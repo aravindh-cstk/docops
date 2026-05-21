@@ -1,0 +1,7 @@
+node_modules/
+tools/cs-sync/node_modules/
+*.log
+.env
+.env.*
+contentstack.config.json
+.DS_Store
