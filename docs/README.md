@@ -1,3 +1,9 @@
+---
+url: /developers/documentation/github-docs-source
+marker: "Documentation"
+heading: "Developer documentation (GitHub source)"
+---
+
 # Developer documentation (GitHub source)
 
 Markdown in this folder syncs to Contentstack `docs_article` entries when changes merge to `main`.
@@ -37,7 +43,7 @@ Not written by the GitHub sync (editors or other automation):
 
 ## Images
 
-Use relative paths next to the doc, e.g. `![](./images/screenshot.png)`. The sync uploads them to Contentstack Assets and rewrites URLs in HTML.
+Use relative paths next to the doc (for example `images/screenshot.png` in a standard Markdown image). The sync uploads them to Contentstack Assets and rewrites URLs in HTML.
 
 ## Author workflow
 
@@ -47,5 +53,5 @@ Use relative paths next to the doc, e.g. `![](./images/screenshot.png)`. The syn
 4. Merge to `main` — sync workflow creates/updates drafts in Contentstack
 5. Review and publish in the Contentstack UI
 
-- [SETUP-AFTER-SECRETS.md](./SETUP-AFTER-SECRETS.md) — what to do after GitHub secrets are configured
+- [SETUP-AFTER-SECRETS.md](../SETUP-AFTER-SECRETS.md) — what to do after GitHub secrets are configured
 - [tools/cs-sync/README.md](../tools/cs-sync/README.md) — secrets and local commands
