@@ -1,11 +1,12 @@
 import { execSync } from "node:child_process";
 import path from "node:path";
 
-export type ChangeType = "added" | "modified" | "deleted";
+export type ChangeType = "added" | "modified" | "deleted" | "renamed";
 
 export interface DocChange {
   type: ChangeType;
   relativePath: string;
+  oldRelativePath?: string;
 }
 
 function isDocMd(relativePath: string, docsRoot: string): boolean {
@@ -50,11 +51,11 @@ export function getDocChanges(
     } else if (status?.startsWith("R")) {
       const oldPath = rest[0];
       const newPath = rest[1];
-      if (oldPath && isDocMd(oldPath, docsRoot)) {
+      if (oldPath && newPath && isDocMd(newPath, docsRoot)) {
+        changes.push({ type: "renamed", relativePath: newPath, oldRelativePath: oldPath });
+      } else if (oldPath && isDocMd(oldPath, docsRoot)) {
+        // new path is outside docsRoot — treat as a plain delete
         changes.push({ type: "deleted", relativePath: oldPath });
-      }
-      if (newPath && isDocMd(newPath, docsRoot)) {
-        changes.push({ type: "added", relativePath: newPath });
       }
     }
   }

@@ -13,7 +13,7 @@ import {
 
 export interface SyncResult {
   path: string;
-  action: "created" | "updated" | "unpublished" | "skipped";
+  action: "created" | "updated" | "unpublished" | "renamed" | "skipped";
   url?: string;
   uid?: string;
   error?: string;
@@ -72,6 +72,9 @@ async function processChange(
 ): Promise<SyncResult> {
   if (change.type === "deleted") {
     return unpublishDeleted(config, client, change, beforeSha);
+  }
+  if (change.type === "renamed") {
+    return handleRename(config, client, change, beforeSha);
   }
 
   const doc =
@@ -159,6 +162,53 @@ async function unpublishDeleted(
     action: "unpublished",
     url: doc.frontMatter.url,
     uid: existing.uid,
+  };
+}
+
+async function handleRename(
+  config: AppConfig,
+  client: ContentstackClient,
+  change: DocChange,
+  beforeSha: string,
+): Promise<SyncResult> {
+  const oldContent = change.oldRelativePath
+    ? readFileAtCommit(config.repoRoot, beforeSha, change.oldRelativePath)
+    : null;
+
+  const oldDoc = oldContent && change.oldRelativePath
+    ? parseDocContent(config.repoRoot, config.CS_DOCS_ROOT, change.oldRelativePath, oldContent)
+    : null;
+
+  const existing = oldDoc
+    ? await client.findEntryByUrl(oldDoc.frontMatter.url)
+    : null;
+
+  const newDoc = parseDocFile(config.repoRoot, config.CS_DOCS_ROOT, change.relativePath);
+  if (!newDoc) {
+    return { path: change.relativePath, action: "skipped", error: "Could not parse renamed doc" };
+  }
+
+  let html = markdownToHtml(newDoc.body);
+  html = await processImagesInHtml(html, newDoc.filePath, client);
+  const payload = buildEntryPayload(newDoc.frontMatter, html, existing?.article_content);
+
+  if (existing) {
+    const updated = await client.updateEntry(existing.uid, payload);
+    return {
+      path: change.relativePath,
+      action: "renamed",
+      url: newDoc.frontMatter.url,
+      uid: updated.uid,
+    };
+  }
+
+  // Old entry not found — fall back to create
+  const created = await client.createEntry(payload);
+  return {
+    path: change.relativePath,
+    action: "created",
+    url: newDoc.frontMatter.url,
+    uid: created.uid,
   };
 }
 
