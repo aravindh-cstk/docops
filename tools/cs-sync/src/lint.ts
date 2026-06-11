@@ -6,6 +6,8 @@ import { fileURLToPath } from "node:url";
 import { z } from "zod";
 import { findRepoRoot } from "./diff.js";
 import { parseDocFile, resolveDocPaths } from "./parser.js";
+import { collectLocalImageRefs } from "./assets.js";
+import { lintStyle } from "./style-lint.js";
 
 const MD_LINK_RE = /\[([^\]]*)]\(([^)]+)\)/g;
 const DOCS_URL_PREFIX = "/developers/";
@@ -151,6 +153,16 @@ function lintDoc(
         errors.push(`${repoRelativePath}: broken link \`${href}\` → ${repoRel}`);
       }
     }
+
+    const absoluteDocPath = path.join(repoRoot, repoRelativePath);
+    for (const { ref, resolved } of collectLocalImageRefs(doc.body, absoluteDocPath)) {
+      if (!fs.existsSync(resolved)) {
+        const repoRel = path.relative(repoRoot, resolved).replace(/\\/g, "/");
+        errors.push(`${repoRelativePath}: missing image \`${ref}\` → ${repoRel}`);
+      }
+    }
+
+    errors.push(...lintStyle(doc.body, repoRelativePath));
   } catch (err) {
     if (err instanceof z.ZodError) {
       errors.push(...formatZodErrors(repoRelativePath, err));

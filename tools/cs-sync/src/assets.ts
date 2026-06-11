@@ -83,14 +83,22 @@ export async function processImagesInHtml(
   return result;
 }
 
-export function collectLocalImageRefs(markdown: string, docFilePath: string): string[] {
+export function collectLocalImageRefs(
+  markdown: string,
+  docFilePath: string,
+): { ref: string; resolved: string }[] {
   const docDir = path.dirname(docFilePath);
-  const refs: string[] = [];
+  const results: { ref: string; resolved: string }[] = [];
 
   for (const match of markdown.matchAll(MD_IMAGE_RE)) {
-    const ref = match[1];
-    if (isLocalAssetRef(ref)) refs.push(resolveLocalPath(docDir, ref));
+    const ref = match[1] ?? "";
+    if (isLocalAssetRef(ref)) results.push({ ref, resolved: resolveLocalPath(docDir, ref) });
   }
 
-  return refs;
+  for (const match of markdown.matchAll(IMG_SRC_RE)) {
+    const ref = match[2] ?? "";
+    if (isLocalAssetRef(ref)) results.push({ ref, resolved: resolveLocalPath(docDir, ref) });
+  }
+
+  return results;
 }
