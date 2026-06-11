@@ -1,0 +1,9 @@
+# CODEOWNERS — controls who must review changes and which paths require a PR.
+#
+# Only changes under docs/ require a pull request and the lint status check.
+# Changes to tooling, workflows, or root-level files can be pushed directly to main.
+#
+# Format: <path pattern> <@owner or team>
+# Replace @aravindh-cstk with your GitHub username or team (e.g. @your-org/docs-team).
+
+/docs/  @aravindh-cstk
