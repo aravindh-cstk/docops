@@ -1,6 +1,6 @@
 ---
-heading: "About Visual Editor"
-url: https://www.contentstack.com/docs/content-managers/visual-editor/about-visual-editor
+heading: About Visual Editor
+url: /content-managers/visual-editor/about-visual-editor
 marker: Visual Editor
 ---
 
