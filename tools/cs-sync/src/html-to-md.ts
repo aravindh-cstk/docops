@@ -1,4 +1,7 @@
 import TurndownService from "turndown";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error — turndown-plugin-gfm ships no bundled types
+import { gfm } from "turndown-plugin-gfm";
 
 const td = new TurndownService({
   headingStyle: "atx",
@@ -6,6 +9,18 @@ const td = new TurndownService({
   bulletListMarker: "-",
   codeBlockStyle: "fenced",
   fence: "```",
+});
+
+td.use(gfm);
+
+// Contentstack <pre> blocks lack an inner <code> element, so Turndown's default
+// code-block rule doesn't fire. Emit a fenced block explicitly.
+td.addRule("pre-fenced", {
+  filter: "pre",
+  replacement: (content) => {
+    const code = content.replace(/\\(.)/g, "$1").trim();
+    return `\n\n\`\`\`\n${code}\n\`\`\`\n\n`;
+  },
 });
 
 // <p class="note|tip|warning"> → > **Note:** ...
@@ -25,6 +40,23 @@ td.addRule("callout", {
   },
 });
 
+// Contentstack's rich text editor emits <br code="[object Object]"/> inside
+// <pre> blocks as a line separator. Replace with a real newline before Turndown
+// sees it, otherwise the <br> breaks code block detection.
+function preprocessHtml(html: string): string {
+  return html.replace(/(<pre[^>]*>)([\s\S]*?)(<\/pre>)/g, (_, open, content, close) =>
+    open + content.replace(/<br[^>]*>/gi, "\n") + close,
+  );
+}
+
 export function htmlToMarkdown(html: string): string {
-  return td.turndown(html).trim();
+  return td
+    .turndown(preprocessHtml(html))
+    .trim()
+    // Turndown escapes [ and ] everywhere to avoid accidental link syntax.
+    // In heading lines they are always literal text, so unescape them.
+    .replace(/^(#{1,6} .+)$/gm, (line) => line.replace(/\\\[/g, "[").replace(/\\\]/g, "]"))
+    // The GFM plugin escapes leading - in any content to prevent list rendering,
+    // but inside table cells - is always literal. Unescape \- in table rows only.
+    .replace(/^\|.+\|$/gm, (row) => row.replace(/\\\-/g, "-"));
 }
