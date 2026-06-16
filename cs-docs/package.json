@@ -1,0 +1,13 @@
+{
+  "name": "contentstack-export-cs-docs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Export Contentstack docs_article entries into cs-docs as markdown files.",
+  "main": "export-contentstack.js",
+  "scripts": {
+    "export": "node export-contentstack.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

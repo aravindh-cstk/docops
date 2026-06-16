@@ -1,0 +1,95 @@
+---
+title: "[Tools] - Generate Sample Apps Automatically"
+description: How to use Contentstack's sample-apps-auto-config utility to automatically generate sample apps and required configuration.
+url: https://www.contentstack.com/docs/developers/utilities/generate-sample-apps-automatically
+product: Contentstack
+doc_type: utilities-guide
+audience:
+  - developers
+  - users
+version: unknown
+last_updated: 2026-03-26
+---
+
+# [Tools] - Generate Sample Apps Automatically
+
+This page explains how to use Contentstack’s `sample-apps-auto-config` command-line utility to automatically generate a sample app along with the required stack configuration. It is intended for developers and other users who want to quickly create and deploy a working example app without manually creating stacks, content types, entries, and publishing settings.
+
+### Item 1
+
+#### Article section
+
+##### Heading
+
+Generate Sample Apps Automatically
+
+##### Content
+
+In order to create a sample app in Contentstack, there are certain steps that need to be followed. These steps include creating a stack, adding content types, entries, publishing environment, and publishing the entries on the specified environment.
+
+Although these steps are simple and easy to follow, they require time and effort in setting them up. However, with Contentstack's **sample-apps-auto-config** utility, developers and other users can build a sample app and the required configuration automatically.
+
+Once the utility generates the required configurations, you can then deploy the content on any web hosting site. In this document, we'll discuss how to use this utility.
+
+## Prerequisites
+- [Node.js](https://nodejs.org/en/download/) installed on your computer
+- [Contentstack](https://www.contentstac.com/) account
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your machine
+
+## Set up the Essentials
+
+Contentstack's **sample-apps-auto-config** utility is primarily a command-line utility. Follow the steps given below to use it:
+- Clone the utility repository by using the following command:
+
+//command comes here
+- Fire up your terminal and move inside the project directory that you just downloaded.
+- Then, install the required dependencies by running the following command. After that, issue the `npm link` command to connect  the project to the module:
+
+```
+npm install
+npm link
+```
+
+The other way to do this is to open your terminal, create a blank folder by using the `mkdir` command, clone the repository, and then install the node modules. But the method suggested above is the suggested way to do this to keep you project clean.
+
+## Run the sample-apps-auto-config Utility
+
+After the dependencies have been installed, perform the the following steps to use the utility:
+- Ensure you are still in the project root directory, invoke the utility by using the following command:
+
+```
+build template-generator
+```
+- It will ask you to choose any one of the templates. Select from the list of available example apps by using the arrow key and hit Enter. For this demo, we have selected **Vue-Nuxt-App**.
+- Next, you need to provide your credentials such as Contentstack email and password. Enter the details and hit Enter. You have now logged into Contentstack, it will ask you to provide a stack name to be created. For our example, type **Website **and hit Enter.
+
+**Note**: If you have enabled [Two-factor Authentication](/docs/developers/two-factor-authentication) on your Contentstack account, ensure you have disabled it . Else, you will not be able to log in to your Contentstack account.
+- Then, you need to provide the Contentstack's organization ID. A stack named Website will be created inside your organization.
+
+**Additional Resource**: You can find your Organization ID by following the steps mentioned in the [Organization Settings](/docs/owners-and-admins/organization-settings-overview) section.
+- Next, you'll need to specify the environment where you want to publish your content to. By default, you'll see (production), you can type anything, for now type development.
+
+You will get a success message once the utility has auto-generated a stack, imported the content types, created three entries, and published them on the development environment.
+
+Upon completion, the utility creates an app folder with the imported data as shown in the screenshot below:
+
+You can use this folder for deploying the application on your preferred hosting platform such as Netlify, Heroku, and so on. Let's now verify whether the above mentioned stack, content types, and entries have been created in Contentstack.
+- To do this, log in to  your Contentstack account and verify that the stack named **Website** is created.
+- Hover over Website and click on Open Stack. Navigate to the **CONTENT** tab, and you'll see three content types auto-created by the utility:
+
+Open any content type, you'll see content and some other data inside the entry, generated by the utility.
+- Click on **PUBLISH QUEUE** tab at the top, and you will see the entries auto-published on development with status as Published.
+
+## Common questions
+
+### What does the sample-apps-auto-config utility do?
+It auto-generates a stack, imports content types, creates entries, and publishes them to a specified environment, and then creates an app folder with the imported data.
+
+### Do I need to disable Two-factor Authentication to use this utility?
+**Note**: If you have enabled [Two-factor Authentication](/docs/developers/two-factor-authentication) on your Contentstack account, ensure you have disabled it . Else, you will not be able to log in to your Contentstack account.
+
+### What do I need installed before running the utility?
+You need [Node.js](https://nodejs.org/en/download/) installed on your computer, a [Contentstack](https://www.contentstac.com/) account, and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your machine.
+
+### Where can I find my Organization ID?
+**Additional Resource**: You can find your Organization ID by following the steps mentioned in the [Organization Settings](/docs/owners-and-admins/organization-settings-overview) section.

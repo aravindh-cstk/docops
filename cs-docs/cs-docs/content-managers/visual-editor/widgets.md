@@ -1,0 +1,46 @@
+---
+title: "[Visual Editor] - Widgets"
+description: Widgets panel in the Visual Editor for integrating apps and extensions directly within the editor.
+url: https://www.contentstack.com/docs/content-managers/visual-editor/widgets
+product: Contentstack
+doc_type: guide
+audience:
+  - content-managers
+  - editors
+version: current
+last_updated: 2026-03-25
+---
+
+# [Visual Editor] - Widgets
+
+This page explains how to use the Widgets panel in Contentstack’s Visual Editor to integrate and launch apps and extensions while editing content. It is intended for content managers and editors who want to access advanced tools (e.g., SEO, translation) directly within the editor.
+
+## Widgets
+
+The Widgets panel enables you to enhance content by integrating apps and extensions directly within the Visual Editor.
+
+This feature supports advanced use cases such as SEO optimization, sentiment analysis, or translation, allowing you to extend CMS capabilities without switching between tools.
+
+**Additional Resource:** Refer to the [Installing Apps](/docs/developers/marketplace-platform-guides/installing-apps) document for more information on how to add apps to your stack.
+
+To access Widgets within Visual Editor, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
+- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Click **Editor** in the bottom pill menu.
+- In the right sidebar, click the "Widgets" icon.
+- Use the **Widgets** dropdown and select the app or extension.
+
+Using Widgets, you can launch tools that support advanced content needs.
+
+## Common questions
+
+### Do I need to install apps before they appear in the Widgets dropdown?
+Yes. Apps or extensions must be added to your stack before they can be selected from the **Widgets** dropdown.
+
+### Where do I find Widgets in the Visual Editor?
+In the Visual Editor’s right sidebar, click the "Widgets" icon.
+
+### What kinds of tools can Widgets launch?
+Widgets can launch apps and extensions that support advanced use cases such as SEO optimization, sentiment analysis, or translation.
+
+### What are the prerequisites to access Widgets?
+You must log in to your Contentstack account and open a stack’s **Visual Experience** editor to access the Widgets panel.
