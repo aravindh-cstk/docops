@@ -1,6 +1,43 @@
 import { execSync } from "node:child_process";
 import path from "node:path";
 
+export function parseArgs(argv: string[]): { base: string } {
+  let base = "origin/main";
+  for (let i = 0; i < argv.length; i++) {
+    if (argv[i] === "--base" && argv[i + 1]) base = argv[++i];
+  }
+  return { base };
+}
+
+export function listChangedDocs(
+  repoRoot: string,
+  docsRoot: string,
+  base: string,
+): { mdFiles: string[]; nonMdFiles: string[] } {
+  try {
+    execSync(`git merge-base ${base} HEAD`, { cwd: repoRoot, stdio: "pipe" });
+    const mergeBase = execSync(`git merge-base ${base} HEAD`, {
+      cwd: repoRoot,
+      encoding: "utf8",
+    }).trim();
+    const out = execSync(
+      `git diff --name-only --diff-filter=d ${mergeBase} HEAD -- ${docsRoot}`,
+      { cwd: repoRoot, encoding: "utf8" },
+    ).trim();
+    const all = out ? out.split("\n").filter(Boolean) : [];
+    return {
+      mdFiles: all.filter((p) => p.endsWith(".md")),
+      nonMdFiles: all.filter((p) => !p.endsWith(".md")),
+    };
+  } catch {
+    const out = execSync(`git ls-files '${docsRoot}/**/*.md'`, {
+      cwd: repoRoot,
+      encoding: "utf8",
+    }).trim();
+    return { mdFiles: out ? out.split("\n").filter(Boolean) : [], nonMdFiles: [] };
+  }
+}
+
 export type ChangeType = "added" | "modified" | "deleted" | "renamed";
 
 export interface DocChange {

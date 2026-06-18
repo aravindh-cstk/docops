@@ -3,12 +3,36 @@ import path from "node:path";
 import matter from "gray-matter";
 import { z } from "zod";
 
+export const PRODUCT_NAMES = new Set([
+  "content-managers",
+  "headless-cms",
+  "personalize",
+  "data-and-insights",
+  "studio",
+  "agent-os",
+  "assets",
+  "brand-kit",
+  "launch",
+  "developer-hub",
+  "administration",
+  "analytics",
+  "marketplace",
+]);
+
+const VALID_PRODUCTS = [...PRODUCT_NAMES].join(", ");
+
 export const frontMatterSchema = z.object({
   url: z
-    .string({ required_error: "Missing required frontmatter field 'url' — add: url: /your-product/your-article-slug" })
-    .min(1, { message: "Missing required frontmatter field 'url' — add: url: /your-product/your-article-slug" })
-    .refine((u) => !u.startsWith("/docs/"), {
-      message: "Invalid 'url' — must not start with /docs/ (use a product path like /your-product/your-article-slug)",
+    .string({ required_error: "Missing required frontmatter field 'url' — add: url: /personalize/your-article-slug" })
+    .min(1, { message: "Missing required frontmatter field 'url' — add: url: /personalize/your-article-slug" })
+    .refine((u) => !u.startsWith("http://") && !u.startsWith("https://"), {
+      message: "Invalid 'url' — must be a relative path, not a full URL (e.g. /personalize/about-personalize)",
+    })
+    .refine((u) => u.startsWith("/"), {
+      message: "Invalid 'url' — must start with / (e.g. /personalize/about-personalize)",
+    })
+    .refine((u) => PRODUCT_NAMES.has(u.split("/")[1] ?? ""), {
+      message: `Invalid 'url' — first segment must be a known product name (e.g. /personalize/about-personalize). Valid products: ${VALID_PRODUCTS}`,
     })
     .refine((u) => !u.endsWith("/"), {
       message: "Invalid 'url' — must not end with a trailing slash (remove the trailing /)",
