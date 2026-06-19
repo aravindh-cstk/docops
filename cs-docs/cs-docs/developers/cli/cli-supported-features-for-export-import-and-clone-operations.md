@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - CLI-Supported Features for Export, Import, and Clone Operations"
 description: CLI-Supported Features for Export, Import, and Clone Operations
-url: https://www.contentstack.com/docs/developers/cli/cli-supported-features-for-export-import-and-clone-operations
+url: https://www.contentstack.com/docs/headless-cms/cli-supported-features-for-export-import-and-clone-operations
 product: Contentstack
 doc_type: cli-guide
 audience:

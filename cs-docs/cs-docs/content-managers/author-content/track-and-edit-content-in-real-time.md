@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Track and Edit Content in Real-time"
 description: Track and edit content in real-time using Contentstack Live Preview.
-url: https://www.contentstack.com/docs/content-managers/author-content/track-and-edit-content-in-real-time
+url: https://www.contentstack.com/docs/headless-cms/track-and-edit-content-in-real-time
 product: Contentstack
 doc_type: guide
 audience:

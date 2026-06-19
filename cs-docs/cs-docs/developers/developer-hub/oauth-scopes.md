@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - OAuth Scopes"
 description: OAuth Scopes
-url: https://www.contentstack.com/docs/developers/developer-hub/oauth-scopes
+url: https://www.contentstack.com/docs/developer-hub/oauth-scopes
 product: Developer Hub guides
 doc_type: guide
 audience:

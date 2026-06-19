@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Organization Limitations"
 description: Organization Limitations
-url: https://www.contentstack.com/docs/developers/organization/organization-limitations
+url: https://www.contentstack.com/docs/administration/organization-limitations
 product: Organization
 doc_type: reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Limitations of Advanced Search"
 description: Limitations and constraints for using Advanced Search in Search Content.
-url: https://www.contentstack.com/docs/content-managers/search-content/limitations-of-advanced-search
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-advanced-search
 product: Search Content
 doc_type: reference
 audience:

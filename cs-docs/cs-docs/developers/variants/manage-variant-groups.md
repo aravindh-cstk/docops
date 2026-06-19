@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - Manage Variant Groups"
 description: Manage variant groups in Contentstack Variants CMS, including accessing, creating, linking content types, and API reference.
-url: https://www.contentstack.com/docs/developers/variants/manage-variant-groups
+url: https://www.contentstack.com/docs/headless-cms/manage-variant-groups
 product: Contentstack
 doc_type: guide
 audience:

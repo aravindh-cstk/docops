@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Live Preview Real-world Scenarios"
 description: Real-world use cases for Contentstack Live Preview to preview content changes across environments in real time without saving or publishing.
-url: https://www.contentstack.com/docs/content-managers/author-content/live-preview-real-world-scenarios
+url: https://www.contentstack.com/docs/headless-cms/live-preview-real-world-scenarios
 product: Contentstack
 doc_type: guide
 audience:

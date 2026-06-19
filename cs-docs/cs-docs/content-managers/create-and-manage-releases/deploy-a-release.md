@@ -1,7 +1,7 @@
 ---
 title: "[Headless CMS | Releases] - Deploy a Release"
 description: Deploy a Release
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/deploy-a-release
+url: https://www.contentstack.com/docs/headless-cms/deploy-a-release
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Import a Content Type"
 description: Import the JSON file of a content type into your stack in Contentstack.
-url: https://www.contentstack.com/docs/developers/create-content-types/import-a-content-type
+url: https://www.contentstack.com/docs/headless-cms/import-a-content-type
 product: Contentstack
 doc_type: how-to
 audience:

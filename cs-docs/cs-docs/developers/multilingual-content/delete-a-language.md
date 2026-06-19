@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Delete a Language"
 description: Delete a language from a stack and understand the impact on localized entries; includes UI steps and API reference.
-url: https://www.contentstack.com/docs/developers/multilingual-content/delete-a-language
+url: https://www.contentstack.com/docs/headless-cms/delete-a-language
 product: Contentstack
 doc_type: how-to
 audience:

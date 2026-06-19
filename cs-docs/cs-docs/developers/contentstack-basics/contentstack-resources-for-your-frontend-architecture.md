@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Basics] - Contentstack Resources for Your Frontend Architecture"
 description: Contentstack resources for your frontend architecture, including RESTful APIs, DataSync, webhooks, SDKs, and static site generators.
-url: https://www.contentstack.com/docs/developers/contentstack-basics/contentstack-resources-for-your-frontend-architecture
+url: https://www.contentstack.com/docs/headless-cms/contentstack-resources-for-your-frontend-architecture
 product: Contentstack
 doc_type: concept-guide
 audience:

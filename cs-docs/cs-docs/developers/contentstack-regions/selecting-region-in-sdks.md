@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Regions] - Selecting Region in SDKs"
 description: Selecting Region in SDKs
-url: https://www.contentstack.com/docs/developers/contentstack-regions/selecting-region-in-sdks
+url: https://www.contentstack.com/docs/administration/selecting-region-in-sdks
 product: Contentstack
 doc_type: developer-guide
 audience:

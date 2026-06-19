@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Live Preview] - How Live Preview Works"
 description: How Contentstack Live Preview works, including data flow, CSR vs SSR behavior, SDK role, limitations, and API/authentication details.
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/how-live-preview-works
+url: https://www.contentstack.com/docs/headless-cms/how-live-preview-works
 product: Contentstack
 doc_type: developer-guide
 audience:

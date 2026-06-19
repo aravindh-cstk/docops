@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Contentstack App Lifecycle: A Developer's Guide"
 description: Documentation describing the lifecycle of Contentstack Standard apps and Machine-to-Machine apps, including creation, development, hosting, installation, testing, listing, updates, and key considerations.
-url: https://www.contentstack.com/docs/developers/developer-hub/contentstack-app-lifecycle-a-developers-guide
+url: https://www.contentstack.com/docs/developer-hub/contentstack-app-lifecycle-a-developers-guide
 product: Contentstack
 doc_type: developer-hub-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Create Content Types] - Limitations of Content Types"
 description: Limitations of Content Types
-url: https://www.contentstack.com/docs/developers/create-content-types/limitations-of-content-types
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-content-types
 product: Contentstack
 doc_type: reference
 audience:

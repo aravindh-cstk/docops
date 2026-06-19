@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - JW Player App Installation Guide"
 description: JW Player App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/jw-player
+url: https://www.contentstack.com/docs/marketplace/jw-player
 product: Contentstack
 doc_type: marketplace-guide
 audience:

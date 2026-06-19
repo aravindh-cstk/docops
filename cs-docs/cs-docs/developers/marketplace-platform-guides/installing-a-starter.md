@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Importing a Starter"
 description: Step-by-step instructions to import a Starter using both the Marketplace and Stack Creation Experience.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/installing-a-starter
+url: https://www.contentstack.com/docs/marketplace/installing-a-starter
 product: Contentstack
 doc_type: marketplace-guide
 audience:

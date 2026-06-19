@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Error Management for Action Steps"
 description: Error Management for Action Steps feature for managing automation workflows when an action step encounters an error.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/error-management-for-action-steps
+url: https://www.contentstack.com/docs/agent-os/error-management-for-action-steps
 product: Automation Hub
 doc_type: guide
 audience:

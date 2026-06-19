@@ -1,7 +1,7 @@
 ---
 title: "[JSON Rich Text Editor] - Customize JSON Rich Text Editor"
 description: Customize the JSON Rich Text Editor (RTE) by enabling the Custom Editor, selecting formatting options, and controlling the toolbar for content managers.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/customize-json-rich-text-editor
+url: https://www.contentstack.com/docs/headless-cms/customize-json-rich-text-editor
 product: Contentstack
 doc_type: how-to
 audience:

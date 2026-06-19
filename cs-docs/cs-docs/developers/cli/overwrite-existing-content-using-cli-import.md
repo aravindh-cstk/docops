@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Overwrite Existing Content using CLI Import"
 description: Overwrite existing content during Contentstack CLI imports using the Import Overwrite feature and import-setup for targeted module updates.
-url: https://www.contentstack.com/docs/developers/cli/overwrite-existing-content-using-cli-import
+url: https://www.contentstack.com/docs/headless-cms/overwrite-existing-content-using-cli-import
 product: Contentstack
 doc_type: how-to
 audience:

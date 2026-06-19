@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - Streamline your Publishing Process with Nested Reference Publishing"
 description: Streamline your Publishing Process with Nested Reference Publishing
-url: https://www.contentstack.com/docs/content-managers/publish-content/streamline-your-publishing-process-with-nested-reference-publishing
+url: https://www.contentstack.com/docs/headless-cms/streamline-your-publishing-process-with-nested-reference-publishing
 product: Content Management
 doc_type: article
 audience:

@@ -1,7 +1,7 @@
 ---
 title: Contentstack Command-line Interface (CLI) - Bulk Operations in CLI
 description: Bulk publish and unpublish entries and assets using the Contentstack CLI Bulk Operations plugin, including modes, cross-publish setup, configuration, troubleshooting, and best practices.
-url: https://www.contentstack.com/docs/developers/cli/bulk-operations-in-cli
+url: https://www.contentstack.com/docs/headless-cms/bulk-operations-in-cli
 product: Contentstack
 doc_type: cli-guide
 audience:

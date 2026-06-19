@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - Schedule Publish/Unpublish Entries"
 description: Schedule publishing or unpublishing entries for a specific date and time, including rescheduling and version control behavior.
-url: https://www.contentstack.com/docs/content-managers/publish-content/schedule-publish-unpublish-entries
+url: https://www.contentstack.com/docs/headless-cms/schedule-publish-unpublish-entries
 product: Contentstack
 doc_type: guide
 audience:

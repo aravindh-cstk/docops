@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Using Repeat Paths to Automate Repetitive Task"
 description: Using Repeat Paths to Automate Repetitive Tasks in Contentstack Agent OS Automation Hub.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/using-repeat-paths-to-automate-repetitive-tasks
+url: https://www.contentstack.com/docs/agent-os/using-repeat-paths-to-automate-repetitive-tasks
 product: Contentstack
 doc_type: automation-hub-guide
 audience:

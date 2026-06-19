@@ -1,7 +1,7 @@
 ---
 title: [Brand Kit] - Edit a Brand Kit
 description: Edit your Brand Kit by updating the name or description, adding stacks, or unlinking them within Contentstack.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/edit-a-brand-kit
+url: https://www.contentstack.com/docs/brand-kit/edit-a-brand-kit
 product: Contentstack
 doc_type: documentation
 audience:
@@ -29,7 +29,7 @@ You can edit certain details of a Brand Kit from the Brand Kit settings page.
 
 ### Steps for Execution
 
-**Note**: For this guide, we have assumed that you have already created a Brand Kit. Refer to the [Create a Brand Kit](/docs/content-managers/brand-kit/create-a-brand-kit) document.
+**Note**: For this guide, we have assumed that you have already created a Brand Kit. Refer to the [Create a Brand Kit](/docs/brand-kit/create-a-brand-kit) document.
 
 To edit a Brand Kit, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 

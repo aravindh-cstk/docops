@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Add to Release in Visual Editor"
 description: Add one or more entries to a release directly from the Visual Editor page editing interface.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/add-to-release
+url: https://www.contentstack.com/docs/headless-cms/add-to-release
 product: Contentstack
 doc_type: how-to
 audience:

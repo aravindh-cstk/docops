@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Mark as Title"
 description: The Mark as title property lets you display the value of a specific field as the title for repeated content structures.
-url: https://www.contentstack.com/docs/developers/create-content-types/mark-as-title
+url: https://www.contentstack.com/docs/headless-cms/mark-as-title
 product: Developers Documentation
 doc_type: guide
 audience:

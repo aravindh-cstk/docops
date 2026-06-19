@@ -1,7 +1,7 @@
 ---
 title: "[Json Rich Text Editor] - Benefits of JSON RTE for Developers"
 description: Benefits of JSON RTE for Developers
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/benefits-of-json-rte-for-developers
+url: https://www.contentstack.com/docs/headless-cms/benefits-of-json-rte-for-developers
 product: Json Rich Text Editor
 doc_type: article
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - View List of Connected Apps in Automations"
 description: View and manage connected app authentications in Automations via Agent OS Settings, including edit, reauthorize, and delete actions.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/view-list-of-connected-apps-in-automations
+url: https://www.contentstack.com/docs/agent-os/view-list-of-connected-apps-in-automations
 product: Agent OS
 doc_type: guide
 audience:

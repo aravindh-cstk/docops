@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Create a Taxonomy"
 description: Create a taxonomy to organize and structure your website’s content in Contentstack.
-url: https://www.contentstack.com/docs/developers/taxonomy/create-a-taxonomy
+url: https://www.contentstack.com/docs/headless-cms/create-a-taxonomy
 product: Contentstack
 doc_type: how-to
 audience:

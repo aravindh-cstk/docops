@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Auto-populate Environment Variables from a Linked Stack"
 description: Auto-populate Environment Variables in Contentstack Launch by linking a stack to your project and importing stack variables.
-url: https://www.contentstack.com/docs/developers/launch/auto-populate-environment-variables-from-a-linked-stack
+url: https://www.contentstack.com/docs/launch/auto-populate-environment-variables-from-a-linked-stack
 product: Contentstack Launch
 doc_type: how-to
 audience:
@@ -36,7 +36,7 @@ Follow the steps to link a stack to your project:
 
 - Click **Launch** from the dashboard.
 - Click the **+ New Project** button.
-- Select [Import from a Git Repository](/docs/developers/launch/import-project-using-github) or [Upload a file](/docs/developers/launch/import-project-using-file-upload) as usual from the **Create New Project** modal.
+- Select [Import from a Git Repository](/docs/launch/import-project-using-github) or [Upload a file](/docs/launch/import-project-using-file-upload) as usual from the **Create New Project** modal.
 - In the **Environment Variables** section, click the **Connect and Import Variables** button.
 - Select the **Stack** which has the Starter app installed and then select the **Delivery Token** for your stack.**Note**: On selecting a delivery token, Launch automatically selects a Stack environment available for the selected token.
 - Click the **Import Variables** button.  

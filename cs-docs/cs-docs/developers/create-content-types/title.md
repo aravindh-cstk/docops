@@ -1,7 +1,7 @@
 ---
 title: Set Up Your Project - Title
 description: Documentation for the Title field available in all content types, including its behavior, configurable properties, and related resources.
-url: https://www.contentstack.com/docs/developers/create-content-types/title
+url: https://www.contentstack.com/docs/headless-cms/title
 product: Contentstack
 doc_type: reference
 audience:

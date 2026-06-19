@@ -1,7 +1,7 @@
 ---
 title: "[Preview Sharing] - Reply to a Review Comment"
 description: How to reply to a review comment in Preview Sharing using threaded discussions.
-url: https://www.contentstack.com/docs/content-managers/preview-sharing/reply-to-a-review-comment
+url: https://www.contentstack.com/docs/headless-cms/reply-to-a-review-comment
 product: Contentstack
 doc_type: how-to
 audience:

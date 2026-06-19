@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Why Management Tokens"
 description: Why Management Tokens
-url: https://www.contentstack.com/docs/developers/create-tokens/why-management-tokens
+url: https://www.contentstack.com/docs/headless-cms/why-management-tokens
 product: Contentstack
 doc_type: concept
 audience:

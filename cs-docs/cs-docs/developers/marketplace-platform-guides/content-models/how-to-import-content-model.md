@@ -1,7 +1,7 @@
 ---
 title: "[Content Models] - How to Import a Content Model"
 description: Import, view, and edit Contentstack Marketplace Content Models and use them within your stack.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model
+url: https://www.contentstack.com/docs/marketplace/how-to-import-content-model
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:

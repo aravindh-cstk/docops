@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Taxonomy for a Basic Blog Website"
 description: Taxonomy for a Basic Blog Website
-url: https://www.contentstack.com/docs/developers/taxonomy/taxonomy-for-a-basic-blog-website
+url: https://www.contentstack.com/docs/headless-cms/taxonomy-for-a-basic-blog-website
 product: Contentstack
 doc_type: guide
 audience:

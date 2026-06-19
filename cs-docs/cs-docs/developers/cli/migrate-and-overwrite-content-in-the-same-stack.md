@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Migrate and Overwrite Content in the Same Stack"
 description: Migrate and overwrite existing content in the same Contentstack stack using the Contentstack CLI entries module.
-url: https://www.contentstack.com/docs/developers/cli/migrate-and-overwrite-content-in-the-same-stack
+url: https://www.contentstack.com/docs/headless-cms/migrate-and-overwrite-content-in-the-same-stack
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Bulk Delete Localized Entry Versions"
 description: Bulk delete multiple localized and unlocalized versions of an entry from the Delete modal of the entry's master language version.
-url: https://www.contentstack.com/docs/content-managers/author-content/bulk-delete-localized-entry-versions
+url: https://www.contentstack.com/docs/headless-cms/bulk-delete-localized-entry-versions
 product: Contentstack
 doc_type: how-to
 audience:

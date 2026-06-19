@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Live Preview] - Set Up Live Preview for Your Stack"
 description: Set up and enable Live Preview for a Contentstack stack, including environment Base URL configuration and Visual Experience settings.
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-for-your-stack
+url: https://www.contentstack.com/docs/headless-cms/set-up-live-preview-for-your-stack
 product: Contentstack
 doc_type: setup-guide
 audience:

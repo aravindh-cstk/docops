@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Update Entry Workflow Details in Bulk"
 description: "How to update workflow details such as stage, assignee, due date, and comments for multiple entries simultaneously in Contentstack."
-url: https://www.contentstack.com/docs/content-managers/author-content/update-entry-workflow-details-in-bulk
+url: https://www.contentstack.com/docs/headless-cms/update-entry-workflow-details-in-bulk
 product: Contentstack
 doc_type: how-to
 audience:

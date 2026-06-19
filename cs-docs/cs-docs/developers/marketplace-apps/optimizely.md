@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Optimizely App Installation Guide"
 description: Install and configure the Optimizely app in the Contentstack Marketplace to fetch and display audiences and variations within entries.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/optimizely
+url: https://www.contentstack.com/docs/marketplace/optimizely
 product: Contentstack
 doc_type: marketplace-guide
 audience:

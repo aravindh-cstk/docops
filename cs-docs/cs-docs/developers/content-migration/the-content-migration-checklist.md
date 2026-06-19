@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - The Content Migration Checklist"
 description: Content migration checklist for migrating content from WordPress or Drupal to Contentstack, including planning, execution, and verification/monitoring stages.
-url: https://www.contentstack.com/docs/developers/content-migration/the-content-migration-checklist
+url: https://www.contentstack.com/docs/headless-cms/the-content-migration-checklist
 product: Contentstack
 doc_type: guide
 audience:

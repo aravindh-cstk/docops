@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Restricted Keywords for UIDs"
 description: Restricted keywords to avoid when providing user-defined unique IDs (UIDs) for content types, fields, and taxonomies.
-url: https://www.contentstack.com/docs/developers/create-content-types/restricted-keywords-for-uids
+url: https://www.contentstack.com/docs/headless-cms/restricted-keywords-for-uids
 product: Contentstack
 doc_type: reference
 audience:

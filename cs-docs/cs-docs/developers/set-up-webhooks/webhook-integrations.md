@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Webhook Integrations"
 description: Examples of how to integrate Contentstack webhooks with third-party services such as AWS Lambda, SNS, Translate, Memsource, Pusher, Rekognition, Algolia, SQS, and Microsoft Azure.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-integrations
+url: https://www.contentstack.com/docs/headless-cms/webhook-integrations
 product: Contentstack
 doc_type: guide
 audience:

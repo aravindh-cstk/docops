@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - How Search Works"
 description: How Search Works for Contentstack’s Search functionality within a stack, including quick search, filters, and advanced search.
-url: https://www.contentstack.com/docs/content-managers/search-content/how-search-works
+url: https://www.contentstack.com/docs/headless-cms/how-search-works
 product: Contentstack
 doc_type: guide
 audience:

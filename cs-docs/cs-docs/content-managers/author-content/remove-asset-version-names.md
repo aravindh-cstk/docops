@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Remove Asset Version Names"
 description: Remove a custom name from an asset version and revert to the default naming convention in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/remove-asset-version-names
+url: https://www.contentstack.com/docs/headless-cms/remove-asset-version-names
 product: Contentstack
 doc_type: how-to
 audience:

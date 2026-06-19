@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Transfer Stack Ownership to Other User"
 description: Transfer Stack Ownership to Other User
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/transfer-stack-ownership-to-other-user
+url: https://www.contentstack.com/docs/headless-cms/transfer-stack-ownership-to-other-user
 product: Set Up Your Project
 doc_type: how-to
 audience:

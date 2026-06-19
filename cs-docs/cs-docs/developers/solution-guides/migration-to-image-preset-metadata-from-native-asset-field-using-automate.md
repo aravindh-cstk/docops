@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - Migration to Image Preset Metadata from Native Asset Field Using Automate"
 description: Native File field data migration to the image preset custom field with preset metadata creation in bulk for all existing entries using the Automate.
-url: https://www.contentstack.com/docs/developers/solution-guides/migration-to-image-preset-metadata-from-native-asset-field-using-automate
+url: https://www.contentstack.com/docs/headless-cms/migration-to-image-preset-metadata-from-native-asset-field-using-automate
 product: Contentstack
 doc_type: solution-guide
 audience:

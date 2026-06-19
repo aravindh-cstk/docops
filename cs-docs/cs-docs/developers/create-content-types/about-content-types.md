@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Content Types"
 description: About Content Types
-url: https://www.contentstack.com/docs/developers/create-content-types/about-content-types
+url: https://www.contentstack.com/docs/headless-cms/about-content-types
 product: Contentstack
 doc_type: concept
 audience:

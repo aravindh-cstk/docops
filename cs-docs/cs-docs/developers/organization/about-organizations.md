@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - About Organizations"
 description: About Organizations in Contentstack and how they relate to users, stacks, roles, permissions, and organization settings.
-url: https://www.contentstack.com/docs/developers/organization/about-organizations
+url: https://www.contentstack.com/docs/administration/about-organizations
 product: Contentstack
 doc_type: concept
 audience:

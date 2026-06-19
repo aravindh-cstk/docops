@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - OLD Algolia"
 description: Install and configure the OLD Algolia Marketplace app to update Algolia indices on publish, unpublish, or delete events in Contentstack.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/algolia-old
+url: https://www.contentstack.com/docs/marketplace/algolia-old
 product: Contentstack Marketplace
 doc_type: marketplace-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Algolia App Installation Guide"
 description: Algolia App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/algolia
+url: https://www.contentstack.com/docs/marketplace/algolia
 product: Contentstack
 doc_type: marketplace-guide
 audience:

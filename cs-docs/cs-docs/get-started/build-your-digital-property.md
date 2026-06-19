@@ -1,7 +1,7 @@
 ---
 title: "[Get Started with CS] - Build your Digital Property"
 description: Learn how you can start using Contentstack to build your websites with help from a quick start guide, content modeling, and SDKs as development resources.
-url: https://www.contentstack.com/docs/get-started/build-your-digital-property
+url: https://www.contentstack.com/docs/headless-cms/build-your-digital-property
 product: Contentstack
 doc_type: get-started
 audience:

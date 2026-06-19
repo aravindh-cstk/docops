@@ -1,7 +1,7 @@
 ---
 title: "[Workflows] - Update a Workflow"
 description: How to update an existing workflow in Contentstack, including workflow details, branches, content types, stages, and stage-level rules.
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/update-a-workflow
+url: https://www.contentstack.com/docs/headless-cms/update-a-workflow
 product: Contentstack
 doc_type: how-to
 audience:

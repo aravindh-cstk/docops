@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Image OCR App Installation Guide"
 description: Image OCR App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/image-ocr
+url: https://www.contentstack.com/docs/marketplace/image-ocr
 product: Contentstack
 doc_type: marketplace-guide
 audience:

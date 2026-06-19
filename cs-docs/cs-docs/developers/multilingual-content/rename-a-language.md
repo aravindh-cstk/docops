@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Rename a Language"
 description: Rename an existing language in a Contentstack stack via the UI or via API reference.
-url: https://www.contentstack.com/docs/developers/multilingual-content/rename-a-language
+url: https://www.contentstack.com/docs/headless-cms/rename-a-language
 product: Contentstack
 doc_type: how-to
 audience:

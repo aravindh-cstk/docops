@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Create a Project"
 description: Create a project in Automate to organize automations in one location.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/create-a-project
+url: https://www.contentstack.com/docs/studio/create-a-project
 product: Contentstack Automate
 doc_type: guide
 audience:

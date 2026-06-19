@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Configure Rate Limits in the CLI"
 description: Configure and manage rate limits in the Contentstack Command Line Interface (CLI), including setting, getting, and removing rate limit configurations for an organization.
-url: https://www.contentstack.com/docs/developers/cli/configure-rate-limits-in-the-cli
+url: https://www.contentstack.com/docs/headless-cms/configure-rate-limits-in-the-cli
 product: Contentstack
 doc_type: cli-guide
 audience:

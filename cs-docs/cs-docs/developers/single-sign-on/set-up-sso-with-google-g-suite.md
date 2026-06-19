@@ -1,7 +1,7 @@
 ---
 title: "[SSO] - Set up SSO with Google G-Suite"
 description: Step-by-step guide to set up Single Sign-On (SSO) in Contentstack with Google G Suite as your SAML 2.0 identity Provider (IdP).
-url: https://www.contentstack.com/docs/developers/single-sign-on/set-up-sso-with-google-g-suite
+url: https://www.contentstack.com/docs/administration/set-up-sso-with-google-g-suite
 product: Contentstack
 doc_type: how-to-guide
 audience:

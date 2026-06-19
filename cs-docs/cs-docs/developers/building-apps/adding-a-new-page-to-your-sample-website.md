@@ -1,7 +1,7 @@
 ---
 title: "[Building Websites] - Adding a New Page to Your Sample Website"
 description: Add a “Menu” page to a sample website using Contentstack, including content creation, code changes, and deployment with Launch.
-url: https://www.contentstack.com/docs/developers/building-apps/adding-a-new-page-to-your-sample-website
+url: https://www.contentstack.com/docs/headless-cms/adding-a-new-page-to-your-sample-website
 product: Contentstack
 doc_type: tutorial
 audience:

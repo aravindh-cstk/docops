@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - MonkeyLearn App Installation Guide"
 description: MonkeyLearn App Installation Guide for installing and configuring the MonkeyLearn app within Contentstack Marketplace.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/monkeylearn
+url: https://www.contentstack.com/docs/marketplace/monkeylearn
 product: Contentstack
 doc_type: marketplace-app-guide
 audience:

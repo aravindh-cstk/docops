@@ -1,7 +1,7 @@
 ---
 title: "[Field Visibility Rules] - Limitations of Field Visibility Rules"
 description: Limitations and restrictions for Field Visibility Rules, including operand fields, target fields, and global fields.
-url: https://www.contentstack.com/docs/developers/create-content-types/limitations-of-field-visibility-rules
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-field-visibility-rules
 product: Contentstack
 doc_type: reference
 audience:

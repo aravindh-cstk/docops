@@ -1,7 +1,7 @@
 ---
 title: "[Create Tokens] - Create a Delivery Token"
 description: Create a Delivery Token (and optionally a Preview Token) to enable secure access to published content from specific branches/aliases and publishing environments within a stack.
-url: https://www.contentstack.com/docs/developers/create-tokens/create-a-delivery-token
+url: https://www.contentstack.com/docs/headless-cms/create-a-delivery-token
 product: Contentstack
 doc_type: how-to
 audience:

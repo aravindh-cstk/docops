@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Guide to Convert Contentstack Extensions to Marketplace Apps"
 description: Guide to convert your existing Contentstack extension to a marketplace app.
-url: https://www.contentstack.com/docs/developers/developer-hub/guide-to-convert-contentstack-extensions-to-marketplace-apps
+url: https://www.contentstack.com/docs/developer-hub/guide-to-convert-contentstack-extensions-to-marketplace-apps
 product: Contentstack
 doc_type: guide
 audience:
@@ -77,10 +77,10 @@ ContentstackAppSdk.init().then(function (appSdk) {
 });
 ```
 
-- A Marketplace app could have one or more UI locations in Contentstack. The UI locations are as follows:[Custom Field](/docs/developers/developer-hub/custom-field-location)
-- [Sidebar Widget](/docs/developers/developer-hub/asset-sidebar-location)
-- [Dashboard Widget](/docs/developers/developer-hub/dashboard-location)
-- [RTE - Rich Text Editor](/docs/developers/developer-hub/rte-location)
+- A Marketplace app could have one or more UI locations in Contentstack. The UI locations are as follows:[Custom Field](/docs/developer-hub/custom-field-location)
+- [Sidebar Widget](/docs/developer-hub/asset-sidebar-location)
+- [Dashboard Widget](/docs/developer-hub/dashboard-location)
+- [RTE - Rich Text Editor](/docs/developer-hub/rte-location)
 - Config Screen with Webhooks
 
 **Note:** In an extension, you can only add one Contentstack UI location.
@@ -105,7 +105,7 @@ Contentstack will then render this URL on its webpage.
 It’s time to put your newly built app into action.
 Connect your deployed app to Contentstack. For that, you need to create a Marketplace app.
 
-To create an app in Marketplace, perform the steps given in the [Create an App in Marketplace](/docs/developers/developer-hub/creating-an-app-in-developer-hub) document.
+To create an app in Marketplace, perform the steps given in the [Create an App in Marketplace](/docs/developer-hub/creating-an-app-in-developer-hub) document.
 
 Once done, your Marketplace app is now ready.
 
@@ -113,7 +113,7 @@ Once done, your Marketplace app is now ready.
 
 Now let’s install the Marketplace app in one of your stack.
 
-To install your app, perform the steps covered in the[Installing an App in Developer Hub](/docs/developers/developer-hub/installing-your-app-via-developer-hub) guide.
+To install your app, perform the steps covered in the[Installing an App in Developer Hub](/docs/developer-hub/installing-your-app-via-developer-hub) guide.
 
 Once done, your app is now installed and ready to use.
 

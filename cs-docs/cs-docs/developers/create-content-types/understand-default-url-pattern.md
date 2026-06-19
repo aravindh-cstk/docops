@@ -1,7 +1,7 @@
 ---
 title: "[Headless CMS | Default URL Pattern] - Understand Default URL Pattern"
 description: Understand Default URL Pattern
-url: https://www.contentstack.com/docs/developers/create-content-types/understand-default-url-pattern
+url: https://www.contentstack.com/docs/headless-cms/understand-default-url-pattern
 product: Contentstack
 doc_type: guide
 audience:

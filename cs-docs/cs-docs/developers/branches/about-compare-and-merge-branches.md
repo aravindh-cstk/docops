@@ -1,7 +1,7 @@
 ---
 title: About Compare and Merge Branches
 description: About Compare and Merge Branches
-url: https://www.contentstack.com/docs/developers/branches/about-compare-and-merge-branches
+url: https://www.contentstack.com/docs/headless-cms/about-compare-and-merge-branches
 product: Developers
 doc_type: guide
 audience:

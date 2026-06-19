@@ -1,7 +1,7 @@
 ---
 title: "[Workflows] - About Workflows"
 description: About Workflows
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/about-workflows
+url: https://www.contentstack.com/docs/headless-cms/about-workflows
 product: Workflows
 doc_type: concept
 audience:

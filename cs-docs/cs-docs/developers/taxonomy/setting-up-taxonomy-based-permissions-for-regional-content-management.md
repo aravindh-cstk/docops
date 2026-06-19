@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Setting Up Taxonomy-based Permissions for Regional Content Management"
 description: Setting up taxonomy-based permissions for custom roles to manage regional content access using taxonomies and terms.
-url: https://www.contentstack.com/docs/developers/taxonomy/setting-up-taxonomy-based-permissions-for-regional-content-management
+url: https://www.contentstack.com/docs/headless-cms/setting-up-taxonomy-based-permissions-for-regional-content-management
 product: Contentstack
 doc_type: how-to
 audience:

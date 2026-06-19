@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Stack Users"
 description: About Stack Users
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/about-stack-users
+url: https://www.contentstack.com/docs/headless-cms/about-stack-users
 product: Contentstack
 doc_type: concept
 audience:

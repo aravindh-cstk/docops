@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Heroku
 description: Set up the Heroku Action connector to trigger a build of your Heroku app.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/heroku
+url: https://www.contentstack.com/docs/agent-os/heroku
 product: Contentstack
 doc_type: automation-connector-guide
 audience:

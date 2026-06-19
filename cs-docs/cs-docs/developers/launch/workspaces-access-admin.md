@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Workspaces, Access & Admin"
 uid: blt20ba33f29ffa36c2
-url: /developers/launch/workspaces-access-admin
+url: /launch/workspaces-access-admin
 contentstack:
   environment: production
   assets: []

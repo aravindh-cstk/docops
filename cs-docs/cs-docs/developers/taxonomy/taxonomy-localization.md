@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Taxonomy Localization"
 description: Taxonomy Localization
-url: https://www.contentstack.com/docs/developers/taxonomy/taxonomy-localization
+url: https://www.contentstack.com/docs/headless-cms/taxonomy-localization
 product: Contentstack
 doc_type: feature-guide
 audience:

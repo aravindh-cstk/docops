@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - Daylight Saving Time in Contentstack"
 description: How Daylight Saving Time (DST) affects scheduling publish/unpublish in Contentstack and how effective publishing date/time is displayed.
-url: https://www.contentstack.com/docs/content-managers/publish-content/daylight-saving-time-in-contentstack
+url: https://www.contentstack.com/docs/headless-cms/daylight-saving-time-in-contentstack
 product: Contentstack
 doc_type: article
 audience:

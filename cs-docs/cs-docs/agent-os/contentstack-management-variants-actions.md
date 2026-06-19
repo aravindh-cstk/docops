@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Contentstack Management - Variants Actions"
 description: Contentstack Management - Variants Actions
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-management-variants-actions
+url: https://www.contentstack.com/docs/agent-os/contentstack-management-variants-actions
 product: Contentstack
 doc_type: automation-hub-connector-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Management Tokens"
 description: About Management Tokens
-url: https://www.contentstack.com/docs/developers/create-tokens/about-management-tokens
+url: https://www.contentstack.com/docs/headless-cms/about-management-tokens
 product: Contentstack
 doc_type: concept
 audience:

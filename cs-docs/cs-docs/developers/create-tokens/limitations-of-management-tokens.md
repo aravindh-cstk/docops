@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Limitations of Management Tokens"
 description: Limitations and usage restrictions for management tokens.
-url: https://www.contentstack.com/docs/developers/create-tokens/limitations-of-management-tokens
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-management-tokens
 product: Set Up Your Project
 doc_type: reference
 audience:

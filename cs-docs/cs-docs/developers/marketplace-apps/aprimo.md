@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Aprimo App Installation Guide"
 description: Aprimo App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/aprimo
+url: https://www.contentstack.com/docs/marketplace/aprimo
 product: Contentstack
 doc_type: marketplace-guide
 audience:

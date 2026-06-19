@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Shopify App Installation Guide"
 description: Shopify App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/shopify
+url: https://www.contentstack.com/docs/marketplace/shopify
 product: Contentstack Marketplace
 doc_type: marketplace-guide
 audience:

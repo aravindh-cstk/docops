@@ -1,7 +1,7 @@
 ---
 title: Set Up Live Preview with REST for CSR
 description: Set up Contentstack Live Preview for client-side rendering (CSR) websites using REST APIs.
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-with-rest-for-client-side-rendering
+url: https://www.contentstack.com/docs/headless-cms/set-up-live-preview-with-rest-for-client-side-rendering
 product: Contentstack
 doc_type: guide
 audience:

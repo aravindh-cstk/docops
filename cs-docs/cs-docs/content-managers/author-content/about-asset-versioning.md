@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - About Asset Versioning"
 description: About Asset Versioning for managing asset change history in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/about-asset-versioning
+url: https://www.contentstack.com/docs/headless-cms/about-asset-versioning
 product: Contentstack
 doc_type: concept
 audience:

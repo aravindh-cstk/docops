@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Delete Entries and Assets in Bulk"
 description: Delete entries and assets found in search results in bulk in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/search-content/delete-entries-and-assets-in-bulk
+url: https://www.contentstack.com/docs/headless-cms/delete-entries-and-assets-in-bulk
 product: Contentstack
 doc_type: how-to
 audience:

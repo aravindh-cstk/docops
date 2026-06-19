@@ -1,7 +1,7 @@
 ---
 title: "[Team] - Delete a Team"
 description: Delete an existing team created in your Contentstack organization.
-url: https://www.contentstack.com/docs/developers/teams/delete-a-team
+url: https://www.contentstack.com/docs/administration/delete-a-team
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Create and Manage Releases NEW] - Edit a Release"
 description: Edit a Release
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/edit-a-release
+url: https://www.contentstack.com/docs/headless-cms/edit-a-release
 product: Contentstack
 doc_type: guide
 audience:

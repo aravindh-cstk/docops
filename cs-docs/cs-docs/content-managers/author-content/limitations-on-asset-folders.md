@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Limitations on Asset Folders"
 description: Limitations on asset folders, including maximum number of folders per stack and nesting levels.
-url: https://www.contentstack.com/docs/content-managers/author-content/limitations-on-asset-folders
+url: https://www.contentstack.com/docs/headless-cms/limitations-on-asset-folders
 product: Contentstack
 doc_type: reference
 audience:

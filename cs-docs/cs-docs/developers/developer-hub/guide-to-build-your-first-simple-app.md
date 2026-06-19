@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Guide to Build Your First Simple App"
 description: Guide to Build Your First Simple App
-url: https://www.contentstack.com/docs/developers/developer-hub/guide-to-build-your-first-simple-app
+url: https://www.contentstack.com/docs/developer-hub/guide-to-build-your-first-simple-app
 product: Contentstack
 doc_type: guide
 audience:
@@ -40,7 +40,7 @@ This step-by-step guide explains how to create a Color Picker app and use it to 
 
 ## Setup a New Project
 
-As a first step, you need to create a project directory where you can work in. We will be using the [Marketplace App Boilerplate](/docs/developers/developer-hub/marketplace-app-boilerplate/) for creating our project.
+As a first step, you need to create a project directory where you can work in. We will be using the [Marketplace App Boilerplate](/docs/developer-hub/marketplace-app-boilerplate/) for creating our project.
 
 ```
 git clone https://github.com/contentstack/marketplace-app-boilerplate.git color-picker
@@ -91,7 +91,7 @@ The **App Location(s)** section is enabled once you enter the App URL.
 - Hover over the **Custom Field** UI Location, and click the **+ Add** button.
 - Enter the details for the **Custom Field** configuration.
   **Name** (*optional*): By default, the app name is set as the location name. Enter appropriate names for the location, when you have more than one location of the same type.
-- **Signed** (*required*): When enabled, all the initial page load calls will contain a JWT token than can be used to verify whether the page load request originated from Contentstack itself. For more information, refer to the [Signed Locations](/docs/developers/developer-hub/securing-your-app/) document.
+- **Signed** (*required*): When enabled, all the initial page load calls will contain a JWT token than can be used to verify whether the page load request originated from Contentstack itself. For more information, refer to the [Signed Locations](/docs/developer-hub/securing-your-app/) document.
 - **Path** (*optional*): Allows you to configure the location URL path relative to the App URL. This is particularly useful when the developer wants the app to appear in multiple locations. For example, enter the path as `/custom-field`.
 - **Data Type** (*required*): Define what kind of data type this custom field location is storing. For example, select the data type `JSON`.
 - **Description** (*optional*): Enter a suitable description for your UI location. This description will be visible on the entry page when the user uses the custom field location.
@@ -282,7 +282,7 @@ $ npm start
 ## Next Steps
 
 **Secure your application**:
-Using the [signed support](https://www.contentstack.com/docs/developers/developer-hub/securing-your-app/), you can learn how to secure calls to outgoing APIs from the Contentstack UI and backend using the Contentstack App Framework.
+Using the [signed support](https://www.contentstack.com/docs/developer-hub/securing-your-app/), you can learn how to secure calls to outgoing APIs from the Contentstack UI and backend using the Contentstack App Framework.
 
 - **Host the app**:
 Now that your app is ready, host it for your team to use. You can host the app on external services like Netlify, Vercel, etc.

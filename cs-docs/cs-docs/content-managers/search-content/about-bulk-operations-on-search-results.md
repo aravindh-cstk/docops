@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - About Bulk Operations on Search Results"
 description: Contentstack allows you to perform bulk operations on search results, enabling content managers to select multiple items and perform actions such as Publish, Unpublish, Delete, or Change Workflow Details in bulk.
-url: https://www.contentstack.com/docs/content-managers/search-content/about-bulk-operations-on-search-results
+url: https://www.contentstack.com/docs/headless-cms/about-bulk-operations-on-search-results
 product: Contentstack
 doc_type: guide
 audience:

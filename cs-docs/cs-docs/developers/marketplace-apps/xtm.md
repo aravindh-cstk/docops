@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - XTM App Installation Guide"
 description: XTM App Installation Guide for installing and configuring the XTM app in Contentstack Marketplace and using it for machine and human translation.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/xtm
+url: https://www.contentstack.com/docs/marketplace/xtm
 product: Contentstack
 doc_type: marketplace-guide
 audience:

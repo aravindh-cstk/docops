@@ -1,7 +1,7 @@
 ---
 title: "[Content Models] - Contact Us Page"
 description: Content model schema and prerequisites for building a Contact Us Page using Contentstack Content Types and Global Fields.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models/contact-us-page
+url: https://www.contentstack.com/docs/marketplace-platform-guides/content-models/contact-us-page
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:
@@ -63,7 +63,7 @@ The Contact Us Page Content Model contains the [Content Types](/docs/developers/
 - **Contact Number**: This is a [Number](/docs/developers/create-content-types/number) field that stores the contact number of the organization. You can add multiple contact numbers to this field.
 - **Email Address**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field that stores the company’s official email address.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Contact Us Page Content Modeling](/docs/developers/content-modeling/contact-us-page/) documentation to understand how to model the "Contact Us" page.
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Contact Us Page Content Modeling](/docs/developers/content-modeling/contact-us-page/) documentation to understand how to model the "Contact Us" page.
 
 After publishing the entry, you can view the Contact Us Page on your website.
 

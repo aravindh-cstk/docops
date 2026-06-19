@@ -1,7 +1,7 @@
 ---
 title: "[Architecture Diagrams] - Simple Website with Contentstack Launch"
 uid: bltc7163bd2fff20430
-url: /developers/architecture-diagrams/simple-website-with-contentstack-launch
+url: https://www.contentstack.com/docs/headless-cms/simple-website-with-contentstack-launch
 contentstack:
   environment: production
   assets: []

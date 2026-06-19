@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Google Vertex
 description: Documentation for setting up and using the Google Vertex connector in Automate, including prerequisites and available actions.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/google-vertex
+url: https://www.contentstack.com/docs/agent-os/google-vertex
 product: Contentstack Automate
 doc_type: connector-guide
 audience:

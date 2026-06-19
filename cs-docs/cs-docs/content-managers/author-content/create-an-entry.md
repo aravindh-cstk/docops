@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Create an Entry"
 description: Create an Entry
-url: https://www.contentstack.com/docs/content-managers/author-content/create-an-entry
+url: https://www.contentstack.com/docs/headless-cms/create-an-entry
 product: Contentstack
 doc_type: guide
 audience:

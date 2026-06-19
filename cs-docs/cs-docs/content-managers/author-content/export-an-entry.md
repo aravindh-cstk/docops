@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Export an Entry"
 description: Exporting an entry in Contentstack allows you to download its data in JSON format.
-url: https://www.contentstack.com/docs/content-managers/author-content/export-an-entry
+url: https://www.contentstack.com/docs/headless-cms/export-an-entry
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Installing Apps"
 description: Installing Apps from the Contentstack Marketplace, including Stack Apps and Organization Apps.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/installing-apps
+url: https://www.contentstack.com/docs/marketplace/installing-apps
 product: Contentstack
 doc_type: marketplace-guide
 audience:

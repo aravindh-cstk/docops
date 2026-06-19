@@ -1,7 +1,7 @@
 ---
 title: "[Create Content Types] - Edit a Content Type"
 description: Instructions for editing a Contentstack content type, including updating fields and schema properties, with warnings about data loss and links to related guides and API reference.
-url: https://www.contentstack.com/docs/developers/create-content-types/edit-a-content-type
+url: https://www.contentstack.com/docs/headless-cms/edit-a-content-type
 product: Contentstack
 doc_type: guide
 audience:

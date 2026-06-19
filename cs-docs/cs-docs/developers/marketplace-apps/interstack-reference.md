@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Interstack Reference App Installation Guide"
 description: Installation and configuration guide for the Interstack Reference Marketplace app in Contentstack, including usage via a Custom field.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/interstack-reference
+url: https://www.contentstack.com/docs/marketplace/interstack-reference
 product: Contentstack
 doc_type: marketplace-guide
 audience:

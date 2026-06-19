@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Transform"
 description: Transform action connector documentation for manipulating texts and numbers, including actions like Aggregate Data, Date and Time Transformer, Filter Data, JSON Stringify, Merge Data, Modify Object Fields, Remove Duplicate Data, Sort Data, Transform modifiers, and Template helper functions.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/transform
+url: https://www.contentstack.com/docs/agent-os/transform
 product: Contentstack
 doc_type: connector-guide
 audience:

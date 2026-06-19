@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - Set Up Content Migration Framework (Windows)"
 description: Install and set up the Contentstack Migration Framework on Windows to migrate content from a legacy CMS into Contentstack.
-url: https://www.contentstack.com/docs/developers/content-migration/set-up-content-migration-framework-windows
+url: https://www.contentstack.com/docs/headless-cms/set-up-content-migration-framework-windows
 product: Contentstack
 doc_type: guide
 audience:

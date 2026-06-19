@@ -1,7 +1,7 @@
 ---
 title: "[Architecture Diagrams] - Layered Diagram"
 description: Layered Diagram
-url: https://www.contentstack.com/docs/developers/architecture-diagrams/contentstack-powered-website-layered-architecture
+url: https://www.contentstack.com/docs/headless-cms/contentstack-powered-website-layered-architecture
 product: Contentstack
 doc_type: architecture-diagram
 audience:

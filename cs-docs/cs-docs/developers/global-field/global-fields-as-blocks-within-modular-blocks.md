@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Global Fields as Blocks within Modular Blocks"
 description: Use Global fields as blocks within the Modular Blocks field while building content types in Contentstack.
-url: https://www.contentstack.com/docs/developers/global-field/global-fields-as-blocks-within-modular-blocks
+url: https://www.contentstack.com/docs/headless-cms/global-fields-as-blocks-within-modular-blocks
 product: Contentstack
 doc_type: guide
 audience:

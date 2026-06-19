@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Localization Operator Real-world Scenarios"
 description: Explore how the localization operator can enhance search accuracy in Contentstack through real-world examples.
-url: https://www.contentstack.com/docs/content-managers/search-content/localization-operator-real-world-scenarios
+url: https://www.contentstack.com/docs/headless-cms/localization-operator-real-world-scenarios
 product: Contentstack
 doc_type: guide
 audience:

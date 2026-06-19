@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Bulk Add to Release"
 description: Bulk Add to Release feature for selecting multiple entries and adding them to a release simultaneously.
-url: https://www.contentstack.com/docs/content-managers/author-content/bulk-add-to-release
+url: https://www.contentstack.com/docs/headless-cms/bulk-add-to-release
 product: Contentstack
 doc_type: feature-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Create and Apply Labels"
 description: Create and apply labels to content types in Contentstack, including branch-specific behavior and related API references.
-url: https://www.contentstack.com/docs/developers/create-content-types/create-and-apply-labels
+url: https://www.contentstack.com/docs/headless-cms/create-and-apply-labels
 product: Contentstack
 doc_type: guide
 audience:

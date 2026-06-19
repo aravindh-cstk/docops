@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Form"
 description: The Form panel in Visual Editor lets you edit entries, manage versions, and perform entry-level actions without leaving your page.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/form
+url: https://www.contentstack.com/docs/headless-cms/form
 product: Contentstack
 doc_type: guide
 audience:

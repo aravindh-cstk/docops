@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Repair GitHub Connection for Projects"
 description: Contentstack Launch enables you to automatically repair the GitHub connection for existing projects.
-url: https://www.contentstack.com/docs/developers/launch/repair-github-connection-for-projects
+url: https://www.contentstack.com/docs/launch/repair-github-connection-for-projects
 product: Contentstack Launch
 doc_type: how-to
 audience:
@@ -45,7 +45,7 @@ If you are experiencing any of the below issues or errors while trying to repair
 
 - **Please connect to a git provider OAuth app before proceeding with the repair**:  
   Your GitHub is currently disconnected.  
-  Reconnect your Launch project to GitHub by following the steps in the [Create a Project Using GitHub](/docs/developers/launch/import-project-using-github) documentation.
+  Reconnect your Launch project to GitHub by following the steps in the [Create a Project Using GitHub](/docs/launch/import-project-using-github) documentation.
   - Now proceed with Repair Connection.
 
 - **Git provider OAuth app is uninstalled. Please reconnect the git provider OAuth app before proceeding with the repair**:  
@@ -71,7 +71,7 @@ If there's any connection error between your Git repository and project, you can
 You need access to the Launch Project as the Owner/Admin.
 
 **What should I do if GitHub is disconnected before I try to repair?**  
-Reconnect your Launch project to GitHub by following the steps in the [Create a Project Using GitHub](/docs/developers/launch/import-project-using-github) documentation, then proceed with Repair Connection.
+Reconnect your Launch project to GitHub by following the steps in the [Create a Project Using GitHub](/docs/launch/import-project-using-github) documentation, then proceed with Repair Connection.
 
 **Where do I grant repository access for the GitHub app?**  
 Navigate to https://github.com/settings/installations, click **Configure** next to the installed app, then update **Repository access** and click **Save**.

@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - Removing Stale Data from Targeting with Automate"
 description: Removing stale terms from targeting data fields using an automation triggered by webhook or scheduler.
-url: https://www.contentstack.com/docs/developers/solution-guides/removing-stale-data-from-targeting-with-automate
+url: https://www.contentstack.com/docs/headless-cms/removing-stale-data-from-targeting-with-automate
 product: Contentstack
 doc_type: solution-guide
 audience:

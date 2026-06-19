@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Back up Existing Content"
 description: How to back up existing content using Contentstack webhooks.
-url: https://www.contentstack.com/docs/content-managers/author-content/back-up-existing-content
+url: https://www.contentstack.com/docs/headless-cms/back-up-existing-content
 product: Contentstack
 doc_type: guide
 audience:

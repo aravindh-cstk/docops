@@ -1,7 +1,7 @@
 ---
 title: Set Up Your Project - Number
 description: Documentation for the Number field in content types, including its purpose, modifiable properties, and related resources.
-url: https://www.contentstack.com/docs/developers/create-content-types/number
+url: https://www.contentstack.com/docs/headless-cms/number
 product: Contentstack
 doc_type: field-reference
 audience:

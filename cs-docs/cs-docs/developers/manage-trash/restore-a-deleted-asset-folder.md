@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Restore a Deleted Asset Folder"
 description: Restore a deleted asset folder from the Trash, including options to restore with or without assets.
-url: https://www.contentstack.com/docs/developers/manage-trash/restore-a-deleted-asset-folder
+url: https://www.contentstack.com/docs/headless-cms/restore-a-deleted-asset-folder
 product: Contentstack
 doc_type: how-to
 audience:

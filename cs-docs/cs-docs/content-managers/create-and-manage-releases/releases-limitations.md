@@ -1,7 +1,7 @@
 ---
 title: "[Create and Manage Releases NEW] - Releases Limitations"
 description: Releases Limitations
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/releases-limitations
+url: https://www.contentstack.com/docs/headless-cms/releases-limitations
 product: Content Managers
 doc_type: reference
 audience:

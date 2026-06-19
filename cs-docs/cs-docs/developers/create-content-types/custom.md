@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Custom"
 description: Documentation for the Custom field used to add and use customizable fields in a Contentstack content type via extensions (custom field logic).
-url: https://www.contentstack.com/docs/developers/create-content-types/custom
+url: https://www.contentstack.com/docs/headless-cms/custom
 product: Contentstack
 doc_type: developer-guide
 audience:

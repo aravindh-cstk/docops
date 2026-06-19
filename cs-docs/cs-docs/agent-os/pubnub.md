@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - PubNub
 description: Set up the PubNub action connector to send a message to a specified channel through your PubNub account.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/pubnub
+url: https://www.contentstack.com/docs/agent-os/pubnub
 product: Contentstack
 doc_type: connector-guide
 audience:

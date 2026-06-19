@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - App Visibility Status"
 description: App Visibility Status defines the visibility of your app in terms of whether it will be private (visible to only you) or public (visible to all).
-url: https://www.contentstack.com/docs/developers/developer-hub/app-visibility-status
+url: https://www.contentstack.com/docs/developer-hub/app-visibility-status
 product: Contentstack
 doc_type: developer-hub-guide
 audience:

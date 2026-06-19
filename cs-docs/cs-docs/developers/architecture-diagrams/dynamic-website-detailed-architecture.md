@@ -1,7 +1,7 @@
 ---
 title: "[Architecture Diagrams] - Dynamic Website"
 description: Detailed architecture diagram and explanation for a dynamic website setup using Contentstack, including SaaS, IaaS, and CDN layers.
-url: https://www.contentstack.com/docs/developers/architecture-diagrams/dynamic-website-detailed-architecture
+url: https://www.contentstack.com/docs/headless-cms/dynamic-website-detailed-architecture
 product: Contentstack
 doc_type: architecture-diagram
 audience:

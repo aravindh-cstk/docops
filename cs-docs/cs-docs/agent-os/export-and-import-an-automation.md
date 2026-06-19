@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Export and Import an Automation"
 description: Export and import automation workflows as JSON files to migrate configurations across projects and organizations.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/export-and-import-an-automation
+url: https://www.contentstack.com/docs/agent-os/export-and-import-an-automation
 product: Automation Hub
 doc_type: guide
 audience:

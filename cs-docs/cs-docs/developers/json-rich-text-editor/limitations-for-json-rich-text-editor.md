@@ -1,7 +1,7 @@
 ---
 title: "[Json Rich Text Editor] - Limitations for JSON Rich Text Editor"
 description: Limitations for JSON Rich Text Editor
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/limitations-for-json-rich-text-editor
+url: https://www.contentstack.com/docs/headless-cms/limitations-for-json-rich-text-editor
 product: Json Rich Text Editor
 doc_type: reference
 audience:

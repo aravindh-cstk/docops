@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Run a Quick Search"
 description: Run a quick search for entries using the Contentstack search bar and keyboard shortcut.
-url: https://www.contentstack.com/docs/content-managers/search-content/run-a-quick-search
+url: https://www.contentstack.com/docs/headless-cms/run-a-quick-search
 product: Contentstack
 doc_type: how-to
 audience:

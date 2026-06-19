@@ -1,7 +1,7 @@
 ---
 title: "[SCIM] - Set Up SCIM Provisioning with Okta Native App"
 description: Configure Contentstack as a provisioning app in Okta Native App to provision or deprovision users automatically using SCIM.
-url: https://www.contentstack.com/docs/developers/scim/set-up-scim-provisioning-with-okta-native-app
+url: https://www.contentstack.com/docs/administration/set-up-scim-provisioning-with-okta-native-app
 product: Contentstack
 doc_type: guide
 audience:

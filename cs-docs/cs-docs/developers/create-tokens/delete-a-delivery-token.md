@@ -1,7 +1,7 @@
 ---
 title: "[Create Tokens] - Delete a Delivery Token"
 description: Instructions for deleting a Delivery Token (and its associated Preview Token) in Contentstack, plus how to delete only the Preview Token and related API references.
-url: https://www.contentstack.com/docs/developers/create-tokens/delete-a-delivery-token
+url: https://www.contentstack.com/docs/headless-cms/delete-a-delivery-token
 product: Contentstack
 doc_type: how-to
 audience:

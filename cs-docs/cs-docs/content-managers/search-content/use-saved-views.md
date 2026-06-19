@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Use Saved Views"
 description: Saved Views in Contentstack let you quickly access customized search settings and filters for entries and assets.
-url: https://www.contentstack.com/docs/content-managers/search-content/use-saved-views
+url: https://www.contentstack.com/docs/headless-cms/use-saved-views
 product: Contentstack
 doc_type: guide
 audience:

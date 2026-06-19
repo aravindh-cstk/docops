@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - AI-Generated SEO Keywords with Automate"
 description: AI-Generated SEO Keywords with Automate
-url: https://www.contentstack.com/docs/developers/solution-guides/ai-generated-seo-keywords-with-automate
+url: https://www.contentstack.com/docs/headless-cms/ai-generated-seo-keywords-with-automate
 product: Contentstack
 doc_type: solution-guide
 audience:

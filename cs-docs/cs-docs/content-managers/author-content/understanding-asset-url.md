@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Understanding Asset URL"
 description: "Explains the structure of Contentstack asset URLs and what each part represents."
-url: https://www.contentstack.com/docs/content-managers/author-content/understanding-asset-url
+url: https://www.contentstack.com/docs/headless-cms/understanding-asset-url
 product: "Contentstack"
 doc_type: "concept"
 audience:

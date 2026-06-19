@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Contentstack Management - Global Fields Actions"
 description: Contentstack Management - Global Fields Actions
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-management-global-fields-actions
+url: https://www.contentstack.com/docs/agent-os/contentstack-management-global-fields-actions
 product: Contentstack
 doc_type: connector-guide
 audience:

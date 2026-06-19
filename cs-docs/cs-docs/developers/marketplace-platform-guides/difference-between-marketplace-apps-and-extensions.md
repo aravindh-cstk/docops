@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Difference Between Marketplace Apps and Extensions"
 description: Difference Between Marketplace Apps and Extensions
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/difference-between-marketplace-apps-and-extensions
+url: https://www.contentstack.com/docs/marketplace/difference-between-marketplace-apps-and-extensions
 product: Contentstack
 doc_type: marketplace-guide
 audience:

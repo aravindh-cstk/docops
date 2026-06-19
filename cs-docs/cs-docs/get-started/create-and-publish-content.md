@@ -1,7 +1,7 @@
 ---
 title: "[Get Started with CS] - Create and Publish Content"
 description: Learn how as content managers, you manage your content within Contentstack by creating entries, searching content, publishing content, deploying releases, using workflows, and managing obsolete content.
-url: https://www.contentstack.com/docs/get-started/create-and-publish-content
+url: https://www.contentstack.com/docs/headless-cms/create-and-publish-content
 product: Contentstack
 doc_type: get-started
 audience:

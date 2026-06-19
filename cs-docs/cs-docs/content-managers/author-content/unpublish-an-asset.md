@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Unpublish an Asset"
 description: "Steps to unpublish an asset from selected environments and locales in Contentstack, including scheduling and API reference."
-url: https://www.contentstack.com/docs/content-managers/author-content/unpublish-an-asset
+url: https://www.contentstack.com/docs/headless-cms/unpublish-an-asset
 product: "Contentstack"
 doc_type: "how-to"
 audience:

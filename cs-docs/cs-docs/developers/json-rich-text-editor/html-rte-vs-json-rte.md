@@ -1,7 +1,7 @@
 ---
 title: "[Json Rich Text Editor] - HTML RTE vs JSON RTE"
 description: Differences between HTML RTE and JSON RTE content storage, editing environment, flexibility, and developer interaction.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/html-rte-vs-json-rte
+url: https://www.contentstack.com/docs/headless-cms/html-rte-vs-json-rte
 product: Json Rich Text Editor
 doc_type: conceptual-guide
 audience:

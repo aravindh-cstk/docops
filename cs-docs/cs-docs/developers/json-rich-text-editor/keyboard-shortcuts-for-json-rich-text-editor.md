@@ -1,7 +1,7 @@
 ---
 title: "[JSON Rich Text Editor] - Keyboard Shortcuts for JSON Rich Text Editor"
 description: Keyboard shortcuts for formatting, headings, blocks, alignment, lists, line breaks, tables, and miscellaneous actions in the JSON Rich Text Editor on Windows and macOS.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/keyboard-shortcuts-for-json-rich-text-editor
+url: https://www.contentstack.com/docs/headless-cms/keyboard-shortcuts-for-json-rich-text-editor
 product: JSON Rich Text Editor
 doc_type: reference
 audience:

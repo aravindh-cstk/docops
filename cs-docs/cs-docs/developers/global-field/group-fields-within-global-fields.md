@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Group Fields within Global Fields"
 description: Use Group fields within Global fields in Contentstack to streamline content modeling and reduce repetitive configurations.
-url: https://www.contentstack.com/docs/developers/global-field/group-fields-within-global-fields
+url: https://www.contentstack.com/docs/headless-cms/group-fields-within-global-fields
 product: Contentstack
 doc_type: how-to
 audience:

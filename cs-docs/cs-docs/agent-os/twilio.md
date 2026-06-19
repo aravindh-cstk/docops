@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Twilio
 description: Set up and use the Twilio action connector to perform voice, messaging, video, and other communication functions via Twilio web service APIs.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/twilio
+url: https://www.contentstack.com/docs/agent-os/twilio
 product: Automation Hub
 doc_type: connector-guide
 audience:

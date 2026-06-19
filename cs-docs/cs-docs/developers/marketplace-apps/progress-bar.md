@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Progress Bar App Installation Guide"
 description: Progress Bar App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/progress-bar
+url: https://www.contentstack.com/docs/marketplace/progress-bar
 product: Contentstack
 doc_type: marketplace-guide
 audience:

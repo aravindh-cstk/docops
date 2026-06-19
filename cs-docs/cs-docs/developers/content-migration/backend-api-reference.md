@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - Backend API Reference"
 description: Backend API reference for content migration, covering configurations, controllers, middleware, authentication, migrations, and management endpoints.
-url: https://www.contentstack.com/docs/developers/content-migration/backend-api-reference
+url: https://www.contentstack.com/docs/headless-cms/backend-api-reference
 product: Content Migration
 doc_type: api-reference
 audience:

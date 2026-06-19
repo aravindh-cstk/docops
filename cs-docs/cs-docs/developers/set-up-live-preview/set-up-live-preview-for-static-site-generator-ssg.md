@@ -1,7 +1,7 @@
 ---
 title: "[Set up Live Preview] - Set up Live Preview for Static-Site Generator (SSG)"
 description: Set up Live Preview for Static-Site Generator (SSG) websites using CSR mode, including prerequisites, preview token setup, SDK configuration, Live Preview Utils SDK initialization, webpage configuration, hosting, stack settings, and Live Edit tags.
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-for-static-site-generator-ssg
+url: https://www.contentstack.com/docs/headless-cms/set-up-live-preview-for-static-site-generator-ssg
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Delete a Content Type"
 description: Delete a Content Type
-url: https://www.contentstack.com/docs/developers/create-content-types/delete-a-content-type
+url: https://www.contentstack.com/docs/headless-cms/delete-a-content-type
 product: Contentstack
 doc_type: how-to
 audience:

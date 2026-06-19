@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - File size limit"
 description: Documentation for configuring the File size limit (MB) property for a File field in content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/file-size-limit
+url: https://www.contentstack.com/docs/headless-cms/file-size-limit
 product: Contentstack
 doc_type: guide
 audience:

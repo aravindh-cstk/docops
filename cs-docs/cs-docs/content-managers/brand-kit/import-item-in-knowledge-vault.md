@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Import Item in Knowledge Vault"
 description: Import previously exported items into the Knowledge Vault to restore configurations, migrate setups between environments, or reuse saved data.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/import-item-in-knowledge-vault
+url: https://www.contentstack.com/docs/brand-kit/import-item-in-knowledge-vault
 product: Contentstack
 doc_type: how-to
 audience:
@@ -25,11 +25,11 @@ Import previously exported items into the Knowledge Vault to restore configurati
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
 - Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
-- Access to Brand Kit as an invited [Collaborator](/docs/content-managers/brand-kit/invite-collaborators/)
+- Access to Brand Kit as an invited [Collaborator](/docs/brand-kit/invite-collaborators/)
 
 ## Steps for Execution
 
-**Note**: This guide assumes that you have already [added items in the Knowledge Vault](/docs/content-managers/brand-kit/add-item-in-knowledge-vault) within your Brand Kit.
+**Note**: This guide assumes that you have already [added items in the Knowledge Vault](/docs/brand-kit/add-item-in-knowledge-vault) within your Brand Kit.
 
 To import an item in Knowledge Vault, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the left navigation panel, click the **Brand Kit** icon.

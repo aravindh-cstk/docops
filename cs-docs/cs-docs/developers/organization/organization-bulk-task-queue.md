@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Organization Bulk Task Queue"
 description: Documentation for the Organization Bulk Task Queue in Contentstack, including task statuses and filtering options.
-url: https://www.contentstack.com/docs/developers/organization/organization-bulk-task-queue
+url: https://www.contentstack.com/docs/administration/organization-bulk-task-queue
 product: Contentstack
 doc_type: guide
 audience:

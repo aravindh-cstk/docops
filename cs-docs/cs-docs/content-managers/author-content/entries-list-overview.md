@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Entries List Overview"
 description: Overview of the Entries list page, including key features, navigation, filtering, sorting, and display options.
-url: https://www.contentstack.com/docs/content-managers/author-content/entries-list-overview
+url: https://www.contentstack.com/docs/headless-cms/entries-list-overview
 product: Contentstack
 doc_type: overview
 audience:

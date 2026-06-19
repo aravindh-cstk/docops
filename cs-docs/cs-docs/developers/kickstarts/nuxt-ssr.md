@@ -1,7 +1,7 @@
 ---
 title: "[Kickstarts] - Kickstart Nuxt (SSR)"
 uid: bltee67801230f267a7
-url: /developers/kickstarts/nuxt-ssr
+url: https://www.contentstack.com/docs/headless-cms/nuxt-ssr
 contentstack:
   environment: production
   assets: []

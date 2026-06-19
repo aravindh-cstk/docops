@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Basics} - What You Need to Get Started"
 description: Minimum requirements needed to run the Contentstack app at optimal performance.
-url: https://www.contentstack.com/docs/developers/contentstack-basics/what-you-need-to-get-started
+url: https://www.contentstack.com/docs/headless-cms/what-you-need-to-get-started
 product: Contentstack
 doc_type: getting-started
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Stack] - Delete a Stack"
 description: Delete a stack and understand the impact, permissions, and API option.
-url: https://www.contentstack.com/docs/developers/set-up-stack/delete-a-stack
+url: https://www.contentstack.com/docs/headless-cms/delete-a-stack
 product: Contentstack
 doc_type: how-to
 audience:

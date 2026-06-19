@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Traffic Encryption"
 description: Traffic Encryption for Contentstack Launch deployments, including HTTPS, TLS versions, and supported cipher suites.
-url: https://www.contentstack.com/docs/developers/launch/traffic-encryption
+url: https://www.contentstack.com/docs/launch/traffic-encryption
 product: Contentstack Launch
 doc_type: security-guide
 audience:

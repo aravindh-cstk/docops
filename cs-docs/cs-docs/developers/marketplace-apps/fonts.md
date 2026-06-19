@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Fonts App Installation Guide"
 description: Fonts App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/fonts
+url: https://www.contentstack.com/docs/marketplace/fonts
 product: Contentstack
 doc_type: marketplace-guide
 audience:

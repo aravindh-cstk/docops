@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Benefits of Live Preview"
 description: "Benefits of Live Preview"
-url: https://www.contentstack.com/docs/content-managers/author-content/benefits-of-live-preview
+url: https://www.contentstack.com/docs/headless-cms/benefits-of-live-preview
 product: Contentstack
 doc_type: author-content
 audience:

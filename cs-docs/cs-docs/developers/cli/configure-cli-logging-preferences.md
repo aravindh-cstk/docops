@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Configure CLI Logging Preferences"
 description: Configure logging preferences for the Contentstack CLI using config:set:log and config:get:log commands.
-url: https://www.contentstack.com/docs/developers/cli/configure-cli-logging-preferences
+url: https://www.contentstack.com/docs/headless-cms/configure-cli-logging-preferences
 product: Contentstack
 doc_type: cli-guide
 audience:

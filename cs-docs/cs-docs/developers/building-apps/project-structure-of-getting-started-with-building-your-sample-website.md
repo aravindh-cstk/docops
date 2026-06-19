@@ -1,7 +1,7 @@
 ---
 title: "[Building Websites] - Project Structure of Getting Started With Building Your Sample Website"
 description: Project structure of getting started with building your sample website.
-url: https://www.contentstack.com/docs/developers/building-apps/project-structure-of-getting-started-with-building-your-sample-website
+url: https://www.contentstack.com/docs/headless-cms/project-structure-of-getting-started-with-building-your-sample-website
 product: Building Websites
 doc_type: getting-started
 audience:

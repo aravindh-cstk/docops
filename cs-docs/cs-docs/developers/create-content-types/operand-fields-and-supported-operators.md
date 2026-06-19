@@ -1,7 +1,7 @@
 ---
 title: "[Field Visibility Rules] - Operand Fields and Supported Operators"
 description: Operand fields and supported operators for field-based operations in Field Visibility Rules.
-url: https://www.contentstack.com/docs/developers/create-content-types/operand-fields-and-supported-operators
+url: https://www.contentstack.com/docs/headless-cms/operand-fields-and-supported-operators
 product: Field Visibility Rules
 doc_type: reference
 audience:

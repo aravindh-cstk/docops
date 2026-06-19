@@ -1,7 +1,7 @@
 ---
 title: "[Fields] - Taxonomy"
 description: Documentation for the Taxonomy field, including how developers add it to content types and how content managers use it when creating entries.
-url: https://www.contentstack.com/docs/developers/create-content-types/taxonomy
+url: https://www.contentstack.com/docs/headless-cms/taxonomy
 product: Documentation
 doc_type: field-guide
 audience:

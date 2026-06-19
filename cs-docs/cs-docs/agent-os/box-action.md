@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Box Action"
 description: Documentation for configuring the Box Action connector to automate file upload and generate a file download URL.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/box-action
+url: https://www.contentstack.com/docs/agent-os/box-action
 product: Automation Hub
 doc_type: connector-guide
 audience:

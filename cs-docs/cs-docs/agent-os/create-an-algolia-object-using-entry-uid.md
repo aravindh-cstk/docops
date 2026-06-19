@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Create an Algolia Object using Entry UID"
 description: Create an Algolia Object using Entry UID using Contentstack Automations with Contentstack trigger, Transform action, and Algolia Index Entries action.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/create-an-algolia-object-using-entry-uid
+url: https://www.contentstack.com/docs/agent-os/create-an-algolia-object-using-entry-uid
 product: Contentstack
 doc_type: automation-hub-guide
 audience:

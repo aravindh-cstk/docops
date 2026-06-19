@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Microsoft Teams
 description: Setup and use the Microsoft Teams action connector to send automated messages in channels or chats via Automate.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/microsoft-teams
+url: https://www.contentstack.com/docs/agent-os/microsoft-teams
 product: Automate
 doc_type: connector-guide
 audience:

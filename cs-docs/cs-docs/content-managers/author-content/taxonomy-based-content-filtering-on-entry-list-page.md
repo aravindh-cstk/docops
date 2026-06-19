@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Taxonomy-based Content Filtering on Entry List Page"
 description: Taxonomy-based Content Filtering on Entry List Page
-url: https://www.contentstack.com/docs/content-managers/author-content/taxonomy-based-content-filtering-on-entry-list-page
+url: https://www.contentstack.com/docs/headless-cms/taxonomy-based-content-filtering-on-entry-list-page
 product: Contentstack
 doc_type: guide
 audience:

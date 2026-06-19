@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Optimizing Content Management with Taxonomy-based Permissions"
 description: Optimizing Content Management with Taxonomy-based Permissions
-url: https://www.contentstack.com/docs/developers/taxonomy/optimize-content-management-with-taxonomy-based-permissions
+url: https://www.contentstack.com/docs/headless-cms/optimize-content-management-with-taxonomy-based-permissions
 product: Contentstack
 doc_type: guide
 audience:

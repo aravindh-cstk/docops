@@ -1,7 +1,7 @@
 ---
 title: "[Introduction to Contentstack - a Headless CMS] - Glossary"
 description: Glossary of key terms and core concepts across the Contentstack CMS.
-url: https://www.contentstack.com/docs/overview/glossary
+url: https://www.contentstack.com/docs/headless-cms/glossary
 product: Contentstack
 doc_type: glossary
 audience:

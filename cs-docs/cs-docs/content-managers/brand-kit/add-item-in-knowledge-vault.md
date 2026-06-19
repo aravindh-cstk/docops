@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Add Item in Knowledge Vault"
 description: Add items into the Brand Kit Knowledge Vault using the UI, including manual text entry and file upload.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/add-item-in-knowledge-vault
+url: https://www.contentstack.com/docs/brand-kit/add-item-in-knowledge-vault
 product: Contentstack
 doc_type: guide
 audience:
@@ -38,7 +38,7 @@ To add an item in Brand Kit Knowledge Vault, log in to your [Contentstack accoun
 - Click **Knowledge Vault** from the left navigation panel, then click the **+ New Item** button and select **Add Manually** to add a new item to the Knowledge Vault.  
   **Note**: Only Brand Kit Owners and Admins can add items to the Knowledge Vault.  
 
-  **Additional Resource**: To import an item in Knowledge Vault, refer to the [Import Item in Knowledge Vault](/docs/content-managers/brand-kit/import-item-in-knowledge-vault) document.
+  **Additional Resource**: To import an item in Knowledge Vault, refer to the [Import Item in Knowledge Vault](/docs/brand-kit/import-item-in-knowledge-vault) document.
 - In the **Add Item** modal, you have two options to add items into the Knowledge Vault:
 
   **Manual Text Entry**: Select **Manual Text Entry** and click **Add** to directly add text in the corresponding screen that opens. Enter **Name**, **Text Content** in the editor, and click **Save** to add the item in the Knowledge Vault.

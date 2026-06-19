@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - Nested Reference Publishing Use Cases"
 description: Nested Reference Publishing Use Cases for publishing nested references with complex structures and understanding bulk publish statuses.
-url: https://www.contentstack.com/docs/content-managers/publish-content/nested-reference-publishing-use-cases
+url: https://www.contentstack.com/docs/headless-cms/nested-reference-publishing-use-cases
 product: Contentstack
 doc_type: guide
 audience:

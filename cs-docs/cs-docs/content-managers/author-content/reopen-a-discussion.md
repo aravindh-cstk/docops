@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Reopen a Discussion"
 description: "How to reopen resolved discussions in Contentstack entries using the Discussions tab."
-url: https://www.contentstack.com/docs/content-managers/author-content/reopen-a-discussion
+url: https://www.contentstack.com/docs/headless-cms/reopen-a-discussion
 product: Contentstack
 doc_type: how-to
 audience:

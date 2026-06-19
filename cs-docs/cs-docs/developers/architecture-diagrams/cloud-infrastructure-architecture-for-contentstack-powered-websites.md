@@ -1,7 +1,7 @@
 ---
 title: "[Architecture Diagrams] - Cloud Infrastructure"
 description: Cloud infrastructure architecture diagram and explanation for Contentstack-powered websites using Amazon Web Services (AWS).
-url: https://www.contentstack.com/docs/developers/architecture-diagrams/cloud-infrastructure-architecture-for-contentstack-powered-websites
+url: https://www.contentstack.com/docs/headless-cms/cloud-infrastructure-architecture-for-contentstack-powered-websites
 product: Contentstack
 doc_type: architecture-diagram
 audience:

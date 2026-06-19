@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Releases"
 description: About Releases
-url: https://www.contentstack.com/docs/developers/create-releases/about-releases
+url: https://www.contentstack.com/docs/headless-cms/about-releases
 product: Contentstack
 doc_type: concept
 audience:

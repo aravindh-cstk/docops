@@ -1,7 +1,7 @@
 ---
 title: "[Get Started with CS] - Building Websites with Contentstack and AI"
 uid: blt47b5c6cbb5777ad0
-url: /get-started/build-websites-with-contentstack-and-ai
+url: https://www.contentstack.com/docs/headless-cms/build-websites-with-contentstack-and-ai
 contentstack:
   environment: production
   assets: []

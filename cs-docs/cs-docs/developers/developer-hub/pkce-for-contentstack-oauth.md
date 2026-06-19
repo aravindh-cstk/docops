@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - PKCE for Contentstack OAuth"
 description: PKCE for Contentstack OAuth
-url: https://www.contentstack.com/docs/developers/developer-hub/pkce-for-contentstack-oauth
+url: https://www.contentstack.com/docs/developer-hub/pkce-for-contentstack-oauth
 product: Contentstack
 doc_type: developer-hub-guide
 audience:

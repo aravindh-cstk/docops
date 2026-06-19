@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Blocking AI Crawlers"
 description: Blocking AI crawlers in Contentstack Launch using robots.txt and Launch Edge Functions.
-url: https://www.contentstack.com/docs/developers/launch/blocking-ai-crawlers
+url: https://www.contentstack.com/docs/launch/blocking-ai-crawlers
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -26,7 +26,7 @@ AI crawlers have become a common presence across the web, scanning websites and 
 
 Launch provides two ways to help you control access by AI crawlers:
 - Using a `robots.txt` file.
-- Using [Contentstack Launch Edge Functions](/docs/developers/launch/edge-functions/) to block crawlers at runtime.
+- Using [Contentstack Launch Edge Functions](/docs/launch/edge-functions/) to block crawlers at runtime.
 
 **Note:**
 - If you want to **disallow all web crawlers**, including non-AI crawlers, for **a specific domain**, you can add the [**X-Robots-Tag header**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Robots-Tag) (for example, `"noindex, nofollow"`) to your responses. See [this example](https://github.com/contentstack-launch-examples/monorepo-with-edge-function/blob/block-crawlers-for-a-domain/functions/%5Bproxy%5D.edge.js) on how to implement it in your Launch project using **Launch Edge Functions**.
@@ -112,7 +112,7 @@ export default function handler(request) {
 - Whenever you add a User-Agent in the `KNOWN_BOTS` list, ensure you add it in lowercase.
 
 ## Deployment Instructions on Contentstack Launch
-- Refer to the [Launch Edge Functions](/docs/developers/launch/edge-functions) documentation for setup.
+- Refer to the [Launch Edge Functions](/docs/launch/edge-functions) documentation for setup.
 - Add the edge function to your project’s edge runtime entry point.
 - Deploy using your Launch pipeline. The edge function will begin filtering requests before they reach your backend or frontend.
 

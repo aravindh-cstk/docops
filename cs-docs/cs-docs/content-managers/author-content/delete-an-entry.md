@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Delete an Entry"
 description: How to delete an entry in Contentstack and what happens after deletion, including trash retention and related resources.
-url: https://www.contentstack.com/docs/content-managers/author-content/delete-an-entry
+url: https://www.contentstack.com/docs/headless-cms/delete-an-entry
 product: Contentstack
 doc_type: how-to
 audience:

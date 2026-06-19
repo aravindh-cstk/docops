@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - JSON Rich Text Editor for Content Managers"
 description: JSON Rich Text Editor for Content Managers
-url: https://www.contentstack.com/docs/content-managers/author-content/json-rich-text-editor-for-content-managers
+url: https://www.contentstack.com/docs/headless-cms/json-rich-text-editor-for-content-managers
 product: Contentstack
 doc_type: guide
 audience:

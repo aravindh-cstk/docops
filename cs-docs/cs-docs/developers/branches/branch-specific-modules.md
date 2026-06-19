@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Branch-specific Modules"
 description: Branch-specific Modules
-url: https://www.contentstack.com/docs/developers/branches/branch-specific-modules
+url: https://www.contentstack.com/docs/headless-cms/branch-specific-modules
 product: Contentstack
 doc_type: guide
 audience:

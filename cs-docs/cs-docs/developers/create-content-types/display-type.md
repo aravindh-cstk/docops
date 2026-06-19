@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Display Type"
 description: Documentation for the Display Type parameter for the Select field when setting up your project content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/display-type
+url: https://www.contentstack.com/docs/headless-cms/display-type
 product: Developer Docs
 doc_type: reference
 audience:

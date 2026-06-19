@@ -1,7 +1,7 @@
 ---
 title: "[Set up Live Preview] - Get Started with Live Preview Utils SDK V2.0"
 description: Get Started with Live Preview Utils SDK V2.0
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/get-started-with-live-preview-utils-sdk
+url: https://www.contentstack.com/docs/headless-cms/get-started-with-live-preview-utils-sdk
 product: Contentstack
 doc_type: get-started
 audience:

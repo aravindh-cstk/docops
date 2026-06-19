@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Rename an Asset Folder"
 description: Rename an asset folder in Contentstack via the UI or using the Content Management API.
-url: https://www.contentstack.com/docs/content-managers/author-content/rename-a-folder
+url: https://www.contentstack.com/docs/headless-cms/rename-a-folder
 product: Contentstack
 doc_type: how-to
 audience:

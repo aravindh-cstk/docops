@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - BigCommerce Trigger"
 description: Configure the BigCommerce trigger connector in Automation Hub to listen for BigCommerce events and use them in automations.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/bigcommerce-trigger
+url: https://www.contentstack.com/docs/agent-os/bigcommerce-trigger
 product: Automation Hub
 doc_type: connector-guide
 audience:

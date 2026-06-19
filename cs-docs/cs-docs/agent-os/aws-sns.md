@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - AWS SNS"
 description: AWS SNS connector setup and usage for sending notifications via AWS Simple Notification Service (AWS SNS).
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/aws-sns
+url: https://www.contentstack.com/docs/agent-os/aws-sns
 product: Contentstack
 doc_type: automation-connector-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - About Entries"
 description: About Entries
-url: https://www.contentstack.com/docs/content-managers/author-content/about-entries
+url: https://www.contentstack.com/docs/headless-cms/about-entries
 product: Contentstack
 doc_type: concept
 audience:

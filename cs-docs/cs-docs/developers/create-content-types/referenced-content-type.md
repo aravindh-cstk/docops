@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Referenced Content Type"
 description: Documentation for the Referenced Content Type field property used with reference fields in Contentstack content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/referenced-content-type
+url: https://www.contentstack.com/docs/headless-cms/referenced-content-type
 product: Contentstack
 doc_type: field-properties
 audience:

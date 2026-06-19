@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Managing your Apps"
 description: Manage installed/authorized apps and installation requests from the Manage section in the Marketplace.
-url: https://www.contentstack.com/docs/developers/developer-hub/managing-your-apps
+url: https://www.contentstack.com/docs/developer-hub/managing-your-apps
 product: Contentstack
 doc_type: guide
 audience:

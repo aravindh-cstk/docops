@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Limitations for Taxonomy"
 description: Limitations for Taxonomy
-url: https://www.contentstack.com/docs/developers/taxonomy/limitations-for-taxonomy
+url: https://www.contentstack.com/docs/headless-cms/limitations-for-taxonomy
 product: Contentstack
 doc_type: reference
 audience:

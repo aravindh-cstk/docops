@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Launch Trigger"
 description: Documentation for configuring Deployment and Environment trigger events for the Contentstack Launch connector in Automation Hub.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/launch-trigger
+url: https://www.contentstack.com/docs/agent-os/launch-trigger
 product: Contentstack
 doc_type: automation-hub-connector-guide
 audience:

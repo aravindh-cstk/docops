@@ -1,7 +1,7 @@
 ---
 title: "[GraphQL API NEW] - Use GraphQL Queries with Apollo Client iOS SDK"
 description: Use GraphQL Queries with Apollo Client iOS SDK
-url: https://www.contentstack.com/docs/developers/graphql-api/use-the-graphql-queries-with-apollo-sdks/use-graphql-queries-with-apollo-client-ios-sdk
+url: https://www.contentstack.com/docs/headless-cms/use-graphql-queries-with-apollo-client-ios-sdk
 product: Contentstack
 doc_type: guide
 audience:

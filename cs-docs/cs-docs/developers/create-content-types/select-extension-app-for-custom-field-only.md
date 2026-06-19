@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Select Extension/App (for Custom Field only)"
 description: Select Extension/App (for Custom Field only)
-url: https://www.contentstack.com/docs/developers/create-content-types/select-extension-app-for-custom-field-only
+url: https://www.contentstack.com/docs/headless-cms/select-extension-app-for-custom-field-only
 product: Contentstack
 doc_type: how-to
 audience:

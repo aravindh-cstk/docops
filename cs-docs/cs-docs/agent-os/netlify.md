@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Netlify
 description: Documentation for the Netlify connector in Contentstack Automations, including setup steps and deploying a site.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/netlify
+url: https://www.contentstack.com/docs/agent-os/netlify
 product: Contentstack
 doc_type: connector-guide
 audience:

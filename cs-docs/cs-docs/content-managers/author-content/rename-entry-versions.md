@@ -1,7 +1,7 @@
 ---
 title: "[Author Content | Entry Versions] - Rename Entry Versions"
 description: Rename an existing version of an entry in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/rename-entry-versions
+url: https://www.contentstack.com/docs/headless-cms/rename-entry-versions
 product: Contentstack
 doc_type: how-to
 audience:

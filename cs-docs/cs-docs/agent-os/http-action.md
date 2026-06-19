@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - HTTP"
 description: HTTP Action connector setup for making an HTTP call when a trigger event occurs.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/http-action
+url: https://www.contentstack.com/docs/agent-os/http-action
 product: Automation Hub
 doc_type: connector-guide
 audience:

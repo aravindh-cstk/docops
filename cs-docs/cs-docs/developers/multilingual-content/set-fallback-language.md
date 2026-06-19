@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Set Fallback Language"
 description: "How to set a fallback language for a language in a stack, including related API reference."
-url: https://www.contentstack.com/docs/developers/multilingual-content/set-fallback-language
+url: https://www.contentstack.com/docs/headless-cms/set-fallback-language
 product: "Contentstack"
 doc_type: "how-to"
 audience:

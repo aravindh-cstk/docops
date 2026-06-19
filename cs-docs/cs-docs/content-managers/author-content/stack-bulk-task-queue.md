@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Stack Bulk Task Queue"
 description: The Bulk Task Queue displays a list of bulk operations performed within a specific stack.
-url: https://www.contentstack.com/docs/content-managers/author-content/stack-bulk-task-queue
+url: https://www.contentstack.com/docs/headless-cms/stack-bulk-task-queue
 product: Contentstack
 doc_type: guide
 audience:

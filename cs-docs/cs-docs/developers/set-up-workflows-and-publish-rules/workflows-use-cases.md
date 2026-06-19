@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Workflows Use Cases"
 description: Real-world workflow and publish rule scenarios for Contentstack, including stage setup, transition rules, and publishing conditions.
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/workflows-use-cases
+url: https://www.contentstack.com/docs/headless-cms/workflows-use-cases
 product: Contentstack
 doc_type: guide
 audience:

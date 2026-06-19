@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Marketplace App Boilerplate"
 description: Marketplace App Boilerplate
-url: https://www.contentstack.com/docs/developers/developer-hub/marketplace-app-boilerplate
+url: https://www.contentstack.com/docs/developer-hub/marketplace-app-boilerplate
 product: Contentstack
 doc_type: guide
 audience:
@@ -266,13 +266,13 @@ To use your application, you need to upload it to Contentstack. To do so, follow
 - Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - On the Dashboard page, click the **Developer Hub** icon as shown below:
 - Click the **+ New App** button.
-- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](/docs/developers/developer-hub/introduction-to-contentstack-applications).**Additional Resource: **Refer to the [Creating an App in Developer Hub](/docs/developers/developer-hub/creating-an-app-in-developer-hub) document to know more about Standard and Machine to Machine app categories.
+- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](/docs/developer-hub/introduction-to-contentstack-applications).**Additional Resource: **Refer to the [Creating an App in Developer Hub](/docs/developer-hub/creating-an-app-in-developer-hub) document to know more about Standard and Machine to Machine app categories.
 - In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** and an optional **Description**.
 - Click **Create**. You will be redirected to the **UI Locations** landing page.
 - To continue, go to the **Manage** section and select the **Basic** **Information** tab.
 - On the resulting **Basic** **Information** page, upload your app’s icon and **Save** the changes.**Note:** The **Save** button is **enabled only** after you edit the app’s editable details.
 - Click the **UI Locations** tab. To set the **App URL**, click the **View** **Hosting** link. You will be redirected to the **Hosting** tab.
-- In the **Hosting** tab, you can select [Hosting with Launch](/docs/developers/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developers/developer-hub/app-hosting#custom-hosting) options. Select the **Custom** **Hosting** option to enter the hosted URL of your application. Enter the **App URL** and click **Save** to confirm your hosting configuration.
+- In the **Hosting** tab, you can select [Hosting with Launch](/docs/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developer-hub/app-hosting#custom-hosting) options. Select the **Custom** **Hosting** option to enter the hosted URL of your application. Enter the **App URL** and click **Save** to confirm your hosting configuration.
 - Navigate back to the UI Locations tab, click the vertical ellipses, then click the **+ Add UI Location **button to add as needed.
 - Add the below routes for each UI Location to get the desired results.**Note:** The name for each UI Location is optional, and can be used to override the default app name.
 
@@ -319,7 +319,7 @@ To use your application, you need to upload it to Contentstack. To do so, follow
 
   **Sample App Configuration: **You can save non-sensitive data that you want to show in different UI locations. For example, if you want to create a form with Username, Date, Email Address, etc. then, you can add the value in the field and view the data in the configured UI location(s).
 
-- **Sample Server Configuration:** You can save sensitive data. For example, if you want to create a form with Password, Client Secret, and Client ID then, you can enter a value in the Sample Server Configuration Field and the value will be stored in the backend via webhooks.**Additional Resource:** To learn more, refer to the [App Configuration](/docs/developers/developer-hub/app-config-location) document.
+- **Sample Server Configuration:** You can save sensitive data. For example, if you want to create a form with Password, Client Secret, and Client ID then, you can enter a value in the Sample Server Configuration Field and the value will be stored in the backend via webhooks.**Additional Resource:** To learn more, refer to the [App Configuration](/docs/developer-hub/app-config-location) document.
 
   **Note:** The values entered in the **Sample App Configuration** and **Sample Server Configuration** fields are displayed across all UI locations configured for the app.
 
@@ -605,7 +605,7 @@ If you are working with a Contentstack instance hosted in a different region, yo
 
 ## Next Step
 
-Next, you can refer to the [Get Started with Building Apps using Contentstack’s App SDK ](/docs/developers/developer-hub/get-started-with-building-apps-using-contentstack-app-sdk)guide to start creating apps using the Contentstack App SDK.
+Next, you can refer to the [Get Started with Building Apps using Contentstack’s App SDK ](/docs/developer-hub/get-started-with-building-apps-using-contentstack-app-sdk)guide to start creating apps using the Contentstack App SDK.
 
 ## Common questions
 

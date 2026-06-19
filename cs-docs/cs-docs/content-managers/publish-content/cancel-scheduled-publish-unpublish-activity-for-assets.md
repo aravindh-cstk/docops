@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - Cancel Scheduled Publish/Unpublish Activity for Assets"
 description: Cancel scheduled publishing or unpublishing activity for assets via the Publish Queue or using the Content Management API.
-url: https://www.contentstack.com/docs/content-managers/publish-content/cancel-scheduled-publish-unpublish-activity-for-assets
+url: https://www.contentstack.com/docs/headless-cms/cancel-scheduled-publish-unpublish-activity-for-assets
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - How Languages Work in Contentstack"
 description: How languages work in Contentstack for multilingual content, including inheritance from fallback languages until localized.
-url: https://www.contentstack.com/docs/developers/multilingual-content/how-languages-work-in-contentstack
+url: https://www.contentstack.com/docs/headless-cms/how-languages-work-in-contentstack
 product: Contentstack
 doc_type: concept
 audience:

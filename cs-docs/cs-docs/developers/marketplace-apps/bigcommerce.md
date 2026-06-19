@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - BigCommerce App Installation Guide"
 description: BigCommerce App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/bigcommerce
+url: https://www.contentstack.com/docs/marketplace/bigcommerce
 product: Contentstack Marketplace
 doc_type: marketplace-app-guide
 audience:

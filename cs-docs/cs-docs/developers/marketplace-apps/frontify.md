@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Frontify App Installation Guide"
 description: Install and configure the Frontify app from Contentstack Marketplace, fetch Frontify credentials, and use Frontify assets in Contentstack entries.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/frontify
+url: https://www.contentstack.com/docs/marketplace/frontify
 product: Contentstack Marketplace
 doc_type: marketplace-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Get Started] - How to Start Using Contentstack"
 description: How to start using Contentstack in a few steps, including access, basics, quickstart, features, and developer tools.
-url: https://www.contentstack.com/docs/developers/contentstack-basics/how-to-start-using-contentstack
+url: https://www.contentstack.com/docs/headless-cms/how-to-start-using-contentstack
 product: Contentstack
 doc_type: getting-started
 audience:

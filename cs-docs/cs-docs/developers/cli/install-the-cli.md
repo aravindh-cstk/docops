@@ -1,7 +1,7 @@
 ---
 title: Contentstack Command-line Interface (CLI) - Install the CLI
 description: Install and update the Contentstack Command-line Interface (CLI) in macOS, Windows, and Linux environments.
-url: https://www.contentstack.com/docs/developers/cli/install-the-cli
+url: https://www.contentstack.com/docs/headless-cms/install-the-cli
 product: Contentstack
 doc_type: guide
 audience:

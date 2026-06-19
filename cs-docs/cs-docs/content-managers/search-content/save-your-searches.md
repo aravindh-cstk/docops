@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Save Your Searches"
 description: How to save Basic or Advanced search queries for reuse in Search Content.
-url: https://www.contentstack.com/docs/content-managers/search-content/save-your-searches
+url: https://www.contentstack.com/docs/headless-cms/save-your-searches
 product: Search Content
 doc_type: how-to
 audience:

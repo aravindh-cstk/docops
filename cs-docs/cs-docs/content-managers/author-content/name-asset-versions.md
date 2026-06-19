@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Name Asset Versions"
 description: Assigning custom names to versions can help you better organize and identify specific versions of your assets for improved content management.
-url: https://www.contentstack.com/docs/content-managers/author-content/name-asset-versions
+url: https://www.contentstack.com/docs/headless-cms/name-asset-versions
 product: Contentstack
 doc_type: guide
 audience:

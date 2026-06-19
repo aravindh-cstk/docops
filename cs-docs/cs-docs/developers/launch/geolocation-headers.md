@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Geolocation Headers in Launch"
 description: Geolocation Headers in Launch
-url: https://www.contentstack.com/docs/developers/launch/geolocation-headers
+url: https://www.contentstack.com/docs/launch/geolocation-headers
 product: Contentstack Launch
 doc_type: developer-guide
 audience:
@@ -16,7 +16,7 @@ This page explains the geolocation headers that Contentstack Launch automaticall
 
 ## Geolocation Headers in Launch
 
-Launch automatically includes geolocation headers in every incoming request. You can use these headers in [Edge Functions](/docs/developers/launch/edge-functions), [Cloud Functions](/docs/developers/launch/cloud-functions), or backend APIs to personalize content, analyze traffic, or apply region-specific logic.
+Launch automatically includes geolocation headers in every incoming request. You can use these headers in [Edge Functions](/docs/launch/edge-functions), [Cloud Functions](/docs/launch/cloud-functions), or backend APIs to personalize content, analyze traffic, or apply region-specific logic.
 
 ## Available Headers
 
@@ -103,7 +103,7 @@ If a header value appears empty or inaccurate, it may be due to one of the follo
 Yes. Launch automatically includes geolocation headers in every incoming request.
 
 ### Where can I use these headers?
-You can use these headers in [Edge Functions](/docs/developers/launch/edge-functions), [Cloud Functions](/docs/developers/launch/cloud-functions), or backend APIs.
+You can use these headers in [Edge Functions](/docs/launch/edge-functions), [Cloud Functions](/docs/launch/cloud-functions), or backend APIs.
 
 ### Why are the header values empty or inaccurate?
 It may be due to uncommon scenarios such as **Privacy tools:** The visitor is using a VPN, proxy, or privacy-focused browser, or **New IP ranges:** The IP address is recently allocated and not yet listed in global geolocation databases.

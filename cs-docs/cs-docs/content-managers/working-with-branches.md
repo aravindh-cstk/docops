@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Working with Branches"
 description: Documentation for content managers on working with branches in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/working-with-branches
+url: https://www.contentstack.com/docs/headless-cms/working-with-branches
 product: Contentstack
 doc_type: article
 audience:

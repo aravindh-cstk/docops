@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Performance, Network & Security Errors"
 uid: bltf2f182de68d55995
-url: /developers/launch/performance-network-security-errors
+url: /launch/performance-network-security-errors
 contentstack:
   environment: production
   assets: []

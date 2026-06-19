@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Mandatory"
 description: Documentation for the Mandatory field property, which designates fields as required during entry creation and publishing.
-url: https://www.contentstack.com/docs/developers/create-content-types/mandatory
+url: https://www.contentstack.com/docs/headless-cms/mandatory
 product: Documentation
 doc_type: guide
 audience:

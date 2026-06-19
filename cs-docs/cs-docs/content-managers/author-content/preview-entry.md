@@ -1,7 +1,7 @@
 ---
 title: "[Timeline] - Preview Entry"
 description: "How to preview an entry using Contentstack Timeline."
-url: https://www.contentstack.com/docs/content-managers/author-content/preview-entry
+url: https://www.contentstack.com/docs/headless-cms/preview-entry
 product: Contentstack
 doc_type: guide
 audience:

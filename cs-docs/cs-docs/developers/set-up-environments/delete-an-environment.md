@@ -1,7 +1,7 @@
 ---
 title: "[Set up Environments] - Delete an Environment"
 description: Delete an Environment
-url: https://www.contentstack.com/docs/developers/set-up-environments/delete-an-environment
+url: https://www.contentstack.com/docs/headless-cms/delete-an-environment
 product: Contentstack
 doc_type: how-to
 audience:

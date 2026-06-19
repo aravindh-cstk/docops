@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Edit an Entry"
 description: How to edit an entry in Contentstack, including drafts/auto-save behavior, collaborative editing, preview tools, and API reference.
-url: https://www.contentstack.com/docs/content-managers/author-content/edit-an-entry
+url: https://www.contentstack.com/docs/headless-cms/edit-an-entry
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Cloning a Stack"
 description: Contentstack enables you to clone a stack and its associated structure and content using the cm:stacks:clone CLI command.
-url: https://www.contentstack.com/docs/developers/cli/cloning-a-stack
+url: https://www.contentstack.com/docs/headless-cms/cloning-a-stack
 product: Contentstack
 doc_type: cli-guide
 audience:

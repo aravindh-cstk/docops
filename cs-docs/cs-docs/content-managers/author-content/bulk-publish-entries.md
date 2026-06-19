@@ -1,7 +1,7 @@
 ---
 title: "[Headless CMS | Bulk Operations on Entries] - Bulk Publish Entries"
 description: Bulk publish multiple entries along with their linked or referenced content.
-url: https://www.contentstack.com/docs/content-managers/author-content/bulk-publish-entries
+url: https://www.contentstack.com/docs/headless-cms/bulk-publish-entries
 product: Contentstack
 doc_type: how-to
 audience:

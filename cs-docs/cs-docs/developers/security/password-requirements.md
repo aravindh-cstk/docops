@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Password Requirements"
 description: Password requirements and best practices for secure login and account protection in Contentstack.
-url: https://www.contentstack.com/docs/developers/security/password-requirements
+url: https://www.contentstack.com/docs/administration/password-requirements
 product: Contentstack
 doc_type: security-guide
 audience:

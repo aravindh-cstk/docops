@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Translate Data using Smartling"
 description: Translate Data using Smartling
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/translate-data-using-smartling
+url: https://www.contentstack.com/docs/agent-os/translate-data-using-smartling
 product: Contentstack Automate
 doc_type: automation-hub-guide
 audience:

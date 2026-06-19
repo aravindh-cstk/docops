@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Forgot (Reset) Password"
 description: Reset a forgotten Contentstack password using the registered email address or via API.
-url: https://www.contentstack.com/docs/developers/security/forgot-reset-password
+url: https://www.contentstack.com/docs/administration/forgot-reset-password
 product: Contentstack
 doc_type: security-guide
 audience:

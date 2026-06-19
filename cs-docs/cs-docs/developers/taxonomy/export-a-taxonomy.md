@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Export a Taxonomy"
 description: Export a taxonomy in JSON or CSV format in Contentstack, and reference the API request for exporting taxonomies.
-url: https://www.contentstack.com/docs/developers/taxonomy/export-a-taxonomy
+url: https://www.contentstack.com/docs/headless-cms/export-a-taxonomy
 product: Contentstack
 doc_type: how-to
 audience:

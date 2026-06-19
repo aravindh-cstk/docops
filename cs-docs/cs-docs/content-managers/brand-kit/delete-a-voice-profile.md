@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Delete a Voice Profile"
 description: Steps required to delete a Voice Profile from Brand Kit.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/delete-a-voice-profile
+url: https://www.contentstack.com/docs/brand-kit/delete-a-voice-profile
 product: Contentstack
 doc_type: how-to
 audience:

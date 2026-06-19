@@ -1,7 +1,7 @@
 ---
 title: "[Architecture Diagrams] - MACH Architecture Diagram"
 description: MACH Architecture Diagram
-url: https://www.contentstack.com/docs/developers/architecture-diagrams/mach-architecture-diagram
+url: https://www.contentstack.com/docs/headless-cms/mach-architecture-diagram
 product: Contentstack
 doc_type: architecture-diagram
 audience:

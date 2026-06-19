@@ -1,7 +1,7 @@
 ---
 title: [Automations guides and connectors] - Notion
 description: Connect Notion with your favorite apps. Automate tasks, streamline workflows, and boost productivity seamlessly.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/notion
+url: https://www.contentstack.com/docs/agent-os/notion
 product: Automations
 doc_type: documentation
 audience:

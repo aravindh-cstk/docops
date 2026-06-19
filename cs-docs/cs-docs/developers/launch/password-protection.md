@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Password Protection for Environments"
 description: Enable and disable password protection for development and staging environments in Contentstack Launch using Basic Auth.
-url: https://www.contentstack.com/docs/developers/launch/password-protection
+url: https://www.contentstack.com/docs/launch/password-protection
 product: Contentstack Launch
 doc_type: how-to
 audience:

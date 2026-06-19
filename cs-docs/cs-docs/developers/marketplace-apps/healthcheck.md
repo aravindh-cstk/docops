@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Healthcheck App Installation Guide"
 description: Healthcheck App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/healthcheck
+url: https://www.contentstack.com/docs/marketplace/healthcheck
 product: Contentstack
 doc_type: marketplace-guide
 audience:

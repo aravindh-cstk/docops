@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Delete a Webhook"
 description: How to delete a webhook in Contentstack using the UI or via API reference.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/delete-a-webhook
+url: https://www.contentstack.com/docs/headless-cms/delete-a-webhook
 product: Contentstack
 doc_type: how-to
 audience:

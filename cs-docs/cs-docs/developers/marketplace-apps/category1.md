@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Marketplace Apps"
 description: Marketplace Apps documentation page under Marketplace guides and apps.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/category1
+url: https://www.contentstack.com/docs/marketplace/category1
 product: Marketplace
 doc_type: guide
 audience:

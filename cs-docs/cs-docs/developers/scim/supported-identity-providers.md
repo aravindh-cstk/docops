@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Supported Identity Providers for SCIM"
 description: Supported Identity Providers for SCIM
-url: https://www.contentstack.com/docs/developers/scim/supported-identity-providers
+url: https://www.contentstack.com/docs/administration/supported-identity-providers
 product: Contentstack
 doc_type: guide
 audience:

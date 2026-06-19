@@ -1,7 +1,7 @@
 ---
 title: "[Second level navigation] - Marketplace Apps"
 description: Contentstack Marketplace apps allow you to extend the capability of our core CMS and customize its functionalities.
-url: https://www.contentstack.com/docs/developers/marketplace-apps
+url: https://www.contentstack.com/docs/marketplace-apps
 product: Contentstack
 doc_type: navigation
 audience:
@@ -111,13 +111,13 @@ Here are few apps you can set up quickly and use within your organization or sta
 
 - **JSON Editor**
   - Title: JSON Editor
-  - Url: /docs/developers/marketplace-apps/json-editor
+  - Url: /docs/marketplace-apps/json-editor
 - **Developer Tools**
   - Title: Developer Tools
   - Url: /developers/marketplace-apps/developer-tools
 - **Ace Editor**
   - Title: Ace Editor
-  - Url: /docs/developers/marketplace-apps/ace-editor
+  - Url: /docs/marketplace-apps/ace-editor
 
 ##### Digital Asset Management
 

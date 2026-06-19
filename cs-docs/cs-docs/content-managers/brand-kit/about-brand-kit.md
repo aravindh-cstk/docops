@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - About Brand Kit"
 description: Overview of Contentstack Brand Kit as a centralized repository for brand identity and guidelines.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/about-brand-kit
+url: https://www.contentstack.com/docs/brand-kit/about-brand-kit
 product: Contentstack
 doc_type: overview
 audience:

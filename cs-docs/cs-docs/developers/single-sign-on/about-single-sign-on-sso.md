@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - About Single Sign-On (SSO)"
 description: About Single Sign-On (SSO) in Contentstack organizations, including SAML 2.0 support and access to SSO settings.
-url: https://www.contentstack.com/docs/developers/single-sign-on/about-single-sign-on-sso
+url: https://www.contentstack.com/docs/administration/about-single-sign-on-sso
 product: Contentstack
 doc_type: concept
 audience:

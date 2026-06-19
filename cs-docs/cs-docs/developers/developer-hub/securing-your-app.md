@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Securing your App"
 description: Security guidance for Marketplace Apps communicating with Contentstack via signed webhooks, signed UI locations (JWT app-token verification), and IP whitelisting.
-url: https://www.contentstack.com/docs/developers/developer-hub/securing-your-app
+url: https://www.contentstack.com/docs/developer-hub/securing-your-app
 product: Contentstack
 doc_type: developer-guide
 audience:

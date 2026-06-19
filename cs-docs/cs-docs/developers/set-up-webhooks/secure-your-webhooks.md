@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Secure Your Webhooks"
 description: Secure Your Webhooks
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/secure-your-webhooks
+url: https://www.contentstack.com/docs/headless-cms/secure-your-webhooks
 product: Contentstack
 doc_type: guide
 audience:

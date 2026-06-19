@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Branches Real-world Scenarios"
 description: Real-world use cases and scenarios for working with Branches in Contentstack.
-url: https://www.contentstack.com/docs/developers/branches/real-world-scenarios
+url: https://www.contentstack.com/docs/headless-cms/real-world-scenarios
 product: Contentstack
 doc_type: guide
 audience:

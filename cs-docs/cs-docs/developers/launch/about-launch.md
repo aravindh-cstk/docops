@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - About Contentstack Launch"
 description: Overview of Contentstack Launch, including core features, key benefits, use cases, and how to access Launch.
-url: https://www.contentstack.com/docs/developers/launch/about-launch
+url: https://www.contentstack.com/docs/launch/about-launch
 product: Contentstack Launch
 doc_type: overview
 audience:
@@ -21,26 +21,26 @@ This page introduces Contentstack Launch and explains its core features, benefit
 ## Core Features
 - **Project Bootstrap & Deployment**
 
-      Instant provisioning by [linking GitHub](/docs/developers/launch/import-project-using-github) or [Bitbucket](/docs/developers/launch/import-a-project-using-bitbucket-cloud) repositories, or [uploading ZIP files](/docs/developers/launch/import-project-using-file-upload).
-- Full support for frameworks such as [Gatsby](/docs/developers/launch/gatsby-on-launch), [Next.js](/docs/developers/launch/nextjs-on-launch), [Vue](/docs/developers/launch/vue-on-launch), [React](/docs/developers/launch/create-react-app-on-launch), [Angular](/docs/developers/launch/angular-on-launch), [Remix](/docs/developers/launch/remix-on-launch), [Nuxt](/docs/developers/launch/nuxt-on-launch), [client-side rendering (CSR)](/docs/developers/launch/framework-agnostic-csr-hosting-on-launch).
+      Instant provisioning by [linking GitHub](/docs/launch/import-project-using-github) or [Bitbucket](/docs/launch/import-a-project-using-bitbucket-cloud) repositories, or [uploading ZIP files](/docs/launch/import-project-using-file-upload).
+- Full support for frameworks such as [Gatsby](/docs/launch/gatsby-on-launch), [Next.js](/docs/launch/nextjs-on-launch), [Vue](/docs/launch/vue-on-launch), [React](/docs/launch/create-react-app-on-launch), [Angular](/docs/launch/angular-on-launch), [Remix](/docs/launch/remix-on-launch), [Nuxt](/docs/launch/nuxt-on-launch), [client-side rendering (CSR)](/docs/launch/framework-agnostic-csr-hosting-on-launch).
 - **Multi-Environment Management**
 
-      Create distinct [environments](/docs/developers/launch/environments) (e.g., dev, staging, prod), each accessible via a unique URL.
-- Configure branch, custom build commands, [environment variables](/docs/developers/launch/environment-variables), and password protection.
-- **Advanced **[**Deployment **](/docs/developers/launch/deployments)**& Logs**
+      Create distinct [environments](/docs/launch/environments) (e.g., dev, staging, prod), each accessible via a unique URL.
+- Configure branch, custom build commands, [environment variables](/docs/launch/environment-variables), and password protection.
+- **Advanced **[**Deployment **](/docs/launch/deployments)**& Logs**
 
       Detailed deployment history, statuses such as Live, Failed, or Queued, logs, and redeploy options via UI, Git commits, or deploy hooks.
-- [**Deploy Hooks**](/docs/developers/launch/deploy-hooks)** Integration**
+- [**Deploy Hooks**](/docs/launch/deploy-hooks)** Integration**
 
       Unique HTTP trigger URLs to initiate deployments programmatically or via CI/CD (e.g., cron jobs or CMS webhooks).
-- [**Custom Domains**](/docs/developers/launch/custom-domain)** & Auto HTTPS**
+- [**Custom Domains**](/docs/launch/custom-domain)** & Auto HTTPS**
 
       Set up branded domains with SSL by default.
 - Supports apex domain redirection.
-- [**Cloud Functions**](/docs/developers/launch/cloud-functions)
+- [**Cloud Functions**](/docs/launch/cloud-functions)
 
       Run serverless functions to handle backend tasks or API integrations directly within Launch.
-- [**Edge Functions**](/docs/developers/launch/edge-functions)
+- [**Edge Functions**](/docs/launch/edge-functions)
 
       Deploy custom logic at the CDN edge for real-time personalization, authentication, or URL rewrites with minimal latency.
 - [**CLI for Launch**](/docs/developers/cli/cli-for-launch)
@@ -48,17 +48,17 @@ This page introduces Contentstack Launch and explains its core features, benefit
       Use the Contentstack CLI to create, manage, and deploy Launch projects programmatically, or integrate commands into CI/CD workflows.
 - **Performance**
 
-      [**Cache Priming**](/docs/developers/launch/cache-priming): Preloads key pages to the CDN during deployment for faster first-load times.
+      [**Cache Priming**](/docs/launch/cache-priming): Preloads key pages to the CDN during deployment for faster first-load times.
 - Launch uses a global CDN network to deliver content closest to the users.
 - **Observability & Scaling Tools**
 
-      [Log Targets](/docs/developers/launch/log-targets): Send server or edge logs via OpenTelemetry to external monitoring services.
-- [Load-Testing Support](/docs/developers/launch/load-testing): Includes a checklist and best practices to simulate peak traffic and validate scalability.
+      [Log Targets](/docs/launch/log-targets): Send server or edge logs via OpenTelemetry to external monitoring services.
+- [Load-Testing Support](/docs/launch/load-testing): Includes a checklist and best practices to simulate peak traffic and validate scalability.
 - **Security & Access Control**
 
-      [Password protect environments](/docs/developers/launch/password-protection).
-- [Role-based user management](/docs/developers/launch/users) (Owner, Admin, Read-Only) with granular permissions.
-- [**Traffic Encryption**](/docs/developers/launch/traffic-encryption): HTTPS/TLS 1.2 & 1.3 by default, with auto-upgrades.
+      [Password protect environments](/docs/launch/password-protection).
+- [Role-based user management](/docs/launch/users) (Owner, Admin, Read-Only) with granular permissions.
+- [**Traffic Encryption**](/docs/launch/traffic-encryption): HTTPS/TLS 1.2 & 1.3 by default, with auto-upgrades.
 
 ## Key Benefits
 - **Speed & Simplicity:** One-click deployments, automatic builds triggered via Git, and instant rollbacks, simplify CI/CD and accelerate time to market.

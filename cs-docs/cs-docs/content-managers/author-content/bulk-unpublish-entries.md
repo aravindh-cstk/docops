@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Bulk Unpublish Entries"
 description: Unpublishing multiple entries at once simplifies bulk content removal and streamlines release management.
-url: https://www.contentstack.com/docs/content-managers/author-content/bulk-unpublish-entries
+url: https://www.contentstack.com/docs/headless-cms/bulk-unpublish-entries
 product: Contentstack
 doc_type: how-to
 audience:

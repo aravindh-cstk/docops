@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Webhook Rate Limit"
 description: Webhook Rate Limit for webhook executions per minute per organization.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-rate-limit
+url: https://www.contentstack.com/docs/headless-cms/webhook-rate-limit
 product: Contentstack
 doc_type: concept
 audience:

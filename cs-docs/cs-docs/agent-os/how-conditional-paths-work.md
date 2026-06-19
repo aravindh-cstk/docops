@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - How Conditional Paths Work"
 description: How Conditional Paths Work in Automation Hub guides and connectors.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/how-conditional-paths-work
+url: https://www.contentstack.com/docs/agent-os/how-conditional-paths-work
 product: Agent OS
 doc_type: guide
 audience:

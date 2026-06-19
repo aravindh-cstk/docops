@@ -1,7 +1,7 @@
 ---
 title: [JSON RTE] - Tables
 description: Learn how to work with tables in Contentstack’s JSON RTE. Render, style, and optimize tabular data for your frontend applications.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/tables
+url: https://www.contentstack.com/docs/headless-cms/tables
 product: Contentstack
 doc_type: documentation
 audience:

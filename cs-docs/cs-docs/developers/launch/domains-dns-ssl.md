@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Domains, DNS & SSL"
 uid: blt39aafa0e837d53ef
-url: /developers/launch/domains-dns-ssl
+url: /launch/domains-dns-ssl
 contentstack:
   environment: production
   assets: []

@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Save In-progress Entry"
 description: Save in-progress entries while editing, even if mandatory fields are not yet completed.
-url: https://www.contentstack.com/docs/content-managers/author-content/save-in-progress-entry
+url: https://www.contentstack.com/docs/headless-cms/save-in-progress-entry
 product: Contentstack
 doc_type: guide
 audience:

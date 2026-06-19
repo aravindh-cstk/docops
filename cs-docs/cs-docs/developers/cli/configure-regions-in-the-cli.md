@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Configure Regions in the CLI"
 description: Configure regions in the Contentstack CLI using config namespace commands.
-url: https://www.contentstack.com/docs/developers/cli/configure-regions-in-the-cli
+url: https://www.contentstack.com/docs/headless-cms/configure-regions-in-the-cli
 product: Contentstack
 doc_type: cli-guide
 audience:

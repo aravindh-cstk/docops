@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - Migrate Content Between Stacks (within Contentstack)"
 description: Migrate content from one stack to another within Contentstack using the contentstack-export and contentstack-import tools.
-url: https://www.contentstack.com/docs/developers/content-migration/migrate-content-between-stacks-within-contentstack
+url: https://www.contentstack.com/docs/headless-cms/migrate-content-between-stacks-within-contentstack
 product: Contentstack
 doc_type: guide
 audience:

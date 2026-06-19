@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - AI Assistant App Installation Guide"
 description: AI Assistant App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/ai-assistant
+url: https://www.contentstack.com/docs/marketplace/ai-assistant
 product: Contentstack
 doc_type: marketplace-guide
 audience:

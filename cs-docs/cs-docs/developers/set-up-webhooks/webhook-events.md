@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Webhook Events"
 description: Here's a complete list of events available for Webhooks.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-events
+url: https://www.contentstack.com/docs/headless-cms/webhook-events
 product: Contentstack
 doc_type: reference
 audience:

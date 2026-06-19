@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - commercetools App Installation Guide"
 description: commercetools App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/commercetools
+url: https://www.contentstack.com/docs/marketplace/commercetools
 product: Contentstack Marketplace
 doc_type: marketplace-app-guide
 audience:

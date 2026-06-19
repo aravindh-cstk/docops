@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Live Preview] - Live Preview Onboarding and Troubleshooting Guide"
 description: Live Preview Onboarding and Troubleshooting Guide
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/live-preview-onboarding-and-troubleshooting-guide
+url: https://www.contentstack.com/docs/headless-cms/live-preview-onboarding-and-troubleshooting-guide
 product: Contentstack
 doc_type: troubleshooting-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Regions] - Europe Region — What it is and What it isn't"
 description: Details on what the Contentstack Europe region is and what it is not, including capabilities, separation from North America, and API endpoint differences.
-url: https://www.contentstack.com/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt
+url: https://www.contentstack.com/docs/administration/europe-region-what-it-is-and-what-it-isnt
 product: Contentstack
 doc_type: concept
 audience:

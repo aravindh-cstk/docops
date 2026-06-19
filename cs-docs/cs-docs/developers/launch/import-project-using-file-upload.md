@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Create a Project using File Upload"
 description: Create a project in Contentstack Launch by uploading a project folder or .zip file, then deploy and optionally delete the project.
-url: https://www.contentstack.com/docs/developers/launch/import-project-using-file-upload
+url: https://www.contentstack.com/docs/launch/import-project-using-file-upload
 product: Contentstack Launch
 doc_type: how-to
 audience:

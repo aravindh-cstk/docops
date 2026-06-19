@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - How SSO works with Contentstack"
 description: How Single Sign-On (SSO) works with Contentstack, including IdP authentication flow and role mapping requirements.
-url: https://www.contentstack.com/docs/developers/single-sign-on/how-sso-works-with-contentstack
+url: https://www.contentstack.com/docs/administration/how-sso-works-with-contentstack
 product: Contentstack
 doc_type: security-management
 audience:

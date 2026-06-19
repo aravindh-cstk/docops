@@ -1,7 +1,7 @@
 ---
 title: "[Fields] - Global"
 description: Documentation for the Global field, a reusable group of fields that can be used across multiple content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/global
+url: https://www.contentstack.com/docs/headless-cms/global
 product: Contentstack
 doc_type: reference
 audience:

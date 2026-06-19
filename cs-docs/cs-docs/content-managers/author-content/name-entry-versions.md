@@ -1,7 +1,7 @@
 ---
 title: "[Author Content | Entry Versions] - Name Entry Versions"
 description: Assigning custom names to versions to better organize and identify specific versions of your entries.
-url: https://www.contentstack.com/docs/content-managers/author-content/name-entry-versions
+url: https://www.contentstack.com/docs/headless-cms/name-entry-versions
 product: Contentstack
 doc_type: guide
 audience:

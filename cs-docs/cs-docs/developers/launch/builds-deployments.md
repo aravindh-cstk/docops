@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Builds & Deployments"
 uid: blt96216dd20cdf2dd8
-url: /developers/launch/builds-deployments
+url: /launch/builds-deployments
 contentstack:
   environment: production
   assets: []

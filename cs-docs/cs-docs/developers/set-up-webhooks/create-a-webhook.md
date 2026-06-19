@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Create a Webhook"
 description: Create a webhook in Contentstack to send real-time data to third-party applications when events occur.
-url: https://www.contentstack.com/developers/set-up-webhooks/create-a-webhook
+url: https://www.contentstack.com/docs/headless-cms/create-a-webhook
 product: Contentstack
 doc_type: how-to
 audience:

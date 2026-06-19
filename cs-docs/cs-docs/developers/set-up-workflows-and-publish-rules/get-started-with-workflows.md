@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Get Started with Workflows"
 description: Get Started with Workflows
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/get-started-with-workflows
+url: https://www.contentstack.com/docs/headless-cms/get-started-with-workflows
 product: Contentstack
 doc_type: getting-started
 audience:

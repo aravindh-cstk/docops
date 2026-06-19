@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Delete a Project"
 description: Delete a project in Contentstack Launch.
-url: https://www.contentstack.com/docs/developers/launch/delete-a-project
+url: https://www.contentstack.com/docs/launch/delete-a-project
 product: Contentstack Launch
 doc_type: how-to
 audience:

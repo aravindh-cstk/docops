@@ -1,7 +1,7 @@
 ---
 title: Set Up Live Preview with GraphQL for SSR
 description: Configure Live Preview with GraphQL for a Server-side Rendering (SSR) website.
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-with-graphql-for-server-side-rendering
+url: https://www.contentstack.com/docs/headless-cms/set-up-live-preview-with-graphql-for-server-side-rendering
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Organization Roles"
 description: Organization roles and permissions overview for Contentstack organizations.
-url: https://www.contentstack.com/docs/developers/organization/organization-roles
+url: https://www.contentstack.com/docs/administration/organization-roles
 product: Contentstack
 doc_type: concept
 audience:

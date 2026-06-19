@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Global Fields within Group Fields"
 description: How to add a Global field within a Group field when creating a content type in Contentstack.
-url: https://www.contentstack.com/docs/developers/global-field/global-fields-within-group-fields
+url: https://www.contentstack.com/docs/headless-cms/global-fields-within-group-fields
 product: Contentstack
 doc_type: guide
 audience:

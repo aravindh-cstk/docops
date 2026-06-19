@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Contentstack Management - Assets Actions"
 description: Contentstack Management - Assets Actions
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-management-assets-actions
+url: https://www.contentstack.com/docs/agent-os/contentstack-management-assets-actions
 product: Contentstack
 doc_type: automation-hub-connector
 audience:

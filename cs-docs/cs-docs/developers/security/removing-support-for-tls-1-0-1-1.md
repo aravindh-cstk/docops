@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Removing Support for TLS 1.0 & 1.1"
 description: Contentstack has upgraded its TLS to version 1.2, and therefore, TLS 1.0 and 1.1 have been deprecated.
-url: https://www.contentstack.com/docs/developers/security/removing-support-for-tls-1-0-1-1
+url: https://www.contentstack.com/docs/administration/removing-support-for-tls-1-0-1-1
 product: Contentstack
 doc_type: security-management
 audience:

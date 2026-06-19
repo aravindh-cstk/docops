@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Default Dashboard Extensions"
 description: Documentation for the default dashboard extensions available in the stack Dashboard and how to access the Stack Dashboard.
-url: https://www.contentstack.com/docs/developers/set-up-stack/default-dashboard-extensions
+url: https://www.contentstack.com/docs/headless-cms/default-dashboard-extensions
 product: Contentstack
 doc_type: guide
 audience:

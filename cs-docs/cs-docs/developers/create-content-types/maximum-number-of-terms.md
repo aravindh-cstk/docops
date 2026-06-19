@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Maximum Number of Terms"
 description: Documentation for the Maximum Number of Terms field property for taxonomy fields in Contentstack content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/maximum-number-of-terms
+url: https://www.contentstack.com/docs/headless-cms/maximum-number-of-terms
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - IP-based Access Control Using Edge Functions in Launch"
 description: Implement IP-based access control using Edge Functions in Contentstack Launch to allowlist or restrict traffic to your site’s origin from specific IP ranges.
-url: https://www.contentstack.com/docs/developers/launch/ip-based-access-control-using-edge-functions
+url: https://www.contentstack.com/docs/launch/ip-based-access-control-using-edge-functions
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -17,7 +17,7 @@ This page explains how to implement IP-based access control using Edge Functions
 
 ## IP-based Access Control Using Edge Functions in Launch
 
-This guide explains how to implement **IP-based access control** using [**Edge Functions**](/docs/developers/launch/edge-functions) in **Contentstack Launch**. This feature helps you restrict or allow traffic to your site’s origin only from specific IP ranges, such as internal networks or trusted CDN providers.
+This guide explains how to implement **IP-based access control** using [**Edge Functions**](/docs/launch/edge-functions) in **Contentstack Launch**. This feature helps you restrict or allow traffic to your site’s origin only from specific IP ranges, such as internal networks or trusted CDN providers.
 
 ## Implementing IP Filtering with Edge Functions
 
@@ -31,7 +31,7 @@ With Contentstack Launch, you can set up IP-based access rules using custom logi
 - Block specific malicious or unwanted IP addresses from accessing your site.
 - Allow internal teams (based on corporate IPs) to preview restricted environments.
 
-**Additional Resource:** Refer to the [Edge Functions Guide](/docs/developers/launch/edge-functions) to set up an edge function in your Launch application to add the custom logic for IP access control.
+**Additional Resource:** Refer to the [Edge Functions Guide](/docs/launch/edge-functions) to set up an edge function in your Launch application to add the custom logic for IP access control.
 
 ## IP Allowlisting: Permit Traffic from Trusted IPs
 

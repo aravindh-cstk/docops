@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Environments"
 description: Create, configure, and delete environments in Contentstack Launch.
-url: https://www.contentstack.com/docs/developers/launch/environments
+url: https://www.contentstack.com/docs/launch/environments
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -37,12 +37,12 @@ This document guides you through the process of creating, configuring, and delet
 - The fields in the `Build and Output Settings` section get auto-populated based on the detected framework. You can always change the `Framework Preset` and the build and output commands as per your requirement.If you choose `Other` or `Angular` in the Framework Preset drop-down, a `Server Command` field displays as follows:
 
 This field allows you to deploy the selected framework as Server-Side Rendered. Leaving the `Server Command` field as blank deploys the framework as `CSR (Client-Side Rendered)`.
-- In the `Environment Variables` field, perform the following:If you want to [auto-populate environment variables from a linked stack](/docs/developers/launch/auto-populate-environment-variables-from-a-linked-stack/), select a stack and click the **Import Variables** button.
+- In the `Environment Variables` field, perform the following:If you want to [auto-populate environment variables from a linked stack](/docs/launch/auto-populate-environment-variables-from-a-linked-stack/), select a stack and click the **Import Variables** button.
 - Click the **+ Add Environment Variable** button to manually add environment variable(s).
 - Click the **Create** button.You have successfully created an environment.
 - If you choose to upload a file to deploy your project, follow the steps below:Enter an environment name.
 - Select a preset from the **Framework Preset** dropdown. The other fields in the `Build and Output Settings` section get auto-populated based on the selected preset. You can always change the `Framework Preset` and the build and output commands as per your requirement.
-- In the `Environment Variables` field, perform the following:If you want to [auto-populate environment variables from a linked stack](/docs/developers/launch/auto-populate-environment-variables-from-a-linked-stack/), select a stack and click the **Import Variables** button.
+- In the `Environment Variables` field, perform the following:If you want to [auto-populate environment variables from a linked stack](/docs/launch/auto-populate-environment-variables-from-a-linked-stack/), select a stack and click the **Import Variables** button.
 - Click the **+ Add Environment Variable** button to manually add environment variable(s).
 - The `Upload a file` field allows you to browse and upload a new file. Click **browse to upload** to upload a project file.
 You can also re-upload a different file after uploading a file.
@@ -60,7 +60,7 @@ A password-protected environment is represented with a **lock** icon next to it 
 - Edit the details in the **Environment Name** and **Git Branch** fields.**Note**: When you import a project by uploading a file, the Git Branch field in the General settings is not available.
 - Click the **Save Environment Details** button.
 - You can configure environments to use deploy hooks, custom domains, and environment variables.
-- You can control the deployment behavior by [toggling auto-deployments](/docs/developers/launch/disable-automatic-redeployment#disable-automatic-redeployment).
+- You can control the deployment behavior by [toggling auto-deployments](/docs/launch/disable-automatic-redeployment#disable-automatic-redeployment).
 - You can protect an environment using a password.
 
 **Note**: The auto-deployment feature is unavailable when you import a project by uploading a file.

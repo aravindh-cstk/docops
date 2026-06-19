@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Number of Characters"
 description: Documentation for the Number of Characters property used to set minimum and maximum character limits for fields in content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/number-of-characters
+url: https://www.contentstack.com/docs/headless-cms/number-of-characters
 product: Set Up Your Project
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Synchronize Data With Datasync] - About Contentstack DataSync"
 description: About Contentstack DataSync
-url: https://www.contentstack.com/docs/developers/develop-apps-with-datasync/about-contentstack-datasync
+url: https://www.contentstack.com/docs/headless-cms/about-contentstack-datasync
 product: Contentstack
 doc_type: overview
 audience:

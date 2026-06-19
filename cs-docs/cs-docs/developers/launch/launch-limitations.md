@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Launch Limitations"
 description: Launch Limitations
-url: https://www.contentstack.com/docs/developers/launch/launch-limitations
+url: https://www.contentstack.com/docs/launch/launch-limitations
 product: Contentstack Launch
 doc_type: reference
 audience:

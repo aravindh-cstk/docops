@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Delete an Alias"
 description: Delete an alias in Contentstack branches.
-url: https://www.contentstack.com/docs/developers/branches/delete-an-alias
+url: https://www.contentstack.com/docs/headless-cms/delete-an-alias
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Switch Between Alphabetical and Label View"
 description: Switch between Alphabetical View and Label View for content types in Contentstack.
-url: https://www.contentstack.com/docs/developers/create-content-types/switch-between-alphabetical-and-label-view
+url: https://www.contentstack.com/docs/headless-cms/switch-between-alphabetical-and-label-view
 product: Contentstack
 doc_type: guide
 audience:

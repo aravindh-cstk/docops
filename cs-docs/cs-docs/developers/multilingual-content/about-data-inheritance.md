@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Data Inheritance"
 description: Data inheritance is the continuous inheritance from the fallback language until the entry is localized.
-url: https://www.contentstack.com/docs/developers/multilingual-content/about-data-inheritance
+url: https://www.contentstack.com/docs/headless-cms/about-data-inheritance
 product: Documentation
 doc_type: concept
 audience:

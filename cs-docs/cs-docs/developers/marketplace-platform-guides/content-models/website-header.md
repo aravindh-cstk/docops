@@ -1,7 +1,7 @@
 ---
 title: "[Content Models] - Website Header"
 description: Website Header Content Model schema, prerequisites, and related resources.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models/website-header
+url: https://www.contentstack.com/docs/marketplace-platform-guides/content-models/website-header
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:
@@ -42,7 +42,7 @@ The Website Header Content Model contains one [Content Type](/docs/developers/cr
 - **Notification Bar**: This is a [Group field](/docs/developers/create-content-types/group/) with the following fields in it:**Announcement Text**: You can add any announcement to your website using this [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/) field.
 - **Show Announcement?**: You can enable or disable the announcement in this [Boolean](/docs/developers/create-content-types/boolean/) field.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Website Header Content Modeling](/docs/developers/content-modeling/website-header/) documentation to understand how to model the "Website Header".
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Website Header Content Modeling](/docs/developers/content-modeling/website-header/) documentation to understand how to model the "Website Header".
 
 Here’s how your Website Header looks after you publish the entry:
 
@@ -55,7 +55,7 @@ A: Access to the Contentstack Organization/Stack as the Owner/Admin or Stack Dev
 A: The Website Header Content Model contains one [Content Type](/docs/developers/create-content-types/about-content-types/) named **Header**.
 
 **Q: How can I import the prebuilt Website Header Content Model?**  
-A: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
+A: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
 
 **Q: Where can I learn more about modeling the "Website Header"?**  
 A: Refer the [Website Header Content Modeling](/docs/developers/content-modeling/website-header/) documentation to understand how to model the "Website Header".

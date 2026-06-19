@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - About Permanent Asset URLs"
 description: About Permanent Asset URLs in Contentstack and how they provide stable references for assets even when updated or replaced.
-url: https://www.contentstack.com/docs/content-managers/author-content/permanent-asset-urls
+url: https://www.contentstack.com/docs/headless-cms/permanent-asset-urls
 product: Contentstack
 doc_type: concept
 audience:

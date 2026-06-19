@@ -1,7 +1,7 @@
 ---
 title: "[Developers] - Fetch Content"
 description: Fetch Content
-url: https://www.contentstack.com/docs/developers/fetch-content
+url: https://www.contentstack.com/docs/headless-cms/fetch-content
 product: Contentstack
 doc_type: developers-guide
 audience:

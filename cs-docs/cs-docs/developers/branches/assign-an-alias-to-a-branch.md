@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Assign an Alias to a Branch"
 description: Assign an alias to a branch in Contentstack to point to a particular branch in your stack.
-url: https://www.contentstack.com/docs/developers/branches/assign-an-alias-to-a-branch
+url: https://www.contentstack.com/docs/headless-cms/assign-an-alias-to-a-branch
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - What is a Repeat Path?"
 description: What is a Repeat Path in Agent OS and when to use it.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/what-is-a-repeat-path
+url: https://www.contentstack.com/docs/agent-os/what-is-a-repeat-path
 product: Contentstack
 doc_type: guide
 audience:

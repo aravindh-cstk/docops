@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Log Targets"
 description: Log Targets in Contentstack Launch for forwarding server and edge logs to third-party monitoring services via OpenTelemetry.
-url: https://www.contentstack.com/docs/developers/launch/log-targets
+url: https://www.contentstack.com/docs/launch/log-targets
 product: Contentstack Launch
 doc_type: guide
 audience:

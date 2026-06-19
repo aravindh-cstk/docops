@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Stack] - Transfer Stack Ownership"
 description: Transfer Stack Ownership
-url: https://www.contentstack.com/docs/developers/set-up-stack/transfer-stack-ownership
+url: https://www.contentstack.com/docs/headless-cms/transfer-stack-ownership
 product: Contentstack
 doc_type: guide
 audience:

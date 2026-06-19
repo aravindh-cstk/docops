@@ -1,7 +1,7 @@
 ---
 title: "[Set up Environments] - Edit an Environment"
 description: Editing an environment allows you to update its details, adapt to workflow changes, and ensure smooth content deployment.
-url: https://www.contentstack.com/docs/developers/set-up-environments/edit-an-environment
+url: https://www.contentstack.com/docs/headless-cms/edit-an-environment
 product: Contentstack
 doc_type: how-to
 audience:

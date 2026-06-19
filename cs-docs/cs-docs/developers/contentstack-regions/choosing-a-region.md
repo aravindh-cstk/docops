@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Regions] - Choosing a Region"
 description: Choosing a Region for your organization data while subscribing for a Contentstack (organization) account.
-url: https://www.contentstack.com/docs/developers/contentstack-regions/choosing-a-region
+url: https://www.contentstack.com/docs/administration/choosing-a-region
 product: Contentstack
 doc_type: guide
 audience:

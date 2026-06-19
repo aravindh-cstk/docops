@@ -1,7 +1,7 @@
 ---
 title: "[Use Workflows] - Use Task Filter"
 description: Use Task Filter in Workflows to refine tasks based on specific filters.
-url: https://www.contentstack.com/docs/content-managers/use-workflows/use-task-filter
+url: https://www.contentstack.com/docs/headless-cms/use-task-filter
 product: Contentstack
 doc_type: guide
 audience:

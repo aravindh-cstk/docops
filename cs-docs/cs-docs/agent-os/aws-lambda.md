@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - AWS Lambda"
 description: Configure and execute an AWS Lambda function invoked in response to an event generated in Contentstack using the Automations AWS Lambda action connector.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/aws-lambda
+url: https://www.contentstack.com/docs/agent-os/aws-lambda
 product: Contentstack
 doc_type: connector-guide
 audience:

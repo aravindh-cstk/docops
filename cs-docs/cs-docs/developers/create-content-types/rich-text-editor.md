@@ -1,7 +1,7 @@
 ---
 title: "[Fields] - HTML-based Rich Text Editor"
 description: Documentation for the HTML-based Rich Text Editor (RTE) field, including customization, copy-paste behavior, embeds, limitations, and shortcut keys.
-url: https://www.contentstack.com/docs/developers/create-content-types/rich-text-editor
+url: https://www.contentstack.com/docs/headless-cms/rich-text-editor
 product: Contentstack
 doc_type: reference
 audience:

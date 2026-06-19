@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Installing your App via Developer Hub"
 description: Instructions for installing your app via Developer Hub in a stack or organization, including authorization and configuration steps.
-url: https://www.contentstack.com/docs/developers/developer-hub/installing-your-app-via-developer-hub
+url: https://www.contentstack.com/docs/developer-hub/installing-your-app-via-developer-hub
 product: Contentstack
 doc_type: guide
 audience:
@@ -25,7 +25,7 @@ Once your app is ready, you can test the app by installing it in your preferred 
 - In the case of a stack app, you are prompted to select the stack within which you want to install the app. Select the stack and click **Install**.
 
     **Note**: If you are not a stack admin or owner, you will see a **Request Install** button instead. Clicking this button will send a request to the stack admin to install this app for you.
-- You will be redirected to the configuration page to fill in the required information related to the App to complete the installation (as seen in the [Configuring an App](/docs/developers/developer-hub/configuring-an-app) section). After adding the details, click the **Save** button.
+- You will be redirected to the configuration page to fill in the required information related to the App to complete the installation (as seen in the [Configuring an App](/docs/developer-hub/configuring-an-app) section). After adding the details, click the **Save** button.
 - In the case of an organization app, you will be asked to allow access to specific modules of your Contentstack account. Click **Authorize & Install** to proceed.
 
 Once you install an app, you can find the app in **Marketplace** > **Manage** > **Installed Apps**. You can hover on the app and update the app configuration, and uninstall it.

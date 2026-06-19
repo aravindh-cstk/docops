@@ -1,7 +1,7 @@
 ---
 title: "[JSON Rich Text Editor] - Use Slash Command for Shortcuts in JSON RTE"
 description: Use slash commands in the JSON Rich Text Editor (JSON RTE) to access formatting shortcuts, lists, dividers, and alignment options.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/use-slash-command-for-shortcuts-in-json-rte
+url: https://www.contentstack.com/docs/headless-cms/use-slash-command-for-shortcuts-in-json-rte
 product: JSON Rich Text Editor
 doc_type: how-to
 audience:

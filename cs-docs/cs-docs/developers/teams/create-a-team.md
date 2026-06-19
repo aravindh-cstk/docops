@@ -1,7 +1,7 @@
 ---
 title: "[Teams] - Create a Team"
 description: Create a Team in Contentstack and assign Organization- and Stack-level roles, then add users to the Team.
-url: https://www.contentstack.com/docs/developers/teams/create-a-team
+url: https://www.contentstack.com/docs/administration/create-a-team
 product: Contentstack
 doc_type: how-to
 audience:

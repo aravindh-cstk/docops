@@ -1,7 +1,7 @@
 ---
 title: "[Synchronize Data With Datasync] - Create a Node.js app using Contentstack DataSync"
 description: Step-by-step guide to create a Node.js-based app that fetches data synced through Contentstack DataSync, including setup and MongoDB datastore configuration.
-url: https://www.contentstack.com/docs/developers/develop-apps-with-datasync/create-a-node-js-app-using-contentstack-datasync
+url: https://www.contentstack.com/docs/headless-cms/create-a-node-js-app-using-contentstack-datasync
 product: Contentstack DataSync
 doc_type: tutorial
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Create and Manage Releases NEW] - Update Release Items to the Latest"
 description: How to update items (assets and entries) in a release to the latest versions in Contentstack, including bulk update and API reference.
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/update-release-items-to-their-latest-versions
+url: https://www.contentstack.com/docs/headless-cms/update-release-items-to-their-latest-versions
 product: Contentstack
 doc_type: how-to
 audience:

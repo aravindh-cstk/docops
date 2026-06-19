@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Form.io App Installation Guide"
 description: Form.io App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/form-io
+url: https://www.contentstack.com/docs/marketplace/form-io
 product: Contentstack
 doc_type: marketplace-guide
 audience:

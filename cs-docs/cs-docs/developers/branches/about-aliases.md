@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Aliases"
 description: Contentstack allows you to assign aliases to any branch of your stack. An alias acts as a pointer to a specific branch.
-url: https://www.contentstack.com/docs/developers/branches/about-aliases
+url: https://www.contentstack.com/docs/headless-cms/about-aliases
 product: Contentstack
 doc_type: concept
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Product Analytics"
 description: Product Analytics section in Organization settings, including Subscription Usage, Usage by Stacks, Usage Analytics, Top URLs, and Apply Filters.
-url: https://www.contentstack.com/docs/developers/organization/product-analytics
+url: https://www.contentstack.com/docs/administration/product-analytics
 product: Contentstack
 doc_type: guide
 audience:

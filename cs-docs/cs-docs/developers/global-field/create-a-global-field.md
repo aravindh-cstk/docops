@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Create a Global Field"
 description: Create a Global Field in Contentstack and reuse it across content types, including using Nested Global fields and the API reference.
-url: https://www.contentstack.com/docs/developers/global-field/create-a-global-field
+url: https://www.contentstack.com/docs/headless-cms/create-a-global-field
 product: Contentstack
 doc_type: how-to
 audience:

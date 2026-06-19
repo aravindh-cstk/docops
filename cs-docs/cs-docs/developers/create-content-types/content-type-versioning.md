@@ -1,7 +1,7 @@
 ---
 title: "[Create Content Types] - Content Type Versioning"
 description: Create and manage multiple versions of a content type’s schema, compare versions, and understand comparison indicators.
-url: https://www.contentstack.com/docs/developers/create-content-types/content-type-versioning
+url: https://www.contentstack.com/docs/headless-cms/content-type-versioning
 product: Contentstack
 doc_type: guide
 audience:

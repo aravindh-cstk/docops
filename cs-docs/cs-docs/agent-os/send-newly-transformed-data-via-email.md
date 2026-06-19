@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Send Newly Transformed Data via Email"
 description: Guide to set up an automation that triggers on Contentstack entry creation, transforms input data, and sends the transformed data via Email by Agent OS.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/send-newly-transformed-data-via-email
+url: https://www.contentstack.com/docs/agent-os/send-newly-transformed-data-via-email
 product: Agent OS
 doc_type: automation-guide
 audience:

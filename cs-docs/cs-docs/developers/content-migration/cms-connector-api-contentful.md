@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - CMS Connector API - Contentful"
 description: Documentation for the migration-contentful package used to migrate data from Contentful to Contentstack CMS.
-url: https://www.contentstack.com/docs/developers/content-migration/cms-connector-api-contentful
+url: https://www.contentstack.com/docs/headless-cms/cms-connector-api-contentful
 product: Contentstack
 doc_type: developer-guide
 audience:

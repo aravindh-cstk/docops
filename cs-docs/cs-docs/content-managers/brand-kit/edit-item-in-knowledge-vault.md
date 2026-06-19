@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Edit Item in Knowledge Vault"
 description: Update and manage items in the Knowledge Vault by editing text and updating uploaded files.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/edit-item-in-knowledge-vault
+url: https://www.contentstack.com/docs/brand-kit/edit-item-in-knowledge-vault
 product: Contentstack
 doc_type: how-to-guide
 audience:
@@ -29,7 +29,7 @@ Update and manage items in the Knowledge Vault to keep your documents and data o
 
 ## Steps for Execution
 
-**Note**: For this guide, we have assumed that you have [added items in the Knowledge Vault](/docs/content-managers/brand-kit/add-item-in-knowledge-vault) inside your Brand Kit.
+**Note**: For this guide, we have assumed that you have [added items in the Knowledge Vault](/docs/brand-kit/add-item-in-knowledge-vault) inside your Brand Kit.
 
 To edit an existing item in Knowledge Vault, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 

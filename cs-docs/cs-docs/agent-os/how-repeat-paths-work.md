@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - How Repeat Paths Work?"
 description: Documentation on configuring and using Repeat Path in automations to perform actions on bulk data.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/how-repeat-paths-work
+url: https://www.contentstack.com/docs/agent-os/how-repeat-paths-work
 product: Contentstack
 doc_type: guide
 audience:

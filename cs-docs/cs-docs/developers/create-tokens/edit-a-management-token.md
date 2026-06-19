@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Edit a Management Token"
 description: Edit a Management Token in Contentstack by updating management token details after it is generated.
-url: https://www.contentstack.com/docs/developers/create-tokens/edit-a-management-token
+url: https://www.contentstack.com/docs/headless-cms/edit-a-management-token
 product: Contentstack
 doc_type: how-to
 audience:

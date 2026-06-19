@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Switch Between Organizations"
 description: How to switch between organizations in Contentstack to access and manage stacks across multiple organizations.
-url: https://www.contentstack.com/docs/developers/organization/switch-between-organizations
+url: https://www.contentstack.com/docs/administration/switch-between-organizations
 product: Contentstack
 doc_type: how-to
 audience:

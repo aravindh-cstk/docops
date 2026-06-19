@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - RTE Formatter"
 description: The RTE Formatter action connector helps convert content within the JSON Rich Text Editor into HTML or text formats, and convert HTML RTE content into JSON.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/rte-formatter
+url: https://www.contentstack.com/docs/agent-os/rte-formatter
 product: Automation Hub
 doc_type: connector-guide
 audience:

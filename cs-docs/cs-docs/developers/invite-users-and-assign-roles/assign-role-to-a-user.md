@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Assign Role to a User"
 description: Assign Role to a User in Contentstack and understand permission resolution for multiple roles.
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/assign-role-to-a-user
+url: https://www.contentstack.com/docs/headless-cms/assign-role-to-a-user
 product: Contentstack
 doc_type: guide
 audience:

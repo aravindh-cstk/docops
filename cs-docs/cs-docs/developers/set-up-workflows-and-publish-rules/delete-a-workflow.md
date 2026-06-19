@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Delete a Workflow"
 description: Delete a Workflow
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/delete-a-workflow
+url: https://www.contentstack.com/docs/headless-cms/delete-a-workflow
 product: Contentstack
 doc_type: how-to
 audience:

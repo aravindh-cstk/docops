@@ -1,7 +1,7 @@
 ---
 title: Select
 description: Learn how to use the Select field in Contentstack to create predefined options, configure display types, and manage single or multiple selections in content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/select
+url: https://www.contentstack.com/docs/headless-cms/select
 product: Contentstack
 doc_type: feature-guide
 audience:

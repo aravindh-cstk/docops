@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Set Up SSO in Contentstack"
 description: General step-by-step guide explaining the process of setting up single sign-on in Contentstack with your SAML 2.0 Identity Provider.
-url: https://www.contentstack.com/docs/developers/single-sign-on/set-up-sso-in-contentstack
+url: https://www.contentstack.com/docs/administration/set-up-sso-in-contentstack
 product: Contentstack
 doc_type: security-management
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Fields] - Non-localizable Field"
 description: Contentstack allows you to mark any field in a content type as Non-localizable to prevent translation or modification in localized entries.
-url: https://www.contentstack.com/docs/developers/multilingual-content/non-localizable-field
+url: https://www.contentstack.com/docs/headless-cms/non-localizable-field
 product: Contentstack
 doc_type: concept
 audience:

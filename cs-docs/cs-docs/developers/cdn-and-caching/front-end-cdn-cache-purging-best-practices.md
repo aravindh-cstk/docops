@@ -1,7 +1,7 @@
 ---
 title: "[CDN and Caching] - Front-end CDN cache purging best practices"
 description: Best practices for purging only required content from a front-end CDN cache using Contentstack webhooks, UID-to-URL mapping, content hierarchy, and partials.
-url: https://www.contentstack.com/docs/developers/cdn-and-caching/front-end-cdn-cache-purging-best-practices
+url: https://www.contentstack.com/docs/headless-cms/front-end-cdn-cache-purging-best-practices
 product: Contentstack
 doc_type: best-practices
 audience:

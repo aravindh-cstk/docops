@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Stack] - About Stacks"
 description: Overview of what a Stack is in Contentstack and its key features.
-url: https://www.contentstack.com/docs/developers/set-up-stack/about-stack
+url: https://www.contentstack.com/docs/headless-cms/about-stack
 product: Contentstack
 doc_type: concept
 audience:

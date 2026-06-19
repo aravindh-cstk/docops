@@ -1,7 +1,7 @@
 ---
 title: "[GraphQL API NEW] - About GraphQL"
 uid: bltc023ff75af937fdc
-url: /developers/graphql-api/about-graphql
+url: https://www.contentstack.com/docs/headless-cms/about-graphql
 contentstack:
   environment: production
   assets: []

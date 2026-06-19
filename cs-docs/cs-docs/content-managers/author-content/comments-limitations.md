@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Comments Limitations"
 description: Limitations and constraints for discussions and comments in Author Content.
-url: https://www.contentstack.com/docs/content-managers/author-content/comments-limitations
+url: https://www.contentstack.com/docs/headless-cms/comments-limitations
 product: Author Content
 doc_type: reference
 audience:

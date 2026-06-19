@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Additional Metadata Support for Assets"
 description: Additional Metadata Support for Assets
-url: https://www.contentstack.com/docs/content-managers/author-content/additional-metadata-support-for-assets
+url: https://www.contentstack.com/docs/headless-cms/additional-metadata-support-for-assets
 product: Contentstack
 doc_type: guide
 audience:

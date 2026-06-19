@@ -1,7 +1,7 @@
 ---
 title: "[GraphQL API NEW] - Use GraphQL Queries with Apollo Client Android SDK"
 description: Step-by-step guide to use the Apollo client and Contentstack GraphQL queries to power the content of Android SDK apps.
-url: https://www.contentstack.com/docs/developers/graphql-api/use-the-graphql-queries-with-apollo-sdks/use-graphql-queries-with-apollo-client-android-sdk
+url: https://www.contentstack.com/docs/headless-cms/use-graphql-queries-with-apollo-client-android-sdk
 product: Contentstack
 doc_type: api-guide
 audience:

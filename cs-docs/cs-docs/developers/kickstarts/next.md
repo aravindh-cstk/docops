@@ -1,7 +1,7 @@
 ---
 title: "[Kickstarts] - Next.js"
 description: Kickstarts are pre-built, minimal code templates designed to help you integrate a Next.js project with Contentstack.
-url: https://www.contentstack.com/docs/developers/kickstarts/next
+url: https://www.contentstack.com/docs/headless-cms/next
 product: Contentstack
 doc_type: developer-guide
 audience:

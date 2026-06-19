@@ -1,7 +1,7 @@
 ---
 title: "[Architecture Diagrams] - Partially Headless Setup"
 description: Architecture diagram and explanation for a partially headless setup, showing migration from a traditional CMS to a headless CMS (Contentstack).
-url: https://www.contentstack.com/docs/developers/architecture-diagrams/partially-headless-setup-detailed-architecture
+url: https://www.contentstack.com/docs/headless-cms/partially-headless-setup-detailed-architecture
 product: Contentstack
 doc_type: architecture-diagram
 audience:

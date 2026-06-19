@@ -1,7 +1,7 @@
 ---
 title: "[Create Tokens] - Limitations of Delivery Tokens"
 description: Limitations and constraints for Delivery Tokens in Contentstack, including plan limits, branch/alias linking, expiration behavior, access scope, and role permissions.
-url: https://www.contentstack.com/docs/developers/create-tokens/limitations-of-delivery-tokens
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-delivery-tokens
 product: Contentstack
 doc_type: reference
 audience:

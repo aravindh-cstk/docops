@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Launch Quick Start Guide with Generic CSR"
 description: Launch Quick Start Guide with Generic CSR
-url: https://www.contentstack.com/docs/developers/launch/quick-start-generic-csr
+url: https://www.contentstack.com/docs/launch/quick-start-generic-csr
 product: Contentstack Launch
 doc_type: quick-start
 audience:
@@ -33,9 +33,9 @@ Alternatively, go to the **App Switcher** in the top panel and click the **Launc
 - On the **Launch Projects** screen, click the **+ New Project** button to initiate the project creation process.
 - From the **Create New Project** modal, click **Import from a Git Repository**.
 
-    **Note:** You can also choose to [upload a .zip file to import a project](/docs/developers/launch/import-project-using-file-upload/).
+    **Note:** You can also choose to [upload a .zip file to import a project](/docs/launch/import-project-using-file-upload/).
 - Click **GitHub**.
-    **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/developers/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
+    **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
 
     A Sign in to GitHub screen pops up. Enter your credentials and log in to your GitHub account.
 

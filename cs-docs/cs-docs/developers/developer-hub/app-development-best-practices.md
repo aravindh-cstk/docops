@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - App Development Best Practices"
 description: Best practices for building high-performing apps using the Contentstack App Framework for Contentstack Marketplace.
-url: https://www.contentstack.com/docs/developers/developer-hub/app-development-best-practices
+url: https://www.contentstack.com/docs/developer-hub/app-development-best-practices
 product: Contentstack
 doc_type: developer-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Author Content | Entry Versions] - Understanding Entry Versions"
 description: Understanding Entry Versions
-url: https://www.contentstack.com/docs/content-managers/author-content/understanding-entry-versions
+url: https://www.contentstack.com/docs/headless-cms/understanding-entry-versions
 product: Contentstack
 doc_type: concept
 audience:

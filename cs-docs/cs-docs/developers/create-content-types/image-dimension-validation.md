@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Image Dimension Validation"
 description: Image Dimension Validation property for the File field to filter or validate uploaded image dimensions on the entry page.
-url: https://www.contentstack.com/docs/developers/create-content-types/image-dimension-validation
+url: https://www.contentstack.com/docs/headless-cms/image-dimension-validation
 product: Documentation
 doc_type: guide
 audience:

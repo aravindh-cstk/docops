@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Session Management"
 description: Monitor and manage all active sessions associated with your Contentstack account, including terminating other sessions.
-url: https://www.contentstack.com/docs/developers/security/session-management
+url: https://www.contentstack.com/docs/administration/session-management
 product: Contentstack
 doc_type: security-guide
 audience:

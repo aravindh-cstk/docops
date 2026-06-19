@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - Schedule Publish/Unpublish Assets"
 description: Schedule publishing or unpublishing assets immediately or at a later date/time, including time zone and DST considerations.
-url: https://www.contentstack.com/docs/content-managers/publish-content/schedule-publish-unpublish-assets
+url: https://www.contentstack.com/docs/headless-cms/schedule-publish-unpublish-assets
 product: Contentstack
 doc_type: guide
 audience:

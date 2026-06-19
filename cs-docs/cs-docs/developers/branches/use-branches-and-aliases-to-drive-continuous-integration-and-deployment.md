@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Use Branches and Aliases to Drive Continuous Integration and Deployment"
 description: Use Branches and Aliases to Drive Continuous Integration and Deployment
-url: https://www.contentstack.com/docs/developers/branches/use-branches-and-aliases-to-drive-continuous-integration-and-deployment
+url: https://www.contentstack.com/docs/headless-cms/use-branches-and-aliases-to-drive-continuous-integration-and-deployment
 product: Contentstack
 doc_type: guide
 audience:

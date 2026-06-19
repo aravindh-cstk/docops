@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Languages"
 description: Contentstack multilingual capability and language support for creating and publishing entries in multiple languages.
-url: https://www.contentstack.com/docs/developers/multilingual-content/about-languages
+url: https://www.contentstack.com/docs/headless-cms/about-languages
 product: Contentstack
 doc_type: concept
 audience:

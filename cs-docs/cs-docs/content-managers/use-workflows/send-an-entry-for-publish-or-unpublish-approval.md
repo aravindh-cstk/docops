@@ -1,7 +1,7 @@
 ---
 title: "[Use Workflows] - Send an Entry for Publish or Unpublish Approval"
 description: "How to send an entry for publish or unpublish approval using Workflows and Publish Rules."
-url: https://www.contentstack.com/docs/content-managers/use-workflows/send-an-entry-for-publish-or-unpublish-approval
+url: https://www.contentstack.com/docs/headless-cms/send-an-entry-for-publish-or-unpublish-approval
 product: Contentstack
 doc_type: how-to
 audience:

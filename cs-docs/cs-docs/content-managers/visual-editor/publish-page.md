@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Publish a Page"
 description: How to publish a page using Visual Editor, including Quick Publish and Advanced Publish options.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/publish-page
+url: https://www.contentstack.com/docs/headless-cms/publish-page
 product: Contentstack
 doc_type: how-to
 audience:

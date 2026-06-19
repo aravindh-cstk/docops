@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Limit for Multiple Choices"
 description: Documentation for the Limit for Multiple Choices property for the Select field when configuring content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/limit-for-multiple-choices
+url: https://www.contentstack.com/docs/headless-cms/limit-for-multiple-choices
 product: Contentstack
 doc_type: reference
 audience:

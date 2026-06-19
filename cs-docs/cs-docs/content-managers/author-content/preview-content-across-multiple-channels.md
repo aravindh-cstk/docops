@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Preview Content across Multiple Channels"
 description: Preview content across multiple devices and orientations using Live Preview to validate responsiveness across channels.
-url: https://www.contentstack.com/docs/content-managers/author-content/preview-content-across-multiple-channels
+url: https://www.contentstack.com/docs/headless-cms/preview-content-across-multiple-channels
 product: Contentstack
 doc_type: how-to
 audience:

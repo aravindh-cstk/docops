@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Shopify App Installation Guide | Old Version"
 description: Install and configure the Contentstack Marketplace Shopify app and use it within your stack entries.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/shopify/old-version
+url: https://www.contentstack.com/docs/marketplace/shopify/old-version
 product: Contentstack Marketplace
 doc_type: guide
 audience:

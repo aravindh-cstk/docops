@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Types of Roles"
 description: Overview of Contentstack stack user roles and their permissions, including Owner, Admin, Developer, Content Manager, and Custom Role.
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/types-of-roles
+url: https://www.contentstack.com/docs/headless-cms/types-of-roles
 product: Contentstack
 doc_type: concept-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Bynder App Installation Guide"
 uid: bltbe84a04b2b8329ee
-url: /developers/marketplace-apps/bynder
+url: /marketplace/bynder
 contentstack:
   environment: production
   assets: []

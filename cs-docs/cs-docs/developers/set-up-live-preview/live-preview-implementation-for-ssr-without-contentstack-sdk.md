@@ -1,7 +1,7 @@
 ---
 title: "[Live Preview] Live Preview for SSR without Contentstack SDK"
 description: Live Preview for SSR without Contentstack Delivery SDK
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/live-preview-implementation-for-ssr-without-contentstack-sdk
+url: https://www.contentstack.com/docs/headless-cms/live-preview-implementation-for-ssr-without-contentstack-sdk
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Import a Voice Profile"
 description: Import preconfigured voice profiles into your Brand Kit stack using a JSON file.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/import-a-voice-profile
+url: https://www.contentstack.com/docs/brand-kit/import-a-voice-profile
 product: Contentstack
 doc_type: how-to
 audience:
@@ -23,12 +23,12 @@ Brand Kit allows you to import preconfigured voice profiles into your stack. Thi
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
 - Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
-- Access to Brand Kit as an invited [Collaborator](/docs/content-managers/brand-kit/invite-collaborators)
+- Access to Brand Kit as an invited [Collaborator](/docs/brand-kit/invite-collaborators)
 
 **Note**: Only the respective Brand Kit Owners can import the Voice Profiles.
 
 ## Steps for Execution
-**Note**: For this guide, we have assumed that you have [created a Voice Profile](/docs/content-managers/brand-kit/create-a-voice-profile) inside your Brand Kit.
+**Note**: For this guide, we have assumed that you have [created a Voice Profile](/docs/brand-kit/create-a-voice-profile) inside your Brand Kit.
 
 To import a Voice Profile, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the left navigation panel, click the **Brand Kit** icon.

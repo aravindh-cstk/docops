@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Contentstack Management - Entries Actions"
 description: Contentstack Management connector actions for entry-based operations in Automation Hub.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-management-entries-actions
+url: https://www.contentstack.com/docs/agent-os/contentstack-management-entries-actions
 product: Contentstack
 doc_type: automation-hub-connector-guide
 audience:

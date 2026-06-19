@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Change Personal Details"
 description: How to edit personal details (name, company name, profile image) in your Contentstack profile; email address is read-only.
-url: https://www.contentstack.com/docs/developers/security/change-personal-details
+url: https://www.contentstack.com/docs/administration/change-personal-details
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Organization]- Stack Admin vs Stack Developer"
 description: Differences in rights between Stack Admin and Stack Developer roles within a stack.
-url: https://www.contentstack.com/docs/developers/organization/stack-admin-vs-stack-developer
+url: https://www.contentstack.com/docs/administration/stack-admin-vs-stack-developer
 product: "[Organization]"
 doc_type: role-guide
 audience:

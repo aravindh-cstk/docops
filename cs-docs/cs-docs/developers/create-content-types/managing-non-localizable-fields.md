@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Managing Non-Localizable Fields"
 description: Managing Non-Localizable Fields
-url: https://www.contentstack.com/docs/developers/create-content-types/managing-non-localizable-fields
+url: https://www.contentstack.com/docs/headless-cms/managing-non-localizable-fields
 product: Contentstack
 doc_type: guide
 audience:

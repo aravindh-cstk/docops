@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Updating an App in Developer Hub"
 description: After creating an app, you can update its basic information, OAuth scopes, App URL, and webhook details in Developer Hub.
-url: https://www.contentstack.com/docs/developers/developer-hub/updating-an-app-in-developer-hub
+url: https://www.contentstack.com/docs/developer-hub/updating-an-app-in-developer-hub
 product: Developer Hub
 doc_type: guide
 audience:

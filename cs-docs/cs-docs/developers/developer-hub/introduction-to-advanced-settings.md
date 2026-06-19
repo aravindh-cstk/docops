@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Introduction to Advanced Settings"
 description: Introduction to Advanced Settings in Contentstack Developer Hub, including Rewrites, Variables, and Mappings for secure external API integrations without a custom backend.
-url: https://www.contentstack.com/docs/developers/developer-hub/introduction-to-advanced-settings
+url: https://www.contentstack.com/docs/developer-hub/introduction-to-advanced-settings
 product: Contentstack
 doc_type: developer-hub-guide
 audience:
@@ -20,14 +20,14 @@ Developing applications in the Contentstack platform often requires integration 
 
 Advanced Settings simplifies this process by eliminating the need for a custom backend. You can securely call external APIs that require sensitive information, without exposing those credentials to the frontend, ensuring both enhanced security and flexibility across your applications.
 
-**Additional Resource: **To learn more about the API call implementation, refer to the [API Integration in Developer Hub Apps](https://www.contentstack.com/docs/developers/developer-hub/api-integration-in-developer-hub-apps) documentation.
+**Additional Resource: **To learn more about the API call implementation, refer to the [API Integration in Developer Hub Apps](https://www.contentstack.com/docs/developer-hub/api-integration-in-developer-hub-apps) documentation.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login) with access to Developer Hub
-- Understanding [Contentstack App Development](/docs/developers/developer-hub)
+- Understanding [Contentstack App Development](/docs/developer-hub)
 - Understanding of [Contentstack App SDK](https://github.com/contentstack/app-sdk-docs)
-- Understanding of [Server Configuration](/docs/developers/developer-hub/app-config-location)
+- Understanding of [Server Configuration](/docs/developer-hub/app-config-location)
 
 ## Why Use Advanced Settings?
 
@@ -44,7 +44,7 @@ Advanced Settings includes three integrated features that work together to strea
 
 - [**Rewrites**](#rewrites)**: **Enable your application to make calls to external endpoints outside of Contentstack, supporting seamless integration with third-party services.
 - [**Variables**](#variables)**: **Securely store essential data such as API keys and other sensitive information as key-value pairs. These values are stored on the platform and never exposed on the frontend, ensuring strong security.
-- [**Mappings**](#mappings)**: **Link a symbolic name to a path within the [server configuration](/docs/developers/developer-hub/app-config-location). This allows applications to reference stored values dynamically, enabling developers to securely access installation-specific sensitive data without exposing it in the frontend.
+- [**Mappings**](#mappings)**: **Link a symbolic name to a path within the [server configuration](/docs/developer-hub/app-config-location). This allows applications to reference stored values dynamically, enabling developers to securely access installation-specific sensitive data without exposing it in the frontend.
 
 ## How to Add Advanced Settings?
 
@@ -53,7 +53,7 @@ To use Advanced Settings, perform the following steps:
 - Log in to your [Contentstack account](https://www.contentstack.com/login).
 - On the Dashboard page, click the **Developer Hub** icon as shown below:
 - Click the **+ New App** button.
-- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](/docs/developers/developer-hub/introduction-to-contentstack-applications).**Additional Resource: **Refer to the [Creating an App in Developer Hub](/docs/developers/developer-hub/creating-an-app-in-developer-hub) document to know more about Standard and Machine to Machine app categories.
+- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](/docs/developer-hub/introduction-to-contentstack-applications).**Additional Resource: **Refer to the [Creating an App in Developer Hub](/docs/developer-hub/creating-an-app-in-developer-hub) document to know more about Standard and Machine to Machine app categories.
 - In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** and an optional **Description.**
 - Click **Create**. You will be redirected to the UI Locations landing page.
 - To continue, go to the **Advanced** section. You will see the three integrated features, i.e., **Variables**, **Mappings**, and **Rewrites**.
@@ -77,7 +77,7 @@ App developers can set up rewrite rules in** Advanced Settings → Rewrites**. W
 
 With **Variables**, you can securely store API keys and other sensitive credentials without exposing them in the frontend. These values are encrypted, stored on Contentstack infrastructure, and kept fully secure from client-side access.
 
-**Note: **Variables are app-specific, meaning all installations of the app share the same values. To store installation-specific or user-specific secret configurations, use [server configuration](/docs/developers/developer-hub/app-config-location) instead.
+**Note: **Variables are app-specific, meaning all installations of the app share the same values. To store installation-specific or user-specific secret configurations, use [server configuration](/docs/developer-hub/app-config-location) instead.
 
 **Variable** **substitution** is supported in the `appSdk.api` method, allowing you to reference secure environment variables (such as API keys) in your API requests.
 
@@ -93,7 +93,7 @@ Instead of hardcoding secrets, use the syntax `{{var.VARIABLE_NAME}}` in request
 
 **Mappings** allow dynamic value substitution in API requests, so app administrators can configure URLs, endpoints, or other values that change across installations or environments.
 
-Each mapping refers to a value stored in [server configuration](/docs/developers/developer-hub/app-config-location) and can be used in the `appSdk.api` method with the syntax `{{map.MAPPING_NAME}}`. At runtime, this placeholder is replaced with the installation-specific value.
+Each mapping refers to a value stored in [server configuration](/docs/developer-hub/app-config-location) and can be used in the `appSdk.api` method with the syntax `{{map.MAPPING_NAME}}`. At runtime, this placeholder is replaced with the installation-specific value.
 
 **When to use:**
 
@@ -157,7 +157,7 @@ The combination of the `.api()` method, **Variables**, **Mappings**, and **Rewri
 
 ### Are Variables installation-specific?
 
-No. **Note: **Variables are app-specific, meaning all installations of the app share the same values. To store installation-specific or user-specific secret configurations, use [server configuration](/docs/developers/developer-hub/app-config-location) instead.
+No. **Note: **Variables are app-specific, meaning all installations of the app share the same values. To store installation-specific or user-specific secret configurations, use [server configuration](/docs/developer-hub/app-config-location) instead.
 
 ### How do I reference a Variable in an API request?
 

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Selection Type"
 description: Documentation for the Selection Type property of the Select field, including single and multiple choice behavior and rendering options.
-url: https://www.contentstack.com/docs/developers/create-content-types/selection-type
+url: https://www.contentstack.com/docs/headless-cms/selection-type
 product: Documentation
 doc_type: reference
 audience:

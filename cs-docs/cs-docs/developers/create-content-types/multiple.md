@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Multiple"
 description: Documentation for the Multiple field property, including how it works and how to set minimum and maximum limits.
-url: https://www.contentstack.com/docs/developers/create-content-types/multiple
+url: https://www.contentstack.com/docs/headless-cms/multiple
 product: Field Properties
 doc_type: reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Other Frameworks on Launch"
 description: Documentation for hosting static sites, SSG sites, cloud functions, and unsupported SSR frameworks on Contentstack Launch using the Other framework preset, including caching and runtime specifications.
-url: https://www.contentstack.com/docs/developers/launch/other-frameworks-on-launch
+url: https://www.contentstack.com/docs/launch/other-frameworks-on-launch
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -37,7 +37,7 @@ By using the steps mentioned in this guide, you will be able to host a static si
 Follow the steps given below to host a static site on Launch.
 - [Log in to your Contentstack account](https://www.contentstack.com/login/) and click **Launch** from the dashboard.
 - Click the **+ New Project** button.
-- To host a static site project, select [Import from a Git Repository](/docs/developers/launch/import-project-using-github/) or [Upload a file](/docs/developers/launch/import-project-using-file-upload/) as usual from the **Create New Project** modal.
+- To host a static site project, select [Import from a Git Repository](/docs/launch/import-project-using-github/) or [Upload a file](/docs/launch/import-project-using-file-upload/) as usual from the **Create New Project** modal.
 - In the **Build and Output Settings**, leave the `Build Command` field blank.
 When a `Build Command` is not passed while creating a project or an environment, Launch assumes it as a static type and skips the build step.
 - Click the **Deploy** button.
@@ -58,7 +58,7 @@ Contentstack Launch allows you to host sites built using Static Site Generators 
 Follow the steps given below to host an SSG site on Launch.
 - [Log in to your Contentstack account](https://www.contentstack.com/login/) and click **Launch** from the dashboard.
 - Click the **+ New Project** button.
-- To host an SSG site, select [Import from a Git Repository](/docs/developers/launch/import-project-using-github/) or [Upload a file](/docs/developers/launch/import-project-using-file-upload/) from the **Create New Project** modal as usual.
+- To host an SSG site, select [Import from a Git Repository](/docs/launch/import-project-using-github/) or [Upload a file](/docs/launch/import-project-using-file-upload/) from the **Create New Project** modal as usual.
 - In the **Build and Output Settings**, enter the `Build Command` field to build your site.**Note: **Find the `Build Command` by going through your relevant framework documentation. Be sure to choose the build command suitable for deploying to production.
 - Click the **Deploy** button.
 
@@ -66,11 +66,11 @@ With these steps, you have successfully deployed and hosted an SSG site on Launc
 
 ## Hosting Cloud Functions
 
-Contentstack Launch cloud functions are a mechanism for you to provide backend functionality on your sites and enable you to write, deploy, and run server-side code on-demand as API endpoints. [Click here](/docs/developers/launch/cloud-functions) to learn more about hosting Cloud Functions.
+Contentstack Launch cloud functions are a mechanism for you to provide backend functionality on your sites and enable you to write, deploy, and run server-side code on-demand as API endpoints. [Click here](/docs/launch/cloud-functions) to learn more about hosting Cloud Functions.
 
 ## Hosting an SSR Framework Site
 
-In addition to the supported SSR (Server Side Rendered) frameworks, namely [NextJS](/docs/developers/launch/nextjs-on-launch/), [Gatsby](/docs/developers/launch/gatsby-on-launch/), and [Angular-SSR](/docs/developers/launch/angular-on-launch#server-side-rendering-ssr), Contentstack Launch also facilitates the deployment of projects built on frameworks that are not supported by Launch, as long as it runs a Node.js server.
+In addition to the supported SSR (Server Side Rendered) frameworks, namely [NextJS](/docs/launch/nextjs-on-launch/), [Gatsby](/docs/launch/gatsby-on-launch/), and [Angular-SSR](/docs/launch/angular-on-launch#server-side-rendering-ssr), Contentstack Launch also facilitates the deployment of projects built on frameworks that are not supported by Launch, as long as it runs a Node.js server.
 
 **Note: **Although Launch is built to support a wide array of Javascript frameworks, Contentstack may be limited to providing troubleshooting guidance for your specific application code. Please review our documentation carefully.
 
@@ -86,11 +86,11 @@ By using the steps mentioned in this guide, you will be able to host any SSR (Se
 Follow the steps given below to host an SSR site on Launch:
 - [Log in to Contentstack](https://www.contentstack.com/login/) and click the **Launch** icon from the dashboard.
 - On the **Launch Projects** screen, click the **+ New Project** button to initiate the project creation process.
-- Select [Import from a Git Repository](/docs/developers/launch/import-project-using-github/) or [Upload a file](/docs/developers/launch/import-project-using-file-upload/) as usual from the Create New Project modal.
+- Select [Import from a Git Repository](/docs/launch/import-project-using-github/) or [Upload a file](/docs/launch/import-project-using-file-upload/) as usual from the Create New Project modal.
 - In the **Create New Project** modal, add the following details:
 
 **Repository** (Mandatory): Select the repo that contains the app that you want to deploy.**Note:** When you select the repo, the **Build and Output Settings** section gets auto-populated.
-- **Git Branch **(Mandatory): By default, `master` or `main` is selected as the branch. You can choose another branch from the dropdown.**Note:** This field will be displayed only if you choose [Import from a Git Repository](/docs/developers/launch/import-project-using-github/) to deploy your project.
+- **Git Branch **(Mandatory): By default, `master` or `main` is selected as the branch. You can choose another branch from the dropdown.**Note:** This field will be displayed only if you choose [Import from a Git Repository](/docs/launch/import-project-using-github/) to deploy your project.
 - **Project Name** (Mandatory): Gets auto-populated on selecting the repository. You can edit it as per your requirement.
 - **Environment Name** (Mandatory): Enter the name of the environment.
 - **Build and Output Settings** (Mandatory): The fields in this section get auto-populated based on the selected framework, as discussed above. Update the fields to the following:**Framework Preset** (Mandatory): Select **Other** as the framework from the dropdown.
@@ -124,7 +124,7 @@ res.render('index', { title: 'Hello World!' });
 
 ## Cache Revalidation
 
-You can also leverage [Launch’s cache revalidation feature](/docs/developers/launch/revalidate-cdn-cache) to render new content updates on demand.
+You can also leverage [Launch’s cache revalidation feature](/docs/launch/revalidate-cdn-cache) to render new content updates on demand.
 
 **Note:**
 - You can use Cache Revalidation only for SSR frameworks since static sites do not have the runtime server necessary to generate a new version of the page.
@@ -144,7 +144,7 @@ The memory size for a Launch application is **1024 MB**.
 
 ### Runtime Environment
 
-The Launch runtime environment leverages [**Node.js**](/docs/developers/launch/supported-nodejs-versions) to power its execution environment.
+The Launch runtime environment leverages [**Node.js**](/docs/launch/supported-nodejs-versions) to power its execution environment.
 
 ### File System
 

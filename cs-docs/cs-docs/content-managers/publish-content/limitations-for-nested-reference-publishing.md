@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - Limitations for Nested Reference Publishing"
 description: Limitations for Nested Reference Publishing
-url: https://www.contentstack.com/docs/content-managers/publish-content/limitations-for-nested-reference-publishing
+url: https://www.contentstack.com/docs/headless-cms/limitations-for-nested-reference-publishing
 product: Contentstack
 doc_type: reference
 audience:

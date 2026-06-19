@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Airtable
 description: Airtable connector actions for creating, updating, deleting, and fetching records in Airtable.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/airtable
+url: https://www.contentstack.com/docs/agent-os/airtable
 product: Automations guides and connectors
 doc_type: connector-guide
 audience:

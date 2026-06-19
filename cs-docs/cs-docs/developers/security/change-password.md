@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Change Password"
 description: Regularly updating your password helps protect your Contentstack account from unauthorized access.
-url: https://www.contentstack.com/docs/developers/security/change-password
+url: https://www.contentstack.com/docs/administration/change-password
 product: Contentstack
 doc_type: how-to
 audience:

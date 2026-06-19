@@ -1,7 +1,7 @@
 ---
 title: "[SSO] - Set up SSO with Microsoft Entra ID Native App"
 description: Step-by-step guide to set up Single Sign-On (SSO) in Contentstack with Microsoft Entra ID Native App as your SAML 2.0 Identity Provider (IdP).
-url: https://www.contentstack.com/docs/developers/single-sign-on/set-up-sso-with-microsoft-entra-ID-native-app
+url: https://www.contentstack.com/docs/administration/set-up-sso-with-microsoft-entra-ID-native-app
 product: Contentstack
 doc_type: how-to-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Upload Your Deployment Zip File to Launch"
 description: Upload your deployment ZIP file to a signed URL using values from the Get a Signed Upload URL call.
-url: https://www.contentstack.com/docs/developers/launch/upload-your-deployment-zip-file-to-launch
+url: https://www.contentstack.com/docs/launch/upload-your-deployment-zip-file-to-launch
 product: Contentstack Launch
 doc_type: api-guide
 audience:

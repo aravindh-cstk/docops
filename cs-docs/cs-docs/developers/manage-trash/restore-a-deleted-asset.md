@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Restore a Deleted Asset"
 description: Restore a deleted asset from Trash and filter deleted assets.
-url: https://www.contentstack.com/docs/developers/manage-trash/restore-a-deleted-asset
+url: https://www.contentstack.com/docs/headless-cms/restore-a-deleted-asset
 product: Contentstack
 doc_type: how-to
 audience:

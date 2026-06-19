@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Restore Updated Content"
 description: Restore data lost due to entries and content type updates.
-url: https://www.contentstack.com/docs/content-managers/author-content/restore-updated-content
+url: https://www.contentstack.com/docs/headless-cms/restore-updated-content
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Automating Asset Management with Contentstack Automate"
 description: Automate updating an asset description based on a Voice Profile when a new asset is published in Contentstack using Contentstack Automate.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/automating-asset-management-with-contentstack-automate
+url: https://www.contentstack.com/docs/agent-os/automating-asset-management-with-contentstack-automate
 product: Contentstack Automate
 doc_type: guide
 audience:

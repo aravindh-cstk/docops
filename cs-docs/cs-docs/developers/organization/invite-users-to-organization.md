@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Invite Users to Organization"
 description: Invite users to your Contentstack organization to enable seamless collaboration across your team.
-url: https://www.contentstack.com/docs/developers/organization/invite-users-to-organization
+url: https://www.contentstack.com/docs/administration/invite-users-to-organization
 product: Contentstack
 doc_type: guide
 audience:

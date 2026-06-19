@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Taxonomy Migration"
 uid: blt2a6acf45012c79f3
-url: /developers/cli/taxonomy-migration
+url: https://www.contentstack.com/docs/headless-cms/taxonomy-migration
 contentstack:
   environment: production
   assets: []

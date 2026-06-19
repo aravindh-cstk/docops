@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Launch Quick Start Guide with Vue"
 description: Launch Quick Start Guide with Vue
-url: https://www.contentstack.com/docs/developers/launch/quick-start-vue
+url: https://www.contentstack.com/docs/launch/quick-start-vue
 product: Contentstack Launch
 doc_type: quick-start
 audience:
@@ -31,8 +31,8 @@ Follow the steps given below to deploy your first Launch project using GitHub:
 Alternatively, go to the **App Switcher** in the top panel and click the **Launch** icon.
 - On the **Launch Projects** screen, click the **+ New Project** button to initiate the project creation process.
 - From the **Create New Project** modal, click **Import from a Git Repository**.
-**Note:** You can also choose to [upload a .zip file to import a project](/docs/developers/launch/import-project-using-file-upload/).
-- Click **GitHub**.**Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/developers/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
+**Note:** You can also choose to [upload a .zip file to import a project](/docs/launch/import-project-using-file-upload/).
+- Click **GitHub**.**Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
 
 A Sign in to GitHub screen pops up. Enter your credentials and log in to your GitHub account.
 
@@ -81,7 +81,7 @@ If you want to deploy the changes from any other commits, you can click the **Re
 Only the Organization [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles/#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to create projects in a stack for Launch.
 
 ### Can I import a Launch project without using GitHub?
-Yes. You can also choose to [upload a .zip file to import a project](/docs/developers/launch/import-project-using-file-upload/).
+Yes. You can also choose to [upload a .zip file to import a project](/docs/launch/import-project-using-file-upload/).
 
 ### What environment variables are required for the Contentstack VueJS Starter?
 For the Contentstack VueJS Starter to work, you need to provide the environment variables listed in the page under “For the Contentstack VueJS Starter to work, we need to provide the following environment variables:”.

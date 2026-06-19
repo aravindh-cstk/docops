@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Monitor Organization Activities in Audit Log"
 description: Audit Log tracks and displays activities (or events) performed across the Contentstack platform in a particular Organization.
-url: https://www.contentstack.com/docs/developers/organization/monitor-organization-activities-in-audit-log
+url: https://www.contentstack.com/docs/administration/monitor-organization-activities-in-audit-log
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Create a New Release"
 description: Create a new Release to deploy (publish/unpublish) a set of entries and assets to an environment.
-url: https://www.contentstack.com/docs/developers/create-releases/create-a-new-release
+url: https://www.contentstack.com/docs/headless-cms/create-a-new-release
 product: Contentstack
 doc_type: guide
 audience:

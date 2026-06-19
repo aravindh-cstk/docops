@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Unique"
 description: Field property that ensures a field value does not repeat across entries within the same content type, including behavior when copying entries.
-url: https://www.contentstack.com/docs/developers/create-content-types/unique
+url: https://www.contentstack.com/docs/headless-cms/unique
 product: Contentstack
 doc_type: reference
 audience:

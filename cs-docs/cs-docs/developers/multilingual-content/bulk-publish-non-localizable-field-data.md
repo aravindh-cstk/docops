@@ -1,7 +1,7 @@
 ---
 title: "[Multilingual Content] - Bulk Publish Non-localizable Field Data"
 description: Bulk publish localized entries from the master-language entry to reflect updates to Non-localizable fields across locales.
-url: https://www.contentstack.com/docs/developers/multilingual-content/bulk-publish-non-localizable-field-data
+url: https://www.contentstack.com/docs/headless-cms/bulk-publish-non-localizable-field-data
 product: Contentstack
 doc_type: guide
 audience:

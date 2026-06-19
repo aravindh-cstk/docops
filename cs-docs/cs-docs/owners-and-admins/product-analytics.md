@@ -1,7 +1,7 @@
 ---
 title: "[Owners and Admins] - Product Analytics Old (IGNORE)"
 description: Product Analytics Old (IGNORE)
-url: https://www.contentstack.com/docs/owners-and-admins/product-analytics
+url: https://www.contentstack.com/docs/administration/product-analytics
 product: Contentstack
 doc_type: owners-and-admins
 audience:

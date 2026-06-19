@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Bulk Export Entries"
 description: Use the bulk export entries feature to export selected, page-level, or all entries from the entries list page, with customizable columns and JSON/CSV formats.
-url: https://www.contentstack.com/docs/content-managers/author-content/bulk-export-entries
+url: https://www.contentstack.com/docs/headless-cms/bulk-export-entries
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Trash Real-world Scenarios"
 description: Trash Real-world Scenarios
-url: https://www.contentstack.com/docs/developers/manage-trash/trash-real-world-scenarios
+url: https://www.contentstack.com/docs/headless-cms/trash-real-world-scenarios
 product: Contentstack
 doc_type: guide
 audience:

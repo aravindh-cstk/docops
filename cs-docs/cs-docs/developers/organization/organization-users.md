@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Organization Users"
 description: Manage organization users in the Users section, including inviting, editing, removing, unlocking, resetting MFA, exporting, and viewing last login details.
-url: https://www.contentstack.com/docs/developers/organization/organization-users
+url: https://www.contentstack.com/docs/administration/organization-users
 product: Contentstack
 doc_type: guide
 audience:

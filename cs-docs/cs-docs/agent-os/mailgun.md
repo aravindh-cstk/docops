@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Mailgun
 description: Set up the Mailgun action connector to send emails using your own Mailgun account.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/mailgun
+url: https://www.contentstack.com/docs/agent-os/mailgun
 product: Automation Hub
 doc_type: connector-guide
 audience:

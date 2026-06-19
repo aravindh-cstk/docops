@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Regions] - Login Endpoints"
 description: Login endpoints for Contentstack Regions across AWS, Azure, and GCP.
-url: https://www.contentstack.com/docs/developers/contentstack-regions/login-endpoints
+url: https://www.contentstack.com/docs/administration/login-endpoints
 product: Contentstack
 doc_type: reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - CMS Connector API - Wordpress"
 description: Documentation for the migration-wordpress Node.js utility package used to migrate WordPress content to Contentstack.
-url: https://www.contentstack.com/docs/developers/content-migration/cms-connector-api-wordpress
+url: https://www.contentstack.com/docs/headless-cms/cms-connector-api-wordpress
 product: Contentstack
 doc_type: developer-guide
 audience:

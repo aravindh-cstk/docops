@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Vimeo App Installation Guide"
 description: Vimeo App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/vimeo
+url: https://www.contentstack.com/docs/marketplace/vimeo
 product: Contentstack Marketplace
 doc_type: marketplace-app-guide
 audience:

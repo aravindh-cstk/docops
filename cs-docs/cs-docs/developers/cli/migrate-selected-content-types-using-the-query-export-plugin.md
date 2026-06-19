@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Migrate Selected Content Using the Query Export Plugin"
 description: Migrate Selected Content Using the Query Export Plugin
-url: https://www.contentstack.com/docs/developers/cli/migrate-selected-content-types-using-the-query-export-plugin
+url: https://www.contentstack.com/docs/headless-cms/migrate-selected-content-types-using-the-query-export-plugin
 product: Contentstack
 doc_type: cli-guide
 audience:

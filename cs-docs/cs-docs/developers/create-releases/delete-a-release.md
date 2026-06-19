@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Delete a Release"
 description: Delete a release if no longer required.
-url: https://www.contentstack.com/docs/developers/create-releases/delete-a-release
+url: https://www.contentstack.com/docs/headless-cms/delete-a-release
 product: Contentstack
 doc_type: how-to
 audience:

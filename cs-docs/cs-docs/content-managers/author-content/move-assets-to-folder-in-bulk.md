@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Move Assets to Folder in Bulk"
 description: Bulk Move feature in Contentstack to transfer multiple assets to designated folders simultaneously.
-url: https://www.contentstack.com/docs/content-managers/author-content/move-assets-to-folder-in-bulk
+url: https://www.contentstack.com/docs/headless-cms/move-assets-to-folder-in-bulk
 product: Contentstack
 doc_type: how-to
 audience:

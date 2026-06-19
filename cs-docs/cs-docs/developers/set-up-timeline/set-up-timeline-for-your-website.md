@@ -1,7 +1,7 @@
 ---
 title: "[Timeline] - Set Up Timeline for your Website"
 description: Set up Timeline for your Website
-url: https://www.contentstack.com/docs/developers/set-up-timeline/set-up-timeline-for-your-website
+url: https://www.contentstack.com/docs/headless-cms/set-up-timeline-for-your-website
 product: Contentstack
 doc_type: developer-guide
 audience:

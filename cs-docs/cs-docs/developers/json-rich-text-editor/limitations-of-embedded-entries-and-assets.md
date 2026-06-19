@@ -1,7 +1,7 @@
 ---
 title: "[Json Rich Text Editor] - Limitations of Embedded Entries and Assets"
 description: Limitations of embedded entries and assets in a JSON Rich Text Editor (JSON RTE) field.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/limitations-of-embedded-entries-and-assets
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-embedded-entries-and-assets
 product: Json Rich Text Editor
 doc_type: reference
 audience:

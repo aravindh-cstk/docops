@@ -1,7 +1,7 @@
 ---
 title: [Automations guides and connectors] - Contentstack Delivery
 description: Use the Contentstack Delivery connector to fetch assets and entries.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-delivery
+url: https://www.contentstack.com/docs/agent-os/contentstack-delivery
 product: Automations
 doc_type: documentation
 audience:

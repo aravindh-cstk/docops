@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Webhook Circuit Breaker"
 description: Documentation for Contentstack's Webhook Circuit Breaker (WCB), including retry behavior, timeout, disablement thresholds, and notification emails.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-circuit-breaker
+url: https://www.contentstack.com/docs/headless-cms/webhook-circuit-breaker
 product: Contentstack
 doc_type: guide
 audience:

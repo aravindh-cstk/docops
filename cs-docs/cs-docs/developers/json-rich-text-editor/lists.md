@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Lists"
 description: Lists in Contentstack’s JSON Rich Text Editor (RTE), including supported list types, JSON structure, nesting rules, and UI marker behavior.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/lists
+url: https://www.contentstack.com/docs/headless-cms/lists
 product: Contentstack
 doc_type: developer-guide
 audience:

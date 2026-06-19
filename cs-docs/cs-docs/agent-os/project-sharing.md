@@ -1,7 +1,7 @@
 ---
 title: [Automations guides and connectors] - Project Sharing
 description: Learn how to share projects in Agent OS, manage access permissions, and collaborate effectively on automation workflows.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/project-sharing
+url: https://www.contentstack.com/docs/agent-os/project-sharing
 product: Automations
 doc_type: documentation
 audience:

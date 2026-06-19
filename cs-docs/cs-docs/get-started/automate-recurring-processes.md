@@ -1,7 +1,7 @@
 ---
 title: "[Get Started with CS] - Automate Recurring Processes"
 description: Set up an automated system to notify stakeholders when any activity within a stack is performed.
-url: https://www.contentstack.com/docs/get-started/automate-recurring-processes
+url: https://www.contentstack.com/docs/headless-cms/automate-recurring-processes
 product: Contentstack
 doc_type: get-started
 audience:

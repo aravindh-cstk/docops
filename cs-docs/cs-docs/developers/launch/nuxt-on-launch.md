@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Nuxt on Launch"
 description: Nuxt on Launch
-url: https://www.contentstack.com/docs/developers/launch/nuxt-on-launch
+url: https://www.contentstack.com/docs/launch/nuxt-on-launch
 product: Contentstack Launch
 doc_type: developer-guide
 audience:
@@ -97,13 +97,13 @@ Nuxt supports multiple rendering strategies, such as **Universal Rendering**, **
 
 - #### Route Middleware/Server Middleware
 
-  While using [middleware](https://nuxt.com/docs/guide/directory-structure/middleware) for user-specific logic such as authentication or personalization, it is important to note that the CDN caching may serve pages **before** the middleware executes. This can result in unintended exposure of protected or personalized content. To ensure secure and correct behavior, such logic should be handled at the edge using the [Edge Functions](/docs/developers/launch/edge-functions) on Launch.
+  While using [middleware](https://nuxt.com/docs/guide/directory-structure/middleware) for user-specific logic such as authentication or personalization, it is important to note that the CDN caching may serve pages **before** the middleware executes. This can result in unintended exposure of protected or personalized content. To ensure secure and correct behavior, such logic should be handled at the edge using the [Edge Functions](/docs/launch/edge-functions) on Launch.
 
 ### Caching
 
 By default, all pages except API routes are cached on Launch’s CDN when you deploy Nuxt as SSR. This means that the subsequent requests to the same page will be cached, and the page will not be regenerated.
 
-Check out the [Caching Guide for Contentstack Launch](/docs/developers/launch/caching-guide-for-contentstack-launch/) for more information.
+Check out the [Caching Guide for Contentstack Launch](/docs/launch/caching-guide-for-contentstack-launch/) for more information.
 
 However, you can customize this behavior for every route by configuring it in the `nuxt.config.js` file under the `routeRules` directive of `defineNuxtConfig`.
 
@@ -141,15 +141,15 @@ routeRules: {
 
 - **On-Demand Revalidation**
 
-  You can trigger on-demand revalidation using Automate: [Revalidate CDN cache using Automate](/docs/developers/launch/revalidate-cdn-cache).
+  You can trigger on-demand revalidation using Automate: [Revalidate CDN cache using Automate](/docs/launch/revalidate-cdn-cache).
 
   **Note:** Ensure you revalidate the cache for the data endpoint that backs the content, in addition to the page URL. This is important if your page uses cached API endpoints for data delivery. Example: `domain/api/api-route`
 
-**Additional Resource:** Refer to the [Quick Start Guide with Nuxt](/docs/developers/launch/quick-start-nuxt) documentation for a step-by-step walkthrough to deploy your Nuxt project on Launch as an SSR-based application.
+**Additional Resource:** Refer to the [Quick Start Guide with Nuxt](/docs/launch/quick-start-nuxt) documentation for a step-by-step walkthrough to deploy your Nuxt project on Launch as an SSR-based application.
 
 ## Setting up Edge Redirects and Rewrites in Nuxt on Launch
 
-When configuring [Edge Rewrites](/docs/developers/launch/edge-url-rewrites) or [Edge Redirects](/docs/developers/launch/edge-url-redirects) in Contentstack Launch—either via `launch.json` or using [Edge Functions](/docs/developers/launch/edge-functions), it is a prerequisite to use native `<a>` tags instead of `<NuxtLink>` components within your Nuxt application.
+When configuring [Edge Rewrites](/docs/launch/edge-url-rewrites) or [Edge Redirects](/docs/launch/edge-url-redirects) in Contentstack Launch—either via `launch.json` or using [Edge Functions](/docs/launch/edge-functions), it is a prerequisite to use native `<a>` tags instead of `<NuxtLink>` components within your Nuxt application.
 
 This ensures that the client initiates a full-page request, allowing the rewrite or redirect rule to be properly executed at the edge.
 
@@ -161,7 +161,7 @@ This ensures that the client initiates a full-page request, allowing the rewrite
 
 The Launch application enforces a maximum execution timeout of **30 seconds**. If the application does not respond within this time, the request times out and returns an **HTTP 500 status code**.
 
-**Note:** For **error code 500**, please refer to the timed-out errors in the [Server Logs](/docs/developers/launch/cloud-functions#server-logs) tab to understand and address the issue.
+**Note:** For **error code 500**, please refer to the timed-out errors in the [Server Logs](/docs/launch/cloud-functions#server-logs) tab to understand and address the issue.
 
 ### Memory Size
 
@@ -169,7 +169,7 @@ The memory size for a Launch application is **1024 MB**.
 
 ### Runtime Environment
 
-The Launch application runtime environment supports [Node.js version 20](https://nodejs.org/docs/latest-v20.x/api/index.html) to power its execution environment. Learn more about configuring the specific Package Manager [here](/docs/developers/launch/supported-package-managers).
+The Launch application runtime environment supports [Node.js version 20](https://nodejs.org/docs/latest-v20.x/api/index.html) to power its execution environment. Learn more about configuring the specific Package Manager [here](/docs/launch/supported-package-managers).
 
 ### File System
 
@@ -191,7 +191,7 @@ This section provides solutions for some common issues faced with hosting Nuxt.
 
   When using `i18n` in Nuxt, the URL structure changes to support multiple languages. For example, a path like `/about-us` may be localized under `/nl/about-us`.
 
-  In such cases, it is important to [revalidate the cache](/docs/developers/launch/revalidate-cdn-cache) for both the localized URL (e.g., `/nl/about-us`) and the base URL (`/about-us`).
+  In such cases, it is important to [revalidate the cache](/docs/launch/revalidate-cdn-cache) for both the localized URL (e.g., `/nl/about-us`) and the base URL (`/about-us`).
 
   You may also have a default locale configured for URLs without explicit locale paths. For example, visiting `/about-us` may return content localized in English by default. In this case, ensure you revalidate the cache for both `/about-us` and `/nl/about-us`.
 

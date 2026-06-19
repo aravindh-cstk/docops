@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Custom Field Location"
 description: Documentation for configuring the Custom Field UI location for an app in the Contentstack Developer Hub.
-url: https://www.contentstack.com/docs/developers/developer-hub/custom-field-location
+url: https://www.contentstack.com/docs/developer-hub/custom-field-location
 product: Contentstack
 doc_type: developer-hub-guide
 audience:
@@ -28,19 +28,19 @@ To add the custom field location to your app via the Developer Hub console, logi
       Click the **Developer Hub **icon in the left navigation panel.
 - Select an application for which you want to add the custom field location.
 - Click the **UI Locations** tab. To set the **App URL**, click the** View Hosting **link. You will be redirected to the **Hosting **tab.
-- In the **Hosting **tab, you can select [Hosting with Launch](/docs/developers/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developers/developer-hub/app-hosting#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.
+- In the **Hosting **tab, you can select [Hosting with Launch](/docs/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developer-hub/app-hosting#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.
 - Navigate to the **UI Locations** tab to configure the Custom Field location.
 - Hover over the **Custom Field** location, and click the **+ Add**** UI Location** button.
 - On the resulting Configuration page, set up the configurations for custom field location by providing details such as **Name**, **Path**, **Data Type**, and **Description**. You can also enable the configuration using the **Enabled **toggle button.Properties that can be specified for this UI location:
 
           **Name (optional):** Specifies the name of the UI location. This name will be displayed at the location after the app is installed. If not provided, the app name will be used. Ensure unique names for multiple configurations of the same location.
-- **Signed (optional):** When enabled, Contentstack adds a JWT token to the initial HTTP request made for your app's first page. This token can be used to verify that the request originated from Contentstack. For more information, please refer to [Signed Locations](/docs/developers/developer-hub/securing-your-app/).
+- **Signed (optional):** When enabled, Contentstack adds a JWT token to the initial HTTP request made for your app's first page. This token can be used to verify that the request originated from Contentstack. For more information, please refer to [Signed Locations](/docs/developer-hub/securing-your-app/).
 - **Path (optional): **Enables you to define the location relative to the base URL where the app is hosted. This is particularly useful when the developer intends the app to appear in multiple locations.
 - **Enabled (optional)**: Determines whether the location is visible after the app installation. If not specified, the location is enabled by default. Users can manage this option post-installation via the UI Locations tab on the app’s configuration screen.
 
         You can configure any UI location as **mandatory **using the **Required **toggle button. If the toggle is enabled, the location becomes mandatory and cannot be disabled. Whereas, if the toggle is disabled, the UI location is available to use but not mandatory. With the **Multiple** field, you can save input values in array.
 
-        **Additional Resource:** Refer to the [Marketplace App Manifest](/docs/developers/developer-hub/app-manifest) documentation for comprehensive details.
+        **Additional Resource:** Refer to the [Marketplace App Manifest](/docs/developer-hub/app-manifest) documentation for comprehensive details.
 - Finally, click the **Save** button to save the custom field location’s configuration details.
 
         You will see the details of the configured UI location on the **UI Locations** tab in the **App Configuration **screen after installing the app.
@@ -49,7 +49,7 @@ You can enable or disable the non-required UI locations. Apps which have the Cus
 
 **Note:** A single app supports up to **ten** custom field locations.
 
-You can create new custom field locations by writing your custom code, or you can use the prebuilt [boilerplate](/docs/developers/developer-hub/marketplace-app-boilerplate) and modify the given code to suit your requirements.
+You can create new custom field locations by writing your custom code, or you can use the prebuilt [boilerplate](/docs/developer-hub/marketplace-app-boilerplate) and modify the given code to suit your requirements.
 
 ## Common questions
 

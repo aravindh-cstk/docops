@@ -1,7 +1,7 @@
 ---
 title: "[Headless CMS | Fields] - Field Limitations"
 description: Default field limitations in Contentstack.
-url: https://www.contentstack.com/docs/developers/create-content-types/field-limitations
+url: https://www.contentstack.com/docs/headless-cms/field-limitations
 product: Contentstack
 doc_type: reference
 audience:

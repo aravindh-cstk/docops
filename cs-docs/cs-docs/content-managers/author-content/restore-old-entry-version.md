@@ -1,7 +1,7 @@
 ---
 title: "[Author Content | Entry Versions] - Restore Old Entry Version"
 description: Restore or rollback to an earlier saved version of an entry in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/restore-old-entry-version
+url: https://www.contentstack.com/docs/headless-cms/restore-old-entry-version
 product: Contentstack
 doc_type: how-to
 audience:

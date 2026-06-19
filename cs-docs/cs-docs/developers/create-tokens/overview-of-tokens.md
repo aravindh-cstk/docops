@@ -1,7 +1,7 @@
 ---
 title: "[Create Tokens] - Overview of Tokens"
 description: Overview of tokens and how to authenticate Content Delivery API and Content Management API requests in Contentstack.
-url: https://www.contentstack.com/docs/developers/create-tokens/overview-of-tokens
+url: https://www.contentstack.com/docs/headless-cms/overview-of-tokens
 product: Contentstack
 doc_type: overview
 audience:

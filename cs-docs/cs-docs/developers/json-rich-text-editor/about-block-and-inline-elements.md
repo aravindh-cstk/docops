@@ -1,7 +1,7 @@
 ---
 title: [JSON RTE] - About Block and Inline Elements
 description: Learn the difference between block and inline elements in Contentstack's JSON RTE to create structured, well-formatted content easily.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/about-block-and-inline-elements
+url: https://www.contentstack.com/docs/headless-cms/about-block-and-inline-elements
 product: Contentstack
 doc_type: documentation
 audience:

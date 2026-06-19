@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - View Webhook Logs"
 description: View logs for triggered webhooks in Contentstack and retrieve webhook execution details.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/view-webhook-logs
+url: https://www.contentstack.com/docs/headless-cms/view-webhook-logs
 product: Contentstack
 doc_type: guide
 audience:

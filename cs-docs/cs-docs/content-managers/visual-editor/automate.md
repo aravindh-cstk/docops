@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Automate"
 description: Run automation workflows from the Visual Editor page editing interface using the Automate App.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/automate
+url: https://www.contentstack.com/docs/headless-cms/automate
 product: Contentstack
 doc_type: feature-guide
 audience:

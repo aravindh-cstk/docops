@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Widgets"
 description: Widgets panel in the Visual Editor for integrating apps and extensions directly within the editor.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/widgets
+url: https://www.contentstack.com/docs/headless-cms/widgets
 product: Contentstack
 doc_type: guide
 audience:

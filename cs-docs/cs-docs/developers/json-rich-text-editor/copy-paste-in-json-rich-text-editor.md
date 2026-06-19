@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Working with Copy-Paste in JSON Rich Text Editor"
 description: Guidelines, best practices, supported formatting, and limitations for copying and pasting content into Contentstack’s JSON Rich Text Editor (JSON RTE).
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/copy-paste-in-json-rich-text-editor
+url: https://www.contentstack.com/docs/headless-cms/copy-paste-in-json-rich-text-editor
 product: Contentstack
 doc_type: guide
 audience:

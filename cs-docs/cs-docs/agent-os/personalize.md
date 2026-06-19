@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Personalize Connector"
 description: Documentation for the Personalize Connector in Automation Hub, including prerequisites and available actions.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/personalize
+url: https://www.contentstack.com/docs/agent-os/personalize
 product: Contentstack
 doc_type: connector-guide
 audience:

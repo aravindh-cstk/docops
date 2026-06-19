@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Deleting an App"
 description: Steps and warnings for deleting an app from a stack or organization in Developer Hub.
-url: https://www.contentstack.com/docs/developers/developer-hub/deleting-an-app
+url: https://www.contentstack.com/docs/developer-hub/deleting-an-app
 product: Developer Hub
 doc_type: guide
 audience:

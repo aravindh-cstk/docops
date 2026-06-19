@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Supported Languages"
 description: Supported languages in Contentstack multilingual content, including country-specific, area-specific, and generic languages, plus language code formats and standards.
-url: https://www.contentstack.com/docs/developers/multilingual-content/supported-languages
+url: https://www.contentstack.com/docs/headless-cms/supported-languages
 product: Contentstack
 doc_type: concept
 audience:

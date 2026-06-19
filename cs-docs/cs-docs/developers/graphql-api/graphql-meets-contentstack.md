@@ -1,7 +1,7 @@
 ---
 title: "[GraphQL API NEW] - GraphQL meets Contentstack"
 description: GraphQL meets Contentstack
-url: https://www.contentstack.com/docs/developers/graphql-api/graphql-meets-contentstack
+url: https://www.contentstack.com/docs/headless-cms/graphql-meets-contentstack
 product: Contentstack
 doc_type: overview
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Create New Page"
 description: Create and customize web pages using Visual Editor without writing code.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/create-new-page
+url: https://www.contentstack.com/docs/headless-cms/create-new-page
 product: Contentstack
 doc_type: how-to
 audience:

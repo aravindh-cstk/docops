@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Data Store"
 description: Data Store connector documentation for storing and retrieving key-value data at Automation, Organizational, and Execution levels, including Set Data, Get Data, Append Data, and Clear Data actions.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/data-store
+url: https://www.contentstack.com/docs/agent-os/data-store
 product: Automation Hub
 doc_type: connector-guide
 audience:

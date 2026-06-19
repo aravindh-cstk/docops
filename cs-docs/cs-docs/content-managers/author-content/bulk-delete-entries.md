@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Bulk Delete Entries"
 description: Bulk Delete Entries
-url: https://www.contentstack.com/docs/content-managers/author-content/bulk-delete-entries
+url: https://www.contentstack.com/docs/headless-cms/bulk-delete-entries
 product: Contentstack
 doc_type: how-to
 audience:

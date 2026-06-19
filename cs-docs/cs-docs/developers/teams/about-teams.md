@@ -1,7 +1,7 @@
 ---
 title: "[Teams] - About Teams"
 description: Overview of Teams and how they help manage roles and permissions by organizing users into groups.
-url: https://www.contentstack.com/docs/developers/teams/about-teams
+url: https://www.contentstack.com/docs/administration/about-teams
 product: Contentstack
 doc_type: concept
 audience:

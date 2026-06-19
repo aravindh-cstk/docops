@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Mission Control"
 description: Mission Control dashboard in Contentstack for accessing log data and monitoring organization health.
-url: https://www.contentstack.com/docs/developers/organization/mission-control
+url: https://www.contentstack.com/docs/administration/mission-control
 product: Contentstack
 doc_type: guide
 audience:

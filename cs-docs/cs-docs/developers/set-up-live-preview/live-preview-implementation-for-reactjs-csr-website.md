@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Live Preview] Live PreviewImplementation for ReactJS CSR  Website"
 description: Live Preview Implementation for ReactJS CSR Website
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/live-preview-implementation-for-reactjs-csr-website
+url: https://www.contentstack.com/docs/headless-cms/live-preview-implementation-for-reactjs-csr-website
 product: Contentstack
 doc_type: guide
 audience:

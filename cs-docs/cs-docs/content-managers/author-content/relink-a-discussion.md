@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Relink a Discussion"
 description: Relink unlinked discussions to a field in Contentstack entries.
-url: https://www.contentstack.com/docs/content-managers/author-content/relink-a-discussion
+url: https://www.contentstack.com/docs/headless-cms/relink-a-discussion
 product: Contentstack
 doc_type: how-to
 audience:

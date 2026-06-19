@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Gemini
 description: Gemini connector documentation for generating content through chat responses and translating entry data in Automate.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/gemini
+url: https://www.contentstack.com/docs/agent-os/gemini
 product: Contentstack Automate
 doc_type: connector-guide
 audience:

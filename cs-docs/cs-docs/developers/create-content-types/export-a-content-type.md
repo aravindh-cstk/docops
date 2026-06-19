@@ -1,7 +1,7 @@
 ---
 title: "[Create Content Types] - Export a Content Type"
 description: Export the JSON schema of an existing content type from a Contentstack stack, including UI steps and API reference.
-url: https://www.contentstack.com/docs/developers/create-content-types/export-a-content-type
+url: https://www.contentstack.com/docs/headless-cms/export-a-content-type
 product: Contentstack
 doc_type: how-to
 audience:

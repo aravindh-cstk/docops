@@ -1,7 +1,7 @@
 ---
 title: "[Preview Sharing] - Add a Review Comment"
 description: How to add, edit, and delete review comments in a shared preview link.
-url: https://www.contentstack.com/docs/content-managers/preview-sharing/add-a-review-comment
+url: https://www.contentstack.com/docs/headless-cms/add-a-review-comment
 product: Contentstack
 doc_type: how-to
 audience:

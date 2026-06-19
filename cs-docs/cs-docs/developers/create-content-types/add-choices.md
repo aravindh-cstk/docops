@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Add Choices"
 description: Add Choices property for the Select field, including single-value and key-value pair choices.
-url: https://www.contentstack.com/docs/developers/create-content-types/add-choices
+url: https://www.contentstack.com/docs/headless-cms/add-choices
 product: Contentstack
 doc_type: developer-guide
 audience:

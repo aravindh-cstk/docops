@@ -1,7 +1,7 @@
 ---
 title: "[Json Rich Text Editor] - Render JSON RTE Content via SDKs"
 description: Render JSON Rich Text Editor (RTE) content via Contentstack SDK utilities and examples.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/render-json-rte-content-via-sdks
+url: https://www.contentstack.com/docs/headless-cms/render-json-rte-content-via-sdks
 product: Contentstack
 doc_type: developer-guide
 audience:

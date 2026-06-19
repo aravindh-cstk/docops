@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Draft vs. Live Automation Mode"
 description: Draft vs. Live Automation Mode for Agent OS automations, including why the modes exist and what actions are allowed in each mode.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/draft-vs-live-automation-mode
+url: https://www.contentstack.com/docs/agent-os/draft-vs-live-automation-mode
 product: Agent OS
 doc_type: guide
 audience:

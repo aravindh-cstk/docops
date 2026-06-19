@@ -1,7 +1,7 @@
 ---
 title: "[Second level navigation] - Contentstack Basics"
 description: Contentstack Basics listing page with introduction and links to foundational Contentstack documentation.
-url: https://www.contentstack.com/docs/developers/contentstack-basics
+url: https://www.contentstack.com/docs/headless-cms/contentstack-basics
 product: Contentstack
 doc_type: navigation-listing
 audience:

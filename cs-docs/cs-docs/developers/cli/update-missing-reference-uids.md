@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Update Missing Reference UIDs for Entries, Assets, and Extensions"
 uid: blt3afca0a8bf912f83
-url: /developers/cli/update-missing-reference-uids
+url: https://www.contentstack.com/docs/headless-cms/update-missing-reference-uids
 contentstack:
   environment: production
   assets: []

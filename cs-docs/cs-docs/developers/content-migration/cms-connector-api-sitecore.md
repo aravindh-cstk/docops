@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - CMS Connector API - Sitecore"
 description: Documentation for `migration-sitecore`, a Node.js utility package for migrating Sitecore content to another system.
-url: https://www.contentstack.com/docs/developers/content-migration/cms-connector-api-sitecore
+url: https://www.contentstack.com/docs/headless-cms/cms-connector-api-sitecore
 product: Content Migration
 doc_type: developer-guide
 audience:

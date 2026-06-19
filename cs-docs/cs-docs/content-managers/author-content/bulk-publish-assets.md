@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Bulk Publish Assets"
 description: Publishing multiple assets simultaneously in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/bulk-publish-assets
+url: https://www.contentstack.com/docs/headless-cms/bulk-publish-assets
 product: Contentstack
 doc_type: how-to
 audience:

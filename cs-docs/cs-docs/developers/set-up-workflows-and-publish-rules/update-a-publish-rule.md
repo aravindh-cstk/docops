@@ -1,7 +1,7 @@
 ---
 title: "[Publish Rules] - Update a Publish Rule"
 description: How to update an existing Publish Rule in Contentstack, including UI steps and API reference.
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/update-a-publish-rule
+url: https://www.contentstack.com/docs/headless-cms/update-a-publish-rule
 product: Contentstack
 doc_type: how-to
 audience:

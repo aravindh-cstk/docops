@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - View Entry References"
 description: The View Entry References feature helps you understand how entries are connected across your stack.
-url: https://www.contentstack.com/docs/content-managers/author-content/view-entry-references
+url: https://www.contentstack.com/docs/headless-cms/view-entry-references
 product: Contentstack
 doc_type: feature-guide
 audience:

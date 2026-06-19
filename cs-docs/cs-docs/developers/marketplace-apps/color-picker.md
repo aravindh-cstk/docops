@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Color Picker App Installation Guide"
 description: Color Picker App Installation Guide for installing and using the Contentstack Color Picker app and Custom Fields.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/color-picker
+url: https://www.contentstack.com/docs/marketplace/color-picker
 product: Contentstack
 doc_type: marketplace-guide
 audience:

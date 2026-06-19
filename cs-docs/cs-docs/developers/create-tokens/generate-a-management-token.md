@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Generate a Management Token"
 description: Generate a management token that provides secure read-write access to your stack's content through the Content Management API.
-url: https://www.contentstack.com/docs/developers/create-tokens/generate-a-management-token
+url: https://www.contentstack.com/docs/headless-cms/generate-a-management-token
 product: Contentstack
 doc_type: how-to
 audience:

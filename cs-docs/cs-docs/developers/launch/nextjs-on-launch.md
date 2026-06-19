@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Next.js on Launch"
 description: Documentation for deploying and running Next.js (App Router and Pages Router) on Contentstack Launch, including supported features, limitations, caching/revalidation approaches, specifications, and troubleshooting.
-url: https://www.contentstack.com/docs/developers/launch/nextjs-on-launch
+url: https://www.contentstack.com/docs/launch/nextjs-on-launch
 product: Contentstack Launch
 doc_type: developer-guide
 audience:
@@ -35,9 +35,9 @@ Launch does not yet support the following features of Next.js:
 
 Launch offers alternative approaches to caching and revalidation built on established web standards. [Learn more here](#next-js-app-router-cache-revalidation-on-launch).
 
-[Launch Edge Functions](/docs/developers/launch/edge-functions) allow you to execute code at the edge, closer to your users, for improved performance and scalability.
+[Launch Edge Functions](/docs/launch/edge-functions) allow you to execute code at the edge, closer to your users, for improved performance and scalability.
 
-**Additional Resource:** Learn how the Launch [Edge Functions](/docs/developers/launch/edge-functions) [handle the Next.js RSC issues on Launch](/docs/developers/launch/handling-nextjs-rsc-issues-on-launch).
+**Additional Resource:** Learn how the Launch [Edge Functions](/docs/launch/edge-functions) [handle the Next.js RSC issues on Launch](/docs/launch/handling-nextjs-rsc-issues-on-launch).
 
 Data Cache depends on a significant change in the underlying hosting platform. In addition, we have observed that Data Cache is inadequate for several enterprise use cases that require customizing the underlying cache strategy using custom cache headers. Launch offers alternate caching strategies based on accepted web standards that also allow you to maintain platform independence.
 
@@ -123,7 +123,7 @@ module.exports = nextConfig;
 
 ```
 
-Finally, the desired routes can then be revalidated on demand by following the steps detailed in Launch's [Revalidate CDN Cache](/docs/developers/launch/revalidate-cdn-cache) feature.
+Finally, the desired routes can then be revalidated on demand by following the steps detailed in Launch's [Revalidate CDN Cache](/docs/launch/revalidate-cdn-cache) feature.
 
 ## Pages Router
 
@@ -139,9 +139,9 @@ Launch supports the following features of Next.js out-of-the-box for Pages Route
 Launch does not yet support the following features of Next.js:
 - [Edge Middleware](https://nextjs.org/docs/advanced-features/middleware): Middleware functions are executed on the server side in Launch, and not on the edge.
 - [Edge API Routes](https://nextjs.org/docs/api-routes/edge-api-routes): Edge API routes are executed on the server side in Launch, and not on the edge.
-- [On-demand Revalidation](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration#on-demand-revalidation): Currently, Launch does not support Next.js On-Demand Revalidation using the `res.revalidate()` method, whereas it supports [revalidating CDN cache](/docs/developers/launch/revalidate-cdn-cache) in a framework-agnostic way. Please refer to [Next.js On-Demand Revalidation](#next-js-on-demand-revalidation) for more details.
+- [On-demand Revalidation](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration#on-demand-revalidation): Currently, Launch does not support Next.js On-Demand Revalidation using the `res.revalidate()` method, whereas it supports [revalidating CDN cache](/docs/launch/revalidate-cdn-cache) in a framework-agnostic way. Please refer to [Next.js On-Demand Revalidation](#next-js-on-demand-revalidation) for more details.
 
-**Note:** Launch offers [Edge Functions](/docs/developers/launch/edge-functions) as an alternative to Edge Middleware and Edge API Routes for execution of code at the edge.
+**Note:** Launch offers [Edge Functions](/docs/launch/edge-functions) as an alternative to Edge Middleware and Edge API Routes for execution of code at the edge.
 
 ### Next.js On-Demand Revalidation
 
@@ -206,7 +206,7 @@ module.exports = {
 }
 ```
 
-**Additional Resource:** Please refer to the [Quick Start Guide with Next.js](/docs/developers/launch/quick-start-nextjs/) documentation for a step-by-step walkthrough to deploy a Next.js site on Launch.
+**Additional Resource:** Please refer to the [Quick Start Guide with Next.js](/docs/launch/quick-start-nextjs/) documentation for a step-by-step walkthrough to deploy a Next.js site on Launch.
 
 ## Launch Next.js Application Specifications
 
@@ -222,7 +222,7 @@ The memory size for a Launch application is **1024 MB**.
 
 ### Runtime Environment
 
-The Launch runtime environment leverages [**Node.js**](/docs/developers/launch/supported-nodejs-versions) to power its execution environment.
+The Launch runtime environment leverages [**Node.js**](/docs/launch/supported-nodejs-versions) to power its execution environment.
 
 ### File System
 
@@ -242,7 +242,7 @@ This section provides solutions for some common issues faced with hosting Next.j
 
 ### Cache revalidation does not work with Next.js internationalization enabled
 
-Using i18n for Next.js changes the URL structure of your website to support multiple languages. For e.g. a path like `/about-us` may be nested under the localized path `/fr-FR/about-us`. In such cases, it is important to [revalidate](/docs/developers/launch/revalidate-cdn-cache) the URL along with the locale, i.e. `/fr-FR/about-us`.
+Using i18n for Next.js changes the URL structure of your website to support multiple languages. For e.g. a path like `/about-us` may be nested under the localized path `/fr-FR/about-us`. In such cases, it is important to [revalidate](/docs/launch/revalidate-cdn-cache) the URL along with the locale, i.e. `/fr-FR/about-us`.
 
 You may also have a default locale configured for URLs without locales. For e.g. visiting `/about-us` may return content localized by default in en-US. In this case, it is important to revalidate cache for **both** `/about-us` and `/en-US/about-us`. This is because an internationalization enabled Next.js website internally makes calls to the localized URL (`/en-US/about-us`) even when the locale does not appear in the URL.
 
@@ -278,7 +278,7 @@ For App Router, Launch supports the Next.js App Router version 13.4.6 and above.
 Launch does not currently support direct integration with the Next.js app router data cache, so Time-based Revalidation and On Demand Revalidation using `revalidatePath()` / `revalidateTag()` will not work.
 
 ### How can I do on-demand revalidation on Launch?
-The page describes using CDN cache revalidation via Launch’s [Revalidate CDN Cache](/docs/developers/launch/revalidate-cdn-cache) feature, including setting `buildId` to the latest live Launch deployment `uid`.
+The page describes using CDN cache revalidation via Launch’s [Revalidate CDN Cache](/docs/launch/revalidate-cdn-cache) feature, including setting `buildId` to the latest live Launch deployment `uid`.
 
 ### What are the runtime limits for a Next.js app on Launch?
 The Launch application enforces a maximum execution timeout of 30 seconds, memory size is 1024 MB, and the `/tmp` directory provides up to 500 MB of temporary non-persistent storage.

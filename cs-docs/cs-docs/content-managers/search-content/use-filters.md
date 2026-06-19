@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Use Filters"
 description: How to use and customize filters to refine search results for entries and assets in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/search-content/use-filters
+url: https://www.contentstack.com/docs/headless-cms/use-filters
 product: Contentstack
 doc_type: guide
 audience:

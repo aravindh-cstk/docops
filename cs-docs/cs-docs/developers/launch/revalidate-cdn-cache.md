@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Revalidate CDN Cache"
 description: Revalidate CDN cache in Contentstack Launch environments using URL paths, Cache-Tags, or hostnames, including fields, prerequisites, and examples.
-url: https://www.contentstack.com/docs/developers/launch/revalidate-cdn-cache
+url: https://www.contentstack.com/docs/launch/revalidate-cdn-cache
 product: Contentstack Launch
 doc_type: guide
 audience:

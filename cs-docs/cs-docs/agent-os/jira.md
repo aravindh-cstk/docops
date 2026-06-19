@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - JIRA"
 description: Set up and use the JIRA action connector to create a task, create an issue, and update an issue in JIRA.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/jira
+url: https://www.contentstack.com/docs/agent-os/jira
 product: Automation Hub
 doc_type: connector-guide
 audience:

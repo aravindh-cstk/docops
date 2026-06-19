@@ -1,7 +1,7 @@
 ---
 title: "[Kickstarts] - Veda"
 uid: blt2592733086b935ee
-url: /developers/kickstarts/veda
+url: https://www.contentstack.com/docs/headless-cms/veda
 contentstack:
   environment: production
   assets: []

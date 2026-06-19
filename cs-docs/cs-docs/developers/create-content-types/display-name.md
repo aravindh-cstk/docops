@@ -1,7 +1,7 @@
 ---
 title: Set Up Your Project - Display Name
 description: Documentation for the Display Name property when setting up fields in Contentstack content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/display-name
+url: https://www.contentstack.com/docs/headless-cms/display-name
 product: Contentstack
 doc_type: guide
 audience:

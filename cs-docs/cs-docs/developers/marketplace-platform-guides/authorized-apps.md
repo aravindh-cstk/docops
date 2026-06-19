@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Authorized Apps"
 description: Manage authorized apps in Contentstack Marketplace, view app access tokens, and revoke permissions.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/authorized-apps
+url: https://www.contentstack.com/docs/marketplace/authorized-apps
 product: Contentstack
 doc_type: marketplace-guide
 audience:

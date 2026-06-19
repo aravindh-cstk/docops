@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Import Content Using the Seed Command"
 description: Import content into a Contentstack stack from GitHub repositories using the Contentstack CLI seed command.
-url: https://www.contentstack.com/docs/developers/cli/import-content-using-the-seed-command
+url: https://www.contentstack.com/docs/headless-cms/import-content-using-the-seed-command
 product: Contentstack
 doc_type: how-to
 audience:

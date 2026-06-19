@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Update a Role"
 description: Update a Role in Contentstack by editing role details and permissions.
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/update-a-role
+url: https://www.contentstack.com/docs/headless-cms/update-a-role
 product: Contentstack
 doc_type: how-to
 audience:

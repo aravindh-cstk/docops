@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Edge Functions & Frameworks"
 uid: blt531aabad9c86453b
-url: /developers/launch/edge-functions-frameworks
+url: /launch/edge-functions-frameworks
 contentstack:
   environment: production
   assets: []

@@ -1,7 +1,7 @@
 ---
 title: "[Kickstarts] - Nuxt"
 description: Kickstart Nuxt
-url: https://www.contentstack.com/docs/developers/kickstarts/nuxt
+url: https://www.contentstack.com/docs/headless-cms/nuxt
 product: Contentstack
 doc_type: kickstart-guide
 audience:

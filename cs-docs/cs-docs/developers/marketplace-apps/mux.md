@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Mux App Installation Guide"
 uid: bltc908df4ea2f98ccb
-url: /developers/marketplace-apps/mux
+url: /marketplace/mux
 contentstack:
   environment: production
   assets: []

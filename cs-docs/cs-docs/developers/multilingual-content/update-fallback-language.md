@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Update Fallback Language"
 description: Update the fallback language of an existing language in your stack.
-url: https://www.contentstack.com/docs/developers/multilingual-content/update-fallback-language
+url: https://www.contentstack.com/docs/headless-cms/update-fallback-language
 product: Contentstack
 doc_type: how-to
 audience:

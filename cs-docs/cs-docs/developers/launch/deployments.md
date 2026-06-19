@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Deployments"
 description: Details about deployments in Contentstack Launch, including deployment information, statuses, history, canceling deployments, redeploys, queuing mechanism, and logs.
-url: https://www.contentstack.com/docs/developers/launch/deployments
+url: https://www.contentstack.com/docs/launch/deployments
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -86,14 +86,14 @@ You can also cancel the deployment in the modal that appears when the deployment
 
 You can redeploy your site any number of times to create new deployments. Redeployment can be done in one of the following ways-
 - By pushing a commit to your environment's corresponding Git branch when `auto-deploy` is enabled for the environment.
-- By calling a [deploy hook](/docs/developers/launch/deploy-hooks) generated on the environment.
+- By calling a [deploy hook](/docs/launch/deploy-hooks) generated on the environment.
 - By clicking the **Redeploy** button on the deployment info page.
 
-If you are redeploying from the deployment details page or using a [deploy hook](/docs/developers/launch/deploy-hooks/), you can use a `commitId` to redeploy, if you [imported the project using GitHub](/docs/developers/launch/import-project-using-github/).
+If you are redeploying from the deployment details page or using a [deploy hook](/docs/launch/deploy-hooks/), you can use a `commitId` to redeploy, if you [imported the project using GitHub](/docs/launch/import-project-using-github/).
 
 When you click the **Redeploy** button, you can choose a commit to redeploy.
 
-If you [imported the project by uploading a zip file](/docs/developers/launch/import-project-using-file-upload/), you can redeploy without a `commitId`. You can then choose from one of the following options to redeploy:
+If you [imported the project by uploading a zip file](/docs/launch/import-project-using-file-upload/), you can redeploy without a `commitId`. You can then choose from one of the following options to redeploy:
 - Redeploy with the previously uploaded file.
 - Redeploy by uploading a new file.
 

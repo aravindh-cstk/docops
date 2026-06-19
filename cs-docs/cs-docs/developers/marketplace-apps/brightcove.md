@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Brightcove App Installation Guide"
 description: Brightcove App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/brightcove
+url: https://www.contentstack.com/docs/marketplace/brightcove
 product: Contentstack Marketplace
 doc_type: marketplace-app-guide
 audience:

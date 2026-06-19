@@ -1,7 +1,7 @@
 ---
 title: "[Get Started with CS] - Contentstack Basics"
 description: Contentstack Basics glossary and overview of how Contentstack works.
-url: https://www.contentstack.com/docs/get-started/contentstack-basics
+url: https://www.contentstack.com/docs/headless-cms/contentstack-basics
 product: Contentstack
 doc_type: get-started
 audience:

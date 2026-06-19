@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - App Submission and Approval Guide"
 description: End to end guide which defines the steps to follow for submission and approval of Contentstack Marketplace public apps.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/app-submission-and-approval-guide
+url: https://www.contentstack.com/docs/marketplace/app-submission-and-approval-guide
 product: Contentstack
 doc_type: marketplace-guide
 audience:
@@ -46,7 +46,7 @@ The Contentstack Marketplace team will provide you detailed documentation on app
 ### Metadata Content
 
 As a pre-requisites for submitting Apps for the public Marketplace, the Partner is required to provide the Metadata content (descriptions) of your app.
-- Fill the Metadata content [form](https://docs.google.com/forms/d/e/1FAIpQLSf7JdG2sA-6CXTlH75O_KRum9WtpMgxVH9h78yRaTvregjfuQ/viewform) with the appropriate details by following our [guidelines](/docs/developers/marketplace-platform-guides/app-submission-and-approval-guide#metadata-content-descriptions).
+- Fill the Metadata content [form](https://docs.google.com/forms/d/e/1FAIpQLSf7JdG2sA-6CXTlH75O_KRum9WtpMgxVH9h78yRaTvregjfuQ/viewform) with the appropriate details by following our [guidelines](/docs/marketplace-platform-guides/app-submission-and-approval-guide#metadata-content-descriptions).
 
 ### On-boarding
 

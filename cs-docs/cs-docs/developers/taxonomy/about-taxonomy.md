@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - About Taxonomy"
 description: About Taxonomy
-url: https://www.contentstack.com/docs/developers/taxonomy/about-taxonomy
+url: https://www.contentstack.com/docs/headless-cms/about-taxonomy
 product: Contentstack
 doc_type: concept
 audience:

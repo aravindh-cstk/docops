@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - About Visual Editor"
 description: About Visual Editor
-url: https://www.contentstack.com/docs/content-managers/visual-editor/about-visual-editor
+url: https://www.contentstack.com/docs/headless-cms/about-visual-editor
 product: Visual Editor
 doc_type: overview
 audience:

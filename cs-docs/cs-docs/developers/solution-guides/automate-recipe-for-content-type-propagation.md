@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - Automate Recipe for Content Type Propagation"
 description: "An automation flow that propagates content type changes from a source stack to a destination stack."
-url: https://www.contentstack.com/docs/developers/solution-guides/automate-recipe-for-content-type-propagation
+url: https://www.contentstack.com/docs/headless-cms/automate-recipe-for-content-type-propagation
 product: Contentstack
 doc_type: solution-guide
 audience:

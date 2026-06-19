@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Workflow Tasks"
 description: About Workflow Tasks
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks
+url: https://www.contentstack.com/docs/headless-cms/about-workflow-tasks
 product: Contentstack
 doc_type: guide
 audience:

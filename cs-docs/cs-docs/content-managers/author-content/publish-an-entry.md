@@ -1,7 +1,7 @@
 ---
 title: "[Headless CMS | Publish Content] - Publish an Entry"
 description: Instructions for publishing an entry in Contentstack, including publishing references, validation workflows, and limitations.
-url: https://www.contentstack.com/docs/content-managers/author-content/publish-an-entry
+url: https://www.contentstack.com/docs/headless-cms/publish-an-entry
 product: Contentstack
 doc_type: how-to
 audience:

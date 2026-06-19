@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Contentstack Trigger"
 description: Contentstack Trigger for Automation Hub connectors, including prerequisites and setup steps for supported trigger events.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-trigger
+url: https://www.contentstack.com/docs/agent-os/contentstack-trigger
 product: Contentstack
 doc_type: automation-hub-connector
 audience:

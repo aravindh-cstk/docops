@@ -1,7 +1,7 @@
 ---
 title: "[Timeline] - Migrate from Release Preview App to Timeline"
 description: Migration guide to transition from using the Release Preview App to Timeline.
-url: https://www.contentstack.com/docs/developers/set-up-timeline/migrate-from-release-preview-app-to-timeline
+url: https://www.contentstack.com/docs/headless-cms/migrate-from-release-preview-app-to-timeline
 product: Contentstack
 doc_type: migration-guide
 audience:

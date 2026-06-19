@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Restore a Deleted Global Field"
 description: Restore a deleted Global field from the Trash and filter deleted Global fields.
-url: https://www.contentstack.com/docs/developers/manage-trash/restore-a-deleted-global-field
+url: https://www.contentstack.com/docs/headless-cms/restore-a-deleted-global-field
 product: Contentstack
 doc_type: guide
 audience:

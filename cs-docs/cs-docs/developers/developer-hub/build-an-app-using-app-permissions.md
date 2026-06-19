@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Build an App using App Permissions"
 description: Build an App using App Permissions
-url: https://www.contentstack.com/docs/developers/developer-hub/build-an-app-using-app-permissions
+url: https://www.contentstack.com/docs/developer-hub/build-an-app-using-app-permissions
 product: Contentstack
 doc_type: guide
 audience:
@@ -23,13 +23,13 @@ Marketplace apps often interact with Contentstack APIs. **Apps Permissions** ens
 - **PM/Admins: **Safer [Marketplace apps,](/docs/developers/marketplace-apps) well defined access.
 
 ## Overview
-In this guide, we will walk through building an app example for a Quick Info Dashboard App. We will demonstrate how an app can leverage [Apps Permissions](https://www.contentstack.com/docs/developers/developer-hub/api-integration-in-developer-hub-apps) to securely interact with Contentstack APIs.
+In this guide, we will walk through building an app example for a Quick Info Dashboard App. We will demonstrate how an app can leverage [Apps Permissions](https://www.contentstack.com/docs/developer-hub/api-integration-in-developer-hub-apps) to securely interact with Contentstack APIs.
 
 This example app highlights a real-world scenario where stack-level statistics (content types, entries, and assets) are displayed in a Dashboard location.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login) with access to Developer Hub
-- Understanding [Contentstack App Development](/docs/developers/developer-hub)
+- Understanding [Contentstack App Development](/docs/developer-hub)
 - Understanding of [Contentstack Management SDK](https://github.com/contentstack/app-sdk-docs)
 - Quick Info Dashboard app [GitHub](https://github.com/contentstack/marketplace-quick-info-dashboard-app) Repository
 - Marketplace App Boilerplate [GitHub](https://github.com/contentstack/marketplace-app-boilerplate.git) Repository
@@ -52,16 +52,16 @@ To register an app in Developer Hub, perform the steps given below:
 - Log in to your [Contentstack account](https://www.contentstack.com/login).
 - On the Dashboard page, click the **Developer Hub** icon.
 - Click the** + New App **button.
-- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](/docs/developers/developer-hub/introduction-to-contentstack-applications). Here, we will use the **Standard** application.**Additional Resource: **Refer to the [Creating an App in Developer Hub](/docs/developers/developer-hub/creating-an-app-in-developer-hub) documentation to know more about **Standard** and **Machine to Machine **app categories.
+- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](/docs/developer-hub/introduction-to-contentstack-applications). Here, we will use the **Standard** application.**Additional Resource: **Refer to the [Creating an App in Developer Hub](/docs/developer-hub/creating-an-app-in-developer-hub) documentation to know more about **Standard** and **Machine to Machine **app categories.
 - In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** (Quick Info Dashboard) and an optional **Description** as shown below:
 - Click **Create**. You are redirected to the** UI Locations **landing page.
 - Navigate back to the UI Locations tab, click the vertical ellipses, then click the **+ Add UI Location** button to add as needed.**Stack Dashboard: **Enter a **Name**, use `/stack-dashboard`as the **Path**, and select the **Default** **Width**, then click **Save** to apply and store your configuration. This setup ensures your app appears on the Stack Dashboard.**Note: **The name for each UI Location is optional, and can be used to override the default app name.
 
 **Note:** The **Save** button becomes active once all required fields are completed.
-- Navigate to the **Hosting** tab. You will see [Hosting with Launch](/docs/developers/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developers/developer-hub/app-hosting#custom-hosting) options. Select the **Custom Hosting** option to enter the hosted URL of your application. Enter the **App URL** and click **Save** to apply and confirm your hosting configuration. While running the application locally, select Custom Hosting and use your local app URL (for example, (http://localhost:3000).After development, you can host your application using **Contentstack **[**Launch**](/docs/developers/launch).
+- Navigate to the **Hosting** tab. You will see [Hosting with Launch](/docs/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developer-hub/app-hosting#custom-hosting) options. Select the **Custom Hosting** option to enter the hosted URL of your application. Enter the **App URL** and click **Save** to apply and confirm your hosting configuration. While running the application locally, select Custom Hosting and use your local app URL (for example, (http://localhost:3000).After development, you can host your application using **Contentstack **[**Launch**](/docs/developers/launch).
 
 ### Configure Permissions
-[Permissions](/docs/developers/developer-hub/about-ui-locations) control which Contentstack APIs your app can access.
+[Permissions](/docs/developer-hub/about-ui-locations) control which Contentstack APIs your app can access.
 
 For the Quick Info App, configure the following permissions in Developer Hub. To do so, follow the steps below:
 - Click the **UI Locations **tab.
@@ -162,7 +162,7 @@ To install and test the app, follow the steps below:
 ```
 npm run dev
 ```
-- Now, install the Quick Info Dashboard app using the following steps:Navigate to [Developer Hub](/docs/developers/developer-hub) in Contentstack.
+- Now, install the Quick Info Dashboard app using the following steps:Navigate to [Developer Hub](/docs/developer-hub) in Contentstack.
 - Go to the app, and click the **Install App** button.
 - On the permissions screen, select a **Stack** and mark the checkbox to accept the** Terms of Service **and **Privacy Policy**. Once done, click the **Authorize and Install **button.
 - You will see the Stack Dashboard UI location configured for the app. Click **Open Stack **to view the app on the Stack Dashboard.
@@ -182,14 +182,14 @@ The app is now available as a Stack Dashboard app that utilizes the Permissions 
 - Check that permission error messages are clear and actionable
 
 ## Troubleshooting
-- **UI Location not visible:** Check [UI Location](/docs/developers/developer-hub/about-ui-locations) in Developer Hub.
+- **UI Location not visible:** Check [UI Location](/docs/developer-hub/about-ui-locations) in Developer Hub.
 - **App SDK not initialized: **Ensure provider wraps components + installs the app.
 - **403 errors: **Verify [Permissions](#configure-permissions) in Developer Hub.
 - **CORS/network errors: **Match hosting URL with Developer Hub configuration.
 
 ## Resources and Links
-- [Permission](/docs/developers/developer-hub/about-ui-locations/) Overview
-- [Marketplace App Boilerplate](/docs/developers/developer-hub/marketplace-app-boilerplate/)
+- [Permission](/docs/developer-hub/about-ui-locations/) Overview
+- [Marketplace App Boilerplate](/docs/developer-hub/marketplace-app-boilerplate/)
 
 ## Common questions
 

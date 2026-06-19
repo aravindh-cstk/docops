@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Clone a Release"
 description: Clone a Release
-url: https://www.contentstack.com/docs/developers/create-releases/clone-a-release
+url: https://www.contentstack.com/docs/headless-cms/clone-a-release
 product: Contentstack
 doc_type: guide
 audience:

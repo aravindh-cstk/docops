@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Allow images only"
 description: Documentation for the “Allow images only” option for the File field, including supported image types and file size limits.
-url: https://www.contentstack.com/docs/developers/create-content-types/allow-images-only
+url: https://www.contentstack.com/docs/headless-cms/allow-images-only
 product: Set Up Your Project
 doc_type: guide
 audience:

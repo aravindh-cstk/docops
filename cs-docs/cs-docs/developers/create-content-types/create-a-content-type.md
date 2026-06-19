@@ -1,7 +1,7 @@
 ---
 title: Create a Content Type
 description: Learn how to create and configure content types in Contentstack to define reusable content structures.
-url: https://www.contentstack.com/docs/developers/create-content-types/create-a-content-type
+url: https://www.contentstack.com/docs/headless-cms/create-a-content-type
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Throttle Execution"
 description: Throttle Execution refers to controlling the rate at which the executions are carried out within a specific timeframe.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/throttle-execution
+url: https://www.contentstack.com/docs/agent-os/throttle-execution
 product: Agent OS
 doc_type: guide
 audience:

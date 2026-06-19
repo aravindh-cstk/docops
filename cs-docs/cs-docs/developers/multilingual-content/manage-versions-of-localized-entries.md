@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Manage Versions of Localized Entries"
 description: Manage versions of localized entries and view localization status in the Edit Entry page.
-url: https://www.contentstack.com/docs/developers/multilingual-content/manage-versions-of-localized-entries
+url: https://www.contentstack.com/docs/headless-cms/manage-versions-of-localized-entries
 product: Set Up Your Project
 doc_type: guide
 audience:

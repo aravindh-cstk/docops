@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - What is a Conditional Path"
 description: What is a Conditional Path in Automations and when to use it.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/what-is-a-conditional-path
+url: https://www.contentstack.com/docs/agent-os/what-is-a-conditional-path
 product: Automations
 doc_type: guide
 audience:

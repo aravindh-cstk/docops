@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Adding Terms to Entries with Taxonomy"
 description: Assign taxonomy terms to entries within a taxonomy field in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/adding-terms-to-entries-with-taxonomy
+url: https://www.contentstack.com/docs/headless-cms/adding-terms-to-entries-with-taxonomy
 product: Contentstack
 doc_type: how-to
 audience:

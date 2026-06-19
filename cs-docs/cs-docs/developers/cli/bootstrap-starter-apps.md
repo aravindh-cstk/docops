@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Bootstrap Starter Apps"
 description: Bootstrap Starter Apps using the Contentstack CLI Bootstrap plugin and the cm:bootstrap command.
-url: https://www.contentstack.com/docs/developers/cli/bootstrap-starter-apps
+url: https://www.contentstack.com/docs/headless-cms/bootstrap-starter-apps
 product: Contentstack
 doc_type: cli-guide
 audience:

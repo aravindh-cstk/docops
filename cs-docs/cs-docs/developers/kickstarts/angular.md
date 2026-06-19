@@ -1,7 +1,7 @@
 ---
 title: "[Kickstarts] - Angular"
 uid: bltf2b6df17c6fa777a
-url: /developers/kickstarts/angular
+url: https://www.contentstack.com/docs/headless-cms/angular
 contentstack:
   environment: production
   assets: []

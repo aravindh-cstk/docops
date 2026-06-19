@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Right-to-Left Content Writing within the JSON RTE"
 description: Right-to-Left Content Writing within the JSON RTE
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/right-to-left-content-writing-within-the-json-rte
+url: https://www.contentstack.com/docs/headless-cms/right-to-left-content-writing-within-the-json-rte
 product: Contentstack
 doc_type: developer-guide
 audience:

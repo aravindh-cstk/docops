@@ -1,7 +1,7 @@
 ---
 title: [Contentstack Launch] - Load Testing
 description: A comprehensive checklist to conduct load testing in Contentstack Launch.
-url: https://www.contentstack.com/docs/developers/launch/load-testing
+url: https://www.contentstack.com/docs/launch/load-testing
 product: Contentstack
 doc_type: documentation
 audience:
@@ -39,8 +39,8 @@ Review the testing checklist, then share it with the [support](mailto:support@co
 
 * **Define your Caching Strategy**: Ensure all your statically rendered content/assets have appropriate cache control headers.
 * **Monitoring and Logging Setup**: Ensure the monitoring tools (e.g., New Relic, Datadog) and logging are active for real-time tracking.
-  + Set up your [Log Target](/docs/developers/launch/log-targets/) to receive your application logs in real time.
-  + Monitor the [Server Logs](/docs/developers/launch/cloud-functions#server-logs) in the Deployments section.
+  + Set up your [Log Target](/docs/launch/log-targets/) to receive your application logs in real time.
+  + Monitor the [Server Logs](/docs/launch/cloud-functions#server-logs) in the Deployments section.
   + Monitor the Analytics for Launch in the Product Analytics and Mission Control sections.
 
 ## Common questions

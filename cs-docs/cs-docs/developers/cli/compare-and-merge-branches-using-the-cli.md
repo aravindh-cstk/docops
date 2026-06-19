@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Compare and Merge Branches Using the CLI"
 description: Compare and merge Contentstack Branches using the Contentstack CLI, including listing, creating, deleting, configuring base branches, diffing, and merging.
-url: https://www.contentstack.com/docs/developers/cli/compare-and-merge-branches-using-the-cli
+url: https://www.contentstack.com/docs/headless-cms/compare-and-merge-branches-using-the-cli
 product: Contentstack
 doc_type: cli-guide
 audience:

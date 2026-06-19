@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Slack
 description: Set up the Slack action connector to send messages to a specific Slack channel.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/slack
+url: https://www.contentstack.com/docs/agent-os/slack
 product: Automation Hub
 doc_type: connector-guide
 audience:

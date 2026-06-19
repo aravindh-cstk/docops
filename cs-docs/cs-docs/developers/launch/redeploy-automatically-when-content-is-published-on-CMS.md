@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Redeploy Automatically when Content is Published on CMS"
 description: Redeploy a Launch site automatically when content is published in Contentstack CMS by creating a deploy hook and configuring it as a webhook.
-url: https://www.contentstack.com/docs/developers/launch/redeploy-automatically-when-content-is-published-on-CMS
+url: https://www.contentstack.com/docs/launch/redeploy-automatically-when-content-is-published-on-CMS
 product: Contentstack Launch
 doc_type: how-to-guide
 audience:
@@ -31,7 +31,7 @@ This step-by-step guide lets you redeploy automatically when content is publishe
 
 Follow the steps to redeploy automatically when content is published.
 
-- Create a [deploy hook](/docs/developers/launch/deploy-hooks) in Launch.
+- Create a [deploy hook](/docs/launch/deploy-hooks) in Launch.
 - Follow the steps to add the deploy hook as a Webhook to Contentstack CMS.  
   Copy the **deploy hook URL**.
 - Go to your stack and then go to **Settings > Webhooks**.

@@ -1,7 +1,7 @@
 ---
 title: "[Content Models] - Hero Banner"
 description: Hero Banner content model schema and fields for homepage hero banner content.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models/hero-banner
+url: https://www.contentstack.com/docs/marketplace-platform-guides/content-models/hero-banner
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:
@@ -37,7 +37,7 @@ The Hero Banner Content Model contains a [Content Type](/docs/developers/create-
 - **Banner Image Alignment**: This is a [Select](/docs/developers/create-content-types/select) field with Single Choice as the Selection Type to select the alignment of the Banner Image.
 - **Content Alignment**: This is a [Select](/docs/developers/create-content-types/select) field with Single Choice as the Selection Type to select the alignment of the content.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Hero Banner Content Modeling](/docs/developers/content-modeling/hero-banner/) documentation to understand how to model the "Hero Banner".
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Hero Banner Content Modeling](/docs/developers/content-modeling/hero-banner/) documentation to understand how to model the "Hero Banner".
 
 Here’s how your Hero Banner looks after you publish the entry:
 

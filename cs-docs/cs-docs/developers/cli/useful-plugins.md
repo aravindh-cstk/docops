@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Useful Plugins"
 description: Useful Plugins for Contentstack Command-line Interface (CLI)
-url: https://www.contentstack.com/docs/developers/cli/useful-plugins
+url: https://www.contentstack.com/docs/headless-cms/useful-plugins
 product: Contentstack
 doc_type: cli-guide
 audience:

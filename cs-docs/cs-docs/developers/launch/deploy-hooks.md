@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Deploy Hooks"
 description: Create, trigger, rename, and delete Deploy Hooks in Contentstack Launch.
-url: https://www.contentstack.com/docs/developers/launch/deploy-hooks
+url: https://www.contentstack.com/docs/launch/deploy-hooks
 product: Contentstack Launch
 doc_type: guide
 audience:

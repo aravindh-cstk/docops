@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Create Custom CLI Commands"
 description: Contentstack allows developers to write plugins and add custom commands to the CLI.
-url: https://www.contentstack.com/docs/developers/cli/create-custom-cli-commands
+url: https://www.contentstack.com/docs/headless-cms/create-custom-cli-commands
 product: Contentstack
 doc_type: guide
 audience:

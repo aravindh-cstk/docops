@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Edge URL Rewrites"
 description: Set URL rewrite rules in Contentstack Launch using launch.json to rewrite or proxy requests at the CDN edge.
-url: https://www.contentstack.com/docs/developers/launch/edge-url-rewrites
+url: https://www.contentstack.com/docs/launch/edge-url-rewrites
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -16,7 +16,7 @@ This page explains how to configure Edge URL rewrite rules in Contentstack Launc
 
 ## Edge URL Rewrites
 
-You can set URL rewrite rules in Contentstack Launch to rewrite specific URLs in your source code with the content in different URLs of your choice. Unlike the [Edge URL redirects](/docs/developers/launch/edge-url-redirects/) feature that sends you to a completely different URL, the Edge URL rewrites feature involves altering the URL path on the server side without necessarily changing the URL displayed in your browser. This means that it can also function as a proxy for external URLs.
+You can set URL rewrite rules in Contentstack Launch to rewrite specific URLs in your source code with the content in different URLs of your choice. Unlike the [Edge URL redirects](/docs/launch/edge-url-redirects/) feature that sends you to a completely different URL, the Edge URL rewrites feature involves altering the URL path on the server side without necessarily changing the URL displayed in your browser. This means that it can also function as a proxy for external URLs.
 
 URL rewriting has many use cases, such as migrating incrementally from a different hosting platform, proxying a part of the site from a different host, managing micro-sites separately while still hosting them as part of the same domain, and so on.
 
@@ -164,18 +164,18 @@ Here, we have used the `headers` field in the `response` object to set security 
 
 This is because rewrites are evaluated in sequence, and this catch-all rewrite could match all requests and prevent other rewrites from executing.
 
-**Note:** When you forward or rewrite a request to the origin server from the Launch Edge URL Rewrites or the [Launch Edge Function](/docs/developers/launch/edge-functions), the same request will not re-invoke the Launch Edge Function. Instead, it will be directly forwarded to the origin server through a cache layer.
+**Note:** When you forward or rewrite a request to the origin server from the Launch Edge URL Rewrites or the [Launch Edge Function](/docs/launch/edge-functions), the same request will not re-invoke the Launch Edge Function. Instead, it will be directly forwarded to the origin server through a cache layer.
 
 ### Deploy your Project in Launch
 
-Deploy your project in Launch by [importing the source code from GitHub](/docs/developers/launch/import-project-using-github/) or [uploading the source code folder](/docs/developers/launch/import-project-using-file-upload/).
+Deploy your project in Launch by [importing the source code from GitHub](/docs/launch/import-project-using-github/) or [uploading the source code folder](/docs/launch/import-project-using-file-upload/).
 
 After successful deployment, the `Logs` section displays the count of rewrites as follows:
 
 ## Limitations
 
 - Adding a `launch.json` file to an app within a monorepo is currently not supported.
-- Launch does not support complete URLs in the source. However, you can use [Launch Edge Functions](/docs/developers/launch/edge-functions) to rewrite traffic based on the hostname when multiple domains point to the same environment.
+- Launch does not support complete URLs in the source. However, you can use [Launch Edge Functions](/docs/launch/edge-functions) to rewrite traffic based on the hostname when multiple domains point to the same environment.
 
 ## Common questions
 

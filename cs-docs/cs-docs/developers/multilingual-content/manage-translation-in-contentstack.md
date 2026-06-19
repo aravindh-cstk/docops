@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Manage Translation in Contentstack"
 description: Manage Translation in Contentstack
-url: https://www.contentstack.com/docs/developers/multilingual-content/manage-translation-in-contentstack
+url: https://www.contentstack.com/docs/headless-cms/manage-translation-in-contentstack
 product: Contentstack
 doc_type: developer-guide
 audience:

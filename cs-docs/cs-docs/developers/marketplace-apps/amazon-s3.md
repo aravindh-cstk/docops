@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Amazon S3 App Installation Guide"
 description: Amazon S3 App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/amazon-s3
+url: https://www.contentstack.com/docs/marketplace/amazon-s3
 product: Contentstack
 doc_type: marketplace-app-guide
 audience:

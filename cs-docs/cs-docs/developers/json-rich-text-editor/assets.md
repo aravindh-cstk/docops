@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Assets"
 description: Managing assets in the JSON Rich Text Editor (RTE), including choosing existing assets and uploading new assets.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/assets
+url: https://www.contentstack.com/docs/headless-cms/assets
 product: Contentstack
 doc_type: guide
 audience:

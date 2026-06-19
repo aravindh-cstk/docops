@@ -1,7 +1,7 @@
 ---
 title: "[Second level navigation] - Contentstack Launch"
 description: Contentstack Launch documentation navigation page with overview, features, guides, framework guides, CLI, go-live, and related resources.
-url: https://www.contentstack.com/docs/developers/launch
+url: https://www.contentstack.com/docs/agent-os/launch
 product: Contentstack Launch
 doc_type: navigation
 audience:
@@ -248,7 +248,7 @@ Launch How to Guides
 
 - Host any SSR Framework on Launch  
   Title: Host any SSR Framework on Launch  
-  Url: /docs/developers/launch/host-any-ssr-framework
+  Url: /docs/launch/host-any-ssr-framework
 
 - Trigger Deployments on Launch Platform based on Tags/Releases  
   Title: Trigger Deployments on Launch Platform based on Tags/Releases  

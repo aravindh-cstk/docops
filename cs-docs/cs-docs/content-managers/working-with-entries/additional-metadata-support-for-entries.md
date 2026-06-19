@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Additional Metadata Support for Entries"
 description: Additional metadata support for entries in Contentstack, including default metadata, adding custom metadata via API, examples, and related API references.
-url: https://www.contentstack.com/docs/content-managers/working-with-entries/additional-metadata-support-for-entries
+url: https://www.contentstack.com/docs/headless-cms/additional-metadata-support-for-entries
 product: Contentstack
 doc_type: guide
 audience:

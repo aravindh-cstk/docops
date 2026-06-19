@@ -1,7 +1,7 @@
 ---
 title: Comparing Branches
 description: Documentation for the Branch Compare feature to compare changes between a base branch and a compare branch.
-url: https://www.contentstack.com/docs/developers/branches/comparing-branches
+url: https://www.contentstack.com/docs/headless-cms/comparing-branches
 product: Contentstack
 doc_type: guide
 audience:

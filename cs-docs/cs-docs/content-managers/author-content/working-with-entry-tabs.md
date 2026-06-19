@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Working with Entry Tabs"
 description: "How the Tabs layout in the entry editor organizes fields into tabs using the Show as Tab option."
-url: https://www.contentstack.com/docs/content-managers/author-content/working-with-entry-tabs
+url: https://www.contentstack.com/docs/headless-cms/working-with-entry-tabs
 product: Contentstack
 doc_type: author-content
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - CLI Authentication and Adding Tokens"
 description: CLI Authentication and Adding Tokens
-url: https://www.contentstack.com/docs/developers/cli/cli-authentication
+url: https://www.contentstack.com/docs/headless-cms/cli-authentication
 product: Contentstack
 doc_type: cli-guide
 audience:

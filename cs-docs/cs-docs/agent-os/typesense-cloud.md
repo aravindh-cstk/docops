@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Typesense Cloud
 description: Documentation for the Typesense Cloud Connector in Contentstack Automations, including prerequisites, account connection steps, and available actions (Index, Update, Delete).
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/typesense-cloud
+url: https://www.contentstack.com/docs/agent-os/typesense-cloud
 product: Contentstack Automations
 doc_type: connector-guide
 audience:

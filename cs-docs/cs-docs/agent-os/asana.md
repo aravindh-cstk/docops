@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Asana
 description: Documentation for the Asana action connector, including setup and available actions (Create a Task, Get Tasks from Project, Get a User, Update a Task).
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/asana
+url: https://www.contentstack.com/docs/agent-os/asana
 product: Automation Hub Connectors
 doc_type: connector-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: Synchronize Data With Datasync - DataSync FileSystem SDK API Reference
 description: DataSync FileSystem SDK API Reference for synchronizing data with DataSync.
-url: https://www.contentstack.com/docs/developers/develop-apps-with-datasync/datasync-filesystem-sdk-api-reference
+url: https://www.contentstack.com/docs/headless-cms/datasync-filesystem-sdk-api-reference
 product: DataSync
 doc_type: api-reference
 audience:

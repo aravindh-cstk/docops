@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Marketo Forms App Installation Guide"
 description: Marketo Forms App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/marketo-forms
+url: https://www.contentstack.com/docs/marketplace/marketo-forms
 product: Contentstack
 doc_type: marketplace-app-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Uniform App Installation Guide"
 description: Uniform App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/uniform
+url: https://www.contentstack.com/docs/marketplace/uniform
 product: Contentstack Marketplace
 doc_type: marketplace-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - Automatic Translation with Automate and ChatGPT"
 description: Automatic Translation with Automate and ChatGPT using Contentstack Automate and Workflow stages.
-url: https://www.contentstack.com/docs/developers/solution-guides/automatic-translation-with-automate-and-chatgpt
+url: https://www.contentstack.com/docs/headless-cms/automatic-translation-with-automate-and-chatgpt
 product: Contentstack
 doc_type: solution-guide
 audience:

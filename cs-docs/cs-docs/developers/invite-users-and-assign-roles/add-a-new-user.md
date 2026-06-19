@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Add a New User"
 description: Instructions to invite a new user to a stack and assign roles, including an API reference link.
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/add-a-new-user
+url: https://www.contentstack.com/docs/headless-cms/add-a-new-user
 product: Contentstack
 doc_type: how-to
 audience:

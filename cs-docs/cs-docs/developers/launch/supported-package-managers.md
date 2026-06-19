@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Supported Package Managers"
 description: Supported package managers on Contentstack Launch and how Launch installs dependencies based on packageManager configuration.
-url: https://www.contentstack.com/docs/developers/launch/supported-package-managers
+url: https://www.contentstack.com/docs/launch/supported-package-managers
 product: Contentstack Launch
 doc_type: reference
 audience:

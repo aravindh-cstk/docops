@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Digizuite App Installation Guide"
 description: Digizuite App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/digizuite
+url: https://www.contentstack.com/docs/marketplace/digizuite
 product: Contentstack
 doc_type: marketplace-guide
 audience:

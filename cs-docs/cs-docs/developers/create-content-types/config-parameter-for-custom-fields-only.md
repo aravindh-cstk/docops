@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Config Parameter (for Custom Fields only)"
 description: Config Parameter (for Custom Fields only)
-url: https://www.contentstack.com/docs/developers/create-content-types/config-parameter-for-custom-fields-only
+url: https://www.contentstack.com/docs/headless-cms/config-parameter-for-custom-fields-only
 product: Contentstack
 doc_type: reference
 audience:

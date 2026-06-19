@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - Automating Generation of Cross-Stack Content Types with Custom Fields"
 description: Automating generation of cross-stack content types with custom fields using the CMA and a CLI-based tool.
-url: https://www.contentstack.com/docs/developers/solution-guides/automating-generation-of-cross-stack-content-types-with-custom-fields
+url: https://www.contentstack.com/docs/headless-cms/automating-generation-of-cross-stack-content-types-with-custom-fields
 product: Contentstack
 doc_type: solution-guide
 audience:

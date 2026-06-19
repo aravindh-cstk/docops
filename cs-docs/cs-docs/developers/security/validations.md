@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Validations"
 description: Content validations in Contentstack, including built-in validation rules, custom regex validations, custom error messages, and how to set validations on fields.
-url: https://www.contentstack.com/docs/developers/security/validations
+url: https://www.contentstack.com/docs/administration/validations
 product: Contentstack
 doc_type: concept
 audience:

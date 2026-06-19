@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - CircleCI
 description: Configure and integrate the CircleCI action connector to trigger a pipeline from an automation action step.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/circleci
+url: https://www.contentstack.com/docs/agent-os/circleci
 product: Automations guides and connectors
 doc_type: connector-guide
 audience:

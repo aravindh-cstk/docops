@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Releases Limitations"
 description: Releases Limitations
-url: https://www.contentstack.com/docs/developers/create-releases/releases-limitations
+url: https://www.contentstack.com/docs/headless-cms/releases-limitations
 product: Set Up Your Project
 doc_type: reference
 audience:

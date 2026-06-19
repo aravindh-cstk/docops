@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Brand Kit Connector"
 description: Documentation for the Brand Kit Connector in Contentstack Automations, including prerequisites, account connection steps, and available actions for Generative AI, Knowledge Vault, and Voice Profile.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/brand-kit
+url: https://www.contentstack.com/docs/agent-os/brand-kit
 product: Contentstack
 doc_type: automation-connector-guide
 audience:

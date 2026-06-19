@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - Create and Manage Variant Groups in the CMS"
 description: Create and manage variant groups in the Contentstack CMS, including adding variants and linking content types.
-url: https://www.contentstack.com/docs/developers/variants/create-and-manage-variant-groups-in-the-cms
+url: https://www.contentstack.com/docs/headless-cms/create-and-manage-variant-groups-in-the-cms
 product: Contentstack
 doc_type: cms-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Make Changes to Existing Content Types"
 description: Guidance for safely modifying existing Content Type schemas and avoiding data loss.
-url: https://www.contentstack.com/docs/content-managers/author-content/make-changes-to-existing-content-types
+url: https://www.contentstack.com/docs/headless-cms/make-changes-to-existing-content-types
 product: Author Content
 doc_type: guide
 audience:

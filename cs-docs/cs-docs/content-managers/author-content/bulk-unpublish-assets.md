@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Bulk Unpublish Assets"
 description: Bulk unpublish multiple assets by selecting assets, environments, languages, and optionally scheduling unpublishing actions.
-url: https://www.contentstack.com/docs/content-managers/author-content/bulk-unpublish-assets
+url: https://www.contentstack.com/docs/headless-cms/bulk-unpublish-assets
 product: Contentstack
 doc_type: how-to
 audience:

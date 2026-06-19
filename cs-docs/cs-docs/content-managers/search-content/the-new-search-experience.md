@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - The New Search Experience1"
 description: Overview of the New Search Experience, including enhanced basic search, quick filters, My Views, and simplified advanced search.
-url: https://www.contentstack.com/docs/content-managers/search-content/the-new-search-experience
+url: https://www.contentstack.com/docs/headless-cms/the-new-search-experience
 product: Contentstack
 doc_type: guide
 audience:

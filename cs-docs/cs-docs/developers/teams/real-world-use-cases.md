@@ -1,7 +1,7 @@
 ---
 title: "[Teams] - Real World Use Cases"
 description: Real-world examples of using the Teams feature to assign roles and permissions by grouping users in Contentstack.
-url: https://www.contentstack.com/docs/developers/teams/real-world-use-cases
+url: https://www.contentstack.com/docs/administration/real-world-use-cases
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Teams] - Edit a Team"
 description: Edit an existing team in Contentstack, including team details, roles, and users.
-url: https://www.contentstack.com/docs/developers/teams/edit-a-team
+url: https://www.contentstack.com/docs/administration/edit-a-team
 product: Contentstack
 doc_type: how-to
 audience:

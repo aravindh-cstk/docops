@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Edit a Global Field"
 description: Instructions for editing a Global field in Contentstack, including warnings about potential data loss and an API reference for updating Global fields.
-url: https://www.contentstack.com/docs/developers/global-field/edit-a-global-field
+url: https://www.contentstack.com/docs/headless-cms/edit-a-global-field
 product: Contentstack
 doc_type: how-to
 audience:

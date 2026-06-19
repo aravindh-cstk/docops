@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Single Line Textbox"
 description: Documentation for the Single Line Textbox field, including what it does and which properties can be configured.
-url: https://www.contentstack.com/docs/developers/create-content-types/single-line-textbox
+url: https://www.contentstack.com/docs/headless-cms/single-line-textbox
 product: Contentstack
 doc_type: field-reference
 audience:

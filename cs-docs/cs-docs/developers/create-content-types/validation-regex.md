@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Validation (Regex)"
 description: The Validation (Regex) field property allows you to define custom validation rules for field values using regular expressions (regex).
-url: https://www.contentstack.com/docs/developers/create-content-types/validation-regex
+url: https://www.contentstack.com/docs/headless-cms/validation-regex
 product: Contentstack
 doc_type: reference
 audience:

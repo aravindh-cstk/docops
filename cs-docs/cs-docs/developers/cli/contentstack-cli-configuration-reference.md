@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Contentstack CLI Configuration Reference"
 uid: bltc7c58ab7c7d76974
-url: developers/cli/contentstack-cli-configuration-reference
+url: https://www.contentstack.com/docs/headless-cms/contentstack-cli-configuration-reference
 contentstack:
   environment: production
   assets: []

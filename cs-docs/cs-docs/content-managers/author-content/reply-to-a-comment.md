@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Reply to a Comment"
 description: Reply to a comment within content entries to engage in collaborative discussions and manage feedback.
-url: https://www.contentstack.com/docs/content-managers/author-content/reply-to-a-comment
+url: https://www.contentstack.com/docs/headless-cms/reply-to-a-comment
 product: Contentstack
 doc_type: how-to
 audience:

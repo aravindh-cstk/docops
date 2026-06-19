@@ -1,7 +1,7 @@
 ---
 title: Set Up Your Project - File
 description: Documentation for the File field used to upload and use files in an entry, including configurable properties and related resources.
-url: https://www.contentstack.com/docs/developers/create-content-types/file
+url: https://www.contentstack.com/docs/headless-cms/file
 product: Contentstack
 doc_type: reference
 audience:

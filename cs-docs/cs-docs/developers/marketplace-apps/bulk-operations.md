@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Bulk Operations App Installation Guide"
 description: Bulk Operations App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/bulk-operations
+url: https://www.contentstack.com/docs/marketplace/bulk-operations
 product: Contentstack
 doc_type: marketplace-guide
 audience:

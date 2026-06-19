@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Quick Search"
 description: Quick Search feature for finding entries or assets from anywhere within a Contentstack stack.
-url: https://www.contentstack.com/docs/content-managers/search-content/quick-search
+url: https://www.contentstack.com/docs/headless-cms/quick-search
 product: Contentstack
 doc_type: feature-guide
 audience:

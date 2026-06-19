@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Enable or Disable a Webhook"
 description: Enable or disable a webhook in Contentstack.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/enable-or-disable-a-webhook
+url: https://www.contentstack.com/docs/headless-cms/enable-or-disable-a-webhook
 product: Contentstack
 doc_type: how-to
 audience:

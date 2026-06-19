@@ -1,7 +1,7 @@
 ---
 title: App Releases
 description: Documentation for creating, viewing, and managing App Releases in the Developer Hub for Public applications.
-url: https://www.contentstack.com/docs/developers/developer-hub/app-releases
+url: https://www.contentstack.com/docs/developer-hub/app-releases
 product: Contentstack
 doc_type: developer-hub-guide
 audience:

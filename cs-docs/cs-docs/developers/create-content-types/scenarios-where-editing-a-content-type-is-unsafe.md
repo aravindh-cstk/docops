@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Scenarios Where Editing a Content Type Is Unsafe"
 description: Scenarios where editing a content type is unsafe and may cause data loss or invalidate Field visibility rules.
-url: https://www.contentstack.com/docs/developers/create-content-types/scenarios-where-editing-a-content-type-is-unsafe
+url: https://www.contentstack.com/docs/headless-cms/scenarios-where-editing-a-content-type-is-unsafe
 product: Contentstack
 doc_type: guide
 audience:

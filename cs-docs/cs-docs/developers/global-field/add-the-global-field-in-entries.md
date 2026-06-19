@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Add the Global Field in Entries"
 description: "How to add a Global field in entries and manage nested Global fields."
-url: https://www.contentstack.com/docs/developers/global-field/add-the-global-field-in-entries
+url: https://www.contentstack.com/docs/headless-cms/add-the-global-field-in-entries
 product: "Documentation"
 doc_type: "how-to"
 audience:

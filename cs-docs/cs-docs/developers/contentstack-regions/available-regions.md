@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Regions] - Available Regions"
 description: Available Regions for Contentstack and how to choose a data center when subscribing.
-url: https://www.contentstack.com/docs/developers/contentstack-regions/available-regions
+url: https://www.contentstack.com/docs/administration/available-regions
 product: Contentstack
 doc_type: reference
 audience:

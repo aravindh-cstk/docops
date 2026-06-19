@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Add a Comment"
 description: "How to add comments to Contentstack entries to improve team collaboration and manage discussions."
-url: https://www.contentstack.com/docs/content-managers/author-content/add-a-comment
+url: https://www.contentstack.com/docs/headless-cms/add-a-comment
 product: Contentstack
 doc_type: how-to
 audience:

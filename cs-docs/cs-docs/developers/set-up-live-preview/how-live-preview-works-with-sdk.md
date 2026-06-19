@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Live Preview] - How Live Preview Works with SDK"
 description: How Live Preview Works with SDK
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/how-live-preview-works-with-sdk
+url: https://www.contentstack.com/docs/headless-cms/how-live-preview-works-with-sdk
 product: Contentstack
 doc_type: developer-guide
 audience:

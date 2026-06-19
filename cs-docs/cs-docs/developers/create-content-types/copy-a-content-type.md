@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Copy a Content Type"
 description: Instructions for copying an existing content type in a Contentstack stack.
-url: https://www.contentstack.com/docs/developers/create-content-types/copy-a-content-type
+url: https://www.contentstack.com/docs/headless-cms/copy-a-content-type
 product: Contentstack
 doc_type: how-to
 audience:

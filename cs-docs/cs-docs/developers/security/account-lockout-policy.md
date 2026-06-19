@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Account Lockout Policy"
 description: Contentstack account lockout policy details, including how lockouts work, unlock steps, and best practices.
-url: https://www.contentstack.com/docs/developers/security/account-lockout-policy
+url: https://www.contentstack.com/docs/administration/account-lockout-policy
 product: Contentstack
 doc_type: security-guide
 audience:

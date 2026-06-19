@@ -1,7 +1,7 @@
 ---
 title: "[Content Modeling] - Content Modeling Best Practices"
 description: Best practices for modeling content types in Contentstack for efficient, reusable, and scalable content management.
-url: https://www.contentstack.com/docs/developers/content-modeling/content-modeling-best-practices
+url: https://www.contentstack.com/docs/headless-cms/content-modeling-best-practices
 product: Contentstack
 doc_type: best-practices
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Create Tokens] - Types of Tokens"
 description: Overview of token types in Contentstack, including Delivery Tokens, Access Tokens, Authentication Tokens (Auth Tokens), and Management Tokens, with their uses, limitations, and permissions.
-url: https://www.contentstack.com/docs/developers/create-tokens/types-of-tokens
+url: https://www.contentstack.com/docs/headless-cms/types-of-tokens
 product: Contentstack
 doc_type: concept-guide
 audience:

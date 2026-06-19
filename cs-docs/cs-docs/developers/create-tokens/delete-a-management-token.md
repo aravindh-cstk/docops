@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Delete a Management Token"
 description: Delete a management token in Contentstack and understand the impact on sessions and permissions.
-url: https://www.contentstack.com/docs/developers/create-tokens/delete-a-management-token
+url: https://www.contentstack.com/docs/headless-cms/delete-a-management-token
 product: Contentstack
 doc_type: how-to
 audience:

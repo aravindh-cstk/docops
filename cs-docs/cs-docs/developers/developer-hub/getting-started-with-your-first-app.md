@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Getting Started with your First App"
 description: Getting Started with your First App
-url: https://www.contentstack.com/docs/developers/developer-hub/getting-started-with-your-first-app
+url: https://www.contentstack.com/docs/developer-hub/getting-started-with-your-first-app
 product: Contentstack
 doc_type: guide
 audience:
@@ -16,7 +16,7 @@ This page explains how to build and run a simple “Color Picker” app using th
 
 ## Getting Started with your First App
 
-In this section, we will learn how to build a simple **“Color Picker”** app using the Contentstack App Framework. This app contains a [Custom Field UI location](/docs/developers/developer-hub/custom-field-location), which provides a native color picker polyfill that Contentstack users can use as an input field.
+In this section, we will learn how to build a simple **“Color Picker”** app using the Contentstack App Framework. This app contains a [Custom Field UI location](/docs/developer-hub/custom-field-location), which provides a native color picker polyfill that Contentstack users can use as an input field.
 
 This step-by-step guide explains how to create a Color Picker app and use it to select color as an input within an entry.
 
@@ -39,7 +39,7 @@ This step-by-step guide explains how to create a Color Picker app and use it to 
 ### Set up and Register an App
 As a first step, you need to create a project directory where you can work in. You can use the Contentstack [Apps CLI Plugin](/docs/developers/cli/apps-cli-plugin) to clone the Marketplace App Boilerplate for creating your project.
 
-This command allows you to create or register an app in [Developer Hub](/docs/developers/developer-hub/) and optionally clone a boilerplate locally. Open a terminal and execute the following command:
+This command allows you to create or register an app in [Developer Hub](/docs/developer-hub/) and optionally clone a boilerplate locally. Open a terminal and execute the following command:
 ```
 csdx app:create
 ```
@@ -63,7 +63,7 @@ npm run dev
 This hosts your application on `http://localhost:3000.` We will connect to this through the Contentstack web app.
 
 ### Install and Configure the App
-The boilerplate app has sample pages for all the supported [UI locations](/docs/developers/developer-hub/about-ui-locations) in the source code. To test the app, Install the app in one of the stacks.
+The boilerplate app has sample pages for all the supported [UI locations](/docs/developer-hub/about-ui-locations) in the source code. To test the app, Install the app in one of the stacks.
 
 Run the following commands in a **separate console window** to keep the server running. Run the following command to install the app. You can also perform the same installation via Developer Hub.
 ```
@@ -222,10 +222,10 @@ npm start
 ### Next Steps
 **Host the app on Launch:**
 
-Now that your app is ready, you can [host it on Launch](/docs/developers/developer-hub/app-hosting) for your team to use. You can also choose to host the app on external services like Netlify, Vercel, etc.
+Now that your app is ready, you can [host it on Launch](/docs/developer-hub/app-hosting) for your team to use. You can also choose to host the app on external services like Netlify, Vercel, etc.
 - **Secure your application:**
 
-Using the [signed support](/docs/developers/developer-hub/securing-your-app/), you can learn how to secure calls to outgoing APIs from the Contentstack UI and backend using the Contentstack App Framework.
+Using the [signed support](/docs/developer-hub/securing-your-app/), you can learn how to secure calls to outgoing APIs from the Contentstack UI and backend using the Contentstack App Framework.
 - **Submit for publishing on Marketplace:**
 
 Once your application is production-ready and you want to share the solution with Contentstack Marketplace, you can check the [App Submission and Approval Guide](/docs/developers/marketplace-platform-guides/app-submission-and-approval-guide).

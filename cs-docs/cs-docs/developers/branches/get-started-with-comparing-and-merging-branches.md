@@ -1,7 +1,7 @@
 ---
 title: Get Started with Comparing and Merging Branches
 description: Get started guide for comparing and merging branches.
-url: https://www.contentstack.com/docs/developers/branches/get-started-with-comparing-and-merging-branches
+url: https://www.contentstack.com/docs/headless-cms/get-started-with-comparing-and-merging-branches
 product: Branches
 doc_type: guide
 audience:

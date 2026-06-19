@@ -1,7 +1,7 @@
 ---
 title: [Search Content] - Using the New Search: Real-world Scenarios
 description: Using the New Search: Real-world Scenarios
-url: https://www.contentstack.com/docs/content-managers/search-content/using-the-new-search-real-world-scenarios
+url: https://www.contentstack.com/docs/headless-cms/using-the-new-search-real-world-scenarios
 product: Contentstack
 doc_type: documentation
 audience:

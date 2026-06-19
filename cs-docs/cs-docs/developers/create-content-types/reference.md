@@ -1,7 +1,7 @@
 ---
 title: "[Headless CMS | Fields] - Reference"
 description: Reference
-url: https://www.contentstack.com/docs/developers/create-content-types/reference
+url: https://www.contentstack.com/docs/headless-cms/reference
 product: Contentstack
 doc_type: reference
 audience:

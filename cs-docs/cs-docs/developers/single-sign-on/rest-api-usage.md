@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - REST API Usage"
 description: REST API usage considerations when enabling SSO for an organization, including Content Delivery API and Content Management API behavior.
-url: https://www.contentstack.com/docs/developers/single-sign-on/rest-api-usage
+url: https://www.contentstack.com/docs/administration/rest-api-usage
 product: Contentstack
 doc_type: security-management
 audience:

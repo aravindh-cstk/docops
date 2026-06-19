@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Uninstalling an App"
 description: Steps to uninstall an app from Marketplace stacks.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/uninstalling-an-app
+url: https://www.contentstack.com/docs/marketplace/uninstalling-an-app
 product: Marketplace
 doc_type: guide
 audience:

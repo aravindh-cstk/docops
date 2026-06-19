@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - About Global Field"
 description: About Global Field
-url: https://www.contentstack.com/docs/developers/global-field/about-global-field
+url: https://www.contentstack.com/docs/headless-cms/about-global-field
 product: Contentstack
 doc_type: concept
 audience:

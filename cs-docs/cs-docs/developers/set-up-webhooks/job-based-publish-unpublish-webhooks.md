@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Job-Based Publish/Unpublish Webhooks"
 description: Job-based webhook events trigger when bulk publish/unpublish operations complete.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/job-based-publish-unpublish-webhooks
+url: https://www.contentstack.com/docs/headless-cms/job-based-publish-unpublish-webhooks
 product: Set Up Your Project
 doc_type: webhook-guide
 audience:

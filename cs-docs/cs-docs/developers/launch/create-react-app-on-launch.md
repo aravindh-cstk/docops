@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Create React App on Launch"
 description: Documentation for hosting and deploying Create React App (CRA) projects on Contentstack Launch.
-url: https://www.contentstack.com/docs/developers/launch/create-react-app-on-launch
+url: https://www.contentstack.com/docs/launch/create-react-app-on-launch
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -20,7 +20,7 @@ This page explains what Create React App (CRA) is and how Contentstack Launch su
 
 Contentstack Launch offers comprehensive support for hosting applications built with Create React App. Whether you are building a small portfolio site or a complex web application, Launch seamlessly handles the deployment of Create React App projects.
 
-**Additional Resource:** Please refer to the [Quick Start Guide with React](/docs/developers/launch/quick-start-react/) documentation for a step-by-step walkthrough to deploy a React Starter on Launch.
+**Additional Resource:** Please refer to the [Quick Start Guide with React](/docs/launch/quick-start-react/) documentation for a step-by-step walkthrough to deploy a React Starter on Launch.
 
 ## Common questions
 
@@ -28,7 +28,7 @@ Contentstack Launch offers comprehensive support for hosting applications built 
 No specific customization is required based on this page; Contentstack Launch offers comprehensive support for hosting applications built with Create React App.
 
 ### Where can I find step-by-step instructions to deploy a React app on Launch?
-Use the **Additional Resource** link: [Quick Start Guide with React](/docs/developers/launch/quick-start-react/).
+Use the **Additional Resource** link: [Quick Start Guide with React](/docs/launch/quick-start-react/).
 
 ### What kinds of CRA projects can be deployed on Launch?
 This page indicates Launch supports CRA projects ranging from small portfolio sites to complex web applications.

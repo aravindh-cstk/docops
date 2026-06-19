@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Regions] - Data Storage"
 description: Data storage behavior and constraints across Contentstack regions.
-url: https://www.contentstack.com/docs/developers/contentstack-regions/data-storage
+url: https://www.contentstack.com/docs/administration/data-storage
 product: Contentstack
 doc_type: concept
 audience:

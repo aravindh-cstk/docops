@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Using Conditional Paths to Customize Automations"
 description: Using Conditional Paths to Customize Automations
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/using-conditional-paths-to-customize-automations
+url: https://www.contentstack.com/docs/agent-os/using-conditional-paths-to-customize-automations
 product: Contentstack
 doc_type: guide
 audience:

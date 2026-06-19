@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Manage Language Permissions"
 description: Manage language-specific access for custom roles, including restrictions, exceptions, and fallback inheritance scenarios for localized and unlocalized entries.
-url: https://www.contentstack.com/docs/developers/multilingual-content/manage-language-permissions
+url: https://www.contentstack.com/docs/headless-cms/manage-language-permissions
 product: Set Up Your Project
 doc_type: guide
 audience:

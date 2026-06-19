@@ -1,7 +1,7 @@
 ---
 title: Contentstack Command-line Interface (CLI) - Create Custom CLI Plugins for Contentstack
 description: This guide explains how to develop an external plugin for Contentstack CLI, including requirements, project structure, best practices, testing, publishing steps, and key internal behaviors to consider.
-url: https://www.contentstack.com/docs/developers/cli/create-custom-cli-plugins
+url: https://www.contentstack.com/docs/headless-cms/create-custom-cli-plugins
 product: Contentstack
 doc_type: developer-guide
 audience:

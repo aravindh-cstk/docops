@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Block and Inline Properties"
 description: Assign classes and IDs to block-level and inline elements in Contentstack's JSON Rich Text Editor.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/block-and-inline-properties
+url: https://www.contentstack.com/docs/headless-cms/block-and-inline-properties
 product: Contentstack
 doc_type: guide
 audience:

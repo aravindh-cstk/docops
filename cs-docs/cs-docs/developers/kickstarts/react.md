@@ -1,7 +1,7 @@
 ---
 title: "[Kickstarts] - React"
 uid: blt18e6817999b64016
-url: /developers/kickstarts/react
+url: https://www.contentstack.com/docs/headless-cms/react
 contentstack:
   environment: production
   assets: []

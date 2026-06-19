@@ -1,7 +1,7 @@
 ---
 title: "[Content Modeling] - About Content Modeling"
 description: About Content Modeling
-url: https://www.contentstack.com/docs/developers/content-modeling/about-content-modeling
+url: https://www.contentstack.com/docs/headless-cms/about-content-modeling
 product: Contentstack
 doc_type: concept
 audience:

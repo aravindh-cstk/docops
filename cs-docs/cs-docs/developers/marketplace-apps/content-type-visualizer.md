@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Content Type Visualizer App Installation Guide"
 description: Installation and usage guide for the Content Type Visualizer Dashboard app in Contentstack Marketplace.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/content-type-visualizer
+url: https://www.contentstack.com/docs/marketplace/content-type-visualizer
 product: Contentstack
 doc_type: marketplace-guide
 audience:

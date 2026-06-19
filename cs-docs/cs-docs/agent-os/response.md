@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Response
 description: Documentation for the Response action connector in Automation Hub connectors, including setup steps and usage notes.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/response
+url: https://www.contentstack.com/docs/agent-os/response
 product: Automation Hub
 doc_type: connector-guide
 audience:

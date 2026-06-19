@@ -1,7 +1,7 @@
 ---
 title: "[Drafts and Auto Save] - Delete Draft Entry"
 description: Instructions for discarding draft changes and restoring an entry to its last saved version in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/delete-draft-entry
+url: https://www.contentstack.com/docs/headless-cms/delete-draft-entry
 product: Contentstack
 doc_type: guide
 audience:

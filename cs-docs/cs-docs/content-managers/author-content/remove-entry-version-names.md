@@ -1,7 +1,7 @@
 ---
 title: "[Author Content | Entry Versions] - Remove Entry Version Names"
 description: Remove a custom name from an entry version and revert it to the default naming convention in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/remove-entry-version-names
+url: https://www.contentstack.com/docs/headless-cms/remove-entry-version-names
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Architecture Diagrams] - Simple Website Using DataSync"
 description: Architecture diagram and explanation for setting up a simple website using DataSync.
-url: https://www.contentstack.com/docs/developers/architecture-diagrams/simple-website-using-datasync
+url: https://www.contentstack.com/docs/headless-cms/simple-website-using-datasync
 product: Contentstack
 doc_type: architecture-diagram
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Manage Trash] - About Trash"
 description: About the Trash feature in Contentstack, including retention period, what items are stored, how to access Trash, and how to manage and restore deleted items.
-url: https://www.contentstack.com/docs/developers/manage-trash/about-trash
+url: https://www.contentstack.com/docs/headless-cms/about-trash
 product: Contentstack
 doc_type: concept
 audience:

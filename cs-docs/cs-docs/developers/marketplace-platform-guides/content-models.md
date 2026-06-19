@@ -1,7 +1,7 @@
 ---
 title: "[Second level navigation] - Working with Content Models"
 description: Working with Contentstack Marketplace Content Models to import, view, and edit schemas and use them within your stack.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models
+url: https://www.contentstack.com/docs/marketplace-platform-guides/content-models
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:

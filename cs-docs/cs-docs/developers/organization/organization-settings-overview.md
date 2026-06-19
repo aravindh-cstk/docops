@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Organization Settings Overview"
 description: Overview of the Organization Settings page and how Organization Owners/Admins can access and manage organization settings.
-url: https://www.contentstack.com/docs/developers/organization/organization-settings-overview
+url: https://www.contentstack.com/docs/administration/organization-settings-overview
 product: Contentstack
 doc_type: overview
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Change Workflow Stage of an Entry"
 description: "How to change the workflow stage of an entry, assign users or roles, set due dates, and notify assignees."
-url: https://www.contentstack.com/docs/content-managers/use-workflows/change-workflow-stage-of-an-entry
+url: https://www.contentstack.com/docs/headless-cms/change-workflow-stage-of-an-entry
 product: "Author Content"
 doc_type: "how-to"
 audience:

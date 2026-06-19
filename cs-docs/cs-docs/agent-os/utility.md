@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Utility"
 description: Utility action connector for managing automation workflow, including Continue Automation If, Continue Repeat If, Log Action, and Wait.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/utility
+url: https://www.contentstack.com/docs/agent-os/utility
 product: Contentstack
 doc_type: connector-guide
 audience:

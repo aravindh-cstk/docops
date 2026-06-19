@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Export a Global Field"
 description: Export the JSON file of an existing Global field in a Contentstack stack for reuse or modification.
-url: https://www.contentstack.com/docs/developers/global-field/export-a-global-field
+url: https://www.contentstack.com/docs/headless-cms/export-a-global-field
 product: Contentstack
 doc_type: how-to
 audience:

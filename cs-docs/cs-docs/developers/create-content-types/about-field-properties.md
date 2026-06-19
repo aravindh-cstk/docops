@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Field Properties"
 description: About Field Properties
-url: https://www.contentstack.com/docs/developers/create-content-types/about-field-properties
+url: https://www.contentstack.com/docs/headless-cms/about-field-properties
 product: Set Up Your Project
 doc_type: article
 audience:

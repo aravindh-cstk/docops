@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Users"
 description: Users, roles, capabilities, permissions, and user management actions in Contentstack Launch projects.
-url: https://www.contentstack.com/docs/developers/launch/users
+url: https://www.contentstack.com/docs/launch/users
 product: Contentstack Launch
 doc_type: guide
 audience:

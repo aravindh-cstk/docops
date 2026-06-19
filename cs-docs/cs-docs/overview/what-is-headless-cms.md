@@ -1,7 +1,7 @@
 ---
 title: "[Introduction to Contentstack - a Headless CMS] - What is Headless CMS?"
 description: Introduction to Contentstack and an explanation of what a Headless CMS is, including a comparison of Traditional, Decoupled, and Headless CMS architectures.
-url: https://www.contentstack.com/docs/overview/what-is-headless-cms
+url: https://www.contentstack.com/docs/headless-cms/what-is-headless-cms
 product: Contentstack
 doc_type: overview
 audience:

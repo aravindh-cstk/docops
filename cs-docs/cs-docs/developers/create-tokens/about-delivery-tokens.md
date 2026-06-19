@@ -1,7 +1,7 @@
 ---
 title: "[Create Tokens] - About Delivery Tokens"
 description: About Delivery Tokens and Preview Tokens for accessing published content and live preview data in specific environments.
-url: https://www.contentstack.com/docs/developers/create-tokens/about-delivery-tokens
+url: https://www.contentstack.com/docs/headless-cms/about-delivery-tokens
 product: Contentstack
 doc_type: concept
 audience:

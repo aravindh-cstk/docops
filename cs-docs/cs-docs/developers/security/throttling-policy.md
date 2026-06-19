@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Throttling Policy"
 description: Throttling Policy for Security Management.
-url: https://www.contentstack.com/docs/developers/security/throttling-policy
+url: https://www.contentstack.com/docs/administration/throttling-policy
 product: Contentstack
 doc_type: policy
 audience:

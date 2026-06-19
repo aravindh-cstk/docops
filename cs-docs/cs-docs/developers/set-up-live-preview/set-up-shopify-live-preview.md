@@ -1,7 +1,7 @@
 ---
 title: Set Up Shopify Live Preview
 description: Set up Shopify Live Preview to connect Contentstack with Shopify Liquid themes for real-time preview without publishing or reloading.
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-shopify-live-preview
+url: https://www.contentstack.com/docs/headless-cms/set-up-shopify-live-preview
 product: Contentstack
 doc_type: setup-guide
 audience:

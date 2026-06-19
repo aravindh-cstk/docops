@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Table App Installation Guide"
 description: Install and configure the Table app from the Contentstack Marketplace and use it as a Custom Field within entries.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/table
+url: https://www.contentstack.com/docs/marketplace/table
 product: Contentstack
 doc_type: marketplace-guide
 audience:

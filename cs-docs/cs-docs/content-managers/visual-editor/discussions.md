@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Discussions"
 description: Documentation for using the Discussions panel in the Visual Editor to add, view, filter, and resolve feedback on page fields.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/discussions
+url: https://www.contentstack.com/docs/headless-cms/discussions
 product: Contentstack
 doc_type: feature-guide
 audience:

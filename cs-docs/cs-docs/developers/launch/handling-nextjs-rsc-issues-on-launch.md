@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Handling Next.js RSC Issues on Launch"
 description: This guide explains how to address issues with the Next.js React Server Components (RSC) when using Next.js with App Router on Contentstack Launch—particularly when requests are routed through a CDN.
-url: https://www.contentstack.com/docs/developers/launch/handling-nextjs-rsc-issues-on-launch
+url: https://www.contentstack.com/docs/launch/handling-nextjs-rsc-issues-on-launch
 product: Contentstack Launch
 doc_type: troubleshooting-guide
 audience:
@@ -17,7 +17,7 @@ This page explains how to identify and fix cases where Next.js App Router reques
 
 Handling Next.js RSC Issues on Launch
 
-This guide explains how to address issues with the **Next.js React Server Components (RSC)** when using [Next.js with App Router on Contentstack Launch](/docs/developers/launch/nextjs-on-launch#app-router)—particularly when requests are routed through a CDN.
+This guide explains how to address issues with the **Next.js React Server Components (RSC)** when using [Next.js with App Router on Contentstack Launch](/docs/launch/nextjs-on-launch#app-router)—particularly when requests are routed through a CDN.
 
 ## Identifying the Problem
 When Next.js with App Router runs behind a CDN (such as the Launch CDN), you may encounter a problem where **React Server Component payloads** are returned instead of the expected **HTML pages**.
@@ -44,7 +44,7 @@ While disabling caching avoids this issue, it forces all requests to hit your or
 A **smarter approach** is to modify only the problematic requests so responses can still be safely cached at the CDN.
 
 ## Solution: Use Launch Edge Functions
-Fix the issue by using a [Launch Edge Function](/docs/developers/launch/edge-functions/) that removes the `Rsc: 1` header when the corresponding `_rsc` query parameter is missing.
+Fix the issue by using a [Launch Edge Function](/docs/launch/edge-functions/) that removes the `Rsc: 1` header when the corresponding `_rsc` query parameter is missing.
 
 ### Implementing the Edge Function Solution
 - In the `/functions` directory of your repository, create a file named `[proxy].edge.js`.

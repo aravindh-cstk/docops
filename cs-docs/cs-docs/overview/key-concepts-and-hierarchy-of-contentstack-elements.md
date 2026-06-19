@@ -1,7 +1,7 @@
 ---
 title: "[Introduction to Contentstack - a Headless CMS] - Key Concepts and Hierarchy of Contentstack Elements"
 description: Key Concepts and Hierarchy of Contentstack Elements
-url: https://www.contentstack.com/docs/overview/key-concepts-and-hierarchy-of-contentstack-elements
+url: https://www.contentstack.com/docs/headless-cms/key-concepts-and-hierarchy-of-contentstack-elements
 product: Contentstack
 doc_type: overview
 audience:

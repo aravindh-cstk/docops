@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Sub Automation Trigger"
 description: Documentation for configuring and using the Sub Automation Trigger connector in Automation Hub.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/sub-automation-trigger
+url: https://www.contentstack.com/docs/agent-os/sub-automation-trigger
 product: Automation Hub
 doc_type: connector-guide
 audience:

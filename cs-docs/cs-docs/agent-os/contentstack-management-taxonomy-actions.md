@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Contentstack Management - Taxonomy Actions"
 description: Contentstack Management - Taxonomy Actions
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-management-taxonomy-actions
+url: https://www.contentstack.com/docs/agent-os/contentstack-management-taxonomy-actions
 product: Contentstack
 doc_type: automation-hub-connector
 audience:

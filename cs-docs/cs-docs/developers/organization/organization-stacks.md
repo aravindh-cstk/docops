@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Organization Stacks"
 description: Manage and delete stacks under an organization in Contentstack, including role-based deletion steps and related API references.
-url: https://www.contentstack.com/docs/developers/organization/organization-stacks
+url: https://www.contentstack.com/docs/administration/organization-stacks
 product: Contentstack
 doc_type: guide
 audience:

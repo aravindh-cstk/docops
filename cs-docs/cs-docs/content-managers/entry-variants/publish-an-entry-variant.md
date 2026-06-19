@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - Publish an Entry Variant"
 description: Publish an Entry Variant
-url: https://www.contentstack.com/docs/content-managers/entry-variants/publish-an-entry-variant
+url: https://www.contentstack.com/docs/headless-cms/publish-an-entry-variant
 product: Contentstack
 doc_type: how-to
 audience:

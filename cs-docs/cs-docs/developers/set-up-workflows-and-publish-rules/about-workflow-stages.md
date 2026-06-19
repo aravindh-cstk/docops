@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Workflow Stages"
 description: About Workflow Stages
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages
+url: https://www.contentstack.com/docs/headless-cms/about-workflow-stages
 product: Set Up Your Project
 doc_type: guide
 audience:

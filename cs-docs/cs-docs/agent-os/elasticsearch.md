@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Elasticsearch"
 description: Elasticsearch connector setup steps for Automation Hub action connectors.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/elasticsearch
+url: https://www.contentstack.com/docs/agent-os/elasticsearch
 product: Automation Hub
 doc_type: connector-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Building Websites] - Enable Live Preview in Your Sample Website"
 description: Enable Live Preview in your sample website to preview entry content changes side by side in real-time before saving or publishing.
-url: https://www.contentstack.com/docs/developers/building-apps/enable-live-preview-in-your-sample-website
+url: https://www.contentstack.com/docs/headless-cms/enable-live-preview-in-your-sample-website
 product: Contentstack
 doc_type: guide
 audience:

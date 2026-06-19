@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Real-Time User Event Tracking with Data and Insights (Lytics) in Contentstack Launch"
 description: Real-Time User Event Tracking with Data and Insights (Lytics) in Contentstack Launch.
-url: https://www.contentstack.com/docs/developers/launch/event-tracking-in-contentstack-launch
+url: https://www.contentstack.com/docs/launch/event-tracking-in-contentstack-launch
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -23,7 +23,7 @@ Launch integrates with Data and Insights to provide you with automatic event tra
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Launch Project as the [Owner/Admin](/docs/developers/launch/users)
+- Access to the Launch Project as the [Owner/Admin](/docs/launch/users)
 
 ## Steps for Execution
 
@@ -47,13 +47,13 @@ Go to your Launch dashboard and click the **project card** to open your project 
 - In the modal that appears, click the **checkbox** to accept the privacy regulations and then click the **Yes, Enable Event Tracking** button to confirm the action.  
   Accepting the consent modal will load the Event Tracking script to your website.
 - Update your site to include a [consent](#handling-user-consent-optin) modal. Use a **Consent Management Platform** or build your own modal to collect this consent.
-- Perform a mandatory [redeployment](/docs/developers/launch/deployments#redeploys) once you have enabled Event Tracking on the environment.
+- Perform a mandatory [redeployment](/docs/launch/deployments#redeploys) once you have enabled Event Tracking on the environment.
 
 **Note:** Although Event Tracking will now be enabled for your site, user events will not be tracked until the end user "opts in" to sharing their data with you. To test the Event Tracking data collection feature prior to building a consent modal, open the browser console and enter the command `jstag.optIn()`. This enables data collection for Event Tracking for that specific session. This does not allow Event Tracking data collection across all the user sessions.
 
 ### Caching Behaviors
 
-- If your application uses browser-side caching, [redeploy](/docs/developers/launch/deployments#redeploys) your site after enabling or disabling Event Tracking to prevent browsers from serving outdated scripts due to [ETag-based](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag#:~:text=Caching%20of%20unchanged%20resources) caching.
+- If your application uses browser-side caching, [redeploy](/docs/launch/deployments#redeploys) your site after enabling or disabling Event Tracking to prevent browsers from serving outdated scripts due to [ETag-based](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag#:~:text=Caching%20of%20unchanged%20resources) caching.
 - Without a redeploy, users might see a cached version that does not reflect the updated script.
 
 ### Verify the Enabled Event Tracking
@@ -74,7 +74,7 @@ Go to your Launch dashboard and click the **project card** to open your project 
 - Click the **Enable Real-Time User Event Tracking** toggle again to disable Event Tracking from your Launch project.
 - In the modal that appears, click the **Yes, Disable Event Tracking** button to confirm the action.  
   **Note**: Disabling Event Tracking deletes any previously collected data associated with this environment.
-- Perform a mandatory [redeployment](/docs/developers/launch/deployments#redeploys) to remove the Real-Time Event Tag due to browser-side caching.
+- Perform a mandatory [redeployment](/docs/launch/deployments#redeploys) to remove the Real-Time Event Tag due to browser-side caching.
 
 **Once disabled:**
 

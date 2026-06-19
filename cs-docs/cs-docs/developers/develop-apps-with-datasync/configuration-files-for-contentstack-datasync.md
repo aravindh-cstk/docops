@@ -1,7 +1,7 @@
 ---
 title: "[Synchronize Data With Datasync] - Configuration Files for Contentstack DataSync"
 description: Configuration file parameters and examples for Contentstack DataSync modules (webhook listener, sync manager, filesystem and MongoDB stores, and SDKs).
-url: https://www.contentstack.com/docs/developers/develop-apps-with-datasync/configuration-files-for-contentstack-datasync
+url: https://www.contentstack.com/docs/headless-cms/configuration-files-for-contentstack-datasync
 product: Contentstack DataSync
 doc_type: configuration-reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Change Workflow"
 description: Change the workflow of a web page directly within the Visual Editor page editing interface.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/change-workflow
+url: https://www.contentstack.com/docs/headless-cms/change-workflow
 product: Contentstack
 doc_type: how-to
 audience:

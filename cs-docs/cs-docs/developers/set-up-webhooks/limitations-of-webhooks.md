@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Limitations of Webhooks"
 description: Limitations and maximum limits for creating and configuring webhooks.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/limitations-of-webhooks
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-webhooks
 product: Contentstack
 doc_type: reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - Limitations for Entry Variants"
 description: Limitations and constraints for using Entry Variants and Stack Variant Groups in Variants CMS.
-url: https://www.contentstack.com/docs/content-managers/entry-variants/limitations-for-entry-variants
+url: https://www.contentstack.com/docs/headless-cms/limitations-for-entry-variants
 product: Contentstack
 doc_type: reference
 audience:

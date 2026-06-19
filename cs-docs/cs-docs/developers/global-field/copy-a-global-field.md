@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Copy a Global Field"
 description: How to duplicate an existing Global field in Contentstack to reuse its structure with minimal modifications.
-url: https://www.contentstack.com/docs/developers/global-field/copy-a-global-field
+url: https://www.contentstack.com/docs/headless-cms/copy-a-global-field
 product: Contentstack
 doc_type: how-to
 audience:

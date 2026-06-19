@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Limitations for Search"
 description: Limitations for Search in Search Content
-url: https://www.contentstack.com/docs/content-managers/search-content/limitations-for-search
+url: https://www.contentstack.com/docs/headless-cms/limitations-for-search
 product: Search Content
 doc_type: reference
 audience:

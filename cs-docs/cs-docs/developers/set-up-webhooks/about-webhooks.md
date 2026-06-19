@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Webhooks"
 description: Overview of webhooks in Contentstack and how they can be used to send real-time information to third-party apps and services.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/about-webhooks
+url: https://www.contentstack.com/docs/headless-cms/about-webhooks
 product: Contentstack
 doc_type: concept
 audience:

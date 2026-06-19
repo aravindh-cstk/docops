@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Default Value"
 description: Documentation for the Default Value property of a field when setting up a project and creating content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/default-value
+url: https://www.contentstack.com/docs/headless-cms/default-value
 product: Documentation
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Advanced Search"
 description: Advanced Search in Contentstack enables precise, field-level searches on entries and assets using multiple conditions and complex logic.
-url: https://www.contentstack.com/docs/content-managers/search-content/advanced-search
+url: https://www.contentstack.com/docs/headless-cms/advanced-search
 product: Contentstack
 doc_type: guide
 audience:

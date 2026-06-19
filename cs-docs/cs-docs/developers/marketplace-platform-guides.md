@@ -1,7 +1,7 @@
 ---
 title: "[Second level navigation] - Marketplace Platform Guides"
 description: Marketplace Platform Guides listing page for Contentstack Marketplace documentation.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides
+url: https://www.contentstack.com/docs/marketplace-platform-guides
 product: Contentstack
 doc_type: navigation
 audience:

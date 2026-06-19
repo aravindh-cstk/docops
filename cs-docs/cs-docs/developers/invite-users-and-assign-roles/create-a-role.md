@@ -1,7 +1,7 @@
 ---
 title: "[Stack Roles] - Create a Role"
 description: Create a Role
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/create-a-role
+url: https://www.contentstack.com/docs/headless-cms/create-a-role
 product: Contentstack
 doc_type: guide
 audience:

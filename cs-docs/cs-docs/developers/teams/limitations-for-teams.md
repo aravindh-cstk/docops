@@ -1,7 +1,7 @@
 ---
 title: "[Teams] - Limitations for Teams"
 description: Limitations for Teams
-url: https://www.contentstack.com/docs/developers/teams/limitations-for-teams
+url: https://www.contentstack.com/docs/administration/limitations-for-teams
 product: Contentstack
 doc_type: reference
 audience:

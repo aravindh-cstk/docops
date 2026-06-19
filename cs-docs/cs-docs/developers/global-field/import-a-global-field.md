@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Import a Global Field"
 description: Import a Global Field
-url: https://www.contentstack.com/docs/developers/global-field/import-a-global-field
+url: https://www.contentstack.com/docs/headless-cms/import-a-global-field
 product: Contentstack
 doc_type: how-to
 audience:

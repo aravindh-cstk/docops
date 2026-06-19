@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Edit or Delete a Comment"
 description: Managing comments in Contentstack allows users to maintain clear and relevant discussions by editing or deleting comments they posted.
-url: https://www.contentstack.com/docs/content-managers/author-content/edit-or-delete-a-comment
+url: https://www.contentstack.com/docs/headless-cms/edit-or-delete-a-comment
 product: Contentstack
 doc_type: how-to
 audience:

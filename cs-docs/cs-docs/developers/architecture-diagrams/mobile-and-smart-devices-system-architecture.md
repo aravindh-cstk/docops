@@ -1,7 +1,7 @@
 ---
 title: "[Architecture Diagrams] - Mobile and Smart Devices System Architecture"
 description: Mobile and Smart Devices System Architecture
-url: https://www.contentstack.com/docs/developers/architecture-diagrams/mobile-and-smart-devices-system-architecture
+url: https://www.contentstack.com/docs/headless-cms/mobile-and-smart-devices-system-architecture
 product: Contentstack
 doc_type: architecture-diagram
 audience:

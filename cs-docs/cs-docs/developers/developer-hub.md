@@ -1,7 +1,7 @@
 ---
 title: Contentstack App Development
 description: Second level navigation listing page for Contentstack App Development resources in Developer Hub.
-url: https://www.contentstack.com/docs/developers/developer-hub
+url: https://www.contentstack.com/docs/developer-hub
 product: Contentstack
 doc_type: navigation
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Timeline] - About Timeline"
 description: Timeline is a powerful feature tailored for content managers, allowing you to visualize future changes to your website content effortlessly.
-url: https://www.contentstack.com/docs/content-managers/timeline/about-timeline
+url: https://www.contentstack.com/docs/headless-cms/about-timeline
 product: Timeline
 doc_type: feature-overview
 audience:

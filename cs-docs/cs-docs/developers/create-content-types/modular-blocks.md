@@ -1,7 +1,7 @@
 ---
 title: "[Fields] - Modular Blocks"
 description: Documentation for the Modular Blocks field, including developer setup, content manager usage, nested modular blocks, copying field values, and limitations.
-url: https://www.contentstack.com/docs/developers/create-content-types/modular-blocks
+url: https://www.contentstack.com/docs/headless-cms/modular-blocks
 product: Contentstack
 doc_type: field-reference
 audience:

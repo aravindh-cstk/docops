@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - About Basic Search"
 description: "Basic Search (press “K”) is a full-text search that compares every word of your search phrase with all the values used in all the fields of entries or assets."
-url: https://www.contentstack.com/docs/content-managers/search-content/about-basic-search
+url: https://www.contentstack.com/docs/headless-cms/about-basic-search
 product: "Content Managers"
 doc_type: "concept"
 audience:

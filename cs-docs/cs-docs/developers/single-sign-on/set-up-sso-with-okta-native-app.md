@@ -1,7 +1,7 @@
 ---
 title: "[SSO] - Set up SSO with Okta Native App"
 description: Step-by-step guide to set up Single Sign-On (SSO) in Contentstack with Okta as your SAML 2.0 identity Provider (IdP).
-url: https://www.contentstack.com/docs/developers/single-sign-on/set-up-sso-with-okta-native-app
+url: https://www.contentstack.com/docs/administration/set-up-sso-with-okta-native-app
 product: Contentstack
 doc_type: guide
 audience:

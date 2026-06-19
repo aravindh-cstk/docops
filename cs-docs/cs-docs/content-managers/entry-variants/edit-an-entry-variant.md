@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - Edit an Entry Variant"
 description: How to edit an entry variant in Contentstack and where to find the API request for updating an entry variant.
-url: https://www.contentstack.com/docs/content-managers/entry-variants/edit-an-entry-variant
+url: https://www.contentstack.com/docs/headless-cms/edit-an-entry-variant
 product: Contentstack
 doc_type: how-to
 audience:

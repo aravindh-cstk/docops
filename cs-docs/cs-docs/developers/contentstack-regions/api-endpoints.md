@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Regions] - API Endpoints"
 description: Base API URLs for Contentstack services across AWS, Azure, and GCP regions, including GraphQL Live Preview endpoints.
-url: https://www.contentstack.com/docs/developers/contentstack-regions/api-endpoints
+url: https://www.contentstack.com/docs/administration/api-endpoints
 product: Contentstack
 doc_type: reference
 audience:

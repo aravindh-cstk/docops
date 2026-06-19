@@ -1,7 +1,7 @@
 ---
 title: "[Field Visibility Rule] - Add a Field Visibility Rule"
 description: Steps to create and configure Field Visibility Rules in Contentstack for content types and global fields.
-url: https://www.contentstack.com/docs/developers/create-content-types/add-a-field-visibility-rule
+url: https://www.contentstack.com/docs/headless-cms/add-a-field-visibility-rule
 product: Contentstack
 doc_type: how-to
 audience:

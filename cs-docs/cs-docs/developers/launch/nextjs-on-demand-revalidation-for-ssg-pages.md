@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Next JS On-Demand Revalidation for SSG pages"
 description: Next JS On-Demand Revalidation for SSG pages in Contentstack Launch using SSR with cache headers and buildId configuration.
-url: https://www.contentstack.com/docs/developers/launch/nextjs-on-demand-revalidation-for-ssg-pages
+url: https://www.contentstack.com/docs/launch/nextjs-on-demand-revalidation-for-ssg-pages
 product: Contentstack Launch
 doc_type: guide
 audience:

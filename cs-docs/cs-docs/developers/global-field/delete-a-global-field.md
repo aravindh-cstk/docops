@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Delete a Global Field"
 description: How to delete a Global field in Contentstack and related considerations, including API reference.
-url: https://www.contentstack.com/docs/developers/global-field/delete-a-global-field
+url: https://www.contentstack.com/docs/headless-cms/delete-a-global-field
 product: Contentstack
 doc_type: how-to
 audience:

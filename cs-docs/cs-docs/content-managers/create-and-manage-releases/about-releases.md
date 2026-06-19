@@ -1,7 +1,7 @@
 ---
 title: "[Create and Manage Releases] - About Releases"
 description: About Releases
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/about-releases
+url: https://www.contentstack.com/docs/headless-cms/about-releases
 product: Contentstack
 doc_type: concept
 audience:

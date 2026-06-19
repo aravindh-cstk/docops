@@ -1,7 +1,7 @@
 ---
 title: "[Set up Environments] - Environment Limitations"
 description: Environment Limitations for Set up Environments
-url: https://www.contentstack.com/docs/developers/set-up-environments/environment-limitations
+url: https://www.contentstack.com/docs/headless-cms/environment-limitations
 product: Contentstack
 doc_type: reference
 audience:

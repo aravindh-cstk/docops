@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - About Knowledge Vault"
 description: Overview of Knowledge Vault, how it works, key features, and methods to ingest items.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/about-knowledge-vault
+url: https://www.contentstack.com/docs/brand-kit/about-knowledge-vault
 product: Contentstack
 doc_type: concept
 audience:
@@ -44,7 +44,7 @@ The following are the key features of the Knowledge Vault:
 ## Ingesting Items into the Knowledge Vault
 
 There are three methods to add content in to the Knowledge Vault:
-- **Using the Knowledge Vault Interface**: You can add and update items in the Knowledge Vault via its interface. For more details, refer to the [Add Item in Knowledge Vault](/docs/content-managers/brand-kit/add-item-in-knowledge-vault) and [Edit Item in Knowledge Vault](/docs/content-managers/brand-kit/edit-item-in-knowledge-vault) guides.
+- **Using the Knowledge Vault Interface**: You can add and update items in the Knowledge Vault via its interface. For more details, refer to the [Add Item in Knowledge Vault](/docs/brand-kit/add-item-in-knowledge-vault) and [Edit Item in Knowledge Vault](/docs/brand-kit/edit-item-in-knowledge-vault) guides.
 - **Using the Automate Brand Kit Connector**: You can load items into the Knowledge Vault by using the [Create an Item in Knowledge Vault](/docs/developers/automation-hub-connectors/brand-kit#create-an-item-in-knowledge-vault) action within the Automate [Brand Kit](/docs/developers/automation-hub-connectors/brand-kit) Connector.
 - **Using the Knowledge Vault API**: You can add items into the Knowledge Vault by using the [Ingest Content](/docs/developers/apis/brand-kit-management-api#ingest-content) request in the [Knowledge Vault](/docs/developers/apis/brand-kit-management-api#knowledge-vault) API.
 

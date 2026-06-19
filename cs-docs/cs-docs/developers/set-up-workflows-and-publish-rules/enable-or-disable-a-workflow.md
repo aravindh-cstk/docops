@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Enable or Disable a Workflow"
 description: Instructions to enable or disable a workflow in Contentstack, with related API reference links.
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/enable-or-disable-a-workflow
+url: https://www.contentstack.com/docs/headless-cms/enable-or-disable-a-workflow
 product: Contentstack
 doc_type: how-to
 audience:

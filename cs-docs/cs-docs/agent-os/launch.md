@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Launch
 description: Set up the Launch connector in Automate to trigger deployments and revalidate CDN cache for Contentstack Launch projects.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/launch
+url: https://www.contentstack.com/docs/agent-os/launch
 product: Contentstack
 doc_type: connector-guide
 audience:

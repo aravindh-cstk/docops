@@ -1,7 +1,7 @@
 ---
 title: "[Timeline] - Set Up Timeline without Contentstack SDK"
 description: Set up the Timeline feature for your stack without using the Contentstack SDK by adding preview_timestamp to API request headers and using Live Preview Utils SDK.
-url: https://www.contentstack.com/docs/developers/set-up-timeline/set-up-timeline-without-contentstack-sdk
+url: https://www.contentstack.com/docs/headless-cms/set-up-timeline-without-contentstack-sdk
 product: Contentstack
 doc_type: developer-guide
 audience:

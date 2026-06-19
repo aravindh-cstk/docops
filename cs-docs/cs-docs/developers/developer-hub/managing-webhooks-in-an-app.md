@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Managing Webhooks in an App"
 description: Managing Webhooks in an App
-url: https://www.contentstack.com/docs/developers/developer-hub/managing-webhooks-in-an-app
+url: https://www.contentstack.com/docs/developer-hub/managing-webhooks-in-an-app
 product: Contentstack
 doc_type: guide
 audience:

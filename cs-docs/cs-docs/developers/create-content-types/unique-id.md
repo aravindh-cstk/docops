@@ -1,7 +1,7 @@
 ---
 title: Set Up Your Project - Unique ID
 description: Documentation for the Unique ID (UID) property for fields in content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/unique-id
+url: https://www.contentstack.com/docs/headless-cms/unique-id
 product: Contentstack
 doc_type: concept
 audience:

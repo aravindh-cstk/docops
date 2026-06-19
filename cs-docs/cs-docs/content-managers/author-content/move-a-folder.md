@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Move an Asset Folder"
 description: "How to move an asset folder in Contentstack and where to find the API request to move a folder."
-url: https://www.contentstack.com/docs/content-managers/author-content/move-a-folder
+url: https://www.contentstack.com/docs/headless-cms/move-a-folder
 product: Contentstack
 doc_type: how-to
 audience:

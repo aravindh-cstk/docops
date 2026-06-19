@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Set Up Visual Editor for Your Website"
 description: Set up and configure Contentstack Visual Editor for your website, including prerequisites, SDK upgrades, configuration, and edit tags.
-url: https://www.contentstack.com/docs/developers/set-up-visual-editor/set-up-visual-editor-for-your-website
+url: https://www.contentstack.com/docs/headless-cms/set-up-visual-editor-for-your-website
 product: Contentstack
 doc_type: guide
 audience:

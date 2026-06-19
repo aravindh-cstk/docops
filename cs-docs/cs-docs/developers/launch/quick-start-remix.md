@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Launch Quick Start Guide with Remix"
 description: Launch Quick Start Guide with Remix
-url: https://www.contentstack.com/docs/developers/launch/quick-start-remix
+url: https://www.contentstack.com/docs/launch/quick-start-remix
 product: Contentstack Launch
 doc_type: quick-start
 audience:
@@ -16,7 +16,7 @@ This page explains how to create and deploy your first Contentstack Launch proje
 
 ## Launch Quick Start Guide with Remix
 
-The fastest way to get started with Remix on Launch is by creating a project by importing the website code from [GitHub](https://github.com/tejas-contentstack/remix-101) or [Bitbucket Cloud](/docs/developers/launch/import-a-project-using-bitbucket-cloud/).
+The fastest way to get started with Remix on Launch is by creating a project by importing the website code from [GitHub](https://github.com/tejas-contentstack/remix-101) or [Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud/).
 
 This document guides you through the process of creating a project using GitHub.
 
@@ -36,10 +36,10 @@ Follow the steps given below to deploy your first Launch project using GitHub:
 - On the **Launch** **Projects** screen, click the **+ New Project** button to initiate the project creation process.
 - From the **Create New Project** modal, click **Import from a Git Repository**.
 
-  **Note:** You can also choose to [upload a .zip file to import a project](/docs/developers/launch/import-project-using-file-upload/).
+  **Note:** You can also choose to [upload a .zip file to import a project](/docs/launch/import-project-using-file-upload/).
 - Click **GitHub**.
 
-  **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/developers/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
+  **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
 
   A new page opens. Sign in or create a new GitHub account.
 - Enter your credentials and log in.
@@ -83,7 +83,7 @@ If you want to deploy the changes from any other commits, you can click the **Re
 Only the Organization [Admin](/docs/developers/organization/organization-roles#organization-admin)/[Owner](/docs/developers/organization/organization-roles#organization-owner) has the right to create projects in a stack for Launch.
 
 ### Can I import a project without GitHub?
-Yes. You can also import a project using Bitbucket Cloud or choose to [upload a .zip file to import a project](/docs/developers/launch/import-project-using-file-upload/).
+Yes. You can also import a project using Bitbucket Cloud or choose to [upload a .zip file to import a project](/docs/launch/import-project-using-file-upload/).
 
 ### What should the Output Directory be set to for Remix?
 Ensure that the **Output Directory** is set to `./build`.

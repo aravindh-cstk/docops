@@ -1,7 +1,7 @@
 ---
 title: "[Content Models] - About Content Models"
 description: About Contentstack Marketplace Content Models and how to access and use prebuilt content models.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models/about-content-models
+url: https://www.contentstack.com/docs/marketplace/about-content-models
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:
@@ -28,18 +28,18 @@ To access Content Models:
 You can see all the prebuilt content models.
 
 Below is a list of the prebuilt Content Models provided by Contentstack:
-- [About Us Page](/docs/developers/marketplace-platform-guides/content-models/about-us-page)
-- [Blog Landing Page](/docs/developers/marketplace-platform-guides/content-models/blog-landing-page)
-- [Blog Listing Page](/docs/developers/marketplace-platform-guides/content-models/blog-listing-page)
-- [Contact Us Page](/docs/developers/marketplace-platform-guides/content-models/contact-us-page)
-- [Frequently Asked Questions](/docs/developers/marketplace-platform-guides/content-models/faqs)
-- [Hero Banner](/docs/developers/marketplace-platform-guides/content-models/hero-banner)
-- [Product Listing Page](/docs/developers/marketplace-platform-guides/content-models/product-listing-page)
-- [Website Footer](/docs/developers/marketplace-platform-guides/content-models/website-footer)
-- [Website Header](/docs/developers/marketplace-platform-guides/content-models/website-header)
-- [Website Homepage](/docs/developers/marketplace-platform-guides/content-models/website-homepage)
+- [About Us Page](/docs/marketplace-platform-guides/content-models/about-us-page)
+- [Blog Landing Page](/docs/marketplace-platform-guides/content-models/blog-landing-page)
+- [Blog Listing Page](/docs/marketplace-platform-guides/content-models/blog-listing-page)
+- [Contact Us Page](/docs/marketplace-platform-guides/content-models/contact-us-page)
+- [Frequently Asked Questions](/docs/marketplace-platform-guides/content-models/faqs)
+- [Hero Banner](/docs/marketplace-platform-guides/content-models/hero-banner)
+- [Product Listing Page](/docs/marketplace-platform-guides/content-models/product-listing-page)
+- [Website Footer](/docs/marketplace-platform-guides/content-models/website-footer)
+- [Website Header](/docs/marketplace-platform-guides/content-models/website-header)
+- [Website Homepage](/docs/marketplace-platform-guides/content-models/website-homepage)
 
-**Additional Resource:** You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
+**Additional Resource:** You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
 
 ## Common questions
 
@@ -53,6 +53,6 @@ In the left-hand side primary navigation, click the **Marketplace** icon to go t
 The Content Models include [Content Types](/docs/developers/create-content-types/about-content-types/), [Global Fields](/docs/developers/create-content-types/global/), [Labels](/docs/developers/create-content-types/about-labels/), and [Extensions](/docs/developers/experience-extensions-overview/about-experience-extensions/).
 
 ### How can I import prebuilt Content Models?
-You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
+You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
 
 <!-- filename: content-models-about-content-models.md -->

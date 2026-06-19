@@ -1,7 +1,7 @@
 ---
 title: "[Use Workflows] - Change Entry Workflow Stage"
 description: How to change the workflow stage of an entry in Contentstack, including setting due dates, assigning users/roles, and adding comments; also includes the related API reference.
-url: https://www.contentstack.com/docs/content-managers/use-workflows/change-entry-workflow-stage
+url: https://www.contentstack.com/docs/headless-cms/change-entry-workflow-stage
 product: Contentstack
 doc_type: how-to
 audience:

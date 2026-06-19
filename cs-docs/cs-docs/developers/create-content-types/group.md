@@ -1,7 +1,7 @@
 ---
 title: "[Fields] - Group"
 description: Documentation for the Group field used to organize multiple fields into a reusable unit in Contentstack content modeling.
-url: https://www.contentstack.com/docs/developers/create-content-types/group
+url: https://www.contentstack.com/docs/headless-cms/group
 product: Contentstack
 doc_type: field-reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Extensions] - Venus Component Library"
 description: Venus Component Library
-url: https://www.contentstack.com/docs/developers/venus-component-library
+url: https://www.contentstack.com/docs/headless-cms/venus-component-library
 product: Contentstack
 doc_type: developer-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[SSO] - Set up SSO with OneLogin"
 description: Step-by-step guide to set up Single Sign-On (SSO) in Contentstack with OneLogin as your SAML 2.0 Identity Provider (IdP).
-url: https://www.contentstack.com/docs/developers/single-sign-on/set-up-sso-with-onelogin
+url: https://www.contentstack.com/docs/administration/set-up-sso-with-onelogin
 product: Contentstack
 doc_type: guide
 audience:

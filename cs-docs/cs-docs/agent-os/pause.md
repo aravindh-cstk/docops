@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Pause"
 description: The Pause action connector lets you pause an existing automation.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/pause
+url: https://www.contentstack.com/docs/agent-os/pause
 product: Automation Hub
 doc_type: connector-guide
 audience:

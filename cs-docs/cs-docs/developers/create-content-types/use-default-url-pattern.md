@@ -1,7 +1,7 @@
 ---
 title: "[Headless CMS | Default URL Pattern] - Use Default URL Pattern"
 description: Use Default URL Pattern
-url: https://www.contentstack.com/docs/developers/create-content-types/use-default-url-pattern
+url: https://www.contentstack.com/docs/headless-cms/use-default-url-pattern
 product: Contentstack
 doc_type: guide
 audience:

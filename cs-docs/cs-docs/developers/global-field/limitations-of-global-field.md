@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Limitations of Global Field"
 description: Limitations of Global Field
-url: https://www.contentstack.com/docs/developers/global-field/limitations-of-global-field
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-global-field
 product: Contentstack
 doc_type: reference
 audience:

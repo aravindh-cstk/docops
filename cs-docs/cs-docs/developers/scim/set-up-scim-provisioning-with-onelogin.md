@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Set Up SCIM Provisioning With OneLogin"
 description: Set up SCIM provisioning with OneLogin for Contentstack to provision and deprovision users and manage group mappings.
-url: https://www.contentstack.com/docs/developers/scim/set-up-scim-provisioning-with-onelogin
+url: https://www.contentstack.com/docs/administration/set-up-scim-provisioning-with-onelogin
 product: Contentstack
 doc_type: security-management-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - JSON Editor App Installation Guide"
 description: JSON Editor App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/json-editor
+url: https://www.contentstack.com/docs/marketplace/json-editor
 product: Contentstack
 doc_type: marketplace-guide
 audience:

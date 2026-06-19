@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - JSON RTE Comments"
 description: JSON RTE Comments feature in Contentstack lets you add comments directly within the JSON Rich Text Editor.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/json-rte-comments
+url: https://www.contentstack.com/docs/headless-cms/json-rte-comments
 product: Contentstack
 doc_type: feature-guide
 audience:

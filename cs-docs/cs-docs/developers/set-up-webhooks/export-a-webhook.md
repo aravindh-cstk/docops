@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Export a Webhook"
 description: Export a webhook in JSON format from Contentstack.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/export-a-webhook
+url: https://www.contentstack.com/docs/headless-cms/export-a-webhook
 product: Contentstack
 doc_type: how-to
 audience:

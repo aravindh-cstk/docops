@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Instruction Value"
 description: Documentation for the Instruction Value property used when creating content types and fields.
-url: https://www.contentstack.com/docs/developers/create-content-types/instruction-value
+url: https://www.contentstack.com/docs/headless-cms/instruction-value
 product: Set Up Your Project
 doc_type: reference
 audience:

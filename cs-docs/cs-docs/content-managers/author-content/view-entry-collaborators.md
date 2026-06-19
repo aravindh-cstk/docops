@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - View Entry Collaborators"
 description: Contentstack’s View Entry Collaborators feature allows you to see which collaborators are currently viewing or editing the same entry.
-url: https://www.contentstack.com/docs/content-managers/author-content/view-entry-collaborators
+url: https://www.contentstack.com/docs/headless-cms/view-entry-collaborators
 product: Contentstack
 doc_type: feature-guide
 audience:

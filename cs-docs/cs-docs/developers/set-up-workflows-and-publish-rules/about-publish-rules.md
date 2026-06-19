@@ -1,7 +1,7 @@
 ---
 title: "[Publish Rules] - About Publish Rules"
 description: About Publish Rules
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/about-publish-rules
+url: https://www.contentstack.com/docs/headless-cms/about-publish-rules
 product: Developers
 doc_type: guide
 audience:

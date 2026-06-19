@@ -1,7 +1,7 @@
 ---
 title: "[Create and Manage Releases NEW] - Lock a Release"
 description: Locking a release prevents any accidental modifications or deployments to its items.
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/lock-a-release
+url: https://www.contentstack.com/docs/headless-cms/lock-a-release
 product: Contentstack
 doc_type: guide
 audience:

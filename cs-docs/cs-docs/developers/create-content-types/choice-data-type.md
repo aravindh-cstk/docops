@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Choice Data Type"
 description: Documentation for the Choice Data Type property of the Select field, including available options, warnings, and related resources.
-url: https://www.contentstack.com/docs/developers/create-content-types/choice-data-type
+url: https://www.contentstack.com/docs/headless-cms/choice-data-type
 product: Set Up Your Project
 doc_type: reference
 audience:

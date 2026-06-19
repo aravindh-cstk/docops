@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Disable Automatic Redeployment"
 description: Steps to disable the Auto-Deploy on Commits setting in Contentstack Launch environments.
-url: https://www.contentstack.com/docs/developers/launch/disable-automatic-redeployment
+url: https://www.contentstack.com/docs/launch/disable-automatic-redeployment
 product: Contentstack Launch
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Supported Node.js Versions"
 description: Supported Node.js versions on Contentstack Launch and how to set the Node.js version in package.json.
-url: https://www.contentstack.com/docs/developers/launch/supported-nodejs-versions
+url: https://www.contentstack.com/docs/launch/supported-nodejs-versions
 product: Contentstack Launch
 doc_type: reference
 audience:
@@ -64,7 +64,7 @@ When a valid [semver range](https://semver.org/) for Node.js 20 (e.g. 20.x) is s
 If you encounter the following error when redeploying an existing project, it is likely due to the Node.js version settings:
 
 ```
-ERROR: Node.js v18. and below are no longer supported on Launch. Please upgrade to a supported version to continue deploying your projects. View supported versions here: https://www.contentstack.com/docs/developers/launch/supported-nodejs-versions
+ERROR: Node.js v18. and below are no longer supported on Launch. Please upgrade to a supported version to continue deploying your projects. View supported versions here: https://www.contentstack.com/docs/launch/supported-nodejs-versions
 ```
 
 Your latest live deployment was created **before August 1**, and your `package.json` does not specify an `"engines"` property. In such cases, the deployment still defaults to **Node.js 18**, which has now been **discontinued**. As a result, redeployments of these projects fail.

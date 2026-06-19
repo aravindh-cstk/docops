@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Audiences"
 description: How to use the Audiences feature in Visual Editor to customize and preview content variations for different user segments.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/audiences
+url: https://www.contentstack.com/docs/headless-cms/audiences
 product: Contentstack
 doc_type: guide
 audience:

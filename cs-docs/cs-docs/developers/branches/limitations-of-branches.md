@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Limitations of Branches"
 description: Limitations and constraints for using branches in a project.
-url: https://www.contentstack.com/docs/developers/branches/limitations-of-branches
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-branches
 product: Contentstack
 doc_type: reference
 audience:

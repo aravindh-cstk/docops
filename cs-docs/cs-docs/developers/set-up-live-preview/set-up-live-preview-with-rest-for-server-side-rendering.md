@@ -1,7 +1,7 @@
 ---
 title: Set up Live Preview with REST for SSR
 description: Set up Live Preview using REST APIs for server-side rendering (SSR) websites.
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-with-rest-for-server-side-rendering
+url: https://www.contentstack.com/docs/headless-cms/set-up-live-preview-with-rest-for-server-side-rendering
 product: Contentstack
 doc_type: guide
 audience:

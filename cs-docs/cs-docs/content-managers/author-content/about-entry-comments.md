@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - About Entry Comments"
 description: Contentstack’s “Comments” feature allows you to add comments to fields in the entry editor, and to collaborate with other Contentstack users during the content creation and review processes.
-url: https://www.contentstack.com/docs/content-managers/author-content/about-entry-comments
+url: https://www.contentstack.com/docs/headless-cms/about-entry-comments
 product: Contentstack
 doc_type: concept
 audience:

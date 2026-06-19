@@ -1,7 +1,7 @@
 ---
 title: "[Use Workflows] - Send an Entry for Edit Access Approval"
 description: Send an entry for edit access approval in Workflows when stage access rules restrict editing.
-url: https://www.contentstack.com/docs/content-managers/use-workflows/send-an-entry-for-edit-access-approval
+url: https://www.contentstack.com/docs/headless-cms/send-an-entry-for-edit-access-approval
 product: Contentstack
 doc_type: how-to
 audience:

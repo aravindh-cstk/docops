@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Info Panel App Installation Guide"
 description: Info Panel App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/info-panel
+url: https://www.contentstack.com/docs/marketplace/info-panel
 product: Contentstack
 doc_type: marketplace-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Launch Quick Start Guide with Nuxt"
 description: Launch Quick Start Guide with Nuxt
-url: https://www.contentstack.com/docs/developers/launch/quick-start-nuxt
+url: https://www.contentstack.com/docs/launch/quick-start-nuxt
 product: Contentstack Launch
 doc_type: quick-start
 audience:
@@ -16,7 +16,7 @@ This page explains how to quickly create and deploy a Nuxt project in Contentsta
 
 ## Launch Quick Start Guide with Nuxt
 
-The fastest way to get started with Nuxt on Launch is by creating a project and importing your website code from [GitHub](https://github.com/AryanBansal-launch/kickstart-nuxt-Tim.git) or [Bitbucket Cloud](/docs/developers/launch/import-a-project-using-bitbucket-cloud/).
+The fastest way to get started with Nuxt on Launch is by creating a project and importing your website code from [GitHub](https://github.com/AryanBansal-launch/kickstart-nuxt-Tim.git) or [Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud/).
 
 This document guides you through the process of creating a project using GitHub.
 
@@ -35,10 +35,10 @@ Alternatively, go to the **App Switcher** in the top panel and click the **Launc
 - On the **Launch** **Projects** screen, click the **+ New Project** button to initiate the project creation process.
 - From the **Create New Project** modal, click **Import from a Git Repository**.
 
-  **Note:** You can also choose to [upload a .zip file to import a project](/docs/developers/launch/import-project-using-file-upload/).
+  **Note:** You can also choose to [upload a .zip file to import a project](/docs/launch/import-project-using-file-upload/).
 - Click **GitHub**.
 
-  **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/developers/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
+  **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
 
   A new page opens. **Sign in** or **create a new GitHub account**.
 - Enter your credentials and log in.

@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Create a Term"
 description: Instructions for creating taxonomy terms in Contentstack and a link to the API reference for creating terms via API.
-url: https://www.contentstack.com/docs/developers/taxonomy/create-a-term
+url: https://www.contentstack.com/docs/headless-cms/create-a-term
 product: Contentstack
 doc_type: how-to
 audience:

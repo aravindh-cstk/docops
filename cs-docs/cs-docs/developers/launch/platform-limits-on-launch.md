@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Platform Limits on Launch"
 description: Platform limits for request/response sizes, cache revalidation, and how limits are applied in Contentstack Launch.
-url: https://www.contentstack.com/docs/developers/launch/platform-limits-on-launch
+url: https://www.contentstack.com/docs/launch/platform-limits-on-launch
 product: Contentstack Launch
 doc_type: platform-limits
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - Assigning Taxonomy Terms Based on Locale"
 description: Assigning Taxonomy Terms Based on Locale
-url: https://www.contentstack.com/docs/developers/solution-guides/assigning-taxonomy-terms-based-on-locale
+url: https://www.contentstack.com/docs/headless-cms/assigning-taxonomy-terms-based-on-locale
 product: Contentstack
 doc_type: solution-guide
 audience:

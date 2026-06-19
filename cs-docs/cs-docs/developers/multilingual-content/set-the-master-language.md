@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Set the Master Language"
 description: Set the master language for a Contentstack stack and understand limitations and localization options.
-url: https://www.contentstack.com/docs/developers/multilingual-content/set-the-master-language
+url: https://www.contentstack.com/docs/headless-cms/set-the-master-language
 product: Contentstack
 doc_type: guide
 audience:

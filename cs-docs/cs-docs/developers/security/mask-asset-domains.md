@@ -1,7 +1,7 @@
 ---
 title: [Manage Asset Security] - Mask Asset Domains
 description: Mask Asset Domains
-url: https://www.contentstack.com/docs/developers/security/mask-asset-domains
+url: https://www.contentstack.com/docs/administration/mask-asset-domains
 product: Contentstack
 doc_type: documentation
 audience:

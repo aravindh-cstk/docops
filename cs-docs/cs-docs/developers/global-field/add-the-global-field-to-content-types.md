@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Add the Global Field to Content Types"
 description: Add the Global Field to Content Types
-url: https://www.contentstack.com/docs/developers/global-field/add-the-global-field-to-content-types
+url: https://www.contentstack.com/docs/headless-cms/add-the-global-field-to-content-types
 product: Contentstack
 doc_type: guide
 audience:

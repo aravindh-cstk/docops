@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - Getting Started with Variants"
 description: Getting Started with Variants in Contentstack Variants CMS, including terminology, creation methods, management, publishing, API integration, and limitations.
-url: https://www.contentstack.com/docs/developers/variants/getting-started-with-variants
+url: https://www.contentstack.com/docs/headless-cms/getting-started-with-variants
 product: Contentstack
 doc_type: getting-started
 audience:

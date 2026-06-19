@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Stack] - Stack Limitations"
 description: Limitations for Stack
-url: https://www.contentstack.com/docs/developers/set-up-stack/stack-limitations
+url: https://www.contentstack.com/docs/headless-cms/stack-limitations
 product: Set Up Stack
 doc_type: reference
 audience:

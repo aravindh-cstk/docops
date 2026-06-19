@@ -1,7 +1,7 @@
 ---
 title: "[Live Preview Dev] Set Up Live Preview for Gatsby-Powered Sites"
 description: Configure Live Preview for Gatsby-powered websites using Contentstack, including preview tokens, Live Preview Utils SDK initialization, page-level setup, stack settings, and live edit tags.
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-for-gatsby-powered-sites
+url: https://www.contentstack.com/docs/headless-cms/set-up-live-preview-for-gatsby-powered-sites
 product: Contentstack
 doc_type: developer-guide
 audience:

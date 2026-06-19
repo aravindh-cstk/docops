@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Move/Reorder a Term"
 description: Instructions for moving or reordering taxonomy terms in Contentstack, plus a link to the corresponding API reference.
-url: https://www.contentstack.com/docs/developers/taxonomy/move-or-reorder-a-term
+url: https://www.contentstack.com/docs/headless-cms/move-or-reorder-a-term
 product: Contentstack
 doc_type: how-to
 audience:

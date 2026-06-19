@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Navigating Your Website in Visual Editor"
 description: Use Visual Editor to visually edit and manage your website’s structure and content in real time, including navigation, key interface areas, and canvas interactions.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/navigating-your-website-in-visual-editor
+url: https://www.contentstack.com/docs/headless-cms/navigating-your-website-in-visual-editor
 product: Contentstack
 doc_type: guide
 audience:

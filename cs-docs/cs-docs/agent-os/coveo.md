@@ -2,7 +2,7 @@
 title: [Automations guides and connectors] - Coveo
 description: Learn to use the Coveo Automate connector to efficiently push and delete items from your website to Coveo.
 
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/coveo
+url: https://www.contentstack.com/docs/agent-os/coveo
 product: Automations
 doc_type: documentation
 audience:

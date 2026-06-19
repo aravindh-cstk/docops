@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - About SCIM"
 description: Overview of SCIM (System for Cross-domain Identity Management) and how Contentstack supports SCIM-based user provisioning.
-url: https://www.contentstack.com/docs/developers/scim/about-scim
+url: https://www.contentstack.com/docs/administration/about-scim
 product: Contentstack
 doc_type: concept
 audience:

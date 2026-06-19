@@ -1,7 +1,7 @@
 ---
 title: Set Up Environments - About Environments
 description: About Environments
-url: https://www.contentstack.com/docs/developers/set-up-environments/about-environments
+url: https://www.contentstack.com/docs/headless-cms/about-environments
 product: Contentstack
 doc_type: concept
 audience:

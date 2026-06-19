@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Limitations on Publishing Localized Entry Versions"
 description: Limitations and configurable limits for publishing localized entry versions across languages and environments.
-url: https://www.contentstack.com/docs/developers/multilingual-content/limitations-on-publishing-localized-entry-versions
+url: https://www.contentstack.com/docs/headless-cms/limitations-on-publishing-localized-entry-versions
 product: Contentstack
 doc_type: guide
 audience:

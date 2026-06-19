@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Configuring an App"
 description: Configuring an App in Developer Hub guides
-url: https://www.contentstack.com/docs/developers/developer-hub/configuring-an-app
+url: https://www.contentstack.com/docs/developer-hub/configuring-an-app
 product: Developer Hub
 doc_type: guide
 audience:

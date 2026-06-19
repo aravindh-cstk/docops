@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Troubleshooting Launch Response Error Codes"
 description: Troubleshooting guide for diagnosing and resolving Contentstack Launch response errors from the CDN edge layer or origin serverless functions.
-url: https://www.contentstack.com/docs/developers/launch/troubleshooting-launch-response-error-codes
+url: https://www.contentstack.com/docs/launch/troubleshooting-launch-response-error-codes
 product: Contentstack Launch
 doc_type: troubleshooting
 audience:
@@ -41,8 +41,8 @@ A CDN edge error occurs when the request reaches the CDN layer, but the Launch E
 The Edge Function encountered an unhandled exception or returned an invalid or malformed response.
 
 **Resolution:**
-- Check the [**Launch Server Logs**](/docs/developers/launch/edge-functions#server-logs) associated with the Edge Function’s execution to identify what caused the failure.
-- Review the [**Edge Function’s**](/docs/developers/launch/edge-functions) logic to ensure there are no unhandled exceptions.
+- Check the [**Launch Server Logs**](/docs/launch/edge-functions#server-logs) associated with the Edge Function’s execution to identify what caused the failure.
+- Review the [**Edge Function’s**](/docs/launch/edge-functions) logic to ensure there are no unhandled exceptions.
 - Ensure the function always returns a valid, properly structured response.
 
 ## Error Codes from the Origin
@@ -60,7 +60,7 @@ Launch attempted to start your project’s server, but the process failed to ini
 An incorrect server command, missing or invalid build output, an unexpected error that prevents the server from starting, or an application crash caused by running out of memory.
 
 **Resolution:**
-- Check the **Launch Server Logs** or your configured [**Log Targets**](/docs/developers/launch/log-targets).
+- Check the **Launch Server Logs** or your configured [**Log Targets**](/docs/launch/log-targets).
 - Verify that the **server command** is correct and can start successfully in your local environment.
 - Fix configuration or build issues and redeploy the project.
 
@@ -83,7 +83,7 @@ An unexpected issue within the Launch platform prevented the request from comple
 **Error:**
 `Bad Gateway CF003: The total size of the response headers exceeded the limit. Check and reduce their size.`
 
-Your server-side application returned response headers whose combined size was greater than the [allowed limit](/docs/developers/launch/platform-limits-on-launch). This error returns a `502` response.
+Your server-side application returned response headers whose combined size was greater than the [allowed limit](/docs/launch/platform-limits-on-launch). This error returns a `502` response.
 
 **Cause:**
 - Large cookies.

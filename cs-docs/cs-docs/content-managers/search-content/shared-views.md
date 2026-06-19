@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Shared Views"
 description: Contentstack shared views functionality for collaborating by sharing saved views within a stack.
-url: https://www.contentstack.com/docs/content-managers/search-content/shared-views
+url: https://www.contentstack.com/docs/headless-cms/shared-views
 product: Contentstack
 doc_type: how-to
 audience:

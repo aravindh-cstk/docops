@@ -1,7 +1,7 @@
 ---
 title: "[Field Visibility Rules] - About Field Visibility Rules"
 description: About Field Visibility Rules
-url: https://www.contentstack.com/docs/developers/create-content-types/about-field-visibility-rules
+url: https://www.contentstack.com/docs/headless-cms/about-field-visibility-rules
 product: Contentstack
 doc_type: concept
 audience:

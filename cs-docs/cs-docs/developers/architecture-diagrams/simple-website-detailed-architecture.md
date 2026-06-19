@@ -1,7 +1,7 @@
 ---
 title: "[Architecture Diagrams] - Simple Website"
 description: Detailed architecture diagram and explanation for a simple website using Contentstack with SaaS integrations, IaaS infrastructure, and a CDN layer.
-url: https://www.contentstack.com/docs/developers/architecture-diagrams/simple-website-detailed-architecture
+url: https://www.contentstack.com/docs/headless-cms/simple-website-detailed-architecture
 product: Contentstack
 doc_type: architecture-diagram
 audience:

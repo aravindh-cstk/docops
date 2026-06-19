@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Use Saved Searches"
 description: "[Search Content] - Use Saved Searches"
-url: https://www.contentstack.com/docs/content-managers/search-content/use-saved-searches
+url: https://www.contentstack.com/docs/headless-cms/use-saved-searches
 product: Content Managers
 doc_type: guide
 audience:

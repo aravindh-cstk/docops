@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - Cache Invalidation for the Website Using Automate"
 description: Invalidate cached content when an entry is published or unpublished to reflect the updated data on the client side and always return the updated content.
-url: https://www.contentstack.com/docs/developers/solution-guides/cache-invalidation-for-the-website-using-automate
+url: https://www.contentstack.com/docs/headless-cms/cache-invalidation-for-the-website-using-automate
 product: Contentstack
 doc_type: solution-guide
 audience:

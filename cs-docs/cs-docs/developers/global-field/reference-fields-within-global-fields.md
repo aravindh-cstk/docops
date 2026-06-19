@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Reference Fields within Global Fields"
 description: Reference Fields within Global Fields
-url: https://www.contentstack.com/docs/developers/global-field/reference-fields-within-global-fields
+url: https://www.contentstack.com/docs/headless-cms/reference-fields-within-global-fields
 product: Contentstack
 doc_type: reference
 audience:

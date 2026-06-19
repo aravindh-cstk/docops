@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Edge URL Redirects"
 description: Manage high-performance, edge-based URL redirects in Contentstack Launch using launch.json.
-url: https://www.contentstack.com/docs/developers/launch/edge-url-redirects
+url: https://www.contentstack.com/docs/launch/edge-url-redirects
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -125,13 +125,13 @@ In the above example, the requests to the path `/blog/post` from the root of you
 With this configuration, requests like `/blogs/insights?postId=321` redirects to `/blogs/insights/321`. The query parameter `postId` is captured with the given regular expression and used as a path parameter in the destination URL. We also see here the usage of the negative lookahead regular expression, which allows you to exclude categories such as "product-updates" and "announcements" from being matched.
 
 ### Deploy your Project in Launch
-Deploy your project in Launch by [importing the source code from GitHub](/docs/developers/launch/import-project-using-github/) or by [uploading the source code folder](/docs/developers/launch/import-project-using-file-upload/).
+Deploy your project in Launch by [importing the source code from GitHub](/docs/launch/import-project-using-github/) or by [uploading the source code folder](/docs/launch/import-project-using-file-upload/).
 
 After successful deployment, the `Logs` section displays the count of redirects as follows:
 
 ## Limitations
 - Adding a `launch.json` file to an app within a monorepo is currently not supported.
-- Launch does not support complete URLs in the source. However, you can use [Launch Edge Functions](/docs/developers/launch/edge-functions) to redirect traffic based on the hostname when multiple domains point to the same environment.
+- Launch does not support complete URLs in the source. However, you can use [Launch Edge Functions](/docs/launch/edge-functions) to redirect traffic based on the hostname when multiple domains point to the same environment.
 
 ## Common questions
 
@@ -145,4 +145,4 @@ For permanent redirection: `301` or `308`. For temporary redirection: `302` or `
 The source and destination URLs must not exceed **512** characters each, and the **file size** must be limited to **5MB**.
 
 ### Can I redirect based on hostname or use complete URLs in the source?
-Launch does not support complete URLs in the source. However, you can use [Launch Edge Functions](/docs/developers/launch/edge-functions) to redirect traffic based on the hostname when multiple domains point to the same environment.
+Launch does not support complete URLs in the source. However, you can use [Launch Edge Functions](/docs/launch/edge-functions) to redirect traffic based on the hostname when multiple domains point to the same environment.

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Constructor App Installation Guide"
 description: Constructor App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/constructor-io
+url: https://www.contentstack.com/docs/marketplace/constructor-io
 product: Contentstack Marketplace
 doc_type: marketplace-app-guide
 audience:

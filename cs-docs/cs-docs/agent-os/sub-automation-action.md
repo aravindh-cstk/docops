@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Sub Automation Action"
 description: Documentation for configuring and using the Sub Automation action connector in Automation Hub connectors.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/sub-automation-action
+url: https://www.contentstack.com/docs/agent-os/sub-automation-action
 product: Contentstack
 doc_type: connector-guide
 audience:

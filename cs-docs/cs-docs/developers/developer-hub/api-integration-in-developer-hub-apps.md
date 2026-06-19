@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - API Integration in Developer Hub Apps"
 description: Use the Contentstack App SDK .api() method to make internal Contentstack API calls and external third-party API calls from Developer Hub apps, with authentication and routing handled via App Permissions and Advanced Settings.
-url: https://www.contentstack.com/docs/developers/developer-hub/api-integration-in-developer-hub-apps
+url: https://www.contentstack.com/docs/developer-hub/api-integration-in-developer-hub-apps
 product: Contentstack
 doc_type: guide
 audience:
@@ -26,9 +26,9 @@ The Contentstack App SDK `.api()` method offers a unified approach for making in
 ## Prerequisites
 
 Before making API calls, ensure the following:
-- A [Developer Hub](/docs/developers/developer-hub) App already created
-- **For internal calls**, App Permissions properly configured in the [app manifest](/docs/developers/developer-hub/app-manifest/)
-- **For external calls**, [Advanced Settings](/docs/developers/developer-hub/introduction-to-advanced-settings) set up with Variables, Mappings, and Rewrites as needed
+- A [Developer Hub](/docs/developer-hub) App already created
+- **For internal calls**, App Permissions properly configured in the [app manifest](/docs/developer-hub/app-manifest/)
+- **For external calls**, [Advanced Settings](/docs/developer-hub/introduction-to-advanced-settings) set up with Variables, Mappings, and Rewrites as needed
 - The **App SDK **initialized in your application
 
 **Additional Resource: **Refer to the [App SDK](https://github.com/contentstack/app-sdk-docs/) documentation to learn more.
@@ -240,8 +240,8 @@ async function makeApiCallWithRetry(url, options, maxRetries = 3) {
 - Wrap API calls in **try-catch** blocks with detailed error logging for better traceability
 
 ### Getting Help
-- Refer to the [App Permissions](/docs/developers/developer-hub/build-an-app-using-app-permissions) documentation
-- Refer to the [Introduction to Advanced Settings](/docs/developers/developer-hub/introduction-to-advanced-settings) in Developer Hub
+- Refer to the [App Permissions](/docs/developer-hub/build-an-app-using-app-permissions) documentation
+- Refer to the [Introduction to Advanced Settings](/docs/developer-hub/introduction-to-advanced-settings) in Developer Hub
 - Contact the [support team](mailto:support@contentstack.com) with specific error messages and request details
 
 ## Common questions

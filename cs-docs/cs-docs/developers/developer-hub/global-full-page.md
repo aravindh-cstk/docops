@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Global Full Page Location"
 description: Documentation for the Global Full Page UI Location in Contentstack Developer Hub, including overview, use cases, and setup steps.
-url: https://www.contentstack.com/docs/developers/developer-hub/global-full-page
+url: https://www.contentstack.com/docs/developer-hub/global-full-page
 product: Contentstack
 doc_type: developer-hub-guide
 audience:
@@ -49,13 +49,13 @@ Here is how you can add the Global Full Page location to your app:
 - Click the **Developer Hub** icon in the left navigation panel.
 - Select an application for which you want to add the Global Full Page location.
 - Click the **UI Locations** tab. To set the App URL, click the **View Hosting** link. You will be redirected to the **Hosting **tab.
-- In the **Hosting **tab, you can select [Hosting with Launch](/docs/developers/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developers/developer-hub/app-hosting#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.
+- In the **Hosting **tab, you can select [Hosting with Launch](/docs/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developer-hub/app-hosting#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.
 - Navigate to the **UI Locations **tab to configure the Global Full Page UI location.
 - Click the three vertical dots and then, click **+ Add UI Location.******
 - On the resulting **Configuration **page, set up the configurations for Global Full Page location by providing details such as **Name**, **Path**, **Location Icon**, and **Description**. You can also enable the location by default using the **Enabled **toggle button.Properties that can be specified for this UI location:
 
 **Name (optional)**: Specifies the name of the UI location. This name will be displayed at the location after the app is installed. If not provided, the app name will be used. Ensure unique names for multiple configurations of the same location.
-- **Signed (optional)**: When enabled, Contentstack adds a JWT token to the initial HTTP request made for your app's first page. This token can be used to verify that the request originated from Contentstack. For more information, please refer to [Signed Locations](/docs/developers/developer-hub/securing-your-app#securing-ui-locations).
+- **Signed (optional)**: When enabled, Contentstack adds a JWT token to the initial HTTP request made for your app's first page. This token can be used to verify that the request originated from Contentstack. For more information, please refer to [Signed Locations](/docs/developer-hub/securing-your-app#securing-ui-locations).
 - **Path (optional)**: Enables you to define the location relative to the base URL where the app is hosted. This is particularly useful when the developer intends the app to appear in multiple locations.
 - **Enabled (optional)**: Determines whether the location is visible after the app installation. If not specified, the location is enabled by default. Users can manage this option post-installation via the UI Locations tab on the app’s configuration screen.
 
@@ -63,13 +63,13 @@ You can mark any UI location as **mandatory **using the **Required **toggle. If 
 
 **Note:** The location icon file size must be less than **1 MB **and must be in **.svg** format.
 
-**Additional Resource:** Refer to the [Marketplace App Manifest](/docs/developers/developer-hub/app-manifest) documentation for comprehensive details.
+**Additional Resource:** Refer to the [Marketplace App Manifest](/docs/developer-hub/app-manifest) documentation for comprehensive details.
 - Finally, click the **Save** button to save the Global Full Page location’s configuration details.You will see the details of the configured UI location on the **UI Locations **tab in the **App Configuration **screen after installing the app and will have the option to enable or disable the non-required UI locations.
 
 Navigate to the stack. In the left navigation, you will see the installed app in the Full Page UI location.
 
 ### Customize and Deploy
-Refer to the [Marketplace App Boilerplate](/docs/developers/developer-hub/marketplace-app-boilerplate) to learn more.
+Refer to the [Marketplace App Boilerplate](/docs/developer-hub/marketplace-app-boilerplate) to learn more.
 
 ## Common questions
 

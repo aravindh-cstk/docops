@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Boolean"
 description: Documentation for the Boolean input field, its properties, and real-world scenarios in Contentstack content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/boolean
+url: https://www.contentstack.com/docs/headless-cms/boolean
 product: Contentstack
 doc_type: reference
 audience:

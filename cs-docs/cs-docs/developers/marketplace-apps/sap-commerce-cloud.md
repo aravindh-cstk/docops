@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - SAP Commerce Cloud App Installation Guide"
 description: SAP Commerce Cloud App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/sap-commerce-cloud
+url: https://www.contentstack.com/docs/marketplace/sap-commerce-cloud
 product: Contentstack Marketplace
 doc_type: marketplace-app-guide
 audience:

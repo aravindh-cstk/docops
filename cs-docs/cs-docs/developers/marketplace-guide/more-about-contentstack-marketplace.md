@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - More about Contentstack Marketplace"
 description: More about Contentstack Marketplace
-url: https://www.contentstack.com/docs/developers/marketplace-guide/more-about-contentstack-marketplace
+url: https://www.contentstack.com/docs/marketplace-guide/more-about-contentstack-marketplace
 product: Contentstack
 doc_type: marketplace-guide
 audience:

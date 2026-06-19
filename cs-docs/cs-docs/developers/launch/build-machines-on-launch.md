@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Build Machines on Launch"
 description: Build Machines determine the compute resources (CPU, memory, and disk) allocated to your project during the build process on Launch.
-url: https://www.contentstack.com/docs/developers/launch/build-machines-on-launch
+url: https://www.contentstack.com/docs/launch/build-machines-on-launch
 product: Contentstack Launch
 doc_type: developer-guide
 audience:

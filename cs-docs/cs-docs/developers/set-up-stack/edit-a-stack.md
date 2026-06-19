@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Stack] - Edit a Stack"
 description: Edit a stack’s details in Contentstack to keep your workspace organized and aligned with your project’s needs.
-url: https://www.contentstack.com/docs/developers/set-up-stack/edit-a-stack
+url: https://www.contentstack.com/docs/headless-cms/edit-a-stack
 product: Contentstack
 doc_type: how-to
 audience:

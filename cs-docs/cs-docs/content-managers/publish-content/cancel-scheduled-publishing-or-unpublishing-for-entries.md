@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - Cancel Scheduled Publishing/Unpublishing for Entries"
 description: Cancel scheduled publish or unpublish actions for entries from the Publish Queue, Entry Editor, or via the Content Management API.
-url: https://www.contentstack.com/docs/content-managers/publish-content/cancel-scheduled-publishing-or-unpublishing-for-entries
+url: https://www.contentstack.com/docs/headless-cms/cancel-scheduled-publishing-or-unpublishing-for-entries
 product: Contentstack
 doc_type: how-to
 audience:

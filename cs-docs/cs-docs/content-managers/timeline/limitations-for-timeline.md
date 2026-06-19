@@ -1,7 +1,7 @@
 ---
 title: "[Timeline] - Limitations for Timeline"
 description: Limitations and compatibility requirements for the Timeline feature.
-url: https://www.contentstack.com/docs/content-managers/timeline/limitations-for-timeline
+url: https://www.contentstack.com/docs/headless-cms/limitations-for-timeline
 product: Contentstack
 doc_type: feature-limitations
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Wordbee App Installation Guide"
 description: Wordbee App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/wordbee
+url: https://www.contentstack.com/docs/marketplace/wordbee
 product: Contentstack
 doc_type: marketplace-app-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Webhook Configuration"
 description: Configure the maximum connections per second for all webhooks in your organization.
-url: https://www.contentstack.com/docs/developers/organization/webhook-configuration
+url: https://www.contentstack.com/docs/administration/webhook-configuration
 product: Contentstack
 doc_type: configuration-guide
 audience:

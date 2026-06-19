@@ -1,7 +1,7 @@
 ---
 title: "[Get Started with CS] - Enhance Content Creation and Management"
 description: Enhance Content Creation and Management
-url: https://www.contentstack.com/docs/get-started/enhance-content-creation-and-management
+url: https://www.contentstack.com/docs/headless-cms/enhance-content-creation-and-management
 product: Contentstack
 doc_type: get-started
 audience:

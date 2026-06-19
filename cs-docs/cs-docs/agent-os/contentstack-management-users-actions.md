@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Contentstack Management - Users Actions"
 description: Contentstack Management - Users Actions in Automation Hub connectors, including the Get User Information action.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-management-users-actions
+url: https://www.contentstack.com/docs/agent-os/contentstack-management-users-actions
 product: Contentstack
 doc_type: automation-hub-connector
 audience:

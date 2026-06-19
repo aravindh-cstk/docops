@@ -1,7 +1,7 @@
 ---
 title: [Set Up Your Project] - Add Entry/Asset to a Release
 description: Add entries and assets to a release in Contentstack, streamlining your content release workflow.
-url: https://www.contentstack.com/docs/developers/create-releases/add-entry-asset-to-a-release
+url: https://www.contentstack.com/docs/headless-cms/add-entry-asset-to-a-release
 product: Contentstack
 doc_type: documentation
 audience:

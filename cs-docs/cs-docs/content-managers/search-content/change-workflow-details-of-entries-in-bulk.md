@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Change Workflow Details of Entries in Bulk"
 description: Change the workflow details of multiple entries from search results in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/search-content/change-workflow-details-of-entries-in-bulk
+url: https://www.contentstack.com/docs/headless-cms/change-workflow-details-of-entries-in-bulk
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Introduction to Contentstack - a Headless CMS] - Why Should You Choose Contentstack?"
 description: Overview of headless CMS concepts, differences between traditional/decoupled/headless CMS, and why to choose Contentstack.
-url: https://www.contentstack.com/docs/overview/why-should-you-choose-contentstack
+url: https://www.contentstack.com/docs/headless-cms/why-should-you-choose-contentstack
 product: Contentstack
 doc_type: overview
 audience:

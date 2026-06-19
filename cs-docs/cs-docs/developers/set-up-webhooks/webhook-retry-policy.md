@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Webhook Retry Policy"
 description: Contentstack webhook exponential retry policy behavior, timeouts, and resend intervals.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-retry-policy
+url: https://www.contentstack.com/docs/headless-cms/webhook-retry-policy
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Workflow Board App Installation Guide"
 description: Workflow Board App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/workflow-board
+url: https://www.contentstack.com/docs/marketplace/workflow-board
 product: Contentstack
 doc_type: marketplace-guide
 audience:

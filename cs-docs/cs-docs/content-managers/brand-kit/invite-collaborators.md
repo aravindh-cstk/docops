@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Invite Collaborators"
 description: How to invite and manage collaborators for a Brand Kit in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/invite-collaborators
+url: https://www.contentstack.com/docs/brand-kit/invite-collaborators
 product: Contentstack
 doc_type: how-to
 audience:

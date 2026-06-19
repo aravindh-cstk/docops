@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Ace Editor App Installation Guide"
 description: Ace Editor App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/ace-editor
+url: https://www.contentstack.com/docs/marketplace/ace-editor
 product: Contentstack
 doc_type: marketplace-guide
 audience:

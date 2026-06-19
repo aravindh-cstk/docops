@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Permanent Asset URL Limitations"
 description: Permanent Asset URL Limitations for Author Content assets, including slug length and update constraints.
-url: https://www.contentstack.com/docs/content-managers/author-content/permanent-asset-url-limitations
+url: https://www.contentstack.com/docs/headless-cms/permanent-asset-url-limitations
 product: Author Content
 doc_type: reference
 audience:

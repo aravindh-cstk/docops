@@ -1,7 +1,7 @@
 ---
 title: "[Preview Sharing] - Share a Preview"
 description: Share a Preview using Contentstack Visual Editor to preview content across devices and collaborate before publishing.
-url: https://www.contentstack.com/docs/content-managers/preview-sharing/share-a-preview
+url: https://www.contentstack.com/docs/headless-cms/share-a-preview
 product: Contentstack
 doc_type: feature-guide
 audience:

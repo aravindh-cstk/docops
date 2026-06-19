@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Trados App Installation Guide"
 description: Trados App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/trados
+url: https://www.contentstack.com/docs/marketplace/trados
 product: Contentstack
 doc_type: marketplace-app-guide
 audience:

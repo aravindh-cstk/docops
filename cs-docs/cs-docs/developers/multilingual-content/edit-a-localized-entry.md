@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Edit a Localized Entry"
 description: Instructions for localizing and editing an entry in a selected language.
-url: https://www.contentstack.com/docs/developers/multilingual-content/edit-a-localized-entry
+url: https://www.contentstack.com/docs/headless-cms/edit-a-localized-entry
 product: Documentation
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Import a Taxonomy"
 description: Import a taxonomy from a CSV or JSON file into your stack.
-url: https://www.contentstack.com/docs/developers/taxonomy/import-a-taxonomy
+url: https://www.contentstack.com/docs/headless-cms/import-a-taxonomy
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Restore a Deleted Entry"
 description: Restore a Deleted Entry and filter deleted entries in Trash.
-url: https://www.contentstack.com/docs/developers/manage-trash/restore-a-deleted-entry
+url: https://www.contentstack.com/docs/headless-cms/restore-a-deleted-entry
 product: Contentstack
 doc_type: how-to
 audience:

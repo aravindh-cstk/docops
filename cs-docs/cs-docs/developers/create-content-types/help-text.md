@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Help Text"
 description: Help Text property for fields in content types and how it appears on entries.
-url: https://www.contentstack.com/docs/developers/create-content-types/help-text
+url: https://www.contentstack.com/docs/headless-cms/help-text
 product: Documentation
 doc_type: help-text
 audience:

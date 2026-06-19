@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Azure DevOps
 description: Azure DevOps connector setup for automating CI/CD workflow by running a pipeline.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/azure-devops
+url: https://www.contentstack.com/docs/agent-os/azure-devops
 product: Automation Hub
 doc_type: connector-guide
 audience:

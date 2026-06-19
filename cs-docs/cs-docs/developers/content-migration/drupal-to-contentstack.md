@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - Drupal to Contentstack"
 description: Export content from Drupal and import it into Contentstack using the Drupal SQL to Contentstack exporter utility.
-url: https://www.contentstack.com/docs/developers/content-migration/drupal-to-contentstack
+url: https://www.contentstack.com/docs/headless-cms/drupal-to-contentstack
 product: Contentstack
 doc_type: migration-guide
 audience:

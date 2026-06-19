@@ -1,7 +1,7 @@
 ---
 title: "[Preview Sharing] - Resolve a Review Comment"
 description: Resolve a review comment in a shared preview to keep discussions organized and prevent clutter.
-url: https://www.contentstack.com/docs/content-managers/preview-sharing/resolve-a-review-comment
+url: https://www.contentstack.com/docs/headless-cms/resolve-a-review-comment
 product: Preview Sharing
 doc_type: how-to
 audience:

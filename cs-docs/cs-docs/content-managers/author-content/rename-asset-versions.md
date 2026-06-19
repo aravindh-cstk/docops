@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Rename Asset Versions"
 description: Rename an existing version of an asset in Contentstack to assign meaningful labels and streamline content management.
-url: https://www.contentstack.com/docs/content-managers/author-content/rename-asset-versions
+url: https://www.contentstack.com/docs/headless-cms/rename-asset-versions
 product: Contentstack
 doc_type: how-to
 audience:

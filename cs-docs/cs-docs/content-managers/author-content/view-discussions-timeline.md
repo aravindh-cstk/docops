@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - View Discussions Timeline"
 description: View and manage all discussions related to an entry’s fields using the Timeline section in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/view-discussions-timeline
+url: https://www.contentstack.com/docs/headless-cms/view-discussions-timeline
 product: Contentstack
 doc_type: guide
 audience:

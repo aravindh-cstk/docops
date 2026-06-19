@@ -1,7 +1,7 @@
 ---
 title: "[Set up Live Preview] - Migrate to Preview Service"
 description: Migrate Live Preview from the Content Management API (CMA) to the Preview Service by updating base URLs and authentication tokens (and headers for direct API calls).
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/migrate-to-preview-service
+url: https://www.contentstack.com/docs/headless-cms/migrate-to-preview-service
 product: Contentstack
 doc_type: guide
 audience:

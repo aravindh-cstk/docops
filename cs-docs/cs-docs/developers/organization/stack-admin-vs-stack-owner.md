@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Stack Admin vs Stack Owner"
 description: Differences in rights between Stack Admin and Stack Owner roles for a stack.
-url: https://www.contentstack.com/docs/developers/organization/stack-admin-vs-stack-owner
+url: https://www.contentstack.com/docs/administration/stack-admin-vs-stack-owner
 product: Organization
 doc_type: role-comparison
 audience:

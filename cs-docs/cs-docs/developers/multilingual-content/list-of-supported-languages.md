@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - List of Supported Languages"
 description: List of supported languages and language codes for localizing entries in Contentstack.
-url: https://www.contentstack.com/docs/developers/multilingual-content/list-of-supported-languages
+url: https://www.contentstack.com/docs/headless-cms/list-of-supported-languages
 product: Contentstack
 doc_type: reference
 audience:

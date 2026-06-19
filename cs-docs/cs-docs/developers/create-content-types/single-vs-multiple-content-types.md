@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Single vs Multiple Content Types"
 description: Guidance on choosing Single vs Multiple when creating content types (Webpage or Content Block).
-url: https://www.contentstack.com/docs/developers/create-content-types/single-vs-multiple-content-types
+url: https://www.contentstack.com/docs/headless-cms/single-vs-multiple-content-types
 product: Documentation
 doc_type: guide
 audience:

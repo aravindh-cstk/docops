@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Asset Limitations"
 description: Asset limitations for filenames/URLs, file sizes, batch uploads, stack storage, and image optimization constraints.
-url: https://www.contentstack.com/docs/content-managers/author-content/asset-limitations
+url: https://www.contentstack.com/docs/headless-cms/asset-limitations
 product: Contentstack
 doc_type: reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Supported Operators for Various Data Types"
 description: Supported operators for querying fields across various data types in Advanced Search in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/search-content/supported-operators-for-various-data-types
+url: https://www.contentstack.com/docs/headless-cms/supported-operators-for-various-data-types
 product: Contentstack
 doc_type: reference
 audience:

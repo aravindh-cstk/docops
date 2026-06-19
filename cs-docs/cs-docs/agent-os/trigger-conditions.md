@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Trigger Conditions"
 description: Trigger Conditions operators for configuring automation triggers in Automation Hub.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/trigger-conditions
+url: https://www.contentstack.com/docs/agent-os/trigger-conditions
 product: Automation Hub
 doc_type: guide
 audience:

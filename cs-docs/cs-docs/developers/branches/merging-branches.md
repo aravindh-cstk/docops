@@ -1,7 +1,7 @@
 ---
 title: Merging Branches
 description: The Branch Merging feature enables you to merge changes between two branches using a variety of available merge strategies.
-url: https://www.contentstack.com/docs/developers/branches/merging-branches
+url: https://www.contentstack.com/docs/headless-cms/merging-branches
 product: Contentstack
 doc_type: guide
 audience:

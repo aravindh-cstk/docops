@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Two-factor Authentication"
 description: Enable, reset, and disable two-factor authentication (2FA) for Contentstack accounts using Authy or SMS.
-url: https://www.contentstack.com/docs/developers/security/two-factor-authentication
+url: https://www.contentstack.com/docs/administration/two-factor-authentication
 product: Contentstack
 doc_type: security-guide
 audience:

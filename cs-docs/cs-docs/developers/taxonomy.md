@@ -1,7 +1,7 @@
 ---
 title: "[Second level navigation] - Taxonomy"
 description: Taxonomy, offers versatile options for classifying, organizing, and managing content according to your unique requirements.
-url: https://www.contentstack.com/docs/developers/taxonomy
+url: https://www.contentstack.com/docs/headless-cms/taxonomy
 product: Documentation
 doc_type: navigation-page
 audience:

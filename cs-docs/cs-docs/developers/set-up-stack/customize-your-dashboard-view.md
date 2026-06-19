@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Customize Your Dashboard View"
 description: Customize your Contentstack stack dashboard view by adding, removing, and sorting dashboard extensions.
-url: https://www.contentstack.com/docs/developers/set-up-stack/customize-your-dashboard-view
+url: https://www.contentstack.com/docs/headless-cms/customize-your-dashboard-view
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Limitations of Aliases"
 description: Limitations and rules for using aliases in branches.
-url: https://www.contentstack.com/docs/developers/branches/limitations-of-aliases
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-aliases
 product: Set Up Your Project
 doc_type: reference
 audience:

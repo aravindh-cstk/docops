@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Stack] - Leave a Stack"
 description: Instructions for leaving a Contentstack stack, including restrictions for stack owners.
-url: https://www.contentstack.com/docs/developers/set-up-stack/leave-a-stack
+url: https://www.contentstack.com/docs/headless-cms/leave-a-stack
 product: Contentstack
 doc_type: how-to
 audience:

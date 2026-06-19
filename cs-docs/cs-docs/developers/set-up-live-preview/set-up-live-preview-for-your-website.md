@@ -1,7 +1,7 @@
 ---
 title: Set Up Live Preview for your Website
 description: Set up Live Preview for your Website
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website
+url: https://www.contentstack.com/docs/headless-cms/set-up-live-preview-for-your-website
 product: Contentstack
 doc_type: developer-guide
 audience:

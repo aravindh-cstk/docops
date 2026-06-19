@@ -1,7 +1,7 @@
 ---
 title: "[Extensions] - Modal Support for Apps/Extensions"
 description: Modal Support for Apps/Extensions
-url: https://www.contentstack.com/docs/developers/modal-support-for-apps-and-extensions
+url: https://www.contentstack.com/docs/headless-cms/modal-support-for-apps-and-extensions
 product: Contentstack
 doc_type: developer-guide
 audience:

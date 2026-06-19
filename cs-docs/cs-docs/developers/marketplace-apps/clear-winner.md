@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Clearwinner App Installation Guide"
 uid: blt1fbbc771ed93d608
-url: /developers/marketplace-apps/clear-winner
+url: /marketplace/clear-winner
 contentstack:
   environment: production
   assets: []

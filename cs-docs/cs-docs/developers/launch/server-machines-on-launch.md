@@ -1,7 +1,7 @@
 ---
 title: [Contentstack Launch] - Server Machines on Launch
 description: Learn how server machines manage CPU and memory for your functions on Contentstack Launch. Explore machine tiers L1, L2, and L3 for optimal performance.
-url: https://www.contentstack.com/docs/developers/launch/server-machines-on-launch
+url: https://www.contentstack.com/docs/launch/server-machines-on-launch
 product: Contentstack
 doc_type: documentation
 audience:

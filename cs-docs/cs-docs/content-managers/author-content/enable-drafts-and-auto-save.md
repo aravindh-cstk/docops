@@ -1,7 +1,7 @@
 ---
 title: "[Drafts and Auto Save] - Enable or Disable Drafts and Auto Save"
 description: Enable or disable Drafts and Auto Save for entries in a Contentstack stack.
-url: https://www.contentstack.com/docs/content-managers/author-content/enable-drafts-and-auto-save
+url: https://www.contentstack.com/docs/headless-cms/enable-drafts-and-auto-save
 product: Contentstack
 doc_type: how-to
 audience:

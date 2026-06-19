@@ -1,7 +1,7 @@
 ---
 title: Contentstack Command-line Interface (CLI) - Entry Migration
 description: Use the Entry Migration utility in the Contentstack CLI to merge entries along with content types during Branches merge operations.
-url: https://www.contentstack.com/docs/developers/cli/entry-migration
+url: https://www.contentstack.com/docs/headless-cms/entry-migration
 product: Contentstack
 doc_type: cli-guide
 audience:

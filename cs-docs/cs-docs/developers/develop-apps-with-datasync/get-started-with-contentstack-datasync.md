@@ -1,7 +1,7 @@
 ---
 title: "[Synchronize Data With Datasync] - Get started with Contentstack DataSync"
 description: Get started with Contentstack DataSync on localhost using the datasync boilerplate, configure API keys/tokens, run sync, set up ngrok, and create webhooks.
-url: https://www.contentstack.com/docs/developers/develop-apps-with-datasync/get-started-with-contentstack-datasync
+url: https://www.contentstack.com/docs/headless-cms/get-started-with-contentstack-datasync
 product: Contentstack DataSync
 doc_type: getting-started
 audience:

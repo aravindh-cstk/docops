@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - About SCIM Group Mapping"
 description: About SCIM Group Mapping in Contentstack Security Management.
-url: https://www.contentstack.com/docs/developers/scim/about-scim-group-mapping
+url: https://www.contentstack.com/docs/administration/about-scim-group-mapping
 product: Contentstack
 doc_type: concept
 audience:

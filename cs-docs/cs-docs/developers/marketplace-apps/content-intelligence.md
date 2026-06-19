@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Content Intelligence App Installation Guide"
 description: Content Intelligence App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/content-intelligence
+url: https://www.contentstack.com/docs/marketplace/content-intelligence
 product: Contentstack
 doc_type: marketplace-guide
 audience:

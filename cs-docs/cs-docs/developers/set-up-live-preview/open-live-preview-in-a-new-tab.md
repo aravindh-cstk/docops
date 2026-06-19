@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Live Preview] - Open Live Preview in a New Tab"
 description: Documentation for configuring Contentstack Live Preview to open outside the iFrame in a standalone browser tab, including SDK version behavior and setup steps.
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/open-live-preview-in-a-new-tab
+url: https://www.contentstack.com/docs/headless-cms/open-live-preview-in-a-new-tab
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: [Automations guides and connectors] - AWS Bedrock
 description: Use this connector to generate content using the different Foundation model.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/aws-bedrock
+url: https://www.contentstack.com/docs/agent-os/aws-bedrock
 product: Automations
 doc_type: documentation
 audience:

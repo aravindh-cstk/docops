@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Calendar App Installation Guide"
 description: Calendar App Installation Guide for installing and using the Calendar app from the Contentstack Marketplace.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/calendar
+url: https://www.contentstack.com/docs/marketplace/calendar
 product: Contentstack
 doc_type: marketplace-guide
 audience:

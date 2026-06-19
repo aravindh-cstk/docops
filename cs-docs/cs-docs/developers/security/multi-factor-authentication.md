@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Multi-Factor Authentication"
 description: Multi-Factor Authentication (MFA) setup and reset steps for Contentstack accounts, including backup codes and support guidance.
-url: https://www.contentstack.com/docs/developers/security/multi-factor-authentication
+url: https://www.contentstack.com/docs/administration/multi-factor-authentication
 product: Contentstack
 doc_type: security-guide
 audience:

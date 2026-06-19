@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Labels"
 description: About Labels
-url: https://www.contentstack.com/docs/developers/create-content-types/about-labels
+url: https://www.contentstack.com/docs/headless-cms/about-labels
 product: Set Up Your Project
 doc_type: concept
 audience:

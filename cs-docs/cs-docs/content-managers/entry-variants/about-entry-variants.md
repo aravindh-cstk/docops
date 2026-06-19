@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - About Entry Variants"
 description: Overview of Entry Variants in Contentstack, including key concepts, benefits, and related API references.
-url: https://www.contentstack.com/docs/content-managers/entry-variants/about-entry-variants
+url: https://www.contentstack.com/docs/headless-cms/about-entry-variants
 product: Contentstack
 doc_type: concept-guide
 audience:

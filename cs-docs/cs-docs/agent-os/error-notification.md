@@ -2,7 +2,7 @@
 title: [Automations guides and connectors] - Error Notification
 description: Learn how to configure Agent OS error notifications for alerts on failed automations via execution logs and email.
 
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/error-notification
+url: https://www.contentstack.com/docs/agent-os/error-notification
 product: Automations
 doc_type: documentation
 audience:

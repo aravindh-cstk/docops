@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Get Started with Brand Kit"
 description: Step-by-step guide to create a Brand Kit and Voice Profile in Contentstack and use them in the AI Assistant app.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/get-started-with-brand-kit
+url: https://www.contentstack.com/docs/brand-kit/get-started-with-brand-kit
 product: Contentstack
 doc_type: guide
 audience:
@@ -85,7 +85,7 @@ To use Brand Kit within the AI Assistant app within an entry of your stack, foll
 - After adding the content, **Save** and **Publish** your entry.
 
 **Additional Resource**:
-- For details on the Brand Kit, refer to the [Brand Kit](/docs/content-managers/brand-kit/about-brand-kit), [Voice Profile](/docs/content-managers/brand-kit/about-voice-profile), and [Knowledge Vault](/docs/content-managers/brand-kit/about-knowledge-vault) documentation.
+- For details on the Brand Kit, refer to the [Brand Kit](/docs/brand-kit/about-brand-kit), [Voice Profile](/docs/brand-kit/about-voice-profile), and [Knowledge Vault](/docs/brand-kit/about-knowledge-vault) documentation.
 - For AI Assistant app related information, refer to the [AI Assistant with Brand Kit](/docs/developers/marketplace-apps/ai-assistant-with-brand-kit) documentation.
 - For more queries, refer to the [Brand Kit FAQs](/docs/faqs#brand-kit-faqs) documentation.
 

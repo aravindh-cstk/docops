@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Variables Plugin Usage Guide"
 description: Variables Plugin Usage Guide for inserting and configuring varying values in the JSON Rich Text Editor using referred content types.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/variables-plugin-usage-guide
+url: https://www.contentstack.com/docs/marketplace/variables-plugin-usage-guide
 product: Contentstack
 doc_type: marketplace-guide
 audience:

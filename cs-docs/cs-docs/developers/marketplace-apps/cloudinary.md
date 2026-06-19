@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Cloudinary App Installation Guide"
 description: Cloudinary App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/cloudinary
+url: https://www.contentstack.com/docs/marketplace/cloudinary
 product: Contentstack
 doc_type: marketplace-guide
 audience:

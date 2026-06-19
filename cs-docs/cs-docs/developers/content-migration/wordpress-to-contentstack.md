@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - Wordpress to Contentstack"
 description: Guide to migrating content from Wordpress to Contentstack using the Contentstack Migration Framework.
-url: https://www.contentstack.com/docs/developers/content-migration/wordpress-to-contentstack
+url: https://www.contentstack.com/docs/headless-cms/wordpress-to-contentstack
 product: Contentstack
 doc_type: guide
 audience:

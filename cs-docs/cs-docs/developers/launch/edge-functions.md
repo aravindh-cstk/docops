@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Edge Functions"
 description: Edge Functions in Contentstack Launch allow you to execute your code in proximity to your user’s location before a request is processed.
-url: https://www.contentstack.com/docs/developers/launch/edge-functions
+url: https://www.contentstack.com/docs/launch/edge-functions
 product: Contentstack Launch
 doc_type: developer-guide
 audience:
@@ -18,7 +18,7 @@ This page explains how to create and use Edge Functions in Contentstack Launch, 
 
 Edge Functions in Contentstack Launch allow you to execute your code in proximity to your user’s location before a request is processed. They enable you to modify requests or responses, make calls to domains other than the Launch origin server, and return responses from the edge without making any calls to the Launch origin server.
 
-**Note:** For [Edge URL Redirects](/docs/developers/launch/edge-url-redirects/), [Edge URL Rewrites](/docs/developers/launch/edge-url-rewrites/), and [Password Protection](/docs/developers/launch/password-protection/), consult their respective documentation. They provide a straightforward and declarative method to accomplish the same tasks.
+**Note:** For [Edge URL Redirects](/docs/launch/edge-url-redirects/), [Edge URL Rewrites](/docs/launch/edge-url-rewrites/), and [Password Protection](/docs/launch/password-protection/), consult their respective documentation. They provide a straightforward and declarative method to accomplish the same tasks.
 
 You must code your function in JavaScript in a file named `[proxy].edge.js` and save it in the `/functions` directory at the root of your project.
 
@@ -72,7 +72,7 @@ You can access the environment variables inside the Launch Edge Function.
 
 **Note**: Launch Edge Functions can have up to **64** environment variables, with the size of each environment variable not exceeding **5KB**.
 
-You can [add environment variables](/docs/developers/launch/environment-variables#add-environment-variables) by going to the corresponding environment’s Settings page on Launch.
+You can [add environment variables](/docs/launch/environment-variables#add-environment-variables) by going to the corresponding environment’s Settings page on Launch.
 
 **Example:**
 
@@ -186,16 +186,16 @@ export default async function handler(request) {
 The code given above redirects any incoming `POST` requests on `/appliances` to `/appliances/new`. All other requests will be forwarded to the origin.
 
 ## Precedence of launch.json and Password Protection over Launch Edge Functions
-- If you are using both `launch.json` and Launch Edge Functions in your project, then the [Edge URL Rewrites](/docs/developers/launch/edge-url-rewrites/) and [Edge URL Redirects](/docs/developers/launch/edge-url-redirects) using `launch.json` will take precedence over the Edge Function. This means if you define a redirect for a route in both `launch.json` and Edge Function, then the redirect from `launch.json` will always be executed first.
-- If you have enabled [password protection](/docs/developers/launch/password-protection/) for your website, then it will take precedence over the Edge Function.
+- If you are using both `launch.json` and Launch Edge Functions in your project, then the [Edge URL Rewrites](/docs/launch/edge-url-rewrites/) and [Edge URL Redirects](/docs/launch/edge-url-redirects) using `launch.json` will take precedence over the Edge Function. This means if you define a redirect for a route in both `launch.json` and Edge Function, then the redirect from `launch.json` will always be executed first.
+- If you have enabled [password protection](/docs/launch/password-protection/) for your website, then it will take precedence over the Edge Function.
 
-**Note:** When you forward or rewrite a request to the origin server from the [Launch Edge URL Rewrites](/docs/developers/launch/edge-url-rewrites) or the Launch Edge Function, the same request will not re-invoke the Launch Edge Function. Instead, it will be directly forwarded to the origin server through a cache layer.
+**Note:** When you forward or rewrite a request to the origin server from the [Launch Edge URL Rewrites](/docs/launch/edge-url-rewrites) or the Launch Edge Function, the same request will not re-invoke the Launch Edge Function. Instead, it will be directly forwarded to the origin server through a cache layer.
 
 ## Deploying a Project with Only Launch Edge Function
 Follow the steps given below to deploy a project that does not have a website but only Launch Edge Function:
 - Ensure that the root directory has a `/functions` folder.
 - Add a `[proxy].edge.js` file.
-- While setting up the project, by [Importing from a Git Repository](/docs/developers/launch/import-project-using-github/) or [Uploading a file](/docs/developers/launch/import-project-using-file-upload/), set the **Framework Preset** to `Other`.
+- While setting up the project, by [Importing from a Git Repository](/docs/launch/import-project-using-github/) or [Uploading a file](/docs/launch/import-project-using-file-upload/), set the **Framework Preset** to `Other`.
 - If the Edge Function has dependency packages, follow the steps below:Ensure that a `package.json` file is present at the root directory.
 - Set `Build Command` to `npm install` to install the dependency packages.
 
@@ -213,7 +213,7 @@ However, it does respect the response headers for [cache control](https://develo
 ### Server Logs
 The **Server Logs** section in Contentstack Launch provides real-time access to logs from the latest deployment of your Launch Edge Functions. This includes any `console.log` outputs and unhandled exceptions generated by your Edge Function code.
 
-**Note:** For both `Live` and `Archived` statuses, server logs are retained for **24** hours, with a maximum of **5000** most recent logs viewable. We recommend using [Log Targets](/docs/developers/launch/log-targets) to forward server logs to your logging platform in real-time for future reference.
+**Note:** For both `Live` and `Archived` statuses, server logs are retained for **24** hours, with a maximum of **5000** most recent logs viewable. We recommend using [Log Targets](/docs/launch/log-targets) to forward server logs to your logging platform in real-time for future reference.
 
 If you encounter `Internal server error CFL-0001` on your application URL, it likely indicates an unhandled exception in your Edge Function code. For debugging assistance, please refer to the **Server Logs** section:
 
@@ -254,7 +254,7 @@ In Device-Based Content Delivery, content is customized for each device type, en
 **Demo URL**: [https://edge-device-adaptation.contentstackapps.com/](https://edge-device-adaptation.contentstackapps.com/)
 
 ### Authenticate with Contentstack SSO
-Contentstack Launch already offers basic [password protection](/docs/developers/launch/password-protection/) for your website using HTTP basic authentication. You can take security a step further by leveraging Contentstack Edge Functions to set up authentication based on [Contentstack account](https://www.contentstack.com/login/) logins.
+Contentstack Launch already offers basic [password protection](/docs/launch/password-protection/) for your website using HTTP basic authentication. You can take security a step further by leveraging Contentstack Edge Functions to set up authentication based on [Contentstack account](https://www.contentstack.com/login/) logins.
 
 Please `checkout` the repository `README` to understand the JWT + OAuth flow and also for instructions on how to set it up yourself.
 

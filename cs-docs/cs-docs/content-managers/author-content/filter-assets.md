@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Filter Assets"
 description: Filter assets using predefined Popular Views, saved My Views, and asset search filters in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/filter-assets
+url: https://www.contentstack.com/docs/headless-cms/filter-assets
 product: Contentstack
 doc_type: guide
 audience:

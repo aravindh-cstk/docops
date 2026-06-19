@@ -1,7 +1,7 @@
 ---
 title: "[GraphQL API NEW] - Use GraphQL Queries with Apollo Client React Native SDK"
 description: Step-by-step guide to use Apollo Client and Contentstack GraphQL queries in React Native SDK apps.
-url: https://www.contentstack.com/docs/developers/graphql-api/use-the-graphql-queries-with-apollo-sdks/use-graphql-queries-with-apollo-client-react-native-sdk
+url: https://www.contentstack.com/docs/headless-cms/use-graphql-queries-with-apollo-client-react-native-sdk
 product: Contentstack
 doc_type: developer-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Get Started with CS] Set Up your Account"
 description: Account setup tasks for organization owners, including region selection, security, team invites, content migration, support, and community resources.
-url: https://www.contentstack.com/docs/get-started/set-up-your-account
+url: https://www.contentstack.com/docs/headless-cms/set-up-your-account
 product: Contentstack
 doc_type: get-started
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Use Workflows] - Mark a Task as Complete"
 description: How to mark a workflow task as complete in the Tasks section by completing the required action.
-url: https://www.contentstack.com/docs/content-managers/use-workflows/mark-a-task-as-complete
+url: https://www.contentstack.com/docs/headless-cms/mark-a-task-as-complete
 product: Workflows
 doc_type: how-to
 audience:

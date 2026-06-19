@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Restore Old Asset Version"
 description: Restore or rollback to an earlier saved version of an asset in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/author-content/restore-old-asset-version
+url: https://www.contentstack.com/docs/headless-cms/restore-old-asset-version
 product: Contentstack
 doc_type: how-to
 audience:

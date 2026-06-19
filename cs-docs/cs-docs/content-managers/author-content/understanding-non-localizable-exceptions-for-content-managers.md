@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Understanding Non-localizable Exceptions for Content Managers"
 description: Understanding how non-localizable fields behave in different scenarios and what exceptions to expect when managing localized content.
-url: https://www.contentstack.com/docs/content-managers/author-content/understanding-non-localizable-exceptions-for-content-managers
+url: https://www.contentstack.com/docs/headless-cms/understanding-non-localizable-exceptions-for-content-managers
 product: Contentstack
 doc_type: guide
 audience:

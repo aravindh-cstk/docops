@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Stack Dashboards"
 description: About Stack Dashboards in Contentstack, including dashboard purpose, customization via extensions, and access details.
-url: https://www.contentstack.com/docs/developers/set-up-stack/about-stack-dashboard
+url: https://www.contentstack.com/docs/headless-cms/about-stack-dashboard
 product: Contentstack
 doc_type: concept
 audience:

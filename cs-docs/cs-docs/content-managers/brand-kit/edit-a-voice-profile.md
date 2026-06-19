@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Edit a Voice Profile"
 description: Edit the specifications of your Voice Profile in Brand Kit, including name, description, communication style mixer, and custom details.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/edit-a-voice-profile
+url: https://www.contentstack.com/docs/brand-kit/edit-a-voice-profile
 product: Contentstack
 doc_type: guide
 audience:
@@ -23,13 +23,13 @@ You can edit the specifications of your Voice Profile, such as its name and desc
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
 - Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
-- Access to Brand Kit as an invited [Collaborator](/docs/content-managers/brand-kit/invite-collaborators)
+- Access to Brand Kit as an invited [Collaborator](/docs/brand-kit/invite-collaborators)
 
 **Note**: Only the respective Brand Kit Owners can edit the Voice Profiles inside it.
 
 ## Steps for Execution
 
-**Note**: For this guide, we have assumed that you have [created a Voice Profile](/docs/content-managers/brand-kit/create-a-voice-profile) inside your Brand Kit.
+**Note**: For this guide, we have assumed that you have [created a Voice Profile](/docs/brand-kit/create-a-voice-profile) inside your Brand Kit.
 
 To edit a Voice Profile, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - On the left navigation panel, click the **Brand Kit** icon.

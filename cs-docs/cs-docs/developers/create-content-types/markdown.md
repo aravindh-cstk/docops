@@ -1,7 +1,7 @@
 ---
 title: Set Up Your Project - Markdown
 description: Documentation for the Markdown field and supported formatting commands in the Markdown editor.
-url: https://www.contentstack.com/docs/developers/create-content-types/markdown
+url: https://www.contentstack.com/docs/headless-cms/markdown
 product: Contentstack
 doc_type: reference
 audience:

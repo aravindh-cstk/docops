@@ -1,7 +1,7 @@
 ---
 title: "[Create and Manage Releases NEW] - Delete a Release"
 description: Delete a Release in Contentstack and reference the API request for deleting a release.
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/delete-a-release
+url: https://www.contentstack.com/docs/headless-cms/delete-a-release
 product: Contentstack
 doc_type: how-to
 audience:

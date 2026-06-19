@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Limitations for Entries"
 description: Limitations and constraints for Author Content entries, including reference query limits, tags, and publishing restrictions for unsaved entries.
-url: https://www.contentstack.com/docs/content-managers/author-content/entries-limitations
+url: https://www.contentstack.com/docs/headless-cms/entries-limitations
 product: Author Content
 doc_type: reference
 audience:

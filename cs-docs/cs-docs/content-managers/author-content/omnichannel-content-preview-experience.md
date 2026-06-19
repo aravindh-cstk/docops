@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Omnichannel Content Preview Experience"
 description: Omnichannel Content Preview Experience
-url: https://www.contentstack.com/docs/content-managers/author-content/omnichannel-content-preview-experience
+url: https://www.contentstack.com/docs/headless-cms/omnichannel-content-preview-experience
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Preview Sharing] - Limitations for Preview Sharing"
 description: Limitations and constraints for using the Preview Sharing feature.
-url: https://www.contentstack.com/docs/content-managers/preview-sharing/limitations-for-preview-sharing
+url: https://www.contentstack.com/docs/headless-cms/limitations-for-preview-sharing
 product: Contentstack
 doc_type: guide
 audience:

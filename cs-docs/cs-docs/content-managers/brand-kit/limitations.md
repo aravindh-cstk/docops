@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Limitations"
 description: Limitations and rate limits for Brand Kit, including maximum counts and API request rate limits.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/limitations
+url: https://www.contentstack.com/docs/brand-kit/limitations
 product: Contentstack
 doc_type: reference
 audience:

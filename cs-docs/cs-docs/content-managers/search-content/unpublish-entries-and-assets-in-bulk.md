@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Unpublish Entries and Assets in Bulk"
 description: Unpublish entries and assets found in search results in bulk.
-url: https://www.contentstack.com/docs/content-managers/search-content/unpublish-entries-and-assets-in-bulk
+url: https://www.contentstack.com/docs/headless-cms/unpublish-entries-and-assets-in-bulk
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Get Started with Building Apps using Contentstack’s App SDK"
 description: Get started guide for developing an app using Contentstack’s App SDK, including prerequisites, boilerplate setup, library imports, styling, SDK initialization, and an example file.
-url: https://www.contentstack.com/docs/developers/developer-hub/get-started-with-building-apps-using-contentstack-app-sdk
+url: https://www.contentstack.com/docs/developer-hub/get-started-with-building-apps-using-contentstack-app-sdk
 product: Contentstack
 doc_type: guide
 audience:

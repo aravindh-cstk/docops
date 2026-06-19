@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Delete a Taxonomy"
 description: Documentation for deleting a taxonomy in Contentstack, including UI steps and API reference.
-url: https://www.contentstack.com/docs/developers/taxonomy/delete-a-taxonomy
+url: https://www.contentstack.com/docs/headless-cms/delete-a-taxonomy
 product: Contentstack
 doc_type: how-to
 audience:

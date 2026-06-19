@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Unpublish an Entry"
 description: Unpublishing an entry in Contentstack to remove it from environments/locales without deleting it.
-url: https://www.contentstack.com/docs/content-managers/author-content/unpublish-an-entry
+url: https://www.contentstack.com/docs/headless-cms/unpublish-an-entry
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Add Taxonomy to a Content Type"
 description: Add a taxonomy as a field to content types in Contentstack and configure taxonomy field properties.
-url: https://www.contentstack.com/docs/developers/taxonomy/add-taxonomy-to-a-content-type
+url: https://www.contentstack.com/docs/headless-cms/add-taxonomy-to-a-content-type
 product: Contentstack
 doc_type: how-to
 audience:

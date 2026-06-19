@@ -1,7 +1,7 @@
 ---
 title: [Timeline] - Preview Content Across a Timeline
 description: Learn to navigate the Timeline feature effortlessly. Visualize future updates, compare versions, and ensure seamless website transitions.
-url: https://www.contentstack.com/docs/content-managers/timeline/preview-content-across-a-timeline
+url: https://www.contentstack.com/docs/headless-cms/preview-content-across-a-timeline
 product: Contentstack
 doc_type: documentation
 audience:

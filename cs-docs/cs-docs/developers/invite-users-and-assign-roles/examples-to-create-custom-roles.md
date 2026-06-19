@@ -1,7 +1,7 @@
 ---
 title: "[Stack Roles] - Examples to Create Custom Roles"
 description: Examples to Create Custom Roles
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/examples-to-create-custom-roles
+url: https://www.contentstack.com/docs/headless-cms/examples-to-create-custom-roles
 product: Contentstack
 doc_type: guide
 audience:

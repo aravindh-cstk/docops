@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Create/Upload Assets"
 description: How to create and upload assets in Contentstack, including asset details and API reference.
-url: https://www.contentstack.com/docs/content-managers/author-content/create-upload-assets
+url: https://www.contentstack.com/docs/headless-cms/create-upload-assets
 product: Contentstack
 doc_type: guide
 audience:

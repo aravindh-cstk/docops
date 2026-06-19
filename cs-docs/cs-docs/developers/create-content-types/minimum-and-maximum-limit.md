@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Minimum and Maximum Limits"
 description: Minimum and Maximum Limits properties for fields marked as Multiple in Contentstack content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/minimum-and-maximum-limit
+url: https://www.contentstack.com/docs/headless-cms/minimum-and-maximum-limit
 product: Contentstack
 doc_type: concept-guide
 audience:

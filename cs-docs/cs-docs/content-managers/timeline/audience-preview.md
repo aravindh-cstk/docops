@@ -1,7 +1,7 @@
 ---
 title: "[Timeline] - Audience Preview"
 description: Audience Preview in Timeline lets you select different user segments or groups and preview how the content will appear for each audience within the Timeline.
-url: https://www.contentstack.com/docs/content-managers/timeline/audience-preview
+url: https://www.contentstack.com/docs/headless-cms/audience-preview
 product: Contentstack
 doc_type: guide
 audience:

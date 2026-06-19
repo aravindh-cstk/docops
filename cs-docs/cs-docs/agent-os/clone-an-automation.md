@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Clone an Automation"
 description: How to duplicate (clone) an automation, including behavior across projects and handling project variables.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/clone-an-automation
+url: https://www.contentstack.com/docs/agent-os/clone-an-automation
 product: Automation Hub
 doc_type: guide
 audience:

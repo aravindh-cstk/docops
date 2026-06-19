@@ -1,7 +1,7 @@
 ---
 title: Contentstack Command-line Interface (CLI) - Query-based Export
 description: Documentation for the Contentstack CLI Query Export Plugin, including installation, usage, options, query format, supported modules, and limitations.
-url: https://www.contentstack.com/docs/developers/cli/query-based-export
+url: https://www.contentstack.com/docs/headless-cms/query-based-export
 product: Contentstack
 doc_type: cli-guide
 audience:

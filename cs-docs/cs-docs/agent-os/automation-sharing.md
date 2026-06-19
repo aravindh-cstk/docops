@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Automation Sharing"
 description: Documentation for sharing automation workflows across organizations using a sharable recipe link, including handling project variables and pre-installation information.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/automation-sharing
+url: https://www.contentstack.com/docs/agent-os/automation-sharing
 product: Contentstack
 doc_type: guide
 audience:

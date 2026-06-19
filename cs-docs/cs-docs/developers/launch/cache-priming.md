@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Cache Priming"
 description: Cache Priming is a performance optimization feature in Contentstack Launch that improves website speed by preloading critical content into the CDN cache before user access.
-url: https://www.contentstack.com/docs/developers/launch/cache-priming
+url: https://www.contentstack.com/docs/launch/cache-priming
 product: Contentstack Launch
 doc_type: feature-guide
 audience:
@@ -25,7 +25,7 @@ Ideal for high-traffic websites, e-commerce platforms, and content-heavy applica
 Cache Priming preloads pages and content onto the CDN cache during deployment, ensuring the latest versions are immediately available without requiring an initial request. By eliminating delays caused by backend processing or stale cache states, it consistently delivers fresh, optimized experiences.
 
 **Important:** Cache Priming only works for routes whose responses are cacheable at the CDN layer. If a route's `Cache-Control` header includes `no-store`, `no-cache`, or `must-revalidate`, these directives instruct the CDN to skip storing the response and fetch directly from origin on every request. As a result, priming requests still run and appear in your logs, but no content is cached, and every request continues to be served directly from origin.  
-Ensure your routes return cacheable headers such as `s-maxage=60` before relying on cache priming. See the [Caching Guide for Contentstack Launch](/docs/developers/launch/caching-guide-for-contentstack-launch) for details.
+Ensure your routes return cacheable headers such as `s-maxage=60` before relying on cache priming. See the [Caching Guide for Contentstack Launch](/docs/launch/caching-guide-for-contentstack-launch) for details.
 
 ## Overcoming Performance Challenges with Cache Priming
 
@@ -83,10 +83,10 @@ Open your source code folder.
 
 Choose one of the following methods to deploy your project in Launch:
 
-[Importing the source code from GitHub](/docs/developers/launch/import-project-using-github/)
+[Importing the source code from GitHub](/docs/launch/import-project-using-github/)
 
-- [Importing a project using Bitbucket Cloud](/docs/developers/launch/import-a-project-using-bitbucket-cloud/)
-- [Uploading the source code folder.](/docs/developers/launch/import-project-using-file-upload/)
+- [Importing a project using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud/)
+- [Uploading the source code folder.](/docs/launch/import-project-using-file-upload/)
 
 ### Enable Cache Priming in your Project
 

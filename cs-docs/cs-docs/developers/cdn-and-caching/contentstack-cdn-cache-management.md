@@ -1,7 +1,7 @@
 ---
 title: "[CDN and Caching] - Contentstack CDN Cache Management"
 description: Contentstack CDN cache management, including how CDN cache works, cache purging events, timeouts/retries guidance, and cache header responses.
-url: https://www.contentstack.com/docs/developers/cdn-and-caching/contentstack-cdn-cache-management
+url: https://www.contentstack.com/docs/headless-cms/contentstack-cdn-cache-management
 product: Contentstack
 doc_type: guide
 audience:

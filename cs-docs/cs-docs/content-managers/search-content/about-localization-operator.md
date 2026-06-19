@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - About Localization Operator"
 description: The localization operator in Contentstack's Advanced Search lets you find entries based on their localization status in specific languages.
-url: https://www.contentstack.com/docs/content-managers/search-content/about-localization-operator
+url: https://www.contentstack.com/docs/headless-cms/about-localization-operator
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Highlight App Installation Guide"
 description: Highlight App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/highlight
+url: https://www.contentstack.com/docs/marketplace/highlight
 product: Contentstack
 doc_type: marketplace-guide
 audience:

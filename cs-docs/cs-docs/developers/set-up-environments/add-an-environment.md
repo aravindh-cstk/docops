@@ -1,7 +1,7 @@
 ---
 title: "[Set up Environments] - Add an Environment"
 description: Add an Environment as a content delivery destination where you publish and deploy your application or website content.
-url: https://www.contentstack.com/docs/developers/set-up-environments/add-an-environment
+url: https://www.contentstack.com/docs/headless-cms/add-an-environment
 product: Contentstack
 doc_type: how-to
 audience:

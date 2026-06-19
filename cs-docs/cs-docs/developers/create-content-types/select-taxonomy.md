@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Select Taxonomy"
 description: How to use the Select Taxonomy field property to add an existing taxonomy while configuring the Taxonomy field in Contentstack.
-url: https://www.contentstack.com/docs/developers/create-content-types/select-taxonomy
+url: https://www.contentstack.com/docs/headless-cms/select-taxonomy
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Regions] - Selecting Region in Contentstack Starter Apps"
 description: Selecting Region in Contentstack Starter Apps
-url: https://www.contentstack.com/docs/developers/contentstack-regions/selecting-region-in-contentstack-starter-apps
+url: https://www.contentstack.com/docs/administration/selecting-region-in-contentstack-starter-apps
 product: Contentstack
 doc_type: configuration-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Publish Rules] - Add a Publish Rule"
 description: Adding a publish rule lets you define approval or workflow requirements before entries can be published or unpublished.
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/add-a-publish-rule
+url: https://www.contentstack.com/docs/headless-cms/add-a-publish-rule
 product: Contentstack
 doc_type: how-to
 audience:

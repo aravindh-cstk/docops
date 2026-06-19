@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Multi Line Textbox"
 description: Documentation for the Multi Line Textbox field, including what it is and which properties can be configured.
-url: https://www.contentstack.com/docs/developers/create-content-types/multi-line-textbox
+url: https://www.contentstack.com/docs/headless-cms/multi-line-textbox
 product: Set Up Your Project
 doc_type: field-reference
 audience:

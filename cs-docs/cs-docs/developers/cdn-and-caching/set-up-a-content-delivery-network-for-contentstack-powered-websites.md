@@ -1,7 +1,7 @@
 ---
 title: "[CDN and Caching] - Set Up a Content Delivery Network for Contentstack-powered Websites"
 description: Set up a separate CDN for a Contentstack-powered website to improve delivery speed and control caching between your web server and browsers.
-url: https://www.contentstack.com/docs/developers/cdn-and-caching/set-up-a-content-delivery-network-for-contentstack-powered-websites
+url: https://www.contentstack.com/docs/headless-cms/set-up-a-content-delivery-network-for-contentstack-powered-websites
 product: Contentstack
 doc_type: guide
 audience:

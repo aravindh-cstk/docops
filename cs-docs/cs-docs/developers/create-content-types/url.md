@@ -1,7 +1,7 @@
 ---
 title: "[Headless CMS | Fields] - URL"
 description: Use the URL field to define relative webpage paths, configure URL field properties, prefixes, patterns, formatting, and enforce unique entry URLs via the Content Management API.
-url: https://www.contentstack.com/docs/developers/create-content-types/url
+url: https://www.contentstack.com/docs/headless-cms/url
 product: Contentstack
 doc_type: field-reference
 audience:

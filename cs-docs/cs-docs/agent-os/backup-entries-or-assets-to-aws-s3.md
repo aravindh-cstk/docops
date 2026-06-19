@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Backup Entries or Assets to AWS S3"
 description: Guide to using Contentstack Automate to back up entries or assets to an AWS S3 bucket.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/backup-entries-or-assets-to-aws-s3
+url: https://www.contentstack.com/docs/agent-os/backup-entries-or-assets-to-aws-s3
 product: Contentstack
 doc_type: automation-guide
 audience:

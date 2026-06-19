@@ -1,7 +1,7 @@
 ---
 title: "[Manage Asset Security] - Secure Public URLs of Assets"
 description: Contentstack provides asset URL security, allowing teams to protect content by restricting public access to asset URLs.
-url: https://www.contentstack.com/docs/developers/security/secure-public-urls-of-assets
+url: https://www.contentstack.com/docs/administration/secure-public-urls-of-assets
 product: Contentstack
 doc_type: security-guide
 audience:

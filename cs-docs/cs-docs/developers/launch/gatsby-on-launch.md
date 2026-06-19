@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Gatsby on Launch"
 description: Gatsby on Launch
-url: https://www.contentstack.com/docs/developers/launch/gatsby-on-launch
+url: https://www.contentstack.com/docs/launch/gatsby-on-launch
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -39,7 +39,7 @@ The memory size for a Launch application is **1024 MB**.
 
 ### Runtime Environment
 
-The Launch runtime environment leverages [**Node.js**](/docs/developers/launch/supported-nodejs-versions) to power its execution environment.
+The Launch runtime environment leverages [**Node.js**](/docs/launch/supported-nodejs-versions) to power its execution environment.
 
 ### File System
 
@@ -53,7 +53,7 @@ The `/tmp` directory is a temporary file system accessible to every Launch serve
 
 Launch application supports the `x86_64` instruction set.
 
-**Additional Resource:** Please refer to the [Quick Start Guide with Gatsby](/docs/developers/launch/quick-start-gatsby) documentation for a step-by-step walkthrough to deploy a Gatsby site on Launch.
+**Additional Resource:** Please refer to the [Quick Start Guide with Gatsby](/docs/launch/quick-start-gatsby) documentation for a step-by-step walkthrough to deploy a Gatsby site on Launch.
 
 ## Common questions
 

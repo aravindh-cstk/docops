@@ -1,7 +1,7 @@
 ---
 title: "[Preview Sharing] - About Preview Sharing"
 description: Overview of Visual Builder’s Preview Sharing feature for generating secure, shareable links to draft website content for external review and feedback.
-url: https://www.contentstack.com/docs/content-managers/preview-sharing/about-preview-sharing
+url: https://www.contentstack.com/docs/headless-cms/about-preview-sharing
 product: Contentstack Visual Builder
 doc_type: feature-overview
 audience:

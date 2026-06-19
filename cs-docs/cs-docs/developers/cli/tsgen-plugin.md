@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Generate Typescript Typings with TSGen Plugin"
 description: Generate TypeScript typings from REST API and GraphQL queries using the Contentstack CLI TSGen plugin.
-url: https://www.contentstack.com/docs/developers/cli/tsgen-plugin
+url: https://www.contentstack.com/docs/headless-cms/tsgen-plugin
 product: Contentstack
 doc_type: cli-guide
 audience:

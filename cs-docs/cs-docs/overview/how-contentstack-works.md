@@ -1,7 +1,7 @@
 ---
 title: "[Introduction to Contentstack - a Headless CMS] - How Contentstack Works"
 description: Overview of how Contentstack works, including the 3-step process to model, create, and publish content.
-url: https://www.contentstack.com/docs/overview/how-contentstack-works
+url: https://www.contentstack.com/docs/headless-cms/how-contentstack-works
 product: Contentstack
 doc_type: overview
 audience:

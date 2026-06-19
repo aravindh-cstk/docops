@@ -1,7 +1,7 @@
 ---
 title: "[Author Content | Entry Versions] - Compare Entry Versions"
 description: Compare any two versions of an entry side-by-side on the same screen in Contentstack, including across different languages.
-url: https://www.contentstack.com/docs/content-managers/author-content/compare-entry-versions
+url: https://www.contentstack.com/docs/headless-cms/compare-entry-versions
 product: Contentstack
 doc_type: how-to
 audience:

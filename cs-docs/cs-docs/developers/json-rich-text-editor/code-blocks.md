@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Code Blocks"
 description: How to add and format code blocks in the JSON Rich Text Editor (JSON RTE) in Contentstack, including language formatting and best practices.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/code-blocks
+url: https://www.contentstack.com/docs/headless-cms/code-blocks
 product: Contentstack
 doc_type: guide
 audience:

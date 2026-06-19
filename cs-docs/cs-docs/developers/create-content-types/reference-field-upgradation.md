@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Reference Field Upgradation"
 description: Reference Field Upgradation for the Reference field, including schema changes, publishing requirements, and limitations.
-url: https://www.contentstack.com/docs/developers/create-content-types/reference-field-upgradation
+url: https://www.contentstack.com/docs/headless-cms/reference-field-upgradation
 product: Set Up Your Project
 doc_type: reference
 audience:

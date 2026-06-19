@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - TravisCI
 description: TravisCI connector documentation for setting up an action connector and triggering a build.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/travisci
+url: https://www.contentstack.com/docs/agent-os/travisci
 product: Automation Hub
 doc_type: connector-guide
 audience:

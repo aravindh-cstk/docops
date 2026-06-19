@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - AWS SQS"
 description: AWS SQS connector setup and usage for sending messages via an automation action step.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/aws-sqs
+url: https://www.contentstack.com/docs/agent-os/aws-sqs
 product: Automation Hub
 doc_type: connector-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: Contentstack Brand Kit
 description: Contentstack Brand Kit is a one-stop-shop for managing and showcasing your brand’s unique identity.
-url: https://www.contentstack.com/docs/content-managers/brand-kit
+url: https://www.contentstack.com/docs/agent-os/brand-kit
 product: Contentstack
 doc_type: navigation-page
 audience:
@@ -20,7 +20,7 @@ This page introduces Contentstack Brand Kit and provides a structured set of lin
 
 Contentstack Brand Kit is a one-stop-shop for managing and showcasing your brand’s unique identity. It allows you to centralize your brand voice, guidelines, and communication styles.
 
-Within a [Brand Kit](/docs/content-managers/brand-kit/about-brand-kit), you can define your brand’s distinct voice through customizable [Voice Profiles](/docs/content-managers/brand-kit/about-voice-profile) and leverage integrated AI capabilities to generate on-brand content seamlessly. You can also easily consolidate and organize your brand’s knowledgebase in the [Knowledge Vault](/docs/content-managers/brand-kit/about-knowledge-vault) and maintain brand integrity.
+Within a [Brand Kit](/docs/brand-kit/about-brand-kit), you can define your brand’s distinct voice through customizable [Voice Profiles](/docs/brand-kit/about-voice-profile) and leverage integrated AI capabilities to generate on-brand content seamlessly. You can also easily consolidate and organize your brand’s knowledgebase in the [Knowledge Vault](/docs/brand-kit/about-knowledge-vault) and maintain brand integrity.
 
 Brand Kit seamlessly integrates with the [Marketplace AI Assistant](/docs/developers/marketplace-apps/ai-assistant-with-brand-kit) app. Install the app from our Marketplace, select your Brand Kit and Voice Profile, and create AI-generated content using the prompt.
 

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Git & Repository Integrations"
 uid: blt4938b13d289d24da
-url: /developers/launch/git-repository-integrations
+url: /launch/git-repository-integrations
 contentstack:
   environment: production
   assets: []

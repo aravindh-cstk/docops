@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - About Complex Global Fields"
 description: About Complex Global Fields in Contentstack Global Fields.
-url: https://www.contentstack.com/docs/developers/global-field/about-complex-global-fields
+url: https://www.contentstack.com/docs/headless-cms/about-complex-global-fields
 product: Contentstack
 doc_type: concept
 audience:

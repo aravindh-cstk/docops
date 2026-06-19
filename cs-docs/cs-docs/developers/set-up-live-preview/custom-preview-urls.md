@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Live Preview] - Custom Preview URLs"
 description: Custom Preview URLs
-url: https://www.contentstack.com/docs/developers/set-up-live-preview/custom-preview-urls
+url: https://www.contentstack.com/docs/headless-cms/custom-preview-urls
 product: Contentstack
 doc_type: developer-guide
 audience:

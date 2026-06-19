@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Stack] - Monitor Stack Activities in Audit Log"
 description: Monitor stack activities in the Audit Log, including access steps, filtering options, and types of audit log events.
-url: https://www.contentstack.com/docs/developers/set-up-stack/monitor-stack-activities-in-audit-log
+url: https://www.contentstack.com/docs/headless-cms/monitor-stack-activities-in-audit-log
 product: Contentstack
 doc_type: guide
 audience:

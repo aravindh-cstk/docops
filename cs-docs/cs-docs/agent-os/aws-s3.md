@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - AWS S3"
 description: AWS S3 connector for Automations (Automation Hub) to create, delete, and list files in AWS S3 buckets.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/aws-s3
+url: https://www.contentstack.com/docs/agent-os/aws-s3
 product: Contentstack
 doc_type: connector-guide
 audience:

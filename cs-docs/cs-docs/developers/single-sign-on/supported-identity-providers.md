@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Supported Identity Providers"
 description: Supported identity providers for integrating Contentstack SSO using SAML 2.0, with links to setup guides.
-url: https://www.contentstack.com/docs/developers/single-sign-on/supported-identity-providers
+url: https://www.contentstack.com/docs/administration/supported-identity-providers
 product: Contentstack
 doc_type: guide
 audience:

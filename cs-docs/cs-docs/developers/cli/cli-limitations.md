@@ -1,7 +1,7 @@
 ---
 title: Contentstack Command-line Interface (CLI) - CLI Limitations
 description: Core limitations of the Contentstack CLI across compatibility, authentication, export/import behaviors, and system requirements.
-url: https://www.contentstack.com/docs/developers/cli/cli-limitations
+url: https://www.contentstack.com/docs/headless-cms/cli-limitations
 product: Contentstack
 doc_type: reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Types of Apps"
 description: Types of Apps in Contentstack Developer Hub, including Organization Apps and Stack Apps, UI locations, webhook events, and limitations.
-url: https://www.contentstack.com/docs/developers/developer-hub/types-of-apps
+url: https://www.contentstack.com/docs/developer-hub/types-of-apps
 product: Contentstack
 doc_type: developer-hub-guide
 audience:
@@ -18,7 +18,7 @@ This page explains the types of apps supported in Contentstack Developer Hub, in
 
 Apps help you extend the capabilities of our core CMS and customize its functionalities. They help you enhance the Contentstack experience by connecting to various third-party services in a few simple clicks.
 
-Contentstack currently supports two categories of apps: [Introduction to Contentstack Applications](/docs/developers/developer-hub/introduction-to-contentstack-applications).
+Contentstack currently supports two categories of apps: [Introduction to Contentstack Applications](/docs/developer-hub/introduction-to-contentstack-applications).
 
 Standard apps can be created at either the stack or organization level, while Machine-to-Machine apps are currently limited to the organization level.
 
@@ -34,14 +34,14 @@ Organization Apps are the apps that are installed at the Organization level, and
 
 ### Step to Create an Organization App
 
-To create/register your organization app with Contentstack, refer to the [Creating an App in Developer Hub](https://www.contentstack.com/docs/developers/developer-hub/creating-an-app-in-developer-hub/) documentation.
+To create/register your organization app with Contentstack, refer to the [Creating an App in Developer Hub](https://www.contentstack.com/docs/developer-hub/creating-an-app-in-developer-hub/) documentation.
 
 ### List of UI locations in Organization Apps
 
 UI locations help you define the UI touch points where the user can experience the App. These UI Locations enable you to customize the Contentstack experience, by customizing Contentstack's default UI and behavior.
 
 For organization apps, there is only one UI location available.
-- [App Configuration](https://www.contentstack.com/docs/developers/developer-hub/app-config-location/)
+- [App Configuration](https://www.contentstack.com/docs/developer-hub/app-config-location/)
 
 ### Enable UI locations in Organization Apps
 
@@ -51,33 +51,33 @@ For organization apps, there is only one UI location available.
 
 ### List Webhook Events in Organization Apps
 
-[Webhooks](/docs/developers/developer-hub/managing-webhooks-in-an-app/) provide a mechanism to send real-time information to any third-party app or service, when an event occurs in your app. Organization app only supports App events.
+[Webhooks](/docs/developer-hub/managing-webhooks-in-an-app/) provide a mechanism to send real-time information to any third-party app or service, when an event occurs in your app. Organization app only supports App events.
 
 ### Limitations of Organization App
 
 - Organization Apps cannot target UI locations inside individual stacks.
 - Organization Apps cannot target webhook inside individual stacks.
 
-**Additional Resource:** For more information, refer to the [About UI Locations](/docs/developers/developer-hub/about-ui-locations) document to know more about each location.
+**Additional Resource:** For more information, refer to the [About UI Locations](/docs/developer-hub/about-ui-locations) document to know more about each location.
 
 ## Stack Apps
 
 ### Steps to Create a Stack App
 
-To create/register your stack app with Contentstack, refer to the [Creating an App in Developer Hub](https://www.contentstack.com/docs/developers/developer-hub/creating-an-app-in-developer-hub/) documentation.
+To create/register your stack app with Contentstack, refer to the [Creating an App in Developer Hub](https://www.contentstack.com/docs/developer-hub/creating-an-app-in-developer-hub/) documentation.
 
 ### List of UI locations in Stack Apps
 
 UI locations help you define the UI touch points where the user can experience the App. These UI Locations enable you to customize the Contentstack experience, by customizing Contentstack's default UI and behavior.  
 For stack apps, six UI locations are available:
-- [Custom Field](/docs/developers/developer-hub/custom-field-location)
-- [Dashboard](/docs/developers/developer-hub/dashboard-location)
-- [Asset Sidebar](/docs/developers/developer-hub/asset-sidebar-location)
-- [App configuration](/docs/developers/developer-hub/app-config-location)
-- [RTE](/docs/developers/developer-hub/rte-location)
-- [Sidebar](/docs/developers/developer-hub/sidebar-location)
-- [Field Modifier](/docs/developers/developer-hub/field-modifier-location/)
-- [Full Page](/docs/developers/developer-hub/full-page-location/)
+- [Custom Field](/docs/developer-hub/custom-field-location)
+- [Dashboard](/docs/developer-hub/dashboard-location)
+- [Asset Sidebar](/docs/developer-hub/asset-sidebar-location)
+- [App configuration](/docs/developer-hub/app-config-location)
+- [RTE](/docs/developer-hub/rte-location)
+- [Sidebar](/docs/developer-hub/sidebar-location)
+- [Field Modifier](/docs/developer-hub/field-modifier-location/)
+- [Full Page](/docs/developer-hub/full-page-location/)
 
 ### Enable UI Locations in Stack Apps
 
@@ -113,7 +113,7 @@ Stack Apps are installed for a specific stack and their scope is limited only to
 **Note**: Only Organization Admins are authorized to install Organization Apps.
 
 ### What UI locations are available for Organization Apps?
-For organization apps, there is only one UI location available: [App Configuration](https://www.contentstack.com/docs/developers/developer-hub/app-config-location/).
+For organization apps, there is only one UI location available: [App Configuration](https://www.contentstack.com/docs/developer-hub/app-config-location/).
 
 ### Do Stack Apps and Organization Apps support the same webhook events?
 Organization app only supports App events, while Stack app has both stack events and app events.

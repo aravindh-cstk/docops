@@ -1,7 +1,7 @@
 ---
 title: "[Field Visibility Rules] - Scenarios Invalidating the Field Visibility Rules"
 description: Scenarios that invalidate field visibility rules when fields, validations, or global field structures are changed.
-url: https://www.contentstack.com/docs/developers/create-content-types/scenarios-invalidating-the-field-visibility-rules
+url: https://www.contentstack.com/docs/headless-cms/scenarios-invalidating-the-field-visibility-rules
 product: Contentstack
 doc_type: guide
 audience:

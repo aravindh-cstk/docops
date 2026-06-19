@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - JSON schema for creating a content type"
 description: JSON schema for creating a content type and field schemas, field parameters, and content type element schemas.
-url: https://www.contentstack.com/docs/developers/create-content-types/json-schema-for-creating-a-content-type
+url: https://www.contentstack.com/docs/headless-cms/json-schema-for-creating-a-content-type
 product: Contentstack
 doc_type: developer-guide
 audience:

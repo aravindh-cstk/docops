@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Webhook Data Format"
 description: Webhook Data Format
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-data-format
+url: https://www.contentstack.com/docs/headless-cms/webhook-data-format
 product: Contentstack
 doc_type: api-guide
 audience:

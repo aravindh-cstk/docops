@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - React UI Implementation Guide"
 description: Starting point and key components of the React app codebase for content migration.
-url: https://www.contentstack.com/docs/developers/content-migration/react-ui-implementation-guide
+url: https://www.contentstack.com/docs/headless-cms/react-ui-implementation-guide
 product: Contentstack
 doc_type: implementation-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Delete a Term"
 description: Documentation for deleting terms from a taxonomy in Contentstack, including UI steps and API reference.
-url: https://www.contentstack.com/docs/developers/taxonomy/delete-a-term
+url: https://www.contentstack.com/docs/headless-cms/delete-a-term
 product: Contentstack
 doc_type: how-to
 audience:

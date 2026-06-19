@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Akeneo App Installation Guide"
 description: Akeneo App Installation Guide for installing and configuring the Contentstack Marketplace Akeneo app and using it within a stack.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/akeneo
+url: https://www.contentstack.com/docs/marketplace/akeneo
 product: Contentstack
 doc_type: marketplace-guide
 audience:

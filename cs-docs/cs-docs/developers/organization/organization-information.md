@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Organization Information"
 description: Organization Information (Security Dashboard)
-url: https://www.contentstack.com/docs/developers/organization/organization-information
+url: https://www.contentstack.com/docs/administration/organization-information
 product: Contentstack
 doc_type: guide
 audience:

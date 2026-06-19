@@ -1,7 +1,7 @@
 ---
 title: "[Multilingual Content] - Localize an Entry"
 description: Localizing an entry in Contentstack to create independent versions for different languages and how it works with the Copy Entry feature.
-url: https://www.contentstack.com/docs/developers/multilingual-content/localize-an-entry
+url: https://www.contentstack.com/docs/headless-cms/localize-an-entry
 product: Contentstack
 doc_type: guide
 audience:

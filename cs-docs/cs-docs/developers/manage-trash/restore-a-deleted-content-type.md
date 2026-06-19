@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Restore a Deleted Content Type"
 description: Restore a deleted content type from Trash and understand key considerations and filtering options.
-url: https://www.contentstack.com/docs/developers/manage-trash/restore-a-deleted-content-type
+url: https://www.contentstack.com/docs/headless-cms/restore-a-deleted-content-type
 product: Contentstack
 doc_type: how-to
 audience:

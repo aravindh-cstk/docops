@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Generate a Permanent Asset URL"
 description: Generate a permanent URL for an asset in Contentstack so the URL remains unchanged even if the asset is updated or replaced.
-url: https://www.contentstack.com/docs/content-managers/author-content/generate-a-permanent-asset-url
+url: https://www.contentstack.com/docs/headless-cms/generate-a-permanent-asset-url
 product: Contentstack
 doc_type: how-to
 audience:

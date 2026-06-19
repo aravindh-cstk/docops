@@ -1,7 +1,7 @@
 ---
 title: "[Global Field] - Global Field Use Cases"
 description: Use cases and examples for implementing Global Fields across content types in a stack.
-url: https://www.contentstack.com/docs/developers/global-field/global-field-use-cases
+url: https://www.contentstack.com/docs/headless-cms/global-field-use-cases
 product: Contentstack
 doc_type: guide
 audience:

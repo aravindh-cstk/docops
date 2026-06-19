@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Change Organization Role of Existing Users"
 description: "How to update the organization role and stack-level permissions for an existing user in Contentstack."
-url: https://www.contentstack.com/docs/developers/organization/change-organization-role-of-existing-users
+url: https://www.contentstack.com/docs/administration/change-organization-role-of-existing-users
 product: Contentstack
 doc_type: how-to
 audience:

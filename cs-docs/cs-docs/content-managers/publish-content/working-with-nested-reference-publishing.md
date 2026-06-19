@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - Working with Nested Reference Publishing"
 description: Nested Reference Publishing allows you to view all references for an entry(ies) and send them all for publishing along with the parent entry together.
-url: https://www.contentstack.com/docs/content-managers/publish-content/working-with-nested-reference-publishing
+url: https://www.contentstack.com/docs/headless-cms/working-with-nested-reference-publishing
 product: Contentstack
 doc_type: guide
 audience:

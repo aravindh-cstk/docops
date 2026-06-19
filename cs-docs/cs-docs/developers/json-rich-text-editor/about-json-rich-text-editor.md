@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - About JSON Rich Text Editor"
 description: Overview of the JSON Rich Text Editor (RTE), its key features, and how empty JSON RTE fields are handled.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/about-json-rich-text-editor
+url: https://www.contentstack.com/docs/headless-cms/about-json-rich-text-editor
 product: JSON RTE
 doc_type: concept
 audience:

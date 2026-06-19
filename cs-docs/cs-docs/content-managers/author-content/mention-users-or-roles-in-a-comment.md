@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Mention Users or Roles in a Comment"
 description: Mention Users or Roles in a Comment
-url: https://www.contentstack.com/docs/content-managers/author-content/mention-users-or-roles-in-a-comment
+url: https://www.contentstack.com/docs/headless-cms/mention-users-or-roles-in-a-comment
 product: Contentstack
 doc_type: how-to
 audience:

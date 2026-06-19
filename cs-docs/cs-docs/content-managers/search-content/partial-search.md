@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Partial Search"
 description: Contentstack partial keyword search behavior, including prefix search and suffix/infix matching.
-url: https://www.contentstack.com/docs/content-managers/search-content/partial-search
+url: https://www.contentstack.com/docs/headless-cms/partial-search
 product: Contentstack
 doc_type: guide
 audience:

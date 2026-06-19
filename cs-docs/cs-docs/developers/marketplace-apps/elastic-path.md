@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Elastic Path App Installation Guide"
 description: Elastic Path App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/elastic-path
+url: https://www.contentstack.com/docs/marketplace/elastic-path
 product: Contentstack Marketplace
 doc_type: marketplace-guide
 audience:

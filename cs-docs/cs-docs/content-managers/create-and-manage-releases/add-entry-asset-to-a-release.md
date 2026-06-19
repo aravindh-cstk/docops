@@ -1,7 +1,7 @@
 ---
 title: "[Create and Manage Releases] - Add Entry/Asset to a Release"
 description: After creating a release, you can add entries or assets to prepare them for deployment across environments.
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/add-entry-asset-to-a-release
+url: https://www.contentstack.com/docs/headless-cms/add-entry-asset-to-a-release
 product: Contentstack
 doc_type: guide
 audience:

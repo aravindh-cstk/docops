@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - About Views"
 description: Overview of the Views feature in Contentstack Search Content, including Popular Views, Saved Views, and Content Type Views.
-url: https://www.contentstack.com/docs/content-managers/search-content/about-views
+url: https://www.contentstack.com/docs/headless-cms/about-views
 product: Contentstack
 doc_type: concept
 audience:

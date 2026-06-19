@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Security Configuration"
 description: Configure organization security settings including Multi-Factor Authentication, Password Policies, Session Timeout, and Allowed Email Domains.
-url: https://www.contentstack.com/docs/developers/organization/security-configuration
+url: https://www.contentstack.com/docs/administration/security-configuration
 product: Contentstack
 doc_type: guide
 audience:

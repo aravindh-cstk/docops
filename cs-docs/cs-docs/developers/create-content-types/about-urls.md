@@ -1,7 +1,7 @@
 ---
 title: "[Headless CMS | Default URL Pattern] - About URLs"
 description: About URLs and how to set and format URLs in Contentstack, including URL patterns and best practices.
-url: https://www.contentstack.com/docs/developers/create-content-types/about-urls
+url: https://www.contentstack.com/docs/headless-cms/about-urls
 product: Contentstack
 doc_type: concept
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Unlocalize an Entry"
 description: How to unlocalize a localized entry so it inherits content from the fallback locale, including UI steps, differences from deleting, and related API references.
-url: https://www.contentstack.com/docs/developers/multilingual-content/unlocalize-an-entry
+url: https://www.contentstack.com/docs/headless-cms/unlocalize-an-entry
 product: Contentstack
 doc_type: how-to
 audience:

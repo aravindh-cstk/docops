@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Allowed file type(s)"
 description: Documentation for the Allowed file type(s) property used with the File field when creating content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/allowed-file-types
+url: https://www.contentstack.com/docs/headless-cms/allowed-file-types
 product: Set Up Your Project
 doc_type: reference
 audience:

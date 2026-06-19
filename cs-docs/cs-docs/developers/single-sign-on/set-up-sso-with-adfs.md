@@ -1,7 +1,7 @@
 ---
 title: "[SSO] - Set up SSO with Active Directory Federation Services (AD FS)"
 description: Step-by-step guide to set up Single Sign-On (SSO) in Contentstack with AD FS as your SAML 2.0 Identity Provider (IdP).
-url: https://www.contentstack.com/docs/developers/single-sign-on/set-up-sso-with-adfs
+url: https://www.contentstack.com/docs/administration/set-up-sso-with-adfs
 product: Contentstack
 doc_type: how-to
 audience:

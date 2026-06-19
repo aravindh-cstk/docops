@@ -1,7 +1,7 @@
 ---
 title: "[CDN and Caching] - What Is CDN and How It Works"
 description: Overview of what a CDN is, how it speeds up content delivery, and how Contentstack uses CDN for faster performance.
-url: https://www.contentstack.com/docs/developers/cdn-and-caching/what-is-cdn-and-how-it-works
+url: https://www.contentstack.com/docs/headless-cms/what-is-cdn-and-how-it-works
 product: Contentstack
 doc_type: concept-guide
 audience:

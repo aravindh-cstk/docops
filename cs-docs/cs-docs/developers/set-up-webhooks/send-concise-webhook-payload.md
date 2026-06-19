@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Send Concise Webhook Payload"
 description: Send a concise JSON payload in Contentstack webhooks and view examples of comprehensive vs concise payloads.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/send-concise-webhook-payload
+url: https://www.contentstack.com/docs/headless-cms/send-concise-webhook-payload
 product: Contentstack
 doc_type: how-to
 audience:

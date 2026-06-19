@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Add New Entries to Algolia’s Search Index"
 description: Guide to set up an automation that indexes newly created Contentstack entries into Algolia’s search index.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/add-new-entries-to-algolia-s-search-index
+url: https://www.contentstack.com/docs/agent-os/add-new-entries-to-algolia-s-search-index
 product: Contentstack
 doc_type: automation-hub-guide
 audience:

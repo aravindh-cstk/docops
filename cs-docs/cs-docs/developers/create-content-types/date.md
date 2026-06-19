@@ -1,7 +1,7 @@
 ---
 title: "[Fields] - Date"
 description: Documentation for the Date field, including key features, configurable properties, and best practices.
-url: https://www.contentstack.com/docs/developers/create-content-types/date
+url: https://www.contentstack.com/docs/headless-cms/date
 product: Contentstack
 doc_type: reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - About Nested Reference Publishing"
 description: About Nested Reference Publishing
-url: https://www.contentstack.com/docs/content-managers/publish-content/about-nested-reference-publishing
+url: https://www.contentstack.com/docs/headless-cms/about-nested-reference-publishing
 product: Contentstack
 doc_type: guide
 audience:

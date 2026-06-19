@@ -1,7 +1,7 @@
 ---
 title: Drafts and Auto Save - About Drafts and Auto Save
 description: Overview of Drafts and Auto Save, including how auto save works, version types, and real-time collaboration behavior.
-url: https://www.contentstack.com/docs/content-managers/author-content/about-drafts-and-auto-save
+url: https://www.contentstack.com/docs/headless-cms/about-drafts-and-auto-save
 product: Contentstack
 doc_type: concept
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Export Content to CSV File Using the CLI"
 description: Export Content to CSV File Using the CLI
-url: https://www.contentstack.com/docs/developers/cli/export-content-to-csv-file
+url: https://www.contentstack.com/docs/headless-cms/export-content-to-csv-file
 product: Contentstack
 doc_type: cli-guide
 audience:

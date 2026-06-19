@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - CLI for Launch"
 description: CLI for Launch
-url: https://www.contentstack.com/docs/developers/cli/cli-for-launch
+url: https://www.contentstack.com/docs/headless-cms/cli-for-launch
 product: Contentstack
 doc_type: cli-guide
 audience:

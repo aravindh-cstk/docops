@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Branches"
 description: About Branches
-url: https://www.contentstack.com/docs/developers/branches/about-branches
+url: https://www.contentstack.com/docs/headless-cms/about-branches
 product: Contentstack
 doc_type: guide
 audience:

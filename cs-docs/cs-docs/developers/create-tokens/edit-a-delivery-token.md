@@ -1,7 +1,7 @@
 ---
 title: "[Create Tokens] - Edit a Delivery Token"
 description: Edit a Delivery Token in Contentstack by updating its details such as name, alias, description, branch, and publishing environment.
-url: https://www.contentstack.com/docs/developers/create-tokens/edit-a-delivery-token
+url: https://www.contentstack.com/docs/headless-cms/edit-a-delivery-token
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[SSO] - Set up SSO with Microsoft Azure AD B2C"
 description: Step-by-step guide to set up Single Sign-On (SSO) in Contentstack with Microsoft Azure Active Directory (AD) B2C as your SAML 2.0 Identity Provider (IdP).
-url: https://www.contentstack.com/docs/developers/single-sign-on/set-up-sso-with-microsoft-azure-ad-b2c
+url: https://www.contentstack.com/docs/administration/set-up-sso-with-microsoft-azure-ad-b2c
 product: Contentstack
 doc_type: how-to
 audience:

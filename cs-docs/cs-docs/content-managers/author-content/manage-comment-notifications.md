@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Manage Comment Notifications"
 description: Manage comment notifications for tagged comments, including email and in-app notifications.
-url: https://www.contentstack.com/docs/content-managers/author-content/manage-comment-notifications
+url: https://www.contentstack.com/docs/headless-cms/manage-comment-notifications
 product: Author Content
 doc_type: guide
 audience:

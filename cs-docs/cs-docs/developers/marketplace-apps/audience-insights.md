@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Audience Insights App Installation Guide"
 description: Audience Insights App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/audience-insights
+url: https://www.contentstack.com/docs/marketplace/audience-insights
 product: Contentstack
 doc_type: marketplace-guide
 audience:

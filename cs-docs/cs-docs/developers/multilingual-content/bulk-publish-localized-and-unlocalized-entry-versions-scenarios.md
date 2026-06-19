@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Bulk Publish Localized and Unlocalized Entry Versions Scenarios"
 description: Bulk Publish Localized and Unlocalized Entry Versions Scenarios
-url: https://www.contentstack.com/docs/developers/multilingual-content/bulk-publish-localized-and-unlocalized-entry-versions-scenarios
+url: https://www.contentstack.com/docs/headless-cms/bulk-publish-localized-and-unlocalized-entry-versions-scenarios
 product: Contentstack
 doc_type: guide
 audience:

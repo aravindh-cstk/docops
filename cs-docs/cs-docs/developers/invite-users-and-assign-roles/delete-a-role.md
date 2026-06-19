@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Delete a Role"
 description: Delete a custom role in a Contentstack stack, including UI steps and API reference.
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/delete-a-role
+url: https://www.contentstack.com/docs/headless-cms/delete-a-role
 product: Contentstack
 doc_type: how-to
 audience:

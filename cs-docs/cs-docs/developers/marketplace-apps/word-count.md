@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Word Count App Installation Guide"
 description: Word Count App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/word-count
+url: https://www.contentstack.com/docs/marketplace/word-count
 product: Contentstack
 doc_type: marketplace-guide
 audience:

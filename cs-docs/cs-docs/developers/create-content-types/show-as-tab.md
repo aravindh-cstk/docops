@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Show as Tab"
 description: Documentation for the Show as Tab field property in Contentstack content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/show-as-tab
+url: https://www.contentstack.com/docs/headless-cms/show-as-tab
 product: Contentstack
 doc_type: feature-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - Auto Publish to Staging on Workflow Approval"
 description: Auto Publish to Staging on Workflow Approval
-url: https://www.contentstack.com/docs/developers/solution-guides/auto-publish-to-staging-on-workflow-approval
+url: https://www.contentstack.com/docs/headless-cms/auto-publish-to-staging-on-workflow-approval
 product: Contentstack
 doc_type: solution-guide
 audience:

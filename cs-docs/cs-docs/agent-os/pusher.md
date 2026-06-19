@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Pusher
 description: Set up the Pusher action connector to send a message to a specified Pusher channel.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/pusher
+url: https://www.contentstack.com/docs/agent-os/pusher
 product: Contentstack
 doc_type: connector-guide
 audience:

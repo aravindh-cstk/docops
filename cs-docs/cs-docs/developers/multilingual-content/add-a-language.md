@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Add a Language"
 description: Add languages to your stack to create and publish entries in multiple languages.
-url: https://www.contentstack.com/docs/developers/multilingual-content/add-a-language
+url: https://www.contentstack.com/docs/headless-cms/add-a-language
 product: Contentstack
 doc_type: guide
 audience:

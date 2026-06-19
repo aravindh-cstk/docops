@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Limitations of Live Preview"
 description: Limitations and compatibility constraints for the Live Preview feature.
-url: https://www.contentstack.com/docs/content-managers/author-content/limitations-of-live-preview
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-live-preview
 product: Author Content
 doc_type: guide
 audience:

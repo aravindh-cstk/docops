@@ -1,7 +1,7 @@
 ---
 title: "[GraphQL API NEW] - Use GraphQL Queries with Apollo Client JavaScript SDK"
 description: Use Contentstack GraphQL queries with the Apollo Client JavaScript SDK to fetch and render content.
-url: https://www.contentstack.com/docs/developers/graphql-api/use-the-graphql-queries-with-apollo-sdks/use-graphql-queries-with-apollo-client-javascript-sdk
+url: https://www.contentstack.com/docs/headless-cms/use-graphql-queries-with-apollo-client-javascript-sdk
 product: Contentstack
 doc_type: guide
 audience:

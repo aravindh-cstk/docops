@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Create a Brand Kit"
 description: Create a Brand Kit to organize voice profiles and manage access within a Contentstack organization.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/create-a-brand-kit
+url: https://www.contentstack.com/docs/brand-kit/create-a-brand-kit
 product: Contentstack
 doc_type: how-to
 audience:
@@ -36,7 +36,7 @@ To create a Brand Kit, log in to your [Contentstack account](https://www.content
 - Selecting one or multiple stacks (during the stack selection step as discussed above) will sync the stack variables in the Environments settings.
 - The maximum number of Brand Kits allowed per organization is **50**.
 
-After successfully creating the Brand Kit, you can start [creating Voice Profiles](/docs/content-managers/brand-kit/create-a-voice-profile) in it.
+After successfully creating the Brand Kit, you can start [creating Voice Profiles](/docs/brand-kit/create-a-voice-profile) in it.
 
 ## Common questions
 
@@ -50,4 +50,4 @@ Selecting one or multiple stacks (during the stack selection step as discussed a
 Yes. The maximum number of Brand Kits allowed per organization is **50**.
 
 ### What can I do after creating a Brand Kit?
-After successfully creating the Brand Kit, you can start [creating Voice Profiles](/docs/content-managers/brand-kit/create-a-voice-profile) in it.
+After successfully creating the Brand Kit, you can start [creating Voice Profiles](/docs/brand-kit/create-a-voice-profile) in it.

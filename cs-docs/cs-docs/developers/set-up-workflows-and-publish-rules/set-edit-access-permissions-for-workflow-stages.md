@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Set Edit Access Permissions for Workflow Stages"
 description: Set edit access permissions for workflow stages to control which users or roles can edit entries at different stages.
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/set-edit-access-permissions-for-workflow-stages
+url: https://www.contentstack.com/docs/headless-cms/set-edit-access-permissions-for-workflow-stages
 product: Contentstack
 doc_type: how-to
 audience:

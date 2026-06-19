@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Machine to Machine Apps"
 description: Machine-to-Machine (M2M) Apps for secure server-to-server communication using OAuth 2.0, including use cases and available scopes.
-url: https://www.contentstack.com/docs/developers/developer-hub/machine-to-machine-apps
+url: https://www.contentstack.com/docs/developer-hub/machine-to-machine-apps
 product: Contentstack
 doc_type: developer-hub-guide
 audience:
@@ -19,7 +19,7 @@ This page explains Machine-to-Machine (M2M) Apps, what they are used for, and wh
 
 **Note:** *This feature is in Beta. Please contact your Account Manager to enable it.*
 
-**Machine-to-Machine (M2M) Apps **are designed for secure server-to-server communication, eliminating the need for user intervention. These apps use the [OAuth 2.0](/docs/developers/developer-hub/contentstack-oauth) protocol for authentication and authorization, making them highly secure and reliable for machine-to-machine interactions.
+**Machine-to-Machine (M2M) Apps **are designed for secure server-to-server communication, eliminating the need for user intervention. These apps use the [OAuth 2.0](/docs/developer-hub/contentstack-oauth) protocol for authentication and authorization, making them highly secure and reliable for machine-to-machine interactions.
 
 ## Use Cases
 
@@ -55,7 +55,7 @@ Machine-to-Machine Apps currently have limited scope access but we plan to expan
 A: No. Machine-to-Machine (M2M) Apps are designed for secure server-to-server communication, eliminating the need for user intervention.
 
 **Q: What authentication protocol do M2M Apps use?**  
-A: These apps use the [OAuth 2.0](/docs/developers/developer-hub/contentstack-oauth) protocol for authentication and authorization.
+A: These apps use the [OAuth 2.0](/docs/developer-hub/contentstack-oauth) protocol for authentication and authorization.
 
 **Q: Are Machine-to-Machine Apps generally available?**  
 A: No. **Note:** *This feature is in Beta. Please contact your Account Manager to enable it.*

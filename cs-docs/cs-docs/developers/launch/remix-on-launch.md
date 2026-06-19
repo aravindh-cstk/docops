@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Remix on Launch"
 description: Remix features and application specifications supported in Contentstack Launch, including SSR, caching, runtime environment, and limits.
-url: https://www.contentstack.com/docs/developers/launch/remix-on-launch
+url: https://www.contentstack.com/docs/launch/remix-on-launch
 product: Contentstack Launch
 doc_type: developer-guide
 audience:
@@ -29,7 +29,7 @@ Launch fully supports Remix’s Server-Side Rendering (SSR) approach, which impr
 
 After the server sends the pre-rendered page to the client, Remix hydrates the application, enabling interactivity and dynamic behavior.
 
-**Additional Resource:** Follow the [Quick Start Guide with Remix](/docs/developers/launch/quick-start-remix/) for a step-by-step walkthrough to deploy your Remix project on Launch as an SSR-based application.
+**Additional Resource:** Follow the [Quick Start Guide with Remix](/docs/launch/quick-start-remix/) for a step-by-step walkthrough to deploy your Remix project on Launch as an SSR-based application.
 
 ## Launch Remix Application Specifications
 
@@ -45,7 +45,7 @@ The memory size for a Launch application is **1024 MB**.
 
 ### Runtime Environment
 
-The Launch runtime environment leverages [**Node.js**](/docs/developers/launch/supported-nodejs-versions) to power its execution environment.
+The Launch runtime environment leverages [**Node.js**](/docs/launch/supported-nodejs-versions) to power its execution environment.
 
 ### File System
 
@@ -83,7 +83,7 @@ export const loader = async ({ request }: LoaderArgs) => {
 
 ### Cache Revalidation
 
-As a Remix SSR user, you can also leverage [Launch’s cache revalidation feature](/docs/developers/launch/revalidate-cdn-cache) to render new content updates on demand.
+As a Remix SSR user, you can also leverage [Launch’s cache revalidation feature](/docs/launch/revalidate-cdn-cache) to render new content updates on demand.
 
 **Note:** Please ensure that you revalidate the cache for both the data endpoint backing the content and the page URL. This is important if you have cached API endpoints delivering data for the page.
 

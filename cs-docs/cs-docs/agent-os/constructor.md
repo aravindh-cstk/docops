@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Constructor"
 description: Constructor connector setup and actions (Index an Entry, Delete an Entry) in Contentstack Automate.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/constructor
+url: https://www.contentstack.com/docs/agent-os/constructor
 product: Contentstack
 doc_type: connector-guide
 audience:

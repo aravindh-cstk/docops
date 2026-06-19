@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - About Search"
 description: About Search in Contentstack Search functionality for locating assets or entries within a stack, including types of search and a tutorial video reference.
-url: https://www.contentstack.com/docs/content-managers/search-content/about-search
+url: https://www.contentstack.com/docs/headless-cms/about-search
 product: Contentstack
 doc_type: concept
 audience:

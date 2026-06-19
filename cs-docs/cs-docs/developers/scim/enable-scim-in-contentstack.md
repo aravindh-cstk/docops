@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - Enable SCIM in Contentstack"
 description: Enable SCIM 2.0 for a Contentstack organization from Organization Settings.
-url: https://www.contentstack.com/docs/developers/scim/enable-scim-in-contentstack
+url: https://www.contentstack.com/docs/administration/enable-scim-in-contentstack
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Regions] - About Regions"
 description: About Regions in Contentstack Regions.
-url: https://www.contentstack.com/docs/developers/contentstack-regions/about-regions
+url: https://www.contentstack.com/docs/administration/about-regions
 product: Contentstack
 doc_type: concept
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Status"
 description: Status panel overview and how to access it in Visual Editor.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/status
+url: https://www.contentstack.com/docs/headless-cms/status
 product: Contentstack
 doc_type: guide
 audience:

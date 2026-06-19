@@ -1,7 +1,7 @@
 ---
 title: "[Building Websites] - Get Started With Building a Website"
 description: This guide will lead you through the process of integrating Contentstack, a headless Content Management System (CMS), with a React application.
-url: https://www.contentstack.com/docs/developers/building-websites/get-started-with-building-a-website
+url: https://www.contentstack.com/docs/headless-cms/get-started-with-building-a-website
 product: Contentstack
 doc_type: guide
 audience:

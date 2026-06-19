@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Image Preset Builder App Installation Guide"
 description: Image Preset Builder App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/image-preset-builder
+url: https://www.contentstack.com/docs/marketplace/image-preset-builder
 product: Contentstack
 doc_type: marketplace-guide
 audience:

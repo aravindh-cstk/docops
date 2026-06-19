@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Egnyte App Installation Guide"
 description: Egnyte App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/egnyte
+url: https://www.contentstack.com/docs/marketplace/egnyte
 product: Contentstack Marketplace
 doc_type: marketplace-guide
 audience:

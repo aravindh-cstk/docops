@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Configure Early Access in the CLI"
 description: Configure and use the Early Access header in the Contentstack CLI, including set, get, and remove commands.
-url: https://www.contentstack.com/docs/developers/cli/configure-early-access-program-in-the-cli
+url: https://www.contentstack.com/docs/headless-cms/configure-early-access-program-in-the-cli
 product: Contentstack
 doc_type: cli-guide
 audience:

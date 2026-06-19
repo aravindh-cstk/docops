@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Google Analytics App Installation Guide"
 description: Google Analytics App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/google-analytics
+url: https://www.contentstack.com/docs/marketplace/google-analytics
 product: Contentstack
 doc_type: marketplace-guide
 audience:

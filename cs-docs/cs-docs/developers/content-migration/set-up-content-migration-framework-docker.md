@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - Set Up Content Migration Framework (Docker)"
 description: Install the Contentstack Migration Framework using Docker on Windows and macOS systems.
-url: https://www.contentstack.com/docs/developers/content-migration/set-up-content-migration-framework-docker
+url: https://www.contentstack.com/docs/headless-cms/set-up-content-migration-framework-docker
 product: Contentstack
 doc_type: installation-guide
 audience:

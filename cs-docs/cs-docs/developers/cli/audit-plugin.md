@@ -1,7 +1,7 @@
 ---
 title: Contentstack Command-line Interface (CLI) - Audit Plugin
 description: Use the Contentstack CLI Audit plugin to validate exported stack data, generate reports, and fix supported issues across modules.
-url: https://www.contentstack.com/docs/developers/cli/audit-plugin
+url: https://www.contentstack.com/docs/headless-cms/audit-plugin
 product: Contentstack
 doc_type: cli-plugin-guide
 audience:

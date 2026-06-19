@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Markdown Content"
 description: Markdown syntax support and commands in Contentstack’s JSON Rich Text Editor (JSON RTE).
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/markdown-content
+url: https://www.contentstack.com/docs/headless-cms/markdown-content
 product: Contentstack
 doc_type: guide
 audience:

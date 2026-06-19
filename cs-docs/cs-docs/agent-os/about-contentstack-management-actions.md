@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - About Contentstack Management Actions"
 description: About Contentstack Management Actions in Automation Hub connectors, including prerequisites and setup steps.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-management
+url: https://www.contentstack.com/docs/agent-os/contentstack-management
 product: Contentstack
 doc_type: automation-hub-connector-guide
 audience:

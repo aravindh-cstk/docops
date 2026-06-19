@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Remove Entry/Asset from a Release"
 description: Remove item(s) (entries/assets) from a Release in Contentstack.
-url: https://www.contentstack.com/docs/developers/create-releases/remove-entry-asset-from-a-release
+url: https://www.contentstack.com/docs/headless-cms/remove-entry-asset-from-a-release
 product: Contentstack
 doc_type: how-to
 audience:

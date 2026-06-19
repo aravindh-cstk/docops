@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Key Features of Management Tokens"
 description: Key Features of Management Tokens
-url: https://www.contentstack.com/docs/developers/create-tokens/key-features
+url: https://www.contentstack.com/docs/headless-cms/key-features
 product: Contentstack
 doc_type: guide
 audience:

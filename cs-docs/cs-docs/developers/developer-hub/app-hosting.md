@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - App Hosting"
 description: App Hosting in Developer Hub
-url: https://www.contentstack.com/docs/developers/developer-hub/app-hosting
+url: https://www.contentstack.com/docs/developer-hub/app-hosting
 product: Contentstack
 doc_type: guide
 audience:
@@ -17,7 +17,7 @@ This page explains how to host the UI code for UI Locations using App Hosting in
 
 ## App Hosting in Developer Hub
 
-[UI Locations](/docs/developers/developer-hub/about-ui-locations) are integral to the customization of the Contentstack that allow you to enhance the Contentstack user interface with custom-built elements, providing an enriched user experience. They refer to specific places within the Contentstack dashboard where custom UI components can be embedded. To ensure these components operate seamlessly, their corresponding UI code must be hosted properly.
+[UI Locations](/docs/developer-hub/about-ui-locations) are integral to the customization of the Contentstack that allow you to enhance the Contentstack user interface with custom-built elements, providing an enriched user experience. They refer to specific places within the Contentstack dashboard where custom UI components can be embedded. To ensure these components operate seamlessly, their corresponding UI code must be hosted properly.
 
 The App Hosting feature in Contentstack enables you to host your app via Contentstack’s [Launch](/docs/developers/launch#launch-overview) platform or an external web hosting provider.
 
@@ -42,7 +42,7 @@ A self-managed solution if you require hosting on your own servers or need speci
 
 ### Steps for Custom Hosting
 
-Log in to your [Contentstack account](https://contentstack.com/login), [create an app](/docs/developers/developer-hub/creating-an-app-in-developer-hub/) in the Developer Hub and follow the steps below to host your app:
+Log in to your [Contentstack account](https://contentstack.com/login), [create an app](/docs/developer-hub/creating-an-app-in-developer-hub/) in the Developer Hub and follow the steps below to host your app:
 - Navigate to the app you created. In the left navigation panel, you will find the icon for **Developer Hub**. Click the icon to navigate to Developer Hub.
 - You will be directed to the app dashboard where you will see all apps created so far. Select an app to get started.
 - In the left navigation panel, click the **Hosting **tab.

@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Azure ChatGPT
 description: Azure ChatGPT connector documentation for generating chat responses, prompt responses, and translating entry data in Automate.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/azure-chatgpt
+url: https://www.contentstack.com/docs/agent-os/azure-chatgpt
 product: Contentstack Automate
 doc_type: connector-guide
 audience:

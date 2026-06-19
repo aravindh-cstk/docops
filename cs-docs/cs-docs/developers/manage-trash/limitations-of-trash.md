@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Limitations of Trash"
 description: Limitations of Trash
-url: https://www.contentstack.com/docs/developers/manage-trash/limitations-of-trash
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-trash
 product: Set Up Your Project
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Preview Content on Different Environments"
 description: Preview content in a specific environment (development, staging, production) using Contentstack Live Preview.
-url: https://www.contentstack.com/docs/content-managers/author-content/preview-content-on-different-environments
+url: https://www.contentstack.com/docs/headless-cms/preview-content-on-different-environments
 product: Contentstack
 doc_type: how-to
 audience:

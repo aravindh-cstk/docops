@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Customer Entitlements"
 description: Organization settings information related to number of users, usage, and analytics, including user limits, inactive user removal, and usage analytics filters.
-url: https://www.contentstack.com/docs/developers/organization/customer-entitlements
+url: https://www.contentstack.com/docs/administration/customer-entitlements
 product: Contentstack
 doc_type: guide
 audience:

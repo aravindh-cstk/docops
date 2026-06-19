@@ -1,7 +1,7 @@
 ---
 title: "[Architecture Diagrams] - Static Website"
 description: Detailed architecture diagram and explanation for building a static website with Contentstack and related SaaS and deployment services.
-url: https://www.contentstack.com/docs/developers/architecture-diagrams/static-website-detailed-architecture
+url: https://www.contentstack.com/docs/headless-cms/static-website-detailed-architecture
 product: Contentstack
 doc_type: architecture-diagram
 audience:

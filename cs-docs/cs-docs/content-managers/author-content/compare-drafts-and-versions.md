@@ -1,7 +1,7 @@
 ---
 title: "[Drafts and Auto Save] - Compare Drafts and Versions"
 description: Compare Drafts and Versions
-url: https://www.contentstack.com/docs/content-managers/author-content/compare-drafts-and-versions
+url: https://www.contentstack.com/docs/headless-cms/compare-drafts-and-versions
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Release Preview App Installation Guide"
 description: Release Preview App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/release-preview
+url: https://www.contentstack.com/docs/marketplace/release-preview
 product: Contentstack
 doc_type: marketplace-guide
 audience:

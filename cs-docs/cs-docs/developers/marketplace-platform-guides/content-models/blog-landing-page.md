@@ -1,7 +1,7 @@
 ---
 title: "[Content Models] - Blog Landing Page"
 description: Blog Landing Page content model schema, including Blog Landing Page and Author content types plus SEO and Social Share global fields.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models/blog-landing-page
+url: https://www.contentstack.com/docs/marketplace-platform-guides/content-models/blog-landing-page
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:
@@ -62,7 +62,7 @@ The Blog Landing Page Content Model contains the [Content Types](/docs/developer
 - **Picture**: This is a [File](/docs/developers/create-content-types/file/) field that allows you to choose the author's photograph. Ideally, the image file for the picture should be less than 100KB in a PNG format.
 - **Bio**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox) field to add a short description about the author.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Blog Landing Page Content Modeling](/docs/developers/content-modeling/blog-landing-page/) documentation to understand how to model the "Blog Landing" page.
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Blog Landing Page Content Modeling](/docs/developers/content-modeling/blog-landing-page/) documentation to understand how to model the "Blog Landing" page.
 
 After publishing the entry, you can view the Blog Landing Page on your website.
 
@@ -75,7 +75,7 @@ The Blog Landing Page Content Model contains the **Blog Landing Page** and **Aut
 Yes. The **Related Post** field is a reference field that refers to the **Blog Landing Page** content type, and you can refer to multiple blog articles.
 
 ### How can I import the prebuilt Content Models?
-You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
+You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
 
 ### What do I need before using this content model?
 You need a [Contentstack account](https://www.contentstack.com/login/) and access to the Contentstack Organization/Stack as the Owner/Admin or Stack Developer.

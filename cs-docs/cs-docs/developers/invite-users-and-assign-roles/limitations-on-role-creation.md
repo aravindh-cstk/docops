@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Limitations on Role Creation"
 description: Limitations on Role Creation
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/limitations-on-role-creation
+url: https://www.contentstack.com/docs/headless-cms/limitations-on-role-creation
 product: Set Up Your Project
 doc_type: guide
 audience:

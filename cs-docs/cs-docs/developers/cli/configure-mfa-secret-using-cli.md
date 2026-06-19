@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Configure MFA Secret Using CLI"
 description: Configure or remove the MFA secret used by the Contentstack CLI to generate one-time passwords (OTP).
-url: https://www.contentstack.com/docs/developers/cli/configure-mfa-secret-using-cli
+url: https://www.contentstack.com/docs/headless-cms/configure-mfa-secret-using-cli
 product: Contentstack
 doc_type: cli-guide
 audience:

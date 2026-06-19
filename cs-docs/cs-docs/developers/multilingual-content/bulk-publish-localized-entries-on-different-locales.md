@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Bulk Publish Localized Entries on Different Locales"
 description: Bulk Publish Localized Entries on Different Locales
-url: https://www.contentstack.com/docs/developers/multilingual-content/bulk-publish-localized-entries-on-different-locales
+url: https://www.contentstack.com/docs/headless-cms/bulk-publish-localized-entries-on-different-locales
 product: Contentstack
 doc_type: guide
 audience:

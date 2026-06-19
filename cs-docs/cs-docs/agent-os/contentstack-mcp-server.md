@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Contentstack MCP Server
 description: Documentation for the Contentstack MCP Server, including key capabilities, prerequisites, authentication, and configuration for Claude and Cursor.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/contentstack-mcp-server
+url: https://www.contentstack.com/docs/agent-os/contentstack-mcp-server
 product: Contentstack
 doc_type: automation-hub-guide
 audience:

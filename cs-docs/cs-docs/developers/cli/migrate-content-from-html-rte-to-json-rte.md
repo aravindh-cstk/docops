@@ -1,7 +1,7 @@
 ---
 title: "[CLI] - Migrate Content from HTML RTE to JSON RTE using CLI"
 description: Migrate content from HTML Rich Text Editor (RTE) fields to JSON Rich Text Editor (RTE) fields using Contentstack CLI commands, either via a config file or flags.
-url: https://www.contentstack.com/docs/developers/cli/migrate-content-from-html-rte-to-json-rte
+url: https://www.contentstack.com/docs/headless-cms/migrate-content-from-html-rte-to-json-rte
 product: Contentstack
 doc_type: cli-guide
 audience:

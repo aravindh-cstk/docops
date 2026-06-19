@@ -1,7 +1,7 @@
 ---
 title: [Author Content>Create and Manage Content] - Copy an Entry
 description: Learn how to copy entries in Contentstack to reuse content efficiently. Duplicate current locale or all localized entries with auto-updated unique fields.
-url: https://www.contentstack.com/docs/content-managers/author-content/copy-an-entry
+url: https://www.contentstack.com/docs/headless-cms/copy-an-entry
 product: Contentstack
 doc_type: documentation
 audience:

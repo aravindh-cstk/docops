@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - Understanding How Publishing Works with Entry Variants"
 description: How publishing interacts with entry variants, including independent, environment-specific, and language-specific publishing behaviors and scenarios.
-url: https://www.contentstack.com/docs/content-managers/entry-variants/understanding-how-publishing-works-with-entry-variants
+url: https://www.contentstack.com/docs/headless-cms/understanding-how-publishing-works-with-entry-variants
 product: Contentstack
 doc_type: guide
 audience:

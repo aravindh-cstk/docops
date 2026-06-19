@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Marketplace DAM App Boilerplate"
 description: Marketplace DAM App Boilerplate guide for building a DAM (Digital Asset Management) Marketplace app using the Marketplace DAM App Boilerplate.
-url: https://www.contentstack.com/docs/developers/developer-hub/marketplace-dam-app-boilerplate
+url: https://www.contentstack.com/docs/developer-hub/marketplace-dam-app-boilerplate
 product: Contentstack
 doc_type: guide
 audience:
@@ -16,7 +16,7 @@ This page explains how to build a DAM (Digital Asset Management) Marketplace app
 
 ## Marketplace DAM App Boilerplate
 
-A boilerplate streamlines your workflow with pre-configured templates, ensuring rapid development and seamless integration within the [Contentstack's Developer Hub](/docs/developers/developer-hub). It elevates digital asset management capabilities and enhances content delivery across diverse platforms.
+A boilerplate streamlines your workflow with pre-configured templates, ensuring rapid development and seamless integration within the [Contentstack's Developer Hub](/docs/developer-hub). It elevates digital asset management capabilities and enhances content delivery across diverse platforms.
 
 They can define project-level elements or standard methods for one or more projects.
 
@@ -24,7 +24,7 @@ The following guide shows how to build a DAM (Digital Asset Management) Marketpl
 
 ## Why should you use the Marketplace DAM App Boilerplate?
 
-- The DAM app boilerplate provides a standard code structure for all the required [UI locations](/docs/developers/developer-hub/about-ui-locations) of a DAM app. You can quickly start developing the app by changing the `root_config` files as needed for the third-party DAM application.
+- The DAM app boilerplate provides a standard code structure for all the required [UI locations](/docs/developer-hub/about-ui-locations) of a DAM app. You can quickly start developing the app by changing the `root_config` files as needed for the third-party DAM application.
 - Creating an application is quick since you only need to modify the required functions in `root_config` for your UI locations to work.
 - We have built a boilerplate that incorporates all the best practices you can use while building your application in Contentstack.
 - With this boilerplate, you can save a considerable amount of development time when building a third-party DAM Application.
@@ -163,7 +163,7 @@ To use your application, you need to set it up in Contentstack. To do so, perfor
   - **Save in Entry** [Mandatory]: If you select the **Custom Fields** option, you can select the structure of the data you want to save in the entry. If the **All Fields** option is selected, you might be able to add limited products in the custom field depending on the size of the data (Refer to the [Custom Fields Limitations](/docs/developers/create-custom-fields/limitations-of-custom-fields) documentation for more details).
 - Click the **Save** button and then click **Open Stack** to start using the application.
 
-**Additional Resource**: To learn more, refer to the [App Configuration](/docs/developers/developer-hub/app-config-location) document.
+**Additional Resource**: To learn more, refer to the [App Configuration](/docs/developer-hub/app-config-location) document.
 
 Having the basic DAM app setup ready, you can now update `root_config` files in the UI directories.
 

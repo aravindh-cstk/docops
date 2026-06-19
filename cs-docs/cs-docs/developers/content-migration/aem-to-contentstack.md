@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - AEM to Contentstack"
 description: Guide for using the Contentstack Migration Framework to migrate content from AEM to Contentstack.
-url: https://www.contentstack.com/docs/developers/content-migration/aem-to-contentstack
+url: https://www.contentstack.com/docs/headless-cms/aem-to-contentstack
 product: Contentstack
 doc_type: guide
 audience:

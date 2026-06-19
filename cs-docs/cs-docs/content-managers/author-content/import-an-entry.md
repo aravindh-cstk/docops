@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Import an Entry"
 description: Importing an entry in Contentstack by uploading a JSON file, including steps, notes, warnings, and API reference.
-url: https://www.contentstack.com/docs/content-managers/author-content/import-an-entry
+url: https://www.contentstack.com/docs/headless-cms/import-an-entry
 product: Contentstack
 doc_type: how-to
 audience:

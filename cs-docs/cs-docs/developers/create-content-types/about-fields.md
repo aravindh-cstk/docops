@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Fields"
 description: About Fields
-url: https://www.contentstack.com/docs/developers/create-content-types/about-fields
+url: https://www.contentstack.com/docs/headless-cms/about-fields
 product: Contentstack
 doc_type: article
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Restore a Deleted Term"
 description: Restore a deleted taxonomy term from Trash and filter deleted terms in Contentstack.
-url: https://www.contentstack.com/docs/developers/manage-trash/restore-a-deleted-term
+url: https://www.contentstack.com/docs/headless-cms/restore-a-deleted-term
 product: Contentstack
 doc_type: how-to
 audience:

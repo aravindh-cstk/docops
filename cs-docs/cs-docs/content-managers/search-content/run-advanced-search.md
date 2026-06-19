@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Run Advanced Search"
 description: Run Advanced Search in Contentstack using conditions, queries, and nested conditions.
-url: https://www.contentstack.com/docs/content-managers/search-content/run-advanced-search
+url: https://www.contentstack.com/docs/headless-cms/run-advanced-search
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Star Ratings App Installation Guide"
 description: Star Ratings App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/star-ratings
+url: https://www.contentstack.com/docs/marketplace/star-ratings
 product: Contentstack
 doc_type: marketplace-guide
 audience:

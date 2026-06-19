@@ -1,7 +1,7 @@
 ---
 title: "[Content Models] - Product Listing Page"
 description: Product Listing Page content model schema, prerequisites, and related content types and global fields.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models/product-listing-page
+url: https://www.contentstack.com/docs/marketplace-platform-guides/content-models/product-listing-page
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:
@@ -35,7 +35,7 @@ The Product Listing Content Model contains the [Content Types](/docs/developers/
 
 - **Title**: This is a [Title](/docs/developers/create-content-types/title) field that defines the title of the Product Listing Page entry. This is a mandatory field and must be unique.
 - **URL**: This is a [URL](/docs/developers/create-content-types/url/) field that adds the redirection URL of the Product Listing page. This is a mandatory field.
-- **Page Components**: This is a [Modular Block](/docs/developers/create-content-types/modular-blocks/) field containing three Modular Blocks. Let’s discuss in detail.**Hero Banner**: This is the first block that includes the following:**Hero Banner**: This is a [Reference](/docs/developers/create-content-types/reference) field that refers to the [Hero Banner](/docs/developers/marketplace-platform-guides/content-models/hero-banner#schema-for-hero-banner-content-type) content type.
+- **Page Components**: This is a [Modular Block](/docs/developers/create-content-types/modular-blocks/) field containing three Modular Blocks. Let’s discuss in detail.**Hero Banner**: This is the first block that includes the following:**Hero Banner**: This is a [Reference](/docs/developers/create-content-types/reference) field that refers to the [Hero Banner](/docs/marketplace-platform-guides/content-models/hero-banner#schema-for-hero-banner-content-type) content type.
 - **Product**: This is the second block that includes the following:**Product**: This is a [Reference](/docs/developers/create-content-types/reference) field that refers to the [Product](#schema-for-product-content-type) content type. There can be multiple products.
 - **Widget**: This is the third block that includes the following:**Title H2**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) field that defines the title of this widget section.
 - **Related Products**: This is a [Reference](/docs/developers/create-content-types/reference#self-referencing) field that refers to the [Product Listing Page](#schema-for-product-listing-page-content-type) content type.
@@ -53,7 +53,7 @@ The Product Listing Content Model contains the [Content Types](/docs/developers/
 - **Price**: This is a [Number](/docs/developers/create-content-types/number) field that stores the price of the product.
 - **Call To Action**: This is a [Link](/docs/developers/create-content-types/link/) field that stores button name as a title and URL for submitting product details.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Product Listing Page Content Modeling](/docs/developers/content-modeling/product-listing-page/) documentation to understand how to model the "Product Listing" page.
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Product Listing Page Content Modeling](/docs/developers/content-modeling/product-listing-page/) documentation to understand how to model the "Product Listing" page.
 
 After publishing the entry, you can view the product listing on your website.
 

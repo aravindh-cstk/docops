@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Introduction to Contentstack Starters"
 description: Introduction to Contentstack Starters in the Contentstack Marketplace, including supported technologies and hosting options.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/starters
+url: https://www.contentstack.com/docs/marketplace/starters
 product: Contentstack
 doc_type: marketplace-guide
 audience:

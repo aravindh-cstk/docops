@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Videos and Social Embeds"
 description: How to integrate videos and social embeds in Contentstack’s JSON Rich Text Editor (RTE).
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/videos-and-social-embeds
+url: https://www.contentstack.com/docs/headless-cms/videos-and-social-embeds
 product: Contentstack
 doc_type: guide
 audience:

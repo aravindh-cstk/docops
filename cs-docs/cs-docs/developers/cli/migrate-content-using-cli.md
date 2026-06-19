@@ -1,7 +1,7 @@
 ---
 title: Contentstack Command-line Interface (CLI) - Migrate Content using CLI
 description: Migrate content between Contentstack stacks using the Contentstack CLI.
-url: https://www.contentstack.com/docs/developers/cli/migrate-content-using-cli
+url: https://www.contentstack.com/docs/headless-cms/migrate-content-using-cli
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Embed Entries or Assets"
 description: Embed entries and assets directly within the JSON Rich Text Editor field, including inline, block, and hyperlink embed types.
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/embed-entries-or-assets
+url: https://www.contentstack.com/docs/headless-cms/embed-entries-or-assets
 product: Contentstack
 doc_type: guide
 audience:

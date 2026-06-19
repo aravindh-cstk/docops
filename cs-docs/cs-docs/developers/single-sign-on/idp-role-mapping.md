@@ -1,7 +1,7 @@
 ---
 title: "[Security Management] - IdP Role Mapping"
 description: Assign Contentstack roles to users based on IdP group/role mappings for SSO-enabled organizations.
-url: https://www.contentstack.com/docs/developers/single-sign-on/idp-role-mapping
+url: https://www.contentstack.com/docs/administration/idp-role-mapping
 product: Contentstack
 doc_type: security-management
 audience:

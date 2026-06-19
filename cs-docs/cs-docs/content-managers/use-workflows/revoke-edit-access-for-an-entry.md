@@ -1,7 +1,7 @@
 ---
 title: "[Use Workflows] - Revoke Edit Access for an Entry"
 description: Instructions for revoking edit access for users on an entry in a specific workflow stage.
-url: https://www.contentstack.com/docs/content-managers/use-workflows/revoke-edit-access-for-an-entry
+url: https://www.contentstack.com/docs/headless-cms/revoke-edit-access-for-an-entry
 product: Contentstack
 doc_type: how-to
 audience:

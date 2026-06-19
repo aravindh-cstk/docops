@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Box Trigger"
 description: Documentation for setting up the Box Trigger in Automation Hub connectors.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/box-trigger
+url: https://www.contentstack.com/docs/agent-os/box-trigger
 product: Automation Hub
 doc_type: connector-guide
 audience:

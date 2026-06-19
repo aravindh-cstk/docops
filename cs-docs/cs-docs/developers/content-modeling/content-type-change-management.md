@@ -1,7 +1,7 @@
 ---
 title: "[Content Modeling] - Content Type Change Management"
 description: Guidelines and best practices for safely modifying content type schemas after entries have been created and published, including adding, editing, deleting, and restoring fields.
-url: https://www.contentstack.com/docs/developers/content-modeling/content-type-change-management
+url: https://www.contentstack.com/docs/headless-cms/content-type-change-management
 product: Contentstack
 doc_type: guide
 audience:

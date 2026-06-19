@@ -1,7 +1,7 @@
 ---
 title: "[Use Workflows] - Entry Default Workflow Stage"
 description: Documentation for understanding the default workflow stage assigned to a newly created entry and how assignments and due dates work.
-url: https://www.contentstack.com/docs/content-managers/use-workflows/entry-default-workflow-stage
+url: https://www.contentstack.com/docs/headless-cms/entry-default-workflow-stage
 product: Contentstack
 doc_type: guide
 audience:

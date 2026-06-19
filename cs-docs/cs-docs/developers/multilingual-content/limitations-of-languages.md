@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Limitations of Languages"
 description: Limitations and validation rules for language names and language codes.
-url: https://www.contentstack.com/docs/developers/multilingual-content/limitations-of-languages
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-languages
 product: Set Up Your Project
 doc_type: reference
 audience:

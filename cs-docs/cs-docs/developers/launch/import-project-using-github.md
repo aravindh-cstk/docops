@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Create a Project Using GitHub"
 description: Create a project in Contentstack Launch by connecting a GitHub account and importing from a Git repository, including prerequisites, deployment steps, deletion, and troubleshooting.
-url: https://www.contentstack.com/docs/developers/launch/import-project-using-github
+url: https://www.contentstack.com/docs/launch/import-project-using-github
 product: Contentstack Launch
 doc_type: how-to
 audience:
@@ -75,7 +75,7 @@ If you are experiencing connection issues or errors with your GitHub integration
 - Click [here](https://github.com/settings/installations) to navigate to the **Applications** page in GitHub and click **Configure** next to the app that must be uninstalled.
 - Scroll down to the bottom of the page and click **Uninstall** to remove the GitHub app.
 - Navigate back to Contentstack Launch.**Note: **It is recommended to reconnect GitHub using a different browser. For example, if you are currently using Google Chrome, try Firefox, Safari, or another browser to perform the reconnection steps.
-- Follow the instructions again to [Connect your GitHub Account to Launch and Deploy a Project](/docs/developers/launch/import-project-using-github#connect-your-github-account-to-launch-and-deploy-a-project).
+- Follow the instructions again to [Connect your GitHub Account to Launch and Deploy a Project](/docs/launch/import-project-using-github#connect-your-github-account-to-launch-and-deploy-a-project).
 
 ## Common questions
 

@@ -1,7 +1,7 @@
 ---
 title: "[Get Started with CS] - Build and Integrate with Contentstack"
 description: Build and Integrate with Contentstack
-url: https://www.contentstack.com/docs/get-started/build-and-integrate-with-contentstack
+url: https://www.contentstack.com/docs/headless-cms/build-and-integrate-with-contentstack
 product: Contentstack
 doc_type: get-started
 audience:

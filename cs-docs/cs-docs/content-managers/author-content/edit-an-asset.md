@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Edit an Asset"
 description: How to edit an asset in Contentstack, including updating metadata, replacing files, and understanding how updates reflect across fields and editors.
-url: https://www.contentstack.com/docs/content-managers/author-content/edit-an-asset
+url: https://www.contentstack.com/docs/headless-cms/edit-an-asset
 product: Contentstack
 doc_type: how-to
 audience:

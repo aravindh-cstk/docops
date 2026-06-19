@@ -1,7 +1,7 @@
 ---
 title: "[Drafts and Auto Save] - Limitations for Drafts and Auto Save"
 description: Limitations for Drafts and Auto Save
-url: https://www.contentstack.com/docs/content-managers/author-content/limitations-for-drafts-and-auto-save
+url: https://www.contentstack.com/docs/headless-cms/limitations-for-drafts-and-auto-save
 product: Contentstack
 doc_type: reference
 audience:

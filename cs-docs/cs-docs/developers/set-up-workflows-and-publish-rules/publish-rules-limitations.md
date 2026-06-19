@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Publish Rules Limitations"
 description: Publish Rules Limitations
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/publish-rules-limitations
+url: https://www.contentstack.com/docs/headless-cms/publish-rules-limitations
 product: Set Up Your Project
 doc_type: reference
 audience:

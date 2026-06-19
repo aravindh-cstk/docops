@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Save Your Views"
 description: Save search settings as views in Contentstack for quick access later.
-url: https://www.contentstack.com/docs/content-managers/search-content/save-your-views
+url: https://www.contentstack.com/docs/headless-cms/save-your-views
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Timeline] - Preview API"
 description: Comprehensive guide to Contentstack's Preview API for retrieving content for previewing, used by Live Preview and Timeline.
-url: https://www.contentstack.com/docs/developers/set-up-timeline/preview-api
+url: https://www.contentstack.com/docs/headless-cms/preview-api
 product: Contentstack
 doc_type: api-guide
 audience:

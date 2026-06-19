@@ -1,7 +1,7 @@
 ---
 title: "[Synchronize Data With Datasync] - Limitations of Contentstack DataSync"
 description: Limitations of Contentstack DataSync.
-url: https://www.contentstack.com/docs/developers/develop-apps-with-datasync/limitations-of-contentstack-datasync
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-contentstack-datasync
 product: Contentstack
 doc_type: reference
 audience:

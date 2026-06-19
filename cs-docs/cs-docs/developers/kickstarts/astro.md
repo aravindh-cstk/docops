@@ -1,7 +1,7 @@
 ---
 title: "[Kickstarts] - Astro"
 uid: blta593ee4c7b87ce94
-url: /developers/kickstarts/astro
+url: https://www.contentstack.com/docs/headless-cms/astro
 contentstack:
   environment: production
   assets: []

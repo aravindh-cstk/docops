@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Render JSON RTE content using JSON RTE Serializer"
 description: Render JSON RTE content using JSON RTE Serializer
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/render-json-rte-content-using-json-rte-serializer
+url: https://www.contentstack.com/docs/headless-cms/render-json-rte-content-using-json-rte-serializer
 product: Contentstack
 doc_type: guide
 audience:

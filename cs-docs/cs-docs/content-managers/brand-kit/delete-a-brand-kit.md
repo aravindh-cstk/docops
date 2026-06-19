@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Delete a Brand Kit"
 description: Steps required to delete a Brand Kit in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/delete-a-brand-kit
+url: https://www.contentstack.com/docs/brand-kit/delete-a-brand-kit
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Publish Content] - View Publish Status of Entries/Assets in Publish Queue"
 uid: blte18497431b654680
-url: /content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue
+url: https://www.contentstack.com/docs/headless-cms/view-publish-status-of-entries-assets-in-publish-queue
 contentstack:
   environment: production
   assets: []

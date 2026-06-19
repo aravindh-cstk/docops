@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - SendGrid
 description: Set up the SendGrid action connector to send email using an automation action step.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/sendgrid
+url: https://www.contentstack.com/docs/agent-os/sendgrid
 product: Automation Hub
 doc_type: connector-guide
 audience:

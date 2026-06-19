@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Browsing Apps and Guides"
 description: Browsing Apps and Guides in the Contentstack Marketplace.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/browsing-apps-and-guides
+url: https://www.contentstack.com/docs/marketplace/browsing-apps-and-guides
 product: Contentstack
 doc_type: marketplace-guide
 audience:

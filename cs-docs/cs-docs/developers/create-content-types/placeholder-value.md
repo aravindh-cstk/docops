@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Placeholder Value"
 description: Placeholder Value
-url: https://www.contentstack.com/docs/developers/create-content-types/placeholder-value
+url: https://www.contentstack.com/docs/headless-cms/placeholder-value
 product: Set Up Your Project
 doc_type: reference
 audience:

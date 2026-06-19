@@ -1,7 +1,7 @@
 ---
 title: "[JSON Rich Text Editor] - Schema of JSON Rich Text Editor"
 description: Schema of JSON Rich Text Editor
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/schema-of-json-rich-text-editor
+url: https://www.contentstack.com/docs/headless-cms/schema-of-json-rich-text-editor
 product: JSON Rich Text Editor
 doc_type: reference
 audience:

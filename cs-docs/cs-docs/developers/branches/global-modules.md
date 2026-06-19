@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Global Modules"
 description: Global modules available throughout the stack irrespective of which branch you are working on.
-url: https://www.contentstack.com/docs/developers/branches/global-modules
+url: https://www.contentstack.com/docs/headless-cms/global-modules
 product: Branches
 doc_type: guide
 audience:

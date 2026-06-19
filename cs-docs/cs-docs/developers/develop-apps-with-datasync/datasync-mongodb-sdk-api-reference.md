@@ -1,7 +1,7 @@
 ---
 title: Synchronize Data With Datasync - DataSync MongoDB SDK API Reference
 description: DataSync MongoDB SDK API Reference
-url: https://www.contentstack.com/docs/developers/develop-apps-with-datasync/datasync-mongodb-sdk-api-reference
+url: https://www.contentstack.com/docs/headless-cms/datasync-mongodb-sdk-api-reference
 product: DataSync
 doc_type: api-reference
 audience:

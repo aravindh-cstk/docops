@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Bulk Publish Localized Entry Versions"
 description: Bulk publish multiple localized and unlocalized versions of an entry from the Publish modal in the master language version.
-url: https://www.contentstack.com/docs/content-managers/author-content/bulk-publish-localized-entry-versions
+url: https://www.contentstack.com/docs/headless-cms/bulk-publish-localized-entry-versions
 product: Contentstack
 doc_type: how-to
 audience:

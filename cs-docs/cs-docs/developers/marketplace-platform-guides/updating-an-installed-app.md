@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Updating an Installed App"
 description: Steps to update an installed app from the Contentstack Marketplace.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/updating-an-installed-app
+url: https://www.contentstack.com/docs/marketplace/updating-an-installed-app
 product: Contentstack
 doc_type: marketplace-guide
 audience:

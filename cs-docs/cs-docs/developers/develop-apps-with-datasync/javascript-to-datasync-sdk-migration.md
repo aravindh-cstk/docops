@@ -1,7 +1,7 @@
 ---
 title: "[Synchronize Data With Datasync] - JavaScript to DataSync SDK Migration"
 description: This guide will give you detailed information about how to migrate from contentstack-javascript to DataSync.
-url: https://www.contentstack.com/docs/developers/develop-apps-with-datasync/javascript-to-datasync-sdk-migration
+url: https://www.contentstack.com/docs/headless-cms/javascript-to-datasync-sdk-migration
 product: Contentstack DataSync
 doc_type: migration-guide
 audience:

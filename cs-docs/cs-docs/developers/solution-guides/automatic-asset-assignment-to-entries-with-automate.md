@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - Automatic Asset Assignment to Entries with Automate"
 description: Automatic Asset Assignment to Entries with Automate
-url: https://www.contentstack.com/docs/developers/solution-guides/automatic-asset-assignment-to-entries-with-automate
+url: https://www.contentstack.com/docs/headless-cms/automatic-asset-assignment-to-entries-with-automate
 product: Contentstack
 doc_type: solution-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Installed Apps"
 description: Information about viewing installed apps, permissions, and managing configuration, UI locations, and webhooks.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/installed-apps
+url: https://www.contentstack.com/docs/marketplace/installed-apps
 product: Marketplace
 doc_type: guide
 audience:

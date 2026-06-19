@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Term Localization"
 description: Term Localization allows you to localize individual taxonomy terms for each locale without duplicating or restructuring the taxonomy.
-url: https://www.contentstack.com/docs/developers/taxonomy/term-localization
+url: https://www.contentstack.com/docs/headless-cms/term-localization
 product: Contentstack
 doc_type: guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Mark a Task as Complete"
 description: How to mark a task as complete in the Tasks section and what actions are required for different task types.
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/mark-a-task-as-complete
+url: https://www.contentstack.com/docs/headless-cms/mark-a-task-as-complete
 product: Set Up Your Project
 doc_type: guide
 audience:

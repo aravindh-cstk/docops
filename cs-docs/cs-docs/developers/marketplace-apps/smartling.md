@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Smartling App Installation Guide"
 description: Smartling App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/smartling
+url: https://www.contentstack.com/docs/marketplace/smartling
 product: Contentstack
 doc_type: marketplace-guide
 audience:

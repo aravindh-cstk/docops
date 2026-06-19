@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Localization"
 description: About Localization in multilingual content, including how localization breaks inheritance from fallback language and creates an independent entry.
-url: https://www.contentstack.com/docs/developers/multilingual-content/about-localization
+url: https://www.contentstack.com/docs/headless-cms/about-localization
 product: Multilingual Content
 doc_type: concept
 audience:

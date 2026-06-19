@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - About Marketplace"
 description: About Marketplace
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/about-marketplace
+url: https://www.contentstack.com/docs/marketplace/about-marketplace
 product: Contentstack
 doc_type: marketplace-guide
 audience:

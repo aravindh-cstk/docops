@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Google PubSub"
 description: Set up the Google PubSub action connector to publish data to a topic.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/google-pubsub
+url: https://www.contentstack.com/docs/agent-os/google-pubsub
 product: Automation Hub
 doc_type: connector-guide
 audience:

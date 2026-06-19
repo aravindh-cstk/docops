@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Edit a Webhook"
 description: Edit an existing webhook in Contentstack.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/edit-a-webhook
+url: https://www.contentstack.com/docs/headless-cms/edit-a-webhook
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Remove a User"
 description: Remove a user from a stack via the Contentstack UI or via API (Unshare a stack).
-url: https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/remove-a-user
+url: https://www.contentstack.com/docs/headless-cms/remove-a-user
 product: Contentstack
 doc_type: how-to
 audience:

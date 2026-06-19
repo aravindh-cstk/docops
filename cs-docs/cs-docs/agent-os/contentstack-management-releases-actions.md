@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Contentstack Management - Releases Actions"
 description: Contentstack Management - Releases Actions
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-management-releases-actions
+url: https://www.contentstack.com/docs/agent-os/contentstack-management-releases-actions
 product: Contentstack
 doc_type: automation-hub-connector
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Delete an Asset Folder"
 description: Instructions for deleting an asset folder in Contentstack and reference for deleting via API.
-url: https://www.contentstack.com/docs/content-managers/author-content/delete-a-folder
+url: https://www.contentstack.com/docs/headless-cms/delete-a-folder
 product: Contentstack
 doc_type: how-to
 audience:

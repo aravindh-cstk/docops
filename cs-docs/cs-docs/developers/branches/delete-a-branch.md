@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Delete a Branch"
 description: Documentation for deleting a branch in Contentstack.
-url: https://www.contentstack.com/docs/developers/branches/delete-a-branch
+url: https://www.contentstack.com/docs/headless-cms/delete-a-branch
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - Contentful to Contentstack"
 description: Guide for using the Contentstack Migration Framework to migrate content from Contentful to Contentstack.
-url: https://www.contentstack.com/docs/developers/content-migration/contentful-to-contentstack
+url: https://www.contentstack.com/docs/headless-cms/contentful-to-contentstack
 product: Contentstack
 doc_type: guide
 audience:

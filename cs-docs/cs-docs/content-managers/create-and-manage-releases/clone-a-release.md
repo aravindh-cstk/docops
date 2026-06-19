@@ -1,7 +1,7 @@
 ---
 title: "[Create and Manage Releases NEW] - Clone a Release"
 description: Clone a release to create a duplicate of an existing release along with all its items.
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/clone-a-release
+url: https://www.contentstack.com/docs/headless-cms/clone-a-release
 product: Contentstack
 doc_type: how-to
 audience:

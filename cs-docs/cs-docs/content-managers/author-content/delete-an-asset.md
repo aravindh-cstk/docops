@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Delete an Asset"
 description: Instructions for deleting an asset in Contentstack, including UI steps, retention period notes, and API reference.
-url: https://www.contentstack.com/docs/content-managers/author-content/delete-an-asset
+url: https://www.contentstack.com/docs/headless-cms/delete-an-asset
 product: Contentstack
 doc_type: how-to
 audience:

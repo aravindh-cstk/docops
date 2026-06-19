@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Edit a Term"
 description: Edit a term in a taxonomy and update its properties in Contentstack.
-url: https://www.contentstack.com/docs/developers/taxonomy/edit-a-term
+url: https://www.contentstack.com/docs/headless-cms/edit-a-term
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Workflows Limitations"
 description: Limitations applied to workflows, publish rules, stages, users, roles, and content types.
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/workflows-limitations
+url: https://www.contentstack.com/docs/headless-cms/workflows-limitations
 product: Set Up Your Project
 doc_type: reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Datasync SDK] - Get Started with DataSync MongoDB SDK"
 description: Get started guide for the Contentstack DataSync MongoDB SDK, including prerequisites, installation, configuration, and basic queries.
-url: https://www.contentstack.com/docs/developers/sdks/datasync-sdk/typescript/get-started-with-datasync-mongodb-sdk
+url: https://www.contentstack.com/docs/developers/sdks/datasync-sdk-mongodb/typescript/get-started-with-datasync-mongodb-sdk
 product: Contentstack DataSync
 doc_type: sdk-getting-started
 audience:

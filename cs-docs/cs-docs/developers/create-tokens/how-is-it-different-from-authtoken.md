@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - How is it different from Authtoken"
 description: Differences between Management Tokens and Authtokens, including scope, user linkage, and permissions.
-url: https://www.contentstack.com/docs/developers/create-tokens/how-is-it-different-from-authtoken
+url: https://www.contentstack.com/docs/headless-cms/how-is-it-different-from-authtoken
 product: Set Up Your Project
 doc_type: reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Validation Error Message"
 description: Validation Error Message property documentation for custom validation error messages when Validation (Regex) fails.
-url: https://www.contentstack.com/docs/developers/create-content-types/validation-error-message
+url: https://www.contentstack.com/docs/headless-cms/validation-error-message
 product: Set Up Your Project
 doc_type: reference
 audience:

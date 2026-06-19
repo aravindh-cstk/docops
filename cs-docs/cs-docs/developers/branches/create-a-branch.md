@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Create a Branch"
 description: Documentation for creating a branch in Contentstack and related API references.
-url: https://www.contentstack.com/docs/developers/branches/create-a-branch
+url: https://www.contentstack.com/docs/headless-cms/create-a-branch
 product: Contentstack
 doc_type: how-to
 audience:

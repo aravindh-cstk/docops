@@ -1,7 +1,7 @@
 ---
 title: "[Datasync SDK] - Get Started with DataSync FileSystem SDK"
 description: Get started guide for the Contentstack DataSync Filesystem SDK, including prerequisites, installation, configuration, and basic queries.
-url: https://www.contentstack.com/docs/developers/sdks/datasync-sdk/typescript/get-started-with-datasync-filesystem-sdk
+url: https://www.contentstack.com/docs/developers/sdks/datasync-sdk-filesystem/typescript/get-started-with-datasync-filesystem-sdk
 product: Contentstack
 doc_type: sdk-guide
 audience:

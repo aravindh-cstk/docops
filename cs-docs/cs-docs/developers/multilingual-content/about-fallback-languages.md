@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - About Fallback Languages"
 description: About fallback languages and how to retrieve fallback language content for published entries.
-url: https://www.contentstack.com/docs/developers/multilingual-content/about-fallback-languages
+url: https://www.contentstack.com/docs/headless-cms/about-fallback-languages
 product: Contentstack
 doc_type: concept
 audience:

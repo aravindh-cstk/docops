@@ -1,7 +1,7 @@
 ---
 title: "[Content Models] - Frequently Asked Questions"
 description: Frequently Asked Questions (FAQs) content model schema, prerequisites, and related resources.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models/faqs
+url: https://www.contentstack.com/docs/marketplace-platform-guides/content-models/faqs
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:
@@ -28,7 +28,7 @@ The FAQs Content Model contains two [Content Types](/docs/developers/create-cont
 ### Schema for FAQs Content Type
 - **Title**: The [Title](/docs/developers/create-content-types/title) field displays the title of the FAQs entry. This is a mandatory field and must be unique.
 - **URL**: The [URL](/docs/developers/create-content-types/url/) field displays the URL of the FAQs page. This is a mandatory field and must be unique.
-- **Page Components**: This [Modular Block](/docs/developers/create-content-types/modular-blocks/) field includes the following components in the webpage:**Hero Banner**: This [Modular Block](/docs/developers/create-content-types/modular-blocks/) field has the following component:**Hero Banner**: This is a [Reference Field](/docs/developers/create-content-types/reference/) that refers to the [Hero Banner](/docs/developers/marketplace-platform-guides/content-models/hero-banner#schema-for-hero-banner-content-type) content type.
+- **Page Components**: This [Modular Block](/docs/developers/create-content-types/modular-blocks/) field includes the following components in the webpage:**Hero Banner**: This [Modular Block](/docs/developers/create-content-types/modular-blocks/) field has the following component:**Hero Banner**: This is a [Reference Field](/docs/developers/create-content-types/reference/) that refers to the [Hero Banner](/docs/marketplace-platform-guides/content-models/hero-banner#schema-for-hero-banner-content-type) content type.
 - **Section With Cards**: This [Modular Block](/docs/developers/create-content-types/modular-blocks/) field contains the **Section with Cards** [Global](/docs/developers/create-content-types/global/) field which has the following components:**Section Title**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) field that displays the title of the section. This is a mandatory field and must be unique.
 - **Section Description**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox/) field to add the description of the section.
 - **Cards**: This [Group](/docs/developers/create-content-types/group/) field includes the following fields to add the question-answers to the FAQs section:**Card Title H3**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field to add the frequently asked questions about your product/business. The title is displayed as a level-three heading.
@@ -40,7 +40,7 @@ The FAQs Content Model contains two [Content Types](/docs/developers/create-cont
 - **Meta Keywords**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field to add the meta keywords of your FAQs page.
 - **Enable Search Indexing**: You can enable or disable the searches in this [Boolean](/docs/developers/create-content-types/boolean/) field.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Frequently Asked Questions Content Modeling](/docs/developers/content-modeling/faqs/) documentation to understand how to model the "Frequently Asked Questions (FAQs)" page.
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Frequently Asked Questions Content Modeling](/docs/developers/content-modeling/faqs/) documentation to understand how to model the "Frequently Asked Questions (FAQs)" page.
 
 Here’s how your FAQs page looks after you publish the entry:
 

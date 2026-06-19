@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Limitations of Bulk Operations on Entries"
 description: Limits and constraints for bulk operations on entries in Author Content.
-url: https://www.contentstack.com/docs/content-managers/author-content/limitations-of-bulk-operations-on-entries
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-bulk-operations-on-entries
 product: Contentstack
 doc_type: reference
 audience:

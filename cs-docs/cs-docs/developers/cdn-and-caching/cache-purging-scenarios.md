@@ -1,7 +1,7 @@
 ---
 title: "[CDN and Caching] - Cache Purging Scenarios"
 description: Cache purging scenarios for Contentstack CDN and caching across locales and environments.
-url: https://www.contentstack.com/docs/developers/cdn-and-caching/cache-purging-scenarios
+url: https://www.contentstack.com/docs/headless-cms/cache-purging-scenarios
 product: Contentstack
 doc_type: concept-guide
 audience:

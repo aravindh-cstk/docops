@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - HTTP Trigger"
 description: Create a webhook URL to perform HTTP GET/POST requests and trigger associated actions.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/http-trigger
+url: https://www.contentstack.com/docs/agent-os/http-trigger
 product: Automation Hub
 doc_type: connector-guide
 audience:

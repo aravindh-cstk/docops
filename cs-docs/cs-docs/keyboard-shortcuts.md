@@ -1,7 +1,7 @@
 ---
 title: "[Keyboard shortcuts] - App Keyboard Shortcuts"
 description: App Keyboard Shortcuts
-url: https://www.contentstack.com/docs/keyboard-shortcuts
+url: https://www.contentstack.com/docs/headless-cms/keyboard-shortcuts
 product: Contentstack
 doc_type: reference
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Blocking Default Launch Domains From Google Search"
 description: Blocking Default Launch Domains From Google Search
-url: https://www.contentstack.com/docs/developers/launch/blocking-default-launch-domains-from-google-search
+url: https://www.contentstack.com/docs/launch/blocking-default-launch-domains-from-google-search
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -118,7 +118,7 @@ If your site uses an external CDN (like CloudFront, Fastly, or Akamai) that prox
 - Add a custom header in your CDN configuration:  
 `X-Launch-Auth-Key: <unique-secret-value>`
 
-- Create an [Edge Function](/docs/developers/launch/edge-functions) in Launch:
+- Create an [Edge Function](/docs/launch/edge-functions) in Launch:
 
 ```
 export default async function handler(request, context) {

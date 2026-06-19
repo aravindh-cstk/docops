@@ -1,7 +1,7 @@
 ---
 title: "[Content Models] - About Us Page"
 description: About Us Page content model schema, prerequisites, and related content types and global fields.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models/about-us-page
+url: https://www.contentstack.com/docs/marketplace-platform-guides/content-models/about-us-page
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:
@@ -38,7 +38,7 @@ The About Us Page Content Model contains the [Content Types](/docs/developers/cr
 ### Schema for About Us Page Content Type
 - **Title**: This is a [Title](/docs/developers/create-content-types/title) field that defines the title of the About Us entry. This is a mandatory field and must be unique.
 - **URL**: This is a [URL](/docs/developers/create-content-types/url/) field that adds the redirection URL of the About Us page . This is also a mandatory field.
-- **Page Components**: This is a [Modular Block](/docs/developers/create-content-types/modular-blocks/) field containing six Modular Blocks. Let’s discuss in detail.**Hero Banner**: This is the first block that includes the following:**Hero Banner**: This is a [Reference](/docs/developers/create-content-types/reference) field that refers to the [Hero Banner](/docs/developers/marketplace-platform-guides/content-models/hero-banner#schema-for-hero-banner-content-type) content type.
+- **Page Components**: This is a [Modular Block](/docs/developers/create-content-types/modular-blocks/) field containing six Modular Blocks. Let’s discuss in detail.**Hero Banner**: This is the first block that includes the following:**Hero Banner**: This is a [Reference](/docs/developers/create-content-types/reference) field that refers to the [Hero Banner](/docs/marketplace-platform-guides/content-models/hero-banner#schema-for-hero-banner-content-type) content type.
 - **Section with Bucket**: This is the second block that contains **Section with Buckets** [Global](/docs/developers/create-content-types/global/) field which includes the following components:**Title H2**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) field that defines the title for the section. The H2 element defines a level-two heading.
 - **Description**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox) field that stores the description for this section.
 - **Tabular Buckets**: This is a [Boolean](/docs/developers/create-content-types/boolean/) field which describes whether the data is represented in tabular format or not.
@@ -58,7 +58,7 @@ The About Us Page Content Model contains the [Content Types](/docs/developers/cr
 - **Image**: This is a [File](/docs/developers/create-content-types/file/) field where you can add an image as per your requirement.
 - **Is Image Right Aligned?**: This is a [Boolean](/docs/developers/create-content-types/boolean/) field which specifies that the image is right-aligned or left-aligned.
 - **Team**: This is the fifth block that includes the following:**Team**: This is a [Reference](/docs/developers/create-content-types/reference) field that refers to the [Our Team](#schema-for-our-team-content-type) content type.
-- **Contact Us**: This is the sixth block that includes the following:**Contact**: This is a [Reference](/docs/developers/create-content-types/reference) field that refers to the [Contact](/docs/developers/marketplace-platform-guides/content-models/contact-us-page#schema-for-contact-content-type) content type.
+- **Contact Us**: This is the sixth block that includes the following:**Contact**: This is a [Reference](/docs/developers/create-content-types/reference) field that refers to the [Contact](/docs/marketplace-platform-guides/content-models/contact-us-page#schema-for-contact-content-type) content type.
 - **SEO**: This is the [Global](/docs/developers/create-content-types/global) field which includes the following components:**Meta Title**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field to add the meta title of your About Us Page. This should be between 120 to 160 characters.
 - **Meta Description**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox/) field to add the meta description of your About Us Page.
 - **Meta Keywords**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field to add the meta keywords of your About Us Page.
@@ -72,7 +72,7 @@ The About Us Page Content Model contains the [Content Types](/docs/developers/cr
 - **Image**: This is a [File](/docs/developers/create-content-types/file/) field that allows you to choose the photograph of an employee.
 - **Short Description**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox) field to add a short description about the employee.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [About Us Page Content Modeling](/docs/developers/content-modeling/about-us-page) documentation to understand how to model the "About Us" page.
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [About Us Page Content Modeling](/docs/developers/content-modeling/about-us-page) documentation to understand how to model the "About Us" page.
 
 After publishing the entry, you can view the About Us Page on your website.
 
@@ -85,7 +85,7 @@ Developers and users with access to the Contentstack Organization/Stack as the O
 It contains the [Content Types](/docs/developers/create-content-types/about-content-types/) - **About Us Page**, **Contact**, **Hero Banner**, and **Our Team**; and [Global Fields](/docs/developers/create-content-types/global/) - **SEO**, **Section**, and **Section with Buckets**.
 
 ### How can I import the prebuilt Content Models?
-You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
+You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
 
 ### What happens after publishing the entry?
 After publishing the entry, you can view the About Us Page on your website.

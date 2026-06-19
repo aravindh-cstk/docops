@@ -1,7 +1,7 @@
 ---
 title: "[Drafts and Auto Save] - Working with Drafts and Auto Save"
 description: Working with Drafts and Auto Save
-url: https://www.contentstack.com/docs/content-managers/author-content/working-with-drafts-and-auto-save
+url: https://www.contentstack.com/docs/headless-cms/working-with-drafts-and-auto-save
 product: Contentstack
 doc_type: guide
 audience:

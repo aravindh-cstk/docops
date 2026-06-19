@@ -1,7 +1,7 @@
 ---
 title: "[JSON RTE] - Basic Formatting"
 description: Essential text styles and structural formatting options available in the Contentstack JSON Rich Text Editor (RTE).
-url: https://www.contentstack.com/docs/developers/json-rich-text-editor/basic-formatting
+url: https://www.contentstack.com/docs/headless-cms/basic-formatting
 product: Contentstack
 doc_type: guide
 audience:

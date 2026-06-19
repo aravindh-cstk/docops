@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Edit a Taxonomy"
 description: Edit a taxonomy to update its name or description in Contentstack.
-url: https://www.contentstack.com/docs/developers/taxonomy/edit-a-taxonomy
+url: https://www.contentstack.com/docs/headless-cms/edit-a-taxonomy
 product: Contentstack
 doc_type: how-to
 audience:

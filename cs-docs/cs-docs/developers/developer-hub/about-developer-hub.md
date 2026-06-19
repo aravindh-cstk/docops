@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - About Developer Hub"
 description: About Developer Hub
-url: https://www.contentstack.com/docs/developers/developer-hub/about-developer-hub
+url: https://www.contentstack.com/docs/developer-hub/about-developer-hub
 product: Contentstack
 doc_type: guide
 audience:
@@ -33,7 +33,7 @@ To access Developer Hub, log in to your [Contentstack account](https://www.conte
 
 On the left-hand side primary navigation, you will find a new icon for Developer Hub (as shown below). Click the icon to go to Developer Hub.
 
-Now, let’s get started with [creating apps in Developer Hub](/docs/developers/developer-hub/creating-an-app-in-developer-hub).
+Now, let’s get started with [creating apps in Developer Hub](/docs/developer-hub/creating-an-app-in-developer-hub).
 
 ## Common questions
 

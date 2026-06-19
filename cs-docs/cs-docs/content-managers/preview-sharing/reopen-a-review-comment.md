@@ -1,7 +1,7 @@
 ---
 title: "[Preview Sharing] - Reopen a Review Comment"
 description: Reopen a review comment that has been marked as Resolved in Preview Sharing discussions.
-url: https://www.contentstack.com/docs/content-managers/preview-sharing/reopen-a-review-comment
+url: https://www.contentstack.com/docs/headless-cms/reopen-a-review-comment
 product: Preview Sharing
 doc_type: how-to
 audience:

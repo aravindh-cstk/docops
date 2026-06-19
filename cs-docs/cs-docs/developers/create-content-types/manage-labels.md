@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Manage Labels"
 description: Manage labels in Contentstack to organize and categorize your content types, including adding, editing, and deleting labels, with related API reference links.
-url: https://www.contentstack.com/docs/developers/create-content-types/manage-labels
+url: https://www.contentstack.com/docs/headless-cms/manage-labels
 product: Contentstack
 doc_type: how-to
 audience:

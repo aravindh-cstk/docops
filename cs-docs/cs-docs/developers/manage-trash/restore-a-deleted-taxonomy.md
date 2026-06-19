@@ -1,7 +1,7 @@
 ---
 title: "[Taxonomy] - Restore a Deleted Taxonomy"
 description: Restore a deleted taxonomy from the Trash and optionally restore its content type association; includes filtering deleted taxonomies.
-url: https://www.contentstack.com/docs/developers/manage-trash/restore-a-deleted-taxonomy
+url: https://www.contentstack.com/docs/headless-cms/restore-a-deleted-taxonomy
 product: Contentstack
 doc_type: how-to
 audience:

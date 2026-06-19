@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Release Tag"
 description: The Release Tag feature in the Developer Hub allows you to provide a detailed description of the updates you make to an app.
-url: https://www.contentstack.com/docs/developers/developer-hub/release-tag
+url: https://www.contentstack.com/docs/developer-hub/release-tag
 product: Contentstack
 doc_type: guide
 audience:

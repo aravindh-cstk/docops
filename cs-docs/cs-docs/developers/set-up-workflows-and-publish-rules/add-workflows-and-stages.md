@@ -1,7 +1,7 @@
 ---
 title: "[Workflows] - Add Workflows and Stages"
 description: Create workflows in Contentstack and configure workflow details, stages, transitions, permissions, superusers, and enablement.
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages
+url: https://www.contentstack.com/docs/headless-cms/add-workflows-and-stages
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Create Content Types] Import Prebuilt Content Models"
 description: Import prebuilt Content Model templates into a stack, then view and edit their schema.
-url: https://www.contentstack.com/docs/developers/create-content-types/import-prebuilt-content-models
+url: https://www.contentstack.com/docs/headless-cms/import-prebuilt-content-models
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Drafts and Auto Save] - Real-Time Collaboration in the Entry Editor"
 description: Real-Time Collaboration in the Entry Editor
-url: https://www.contentstack.com/docs/content-managers/author-content/real-time-collaboration-in-the-entry-editor
+url: https://www.contentstack.com/docs/headless-cms/real-time-collaboration-in-the-entry-editor
 product: Contentstack
 doc_type: feature-guide
 audience:

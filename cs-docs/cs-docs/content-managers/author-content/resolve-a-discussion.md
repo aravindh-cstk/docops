@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Resolve a Discussion"
 description: Resolve a discussion in Contentstack entries to keep the workspace clean and organized.
-url: https://www.contentstack.com/docs/content-managers/author-content/resolve-a-discussion
+url: https://www.contentstack.com/docs/headless-cms/resolve-a-discussion
 product: Contentstack
 doc_type: how-to
 audience:

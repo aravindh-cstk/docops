@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Basic Search"
 description: Basic Search in Contentstack for locating entries and assets within a stack.
-url: https://www.contentstack.com/docs/content-managers/search-content/basic-search
+url: https://www.contentstack.com/docs/headless-cms/basic-search
 product: Contentstack
 doc_type: guide
 audience:

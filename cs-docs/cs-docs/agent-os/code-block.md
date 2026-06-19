@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Code Block
 description: The Code Block connector lets you execute the JavaScript code and returns the expected output to assist in complex data transformation.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/code-block
+url: https://www.contentstack.com/docs/agent-os/code-block
 product: Automation Hub
 doc_type: connector-guide
 audience:

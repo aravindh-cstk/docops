@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - Manage Versions of Entry Variants"
 description: Manage versions of entry variants to track changes, compare versions, and restore previous versions in Contentstack.
-url: https://www.contentstack.com/docs/content-managers/entry-variants/manage-versions-of-entry-variants
+url: https://www.contentstack.com/docs/headless-cms/manage-versions-of-entry-variants
 product: Contentstack
 doc_type: guide
 audience:

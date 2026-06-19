@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Add a Preview Environment"
 description: Add a Preview environment and publish content to preview it before publishing to production.
-url: https://www.contentstack.com/docs/developers/set-up-environments/add-a-preview-environment
+url: https://www.contentstack.com/docs/headless-cms/add-a-preview-environment
 product: Contentstack
 doc_type: guide
 audience:

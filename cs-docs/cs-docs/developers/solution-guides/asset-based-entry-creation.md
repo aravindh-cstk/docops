@@ -1,7 +1,7 @@
 ---
 title: "[Solution Guides Articles] - Asset-based Entry Creation"
 description: Streamlines the process of creating an entry after creating a product asset.
-url: https://www.contentstack.com/docs/developers/solution-guides/asset-based-entry-creation
+url: https://www.contentstack.com/docs/headless-cms/asset-based-entry-creation
 product: Contentstack
 doc_type: solution-guide
 audience:

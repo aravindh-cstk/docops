@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Preview Content across Varied Window Sizes"
 description: Preview Content across Varied Window Sizes
-url: https://www.contentstack.com/docs/content-managers/author-content/preview-content-across-varied-window-sizes
+url: https://www.contentstack.com/docs/headless-cms/preview-content-across-varied-window-sizes
 product: Contentstack
 doc_type: how-to
 audience:

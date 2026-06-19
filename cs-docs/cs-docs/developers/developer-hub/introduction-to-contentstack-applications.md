@@ -1,7 +1,7 @@
 ---
 title: "[Developer Hub guides] - Introduction to Contentstack Applications"
 description: Introduction to Contentstack Applications, including app categories, scope levels, visibility states, and guidance on choosing between Standard and Machine to Machine apps.
-url: https://www.contentstack.com/docs/developers/developer-hub/introduction-to-contentstack-applications
+url: https://www.contentstack.com/docs/developer-hub/introduction-to-contentstack-applications
 product: Contentstack
 doc_type: developer-hub-guide
 audience:
@@ -38,10 +38,10 @@ Let's explore these concepts in more detail.
 ## Standard Applications
 
 Standard Applications are the most versatile type of application. They offer a variety of features and capabilities, including:
-- **UI Locations: **Allows you to create custom user interfaces across the platform. Learn more about all of the available UI locations [here](/docs/developers/developer-hub/about-ui-locations/).
+- **UI Locations: **Allows you to create custom user interfaces across the platform. Learn more about all of the available UI locations [here](/docs/developer-hub/about-ui-locations/).
 - **Webhooks:** Allows you to trigger actions in your application when certain events happen in Contentstack. This enables you to build logic into your application based on user interactions and events in the platform.
 - **OAuth 2.0 Integrations: **Allows you to connect your application to third-party services using OAuth 2.0, making it easy to exchange data and authenticate users.
-- **App Hosting: **Allows you to host your application's code directly in [Launch](/docs/developers/developer-hub/app-hosting#hosting-with-launch). This provides a convenient and quick way to stand up your application without having to bring your own hosting solution to the table.
+- **App Hosting: **Allows you to host your application's code directly in [Launch](/docs/developer-hub/app-hosting#hosting-with-launch). This provides a convenient and quick way to stand up your application without having to bring your own hosting solution to the table.
 
 ## Machine to Machine Applications
 

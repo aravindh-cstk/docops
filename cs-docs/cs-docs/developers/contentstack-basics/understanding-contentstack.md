@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Basics] - Understanding Contentstack"
 description: Overview of Contentstack as a headless CMS and component of a Digital Experience Platform (DXP), including key features and who should use it.
-url: https://www.contentstack.com/docs/developers/contentstack-basics/understanding-contentstack
+url: https://www.contentstack.com/docs/headless-cms/understanding-contentstack
 product: Contentstack
 doc_type: concept-overview
 audience:

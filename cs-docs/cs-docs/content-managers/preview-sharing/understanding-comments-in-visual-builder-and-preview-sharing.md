@@ -1,7 +1,7 @@
 ---
 title: "[Preview Sharing] - Understanding Comments in Visual Builder and Preview Sharing"
 description: Understanding Comments in Visual Builder and Preview Sharing
-url: https://www.contentstack.com/docs/content-managers/preview-sharing/understanding-comments-in-visual-builder-and-preview-sharing
+url: https://www.contentstack.com/docs/headless-cms/understanding-comments-in-visual-builder-and-preview-sharing
 product: Contentstack
 doc_type: concept-guide
 audience:

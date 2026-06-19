@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Deploy a Release"
 description: Deploying a Release to publish or unpublish items in a selected environment.
-url: https://www.contentstack.com/docs/developers/create-releases/deploy-a-release
+url: https://www.contentstack.com/docs/headless-cms/deploy-a-release
 product: Contentstack
 doc_type: guide
 audience:

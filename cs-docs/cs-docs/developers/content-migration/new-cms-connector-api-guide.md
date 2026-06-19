@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - New CMS Connector API Guide"
 description: Guide for extending the CMS Connector API to support new Content Management Systems (CMS) and file types.
-url: https://www.contentstack.com/docs/developers/content-migration/new-cms-connector-api-guide
+url: https://www.contentstack.com/docs/headless-cms/new-cms-connector-api-guide
 product: Content Migration
 doc_type: api-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - About Live Preview"
 description: "Overview of Contentstack Live Preview for real-time content preview while editing entries."
-url: https://www.contentstack.com/docs/content-managers/author-content/about-live-preview
+url: https://www.contentstack.com/docs/headless-cms/about-live-preview
 product: "Contentstack"
 doc_type: "concept"
 audience:

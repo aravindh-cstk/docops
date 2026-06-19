@@ -1,7 +1,7 @@
 ---
 title: "[Set up Live Preview] - Set up Live Edit Tags for Entries with REST"
 uid: blt2dca7cb81d41c9ca
-url: /developers/set-up-live-preview/set-up-live-edit-tags-for-entries-with-rest
+url: https://www.contentstack.com/docs/headless-cms/set-up-live-edit-tags-for-entries-with-rest
 contentstack:
   environment: production
   assets: []

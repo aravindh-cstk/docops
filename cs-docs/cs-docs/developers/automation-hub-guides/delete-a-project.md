@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Delete a Project"
 description: Delete a project, its automations, and connected apps from Automate.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/delete-a-project
+url: https://www.contentstack.com/docs/launch/delete-a-project
 product: Automate
 doc_type: guide
 audience:

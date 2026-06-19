@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Limitations for Visual Editor"
 description: Limitations for Visual Editor
-url: https://www.contentstack.com/docs/content-managers/visual-editor/limitations-for-visual-editor
+url: https://www.contentstack.com/docs/headless-cms/limitations-for-visual-editor
 product: Contentstack
 doc_type: guide
 audience:

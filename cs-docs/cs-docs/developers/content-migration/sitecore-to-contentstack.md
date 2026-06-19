@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - Sitecore to Contentstack"
 description: Guide for using the Contentstack Migration Framework to migrate content from Sitecore to Contentstack.
-url: https://www.contentstack.com/docs/developers/content-migration/sitecore-to-contentstack
+url: https://www.contentstack.com/docs/headless-cms/sitecore-to-contentstack
 product: Contentstack
 doc_type: guide
 audience:

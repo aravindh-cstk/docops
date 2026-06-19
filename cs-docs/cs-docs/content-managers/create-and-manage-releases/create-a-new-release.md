@@ -1,7 +1,7 @@
 ---
 title: "[Create and Manage Releases NEW] - Create a New Release"
 description: Create a new release containing entries and assets to deploy to an environment.
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/create-a-new-release
+url: https://www.contentstack.com/docs/headless-cms/create-a-new-release
 product: Contentstack
 doc_type: guide
 audience:

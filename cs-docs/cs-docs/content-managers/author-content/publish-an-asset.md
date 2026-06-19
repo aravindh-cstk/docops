@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Publish an Asset"
 description: "How to publish an asset to environments and locales in Contentstack, including scheduling and API reference."
-url: https://www.contentstack.com/docs/content-managers/author-content/publish-an-asset
+url: https://www.contentstack.com/docs/headless-cms/publish-an-asset
 product: "Contentstack"
 doc_type: "how-to"
 audience:

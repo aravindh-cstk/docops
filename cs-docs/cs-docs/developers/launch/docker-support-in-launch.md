@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Can I run a Docker container on Launch?"
 description: Documentation explaining whether Contentstack Launch supports running Docker containers.
-url: https://www.contentstack.com/docs/developers/launch/docker-support-in-launch
+url: https://www.contentstack.com/docs/launch/docker-support-in-launch
 product: Contentstack Launch
 doc_type: faq
 audience:

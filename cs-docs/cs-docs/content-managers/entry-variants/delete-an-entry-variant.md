@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - Delete an Entry Variant"
 description: Instructions for deleting an entry variant in Contentstack, including UI steps and API reference.
-url: https://www.contentstack.com/docs/content-managers/entry-variants/delete-an-entry-variant
+url: https://www.contentstack.com/docs/headless-cms/delete-an-entry-variant
 product: Contentstack
 doc_type: how-to
 audience:

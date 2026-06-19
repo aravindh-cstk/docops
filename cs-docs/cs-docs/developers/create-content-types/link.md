@@ -1,7 +1,7 @@
 ---
 title: Set Up Your Project - Link
 description: Documentation for the Link field used when creating content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/link
+url: https://www.contentstack.com/docs/headless-cms/link
 product: Contentstack
 doc_type: field-reference
 audience:

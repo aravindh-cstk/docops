@@ -1,7 +1,7 @@
 ---
 title: "[Content Migration] - Import Content into Contentstack"
 description: Import exported JSON content into Contentstack using the deprecated contentstack-import utility.
-url: https://www.contentstack.com/docs/developers/content-migration/import-content-into-contentstack
+url: https://www.contentstack.com/docs/headless-cms/import-content-into-contentstack
 product: Contentstack
 doc_type: guide
 audience:

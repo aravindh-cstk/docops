@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - Contentstack Management - Branch Alias Actions"
 description: Contentstack Management - Branch Alias Actions for Automation Hub connectors, including assigning/reassigning, deleting, and retrieving branch aliases.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-management-branch-alias-actions
+url: https://www.contentstack.com/docs/agent-os/contentstack-management-branch-alias-actions
 product: Contentstack
 doc_type: automation-hub-connector
 audience:

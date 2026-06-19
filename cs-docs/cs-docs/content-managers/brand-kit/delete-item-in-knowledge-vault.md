@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Delete Item in Knowledge Vault"
 description: Delete Item in Knowledge Vault
-url: https://www.contentstack.com/docs/content-managers/brand-kit/delete-item-in-knowledge-vault
+url: https://www.contentstack.com/docs/brand-kit/delete-item-in-knowledge-vault
 product: Contentstack
 doc_type: how-to
 audience:

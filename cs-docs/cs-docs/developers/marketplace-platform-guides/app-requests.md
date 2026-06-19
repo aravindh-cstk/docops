@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - App Requests"
 description: App Requests in the Marketplace guides and apps documentation.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/app-requests
+url: https://www.contentstack.com/docs/marketplace/app-requests
 product: Marketplace
 doc_type: guide
 audience:

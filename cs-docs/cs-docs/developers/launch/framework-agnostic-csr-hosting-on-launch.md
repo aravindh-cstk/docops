@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Launch] - Framework Agnostic CSR Hosting on Launch"
 description: Framework Agnostic CSR Hosting on Launch
-url: https://www.contentstack.com/docs/developers/launch/framework-agnostic-csr-hosting-on-launch
+url: https://www.contentstack.com/docs/launch/framework-agnostic-csr-hosting-on-launch
 product: Contentstack Launch
 doc_type: guide
 audience:
@@ -28,7 +28,7 @@ You can import CSR projects directly from your Git repositories or upload projec
 
 When setting up a new project on Launch, you are prompted to choose a Framework Preset. To enable the CSR hosting capability, select the `CSR (Client-Side Rendered)` option from the `Framework Preset` list.
 
-**Additional Resource:** Please refer to the [Quick Start Guide with Generic CSR](/docs/developers/launch/quick-start-generic-csr/) documentation for a step-by-step walkthrough to deploy a sample CSR Starter on Launch.
+**Additional Resource:** Please refer to the [Quick Start Guide with Generic CSR](/docs/launch/quick-start-generic-csr/) documentation for a step-by-step walkthrough to deploy a sample CSR Starter on Launch.
 
 ## Common questions
 
@@ -42,4 +42,4 @@ Yes, Launch is designed to host a wide range of client-side rendered application
 When setting up a new project on Launch, select the `CSR (Client-Side Rendered)` option from the `Framework Preset` list.
 
 ### Where can I find a step-by-step CSR deployment walkthrough?
-Refer to the [Quick Start Guide with Generic CSR](/docs/developers/launch/quick-start-generic-csr/) documentation for a step-by-step walkthrough to deploy a sample CSR Starter on Launch.
+Refer to the [Quick Start Guide with Generic CSR](/docs/launch/quick-start-generic-csr/) documentation for a step-by-step walkthrough to deploy a sample CSR Starter on Launch.

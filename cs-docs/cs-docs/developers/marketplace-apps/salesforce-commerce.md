@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Salesforce Commerce App Installation Guide"
 description: Salesforce Commerce App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/salesforce-commerce
+url: https://www.contentstack.com/docs/marketplace/salesforce-commerce
 product: Contentstack Marketplace
 doc_type: marketplace-app-guide
 audience:

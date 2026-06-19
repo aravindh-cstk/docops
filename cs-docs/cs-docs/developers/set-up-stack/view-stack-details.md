@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Stack] - View Stack Details"
 description: Access and manage stack details including configuration settings, API credentials (stack UID), and user permissions.
-url: https://www.contentstack.com/docs/developers/set-up-stack/view-stack-details
+url: https://www.contentstack.com/docs/headless-cms/view-stack-details
 product: Contentstack
 doc_type: guide
 audience:

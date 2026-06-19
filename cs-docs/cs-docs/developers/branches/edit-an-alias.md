@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Edit an Alias"
 description: How to edit an alias to change its name, description, or target branch in Contentstack.
-url: https://www.contentstack.com/docs/developers/branches/edit-an-alias
+url: https://www.contentstack.com/docs/headless-cms/edit-an-alias
 product: Contentstack
 doc_type: how-to
 audience:

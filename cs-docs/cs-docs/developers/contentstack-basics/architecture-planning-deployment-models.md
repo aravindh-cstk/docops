@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Basics] - Architecture Planning And Deployment Models"
 description: Determine the right deployment model for a project by choosing between PUSH publishing and PULL publishing, with guidance on infrastructure and considerations.
-url: https://www.contentstack.com/docs/developers/contentstack-basics/architecture-planning-deployment-models
+url: https://www.contentstack.com/docs/headless-cms/architecture-planning-deployment-models
 product: Contentstack
 doc_type: best-practice-guide
 audience:

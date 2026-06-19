@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - About Discussions"
 description: Discussions in Contentstack enable seamless collaboration by allowing users to share comments on specific fields within an entry.
-url: https://www.contentstack.com/docs/content-managers/author-content/about-discussions
+url: https://www.contentstack.com/docs/headless-cms/about-discussions
 product: Contentstack
 doc_type: guide
 audience:

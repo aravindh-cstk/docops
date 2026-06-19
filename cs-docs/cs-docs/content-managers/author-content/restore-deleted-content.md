@@ -1,7 +1,7 @@
 ---
 title: "[Author Content] - Restore Deleted Content"
 description: How to request restoration of deleted stacks, content types, entries, and assets in Contentstack, including required details and timelines.
-url: https://www.contentstack.com/docs/content-managers/author-content/restore-deleted-content
+url: https://www.contentstack.com/docs/headless-cms/restore-deleted-content
 product: Contentstack
 doc_type: guide
 audience:

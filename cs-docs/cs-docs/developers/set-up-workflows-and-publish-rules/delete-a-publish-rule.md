@@ -1,7 +1,7 @@
 ---
 title: "[Set up Workflows and Publish Rules] - Delete a Publish Rule"
 description: Documentation for deleting a publish rule in Contentstack, including UI steps and API reference.
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/delete-a-publish-rule
+url: https://www.contentstack.com/docs/headless-cms/delete-a-publish-rule
 product: Contentstack
 doc_type: how-to
 audience:

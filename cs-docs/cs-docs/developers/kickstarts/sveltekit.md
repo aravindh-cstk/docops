@@ -1,7 +1,7 @@
 ---
 title: "[Kickstarts] - SvelteKit"
 uid: blt52abe9429486e434
-url: /developers/kickstarts/sveltekit
+url: https://www.contentstack.com/docs/headless-cms/sveltekit
 contentstack:
   environment: production
   assets: []

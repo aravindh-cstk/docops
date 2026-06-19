@@ -1,7 +1,7 @@
 ---
 title: Automations guides and connectors - Anthropic
 description: Set up and use the Anthropic connector in Automate to generate chat responses using Claude models for text and images.
-url: https://www.contentstack.com/docs/developers/automation-hub-connectors/anthropic
+url: https://www.contentstack.com/docs/agent-os/anthropic
 product: Contentstack Automate
 doc_type: connector-guide
 audience:

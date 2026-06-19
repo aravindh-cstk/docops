@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Apps CLI Plugin"
 description: Apps CLI Plugin for Contentstack CLI to perform CRUD operations on apps in Developer Hub and manage app installation in organizations or stacks.
-url: https://www.contentstack.com/docs/developers/cli/apps-cli-plugin
+url: https://www.contentstack.com/docs/headless-cms/apps-cli-plugin
 product: Contentstack
 doc_type: cli-guide
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - App Releases"
 description: App Releases in Marketplace
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/app-releases-in-marketplace
+url: https://www.contentstack.com/docs/marketplace/app-releases-in-marketplace
 product: Contentstack
 doc_type: marketplace-guide
 audience:

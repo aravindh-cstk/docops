@@ -1,7 +1,7 @@
 ---
 title: "[Publish Rules] - About Publish Rule Components"
 description: About Publish Rule Components
-url: https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/about-publish-rule-components
+url: https://www.contentstack.com/docs/headless-cms/about-publish-rule-components
 product: Contentstack
 doc_type: concept
 audience:

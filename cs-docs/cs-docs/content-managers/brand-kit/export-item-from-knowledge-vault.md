@@ -1,7 +1,7 @@
 ---
 title: "[Brand Kit] - Export Item from Knowledge Vault"
 description: Export items from the Knowledge Vault to download a copy of the content in JSON format.
-url: https://www.contentstack.com/docs/content-managers/brand-kit/export-item-from-knowledge-vault
+url: https://www.contentstack.com/docs/brand-kit/export-item-from-knowledge-vault
 product: Contentstack
 doc_type: how-to
 audience:
@@ -23,11 +23,11 @@ You can export items from the Knowledge Vault to download a copy of the content 
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
 - Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
-- Access to Brand Kit as an invited [Collaborator](/docs/content-managers/brand-kit/invite-collaborators/)
+- Access to Brand Kit as an invited [Collaborator](/docs/brand-kit/invite-collaborators/)
 
 ## Steps for Execution
 
-**Note**: For this guide, we have assumed that you have [added items in the Knowledge Vault](/docs/content-managers/brand-kit/add-item-in-knowledge-vault) inside your Brand Kit.
+**Note**: For this guide, we have assumed that you have [added items in the Knowledge Vault](/docs/brand-kit/add-item-in-knowledge-vault) inside your Brand Kit.
 
 To export a Knowledge Vault item, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the left navigation panel, click the **Brand Kit** icon.

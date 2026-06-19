@@ -1,7 +1,7 @@
 ---
 title: "[Synchronize Data With Datasync] - Changing Persistent Storage Connector"
 description: Steps required to change the storage connector from Filesystem to MongoDB and vice versa in Contentstack DataSync.
-url: https://www.contentstack.com/docs/developers/develop-apps-with-datasync/changing-persistent-storage-connector
+url: https://www.contentstack.com/docs/headless-cms/changing-persistent-storage-connector
 product: Contentstack
 doc_type: guide
 audience:

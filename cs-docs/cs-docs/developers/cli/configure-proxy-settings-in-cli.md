@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Configure Proxy Settings in CLI"
 description: Configure and manage proxy settings in the Contentstack Command Line Interface (CLI) using global configuration and environment variables.
-url: https://www.contentstack.com/docs/developers/cli/configure-proxy-settings-in-cli
+url: https://www.contentstack.com/docs/headless-cms/configure-proxy-settings-in-cli
 product: Contentstack
 doc_type: cli-guide
 audience:

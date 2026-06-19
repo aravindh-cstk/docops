@@ -1,7 +1,7 @@
 ---
 title: "[Create and Manage Releases NEW] - Unlock a Release"
 description: Unlocking a release enables you to make modifications to the items of a release.
-url: https://www.contentstack.com/docs/content-managers/create-and-manage-releases/unlock-a-release
+url: https://www.contentstack.com/docs/headless-cms/unlock-a-release
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[Use Workflows] - Approve Edit Access Request for an Entry"
 description: Approve Edit Access Request for an Entry
-url: https://www.contentstack.com/docs/content-managers/use-workflows/approve-edit-access-request-for-an-entry
+url: https://www.contentstack.com/docs/headless-cms/approve-edit-access-request-for-an-entry
 product: Contentstack
 doc_type: how-to
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "[SCIM] - Set Up SCIM Provisioning with Okta"
 description: Set up guide for configuring Contentstack as a provisioning app in Okta using SCIM (deprecated).
-url: https://www.contentstack.com/docs/developers/scim/set-up-scim-provisioning-with-okta
+url: https://www.contentstack.com/docs/administration/set-up-scim-provisioning-with-okta
 product: Contentstack
 doc_type: setup-guide
 audience:

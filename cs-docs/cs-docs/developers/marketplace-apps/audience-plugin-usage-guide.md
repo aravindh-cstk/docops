@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - Audience Variable App Installation Guide"
 description: Audience Variable App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/audience-plugin-usage-guide
+url: https://www.contentstack.com/docs/marketplace/audience-plugin-usage-guide
 product: Contentstack
 doc_type: marketplace-guide
 audience:

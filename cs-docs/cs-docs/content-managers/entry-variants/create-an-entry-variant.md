@@ -1,7 +1,7 @@
 ---
 title: "[Variants CMS] - Create an Entry Variant"
 description: Create an Entry Variant in Contentstack Variants CMS and learn how to manage variants in the entry editor or via API.
-url: https://www.contentstack.com/docs/content-managers/entry-variants/create-an-entry-variant
+url: https://www.contentstack.com/docs/headless-cms/create-an-entry-variant
 product: Contentstack
 doc_type: how-to
 audience:

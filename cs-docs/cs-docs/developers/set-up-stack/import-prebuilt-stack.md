@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Stack] - Import Prebuilt Stack"
 description: Import a prebuilt stack to quickly set up projects using predefined content types, entries, and assets.
-url: https://www.contentstack.com/docs/developers/set-up-stack/import-prebuilt-stack
+url: https://www.contentstack.com/docs/headless-cms/import-prebuilt-stack
 product: Contentstack
 doc_type: guide
 audience:

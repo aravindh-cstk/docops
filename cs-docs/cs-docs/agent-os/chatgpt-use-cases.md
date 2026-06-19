@@ -1,7 +1,7 @@
 ---
 title: "[Automations guides and connectors] - ChatGPT Use Cases"
 description: ChatGPT automation use cases for translating text using Function Calling and generating image URLs using DALL-E 3 Image Generator in Contentstack Automate.
-url: https://www.contentstack.com/docs/developers/automation-hub-guides/chatgpt-use-cases
+url: https://www.contentstack.com/docs/agent-os/chatgpt-use-cases
 product: Contentstack Automate
 doc_type: guide
 audience:

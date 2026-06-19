@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Limitations of Localization"
 description: Limitations applied while using fallback language in multilingual content.
-url: https://www.contentstack.com/docs/developers/multilingual-content/limitations-of-localization
+url: https://www.contentstack.com/docs/headless-cms/limitations-of-localization
 product: Contentstack
 doc_type: guide
 audience:

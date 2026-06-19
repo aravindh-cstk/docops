@@ -1,7 +1,7 @@
 ---
 title: "[Field Properties] - Non-localizable"
 description: Documentation for the Non-localizable field property in Contentstack content types.
-url: https://www.contentstack.com/docs/developers/create-content-types/non-localizable
+url: https://www.contentstack.com/docs/headless-cms/non-localizable
 product: Contentstack
 doc_type: developer-guide
 audience:

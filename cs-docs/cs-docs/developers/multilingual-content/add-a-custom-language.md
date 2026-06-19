@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Add a Custom Language"
 description: Instructions for creating and adding a custom language to a stack, including notes on branches, language codes, fallback languages, and an API reference.
-url: https://www.contentstack.com/docs/developers/multilingual-content/add-a-custom-language
+url: https://www.contentstack.com/docs/headless-cms/add-a-custom-language
 product: Contentstack
 doc_type: how-to
 audience:

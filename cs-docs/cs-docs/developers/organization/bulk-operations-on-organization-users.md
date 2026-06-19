@@ -1,7 +1,7 @@
 ---
 title: "[Organization] - Bulk Operations on Organization Users"
 description: Bulk operations to manage multiple organization users in Contentstack Administration.
-url: https://www.contentstack.com/docs/developers/organization/bulk-operations-on-organization-users
+url: https://www.contentstack.com/docs/administration/bulk-operations-on-organization-users
 product: Administration
 doc_type: how-to
 audience:

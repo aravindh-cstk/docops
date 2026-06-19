@@ -1,7 +1,7 @@
 ---
 title: "[Content Models] - Website Footer"
 description: Content model schema and prerequisites for creating a Website Footer in Contentstack, including Footer content type and Social Share global field.
-url: https://www.contentstack.com/docs/developers/marketplace-platform-guides/content-models/website-footer
+url: https://www.contentstack.com/docs/marketplace-platform-guides/content-models/website-footer
 product: Contentstack
 doc_type: marketplace-platform-guide
 audience:
@@ -45,7 +45,7 @@ The Website Footer Content Model contains the **Footer** [Content Types](/docs/d
 - **URL**: This is a [Link](/docs/developers/create-content-types/link/) field that adds a social media name as a title and links it for redirection.
 - **Copyright**: This is a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/) field that holds the legal copyright information of the website.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Website Footer Content Modeling](/docs/developers/content-modeling/website-footer/) documentation to understand how to model the "Website Footer".
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Website Footer Content Modeling](/docs/developers/content-modeling/website-footer/) documentation to understand how to model the "Website Footer".
 
 After publishing the entry, you can view the Website Footer on your website.
 
@@ -61,4 +61,4 @@ You need a Contentstack account and access to the Contentstack Organization/Stac
 The Website Footer Content Model contains the **Footer** [Content Types](/docs/developers/create-content-types/about-content-types/) and **Social Share** [Global Field](/docs/developers/create-content-types/global/).
 
 ### How can I import the prebuilt Content Models?
-You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
+You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).

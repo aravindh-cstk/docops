@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Import a Webhook"
 description: Import a webhook by uploading a JSON file, or update an existing webhook by importing JSON.
-url: https://www.contentstack.com/docs/developers/set-up-webhooks/import-a-webhook
+url: https://www.contentstack.com/docs/headless-cms/import-a-webhook
 product: Contentstack
 doc_type: how-to
 audience:

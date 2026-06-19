@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - AI Assistant with Brand Kit"
 description: Marketplace guide for installing and using the AI Assistant app with Brand Kit in Contentstack.
-url: https://www.contentstack.com/docs/developers/marketplace-apps/ai-assistant-with-brand-kit
+url: https://www.contentstack.com/docs/marketplace/ai-assistant-with-brand-kit
 product: Contentstack
 doc_type: marketplace-guide
 audience:
@@ -33,7 +33,7 @@ You can install the AI Assistant app directly from our Marketplace and use it wi
 - Brand Kit enabled for your Contentstack Organization
 - Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
 
-**Note**: If Brand Kit is not enabled for your Organization, the AI Assistant app operates as usual. Please follow the [AI Assistant App Installation Guide](/docs/developers/marketplace-apps/ai-assistant) to see how it works in this scenario.
+**Note**: If Brand Kit is not enabled for your Organization, the AI Assistant app operates as usual. Please follow the [AI Assistant App Installation Guide](/docs/marketplace/ai-assistant) to see how it works in this scenario.
 
 Follow this step-by-step guide to install the AI Assistant app within your stack.
 

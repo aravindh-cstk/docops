@@ -1,7 +1,7 @@
 ---
 title: "[Set Up Your Project] - Set date range"
 description: Documentation for the Set date range property in the Date field when setting up a content type.
-url: https://www.contentstack.com/docs/developers/create-content-types/set-date-range
+url: https://www.contentstack.com/docs/headless-cms/set-date-range
 product: Contentstack
 doc_type: reference
 audience:

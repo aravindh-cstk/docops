@@ -1,7 +1,7 @@
 ---
 title: "[Marketplace guides and apps] - YouTube App Installation Guide"
 description: YouTube App Installation Guide
-url: https://www.contentstack.com/docs/developers/marketplace-apps/youtube
+url: https://www.contentstack.com/docs/marketplace/youtube
 product: Contentstack
 doc_type: marketplace-guide
 audience:

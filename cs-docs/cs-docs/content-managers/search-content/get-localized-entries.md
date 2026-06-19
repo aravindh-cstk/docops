@@ -1,7 +1,7 @@
 ---
 title: "[Search Content] - Get Localized Entries"
 description: How to filter and view entries that are explicitly localized in a selected language (and distinguish them from fallback content).
-url: https://www.contentstack.com/docs/content-managers/search-content/get-localized-entries
+url: https://www.contentstack.com/docs/headless-cms/get-localized-entries
 product: Contentstack
 doc_type: how-to
 audience:

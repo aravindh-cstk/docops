@@ -1,7 +1,7 @@
 ---
 title: "[Visual Editor] - Drafts"
 description: Drafts panel in the Visual Editor for tracking and managing unsaved content changes before publishing.
-url: https://www.contentstack.com/docs/content-managers/visual-editor/drafts
+url: https://www.contentstack.com/docs/headless-cms/drafts
 product: Contentstack
 doc_type: guide
 audience:

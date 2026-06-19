@@ -1,7 +1,7 @@
 ---
 title: "[Contentstack Command-line Interface (CLI)] - Uninstall CLI Plugins"
 description: Uninstall or remove Contentstack CLI plugins using the plugins:uninstall command.
-url: https://www.contentstack.com/docs/developers/cli/uninstall-cli-plugins
+url: https://www.contentstack.com/docs/headless-cms/uninstall-cli-plugins
 product: Contentstack
 doc_type: cli-guide
 audience:
