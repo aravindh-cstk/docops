@@ -11,7 +11,8 @@
     "LTS", "OS", "VM", "VPC", "IAM", "ARN", "S3", "EC2", "RDS",
     "TS", "JS", "TSX", "JSX", "ESM", "CJS", "ESLint", "TSC",
     "NPM", "PNPM", "CI/CD", "DevOps", "SaaS", "PaaS", "IaaS",
-    "B2B", "B2C", "DXP", "WCM", "DAM", "PIM"
+    "B2B", "B2C", "DXP", "WCM", "DAM", "PIM",
+    "WYSIWYG"
   ],
   "bannedPhrases": [
     "effortlessly streamline",

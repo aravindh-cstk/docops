@@ -381,12 +381,12 @@ function checkPhrasalVerbs(stripped: string, file: string): string[] {
 // Tier 2 — Moderate checks
 // ---------------------------------------------------------------------------
 
-const TITLE_CASE_ALWAYS_LOWER = new Set([
+export const TITLE_CASE_ALWAYS_LOWER = new Set([
   "a", "an", "the", "and", "or", "nor", "but", "for", "yet", "so",
   "in", "on", "at", "to", "by", "of", "up", "as",
 ]);
 
-function isTitleCase(text: string): boolean {
+export function isTitleCase(text: string): boolean {
   const words = text.split(/\s+/);
   for (let i = 0; i < words.length; i++) {
     const word = words[i]!;

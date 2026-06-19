@@ -13,3 +13,6 @@ tools/cs-sync/.env
 
 contentstack.config.json
 .DS_Store
+
+# Local scratch files — never commit
+temp/

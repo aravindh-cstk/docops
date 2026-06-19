@@ -4,7 +4,7 @@ import path from "node:path";
 import { execSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { z } from "zod";
-import { findRepoRoot } from "./diff.js";
+import { findRepoRoot, listChangedDocs, parseArgs } from "./diff.js";
 import { parseDocFile, resolveDocPaths } from "./parser.js";
 import { collectLocalImageRefs } from "./assets.js";
 import { lintStyle } from "./style-lint.js";
@@ -25,43 +25,6 @@ function formatZodErrors(file: string, err: z.ZodError): string[] {
     }
     return `${file}: ${issue.message}`;
   });
-}
-
-function parseArgs(argv: string[]): { base: string } {
-  let base = "origin/main";
-  for (let i = 0; i < argv.length; i++) {
-    if (argv[i] === "--base" && argv[i + 1]) base = argv[++i];
-  }
-  return { base };
-}
-
-function listChangedDocs(
-  repoRoot: string,
-  docsRoot: string,
-  base: string,
-): { mdFiles: string[]; nonMdFiles: string[] } {
-  try {
-    execSync(`git merge-base ${base} HEAD`, { cwd: repoRoot, stdio: "pipe" });
-    const mergeBase = execSync(`git merge-base ${base} HEAD`, {
-      cwd: repoRoot,
-      encoding: "utf8",
-    }).trim();
-    const out = execSync(
-      `git diff --name-only --diff-filter=d ${mergeBase} HEAD -- ${docsRoot}`,
-      { cwd: repoRoot, encoding: "utf8" },
-    ).trim();
-    const all = out ? out.split("\n").filter(Boolean) : [];
-    return {
-      mdFiles: all.filter((p) => p.endsWith(".md")),
-      nonMdFiles: all.filter((p) => !p.endsWith(".md")),
-    };
-  } catch {
-    const out = execSync(`git ls-files '${docsRoot}/**/*.md'`, {
-      cwd: repoRoot,
-      encoding: "utf8",
-    }).trim();
-    return { mdFiles: out ? out.split("\n").filter(Boolean) : [], nonMdFiles: [] };
-  }
 }
 
 function resolveUrlToFile(
@@ -103,10 +66,47 @@ function resolveLinkTarget(
   return target;
 }
 
+function buildAllDocs(repoRoot: string, docsRoot: string): Set<string> {
+  return new Set(
+    execSync(`git ls-files '${docsRoot}/**/*.md'`, {
+      cwd: repoRoot,
+      encoding: "utf8",
+    })
+      .trim()
+      .split("\n")
+      .filter(Boolean),
+  );
+}
+
+function checkDuplicateUrls(
+  repoRoot: string,
+  docsRoot: string,
+  allDocs: Set<string>,
+): string[] {
+  const errors: string[] = [];
+  const urlPaths = new Map<string, string>();
+  for (const p of allDocs) {
+    try {
+      const d = parseDocFile(repoRoot, docsRoot, p);
+      if (urlPaths.has(d.frontMatter.url)) {
+        errors.push(
+          `Duplicate url "${d.frontMatter.url}" in ${urlPaths.get(d.frontMatter.url)} and ${p}`,
+        );
+      } else {
+        urlPaths.set(d.frontMatter.url, p);
+      }
+    } catch {
+      /* skip files with invalid frontmatter — reported separately in lintDoc */
+    }
+  }
+  return errors;
+}
+
 function lintDoc(
   repoRoot: string,
   docsRoot: string,
   repoRelativePath: string,
+  allDocs: Set<string>,
 ): string[] {
   const errors: string[] = [];
 
@@ -116,32 +116,6 @@ function lintDoc(
     if (!fs.existsSync(absolute)) {
       errors.push(`${repoRelativePath}: file not found`);
       return errors;
-    }
-
-    const allDocs = new Set(
-      execSync(`git ls-files '${docsRoot}/**/*.md'`, {
-        cwd: repoRoot,
-        encoding: "utf8",
-      })
-        .trim()
-        .split("\n")
-        .filter(Boolean),
-    );
-
-    const urlPaths = new Map<string, string>();
-    for (const p of allDocs) {
-      try {
-        const d = parseDocFile(repoRoot, docsRoot, p);
-        if (urlPaths.has(d.frontMatter.url)) {
-          errors.push(
-            `Duplicate url ${d.frontMatter.url} in ${urlPaths.get(d.frontMatter.url)} and ${p}`,
-          );
-        } else {
-          urlPaths.set(d.frontMatter.url, p);
-        }
-      } catch {
-        /* skip invalid docs in duplicate check */
-      }
     }
 
     for (const match of doc.body.matchAll(MD_LINK_RE)) {
@@ -197,8 +171,14 @@ async function main(): Promise<void> {
     return;
   }
 
+  // Build the full doc list once and run duplicate-URL check across all docs.
+  // This catches duplicates introduced by any file in the PR, not just the file
+  // being linted — and avoids re-running the scan once per changed file.
+  const allDocs = buildAllDocs(repoRoot, docsRoot);
+  allErrors.push(...checkDuplicateUrls(repoRoot, docsRoot, allDocs));
+
   for (const file of mdFiles) {
-    allErrors.push(...lintDoc(repoRoot, docsRoot, file));
+    allErrors.push(...lintDoc(repoRoot, docsRoot, file, allDocs));
   }
 
   if (allErrors.length > 0) {
