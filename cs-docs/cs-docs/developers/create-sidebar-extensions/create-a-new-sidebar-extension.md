@@ -1,0 +1,123 @@
+---
+title: "[Extensions] - Create a New Sidebar Extension"
+description: Steps to create and test a custom Sidebar Extension in Contentstack, with related API references.
+url: https://www.contentstack.com/docs/developers/create-sidebar-extensions/create-a-new-sidebar-extension
+product: Contentstack
+doc_type: how-to
+audience:
+  - developers
+version: legacy
+last_updated: 2026-03-26
+---
+
+# [Extensions] - Create a New Sidebar Extension
+
+This page explains how to create a custom Sidebar Extension in Contentstack, how to test it locally before release, and where to find related API requests. It is intended for developers extending Contentstack entry experiences, especially when working with extensions in stacks and branches.
+
+## Create a New Sidebar Extension
+
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](/docs/developers/developer-hub/sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+
+Contentstack allows you to create a [custom Sidebar Extension](/docs/developers/create-custom-widgets/about-custom-widgets) in your [stack](/docs/developers/set-up-stack/about-stack) to analyze your entry content and recommend ideas.
+
+**Note:** When working within specific branches, extensions added or created will be available only within that particular branch. For example, you are working within the development branch, and you add new Custom Sidebar Extensions to this branch. These custom sidebar extensions will be available only within the development branch. Refer to our [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) document for more information.
+
+To create a custom Sidebar Extension, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
+
+- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+- Click on **Extensions**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
+- In the **Select Extension Type** window, select **Sidebar Extension**.
+- In the **Create New Extension** page, enter values in the fields as given below:
+  - **Title**: Provide a suitable title for your custom Sidebar Extension
+    . This title will be visible as a sidebar extension name in the entry page.
+  - **Hosting method**: Select how you want to host the Sidebar Extension:
+    - **External Hosting**: Select this option for externally hosted Sidebar Extensions. You need to provide the URL in the **External hosting URL** field that appears below.
+    - **Hosted on Contentstack**: Select this option if you can write the code in the **Extension source code** field that appears below.
+
+    **Additional Resource**: If you want to try out sample code for Sidebar Extension in the **Extension source code** field, browse through the [Text Intelligence repository](https://github.com/contentstack/extensions/tree/master/text-intelligence) available on GitHub.
+  - **Config Paramete**r: If you have used any config parameters (such as [access token](/docs/developers/create-tokens/types-of-tokens#access-tokens)) in the source code, specify the value of the parameters in this field.
+  - **Scope**: Select for which [content types](/docs/developers/create-content-types/about-content-types) this Sidebar Extension will be available. You can choose either **All Content Types** or **Specific Content Types**.
+- Finally, click on **Save**.
+
+## Test Custom Sidebar Extension
+
+When you create your custom extension to integrate with Contentstack, you can follow the steps given below to test the extension and verify if the extension is working fine before releasing it.
+
+- To test the extension, first, clone the extension repo that you have built and install the dependencies. Then, edit the HTML, CSS, and JS files from the source folder.
+- To install the required dependencies, run the following commands in the root folder:
+
+```
+npm install gulp-cli -g
+npm install
+```
+
+- To create a new build for the extension, run the following command (index.html):
+
+```
+gulp build
+```
+
+- Update/test the extension while developing:
+
+```
+gulp watch
+```
+
+- Now, create a server using the **Lite Server** npm module. Before that, install the Lite Server module by using the following command:
+
+```
+npm install -g lite-server
+```
+
+- Then, run the lite-server — in the root folder as follows:
+
+```
+lite-server
+```
+
+After running the above command, you should see the following:
+
+    Make a note of the port no in Access URLs (the localhost URL):
+
+- Next, we need to install `ngrok` to build secure tunnels from a public endpoint (that is the internet) to a locally running server. Issue the following command:
+
+```
+npm install ngrok -g
+ngrok http <>
+```
+
+You should see the following:
+
+Once you run the above command, you will get a URL.
+
+- Navigate to the extension page that you created above, and in the **Hosting method** field, select **External hosting** and paste the above URL in it.
+- Save your extension and check the entry where you have added your extension.
+
+You should see your updated changes.
+
+## API Reference
+
+Here are the links to the API requests related to this action:
+
+- [Upload a Sidebar Extension](/docs/developers/apis/content-management-api#upload-a-widget)
+- [Create Sidebar Extension with source URL](/docs/developers/apis/content-management-api#create-widget-with-source-url)
+- [Create Sidebar Extension with source code](/docs/developers/apis/content-management-api#create-widget-with-source-code)
+
+## Common questions
+
+### Is this the recommended approach for extending the sidebar?
+
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](/docs/developers/developer-hub/sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+
+### Will my Sidebar Extension be available across all branches?
+
+**Note:** When working within specific branches, extensions added or created will be available only within that particular branch.
+
+### How do I test an externally hosted Sidebar Extension locally?
+
+Use the steps under **Test Custom Sidebar Extension**, including running `lite-server` and using `ngrok` to generate a public URL, then paste the URL into the **External hosting URL** field.
+
+### Where can I find API requests for creating or uploading Sidebar Extensions?
+
+See **API Reference** for links to: **Upload a Sidebar Extension**, **Create Sidebar Extension with source URL**, and **Create Sidebar Extension with source code**.

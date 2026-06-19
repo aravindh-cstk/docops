@@ -1,0 +1,97 @@
+---
+title: "[Extensions] - Bynder"
+description: Documentation for creating and using a Bynder custom field extension in Contentstack.
+url: https://www.contentstack.com/docs/developers/create-custom-fields/bynder
+product: Contentstack
+doc_type: guide
+audience:
+  - developers
+version: legacy-extensions
+last_updated: 2026-03-26
+---
+
+# [Extensions] - Bynder
+
+This page explains how to create and configure the legacy Bynder custom field extension in Contentstack, then use it in a content type and entries. It is intended for developers setting up custom fields and should be used when integrating Bynder via extensions (legacy approach) rather than the Marketplace App.
+
+## Bynder
+
+**Note**: This documentation uses the legacy approach with extensions. We have launched Bynder as a Marketplace App. For more information on Bynder, please refer to the [Bynder App Installation Guide](/docs/developers/marketplace-apps/bynder).
+
+The Bynder custom field extension allows you to fetch images from Bynder and display them into a [field](/docs/developers/create-content-types/about-fields) in your [content type](/docs/developers/create-content-types/about-content-types). Subsequently, while creating [entries](/docs/content-managers/working-with-entries/about-entries), you can select one or more images as the input value for the field.
+
+This step-by-step guide explains how to create a Bynder custom field extension for your content types in Contentstack. The steps performed are as follows:
+- [Create a Bynder account](#create-a-bynder-account)
+- [Add the Bynder custom field extension to your stack](#add-the-bynder-custom-field-extension-to-your-stack)
+- [Use your custom field](#use-your-custom-field)
+
+## Prerequisites
+- [Bynder account](https://www.bynder.com/en/) and a domain
+- [Contentstack account](https://app.contentstack.com/#!/login)
+
+## Create a Bynder Account
+
+To use this extension, you need to create an account in Bynder. To do that, follow the steps given below:
+
+Go to [https://www.bynder.com/en/](https://www.bynder.com/en/) and create a new account. It is recommended to use the partnership account by purchasing the license. The free trial account won't work as expected.
+- You will receive a confirmation email, click on the provided link and change your password.
+
+You'll then get a URL. Make a note of it as you will need it when you set up the extension in Contentstack.
+
+**Additional Resource**: If you want a detailed explanation to get started with your Bynder account, refer to the [Getting Started with Bynder](https://help.bynder.com/getting-started/Log-in-to-Bynder.htm) documentation.
+
+Now, let's move ahead and set up our extension.
+
+## Add the Bynder Custom Field Extension to your Stack
+
+To add the Bynder custom field to your stack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
+
+Go to your [stack](/docs/developers/set-up-stack/about-stack), and click on the “Settings” icon on the left navigation panel
+- Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
+- On the **Extensions** page, click on the **+ New Extension** button and then on **Create new**:
+- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Create New Extension** page, enter values in the fields as given below
+  - **Title ***(required)*: Provide a suitable title, for example “Bynder,” for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+  - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
+  - **Multiple ***(optional)*: Leave this field unchecked.
+  - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
+  - **Extension Source Code**: *(required)*: Specify the extension code here. If Extensions are part of your plan, contact our [Support](mailto:support@contentstack.com) team to get the code for the extension.
+
+The support team will provide you with the source code (src file). Copy the code from the `index.html` file located in the root folder and paste it in the **Extension source code** field.**Note**: In the downloaded code, inside the **source** folder, there's a **bynder-widget** HTML file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload asset](/docs/content-managers/working-with-assets/create-upload-assets) article. After uploading the file, you'll get a URL in the [asset details](/docs/content-managers/working-with-assets/create-upload-assets#asset-details) section, make note of this URL.
+- **Config Parameter ***(required)*: Enter the following configuration details as the extension's config parameter:
+```
+{
+    "widgetUrl": ">",
+    "defaultDomain": ">"
+}
+```
+The value for widgetUrl is the URL of the **bynder-widget** HTML file which you just uploaded as an asset. The value for defaultDomain is the same URL that you generated after the creation of your account in Bynder.****
+- **Save** the custom field.
+
+Now, let’s understand how you can start using this custom field in your content type.
+
+## Use Your Custom Field
+
+Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
+
+[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [**Custom**](/docs/developers/create-content-types/custom) field to it.
+- Under **Select Extension**, select the “Bynder” field that you created and set the other properties. You can add other fields as per requirements.
+- Finally, click on either **Save **or** Save and Close** to save your changes.
+- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Bynder **field in action.
+- Click on **Choose Assets**. If you are still logged into Bynder, it will open inside your entry page, from where you can select multiple images and insert them in your entry as shown below:
+
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+
+## Common questions
+
+**Q: Is this guide for the Marketplace App or the legacy extension approach?**  
+A: **Note**: This documentation uses the legacy approach with extensions. We have launched Bynder as a Marketplace App. For more information on Bynder, please refer to the [Bynder App Installation Guide](/docs/developers/marketplace-apps/bynder).
+
+**Q: What data type should be selected for the Bynder custom field extension?**  
+A: Select **JSON**.
+
+**Q: Where do I get the `widgetUrl` value used in the config parameter?**  
+A: The value for widgetUrl is the URL of the **bynder-widget** HTML file which you just uploaded as an asset.
+
+**Q: Is there a limit to how many items can be selected in the Bynder field?**  
+A: **Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
