@@ -173,7 +173,7 @@ async function fetchEntry(contentTypeUid, entryUid) {
 function sanitizeSegment(seg) {
   return String(seg).trim()
     .replace(/^[/.]+|[/.]+$/g, '')
-    .replace(/[<>:"|?*\\]+/g, '')
+    .replace(/[<>:"|?*\\/]+/g, '-')
     .replace(/\s+/g, '-')
     .replace(/--+/g, '-')
     .replace(/^[-.]|[-.]$/g, '') || 'untitled';
@@ -228,7 +228,7 @@ async function writeFile(parts, content) {
 // Export: cda_api_reference_pages (106 entries)
 // ---------------------------------------------------------------------------
 async function exportCdaApiReferencePages() {
-  console.log('\n[1/2] Exporting cda_api_reference_pages...');
+  console.log('\n[1/5] Exporting cda_api_reference_pages...');
   const entries = await fetchAllEntries('cda_api_reference_pages');
 
   for (const entry of entries) {
@@ -266,6 +266,177 @@ async function exportCdaApiReferencePages() {
     } catch (err) {
       console.error('  Failed entry:', entry.uid, err.message);
     }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Export: api_requests_* content types (individual API endpoint pages)
+// ---------------------------------------------------------------------------
+
+const API_REQUESTS_CONTENT_TYPES = {
+  api_requests_cda:                   'developers/apis/content-delivery-api',
+  api_requests_cma:                   'developers/apis/content-management-api',
+  api_requests_automation_hub:        'developers/apis/automations-management-api',
+  api_requests_analytics:             'developers/apis/analytics-api',
+  api_requests_graphql:               'developers/apis/graphql-content-delivery-api',
+  api_requests_image:                 'developers/apis/image-delivery-api',
+  api_requests_scim:                  'developers/apis/scim-api',
+  api_requests_brand_kit:             'developers/apis/brand-kit-management-api',
+  api_requests_knowlegde_vault:       'developers/apis/knowledge-vault-api',
+  api_requests_generative_api:        'developers/apis/generative-ai-api',
+  api_requests_apps:                  'developers/apis/apps-api',
+  api_requests_asset_management_api:  'developers/apis/asset-management-api',
+  api_requests_administration:        'developers/apis/administration-api',
+};
+
+async function exportApiRequests() {
+  console.log('\n[3/4] Exporting api_requests_* content types...');
+
+  for (const [contentTypeUid, parentFolder] of Object.entries(API_REQUESTS_CONTENT_TYPES)) {
+    let entries;
+    try {
+      entries = await fetchAllEntries(contentTypeUid);
+    } catch (err) {
+      console.warn(`  Skipping ${contentTypeUid}: ${err.message}`);
+      continue;
+    }
+    if (!entries.length) continue;
+
+    console.log(`  ${contentTypeUid} → ${parentFolder}/requests/ (${entries.length} entries)`);
+
+    for (const entry of entries) {
+      try {
+        // Use title for filename to avoid URL collisions (multiple entries can share the same URL)
+        const slug = sanitizeSegment(entry.title || entry.url || entry.uid);
+        const parts = [...parentFolder.split('/'), 'requests', `${slug}.md`];
+
+        const method = entry.method && entry.method.select ? entry.method.select : (entry.method || '');
+        const endpoint = entry.api_endpoint || entry.url || '';
+
+        const seoDesc = `${method} ${endpoint}`.trim() || entry.title || '';
+
+        const entryUrl = entry.url && entry.url.startsWith('http') ? entry.url : `${parentFolder}/requests${entry.url || '/' + slug}`;
+        const frontmatter = buildFrontmatter({
+          title: entry.title,
+          description: seoDesc,
+          url: entryUrl,
+          docType: 'api-request',
+          version: 'unknown',
+          lastUpdated: formatDate(entry.updated_at),
+        });
+
+        const bodyParts = [`# ${entry.title}\n`];
+
+        if (method || endpoint) {
+          bodyParts.push(`**Method:** \`${method}\`  \n**Endpoint:** \`${endpoint}\``);
+        }
+
+        if (entry.summary) {
+          bodyParts.push(htmlToMarkdown(entry.summary));
+        }
+
+        // Parameters table (first region / default)
+        if (Array.isArray(entry.parameters) && entry.parameters.length) {
+          const paramBlock = entry.parameters[0];
+          const p = paramBlock.api_parameters || paramBlock;
+          const allParams = [
+            ...(p.headers || []),
+            ...(p.url_parameters || []),
+            ...(p.query_parameters || []),
+          ];
+          if (allParams.length) {
+            const rows = allParams.map(param => {
+              const key = (param.key || '').replace(/\|/g, '\\|');
+              const value = (param.value || '').replace(/\|/g, '\\|');
+              const desc = htmlToMarkdown(param.description || '').replace(/\n/g, ' ').slice(0, 160).replace(/\|/g, '\\|');
+              return `| ${key} | ${value} | ${desc} |`;
+            });
+            bodyParts.push('**Parameters:**\n\n| Key | Value | Description |\n|-----|-------|-------------|');
+            bodyParts.push(...rows);
+          }
+        }
+
+        if (entry.request_body && String(entry.request_body).trim()) {
+          bodyParts.push(`**Request Body:**\n\n\`\`\`json\n${String(entry.request_body).trim()}\n\`\`\``);
+        }
+
+        if (entry.response_body && String(entry.response_body).trim()) {
+          const sc = entry.status_code ? ` (${entry.status_code})` : '';
+          bodyParts.push(`**Response${sc}:**\n\n\`\`\`json\n${String(entry.response_body).trim()}\n\`\`\``);
+        }
+
+        const content = `${frontmatter}\n\n${bodyParts.join('\n\n')}\n`;
+        await writeFile(parts, content);
+      } catch (err) {
+        console.error(`  Failed ${contentTypeUid} entry:`, entry.uid, err.message);
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Export: postman_landing_page and postman collections
+// ---------------------------------------------------------------------------
+
+async function exportPostman() {
+  console.log('\n[4/4] Exporting postman content...');
+
+  // postman_landing_page
+  try {
+    const entries = await fetchAllEntries('postman_landing_page');
+    for (const entry of entries) {
+      const slug = sanitizeSegment(entry.url || entry.title || 'postman-collections');
+      const parts = [`${slug}.md`];
+      const descMd = htmlToMarkdown(entry.description || '');
+      const frontmatter = buildFrontmatter({
+        title: entry.title,
+        description: (entry.seo && entry.seo.description) || entry.title || '',
+        url: entry.url || slug,
+        docType: 'api-landing',
+        version: 'unknown',
+        lastUpdated: formatDate(entry.updated_at),
+      });
+
+      const bodyParts = [`# ${entry.title}\n`, descMd];
+
+      if (Array.isArray(entry.api_list) && entry.api_list.length) {
+        bodyParts.push('## Postman Collections\n');
+        for (const api of entry.api_list) {
+          if (api.title) bodyParts.push(`### ${api.title}`);
+          if (api.description) bodyParts.push(htmlToMarkdown(api.description));
+          if (api.postman_link) bodyParts.push(`[Download Collection](${api.postman_link})`);
+        }
+      }
+
+      await writeFile(parts, `${frontmatter}\n\n${bodyParts.join('\n\n')}\n`);
+    }
+  } catch (err) {
+    console.warn('  postman_landing_page:', err.message);
+  }
+
+  // postman collections
+  try {
+    const entries = await fetchAllEntries('postman');
+    for (const entry of entries) {
+      const slug = sanitizeSegment(entry.title || entry.uid);
+      const parts = ['postman', `${slug}.md`];
+      const frontmatter = buildFrontmatter({
+        title: entry.title,
+        description: htmlToMarkdown(entry.description || '').split('\n')[0].slice(0, 200),
+        url: `postman/${slug}`,
+        docType: 'postman-collection',
+        version: entry.latest_version || 'unknown',
+        lastUpdated: formatDate(entry.updated_at),
+      });
+
+      const bodyParts = [`# ${entry.title}\n`];
+      if (entry.description) bodyParts.push(htmlToMarkdown(entry.description));
+      if (entry.summary) bodyParts.push(htmlToMarkdown(entry.summary));
+
+      await writeFile(parts, `${frontmatter}\n\n${bodyParts.join('\n\n')}\n`);
+    }
+  } catch (err) {
+    console.warn('  postman:', err.message);
   }
 }
 
@@ -389,7 +560,7 @@ async function resolveMainSectionApiReferences(entry) {
 }
 
 async function exportApiDetailPages() {
-  console.log('\n[2/2] Exporting api_detail_page...');
+  console.log('\n[5/5] Exporting api_detail_page...');
   const entries = await fetchAllEntries('api_detail_page');
 
   for (const entry of entries) {
@@ -462,6 +633,8 @@ async function main() {
   await ensureDir(OUTPUT_ROOT);
 
   await exportCdaApiReferencePages();
+  await exportApiRequests();
+  await exportPostman();
   await exportApiDetailPages();
 
   console.log('\nExport complete.');

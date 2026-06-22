@@ -3489,11 +3489,580 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’, ‘Color’, and ‘Price in USD’ fields.
 
+#### Try 'OR' Operator within Group
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+#### OR Operator within Group
+
+Get all entries that satisfy at least one of the given conditions provided in the OR query. This query is specifically for fields that are part of the Group field.
+
+**Example**: In the **Product** content type, we have a Group field named **Bank Offers**. And, within this Group field, we have a field named **Card Type**. If, for instance, you want to retrieve the entries where either the value for Card Type is ‘Debit Card’ or ‘Credit Card’, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      OR: [
+        {
+          bank_offers: {
+            card_type: "Credit Card"
+          }
+        },
+        {
+          bank_offers: {
+            card_type: "Debit Card"
+          }
+        }
+      ]
+    }) {
+    items {
+      title
+      price_in_usd
+      color
+    }
+  }
+}
+```
+
+The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’, ‘Color’, and ‘Price in USD’ fields.
+
+#### Try 'OR' Operator within Modular Blocks
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+#### OR Operator within Modular Blocks
+
+Get all entries that satisfy at least one of the given conditions provided in the OR query. This query uses [inline fragments](https://graphql.org/learn/queries/#inline-fragments) to retrieve values of fields that are part of any block within a Modular Block field.
+
+**Example**: In the **Product** content type, we have a Modular Blocks field named **Additional Info** that contains the **Deals** and **Rating** blocks. And, within the Deals and Rating blocks, we have the **Deal Name** and **Stars** fields, respectively. If, for instance, you want to retrieve the entries wherein either the value for Deal Name is ‘Christmas Deal’ and Stars is '2', respectively, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      OR: [
+        {
+          additional_info: {
+            deals: {
+              deal_name: "Christmas Deal"
+            }
+          }
+        },
+        {
+          additional_info: {
+            rating: {
+              stars: 2
+            }
+          }
+        }
+      ]
+    }) {
+    items {
+      additional_info {
+        ... on ProductAdditionalInfoRelatedProducts {
+          related_products {
+            productsConnection {
+              edges {
+                node {
+                  ... on Product {
+                    title
+                  }
+                }
+              }
+            }
+          }
+        }
+        ... on ProductAdditionalInfoRating {
+          rating {
+            stars
+          }
+        }
+        ... on ProductAdditionalInfoDeals {
+          deals {
+            deal_name
+            deal_details
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
+
+#### Try 'OR' Operator within Nested Modular Blocks
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+**OR Operator within Nested Modular Blocks**
+
+You can use [inline fragments](https://graphql.org/learn/queries/#inline-fragments) to retrieve values of fields that lie within a particular block of a Nested Modular Blocks field. Within the inline fragments section, you need to specify the content type UID, modular blocks UID, block UID, nested modular blocks UID, and the nested block UID.
+
+**Example**: In the **Product** content type, you have a **Coupons** Modular Blocks field that is nested within the **Deals** block of the **Additional Info** Modular Blocks field. The Coupons Modular Blocks field contains a **Daily Coupons** block:
+
+```
+... on ProductAdditionalInfoDealsBlockCouponsDailyCoupons {
+  daily_coupons {
+    coupon_name
+    coupon_details
+    coupon_discount_rate
+  }
+```
+
+If you want to retrieve the entries where either the value for "Coupon Name" is "Lucky Twenty" or "Early Bird Coupon", your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      OR: [
+        {
+          additional_info: {
+            deals: {
+              coupons: {
+                daily_coupons: {
+                  coupon_name: "Lucky Twenty"
+                }
+              }
+            }
+          }
+        },
+        {
+          additional_info: {
+            deals: {
+              coupons: {
+                daily_coupons: {
+                  coupon_name: "Early Bird Coupon"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }) {
+    items {
+      title
+      additional_info {
+        ... on ProductAdditionalInfoDeals {
+          deals {
+            deal_name
+            deal_details
+            coupons {
+              ... on ProductAdditionalInfoDealsBlockCouponsDailyCoupons {
+                daily_coupons {
+                  coupon_name
+                  coupon_details
+                  coupon_discount_rate
+                }
+              }
+              ... on ProductAdditionalInfoDealsBlockCouponsFaqs {
+                faqs {
+                  coupon_faqs {
+                    question
+                    answer
+                  }
+                }
+              }
+              ... on ProductAdditionalInfoDealsBlockCouponsSpecialCoupons {
+                special_coupons {
+                  special_coupon_name
+                  special_coupon_details
+                  special_coupon_discount_rate
+                }
+              }
+            }
+          }
+        }                
+      }
+    }
+  }
+}
+```
+
+The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
+
 
 #### Less Than Operator
 
+#### Try 'Less Than' Operator
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+Get entries in which the value of a field is lesser than the value provided in the condition.
+
+**Example**: Let’s say you want to retrieve all the entries that have the value of the **Price in USD** field set to a value that is less than but not equal to **150**. Your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      price_in_usd_lt: 150
+    }) {
+    items {
+      title
+      price_in_usd
+    }
+  }
+}
+```
+
+The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Price in USD’ fields.
+
+#### Try 'Less Than' Operator within Group
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+#### Less Than Operator within Group
+
+Get entries in which the value of a field is lesser than the value provided in the condition. This query is specifically for fields that are part of the Group field.
+
+**Example**: In the **Product** content type, we have a Group field named **Bank Offers**. And, within this Group field, we have a subfield named **Discount in Percentage**. If, for instance, you want to retrieve the entries in which the values for the Discount in Percentage field is less than ‘40’, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      bank_offers: {
+        discount_in_percentage_lt: 40
+      }
+    }) {
+    items {
+      title
+      color
+    }
+  }
+}
+```
+
+The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Color’ fields.
+
+#### Try 'Less Than' Operator within Modular Blocks
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+#### Less Than Operator within Modular Blocks
+
+Get entries in which the value of a field is lesser than the value provided in the condition. This query uses [inline fragments](https://graphql.org/learn/queries/#inline-fragments) to retrieve values of fields that are part of any block within a Modular Block field.
+
+**Example**: In the **Product** content type, we have a Modular Blocks field named **Additional Info** that contains the **Rating** block. And, within this Block field, we have a field named **Stars**. If, for instance, you want to retrieve the entries in which the value for the Stars field is less than ‘3’, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      additional_info: {
+        rating: {
+          stars_lt: 3
+        }
+      }
+    }) {
+    items {
+      additional_info {
+        ... on ProductAdditionalInfoRelatedProducts {
+          related_products {
+            productsConnection {
+              edges {
+                node {
+                  ... on Product {
+                    title
+                  }
+                }
+              }
+            }
+          }
+        }
+        ... on ProductAdditionalInfoRating {
+          rating {
+            stars
+          }
+        }
+        ... on ProductAdditionalInfoDeals {
+          deals {
+            deal_name
+            deal_details
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
+
+#### Try 'Less Than' Operator within Nested Modular Blocks
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+**Less Than Operator within Nested Modular Blocks**
+
+You can use [inline fragments](https://graphql.org/learn/queries/#inline-fragments) to retrieve values of fields that lie within a particular block of a Nested Modular Blocks field. Within the inline fragments section, you need to specify the content type UID, modular blocks UID, block UID, nested modular blocks UID, and the nested block UID.
+
+**Example**: In the **Product** content type, you have a **Coupons** Modular Blocks field that is nested within the **Deals** block of the **Additional Info** Modular Blocks field. The Coupons Modular Blocks field contains a **Daily Coupons** block:
+
+```
+... on ProductAdditionalInfoDealsBlockCouponsDailyCoupons {
+  daily_coupons {
+    coupon_name
+    coupon_details
+    coupon_discount_rate
+  }
+```
+
+If you want to retrieve all the entries that have the value of the "Coupon Discount Rate" field set to a value that is less than but not equal to **40**, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      additional_info: {
+        deals: {
+          coupons: {
+            daily_coupons: {
+              coupon_discount_rate_lt: 40
+            }
+          }
+        }
+      }
+    }) {
+    items {
+      title
+      additional_info {
+        ... on ProductAdditionalInfoDeals {
+          deals {
+            deal_name
+            deal_details
+            coupons {
+              ... on ProductAdditionalInfoDealsBlockCouponsDailyCoupons {
+                daily_coupons {
+                  coupon_name
+                  coupon_details
+                  coupon_discount_rate
+                }
+              }
+              ... on ProductAdditionalInfoDealsBlockCouponsFaqs {
+                faqs {
+                  coupon_faqs {
+                    question
+                    answer
+                  }
+                }
+              }
+              ... on ProductAdditionalInfoDealsBlockCouponsSpecialCoupons {
+                special_coupons {
+                  special_coupon_name
+                  special_coupon_details
+                  special_coupon_discount_rate
+                }
+              }
+            }
+          }
+        }                
+      }
+    }
+  }
+}
+```
+
+The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
+
 
 #### Less Than Or Equal To Operator
+
+#### Try 'Less Than Or Equal To' Operator
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+Get entries in which the value of a field is lesser than or equal to the value provided in the condition.
+
+**Example**: Let’s say you want to retrieve all the entries that have the value of the **Price in USD** field set to a value that is less than or equal to **150**. Your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      price_in_usd_lte: 150
+    }) {
+    items {
+      title
+      price_in_usd
+    }
+  }
+}
+```
+
+The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Price in USD’ fields.
+
+#### Try 'Less Than Or Equal To' Operator within Group
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+#### Less Than Or Equal To Operator within Group
+
+Get entries in which the value of a field is lesser than or equal to the value provided in the condition. This query is specifically for fields that are part of the Group field.
+
+**Example**: In the **Product** content type, we have a Group field named **Bank Offers**. And, within this Group field, we have a subfield named **Discount in Percentage**. If, for instance, you want to retrieve the entries in which the values for the Discount in Percentage field are less than or equal to ‘30’, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      bank_offers: {
+        discount_in_percentage_lte: 30
+      }
+    }) {
+    items {
+      title
+      color
+    }
+  }
+}
+```
+
+The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Color’ fields.
+
+#### Try 'Less Than Or Equal To' Operator within Modular Blocks
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+#### Less Than Or Equal To Operator within Modular Blocks
+
+Get entries in which the value of a field is lesser than or equal to the value provided in the condition. This query uses [inline fragments](https://graphql.org/learn/queries/#inline-fragments) to retrieve values of fields that are part of any block within a Modular Block field.
+
+**Example**: In the **Product** content type, we have a Modular Blocks field named **Additional Info** that contains the **Rating** block. And, within this Rating block, we have a field named **Stars**. If, for instance, you want to retrieve the entries in which the values for the Stars field are less than or equal to ‘3’, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      additional_info: {
+        rating: {
+          stars_lte: 3
+        }
+      }
+    }) {
+    items {
+      additional_info {
+        ... on ProductAdditionalInfoRelatedProducts {
+          related_products {
+            productsConnection {
+              edges {
+                node {
+                  ... on Product {
+                    title
+                  }
+                }
+              }
+            }
+          }
+        }
+        ... on ProductAdditionalInfoRating {
+          rating {
+            stars
+          }
+        }
+        ... on ProductAdditionalInfoDeals {
+          deals {
+            deal_name
+            deal_details
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
+
+#### Try 'Less Than Or Equal To' Operator within Nested Modular Blocks
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+**Less Than Or Equal To Operator within Nested Modular Blocks**
+
+You can use [inline fragments](https://graphql.org/learn/queries/#inline-fragments) to retrieve values of fields that lie within a particular block of a Nested Modular Blocks field. Within the inline fragments section, you need to specify the content type UID, modular blocks UID, block UID, nested modular blocks UID, and the nested block UID.
+
+**Example**: In the **Product** content type, you have a **Coupons** Modular Blocks field that is nested within the **Deals** block of the **Additional Info** Modular Blocks field. The Coupons Modular Blocks field contains a **Daily Coupons** block:
+
+```
+... on ProductAdditionalInfoDealsBlockCouponsDailyCoupons {
+  daily_coupons {
+    coupon_name
+    coupon_details
+    coupon_discount_rate
+  }
+```
+
+If you want to retrieve all the entries that have the value of the "Coupon Discount Rate" field set to a value that is less than or equal to **50**, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      additional_info: {
+        deals: {
+          coupons: {
+            daily_coupons: {
+              coupon_discount_rate_lte: 50
+            }
+          }
+        }
+      }
+    }) {
+    items {
+      title
+      additional_info {
+        ... on ProductAdditionalInfoDeals {
+          deals {
+            deal_name
+            deal_details
+            coupons {
+              ... on ProductAdditionalInfoDealsBlockCouponsDailyCoupons {
+                daily_coupons {
+                  coupon_name
+                  coupon_details
+                  coupon_discount_rate
+                }
+              }
+              ... on ProductAdditionalInfoDealsBlockCouponsFaqs {
+                faqs {
+                  coupon_faqs {
+                    question
+                    answer
+                  }
+                }
+              }
+              ... on ProductAdditionalInfoDealsBlockCouponsSpecialCoupons {
+                special_coupons {
+                  special_coupon_name
+                  special_coupon_details
+                  special_coupon_discount_rate
+                }
+              }
+            }
+          }
+        }                
+      }
+    }
+  }
+}
+```
+
+The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
 #### Greater Than Operator
@@ -3517,6 +4086,36 @@ query {
       title
       price_in_usd
       color
+    }
+  }
+}
+```
+
+The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’, ‘Price in USD’, and ‘Color’ fields.
+
+#### Try 'Greater Than' Operator within Group
+
+**Method:** ``  
+**Endpoint:** `/stacks/apiKey/explore`
+
+#### Greater Than Operator within Group
+
+Get entries in which the value for a field is greater than the value provided in the condition. This query is specifically for fields that are part of the Group field.
+
+**Example**: In the **Product** content type, we have a Group field named **Bank Offers**. And, within this Group field, we have a subfield named **Discount in Percentage**. If, for instance, you want to retrieve the entries in which the values for the Discount in Percentage field is greater than ‘20’, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      bank_offers: {
+        discount_in_percentage_gt: 20
+      }
+    }) {
+    items {
+      title
+      color
+      price_in_usd
     }
   }
 }

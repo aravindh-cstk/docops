@@ -1,0 +1,116 @@
+---
+title: "Localize an entry"
+description: PUT /content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}
+url: developers/apis/content-management-api/requests/localize-an-entry
+product: Contentstack
+doc_type: api-request
+audience:
+  - developers
+version: unknown
+last_updated: 2025-06-30
+---
+
+# Localize an entry
+
+
+**Method:** `PUT`  
+**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
+
+The Localize an entry request allows you to localize an entry i.e., the entry will cease to fetch data from its fallback language and possess independent content specific to the selected locale.
+
+To configure the permissions for your application via OAuth, please include the cm.entries.management:write scope.
+
+In the "Body" parameter, you need to provide the content of your entry based on the content type.
+
+**Note**: When localizing an entry, if a **Group**, **Modular Blocks**, or **Global** field instance contains a field that is marked as non-localizable, you must include _metadata.uid for the field in the request payload to map that instance in child locale. This ensures that the non-localizable field retains its value from the master locale. You can find the metadata UID for each non-localizable field by using the [Get a Single Entry](/docs/developers/apis/content-management-api#get-a-single-entry) request for the master entry.
+
+Here's a sample request body:
+
+```
+{
+    "entry":{
+        "title":"Sample Entry in Arabic",
+        "group":[{
+            "single_line":"Non-localizable single line textbox",
+            "_metadata":{
+                "uid":"csde3afe4a1ece294b"
+                }
+            }],
+        "single_line":"Localizable single line textbox",
+        "tags":[]
+    }
+}
+```
+
+**Note:** This request will only create the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](/docs/content-managers/author-content/publish-an-entry) request and pass the respective locale code in the locale={locale_code} parameter.
+
+**Additional Resource:** Refer the [Localization](/docs/developers/multilingual-content/localize-an-entry) docs for more information.
+
+**Parameters:**
+
+| Key | Value | Description |
+|-----|-------|-------------|
+
+| api_key | blt20962a819b57e233 | Enter the API key of the stack. |
+
+| authtoken | Your_Authtoken | Enter your authtoken |
+
+| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+
+| branch | main | Enter your branch unique ID. |
+
+| content_type_uid | product | Enter the unique ID of the content type. |
+
+| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you want to localize. |
+
+| locale | fr-fr | Enter the code of the language to localize the entry of that particular language. |
+
+| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
+
+**Request Body:**
+
+```json
+{
+    "entry":{
+        "title":"Sample Entry in Arabic",
+        "group":[{
+            "single_line":"Non-localizable single line textbox",
+            "_metadata":{
+                "uid":"csde3afe4a1ece294b"
+                }
+            }],
+        "single_line":"Localizable single line textbox",
+        "tags":[]
+    }
+}
+```
+
+**Response (200):**
+
+```json
+{
+    "notice": "Entry localized successfully.",
+    "entry": {
+        "locale": "hi-in",
+        "uid": "bltf285cc2affe9f495",
+        "ACL": {},
+        "_in_progress": false,
+        "_version": 1,
+        "created_at": "2025-05-07T04:52:45.031Z",
+        "created_by": "blte93d4119f79db761",
+        "group": [
+            {
+                "single_line": "Non-localizable single line textbox",
+                "_metadata": {
+                    "uid": "csde3afe4a1ece294b"
+                }
+            }
+        ],
+        "single_line": "Localizable single line textbox",
+        "tags": [],
+        "title": "Sample Entry in Arabic",
+        "updated_at": "2025-05-07T04:52:45.031Z",
+        "updated_by": "blte93d4119f79db761"
+    }
+}
+```

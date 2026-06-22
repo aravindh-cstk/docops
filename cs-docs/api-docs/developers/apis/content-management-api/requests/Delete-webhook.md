@@ -1,0 +1,43 @@
+---
+title: "Delete webhook"
+description: DELETE /webhooks/{webhook_uid}
+url: developers/apis/content-management-api/requests/delete-webhook
+product: Contentstack
+doc_type: api-request
+audience:
+  - developers
+version: unknown
+last_updated: 2024-07-25
+---
+
+# Delete webhook
+
+
+**Method:** `DELETE`  
+**Endpoint:** `/webhooks/{webhook_uid}`
+
+The Delete webhook call deletes an existing webhook from a stack.
+
+When executing the API call, under the 'Header' section, you need to enter the API key of your stack and the authtoken that you receive after logging into your account.  
+To configure the permissions for your application via OAuth, please include the cm.webhooks.management:write scope.
+
+**Parameters:**
+
+| Key | Value | Description |
+|-----|-------|-------------|
+
+| api_key | Enter the API key of your stack |  |
+
+| authtoken | your_authtoken | Enter your authtoken. |
+
+| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+
+| webhook_uid | bltc7aa14ea1959b252 | Enter the unique ID of the webhook that you want to delete. Execute the 'Get all webhooks' call to retrieve the UID of a webhook. |
+
+**Response (200):**
+
+```json
+{
+    "notice": "The Webhook was deleted successfully"
+}
+```

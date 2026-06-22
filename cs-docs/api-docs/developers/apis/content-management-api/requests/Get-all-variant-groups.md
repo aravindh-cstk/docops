@@ -1,0 +1,187 @@
+---
+title: "Get all variant groups"
+description: GET /variant_groups?skip=0&limit=30&include_count=true&include_variant_info=true&include_variant_count=true&desc=created_at&content_type={your_content_type_uid}
+url: developers/apis/content-management-api/requests/get-all-variant-groups
+product: Contentstack
+doc_type: api-request
+audience:
+  - developers
+version: unknown
+last_updated: 2024-09-24
+---
+
+# Get all variant groups
+
+
+**Method:** `GET`  
+**Endpoint:** `/variant_groups?skip=0&limit=30&include_count=true&include_variant_info=true&include_variant_count=true&desc=created_at&content_type={your_content_type_uid}`
+
+The Get all variant groups request returns a list of all variant groups linked to your stack. To retrieve the variant UIDs specific to a content type, include the content_type query parameter with the content type UID in your request.
+
+**Parameters:**
+
+| Key | Value | Description |
+|-----|-------|-------------|
+
+| api_key | your_stack_api_key | Enter the API key of the stack. |
+
+| authtoken | your_authtoken | Enter your authtoken. |
+
+| authorization | your_management_token | Enter your management token. |
+
+| skip | 2 | Enter the number of items to be skipped from the response body. |
+
+| limit | 4 | Enter the maximum number of items to be returned. |
+
+| include_count | true | Set this parameter to “true” to include the total count of variant groups. |
+
+| include_variant_info | true | Set this parameter to “true” to include the variant information. |
+
+| include_variant_count | true | Set this parameter to “true” to include the total count of variants within a variant group. |
+
+| asc | created_at | Sort the response in ascending order. Options include created_at and name. |
+
+| desc | name | Sort the response in descending order. Options include created_at and name. |
+
+| content_type | your_content_type_uid | Enter the unique ID of your content type. |
+
+**Response (200):**
+
+```json
+{
+    "variant_groups": [
+        {
+            "name": "region",
+            "created_by": "blt**************59",
+            "updated_by": "blt**************59",
+            "uid": "cs**************43",
+            "branches": [
+                "main"
+            ],
+            "content_types": [
+                {
+                    "uid": "mobile",
+                    "status": "linked"
+                },
+                {
+                    "uid": "laptop",
+                    "status": "linked"
+                }
+            ],
+            "created_at": "2024-08-20T10:31:07.092Z",
+            "updated_at": "2024-08-20T10:31:07.092Z"
+        },
+        {
+            "name": "Variant-Group-test-ct",
+            "created_by": "blt**************9e",
+            "updated_by": "blt**************33",
+            "uid": "cs8**************b6",
+            "content_types": [
+                {
+                    "uid": "testing_variant_cases",
+                    "status": "linked"
+                },
+                {
+                    "uid": "test_reference",
+                    "status": "linked"
+                },
+                {
+                    "uid": "test",
+                    "status": "linked"
+                }
+            ],
+            "created_at": "2024-08-21T10:10:29.494Z",
+            "updated_at": "2024-08-22T11:30:48.669Z",
+            "description": "",
+            "variant_count": 3,
+            "variants": [
+                {
+                    "uid": "cs1**************67",
+                    "created_by": "blt**************33",
+                    "updated_by": "blt**************33",
+                    "name": "test",
+                    "created_at": "2024-08-22T11:30:48.774Z",
+                    "updated_at": "2024-08-22T11:30:48.774Z"
+                },
+                {
+                    "uid": "cs3**************8f",
+                    "created_by": "blt**************33",
+                    "updated_by": "blt**************33",
+                    "name": "test 2",
+                    "created_at": "2024-08-22T11:30:48.978Z",
+                    "updated_at": "2024-08-22T11:30:48.978Z"
+                },
+                {
+                    "uid": "cs3d901397291171c0",
+                    "created_by": "blt**************33",
+                    "updated_by": "blt**************33",
+                    "name": "test 3",
+                    "created_at": "2024-08-22T11:30:48.979Z",
+                    "updated_at": "2024-08-22T11:30:48.979Z"
+                }
+            ]
+        },
+        {
+            "content_types": [
+                {
+                    "uid": "vigor",
+                    "status": "linked"
+                },
+                {
+                    "uid": "tsyuio",
+                    "status": "linked"
+                }
+            ],
+            "name": "test segmentated",
+            "personalize_metadata": {
+                "project_uid": "660bc**************31ac",
+                "experience_uid": "660bd**************431ba",
+                "experience_short_uid": "0",
+                "status": "linked"
+            },
+            "created_by": null,
+            "updated_by": "blt**************1a",
+            "uid": "cse**************e2",
+            "created_at": "2024-08-22T11:41:36.588Z",
+            "updated_at": "2024-08-22T13:07:10.907Z",
+            "variant_count": 2,
+            "variants": [
+                {
+                    "uid": "csf**************7d",
+                    "created_by": null,
+                    "updated_by": "blt**************1a",
+                    "name": "Country",
+                    "variant_group_uid": "cse**************e2",
+                    "personalize_metadata": {
+                        "project_uid": "660bc**************31ac",
+                        "experience_uid": "660bd**************31ba",
+                        "experience_short_uid": "0",
+                        "status": "linked",
+                        "variant_short_uid": "1"
+                    },
+                    "alias": "cs_personalize_0_1",
+                    "created_at": "2024-08-22T11:41:36.602Z",
+                    "updated_at": "2024-08-22T13:07:11.069Z"
+                },
+                {
+                    "uid": "cs8**************5e",
+                    "created_by": null,
+                    "updated_by": "blt**************1a",
+                    "name": "test",
+                    "variant_group_uid": "cse**************e2",
+                    "personalize_metadata": {
+                        "project_uid": "660bc**************31ac",
+                        "experience_uid": "660bd**************31ba",
+                        "experience_short_uid": "0",
+                        "status": "linked",
+                        "variant_short_uid": "0"
+                    },
+                    "alias": "cs_personalize_0_0",
+                    "created_at": "2024-08-22T11:41:36.603Z",
+                    "updated_at": "2024-08-22T13:07:11.088Z"
+                }
+            ]
+        }
+    ]
+}
+```

@@ -1,0 +1,34 @@
+---
+title: "Log out of your account"
+description: DELETE /user-session
+url: developers/apis/content-management-api/requests/log-out-of-your-account
+product: Contentstack
+doc_type: api-request
+audience:
+  - developers
+version: unknown
+last_updated: 2023-01-05
+---
+
+# Log out of your account
+
+
+**Method:** `DELETE`  
+**Endpoint:** `/user-session`
+
+The Log out of your account call is used to sign out the user of Contentstack account.
+
+**Parameters:**
+
+| Key | Value | Description |
+|-----|-------|-------------|
+
+| authtoken | your_authtoken |  |
+
+**Response (200):**
+
+```json
+{
+	"notice": "You've logged out successfully!"
+}
+```
