@@ -37,7 +37,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -151,7 +151,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 #### Sample Response
@@ -217,7 +217,7 @@ The disabled parameter, allows you to enable or disable the webhook. You can set
 
 The concise_payload parameter allows you to send a concise JSON payload to the target URL when a specific event occurs. To send a comprehensive JSON payload, you can set its value to false. However, to send a concise payload, set the value of the concise_payload parameter to true.
 
-**Note**: Refer to our [Webhook Events](https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-events) document to get a list of conditions that can be included in your request body. You can also set trigger conditions based on actions performed on [entry comments](https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-events#entry-comments) and [discussions](https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-events#entry-discussions).
+**Note**: Refer to our [Webhook Events](../../../../cs-docs/developers/set-up-webhooks/webhook-events.md) document to get a list of conditions that can be included in your request body. You can also set trigger conditions based on actions performed on [entry comments](../../../../cs-docs/developers/set-up-webhooks/webhook-events.md#entry-comments) and [discussions](../../../../cs-docs/developers/set-up-webhooks/webhook-events.md#entry-discussions).
 
 The authentication_type parameter specifies the type of authentication to be used for the webhook, such as **Basic Auth**, **OAuth2.0 Client Credential**, **Bearer Token**, and **None**. Based on the selected authentication type, you will need to provide the relevant authentication details in the request body.
 
@@ -287,7 +287,7 @@ When creating a webhook, you can specify the branch scope through the following 
 ]
 ```
 
-**Note**: To configure the permissions for applications that are using Contentstack OAuth, add the cm.webhooks.management:write user-related permission scope under the OAuth settings of your app in Developer Hub. For more details, refer to the [Contentstack OAuth documentation](https://www.contentstack.com/docs/developers/developer-hub/contentstack-oauth).
+**Note**: To configure the permissions for applications that are using Contentstack OAuth, add the cm.webhooks.management:write user-related permission scope under the OAuth settings of your app in Developer Hub. For more details, refer to the [Contentstack OAuth documentation](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md).
 
 #### Headers
 
@@ -298,7 +298,7 @@ When creating a webhook, you can specify the branch scope through the following 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -397,7 +397,7 @@ The disabled parameter allows you to enable or disable the webhook. You can set 
 
 The concise_payload parameter allows you to send a concise JSON payload to the target URL when a specific event occurs. To send a comprehensive JSON payload, you can set its value to false. However, to send a concise payload, set the value of the concise_payload parameter to true.
 
-**Note**: Refer to our [Webhook Events](https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-events) document to get a list of conditions that can be included in your request body. You can also set trigger conditions based on actions performed on [entry comments](https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-events#entry-comments) and [discussions](https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-events#entry-discussions).
+**Note**: Refer to our [Webhook Events](../../../../cs-docs/developers/set-up-webhooks/webhook-events.md) document to get a list of conditions that can be included in your request body. You can also set trigger conditions based on actions performed on [entry comments](../../../../cs-docs/developers/set-up-webhooks/webhook-events.md#entry-comments) and [discussions](../../../../cs-docs/developers/set-up-webhooks/webhook-events.md#entry-discussions).
 
 The authentication_type parameter specifies the type of authentication to be used for the webhook, such as **Basic Auth**, **OAuth2.0 Client Credential**, **Bearer Token**, and **None**. Based on the selected authentication type, you will need to provide the relevant authentication details in the request body.
 
@@ -467,7 +467,7 @@ When updating a webhook, you can specify the branch scope through the following 
 ]
 ```
 
-**Note**: To configure the permissions for applications that are using Contentstack OAuth, add the cm.webhooks.management:write user-related permission scope under the OAuth settings of your app in Developer Hub. For more details, refer to the [Contentstack OAuth documentation](https://www.contentstack.com/docs/developers/developer-hub/contentstack-oauth).
+**Note**: To configure the permissions for applications that are using Contentstack OAuth, add the cm.webhooks.management:write user-related permission scope under the OAuth settings of your app in Developer Hub. For more details, refer to the [Contentstack OAuth documentation](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md).
 
 #### URL Parameters
 
@@ -484,7 +484,7 @@ When updating a webhook, you can specify the branch scope through the following 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -597,7 +597,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 #### Sample Response
@@ -634,7 +634,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "multipart/form-data" to pass form-data params.
@@ -702,7 +702,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "multipart/form-data" to pass form-data params.
@@ -772,7 +772,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "multipart/form-data" to pass a form-data params.
@@ -898,7 +898,7 @@ This API request will return a maximum of **100** records while fetching the exe
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 #### Sample Response
@@ -1148,7 +1148,7 @@ To configure the permissions for your application via OAuth, please include the 
 #### URL Parameters
 
 - **execution_uid** (required)
-  Enter the execution unique ID of the webhook that you want to retry. Execute the [Get executions of a webhook](https://www.contentstack.com/docs/developers/apis/content-management-api#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
+  Enter the execution unique ID of the webhook that you want to retry. Execute the [Get executions of a webhook](../../../api-detail/content-management-api.md#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
   Default: `cs2642bec9-c336-4da1-8aad-fded56c7d50e`
 
 #### Headers
@@ -1159,7 +1159,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 #### Sample Response
@@ -1187,7 +1187,7 @@ To configure the permissions for your application via OAuth, please include the 
 #### URL Parameters
 
 - **execution_uid** (required)
-  Enter the execution unique ID of the webhook of which you want to retrieve the execution log. Execute the [Get executions of a webhook](https://www.contentstack.com/docs/developers/apis/content-management-api#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
+  Enter the execution unique ID of the webhook of which you want to retrieve the execution log. Execute the [Get executions of a webhook](../../../api-detail/content-management-api.md#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
   Default: `cs4eb0cd75-8a6e-416a-b367-07158d698d41`
 
 #### Headers
@@ -1198,7 +1198,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 #### Sample Response

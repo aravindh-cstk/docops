@@ -47,7 +47,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -122,7 +122,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -185,7 +185,7 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`
@@ -244,7 +244,7 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -323,7 +323,7 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -406,7 +406,7 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -481,7 +481,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -732,7 +732,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -821,7 +821,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -886,7 +886,7 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`
@@ -950,7 +950,7 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1037,7 +1037,7 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1125,7 +1125,7 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1208,7 +1208,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -1253,7 +1253,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1323,7 +1323,7 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`
@@ -1386,7 +1386,7 @@ In the ‘Body’ section, you need to provide details of the dashboard widget, 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -1463,7 +1463,7 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1546,7 +1546,7 @@ In the ‘Body’ section, you need to provide details of the extension, such as
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1621,7 +1621,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -1668,7 +1668,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -1815,7 +1815,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -1879,7 +1879,7 @@ In the ‘Body’ section, you need to provide details of the JSON RTE plugin, s
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -1967,7 +1967,7 @@ In the ‘Body’ section, you need to provide details of the JSON RTE plugin, s
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -2043,7 +2043,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

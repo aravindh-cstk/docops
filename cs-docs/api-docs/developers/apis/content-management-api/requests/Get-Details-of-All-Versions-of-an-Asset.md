@@ -50,7 +50,7 @@ The Get Details of All Versions of an Asset request returns comprehensive inform
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **api_key** (required)
   Enter the API key of your stack.

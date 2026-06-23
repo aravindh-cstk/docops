@@ -23,7 +23,7 @@ To configure the permissions for your application via OAuth, please include the 
 ## URL Parameters
 
 - **execution_uid** (required)
-  Enter the execution unique ID of the webhook that you want to retry. Execute the [Get executions of a webhook](https://www.contentstack.com/docs/developers/apis/content-management-api#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
+  Enter the execution unique ID of the webhook that you want to retry. Execute the [Get executions of a webhook](../../../../api-detail/content-management-api.md#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
   Default: `cs2642bec9-c336-4da1-8aad-fded56c7d50e`
 
 ## Headers
@@ -34,7 +34,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 ## Sample Response

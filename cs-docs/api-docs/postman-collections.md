@@ -26,7 +26,7 @@ Contentstack provides a read-only set of APIs that helps you fetch content from 
 
 To get started with the CDA Postman collection, you need to have the latest version of Postman. Then, click on the following button to download and install our CDA Postman collection along with the associated environment:
 
-Read our [Content Delivery API Documentation](https://www.contentstack.com/docs/developers/apis/content-delivery-api/#postman-collection) to learn more.
+Read our [Content Delivery API Documentation](./api-detail/content-delivery-api.md#postman-collection) to learn more.
 
 **Note**: If you do not use Postman, you can also download the [JSON files for the CDA Postman collection](https://github.com/contentstack/contentstack-postman-collections/blob/collections/cda-collection.json) separately.
 
@@ -38,7 +38,7 @@ To get started with the CMA Postman collection, you need to have the latest vers
 
 **Note:** For Windows, downloading the collection doesn't download the environment automatically due to the larger size of the environment file. Consequently, Windows users need to download the Content Management API - Environment file manually and import it in their Postman environment.
 
-Read our [Content Management API Documentation](https://www.contentstack.com/docs/developers/apis/content-management-api/#postman-collection) to learn more.
+Read our [Content Management API Documentation](./api-detail/content-management-api.md#postman-collection) to learn more.
 
 **Note**: If you do not use Postman, you can also download the [JSON files for the CMA Postman collection](https://github.com/contentstack/contentstack-postman-collections/blob/collections/cma-collection.json) separately.
 

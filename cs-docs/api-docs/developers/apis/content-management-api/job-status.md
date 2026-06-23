@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # CMA | Job Status
 
-The Job Status API allows you to monitor the progress of your bulk operations on entries and assets. This functionality helps tracking the status of jobs, offering comprehensive details about the job's execution and the items present in the job, including nested references. Read more about [Nested Reference Publishing](https://www.contentstack.com/docs/content-managers/publish-content/about-nested-reference-publishing).
+The Job Status API allows you to monitor the progress of your bulk operations on entries and assets. This functionality helps tracking the status of jobs, offering comprehensive details about the job's execution and the items present in the job, including nested references. Read more about [Nested Reference Publishing](../../../../cs-docs/content-managers/publish-content/about-nested-reference-publishing.md).
 
 ## Get Job Status
 

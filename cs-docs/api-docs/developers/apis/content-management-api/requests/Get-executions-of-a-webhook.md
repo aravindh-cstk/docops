@@ -80,7 +80,7 @@ This API request will return a maximum of **100** records while fetching the exe
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 ## Sample Response

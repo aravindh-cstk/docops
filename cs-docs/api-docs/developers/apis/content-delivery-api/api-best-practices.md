@@ -65,7 +65,7 @@ For example, if your app is customer facing and there is an FAQ section in your 
 
 #### Use Contentstack Webhooks for Tracking Changes
 
-Contentstack [webhooks](https://www.contentstack.com/docs/developers/set-up-webhooks/about-webhooks) can be used to keep track of changes. You can set webhooks when any changes are made to content or code and then react as required. 
+Contentstack [webhooks](../../../../cs-docs/developers/set-up-webhooks/about-webhooks.md) can be used to keep track of changes. You can set webhooks when any changes are made to content or code and then react as required. 
 
 The webhook notifications allow App to fetch details as desired instead of waiting for the app's API instance to check for job status periodically and then fetch the data. Webhooks can help you in such situations by notifying you as and when the job gets completed.
 
@@ -79,7 +79,7 @@ This approach can be useful in reducing the number of includes involved in makin
 
 #### Avoid Retrieving Multiple Levels in Referencing
 
-[Referencing](https://www.contentstack.com/docs/developers/create-content-types/reference) is a powerful Contentstack feature that allows you to create references. However, if not needed, we encourage you to avoid fetching unnecessary references in the response.
+[Referencing](../../../../cs-docs/developers/create-content-types/reference.md) is a powerful Contentstack feature that allows you to create references. However, if not needed, we encourage you to avoid fetching unnecessary references in the response.
 
 The number of includes in case of referencing is one thing, but the depth of a single include is also more resource costly than a shallower include. So you should always decide logically when retrieving data in a single call and avoid retrieving them unnecessarily for optimum resource utilization.
 
@@ -87,6 +87,6 @@ The number of includes in case of referencing is one thing, but the depth of a s
 
 When making use of multiple content type references, and fetching the schema of all these content types can be exhausting. This also increases the number of includes in a call.
 
-This case can be handled efficiently by using [Modular Blocks](https://www.contentstack.com/docs/developers/create-content-types/modular-blocks). They can be used with other modules to construct a complete webpage. You can create multiple blocks (let's say, B1, B2, B3, and so on with each block with a different schema) within a modular block while creating a content type.
+This case can be handled efficiently by using [Modular Blocks](../../../../cs-docs/developers/create-content-types/modular-blocks.md). They can be used with other modules to construct a complete webpage. You can create multiple blocks (let's say, B1, B2, B3, and so on with each block with a different schema) within a modular block while creating a content type.
 
 While creating an entry in this content type, you can add data to any of the blocks (B1, B2, B3) and keep other blocks empty. And now when you make a call, you don't have to include the referenced content types in your call. This is another way of minimizing the includes in your call or queries.

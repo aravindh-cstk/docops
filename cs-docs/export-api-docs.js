@@ -197,7 +197,10 @@ function formatDate(isoString) {
 }
 
 function buildFrontmatter({ title, description, url, docType, version, lastUpdated }) {
-  const desc = (description || '').replace(/\n/g, ' ').replace(/"/g, "'").slice(0, 300).trim();
+  // Strip markdown links before truncating so we never cut a URL mid-token
+  const desc = (description || '')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')  // [text](url) → text
+    .replace(/\n/g, ' ').replace(/"/g, "'").slice(0, 300).trim();
   const lines = [
     '---',
     `title: "${(title || '').replace(/"/g, "'")}"`,

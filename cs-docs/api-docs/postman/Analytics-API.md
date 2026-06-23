@@ -20,5 +20,5 @@ The Contentstack Analytics Postman Collection is a set of preconfigured REST API
 - Analytics Postman Collection Version: {version}
 - Last Updated: {date}
 
-To use the API request, you will need to authenticate yourself either with an [Authtoken.](https://www.contentstack.com/docs/developers/apis/analytics-api#authentication)   
-Read more about it in [Authentication.](https://www.contentstack.com/docs/developers/apis/analytics-api/#authentication)
+To use the API request, you will need to authenticate yourself either with an [Authtoken.](../api-detail/analytics-api.md#authentication)   
+Read more about it in [Authentication.](../api-detail/analytics-api.md#authentication)
