@@ -215,14 +215,24 @@ async function exportSection(sectionName, contentType, urlPattern) {
   for (const entry of entries) {
     try {
       const parts = urlToFilePath(entry.url);
-      const frontmatter = buildFrontmatter({
-        title: entry.title,
-        description: entry.seo?.description || entry.description || entry.title,
-        url: `https://www.contentstack.com${entry.url || '/'}`,
-      });
 
-      const bodyMd = entry.body ? htmlToMarkdown(entry.body) : '';
-      const content = `${frontmatter}\n\n# ${entry.title}\n\n${bodyMd}\n`;
+      // SDK docs and other entries may have pre-rendered md_content instead of body HTML
+      let content;
+      if (entry.md_content && typeof entry.md_content === 'string' && entry.md_content.trim().startsWith('---')) {
+        // md_content is already markdown with frontmatter — use it as-is
+        content = entry.md_content;
+      } else {
+        // Regular docs_article with body HTML — convert and build frontmatter
+        const frontmatter = buildFrontmatter({
+          title: entry.title,
+          description: entry.seo?.description || entry.description || entry.title,
+          url: `https://www.contentstack.com${entry.url || '/'}`,
+        });
+
+        const bodyMd = entry.body ? htmlToMarkdown(entry.body) : '';
+        content = `${frontmatter}\n\n# ${entry.title}\n\n${bodyMd}\n`;
+      }
+
       await writeFile(parts, content);
     } catch (err) {
       console.error(`  Failed: ${entry.uid}`, err.message);
