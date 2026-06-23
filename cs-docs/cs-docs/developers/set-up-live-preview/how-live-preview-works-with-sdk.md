@@ -28,7 +28,7 @@ The Live Preview SDK connects your website to the entry editor, enabling real-ti
 
 This real-time content rendering makes it easier for content teams to see changes instantly and make informed updates before publishing.
 
-**Additional Resource**: Learn how to configure Live Preview to [open in a new browser tab](/docs/developers/set-up-live-preview/open-live-preview-in-a-new-tab), with behavior based on your SDK version.
+**Additional Resource**: Learn how to configure Live Preview to [open in a new browser tab](./open-live-preview-in-a-new-tab.md), with behavior based on your SDK version.
 
 ## Understanding the Live Preview Hash
 

@@ -23,7 +23,7 @@ Contentstack provides a .NET Management SDK (that uses Content Management APIs) 
 
 **Note:** The Contentstack .NET Management SDK supports **.NET version 3.1** or later.
 
-To integrate your .NET app with Contentstack .NET Management SDK, follow the steps mentioned in the [Get Started with .NET Management SDK](/docs/developers/dot-net/get-started-with-dot-net-management-sdk)  document.
+To integrate your .NET app with Contentstack .NET Management SDK, follow the steps mentioned in the [Get Started with .NET Management SDK](./get-started-with-dot-net-management-sdk.md)  document.
 
 ## Common questions
 
@@ -34,4 +34,4 @@ You can manage the content of your Contentstack account, including creating, upd
 The Contentstack .NET Management SDK supports **.NET version 3.1** or later.
 
 ### Where do I start integrating the SDK?
-Follow the steps in the [Get Started with .NET Management SDK](/docs/developers/dot-net/get-started-with-dot-net-management-sdk) document.
+Follow the steps in the [Get Started with .NET Management SDK](./get-started-with-dot-net-management-sdk.md) document.

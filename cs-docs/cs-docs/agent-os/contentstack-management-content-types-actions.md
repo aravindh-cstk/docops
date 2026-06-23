@@ -17,7 +17,7 @@ This page describes the Contentstack Management connector actions related to Con
 
 ## Contentstack Management - Content Types Actions
 
-A [Content Type](/docs/developers/create-content-types/about-content-types) serves as the framework or blueprint for a page or section within your web or mobile platform. It allows you to establish the fundamental structure of this blueprint by incorporating fields and configuring their attributes. By using the Contentstack Management Content Types action, you can fetch all content types from a selected stack.
+A [Content Type](../developers/create-content-types/about-content-types.md) serves as the framework or blueprint for a page or section within your web or mobile platform. It allows you to establish the fundamental structure of this blueprint by incorporating fields and configuring their attributes. By using the Contentstack Management Content Types action, you can fetch all content types from a selected stack.
 
 Let’s look at the action in detail.
 
@@ -33,7 +33,7 @@ This action fetches all the content types present in a stack.
   **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
 - **[Optional]** Enable the **Show Optional Fields** toggle button to display the **Content Type Limit**, **Customized Data (query)**, and **Skip Content Type (Pagination)** fields.
 - Provide your data in the **Customized Data (query)** field to filter the retrieval of content types. Enter your data in the **Key**, and **Value** fields.
-- You can also include the total count of the content types, global field schema, and the branch details by clicking the respective checkboxes.**Additional Resource:** Refer to the [Content Delivery API Docs](/docs/developers/apis/content-delivery-api/#queries) for more information on Queries.
+- You can also include the total count of the content types, global field schema, and the branch details by clicking the respective checkboxes.**Additional Resource:** Refer to the [Content Delivery API Docs](../../api-docs/api-detail/content-delivery-api.md#queries) for more information on Queries.
 
   **Note:** The **Customized Data (query)** field acts as a filter to fetch the content types that fulfill the specifications provided in the Key-Value fields.
 - Once done, click **Proceed**.
@@ -65,6 +65,6 @@ You need to click **+ Add New Account** to connect your Contentstack account, an
 Use the **Customized Data (query)** field and enter your data in the **Key**, and **Value** fields.
 
 ### Where can I learn more about queries?
-Refer to the [Content Delivery API Docs](/docs/developers/apis/content-delivery-api/#queries) for more information on Queries.
+Refer to the [Content Delivery API Docs](../../api-docs/api-detail/content-delivery-api.md#queries) for more information on Queries.
 
 <!-- filename: automations-guides-and-connectors-contentstack-management-content-types-actions.md -->

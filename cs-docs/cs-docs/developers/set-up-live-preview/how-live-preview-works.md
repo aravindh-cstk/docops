@@ -98,7 +98,7 @@ Live Preview in Contentstack **renders inside an iframe** within the CMS interfa
 
 By default, Live Preview loads your website inside an iFrame. With **Live Preview SDK v4.0.0** or **later**, you can also open your site in a separate browser tab.
 
-**Additional Resource**: To learn how to configure this option, refer [Open Live Preview in a New Tab](/docs/developers/set-up-live-preview/open-live-preview-in-a-new-tab).
+**Additional Resource**: To learn how to configure this option, refer [Open Live Preview in a New Tab](./open-live-preview-in-a-new-tab.md).
 
 ## Limitations of Using Live Preview Without the LP SDK
 

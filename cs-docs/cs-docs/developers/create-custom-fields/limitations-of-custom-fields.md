@@ -16,7 +16,7 @@ This page lists the limitations and constraints for using custom fields implemen
 
 ## Limitations of Custom Fields
 
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](/docs/developers/developer-hub/custom-field-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](../developer-hub/custom-field-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 The limitations to using custom fields are as follows:
 - The maximum size of the custom field extension source code cannot exceed **500**** KB**.

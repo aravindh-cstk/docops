@@ -16,12 +16,12 @@ This page explains the legacy “Developer Tools” Sidebar Extension for Conten
 
 ## Developer Tools
 
-**Note: **This documentation uses the legacy approach with extensions. We have launched Developer Tools as a Marketplace App. For more information on Developer Tools, please refer to the [Developer Tools App Installation Guide](/docs/developers/marketplace-apps/developer-tools/).
+**Note: **This documentation uses the legacy approach with extensions. We have launched Developer Tools as a Marketplace App. For more information on Developer Tools, please refer to the [Developer Tools App Installation Guide](../marketplace-apps/developer-tools.md).
 
-The “Developer Tools” Sidebar Extension provides developers with quick tools (API endpoint, JSON, etc.) to work with an [entry](/docs/content-managers/working-with-entries/about-entries) or all entries of a [content type](/docs/developers/create-content-types/about-content-types) and do a lot more. Let’s explore more about this extension.
+The “Developer Tools” Sidebar Extension provides developers with quick tools (API endpoint, JSON, etc.) to work with an [entry](../../content-managers/author-content/about-entries.md) or all entries of a [content type](../create-content-types/about-content-types.md) and do a lot more. Let’s explore more about this extension.
 
 The Developer Tools Sidebar Extension, which can be accessed on the right-hand side of the entry page, primarily has two tabs: **API Details** and **JSON View**.
-- **API Details**: This tab provides the [REST API](/docs/developers/single-sign-on/rest-api-usage) endpoints or queries (in any language of your choice) that you can readily use to access/fetch the current entry or all entries of the content type. You need to select the Platform, copy the endpoint/query, add the environment name, and use it as required to fetch the entry.
+- **API Details**: This tab provides the [REST API](../single-sign-on/rest-api-usage.md) endpoints or queries (in any language of your choice) that you can readily use to access/fetch the current entry or all entries of the content type. You need to select the Platform, copy the endpoint/query, add the environment name, and use it as required to fetch the entry.
 - **JSON View**: The JSON view tab displays the JSON data of your entry. You can then copy this JSON and use it as per requirement or import it to other content types.
 
 This step-by-step guide explains how to create **Developer Tools** Sidebar Extension for your content types.
@@ -35,7 +35,7 @@ This step-by-step guide explains how to create **Developer Tools** Sidebar Exten
 
 To create a Developer Tools Sidebar Extension, log in to your [Contentstack account](https://app.contentstack.com/#!/stacks) and perform the following steps:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Select **Extensions.** You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - Click on **+ New Extension** and select **Create new. ******
 - On the **Select Extension Type** screen, select **Sidebar Extension.**********

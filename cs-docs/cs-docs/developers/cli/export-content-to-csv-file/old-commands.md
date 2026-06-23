@@ -18,11 +18,11 @@ This page explains how to use the Contentstack CLI `cm:export-to-csv` command to
 
 The `**cm:export-to-csv**` command allows users to export the following data into a CSV file:
 - Stack Entries
-- [Organization users’ details](/docs/owners-and-admins/organization-users)
+- [Organization users’ details](../../organization/organization-users.md)
 
 This makes it easy for users to perform other operations such as create content backups, perform data analysis, and so on.
 
-To export the content of a stack, you need to have access to it. Likewise, to export an organization’s user data, you need to be the “[owner](/docs/owners-and-admins/organization-roles#organization-owner)” or an “[admin](/docs/owners-and-admins/organization-roles#organization-admin)” user of that organization.
+To export the content of a stack, you need to have access to it. Likewise, to export an organization’s user data, you need to be the “[owner](../../organization/organization-roles.md#organization-owner)” or an “[admin](../../organization/organization-roles.md#organization-admin)” user of that organization.
 
 You can export content into a .csv file by performing the following two steps:
 - [Log in to the CLI session](#log-in-to-the-cli-session)
@@ -60,7 +60,7 @@ This option will ask you to select the following:Organization where your stack r
 - Stack where the content type resides
 - Content type(s) to which the entries belong
 - Language of which you want to export the entries
-- **Export organization users to CSV**: Export the organization users’ details to a CSV file. To use this option, you should either be an [Organization Owner](/docs/owners-and-admins/organization-roles#organization-owner) or the [Organization Admin](/docs/owners-and-admins/organization-roles#organization-admin). This option lists the organization(s) of which you are either an owner or admin.
+- **Export organization users to CSV**: Export the organization users’ details to a CSV file. To use this option, you should either be an [Organization Owner](../../organization/organization-roles.md#organization-owner) or the [Organization Admin](../../organization/organization-roles.md#organization-admin). This option lists the organization(s) of which you are either an owner or admin.
 - **Exit**: Stop this command from further execution.
 
 Once you select any one of the above-mentioned options, the “data” folder is auto-generated in the current working directory (folder), and the corresponding CSV files are stored within this “data” folder.

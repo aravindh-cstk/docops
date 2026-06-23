@@ -16,7 +16,7 @@ This page describes recommended best practices for developers building apps with
 
 ## App Development Best Practices
 
-Contentstack provides an App Framework that makes it easy to build mobile apps for [Contentstack Marketplace](/docs/developers/marketplace-platform-guides/about-marketplace). This document explores some best practices to help app developers quickly build high-performing apps.
+Contentstack provides an App Framework that makes it easy to build mobile apps for [Contentstack Marketplace](../marketplace-platform-guides/about-marketplace.md). This document explores some best practices to help app developers quickly build high-performing apps.
 
 Developers can follow these guidelines and simplify the app developing, managing, reviewing and the approval process for their apps.
 
@@ -32,7 +32,7 @@ Here are the some recommended methods:
 
 ## Use Venus Component Library
 
-We highly recommend you to use the [Venus React Component Library](/docs/developers/venus-component-library) to build Contentstack-based applications. The Venus framework offers a comprehensive collection of Contentstack's UI components, helping you keep consistency
+We highly recommend you to use the [Venus React Component Library](../venus-component-library.md) to build Contentstack-based applications. The Venus framework offers a comprehensive collection of Contentstack's UI components, helping you keep consistency
 throughout the app development process.
 
 ## Define Project Structure

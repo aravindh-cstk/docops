@@ -18,9 +18,9 @@ This page explains what Variants are in Contentstack Personalize, how they relat
 
 ## About Variants
 
-Variants in Contentstack [Personalize](/docs/personalize/about-personalize) are alternative versions of content or experiences designed to cater to specific audiences. Each [experience](/docs/personalize/about-experiences) created in your Personalize project is reflected in the CMS as a [Variant Group](/docs/developers/variants/manage-variant-groups) with the same experience name.
+Variants in Contentstack [Personalize](./about-personalize.md) are alternative versions of content or experiences designed to cater to specific audiences. Each [experience](./about-experiences.md) created in your Personalize project is reflected in the CMS as a [Variant Group](../developers/variants/manage-variant-groups.md) with the same experience name.
 
-You can [create entry variants](/docs/content-managers/entry-variants/create-an-entry-variant) for each of these variants via the Entry Editor.
+You can [create entry variants](../content-managers/entry-variants/create-an-entry-variant.md) for each of these variants via the Entry Editor.
 
 By creating and managing these variants you can:
 - **Create dynamic personalized experiences**: Dynamically deliver personalized content to visitors in real-time based on demographics, behavior, and preferences.
@@ -43,7 +43,7 @@ By effectively using Variants in Contentstack Personalize, you can enhance custo
 
 ## Next Steps
 
-After creating a [Segmented](/docs/personalize/create-segmented-experience) or [A/B Test](/docs/personalize/create-ab-test-experience) experience in your Personalize project, you can create [Entry Variants](/docs/content-managers/entry-variants/about-entry-variants/) via the CMS. For more information, please refer to the following documentation for Entry Variants:
+After creating a [Segmented](./create-segmented-experience.md) or [A/B Test](./create-ab-test-experience.md) experience in your Personalize project, you can create [Entry Variants](../content-managers/entry-variants/about-entry-variants.md) via the CMS. For more information, please refer to the following documentation for Entry Variants:
 - [Work with Entry Variants](/docs/content-managers/entry-variants#work-with-entry-variants)
 - [More about Entry Variants](/docs/content-managers/entry-variants#more-about-entry-variants)
 

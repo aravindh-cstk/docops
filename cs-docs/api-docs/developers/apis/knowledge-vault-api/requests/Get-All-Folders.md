@@ -16,7 +16,7 @@ last_updated: 2026-03-02
 
 The Get All Folders request retrieves a paginated list of all folders within the Knowledge Vault for a specified brand kit. You can apply filters such as sorting, pagination, and the inclusion of user metadata in the response.
 
-To configure the permissions for your app via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your app via [OAuth](../../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 ## Query Parameters
 
@@ -39,7 +39,7 @@ To configure the permissions for your app via [OAuth](/docs/developers/developer
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../../api-detail/knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 - **organization_uid** (required)
   Enter the Organization UID.

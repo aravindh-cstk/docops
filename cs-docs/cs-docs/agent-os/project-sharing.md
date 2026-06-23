@@ -23,7 +23,7 @@ To invite any user, perform the following steps:
 
 1. Log in to your [Contentstack account](https://www.contentstack.com/login/).
 2. After logging in, click the **App Switcher** icon, then select **Agent OS** from the list.![App_switcher_icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6290d7afc992eda9/6998761148bd410008f0963f/App_switcher_icon.png)
-3. Go to your Agent OS project or [create](/docs/developers/automation-hub-guides/managing-projects#create-a-project) a new one.
+3. Go to your Agent OS project or [create](./managing-projects.md#create-a-project) a new one.
 4. From the top navigation panel, click **Settings**.
 5. In the **General** section, you can edit the **Project** **Name** and **Description**. You can also filter projects based on tags.
 

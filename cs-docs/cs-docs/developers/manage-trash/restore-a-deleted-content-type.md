@@ -30,10 +30,10 @@ To restore a deleted content type from the Trash, log in to your Contentstack ac
 ## Key Points to Remember
 
 Before restoring a deleted content type, it is important to understand the following points:
-- The [entry-level](/docs/developers/invite-users-and-assign-roles/create-a-role#permissions-on-entries) or [field-level](/docs/developers/invite-users-and-assign-roles/create-a-role#exceptions-on-entries) permissions that were set on the restored content type before deletion will no longer be applicable to it
-- The [workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) that was assigned to the restored content type before deletion will no longer be applicable to it
-- The [labels](/docs/developers/create-content-types/about-labels) that were applied to the restored content type before deletion will no longer exist
-- The [releases](/docs/content-managers/create-and-manage-releases/about-releases) that were yet to be deployed will no longer contain the entries and assets of the restored content type
+- The [entry-level](../invite-users-and-assign-roles/create-a-role.md#permissions-on-entries) or [field-level](../invite-users-and-assign-roles/create-a-role.md#exceptions-on-entries) permissions that were set on the restored content type before deletion will no longer be applicable to it
+- The [workflow](../set-up-workflows-and-publish-rules/about-workflows.md) that was assigned to the restored content type before deletion will no longer be applicable to it
+- The [labels](../create-content-types/about-labels.md) that were applied to the restored content type before deletion will no longer exist
+- The [releases](../../content-managers/create-and-manage-releases/about-releases.md) that were yet to be deployed will no longer contain the entries and assets of the restored content type
 
 ## Filter Deleted Content Types
 

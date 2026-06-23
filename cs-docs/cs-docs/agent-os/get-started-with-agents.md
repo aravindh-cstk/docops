@@ -35,7 +35,7 @@ The agent you build performs the following complex workflow:
 
 1. [Contentstack account](https://www.contentstack.com/login)
 2. Agent plan for your organization
-3. [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) access for the Contentstack stack
+3. [Admin](../developers/invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../developers/invite-users-and-assign-roles/types-of-roles.md#owner) access for the Contentstack stack
 
 Let's start by logging into the [Contentstack account](https://www.contentstack.com/login/) and following the steps given below:
 
@@ -78,12 +78,12 @@ The Agent Builder comprises three sections: **Trigger**, **Tools**, and **Instru
 
 1. In the **Triggers** section, click **+** to add the trigger. A side panel opens.
 
-   **Additional Resource:** Refer to the [Triggers](/docs/developers/automation-hub-connectors#triggers) documentation to learn more.
+   **Additional Resource:** Refer to the [Triggers](../developers/automation-hub-connectors.md#triggers) documentation to learn more.
 
    ![Add_Trigger_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf256c59911b330a3/6996d58080879200082ead1a/Add_Trigger_Icon.png)
 2. Select the **HTTP Trigger** and click **Save**. Once done, you are ready to use the trigger.
 
-   **Additional Resource:** Refer to the [HTTP Trigger](/docs/developers/automation-hub-connectors/http-trigger) documentation to learn more.
+   **Additional Resource:** Refer to the [HTTP Trigger](./http-trigger.md) documentation to learn more.
 3. Click the vertical ellipsis to edit the configuration or replace the trigger. Selecting either option opens a side panel where you can modify the existing trigger configuration or replace it with a new trigger.![Edit_replace_trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt493a9886398d9578/6996d598b13d650008b4f278/Edit_replace_trigger.png)
 
 #### Tools
@@ -115,7 +115,7 @@ Let’s see how to add all three tools:
 
             ![ChatGPT_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltce9e0263ad52c5f7/6996d58036d8d5000862c86e/ChatGPT_Action.png)
 
-      **Additional Resource:** For more information, refer to the [ChatGPT connector](/docs/developers/automation-hub-connectors/chatgpt) documentation.
+      **Additional Resource:** For more information, refer to the [ChatGPT connector](./chatgpt.md) documentation.
 
    **CMS: Create an Entry action**
 
@@ -135,7 +135,7 @@ Let’s see how to add all three tools:
    5. For the rest of the fields, let AI select the values. Click the **Save** button.![Slack_Configuration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt539e58740bba060f/6996d5e08d3a6a0008c5a3bd/Slack_Configuration.png)
 2. Once done, you see all the added tools.![Added_tools.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9f0d6858b716813a/6996d57fcf7e250008e68028/Added_tools.png)
 
-   **Additional Resource:** Refer to the [Connectors](/docs/developers/automation-hub-connectors) documentation to learn more.
+   **Additional Resource:** Refer to the [Connectors](../developers/automation-hub-connectors.md) documentation to learn more.
 
 #### Instructions
 

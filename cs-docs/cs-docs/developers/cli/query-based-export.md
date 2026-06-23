@@ -16,7 +16,7 @@ This page explains how to use the Contentstack CLI Query Export Plugin to export
 
 ## Query-based Export
 
-The Contentstack CLI Query Export Plugin gives you complete control over exporting specific content types and their dependencies using [queries](/docs/developers/apis/content-delivery-api/#queries).
+The Contentstack CLI Query Export Plugin gives you complete control over exporting specific content types and their dependencies using [queries](../../../api-docs/api-detail/content-delivery-api.md#queries).
 
 The Query-based Export plugin lets you perform the following operations in Contentstack CLI:
 - Migrating specific content types.
@@ -24,15 +24,15 @@ The Query-based Export plugin lets you perform the following operations in Conte
 - Managing environments efficiently.
 
 Key Features
-- **Query-based Filtering:** Uses queries to select specific [content types](/docs/developers/create-content-types/about-content-types).
-- **Automatic Dependency Export:** Includes related [global fields](/docs/developers/global-field/about-global-field), [extensions](/docs/developers/experience-extensions-overview), [taxonomies](/docs/developers/taxonomy/about-taxonomy), [Marketplace apps](/docs/developers/marketplace-platform-guides/about-marketplace), and [personalize](/docs/personalize/about-personalize).
-- **Reference Handling:** Automatically detects and exports referenced content types and their [entries](/docs/content-managers/working-with-entries/about-entries), [entry variants](/docs/content-managers/entry-variants/about-entry-variants/), and referenced assets.
+- **Query-based Filtering:** Uses queries to select specific [content types](../create-content-types/about-content-types.md).
+- **Automatic Dependency Export:** Includes related [global fields](../global-field/about-global-field.md), [extensions](../experience-extensions-overview.md), [taxonomies](../taxonomy/about-taxonomy.md), [Marketplace apps](../marketplace-platform-guides/about-marketplace.md), and [personalize](../../personalize/about-personalize.md).
+- **Reference Handling:** Automatically detects and exports referenced content types and their [entries](../../content-managers/author-content/about-entries.md), [entry variants](../../content-managers/entry-variants/about-entry-variants.md), and referenced assets.
 - **Reliable Exports:** Maintains content integrity by including all related parts.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
-- [CLI installed](/docs/developers/cli/install-the-cli/) and [configured](/docs/developers/cli/configure-regions-in-the-cli/) (version 1.44 or higher)
-- CLI [authenticated](/docs/developers/cli/cli-authentication#authentication)
+- [CLI installed](./install-the-cli.md) and [configured](./configure-regions-in-the-cli.md) (version 1.44 or higher)
+- CLI [authenticated](./cli-authentication.md#authentication)
 
 ## Installation
 
@@ -67,7 +67,7 @@ Options
 | `-c, --config=config` | Path to the configuration JSON file containing all options for a single run. |
 | `--skip-references` | Skip referenced content types. |
 | `--skip-dependencies` | Skip global fields, extensions, and taxonomies. |
-| `--secured-assets=secured-assets` | [optional] Use this flag to export your content if the [secured assets](/docs/developers/security) feature is enabled. |
+| `--secured-assets=secured-assets` | [optional] Use this flag to export your content if the [secured assets](../security.md) feature is enabled. |
 | `--yes, -y` | [optional] Skip confirmation prompts. |
 | `--config, -c` | [optional] Path to the configuration file. |
 
@@ -90,7 +90,7 @@ Use the following query structure to filter content types. Replace placeholders 
 
 **Example Operators:** `$in`, `$regex`, `$gte`
 
-**Additional Resource:** Refer to the [Content Delivery API Queries](/docs/developers/apis/content-delivery-api#queries) for the full list of operators.
+**Additional Resource:** Refer to the [Content Delivery API Queries](../../../api-docs/api-detail/content-delivery-api.md#queries) for the full list of operators.
 
 **Examples**
 - To export content types by title:
@@ -137,7 +137,7 @@ my-query.json:
 Only `content type` queries are supported.
 
 ### Does the export include referenced content automatically?
-**Reference Handling:** Automatically detects and exports referenced content types and their [entries](/docs/content-managers/working-with-entries/about-entries), [entry variants](/docs/content-managers/entry-variants/about-entry-variants/), and referenced assets.
+**Reference Handling:** Automatically detects and exports referenced content types and their [entries](../../content-managers/author-content/about-entries.md), [entry variants](../../content-managers/entry-variants/about-entry-variants.md), and referenced assets.
 
 ### What happens if my stack is branch-enabled and I don’t provide `--branch` or `--branch-alias`?
 (Version: 1.0.0-beta.4 or above)**Note:** If no branch or branch alias is provided, and the stack is branch-enabled, the default main branch will be exported.

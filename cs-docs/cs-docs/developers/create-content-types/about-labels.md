@@ -16,12 +16,12 @@ This page explains what Labels are and how to use them to organize Content Types
 
 ## About Labels
 
-Labels are like folders that provide flexibility for organizing your [Content Types](/docs/developers/create-content-types/about-content-types). They allow you to categorize and manage the content types in your [stack](/docs/developers/set-up-stack/about-stack) effectively, ensuring a streamlined workflow.
+Labels are like folders that provide flexibility for organizing your [Content Types](./about-content-types.md). They allow you to categorize and manage the content types in your [stack](../set-up-stack/about-stack.md) effectively, ensuring a streamlined workflow.
 
 ## Key Features of Labels
 
 - **Categorization and Organization:** Labels help group and classify content types for easier access.
-- **Branch-Specific Labels:** Labels are unique to each branch. For instance, labels created in the development branch are applicable only to content types within that branch. For more details, refer to the [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) document.
+- **Branch-Specific Labels:** Labels are unique to each branch. For instance, labels created in the development branch are applicable only to content types within that branch. For more details, refer to the [Branch-specific Modules](../branches/branch-specific-modules.md) document.
 - **Flexible Grouping:** You can apply labels to one or more content types to organize them based on specific criteria. Similarly, a content type can have more than one label assigned to it.
 
 ## Example Use Case

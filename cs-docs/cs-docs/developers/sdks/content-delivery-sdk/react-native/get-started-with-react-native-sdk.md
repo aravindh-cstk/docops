@@ -17,7 +17,7 @@ This page explains how to install and initialize the Contentstack React Native S
 
 ## Get Started with React Native SDK
 
-This guide will help you get started with Contentstack [React Native SDK](/docs/developers/sdks/content-delivery-sdk/react-native/about-react-native-sdk/) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [React Native SDK](./about-react-native-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 To get started with [React Native](https://reactnative.dev/docs/getting-started.html), you will need the following:
@@ -26,7 +26,7 @@ To get started with [React Native](https://reactnative.dev/docs/getting-started.
 - NodeJS 4.4.7 or later
 
 ## SDK installation and setup
-Contentstack offers six [regions](/docs/developers/contentstack-regions/about-regions) **AWS North America**,** AWS Europe**, **Azure North America**, **Azure Europe**, **GCP North America, **and **GCP Europe** as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.
+Contentstack offers six [regions](../../../contentstack-regions/about-regions.md) **AWS North America**,** AWS Europe**, **Azure North America**, **Azure Europe**, **GCP North America, **and **GCP Europe** as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.
 
 To use SDKs for the Europe, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.
 
@@ -44,7 +44,7 @@ import Contentstack from 'contentstack/react-native'
 ```
 
 ## Initialize SDK
-To initialize the SDK, you will need to specify the **stack’s API key**, [**delivery token**](/docs/developers/create-tokens/about-delivery-tokens), and name of the [**environment**](/docs/developers/set-up-environments/about-environments) where you will publish the content.
+To initialize the SDK, you will need to specify the **stack’s API key**, [**delivery token**](../../../create-tokens/about-delivery-tokens.md), and name of the [**environment**](../../../set-up-environments/about-environments.md) where you will publish the content.
 
 ```
 // Initialize the SDK
@@ -67,10 +67,10 @@ const Stack = new Contentstack({ ‘api_key’: “stack_api_key”, ‘access_t
 Once you have initialized the SDK, you can start getting content in your app.
 
 ## Basic queries
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
 ### Get a single entry
-To get a single [entry](/docs/content-managers/author-content/about-entries/), specify the [content type](/docs/developers/create-content-types/about-content-types) and the id of the entry.
+To get a single [entry](../../../../content-managers/author-content/about-entries.md), specify the [content type](../../../create-content-types/about-content-types.md) and the id of the entry.
 
 ```
 var Query = Stack.ContentType('blog').Entry("blta464e9fbd048668c")
@@ -105,12 +105,12 @@ Query
  });
 
 ```
-These were examples of some of the basic queries of the SDK. For advanced queries, refer to Contentstack React Native [API reference](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/).
+These were examples of some of the basic queries of the SDK. For advanced queries, refer to Contentstack React Native [API reference](../../../create-content-types/reference.md).
 
-**Note:** Currently, the React Native SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](/docs/developers/apis/content-delivery-api#queries) section of our Content Delivery API documentation.
+**Note:** Currently, the React Native SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](../../../../../api-docs/api-detail/content-delivery-api.md#queries) section of our Content Delivery API documentation.
 
 #### Paginating Responses
-In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/#query-skip) and [limit](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/#query-limit) parameters in subsequent requests.
+In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](../../../create-content-types/reference.md#query-skip) and [limit](../../../create-content-types/reference.md#query-limit) parameters in subsequent requests.
 
 ```
 const Stack = Contentstack.Stack("api_key", "delivery_token", "environment_name");
@@ -125,12 +125,12 @@ let blogQuery = Stack.ContentType('example').Query();
 ## Limitations
 - We have a URL size limitation of 8KB on API Requests that hit our CDN services. Any Request URL that goes above this size limit will receive the `400 - Bad request` error response. Please make sure you limit the size of your API Requests.
 - The React Native SDK does not support multiple content types referencing in a single query.
-- Currently, the React Native SDK does not yet support querying Global Field schemas ([All Global Fields](/docs/developers/apis/content-delivery-api#all-global-fields) and [Single Global Field](/docs/developers/apis/content-delivery-api#single-global-field)). You can include these details when querying content type details ([All Content Types](/docs/developers/apis/content-delivery-api#all-content-types) and [Single Content Type](/docs/developers/apis/content-delivery-api#single-content-type)) with the `include_global_field_schema query parameter`.
+- Currently, the React Native SDK does not yet support querying Global Field schemas ([All Global Fields](../../../../../api-docs/api-detail/content-delivery-api.md#all-global-fields) and [Single Global Field](../../../../../api-docs/api-detail/content-delivery-api.md#single-global-field)). You can include these details when querying content type details ([All Content Types](../../../../../api-docs/api-detail/content-delivery-api.md#all-content-types) and [Single Content Type](../../../../../api-docs/api-detail/content-delivery-api.md#single-content-type)) with the `include_global_field_schema query parameter`.
 
 ## More Resources
 - [React Native News App](/docs/developers/sample-apps/create-a-news-app-for-ios-and-or-android-using-react-native-and-contentstack/)
-- [React Native API Reference](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/)
-- [React Native SDK Changelog](/docs/developers/sdks/content-delivery-sdk/javascript-browser/javascript-sdk-changelog/)
+- [React Native API Reference](../../../create-content-types/reference.md)
+- [React Native SDK Changelog](../javascript-browser/javascript-sdk-changelog.md)
 
 ## Common questions
 

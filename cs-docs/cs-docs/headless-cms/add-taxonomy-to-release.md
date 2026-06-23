@@ -17,7 +17,7 @@ This page explains how to add taxonomies to a release in Contentstack so taxonom
 
 ## Add Taxonomy to Release
 
-You can add [taxonomies](/docs/developers/taxonomy/about-taxonomy) to a release to deploy taxonomy structures and localized taxonomy terms as part of your release workflow. This helps ensure taxonomy updates are deployed consistently alongside related content changes.
+You can add [taxonomies](../developers/taxonomy/about-taxonomy.md) to a release to deploy taxonomy structures and localized taxonomy terms as part of your release workflow. This helps ensure taxonomy updates are deployed consistently alongside related content changes.
 
 This is useful when you want to:
 - Deploy taxonomy updates along with related content changes
@@ -25,7 +25,7 @@ This is useful when you want to:
 - Include taxonomy terms when promoting content across environments
 
 To add a taxonomy to a release, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and navigate to **Taxonomy**.
+- Go to your [stack](../developers/set-up-stack/about-stack.md) and navigate to **Taxonomy**.
 - Open the required taxonomy.
 - Click the horizontal ellipsis icon.
 - Select **Add to Release**.

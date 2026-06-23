@@ -26,7 +26,7 @@ This is a general step-by-step guide explaining the process of setting up single
 
 In order to enable SSO for your organization, you would need the following:
 - Access to your identity provider’s configuration settings
-- [Owner role](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) in your Contentstack [organization](/docs/owners-and-admins/about-organizations)
+- [Owner role](../invite-users-and-assign-roles/types-of-roles.md#owner) in your Contentstack [organization](../organization/about-organizations.md)
 
 ## Steps to enable SSO in Contentstack
 
@@ -62,7 +62,7 @@ In your IdP, provide the following details:
 In the **Single Sign-on URL** field, provide the ACS URL that was generated for your organization in Contentstack.
 - Use Contentstack’s Entity ID (generated in Step 1) in your IdP in **Audience URI**, **SP Entity ID**, **SAML Issuer ID**, or fields similar to these.
 - In the **NameID Format**, select or enter **EmailAddress**. This defines the parameter that your IdP should use to identify Contentstack users.
-- ***[Optional Step] ***If you want to encrypt your SAML attributes, you need to enable SAML encryption in your IdP and upload the [Contentstack Public Certificate](/docs/developers/single-sign-on/enable-saml-encryption/#download-the-contentstack-public-certificate-for-saml-encryption).
+- ***[Optional Step] ***If you want to encrypt your SAML attributes, you need to enable SAML encryption in your IdP and upload the [Contentstack Public Certificate](./enable-saml-encryption.md#download-the-contentstack-public-certificate-for-saml-encryption).
 - Under **Attribute Mapping** or **Attribute Statements**, add three attributes, i.e., **email**, **first_name**, and **last_name**, and map corresponding IdP values, such as email, first name, and last name. The Name format of the attributes(email, first_name, last_name) must be "Basic". If the Name format is selected as **Unspecified** or in any other format, then it doesn’t work.
 - **[*****Optional Step*****] **If you want to map IdP groups/roles to Contentstack roles, you need to add a new attribute called “roles” under **Attribute Mapping**, and return your IdP users’ roles or groups.
 
@@ -75,7 +75,7 @@ Go to **2. IdP Configuration** in Contentstack.
 - In the **Single Sign-On URL** field, paste the **IdP Single Sign-On URL** that you received from IdP in Step 2.
 - In the **Certificate** field in Contentstack, upload the **X.509** or **Public Key Certificate** that you received from your IdP.
 - Select the relevant algorithm from the options given under the **Signature Algorithm** field.
-- ***[Optional Step] ***Enable the [SAML encryption](/docs/developers/single-sign-on/enable-saml-encryption) in Contentstack if you want to encrypt your SAML attributes via your IdP.
+- ***[Optional Step] ***Enable the [SAML encryption](./enable-saml-encryption.md) in Contentstack if you want to encrypt your SAML attributes via your IdP.
 - Click **Save** to save IdP configuration.
 
 **Tip:** In some IdPs, you may have to assign the newly-created Contentstack application to the existing users of your IdP. You can find these settings under the **Users** section in IdP.
@@ -120,14 +120,14 @@ Under **Advanced settings**, you will find more advanced settings related to use
 
 ##### Configuring IdP Role Mapping
 
-[IdP Role Mapping](/docs/developers/single-sign-on/idp-role-mapping) allows you to assign Contentstack roles to the users of a group/role in your IdP.
+[IdP Role Mapping](./idp-role-mapping.md) allows you to assign Contentstack roles to the users of a group/role in your IdP.
 
 Before you add new role mappings, you must add the “roles” attributes in the “Attribute Mappings” section in your IdP. The steps are covered in Step 2 above.
 
 To add new IdP role mapping, click on the **+ ADD ROLE MAPPING** link. Enter the following details:
 - **IdP Role Identifier**: Role identifier is the name or UID (by which it is uniquely identified in IdP) of the IdP group that you want to map. For example, “Contentstack Developers” or “Contentstack Project Managers.”
 - **Organization Role**: Assign an organization-level Contentstack role (i.e., either “Admin” or “Member”) to the IdP group/role that you are mapping.
-- **Stack Roles**: Assign [stacks](/docs/developers/set-up-stack/about-stack) as well as corresponding stack-level roles to this IdP role.
+- **Stack Roles**: Assign [stacks](../set-up-stack/about-stack.md) as well as corresponding stack-level roles to this IdP role.
 
 On the [IdP side](#setup-contentstack-app-in-your-idp), you need to add “Group Mapping” or “Group Attributes” to map the roles.
 

@@ -24,22 +24,22 @@ It prevents data loss by enabling users to recover, edit, and restore items in b
 ## Items Stored in Trash
 
 When content is deleted from the stack, it is not immediately removed. Instead, the following items are moved to the Trash section:
-- [Content Types](/docs/developers/create-content-types/about-content-types)
-- [Global Fields](/docs/developers/global-field/about-global-field)
-- [Entries](/docs/content-managers/working-with-entries/about-entries)
+- [Content Types](../create-content-types/about-content-types.md)
+- [Global Fields](../global-field/about-global-field.md)
+- [Entries](../../content-managers/author-content/about-entries.md)
 - [Assets](/docs/content-managers/working-with-assets/about-assets)
-- [Taxonomies](/docs/developers/taxonomy/about-taxonomy)
+- [Taxonomies](../taxonomy/about-taxonomy.md)
 
 Each item is listed into separate tabs within the Trash view, allowing you to locate specific content for review or restoration.
 
 ## Accessing the Trash
 
 To access the Trash, login to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon, or press the shortcut key “S” (on both Windows and macOS).
+- Navigate to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon, or press the shortcut key “S” (on both Windows and macOS).
 - Select **Trash** in the **Settings** panel or press the shortcut key “Alt + T” on Windows and “Option + T” on macOS.
 - Use the tabs to browse deleted content by type.
 
-**Note:** You can view or restore items in Trash only if you had access before they were deleted. Items remain restorable until the system or a user with appropriate [permissions](/docs/developers/invite-users-and-assign-roles/create-a-role#permissions-on-entries) removes them permanently.
+**Note:** You can view or restore items in Trash only if you had access before they were deleted. Items remain restorable until the system or a user with appropriate [permissions](../invite-users-and-assign-roles/create-a-role.md#permissions-on-entries) removes them permanently.
 
 ## Managing Deleted Items
 

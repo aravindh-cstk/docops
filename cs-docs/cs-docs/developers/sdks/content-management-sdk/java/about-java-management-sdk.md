@@ -22,7 +22,7 @@ Contentstack provides a Java Management SDK (that uses Content Management APIs) 
 
 **Note:** The Contentstack Java Management SDK supports **Java version 8** or later.
 
-To integrate your Java app with Contentstack Java Management SDK, follow the steps mentioned in the [Get Started with Java Management SDK](/docs/developers/java/get-started-with-java-management-sdk) document.
+To integrate your Java app with Contentstack Java Management SDK, follow the steps mentioned in the [Get Started with Java Management SDK](./get-started-with-java-management-sdk.md) document.
 
 ## Common questions
 
@@ -33,4 +33,4 @@ A: You can manage the content of your Contentstack account, including creating, 
 A: The Contentstack Java Management SDK supports **Java version 8** or later.
 
 **Q: Where do I start to integrate the SDK into my Java app?**  
-A: Follow the steps in the [Get Started with Java Management SDK](/docs/developers/java/get-started-with-java-management-sdk) document.
+A: Follow the steps in the [Get Started with Java Management SDK](./get-started-with-java-management-sdk.md) document.

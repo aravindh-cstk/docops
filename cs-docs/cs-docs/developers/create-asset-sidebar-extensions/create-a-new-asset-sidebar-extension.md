@@ -16,12 +16,12 @@ This page explains how to create an Asset Sidebar Extension in Contentstack usin
 
 ## Create a New Asset Sidebar Extension
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](/docs/developers/developer-hub/asset-sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](../developer-hub/asset-sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
-Contentstack allows you to create an Asset Sidebar Extension that enhances the way you manage, transform, and optimize the [assets](https://www.contentstack.com/docs/content-managers/working-with-assets/about-assets/) in your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack/).
+Contentstack allows you to create an Asset Sidebar Extension that enhances the way you manage, transform, and optimize the [assets](https://www.contentstack.com/docs/content-managers/working-with-assets/about-assets/) in your [stack](../set-up-stack/about-stack.md).
 
 To create an Asset Sidebar Extension, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Navigate to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack/) and click on the “Settings” icon on the left navigation panel.
+- Navigate to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions** under **Setttings**.
 - On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Asset Sidebar Extension**.
@@ -34,7 +34,7 @@ To create an Asset Sidebar Extension, log in to your [Contentstack account](http
 - **Hosting method**: Select how you want to host the Asset Sidebar Extension :
           **External Hosting**: Select this option for externally hosted Asset Sidebar Extension. You need to provide the URL in the **External hosting URL** field that appears below.
 - **Hosted on Contentstack**: Select this option if you can write the code in the **Extension source code** field that appears below.
-- **Config Parameter**: If you have used any config parameters (such as [access token](/docs/developers/create-tokens/types-of-tokens#access-tokens)) in the source code, specify the value of the parameters in this field.
+- **Config Parameter**: If you have used any config parameters (such as [access token](../create-tokens/types-of-tokens.md#access-tokens)) in the source code, specify the value of the parameters in this field.
 - Finally, click on **Save**.
 
 Once you create an extension, Contentstack automatically generates a unique ID, as shown over the extension page.
@@ -44,16 +44,16 @@ After creation, you can use the Asset Sidebar Extension by accessing it from the
 ## API Reference
 
 Here are the links to the API requests related to this action performed on asset sidebar extensions:
-- [Get all asset sidebar extensions](https://www.contentstack.com/docs/developers/apis/content-management-api/#get-all-asset-sidebar-extensions)
-- [Get a single asset sidebar extension](https://www.contentstack.com/docs/developers/apis/content-management-api/#get-a-single-asset-sidebar-extension)
-- [Create an asset sidebar extension with source URL](https://www.contentstack.com/docs/developers/apis/content-management-api/#create-an-asset-sidebar-extension-with-source-url)
-- [Update an asset sidebar extension](https://www.contentstack.com/docs/developers/apis/content-management-api/#update-an-asset-sidebar-extension)
-- [Delete asset sidebar extension](https://www.contentstack.com/docs/developers/apis/content-management-api/#delete-asset-sidebar-extension)
+- [Get all asset sidebar extensions](../../../api-docs/api-detail/content-management-api.md#get-all-asset-sidebar-extensions)
+- [Get a single asset sidebar extension](../../../api-docs/api-detail/content-management-api.md#get-a-single-asset-sidebar-extension)
+- [Create an asset sidebar extension with source URL](../../../api-docs/api-detail/content-management-api.md#create-an-asset-sidebar-extension-with-source-url)
+- [Update an asset sidebar extension](../../../api-docs/api-detail/content-management-api.md#update-an-asset-sidebar-extension)
+- [Delete asset sidebar extension](../../../api-docs/api-detail/content-management-api.md#delete-asset-sidebar-extension)
 
 ## Common questions
 
 ### Should I use legacy extensions or the Contentstack App Framework for new development?
-The page notes that Experience Extensions use the legacy approach with extensions and recommends using the [Asset Sidebar UI Location](/docs/developers/developer-hub/asset-sidebar-location/) for the Contentstack App Framework.
+The page notes that Experience Extensions use the legacy approach with extensions and recommends using the [Asset Sidebar UI Location](../developer-hub/asset-sidebar-location.md) for the Contentstack App Framework.
 
 ### What is the allowed width range for an Asset Sidebar Extension?
 **Note:** The Asset Sidebar Extension width can range from 335 pixels to 1024 pixels.

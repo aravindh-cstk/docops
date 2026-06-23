@@ -23,7 +23,7 @@ After creating and configuring a composition in Studio, the next step is to depl
 
 Publishing a composition ensures your changes are accessible in the selected stack and environment for review, staging, or live use.
 
-**Note:** Save your changes before using the [Preview](/docs/studio/live-preview-and-visual-editing-with-studio) feature. Unsaved edits won’t appear in the landing page preview.
+**Note:** Save your changes before using the [Preview](./live-preview-and-visual-editing-with-studio.md) feature. Unsaved edits won’t appear in the landing page preview.
 
 ## Save vs Deploy
 

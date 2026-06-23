@@ -17,11 +17,11 @@ This page explains how to restore deleted content in Contentstack and what infor
 
 ## Restore Deleted Content
 
-**Note:** By default, the [Trash](/docs/developers/manage-trash/about-trash) feature stores deleted content such as Content Types, Entries, and Assets for **14 days** before it is permanently deleted. If this period has passed, contact the [Customer Support](mailto:support@contentstack.com) team with the necessary details for restoration.
+**Note:** By default, the [Trash](../../developers/manage-trash/about-trash.md) feature stores deleted content such as Content Types, Entries, and Assets for **14 days** before it is permanently deleted. If this period has passed, contact the [Customer Support](mailto:support@contentstack.com) team with the necessary details for restoration.
 
 If you have accidentally deleted stacks, entries, assets, or content types, the Contentstack [Customer Support](mailto:support@contentstack.com) team can assist with restoring the data. To process your request, you will need to provide specific details about the deleted modules.
 
-**Note:** Only a **Stack **[**Owner**](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner)**/**[**Admin**](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) or **Organization **[**Owner**](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner)**/**[**Admin**](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) can submit or approve requests to restore content.
+**Note:** Only a **Stack **[**Owner**](../../developers/invite-users-and-assign-roles/types-of-roles.md#owner)**/**[**Admin**](../../developers/invite-users-and-assign-roles/types-of-roles.md#admin) or **Organization **[**Owner**](../../developers/invite-users-and-assign-roles/types-of-roles.md#owner)**/**[**Admin**](../../developers/invite-users-and-assign-roles/types-of-roles.md#admin) can submit or approve requests to restore content.
 
 ## Stacks
 
@@ -36,7 +36,7 @@ To restore a deleted stack, provide the following details:
 
 To restore deleted content types, provide the following details:
 - **Stack API Key:** The API key of the stack containing the deleted content type.
-- **Deletion Time:** The date and time the content type was deleted (available in the stack’s [audit log](/docs/developers/set-up-stack/monitor-stack-activities-in-audit-log)).
+- **Deletion Time:** The date and time the content type was deleted (available in the stack’s [audit log](../../developers/set-up-stack/monitor-stack-activities-in-audit-log.md)).
 - **Branch Name:** The name of the branch containing the deleted content type(s).
 
 **Note:** When restoring a content type, you can choose to restore it either with or without the entries that were deleted along with it.
@@ -45,8 +45,8 @@ To restore deleted content types, provide the following details:
 
 To recover deleted entries, provide the following details:
 - **Stack API Key:** The API key of the stack containing the deleted entries.
-- **Content Type UID:** The UID of the content type associated with the deleted entries (available in the stack’s [audit log](/docs/developers/set-up-stack/monitor-stack-activities-in-audit-log)).
-- **Deletion Time:** The date and time the entries were deleted (available in the stack’s [audit log](/docs/developers/set-up-stack/monitor-stack-activities-in-audit-log)).
+- **Content Type UID:** The UID of the content type associated with the deleted entries (available in the stack’s [audit log](../../developers/set-up-stack/monitor-stack-activities-in-audit-log.md)).
+- **Deletion Time:** The date and time the entries were deleted (available in the stack’s [audit log](../../developers/set-up-stack/monitor-stack-activities-in-audit-log.md)).
 - **Branch Name:** The name of the branch containing the deleted entries.
 
 **Warning:** The deletion time is necessary to restore entries associated with the content type. The published status of the deleted entries cannot be retrieved when restoring them.
@@ -55,7 +55,7 @@ To recover deleted entries, provide the following details:
 
 To restore deleted assets, provide the following details:
 - **Stack API Key:** The API key of the stack containing the deleted asset(s).
-- **Deletion Time:** The date and time the assets were deleted (available in the stack’s [audit log](/docs/developers/set-up-stack/monitor-stack-activities-in-audit-log)).
+- **Deletion Time:** The date and time the assets were deleted (available in the stack’s [audit log](../../developers/set-up-stack/monitor-stack-activities-in-audit-log.md)).
 - **Branch Name:** The name of the branch containing the deleted asset(s).
 
 **Warning:** The published status of the deleted assets cannot be retrieved when restoring them.

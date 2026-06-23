@@ -17,7 +17,7 @@ last_updated: 2025-07-01
 The Create a content type with embedded RTE objects request lets you create a content type, which supports embedded objects inside its RTE field.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the complete schema of the content type (refer [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type)).
+In the “Body” section, you need to provide the complete schema of the content type (refer [JSON schema for creating a content type](../../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md)).
 
 To embed entries within a specific RTE, pass the reference_to parameter with valid content type UIDs to determine entries of which content type(s) can be embedded inside the editor.
 
@@ -44,7 +44,7 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
 }
 ```
 
-**Additional Resource**: Refer to the [Rich Text Field Schema](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#html-based-rich-text-editor) guide to understand how you can format the content entered in the field.
+**Additional Resource**: Refer to the [Rich Text Field Schema](../../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md#html-based-rich-text-editor) guide to understand how you can format the content entered in the field.
 
 ## Query Parameters
 
@@ -61,7 +61,7 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.

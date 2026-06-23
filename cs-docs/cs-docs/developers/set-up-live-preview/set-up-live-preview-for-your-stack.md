@@ -16,14 +16,14 @@ This page explains how to enable and configure Contentstack Live Preview for a s
 
 ## Set Up Live Preview for Your Stack
 
-Contentstack's [Live Preview](/docs/content-managers/live-preview/about-live-preview/) feature allows you to view real-time content updates while editing entries, ensuring a smooth editing experience and reducing publishing errors.
+Contentstack's [Live Preview](../../content-managers/author-content/about-live-preview.md) feature allows you to view real-time content updates while editing entries, ensuring a smooth editing experience and reducing publishing errors.
 
 To enable Live Preview for your stack, log in to your [Contentstack Account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and click the “Settings” icon in the left navigation pane**l.**
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon in the left navigation pane**l.**
 - Navigate to **Environments **and select an existing environment or create a new one.
-- Add the [Base URL](/docs/developers/set-up-environments/add-an-environment/) for each locale to ensure accurate content previews, then **Save** your changes.
+- Add the [Base URL](../set-up-environments/add-an-environment.md) for each locale to ensure accurate content previews, then **Save** your changes.
 - Next, navigate to **Visual Experience** from the **Settings** menu and select the **Enable Live Preview** checkbox.
-- Select the **Default Preview Environment**.**Additional Resource**: By default, Live Preview generates preview URLs using the Base URL configured for an environment and the URL value defined in an entry. This approach works well for simple routing setups. For more complex website structures, use [Custom Preview URLs](/docs/developers/set-up-live-preview/custom-preview-urls) to define dynamic, pattern-based preview URLs.
+- Select the **Default Preview Environment**.**Additional Resource**: By default, Live Preview generates preview URLs using the Base URL configured for an environment and the URL value defined in an entry. This approach works well for simple routing setups. For more complex website structures, use [Custom Preview URLs](./custom-preview-urls.md) to define dynamic, pattern-based preview URLs.
 - Enable the **Display Setup Status** toggle to display the configuration status.
 - Enable the **Always Open in New Tab** toggle to preview your website in a new browser tab.**Note**: With the latest Live Preview SDK (**v4.0.0** or **later**), the website opens outside the Contentstack iFrame. This feature is available on select plans. Contact our [support](mailto:support@contentstack.com) team to enable it for your organization.
 
@@ -39,7 +39,7 @@ Once enabled, the **Live Preview** icon appears in the right panel of your entry
 Yes—Live Preview generates preview URLs using the Base URL configured for an environment and the URL value defined in an entry.
 
 ### When should I use Custom Preview URLs?
-For more complex website structures where simple Base URL + entry URL routing is not sufficient, use [Custom Preview URLs](/docs/developers/set-up-live-preview/custom-preview-urls) to define dynamic, pattern-based preview URLs.
+For more complex website structures where simple Base URL + entry URL routing is not sufficient, use [Custom Preview URLs](./custom-preview-urls.md) to define dynamic, pattern-based preview URLs.
 
 ### Why does Live Preview open in a new tab instead of inside the Contentstack iFrame?
 With the latest Live Preview SDK (**v4.0.0** or **later**), the website opens outside the Contentstack iFrame when using the **Always Open in New Tab** option.

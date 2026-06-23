@@ -25,7 +25,7 @@ Contentstack provides signed support for both integrations.
 
 ## Securing Webhooks
 
-If your app wants to receive any data from webhook, we encourage you to use the [signed webhooks](https://www.contentstack.com/docs/developers/set-up-webhooks/secure-your-webhooks/#webhook-signature) feature on the server side.
+If your app wants to receive any data from webhook, we encourage you to use the [signed webhooks](../set-up-webhooks/secure-your-webhooks.md#webhook-signature) feature on the server side.
 
 This feature allows App developers to verify whether the webhook requests are originating from Contentstack itself, and helps them build robust apps and secure any multi-tenant data stored within the Apps.
 
@@ -97,7 +97,7 @@ To protect your domain from potential attacks, Contentstack provides you with a 
 
 To receive the Contentstack IPs, contact our [Support](mailto:support@contentstack.com) team today.
 
-**Additional Resource:** You can also read further on how to [Pass Contentstack Webhooks through Firewall](https://www.contentstack.com/docs/developers/how-to-guides/pass-contentstack-webhooks-through-firewalls), in our detailed documentation.
+**Additional Resource:** You can also read further on how to [Pass Contentstack Webhooks through Firewall](../how-to-guides/pass-contentstack-webhooks-through-firewalls.md), in our detailed documentation.
 
 ## Common questions
 

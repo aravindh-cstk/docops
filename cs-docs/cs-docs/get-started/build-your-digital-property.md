@@ -29,13 +29,13 @@ Learn how you can start using Contentstack to build your websites with help from
 
 ## Quickstart Guide to Build your First Project
 
-Create a basic webpage using Contentstack within 5 mins using our [Quickstart](/docs/developers/quickstart-in-5-mins/) guide.
+Create a basic webpage using Contentstack within 5 mins using our [Quickstart](../developers/quickstart-in-5-mins.md) guide.
 
 ## Structure your Website
 
 Content modeling allows you to determine and create the best content type for your needs by establishing the structure of your content at a granular level.
 
-Learn more about [Content Modeling](/docs/developers/content-modeling/about-content-modeling/).
+Learn more about [Content Modeling](../developers/content-modeling/about-content-modeling.md).
 
 ## Set up your Project
 
@@ -46,15 +46,15 @@ To set up your project, create a new stack. Next, create content types and entri
 - [Create Entries](/docs/content-managers/author-content/#create-and-manage-content)
 - [Set up an Environment](/docs/developers/set-up-environments/)
 - [Create Token](/docs/developers/create-tokens/)
-- [Fetch Content](/docs/developers/fetch-content/)
+- [Fetch Content](../developers/fetch-content.md)
 
 ## Build your Website
 
 Quickly build and manage websites using our SDKs. Using architecture diagrams, you can also create or set up your infrastructure for hosting, running, and managing your apps or websites. Our command-line interface (CLI) allows you to perform tasks in Contentstack via your terminal. Lastly, you can fetch and manage content in Contentstack using our Content Delivery and Management APIs.
 
 - [SDKs](/docs/developers#platforms-and-sdks)
-- [Static Site Generators](/docs/developers/sdks/content-delivery-sdk/javascript-browser/build-static-sites-using-static-site-generators)
-- [Architecture diagrams](/docs/developers/architecture-diagrams/)
+- [Static Site Generators](../developers/sdks/content-delivery-sdk/javascript-browser/build-static-sites-using-static-site-generators.md)
+- [Architecture diagrams](../developers/architecture-diagrams.md)
 - [Starter Apps](/docs/developers/sample-apps/)
 - [CLI](/docs/developers/cli/)
 - [APIs](/docs/developers/#apis)
@@ -62,10 +62,10 @@ Quickly build and manage websites using our SDKs. Using architecture diagrams, y
 ## Common questions
 
 ### What should I do first to build a project with Contentstack?
-Start with the Quickstart guide: [Quickstart](/docs/developers/quickstart-in-5-mins/).
+Start with the Quickstart guide: [Quickstart](../developers/quickstart-in-5-mins.md).
 
 ### Where do I learn how to structure my website content?
-Use the Content Modeling documentation: [Content Modeling](/docs/developers/content-modeling/about-content-modeling/).
+Use the Content Modeling documentation: [Content Modeling](../developers/content-modeling/about-content-modeling.md).
 
 ### What are the main setup steps before building the website?
 Create a new stack, create content types and entries, publish using environments, and use tokens to fetch or manage your content via APIs.

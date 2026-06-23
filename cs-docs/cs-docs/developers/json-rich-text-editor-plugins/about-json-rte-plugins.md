@@ -16,9 +16,9 @@ This page explains what JSON Rich Text Editor (JSON RTE) Plugins are, what they 
 
 ## About JSON RTE Plugins
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [RTE UI Location](/docs/developers/developer-hub/rte-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [RTE UI Location](../developer-hub/rte-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
-The JSON Rich Text Editor Plugins lets you add/create custom plugins to extend the functionality of your [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) as per your needs. You can use third-party applications to interact with your JSON Rich Text Editor content.
+The JSON Rich Text Editor Plugins lets you add/create custom plugins to extend the functionality of your [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) as per your needs. You can use third-party applications to interact with your JSON Rich Text Editor content.
 
 With prebuilt plugins such as Highlight, Info Panel, and Word Count, you can enhance the JSON Rich Text Editor (JSON RTE) field. Instead of using separate custom fields to interact with the content within the JSON RTE, create and add plugins to your JSON RTE for real-time adaptiveness.
 
@@ -48,4 +48,4 @@ You can either create new JSON RTE plugins by writing custom code, or use prebui
 Yes. You can add a maximum of **50** extensions (including custom fields, custom widgets, dashboard widgets, and JSON RTE plugins) in a stack.
 
 ### What is recommended instead of the legacy Experience Extensions approach?
-We recommend using the [RTE UI Location](/docs/developers/developer-hub/rte-location/) for the Contentstack App Framework to extend the functionality of your apps.
+We recommend using the [RTE UI Location](../developer-hub/rte-location.md) for the Contentstack App Framework to extend the functionality of your apps.

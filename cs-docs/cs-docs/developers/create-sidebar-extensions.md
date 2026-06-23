@@ -24,7 +24,7 @@ Create Sidebar Extensions
 
 ##### Introduction
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](/docs/developers/developer-hub/sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](./developer-hub/sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 Sidebar Extensions let you integrate powerful functionalities into your stack that let you analyze your entry content and recommend ideas.
 
@@ -113,7 +113,7 @@ More about Sidebar Extensions
 ## Common questions
 
 **Q: Are Sidebar Extensions the recommended approach for new development?**  
-A: **Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](/docs/developers/developer-hub/sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+A: **Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](./developer-hub/sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 **Q: What can Sidebar Extensions be used for?**  
 A: Sidebar Extensions let you integrate powerful functionalities into your stack that let you analyze your entry content and recommend ideas.

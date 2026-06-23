@@ -24,20 +24,20 @@ The hero banner features prominently on the homepage, commanding attention with 
 - Access to the Contentstack Organization/Stack as the Owner/Admin
 
 ## Schema for Hero Banner Content Model
-The Hero Banner Content Model contains a [Content Type](/docs/developers/create-content-types/about-content-types/) named **Hero Banner**.
+The Hero Banner Content Model contains a [Content Type](../../create-content-types/about-content-types.md) named **Hero Banner**.
 
 ### Schema for Hero Banner Content Type
-- **Banner Title**: This is a [Title](/docs/developers/create-content-types/title) field that displays the title of the Hero Banner. This is a mandatory field and must be unique.
-- **Banner Image**: This is a [File](/docs/developers/create-content-types/file/) field where you can choose an appropriate image to add in the banner.
-- **Background Color**: This is a [Custom](/docs/developers/create-content-types/custom/) field that adds [Color Picker](https://www.contentstack.com/docs/developers/marketplace-apps/color-picker/) as an extension that you can use to set the default background color of the page.
-- **Text Color**: This is a [Custom](/docs/developers/create-content-types/custom/) field containing [Color Picker](https://www.contentstack.com/docs/developers/marketplace-apps/color-picker/) as an extension that you can use to set the default text color.
-- **Banner Description**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox/) field to add the banner description.
-- **Call To Action**: This is a [Link](/docs/developers/create-content-types/link/) field to add links based on your requirement.
-- **Is Banner Image Full Width**?: This is a [Boolean](/docs/developers/create-content-types/boolean) field that lets you enable or disable a full-width banner image on a web page. By default, this field is set to true, i.e. the Banner Image is in full-width.
-- **Banner Image Alignment**: This is a [Select](/docs/developers/create-content-types/select) field with Single Choice as the Selection Type to select the alignment of the Banner Image.
-- **Content Alignment**: This is a [Select](/docs/developers/create-content-types/select) field with Single Choice as the Selection Type to select the alignment of the content.
+- **Banner Title**: This is a [Title](../../create-content-types/title.md) field that displays the title of the Hero Banner. This is a mandatory field and must be unique.
+- **Banner Image**: This is a [File](../../create-content-types/file.md) field where you can choose an appropriate image to add in the banner.
+- **Background Color**: This is a [Custom](../../create-content-types/custom.md) field that adds [Color Picker](../../marketplace-apps/color-picker.md) as an extension that you can use to set the default background color of the page.
+- **Text Color**: This is a [Custom](../../create-content-types/custom.md) field containing [Color Picker](../../marketplace-apps/color-picker.md) as an extension that you can use to set the default text color.
+- **Banner Description**: This is a [Multi Line Textbox](../../create-content-types/multi-line-textbox.md) field to add the banner description.
+- **Call To Action**: This is a [Link](../../create-content-types/link.md) field to add links based on your requirement.
+- **Is Banner Image Full Width**?: This is a [Boolean](../../create-content-types/boolean.md) field that lets you enable or disable a full-width banner image on a web page. By default, this field is set to true, i.e. the Banner Image is in full-width.
+- **Banner Image Alignment**: This is a [Select](../../create-content-types/select.md) field with Single Choice as the Selection Type to select the alignment of the Banner Image.
+- **Content Alignment**: This is a [Select](../../create-content-types/select.md) field with Single Choice as the Selection Type to select the alignment of the content.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Hero Banner Content Modeling](/docs/developers/content-modeling/hero-banner/) documentation to understand how to model the "Hero Banner".
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](./how-to-import-content-model.md)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](../../create-content-types/import-prebuilt-content-models.md)). Refer the [Hero Banner Content Modeling](../../content-modeling/hero-banner.md) documentation to understand how to model the "Hero Banner".
 
 Here’s how your Hero Banner looks after you publish the entry:
 

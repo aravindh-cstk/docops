@@ -17,16 +17,16 @@ This page explains how to create personalized content using Variants in a connec
 
 ## Create Personalized Content
 
-To create personalized content, the [Variants](/docs/personalize/about-variants) feature available in the connected CMS stack helps you compose content variants corresponding to each of the Variants in Personalize Experiences. If a [Personalize Project](/docs/personalize/create-personalize-project) is connected to a CMS stack, all relevant changes made within the project automatically sync to the CMS for you to create content.
+To create personalized content, the [Variants](./about-variants.md) feature available in the connected CMS stack helps you compose content variants corresponding to each of the Variants in Personalize Experiences. If a [Personalize Project](./create-personalize-project.md) is connected to a CMS stack, all relevant changes made within the project automatically sync to the CMS for you to create content.
 
-Personalize creates a [Variant group](/docs/developers/variants/manage-variant-groups) in the stack for each experience, using the same name as the experience. For every variant within an experience, Personalize creates a corresponding **variant** within the same variant group.
+Personalize creates a [Variant group](../developers/variants/manage-variant-groups.md) in the stack for each experience, using the same name as the experience. For every variant within an experience, Personalize creates a corresponding **variant** within the same variant group.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Contentstack [Organization](/docs/developers/organization/about-organizations) that has Personalize enabled
-- Access to a [project](/docs/developers/automation-hub-guides/create-a-project) in Personalize with Experiences and Variants defined
-- Access to the [stack](/docs/developers/set-up-stack/create-a-new-stack) connected to the project
+- Access to the Contentstack [Organization](../developers/organization/about-organizations.md) that has Personalize enabled
+- Access to a [project](../developers/automation-hub-guides/create-a-project.md) in Personalize with Experiences and Variants defined
+- Access to the [stack](../developers/set-up-stack/create-a-new-stack.md) connected to the project
 
 ## Access the Variant Group and Start Personalizing Content
 
@@ -48,13 +48,13 @@ Follow these steps to navigate to the variant group in the CMS and begin creatin
 
 To access Variants, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
 
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack) and click the **Settings** icon (or press “S”).
+- Navigate to the desired [stack](../developers/set-up-stack/about-stack.md) and click the **Settings** icon (or press “S”).
 - Select Variants in the navigation panel on the left.
 - Click a particular variant group.
 - In the Linked Content Types field, select one or more content types to associate with the variant group.
   Associating a variant group with specific content type allows you to personalize the content of the entries based on the content types.
-- Click **Apply**, then click **Save**.**Additional Resources: **For more information, refer to [Linking Content Types.](/docs/developers/variants/manage-variant-groups#linking-content-types)
-- You can now create entry variants by modifying the fields or sections as needed to personalize content.**Additional Resources: **For more information, refer to [Variants](/docs/personalize/about-variants) and [Create Entry Variants.](/docs/content-managers/entry-variants/create-an-entry-variant)
+- Click **Apply**, then click **Save**.**Additional Resources: **For more information, refer to [Linking Content Types.](../developers/variants/manage-variant-groups.md#linking-content-types)
+- You can now create entry variants by modifying the fields or sections as needed to personalize content.**Additional Resources: **For more information, refer to [Variants](./about-variants.md) and [Create Entry Variants.](../content-managers/entry-variants/create-an-entry-variant.md)
 - You can now publish the entries for the rendered pages to be personalized.
 
 **Note:** Personalize uses the variant-to-entry mapping to decide in real time which content each user sees based on their audience group.
@@ -137,12 +137,12 @@ This can lead to two possible scenarios:
 
 Layering and prioritization together ensure that the applied personalization reflects the complete visitor context and delivers an optimal user experience.
 
-**Additional Resources: **For more information, refer to[ Prioritize Experiences](/docs/personalize/prioritize-experiences) and [Layered Experiences](/docs/personalize/layered-experiences-use-case) documentation.
+**Additional Resources: **For more information, refer to[ Prioritize Experiences](./prioritize-experiences.md) and [Layered Experiences](./layered-experiences-use-case.md) documentation.
 
 ## Common questions
 
 ### How are variant groups created for Personalize Experiences?
-Personalize creates a [Variant group](/docs/developers/variants/manage-variant-groups) in the stack for each experience, using the same name as the experience, and creates a corresponding **variant** for every variant within the experience.
+Personalize creates a [Variant group](../developers/variants/manage-variant-groups.md) in the stack for each experience, using the same name as the experience, and creates a corresponding **variant** for every variant within the experience.
 
 ### Where do I find the Variant Group link from an Experience?
 In the experience, open the **Information** side drawer and scroll to the **Contentstack CMS Sync Status** section, then click the **Variant Group** link.

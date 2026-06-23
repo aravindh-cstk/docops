@@ -25,7 +25,7 @@ The Launch application enforces a maximum execution timeout, requiring it to res
 The memory size for a Launch application is **1024 MB**.
 
 ### Runtime Environment
-The Launch runtime environment leverages [**Node.js**](/docs/developers/launch/supported-nodejs-versions) to power its execution environment.
+The Launch runtime environment leverages [**Node.js**](../developers/launch/supported-nodejs-versions.md) to power its execution environment.
 
 ### File System
 The Launch framework file system refers to the Launch application's ability to interact with the file system, including `read` and `write` operations. By default, Launch applications implement a read-only file system, with the exception of the designated `/tmp` directory, which facilitates `write` operations.

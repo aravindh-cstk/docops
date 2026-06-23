@@ -17,12 +17,12 @@ This page explains how the **Referenced Content Type** property works for a **Re
 
 ## Referenced Content Type
 
-A [reference](/docs/developers/create-content-types/reference) field allows you to link entries from one content type to entries from another content type. This helps you reuse and manage related content across entries instead of duplicating information.
+A [reference](./reference.md) field allows you to link entries from one content type to entries from another content type. This helps you reuse and manage related content across entries instead of duplicating information.
 
 Use the **Referenced Content Type** property to define which content types users can select entries from while creating or editing entries.
 
 To configure referenced content types, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and open the content type where you want to add the reference field.
+- Navigate to your [stack](../set-up-stack/about-stack.md) and open the content type where you want to add the reference field.
 - Add a **Reference** field and click the **Properties** icon.
 - In the **Referenced Content Type** section, select one or more content types.
 - Click **Save** or **Save and Close** to apply the changes.

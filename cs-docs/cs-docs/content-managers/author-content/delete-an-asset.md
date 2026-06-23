@@ -17,7 +17,7 @@ This page explains how to delete an asset in Contentstack, what happens when an 
 
 ## Delete an Asset
 
-Deleting an [asset](/docs/content-managers/working-with-assets/about-assets) removes it from your stack and any [environments](/docs/developers/set-up-environments/about-environments) or [entries](/docs/content-managers/author-content/about-entries) where it is used. Use this action with caution, as deleted assets will no longer be available unless restored from the trash within the retention period.
+Deleting an [asset](/docs/content-managers/working-with-assets/about-assets) removes it from your stack and any [environments](../../developers/set-up-environments/about-environments.md) or [entries](./about-entries.md) where it is used. Use this action with caution, as deleted assets will no longer be available unless restored from the trash within the retention period.
 
 To delete an asset, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 - Go to your stack, and click the **“Assets”** icon in the left navigation panel. You can also use the shortcut key “A” (for both Windows OS and Mac OS users) to access the assets menu.
@@ -33,11 +33,11 @@ Alternatively, you can also delete an asset from the assets list page. To do so,
 - From the dropdown menu, select **Delete**.
 - Click **Delete** to confirm your action.
 
-**Additional Resource:** Learn how to delete multiple assets at once by referring to our [Bulk Delete Assets](/docs/content-managers/author-content/bulk-delete-assets) document.
+**Additional Resource:** Learn how to delete multiple assets at once by referring to our [Bulk Delete Assets](./bulk-delete-assets.md) document.
 
 ## API Reference
 
-To delete an asset via API, refer to the [Delete asset](/docs/developers/apis/content-management-api#delete-asset) API request.
+To delete an asset via API, refer to the [Delete asset](../../../api-docs/api-detail/content-management-api.md#delete-asset) API request.
 
 ## Common questions
 
@@ -51,4 +51,4 @@ A: Yes. Deleted assets are moved to the trash and can be restored within **14 da
 A: Yes. You can delete an asset from the assets list page using the **vertical ellipsis** in the **Actions** column.
 
 **Q: Can I delete an asset using an API request?**  
-A: Yes. Refer to the [Delete asset](/docs/developers/apis/content-management-api#delete-asset) API request.
+A: Yes. Refer to the [Delete asset](../../../api-docs/api-detail/content-management-api.md#delete-asset) API request.

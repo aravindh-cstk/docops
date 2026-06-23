@@ -20,7 +20,7 @@ This page explains the Analytics dashboard for CMS, including what metrics and s
 
 The Analytics dashboard for CMS provides a comprehensive overview of how your **Content Management System (CMS)** is utilized within your organization. This dashboard includes key metrics that are essential for managing and optimizing your CMS effectively.
 
-**Note:** Only organization [Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admin](/docs/developers/organization/organization-roles#organization-admin) roles can access the Analytics feature.
+**Note:** Only organization [Owner](../developers/organization/organization-roles.md#organization-owner) and [Admin](../developers/organization/organization-roles.md#organization-admin) roles can access the Analytics feature.
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - From the dropdown in the header, select the organization whose analytics you want to view.
@@ -35,7 +35,7 @@ The Analytics dashboard is divided into several key sections, each providing val
 
 ### Subscription Usage
 
-This section gives an overview of your CMS resource consumption, such as bandwidth, API requests, and the number of [stacks](/docs/developers/set-up-stack/about-stack), [entries,](/docs/content-managers/author-content/about-entries) [assets](/docs/content-managers/author-content/about-assets), [content types](/docs/developers/create-content-types/about-content-types), and much more. It helps you manage your subscription limits by showing a comparison of your current usage against the allocated resources.
+This section gives an overview of your CMS resource consumption, such as bandwidth, API requests, and the number of [stacks](../developers/set-up-stack/about-stack.md), [entries,](../content-managers/author-content/about-entries.md) [assets](../content-managers/author-content/about-assets.md), [content types](../developers/create-content-types/about-content-types.md), and much more. It helps you manage your subscription limits by showing a comparison of your current usage against the allocated resources.
 
 **Note:** The data displayed reflects usage from the last **30 days**. For example, if viewed on February 20, the metrics will cover the period from January 21 to February 20.
 
@@ -59,7 +59,7 @@ Here are some of the metrics available:
 - **Branches**: Number of branches within the stacks.
 - **Branch Aliases**: Number of branch aliases within the stacks.
 
-**Note:** [Global Fields](/docs/developers/global-field/about-global-field), [Extensions](/docs/developers/experience-extensions-overview/about-experience-extensions), [Branches](/docs/developers/branches/about-branches), and [Branch Aliases](/docs/developers/branches/about-aliases) are plan-based features. To enable these features for your organization, reach out to our [support](mailto:support@contentstack.com) team.
+**Note:** [Global Fields](../developers/global-field/about-global-field.md), [Extensions](../developers/experience-extensions-overview/about-experience-extensions.md), [Branches](../developers/branches/about-branches.md), and [Branch Aliases](../developers/branches/about-aliases.md) are plan-based features. To enable these features for your organization, reach out to our [support](mailto:support@contentstack.com) team.
 
 ### API Usage
 

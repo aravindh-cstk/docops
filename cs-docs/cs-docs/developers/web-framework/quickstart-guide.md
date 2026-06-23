@@ -28,21 +28,21 @@ The steps to be followed are given below:
 
 ## Create a stack
 
-A [stack](/docs/developers/set-up-stack/about-stack) is like a container that holds the content of your site. To create a new stack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and click the **+ New Stack** action button. Enter a suitable **Name** and **Description** (optional) for the stack.
+A [stack](../set-up-stack/about-stack.md) is like a container that holds the content of your site. To create a new stack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and click the **+ New Stack** action button. Enter a suitable **Name** and **Description** (optional) for the stack.
 
 ## Create a content type
 
-A [content type](/docs/developers/create-content-types/about-content-types) is your page’s structure. Since we are planning to create a simple home page, the page will contain only a couple of fields: **Title** and **Body**. You can add/remove more [fields](/docs/developers/create-content-types/about-fields) depending on your requirements. Let’s look at a short video to learn the process of creating a content type (**Home**).
+A [content type](../create-content-types/about-content-types.md) is your page’s structure. Since we are planning to create a simple home page, the page will contain only a couple of fields: **Title** and **Body**. You can add/remove more [fields](../create-content-types/about-fields.md) depending on your requirements. Let’s look at a short video to learn the process of creating a content type (**Home**).
 
 ## Create your first page
 
-You can create pages for your website by creating [entries](/docs/content-managers/working-with-entries/about-entries) using the defined content type. To create your website’s home page , click the **Home** content type and add content in the given fields.
+You can create pages for your website by creating [entries](../../content-managers/author-content/about-entries.md) using the defined content type. To create your website’s home page , click the **Home** content type and add content in the given fields.
 
 With this step, we’re almost done with defining the structure and content of your site. Let’s now set up the publishing environment.
 
 ## Set up publishing environment
 
-A publishing [environment](/docs/developers/set-up-environments/about-environments) is your web server where you want to deploy your content. While you [create an environment](/docs/developers/set-up-environments/add-an-environment), click on the **Advanced** option, and select **Deploy Content to Server(s)** option to sync the published content on your web server.
+A publishing [environment](../set-up-environments/about-environments.md) is your web server where you want to deploy your content. While you [create an environment](../set-up-environments/add-an-environment.md), click on the **Advanced** option, and select **Deploy Content to Server(s)** option to sync the published content on your web server.
 
 ## Set up and connect contentstack-express
 
@@ -60,7 +60,7 @@ $ npm install -g contentstack-cli
 $ contentstack connect
 ```
 
-This will prompt you to enter the stack API key and Access Token. You can find these in the [Stack details](/docs/developers/set-up-stack/view-stack-details) page.
+This will prompt you to enter the stack API key and Access Token. You can find these in the [Stack details](../set-up-stack/view-stack-details.md) page.
 ```
 Enter your stack api key: {API_KEY}
 Enter your stack access token: {ACCESS_TOKEN}
@@ -89,9 +89,9 @@ We are done with setting up the publishing environment! However, your site’s h
 
 Go to the **Home** content type, and publish the entry on the ****“**development**” environment. Then, visit the page `http://localhost:4000` in your browser to view the published content.
 
-Contentstack's web framework automatically applies the default page theme and design. To customize your page design, check out the [Theming](/docs/developers/web-framework-deep-dive/theming-and-templating) guide to customize your page design.
+Contentstack's web framework automatically applies the default page theme and design. To customize your page design, check out the [Theming](./theming-and-templating.md) guide to customize your page design.
 
-Contentstack provides [Postman collections of our Content Delivery, Content Management, and GraphQL APIs](/docs/developers/apis/postman-collections) which will help you to get started with the APIs and try them out through the Postman client. To get started with the the Postman collections, download the latest version of the Postman collection(s) and the Postman app, set your Contentstack account-specific values in the collection environment, and try out our APIs with ease.
+Contentstack provides [Postman collections of our Content Delivery, Content Management, and GraphQL APIs](../../../api-docs/postman-collections.md) which will help you to get started with the APIs and try them out through the Postman client. To get started with the the Postman collections, download the latest version of the Postman collection(s) and the Postman app, set your Contentstack account-specific values in the collection environment, and try out our APIs with ease.
 
 ## Common questions
 
@@ -105,4 +105,4 @@ Contentstack provides [Postman collections of our Content Delivery, Content Mana
 We are done with setting up the publishing environment! However, your site’s home will throw a “404” error. This is because the content has not yet been published.
 
 ### Where do I find the stack API key and Access Token?
-This will prompt you to enter the stack API key and Access Token. You can find these in the [Stack details](/docs/developers/set-up-stack/view-stack-details) page.
+This will prompt you to enter the stack API key and Access Token. You can find these in the [Stack details](../set-up-stack/view-stack-details.md) page.

@@ -36,8 +36,8 @@ As seen in the above screenshot, there are four distinct projects in the `apps` 
 Follow the steps to deploy a project from a monorepo.
 - [Log in to your Contentstack account ](https://www.contentstack.com/login/)and click **Launch** in the dashboard.
 - Click the **+ New Project** button.
-- Select [Import from a Git Repository](/docs/launch/import-project-using-github/) from the **Create New Project** modal, and then select your Git provider.**Note**:You can also deploy a project from a monorepo using the [File upload](/docs/launch/import-project-using-file-upload/) approach.
-- To import a project using Bitbucket Cloud, follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
+- Select [Import from a Git Repository](./import-project-using-github.md) from the **Create New Project** modal, and then select your Git provider.**Note**:You can also deploy a project from a monorepo using the [File upload](./import-project-using-file-upload.md) approach.
+- To import a project using Bitbucket Cloud, follow the steps in the [Create a Project Using Bitbucket Cloud](./import-a-project-using-bitbucket-cloud.md) guide to proceed.
 - From the **Repository** drop-down, select the monorepo that contains the app you want to deploy.
 - In the **Build and Output Settings** section, perform the following steps:Select the framework for your project under the **Framework Preset** drop-down.
 - Update the **Build Command** field.

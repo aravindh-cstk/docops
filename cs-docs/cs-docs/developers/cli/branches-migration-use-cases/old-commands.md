@@ -18,7 +18,7 @@ This page explains how to use Contentstack branches with the Contentstack CLI Mi
 
 The branches feature in Contentstack allows you to create multiple copies of your stack. You can add numerous branches of your stack and migrate your content to these branches.
 
-[Branches](/docs/developers/branches) primarily help you sync between your code and content model without making significant changes to the code.
+[Branches](../../../../api-docs/developers/apis/content-management-api/branches.md) primarily help you sync between your code and content model without making significant changes to the code.
 
 Using the Contentstack CLI's Migration plugin, you can migrate your content from one branch to another using a** migration script**.
 
@@ -86,7 +86,7 @@ csdx cm:migration -A -n  -k  -b
 **Note**: Make sure, while running the script, it should point to the target branch.
 
 - Finally, you can deploy all the changes on your production branch. This can be done in the following two ways:  
-  **Use an Alias for Release**:  This is an efficient way to apply new changes to your existing content. To use this method, create a production alias that points to the release branch.**Additional Resource**: Read our detailed guide on [how to use aliases](/docs/developers/branches#work-with-aliases) in content branching.
+  **Use an Alias for Release**:  This is an efficient way to apply new changes to your existing content. To use this method, create a production alias that points to the release branch.**Additional Resource**: Read our detailed guide on [how to use aliases](../../../../api-docs/developers/apis/content-management-api/branches.md#work-with-aliases) in content branching.
 
 **Note**: By using an alias for release, you can eliminate the risk of data loss. In case of any errors, it will by default rollback to the old code/branch.
 

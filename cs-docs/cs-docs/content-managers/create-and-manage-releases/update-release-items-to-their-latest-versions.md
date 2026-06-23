@@ -26,7 +26,7 @@ If an unlocalized entry that is part of the release has been localized later, yo
 **Note:** You cannot update the release items if the updated version of an entry has new references. The references are not automatically added to the release. You need to add them manually.
 
 To update the release items to their latest versions, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow these steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Releases” icon in the left navigation panel. Or, press “alt + R” for Windows and “option + R” for Mac.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Releases” icon in the left navigation panel. Or, press “alt + R” for Windows and “option + R” for Mac.
 - Hover over the release you want to unlock in the left panel.
 - Click the “Update All Release Items” icon from the popup. Alternatively, click the horizontal ellipsis in the top right corner and click **Update All Release Items**.
 - In the **Update All Release Items** modal, click **Update** to update the assets and entries of the release to the latest.
@@ -36,11 +36,11 @@ To bulk update release items to their latest, follow these steps:
 - Once you have selected the items, a floating panel will appear on the page. Click the **Update Release Item(s)** option in this panel.
 - In the **Update Release Item(s)** modal, click **Yes, Proceed** to update the selected items to their latest.
 
-**Note:** If the release is locked, you can [unlock](/docs/content-managers/create-and-manage-releases/unlock-a-release) and then update the release items to their latest versions.
+**Note:** If the release is locked, you can [unlock](./unlock-a-release.md) and then update the release items to their latest versions.
 
 ## API Reference
 
-To update release items to their latest versions via API, refer to the [Update Release Items to their Latest Versions](/docs/developers/apis/content-management-api#update-release-items-to-their-latest-versions) API request.
+To update release items to their latest versions via API, refer to the [Update Release Items to their Latest Versions](../../../api-docs/api-detail/content-management-api.md#update-release-items-to-their-latest-versions) API request.
 
 ## Common questions
 
@@ -51,7 +51,7 @@ To update release items to their latest versions via API, refer to the [Update R
 **Note:** You cannot update the release items if the updated version of an entry has new references. The references are not automatically added to the release. You need to add them manually.
 
 ### What should I do if the release is locked?
-**Note:** If the release is locked, you can [unlock](/docs/content-managers/create-and-manage-releases/unlock-a-release) and then update the release items to their latest versions.
+**Note:** If the release is locked, you can [unlock](./unlock-a-release.md) and then update the release items to their latest versions.
 
 ### Is there an API to update release items to their latest versions?
-To update release items to their latest versions via API, refer to the [Update Release Items to their Latest Versions](/docs/developers/apis/content-management-api#update-release-items-to-their-latest-versions) API request.
+To update release items to their latest versions via API, refer to the [Update Release Items to their Latest Versions](../../../api-docs/api-detail/content-management-api.md#update-release-items-to-their-latest-versions) API request.

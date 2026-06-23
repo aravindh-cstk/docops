@@ -17,7 +17,7 @@ This page explains what a space is in Assets and provides step-by-step instructi
 
 ## Create a Space
 
-In Assets, a [space](/docs/assets/about-spaces-and-workspaces#spaces) is the top-level container where you manage assets for a specific website, brand, or business unit.
+In Assets, a [space](./about-spaces-and-workspaces.md#spaces) is the top-level container where you manage assets for a specific website, brand, or business unit.
 
 To create a space, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps below:
 - Navigate to **Assets** through “App Switcher”.
@@ -28,7 +28,7 @@ To create a space, log in to your [Contentstack account](https://www.contentstac
 
 Your space is now ready. You can start uploading assets, creating user-defined fields, and workspaces as needed.
 
-**Note:** When you create a new space, a **main workspace** is automatically created. This workspace acts as the primary workspace. You can [create additional workspaces](/docs/assets/create-a-workspace) as forks of the main or any other workspace. These workspaces inherit assets and configurations from the source workspace, similar to how branches work in Git or CMS.
+**Note:** When you create a new space, a **main workspace** is automatically created. This workspace acts as the primary workspace. You can [create additional workspaces](./create-a-workspace.md) as forks of the main or any other workspace. These workspaces inherit assets and configurations from the source workspace, similar to how branches work in Git or CMS.
 
 ## Common questions
 
@@ -42,4 +42,4 @@ Yes, **Name** is required when creating a space.
 When you create a new space, a **main workspace** is automatically created, and you can start uploading assets, creating user-defined fields, and workspaces as needed.
 
 ### Can I create more workspaces after creating a space?
-Yes, you can [create additional workspaces](/docs/assets/create-a-workspace) as forks of the main or any other workspace.
+Yes, you can [create additional workspaces](./create-a-workspace.md) as forks of the main or any other workspace.

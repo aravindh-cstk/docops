@@ -108,20 +108,20 @@ Dynamic websites require more development resources and infrastructure costs are
 
 ### More Architecture Diagrams
 
-- [Static website architecture](/docs/developers/architecture-diagrams/static-website-detailed-architecture)
-- [Simple website architecture](/docs/developers/architecture-diagrams/simple-website-detailed-architecture)
-- [Partially headless setup architecture](/docs/developers/architecture-diagrams/partially-headless-setup-detailed-architecture)
-- [Layered architecture for Contentstack-powered websites](/docs/developers/architecture-diagrams/contentstack-powered-website-layered-architecture)
-- [Cloud infrastructure diagram](/docs/developers/architecture-diagrams/cloud-infrastructure-architecture-for-contentstack-powered-websites)
-- [MACH System Architecture](/docs/developers/architecture-diagrams/mach-architecture-diagram)
-- [Simple Website Using DataSync](/docs/developers/architecture-diagrams/simple-website-using-datasync)
-- [Mobile and Smart Devices System Architecture](/docs/developers/architecture-diagrams/mobile-and-smart-devices-system-architecture)
+- [Static website architecture](./static-website-detailed-architecture.md)
+- [Simple website architecture](./simple-website-detailed-architecture.md)
+- [Partially headless setup architecture](./partially-headless-setup-detailed-architecture.md)
+- [Layered architecture for Contentstack-powered websites](./contentstack-powered-website-layered-architecture.md)
+- [Cloud infrastructure diagram](./cloud-infrastructure-architecture-for-contentstack-powered-websites.md)
+- [MACH System Architecture](./mach-architecture-diagram.md)
+- [Simple Website Using DataSync](./simple-website-using-datasync.md)
+- [Mobile and Smart Devices System Architecture](./mobile-and-smart-devices-system-architecture.md)
 
 ### Resources to Get Started
 
-- [Quickstart in 5 minutes](/docs/developers/quickstart-in-5-mins)
+- [Quickstart in 5 minutes](../quickstart-in-5-mins.md)
 - [Sample applications](/docs/developers/sample-apps)
-- [How to start using Contentstack](/docs/developers/contentstack-basics/how-to-start-using-contentstack)
+- [How to start using Contentstack](../contentstack-basics/how-to-start-using-contentstack.md)
 
 ## Common questions
 

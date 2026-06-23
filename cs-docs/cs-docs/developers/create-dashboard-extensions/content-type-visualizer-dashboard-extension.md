@@ -17,7 +17,7 @@ This page explains how to add and use the Content Type Visualizer Dashboard Exte
 
 ## Content Type Visualizer Dashboard Extension
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Content Type Visualizer as a Marketplace App. For more information on Content Type Visualizer, please refer to the [Content Type Visualizer App Installation Guide](/docs/developers/marketplace-apps/content-type-visualizer).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Content Type Visualizer as a Marketplace App. For more information on Content Type Visualizer, please refer to the [Content Type Visualizer App Installation Guide](../marketplace-apps/content-type-visualizer.md).
 
 Content Type Visualizer Dashboard Extension offers a graphical representation of all content types, along with their fields, in a particular stack. This is similar to an ER diagram which is most commonly used in database management.
 
@@ -79,7 +79,7 @@ If you click on the pencil icon (as shown in the screenshot below) next to the c
 ## Common questions
 
 ### Is this documentation for the Marketplace App or the legacy extension?
-**Note**: This documentation uses the legacy approach with extensions. We have launched Content Type Visualizer as a Marketplace App. For more information on Content Type Visualizer, please refer to the [Content Type Visualizer App Installation Guide](/docs/developers/marketplace-apps/content-type-visualizer).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Content Type Visualizer as a Marketplace App. For more information on Content Type Visualizer, please refer to the [Content Type Visualizer App Installation Guide](../marketplace-apps/content-type-visualizer.md).
 
 ### What value should I use for `appHost` in the config parameters?
 You need to provide the app host (region where your app is hosted, that is North America or European region, for example, app.contentstack.com). For the Europe region, please use "eu-app.contentstack.com". Similarly, for Azure North America, use "azure-na-app.contentstack.com", and for Azure Europe, use “azure-eu-app.contentstack.com”.

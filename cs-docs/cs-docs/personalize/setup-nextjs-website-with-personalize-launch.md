@@ -22,7 +22,7 @@ This guide will help you set up your Next.js website with Personalize, hosted on
 ## Prerequisites
 - Next.js website on the latest version (14 and above) with [app router](https://nextjs.org/docs/app)
 - Website content sourced from a Stack
-- Website deployed on [Launch](/docs/developers/launch/about-launch/)
+- Website deployed on [Launch](../developers/launch/about-launch.md)
 - Personalize project created and connected to the Stack
 
 ## Steps for Execution
@@ -39,9 +39,9 @@ To retrieve the project UID, log in to your [Contentstack account](https://www.c
 - Click the **Copy** icon to copy the project UID to your clipboard. We will need this UID while setting up the Personalize Edge SDK in the next step.
 
 ### Proxy Requests with Launch Edge Proxy
-[Launch Edge Proxy](/docs/developers/launch/edge-functions) allows you to execute your code in proximity to your user’s location before a request is processed. Using this feature, we can make a call to the Personalize Edge API and fetch the [User Manifest](/docs/personalize/glossary-key-features#user-manifest) for each visitor. The User Manifest contains the selected Variant for each Experience. We can then pass these variants as the URL query parameters.
+[Launch Edge Proxy](../developers/launch/edge-functions.md) allows you to execute your code in proximity to your user’s location before a request is processed. Using this feature, we can make a call to the Personalize Edge API and fetch the [User Manifest](./glossary-key-features.md#user-manifest) for each visitor. The User Manifest contains the selected Variant for each Experience. We can then pass these variants as the URL query parameters.
 
-We would use the Launch Edge Proxy, since the Next.js Middleware executes on the server side and not in the Edge when [hosted on Launch](/docs/developers/launch/nextjs-on-launch#limitations).
+We would use the Launch Edge Proxy, since the Next.js Middleware executes on the server side and not in the Edge when [hosted on Launch](../developers/launch/nextjs-on-launch.md#limitations).
 
 #### Install the Personalize SDK
 To install the Personalize Edge SDK in your Next.js project:
@@ -50,7 +50,7 @@ To install the Personalize Edge SDK in your Next.js project:
 $ npm install @contentstack/personalize-edge-sdk
 ```
 
-**Additional Resource:** The [API Reference](/docs/developers/sdks/personalize-edge-sdk/javascript/reference/) for the SDK contains a lot of information on how to use the SDK.
+**Additional Resource:** The [API Reference](../developers/create-content-types/reference.md) for the SDK contains a lot of information on how to use the SDK.
 
 #### Create the Edge Function Handler
 The `[proxy].edge.js` is to be created in the `/functions/` folder inside your website source code. To create the Edge Function Handler:
@@ -84,7 +84,7 @@ export default async function handler(request, context) {
 }
 ```
 
-Here, we initialize and get an instance of the Personalize Edge SDK. Notice how we are passing the `request` object along. As part of the initialization process, the user context is extracted from the `request` object and used to fetch the [User Manifest](/docs/personalize/glossary-key-features#user-manifest) from the Personalize Edge API. The Manifest provides a list of variants selected in each published experience.
+Here, we initialize and get an instance of the Personalize Edge SDK. Notice how we are passing the `request` object along. As part of the initialization process, the user context is extracted from the `request` object and used to fetch the [User Manifest](./glossary-key-features.md#user-manifest) from the Personalize Edge API. The Manifest provides a list of variants selected in each published experience.
 
 **Note**: You can also provide a different Edge API URL in case you are on a different Contentstack region. Here are the Edge API URLs for each region:
 - AWS NA: `https://personalize-edge.contentstack.com`
@@ -219,9 +219,9 @@ The final step is to fetch the variant content using the variant parameter passe
 #### Move to Server Side Rendering (SSR) + Cache Headers
 Launch uses cache headers to cache content with SSR, hence we need to change our Next.js rendering mode to SSR. This is because we want to execute backend logic to render uncached requests, so that the right variants can be rendered for each unique request.
 
-Please follow the Launch documentation steps to move to SSR and cache headers [here](/docs/developers/launch/nextjs-on-launch#next-js-app-router-cache-revalidation-on-launch). Essentially, this step involves force rendering the page on the server side and setting the appropriate cache headers.
+Please follow the Launch documentation steps to move to SSR and cache headers [here](../developers/launch/nextjs-on-launch.md#next-js-app-router-cache-revalidation-on-launch). Essentially, this step involves force rendering the page on the server side and setting the appropriate cache headers.
 
-The cache headers recommended in the above [documentation](/docs/developers/launch/nextjs-on-launch#next-js-app-router-cache-revalidation-on-launch) can be tweaked for our personalized setup. We need to replace `stale-while-revalidate` with `must-revalidate` in the example code, to ensure that the personalized page is available immediately as the user navigates the website.
+The cache headers recommended in the above [documentation](../developers/launch/nextjs-on-launch.md#next-js-app-router-cache-revalidation-on-launch) can be tweaked for our personalized setup. We need to replace `stale-while-revalidate` with `must-revalidate` in the example code, to ensure that the personalized page is available immediately as the user navigates the website.
 
 #### Fetch Personalized Variants from the CMS
 Here, we modify the Homepage (`/app/page.ts`) to fetch Personalized variants from the CMS. Similarly, add the code to the other pages of your website source code.
@@ -264,15 +264,15 @@ const Page = async ({
 };
 ```
 
-The above example shows how to fetch an entry variant instead of the base entry when variants are passed in the URL. We are converting the variant parameter passed in the URL to [variant aliases](/docs/personalize/glossary-key-features#variant-aliases) used in the SDK.
+The above example shows how to fetch an entry variant instead of the base entry when variants are passed in the URL. We are converting the variant parameter passed in the URL to [variant aliases](./glossary-key-features.md#variant-aliases) used in the SDK.
 
-**Note:** Optionally, if you want to enable Live Preview for your Personalize project, follow the steps in the [Get Started with TypeScript Delivery SDK and Live Preview](/docs/developers/sdks/content-delivery-sdk/typescript/get-started-with-typescript-delivery-sdk-and-live-preview#initializing-the-stack-with-live-preview) guide.
+**Note:** Optionally, if you want to enable Live Preview for your Personalize project, follow the steps in the [Get Started with TypeScript Delivery SDK and Live Preview](../developers/sdks/content-delivery-sdk/typescript/get-started-with-typescript-delivery-sdk-and-live-preview.md#initializing-the-stack-with-live-preview) guide.
 
 ### Set Up Attributes and Trigger Events
 Setting attributes and triggering events can be done in the following ways:
-- Integrating with a [CDP](/docs/personalize/about-cdp-integration)
-- Using [Google Tag Manager](/docs/personalize/google-tag-manager-integration-with-personalize)
-- Using the SDK in the code ([JavaScript Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript))
+- Integrating with a [CDP](./about-cdp-integration.md)
+- Using [Google Tag Manager](./google-tag-manager-integration-with-personalize.md)
+- Using the SDK in the code ([JavaScript Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md))
 
 Below we have elaborated on the third approach.
 

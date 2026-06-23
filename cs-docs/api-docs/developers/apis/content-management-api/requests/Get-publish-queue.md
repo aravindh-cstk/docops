@@ -19,7 +19,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: You can retrieve the publish queue details for activities performed on entries and/or assets of your stack in the last 30 days. To retrieve publish queue details for nested reference published tasks, pass api_version parameter as **3.2** in the **Headers** section.
 
-You can apply various queries such as [count](../../../../api-detail/content-delivery-api.md#count), [limit](../../../../api-detail/content-delivery-api.md#limit), bulkJobId, include_job_details: true/false, etc. to filter the results. Refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section for more details.
+You can apply various queries such as [count](../../../../api-detail/content-delivery-api.md#count), [limit](../../../../api-detail/content-delivery-api.md#limit), bulkJobId, include_job_details: true/false, etc. to filter the results. Refer to the [Queries](../../../../api-detail/content-delivery-api.md#queries) section for more details.
 
 Now, you can limit the number of bulk job details in the response body to **25** items. Also, you can view the summary of your bulk jobs within the summary key in the response body.
 

@@ -19,7 +19,7 @@ This page explains the Polaris Analytics dashboard in Contentstack, including wh
 
 The Analytics dashboard for Polaris provides detailed insights into how Contentstack's built-in AI assistant is being used across your organization. Polaris can perform actions on entries, assets, and the Visual Editor on behalf of users. Use these metrics to monitor usage trends, response latency, token consumption, and execution success rates across Polaris operations.
 
-**Note:** Only organization [Owner](/docs/developers/organization/organization-roles#organization-owner), [Admin](/docs/developers/organization/organization-roles#organization-admin), and Product Analytics Viewer roles can access Analytics.
+**Note:** Only organization [Owner](../developers/organization/organization-roles.md#organization-owner), [Admin](../developers/organization/organization-roles.md#organization-admin), and Product Analytics Viewer roles can access Analytics.
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to **Analytics** through the “App Switcher”.

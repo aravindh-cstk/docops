@@ -21,7 +21,7 @@ This page lists the limitations of Advanced Search for Search Content. It is int
 - The maximum number of search queries allowed at a time is **20**
 - The allowed level of nesting in conditions is **1**
 - The maximum number of search conditions that can be saved at a time is **500**
-- You can only search for Custom Fields of type **text** through the [Advanced Search](/docs/content-managers/search-content/run-advanced-search).
+- You can only search for Custom Fields of type **text** through the [Advanced Search](./run-advanced-search.md).
 
 ## Common questions
 

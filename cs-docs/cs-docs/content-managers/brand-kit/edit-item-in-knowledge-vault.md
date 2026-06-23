@@ -19,17 +19,17 @@ This page explains how to edit an existing Knowledge Vault item in Brand Kit, in
 
 Update and manage items in the Knowledge Vault to keep your documents and data organized and up-to-date. You can manually update the text in the editor and change the already uploaded file.
 
-**Note**: Only Brand Kit [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin) can edit items in the Knowledge Vault.
+**Note**: Only Brand Kit [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin) can edit items in the Knowledge Vault.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin)
 
 ## Steps for Execution
 
-**Note**: For this guide, we have assumed that you have [added items in the Knowledge Vault](/docs/brand-kit/add-item-in-knowledge-vault) inside your Brand Kit.
+**Note**: For this guide, we have assumed that you have [added items in the Knowledge Vault](./add-item-in-knowledge-vault.md) inside your Brand Kit.
 
 To edit an existing item in Knowledge Vault, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 

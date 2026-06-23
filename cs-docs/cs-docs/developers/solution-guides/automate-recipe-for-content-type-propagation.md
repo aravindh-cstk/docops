@@ -37,7 +37,7 @@ This flow uses a series of triggers and actions to detect content type changes a
 
   Before any updates are applied to the destination stack, it is necessary to verify whether the content type exists or not in the destination stack. In this step, we issue an HTTP Request action to query the destination stack.
 
-  Ensure that the appropriate headers for the HTTP action are included, such as the api_key, authorization, content-type, and optionally, the include_branch. For security purposes, the credential information can be stored as [Project Variables](https://www.contentstack.com/docs/developers/automation-hub-guides/project-variables) and referenced in the header value selection.
+  Ensure that the appropriate headers for the HTTP action are included, such as the api_key, authorization, content-type, and optionally, the include_branch. For security purposes, the credential information can be stored as [Project Variables](../../../api-docs/developers/apis/automations-management-api/project-variables.md) and referenced in the header value selection.
 
   Ensure that the action is tested to capture the response payload. In this case, we expect two HTTP response codes. A 200 code indicates the content type already exists in the destination stack. A 422 code indicates if the content type cannot be found.
 

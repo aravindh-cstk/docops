@@ -27,18 +27,18 @@ To change your password, log in to your [Contentstack account](https://www.conte
 - Click the "Profile" icon in the top-right corner of the dashboard and select **Profile** from the dropdown.
 - In the **Profile** section, click the **Security** tab in the left navigation panel.
 - Under **Email & Password**, click **Reset Password**.
-- In the **Reset Password** modal, enter your current password in the **Old Password** field. Type your new password in the **New Password** field. Re-enter your password in the **Confirm Password** field.**Note:** Ensure the new password meets your organization’s [password policy](/docs/developers/organization/security-configuration#password-policies).
+- In the **Reset Password** modal, enter your current password in the **Old Password** field. Type your new password in the **New Password** field. Re-enter your password in the **Confirm Password** field.**Note:** Ensure the new password meets your organization’s [password policy](../organization/security-configuration.md#password-policies).
 - Click **Update** to apply the new password.
 
 Use the new credentials for your next login.
 
-**Tip**: For security, avoid reusing old passwords and consider enabling [Multi-Factor Authentication (MFA)](/docs/developers/security/multi-factor-authentication) for an extra layer of protection.
+**Tip**: For security, avoid reusing old passwords and consider enabling [Multi-Factor Authentication (MFA)](./multi-factor-authentication.md) for an extra layer of protection.
 
-**Additional Resource:** If you do not remember your password, refer to the [Forgot (Reset) Password](/docs/developers/security/forgot-reset-password) document for more information.
+**Additional Resource:** If you do not remember your password, refer to the [Forgot (Reset) Password](./forgot-reset-password.md) document for more information.
 
 ## API Reference
 
-To reset your password via API, refer to the [Reset Password](/docs/developers/apis/content-management-api#reset-password) API request.
+To reset your password via API, refer to the [Reset Password](../../../api-docs/api-detail/content-management-api.md#reset-password) API request.
 
 ## Common questions
 
@@ -49,7 +49,7 @@ Yes. **Note:** Changing your password signs you out of all sessions across brows
 Go to **Profile** → **Security** → under **Email & Password** click **Reset Password**.
 
 ### What if I forgot my current password?
-Refer to the [Forgot (Reset) Password](/docs/developers/security/forgot-reset-password) document for more information.
+Refer to the [Forgot (Reset) Password](./forgot-reset-password.md) document for more information.
 
 ### Can I reset my password using an API?
-Yes. To reset your password via API, refer to the [Reset Password](/docs/developers/apis/content-management-api#reset-password) API request.
+Yes. To reset your password via API, refer to the [Reset Password](../../../api-docs/api-detail/content-management-api.md#reset-password) API request.

@@ -16,7 +16,7 @@ This page explains how to migrate existing content from an HTML Rich Text Editor
 
 ## Migrate Content from HTML RTE to JSON RTE | Old Commands
 
-The [JSON Rich Text Editor (RTE)](/docs/developers/create-content-types/json-rich-text-editor) field stores and returns the data in the JSON format. You can add the JSON RTE field to an existing content type by [editing](/docs/developers/create-content-types/edit-a-content-type) it or by [creating a new content type](/docs/developers/create-content-types/create-a-content-type).
+The [JSON Rich Text Editor (RTE)](../../json-rich-text-editor.md) field stores and returns the data in the JSON format. You can add the JSON RTE field to an existing content type by [editing](../../create-content-types/edit-a-content-type.md) it or by [creating a new content type](../../create-content-types/create-a-content-type.md).
 
 If you already have data in the HTML RTE and want to migrate to JSON RTE, you can use the Contentstack CLI. By using a few commands in our CLI, you can easily perform the required migration.
 
@@ -39,8 +39,8 @@ csdx auth:tokens:add -m -a > -k > -t >
 Options:
 - `-a`, `--alias=alias`: Alias (name) you want to assign to the token.
 - `-m`, `--management`: Flag to set management token.
-- `-k`, `--api-key=api-key`: [API key](/docs/developers/set-up-stack/view-stack-details) of the stack where the token exists.
-- `-t`, `--token=token`: Value of your stack [management token](/docs/developers/create-tokens/generate-a-management-token).
+- `-k`, `--api-key=api-key`: [API key](../../set-up-stack/view-stack-details.md) of the stack where the token exists.
+- `-t`, `--token=token`: Value of your stack [management token](../../create-tokens/generate-a-management-token.md).
 
 Make note of the alias (token-name) you assign for the management token, we will require it in the next step. After successfully adding the management token, let's proceed to migrate the content from HTML RTE to JSON RTE.
 

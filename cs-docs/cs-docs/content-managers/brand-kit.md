@@ -20,9 +20,9 @@ This page introduces Contentstack Brand Kit and provides a structured set of lin
 
 Contentstack Brand Kit is a one-stop-shop for managing and showcasing your brand’s unique identity. It allows you to centralize your brand voice, guidelines, and communication styles.
 
-Within a [Brand Kit](/docs/brand-kit/about-brand-kit), you can define your brand’s distinct voice through customizable [Voice Profiles](/docs/brand-kit/about-voice-profile) and leverage integrated AI capabilities to generate on-brand content seamlessly. You can also easily consolidate and organize your brand’s knowledgebase in the [Knowledge Vault](/docs/brand-kit/about-knowledge-vault) and maintain brand integrity.
+Within a [Brand Kit](./brand-kit/about-brand-kit.md), you can define your brand’s distinct voice through customizable [Voice Profiles](./brand-kit/about-voice-profile.md) and leverage integrated AI capabilities to generate on-brand content seamlessly. You can also easily consolidate and organize your brand’s knowledgebase in the [Knowledge Vault](./brand-kit/about-knowledge-vault.md) and maintain brand integrity.
 
-Brand Kit seamlessly integrates with the [Marketplace AI Assistant](/docs/developers/marketplace-apps/ai-assistant-with-brand-kit) app. Install the app from our Marketplace, select your Brand Kit and Voice Profile, and create AI-generated content using the prompt.
+Brand Kit seamlessly integrates with the [Marketplace AI Assistant](../developers/marketplace-apps/ai-assistant-with-brand-kit.md) app. Install the app from our Marketplace, select your Brand Kit and Voice Profile, and create AI-generated content using the prompt.
 
 Also, by using our [Automate Brand Kit Connector](/docs/developers/automation-hub-connectors/brand-kit), you perform Brand Kit specific actions, such as fetching the details of Voice Profiles and Knowledge Vault.
 
@@ -68,10 +68,10 @@ Also, by using our [Automate Brand Kit Connector](/docs/developers/automation-hu
 
 ### More about Brand Kit
 
-- [Brand Kit Management API](/docs/developers/apis/brand-kit-management-api)
-- [Generative AI API](/docs/developers/apis/generative-ai-api)
-- [Knowledge Vault API](/docs/developers/apis/knowledge-vault-api)
-- [Brand Kit Integration with Marketplace AI Assistant App](/docs/developers/marketplace-apps/ai-assistant-with-brand-kit)
+- [Brand Kit Management API](../../api-docs/api-detail/brand-kit-management-api.md)
+- [Generative AI API](../../api-docs/api-detail/generative-ai-api.md)
+- [Knowledge Vault API](../../api-docs/api-detail/knowledge-vault-api.md)
+- [Brand Kit Integration with Marketplace AI Assistant App](../developers/marketplace-apps/ai-assistant-with-brand-kit.md)
 - [Automate Brand Kit Connector](/developers/automation-hub-connectors/brand-kit)
 - [Brand Kit FAQs](/faqs#brand-kit-faqs)
 - [Brand Kit Limitations](/content-managers/brand-kit/limitations)
@@ -88,4 +88,4 @@ Use the Quickstart link: [Get Started with Brand Kit](/content-managers/brand-ki
 See [About Voice Profiles](/content-managers/brand-kit/about-voice-profile) and [About Knowledge Vault](/content-managers/brand-kit/about-knowledge-vault).
 
 ### Are there APIs and integrations available for Brand Kit?
-Yes—see [Brand Kit Management API](/docs/developers/apis/brand-kit-management-api), [Generative AI API](/docs/developers/apis/generative-ai-api), [Knowledge Vault API](/docs/developers/apis/knowledge-vault-api), and [Brand Kit Integration with Marketplace AI Assistant App](/docs/developers/marketplace-apps/ai-assistant-with-brand-kit).
+Yes—see [Brand Kit Management API](../../api-docs/api-detail/brand-kit-management-api.md), [Generative AI API](../../api-docs/api-detail/generative-ai-api.md), [Knowledge Vault API](../../api-docs/api-detail/knowledge-vault-api.md), and [Brand Kit Integration with Marketplace AI Assistant App](../developers/marketplace-apps/ai-assistant-with-brand-kit.md).

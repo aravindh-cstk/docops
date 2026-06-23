@@ -37,7 +37,7 @@ If an entry is not published in a specific locale, make use of the “include_fa
 
 To include the publish details in the response, make use of the include_publish_details=true parameter. This will return the publishing details of the entry in every environment along with the version number that is published in each of the environments.
 
-You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
+You can add other [Queries](../../../../api-detail/content-delivery-api.md#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
 
 **When using Delivery Tokens**
 
@@ -47,7 +47,7 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 - If you specify a locale in the query, it returns the latest published version of the localized entry/entries
 - If an entry is not localized, make use of the include_fallback=true query parameter to fetch the published content from its fallback locale
 
-**Tip:** This request returns only the first 100 entries of the specified content type. Refer to the [Pagination](/docs/developers/apis/content-delivery-api#pagination) section to retrieve the rest of your entries in a paginated form.
+**Tip:** This request returns only the first 100 entries of the specified content type. Refer to the [Pagination](../../../../api-detail/content-delivery-api.md#pagination) section to retrieve the rest of your entries in a paginated form.
 
 ## URL Parameters
 

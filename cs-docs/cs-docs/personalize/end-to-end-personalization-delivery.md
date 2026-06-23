@@ -17,7 +17,7 @@ This page explains the end-to-end technical flow for delivering personalized exp
 
 ## Delivering Personalized Experiences: A detailed end-to-end technical guide
 
-This guide explains the complete flow of personalization delivery in Contentstack. It covers how user data is consented for and collected, how **Data & Insights (Lytics)** tracks user profiles and audience memberships, how **Personalize** assesses audience memberships and user context to determine active variants, and how the [Personalize Edge API](/docs/developers/apis/personalize-edge-api) and [Contentstack Delivery API (CDA)](/docs/developers/apis/content-delivery-api) work together to render the correct content variants in real-time.
+This guide explains the complete flow of personalization delivery in Contentstack. It covers how user data is consented for and collected, how **Data & Insights (Lytics)** tracks user profiles and audience memberships, how **Personalize** assesses audience memberships and user context to determine active variants, and how the [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md) and [Contentstack Delivery API (CDA)](../../api-docs/api-detail/content-delivery-api.md) work together to render the correct content variants in real-time.
 
 The below sequence diagram gives a better understanding of how request flows seamlessly between **Data & Insights (Lytics)**, **Personalize**, and **Contentstack CMS** to deliver personalized experiences efficiently.
 
@@ -46,25 +46,25 @@ This collected data is sent to Data & Insights (Lytics), which processes it to b
 
 For more information, refer to the following guides:
 - [Data & Insights (Lytics)](/docs/data-and-insights)
-- [Set up JS Tag](/docs/data-and-insights/install-real-time-event-tag)
+- [Set up JS Tag](../data-and-insights/install-real-time-event-tag.md)
 - [Data Collection by the JS Tag](https://docs.lytics.com/docs/lytics-javascript-tag#data-collection)
 
 ### Using Personalize Custom Attributes
 
-You can use [Personalize Custom Attributes](/docs/personalize/about-attributes) to define user traits and send them directly to the Personalize decision engine for real-time audience evaluation, useful for first-page personalization.
+You can use [Personalize Custom Attributes](./about-attributes.md) to define user traits and send them directly to the Personalize decision engine for real-time audience evaluation, useful for first-page personalization.
 
 The custom attributes for each user can be persisted at Personalize Edge, or sent a new and ad-hoc each time you request that user’s active variants.
 
-To persist a user’s custom attributes at Personalize Edge, you can use the [Personalize Edge API](/docs/developers/apis/personalize-edge-api) or the [Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript).
+To persist a user’s custom attributes at Personalize Edge, you can use the [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md) or the [Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md).
 
 To do it via the API, call the PATCH /user-attributes endpoint of the Edge API.
 
 ```
 curl --location --request PATCH 'https:///user-attributes' \--header 'x-project-uid: your_project_uid' \--header 'x-cs-personalize-user-uid: you_visitors_user_uid' \--header 'Content-Type: application/json' \--data '{    "age": 42,    "highValueCustomer": true}'
 ```
-**Note:** Find your Contentstack region’s Personalize Edge API base URL [here](/docs/developers/apis/personalize-edge-api#base-url).
+**Note:** Find your Contentstack region’s Personalize Edge API base URL [here](../../api-docs/api-detail/personalize-edge-api.md#base-url).
 
-Alternatively, the more common and simpler approach is to use the `set()` method in the [Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript) to define key-value pairs representing user attributes. Ensure that the attribute keys you define match those created in the **Personalize Attributes** module.
+Alternatively, the more common and simpler approach is to use the `set()` method in the [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md) to define key-value pairs representing user attributes. Ensure that the attribute keys you define match those created in the **Personalize Attributes** module.
 
 ```
 import Personalize from '@contentstack/personalize-edge-sdk';// if not using Contentstack's AWS NA regionPersonalize.setEdgeApiUrl('');const personalizeSdk = await Personalize.init(projectUid, initOptions);await personalizeSdk.set({  age: 42,  highValueCustomer: true,});
@@ -76,11 +76,11 @@ const personalizeSdk = await Personalize.init(projectUid, {    liveAttributes: {
 ```
 Passing custom attributes during initialization treats them as **live attributes**, allowing real-time variant evaluation.
 
-**Note:** You need to have the audiences rules set up correctly to utilize the user data. To learn more about audience rules in Personalize, refer [here](https://www.contentstack.com/docs/personalize/create-audience).
+**Note:** You need to have the audiences rules set up correctly to utilize the user data. To learn more about audience rules in Personalize, refer [here](./create-audience.md).
 
 ## Request Manifest (Personalize)
 
-The [Manifest API](/docs/developers/apis/personalize-edge-api#get-manifest) (GET /manifest) returns the list of active variants for a user. When a visitor lands on your site, you should call the Personalize Edge API to evaluate all **active experiences** and determine which variant is active for each. It evaluates active variants by reading the audience memberships and user context passed in request headers. To find out more about the API’s working, check out the ‘Via API’ subsection below. This can be simplified by using the Personalize Edge SDK, which we highly recommend.
+The [Manifest API](../../api-docs/api-detail/personalize-edge-api.md#get-manifest) (GET /manifest) returns the list of active variants for a user. When a visitor lands on your site, you should call the Personalize Edge API to evaluate all **active experiences** and determine which variant is active for each. It evaluates active variants by reading the audience memberships and user context passed in request headers. To find out more about the API’s working, check out the ‘Via API’ subsection below. This can be simplified by using the Personalize Edge SDK, which we highly recommend.
 
 **Via JavaScript Edge SDK**
 
@@ -89,12 +89,12 @@ import Personalize from '@contentstack/personalize-edge-sdk';const personalizeSd
 ```
 Upon initialization, it calls the Manifest API to fetch the user’s active variants, which can then be retrieved using the `personalizeSdk.getActiveVariants()` method.
 
-In an edge environment (for example, a **Launch Edge Function**), you would initialize the SDK and pass the incoming request object in the [initOptions](/docs/developers/sdks/personalize-edge-sdk/javascript/reference#initoptions). Initializing with the request object will allow the SDK to read context such as page URL, referrer, IP address, cookies, etc., which are needed by the Edge API for determining the active variants.
+In an edge environment (for example, a **Launch Edge Function**), you would initialize the SDK and pass the incoming request object in the [initOptions](../developers/create-content-types/reference.md#initoptions). Initializing with the request object will allow the SDK to read context such as page URL, referrer, IP address, cookies, etc., which are needed by the Edge API for determining the active variants.
 
 ```
 const activeVariants = personalizeSdk.getActiveVariants();/**Example active variants - experience short uid: variant short uid key-value pairs{  '0': 'a',  '1': '2',  '2': 'e',}**/
 ```
-**Note:** Ideally, you would perform this at your edge function. For more details about the edge-based implementation architecture, check out this [document](/docs/personalize/ssr-edge-routing-technical-implementation-architecture). For a step-by-step Next.js implementation example, refer to [Setup Next.js Website with Personalize - Launch](/docs/personalize/setup-nextjs-website-with-personalize-launch). Note that the functions used in the actual code might slightly differ from the ones mentioned above, this is due to the nuances in real-world implementation best practices.
+**Note:** Ideally, you would perform this at your edge function. For more details about the edge-based implementation architecture, check out this [document](./ssr-edge-routing-technical-implementation-architecture.md). For a step-by-step Next.js implementation example, refer to [Setup Next.js Website with Personalize - Launch](./setup-nextjs-website-with-personalize-launch.md). Note that the functions used in the actual code might slightly differ from the ones mentioned above, this is due to the nuances in real-world implementation best practices.
 
 ### Via API (Manual)
 
@@ -106,7 +106,7 @@ You can call the **Personalize Edge API** directly, but you must handle user con
 - x-project-uid (your Personalize Project UID)
 - x-cs-personalize-user-uid (the current user’s user UID)
 
-The context for matching contextual attributes can be provided in optional headers, for example x-page-url for matching query parameters. For the complete list, check out the API documentation [here](/docs/developers/apis/personalize-edge-api#get-manifest).
+The context for matching contextual attributes can be provided in optional headers, for example x-page-url for matching query parameters. For the complete list, check out the API documentation [here](../../api-docs/api-detail/personalize-edge-api.md#get-manifest).
 
 **Example:**
 
@@ -132,14 +132,14 @@ To fetch entry variants, we need to first get the variant aliases.
 
 The `getVariantAliases()` method in Edge SDK returns a list of variant aliases.
 
-**Note:** In the actual implementation, the methods may slightly differ if you follow the recommended edge-based implementation architecture, although the core concept remains the same. The [Proxy Requests with Launch Edge Proxy](/docs/personalize/setup-nextjs-website-with-personalize-launch#proxy-requests-with-launch-edge-proxy) and [Fetch Variant Content from the Origin](/docs/personalize/setup-nextjs-website-with-personalize-launch#fetch-variant-content-from-the-origin) sections of the Next.js Launch setup guide provide an example for the same.
+**Note:** In the actual implementation, the methods may slightly differ if you follow the recommended edge-based implementation architecture, although the core concept remains the same. The [Proxy Requests with Launch Edge Proxy](./setup-nextjs-website-with-personalize-launch.md#proxy-requests-with-launch-edge-proxy) and [Fetch Variant Content from the Origin](./setup-nextjs-website-with-personalize-launch.md#fetch-variant-content-from-the-origin) sections of the Next.js Launch setup guide provide an example for the same.
 
 ```
 const variantAliases = personalizeSdk.getVariantAliases();// ['cs_personalize_a_0', 'cs_personalize_b_1']
 ```
 - **Via API**
 
-Use the active variants returned by the Manifest API to generate the variant aliases manually and fetch personalized entry data via the [Contentstack CDA](/docs/developers/apis/content-delivery-api) (REST, GraphQL, or SDK). Make sure to include the `publish_details` field to access applied variant metadata.
+Use the active variants returned by the Manifest API to generate the variant aliases manually and fetch personalized entry data via the [Contentstack CDA](../../api-docs/api-detail/content-delivery-api.md) (REST, GraphQL, or SDK). Make sure to include the `publish_details` field to access applied variant metadata.
 
 Extract the variant alias from the Manifest response using the following logic:
 You should get an array that looks like ['cs_personalize_a_0', 'cs_personalize_b_1']
@@ -155,8 +155,8 @@ The variant aliases can then be passed to the CMS Delivery API to fetch entries.
 import contentstack from '@contentstack/delivery-sdk';const stack = contentstack.stack({  apiKey: 'your stack api key',  deliveryToken: 'your stack delivery token',  environment: 'your stack environment',  host: 'your stack delivery api host',});const entry = await stack  .contentType('your_content_type_uid')  .entry('your_entry_uid')  .variants(variantAliases)  .fetch();
 ```
 - **Via Contentstack Delivery API (CDA)**
-- REST API: [Entry Variants API](/docs/developers/apis/content-delivery-api#entry-variants)
-- SDK: [Get Variants](/docs/developers/sdks/content-delivery-sdk/typescript/reference#variants)
+- REST API: [Entry Variants API](../../api-docs/api-detail/content-delivery-api.md#entry-variants)
+- SDK: [Get Variants](../developers/create-content-types/reference.md#variants)
 
 **Example Request:**
 
@@ -176,7 +176,7 @@ Each key in the variant's object is a Variant UID. Each value includes an alias 
 
 ### Impressions
 
-Tracking [impressions](/docs/personalize/about-events#impressions) and [conversions](/docs/personalize/about-events#conversions) completes the feedback cycle allowing you to measure the effectiveness of your personalization.
+Tracking [impressions](./about-events.md#impressions) and [conversions](./about-events.md#conversions) completes the feedback cycle allowing you to measure the effectiveness of your personalization.
 
 Impressions could be tracked in Personalize in two ways:
 - **For specific experiences**
@@ -215,7 +215,7 @@ Pass over the variantAliases to the `triggerImpressions()` method available in P
 ```
 import Personalize from '@contentstack/personalize-edge-sdk';const personalizeSdk = await Personalize.init(projectUid, initOptions);personalizeSdk.triggerImpressions({  aliases: variantAliases});
 ```
-**Additional Resource:** For more information on how to trigger impressions dynamically, refer to [Dynamically Track Variant Impressions Based On Entry Variant Shown](/docs/personalize/dynamically-track-variant-impressions).
+**Additional Resource:** For more information on how to trigger impressions dynamically, refer to [Dynamically Track Variant Impressions Based On Entry Variant Shown](./dynamically-track-variant-impressions.md).
 
 **Via API**
 
@@ -233,7 +233,7 @@ A conversion represents a user action (for example, clicking a button or complet
 ```
 import Personalize from '@contentstack/personalize-edge-sdk';const personalizeSdk = await Personalize.init(projectUid, { request });const eventKey = 'your_event_key';personalizeSdk.triggerEvent(eventKey);
 ```
-The `triggerEvent` method takes an eventKey. The eventKey is configured when you [create an event](/docs/personalize/create-event). These events must be defined as a metric for conversions to be registered.
+The `triggerEvent` method takes an eventKey. The eventKey is configured when you [create an event](./create-event.md). These events must be defined as a metric for conversions to be registered.
 
 **Via API**
 
@@ -242,7 +242,7 @@ curl -X POST 'https://personalize-edge.contentstack.com/events' \  --header 'x-c
 ```
 **Note:** To track conversions, you should configure the conversion metrics in experiences.
 
-**Additional Resource: **For more information, refer to [Configure Metrics in Experiences.](/docs/personalize/create-ab-test-experience#steps-for-execution)
+**Additional Resource: **For more information, refer to [Configure Metrics in Experiences.](./create-ab-test-experience.md#steps-for-execution)
 
 ## Implementation Checklist
 

@@ -25,12 +25,12 @@ This guide provides a step-by-step walkthrough for editing experiences in Conten
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to the Contentstack Organization that has Personalize enabled
 - Access to a project in Personalize
-- [Experience](/docs/personalize#working-with-experiences) created in your Personalize project
+- [Experience](../agent-os/personalize.md#working-with-experiences) created in your Personalize project
 
 **Note:** Users with Owner and Member access to a Personalize project can edit existing experiences.
 
 ## Steps for Execution
-**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
 ### Editing an Experience Draft
 To edit an existing experience (draft which was never activated previously), log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
@@ -61,7 +61,7 @@ The **Edit Version** modal will appear, confirming that a new clone of the curre
 
 You will get a success message after the experience has been successfully updated.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#experiences) to create, edit, delete, and retrieve all existing experiences.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#experiences) to create, edit, delete, and retrieve all existing experiences.
 
 ## Common questions
 

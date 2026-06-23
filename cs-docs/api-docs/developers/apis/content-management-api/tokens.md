@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # CMA | Tokens
 
-Contentstack provides different [types of tokens](/docs/developers/create-tokens/types-of-tokens/) to authorize API requests. You can use [Delivery Tokens](/docs/developers/create-tokens/about-delivery-tokens) to authenticate Content Delivery API (CDA) requests and retrieve the published content of an environment. To authenticate Content Management API (CMA) requests over your stack content, you can use [Management Tokens](/docs/developers/create-tokens/about-management-tokens).
+Contentstack provides different [types of tokens](../../../../cs-docs/developers/create-tokens/types-of-tokens.md) to authorize API requests. You can use [Delivery Tokens](../../../../cs-docs/developers/create-tokens/about-delivery-tokens.md) to authenticate Content Delivery API (CDA) requests and retrieve the published content of an environment. To authenticate Content Management API (CMA) requests over your stack content, you can use [Management Tokens](../../../../cs-docs/developers/create-tokens/about-management-tokens.md).
 
 Delivery tokens provide read-only access to the associated environments, while management tokens provide read-write access to the content of your stack. Use these tokens along with the stack API key to make authorized API requests.
 
@@ -549,7 +549,7 @@ The Delete delivery token request deletes a specific delivery token.
 
 ## Preview Token Collection
 
-A [Preview Token](/docs/developers/create-tokens/about-delivery-tokens#about-preview-tokens) provides you access to retrieve details of your website within the live preview panel.
+A [Preview Token](../../../../cs-docs/developers/create-tokens/about-delivery-tokens.md#about-preview-tokens) provides you access to retrieve details of your website within the live preview panel.
 
 **Note**: The Preview tokens are exclusively compatible with the new rest-preview.contentstack.com endpoint.
 

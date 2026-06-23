@@ -28,15 +28,15 @@ The fastest way to get started with Launch is to clone and deploy a [sample Angu
 
 Follow the steps given below to deploy your first Launch project using GitHub:
 
-**Note:** Only the Organization [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles/#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to create projects in a stack for Launch.
+**Note:** Only the Organization [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) has the right to create projects in a stack for Launch.
 - [Log in to Contentstack](https://www.contentstack.com/login/) and click the **Launch** icon from the dashboard, as shown below:
 Alternatively, go to the **App Switcher** in the top panel and click the **Launch** icon.
 - On the **Launch Projects** screen, click the **+ New Project** button to initiate the project creation process.
 - From the **Create New Project** modal, click **Import from a Git Repository**.
 
-    **Note:** You can also choose to [upload a .zip file to import a project](/docs/launch/import-project-using-file-upload/).
+    **Note:** You can also choose to [upload a .zip file to import a project](./import-project-using-file-upload.md).
 - Click **GitHub**.
-    **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
+    **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](./import-a-project-using-bitbucket-cloud.md) guide to proceed.
 
     A Sign in to GitHub screen pops up. Enter your credentials and log in to your GitHub account.
 

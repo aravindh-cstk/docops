@@ -17,13 +17,13 @@ This page explains what the **Workflow Tasks** page is, who can view which tasks
 
 ## About Workflow Tasks
 
-The **Workflow Tasks** page is a collection of all your pending tasks. Whenever someone assigns you to work on a [workflow stage](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages) on an [entry](/docs/content-managers/working-with-entries/about-entries), or if someone sends you an entry for [publishing](/docs/content-managers/working-with-entries/publish-an-entry) or unpublishing approval, it is added to your **Tasks** page. Each [stack](/docs/developers/set-up-stack/about-stack) has a separate Tasks section.
+The **Workflow Tasks** page is a collection of all your pending tasks. Whenever someone assigns you to work on a [workflow stage](./about-workflow-stages.md) on an [entry](../../content-managers/author-content/about-entries.md), or if someone sends you an entry for [publishing](../../content-managers/author-content/publish-an-entry.md) or unpublishing approval, it is added to your **Tasks** page. Each [stack](../set-up-stack/about-stack.md) has a separate Tasks section.
 
 This enables you to get an overview of the approval requests specific to the content of your stack.
 
 **Key points to remember**:
-- Stack [owners](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) and [administrators](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) have access to view all the tasks assigned to [different users](/docs/developers/invite-users-and-assign-roles/about-stack-roles).
-- [Content managers](/docs/developers/invite-users-and-assign-roles/types-of-roles#content-manager) and other custom roles with limited privileges cannot view the entire task list. They can only view their tasks list.
+- Stack [owners](../invite-users-and-assign-roles/types-of-roles.md#owner) and [administrators](../invite-users-and-assign-roles/types-of-roles.md#admin) have access to view all the tasks assigned to [different users](../invite-users-and-assign-roles/about-stack-roles.md).
+- [Content managers](../invite-users-and-assign-roles/types-of-roles.md#content-manager) and other custom roles with limited privileges cannot view the entire task list. They can only view their tasks list.
 
 **Note:** The owner of the stack or the administrator can view all the tasks assigned to all users of the stack. This gives them a central location to view and keep track of all the assigned tasks.
 

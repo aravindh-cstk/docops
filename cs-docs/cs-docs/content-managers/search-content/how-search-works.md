@@ -18,7 +18,7 @@ This page explains how Contentstack’s Search functionality works for finding a
 
 Contentstack’s Search functionality allows you to look for any assets or entries located within a particular stack. This search function (press “K”) can be used through the search bar located on the header of the Contentstack app.
 
-**Note**: When working within specific branches, you will view searched content types, entries, assets, etc., only from the branch. For example, if you have a home content type within the development branch, you will search for that content type only in the development branch. Refer to our [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) document for more information.
+**Note**: When working within specific branches, you will view searched content types, entries, assets, etc., only from the branch. For example, if you have a home content type within the development branch, you will search for that content type only in the development branch. Refer to our [Branch-specific Modules](../../developers/branches/branch-specific-modules.md) document for more information.
 
 ## Types of Search
 

@@ -16,7 +16,7 @@ This page explains what a Global field is in Contentstack, why you would use it,
 
 ## About Global Field
 
-A **Global** **field** is a reusable set of fields that you define once and utilize across multiple [content types](/docs/developers/create-content-types/about-content-types/) within your [stack](/docs/developers/set-up-stack/about-stack/). This approach streamlines [content modeling](/docs/developers/content-modeling/about-content-modeling/) and ensures consistency, eliminating the need to manually recreate common fields for different content types.
+A **Global** **field** is a reusable set of fields that you define once and utilize across multiple [content types](../create-content-types/about-content-types.md) within your [stack](../set-up-stack/about-stack.md). This approach streamlines [content modeling](../content-modeling/about-content-modeling.md) and ensures consistency, eliminating the need to manually recreate common fields for different content types.
 
 ## Key Features and Benefits
 - **Centralized Management:** Update a Global field in one place, and the changes reflect across all content types where it's used.
@@ -25,7 +25,7 @@ A **Global** **field** is a reusable set of fields that you define once and util
 
 **Note:**
 - Global fields are specific to a stack and cannot be shared across multiple stacks.
-- When working with specific branches, any Global fields you create or update will be unique to that [branch](/docs/developers/branches/about-branches/). Refer to the [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) documentation for more details.
+- When working with specific branches, any Global fields you create or update will be unique to that [branch](../branches/about-branches.md). Refer to the [Branch-specific Modules](../branches/branch-specific-modules.md) documentation for more details.
 
 Suppose you create a Global field named **"SEO"** containing fields like **"Meta Title"** and **"Meta Description"**. By adding this Global field to any content type, these subfields automatically appear within that content type, ensuring uniformity.
 

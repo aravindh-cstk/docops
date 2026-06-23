@@ -17,10 +17,10 @@ This page explains how to use Contentstack’s Sync API with the Python SDK to k
 ## Use the Sync API with Python SDK
 
 The Sync API takes care of syncing your Contentstack data with your app and ensures that the data is always up-to-date by providing delta updates. Contentstack’s Python SDK provides several methods that you can use to sync data. Learn more about these methods below:
-- [Initial sync](/docs/developers/android/use-the-sync-api-with-android-sdk)
-- [Sync pagination](/docs/developers/android/use-the-sync-api-with-android-sdk#sync-pagination)
-- [Subsequent sync](/docs/developers/android/use-the-sync-api-with-android-sdk#subsequent-sync)
-- [Advanced sync queries](/docs/developers/android/use-the-sync-api-with-android-sdk#advanced-sync-queries)
+- [Initial sync](../sdks/content-delivery-sdk/android/use-the-sync-api-with-android-sdk.md)
+- [Sync pagination](../sdks/content-delivery-sdk/android/use-the-sync-api-with-android-sdk.md#sync-pagination)
+- [Subsequent sync](../sdks/content-delivery-sdk/android/use-the-sync-api-with-android-sdk.md#subsequent-sync)
+- [Advanced sync queries](../sdks/content-delivery-sdk/android/use-the-sync-api-with-android-sdk.md#advanced-sync-queries)
 
 ## Common questions
 

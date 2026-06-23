@@ -21,7 +21,7 @@ Contentstack provides asset URL security, allowing teams to protect content by r
 
 ## How To Access Secured Published Assets
 
-To access a secured asset, you must include both a [delivery token](/docs/developers/create-tokens/about-delivery-tokens) and an [environment](/docs/developers/set-up-environments/about-environments) name as query parameters in the asset URL.
+To access a secured asset, you must include both a [delivery token](../create-tokens/about-delivery-tokens.md) and an [environment](../set-up-environments/about-environments.md) name as query parameters in the asset URL.
 
 Example URLs:
 - `https://assets.contentstack.io/v3/assets/{stack_uid}/{asset_uid}/{asset_version_id}/asset_file_of_pdf.pdf?access_token={delivery_token}&environment={environment_name}`
@@ -33,11 +33,11 @@ Example URLs:
 
 When secure asset URLs are enabled, the following limitations apply:
 - **Rich Text Fields (RTE, JSON RTE, and Markdown):** Once asset privatization is enabled, these fields would no longer support asset or image insertion using the standard file picker. As a workaround, to include a secured asset, manually append the required authentication parameters to the URL.**Warning:** Manually appending the asset URL is not recommended for rich text fields due to maintainability and potential security exposure.
-- **Image Delivery API Limitations:** The [overlay](/docs/developers/apis/image-delivery-api#overlay) transformation parameter does not function with secured assets.
+- **Image Delivery API Limitations:** The [overlay](../../../api-docs/api-detail/image-delivery-api.md#overlay) transformation parameter does not function with secured assets.
 
 ## How To Access Draft Assets
 
-To access draft (unpublished) assets, use either an [Authtoken](/docs/developers/apis/content-management-api#how-to-get-authtoken) or a [Management Token](/docs/developers/apis/content-management-api#how-to-get-management-tokens) with the [Content Management APIs](/docs/developers/apis/content-management-api#api-reference).
+To access draft (unpublished) assets, use either an [Authtoken](../../../api-docs/api-detail/content-management-api.md#how-to-get-authtoken) or a [Management Token](../../../api-docs/api-detail/content-management-api.md#how-to-get-management-tokens) with the [Content Management APIs](../../../api-docs/api-detail/content-management-api.md#api-reference).
 
 **Note**: Delivery tokens work only for published assets and cannot be used to fetch draft versions.
 

@@ -16,7 +16,7 @@ This page explains how to use the Contentstack Management connector’s Global F
 
 ## Contentstack Management - Global Fields Actions
 
-A [Global Field](/docs/developers/global-field/about-global-field) is a reusable field (or group of fields) that you can define once and reuse in any content type within your stack. You can perform global field based operations using the following Contentstack Management Global Field actions.
+A [Global Field](../developers/global-field/about-global-field.md) is a reusable field (or group of fields) that you can define once and reuse in any content type within your stack. You can perform global field based operations using the following Contentstack Management Global Field actions.
 
 Let’s look at each of these in detail.
 

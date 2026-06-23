@@ -22,11 +22,11 @@ Contentstack currently supports three regions: **North America**, **Europe**,** 
 
 By default, the CLI uses the North American region. Configuration changes are not required for North America region users.
 
-Using the following set of commands, you can configure the CLI to use other [regions](/docs/developers/contentstack-regions).
+Using the following set of commands, you can configure the CLI to use other [regions](../../contentstack-regions.md).
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- CLI [installed](/docs/developers/cli/install-the-cli)
+- CLI [installed](../install-the-cli.md)
 - [Authentication](/docs/developers/cli/authenticate-with-the-cli)to use CLI
 
 ## Commands
@@ -43,7 +43,7 @@ csdx config:get:region
 
 ### Set region
 
-The `config:set:region` command lets you select a region, from the available [Contentstack regions](/docs/developers/contentstack-regions), to perform actions using CLI.
+The `config:set:region` command lets you select a region, from the available [Contentstack regions](../../contentstack-regions.md), to perform actions using CLI.
 
 **Usage**
 
@@ -68,7 +68,7 @@ csdx config:set:region AZURE-NA
 
 ### Set custom host and region
 
-By using the `config:set:region` command, you can also set a custom host for [Content Delivery](https://www.contentstack.com/docs/developers/apis/content-delivery-api/) and [Content Management](https://www.contentstack.com/docs/developers/apis/content-management-api/) APIs, and set a custom region name for the hosts.
+By using the `config:set:region` command, you can also set a custom host for [Content Delivery](../../../../api-docs/api-detail/content-delivery-api.md) and [Content Management](../../../../api-docs/api-detail/content-management-api.md) APIs, and set a custom region name for the hosts.
 
 **Usage**
 

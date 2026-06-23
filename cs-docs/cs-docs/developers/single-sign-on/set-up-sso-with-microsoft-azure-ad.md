@@ -17,9 +17,9 @@ This page provides a step-by-step procedure for configuring Single Sign-On (SSO)
 
 ## Set up SSO with Microsoft Azure AD
 
-**Warning**: This set up guide is deprecated. Please visit our documentation on [Set up SSO with Microsoft Entra ID Native App](/docs/developers/single-sign-on/set-up-sso-with-microsoft-entra-ID-native-app).
+**Warning**: This set up guide is deprecated. Please visit our documentation on [Set up SSO with Microsoft Entra ID Native App](./set-up-sso-with-microsoft-entra-ID-native-app.md).
 
-This step-by-step guide explains how to set up [Single Sign-On](/docs/developers/single-sign-on) in Contentstack with Microsoft Azure Active Directory (AD) as your SAML 2.0 Identity Provider (IdP).
+This step-by-step guide explains how to set up [Single Sign-On](../single-sign-on.md) in Contentstack with Microsoft Azure Active Directory (AD) as your SAML 2.0 Identity Provider (IdP).
 
 In a nutshell, this integration requires following steps:
 - [Create SSO Name and ACS URL in Contentstack](#create-sso-name-and-acs-url-in-contentstack)
@@ -34,7 +34,7 @@ Let us see each of the processes in detail.
 
 ## Create SSO Name and ACS URL in Contentstack
 
-**Note:** Only the Organization [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) will be able to perform the steps discussed below.
+**Note:** Only the Organization [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) will be able to perform the steps discussed below.
 
 Start by creating an SSO Name and generate the ACS URL in Contentstack
 
@@ -138,7 +138,7 @@ You will be able to see all the roles that you created when you assign them to y
 
 ## Assign Roles to Application Users for IdP Role Mapping
 
-**Note:** This is an optional step, but it is mandatory if [IdP Role Mapping](/docs/developers/single-sign-on/idp-role-mapping) is part of your Contentstack plan and you want to implement it.
+**Note:** This is an optional step, but it is mandatory if [IdP Role Mapping](./idp-role-mapping.md) is part of your Contentstack plan and you want to implement it.
 
 This is an alternate way of managing users and permissions of your SSO-enabled organization. Performing this step lets you map your IdP roles to Contentstack roles while configuring SSO for your Contentstack organization.
 
@@ -155,7 +155,7 @@ You can now proceed to create role mappings in Contentstack for the IdP roles yo
 
 **Note:** You will only be able to view and perform this step if IdP Role Mapping is part of your Contentstack plan.
 
-In the **User Management** section of Contentstack's SSO Setup page, you will see [Strict Mode](/docs/developers/single-sign-on/set-up-sso-in-contentstack#strict-mode) (authorize access to organization users only via SSO login) and [Session Timeout](/docs/developers/single-sign-on/set-up-sso-in-contentstack#session-timeout) (define session duration for a user signed in through SSO).
+In the **User Management** section of Contentstack's SSO Setup page, you will see [Strict Mode](./set-up-sso-in-contentstack.md#strict-mode) (authorize access to organization users only via SSO login) and [Session Timeout](./set-up-sso-in-contentstack.md#session-timeout) (define session duration for a user signed in through SSO).
 
 Below these options, you will see the **Advanced Settings** option.
 
@@ -165,14 +165,14 @@ In the **Add Role Mapping** section, click on the **+ ADD ROLE MAPPING** link to
 
 **IdP Role Identifier**: Enter the IdP group/role identifier, for example, “developers.” You can use the value from your manifest.
 - **Organization Role**: Assign either the **ADMIN **or **MEMBER**role to the mapped group/role.
-- **Stack Roles ***(optional)*: Assign [stacks](/docs/developers/set-up-stack/about-stack) as well as the corresponding stack-level roles to this role.
+- **Stack Roles ***(optional)*: Assign [stacks](../set-up-stack/about-stack.md) as well as the corresponding stack-level roles to this role.
 
 Likewise, you can add more role mappings for your Contentstack organization. To add a new Role mapping, click on **+ ADD ROLE MAPPING** and enter the details.
 - Keep **Role Delimiter** blank as Microsoft Azure AD usually returns roles in an array.
 - Finally, check the **Enable IdP Role Mapping** checkbox to enable the feature.
 - Click on **Next** to continue further.
 
-While some details about these steps are given below, you can refer to our [general SSO guide](/docs/developers/single-sign-on) for more information.
+While some details about these steps are given below, you can refer to our [general SSO guide](../single-sign-on.md) for more information.
 
 ## Test and Enable SSO
 
@@ -208,10 +208,10 @@ Once this is enabled, users of this organization can access the organization thr
 ## Common questions
 
 ### Is this guide still recommended for new SSO setups?
-No. **Warning**: This set up guide is deprecated. Please visit our documentation on [Set up SSO with Microsoft Entra ID Native App](/docs/developers/single-sign-on/set-up-sso-with-microsoft-entra-ID-native-app).
+No. **Warning**: This set up guide is deprecated. Please visit our documentation on [Set up SSO with Microsoft Entra ID Native App](./set-up-sso-with-microsoft-entra-ID-native-app.md).
 
 ### Who can perform the Contentstack-side SSO setup steps?
-**Note:** Only the Organization [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) will be able to perform the steps discussed below.
+**Note:** Only the Organization [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) will be able to perform the steps discussed below.
 
 ### Do I need to add the `roles` attribute in Azure AD?
 If you want to enable Role Mapping in Contentstack, then it is highly important to add the `roles` attribute as we need this for IdP Role Mapping which we will cover in the next set of steps.

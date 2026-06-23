@@ -18,10 +18,10 @@ This page explains how to edit a stack in Contentstack, including who can perfor
 
 You can update a stack’s details to keep your workspace organized and aligned with your project’s needs.
 
-**Note:** Only the Stack [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) or [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) can edit a stack.
+**Note:** Only the Stack [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) or [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin) can edit a stack.
 
 To edit a stack, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
+- Navigate to your [stack](./about-stack.md) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 - In the **General** section, modify the stack’s **Name** and **Description**.
 - Click **Save** to confirm your changes.
 
@@ -31,12 +31,12 @@ After updating the stack settings, you can view the **Last Modified** timestamp 
 
 ## API Reference
 
-To edit a stack via API, refer to the [Update a Stack](https://www.contentstack.com/docs/developers/apis/content-management-api#update-stack) API request.
+To edit a stack via API, refer to the [Update a Stack](../../../api-docs/api-detail/content-management-api.md#update-stack) API request.
 
 ## Common questions
 
 **Who can edit a stack?**  
-Only the Stack [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) or [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) can edit a stack.
+Only the Stack [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) or [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin) can edit a stack.
 
 **Where do I edit a stack’s name and description?**  
 In the **General** section after opening stack **Settings**.
@@ -45,4 +45,4 @@ In the **General** section after opening stack **Settings**.
 Click **Save** to confirm your changes.
 
 **Can I edit a stack using an API instead of the UI?**  
-Yes. Refer to the [Update a Stack](https://www.contentstack.com/docs/developers/apis/content-management-api#update-stack) API request.
+Yes. Refer to the [Update a Stack](../../../api-docs/api-detail/content-management-api.md#update-stack) API request.

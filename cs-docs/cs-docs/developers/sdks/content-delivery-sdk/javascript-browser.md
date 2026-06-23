@@ -19,7 +19,7 @@ This page provides the JavaScript Delivery (Browser) SDK landing content and nav
 
 The JavaScript guide covers a series of topics on our CMS that ranges from a quickstart guide, queries that you can send to Contentstack to fetch data for your JavaScript app, download the [SDK for JavaScript](https://github.com/contentstack/contentstack-javascript), and example apps.
 
-**Note**: We recommend using the [TypeScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/typescript) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project. Learn to seamlessly [migrate from JavaScript to TypeScript](/docs/developers/sdks/content-delivery-sdk/typescript/migrate-from-javascript-to-typescript/).
+**Note**: We recommend using the [TypeScript Delivery SDK](./typescript.md) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project. Learn to seamlessly [migrate from JavaScript to TypeScript](./typescript/migrate-from-javascript-to-typescript.md).
 
 ## Use JavaScript Delivery SDK
 
@@ -121,7 +121,7 @@ The JavaScript guide covers a series of topics on our CMS that ranges from a qui
 You can download the SDK for JavaScript from: https://github.com/contentstack/contentstack-javascript
 
 ### Is TypeScript recommended over the JavaScript Delivery SDK?
-**Note**: We recommend using the [TypeScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/typescript) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project.
+**Note**: We recommend using the [TypeScript Delivery SDK](./typescript.md) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project.
 
 ### Where is the API reference for the JavaScript Delivery SDK?
 The API reference is available here: /developers/sdks/content-delivery-sdk/javascript-browser/reference/

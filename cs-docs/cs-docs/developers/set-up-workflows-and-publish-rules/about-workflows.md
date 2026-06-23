@@ -18,7 +18,7 @@ This page explains what a Workflow is, highlights key features, and describes ho
 
 A **Workflow** defines a sequence of steps that streamlines the content review and approval process. It enables teams to follow a structured approach and collaborate efficiently, ensuring consistency and quality in published content.
 
-**Note:** You can create [branch-specific](/docs/developers/branches/branch-specific-modules) workflows. This means you can add multiple workflows for a content type, with each one linked to a distinct branch.
+**Note:** You can create [branch-specific](../branches/branch-specific-modules.md) workflows. This means you can add multiple workflows for a content type, with each one linked to a distinct branch.
 
 For example, in an enterprise content team, multiple users collaborate on entries. A defined workflow ensures a clear and consistent flow of content from creation to publication across all digital properties.
 
@@ -37,7 +37,7 @@ Workflows provide flexibility and control over how content moves through its lif
 
 ## How Workflows Work
 
-After you define a workflow and assign a user to the next stage, that user receives a **Workflow Task**. From the [Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks) page, they can:
+After you define a workflow and assign a user to the next stage, that user receives a **Workflow Task**. From the [Tasks](./about-workflow-tasks.md) page, they can:
 
 - Open the assigned entry.
 - Review its content.
@@ -45,7 +45,7 @@ After you define a workflow and assign a user to the next stage, that user recei
 
 Each stage transition is captured in the **Audit Log**, providing visibility into who moved an entry and when. This helps maintain traceability throughout the workflow.
 
-**Additional Resource:** For details on configuring workflow stages and rules, see [Set Up a Workflow](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages).
+**Additional Resource:** For details on configuring workflow stages and rules, see [Set Up a Workflow](./add-workflows-and-stages.md).
 
 ## Tutorial Video
 
@@ -58,7 +58,7 @@ Only the **Stack Owner**, **Administrator**, and **Developer** roles can create 
 Yes. You can add multiple workflows for a content type, with each one linked to a distinct branch.
 
 ### Where do users see and act on workflow tasks?
-Assigned users can use the [Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks) page to open entries, review content, and move entries to the next stage.
+Assigned users can use the [Tasks](./about-workflow-tasks.md) page to open entries, review content, and move entries to the next stage.
 
 ### How are workflow stage changes tracked?
 Each stage transition is captured in the **Audit Log**, showing who moved an entry and when.

@@ -18,15 +18,15 @@ This page explains how to use the **Set date range** property for the **Date** f
 
 The **Set date range **property lets you define a range of date for the user.
 
-While setting up a [content type](/docs/developers/create-content-types/about-content-types), if you add the [**Date**](/docs/developers/create-content-types/date) field and select this property, it will show the following options along with\ the mandatory and hide-time options:
+While setting up a [content type](./about-content-types.md), if you add the [**Date**](./date.md) field and select this property, it will show the following options along with\ the mandatory and hide-time options:
 - **Start date**: Let's you specify the start date for the date range.
 - **End date**: Let's you specify the end date for the date range.
 
-When you set this range, the user will only be able to enter the date within the specified range on the [entry](/docs/content-managers/working-with-entries/about-entries) page.
+When you set this range, the user will only be able to enter the date within the specified range on the [entry](../../content-managers/author-content/about-entries.md) page.
 
-**Additional Resources**: To add this property to the Date field when [creating your content type via an API request](/docs/developers/apis/content-management-api#create-a-content-type), refer to the [JSON payload of the Date](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#date) field.
+**Additional Resources**: To add this property to the Date field when [creating your content type via an API request](../../../api-docs/api-detail/content-management-api.md#create-a-content-type), refer to the [JSON payload of the Date](./json-schema-for-creating-a-content-type.md#date) field.
 
-Making changes in existing field properties may result in data loss. To prevent this, make sure you go through our [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide before you go ahead.
+Making changes in existing field properties may result in data loss. To prevent this, make sure you go through our [Content Type Change Management](../content-modeling/content-type-change-management.md) guide before you go ahead.
 
 ## Common questions
 

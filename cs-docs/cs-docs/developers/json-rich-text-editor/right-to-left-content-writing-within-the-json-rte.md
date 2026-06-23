@@ -17,7 +17,7 @@ This page explains how to write or add right-to-left (RTL) content in Contentsta
 
 Right-to-Left Content Writing within the JSON RTE
 
-The [JSON Rich Text Editor](https://www.contentstack.com/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) supports writing or adding content from right to left (RTL), making content management and editing more efficient and effortless.
+The [JSON Rich Text Editor](./about-json-rich-text-editor.md) supports writing or adding content from right to left (RTL), making content management and editing more efficient and effortless.
 
 There are two ways in which you can leverage the RTL support within the JSON RTE.
 

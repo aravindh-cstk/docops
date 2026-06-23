@@ -16,13 +16,13 @@ This page explains how to integrate Brightcove with Contentstack using a legacy 
 
 ## Brightcove
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Brightcove as a Marketplace App. For more information on Brightcove, please refer to the [Brightcove App Installation Guide](/docs/developers/marketplace-apps/brightcove).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Brightcove as a Marketplace App. For more information on Brightcove, please refer to the [Brightcove App Installation Guide](../marketplace-apps/brightcove.md).
 
 [Brightcove](https://www.brightcove.com/) is a cloud-based video platform that helps businesses to simplify the process of video distribution across digital platforms.
 
-You can integrate Brightcove with Contentstack using our [Experience Extension](/docs/developers/about-experience-extensions). You can add a [Custom Field](/docs/developers/create-custom-fields/about-custom-fields) in your content type to fetch and display Brightcove videos into a [field](/docs/developers/create-content-types/about-fields) of your [content type](/docs/developers/create-content-types/about-content-types).
+You can integrate Brightcove with Contentstack using our [Experience Extension](../experience-extensions-overview/about-experience-extensions.md). You can add a [Custom Field](./about-custom-fields.md) in your content type to fetch and display Brightcove videos into a [field](../create-content-types/about-fields.md) of your [content type](../create-content-types/about-content-types.md).
 
-Thus, when you create an [entry](/docs/content-managers/working-with-entries/about-entries) for this content type, you can select one or more videos as an input value for the field.
+Thus, when you create an [entry](../../content-managers/author-content/about-entries.md) for this content type, you can select one or more videos as an input value for the field.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Thus, when you create an [entry](/docs/content-managers/working-with-entries/abo
 - [Brightcove account](https://signin.brightcove.com/)
 - [AWS account](https://aws.amazon.com/)
 - [Working knowledge of AWS lambda and AWS API Gateways](https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html)
-- Basic knowledge of [Contentstack Experience Extensions](/docs/developers/about-experience-extensions)
+- Basic knowledge of [Contentstack Experience Extensions](../experience-extensions-overview/about-experience-extensions.md)
 
 This step-by-step guide explains how to create a Brightcove custom field extension for your content types in Contentstack. The steps performed are as follows:
 
@@ -70,7 +70,7 @@ We will create an AWS Lambda Function and set up an API Gateway to trigger the B
 - For this exercise, we have created a sample code that will help you set up the system. If Extensions are part of your plan, contact our [Support team](mailto:support@contentstack.com) to get the code for the extension.
 - Once you download the code, you will see the following folders:
   - **brightcove**: It contains the **build** folder that has the **index.html** file. You need to copy the code from this file and paste it inside the **Extension source code** field.
-  - **brightcove-popup**: This folder also contains the **build** folder that has another **index.html** file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload](/docs/content-managers/working-with-assets/create-upload-assets) asset article. After uploading the file, you'll get a URL in the [asset details](/docs/content-managers/working-with-assets/create-upload-assets#asset-details) section, make note of this URL.
+  - **brightcove-popup**: This folder also contains the **build** folder that has another **index.html** file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload](../../content-managers/author-content/create-upload-assets.md) asset article. After uploading the file, you'll get a URL in the [asset details](../../content-managers/author-content/create-upload-assets.md#asset-details) section, make note of this URL.
   - **lambda**: We need to install the node modules inside this and then upload the zip file onto AWS lambda function.
 
 To do this, open the command prompt, move inside the lambda directory, and run the following command:
@@ -120,12 +120,12 @@ With these steps, we have successfully set up our AWS lambda function and the AP
 
 To add this extension to your stack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and click on the **Settings** icon on the left navigation panel.
+- Go to your [stack](../set-up-stack/about-stack.md), and click on the **Settings** icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:
-  - **Title ***(required)*: Provide a suitable title, for example “Brightcove,” for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+  - **Title ***(required)*: Provide a suitable title, for example “Brightcove,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
   - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
   - **Multiple** (optional): Select this option.
   - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
@@ -156,19 +156,19 @@ For the **redirectURL** parameter, enter the URL of the **index.html** file that
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 - Click on the “Content Models” icon on the left panel and click the **+ New Content Type** button.
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [**Custom**](/docs/developers/create-content-types/custom) field to it by clicking on the “Insert a field” link denoted by a **+ **sign.
+- [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it by clicking on the “Insert a field” link denoted by a **+ **sign.
 - Under **Select Extension**, select the “Brightcove” field that you created and set the other properties. You can add other fields as per requirements
 - Finally, click on **Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Brightcove **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Brightcove **field in action.
 - Click on **Choose Videos**. Your Brightcove video playlist will appear. Select the videos you want to add in your entry and click on the **Add Selected Videos** button.
 
-**Additional Resource: **You can also refer to our other documents on custom video extensions such as [YouTube](/docs/developers/create-custom-fields/youtube), [Ooyala](/docs/developers/create-custom-fields/ooyala), and [Vimeo](/docs/developers/create-custom-fields/vimeo).
+**Additional Resource: **You can also refer to our other documents on custom video extensions such as [YouTube](./youtube.md), [Ooyala](./ooyala.md), and [Vimeo](./vimeo.md).
 
 ## Common questions
 
 ### Is this the recommended way to integrate Brightcove with Contentstack?
 
-No. **Note**: This documentation uses the legacy approach with extensions. We have launched Brightcove as a Marketplace App. For more information on Brightcove, please refer to the [Brightcove App Installation Guide](/docs/developers/marketplace-apps/brightcove).
+No. **Note**: This documentation uses the legacy approach with extensions. We have launched Brightcove as a Marketplace App. For more information on Brightcove, please refer to the [Brightcove App Installation Guide](../marketplace-apps/brightcove.md).
 
 ### What value should I use for `proxyUrl`?
 

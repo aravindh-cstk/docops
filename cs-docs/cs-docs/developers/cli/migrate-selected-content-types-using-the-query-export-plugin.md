@@ -77,7 +77,7 @@ csdx cm:stacks:export-query -k  -d ./export --branch main --query '{"modules":{"
 - Use Delivery API–style operators (e.g. `$in`, `$regex`, `$gte`).
 - The query filters **content types only**. Entries and assets are not directly filtered in the query JSON. All entries under matched content types are exported; only assets referenced by those exported entries are included.
 
-**Additional Resource:** Refer to the Contentstack [Content Delivery API documentation](/docs/developers/apis/content-delivery-api) for the full list of supported operators.
+**Additional Resource:** Refer to the Contentstack [Content Delivery API documentation](../../../api-docs/api-detail/content-delivery-api.md) for the full list of supported operators.
 
 ## Export Output Structure
 

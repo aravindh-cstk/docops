@@ -39,7 +39,7 @@ Personalize offers the following **2** **types** of Attributes:
 - **Region:** Target audiences from a particular geographic region within a country. For example, target users in the state of California with tailored content.
 
 By leveraging these default system attributes, you can quickly and easily create audience segments without the need for extensive customization, enabling you to tailor your content based on visitor demographics, technographics, and other key factors. This streamlines the process of delivering targeted content and ensures that your personalization efforts are both efficient and effective.
-- **Custom Attribute**: In Contentstack Personalize, custom attributes are user-defined characteristics or properties that you can create to enhance audience segmentation and targeting. These attributes allow you to capture specific visitor information that is not covered by the preset attributes, enabling more granular and tailored personalization. After creating a custom attribute in your project, the data needs to be collected for the attribute. This can be done using the [Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript) or the [Personalize Edge API](/docs/developers/apis/personalize-edge-api). You can also use tools like [Google Tag Manager](/docs/personalize/about-gtm-integration) and [Customer Data Platform](/docs/personalize/about-cdp-integration) integrations for collecting the data.
+- **Custom Attribute**: In Contentstack Personalize, custom attributes are user-defined characteristics or properties that you can create to enhance audience segmentation and targeting. These attributes allow you to capture specific visitor information that is not covered by the preset attributes, enabling more granular and tailored personalization. After creating a custom attribute in your project, the data needs to be collected for the attribute. This can be done using the [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md) or the [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md). You can also use tools like [Google Tag Manager](./about-gtm-integration.md) and [Customer Data Platform](./about-cdp-integration.md) integrations for collecting the data.
 
 This flexibility empowers you to create highly specific audience segments and deliver personalized experiences that resonate with individual users, ultimately driving engagement and conversions.
 
@@ -51,7 +51,7 @@ You cannot modify or remove preset attributes from a project.You can add, edit, 
 
 ## Next Steps
 
-Although Contentstack Personalize offers you preset attributes for audiences, you can still [create your own Custom Attributes](/docs/personalize/create-custom-attribute). Both can be included in the rules for Audiences.
+Although Contentstack Personalize offers you preset attributes for audiences, you can still [create your own Custom Attributes](./create-custom-attribute.md). Both can be included in the rules for Audiences.
 
 ## Common questions
 

@@ -44,12 +44,12 @@ Contentstack provides two types of destinations in the Segment Destination [Cata
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/) that has Personalize enabled
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../developers/organization/organization-roles.md#organization-owner)/[Admin](../developers/organization/organization-roles.md#organization-admin)
 - Access to a project in Personalize
 - [Twilio Segment Workspace](https://app.segment.com/login)
 
 **Additional Resource**:
-- To configure **Personalize** for your Organization, refer to the [Getting Started with Contentstack Personalize](/docs/personalize/get-started-with-personalize-with-ab-test-end-to-end-guide) document.
+- To configure **Personalize** for your Organization, refer to the [Getting Started with Contentstack Personalize](./get-started-with-personalize-with-ab-test-end-to-end-guide.md) document.
 - To configure **Segment** on your website, refer to the [Basic Segment Installation](https://segment.com/docs/getting-started/02-simple-install/) guide.
 
 Let's follow this step-by-step guide to set up a **Contentstack Destination** within Segment to connect with Contentstack Personalize.
@@ -78,7 +78,7 @@ To configure the Contentstack Destination within Twilio Segment, follow the step
 - **Configure Mappings**: In the **Mappings** section of your Segment setup, follow the steps:**Add a New Mapping**: Click the **+ New Mapping** button to add a new mapping. You can map the values according to the Contentstack Destination installed. Refer to the [Contentstack Segment Destination](#contentstack-segment-destinations) documentation.
 - **Configure Mapping Settings**: Ensure the payload is structured correctly and mapped as per your requirements.
 - **Save the Mappings**: Click the **Save** button to save the mappings.
-- **Configure Destination Settings**: In the **Settings** section of your Contentstack destination, provide your **Personalize project ID** (mandatory) and [**Personalize Edge API base URL**](/docs/developers/apis/personalize-edge-api#base-url) (mandatory), and save the settings.
+- **Configure Destination Settings**: In the **Settings** section of your Contentstack destination, provide your **Personalize project ID** (mandatory) and [**Personalize Edge API base URL**](../../api-docs/api-detail/personalize-edge-api.md#base-url) (mandatory), and save the settings.
 - **Test the Destination**: Use the **Event Tester** tool to verify the destination configuration:Send a payload to the Contentstack destination based on your Segment call type.
 - Review the results to ensure the data is flowing properly into Contentstack Personalize.
 
@@ -93,24 +93,24 @@ Contentstack Personalize supports 2 types of experiences:
 
 ### Steps to Create a Personalize Segmented Experience
 
-- **Create a Personalize Project**: In your Contentstack organization, [create a new Personalize project](/docs/personalize/create-personalize-project) and link your stack to give the project access to entries and the variants needed for personalized content.
-- **Create Attributes**: Navigate to the **Attributes** sections in the Personalize project to create any custom attributes that need to be mapped from Segment. For more details, refer to the [Attributes](/docs/personalize/about-attributes) documentation.**Note**: In the beta version, you will need to manually create these data points and ensure that they must match the data IDs within your Segment Workspace.
-- **Create Audiences**: Navigate to the **Audiences** sections in the Personalize project to create any audiences that need to be mapped from Segment. For more details, refer to the [Audiences](/docs/personalize/about-audiences) documentation.
+- **Create a Personalize Project**: In your Contentstack organization, [create a new Personalize project](./create-personalize-project.md) and link your stack to give the project access to entries and the variants needed for personalized content.
+- **Create Attributes**: Navigate to the **Attributes** sections in the Personalize project to create any custom attributes that need to be mapped from Segment. For more details, refer to the [Attributes](./about-attributes.md) documentation.**Note**: In the beta version, you will need to manually create these data points and ensure that they must match the data IDs within your Segment Workspace.
+- **Create Audiences**: Navigate to the **Audiences** sections in the Personalize project to create any audiences that need to be mapped from Segment. For more details, refer to the [Audiences](./about-audiences.md) documentation.
 - **Create Segmented Experiences**: Create a **Segmented** experience within your Personalize project for each audience.Define active **Variants** for each **Audience**, give them descriptive names, apply **Condition**, and ensure you note the **Short UIDs**, as they will be used during content creation.
 
-For further information on creating **Segmented** experiences, refer to the [Create a Segmented Experience](/docs/personalize/create-segmented-experience) document.
+For further information on creating **Segmented** experiences, refer to the [Create a Segmented Experience](./create-segmented-experience.md) document.
 - **Activate the Experience**: Once configured, activate the **Segmented Experience** for use within the project.
 
 ### Steps to Create a Personalize A/B Test Experience
 
-- **Create a Personalize Project**: In your Contentstack organization, [create a new Personalize project](/docs/personalize/create-personalize-project) and link your stack to give the project access to entries and the variants needed for personalized content.
-- **Create Events**: In the **Events** section of your personalize project, create new events with unique keys. For more details, refer to the [Events](/docs/personalize/about-events) documentation.**Note**: In the beta version, you will need to manually create these event values and ensure that they must match the event values within your Segment Workspace.
+- **Create a Personalize Project**: In your Contentstack organization, [create a new Personalize project](./create-personalize-project.md) and link your stack to give the project access to entries and the variants needed for personalized content.
+- **Create Events**: In the **Events** section of your personalize project, create new events with unique keys. For more details, refer to the [Events](./about-events.md) documentation.**Note**: In the beta version, you will need to manually create these event values and ensure that they must match the event values within your Segment Workspace.
 - **Create A/B Test Experiences**: Create an **A/B Test** experience within your Personalize project for each audience.Define active **Variants** for each **Audience**, give them descriptive names, assign **Traffic Distribution** percentages for each one, and ensure you note the **Short UIDs**, as they will be used during content creation. Add all the events in **Metrics** that are needed for impressions and conversions, and then select the relevant audience(s) for your **Target Group**.
 
-For further information on creating **A/B Test** experiences, refer to the [Create an A/B Test Experience](/docs/personalize/create-ab-test-experience) document.
+For further information on creating **A/B Test** experiences, refer to the [Create an A/B Test Experience](./create-ab-test-experience.md) document.
 - **Activate the Experience**: Once configured, activate the **A/B Test Experience** for use within the project.
 
-**Additional Resource**: Learn more about [Personalize](/docs/personalize/about-personalize/) documentation.
+**Additional Resource**: Learn more about [Personalize](./about-personalize.md) documentation.
 
 Once the setup is complete, all custom traits and audiences from Segment will be synced into the custom attributes of Contentstack Personalize. These attributes can then be leveraged in the creation of personalized experiences and variants, ensuring precise audience targeting and dynamic content delivery across your digital platforms.
 
@@ -123,7 +123,7 @@ The Twilio Segment destination integration with Personalize has been deprecated,
 **Contentstack Web** supports syncing of events and attributes into Contentstack Personalize, while **Contentstack Cloud** supports syncing of audiences and computed traits into Contentstack Personalize.
 
 ### What settings are mandatory when configuring the Contentstack destination?
-You must provide your **Personalize project ID** (mandatory) and [**Personalize Edge API base URL**](/docs/developers/apis/personalize-edge-api#base-url) (mandatory) in the destination **Settings**.
+You must provide your **Personalize project ID** (mandatory) and [**Personalize Edge API base URL**](../../api-docs/api-detail/personalize-edge-api.md#base-url) (mandatory) in the destination **Settings**.
 
 ### What types of experiences can be created in Contentstack Personalize?
 Contentstack Personalize supports 2 types of experiences: **Segmented Experience** and **A/B Test Experience**.

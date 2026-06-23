@@ -16,7 +16,7 @@ This page explains how to migrate an existing website integration from the Relea
 
 ## Migrate from Release Preview App to Timeline
 
-This migration guide provides a detailed breakdown of the necessary changes needed to transition from using the Release Preview App to [Timeline](/docs/content-managers/timeline/about-timeline).
+This migration guide provides a detailed breakdown of the necessary changes needed to transition from using the Release Preview App to [Timeline](../../content-managers/timeline/about-timeline.md).
 
 The Release Preview App is a third party extension to preview your release, whereas the Timeline feature offers more functionality and versatility to preview how your site will appear once scheduled updates are made live, providing a comprehensive view of upcoming content transformations.
 
@@ -25,15 +25,15 @@ The Release Preview App is a third party extension to preview your release, wher
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to [stack settings](/docs/developers/set-up-stack/view-stack-details)
-- [Preview token](/docs/developers/create-tokens/about-delivery-tokens#about-preview-tokens)
+- Access to [stack settings](../set-up-stack/view-stack-details.md)
+- [Preview token](../create-tokens/about-delivery-tokens.md#about-preview-tokens)
 - Website that uses [Contentstack Delivery SDKs](/docs/developers/sdks)
 - IFrame-compatible website to avoid [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors
-- Website configured with [Release Preview](/docs/developers/marketplace-apps/release-preview) App
+- Website configured with [Release Preview](../marketplace-apps/release-preview.md) App
 
 ## Upgrade Packages
 
-Upgrade the [JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk/) and [Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk/) to enable the timeline feature.
+Upgrade the [JavaScript Delivery SDK](../sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk.md) and [Live Preview Utils SDK](../sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) to enable the timeline feature.
 
 **Note**: The timeline feature requires Live Preview Utils version **2.0** or above.
 
@@ -191,7 +191,7 @@ app.use(async (req, res, next) => {
 })
 ```
 
-**Note**: For first-time users, additional details on how to tree shake live preview utils and slim down your production build can be found in the [Set Up Timeline for your Website](/docs/developers/set-up-timeline/set-up-timeline-for-your-website/) documentation.
+**Note**: For first-time users, additional details on how to tree shake live preview utils and slim down your production build can be found in the [Set Up Timeline for your Website](./set-up-timeline-for-your-website.md) documentation.
 
 ## Common questions
 
@@ -205,4 +205,4 @@ No. Live Preview Utils CSS is now included by default, so you no longer need to 
 Remove the `ReleasePreviewPlugin` code, `ReleasePreview.init`, and Compare Utils imports/logic, as these functions are now handled by server and SDK.
 
 **Where can I find more details for first-time Timeline setup?**  
-See the [Set Up Timeline for your Website](/docs/developers/set-up-timeline/set-up-timeline-for-your-website/) documentation.
+See the [Set Up Timeline for your Website](./set-up-timeline-for-your-website.md) documentation.

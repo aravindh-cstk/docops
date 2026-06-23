@@ -88,7 +88,7 @@ In the **Add SAP Commerce Cloud Key Field** modal, enter the **Key Name or Path*
 
 - After adding the configuration details, click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Note**: The app requires at least one UI location to be enabled; otherwise, you would not be able to save your app configuration settings.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the SAP Commerce Cloud app.
 
 ## Use the SAP Commerce Cloud App within your Stack
@@ -98,9 +98,9 @@ To use the SAP Commerce Cloud app within an entry of your stack, follow the step
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
 - Create a content type by adding relevant details as displayed below:
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom) field for product in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field for product in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension or App**, select **SAP Commerce Cloud - Product** and click **Proceed**.This adds SAP Commerce Cloud - Product Field in the custom field.
-- Add another [Custom](/docs/developers/create-content-types/custom) field for category in your content type by clicking the **Insert a field **link represented by a **+** sign.
+- Add another [Custom](../create-content-types/custom.md) field for category in your content type by clicking the **Insert a field **link represented by a **+** sign.
 - Under **Select Extension or App**, select **SAP Commerce Cloud - Category** and click **Proceed**.This adds SAP Commerce Cloud - Category Field in the custom field.
 - Under **Advanced** properties, you have the option to set the **Config Parameter** for all entries of a particular content type. If you do so, it overrides the default app configuration that you set at the time of app installation on the Configuration screen.The `key:value` passed in the configuration object overrides the default app configuration settings.
 
@@ -140,7 +140,7 @@ In case you want to use a different SAP Commerce Cloud configuration for any cus
 **Note**: If any configuration value is not added, or if all the values are empty in the **Config Parameter** properties settings, the SAP Commerce Cloud app uses the default configuration which was set up in [step 2](#install-and-configure-the-sap-commerce-cloud-app-in-marketplace).
 
 - After adding the app, click **Save** or **Save and Close** to save your changes.
-- In the left navigation panel, navigate to the **Entries** page and click **+ New Entry** to [create an entry](/docs/content-managers/author-content/create-an-entry) for the above content type, and then click **Proceed**.You will see the SAP Commerce Cloud custom fields on your entry page as shown below:
+- In the left navigation panel, navigate to the **Entries** page and click **+ New Entry** to [create an entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.You will see the SAP Commerce Cloud custom fields on your entry page as shown below:
 - Click the **Add Product(s)** button, select the products from your SAP Commerce Cloud store and add them to your entry.Select the products from your SAP Commerce Cloud selector page and click **+ Add Product(s)** to add them to your entry.
 
 You can select the products from multiple configurations at once using the **Configuration** dropdown.

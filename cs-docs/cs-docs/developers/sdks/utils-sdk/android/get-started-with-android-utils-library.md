@@ -17,7 +17,7 @@ This page explains how to install and use the Contentstack Android Utils SDK in 
 
 Get Started with Android Utils Library
 
-This guide will help you get started with Contentstack [Android Utils SDK](/docs/developers/android/about-android-utils-library) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Android Utils SDK](./about-android-utils-library.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 - The latest version of Android Studio

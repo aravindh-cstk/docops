@@ -33,7 +33,7 @@ To provide content in English (United States), French (France), and Spanish (Spa
 
 **Warning** : When you publish multiple language entries at once, only the latest version of the localized entry will be published.
 
-Learn more about [bulk publishing localized entries](/docs/content-managers/bulk-operations-on-entries-and-assets/bulk-publish-localized-entry-versions) in different languages.
+Learn more about [bulk publishing localized entries](../../content-managers/author-content/bulk-publish-localized-entry-versions.md) in different languages.
 
 ## Common questions
 

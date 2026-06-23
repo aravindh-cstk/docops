@@ -19,7 +19,7 @@ This page explains how to use Contentstack’s bulk-publishing of entries and as
 
 Publishing entries and assets in bulk in specific environments can ease content management. With Contentstack's bulk-publishing of entries and assets script, you can automate the process of bulk publishing your entries and assets.
 
-**Warning**: This document has been deprecated. We recommend using the [Bulk Publish and Unpublish Content](/docs/developers/cli/bulk-publish-and-unpublish-content/) document to perform bulk publish/unpublish operations on entries and assets through the command-line interface (CLI).
+**Warning**: This document has been deprecated. We recommend using the [Bulk Publish and Unpublish Content](../cli/bulk-publish-and-unpublish-content.md) document to perform bulk publish/unpublish operations on entries and assets through the command-line interface (CLI).
 
 In this guide, we will look at different scenarios of bulk publishing and how to use the bulk-publish-entries-assets script in each scenario.
 
@@ -44,7 +44,7 @@ If Bulk API is not part of your plan, each item published using this script will
 - Bulk actions do not follow the standard CMA rate limit of 10 requests per second. The default rate limit for bulk actions is **1 request per second** i.e., in one second, you can make only one bulk publish API request
 - The script does not support the bulk publishing of entries of all locales. However, you can specify the locales as an array (en-us, fr-fr, zh-zh, and so on) against the ‘locale’ parameter in the config file to publish them.
 
-**Additional Resources**: If you want to perform bulk publish/unpublish operations on entries and assets using command-line interface (CLI), refer to its [CLI documentation](/docs/developers/cli/bulk-publish-and-unpublish-content).
+**Additional Resources**: If you want to perform bulk publish/unpublish operations on entries and assets using command-line interface (CLI), refer to its [CLI documentation](../cli/bulk-publish-and-unpublish-content.md).
 
 ## Download the Code and Install Dependencies
 
@@ -220,7 +220,7 @@ The above command will publish the entries (of the mentioned content types) and 
 
 ## Case 7: Publish Localized entries if the Non-localized Field of the Master Entry is Updated
 
-This is a scenario where you want to publish those entries in bulk that had their non-localized field changed. Read more about [Non-localized Field](/docs/developers/multilingual-content/non-localizable-field).
+This is a scenario where you want to publish those entries in bulk that had their non-localized field changed. Read more about [Non-localized Field](../multilingual-content/non-localizable-field.md).
 - Open the **config.js** file and provide the necessary details in the following section of the code:
 
 ```
@@ -309,7 +309,7 @@ npm run publish_entries -- -retryFailed 18003bulkPublishEntries.error
 ## Common questions
 
 ### Is this script still recommended for bulk publish/unpublish?
-This document has been deprecated. We recommend using the [Bulk Publish and Unpublish Content](/docs/developers/cli/bulk-publish-and-unpublish-content/) document to perform bulk publish/unpublish operations on entries and assets through the command-line interface (CLI).
+This document has been deprecated. We recommend using the [Bulk Publish and Unpublish Content](../cli/bulk-publish-and-unpublish-content.md) document to perform bulk publish/unpublish operations on entries and assets through the command-line interface (CLI).
 
 ### How many items can be published per Bulk API request?
 If **Bulk API **is part of your plan, each bulk publish API request will publish a maximum of 10 items per request.

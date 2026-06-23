@@ -50,13 +50,13 @@ You can enable Streaming Responses at different stages of your project setup. Fo
 
 ### Enable Streaming on Project Creation
 
-- Perform the steps to create a new project using [GitHub](/docs/developers/launch/import-project-using-github), [Bitbucket](/docs/developers/launch/import-a-project-using-bitbucket-cloud), or by [uploading a file](/docs/developers/launch/import-project-using-file-upload).
+- Perform the steps to create a new project using [GitHub](../developers/launch/import-project-using-github.md), [Bitbucket](../developers/launch/import-a-project-using-bitbucket-cloud.md), or by [uploading a file](../developers/launch/import-project-using-file-upload.md).
 - While performing the steps, in the **Create New Project** modal, click the **Enable Streaming Responses** toggle in the **Build and Output Settings** section.
 - Once all details are configured, click **Deploy** to create your project with **Streaming Responses** enabled.
 
 ### Enable Streaming on Environment Creation
 
-- Perform the steps to [create a new environment](/docs/developers/launch/environments#create-an-environment).
+- Perform the steps to [create a new environment](../developers/launch/environments.md#create-an-environment).
 - While performing the steps, in the **Create New Environment** modal, click the **Enable Streaming Responses** toggle in the **Build and Output Settings** section.
 - Once all details are configured, click **Create** to create your environment with **Streaming Responses** enabled.
 

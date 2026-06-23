@@ -17,7 +17,7 @@ This page explains how to set up Single Sign-On (SSO) in Contentstack using Ping
 
 ## Set up SSO with PingIdentity
 
-This step-by-step guide explains how to set up [Single Sign-On](/docs/developers/single-sign-on) in Contentstack with PingIdentity as your SAML 2.0 Identity Provider (IdP).
+This step-by-step guide explains how to set up [Single Sign-On](./single-sign-on.md) in Contentstack with PingIdentity as your SAML 2.0 Identity Provider (IdP).
 
 To do so, this integration requires the following steps:
 - [Create SSO Name and ACS URL in Contentstack](#create-sso-name-and-acs-url-in-contentstack)
@@ -82,19 +82,19 @@ In your PingIdentity admin account, click on the **Identities** icon on the left
 In the **User Management** section, you will see the following steps:
 
 **Strict Mode**: Enable **Strict Mode **if you do not want any users to access the organization without SSO login.
-- **Session Timeout**: The [**Session Timeout**](/docs/developers/single-sign-on/set-up-sso-in-contentstack#session-timeout) option lets you define the session duration for a user signed in through SSO. While the default is set to 12 hours, you can modify it as needed.
-- ** Advanced Settings**: Click on the [advanced settings](/docs/developers/single-sign-on/set-up-sso-in-contentstack#advanced-settings) to expand the IdP Role Mapping section to map IdP roles to Contentstack.[/docs/developers/single-sign-on/set-up-sso-in-contentstack#advanced-settings](/docs/developers/single-sign-on/set-up-sso-in-contentstack#advanced-settings)  
+- **Session Timeout**: The [**Session Timeout**](./single-sign-on/set-up-sso-in-contentstack.md#session-timeout) option lets you define the session duration for a user signed in through SSO. While the default is set to 12 hours, you can modify it as needed.
+- ** Advanced Settings**: Click on the [advanced settings](./single-sign-on/set-up-sso-in-contentstack.md#advanced-settings) to expand the IdP Role Mapping section to map IdP roles to Contentstack.[/docs/developers/single-sign-on/set-up-sso-in-contentstack#advanced-settings](./single-sign-on/set-up-sso-in-contentstack.md#advanced-settings)  
   In the **Add Role Mapping** section, click on the **+ ADD ROLE MAPPING** link to add new IdP role mapping and enter the following details:  
   **IdP Role Identifier**: Enter the IdP group/role identifier, for example, “Contentstack Developers.”
 - **Organization Role**: Assign either the **Admin or Member **role to the mapped group/role.
-- **Stack Roles ***(optional)*: Assign [stacks](/docs/developers/set-up-stack/about-stack) as well as the corresponding stack-level roles to this role.
+- **Stack Roles ***(optional)*: Assign [stacks](./set-up-stack/about-stack.md) as well as the corresponding stack-level roles to this role.
 
 Likewise, you can add more role mappings for your Contentstack organization. To add a new Role mapping, click on **+ ADD ROLE MAPPING** and enter the details.
 - Keep **Role Delimiter** blank.
 - Finally, check the **Enable IdP Role Mapping** checkbox to enable the feature.
 - **Save** and click on **Next** to continue further.
 
-While some details about these steps are given below, you can refer to our [general SSO guide](/docs/developers/single-sign-on) for more information.
+While some details about these steps are given below, you can refer to our [general SSO guide](./single-sign-on.md) for more information.
 
 ## Test and Enable SSO
 

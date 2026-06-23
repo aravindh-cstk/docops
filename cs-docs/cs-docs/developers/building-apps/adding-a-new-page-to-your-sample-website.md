@@ -17,7 +17,7 @@ This page explains how to add a new “Menu” page to your sample website using
 
 ## Adding a New Page to Your Sample Website
 
-After learning how to build an app from scratch in the [Get Started Building a Website](/docs/developers/building-websites/get-started-with-building-a-website/) guide, let’s learn how to integrate a new page into your website using Contentstack.
+After learning how to build an app from scratch in the [Get Started Building a Website](../building-websites/get-started-with-building-a-website.md) guide, let’s learn how to integrate a new page into your website using Contentstack.
 
 This guide specifically covers the step-by-step process of adding a “Menu” page, including content creation, code changes, and deployment.
 
@@ -32,7 +32,7 @@ To add the Menu page within your application, you need to perform the following 
 
 In this section, you will build the Menu page.
 
-**Note:** Before proceeding with the steps below, ensure that you have imported the “Dishes” and the “Page” content types. Refer to the [Import Content Types](/docs/developers/building-websites/get-started-with-building-a-website/#import-content-types) section.
+**Note:** Before proceeding with the steps below, ensure that you have imported the “Dishes” and the “Page” content types. Refer to the [Import Content Types](../building-websites/get-started-with-building-a-website.md#import-content-types) section.
 
 Let’s start creating the entries for the “Dishes” and the “Page” content types which you have already added previously.
 
@@ -40,13 +40,13 @@ Let’s start creating the entries for the “Dishes” and the “Page” conte
 
 You need to create one entry each for the courses: “APPETIZERS,” “MAIN DISHES,” “DESSERTS,” and “BEVERAGES.”
 
-Perform the steps below to [create a new entry](https://www.contentstack.com/docs/content-managers/author-content/create-an-entry) for the “Dishes” content type and enter the following values.
+Perform the steps below to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the “Dishes” content type and enter the following values.
 
 Within the Entry Editor page, enter/select the following content against the respective fields:
 
 Let's create an entry for the “APPETIZERS” Course
 - **Title**: Enter “Fried Prawns”**Note:** Make sure to keep the title of all dishes similar to the respective asset/image name.
-- **Image: **To upload the logo, perform the following set of actions (refer [About File Field](https://www.contentstack.com/docs/developers/create-content-types/file)):
+- **Image: **To upload the logo, perform the following set of actions (refer [About File Field](../create-content-types/file.md)):
       Click on **Upload a new file**.
 - Click on **Choose files **and select the desired asset file (in our case, select the Assets/Page - Menu /APPETIZERS/Fried Prawns.jpg), then click on **Open**.
 - **Price**: Enter “10”
@@ -260,12 +260,12 @@ Awesome! You have successfully added a new page to the website and pushed it liv
 
 ## Next Steps
 
-[Enable Live Preview in Your Sample Website](/docs/developers/building-apps/enable-live-preview-in-your-sample-website/)
+[Enable Live Preview in Your Sample Website](./enable-live-preview-in-your-sample-website.md)
 
 ## Common questions
 
 ### Do I need to import content types before creating entries for the Menu page?
-Yes. **Note:** Before proceeding with the steps below, ensure that you have imported the “Dishes” and the “Page” content types. Refer to the [Import Content Types](/docs/developers/building-websites/get-started-with-building-a-website/#import-content-types) section.
+Yes. **Note:** Before proceeding with the steps below, ensure that you have imported the “Dishes” and the “Page” content types. Refer to the [Import Content Types](../building-websites/get-started-with-building-a-website.md#import-content-types) section.
 
 ### Why does clicking the Menu navigation show “404! Page not found” initially?
 Because the **<NotFound />** component renders for the **/menu** path. It’s intentional until you replace it with the **<Menu />** component in routing.

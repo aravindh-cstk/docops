@@ -68,7 +68,7 @@ In the left-hand side primary navigation, click the **Marketplace** icon.
   In the **Add Form.io Key Path** modal, enter the **Form.io Key Path** and click the **Create and Apply** button to create a new key.
 - Click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Form.io application.
 
 ## Use Form.io within your Stack Entry
@@ -77,7 +77,7 @@ To use the Form.io app within an entry of your stack, follow the steps given bel
 
 Go to your stack, and click the **Content Models** icon on the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
 - In the **Content Type Builder** page, add a Custom field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension or App**, select **Form.io**, and then click the **Proceed** button.  
   Change the **Display Name** of the custom field to your choice, for example, **Form.io Custom Field**. Optionally, you can add **Help Text** and **Instruction Value** for your custom field. This adds the Form.io app in the custom field.

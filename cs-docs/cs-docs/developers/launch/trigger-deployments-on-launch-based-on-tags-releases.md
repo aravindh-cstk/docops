@@ -30,8 +30,8 @@ This step-by-step guide explains how to configure automatic deployments on the L
 
       Click **Launch** from the dashboard as shown below.
 - On the Projects landing page, select your **project**.
-- Navigate to the Launch [Environment Settings](/docs/launch/environments#configure-an-environment) page.
-- Create a new [**Deploy Hook**](/docs/launch/deploy-hooks#create-a-deploy-hook).
+- Navigate to the Launch [Environment Settings](./environments.md#configure-an-environment) page.
+- Create a new [**Deploy Hook**](./deploy-hooks.md#create-a-deploy-hook).
 - Copy the generated Deploy Hook URL. You'll need this in the next step.
 - ### Create a GitHub Action
 
@@ -76,7 +76,7 @@ A: Yes, you create a Deploy Hook in Launch and use the generated Deploy Hook URL
 A: The template triggers on `push` events for tags matching the pattern `content/*` (which you can change as needed).
 
 **Q: Where do I configure the Launch environment used by the Deploy Hook?**  
-A: You configure it in the Launch [Environment Settings](/docs/launch/environments#configure-an-environment) page.
+A: You configure it in the Launch [Environment Settings](./environments.md#configure-an-environment) page.
 
 **Q: What should I update if my tagging convention changes?**  
 A: Update the workflow file’s tag trigger pattern so it matches your new tagging convention.

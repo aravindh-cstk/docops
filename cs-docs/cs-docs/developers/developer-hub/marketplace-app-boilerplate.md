@@ -28,7 +28,7 @@ For more details about the **Marketplace App Boilerplate**, [download](https://g
 - You can quickly create an application since the routes and infrastructure are already built for you.
 - We have built a boilerplate that incorporates best practices to help you build your Contentstack application.
 - With this template, you can save a considerable amount of development time.
-- You can use the JSON RTE plugin within the Boilerplate App. For more information, please refer to the [JSON RTE plugin](https://www.contentstack.com/docs/developers/json-rich-text-editor-plugins/) documentation.
+- You can use the JSON RTE plugin within the Boilerplate App. For more information, please refer to the [JSON RTE plugin](../json-rich-text-editor-plugins.md) documentation.
 - The boilerplate now includes native support for signed requests using the reusable `useVerifyAppToken` hook. This enhancement allows for secure API integrations, particularly when working with protected server routes or external services that require authentication or sensitive token validation.
 
 ## Structure of the Marketplace App Boilerplate
@@ -266,13 +266,13 @@ To use your application, you need to upload it to Contentstack. To do so, follow
 - Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - On the Dashboard page, click the **Developer Hub** icon as shown below:
 - Click the **+ New App** button.
-- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](/docs/developer-hub/introduction-to-contentstack-applications).**Additional Resource: **Refer to the [Creating an App in Developer Hub](/docs/developer-hub/creating-an-app-in-developer-hub) document to know more about Standard and Machine to Machine app categories.
+- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](./introduction-to-contentstack-applications.md).**Additional Resource: **Refer to the [Creating an App in Developer Hub](./creating-an-app-in-developer-hub.md) document to know more about Standard and Machine to Machine app categories.
 - In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** and an optional **Description**.
 - Click **Create**. You will be redirected to the **UI Locations** landing page.
 - To continue, go to the **Manage** section and select the **Basic** **Information** tab.
 - On the resulting **Basic** **Information** page, upload your app’s icon and **Save** the changes.**Note:** The **Save** button is **enabled only** after you edit the app’s editable details.
 - Click the **UI Locations** tab. To set the **App URL**, click the **View** **Hosting** link. You will be redirected to the **Hosting** tab.
-- In the **Hosting** tab, you can select [Hosting with Launch](/docs/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developer-hub/app-hosting#custom-hosting) options. Select the **Custom** **Hosting** option to enter the hosted URL of your application. Enter the **App URL** and click **Save** to confirm your hosting configuration.
+- In the **Hosting** tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom** **Hosting** option to enter the hosted URL of your application. Enter the **App URL** and click **Save** to confirm your hosting configuration.
 - Navigate back to the UI Locations tab, click the vertical ellipses, then click the **+ Add UI Location **button to add as needed.
 - Add the below routes for each UI Location to get the desired results.**Note:** The name for each UI Location is optional, and can be used to override the default app name.
 
@@ -314,12 +314,12 @@ To use your application, you need to upload it to Contentstack. To do so, follow
   **Note: **After saving the locations, on the** UI Locations** screen, click **Install App** to install the app in a stack.
 
 - Select the stack where you want to install the app and click the **Install** button.
-- You will be redirected to the configuration page of the app.**Note: **The **App Configuration** page is visible **only** if the **App Configuration **UI Location is set up. Not all apps (for example, the [Color Picker](/docs/developers/marketplace-apps/color-picker) app) require this configuration. Set up the App Configuration location **only if** your app needs any configuration.
+- You will be redirected to the configuration page of the app.**Note: **The **App Configuration** page is visible **only** if the **App Configuration **UI Location is set up. Not all apps (for example, the [Color Picker](../marketplace-apps/color-picker.md) app) require this configuration. Set up the App Configuration location **only if** your app needs any configuration.
 - On the **App Configuration** page, enter the values for **Sample App Configuration** field and **Sample Server Configuration** field.Let’s understand the configuration fields:
 
   **Sample App Configuration: **You can save non-sensitive data that you want to show in different UI locations. For example, if you want to create a form with Username, Date, Email Address, etc. then, you can add the value in the field and view the data in the configured UI location(s).
 
-- **Sample Server Configuration:** You can save sensitive data. For example, if you want to create a form with Password, Client Secret, and Client ID then, you can enter a value in the Sample Server Configuration Field and the value will be stored in the backend via webhooks.**Additional Resource:** To learn more, refer to the [App Configuration](/docs/developer-hub/app-config-location) document.
+- **Sample Server Configuration:** You can save sensitive data. For example, if you want to create a form with Password, Client Secret, and Client ID then, you can enter a value in the Sample Server Configuration Field and the value will be stored in the backend via webhooks.**Additional Resource:** To learn more, refer to the [App Configuration](./app-config-location.md) document.
 
   **Note:** The values entered in the **Sample App Configuration** and **Sample Server Configuration** fields are displayed across all UI locations configured for the app.
 
@@ -379,7 +379,7 @@ export default AppConfigurationExtension;
 
 ### Installing JSON RTE Plugin
 
-To install the JSON RTE Plugin, refer to the [Create JSON RTE Plugin](/docs/developers/json-rich-text-editor-plugins/create-new-json-rte-plugin#clone-boilerplate-github-repository) documentation.
+To install the JSON RTE Plugin, refer to the [Create JSON RTE Plugin](../json-rich-text-editor-plugins/create-new-json-rte-plugin.md#clone-boilerplate-github-repository) documentation.
 
 ## Integrating Venus Component Library
 
@@ -387,7 +387,7 @@ To install the JSON RTE Plugin, refer to the [Create JSON RTE Plugin](/docs/deve
 
 The library includes ready-to-use components such as buttons, modals, inputs, dropdowns, tables, and form controls, all built in alignment with Contentstack’s design system and accessibility guidelines.
 
-[Venus](/docs/developers/venus-component-library) components can be seamlessly integrated into any React project, regardless of the build tool, including Vite, Webpack, or other modern bundlers.
+[Venus](../venus-component-library.md) components can be seamlessly integrated into any React project, regardless of the build tool, including Vite, Webpack, or other modern bundlers.
 
 Follow the instructions given below to integrate the components with existing UI extensions built using React.
 
@@ -605,7 +605,7 @@ If you are working with a Contentstack instance hosted in a different region, yo
 
 ## Next Step
 
-Next, you can refer to the [Get Started with Building Apps using Contentstack’s App SDK ](/docs/developer-hub/get-started-with-building-apps-using-contentstack-app-sdk)guide to start creating apps using the Contentstack App SDK.
+Next, you can refer to the [Get Started with Building Apps using Contentstack’s App SDK ](./get-started-with-building-apps-using-contentstack-app-sdk.md)guide to start creating apps using the Contentstack App SDK.
 
 ## Common questions
 

@@ -23,29 +23,29 @@ You can use different locations within a single app to build an immersive experi
 After you create an app, you can distribute it as a single application based on the app's use case.
 
 The Contentstack App Framework currently supports the following UI locations:
-- [App Config Location](/docs/developer-hub/app-config-location)
-- [Asset Sidebar Location](/docs/developer-hub/asset-sidebar-location)
-- [Custom Field Location](/docs/developer-hub/custom-field-location)
-- [Content Type Sidebar Location](/docs/developer-hub/content-type-sidebar-location)
-- [Stack Dashboard Location](/docs/developer-hub/dashboard-location)
-- [Entry Sidebar Location](/docs/developer-hub/sidebar-location)
-- [Field Modifier Location](/docs/developer-hub/field-modifier-location/)
-- [Full Page Location](/docs/developer-hub/full-page-location/)
-- [Global Full Page Location](/docs/developer-hub/global-full-page/)
-- [RTE Location](/docs/developer-hub/rte-location)
+- [App Config Location](./app-config-location.md)
+- [Asset Sidebar Location](./asset-sidebar-location.md)
+- [Custom Field Location](./custom-field-location.md)
+- [Content Type Sidebar Location](./content-type-sidebar-location.md)
+- [Stack Dashboard Location](./dashboard-location.md)
+- [Entry Sidebar Location](./sidebar-location.md)
+- [Field Modifier Location](./field-modifier-location.md)
+- [Full Page Location](./full-page-location.md)
+- [Global Full Page Location](./global-full-page.md)
+- [RTE Location](./rte-location.md)
 
 ## Apps Permissions
 
 To add the apps permissions In the UI Locations tab, follow these steps:
 - Log in to your [Contentstack account](https://www.contentstack.com/login).
 - On the Dashboard page, click the **Developer Hub** icon.
-- Select the application for which you want to add the permissions or click the** + New App **button to [create](/docs/developer-hub/creating-an-app-in-developer-hub) a new application.
+- Select the application for which you want to add the permissions or click the** + New App **button to [create](./creating-an-app-in-developer-hub.md) a new application.
 - Click the **UI Locations** tab.
 - Go to the **Permissions** section in the **UI Locations** tab.
 - Select all the permissions you wish to add.**Note: **By default, no permissions are selected.
 - Once you have selected the desired permissions, click the **Save** button.
 
-**Additional Resource: **Refer to the [OAuth Scopes](/docs/developer-hub/oauth-scopes) document to learn more about the app and user token scopes.
+**Additional Resource: **Refer to the [OAuth Scopes](./oauth-scopes.md) document to learn more about the app and user token scopes.
 
 ## Common questions
 
@@ -59,4 +59,4 @@ A: Yes, you can use different locations within a single app to build an immersiv
 A: No. By default, no permissions are selected.
 
 **Q: Where can I learn more about app and user token scopes?**  
-A: Refer to the [OAuth Scopes](/docs/developer-hub/oauth-scopes) document.
+A: Refer to the [OAuth Scopes](./oauth-scopes.md) document.

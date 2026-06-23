@@ -63,7 +63,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
   In the **Add Egnyte Key Path** modal, enter the **Egnyte Key Path** and click the **Create** or **Create and Apply** button to create a new key.
 - Click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.  
-  **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+  **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Egnyte application.
 
 ## Use Egnyte within your Stack Entry
@@ -79,7 +79,7 @@ Go to your stack, click the **Content Models** icon in the left navigation panel
 
 ### Steps to Use the Egnyte App as a Custom Field
 
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **Egnyte** and click the **Proceed** button.  
   This adds Egnyte in the custom field.
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
@@ -105,7 +105,7 @@ Go to your stack, click the **Content Models** icon in the left navigation panel
 
 ### Steps to Use the Egnyte App in a JSON Rich Text Editor Field
 
-- In the **Content Type Builder** page, add a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **Egnyte** and click the **Proceed** button.  
   This adds Egnyte in the custom field.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
@@ -116,7 +116,7 @@ Go to your stack, click the **Content Models** icon in the left navigation panel
 - Choose the assets from your Egnyte account and click **OK** to add them to your entry.  
   The assets you select get added to your entry.
 - To resize the image, drag the corner of the image and adjust the size as required. Hover over the image to view the options to edit and remove the asset.  
-  **Additional Resource**: You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field.
+  **Additional Resource**: You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field.
 - After adding the asset(s), **Save** and **Publish** your entry.
 
 ## Common questions

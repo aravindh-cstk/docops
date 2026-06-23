@@ -31,7 +31,7 @@ Let us check the points to be considered when planning the CMS migration:
 
 - Define Migration goals.
 - Make sure that you have read and understood the requirements for migrating from your cms (Wordpress or Drupal) to Contentstacks Headless CMS.
-- **Note:** You can get details of the requirements in the Read Me section of the migration guides on our Github pages for [WordPress](/docs/developers/content-migration/wordpress-to-contentstack/) and [Drupal](/docs/developers/content-migration/drupal-to-contentstack/).
+- **Note:** You can get details of the requirements in the Read Me section of the migration guides on our Github pages for [WordPress](./wordpress-to-contentstack.md) and [Drupal](./drupal-to-contentstack.md).
 - Note all the CMS-specific plugins that affect the content
 - Review custom styling, content annotation
 - Migration plan of comments associated with the post
@@ -64,7 +64,7 @@ Make sure to check the following points when executing migrations:
 
 ## Additional Resources
 
-To know more about migrating from your traditional CMSs such as WordPress and Drupal, make sure you read our documentation on [Export Content from other CMS](/docs/developers/content-migration/#export-guides-for-cmss).
+To know more about migrating from your traditional CMSs such as WordPress and Drupal, make sure you read our documentation on [Export Content from other CMS](../content-migration.md#export-guides-for-cmss).
 
 ## Common questions
 
@@ -82,4 +82,4 @@ This migration checklist consists of 3 critical stages: planning, execution, and
 
 ### Where can I find more resources for WordPress or Drupal migrations?
 
-You can get details of the requirements in the Read Me section of the migration guides on our Github pages for [WordPress](/docs/developers/content-migration/wordpress-to-contentstack/) and [Drupal](/docs/developers/content-migration/drupal-to-contentstack/).
+You can get details of the requirements in the Read Me section of the migration guides on our Github pages for [WordPress](./wordpress-to-contentstack.md) and [Drupal](./drupal-to-contentstack.md).

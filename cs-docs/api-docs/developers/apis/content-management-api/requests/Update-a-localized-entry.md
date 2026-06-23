@@ -20,7 +20,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the "Body" parameter, you need to provide the content of your entry based on the content type.
 
-**Important**: If a **Modular Blocks**, **Group**, or **Global** field (marked as multiple) contains a field marked as non-localizable, you must include both _metadata.uid and "non_localizable_content": true for that instance in the request payload. This ensures the non-localizable content continues to retrieve its value from the master locale. You can find the metadata UID for each instance by using the [Get a Single Entry](/docs/developers/apis/content-management-api#get-a-single-entry) request for the master entry.
+**Important**: If a **Modular Blocks**, **Group**, or **Global** field (marked as multiple) contains a field marked as non-localizable, you must include both _metadata.uid and "non_localizable_content": true for that instance in the request payload. This ensures the non-localizable content continues to retrieve its value from the master locale. You can find the metadata UID for each instance by using the [Get a Single Entry](../../../../api-detail/content-management-api.md#get-a-single-entry) request for the master entry.
 
 Here's a sample request body:
 
@@ -46,9 +46,9 @@ Here's a sample request body:
 
 In this example, the group field is marked as multiple and contains a field (single_line) that is non-localizable. The non_localizable_content: true along with _metadata.uid ensures that the single_line field continues to pull its value from the master locale, while allowing updates to other fields like multi_line.
 
-**Note:** This request will only update the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](/docs/content-managers/author-content/publish-an-entry) request and pass the respective locale code in the locale={locale_code} parameter.
+**Note:** This request will only update the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](../../../../../cs-docs/content-managers/author-content/publish-an-entry.md) request and pass the respective locale code in the locale={locale_code} parameter.
 
-**Additional Resource:** Refer the [Localization](/docs/developers/multilingual-content/localize-an-entry) docs for more information.
+**Additional Resource:** Refer the [Localization](../../../../../cs-docs/developers/multilingual-content/localize-an-entry.md) docs for more information.
 
 ## URL Parameters
 
@@ -77,7 +77,7 @@ In this example, the group field is marked as multiple and contains a field (sin
   Enter your authtoken
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

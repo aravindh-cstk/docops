@@ -47,15 +47,15 @@ Users must have behavioral data to make confident measurements before they have 
 
 | Score | Description |
 |---|---|
-| [Quantity](/docs/data-and-insights/behavioral-scores#quantity) | Measures a user's cumulative activity over their lifetime of brand engagement. |
-| [Frequency](/docs/data-and-insights/behavioral-scores#frequency) | Measures how often a user is interacting with your brand over time. |
-| [Recency](/docs/data-and-insights/behavioral-scores#recency) | Measures how recently the user's general interaction has been. |
-| [Intensity](/docs/data-and-insights/behavioral-scores#intensity) | Measures the depth of a user's typical interaction with your brand. |
-| [Momentum](/docs/data-and-insights/behavioral-scores#momentum) | Measures the rate at which users are interacting with your brand. |
-| [Propensity](/docs/data-and-insights/behavioral-scores#propensity) | Predicts how likely a user is to return with subsequent activity. |
-| [Consistency](/docs/data-and-insights/behavioral-scores#consistency) | Measures the regularity of a user's engagement pattern. |
-| [Maturity](/docs/data-and-insights/behavioral-scores#maturity) | Measures how long a user has registered interactions with your brand. |
-| [Volatility](/docs/data-and-insights/behavioral-scores#volatility) | Measures how sporadic a user's behavior is while interacting with your brand. |
+| [Quantity](./behavioral-scores.md#quantity) | Measures a user's cumulative activity over their lifetime of brand engagement. |
+| [Frequency](./behavioral-scores.md#frequency) | Measures how often a user is interacting with your brand over time. |
+| [Recency](./behavioral-scores.md#recency) | Measures how recently the user's general interaction has been. |
+| [Intensity](./behavioral-scores.md#intensity) | Measures the depth of a user's typical interaction with your brand. |
+| [Momentum](./behavioral-scores.md#momentum) | Measures the rate at which users are interacting with your brand. |
+| [Propensity](./behavioral-scores.md#propensity) | Predicts how likely a user is to return with subsequent activity. |
+| [Consistency](./behavioral-scores.md#consistency) | Measures the regularity of a user's engagement pattern. |
+| [Maturity](./behavioral-scores.md#maturity) | Measures how long a user has registered interactions with your brand. |
+| [Volatility](./behavioral-scores.md#volatility) | Measures how sporadic a user's behavior is while interacting with your brand. |
 
 **Note:** If you are already a customer of Lytics, you can see the following explanation of each score alongside your own data in the app on the Scoring page.
 

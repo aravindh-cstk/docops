@@ -30,11 +30,11 @@ Contentstack currently supports the following regions:
 | Google Cloud Platform | North America | GCP-NA |
 | Google Cloud Platform | Europe | GCP-EU |
 
-Using the following set of commands you can configure the [regions](/docs/developers/contentstack-regions) in the CLI.
+Using the following set of commands you can configure the [regions](../contentstack-regions.md) in the CLI.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- CLI [installed ](/docs/developers/cli/install-the-cli)
+- CLI [installed ](./install-the-cli.md)
 
 ## Commands
 
@@ -48,7 +48,7 @@ csdx config:get:region
 ```
 
 ### Set region
-The `config:set:region` command lets you select a region, from the available [Contentstack regions](/docs/developers/contentstack-regions), to perform actions using the CLI.
+The `config:set:region` command lets you select a region, from the available [Contentstack regions](../contentstack-regions.md), to perform actions using the CLI.
 
 **Usage**
 
@@ -95,7 +95,7 @@ csdx config:set:region GCP-EU
 ```
 
 ### Set custom host and region
-By using the `config:set:region` command, you can also set a custom host for [Content Delivery](/docs/developers/apis/content-delivery-api), [Content Management](/docs/developers/apis/content-management-api), UI Host, [Developer Hub](/docs/developers/developer-hub/about-developer-hub/), [Launch](/docs/developers/launch/about-launch/), and [Personalize](/docs/personalize/about-personalize) APIs, and set a custom region name for the hosts.
+By using the `config:set:region` command, you can also set a custom host for [Content Delivery](../../../api-docs/api-detail/content-delivery-api.md), [Content Management](../../../api-docs/api-detail/content-management-api.md), UI Host, [Developer Hub](../developer-hub/about-developer-hub.md), [Launch](../launch/about-launch.md), and [Personalize](../../personalize/about-personalize.md) APIs, and set a custom region name for the hosts.
 
 **Usage**
 

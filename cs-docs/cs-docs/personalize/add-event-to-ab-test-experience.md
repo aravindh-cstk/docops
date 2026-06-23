@@ -30,7 +30,7 @@ The **primary** metric determines the winning variant, while **secondary** metri
 - Access to a project in Personalize
 
 ## Steps for Execution
-**Note: **For this guide, we have assumed that you have already [created a Personalize project](/docs/personalize/create-personalize-project) and [an event](/docs/personalize/create-event).
+**Note: **For this guide, we have assumed that you have already [created a Personalize project](./create-personalize-project.md) and [an event](./create-event.md).
 
 To add the created event to an A/B Test experience, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
@@ -41,14 +41,14 @@ To add the created event to an A/B Test experience, log in to your [Contentstack
 - Click **Save General Details**.
 - Click **Configuration** tab in the left-hand menu.
 - Scroll to the **Metrics **section and then click **+ Add Event**.
-- Select the preferred event from the drop-down list.You can add multiple events to an A/B Test experience as Metrics. Use the [Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/) to trigger the events for your experiences using the `triggerImpressions` and `triggerEvent` methods.
+- Select the preferred event from the drop-down list.You can add multiple events to an A/B Test experience as Metrics. Use the [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md) to trigger the events for your experiences using the `triggerImpressions` and `triggerEvent` methods.
 
-**Note:** When adding an event for the first time, it is automatically set as ‘primary’. The 'primary' metric determines A/B test winners from the variants, while secondary metrics offer additional insights. When any of the listed events occur, metrics calculate an increase in unique conversions per visitor which you can view in the [Experience Analytics](/docs/personalize/experience-analytics).
+**Note:** When adding an event for the first time, it is automatically set as ‘primary’. The 'primary' metric determines A/B test winners from the variants, while secondary metrics offer additional insights. When any of the listed events occur, metrics calculate an increase in unique conversions per visitor which you can view in the [Experience Analytics](./experience-analytics.md).
 - Click **Save** to complete the set up.
 
 This adds the new event as a reference in your A/B Test experience.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#events) to create, edit, delete, and get all existing events.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#events) to create, edit, delete, and get all existing events.
 
 ## Common questions
 
@@ -59,7 +59,7 @@ You can add up to **5 events (1 primary and 4 secondary)** to each test.
 The **primary** metric determines the winning variant, while **secondary** metrics provide additional insights into user behavior.
 
 ### Where can I view the results for the events I add?
-You can view metrics in the [Experience Analytics](/docs/personalize/experience-analytics).
+You can view metrics in the [Experience Analytics](./experience-analytics.md).
 
 ### How do I trigger events for my experiences?
-Use the [Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/) and the `triggerImpressions` and `triggerEvent` methods.
+Use the [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md) and the `triggerImpressions` and `triggerEvent` methods.

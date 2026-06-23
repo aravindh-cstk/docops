@@ -17,7 +17,7 @@ This page explains the available Contentstack Management Taxonomy actions in Aut
 
 ## Contentstack Management - Taxonomy Actions
 
-[Taxonomy](/docs/developers/taxonomy/about-taxonomy/) assists in organizing the content within stack into categories, making it easier to navigate, search, and retrieve information. You can perform taxonomy based operations using the following Contentstack Management Taxonomy actions.
+[Taxonomy](../developers/taxonomy/about-taxonomy.md) assists in organizing the content within stack into categories, making it easier to navigate, search, and retrieve information. You can perform taxonomy based operations using the following Contentstack Management Taxonomy actions.
 - Create a Taxonomy
 - Create a Term
 - Delete a Taxonomy

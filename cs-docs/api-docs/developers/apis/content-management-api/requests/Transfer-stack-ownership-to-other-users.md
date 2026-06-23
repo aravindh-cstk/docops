@@ -20,7 +20,7 @@ Once the specified user accepts the invitation by clicking on the link provided 
 
 In the 'Body' section, you need to provide the email address of the user to whom you wish to transfer the ownership of the stack in JSON format.
 
-**Additional Resource**: To transfer ownership of a stack to other users via Contentstack's UI, refer to the [Transfer Stack Ownership](/docs/developers/set-up-stack/transfer-stack-ownership) article.
+**Additional Resource**: To transfer ownership of a stack to other users via Contentstack's UI, refer to the [Transfer Stack Ownership](../../../../../cs-docs/developers/set-up-stack/transfer-stack-ownership.md) article.
 
 ## Headers
 

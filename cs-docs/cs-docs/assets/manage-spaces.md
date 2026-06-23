@@ -17,7 +17,7 @@ This page explains how to manage an Assets space by editing its details or delet
 
 Manage Spaces
 
-Assets allows you to manage your [space](/docs/assets/about-spaces-and-workspaces#spaces) by updating its information or deleting it when it is no longer needed, helping you maintain an organized asset environment.
+Assets allows you to manage your [space](./about-spaces-and-workspaces.md#spaces) by updating its information or deleting it when it is no longer needed, helping you maintain an organized asset environment.
 
 ## Edit a Space
 To update your space information, perform the following steps:

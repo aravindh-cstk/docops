@@ -23,15 +23,15 @@ URLs play a key role in organizing content and ensuring consistent delivery acro
 
 ## Setting URLs in Contentstack
 
-When [creating an entry](/docs/content-managers/working-with-entries/create-an-entry) in Contentstack, you can define the URL in the following ways:
+When [creating an entry](../../content-managers/author-content/create-an-entry.md) in Contentstack, you can define the URL in the following ways:
 - Manually enter a structured URL
-- Use [URL patterns](/docs/developers/create-content-types/use-default-url-pattern) to automatically generate URLs based on predefined rules and selected values
+- Use [URL patterns](./use-default-url-pattern.md) to automatically generate URLs based on predefined rules and selected values
 
 URL patterns let you construct URLs using values such as fields, locale, or taxonomy. This helps maintain consistency and reduces manual effort.
 
-**Additional Resource:** For more details on configuring URL patterns, refer to the [URL](/docs/developers/create-content-types/url) field documentation.
+**Additional Resource:** For more details on configuring URL patterns, refer to the [URL](./url.md) field documentation.
 
-**Note:** URL field properties cannot be modified for [Single](/docs/developers/create-content-types/single-vs-multiple-content-types#single) content types because they contain only one entry and do not require dynamic URL generation.
+**Note:** URL field properties cannot be modified for [Single](./single-vs-multiple-content-types.md#single) content types because they contain only one entry and do not require dynamic URL generation.
 
 ## URL Format and Syntax
 

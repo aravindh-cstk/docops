@@ -72,7 +72,7 @@ To verify successful tag installation:
 
 You should see confirmation once data is successfully flowing in.
 
-**Note**: If your website is hosted on Contentstack Launch, you can manage the event tags by following the steps outlined in the [Event Tracking (Lytics) in Contentstack Launch](/docs/developers/launch/event-tracking-in-contentstack-launch) guide.
+**Note**: If your website is hosted on Contentstack Launch, you can manage the event tags by following the steps outlined in the [Event Tracking (Lytics) in Contentstack Launch](../developers/launch/event-tracking-in-contentstack-launch.md) guide.
 
 ## Common questions
 

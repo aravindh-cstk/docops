@@ -31,9 +31,9 @@ Contentstack is a headless, API-first content management system (CMS) that provi
 
 This document is a detailed reference to Contentstack’s Content Management API.
 
-The **Content Management API (CMA)** is used to manage the content of your Contentstack account. This includes creating, updating, deleting, and fetching content of your account. To use the Content Management API, you will need to authenticate yourself with a [Management Token](/docs/developers/create-tokens/about-management-tokens) or an [Authtoken](#how-to-get-authtoken). Read more about it in [Authentication](#authentication).
+The **Content Management API (CMA)** is used to manage the content of your Contentstack account. This includes creating, updating, deleting, and fetching content of your account. To use the Content Management API, you will need to authenticate yourself with a [Management Token](../../cs-docs/developers/create-tokens/about-management-tokens.md) or an [Authtoken](#how-to-get-authtoken). Read more about it in [Authentication](#authentication).
 
-**Note:** The Content Management APIs also include many GET requests. However, it is highly recommended that you always use the [Content Delivery API](/docs/developers/apis/content-delivery-api) to deliver content to your web or mobile properties.
+**Note:** The Content Management APIs also include many GET requests. However, it is highly recommended that you always use the [Content Delivery API](./content-delivery-api.md) to deliver content to your web or mobile properties.
 
 ### Content Management SDKs
 
@@ -54,7 +54,7 @@ We provide Management SDKs for the following platform:
 
 Contentstack provides **token-based authentication** that allows you to create, update, delete, and fetch the content of your Contentstack account. You can use either the stack’s Management Token, OAuth Token, or the user Authtoken, along with the stack API key, to make Content Management API requests. The API key is a unique key assigned to each [stack](/docs/developers/set-up-stack).
 
-Management Tokens are stack-level read-write tokens that allow making CMA requests without the need to provide user credentials. The Contentstack OAuth server generates access tokens (both App and User tokens), which client applications can employ to retrieve restricted data on behalf of the resource owner. However, Authtokens are user-specific tokens generated when user logs in to Contentstack. Read more about the different [types of tokens](/docs/developers/create-tokens/types-of-tokens).
+Management Tokens are stack-level read-write tokens that allow making CMA requests without the need to provide user credentials. The Contentstack OAuth server generates access tokens (both App and User tokens), which client applications can employ to retrieve restricted data on behalf of the resource owner. However, Authtokens are user-specific tokens generated when user logs in to Contentstack. Read more about the different [types of tokens](../../cs-docs/developers/create-tokens/types-of-tokens.md).
 
 #### For API Key and Authtoken-based authentication
 
@@ -77,9 +77,9 @@ An **Authtoken** is a read-write token used to make authorized CMA requests, and
 
 **Management Tokens**, on the other hand, are **stack-level** tokens, with no users attached to them. They can do everything that authtokens can do. Since they are not personal tokens, no role-specific permissions are applicable to them. It is recommended to use these tokens for automation scripts, third-party app integrations, and for **Single Sign On (SSO)-enabled organizations**.
 
-**Contentstack OAuth** employs the OAuth 2.0 protocol, enabling external applications to access Contentstack APIs on behalf of users. It issues access tokens (App & User tokens) to client applications, allowing them to retrieve restricted data from the Contentstack resource server without the need for the resource owner to share their credentials. Learn more about [Contentstack OAuth](/docs/developers/developer-hub/contentstack-oauth) and [OAuth Scopes](/docs/developers/developer-hub/oauth-scopes).
+**Contentstack OAuth** employs the OAuth 2.0 protocol, enabling external applications to access Contentstack APIs on behalf of users. It issues access tokens (App & User tokens) to client applications, allowing them to retrieve restricted data from the Contentstack resource server without the need for the resource owner to share their credentials. Learn more about [Contentstack OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md) and [OAuth Scopes](../../cs-docs/developers/developer-hub/oauth-scopes.md).
 
-**Authtoken** lets you make almost all the Content Management requests, while with **Management Tokens**, you have a few limitations. For more information, read our [Limitations of Management Tokens](/docs/developers/create-tokens/limitations-of-management-tokens) documentation.
+**Authtoken** lets you make almost all the Content Management requests, while with **Management Tokens**, you have a few limitations. For more information, read our [Limitations of Management Tokens](../../cs-docs/developers/create-tokens/limitations-of-management-tokens.md) documentation.
 
 **Note:** When trying out POST/PUT calls, in addition to the API Key and Authtoken / Management token, you need to mandatorily pass Content-Type:application/json in the Header.
 
@@ -95,11 +95,11 @@ To retrieve the stack API key, perform the steps given below:
 
 #### How to Get Authtoken
 
-To retrieve the authtoken, log in to your Contentstack account by using the "[Log in to your account](/docs/developers/apis/content-management-api#logging-in-out)" request. This request will return the authtoken in the response body.
+To retrieve the authtoken, log in to your Contentstack account by using the "[Log in to your account](./content-management-api.md#logging-in-out)" request. This request will return the authtoken in the response body.
 
-You can generate multiple authtokens by executing the "[Log in to your account](/docs/developers/apis/content-management-api#logging-in-out)" request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of **20 valid tokens** that a user can use per account at a time, to execute CMA requests. If you already have valid 20 tokens, creating a new authtoken will automatically cause the oldest authtoken to expire without warning.
+You can generate multiple authtokens by executing the "[Log in to your account](./content-management-api.md#logging-in-out)" request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of **20 valid tokens** that a user can use per account at a time, to execute CMA requests. If you already have valid 20 tokens, creating a new authtoken will automatically cause the oldest authtoken to expire without warning.
 
-For SSO-enabled organizations, the "[Log in to your account](/docs/developers/apis/content-management-api#logging-in-out)" request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require user authtoken will not work. Only the owner of the organization and users with permission to access the organization without SSO can use the Content Management APIs. Learn more about [REST API Usage](/docs/developers/single-sign-on/rest-api-usage).
+For SSO-enabled organizations, the "[Log in to your account](./content-management-api.md#logging-in-out)" request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require user authtoken will not work. Only the owner of the organization and users with permission to access the organization without SSO can use the Content Management APIs. Learn more about [REST API Usage](../../cs-docs/developers/single-sign-on/rest-api-usage.md).
 
 #### How to Get Management Tokens
 
@@ -109,13 +109,13 @@ To get the Management Token, perform the steps given below after logging into yo
 2. Navigate to Settings > Tokens > Management Tokens.
 3. From the list, pick the Management Token that you want.Read more about how you can create a new Management Token.
 
-**Note**: Only the stack [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) and [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) users can create Management Tokens.
+**Note**: Only the stack [Owner](../../cs-docs/developers/invite-users-and-assign-roles/types-of-roles.md#owner) and [Admin](../../cs-docs/developers/invite-users-and-assign-roles/types-of-roles.md#admin) users can create Management Tokens.
 
 You can generate multiple management tokens for a specific stack within your organization. However, there is a maximum limit of **10 valid tokens** that can exist per stack at a time, to execute CMA requests. If you already have 10 valid tokens, creating a new management token will automatically cause the oldest management token to expire without warning.
 
 #### How to Get OAuth Tokens
 
-To get the OAuth Token, perform the steps given within the [Configuring Contentstack OAuth](/docs/developers/developer-hub/contentstack-oauth#configuring-contentstack-oauth) section after logging into your Contentstack account.
+To get the OAuth Token, perform the steps given within the [Configuring Contentstack OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md#configuring-contentstack-oauth) section after logging into your Contentstack account.
 
 **Note**: Only the organization Owner and Admin users can create OAuth Tokens.
 
@@ -187,7 +187,7 @@ Let’s look at the error code and their meanings.
 
 Contentstack offers you a Postman Collection that helps you try out our Content Management API. You can download this collection, connect to your Contentstack account, and try out the Content Management API with ease.
 
-Learn more about how to [get started with using the Postman Collection](/docs/developers/apis/content-management-api#postman-collection) for Contenstack Content Management API.
+Learn more about how to [get started with using the Postman Collection](./content-management-api.md#postman-collection) for Contenstack Content Management API.
 
 ### Using OpenAPI Files
 
@@ -766,7 +766,7 @@ Once the specified user accepts the invitation by clicking on the link provided 
 
 In the 'Body' section, you need to provide the email address of the user to whom you wish to transfer the ownership of the stack in JSON format.
 
-**Additional Resource**: To transfer ownership of a stack to other users via Contentstack's UI, refer to the [Transfer Stack Ownership](/docs/developers/set-up-stack/transfer-stack-ownership) article.
+**Additional Resource**: To transfer ownership of a stack to other users via Contentstack's UI, refer to the [Transfer Stack Ownership](../../cs-docs/developers/set-up-stack/transfer-stack-ownership.md) article.
 
 ##### Headers
 
@@ -1120,7 +1120,7 @@ In the 'Body' section, you need to provide the email ID of the user from whom yo
 
 ### Branches
 
-[Branches](/docs/developers/branches) allows you to isolate and easily manage your “in-progress” work from your stable, live work in the production environment. It helps multiple development teams to work in parallel in a more collaborative, organized, and structured manner without impacting each other.
+[Branches](../developers/apis/content-management-api/branches.md) allows you to isolate and easily manage your “in-progress” work from your stable, live work in the production environment. It helps multiple development teams to work in parallel in a more collaborative, organized, and structured manner without impacting each other.
 
 
 #### Get All Branches
@@ -1131,7 +1131,7 @@ In the 'Body' section, you need to provide the email ID of the user from whom yo
 
 The Get all branches request returns comprehensive information of all the branches available in a particular stack in your account.
 
-You can add queries to extend the functionality of this API call. Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (Refer [Queries](/docs/developers/apis/content-delivery-api#queries))  
+You can add queries to extend the functionality of this API call. Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (Refer [Queries](./content-delivery-api.md#queries))  
 To configure the permissions for your application via OAuth, please include the cm.branches.management:read scope.
 
 ##### Query Parameters
@@ -1307,7 +1307,7 @@ To confirm the deletion of a branch, you need to specify the force=true query pa
 **Note:** You need to delete the child branches before deleting the parent branch. If a branch is the source for any other branch, irrespective of whether you pass a force parameter or not, the API will not allow you to delete that branch.  
  You must only use the authtoken to delete a branch.
 
-**Additional Resource:** Deleting a branch also deletes the [alias](/docs/developers/branches/#work-with-aliases) pointing towards it.
+**Additional Resource:** Deleting a branch also deletes the [alias](../developers/apis/content-management-api/branches.md#work-with-aliases) pointing towards it.
 
 When executing the API call, in the “URL Parameters” section, provide the UID of your branch.
 
@@ -1344,7 +1344,7 @@ When executing the API call, in the “URL Parameters” section, provide the UI
 
 #### Comparing Branches
 
-With the [Comparing Branches](/docs/developers/branches/comparing-branches) functionality, you can compare and check the differences between any two branches.
+With the [Comparing Branches](../../cs-docs/developers/branches/comparing-branches.md) functionality, you can compare and check the differences between any two branches.
 
 ##### Compare Branches
 
@@ -1904,7 +1904,7 @@ The  Compare specific global field between branches request returns all the diff
 
 #### Merging Branches
 
-The [Merging Branches](/docs/developers/branches/merging-branches)functionality enables you to merge two branches, integrating the development changes made in the compare branch into the base branch.
+The [Merging Branches](../../cs-docs/developers/branches/merging-branches.md)functionality enables you to merge two branches, integrating the development changes made in the compare branch into the base branch.
 
 ##### Merge Branches
 
@@ -1914,7 +1914,7 @@ The [Merging Branches](/docs/developers/branches/merging-branches)functionality 
 
 The Merge branches request merges the specified two branches as per the merge strategy selected.
 
-**Additional Resource:** To learn how to select and use the merge strategies, refer to our documentation on [Merging Branches](/docs/developers/branches/merging-branches/).
+**Additional Resource:** To learn how to select and use the merge strategies, refer to our documentation on [Merging Branches](../../cs-docs/developers/branches/merging-branches.md).
 
 You can pass ignore in the default_merge_strategy query parameter, and pass the item_merge_strategies in the request body to override the default strategy and use a different merge strategy for specific content types or global fields.
 
@@ -2388,9 +2388,9 @@ The Get single merge job request returns the status and configuration details of
 
 ### Aliases
 
-[](/docs/developers/branches/create-a-branch)
+[](../../cs-docs/developers/branches/create-a-branch.md)
 
-An [alias](/docs/developers/branches/#work-with-aliases) acts as a pointer to a particular branch. You can specify the alias ID in your frontend code to pull content from the target branch associated with an alias.
+An [alias](../developers/apis/content-management-api/branches.md#work-with-aliases) acts as a pointer to a particular branch. You can specify the alias ID in your frontend code to pull content from the target branch associated with an alias.
 
 
 #### Get All Aliases
@@ -2638,7 +2638,7 @@ When executing the API call, you can add queries to extend the functionality of 
 
 **Tip**: If any of your content types contains a Global field and you wish to fetch the content schema of the Global field, then you need to pass the include_global_field_schema:true parameter. This parameter helps return the Global field's schema along with the content type schema.
 
-Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](/docs/developers/apis/content-delivery-api#queries))
+Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](./content-delivery-api.md#queries))
 
 **Note**:
 
@@ -2664,7 +2664,7 @@ Under the 'URL Parameters' section, insert a parameter named query and provide a
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -3639,7 +3639,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note:** The schema of the content type returned will depend on the provided version. If no version is specified, you will get the latest version of the content type.
 
-To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](/docs/developers/apis/content-delivery-api#queries)
+To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](./content-delivery-api.md#queries)
 
 **Tip**: If any of your content types contains a Global field and you wish to fetch the content schema of the Global field, then you need to pass theinclude_global_field_schema:true parameter. This parameter helps return the Global field's schema along with the content type schema.
 
@@ -3670,7 +3670,7 @@ To learn more about the queries, refer to the [Queries section of the Content De
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -4119,7 +4119,7 @@ To learn more about the queries, refer to the [Queries section of the Content De
 The Create a content type call creates a new content type in a particular stack of your Contentstack account.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the complete schema of the content type. You can refer the [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) document to know how you can add fields into your content type through API.
+In the “Body” section, you need to provide the complete schema of the content type. You can refer the [JSON schema for creating a content type](../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md) document to know how you can add fields into your content type through API.
 
 To mark a field as non-unique, you need to set the unique parameter to false. For example, to remove the unique constraint on the default 'title' field, you need to update the JSON schema of the title field as follows:
 
@@ -4154,7 +4154,7 @@ To mark a field as non-unique, you need to set the unique parameter to false. Fo
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -4372,7 +4372,7 @@ The schema of the **Select** field that contains key-value pairs will look as fo
 
   
 
-**Additional Resource:** In the “Body” section, you need to provide the updated schema of your content type with the select field schema. You can refer to the [Select field JSON schema](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#select) document to know how you can add/update schema for the Select field in your content type through API.
+**Additional Resource:** In the “Body” section, you need to provide the updated schema of your content type with the select field schema. You can refer to the [Select field JSON schema](../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md#select) document to know how you can add/update schema for the Select field in your content type through API.
 
 ##### Create Content Type with JSON RTE
 
@@ -4391,7 +4391,7 @@ The schema of the **Select** field that contains key-value pairs will look as fo
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -4686,7 +4686,7 @@ The schema of the **Select** field that contains key-value pairs will look as fo
 The Create content type with JSON RTE request shows you how to add a JSON RTE field while creating a content type.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the complete schema of the content type with the JSON RTE schema as follows. You can find more details in the [JSON schema of the JSON RTE](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#json-rich-text-editor) document.
+In the “Body” section, you need to provide the complete schema of the content type with the JSON RTE schema as follows. You can find more details in the [JSON schema of the JSON RTE](../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md#json-rich-text-editor) document.
 
 ```
 {
@@ -4728,7 +4728,7 @@ Under the reference_to parameter, mention the UIDs of the content types whose en
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -5341,7 +5341,7 @@ The Update Content Type call is used to update the schema of an existing content
 When executing the API call, in the “URL Parameters” section, provide the uid of your content type.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) document to know how you can add/update fields in your content type through API.
+In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md) document to know how you can add/update fields in your content type through API.
 
 ##### URL Parameters
 
@@ -5362,7 +5362,7 @@ In the “Body” section, you need to provide the updated schema of your conten
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -5564,7 +5564,7 @@ In the “Body” section, you need to provide the updated schema of your conten
 The Set Field Visibility Rule for Content Type API request lets you add Field Visibility Rules to existing content types. These rules allow you to show and hide fields based on the state or value of certain fields.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-[Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) can be set while creating your content type (via UI, only after you’ve added all the required fields to the content type and saved it) or while editing a content type (both via UI and API).
+[Field Visibility Rules](../../cs-docs/developers/create-content-types/about-field-visibility-rules.md) can be set while creating your content type (via UI, only after you’ve added all the required fields to the content type and saved it) or while editing a content type (both via UI and API).
 
 To set a Field Visibility Rule, you need to add the following code snippet in the Request body of the content type:
 
@@ -5607,7 +5607,7 @@ Let’s look at the keys used in the above code snippet:
 - action: You need to pass either show or hide depending on whether you want to show or hide the Target field.
 - target_field: Pass the UID of the Target field (target_field_uid) i.e., the field on which you want to perform the action.
 
-For more details, check out the [Define Conditions](/docs/developers/create-content-types/add-a-field-visibility-rule#define-conditions) section when adding a Field Visibility Rule.
+For more details, check out the [Define Conditions](../../cs-docs/developers/create-content-types/add-a-field-visibility-rule.md#define-conditions) section when adding a Field Visibility Rule.
 
 ##### URL Parameters
 
@@ -5630,7 +5630,7 @@ For more details, check out the [Define Conditions](/docs/developers/create-cont
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -5887,7 +5887,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -5942,7 +5942,7 @@ Additionally, to fetch all Global fields in which the specified content type is 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -5996,7 +5996,7 @@ The schema of the content type returned will depend on the version number provid
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -6167,7 +6167,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`
@@ -6880,7 +6880,7 @@ The Get a single taxonomy request returns comprehensive information of a specifi
 
 The Create a taxonomy request creates a taxonomy in a particular stack of your organization.
 
-**Note**: Refer to the [Restricted Keywords for UIDs](/docs/developers/create-content-types/restricted-keywords-for-uids) to avoid using reserved keywords.
+**Note**: Refer to the [Restricted Keywords for UIDs](../../cs-docs/developers/create-content-types/restricted-keywords-for-uids.md) to avoid using reserved keywords.
 
 ##### Headers
 
@@ -7003,7 +7003,7 @@ The Localize a taxonomy request is used to add translated values to a taxonomy f
 ##### URL Parameters
 
 - **taxonomy_uid** (required)
-  Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](./content-management-api.md#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
   Default: `global_content_topics`
 
 ##### Query Parameters
@@ -7069,7 +7069,7 @@ The Unlocalize a taxonomy request is used to remove translated values from a tax
 ##### URL Parameters
 
 - **taxonomy_uid** (required)
-  Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](./content-management-api.md#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
   Default: `global_content_topics`
 
 ##### Query Parameters
@@ -7163,7 +7163,7 @@ The exported file doesn't download automatically. You can use a REST API client 
 ##### URL Parameters
 
 - **taxonomy_uid** (required)
-  Enter the unique ID of the taxonomy you want to export. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Enter the unique ID of the taxonomy you want to export. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](./content-management-api.md#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
   Default: `sample_one`
 
 ##### Query Parameters
@@ -8300,11 +8300,11 @@ The Get all terms across all taxonomies request returns comprehensive informatio
 
 A Global field is a reusable field (or group of fields) that you can define once and reuse across multiple content types within your stack. This eliminates the need to recreate the same set of fields multiple times, saving effort and ensuring consistency.
 
-**Note**: If your Global field contains [nested Global fields](/docs/developers/global-field/about-global-field#nested-global-fields), they will appear as part of the schema in the API response.
+**Note**: If your Global field contains [nested Global fields](../../cs-docs/developers/global-field/about-global-field.md#nested-global-fields), they will appear as part of the schema in the API response.
 
 You can pass the **branch header** in API requests to fetch or manage modules within specific branches of the stack. Additionally, setting the include_branch query parameter to true includes the _branch key in the response, specifying the unique ID of the branch where the module resides.
 
-**Additional Resource**: You can create dynamic and flexible Global Fields by nesting Global fields within a [Modular Block](/docs/developers/global-field/global-fields-as-blocks-within-modular-blocks), [Global](/docs/developers/global-field/about-global-field/), or a [Group](/docs/developers/global-field/group-fields-within-global-fields) fields.
+**Additional Resource**: You can create dynamic and flexible Global Fields by nesting Global fields within a [Modular Block](../../cs-docs/developers/global-field/global-fields-as-blocks-within-modular-blocks.md), [Global](../../cs-docs/developers/global-field/about-global-field.md), or a [Group](../../cs-docs/developers/global-field/group-fields-within-global-fields.md) fields.
 
 
 #### Get All Global Fields
@@ -8351,7 +8351,7 @@ The Get all global fields request returns comprehensive information of all the g
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -8426,7 +8426,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 ##### URL Parameters
 
 - **global_field_uid** (required)
-  Enter the unique ID of the Global field of which you want to retrieve the details. The UID of a Global field is unique across a stack. Execute the '[Get all Global fields](/docs/developers/apis/content-management-api#get-all-global-fields)' request to retrieve the UID of a Global field.
+  Enter the unique ID of the Global field of which you want to retrieve the details. The UID of a Global field is unique across a stack. Execute the '[Get all Global fields](./content-management-api.md#get-all-global-fields)' request to retrieve the UID of a Global field.
   Default: `category`
 
 ##### Query Parameters
@@ -8459,7 +8459,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -8583,7 +8583,7 @@ To create a nested global field, follow the schema in the request body:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -8727,7 +8727,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -8847,7 +8847,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -8975,7 +8975,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -9028,7 +9028,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 ### Entries
 
-An [entry](/docs/content-managers/author-content/) is the actual piece of content created using one of the defined [content types](/docs/developers/create-content-types/about-content-types).
+An [entry](/docs/content-managers/author-content/) is the actual piece of content created using one of the defined [content types](../../cs-docs/developers/create-content-types/about-content-types.md).
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -9062,11 +9062,11 @@ Example structure:
 
 You can also extend this API request by adding queries to filter or refine results. Use the query parameter in the URL and provide the query in JSON format.
 
-**Additional Resource**: For more information about supported queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API documentation.
+**Additional Resource**: For more information about supported queries, refer to the [Queries](./content-delivery-api.md#queries) section of the Content Delivery API documentation.
 
 For example, to retrieve entries in a specific workflow stage, pass a query using _workflow.uid, where uid is the workflow stage UID.
 
-**Tip**: This request returns the first **100 entries** for the specified content type. To retrieve additional entries, use [pagination](/docs/developers/apis/content-delivery-api#pagination).
+**Tip**: This request returns the first **100 entries** for the specified content type. To retrieve additional entries, use [pagination](./content-delivery-api.md#pagination).
 
 ##### URL Parameters
 
@@ -9099,7 +9099,7 @@ For example, to retrieve entries in a specific workflow stage, pass a query usin
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication.](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -9280,7 +9280,7 @@ You will find the entry metadata under the _metadata key in the response. It wil
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: ` [Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -9400,7 +9400,7 @@ Here's the JSON schema for both the cases:
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -9573,7 +9573,7 @@ The schema to embed assets within the JSON RTE field is as follows:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -9853,7 +9853,7 @@ The schema to embed assets within the JSON RTE field is as follows:
 
 **POST** `/content_types/{content_type_uid}/entries`
 
-The Create an entry with master locale request lets you create an entry in the master language of your stack if it does not already exist or has been deleted. You can use the UID of a [localized entry](/docs/developers/multilingual-content/localize-an-entry) to convert it into a [master language entry](/docs/developers/multilingual-content/set-the-master-language).
+The Create an entry with master locale request lets you create an entry in the master language of your stack if it does not already exist or has been deleted. You can use the UID of a [localized entry](../../cs-docs/developers/multilingual-content/localize-an-entry.md) to convert it into a [master language entry](../../cs-docs/developers/multilingual-content/set-the-master-language.md).
 
 To configure the permissions for your application via OAuth, please include the cm.entries.management:write scope.   
 If the master language is not accessible or does not exist, a custom user role can still create an entry in any of the other available locales. However, the entry in the master language remains non-existent.
@@ -9901,7 +9901,7 @@ Here’s what your request body should look like:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -10235,7 +10235,7 @@ In the “Body” section, to update the taxonomy fields, use the following code
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -10417,7 +10417,7 @@ The schema to update an embedded asset within the JSON RTE field is as follows:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -11391,7 +11391,7 @@ This API Request supports the following actions as well:
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -11411,7 +11411,7 @@ This API Request supports the following actions as well:
 
 Entry versions provide a history of changes made to an entry over time. You can view metadata for each version and assign custom names to specific versions to help identify key milestones or changes.
 
-To learn how to assign a name to a version, refer to the [Name Entry Version](/docs/content-managers/author-content/name-entry-versions) documentation.
+To learn how to assign a name to a version, refer to the [Name Entry Version](../../cs-docs/content-managers/author-content/name-entry-versions.md) documentation.
 
 ##### Set Version Name for Entry
 
@@ -11449,7 +11449,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -11525,7 +11525,7 @@ The Get Details of All Versions of an Entry request returns comprehensive inform
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication.](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **api_key** (required)
   Enter the API key of your stack.
@@ -11635,7 +11635,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 ##### Sample Request
@@ -11714,7 +11714,7 @@ To include publish-related metadata for the referenced entry, set the include_pu
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **api_key** (required)
   Enter the API key of your stack.
@@ -11790,7 +11790,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -11823,7 +11823,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the "Body" parameter, you need to provide the content of your entry based on the content type.
 
-**Note**: When localizing an entry, if a **Group**, **Modular Blocks**, or **Global** field instance contains a field that is marked as non-localizable, you must include _metadata.uid for the field in the request payload to map that instance in child locale. This ensures that the non-localizable field retains its value from the master locale. You can find the metadata UID for each non-localizable field by using the [Get a Single Entry](/docs/developers/apis/content-management-api#get-a-single-entry) request for the master entry.
+**Note**: When localizing an entry, if a **Group**, **Modular Blocks**, or **Global** field instance contains a field that is marked as non-localizable, you must include _metadata.uid for the field in the request payload to map that instance in child locale. This ensures that the non-localizable field retains its value from the master locale. You can find the metadata UID for each non-localizable field by using the [Get a Single Entry](./content-management-api.md#get-a-single-entry) request for the master entry.
 
 Here's a sample request body:
 
@@ -11843,9 +11843,9 @@ Here's a sample request body:
 }
 ```
 
-**Note:** This request will only create the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](/docs/content-managers/author-content/publish-an-entry) request and pass the respective locale code in the locale={locale_code} parameter.
+**Note:** This request will only create the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](../../cs-docs/content-managers/author-content/publish-an-entry.md) request and pass the respective locale code in the locale={locale_code} parameter.
 
-**Additional Resource:** Refer the [Localization](/docs/developers/multilingual-content/localize-an-entry) docs for more information.
+**Additional Resource:** Refer the [Localization](../../cs-docs/developers/multilingual-content/localize-an-entry.md) docs for more information.
 
 ##### URL Parameters
 
@@ -11874,7 +11874,7 @@ Here's a sample request body:
   Enter your authtoken
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -11942,7 +11942,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the "Body" parameter, you need to provide the content of your entry based on the content type.
 
-**Important**: If a **Modular Blocks**, **Group**, or **Global** field (marked as multiple) contains a field marked as non-localizable, you must include both _metadata.uid and "non_localizable_content": true for that instance in the request payload. This ensures the non-localizable content continues to retrieve its value from the master locale. You can find the metadata UID for each instance by using the [Get a Single Entry](/docs/developers/apis/content-management-api#get-a-single-entry) request for the master entry.
+**Important**: If a **Modular Blocks**, **Group**, or **Global** field (marked as multiple) contains a field marked as non-localizable, you must include both _metadata.uid and "non_localizable_content": true for that instance in the request payload. This ensures the non-localizable content continues to retrieve its value from the master locale. You can find the metadata UID for each instance by using the [Get a Single Entry](./content-management-api.md#get-a-single-entry) request for the master entry.
 
 Here's a sample request body:
 
@@ -11968,9 +11968,9 @@ Here's a sample request body:
 
 In this example, the group field is marked as multiple and contains a field (single_line) that is non-localizable. The non_localizable_content: true along with _metadata.uid ensures that the single_line field continues to pull its value from the master locale, while allowing updates to other fields like multi_line.
 
-**Note:** This request will only update the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](/docs/content-managers/author-content/publish-an-entry) request and pass the respective locale code in the locale={locale_code} parameter.
+**Note:** This request will only update the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](../../cs-docs/content-managers/author-content/publish-an-entry.md) request and pass the respective locale code in the locale={locale_code} parameter.
 
-**Additional Resource:** Refer the [Localization](/docs/developers/multilingual-content/localize-an-entry) docs for more information.
+**Additional Resource:** Refer the [Localization](../../cs-docs/developers/multilingual-content/localize-an-entry.md) docs for more information.
 
 ##### URL Parameters
 
@@ -11999,7 +11999,7 @@ In this example, the group field is marked as multiple and contains a field (sin
   Enter your authtoken
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -12062,7 +12062,7 @@ In this example, the group field is marked as multiple and contains a field (sin
 
 **POST** `/content_types/{content_type_uid}/entries/{entry_uid}/unlocalize?locale={locale_code}`
 
-The Unlocalize an entry request is used to unlocalize an existing entry. Read more about [Unlocalization](/docs/developers/multilingual-content/unlocalize-an-entry).   
+The Unlocalize an entry request is used to unlocalize an existing entry. Read more about [Unlocalization](../../cs-docs/developers/multilingual-content/unlocalize-an-entry.md).   
 To configure the permissions for your application via OAuth, please include the cm.entry:write scope.
 
 ##### URL Parameters
@@ -12087,7 +12087,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -12137,7 +12137,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -12206,7 +12206,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`
@@ -12275,7 +12275,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`
@@ -12350,7 +12350,7 @@ In case of **Scheduled Publishing**, add the scheduled_at key and provide the da
 - **authtoken** (optional)
   Default: `your authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -12424,7 +12424,7 @@ Here are some additional parameters that you need to pass in the “Request Body
 - **authtoken** (optional)
   Default: `your authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -12497,7 +12497,7 @@ In case of **Scheduled Unpublishing**, add the scheduled_at key and provide the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -12546,7 +12546,7 @@ Entry Variants allows you to create content variations for different audiences, 
 
 The Create entry variant request lets you create an entry variant of your existing base entry.
 
-**Note**: You must have variant groups linked to relevant content type(s). If you have not linked your content types to a variant group yet, refer to the [Link Content Type](/docs/developers/apis/content-management-api#link-content-types) request.
+**Note**: You must have variant groups linked to relevant content type(s). If you have not linked your content types to a variant group yet, refer to the [Link Content Type](./content-management-api.md#link-content-types) request.
 
 In the “Body” section, include only the fields that require updating for the entry variant. The system detects changes automatically based on the values provided. All other fields inherit their values from the base entry. For Group and Modular Blocks fields with multiple instances, use the _order property to define the preferred sequence of instance UIDs.
 
@@ -12731,7 +12731,7 @@ In the “Body” section, include only the fields that require updating for the
 
 The Update entry variant request lets you update an entry variant of your existing base entry.
 
-**Note**: You must have variant groups linked to relevant content type(s). If you have not linked your content types to a variant group yet, refer to the [Link Content Type](/docs/developers/apis/content-management-api#link-content-types) request.
+**Note**: You must have variant groups linked to relevant content type(s). If you have not linked your content types to a variant group yet, refer to the [Link Content Type](./content-management-api.md#link-content-types) request.
 
 In the “Body” section, include only the fields that require updating for the entry variant. The system detects changes automatically based on the values provided. All other fields inherit their values from the base entry. For Group and Modular Blocks fields with multiple instances, use the _order property to define the preferred sequence of instance UIDs.
 
@@ -13386,7 +13386,7 @@ In the “Body” section, include the version number and variant UID within var
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
-These files can be attached and used in multiple [entries](/docs/content-managers/working-with-entries/about-entries).
+These files can be attached and used in multiple [entries](../../cs-docs/content-managers/author-content/about-entries.md).
 
 
 #### Get All Assets
@@ -13417,7 +13417,7 @@ You will find the asset metadata under the _metadata key in the response. It wil
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
+To learn more about the queries, refer to the [Queries](./content-delivery-api.md#queries) section of the Content Delivery API doc.
 
 **Tip:** To include the publish details in the response, make use of the include_publish_details parameter and set its value to ‘true’. This query will return the publish details of the entry in every environment along with the version number that is published in each of the environment. When you publish an asset, the associated metadata of that asset will also get published.
 
@@ -13461,7 +13461,7 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -13578,7 +13578,7 @@ You will find the asset metadata under the _metadata key in the response. It wil
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -13646,7 +13646,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -13728,7 +13728,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -13841,7 +13841,7 @@ In the above cURL command, pass the necessary values within the curly brackets. 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Pass “multipart/form-data” to include form data body parameters.
@@ -13925,7 +13925,7 @@ Additionally, you can pass optional parameters such as asset[title] and asset[de
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`
@@ -13999,7 +13999,7 @@ https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
 ##### URL Parameters
 
 - **asset_uid** (required)
-  Enter the UID of the asset for which you want to generate a permanent URL. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) request to get the UID of the asset.
+  Enter the UID of the asset for which you want to generate a permanent URL. Use the [Get All Assets](./content-management-api.md#get-all-assets) request to get the UID of the asset.
   Default: `your_asset_uid`
 
 ##### Query Parameters
@@ -14017,7 +14017,7 @@ https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter “application/json” to pass a Request body.
@@ -14078,12 +14078,12 @@ To configure the permissions for your application via OAuth, please include the 
 
 This request will return the most recent version of the asset, however, to download the latest published version of the asset, pass the environment query parameter with the environment name.
 
-**Note**: Before executing this API request, ensure to [create a permanent URL for the asset](/docs/developers/apis/content-management-api#generate-permanent-asset-url) you want to download.
+**Note**: Before executing this API request, ensure to [create a permanent URL for the asset](./content-management-api.md#generate-permanent-asset-url) you want to download.
 
 ##### URL Parameters
 
 - **asset_uid** (required)
-  Enter the UID of the asset you want to download. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) request to get the UID of the asset.
+  Enter the UID of the asset you want to download. Use the [Get All Assets](./content-management-api.md#get-all-assets) request to get the UID of the asset.
   Default: `your_asset_uid`
 - **slug** (required)
   Enter the unique identifier of the asset.
@@ -14137,7 +14137,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -14159,7 +14159,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 **GET** `/assets/rt`
 
-The Get information on RTE assetscall returns comprehensive information on all assets uploaded through the [Rich Text Editor field](/docs/developers/create-content-types/rich-text-editor).  
+The Get information on RTE assetscall returns comprehensive information on all assets uploaded through the [Rich Text Editor field](../../cs-docs/developers/create-content-types/rich-text-editor.md).  
 To configure the permissions for your application via OAuth, please include the cm.assets.rt:read scope.
 
 ##### Query Parameters
@@ -14197,7 +14197,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 Versioning helps you track changes made to assets over time. You can assign custom names to specific asset versions for easier identification and reference.
 
-For more details, refer to the [Name Asset Versions](/docs/content-managers/asset-versions/name-asset-versions) documentation.
+For more details, refer to the [Name Asset Versions](../../cs-docs/content-managers/author-content/name-asset-versions.md) documentation.
 
 ##### Set Version Name for Asset
 
@@ -14483,7 +14483,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
+To learn more about the queries, refer to the [Queries](./content-delivery-api.md#queries) section of the Content Delivery API doc.
 
 ##### URL Parameters
 
@@ -14504,7 +14504,7 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -14587,7 +14587,7 @@ Here's an example of the raw body:
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Pass “application/json” to enter JSON request body and “multipart/form-data” to include form data body parameters.
@@ -14642,9 +14642,9 @@ The Update asset request allows you to update the title and description of an as
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
 
 **Note: **Here are some points to keep in mind:  
-1. You can also use this request to [Generate a permanent URL](/docs/developers/apis/content-management-api#generate-permanent-asset-url)
+1. You can also use this request to [Generate a permanent URL](./content-management-api.md#generate-permanent-asset-url)
  for your asset, which remains constant irrespective of any further updates to the asset.  
-2. This call updates only the meta data of an asset. To replace an asset, try the [Replace asset](/docs/developers/apis/content-management-api#replace-asset) request under **Asset Collection**.
+2. This call updates only the meta data of an asset. To replace an asset, try the [Replace asset](./content-management-api.md#replace-asset) request under **Asset Collection**.
 
 Under 'Body', you need to pass the updated details of "Title" and "Description" is in the form of 'raw' body as follows:
 
@@ -14679,7 +14679,7 @@ Another way to provide a "Title" and a "Description" for the asset is to pass th
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Pass “multipart/form-data” as the value to this parameter to include form data body parameters.
@@ -14741,7 +14741,7 @@ Another way to provide a "Title" and a "Description" for the asset is to pass th
 
 **POST** `/assets/{asset_uid}/publish`
 
-The Publish an asset call is used to publish a specific version of an asset on the desired [environment](/docs/developers/set-up-environments/about-environments) either immediately or at a later date/time.  
+The Publish an asset call is used to publish a specific version of an asset on the desired [environment](../../cs-docs/developers/set-up-environments/about-environments.md) either immediately or at a later date/time.  
 To configure the permissions for your application via OAuth, please include the cm.asset:publish scope.
 
 **Note: **When you publish an asset, the associated metadata of that asset will also get published. However, when publishing assets in bulk, the associated metadata of the assets will not get published.
@@ -14805,7 +14805,7 @@ In the 'Body' section, enter the asset details, such as locales and environments
 
 **POST** `/assets/{asset_uid}/unpublish`
 
-The Unpublish an asset call is used to unpublish a specific version of an asset from a desired [environment](/docs/developers/set-up-environments/about-environments).  
+The Unpublish an asset call is used to unpublish a specific version of an asset from a desired [environment](../../cs-docs/developers/set-up-environments/about-environments.md).  
 To configure the permissions for your application via OAuth, please include the cm.asset:unpublish scope.
 
 In case of **Scheduled Unpublishing**, add the scheduled_at key and provide the date/time in the ISO format as its value. Example: "scheduled_at":"2016-10-07T12:34:36.000Z"
@@ -14895,7 +14895,7 @@ When executing the API call to search for a subfolder, you need to provide the p
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -14952,7 +14952,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -15011,7 +15011,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -15078,7 +15078,7 @@ If you want to place this folder within another folder, provide the UID of the p
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -15156,7 +15156,7 @@ In the ‘Body’ section, you need to provide a new name for your folder, and i
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -15219,7 +15219,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -15236,7 +15236,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 ### Embed Entries and Assets in the Rich Text Editor
 
-You can embed other entries and/or assets inside the [Rich Text Editor](/docs/developers/create-content-types/rich-text-editor) (RTE) field while creating entries. Inside the RTE field, you can embed entries inline; at the block level; or as a hyperlink; and assets as downloadable entities or simply display them (for images).
+You can embed other entries and/or assets inside the [Rich Text Editor](../../cs-docs/developers/create-content-types/rich-text-editor.md) (RTE) field while creating entries. Inside the RTE field, you can embed entries inline; at the block level; or as a hyperlink; and assets as downloadable entities or simply display them (for images).
 
 **Note**: This feature is available only if it is part of your plan. To avail of this feature, you can get in touch with our [Support](mailto:support@contentstack.com) team.
 
@@ -15256,7 +15256,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 The Create a content type with embedded RTE objects request lets you create a content type, which supports embedded objects inside its RTE field.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the complete schema of the content type (refer [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type)).
+In the “Body” section, you need to provide the complete schema of the content type (refer [JSON schema for creating a content type](../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md)).
 
 To embed entries within a specific RTE, pass the reference_to parameter with valid content type UIDs to determine entries of which content type(s) can be embedded inside the editor.
 
@@ -15283,7 +15283,7 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
 }
 ```
 
-**Additional Resource**: Refer to the [Rich Text Field Schema](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#html-based-rich-text-editor) guide to understand how you can format the content entered in the field.
+**Additional Resource**: Refer to the [Rich Text Field Schema](../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md#html-based-rich-text-editor) guide to understand how you can format the content entered in the field.
 
 ##### Query Parameters
 
@@ -15300,7 +15300,7 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -15542,7 +15542,7 @@ The Update content type with embedded RTE objects request allows you to update t
 
 When executing the API request, in the “URL Parameters” section, provide the unique ID of your content type.
 
-In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) document to know how you can add/update fields in your content type through API.
+In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md) document to know how you can add/update fields in your content type through API.
 
 You can make changes to the schema of the Rich Text Editor field while updating the content type schema. Here is a sample of an updated Rich Text Editor schema:
 
@@ -15589,7 +15589,7 @@ You can make changes to the schema of the Rich Text Editor field while updating 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -15880,7 +15880,7 @@ The above Rich Text Editor contains entries embedded as a separate content block
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -15951,7 +15951,7 @@ Since we refer to an embedded asset as a separate HTML element, you need to wrap
 - sys-style-type: You can pass display or download to specify whether the embedded asset should be downloadable or act as a display image
 - type: To specify the type of object embedded inside the rich text, e.g., asset
 
-**Tip**: An embedded asset works exactly like the [Reference](/docs/developers/create-content-types/reference) field. When you update the details of an embedded asset or replace the source asset with another asset, the Rich Text Editor automatically updates the embedded HTML component with the latest version of that asset.
+**Tip**: An embedded asset works exactly like the [Reference](../../cs-docs/developers/create-content-types/reference.md) field. When you update the details of an embedded asset or replace the source asset with another asset, the Rich Text Editor automatically updates the embedded HTML component with the latest version of that asset.
 
 Here’s a sample of rich text that contains embedded assets:
 
@@ -15991,7 +15991,7 @@ Embedded asset as downloadable image:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -16090,7 +16090,7 @@ Updated embedded entry inline with text:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -16150,7 +16150,7 @@ If your entry contains a Rich Text Editor field and you wish to fetch the conten
 
 You can view information about the embedded objects under the _embedded_items parameter in the JSON response body.
 
-**Note**: Contentstack’s [Content Delivery SDKs](/docs/developers/fetch-content#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the frontend however required.
+**Note**: Contentstack’s [Content Delivery SDKs](../../cs-docs/developers/fetch-content.md#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the frontend however required.
 
 ##### URL Parameters
 
@@ -16182,7 +16182,7 @@ You can view information about the embedded objects under the _embedded_items pa
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -16340,9 +16340,9 @@ You can view information about the embedded objects under the _embedded_items pa
 
 ### Bulk Operations
 
-You can perform bulk operations such as [Add to Release](/docs/content-managers/author-content/bulk-add-to-release), [Publish](/docs/content-managers/bulk-operations-on-entries-and-assets/bulk-publish-entries), [Unpublish](/docs/content-managers/bulk-operations-on-entries-and-assets/bulk-unpublish-entries), and [Delete](/docs/content-managers/bulk-operations-on-entries-and-assets/bulk-delete-entries) on multiple entries or assets, or [Change the Workflow Details](/docs/content-managers/bulk-operations-on-entries-and-assets/update-entry-workflow-details-in-bulk) of multiple entries or assets at the same time.
+You can perform bulk operations such as [Add to Release](../../cs-docs/content-managers/author-content/bulk-add-to-release.md), [Publish](../../cs-docs/content-managers/author-content/bulk-publish-entries.md), [Unpublish](../../cs-docs/content-managers/author-content/bulk-unpublish-entries.md), and [Delete](../../cs-docs/content-managers/author-content/bulk-delete-entries.md) on multiple entries or assets, or [Change the Workflow Details](../../cs-docs/content-managers/author-content/update-entry-workflow-details-in-bulk.md) of multiple entries or assets at the same time.
 
-**Additional Resource**: You can also learn how to [perform bulk operations on search results](/docs/content-managers/search-content/about-bulk-operations-on-search-results).
+**Additional Resource**: You can also learn how to [perform bulk operations on search results](../../cs-docs/content-managers/search-content/about-bulk-operations-on-search-results.md).
 
 **Points to keep in mind**:
 
@@ -16379,7 +16379,7 @@ For each asset, provide the title, asset UID, set the content_type_uid to sys_as
         }
 ```
 
-Once the API request is executed, a job ID is generated in the response. You can use this job ID to track the status of your add to release request in [Get Stack Bulk Task Queue](/docs/developers/apis/content-management-api#get-stack-bulk-task-queue).
+Once the API request is executed, a job ID is generated in the response. You can use this job ID to track the status of your add to release request in [Get Stack Bulk Task Queue](./content-management-api.md#get-stack-bulk-task-queue).
 
 **Note**: Pass bulk_version as 2.0 in the Headers section.
 
@@ -16452,13 +16452,13 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the 'Body' section, you need to specify the locales (mention the locale codes) and environments (mention the names) to which you want to publish the entries or assets. If you do not specify a source locale, the entries or assets will be published in the master locale automatically.
 
-**Tip**: To schedule the publishing of multiple entries and/or assets, you can make use of the [Create a Release](/docs/developers/apis/content-management-api#create-a-release) request. Then, you can deploy this Release and all of the pinned items can be published together either immediately or at a scheduled time to whatever environment you choose.
+**Tip**: To schedule the publishing of multiple entries and/or assets, you can make use of the [Create a Release](./content-management-api.md#create-a-release) request. Then, you can deploy this Release and all of the pinned items can be published together either immediately or at a scheduled time to whatever environment you choose.
 
 Within the ‘entries’ parameter, pass these details of each entry – content type UIDs, entry UIDs, locales in which the entries are present, and the version (you need to specify the entry versions when schedule publishing) that you want to publish. Within the ‘assets’ parameter, pass these details of each entry – asset UIDs and the version that you want to publish (optional).
 
 **Note**: The version parameter must be passed as an integer in the request body. For example, version: 2.
 
-If some of the entries added to the bulk publish request do not satisfy the applied [publish rules](/docs/developers/set-up-workflows-and-publish-rules/about-publish-rules), then all the items will not be published. To publish at least the items that satisfy the publish rules, pass additional query parameters, skip_workflow_stage_check=true and approvals=true.
+If some of the entries added to the bulk publish request do not satisfy the applied [publish rules](../../cs-docs/developers/set-up-workflows-and-publish-rules/about-publish-rules.md), then all the items will not be published. To publish at least the items that satisfy the publish rules, pass additional query parameters, skip_workflow_stage_check=true and approvals=true.
 
 Let's understand how these two query parameters work while publishing entries.
 
@@ -16484,7 +16484,7 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -16555,11 +16555,11 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the 'Body' section, you need to specify the locales (mention the locale codes) and environments (mention the names) to which you want to unpublish the entries or assets. If you do not specify a source locale, the entries or assets will be unpublished in the master locale automatically.
 
-**Tip**: To schedule the unpublishing of multiple entries and/or assets, you can make use of the ‘[Create a Release](/docs/developers/apis/content-management-api/#create-a-release)’ request. Then, you can deploy this Release and all of the pinned items can be unpublished together either immediately or at a scheduled time to whatever environment you choose.
+**Tip**: To schedule the unpublishing of multiple entries and/or assets, you can make use of the ‘[Create a Release](./content-management-api.md#create-a-release)’ request. Then, you can deploy this Release and all of the pinned items can be unpublished together either immediately or at a scheduled time to whatever environment you choose.
 
 Within the ‘entries’ parameter, pass these details of each entry – content type UIDs, entry UIDs, locales in which the entries are present, and the version that you want to unpublish. Within the ‘assets’ parameter, pass these details of each entry – asset UIDs and the version that you want to unpublish (optional).
 
-If some of the entries added to the bulk unpublish request do not satisfy the applied [publish rules](/docs/developers/set-up-workflows-and-publish-rules/about-publish-rules), then all the items will not be unpublished. To unpublish at least the items that satisfy the publish rules, pass additional query parameters, skip_workflow_stage_check=true and approvals=true.
+If some of the entries added to the bulk unpublish request do not satisfy the applied [publish rules](../../cs-docs/developers/set-up-workflows-and-publish-rules/about-publish-rules.md), then all the items will not be unpublished. To unpublish at least the items that satisfy the publish rules, pass additional query parameters, skip_workflow_stage_check=true and approvals=true.
 
 Let's understand how these two query parameters work while unpublishing entries.
 
@@ -16585,7 +16585,7 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -16672,7 +16672,7 @@ In the 'Body' section, you need to specify the content type UIDs, entry UIDs or 
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -16712,7 +16712,7 @@ In the 'Body' section, you need to specify the content type UIDs, entry UIDs or 
 
 The ‘Change Workflow Details’ action is a new option that allows you to change workflow details (such as stage, assignee, due date, and comments) of multiple entries at the same time. 
 
-**Additional Resource**: To know how you can change Workflow details of multiple entries at once, refer to the [Change Workflow Details of Entries in Bulk](/docs/content-managers/search-content/change-workflow-details-of-entries-in-bulk) article.
+**Additional Resource**: To know how you can change Workflow details of multiple entries at once, refer to the [Change Workflow Details of Entries in Bulk](../../cs-docs/content-managers/search-content/change-workflow-details-of-entries-in-bulk.md) article.
 
 #### Update workflow details in bulk
 
@@ -16737,7 +16737,7 @@ Within the ‘entries’ parameter, pass these details of each entry – content
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -17084,16 +17084,16 @@ The Get Stack Bulk Task Queue request retrieves a list of all the bulk actions p
 
 ### Extensions
 
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations ](/docs/developers/developer-hub/about-ui-locations/)for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations ](../../cs-docs/developers/developer-hub/about-ui-locations.md)for the Contentstack App Framework to extend the functionality of your apps.
 
-Extensions let you create custom fields and custom widgets that lets you customize Contentstack's default UI and behavior. Read more about [Extensions](/docs/developers/experience-extensions-overview/about-experience-extensions).
+Extensions let you create custom fields and custom widgets that lets you customize Contentstack's default UI and behavior. Read more about [Extensions](../../cs-docs/developers/experience-extensions-overview/about-experience-extensions.md).
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
 
 #### Custom Fields
 
-This type of extension lets you create custom fields that you can use in your content types. Read more [About Custom Fields](/docs/developers/create-custom-fields/about-custom-fields).
+This type of extension lets you create custom fields that you can use in your content types. Read more [About Custom Fields](../../cs-docs/developers/create-custom-fields/about-custom-fields.md).
 
 #### Get all custom fields
 
@@ -17589,7 +17589,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -18710,7 +18710,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 #### JSON RTE Plugins
 
-This type of extension lets you add customized plugins to your JSON Rich Text Editor and extend its functionality. Read more [About JSON RTE Plugins](/docs/developers/json-rich-text-editor-plugins).
+This type of extension lets you add customized plugins to your JSON Rich Text Editor and extend its functionality. Read more [About JSON RTE Plugins](../../cs-docs/developers/json-rich-text-editor-plugins.md).
 
 #### Get all JSON RTE plugins
 
@@ -19165,7 +19165,7 @@ The schema for this is as follows:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -19384,7 +19384,7 @@ The schema for this is as follows:
 
 #### Asset Sidebar Extensions
 
-This type of extension lets you add widgets with more capabilities or custom functionalities for editors to manage, transform, and optimize stack assets. Read more about [Asset Sidebar Extensions](/docs/developers/create-asset-sidebar-extensions).
+This type of extension lets you add widgets with more capabilities or custom functionalities for editors to manage, transform, and optimize stack assets. Read more about [Asset Sidebar Extensions](../../cs-docs/developers/create-asset-sidebar-extensions.md).
 
 #### Get all asset sidebar extensions
 
@@ -19741,9 +19741,9 @@ Metadata is a piece of information that lets you describe or classify an asset/e
 
 You can manage your digital entities effectively and facilitate enhanced accessibility with additional metadata.
 
-**Note:** The Metadata feature allows users to update their [asset metadata](/docs/content-managers/author-content/additional-metadata-support-for-assets/) or [entry metadata](/docs/content-managers/working-with-entries/additional-metadata-support-for-entries/) without incrementing the asset or entry version.
+**Note:** The Metadata feature allows users to update their [asset metadata](../../cs-docs/content-managers/author-content/additional-metadata-support-for-assets.md) or [entry metadata](../../cs-docs/content-managers/working-with-entries/additional-metadata-support-for-entries.md) without incrementing the asset or entry version.
 
-**Note:** An [extension](/docs/developers/apis/content-management-api#extensions) or app is required to use Metadata APIs.
+**Note:** An [extension](./content-management-api.md#extensions) or app is required to use Metadata APIs.
 
 
 #### Get Metadata
@@ -20394,7 +20394,7 @@ To configure the permissions for your application via OAuth, include the cm.labe
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
+To learn more about the queries, refer to the [Queries](./content-delivery-api.md#queries) section of the Content Delivery API doc.
 
 ##### URL Parameters
 
@@ -21403,7 +21403,7 @@ In case an un-localized entry in the release has been localized later, this requ
 ##### URL Parameters
 
 - **release_uid** (required)
-  Enter the unique ID of the release of which you want to update the items (entries and assets) to their latest versions. You can find the release uid by running the [Get all Releases](/docs/developers/apis/content-management-api#releases-collection) API request.
+  Enter the unique ID of the release of which you want to update the items (entries and assets) to their latest versions. You can find the release uid by running the [Get all Releases](./content-management-api.md#releases-collection) API request.
   Default: `blt045d036eb8f2f9df`
 
 ##### Query Parameters
@@ -23401,7 +23401,7 @@ In the 'Body' section, you need to provide the details of the workflow stage. En
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (optional)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](./content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -24111,7 +24111,7 @@ When executing the API call, under the 'Header' section, you need to enter the a
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
+To learn more about the queries, refer to the [Queries](./content-delivery-api.md#queries) section of the Content Delivery API doc.
 
 ##### Query Parameters
 
@@ -24173,7 +24173,7 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 
 **POST** `/locales`
 
-This call lets you add a new language to your stack. You can either add a [supported language](/docs/developers/multilingual-content/supported-languages) or a [custom language](/docs/developers/multilingual-content/add-a-custom-language) of your choice.  
+This call lets you add a new language to your stack. You can either add a [supported language](../../cs-docs/developers/multilingual-content/supported-languages.md) or a [custom language](../../cs-docs/developers/multilingual-content/add-a-custom-language.md) of your choice.  
 To configure the permissions for your application via OAuth, please include the cm.languages.management:write scope.
 
 When executing the API call, under the 'Header' section, you need to enter the API key of your stack and the authtoken that you receive after logging into your account.
@@ -24407,7 +24407,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 #### Fallback Languages
 
-Language fallback allows entries created in a particular language to initially inherit data from the fallback language instead of directly inheriting content from the master language. For more information, refer the documentation for [Fallback Language](/docs/developers/multilingual-content/about-fallback-languages).
+Language fallback allows entries created in a particular language to initially inherit data from the fallback language instead of directly inheriting content from the master language. For more information, refer the documentation for [Fallback Language](../../cs-docs/developers/multilingual-content/about-fallback-languages.md).
 
 #### Set a fallback language
 
@@ -24562,7 +24562,7 @@ The Get all environments call fetches the list of all environments available in 
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api/#queries) section of the Content Delivery API doc.  
+To learn more about the queries, refer to the [Queries](./content-delivery-api.md#queries) section of the Content Delivery API doc.  
 To configure the permissions for your application via OAuth, please include thecm.environments.management:read scope.
 
 ##### Query Parameters
@@ -24872,7 +24872,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 ### Tokens
 
-Contentstack provides different [types of tokens](/docs/developers/create-tokens/types-of-tokens/) to authorize API requests. You can use [Delivery Tokens](/docs/developers/create-tokens/about-delivery-tokens) to authenticate Content Delivery API (CDA) requests and retrieve the published content of an environment. To authenticate Content Management API (CMA) requests over your stack content, you can use [Management Tokens](/docs/developers/create-tokens/about-management-tokens).
+Contentstack provides different [types of tokens](../../cs-docs/developers/create-tokens/types-of-tokens.md) to authorize API requests. You can use [Delivery Tokens](../../cs-docs/developers/create-tokens/about-delivery-tokens.md) to authenticate Content Delivery API (CDA) requests and retrieve the published content of an environment. To authenticate Content Management API (CMA) requests over your stack content, you can use [Management Tokens](../../cs-docs/developers/create-tokens/about-management-tokens.md).
 
 Delivery tokens provide read-only access to the associated environments, while management tokens provide read-write access to the content of your stack. Use these tokens along with the stack API key to make authorized API requests.
 
@@ -25409,7 +25409,7 @@ The Delete delivery token request deletes a specific delivery token.
 
 #### Preview Token Collection
 
-A [Preview Token](/docs/developers/create-tokens/about-delivery-tokens#about-preview-tokens) provides you access to retrieve details of your website within the live preview panel.
+A [Preview Token](../../cs-docs/developers/create-tokens/about-delivery-tokens.md#about-preview-tokens) provides you access to retrieve details of your website within the live preview panel.
 
 **Note**: The Preview tokens are exclusively compatible with the new rest-preview.contentstack.com endpoint.
 
@@ -26040,7 +26040,7 @@ The Get all roles request returns comprehensive information about all roles crea
 
 You can add queries to extend the functionality of this API request. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.  
+To learn more about the queries, refer to the [Queries](./content-delivery-api.md#queries) section of the Content Delivery API doc.  
 To configure the permissions for your application via OAuth, please include the cm.roles.management:read scope.
 
 ##### Query Parameters
@@ -26360,7 +26360,7 @@ The Create a role request creates a new role in a stack.
 In the 'Body' section, mention the role name, description, users, additional roles, rules (includes the actions that can be performed on entries, fields, and/or assets), and permissions (which include the details of the content types, taxonomies, environments, and languages that are accessible).
 To configure the permissions for your application via OAuth, please include the cm.roles.management:write scope.
 
-**Note**: You can also restrict access to the [master language entry](/docs/developers/multilingual-content/set-the-master-language) while defining permissions for a new role. Refer to our [Manage Language Permissions](/docs/developers/multilingual-content/manage-language-permissions) documentation for more details.
+**Note**: You can also restrict access to the [master language entry](../../cs-docs/developers/multilingual-content/set-the-master-language.md) while defining permissions for a new role. Refer to our [Manage Language Permissions](../../cs-docs/developers/multilingual-content/manage-language-permissions.md) documentation for more details.
 
 To add customized exceptions for all or specific languages, add an additional locale module in the request body. Under this module, pass the following parameters:
 
@@ -26389,7 +26389,7 @@ Here’s what your request body should look like:
 }
 ```
 
-**Note**: [Language-related exceptions](/docs/developers/invite-users-and-assign-roles/create-a-role#exceptions-on-languages) can be added only for custom roles and the developer and content manager system roles.
+**Note**: [Language-related exceptions](../../cs-docs/developers/invite-users-and-assign-roles/create-a-role.md#exceptions-on-languages) can be added only for custom roles and the developer and content manager system roles.
 
 When creating a user role, you need to specify the branch and alias scope through the following schema in the request body:
 
@@ -26659,7 +26659,7 @@ The Update role request lets you modify an existing role of your stack. However,
 In the 'Body' section, include the updated details of the role which include name, description, users, additional roles, rules (includes the actions that can be performed on entries, fields, and/or assets), and permissions (which include the details of the content types, taxonomies, environments, and languages that are accessible).
 To configure the permissions for your application via OAuth, please include the cm.roles.management:write scope.
 
-**Note**: You can also restrict access to the [master language](/docs/developers/multilingual-content/set-the-master-language/) entry while defining permissions for a new role.
+**Note**: You can also restrict access to the [master language](../../cs-docs/developers/multilingual-content/set-the-master-language.md) entry while defining permissions for a new role.
 
 To add customized exceptions for all or specific languages, add an additional locale module in the request body. Under this module, pass the following parameters:
 
@@ -26688,7 +26688,7 @@ Here’s what your request body should look like:
 }
 ```
 
-**Note**: [Language-related exceptions](/docs/developers/invite-users-and-assign-roles/create-a-role#exceptions-on-languages) can be added only for custom roles and the developer and content manager system roles.
+**Note**: [Language-related exceptions](../../cs-docs/developers/invite-users-and-assign-roles/create-a-role.md#exceptions-on-languages) can be added only for custom roles and the developer and content manager system roles.
 
 When updating a user role, you need to specify the branch and alias scope through the following schema in the request body:
 
@@ -27839,7 +27839,7 @@ The following table shows values you can use for the query parameter:
 }
 ``` |
 
-This API request will return a maximum of **100** records while fetching the execution details for a specific webhook. Previously, there was no limit on the number of records returned. You can use the "[skip](/docs/developers/apis/content-delivery-api#skip)" parameter to fetch older records. To limit the number of records returned, you can use the “[limit](/docs/developers/apis/content-delivery-api#limit)” parameter.
+This API request will return a maximum of **100** records while fetching the execution details for a specific webhook. Previously, there was no limit on the number of records returned. You can use the "[skip](./content-delivery-api.md#skip)" parameter to fetch older records. To limit the number of records returned, you can use the “[limit](./content-delivery-api.md#limit)” parameter.
 
 ##### URL Parameters
 
@@ -28370,7 +28370,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 Audit log displays a record of all the activities performed in a stack and helps you keep a track of all published items, updates, deletes, and current status of the existing content.
 
-Read more about [Audit Log](/docs/developers/set-up-stack/monitor-stack-activities-in-audit-log).
+Read more about [Audit Log](../../cs-docs/developers/set-up-stack/monitor-stack-activities-in-audit-log.md).
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -28383,7 +28383,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 The Get audit log request is used to retrieve the audit log of a stack.
 
-You can apply queries to filter the results. Refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section for more details.  
+You can apply queries to filter the results. Refer to the [Queries](./content-delivery-api.md#queries) section for more details.  
 To configure the permissions for your application via OAuth, please include the cm.audit-logs:read scope.
 
 **Note:** You can retrieve audit log information only for 30 days prior to the current day (for an organization).
@@ -29396,7 +29396,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 The **Publish Queue** displays the historical and current details of activities such as publish, unpublish, or delete that can be performed on entries and/or assets. It also shows details of Release deployments. These details include time, entry, content type, version, language, user, environment, and status.  
   
-For more details, refer the [Publish Queue](/docs/content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue) documentation.
+For more details, refer the [Publish Queue](../../cs-docs/content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue.md) documentation.
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -29412,7 +29412,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: You can retrieve the publish queue details for activities performed on entries and/or assets of your stack in the last 30 days. To retrieve publish queue details for nested reference published tasks, pass api_version parameter as **3.2** in the **Headers** section.
 
-You can apply various queries such as [count](./content-delivery-api.md#count), [limit](./content-delivery-api.md#limit), bulkJobId, include_job_details: true/false, etc. to filter the results. Refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section for more details.
+You can apply various queries such as [count](./content-delivery-api.md#count), [limit](./content-delivery-api.md#limit), bulkJobId, include_job_details: true/false, etc. to filter the results. Refer to the [Queries](./content-delivery-api.md#queries) section for more details.
 
 Now, you can limit the number of bulk job details in the response body to **25** items. Also, you can view the summary of your bulk jobs within the summary key in the response body.
 
@@ -30336,12 +30336,12 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: You can retrieve the publish queue details for activities performed in the last **30** days only.
 
-You can apply queries to filter the results. Refer to the [Queries](/docs/developers/apis/content-management-api#authentication) section for more details.
+You can apply queries to filter the results. Refer to the [Queries](./content-management-api.md#authentication) section for more details.
 
 ##### URL Parameters
 
 - **publish_queue_uid** (required)
-  Enter the UID of a specific publish queue activity of which you want to retrieve the details. Execute the [Get publish queue](/docs/developers/apis/content-management-api#get-publish-queue) API request to retrieve the UID of a particular publish queue activity.
+  Enter the UID of a specific publish queue activity of which you want to retrieve the details. Execute the [Get publish queue](./content-management-api.md#get-publish-queue) API request to retrieve the UID of a particular publish queue activity.
   Default: `your_publish_queue_uid`
 
 ##### Query Parameters
@@ -30536,7 +30536,7 @@ Some of the important variables that you need to set are as follows:
 | api_key | your_stack_api_key |
 | authorization | your_management_token |
 
-**Note:** The Contentstack Postman Collection will require a valid [Management token](/docs/developers/create-tokens/about-management-tokens) to make API calls. Check out the [Authentication](#authentication) section for more details.
+**Note:** The Contentstack Postman Collection will require a valid [Management token](../../cs-docs/developers/create-tokens/about-management-tokens.md) to make API calls. Check out the [Authentication](#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 

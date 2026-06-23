@@ -16,7 +16,7 @@ This page explains best practices for setting up an optimized front-end CDN cach
 
 ## Front-end CDN cache purging best practices
 
-Contentstack comes with a [content delivery network (CDN)](/docs/developers/cdn-and-caching/what-is-cdn-and-how-it-works) that caches data in hundreds of PoP servers around the world. So, blazing-fast content delivery comes by default. And with an adequate purging mechanism in place, your users are sure to get fresh and updated content, always.
+Contentstack comes with a [content delivery network (CDN)](./what-is-cdn-and-how-it-works.md) that caches data in hundreds of PoP servers around the world. So, blazing-fast content delivery comes by default. And with an adequate purging mechanism in place, your users are sure to get fresh and updated content, always.
 
 In most cases, this is adequate, and you may not require any additional caching mechanism for your web applications. However, if you plan to set up a front-end caching—for reasons such as for complete control over what is cached and how—there are certain best practices to keep in mind.
 
@@ -30,7 +30,7 @@ Let’s look at these steps in detail.
 
 ## Set up webhooks to listen to events
 
-In your Contentstack account, [set up webhooks](/docs/developers/set-up-webhooks) for the publish, unpublish or delete events for all [entries](/docs/content-managers/working-with-entries/about-entries) and [assets](/docs/content-managers/working-with-assets/about-assets). This will help you send real-time updates on these events to your caching service. When webhook events are triggered, it brings the relevant data payload, and notifies the destination URL. So, you can accordingly purge the updated or new content from your cache.
+In your Contentstack account, [set up webhooks](/docs/developers/set-up-webhooks) for the publish, unpublish or delete events for all [entries](../../content-managers/author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets). This will help you send real-time updates on these events to your caching service. When webhook events are triggered, it brings the relevant data payload, and notifies the destination URL. So, you can accordingly purge the updated or new content from your cache.
 
 The webhook payload, however, brings only the UIDs of the first-level references (i.e., immediate referenced entries and assets), and not the whole JSON or deeper nested references. This is when you will need the mapping of UIDs to URLs as well as parent-to-child content.
 

@@ -43,8 +43,8 @@ Contentstack's Taxonomy feature empowers users to effectively manage and optimiz
 ## API Reference
 
 To perform operations related to Taxonomy within your stack via API, refer to the following documents:
-- [Taxonomy collection](/docs/developers/apis/content-management-api#taxonomy) in our Content Management API
-- Taxonomy [GET request](/docs/developers/apis/content-delivery-api#get-all-entries-with-defined-taxonomies) and [queries](/docs/developers/apis/content-delivery-api#taxonomy) in our Content Delivery API
+- [Taxonomy collection](../../../api-docs/api-detail/content-management-api.md#taxonomy) in our Content Management API
+- Taxonomy [GET request](../../../api-docs/api-detail/content-delivery-api.md#get-all-entries-with-defined-taxonomies) and [queries](../../../api-docs/api-detail/content-delivery-api.md#taxonomy) in our Content Delivery API
 
 ## Common questions
 

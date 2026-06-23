@@ -27,13 +27,13 @@ View Stack Details
 Accessing stack details helps you manage configuration settings, authentication credentials (stack UID), and user permissions efficiently.
 
 To view your stack details, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Navigate to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
+- Navigate to your [stack](./about-stack.md) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 - In the **General** section, you can view or update the following details:**Name** of your stack
 - The **description** provided for the stack
 - The **Stack Owner Email** in read-only mode
 - The **Appearance** section allows you to manage the visual identification of your stack. You can select a predefined color under **Stack Color** to visually identify your stack across the interface.**Note**: If no color is selected, a default color is applied.
 - In the **API Credentials** section, view the stack **API Key** (stack UID) used for authentication and API requests.
-- If you are the stack [Owner](https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), you can [delete the stack](/docs/developers/organization/organization-stacks#delete-a-stack) or [transfer ownership](/docs/developers/set-up-stack/transfer-stack-ownership). Other users can only [leave the stack](/docs/developers/set-up-stack/leave-a-stack).
+- If you are the stack [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner), you can [delete the stack](../organization/organization-stacks.md#delete-a-stack) or [transfer ownership](./transfer-stack-ownership.md). Other users can only [leave the stack](./leave-a-stack.md).
 
 Accessing these settings allows you to manage stack configuration, authentication credentials, and user permissions effectively.
 

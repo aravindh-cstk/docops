@@ -18,7 +18,7 @@ This page explains how to share and re-use assets between two Contentstack stack
 
 **Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release.
 
-To manage our website content effectively, we often make use of multiple stacks and store content and related assets in respective [stacks](/docs/developers/set-up-stack/about-stack).
+To manage our website content effectively, we often make use of multiple stacks and store content and related assets in respective [stacks](../set-up-stack/about-stack.md).
 
 In this guide, we will discuss how to share and re-use [assets](/docs/content-managers/working-with-assets/about-assets) between stacks. We will create two stacks and by using an extension in one of the stacks, we will fetch assets from the other stack into this stack.
 
@@ -26,7 +26,7 @@ In this guide, we will discuss how to share and re-use [assets](/docs/content-ma
 - [Contentstack Account](https://app.contentstack.com/#!/login)
 - [ngrok](https://ngrok.com/download) for creating a secured tunnel
 
-**Process overview**: We will create two stacks: Stack A and Stack B. We will create an [extension](/docs/developers/about-experience-extensions) in one of the [content types](/docs/developers/create-content-types/about-content-types) in Stack B and fetch the assets from Stack A through the extension that we have created in Stack B.
+**Process overview**: We will create two stacks: Stack A and Stack B. We will create an [extension](../experience-extensions-overview/about-experience-extensions.md) in one of the [content types](../create-content-types/about-content-types.md) in Stack B and fetch the assets from Stack A through the extension that we have created in Stack B.
 
 The extension will allow us to choose multiple assets from Stack A and save it in an array of a JSON response. It will store the UIDs of the assets (and the assets itself) that you have selected from the Stack A.
 
@@ -48,7 +48,7 @@ Log in to your [Contentstack account](https://app.contentstack.com/) and follow 
 In your stack, navigate to the “Settings” icon on the left navigation panel, and select **Extensions**.
 - On the **Extensions** page, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
-- On the **Create New Extension** page, enter values in the fields as given below:**Title**: Provide a suitable title for your custom field. This title will be visible when you select the extension in the [custom field](/docs/developers/create-content-types/custom) in your content type.
+- On the **Create New Extension** page, enter values in the fields as given below:**Title**: Provide a suitable title for your custom field. This title will be visible when you select the extension in the [custom field](../create-content-types/custom.md) in your content type.
 - **Field data type**: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple**: You can leave this field unchecked or select it if your custom field will expect multiple values. In such a case, the field will save the input values in an array. For this example, keep this option checked as we will be adding multiple files.
 - **Hosting method**: Select the **External hosting** option and we will add the URL where the code is hosted. For now leave this blank, we will add the URL later.
@@ -128,11 +128,11 @@ The port number is the one that you generated in the above steps, in our case it
 ## Use Your Custom Field Extension
 Once you have added a custom field, you can use it in your content type like any other field. Log in to Contentstack and open Stack B. Then, to add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the **Custom** field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the **Custom** field to it.
 - Hover over the **Custom** field and click the “Settings” gear icon.
 - Under **Select Extension**, select the extension that we have created for this exercise.
 - After adding other relevant fields in your content type, click on either **Save** or **Save and Close** to save your changes
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see your custom field (the name of our custom field is "asset") in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see your custom field (the name of our custom field is "asset") in action.
 - Click on the **Choose Assets** button as shown in the following screenshot:
 - When you click on **Choose Assets**, a window pops up that allows you choose assets from Stack A as shown below:
 - As you can see above, multiple assets are fetched from Stack A and in the following screenshot, you can see two images are selected to be saved in our Stack B entry:

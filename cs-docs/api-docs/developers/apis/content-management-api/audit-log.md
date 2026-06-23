@@ -14,7 +14,7 @@ last_updated: 2026-06-02
 
 Audit log displays a record of all the activities performed in a stack and helps you keep a track of all published items, updates, deletes, and current status of the existing content.
 
-Read more about [Audit Log](/docs/developers/set-up-stack/monitor-stack-activities-in-audit-log).
+Read more about [Audit Log](../../../../cs-docs/developers/set-up-stack/monitor-stack-activities-in-audit-log.md).
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -26,7 +26,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 The Get audit log request is used to retrieve the audit log of a stack.
 
-You can apply queries to filter the results. Refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section for more details.  
+You can apply queries to filter the results. Refer to the [Queries](../../../api-detail/content-delivery-api.md#queries) section for more details.  
 To configure the permissions for your application via OAuth, please include the cm.audit-logs:read scope.
 
 **Note:** You can retrieve audit log information only for 30 days prior to the current day (for an organization).

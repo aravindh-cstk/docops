@@ -137,7 +137,7 @@ The Get a single team request returns comprehensive information of a specific te
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team of which you want to retrieve the details. The UID of a team is unique across an organization. Execute the [Get all teams](./api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 
 #### Query Parameters
@@ -285,7 +285,7 @@ The Update a team request is used to modify details, such as adding or removing 
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team you want to update. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team you want to update. The UID of a team is unique across an organization. Execute the [Get all teams](./api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 
 #### Query Parameters
@@ -372,7 +372,7 @@ The Delete a team request deletes an existing team along with all its associated
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team you want to update. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team you want to update. The UID of a team is unique across an organization. Execute the [Get all teams](./api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 
 #### Headers
@@ -386,7 +386,7 @@ The Delete a team request deletes an existing team along with all its associated
 
 ## Users
 
-All accounts registered with Contentstack are known as [Users](/docs/developers/invite-users-and-assign-roles/about-stack-users). An organization can have many users with varying permissions and roles.
+All accounts registered with Contentstack are known as [Users](../cs-docs/developers/invite-users-and-assign-roles/about-stack-users.md). An organization can have many users with varying permissions and roles.
 
 ##### Get all users of team
 
@@ -406,7 +406,7 @@ Additionally, you can also set the query parameters: includeUserDetails or inclu
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](./api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 
 #### Query Parameters
@@ -495,7 +495,7 @@ You need to pass the email IDs of the users in the request body as follows:
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](./api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 
 #### Headers
@@ -530,10 +530,10 @@ The Remove a user from team request allows you to remove an existing user from a
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](./api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 - **user_uid** (required)
-  Enter the UID of the user you want to remove from the team. The UID of a user is unique across an organization. Execute the [Get all users of team](/docs/developers/apis/content-management-api#get-all-users-of-team) request to retrieve the UID of a user.
+  Enter the UID of the user you want to remove from the team. The UID of a user is unique across an organization. Execute the [Get all users of team](./api-detail/content-management-api.md#get-all-users-of-team) request to retrieve the UID of a user.
   Default: `user_uid`
 
 #### Headers
@@ -565,7 +565,7 @@ The Get all stack role mapping request allows you to retrieve details of all ass
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](./api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 
 #### Headers
@@ -622,7 +622,7 @@ You need to pass the API key of the stack and the role UIDs in the request body 
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](./api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 
 #### Headers
@@ -683,7 +683,7 @@ The Update a stack role mapping request allows you to update the stack roles for
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](./api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 - **stack_api_key** (required)
   Enter the API key of the stack.
@@ -736,7 +736,7 @@ The Remove a stack role mapping request allows you to delete the associations of
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](./api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 - **stack_api_key** (required)
   Enter the API key of the stack.

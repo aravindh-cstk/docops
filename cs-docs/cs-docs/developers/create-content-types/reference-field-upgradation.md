@@ -16,8 +16,8 @@ This page explains the Reference Field Upgradation introduced on 29th July 2019,
 
 ## Reference Field Upgradation
 
-On 29th July 2019, we introduced a new version of the [**Reference**](/docs/developers/create-content-types/reference) field that provides referencing to multiple [content types](/docs/developers/create-content-types/about-content-types). Here's what changed:
-- For [stacks](/docs/developers/set-up-stack/about-stack) **created after 29th July 2019**, you will automatically be using the upgraded Reference field.
+On 29th July 2019, we introduced a new version of the [**Reference**](./reference.md) field that provides referencing to multiple [content types](./about-content-types.md). Here's what changed:
+- For [stacks](../set-up-stack/about-stack.md) **created after 29th July 2019**, you will automatically be using the upgraded Reference field.
 - For stacks **created before 29th July 2019**, your Reference field will continue referencing a single content type, but you can upgrade to the new version by updating the schema of your Reference field (shown in table below) in your content type.
 
 When you upgrade your Reference field, the input format of your Reference field changes from *array of strings* to *array of objects*. The change in the format of the Reference field is as follows:
@@ -52,7 +52,7 @@ After upgrading/downgrading the Reference field, you need to save the entry and 
 ## Common questions
 
 **Q: Which stacks automatically use the upgraded Reference field?**  
-A: For [stacks](/docs/developers/set-up-stack/about-stack) **created after 29th July 2019**, you will automatically be using the upgraded Reference field.
+A: For [stacks](../set-up-stack/about-stack.md) **created after 29th July 2019**, you will automatically be using the upgraded Reference field.
 
 **Q: What changes in the input format when upgrading the Reference field?**  
 A: The input format changes from *array of strings* to *array of objects*.

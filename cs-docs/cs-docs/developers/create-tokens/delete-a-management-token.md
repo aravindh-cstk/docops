@@ -17,9 +17,9 @@ This page explains how to delete a management token in Contentstack, who is auth
 
 ## Delete a Management Token
 
-You can delete a management token in Contentstack if it's no longer required. Deleting a token is permanent and will immediately terminate all sessions using that token. Only authorized users, such as the stack [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) or [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), must perform this action with caution.
+You can delete a management token in Contentstack if it's no longer required. Deleting a token is permanent and will immediately terminate all sessions using that token. Only authorized users, such as the stack [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) or [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin), must perform this action with caution.
 
-To delete a management token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To delete a management token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon in the left navigation panel.
 - Select **Tokens** in the list.
 - Navigate to the **Management Tokens** tab to view the list of all the existing management tokens for the stack.
@@ -31,7 +31,7 @@ To delete a management token, log in to your [Contentstack account](https://www.
 ## Common questions
 
 ### Who can delete a management token?
-Only authorized users, such as the stack [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) or [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), must perform this action with caution.
+Only authorized users, such as the stack [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) or [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin), must perform this action with caution.
 
 ### What happens immediately after deleting a management token?
 Deleting a token is permanent and will immediately terminate all sessions using that token.

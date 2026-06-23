@@ -23,14 +23,14 @@ The Personalize Edge SDK enables you to personalize content for your Contentstac
 
 ## Key Features
 
-- Fetch and manage personalized user experiences with the [manifest](/docs/personalize/glossary-key-features#user-manifest)
+- Fetch and manage personalized user experiences with the [manifest](../../../../personalize/glossary-key-features.md#user-manifest)
 - Automatically leverage preset attributes such as query parameters, device types and referrer
 - Trigger impressions and conversions, set custom attributes, and set custom user IDs.
-- Seamlessly retrieve CMS [variant aliases](/docs/personalize/glossary-key-features#variant-aliases) for a user’s active variants to fetch personalized content
+- Seamlessly retrieve CMS [variant aliases](../../../../personalize/glossary-key-features.md#variant-aliases) for a user’s active variants to fetch personalized content
 
 ## Next Steps
 
-[Get Started with JavaScript Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk/)
+[Get Started with JavaScript Personalize Edge SDK](./get-started-with-javascript-personalize-edge-sdk.md)
 
 ## Common questions
 
@@ -38,10 +38,10 @@ The Personalize Edge SDK enables you to personalize content for your Contentstac
 Developers building Contentstack-powered digital properties who want to personalize content by fetching user-specific variants, triggering events, and setting attributes.
 
 ### What can I do with the manifest?
-You can fetch and manage personalized user experiences with the [manifest](/docs/personalize/glossary-key-features#user-manifest).
+You can fetch and manage personalized user experiences with the [manifest](../../../../personalize/glossary-key-features.md#user-manifest).
 
 ### How do I fetch personalized content from the CMS?
-You can retrieve CMS [variant aliases](/docs/personalize/glossary-key-features#variant-aliases) for a user’s active variants to fetch personalized content.
+You can retrieve CMS [variant aliases](../../../../personalize/glossary-key-features.md#variant-aliases) for a user’s active variants to fetch personalized content.
 
 ### Where do I start after reading this page?
-Follow the Next Steps link: [Get Started with JavaScript Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk/).
+Follow the Next Steps link: [Get Started with JavaScript Personalize Edge SDK](./get-started-with-javascript-personalize-edge-sdk.md).

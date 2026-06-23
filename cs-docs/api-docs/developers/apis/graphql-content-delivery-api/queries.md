@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # GraphQL | Queries
 
-In this section, we learn how to fetch one or more [entries](/docs/content-managers/author-content/about-entries) or specific [fields](/docs/developers/create-content-types/about-fields) of those entries. We also learn how to fetch entries from multiple [content types](/docs/developers/create-content-types/about-content-types).
+In this section, we learn how to fetch one or more [entries](../../../../cs-docs/content-managers/author-content/about-entries.md) or specific [fields](../../../../cs-docs/developers/create-content-types/about-fields.md) of those entries. We also learn how to fetch entries from multiple [content types](../../../../cs-docs/developers/create-content-types/about-content-types.md).
 
 ## Get a List of Entries
 
@@ -303,7 +303,7 @@ query Query_2 {
 
 ## Get Entries from Multiple Languages
 
-You can fetch [localized](/docs/developers/multilingual-content/about-localization) versions of entries present in a single or multiple content types through a single API request. This query uses GraphQL’s [aliases](https://graphql.org/learn/queries/#aliases) to identify each set of localized entry versions.
+You can fetch [localized](../../../../cs-docs/developers/multilingual-content/about-localization.md) versions of entries present in a single or multiple content types through a single API request. This query uses GraphQL’s [aliases](https://graphql.org/learn/queries/#aliases) to identify each set of localized entry versions.
 
 You can use a [fragment](https://graphql.org/learn/queries/#fragments) to define fields such as “Title” and “Launch Date” and reuse it to query across multiple locales.
 
@@ -448,7 +448,7 @@ query {
 
 ## Get Group Fields while Retrieving Entries
 
-You can fetch data of only certain fields of a **Group** field that is used within a specific entry of a content type. To do this, you need to specify the content type UID, the entry UID, the Group field UID, and the UIDs of the fields that are part of the Group field in the query. Read more about [Group fields](/docs/developers/create-content-types/group).
+You can fetch data of only certain fields of a **Group** field that is used within a specific entry of a content type. To do this, you need to specify the content type UID, the entry UID, the Group field UID, and the UIDs of the fields that are part of the Group field in the query. Read more about [Group fields](../../../../cs-docs/developers/create-content-types/group.md).
 
 So, for instance, the **Product** content type has a Group field named **Bank Offers** and, within this Group field, we have a subfield named **Card Type**. If you want to retrieve the entries in which the value for the Card Type field is **Debit Card**, the query for this request would look as follows:
 
@@ -479,11 +479,11 @@ query {
 
 ## Get JSON RTE Fields while Retrieving Entries
 
-You can fetch the JSON-formatted data of a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor) (RTE) field added to the entries of a content type. To do this, you need to specify the **content type UID**, the **JSON RTE field UID**, and the **json** field.
+You can fetch the JSON-formatted data of a [JSON Rich Text Editor](../../../../cs-docs/developers/json-rich-text-editor.md) (RTE) field added to the entries of a content type. To do this, you need to specify the **content type UID**, the **JSON RTE field UID**, and the **json** field.
 
 The json field returns all the content blocks present inside the JSON RTE in the API response.
 
-**Note**: To fetch entries or assets embedded within the JSON RTE, you need to specify the embedded_itemsConnection field. Refer to the [Include Embedded RTE Items](/docs/developers/apis/graphql-content-delivery-api#include-embedded-rte-items) section for more information.
+**Note**: To fetch entries or assets embedded within the JSON RTE, you need to specify the embedded_itemsConnection field. Refer to the [Include Embedded RTE Items](../../../api-detail/graphql-content-delivery-api.md#include-embedded-rte-items) section for more information.
 
 **Example**: In the **Product** content type, we have a "JSON Rich Text Editor" field named **Cart Items**. This field stores information about products that you have already added to your cart (kitchen appliances in this example), and also contains a company logo.
 
@@ -518,7 +518,7 @@ query {
 
 The response body of this query will include details of the embedded appliance entries and company logo asset. The json field inside the **Cart Items** JSON RTE returns all your editor content in JSON format.
 
-**Additional Resource**: Refer to the [JSON RTE schema](/docs/developers/json-rich-text-editor) documentation to understand how it stores and returns content.
+**Additional Resource**: Refer to the [JSON RTE schema](../../../../cs-docs/developers/json-rich-text-editor.md) documentation to understand how it stores and returns content.
 
 ### Get JSON RTE Fields while Retrieving Entries
 
@@ -529,9 +529,9 @@ The response body of this query will include details of the embedded appliance e
 
 ## Get Custom Fields while Retrieving Entries
 
-You can fetch the data of [Custom Field Extensions](/docs/developers/create-custom-fields/about-custom-fields) added to the entries of a content type. To do this, you need to specify the content type UID, the extension UID, and the UIDs of other fields that you want to fetch in the query.
+You can fetch the data of [Custom Field Extensions](../../../../cs-docs/developers/create-custom-fields/about-custom-fields.md) added to the entries of a content type. To do this, you need to specify the content type UID, the extension UID, and the UIDs of other fields that you want to fetch in the query.
 
-Contentstack allows you to retrieve the details of custom fields with input datatypes such as Number, Text, Boolean, Date, File, Reference, and JSON. Read more about [Extensions](/docs/developers/about-experience-extensions).
+Contentstack allows you to retrieve the details of custom fields with input datatypes such as Number, Text, Boolean, Date, File, Reference, and JSON. Read more about [Extensions](../../../../cs-docs/developers/experience-extensions-overview/about-experience-extensions.md).
 
 **Example**: In the **Product** content type, we have a "JSON Editor" custom field named **Helpful Links**. This field stores links to seller information as well as return policy norms for a specific product. If, for instance, you want to retrieve the value for this field, your query will look as follows:
 

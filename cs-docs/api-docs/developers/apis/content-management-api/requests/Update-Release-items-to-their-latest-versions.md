@@ -41,7 +41,7 @@ In case an un-localized entry in the release has been localized later, this requ
 ## URL Parameters
 
 - **release_uid** (required)
-  Enter the unique ID of the release of which you want to update the items (entries and assets) to their latest versions. You can find the release uid by running the [Get all Releases](/docs/developers/apis/content-management-api#releases-collection) API request.
+  Enter the unique ID of the release of which you want to update the items (entries and assets) to their latest versions. You can find the release uid by running the [Get all Releases](../../../../api-detail/content-management-api.md#releases-collection) API request.
   Default: `blt045d036eb8f2f9df`
 
 ## Query Parameters

@@ -126,7 +126,7 @@ Now, refer the next section to learn how to import the exported content into Con
 
 The exported content is now ready to be imported into  Contentstack. This content will be in JSON format and stored at the location provided in the “index.json” configuration file from where you can later import the data into Contentstack.
 
-To import the content, follow the steps mentioned in the [Import Content into Contentstack](/docs/developers/import-content-into-contentstack) document.
+To import the content, follow the steps mentioned in the [Import Content into Contentstack](./import-content-into-contentstack.md) document.
 
 ## Common questions
 

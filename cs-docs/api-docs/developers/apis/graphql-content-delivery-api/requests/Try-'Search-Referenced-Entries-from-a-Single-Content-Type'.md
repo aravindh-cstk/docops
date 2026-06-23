@@ -16,7 +16,7 @@ last_updated: 2023-03-28
 
 Get entries having values based on referenced fields. This query retrieves all entries that satisfy query conditions made on referenced fields that refer to a single content type.
 
-**Note**: If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](/docs/developers/create-content-types/reference-field-upgradation) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
+**Note**: If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](../../../../../cs-docs/developers/create-content-types/reference-field-upgradation.md) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
 
 Let us use the equals operator to search based on the **Title** field of the referenced content type, **Category**.
 

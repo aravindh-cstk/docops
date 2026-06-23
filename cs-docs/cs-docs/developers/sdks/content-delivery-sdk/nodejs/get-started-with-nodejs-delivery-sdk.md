@@ -16,14 +16,14 @@ This page explains how to install, configure, and use the Contentstack Node.js D
 
 ## Get Started with NodeJS Delivery SDK
 
-This guide will help you get started with Contentstack [Node.js SDK](/docs/developers/sdks/content-delivery-sdk/nodejs/about-nodejs-delivery-sdk/) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Node.js SDK](./about-nodejs-delivery-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 To get started with Node.js, you will need the following:
 - [Node.js](https://nodejs.org/en) version 20 or later
 
 ## SDK Installation and Setup
-Contentstack offers seven [regions:](/docs/developers/contentstack-regions/about-regions) **AWS North America**,** AWS Europe**, **AWS Australia, Azure North America**, **Azure Europe**, **GCP North America, **and **GCP Europe **as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use the SDKs offered by Contentstack.
+Contentstack offers seven [regions:](../../../contentstack-regions/about-regions.md) **AWS North America**,** AWS Europe**, **AWS Australia, Azure North America**, **Azure Europe**, **GCP North America, **and **GCP Europe **as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use the SDKs offered by Contentstack.
 
 To use SDKs for the Europe, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.
 
@@ -39,7 +39,7 @@ import Contentstack from 'contentstack';
 ```
 
 ## Initialize SDK
-To initialize the SDK, specify the** stack’s API key**, [**delivery token**](/docs/developers/create-tokens/about-delivery-tokens), and name of the [**environment**](/docs/developers/set-up-environments/about-environments) where you have published the content.
+To initialize the SDK, specify the** stack’s API key**, [**delivery token**](../../../create-tokens/about-delivery-tokens.md), and name of the [**environment**](../../../set-up-environments/about-environments.md) where you have published the content.
 
 ```
 // Initialize the Contentstack Stack
@@ -55,10 +55,10 @@ const Stack = new Contentstack.Stack({ 'api_key': "stack_api_key", 'access_token
 Once you have initialized the SDK, you can start getting content in your app.
 
 ## Basic Queries
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
 ### Get a Single Entry
-To get a single [entry](/docs/content-managers/author-content/about-entries), you need to specify the [content type](/docs/developers/create-content-types/about-content-types) as well as the id of the entry.
+To get a single [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) as well as the id of the entry.
 
 ```
 const Query = Stack.ContentType('blog').Entry("entry_uid")
@@ -91,12 +91,12 @@ Query
      // err object
  });
 ```
-These were the examples of some of the basic queries of the NodeJS SDK. For advanced queries, refer to Contentstack NodeJS [API reference](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/).
+These were the examples of some of the basic queries of the NodeJS SDK. For advanced queries, refer to Contentstack NodeJS [API reference](../../../create-content-types/reference.md).
 
-**Note:** Currently, the NodeJS SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](/docs/developers/apis/content-delivery-api#queries) section of our Content Delivery API documentation.
+**Note:** Currently, the NodeJS SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](../../../../../api-docs/api-detail/content-delivery-api.md#queries) section of our Content Delivery API documentation.
 
 #### Paginating Responses
-In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/#query-skip) and [limit](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/#query-limit) parameters in subsequent requests.
+In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](../../../create-content-types/reference.md#query-skip) and [limit](../../../create-content-types/reference.md#query-limit) parameters in subsequent requests.
 
 ```
 const Stack = Contentstack.Stack("api_key", "delivery_token", "environment_name");
@@ -113,14 +113,14 @@ We have a URL size limitation of 8KB on API Requests that hit our CDN services. 
 
 The NodeJS SDK does not support multiple content types referencing in a single query.
 
-Currently, the NodeJS SDK does not yet support querying Global Field schemas ([All Global Fields](/docs/developers/apis/content-delivery-api#all-global-fields) and [Single Global Field](/docs/developers/apis/content-delivery-api#single-global-field)). You can include these details when querying content type details ([All Content Types](/docs/developers/apis/content-delivery-api#all-content-types) and [Single Content Type](/docs/developers/apis/content-delivery-api#single-content-type)) with the `include_global_field_schema query parameter`.
+Currently, the NodeJS SDK does not yet support querying Global Field schemas ([All Global Fields](../../../../../api-docs/api-detail/content-delivery-api.md#all-global-fields) and [Single Global Field](../../../../../api-docs/api-detail/content-delivery-api.md#single-global-field)). You can include these details when querying content type details ([All Content Types](../../../../../api-docs/api-detail/content-delivery-api.md#all-content-types) and [Single Content Type](../../../../../api-docs/api-detail/content-delivery-api.md#single-content-type)) with the `include_global_field_schema query parameter`.
 
 ## More Resources
 - [Sample website using Nuxt.js](/docs/developers/sample-apps/build-a-website-using-nuxt-js-and-contentstack)
 - [Sample website using Next.js](https://www.contentstack.com/docs/developers/sample-apps/build-a-website-using-next-js-and-contentstack)
 - [Sample website using Metalsmith](/docs/developers/sample-apps/build-a-website-using-metalsmith-and-contentstack)
-- [API Reference](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/)
-- [Node.js (JavaScript) SDK Changelog](/docs/developers/sdks/content-delivery-sdk/javascript-browser/javascript-sdk-changelog/)
+- [API Reference](../../../create-content-types/reference.md)
+- [Node.js (JavaScript) SDK Changelog](../javascript-browser/javascript-sdk-changelog.md)
 
 ## Common questions
 

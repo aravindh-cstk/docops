@@ -16,17 +16,17 @@ This page explains the **Limit for Multiple Choices** property for the **Select*
 
 ## Limit for Multiple Choices
 
-The **Limit for Multiple Choices** property is associated with the [**Select**](/docs/developers/create-content-types/select) field. It lets you set a selection limit on the choices.
+The **Limit for Multiple Choices** property is associated with the [**Select**](./select.md) field. It lets you set a selection limit on the choices.
 
-While setting up the **Select **field in your [content type](/docs/developers/create-content-types/about-content-types), if the **Selection Type** is set to **Multiple Choices**, then only you can set the minimum and/or maximum number of selections.
+While setting up the **Select **field in your [content type](./about-content-types.md), if the **Selection Type** is set to **Multiple Choices**, then only you can set the minimum and/or maximum number of selections.
 
 **Note**: This property is only available for these **Display Type**: **Checkbox **and **Dropdown**
 
 For example, if you want the user to select a minimum of two items and a maximum of five items, you can set this limit through this property, as shown in the image below:
 
-**Additional Resources**: To set this property to the **Select** field [when creating your content type via an API request](/docs/developers/apis/content-management-api#create-a-content-type), refer to the JSON payload of the [Select](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#select) field.
+**Additional Resources**: To set this property to the **Select** field [when creating your content type via an API request](../../../api-docs/api-detail/content-management-api.md#create-a-content-type), refer to the JSON payload of the [Select](./json-schema-for-creating-a-content-type.md#select) field.
 
-Changing an existing field property may result in loss of data. To avoid data loss, make sure you go through our [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide before you go ahead.
+Changing an existing field property may result in loss of data. To avoid data loss, make sure you go through our [Content Type Change Management](../content-modeling/content-type-change-management.md) guide before you go ahead.
 
 ## Common questions
 

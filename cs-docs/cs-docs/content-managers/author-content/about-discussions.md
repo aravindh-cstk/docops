@@ -36,10 +36,10 @@ You can access and manage all discussions from the Discussions section, located 
 - Each discussion can include up to **1000 comments**.
 
 Refer to the following sections to learn how to manage your discussions:
-- [Resolve a Discussion](/docs/content-managers/working-with-entries/resolve-a-discussion)
-- [Reopen a Discussion](/docs/content-managers/working-with-entries/reopen-a-discussion)
-- [Relink a Discussion](/docs/content-managers/working-with-entries/relink-a-discussion)
-- [View Discussions Timeline](/docs/content-managers/working-with-entries/view-discussions-timeline)
+- [Resolve a Discussion](./resolve-a-discussion.md)
+- [Reopen a Discussion](./reopen-a-discussion.md)
+- [Relink a Discussion](./relink-a-discussion.md)
+- [View Discussions Timeline](./view-discussions-timeline.md)
 
 ## Common questions
 

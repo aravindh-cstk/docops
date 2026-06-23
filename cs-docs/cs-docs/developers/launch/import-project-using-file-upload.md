@@ -27,7 +27,7 @@ This document guides you through the process of creating a project in Launch by 
 
 ## Upload a file and deploy a project
 
-**Note:** Only the Organization [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles/#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to create projects in a stack for Launch.
+**Note:** Only the Organization [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) has the right to create projects in a stack for Launch.
 - Click the **Launch **option from the dashboard, as shown below.
 - Click **+ New Project**.
 - From the **Create New Project** modal, click **Upload a file**.

@@ -19,8 +19,8 @@ This page explains how to remove a custom name from an asset version in Contents
 
 Asset versions in Contentstack can have custom names for better organization and clarity. You can remove a custom name and revert the version to its default naming convention (e.g., "Version 2").
 
-To remove an [asset](/docs/content-managers/author-content/about-assets) version name, log in to your [Contentstack account](https://www.contentstack.com/login) and follow these steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Assets” icon in the left navigation panel.
+To remove an [asset](./about-assets.md) version name, log in to your [Contentstack account](https://www.contentstack.com/login) and follow these steps:
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel.
 - Navigate to the asset you want to update.
 - Click the **version** **dropdown** in the top-right corner of the page.
 - From the dropdown menu, view the list of all asset versions. Click the **Rename** icon next to the version you want to name.

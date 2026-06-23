@@ -24,29 +24,29 @@ Date
 
 ##### Content
 
-The **Date** field enables users to select a specific date and time through a calendar UI. It uses the ISO 8601 format (`YYYY-MM-DDTHH:MM:SSZ`) and supports timezone settings for accurate scheduling across different regions and user [locales](/docs/developers/multilingual-content/about-languages).
+The **Date** field enables users to select a specific date and time through a calendar UI. It uses the ISO 8601 format (`YYYY-MM-DDTHH:MM:SSZ`) and supports timezone settings for accurate scheduling across different regions and user [locales](../multilingual-content/about-languages.md).
 
 ## Key Features
-- Displays a calendar with date and time pickers on the [entry](/docs/content-managers/working-with-entries/about-entries) page.
+- Displays a calendar with date and time pickers on the [entry](../../content-managers/author-content/about-entries.md) page.
 - Optionally hides the time picker using the **Hide Time** property under the field settings.
 - Supports time zone configurations based on user locale and stack settings.
 
 ## Configurable Properties
-You can edit the following field [properties](/docs/developers/create-content-types/about-field-properties) at any time:
-- [Display Name](/docs/developers/create-content-types/display-name)
-- [Unique ID](/docs/developers/create-content-types/unique-id)
-- [Instruction Value](/docs/developers/create-content-types/instruction-value)
-- [Help Text](/docs/developers/create-content-types/help-text)
-- [Default Value](/docs/developers/create-content-types/default-value)
+You can edit the following field [properties](./about-field-properties.md) at any time:
+- [Display Name](./display-name.md)
+- [Unique ID](./unique-id.md)
+- [Instruction Value](./instruction-value.md)
+- [Help Text](./help-text.md)
+- [Default Value](./default-value.md)
 
 Additionally, toggleable settings include:
-- [Mandatory](/docs/developers/create-content-types/mandatory)
+- [Mandatory](./mandatory.md)
 - Hide Time
-- [Set Date Range](/docs/developers/create-content-types/set-date-range)
-- [Multiple](/docs/developers/create-content-types/multiple)
-- [Non-localizable](/docs/developers/create-content-types/non-localizable)
+- [Set Date Range](./set-date-range.md)
+- [Multiple](./multiple.md)
+- [Non-localizable](./non-localizable.md)
 
-**Warning:** Changing the configuration of an existing field in a published Content Type may result in data loss. To avoid this, refer to the [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide.
+**Warning:** Changing the configuration of an existing field in a published Content Type may result in data loss. To avoid this, refer to the [Content Type Change Management](../content-modeling/content-type-change-management.md) guide.
 
 ## Setting Date and Time
 After adding the Date field to your Content Type, open **Date Properties** and select the **Custom Date** option to configure your preferred date and time format.
@@ -54,8 +54,8 @@ After adding the Date field to your Content Type, open **Date Properties** and s
 **Tip:** Consider the target audience's local time zones when configuring default values. This ensures accurate content scheduling across global teams.
 
 **Additional Resource:**
-- To dynamically show or hide this field based on user input, use the [Field Visibility Rule](/docs/developers/create-content-types/about-field-visibility-rules) feature.
-- To add a Date field using the Content Management API, refer to the [JSON payload](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#date) example in our CMA [request](/docs/developers/apis/content-management-api#create-a-content-type).
+- To dynamically show or hide this field based on user input, use the [Field Visibility Rule](./about-field-visibility-rules.md) feature.
+- To add a Date field using the Content Management API, refer to the [JSON payload](./json-schema-for-creating-a-content-type.md#date) example in our CMA [request](../../../api-docs/api-detail/content-management-api.md#create-a-content-type).
 
 ## Best Practices
 - Use the ISO format for all programmatic operations to ensure compatibility.
@@ -76,4 +76,4 @@ Yes. You can optionally hide the time picker using the **Hide Time** property un
 It uses the ISO 8601 format (`YYYY-MM-DDTHH:MM:SSZ`).
 
 ### Is it safe to change Date field settings after publishing?
-**Warning:** Changing the configuration of an existing field in a published Content Type may result in data loss. Refer to the [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide.
+**Warning:** Changing the configuration of an existing field in a published Content Type may result in data loss. Refer to the [Content Type Change Management](../content-modeling/content-type-change-management.md) guide.

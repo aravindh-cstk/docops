@@ -22,7 +22,7 @@ This page explains how to delete an entry variant in Contentstack, including the
 Deleting an entry variant in Contentstack allows you to remove specific personalized versions of your content that are no longer needed.
 
 To delete an entry variant, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries **icon in the left navigation panel and select an existing entry variant.
+- Navigate to the desired [stack](../../developers/set-up-stack/about-stack.md), then click the **Entries **icon in the left navigation panel and select an existing entry variant.
 - Click the horizontal ellipsis at the bottom of the entry editor and click the **Delete **button.
 - In the **Delete Entry Variant** modal that appears, under **Select Language(s)**, select the locale(s) in which you want to delete the entry.
 - Confirm by clicking the **Delete **button.**Note: **Once deleted, you cannot recover the entry variant.
@@ -31,7 +31,7 @@ By following these steps, you can efficiently delete entry variants in Contentst
 
 ## API Reference
 
-To delete an entry variant via API, refer to the [Delete Entry Variant](/docs/developers/apis/content-management-api#delete-entry-variant) API requests.
+To delete an entry variant via API, refer to the [Delete Entry Variant](../../../api-docs/api-detail/content-management-api.md#delete-entry-variant) API requests.
 
 ## Common questions
 
@@ -45,4 +45,4 @@ Click the horizontal ellipsis at the bottom of the entry editor and click the **
 Yes. In the **Delete Entry Variant** modal, under **Select Language(s)**, select the locale(s) in which you want to delete the entry.
 
 ### Is there an API to delete an entry variant?
-Yes. Refer to the [Delete Entry Variant](/docs/developers/apis/content-management-api#delete-entry-variant) API requests.
+Yes. Refer to the [Delete Entry Variant](../../../api-docs/api-detail/content-management-api.md#delete-entry-variant) API requests.

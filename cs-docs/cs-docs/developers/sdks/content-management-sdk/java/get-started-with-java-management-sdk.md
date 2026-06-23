@@ -17,7 +17,7 @@ This page explains how to install, authenticate, initialize, and perform basic o
 
 ## Get Started with Java Management SDK
 
-This guide will help you get started with Contentstack [Java Management SDK](/docs/developers/java/about-java-management-sdk) (that uses Content Management APIs) to manage Java apps powered by Contentstack.
+This guide will help you get started with Contentstack [Java Management SDK](./about-java-management-sdk.md) (that uses Content Management APIs) to manage Java apps powered by Contentstack.
 
 ## Prerequisite
 - **Java version 8** or later.
@@ -64,7 +64,7 @@ To use this SDK, you need to authenticate users. You can do this by using an aut
 
 ### Authtoken
 
-An [authtoken](/docs/developers/create-tokens/types-of-tokens#authentication-tokens-authtokens-) is a read-write token used to make authorized CMA requests, and it is a user-specific token.
+An [authtoken](../../../create-tokens/types-of-tokens.md#authentication-tokens-authtokens-) is a read-write token used to make authorized CMA requests, and it is a user-specific token.
 
 ```
 Contentstack client = new Contentstack.Builder().setAuthtoken("AUTHTOKEN").build();
@@ -81,7 +81,7 @@ client.login("EMAIL", "PASSWORD");
 
 ### Management Token
 
-[Management tokens](/docs/developers/create-tokens/about-management-tokens) are stack-level tokens with no users attached to them.
+[Management tokens](../../../create-tokens/about-management-tokens.md) are stack-level tokens with no users attached to them.
 
 ```
 Contentstack client = new Contentstack.Builder().build();

@@ -20,7 +20,7 @@ This page explains how to access and use Polaris (Agent OS) inside the Contentst
 
 **Note:** **Agent OS** is currently in **Early Access**. Features may change and limitations may apply. We recommend using it in non-production environments until general availability. For more information, contact [support](mailto:support@contentstack.com).
 
-Polaris is an AI-powered co-pilot embedded directly within the Contentstack CMS. It allows you to use natural language prompts to perform real CMS actions, such as creating or updating [entries](/docs/content-managers/author-content/about-entries) and [assets](/docs/content-managers/author-content/about-assets), all while staying fully within the CMS interface and permission model.
+Polaris is an AI-powered co-pilot embedded directly within the Contentstack CMS. It allows you to use natural language prompts to perform real CMS actions, such as creating or updating [entries](../content-managers/author-content/about-entries.md) and [assets](../content-managers/author-content/about-assets.md), all while staying fully within the CMS interface and permission model.
 
 This guide shows how to get started with Polaris across three common CMS contexts. For each context, we will detail how Polaris works, the types of prompts you can use, and how it safely executes actions using previews and confirmations.
 - Entry Editor
@@ -29,14 +29,14 @@ This guide shows how to get started with Polaris across three common CMS context
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) access for the Contentstack stack
+- [Admin](../developers/invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../developers/invite-users-and-assign-roles/types-of-roles.md#owner) access for the Contentstack stack
 - Polaris plan for your organization
 
 ## Accessing Polaris
 
 Let's start by logging into the [Contentstack account](https://www.contentstack.com/login/) and following the steps given below:
 - Open the stack.
-- Navigate to an [Entry](/docs/content-managers/author-content/about-entries), or [Asset](/docs/content-managers/author-content/about-assets), or [Visual Editor](/docs/content-managers/visual-builder/about-visual-builder) page.
+- Navigate to an [Entry](../content-managers/author-content/about-entries.md), or [Asset](../content-managers/author-content/about-assets.md), or [Visual Editor](/docs/content-managers/visual-builder/about-visual-builder) page.
 - Click the **Polaris** icon to open the **Polaris** **panel** within the CMS interface.The Polaris panel opens as a side panel within the CMS UI. This panel is where you enter prompts and review planned actions and results.
 
 ## Using Polaris in the Entry Editor

@@ -19,7 +19,7 @@ This page explains how to update an existing app in Developer Hub, including bas
 After creating an app, you can update its basic information, OAuth scopes, App URL, and webhook details. You can even enable or disable them.  
 Let’s look at them in detail.
 
-**Note:** You can update your existing app installations from [Marketplace](/docs/developers/marketplace-platform-guides/about-marketplace/). Navigate to Marketplace -> Manage -> Installed Apps. Click **Update **to install an updated version of your app.
+**Note:** You can update your existing app installations from [Marketplace](../marketplace-platform-guides/about-marketplace.md). Navigate to Marketplace -> Manage -> Installed Apps. Click **Update **to install an updated version of your app.
 
 ## Basic Information
 
@@ -72,4 +72,4 @@ In the **OAuth** page, you can update the scopes of either the **App Token** or 
 You can update the **App URL** and edit **Enabled location(s)** or add **Available location(s)** under **App Location(s)**.
 
 ### How do I update existing app installations?
-You can update your existing app installations from [Marketplace](/docs/developers/marketplace-platform-guides/about-marketplace/). Navigate to Marketplace -> Manage -> Installed Apps. Click **Update **to install an updated version of your app.
+You can update your existing app installations from [Marketplace](../marketplace-platform-guides/about-marketplace.md). Navigate to Marketplace -> Manage -> Installed Apps. Click **Update **to install an updated version of your app.

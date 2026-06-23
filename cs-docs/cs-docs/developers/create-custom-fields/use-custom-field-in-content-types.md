@@ -16,32 +16,32 @@ This page explains how to add and use a custom field (extension) inside a Conten
 
 ## Use Custom Field in Content Types
 
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](/docs/developers/developer-hub/custom-field-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](../developer-hub/custom-field-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
-Once you have added a custom field to your [stack](/docs/developers/set-up-stack/about-stack), you can use it in your [content type](/docs/developers/create-content-types/about-content-types) like any other field.
+Once you have added a custom field to your [stack](../set-up-stack/about-stack.md), you can use it in your [content type](../create-content-types/about-content-types.md) like any other field.
 
 To add a custom field in a content type, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your stack and and click on the “Content Models” icon on the left navigation panel.
 - Click on the **+ New Content Type** button.
 - Enter the details as shown in the below image and click **Save and Proceed**.
-- In the Content Type Builder page, add the [Custom](/docs/developers/create-content-types/custom) field in your content type by clicking on the “Insert a field” link represented by a + sign.
+- In the Content Type Builder page, add the [Custom](../create-content-types/custom.md) field in your content type by clicking on the “Insert a field” link represented by a + sign.
 - Under **Select Extension**, select the custom field that you created.
-You can add other [fields](/docs/developers/create-content-types/about-fields) as per requirements.
-- Optionally, you can provide specific configuration settings for your custom extension field within the [**Config Parameters**](/docs/developers/create-content-types/config-parameter-for-custom-fields-only) field in the **Advanced** properties. This setting will be applicable to only this particular instance of the Custom Field.
+You can add other [fields](../create-content-types/about-fields.md) as per requirements.
+- Optionally, you can provide specific configuration settings for your custom extension field within the [**Config Parameters**](../create-content-types/config-parameter-for-custom-fields-only.md) field in the **Advanced** properties. This setting will be applicable to only this particular instance of the Custom Field.
 - After adding the fields, click on either **Save** or **Save and Close** to save your changes.
 
-Now, when you [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for that content type, you will see your custom field in action.
+Now, when you [create an entry](../../content-managers/author-content/create-an-entry.md) for that content type, you will see your custom field in action.
 
 ## Common questions
 
 ### Should I use Experience Extensions or the Custom Field UI location?
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](/docs/developers/developer-hub/custom-field-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](../developer-hub/custom-field-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 ### Where do I select the custom field I created?
 Under **Select Extension**, select the custom field that you created.
 
 ### Can I configure a custom field differently for a specific content type?
-Optionally, you can provide specific configuration settings for your custom extension field within the [**Config Parameters**](/docs/developers/create-content-types/config-parameter-for-custom-fields-only) field in the **Advanced** properties. This setting will be applicable to only this particular instance of the Custom Field.
+Optionally, you can provide specific configuration settings for your custom extension field within the [**Config Parameters**](../create-content-types/config-parameter-for-custom-fields-only.md) field in the **Advanced** properties. This setting will be applicable to only this particular instance of the Custom Field.
 
 ### When will I see the custom field in action?
-Now, when you [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for that content type, you will see your custom field in action.
+Now, when you [create an entry](../../content-managers/author-content/create-an-entry.md) for that content type, you will see your custom field in action.

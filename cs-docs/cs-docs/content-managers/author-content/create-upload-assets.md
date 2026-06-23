@@ -21,11 +21,11 @@ Assets such as images, videos, documents, and other files are essential for crea
 
 You can start adding [assets](/docs/content-managers/working-with-assets/about-assets) directly into your default root location, or you can [create folders](/docs/content-managers/asset-folders/create-a-folder) and upload your assets within them.
 
-**Note:** Assets are specific to the branch they are uploaded to. For example, an asset uploaded to the **development** branch can only be accessed within that branch. Assets in non-main branches include the branch UID in their URL. Refer to the [Branch-Specific Modules](/docs/developers/branches/branch-specific-modules) document for details.
+**Note:** Assets are specific to the branch they are uploaded to. For example, an asset uploaded to the **development** branch can only be accessed within that branch. Assets in non-main branches include the branch UID in their URL. Refer to the [Branch-Specific Modules](../../developers/branches/branch-specific-modules.md) document for details.
 
 To upload a new asset, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Assets” icon in the left navigation panel or use the shortcut key “A” (for both Windows and Mac users).
-- Drag files directly into the Assets module.**Note**: You cannot drag and drop folders. Instead, [create a folder](/docs/content-managers/author-content/create-a-folder/) and upload files into it.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel or use the shortcut key “A” (for both Windows and Mac users).
+- Drag files directly into the Assets module.**Note**: You cannot drag and drop folders. Instead, [create a folder](./create-a-folder.md) and upload files into it.
 - Alternatively, you can click **+ New Asset** in the top right corner.
 - In the **Upload Asset(s)** modal, click **Choose files** to select the files from your system.
 - Once selected, the upload progress and success status of the assets will be displayed.
@@ -56,7 +56,7 @@ Use the **Click to copy** icon to copy the URL.
 
 ## API Reference
 
-To create or upload assets via API, refer to the [Upload asset](/docs/developers/apis/content-management-api#upload-asset) API request.
+To create or upload assets via API, refer to the [Upload asset](../../../api-docs/api-detail/content-management-api.md#upload-asset) API request.
 
 ## Common questions
 
@@ -67,7 +67,7 @@ A maximum of **10 assets** can be uploaded at once.
 Each asset file should not exceed **700 MB**.
 
 **Can I drag and drop folders into the Assets module?**  
-No. You cannot drag and drop folders. Instead, [create a folder](/docs/content-managers/author-content/create-a-folder/) and upload files into it.
+No. You cannot drag and drop folders. Instead, [create a folder](./create-a-folder.md) and upload files into it.
 
 **Are assets shared across branches?**  
 No. Assets are specific to the branch they are uploaded to, and assets in non-main branches include the branch UID in their URL.

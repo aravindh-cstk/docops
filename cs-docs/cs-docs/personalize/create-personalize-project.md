@@ -24,7 +24,7 @@ This guide provides step-by-step instructions on creating a Personalize project 
 ### Prerequisites
 
 * [Contentstack account](https://www.contentstack.com/login)
-* Access to the Contentstack Organization as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin) that has Personalize enabled
+* Access to the Contentstack Organization as the [Owner](../developers/organization/organization-roles.md#organization-owner)/[Admin](../developers/organization/organization-roles.md#organization-admin) that has Personalize enabled
 * An existing stack you want to link to the Personalize project
 
 ### Steps for Execution
@@ -45,7 +45,7 @@ To create a new project in Personalize, log in to your [Contentstack account](ht
 
 ### Next Steps
 
-You can now create personalized [experiences](/docs/personalize/about-experiences) within your project and link the content types of the existing stack via the CMS with your Personalize project to [create and manage Entry Variants](/docs/developers/variants/manage-variant-groups).
+You can now create personalized [experiences](./about-experiences.md) within your project and link the content types of the existing stack via the CMS with your Personalize project to [create and manage Entry Variants](../developers/variants/manage-variant-groups.md).
 
 ## Common questions
 ### What is covered in [Personalize] - Create a Personalize Project?

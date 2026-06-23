@@ -17,13 +17,13 @@ This page lists the identity providers (IdPs) that are currently supported for S
 
 ## Supported Identity Providers for SCIM
 
-Using [SCIM](/docs/developers/scim/about-scim)provisioning functionality, you can provision and deprovision users from your Contentstack [organization](/docs/developers/organization/about-organizations/) via the IdP client’s portal. Currently, we support SCIM provisioning via [OneLogin](/docs/developers/scim/set-up-scim-provisioning-with-onelogin), [Microsoft Azure AD](/docs/developers/scim/set-up-scim-provisioning-with-microsoft-azure-ad/), and [Okta](/docs/developers/scim/set-up-scim-provisioning-with-okta/) only. We plan to add support for other IdPs soon.
+Using [SCIM](./about-scim.md)provisioning functionality, you can provision and deprovision users from your Contentstack [organization](../organization/about-organizations.md) via the IdP client’s portal. Currently, we support SCIM provisioning via [OneLogin](./set-up-scim-provisioning-with-onelogin.md), [Microsoft Azure AD](./set-up-scim-provisioning-with-microsoft-azure-ad.md), and [Okta](./set-up-scim-provisioning-with-okta.md) only. We plan to add support for other IdPs soon.
 
 ## Guides for using SCIM Provisioning with specific IdPs
 
-- [Set up SCIM Provisioning with OneLogin](/docs/developers/scim/set-up-scim-provisioning-with-onelogin)
-- [Set Up SCIM Provisioning with Microsoft Azure AD](/docs/developers/scim/set-up-scim-provisioning-with-microsoft-azure-ad/#add-users-and-groups-to-your-application)
-- [Set Up SCIM Provisioning with Okta](/docs/developers/scim/set-up-scim-provisioning-with-okta/)
+- [Set up SCIM Provisioning with OneLogin](./set-up-scim-provisioning-with-onelogin.md)
+- [Set Up SCIM Provisioning with Microsoft Azure AD](./set-up-scim-provisioning-with-microsoft-azure-ad.md#add-users-and-groups-to-your-application)
+- [Set Up SCIM Provisioning with Okta](./set-up-scim-provisioning-with-okta.md)
 
 ## Common questions
 

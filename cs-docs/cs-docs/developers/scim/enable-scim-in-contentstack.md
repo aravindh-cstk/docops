@@ -17,7 +17,7 @@ This page explains how organization owners or admins can enable SCIM 2.0 in Cont
 
 ## Enable SCIM in Contentstack
 
-**Note**: To use SCIM in Contentstack, make sure your Contentstack’s plan supports SCIM functionality. Moreover, only the [owner](/docs/owners-and-admins/organization-roles#organization-owner) or [admin](/docs/owners-and-admins/organization-roles#organization-admin) of the organization has the right to enable SCIM.
+**Note**: To use SCIM in Contentstack, make sure your Contentstack’s plan supports SCIM functionality. Moreover, only the [owner](../organization/organization-roles.md#organization-owner) or [admin](../organization/organization-roles.md#organization-admin) of the organization has the right to enable SCIM.
 
 To enable SCIM, log in to your Contentstack account, and perform the following steps:
 - On the **All Stacks** page, click the **ORGANIZATION **dropdown menu and click the “Settings” cog icon to open the **Organization Settings** screen.

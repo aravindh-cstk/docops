@@ -25,7 +25,7 @@ To upload assets, log in to your [Contentstack account](https://www.contentstack
 - Browse your local system and select the files you want to upload.
 - Click **Open**.
 
-**Note:** You cannot drag and drop folders. Instead, [create a folder](/docs/assets/create-a-folder) and upload files into it.
+**Note:** You cannot drag and drop folders. Instead, [create a folder](./create-a-folder.md) and upload files into it.
 
 Uploaded assets appear in the assets listing. You can apply filters, sort, or organize them into folders.
 
@@ -38,7 +38,7 @@ Select or drag and drop up to **100 assets** at once.
 The size of an asset should not exceed **1.5 GB**.
 
 ### Can I drag and drop folders to upload assets?
-No. You cannot drag and drop folders. Instead, [create a folder](/docs/assets/create-a-folder) and upload files into it.
+No. You cannot drag and drop folders. Instead, [create a folder](./create-a-folder.md) and upload files into it.
 
 ### Where do uploaded assets appear after upload?
 Uploaded assets appear in the assets listing. You can apply filters, sort, or organize them into folders.

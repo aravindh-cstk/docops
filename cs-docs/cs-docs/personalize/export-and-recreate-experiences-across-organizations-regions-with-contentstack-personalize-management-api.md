@@ -19,13 +19,13 @@ This guide provides a technical overview and step-by-step instructions to progra
 
 ## When to Use This Guide
 - Replicate a Personalize project setup between environments.
-- Copy or synchronize [attributes](/docs/personalize/about-attributes), [audiences](/docs/personalize/about-audiences), [events](/docs/personalize/about-events), and [experiences](/docs/personalize/about-experiences) across multiple Personalize projects.
+- Copy or synchronize [attributes](./about-attributes.md), [audiences](./about-audiences.md), [events](./about-events.md), and [experiences](./about-experiences.md) across multiple Personalize projects.
 - Programmatically extract and rebuild experiences and variants using the Personalize Management API.
 
 ## Prerequisites
 - A [Contentstack account](https://www.contentstack.com/login/)
-- A destination [Personalize project](/docs/personalize/create-personalize-project) to recreate exported components.
-- A [Personalize Management API](/docs/developers/apis/personalize-management-api) token with either **personalize:read/personalize:manage** scope for the source project and **personalize:manage **for the** **destination project.
+- A destination [Personalize project](./create-personalize-project.md) to recreate exported components.
+- A [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md) token with either **personalize:read/personalize:manage** scope for the source project and **personalize:manage **for the** **destination project.
 - Project UIDs for both the source and destination projects.
 - A scriptable environment such as Node.js, Python, or a shell script with curl for making API calls.
 
@@ -33,11 +33,11 @@ This guide provides a technical overview and step-by-step instructions to progra
 
 | Item | API Endpoint(s) | Description |
 |---|---|---|
-| Attributes | [GET /attributes](/docs/developers/apis/personalize-management-api#get-all-attributes),<br>[POST /attributes](/docs/developers/apis/personalize-management-api#create-an-attribute) | Supports **CRUD **(Create, Read, Update, Delete) operations. Use **GET** to export all attribute definitions and **POST** to create them in the destination project. |
-| Audiences | [GET /audiences](/docs/developers/apis/personalize-management-api#get-all-audiences),<br>[POST /audiences](/docs/developers/apis/personalize-management-api#create-an-audience) | Supports **CRUD **operations. Use **GET** to export audience configurations and **POST** to create them in the destination project. |
-| Events | [GET /events](/docs/developers/apis/personalize-management-api#get-all-events),<br>[POST /events](/docs/developers/apis/personalize-management-api#create-an-event) | Supports **CRUD **operations. Use **GET** to export events and **POST** to create them in the destination project. |
-| Experiences | [GET /experiences](/docs/developers/apis/personalize-management-api#get-all-experiences),<br>[POST /experiences](/docs/developers/apis/personalize-management-api#create-an-experience) | Use **GET** to fetch a list of all experiences. Use the **POST** endpoints to create new experiences in the destination project. |
-| Experience Versions | [GET /experiences/{exp_uid}/versions](/docs/developers/apis/personalize-management-api#get-all-experience-versions)<br>[POST /experiences/{exp_uid}/versions](/docs/developers/apis/personalize-management-api#create-an-experience-version)<br>[PUT /experiences/{exp_uid}/versions](/docs/developers/apis/personalize-management-api#update-an-experience-version) | Use **GET** to retrieve detailed variant data. **POST** to create new versions, and **PUT** to activate (or pause) them. |
+| Attributes | [GET /attributes](../../api-docs/api-detail/personalize-management-api.md#get-all-attributes),<br>[POST /attributes](../../api-docs/api-detail/personalize-management-api.md#create-an-attribute) | Supports **CRUD **(Create, Read, Update, Delete) operations. Use **GET** to export all attribute definitions and **POST** to create them in the destination project. |
+| Audiences | [GET /audiences](../../api-docs/api-detail/personalize-management-api.md#get-all-audiences),<br>[POST /audiences](../../api-docs/api-detail/personalize-management-api.md#create-an-audience) | Supports **CRUD **operations. Use **GET** to export audience configurations and **POST** to create them in the destination project. |
+| Events | [GET /events](../../api-docs/api-detail/personalize-management-api.md#get-all-events),<br>[POST /events](../../api-docs/api-detail/personalize-management-api.md#create-an-event) | Supports **CRUD **operations. Use **GET** to export events and **POST** to create them in the destination project. |
+| Experiences | [GET /experiences](../../api-docs/api-detail/personalize-management-api.md#get-all-experiences),<br>[POST /experiences](../../api-docs/api-detail/personalize-management-api.md#create-an-experience) | Use **GET** to fetch a list of all experiences. Use the **POST** endpoints to create new experiences in the destination project. |
+| Experience Versions | [GET /experiences/{exp_uid}/versions](../../api-docs/api-detail/personalize-management-api.md#get-all-experience-versions)<br>[POST /experiences/{exp_uid}/versions](../../api-docs/api-detail/personalize-management-api.md#create-an-experience-version)<br>[PUT /experiences/{exp_uid}/versions](../../api-docs/api-detail/personalize-management-api.md#update-an-experience-version) | Use **GET** to retrieve detailed variant data. **POST** to create new versions, and **PUT** to activate (or pause) them. |
 
 ## Workflow Overview
 Duplicating a personalization experience across organizations/regions follows the **Extract, Transform, Load (ETL)** pattern:
@@ -113,7 +113,7 @@ GET /personalize/projects/{source_project_uid}/events
 ]
 ```
 
-**Note:** These examples do not show the complete API responses. To view detailed response structures, refer to the [Personalize Management API documentation](https://www.contentstack.com/docs/developers/apis/personalize-management-api).
+**Note:** These examples do not show the complete API responses. To view detailed response structures, refer to the [Personalize Management API documentation](../../api-docs/api-detail/personalize-management-api.md).
 - Save all three responses as **JSON files** for reuse when recreating these components in the destination project.
 
 ### Recreate Attributes, Audiences, and Events in the Destination Project
@@ -202,7 +202,7 @@ POST /personalize/projects/{destination_project_uid}/experiences
 { "uid": "exp_new01", "status": "DRAFT" }
 ```
 
-**Note:** These examples do not show the complete API responses. To view detailed response structures, refer to the [Personalize Management API Documentation](https://www.contentstack.com/docs/developers/apis/personalize-management-api#create-an-experience).
+**Note:** These examples do not show the complete API responses. To view detailed response structures, refer to the [Personalize Management API Documentation](../../api-docs/api-detail/personalize-management-api.md#create-an-experience).
 
 ### Export Detailed Experience Versions (with Variants) from the Source Project
 - Send the following request for each experience UID:`GET /personalize/projects/{source_project_uid}/experiences/{experience_uid}/versions`
@@ -268,14 +268,14 @@ PUT {BASE_URL}/experiences/{experience_uid}/versions/{version_uid}
 }
 ```
 
-**Additional Resource:** For more information, refer to [Update an Experience Version ](https://www.contentstack.com/docs/developers/apis/personalize-management-api#update-an-experience-version)documentation.
+**Additional Resource:** For more information, refer to [Update an Experience Version ](../../api-docs/api-detail/personalize-management-api.md#update-an-experience-version)documentation.
 - Confirm that all experiences and variants are active and visible in the destination project.
 
 ### Verify and Monitor the Migration
 - Confirm that all attributes, audiences, variants, and experiences appear correctly in the destination project.
 - Confirm that the project is connected to the desired stack and has entry variants configured correctly.
 - Test each experience to verify correct variant delivery and targeting logic.
-- Monitor Experience performance with [**Experience Analytics** ](https://www.contentstack.com/docs/personalize/experience-analytics)to verify traffic distribution, audience exposure,and conversions.
+- Monitor Experience performance with [**Experience Analytics** ](./experience-analytics.md)to verify traffic distribution, audience exposure,and conversions.
 
 ## Common questions
 

@@ -17,7 +17,7 @@ This page explains how to install the Contentstack Migration Framework on Window
 
 ## Set Up Content Migration Framework (Windows)
 
-The **Contentstack Migration Framework** is designed to help users seamlessly migrate content from a legacy **Content Management System** (**CMS**) to Contentstack. The framework simplifies the migration process by providing an intuitive interface and step-by-step workflow for importing content, mapping content types, and migrating data into a [stack](/docs/developers/set-up-stack/about-stack) within Contentstack. This guide outlines the process for installing the migration framework.
+The **Contentstack Migration Framework** is designed to help users seamlessly migrate content from a legacy **Content Management System** (**CMS**) to Contentstack. The framework simplifies the migration process by providing an intuitive interface and step-by-step workflow for importing content, mapping content types, and migrating data into a [stack](../set-up-stack/about-stack.md) within Contentstack. This guide outlines the process for installing the migration framework.
 
 **Note**: If you are migrating Sitecore data, setting up the Migration Framework via Docker is recommended. Refer to the [Set Up Content Migration Framework (Docker)](/docs/developers/content-migration/set-up-content-migration-tool-docker) document for detailed instructions.
 

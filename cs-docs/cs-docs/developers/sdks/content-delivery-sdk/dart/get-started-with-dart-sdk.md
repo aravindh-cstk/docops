@@ -79,14 +79,14 @@ final stack = contentstack.Stack(apiKey, deliveryToken, environment);
 
 **Note**: By default, the SDK uses the North American region. Configuration changes are not required for North American region users.
 
-For Europe, Azure North America, or Azure Europe, check the [code of your region](/docs/developers/contentstack-regions/selecting-region-in-sdks#dart) and configure your SDK.
+For Europe, Azure North America, or Azure Europe, check the [code of your region](../../../contentstack-regions/selecting-region-in-sdks.md#dart) and configure your SDK.
 
 Once you have initialized the SDK, you can query entries to fetch the required content.
 
-For setting the branch for Europe, Azure North America, or Azure Europe, check the [code of your region](/docs/developers/contentstack-regions/selecting-region-in-sdks#dart) and initialize SDK in a particular branch.
+For setting the branch for Europe, Azure North America, or Azure Europe, check the [code of your region](../../../contentstack-regions/selecting-region-in-sdks.md#dart) and initialize SDK in a particular branch.
 
 ## Basic Queries
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
 ### Get a Single Entry
 To retrieve a single entry from a content type, use the code snippet given below:
@@ -119,10 +119,10 @@ await query.find().then((response){
 
 These were examples of some of the basic queries of the SDK. For advanced queries, refer to Contentstack [Dart SDK API Reference](/docs/developers/dart/api-reference/) documentation.
 
-**Note:** Currently, the Dart SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](/docs/developers/apis/content-delivery-api#queries) section of our Content Delivery API documentation.
+**Note:** Currently, the Dart SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](../../../../../api-docs/api-detail/content-delivery-api.md#queries) section of our Content Delivery API documentation.
 
 #### Paginating Responses
-In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](/docs/developers/sdks/content-delivery-sdk/dart/reference/#query-skip) and [limit](/docs/developers/sdks/content-delivery-sdk/dart/reference/#query-limit) parameters in subsequent requests.
+In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](../../../create-content-types/reference.md#query-skip) and [limit](../../../create-content-types/reference.md#query-limit) parameters in subsequent requests.
 
 ```
 final stack = contentstack.Stack( "apiKey", "deliveryToken", "environment");
@@ -137,11 +137,11 @@ await query.find().then((response){
 ## Limitations
 - We have a URL size limitation of **8KB** on API Requests that hit our CDN services. Any Request URL that goes above this size limit will receive the `400 - Bad request` error response. Please make sure you limit the size of your API Requests.
 - The Dart SDK does not support multiple content types referencing in a single query.
-- Currently, the Dart SDK does not yet support querying Global Field schemas ([All Global Fields](/docs/developers/apis/content-delivery-api#all-global-fields) and [Single Global Field](/docs/developers/apis/content-delivery-api#single-global-field)). You can include these details when querying content type details ([All Content Types](/docs/developers/apis/content-delivery-api#all-content-types) and [Single Content Type](/docs/developers/apis/content-delivery-api#single-content-type)) with the `include_global_field_schema query parameter`.
+- Currently, the Dart SDK does not yet support querying Global Field schemas ([All Global Fields](../../../../../api-docs/api-detail/content-delivery-api.md#all-global-fields) and [Single Global Field](../../../../../api-docs/api-detail/content-delivery-api.md#single-global-field)). You can include these details when querying content type details ([All Content Types](../../../../../api-docs/api-detail/content-delivery-api.md#all-content-types) and [Single Content Type](../../../../../api-docs/api-detail/content-delivery-api.md#single-content-type)) with the `include_global_field_schema query parameter`.
 
 ## More Resources
 - [E-commerce App using Contentstack's Dart SDK](/docs/developers/sample-apps/build-a-flutter-e-commerce-app-using-contentstack-s-dart-sdk)
-- [API Reference](/docs/developers/sdks/content-delivery-sdk/dart/reference)
+- [API Reference](../../../create-content-types/reference.md)
 - [View and Download Dart SDK repository on GitHub](https://github.com/contentstack/contentstack-dart)
 
 ## Common questions
@@ -150,7 +150,7 @@ await query.find().then((response){
 **Note**: By default, the SDK uses the North American region. Configuration changes are not required for North American region users.
 
 ### How do I configure the SDK for Europe, Azure North America, or Azure Europe?
-For Europe, Azure North America, or Azure Europe, check the [code of your region](/docs/developers/contentstack-regions/selecting-region-in-sdks#dart) and configure your SDK.
+For Europe, Azure North America, or Azure Europe, check the [code of your region](../../../contentstack-regions/selecting-region-in-sdks.md#dart) and configure your SDK.
 
 ### How many items does “Get Multiple Entries” return in one request?
 In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type.

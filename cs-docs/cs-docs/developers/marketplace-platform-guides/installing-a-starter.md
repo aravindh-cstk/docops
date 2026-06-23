@@ -26,7 +26,7 @@ This guide provides step-by-step instructions to import a Starter using both the
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to the Contentstack Organization/Stack as the Owner/Admin
-- [Launch](https://www.contentstack.com/docs/developers/launch/about-launch) enabled for your Organization if you are using Launch for website deployment
+- [Launch](../launch/about-launch.md) enabled for your Organization if you are using Launch for website deployment
 - Access to the Github repository
 
 Let's follow this step-by-step guide to import and configure a Starter within your stack.

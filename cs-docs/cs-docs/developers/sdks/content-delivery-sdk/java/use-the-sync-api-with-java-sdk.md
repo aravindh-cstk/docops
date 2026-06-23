@@ -23,7 +23,7 @@ This guide will help you understand how to use the Sync API with Contentstack Ja
 
 ## Initial sync
 
-The Initial sync request performs a complete sync of your app data. It returns all the published [entries](/docs/content-managers/working-with-entries/about-entries) and [assets](/docs/content-managers/working-with-assets/about-assets) of the specified [stack](/docs/developers/set-up-stack/about-stack) in response.
+The Initial sync request performs a complete sync of your app data. It returns all the published [entries](../../../../content-managers/author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets) of the specified [stack](../../../set-up-stack/about-stack.md) in response.
 
 To start the Initial sync process, use the sync method.
 
@@ -41,7 +41,7 @@ stack.sync(new SyncResultCallBack() {
 
 ```
 
-**Note**: Use the value of the [delivery token](/docs/developers/create-tokens/create-a-delivery-token) against the **access_token** key.
+**Note**: Use the value of the [delivery token](../../../create-tokens/create-a-delivery-token.md) against the **access_token** key.
 
 The response also contains a sync token, which you need to store, since this token is used to get subsequent delta updates later, as shown in the [Subsequent sync](#subsequent-sync) section below.
 
@@ -189,9 +189,9 @@ public void onCompletion(SyncStack syncStack, Error error) {
 
 ## More resources
 
-- [Java Sample App](/docs/developers/sdks/content-delivery-sdk/java/java-sample-app)
+- [Java Sample App](./java-sample-app.md)
 - [Contentstack Java News App](https://github.com/contentstack/contentstack-java-news-web-app-example)
-- [Java SDK API reference](/docs/developers/sdks/content-delivery-sdk/java/reference/)
+- [Java SDK API reference](../../../create-content-types/reference.md)
 - [View and Download Java SDK repository on GitHub](https://github.com/contentstack/contentstack-java)
 
 ## Common questions

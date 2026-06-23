@@ -16,11 +16,11 @@ This page lists the limitations of Dashboard Extensions, including size limits, 
 
 ## Limitations of Dashboard Extensions
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Dashboard UI Location](/docs/developers/developer-hub/dashboard-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Dashboard UI Location](../developer-hub/dashboard-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 - The maximum size of the dashboard extension code cannot exceed 500KB.
 - The maximum character length for the Title field is 256.
-- You can install a maximum of **50 **extensions (including custom fields, sidebar extensions, dashboard extensions, and JSON RTE plugins) in a [stack](/docs/developers/set-up-stack/about-stack).
+- You can install a maximum of **50 **extensions (including custom fields, sidebar extensions, dashboard extensions, and JSON RTE plugins) in a [stack](../set-up-stack/about-stack.md).
 - The maximum size of the dashboard extension’s configuration parameters cannot exceed 10KB.
 - The height of the dashboard extension can be altered when it is in the full-screen mode. It can vary from the default dashboard extension height to the browser window's height only.
 
@@ -30,7 +30,7 @@ This page lists the limitations of Dashboard Extensions, including size limits, 
 The maximum size of the dashboard extension code cannot exceed 500KB.
 
 ### How many extensions can be installed in a stack?
-You can install a maximum of **50 **extensions (including custom fields, sidebar extensions, dashboard extensions, and JSON RTE plugins) in a [stack](/docs/developers/set-up-stack/about-stack).
+You can install a maximum of **50 **extensions (including custom fields, sidebar extensions, dashboard extensions, and JSON RTE plugins) in a [stack](../set-up-stack/about-stack.md).
 
 ### What is the maximum size for dashboard extension configuration parameters?
 The maximum size of the dashboard extension’s configuration parameters cannot exceed 10KB.

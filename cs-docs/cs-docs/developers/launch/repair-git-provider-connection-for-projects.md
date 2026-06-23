@@ -16,7 +16,7 @@ This page explains how to repair a broken Git provider connection for an existin
 
 ## Repair Git Provider Connection for Projects
 
-**Note:** This guide covers repairing Git provider connections for apps such as [Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud/) on Contentstack Launch. If you're using GitHub, refer to the [Repair GitHub Connection for Projects](/docs/launch/repair-github-connection-for-projects/) instead.
+**Note:** This guide covers repairing Git provider connections for apps such as [Bitbucket Cloud](./import-a-project-using-bitbucket-cloud.md) on Contentstack Launch. If you're using GitHub, refer to the [Repair GitHub Connection for Projects](./repair-github-connection-for-projects.md) instead.
 
 Contentstack Launch allows you to automatically repair Git provider connections for existing projects. If a Git provider app is uninstalled, the connection between Launch and the Git provider becomes invalid, preventing Launch from interacting with the repository.
 
@@ -48,7 +48,7 @@ If you encounter any of the following issues while repairing your Git provider c
 - **Please connect to a Git provider OAuth app before proceeding with the repair**  
   Your Git Provider app is currently uninstalled.
 
-  Install the Git Provider Marketplace app.Install the Bitbucket Marketplace app by following the steps in the [Create a Project using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud#install-the-bitbucket-cloud-marketplace-app) documentation.
+  Install the Git Provider Marketplace app.Install the Bitbucket Marketplace app by following the steps in the [Create a Project using Bitbucket Cloud](./import-a-project-using-bitbucket-cloud.md#install-the-bitbucket-cloud-marketplace-app) documentation.
   - Retry the **Repair Connection** action.
 
 - **Please add the repository to the Git Provider OAuth app before proceeding with the repair**  

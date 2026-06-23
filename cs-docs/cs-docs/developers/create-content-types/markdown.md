@@ -25,13 +25,13 @@ Markdown
 
 ##### Content
 
-The Markdown field enables users to input text in markdown format in an [entry](/docs/content-managers/working-with-entries/about-entries). Markdown text is marked with certain tags or formatting instructions. Once done entering your content, click on the **Preview** tab to preview your formatted text in real time.
+The Markdown field enables users to input text in markdown format in an [entry](../../content-managers/author-content/about-entries.md). Markdown text is marked with certain tags or formatting instructions. Once done entering your content, click on the **Preview** tab to preview your formatted text in real time.
 
 **Note:** Contentstack uses the "Markdown" syntax for its Markdown field. You can find more details about the Markdown syntax in [Pagedown](https://code.google.com/archive/p/pagedown/wikis/PageDown.wiki).
 
-This field possesses certain [properties](/docs/developers/create-content-types/about-field-properties) that you can change any time as per your needs. The properties that can be modified are “[Display Name](/docs/developers/create-content-types/display-name),” “[Unique ID](/docs/developers/create-content-types/unique-id),” “[Placeholder Value](/docs/developers/create-content-types/placeholder-value),” “[Instruction Value](/docs/developers/create-content-types/instruction-value),” “[Help Text](/docs/developers/create-content-types/help-text),” “[Mandatory](/docs/developers/create-content-types/mandatory),” “[Multiple](/docs/developers/create-content-types/multiple),” and “[Non-localizable](/docs/developers/create-content-types/non-localizable).”
+This field possesses certain [properties](./about-field-properties.md) that you can change any time as per your needs. The properties that can be modified are “[Display Name](./display-name.md),” “[Unique ID](./unique-id.md),” “[Placeholder Value](./placeholder-value.md),” “[Instruction Value](./instruction-value.md),” “[Help Text](./help-text.md),” “[Mandatory](./mandatory.md),” “[Multiple](./multiple.md),” and “[Non-localizable](./non-localizable.md).”
 
-**Additional Resource:** You can also try out our [Rich Text Editor](/docs/developers/create-content-types/rich-text-editor) and [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/). You can refer to our documentation to understand the difference between [Markdown and RTE](/docs/developers/how-to-guides/content-modeling-best-practices#rte-vs-markdown).
+**Additional Resource:** You can also try out our [Rich Text Editor](./rich-text-editor.md) and [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md). You can refer to our documentation to understand the difference between [Markdown and RTE](../content-modeling/content-modeling-best-practices.md#rte-vs-markdown).
 
 After adding this field in content type, you will see it on your entry page as shown below.
 
@@ -72,7 +72,7 @@ Once done entering your content, click on the **Preview** tab to preview your fo
 Contentstack uses the "Markdown" syntax for its Markdown field. You can find more details about the Markdown syntax in [Pagedown](https://code.google.com/archive/p/pagedown/wikis/PageDown.wiki).
 
 **Can I change the Markdown field settings after creating it?**  
-This field possesses certain [properties](/docs/developers/create-content-types/about-field-properties) that you can change any time as per your needs.
+This field possesses certain [properties](./about-field-properties.md) that you can change any time as per your needs.
 
 **Where can I learn the difference between Markdown and Rich Text Editor?**  
-You can refer to our documentation to understand the difference between [Markdown and RTE](/docs/developers/how-to-guides/content-modeling-best-practices#rte-vs-markdown).
+You can refer to our documentation to understand the difference between [Markdown and RTE](../content-modeling/content-modeling-best-practices.md#rte-vs-markdown).

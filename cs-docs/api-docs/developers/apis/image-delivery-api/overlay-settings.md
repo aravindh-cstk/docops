@@ -28,7 +28,7 @@ The overlay parameter allows you to put one image on top of another. You need to
 
 1. By default, the cropping alignment will be middle, center. See overlay-align for more details.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 
@@ -59,7 +59,7 @@ You can also specify two values for this parameter, for example ?overlay-align=l
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-align={overlay-align}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 
@@ -90,7 +90,7 @@ Let’s use these different parameters to understand how they work. First, try t
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 Let us now try how the vertical repetition of overlay image works.
 
@@ -111,7 +111,7 @@ Let us now try how the vertical repetition of overlay image works.
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 Now, let’s see what happens to an image when the vertical as well as horizontal repetition is enabled for the overlay image.
 
@@ -132,7 +132,7 @@ Now, let’s see what happens to an image when the vertical as well as horizonta
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 
@@ -167,7 +167,7 @@ In order to set the overlay image width to more than 99%, use the p parameter al
 2. To specify a width more than 100% of the original image, use the p parameter. For example, to get a width of 250%, use overlay-width=250p.
 3. If the overlay image used is larger than the actual image, the overlay image will be cropped to fit the actual image.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 
@@ -202,7 +202,7 @@ In order to set the overlay image height to more than 99%, use the p parameter a
 2. To specify a height more than 100% of the original image, use the p parameter. For example, to get a height of 250%, use overlay-height=250p.
 3. If the overlay image used is larger than the actual image, the overlay image will be cropped to fit the actual image.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 

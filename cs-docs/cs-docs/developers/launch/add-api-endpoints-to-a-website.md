@@ -16,7 +16,7 @@ This page explains how to add API endpoints to a website in Contentstack Launch 
 
 ## Add API Endpoints to a Website in Launch
 
-Launch allows you to write [Cloud Functions](/docs/launch/cloud-functions) to create API endpoints.
+Launch allows you to write [Cloud Functions](./cloud-functions.md) to create API endpoints.
 
 This step-by-step guide lets you add API endpoints to a website in Launch.
 
@@ -46,8 +46,8 @@ export default function handler(request, response) {
 
 - Zip the source folder that contains the `/functions` folder.
 - Deploy your project in Launch using one of the following methods:
-      [Import from a Git Repository](/docs/launch/import-project-using-github/)
-- [Upload a file](/docs/launch/import-project-using-file-upload/)
+      [Import from a Git Repository](./import-project-using-github.md)
+- [Upload a file](./import-project-using-file-upload.md)
 
 After successful deployment, you will see the Cloud Functions displayed in the log:The function endpoint is determined by its **file path** relative to `/functions`. The function runs when you visit the path: `/users`.
 - Click the icon next to the URL in the **Domains** section to open the deployed website.In this example, the URL of the API endpoint will be `https://sample-test-api.devsampleapp.com/users`.

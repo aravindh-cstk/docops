@@ -17,14 +17,14 @@ This page explains how to request edit access for an entry when Workflows stage 
 
 ## Send an Entry for Edit Access Approval
 
-**Note**: If you aren’t familiar with Workflows, we recommend reading about [Workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) and its related concepts such as [Stages](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages) and [Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks) before proceeding with this article.
+**Note**: If you aren’t familiar with Workflows, we recommend reading about [Workflows](../../developers/set-up-workflows-and-publish-rules/about-workflows.md) and its related concepts such as [Stages](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md) and [Tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md) before proceeding with this article.
 
-If a [stage access rule](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages#add-stage-transition-and-access-rules) has been set for a specific stage, only the specified users will be able to edit or delete the entry in that stage. Any other users who wish to edit the entry need to request the current workflow stage user(s) to allow them to edit the entry on the current workflow stage.
+If a [stage access rule](../../developers/set-up-workflows-and-publish-rules/add-workflows-and-stages.md#add-stage-transition-and-access-rules) has been set for a specific stage, only the specified users will be able to edit or delete the entry in that stage. Any other users who wish to edit the entry need to request the current workflow stage user(s) to allow them to edit the entry on the current workflow stage.
 
-**Additional Resource**: As you send entries for edit access approval, it would be helpful to understand [how stage access rules work](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages#add-stage-transition-and-access-rules).
+**Additional Resource**: As you send entries for edit access approval, it would be helpful to understand [how stage access rules work](../../developers/set-up-workflows-and-publish-rules/add-workflows-and-stages.md#add-stage-transition-and-access-rules).
 
 To send your entry for edit access approval, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and open the entry.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md), and open the entry.
 - On the entry page, click on **Request Edit Access** at the bottom of the page.  
 The **Request Edit Access** dialog box appears on screen.
 - Add comments for the approver in the **Add comments** box and click on **Send Request**.  
@@ -41,7 +41,7 @@ Users with stage access rights for the entry’s current workflow stage can appr
 You can see the current status of the request (pending, approved, rejected) in the **Tasks** section.
 
 ### Why don’t I have the ability to edit or delete an entry in a stage?
-If a [stage access rule](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages#add-stage-transition-and-access-rules) has been set for a specific stage, only the specified users will be able to edit or delete the entry in that stage.
+If a [stage access rule](../../developers/set-up-workflows-and-publish-rules/add-workflows-and-stages.md#add-stage-transition-and-access-rules) has been set for a specific stage, only the specified users will be able to edit or delete the entry in that stage.
 
 ### What should I include in the request?
 Add comments for the approver in the **Add comments** box before clicking **Send Request**.

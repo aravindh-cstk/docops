@@ -64,7 +64,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
 - If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.
 
-**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the MonkeyLearn application.
 
 ## Use MonkeyLearn within your Stack

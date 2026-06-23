@@ -51,7 +51,7 @@ Note down this token since you will need it while configuring the Optimizely ext
 
 ## Add "Optimizely Experiments" extension to your stack
 
-To add Optimizely Experiments to your [stack](/docs/developers/set-up-stack/about-stack), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
+To add Optimizely Experiments to your [stack](../set-up-stack/about-stack.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
 Go to the stack and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
@@ -70,7 +70,7 @@ Go to the stack and click on the “Settings” icon on the left navigation pane
 }
 ```
 
-**Scope** - You can choose to incorporate this Sidebar Extension in either **All Content Types** or **Specific Content Types**. Selecting the latter option displays a list of [content types](/docs/developers/create-content-types/about-content-types) from which you can select the required ones.
+**Scope** - You can choose to incorporate this Sidebar Extension in either **All Content Types** or **Specific Content Types**. Selecting the latter option displays a list of [content types](../create-content-types/about-content-types.md) from which you can select the required ones.
 - Click **Save** to create your Sidebar Extension.
 
 Now, let’s understand how you can start using your Sidebar Extension extension in your entries.
@@ -80,7 +80,7 @@ Now, let’s understand how you can start using your Sidebar Extension extension
 Once you have added this Sidebar Extension, you can use it in entries of selected content type(s). Let’s look at the steps involved in using this Sidebar Extension.
 
 Go to your stack and click on the “Entries” icon on the left navigation panel.
-- Select the content type for which you have enabled the Sidebar Extension and click on an [entry](/docs/content-managers/working-with-entries/about-entries)
+- Select the content type for which you have enabled the Sidebar Extension and click on an [entry](../../content-managers/author-content/about-entries.md)
 - Click the “Sidebar Extensions” icon on the right side of the page, and select **Optimizely Experiments** from the dropdown menu.
 - The selected Sidebar Extension expands on the sidebar displaying the list of experiments that you have already created.
 - Click on the “Run” or “Pause” Action buttons to run or pause your experiments, respectively.

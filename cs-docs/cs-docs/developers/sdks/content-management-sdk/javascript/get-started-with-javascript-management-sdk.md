@@ -68,7 +68,7 @@ const { client } = contentstack;
 To use this SDK, you need to authenticate users. You can do this by using an authtoken, credentials, or a management token (stack-level token). Let's discuss them in detail.
 
 ### Authtoken
-An [authtoken](/docs/developers/create-tokens/types-of-tokens#authentication-tokens-authtokens-) is a read-write token used to make authorized CMA requests, and it is a user-specific token.
+An [authtoken](../../../create-tokens/types-of-tokens.md#authentication-tokens-authtokens-) is a read-write token used to make authorized CMA requests, and it is a user-specific token.
 
 ```
 import * as contentstack from '@contentstack/management'
@@ -119,7 +119,7 @@ The JavaScript Management SDK supports **OAuth 2.0**, enabling secure, token-bas
 
 With OAuth 2.0, developers can easily implement secure access for both **web-based interfaces** and **command-line tools**.
 
-**Additional Resource**: For more information on the OAuth support in JavaScript Management SDK, refer to [Implement OAuth 2.0 with JavaScript Management SDK](/docs/developers/sdks/content-management-sdk/javascript/implement-oauth-2-0-with-javascript-management-sdk) documentation.
+**Additional Resource**: For more information on the OAuth support in JavaScript Management SDK, refer to [Implement OAuth 2.0 with JavaScript Management SDK](./implement-oauth-2-0-with-javascript-management-sdk.md) documentation.
 
 **Key Features**
 - **Easy SDK initialization**: Set up OAuth effortlessly by configuring the SDK with minimal credentials.
@@ -129,7 +129,7 @@ With OAuth 2.0, developers can easily implement secure access for both **web-bas
 - **Token revocation support included**: Integrated token revocation allows your app to invalidate access upon logout or session expiration.
 
 ### Management Token
-[Management tokens](/docs/developers/create-tokens/about-management-tokens) are stack-level tokens with no users attached to them.
+[Management tokens](../../../create-tokens/about-management-tokens.md) are stack-level tokens with no users attached to them.
 
 ```
 import * as contentstack from '@contentstack/management'
@@ -170,7 +170,7 @@ https://api.contentstack.io
 
 Contentstack supports multiple regions, each with a distinct base URL. Using the correct region-specific endpoint ensures optimal performance and compliance with regional data regulations.
 
-For a full list of supported region values and their corresponding base URLs, refer to the [Content Management API](/docs/developers/apis/content-management-api#base-url) documentation.
+For a full list of supported region values and their corresponding base URLs, refer to the [Content Management API](../../../../../api-docs/api-detail/content-management-api.md#base-url) documentation.
 
 ```
 import * as contentstack from '@contentstack/management'
@@ -251,7 +251,7 @@ contentstackClient.stack({ api_key: 'API_KEY' }).asset().create({ asset })
 
 ## Further Reading
 - [Contentstack Website](https://www.contentstack.com)
-- [Content Management API Docs](/docs/developers/apis/content-management-api)
+- [Content Management API Docs](../../../../../api-docs/api-detail/content-management-api.md)
 
 ## Common questions
 
@@ -262,7 +262,7 @@ You need [Node.js](https://nodejs.org/en) version 22 or above installed to use t
 You can authenticate using an authtoken, credentials (login), OAuth 2.0, or a management token (stack-level token).
 
 ### How do I connect to a specific region endpoint?
-Set the `host` in the client configuration (for example, `api.contentstack.io` for the North America (NA) region) and refer to the [Content Management API](/docs/developers/apis/content-management-api#base-url) documentation for other base URLs.
+Set the `host` in the client configuration (for example, `api.contentstack.io` for the North America (NA) region) and refer to the [Content Management API](../../../../../api-docs/api-detail/content-management-api.md#base-url) documentation for other base URLs.
 
 ### Can I use a proxy with the JavaScript Management SDK?
 Yes. You can define an HTTP proxy for your requests by passing proxy settings within the client configuration.

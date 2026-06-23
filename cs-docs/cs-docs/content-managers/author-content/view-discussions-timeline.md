@@ -24,7 +24,7 @@ By accessing the Timeline, you can gain insights into the context of comments, t
 The Timeline section allows you to review all discussions of an entry's fields, whether active or resolved.
 
 To view the discussion timeline, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
 - Open an entry with comments, click the **Discussions** tab in the right navigation panel, and select **Timeline** from the dropdown menu.
 - Review all comments within each discussion to understand their context.
 - To manage a discussion, hover over it in the **Timeline** section and choose one of the following actions:Click **Resolve** to close the discussion.

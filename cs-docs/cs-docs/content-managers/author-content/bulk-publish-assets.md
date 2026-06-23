@@ -21,7 +21,7 @@ Publishing multiple assets simultaneously streamlines your workflow, saving time
 
 To publish multiple assets at once, log in to your [Contentstack account,](https://www.contentstack.com/login/) and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Assets” icon in the left navigation panel. You can also use the shortcut key “A” (for both Windows and Mac OS users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel. You can also use the shortcut key “A” (for both Windows and Mac OS users).
 - Use the checkboxes to select the assets you want to publish.
 - After selecting the assets, click the **Publish** option in the floating panel that appears.
 - In the **Publish** **Assets** modal:
@@ -32,7 +32,7 @@ To publish multiple assets at once, log in to your [Contentstack account,](https
 
 **Note: **You can publish up to **10** **assets** simultaneously in **10** **languages** across **10** **environments**.
 
-**Additional Resource:** For automated bulk publishing, refer to the [Bulk Publishing of Entries and Assets](/docs/developers/utilities/bulk-publishing-of-entries-and-assets) guide.
+**Additional Resource:** For automated bulk publishing, refer to the [Bulk Publishing of Entries and Assets](../../developers/utilities/bulk-publishing-of-entries-and-assets.md) guide.
 
 ## Common questions
 
@@ -46,4 +46,4 @@ Yes. You can publish in **10** **languages** across **10** **environments**.
 When publishing multiple assets, only their latest versions will be published.
 
 ### Where can I find guidance for automated bulk publishing?
-Refer to the **Additional Resource** link: [Bulk Publishing of Entries and Assets](/docs/developers/utilities/bulk-publishing-of-entries-and-assets).
+Refer to the **Additional Resource** link: [Bulk Publishing of Entries and Assets](../../developers/utilities/bulk-publishing-of-entries-and-assets.md).

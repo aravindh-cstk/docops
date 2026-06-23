@@ -25,7 +25,7 @@ From automatically generating metadata to enabling intuitive search experiences,
 
 ## Auto-Generate Alt Text
 
-AI can automatically generate descriptive alt text for image assets. Refer to the [Edit Configurable Metadata](/docs/assets/edit-configurable-metadata) document for more information.
+AI can automatically generate descriptive alt text for image assets. Refer to the [Edit Configurable Metadata](./edit-configurable-metadata.md) document for more information.
 
 Why it matters:
 - Improves accessibility compliance
@@ -40,7 +40,7 @@ How it works:
 
 ## Automatic Tag Generation
 
-AI can generate relevant tags based on the asset content. Refer to the [Edit Configurable Metadata](/docs/assets/edit-configurable-metadata) document for more information.
+AI can generate relevant tags based on the asset content. Refer to the [Edit Configurable Metadata](./edit-configurable-metadata.md) document for more information.
 
 Benefits:
 - Eliminates manual tagging effort
@@ -57,7 +57,7 @@ These tags are automatically added, review them carefully before saving.
 
 ## Filter Assets Using Colors
 
-AI enables visual search based on dominant colors in assets. Refer to the [Apply Filters](/docs/assets/apply-filters) document for more information.
+AI enables visual search based on dominant colors in assets. Refer to the [Apply Filters](./apply-filters.md) document for more information.
 
 Use cases:
 - Find assets matching brand colors
@@ -70,7 +70,7 @@ How it works:
 
 ## Visual Markup Generation
 
-AI assists in generating visual markups such as [bounding boxes](/docs/assets/add-visual-markups#bounding-box) and [hotspots](/docs/assets/add-visual-markups#hotspot). AI automatically identifies objects (e.g., cars, people) and provides their coordinates (bounding boxes), allowing developers to create interactive shoppable images or automated focal points. Refer to the [Add Visual Markup](/docs/assets/add-visual-markups) document for more information.
+AI assists in generating visual markups such as [bounding boxes](./add-visual-markups.md#bounding-box) and [hotspots](./add-visual-markups.md#hotspot). AI automatically identifies objects (e.g., cars, people) and provides their coordinates (bounding boxes), allowing developers to create interactive shoppable images or automated focal points. Refer to the [Add Visual Markup](./add-visual-markups.md) document for more information.
 
 What you can do:
 - Identify objects within images
@@ -90,10 +90,10 @@ Contentstack Assets combines AI with powerful asset management capabilities, ena
 A: **Note:** AI-powered suggestions can be incorrect sometimes. Review before accepting and report any inconsistencies to our [support](mailto:support@contentstack.com) team for further investigation.
 
 **Q: Where can I learn more about configuring metadata used by AI features?**  
-A: Refer to the [Edit Configurable Metadata](/docs/assets/edit-configurable-metadata) document for more information.
+A: Refer to the [Edit Configurable Metadata](./edit-configurable-metadata.md) document for more information.
 
 **Q: How do I filter assets by dominant colors?**  
-A: Refer to the [Apply Filters](/docs/assets/apply-filters) document for more information.
+A: Refer to the [Apply Filters](./apply-filters.md) document for more information.
 
 **Q: Where can I find details about bounding boxes and hotspots?**  
-A: Refer to the [Add Visual Markup](/docs/assets/add-visual-markups) document for more information.
+A: Refer to the [Add Visual Markup](./add-visual-markups.md) document for more information.

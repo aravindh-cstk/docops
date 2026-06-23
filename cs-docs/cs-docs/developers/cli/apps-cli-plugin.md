@@ -16,15 +16,15 @@ This page explains how to install and use the Contentstack Apps CLI plugin to cr
 
 ## Apps CLI Plugin
 
-Contentstack lets you develop apps in your organization using the [Developer Hub](/docs/developers/developer-hub/about-developer-hub/) portal. With the Apps CLI plugin, Contentstack CLI allows you to perform the CRUD operations on your app in Developer Hub and then use the app in your organization or stack by installing or uninstalling your app as required.
+Contentstack lets you develop apps in your organization using the [Developer Hub](../developer-hub/about-developer-hub.md) portal. With the Apps CLI plugin, Contentstack CLI allows you to perform the CRUD operations on your app in Developer Hub and then use the app in your organization or stack by installing or uninstalling your app as required.
 
 This step-by-step guide lets you install and use the Apps CLI plugin in CLI.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
-- [CLI installed](/docs/developers/cli/install-the-cli/) and [configured](/docs/developers/cli/configure-regions-in-the-cli/) (version 1.7.11 and above)
-- [CLI authenticated](/docs/developers/cli/cli-authentication/)
+- [CLI installed](./install-the-cli.md) and [configured](./configure-regions-in-the-cli.md) (version 1.7.11 and above)
+- [CLI authenticated](./cli-authentication.md)
 
 ## Install the Apps CLI Plugin
 
@@ -230,7 +230,7 @@ csdx app:update --app-manifest
 
 ### Deploy an App
 
-The `app:deploy` command in CLI allows you to deploy an app on the [Contentstack Launch](/docs/developers/launch/about-launch/) platform, or on an external platform using [custom hosting](/docs/developers/developer-hub/app-hosting#custom-hosting).
+The `app:deploy` command in CLI allows you to deploy an app on the [Contentstack Launch](../launch/about-launch.md) platform, or on an external platform using [custom hosting](../developer-hub/app-hosting.md#custom-hosting).
 
 - Open a terminal.
 - Fire the following command to deploy an app:
@@ -244,7 +244,7 @@ csdx app:deploy
 - Select a **Hosting Type**.
       If you select **Hosting with Launch**, then select from the following:
           **Existing**: Allows you to select an existing Launch project to host your app.
-- **New**: Creates a new Launch project to host your app.**Note:** When you create a new Launch project (using [GitHub](/docs/developers/launch/import-project-using-github) or [File upload](/docs/developers/launch/import-project-using-file-upload/)) to host your app, you can pass the project parameters in a [config](https://github.com/contentstack/contentstack-apps-cli/blob/main/examples/create-launch-project.json) file.
+- **New**: Creates a new Launch project to host your app.**Note:** When you create a new Launch project (using [GitHub](../launch/import-project-using-github.md) or [File upload](../launch/import-project-using-file-upload.md)) to host your app, you can pass the project parameters in a [config](https://github.com/contentstack/contentstack-apps-cli/blob/main/examples/create-launch-project.json) file.
 - If you select **Custom Hosting**, enter any custom URL to host your app.
 
 You have successfully deployed an app.

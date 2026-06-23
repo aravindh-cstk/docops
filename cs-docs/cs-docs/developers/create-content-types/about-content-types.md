@@ -16,13 +16,13 @@ This page explains what Content Types are in Contentstack, the key terminology a
 
 ## About Content Types
 
-A Content Type is the structure or blueprint of a page or a section that your web or mobile property will display. It lets you define the overall schema of this blueprint by adding [fields](/docs/developers/create-content-types/about-fields) and setting its [properties](/docs/developers/create-content-types/about-field-properties).
+A Content Type is the structure or blueprint of a page or a section that your web or mobile property will display. It lets you define the overall schema of this blueprint by adding [fields](./about-fields.md) and setting its [properties](./about-field-properties.md).
 
-**Note:** When working within specific branches, content types added or updated will be specific to that particular branch. Refer to our [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) document for more information.
+**Note:** When working within specific branches, content types added or updated will be specific to that particular branch. Refer to our [Branch-specific Modules](../branches/branch-specific-modules.md) document for more information.
 
 In essence, creating a content type is like creating a mold or cast that lets you create several objects (entries) of the same nature and pattern. Content types, however, should be created after you [model your content](/docs/developers/how-to-guides/content-modeling) appropriately.
 
-Here is the structure of a “News” Content Type that has a “title,” “description,” “asset,” and “date” fields. Once this content type is ready, you can [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for it.
+Here is the structure of a “News” Content Type that has a “title,” “description,” “asset,” and “date” fields. Once this content type is ready, you can [create an entry](../../content-managers/author-content/create-an-entry.md) for it.
 
 ## Terminologies
 
@@ -39,7 +39,7 @@ Here is the structure of a “News” Content Type that has a “title,” “de
 
 Contentstack allows you to customize a content type to meet your requirements. You can create webpage(s), the pages of your mobile application, or the partials of your webpage (header, footer, or menu).
 
-Using the [Single and Multiple Content Types](/docs/developers/create-content-types/single-vs-multiple-content-types) options, you can even set the number of entries for a particular content type.
+Using the [Single and Multiple Content Types](./single-vs-multiple-content-types.md) options, you can even set the number of entries for a particular content type.
 
 This means that if you set “Blog” content type as multiple, you can create many entries of the same structure. And if you set “Homepage” content type as single, you can only make a single entry for this content type.
 

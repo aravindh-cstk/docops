@@ -18,7 +18,7 @@ This page provides a cloud infrastructure architecture diagram and detailed expl
 
 ## Cloud Infrastructure
 
-This diagram outlines the architecture details of a [simple](/docs/developers/architecture-diagrams/simple-website-detailed-architecture) or [dynamic](/docs/developers/architecture-diagrams/dynamic-website-detailed-architecture) website that uses Amazon Web Services (AWS) as its cloud infrastructure provider. It explains the various components of your infrastructure and highlights how the client interacts with your app, and how your app communicates with the third-party services.
+This diagram outlines the architecture details of a [simple](./simple-website-detailed-architecture.md) or [dynamic](./dynamic-website-detailed-architecture.md) website that uses Amazon Web Services (AWS) as its cloud infrastructure provider. It explains the various components of your infrastructure and highlights how the client interacts with your app, and how your app communicates with the third-party services.
 
 (**Download Diagram**: [PDF](https://assets.contentstack.io/v3/assets/blt23180bf2502c7444/blt3abe5e13b572f2f3/5f3d0778cc17142ec0f0c235/Cloud_Infrastructure_Diagram.pdf?disposition=download), [SVG](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt49fd361e86581722/5f3d07b8cc17142ec0f0c245/Cloud_Infrastructure_Diagram.svg?disposition=download), [JPG](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt024eb4485ba5b61f/5f3d05c36e9660261c55bade/Cloud_Infrastructure_Diagram.jpeg?disposition=download), and [VSDX)](https://assets.contentstack.io/v3/assets/blt23180bf2502c7444/blt0906bcccc8dcb488/5f3d084962013530f82eb71f/Cloud_Infrastructure_Diagram.vsdx?disposition=download)
 
@@ -149,19 +149,19 @@ Google Analytics tracks user behavior or actions on your website. It collects us
 ## Next Steps
 
 ### More Architecture Diagrams
-- [Simple website architecture](/docs/developers/architecture-diagrams/simple-website-detailed-architecture)
-- [Static website architecture](/docs/developers/architecture-diagrams/static-website-detailed-architecture)
-- [Dynamic website architecture](/docs/developers/architecture-diagrams/dynamic-website-detailed-architecture)
-- [Partially headless setup architecture](/docs/developers/architecture-diagrams/partially-headless-setup-detailed-architecture)
-- [Layered architecture for Contentstack-powered websites](/docs/developers/architecture-diagrams/contentstack-powered-website-layered-architecture)
-- [MACH System Architecture](/docs/developers/architecture-diagrams/mach-architecture-diagram)
-- [Simple Website Using DataSync](/docs/developers/architecture-diagrams/simple-website-using-datasync)
-- [Mobile and Smart Devices System Architecture](/docs/developers/architecture-diagrams/mobile-and-smart-devices-system-architecture)
+- [Simple website architecture](./simple-website-detailed-architecture.md)
+- [Static website architecture](./static-website-detailed-architecture.md)
+- [Dynamic website architecture](./dynamic-website-detailed-architecture.md)
+- [Partially headless setup architecture](./partially-headless-setup-detailed-architecture.md)
+- [Layered architecture for Contentstack-powered websites](./contentstack-powered-website-layered-architecture.md)
+- [MACH System Architecture](./mach-architecture-diagram.md)
+- [Simple Website Using DataSync](./simple-website-using-datasync.md)
+- [Mobile and Smart Devices System Architecture](./mobile-and-smart-devices-system-architecture.md)
 
 ### Resources to Get Started
-- [Quickstart in 5 minutes](/docs/developers/quickstart-in-5-mins)
+- [Quickstart in 5 minutes](../quickstart-in-5-mins.md)
 - [Sample applications](/docs/developers/sample-apps)
-- [How to start using Contentstack](/docs/developers/contentstack-basics/how-to-start-using-contentstack)
+- [How to start using Contentstack](../contentstack-basics/how-to-start-using-contentstack.md)
 
 ## Common questions
 

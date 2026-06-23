@@ -16,7 +16,7 @@ This page explains how to build a DAM (Digital Asset Management) Marketplace app
 
 ## Marketplace DAM App Boilerplate
 
-A boilerplate streamlines your workflow with pre-configured templates, ensuring rapid development and seamless integration within the [Contentstack's Developer Hub](/docs/developer-hub). It elevates digital asset management capabilities and enhances content delivery across diverse platforms.
+A boilerplate streamlines your workflow with pre-configured templates, ensuring rapid development and seamless integration within the [Contentstack's Developer Hub](../developer-hub.md). It elevates digital asset management capabilities and enhances content delivery across diverse platforms.
 
 They can define project-level elements or standard methods for one or more projects.
 
@@ -24,7 +24,7 @@ The following guide shows how to build a DAM (Digital Asset Management) Marketpl
 
 ## Why should you use the Marketplace DAM App Boilerplate?
 
-- The DAM app boilerplate provides a standard code structure for all the required [UI locations](/docs/developer-hub/about-ui-locations) of a DAM app. You can quickly start developing the app by changing the `root_config` files as needed for the third-party DAM application.
+- The DAM app boilerplate provides a standard code structure for all the required [UI locations](./about-ui-locations.md) of a DAM app. You can quickly start developing the app by changing the `root_config` files as needed for the third-party DAM application.
 - Creating an application is quick since you only need to modify the required functions in `root_config` for your UI locations to work.
 - We have built a boilerplate that incorporates all the best practices you can use while building your application in Contentstack.
 - With this boilerplate, you can save a considerable amount of development time when building a third-party DAM Application.
@@ -160,10 +160,10 @@ To use your application, you need to set it up in Contentstack. To do so, perfor
 - You will be redirected to the configuration page of the app. On the **Configuration** page, enter the following details:**Text input**: You can enter the input text for the Sample DAM app and save the data. You can also use any other app configuration as per your DAM website.
   - **Select input**: You can use the Select input field to select any option from the dropdown options.
   - **DAM radio input**: You can use the radio input field to choose an option from the given options (**Single Select** or **Multi Select**).**Note**: You can customize the app configuration with your dedicated fields.
-  - **Save in Entry** [Mandatory]: If you select the **Custom Fields** option, you can select the structure of the data you want to save in the entry. If the **All Fields** option is selected, you might be able to add limited products in the custom field depending on the size of the data (Refer to the [Custom Fields Limitations](/docs/developers/create-custom-fields/limitations-of-custom-fields) documentation for more details).
+  - **Save in Entry** [Mandatory]: If you select the **Custom Fields** option, you can select the structure of the data you want to save in the entry. If the **All Fields** option is selected, you might be able to add limited products in the custom field depending on the size of the data (Refer to the [Custom Fields Limitations](../create-custom-fields/limitations-of-custom-fields.md) documentation for more details).
 - Click the **Save** button and then click **Open Stack** to start using the application.
 
-**Additional Resource**: To learn more, refer to the [App Configuration](/docs/developer-hub/app-config-location) document.
+**Additional Resource**: To learn more, refer to the [App Configuration](./app-config-location.md) document.
 
 Having the basic DAM app setup ready, you can now update `root_config` files in the UI directories.
 
@@ -185,16 +185,16 @@ Having the basic DAM app setup ready, you can now update `rte_config` files in t
 
 To use the DAM application within an entry of your stack, follow the steps given below:
 
-- Go to your stack, click the [Content Models](/docs/developers/marketplace-platform-guides/content-models/about-content-models) icon in the left navigation panel, and click the **+ New Content Type** button.
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
+- Go to your stack, click the [Content Models](../marketplace-platform-guides/content-models/about-content-models.md) icon in the left navigation panel, and click the **+ New Content Type** button.
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
 
 ### Steps to use the DAM App within the Custom Field
 
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom/) field in your content type by clicking the **Insert a field** link represented by a + sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a + sign.
 - Under **Select Extension/App**, select names defined for the Custom Field UI location and click the **Proceed** button.  
   This adds the DAM app in the custom field.
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
-- To use the DAM app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](/docs/content-managers/author-content/create-an-entry) for the above content type, and then click **Proceed**.  
+- To use the DAM app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.  
   You can see the DAM app’s custom field on your entry page as shown below:
 - Click the **+ Choose Asset(s)** button.
 - Select assets from the third-party DAM website to add them to your entry.
@@ -203,11 +203,11 @@ To use the DAM application within an entry of your stack, follow the steps given
 
 ### Steps to use the DAM App within the JSON RTE
 
-- In the **Content Type Builder** page, add a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) field in your content type by clicking the **Insert a field** link represented by a + sign.
+- In the **Content Type Builder** page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field in your content type by clicking the **Insert a field** link represented by a + sign.
 - Under **Select JSON RTE Plugin(s)**, choose the names defined for the JSON RTE UI location, and then click the **Add Plugin(s)** button.  
   This adds the DAM app in the JSON RTE.
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
-- To use the DAM app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](/docs/content-managers/author-content/create-an-entry) for the above content type, and then click **Proceed**.  
+- To use the DAM app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.  
   You can see the DAM app’s icon in the JSON RTE on your entry page as shown below:
 - Click the DAM app's icon.
 - Select assets from the third-party DAM website to add them to your entry.
@@ -238,7 +238,7 @@ Navigate to the `ui > example > sample_dam_app` folder and copy the `root_config
 - You must open the app in the configured UI location to view it.
 - The screenshots shown in this document are using **example/sample_dam_app** from the UI directory.
 
-**Additional Resource**: To learn about the use of **Bynder** and **Cloudinary** DAM apps, please refer to the [Bynder App Installation Guide](/docs/developers/marketplace-apps/bynder) and [Cloudinary App Installation Guide](/docs/developers/marketplace-apps/cloudinary).
+**Additional Resource**: To learn about the use of **Bynder** and **Cloudinary** DAM apps, please refer to the [Bynder App Installation Guide](../marketplace-apps/bynder.md) and [Cloudinary App Installation Guide](../marketplace-apps/cloudinary.md).
 
 ## Common questions
 

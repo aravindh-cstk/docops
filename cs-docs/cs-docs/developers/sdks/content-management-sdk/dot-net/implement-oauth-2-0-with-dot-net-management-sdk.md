@@ -18,13 +18,13 @@ This page explains how to implement OAuth 2.0 authentication using the .NET Mana
 
 ## Implement OAuth 2.0 with .NET Management SDK
 
-Use OAuth 2.0 with the .NET Management SDK to securely authenticate your app with [Contentstack’s Content Management API](/docs/developers/apis/content-management-api) (CMA). The SDK stores tokens securely and refreshes access tokens automatically.
+Use OAuth 2.0 with the .NET Management SDK to securely authenticate your app with [Contentstack’s Content Management API](../../../../../api-docs/api-detail/content-management-api.md) (CMA). The SDK stores tokens securely and refreshes access tokens automatically.
 
 Apply this flow across web applications, CLI tools, and other .NET environments to streamline authentication and enable role-based access control.
 
 ## Prerequisites
 - Install `contentstack.management.csharp` **v0.4.0** or **later**.
-- [Register an OAuth application.](/docs/developers/developer-hub/contentstack-oauth) If none is registered, the SDK defaults to the Contentstack CLI App.
+- [Register an OAuth application.](../../../developer-hub/contentstack-oauth.md) If none is registered, the SDK defaults to the Contentstack CLI App.
 - Ensure you have the following credentials:`AppId`
 - `ClientId`
 - `RedirectUri`

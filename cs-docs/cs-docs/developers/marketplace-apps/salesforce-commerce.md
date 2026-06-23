@@ -164,7 +164,7 @@ In the **Add Salesforce Commerce Key Field** modal, enter the **Key Name or Path
 - **Category List View Columns:** Select and show specific category fields in the category list view within entries. By default, **id**, **name**, and **image** columns are selected.Once you save your configuration, the selected columns appear in the custom field’s list view on the entry page. You can also update or remove columns at any time to refine the view.
 - After adding the configuration details, click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Note**: The app requires at least one UI location to be enabled, otherwise you will not be able to save your app configuration settings.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Salesforce Commerce app.
 
 ## Use the Salesforce Commerce App within your Stack
@@ -172,9 +172,9 @@ To use the Salesforce Commerce app within an entry of your stack, follow the ste
 
 Navigate to the stack dashboard, click **Content Models** in the header, then **New Content Type**. From the dropdown, select **Create New**.
 - Create a content type by entering relevant details as given below:
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom) field for product in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field for product in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension or App**, select **Salesforce Commerce - Product** and click the **Proceed** button.This adds Salesforce Commerce - Product in the custom field.
-- Add another [Custom](/docs/developers/create-content-types/custom) field for category in your content type by clicking the **Insert a field **link represented by a **+** sign.
+- Add another [Custom](../create-content-types/custom.md) field for category in your content type by clicking the **Insert a field **link represented by a **+** sign.
 - Under **Select Extension or App**, select **Salesforce Commerce - Category** and click the **Proceed** button.This adds Salesforce Commerce - Category in the custom field.
 - Under **Advanced** properties, you have the option to set the **Config Parameter** for all entries of a particular content type. If you do so, it overrides the default app configuration you set at the time of app installation on the Configuration screen.The **key:value** passed in the configuration object overrides the default app configuration settings.
 
@@ -221,7 +221,7 @@ If you want to use a different Salesforce Commerce configuration for any custom 
 
 **Note**: If any configuration value is not added, or if all the values are empty in the **Config Parameter** properties settings, the Salesforce Commerce app uses the default credentials configured in the installation in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace).
 - After adding the custom fields for the app, click **Save** or **Save and Close** to save your changes.
-- To use the Salesforce Commerce app, [create an entry](/docs/content-managers/author-content/create-an-entry) for this content type. In the left navigation panel, navigate to the Entries page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Salesforce Commerce app’s custom fields on your entry page as shown below:
+- To use the Salesforce Commerce app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. In the left navigation panel, navigate to the Entries page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Salesforce Commerce app’s custom fields on your entry page as shown below:
 - Click the **+ Add Product(s)** button to choose the product(s).
 - Select the products from your Salesforce Commerce store and click the **+ Add Product(s)** button to add them to your entry.You can select the products from multiple configurations at once using the **Configuration** drop-down.
 

@@ -20,12 +20,12 @@ To configure the permissions for your application via OAuth, please include the 
 
 This request will return the most recent version of the asset, however, to download the latest published version of the asset, pass the environment query parameter with the environment name.
 
-**Note**: Before executing this API request, ensure to [create a permanent URL for the asset](/docs/developers/apis/content-management-api#generate-permanent-asset-url) you want to download.
+**Note**: Before executing this API request, ensure to [create a permanent URL for the asset](../../../../api-detail/content-management-api.md#generate-permanent-asset-url) you want to download.
 
 ## URL Parameters
 
 - **asset_uid** (required)
-  Enter the UID of the asset you want to download. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) request to get the UID of the asset.
+  Enter the UID of the asset you want to download. Use the [Get All Assets](../../../../api-detail/content-management-api.md#get-all-assets) request to get the UID of the asset.
   Default: `your_asset_uid`
 - **slug** (required)
   Enter the unique identifier of the asset.

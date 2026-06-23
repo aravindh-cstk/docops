@@ -14,7 +14,7 @@ last_updated: 2024-03-21
 
 **POST** `/content_types/{content_type_uid}/entries`
 
-The Create an entry with master locale request lets you create an entry in the master language of your stack if it does not already exist or has been deleted. You can use the UID of a [localized entry](/docs/developers/multilingual-content/localize-an-entry) to convert it into a [master language entry](/docs/developers/multilingual-content/set-the-master-language).
+The Create an entry with master locale request lets you create an entry in the master language of your stack if it does not already exist or has been deleted. You can use the UID of a [localized entry](../../../../../cs-docs/developers/multilingual-content/localize-an-entry.md) to convert it into a [master language entry](../../../../../cs-docs/developers/multilingual-content/set-the-master-language.md).
 
 To configure the permissions for your application via OAuth, please include the cm.entries.management:write scope.   
 If the master language is not accessible or does not exist, a custom user role can still create an entry in any of the other available locales. However, the entry in the master language remains non-existent.
@@ -62,7 +62,7 @@ Here’s what your request body should look like:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.

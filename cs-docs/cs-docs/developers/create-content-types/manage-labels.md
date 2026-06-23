@@ -20,7 +20,7 @@ This page explains how to manage labels in Contentstack to organize and categori
 Labels in Contentstack provide an efficient way to organize and categorize your content types, making them easier to manage and access. Whether you need to add a new label, update an existing one, or remove labels that are no longer needed, Contentstack offers a simple and intuitive way to handle these actions.
 
 To manage labels, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and click the “Content Models” icon in the left navigation panel to view the list of [content types](/docs/developers/create-content-types/about-content-types).
+- Go to your [stack](../set-up-stack/about-stack.md), and click the “Content Models” icon in the left navigation panel to view the list of [content types](./about-content-types.md).
 - Click the “Gear” icon.
 - The **Manage Labels** modal appears. From this modal, you can:**Add a new label:** Click the **+ New Label** button, enter the desired label name, and save your changes.
 - **Edit an existing label:** Update the label name or nest it under another label for better organization.
@@ -29,9 +29,9 @@ To manage labels, log in to your [Contentstack account](https://app.contentstack
 ## API Reference
 
 To manage labels via API, refer to the following API requests:
-- [Add label](/docs/developers/apis/content-management-api#add-label)
-- [Update label](/docs/developers/apis/content-management-api#update-label)
-- [Delete label](/docs/developers/apis/content-management-api#delete-label)
+- [Add label](../../../api-docs/api-detail/content-management-api.md#add-label)
+- [Update label](../../../api-docs/api-detail/content-management-api.md#update-label)
+- [Delete label](../../../api-docs/api-detail/content-management-api.md#delete-label)
 
 ## Common questions
 

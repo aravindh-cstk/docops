@@ -17,7 +17,7 @@ This page explains [JSON RTE] - About Block and Inline Elements for Contentstack
 
 ## About Block and Inline Elements
 
-In the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) (RTE), content is organized into **block elements** and **inline elements**. Understanding the distinction between these two types of elements is essential for content managers to create structured and well-formatted content.
+In the [JSON Rich Text Editor](./about-json-rich-text-editor.md) (RTE), content is organized into **block elements** and **inline elements**. Understanding the distinction between these two types of elements is essential for content managers to create structured and well-formatted content.
 
 This guide will walk you through what block and inline elements are, how they function, and when to use them, ensuring a smooth content authoring experience.
 

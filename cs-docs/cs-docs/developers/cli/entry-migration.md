@@ -16,23 +16,23 @@ This page explains how to use the Contentstack Command-line Interface (CLI) Entr
 
 ## Entry Migration
 
-In Branches, the [merge operation](/docs/developers/cli/compare-and-merge-branches-using-the-cli/) is performed on content types and not on the entries within the content types. With the Entry Migration utility, created as part of the Entry Migration flow, you can now merge the entries along with the content types.
+In Branches, the [merge operation](./compare-and-merge-branches-using-the-cli.md) is performed on content types and not on the entries within the content types. With the Entry Migration utility, created as part of the Entry Migration flow, you can now merge the entries along with the content types.
 
 This step-by-step guide lets you use the Entry Migration utility to perform the merge operation on entries.
 
 **Note**:
 - The generated entry migration scripts can handle only simple scenarios. For complicated entry migration scenarios, you can customize the migration scripts.
 - The entry migration scripts are available in the `merge_scripts` folder.
-- If you want to create a script from scratch, you can use the [Migration](/docs/developers/cli/migrate-your-content-using-the-cli-migration-command) command.
+- If you want to create a script from scratch, you can use the [Migration](./migrate-your-content-using-the-cli-migration-command.md) command.
 - Entry migration generates migration scripts only for content types merged during the
 `branches:merge` command.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
-- [CLI installed](/docs/developers/cli/install-the-cli/) and [configured](/docs/developers/cli/configure-regions-in-the-cli/) (version 1.7.0 and above)
-- [CLI authenticated](/docs/developers/cli/cli-authentication/)
-- [Branches](/docs/developers/branches/) enabled for your organization
-- [Merge operation](/docs/developers/cli/compare-and-merge-branches-using-the-cli/#steps-to-merge-branches) performed
+- [CLI installed](./install-the-cli.md) and [configured](./configure-regions-in-the-cli.md) (version 1.7.0 and above)
+- [CLI authenticated](./cli-authentication.md)
+- [Branches](../../../api-docs/developers/apis/content-management-api/branches.md) enabled for your organization
+- [Merge operation](./compare-and-merge-branches-using-the-cli.md#steps-to-merge-branches) performed
 
 ## Usage
 

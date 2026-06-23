@@ -19,7 +19,7 @@ This page explains how organization administrators can configure the maximum con
 
 The “Webhook Configuration” feature lets you establish the maximum connections per second for all webhooks in your organization. This limit determines the maximum connections permitted to webhook URLs at any given time. Once this limit is reached, connections are efficiently throttled to avoid surpassing it.
 
-By configuring [webhooks](/docs/developers/set-up-webhooks/about-webhooks), you can designate a specific URL for Contentstack to send data to whenever a relevant event occurs in your stack.
+By configuring [webhooks](../set-up-webhooks/about-webhooks.md), you can designate a specific URL for Contentstack to send data to whenever a relevant event occurs in your stack.
 
 To set the connection limit for the webhooks in your organization, log in to your [Contentstack account](https://www.contentstack.com/login) and follow the steps below:
 - Select the Organization from the dropdown on the header and click on the “Org Admin” icon in the left navigation panel.Or, you can simply click on the “Org Admin” cog beside the Organization that you intend to open.

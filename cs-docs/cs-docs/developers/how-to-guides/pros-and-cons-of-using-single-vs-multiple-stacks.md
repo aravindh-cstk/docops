@@ -17,9 +17,9 @@ This page explains the advantages and disadvantages of managing content in Conte
 
 ## Pros and Cons of Using Single Vs Multiple Stacks
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn more about stacks, refer to the [Stack](/docs/developers/set-up-stack/about-stack) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn more about stacks, refer to the [Stack](../set-up-stack/about-stack.md) documentation.
 
-A [stack](/docs/developers/set-up-stack/about-stack) is like a container that holds all your project's content ([entries](/docs/content-managers/working-with-entries/about-entries), assets, and so on), and to manage our projects in Contentstack, we make use of a single stack and, at times, multiple stacks.
+A [stack](../set-up-stack/about-stack.md) is like a container that holds all your project's content ([entries](../../content-managers/author-content/about-entries.md), assets, and so on), and to manage our projects in Contentstack, we make use of a single stack and, at times, multiple stacks.
 
 In this guide, we will discuss the pros and cons of using a single stack versus multiple stacks. This will help us understand in which scenarios we should use a single stack and when to use of numerous stacks for effective content management.
 
@@ -51,7 +51,7 @@ Using multiple stacks for your website management can simplify the overall websi
 - Content management becomes simplified for individual team members when working on a large website with multiple assets and entries.
 - Managing multiple projects becomes easier as you can distribute and segregate the project's content in different stacks.
 
-**Additional Resource:** Learn how you can [Sync Data Between Stacks Using Contentstack Webhooks and AWS Lambda](/docs/developers/how-to-guides/sync-data-between-stacks-using-contentstack-webhooks-and-aws-lambda).
+**Additional Resource:** Learn how you can [Sync Data Between Stacks Using Contentstack Webhooks and AWS Lambda](./sync-data-between-stacks-using-contentstack-webhooks-and-aws-lambda.md).
 
 **Cons of Using Multiple Stacks**
 - Your website content gets distributed across multiple stacks. This introduces interdependency, which requires proper management.
@@ -64,7 +64,7 @@ Using multiple stacks for your website management can simplify the overall websi
 **Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release.
 
 ### Where can I learn more about stacks?
-To learn more about stacks, refer to the [Stack](/docs/developers/set-up-stack/about-stack) documentation.
+To learn more about stacks, refer to the [Stack](../set-up-stack/about-stack.md) documentation.
 
 ### When is a single stack typically sufficient?
 When you have a relatively smaller website (with just one domain), using a single stack for managing the content will suffice.

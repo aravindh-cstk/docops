@@ -17,11 +17,11 @@ This page explains what Stack Dashboards are in Contentstack, what they show by 
 
 ## About Stack Dashboards
 
-The **Dashboard **is the homepage of your [stack](/docs/developers/set-up-stack/about-stack). This dashboard allows [Contentstack users](/docs/developers/invite-users-and-assign-roles/about-stack-users) to view and navigate to recently modified [entries](/docs/content-managers/working-with-entries/about-entries) and [assets](/docs/content-managers/working-with-assets/about-assets) of your stack.
+The **Dashboard **is the homepage of your [stack](./about-stack.md). This dashboard allows [Contentstack users](../invite-users-and-assign-roles/about-stack-users.md) to view and navigate to recently modified [entries](../../content-managers/author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets) of your stack.
 
 Contentstack lets you customize your dashboard view by adding new widgets through [extensions](/docs/developers#extend-contentstack-s-ui-through-extensions).
 
-**Additional Resource**: Refer [Create a New Dashboard Extension](/docs/developers/create-dashboard-extensions/create-a-new-dashboard-extension) to learn how to create a widget for your dashboard. We have also detailed the process of testing the dashboard widget before releasing it.
+**Additional Resource**: Refer [Create a New Dashboard Extension](../create-dashboard-extensions/create-a-new-dashboard-extension.md) to learn how to create a widget for your dashboard. We have also detailed the process of testing the dashboard widget before releasing it.
 
 You can even sort or hide widgets on your dashboard as per your requirements.
 
@@ -34,7 +34,7 @@ You can browse through the following topics, mentioned in the â€œMore Articlesâ€
 ## Common questions
 
 ### Who can use the Stack Dashboard?
-[Contentstack users](/docs/developers/invite-users-and-assign-roles/about-stack-users) can use the dashboard to view and navigate to recently modified [entries](/docs/content-managers/working-with-entries/about-entries) and [assets](/docs/content-managers/working-with-assets/about-assets) of your stack.
+[Contentstack users](../invite-users-and-assign-roles/about-stack-users.md) can use the dashboard to view and navigate to recently modified [entries](../../content-managers/author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets) of your stack.
 
 ### How do I add new widgets to the dashboard?
 Contentstack lets you customize your dashboard view by adding new widgets through [extensions](/docs/developers#extend-contentstack-s-ui-through-extensions).

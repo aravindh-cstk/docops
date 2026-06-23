@@ -20,7 +20,7 @@ The `config` namespace in the Contentstack CLI provides commands to configure va
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
-- Contentstack CLI [installed](/docs/developers/cli/install-the-cli/)
+- Contentstack CLI [installed](../install-the-cli.md)
 
 ## Commands
 

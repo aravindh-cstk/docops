@@ -18,7 +18,7 @@ This page explains how to set up the Contentstack Dart SDK in a Dart/Flutter pro
 
 ## Get Started with Dart SDK and Live Preview
 
-This guide will help you get started with [Contentstack Dart SDK](/docs/developers/sdks/content-delivery-sdk/dart/about-dart-sdk/) to build apps powered by Contentstack.
+This guide will help you get started with [Contentstack Dart SDK](./about-dart-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 - [Contentstack account](https://app.contentstack.com/#!/login)
@@ -68,7 +68,7 @@ live_preview = {
 ```
 
 ## Initializing the Stack with Live Preview
-Since the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk) is responsible for communication, you need to initialize it within your stack.
+Since the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) is responsible for communication, you need to initialize it within your stack.
 
 Use the following command to initialize the stack:
 
@@ -79,7 +79,7 @@ final stack = Contentstack.stack(api_key, delivery_token, environment, live_prev
     host: 'api.contentstack.io'
 });
 ```
-**Note**: By default, the `host` parameter points to the North America endpoint. If your website is hosted on the European data center, then pass the [European](/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt) endpoint against the `host` parameter.
+**Note**: By default, the `host` parameter points to the North America endpoint. If your website is hosted on the European data center, then pass the [European](../../../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) endpoint against the `host` parameter.
 
 ## Create an Interceptor
 Use the following code to create an interceptor:
@@ -103,12 +103,12 @@ class LoggingInterceptor implements InterceptorContract {
 ```
 
 ## For Server-side Rendered Websites
-To install and initialize the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk), you can refer to our [SSR Live Preview Setup](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website#server-side-rendering-ssr-) documentation.
+To install and initialize the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md), you can refer to our [SSR Live Preview Setup](../../../set-up-live-preview/set-up-live-preview-for-your-website.md#server-side-rendering-ssr-) documentation.
 
 ## Query Request
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
-To get an [entry](/docs/content-managers/author-content/about-entries), you need to specify the [content type](/docs/developers/create-content-types/about-content-types) UID and the UID of the entry.
+To get an [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) UID and the UID of the entry.
 
 ```
 final entry = stack.contentType('contentTypeUid').entry(entryUid: 'entryUid');
@@ -120,10 +120,10 @@ final entry = stack.contentType('contentTypeUid').entry(entryUid: 'entryUid');
 ```
 
 ## More Resources
-- [JavaScript Live Preview Utils SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-live-preview-utils-sdk)
+- [JavaScript Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
 - [E-commerce App using Contentstack's Dart SDK](/docs/developers/sample-apps/build-a-flutter-e-commerce-app-using-contentstack-s-dart-sdk)
 - [API Reference](/docs/developers/dart/api-reference/)
-- [Dart SDK Changelog](/docs/developers/sdks/content-delivery-sdk/dart/dart-sdk-changelog/)
+- [Dart SDK Changelog](./dart-sdk-changelog.md)
 - [View and Download Dart SDK repository on GitHub](https://github.com/contentstack/contentstack-dart)
 
 ## Common questions
@@ -135,9 +135,9 @@ You need a [Contentstack account](https://app.contentstack.com/#!/login) and [Da
 Add it to your `pubspec.yaml` file under `dependencies`.
 
 ### What does the `host` parameter do in the Live Preview configuration?
-By default, the `host` parameter points to the North America endpoint. If your website is hosted on the European data center, then pass the [European](/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt) endpoint against the `host` parameter.
+By default, the `host` parameter points to the North America endpoint. If your website is hosted on the European data center, then pass the [European](../../../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) endpoint against the `host` parameter.
 
 ### Where can I find guidance for SSR Live Preview setup?
-Refer to the [SSR Live Preview Setup](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website#server-side-rendering-ssr-) documentation.
+Refer to the [SSR Live Preview Setup](../../../set-up-live-preview/set-up-live-preview-for-your-website.md#server-side-rendering-ssr-) documentation.
 
 Filename: dart-get-started-with-dart-sdk-and-live-preview.md

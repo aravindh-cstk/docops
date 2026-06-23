@@ -74,7 +74,7 @@ Here’s a step-by-step overview of how experiences function in Contentstack Per
 
 ## Next Steps
 
-- To get started with creating your own experience, check out the [Create a Segmented Experience](/docs/personalize/create-segmented-experience) or the [Create an A/B Test Experience](/docs/personalize/create-ab-test-experience).
+- To get started with creating your own experience, check out the [Create a Segmented Experience](./create-segmented-experience.md) or the [Create an A/B Test Experience](./create-ab-test-experience.md).
 
 ## Common questions
 

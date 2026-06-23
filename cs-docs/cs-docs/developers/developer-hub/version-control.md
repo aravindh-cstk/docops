@@ -20,7 +20,7 @@ Version Control in the Developer Hub lets you identify different versions of an 
 
 When a user changes or updates app information in any tab such as **UI ****Locations**, **Webhooks**, **App ****Manifest**, or **OAuth**, a new version gets created. In short, each app update results in a new version.
 
-This feature helps you keep track of  all the changes ever made to an app. You can simply navigate to the versions and view the changes. With the **Version ****Control **tab in [Developer Hub](/docs/developer-hub), you can view details of all the versions created for the apps.
+This feature helps you keep track of  all the changes ever made to an app. You can simply navigate to the versions and view the changes. With the **Version ****Control **tab in [Developer Hub](../developer-hub.md), you can view details of all the versions created for the apps.
 
 Let’s see how to navigate to the Version Control tab.
 
@@ -62,7 +62,7 @@ You will be presented with two options: **View **and **Create ****Release ****Ta
 When a user changes or updates app information in any tab such as **UI ****Locations**, **Webhooks**, **App ****Manifest**, or **OAuth**, a new version gets created.
 
 ### Where can I see the list of all versions for an app?
-You can view details of all the versions created for the apps from the **Version ****Control **tab in [Developer Hub](/docs/developer-hub).
+You can view details of all the versions created for the apps from the **Version ****Control **tab in [Developer Hub](../developer-hub.md).
 
 ### Can I restore an app to a previous version?
 Yes. From the **Basic ****Information **page, you can click the **Restore ****This ****Version **button to restore your app to the opened version.

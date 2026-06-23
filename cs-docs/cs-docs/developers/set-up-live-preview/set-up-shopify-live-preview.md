@@ -65,7 +65,7 @@ Select your **Repository** and **Branch**.
 
 ## Enable “Always Open in New Tab”
 
-For easier access, you can configure Live Preview to [open in a new tab](/docs/developers/set-up-live-preview/open-live-preview-in-a-new-tab).
+For easier access, you can configure Live Preview to [open in a new tab](./open-live-preview-in-a-new-tab.md).
 
 In your stack, go to **Settings** and select **Visual Experience**.
 

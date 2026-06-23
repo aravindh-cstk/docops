@@ -18,7 +18,7 @@ This page explains how organization data is stored across Contentstack regions, 
 
 ## Data Storage
 
-The AWS North America, AWS Europe, AWS Australia, Azure North America, Azure Europe, GCP North America and GCP Europe regions are completely separate and isolated from each other. Every piece of your [organization](/docs/owners-and-admins/about-organizations) data resides in your choice of [region](/docs/developers/contentstack-regions/about-regions). This means that you cannot decide to store some parts of the organization data in one region and the rest in the other.
+The AWS North America, AWS Europe, AWS Australia, Azure North America, Azure Europe, GCP North America and GCP Europe regions are completely separate and isolated from each other. Every piece of your [organization](../organization/about-organizations.md) data resides in your choice of [region](./about-regions.md). This means that you cannot decide to store some parts of the organization data in one region and the rest in the other.
 
 **Note**: Once an organization has been registered/created, you cannot change the organization region.
 

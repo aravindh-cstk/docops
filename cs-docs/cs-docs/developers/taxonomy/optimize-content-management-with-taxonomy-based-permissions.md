@@ -18,7 +18,7 @@ This page explains how taxonomy-based permissions in Contentstack can be used to
 
 ## Optimizing Content Management with Taxonomy-based Permissions
 
-Taxonomy-based Permissions in Contentstack allows Stack [Owners](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [Admins](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [Developers](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer)to create custom roles, granting users limited access to entries based on the associated [taxonomies](/docs/developers/taxonomy/about-taxonomy/) or [terms](/docs/developers/taxonomy/create-a-term/).
+Taxonomy-based Permissions in Contentstack allows Stack [Owners](../invite-users-and-assign-roles/types-of-roles.md#owner), [Admins](../invite-users-and-assign-roles/types-of-roles.md#admin), and [Developers](../invite-users-and-assign-roles/types-of-roles.md#developer)to create custom roles, granting users limited access to entries based on the associated [taxonomies](./about-taxonomy.md) or [terms](./create-a-term.md).
 
 ## Key Benefits
 
@@ -46,7 +46,7 @@ For instance, different product categories such as Electronics, Clothing, Home A
 - **Assign Permissions**: Assign the relevant taxonomy-based permissions (e.g., Electronics, Clothing) to each role.
 - **Manage Content**: Content Managers will manage listings, descriptions, and updates for their assigned categories, reducing the risk of accidental changes to other categories.
 
-**Additional Resource**: For detailed instructions on creating custom roles and applying permissions, refer to the [Create a Role](/docs/developers/invite-users-and-assign-roles/create-a-role) documentation.
+**Additional Resource**: For detailed instructions on creating custom roles and applying permissions, refer to the [Create a Role](../invite-users-and-assign-roles/create-a-role.md) documentation.
 
 Utilizing taxonomy-based permissions ensures efficient and secure content management. By following these best practices, you can leverage this feature to improve workflow and protect sensitive information within your organization.
 
@@ -62,4 +62,4 @@ Uncategorized entries (entries not assigned with any term) will not be visible t
 Ensure that all entries have assigned taxonomies or terms so users can see the content they are intended to manage.
 
 ### Where can I find instructions for creating roles and applying permissions?
-Refer to the [Create a Role](/docs/developers/invite-users-and-assign-roles/create-a-role) documentation.
+Refer to the [Create a Role](../invite-users-and-assign-roles/create-a-role.md) documentation.

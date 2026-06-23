@@ -16,13 +16,13 @@ This page provides an overview of Contentstack’s “contentstack-express” we
 
 **Warning**: contentstack-express framework has been deprecated. We will soon stop supporting this framework. Instead, we recommend using [DataSync](/docs/developers/develop-apps-with-datasync), which is faster and more flexible than the web framework.
 
-Contentstack is a SaaS-based, headless content management platform. The content — stored and managed in the cloud — can be retrieved and delivered to any channel (web, mobile, devices, etc.) via its [Content Delivery APIs](/docs/developers/apis/content-delivery-api).
+Contentstack is a SaaS-based, headless content management platform. The content — stored and managed in the cloud — can be retrieved and delivered to any channel (web, mobile, devices, etc.) via its [Content Delivery APIs](../../../api-docs/api-detail/content-delivery-api.md).
 
 For websites, however, we also provide push publishing, which improves the overall performance and content delivery speed of your website. In push publishing, the content that you publish via Contentstack is saved in the local file system of the web server. Subsequently, whenever there is an incoming page request on the website, the content is retrieved and rendered directly from the local storage, instead of fetching it from Contentstack database via APIs.
 
 ## “contentstack-express” web framework
 
-Contentstack provides a [Node.js](/docs/developers/nodejs) web application framework “contentstack-express” for building websites with push-publishing. The framework is designed for developing complex and customized websites quickly. It provides tools and options to readily incorporate common/familiar features, rather than re-inventing the wheel by coding from scratch.
+Contentstack provides a [Node.js](../sdks/content-delivery-sdk/nodejs.md) web application framework “contentstack-express” for building websites with push-publishing. The framework is designed for developing complex and customized websites quickly. It provides tools and options to readily incorporate common/familiar features, rather than re-inventing the wheel by coding from scratch.
 
 Since the framework is based on Node.js Express, it supports all the features that are offered by Node.js Express. Let’s look at some of the other benefits it provides.
 
@@ -31,7 +31,7 @@ Since the framework is based on Node.js Express, it supports all the features th
 ### Auto-sync content
 
 Once you install the framework, it syncs
-all the [content](/docs/content-managers/working-with-entries/about-entries) on your web server. Subsequently, whenever you [publish](/docs/content-managers/working-with-entries/publish-an-entry) or [unpublish](/docs/content-managers/working-with-entries/unpublish-an-entry) content from Contentstack, it automatically saves
+all the [content](../../content-managers/author-content/about-entries.md) on your web server. Subsequently, whenever you [publish](../../content-managers/author-content/publish-an-entry.md) or [unpublish](../../content-managers/author-content/unpublish-an-entry.md) content from Contentstack, it automatically saves
 or removes content, respectively, from the local storage of your web
 server.
 
@@ -45,7 +45,7 @@ website. Its in-built routing handles all the hard work needed to set-up
 ### Theming
 
 You can customize the look and feel of your
-website or web application with the various [theming](/docs/developers/web-framework-deep-dive/theming-and-templating) options offered by
+website or web application with the various [theming](./theming-and-templating.md) options offered by
 contentstack-express.
 
 ### Mini apps/extensions

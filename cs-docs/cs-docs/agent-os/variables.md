@@ -21,7 +21,7 @@ The Project Variables section helps you add project variables to use the same ke
 
 To add the Project Variables, perform the following steps:
 - log in to your [Contentstack account](https://www.contentstack.com/login/).
-- Go to your project or [create](/docs/developers/automation-hub-guides/project-variables) a new one.
+- Go to your project or [create](../../api-docs/developers/apis/automations-management-api/project-variables.md) a new one.
 - In the top navigation panel, click **Settings**. Then in the left navigation click **Variables**. You will see all the project variables defined in your project.
 
 To add a new project variable, follow the steps below.
@@ -36,11 +36,11 @@ For example, in the AWS S3 connector, you will see a list of all the project var
 
 Let's see how to add and use project variables in automation.
 
-In this use case, we will cover a scenario where you can add project variables to create entries using the Contentstack [Content Management API](/docs/developers/apis/content-management-api).
+In this use case, we will cover a scenario where you can add project variables to create entries using the Contentstack [Content Management API](../../api-docs/api-detail/content-management-api.md).
 
-We create two project variables: management token and stack key respectively. Once the variables are created, configure the [HTTP Trigger](/docs/developers/automation-hub-connectors/http-trigger), [HTTP Action](/docs/developers/automation-hub-connectors/http-action), and [Response](/docs/developers/automation-hub-connectors/response) connector.
+We create two project variables: management token and stack key respectively. Once the variables are created, configure the [HTTP Trigger](./http-trigger.md), [HTTP Action](./http-action.md), and [Response](./response.md) connector.
 
-Configure the HTTP Trigger to trigger the action. Later configure the HTTP Action to fetch the entries dynamically via the [Content Management API](/docs/developers/apis/content-management-api). You can display the response sent by the HTTP Action connector in the Response connector.
+Configure the HTTP Trigger to trigger the action. Later configure the HTTP Action to fetch the entries dynamically via the [Content Management API](../../api-docs/api-detail/content-management-api.md). You can display the response sent by the HTTP Action connector in the Response connector.
 
 Let's break this scenario to see what must be the trigger event and the consequent action required to execute the Automation:
 - **Set up the “HTTP Trigger" Event:** This trigger event is activated whenever a user makes a HTTP GET/POST request to the configured URL.

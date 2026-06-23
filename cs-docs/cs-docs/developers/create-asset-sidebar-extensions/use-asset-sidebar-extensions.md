@@ -16,9 +16,9 @@ This page explains how to use Asset Sidebar Extensions in Contentstack to manage
 
 ## Use Asset Sidebar Extensions
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](/docs/developers/developer-hub/asset-sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](../developer-hub/asset-sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
-Once you have added an [Asset Sidebar Extension](/docs/developers/create-asset-sidebar-extensions/about-asset-sidebar-extensions/) in your stack, you can use it to manage, transform, and optimize any of your assets.
+Once you have added an [Asset Sidebar Extension](./about-asset-sidebar-extensions.md) in your stack, you can use it to manage, transform, and optimize any of your assets.
 
 To use custom widgets in an entry, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Click on the "Assets" icon in the left navigation panel in your stack.
@@ -30,7 +30,7 @@ To use custom widgets in an entry, log in to your [Contentstack account](https:/
 ## Common questions
 
 ### Do Asset Sidebar Extensions use the Contentstack App Framework?
-No. **Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](/docs/developers/developer-hub/asset-sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+No. **Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](../developer-hub/asset-sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 ### Where do I access an Asset Sidebar Extension in the UI?
 On the asset information page, click on the "Widgets" icon in the right panel, then select the required asset sidebar extension from the drop-down menu in the top-right corner.

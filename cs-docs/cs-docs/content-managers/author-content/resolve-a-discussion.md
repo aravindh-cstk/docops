@@ -20,7 +20,7 @@ This page explains how content managers and authors can resolve discussions (com
 Contentstack's discussion feature allows teams to collaborate seamlessly within entries by adding and responding to comments. Once a discussion has reached its conclusion or is no longer relevant, resolving it helps maintain a clean and organized workspace.
 
 To resolve a discussion, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
 - Open an entry with comments and click the “Comment” icon next to the field.
 - In the comment box, click **Resolve** at the top to mark the discussion as resolved. **Note:** A content manager with the necessary permissions can resolve a discussion.
 - Alternatively, you can also resolve an **Active** discussion in the **Discussions** panel.

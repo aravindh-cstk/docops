@@ -40,8 +40,8 @@ Next, let’s look at the steps to set up the trigger event.
 
 Click **Configure Trigger **from the left navigation panel.
 - Within the **Configure Trigger** step, click the **Contentstack** connector.
-- Add your [Contentstack account](https://app.contentstack.com/#!/login). For more information, refer to the [Contentstack Trigger](/docs/developers/automation-hub-connectors/contentstack-trigger/) documentation.
-- Once done, select **Entry Created** from the list of trigger events and define the rest of the steps needed to set up the trigger (refer **steps 3 to 12 **in [Contentstack Trigger](/docs/developers/automation-hub-connectors/contentstack-trigger/)).
+- Add your [Contentstack account](https://app.contentstack.com/#!/login). For more information, refer to the [Contentstack Trigger](./contentstack-trigger.md) documentation.
+- Once done, select **Entry Created** from the list of trigger events and define the rest of the steps needed to set up the trigger (refer **steps 3 to 12 **in [Contentstack Trigger](./contentstack-trigger.md)).
 - Click **Test Trigger** to execute and test the trigger that you configured.
 
 ## Set up your Transform Action Connector
@@ -65,7 +65,7 @@ This sets the **Transform** action connector.
 
 Now, let’s see how you can test out your Automation. To do so, perform the steps given below:
 
-Go to Contentstack and [create an entry ](/docs/content-managers/working-with-entries/create-an-entry/)for the content type that you selected in your trigger event in Step 2.  
+Go to Contentstack and [create an entry ](../content-managers/author-content/create-an-entry.md)for the content type that you selected in your trigger event in Step 2.  
 This should trigger your Automation.
 - To post the JSON data by sending an email through the Email by Automate action connector:  
   Click **+ Add New Step**. Click **Action Step** to configure third-party services.

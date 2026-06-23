@@ -24,7 +24,7 @@ The Execution Log section in Agent OS helps you monitor the status of your autom
 To access **Execution Log**, [log into your Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
 1. After logging in, click the **App Switcher** icon, then select **Agent OS** from the list.![App_switcher_icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6290d7afc992eda9/6998761148bd410008f0963f/App_switcher_icon.png)
-2. Open your project or [create](/docs/developers/automation-hub-guides/managing-projects#create-a-project) a new one.
+2. Open your project or [create](./managing-projects.md#create-a-project) a new one.
 3. From the top navigation panel, click **Settings**.![Settings_Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt54c29342b477e2fd/69987601a9de3800086c7925/Settings_Icon.png)
 4. Click **Execution Log** in the left navigation panel. You can view the executions for **Agents** and **Automations** by clicking the dropdown.![Agent_automation_dropdown](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c80c134cb3d8669/6998760163bcae00089104c6/Agent_automation_dropdown.png)
 

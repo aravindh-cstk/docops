@@ -38,31 +38,31 @@ Let's identify the fields that build up your FAQs Page content type that you see
 
 The “FAQs” content model contains the following set of fields. Let’s look in detail at what content types and fields were used to create the model.**FAQs** Content Type:
 
-**Title**: The [Title](/docs/developers/create-content-types/title) field is where you will provide your webpage a unique name. It should be clear and concise, and accurately reflect the contents of the webpage. The title field is a required field.
+**Title**: The [Title](../create-content-types/title.md) field is where you will provide your webpage a unique name. It should be clear and concise, and accurately reflect the contents of the webpage. The title field is a required field.
 
-**URL**: Here goes the web URL of your “FAQs" page. When clicked on, this link provided in the [URL](/docs/developers/create-content-types/url) field takes users straight to your FAQs webpage.
+**URL**: Here goes the web URL of your “FAQs" page. When clicked on, this link provided in the [URL](../create-content-types/url.md) field takes users straight to your FAQs webpage.
 
-**Page Components**: This content type hosts different sections that you see in your webpage. The field is a [Modular Block](/docs/developers/create-content-types/modular-blocks/) that contains two other Modular Blocks. Let’s take a closer look at each one.
+**Page Components**: This content type hosts different sections that you see in your webpage. The field is a [Modular Block](../create-content-types/modular-blocks.md) that contains two other Modular Blocks. Let’s take a closer look at each one.
 
-**Hero Banner**: The Hero Banner is typically the first thing that visitors see when they land on a webpage and is designed to grab their attention. is used to communicate the most important content of the page and should have a clear call to action (CTA). This [Modular Block](/docs/developers/create-content-types/modular-blocks/) field has the following component:**Hero Banner**: This is a [Reference Field](/docs/developers/create-content-types/reference/) that refers to the [Hero Banner](/docs/developers/content-modeling/hero-banner#developing-content-type) content type.
-- **Section With Cards**: This section contains the different components of the web page. It is a [Modular Block](/docs/developers/create-content-types/modular-blocks/) field that contains a Section with Cards [Global](/docs/developers/create-content-types/global/) field which has the following components:**Section Title**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) field where you will provide a unique title of the section. It is a mandatory field and must be clear and concise.
-- **Section Description**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox/) field where you will add the description of the section.
-- **Cards**: This is a [Group](/docs/developers/create-content-types/group/) field where you will add the question-answers to the FAQs section. It includes the following fields:**Card Title H3**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field where you will add the frequently asked questions about your product/business. The title is displayed as a level-three heading.
-- **Description**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox/) field where you will add the answers to the frequently asked questions about your product/business.
-- **Call To Action**: This is a [Link](/docs/developers/create-content-types/link/) field to add links based on your requirement.
-- **Image**: This is a [File](/docs/developers/create-content-types/file/) field which allows you to add an image for this section. The ideal file size for the location image is less than 100 KB and the file format should be PNG.
+**Hero Banner**: The Hero Banner is typically the first thing that visitors see when they land on a webpage and is designed to grab their attention. is used to communicate the most important content of the page and should have a clear call to action (CTA). This [Modular Block](../create-content-types/modular-blocks.md) field has the following component:**Hero Banner**: This is a [Reference Field](../create-content-types/reference.md) that refers to the [Hero Banner](./hero-banner.md#developing-content-type) content type.
+- **Section With Cards**: This section contains the different components of the web page. It is a [Modular Block](../create-content-types/modular-blocks.md) field that contains a Section with Cards [Global](../create-content-types/global.md) field which has the following components:**Section Title**: This is a [Single Line Textbox](../create-content-types/single-line-textbox.md) field where you will provide a unique title of the section. It is a mandatory field and must be clear and concise.
+- **Section Description**: This is a [Multi Line Textbox](../create-content-types/multi-line-textbox.md) field where you will add the description of the section.
+- **Cards**: This is a [Group](../create-content-types/group.md) field where you will add the question-answers to the FAQs section. It includes the following fields:**Card Title H3**: This is a [Single Line Textbox](../create-content-types/single-line-textbox.md) field where you will add the frequently asked questions about your product/business. The title is displayed as a level-three heading.
+- **Description**: This is a [Multi Line Textbox](../create-content-types/multi-line-textbox.md) field where you will add the answers to the frequently asked questions about your product/business.
+- **Call To Action**: This is a [Link](../create-content-types/link.md) field to add links based on your requirement.
+- **Image**: This is a [File](../create-content-types/file.md) field which allows you to add an image for this section. The ideal file size for the location image is less than 100 KB and the file format should be PNG.
 
-**SEO**: This is the [Global](/docs/developers/create-content-types/global/) field with the following components:
-- **Meta Title**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field that allows you to enter the meta title of your webpage, which should be between 120 and 160 characters.
-- **Meta Description**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox/) field that allows you to add the meta description of your webpage.
-- **Meta Keywords**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field that allows you to add the meta keywords of your webpage.
-- **Enable Search Indexing**: This is a [Boolean](/docs/developers/create-content-types/boolean/) field that allows you to enable or disable search indexing for your webpage.
+**SEO**: This is the [Global](../create-content-types/global.md) field with the following components:
+- **Meta Title**: This is a [Single Line Textbox](../create-content-types/single-line-textbox.md) field that allows you to enter the meta title of your webpage, which should be between 120 and 160 characters.
+- **Meta Description**: This is a [Multi Line Textbox](../create-content-types/multi-line-textbox.md) field that allows you to add the meta description of your webpage.
+- **Meta Keywords**: This is a [Single Line Textbox](../create-content-types/single-line-textbox.md) field that allows you to add the meta keywords of your webpage.
+- **Enable Search Indexing**: This is a [Boolean](../create-content-types/boolean.md) field that allows you to enable or disable search indexing for your webpage.
 
 This completes the creation of the “FAQs" content model.
 
 **Additional Resource**:
-- To import the content model within your stack, refer to the [Import Prebuilt Content Models](/docs/developers/create-content-types/import-prebuilt-content-models) documentation.
-- To import the prebuilt Content Model via the Marketplace, refer to the [How to Import a Content Model via Marketplace](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model) document.
+- To import the content model within your stack, refer to the [Import Prebuilt Content Models](../create-content-types/import-prebuilt-content-models.md) documentation.
+- To import the prebuilt Content Model via the Marketplace, refer to the [How to Import a Content Model via Marketplace](../marketplace-platform-guides/content-models/how-to-import-content-model.md) document.
 
 ## Common questions
 
@@ -70,11 +70,11 @@ This completes the creation of the “FAQs" content model.
 A: The FAQs content model contains the following main sections:The “FAQs” Hero Banner, the “Connect with an Advisor” section, the “Quick Links” section to get the user started, and the “View Articles” section for reference.
 
 **Q: What field type is used for “Page Components”?**  
-A: The “Page Components” field is a [Modular Block](/docs/developers/create-content-types/modular-blocks/) that contains two other Modular Blocks.
+A: The “Page Components” field is a [Modular Block](../create-content-types/modular-blocks.md) that contains two other Modular Blocks.
 
 **Q: What fields are included under the “Cards” group in “Section With Cards”?**  
 A: It includes **Card Title H3**, **Description**, **Call To Action**, and **Image**.
 
 **Q: Where can I find instructions to import this content model?**  
-A: Refer to **Additional Resource** links: [Import Prebuilt Content Models](/docs/developers/create-content-types/import-prebuilt-content-models) and [How to Import a Content Model via Marketplace](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model).
+A: Refer to **Additional Resource** links: [Import Prebuilt Content Models](../create-content-types/import-prebuilt-content-models.md) and [How to Import a Content Model via Marketplace](../marketplace-platform-guides/content-models/how-to-import-content-model.md).
 

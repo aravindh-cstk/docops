@@ -14,7 +14,7 @@ last_updated: 2024-03-21
 
 **POST** `/content_types/{content_type_uid}/entries/{entry_uid}/unlocalize?locale={locale_code}`
 
-The Unlocalize an entry request is used to unlocalize an existing entry. Read more about [Unlocalization](/docs/developers/multilingual-content/unlocalize-an-entry).   
+The Unlocalize an entry request is used to unlocalize an existing entry. Read more about [Unlocalization](../../../../../cs-docs/developers/multilingual-content/unlocalize-an-entry.md).   
 To configure the permissions for your application via OAuth, please include the cm.entry:write scope.
 
 ## URL Parameters
@@ -39,7 +39,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

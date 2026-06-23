@@ -16,7 +16,7 @@ last_updated: 2026-04-14
 
 The Top URLs request gets you the number of requests made from your URLs for the given services.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../../../../api-detail/analytics-api.md#retrieve-data) endpoint.
 
 ```
 {

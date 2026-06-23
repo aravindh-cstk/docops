@@ -52,7 +52,7 @@ query={
 }
 ```
 
-**Note**: Refer to the [Taxonomy Queries](/docs/developers/apis/content-delivery-api#taxonomy-queries) section for more query filters.
+**Note**: Refer to the [Taxonomy Queries](../../../../api-detail/content-delivery-api.md#taxonomy-queries) section for more query filters.
 
 ## Query Parameters
 

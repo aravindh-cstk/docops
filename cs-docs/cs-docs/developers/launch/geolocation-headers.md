@@ -16,7 +16,7 @@ This page explains the geolocation headers that Contentstack Launch automaticall
 
 ## Geolocation Headers in Launch
 
-Launch automatically includes geolocation headers in every incoming request. You can use these headers in [Edge Functions](/docs/launch/edge-functions), [Cloud Functions](/docs/launch/cloud-functions), or backend APIs to personalize content, analyze traffic, or apply region-specific logic.
+Launch automatically includes geolocation headers in every incoming request. You can use these headers in [Edge Functions](./edge-functions.md), [Cloud Functions](./cloud-functions.md), or backend APIs to personalize content, analyze traffic, or apply region-specific logic.
 
 ## Available Headers
 
@@ -28,7 +28,7 @@ All requests on Launch include the following geolocation headers:
 | `Visitor-IP-Region` | The ISO 3166-2 name for the first-level region associated with the IP | Oregon |
 | `Visitor-IP-City` | The city name associated with the IP address | The Dalles |
 
-**Note:** Launch’s Edge infrastructure automatically injects these headers. They are available across all [Contentstack regions](/docs/developers/contentstack-regions).
+**Note:** Launch’s Edge infrastructure automatically injects these headers. They are available across all [Contentstack regions](../contentstack-regions.md).
 
 ## How to Access Geolocation Headers
 
@@ -103,12 +103,12 @@ If a header value appears empty or inaccurate, it may be due to one of the follo
 Yes. Launch automatically includes geolocation headers in every incoming request.
 
 ### Where can I use these headers?
-You can use these headers in [Edge Functions](/docs/launch/edge-functions), [Cloud Functions](/docs/launch/cloud-functions), or backend APIs.
+You can use these headers in [Edge Functions](./edge-functions.md), [Cloud Functions](./cloud-functions.md), or backend APIs.
 
 ### Why are the header values empty or inaccurate?
 It may be due to uncommon scenarios such as **Privacy tools:** The visitor is using a VPN, proxy, or privacy-focused browser, or **New IP ranges:** The IP address is recently allocated and not yet listed in global geolocation databases.
 
 ### Are these headers available in all Contentstack regions?
-Yes. They are available across all [Contentstack regions](/docs/developers/contentstack-regions).
+Yes. They are available across all [Contentstack regions](../contentstack-regions.md).
 
 Filename: contentstack-launch-geolocation-headers-in-launch.md

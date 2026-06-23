@@ -14,7 +14,7 @@ last_updated: 2026-06-02
 
 Taxonomy, simplifies the process of organizing content in your system, making it effortless to find and retrieve information. It allows you to arrange your web properties in a hierarchy according to your specific needs, whether it's their purpose, intended audience, or other aspects of your business.
 
-**Note**: Refer to the [Taxonomy Queries](/docs/developers/apis/content-delivery-api#taxonomy-queries) section for more query filters.
+**Note**: Refer to the [Taxonomy Queries](../../../api-detail/content-delivery-api.md#taxonomy-queries) section for more query filters.
 
 ## Get all taxonomies
 
@@ -39,7 +39,7 @@ The Get all taxonomies request retrieves all published taxonomies for the given 
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](../../../api-detail/content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 #### Sample Response
@@ -95,7 +95,7 @@ The Get a single taxonomy request retrieves details of a single published taxono
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](../../../api-detail/content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 #### Sample Response
@@ -151,7 +151,7 @@ The Get all terms request retrieves all published terms in a taxonomy for the sp
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](../../../api-detail/content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 #### Sample Response
@@ -214,7 +214,7 @@ The Get a single term request retrieves a specific published term within a taxon
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](../../../api-detail/content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 #### Sample Response
@@ -272,7 +272,7 @@ The Get a single term in all locales request retrieves all localized versions of
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](../../../api-detail/content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 #### Sample Response
@@ -344,7 +344,7 @@ The Get descendants of a term request retrieves all descendant terms of a given 
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](../../../api-detail/content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 #### Sample Response
@@ -408,7 +408,7 @@ The Get ancestors of a term request retrieves all ancestor terms of a given term
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](../../../api-detail/content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 #### Sample Response

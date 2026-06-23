@@ -32,7 +32,7 @@ Since we refer to an embedded asset as a separate HTML element, you need to wrap
 - sys-style-type: You can pass display or download to specify whether the embedded asset should be downloadable or act as a display image
 - type: To specify the type of object embedded inside the rich text, e.g., asset
 
-**Tip**: An embedded asset works exactly like the [Reference](/docs/developers/create-content-types/reference) field. When you update the details of an embedded asset or replace the source asset with another asset, the Rich Text Editor automatically updates the embedded HTML component with the latest version of that asset.
+**Tip**: An embedded asset works exactly like the [Reference](../../../../../cs-docs/developers/create-content-types/reference.md) field. When you update the details of an embedded asset or replace the source asset with another asset, the Rich Text Editor automatically updates the embedded HTML component with the latest version of that asset.
 
 Here’s a sample of rich text that contains embedded assets:
 
@@ -72,7 +72,7 @@ Embedded asset as downloadable image:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.

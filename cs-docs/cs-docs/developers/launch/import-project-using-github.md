@@ -27,7 +27,7 @@ This document guides you through the process of connecting your GitHub account a
 - [GitHub account](https://github.com/login)
 
 ## Connect your GitHub Account to Launch and Deploy a Project
-**Note:** Only the Organization [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles/#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to create projects in a stack for Launch.
+**Note:** Only the Organization [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) has the right to create projects in a stack for Launch.
 - Click the **Launch **option from the dashboard, as shown below.
 - Click **+ New Project**.
 - From the **Create New Project** modal, click **Import from a Git Repository**.
@@ -35,7 +35,7 @@ This document guides you through the process of connecting your GitHub account a
 
 A pop-up will open with connection details.
 - Enter the login credentials of your GitHub account.
-- Select the option to choose **All repositories** or **Only select repositories,** and then click the **Save **button.**Important:** Only GitHub users with the [**Owner**](/docs/developers/organization/organization-roles#organization-owner) or [**Admin**](/docs/developers/organization/organization-roles#organization-admin) role in the organization can provide access to repositories.
+- Select the option to choose **All repositories** or **Only select repositories,** and then click the **Save **button.**Important:** Only GitHub users with the [**Owner**](../organization/organization-roles.md#organization-owner) or [**Admin**](../organization/organization-roles.md#organization-admin) role in the organization can provide access to repositories.
 
 **Note:** If you are accessing GitHub through Contentstack for the first time, you must authorize Contentstack by clicking the **Install & Authorize** button after selecting All repositories.
 
@@ -75,7 +75,7 @@ If you are experiencing connection issues or errors with your GitHub integration
 - Click [here](https://github.com/settings/installations) to navigate to the **Applications** page in GitHub and click **Configure** next to the app that must be uninstalled.
 - Scroll down to the bottom of the page and click **Uninstall** to remove the GitHub app.
 - Navigate back to Contentstack Launch.**Note: **It is recommended to reconnect GitHub using a different browser. For example, if you are currently using Google Chrome, try Firefox, Safari, or another browser to perform the reconnection steps.
-- Follow the instructions again to [Connect your GitHub Account to Launch and Deploy a Project](/docs/launch/import-project-using-github#connect-your-github-account-to-launch-and-deploy-a-project).
+- Follow the instructions again to [Connect your GitHub Account to Launch and Deploy a Project](./import-project-using-github.md#connect-your-github-account-to-launch-and-deploy-a-project).
 
 ## Common questions
 

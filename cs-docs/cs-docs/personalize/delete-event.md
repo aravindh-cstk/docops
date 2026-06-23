@@ -31,7 +31,7 @@ This guide provides step-by-step instructions for deleting both referenced and n
 **Note: **Users with Owner and Member access to a Personalize project can delete existing events.
 
 ## Steps for Execution
-**Note: **For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note: **For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
 ### Delete a Non-referenced Event
 To delete an existing non-referenced event, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
@@ -44,7 +44,7 @@ To delete an existing non-referenced event, log in to your [Contentstack account
 You will get a success message after the event is deleted from Personalize.
 
 ### Delete a Referenced Event
-**Note: **For this part of the guide, we have assumed that you have already created a Personalize project and [added an event to an existing A/B Test experience](/docs/personalize/add-event-to-ab-test-experience/).
+**Note: **For this part of the guide, we have assumed that you have already created a Personalize project and [added an event to an existing A/B Test experience](./add-event-to-ab-test-experience.md).
 
 To delete an existing referenced event, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
@@ -58,7 +58,7 @@ To delete an existing referenced event, log in to your [Contentstack account](ht
 
 You will get a success message after the event is deleted from Personalize.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#events) to create, edit, delete, and get all existing events.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#events) to create, edit, delete, and get all existing events.
 
 ## Common questions
 

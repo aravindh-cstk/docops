@@ -16,7 +16,7 @@ This page explains the schema and structure used by the JSON Rich Text Editor (R
 
 ## Schema of JSON Rich Text Editor
 
-The [JSON Rich Text Editor (RTE)](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) organizes its data into blocks and spans, ensuring a clean and structured JSON output. Each paragraph is represented as a block, each block contains an array, and each array includes multiple spans of text objects representing different nodes of text. This structure simplifies data processing on the backend.
+The [JSON Rich Text Editor (RTE)](./about-json-rich-text-editor.md) organizes its data into blocks and spans, ensuring a clean and structured JSON output. Each paragraph is represented as a block, each block contains an array, and each array includes multiple spans of text objects representing different nodes of text. This structure simplifies data processing on the backend.
 
 ## Structure and Schema
 
@@ -135,7 +135,7 @@ Block nodes can be rendered in three ways:
 
 **Additional Resources:**
 - Refer to the [Prerequisites](https://github.com/contentstack/rte-plugin-boilerplate/blob/be5739f31e1b1102786a6eeeb94f40fd9de555c9/docs/api-reference.md#prerequisites) section for requirements to work with JSON RTE.
-- Explore our [detailed documentation](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#json-rich-text-editor) for an in-depth explanation of the JSON RTE schema.
+- Explore our [detailed documentation](../create-content-types/json-schema-for-creating-a-content-type.md#json-rich-text-editor) for an in-depth explanation of the JSON RTE schema.
 
 ## Common questions
 

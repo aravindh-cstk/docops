@@ -16,7 +16,7 @@ This page introduces Contentstack DataSync, explains its key benefits, and outli
 
 ## About Contentstack DataSync
 
-Contentstack DataSync is a robust utility designed to keep your published content synchronized with your local database. It ensures that the most recent [publish](/docs/content-managers/working-with-entries/publish-an-entry), [update](/docs/content-managers/working-with-entries/edit-an-entry), and [delete](/docs/content-managers/working-with-entries/delete-an-entry) operations done on your [entry](/docs/content-managers/working-with-entries/about-entries), and/or [assets](/docs/content-managers/working-with-assets/about-assets) reflect automatically on the content.
+Contentstack DataSync is a robust utility designed to keep your published content synchronized with your local database. It ensures that the most recent [publish](../../content-managers/author-content/publish-an-entry.md), [update](../../content-managers/author-content/edit-an-entry.md), and [delete](../../content-managers/author-content/delete-an-entry.md) operations done on your [entry](../../content-managers/author-content/about-entries.md), and/or [assets](/docs/content-managers/working-with-assets/about-assets) reflect automatically on the content.
 
 ## Key Benefits of Using DataSync
 
@@ -26,7 +26,7 @@ DataSync offers several key benefits:
 - **Offline Access:** Serve content from your local database even if your connection to Contentstack is temporarily unavailable.
 - **Flexible Tech Stack:** DataSync is language-agnostic. You can use it with any front-end or back-end framework that can interact with the synced database.
 
-**Additional Resources**: To learn how to implement DataSync with an application, you can refer to this [Node.js example app guide](/docs/developers/develop-apps-with-datasync/create-a-node-js-app-using-contentstack-datasync).
+**Additional Resources**: To learn how to implement DataSync with an application, you can refer to this [Node.js example app guide](./create-a-node-js-app-using-contentstack-datasync.md).
 
 ## Contentstack DataSync SDKs
 
@@ -50,12 +50,12 @@ The Filesystem SDK stores your content locally in JSON files. It’s best suited
 - Lightweight and easy to set up
 - Suitable for JAMstack and serverless applications
 
-**Additional Resource:** To know more about the MongoDB SDK and FileSystem SDK, refer to the [Get Started with Contentstack MongoDB SDK](/docs/developers/develop-apps-with-datasync/get-started-with-datasync-mongodb-sdk) and [Get Started with Contentstack FileSystem SDK](/docs/developers/develop-apps-with-datasync/get-started-with-datasync-filesystem-sdk) documentation.
+**Additional Resource:** To know more about the MongoDB SDK and FileSystem SDK, refer to the [Get Started with Contentstack MongoDB SDK](../sdks/datasync-sdk-mongodb/typescript/get-started-with-datasync-mongodb-sdk.md) and [Get Started with Contentstack FileSystem SDK](../sdks/datasync-sdk-filesystem/typescript/get-started-with-datasync-filesystem-sdk.md) documentation.
 
 ## Common questions
 
 **What does Contentstack DataSync do?**  
-It keeps your published content synchronized with your local database and reflects [publish](/docs/content-managers/working-with-entries/publish-an-entry), [update](/docs/content-managers/working-with-entries/edit-an-entry), and [delete](/docs/content-managers/working-with-entries/delete-an-entry) operations automatically.
+It keeps your published content synchronized with your local database and reflects [publish](../../content-managers/author-content/publish-an-entry.md), [update](../../content-managers/author-content/edit-an-entry.md), and [delete](../../content-managers/author-content/delete-an-entry.md) operations automatically.
 
 **What are the key benefits of using DataSync?**  
 Reduced API overhead, real-time syncing, offline access, and a flexible tech stack.
@@ -64,6 +64,6 @@ Reduced API overhead, real-time syncing, offline access, and a flexible tech sta
 Use the MongoDB SDK for syncing to a local MongoDB database with rich querying support, or the Filesystem SDK to store content locally in JSON files for lightweight setups.
 
 **Where can I find implementation examples or getting started guides?**  
-See the [Node.js example app guide](/docs/developers/develop-apps-with-datasync/create-a-node-js-app-using-contentstack-datasync) and the getting started docs for the [MongoDB SDK](/docs/developers/develop-apps-with-datasync/get-started-with-datasync-mongodb-sdk) and [FileSystem SDK](/docs/developers/develop-apps-with-datasync/get-started-with-datasync-filesystem-sdk).
+See the [Node.js example app guide](./create-a-node-js-app-using-contentstack-datasync.md) and the getting started docs for the [MongoDB SDK](../sdks/datasync-sdk-mongodb/typescript/get-started-with-datasync-mongodb-sdk.md) and [FileSystem SDK](../sdks/datasync-sdk-filesystem/typescript/get-started-with-datasync-filesystem-sdk.md).
 
 <!-- filename: synchronize-data-with-datasync-about-contentstack-datasync.md -->

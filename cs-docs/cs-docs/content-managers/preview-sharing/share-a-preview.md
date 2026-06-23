@@ -21,7 +21,7 @@ The **Share Preview** feature in Contentstack’s **Visual Editor** enables team
 
 To share a preview, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to preview and manage your website.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) where you want to preview and manage your website.
 - In the left panel, click the **Visual Experience** icon. By default you would see the Timeline preview. Click **Editor** from the pill at the bottom to switch to **Visual Editor**.
 - Use the website navigation menu or the **URL **bar to find the page you want to share.
 - From the options available under the horizontal ellipsis, click the **Share** button.**Note**: The Share button requires **Live Preview SDK v3.2.0** or later. If you’re using an older version of the SDK, the sharing functionality will not be available.

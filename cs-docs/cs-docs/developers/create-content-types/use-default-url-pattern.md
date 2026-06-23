@@ -16,7 +16,7 @@ This page explains how to configure and use default URL patterns for generating 
 
 ## Use Default URL Pattern
 
-After adding a [URL](/docs/developers/create-content-types/url) field, you can define how entry URLs are generated using a URL pattern.
+After adding a [URL](./url.md) field, you can define how entry URLs are generated using a URL pattern.
 
 A URL pattern determines the structure of your URLs by combining static text and dynamic values (tokens). These values are replaced with actual entry data when the URL is generated.
 
@@ -43,7 +43,7 @@ www.examplesite.com/blog/en-us/my-first-page
 ```
 
 To add and configure a URL field, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click **Content Models**.
+- Go to your [stack](../set-up-stack/about-stack.md) and click **Content Models**.
 - Select the content type where you want to add the URL field.
 
       **Tip:** You can also click the **vertical ellipsis** icon in the **Actions** column next to the content type and select **Edit**.

@@ -28,13 +28,13 @@ Use regex validation when you need to:
 - Apply custom validation rules beyond built-in field validations
 
 The Validation (Regex) property is available only for the following field types:
-- [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox)
-- [Multi-Line Textbox](/docs/developers/create-content-types/multi-line-textbox)
+- [Single Line Textbox](./single-line-textbox.md)
+- [Multi-Line Textbox](./multi-line-textbox.md)
 
 ## Add Regex Validation to a Field
 
 To configure regex validation for a field, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and open the content type where you want to configure regex validation.
+- Navigate to your [stack](../set-up-stack/about-stack.md) and open the content type where you want to configure regex validation.
 - Add or edit a **Single Line Textbox** or **Multi-Line Textbox** field.
 - Open the field properties panel and click the **Advanced** tab.
 - In the **Validation (Regex)** field, enter the required regex pattern.

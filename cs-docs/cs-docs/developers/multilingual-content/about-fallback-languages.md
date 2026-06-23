@@ -17,19 +17,19 @@ This page explains what fallback languages are in Contentstack multilingual cont
 
 ## About Fallback Languages
 
-A fallback language is the parent language from which a given [language](/docs/developers/multilingual-content/about-languages) inherits data from. Contentstack allows you to define a fallback language for every language you add to a [stack](/docs/developers/set-up-stack/about-stack).
+A fallback language is the parent language from which a given [language](./about-languages.md) inherits data from. Contentstack allows you to define a fallback language for every language you add to a [stack](../set-up-stack/about-stack.md).
 
-Using a fallback language, you have control over the source content for a given language. You can then make changes to the fetched content and [localize an entry](/docs/developers/multilingual-content/localize-an-entry) in the given language. For a given language, if there is no data available in the fallback language, the entry will fetch data from the master language.
+Using a fallback language, you have control over the source content for a given language. You can then make changes to the fetched content and [localize an entry](./localize-an-entry.md) in the given language. For a given language, if there is no data available in the fallback language, the entry will fetch data from the master language.
 
-For example, you can set **English (United States)** as the fallback language for **French (France)**, and **French (France)** as the fallback language for **Spanish (Spain)**. In this case, when you try to create an entry in **Spanish (Spain)**, it will first fetch the content of the entry created in **French (France)**. If no data is available in **French (France)**, it will fetch data from the [master language](/docs/developers/multilingual-content/set-the-master-language).
+For example, you can set **English (United States)** as the fallback language for **French (France)**, and **French (France)** as the fallback language for **Spanish (Spain)**. In this case, when you try to create an entry in **Spanish (Spain)**, it will first fetch the content of the entry created in **French (France)**. If no data is available in **French (France)**, it will fetch data from the [master language](./set-the-master-language.md).
 
-**Note**: You cannot [create a fallback-language](/docs/developers/multilingual-content/add-a-language) chain deeper than one level for non-master languages. So, in the above example, you cannot set a fallback language (other than the master language) for Spanish (Spain).
+**Note**: You cannot [create a fallback-language](./add-a-language.md) chain deeper than one level for non-master languages. So, in the above example, you cannot set a fallback language (other than the master language) for Spanish (Spain).
 
 ## Retrieve Fallback Language Content for Published Entries
 
-When an entry is not published in a specific language, you can fetch content from its fallback language (only if it is published) in the same [Content Delivery API](/docs/developers/apis/content-delivery-api) request.
+When an entry is not published in a specific language, you can fetch content from its fallback language (only if it is published) in the same [Content Delivery API](../../../api-docs/api-detail/content-delivery-api.md) request.
 
-To automatically include the published fallback language content in your API response, pass the `include_fallback:true` parameter in the request. Learn more about retrieving fallback language content for published [entries](/docs/developers/apis/content-delivery-api#entries) and [assets](/docs/developers/apis/content-delivery-api#assets).
+To automatically include the published fallback language content in your API response, pass the `include_fallback:true` parameter in the request. Learn more about retrieving fallback language content for published [entries](../../../api-docs/api-detail/content-delivery-api.md#entries) and [assets](../../../api-docs/api-detail/content-delivery-api.md#assets).
 
 The following diagram illustrates the data inheritance fallback logic between each of the languages in which the entries of a stack have been published
 
@@ -43,10 +43,10 @@ If an entry is not published in **Spanish (Mexico)**, then you can fetch the ent
 ## API Reference
 
 To fetch published fallback language content via API, refer to the following API requests:
-- [Get all entries](/docs/developers/apis/content-delivery-api#get-all-entries)
-- [Get a single entry](/docs/developers/apis/content-delivery-api#get-a-single-entry)
-- [Get all assets](/docs/developers/apis/content-delivery-api#get-all-assets)
-- [Get a single asset](/docs/developers/apis/content-delivery-api#get-a-single-asset)
+- [Get all entries](../../../api-docs/api-detail/content-delivery-api.md#get-all-entries)
+- [Get a single entry](../../../api-docs/api-detail/content-delivery-api.md#get-a-single-entry)
+- [Get all assets](../../../api-docs/api-detail/content-delivery-api.md#get-all-assets)
+- [Get a single asset](../../../api-docs/api-detail/content-delivery-api.md#get-a-single-asset)
 
 ## Common questions
 
@@ -60,5 +60,5 @@ No. You cannot create a fallback-language chain deeper than one level for non-ma
 Pass the `include_fallback:true` parameter in the request to automatically include the published fallback language content in your API response.
 
 ### Can I retrieve fallback language content for both entries and assets?
-Yes. Learn more about retrieving fallback language content for published [entries](/docs/developers/apis/content-delivery-api#entries) and [assets](/docs/developers/apis/content-delivery-api#assets).
+Yes. Learn more about retrieving fallback language content for published [entries](../../../api-docs/api-detail/content-delivery-api.md#entries) and [assets](../../../api-docs/api-detail/content-delivery-api.md#assets).
 

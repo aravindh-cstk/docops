@@ -12,9 +12,9 @@ last_updated: 2026-06-02
 
 # CMA | Bulk Operations
 
-You can perform bulk operations such as [Add to Release](/docs/content-managers/author-content/bulk-add-to-release), [Publish](/docs/content-managers/bulk-operations-on-entries-and-assets/bulk-publish-entries), [Unpublish](/docs/content-managers/bulk-operations-on-entries-and-assets/bulk-unpublish-entries), and [Delete](/docs/content-managers/bulk-operations-on-entries-and-assets/bulk-delete-entries) on multiple entries or assets, or [Change the Workflow Details](/docs/content-managers/bulk-operations-on-entries-and-assets/update-entry-workflow-details-in-bulk) of multiple entries or assets at the same time.
+You can perform bulk operations such as [Add to Release](../../../../cs-docs/content-managers/author-content/bulk-add-to-release.md), [Publish](../../../../cs-docs/content-managers/author-content/bulk-publish-entries.md), [Unpublish](../../../../cs-docs/content-managers/author-content/bulk-unpublish-entries.md), and [Delete](../../../../cs-docs/content-managers/author-content/bulk-delete-entries.md) on multiple entries or assets, or [Change the Workflow Details](../../../../cs-docs/content-managers/author-content/update-entry-workflow-details-in-bulk.md) of multiple entries or assets at the same time.
 
-**Additional Resource**: You can also learn how to [perform bulk operations on search results](/docs/content-managers/search-content/about-bulk-operations-on-search-results).
+**Additional Resource**: You can also learn how to [perform bulk operations on search results](../../../../cs-docs/content-managers/search-content/about-bulk-operations-on-search-results.md).
 
 **Points to keep in mind**:
 
@@ -50,7 +50,7 @@ For each asset, provide the title, asset UID, set the content_type_uid to sys_as
         }
 ```
 
-Once the API request is executed, a job ID is generated in the response. You can use this job ID to track the status of your add to release request in [Get Stack Bulk Task Queue](/docs/developers/apis/content-management-api#get-stack-bulk-task-queue).
+Once the API request is executed, a job ID is generated in the response. You can use this job ID to track the status of your add to release request in [Get Stack Bulk Task Queue](../../../api-detail/content-management-api.md#get-stack-bulk-task-queue).
 
 **Note**: Pass bulk_version as 2.0 in the Headers section.
 
@@ -124,13 +124,13 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the 'Body' section, you need to specify the locales (mention the locale codes) and environments (mention the names) to which you want to publish the entries or assets. If you do not specify a source locale, the entries or assets will be published in the master locale automatically.
 
-**Tip**: To schedule the publishing of multiple entries and/or assets, you can make use of the [Create a Release](/docs/developers/apis/content-management-api#create-a-release) request. Then, you can deploy this Release and all of the pinned items can be published together either immediately or at a scheduled time to whatever environment you choose.
+**Tip**: To schedule the publishing of multiple entries and/or assets, you can make use of the [Create a Release](../../../api-detail/content-management-api.md#create-a-release) request. Then, you can deploy this Release and all of the pinned items can be published together either immediately or at a scheduled time to whatever environment you choose.
 
 Within the ‘entries’ parameter, pass these details of each entry – content type UIDs, entry UIDs, locales in which the entries are present, and the version (you need to specify the entry versions when schedule publishing) that you want to publish. Within the ‘assets’ parameter, pass these details of each entry – asset UIDs and the version that you want to publish (optional).
 
 **Note**: The version parameter must be passed as an integer in the request body. For example, version: 2.
 
-If some of the entries added to the bulk publish request do not satisfy the applied [publish rules](/docs/developers/set-up-workflows-and-publish-rules/about-publish-rules), then all the items will not be published. To publish at least the items that satisfy the publish rules, pass additional query parameters, skip_workflow_stage_check=true and approvals=true.
+If some of the entries added to the bulk publish request do not satisfy the applied [publish rules](../../../../cs-docs/developers/set-up-workflows-and-publish-rules/about-publish-rules.md), then all the items will not be published. To publish at least the items that satisfy the publish rules, pass additional query parameters, skip_workflow_stage_check=true and approvals=true.
 
 Let's understand how these two query parameters work while publishing entries.
 
@@ -156,7 +156,7 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -228,11 +228,11 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the 'Body' section, you need to specify the locales (mention the locale codes) and environments (mention the names) to which you want to unpublish the entries or assets. If you do not specify a source locale, the entries or assets will be unpublished in the master locale automatically.
 
-**Tip**: To schedule the unpublishing of multiple entries and/or assets, you can make use of the ‘[Create a Release](/docs/developers/apis/content-management-api/#create-a-release)’ request. Then, you can deploy this Release and all of the pinned items can be unpublished together either immediately or at a scheduled time to whatever environment you choose.
+**Tip**: To schedule the unpublishing of multiple entries and/or assets, you can make use of the ‘[Create a Release](../../../api-detail/content-management-api.md#create-a-release)’ request. Then, you can deploy this Release and all of the pinned items can be unpublished together either immediately or at a scheduled time to whatever environment you choose.
 
 Within the ‘entries’ parameter, pass these details of each entry – content type UIDs, entry UIDs, locales in which the entries are present, and the version that you want to unpublish. Within the ‘assets’ parameter, pass these details of each entry – asset UIDs and the version that you want to unpublish (optional).
 
-If some of the entries added to the bulk unpublish request do not satisfy the applied [publish rules](/docs/developers/set-up-workflows-and-publish-rules/about-publish-rules), then all the items will not be unpublished. To unpublish at least the items that satisfy the publish rules, pass additional query parameters, skip_workflow_stage_check=true and approvals=true.
+If some of the entries added to the bulk unpublish request do not satisfy the applied [publish rules](../../../../cs-docs/developers/set-up-workflows-and-publish-rules/about-publish-rules.md), then all the items will not be unpublished. To unpublish at least the items that satisfy the publish rules, pass additional query parameters, skip_workflow_stage_check=true and approvals=true.
 
 Let's understand how these two query parameters work while unpublishing entries.
 
@@ -258,7 +258,7 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -346,7 +346,7 @@ In the 'Body' section, you need to specify the content type UIDs, entry UIDs or 
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -387,7 +387,7 @@ In the 'Body' section, you need to specify the content type UIDs, entry UIDs or 
 
 The ‘Change Workflow Details’ action is a new option that allows you to change workflow details (such as stage, assignee, due date, and comments) of multiple entries at the same time. 
 
-**Additional Resource**: To know how you can change Workflow details of multiple entries at once, refer to the [Change Workflow Details of Entries in Bulk](/docs/content-managers/search-content/change-workflow-details-of-entries-in-bulk) article.
+**Additional Resource**: To know how you can change Workflow details of multiple entries at once, refer to the [Change Workflow Details of Entries in Bulk](../../../../cs-docs/content-managers/search-content/change-workflow-details-of-entries-in-bulk.md) article.
 
 ### Update workflow details in bulk
 
@@ -412,7 +412,7 @@ Within the ‘entries’ parameter, pass these details of each entry – content
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

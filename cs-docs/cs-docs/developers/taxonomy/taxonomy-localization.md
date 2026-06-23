@@ -21,7 +21,7 @@ This page explains how to localize taxonomy names in Contentstack across locales
 
 Taxonomy Localization lets teams translate taxonomy names for different locales while keeping them connected through a unified default taxonomy reference. This feature supports multilingual content organization by enabling each market or language to display taxonomy terms in their local language, without duplicating the taxonomy hierarchy.
 
-**Note**: You can localize the **taxonomy name** to provide language-specific labels for the taxonomy itself. To [localize the terms](/docs/developers/taxonomy/term-localization) within that taxonomy, edit **individual terms** from the same **Taxonomy Details** page.
+**Note**: You can localize the **taxonomy name** to provide language-specific labels for the taxonomy itself. To [localize the terms](./term-localization.md) within that taxonomy, edit **individual terms** from the same **Taxonomy Details** page.
 
 ## Key Benefits
 
@@ -41,7 +41,7 @@ Localizing a taxonomy in Contentstack allows you to define independent, language
 
 To localize a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack), go to **Settings**, and select **Taxonomy**.
+- Navigate to your [stack](../set-up-stack/about-stack.md), go to **Settings**, and select **Taxonomy**.
 - Select the taxonomy you want to localize.
 - On the **Taxonomy Details** page, review the locale table.**Note**: The list of locales is automatically derived from all locales available across the branches in the stack. This ensures that any locale configured in any branch is reflected in the taxonomy localization view.
 - Click the vertical ellipsis next to the locale you want to localize, and select **Edit**.
@@ -76,7 +76,7 @@ Taxonomy Localization empowers teams to manage multilingual content efficiently 
 
 ## API Reference
 
-To localize or unlocalize taxonomies via API, refer to the [Localize a Taxonomy](/docs/developers/apis/content-management-api#localize-a-taxonomy) and [Unlocalize a Taxonomy](/docs/developers/apis/content-management-api#unlocalize-a-taxonomy) API requests.
+To localize or unlocalize taxonomies via API, refer to the [Localize a Taxonomy](../../../api-docs/api-detail/content-management-api.md#localize-a-taxonomy) and [Unlocalize a Taxonomy](../../../api-docs/api-detail/content-management-api.md#unlocalize-a-taxonomy) API requests.
 
 ## Common questions
 
@@ -84,7 +84,7 @@ To localize or unlocalize taxonomies via API, refer to the [Localize a Taxonomy]
 This feature is **currently available for CMA use only**. Publishing localized taxonomy names and terms to CDA is coming soon.
 
 ### Can I localize taxonomy terms as well as taxonomy names?
-You can localize the **taxonomy name**. To [localize the terms](/docs/developers/taxonomy/term-localization) within that taxonomy, edit **individual terms** from the same **Taxonomy Details** page.
+You can localize the **taxonomy name**. To [localize the terms](./term-localization.md) within that taxonomy, edit **individual terms** from the same **Taxonomy Details** page.
 
 ### What happens when I unlocalize a taxonomy for a locale?
 Removing a localized value activates the fallback chain for that locale. The taxonomy structure remains unchanged.

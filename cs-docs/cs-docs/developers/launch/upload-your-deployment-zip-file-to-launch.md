@@ -73,9 +73,9 @@ file=@""
 **Success Response: NA**
 
 Now, proceed to the next step by selecting the required action item from the list below:
-- [Create the project](/docs/developers/apis/launch-api#create-project)
-- [Create the environment](/docs/developers/apis/launch-api#create-environment)
-- [Create the deployment](/docs/developers/apis/launch-api#create-deployment)
+- [Create the project](../../../api-docs/api-detail/launch-api.md#create-project)
+- [Create the environment](../../../api-docs/api-detail/launch-api.md#create-environment)
+- [Create the deployment](../../../api-docs/api-detail/launch-api.md#create-deployment)
 
 ## Common questions
 

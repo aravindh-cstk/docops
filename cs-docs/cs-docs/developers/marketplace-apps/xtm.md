@@ -64,7 +64,7 @@ Navigate to your stack, click **Settings** in the top navigation panel, and then
 - Select the **Workflow superuser(s)** from the provided dropdown. To activate the workflow, click the **Enable Workflow** toggle button.
 - After filling up the details, click **Save**. A workflow is created to configure in the XTM app in [step 3](#install-and-configure-the-xtm-app-in-marketplace).
 
-**Additional Resource:** To learn more, refer to the [Workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) documentation.
+**Additional Resource:** To learn more, refer to the [Workflows](../set-up-workflows-and-publish-rules/about-workflows.md) documentation.
 
 ## Install and Configure the XTM app in Marketplace
 To install the app in Contentstack, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
@@ -122,7 +122,7 @@ For any target languages not selected, the app uses the default language code of
 - If you want to reset the configuration settings, click the **Reset Configuration** button. A popup will appear. Click the **Reset Config** button to reset the entire configuration.
 - After adding the configuration details, click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource:** For more information on UI locations and webhooks, refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource:** For more information on UI locations and webhooks, refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 
 ## Use the XTM App for Machine Translation
 To create projects for translation using the XTM app, you can use Workflow, Entry Sidebar, and Full Page Location.
@@ -137,7 +137,7 @@ Navigate to **Entries** from the header and open the entry you want to translate
 - Select the next workflow stage from the **Set Workflow Stage** dropdown. For instance, after **Draft**, select the **Send for Translation** stage to create a project and initiate the translation.
 - You can also set a due date, assign to users or roles, add comments, and then click the **Update** button.
 
-**Note:** If you want to use the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field, you can select the XTM pre-configured JSON RTE template option from the **Filter Template** drop-down. To configure the Filter Templates in your [XTM account](https://xtm.cloud/), please contact XTM support.
+**Note:** If you want to use the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field, you can select the XTM pre-configured JSON RTE template option from the **Filter Template** drop-down. To configure the Filter Templates in your [XTM account](https://xtm.cloud/), please contact XTM support.
 
 ### Using the XTM App as an Entry Sidebar
 To use the XTM app as an Entry Sidebar, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps given below:
@@ -147,7 +147,7 @@ To use the XTM app as an Entry Sidebar, log in to your [Contentstack account](ht
 
 Enable the **Exclude XTM Workflow** toggle button if you want to exclude the **XTM Workflow** configured under **XTM Fields** during app configuration in [step 3](#install-and-configure-the-xtm-app-in-marketplace).
 
-**Note:** If you are using the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field, select the JSON RTE Filter template option in your [XTM account](https://xtm.cloud/).
+**Note:** If you are using the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field, select the JSON RTE Filter template option in your [XTM account](https://xtm.cloud/).
 - **Template**: Click the **Template** option and select a template from the dropdown.
 - **Due Date** (optional): The due date selected in the Sidebar app will be displayed in the **Delivery due date** field of the **General info** section for the specified project in XTM.
 - **Description** (optional): The description provided for the project in the Sidebar app will be displayed in the **Description** field of the **General info** section for the specified project in XTM.
@@ -177,7 +177,7 @@ To use the XTM app in Contentstack, log in to your [Contentstack account](https:
 - In the **Confirm Translation** modal, fill in the details as follows:Provide the **Project Name** for the translation.
 - Select the **Language** or **Template** option:**Language**: Click the **Language** option, then select a **Language** and a **Filter Template** from the respective dropdowns.If **Auto Assign Template** is configured under **XTM Fields** during app configuration in [step 3](#install-and-configure-the-xtm-app-in-marketplace), it will be selected by default in the dropdown. You can also select any template from the dropdown.
 
-**Note:** If you are using the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field, select the **JSON RTE Filter template** option in your [XTM account](https://xtm.cloud/).
+**Note:** If you are using the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field, select the **JSON RTE Filter template** option in your [XTM account](https://xtm.cloud/).
 - **Template**: Click the **Template** option and select a template from the dropdown.
 - Set the date and time in the **Due Date** (optional) field for the translation process.**Note:** The **Deadline Date** format is `**mm:dd:yyyy**`, and the time format is `**hh:mm:ssZZ**`, where `**ZZ**` refers to the time zone.
 - Enter the **Description** (optional) for the XTM translation project.

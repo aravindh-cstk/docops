@@ -20,7 +20,7 @@ This page explains how to bulk unpublish multiple entries in Contentstack. It is
 Unpublishing multiple entries at once simplifies bulk content removal and streamlines release management.
 
 To bulk unpublish entries, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and click the "Entries" icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the "Entries" icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
 - Use the checkboxes to select the entries you want to unpublish.
 - After selecting the entries, click the **Unpublish** option in the floating panel that appears.
 - In the **Unpublish Entries** modal:**Select Environment(s)**: Select the environment(s) where the entries must be unpublished.

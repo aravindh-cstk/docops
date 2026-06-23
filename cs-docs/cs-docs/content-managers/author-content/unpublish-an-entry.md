@@ -17,12 +17,12 @@ This page explains how to unpublish an entry in Contentstack so it is removed fr
 
 ## Unpublish an Entry
 
-Unpublishing an [entry](/docs/content-managers/author-content/about-entries/) in Contentstack allows you to remove it from your web or mobile property while retaining the entry in your stack. This ensures flexibility in content management without permanent deletion.
+Unpublishing an [entry](./about-entries.md) in Contentstack allows you to remove it from your web or mobile property while retaining the entry in your stack. This ensures flexibility in content management without permanent deletion.
 
-**Additional Resources: **For information on how to publish entries, refer to our guide on [Publishing Entries](/docs/content-managers/working-with-entries/publish-an-entry).
+**Additional Resources: **For information on how to publish entries, refer to our guide on [Publishing Entries](./publish-an-entry.md).
 
 To unpublish an entry, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key E (for both Windows and Mac users) to access the entries.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key E (for both Windows and Mac users) to access the entries.
 - Locate the entry you want to unpublish.
 - Open the entry to be unpublished and click the **Unpublish** icon at the bottom-right corner.
 - In the **Unpublish Entry** modal, select the desired environments under **Select Environment(s)** and the appropriate locales under **Select Language(s)** from which the entry will be unpublished.
@@ -31,7 +31,7 @@ To unpublish an entry, log in to your [Contentstack account](https://www.content
 
 **Note: **The unpublishing date cannot extend beyond 12 months.
 
-If you select a time zone that follows [daylight saving time (DST)](https://www.contentstack.com/docs/content-managers/publish-content/daylight-saving-time-in-contentstack), a help text will indicate the adjusted unpublishing time considering DST changes (with a one-hour adjustment).
+If you select a time zone that follows [daylight saving time (DST)](../publish-content/daylight-saving-time-in-contentstack.md), a help text will indicate the adjusted unpublishing time considering DST changes (with a one-hour adjustment).
 - Confirm your settings by clicking **Send.**
 
 Alternatively, you can also unpublish an entry from the entries list page. To do so, perform the following steps:
@@ -53,7 +53,7 @@ If the entry you are unpublishing is referenced in other entries, an alert displ
 
 ## API References
 
-You can also use the [Unpublish an Entry](/docs/developers/apis/content-management-api#unpublish-an-entry) API Request to perform the task.
+You can also use the [Unpublish an Entry](../../../api-docs/api-detail/content-management-api.md#unpublish-an-entry) API Request to perform the task.
 
 ## Common questions
 

@@ -31,7 +31,7 @@ Visual Editor offers several key capabilities that enhance the content creation 
 - **Real-Time Preview**: See instant feedback on edits in a live-site context, making it easier to identify and resolve issues before publishing.
 - **Automated Content Delivery**: Set up event-based workflows that trigger automated actions across integrated applications.
 - **Audience-Specific Content Editing**: Customize and preview content variations for different user segments, such as regions, languages, or customer types.
-- **Workflow Management**: Simplify editorial processes with customizable workflows, in-context workflow transitions, and flexible publishing options like quick or advanced publishing for single or multiple [entries](/docs/content-managers/author-content/about-entries).
+- **Workflow Management**: Simplify editorial processes with customizable workflows, in-context workflow transitions, and flexible publishing options like quick or advanced publishing for single or multiple [entries](../author-content/about-entries.md).
 - **Multi-Channel Publishing**: Choose target environments such as staging or production during publishing to streamline content deployment across channels.
 
 Visual Editor makes it easy to create and manage content with multi-entry editing, real-time validation, on-canvas field control, and smooth workflow and publishing tools.

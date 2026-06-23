@@ -20,14 +20,14 @@ This page explains how to delete a release in Contentstack and points to the cor
 Delete a release if no longer required.
 
 To delete a release, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow these steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Releases” icon in the left navigation panel.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Releases” icon in the left navigation panel.
 - Hover over the release you want to delete in the left panel.
 - Click the “Delete” icon in the popup modal. Alternatively, click the horizontal ellipsis in the top right corner and click **Delete**.
 - In the resulting **Delete Release** modal, click the **Delete** button to unlock your release.
 
 ## API Reference
 
-To perform this delete action via API, refer to the [Delete a release](/docs/developers/apis/content-management-api#delete-a-release) API request.
+To perform this delete action via API, refer to the [Delete a release](../../../api-docs/api-detail/content-management-api.md#delete-a-release) API request.
 
 ## Common questions
 

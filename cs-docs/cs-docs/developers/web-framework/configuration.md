@@ -163,7 +163,7 @@ Activate a theme from here. The theme specified here should be one of the themes
 
 ### languages
 
-To configure a [language](/docs/developers/multilingual-content/about-languages) other than the default one on the server, add the language in the format specified below. It requires a valid language code and a relative_url_prefix. You also need to specify that the application is having a separate domain for this particular language.
+To configure a [language](../multilingual-content/about-languages.md) other than the default one on the server, add the language in the format specified below. It requires a valid language code and a relative_url_prefix. You also need to specify that the application is having a separate domain for this particular language.
 
 **Example**
 
@@ -176,7 +176,7 @@ To configure a [language](/docs/developers/multilingual-content/about-languages)
 
 ```
 
-The above example shows how to add a new [localized](/docs/developers/multilingual-content/about-localization) language (Japanese) on the server. Here, we first specify the language code, and then the relative url prefix. Lastly, we specify the specific domain name for the new language.
+The above example shows how to add a new [localized](../multilingual-content/about-localization.md) language (Japanese) on the server. Here, we first specify the language code, and then the relative url prefix. Lastly, we specify the specific domain name for the new language.
 
 ## Common questions
 

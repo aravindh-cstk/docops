@@ -22,8 +22,8 @@ The Dashboard provides two extensions by default:
 
 ## Recently Modified Entries
 
-The **Recently Modified Entries** extension displays the list of entries that were recently modified by any [user](/docs/developers/invite-users-and-assign-roles/about-stack-users) of the [stack](/docs/developers/set-up-stack/about-stack). At any time you will be able to view a maximum of **10** recently modified [entries](/docs/content-managers/working-with-entries/about-entries) along with the following details:
-- [**Content type**](/docs/developers/create-content-types/about-content-types) to which the entry belongs
+The **Recently Modified Entries** extension displays the list of entries that were recently modified by any [user](../invite-users-and-assign-roles/about-stack-users.md) of the [stack](./about-stack.md). At any time you will be able to view a maximum of **10** recently modified [entries](../../content-managers/author-content/about-entries.md) along with the following details:
+- [**Content type**](../create-content-types/about-content-types.md) to which the entry belongs
 - **Name** of the user who modified the entry
 - **Date** and **time** at which the entry was modified
 
@@ -47,7 +47,7 @@ The Dashboard is the stack’s homepage. To access the Dashboard, follow the ste
 
 The Dashboard page has the same default extensions that we just discussed above.
 
-**Additional Resource**: Along with default dashboard extensions, Contentstack provides you the flexibility to [create a custom dashboard extension.](/docs/developers/create-dashboard-extensions/create-a-new-dashboard-extension/) Optionally, you can refer to the documentation on [Google Analytics Dashboard Extension](/docs/developers/create-dashboard-extensions/google-analytics-dashboard-extension) to get started with custom dashboard extensions.
+**Additional Resource**: Along with default dashboard extensions, Contentstack provides you the flexibility to [create a custom dashboard extension.](../create-dashboard-extensions/create-a-new-dashboard-extension.md) Optionally, you can refer to the documentation on [Google Analytics Dashboard Extension](../create-dashboard-extensions/google-analytics-dashboard-extension.md) to get started with custom dashboard extensions.
 
 ## Common questions
 
@@ -55,7 +55,7 @@ The Dashboard page has the same default extensions that we just discussed above.
 At any time you will be able to view a maximum of **10** recently modified entries and a maximum of **10** recently modified assets.
 
 ### What details are shown for Recently Modified Entries?
-The extension shows the [**Content type**](/docs/developers/create-content-types/about-content-types) to which the entry belongs, the **Name** of the user who modified the entry, and the **Date** and **time** at which the entry was modified.
+The extension shows the [**Content type**](../create-content-types/about-content-types.md) to which the entry belongs, the **Name** of the user who modified the entry, and the **Date** and **time** at which the entry was modified.
 
 ### What happens when I click an entry or asset in these extensions?
 Clicking on an entry will direct you to the entry page, and clicking on an asset will direct you to the Asset Details page.

@@ -19,7 +19,7 @@ This page explains how to customize the JSON Rich Text Editor (RTE) in Contentst
 
 You can tailor the JSON Rich Text Editor (RTE) to meet specific content needs by enabling the Custom Editor. This allows selecting formatting options and controlling the toolbar for content managers.
 
-**Note:** Only the stack [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [Admins](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and users with [Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) role can customize the JSON RTE field.
+**Note:** Only the stack [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [Admins](../invite-users-and-assign-roles/types-of-roles.md#admin), and users with [Developer](../invite-users-and-assign-roles/types-of-roles.md#developer) role can customize the JSON RTE field.
 
 To customize the JSON RTE, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
 - Go to the Content Type Builder and add the **JSON Rich Text Editor** field to your content type.
@@ -30,16 +30,16 @@ To customize the JSON RTE, log in to your [Contentstack account](https://www.con
 Content managers will see the configured toolbar options when creating or editing entries of this content type.
 
 **Additional Resources:**
-- [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) in our documentation for advanced customization.
+- [Field Visibility Rules](../create-content-types/about-field-visibility-rules.md) in our documentation for advanced customization.
 
 ## API Reference for JSON RTE
 
 Use the following API requests to manage JSON RTE via Content Management API.
-- [Create a content type with JSON RTE](/docs/developers/apis/content-management-api#create-content-type-with-json-rte)
-- [Create an entry with JSON RTE](/docs/developers/apis/content-management-api#create-an-entry-with-json-rte)
-- [Update an entry with JSON RTE](/docs/developers/apis/content-management-api#update-an-entry-with-json-rte)
+- [Create a content type with JSON RTE](../../../api-docs/api-detail/content-management-api.md#create-content-type-with-json-rte)
+- [Create an entry with JSON RTE](../../../api-docs/api-detail/content-management-api.md#create-an-entry-with-json-rte)
+- [Update an entry with JSON RTE](../../../api-docs/api-detail/content-management-api.md#update-an-entry-with-json-rte)
 
-You can also retrieve JSON RTE fields via GraphQL. Refer to the [Get JSON RTE Fields while Retrieving Entries](/docs/developers/apis/graphql-content-delivery-api#get-json-rte-fields-while-retrieving-entries) query in the GraphQL API documentation.
+You can also retrieve JSON RTE fields via GraphQL. Refer to the [Get JSON RTE Fields while Retrieving Entries](../../../api-docs/api-detail/graphql-content-delivery-api.md#get-json-rte-fields-while-retrieving-entries) query in the GraphQL API documentation.
 
 ## Common questions
 

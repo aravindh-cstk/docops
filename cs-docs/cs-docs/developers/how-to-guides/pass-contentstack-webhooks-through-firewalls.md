@@ -17,7 +17,7 @@ This page explains how Contentstack webhooks interact with firewalls and outline
 
 ## Pass Contentstack Webhooks through Firewalls
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to configure and manage webhook integrations in Contentstack, refer to the [Webhooks](/docs/developers/webhooks) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to configure and manage webhook integrations in Contentstack, refer to the [Webhooks](../../../api-docs/developers/apis/content-management-api/webhooks.md) documentation.
 
 A firewall is an essential element in network security systems. It secures the organization's internal network and monitors the flow of inbound and outbound traffic based on predetermined rules and protocols.
 
@@ -27,15 +27,15 @@ This might affect system communication, especially if you're using third-party a
 
 Therefore, in this guide, we will discuss some options that you can use to let the firewalls accept legitimate requests.
 
-**Note:** To facilitate IP netblocks for receiving [webhook ](/docs/developers/set-up-webhooks/secure-your-webhooks#ip-whitelisting-with-contentstack)callbacks from Contentstack, kindly reach out to administrators authorized by Contentstack. They will provide the necessary guidance in configuring the relevant settings.
+**Note:** To facilitate IP netblocks for receiving [webhook ](../set-up-webhooks/secure-your-webhooks.md#ip-whitelisting-with-contentstack)callbacks from Contentstack, kindly reach out to administrators authorized by Contentstack. They will provide the necessary guidance in configuring the relevant settings.
 
 ## Webhooks in Contentstack
 
-[Webhooks](/docs/developers/set-up-webhooks/about-webhooks) are URLs invoked by Contentstack to signal events or post data to your third-party application whenever an event occurs in your stack. By sending real-time information, webhooks keep your application in sync with your Contentstack account.
+[Webhooks](../set-up-webhooks/about-webhooks.md) are URLs invoked by Contentstack to signal events or post data to your third-party application whenever an event occurs in your stack. By sending real-time information, webhooks keep your application in sync with your Contentstack account.
 
 Any firewall mustn't block Webhook notifications; otherwise, your app might not receive timely notifications from taking the next course of action.
 
-**Additional Resource**: [Contentstack's Webhook Integration](/docs/developers/set-up-webhooks/webhook-integrations) guide will help you integrate any third-party application to create custom solutions.
+**Additional Resource**: [Contentstack's Webhook Integration](../set-up-webhooks/webhook-integrations.md) guide will help you integrate any third-party application to create custom solutions.
 
 ## Test Webhooks Through Firewalls
 

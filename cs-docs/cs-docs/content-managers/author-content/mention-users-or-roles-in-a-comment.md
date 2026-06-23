@@ -18,15 +18,15 @@ This page explains how to mention (tag) specific users or roles in Contentstack 
 
 ## Mention Users or Roles in a Comment
 
-Contentstack makes collaboration more efficient by allowing you to tag specific users or roles directly in comments. This feature ensures that the right people are notified via email and [in-app notifications](/docs/manage-notifications), streamlining communication and task management within your team. Whether you are seeking feedback, assigning tasks, or sharing updates, tagging simplifies the process of involving the relevant individuals or groups.
+Contentstack makes collaboration more efficient by allowing you to tag specific users or roles directly in comments. This feature ensures that the right people are notified via email and [in-app notifications](../../headless-cms/manage-notifications.md), streamlining communication and task management within your team. Whether you are seeking feedback, assigning tasks, or sharing updates, tagging simplifies the process of involving the relevant individuals or groups.
 
 **Note:** You can mention a maximum of **20 users** (e.g., John Smith) and **20 roles** (e.g., Developer) in a single comment.
 
 To tag a user or role in a comment, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and open an existing entry.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and open an existing entry.
 - Open an entry and click the “Add comment” icon for a field.
 - To tag someone in the comment, type “@” and type their name or role. Then, select the user or role from the suggestions.
-    **Note:** You can tag users or roles in [JSON RTE comments](/docs/developers/json-rich-text-editor/json-rte-comments#tag-users-or-roles-within-a-json-rte-comment) for specific content blocks, text, and images.
+    **Note:** You can tag users or roles in [JSON RTE comments](../../developers/json-rich-text-editor/json-rte-comments.md#tag-users-or-roles-within-a-json-rte-comment) for specific content blocks, text, and images.
 - Click **Post** to comment.
 
 **Note:**

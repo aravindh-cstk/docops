@@ -16,7 +16,7 @@ This page explains the legacy extensions-based approach for integrating SAP Comm
 
 ## SAP Commerce Cloud (Hybris)
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched SAP Commerce Cloud as a Marketplace App. For more information on SAP Commerce Cloud, please refer to the [SAP Commerce Cloud App Installation Guide](/docs/developers/marketplace-apps/sap-commerce-cloud).
+**Note**: This documentation uses the legacy approach with extensions. We have launched SAP Commerce Cloud as a Marketplace App. For more information on SAP Commerce Cloud, please refer to the [SAP Commerce Cloud App Installation Guide](../marketplace-apps/sap-commerce-cloud.md).
 
 [SAP Commerce Cloud](https://help.sap.com/viewer/product/SAP_COMMERCE_CLOUD/SHIP/en-US?task=discover_task) (Hybris) is one of the most efficient and flexible e-commerce project development platform. Specifically designed for B2B businesses and retailers, it offers unparalleled opportunities for digital transformation to these segments.
 

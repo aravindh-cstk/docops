@@ -25,7 +25,7 @@ Suppose your blog focuses on Information Technology and includes posts on topics
 Once configured, the taxonomy helps structure your blog content and enables term-based filtering in your frontend.
 
 To create this taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to create a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to create a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Click the **+ New Taxonomy** button.
 - In the **Create Taxonomy** modal, add the following details:
 
@@ -34,7 +34,7 @@ To create this taxonomy, log in to your [Contentstack account](https://www.conte
 - (Optional) Add a **Description** for reference.
 - Click **Create Taxonomy**.
 
-      **Note**: You can [localize](/docs/developers/taxonomy/taxonomy-localization) the taxonomy name to display language-specific labels.
+      **Note**: You can [localize](./taxonomy-localization.md) the taxonomy name to display language-specific labels.
 - Start defining terms to categorize your blog content. Create a term named **Artificial Intelligence** and click **Save**.
 - To add a child (nested) term, click the vertical ellipsis next to the parent term and select **Create Child Term**.
 - Repeat this process to add more terms under the *Blog Posts* taxonomy as needed. As you build out the taxonomy, the left panel will display the full hierarchy of terms.
@@ -67,7 +67,7 @@ Yes. When publishing the entry, Contentstack will prompt you to publish the taxo
 Yes. To add a child (nested) term, click the vertical ellipsis next to the parent term and select **Create Child Term**.
 
 ### Can I localize the taxonomy name?
-Yes. **Note**: You can [localize](/docs/developers/taxonomy/taxonomy-localization) the taxonomy name to display language-specific labels.
+Yes. **Note**: You can [localize](./taxonomy-localization.md) the taxonomy name to display language-specific labels.
 
 ### Where do I add taxonomy classification in a content type?
 In the **Content Type Builder**, click the **+** icon and select **Taxonomy** from the list of fields, then add the taxonomy (for example **Blog Posts**) to the field (for example **Categories**).

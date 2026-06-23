@@ -20,7 +20,7 @@ This page explains how to use Apollo Client with Contentstack GraphQL queries in
 
 Apollo is a GraphQL client that helps you consume GraphQL APIs.
 
-This step-by-step guide explains how to use the Apollo client and Contentstack GraphQL queries to power the content of your [React Native SDK](/docs/developers/react-native) apps.
+This step-by-step guide explains how to use the Apollo client and Contentstack GraphQL queries to power the content of your [React Native SDK](../../sdks/content-delivery-sdk/react-native.md) apps.
 
 ## Prerequisites
 

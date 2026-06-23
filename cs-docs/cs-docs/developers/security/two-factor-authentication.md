@@ -66,7 +66,7 @@ Here are the steps for disabling two-factor authentication:
 - On the dialog box that appears, confirm by clicking on "Disable".
 Once two-factor authentication is disabled, you will be able to log in to your account by simply entering your registered email address and password.
 
-**Additional Resource**: It is advisable to change your password regularly to ensure account security. Here are some [password requirements](/docs/developers/password-related-security/password-requirements) that you need to follow. To know more about password security, refer to our [Password-related Security](/docs/developers/password-related-security) section.
+**Additional Resource**: It is advisable to change your password regularly to ensure account security. Here are some [password requirements](./password-requirements.md) that you need to follow. To know more about password security, refer to our [Password-related Security](/docs/developers/password-related-security) section.
 
 ## Common questions
 

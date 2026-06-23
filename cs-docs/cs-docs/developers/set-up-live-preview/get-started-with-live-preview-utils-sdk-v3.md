@@ -25,7 +25,7 @@ The Live Preview Utils SDK version 3 allows you to listen to entry change events
 If you are upgrading from version 2 to version 3 of the Live Preview Utils SDK, there are some key changes that may impact your existing implementation. Below are the important updates and recommended alternatives to ensure a smooth transition.
 - **Removal of **`**setConfigFromParams**`The `setConfigFromParams` method, previously used to extract the Live Preview hash from the request query string (available via `Contentstack.hash`), has been removed.
 
-If you have implemented `setConfigFromParams` in your middleware, you can safely remove it. To manually extract and use the Live Preview hash, refer to **Step 3: Utilize the Live Preview Hash** in the [Set Up the Website](/docs/developers/set-up-live-preview/live-preview-implementation-for-ssr-without-contentstack-sdk#set-up-the-website) section.
+If you have implemented `setConfigFromParams` in your middleware, you can safely remove it. To manually extract and use the Live Preview hash, refer to **Step 3: Utilize the Live Preview Hash** in the [Set Up the Website](./live-preview-implementation-for-ssr-without-contentstack-sdk.md#set-up-the-website) section.
 - **Removal of **`**getGatsbyDataFormat**`The `getGatsbyDataFormat` method has been deprecated in version 3. This method is no longer necessary because the `gatsby-source-contentstack` plugin now handles data formatting internally.
 
 Use the [`gatsby-source-contentstack`](https://www.gatsbyjs.com/plugins/gatsby-source-contentstack/) plugin for your Gatsby project to ensure seamless compatibility with Live Preview.
@@ -85,7 +85,7 @@ The `enable` property determines enablement or disablement of Live Preview commu
 | boolean | true | yes |
 
 #### ssr
-The `ssr` property defines the data update strategy for previewed content based on your app's rendering approach ([Server-Side Rendering](/docs/developers/set-up-live-preview/set-up-live-preview-with-rest-for-server-side-rendering/) or [Client-Side Rendering](/docs/developers/set-up-live-preview/set-up-live-preview-with-rest-for-client-side-rendering/)).
+The `ssr` property defines the data update strategy for previewed content based on your app's rendering approach ([Server-Side Rendering](./set-up-live-preview-with-rest-for-server-side-rendering.md) or [Client-Side Rendering](./set-up-live-preview-with-rest-for-client-side-rendering.md)).
 
 | Type | Default | Optional |
 |---|---|---|
@@ -190,7 +190,7 @@ The `cleanCslpOnProduction` object removes `data-cslp` attributes from the websi
 | boolean | true | yes |
 
 #### stackDetails
-The `stackDetails` object contains stack-specific information for redirection to the corresponding entry whenever you use [edit tags](/docs/developers/set-up-live-preview/set-up-live-edit-tags-for-entries-with-rest/) within your website.
+The `stackDetails` object contains stack-specific information for redirection to the corresponding entry whenever you use [edit tags](./set-up-live-edit-tags-for-entries-with-rest.md) within your website.
 
 ```
 stackDetails: {

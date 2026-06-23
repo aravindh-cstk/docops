@@ -16,9 +16,9 @@ This page explains how to use the JSON RTE Serializer package in Node.js to conv
 
 ## Render JSON RTE content using JSON RTE Serializer
 
-The [JSON RTE](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) Serializer package converts content between JSON and HTML formats, and the Markdown serializer converts JSON into Markdown. This package also supports the migration of HTML-based RTE content to JSON format across
-  [entries](/docs/content-managers/author-content/about-entries) within a
-  [content type](/docs/developers/create-content-types/about-content-types).
+The [JSON RTE](./about-json-rich-text-editor.md) Serializer package converts content between JSON and HTML formats, and the Markdown serializer converts JSON into Markdown. This package also supports the migration of HTML-based RTE content to JSON format across
+  [entries](../../content-managers/author-content/about-entries.md) within a
+  [content type](../create-content-types/about-content-types.md).
 
 The following prerequisites are required to use the JSON RTE Serializer with Node.js applications:
 - Node.js version **10** or **later**

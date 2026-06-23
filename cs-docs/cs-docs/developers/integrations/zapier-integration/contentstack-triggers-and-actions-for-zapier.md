@@ -19,7 +19,7 @@ This page explains the triggers and actions available in Contentstack’s Zapier
 
 Our Zapier integration allows you to connect Contentstack with thousands of cloud applications and help you automate business workflows.
 
-**Additional Resource: **To learn more about Contentstack's Zapier integration, please read our in-depth guide on [integrating Zapier with Contentstack and learning to build Zaps](/docs/developers/integrations/zapier-integration/integrate-contentstack-with-other-apps-using-zapier).
+**Additional Resource: **To learn more about Contentstack's Zapier integration, please read our in-depth guide on [integrating Zapier with Contentstack and learning to build Zaps](./integrate-contentstack-with-other-apps-using-zapier.md).
 
 To set up a Zap in Zapier, you may need to set up a trigger and one or more actions. A **trigger **is an event that fires up a zap. And an **action **is a task that will be performed automatically once a zap is triggered. You can read more about [Triggers](https://platform.zapier.com/docs/triggers) and [Actions](https://platform.zapier.com/docs/actions) in detail.
 
@@ -53,7 +53,7 @@ The triggers and actions listed above can be combined to create multiple Zaps al
 
 ## Next Step
 
-- [Recommended Zap Templates](/docs/developers/integrations/zapier-integration/recommended-zap-templates)
+- [Recommended Zap Templates](./recommended-zap-templates.md)
 
 ## Common questions
 

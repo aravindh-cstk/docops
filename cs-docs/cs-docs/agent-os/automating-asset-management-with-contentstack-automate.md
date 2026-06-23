@@ -51,7 +51,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - Within the **Configure Trigger **step, click the **Contentstack **trigger connector.
 - Under the **Choose Trigger** tab, select **Asset **Trigger.
 - On the **Asset Trigger Configure Trigger** page, enter the details given below:  
-  Click **+ Add New Account** button to connect your Contentstack account.**Additional Resource: **Refer to the [Contentstack Trigger](/docs/developers/automation-hub-connectors/contentstack-trigger) documentation to learn about adding an account.
+  Click **+ Add New Account** button to connect your Contentstack account.**Additional Resource: **Refer to the [Contentstack Trigger](./contentstack-trigger.md) documentation to learn about adding an account.
 - Select the trigger event from the drop-down, i.e., **Asset Published **and select a **Stack** and **Branch **from the **Lookup **drop-down.For Asset Trigger, you will find the following events:
   - **Asset Created:** When you create a new asset in your stack.
   - **Asset Updated:** When you update an asset.
@@ -73,7 +73,7 @@ Click **Configure Action Step** from the left navigation panel.
 - Within the **Configure Action Step**, click the **ChatGPT **connector.
 - Under** Choose an Action **tab, select the **Chat with Vision **action.
 - On the **Chat with Vision Configure Action **page, enter the details given below:  
-  Click **+ Add New Account** button to connect your ChatGPT account.**Additional Resource:** Refer to the [ChatGPT](/docs/developers/automation-hub-connectors/chatgpt#prerequisites) Connector documentation to learn about adding an account.
+  Click **+ Add New Account** button to connect your ChatGPT account.**Additional Resource:** Refer to the [ChatGPT](./chatgpt.md#prerequisites) Connector documentation to learn about adding an account.
 - Select the **API Model **from the drop-down list for response predictions. You can select the **gpt-4-vision-preview** API model. This model will be available as gpt-4-vision after production support.
 - Provide the **Prompt Text **to generate response(s). Click **+ Add Prompt Text** to enter multiple prompts.**Note: **For the Role as **system **or **assistant**, you will see the Prompt Text box to enter the text to generate response. If you select the Role as **user**, you can select the type of prompt content, i.e. Text or Image.
 
@@ -112,7 +112,7 @@ Click **Configure Action Step** from the left navigation panel.
 - Within the **Configure Action Step**, click the **ChatGPT **connector.
 - Under **Choose an Action** tab, select the **Chat** action.
 - On the **Chat Configure Action **page, enter the details given below:  
-  Click **+ Add New Account **button to connect your ChatGPT account.**Additional Resource:** Refer to the [ChatGPT](/docs/developers/automation-hub-connectors/chatgpt#prerequisites) Connector documentation to learn about adding an account.
+  Click **+ Add New Account **button to connect your ChatGPT account.**Additional Resource:** Refer to the [ChatGPT](./chatgpt.md#prerequisites) Connector documentation to learn about adding an account.
 - Select the **API Model **from the drop-down list to generate content for the chat responses.**Note:** Different models are available to different users based on the account the user holds such as paid accounts. You must check the account access before selecting the model.
 - Provide the **Prompt Text **to generate response(s). Click **+ Add Prompt** **Text **to enter multiple prompts.
 - Select the **Role **from the drop-down options to send to the API model request. By default, the role is set to the user.**Additional Resource:** There are three different types of roles provided by the OpenAI platform. The **system **role sets the response context, the **assistant **role provides the response content, and the **user **role asks the prompt.

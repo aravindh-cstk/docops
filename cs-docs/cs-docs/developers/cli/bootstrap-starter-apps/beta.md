@@ -18,20 +18,20 @@ This page explains how to use the Contentstack CLI Bootstrap plugin (`cm:bootstr
 
 The Bootstrap plugin in the Contentstack CLI simplifies the process of setting up [Starter apps](/docs/developers/sample-apps/#starter-apps) by automating stack creation and content import. With a single command, developers can quickly clone a Starter app and configure it with all the required assets and content.
 
-Using this plugin, all necessary content—such as [content types](/docs/developers/create-content-types/about-content-types), [environments](/docs/developers/set-up-environments/about-environments), [entries](/docs/content-managers/author-content/about-entries), and [assets](/docs/content-managers/author-content/about-assets)—is automatically created in the stack you choose or create.
+Using this plugin, all necessary content—such as [content types](../../create-content-types/about-content-types.md), [environments](../../set-up-environments/about-environments.md), [entries](../../../content-managers/author-content/about-entries.md), and [assets](../../../content-managers/author-content/about-assets.md)—is automatically created in the stack you choose or create.
 
 This guide explains how to use the Bootstrap plugin to automate the setup process for your Starter app projects.
 
-**Note:** This Starter app uses [Live Preview](/docs/content-managers/author-content/about-live-preview) version 2.0.
+**Note:** This Starter app uses [Live Preview](../../../content-managers/author-content/about-live-preview.md) version 2.0.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login)
-- CLI [installed](/docs/developers/cli/install-the-cli)
-- [Set region](/docs/developers/cli/configure-regions-in-the-cli#set-region)
+- CLI [installed](../install-the-cli.md)
+- [Set region](../configure-regions-in-the-cli.md#set-region)
 - Authenticate CLI using one of the following:  
-      [Login](/docs/developers/cli/cli-authentication#authentication)
-- [Management Token](/docs/developers/cli/cli-authentication#token-management)
+      [Login](../cli-authentication.md#authentication)
+- [Management Token](../cli-authentication.md#token-management)
 
 ## Using the Bootstrap Command
 
@@ -160,7 +160,7 @@ cp .env.example .env.development
         The `.env.development` file contains all the necessary configuration parameters.
 
           Open it in any code editor or IDE of your choice.
-- Provide your stack credentials (such as [API key](/docs/developers/set-up-stack/view-stack-details/), [Delivery token](/docs/developers/create-tokens/about-delivery-tokens/), and [environment](/docs/developers/set-up-environments/about-environments/)), and save the file.
+- Provide your stack credentials (such as [API key](../../set-up-stack/view-stack-details.md), [Delivery token](../../create-tokens/about-delivery-tokens.md), and [environment](../../set-up-environments/about-environments.md)), and save the file.
 
 ```
 # Contentstack is the tool we use to manage our website's content.
@@ -307,7 +307,7 @@ cp .env.sample .env
 
         The `.env` file contains all the necessary configuration parameters.
 - Open it in any code editor or IDE of your choice.
-- Provide your stack credentials (such as [API key](/docs/developers/set-up-stack/view-stack-details/), [Delivery token](/docs/developers/create-tokens/about-delivery-tokens/), and [environment](/docs/developers/set-up-environments/about-environments/)), and save the file.
+- Provide your stack credentials (such as [API key](../../set-up-stack/view-stack-details.md), [Delivery token](../../create-tokens/about-delivery-tokens.md), and [environment](../../set-up-environments/about-environments.md)), and save the file.
 - Now, open your terminal, point it to your project location, and run the following commands:
 ```
 npm install
@@ -326,7 +326,7 @@ Here's how your website's Home page will look after running on your localhost.
 
 You can deploy your Starter app using:
 - [Contentstack Launch](https://app.contentstack.com/#!/launch)  
-    **Additional Resource:** For more details, visit the [Contentstack Launch documentation](/docs/developers/launch).
+    **Additional Resource:** For more details, visit the [Contentstack Launch documentation](../../launch.md).
 - [Vercel](https://vercel.com/)
 
 ## Supported Starter Apps
@@ -344,7 +344,7 @@ You can deploy your Starter app using:
 ## Limitations
 
 - Avoid importing duplicate content types into existing stacks.
-- To create new stacks, ensure your role is set to [**Owner**](/docs/owners-and-admins/organization-roles/#organization-owner) or [**Admin**](/docs/owners-and-admins/organization-roles/#organization-admin) in the organization.
+- To create new stacks, ensure your role is set to [**Owner**](../../organization/organization-roles.md#organization-owner) or [**Admin**](../../organization/organization-roles.md#organization-admin) in the organization.
 
 ## Common questions
 

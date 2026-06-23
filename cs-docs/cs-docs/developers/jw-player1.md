@@ -24,7 +24,7 @@ JW Player1
 
 ##### Content
 
-The JW Player [custom field](/docs/developers/create-custom-fields/about-custom-fields) extension allows you to fetch your videos from JW Player and display them into a [field](/docs/developers/create-content-types/about-fields) of your [Content type](/docs/developers/create-content-types/about-content-types). Thus, while creating [entries](/docs/content-managers/working-with-entries/about-entries), you can select one or more videos as the input values for the field.
+The JW Player [custom field](./create-custom-fields/about-custom-fields.md) extension allows you to fetch your videos from JW Player and display them into a [field](./create-content-types/about-fields.md) of your [Content type](./create-content-types/about-content-types.md). Thus, while creating [entries](../content-managers/author-content/about-entries.md), you can select one or more videos as the input values for the field.
 
 To create the JW Player custom field extension for your content types, follow the steps given below.
 
@@ -51,7 +51,7 @@ Go to the [JW Player](https://www.jwplayer.com/) website and create a new accoun
 - You will be directed to the Complete Your Profile modal. You can provide the required information or you can skip it for now to move to your dashboard.
 - You are now ready to upload your videos to JW Player.  To do this, click on the **Upload** or **+ Add** button to start uploading.
 - You can either **Drop** your files or click on **select a file **option to upload your videos on JW Player.
-- Once the videos are uploaded, click on **Exit**. Your uploaded videos will be seen under **Recent Videos. **To check the **Video Summary **of any video click on the video, scroll down to add** Title** and a suitable **Description** of your video and **Save** it. These details will be visible in the [Custom Field](/docs/developers/create-custom-fields/about-custom-fields) of Contentstack.
+- Once the videos are uploaded, click on **Exit**. Your uploaded videos will be seen under **Recent Videos. **To check the **Video Summary **of any video click on the video, scroll down to add** Title** and a suitable **Description** of your video and **Save** it. These details will be visible in the [Custom Field](./create-custom-fields/about-custom-fields.md) of Contentstack.
 - Now for Contentstack to fetch videos from your JW Player in the custom field, it requires your accounts  **API Key** and **Secret Key**. To get these, click on the **Settings** gear icon at top right corner and select the **API Credentials** option.
 - On the **API Credentials** screen, under the** v****1 ****API Credentials** click on **Show Credentials **to view the API** Key **as shown below.
 - Next we proceed to create a** Secret Key **under** v****2**** API Credentials **section. Click on the **Add **button to add a new API key. Enter a suitable **Name **for your API key, select the **Read-Only** option from the **User Role** dropdown, and click on the **Save **button.
@@ -65,13 +65,13 @@ To set up an extension in Contentstack, log in to your [Contentstack account](ht
 - Get the code by contacting our [Support](mailto:support@contentstack.com) team. The support team will provide you with the source code that contains the following files:
 
   jw: Navigate to jw/build/index.html file. We will upload the code in this file in the extension source code field of our extension in the next step.
-- jw-popup: Navigate to jw-popup/build/index.html, upload this file as an asset in your stack by referring to the [Create/Upload Assets](/docs/content-managers/working-with-assets/create-upload-assets) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), navigate to the “Settings” icon on the left navigation panel.
+- jw-popup: Navigate to jw-popup/build/index.html, upload this file as an asset in your stack by referring to the [Create/Upload Assets](../content-managers/author-content/create-upload-assets.md) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
+- Go to your [stack](./set-up-stack/about-stack.md), navigate to the “Settings” icon on the left navigation panel.
 - Click on **Extensions**.
 - Click on the **+ New Extension** button, and select **Create new**.
 - Select the **Custom Field** option in the **Select Extension Type **window. This Custom field extension will fetch videos from JW Player to your Contentstack field.
 - On the **Create New Extension** page, enter values in the fields as given below:
-- **Title** *(required)*: Provide a suitable title, for example “JW Player” for your custom field. This title will be visible when you select the extension in the [custom](/docs/developers/create-content-types/custom) field in your content type.
+- **Title** *(required)*: Provide a suitable title, for example “JW Player” for your custom field. This title will be visible when you select the extension in the [custom](./create-content-types/custom.md) field in your content type.
 - **Field data type** *(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple **: Check this field.
 - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
@@ -102,10 +102,10 @@ Now, let's use this custom field in our content-type.
 
 Once you have added a custom field, you can use it in your content type like any other field.  Perform the following steps to add a custom field
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [Custom](/docs/developers/create-content-types/custom) field to it.
+[Create a content type](./create-content-types/create-a-content-type.md) and add the [Custom](./create-content-types/custom.md) field to it.
 - Under the **Select Extension** dropdown, select the “JW Player” extension that you created and set the other properties. You can add other fields if required.
 - Finally, click on **Save and Close** to save your changes.
-- Now [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **JW Player** field in action.
+- Now [create an entry](../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **JW Player** field in action.
 - Under your custom field you will find all the videos that you have uploaded on JW Player when you click on the **Choose Video** button. Select the videos you want to add to this field.
 
 ## Common questions

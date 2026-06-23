@@ -19,7 +19,7 @@ This page explains how to install, configure, and use the Contentstack Marketpla
 
 Trados is a computer-assisted translation software suite created by the company RWS, which helps language professionals manage and streamline their translation projects. It includes tools for communication, workflow management, terminology management, text analysis, and quality assurance.
 
-With the Contentstack Marketplace Trados app, you can easily translate your [Releases](/docs/content-managers/create-and-manage-releases/about-releases/) content (entries) into multiple languages and provide localized versions within your Contentstack entries. You can create a project using the Trados app Dashboard Widget and view the translation status of your projects.
+With the Contentstack Marketplace Trados app, you can easily translate your [Releases](../../content-managers/create-and-manage-releases/about-releases.md) content (entries) into multiple languages and provide localized versions within your Contentstack entries. You can create a project using the Trados app Dashboard Widget and view the translation status of your projects.
 
 ## Prerequisites
 - [Trados account](https://languagecloud.sdl.com/en/managed-translation/login?t=638162167154949195)
@@ -84,7 +84,7 @@ You can include or exclude specific fields from translation for specific content
                 You can reset your configuration by clicking the **Reset Configuration** button.
 - After configuring all the details, click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click the **Open Stack** button to start using the Trados application.
 
 ## Use Trados within your Stack

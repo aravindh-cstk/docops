@@ -17,10 +17,10 @@ This page explains how to rename an existing asset version in Contentstack. It i
 
 ## Rename Asset Versions
 
-You can rename an existing version of an [asset](/docs/content-managers/author-content/about-assets) in Contentstack to enhance and streamline content management. Renaming versions allows you to assign meaningful labels, making it easier to identify and manage specific versions of your assets effectively.
+You can rename an existing version of an [asset](./about-assets.md) in Contentstack to enhance and streamline content management. Renaming versions allows you to assign meaningful labels, making it easier to identify and manage specific versions of your assets effectively.
 
 To rename an existing asset version, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Assets” icon in the left navigation panel.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel.
 - Navigate to the asset you want to modify.
 - Click the **version** **dropdown **in the top-right corner of the page.
 - From the dropdown menu, view the list of all asset versions. Click the **Rename** icon next to the version you want to name.

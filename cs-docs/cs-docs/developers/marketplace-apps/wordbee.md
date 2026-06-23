@@ -46,7 +46,7 @@ Log in to the Wordbee (Beebox) account using your Wordbee account credentials.
 
 - On the Wordbee (Beebox) dashboard, choose your project and click **Select**.
 - Go to **Settings** from the left navigation panel and click the **CMS Connector** tab to get the **API Url**, **API Project Key**, **API Login**, and **API Password** of your project.
-- To get the **API Callback URL**, add your [Stack API Key](/docs/developers/apis/content-delivery-api#authentication) to the following link:
+- To get the **API Callback URL**, add your [Stack API Key](../../../api-docs/api-detail/content-delivery-api.md#authentication) to the following link:
 
 ```
 https://wordbee.contentstackmarket.com/api/prod-marketplace-wordbee-consumer-api?api_key=
@@ -220,7 +220,7 @@ Click the **+ Add Language** button to add a language.
 - Once done, click the **Finish** button. If you want to reset the configuration, click the **Reset Configuration** button.
 - After configuring all the details, click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click the **Open Stack** button to start using the Wordbee app.
 
 ## Use the Wordbee App within your Stack

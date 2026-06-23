@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # Knowledge Vault | Knowledge Vault
 
-The [Knowledge Vault](/docs/content-managers/brand-kit/about-knowledge-vault) API serves as a centralized hub for content, enabling you to store, manage, and organize brand-related assets such as text, documents, images, and other files, within structured brand kit folders.
+The [Knowledge Vault](../../../../cs-docs/content-managers/brand-kit/about-knowledge-vault.md) API serves as a centralized hub for content, enabling you to store, manage, and organize brand-related assets such as text, documents, images, and other files, within structured brand kit folders.
 
 ## Ingest Content Item
 
@@ -22,7 +22,7 @@ The [Knowledge Vault](/docs/content-managers/brand-kit/about-knowledge-vault) AP
 
 The Ingest Content request stores textual content in a specified folder within the Knowledge Vault of a brand kit. It enriches the content with metadata such as title and tags for improved organization and retrieval.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body for ingesting content:
 
@@ -42,7 +42,7 @@ Here’s an example of the Request Body for ingesting content:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 - **organization_uid** (required)
   Enter the Organization UID.
@@ -96,7 +96,7 @@ Here’s an example of the Request Body for ingesting content:
 
 The Update Content request lets you update a specific content stored in the Knowledge Vault.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 #### URL Parameters
 
@@ -113,7 +113,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Request
@@ -153,7 +153,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Delete Content request lets you delete a specific content stored in the Knowledge Vault.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 #### URL Parameters
 
@@ -170,7 +170,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Response

@@ -16,7 +16,7 @@ This page explains how to use the **Compare** and **Merge** Branches features to
 
 With **Compare** and** Merge** Branches, you can now compare the differences between two branches and merge them together.
 
-**Note:** Both the **Compare** and **Merge** features are currently only available for content types and global fields, and are accessible through the [Content Management API](/docs/developers/apis/content-management-api#comparing-branches)and [CLI commands](/docs/developers/cli/compare-and-merge-branches-using-the-cli/).
+**Note:** Both the **Compare** and **Merge** features are currently only available for content types and global fields, and are accessible through the [Content Management API](../../../api-docs/api-detail/content-management-api.md#comparing-branches)and [CLI commands](../cli/compare-and-merge-branches-using-the-cli.md).
 
 ## How to Compare Branches
 
@@ -29,7 +29,7 @@ When comparing two branches, you can see:
 - All the differences between a specific content type in both branches
 - All the differences between a specific global field in both branches
 
-Learn more about [comparing branches.](/docs/developers/branches/comparing-branches)
+Learn more about [comparing branches.](./comparing-branches.md)
 
 ## How to Merge Branches
 
@@ -46,15 +46,15 @@ You can select a default merge strategy as well as override the default strategy
 - **Merge modified with prefer compare: **Merges only the modified changes from the compare branch into the base branch and ignores any new changes in the base branch. When resolving a conflict between the two branches, the system keeps the change in the compare branch and ignores the change in the base branch.
 - **Ignore:** Ignores the changes in the compare branch, keeping the base branch intact. This can be used either to ignore a specific change or to ignore all changes and merge only specific changes.
 
-Learn more about [merging branches.](/docs/developers/branches/merging-branches)
+Learn more about [merging branches.](./merging-branches.md)
 
-**Additional Resource:** If you want to carry out operations related to **Compare** and** Merge** **Branches** within your stack using the CLI, refer to the guide on how to [Compare and Merge Branches using the CLI](/docs/developers/cli/compare-and-merge-branches-using-the-cli/).
+**Additional Resource:** If you want to carry out operations related to **Compare** and** Merge** **Branches** within your stack using the CLI, refer to the guide on how to [Compare and Merge Branches using the CLI](../cli/compare-and-merge-branches-using-the-cli.md).
 
 ## API Reference
 
 To perform operations related to Compare and Merge Branches within your stack via API, refer to the following documents:
-- [Comparing Branches](/docs/developers/apis/content-management-api#comparing-branches)
-- [Merging Branches](/docs/developers/apis/content-management-api#merging-branches)
+- [Comparing Branches](../../../api-docs/api-detail/content-management-api.md#comparing-branches)
+- [Merging Branches](../../../api-docs/api-detail/content-management-api.md#merging-branches)
 
 ## Common questions
 
@@ -62,14 +62,14 @@ To perform operations related to Compare and Merge Branches within your stack vi
 **Note:** Both the **Compare** and **Merge** features are currently only available for content types and global fields.
 
 ### Where can I access Compare and Merge Branches?
-Both features are accessible through the [Content Management API](/docs/developers/apis/content-management-api#comparing-branches)and [CLI commands](/docs/developers/cli/compare-and-merge-branches-using-the-cli/).
+Both features are accessible through the [Content Management API](../../../api-docs/api-detail/content-management-api.md#comparing-branches)and [CLI commands](../cli/compare-and-merge-branches-using-the-cli.md).
 
 ### What happens by default when I trigger a merge?
 **Note**: Once a merge action is triggered, the default behavior is to create a backup branch of the original Base branch.
 
 ### Where can I find the API documentation for comparing and merging branches?
 Refer to:
-- [Comparing Branches](/docs/developers/apis/content-management-api#comparing-branches)
-- [Merging Branches](/docs/developers/apis/content-management-api#merging-branches)
+- [Comparing Branches](../../../api-docs/api-detail/content-management-api.md#comparing-branches)
+- [Merging Branches](../../../api-docs/api-detail/content-management-api.md#merging-branches)
 
 Filename: about-compare-and-merge-branches.md

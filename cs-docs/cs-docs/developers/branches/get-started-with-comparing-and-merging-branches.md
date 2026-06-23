@@ -14,7 +14,7 @@ last_updated: 2026-03-25
 
 This page explains how to compare and merge branches (for content types and global fields) so you can review structural changes safely and choose an appropriate merge strategy before updating production-facing content.
 
-When making structural changes to your website, it is crucial to ensure that you are completely satisfied with the changes. Our [Branches](/docs/developers/branches/about-branches/) feature allows you to create a branch based on another branch, so you can make significant changes to the structure of your website. Previously, you could only finalize the changes in this new branch and then create an alias to point to the new changes or merge them via scripts you had to manually create.
+When making structural changes to your website, it is crucial to ensure that you are completely satisfied with the changes. Our [Branches](./about-branches.md) feature allows you to create a branch based on another branch, so you can make significant changes to the structure of your website. Previously, you could only finalize the changes in this new branch and then create an alias to point to the new changes or merge them via scripts you had to manually create.
 
 Our support for comparing and merging branches makes it easier for you to work with the new changes on your website.
 
@@ -57,7 +57,7 @@ In this case, the differences between the base (main) and compare (redesign) bra
 |  | Biography | Field | Image |
 |  | (not present) |  |  |
 
-**Additional Resource:** Learn how to compare branches using our new requests in the [Comparing Branches](/docs/developers/apis/content-management-api/#comparing-branches) section in CMA. To compare branches via CLI, you can refer to the [Compare Branches](/docs/developers/cli/compare-and-merge-branches-using-the-cli/#steps-to-compare-branches) section in the guide on how to [Compare and Merge Branches using the CLI](/docs/developers/cli/compare-and-merge-branches-using-the-cli/).
+**Additional Resource:** Learn how to compare branches using our new requests in the [Comparing Branches](../../../api-docs/api-detail/content-management-api.md#comparing-branches) section in CMA. To compare branches via CLI, you can refer to the [Compare Branches](../cli/compare-and-merge-branches-using-the-cli.md#steps-to-compare-branches) section in the guide on how to [Compare and Merge Branches using the CLI](../cli/compare-and-merge-branches-using-the-cli.md).
 
 In the above scenario, the status of the content types would be as follows:
 - **Base only: **The Footer content type is present only in the base branch.
@@ -229,7 +229,7 @@ In the scenario above, the result of using various merge strategies would be as 
 
 By default, when merging, a backup of the base branch is created before the merge process begins. In case of issues or for testing purposes, you can create an alias that points to the backup of the main (base) branch. This ensures that your production website displays the content as it is and does not break. Once you are satisfied with your merge action, you can point the alias back to the main (base) branch that contains the new merged changes.
 
-**Additional Resource:** Learn how to merge branches using our new requests in the [Merging Branches](/docs/developers/apis/content-management-api/#merging-branches) section in CMA. To merge branches via CLI, you can refer to the [Merge Branches](/docs/developers/cli/compare-and-merge-branches-using-the-cli/#steps-to-merge-branches)section in the guide on how to [Compare and Merge Branches using the CLI](/docs/developers/cli/compare-and-merge-branches-using-the-cli/).
+**Additional Resource:** Learn how to merge branches using our new requests in the [Merging Branches](../../../api-docs/api-detail/content-management-api.md#merging-branches) section in CMA. To merge branches via CLI, you can refer to the [Merge Branches](../cli/compare-and-merge-branches-using-the-cli.md#steps-to-merge-branches)section in the guide on how to [Compare and Merge Branches using the CLI](../cli/compare-and-merge-branches-using-the-cli.md).
 
 ## Common questions
 

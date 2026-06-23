@@ -17,7 +17,7 @@ This page explains the scenarios in which Field Visibility Rules can become inva
 
 Scenarios That Invalidate Field Visibility Rules
 
-[Field visibility rules](/docs/developers/create-content-types/about-field-visibility-rules) determine when specific fields appear based on predefined conditions. However, modifying the properties of these [fields](/docs/developers/create-content-types/about-fields) can invalidate the rules, causing them to no longer function as expected. If a saved rule is later altered, it may become invalid in the following cases.
+[Field visibility rules](./about-field-visibility-rules.md) determine when specific fields appear based on predefined conditions. However, modifying the properties of these [fields](./about-fields.md) can invalidate the rules, causing them to no longer function as expected. If a saved rule is later altered, it may become invalid in the following cases.
 
 ## Changes to Fields Used in the Rule
 
@@ -25,7 +25,7 @@ Modifying fields in a visibility rule invalidates the rule:
 - Changing the UID of the operand or target field.
 - Deleting or removing the operand or target field.
 - Marking the operand field as **Multiple**.
-- Moving only the operand or only the target field into a [Group](/docs/developers/create-content-types/group) or [Modular Block](/docs/developers/create-content-types/modular-blocks). For Field Visibility Rules to remain valid, **both the operand** and **target** fields must be within the same Group or the same Modular Block.
+- Moving only the operand or only the target field into a [Group](./group.md) or [Modular Block](./modular-blocks.md). For Field Visibility Rules to remain valid, **both the operand** and **target** fields must be within the same Group or the same Modular Block.
 - Changing the data type of the operand field to an unsupported type.
 - When a Group is changed from **Single** to **Multiple**, the parent group field cannot be used as an operand.
 - Altering a Modular Block so that a field is no longer a valid operand or target.
@@ -35,7 +35,7 @@ Modifying fields in a visibility rule invalidates the rule:
 Field visibility rules do not work if the target field has specific validations applied. The following validations invalidate the rule:
 - **Date Range:** A specific start and end date
 - **Max Instances:** For any field set as **Multiple**
-- **Limit for Multiple Choices:** Restrictions on selections in a [Select](/docs/developers/create-content-types/select) field
+- **Limit for Multiple Choices:** Restrictions on selections in a [Select](./select.md) field
 - **Mandatory Field:** For the field marked as Required
 - **Character Length:** Restrictions on the maximum number of characters (e.g., A blog name restricted to 10–20 characters)
 - **Number Range:** Restrictions on numbers to be within a specific range (e.g., A value between 10 and 15)

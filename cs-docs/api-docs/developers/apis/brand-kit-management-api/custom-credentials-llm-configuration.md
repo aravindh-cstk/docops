@@ -22,7 +22,7 @@ Custom Credentials (LLM) Configuration allows you to integrate your own Large La
 
 The Get Custom Credentials request fetches the custom credentials from a Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 #### URL Parameters
 
@@ -45,7 +45,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Response
@@ -85,7 +85,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Set Custom Credentials request lets you configure the custom API credentials for Brand Kit.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body for configuring the Brand Kit using **OpenAI** API provider:
 
@@ -120,7 +120,7 @@ Here’s an example of the Request Body for configuring the Brand Kit using **Op
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Request

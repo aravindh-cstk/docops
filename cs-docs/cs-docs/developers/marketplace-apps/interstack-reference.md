@@ -40,7 +40,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - A **Configuration** page appears with the configured settings.
 **Note**: The settings are configured automatically after installing the app. No additional settings are required to use the Interstack Reference app. If the app is not configured properly, you will get an error message.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
-**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click the **Save** button.
 - Click **Open Stack** to start using the Interstack Reference application.
 
@@ -51,7 +51,7 @@ Follow the steps given below to use the Interstack Reference application using a
 
 Go to your stack and click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 - Create a content type by adding relevant details and click **Save and proceed**.
-- In the Content Type Builder page, add a [Custom field](/docs/developers/create-custom-fields/use-custom-field-in-content-types/) in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the Content Type Builder page, add a [Custom field](../create-custom-fields/use-custom-field-in-content-types.md) in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select** Interstack Reference** and then click **Proceed**.
 
 This adds Interstack Reference in the custom field.
@@ -92,7 +92,7 @@ Click the **Properties** icon of the Custom field in your content type.
 - Once you select the content type, a list of all the entries present in the content type appears. Select your preferred entry and then click the **Add Selected Entry **button to add the entry.
 - Click **Save**.**Tip:** The advantage of using the Interstack Reference app over the traditional referencing method is that you can select entries from** different stacks **in the Contentstack environment.
 
-**Note:** Contentstack has its own [JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk/) that supports this plugin which can be used to fetch the content for your page from Contentstack for Interstack Reference app.
+**Note:** Contentstack has its own [JavaScript Delivery SDK](../sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk.md) that supports this plugin which can be used to fetch the content for your page from Contentstack for Interstack Reference app.
 
 Follow the steps below to view the details of all the Referenced and Referencing entries.
 - Go to the **Entries** page, navigate to the Interstack Reference entry. Click the **Widgets** icon.

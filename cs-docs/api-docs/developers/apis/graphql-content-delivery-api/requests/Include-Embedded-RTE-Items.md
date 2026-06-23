@@ -14,7 +14,7 @@ last_updated: 2023-03-29
 
 **** `/stacks/apiKey/explore`
 
-Get entries of a content type along with the comprehensive details of the embedded entries and assets referenced inside the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor). This query uses inline fragments and relay specification to retrieve details of rich text editors that refer to multiple embedded items.
+Get entries of a content type along with the comprehensive details of the embedded entries and assets referenced inside the [JSON Rich Text Editor](../../../../../cs-docs/developers/json-rich-text-editor.md). This query uses inline fragments and relay specification to retrieve details of rich text editors that refer to multiple embedded items.
 
 **Note**: You cannot filter the GraphQL query response based on embedded items or references inside an embedded entry.
 

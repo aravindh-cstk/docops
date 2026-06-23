@@ -29,7 +29,7 @@ Block-level properties apply to larger content structures such as:
 For example, applying a CSS class to a paragraph for custom styling or adding an ID to a section for smooth scrolling.
 
 To add a block-level property within your JSON RTE, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries** icon in the left navigation panel.
+- Navigate to the desired [stack](../set-up-stack/about-stack.md), then click the **Entries** icon in the left navigation panel.
 - Create a new entry or open an existing one containing a JSON RTE field.
 - In the **JSON RTE field**, select the block element (e.g., paragraph or heading) and click the **Property** icon in the toolbar.
 - Click **Add Property** or use the shortcut key “Cmd + Shift + P” for Mac users and “Ctrl + Shift + P” for Windows users.
@@ -45,7 +45,7 @@ Inline properties apply to smaller segments within a block element, such as:
 For example, styling individual words or phrases within a paragraph using a CSS class or adding metadata for embedded links.
 
 To add an inline property within your JSON RTE, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries** icon in the left navigation panel.
+- Navigate to the desired [stack](../set-up-stack/about-stack.md), then click the **Entries** icon in the left navigation panel.
 - Create a new entry or open an existing one containing a JSON RTE field.
 - In the **JSON RTE field**, highlight the text or element you want to style and click the **Property** icon in the toolbar.
 - In the **Add Property** modal that appears, enter the **Class** or **ID** property.

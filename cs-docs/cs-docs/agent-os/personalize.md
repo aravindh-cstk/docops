@@ -17,7 +17,7 @@ This page explains how to connect Contentstack Personalize to Automate (Automati
 
 ## Personalize Connector
 
-Contentstack [Personalize](/docs/personalize/about-personalize) is an optimization engine designed to tailor content based on information gathered about user preferences. By using the logged observations, you can provide targeted content experiences in real time to your customers or audiences depending on their own preferences.
+Contentstack [Personalize](../personalize/about-personalize.md) is an optimization engine designed to tailor content based on information gathered about user preferences. By using the logged observations, you can provide targeted content experiences in real time to your customers or audiences depending on their own preferences.
 
 Personalize offers two distinct types of experiences:
 - **Segmented Experience:** Used when you want to show a particular variation to the visitor based on demographics, referrers, and other relevant factors.

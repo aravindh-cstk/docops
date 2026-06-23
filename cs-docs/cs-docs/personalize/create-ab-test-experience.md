@@ -41,13 +41,13 @@ By carefully considering these factors, you can determine whether A/B testing is
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to the Contentstack Organization that has Personalize enabled
 - Access to a project in Personalize
-- [Audience created](/docs/personalize/create-audience) in your Personalize project
-- [Event created](/docs/personalize/create-event/) in your Personalize project
+- [Audience created](./create-audience.md) in your Personalize project
+- [Event created](./create-event.md) in your Personalize project
 
 **Note:** Users with Owner and Member access to a Personalize project can create A/B Test experiences.
 
 ## Steps for Execution
-**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
 To create an A/B Test Experience, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize.**
@@ -79,8 +79,8 @@ By default, Variant Distribution is set to **Equally split**.
 Once one of these thresholds is met, traffic redistribution occurs **every minute**, as long as the system continues to receive impression and conversion events.
 
 To ensure continued learning, every Multi-Armed Bandit test reserves a **minimum exploratory traffic share of 1%**, which is split equally across all variants. Until the threshold is met, all variants continue to receive equal traffic.
-- After selecting the variant distribution, you can create variants for the A/B Test. Variants are alternative versions ([CMS Entry Variants](/docs/content-managers/entry-variants/about-entry-variants)) of content or experiences created for testing against each other. To create variants for your experience, click the **+ Add Variant** button.**Short UID:** This unique ID is automatically assigned to each variant and used in [Personalize API requests](/docs/developers/sdks/personalize-edge-sdk/javascript/reference).
-- **Variant Name:** Provide a meaningful name for the variant. This name will be reflected in the Entry Editor for the [Entry Variants](/docs/content-managers/entry-variants/about-entry-variants) in the CMS.**Note:** Each A/B Test experience must contain at least **2 variants**. Each experience is reflected in the CMS as Variant Group and you can [create Entry Variants](/docs/content-managers/entry-variants/create-an-entry-variant) for each of these variants via the Entry Editor.
+- After selecting the variant distribution, you can create variants for the A/B Test. Variants are alternative versions ([CMS Entry Variants](../content-managers/entry-variants/about-entry-variants.md)) of content or experiences created for testing against each other. To create variants for your experience, click the **+ Add Variant** button.**Short UID:** This unique ID is automatically assigned to each variant and used in [Personalize API requests](../developers/create-content-types/reference.md).
+- **Variant Name:** Provide a meaningful name for the variant. This name will be reflected in the Entry Editor for the [Entry Variants](../content-managers/entry-variants/about-entry-variants.md) in the CMS.**Note:** Each A/B Test experience must contain at least **2 variants**. Each experience is reflected in the CMS as Variant Group and you can [create Entry Variants](../content-managers/entry-variants/create-an-entry-variant.md) for each of these variants via the Entry Editor.
 - **Traffic Distribution in %:**For **Equally split**, the distribution percentage is calculated automatically.
 - For **Custom**, you can specify the percentage as per your preference.
 - For **Multi-Armed Bandit**, traffic percentages are managed automatically and cannot be edited manually.
@@ -92,21 +92,21 @@ Similarly, you can add multiple variants by clicking the **+ Add Variant** butto
 - **Audiences:** Click the **Audiences** field. From the **Select Audience(s)** modal, select one or multiple audiences, then click the **Apply Selected Audiences** button to set the audience criteria for the target group.
 - Once you have defined your variant, click the **Save Draft** button.
 - Now click the **Activate Draft** button.
-- Click **Activate** in the Activate Draft Modal to activate the experience on your site for your visitors.**Note:** Ensure you [create Entry Variants](/docs/content-managers/entry-variants/create-an-entry-variant) in the CMS before activating an experience for a seamless personalized campaign for your visitors.
+- Click **Activate** in the Activate Draft Modal to activate the experience on your site for your visitors.**Note:** Ensure you [create Entry Variants](../content-managers/entry-variants/create-an-entry-variant.md) in the CMS before activating an experience for a seamless personalized campaign for your visitors.
 
-This creates a new A/B Test Experience in your Personalize project. For managing experience versions (activated/draft/paused), please refer to [this guide](/docs/personalize/experience-versioning).
+This creates a new A/B Test Experience in your Personalize project. For managing experience versions (activated/draft/paused), please refer to [this guide](./experience-versioning.md).
 
-**Additional Information:** To achieve optimal personalization for your users, prioritize experiences and variants independently. Use experience priority when multiple experiences customize the same element on a digital property, and apply variant priority when audience conditions match multiple variants. For more details, please refer to [this guide](/docs/personalize/prioritize-experiences).
+**Additional Information:** To achieve optimal personalization for your users, prioritize experiences and variants independently. Use experience priority when multiple experiences customize the same element on a digital property, and apply variant priority when audience conditions match multiple variants. For more details, please refer to [this guide](./prioritize-experiences.md).
 
 After activating your A/B Test experience, the Analytics are updated within a few minutes when your visitors start accessing and interacting with your content.
 
-**Note:** To design, preview, and analyze A/B Test experiences effectively, make sure [Live Preview](/docs/content-managers/author-content/about-live-preview) and [Visual Builder](/docs/content-managers/visual-builder/about-visual-builder) are enabled and set up on your stack. **Live Preview** provides real-time visibility into how content appears across variants. **Visual Builder** allows editors to manage variant-specific content and preview multiple variants simultaneously based on different audience selections without developer involvement.
+**Note:** To design, preview, and analyze A/B Test experiences effectively, make sure [Live Preview](../content-managers/author-content/about-live-preview.md) and [Visual Builder](/docs/content-managers/visual-builder/about-visual-builder) are enabled and set up on your stack. **Live Preview** provides real-time visibility into how content appears across variants. **Visual Builder** allows editors to manage variant-specific content and preview multiple variants simultaneously based on different audience selections without developer involvement.
 
 **Note:**
 - Users with Owner and Member access to a Personalize project can create new experiences, and edit/delete existing experiences.
 - The default number of Experiences allowed per project is **100**. To increase this limit, please contact our [support team](mailto:support@contact.com). By Contentstack permissions, they can be extended till **1000 **per project.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#experiences) to create, edit, delete, and retrieve all existing experiences.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#experiences) to create, edit, delete, and retrieve all existing experiences.
 
 ## Common questions
 

@@ -18,7 +18,7 @@ This page explains how to manage compositions in Contentstack Studio, including 
 
 **Note:** Studio is currently available in limited Beta. To request access and participate in the feedback program, contact our [support](mailto:support@contentstack.com) team.
 
-A **composition** is the foundational unit of structure in [Studio](/docs/studio/about-studio). It can represent a full page, a section of a page, or a reusable UI module. After creating a [project](/docs/studio/create-a-project), you use compositions to define layouts, bind content, and apply design rules.
+A **composition** is the foundational unit of structure in [Studio](./about-studio.md). It can represent a full page, a section of a page, or a reusable UI module. After creating a [project](./create-a-project.md), you use compositions to define layouts, bind content, and apply design rules.
 
 A composition typically combines the following elements:
 - UI components

@@ -25,7 +25,7 @@ These components define the organizational structure of your content within Cont
 
 ### Organization
 
-The organization acts as the parent entity for your company or team. It encapsulates multiple stacks and branches and manages all associated resources. Learn more about [Organizations](/docs/developers/organization/).
+The organization acts as the parent entity for your company or team. It encapsulates multiple stacks and branches and manages all associated resources. Learn more about [Organizations](../developers/organization.md).
 
 ### Stacks
 
@@ -33,7 +33,7 @@ A stack is a container that holds all the content (entries) and assets related t
 
 ### Branches
 
-Branches allow you to create multiple copies of your stack content. Changes can be made within different branches without affecting the main branch. Learn more about [Branches](/docs/developers/branches).
+Branches allow you to create multiple copies of your stack content. Changes can be made within different branches without affecting the main branch. Learn more about [Branches](../../api-docs/developers/apis/content-management-api/branches.md).
 
 **Note:** The term module may refer to a conceptual part of Contentstack, not a distinct feature.
 
@@ -99,7 +99,7 @@ Publish Queue places each publish or unpublish request into a background queue a
 
 ### Regions
 
-Regions define where your data is hosted. Contentstack currently supports six regions: AWS North America, AWS Europe, Azure North America, Azure Europe, GCP North America, and GCP Europe. Learn more about [Regions](https://www.contentstack.com/docs/developers/contentstack-regions).
+Regions define where your data is hosted. Contentstack currently supports six regions: AWS North America, AWS Europe, Azure North America, Azure Europe, GCP North America, and GCP Europe. Learn more about [Regions](../developers/contentstack-regions.md).
 
 ## Workflows
 
@@ -127,7 +127,7 @@ Timeline allows you to preview how your website will look on a future date and t
 
 ### Audit Log
 
-Logs of all actions taken in a stack, including create/update/delete activities for content and assets. This helps the user track the current status of the existing content. Learn more about the [Contentstack Audit Log](/docs/developers/set-up-stack/monitor-stack-activities-in-audit-log).
+Logs of all actions taken in a stack, including create/update/delete activities for content and assets. This helps the user track the current status of the existing content. Learn more about the [Contentstack Audit Log](../developers/set-up-stack/monitor-stack-activities-in-audit-log.md).
 
 ### Analytics
 

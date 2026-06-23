@@ -17,13 +17,13 @@ This page explains how to enable **Send Concise Payload** for a Contentstack web
 
 ## Send Concise Webhook Payload
 
-While creating or updating a [webhook](/docs/developers/set-up-webhooks/about-webhooks), Contentstack allows you to send a concise JSON payload to the specified URL whenever the selected event occurs.
+While creating or updating a [webhook](./about-webhooks.md), Contentstack allows you to send a concise JSON payload to the specified URL whenever the selected event occurs.
 
-To send a concise webhook payload, log in to [Contentstack](https://www.contentstack.com/login), go to your [stack](/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To send a concise webhook payload, log in to [Contentstack](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon (press “S”) on the left navigation panel, and select **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS). You will notice a list of existing webhooks.
 - Select the webhook for which you want to enable the concise JSON payload.
 - On the webhook page, toggle the **Send Concise Payload** switch to enable the webhook to return a concise JSON payload and click **Save**.
-- To view the payload sent by a webhook, refer to the [View Webhook Logs](https://www.contentstack.com/docs/developers/set-up-webhooks/view-webhook-logs) document.
+- To view the payload sent by a webhook, refer to the [View Webhook Logs](./view-webhook-logs.md) document.
 
 ## Examples
 
@@ -257,8 +257,8 @@ Here's an example of a **concise JSON payload** that a webhook sends in the resp
 ## API Reference
 
 To send concise webhook payload while creating or updating a webhook via API, refer to the following API requests:
-- [Create a webhook](/docs/developers/apis/content-management-api#create-a-webhook)
-- [Update webhook](/docs/developers/apis/content-management-api#update-webhook)
+- [Create a webhook](../../../api-docs/api-detail/content-management-api.md#create-a-webhook)
+- [Update webhook](../../../api-docs/api-detail/content-management-api.md#update-webhook)
 
 ## Common questions
 
@@ -266,10 +266,10 @@ To send concise webhook payload while creating or updating a webhook via API, re
 It enables the webhook to return a concise JSON payload instead of a comprehensive JSON payload.
 
 ### Where can I see the payload that was sent by a webhook?
-To view the payload sent by a webhook, refer to the [View Webhook Logs](https://www.contentstack.com/docs/developers/set-up-webhooks/view-webhook-logs) document.
+To view the payload sent by a webhook, refer to the [View Webhook Logs](./view-webhook-logs.md) document.
 
 ### Can I enable concise payloads when creating or updating webhooks via API?
-Yes. Refer to the API requests: [Create a webhook](/docs/developers/apis/content-management-api#create-a-webhook) and [Update webhook](/docs/developers/apis/content-management-api#update-webhook).
+Yes. Refer to the API requests: [Create a webhook](../../../api-docs/api-detail/content-management-api.md#create-a-webhook) and [Update webhook](../../../api-docs/api-detail/content-management-api.md#update-webhook).
 
 ### Where do I enable concise payloads in the UI?
 On the webhook page, toggle the **Send Concise Payload** switch and click **Save**.

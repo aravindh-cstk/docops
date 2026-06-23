@@ -114,7 +114,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - **Import Service Account Details**: Upload the service account details (`service_account.json` file) retrieved in [Step 1](#fetch-view-id-property-id-and-service-account-details).**Note**: The **project_id**, **client_email**, and **private_key** are mandatory fields in JSON file which cannot be edited.
 - After adding the configuration details, click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click the **Open Stack** button to start using the Google Analytics application.
 
 ## Use the Google Analytics Dashboard Widget
@@ -130,7 +130,7 @@ To use the Google Analytics app within an entry of your stack, follow the steps 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
 - Create a content type by adding relevant details as displayed below:
-- In the **Content Type Builder** page, add a [URL](/docs/developers/create-content-types/url) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [URL](../create-content-types/url.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - After adding the fields, click **Save** or **Save and Close** to save your changes.
 - To use the Google Analytics app in the sidebar widget, create an entry for this content type.
 - In the **Title** field, enter a suitable title for your entry. In the **URL** field, enter the URL of the page for which you want to take the Google Analytics data, and then **Save** the entry.
@@ -150,4 +150,4 @@ You can choose to use Google Universal Analytics or Google Analytics 4 with the 
 **Import Service Account Details**: Upload the service account details (`service_account.json` file) retrieved in [Step 1](#fetch-view-id-property-id-and-service-account-details).
 
 ### What field is required to use the sidebar widget for page-specific analytics?
-In the **Content Type Builder** page, add a [URL](/docs/developers/create-content-types/url) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+In the **Content Type Builder** page, add a [URL](../create-content-types/url.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.

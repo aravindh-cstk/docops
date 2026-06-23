@@ -17,10 +17,10 @@ This page explains how to assign or update roles for existing stack users in Con
 
 ## Assign Role to a User
 
-**Note**: Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admins](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and users assigned [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) roles, who has invited a specific [user](/docs/developers/invite-users-and-assign-roles/about-stack-users), can assign a particular role to that user. Any role you assign to a stack user will be reflected across all the branches of the stack. That user role will be able to access data of only the allowed branch(es) or branches associated with the allowed alias(es). Refer to our [Global Modules](/docs/developers/branches/global-modules) document for more information.
+**Note**: Only the stack [owner](./types-of-roles.md#owner), [admins](./types-of-roles.md#admin), and users assigned [developer](./types-of-roles.md#developer) roles, who has invited a specific [user](./about-stack-users.md), can assign a particular role to that user. Any role you assign to a stack user will be reflected across all the branches of the stack. That user role will be able to access data of only the allowed branch(es) or branches associated with the allowed alias(es). Refer to our [Global Modules](../branches/global-modules.md) document for more information.
 
 To update a role assigned to an existing user, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), navigate to the “Settings” icon on the left navigation panel, and select **Users & Roles**. This opens the **Users** page where you can see a list of existing users in the stack.
+- Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” icon on the left navigation panel, and select **Users & Roles**. This opens the **Users** page where you can see a list of existing users in the stack.
 - Click on the user to whom you want to assign a specific role.
 - In the **Update User** window, select the role(s) from the **Roles** dropdown menu.
 - Click on **Update**.
@@ -29,7 +29,7 @@ To update a role assigned to an existing user, log in to your [Contentstack acco
 
 Now, the user, whose role is changed, will have updated rights over the stacks and to the content within.
 
-**Additional Resource**: You can assign a role to users when you add them. Follow the steps mentioned in the [Add a New User](/docs/developers/invite-users-and-assign-roles/add-a-new-user) article.
+**Additional Resource**: You can assign a role to users when you add them. Follow the steps mentioned in the [Add a New User](./add-a-new-user.md) article.
 
 ## Permission Resolution for Multiple Roles
 
@@ -49,4 +49,4 @@ A: Any role you assign to a stack user will be reflected across all the branches
 A: Contentstack evaluates permissions from all your roles together; effective permissions are the union of all granted permissions, and the most permissive access applies for the same resource.
 
 **Q: Can roles be assigned when adding a new user?**  
-A: Yes. You can assign a role to users when you add them by following the steps in the [Add a New User](/docs/developers/invite-users-and-assign-roles/add-a-new-user) article.
+A: Yes. You can assign a role to users when you add them by following the steps in the [Add a New User](./add-a-new-user.md) article.

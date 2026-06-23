@@ -40,7 +40,7 @@ Perform the following steps to set up the Box trigger:
 - To execute and test the configured trigger, click the **Test Trigger **button.
 - On successful configuration, you can see the below output. Click the **Save and Exit **button.
 
-Additionally, you can use the Box trigger with the [Box Connector](/docs/developers/automation-hub-connectors/box-action) to generate the file download URL. For example, select the “File Uploaded” event in the Box trigger and configure the Box action to fetch the file download URL.
+Additionally, you can use the Box trigger with the [Box Connector](./box-action.md) to generate the file download URL. For example, select the “File Uploaded” event in the Box trigger and configure the Box action to fetch the file download URL.
 
 This sets the **Box **trigger connector.
 
@@ -56,4 +56,4 @@ No. You can **only **assign a **single **folder to a trigger.
 You can revert back to the last trigger configurations by clicking the **Revert Changes **button.
 
 ### How can I generate a file download URL after a “File Uploaded” event?
-Use the Box trigger with the [Box Connector](/docs/developers/automation-hub-connectors/box-action) to generate the file download URL by configuring the Box action to fetch the file download URL.
+Use the Box trigger with the [Box Connector](./box-action.md) to generate the file download URL by configuring the Box action to fetch the file download URL.

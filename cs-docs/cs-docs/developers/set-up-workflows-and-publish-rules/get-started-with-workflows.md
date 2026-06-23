@@ -16,11 +16,11 @@ This page explains how to begin using workflows and (optionally) publish rules i
 
 ## Get Started with Workflows
 
-To start working with [workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) for your [stack](/docs/developers/set-up-stack/about-stack), you need to create:
+To start working with [workflows](./about-workflows.md) for your [stack](../set-up-stack/about-stack.md), you need to create:
 - **Workflows** (which includes defining stages), and
 - **Publish rules** (if required)
 
-After you have [added a workflow](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages) and [created the publish rules](/docs/developers/set-up-workflows-and-publish-rules/add-a-publish-rule), let’s discuss how to use the workflow.
+After you have [added a workflow](./add-workflows-and-stages.md) and [created the publish rules](./add-a-publish-rule.md), let’s discuss how to use the workflow.
 
 To see the workflow details, log in to your [contentstack](https://app.contentstack.com/#!/login) account and perform the following steps:
 - Go to the Stack and open the entry for which you have enabled the workflow.

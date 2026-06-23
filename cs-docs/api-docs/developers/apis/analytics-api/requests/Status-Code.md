@@ -16,7 +16,7 @@ last_updated: 2026-04-14
 
 The Status Code request will show the count for the number of API requests made for each HTTP status code. For example, 200, 201, 400, 404, and so on. You can use the httpStatusCode parameter to get the count for a specific status code instead of all status codes.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../../../../api-detail/analytics-api.md#retrieve-data) endpoint.
 
 ```
 {

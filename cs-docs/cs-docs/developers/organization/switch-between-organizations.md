@@ -16,13 +16,13 @@ This page explains how to switch between organizations in Contentstack so you ca
 
 ## Switch Between Organizations
 
-Contentstack allows you to switch between [organizations](/docs/developers/organization/about-organizations) to access and manage [stacks](/docs/developers/set-up-stack/about-stack) across multiple organizations. This feature allows you to move seamlessly between different organizations where you are a member.
+Contentstack allows you to switch between [organizations](./about-organizations.md) to access and manage [stacks](../set-up-stack/about-stack.md) across multiple organizations. This feature allows you to move seamlessly between different organizations where you are a member.
 
 To switch between organizations, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Click the “Profile” icon.
 - Select your organization from the **Switch organization** dropdown.
 
-**Note:** You can only see organizations in which you are a [member](https://www.contentstack.com/docs/developers/organization/organization-roles#organization-member).
+**Note:** You can only see organizations in which you are a [member](./organization-roles.md#organization-member).
 
 After switching, you can view the stacks for the selected organization.
 
@@ -31,7 +31,7 @@ After switching, you can view the stacks for the selected organization.
 ## Common questions
 
 ### Why can’t I see an organization in the **Switch organization** dropdown?
-You can only see organizations in which you are a [member](https://www.contentstack.com/docs/developers/organization/organization-roles#organization-member).
+You can only see organizations in which you are a [member](./organization-roles.md#organization-member).
 
 ### Where is the organization switcher located?
 Click the “Profile” icon, then select your organization from the **Switch organization** dropdown.

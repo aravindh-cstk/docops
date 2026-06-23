@@ -25,7 +25,7 @@ You can also deselect the master language to deny access to a specific custom ro
 
 The custom role will still be able to see other language variants of the entry if the user has access to those languages.
 
-**Note**: Refer to the [Language-Specific Restrictions on Entries Scenarios](/docs/developers/multilingual-content/manage-language-permissions#language-specific-restrictions-on-entries-scenarios) section to understand how language-specific restrictions affect a user's entry access permissions.
+**Note**: Refer to the [Language-Specific Restrictions on Entries Scenarios](./manage-language-permissions.md#language-specific-restrictions-on-entries-scenarios) section to understand how language-specific restrictions affect a user's entry access permissions.
 
 You can also set language-based exceptions that disallow a new role to "Create," "Update" and/or "Delete" entries localized in specific languages. For example, restrict a role from being able to "Create" or "Update" entries localized in English (United States) or French (France).
 
@@ -43,7 +43,7 @@ A fallback language is the parent language from which a given language inherits 
 
 When you localize a child entry, it breaks inheritance from the restricted fallback language and exists independently. In such a scenario, a user role with appropriate permissions to the child language can still access the localized entry.
 
-**Additional Resource**: To understand more about language-specific permissions in roles, refer to the [Exceptions on Languages](/docs/developers/invite-users-and-assign-roles/create-a-role#exceptions-on-languages) documentation.
+**Additional Resource**: To understand more about language-specific permissions in roles, refer to the [Exceptions on Languages](../invite-users-and-assign-roles/create-a-role.md#exceptions-on-languages) documentation.
 
 Let’s look at a few real-world scenarios to understand how language-specific permissions work with your localized and unlocalized entries in terms of fallback inheritance.
 

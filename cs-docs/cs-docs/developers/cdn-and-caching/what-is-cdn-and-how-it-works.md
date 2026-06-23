@@ -26,7 +26,7 @@ However, the website content is stored somewhere, at a physical location, from w
 
 **Additional Resource:** Check out our [Hosting a Website](/docs/developers/how-to-guides/hosting-a-website) guide for recommendations that may make hosting your website quicker and easier.
 
-Let’s assume that your website is hosted in San Francisco, California. When a user loads a webpage on your website, it fetches the content (including images, videos, CSS, [JavaScript](/docs/developers/javascript-browser)) from your server in San Francisco and displays a view to the visitor. It works perfectly fine if the user request is coming from San Francisco or from anywhere within California.
+Let’s assume that your website is hosted in San Francisco, California. When a user loads a webpage on your website, it fetches the content (including images, videos, CSS, [JavaScript](../sdks/content-delivery-sdk/javascript-browser.md)) from your server in San Francisco and displays a view to the visitor. It works perfectly fine if the user request is coming from San Francisco or from anywhere within California.
 
 But if the requests are coming from Canada, China, Cuba, or Chile, your content needs to travel a lot of distance before they reach where they need to be displayed. Moreover, if many users request the same content simultaneously, the server gets bogged down and may take more time to manage the load and queue up responses. Quite naturally, the speed of content delivery is affected as a result. The website may experience higher latency and longer page-load time.
 
@@ -46,7 +46,7 @@ But what gives Contentstack that lightning speed? The answer is CDN. Contentstac
 
 **Note**: If you are using Contentstack to manage content for your website, lightning-fast content delivery comes by default.
 
-**Additional Resource:** Interested in setting up a CDN of your own for your Contentstack websites? Refer to our [Set up a Content Delivery Network for Contentstack-powered Websites](/docs/developers/how-to-guides/set-up-a-content-delivery-network-for-contentstack-powered-websites) guide.
+**Additional Resource:** Interested in setting up a CDN of your own for your Contentstack websites? Refer to our [Set up a Content Delivery Network for Contentstack-powered Websites](./set-up-a-content-delivery-network-for-contentstack-powered-websites.md) guide.
 
 ## Four Major Benefits of a Content Management System with CDN
 
@@ -58,9 +58,9 @@ Apart from the significant benefits of using a [headless CMS](https://www.conten
 
 ## Next Steps
 
-- Refer to our detailed guide to understand how [CDN Cache works in Contentstack and how Contentstack purges cached data from the servers](/docs/developers/how-to-guides/contentstack-cdn-cache-management).
-- Understand how Contentstack purges relevant cache content in various scenarios in our detailed [guide](/docs/developers/cdn-and-caching/cache-purging-scenarios/) on the topic.
-- Learn how-to [Set up a Content Delivery Network for Contentstack-powered Websites](/docs/developers/how-to-guides/set-up-a-content-delivery-network-for-contentstack-powered-websites).
+- Refer to our detailed guide to understand how [CDN Cache works in Contentstack and how Contentstack purges cached data from the servers](./contentstack-cdn-cache-management.md).
+- Understand how Contentstack purges relevant cache content in various scenarios in our detailed [guide](./cache-purging-scenarios.md) on the topic.
+- Learn how-to [Set up a Content Delivery Network for Contentstack-powered Websites](./set-up-a-content-delivery-network-for-contentstack-powered-websites.md).
 
 ## Common questions
 

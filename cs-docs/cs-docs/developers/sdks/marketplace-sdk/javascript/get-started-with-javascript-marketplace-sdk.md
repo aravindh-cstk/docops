@@ -17,7 +17,7 @@ This page is a step-by-step guide for developers who want to install and start u
 
 ## Get Started with JavaScript Marketplace SDK
 
-This step-by-step guide will help you get started with the [JavaScript Marketplace SDK](/docs/developers/sdks/marketplace-sdk/javascript/about-javascript-marketplace-sdk) and build apps powered by Contentstack.
+This step-by-step guide will help you get started with the [JavaScript Marketplace SDK](./about-javascript-marketplace-sdk.md) and build apps powered by Contentstack.
 
 ## Prerequisites
 To get started with the JavaScript Marketplace SDK, you will need the following:
@@ -40,7 +40,7 @@ To use this SDK, you must authenticate yourself using one of the following metho
 Let’s look at each of them in detail.
 
 ### Authtoken
-An [Authtoken](/docs/developers/create-tokens/types-of-tokens#authentication-tokens-authtokens) is a user-specific, read-write token used to make authorized Content Management API requests. You can retrieve an Authtoken by logging in to Contentstack using the “Log in to your account” request.
+An [Authtoken](../../../create-tokens/types-of-tokens.md#authentication-tokens-authtokens) is a user-specific, read-write token used to make authorized Content Management API requests. You can retrieve an Authtoken by logging in to Contentstack using the “Log in to your account” request.
 
 ```
 contentstackClient = contentstack.client({ authtoken: 'AUTHTOKEN' });
@@ -54,7 +54,7 @@ contentstackClient.login({ email: 'EMAIL', password: 'PASSWORD'});
 ```
 
 ### OAuth Token
-[Contentstack OAuth](/docs/developers/developer-hub/contentstack-oauth) uses the OAuth 2.0 protocol that allows external applications and services to access Contentstack APIs on your behalf.
+[Contentstack OAuth](../../../developer-hub/contentstack-oauth.md) uses the OAuth 2.0 protocol that allows external applications and services to access Contentstack APIs on your behalf.
 
 ```
 contentstackClient = contentstack.client({ authorization: 'OAUTH_TOKEN' });
@@ -71,7 +71,7 @@ client.marketplace('organization_uid');
 **Note:** By default, the SDK uses the North American region, so configuration changes are not required for North American region users. Users of other regions can refer to the following section.
 
 ### Region Support
-Contentstack offers four [regions](/docs/developers/contentstack-regions/about-regions) North America (NA), Europe (EU), Azure North America (Azure NA), and Azure Europe (Azure EU) as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.
+Contentstack offers four [regions](../../../contentstack-regions/about-regions.md) North America (NA), Europe (EU), Azure North America (Azure NA), and Azure Europe (Azure EU) as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.
 
 To use SDKs for the EU, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, given below, and the rest of the instructions remain the same.
 
@@ -189,7 +189,7 @@ client.marketplace('organization_uid').app().create(app)
 [JavaScript Marketplace GitHub Repository](https://github.com/contentstack/contentstack-marketplace-javascript)
 
 ### Next Steps
-[JavaScript Marketplace SDK API Reference](/docs/developers/sdks/marketplace-sdk/javascript/reference)
+[JavaScript Marketplace SDK API Reference](../../../create-content-types/reference.md)
 
 ## Common questions
 
@@ -203,4 +203,4 @@ Authtoken, Login Credentials, or OAuth Token.
 **Note:** By default, the SDK uses the North American region, so configuration changes are not required for North American region users.
 
 ### Where can I find more examples and reference documentation?
-[JavaScript Marketplace GitHub Repository](https://github.com/contentstack/contentstack-marketplace-javascript) and [JavaScript Marketplace SDK API Reference](/docs/developers/sdks/marketplace-sdk/javascript/reference).
+[JavaScript Marketplace GitHub Repository](https://github.com/contentstack/contentstack-marketplace-javascript) and [JavaScript Marketplace SDK API Reference](../../../create-content-types/reference.md).

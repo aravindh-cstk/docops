@@ -43,7 +43,7 @@ Assets provides three default organization-level roles.
 - **Asset Type Manager:** Manages asset types and user-defined fields. Typically supports metadata modeling and schema configuration.
 - **Member:** Provides access to Assets but does not grant administrative permissions by itself. Capabilities depend on the space-level roles assigned per space.
 
-**Additional Resource:** For a detailed explanation of how Assets applies roles at the product and space levels, refer to the [About Assets Roles](/docs/assets/about-assets-roles) documentation.
+**Additional Resource:** For a detailed explanation of how Assets applies roles at the product and space levels, refer to the [About Assets Roles](../assets/about-assets-roles.md) documentation.
 
 ## Custom Product Roles
 
@@ -51,7 +51,7 @@ When the default roles do not match a team's responsibilities, you can create cu
 
 **Note:** Only organization-level (product-level) custom roles can be created through Administration. Project-level custom roles must be created from the respective project or its per-product settings page.
 
-**Additional Resource:** To create a custom organization-level role, refer to the [Create Custom Roles](/docs/administration/create-custom-roles) documentation.
+**Additional Resource:** To create a custom organization-level role, refer to the [Create Custom Roles](./create-custom-roles.md) documentation.
 
 ## Common questions
 

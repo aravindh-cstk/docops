@@ -17,13 +17,13 @@ This page explains [Timeline] - Preview Content Across a Timeline for Contentsta
 
 ## Preview Content Across a Timeline
 
-[Timeline](/docs/content-managers/timeline/about-timeline) allows you to see how your website will look at specific future dates and times. This feature helps you visualize the impact of scheduled content updates, ensuring everything appears as expected before going live.
+[Timeline](./about-timeline.md) allows you to see how your website will look at specific future dates and times. This feature helps you visualize the impact of scheduled content updates, ensuring everything appears as expected before going live.
 
 **Note**: You need to enable the live preview feature in your stack settings to be able to view and use the timeline feature.
 
 To view the timeline, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-1. Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to preview your website’s timeline.
+1. Go to your [stack](../../developers/set-up-stack/about-stack.md) where you want to preview your website’s timeline.
 2. In the left panel, click the "Visual Experience" icon. By default you would see the Timeline preview.
 
    **Note**: If you have not set up the default environment, the latest live preview SDK, and the preview token in the live preview settings, the Set Up Timeline screen will appear. This screen will guide you through each step to set up and use the timeline feature.
@@ -68,7 +68,7 @@ You can also compare your website in two different timelines.
 1. Hover over a date for comparison and click the **Compare Website** icon to open a side-by-side comparison of your website in the current timeline and the selected date.
 2. Use the **Highlight Differences** option to see all differences between the two pages.
 
-   **Note**: You can [customize the color options](/docs/developers/set-up-timeline/set-up-timeline-for-your-website#customize-color-options-for-highlight-differences-feature) for the highlight differences functionality.
+   **Note**: You can [customize the color options](../../developers/set-up-timeline/set-up-timeline-for-your-website.md#customize-color-options-for-highlight-differences-feature) for the highlight differences functionality.
 3. Preview the website in different views (Responsive, Desktop, Tablet, or Mobile) or manually set the width and height.
 4. Change the orientation of the website as needed.
 5. Alternatively, compare websites in different timelines from the **Preview Details** page.
@@ -95,7 +95,7 @@ When viewing a particular release, use the **Preview** button to preview the web
 
 ![Releases.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta83ecf7afd870283/670670d156cc1181feb07c61/Releases.gif)
 
-**Additional Resource**: You can preview a particular entry with or without scheduling it for publishing. Refer to the [Preview Entry](/docs/content-managers/author-content/preview-entry/) document for more information.
+**Additional Resource**: You can preview a particular entry with or without scheduling it for publishing. Refer to the [Preview Entry](../author-content/preview-entry.md) document for more information.
 
 Use the timeline feature to navigate through your website as a visitor would. Check all pages, links, and content elements to ensure they appear correctly. Pay attention to the layout, design, and functionality to confirm everything works as intended.
 

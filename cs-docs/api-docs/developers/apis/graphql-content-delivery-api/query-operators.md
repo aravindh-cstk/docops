@@ -36,7 +36,7 @@ Contentstack classifies content types, group fields, global fields, assets, refe
 
 Each of these fields has its own set of filters. Filter names typically follow this pattern and are postfixed by Where. For example, ContentType.Group.Reference is equivalent to ProductGroupReferenceWhere in GraphQL.
 
-Each filter has a subcategory of available filter types based on the fields that make up the complex type. You can refer to the [Naming Convention](/docs/developers/apis/graphql-content-delivery-api#naming-convention) section to know more about how filter names are generated.
+Each filter has a subcategory of available filter types based on the fields that make up the complex type. You can refer to the [Naming Convention](../../../api-detail/graphql-content-delivery-api.md#naming-convention) section to know more about how filter names are generated.
 
 Let’s understand how to use these query operators with GraphQL.
 

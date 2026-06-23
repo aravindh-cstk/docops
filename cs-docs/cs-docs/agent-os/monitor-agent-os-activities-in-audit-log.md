@@ -17,13 +17,13 @@ This page explains [Automations guides and connectors] - Monitor Agent OS Activi
 
 ## Monitor Agent OS Activities in Audit Log
 
-The **Audit Log** section helps you monitor the activities performed in a particular [project](/docs/developers/automation-hub-guides/create-a-project).
+The **Audit Log** section helps you monitor the activities performed in a particular [project](../developers/automation-hub-guides/create-a-project.md).
 
 To access the Audit Log, follow the below steps:
 
 1. Log in to your [Contentstack account](https://www.contentstack.com/login).
 2. After logging in, click the **App Switcher** icon, then select **Agent OS** from the list.![App_switcher_icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6290d7afc992eda9/6998761148bd410008f0963f/App_switcher_icon.png)
-3. Go to your project or [create](/docs/developers/automation-hub-guides/managing-projects#create-a-project) a new one.
+3. Go to your project or [create](./managing-projects.md#create-a-project) a new one.
 4. From the top navigation panel, click **Settings**. Click the **Audit Log** tab to see all the details of the project.![Audit_log_tab](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt45be97e35fc777d6/6998741b36d8d5000862d105/Audit_log_tab.png)
 
 The following details are displayed under Audit Log when an event occurs:

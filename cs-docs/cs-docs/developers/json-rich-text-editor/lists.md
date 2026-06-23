@@ -58,7 +58,7 @@ Each list consists of **list items** (`li`) containing their own child elements,
 
 Control how content continues within a list item using **Enter** and **Shift + Enter**.
 
-**Note:** The Return key behavior can be customized at the stack level using the Stack Settings API request. Configure the `cs_breakline_on_enter` and `cs_only_breakline` parameters within the `rte` object to modify how the **Enter** and **Shift + Enter** keys behave. Refer to the [Stack Settings](/docs/developers/apis/content-management-api#add-stack-settings) documentation for more details.
+**Note:** The Return key behavior can be customized at the stack level using the Stack Settings API request. Configure the `cs_breakline_on_enter` and `cs_only_breakline` parameters within the `rte` object to modify how the **Enter** and **Shift + Enter** keys behave. Refer to the [Stack Settings](../../../api-docs/api-detail/content-management-api.md#add-stack-settings) documentation for more details.
 
 When editing a list in the JSON Rich Text Editor:
 

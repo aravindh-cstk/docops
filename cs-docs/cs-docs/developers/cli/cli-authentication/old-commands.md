@@ -29,7 +29,7 @@ In the following table, we have listed the necessity of `auth:login` and `auth:t
 
 ## Prerequisites
 - [Contentstack account](https://app.contentstack.com/#!/login)
-- CLI [installed](/docs/developers/cli/install-the-cli)on your machine
+- CLI [installed](../install-the-cli.md)on your machine
 
 ## Commands
 
@@ -70,7 +70,7 @@ After successful login, the authtoken will be generated automatically which you 
 
 **Note:**
 - Contentstack currently supports three regions: **North America**, **Europe **and **Azure North America**. If you want to use a specific endpoint, other than **NA**, refer to the [Set Region](/docs/developers/cli/configure-the-cli#set-region) command.
-- Contentstack CLI now supports [Two-factor Authentication](/docs/developers/two-factor-authentication), which ensures additional security to your Contentstack account.
+- Contentstack CLI now supports [Two-factor Authentication](../../security/two-factor-authentication.md), which ensures additional security to your Contentstack account.
 
 ### Logout
 The `auth:logout `command lets you log out of Contentstack and clear the session.
@@ -107,7 +107,7 @@ csdx logout -f
 ### Add Management Token
 To perform content management tasks, we recommend using the management token.
 
-**Note**: Before running this command, make sure you have [generated a management token](/docs/developers/create-tokens/generate-a-management-token) in your stack.
+**Note**: Before running this command, make sure you have [generated a management token](../../create-tokens/generate-a-management-token.md) in your stack.
 
 The following command lets you add an existing management token from your Contentstack account and save it to the session for further use.
 
@@ -141,7 +141,7 @@ csdx auth:tokens:add -m -a tokenname -k blt******** --token cs********* -y
 ### Add Delivery Token
 For Bulk Publish commands, if you don’t want to use the management token, you can use the delivery token instead. However, you will not be able to execute import and export content commands by using the delivery token.
 
-**Note**: Before running this command, make sure you have [generated a delivery token](/docs/developers/create-tokens/create-a-delivery-token) in your stack.
+**Note**: Before running this command, make sure you have [generated a delivery token](../../create-tokens/create-a-delivery-token.md) in your stack.
 
 **Usage**
 

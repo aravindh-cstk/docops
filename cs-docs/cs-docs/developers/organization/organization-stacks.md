@@ -17,7 +17,7 @@ This page explains where to find the Organization Stacks list in Contentstack, w
 
 ### Organization Stacks
 
-Under the **Stacks** tab of the [Organization Settings](/docs/owners-and-admins/organization-settings-overview) page, you will see the list of [stacks](/docs/developers/set-up-stack/about-stack) created under the Organization.
+Under the **Stacks** tab of the [Organization Settings](./organization-settings-overview.md) page, you will see the list of [stacks](../set-up-stack/about-stack.md) created under the Organization.
 
 To access the Stacks settings page, you need to perform the following steps:
 - Log in to your [Contentstack account](https://www.contentstack.com/login).
@@ -36,7 +36,7 @@ From this page, you can only **Delete** a stack.
 
 ## Delete a Stack
 
-**Note:** Only the [Organization Owner](https://www.contentstack.com/docs/developers/organization/organization-roles#organization-owner) or [Stack creator/owner](https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to delete a stack.
+**Note:** Only the [Organization Owner](./organization-roles.md#organization-owner) or [Stack creator/owner](../invite-users-and-assign-roles/types-of-roles.md#owner) has the right to delete a stack.
 
 Let us look in detail the steps that need to be performed by the respective roles.
 
@@ -63,19 +63,19 @@ There's an alternative method of deleting stacks through the Stack Settings page
 ## API Reference
 
 You can refer to the following API calls:
-- [Delete a Stack](https://www.contentstack.com/docs/developers/apis/content-management-api/#delete-stack)
-- [Get all stacks in an Organization](https://www.contentstack.com/docs/developers/apis/content-management-api/#get-all-stacks-in-an-organization)
+- [Delete a Stack](../../../api-docs/api-detail/content-management-api.md#delete-stack)
+- [Get all stacks in an Organization](../../../api-docs/api-detail/content-management-api.md#get-all-stacks-in-an-organization)
 
 ## Common questions
 
 **Q: Where do I find the list of stacks under an organization?**  
-A: Under the **Stacks** tab of the [Organization Settings](/docs/owners-and-admins/organization-settings-overview) page.
+A: Under the **Stacks** tab of the [Organization Settings](./organization-settings-overview.md) page.
 
 **Q: Who is allowed to delete a stack?**  
-A: Only the [Organization Owner](https://www.contentstack.com/docs/developers/organization/organization-roles#organization-owner) or the [Stack creator/owner](https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/types-of-roles#owner).
+A: Only the [Organization Owner](./organization-roles.md#organization-owner) or the [Stack creator/owner](../invite-users-and-assign-roles/types-of-roles.md#owner).
 
 **Q: What happens when a stack is deleted?**  
 A: The stack is permanently deleted, and deletion will result in the permanent deletion of all the content stored within that stack.
 
 **Q: Are there API calls related to organization stacks?**  
-A: Yes. See [Delete a Stack](https://www.contentstack.com/docs/developers/apis/content-management-api/#delete-stack) and [Get all stacks in an Organization](https://www.contentstack.com/docs/developers/apis/content-management-api/#get-all-stacks-in-an-organization).
+A: Yes. See [Delete a Stack](../../../api-docs/api-detail/content-management-api.md#delete-stack) and [Get all stacks in an Organization](../../../api-docs/api-detail/content-management-api.md#get-all-stacks-in-an-organization).

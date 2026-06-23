@@ -223,7 +223,7 @@ The Prompt action returns the generated response(s) for the prompt provided via 
 - Check if the details are correct. If yes, then click **Test Action**.
 - You will get the response(s). Once set, click **Save and Exit**.
 
-**Additional Resources:** Refer to the [ChatGPT Use Cases](/docs/developers/automation-hub-guides/chatgpt-use-cases) guide for the two use cases to translate texts via the Function Calling action and generate image URLs via the DALL-E 3 Image Generator action.
+**Additional Resources:** Refer to the [ChatGPT Use Cases](./chatgpt-use-cases.md) guide for the two use cases to translate texts via the Function Calling action and generate image URLs via the DALL-E 3 Image Generator action.
 
 ### Action 7: Select the Translate an Entry action
 
@@ -233,7 +233,7 @@ The Translate an Entry action returns the translated entry data in the response.
 - On the **Translate an Entry Configure Action **page, enter the details given below:Click **+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account to Automate](#connect-your-chatgpt-account-to-automate) step.
 - Select the **API** **Model** from the dropdown list for response predictions.**Additional Resource**: For more information about the API Models, please refer to [ChatGPT API Models](https://platform.openai.com/docs/models).
 - In the **Entry** **Data** field, enter the entry data to translate.
-- In the **Content** **Type** **Schema** field, enter the content type schema for translating the entry data.You can fetch the **Entry** **Data** and **Content** **Type** **Schema** from the previous step using the [Get a Single Content Type](/docs/developers/automation-hub-connectors/contentstack-management-content-types-actions#get-a-single-content-type) and [Get a Single Entry](/docs/developers/automation-hub-connectors/contentstack-management-entries-actions#get-a-single-entry) actions.
+- In the **Content** **Type** **Schema** field, enter the content type schema for translating the entry data.You can fetch the **Entry** **Data** and **Content** **Type** **Schema** from the previous step using the [Get a Single Content Type](./contentstack-management-content-types-actions.md#get-a-single-content-type) and [Get a Single Entry](./contentstack-management-entries-actions.md#get-a-single-entry) actions.
 - In the **Select** **Language** drop-down, select the language in which you want to translate the entry data.
 - Click the **Show Optional Fields** toggle button to use these optional fields:Provide the **Prompt** **Text** to generate the response. This offers additional capabilities to customize the translated entry data.
 - Enter the **Number** **of** **Tokens** to generate the content. By default, the token limit is 2000.

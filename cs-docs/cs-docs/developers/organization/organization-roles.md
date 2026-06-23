@@ -17,11 +17,11 @@ This page explains the predefined roles available in a Contentstack Organization
 
 Organization Roles
 
-In order to work on a [stack](/docs/developers/set-up-stack/about-stack), a user must be part of the [Organization](/docs/developers/organization/about-organizations/) that contains the stack. You can either [invite users to an Organization](/docs/developers/organization/invite-users-to-organization/) and then assign them a stack(s) or add them to a stack to automatically add them to an Organization.
+In order to work on a [stack](../set-up-stack/about-stack.md), a user must be part of the [Organization](./about-organizations.md) that contains the stack. You can either [invite users to an Organization](./invite-users-to-organization.md) and then assign them a stack(s) or add them to a stack to automatically add them to an Organization.
 
 Organizations have three predefined roles that are/can be assigned to a user: [Owner](#organization-owner), [Admin](#organization-admin), and [Member](#organization-member). You cannot create custom roles in an Organization, as you can create for stacks.
 
-**Additional Resources**: Though we do not provide permissions to create custom roles for Organizations, you can create [custom roles for stacks](/docs/developers/invite-users-and-assign-roles/types-of-roles#custom-role) with specific sets of permissions and assign it to your users.
+**Additional Resources**: Though we do not provide permissions to create custom roles for Organizations, you can create [custom roles for stacks](../invite-users-and-assign-roles/types-of-roles.md#custom-role) with specific sets of permissions and assign it to your users.
 
 Let’s understand the three predefined roles in detail.
 
@@ -33,7 +33,7 @@ The Owner has maximum privileges, which includes the ability to:
 - Invite users to Organizations and stacks
 - Access Organization’s Log Data (Mission Control)
 - Assign roles to users
-- Set up [SSO](/docs/developers/single-sign-on) for an organization
+- Set up [SSO](../single-sign-on.md) for an organization
 - Transfer ownership of an Organization to another user
 - Access stacks created by themselves
 - Access to other users’ stacks, if adequate permissions are assigned by the owner of the stack
@@ -72,9 +72,9 @@ The following is a tabular summary that outlines the Organization roles and thei
 ## API Reference
 
 You can refer to the following user-related API requests:
-- [Create a Role](/docs/developers/apis/content-management-api#create-a-role)
-- [Update a Role](/docs/developers/apis/content-management-api#update-role)
-- [Delete a Role](/docs/developers/apis/content-management-api#delete-role)
+- [Create a Role](../../../api-docs/api-detail/content-management-api.md#create-a-role)
+- [Update a Role](../../../api-docs/api-detail/content-management-api.md#update-role)
+- [Delete a Role](../../../api-docs/api-detail/content-management-api.md#delete-role)
 
 ## Common questions
 

@@ -20,7 +20,7 @@ The Contentstack DataSync Filesystem SDK enables developers to efficiently synch
 
 ## Prerequisites
 - [Node.js](https://nodejs.org/en/download/) version 20 or higher
-- Data synchronized through [Contentstack DataSync](/docs/developers/develop-apps-with-datasync/about-contentstack-datasync)
+- Data synchronized through [Contentstack DataSync](../../../develop-apps-with-datasync/about-contentstack-datasync.md)
 
 ## Installation and Setup
 To use the DataSync Filesystem SDK, integrate it into the DataSync Boilerplate to query content synchronized to the local filesystem.

@@ -16,7 +16,7 @@ This page explains how the **(JSON RTE)** in Contentstack supports content manag
 
 ## JSON Rich Text Editor for Content Managers
 
-The [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor)
+The [JSON Rich Text Editor](../../developers/json-rich-text-editor/about-json-rich-text-editor.md)
   ** (JSON RTE)** in Contentstack simplifies content creation by eliminating the need for HTML. It offers intuitive styling options and flexible content arrangement, making it easier for content managers to focus on creating compelling content.
 
 ## Format Without HTML

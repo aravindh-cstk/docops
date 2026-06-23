@@ -42,7 +42,7 @@ Let's check the process of setting up SCIM in Contentstack.
 
 To allow provisioning and deprovisioning of users in Contentstack’s organization through OneLogin, you need to enable SCIM in Contentstack by performing the following steps:
 
-Log in to your Contentstack account and go to the [**Organization Settings**](/docs/owners-and-admins/organization-settings-overview) page.
+Log in to your Contentstack account and go to the [**Organization Settings**](../organization/organization-settings-overview.md) page.
 - Go to the SCIM tab and select the **Enable SCIM** option.
 - On the **Enable SCIM **modal, click **Enable**.
 
@@ -70,7 +70,7 @@ The Contentstack app is now added to your OneLogin account.
 - For Azure EU region, **use https://azure-eu-app.contentstack.com**
 - For GCP North America region, use **https://gcp-na-app.contentstack.com**
 - For GCP Europe region, use **https://gcp-eu-app.contentstack.com**
-- **Organization UID**: Enter the UID of your Contentstack organization. To get the UID, log in to your Contentstack account and go to the [Organization Settings](/docs/owners-and-admins/organization-settings-overview) page. Then, go to the **INFO** tab and you’ll see **Organization ID** on the** Organization Info** page as shown below:
+- **Organization UID**: Enter the UID of your Contentstack organization. To get the UID, log in to your Contentstack account and go to the [Organization Settings](../organization/organization-settings-overview.md) page. Then, go to the **INFO** tab and you’ll see **Organization ID** on the** Organization Info** page as shown below:
 
 Finally, your **Application details** section will look similar to the image below:
 - Click on **Save** on the top-right corner.
@@ -118,7 +118,7 @@ To do so, perform the following steps:In the OneLogin’s **Contentstack** app, 
 - Then click on **Approve** to approve the request.
 - Once the request is approved, the status changes to **Provisioned** as shown in the screenshot below.
 
-The added user will get an invitation (via email) to collaborate on the Contentstack organization. To verify if the user has been provisioned, go to the [**Organization Settings**](/docs/owners-and-admins/organization-settings-overview) page in Contentstack, and then [**USERS**](/docs/owners-and-admins/organization-users) to check if the user’s name appears in the list.
+The added user will get an invitation (via email) to collaborate on the Contentstack organization. To verify if the user has been provisioned, go to the [**Organization Settings**](../organization/organization-settings-overview.md) page in Contentstack, and then [**USERS**](../organization/organization-users.md) to check if the user’s name appears in the list.
 Once the user is added to your Contentstack organization, you can proceed with **Step 6** to create groups in the Onelogin app.
 
 ### Deprovision Users via OneLogin

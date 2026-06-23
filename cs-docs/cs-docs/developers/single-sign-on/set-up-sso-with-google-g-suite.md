@@ -17,7 +17,7 @@ This page explains how to configure Single Sign-On (SSO) for a Contentstack orga
 
 ## Set up SSO with Google G-Suite
 
-This step-by-step guide explains how to set up [Single Sign-On (SSO)](/docs/developers/single-sign-on) in Contentstack with Google G Suite as your SAML 2.0 identity Provider (IdP).
+This step-by-step guide explains how to set up [Single Sign-On (SSO)](../single-sign-on.md) in Contentstack with Google G Suite as your SAML 2.0 identity Provider (IdP).
 
 The integration with Google G Suite can be done in two easy steps:
 - [Create SSO Name and ACS URL in Contentstack](#create-sso-name-and-acs-url-in-contentstack)
@@ -27,7 +27,7 @@ Let’s see each of the steps in detail.
 
 ## Create SSO Name and ACS URL in Contentstack
 
-Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to the [**Organization Settings**](/docs/owners-and-admins/organization-settings-overview)** **page, and click on the **Single Sign-On** tab.
+Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to the [**Organization Settings**](../organization/organization-settings-overview.md)** **page, and click on the **Single Sign-On** tab.
 
 - Enter an **SSO Name** of your choice, and click **Create**. For example, if your company name is “Acme, Inc.” enter “acme” here. This name will be used as one of the login credentials by the organization users while signing in.**Note:** The SSO Name can contain only alphabets (in lowercase), numbers (0-9), and/or hyphens (-).
 
@@ -64,17 +64,17 @@ With this, you are done with setting up the Contentstack app in Google G Suite. 
 
 In Contentstack, save your settings and go to **3. User Management**.
 
-Enable [**Strict Mode**](/docs/developers/single-sign-on/set-up-sso-in-contentstack#strict-mode)** **if you do not want any users to access the organization without SSO login.
+Enable [**Strict Mode**](./set-up-sso-in-contentstack.md#strict-mode)** **if you do not want any users to access the organization without SSO login.
 
-[**Session Timeout**](/docs/developers/single-sign-on/set-up-sso-in-contentstack#session-timeout)** **lets you define the session duration for a user signed in through SSO. While the default is set to 12 hours, you can modify it as per your requirement.
+[**Session Timeout**](./set-up-sso-in-contentstack.md#session-timeout)** **lets you define the session duration for a user signed in through SSO. While the default is set to 12 hours, you can modify it as per your requirement.
 
 ### Test & Enable
 
 Go to **4. Test & Enable** in Contentstack.
 
-Click the [**Test SSO**](/docs/developers/single-sign-on/set-up-sso-in-contentstack#test-sso)** **button to check if your SSO settings have been configured properly. It is highly recommended that you test your settings before enabling SSO.
+Click the [**Test SSO**](./set-up-sso-in-contentstack.md#test-sso)** **button to check if your SSO settings have been configured properly. It is highly recommended that you test your settings before enabling SSO.
 
-To enable SSO for your Contentstack organization, click on [**Enable SSO**](/docs/developers/single-sign-on/set-up-sso-in-contentstack#enable-sso). Once this is enabled, users of this organization can access the organization through SSO.
+To enable SSO for your Contentstack organization, click on [**Enable SSO**](./set-up-sso-in-contentstack.md#enable-sso). Once this is enabled, users of this organization can access the organization through SSO.
 
 You can then disable SSO from the same page when required.
 

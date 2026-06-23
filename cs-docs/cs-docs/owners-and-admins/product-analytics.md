@@ -25,7 +25,7 @@ Product Analytics Old (IGNORE)
 
 ##### Content
 
-OLD The **Product** **Analytics** section provides an overview of how the users of your [Organization](https://www.contentstack.com/docs/owners-and-admins/about-organizations) are using Contentstack.
+OLD The **Product** **Analytics** section provides an overview of how the users of your [Organization](../developers/organization/about-organizations.md) are using Contentstack.
 
 **Note:** The Product Analytics feature is only available in the [new Contentstack interface](/docs/new-contentstack). Contact our [support](mailto:support@contentstack.com) team to enable this feature, if you are not able to access the Product Analytics dashboard.
 
@@ -34,11 +34,11 @@ To access the analytics for your Organization, log in to your [Contentstack acco
 - Click the “Settings” icon on the left navigation panel.
 - Click the **Product** **Analytics** tab to access the section.
 
-**Note**: Only Organization [Owner](https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/types-of-roles/#owner) and [Admins](https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/types-of-roles/#admin) can access this section.
+**Note**: Only Organization [Owner](../developers/invite-users-and-assign-roles/types-of-roles.md#owner) and [Admins](../developers/invite-users-and-assign-roles/types-of-roles.md#admin) can access this section.
 
 This section contains the following subsections:
-- **Subscription Usage**: Displays the number of [extensions](/docs/developers/about-experience-extensions), [users](/docs/developers/invite-users-and-assign-roles/about-stack-users), [stacks](/docs/developers/set-up-stack/about-stack), [content types](/docs/developers/create-content-types/about-content-types), [global fields](/docs/developers/global-field/about-global-field), [entries](https://www.contentstack.com/docs/content-managers/working-with-entries/about-entries/), [assets](https://www.contentstack.com/docs/content-managers/working-with-assets/about-assets/), [environments](https://www.contentstack.com/docs/developers/set-up-environments/about-environments/), and [executions](/docs/developers/automation-hub-guides/executions-in-automation-hub) currently existing in the organization.
-- **Usage by Stacks**: Provides detailed information of each stack created in the organization. The usage in terms of how many content types, global fields, entries, assets, environments, [locales](https://www.contentstack.com/docs/developers/restructure-your-data-to-use-contentstack-import-content-utility/#locales), extensions, [webhooks](/docs/developers/set-up-webhooks/about-webhooks), [custom roles](/docs/developers/invite-users-and-assign-roles/types-of-roles#custom-role), bandwidth and API requests have been created.
+- **Subscription Usage**: Displays the number of [extensions](../developers/experience-extensions-overview/about-experience-extensions.md), [users](../developers/invite-users-and-assign-roles/about-stack-users.md), [stacks](../developers/set-up-stack/about-stack.md), [content types](../developers/create-content-types/about-content-types.md), [global fields](../developers/global-field/about-global-field.md), [entries](../content-managers/author-content/about-entries.md), [assets](https://www.contentstack.com/docs/content-managers/working-with-assets/about-assets/), [environments](../developers/set-up-environments/about-environments.md), and [executions](/docs/developers/automation-hub-guides/executions-in-automation-hub) currently existing in the organization.
+- **Usage by Stacks**: Provides detailed information of each stack created in the organization. The usage in terms of how many content types, global fields, entries, assets, environments, [locales](../developers/restructure-your-data-to-use-contentstack-import-content-utility.md#locales), extensions, [webhooks](../developers/set-up-webhooks/about-webhooks.md), [custom roles](../developers/invite-users-and-assign-roles/types-of-roles.md#custom-role), bandwidth and API requests have been created.
 - **Usage Analytics**: Provides details of the Bandwidth and APIs Requests usage.
 - **Top URLs**: Provides details of the frequently hit API calls.
 - **Apply Filter**: Filter out the API Usage and Top URLs data.
@@ -47,7 +47,7 @@ This page also provides details of your subscription plan (i.e., maximum limits,
 
 ## Subscription Usage
 
-The “Usage Overview” section displays the number of [extensions](/docs/developers/about-experience-extensions), [users](/docs/developers/invite-users-and-assign-roles/about-stack-users), [stacks](/docs/developers/set-up-stack/about-stack), [content types](/docs/developers/create-content-types/about-content-types), [global fields](/docs/developers/global-field/about-global-field), [entries](https://www.contentstack.com/docs/content-managers/working-with-entries/about-entries/), [assets](https://www.contentstack.com/docs/content-managers/working-with-assets/about-assets/), [environments](https://www.contentstack.com/docs/developers/set-up-environments/about-environments/), and [executions](/docs/developers/automation-hub-guides/executions-in-automation-hub) currently existing in the organization.
+The “Usage Overview” section displays the number of [extensions](../developers/experience-extensions-overview/about-experience-extensions.md), [users](../developers/invite-users-and-assign-roles/about-stack-users.md), [stacks](../developers/set-up-stack/about-stack.md), [content types](../developers/create-content-types/about-content-types.md), [global fields](../developers/global-field/about-global-field.md), [entries](../content-managers/author-content/about-entries.md), [assets](https://www.contentstack.com/docs/content-managers/working-with-assets/about-assets/), [environments](../developers/set-up-environments/about-environments.md), and [executions](/docs/developers/automation-hub-guides/executions-in-automation-hub) currently existing in the organization.
 
 In the Executions usage count, users can view the number of executions performed in Automation Hub.
 

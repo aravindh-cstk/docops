@@ -19,20 +19,20 @@ This page explains [Search Content] - Using the New Search: Real-world Scenarios
 
 In this section, we will look at a few real-world scenarios to understand how [advanced search](/docs/content-managers/search-content/about-advanced-search) helps perform more accurate searches in Contentstack.
 
-Consider a scenario where you have a [stack](/docs/developers/set-up-stack/about-stack) named “Demo” that contains multiple [content types](/docs/developers/create-content-types/about-content-types) with several [entries](/docs/content-managers/working-with-entries/about-entries) and [assets](/docs/content-managers/working-with-assets/about-assets). A few of the target content types of which you want to search entries are “Blog” and “Products”.
+Consider a scenario where you have a [stack](../../developers/set-up-stack/about-stack.md) named “Demo” that contains multiple [content types](../../developers/create-content-types/about-content-types.md) with several [entries](../author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets). A few of the target content types of which you want to search entries are “Blog” and “Products”.
 
 Now, let’s see some scenarios to understand how Contentstack’s search queries will work on the entries and assets of your stack.
 
-* [Search any entry with the term ‘Artificial Intelligence’](/docs/content-managers/search-content/using-the-new-search-real-world-scenarios#search-any-entry-with-the-term-artificial-intelligence)
-* [Search ‘Blog’ entries with the term ‘Artificial Intelligence’](/docs/content-managers/search-content/using-the-new-search-real-world-scenarios#search-blog-entries-with-the-term-artificial-intelligence)
-* [Search ‘Blog’ entries with ‘Artificial Intelligence’ and published on ‘Development’](/docs/content-managers/search-content/using-the-new-search-real-world-scenarios#search-blog-entries-with-artificial-intelligence-and-published-on-development)
-* [Search 'Blog' entries with 'Title' containing ‘Artificial Intelligence’](/docs/content-managers/search-content/using-the-new-search-real-world-scenarios#search-blog-entries-with-title-containing-artificial-intelligence)
-* [Search 'Blog' entries with 'Title' containing ‘Artificial Intelligence’ and published on 'Development'](/docs/content-managers/search-content/using-the-new-search-real-world-scenarios#search-blog-entries-with-title-containing-artificial-intelligence-and-published-on-development)
-* [Search 'Blog' entries where 'Title' contains ‘Artificial Intelligence’ and 'Author' contains 'Matthew'](/docs/content-managers/search-content/using-the-new-search-real-world-scenarios#search-blog-entries-where-title-contains-artificial-intelligence-and-author-contains-matthew)
-* [Search 'Blog' entries where 'Title' contains ‘Artificial Intelligence’ and 'Category' is 'News'](/docs/content-managers/search-content/using-the-new-search-real-world-scenarios#search-blog-entries-where-title-contains-artificial-intelligence-and-category-is-news)
-* [Search 'Blog' entries where 'Title' contains ‘Artificial Intelligence’ and 'Meta Tags' SEO field contains 'AI'](/docs/content-managers/search-content/using-the-new-search-real-world-scenarios#search-blog-entries-where-title-contains-artificial-intelligence-and-meta-tags-seo-field-contains-ai)
-* [Search 'Blog' entries where 'Title' contains ‘Artificial Intelligence’ and 'Gender' is 'Female'](/docs/content-managers/search-content/using-the-new-search-real-world-scenarios#search-blog-entries-where-title-contains-artificial-intelligence-and-gender-is-female)
-* [Search 'Blog' entries where 'Title' contains ‘Artificial Intelligence’ and 'Blog Image' is 'Science and Technology'](/docs/content-managers/search-content/using-the-new-search-real-world-scenarios#search-blog-entries-where-title-contains-artificial-intelligence-and-blog-image-is-science-and-technology)
+* [Search any entry with the term ‘Artificial Intelligence’](./using-the-new-search-real-world-scenarios.md#search-any-entry-with-the-term-artificial-intelligence)
+* [Search ‘Blog’ entries with the term ‘Artificial Intelligence’](./using-the-new-search-real-world-scenarios.md#search-blog-entries-with-the-term-artificial-intelligence)
+* [Search ‘Blog’ entries with ‘Artificial Intelligence’ and published on ‘Development’](./using-the-new-search-real-world-scenarios.md#search-blog-entries-with-artificial-intelligence-and-published-on-development)
+* [Search 'Blog' entries with 'Title' containing ‘Artificial Intelligence’](./using-the-new-search-real-world-scenarios.md#search-blog-entries-with-title-containing-artificial-intelligence)
+* [Search 'Blog' entries with 'Title' containing ‘Artificial Intelligence’ and published on 'Development'](./using-the-new-search-real-world-scenarios.md#search-blog-entries-with-title-containing-artificial-intelligence-and-published-on-development)
+* [Search 'Blog' entries where 'Title' contains ‘Artificial Intelligence’ and 'Author' contains 'Matthew'](./using-the-new-search-real-world-scenarios.md#search-blog-entries-where-title-contains-artificial-intelligence-and-author-contains-matthew)
+* [Search 'Blog' entries where 'Title' contains ‘Artificial Intelligence’ and 'Category' is 'News'](./using-the-new-search-real-world-scenarios.md#search-blog-entries-where-title-contains-artificial-intelligence-and-category-is-news)
+* [Search 'Blog' entries where 'Title' contains ‘Artificial Intelligence’ and 'Meta Tags' SEO field contains 'AI'](./using-the-new-search-real-world-scenarios.md#search-blog-entries-where-title-contains-artificial-intelligence-and-meta-tags-seo-field-contains-ai)
+* [Search 'Blog' entries where 'Title' contains ‘Artificial Intelligence’ and 'Gender' is 'Female'](./using-the-new-search-real-world-scenarios.md#search-blog-entries-where-title-contains-artificial-intelligence-and-gender-is-female)
+* [Search 'Blog' entries where 'Title' contains ‘Artificial Intelligence’ and 'Blog Image' is 'Science and Technology'](./using-the-new-search-real-world-scenarios.md#search-blog-entries-where-title-contains-artificial-intelligence-and-blog-image-is-science-and-technology)
 
 ### Search any entry with the term ‘Artificial Intelligence’
 

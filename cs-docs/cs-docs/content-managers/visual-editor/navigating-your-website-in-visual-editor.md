@@ -19,24 +19,24 @@ This page explains how to navigate and work within Contentstack Visual Editor, i
 
 Use Visual Editor to visually edit and manage your website’s structure and content in real time.
 
-**Note:** To use Visual Editor, ensure that the [Live Preview](/docs/content-managers/author-content/about-live-preview) feature is enabled in your stack settings. For setup instructions, refer to the [Set Up Visual Editor for Your Website](/docs/developers/set-up-visual-editor/set-up-visual-editor-for-your-website) guide.
+**Note:** To use Visual Editor, ensure that the [Live Preview](../author-content/about-live-preview.md) feature is enabled in your stack settings. For setup instructions, refer to the [Set Up Visual Editor for Your Website](../../developers/set-up-visual-editor/set-up-visual-editor-for-your-website.md) guide.
 
 To navigate through your website, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - The Visual Editor interface includes five key areas to help you navigate and manage your website efficiently:
   - **URL Bar**: Displays a list of all available web pages. It helps you quickly understand the structure of your site and switch between pages for editing.
   - **Canvas**: Serves as the main workspace where you can preview your site and make visual edits directly. It reflects real-time changes and simulates the live appearance of the page.
   - **Toolbar**: Appears over page components and provides contextual tools to move elements, add comments, apply field modifiers, and view detailed field information such as the field name and its associated content type.
   - **Right Panel:** Gives you access to the following tools:
-    - [**Status**](/docs/content-managers/visual-editor/status) to view the current entry’s state along with all linked or referenced entries on the page.
-    - [**Form**](/docs/content-managers/visual-editor/form) to perform inline editing with real-time preview and breadcrumb navigation.
-    - [**Drafts**](/docs/content-managers/visual-editor/drafts) to review and manage unsaved changes.
-    - [**Discussions**](/docs/content-managers/visual-editor/discussions) to collaborate through field-level feedback.
-    - [**Widgets**](/docs/content-managers/visual-editor/widgets) to add features like SEO optimization or translation.
-    - [**Audiences**](/docs/content-managers/visual-editor/audiences) to tailor content for specific user segments or regions.
-    - [**Automate**](/docs/content-managers/visual-editor/automate) to automate workflows and trigger custom actions.
+    - [**Status**](./status.md) to view the current entry’s state along with all linked or referenced entries on the page.
+    - [**Form**](./form.md) to perform inline editing with real-time preview and breadcrumb navigation.
+    - [**Drafts**](./drafts.md) to review and manage unsaved changes.
+    - [**Discussions**](./discussions.md) to collaborate through field-level feedback.
+    - [**Widgets**](./widgets.md) to add features like SEO optimization or translation.
+    - [**Audiences**](./audiences.md) to tailor content for specific user segments or regions.
+    - [**Automate**](./automate.md) to automate workflows and trigger custom actions.
   - **Publish Panel:**Displays all entries updated during a session, helping you track changes and organize updates.
 - You can assign workflows, fix validation errors, and choose between quick publishing for fast deployment or advanced publishing for more control.
 
@@ -65,7 +65,7 @@ Page navigation is disabled within the canvas. Use the **URL Bar** to navigate w
 Hold **Alt** (Windows) or **Option** (macOS) while clicking the element in the canvas to temporarily bypass the editor's editing mode.
 
 ### What do I need enabled to use Visual Editor?
-Ensure that the [Live Preview](/docs/content-managers/author-content/about-live-preview) feature is enabled in your stack settings.
+Ensure that the [Live Preview](../author-content/about-live-preview.md) feature is enabled in your stack settings.
 
 ### Which Live Preview SDK versions support interaction bypass with Alt/Option?
 This support is available only from version **3.1.3** and **above** of the Live Preview SDK.

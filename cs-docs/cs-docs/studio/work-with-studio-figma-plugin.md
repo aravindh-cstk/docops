@@ -24,15 +24,15 @@ Use the Studio Figma plugin to convert design layers into reusable UI components
 ## Prerequisites
 
 Before using the plugin, ensure the following:
-- A valid [Contentstack account](https://www.contentstack.com/login/) with access to at least one [stack](/docs/developers/set-up-stack/about-stack) and Studio project.
-- [User roles](/docs/developers/invite-users-and-assign-roles/about-stack-users/) and [permissions](/docs/developers/invite-users-and-assign-roles/about-stack-roles/) with read/write access to [entries](/docs/content-managers/author-content/about-entries) and [environments](/docs/developers/set-up-environments/about-environments).
+- A valid [Contentstack account](https://www.contentstack.com/login/) with access to at least one [stack](../developers/set-up-stack/about-stack.md) and Studio project.
+- [User roles](../developers/invite-users-and-assign-roles/about-stack-users.md) and [permissions](../developers/invite-users-and-assign-roles/about-stack-roles.md) with read/write access to [entries](../content-managers/author-content/about-entries.md) and [environments](../developers/set-up-environments/about-environments.md).
 - A Figma file with edit permissions.
 
-Before you begin, review the [Figma Best Practices](/docs/studio/figma-best-practices) document to ensure your designs are properly set up and optimized for use.
+Before you begin, review the [Figma Best Practices](./figma-best-practices.md) document to ensure your designs are properly set up and optimized for use.
 
 To integrate Figma designs with Studio, open your Figma file and perform the following steps:
 - Install the plugin from the [**Figma Marketplace**](https://www.figma.com/community/plugin/1541766192464484605/contentstack-studio) and click **Run**.
-- In the login page, choose your organization’s [region](/docs/developers/contentstack-regions/about-regions) and click **Authorize** to proceed.
+- In the login page, choose your organization’s [region](../developers/contentstack-regions/about-regions.md) and click **Authorize** to proceed.
 - The plugin redirects you to the Contentstack application. Select the desired organization from the list.
 - After authentication, return to Figma. The plugin displays the list of projects linked to your organization in Studio.
 - Select a frame or component, or hold Shift and click to select multiple items. Alternatively, drag a selection box across the canvas to select multiple frames.**Note:** To enhance accuracy and avoid duplication, map your pre-built components and design tokens before generation.
@@ -43,14 +43,14 @@ To integrate Figma designs with Studio, open your Figma file and perform the fol
 - Click **Generate Design** to create the component’s code, styles, and mapping metadata.
 - After code generation, choose one of the following export options:**Copy to Studio**Copies the generated component to your clipboard as composition JSON, which you can paste into the Studio editing canvas.
 - Use this when the Figma design includes components that are already built and registered in Studio and do not require further changes before import.
-- **Copy CLI Command**Generates a CLI command to [add the component](/docs/studio/work-with-studio-cli#add-component) to your local project and [register it in Studio](/docs/studio/work-with-studio-cli#register).
+- **Copy CLI Command**Generates a CLI command to [add the component](./work-with-studio-cli.md#add-component) to your local project and [register it in Studio](./work-with-studio-cli.md#register).
 - Use this option when the Figma design includes a component that does not have generated code or needs refinement, such as color, spacing, or behavior adjustments, before adding it to Studio. This is useful for advanced JavaScript components.
 
 ## Map Design Components
 
 Mapping helps the Figma plugin identify and reuse components that already exist in Studio when you export new designs. This prevents duplicate components and keeps your design system consistent
 
-**Note:** Before mapping design components in Figma, make sure the components are [synced using the CLI](/docs/studio/work-with-studio-cli#sync-your-existing-components). Only synced components appear in the Figma plugin map.
+**Note:** Before mapping design components in Figma, make sure the components are [synced using the CLI](./work-with-studio-cli.md#sync-your-existing-components). Only synced components appear in the Figma plugin map.
 - Go to the **Component Mapping** tab to view the detected Figma components and corresponding code components.
 - Click **Auto Map** to match design layers to code components automatically.**Note:** The mapping is based on component name, description, and properties. Layers without a matching component remain unmapped and can be linked manually.
 - Review and adjust mappings before export to ensure accuracy.
@@ -65,7 +65,7 @@ Export design tokens using one of the following methods:
 
 Use the copied design token command from the plugin in the CLI to import and register the tokens in your Studio project. Once imported, you can use these tokens during visual editing.
 
-**Additional Resource:** To learn more about importing design tokens, refer to the [Work with Studio CLI](/docs/studio/work-with-studio-cli) documentation.
+**Additional Resource:** To learn more about importing design tokens, refer to the [Work with Studio CLI](./work-with-studio-cli.md) documentation.
 
 ## Common questions
 

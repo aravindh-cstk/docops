@@ -33,7 +33,7 @@ To use the Contentstack Management connector, you first need to add your [Conten
 
       If you select **Contentstack OAuth** and click **Proceed**, the Manage Permissions modal will open, as shown below. Provide the OAuth permissions for all the values by checking the boxes and click **Authorize**.
 
-        **Note: **Contentstack offers support for [Branches](/docs/developers/branches/about-branches/) in Automate. You must authenticate and re-authorize your existing account by checking all the permissions to add your Contentstack account.
+        **Note: **Contentstack offers support for [Branches](../developers/branches/about-branches.md) in Automate. You must authenticate and re-authorize your existing account by checking all the permissions to add your Contentstack account.
 
 - In the pop-up, select your organization to complete the authorization.
 - In the pop-up that appears, view the module-specific access rights provided to the app. Click **Authorize **to complete authorization.
@@ -98,7 +98,7 @@ The Branch Trigger event lets you trigger an automation when you create or delet
 **Example:**
 Set up an automation with the Branch Trigger and Slack Action. With this automation, you can send a slack notification to the relevant team members/Slack channel when a new branch is created, informing the users about the purpose of the new branch.
 
-**Note:** You must have the [Branches](/docs/developers/branches/about-branches/) feature enabled for your stack. For more information, please reach out to our [Support Team](mailto:support@contentstack.com).
+**Note:** You must have the [Branches](../developers/branches/about-branches.md) feature enabled for your stack. For more information, please reach out to our [Support Team](mailto:support@contentstack.com).
 
 Let’s look at the steps to set up the trigger event.
 
@@ -209,7 +209,7 @@ This sets your Entry Comment Trigger.
 
 The Entry Variant Trigger event lets you trigger an automation when an entry’s variants are created, updated, or deleted.
 
-**Note:** The [Entry Variants](/docs/content-managers/entry-variants/about-entry-variants) feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
+**Note:** The [Entry Variants](../content-managers/entry-variants/about-entry-variants.md) feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
 
 **Example**
 
@@ -266,7 +266,7 @@ This sets your **Global Field **trigger.
 
 The Job Trigger event lets you trigger an automation when you publish or unpublish a job. A job refers to any **bulk action **you perform, such as publishing or unpublishing entries, assets, and releases. Each job can include multiple related items that require a specific action. For example, publishing an entry along with all the assets and entries it references would be considered a single job.
 
-**Note:** You must have the [Nested Reference Publishing](/docs/content-managers/publish-content/about-nested-reference-publishing) feature enabled for your organization. For more information, please reach out to our [Support Team](mailto:support@contentstack.com).
+**Note:** You must have the [Nested Reference Publishing](../content-managers/publish-content/about-nested-reference-publishing.md) feature enabled for your organization. For more information, please reach out to our [Support Team](mailto:support@contentstack.com).
 
 Let’s look at the steps to set up the trigger event.
 

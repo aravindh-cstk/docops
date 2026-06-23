@@ -30,7 +30,7 @@ Read more about creating [Notification Systems with Contentstack Webhooks, AWS L
 
 By using Contentstack Webhooks and AWS Lambda, you can set up a translation system which translates the content of an entry into a specified language. We will use Contentstack Webhooks and Workflows along with AWS Lambda and AWS Translate to get this done.
 
-Read more about [Setting up a Translation System](/docs/developers/how-to-guides/set-up-a-translation-system-with-contentstack-webhooks-and-workflows-aws-lambda-and-aws-translate).
+Read more about [Setting up a Translation System](../how-to-guides/set-up-a-translation-system-with-contentstack-webhooks-and-workflows-aws-lambda-and-aws-translate.md).
 
 ## Create New Entries Automatically Using
 

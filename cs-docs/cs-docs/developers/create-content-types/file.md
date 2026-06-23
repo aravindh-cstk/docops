@@ -17,18 +17,18 @@ This page describes the **File** field, how it is used to upload and manage file
 
 ## File
 
-The **File **field enables users to upload and use files in an [entry](/docs/content-managers/working-with-entries/about-entries). The File field can be used to add assets, such as images, videos, PDFs, and audio files to your entries.
+The **File **field enables users to upload and use files in an [entry](../../content-managers/author-content/about-entries.md). The File field can be used to add assets, such as images, videos, PDFs, and audio files to your entries.
 
-The File field possesses certain [properties](/docs/developers/create-content-types/about-field-properties) that you can change at any time as per your requirements. The properties that can be modified are “[Display Name](/docs/developers/create-content-types/display-name),” “[Unique ID](/docs/developers/create-content-types/unique-id),” “[Instruction Value](/docs/developers/create-content-types/instruction-value),” “[Help Text](/docs/developers/create-content-types/help-text),” “[Mandatory](/docs/developers/create-content-types/mandatory),” “[Multiple](/docs/developers/create-content-types/multiple),” “[Allow Images Only](/docs/developers/create-content-types/allow-images-only),” “[Non-localizable](/docs/developers/create-content-types/non-localizable),” “[Allowed file type(s)](/docs/developers/create-content-types/allowed-file-types),” and “[File size limit](/docs/developers/create-content-types/file-size-limit) (MB).”
+The File field possesses certain [properties](./about-field-properties.md) that you can change at any time as per your requirements. The properties that can be modified are “[Display Name](./display-name.md),” “[Unique ID](./unique-id.md),” “[Instruction Value](./instruction-value.md),” “[Help Text](./help-text.md),” “[Mandatory](./mandatory.md),” “[Multiple](./multiple.md),” “[Allow Images Only](./allow-images-only.md),” “[Non-localizable](./non-localizable.md),” “[Allowed file type(s)](./allowed-file-types.md),” and “[File size limit](./file-size-limit.md) (MB).”
 
 **Note**: If you select the **Multiple** property for this field and mentioned a number, for example 5, in the **Set Maximum Limit** sub-property, then at once you can upload only those numbers of files.
 
 After adding this field in content type, you will see it on your entry page as shown below:
 
 **Additional Resource**:
-- If you want to hide/show a field when certain conditions are met, you can use [Field Visibility Rules.](/docs/developers/create-content-types/about-field-visibility-rules)
+- If you want to hide/show a field when certain conditions are met, you can use [Field Visibility Rules.](./about-field-visibility-rules.md)
 - To learn how you can use a field for a given scenario, we recommend you to check out our [Content Modeling](/docs/developers/how-to-guides/content-modeling) guide.
-- Editing any current field in existing Content Type might result in data loss. To prevent data loss, make sure to check out our [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide.
+- Editing any current field in existing Content Type might result in data loss. To prevent data loss, make sure to check out our [Content Type Change Management](../content-modeling/content-type-change-management.md) guide.
 
 ## Common questions
 
@@ -42,4 +42,4 @@ After adding this field in content type, you will see it on your entry page as s
    If you select the **Multiple** property and set a number in **Set Maximum Limit**, then at once you can upload only those numbers of files.
 
 4. **Where can I learn about hiding/showing fields based on conditions?**  
-   You can use [Field Visibility Rules.](/docs/developers/create-content-types/about-field-visibility-rules)
+   You can use [Field Visibility Rules.](./about-field-visibility-rules.md)

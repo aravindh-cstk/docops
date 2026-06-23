@@ -16,15 +16,15 @@ This page explains how to create a custom Sidebar Extension in Contentstack, how
 
 ## Create a New Sidebar Extension
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](/docs/developers/developer-hub/sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](../developer-hub/sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
-Contentstack allows you to create a [custom Sidebar Extension](/docs/developers/create-custom-widgets/about-custom-widgets) in your [stack](/docs/developers/set-up-stack/about-stack) to analyze your entry content and recommend ideas.
+Contentstack allows you to create a [custom Sidebar Extension](/docs/developers/create-custom-widgets/about-custom-widgets) in your [stack](../set-up-stack/about-stack.md) to analyze your entry content and recommend ideas.
 
-**Note:** When working within specific branches, extensions added or created will be available only within that particular branch. For example, you are working within the development branch, and you add new Custom Sidebar Extensions to this branch. These custom sidebar extensions will be available only within the development branch. Refer to our [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) document for more information.
+**Note:** When working within specific branches, extensions added or created will be available only within that particular branch. For example, you are working within the development branch, and you add new Custom Sidebar Extensions to this branch. These custom sidebar extensions will be available only within the development branch. Refer to our [Branch-specific Modules](../branches/branch-specific-modules.md) document for more information.
 
 To create a custom Sidebar Extension, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+- Navigate to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**.
 - On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Sidebar Extension**.
@@ -36,8 +36,8 @@ To create a custom Sidebar Extension, log in to your [Contentstack account](http
     - **Hosted on Contentstack**: Select this option if you can write the code in the **Extension source code** field that appears below.
 
     **Additional Resource**: If you want to try out sample code for Sidebar Extension in the **Extension source code** field, browse through the [Text Intelligence repository](https://github.com/contentstack/extensions/tree/master/text-intelligence) available on GitHub.
-  - **Config Paramete**r: If you have used any config parameters (such as [access token](/docs/developers/create-tokens/types-of-tokens#access-tokens)) in the source code, specify the value of the parameters in this field.
-  - **Scope**: Select for which [content types](/docs/developers/create-content-types/about-content-types) this Sidebar Extension will be available. You can choose either **All Content Types** or **Specific Content Types**.
+  - **Config Paramete**r: If you have used any config parameters (such as [access token](../create-tokens/types-of-tokens.md#access-tokens)) in the source code, specify the value of the parameters in this field.
+  - **Scope**: Select for which [content types](../create-content-types/about-content-types.md) this Sidebar Extension will be available. You can choose either **All Content Types** or **Specific Content Types**.
 - Finally, click on **Save**.
 
 ## Test Custom Sidebar Extension
@@ -100,15 +100,15 @@ You should see your updated changes.
 
 Here are the links to the API requests related to this action:
 
-- [Upload a Sidebar Extension](/docs/developers/apis/content-management-api#upload-a-widget)
-- [Create Sidebar Extension with source URL](/docs/developers/apis/content-management-api#create-widget-with-source-url)
-- [Create Sidebar Extension with source code](/docs/developers/apis/content-management-api#create-widget-with-source-code)
+- [Upload a Sidebar Extension](../../../api-docs/api-detail/content-management-api.md#upload-a-widget)
+- [Create Sidebar Extension with source URL](../../../api-docs/api-detail/content-management-api.md#create-widget-with-source-url)
+- [Create Sidebar Extension with source code](../../../api-docs/api-detail/content-management-api.md#create-widget-with-source-code)
 
 ## Common questions
 
 ### Is this the recommended approach for extending the sidebar?
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](/docs/developers/developer-hub/sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](../developer-hub/sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 ### Will my Sidebar Extension be available across all branches?
 

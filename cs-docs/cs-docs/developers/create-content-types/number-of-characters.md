@@ -16,11 +16,11 @@ This page explains how to use the **Number of Characters** property when creatin
 
 ## Number of Characters
 
-The **Number of Characters** property lets you specify a limit of the minimum or maximum number of characters that a user can input to a [field](/docs/developers/create-content-types/about-fields).
+The **Number of Characters** property lets you specify a limit of the minimum or maximum number of characters that a user can input to a [field](./about-fields.md).
 
 For example, you want to create an SEO block in your website containing the Meta Title and Meta Description fields and set a minimum and maximum limit for these fields. Using this property, you can configure the Meta Title and Meta Description fields to have a maximum limit of 60 and 160 characters, respectively.
 
-When you [create a content type](/docs/developers/create-content-types/create-a-content-type) and add an input type of field to it, under the **Number of Characters** property, you will see two options:
+When you [create a content type](./create-a-content-type.md) and add an input type of field to it, under the **Number of Characters** property, you will see two options:
 - **Minimum**: Lets you specify the minimum number of characters to enter in the field.
 - **Maximum**: Lets you specify the maximum number of characters to enter in the field.
 

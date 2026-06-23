@@ -22,12 +22,12 @@ You can export items from the Knowledge Vault to download a copy of the content 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
-- Access to Brand Kit as an invited [Collaborator](/docs/brand-kit/invite-collaborators/)
+- Access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin)
+- Access to Brand Kit as an invited [Collaborator](./invite-collaborators.md)
 
 ## Steps for Execution
 
-**Note**: For this guide, we have assumed that you have [added items in the Knowledge Vault](/docs/brand-kit/add-item-in-knowledge-vault) inside your Brand Kit.
+**Note**: For this guide, we have assumed that you have [added items in the Knowledge Vault](./add-item-in-knowledge-vault.md) inside your Brand Kit.
 
 To export a Knowledge Vault item, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the left navigation panel, click the **Brand Kit** icon.

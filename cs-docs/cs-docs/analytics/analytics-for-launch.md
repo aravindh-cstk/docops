@@ -16,9 +16,9 @@ This page explains how to use the Launch Analytics dashboard in Contentstack to 
 
 ## Analytics for Launch
 
-The [Launch](/docs/developers/launch/about-launch) Analytics page provides detailed insights into the progress of your deployment projects. By analyzing key metrics like execution times, project environments, and API performance, you can optimize deployments and make informed, data-driven decisions.
+The [Launch](../developers/launch/about-launch.md) Analytics page provides detailed insights into the progress of your deployment projects. By analyzing key metrics like execution times, project environments, and API performance, you can optimize deployments and make informed, data-driven decisions.
 
-**Note:** Only organization [Owner](/docs/developers/organization/organization-roles#organization-owner), [Admin](/docs/developers/organization/organization-roles#organization-admin), and Product Analytics Viewer roles can access Analytics.
+**Note:** Only organization [Owner](../developers/organization/organization-roles.md#organization-owner), [Admin](../developers/organization/organization-roles.md#organization-admin), and Product Analytics Viewer roles can access Analytics.
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to **Analytics** through the “App Switcher”.

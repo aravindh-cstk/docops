@@ -29,7 +29,7 @@ After installing the Amazon S3 app from the Contentstack Marketplace, you can us
 
 - [Amazon S3 account](https://aws.amazon.com/)
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../organization/organization-roles.md#organization-owner)/[Admin](../organization/organization-roles.md#organization-admin)
 
 Let's follow this step-by-step guide to install and configure the Amazon S3 app within your stack.
 
@@ -73,7 +73,7 @@ In the **Add Amazon S3 Key Path** modal, enter the **Amazon S3 Key Path** and cl
 
 - Click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Note**: The app requires at least one UI location to be enabled, otherwise you will not be able to save your app configuration settings.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Amazon S3 app.
 
 ## Use the Amazon S3 App within your Entry
@@ -82,7 +82,7 @@ To use the Amazon S3 app within an entry of your stack, follow the steps given b
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
 
 There are two ways to use the Amazon S3 app in your entry:
 
@@ -91,7 +91,7 @@ There are two ways to use the Amazon S3 app in your entry:
 
 ### Steps to Use the Amazon S3 App as a Custom Field
 
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension or App**, select **Amazon S3** and click the **Proceed** button.This adds Amazon S3 to the custom field.
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
 - To use the Amazon S3 app, create an entry in this newly created content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Amazon S3 app’s custom fields on your entry page, as shown below:
@@ -123,7 +123,7 @@ The assets you select get added to your entry in the list view.
 
 ### Steps to Use the Amazon S3 App as a JSON RTE Plugin
 
-- In the **Content Type Builder** page, add a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Plugin(s)**, select **Amazon S3**, and then click **Add Plugin(s)**.This adds Amazon S3 in the JSON Rich Text Editor.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
 - To use the Amazon S3 app, create an entry for this content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Amazon S3 icon in the JSON Rich Text Editor field on your entry page, as shown below:
@@ -133,7 +133,7 @@ The assets you select get added to your entry in the list view.
 **Note**: Search is case-sensitive.
 
 - The assets you select get added to your entry.
-- To resize the image, drag the corner of the image and adjust the size as required. Hover over the image to view the options to **Open in New Tab**, **Edit Properties**, and **Remove** the asset.**Additional Resource**: You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field.
+- To resize the image, drag the corner of the image and adjust the size as required. Hover over the image to view the options to **Open in New Tab**, **Edit Properties**, and **Remove** the asset.**Additional Resource**: You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field.
 - After adding the asset(s), **Save** and **Publish** your entry.
 
 ## Common questions

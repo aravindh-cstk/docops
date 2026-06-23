@@ -16,7 +16,7 @@ last_updated: 2023-09-04
 
 The Merge branches request merges the specified two branches as per the merge strategy selected.
 
-**Additional Resource:** To learn how to select and use the merge strategies, refer to our documentation on [Merging Branches](/docs/developers/branches/merging-branches/).
+**Additional Resource:** To learn how to select and use the merge strategies, refer to our documentation on [Merging Branches](../../../../../cs-docs/developers/branches/merging-branches.md).
 
 You can pass ignore in the default_merge_strategy query parameter, and pass the item_merge_strategies in the request body to override the default strategy and use a different merge strategy for specific content types or global fields.
 

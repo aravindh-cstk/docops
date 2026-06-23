@@ -21,11 +21,11 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the 'Body' section, you need to specify the locales (mention the locale codes) and environments (mention the names) to which you want to unpublish the entries or assets. If you do not specify a source locale, the entries or assets will be unpublished in the master locale automatically.
 
-**Tip**: To schedule the unpublishing of multiple entries and/or assets, you can make use of the ‘[Create a Release](/docs/developers/apis/content-management-api/#create-a-release)’ request. Then, you can deploy this Release and all of the pinned items can be unpublished together either immediately or at a scheduled time to whatever environment you choose.
+**Tip**: To schedule the unpublishing of multiple entries and/or assets, you can make use of the ‘[Create a Release](../../../../api-detail/content-management-api.md#create-a-release)’ request. Then, you can deploy this Release and all of the pinned items can be unpublished together either immediately or at a scheduled time to whatever environment you choose.
 
 Within the ‘entries’ parameter, pass these details of each entry – content type UIDs, entry UIDs, locales in which the entries are present, and the version that you want to unpublish. Within the ‘assets’ parameter, pass these details of each entry – asset UIDs and the version that you want to unpublish (optional).
 
-If some of the entries added to the bulk unpublish request do not satisfy the applied [publish rules](/docs/developers/set-up-workflows-and-publish-rules/about-publish-rules), then all the items will not be unpublished. To unpublish at least the items that satisfy the publish rules, pass additional query parameters, skip_workflow_stage_check=true and approvals=true.
+If some of the entries added to the bulk unpublish request do not satisfy the applied [publish rules](../../../../../cs-docs/developers/set-up-workflows-and-publish-rules/about-publish-rules.md), then all the items will not be unpublished. To unpublish at least the items that satisfy the publish rules, pass additional query parameters, skip_workflow_stage_check=true and approvals=true.
 
 Let's understand how these two query parameters work while unpublishing entries.
 
@@ -51,7 +51,7 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

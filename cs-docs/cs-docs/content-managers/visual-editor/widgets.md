@@ -21,10 +21,10 @@ The Widgets panel enables you to enhance content by integrating apps and extensi
 
 This feature supports advanced use cases such as SEO optimization, sentiment analysis, or translation, allowing you to extend CMS capabilities without switching between tools.
 
-**Additional Resource:** Refer to the [Installing Apps](/docs/developers/marketplace-platform-guides/installing-apps) document for more information on how to add apps to your stack.
+**Additional Resource:** Refer to the [Installing Apps](../../developers/marketplace-platform-guides/installing-apps.md) document for more information on how to add apps to your stack.
 
 To access Widgets within Visual Editor, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - In the right sidebar, click the "Widgets" icon.
 - Use the **Widgets** dropdown and select the app or extension.

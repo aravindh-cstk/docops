@@ -14,7 +14,7 @@ last_updated: 2026-03-25
 
 This page explains real-world scenarios for using Branches (and aliases) in Contentstack, aimed at developers who need to manage parallel workstreams, reduce risk to production content, and support workflows like redesigns, testing, and CI/CD rollback.
 
-[Branches](/docs/developers/branches/about-branches)allows you to make changes and iterate your work without the risk of impacting the content deployed on production. Thus, making it easier for developers to work on multiple releases simultaneously.
+[Branches](./about-branches.md)allows you to make changes and iterate your work without the risk of impacting the content deployed on production. Thus, making it easier for developers to work on multiple releases simultaneously.
 
 Let's look at the following use cases to learn how to work with Branches in Contentstack.
 
@@ -28,15 +28,15 @@ To achieve this, you'll need to create a development branch within your producti
 
 The development branch will now have a copy of all the content from the main branch (production). With this development branch, the developers can modify the structure, add new changes, iterate, and publish in a testing environment to preview the recent changes.
 
-**Additional Resource:** To create a new branch, read our doc on [creating a branch](/docs/developers/branches/create-a-branch).
+**Additional Resource:** To create a new branch, read our doc on [creating a branch](./create-a-branch.md).
 
 You can compare the differences in the content types and global fields between the development and main branches. Once you are satisfied with the changes, you can merge the development branch into the main branch.
 
-**Additional Resource:** Refer to our [Get started with comparing and merging branches](/docs/developers/branches/get-started-with-comparing-and-merging-branches)documentation to learn more about comparing and merging branches
+**Additional Resource:** Refer to our [Get started with comparing and merging branches](./get-started-with-comparing-and-merging-branches.md)documentation to learn more about comparing and merging branches
 
 When merging, a backup of the branch you are merging into (in this case the main branch) is created by default before the merge action takes place. If you use aliases, you can easily point the alias to this backup branch to quickly switch back to how things were before the merge occurred.
 
-**Additional Resource:** To learn how to assign a new alias or modify an alias, read our doc on how to [Assign an Alias](/docs/developers/branches/assign-an-alias-to-a-branch) or [Edit an Alias](/docs/developers/branches/edit-an-alias).
+**Additional Resource:** To learn how to assign a new alias or modify an alias, read our doc on how to [Assign an Alias](./assign-an-alias-to-a-branch.md) or [Edit an Alias](./edit-an-alias.md).
 
 ## Example 2: Use branches to redesign your website
 
@@ -46,7 +46,7 @@ With the use of branches, you can redesign or restructure your website with grea
 
 In the** redesign** branch, you can make structural changes to your content types and global fields. Once you are satisfied with your changes, you can compare the differences and then merge the redesign branch into the main branch using the overwrite with compare strategy to completely replace the main (base) branch with the newly redesigned changes from the redesign (compare) branch.
 
-**Note:** The [Compare](/docs/developers/branches/comparing-branches) and [Merge](/docs/developers/branches/merging-branches) feature currently only compares and merges differences between content type and global field modules, and is only available via [Content Management API](/docs/developers/apis/content-management-api/#comparing-branches) and [CLI commands](/docs/developers/cli/compare-and-merge-branches-using-the-cli/).
+**Note:** The [Compare](./comparing-branches.md) and [Merge](./merging-branches.md) feature currently only compares and merges differences between content type and global field modules, and is only available via [Content Management API](../../../api-docs/api-detail/content-management-api.md#comparing-branches) and [CLI commands](../cli/compare-and-merge-branches-using-the-cli.md).
 
 ## Example 3: Use branches to prevent data loss
 
@@ -74,7 +74,7 @@ With branches and aliases, developers can maintain production content across dif
 
 Aliases can always point back to the previously referenced content branch in case of unintentional content deployment. This flexibility allows developers to roll back changes instantly. Here, CI/CD can integrate with the CMS to automate rollback for such content changes.
 
-**Additional Resource**: Refer to our [Use Branches and Aliases to Drive Continuous Integration and Deployment](/docs/developers/branches/use-branches-and-aliases-to-drive-continuous-integration-and-deployment) document to learn how branches and aliases help integrate Contentstack with standard CI/CD practices.
+**Additional Resource**: Refer to our [Use Branches and Aliases to Drive Continuous Integration and Deployment](./use-branches-and-aliases-to-drive-continuous-integration-and-deployment.md) document to learn how branches and aliases help integrate Contentstack with standard CI/CD practices.
 
 Let's consider a scenario where we need to make changes to production data for a live website.
 
@@ -89,7 +89,7 @@ Create a copy of the **main **branch content in a separate branch to change your
 
 The default behavior when merging will create a backup of the branch you are merging into for safety. You can use this to quickly revert your site in the event that there is an issue with the merge via an alias. With flexible release rollback capabilities, branches allow Contentstack to align with your CI/CD pipeline and strategies.
 
-**Additional Resource:** To understand the complete working of comparing and merging branches, please read our end-to-end guide on [Getting Started with Comparing and Merging Branches.](/docs/developers/branches/get-started-with-comparing-and-merging-branches/)
+**Additional Resource:** To understand the complete working of comparing and merging branches, please read our end-to-end guide on [Getting Started with Comparing and Merging Branches.](./get-started-with-comparing-and-merging-branches.md)
 
 ## Common questions
 
@@ -97,7 +97,7 @@ The default behavior when merging will create a backup of the branch you are mer
 With branches, you can reduce the stacks in your organization by maintaining the development and production branches within one stack.
 
 ### What gets compared and merged between branches?
-The [Compare](/docs/developers/branches/comparing-branches) and [Merge](/docs/developers/branches/merging-branches) feature currently only compares and merges differences between content type and global field modules.
+The [Compare](./comparing-branches.md) and [Merge](./merging-branches.md) feature currently only compares and merges differences between content type and global field modules.
 
 ### What happens during a merge if something goes wrong?
 When merging, a backup of the branch you are merging into is created by default before the merge action takes place, and you can point an alias to this backup branch to quickly switch back.

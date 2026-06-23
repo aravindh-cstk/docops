@@ -27,7 +27,7 @@ The JSON RTE allows users to seamlessly select and embed assets that have alread
 
 To choose and embed existing assets within your JSON RTE, log in to your
 [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries** icon in the left navigation panel.
+- Navigate to the desired [stack](../set-up-stack/about-stack.md), then click the **Entries** icon in the left navigation panel.
 - Create a new entry or open an existing one containing a JSON RTE field.
 - In the **JSON RTE field**, click the **Asset** icon in the toolbar.
 - From the dropdown menu, select **Choose from assets**.
@@ -45,7 +45,7 @@ When an asset is not available in the asset library, you can upload new ones dir
 
 To upload new assets within your JSON RTE, log in to your
 [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries** icon in the left navigation panel.
+- Navigate to the desired [stack](../set-up-stack/about-stack.md), then click the **Entries** icon in the left navigation panel.
 - Create a new entry or open an existing one containing a JSON RTE field.
 - In the **JSON RTE field**, click the **Asset** icon in the toolbar.
 - From the dropdown menu, select **Upload new asset(s)**.

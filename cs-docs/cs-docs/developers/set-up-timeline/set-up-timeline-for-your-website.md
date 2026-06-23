@@ -16,18 +16,18 @@ This page explains how to set up the [Timeline] feature for a website using Cont
 
 Set Up Timeline for your Website
 
-The [Timeline](/docs/content-managers/timeline/about-timeline) feature enables you to see how your site will appear once scheduled updates are made live, providing a comprehensive view of upcoming content transformations.
+The [Timeline](../../content-managers/timeline/about-timeline.md) feature enables you to see how your site will appear once scheduled updates are made live, providing a comprehensive view of upcoming content transformations.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to [stack settings](/docs/developers/set-up-stack/view-stack-details)
-- [Preview token](/docs/developers/create-tokens/about-delivery-tokens#about-preview-tokens)
+- Access to [stack settings](../set-up-stack/view-stack-details.md)
+- [Preview token](../create-tokens/about-delivery-tokens.md#about-preview-tokens)
 - Website that uses [Contentstack Delivery SDKs](/docs/developers/sdks)
 - IFrame-compatible website to avoid [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors
 
 ## Upgrade Packages
 
-Upgrade the [JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk/) and [Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk/) to enable the timeline feature.
+Upgrade the [JavaScript Delivery SDK](../sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk.md) and [Live Preview Utils SDK](../sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) to enable the timeline feature.
 
 **Note**: The timeline feature requires Live Preview Utils version **2.0** or above.
 

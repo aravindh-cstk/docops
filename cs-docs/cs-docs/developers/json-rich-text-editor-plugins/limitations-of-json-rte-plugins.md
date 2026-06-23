@@ -16,7 +16,7 @@ This page lists the known limitations and constraints when using JSON RTE Plugin
 
 ## Limitations of JSON RTE Plugins
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [RTE UI Location](/docs/developers/developer-hub/rte-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [RTE UI Location](../developer-hub/rte-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 The limitations of using JSON RTE Plugins are as follows:
 - The title you provide for a JSON RTE plugin cannot exceed **256** characters.
@@ -37,4 +37,4 @@ A: You can add a maximum of **50** extensions (including custom fields, custom w
 A: The maximum size of the JSON RTE plugin configuration cannot exceed **10 KB**.
 
 **Q: Where should I look for the recommended approach instead of legacy Experience Extensions?**  
-A: We recommend using the [RTE UI Location](/docs/developers/developer-hub/rte-location/) for the Contentstack App Framework to extend the functionality of your apps.
+A: We recommend using the [RTE UI Location](../developer-hub/rte-location.md) for the Contentstack App Framework to extend the functionality of your apps.

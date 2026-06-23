@@ -14,7 +14,7 @@ last_updated: 2025-07-01
 
 **GET** `/assets/rt`
 
-The Get information on RTE assetscall returns comprehensive information on all assets uploaded through the [Rich Text Editor field](/docs/developers/create-content-types/rich-text-editor).  
+The Get information on RTE assetscall returns comprehensive information on all assets uploaded through the [Rich Text Editor field](../../../../../cs-docs/developers/create-content-types/rich-text-editor.md).  
 To configure the permissions for your application via OAuth, please include the cm.assets.rt:read scope.
 
 ## Query Parameters

@@ -32,7 +32,7 @@ Let’s create an example Zap to understand how our Zapier integration helps you
 
 ## Getting Started
 
-In this guide, we will create a Zap that will allow us to **receive Slack notifications** when a **new **[**entry**](/docs/content-managers/working-with-entries/about-entries)** is created in Contentstack**.
+In this guide, we will create a Zap that will allow us to **receive Slack notifications** when a **new **[**entry**](../../../content-managers/author-content/about-entries.md)** is created in Contentstack**.
 
 ## Prerequisites
 
@@ -62,7 +62,7 @@ Now, let's set up a trigger for the entry creation event in Contentstack using t
 Next, select the app that you want to integrate with, for our example, **Contentstack BETA.**
 - Select the **Trigger Event** in Contentstack which will trigger the Zap. For this example, let’s select **New Entry.** This will trigger the Zap whenever a new entry is created in your Contentstack account.
 - After selecting the trigger event, configure your Contentstack account to connect with Zapier. Click on the **Sign in to Contentstack** button to add a new account to Zapier.
-- This will redirect you to a new page where you need to select the [**Region**](/docs/developers/contentstack-regions/available-regions) of your data center as shown below:
+- This will redirect you to a new page where you need to select the [**Region**](../../contentstack-regions/available-regions.md) of your data center as shown below:
 - To complete your account set up, click on the **Yes, Continue **button.
 - Select the organization where you want to perform the operation and allow **Zapier OAuth** to access your Contentstack organization. Review the permissions and click on **Read more. S**croll down and click on the** Authorize **button to grant **Zapier OAuth** the permissions to access your organization as shown below:
 - Now, in your Zapier app, choose the account (if not selected) that you just configured and click on **Continue**.
@@ -103,8 +103,8 @@ Learn more about [**triggers**](https://platform.zapier.com/docs/triggers)** and
 
 ## Next Steps
 
-- [Contentstack Triggers and Actions for Zapier](/docs/developers/integrations/zapier-integration/contentstack-triggers-and-actions-for-zapier)
-- [Recommended Zap Templates](/docs/developers/integrations/zapier-integration/recommended-zap-templates)
+- [Contentstack Triggers and Actions for Zapier](./contentstack-triggers-and-actions-for-zapier.md)
+- [Recommended Zap Templates](./recommended-zap-templates.md)
 
 ## Common questions
 

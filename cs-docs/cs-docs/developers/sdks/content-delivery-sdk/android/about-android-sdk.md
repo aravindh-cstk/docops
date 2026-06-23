@@ -20,13 +20,13 @@ This page introduces the Contentstack Android SDK, explains what it is used for,
 
 *Use Contentstack to power content for your Android projects*
 
-Contentstack provides Android SDK that Developers can use to develop Android applications and power its content from Contentstack. The Contentstack Android SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your Android-based applications.
+Contentstack provides Android SDK that Developers can use to develop Android applications and power its content from Contentstack. The Contentstack Android SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your Android-based applications.
 
 **Note**: The Contentstack Android SDK supports Android version 7.0 or later.
 
-In order to integrate your Android app with Contentstack Android SDK, follow the steps mentioned in the [Get Started](/docs/developers/android/get-started-with-android-sdk) section.
+In order to integrate your Android app with Contentstack Android SDK, follow the steps mentioned in the [Get Started](./get-started-with-android-sdk.md) section.
 
-You can check out the [sample Android apps](/docs/developers/sdks/content-delivery-sdk/android/#sample-apps-for-android) that Contentstack have developed to see Android SDK in action.
+You can check out the [sample Android apps](../android.md#sample-apps-for-android) that Contentstack have developed to see Android SDK in action.
 
 ## More resources
 
@@ -35,13 +35,13 @@ You can check out the [sample Android apps](/docs/developers/sdks/content-delive
 ## Common questions
 
 ### What APIs does the Contentstack Android SDK use to fetch content?
-The Contentstack Android SDK uses the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your Android-based applications.
+The Contentstack Android SDK uses the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your Android-based applications.
 
 ### What Android versions are supported by the Contentstack Android SDK?
 **Note**: The Contentstack Android SDK supports Android version 7.0 or later.
 
 ### Where do I start to integrate the Android SDK into my app?
-Follow the steps mentioned in the [Get Started](/docs/developers/android/get-started-with-android-sdk) section.
+Follow the steps mentioned in the [Get Started](./get-started-with-android-sdk.md) section.
 
 ### Where can I find sample apps or the SDK source code?
-You can check out the [sample Android apps](/docs/developers/sdks/content-delivery-sdk/android/#sample-apps-for-android) and the GitHub repository: [View and Download Android SDK repository on GitHub](https://github.com/contentstack/contentstack-android).
+You can check out the [sample Android apps](../android.md#sample-apps-for-android) and the GitHub repository: [View and Download Android SDK repository on GitHub](https://github.com/contentstack/contentstack-android).

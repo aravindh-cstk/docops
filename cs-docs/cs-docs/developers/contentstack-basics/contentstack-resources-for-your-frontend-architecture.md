@@ -24,13 +24,13 @@ Contentstack, therefore, provides some powerful tools and resources that you can
 
 ## RESTful APIs
 
-Contentstack provides [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to deliver content to your apps.
+Contentstack provides [Content Delivery APIs](../../../api-docs/api-detail/content-delivery-api.md) to deliver content to your apps.
 
 This means that fetching content for your application is as simple as issuing GET requests and getting JSON payload in response.
 
-The best part about our content delivery is that it comes with [CDN](/docs/developers/how-to-guides/set-up-a-content-delivery-network-for-contentstack-powered-websites) (content delivery network) support. A CDN is a set of servers distributed across the globe, helping in delivering content at lightning-fast speed. This helps you develop web and mobile apps without worrying about the backend and content delivery.
+The best part about our content delivery is that it comes with [CDN](../cdn-and-caching/set-up-a-content-delivery-network-for-contentstack-powered-websites.md) (content delivery network) support. A CDN is a set of servers distributed across the globe, helping in delivering content at lightning-fast speed. This helps you develop web and mobile apps without worrying about the backend and content delivery.
 
-Contentstack also provides [GraphQL Content Delivery API](/docs/developers/apis/graphql-content-delivery-api) support and [Sync APIs](/docs/developers/apis/content-delivery-api#synchronization).
+Contentstack also provides [GraphQL Content Delivery API](../../../api-docs/api-detail/graphql-content-delivery-api.md) support and [Sync APIs](../../../api-docs/api-detail/content-delivery-api.md#synchronization).
 
 The former lets you fetch customized response (of only the specified fields). It is ideal for** mobile applications** as it uses less data and loads faster.
 

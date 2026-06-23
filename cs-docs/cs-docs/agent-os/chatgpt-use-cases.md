@@ -16,11 +16,11 @@ This page explains how to use the Contentstack Automate ChatGPT connector for tw
 
 ## ChatGPT Use Cases
 
-The Contentstack Automate [ChatGPT Connector](/docs/developers/automation-hub-connectors/chatgpt/) integrates OpenAI's ChatGPT with Contentstack's content management system, allowing users to create high-quality AI-generated content directly within Contentstack. This streamlines content creation, enhances digital experiences, and offers two automation use cases for translating text and generating image URLs.
+The Contentstack Automate [ChatGPT Connector](./chatgpt.md) integrates OpenAI's ChatGPT with Contentstack's content management system, allowing users to create high-quality AI-generated content directly within Contentstack. This streamlines content creation, enhances digital experiences, and offers two automation use cases for translating text and generating image URLs.
 
 Below are two distinct ChatGPT automation use cases:
-- [For translating a specified string into a chosen language upon trigger invocation via the Function Calling action](/docs/developers/automation-hub-guides/chatgpt-use-cases#use-case-1-translate-the-response-using-function-calling-action-based-on-sub-automation).
-- [For generating an image URL via the DALL-E 3 Image Generator action, which can then be utilized to create an asset in Contentstack](/docs/developers/automation-hub-guides/chatgpt-use-cases#use-case-2-generate-an-image-using-the-dall-e-3-image-generator-action).
+- [For translating a specified string into a chosen language upon trigger invocation via the Function Calling action](./chatgpt-use-cases.md#use-case-1-translate-the-response-using-function-calling-action-based-on-sub-automation).
+- [For generating an image URL via the DALL-E 3 Image Generator action, which can then be utilized to create an asset in Contentstack](./chatgpt-use-cases.md#use-case-2-generate-an-image-using-the-dall-e-3-image-generator-action).
 
 ## Prerequisites
 
@@ -151,7 +151,7 @@ Let’s look at the setup in detail.
 
 Within the **Configure Trigger** step, click the **Contentstack **connector.
 - Under **Choose Trigger **tab, select the **Entry **trigger.
-- Add your Contentstack account. For more information, refer to the [Contentstack Trigger](/docs/developers/automation-hub-connectors/contentstack-trigger/) documentation.
+- Add your Contentstack account. For more information, refer to the [Contentstack Trigger](./contentstack-trigger.md) documentation.
 - In the **Select an Event **drop-down, choose the **Entry Created** event from the list of events.
 - Select a **Stack**, and a **Branch **from the **Lookup **drop-down.
 - Once done, click **Proceed**.

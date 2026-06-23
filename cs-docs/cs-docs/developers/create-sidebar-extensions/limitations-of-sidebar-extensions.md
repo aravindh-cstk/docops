@@ -16,7 +16,7 @@ This page lists the known limitations of Sidebar Extensions in Contentstack. It 
 
 ## Limitations of Sidebar Extensions
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](/docs/developers/developer-hub/sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](../developer-hub/sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 The limitations to using Sidebar Extensions are as follows:
 - The maximum size of the sidebar extension source code cannot exceed **500** KB.

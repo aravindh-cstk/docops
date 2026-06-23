@@ -88,7 +88,7 @@ This happens because the execution still has the payload data for the previously
 If an automation runs successfully on the first attempt, you will see a success message as shown below:
 
 ### Limitations
-- If an automation has a [**Response**](/docs/developers/automation-hub-connectors/response)** **connector, you will not be able to retry the execution for that automation.
+- If an automation has a [**Response**](./response.md)** **connector, you will not be able to retry the execution for that automation.
 - The Info icon disappears once the retry limit is exceeded. You must start a new execution.
 
 ## Common questions
@@ -103,4 +103,4 @@ No. Testing of any individual trigger and action steps does not count as an exec
 In the Retry Execution pop-up, you can retry the execution up to **2** more times.
 
 ### When can’t I retry an execution?
-If an automation has a [**Response**](/docs/developers/automation-hub-connectors/response)** **connector, you will not be able to retry the execution for that automation.
+If an automation has a [**Response**](./response.md)** **connector, you will not be able to retry the execution for that automation.

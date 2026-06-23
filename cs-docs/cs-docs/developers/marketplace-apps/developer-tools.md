@@ -27,7 +27,7 @@ The Contentstack Marketplace lets you install the Developer Tools app and use it
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../organization/organization-roles.md#organization-owner)/[Admin](../organization/organization-roles.md#organization-admin)
 
 This is a step-by-step guide to install and configure Developer Tools within your stack.
 
@@ -46,7 +46,7 @@ In the left navigation panel, click the **Marketplace** icon.
 - Within the Marketplace, you can see the available apps. Hover over the **Developer Tools** app and click **Install**.
 - In the popup window, select the stack where you want to install the Developer Tools app, accept the **Terms of Service**, and click the **Install** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.  
-  **Additional Resource**: For more information, refer to the [Entry Sidebar](/docs/developers/developer-hub/sidebar-location) and [Content Type Sidebar](/docs/developers/developer-hub/content-type-sidebar-location) UI Locations documentation.
+  **Additional Resource**: For more information, refer to the [Entry Sidebar](../developer-hub/sidebar-location.md) and [Content Type Sidebar](../developer-hub/content-type-sidebar-location.md) UI Locations documentation.
 - Click **Open Stack** to start using the Developer Tools app.**Note**: No additional configuration is required.
 
 ## Use Developer Tools within your Stack
@@ -55,7 +55,7 @@ To use the Developer Tools app within your stack, follow the steps given below:
 
 ### Content Type Sidebar
 
-To use the Developer Tools app in the Content Type Sidebar, open your existing content type or [create a new one](/docs/developers/create-content-types/create-a-content-type).
+To use the Developer Tools app in the Content Type Sidebar, open your existing content type or [create a new one](../create-content-types/create-a-content-type.md).
 
 **Note**: If you add or remove fields in the content type, then save the content type before generating the code.
 
@@ -70,7 +70,7 @@ In the right navigation panel, click **Apps**, and then select the **Developer T
 
 ### Entry Sidebar
 
-To use the Developer Tools app in the Entry Sidebar, open your existing entry or [create a new one](/docs/content-managers/author-content/create-an-entry).
+To use the Developer Tools app in the Entry Sidebar, open your existing entry or [create a new one](../../content-managers/author-content/create-an-entry.md).
 
 **Note**: If you add, edit, or remove any data in the entry, make sure to save it before copying the code.
 
@@ -81,7 +81,7 @@ In the right navigation panel, select **Apps** and then select **Developer Tools
 - To copy the code of the current entry, click the **Copy** icon in the **Get this Entry** section.
 - To copy the code for all entries of the content type, click the **Copy** icon in the **Get all Entries** section.
 - Click the **JSON View** tab to view the current entry code in the JSON format. To copy the JSON code, click the **Copy** icon.
-- The code samples are updated based on the [environments](/docs/developers/set-up-environments/about-environments). Click the **App Settings** icon to modify the environments for the code snippets.  
+- The code samples are updated based on the [environments](../set-up-environments/about-environments.md). Click the **App Settings** icon to modify the environments for the code snippets.  
   You can also expand the code view by clicking the **Expand View** icon.
 
 ## Common questions
@@ -96,4 +96,4 @@ This app supports two UI locations; the Entry Sidebar and the Content Type Sideb
 If you add or remove fields in the content type, then save the content type before generating the code. If you add, edit, or remove any data in the entry, make sure to save it before copying the code.
 
 ### What affects the code samples shown in the Entry Sidebar?
-The code samples are updated based on the [environments](/docs/developers/set-up-environments/about-environments). Click the **App Settings** icon to modify the environments for the code snippets.
+The code samples are updated based on the [environments](../set-up-environments/about-environments.md). Click the **App Settings** icon to modify the environments for the code snippets.

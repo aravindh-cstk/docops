@@ -47,10 +47,10 @@ You can choose one of two routes (or both, really).
 Simple HTML Site  
 Static Site with Gatsby
 
-If you want to launch a simple site, follow these steps to launch your first webpage: [Quickstart in 5 mins](/docs/developers/quickstart-in-5-mins)  
+If you want to launch a simple site, follow these steps to launch your first webpage: [Quickstart in 5 mins](./quickstart-in-5-mins.md)  
 Or connect Contentstack to a static site generator through the Gatsby sample app: [Build a sample website using Gatsby and Contentstack](/docs/developers/sample-apps/build-a-sample-website-using-gatsby-and-contentstack)
 
-You may also want to check out our [Postman Collections](/docs/developers/apis/postman-collections). We’ve seen this help developers who already know REST/GraphQL get up to speed quickly.
+You may also want to check out our [Postman Collections](../../api-docs/postman-collections.md). We’ve seen this help developers who already know REST/GraphQL get up to speed quickly.
 
 **We’re here for you.** We want your Contentstack Trial to give you the answers you’re looking for. Take advantage of our:
 
@@ -80,9 +80,9 @@ Go to your stack from yesterday and click on the **CONTENT** tab at the top.
   - Finally, click on **Create and Add Fields**.
 - In the **Content Type Builder** page, drag and drop the fields you want, modify their behavior by setting their properties, and click on either **Save** or **Save and Close** to save your content type.
 
-For more information, check out the [Create a Content Type](/docs/developers/create-content-types/create-a-content-type) section.
+For more information, check out the [Create a Content Type](./create-content-types/create-a-content-type.md) section.
 
-Your last step for today is to [create an entry](/docs/content-managers/working-with-entries/create-an-entry) of your new Content Type. You’ll need an entry to test out Contenstack’s APIs tomorrow.
+Your last step for today is to [create an entry](../content-managers/author-content/create-an-entry.md) of your new Content Type. You’ll need an entry to test out Contenstack’s APIs tomorrow.
 
 **Did you know?** With Contentstack, you can create as many content types as you need. That is crucial because you’ll definitely need more during development and you don’t want to get stuck because you hit your license limits. This is the #1 reason for messy headless implementations and cost creep.
 
@@ -96,11 +96,11 @@ Modular Blocks is our most popular field type. It allows content managers to dyn
 
 Fluid Page Compositions, Advanced Menu structures, and basic Geo segmentation are some of the real-life examples of what Contentstack customers are doing with Modular Blocks. It’s a real super power. You can even NEST THEM! 😱
 
-Learn more about [Modular Blocks](/docs/developers/create-content-types/modular-blocks).
+Learn more about [Modular Blocks](./create-content-types/modular-blocks.md).
 
 **Did you know?** The flexibility you gain in Contentstack using  modular blocks is pretty unique in the headless CMS world and crucial for you to get business user buy-in.
 
-**Can’t get enough of Content Modeling?** Here are our [Content Modeling best practices](/docs/developers/how-to-guides/content-modeling-best-practices).
+**Can’t get enough of Content Modeling?** Here are our [Content Modeling best practices](./content-modeling/content-modeling-best-practices.md).
 
 ## Day 3 – Work with APIs and Environments
 
@@ -110,14 +110,14 @@ Here are the Contentstack APIs:
 
 | API | Description |
 |---|---|
-| [Content Delivery API](/docs/developers/apis/content-delivery-api) | The Content Delivery API (CDA) is used to retrieve content from your Contentstack account and deliver it to your web or mobile properties. |
-| [Contentstack GraphQL API](/docs/developers/apis/graphql-content-delivery-api) | The GraphQL Content Delivery API is a more efficient alternative to the Content Delivery API. Fetch customized responses or retrieve data from multiple resources through a single API request. |
-| [Content Management API](/docs/developers/apis/content-management-api) | The Content Management API (CMA) is used to make changes to Contentstack. This includes creating, updating, deleting content, or any function you can do through our web UI. |
-| [Image Delivery API](/docs/developers/apis/image-delivery-api) | The Image Delivery API is used to retrieve, manipulate, or convert image files and display them to your delivery endpoints without modifying the source image in the CMS. |
+| [Content Delivery API](../../api-docs/api-detail/content-delivery-api.md) | The Content Delivery API (CDA) is used to retrieve content from your Contentstack account and deliver it to your web or mobile properties. |
+| [Contentstack GraphQL API](../../api-docs/api-detail/graphql-content-delivery-api.md) | The GraphQL Content Delivery API is a more efficient alternative to the Content Delivery API. Fetch customized responses or retrieve data from multiple resources through a single API request. |
+| [Content Management API](../../api-docs/api-detail/content-management-api.md) | The Content Management API (CMA) is used to make changes to Contentstack. This includes creating, updating, deleting content, or any function you can do through our web UI. |
+| [Image Delivery API](../../api-docs/api-detail/image-delivery-api.md) | The Image Delivery API is used to retrieve, manipulate, or convert image files and display them to your delivery endpoints without modifying the source image in the CMS. |
 
 Here’s a simple website architecture as an example of how the different components come together:
 
-Read the detailed explanation on our [documentation](/docs/developers/architecture-diagrams/simple-website-detailed-architecture) site.
+Read the detailed explanation on our [documentation](./architecture-diagrams/simple-website-detailed-architecture.md) site.
 
 #### Let’s talk Environments
 
@@ -166,12 +166,12 @@ As you spend more time in Contentstack, you’ll notice that there are lot more 
 
 Meanwhile, here are a few other fields we wanted to make sure you try out:
 
-- [Global fields](/docs/developers/create-content-types/global) allow you to easily reuse content structures throughout your application. This is popular for shared components (carousels, video players, galleries, etc.) and for metadata such as SEO.
-- [Custom fields](/docs/developers/create-custom-fields/about-custom-fields) are perfect for filling the gap for your unique needs. You may need to access external content or you have a unique structure that our pre-built fields don’t support, build a custom interface as a custom field and store the data however you need
-- [Groups](/docs/developers/create-content-types/group) are great for helping organize your content more clearly and when you need to repeat a set of fields (such as an image/caption/source in a photo gallery)
-- [Releases](/docs/developers/create-releases/about-releases) are another great feature to check out. They allow you to deploy a set of entries or assets all at once in an environment, perfect for launches and campaigns.
+- [Global fields](./create-content-types/global.md) allow you to easily reuse content structures throughout your application. This is popular for shared components (carousels, video players, galleries, etc.) and for metadata such as SEO.
+- [Custom fields](./create-custom-fields/about-custom-fields.md) are perfect for filling the gap for your unique needs. You may need to access external content or you have a unique structure that our pre-built fields don’t support, build a custom interface as a custom field and store the data however you need
+- [Groups](./create-content-types/group.md) are great for helping organize your content more clearly and when you need to repeat a set of fields (such as an image/caption/source in a photo gallery)
+- [Releases](./create-releases/about-releases.md) are another great feature to check out. They allow you to deploy a set of entries or assets all at once in an environment, perfect for launches and campaigns.
 
-**Did you know?** Some developers prefer to build their content types in code. Contentstack makes it super simple. See how to do it in our [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) documentation.
+**Did you know?** Some developers prefer to build their content types in code. Contentstack makes it super simple. See how to do it in our [JSON schema for creating a content type](./create-content-types/json-schema-for-creating-a-content-type.md) documentation.
 
 ## Day 7 – Set Up Workflows, Roles, and Permissions
 
@@ -181,25 +181,25 @@ All **Users** in Contentstack have permissions based on the **Roles** assigned t
 
 Here’s a quick video on how to add a new user. Let’s add a fellow developer:
 
-Depending on the permissions users have, they can be classified into five types: Owner, Admin, Developer, Content Manager, or a User With Custom Permissions. Check out our documentation to understand these [types in more detail](/docs/developers/invite-users-and-assign-roles/types-of-roles).
+Depending on the permissions users have, they can be classified into five types: Owner, Admin, Developer, Content Manager, or a User With Custom Permissions. Check out our documentation to understand these [types in more detail](./invite-users-and-assign-roles/types-of-roles.md).
 
-Let’s [create a new custom role](/docs/developers/invite-users-and-assign-roles/create-a-role) to explore the granular permission levels of Contentstack.
+Let’s [create a new custom role](./invite-users-and-assign-roles/create-a-role.md) to explore the granular permission levels of Contentstack.
 
 To create a role, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 
 Go to your stack, navigate to the “Settings” gear icon, and select **Roles**. Here, you will see the list of existing roles of the stack.
 - Click on the **+ New Role** button located at the top right corner of the **Roles** page.
 - Enter a suitable **Name** and **Description** for the role.
-- Under **PERMISSIONS**, define the permissions that you want to assign to the new role. You can set permissions on [entries](/docs/content-managers/working-with-entries/about-entries), [assets](/docs/content-managers/working-with-assets/about-assets), and [asset folders](/docs/content-managers/asset-folders).
-  - **Permissions on entries**: Set permissions for all entries of all/specific content types, or specific entries, or even specific fields. Refer to the “[Permissions on entries](/docs/developers/invite-users-and-assign-roles/create-a-role#permissions-on-entries)” section to learn how you can use this permission.
-  - **Permissions on assets**: Set permissions on all/specific assets, or on specific assets’ folder. Refer to the “[Permissions on assets](/docs/developers/invite-users-and-assign-roles/create-a-role#permissions-on-assets)” section to learn how you can use this permission.
-  - **Exceptions**: If you do not want any role to access data of certain entries and/or fields, or any assets, you can add [exceptions](/docs/developers/invite-users-and-assign-roles/create-a-role#exceptions).
-- Finally, set the publishing rights for [environments](/docs/developers/set-up-environments/about-environments), and [languages](/docs/developers/multilingual-content/about-languages):
+- Under **PERMISSIONS**, define the permissions that you want to assign to the new role. You can set permissions on [entries](../content-managers/author-content/about-entries.md), [assets](/docs/content-managers/working-with-assets/about-assets), and [asset folders](/docs/content-managers/asset-folders).
+  - **Permissions on entries**: Set permissions for all entries of all/specific content types, or specific entries, or even specific fields. Refer to the “[Permissions on entries](./invite-users-and-assign-roles/create-a-role.md#permissions-on-entries)” section to learn how you can use this permission.
+  - **Permissions on assets**: Set permissions on all/specific assets, or on specific assets’ folder. Refer to the “[Permissions on assets](./invite-users-and-assign-roles/create-a-role.md#permissions-on-assets)” section to learn how you can use this permission.
+  - **Exceptions**: If you do not want any role to access data of certain entries and/or fields, or any assets, you can add [exceptions](./invite-users-and-assign-roles/create-a-role.md#exceptions).
+- Finally, set the publishing rights for [environments](./set-up-environments/about-environments.md), and [languages](./multilingual-content/about-languages.md):
   - **Publishing Environments**: Set on which environment(s) the role can publish content.
   - **Languages**: Set to which language(s) the role has access to.
 - Click **Save** to create the new role.
 
-**Did you know?** You can reconfigure the standard roles to meet your needs (except Admin and Owner). Also, you can create as many additional roles as you need, without any impact on pricing. Here’s a [few examples](/docs/developers/invite-users-and-assign-roles/examples-to-create-custom-roles) of how Contentstack customers use custom roles.
+**Did you know?** You can reconfigure the standard roles to meet your needs (except Admin and Owner). Also, you can create as many additional roles as you need, without any impact on pricing. Here’s a [few examples](./invite-users-and-assign-roles/examples-to-create-custom-roles.md) of how Contentstack customers use custom roles.
 
 In the next lesson, we should start getting buy-in from your business team. To prepare for that, let’s set up a [simple workflow](/docs/developers/set-up-workflows-and-publish-rules) for them. You can start with something as straightforward as draft content -> approve draft -> publish.
 
@@ -209,13 +209,13 @@ Create the workflow by completing these steps:
 - Add stage transitions and access rules.
 - Enable and save the workflow
 
-Read through [Add Workflows and Stages](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages) in our documentation to get step-by-step instructions.
+Read through [Add Workflows and Stages](./set-up-workflows-and-publish-rules/add-workflows-and-stages.md) in our documentation to get step-by-step instructions.
 
 ## Day 8 – Get an Editor to Test Your Creation
 
 I really hope you’re enjoying your Contentstack Trial so far. Our customers tell us that giving their content and marketing teams a chance to explore Contentstack made their trial experience even more effective.
 
-So let’s add them to the trial. Learn how to [add a user](/docs/developers/invite-users-and-assign-roles/add-a-new-user) here.
+So let’s add them to the trial. Learn how to [add a user](./invite-users-and-assign-roles/add-a-new-user.md) here.
 
 **Did you know?** Contentstack is the highest-rated headless CMS on G2Crowd and across Gartner Peer Reviews. By developers and business users alike.
 
@@ -237,7 +237,7 @@ Any time you want your changes in Contentstack to trigger an action in another p
 
 In this short video, we create a webhook and take a look at webhook activity logs:
 
-A lot of our customers use them as part of their translation workflow, but there are so many things you can do with webhooks. Here are a [few examples](/docs/developers/how-to-guides#automation).
+A lot of our customers use them as part of their translation workflow, but there are so many things you can do with webhooks. Here are a [few examples](./how-to-guides.md#automation).
 
 **Did you know?** Many of our customers told us they had problems getting their editors to organize assets. Why not [use AI to auto-tag your images](/docs/developers/how-to-guides/auto-image-tagging-with-contentstack-webhooks-aws-lambda-and-aws-rekognition) so you can organize them automatically?
 
@@ -245,13 +245,13 @@ A lot of our customers use them as part of their translation workflow, but there
 
 This is the last day of your 10 Days of Contentstack! 😢
 
-We know that every company is unique and we can’t anticipate everything you’ll want to do in Contentstack. So let me present to you: [Experience Extensions](/docs/developers/about-experience-extensions)!
+We know that every company is unique and we can’t anticipate everything you’ll want to do in Contentstack. So let me present to you: [Experience Extensions](./experience-extensions-overview/about-experience-extensions.md)!
 
-You can create three types of Experience Extensions within Contentstack: [Custom Fields](/docs/developers/create-custom-fields/about-custom-fields), [Custom Widgets](/docs/developers/create-custom-widgets/about-custom-widgets), and [Dashboard Widgets](/docs/developers/set-up-stack/default-dashboard-widgets).
+You can create three types of Experience Extensions within Contentstack: [Custom Fields](./create-custom-fields/about-custom-fields.md), [Custom Widgets](/docs/developers/create-custom-widgets/about-custom-widgets), and [Dashboard Widgets](/docs/developers/set-up-stack/default-dashboard-widgets).
 
 This short video shows how you can create a new custom widget.
 
-Two of the most popular extensions our customers use are the [Google Analytics widget](/docs/developers/create-custom-widgets/google-analytics) and the [IBM Watson widget](/docs/developers/create-custom-widgets/ibm-watson). You can peruse our [full list of our experience extensions](/docs/developers/all-contentstack-experience-extensions), to see what other third-party apps you can easily connect to Contentstack.
+Two of the most popular extensions our customers use are the [Google Analytics widget](/docs/developers/create-custom-widgets/google-analytics) and the [IBM Watson widget](./create-sidebar-extensions/ibm-watson.md). You can peruse our [full list of our experience extensions](./experience-extensions-overview/all-contentstack-experience-extensions.md), to see what other third-party apps you can easily connect to Contentstack.
 
 **Did you know?** A few years ago, our team was traveling to meet with one of the largest gaming companies in the world. While waiting at the airport, we noticed they were very active on social media. On the flight, one of our developers (who had never used the Twitter, Facebook or LinkedIn SDK before!) built a social widget in just two hours as a surprise for the customer.
 

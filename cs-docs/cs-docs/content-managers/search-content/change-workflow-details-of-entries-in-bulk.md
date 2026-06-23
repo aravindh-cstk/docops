@@ -18,12 +18,12 @@ This page explains how to change workflow details for multiple entries at once f
 ## Change Workflow Details of Entries in Bulk
 
 To change the workflow details of multiple entries from your search results, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Navigate to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and select the “[Entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries)” or “[Assets](https://www.contentstack.com/docs/content-managers/author-content/about-assets)” module.
-- Perform a search based on your requirements using [Basic Search](/docs/content-managers/search-content/basic-search), [Advanced Search](/docs/content-managers/search-content/advanced-search), [Filters](/docs/content-managers/search-content/use-filters), and [Views](/docs/content-managers/search-content/about-views) to narrow down your search results.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the “[Entries](../author-content/about-entries.md)” or “[Assets](../author-content/about-assets.md)” module.
+- Perform a search based on your requirements using [Basic Search](./basic-search.md), [Advanced Search](./advanced-search.md), [Filters](./use-filters.md), and [Views](./about-views.md) to narrow down your search results.
 - From the search results, select the entries you want to update. Then, click **Change Workflow Details** from the floating bar.
 - On the **Edit Workflow Settings** screen:Under **Workflow Stage**, select the stage that you want to set for this entry.
 - Set a due date for this new stage by using the **Date Picker** tool.
-- You can assign this stage to multiple users by selecting a user from the **Assign to User(s)** dropdown.**Tip**: When you assign an entry stage to a user, it is added as a new task in the assignee’s **Tasks** section. Learn more about [Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks).
+- You can assign this stage to multiple users by selecting a user from the **Assign to User(s)** dropdown.**Tip**: When you assign an entry stage to a user, it is added as a new task in the assignee’s **Tasks** section. Learn more about [Tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md).
 - You can also assign the stage to multiple roles by selecting a role from the **Assign to Role(s)** dropdown.
 - Send a notification email to the assignee by selecting the **Notify via email** checkbox.
 - Use the **Add Comment** field to provide any additional information or instructions.

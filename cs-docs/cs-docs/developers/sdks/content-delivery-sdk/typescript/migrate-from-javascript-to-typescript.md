@@ -66,7 +66,7 @@ const Stack = contentstack.stack({apiKey: “apiKey”, deliveryToken: “delive
 
 ## Stack
 
-A [stack](/docs/developers/set-up-stack/about-stack) is a repository or a container that holds all the content/assets of your site. It allows multiple users to create, edit, approve, and publish their content within a single space.
+A [stack](../../../set-up-stack/about-stack.md) is a repository or a container that holds all the content/assets of your site. It allows multiple users to create, edit, approve, and publish their content within a single space.
 
 The stack function initializes an instance of the “Stack”
 
@@ -180,7 +180,7 @@ Stack.sync({'sync_token': ''});
 
 ## Entries
 
-An [entry](/docs/content-managers/author-content/about-entries) is the actual piece of content created using one of the defined content types. To work with a single entry, specify its UID.
+An [entry](../../../../content-managers/author-content/about-entries.md) is the actual piece of content created using one of the defined content types. To work with a single entry, specify its UID.
 
 ### JavaScript Implementation for Entries
 
@@ -305,7 +305,7 @@ const result = await stack.contentType("content_type_uid").entry().find();
 
 ## Assets
 
-In Contentstack, any files (images, videos, PDFs, audio files, and so on) that you upload get stored in your repository for future use. This repository of uploaded files is called [assets](/docs/content-managers/author-content/about-assets).
+In Contentstack, any files (images, videos, PDFs, audio files, and so on) that you upload get stored in your repository for future use. This repository of uploaded files is called [assets](../../../../content-managers/author-content/about-assets.md).
 
 The Asset method by default creates an object for all assets of a stack. To retrieve a single asset, specify its UID.
 
@@ -496,7 +496,7 @@ const res = await query.find();
 
 ## Content Type
 
-A [content type](/docs/developers/create-content-types/about-content-types) is the structure or blueprint of a page or a section that your web or mobile property will display. It lets you define the overall schema of this blueprint by adding fields and setting its properties.
+A [content type](../../../create-content-types/about-content-types.md) is the structure or blueprint of a page or a section that your web or mobile property will display. It lets you define the overall schema of this blueprint by adding fields and setting its properties.
 
 ### TypeScript Implementation for Content Type
 
@@ -527,7 +527,7 @@ const contentType = await Stack.contentType().includeGlobalFieldSchema().find();
 
 ## Pagination Responses
 
-In a single instance, the Get Multiple Entries query will retrieve only the first 100 items of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference#query-skip) and [limit](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference#query-limit) parameters in subsequent requests.
+In a single instance, the Get Multiple Entries query will retrieve only the first 100 items of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](../../../create-content-types/reference.md#query-skip) and [limit](../../../create-content-types/reference.md#query-limit) parameters in subsequent requests.
 
 ### JavaScript Implementation for Pagination
 
@@ -661,7 +661,7 @@ Utils.jsonToHTML({
 ## Limitations
 - Our CDN services have a maximum URL size of **8KB**. Any request from Typescript Delivery SDK that exceeds this limit will get a 400 error.
 - The Typescript Delivery SDK does not support multiple content types referencing in a single query.
-- The Typescript Delivery SDK currently does not support querying [Global Field](/docs/developers/apis/content-delivery-api/#global-fields) schemas. However, you can include these details when querying [content type](/docs/developers/apis/content-delivery-api/#content-types) details by using the `include_global_field_schema` query parameter.
+- The Typescript Delivery SDK currently does not support querying [Global Field](../../../../../api-docs/api-detail/content-delivery-api.md#global-fields) schemas. However, you can include these details when querying [content type](../../../../../api-docs/api-detail/content-delivery-api.md#content-types) details by using the `include_global_field_schema` query parameter.
 
 ## Common questions
 

@@ -27,15 +27,15 @@ The fastest way to get started with Launch is to clone and deploy a [sample Astr
 
 Follow the steps given below to deploy your first Launch project using GitHub:
 
-**Note:** Only the Organization [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles/#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to create projects in a stack for Launch.
+**Note:** Only the Organization [Admin](../developers/invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../developers/invite-users-and-assign-roles/types-of-roles.md#owner) has the right to create projects in a stack for Launch.
 - [Log in to Contentstack](https://www.contentstack.com/login/) and click the **Launch** icon from the dashboard, as shown below:
 Alternatively, go to the **App Switcher** in the top panel and click the **Launch** icon.
 - On the **Launch Projects** screen, click the **+ New Project** button to initiate the project creation process.
 - From the **Create New Project** modal, click **Import from a Git Repository**.
 
-    **Note:** You can also choose to [upload a .zip file to import a project](/docs/developers/launch/import-project-using-file-upload/).
+    **Note:** You can also choose to [upload a .zip file to import a project](../developers/launch/import-project-using-file-upload.md).
 - Click **GitHub**.
-    **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/developers/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
+    **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](../developers/launch/import-a-project-using-bitbucket-cloud.md) guide to proceed.
 
     A Sign in to GitHub screen pops up. Enter your credentials and log in to your GitHub account.
 
@@ -81,7 +81,7 @@ If you want to deploy the changes from any other commits, you can click the **Re
 ## Common questions
 
 ### Who can create projects in a stack for Launch?
-Only the Organization [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles/#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to create projects in a stack for Launch.
+Only the Organization [Admin](../developers/invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../developers/invite-users-and-assign-roles/types-of-roles.md#owner) has the right to create projects in a stack for Launch.
 
 ### What should I set as the Output Directory for Astro?
 Update the **Output Directory** to `./dist`.

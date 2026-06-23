@@ -16,12 +16,12 @@ This page explains how to configure Contentstack Live Preview with GraphQL for a
 
 Set Up Live Preview with GraphQL for SSR
 
-Use [GraphQL APIs](https://www.contentstack.com/docs/developers/graphql-api/about-graphql) to preview content in real time with Live Preview. This guide explains how to configure [Live Preview](https://www.contentstack.com/docs/content-managers/author-content/about-live-preview) with GraphQL for a Server-side Rendering (SSR) website.
+Use [GraphQL APIs](../graphql-api/about-graphql.md) to preview content in real time with Live Preview. This guide explains how to configure [Live Preview](../../content-managers/author-content/about-live-preview.md) with GraphQL for a Server-side Rendering (SSR) website.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to [stack settings](/docs/developers/set-up-stack/view-stack-details)
-- [Preview token](https://www.contentstack.com/docs/developers/create-tokens/about-delivery-tokens#understanding-preview-tokens)
+- Access to [stack settings](../set-up-stack/view-stack-details.md)
+- [Preview token](../create-tokens/about-delivery-tokens.md#understanding-preview-tokens)
 - IFrame-compatible website to avoid [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors
 
 Follow these steps to configure Live Preview with GraphQL for your SSR website:
@@ -35,7 +35,7 @@ Create a preview token by navigating to **Settings** > **Tokens** > **Delivery T
 
 Each preview token is associated with a delivery token and shares access to the specific environment. If a delivery token doesn't exist, create one and enable the **Create Preview Token** toggle. For an existing delivery token, use the **+ Create Preview Token** option and copy the generated token.
 - ### Install and Initialize the Live Preview Utils SDK
-Use the [**Live Preview Utils SDK**](/docs/developers/set-up-live-preview/get-started-with-live-preview-utils-sdk-v3) to listen for content updates and fetch real-time preview data on the server side.
+Use the [**Live Preview Utils SDK**](./get-started-with-live-preview-utils-sdk-v3.md) to listen for content updates and fetch real-time preview data on the server side.
 
 Install the SDK using one of the following methods:
 
@@ -175,16 +175,16 @@ In this example, you can use the hash to selectively update the hostname and hea
 
 Once configured, you can continue using GraphQL as usual.
 
-**Note:** Always use a preview token for Live Preview instead of a read-only management token. For region-specific hostnames, refer to the [Base URLs for Live Preview](/docs/developers/apis/graphql-content-delivery-api#base-urls-for-live-preview) section.
+**Note:** Always use a preview token for Live Preview instead of a read-only management token. For region-specific hostnames, refer to the [Base URLs for Live Preview](../../../api-docs/api-detail/graphql-content-delivery-api.md#base-urls-for-live-preview) section.
 - ## Host the Website
-To host a website, you can simply use [launch](/docs/developers/launch) or any other website hosting service.
+To host a website, you can simply use [launch](../launch.md) or any other website hosting service.
 
 **Note:** Make sure your website is HTTPS enabled.
 - ## Update Stack Settings
 To set up Live Preview for the entries of your stack, perform the following steps:
 
 Navigate to **Settings** and select **Environments**.
-- [**Set the base URLs**](/docs/developers/set-up-environments/add-an-environment/) for different locales, and click **Save**.
+- [**Set the base URLs**](../set-up-environments/add-an-environment.md) for different locales, and click **Save**.
 - Select **Visual Experience** from the stack settings.
 - In the **General** tab, select the **Enable Live Preview** checkbox.
 - Set the **Default Preview Environment** and click **Save** to save the settings.**Tip:** You can also update the preview URL and environment from the preview settings available on the entry page.

@@ -18,9 +18,9 @@ This page explains how to create and use the legacy (deprecated) External API Lo
 
 **Note:** The External API Lookup custom field is part of our legacy Experience Extensions and is deprecated.
 
-The External API Lookup extension allows you to fetch resources from third-party/external apps using APIs and display the resources in a [field](/docs/developers/create-content-types/about-fields) in the [content type](/docs/developers/create-content-types/about-content-types) of your [stack](/docs/developers/set-up-stack/about-stack).
+The External API Lookup extension allows you to fetch resources from third-party/external apps using APIs and display the resources in a [field](../create-content-types/about-fields.md) in the [content type](../create-content-types/about-content-types.md) of your [stack](../set-up-stack/about-stack.md).
 
-Thus, while creating an [entry](/docs/content-managers/working-with-entries/about-entries), you can select one or more resources from a list of possible values as an input value for the field.
+Thus, while creating an [entry](../../content-managers/author-content/about-entries.md), you can select one or more resources from a list of possible values as an input value for the field.
 
 This step-by-step guide explains how to create an External **API Lookup** extension for your content types.
 
@@ -31,15 +31,15 @@ This step-by-step guide explains how to create an External **API Lookup** extens
 
 ## Add the “External API Lookup” custom field to your stack
 
-To add the External API Lookup [custom field](/docs/developers/create-custom-fields/about-custom-fields) to your [stack](/docs/developers/set-up-stack/about-stack), log in to your [Contentstack account](https://app.contentstack.com/#!/stacks) and perform the following steps:
+To add the External API Lookup [custom field](./about-custom-fields.md) to your [stack](../set-up-stack/about-stack.md), log in to your [Contentstack account](https://app.contentstack.com/#!/stacks) and perform the following steps:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:
-  - **Title ***(required)*: Provide a suitable title, for example, “External API Lookup,” for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+  - **Title ***(required)*: Provide a suitable title, for example, “External API Lookup,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
   - **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **Text**.
   - **Multiple ***(optional)*: Leave this field unchecked.
   - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
@@ -62,12 +62,12 @@ Once you have added a custom field, you can use it in your content type like any
 
 In your stack, click on “Content Models” on the left navigation panel. By default, you will be on the Content Type page.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by clicking on the **+ New Content Type**. button. Enter the relevant details for the content type and click on **Save**. This leads you to the **Content Type Builder** page where you can add the relevant fields.
+- [Create a content type](../create-content-types/create-a-content-type.md) by clicking on the **+ New Content Type**. button. Enter the relevant details for the content type and click on **Save**. This leads you to the **Content Type Builder** page where you can add the relevant fields.
 - Add the **Custom** field in your content type.
 - Select **External API Lookup** from the dropdown and set the other properties of your custom field.
 - After adding other relevant fields in your Content Type, click on **Save and Close**.
 
-This will create your Content Type. Now, go to the content type and [create a new entry](/docs/content-managers/work-with-entries/create-an-entry). Enter the appropriate details. In the **External API Lookup** field, select any value while creating an entry for this content type as shown below.
+This will create your Content Type. Now, go to the content type and [create a new entry](../../content-managers/author-content/create-an-entry.md). Enter the appropriate details. In the **External API Lookup** field, select any value while creating an entry for this content type as shown below.
 
 ## Common questions
 

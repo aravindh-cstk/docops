@@ -21,7 +21,7 @@ If your entry contains a Rich Text Editor field and you wish to fetch the conten
 
 You can view information about the embedded objects under the _embedded_items parameter in the JSON response body.
 
-**Note**: Contentstack’s [Content Delivery SDKs](/docs/developers/fetch-content#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the frontend however required.
+**Note**: Contentstack’s [Content Delivery SDKs](../../../../../cs-docs/developers/fetch-content.md#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the frontend however required.
 
 ## URL Parameters
 
@@ -53,7 +53,7 @@ You can view information about the embedded objects under the _embedded_items pa
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

@@ -15,21 +15,21 @@ last_updated: 2026-03-25
 
 This page explains how enabling SSO for an organization impacts REST API integrations, especially Content Management API usage, and is intended for developers and administrators who maintain API-based integrations for SSO-enabled organizations.
 
-Enabling SSO for an organization may affect your REST API integrations, particularly the ones using [Content Management APIs](/docs/developers/apis/content-management-api). It is therefore recommended that you read this section carefully.
+Enabling SSO for an organization may affect your REST API integrations, particularly the ones using [Content Management APIs](../../../api-docs/api-detail/content-management-api.md). It is therefore recommended that you read this section carefully.
 
 ## Content Delivery API
 
-For an SSO-enabled organization, [Content Delivery APIs](/docs/developers/apis/content-delivery-api) work as expected. The Content Delivery API requests are GET calls and they use the stack’s [delivery tokens](/docs/developers/create-tokens/about-delivery-tokens) to fetch content. No changes are required.
+For an SSO-enabled organization, [Content Delivery APIs](../../../api-docs/api-detail/content-delivery-api.md) work as expected. The Content Delivery API requests are GET calls and they use the stack’s [delivery tokens](../create-tokens/about-delivery-tokens.md) to fetch content. No changes are required.
 
 ## Content Management API
 
-Any user who accesses the SSO-enabled organization through IdP login cannot make [Content Management API](/docs/developers/apis/content-management-api) requests since it requires a user authtoken. Below we will explain a couple of options on how to utilize the Content Management API for specific users when SSO is enabled.
+Any user who accesses the SSO-enabled organization through IdP login cannot make [Content Management API](../../../api-docs/api-detail/content-management-api.md) requests since it requires a user authtoken. Below we will explain a couple of options on how to utilize the Content Management API for specific users when SSO is enabled.
 
-Since the [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) of an organization can access an SSO-enabled organization through Contentstack credentials as well, he/she has a user authtoken. The owner can use this authtoken (received in the response of the  “[Login](/docs/developers/apis/content-management-api#logging-in-out)” request) to make Content Management API requests.
+Since the [owner](../invite-users-and-assign-roles/types-of-roles.md#owner) of an organization can access an SSO-enabled organization through Contentstack credentials as well, he/she has a user authtoken. The owner can use this authtoken (received in the response of the  “[Login](../../../api-docs/api-detail/content-management-api.md#logging-in-out)” request) to make Content Management API requests.
 
 Similarly, if you have disabled **Strict Mode **for an SSO-enabled organization and granted a few users the permission to access the organization through Contentstack credentials (by enabling the **Allow Access Without SSO** option in the **Organization** **Users **page), then these users can use the authtoken to make Content Management API requests.
 
-**Additional Resource**: For SSO-enabled organizations, instead of logging in with credentials and generating an authtoken, users can directly use the Content Management APIs to read, create, update, or delete content using the [management token](/docs/developers/create-tokens/types-of-tokens#management-tokens).
+**Additional Resource**: For SSO-enabled organizations, instead of logging in with credentials and generating an authtoken, users can directly use the Content Management APIs to read, create, update, or delete content using the [management token](../create-tokens/types-of-tokens.md#management-tokens).
 
 ## Common questions
 

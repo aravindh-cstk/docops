@@ -16,18 +16,18 @@ This page explains how to migrate existing entry content from an HTML Rich Text 
 
 Migrate Content from HTML RTE to JSON RTE using CLI
 
-The [JSON Rich Text Editor (RTE)](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field stores and returns the data in the JSON format. You can add the JSON RTE field to an existing content type by [editing](/docs/developers/create-content-types/edit-a-content-type/) it or by [creating a new content type](/docs/developers/create-content-types/create-a-content-type/).
+The [JSON Rich Text Editor (RTE)](../json-rich-text-editor/about-json-rich-text-editor.md) field stores and returns the data in the JSON format. You can add the JSON RTE field to an existing content type by [editing](../create-content-types/edit-a-content-type.md) it or by [creating a new content type](../create-content-types/create-a-content-type.md).
 
 If you already have data in the HTML RTE and want to migrate to JSON RTE, you can use the Contentstack CLI. By using a few commands in our CLI, you can easily perform the required migration.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login)
-- CLI [installed](/docs/developers/cli/install-the-cli) on your machine
+- CLI [installed](./install-the-cli.md) on your machine
 
-**Note**: By default, the CLI uses the **AWS North America** region. To set the **AWS Europe**, **AWS Australia**, **Azure North America**, **Azure Europe**, **Google North America**, or **Google Europe** region, refer to the [Set Region](/docs/developers/cli/configure-regions-in-the-cli/#commands) command for more details.
+**Note**: By default, the CLI uses the **AWS North America** region. To set the **AWS Europe**, **AWS Australia**, **Azure North America**, **Azure Europe**, **Google North America**, or **Google Europe** region, refer to the [Set Region](./configure-regions-in-the-cli.md#commands) command for more details.
 
-Firstly, open your terminal and add a [management token](/docs/developers/create-tokens/generate-a-management-token/) to the CLI session. To do this, use the following single-line command:
+Firstly, open your terminal and add a [management token](../create-tokens/generate-a-management-token.md) to the CLI session. To do this, use the following single-line command:
 
 ```
 csdx auth:tokens:add --management -a > -k > --token >
@@ -35,7 +35,7 @@ csdx auth:tokens:add --management -a > -k > --token >
 
 Options:
 - `-a`,`--alias=alias`: Alias (name) you want to assign to the token.
-- `-k`,`--stack-api-key=stack-api-key`: [API Key](/docs/developers/set-up-stack/view-stack-details/) of the stack where the token exists.
+- `-k`,`--stack-api-key=stack-api-key`: [API Key](../set-up-stack/view-stack-details.md) of the stack where the token exists.
 - `--token=token`: Value of your management token.
 
 Make note of the alias (token-name) you assign for the management token, we will require it in the next step.  
@@ -49,7 +49,7 @@ In this guide, we will discuss the steps required to perform this migration by u
 
 Let's learn how to use this method through the following steps:
 - Log in to your [Contentstack account](https://www.contentstack.com/login/) and go to your stack.
-- Then, create a [content type](/docs/developers/create-content-types/create-a-content-type/) in your stack and add the HTML Rich Text Editor (RTE) field in it. **Save and Close** the content type and create an [entry](/docs/content-managers/author-content/create-an-entry/) in this newly created content type.
+- Then, create a [content type](../create-content-types/create-a-content-type.md) in your stack and add the HTML Rich Text Editor (RTE) field in it. **Save and Close** the content type and create an [entry](../../content-managers/author-content/create-an-entry.md) in this newly created content type.
 - Add some content inside the RTE field that you have added. Then, save the entry and close it.
 - Edit the same content type and add a new JSON RTE field under the existing RTE content editor field and save your changes.
 - Now let's migrate the content from the existing HTML RTE to the new JSON RTE using the config file.  

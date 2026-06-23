@@ -17,13 +17,13 @@ This page explains how to filter your entries list to show only entries that are
 
 ### Get Localized Entries
 
-When managing multilingual content, it is important to differentiate between localized entries and those displayed due to [fallback language](/docs/developers/multilingual-content/about-fallback-languages) settings.
+When managing multilingual content, it is important to differentiate between localized entries and those displayed due to [fallback language](../../developers/multilingual-content/about-fallback-languages.md) settings.
 
 Contentstack enables users to filter and view entries localized in the selected language, enhancing both the accuracy and efficiency of localization workflows.
 
 **Note**: By default, the entries list displays only localized entries for the selected language because the **Show localized only** toggle is enabled. If you disable the toggle, the list displays both localized entries and their fallback content. To view entries across all available languages, select **All Languages** from the language filter.
 
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and click the “[Entries](/docs/content-managers/author-content/about-entries)” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and click the “[Entries](../author-content/about-entries.md)” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
 - Access the **Language** filter using one of the following methods:
   - Click the **Filters** tab in the left panel and select the **Languages** filter dropdown.
     - **Note:** If this option isn’t visible, click **Manage Filters** at the bottom of the panel and enable the Language filter.
@@ -40,12 +40,12 @@ The entries list now displays only those entries explicitly localized in the sel
 
 **Note:** The language filter setting is saved automatically and remains active until changed.
 
-**Additional Resources:** You can further refine your entry list by using [**Advanced Settings**](/docs/content-managers/search-content/localization-operator-real-world-scenarios#case-2-search-for-entries-that-are-localized-only-in-chinese-china) in the Filters panel. This allows for more granular control over how localized content is displayed.
+**Additional Resources:** You can further refine your entry list by using [**Advanced Settings**](./localization-operator-real-world-scenarios.md#case-2-search-for-entries-that-are-localized-only-in-chinese-china) in the Filters panel. This allows for more granular control over how localized content is displayed.
 
 ## Common questions
 
 **Q: Why do I see entries in a language even if they aren’t localized?**  
-A: They may be displayed due to [fallback language](/docs/developers/multilingual-content/about-fallback-languages) settings rather than being explicitly localized.
+A: They may be displayed due to [fallback language](../../developers/multilingual-content/about-fallback-languages.md) settings rather than being explicitly localized.
 
 **Q: What does the “Show localized only” toggle do?**  
 A: When enabled, the entries list displays only localized entries for the selected language; when disabled, it shows both localized entries and fallback content.

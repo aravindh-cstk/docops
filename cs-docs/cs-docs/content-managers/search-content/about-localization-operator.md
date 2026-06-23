@@ -17,12 +17,12 @@ This page explains how to use the localization operator in Contentstack Advanced
 
 ## About Localization Operator
 
-The localization operator in Contentstack's [Advanced Search](/docs/content-managers/search-content/advanced-search) lets you find entries based on their localization status in specific languages. This feature is especially useful for locating entries that are either localized in a particular language or those that are not yet localized but available in their fallback languages.
+The localization operator in Contentstack's [Advanced Search](./advanced-search.md) lets you find entries based on their localization status in specific languages. This feature is especially useful for locating entries that are either localized in a particular language or those that are not yet localized but available in their fallback languages.
 
-**Tip:** Before using the localization operator, get acquainted with [Advanced Search](/docs/content-managers/search-content/advanced-search) queries.
+**Tip:** Before using the localization operator, get acquainted with [Advanced Search](./advanced-search.md) queries.
 
 To use the localization operator, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Navigate to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and select the [Entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries) module.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the [Entries](../author-content/about-entries.md) module.
 - Click the **Advanced Search** option next to the search bar.
 - By default, you will see **Match All Conditions**, but you can switch to **Match Any Conditions** if needed.
 - Select **Language** from the **Content Type or Field** dropdown.
@@ -37,7 +37,7 @@ For example, to find entries that have not been localized in **French**:
 - You can add more criteria or filters as needed to narrow down your search. Once your query is set up, click the **Search** button to view the results.
 
 **Additional Resource**:
-- Explore real-world localization examples in our [Localization Operator Real-world Scenarios](/docs/content-managers/search-content/localization-operator-real-world-scenarios) article.
+- Explore real-world localization examples in our [Localization Operator Real-world Scenarios](./localization-operator-real-world-scenarios.md) article.
 - Refer to the [Localization](/docs/developers/multilingual-content#localization-in-contentstack) section to understand how languages work in Contentstack.
 
 ## Common questions

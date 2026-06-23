@@ -17,9 +17,9 @@ This page explains how to access and use the Analytics dashboard for Personalize
 
 ## Analytics for Personalize
 
-The Analytics dashboard for [Personalize](/docs/personalize/about-personalize) offers a comprehensive overview of how Contentstack's Personalize feature is utilized within your organization. This dashboard includes key metrics essential for managing and optimizing your personalization strategies effectively.
+The Analytics dashboard for [Personalize](../personalize/about-personalize.md) offers a comprehensive overview of how Contentstack's Personalize feature is utilized within your organization. This dashboard includes key metrics essential for managing and optimizing your personalization strategies effectively.
 
-**Note:** Only organization [Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admin](/docs/developers/organization/organization-roles#organization-admin) roles can access the Analytics feature.
+**Note:** Only organization [Owner](../developers/organization/organization-roles.md#organization-owner) and [Admin](../developers/organization/organization-roles.md#organization-admin) roles can access the Analytics feature.
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - From the dropdown in the header, select the organization for which you want to view analytics.
@@ -86,7 +86,7 @@ Once saved, you can easily access the view from the dropdown menu without reappl
 ## Common questions
 
 ### Who can access the Analytics feature for Personalize?
-Only organization [Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admin](/docs/developers/organization/organization-roles#organization-admin) roles can access the Analytics feature.
+Only organization [Owner](../developers/organization/organization-roles.md#organization-owner) and [Admin](../developers/organization/organization-roles.md#organization-admin) roles can access the Analytics feature.
 
 ### How often is the Personalize dashboard data updated?
 The data in the Personalize dashboard is updated every **24 hours**.

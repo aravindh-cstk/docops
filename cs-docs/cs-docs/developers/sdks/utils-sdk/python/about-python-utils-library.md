@@ -20,11 +20,11 @@ This page explains what the Contentstack Python Utils library is, what it includ
 Contentstack provides the Python Utils library that contains all the utilities for the Python SDK.
 
 Features included:
-- **Embedded Object**: Allows you to fetch embedded [entries](/docs/content-managers/working-with-entries/about-entries)/[assets](/docs/content-managers/working-with-assets/about-assets) (placed inside the “[Rich Text Editor](/docs/developers/create-content-types/rich-text-editor)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](/docs/developers/create-content-types/rich-text-editor#embed-entries-in-the-rte) and [Embed Asset](/docs/developers/create-content-types/rich-text-editor#embed-assets-in-the-rte) documentation.
+- **Embedded Object**: Allows you to fetch embedded [entries](../../../../content-managers/author-content/about-entries.md)/[assets](/docs/content-managers/working-with-assets/about-assets) (placed inside the “[Rich Text Editor](../../../create-content-types/rich-text-editor.md)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](../../../create-content-types/rich-text-editor.md#embed-entries-in-the-rte) and [Embed Asset](../../../create-content-types/rich-text-editor.md#embed-assets-in-the-rte) documentation.
 
 **Note**: The Contentstack Python Utils library supports Node.js version 10 or above.
 
-To use this Utils library in your application, follow the steps specified in the [Get Started with Python Utils library](/docs/developers/python/get-started-with-python-utils-library) guide.
+To use this Utils library in your application, follow the steps specified in the [Get Started with Python Utils library](./get-started-with-python-utils-library.md) guide.
 
 ## Common questions
 
@@ -35,7 +35,7 @@ It contains utilities for the Python SDK, including support for working with emb
 It allows you to fetch embedded entries/assets placed inside the Rich Text Editor (RTE) field and display them on your frontend application.
 
 ### Where do I find setup instructions for the Python Utils library?
-Follow the steps in the [Get Started with Python Utils library](/docs/developers/python/get-started-with-python-utils-library) guide.
+Follow the steps in the [Get Started with Python Utils library](./get-started-with-python-utils-library.md) guide.
 
 ### What runtime requirement is mentioned for this library?
 **Note**: The Contentstack Python Utils library supports Node.js version 10 or above.

@@ -21,10 +21,10 @@ The Import Overwrite feature in Contentstack CLI facilitates seamless stack-to-s
 By providing the ability to overwrite content, this feature streamlines content migration and eliminates the need for manual adjustments, saving time and effort during the import process.
 
 **Supported Modules**
-- [Extensions](/docs/developers/experience-extensions-overview)
-- [Global Fields](/docs/developers/create-content-types/global)
-- [Content Types](/docs/developers/create-content-types/about-content-types)
-- [Entries](/docs/content-managers/author-content/about-entries)
+- [Extensions](../experience-extensions-overview.md)
+- [Global Fields](../create-content-types/global.md)
+- [Content Types](../create-content-types/about-content-types.md)
+- [Entries](../../content-managers/author-content/about-entries.md)
 
 **Usage**
 
@@ -67,7 +67,7 @@ By using these mappers with the import command, users can perform targeted impor
 The `cm:stacks:import-setup` command is designed to simplify the import process by creating necessary mappers and backups for selected modules.
 
 **Note:**
-- Before using the `import-setup` command, make sure you have successfully [exported](/docs/developers/cli/export-content-using-the-cli) and unzipped the exported content located within the corresponding folder.
+- Before using the `import-setup` command, make sure you have successfully [exported](./export-content-using-the-cli.md) and unzipped the exported content located within the corresponding folder.
 - After using the `import-setup` command, a **backup directory will be generated** with the required mapper files. This **directory’s path** will be provided in the import command’s `--backup-dir` flag during the overwrite operation.
 
 **Usage**

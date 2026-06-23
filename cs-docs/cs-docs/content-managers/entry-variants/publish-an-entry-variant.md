@@ -22,7 +22,7 @@ This page explains how to publish an entry variant in Contentstack (including sc
 Publishing entry variants in Contentstack allows you to deliver personalized content tailored to specific user segments.
 
 To publish an entry variant, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), click the **Entries **icon in the left navigation panel, and select an existing entry variant, indicated by the variants icon on the entries list page.
+- Navigate to the desired [stack](../../developers/set-up-stack/about-stack.md), click the **Entries **icon in the left navigation panel, and select an existing entry variant, indicated by the variants icon on the entries list page.
 - Click the **Publish** button within the entry editor.
 - In the **Publish Entry Variant** modal that appears, under **Select Environment(s)** and **Select Language(s)**, select the environment(s) and the locale(s) to which you want to publish the entry.
 - Under **Publish**, you have two sub-options – **Now **(to publish immediately) and **Later **(to publish at a later date/time that you provide).When you select “Later”, a group of options appear asking you to select the **Date **and **Time **of publishing, and the **Time-Zone**.
@@ -40,7 +40,7 @@ By following these steps, you can effectively publish entry variants in Contents
 
 ## API Reference
 
-To publish an entry variant via API, refer to the [Publish Entry Variant](/docs/developers/apis/content-management-api#publish-entry-variant) API requests.
+To publish an entry variant via API, refer to the [Publish Entry Variant](../../../api-docs/api-detail/content-management-api.md#publish-entry-variant) API requests.
 
 ## Common questions
 

@@ -20,7 +20,7 @@ This page lists the current limitations and requirements for using the Teams fea
 - The maximum character length for a team name is **200**.
 - The maximum character length for a team description is **255**.
 - The maximum number of teams allowed per organization is **500**.
-- You need to be an Organization [Owner](/docs/developers/organization/organization-roles#organization-owner) or [Admin](/docs/developers/organization/organization-roles#organization-admin) to create a team.
+- You need to be an Organization [Owner](../organization/organization-roles.md#organization-owner) or [Admin](../organization/organization-roles.md#organization-admin) to create a team.
 
 ## Common questions
 
@@ -31,7 +31,7 @@ A: Yes. Teams feature is plan-based. Please contact our [support](mailto:support
 A: The maximum character length for a team name is **200**, and the maximum character length for a team description is **255**.
 
 **Q: Who can create a team in an organization?**  
-A: You need to be an Organization [Owner](/docs/developers/organization/organization-roles#organization-owner) or [Admin](/docs/developers/organization/organization-roles#organization-admin) to create a team.
+A: You need to be an Organization [Owner](../organization/organization-roles.md#organization-owner) or [Admin](../organization/organization-roles.md#organization-admin) to create a team.
 
 **Q: How many teams can an organization have?**  
 A: The maximum number of teams allowed per organization is **500**.

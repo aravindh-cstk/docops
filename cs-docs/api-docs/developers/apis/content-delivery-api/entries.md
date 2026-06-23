@@ -12,11 +12,11 @@ last_updated: 2026-06-08
 
 # CDA | Entries
 
-An [entry](/docs/content-managers/author-content/about-entries) is the actual piece of content created using one of the defined [content types](/docs/developers/create-content-types/about-content-types).
+An [entry](../../../../cs-docs/content-managers/author-content/about-entries.md) is the actual piece of content created using one of the defined [content types](../../../../cs-docs/developers/create-content-types/about-content-types.md).
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack.
 
-**Note**: [Branches](/docs/developers/branches) is a plan-based feature that is available only in the new Contentstack interface.
+**Note**: [Branches](../content-management-api/branches.md) is a plan-based feature that is available only in the new Contentstack interface.
 
 Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -49,7 +49,7 @@ If an entry is not published in a specific locale, make use of the “include_fa
 
 To include the publish details in the response, make use of the include_publish_details=true parameter. This will return the publishing details of the entry in every environment along with the version number that is published in each of the environments.
 
-You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
+You can add other [Queries](../../../api-detail/content-delivery-api.md#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
 
 **When using Delivery Tokens**
 
@@ -59,7 +59,7 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 - If you specify a locale in the query, it returns the latest published version of the localized entry/entries
 - If an entry is not localized, make use of the include_fallback=true query parameter to fetch the published content from its fallback locale
 
-**Tip:** This request returns only the first 100 entries of the specified content type. Refer to the [Pagination](/docs/developers/apis/content-delivery-api#pagination) section to retrieve the rest of your entries in a paginated form.
+**Tip:** This request returns only the first 100 entries of the specified content type. Refer to the [Pagination](../../../api-detail/content-delivery-api.md#pagination) section to retrieve the rest of your entries in a paginated form.
 
 #### URL Parameters
 
@@ -843,7 +843,7 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 
 The Get a single entry request fetches a particular entry of a content type.
 
-**Tip**: To get a specific version, refer to the [Get a Single Entry](/docs/developers/apis/content-management-api/#get-a-single-entry) management API. This request returns only the latest version.
+**Tip**: To get a specific version, refer to the [Get a Single Entry](../../../api-detail/content-management-api.md#get-a-single-entry) management API. This request returns only the latest version.
 
 Additionally, if you wish to fetch the metadata attached to each entry, then you need to pass include_metadata as a query parameter. Set this parameter to true to include the entry metadata along with all entries in the response body.
 
@@ -868,7 +868,7 @@ To include the publish details in the response, make use of the include_publish_
 
 **Note**: To retrieve an entry from a particular branch, provide the branch_uid under the branch header.
 
-You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
+You can add other [Queries](../../../api-detail/content-delivery-api.md#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
 
 **When using Delivery Tokens**
 
@@ -1022,7 +1022,7 @@ If your entry contains a Rich Text Editor field and you wish to fetch the conten
 
 You can view information about the embedded objects under the _embedded_items parameter in the JSON response body.
 
-**Note**: Contentstack’s [Content Delivery SDKs](/docs/developers/fetch-content#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the front end however required.
+**Note**: Contentstack’s [Content Delivery SDKs](../../../../cs-docs/developers/fetch-content.md#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the front end however required.
 
 #### URL Parameters
 
@@ -1195,7 +1195,7 @@ query={
 }
 ```
 
-**Note**: Refer to the [Taxonomy Queries](/docs/developers/apis/content-delivery-api#taxonomy-queries) section for more query filters.
+**Note**: Refer to the [Taxonomy Queries](../../../api-detail/content-delivery-api.md#taxonomy-queries) section for more query filters.
 
 #### Query Parameters
 

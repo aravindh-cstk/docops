@@ -56,15 +56,15 @@ You can view the Agent OS App on the **Entry** and **Asset** editor page in the 
 To view the Agent OS App in the Entry Editor page, follow the steps below:
 
 1. Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button. In the drop-down, select **Create New** or **Use Prebuilt** options.
-2. Create a [content type](/docs/developers/create-content-types/create-a-content-type/) by adding relevant details and click the **Save and proceed** button.
-3. From the left navigation panel, navigate to the [Entries](/docs/content-managers/author-content/create-an-entry/) page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.
+2. Create a [content type](../developers/create-content-types/create-a-content-type.md) by adding relevant details and click the **Save and proceed** button.
+3. From the left navigation panel, navigate to the [Entries](../content-managers/author-content/create-an-entry.md) page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.
 4. In the right navigation panel, you will see the **Agent OS App** icon. Click to view the Agent OS App.  
    ![Automate_App_Asset_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbe3f33c2eeeecbf8/66838642c8ca7733c1ce006c/Automate_App_Asset_Sidebar.png)
 5. You will see two icons: **View Recipes** and **Manage Automations**. Click **Manage Automations** to create a new automation.
 
    On clicking the **View Recipes** icon, you can see the recipes list.
 
-   **Note:** **View Recipes** and **Manage Automations** icons are only visible to an organization’s [Admin(s)](/docs/developers/organization/organization-roles#organization-admin)/[Owner(s)](/docs/developers/organization/organization-roles#organization-owner). Standard users can **only execute** the automation that is visible via the Agent OS App in the Entry Sidebar location.
+   **Note:** **View Recipes** and **Manage Automations** icons are only visible to an organization’s [Admin(s)](../developers/organization/organization-roles.md#organization-admin)/[Owner(s)](../developers/organization/organization-roles.md#organization-owner). Standard users can **only execute** the automation that is visible via the Agent OS App in the Entry Sidebar location.
 
 #### Create an Automation
 
@@ -91,7 +91,7 @@ Configuring a trigger can be broken into the following steps:
 4. On the **Entry Sidebar Configure Trigger** page, enter the details given below:
    1. Select a **Stack** and **Branch** from the **Lookup** list.
 
-      **Note:** You **cannot** configure a [Response](/docs/developers/automation-hub-connectors/response) connector with the On-Demand Agent OS trigger.
+      **Note:** You **cannot** configure a [Response](./response.md) connector with the On-Demand Agent OS trigger.
    2. Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
       1. Click the **+ Input Options** button to view an Additional Information modal in the Entry Sidebar.
       2. In the **Input** **Label** field, enter the content to display as a label in the Additional Information modal.
@@ -169,7 +169,7 @@ Let’s look at the setup in detail.
 4. On the **Entry Sidebar Configure Trigger** page, enter the details given below:
    1. Select a **Stack** and **Branch** from the **Lookup** list.
 
-      **Note:** You cannot configure a [Response](/docs/developers/automation-hub-connectors/response) connector with the On-Demand Agent OS trigger.
+      **Note:** You cannot configure a [Response](./response.md) connector with the On-Demand Agent OS trigger.
 
       ![Select_Trigger_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt927aa8ca49db7332/675fdacc1cd21e548cc25d96/Select_Trigger_Fields.png)
    2. Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
@@ -189,7 +189,7 @@ Let’s look at the setup in detail.
 2. Within the **Configure** **Action** **Step**, click the **ChatGPT** Connector.
 3. Under the **Choose an Action** tab, select the **Chat** action.
 4. On the **Chat Configure Action** page, enter the details given below:
-   1. Click **+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account](/docs/developers/automation-hub-connectors/chatgpt#connect-your-chatgpt-account-to-automate) step.
+   1. Click **+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account](./chatgpt.md#connect-your-chatgpt-account-to-automate) step.
    2. Select the **API** **Model** from the dropdown list to generate content for the chat responses.
 
       **Note:** Different models are available to different users based on the account the user holds such as paid accounts. You must check the account access before selecting the model.
@@ -201,7 +201,7 @@ Let’s look at the setup in detail.
       ![Chat_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdea4ef133b72678e/675fdacb216a9cad62314a0e/Chat_Fields.png)
    6. Click the **Show Optional Fields** toggle button to use the optional fields.
 
-      **Additional Resource:** Refer to the [ChatGPT](/docs/developers/automation-hub-connectors/chatgpt) Connector.
+      **Additional Resource:** Refer to the [ChatGPT](./chatgpt.md) Connector.
 5. Click the **Proceed** button.
 6. Click the **Test Action** button to test the configured action.
 7. Click the **Save and Exit** button.  
@@ -273,7 +273,7 @@ Let’s look at the setup in detail.
 4. On the **Entry Sidebar Configure Trigger** page, enter the details given below:
    1. Select a **Stack** and **Branch** from the **Lookup** list.
 
-      **Note:** You cannot configure a [Response](/docs/developers/automation-hub-connectors/response) connector with the On-Demand Agent OS trigger.
+      **Note:** You cannot configure a [Response](./response.md) connector with the On-Demand Agent OS trigger.
 
       ![Select_Fields_Entry_Sidebat.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt814cedd00ef30b0a/67e26ab929f30c0055f8e51a/Select_Fields_Entry_Sidebat.png)
    2. Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
@@ -365,7 +365,7 @@ Let’s look at the setup in detail.
 4. On the **Entry Sidebar Configure Trigger** page, enter the details given below:
    1. Select a **Stack** and **Branch** from the **Lookup** list.
 
-      **Note:** You cannot configure a [Response](/docs/developers/automation-hub-connectors/response) connector with the On-Demand Automate trigger.
+      **Note:** You cannot configure a [Response](./response.md) connector with the On-Demand Automate trigger.
 
       ![Select_Trigger_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt927aa8ca49db7332/675fdacc1cd21e548cc25d96/Select_Trigger_Fields.png)
    2. Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
@@ -417,7 +417,7 @@ To view the Agent OS App in the Asset Editor page, follow the steps below:
 
    On clicking the **View Recipes** icon, you can see the Recipes list.
 
-   **Note:** View Recipes and Manage Automations icons are only visible to an organization’s [Admin(s)](/docs/developers/organization/organization-roles#organization-admin)/[Owner(s)](/docs/developers/organization/organization-roles#organization-owner). Standard users can **only execute** the automation that is visible via the Agent OS App in the Asset Sidebar location.
+   **Note:** View Recipes and Manage Automations icons are only visible to an organization’s [Admin(s)](../developers/organization/organization-roles.md#organization-admin)/[Owner(s)](../developers/organization/organization-roles.md#organization-owner). Standard users can **only execute** the automation that is visible via the Agent OS App in the Asset Sidebar location.
 
 #### Create an Automation
 
@@ -444,7 +444,7 @@ Configuring a trigger can be broken into the following steps:
 4. On the **Asset Sidebar Configure Trigger** page, enter the details given below:
    1. Select a **Stack** and **Branch** from the **Lookup** list.
 
-      **Note:** You **cannot** configure a [Response](/docs/developers/automation-hub-connectors/response) connector with the On-Demand Agent OS trigger.
+      **Note:** You **cannot** configure a [Response](./response.md) connector with the On-Demand Agent OS trigger.
 
       ![Select_Fields_Asset_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt45ce36c4b58e913d/66838652b1132466c53a45c3/Select_Fields_Asset_Trigger.png)
    2. Optionally, enable the **Show Optional Fields** toggle button to display the **Select Asset Type** field.
@@ -473,7 +473,7 @@ To configure an action step follow the steps below:
    ![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt53f9612683efc20e/6683898b5e288d95fca23b47/Select_Connector.png)
 4. Under **Choose an Action** tab, select the **Create a New Object** action.  
    ![Select_Create_an_Object_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt649389ebc3748700/6683898be316342cb371e66b/Select_Create_an_Object_Action.png)
-5. Click the **+ Add New Account** button to add your AWS account. Refer to the [AWS S3 documentation](/docs/developers/automation-hub-connectors/aws-s3) to add a new account.
+5. Click the **+ Add New Account** button to add your AWS account. Refer to the [AWS S3 documentation](./aws-s3.md) to add a new account.
 6. On the **Create a New Object Configure Action** page, you need to enter the following details:
    1. Select the AWS **Bucket Name** from the **Lookup** list that appears when you click the textbox. The lookup drop-down loads the buckets already defined and present in your AWS account.
    2. Enter the **File Name** (for example, File01) or/and any value from the values list. For this example, select the asset name fetched from the Asset Sidebar trigger.  

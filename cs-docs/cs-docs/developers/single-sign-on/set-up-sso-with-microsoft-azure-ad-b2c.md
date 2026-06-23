@@ -17,7 +17,7 @@ This page explains how to configure Single Sign-On (SSO) for a Contentstack orga
 
 ## Set up SSO with Microsoft Azure AD B2C
 
-This step-by-step guide explains how to set up [Single Sign-On](/docs/developers/single-sign-on/about-single-sign-on-sso/) in Contentstack with Microsoft Azure Active Directory (AD) B2C as your SAML 2.0 Identity Provider (IdP).
+This step-by-step guide explains how to set up [Single Sign-On](./about-single-sign-on-sso.md) in Contentstack with Microsoft Azure Active Directory (AD) B2C as your SAML 2.0 Identity Provider (IdP).
 
 In a nutshell, this integration requires following steps:
 - [Create SSO Name and ACS URL in Contentstack](#create-sso-name-and-acs-url-in-contentstack)
@@ -30,7 +30,7 @@ Let us see each of the processes in detail.
 
 ## Create SSO Name and ACS URL in Contentstack
 
-**Note:** Only the Organization [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) will be able to perform the steps discussed below.
+**Note:** Only the Organization [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) will be able to perform the steps discussed below.
 
 Start by creating an SSO Name and generate the ACS URL in Contentstack
 - Log in to your [Contentstack account](https://www.contentstack.com/login/), go to the **Organization Settings** page, and click the **Single Sign-On** tab.

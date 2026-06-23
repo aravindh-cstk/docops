@@ -39,7 +39,7 @@ Here are some use cases for for utilizing Contentstack Personalize in conjunctio
 - **User Segmentation**: Utilize GTM to send user attributes and events to Personalize, allowing for better segmentation and tailored experiences based on user profiles.
 - **Real-time Updates**: With GTM, you can make real-time updates to your personalization strategies without requiring a full deployment cycle, ensuring your content remains relevant and engaging.
 
-For detailed instructions on integrating GTM with Contentstack Personalize, visit our [Google Tag Manager Integration Guide](/docs/personalize/google-tag-manager-integration-with-personalize). This guide provides step-by-step instructions to set up and manage your personalization tags effectively.
+For detailed instructions on integrating GTM with Contentstack Personalize, visit our [Google Tag Manager Integration Guide](./google-tag-manager-integration-with-personalize.md). This guide provides step-by-step instructions to set up and manage your personalization tags effectively.
 
 ## Common questions
 
@@ -50,7 +50,7 @@ Marketers and developers who want to deploy and manage personalization tags, eve
 It provides preconfigured actions for initializing the Personalize Edge SDK, triggering impressions, events, and setting user attributes.
 
 ### Where can I find step-by-step setup instructions?
-Visit the [Google Tag Manager Integration Guide](/docs/personalize/google-tag-manager-integration-with-personalize).
+Visit the [Google Tag Manager Integration Guide](./google-tag-manager-integration-with-personalize.md).
 
 ### What kinds of personalization workflows can GTM support?
 Examples include dynamic content delivery, event tracking, user segmentation, and real-time updates to personalization strategies.

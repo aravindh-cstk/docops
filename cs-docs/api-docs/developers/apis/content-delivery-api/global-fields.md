@@ -16,7 +16,7 @@ A [Global](/docs/developers/global-field) field is a reusable field (or group of
 
 You can pass the **branch header** in API requests to fetch or manage modules within specific branches of the stack. Additionally, setting the include_branch query parameter to true includes the _branch key in the response, specifying the unique ID of the branch where the module resides.
 
-**Additional Resource**: You can create dynamic and flexible Global Fields by nesting Global fields within a [Modular Block,](/docs/developers/global-field/global-fields-as-blocks-within-modular-blocks)[Global](/docs/developers/global-field/about-global-field/)**,**or a [Group](/docs/developers/global-field/group-fields-within-global-fields) fields.
+**Additional Resource**: You can create dynamic and flexible Global Fields by nesting Global fields within a [Modular Block,](../../../../cs-docs/developers/global-field/global-fields-as-blocks-within-modular-blocks.md)[Global](../../../../cs-docs/developers/global-field/about-global-field.md)**,**or a [Group](../../../../cs-docs/developers/global-field/group-fields-within-global-fields.md) fields.
 
 ## All Global Fields
 

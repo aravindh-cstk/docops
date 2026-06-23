@@ -26,7 +26,7 @@ By installing the Fonts app from the Contentstack Marketplace, you can enhance t
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner)/[Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner)/[Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)
 
 Let's follow this step-by-step guide to install and configure the Fonts app within your stack.
 
@@ -48,7 +48,7 @@ To install the app, log in to your [Contentstack account](https://www.contentsta
 
   For example, you can check the [Browse Fonts - Google Fonts](https://fonts.google.com/) documentation.
 - On the **UI Locations** tab, you can see the predefined app location. If you disable the UI location, you will not be able to save the configuration as it requires at least one UI location.  
-  **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+  **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Fonts application.
 
 ## Use the Fonts App within your Entry
@@ -56,15 +56,15 @@ To install the app, log in to your [Contentstack account](https://www.contentsta
 To use the Fonts app within an entry of your stack, follow the steps given below:
 
 - Go to your stack, click the **Content Models** icon from the left navigation panel, and click the **+ New Content Type** button.
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
-- In the **Content Type Builder** page, add a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- In the **Content Type Builder** page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - On the **JSON Rich Text Editor Properties** modal, enter the following:
   - Enter a **Display Name** for the field, for example, Fonts.
 - (Optional) Enter an **Instruction Value** and **Help Text** for the field.
 - Click inside the** Select JSON RTE Plugin(s)** field, select **Fonts** from the list of plugins, and then click **Add Plugin(s)**.  
   This adds Fonts in the JSON Rich Text Editor.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
-- To use the Fonts app, [create an entry](/docs/content-managers/author-content/create-an-entry) for this content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry**.
+- To use the Fonts app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry**.
 - You can see new icons added in the JSON RTE editor as shown below:
 - Add the content in the JSON RTE field. Select the word or the content where you want to apply any specific Font Family, Color, or Size.You can see the Fonts in the JSON Rich Text Editor field on your entry page, as shown below:
 - You can then proceed to **Save** and **Publish** your entry.

@@ -35,35 +35,35 @@ The Contact Us Page Content Model includes fields and structures designed to cap
 - Access to the Contentstack Organization/Stack as the Owner/Admin
 
 ## Schema for Contact Us Page Content Model
-The Contact Us Page Content Model contains the [Content Types](/docs/developers/create-content-types/about-content-types) - **Contact Us Page** and **Contact**; and [Global Fields](/docs/developers/create-content-types/global) - **SEO** and **Section with HTML Code**.
+The Contact Us Page Content Model contains the [Content Types](../../create-content-types/about-content-types.md) - **Contact Us Page** and **Contact**; and [Global Fields](../../create-content-types/global.md) - **SEO** and **Section with HTML Code**.
 
 ### Schema for Contact Us Page Content Type
-- **Title**: This is a [Title](/docs/developers/create-content-types/title) field that defines the title of the Contact Us Page entry. This is a mandatory field and must be unique.
-- **Primary Contact Details**: This is a [Reference](/docs/developers/create-content-types/reference) field that refers to the [Contact](#schema-for-contact-content-type) content type.
-- **Page Components**: This is a [Modular Block](/docs/developers/create-content-types/modular-blocks/) field containing three Modular Blocks. Let’s discuss in detail.**Other Location**: This is the first block that includes the following:**Other Locations**: This is a [Group](/docs/developers/create-content-types/group/) field that holds the following information:**City/Country**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field that stores the city or country name.
-- **Address**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox) field that stores the full address of the organization.
-- **Location Image**: This is a [File](/docs/developers/create-content-types/file/) field that allows you to choose the image of the location and add it to the Contact Us page.
-- **Maps Location**: This is a [Link](/docs/developers/create-content-types/link/) field that adds a location name as a title and URL for redirection. You can use this field to add an embed map URL from Google Maps.
-- **Section with HTML Code**: This is the second block that contains **Section with HTML Code** [Global](/docs/developers/create-content-types/global/) field which includes the following components:**Title**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field that defines the title of this specific section.
-- **Description**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox) field that stores the detailed description of the HTML code.
-- **HTML Code**: This is a [Custom](/docs/developers/create-content-types/custom/) field containing [Ace Editor](/docs/developers/marketplace-apps/ace-editor/) as an extension.
-- **Is HTML Code Left Aligned?**: This is a [Boolean](/docs/developers/create-content-types/boolean/) field which specifies that the HTML Code is left-aligned or right-aligned.
-- **Contact Us Form**: This is the third and last block that holds the following:**Contact Fields**: This is a [Group](/docs/developers/create-content-types/group/) field that holds the following information:**Title**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field that shows the group title for the contact form.
-- **Placeholder Text**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field to add the placeholder text for the contact form.
-- **Short Detailed Message**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox) field that stores the request/queries of the user.
-- **Submit**: This is a [Link](/docs/developers/create-content-types/link/) field that adds a submit button name as a title and URL for submission.
-- **SEO**: This is the [Global](/docs/developers/create-content-types/global/) field which includes the following components:**Meta Title**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field to add the meta title of your Contact Us Page. This should be between 120 to 160 characters.
-- **Meta Description**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox/) field to add the meta description of your Contact Us Page.
-- **Meta Keywords**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field to add the meta keywords of your Contact Us Page.
-- **Enable Search Indexing**: You can enable or disable the search indexing in this [Boolean](/docs/developers/create-content-types/boolean/) field.
+- **Title**: This is a [Title](../../create-content-types/title.md) field that defines the title of the Contact Us Page entry. This is a mandatory field and must be unique.
+- **Primary Contact Details**: This is a [Reference](../../create-content-types/reference.md) field that refers to the [Contact](#schema-for-contact-content-type) content type.
+- **Page Components**: This is a [Modular Block](../../create-content-types/modular-blocks.md) field containing three Modular Blocks. Let’s discuss in detail.**Other Location**: This is the first block that includes the following:**Other Locations**: This is a [Group](../../create-content-types/group.md) field that holds the following information:**City/Country**: This is a [Single Line Textbox](../../create-content-types/single-line-textbox.md) field that stores the city or country name.
+- **Address**: This is a [Multi Line Textbox](../../create-content-types/multi-line-textbox.md) field that stores the full address of the organization.
+- **Location Image**: This is a [File](../../create-content-types/file.md) field that allows you to choose the image of the location and add it to the Contact Us page.
+- **Maps Location**: This is a [Link](../../create-content-types/link.md) field that adds a location name as a title and URL for redirection. You can use this field to add an embed map URL from Google Maps.
+- **Section with HTML Code**: This is the second block that contains **Section with HTML Code** [Global](../../create-content-types/global.md) field which includes the following components:**Title**: This is a [Single Line Textbox](../../create-content-types/single-line-textbox.md) field that defines the title of this specific section.
+- **Description**: This is a [Multi Line Textbox](../../create-content-types/multi-line-textbox.md) field that stores the detailed description of the HTML code.
+- **HTML Code**: This is a [Custom](../../create-content-types/custom.md) field containing [Ace Editor](../../marketplace-apps/ace-editor.md) as an extension.
+- **Is HTML Code Left Aligned?**: This is a [Boolean](../../create-content-types/boolean.md) field which specifies that the HTML Code is left-aligned or right-aligned.
+- **Contact Us Form**: This is the third and last block that holds the following:**Contact Fields**: This is a [Group](../../create-content-types/group.md) field that holds the following information:**Title**: This is a [Single Line Textbox](../../create-content-types/single-line-textbox.md) field that shows the group title for the contact form.
+- **Placeholder Text**: This is a [Single Line Textbox](../../create-content-types/single-line-textbox.md) field to add the placeholder text for the contact form.
+- **Short Detailed Message**: This is a [Multi Line Textbox](../../create-content-types/multi-line-textbox.md) field that stores the request/queries of the user.
+- **Submit**: This is a [Link](../../create-content-types/link.md) field that adds a submit button name as a title and URL for submission.
+- **SEO**: This is the [Global](../../create-content-types/global.md) field which includes the following components:**Meta Title**: This is a [Single Line Textbox](../../create-content-types/single-line-textbox.md) field to add the meta title of your Contact Us Page. This should be between 120 to 160 characters.
+- **Meta Description**: This is a [Multi Line Textbox](../../create-content-types/multi-line-textbox.md) field to add the meta description of your Contact Us Page.
+- **Meta Keywords**: This is a [Single Line Textbox](../../create-content-types/single-line-textbox.md) field to add the meta keywords of your Contact Us Page.
+- **Enable Search Indexing**: You can enable or disable the search indexing in this [Boolean](../../create-content-types/boolean.md) field.
 
 ### Schema for Contact Content Type
-- **Title**: This is a [Title](/docs/developers/create-content-types/title) field that defines the title of the contact entry. This is a mandatory field and must be unique.
-- **Address**: This is a [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox) field that stores the full address of the company.
-- **Contact Number**: This is a [Number](/docs/developers/create-content-types/number) field that stores the contact number of the organization. You can add multiple contact numbers to this field.
-- **Email Address**: This is a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field that stores the company’s official email address.
+- **Title**: This is a [Title](../../create-content-types/title.md) field that defines the title of the contact entry. This is a mandatory field and must be unique.
+- **Address**: This is a [Multi Line Textbox](../../create-content-types/multi-line-textbox.md) field that stores the full address of the company.
+- **Contact Number**: This is a [Number](../../create-content-types/number.md) field that stores the contact number of the organization. You can add multiple contact numbers to this field.
+- **Email Address**: This is a [Single Line Textbox](../../create-content-types/single-line-textbox.md) field that stores the company’s official email address.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Contact Us Page Content Modeling](/docs/developers/content-modeling/contact-us-page/) documentation to understand how to model the "Contact Us" page.
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](./how-to-import-content-model.md)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](../../create-content-types/import-prebuilt-content-models.md)). Refer the [Contact Us Page Content Modeling](../../content-modeling/contact-us-page.md) documentation to understand how to model the "Contact Us" page.
 
 After publishing the entry, you can view the Contact Us Page on your website.
 

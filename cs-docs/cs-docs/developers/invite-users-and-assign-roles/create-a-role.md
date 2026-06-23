@@ -20,7 +20,7 @@ This page explains how to create a custom role in a Contentstack stack and confi
 
 Roles help you control what users can view, create, update, publish, or delete within a stack. You can create custom roles to manage access for content teams, developers, translators, taxonomy managers, and other users.
 
-Only stack [Owners](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [Admins](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and users assigned the [Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) role can create roles in a stack.
+Only stack [Owners](./types-of-roles.md#owner), [Admins](./types-of-roles.md#admin), and users assigned the [Developer](./types-of-roles.md#developer) role can create roles in a stack.
 
 To create a role, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Go to your stack and click the **Settings** icon.
@@ -29,8 +29,8 @@ To create a role, log in to your [Contentstack account](https://www.contentstack
 - Click **New Role**.
 - Enter a name and description for the role.
 - Under **Permissions**, configure the required permissions for entries, taxonomies, assets, and languages
-- Under **Publishing Environments**, select the [environments](/docs/developers/set-up-environments/about-environments) where the role can publish content.
-- Configure [language](/docs/developers/multilingual-content/about-languages) permissions and exceptions as required.
+- Under **Publishing Environments**, select the [environments](../set-up-environments/about-environments.md) where the role can publish content.
+- Configure [language](../multilingual-content/about-languages.md) permissions and exceptions as required.
 - Click **Save**.
 
 **Note**: Publishing environment permissions apply to all language variants associated with the selected environments.
@@ -114,7 +114,7 @@ For example, allow a role to access only the “English - United States” langu
 
 To allow access to all available languages, select **All Languages**.
 
-For more information about language-based access behavior, refer to the [Language-Specific Restrictions on Entries Scenarios](/docs/developers/multilingual-content/manage-language-permissions#language-specific-restrictions-on-entries-scenarios) section.
+For more information about language-based access behavior, refer to the [Language-Specific Restrictions on Entries Scenarios](../multilingual-content/manage-language-permissions.md#language-specific-restrictions-on-entries-scenarios) section.
 
 ## Exceptions
 Exceptions allow you to restrict actions that a role would otherwise be allowed to perform through assigned permissions.
@@ -183,7 +183,7 @@ For example, allow a role to read entries in all languages but restrict update a
 For example, allow a role to read English (United States) entry variants but restrict update access.
 
 ## API Reference
-To create custom roles via API, refer to the [Create a Role](/docs/developers/apis/content-management-api#create-a-role) API request.
+To create custom roles via API, refer to the [Create a Role](../../../api-docs/api-detail/content-management-api.md#create-a-role) API request.
 
 ## Common questions
 

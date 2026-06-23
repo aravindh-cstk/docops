@@ -80,7 +80,7 @@ In other words, if the website is content-heavy, go for pull publishing.
 **The architecture image is given below:*
 *
 
-**Additional Resource: **To know more about Architecture Diagrams, read through our extensive [documentation](/docs/developers/architecture-diagrams) on it.
+**Additional Resource: **To know more about Architecture Diagrams, read through our extensive [documentation](../architecture-diagrams.md) on it.
 
 ## Common questions
 

@@ -24,7 +24,7 @@ To make your site easy to access and remember, you need a human-friendly domain 
 
 **Note:** Custom subdomains must not exceed **255 characters** in total length, as per the [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035#section-2.3.4) specification. For example, `www.example.com`, `www.example.org`, `subdomain.example.in`
 
-**Tip:** After setting up a custom domain, the default `*.contentstackapps.com` domain remains accessible. To prevent it from appearing in search results and avoid duplicate content issues for your site, refer to the [Blocking Default Launch Domains From Google Search](/docs/launch/blocking-default-launch-domains-from-google-search) guide.
+**Tip:** After setting up a custom domain, the default `*.contentstackapps.com` domain remains accessible. To prevent it from appearing in search results and avoid duplicate content issues for your site, refer to the [Blocking Default Launch Domains From Google Search](./blocking-default-launch-domains-from-google-search.md) guide.
 
 ## Adding a Custom Domain
 
@@ -33,7 +33,7 @@ Contentstack Launch lets you add custom apex domains and subdomains to your envi
 Follow the steps below to add a custom domain to an existing domain. In this example, we will configure a subdomain for `example.com`.
 
 - Click the **project card** to open your project from the Launch landing page.
-- In the **Environments** screen, click an existing environment or create a new [environment](/docs/launch/environments/). We will add a custom domain to the `Default` environment for this tutorial.
+- In the **Environments** screen, click an existing environment or create a new [environment](./environments.md). We will add a custom domain to the `Default` environment for this tutorial.
 - In the **Default** environment, click the **vertical ellipses** under **Actions** and then click **Settings** to go to the Settings page.
 - In **Environments** under **Settings**, click **Domains**.
 - Click the **+ New Domain **button.
@@ -41,7 +41,7 @@ Follow the steps below to add a custom domain to an existing domain. In this exa
   For example: `www.example.com`, `domain.example.com`  
   If you are creating an apex domain instead, enter only the `<apex domain>`, such as `example.com`  
   After entering the subdomain name, the **DNS Details** section gets auto-populated as shown below:The **Value** field displays the default subdomain.**Note:**If you create an **apex domain** instead, an **A record** appears in the **DNS** section, instead of the **CNAME record** shown above.
-- When you create an **apex domain**, `No Redirection` is selected by default. To enable redirection, learn [how to add apex domains with redirects](/docs/launch/custom-domain#adding-apex-domains-with-redirects).
+- When you create an **apex domain**, `No Redirection` is selected by default. To enable redirection, learn [how to add apex domains with redirects](./custom-domain.md#adding-apex-domains-with-redirects).
 - Click the **Create Custom Domain** button.  
   You can see the newly created domain listed in the Domains page.
 
@@ -60,7 +60,7 @@ This approach offers several key advantages:
 
 In this setup, Launch ensures that all content is exclusively served from the designated subdomain, providing users with a seamless and efficient hosting solution for their websites.
 
-To configure redirection for an apex domain, choose from the following options when [creating the domain](/docs/launch/custom-domain#adding-a-custom-domain):
+To configure redirection for an apex domain, choose from the following options when [creating the domain](./custom-domain.md#adding-a-custom-domain):
 
 - **No Redirection:** This option allows you to add an apex domain without redirecting it to another subdomain or apex domain. Use this when you want the apex domain (e.g., `example.com`) to serve content directly.
 - **Add www.apex.com (subdomain) and redirect apex domain to it:** This option allows you to add an apex domain (e.g., `example.com`) and redirect it to a subdomain (e.g., `www.example.com`). As a result, traffic to the apex domain is redirected to the `www` subdomain, rather than being served directly from the apex domain.**Note:** When you select this option, two domains are created. An apex domain and a `www` subdomain.
@@ -120,7 +120,7 @@ After both the domain and certificate statuses are active, add an **A record** o
 - **Pending:** The custom domain is awaiting validation.
 - **Error:** The custom domain could not be validated. Review the DNS settings and try again.**Note:** Hover over the **Pending** or **Error** status to view the error message and error code in a tooltip. **Copy the message** for further troubleshooting.
 
-**Note:** If your DNS is managed through a Cloudflare zone, an additional Orange-to-Orange (O2O) setup is required. The detailed steps for this configuration are outlined in the [Contentstack Go-Live Guide](/docs/launch/go-live-guide), which can be referred for the implementation guidance.
+**Note:** If your DNS is managed through a Cloudflare zone, an additional Orange-to-Orange (O2O) setup is required. The detailed steps for this configuration are outlined in the [Contentstack Go-Live Guide](./go-live-guide.md), which can be referred for the implementation guidance.
 
 ## Delete a Custom Domain
 

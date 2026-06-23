@@ -17,9 +17,9 @@ This page explains how to set up and use the legacy Shopify custom field extensi
 
 Shopify
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Shopify as a Marketplace App. For more information on Shopify, please refer to the [Shopify App Installation Guide](/docs/developers/marketplace-apps/shopify).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Shopify as a Marketplace App. For more information on Shopify, please refer to the [Shopify App Installation Guide](../marketplace-apps/shopify.md).
 
-Shopify [custom field](/docs/developers/create-custom-fields/about-custom-fields) extension in your [stack](/docs/developers/set-up-stack/about-stack) lets you fetch the products or collections of your Shopify store and display them on your [entry](/docs/content-managers/working-with-entries/about-entries) page via a [field](/docs/developers/create-content-types/about-fields). While creating entries, you can select one or more listed products or collections as an input value for this field.
+Shopify [custom field](./about-custom-fields.md) extension in your [stack](../set-up-stack/about-stack.md) lets you fetch the products or collections of your Shopify store and display them on your [entry](../../content-managers/author-content/about-entries.md) page via a [field](../create-content-types/about-fields.md). While creating entries, you can select one or more listed products or collections as an input value for this field.
 
 ## Prerequisites
 
@@ -51,13 +51,13 @@ The **Storefront API access token** is required to connect your store with Conte
 
 To use your Shopify’s store product(s) or collection(s) in an entry, you need to create an extension by going to your stack and performing the following steps:
 
-If Extensions are part of your plan, contact our [Support](mailto:support@contentstack.com) team to get the code for the extension. The support team will provide you with the source code that contains the following files: **redirect.html**: Upload this file as an asset in your stack by referring to the [Create/Upload Assets](/docs/content-managers/author-content/create-upload-assets/) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the **File URL**.
+If Extensions are part of your plan, contact our [Support](mailto:support@contentstack.com) team to get the code for the extension. The support team will provide you with the source code that contains the following files: **redirect.html**: Upload this file as an asset in your stack by referring to the [Create/Upload Assets](../../content-managers/author-content/create-upload-assets.md) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the **File URL**.
 
 - **index.html**: We will upload the code in this file in the extension source code field of our extension in the next step.
 - Navigate to the “Settings” icon on the left navigation panel, and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions **page, click on the **+ New Extension **button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **+ New Extension** link as shown below.
 - In the **Select Extension Type **window, select **Custom Field**.
-- On the **Create New Extension **page, enter values in the fields as given below:**Title ***(required)*: Provide a suitable title, for example, “Shopify,” for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+- On the **Create New Extension **page, enter values in the fields as given below:**Title ***(required)*: Provide a suitable title, for example, “Shopify,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
 - **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - ******Multiple ***(optional)*: Leave this field unchecked.
 - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
@@ -92,18 +92,18 @@ Now, let’s understand how you can start using this custom field in your conten
 
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [**Custom**](/docs/developers/create-content-types/custom) field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
 
 - Under **Select Extension**, select the “Shopify” field that you created and set the other properties. You can add other fields as per requirements.
 - Finally, click on either **Save **or** Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/author-content/create-an-entry) for this content type, and you will see the **Shopify **field in action, based on the **type **you define in the **Config Parameters **section of the extension. ****
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Shopify **field in action, based on the **type **you define in the **Config Parameters **section of the extension. ****
 
 **Additional Resource:** You can also refer to our wide collection of e-Commerce sample apps built using [Ruby on Rails](/docs/developers/sample-apps/build-a-product-catalog-using-ruby-on-rails-and-contentstack) and [DataSync](/docs/developers/sample-apps/build-an-ecommerce-website-using-contentstack-datasync).
 
 ## Common questions
 
 ### Is this Shopify integration the recommended approach?
-No. **Note**: This documentation uses the legacy approach with extensions. We have launched Shopify as a Marketplace App. For more information on Shopify, please refer to the [Shopify App Installation Guide](/docs/developers/marketplace-apps/shopify).
+No. **Note**: This documentation uses the legacy approach with extensions. We have launched Shopify as a Marketplace App. For more information on Shopify, please refer to the [Shopify App Installation Guide](../marketplace-apps/shopify.md).
 
 ### What data type should the Shopify custom field use?
 **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.

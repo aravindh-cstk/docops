@@ -15,15 +15,15 @@ last_updated: 2026-03-26
 
 This page explains how to send an entry for publish or unpublish approval in Contentstack when Publish Rules are configured. Content managers and developers should use it when an entry requires approval before it can be published or unpublished.
 
-**Note**: If you are new to [Workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) and [Publish Rules](/docs/developers/set-up-workflows-and-publish-rules/about-publish-rules), we recommend reading about them before proceeding to the steps given below.
+**Note**: If you are new to [Workflows](../../developers/set-up-workflows-and-publish-rules/about-workflows.md) and [Publish Rules](../../developers/set-up-workflows-and-publish-rules/about-publish-rules.md), we recommend reading about them before proceeding to the steps given below.
 
-If a Publish Rule has been set for a particular [content type](/docs/developers/create-content-types/about-content-types), you will see it under the **Publish Rules** section in the right side panel of the [entry](/docs/content-managers/working-with-entries/about-entries). There are two ways to send an entry for publishing or unpublishing approval.
+If a Publish Rule has been set for a particular [content type](../../developers/create-content-types/about-content-types.md), you will see it under the **Publish Rules** section in the right side panel of the [entry](../author-content/about-entries.md). There are two ways to send an entry for publishing or unpublishing approval.
 
 To perform this action, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform any one of the following approaches.
 
 ## Via the right-side panel
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and open the entry.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md), and open the entry.
 - On the entry page, click on the “Status” icon on the right panel.
 - In the **Publish Rules** section, you will see the applicable publishing rules (if any). Click on **Request Approval** to send the entry for approval to the approvers.
 - Once a request has been sent, you will see the current status of the request (awaiting approval, approved, rejected) in the same section.
@@ -35,7 +35,7 @@ To perform this action, log in to your [Contentstack account](https://app.conten
 
 ## API Reference
 
-To perform allowed actions with publish request via API, refer to the [Request/Accept/Reject Entry Publish Request](/docs/developers/apis/content-management-api#request-accept-reject-entry-publish-request) API request.
+To perform allowed actions with publish request via API, refer to the [Request/Accept/Reject Entry Publish Request](../../../api-docs/api-detail/content-management-api.md#request-accept-reject-entry-publish-request) API request.
 
 ## Common questions
 
@@ -49,4 +49,4 @@ Once a request has been sent, you will see the current status of the request (aw
 Yes. If a rule has been applied to any of the selected environment(s) or language(s), clicking on **Send **will send the entry for approval to the approver(s).
 
 ### Is there an API to request, accept, or reject an entry publish request?
-Yes. Refer to the [Request/Accept/Reject Entry Publish Request](/docs/developers/apis/content-management-api#request-accept-reject-entry-publish-request) API request.
+Yes. Refer to the [Request/Accept/Reject Entry Publish Request](../../../api-docs/api-detail/content-management-api.md#request-accept-reject-entry-publish-request) API request.

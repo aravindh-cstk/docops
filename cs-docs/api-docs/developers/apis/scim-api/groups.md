@@ -27,7 +27,7 @@ In the "Request Body" section, you need to pass the ID of the user in Contentsta
 #### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 #### Headers
@@ -89,7 +89,7 @@ The Get All Groups request fetches details of all groups that exist in the IdP c
 #### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 #### Query Parameters
@@ -161,7 +161,7 @@ The Get Single Group by ID request fetches details of a single group that exists
 #### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -232,7 +232,7 @@ You need to pass the displayname as a query parameter.
 #### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 #### Query Parameters
@@ -297,7 +297,7 @@ In the "Request Body", you need to pass the ID of the user in the value key.
 #### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -373,7 +373,7 @@ In the "Request Body", you need to pass a new name for the group in the value ke
 #### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -440,7 +440,7 @@ This also revokes admin access for users with admin roles, unless those users ha
 #### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -507,7 +507,7 @@ This also revokes admin access for the user with an admin role, unless that user
 #### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -577,7 +577,7 @@ This also revokes admin access for users with admin role, unless that user has b
 #### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -660,7 +660,7 @@ The Delete Group request deletes an existing group from the SCIM. This will remo
 #### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group you want to delete. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.

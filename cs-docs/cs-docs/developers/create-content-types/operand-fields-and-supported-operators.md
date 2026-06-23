@@ -32,7 +32,7 @@ When configuring field-based operations, it is essential to understand the avail
 
 **Note:**
 - The **Matches** and **Does not match** operators are case sensitive.
-- You cannot use the [Rich-Text Editor](/docs/developers/create-content-types/rich-text-editor), [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor), [Markdown](/docs/developers/create-content-types/markdown), [File](/docs/developers/create-content-types/file), [Link](/docs/developers/create-content-types/link), [Custom](/docs/developers/create-custom-fields/about-custom-fields), [Taxonomy](/docs/developers/create-content-types/taxonomy) fields as the operand fields.
+- You cannot use the [Rich-Text Editor](./rich-text-editor.md), [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md), [Markdown](./markdown.md), [File](./file.md), [Link](./link.md), [Custom](../create-custom-fields/about-custom-fields.md), [Taxonomy](./taxonomy.md) fields as the operand fields.
 - When a **Group** field is marked as **Single**, you can use the parent and its sub-fields as operands. When marked as **Multiple**, you **cannot** use the **parent group field **itself, but you can use its sub-fields as operands.
 - For** Modular Blocks**, neither the parent block nor nested child blocks can be used as operands. You can only select its sub-fields from within the same block as operands.
 

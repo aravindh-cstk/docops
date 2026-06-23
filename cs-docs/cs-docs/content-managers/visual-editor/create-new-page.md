@@ -25,14 +25,14 @@ Create New Page
 
 ##### Content
 
-Use [Visual Editor](/docs/content-managers/visual-editor/about-visual-editor/) to create and customize web pages without writing code. You can publish new content or expand your site structure in just a few clicks.
+Use [Visual Editor](./about-visual-editor.md) to create and customize web pages without writing code. You can publish new content or expand your site structure in just a few clicks.
 
 To create a new web page, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - In the URL bar, click the “+” icon.
-- In the **Create New Page** modal, provide the following details:**Select Content Type**: Select a [content type](/docs/developers/create-content-types/about-content-types) you want to use for the new page.
-- **Title**: Enter the page title. This also serves as the [entry](/docs/content-managers/author-content/about-entries) title.
+- In the **Create New Page** modal, provide the following details:**Select Content Type**: Select a [content type](../../developers/create-content-types/about-content-types.md) you want to use for the new page.
+- **Title**: Enter the page title. This also serves as the [entry](../author-content/about-entries.md) title.
 - **URL**: The system generates a URL based on the title. You can edit this URL if needed.**Tip:** Use the dropdown in the URL bar to browse available content types. Then, click the “+” icon next to the one you want.
 - Click the **Create** button to create the page. You will see the new URL in the URL bar.
 - After creating the page, you can start adding components to build its structure by clicking the **Components** button.**Note:** The available page components are based on the content model of the selected content type.

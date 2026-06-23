@@ -20,7 +20,7 @@ This page explains how to create an asset folder in Contentstack to organize ass
 Organizing your assets into folders ensures they are structured and easy to manage. In Contentstack, you can create folders within the **Assets** section and maintain a nested folder structure, allowing up to **5 levels** of depth.
 
 To create an asset folder, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and click the “Assets” icon in the left navigation panel.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md), and click the “Assets” icon in the left navigation panel.
 - Click the **Create new asset folder** icon at the top-right corner of the page.
 - In the **Create Asset Folder** modal, enter a name for your folder (e.g., Project) and click **Create**.
 Your new folder appears on the **Assets** page.
@@ -34,7 +34,7 @@ You can easily upload and organize assets in your newly created folder by follow
 **Note:** A maximum of **10000 folders**, including nested folders, can be created per stack.
 
 ## API Reference
-To create an asset folder via API, refer to the [Create a folder](/docs/developers/apis/content-management-api#create-a-folder) API request.
+To create an asset folder via API, refer to the [Create a folder](../../../api-docs/api-detail/content-management-api.md#create-a-folder) API request.
 
 ## Common questions
 
@@ -48,4 +48,4 @@ You can maintain a nested folder structure, allowing up to **5 levels** of depth
 Go to your stack, click the “Assets” icon in the left navigation panel, then click the **Create new asset folder** icon at the top-right corner of the page.
 
 **Can I create an asset folder using an API?**  
-To create an asset folder via API, refer to the [Create a folder](/docs/developers/apis/content-management-api#create-a-folder) API request.
+To create an asset folder via API, refer to the [Create a folder](../../../api-docs/api-detail/content-management-api.md#create-a-folder) API request.

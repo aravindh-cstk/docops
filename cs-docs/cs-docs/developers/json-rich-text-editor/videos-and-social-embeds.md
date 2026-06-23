@@ -27,7 +27,7 @@ You can embed videos from popular video platforms like **YouTube**, **Vimeo**, a
 To embed a video within your JSON RTE, log in to your
 [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
 
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries** icon in the left navigation panel.
+- Navigate to the desired [stack](../set-up-stack/about-stack.md), then click the **Entries** icon in the left navigation panel.
 - Create a new entry or open an existing one containing a JSON RTE field.
 - In the **JSON RTE field**, click the **Video** icon in the toolbar.
 - In the **Video** modal that appears, paste the **Embed Code** of the video you want to add.
@@ -42,7 +42,7 @@ Social embedding allows you to enhance your content with interactive, shareable 
 To embed a link within your JSON RTE, log in to your
 [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
 
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries** icon in the left navigation panel.
+- Navigate to the desired [stack](../set-up-stack/about-stack.md), then click the **Entries** icon in the left navigation panel.
 - Create a new entry or open an existing one containing a JSON RTE field.
 - In the **JSON RTE field**, click the **Social Embeds** icon in the toolbar.
 - In the **Social Embeds** modal that appears, paste the **Embed URL** from a supported platform.  

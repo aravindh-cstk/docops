@@ -19,7 +19,7 @@ This page explains how to install and configure the JSON Editor app from the Con
 
 To further enhance the business user experience, Contentstack provides prebuilt custom field applications that let you extend the functionality of your custom fields to serve your unique business needs while providing a native Contentstack look and feel.
 
-Using Contentstack [Custom Field](/docs/developers/create-custom-fields/about-custom-fields), you can now input a JSON text into an entry field. With the JSON Editor custom field, you can edit and format JSON text, and view it in modes like code, trees, etc. within your Contentstack entry.
+Using Contentstack [Custom Field](../create-custom-fields/about-custom-fields.md), you can now input a JSON text into an entry field. With the JSON Editor custom field, you can edit and format JSON text, and view it in modes like code, trees, etc. within your Contentstack entry.
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - Now on the **Configuration** screen, choose the global format in which you want to store the JSON. Select **JSON Object **to store the JSON in JSON format or select **JSON Stringified **to store the JSON as a String.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
 
-**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 
 - After selecting the configuration details, click the **Save** button.
 - Click **Open Stack** to start using the JSON Editor application.
@@ -58,7 +58,7 @@ To use the JSON Editor application within an entry of your stack, follow the ste
 Go to your stack and click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
 - Create a content type by adding relevant details as displayed below:
-- In the Content Type Builder page, add a [Custom field](/docs/developers/create-custom-fields/about-custom-fields) in your content type by clicking the **Insert a field **link represented by a **+** sign.
+- In the Content Type Builder page, add a [Custom field](../create-custom-fields/about-custom-fields.md) in your content type by clicking the **Insert a field **link represented by a **+** sign.
 - Under **Select Extension/App**, select **JSON Editor **and then click **Proceed**.
 
 This adds JSON Editor in the custom field.
@@ -99,4 +99,4 @@ A: It lets you choose the global format in which you want to store the JSON: **J
 A: Use **Advanced Properties** and set the **Config Parameter** with a `stringify` key and a `true` (or `false`) value.
 
 **Q: Where can I learn more about UI locations for installed apps?**  
-A: Refer to the **Additional Resource** link to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+A: Refer to the **Additional Resource** link to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.

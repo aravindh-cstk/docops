@@ -20,7 +20,7 @@ last_updated: 2025-08-28
 
 1. By default, the cropping alignment will be middle, center. See overlay-align for more details.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ## Query Parameters
 

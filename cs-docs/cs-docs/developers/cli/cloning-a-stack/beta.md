@@ -16,21 +16,21 @@ This page explains how to clone a Contentstack stack (structure and optionally c
 
 ## Cloning a Stack | V2.x.x Beta
 
-Contentstack enables you to **clone a stack** and its associated **structure and content** using the `cm:stacks:clone` CLI command. This process lets you [export](/docs/developers/cli/export-content-using-the-cli/) data from a source stack and [import](/docs/developers/cli/import-content-using-the-cli/) it into a new or existing stack, facilitating rapid setup, testing, or migration. This guide uses the latest **Contentstack CLI** commands to ensure a seamless cloning experience.
+Contentstack enables you to **clone a stack** and its associated **structure and content** using the `cm:stacks:clone` CLI command. This process lets you [export](../export-content-using-the-cli.md) data from a source stack and [import](../import-content-using-the-cli.md) it into a new or existing stack, facilitating rapid setup, testing, or migration. This guide uses the latest **Contentstack CLI** commands to ensure a seamless cloning experience.
 
-**Note:** Before executing this command, ensure you have the required permissions for creating or accessing the destination stack. To know more about user roles and their permissions, refer to [this](/docs/developers/invite-users-and-assign-roles/types-of-roles#stack-roles-and-permissions-overview) documentation.
+**Note:** Before executing this command, ensure you have the required permissions for creating or accessing the destination stack. To know more about user roles and their permissions, refer to [this](../../invite-users-and-assign-roles/types-of-roles.md#stack-roles-and-permissions-overview) documentation.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
-- Contentstack CLI [installed](/docs/developers/cli/install-the-cli) and [configured](/docs/developers/cli/configure-regions-in-the-cli/)
-- [Configured authtoken](/docs/developers/cli/cli-authentication#authentication)
+- Contentstack CLI [installed](../install-the-cli.md) and [configured](../configure-regions-in-the-cli.md)
+- [Configured authtoken](../cli-authentication.md#authentication)
 
 ## Commands
 
 The `cm:stacks:clone` command lets you export content from the source stack and import it into the destination stack instantly.
 
-**Note: **By default, an [audit fix](/docs/developers/cli/audit-plugin#issue-resolution-in-references) is performed on the exported content before import. This helps identify and address potential issues in the exported data.
+**Note: **By default, an [audit fix](../audit-plugin.md#issue-resolution-in-references) is performed on the exported content before import. This helps identify and address potential issues in the exported data.
 
 ## Options
 
@@ -128,11 +128,11 @@ csdx cm:stacks:clone --source-management-token-alias > --destination-management-
 
 - To import content into an **existing stack**, ensure you have permissions to create or update content in that stack.
 - Currently, we migrate only the latest version of entries and assets.
-- To **create a new stack**, you must have the [owner](/docs/owners-and-admins/organization-roles/#organization-owner) or [admin](/docs/owners-and-admins/organization-roles/#organization-admin) rights in the destination organization.
+- To **create a new stack**, you must have the [owner](../../organization/organization-roles.md#organization-owner) or [admin](../../organization/organization-roles.md#organization-admin) rights in the destination organization.
 - During **workflow migration**, admins and workflow stage users are not included. These must be manually reconfigured after cloning.
-- The clone function supports the **same modules** as the CLI [export](/docs/developers/cli/export-content-using-the-cli/) and [import](/docs/developers/cli/import-content-using-the-cli/) commands.
+- The clone function supports the **same modules** as the CLI [export](../export-content-using-the-cli.md) and [import](../import-content-using-the-cli.md) commands.
 
-**Additional Resources**: Learn more about the CLI-supported clone operations in the [CLI-Supported Features for Export, Import, and Clone Operations](/docs/developers/cli/cli-supported-features-for-export-import-and-clone-operations) document.
+**Additional Resources**: Learn more about the CLI-supported clone operations in the [CLI-Supported Features for Export, Import, and Clone Operations](../cli-supported-features-for-export-import-and-clone-operations.md) document.
 
 ## Common questions
 

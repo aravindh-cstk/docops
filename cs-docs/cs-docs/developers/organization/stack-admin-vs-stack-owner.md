@@ -16,7 +16,7 @@ This page explains how Stack Admin and Stack Owner rights compare, and highlight
 
 ## Stack Admin vs Stack Owner
 
-The [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) and [Admins](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)of a stack have similar rights. However, there are certain additional rights that only the Owner possesses.
+The [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) and [Admins](../invite-users-and-assign-roles/types-of-roles.md#admin)of a stack have similar rights. However, there are certain additional rights that only the Owner possesses.
 
 The following table highlights the additional rights of a Stack Owner:
 

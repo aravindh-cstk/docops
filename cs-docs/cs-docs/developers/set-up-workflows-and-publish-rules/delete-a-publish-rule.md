@@ -17,13 +17,13 @@ This page explains how to delete a Publish Rule in Contentstack, who is allowed 
 
 ## Delete a Publish Rule
 
-Deleting a [publish rule](/docs/developers/set-up-workflows-and-publish-rules/about-publish-rules) removes outdated configurations such as those tied to deprecated [branches](/docs/developers/branches/about-branches), [environments](/docs/developers/set-up-environments/about-environments), [content types](/docs/developers/create-content-types/about-content-types), or [languages](/docs/developers/multilingual-content/about-languages). This streamlines the workflow and reduces complexity.
+Deleting a [publish rule](./about-publish-rules.md) removes outdated configurations such as those tied to deprecated [branches](../branches/about-branches.md), [environments](../set-up-environments/about-environments.md), [content types](../create-content-types/about-content-types.md), or [languages](../multilingual-content/about-languages.md). This streamlines the workflow and reduces complexity.
 
-**Note:** Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), or [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can delete a publish rule.
+**Note:** Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), or [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can delete a publish rule.
 
 To delete a Publish Rule, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon in the left navigation panel, or press the shortcut key “S” (on both Windows and macOS).
-- In the left panel, select [**Workflows**](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages) and go to the **Publish Rules** tab.
+- Navigate to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon in the left navigation panel, or press the shortcut key “S” (on both Windows and macOS).
+- In the left panel, select [**Workflows**](./about-workflow-stages.md) and go to the **Publish Rules** tab.
 - Click the vertical ellipsis icon in the **Actions** column of the desired publish rule and select **Delete**. Alternatively, open the publish rule and click **Delete** at the bottom of the page.
 - In the **Confirmation** modal that appears, click **Delete**.
 
@@ -31,7 +31,7 @@ To delete a Publish Rule, log in to your [Contentstack account](https://www.cont
 
 ## API Reference
 
-To delete a publish rule via API, refer to the [Delete Publish Rules](/docs/developers/apis/content-management-api#delete-publish-rules) API request.
+To delete a publish rule via API, refer to the [Delete Publish Rules](../../../api-docs/api-detail/content-management-api.md#delete-publish-rules) API request.
 
 ## Common questions
 

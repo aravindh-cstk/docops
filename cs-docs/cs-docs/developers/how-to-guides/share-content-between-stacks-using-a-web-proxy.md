@@ -16,9 +16,9 @@ This page explains how to share content stored in one Contentstack stack with an
 
 ## Share Content Between Stacks Using a Web Proxy
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to manage stack-level content operations and migrations, refer to the [Content Management API](/docs/developers/apis/content-management-api) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to manage stack-level content operations and migrations, refer to the [Content Management API](../../../api-docs/api-detail/content-management-api.md) documentation.
 
-There can be many instances where we must use content stored in one [stack](/docs/developers/set-up-stack/about-stack) in another stack. This sharing of data between stacks is a common practice when we have a lot of content spread across multiple stacks.
+There can be many instances where we must use content stored in one [stack](../set-up-stack/about-stack.md) in another stack. This sharing of data between stacks is a common practice when we have a lot of content spread across multiple stacks.
 
 In this guide, we will discuss how to create a system that can help us share data between stacks by using a sample app and web proxy.
 
@@ -43,7 +43,7 @@ For this exercise, we will first start by downloading the code bundle from our [
 
 ### Create Stacks and Import Content
 
-When [creating stacks](/docs/developers/set-up-stack/create-a-new-stack) for this exercise, remember that we need two separate stacks, a parent stack and a child stack.  
+When [creating stacks](../set-up-stack/create-a-new-stack.md) for this exercise, remember that we need two separate stacks, a parent stack and a child stack.  
 After you create the stacks, use the [Contentstack CLI](/docs/developers/cli) to import entries and assets to both the parent as well as the child stacks. Perform the following steps in order to do this:  
 Perform the following steps in order to do this:
 
@@ -53,7 +53,7 @@ Install the [Contentstack CLI](/docs/developers/cli).
 npm install -g @contentstack/cli
 ```
 
-- [Authenticate](/docs/developers/cli/cli-authentication) yourself with CLI:
+- [Authenticate](../cli/cli-authentication.md) yourself with CLI:
 
 ```
 csdx auth:login
@@ -71,11 +71,11 @@ csdx cm:import -A -s  -d
 - `-d`, `--data=data`: The path or the location in your file system where the content, you intend to import, is stored. For example, `-d "C:\Users\Name\Desktop\cli\content"
   `
 
-Repeat the above steps to [import](/docs/developers/cli/import-content-using-the-cli) data into the child stack.
+Repeat the above steps to [import](../cli/import-content-using-the-cli.md) data into the child stack.
 
-So far, we have created the following [content types](/docs/developers/create-content-types/about-content-types) and imported [entries](/docs/content-managers/working-with-entries/about-entries) and [assets](/docs/content-managers/working-with-assets/about-assets) into them.
+So far, we have created the following [content types](../create-content-types/about-content-types.md) and imported [entries](../../content-managers/author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets) into them.
 
-**Note:** For this exercise, you need to ensure that both the parent and child stack should have en-us set as the [master language](/docs/developers/multilingual-content/set-the-master-language).
+**Note:** For this exercise, you need to ensure that both the parent and child stack should have en-us set as the [master language](../multilingual-content/set-the-master-language.md).
 
 For the parent stack (stack A) we have added the following content types:
 

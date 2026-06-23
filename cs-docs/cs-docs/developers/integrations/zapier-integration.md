@@ -26,8 +26,8 @@ Zapier Integration
 
 Zapier is a workflow automation tool that allows you to connect your Contentstack account with thousands of cloud applications.
 
-To get started with Zapier, first learn how to [Integrate Contentstack with Other Apps using Zapier](/docs/developers/integrations/zapier-integration/integrate-contentstack-with-other-apps-using-zapier).
-You can then create your own Zaps using various [Contentstack triggers and actions for Zapier](/docs/developers/integrations/zapier-integration/contentstack-triggers-and-actions-for-zapier), to suit your requirements.
+To get started with Zapier, first learn how to [Integrate Contentstack with Other Apps using Zapier](./zapier-integration/integrate-contentstack-with-other-apps-using-zapier.md).
+You can then create your own Zaps using various [Contentstack triggers and actions for Zapier](./zapier-integration/contentstack-triggers-and-actions-for-zapier.md), to suit your requirements.
 
 ##### Links section
 

@@ -17,14 +17,14 @@ This page explains Contentstack’s Entry Comments feature, including what it is
 
 ### About Entry Comments
 
-Contentstack’s “Comments” feature allows you to add comments to fields in the [entry](/docs/content-managers/working-with-entries/about-entries) editor, and to collaborate with other Contentstack [users](/docs/developers/invite-users-and-assign-roles/about-stack-users) during the content creation and review processes. Tagged users receive email and in-app notifications, ensuring timely responses. Clicking a notification takes you directly to the relevant discussion.
+Contentstack’s “Comments” feature allows you to add comments to fields in the [entry](./about-entries.md) editor, and to collaborate with other Contentstack [users](../../developers/invite-users-and-assign-roles/about-stack-users.md) during the content creation and review processes. Tagged users receive email and in-app notifications, ensuring timely responses. Clicking a notification takes you directly to the relevant discussion.
 
 ## Key Benefits
 
 - **Enhanced Collaboration**: Promotes direct communication among team members within entry fields.
 - **Contextual Feedback**: Ensures comments are tied to specific content areas, providing clarity.
 - **User Mentions**: Allows tagging teammates or roles using "@" to involve them in discussions.
-- **Integration with Localization**: Each [localized version](/docs/developers/multilingual-content/manage-versions-of-localized-entries) of an entry can host separate discussions pertinent to its content.**Note:** The Entry Comments feature is not available for unlocalized entries or older entry versions.
+- **Integration with Localization**: Each [localized version](../../developers/multilingual-content/manage-versions-of-localized-entries.md) of an entry can host separate discussions pertinent to its content.**Note:** The Entry Comments feature is not available for unlocalized entries or older entry versions.
 
 ## Role-based Advantages
 
@@ -42,7 +42,7 @@ By leveraging the Entry Comments feature, teams can improve collaboration, ensur
    Clicking a notification takes you directly to the relevant discussion.
 
 3. **Can I have separate comment discussions for different languages of the same entry?**  
-   Each [localized version](/docs/developers/multilingual-content/manage-versions-of-localized-entries) of an entry can host separate discussions pertinent to its content.
+   Each [localized version](../../developers/multilingual-content/manage-versions-of-localized-entries.md) of an entry can host separate discussions pertinent to its content.
 
 4. **Is the Entry Comments feature available for unlocalized entries or older entry versions?**  
    **Note:** The Entry Comments feature is not available for unlocalized entries or older entry versions.

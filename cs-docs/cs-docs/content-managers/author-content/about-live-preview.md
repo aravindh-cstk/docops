@@ -23,7 +23,7 @@ You can also preview your content changes across multiple channels, such as mobi
 
 With Live Preview, users can instantly see how their content will appear across various platforms, including mobile devices, tablets, and desktops. It supports locale-specific previews, ensuring that regionally tailored content is accurate and properly formatted.
 
-**Note**: To be able to preview entry content, developers need to first [configure Live Preview for the frontend website](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website) and then [enable it from the stack settings section](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-stack) in Contentstack.
+**Note**: To be able to preview entry content, developers need to first [configure Live Preview for the frontend website](../../developers/set-up-live-preview/set-up-live-preview-for-your-website.md) and then [enable it from the stack settings section](../../developers/set-up-live-preview/set-up-live-preview-for-your-stack.md) in Contentstack.
 
 Once enabled, a Live Preview icon will appear in the entry editor. Click the icon to open a preview panel beside the entry editor. You can interact with the preview by clicking any section to navigate directly to the corresponding field in the editor, making real-time adjustments simple and efficient.
 

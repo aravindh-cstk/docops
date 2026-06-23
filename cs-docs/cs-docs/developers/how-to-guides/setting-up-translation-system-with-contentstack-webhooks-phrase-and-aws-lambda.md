@@ -16,15 +16,15 @@ This page explains how to set up a translation system using Contentstack Webhook
 
 ## Setting up Translation System with Contentstack Webhooks, Phrase, and AWS Lambda
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to use the [Translation](/docs/developers/marketplace-apps#translation) apps, refer to the [Marketplace](/docs/developers/marketplace-apps) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to use the [Translation](../marketplace-apps.md#translation) apps, refer to the [Marketplace](../marketplace-apps.md) documentation.
 
 Phrase is a powerful Computer-assisted Translation (CAT) tool for translating general documents. This cloud-based platform allows businesses to process and translate hundreds of languages in different formats.
 
-Phrase can be integrated with other systems and in this document, we will create a translation system using Contentstack [Webhooks](/docs/developers/set-up-webhooks/about-webhooks), Phrase, and AWS Lambda.
+Phrase can be integrated with other systems and in this document, we will create a translation system using Contentstack [Webhooks](../set-up-webhooks/about-webhooks.md), Phrase, and AWS Lambda.
 
-**Additional Resource:** Translation systems can also be set up using Contentstack Workflows and AWS Translate, to know more, read our guide on how to [Set up a Translation System with Contentstack Webhooks and Workflows, AWS Lambda, and AWS Translate](/docs/developers/how-to-guides/set-up-a-translation-system-with-contentstack-webhooks-and-workflows-aws-lambda-and-aws-translate).
+**Additional Resource:** Translation systems can also be set up using Contentstack Workflows and AWS Translate, to know more, read our guide on how to [Set up a Translation System with Contentstack Webhooks and Workflows, AWS Lambda, and AWS Translate](./set-up-a-translation-system-with-contentstack-webhooks-and-workflows-aws-lambda-and-aws-translate.md).
 
-**A brief overview of the process**: When the [workflow stage](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages) of [entry](/docs/content-managers/working-with-entries/about-entries) changes to **Send to Translation** a webhook is triggered. Phrase will translate the content of the entry and once the translation is done, AWS Lambda will change the workflow stage to **Review**.
+**A brief overview of the process**: When the [workflow stage](../set-up-workflows-and-publish-rules/about-workflow-stages.md) of [entry](../../content-managers/author-content/about-entries.md) changes to **Send to Translation** a webhook is triggered. Phrase will translate the content of the entry and once the translation is done, AWS Lambda will change the workflow stage to **Review**.
 
 Here are the steps required to set up this translation system:
 - [Set up the Essentials](#set-up-the-essentials)
@@ -39,7 +39,7 @@ Here are the steps required to set up this translation system:
 - [Contentstack account](https://app.contentstack.com/#!/login)
 - [Phrase account](https://phrase.com/pricing/)
 - ## Set up the Essentials
-First, [create a stack](/docs/developers/set-up-stack/create-a-new-stack), and [add a content type](/docs/developers/create-content-types) (in our example it is “Phrase”),and [add entries](/docs/developers/create-content-types) to it.
+First, [create a stack](../set-up-stack/create-a-new-stack.md), and [add a content type](/docs/developers/create-content-types) (in our example it is “Phrase”),and [add entries](/docs/developers/create-content-types) to it.
 
 **Note**: Ensure the field UID (body, multi_line, etc) in your code that you want to translate should match with the ones specified in the content type. In our example, it's **title **and **body**.
 
@@ -52,13 +52,13 @@ English [en-us] which is the source language
 
 Once you have these configured, then you're ready to begin the integration process for translation.
 - ## Set up Workflows for Translation
-To [set up workflows](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages) for the translation process, log in to your [Contentstack account](https://app.contentstack.com/#!/) and perform the following steps:
+To [set up workflows](../set-up-workflows-and-publish-rules/add-workflows-and-stages.md) for the translation process, log in to your [Contentstack account](https://app.contentstack.com/#!/) and perform the following steps:
 
 Click the “Settings” icon (press “S”) on the left navigation panel and click on **Workflows** (press “alt + F” for Windows OS, and “option + F” for Mac OS to access workflows).
 - Click on **+ New Workflow.**
 - Add three stages (for example, Draft, Sent to Translation, and Review).
 
-Read more on how to [set up workflows](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages).
+Read more on how to [set up workflows](../set-up-workflows-and-publish-rules/add-workflows-and-stages.md).
 
 Once the editor changes the workflow stage to **Send to Translation**, the webhook will be triggered and call the AWS Lambda function. The Lambda function will get the content translated from Phrase and will change the workflow stage to **Review**.
 
@@ -117,7 +117,7 @@ Next, we need to deploy our API. Follow the steps given below:
 
 On the next screen, you'll get your deployed API under **Invoke URL**. We'll use this URL in the next step when we create a webhook to initiate notifications to our Lambda function.
 - ## Trigger a Webhook to Initiate Translation
-To create and [set up a webhook](/docs/developers/set-up-webhooks/create-a-webhook) in Contentstack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
+To create and [set up a webhook](../set-up-webhooks/create-a-webhook.md) in Contentstack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
 Click the “Settings” icon (press “S”) on the left navigation panel and click on **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS).
 - Click on **+ New Webhook**.
@@ -140,7 +140,7 @@ Go to your **English (en-us**) entry and change the workflow stage by selecting 
 **Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release.
 
 ### What triggers the translation workflow?
-When the [workflow stage](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages) of [entry](/docs/content-managers/working-with-entries/about-entries) changes to **Send to Translation** a webhook is triggered.
+When the [workflow stage](../set-up-workflows-and-publish-rules/about-workflow-stages.md) of [entry](../../content-managers/author-content/about-entries.md) changes to **Send to Translation** a webhook is triggered.
 
 ### What does AWS Lambda do after translation completes?
 AWS Lambda will change the workflow stage to **Review**.

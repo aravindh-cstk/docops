@@ -66,14 +66,14 @@ The Function Calling (Beta) action allows you to generate the responses based on
 - Provide the **Prompt Text **to generate response(s).
 - Click the **+ Add Sub Automation** button to add multiple sub automations.
 
-        **Note: **You must create a [Sub Automation](/docs/developers/automation-hub-connectors/sub-automation-action) to use it in the Function Calling (Beta) action.
+        **Note: **You must create a [Sub Automation](./sub-automation-action.md) to use it in the Function Calling (Beta) action.
 - Click the **Show Optional Fields** toggle button to use the optional field.
 - You can mark the **Sanitize text **checkbox to remove special characters or spaces from the chat response. Enabling this checkbox, eliminates any special characters or spaces in the chat response, resulting in a clean and compatible text.
 - Click **Proceed**.
 - Check if the details are correct. If yes, then click **Test Action**.
 - You will get the response(s). Once set, click **Save and Exit**.
 
-**Note: **The Function Calling (Beta) feature selects which Sub Automation to run from a list of multiple options and generates the input for it. In the [Sub Automation](/docs/developers/automation-hub-connectors/sub-automation-action) action, the Sub Automation determined by the Function Calling (Beta) action is executed.
+**Note: **The Function Calling (Beta) feature selects which Sub Automation to run from a list of multiple options and generates the input for it. In the [Sub Automation](./sub-automation-action.md) action, the Sub Automation determined by the Function Calling (Beta) action is executed.
 
 ### Function Calling Response (Beta)
 
@@ -90,7 +90,7 @@ With the** Function Calling Response (Beta)** action, you can format the output 
 - Check if the details are correct. If yes, then click **Test Action**.
 - You will get the response(s). Once set, click **Save and Exit**.
 
-**Additional Resource:** Refer to the [ChatGPT Use Cases](/docs/developers/automation-hub-guides/chatgpt-use-cases/) to learn more about the Sub Automation action.
+**Additional Resource:** Refer to the [ChatGPT Use Cases](./chatgpt-use-cases.md) to learn more about the Sub Automation action.
 
 ### Send Prompt
 

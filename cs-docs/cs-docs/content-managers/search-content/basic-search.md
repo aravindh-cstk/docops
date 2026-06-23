@@ -17,11 +17,11 @@ This page explains how to use Basic Search in Contentstack to quickly find entri
 
 ## Basic Search
 
-Basic Search in Contentstack allows you to quickly locate [entries](/docs/content-managers/author-content/about-entries) and [assets](/docs/content-managers/author-content/about-assets) within your stack by scanning across various fields. This feature is designed to help you find relevant content with minimal effort, whether you're looking for a specific entry or asset.
+Basic Search in Contentstack allows you to quickly locate [entries](../author-content/about-entries.md) and [assets](../author-content/about-assets.md) within your stack by scanning across various fields. This feature is designed to help you find relevant content with minimal effort, whether you're looking for a specific entry or asset.
 
-For example, if your stack contains numerous content types with several entries and assets, and you're searching for a specific entry like "Smartphone," you no longer need to browse through multiple [content types](/docs/developers/create-content-types/about-content-types) to locate it. Simply enter your search term in the search bar, and the Search will quickly surface the desired entry, streamlining your workflow and improving efficiency.
+For example, if your stack contains numerous content types with several entries and assets, and you're searching for a specific entry like "Smartphone," you no longer need to browse through multiple [content types](../../developers/create-content-types/about-content-types.md) to locate it. Simply enter your search term in the search bar, and the Search will quickly surface the desired entry, streamlining your workflow and improving efficiency.
 
-To access the search bar, navigate to your [stack](/docs/developers/set-up-stack/about-stack) and locate the search bar within **Entries** or **Assets**.
+To access the search bar, navigate to your [stack](../../developers/set-up-stack/about-stack.md) and locate the search bar within **Entries** or **Assets**.
 
 You will notice a dropdown before the search bar, with the options **All**, **Title**, **URL**, and **Specific field**. These options allow you to define the scope of search and help you find exactly what you are looking for.
 
@@ -37,7 +37,7 @@ Your search results are filtered depending on the field selected.
 
 These filters enable you to refine your search results quickly and easily, ensuring you find precisely what you need with greater accuracy.
 
-**Additional Resources:** For more advanced filtering options, refer to our [Use Filters](/docs/content-managers/search-content/use-filters) document to further enhance your search results.
+**Additional Resources:** For more advanced filtering options, refer to our [Use Filters](./use-filters.md) document to further enhance your search results.
 
 ## Common questions
 

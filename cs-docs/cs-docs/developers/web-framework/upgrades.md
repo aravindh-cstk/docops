@@ -21,7 +21,7 @@ This page lists upgrades and update notes for the contentstack-express web frame
 *Updates that you need to know about*
 
 Here is the list of updates that has been introduced in contentstack-express:
-- [Upgrade version v1.0.x/v3.0.x to version v3.1.x](/docs/developers/web-framework-deep-dive/upgrades/upgrade-version-v1-0-x-v3-0-x-to-version-v3-1-x)
+- [Upgrade version v1.0.x/v3.0.x to version v3.1.x](../web-framework-deep-dive/upgrades/upgrade-version-v1-0-x-v3-0-x-to-version-v3-1-x.md)
 
 ## Common questions
 
@@ -32,4 +32,4 @@ A: **Warning**: contentstack-express framework has been deprecated. We will soon
 A: Instead, we recommend using [DataSync](/docs/developers/develop-apps-with-datasync), which is faster and more flexible than the web framework.
 
 **Q: Where can I find the upgrade path to v3.1.x?**  
-A: See: [Upgrade version v1.0.x/v3.0.x to version v3.1.x](/docs/developers/web-framework-deep-dive/upgrades/upgrade-version-v1-0-x-v3-0-x-to-version-v3-1-x)
+A: See: [Upgrade version v1.0.x/v3.0.x to version v3.1.x](../web-framework-deep-dive/upgrades/upgrade-version-v1-0-x-v3-0-x-to-version-v3-1-x.md)

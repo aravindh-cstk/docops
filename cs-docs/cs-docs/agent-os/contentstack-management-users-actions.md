@@ -17,7 +17,7 @@ This page describes the Contentstack Management Users action available in Automa
 
 ## Contentstack Management - Users Actions
 
-Contentstack, being an Enterprise Content Management (ECM) system, accommodates numerous [users](/docs/developers/invite-users-and-assign-roles/about-stack-users) with different permissions collaborating together. In Contentstack, all the member accounts of a stack are referred to as users. By using the Contentstack Management Users action, you can fetch user-related details, such as name, email, and so on.
+Contentstack, being an Enterprise Content Management (ECM) system, accommodates numerous [users](../developers/invite-users-and-assign-roles/about-stack-users.md) with different permissions collaborating together. In Contentstack, all the member accounts of a stack are referred to as users. By using the Contentstack Management Users action, you can fetch user-related details, such as name, email, and so on.
 
 Let’s look at the action in detail.
 

@@ -16,7 +16,7 @@ This page explains how the Branch Merging feature works, what merge strategies a
 
 The Branch Merging feature enables you to merge changes between two branches using a variety of available merge strategies. When merging two branches, you select a base branch where changes will be merged and a compare branch that contains the changes to be merged.
 
-**Note:** The Merge feature currently only merges differences between content type and global field modules, and is **only available via **[**Content Management API**](/docs/developers/apis/content-management-api/#merging-branches)** and **[**CLI commands**](/docs/developers/cli/compare-and-merge-branches-using-the-cli/).
+**Note:** The Merge feature currently only merges differences between content type and global field modules, and is **only available via **[**Content Management API**](../../../api-docs/api-detail/content-management-api.md#merging-branches)** and **[**CLI commands**](../cli/compare-and-merge-branches-using-the-cli.md).
 
 The default behavior when merging will create a backup of the branch you are merging into for safety. You can use this to quickly revert your site in the event that there is an issue with the merge via an alias.
 
@@ -34,7 +34,7 @@ You can merge two branches using the following strategies:
 - **Merge modified with prefer compare: **This strategy allows you to add only the modified changes from the compare branch to the base branch. When conflicts arise, it keeps the modified changes of the compare branch and ignores the modified changes of the base branch. Any new items in the compare branch are ignored.
 - **Ignore: **This strategy allows you to ignore all changes from the compare branch, keeping the base branch as it is. This can be used to ignore a specific change or to ignore all changes and merge only specific changes.
 
-**Additional Resource:** Learn how to merge branches using our new requests in the [Merging Branches](/docs/developers/apis/content-management-api/#merging-branches) section in CMA. To merge branches via CLI, you can refer to the [Merge Branches](/docs/developers/cli/compare-and-merge-branches-using-the-cli/#steps-to-merge-branches) section in the guide on [how to Compare and Merge Branches using the CLI.](/docs/developers/cli/compare-and-merge-branches-using-the-cli/)
+**Additional Resource:** Learn how to merge branches using our new requests in the [Merging Branches](../../../api-docs/api-detail/content-management-api.md#merging-branches) section in CMA. To merge branches via CLI, you can refer to the [Merge Branches](../cli/compare-and-merge-branches-using-the-cli.md#steps-to-merge-branches) section in the guide on [how to Compare and Merge Branches using the CLI.](../cli/compare-and-merge-branches-using-the-cli.md)
 
 ## Use-Cases of Merging Branches
 
@@ -118,7 +118,7 @@ Since this strategy allows you to add only modified changes from the compare bra
 ## Common questions
 
 ### Where is the Merge feature available?
-**Note:** The Merge feature currently only merges differences between content type and global field modules, and is **only available via **[**Content Management API**](/docs/developers/apis/content-management-api/#merging-branches)** and **[**CLI commands**](/docs/developers/cli/compare-and-merge-branches-using-the-cli/).
+**Note:** The Merge feature currently only merges differences between content type and global field modules, and is **only available via **[**Content Management API**](../../../api-docs/api-detail/content-management-api.md#merging-branches)** and **[**CLI commands**](../cli/compare-and-merge-branches-using-the-cli.md).
 
 ### What happens by default when I merge branches?
 The default behavior when merging will create a backup of the branch you are merging into for safety. You can use this to quickly revert your site in the event that there is an issue with the merge via an alias.

@@ -18,7 +18,7 @@ This page describes the folder and file structure created after installing conte
 
 **Warning**: contentstack-express framework has been deprecated. We will soon stop supporting this framework. Instead, we recommend using [DataSync](/docs/developers/develop-apps-with-datasync), which is faster and more flexible than the web framework.
 
-After successfully [installing](/docs/developers/web-framework-deep-dive/installation) contentstack-express, your main directory will contain the following sub-folders:
+After successfully [installing](./installation.md) contentstack-express, your main directory will contain the following sub-folders:
 
 | Folder/File Name | Description |
 |---|---|

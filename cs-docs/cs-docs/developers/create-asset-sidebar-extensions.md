@@ -24,7 +24,7 @@ Create Asset Sidebar Extensions
 
 ##### Introduction
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](/docs/developers/developer-hub/asset-sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](./developer-hub/asset-sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 Asset Sidebar Extensions let you create customized sidebar widgets that extend the functionality of your assets and enhance their editorial experience to suit your needs.
 
@@ -117,7 +117,7 @@ Helpful Links for Asset Sidebar Extensions
 ## Common questions
 
 **Q: Are Asset Sidebar Extensions the recommended approach for new development?**  
-A: **Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](/docs/developers/developer-hub/asset-sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+A: **Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](./developer-hub/asset-sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 **Q: What do Asset Sidebar Extensions let you build?**  
 A: Asset Sidebar Extensions let you create customized sidebar widgets that extend the functionality of your assets and enhance their editorial experience to suit your needs.

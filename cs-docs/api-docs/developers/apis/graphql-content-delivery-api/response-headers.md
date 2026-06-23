@@ -30,11 +30,11 @@ The possible values for this header can be of string datatype, for example, **bl
 
 **x-query-complexity**
 
-This header calculates the complexity value for each API request made to the Contentstack database server. It represents the total number of entries and/or assets that were retrieved from the server by a specific GraphQL API request. Read more about it in the [Query Complexity and Cost Calculation](/docs/developers/apis/graphql-content-delivery-api#query-complexity-and-cost-calculation) section.
+This header calculates the complexity value for each API request made to the Contentstack database server. It represents the total number of entries and/or assets that were retrieved from the server by a specific GraphQL API request. Read more about it in the [Query Complexity and Cost Calculation](../../../api-detail/graphql-content-delivery-api.md#query-complexity-and-cost-calculation) section.
 
 **x-resolver-cost**
 
-This header calculates the total number of database calls that need to be made to fetch the data requested by a specific GraphQL API request. Read more about it in the [Query Complexity and Cost Calculation](/docs/developers/apis/graphql-content-delivery-api#query-complexity-and-cost-calculation) section.
+This header calculates the total number of database calls that need to be made to fetch the data requested by a specific GraphQL API request. Read more about it in the [Query Complexity and Cost Calculation](../../../api-detail/graphql-content-delivery-api.md#query-complexity-and-cost-calculation) section.
 
 **x-reference-depth**
 

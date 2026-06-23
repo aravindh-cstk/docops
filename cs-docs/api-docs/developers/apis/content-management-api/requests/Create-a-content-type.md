@@ -17,7 +17,7 @@ last_updated: 2024-03-21
 The Create a content type call creates a new content type in a particular stack of your Contentstack account.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the complete schema of the content type. You can refer the [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) document to know how you can add fields into your content type through API.
+In the “Body” section, you need to provide the complete schema of the content type. You can refer the [JSON schema for creating a content type](../../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md) document to know how you can add fields into your content type through API.
 
 To mark a field as non-unique, you need to set the unique parameter to false. For example, to remove the unique constraint on the default 'title' field, you need to update the JSON schema of the title field as follows:
 
@@ -52,7 +52,7 @@ To mark a field as non-unique, you need to set the unique parameter to false. Fo
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`

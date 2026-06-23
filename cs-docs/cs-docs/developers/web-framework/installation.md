@@ -43,14 +43,14 @@ In the terminal, navigate to your workspace, and run the “connect” command.
 $ contentstack connect
 ```
 
-This will prompt you to enter the stack api key and access token. You can find these details on your [Stack’s page](/docs/developers/set-up-stack/view-stack-details).
+This will prompt you to enter the stack api key and access token. You can find these details on your [Stack’s page](../set-up-stack/view-stack-details.md).
 
 ```
 Enter your stack api key: {API_KEY}
 Enter your stack access token: {ACCESS_TOKEN}
 ```
 
-This will validate the stack. Once validated, you will be prompted to enter the project root directory and select the publishing [environment](/docs/developers/set-up-environments/about-environments) (“development”) which we created in earlier steps.
+This will validate the stack. Once validated, you will be prompted to enter the project root directory and select the publishing [environment](../set-up-environments/about-environments.md) (“development”) which we created in earlier steps.
 
 ```
 Enter name of the directory to contain the project: (my-site)
@@ -72,4 +72,4 @@ A: Node.js v4.2.0 or later.
 A: Run: `npm install -g contentstack-cli`.
 
 **Q: Where do I find the stack API key and access token for `contentstack connect`?**  
-A: You can find these details on your [Stack’s page](/docs/developers/set-up-stack/view-stack-details).
+A: You can find these details on your [Stack’s page](../set-up-stack/view-stack-details.md).

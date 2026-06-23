@@ -21,7 +21,7 @@ Contentstack's Brand Kit lets you streamline the management of brand identity an
 
 Within the Brand Kit platform, you can create a Brand Kit to store brand-specific information. Inside a Brand Kit, you can make tone-specific Voice Profiles to set the tone of voice, formality level, and other key branding elements that highlight your brand. Each Brand Kit contains a Knowledge Vault, a centralized repository designed to store, manage, and organize all brand-related data items. Serving as a comprehensive knowledge base, it supports Contentstack's Generative AI by offering a reliable reference for content creation.
 
-**Additional Resource: **Refer to the [Brand Kit](/docs/content-managers/brand-kit/about-brand-kit) documentation to know more.
+**Additional Resource: **Refer to the [Brand Kit](../content-managers/brand-kit/about-brand-kit.md) documentation to know more.
 
 The Brand Kit connector lets you perform Brand Kit specific actions. With this connector, you can fetch the details of Voice Profiles, Generative AI content, and create/update/delete and fetch the details of the Knowledge Vault items.
 
@@ -68,7 +68,7 @@ The Generative AI acts as a bridge connecting your Vector database and the Large
 
 Next, the Generative AI API passes this data to the Large Language Model (LLM). Based on your prompt, the LLM then analyzes the data and understands what it means. Finally, the Generative AI API sends back the processed information to you as a response.
 
-**Additional Resource: **Refer to the [Generative AI API](/docs/developers/apis/brand-kit-management-api#generative-ai) documentation to know more.
+**Additional Resource: **Refer to the [Generative AI API](../../api-docs/api-detail/brand-kit-management-api.md#generative-ai) documentation to know more.
 
 With the Generative AI action, you can fetch the details of the response generated using a Voice Profile and Knowledge Vault. You can perform Generative AI-based operations using the following Generative AI action.
 
@@ -92,7 +92,7 @@ This action fetches a response based on the provided prompt, generated using the
 
 A Knowledge Vault is a centralized repository to store, manage, and organize brand-related documents, data, and content in your Brand Kit. You can create, update, or delete items within a Knowledge Vault. These items can be used to generate responses using the [Generative AI](#generative-ai) action.
 
-**Additional Resource: **Refer to the [Knowledge Vault](/docs/content-managers/brand-kit/about-knowledge-vault) documentation to know more.
+**Additional Resource: **Refer to the [Knowledge Vault](../content-managers/brand-kit/about-knowledge-vault.md) documentation to know more.
 
 With the Knowledge Vault actions, you can create/delete/update and fetch the details of the items in the Knowledge Vault. You can perform Knowledge Vault based operations using the following Knowledge Vault actions.
 
@@ -102,7 +102,7 @@ Set up an automation with Create an Item in Knowledge Vault action and Generativ
 
 If you do not mark the checkbox for Knowledge Vault, Generative AI will provide a generic response.
 
-**Additional Resource: **Refer to the [Knowledge Vault API](/docs/developers/apis/brand-kit-management-api#knowledge-vault) documentation to know more.
+**Additional Resource: **Refer to the [Knowledge Vault API](../../api-docs/api-detail/brand-kit-management-api.md#knowledge-vault) documentation to know more.
 
 ### Create an Item in Knowledge Vault
 
@@ -183,9 +183,9 @@ Voice Profiles define a brand or individual user's preferred writing style, tone
 
 Within a Brand Kit, you can create multiple Voice Profiles, enabling the selection of distinct styles for various scenarios. For example, a company might prefer a formal tone for reports or press releases while opting for a casual tone for blog and social media content.
 
-Within the Contentstack’s CMS, you can use the [AI Assistant](/docs/developers/marketplace-apps/ai-assistant-with-brand-kit) app to generate content based on the Brand Kit and Voice Profile.
+Within the Contentstack’s CMS, you can use the [AI Assistant](../developers/marketplace-apps/ai-assistant-with-brand-kit.md) app to generate content based on the Brand Kit and Voice Profile.
 
-**Additional Resource: **Refer to the [Voice Profile](/docs/content-managers/brand-kit/about-voice-profile) documentation to know more.
+**Additional Resource: **Refer to the [Voice Profile](../content-managers/brand-kit/about-voice-profile.md) documentation to know more.
 
 With the Voice Profile actions, you can create, update, delete, and fetch the details of all the Voice Profiles and Brand Kit. You can perform Voice Profile based operations using the following Voice Profile actions.
 

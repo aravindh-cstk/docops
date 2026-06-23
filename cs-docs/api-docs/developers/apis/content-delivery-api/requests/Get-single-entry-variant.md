@@ -16,7 +16,7 @@ last_updated: 2025-09-17
 
 The Get single entry variant request retrieves a single variant entry of a given base entry.
 
-Pass your variant UID(s) or [aliases](/docs/personalize/glossary-key-features#variant-aliases) in the x-cs-variant-uid header to get all the variants applied to the entries.
+Pass your variant UID(s) or [aliases](../../../../../cs-docs/personalize/glossary-key-features.md#variant-aliases) in the x-cs-variant-uid header to get all the variants applied to the entries.
 
 **Note**: By default you can add up to **3 variant UIDs or aliases** (comma-separated) simultaneously. The limit can vary based on your organization plan. The variant UID or alias added first takes priority and will be applied to the base entry fields. For example, if you pass UIDs for Red, Green, and Blue variants in that order, the Red variant will have the highest priority. Sample header request, x-cs-variant-uid: cs6c42daef493fb432, cs7697ce80c9bbcc3e, cs8697ce80c9bbcc4f or x-cs-variant-uid: cs_personalize_0_0, cs_personalize_0_1, cs_personalize_0_2.
 

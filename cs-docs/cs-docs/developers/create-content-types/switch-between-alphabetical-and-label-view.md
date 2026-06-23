@@ -17,12 +17,12 @@ This page explains how to switch between Alphabetical View and Label View when v
 
 ## Switch Between Alphabetical and Label View
 
-Contentstack makes organizing and sorting your [content types](/docs/developers/create-content-types/about-content-types) easy by allowing you to switch between Alphabetical View and Label View. This feature helps streamline navigation, especially when dealing with numerous content types.
+Contentstack makes organizing and sorting your [content types](./about-content-types.md) easy by allowing you to switch between Alphabetical View and Label View. This feature helps streamline navigation, especially when dealing with numerous content types.
 
-**Note:** You can only switch to Label View if you have [applied](/docs/developers/create-content-types/create-and-apply-labels) labels to your content types.
+**Note:** You can only switch to Label View if you have [applied](./create-and-apply-labels.md) labels to your content types.
 
 To switch views, log in to your [Contentstack account](https://app.contentstack.com/#!/stacks) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and click the “Content Models” icon in the left navigation panel to view the list of content types.
+- Go to your [stack](../set-up-stack/about-stack.md), and click the “Content Models” icon in the left navigation panel to view the list of content types.
 - By default, content types are displayed in **Alphabetical View**, which sorts them alphabetically.
 - To view content types by their labels, click on a label from the list. This displays all content types associated with the selected label.
 

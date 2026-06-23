@@ -26,7 +26,7 @@ You can use the query ?canvas={width_value},{height_value} to set the height and
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={width_value},{height_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 To define the X-axis and Y-axis position of the top left corner of the canvas area, use the query ?canvas={width_value},{height_value},x{value},y{value}. This allows you to define the starting point of the canvas region. The x-axis value and y-axis value can be specified in pixels or percentage. An example of this would be ?canvas=700,800,x150,y75 or ?canvas=700,800,x0.60,y0.50.
 
@@ -44,7 +44,7 @@ To define the X-axis and Y-axis position of the top left corner of the canvas ar
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 You can set the horizontal and vertical offset of the canvas area by using the query ?canvas={width_value},{height_value},offset-x{value},offset-y{value}. This allows you to define the center point of the canvas area. The x-axis offset value and y-axis offset value can be defined only in percentage. An example of this would be ?canvas=700,800,offset-x0.65,offset-y0.80.
 
@@ -62,7 +62,7 @@ You can set the horizontal and vertical offset of the canvas area by using the q
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
   
 

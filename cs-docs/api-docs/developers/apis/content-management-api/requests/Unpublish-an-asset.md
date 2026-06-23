@@ -14,7 +14,7 @@ last_updated: 2024-02-20
 
 **POST** `/assets/{asset_uid}/unpublish`
 
-The Unpublish an asset call is used to unpublish a specific version of an asset from a desired [environment](/docs/developers/set-up-environments/about-environments).  
+The Unpublish an asset call is used to unpublish a specific version of an asset from a desired [environment](../../../../../cs-docs/developers/set-up-environments/about-environments.md).  
 To configure the permissions for your application via OAuth, please include the cm.asset:unpublish scope.
 
 In case of **Scheduled Unpublishing**, add the scheduled_at key and provide the date/time in the ISO format as its value. Example: "scheduled_at":"2016-10-07T12:34:36.000Z"

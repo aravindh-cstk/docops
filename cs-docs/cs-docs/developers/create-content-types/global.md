@@ -21,15 +21,15 @@ A Global field is a reusable group of fields. Define it once and use it across m
 
 You can update the following properties of a Global field at any time:
 - Select Global Field
-- [Display Name](/docs/developers/create-content-types/display-name)
-- [Unique ID](/docs/developers/create-content-types/unique-id)
-- [Instruction Value](/docs/developers/create-content-types/instruction-value)
-- [Help Text](/docs/developers/create-content-types/help-text)
-- [Multiple](/docs/developers/create-content-types/multiple)
-- [Non-localizable](/docs/developers/create-content-types/non-localizable)
-- [Mark as Global Field Title](/docs/developers/create-content-types/mark-as-title#mark-as-global-field-title)
+- [Display Name](./display-name.md)
+- [Unique ID](./unique-id.md)
+- [Instruction Value](./instruction-value.md)
+- [Help Text](./help-text.md)
+- [Multiple](./multiple.md)
+- [Non-localizable](./non-localizable.md)
+- [Mark as Global Field Title](./mark-as-title.md#mark-as-global-field-title)
 
-**Note:** You can now **show a Global field as a separate tab** in the entry editor for better organization and navigation. Learn how to enable the [Show as Tab](/docs/developers/create-content-types/show-as-tab) option.
+**Note:** You can now **show a Global field as a separate tab** in the entry editor for better organization and navigation. Learn how to enable the [Show as Tab](./show-as-tab.md) option.
 
 For example, to standardize SEO metadata across all pages, you can create a Global field named **SEO** and add subfields such as:
 - Meta Title
@@ -39,7 +39,7 @@ For example, to standardize SEO metadata across all pages, you can create a Glob
 
 Once created, add the **SEO** Global field to all relevant content types. When content creators add entries, the SEO field appears automatically with the predefined subfields (**Meta Title**, **Meta Description**, **Meta Keywords**, and an **Enable Search Indexing** toggle), ready to use, as shown below:
 
-**Note:** Updating fields in an existing content type may result in data loss. Before making changes, refer to the [Content Type Change Management](/docs/developers/content-modeling/content-type-change-management) documentation.
+**Note:** Updating fields in an existing content type may result in data loss. Before making changes, refer to the [Content Type Change Management](../content-modeling/content-type-change-management.md) documentation.
 
 ## Copy Field Values Across Global Fields
 
@@ -54,9 +54,9 @@ To copy and paste field values across group fields, log in to your [Contentstack
 - In the target entry or instance, click the vertical ellipsis again and select **Paste Field Values**.**Note:** The destination instance must match the original instance’s name and structure.
 
 **Additional Resources:**
-- Learn how to [add Global fields to any content types](/docs/developers/global-field/add-the-global-field-to-content-types) in your stack.
-- Enhance a Global field by adding a [Modular Block within it](/docs/developers/global-field/modular-blocks-within-global-fields), [nesting a Global field inside a Group field](/docs/developers/global-field/global-fields-within-group-fields), or even [within another Global field](/docs/developers/global-field/about-global-field#nested-global-fields).
-- Use [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) to dynamically show or hide fields based on conditions.
+- Learn how to [add Global fields to any content types](../global-field/add-the-global-field-to-content-types.md) in your stack.
+- Enhance a Global field by adding a [Modular Block within it](../global-field/modular-blocks-within-global-fields.md), [nesting a Global field inside a Group field](../global-field/global-fields-within-group-fields.md), or even [within another Global field](../global-field/about-global-field.md#nested-global-fields).
+- Use [Field Visibility Rules](./about-field-visibility-rules.md) to dynamically show or hide fields based on conditions.
 
 ## Common questions
 
@@ -67,7 +67,7 @@ A Global field is a reusable group of fields that you define once and use across
 Yes. You can update properties such as Display Name, Unique ID, Help Text, Multiple, Non-localizable, and Mark as Global Field Title.
 
 ### Can I show a Global field as a separate tab in the entry editor?
-Yes. You can enable the [Show as Tab](/docs/developers/create-content-types/show-as-tab) option.
+Yes. You can enable the [Show as Tab](./show-as-tab.md) option.
 
 ### How do I copy values between Global field instances?
 Use **Copy Field Values** from the instance’s vertical ellipsis menu, then use **Paste Field Values** in the target instance (which must match the original instance’s name and structure).

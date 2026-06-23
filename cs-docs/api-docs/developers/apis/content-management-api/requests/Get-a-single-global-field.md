@@ -27,7 +27,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 ## URL Parameters
 
 - **global_field_uid** (required)
-  Enter the unique ID of the Global field of which you want to retrieve the details. The UID of a Global field is unique across a stack. Execute the '[Get all Global fields](/docs/developers/apis/content-management-api#get-all-global-fields)' request to retrieve the UID of a Global field.
+  Enter the unique ID of the Global field of which you want to retrieve the details. The UID of a Global field is unique across a stack. Execute the '[Get all Global fields](../../../../api-detail/content-management-api.md#get-all-global-fields)' request to retrieve the UID of a Global field.
   Default: `category`
 
 ## Query Parameters
@@ -60,7 +60,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

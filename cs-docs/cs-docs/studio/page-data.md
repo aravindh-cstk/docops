@@ -51,7 +51,7 @@ This section lets you define SEO and sharing metadata for your composition:
 ### Using in code
 
 ## Preview Entry (Linked Compositions)
-For [Linked Compositions](/docs/studio/manage-a-composition#linked-composition), Studio selects the first available entry from the connected Content Type by default. You can change this entry to preview different content variations in Canvas.
+For [Linked Compositions](./manage-a-composition.md#linked-composition), Studio selects the first available entry from the connected Content Type by default. You can change this entry to preview different content variations in Canvas.
 
 ## Page Entries (Data Binding)
 You can associate additional content entries from Contentstack to a composition. These entries become available in the **Page Data** panel for binding to component props.

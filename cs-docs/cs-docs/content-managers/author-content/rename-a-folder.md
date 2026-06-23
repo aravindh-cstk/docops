@@ -20,13 +20,13 @@ This page explains how to rename an asset folder in Contentstack to keep your co
 Renaming asset folders in Contentstack is a simple yet powerful way to keep your content library organized and efficient.
 
 To rename an asset folder, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Assets” icon in the left navigation panel.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel.
 - Locate the folder you want to rename, click the **vertical ellipses** under **Actions**, and select **Rename**.
 - Type in the new name for the folder in the pop-up modal and click **Save**.
 
 ## API Reference
 
-To rename an asset folder using the API, refer to the [Update or move folder](/docs/developers/apis/content-management-api#update-or-move-folder) API request.
+To rename an asset folder using the API, refer to the [Update or move folder](../../../api-docs/api-detail/content-management-api.md#update-or-move-folder) API request.
 
 ## Common questions
 
@@ -37,7 +37,7 @@ Yes. Use the **Rename** option under **Actions** for the folder.
 In your stack, click the “Assets” icon in the left navigation panel, then use the folder’s **Actions** menu.
 
 ### Is there an API to rename an asset folder?
-Yes. Refer to the [Update or move folder](/docs/developers/apis/content-management-api#update-or-move-folder) API request.
+Yes. Refer to the [Update or move folder](../../../api-docs/api-detail/content-management-api.md#update-or-move-folder) API request.
 
 ### Do I need to be logged in to rename an asset folder?
 Yes. Log in to your [Contentstack account](https://www.contentstack.com/login) before performing the steps.

@@ -25,8 +25,8 @@ By installing the Healthcheck app from the Contentstack Marketplace, you can eas
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
-- [Full Page UI Location](/docs/developers/developer-hub/full-page-location/)
+- Access to the Contentstack Organization/Stack as the [Owner](../organization/organization-roles.md#organization-owner)/[Admin](../organization/organization-roles.md#organization-admin)
+- [Full Page UI Location](../developer-hub/full-page-location.md)
 
 Let's follow the step-by-step guide to install and configure the Healthcheck app within your stack.
 
@@ -47,10 +47,10 @@ Navigate to the “App Switcher” icon in the top-right corner and click **Mark
 - After configuring the settings, click **Authorize**.
 - The app displays the organization's entities. Scroll down and click the **Authorize** button again to complete the OAuth authorization.
 
-**Additional Resource**: For more information, refer to the [Branches](/docs/developers/branches/about-branches), [Environments](/docs/developers/set-up-environments/about-environments), and [Contentstack OAuth](/docs/developers/developer-hub/contentstack-oauth) documentation.
+**Additional Resource**: For more information, refer to the [Branches](../branches/about-branches.md), [Environments](../set-up-environments/about-environments.md), and [Contentstack OAuth](../developer-hub/contentstack-oauth.md) documentation.
 - Click the **Save** button to save the configuration.
-- On the **UI Locations** tab, you can see the predefined app location. As the Healthcheck app is a Full Page Location app, the only UI location available is Full Page, as shown below.**Additional Resource**: For more information, refer to the [Full Page Location](/docs/developers/developer-hub/full-page-location/) documentation.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information, on UI locations and webhooks, refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#viewedit-configuration-ui-locations-and-webhook) guide.
+- On the **UI Locations** tab, you can see the predefined app location. As the Healthcheck app is a Full Page Location app, the only UI location available is Full Page, as shown below.**Additional Resource**: For more information, refer to the [Full Page Location](../developer-hub/full-page-location.md) documentation.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information, on UI locations and webhooks, refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#viewedit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Healthcheck app.
 
 ## Use the Healthcheck App within your Stack
@@ -132,7 +132,7 @@ You can click **View Details** to view the content type, field, and global field
 
 You can download a detailed .xlsx report for the **Content Modeling** category by clicking the **Export XLSX** button.
 
-**Additional Resource**: For more information, refer to the [Content Modeling](/docs/developers/content-modeling/about-content-modeling) and [Content Types](/docs/developers/create-content-types/about-content-types) documentation.
+**Additional Resource**: For more information, refer to the [Content Modeling](../content-modeling/about-content-modeling.md) and [Content Types](../create-content-types/about-content-types.md) documentation.
 
 ### Content
 Under the **Content** tab, you will see the assessment results for Entries and Assets. The Healthcheck app is designed to thoroughly evaluate the health and integrity of the entries content and digital assets managed within the stack.
@@ -150,7 +150,7 @@ You can click **View Details** to view the entries and assets issue in detail. T
 
 You can download a detailed .xlsx report for the **Content** category by clicking the **Export XLSX** button.
 
-**Additional Resource**: For more information, refer to the [Entries](/docs/content-managers/author-content/about-entries) and [Assets](/docs/content-managers/author-content/about-assets) documentation.
+**Additional Resource**: For more information, refer to the [Entries](../../content-managers/author-content/about-entries.md) and [Assets](../../content-managers/author-content/about-assets.md) documentation.
 
 ### Other Configurations
 Under the **Other Configurations** tab, the Healthcheck app also checks for configurations related to Webhooks, Environments, Workflows, Releases, Locales, Users, Custom User Roles, Extensions, and more. These additional checks help ensure your stack's overall performance and proper functioning.
@@ -187,7 +187,7 @@ The **Info** tab displays all logs (along with the number of logs), whereas the 
 ## Common questions
 
 ### Who can install and configure the Healthcheck app?
-Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin).
+Access to the Contentstack Organization/Stack as the [Owner](../organization/organization-roles.md#organization-owner)/[Admin](../organization/organization-roles.md#organization-admin).
 
 ### What is the maximum number of entries supported by the Healthcheck app?
 **Note**: The Healthcheck app supports up to **100,000 entries**.

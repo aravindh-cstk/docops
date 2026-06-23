@@ -17,7 +17,7 @@ This page explains Contentstack’s Asset Versioning feature, including what it 
 
 ## About Asset Versioning
 
-Contentstack's **Asset** **Versioning** feature offers a seamless way to manage your [assets](/docs/content-managers/author-content/about-assets) by automatically creating a new version whenever an asset is updated. Whether you’re modifying the title, description, or tags of an asset, this system ensures you have a comprehensive history of changes.
+Contentstack's **Asset** **Versioning** feature offers a seamless way to manage your [assets](./about-assets.md) by automatically creating a new version whenever an asset is updated. Whether you’re modifying the title, description, or tags of an asset, this system ensures you have a comprehensive history of changes.
 
 This functionality is designed to simplify collaboration, streamline workflows, and maintain consistency across your digital content.
 

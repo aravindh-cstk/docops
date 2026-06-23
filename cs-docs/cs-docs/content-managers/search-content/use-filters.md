@@ -23,7 +23,7 @@ Let us understand these search filters.
 
 ## Search Filters for Entries
 
-On the [Entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries) list page, you will see the **Filters** tab in the left panel.
+On the [Entries](../author-content/about-entries.md) list page, you will see the **Filters** tab in the left panel.
 
 You will see some predefined filters that you can use. These filters are multi-select checkboxes that allow you to select multiple values. Once you select a value from the given filters, you will see a filter pill or tag on the entries list table. It lets you see what filters you have applied.
 
@@ -50,7 +50,7 @@ To customize the visibility of filters on the left panel, click the **Manage Fil
 
 ## Search Filters for Assets
 
-To access the search filters for assets, navigate to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and select the [**Assets**](https://www.contentstack.com/docs/content-managers/author-content/about-assets) module. Then, click the **Filters** tab in the left panel. Here’s what you’ll find:
+To access the search filters for assets, navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the [**Assets**](../author-content/about-assets.md) module. Then, click the **Filters** tab in the left panel. Here’s what you’ll find:
 - **Asset Folders**: Lists all available asset folders in the stack.
 - **Asset Types**: Provides a list of asset types for filtering assets by type.
 - **Publish Status**: Displays environments where assets are published, including those not published.

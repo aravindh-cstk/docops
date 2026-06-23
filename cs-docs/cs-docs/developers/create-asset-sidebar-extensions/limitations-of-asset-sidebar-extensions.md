@@ -16,7 +16,7 @@ This page lists the limitations of Asset Sidebar Extensions in Contentstack. Dev
 
 ## Limitations of Asset Sidebar Extensions
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](/docs/developers/developer-hub/asset-sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Asset Sidebar UI Location](../developer-hub/asset-sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 The limitations to using Asset Sidebar Extension are as follows:
 - The maximum size of the asset sidebar extension source code cannot exceed **500** KB**.**

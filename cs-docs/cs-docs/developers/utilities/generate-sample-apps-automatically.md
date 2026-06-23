@@ -63,10 +63,10 @@ build template-generator
 - It will ask you to choose any one of the templates. Select from the list of available example apps by using the arrow key and hit Enter. For this demo, we have selected **Vue-Nuxt-App**.
 - Next, you need to provide your credentials such as Contentstack email and password. Enter the details and hit Enter. You have now logged into Contentstack, it will ask you to provide a stack name to be created. For our example, type **Website **and hit Enter.
 
-**Note**: If you have enabled [Two-factor Authentication](/docs/developers/two-factor-authentication) on your Contentstack account, ensure you have disabled it . Else, you will not be able to log in to your Contentstack account.
+**Note**: If you have enabled [Two-factor Authentication](../security/two-factor-authentication.md) on your Contentstack account, ensure you have disabled it . Else, you will not be able to log in to your Contentstack account.
 - Then, you need to provide the Contentstack's organization ID. A stack named Website will be created inside your organization.
 
-**Additional Resource**: You can find your Organization ID by following the steps mentioned in the [Organization Settings](/docs/owners-and-admins/organization-settings-overview) section.
+**Additional Resource**: You can find your Organization ID by following the steps mentioned in the [Organization Settings](../organization/organization-settings-overview.md) section.
 - Next, you'll need to specify the environment where you want to publish your content to. By default, you'll see (production), you can type anything, for now type development.
 
 You will get a success message once the utility has auto-generated a stack, imported the content types, created three entries, and published them on the development environment.
@@ -86,10 +86,10 @@ Open any content type, you'll see content and some other data inside the entry, 
 It auto-generates a stack, imports content types, creates entries, and publishes them to a specified environment, and then creates an app folder with the imported data.
 
 ### Do I need to disable Two-factor Authentication to use this utility?
-**Note**: If you have enabled [Two-factor Authentication](/docs/developers/two-factor-authentication) on your Contentstack account, ensure you have disabled it . Else, you will not be able to log in to your Contentstack account.
+**Note**: If you have enabled [Two-factor Authentication](../security/two-factor-authentication.md) on your Contentstack account, ensure you have disabled it . Else, you will not be able to log in to your Contentstack account.
 
 ### What do I need installed before running the utility?
 You need [Node.js](https://nodejs.org/en/download/) installed on your computer, a [Contentstack](https://www.contentstac.com/) account, and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your machine.
 
 ### Where can I find my Organization ID?
-**Additional Resource**: You can find your Organization ID by following the steps mentioned in the [Organization Settings](/docs/owners-and-admins/organization-settings-overview) section.
+**Additional Resource**: You can find your Organization ID by following the steps mentioned in the [Organization Settings](../organization/organization-settings-overview.md) section.

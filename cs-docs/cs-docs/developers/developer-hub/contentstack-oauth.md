@@ -29,11 +29,11 @@ Some scenarios in which you can use Contentstack OAuth are as follows:
 
 ## Multiple Region Support
 
-Since Contentstack is hosted at multiple data centers, the API domain URL varies for each data center. Learn more about [Contentstack Regions](/docs/developers/contentstack-regions/about-regions/).
+Since Contentstack is hosted at multiple data centers, the API domain URL varies for each data center. Learn more about [Contentstack Regions](../contentstack-regions/about-regions.md).
 
 Private apps only authorize specific organization members in which the app is developed. Suppose you want your application to execute OAuth capabilities across all regions/data centers. In that case, you need to publish your app either as a Public App or a Public Unlisted App.
 
-**Additional Resource:** Learn more about [app visibility status](/docs/developer-hub/app-visibility-status/).
+**Additional Resource:** Learn more about [app visibility status](./app-visibility-status.md).
 
 Here, the developers need to identify which data center the client has authorized the app from and the region the organization is hosted. After authorization, developers can identify the region using the **location parameter** in the redirected URL.
 
@@ -94,14 +94,14 @@ To integrate your app with Contentstack OAuth, log in to your [Contentstack acco
 
 Configuring OAuth and its scopes allows your app to perform tasks in your development workspace. You can configure and select scopes through the **OAuth** option available in your app.
 To configure OAuth, log in to your Contentstack account and follow the steps below:
-- [Create a new App](/docs/developer-hub/creating-an-app-in-developer-hub) or click the app you want to configure.
+- [Create a new App](./creating-an-app-in-developer-hub.md) or click the app you want to configure.
 - On the left navigation panel, click the **OAuth** tab.
 - In the **OAuth Details** page, the following options are displayed for your app:**Client ID**: The Client ID identifies your application and frequently appears in the OAuth negotiation URLs. You can freely share client IDs in code and emails, but you cannot use them alone to perform actions on behalf of your app.
 - **Client Secret**: The Client Secret acts as a secret credential when exchanging tokens with Contentstack. You should not share the client secret keys via emails, distributed native applications, client-side javascript, or public code repositories.
 - **Redirect URL**: The authorization server directs users to the Redirect URL once they have successfully granted authorization to the app. Maintaining the security of this URL is crucial to avoid redirection to unauthorized locations.
 
 When configuring the app, developers must register one or more Redirect URLs. Users have the flexibility to configure up to **10 **redirect URLs, with the initial one serving as the default. If desired, users can easily alter the default with a simple drag-and-drop method to rearrange the URLs.
-- Add the relevant [app or user token scopes](/docs/developer-hub/oauth-scopes/).
+- Add the relevant [app or user token scopes](./oauth-scopes.md).
 - Click **Save** to save your OAuth configurations.
 **Note:** User permission scopes can be passed dynamically in the Authorization URL while authorizing a user.
 - Next, you can check out how to add the App and User Token Scopes.
@@ -121,7 +121,7 @@ To do so, perform the following steps:
 - Click the **+ User Scopes** button.
 - From the resulting **Select User Token Scopes** pop-up window, select the permissions you want to set up for your users.
 - Once done, click **Choose Scope(s)**.
-**Additional Resource:** Learn more about the app and user token scopes from the [OAuth Scopes](/docs/developer-hub/oauth-scopes/) document.
+**Additional Resource:** Learn more about the app and user token scopes from the [OAuth Scopes](./oauth-scopes.md) document.
 
 ## Authorizing Standard App
 
@@ -138,7 +138,7 @@ North America: `https://app.contentstack.com`
 - **client_id**: The app’s client ID.
 - **redirect_uri**: The redirect URL where Contentstack will send the user.
 - **scope**: The permission scopes set for your application.
-The scopes configured in the app are used directly for the App token. Whereas, for the User token, the scopes in the authorization URL should be a subset of the scopes configured in the app.**Additinal Resource:**Refer to the [OAuth Scopes](/docs/developer-hub/oauth-scopes/) document for a list of all the permission scopes for Contentstack OAuth.
+The scopes configured in the app are used directly for the App token. Whereas, for the User token, the scopes in the authorization URL should be a subset of the scopes configured in the app.**Additinal Resource:**Refer to the [OAuth Scopes](./oauth-scopes.md) document for a list of all the permission scopes for Contentstack OAuth.
 - **state**: The URL where your app is hosted.
 **Note:** You can find the App UID in the basic information section of the app. All query parameters should be URL-encoded.
 
@@ -262,7 +262,7 @@ The response will look something like this:
 
 Your access token allows you to call the methods described by the permission scopes you set during authorization. For instance:
 
-**Scope**: [cm.stacks.management:read](/docs/developers/apis/content-management-api/#get-a-single-stack)
+**Scope**: [cm.stacks.management:read](../../../api-docs/api-detail/content-management-api.md#get-a-single-stack)
 
 **API Call:**
 API_BASE_URL for different regions supported by Contentstack are:
@@ -329,7 +329,7 @@ curl --location --request POST 'https://app.contentstack.com/apps-api/token' \
 
 Standard apps use the `authorization_code` and `refresh_token` grant types. Additionally, our OAuth framework supports the `client_credentials` grant type, designed specifically for Machine-to-Machine (M2M) apps.
 
-**Additional Resource:** For more details on M2M apps, refer to the [Machine-to-Machine Apps](/docs/developer-hub/machine-to-machine-apps) documentation.
+**Additional Resource:** For more details on M2M apps, refer to the [Machine-to-Machine Apps](./machine-to-machine-apps.md) documentation.
 
 The `client_credentials` grant allows Machine-to-Machine (M2M) apps to obtain an access token without user interaction. This is ideal for applications that need to access resources autonomously.
 

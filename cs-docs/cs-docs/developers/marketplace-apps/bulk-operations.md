@@ -21,11 +21,11 @@ The Bulk Operations Marketplace app in Contentstack allows you to perform variou
 
 The Bulk Operations app enables you to use the following operation:
 
-**Entries**: Bulk operations for Contentstack [Entries](/docs/content-managers/author-content/about-entries/), allow you to perform bulk publishing, unpublishing, and deleting multiple entries at once. Content editors save time by avoiding repetitive tasks on more than one entry.
+**Entries**: Bulk operations for Contentstack [Entries](../../content-managers/author-content/about-entries.md), allow you to perform bulk publishing, unpublishing, and deleting multiple entries at once. Content editors save time by avoiding repetitive tasks on more than one entry.
 
-**Assets**: Bulk operations on Contentstack [Assets](/docs/content-managers/author-content/about-assets/), allow you to perform multiple asset-related operations such as uploading, publishing, unpublishing, and deleting in bulk. Bulk operations are available for images and videos stored within the Assets section of CMS.
+**Assets**: Bulk operations on Contentstack [Assets](../../content-managers/author-content/about-assets.md), allow you to perform multiple asset-related operations such as uploading, publishing, unpublishing, and deleting in bulk. Bulk operations are available for images and videos stored within the Assets section of CMS.
 
-**Releases**: Bulk operations on Contentstack [Releases](/docs/content-managers/create-and-manage-releases/about-releases), allow you to add multiple entries and assets at once and also create a new release. This benefits faster deployments and greater visibility into the content publishing process.
+**Releases**: Bulk operations on Contentstack [Releases](../../content-managers/create-and-manage-releases/about-releases.md), allow you to add multiple entries and assets at once and also create a new release. This benefits faster deployments and greater visibility into the content publishing process.
 
 **Find and Replace**: The Find and Replace operation quickly searches for a specific text, such as a word or a phrase, and replaces it with another. The app lets you edit the text in multiple entries at once. It can correct typos or spelling mistakes, update outdated information, and make changes throughout the content.
 
@@ -57,8 +57,8 @@ Navigate to the “App Switcher” icon in the top-right corner and click **Mark
 
   **Note**: If you skip the version check, the app defaults to **v1.0**. To use advanced features available in **v2.0**, contact Contentstack [Support](mailto:support@contentstack.com) for enablement.
 - Click the **Save** button if the release version is updated.
-- On the **UI Locations** tab, you can see the predefined app location ([Stack Dashboard Location](/docs/developers/developer-hub/dashboard-location)). You can use the toggle button corresponding to enable or disable it based on your requirements.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- On the **UI Locations** tab, you can see the predefined app location ([Stack Dashboard Location](../developer-hub/dashboard-location.md)). You can use the toggle button corresponding to enable or disable it based on your requirements.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Bulk Operations app.
 
 ## Use the Bulk Operations App within your Stack
@@ -88,7 +88,7 @@ Navigate to the stack dashboard to view the Bulk Operations app within your CMS.
 
   Click the vertical ellipsis under **Actions** next to an entry and select **View in Trash** to view the entry in trash.  
 
-  **Note**: Deleted entries stay in [Trash](/docs/developers/manage-trash/about-trash) for **14 days** before they are permanently removed.
+  **Note**: Deleted entries stay in [Trash](../manage-trash/about-trash.md) for **14 days** before they are permanently removed.
 - Click the **Reset** button to reset the content type field to start a new search.
 - Confirm and click the **Reset** button again to reset the content type drop-down.  
   **Note**: You can publish, unpublish, or delete up to **1000 entries** at a time.
@@ -121,7 +121,7 @@ Navigate to the stack dashboard to view the Bulk Operations app within your CMS.
 
   Click the vertical ellipsis under **Actions** next to an asset and select **View in Trash** to view the asset in trash.  
 
-  **Note**: Deleted assets stay in [Trash](/docs/developers/manage-trash/about-trash) for 14 days before they are permanently removed.
+  **Note**: Deleted assets stay in [Trash](../manage-trash/about-trash.md) for 14 days before they are permanently removed.
 - You can click the folder path links to move between folders.
 - Click the **Reset** button to reset the dashboard to start a new search.
 - Confirm and click the **Reset** button again to reset the dashboard view.  
@@ -170,7 +170,7 @@ Click **Releases** to add multiple entries and assets to a release or create a n
 - In the Dashboard, enter the following mandatory details:  
   Select the **Content Type** from all the available content types of your stack.
 - Select the **Locale** from the available languages.
-- The **Field Name/Path** drop-down shows all fields of the selected content type. Choose the field in which you want to search the content.**Note**: **Field Name/Path** signifies the [Unique ID](/docs/developers/create-content-types/unique-id/) of the field, which is generated when you add a field in the content type.
+- The **Field Name/Path** drop-down shows all fields of the selected content type. Choose the field in which you want to search the content.**Note**: **Field Name/Path** signifies the [Unique ID](../create-content-types/unique-id.md) of the field, which is generated when you add a field in the content type.
 - Enter a word or phrase in the **Search Value** field for searching.**Note**: The search value is case-sensitive.
 - Click the **Search** button to find the search values in the entries of that content type.  
   **Note**: After the search results for entries are generated, the **Replace** button is enabled.
@@ -188,20 +188,20 @@ Click **Releases** to add multiple entries and assets to a release or create a n
   **Note**: The app takes into account the Language which is configured at the time of selecting the locale in the Search filters.
 
 After publishing the entries successfully, the status changes to **Success** with a confirmation message. For unsuccessful publishing, the status changes to **Fail** with an error message.  
-**Note**: You cannot perform search, replace, and publish if it is restricted in your custom roles permissions. For more details, refer to the [Custom Roles](/docs/developers/invite-users-and-assign-roles/types-of-roles/#custom-role) documentation.
+**Note**: You cannot perform search, replace, and publish if it is restricted in your custom roles permissions. For more details, refer to the [Custom Roles](../invite-users-and-assign-roles/types-of-roles.md#custom-role) documentation.
 - Click the **Reset** button to reset all the fields to start a new search.
 - Confirm and click the **Reset** button again to reset the search filters.  
   You can also reset the filters by updating any value in the mandatory filters.
 
 ### Find and Replace based on Field Types
 
-You can apply the Find and Replace Bulk operation based on the field types. The app supports all the Text Fields, [Number](/docs/developers/create-content-types/number/), [Date](/docs/developers/create-content-types/date/) (without Time), [Boolean](/docs/developers/create-content-types/boolean/), and [References](/docs/developers/create-content-types/reference/).
+You can apply the Find and Replace Bulk operation based on the field types. The app supports all the Text Fields, [Number](../create-content-types/number.md), [Date](../create-content-types/date.md) (without Time), [Boolean](../create-content-types/boolean.md), and [References](../create-content-types/reference.md).
 
 **Note**: The app currently does not support **Select**, **Date** (with Time), **File**, and **Custom** fields.
 
 Let’s apply the Find and Replace operation on different Content Type Fields.
 
-- **Text Fields**: You can apply search on all the text-supported fields such as [Title](/docs/developers/create-content-types/title/), [URL](/docs/developers/create-content-types/url/), [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/), [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox/), [HTML-based Rich Text Editor](/docs/developers/create-content-types/rich-text-editor/), [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/), [Markdown](/docs/developers/create-content-types/markdown/), and [Link](/docs/developers/create-content-types/link/).Enter the **Search Value** text, click **Search**, then enter the **Replace Value** text, select the entries, and then click the **Replace** button to update the content in all the selected field instances at once.  
+- **Text Fields**: You can apply search on all the text-supported fields such as [Title](../create-content-types/title.md), [URL](../create-content-types/url.md), [Single Line Textbox](../create-content-types/single-line-textbox.md), [Multi Line Textbox](../create-content-types/multi-line-textbox.md), [HTML-based Rich Text Editor](../create-content-types/rich-text-editor.md), [JSON Rich Text Editor](../json-rich-text-editor.md), [Markdown](../create-content-types/markdown.md), and [Link](../create-content-types/link.md).Enter the **Search Value** text, click **Search**, then enter the **Replace Value** text, select the entries, and then click the **Replace** button to update the content in all the selected field instances at once.  
 
   The **Fields Name/Path** displays the Unique ID of the field along with the field instance number in which the content is found and replaced. For example, **single_line** is the Unique ID, and **[0]** signifies the first single line textbox within the entry.  
 
@@ -217,7 +217,7 @@ Select any date in the **Search Value** date selector and replace it with anothe
 
 **Note**:
 
-- The app also supports all the supported fields inside the [Modular Blocks](/docs/developers/create-content-types/modular-blocks/), [Group](/docs/developers/create-content-types/group/), and [Global](/docs/developers/create-content-types/global/) fields.
+- The app also supports all the supported fields inside the [Modular Blocks](../create-content-types/modular-blocks.md), [Group](../create-content-types/group.md), and [Global](../create-content-types/global.md) fields.
 - You can select up to **300 table items** for Find & Replace.
 
 ## Common questions
@@ -233,5 +233,5 @@ You need access to the Contentstack Organization/Stack as the Owner/Admin.
 **Note**: You can publish, unpublish, or delete up to **1000 assets** at a time.
 
 ### How long do deleted entries and assets remain in Trash?
-**Note**: Deleted entries stay in [Trash](/docs/developers/manage-trash/about-trash) for **14 days** before they are permanently removed.  
-**Note**: Deleted assets stay in [Trash](/docs/developers/manage-trash/about-trash) for 14 days before they are permanently removed.
+**Note**: Deleted entries stay in [Trash](../manage-trash/about-trash.md) for **14 days** before they are permanently removed.  
+**Note**: Deleted assets stay in [Trash](../manage-trash/about-trash.md) for 14 days before they are permanently removed.

@@ -36,7 +36,7 @@ To enable MFA for your organization, log in to your [Contentstack account](https
 
 **Note:** Once enabled, MFA setup becomes mandatory for all users on their next login.
 
-**Additional Resources: **Refer to our document on setting up [multi-factor authentication](/docs/developers/security/two-factor-authentication) for more information.
+**Additional Resources: **Refer to our document on setting up [multi-factor authentication](../security/two-factor-authentication.md) for more information.
 
 ## Password Policies
 
@@ -58,7 +58,7 @@ If you belong to multiple organizations:
 
 ## Session Timeout
 
-Session timeout in Contentstack’s **Security Configuration** settings allows organization [owners](/docs/developers/organization/organization-roles#organization-owner) and [admins](/docs/developers/organization/organization-roles#organization-admin) to automatically log users out after a defined period of inactivity or maximum session duration. This enhances account security by minimizing risks related to unattended active sessions.
+Session timeout in Contentstack’s **Security Configuration** settings allows organization [owners](./organization-roles.md#organization-owner) and [admins](./organization-roles.md#organization-admin) to automatically log users out after a defined period of inactivity or maximum session duration. This enhances account security by minimizing risks related to unattended active sessions.
 
 Enabling session and idle timeouts helps ensure:
 - Improved control over user session duration
@@ -102,7 +102,7 @@ By implementing these security features, you can significantly enhance your orga
 ## Common questions
 
 ### Who can configure Session Timeout settings?
-Session timeout in Contentstack’s **Security Configuration** settings allows organization [owners](/docs/developers/organization/organization-roles#organization-owner) and [admins](/docs/developers/organization/organization-roles#organization-admin) to automatically log users out after a defined period of inactivity or maximum session duration.
+Session timeout in Contentstack’s **Security Configuration** settings allows organization [owners](./organization-roles.md#organization-owner) and [admins](./organization-roles.md#organization-admin) to automatically log users out after a defined period of inactivity or maximum session duration.
 
 ### What happens after enabling MFA?
 Once enabled, MFA setup becomes mandatory for all users on their next login.

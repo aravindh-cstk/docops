@@ -17,13 +17,13 @@ This page explains how Global fields behave when added to entries, including how
 
 ## Add the Global Field in Entries
 
-For a Content Manager, Global fields function similarly to [Group](/docs/developers/create-content-types/group/) fields. When you add a Global field to an entry, it appears along with its subfields.
+For a Content Manager, Global fields function similarly to [Group](../create-content-types/group.md) fields. When you add a Global field to an entry, it appears along with its subfields.
 
 On the entry page, nested Global fields appear as grouped field sets, allowing content managers to manage related data efficiently within a single interface.
 
 Using Global fields in entries allows you to maintain consistency across multiple entries by reusing predefined structures. Any updates to the Global field automatically reflect in all entries where it is used, ensuring uniformity without manual changes.
 
-**Additional Resource**: You can copy the values of an instance in a Global field and paste them into another instance in the same entry or in a different entry. Learn more about [copying field values](/docs/developers/create-content-types/global#copy-field-values-across-global-fields) across Global fields.
+**Additional Resource**: You can copy the values of an instance in a Global field and paste them into another instance in the same entry or in a different entry. Learn more about [copying field values](../create-content-types/global.md#copy-field-values-across-global-fields) across Global fields.
 
 ## Common questions
 
@@ -37,4 +37,4 @@ Nested Global fields appear as grouped field sets.
 Any updates to the Global field automatically reflect in all entries where it is used.
 
 **Can I copy values between Global field instances?**  
-Yes. You can copy the values of an instance in a Global field and paste them into another instance in the same entry or in a different entry. Learn more about [copying field values](/docs/developers/create-content-types/global#copy-field-values-across-global-fields) across Global fields.
+Yes. You can copy the values of an instance in a Global field and paste them into another instance in the same entry or in a different entry. Learn more about [copying field values](../create-content-types/global.md#copy-field-values-across-global-fields) across Global fields.

@@ -16,7 +16,7 @@ last_updated: 2025-10-09
 
 The Create a taxonomy request creates a taxonomy in a particular stack of your organization.
 
-**Note**: Refer to the [Restricted Keywords for UIDs](/docs/developers/create-content-types/restricted-keywords-for-uids) to avoid using reserved keywords.
+**Note**: Refer to the [Restricted Keywords for UIDs](../../../../../cs-docs/developers/create-content-types/restricted-keywords-for-uids.md) to avoid using reserved keywords.
 
 ## Headers
 

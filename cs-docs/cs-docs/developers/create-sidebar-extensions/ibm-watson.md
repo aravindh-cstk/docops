@@ -64,7 +64,7 @@ WATSON_SERVICE_URL= URL received in service instance credentials
 
 ## Add "IBM Watson" Sidebar Extension to your stack
 
-To add IBM Watson Sidebar Extension to your [stack](/docs/developers/set-up-stack/about-stack), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:Go to your stack and click on the “Settings” icon on the left navigation panel.
+To add IBM Watson Sidebar Extension to your [stack](../set-up-stack/about-stack.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:Go to your stack and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - Click on the **+ New Extension** button on the top-right corner and select **Create new******.
 - Select the extension type as **Sidebar Extension**.
@@ -92,7 +92,7 @@ Now, let’s understand how to use this Sidebar Extension in your entries.
 
 ## Use the extension
 
-Once you have added this Sidebar Extension to your stack, you can use it in the entries of the selected [content type](https://www.contentstack.com/docs/developers/create-content-types/about-content-types/)(s). Let’s look at the steps involved in using this widget.
+Once you have added this Sidebar Extension to your stack, you can use it in the entries of the selected [content type](../create-content-types/about-content-types.md)(s). Let’s look at the steps involved in using this widget.
 
 Go to your stack and click on the “Entries” icon on the left navigation panel.
 - Select the content type for which you have enabled the Sidebar Extension.

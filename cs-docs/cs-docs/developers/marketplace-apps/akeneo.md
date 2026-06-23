@@ -19,7 +19,7 @@ This page explains how to install and configure the Contentstack Marketplace Ake
 
 Akeneo is an open-source product information management system that enables enterprises to create, maintain, and distribute their entire product catalog across multiple channels. It simplifies translation workflows, ensures consistency across every channel, streamlines collaboration on product information, and provides intuitive analytics to optimize product selection.
 
-With the Contentstack Marketplace Akeneo app, you can add products and categories from Akeneo account within your Contentstack entries via [Custom Fields](/docs/developers/create-custom-fields/about-custom-fields). You can also view the product details and search for the products directly in the [Sidebar Widget](/docs/developers/create-custom-widgets/about-custom-widgets).
+With the Contentstack Marketplace Akeneo app, you can add products and categories from Akeneo account within your Contentstack entries via [Custom Fields](../create-custom-fields/about-custom-fields.md). You can also view the product details and search for the products directly in the [Sidebar Widget](/docs/developers/create-custom-widgets/about-custom-widgets).
 
 ## Prerequisites
 
@@ -89,7 +89,7 @@ If you select the **All Fields** option, you can select only a limited number of
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
 - If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.
 
-**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - After configuring all the details, click the **Save** button.
 - Click the **Open Stack** button to start using the Akeneo application.
 
@@ -192,4 +192,4 @@ You need the **Base URL**, **Username**, **Password**, **Client ID**, and **Clie
 **Note**: You can change the **Channel** and **Locale** from the respective dropdowns. All the unavailable products will be permanently removed from the entry as per the selected channel.
 
 ### Where can I learn more about UI locations and webhooks for installed apps?
-**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.

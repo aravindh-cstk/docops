@@ -20,7 +20,7 @@ The Update content type with embedded RTE objects request allows you to update t
 
 When executing the API request, in the “URL Parameters” section, provide the unique ID of your content type.
 
-In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) document to know how you can add/update fields in your content type through API.
+In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](../../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md) document to know how you can add/update fields in your content type through API.
 
 You can make changes to the schema of the Rich Text Editor field while updating the content type schema. Here is a sample of an updated Rich Text Editor schema:
 
@@ -67,7 +67,7 @@ You can make changes to the schema of the Rich Text Editor field while updating 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.

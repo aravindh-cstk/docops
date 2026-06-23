@@ -40,7 +40,7 @@ Here are the key directories and files that form the backbone of our Restaurant 
 
 ## Next Steps
 
-[Adding a New Page to Your Sample Website](/docs/developers/building-apps/adding-a-new-page-to-your-sample-website/)
+[Adding a New Page to Your Sample Website](./adding-a-new-page-to-your-sample-website.md)
 
 ## Common questions
 

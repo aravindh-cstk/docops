@@ -216,7 +216,7 @@ The Get a single taxonomy request returns comprehensive information of a specifi
 
 The Create a taxonomy request creates a taxonomy in a particular stack of your organization.
 
-**Note**: Refer to the [Restricted Keywords for UIDs](/docs/developers/create-content-types/restricted-keywords-for-uids) to avoid using reserved keywords.
+**Note**: Refer to the [Restricted Keywords for UIDs](../../../../cs-docs/developers/create-content-types/restricted-keywords-for-uids.md) to avoid using reserved keywords.
 
 #### Headers
 
@@ -341,7 +341,7 @@ The Localize a taxonomy request is used to add translated values to a taxonomy f
 #### URL Parameters
 
 - **taxonomy_uid** (required)
-  Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](../../../api-detail/content-management-api.md#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
   Default: `global_content_topics`
 
 #### Query Parameters
@@ -408,7 +408,7 @@ The Unlocalize a taxonomy request is used to remove translated values from a tax
 #### URL Parameters
 
 - **taxonomy_uid** (required)
-  Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](../../../api-detail/content-management-api.md#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
   Default: `global_content_topics`
 
 #### Query Parameters
@@ -448,7 +448,7 @@ The exported file doesn't download automatically. You can use a REST API client 
 #### URL Parameters
 
 - **taxonomy_uid** (required)
-  Enter the unique ID of the taxonomy you want to export. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Enter the unique ID of the taxonomy you want to export. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](../../../api-detail/content-management-api.md#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
   Default: `sample_one`
 
 #### Query Parameters

@@ -29,7 +29,7 @@ To configure the permissions for your application via OAuth, include the cm.labe
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
+To learn more about the queries, refer to the [Queries](../../../api-detail/content-delivery-api.md#queries) section of the Content Delivery API doc.
 
 #### URL Parameters
 

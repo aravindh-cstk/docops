@@ -17,9 +17,9 @@ This page explains how to create and configure the Amazon S3 custom field extens
 
 Amazon S3
 
-**Amazon S3 **custom field extension allows you to fetch your data (documents, images, videos, etc) from your [S3 bucket](https://aws.amazon.com/s3/), and display them into a [field](/docs/developers/create-content-types/about-fields) of a [content type](/docs/developers/create-content-types/about-content-types) in your [stack](/docs/developers/set-up-stack/about-stack). By using this extension, you can also upload your assets to your S3 bucket directly from the entry page of your content type.
+**Amazon S3 **custom field extension allows you to fetch your data (documents, images, videos, etc) from your [S3 bucket](https://aws.amazon.com/s3/), and display them into a [field](../create-content-types/about-fields.md) of a [content type](../create-content-types/about-content-types.md) in your [stack](../set-up-stack/about-stack.md). By using this extension, you can also upload your assets to your S3 bucket directly from the entry page of your content type.
 
-Thus, while creating [entries](/docs/content-managers/working-with-entries/about-entries), you can not only select any of the data (as mentioned above) as the input value for the field but also upload files and other assets to your S3 bucket.
+Thus, while creating [entries](../../content-managers/author-content/about-entries.md), you can not only select any of the data (as mentioned above) as the input value for the field but also upload files and other assets to your S3 bucket.
 
 This step-by-step guide explains how to create an Amazon S3 custom field extension for your content types in Contentstack. The steps performed are as follows:
 - [Create an Amazon S3 Service account](#create-an-amazon-s3-service-account)
@@ -78,7 +78,7 @@ Go to [https://aws.amazon.com/s3/](https://aws.amazon.com/s3/) and click on **Ge
 
 To add the Amazon S3 custom field to your stack, log in to your [Contentstack account](https://app.contentstack.com/) and perform the following steps:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions** page, click on the **+ New Extension **button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
@@ -88,7 +88,7 @@ Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the �
 - **Hosting method**: Set the hosting method to **Hosted By Contentstack**.
 - **Extension Source Code**:  In this field, you need to enter the extension code. If Extensions are part of your plan, contact our Support team to get the code for the extension. Once you have downloaded the code, copy the code from the `index.html` file located in the root folder and paste it in the **Extension source code** field.
 
-**Note**: In the downloaded code, inside the **root** folder, there's a **aws-browser** HTML file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload](/docs/content-managers/working-with-assets/create-upload-assets) asset article. After uploading the file, you'll get a URL in the [asset details](/docs/content-managers/working-with-assets/create-upload-assets#asset-details) section, make note of this URL.
+**Note**: In the downloaded code, inside the **root** folder, there's a **aws-browser** HTML file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload](../../content-managers/author-content/create-upload-assets.md) asset article. After uploading the file, you'll get a URL in the [asset details](../../content-managers/author-content/create-upload-assets.md#asset-details) section, make note of this URL.
 - **Config Parameter**: Enter the following configuration details as the extension's config parameter:
 
 ```
@@ -113,13 +113,13 @@ Now, let’s understand how you can start using this custom field in your conten
 
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the **Custom **field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the **Custom **field to it.
 - Under **Select Extension**, select the “AmazonS3” field that you created and set the other properties. You can add other fields as per requirements.
 - Finally, click on either **Save **or** Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Amazon S3 **field on your entry page as shown below:
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Amazon S3 **field on your entry page as shown below:
 - Click on** Choose from S3 Bucket**. If you are still logged into Amazon S3, it will open inside your entry page, from where you can select multiple documents, images, videos, etc, and insert them in your entry. You can also upload items to your S3 bucket from here.
 
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 
 ## Common questions
 

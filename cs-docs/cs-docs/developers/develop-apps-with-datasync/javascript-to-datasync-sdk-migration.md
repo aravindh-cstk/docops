@@ -32,8 +32,8 @@ Some important points before we move in:
 - You need to call Stack.close(dbOptions) before the DataSync SDK terminates.
 
 ## DataSync Specific Methods
-- **.entry(uid?: string)**: This method fetches the first entry of that particular [content type](/docs/developers/create-content-types/about-content-types) after all the filters are applied. The `uid` is an optional field. Generally, this method is used when querying a singleton content type.
-- **.entries()**: This method fetches the [entry](/docs/content-managers/working-with-entries/about-entries) list of a specified content type. Generally, it is called after `.contentType('content_type_uid')`.
+- **.entry(uid?: string)**: This method fetches the first entry of that particular [content type](../create-content-types/about-content-types.md) after all the filters are applied. The `uid` is an optional field. Generally, this method is used when querying a singleton content type.
+- **.entries()**: This method fetches the [entry](../../content-managers/author-content/about-entries.md) list of a specified content type. Generally, it is called after `.contentType('content_type_uid')`.
 - **.asset(uid?: string)**: This method fetches the first asset that is found after all the filters are applied. The `uid` is an optional field.
 - **.assets()**: This method fetches the asset list. Do not call `.contentType('content_type_uid')` for this because both the methods internally set a `_content_type_uid` which is used to determine what kind of object to fetch. Since both of them differ for assets, content_type and entries, it is best not to call them both in the same query. If it does, the last one called, will take preference (as it will override the previous) - which can lead to unexpected results.
 - **.schema(uid?: string)**: This method fetches the first content type schema that's found after all the filters are applied. The `uid` is an optional field.

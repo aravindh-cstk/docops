@@ -29,7 +29,7 @@ This page lists the supported capabilities and limitations of Agent OS, includin
 - The maximum number of loops per Repeat Path is **100**.
 - For Direct Queue (if automation is **not **throttled), the rate limit is **5000 **executions per minute per organization.
 - You can select up to **10 executions per second** from Agent OS Settings (if an automation is throttled) for a specific automation.
-- If an automation includes a [**Response**](/docs/developers/automation-hub-connectors/response/)** **connector, **Retry Execution **will not be available for that automation.
+- If an automation includes a [**Response**](./response.md)** **connector, **Retry Execution **will not be available for that automation.
 - In Agent OS's Design mode, the test action output response previews are limited for performance - if a payload object exceeds **1** MB, only the first **10** nodes of arrays are shown. For payloads under **1** MB, the full output is displayed. This limitation helps optimize performance and ensures efficient data rendering in the browser.
 - The maximum supported size for incoming HTTP requests is **3 MB**.
 - The maximum supported output size for the Log action is** 1 MB**.

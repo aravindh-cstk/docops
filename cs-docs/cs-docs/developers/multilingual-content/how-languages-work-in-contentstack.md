@@ -16,19 +16,19 @@ This page explains how multilingual languages behave in Contentstack, including 
 
 ## How Languages Work in Contentstack
 
-Contentstack offers multilingual support, which allows you to create entries in any language of your choice. When creating entries in other languages, they inherit data initially from the [fallback language](/docs/developers/multilingual-content/about-fallback-languages) until they are localized.
+Contentstack offers multilingual support, which allows you to create entries in any language of your choice. When creating entries in other languages, they inherit data initially from the [fallback language](./about-fallback-languages.md) until they are localized.
 
-Therefore, in order to understand how languages work in Contentstack, you will need to first understand [data inheritance](/docs/developers/multilingual-content/about-data-inheritance), [fallback languages](/docs/developers/multilingual-content/about-fallback-languages), and [localization](/docs/developers/multilingual-content/about-localization).
+Therefore, in order to understand how languages work in Contentstack, you will need to first understand [data inheritance](./about-data-inheritance.md), [fallback languages](./about-fallback-languages.md), and [localization](./about-localization.md).
 
 ## Common questions
 
 ### What happens when I create an entry in another language?
 
-When creating entries in other languages, they inherit data initially from the [fallback language](/docs/developers/multilingual-content/about-fallback-languages) until they are localized.
+When creating entries in other languages, they inherit data initially from the [fallback language](./about-fallback-languages.md) until they are localized.
 
 ### What should I learn first to understand languages in Contentstack?
 
-You will need to first understand [data inheritance](/docs/developers/multilingual-content/about-data-inheritance), [fallback languages](/docs/developers/multilingual-content/about-fallback-languages), and [localization](/docs/developers/multilingual-content/about-localization).
+You will need to first understand [data inheritance](./about-data-inheritance.md), [fallback languages](./about-fallback-languages.md), and [localization](./about-localization.md).
 
 ### What is the fallback language used for?
 

@@ -17,7 +17,7 @@ This page explains how to use Contentstack’s Quick Search to find entries or a
 
 ## Quick Search
 
-The Quick Search feature in Contentstack allows you to swiftly and efficiently search for [entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries) or [assets](https://www.contentstack.com/docs/content-managers/author-content/about-assets) from any location within your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack). Quick Search navigates you to the corresponding entries or assets page with the relevant search results displayed. This feature is designed to save time and improve productivity by streamlining the search process and offering a user-friendly interface.
+The Quick Search feature in Contentstack allows you to swiftly and efficiently search for [entries](../author-content/about-entries.md) or [assets](../author-content/about-assets.md) from any location within your [stack](../../developers/set-up-stack/about-stack.md). Quick Search navigates you to the corresponding entries or assets page with the relevant search results displayed. This feature is designed to save time and improve productivity by streamlining the search process and offering a user-friendly interface.
 
 To access the Quick search, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to your stack and click the “**Search”** icon (or press “ctrl” + "K") located in the header.

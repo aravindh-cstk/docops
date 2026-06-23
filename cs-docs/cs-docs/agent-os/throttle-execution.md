@@ -33,7 +33,7 @@ Automations with throttling enabled are executed **sequentially**.
 
 Suppose you select two executions per second, and there is a request for 1000 executions, so the time taken for execution will reduce by half,( i.e., **500 seconds**).
 
-**Additional Resource: **Refer to the [Error Notification](/docs/developers/automation-hub-guides/error-notification) document for more details.
+**Additional Resource: **Refer to the [Error Notification](./error-notification.md) document for more details.
 
 You can view your automation's success and queue status in the [Execution Log](/docs/developers/automation-hub-guides/view-execution-log-of-automations) section.
 
@@ -45,9 +45,9 @@ If an automation is not set to throttle the execution, it will go in the **Direc
 
 To use the Direct Queue for executions, you must ensure that the automation is not hitting other rate limits such as CMA limits.
 
-Execution request(s) will be sent to the direct queue **only if **your automation does not contain the [Response](/docs/developers/automation-hub-connectors/response) connector.
+Execution request(s) will be sent to the direct queue **only if **your automation does not contain the [Response](./response.md) connector.
 
-The [Response](/docs/developers/automation-hub-connectors/response) connector works synchronously in the background to fetch the response from any server. If an automation contains the Response connector, it will send the response based on the configuration and if it goes in the Direct Queue for execution, you may not be able to view the response.
+The [Response](./response.md) connector works synchronously in the background to fetch the response from any server. If an automation contains the Response connector, it will send the response based on the configuration and if it goes in the Direct Queue for execution, you may not be able to view the response.
 
 ## Common questions
 
@@ -61,4 +61,4 @@ These automations will be queued and the executions will be performed sequential
 The queued executions will retry to execute three times before going into the Rejected status in case of any errors, such as engine failure.
 
 ### When are execution requests sent to the direct queue?
-Execution request(s) will be sent to the direct queue **only if **your automation does not contain the [Response](/docs/developers/automation-hub-connectors/response) connector.
+Execution request(s) will be sent to the direct queue **only if **your automation does not contain the [Response](./response.md) connector.

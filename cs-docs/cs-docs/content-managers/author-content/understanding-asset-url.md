@@ -29,10 +29,10 @@ Here's the breakdown of the asset URL:
 - `images.contentstack.io`: Used for image files specifically.
 - `stack_api_key`: The API key of your stack.
 - `asset_uid`: A unique identifier for the asset itself. This remains constant even if the asset is updated or replaced.
-- `file_uid`: This identifies the specific file instance of the asset. If you [replace](/docs/content-managers/author-content/edit-an-asset) the asset, the asset_uid stays the same, but the file_id changes. This reflects that the underlying file has changed.
+- `file_uid`: This identifies the specific file instance of the asset. If you [replace](./edit-an-asset.md) the asset, the asset_uid stays the same, but the file_id changes. This reflects that the underlying file has changed.
 - `filename`: The name of the file, as uploaded.
 
-**Additional Resource:** For assets that are updated frequently, you can [generate a permanent URL](/docs/content-managers/author-content/permanent-asset-urls), which remains constant even when new versions of the asset are uploaded. This ensures consistent references to the asset.
+**Additional Resource:** For assets that are updated frequently, you can [generate a permanent URL](./permanent-asset-urls.md), which remains constant even when new versions of the asset are uploaded. This ensures consistent references to the asset.
 
 ## Common questions
 

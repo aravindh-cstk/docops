@@ -29,7 +29,7 @@ To add custom languages, log in to your [Contentstack account](https://www.conte
 - **Fallback Language:** Select a language to source content when localized content is unavailable.
 - Click **Add** to create the custom language.
 
-The newly created custom language becomes available for assignment to workspaces. Refer to the [Add Languages to a Workspace](/docs/assets/add-languages-to-a-workspace) document to get started with asset localization.
+The newly created custom language becomes available for assignment to workspaces. Refer to the [Add Languages to a Workspace](./add-languages-to-a-workspace.md) document to get started with asset localization.
 
 **Note:**
 - The combination of language code and locale or country code must remain unique across Assets.

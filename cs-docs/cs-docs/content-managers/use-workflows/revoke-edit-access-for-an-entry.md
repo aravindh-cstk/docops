@@ -17,7 +17,7 @@ This page explains how users or roles with workflow stage transition rights can 
 
 ## Revoke Edit Access for an Entry
 
-**Note**: If you are not familiar with Workflow and its related concepts, we recommend you to check out these articles before you start working with them: [Workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows), [Workflow Stages](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages), and [Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks).
+**Note**: If you are not familiar with Workflow and its related concepts, we recommend you to check out these articles before you start working with them: [Workflow](../../developers/set-up-workflows-and-publish-rules/about-workflows.md), [Workflow Stages](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md), and [Tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md).
 
 Users or roles with workflow stage transition rights over an entry can also revoke edit access for other users who can edit the entry in the current workflow stage. This helps eliminate the possibility of unwanted modifications to the entry.
 
@@ -25,7 +25,7 @@ For example, a user with the “Editor” role can grant a content manager edit 
 
 To revoke edit access for other users who can edit an entry in a particular workflow stage, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and open the entry.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md), and open the entry.
 - On the entry page, go to the **Workflow Details** section under the **Status** panel on the right. The current workflow stage of the entry and its color label appear under this section.
 - Further below, you will also see a section that displays the **Users to whom edit access is granted** over the current workflow stage. Click on the “**x**” icon beside a user name to revoke edit access for that user.
 - When more than four users are able to edit the entry over the current workflow stage, click on **View All** to view the entire list of users.

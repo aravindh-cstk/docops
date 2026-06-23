@@ -65,7 +65,7 @@ Here are some common examples of data binding:
 
 ## Dynamic Templates using Linked Compositions
 
-If your content type includes a slug field, you can create a [linked composition](/docs/studio/manage-a-composition#linked-composition) to generate a single template to render all the pages.
+If your content type includes a slug field, you can create a [linked composition](./manage-a-composition.md#linked-composition) to generate a single template to render all the pages.
 
 For example:
 - A composition bound to the blog content type

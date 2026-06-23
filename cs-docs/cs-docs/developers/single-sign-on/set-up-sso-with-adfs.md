@@ -17,7 +17,7 @@ This page provides a step-by-step procedure for configuring Single Sign-On (SSO)
 
 ## Set up SSO with Active Directory Federation Services (AD FS)
 
-This step-by-step guide explains how to set up [Single Sign-On](/docs/developers/single-sign-on) in Contentstack with AD FS as your SAML 2.0 Identity Provider (IdP):
+This step-by-step guide explains how to set up [Single Sign-On](../single-sign-on.md) in Contentstack with AD FS as your SAML 2.0 Identity Provider (IdP):
 - [Create SSO Name and ACS URL in Contentstack](#create-sso-name-and-acs-url-in-contentstack)
 - [Configure Windows Server](#configure-windows-server)
 - [Edit Claim Rules for your AD FS App](#edit-claim-rules-for-your-ad-fs-app)
@@ -92,17 +92,17 @@ Check the URL path of SAML 2.0/WS-Federation Endpoint. We will be using this whe
 In Contentstack, save your settings and go to **3. User Management**.
 ****
 
-Enable [**Strict Mode**](/docs/developers/single-sign-on/set-up-sso-in-contentstack#strict-mode) if you do not want any users to access the organization without SSO login.
+Enable [**Strict Mode**](./set-up-sso-in-contentstack.md#strict-mode) if you do not want any users to access the organization without SSO login.
 
-[**Session Timeout**](/docs/developers/single-sign-on/set-up-sso-in-contentstack#session-timeout) lets you define the session duration for a user signed in through SSO. While the default is set to 12 hours, you can modify it as per your requirement.
+[**Session Timeout**](./set-up-sso-in-contentstack.md#session-timeout) lets you define the session duration for a user signed in through SSO. While the default is set to 12 hours, you can modify it as per your requirement.
 
-**Note:** We are yet to introduce IdP Role Mapping for AD FS. If you want to know how it works, check out our [IdP Role Mapping](/docs/developers/single-sign-on/idp-role-mapping) document.
+**Note:** We are yet to introduce IdP Role Mapping for AD FS. If you want to know how it works, check out our [IdP Role Mapping](./idp-role-mapping.md) document.
 
 ### Test & Enable
 
-Go to **4. Test & Enable** in Contentstack.Click the [**Test SSO**](/docs/developers/single-sign-on/set-up-sso-in-contentstack#test-sso) button to check if your SSO settings have been configured properly. It is highly recommended that you test your settings before enabling SSO.
+Go to **4. Test & Enable** in Contentstack.Click the [**Test SSO**](./set-up-sso-in-contentstack.md#test-sso) button to check if your SSO settings have been configured properly. It is highly recommended that you test your settings before enabling SSO.
 
-To enable SSO for your Contentstack organization, click on [**Enable SSO**](/docs/developers/single-sign-on/set-up-sso-in-contentstack#enable-sso). Once this is enabled, users of the organization can access the organization through SSO.
+To enable SSO for your Contentstack organization, click on [**Enable SSO**](./set-up-sso-in-contentstack.md#enable-sso). Once this is enabled, users of the organization can access the organization through SSO.
 
 You can disable SSO anytime from the same page.
 

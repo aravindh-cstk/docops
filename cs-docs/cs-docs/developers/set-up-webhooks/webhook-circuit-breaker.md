@@ -17,7 +17,7 @@ This page explains how Contentstack’s Webhook Circuit Breaker (WCB) works, inc
 
 ## Webhook Circuit Breaker
 
-Contentstack currently follows an [exponential webhook retry policy](/docs/developers/set-up-webhooks/webhook-retry-policy) whenever any [webhook](/docs/developers/set-up-webhooks/about-webhooks) fails to send data to the desired notification URL or a session timeout occurs. We try to send data to that notification URL again four more times after certain resend intervals.
+Contentstack currently follows an [exponential webhook retry policy](./webhook-retry-policy.md) whenever any [webhook](./about-webhooks.md) fails to send data to the desired notification URL or a session timeout occurs. We try to send data to that notification URL again four more times after certain resend intervals.
 
 Some notification URLs may be invalid or may have turned unresponsive due to slow client servers. To stop retrying webhook requests that hit such inactive third-party URLs, Contentstack deploys the **Webhook Circuit Breaker** (**WCB**) implementation.
 
@@ -43,7 +43,7 @@ This email alert provides the following details:
 
 The email alert notification contains the subject line - "**[stack_name] - [webhook_title] webhook disabled due to unhealthy notification endpoint**".
 
-To enable the webhook again, you can visit the concerned stack and also debug the issue through the [webhook logs](/docs/developers/set-up-webhooks/view-webhook-logs).
+To enable the webhook again, you can visit the concerned stack and also debug the issue through the [webhook logs](./view-webhook-logs.md).
 
 ## Common questions
 

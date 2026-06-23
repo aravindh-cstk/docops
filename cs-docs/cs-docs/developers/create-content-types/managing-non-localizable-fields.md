@@ -37,7 +37,7 @@ However, any **new instances** you add in the master locale entry after enabling
 
 You can enable **non-localizable** fields in **Group (Multiple)**, **Modular Blocks**, or **Global Fields (Multiple)** to ensure that specific data remains consistent across all locales.
 
-To enable a field as non-localizable, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](/docs/developers/set-up-stack/about-stack/), and perform the following steps:
+To enable a field as non-localizable, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Open the **Content Type Builder** page of the content type where you want to mark a non-localizable field.
 - Select a field from a group, modular block, or global field.
 - Toggle **Non-localizable** to **enabled**.**Note:** When you enable this setting, a **confirmation modal** appears, informing you that localized versions of the field inherit values from the master locale.
@@ -110,7 +110,7 @@ However, any **changes made to localized fields before deletion remain intact** 
 
 ## Best Practices for Managing Non-Localizable Fields
 
-- **Exceptions to Non-localizable Fields:** While non-localizable fields are intended to stay consistent across locales, certain exceptions may occur in specific scenarios—particularly when **new instances** of a **Group (Multiple), Modular Block**, or **Global (Multiple) **are added in localized entries. In such cases, fields marked as Non-localizable behave like localized fields, allowing content editors to enter values unique to that locale. This happens because the new instance does not exist in the master locale.**Additional Resource**: Learn more about [Non-localizable Exceptions for Content Managers](/docs/content-managers/author-content/understanding-non-localizable-exceptions-for-content-managers).
+- **Exceptions to Non-localizable Fields:** While non-localizable fields are intended to stay consistent across locales, certain exceptions may occur in specific scenarios—particularly when **new instances** of a **Group (Multiple), Modular Block**, or **Global (Multiple) **are added in localized entries. In such cases, fields marked as Non-localizable behave like localized fields, allowing content editors to enter values unique to that locale. This happens because the new instance does not exist in the master locale.**Additional Resource**: Learn more about [Non-localizable Exceptions for Content Managers](../../content-managers/author-content/understanding-non-localizable-exceptions-for-content-managers.md).
 - **Use non-localizable fields for critical content** that must remain uniform across all locales, such as product names, company names, or SKU codes.
 - **Test non-localizable field behavior** across locales before finalizing models to avoid surprises.
 - **Communicate changes to content editors** when enabling or disabling non-localizable fields.

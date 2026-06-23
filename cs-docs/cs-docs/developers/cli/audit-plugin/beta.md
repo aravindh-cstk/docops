@@ -19,12 +19,12 @@ This page describes how to install and use the Contentstack CLI Audit plugin (V2
 Contentstack CLI lets you use the Audit plugin to perform audit operations on the exported stack data, helping you identify and fix issues.
 
 The Audit plugin provides users with detailed reports about any issues related to the following, in a given stack data:
-- References in [Content Types](/docs/developers/create-content-types/about-content-types), [Global Fields](/docs/developers/create-content-types/global), and [Entries](/docs/content-managers/author-content/about-entries).
-- Content types used in [Workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) and [Extensions](/docs/developers/experience-extensions-overview).
-- [Branches](/docs/developers/branches/about-branches/) used in custom roles and workflows.
-- [Title field](/docs/developers/create-content-types/title/), [select field](/docs/developers/create-content-types/select/), publish details, and mandatory fields of entries.
+- References in [Content Types](../../create-content-types/about-content-types.md), [Global Fields](../../create-content-types/global.md), and [Entries](../../../content-managers/author-content/about-entries.md).
+- Content types used in [Workflows](../../set-up-workflows-and-publish-rules/about-workflows.md) and [Extensions](../../experience-extensions-overview.md).
+- [Branches](../../branches/about-branches.md) used in custom roles and workflows.
+- [Title field](../../create-content-types/title.md), [select field](../../create-content-types/select.md), publish details, and mandatory fields of entries.
 - Multiple field type mismatches in entries where fields marked with `multiple: true` are not arrays.
-- Publish details of [Assets](/docs/content-managers/author-content/about-assets).
+- Publish details of [Assets](../../../content-managers/author-content/about-assets.md).
 - Field rules in content types.
 
 Additionally, it includes commands that validate and resolve these issues, including missing references, invalid field values, missing mandatory fields, incomplete publish details, field rule violations, and content type mismatches.
@@ -33,18 +33,18 @@ This step-by-step guide lets you install and use the Audit plugin in CLI.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
-- [CLI installed](/docs/developers/cli/install-the-cli/) and [configured](/docs/developers/cli/configure-regions-in-the-cli/) (version 1.9.1 or above)
-- [Exported content](/docs/developers/cli/export-content-using-the-cli) generated using CLI (version 1.9.0 or above) available on local machine
+- [CLI installed](../install-the-cli.md) and [configured](../configure-regions-in-the-cli.md) (version 1.9.1 or above)
+- [Exported content](../export-content-using-the-cli.md) generated using CLI (version 1.9.0 or above) available on local machine
 
 ## Supported Modules
-- [Extensions](/docs/developers/experience-extensions-overview)
-- [Global Fields](/docs/developers/create-content-types/global)
-- [Content Types](/docs/developers/create-content-types/about-content-types)
-- [Field Rules](/docs/developers/create-content-types/about-field-visibility-rules)
-- [Entries](/docs/content-managers/author-content/about-entries)
-- [Workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows)
-- [Custom Roles](/docs/developers/invite-users-and-assign-roles/types-of-roles#custom-role)
-- [Assets](/docs/content-managers/author-content/about-assets)
+- [Extensions](../../experience-extensions-overview.md)
+- [Global Fields](../../create-content-types/global.md)
+- [Content Types](../../create-content-types/about-content-types.md)
+- [Field Rules](../../create-content-types/about-field-visibility-rules.md)
+- [Entries](../../../content-managers/author-content/about-entries.md)
+- [Workflow](../../set-up-workflows-and-publish-rules/about-workflows.md)
+- [Custom Roles](../../invite-users-and-assign-roles/types-of-roles.md#custom-role)
+- [Assets](../../../content-managers/author-content/about-assets.md)
 
 ## Commands
 The Audit plugin lets you perform the following operation in Contentstack CLI:
@@ -585,10 +585,10 @@ csdx cm:stacks:audit \
 cat ./audit-reports/Entries_Select_field.json
 
 # Step 3: Create a configuration file to enable select field fixing
-cat > select-fix-config.json - To find and fix the following in a given exported stack data:Missing content types in [Workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) and [Extensions](/docs/developers/experience-extensions-overview).
-- Missing branches in workflows and [custom roles](/docs/developers/invite-users-and-assign-roles/types-of-roles#custom-role).
-- Publish details of entries and [assets](/docs/content-managers/author-content/about-assets).
-- [Select](/docs/developers/create-content-types/select/), [title](/docs/developers/create-content-types/title/), and mandatory fields of entries.
+cat > select-fix-config.json - To find and fix the following in a given exported stack data:Missing content types in [Workflows](../../set-up-workflows-and-publish-rules/about-workflows.md) and [Extensions](../../experience-extensions-overview.md).
+- Missing branches in workflows and [custom roles](../../invite-users-and-assign-roles/types-of-roles.md#custom-role).
+- Publish details of entries and [assets](../../../content-managers/author-content/about-assets.md).
+- [Select](../../create-content-types/select.md), [title](../../create-content-types/title.md), and mandatory fields of entries.
 - Multiple field type mismatches in entries.
 - Field rules of content types.
 ```

@@ -53,10 +53,10 @@ Here are a few key features of Nested Reference Publishing:
 ## API Reference
 
 When working with APIs, you need to pass a new api_version:3.2 header for your request to send nested references for publishing.
-- [Publish entries and assets in bulk](https://www.contentstack.com/docs/developers/apis/content-management-api/#publish-entries-and-assets-in-bulk)
-- [Unpublish entries and assets in bulk](https://www.contentstack.com/docs/developers/apis/content-management-api/#unpublish-entries-and-assets-in-bulk)
-- [Get publish queue](https://www.contentstack.com/docs/developers/apis/content-management-api/#get-publish-queue)
-- [Cancel scheduled action](https://www.contentstack.com/docs/developers/apis/content-management-api/#cancel-scheduled-action)
+- [Publish entries and assets in bulk](../../../api-docs/api-detail/content-management-api.md#publish-entries-and-assets-in-bulk)
+- [Unpublish entries and assets in bulk](../../../api-docs/api-detail/content-management-api.md#unpublish-entries-and-assets-in-bulk)
+- [Get publish queue](../../../api-docs/api-detail/content-management-api.md#get-publish-queue)
+- [Cancel scheduled action](../../../api-docs/api-detail/content-management-api.md#cancel-scheduled-action)
 
 ## Tutorial Video
 

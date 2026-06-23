@@ -17,10 +17,10 @@ This page explains who can delete a custom role in a Contentstack stack and how 
 
 ## Delete a Role
 
-Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), or users assigned the [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) roles and who have created a specific [custom role](/docs/developers/invite-users-and-assign-roles/types-of-roles#custom-role), can delete that role.
+Only the stack [owner](./types-of-roles.md#owner), or users assigned the [admin](./types-of-roles.md#admin), and [developer](./types-of-roles.md#developer) roles and who have created a specific [custom role](./types-of-roles.md#custom-role), can delete that role.
 
 To delete a custom role, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to the [stack](/docs/developers/set-up-stack/about-stack), navigate to the “Settings” icon on the left navigation panel, and select **Users & ****Roles**.
+- Go to the [stack](../set-up-stack/about-stack.md), navigate to the “Settings” icon on the left navigation panel, and select **Users & ****Roles**.
 - Click the **Roles** tab.
 - Hover over the role you want to delete, click the “Delete” icon (Trash bin) that appears at the extreme end.
 - Confirm the **Delete** action to delete the role.
@@ -31,7 +31,7 @@ Once you delete the role, the user(s) associated with that specific role will no
 
 ## API Reference
 
-To delete a role via API request, refer to the [Delete role](/docs/developers/apis/content-management-api#delete-role) API request.
+To delete a role via API request, refer to the [Delete role](../../../api-docs/api-detail/content-management-api.md#delete-role) API request.
 
 ## Common questions
 
@@ -45,4 +45,4 @@ A: The user(s) associated with that specific role will not have the right to mak
 A: Yes, the stack owner can delete all the roles irrespective of the role being created by any other user.
 
 **Q: Is there an API to delete a role?**  
-A: Yes, refer to the [Delete role](/docs/developers/apis/content-management-api#delete-role) API request.
+A: Yes, refer to the [Delete role](../../../api-docs/api-detail/content-management-api.md#delete-role) API request.

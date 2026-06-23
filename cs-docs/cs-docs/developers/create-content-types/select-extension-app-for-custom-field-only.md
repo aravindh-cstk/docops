@@ -23,7 +23,7 @@ The **Select Extension/App** allows you to add the prebuilt extension/app to you
 - Select the app or extension that you want to use in your **Custom** field and click on **Proceed**.
 - Once the app/extension is added, it should be visible when you create an entry for that Content Type.
 
-**Additional Resource**: To know more about how to add extensions and apps in Contentstack refer to our doc on [Create Custom Fields](https://www.contentstack.com/docs/developers/create-custom-fields).
+**Additional Resource**: To know more about how to add extensions and apps in Contentstack refer to our doc on [Create Custom Fields](../create-custom-fields.md).
 
 ## Common questions
 
@@ -37,4 +37,4 @@ In the **Custom Properties** modal, add the extension/app you want under **Selec
 Once the app/extension is added, it should be visible when you create an entry for that Content Type.
 
 ### Where can I learn more about adding extensions and apps?
-Refer to **Additional Resource**: [Create Custom Fields](https://www.contentstack.com/docs/developers/create-custom-fields).
+Refer to **Additional Resource**: [Create Custom Fields](../create-custom-fields.md).

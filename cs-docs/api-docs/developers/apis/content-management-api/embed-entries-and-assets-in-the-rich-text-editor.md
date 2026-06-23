@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # CMA | Embed Entries and Assets in the Rich Text Editor
 
-You can embed other entries and/or assets inside the [Rich Text Editor](/docs/developers/create-content-types/rich-text-editor) (RTE) field while creating entries. Inside the RTE field, you can embed entries inline; at the block level; or as a hyperlink; and assets as downloadable entities or simply display them (for images).
+You can embed other entries and/or assets inside the [Rich Text Editor](../../../../cs-docs/developers/create-content-types/rich-text-editor.md) (RTE) field while creating entries. Inside the RTE field, you can embed entries inline; at the block level; or as a hyperlink; and assets as downloadable entities or simply display them (for images).
 
 **Note**: This feature is available only if it is part of your plan. To avail of this feature, you can get in touch with our [Support](mailto:support@contentstack.com) team.
 
@@ -31,7 +31,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 The Create a content type with embedded RTE objects request lets you create a content type, which supports embedded objects inside its RTE field.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the complete schema of the content type (refer [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type)).
+In the “Body” section, you need to provide the complete schema of the content type (refer [JSON schema for creating a content type](../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md)).
 
 To embed entries within a specific RTE, pass the reference_to parameter with valid content type UIDs to determine entries of which content type(s) can be embedded inside the editor.
 
@@ -58,7 +58,7 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
 }
 ```
 
-**Additional Resource**: Refer to the [Rich Text Field Schema](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#html-based-rich-text-editor) guide to understand how you can format the content entered in the field.
+**Additional Resource**: Refer to the [Rich Text Field Schema](../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md#html-based-rich-text-editor) guide to understand how you can format the content entered in the field.
 
 #### Query Parameters
 
@@ -75,7 +75,7 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -318,7 +318,7 @@ The Update content type with embedded RTE objects request allows you to update t
 
 When executing the API request, in the “URL Parameters” section, provide the unique ID of your content type.
 
-In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) document to know how you can add/update fields in your content type through API.
+In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md) document to know how you can add/update fields in your content type through API.
 
 You can make changes to the schema of the Rich Text Editor field while updating the content type schema. Here is a sample of an updated Rich Text Editor schema:
 
@@ -365,7 +365,7 @@ You can make changes to the schema of the Rich Text Editor field while updating 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -657,7 +657,7 @@ The above Rich Text Editor contains entries embedded as a separate content block
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -729,7 +729,7 @@ Since we refer to an embedded asset as a separate HTML element, you need to wrap
 - sys-style-type: You can pass display or download to specify whether the embedded asset should be downloadable or act as a display image
 - type: To specify the type of object embedded inside the rich text, e.g., asset
 
-**Tip**: An embedded asset works exactly like the [Reference](/docs/developers/create-content-types/reference) field. When you update the details of an embedded asset or replace the source asset with another asset, the Rich Text Editor automatically updates the embedded HTML component with the latest version of that asset.
+**Tip**: An embedded asset works exactly like the [Reference](../../../../cs-docs/developers/create-content-types/reference.md) field. When you update the details of an embedded asset or replace the source asset with another asset, the Rich Text Editor automatically updates the embedded HTML component with the latest version of that asset.
 
 Here’s a sample of rich text that contains embedded assets:
 
@@ -769,7 +769,7 @@ Embedded asset as downloadable image:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -869,7 +869,7 @@ Updated embedded entry inline with text:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.
@@ -930,7 +930,7 @@ If your entry contains a Rich Text Editor field and you wish to fetch the conten
 
 You can view information about the embedded objects under the _embedded_items parameter in the JSON response body.
 
-**Note**: Contentstack’s [Content Delivery SDKs](/docs/developers/fetch-content#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the frontend however required.
+**Note**: Contentstack’s [Content Delivery SDKs](../../../../cs-docs/developers/fetch-content.md#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the frontend however required.
 
 #### URL Parameters
 
@@ -962,7 +962,7 @@ You can view information about the embedded objects under the _embedded_items pa
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

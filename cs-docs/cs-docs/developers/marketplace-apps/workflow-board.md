@@ -17,7 +17,7 @@ This page explains how to install, configure, and use the Workflow Board app fro
 
 ## Workflow Board App Installation Guide
 
-The Workflow Board is a [Full Page Location](/docs/developers/developer-hub/full-page-location/) app, which displays the workflow stages and tasks in a Kanban format. You can view the list of workflows along with the workflow stages and workflow tasks for content types within your Contentstack environment. You can drag and drop the tasks from one workflow stage to another and update the required details. Also, the app enables you to search for workflows and entries in the Workflow Board app. You can apply various filters to sort the workflow task cards.
+The Workflow Board is a [Full Page Location](../developer-hub/full-page-location.md) app, which displays the workflow stages and tasks in a Kanban format. You can view the list of workflows along with the workflow stages and workflow tasks for content types within your Contentstack environment. You can drag and drop the tasks from one workflow stage to another and update the required details. Also, the app enables you to search for workflows and entries in the Workflow Board app. You can apply various filters to sort the workflow task cards.
 
 Contentstack Marketplace lets you integrate the Workflow Board app directly into your headless CMS. You can easily use this app to view the workflows of your stack. It displays all the workflow stages and tasks on the Workflow Board app in a Kanban view.
 
@@ -58,20 +58,20 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 
 This creates your new workflow.
 
-**Note**: You can also set the [Publish Rules](/docs/developers/set-up-workflows-and-publish-rules/about-publish-rules/) for the workflow stages.
+**Note**: You can also set the [Publish Rules](../set-up-workflows-and-publish-rules/about-publish-rules.md) for the workflow stages.
 
 - Now, click **Entries** in the left navigation panel, open the entry that belongs to the content type added to the workflow, and then click the **Workflow Details** icon in the right navigation panel of your entry.
 - Set the workflow stage of an entry and assign the workflow task to the user or role, add comments, and then click **Save**.
 
 You can track the workflow tasks assigned by clicking **Tasks** in the left-hand side primary navigation panel.
 
-**Additional Resource**: For more information about [Workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows/), [Workflow Stages](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages/), [Workflow Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks/), and [Publish Rules](/docs/developers/set-up-workflows-and-publish-rules/about-publish-rules/), please refer to the [Set up Workflows and Publish Rules](/docs/developers/set-up-workflows-and-publish-rules/) documentation.
+**Additional Resource**: For more information about [Workflows](../set-up-workflows-and-publish-rules/about-workflows.md), [Workflow Stages](../set-up-workflows-and-publish-rules/about-workflow-stages.md), [Workflow Tasks](../set-up-workflows-and-publish-rules/about-workflow-tasks.md), and [Publish Rules](../set-up-workflows-and-publish-rules/about-publish-rules.md), please refer to the [Set up Workflows and Publish Rules](/docs/developers/set-up-workflows-and-publish-rules/) documentation.
 
 ## Workflow Board App
 
 - Now, go to the stack dashboard. In the left-hand side primary navigation, you will find the **Workflow Board** app icon (as shown below).
 
-**Note**: Workflow Board is a Full Page Location app. For more information, refer to the [Full Page Location](/docs/developers/developer-hub/full-page-location/) documentation.
+**Note**: Workflow Board is a Full Page Location app. For more information, refer to the [Full Page Location](../developer-hub/full-page-location.md) documentation.
 
 - Click the app icon to view the Workflow Board app within your CMS.
 - You first need to authorize the app by providing access to your stack. Click the **Authorize** button to start using the app.

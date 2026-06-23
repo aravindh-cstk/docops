@@ -107,7 +107,7 @@ The **Data & Insights (Lytics) **[**Content Affinity Engine**](https://docs.lyti
 
 ### Personalize
 
-The following default limits and constraints apply to **Contentstack **[Personalize](/docs/personalize/about-personalize)
+The following default limits and constraints apply to **Contentstack **[Personalize](../personalize/about-personalize.md)
 
 | Feature | Limit | Description |
 |---|---|---|

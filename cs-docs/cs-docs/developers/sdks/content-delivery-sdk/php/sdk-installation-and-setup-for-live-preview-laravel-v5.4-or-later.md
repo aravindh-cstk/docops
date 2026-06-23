@@ -16,14 +16,14 @@ This page explains how to install the Contentstack PHP SDK and configure Live Pr
 
 ## SDK Installation and Setup for Live Preview (Laravel v5.4 or later)
 
-This guide will help you get started with Contentstack [PHP SDK](/docs/developers/sdks/content-delivery-sdk/php/about-php-sdk/) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [PHP SDK](./about-php-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 
 To get started with PHP, you will need the following:
 - PHP version 5.5.0 or later
 - Laravel version 5.4 or later
-- [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk)
+- [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
 
 ## SDK Installation and Setup
 
@@ -40,7 +40,7 @@ composer require contentstack/contentstack
 ### Method 2: Downloading the zip file
 
 To download the PHP SDK, perform the following steps:
-- [Download](/docs/developers/sdks/content-delivery-sdk/php/get-started-with-php-sdk/) the PHP SDK.
+- [Download](./get-started-with-php-sdk.md) the PHP SDK.
 - Create the `dependencies` folder in your project directory and move the downloaded .zip file within the `dependencies` folder.
 - Download the [MabeEnum](https://github.com/marc-mabe/php-enum) class.
 - Create a folder named `marc-mabe` folder inside `dependencies`, and move the `php-enum` folder to `marc-mabe`.
@@ -49,7 +49,7 @@ Let's get started with the implementation.
 
 ## Initializing the Stack with Live Preview
 
-As the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk/) is responsible for communication, you first need to initialize it within your stack.
+As the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) is responsible for communication, you first need to initialize it within your stack.
 
 Use the following command to initialize the stack:
 
@@ -189,9 +189,9 @@ To install and initialize the Live Preview Utils SDK, open `base.blade.html` and
 
 ## Query Request
 
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api/) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
-To get an [entry](/docs/content-managers/working-with-entries/about-entries/), you need to specify the [content type](/docs/developers/create-content-types/about-content-types/) UID and the UID of the entry.
+To get an [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) UID and the UID of the entry.
 
 ```
 $stack->ContentType('CONTENT_TYPE_UID')->Entry('ENTRY_UID')->toJSON()->fetch();
@@ -199,11 +199,11 @@ $stack->ContentType('CONTENT_TYPE_UID')->Query()->toJSON()->find();
 ```
 
 **Additional Resources:**
-- [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk/)
-- [Download PHP SDK](/docs/developers/sdks/content-delivery-sdk/php/download-php-sdk/)
+- [JavaScript Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
+- [Download PHP SDK](./download-php-sdk.md)
 - [Build a Blog using PHP SDK and Symfony Framework](/docs/developers/sample-apps/build-a-blog-demo-using-contentstacks-php-sdk-and-symfony-framework/)
-- [PHP SDK API Reference](/docs/developers/sdks/content-delivery-sdk/php/reference/)
-- [PHP SDK Changelog](/docs/developers/sdks/content-delivery-sdk/php/php-sdk-changelog/)
+- [PHP SDK API Reference](../../../create-content-types/reference.md)
+- [PHP SDK Changelog](./php-sdk-changelog.md)
 - [Download PHP SDK repository on GitHub](https://github.com/contentstack/contentstack-php)
 
 ## Common questions

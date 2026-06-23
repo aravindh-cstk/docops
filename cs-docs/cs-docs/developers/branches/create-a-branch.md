@@ -17,7 +17,7 @@ This page explains how to create a branch in a Contentstack stack, including who
 
 ## Create a Branch
 
-You can create a [branch](/docs/developers/branches/about-branches) off of your stack's main (default) branch. The child branch you create inherits all of the content types, entries, assets, languages, extensions, releases, etc. that were part of the main branch as it is.
+You can create a [branch](./about-branches.md) off of your stack's main (default) branch. The child branch you create inherits all of the content types, entries, assets, languages, extensions, releases, etc. that were part of the main branch as it is.
 
 **Note:** Only stack owners, admins, and developers can create a new branch.
 
@@ -36,14 +36,14 @@ To create a branch, log in to your [Contentstack account](https://www.contentsta
 **Note:** By default, the main branch will be the source branch for the first child branch you create.
 - Finally, click **Create** to save your branch.
 
-**Note:** At a time only **one** branch can be created across an organization. The creation actions triggered for any other branches will remain in the “in-queue” state till the current branch creation action is completed. You can view the status of these actions within the [organization's bulk task queue](/docs/owners-and-admins/organization-bulk-task-queue).
+**Note:** At a time only **one** branch can be created across an organization. The creation actions triggered for any other branches will remain in the “in-queue” state till the current branch creation action is completed. You can view the status of these actions within the [organization's bulk task queue](../organization/organization-bulk-task-queue.md).
 
 ## API Reference
 
 To perform operations related to Branches within your stack via API, refer to the following documents:
-- [Branches collection](/docs/developers/apis/content-management-api#branches) in our Content Management API
-- [Branches GET requests](/docs/developers/apis/content-delivery-api#branches) in our Content Delivery API
-- [GraphQL API](/docs/developers/apis/graphql-content-delivery-api)
+- [Branches collection](../../../api-docs/api-detail/content-management-api.md#branches) in our Content Management API
+- [Branches GET requests](../../../api-docs/api-detail/content-delivery-api.md#branches) in our Content Delivery API
+- [GraphQL API](../../../api-docs/api-detail/graphql-content-delivery-api.md)
 
 ## Common questions
 

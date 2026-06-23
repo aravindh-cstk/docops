@@ -18,8 +18,8 @@ This page explains how content managers can unpublish multiple entries and asset
 
 To unpublish entries and assets found in your search results in bulk, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-- Navigate to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and select the “[Entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries)” or “[Assets](https://www.contentstack.com/docs/content-managers/author-content/about-assets)” module.
-- Search for the entries and assets you want to unpublish. You can use [Basic Search](/docs/content-managers/search-content/basic-search), [Advanced Search](/docs/content-managers/search-content/advanced-search), [Filters](/docs/content-managers/search-content/use-filters), and [Views](/docs/content-managers/search-content/about-views) to refine your search results.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the “[Entries](../author-content/about-entries.md)” or “[Assets](../author-content/about-assets.md)” module.
+- Search for the entries and assets you want to unpublish. You can use [Basic Search](./basic-search.md), [Advanced Search](./advanced-search.md), [Filters](./use-filters.md), and [Views](./about-views.md) to refine your search results.
 - From the search results, select the entries or assets you want to unpublish. Click the **Unpublish** button on the floating bar at the top.
 - On the **Unpublish Entries**/**Unpublish Assets** screen:**Select Environment(s)** to which you want to unpublish the selected entries.
 - **Select Language(s)** for which you want to unpublish the selected entries.**Note:** While unpublishing multiple localized and unlocalized versions of a single entry, you can select a maximum of **50** **languages** and **50** **environments**.

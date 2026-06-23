@@ -18,7 +18,7 @@ This page explains how content managers can resolve review comments in a shared 
 
 Once a review comment has been addressed, it can be resolved to keep discussions organized and prevent clutter.
 
-**Note**: Ensure that a preview of the content has been shared. Refer to the [Share a Preview](/docs/content-managers/preview-sharing/share-a-preview) document for more details.
+**Note**: Ensure that a preview of the content has been shared. Refer to the [Share a Preview](./share-a-preview.md) document for more details.
 
 To resolve a review comment, follow these steps:
 - Open the **shared preview link** from your email.
@@ -36,4 +36,4 @@ Yes. Resolved comments will be hidden but can be reopened if further discussion 
 Locate the comment thread by clicking the discussion icon on the website preview, or by navigating to the **Discussions** panel on the right.
 
 ### Do I need a shared preview before resolving comments?
-Yes. Ensure that a preview of the content has been shared, and refer to the [Share a Preview](/docs/content-managers/preview-sharing/share-a-preview) document for more details.
+Yes. Ensure that a preview of the content has been shared, and refer to the [Share a Preview](./share-a-preview.md) document for more details.

@@ -19,18 +19,18 @@ This page explains how to use the **Group** field to organize multiple fields in
 
 Use the **Group** field to organize multiple fields into a reusable unit for easier content modeling. Enable **Multiple** to add multiple instances while creating entries.
 
-For example, when creating a banner, you may need a background image, text, and a link to a detail page. You can create a Group field and add the [File](/docs/developers/create-content-types/file), [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox), and [Link](/docs/developers/create-content-types/link) fields to achieve this.
+For example, when creating a banner, you may need a background image, text, and a link to a detail page. You can create a Group field and add the [File](./file.md), [Multi Line Textbox](./multi-line-textbox.md), and [Link](./link.md) fields to achieve this.
 
 You can update the following properties of a Group field at any time:
-- [Display Name](/docs/developers/create-content-types/display-name)
-- [Unique ID](/docs/developers/create-content-types/unique-id)
-- [Instruction Value](/docs/developers/create-content-types/instruction-value)
-- [Help Text](/docs/developers/create-content-types/help-text)
-- [Multiple](/docs/developers/create-content-types/multiple)
-- [Non-localizable](/docs/developers/create-content-types/non-localizable)
-- [Mark as Group Title](/docs/developers/create-content-types/mark-as-title#mark-as-group-title)
+- [Display Name](./display-name.md)
+- [Unique ID](./unique-id.md)
+- [Instruction Value](./instruction-value.md)
+- [Help Text](./help-text.md)
+- [Multiple](./multiple.md)
+- [Non-localizable](./non-localizable.md)
+- [Mark as Group Title](./mark-as-title.md#mark-as-group-title)
 
-**Note:** You can now **show a Group field as a separate tab** in the entry editor for easier navigation. Enable the **Show as Tab** option under **Advanced** settings to display the Group field as a dedicated tab. Learn more in [Show as Tab](/docs/developers/create-content-types/show-as-tab).
+**Note:** You can now **show a Group field as a separate tab** in the entry editor for easier navigation. Enable the **Show as Tab** option under **Advanced** settings to display the Group field as a dedicated tab. Learn more in [Show as Tab](./show-as-tab.md).
 
 After you add the Group field to your content type, the Group field appears on the entry page.
 
@@ -43,7 +43,7 @@ Here are some common use cases for Group fields in Contentstack.
 A website banner or header often uses multiple fields to display content. You can group these fields into a single Group field for easier management.
 
 To create a banner using a Group field, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon.
 - Insert a **Group** field and name it **Hero Unit**.
 - Configure additional properties. If your webpage requires multiple banners, enable the **Multiple** option under **Advanced**.
 - Add the following fields inside the Group field:**File**: Image for the banner background.
@@ -57,7 +57,7 @@ To create a banner using a Group field, log in to your [Contentstack account](ht
 Group fields can organize related fields into survey or questionnaire sections. They are also useful for creating polls, quizzes, or rating forms.
 
 For example, to create a Mental Health Survey form, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon.
 - Insert a **Group** field and name it **Mental Health Survey**.
 - Configure additional properties. To allow multiple surveys, enable the **Multiple** option under **Advanced**.
 - Add the following fields inside the Group field:**Single Line Textbox**: Respondent name
@@ -73,7 +73,7 @@ For example, to create a Mental Health Survey form, log in to your [Contentstack
 You can also add Global fields inside Group fields. Global fields are reusable across multiple content types, while Group fields allow repeated iterations within a content type. Combining the two increases flexibility and reusability.
 
 To create a Group field that fetches SEO data from a Global field, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon.
 - Create a Global field named **SEO**.
 - Inside the Global field, add the following:**Single Line Textbox**: SEO meta title
 - **Multi Line Textbox**: SEO meta description
@@ -98,9 +98,9 @@ To copy and paste field values across group fields, log in to your [Contentstack
 - In the target entry or instance, click the vertical ellipsis again and select **Paste Field Values**.**Note:** The target instance must match the same instance’s name and structure as the source.
 
 **Additional Resources:**
-- To extend functionality, learn how to [add Global fields to Group fields](/docs/developers/global-field/global-fields-within-group-fields).
-- To control visibility of fields, see [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules).
-- Before editing existing content types, review the [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide to avoid data loss.
+- To extend functionality, learn how to [add Global fields to Group fields](../global-field/global-fields-within-group-fields.md).
+- To control visibility of fields, see [Field Visibility Rules](./about-field-visibility-rules.md).
+- Before editing existing content types, review the [Content Type Change Management](../content-modeling/content-type-change-management.md) guide to avoid data loss.
 
 ## Common questions
 

@@ -19,11 +19,11 @@ This page introduces the Contentstack Ruby SDK, explains what it is used for, an
 
 *Use Contentstack to power content for your Ruby projects*
 
-Contentstack provides Ruby SDK that Developers can use to develop Ruby applications and power its content from Contentstack. The Contentstack Ruby SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your Ruby -based applications.
+Contentstack provides Ruby SDK that Developers can use to develop Ruby applications and power its content from Contentstack. The Contentstack Ruby SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your Ruby -based applications.
 
 **Note**: The Contentstack Ruby SDK supports Ruby v2.0 or later.
 
-In order to integrate your Ruby app with Contentstack Ruby SDK, follow the steps mentioned in the [Get Started](/docs/developers/ruby/get-started-with-ruby-sdk) section.
+In order to integrate your Ruby app with Contentstack Ruby SDK, follow the steps mentioned in the [Get Started](./get-started-with-ruby-sdk.md) section.
 
 You can check out the [sample Ruby apps](/docs/developers/ruby#sample-apps-for-ruby) that Contentstack have developed to see Ruby SDK in action.
 
@@ -34,13 +34,13 @@ You can check out the [sample Ruby apps](/docs/developers/ruby#sample-apps-for-r
 ## Common questions
 
 ### Which APIs does the Contentstack Ruby SDK use?
-The Contentstack Ruby SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your Ruby -based applications.
+The Contentstack Ruby SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your Ruby -based applications.
 
 ### What Ruby versions are supported?
 **Note**: The Contentstack Ruby SDK supports Ruby v2.0 or later.
 
 ### Where do I start integrating the Ruby SDK?
-Follow the steps mentioned in the [Get Started](/docs/developers/ruby/get-started-with-ruby-sdk) section.
+Follow the steps mentioned in the [Get Started](./get-started-with-ruby-sdk.md) section.
 
 ### Are there sample apps available?
 You can check out the [sample Ruby apps](/docs/developers/ruby#sample-apps-for-ruby) that Contentstack have developed to see Ruby SDK in action.

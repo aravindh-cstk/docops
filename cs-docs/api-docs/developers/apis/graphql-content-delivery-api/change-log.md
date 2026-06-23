@@ -16,7 +16,7 @@ last_updated: 2026-06-02
 
 Contentstack GraphQL API now allows you to fetch content that belongs to a specific branch in your stack. To do so, you can pass the branch ID as the value of the branch key in the header of the API request.
 
-You can [query our sample stack](https://www.contentstack.com/docs/developers/apis/graphql-content-delivery-api/explorer) to fetch data present across different branches.
+You can [query our sample stack](../../../api-detail/graphql-content-delivery-api/explorer.md) to fetch data present across different branches.
 
 #### July 17, 2021 - Removal of GraphQL Beta Support
 

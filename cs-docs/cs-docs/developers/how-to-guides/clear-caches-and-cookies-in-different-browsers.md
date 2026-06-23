@@ -23,7 +23,7 @@ Users need websites to load quickly, in a blink of an eye. Browsers play their p
 
 However, there may be times when browsers continue to serve cache even if the actual page/content has been changed. As a result, you may encounter certain errors or continue to see older content. In such cases, clearing the cache and cookies of a browser can help.
 
-This document discusses the steps required to clear the cache and cookies on different [browsers](/docs/developers/contentstack-basics/what-you-need-to-get-started#supported-browsers).
+This document discusses the steps required to clear the cache and cookies on different [browsers](../contentstack-basics/what-you-need-to-get-started.md#supported-browsers).
 
 ## On Chrome
 
@@ -64,7 +64,7 @@ The keyboard shortcuts for the same are:
 
 The above steps should clear your browser cache and cookies. However, if the issue still persists, please contact our [support team](mailto:support@contentstack.com).
 
-**Additional Resource:** Check out our [Contentstack CDN Cache Management](/docs/developers/how-to-guides/contentstack-cdn-cache-management) doc for more information on how CDNs work, what's Cache Purging, what are the cache responses, and so on.
+**Additional Resource:** Check out our [Contentstack CDN Cache Management](../cdn-and-caching/contentstack-cdn-cache-management.md) doc for more information on how CDNs work, what's Cache Purging, what are the cache responses, and so on.
 
 ## Common questions
 
@@ -78,4 +78,4 @@ A: Clearing the cache and cookies of a browser can help.
 A: Please contact our [support team](mailto:support@contentstack.com).
 
 **Q: Where can I learn more about CDN caching and cache purging?**  
-A: See **Additional Resource:** [Contentstack CDN Cache Management](/docs/developers/how-to-guides/contentstack-cdn-cache-management).
+A: See **Additional Resource:** [Contentstack CDN Cache Management](../cdn-and-caching/contentstack-cdn-cache-management.md).

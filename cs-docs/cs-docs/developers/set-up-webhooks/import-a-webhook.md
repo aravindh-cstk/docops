@@ -20,7 +20,7 @@ You can create a new webhook or update an existing webhook by importing a JSON f
 
 ## Import a new webhook
 
-To import a webhook, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](/docs/developers/set-up-stack/about-stack), and Perform the steps given below:
+To import a webhook, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and Perform the steps given below:
 
 - Click the “Settings” icon (press “S”) on the left navigation panel and select **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS).
 - Click the "Import Webhook" icon on the top right side of the page.
@@ -39,7 +39,7 @@ This will update your existing webhook.
 
 ## API Reference
 
-To import the JSON body of a webhook in your stack via API, refer to the [Import a webhook](/docs/developers/apis/content-management-api#import-a-webhook) API request.
+To import the JSON body of a webhook in your stack via API, refer to the [Import a webhook](../../../api-docs/api-detail/content-management-api.md#import-a-webhook) API request.
 
 ## Common questions
 
@@ -50,7 +50,7 @@ Yes. You can create a new webhook or update an existing webhook by importing a J
 Click the “Settings” icon (press “S”) on the left navigation panel and select **Webhooks**, then click the "Import Webhook" icon on the top right side of the page.
 
 **How do I import a webhook via API instead of the UI?**  
-Refer to the [Import a webhook](/docs/developers/apis/content-management-api#import-a-webhook) API request.
+Refer to the [Import a webhook](../../../api-docs/api-detail/content-management-api.md#import-a-webhook) API request.
 
 **What happens after I import a JSON file into an existing webhook?**  
 This will update your existing webhook.

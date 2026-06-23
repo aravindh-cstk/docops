@@ -20,7 +20,7 @@ This page explains how to remove a custom name from an entry version in Contents
 Entry versions in Contentstack can have custom names assigned for better organization. You can remove a custom name and revert the version to its default naming convention (e.g., "Version 3").
 
 To remove an entry version name, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon.
 - Navigate to the entry you want to modify.
 - Click the version icon in the top-right corner of the page or the “Versions” icon in the right sidebar.
 - Locate the entry, hover over it, and click the “Rename” icon.

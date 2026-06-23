@@ -15,9 +15,9 @@ last_updated: 2026-03-26
 
 This page explains how to create and configure an Azure Blob Storage custom field extension in Contentstack, intended for developers setting up custom fields and for teams who need to select Azure-hosted assets while creating entries in a stack.
 
-Azure Blob Storage custom field extension allows you to fetch your data (documents, images, videos, etc) from your Azure Blob Storage account and display them into a [field](/docs/developers/create-content-types/about-fields) of a [content type](/docs/developers/create-content-types/about-content-types) in your [stack](/docs/developers/set-up-stack/about-stack).
+Azure Blob Storage custom field extension allows you to fetch your data (documents, images, videos, etc) from your Azure Blob Storage account and display them into a [field](../create-content-types/about-fields.md) of a [content type](../create-content-types/about-content-types.md) in your [stack](../set-up-stack/about-stack.md).
 
-Thus, while creating [entries](/docs/content-managers/working-with-entries/about-entries), you can select any data (as mentioned above) as the input value for the field in the content type of your stack.
+Thus, while creating [entries](../../content-managers/author-content/about-entries.md), you can select any data (as mentioned above) as the input value for the field in the content type of your stack.
 
 This step-by-step guide explains how to create Azure Blob Storage custom field extension for your content types in Contentstack.
 
@@ -74,13 +74,13 @@ To set up an extension in Contentstack, log in to your [Contentstack account](ht
 
 If Extensions are part of your plan, contact our [Support](mailto:support@contentstack.com) team to get the code for the extension. The support team will provide you with the source code that contains the following files:**azure**: Navigate to **azure****/build/index.html **file. We will upload the code in this file in the extension source code field of our extension in the next step.
 
-- **azure-popup**: Navigate to** azure****-popup/build/index.html**, upload this file as an asset in your stack by referring to the [Create/Upload Assets](/docs/content-managers/working-with-assets/create-upload-assets) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
-- Goto your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+- **azure-popup**: Navigate to** azure****-popup/build/index.html**, upload this file as an asset in your stack by referring to the [Create/Upload Assets](../../content-managers/author-content/create-upload-assets.md) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
+- Goto your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions** page, click on the **+ New Extension **button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension** page, enter details in the fields as given below:  
-  **Title**: Provide a suitable title. For example, “Azure Blob Storage”. This title will be visible when you select the extension in the [Custom](/docs/developers/create-content-types/custom) field in your content type.
+  **Title**: Provide a suitable title. For example, “Azure Blob Storage”. This title will be visible when you select the extension in the [Custom](../create-content-types/custom.md) field in your content type.
 - **Field data type**: Select the data type in which the input data of the field should be saved in Contentstack. Select **JSON** in this case.
 - **Multiple**: Keep this option unchecked.
 - **Hosting method**: Set the hosting method to **Hosted By Contentstack**.
@@ -108,15 +108,15 @@ Now, let’s understand how you can start using this custom field in your conten
 After adding the custom field to your content type, you can use it like any other field.  
 To add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) then add the [**custom**](/docs/developers/create-content-types/custom) field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) then add the [**custom**](../create-content-types/custom.md) field to it.
 
 - Under **Select Extension**, select the “Azure Blob Storage” field that you created and set other properties. You can add other fields as per requirements.
 - Click on **Save **or** Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Azure Blob Storage **field in your entry page.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Azure Blob Storage **field in your entry page.
 - Click on** Choose from Azure Container**.  
   It will redirect you to a new page, where you can select documents, images, videos, etc, and insert them in your field by clicking on **Add Selected Object**.
 
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 
 ## Common questions
 

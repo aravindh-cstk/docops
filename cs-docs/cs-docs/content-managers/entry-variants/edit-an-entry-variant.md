@@ -23,7 +23,7 @@ Editing entry variants in Contentstack allows you to update personalized content
 
 To edit an entry variant, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
 
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries **icon in the left navigation panel and select an existing entry variant.
+- Navigate to the desired [stack](../../developers/set-up-stack/about-stack.md), then click the **Entries **icon in the left navigation panel and select an existing entry variant.
 - Within the entry editor for an entry variant, only the fields marked with the **Variant Field **tag are exclusive to the entry variant. Other field values are inherited from the latest version of the base entry.**Note: **Only the fields you modify within the entry variant will be saved; other field values will remain inherited from the base entry.
 - Modify the fields as needed. Make sure your changes align with the intended personalization for the user segment targeted by this variant.
 - Once you are satisfied with the edits, click the **Save **button to apply the changes to the entry variant.
@@ -32,7 +32,7 @@ By following these steps, you can efficiently edit entry variants in Contentstac
 
 ## API Reference
 
-To edit an entry variant via API, refer to the [Update Entry Variant](/docs/developers/apis/content-management-api#update-entry-variant) API requests.
+To edit an entry variant via API, refer to the [Update Entry Variant](../../../api-docs/api-detail/content-management-api.md#update-entry-variant) API requests.
 
 ## Common questions
 
@@ -43,7 +43,7 @@ A: Only the fields marked with the **Variant Field **tag are exclusive to the en
 A: **Note: **Only the fields you modify within the entry variant will be saved; other field values will remain inherited from the base entry.
 
 **Q: Can I edit an entry variant using an API instead of the UI?**  
-A: Yes. Refer to the [Update Entry Variant](/docs/developers/apis/content-management-api#update-entry-variant) API requests.
+A: Yes. Refer to the [Update Entry Variant](../../../api-docs/api-detail/content-management-api.md#update-entry-variant) API requests.
 
 **Q: What if I don’t have access to Entry Variants?**  
 A: **Note**: The Entry Variants feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.

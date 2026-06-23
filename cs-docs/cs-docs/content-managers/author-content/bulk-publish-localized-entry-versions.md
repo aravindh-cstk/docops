@@ -17,12 +17,12 @@ This page explains how to bulk publish multiple localized and unlocalized versio
 
 ## Bulk Publish Localized Entry Versions
 
-You can publish multiple localized and unlocalized versions of an entry right from the “Publish” modal of the entry's [master language](https://www.contentstack.com/docs/developers/multilingual-content/set-the-master-language) version.
+You can publish multiple localized and unlocalized versions of an entry right from the “Publish” modal of the entry's [master language](../../developers/multilingual-content/set-the-master-language.md) version.
 
 **Note**: This feature is available only if included in your plan. Contact our [support](mailto:support@contentstack.com) team to enable this feature if needed.
 
 To bulk publish localized and unlocalized entries, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
 - Open the entry you want to publish.
 - In the top-right corner of the page, select the master language from the dropdown for languages.
 The master language is marked with an **(M)** at the end.

@@ -24,7 +24,7 @@ To get started with the Typescript Delivery SDK, you will need the following:
 - [Node.js](https://nodejs.org/) version 22 or later
 
 ## Authentication
-To effectively interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api), a secure authentication process is employed using a Delivery Token that is specific to a publishing environment. Consequently, when utilizing the TypeScript Delivery SDK, you need to provide the necessary [delivery token](/docs/developers/create-tokens/about-delivery-tokens) during the SDK initialization process for making API requests.
+To effectively interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md), a secure authentication process is employed using a Delivery Token that is specific to a publishing environment. Consequently, when utilizing the TypeScript Delivery SDK, you need to provide the necessary [delivery token](../../../create-tokens/about-delivery-tokens.md) during the SDK initialization process for making API requests.
 
 ## Installation and Setup
 To install the TypeScript SDK via npm, open the terminal and run the following command:
@@ -47,8 +47,8 @@ const stack = contentstack.stack({
 
 Following are the details of the parameters that you need to pass in the above command:
 - `apiKey`: Enter the API key of your stack.
-- `deliveryToken`: Enter the delivery token associated with the environment of your stack. Here’s how you can [create a delivery token](/docs/developers/create-tokens/create-a-delivery-token/).
-- `environment`: Enter the environment name where you want to initialize your SDK. Here’s how you can [add an environment](/docs/developers/set-up-environments/add-an-environment).
+- `deliveryToken`: Enter the delivery token associated with the environment of your stack. Here’s how you can [create a delivery token](../../../create-tokens/create-a-delivery-token.md).
+- `environment`: Enter the environment name where you want to initialize your SDK. Here’s how you can [add an environment](../../../set-up-environments/add-an-environment.md).
 
 To initialize the SDK with the latest features offered in the early access phase, include the early access parameter as shown in the following code:
 
@@ -67,7 +67,7 @@ Custom Configurations offer developers the flexibility to customize and adapt th
 Here's an overview of the common customizable configurations within a SDK.
 
 ### Regions
-Contentstack offers six [regions](/docs/developers/contentstack-regions/about-regions); AWS North America (NA), AWS Europe (EU), Azure North America (Azure NA), Azure Europe (Azure EU), GCP North America (GCP NA), and AWS Australia (AWS AU) as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions on how to use Contentstack SDKs.
+Contentstack offers six [regions](../../../contentstack-regions/about-regions.md); AWS North America (NA), AWS Europe (EU), Azure North America (Azure NA), Azure Europe (Azure EU), GCP North America (GCP NA), and AWS Australia (AWS AU) as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions on how to use Contentstack SDKs.
 
 **Note**: Users using the AWS NA region do not need to make any configuration changes as the SDK considers this region by default. This means, you need not pass the region parameter in the following code.
 
@@ -227,13 +227,13 @@ const prevPageResult = await query.previous().find();
 ## Limitations
 - Our CDN services have a maximum URL size of **8KB**. Any request from Typescript Delivery SDK that exceeds this limit will get a 400 error.
 - The Typescript Delivery SDK does not support multiple content types referencing in a single query.
-- The Typescript Delivery SDK currently does not support querying [Global Field](/docs/developers/apis/content-delivery-api/#global-fields) schemas. However, you can include these details when querying [content type](/docs/developers/apis/content-delivery-api/#content-types) details by using the `include_global_field_schema` query parameter.
+- The Typescript Delivery SDK currently does not support querying [Global Field](../../../../../api-docs/api-detail/content-delivery-api.md#global-fields) schemas. However, you can include these details when querying [content type](../../../../../api-docs/api-detail/content-delivery-api.md#content-types) details by using the `include_global_field_schema` query parameter.
 
 ## More Resources
 [Typescript GitHub Repository](https://github.com/contentstack/contentstack-typescript)
 
 ## Next Steps
-[Typescript Delivery SDK API Reference](/docs/developers/sdks/content-delivery-sdk/typescript/reference/)
+[Typescript Delivery SDK API Reference](../../../create-content-types/reference.md)
 
 ## Common questions
 

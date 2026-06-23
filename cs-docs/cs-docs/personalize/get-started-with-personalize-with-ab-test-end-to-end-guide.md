@@ -32,7 +32,7 @@ This step-by-step guide will help you get started quickly with Contentstack Pers
 ## Prerequisites
 Before starting, ensure you have:
 - A [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Contentstack [Organization](/docs/developers/organization)/[Stack](/docs/developers/set-up-stack/about-stack) as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin) that has Personalize enabled
+- Access to the Contentstack [Organization](../developers/organization.md)/[Stack](../developers/set-up-stack/about-stack.md) as the [Owner](../developers/organization/organization-roles.md#organization-owner)/[Admin](../developers/organization/organization-roles.md#organization-admin) that has Personalize enabled
 - Next.js website (version 14 and above) with [App Router](https://nextjs.org/docs/app)
 - Website content sourced from a Stack and deployed on your preferred hosting platform
 - A basic understanding of A/B testing and Contentstack’s UI
@@ -49,12 +49,12 @@ To create a new Personalize project, log in to your [Contentstack account](https
 
 This creates your new Personalize project and it will now appear on the Personalize Projects landing page.
 
-**Additional Resource**: For detailed information, please refer to the [Create a Project](/docs/personalize/create-personalize-project/) documentation.
+**Additional Resource**: For detailed information, please refer to the [Create a Project](./create-personalize-project.md) documentation.
 
 ## Set up SDK
-You must set up the Personalize Edge SDK for your Next.js website, hosted on Vercel. To do this, refer to [this guide](/docs/personalize/setup-nextjs-website-with-personalize-vercel) and then continue the further steps in Personalize. After setting up the SDK for your Next.js website, continue the steps further from this guide.
+You must set up the Personalize Edge SDK for your Next.js website, hosted on Vercel. To do this, refer to [this guide](./setup-nextjs-website-with-personalize-vercel.md) and then continue the further steps in Personalize. After setting up the SDK for your Next.js website, continue the steps further from this guide.
 
-**Additional Resource:** For setting up the Personalize Edge SDK for your Next.js website with Personalize, hosted on Launch, refer to [this guide](/docs/personalize/setup-nextjs-website-with-personalize-launch).
+**Additional Resource:** For setting up the Personalize Edge SDK for your Next.js website with Personalize, hosted on Launch, refer to [this guide](./setup-nextjs-website-with-personalize-launch.md).
 
 ## Create an A/B Test Experience in Personalize
 An Experience is a configuration within a personalization platform for managing and executing tests and campaigns. You can choose between Segmented or A/B Test experiences. An A/B test experience is a randomized experiment that lets you present two or more content variants of a web page or an app and display them to different sets of users at the same time to verify the effectiveness of these variants.
@@ -77,10 +77,10 @@ To create a new A/B Test experience in the new project, perform the following st
 
 You’ve now created an A/B test experience that you can use to test different content variants.
 
-**Additional Resource**: For detailed information, please refer to the [Create an A/B Test Experience](/docs/personalize/create-ab-test-experience/) documentation.
+**Additional Resource**: For detailed information, please refer to the [Create an A/B Test Experience](./create-ab-test-experience.md) documentation.
 
 ## Enable Live Preview and Visual Builder
-To fully support personalized content creation and validation with **Contentstack Personalize**, enable both [Live Preview](/docs/content-managers/author-content/about-live-preview) and [Visual Builder](/docs/content-managers/visual-builder/about-visual-builder) on your stack. These tools provide editors with real-time visibility and intuitive controls for managing variant-based experiences directly in the CMS interface.
+To fully support personalized content creation and validation with **Contentstack Personalize**, enable both [Live Preview](../content-managers/author-content/about-live-preview.md) and [Visual Builder](/docs/content-managers/visual-builder/about-visual-builder) on your stack. These tools provide editors with real-time visibility and intuitive controls for managing variant-based experiences directly in the CMS interface.
 
 **Note:** **Live Preview** lets you preview personalized experiences in real time. **Visual Builder** allows editors to create and manage variants visually, and preview multiple variants simultaneously based on different audience selections, without requiring developer involvement.
 
@@ -108,17 +108,17 @@ To add the created event to an A/B Test experience, perform the following steps:
 - Click the **Configuration** tab.
 - Scroll to the **Metrics** section and then click **+ Add Event**.
 - Select the preferred event from the drop-down list.
-**Note**: Use the Personalize Edge SDK to trigger the [impressions](/docs/developers/sdks/personalize-edge-sdk/javascript/reference#personalize-triggerimpression) and [events](/docs/developers/sdks/personalize-edge-sdk/javascript/reference#personalize-triggerevent) for your experiences using the `triggerImpression` and `triggerEvent` methods.
+**Note**: Use the Personalize Edge SDK to trigger the [impressions](../developers/create-content-types/reference.md#personalize-triggerimpression) and [events](../developers/create-content-types/reference.md#personalize-triggerevent) for your experiences using the `triggerImpression` and `triggerEvent` methods.
 - Once you have done that, click the **Save** button.
 
 This adds the new event as a reference in your A/B Test experience. Now let’s create Entry Variants for your A/B Test experience.
 
 ## Create Entry Variants in CMS
-Contentstack’s [Entry Variants](/docs/content-managers/entry-variants/about-entry-variants/) feature lets you create and manage variations of your content seamlessly, catering to diverse audiences, languages, and marketing experiments.
+Contentstack’s [Entry Variants](../content-managers/entry-variants/about-entry-variants.md) feature lets you create and manage variations of your content seamlessly, catering to diverse audiences, languages, and marketing experiments.
 
 ### Link Content Types to Variant Groups in CMS
 The Variants page in Contentstack allows you to view and manage all variant groups and entry variants, sourced from the Personalize feature. Follow the steps below to access and manage variants within Contentstack.
-- Navigate to the [stack](/docs/developers/set-up-stack/about-stack) that we synced with our personalized project in earlier steps.
+- Navigate to the [stack](../developers/set-up-stack/about-stack.md) that we synced with our personalized project in earlier steps.
 - In the top navigation panel, click the **Settings** icon (or press **S**) and select **Variants**.
 - You will see a list of all **Variant Groups** imported from Personalize. Below is an overview of the key details on this page:**Variant Group**: Displays the name of the variant group.
 - **Linked With**: Indicates the connection status of the variant group with Personalize.
@@ -127,10 +127,10 @@ The Variants page in Contentstack allows you to view and manage all variant grou
 - **Modified At: **The date and time along with the user name who modified the variant group.
 - When you click a specific **Variant Group**, you will be redirected to the **Variant Group Details** page. On this page, you can view the following details:**Variant Group Name**: The name of the group.
 - **Description**: A brief description of the variant group.
-- [**Variants**](/docs/personalize/about-variants): A list of all the variants under this group.
+- [**Variants**](./about-variants.md): A list of all the variants under this group.
 
 **Note**: You cannot edit the above fields on the **Variant Group Details** page since this information comes from Personalize.
-- In the **Link **[**Content Types**](/docs/developers/create-content-types/about-content-types) section, select one or more content types you want to link with this variant group.
+- In the **Link **[**Content Types**](../developers/create-content-types/about-content-types.md) section, select one or more content types you want to link with this variant group.
 - Click **Apply** to link the selected content types to the variant group.
 - Finally, click **Save** to confirm your changes.
 
@@ -138,20 +138,20 @@ Once you've linked a variant group to a content type, a **dropdown** will appear
 
 ### Create Entry Variants for the Experiences
 Entry Variants allow you to deliver customized content to different user groups, making it easier to target specific audience segments. Follow these steps to create an entry variant.
-- Navigate to the [stack](/docs/developers/set-up-stack/about-stack) where you want to create entry variants.
-- Click the **Entries** icon in the top navigation panel.**Note**: Link variant groups to the relevant content type(s) before creating entry variants. Each [experience](/docs/personalize/about-experiences) in your Personalize project appears as a Variant Group in the stack. For linking details, refer to the [Manage Variant Groups and Entry Variants](/docs/developers/variants/manage-variant-groups) document.
+- Navigate to the [stack](../developers/set-up-stack/about-stack.md) where you want to create entry variants.
+- Click the **Entries** icon in the top navigation panel.**Note**: Link variant groups to the relevant content type(s) before creating entry variants. Each [experience](./about-experiences.md) in your Personalize project appears as a Variant Group in the stack. For linking details, refer to the [Manage Variant Groups and Entry Variants](../developers/variants/manage-variant-groups.md) document.
 - In the top navigation panel, click the **Entries** icon and select **Base Entries.**
 - Select the desired variant from the available variant groups to create your entry variant.
-- The entry editor will display content from the base entry by default. Enter or edit content in the fields as per the selected variant. This content will be tailored specifically for the configured [audiences](/docs/personalize/about-audiences).
+- The entry editor will display content from the base entry by default. Enter or edit content in the fields as per the selected variant. This content will be tailored specifically for the configured [audiences](./about-audiences.md).
 - As soon as you enter or update content for a field, you will see a **Variant Field** tag.
 - You can click the **Variant Field** dropdown and select **Revert to base entry value** if you want to revert to the base entry content for a specific field.
 - Once satisfied with the content, click **Save** to save the entry variant.
-**Note**: Once saved, the entry variants become independent of the base entry. For more details, refer to the [manage versions of entry variants](/docs/content-managers/entry-variants/manage-versions-of-entry-variants) document.
+**Note**: Once saved, the entry variants become independent of the base entry. For more details, refer to the [manage versions of entry variants](../content-managers/entry-variants/manage-versions-of-entry-variants.md) document.
 
 You can manage and switch between different variants within the entry editor by selecting the relevant variant from the dropdown menu.
 
 ### Publish an Entry Variant
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), click the **Entries** icon, and select **Base & Entry Variants.**
+- Navigate to the desired [stack](../developers/set-up-stack/about-stack.md), click the **Entries** icon, and select **Base & Entry Variants.**
 - Select an existing entry variant, indicated by the variants icon on the entries list page.
 - Click the **Publish** button within the entry editor.
 - In the **Publish Entry Variant** modal that appears, under **Select Environment(s)** and **Select Language(s)**, select the environment(s) and the locale(s) to which you want to publish the entry.
@@ -160,7 +160,7 @@ You can manage and switch between different variants within the entry editor by 
 - If you have nested references within your entry variant, the Publish Reference(s) modal showing all the nested references for the entry will open up.
 - Click **Send With References** to send the entry along with all its nested references for publishing.
 
-**Note**: If no previous or current version of the base entry is published in the selected environment(s) and language(s), the base entry will be published by default. Learn more about [how publishing works with Entry Variants](/docs/content-managers/entry-variants/understanding-how-publishing-works-with-entry-variants/).
+**Note**: If no previous or current version of the base entry is published in the selected environment(s) and language(s), the base entry will be published by default. Learn more about [how publishing works with Entry Variants](../content-managers/entry-variants/understanding-how-publishing-works-with-entry-variants.md).
 
 Alternatively, when publishing the base entry, you can **Select Variant(s)** from the dropdown in the **Publish Entry** modal. Choose from the available entry variants to publish them alongside the base entry.
 
@@ -179,13 +179,13 @@ Once you activate the A/B Test, Personalize will start calculating the insights 
 
 Impressions occur when a user views a specific Variant within an Experience, effectively gaining an impression of the personalized content. Each impression is associated with the Experience, its Variant, and the active user.
 
-A conversion is an event that signifies a positive user action, such as a click on the button (Learn More) that we defined earlier in the guide. They are used in A/B Test experiences to evaluate the effectiveness of a variant, and a higher number of conversions can indicate a winning variant. To learn more about how we determine the winning variant in A/B test, please refer to the [Experience Analytics](/docs/personalize/experience-analytics#a-b-test-experience-analytics) documentation.
+A conversion is an event that signifies a positive user action, such as a click on the button (Learn More) that we defined earlier in the guide. They are used in A/B Test experiences to evaluate the effectiveness of a variant, and a higher number of conversions can indicate a winning variant. To learn more about how we determine the winning variant in A/B test, please refer to the [Experience Analytics](./experience-analytics.md#a-b-test-experience-analytics) documentation.
 
 Once you learn which variant is winning, you can tweak the traffic distribution to send more traffic to the winning variant.
 
 You have successfully set up a Contentstack Personalize project, connected it to an existing stack, configured the SDK, and created an A/B test experience with events and entry variants. You are now ready to start personalizing your content and analyzing the performance of your experiences.
 
-This guide provides a complete overview to get you started with Personalize. For more advanced usage and customization, refer to the [Personalize documentation](https://www.contentstack.com/docs/personalize).
+This guide provides a complete overview to get you started with Personalize. For more advanced usage and customization, refer to the [Personalize documentation](../agent-os/personalize.md).
 
 ## Common questions
 

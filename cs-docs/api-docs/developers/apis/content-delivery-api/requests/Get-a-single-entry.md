@@ -16,7 +16,7 @@ last_updated: 2026-06-05
 
 The Get a single entry request fetches a particular entry of a content type.
 
-**Tip**: To get a specific version, refer to the [Get a Single Entry](/docs/developers/apis/content-management-api/#get-a-single-entry) management API. This request returns only the latest version.
+**Tip**: To get a specific version, refer to the [Get a Single Entry](../../../../api-detail/content-management-api.md#get-a-single-entry) management API. This request returns only the latest version.
 
 Additionally, if you wish to fetch the metadata attached to each entry, then you need to pass include_metadata as a query parameter. Set this parameter to true to include the entry metadata along with all entries in the response body.
 
@@ -41,7 +41,7 @@ To include the publish details in the response, make use of the include_publish_
 
 **Note**: To retrieve an entry from a particular branch, provide the branch_uid under the branch header.
 
-You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
+You can add other [Queries](../../../../api-detail/content-delivery-api.md#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
 
 **When using Delivery Tokens**
 

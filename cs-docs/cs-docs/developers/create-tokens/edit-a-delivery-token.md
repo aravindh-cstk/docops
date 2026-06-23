@@ -16,22 +16,22 @@ This page explains how to edit an existing Delivery Token in Contentstack, inclu
 
 ## Edit a Delivery Token
 
-In Contentstack, after [creating a Delivery Token](/docs/developers/create-tokens/create-a-delivery-token), you can modify its details such as name, alias, description, branch, and publishing environment to align with your project's changing requirements.
+In Contentstack, after [creating a Delivery Token](./create-a-delivery-token.md), you can modify its details such as name, alias, description, branch, and publishing environment to align with your project's changing requirements.
 
-**Note:** Only the stack [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can edit Delivery Tokens.
+**Note:** Only the stack [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and [Developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can edit Delivery Tokens.
 
-To edit a Delivery Token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To edit a Delivery Token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 - Click **Tokens** in the settings panel.
-- On the **Delivery Tokens** tab, click the Delivery Token you want to edit. Alternatively, click the vertical ellipsis in the **Actions** column and select **Edit**.**Tip:** If you are on the [Management Tokens](/docs/developers/create-tokens/about-management-tokens) tab, press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
-- Update the necessary fields. If a[Preview Token](/docs/developers/create-tokens/about-delivery-tokens#understanding-preview-tokens) has not been created, click **+ Create Preview Token** to generate one.
+- On the **Delivery Tokens** tab, click the Delivery Token you want to edit. Alternatively, click the vertical ellipsis in the **Actions** column and select **Edit**.**Tip:** If you are on the [Management Tokens](./about-management-tokens.md) tab, press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
+- Update the necessary fields. If a[Preview Token](./about-delivery-tokens.md#understanding-preview-tokens) has not been created, click **+ Create Preview Token** to generate one.
 - Click **Save** to apply your changes.
 
 **Note:** The value of a Delivery Token cannot be edited. If you need a different token string, you'll need to create a new Delivery Token.
 
 ## API Reference
 
-To edit the details of a Delivery Token via API, refer to the [Update Delivery Token](/docs/developers/apis/content-management-api#update-delivery-token) request.
+To edit the details of a Delivery Token via API, refer to the [Update Delivery Token](../../../api-docs/api-detail/content-management-api.md#update-delivery-token) request.
 
 ## Common questions
 
@@ -45,4 +45,4 @@ No. The value of a Delivery Token cannot be edited; you must create a new Delive
 Press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
 
 ### Can I edit a Delivery Token using the API?
-Yes. Refer to the [Update Delivery Token](/docs/developers/apis/content-management-api#update-delivery-token) request.
+Yes. Refer to the [Update Delivery Token](../../../api-docs/api-detail/content-management-api.md#update-delivery-token) request.

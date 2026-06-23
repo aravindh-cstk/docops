@@ -35,7 +35,7 @@ The Knowledge Vault API requests acts as a central repository for brand-related 
 
 ### Authentication
 
-Knowledge Vault uses token-based authentication. You can use the Authtoken along with the Organization UID to make API requests. Read more about the different [types of tokens](/docs/developers/create-tokens/types-of-tokens).
+Knowledge Vault uses token-based authentication. You can use the Authtoken along with the Organization UID to make API requests. Read more about the different [types of tokens](../../cs-docs/developers/create-tokens/types-of-tokens.md).
 
 #### For Authtoken-based authentication
 
@@ -45,13 +45,13 @@ Knowledge Vault uses token-based authentication. You can use the Authtoken along
 
 #### How to Get Authtoken
 
-To retrieve the authtoken, log in to your Contentstack account by using the [Log into your account](/docs/developers/apis/content-management-api/#logging-in-out) request under [User Session](/docs/developers/apis/content-management-api/#user-session). This request will return the authtoken in the response body.
+To retrieve the authtoken, log in to your Contentstack account by using the [Log into your account](./content-management-api.md#logging-in-out) request under [User Session](./content-management-api.md#user-session). This request will return the authtoken in the response body.
 
-You can generate multiple authtokens by executing the [Log into your account](/docs/developers/apis/content-management-api/#logging-in-out) request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of 20 valid tokens that a user can use per account at a time, to execute CMA requests.
+You can generate multiple authtokens by executing the [Log into your account](./content-management-api.md#logging-in-out) request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of 20 valid tokens that a user can use per account at a time, to execute CMA requests.
 
 **Note**: If you already have valid 20 tokens, creating a new authtoken will automatically cause the oldest authtoken to expire without warning.
 
-For SSO-enabled organizations, the [Log into your account](/docs/developers/apis/content-management-api/#logging-in-out) request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require a user authtoken will not work. Only the owner of the organization and users with permission to access the Organization without SSO can use these APIs. Learn more about [REST API Usage](/docs/developers/single-sign-on/rest-api-usage).
+For SSO-enabled organizations, the [Log into your account](./content-management-api.md#logging-in-out) request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require a user authtoken will not work. Only the owner of the organization and users with permission to access the Organization without SSO can use these APIs. Learn more about [REST API Usage](../../cs-docs/developers/single-sign-on/rest-api-usage.md).
 
 ### Rate Limiting
 
@@ -104,7 +104,7 @@ Learn more about [how to get started with using the Postman Collection](#postman
 
 ### Knowledge Vault
 
-[Knowledge Vault](/docs/content-managers/brand-kit/about-knowledge-vault) works as a centralized repository where you can store, manage, and organize brand-related data. You can use the **Ingest Content**, **Update Content**, and **Delete Content** requests.
+[Knowledge Vault](../../cs-docs/content-managers/brand-kit/about-knowledge-vault.md) works as a centralized repository where you can store, manage, and organize brand-related data. You can use the **Ingest Content**, **Update Content**, and **Delete Content** requests.
 
 
 #### Ingest Content
@@ -115,7 +115,7 @@ Learn more about [how to get started with using the Postman Collection](#postman
 
 The Ingest Content request stores textual content in a specified folder within the Knowledge Vault of a brand kit. It enriches the content with metadata such as title and tags for improved organization and retrieval.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body for ingesting content:
 
@@ -135,7 +135,7 @@ Here’s an example of the Request Body for ingesting content:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 - **organization_uid** (required)
   Enter the Organization UID.
@@ -184,7 +184,7 @@ Here’s an example of the Request Body for ingesting content:
 
 The Update Content request lets you update a specific content stored in the Knowledge Vault.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 ##### URL Parameters
 
@@ -201,7 +201,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Request
@@ -240,7 +240,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Delete Content request lets you delete a specific content stored in the Knowledge Vault.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 ##### URL Parameters
 
@@ -257,7 +257,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Response
@@ -359,7 +359,7 @@ Some of the important variables that you need to set are as follows:
 
   
 
-**Note:** The Knowledge Vault Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](/docs/developers/apis/knowledge-vault-api#authentication) section for more details.
+**Note:** The Knowledge Vault Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](./knowledge-vault-api.md#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 
@@ -407,11 +407,11 @@ If you want to prevent this action, perform the steps given below:
 
 This will allow you to access [cookies of this domain in scripts](https://learning.postman.com/docs/sending-requests/cookies/#accessing-cookies-in-scripts) programmatically.
 
-**Note:** To avoid this situation, we recommend you to use the Brand Kit UID along with the Authtoken to make valid Knowledge Vault API requests. For more information, refer to [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+**Note:** To avoid this situation, we recommend you to use the Brand Kit UID along with the Authtoken to make valid Knowledge Vault API requests. For more information, refer to [Authentication](./knowledge-vault-api.md#authentication).
 
 ### Postman Collection Updates
 
-We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](/docs/developers/apis/knowledge-vault-api#download-latest-collection) again and you are good to go.
+We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](./knowledge-vault-api.md#download-latest-collection) again and you are good to go.
 
 You can also choose to watch for the latest Postman Collection updates on our GitHub repository and get notifications of new releases or updates to the repository. The GitHub Readme doc will help you with the steps that you need to follow.
 

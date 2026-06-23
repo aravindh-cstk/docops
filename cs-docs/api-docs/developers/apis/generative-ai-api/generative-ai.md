@@ -22,7 +22,7 @@ The Generate AI works as a communication channel between your Vector database an
 
 The GenAI request carries prompts, processes them, retrieves relevant data, and returns the processed data.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 Here’s an example of the Request Body for using GenAI request:
 
@@ -43,7 +43,7 @@ Here’s an example of the Request Body for using GenAI request:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (optional)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/generative-ai-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/generative-ai-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Request

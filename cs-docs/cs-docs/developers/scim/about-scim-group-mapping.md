@@ -19,9 +19,9 @@ This page explains how SCIM Group Mapping works in Contentstack, who can use it,
 
 The **SCIM Group Mapping** functionality allows you to set permissions (roles) for a particular group of users on an organization and stack(s) in Contentstack. When you add a user to a group via an IdP (Identity Provider) such as OneLogin, the permissions you have defined for the group will be applicable to that user.
 
-**Note**: Only the [Organization owner](/docs/owners-and-admins/organization-roles#organization-owner) and [Organization admin(s)](/docs/owners-and-admins/organization-roles#organization-admin) have the right to use SCIM group mapping functionality.
+**Note**: Only the [Organization owner](../organization/organization-roles.md#organization-owner) and [Organization admin(s)](../organization/organization-roles.md#organization-admin) have the right to use SCIM group mapping functionality.
 
-You can set this permission by navigating to the **SCIM 2.0** tab on your [**Organization Settings**](/docs/developers/organization/organization-settings-overview/) page. Then, from the groups you’ve created via IdP, select the group for which you want to define permissions and set permissions accordingly.
+You can set this permission by navigating to the **SCIM 2.0** tab on your [**Organization Settings**](../organization/organization-settings-overview.md) page. Then, from the groups you’ve created via IdP, select the group for which you want to define permissions and set permissions accordingly.
 
 If you specify a group, let’s say “Content Manager group,” to have the **Content Manager** role for every stack existing within an organization, then all the users belonging to this group will have the **Content Manager** role for these stacks.
 
@@ -30,10 +30,10 @@ If you specify a group, let’s say “Content Manager group,” to have the **C
 ## Common questions
 
 ### Who can use SCIM group mapping functionality?
-Only the [Organization owner](/docs/owners-and-admins/organization-roles#organization-owner) and [Organization admin(s)](/docs/owners-and-admins/organization-roles#organization-admin) have the right to use SCIM group mapping functionality.
+Only the [Organization owner](../organization/organization-roles.md#organization-owner) and [Organization admin(s)](../organization/organization-roles.md#organization-admin) have the right to use SCIM group mapping functionality.
 
 ### Where do I configure SCIM group mapping in Contentstack?
-Navigate to the **SCIM 2.0** tab on your [**Organization Settings**](/docs/developers/organization/organization-settings-overview/) page.
+Navigate to the **SCIM 2.0** tab on your [**Organization Settings**](../organization/organization-settings-overview.md) page.
 
 ### What happens when a user is added to an IdP group?
 The permissions you have defined for the group will be applicable to that user.

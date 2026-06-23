@@ -17,10 +17,10 @@ This page explains how to use the **Status** panel in Contentstack’s Visual Ed
 
 ## Status
 
-The Status panel in [Visual Editor](/docs/content-managers/visual-editor/about-visual-editor) gives you an overview of the current [entry](/docs/content-managers/author-content/about-entries) along with other entries linked or referenced within the web page.
+The Status panel in [Visual Editor](./about-visual-editor.md) gives you an overview of the current [entry](../author-content/about-entries.md) along with other entries linked or referenced within the web page.
 
 To access the status of a web page using Visual Editor, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - In the right sidebar, click the **Status** icon. The panel appears, providing details of the selected page.
 - Expand the relevant sections in the panel to view the following details:**Basic Information**: Displays details such as entry ID, content type ID, creator, creation date, last modified by, and last modified date.

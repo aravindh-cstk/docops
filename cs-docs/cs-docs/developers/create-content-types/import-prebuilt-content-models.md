@@ -17,11 +17,11 @@ This page explains how to import prebuilt Content Model templates into a Content
 
 ## Import Prebuilt Content Models
 
-You can import the prebuilt Content Model templates, view and edit their schema, and use them within your stack. The Content Models template includes the [Content Types](/docs/developers/create-content-types/about-content-types/), [Global Fields](/docs/developers/create-content-types/global/), [Labels](/docs/developers/create-content-types/about-labels/), and [Extensions](/docs/developers/experience-extensions-overview/about-experience-extensions/).
+You can import the prebuilt Content Model templates, view and edit their schema, and use them within your stack. The Content Models template includes the [Content Types](./about-content-types.md), [Global Fields](./global.md), [Labels](./about-labels.md), and [Extensions](../experience-extensions-overview/about-experience-extensions.md).
 
 To import a prebuilt content model, log in to your [Contentstack account](/login/), and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to import the content model, and click the “Content Models” icon on the left navigation panel.
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to import the content model, and click the “Content Models” icon on the left navigation panel.
 - Click the **+ New Content Type** button and select **Use Prebuilt** from the dropdown.
 - From the **Add**** Content Model** modal, hove over the content model you want to import and click the **Import** button.
 - In the popup window, authenticate the access by clicking the **Authorize** button.
@@ -33,7 +33,7 @@ To import a prebuilt content model, log in to your [Contentstack account](/login
 - Now, click the **View Content Models** button to navigate to the Content Models section of the stack where you have imported the content model. You can see the imported content type in the Content Model section of your stack.
 - Click the content type to view the schema.
 
-**Note**: Alternatively, you can [import the prebuilt Content Models via Marketplace](/docs/developers/marketplace-platform-guides/content-models/how-to-import-content-model) as well.
+**Note**: Alternatively, you can [import the prebuilt Content Models via Marketplace](../marketplace-platform-guides/content-models/how-to-import-content-model.md) as well.
 
 ## Common questions
 

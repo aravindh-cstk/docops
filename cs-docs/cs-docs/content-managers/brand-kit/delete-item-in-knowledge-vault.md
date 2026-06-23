@@ -19,13 +19,13 @@ This page explains how to delete an item (or folder) from the Brand Kit Knowledg
 
 If a Knowledge Vault item is no longer required, or becomes outdated or unnecessary, you can delete it from the Knowledge Vault. In this guide, we will discuss how to delete a Knowledge Vault item.
 
-**Note**: Only Brand Kit [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin) can edit items in the Knowledge Vault.
+**Note**: Only Brand Kit [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin) can edit items in the Knowledge Vault.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin)
 
 ## Steps for Execution
 
@@ -45,7 +45,7 @@ You will get a success message once the item or folder is deleted from the Knowl
 ## Common questions
 
 ### Who can delete items in the Knowledge Vault?
-Only Brand Kit [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin) can edit items in the Knowledge Vault.
+Only Brand Kit [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin) can edit items in the Knowledge Vault.
 
 ### What happens if I delete a folder in the Knowledge Vault?
 **Warning**: If you delete a folder, all items within the folder will be deleted.

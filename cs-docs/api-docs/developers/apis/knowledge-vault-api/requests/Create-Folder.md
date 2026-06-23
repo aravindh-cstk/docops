@@ -16,7 +16,7 @@ last_updated: 2026-03-02
 
 The Create Folder request lets you create a new folder within a specified parent directory in your knowledge vault.
 
-To configure the permissions for your app via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your app via [OAuth](../../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Example:
 
@@ -37,7 +37,7 @@ The _name_ and _path_ are required strings where _name_ specifies the new folder
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../../api-detail/knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 - **organization_uid** (required)
   Enter the Organization UID.

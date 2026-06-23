@@ -19,7 +19,7 @@ This page explains what Contentstack Marketplace Content Models are, what they i
 
 The Contentstack Content Models are a blueprint or schema of a content type that defines the structure, fields, and relationships of the content. It is a visual representation of the content type and helps content editors and developers to create and manage content in a structured and organized manner. Content Models allow you to define custom fields, data types, validation rules, and other settings that are specific to the content structure. It enables complete control over how the content is structured and ensures consistency across all the content entries.
 
-With the Contentstack Marketplace Content Models, you can import, view and edit their schema, and use them within your stack. The Content Models include [Content Types](/docs/developers/create-content-types/about-content-types/), [Global Fields](/docs/developers/create-content-types/global/), [Labels](/docs/developers/create-content-types/about-labels/), and [Extensions](/docs/developers/experience-extensions-overview/about-experience-extensions/).
+With the Contentstack Marketplace Content Models, you can import, view and edit their schema, and use them within your stack. The Content Models include [Content Types](../../create-content-types/about-content-types.md), [Global Fields](../../create-content-types/global.md), [Labels](../../create-content-types/about-labels.md), and [Extensions](../../experience-extensions-overview/about-experience-extensions.md).
 
 To access Content Models:
 - Log in to your [Contentstack account](https://www.contentstack.com/login/).
@@ -39,7 +39,7 @@ Below is a list of the prebuilt Content Models provided by Contentstack:
 - [Website Header](/docs/marketplace-platform-guides/content-models/website-header)
 - [Website Homepage](/docs/marketplace-platform-guides/content-models/website-homepage)
 
-**Additional Resource:** You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
+**Additional Resource:** You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](./how-to-import-content-model.md)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](../../create-content-types/import-prebuilt-content-models.md)).
 
 ## Common questions
 
@@ -50,9 +50,9 @@ Content Models are a blueprint or schema of a content type that defines the stru
 In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace and then click **Content Models**.
 
 ### What do the Marketplace Content Models include?
-The Content Models include [Content Types](/docs/developers/create-content-types/about-content-types/), [Global Fields](/docs/developers/create-content-types/global/), [Labels](/docs/developers/create-content-types/about-labels/), and [Extensions](/docs/developers/experience-extensions-overview/about-experience-extensions/).
+The Content Models include [Content Types](../../create-content-types/about-content-types.md), [Global Fields](../../create-content-types/global.md), [Labels](../../create-content-types/about-labels.md), and [Extensions](../../experience-extensions-overview/about-experience-extensions.md).
 
 ### How can I import prebuilt Content Models?
-You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
+You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](./how-to-import-content-model.md)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](../../create-content-types/import-prebuilt-content-models.md)).
 
 <!-- filename: content-models-about-content-models.md -->

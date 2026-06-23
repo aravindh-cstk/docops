@@ -41,7 +41,7 @@ If the selected time zone follows daylight saving time (DST), Contentstack displ
 
 **Note:** During DST, the time differs by one hour from Standard Time. The effective publishing date reflects the local date and time of the user scheduling the entry.
 
-Scheduled publishing and unpublishing are also available in [Releases](/docs/content-managers/create-and-manage-releases/about-releases). This allows content managers to add multiple entries to a Release and schedule them for future deployment.
+Scheduled publishing and unpublishing are also available in [Releases](../create-and-manage-releases/about-releases.md). This allows content managers to add multiple entries to a Release and schedule them for future deployment.
 
 ## Reschedule a Scheduled Publish/Unpublish
 If you have already scheduled an entry to be published or unpublished, you can change the date and time without cancelling the schedule.

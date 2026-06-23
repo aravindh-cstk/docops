@@ -27,12 +27,12 @@ Drupal to Contentstack
 
 ##### Content
 
-The **Contentstack Migration Tool** is designed to help users seamlessly migrate content from a legacy **Content Management System** (**CMS**) to Contentstack. The tool simplifies the migration process by providing an intuitive interface and step-by-step workflow for importing content, mapping content types, and migrating data into a [stack](/docs/developers/set-up-stack/about-stack) within Contentstack. This guide outlines the process for performing a Drupal content migration.
+The **Contentstack Migration Tool** is designed to help users seamlessly migrate content from a legacy **Content Management System** (**CMS**) to Contentstack. The tool simplifies the migration process by providing an intuitive interface and step-by-step workflow for importing content, mapping content types, and migrating data into a [stack](../developers/set-up-stack/about-stack.md) within Contentstack. This guide outlines the process for performing a Drupal content migration.
 
 ## Prerequisites
 Before you begin, ensure that you have the following:
-- A **Contentstack Account** with [Admin](/docs/developers/organization/organization-roles#organization-admin) or [Owner](/docs/developers/organization/organization-roles#organization-owner) role access.
-- The Migration Tool installed and running on your system. Refer to the [Drupal Setup Guide](/docs/headless-cms/set-up-content-migration-framework-drupal) for installation instructions.
+- A **Contentstack Account** with [Admin](../developers/organization/organization-roles.md#organization-admin) or [Owner](../developers/organization/organization-roles.md#organization-owner) role access.
+- The Migration Tool installed and running on your system. Refer to the [Drupal Setup Guide](./set-up-content-migration-framework-drupal.md) for installation instructions.
 - The MySQL database is loaded with the Drupal **structured query language** (**SQL**) dump and reachable from your local environment.
 
 ## Migrate Content from Drupal
@@ -55,7 +55,7 @@ Follow these steps to migrate your Drupal content into Contentstack:
 ### Step 4: Select and Validate Legacy CMS Data
 - By default, Drupal is selected as your legacy CMS.
 - Enter a 2–5 character affix for the source name.Use only letters (no numbers or special characters).
-- Make sure the affix does not match any of the [restricted keywords](https://www.contentstack.com/docs/developers/create-content-types/restricted-keywords-for-uids).
+- Make sure the affix does not match any of the [restricted keywords](../developers/create-content-types/restricted-keywords-for-uids.md).
 - The affix is used as:A prefix if the content type UID matches the restricted UIDs.
 - A suffix for field UIDs.
 - Click **Validate File** to validate the exported Drupal content.**Note**: If validation fails, check for the following issues:
@@ -135,7 +135,7 @@ You have now successfully migrated your content from Drupal to Contentstack. If 
 ## Common questions
 
 ### Who can run a Drupal to Contentstack migration?
-You need a **Contentstack Account** with [Admin](/docs/developers/organization/organization-roles#organization-admin) or [Owner](/docs/developers/organization/organization-roles#organization-owner) role access.
+You need a **Contentstack Account** with [Admin](../developers/organization/organization-roles.md#organization-admin) or [Owner](../developers/organization/organization-roles.md#organization-owner) role access.
 
 ### What should I do if **Validate File** fails?
 Check for **File Format Error**, **Missing Content**, and **Incomplete Files** as listed in the validation **Note**.

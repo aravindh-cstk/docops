@@ -32,7 +32,7 @@ When executing the API call, you can add queries to extend the functionality of 
 
 **Tip**: If any of your content types contains a Global field and you wish to fetch the content schema of the Global field, then you need to pass the include_global_field_schema:true parameter. This parameter helps return the Global field's schema along with the content type schema.
 
-Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](/docs/developers/apis/content-delivery-api#queries))
+Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](../../../api-detail/content-delivery-api.md#queries))
 
 **Note**:
 
@@ -58,7 +58,7 @@ Under the 'URL Parameters' section, insert a parameter named query and provide a
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -1034,7 +1034,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note:** The schema of the content type returned will depend on the provided version. If no version is specified, you will get the latest version of the content type.
 
-To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](/docs/developers/apis/content-delivery-api#queries)
+To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](../../../api-detail/content-delivery-api.md#queries)
 
 **Tip**: If any of your content types contains a Global field and you wish to fetch the content schema of the Global field, then you need to pass theinclude_global_field_schema:true parameter. This parameter helps return the Global field's schema along with the content type schema.
 
@@ -1065,7 +1065,7 @@ To learn more about the queries, refer to the [Queries section of the Content De
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -1515,7 +1515,7 @@ To learn more about the queries, refer to the [Queries section of the Content De
 The Create a content type call creates a new content type in a particular stack of your Contentstack account.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the complete schema of the content type. You can refer the [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) document to know how you can add fields into your content type through API.
+In the “Body” section, you need to provide the complete schema of the content type. You can refer the [JSON schema for creating a content type](../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md) document to know how you can add fields into your content type through API.
 
 To mark a field as non-unique, you need to set the unique parameter to false. For example, to remove the unique constraint on the default 'title' field, you need to update the JSON schema of the title field as follows:
 
@@ -1550,7 +1550,7 @@ To mark a field as non-unique, you need to set the unique parameter to false. Fo
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1768,7 +1768,7 @@ The schema of the **Select** field that contains key-value pairs will look as fo
 
   
 
-**Additional Resource:** In the “Body” section, you need to provide the updated schema of your content type with the select field schema. You can refer to the [Select field JSON schema](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#select) document to know how you can add/update schema for the Select field in your content type through API.
+**Additional Resource:** In the “Body” section, you need to provide the updated schema of your content type with the select field schema. You can refer to the [Select field JSON schema](../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md#select) document to know how you can add/update schema for the Select field in your content type through API.
 
 ##### Create Content Type with JSON RTE
 
@@ -1787,7 +1787,7 @@ The schema of the **Select** field that contains key-value pairs will look as fo
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -2082,7 +2082,7 @@ The schema of the **Select** field that contains key-value pairs will look as fo
 The Create content type with JSON RTE request shows you how to add a JSON RTE field while creating a content type.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the complete schema of the content type with the JSON RTE schema as follows. You can find more details in the [JSON schema of the JSON RTE](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#json-rich-text-editor) document.
+In the “Body” section, you need to provide the complete schema of the content type with the JSON RTE schema as follows. You can find more details in the [JSON schema of the JSON RTE](../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md#json-rich-text-editor) document.
 
 ```
 {
@@ -2124,7 +2124,7 @@ Under the reference_to parameter, mention the UIDs of the content types whose en
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -2738,7 +2738,7 @@ The Update Content Type call is used to update the schema of an existing content
 When executing the API call, in the “URL Parameters” section, provide the uid of your content type.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) document to know how you can add/update fields in your content type through API.
+In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md) document to know how you can add/update fields in your content type through API.
 
 #### URL Parameters
 
@@ -2759,7 +2759,7 @@ In the “Body” section, you need to provide the updated schema of your conten
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -2962,7 +2962,7 @@ In the “Body” section, you need to provide the updated schema of your conten
 The Set Field Visibility Rule for Content Type API request lets you add Field Visibility Rules to existing content types. These rules allow you to show and hide fields based on the state or value of certain fields.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-[Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) can be set while creating your content type (via UI, only after you’ve added all the required fields to the content type and saved it) or while editing a content type (both via UI and API).
+[Field Visibility Rules](../../../../cs-docs/developers/create-content-types/about-field-visibility-rules.md) can be set while creating your content type (via UI, only after you’ve added all the required fields to the content type and saved it) or while editing a content type (both via UI and API).
 
 To set a Field Visibility Rule, you need to add the following code snippet in the Request body of the content type:
 
@@ -3005,7 +3005,7 @@ Let’s look at the keys used in the above code snippet:
 - action: You need to pass either show or hide depending on whether you want to show or hide the Target field.
 - target_field: Pass the UID of the Target field (target_field_uid) i.e., the field on which you want to perform the action.
 
-For more details, check out the [Define Conditions](/docs/developers/create-content-types/add-a-field-visibility-rule#define-conditions) section when adding a Field Visibility Rule.
+For more details, check out the [Define Conditions](../../../../cs-docs/developers/create-content-types/add-a-field-visibility-rule.md#define-conditions) section when adding a Field Visibility Rule.
 
 #### URL Parameters
 
@@ -3028,7 +3028,7 @@ For more details, check out the [Define Conditions](/docs/developers/create-cont
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -3286,7 +3286,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -3342,7 +3342,7 @@ Additionally, to fetch all Global fields in which the specified content type is 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -3397,7 +3397,7 @@ The schema of the content type returned will depend on the version number provid
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -3569,7 +3569,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`

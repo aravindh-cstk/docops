@@ -16,7 +16,7 @@ This page explains how to configure the **File size limit (MB)** property for a 
 
 ## File size limit
 
-The **File size limit (MB)** property of the [**File**](/docs/developers/create-content-types/file)** **field enables you to set size limits on the file, in MB, that the user will upload on the [entry](/docs/content-managers/working-with-entries/about-entries) page.
+The **File size limit (MB)** property of the [**File**](./file.md)** **field enables you to set size limits on the file, in MB, that the user will upload on the [entry](../../content-managers/author-content/about-entries.md) page.
 
 Once you set this limit, users will not be able to upload files that have sizes which do not fall within the mentioned range.
 
@@ -24,9 +24,9 @@ Under this property, there are following options:
 - **Minimum**: Lets you set the minimum size for the file to upload.
 - **Maximum**: Lets you set the maximum size for the file to upload.
 
-**Additional Resources**: Validations let you eliminate errors while writing content. You can check out the [Validations](/docs/developers/how-to-guides/validations) guide to know more.
+**Additional Resources**: Validations let you eliminate errors while writing content. You can check out the [Validations](../security/validations.md) guide to know more.
 
-Making changes in existing field properties may result in data loss. To prevent this, make sure you go through our [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide before you go ahead.
+Making changes in existing field properties may result in data loss. To prevent this, make sure you go through our [Content Type Change Management](../content-modeling/content-type-change-management.md) guide before you go ahead.
 
 ## Common questions
 
@@ -40,4 +40,4 @@ The limit is set in MB under the **File size limit (MB)** property.
 Yes. Under this property, there are following options: **Minimum** and **Maximum**.
 
 **Is it safe to change this property after content exists?**  
-Making changes in existing field properties may result in data loss. To prevent this, make sure you go through our [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide before you go ahead.
+Making changes in existing field properties may result in data loss. To prevent this, make sure you go through our [Content Type Change Management](../content-modeling/content-type-change-management.md) guide before you go ahead.

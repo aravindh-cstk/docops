@@ -19,7 +19,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
+To learn more about the queries, refer to the [Queries](../../../../api-detail/content-delivery-api.md#queries) section of the Content Delivery API doc.
 
 ## URL Parameters
 
@@ -40,7 +40,7 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

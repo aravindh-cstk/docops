@@ -17,7 +17,7 @@ This page explains Contentstack password requirements, organization-configured p
 
 ## Password Requirements
 
-To ensure secure login and account protection, Contentstack enforces password requirements aligned with strong password security best practices. Organization [owner](/docs/developers/organization/organization-roles#organization-owner) and [admin](/docs/developers/organization/organization-roles#organization-admin) roles can define [password policies](/docs/developers/organization/security-configuration#password-policies) that all users must follow within their workspace to help prevent unauthorized access.
+To ensure secure login and account protection, Contentstack enforces password requirements aligned with strong password security best practices. Organization [owner](../organization/organization-roles.md#organization-owner) and [admin](../organization/organization-roles.md#organization-admin) roles can define [password policies](../organization/security-configuration.md#password-policies) that all users must follow within their workspace to help prevent unauthorized access.
 
 ## Password Policy Guidelines
 
@@ -35,22 +35,22 @@ To further enhance your Contentstack password security, the following best pract
 - Use a strong and unique password that is not used on other sites
 - Change your password regularly
 - Avoid predictable patterns or easily guessable words
-- Enable [Multi-Factor Authentication (MFA)](/docs/developers/security/multi-factor-authentication) using an authenticator app for enhanced security
+- Enable [Multi-Factor Authentication (MFA)](./multi-factor-authentication.md) using an authenticator app for enhanced security
 
-**Note:** An organization admin can [enforce MFA](/docs/developers/organization/security-configuration#multi-factor-authentication) for all users in the organization. If enforced, users are prompted to set up MFA during their next login.
+**Note:** An organization admin can [enforce MFA](../organization/security-configuration.md#multi-factor-authentication) for all users in the organization. If enforced, users are prompted to set up MFA during their next login.
 
 Need help? Reach out to our [support](mailto:support@contentstack.com) team.
 
 ## Common questions
 
 ### Who can define password policies in Contentstack?
-Organization [owner](/docs/developers/organization/organization-roles#organization-owner) and [admin](/docs/developers/organization/organization-roles#organization-admin) roles can define [password policies](/docs/developers/organization/security-configuration#password-policies).
+Organization [owner](../organization/organization-roles.md#organization-owner) and [admin](../organization/organization-roles.md#organization-admin) roles can define [password policies](../organization/security-configuration.md#password-policies).
 
 ### What happens if my password does not meet the policy?
 If your password (e.g., `abcd1234`) does not comply, the system prompts you to make necessary adjustments before proceeding.
 
 ### Can MFA be required for all users?
-Yes. An organization admin can [enforce MFA](/docs/developers/organization/security-configuration#multi-factor-authentication) for all users in the organization.
+Yes. An organization admin can [enforce MFA](../organization/security-configuration.md#multi-factor-authentication) for all users in the organization.
 
 ### Where can I get help if I have issues with password requirements?
 Reach out to the [support](mailto:support@contentstack.com) team.

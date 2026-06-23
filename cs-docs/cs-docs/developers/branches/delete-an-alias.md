@@ -16,7 +16,7 @@ This page explains how to delete an alias in Contentstack, including who can del
 
 ## Delete an Alias
 
-Contentstack allows you to delete an alias that you created in your [stack](/docs/developers/set-up-stack/about-stack).
+Contentstack allows you to delete an alias that you created in your [stack](../set-up-stack/about-stack.md).
 
 **Note:** Unless you are the Owner or Admin of the stack, you cannot delete aliases created by other stakeholders.
 

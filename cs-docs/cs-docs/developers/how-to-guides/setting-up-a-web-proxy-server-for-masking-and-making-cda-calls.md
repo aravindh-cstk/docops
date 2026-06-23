@@ -16,13 +16,13 @@ This page explains how to set up a proxy server between your server and the inte
 
 ## Setting up a Web Proxy Server for Masking and Making CDA Calls
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn more, refer to the [Content Delivery API](/docs/developers/apis/content-delivery-api) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn more, refer to the [Content Delivery API](../../../api-docs/api-detail/content-delivery-api.md) documentation.
 
 Setting up a proxy server between your server and the internet is an age-old technique that many organizations have been using. In simplest terms, a proxy server is a computer that sits between the user's computer and the Internet.
 
 In this guide, we will discuss the steps required to set up a proxy server that will not only serve our masking requirement but also fetches default entries along with the requested ones.
 
-For example, let's assume you have the following [content types](/docs/developers/create-content-types/about-content-types):
+For example, let's assume you have the following [content types](../create-content-types/about-content-types.md):
 - Header
 - Navigation
 - Categories
@@ -35,7 +35,7 @@ Now, we'll set up a system such that when you request the entries of content typ
 
 We have created a sample that helps us in achieving what we intend to do. To set up the system, execute the following steps:
 - We have created a sample code for setting up the system. Get in touch with our [support team](mailto:support@contentstack.com) to get the sample code.
-- After downloading the code, you need to make changes in the `index.js` file. Navigate to the **src **folder and move inside the **config** folder. Add your [stack](/docs/developers/set-up-stack/about-stack) credentials to the **index.js** file as follows:
+- After downloading the code, you need to make changes in the `index.js` file. Navigate to the **src **folder and move inside the **config** folder. Add your [stack](../set-up-stack/about-stack.md) credentials to the **index.js** file as follows:
 ```
 module.exports = {
   contentstack:{
@@ -62,7 +62,7 @@ http://{SERVERURL}:8000/v3/content_types/article/entries/bltd9d67cf4b11f9d62?env
 
 In the above response, “defaultEntries” are the ones that you have specified in the configuration in step 3 (inside “DefaultContentTypes”).
 
-When we request for the [entries](/docs/content-managers/working-with-entries/about-entries) in content type “Article,” it will be fetched along with the default ones in a single call.
+When we request for the [entries](../../content-managers/author-content/about-entries.md) in content type “Article,” it will be fetched along with the default ones in a single call.
 
 ## Common questions
 
@@ -70,7 +70,7 @@ When we request for the [entries](/docs/content-managers/working-with-entries/ab
 No. **Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release.
 
 ### Where can I learn more about making CDA calls?
-Refer to the [Content Delivery API](/docs/developers/apis/content-delivery-api) documentation.
+Refer to the [Content Delivery API](../../../api-docs/api-detail/content-delivery-api.md) documentation.
 
 ### What are “defaultEntries” in the response?
 “defaultEntries” are the ones that you have specified in the configuration in step 3 (inside “DefaultContentTypes”).

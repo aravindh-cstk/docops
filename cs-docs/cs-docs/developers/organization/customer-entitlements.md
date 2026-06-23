@@ -46,7 +46,7 @@ The Usage by Stacks section gives a quick overview of the usage of various entit
 
 To view the different usage by stacks in the organization over a period, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-**Additional Resources: **Refer to the [Product Analytics](/docs/developers/organization/product-analytics) documentation for detailed information.
+**Additional Resources: **Refer to the [Product Analytics](./product-analytics.md) documentation for detailed information.
 - Click the **Product Analytics** tab to view the **Usage Overview** page.
 - Scroll down the page to view the **Usage by Stacks** section.
 
@@ -94,4 +94,4 @@ A user removed from an organization also loses access to all stacks it contains.
 Filters let you retrieve data for a specific service, specific group (Daily/Weekly/Monthly), and specific duration (including custom date ranges within the last 30 days).
 
 ### Where can I find more details about analytics?
-Refer to the [Product Analytics](/docs/developers/organization/product-analytics) documentation for detailed information.
+Refer to the [Product Analytics](./product-analytics.md) documentation for detailed information.

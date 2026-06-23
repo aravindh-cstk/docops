@@ -52,7 +52,7 @@ export default defineConfig({
 });
 ```
 
-**Additional Resource:** Refer to the [Quick Start Guide with Analog](/docs/launch/quick-start-analog) documentation for a step-by-step walkthrough to deploy an Analog Starter on Launch as an SSR-based application.
+**Additional Resource:** Refer to the [Quick Start Guide with Analog](./quick-start-analog.md) documentation for a step-by-step walkthrough to deploy an Analog Starter on Launch as an SSR-based application.
 
 #### Static Rendering (Pre-rendering)
 
@@ -310,7 +310,7 @@ The memory size for a Launch application is **1024 MB**.
 
 ### Runtime Environment
 
-The Launch runtime environment leverages [Node.js](/docs/launch/supported-nodejs-versions) to power its execution environment.
+The Launch runtime environment leverages [Node.js](./supported-nodejs-versions.md) to power its execution environment.
 
 ### File System
 
@@ -405,11 +405,11 @@ nitro: {
 }
 ```
 
-**Additional Resource:** Refer to the [Caching Guide for Contentstack Launch](/docs/launch/caching-guide-for-contentstack-launch/) for more information.
+**Additional Resource:** Refer to the [Caching Guide for Contentstack Launch](./caching-guide-for-contentstack-launch.md) for more information.
 
 ### Cache-Revalidation Strategies
 
-Analog.js supports two cache revalidation strategies: time-based revalidation and on-demand revalidation. For detailed information on revalidating CDN cache using URL paths, Cache-Tags, or hostnames, refer to the [Revalidate CDN Cache](/docs/launch/revalidate-cdn-cache) documentation.
+Analog.js supports two cache revalidation strategies: time-based revalidation and on-demand revalidation. For detailed information on revalidating CDN cache using URL paths, Cache-Tags, or hostnames, refer to the [Revalidate CDN Cache](./revalidate-cdn-cache.md) documentation.
 
 #### (i) Time-Based Revalidation
 
@@ -430,7 +430,7 @@ nitro: {
 
 #### (ii) On-Demand Revalidation
 
-You can trigger on-demand revalidation using Automate: [Revalidate CDN cache using Automate](/docs/launch/revalidate-cdn-cache).
+You can trigger on-demand revalidation using Automate: [Revalidate CDN cache using Automate](./revalidate-cdn-cache.md).
 
 **Note:** Ensure you revalidate the cache for the data endpoint that backs the content, in addition to the page URL. This is important if your page uses cached API endpoints for data delivery. **Example**: `domain/api/api-route`
 
@@ -438,7 +438,7 @@ This page will be server-rendered on each request when accessed at `/ssr` (unles
 
 ### Limitation
 
-Currently, [Edge URL Rewrites](/docs/launch/edge-url-rewrites) are not supported for Analog.js applications on Contentstack Launch.
+Currently, [Edge URL Rewrites](./edge-url-rewrites.md) are not supported for Analog.js applications on Contentstack Launch.
 
 ### Example Git Repository
 
@@ -458,4 +458,4 @@ You can configure caching using Nitro route rules in `vite.config.ts`, including
 By default, API routes are not cached. You can configure caching for specific API routes using Nitro route rules in `vite.config.ts`.
 
 ### Are Edge URL Rewrites supported for Analog.js applications on Launch?
-Currently, [Edge URL Rewrites](/docs/launch/edge-url-rewrites) are not supported for Analog.js applications on Contentstack Launch.
+Currently, [Edge URL Rewrites](./edge-url-rewrites.md) are not supported for Analog.js applications on Contentstack Launch.

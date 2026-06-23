@@ -35,11 +35,11 @@ When an action step fails, you can choose one of the following options:
       Allows the execution to continue, bypassing the failed step.
 - Ideal for non-critical steps that do not affect subsequent actions.
 
-**Note: **This functionality is supported in [Repeat Path](/docs/developers/automation-hub-guides#repeat-paths-within-automate) and [Conditional Path](/docs/developers/automation-hub-guides#conditional-paths-within-automate) configurations, giving you precise control over automation execution. Additionally, the error screen will not be displayed in the [Response](/docs/developers/automation-hub-connectors/response/) Connector.
+**Note: **This functionality is supported in [Repeat Path](/docs/developers/automation-hub-guides#repeat-paths-within-automate) and [Conditional Path](/docs/developers/automation-hub-guides#conditional-paths-within-automate) configurations, giving you precise control over automation execution. Additionally, the error screen will not be displayed in the [Response](./response.md) Connector.
 
 ### How to Use Error Handling for Action Steps
 
-Here’s an example scenario that outlines a process for setting up and testing an automated workflow with error handling that involves three components: an [HTTP Trigger](/docs/developers/automation-hub-connectors/http-trigger), a [Transform](/docs/developers/automation-hub-connectors/transform) Connector, and a [Slack](/docs/developers/automation-hub-connectors/slack) Connector.
+Here’s an example scenario that outlines a process for setting up and testing an automated workflow with error handling that involves three components: an [HTTP Trigger](./http-trigger.md), a [Transform](./transform.md) Connector, and a [Slack](./slack.md) Connector.
 
 #### Example Scenario:
 - **Configuration:**
@@ -67,4 +67,4 @@ Use **Ignore and Skip Step, Continue Execution** for non-critical steps that do 
 This functionality is supported in [Repeat Path](/docs/developers/automation-hub-guides#repeat-paths-within-automate) and [Conditional Path](/docs/developers/automation-hub-guides#conditional-paths-within-automate) configurations.
 
 ### Why don’t I see the error screen in some cases?
-Additionally, the error screen will not be displayed in the [Response](/docs/developers/automation-hub-connectors/response/) Connector.
+Additionally, the error screen will not be displayed in the [Response](./response.md) Connector.

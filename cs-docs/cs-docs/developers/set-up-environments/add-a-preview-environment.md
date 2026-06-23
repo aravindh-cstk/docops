@@ -17,15 +17,15 @@ This page explains how to create a Preview environment in Contentstack and publi
 
 ## Add a Preview Environment
 
-You can preview your [entry](/docs/content-managers/working-with-entries/about-entries) before publishing it on the production [environment](/docs/developers/set-up-environments/about-environments) of your website or app in a few simple steps. Previewing your content is a two-step process that involves the creation of a Preview environment and then publishing content on this created environment.
+You can preview your [entry](../../content-managers/author-content/about-entries.md) before publishing it on the production [environment](./about-environments.md) of your website or app in a few simple steps. Previewing your content is a two-step process that involves the creation of a Preview environment and then publishing content on this created environment.
 
-**Note**: We now offer the [Live Preview](/docs/content-managers/live-preview/about-live-preview) feature to preview your content changes in real-time without saving or publishing them to an environment. Contact our [Support](mailto:support@contentstack.com) team to add the Live Preview feature to your Contentstack (organization) account subscription.
+**Note**: We now offer the [Live Preview](../../content-managers/author-content/about-live-preview.md) feature to preview your content changes in real-time without saving or publishing them to an environment. Contact our [Support](mailto:support@contentstack.com) team to add the Live Preview feature to your Contentstack (organization) account subscription.
 
 In this guide, you need to create a preview environment that will point to the location where a demo version of your application is hosted. Then, publish your content to this preview URL and view how your content will display on the live site.
 
-**Additional Resource**: For websites developed using Gatsby and Contentstack, the [Gatsby Preview](/docs/developers/create-sidebar-extensions/gatsby-preview/) extension lets you preview the content changes as soon as you make them.
+**Additional Resource**: For websites developed using Gatsby and Contentstack, the [Gatsby Preview](../create-sidebar-extensions/gatsby-preview.md) extension lets you preview the content changes as soon as you make them.
 
-**Note**: Contentstack no longer supports the ability to add multiple content deployment servers while setting up a specific [publishing environment](https://www.contentstack.com/docs/developers/set-up-environments/about-environments/) in Contentstack. We recommend that you instead make use of [Webhooks](https://www.contentstack.com/docs/developers/set-up-webhooks/about-webhooks/) to trigger deployment to multiple web servers whenever you publish content to an environment.
+**Note**: Contentstack no longer supports the ability to add multiple content deployment servers while setting up a specific [publishing environment](./about-environments.md) in Contentstack. We recommend that you instead make use of [Webhooks](../set-up-webhooks/about-webhooks.md) to trigger deployment to multiple web servers whenever you publish content to an environment.
 
 Let’s look at the steps in detail.
 
@@ -105,6 +105,6 @@ The base URL is the consistent part of the destination’s web address, and for 
 Manual requires users to manually publish content on the preview environment, while Automatic uses a webhook and a script so content is published when an entry is created or updated.
 
 ### Is there an alternative to publishing for previewing changes?
-Yes. The page notes the [Live Preview](/docs/content-managers/live-preview/about-live-preview) feature to preview content changes in real-time without saving or publishing them to an environment.
+Yes. The page notes the [Live Preview](../../content-managers/author-content/about-live-preview.md) feature to preview content changes in real-time without saving or publishing them to an environment.
 
 Filename: set-up-your-project-add-a-preview-environment.md

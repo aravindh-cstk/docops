@@ -74,7 +74,7 @@ Create ordered or unordered lists quickly.
 ## Line Break and Return Behavior
 Manage line breaks and paragraph structure using **Enter** and **Shift + Enter**. These keys determine whether you create a new paragraph, start a new list item, or insert a line break within the same block.
 
-**Note:** The Return key behavior can be customized at the stack level using the Stack Settings API request. Configure the `cs_breakline_on_enter` and `cs_only_breakline` parameters within the `rte` object to modify how the **Enter** and **Shift + Enter** keys behave. Refer to the [Stack Settings](/docs/developers/apis/content-management-api#add-stack-settings) documentation for more details.
+**Note:** The Return key behavior can be customized at the stack level using the Stack Settings API request. Configure the `cs_breakline_on_enter` and `cs_only_breakline` parameters within the `rte` object to modify how the **Enter** and **Shift + Enter** keys behave. Refer to the [Stack Settings](../../../api-docs/api-detail/content-management-api.md#add-stack-settings) documentation for more details.
 
 ### Paragraphs
 Control spacing and structure within standard paragraph text.
@@ -136,7 +136,7 @@ Yes. The tables list the Windows and Mac equivalents for each action.
 The Return key behavior can be customized at the stack level using the Stack Settings API request by configuring the `cs_breakline_on_enter` and `cs_only_breakline` parameters within the `rte` object.
 
 ### Where can I find the Stack Settings documentation referenced here?
-Refer to the [Stack Settings](/docs/developers/apis/content-management-api#add-stack-settings) documentation link included in the note under “Line Break and Return Behavior”.
+Refer to the [Stack Settings](../../../api-docs/api-detail/content-management-api.md#add-stack-settings) documentation link included in the note under “Line Break and Return Behavior”.
 
 ### What’s the difference between a new paragraph and a soft line break?
 Enter creates a new paragraph (or new list item in a list), while Shift + Enter inserts a soft line break within the same block.

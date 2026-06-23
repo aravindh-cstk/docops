@@ -18,9 +18,9 @@ This page explains what webhooks are in Contentstack and how they help keep thir
 
 A webhook is a user-defined HTTP callback. It is a mechanism that sends real-time information to any third-party app or service.
 
-**Note:** You can select a specific [branch](https://www.contentstack.com/docs/developers/branches/about-branches) for which webhooks should trigger. This webhook will be accessible throughout all the branches. Refer to our [Global Modules](/docs/developers/branches/global-modules) document for more information.
+**Note:** You can select a specific [branch](../branches/about-branches.md) for which webhooks should trigger. This webhook will be accessible throughout all the branches. Refer to our [Global Modules](../branches/global-modules.md) document for more information.
 
-Thus, webhook allows you to keep your third-party application in sync with your Contentstack account. Using webhooks, you can specify a URL to which you would like Contentstack to post data when an event occurs in your [stack](/docs/developers/set-up-stack/about-stack).
+Thus, webhook allows you to keep your third-party application in sync with your Contentstack account. Using webhooks, you can specify a URL to which you would like Contentstack to post data when an event occurs in your [stack](../set-up-stack/about-stack.md).
 
 For example,
 - Sending a marketing email to your subscribers whenever you publish any new blog post from your stack
@@ -28,7 +28,7 @@ For example,
 - Creating redirects for old URL whenever you change the entry’s URL to a new one
 - Notifying your users on social platforms about your newly released content
 
-Contentstack provides a [Webhook Integrations](/docs/developers/set-up-webhooks/webhook-integrations) guide on how you can use webhooks for a variety of purposes. This can help you to integrate webhooks with any third-party applications for creating custom solutions.
+Contentstack provides a [Webhook Integrations](./webhook-integrations.md) guide on how you can use webhooks for a variety of purposes. This can help you to integrate webhooks with any third-party applications for creating custom solutions.
 
 ## Common questions
 
@@ -42,4 +42,4 @@ A: Yes. You can select a specific branch for which webhooks should trigger, and 
 A: Contentstack posts data to a URL you specify when an event occurs in your stack.
 
 **Q: Where can I learn how to use webhooks with third-party applications?**  
-A: Refer to the [Webhook Integrations](/docs/developers/set-up-webhooks/webhook-integrations) guide.
+A: Refer to the [Webhook Integrations](./webhook-integrations.md) guide.

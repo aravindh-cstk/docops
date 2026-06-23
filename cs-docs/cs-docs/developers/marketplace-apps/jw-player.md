@@ -77,7 +77,7 @@ In the **Add Key Path** modal, enter the **JW Player Key Path** and click the **
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
 - If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.
 
-**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 
 - Click the **Save** button.
 - Click **Open Stack** to start using the JW Player application.
@@ -88,7 +88,7 @@ To use the JW Player application within an entry of your stack, follow the steps
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
 
 There are two ways to use the JW Player application in your entry:
 
@@ -97,13 +97,13 @@ There are two ways to use the JW Player application in your entry:
 
 ### Steps to use the JW Player application using a Custom field:
 
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom/) field in your content type by clicking the **Insert a field **link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field **link represented by a **+** sign.
 - Under **Select Extension/App**, select **JW Player**, and click the **Proceed** button.
 
 Change the **Display Name** of the custom field to your choice, for example, **JW Player Custom Field**. Optionally, you can add **Help Text** and **Instruction Value** for your custom field. This adds the JW Player app in the custom field.
 
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
-- To use the JW Player app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](/docs/content-managers/author-content/create-an-entry) for the above content type, and then click **Proceed**.
+- To use the JW Player app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.
 
 You can see the JW Player app’s custom field on your entry page as shown below:
 
@@ -139,7 +139,7 @@ The selected video(s) are referenced in the list view within your entry .
 
 ### Steps to use the JW Player application using a JSON Rich Text Editor field:
 
-- In the **Content Type Builder** page, add a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select JSON RTE Plugin(s)**, select **JW Player**, and then click **Add Plugin(s)**.
 
 This adds JW Player in the JSON Rich Text Editor field.
@@ -169,7 +169,7 @@ The videos you selected get referenced within your entry:
 - Click the **Edit** icon to edit the video.
 - Click the **Remove** icon to remove the video.
 
-**Additional Resource**: You can use alignment and inline asset features to edit the video placement within the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field.
+**Additional Resource**: You can use alignment and inline asset features to edit the video placement within the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field.
 
 - After adding the video(s), **Save** and **Publish** your entry.
 

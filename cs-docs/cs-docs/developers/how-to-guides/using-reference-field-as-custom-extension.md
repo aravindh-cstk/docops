@@ -16,9 +16,9 @@ This page explains how to use the Reference field as a custom field extension in
 
 ## Using Reference Field as Custom Extension
 
-The [Custom field](/docs/developers/create-custom-fields/about-custom-fields) extension in Contentstack allows you to add and use customized fields in your content type. You can add customized fields referring to content of other content types as entries in your custom field.
+The [Custom field](../create-custom-fields/about-custom-fields.md) extension in Contentstack allows you to add and use customized fields in your content type. You can add customized fields referring to content of other content types as entries in your custom field.
 
-In Contentstack, you can also use the [Reference](/docs/developers/create-content-types/reference) field as a custom field extension. The reference field allows you to fetch entries from multiple content types and use them in your custom field. This functionality lets you render entries from the [referenced](/docs/developers/create-content-types/referenced-content-type) content types and access them in your content type.
+In Contentstack, you can also use the [Reference](../create-content-types/reference.md) field as a custom field extension. The reference field allows you to fetch entries from multiple content types and use them in your custom field. This functionality lets you render entries from the [referenced](../create-content-types/referenced-content-type.md) content types and access them in your content type.
 
 Let’s understand how we can use a reference field as a custom extension, with an example.
 
@@ -44,8 +44,8 @@ The above use case defines that a user wants to see the “Homes” owned by the
 
 ## Prerequisites
 - [Contentstack account](https://app.contentstack.com/#!/login)
-- Familiarity with [custom](/docs/developers/create-custom-fields/about-custom-fields) and [reference](/docs/developers/create-content-types/reference) fields
-- Generate a [Management](/docs/developers/create-tokens/generate-a-management-token) Token
+- Familiarity with [custom](../create-custom-fields/about-custom-fields.md) and [reference](../create-content-types/reference.md) fields
+- Generate a [Management](../create-tokens/generate-a-management-token.md) Token
 
 In this guide, we will be working on three content types. We will import and create these content types in Step 2. In Step 1, we will set up an extension that will be required to execute this exercise.
 
@@ -58,9 +58,9 @@ Let’s get started!
 
 ## Set up the Extension
 
-Firstly,  log in to your [Contentstack account](https://app.contentstack.com/#!/login) and [create a stack](/docs/developers/set-up-stack/create-a-new-stack). Follow the steps given below to [create a custom field](/docs/developers/create-custom-fields/about-custom-fields) extension that will be required in the content types in step 2:
+Firstly,  log in to your [Contentstack account](https://app.contentstack.com/#!/login) and [create a stack](../set-up-stack/create-a-new-stack.md). Follow the steps given below to [create a custom field](../create-custom-fields/about-custom-fields.md) extension that will be required in the content types in step 2:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack), navigate to the “Settings” gear icon, and select **Extensions**.
+Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” gear icon, and select **Extensions**.
 - On the **Extensions **page, click on the **+ Add Extension** button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one** link as shown below:
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension** page, enter values in the fields as given below:
@@ -72,7 +72,7 @@ Go to your [stack](/docs/developers/set-up-stack/about-stack), navigate to the �
 
 [Download the code](https://github.com/contentstack/using-reference-field-as-custom-extension)
 
-**Note**: The downloaded source folder contains a window.html file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload asset](/docs/content-managers/working-with-assets/create-upload-assets) article. After uploading the file, you'll get a URL in the [asset details](/docs/content-managers/working-with-assets/create-upload-assets#asset-details) section; make note of this URL.
+**Note**: The downloaded source folder contains a window.html file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload asset](../../content-managers/author-content/create-upload-assets.md) article. After uploading the file, you'll get a URL in the [asset details](../../content-managers/author-content/create-upload-assets.md#asset-details) section; make note of this URL.
 - Add the following config parameters in your extension:
 ```
 {
@@ -93,9 +93,9 @@ We have successfully set up the extension, let’s proceed to create a content t
 
 ## Set up the Essentials
 
-We will now import and create the content types required for this example. To do this, go to your [stack](/docs/developers/set-up-stack/about-stack), follow the steps given below:
+We will now import and create the content types required for this example. To do this, go to your [stack](../set-up-stack/about-stack.md), follow the steps given below:
 
-For this exercise, we require three content types, as mentioned above. We will [import the content types](/docs/developers/create-content-types/import-a-content-type) (**Person** and **Home**, which can be downloaded from the link below) and then manually create the **Pet** content type.
+For this exercise, we require three content types, as mentioned above. We will [import the content types](../create-content-types/import-a-content-type.md) (**Person** and **Home**, which can be downloaded from the link below) and then manually create the **Pet** content type.
 
 [Download content types ](https://github.com/contentstack/using-reference-field-as-custom-extension/raw/main/content-type.zip)In this guide, to perform the exercise, we require three content types, as mentioned earlier. You can import “Person” and “Home” content types from the above link, and then we proceed to create the “Pet” content type.
 
@@ -133,7 +133,7 @@ The selected entries will be rendered on the **Pet** entry page as shown below:
 ## Common questions
 
 ### Can I use the Reference field as a custom field extension in Contentstack?
-Yes, you can use the [Reference](/docs/developers/create-content-types/reference) field as a custom field extension to fetch entries from multiple content types and use them in your custom field.
+Yes, you can use the [Reference](../create-content-types/reference.md) field as a custom field extension to fetch entries from multiple content types and use them in your custom field.
 
 ### What data type is used for the custom field in this example?
 For this example, the **Field data type** is **JSON**.

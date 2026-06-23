@@ -55,11 +55,11 @@ The OAuth scopes available for Personalize Management API authorization are:
 
 **Authtokens vs OAuth Token**
 
-An [Authtoken](/docs/developers/create-tokens/types-of-tokens#authentication-tokens-authtokens) is a read-write token used to make authorized Contentstack Personalize Management API requests, and it is a user-specific token. This means that your personal user details are attached to every API request that you make using the authtoken. So, if a person were to obtain access to your authtoken, and knows the Project UID, this person would be able to make API requests that appeared to be coming from you.
+An [Authtoken](../../cs-docs/developers/create-tokens/types-of-tokens.md#authentication-tokens-authtokens) is a read-write token used to make authorized Contentstack Personalize Management API requests, and it is a user-specific token. This means that your personal user details are attached to every API request that you make using the authtoken. So, if a person were to obtain access to your authtoken, and knows the Project UID, this person would be able to make API requests that appeared to be coming from you.
 
-Contentstack OAuth employs the OAuth 2.0 protocol, enabling external applications to access Contentstack APIs on behalf of users. It issues access tokens (currently only User tokens) to client applications, allowing them to retrieve restricted data from the Contentstack resource server without the need for the resource owner to share their credentials. Learn more about [Contentstack OAuth](/docs/developers/developer-hub/contentstack-oauth) and [OAuth Scopes](/docs/developers/developer-hub/oauth-scopes).
+Contentstack OAuth employs the OAuth 2.0 protocol, enabling external applications to access Contentstack APIs on behalf of users. It issues access tokens (currently only User tokens) to client applications, allowing them to retrieve restricted data from the Contentstack resource server without the need for the resource owner to share their credentials. Learn more about [Contentstack OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md) and [OAuth Scopes](../../cs-docs/developers/developer-hub/oauth-scopes.md).
 
-**For Personalize Management API, we recommend using the**[**Contentstack OAuth**](/docs/developers/developer-hub/contentstack-oauth)**tokens.**
+**For Personalize Management API, we recommend using the**[**Contentstack OAuth**](../../cs-docs/developers/developer-hub/contentstack-oauth.md)**tokens.**
 
 **Note:** When trying out POST/PUT calls, in addition to the Project UID and Authtoken, you need to mandatorily pass Content-Type:application/json in the Header.
 
@@ -74,15 +74,15 @@ To retrieve the project UID, perform the steps given below:
 
 #### How to Get Authtoken
 
-To retrieve the authtoken, log in to your Contentstack account by using the "[Log in to your account](/docs/developers/apis/content-management-api/#logging-in-out)" request under "[User Session](/docs/developers/apis/content-management-api/#user-session)". This request will return the authtoken in the response body.
+To retrieve the authtoken, log in to your Contentstack account by using the "[Log in to your account](./content-management-api.md#logging-in-out)" request under "[User Session](./content-management-api.md#user-session)". This request will return the authtoken in the response body.
 
-You can generate multiple authtokens by executing the "[Log in to your account](/docs/developers/apis/content-management-api/#logging-in-out)" request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of 20 valid tokens that a user can use per account at a time, to execute Personalize Management API requests. If you already have valid 20 tokens, creating a new authtoken will automatically cause the oldest authtoken to expire without warning.
+You can generate multiple authtokens by executing the "[Log in to your account](./content-management-api.md#logging-in-out)" request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of 20 valid tokens that a user can use per account at a time, to execute Personalize Management API requests. If you already have valid 20 tokens, creating a new authtoken will automatically cause the oldest authtoken to expire without warning.
 
-For SSO-enabled organizations, the "[Log in to your account](/docs/developers/apis/content-management-api/#logging-in-out)" request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require user authtoken will not work. Only the owner of the organization and users with permission to access the organization without SSO can use the Personalize Management APIs. Learn more about [REST API Usage](/docs/developers/single-sign-on/rest-api-usage).
+For SSO-enabled organizations, the "[Log in to your account](./content-management-api.md#logging-in-out)" request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require user authtoken will not work. Only the owner of the organization and users with permission to access the organization without SSO can use the Personalize Management APIs. Learn more about [REST API Usage](../../cs-docs/developers/single-sign-on/rest-api-usage.md).
 
 #### How to Get OAuth Tokens
 
-To get the OAuth Token, perform the steps given within the [Configuring Contentstack OAuth](/docs/developers/developer-hub/contentstack-oauth#configuring-contentstack-oauth) section after logging into your Contentstack account.
+To get the OAuth Token, perform the steps given within the [Configuring Contentstack OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md#configuring-contentstack-oauth) section after logging into your Contentstack account.
 
 **Note:** Only the organization Owner and Admin users can create OAuth Tokens.
 

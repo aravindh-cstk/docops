@@ -16,7 +16,7 @@ last_updated: 2024-02-29
 
 The Get all branches request returns comprehensive information of all the branches available in a particular stack in your account.
 
-You can add queries to extend the functionality of this API call. Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (Refer [Queries](/docs/developers/apis/content-delivery-api#queries))  
+You can add queries to extend the functionality of this API call. Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (Refer [Queries](../../../../api-detail/content-delivery-api.md#queries))  
 To configure the permissions for your application via OAuth, please include the cm.branches.management:read scope.
 
 ## Query Parameters

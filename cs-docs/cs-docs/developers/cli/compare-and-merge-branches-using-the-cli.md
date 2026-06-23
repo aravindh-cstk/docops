@@ -16,7 +16,7 @@ This page explains how to use the Contentstack Command-line Interface (CLI) to l
 
 ## Compare and Merge Branches Using the CLI
 
-Contentstack provides [Branches](/docs/developers/branches/about-branches/) to create multiple copies of your [stack](/docs/developers/set-up-stack/about-stack/) content. By default, stacks have a **main** branch. You can fork a branch from the main branch (parent branch) to create a new branch (child branch).
+Contentstack provides [Branches](../branches/about-branches.md) to create multiple copies of your [stack](../set-up-stack/about-stack.md) content. By default, stacks have a **main** branch. You can fork a branch from the main branch (parent branch) to create a new branch (child branch).
 
 Contentstack lets you list, create, delete, compare, and merge Branches using the CLI. You can compare two branches and merge the two with the desired changes into a single branch.
 
@@ -25,9 +25,9 @@ This step-by-step guides you on how to create, update, delete, compare, and merg
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
-- [CLI installed](/docs/developers/cli/install-the-cli/) and configured (version 1.7.0 and above)
-- [CLI authenticated](/docs/developers/cli/cli-authentication/)
-- [Branches](/docs/developers/branches/) enabled for your organization.**Note:** Contact your organization administrator for more details.
+- [CLI installed](./install-the-cli.md) and configured (version 1.7.0 and above)
+- [CLI authenticated](./cli-authentication.md)
+- [Branches](../../../api-docs/developers/apis/content-management-api/branches.md) enabled for your organization.**Note:** Contact your organization administrator for more details.
 
 ## Steps to List, Create, and Delete Branches
 
@@ -477,7 +477,7 @@ Choose what you want to do next from the following list:**Merge New Only**: Gene
 - **Start Over**: Takes you back to step 4.
 - If you choose **Execute Merge and Generate Content Migration Scripts** or **Export Summary and Generate Content Migration Scripts** from the above step, follow the steps in step 7.
 
-With this, the merge operation is completed, and the [Entry Migration](/docs/developers/cli/entry-migration/) files generated are placed in the “YYYYMMDDHHMMSS_bltxxx” folder under `merge_scripts` folder in the current working directory.
+With this, the merge operation is completed, and the [Entry Migration](./entry-migration.md) files generated are placed in the “YYYYMMDDHHMMSS_bltxxx” folder under `merge_scripts` folder in the current working directory.
 
 **Usage**
 

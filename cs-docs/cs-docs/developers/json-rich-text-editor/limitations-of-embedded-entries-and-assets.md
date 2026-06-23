@@ -16,7 +16,7 @@ This page lists the limitations and default behaviors for embedded entries and a
 
 ## Limitations of Embedded Entries and Assets
 
-- A maximum of **100** entries can be embedded in a [JSON RTE](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) field.
+- A maximum of **100** entries can be embedded in a [JSON RTE](./about-json-rich-text-editor.md) field.
 - By default, a maximum of **15** content types can be selected for a JSON RTE as a reference.
 - Assets are by default embedded within a JSON RTE field.
 - Any references within the embedded entry will not be resolved.
@@ -24,7 +24,7 @@ This page lists the limitations and default behaviors for embedded entries and a
 ## Common questions
 
 **Q: What happens if I try to embed more than 100 entries in a JSON RTE field?**  
-A: A maximum of **100** entries can be embedded in a [JSON RTE](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) field.
+A: A maximum of **100** entries can be embedded in a [JSON RTE](./about-json-rich-text-editor.md) field.
 
 **Q: How many content types can be selected for a JSON RTE as a reference by default?**  
 A: By default, a maximum of **15** content types can be selected for a JSON RTE as a reference.

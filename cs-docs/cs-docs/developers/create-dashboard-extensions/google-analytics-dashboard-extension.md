@@ -17,7 +17,7 @@ This page explains how to create and configure the legacy “Google Analytics”
 
 ## Google Analytics Dashboard Extension
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Google Analytics as a Marketplace App. For more information on Google Analytics, please refer to the [Google Analytics App Installation Guide](/docs/developers/marketplace-apps/google-analytics).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Google Analytics as a Marketplace App. For more information on Google Analytics, please refer to the [Google Analytics App Installation Guide](../marketplace-apps/google-analytics.md).
 
 The “Google Analytics” dashboard extension retrieves the Google Analytics data of the site associated with your stack using the Reporting API and displays the common metrics data (such as Pageviews, New Users) and user behaviors (such as average time on a page) on your Dashboard.
 
@@ -100,7 +100,7 @@ Login to your [AWS Management Console](https://signin.aws.amazon.com/signin?redi
 
 ## Add Google Analytics Extension to your Stack Dashboard
 
-To add the Google Analytics extension, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+To add the Google Analytics extension, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**
 - Click on the **+ New Extension** button on the top-right corner and select **Create new**
 - On the **Select Extension Type** page, select **Dashboard Extension**. You will be directed to the **Create New Dashboard** page where you need to enter details in the fields as given below:**Title**: Provide a suitable title. For example, Website Analytics.

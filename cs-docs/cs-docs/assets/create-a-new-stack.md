@@ -20,7 +20,7 @@ This page explains how to create a new Contentstack stack and link it to a space
 A stack is a centralized repository that stores and manages content types, entries, and linked assets for a project. It provides a structured environment for teams to create, manage, and publish content across channels.
 
 **Note:**
-- You must be an organization [owner](/docs/developers/organization/organization-roles#organization-owner) or organization [admin](/docs/developers/organization/organization-roles#organization-admin) to create a stack.
+- You must be an organization [owner](../developers/organization/organization-roles.md#organization-owner) or organization [admin](../developers/organization/organization-roles.md#organization-admin) to create a stack.
 - An organization user can create only one stack per minute per organization.
 
 To create a new stack, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:

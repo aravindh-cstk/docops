@@ -21,7 +21,7 @@ Starters in Marketplace are designed to help beginners learn how to build websit
 
 Contentstack Marketplace offers easy and quick installation and hosting of starter apps. Moreover, it provides developers an opportunity to learn in detail about the features in Contentstack and how they can be used to build dynamic websites. You can start developing your business-specific website with Contentstack features.
 
-Starters are built using different technologies combined with [Contentstack’s Node.js SDK](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/nodejs/about-nodejs-delivery-sdk/) to store and deliver the content from Contentstack.
+Starters are built using different technologies combined with [Contentstack’s Node.js SDK](../sdks/content-delivery-sdk/nodejs/about-nodejs-delivery-sdk.md) to store and deliver the content from Contentstack.
 
 Navigate to the [Starters](https://app.contentstack.com/#!/marketplace/starters) section in Contentstack Marketplace and select the app that you want to install.  
 Here is a list of the technologies we used to build the Starters.
@@ -35,7 +35,7 @@ Here is a list of the technologies we used to build the Starters.
 - [Astro](/docs/developers/sample-apps/build-a-starter-website-using-astro-and-contentstack/)
 - [Nuxt3](/docs/developers/sample-apps/build-a-starter-website-using-nuxt3-and-contentstack/)
 
-Contentstack Marketplace allows easy installation of starters and quick hosting using [Contentstack Launch](https://app.contentstack.com/#!/launch). For more details, refer to the [Contentstack Launch documentation](/docs/developers/launch).
+Contentstack Marketplace allows easy installation of starters and quick hosting using [Contentstack Launch](https://app.contentstack.com/#!/launch). For more details, refer to the [Contentstack Launch documentation](../launch.md).
 
 **Note:** Currently, we offer hosting through Contentstack Launch and [Vercel](https://vercel.com/). In the future, we will expand our hosting options to include [Netlify](https://www.netlify.com/), [Heroku](https://www.heroku.com/), etc.
 
@@ -48,7 +48,7 @@ A: Navigate to the [Starters](https://app.contentstack.com/#!/marketplace/starte
 A: The page lists React.js, Next.js, Gatsby, Nuxt.js, Angular, Vue.js, Stencil.js, Astro, and Nuxt3.
 
 **Q: What SDK do Starters use to store and deliver content from Contentstack?**  
-A: Starters are built using different technologies combined with [Contentstack’s Node.js SDK](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/nodejs/about-nodejs-delivery-sdk/).
+A: Starters are built using different technologies combined with [Contentstack’s Node.js SDK](../sdks/content-delivery-sdk/nodejs/about-nodejs-delivery-sdk.md).
 
 **Q: What hosting options are currently available for Starters?**  
 A: Currently, hosting is offered through Contentstack Launch and [Vercel](https://vercel.com/).

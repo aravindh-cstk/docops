@@ -31,11 +31,11 @@ Contentstack is a headless, API-first content management system (CMS) that provi
 
 This document is a detailed reference to the beta version of Contentstack’s SCIM API.
 
-The SCIM API helps businesses to manage their users in their Contentstack [organization](/docs/owners-and-admins/about-organizations)via an IdP client. This includes provisioning (adding) and deprovisioning (removing) users in a Contentstack Organization via IdP client, and assigning permissions to these users via group mapping in Contentstack.
+The SCIM API helps businesses to manage their users in their Contentstack [organization](../../cs-docs/developers/organization/about-organizations.md)via an IdP client. This includes provisioning (adding) and deprovisioning (removing) users in a Contentstack Organization via IdP client, and assigning permissions to these users via group mapping in Contentstack.
 
 Contentstack SCIM API is built using SCIM 2.0 protocol. Currently, we extend our SCIM’s support to OneLogin, but you can write your custom tools that can use Contentstack’s SCIM API.
 
-**Note**: Before using the SCIM API requests, make sure you have enabled SCIM in the SCIM 2.0 section of your [Organization Settings](/docs/owners-and-admins/organization-settings-overview) page.
+**Note**: Before using the SCIM API requests, make sure you have enabled SCIM in the SCIM 2.0 section of your [Organization Settings](../../cs-docs/developers/organization/organization-settings-overview.md) page.
 
 ### Authentication
 
@@ -115,7 +115,7 @@ If the user does not already exist in Contentstack, you can add the new user to 
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 ##### Headers
@@ -183,7 +183,7 @@ The Get All Users request fetches the list of all users (along with details such
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 ##### Query Parameters
@@ -284,7 +284,7 @@ You need to pass the ID of the user as the URL parameter.
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **user_id** (required)
   The ID of the user whose details you want to fetch. Refer to the [Get All Users](#get-all-users) request to get the user ID.
@@ -344,7 +344,7 @@ You need to pass the username as a query parameter.
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 ##### Query Parameters
@@ -419,7 +419,7 @@ In the “Body” section, you need to provide the updated schema of the user in
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **user_id** (required)
   The ID of the user whose details you want to update. Refer to the [Get All Users](#get-all-users) request to get the user ID.
@@ -495,7 +495,7 @@ In the “Body” section, you need to provide the updated schema of the user in
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **user_id** (required)
   The ID of the user whose details you want to update. Refer to the [Get All Users](#get-all-users) request to get the user ID.
@@ -571,7 +571,7 @@ This will remove the user from all the assigned stacks, but the user will contin
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **user_id** (required)
   The ID of the user you want to remove. Refer to the [Get All Users](#get-all-users) request to get the user ID.
@@ -602,7 +602,7 @@ In the "Request Body" section, you need to pass the ID of the user in Contentsta
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 ##### Headers
@@ -663,7 +663,7 @@ The Get All Groups request fetches details of all groups that exist in the IdP c
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 ##### Query Parameters
@@ -734,7 +734,7 @@ The Get Single Group by ID request fetches details of a single group that exists
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -804,7 +804,7 @@ You need to pass the displayname as a query parameter.
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 ##### Query Parameters
@@ -868,7 +868,7 @@ In the "Request Body", you need to pass the ID of the user in the value key.
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -943,7 +943,7 @@ In the "Request Body", you need to pass a new name for the group in the value ke
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -1009,7 +1009,7 @@ This also revokes admin access for users with admin roles, unless those users ha
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -1075,7 +1075,7 @@ This also revokes admin access for the user with an admin role, unless that user
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -1144,7 +1144,7 @@ This also revokes admin access for users with admin role, unless that user has b
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
@@ -1226,7 +1226,7 @@ The Delete Group request deletes an existing group from the SCIM. This will remo
 ##### URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](./content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group you want to delete. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.

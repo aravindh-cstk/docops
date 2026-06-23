@@ -19,7 +19,7 @@ This page explains what a Stack is in Contentstack, who can create stacks, and t
 
 A Stack in Contentstack is a centralized repository that stores all the content and assets for a project. It provides a structured workspace where teams can collaborate to create, manage, and publish content efficiently.
 
-**Note:** Only the Organization [Owner](/docs/developers/organization/organization-roles#organization-owner) or [Admin](/docs/developers/organization/organization-roles#organization-admin) can create stacks and invite users to collaborate.
+**Note:** Only the Organization [Owner](../organization/organization-roles.md#organization-owner) or [Admin](../organization/organization-roles.md#organization-admin) can create stacks and invite users to collaborate.
 
 ## Key Features
 
@@ -39,7 +39,7 @@ Stacks empower teams to work efficiently, maintain content consistency, and scal
 ## Common questions
 
 ### Who can create stacks in Contentstack?
-Only the Organization [Owner](/docs/developers/organization/organization-roles#organization-owner) or [Admin](/docs/developers/organization/organization-roles#organization-admin) can create stacks and invite users to collaborate.
+Only the Organization [Owner](../organization/organization-roles.md#organization-owner) or [Admin](../organization/organization-roles.md#organization-admin) can create stacks and invite users to collaborate.
 
 ### What does a Stack store?
 A Stack in Contentstack is a centralized repository that stores all the content and assets for a project.

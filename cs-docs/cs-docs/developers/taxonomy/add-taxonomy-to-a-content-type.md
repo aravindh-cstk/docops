@@ -20,8 +20,8 @@ This page explains how to add a Taxonomy field to a content type in Contentstack
 Once you have set up your taxonomy, you can add it as a field to your content types and classify your entries.
 
 To add a taxonomy to a content type, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to add a taxonomy to a content type, and click the “Content Models” icon on the left navigation panel.
-- [Create a new content type](/docs/developers/create-content-types/create-a-content-type) or select an existing.
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to add a taxonomy to a content type, and click the “Content Models” icon on the left navigation panel.
+- [Create a new content type](../create-content-types/create-a-content-type.md) or select an existing.
 - In the “Content Type Builder” page, select the fields you want by clicking the “Insert a field” (+ icon) that appears when you hover the cursor.
 - Select **Taxonomy **from the list of fields.
 - You can configure the properties of the taxonomy field by clicking the properties.  
@@ -35,7 +35,7 @@ To add a taxonomy to a content type, log in to your [Contentstack account](https
 
 **Note**: You can only add the Taxonomy field at the parent level; it cannot be added within modular blocks or group fields.
 
-Once you've added the taxonomy field to a content type, you can begin adding entries and [categorizing them using taxonomy](/docs/content-managers/author-content/adding-terms-to-entries-with-taxonomy/).
+Once you've added the taxonomy field to a content type, you can begin adding entries and [categorizing them using taxonomy](../../content-managers/author-content/adding-terms-to-entries-with-taxonomy.md).
 
 ## Common questions
 

@@ -20,9 +20,9 @@ This page explains how to use the **Modular Blocks** field in Contentstack to bu
 The **Modular Blocks** field lets content managers dynamically build and modify components of a page or app, directly from the entry editor. It provides flexibility to assemble rich content structures without developer involvement.
 
 For example, content managers can choose from predefined blocks like:
-- **Banner**: [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) and [File](/docs/developers/create-content-types/file) fields
-- **Product Details**: [Title](/docs/developers/create-content-types/title), [RTE](/docs/developers/json-rich-text-editor/), and File fields
-- **Video**: File and [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox) fields
+- **Banner**: [Single Line Textbox](./single-line-textbox.md) and [File](./file.md) fields
+- **Product Details**: [Title](./title.md), [RTE](../json-rich-text-editor.md), and File fields
+- **Video**: File and [Multi Line Textbox](./multi-line-textbox.md) fields
 
 They can add, reorder, or remove these blocks as needed, allowing them to design complex page layouts independently.
 
@@ -38,10 +38,10 @@ To use Modular Blocks, developers must first add the field to a content type.
 
 **Note:**
 - You can add up to **5 Modular Blocks** fields per content type, with up to **20 blocks** in each field.
-- You can also mark a Modular Blocks field to **Show as Tab** in the entry editor. This option displays the field as a separate tab, helping content managers navigate large entries more easily. Learn more in [Show as Tab](/docs/developers/create-content-types/show-as-tab).
-- You can now designate a specific field inside a block as the “title” of each block instance by enabling the [Mark as Modular block title](/docs/developers/create-content-types/mark-as-title#mark-as-modular-block-title) toggle.
+- You can also mark a Modular Blocks field to **Show as Tab** in the entry editor. This option displays the field as a separate tab, helping content managers navigate large entries more easily. Learn more in [Show as Tab](./show-as-tab.md).
+- You can now designate a specific field inside a block as the “title” of each block instance by enabling the [Mark as Modular block title](./mark-as-title.md#mark-as-modular-block-title) toggle.
 
-**Warning:** You cannot add a Modular Blocks field within a [Group](/docs/developers/create-content-types/group) field.
+**Warning:** You cannot add a Modular Blocks field within a [Group](./group.md) field.
 
 ## Content Manager
 While creating an entry, the Modular Blocks field appears with links to add the defined blocks (e.g., Banner, Product Details). Content managers can:
@@ -63,7 +63,7 @@ Let's learn how to work with Modular Blocks in Contentstack using a few use case
 Modular Blocks simplify creating flexible content types for multiple pages with varying components.
 
 To create a content type with modular blocks, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon.
 - Click **+ New Content Type** and name it **Page**.
 - Add common fields like Intro, Metadata, or SEO.
 - Insert a **Modular Blocks** field and name it **Page Components**.
@@ -76,7 +76,7 @@ To create a content type with modular blocks, log in to your [Contentstack accou
 You can use Modular Blocks to create a navigation menu with references to internal or external pages.
 
 To create a menu using modular blocks, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon.
 - Click **+ New Content Type** and name it **Landing Page**.
 - Add fields like:Title (default)
 - JSON Rich Text Editor (Main Text)
@@ -95,7 +95,7 @@ Now that we are done creating our content types, let's create entries in them an
 - Within **External**, set the title as **Contentstack** and the URL as `https://contentstack.com`.
 - Within **Custom** keep the title as **Docs **with the Path as `/documentation/start`.**Tip:** The Custom block allows linking to any internal path (e.g., `/some-other-link/on-my-webpage`).
 
-You can now use the [Content Delivery API](/docs/developers/apis/content-delivery-api) to retrieve the Menu entry content and build your navigation dynamically. For example, refer to this [example](https://gist.github.com/oskarei/10a547de2049399d696414e84e9e9889).
+You can now use the [Content Delivery API](../../../api-docs/api-detail/content-delivery-api.md) to retrieve the Menu entry content and build your navigation dynamically. For example, refer to this [example](https://gist.github.com/oskarei/10a547de2049399d696414e84e9e9889).
 
 ### Example 3: Light Geo-Segmentation
 To show different content based on user location, create a content type with blocks like:
@@ -115,7 +115,7 @@ Let’s say you want to let authors:
 - Or create a photo gallery with multiple image uploads.
 
 To create nested modular blocks, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon.
 - Create a new or select an existing content type.
 - Add a **Modular Blocks** field named **Article Type**.
 - Create two blocks:**News Articles** that contains a **nested Modular Blocks** field with:Image Block (File field)
@@ -159,9 +159,9 @@ To copy and paste field values across modular blocks, log in to your [Contentsta
 - A nested Modular Blocks field supports up to **30 block instances** per entry.
 
 **Additional Resources:**
-- Learn about [best practices for adding Modular Blocks](/docs/developers/content-modeling/content-modeling-best-practices#use-modular-blocks-field-for-dynamic-web-pages) in our dedicated guide.
+- Learn about [best practices for adding Modular Blocks](../content-modeling/content-modeling-best-practices.md#use-modular-blocks-field-for-dynamic-web-pages) in our dedicated guide.
 - Read our Modular Blocks [validation guide](/docs/developers/how-to-guides/validating-modular-blocks-using-contentstack-webhooks-and-aws-lambda) to understand how to implement validation rules effectively.
-- Explore our comprehensive documentation on [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) to control how fields appear based on user input.
+- Explore our comprehensive documentation on [Field Visibility Rules](./about-field-visibility-rules.md) to control how fields appear based on user input.
 
 ## Common questions
 
@@ -175,5 +175,5 @@ You can nest a Modular Blocks field inside a block of another Modular Blocks fie
 Yes. Content managers can use **Copy Field Values** and **Paste Field Values**, and the destination block must match the original block’s name and structure.
 
 ### Can I add a Modular Blocks field inside a Group field?
-No. **Warning:** You cannot add a Modular Blocks field within a [Group](/docs/developers/create-content-types/group) field.
+No. **Warning:** You cannot add a Modular Blocks field within a [Group](./group.md) field.
 

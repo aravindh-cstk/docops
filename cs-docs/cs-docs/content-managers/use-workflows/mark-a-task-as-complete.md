@@ -16,7 +16,7 @@ This page explains how workflow tasks are marked as complete and removed from yo
 
 ## Mark a Task as Complete
 
-**Note**: If you are not familiar with [Workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) and its [Stages](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages), we recommend you to read about them before proceeding with [Workflow Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks).
+**Note**: If you are not familiar with [Workflow](../../developers/set-up-workflows-and-publish-rules/about-workflows.md) and its [Stages](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md), we recommend you to read about them before proceeding with [Workflow Tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md).
 
 Tasks remain in your stack’s **Tasks** (press “alt + M” for Windows OS, and “option + M” for Mac OS) section until they are completed. To remove the task from your **Tasks** section, you need to complete the action that is required for the task. There is no other way to mark a task as complete.
 - If someone has assigned you to work on a stage of an entry, this task will remain in your **Tasks** section until you work on the stage, and assign it to some other user.

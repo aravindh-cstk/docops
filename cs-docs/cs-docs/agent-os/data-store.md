@@ -47,7 +47,7 @@ Let’s see a simple use-case of Append Data action using Repeat Path.
 
 Append Data action is helpful while working with bulk data. In this example, we are sending bulk data through Postman. You can use any other trigger or third-party source to send your data.  
 We are sending two arrays via Postman which will append and form a single array. For example: {"array1":["start"], "array2":[1,2,3]}.
-- Configure the **HTTP Trigger **connector. For more details, refer to the [HTTP Trigger](/docs/developers/automation-hub-connectors/http-trigger/) connector documentation.**Note:** Send a request to the HTTP trigger URL via Postman to send bulk data and test the trigger. Once you click **Test Trigger**, you can see the data sent via Postman in the output.
+- Configure the **HTTP Trigger **connector. For more details, refer to the [HTTP Trigger](./http-trigger.md) connector documentation.**Note:** Send a request to the HTTP trigger URL via Postman to send bulk data and test the trigger. Once you click **Test Trigger**, you can see the data sent via Postman in the output.
 - Once the trigger is configured, configure an** Action Step** and click the **Data Store **connector.
 - Under **Choose an Action** step, select the **Set Data** action. In the **Store At **dropdown, select **Automation** Level.
 - In the **Set Data** action, set the **Key** and **Value**. Fetch the array data coming from the previous step. Select the value of array1 in the **Value** field.
@@ -104,7 +104,7 @@ Let’s understand more about the Execution Level storage with a simple example:
 With Execution Level, the data is stored in the instance of execution of an automation i.e., the access to the data is limited only in the instance in which the automation is executed. Even if there are parallel executions of an automation, the values are not overridden with multiple executions.
 
 Let’s set up our automation by following these simple steps:
-- Configure the **HTTP Trigger** connector. For more details, refer to the [HTTP Trigger](/docs/developers/automation-hub-connectors/http-trigger/)connector documentation.
+- Configure the **HTTP Trigger** connector. For more details, refer to the [HTTP Trigger](./http-trigger.md)connector documentation.
 - Once the trigger is configured, click the **Data Store **connector.
 - Under **Choose an Action** step, select the** Set Data** action. In the dropdown, select **Execution Level** to store the data at execution level.
 - Enter the **Data** values, i.e., **Key** and corresponding **Value** for the same.

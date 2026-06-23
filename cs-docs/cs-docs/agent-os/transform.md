@@ -143,7 +143,7 @@ return [
 
   The **JSON** **Stringify** action converts an object (or array of objects) into a JSON-formatted string.
 
-  In the [ChatGPT](/docs/developers/automation-hub-connectors/chatgpt) connector, the output is generated in JSON format. This action helps to properly indent the JSON, making it easier to read and use in the entry data.
+  In the [ChatGPT](./chatgpt.md) connector, the output is generated in JSON format. This action helps to properly indent the JSON, making it easier to read and use in the entry data.
 
   Let’s see the configuration for this:
 - In the **Input** **Value** field, enter the JSON data (objects or array of objects) to stringify.

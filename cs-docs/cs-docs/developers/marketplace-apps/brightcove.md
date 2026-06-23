@@ -62,7 +62,7 @@ In the left-hand side primary navigation, click the **Marketplace** icon.
 - For **Custom Fields**, you can search and add specific **Brightcove Keys** you want to save in entries. By default, the **id** and **name** of the assets are selected.
 - Click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Note**: The app requires at least one UI location to be enabled, otherwise you will not be able to save your app configuration settings.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Brightcove app.
 
 ## Use the Brightcove App Within Your Entry
@@ -71,14 +71,14 @@ To use the Brightcove app within an entry of your stack, follow the steps given 
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
 - There are two ways to use the Brightcove app in your entry:
   - [Custom Field](#steps-to-use-the-brightcove-app-using-a-custom-field)
   - [JSON Rich Text Editor Field](#steps-to-use-the-brightcove-app-using-a-json-rich-text-editor-field)
 
 ### Steps to Use the Brightcove App as a Custom Field
 
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension or App**, select **Brightcove**, and click the **Proceed** button.This adds Brightcove in the custom field.
 - Under **Advanced** properties, you can set the maximum number of assets that can be added in the Custom field. In our example, it is 5.
 
@@ -91,7 +91,7 @@ Go to your stack, click the **Content Models** icon in the left navigation panel
 ```
 
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
-- To use the Brightcove app, [create an entry](/docs/content-managers/author-content/create-an-entry) for this content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Brightcove app’s custom field on your entry page, as shown below:
+- To use the Brightcove app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Brightcove app’s custom field on your entry page, as shown below:
 - Click the **+ Choose Video(s)** button.
 - Select the video(s) from your Brightcove selector page and click the **Add Videos(s)** button to add them to your entry.**Note**: You can add multiple videos in one go.
 
@@ -123,10 +123,10 @@ The videos you select get added to your entry in the list view.
 
 ### Steps to Use the Brightcove App as a JSONRTE Plugin
 
-- In the **Content Type Builder** page, add a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Plugin(s)**, select **Brightcove**, and then click **Add Plugin(s)**.This adds Brightcove in the JSON Rich Text Editor field.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
-- To use the Brightcove app, [create an entry](/docs/content-managers/author-content/create-an-entry) for this content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Brightcove JSON Rich Text Editor field on your entry page, as shown below:
+- To use the Brightcove app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Brightcove JSON Rich Text Editor field on your entry page, as shown below:
 - Click the **Brightcove** app button.
 - Select the video(s) from your Brightcove selector page and click the **Add Videos(s)** button to add them to your entry.**Note**: You can add multiple videos in one go.
 
@@ -148,7 +148,7 @@ In the **Edit Asset** modal, you can view the **Embed Link** field.
 
 **Note**: Previously, **Embed Links** were stored using the key `link`, which conflicted with Brightcove's **Related Link** feature that also used `link`. To avoid this conflict, embed links are now stored under `embedLink` and referenced via `redactor_attributes.anchorLink`. Entries using the old `link` key will continue to display correctly.
 
-**Additional Resource: **You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field.
+**Additional Resource: **You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field.
 
 - After adding the video(s), **Save** and **Publish** your entry.
 

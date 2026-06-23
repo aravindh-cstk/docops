@@ -16,7 +16,7 @@ This page describes the Contentstack Management - Languages Actions available in
 
 ## Contentstack Management - Languages Actions
 
-Contentstack offers advanced [multilingual content](/docs/developers/multilingual-content/about-languages) capabilities with over 200 pre-configured locales for creating and publishing entries in multiple languages. You can fetch the details of all the locales in a stack using the Contentstack Management Language action.
+Contentstack offers advanced [multilingual content](../developers/multilingual-content/about-languages.md) capabilities with over 200 pre-configured locales for creating and publishing entries in multiple languages. You can fetch the details of all the locales in a stack using the Contentstack Management Language action.
 
 Let’s look at each of these in detail.
 

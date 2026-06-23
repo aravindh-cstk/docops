@@ -33,7 +33,7 @@ To restore an asset, sign in to your [Contentstack account](https://www.contents
 - Click the vertical ellipsis (⋮) to open the actions menu.
 - Click **Restore**.
 
-**Note**: If you cannot click Restore for an asset, the asset's parent folder is also in trash. Restore the parent folder first using the steps in [Restore a Folder](/docs/assets/restore-an-asset-or-folder#restore-a-folder), then return to the asset's row and click Restore.
+**Note**: If you cannot click Restore for an asset, the asset's parent folder is also in trash. Restore the parent folder first using the steps in [Restore a Folder](./restore-an-asset-or-folder.md#restore-a-folder), then return to the asset's row and click Restore.
 
 Contentstack returns the asset to the assets listing.
 

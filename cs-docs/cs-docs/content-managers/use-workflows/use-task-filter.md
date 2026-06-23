@@ -16,7 +16,7 @@ This page explains how to use the Task filter in Workflows to refine and view ta
 
 ## Use Task Filter
 
-**Note**: Before getting started with the [Task](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks) filter, make sure you are familiar with the key concepts of [Workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) and its [Stages](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages).
+**Note**: Before getting started with the [Task](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md) filter, make sure you are familiar with the key concepts of [Workflow](../../developers/set-up-workflows-and-publish-rules/about-workflows.md) and its [Stages](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md).
 
 You can refine tasks based on specific filters as shown below:
 
@@ -37,4 +37,4 @@ You can refine tasks by action values such as **Approved**, **Pending**, and **R
 Contentstack will filter all the entries of which the selected stage is assigned to you.
 
 ### What should I review before using the Task filter?
-Make sure you are familiar with the key concepts of [Workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) and its [Stages](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages).
+Make sure you are familiar with the key concepts of [Workflow](../../developers/set-up-workflows-and-publish-rules/about-workflows.md) and its [Stages](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md).

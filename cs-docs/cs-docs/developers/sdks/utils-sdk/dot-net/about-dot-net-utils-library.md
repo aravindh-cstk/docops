@@ -20,11 +20,11 @@ This page explains what the Contentstack .NET Utils library is, what it includes
 Contentstack provides the .NET Utils library that contains all the utilities for the .NET SDK.
 
 Features included:
-- **Embedded Object**: Allows you to fetch embedded [entries](/docs/content-managers/author-content/about-entries)/[assets](/docs/content-managers/author-content/about-assets) (placed inside the “[Rich Text Editor](/docs/developers/create-content-types/rich-text-editor)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](/docs/developers/create-content-types/rich-text-editor#embed-entries-in-the-rte) and [Embed Asset](/docs/developers/create-content-types/rich-text-editor#embed-assets-in-the-rte) documentation.
+- **Embedded Object**: Allows you to fetch embedded [entries](../../../../content-managers/author-content/about-entries.md)/[assets](../../../../content-managers/author-content/about-assets.md) (placed inside the “[Rich Text Editor](../../../create-content-types/rich-text-editor.md)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](../../../create-content-types/rich-text-editor.md#embed-entries-in-the-rte) and [Embed Asset](../../../create-content-types/rich-text-editor.md#embed-assets-in-the-rte) documentation.
 
 **Note**: The Contentstack .NET Utils library supports Node.js version 10 or above.
 
-To use this Utils library in your application, follow the steps specified in the [Get Started with .NET Utils library](/docs/developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-sdk-and-live-preview/) guide. You can check out the GitHub page of our [.NET Utils SDK](https://github.com/contentstack/contentstack-utils-dotnet).
+To use this Utils library in your application, follow the steps specified in the [Get Started with .NET Utils library](../../content-delivery-sdk/dot-net/get-started-with-dot-net-sdk-and-live-preview.md) guide. You can check out the GitHub page of our [.NET Utils SDK](https://github.com/contentstack/contentstack-utils-dotnet).
 
 ## Common questions
 
@@ -32,7 +32,7 @@ To use this Utils library in your application, follow the steps specified in the
 It contains utilities for the .NET SDK, including support for fetching and displaying embedded entries/assets from the Rich Text Editor (RTE) field.
 
 ### Where do I find setup instructions for the .NET Utils library?
-Follow the steps in the [Get Started with .NET Utils library](/docs/developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-sdk-and-live-preview/) guide.
+Follow the steps in the [Get Started with .NET Utils library](../../content-delivery-sdk/dot-net/get-started-with-dot-net-sdk-and-live-preview.md) guide.
 
 ### Where is the source code for the .NET Utils SDK?
 The GitHub repository is available at https://github.com/contentstack/contentstack-utils-dotnet.

@@ -38,7 +38,7 @@ git clone https://github.com/contentstack/datasync-boilerplate
 
 - ### Add stack API key and delivery token
 
-Go to the `config` folder and open the `all.js` file. Add your [stack's API key](/docs/developers/set-up-stack/view-stack-details) and the [delivery token](/docs/developers/create-tokens/about-delivery-tokens) of the [environment](/docs/developers/set-up-environments/about-environments):
+Go to the `config` folder and open the `all.js` file. Add your [stack's API key](../set-up-stack/view-stack-details.md) and the [delivery token](../create-tokens/about-delivery-tokens.md) of the [environment](../set-up-environments/about-environments.md):
 
 ```
 const config = {
@@ -105,16 +105,16 @@ npm start
 ```
 
 **Note:**Set `NODE_ENV` to the name of the environment for which the Delivery Token was added in [Step 2](#add-stack-api-key-and-delivery-token).
-- Set `SYNC_ENV` to the environment name selected during the [Delivery Token creation process](/docs/developers/create-tokens/create-a-delivery-token).
+- Set `SYNC_ENV` to the environment name selected during the [Delivery Token creation process](../create-tokens/create-a-delivery-token.md).
 
 After running the above command, the server starts on **port 5000** and all the published items of your stack syncs on your infrastructure.
-If your environment has any published content, the sync utility creates a `_contents` folder in your project, and stores [assets](/docs/content-managers/working-with-assets/about-assets) inside the `_content/en-us/assets` folder and [entries](/docs/content-managers/working-with-entries/about-entries) inside the `_content/en-us/data` folder.
+If your environment has any published content, the sync utility creates a `_contents` folder in your project, and stores [assets](/docs/content-managers/working-with-assets/about-assets) inside the `_content/en-us/assets` folder and [entries](../../content-managers/author-content/about-entries.md) inside the `_content/en-us/data` folder.
 
 - ### Install and run ngrok (for localhost only)
 
-**Note:** If you use a deployment environment, such as production, you don't need `ngrok`. Skip this step and move to creating a [webhook](/docs/developers/set-up-webhooks/about-webhooks). Else, follow this step.
+**Note:** If you use a deployment environment, such as production, you don't need `ngrok`. Skip this step and move to creating a [webhook](../set-up-webhooks/about-webhooks.md). Else, follow this step.
 
-[Contentstack DataSync](/docs/developers/develop-apps-with-datasync/about-contentstack-datasync) is a webhook-based utility, and webhooks get triggered only on public domains. So, if you are setting up Contentstack DataSync on your local machine, you will require a public domain to receive webhook notifications.
+[Contentstack DataSync](./about-contentstack-datasync.md) is a webhook-based utility, and webhooks get triggered only on public domains. So, if you are setting up Contentstack DataSync on your local machine, you will require a public domain to receive webhook notifications.
 
 `ngrok` creates a public URL for your localhost and creates a secure tunnel between the two. So, you need to:
 

@@ -34,8 +34,8 @@ Now, follow the instructions given below to use the Contentstack + Vercel integr
 - Now, select the Vercel projects that will be integrated. Here, you can either choose the **Al**l** Projects **to select all your Vercel projects or some **Specific Projects **to be integrated.  
   Select the required projects to be integrated if you choose the **Specific Projects** option and click the **ADD INTEGRATION **button.
 - As shown below, a new window will appear, where you can select your data center:
-- Login to your [Contentstack account](https://www.contentstack.com/login/) and choose the Contentstack [organization](/docs/owners-and-admins/about-organizations) that you will be connecting with Vercel to link your projects.
-- After selecting the organization, proceed to link Vercel projects with your [stacks](/docs/developers/set-up-stack/about-stack) and [environments](/docs/developers/set-up-environments/about-environments).  
+- Login to your [Contentstack account](https://www.contentstack.com/login/) and choose the Contentstack [organization](../organization/about-organizations.md) that you will be connecting with Vercel to link your projects.
+- After selecting the organization, proceed to link Vercel projects with your [stacks](../set-up-stack/about-stack.md) and [environments](../set-up-environments/about-environments.md).  
   From the Vercel projects dropdown, select a project and map it with a stack from your organization. From the list of environments associated with your stack, select one as shown below:
 - Alternatively, you can add a new project by clicking on the **+ Add another Vercel Project **button or delete your linked projects if you no longer need them.  
   **Note:** When selecting Vercel projects in step 3, you must select the** All Projects **option in order to add multiple projects.

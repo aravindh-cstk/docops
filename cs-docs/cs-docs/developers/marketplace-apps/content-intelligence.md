@@ -19,7 +19,7 @@ Content Intelligence App Installation Guide
 
 The Content Intelligence Marketplace app provides auto suggestion, grammar correction, and spell correction within the JSON RTE. You can easily use the Content Intelligence features to improve the accuracy and quality of your content in real-time.
 
-Contentstack Marketplace allows you to readily install the Content Intelligence application to your stack. With the Content Intelligence button in the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/), you can now enable services for auto suggestion, grammar correction, and spell correction within your Contentstack entry.
+Contentstack Marketplace allows you to readily install the Content Intelligence application to your stack. With the Content Intelligence button in the [JSON Rich Text Editor](../json-rich-text-editor.md), you can now enable services for auto suggestion, grammar correction, and spell correction within your Contentstack entry.
 
 ## Prerequisites
 

@@ -60,11 +60,11 @@ For example: If you choose the AWS Europe data center as your region, all of you
 
 ## Using Regions in Contentstack
 
-- [Login Endpoints](/docs/developers/contentstack-regions/login-endpoints)
-- [API Endpoints](/docs/developers/contentstack-regions/api-endpoints)
-- [Selecting Regions in Contentstack Starter Apps](/docs/developers/selecting-region-in-contentstack-starter-apps)
-- [Selecting Regions in SDKs](/docs/developers/contentstack-regions/selecting-region-in-sdks)
-- [Configure Regions in the CLI](/docs/developers/cli/configure-regions-in-the-cli)
+- [Login Endpoints](./login-endpoints.md)
+- [API Endpoints](./api-endpoints.md)
+- [Selecting Regions in Contentstack Starter Apps](./selecting-region-in-contentstack-starter-apps.md)
+- [Selecting Regions in SDKs](./selecting-region-in-sdks.md)
+- [Configure Regions in the CLI](../cli/configure-regions-in-the-cli.md)
 
 ## Common questions
 
@@ -78,4 +78,4 @@ A: No. Each region is a separate, independent region. Therefore a region doesn't
 A: No. You cannot store your organization's content in multiple regions.
 
 **Q: Where do I find the correct endpoints for my region?**  
-A: See the links under “Using Regions in Contentstack,” such as [Login Endpoints](/docs/developers/contentstack-regions/login-endpoints) and [API Endpoints](/docs/developers/contentstack-regions/api-endpoints).
+A: See the links under “Using Regions in Contentstack,” such as [Login Endpoints](./login-endpoints.md) and [API Endpoints](./api-endpoints.md).

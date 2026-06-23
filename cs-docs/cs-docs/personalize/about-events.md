@@ -33,11 +33,11 @@ This helps you understand if the personalized content is actually being seen by 
 
 For example, if you have two different sale banners for users in different locations. By tracking impressions, you can see how many times each banner is being shown. This helps you measure which banner is being seen more frequently.
 
-You can track impressions using the [Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript#edge-sdk) and [Personalize Edge API](/docs/developers/apis/personalize-edge-api). And also, use tools like [Google Tag Manager,](/docs/personalize/about-gtm-integration/) [Customer Data Platform](/docs/personalize/about-cdp-integration/) integrations or similar platforms. This data is then shown in the 'Analytics' section for each experience, and it's further categorized for each variant.
+You can track impressions using the [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md#edge-sdk) and [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md). And also, use tools like [Google Tag Manager,](./about-gtm-integration.md) [Customer Data Platform](./about-cdp-integration.md) integrations or similar platforms. This data is then shown in the 'Analytics' section for each experience, and it's further categorized for each variant.
 
 ## Conversions
 
-A conversion is an event that signifies a positive user action, such as adding a product to the cart, making a purchase, or scrolling to the end of a page. They are used in [A/B Test experiences](/docs/personalize/create-ab-test-experience) to evaluate the effectiveness of a variant, and a higher number of conversions can indicate a winning variant.
+A conversion is an event that signifies a positive user action, such as adding a product to the cart, making a purchase, or scrolling to the end of a page. They are used in [A/B Test experiences](./create-ab-test-experience.md) to evaluate the effectiveness of a variant, and a higher number of conversions can indicate a winning variant.
 
 For example, imagine you have two versions of a "Buy Now" button. By tracking conversions, you can see which button gets more clicks. This tells you which button is more effective.
 

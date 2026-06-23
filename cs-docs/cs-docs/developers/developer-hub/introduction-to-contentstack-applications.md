@@ -30,7 +30,7 @@ The scope level of your application is defined by the **App Type**:
 
 Apps can also have three different Visibility States:
 - **Private:** This is the default visibility for all newly created applications. These apps are private to the organization they are created in.
-- **Public: **These apps are available in our public marketplace for any customer to install and configure. Only Contenstack can convert an application to Public. [Learn More](/docs/developers/marketplace-platform-guides/app-submission-and-approval-guide) here to see how you can get your app listed.
+- **Public: **These apps are available in our public marketplace for any customer to install and configure. Only Contenstack can convert an application to Public. [Learn More](../marketplace-platform-guides/app-submission-and-approval-guide.md) here to see how you can get your app listed.
 - **Public Unlisted:** These applications are not listed publicly in the Marketplace, but are available for installation if the installation URL is shared with you. This status is generally reserved for applications in a **beta **state.
 
 Let's explore these concepts in more detail.
@@ -38,10 +38,10 @@ Let's explore these concepts in more detail.
 ## Standard Applications
 
 Standard Applications are the most versatile type of application. They offer a variety of features and capabilities, including:
-- **UI Locations: **Allows you to create custom user interfaces across the platform. Learn more about all of the available UI locations [here](/docs/developer-hub/about-ui-locations/).
+- **UI Locations: **Allows you to create custom user interfaces across the platform. Learn more about all of the available UI locations [here](./about-ui-locations.md).
 - **Webhooks:** Allows you to trigger actions in your application when certain events happen in Contentstack. This enables you to build logic into your application based on user interactions and events in the platform.
 - **OAuth 2.0 Integrations: **Allows you to connect your application to third-party services using OAuth 2.0, making it easy to exchange data and authenticate users.
-- **App Hosting: **Allows you to host your application's code directly in [Launch](/docs/developer-hub/app-hosting#hosting-with-launch). This provides a convenient and quick way to stand up your application without having to bring your own hosting solution to the table.
+- **App Hosting: **Allows you to host your application's code directly in [Launch](./app-hosting.md#hosting-with-launch). This provides a convenient and quick way to stand up your application without having to bring your own hosting solution to the table.
 
 ## Machine to Machine Applications
 

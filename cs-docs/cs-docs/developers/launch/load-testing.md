@@ -39,8 +39,8 @@ Review the testing checklist, then share it with the [support](mailto:support@co
 
 * **Define your Caching Strategy**: Ensure all your statically rendered content/assets have appropriate cache control headers.
 * **Monitoring and Logging Setup**: Ensure the monitoring tools (e.g., New Relic, Datadog) and logging are active for real-time tracking.
-  + Set up your [Log Target](/docs/launch/log-targets/) to receive your application logs in real time.
-  + Monitor the [Server Logs](/docs/launch/cloud-functions#server-logs) in the Deployments section.
+  + Set up your [Log Target](./log-targets.md) to receive your application logs in real time.
+  + Monitor the [Server Logs](./cloud-functions.md#server-logs) in the Deployments section.
   + Monitor the Analytics for Launch in the Product Analytics and Mission Control sections.
 
 ## Common questions

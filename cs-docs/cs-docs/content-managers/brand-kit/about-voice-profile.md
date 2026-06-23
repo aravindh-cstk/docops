@@ -26,7 +26,7 @@ Brand Kit's AI Voice Profiles can learn your brand's language and style. These A
 
 The **Playground** feature within Voice Profiles offers a space to experiment and refine your Voice Profiles. By inputting prompts and observing how various settings influence content generation, you can make real-time adjustments. Furthermore, the integration of **Knowledge Vault** enhances brand alignment, ensuring your content remains consistent with your brand's voice.
 
-To create Voice Profiles, follow the instructions provided in the [Create a Voice Profile](/docs/brand-kit/create-a-voice-profile) documentation.
+To create Voice Profiles, follow the instructions provided in the [Create a Voice Profile](./create-a-voice-profile.md) documentation.
 
 ## Common questions
 

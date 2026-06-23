@@ -40,7 +40,7 @@ We changed our color palette and have used a bold and energetic purple to give t
 ## New navigation menu
 The main navigation bar now appears on the left side of the page. This new position makes scanning navigation items easier (as we often read in an [F pattern](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/)) and delivers more scalability. The navigation items now have icons that enhance the interface’s aesthetic appeal and help you navigate faster through easy recollection.
 
-The secondary navigation panel also acts as a filter for many modules, narrowing down [search](/docs/content-managers/search-content/about-basic-search) results.
+The secondary navigation panel also acts as a filter for many modules, narrowing down [search](./content-managers/search-content/about-basic-search.md) results.
 
 ## A better way to search
 We improved search with more power and functionality, so you can find even the tiniest needle in the haystack. The new "Recently Used Fields" option in the search dropdown allows you to select from a variety of frequently used fields.
@@ -52,29 +52,29 @@ You can perform complex search queries anytime by hitting the “:” key and ad
 Read more about [how search works](/docs/content-managers/search-content) in Contentstack.
 
 ## Easy content modeling
-A new module called “Content Models” has been added. It consists of “[Content Types](/docs/developers/create-content-types/about-content-types)” and “[Global Fields](/docs/developers/global-field/about-global-field),” since both help you model the structure of your digital property. Additionally, we have simplified the way developers build content types or global fields. Instead of the legacy drag-and-drop design, our builder page now features a cleaner design with more whitespace, a new way to add and move fields, and simplified filtering. Just click on the “+” icon anywhere on the builder page to add a new field.
+A new module called “Content Models” has been added. It consists of “[Content Types](./developers/create-content-types/about-content-types.md)” and “[Global Fields](./developers/global-field/about-global-field.md),” since both help you model the structure of your digital property. Additionally, we have simplified the way developers build content types or global fields. Instead of the legacy drag-and-drop design, our builder page now features a cleaner design with more whitespace, a new way to add and move fields, and simplified filtering. Just click on the “+” icon anywhere on the builder page to add a new field.
 
 ## Access and create entries the new way
-“[Entries](/docs/content-managers/working-with-entries/about-entries)” now have a new and dedicated home and are no longer part of the broader “Content” menu, making it easier for [content managers](/docs/developers/invite-users-and-assign-roles/types-of-roles#content-manager) and [new users](/docs/developers/invite-users-and-assign-roles/about-stack-users) to navigate to individual content pieces. You can filter entries by content type or view all entries sorted by newest entry first.
+“[Entries](./content-managers/author-content/about-entries.md)” now have a new and dedicated home and are no longer part of the broader “Content” menu, making it easier for [content managers](./developers/invite-users-and-assign-roles/types-of-roles.md#content-manager) and [new users](./developers/invite-users-and-assign-roles/about-stack-users.md) to navigate to individual content pieces. You can filter entries by content type or view all entries sorted by newest entry first.
 
-While on “All Entries,” you can select the content types for which you want to [create a new entry](/docs/content-managers/working-with-entries/create-an-entry#create-new-entry).
+While on “All Entries,” you can select the content types for which you want to [create a new entry](./content-managers/author-content/create-an-entry.md#create-new-entry).
 
 The entry editor also has a cleaner look. The right-hand sidebar, now icon-based for a sleeker look, combined with more streamlined fields means more space for content managers, so they can focus on just creating content. The outline of fields that appears when you hover over the left side makes it easier to jump between fields, especially while working on lengthier content.
 
 ## Improved RTE
-We improved our [RTE field](/docs/developers/create-content-types/rich-text-editor) as well. The underlying functionality remains the same but the look and feel is refreshing. You will notice that the performance has definitely improved immensely.
+We improved our [RTE field](./developers/create-content-types/rich-text-editor.md) as well. The underlying functionality remains the same but the look and feel is refreshing. You will notice that the performance has definitely improved immensely.
 
 ## Smarter asset management
 You can now view [assets](/docs/content-managers/working-with-assets/about-assets) by folder or by their type.
 
 ## Helpful dashboard widgets
-To liven up your [stack dashboard](/docs/developers/set-up-stack/about-stack-dashboard), we introduced some cool widgets that will be available by default for all stacks: **What’s New**, **Quick Help**, and **Did You Know.** Users can add or remove these widgets with a single click.
+To liven up your [stack dashboard](./developers/set-up-stack/about-stack-dashboard.md), we introduced some cool widgets that will be available by default for all stacks: **What’s New**, **Quick Help**, and **Did You Know.** Users can add or remove these widgets with a single click.
 
 ## Single and bulk actions in Publish Queue
 We separated the single and [bulk tasks](/docs/content-managers/bulk-operations-on-entries-and-assets#bulk-operations-on-entries) in Publish Queue, so your single items are not buried under bulk tasks (or vice versa), and you can track both easily.
 
 ## Integrated GraphQL API explorer
-The GraphQL IDE is now embedded, so developers can try out our [GraphQL Content Delivery APIs](/docs/developers/apis/graphql-content-delivery-api) with their actual stack data.
+The GraphQL IDE is now embedded, so developers can try out our [GraphQL Content Delivery APIs](../api-docs/api-detail/graphql-content-delivery-api.md) with their actual stack data.
 
 ## Optional “URL” field
 While creating content types, you no longer have to choose between the “Webpage” and “Content Block” options. It’s just “content type”. The “URL” field doesn’t come as a default field in the content type body, but is available as a field that you can add to your content types, if required. So, if you intend to create a content type for a web page, add the “URL” field, else you can skip adding it.
@@ -85,7 +85,7 @@ This means that users who want to create webpage content type will have to manua
 The changes listed above are just a few of the many exciting new additions to Contentstack. We made numerous other improvements — “comfortable” or “compact” view for lists, the ability to “star” stacks, and being able to refresh a list of items — you will find improvements everywhere. As a Beta user, please try out the new Contentstack as much as possible and let us know what you think.
 
 ## Keyboard Shortcuts
-Contentstack has provided a [list of keyboard shortcuts](/docs/keyboard-shortcuts) that will provide you with an alternative way to directly access certain Contentstack modules in our new interface.
+Contentstack has provided a [list of keyboard shortcuts](./keyboard-shortcuts.md) that will provide you with an alternative way to directly access certain Contentstack modules in our new interface.
 
 You will be able to see the shortcuts in a tooltip when you hover over a module.
 

@@ -23,7 +23,7 @@ Earlier, you could only delete the master language variant of an entry. This mea
 
 With the option to delete a localized version of an entry, all the [versions](/docs/content-managers/entry-versions) of that entry can also be permanently deleted from the stack.
 
-**Additional Resource**: Learn more about [how localization works in Contentstack](/docs/developers/multilingual-content/about-localization) to handle localized entry versions in a better way.
+**Additional Resource**: Learn more about [how localization works in Contentstack](./multilingual-content/about-localization.md) to handle localized entry versions in a better way.
 
 Let us look at an example to understand how to delete localized versions of an entry.
 
@@ -33,7 +33,7 @@ You can delete entry versions available in other languages from the deletion mod
 
 **Tip**: To delete content present in Japanese (Japan), Spanish (Spain), and French (France) but not in the master language entry, you can simply deselect English (United States) in the “Delete” modal and select the remaining language versions for deletion.
 
-Learn more about [deleting multiple language versions of an entry](/docs/content-managers/bulk-delete-localized-entry-versions).
+Learn more about [deleting multiple language versions of an entry](../content-managers/author-content/bulk-delete-localized-entry-versions.md).
 
 **Note**: You can select and delete up to **100 entries **at a time. To delete more than 100 entries, repeat the process in batches.
 
@@ -49,6 +49,6 @@ With the option to delete a localized version of an entry, all the versions of t
 Yes. You can select and delete up to 100 entries at a time. To delete more than 100 entries, repeat the process in batches.
 
 ### Where can I learn more about localization and deleting multiple language versions?
-See **Additional Resource**: [how localization works in Contentstack](/docs/developers/multilingual-content/about-localization) and [deleting multiple language versions of an entry](/docs/content-managers/bulk-delete-localized-entry-versions).
+See **Additional Resource**: [how localization works in Contentstack](./multilingual-content/about-localization.md) and [deleting multiple language versions of an entry](../content-managers/author-content/bulk-delete-localized-entry-versions.md).
 
 [set-up-your-project-bulk-delete-an-entry-from-different-locales.md]

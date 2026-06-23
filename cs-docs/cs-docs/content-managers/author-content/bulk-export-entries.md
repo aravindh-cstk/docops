@@ -17,21 +17,21 @@ This page explains how to use the Bulk Export Entries feature in Contentstack to
 
 ## Bulk Export Entries
 
-Use the bulk export entries feature to export selected, page-level, or all entries from the [entries list](/docs/content-managers/author-content/entries-list-overview) page. Additionally, you can customize which columns to include and choose to export the data in JSON or CSV format.
+Use the bulk export entries feature to export selected, page-level, or all entries from the [entries list](./entries-list-overview.md) page. Additionally, you can customize which columns to include and choose to export the data in JSON or CSV format.
 
 Bulk export saves time with large entry sets and ensures data is in a consistent format.
 
 To bulk export entries, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and go to the **Entries** module.
-- Define the entries to export using the following methods:**Search**: Use different [search methods](/docs/content-managers/search-content/about-search) (e.g., keyword or full-text) to display matching entries.
-- **Filter**: [Apply filters](/docs/content-managers/search-content/use-filters) on the entry list page to narrow down the results.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and go to the **Entries** module.
+- Define the entries to export using the following methods:**Search**: Use different [search methods](../search-content/about-search.md) (e.g., keyword or full-text) to display matching entries.
+- **Filter**: [Apply filters](../search-content/use-filters.md) on the entry list page to narrow down the results.
 - **Select**: Manually select specific entries in the list.
 - Click the “Export” icon in the top-right corner of the Entries page. If entries are manually selected, click the **Export** option in the floating panel.
 - In the **Export Entries** modal, configure your export:**Scope**: Choose whether to export selected entries, entries from the current page, or all filtered results.**Tip:** The total number of entries to be exported is listed in brackets.
 - **Manage columns**: Export all columns, or choose specific ones. Selected columns appear as solid pills, while hidden columns appear as dashed outlines.**Tip:** Use column selection to reduce file size and export only the data you need.
 - **Export format**: Choose between JSON or CSV (default is JSON).
 - Click **Export**. You can start multiple exports, and each one is listed separately in the queue with its current status.
-- After completion, the export file downloads automatically. You can also manage or download exports later from the [**Bulk Task Queue**](/docs/content-managers/author-content/stack-bulk-task-queue).
+- After completion, the export file downloads automatically. You can also manage or download exports later from the [**Bulk Task Queue**](./stack-bulk-task-queue.md).
 - You can cancel exports while they are in progress. To cancel individual exports, click **Cancel**. To cancel all the exports, click the “X” icon.
 
 Bulk export ensures consistent data formats and faster entry management for high-volume tasks.
@@ -48,6 +48,6 @@ A: Yes. Use **Manage columns** to export all columns or choose specific ones.
 A: You can choose between JSON or CSV (default is JSON).
 
 **Q: Where can I find past exports if I don’t download them immediately?**  
-A: You can manage or download exports later from the [**Bulk Task Queue**](/docs/content-managers/author-content/stack-bulk-task-queue).
+A: You can manage or download exports later from the [**Bulk Task Queue**](./stack-bulk-task-queue.md).
 
 filename: author-content-bulk-export-entries.md

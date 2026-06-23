@@ -30,10 +30,10 @@ Perform the following steps to set up the Salesforce Commerce Cloud action conne
 - In the **Authorize **pop-up window, provide the **Organization ID**, **Site ID**, **Short Code**, **Client ID**, and **Client Secret**.
 To generate the above details, log in to the Salesforce Commerce Cloud dashboard and perform the following steps:To generate Organization ID and Short Code, click **Administration **-> **Site Development **-> **Salesforce Commerce API Settings** -> Copy the Organization ID and Short Code.
 - To fetch the Site ID, click **Administration **-> **Sites **-> **Manage Sites **-> Copy the Site ID of the respective site.
-- To generate the **Client ID **and **Client Secret**, refer to our [Salesforce Commerce](/docs/developers/marketplace-apps/salesforce-commerce#retrieve-your-client-credentials-from-salesforce-commerce)documentation.
+- To generate the **Client ID **and **Client Secret**, refer to our [Salesforce Commerce](../developers/marketplace-apps/salesforce-commerce.md#retrieve-your-client-credentials-from-salesforce-commerce)documentation.
 - Once done, click **Authorize**.
 
-**Note: **Contentstack Marketplace offers a [Salesforce Commerce](/docs/developers/marketplace-apps/salesforce-commerce) app for its users, so they can fetch the products into their Contentstack CMS entry. With the Salesforce Commerce Cloud connector, you can fetch the product details from your Salesforce Commerce Cloud account and use it within your entry.
+**Note: **Contentstack Marketplace offers a [Salesforce Commerce](../developers/marketplace-apps/salesforce-commerce.md) app for its users, so they can fetch the products into their Contentstack CMS entry. With the Salesforce Commerce Cloud connector, you can fetch the product details from your Salesforce Commerce Cloud account and use it within your entry.
 - Select the **Product Category** based on your preferred site to fetch the product details.
 - Select the **Product ID** to fetch the product details.
 - Enable the **Show optional fields** toggle button to display the **Product Parameter(s)** field to fetch specific details of a product. Click the checkboxes to fetch the image model and the price details of the product.

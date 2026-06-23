@@ -25,13 +25,13 @@ Single Line Textbox
 
 ##### Content
 
-The **Single Line Textbox** field enables users to type in single-line arbitrary text. When you add this field in content type, you will see a single-line textbox on the [entry](/docs/content-managers/working-with-entries/about-entries) page to enter plain text only, for example, a name or an address line.
+The **Single Line Textbox** field enables users to type in single-line arbitrary text. When you add this field in content type, you will see a single-line textbox on the [entry](../../content-managers/author-content/about-entries.md) page to enter plain text only, for example, a name or an address line.
 
 **Note:** This field does not provide any formatting options and line breaks.
 
-This field possesses certain [properties](/docs/developers/create-content-types/about-field-properties) that you can change at any time as per your needs. The properties that can be modified are “[Display Name](/docs/developers/create-content-types/display-name),” “[Unique ID](/docs/developers/create-content-types/unique-id),” “[Placeholder Value](/docs/developers/create-content-types/placeholder-value),” “[Instruction Value](/docs/developers/create-content-types/instruction-value),” “[Help Text](/docs/developers/create-content-types/help-text),” “[Number of Characters](/docs/developers/create-content-types/number-of-characters),” “[Validation (Regex)](/docs/developers/create-content-types/validation-regex),” “[Validation Error Message](/docs/developers/create-content-types/validation-error-message),” “[Default Value](/docs/developers/create-content-types/default-value),” “[Mandatory](/docs/developers/create-content-types/mandatory),” “[Multiple](/docs/developers/create-content-types/multiple),” and “[Non-localizable](/docs/developers/create-content-types/non-localizable).”
+This field possesses certain [properties](./about-field-properties.md) that you can change at any time as per your needs. The properties that can be modified are “[Display Name](./display-name.md),” “[Unique ID](./unique-id.md),” “[Placeholder Value](./placeholder-value.md),” “[Instruction Value](./instruction-value.md),” “[Help Text](./help-text.md),” “[Number of Characters](./number-of-characters.md),” “[Validation (Regex)](./validation-regex.md),” “[Validation Error Message](./validation-error-message.md),” “[Default Value](./default-value.md),” “[Mandatory](./mandatory.md),” “[Multiple](./multiple.md),” and “[Non-localizable](./non-localizable.md).”
 
-**Additional Resource**: Read more about [Field Visibility Rules](https://www.contentstack.com/docs/developers/create-content-types/about-field-visibility-rules/) in our documentation where we have covered them extensively.
+**Additional Resource**: Read more about [Field Visibility Rules](./about-field-visibility-rules.md) in our documentation where we have covered them extensively.
 
 After adding this field in content type, you will see it on your entry page as shown below:
 
@@ -47,4 +47,4 @@ This field possesses certain properties that you can change at any time as per y
 You can use it to enter plain text only, for example, a name or an address line.
 
 **Where can I learn about controlling when this field is shown?**  
-Read more about [Field Visibility Rules](https://www.contentstack.com/docs/developers/create-content-types/about-field-visibility-rules/) in the documentation.
+Read more about [Field Visibility Rules](./about-field-visibility-rules.md) in the documentation.

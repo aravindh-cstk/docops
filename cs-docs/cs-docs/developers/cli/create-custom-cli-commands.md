@@ -54,7 +54,7 @@ To run the code, open your terminal, point it to the “<<plugin_name>>” direc
 node bin/run hello
 ```
 
-Next, let’s set up this plugin within the **csdx **[namespace](/docs/developers/cli/install-the-cli#namespaces), by using the **plugins:link **command so that you don’t have to use the above command for running the plugin’s code.
+Next, let’s set up this plugin within the **csdx **[namespace](./install-the-cli.md#namespaces), by using the **plugins:link **command so that you don’t have to use the above command for running the plugin’s code.
 
 ## Set up the Plugin
 
@@ -88,7 +88,7 @@ This will successfully install the plugin and you can use this custom plugin to 
 
 ## Uninstall the Plugin
 
-If you have created or installed a plugin using [Contentstack CLI](/docs/developers/cli/install-the-cli), and want to uninstall/ remove that plugin, you can do it by using the **plugins:uninstall **command.
+If you have created or installed a plugin using [Contentstack CLI](./install-the-cli.md), and want to uninstall/ remove that plugin, you can do it by using the **plugins:uninstall **command.
 
 **Note**: This command will not delete the plugin’s code folder.
 

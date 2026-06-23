@@ -16,7 +16,7 @@ This page explains the **Display Type** parameter for the **Select** field when 
 
 ## Display Type
 
-The **Display Type** parameter is applicable to the **Select **field. This parameter lets the users assigned “[Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer)” roles to define how to render the list of choices on the entry page. You can choose among the **Radio **button, **Dropdown **list, and **Checkbox**.
+The **Display Type** parameter is applicable to the **Select **field. This parameter lets the users assigned “[Developer](../invite-users-and-assign-roles/types-of-roles.md#developer)” roles to define how to render the list of choices on the entry page. You can choose among the **Radio **button, **Dropdown **list, and **Checkbox**.
 
 **Note**: These options will vary depending on how you set up the **Select **field.
 
@@ -24,14 +24,14 @@ If the **Selection Type** is set to **Single Choice**, the available options und
 
 If the **Selection Type** is set to **Multiple Choices**, the available options under the **Display Type** parameter will be **Checkbox **and **Dropdown**.
 
-******Additional Resources**: To set this property to the **Select** field when [creating your content type via an API request](/docs/developers/apis/content-management-api#create-a-content-type), refer to the JSON payload of the [Select](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#select) field and the [Field parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained) section.
+******Additional Resources**: To set this property to the **Select** field when [creating your content type via an API request](../../../api-docs/api-detail/content-management-api.md#create-a-content-type), refer to the JSON payload of the [Select](./json-schema-for-creating-a-content-type.md#select) field and the [Field parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained) section.
 
-Changing an existing field property may result in loss of data. To avoid such, check out our [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide before you go ahead.
+Changing an existing field property may result in loss of data. To avoid such, check out our [Content Type Change Management](../content-modeling/content-type-change-management.md) guide before you go ahead.
 
 ## Common questions
 
 ### Who can configure the Display Type parameter?
-Users assigned “[Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer)” roles can define how to render the list of choices on the entry page.
+Users assigned “[Developer](../invite-users-and-assign-roles/types-of-roles.md#developer)” roles can define how to render the list of choices on the entry page.
 
 ### What Display Type options are available for Single Choice selection?
 If the **Selection Type** is set to **Single Choice**, the available options under the **Display Type** parameter will be the **Radio **button and **Dropdown**.
@@ -40,4 +40,4 @@ If the **Selection Type** is set to **Single Choice**, the available options und
 If the **Selection Type** is set to **Multiple Choices**, the available options under the **Display Type** parameter will be **Checkbox **and **Dropdown**.
 
 ### Where can I find API details to set Display Type for a Select field?
-Refer to the JSON payload of the [Select](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#select) field and the [Field parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained) section when [creating your content type via an API request](/docs/developers/apis/content-management-api#create-a-content-type).
+Refer to the JSON payload of the [Select](./json-schema-for-creating-a-content-type.md#select) field and the [Field parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained) section when [creating your content type via an API request](../../../api-docs/api-detail/content-management-api.md#create-a-content-type).

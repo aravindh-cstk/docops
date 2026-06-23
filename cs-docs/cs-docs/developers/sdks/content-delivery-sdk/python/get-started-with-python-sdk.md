@@ -16,7 +16,7 @@ This page explains how to install, initialize, and run basic read-only queries u
 
 ## Get Started with Python SDK
 
-This guide will help you get started with Contentstack [Python SDK](/docs/developers/sdks/content-delivery-sdk/python/about-python-sdk/) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Python SDK](./about-python-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
@@ -49,7 +49,7 @@ Contentstack offers six regions **AWS North America**,** AWS Europe**, **Azure N
 
 To use SDKs for the Europe, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.
 
-To initialize the SDK, the stack’s API key, [**delivery token**](/docs/developers/create-tokens/about-delivery-tokens), and name of the [**environment**](/docs/developers/set-up-environments/about-environments) where you will publish the content, as shown in the snippet below:
+To initialize the SDK, the stack’s API key, [**delivery token**](../../../create-tokens/about-delivery-tokens.md), and name of the [**environment**](../../../set-up-environments/about-environments.md) where you will publish the content, as shown in the snippet below:
 
 ```
 import contentstack
@@ -61,13 +61,13 @@ For Europe, Azure North America, or Azure Europe, check the code of your region 
 
 Once you have initialized the SDK, you can query entries to fetch the required content.
 
-For setting the branch for Europe, Azure North America, or Azure Europe, check the [code of your region](/docs/developers/contentstack-regions/selecting-region-in-sdks#python) and initialize SDK in a particular branch.
+For setting the branch for Europe, Azure North America, or Azure Europe, check the [code of your region](../../../contentstack-regions/selecting-region-in-sdks.md#python) and initialize SDK in a particular branch.
 
 ## Basic Queries
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
 ### Get a Single Entry
-To retrieve a single [entry](/docs/content-managers/author-content/about-entries) from a [content type](/docs/developers/create-content-types/about-content-types), use the code snippet given below:
+To retrieve a single [entry](../../../../content-managers/author-content/about-entries.md) from a [content type](../../../create-content-types/about-content-types.md), use the code snippet given below:
 
 ```
 import contentstack
@@ -90,10 +90,10 @@ Response = blog_query.find()
 ```
 These were examples of some of the basic queries of the SDK. For advanced queries, refer to Contentstack Python SDK [API reference documentation](/docs/developers/python/api-reference/).
 
-**Note:** Currently, the Python SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](/docs/developers/apis/content-delivery-api#queries) section of our Content Delivery API documentation.
+**Note:** Currently, the Python SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](../../../../../api-docs/api-detail/content-delivery-api.md#queries) section of our Content Delivery API documentation.
 
 #### Paginating Responses
-In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](/docs/developers/sdks/content-delivery-sdk/python/reference/#query-skip) and [limit](/docs/developers/sdks/content-delivery-sdk/python/reference/#query-limit) parameters in subsequent requests.
+In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](../../../create-content-types/reference.md#query-skip) and [limit](../../../create-content-types/reference.md#query-limit) parameters in subsequent requests.
 
 ```
 import contentstack
@@ -105,12 +105,12 @@ result = query.locale('locale-code').limit(20).skip(20).find()
 ## Limitations
 - We have a URL size limitation of **8 KB** on API Requests that hit our CDN services. Any Request URL that goes above this size limit will receive the `400 - Bad request` error response. Please make sure you limit the size of your API Requests.
 - The Python SDK does not support multiple content types referencing in a single query.
-- Currently, the Python SDK does not yet support querying Global Field schemas ([All Global Fields](/docs/developers/apis/content-delivery-api#all-global-fields) and [Single Global Field](/docs/developers/apis/content-delivery-api#single-global-field)). You can include these details when querying content type details ([All Content Types](/docs/developers/apis/content-delivery-api#all-content-types) and [Single Content Type](/docs/developers/apis/content-delivery-api#single-content-type)) with the `include_global_field_schema query parameter`.
+- Currently, the Python SDK does not yet support querying Global Field schemas ([All Global Fields](../../../../../api-docs/api-detail/content-delivery-api.md#all-global-fields) and [Single Global Field](../../../../../api-docs/api-detail/content-delivery-api.md#single-global-field)). You can include these details when querying content type details ([All Content Types](../../../../../api-docs/api-detail/content-delivery-api.md#all-content-types) and [Single Content Type](../../../../../api-docs/api-detail/content-delivery-api.md#single-content-type)) with the `include_global_field_schema query parameter`.
 
 ## More Resources
 - [Python News App Using Contentstack’s Python SDK](/docs/developers/sample-apps/build-a-python-news-app-using-contentstack-python-sdk)
 - [API Reference](/docs/developers/python/api-reference/)
-- [Python SDK Changelog](/docs/developers/sdks/content-delivery-sdk/python/python-sdk-changelog/)
+- [Python SDK Changelog](./python-sdk-changelog.md)
 - [View and Download Python SDK repository on GitHub](https://github.com/contentstack/contentstack-python)
 
 ## Common questions

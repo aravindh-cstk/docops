@@ -20,7 +20,7 @@ This page explains what Contentstack is, highlights its key features, and outlin
 
 Contentstack is a modern, enterprise-grade headless Content Management System (CMS) and a central component of a Digital Experience Platform (DXP). By decoupling backend content infrastructure from frontend presentation layers, it empowers businesses to seamlessly create, manage, and deliver personalized content experiences across websites, mobile apps, IoT devices, kiosks, and more.
 
-Leveraging a developer-friendly, API-first architecture—including [REST APIs](/docs/developers/apis), [SDKs](/docs/developers/sdks), and [GraphQL](/docs/developers/graphql-api/about-graphql) support—Contentstack enables flexible, scalable, and efficient content delivery. With robust editorial tools, structured workflows, and powerful integrations, it supports both developers and content teams to innovate rapidly, maintain consistency, and efficiently scale engaging digital experiences across multiple channels.
+Leveraging a developer-friendly, API-first architecture—including [REST APIs](/docs/developers/apis), [SDKs](/docs/developers/sdks), and [GraphQL](../graphql-api/about-graphql.md) support—Contentstack enables flexible, scalable, and efficient content delivery. With robust editorial tools, structured workflows, and powerful integrations, it supports both developers and content teams to innovate rapidly, maintain consistency, and efficiently scale engaging digital experiences across multiple channels.
 
 ## Key Features of Contentstack
 
@@ -61,4 +61,4 @@ Contentstack is a headless Content Management System (CMS) and a central compone
 It supports delivering content across websites, mobile apps, IoT devices, kiosks, and other digital channels.
 
 ### Where can I learn about Contentstack APIs and developer tools?
-Use the linked resources for [REST APIs](/docs/developers/apis), [SDKs](/docs/developers/sdks), and [GraphQL](/docs/developers/graphql-api/about-graphql) support.
+Use the linked resources for [REST APIs](/docs/developers/apis), [SDKs](/docs/developers/sdks), and [GraphQL](../graphql-api/about-graphql.md) support.

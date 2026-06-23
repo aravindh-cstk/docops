@@ -15,15 +15,15 @@ last_updated: unknown
 
 This page explains approaches for keeping content in sync across environments or stacks, intended for developers and teams managing content promotion workflows (for example, moving content from testing/staging to production) without impacting existing content or code.
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn more about stacks, refer to the [Stack](/docs/developers/set-up-stack/about-stack) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn more about stacks, refer to the [Stack](../set-up-stack/about-stack.md) documentation.
 
 If you have some [content published](/docs/content-managers/publish-content) on an environment (for example, “testing” or “staging”), and you want to publish the same content on another environment (say “production”) without impacting any content or code, you can do this in two possible ways.
 
-Also, cross referencing between stack is not supported while using a [reference field](/docs/developers/create-content-types/reference). Even in this case, you can use the following two methods to keep your stacks' data in sync.
+Also, cross referencing between stack is not supported while using a [reference field](../create-content-types/reference.md). Even in this case, you can use the following two methods to keep your stacks' data in sync.
 
 ## Use Multiple Environments
 
-The first recommended way is to create and use multiple [environments](/docs/developers/set-up-environments). For example, you can create two environments in your [stack](/docs/developers/set-up-stack/about-stack), let's say “development” and “production.” In this case, “development” will serve as a test environment and “production” is the environment where your feature or content will be available for users.
+The first recommended way is to create and use multiple [environments](/docs/developers/set-up-environments). For example, you can create two environments in your [stack](../set-up-stack/about-stack.md), let's say “development” and “production.” In this case, “development” will serve as a test environment and “production” is the environment where your feature or content will be available for users.
 
 When using multiple environments, you can first publish the content on the development environment. Here, you can verify that all changes that you have made are correct and there are no errors. Your production or other environments will not be affected by this action.
 
@@ -31,15 +31,15 @@ Once you are satisfied, then you can publish the content on the production envir
 
 ## Use Multiple Stacks
 
-If you want to maintain separate content types and entries, you can use the multiple stack option. In this way, all the content types and entries will be isolated from each other. You can use a script, in this case, to enable our [Content Management API](/docs/developers/apis/content-management-api) requests to reflect the changes on each stack using [Webhooks](/docs/developers/set-up-webhooks/about-webhooks) and the [REST API requests](/docs/developers/apis/).
+If you want to maintain separate content types and entries, you can use the multiple stack option. In this way, all the content types and entries will be isolated from each other. You can use a script, in this case, to enable our [Content Management API](../../../api-docs/api-detail/content-management-api.md) requests to reflect the changes on each stack using [Webhooks](../set-up-webhooks/about-webhooks.md) and the [REST API requests](/docs/developers/apis/).
 
 **Note**: SSO-enabled organizations can use the management token to make API requests.
 
 We have crated a few guides on how to keep stacks in sync. Refer to the following guides for more information:
 
-- [Share Content Between Stacks Using a Web Proxy](/docs/developers/how-to-guides/share-content-between-stacks-using-a-web-proxy)
-- [Sync Data Between Stacks Using Contentstack Webhooks and AWS Lambda](/docs/developers/how-to-guides/sync-data-between-stacks-using-contentstack-webhooks-and-aws-lambda)
-- [Share Assets Between Stacks Using an Extension](/docs/developers/how-to-guides/sharing-assets-between-stacks-using-an-extension)
+- [Share Content Between Stacks Using a Web Proxy](./share-content-between-stacks-using-a-web-proxy.md)
+- [Sync Data Between Stacks Using Contentstack Webhooks and AWS Lambda](./sync-data-between-stacks-using-contentstack-webhooks-and-aws-lambda.md)
+- [Share Assets Between Stacks Using an Extension](./sharing-assets-between-stacks-using-an-extension.md)
 
 ## Common questions
 
@@ -50,7 +50,7 @@ Use multiple environments when you want to publish the same content through stag
 Use multiple stacks when you want to maintain separate content types and entries so that content is isolated between stacks.
 
 ### Can I cross reference between stacks using a reference field?
-No. Cross referencing between stack is not supported while using a [reference field](/docs/developers/create-content-types/reference).
+No. Cross referencing between stack is not supported while using a [reference field](../create-content-types/reference.md).
 
 ### How can I keep multiple stacks in sync?
-You can use a script to enable [Content Management API](/docs/developers/apis/content-management-api) requests to reflect changes on each stack using [Webhooks](/docs/developers/set-up-webhooks/about-webhooks) and the [REST API requests](/docs/developers/apis/).
+You can use a script to enable [Content Management API](../../../api-docs/api-detail/content-management-api.md) requests to reflect changes on each stack using [Webhooks](../set-up-webhooks/about-webhooks.md) and the [REST API requests](/docs/developers/apis/).

@@ -19,7 +19,7 @@ This page explains how to use and configure the **URL** field in Contentstack co
 
 Use the **URL** field to define the relative path of your webpage (for example, `/home` or `/projects/new-project`) where your content is published. This helps maintain consistent routing and improves content discoverability.
 
-You can configure [field properties](/docs/developers/create-content-types/about-field-properties) and set a [default URL pattern](/docs/developers/create-content-types/understand-default-url-pattern) for entries of a specific content type.
+You can configure [field properties](./about-field-properties.md) and set a [default URL pattern](./understand-default-url-pattern.md) for entries of a specific content type.
 
 ## Configure URL Field Properties
 
@@ -35,7 +35,7 @@ After you configure this field in a content type, it appears in the entry editor
 
 **Note:**
 - You can only add the URL field at the parent level. It cannot be added within modular blocks or group fields.
-- You can’t set URL field properties for content types set to [Single](/docs/developers/create-content-types/single-vs-multiple-content-types#single).
+- You can’t set URL field properties for content types set to [Single](./single-vs-multiple-content-types.md#single).
 
 ## Configure URL Prefixes
 
@@ -87,23 +87,23 @@ You can define:
 
 ## Enforce Unique Entry URLs Using the Content Management API
 
-Use the [Content Management API](/docs/developers/apis/content-management-api) to prevent duplicate entry URLs across your [stack](/docs/developers/set-up-stack/about-stack).
+Use the [Content Management API](../../../api-docs/api-detail/content-management-api.md) to prevent duplicate entry URLs across your [stack](../set-up-stack/about-stack.md).
 
 To enforce unique URLs using the API, perform the following steps:
-- Authenticate to Contentstack using your [Authtoken](/docs/developers/create-tokens/types-of-tokens#authentication-tokens-auth-tokens) and the stack’s [Management Token](/docs/developers/create-tokens/types-of-tokens#management-tokens).
-- Make a request to the [Add Stack Settings](/docs/developers/apis/content-management-api#add-stack-settings) API. Use a REST API client (e.g., Postman) to run your API call.
+- Authenticate to Contentstack using your [Authtoken](../create-tokens/types-of-tokens.md#authentication-tokens-auth-tokens) and the stack’s [Management Token](../create-tokens/types-of-tokens.md#management-tokens).
+- Make a request to the [Add Stack Settings](../../../api-docs/api-detail/content-management-api.md#add-stack-settings) API. Use a REST API client (e.g., Postman) to run your API call.
 - In the **Body** section of your request, include the `"enforce_unique_urls": true` parameter to maintain unique URLs across your stack.
 
 If a duplicate URL is detected, the URL field displays an error and prevents publishing until a unique URL is entered.
 
 **Additional Resources:**
-- For details on configuring default patterns, refer to our [Use Default URL Pattern](/docs/developers/create-content-types/use-default-url-pattern) documentation.
-- To know more about redirecting URLs, read our documentation on [Redirecting URLs](/docs/developers/how-to-guides/redirecting-urls).
-- Learn more about [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) and how to configure them.
+- For details on configuring default patterns, refer to our [Use Default URL Pattern](./use-default-url-pattern.md) documentation.
+- To know more about redirecting URLs, read our documentation on [Redirecting URLs](../how-to-guides/redirecting-urls.md).
+- Learn more about [Field Visibility Rules](./about-field-visibility-rules.md) and how to configure them.
 
 ## API Reference
 
-To enforce unique entry URLs via API, refer to the [Add Stack Settings](/docs/developers/apis/content-management-api#add-stack-settings) API request.
+To enforce unique entry URLs via API, refer to the [Add Stack Settings](../../../api-docs/api-detail/content-management-api.md#add-stack-settings) API request.
 
 ## Common questions
 

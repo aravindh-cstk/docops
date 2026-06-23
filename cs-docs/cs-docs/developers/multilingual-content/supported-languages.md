@@ -17,9 +17,9 @@ This page explains the types of languages supported in Contentstack multilingual
 
 ## Supported Languages
 
-Contentstack supports over 200 languages. Here's the complete [list of supported languages](/docs/developers/multilingual-content/list-of-supported-languages).
+Contentstack supports over 200 languages. Here's the complete [list of supported languages](./list-of-supported-languages.md).
 
-**Additional Resource:** You can [add custom languages](/docs/developers/multilingual-content/add-a-custom-language) of your choice to your stack. Once generated, you will be able to create and publish entries in the custom language.
+**Additional Resource:** You can [add custom languages](./add-a-custom-language.md) of your choice to your stack. Once generated, you will be able to create and publish entries in the custom language.
 
 These languages are either country-specific languages, area-specific languages, or generic languages. Let’s learn more about these three types of languages.
 
@@ -65,7 +65,7 @@ For the country designator, Contentstack uses [ISO 3166-1 Alpha-2 country code](
 
 For the area designator, Contentstack uses [UN M49 standard area code](https://en.wikipedia.org/wiki/UN_M49#Code_lists).
 
-**Note**: If you do not want to follow the standard code formats, you can [create a custom language](/docs/developers/multilingual-content/add-a-custom-language) of your choice and add it to your stack. Once generated, you will be able to create and publish entries in the custom language.
+**Note**: If you do not want to follow the standard code formats, you can [create a custom language](./add-a-custom-language.md) of your choice and add it to your stack. Once generated, you will be able to create and publish entries in the custom language.
 
 ## Common questions
 

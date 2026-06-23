@@ -18,11 +18,11 @@ This page explains how to use Developer Hub to manage app versions over time, in
 
 Developer Hub will help you manage your application over time, allowing you to look back on historical changes and even restore back to previous versions.
 
-**Note:**  Refer to our [App Manifest](/docs/developer-hub/app-manifest) documentation to manage app versions effectively.
+**Note:**  Refer to our [App Manifest](./app-manifest.md) documentation to manage app versions effectively.
 
-Let's go over the basics of Version Logs. A new manifest version is automatically generated when you save an update to your application, such as adding a new UI location or updating the [OAuth](/docs/developer-hub/contentstack-oauth) settings. When a new version is created, it is available as an update for private apps.
+Let's go over the basics of Version Logs. A new manifest version is automatically generated when you save an update to your application, such as adding a new UI location or updating the [OAuth](./contentstack-oauth.md) settings. When a new version is created, it is available as an update for private apps.
 
-**Note: **Developer Hub handles changes made to the application’s manifest. It cannot detect any modifications the developer makes to the application code, referred to as the App URL in [Hosting](/docs/developer-hub/app-hosting). Changes to your application code will take effect immediately and be accessible to your users.
+**Note: **Developer Hub handles changes made to the application’s manifest. It cannot detect any modifications the developer makes to the application code, referred to as the App URL in [Hosting](./app-hosting.md). Changes to your application code will take effect immediately and be accessible to your users.
 
 ## Browse and Restore
 

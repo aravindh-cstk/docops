@@ -866,7 +866,7 @@ The following table shows values you can use for the query parameter:
 }
 ``` |
 
-This API request will return a maximum of **100** records while fetching the execution details for a specific webhook. Previously, there was no limit on the number of records returned. You can use the "[skip](/docs/developers/apis/content-delivery-api#skip)" parameter to fetch older records. To limit the number of records returned, you can use the “[limit](/docs/developers/apis/content-delivery-api#limit)” parameter.
+This API request will return a maximum of **100** records while fetching the execution details for a specific webhook. Previously, there was no limit on the number of records returned. You can use the "[skip](../../../api-detail/content-delivery-api.md#skip)" parameter to fetch older records. To limit the number of records returned, you can use the “[limit](../../../api-detail/content-delivery-api.md#limit)” parameter.
 
 #### URL Parameters
 

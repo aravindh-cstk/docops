@@ -22,21 +22,21 @@ After you have exported the content from the source stack, the next step is to i
 
 Content can be imported in a stack for the following modules:
 - [Assets](/docs/content-managers/working-with-assets/about-assets)
-- [Locales](/docs/developers/multilingual-content/about-languages)
-- [Environments](/docs/developers/set-up-environments/about-environments)
-- [Extensions](/docs/developers/about-experience-extensions)
-- [Webhooks](/docs/developers/set-up-webhooks/about-webhooks)
-- [Global Fields](/docs/developers/global-field/about-global-field)
-- [Content Types](/docs/developers/create-content-types/about-content-types)
-- [Entries](/docs/content-managers/working-with-entries/about-entries)
-- [Labels](/docs/developers/create-content-types/about-labels)
-- [Workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows)
+- [Locales](../../multilingual-content/about-languages.md)
+- [Environments](../../set-up-environments/about-environments.md)
+- [Extensions](../../experience-extensions-overview/about-experience-extensions.md)
+- [Webhooks](../../set-up-webhooks/about-webhooks.md)
+- [Global Fields](../../global-field/about-global-field.md)
+- [Content Types](../../create-content-types/about-content-types.md)
+- [Entries](../../../content-managers/author-content/about-entries.md)
+- [Labels](../../create-content-types/about-labels.md)
+- [Workflow](../../set-up-workflows-and-publish-rules/about-workflows.md)
 
 **Note**: The imported content, in the target stack, will be automatically published to the environment and locale in which it was previously published in the source stack. If any exported content wasn’t published on any environment, that particular content won’t get published to any environment after it is imported into the target stack.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- CLI [installed](/docs/developers/cli/install-the-cli)
+- CLI [installed](../install-the-cli.md)
 - A [configured management token](/docs/developers/cli/authenticate-with-the-cli#add-token) (alias) or [authtoken](/docs/developers/cli/authenticate-with-the-cli#login)
 
 ## Commands
@@ -251,9 +251,9 @@ csdx cm:import -A -c “C:/Users/Name/Desktop/cli/config.json”
 ## Limitations
 - The import commands will import only the latest version of a published entry/asset.
 - While importing workflows from one stack to another, admins and workflow stage users are not included. Therefore, admins and stage users of your workflows will not be migrated to the new stack.
-- Currently, you cannot import content for the following modules:[Roles](/docs/developers/invite-users-and-assign-roles/about-stack-roles)
-- [Users](/docs/developers/invite-users-and-assign-roles/about-stack-users)
-- [Releases](/docs/content-managers/create-and-manage-releases/about-releases)
+- Currently, you cannot import content for the following modules:[Roles](../../invite-users-and-assign-roles/about-stack-roles.md)
+- [Users](../../invite-users-and-assign-roles/about-stack-users.md)
+- [Releases](../../../content-managers/create-and-manage-releases/about-releases.md)
 
 **Additional Resources**: Check out the [Export Content](/docs/developers/cli/export-content-using-cli) documentation to learn how you can export content from your stack using CLI.
 

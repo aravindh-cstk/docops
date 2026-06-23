@@ -16,9 +16,9 @@ This page explains how to create and use the legacy **Marketo Forms** extension 
 
 ## Marketo Forms
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Marketo Forms as a Marketplace App. For more information on Marketo Forms, please refer to the [Marketo Forms App Installation Guide](/docs/developers/marketplace-apps/marketo-forms).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Marketo Forms as a Marketplace App. For more information on Marketo Forms, please refer to the [Marketo Forms App Installation Guide](../marketplace-apps/marketo-forms.md).
 
-The Marketo Forms extension lets you fetch and display the list of your existing Marketo forms into the [field](/docs/developers/create-content-types/about-fields) of your [content type](/docs/developers/create-content-types/about-content-types). As a result, while creating [entries](/docs/content-managers/working-with-entries/about-entries), you can view the list of forms, and select the one you want to use on the entry page. In the Contentstack backend, it saves the ID and the metadata (in JSON format) of the Marketo form that you select.
+The Marketo Forms extension lets you fetch and display the list of your existing Marketo forms into the [field](../create-content-types/about-fields.md) of your [content type](../create-content-types/about-content-types.md). As a result, while creating [entries](../../content-managers/author-content/about-entries.md), you can view the list of forms, and select the one you want to use on the entry page. In the Contentstack backend, it saves the ID and the metadata (in JSON format) of the Marketo form that you select.
 
 This step-by-step guide explains how to create a **Marketo Forms** extension in Contentstack. The steps to be performed are as follows:
 - [Get your Marketo account details](#get-your-marketo-account-details)
@@ -95,12 +95,12 @@ CLIENT_ID= Client ID that you retrieved
 
 To add the Marketo Form custom field extension to your stack, log in to your Contentstack account and perform the following steps:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack), and click on the “Settings” icon on the left navigation panel.
+Go to your [stack](../set-up-stack/about-stack.md), and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions **page, click on the **+ Add Extension** button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one** link as shown below.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:
-**Title ***(required)*: Provide a suitable title, for example “Forms,” for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+**Title ***(required)*: Provide a suitable title, for example “Forms,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
 - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple ***(optional)*: Leave this field unchecked.
 - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
@@ -122,22 +122,22 @@ Now, let’s understand how you can start using this custom field in your conten
 
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [**Custom**](/docs/developers/create-content-types/custom) field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
 - Under **Select Extension**, select the “Marketo” field that you created and set the other properties. You can add other fields as per requirements.
 - Finally, click on either **Save **or** Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Forms **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Forms **field in action.
 
 ## More Articles
 
 We have a collection of similar other articles that you may like:
-- [Eloqua](/docs/developers/create-custom-fields/eloqua)
-- [Brandfolder](/docs/developers/create-custom-fields/brandfolder)
-- [Egnyte](/docs/developers/create-custom-fields/egnyte)
+- [Eloqua](./eloqua.md)
+- [Brandfolder](./brandfolder.md)
+- [Egnyte](./egnyte.md)
 
 ## Common questions
 
 ### Is this the recommended way to use Marketo Forms in Contentstack?
-No. **Note**: This documentation uses the legacy approach with extensions. We have launched Marketo Forms as a Marketplace App. For more information on Marketo Forms, please refer to the [Marketo Forms App Installation Guide](/docs/developers/marketplace-apps/marketo-forms).
+No. **Note**: This documentation uses the legacy approach with extensions. We have launched Marketo Forms as a Marketplace App. For more information on Marketo Forms, please refer to the [Marketo Forms App Installation Guide](../marketplace-apps/marketo-forms.md).
 
 ### What does the Marketo Forms extension store in Contentstack?
 In the Contentstack backend, it saves the ID and the metadata (in JSON format) of the Marketo form that you select.

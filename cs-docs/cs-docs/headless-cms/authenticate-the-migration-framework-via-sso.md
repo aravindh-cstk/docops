@@ -32,7 +32,7 @@ Before you begin, ensure the following requirements are met:
 - The migration tool repository is cloned and the `api/manifest.json` file is present at the repository root
 - The Contentstack command-line interface (`csdx` CLI) is installed and accessible in your `PATH`
 - Node.js and npm are available on your system
-- A **Contentstack Account** with [Admin](/docs/developers/organization/organization-roles#organization-admin) or [Owner](/docs/developers/organization/organization-roles#organization-owner) role access.
+- A **Contentstack Account** with [Admin](../developers/organization/organization-roles.md#organization-admin) or [Owner](../developers/organization/organization-roles.md#organization-owner) role access.
 
 ## Run the build Script
 
@@ -83,7 +83,7 @@ To confirm SSO is working end-to-end:
 - Select the Contentstack organization where the OAuth application is registered.
 - After authentication, click **Open Migration Tool**.
 
-This completes the SSO configuration for the Contentstack Migration Tool. Refer to the [Perform Content Migration](/docs/developers/content-migration/sitecore-to-contentstack) section for further steps based on your legacy CMS.
+This completes the SSO configuration for the Contentstack Migration Tool. Refer to the [Perform Content Migration](../developers/content-migration/sitecore-to-contentstack.md) section for further steps based on your legacy CMS.
 
 ## Common questions
 

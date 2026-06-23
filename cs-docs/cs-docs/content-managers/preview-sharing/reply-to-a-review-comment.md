@@ -18,7 +18,7 @@ This page explains how to reply to review comments in Preview Sharing using thre
 
 Conversations around content feedback can be managed through threaded comments. Users can reply to comments to provide additional context or clarification.
 
-**Note**: Ensure that a preview of the content has been shared. Refer to the [Share a Preview](/docs/content-managers/preview-sharing/share-a-preview) document for more details.
+**Note**: Ensure that a preview of the content has been shared. Refer to the [Share a Preview](./share-a-preview.md) document for more details.
 
 To reply to a review comment, follow these steps:
 - Open the **shared preview link** from your email.**Note**: When sharing a preview with external users who are not added to the stack or do not have a Contentstack account, they will be prompted to enter a display name before they can view or comment on the content.

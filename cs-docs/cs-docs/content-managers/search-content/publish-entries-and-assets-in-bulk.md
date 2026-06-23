@@ -18,15 +18,15 @@ This page explains how to publish entries and assets found in your search result
 ## Publish Entries and Assets in Bulk
 
 To publish entries and assets found in your search results in bulk, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and select the “[Entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries)” or “[Assets](https://www.contentstack.com/docs/content-managers/author-content/about-assets)” module.
-- Search for the entries and assets you want to publish. You can use [Basic Search](/docs/content-managers/search-content/basic-search), [Advanced Search](/docs/content-managers/search-content/advanced-search), [Filters](/docs/content-managers/search-content/use-filters), and [Views](/docs/content-managers/search-content/about-views) to refine your search results.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the “[Entries](../author-content/about-entries.md)” or “[Assets](../author-content/about-assets.md)” module.
+- Search for the entries and assets you want to publish. You can use [Basic Search](./basic-search.md), [Advanced Search](./advanced-search.md), [Filters](./use-filters.md), and [Views](./about-views.md) to refine your search results.
 - From the search results, select the entries or assets you want to publish. Click the **Publish** button on the floating bar at the top.**Note:** On smaller screens, click the vertical ellipsis to access the Publish option.
 - On the **Publish Entries**/**Publish Assets** screen:**Select Environment(s)** to which you want to publish the selected entries.
 - **Select Language(s)** for which you want to publish the selected entries.**Note:** While unpublishing multiple localized and unlocalized versions of a single entry, you can select a maximum of **50** **languages** and **50** **environments**.
 - Under **Publish**, you can select – **Now** (to publish immediately) or **Later** (to publish at a later date/time that you provide).
 - Click **Send With References** to publish the selected entries along with their referenced items, or **Send Without References** to publish only the selected entries.
 
-**Note:** When you publish multiple entries/assets, only the latest version of the entries/assets will be published. Read more about [working with different entry versions](/docs/content-managers/entry-versions/name-entry-versions).
+**Note:** When you publish multiple entries/assets, only the latest version of the entries/assets will be published. Read more about [working with different entry versions](../author-content/name-entry-versions.md).
 
 ## Limitations for Publishing Entries and Assets in Bulk
 

@@ -24,7 +24,7 @@ Managing versions of entry variants allows you to keep track of changes made ove
 Every time you update an entry variant, a new version of that entry variant is saved. You can view and manage these versions to keep track of changes, compare them, or restore a previous version if needed.
 
 To manage the versions of an entry variant, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries **icon in the left navigation panel.
+- Navigate to the desired [stack](../../developers/set-up-stack/about-stack.md), then click the **Entries **icon in the left navigation panel.
 - Select an existing entry variant for which you want to manage versions.
 
 Now that you have accessed the relevant entry variant, you can easily view, compare, and restore versions as needed.

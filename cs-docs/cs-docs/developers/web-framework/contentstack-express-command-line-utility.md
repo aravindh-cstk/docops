@@ -18,7 +18,7 @@ contentstack-express Command-line Utility
 
 **Warning**: contentstack-express framework has been deprecated. We will soon stop supporting this framework. Instead, we recommend using [DataSync](/docs/developers/develop-apps-with-datasync), which is faster and more flexible than the web framework.
 
-The contentstack-express Command-line Utility makes it easy to connect to a [stack](/docs/developers/set-up-stack/about-stack), synchronize, [publish](/docs/content-managers/working-with-entries/publish-an-entry), and [unpublish](/docs/content-managers/working-with-entries/unpublish-an-entry) content, as well as create plugins in Contentstack apps.****
+The contentstack-express Command-line Utility makes it easy to connect to a [stack](../set-up-stack/about-stack.md), synchronize, [publish](../../content-managers/author-content/publish-an-entry.md), and [unpublish](../../content-managers/author-content/unpublish-an-entry.md) content, as well as create plugins in Contentstack apps.****
 
 **Note**: The contentstack-express framework CLI will soon be deprecated. However, our new CLI has many utilities that will help you manage your Contentstack account from the command line. Check out our [CLI documentation](/docs/developers/cli) for more details and get started with using our new CLI.
 
@@ -130,7 +130,7 @@ The **unpublish **command is used to unpublish content from the specified enviro
 $ contentstack plugin create [plugin name]
 ```
 
-The plugin create command is used to create a plugin scaffold under the Contentstack application. Check out the documentation on [plugin development](/docs/developers/web-framework-deep-dive/plugins#plugin-development) for more details.
+The plugin create command is used to create a plugin scaffold under the Contentstack application. Check out the documentation on [plugin development](./plugins.md#plugin-development) for more details.
 
 ## Common questions
 

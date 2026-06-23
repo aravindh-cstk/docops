@@ -19,7 +19,7 @@ This page explains how to lock a release in Contentstack to prevent accidental m
 Locking a release prevents any accidental modifications or deployments to its items. This ensures content integrity and adds an extra layer of control during your release management process.
 
 To lock a release, log in to your [Contentstack account](https://www.contentstack.com/login) and follow these steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Releases” icon in the left navigation panel.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Releases” icon in the left navigation panel.
 - Hover over the release you wish to lock.
 - Click the “Lock” icon in the popup modal. Alternatively, click the horizontal ellipsis in the top right corner and click **Lock**.
 - In the **Lock Release** modal that appears, click the **Yes, Proceed** button to lock your release.

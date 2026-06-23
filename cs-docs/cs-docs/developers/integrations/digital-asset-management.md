@@ -19,11 +19,11 @@ This page explains how to integrate Digital Asset Management (DAM) platforms wit
 Using a **Digital Asset Management** (**DAM**) platform is a great way to store, manage, and organize digital assets. If you have been using any DAM platform, you can integrate it easily with Contentstack using our Experience Extensions.
 
 We have created step-by-step integration guides for some of the most popular DAM platforms available today:
-- [Bynder](/docs/developers/create-custom-fields/bynder)
-- [Amazon S3](/docs/developers/create-custom-fields/amazon-s3)
-- [Adobe DAM](/docs/developers/create-custom-fields/adobe-digital-asset-management)
-- [Cloudinary](/docs/developers/create-custom-fields/cloudinary)
-- [Brandfolder](/docs/developers/create-custom-fields/brandfolder)
+- [Bynder](../create-custom-fields/bynder.md)
+- [Amazon S3](../create-custom-fields/amazon-s3.md)
+- [Adobe DAM](../create-custom-fields/adobe-digital-asset-management.md)
+- [Cloudinary](../create-custom-fields/cloudinary.md)
+- [Brandfolder](../create-custom-fields/brandfolder.md)
 
 If you don’t find your favorite DAM platform in the above list, you can still integrate it with Contentstack by following the steps given in any of the above guides.
 

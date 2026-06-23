@@ -20,7 +20,7 @@ The Bulk Publish and Unpublish commands allow you to publish entries and assets 
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- CLI [installed](/docs/developers/cli/install-the-cli) on your machine
+- CLI [installed](../install-the-cli.md) on your machine
 - [Authentication](https://www.contentstack.com/docs/developers/cli/authenticate-with-the-cli/) to use CLI
 - A [configured management token](/docs/developers/cli/authenticate-with-the-cli#add-token)
 
@@ -243,10 +243,10 @@ csdx cm:bulk-publish:configure
 
 - `-a`, `--alias=alias`: Name (alias) of the management token you want to use
 
-**Additional Resources**: If you want to migrate your content from one stack to another, refer to the [Migration](/docs/developers/cli/migrate-content-using-cli) guide.
+**Additional Resources**: If you want to migrate your content from one stack to another, refer to the [Migration](../migrate-content-using-cli.md) guide.
 
 ## Limitations
-- The [cm:bulk-publish:add-fields](#bulk-publish-all-entries-after-adding-a-new-field-in-the-content-type) command does not work for [custom](/docs/developers/create-content-types/custom) and [mandatory](/docs/developers/create-content-types/mandatory) fields.
+- The [cm:bulk-publish:add-fields](#bulk-publish-all-entries-after-adding-a-new-field-in-the-content-type) command does not work for [custom](../../create-content-types/custom.md) and [mandatory](../../create-content-types/mandatory.md) fields.
 
 ## Common questions
 

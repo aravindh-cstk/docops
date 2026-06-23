@@ -29,9 +29,9 @@ last_updated: 2026-06-08
 
 This document is a detailed reference to Contentstack’s Content Delivery API.
 
-The Content Delivery API is used to retrieve content from your Contentstack account and deliver it to your web or mobile properties. If you are looking for APIs to manage content, you should use the [Content Management API](/docs/developers/apis/content-management-api).
+The Content Delivery API is used to retrieve content from your Contentstack account and deliver it to your web or mobile properties. If you are looking for APIs to manage content, you should use the [Content Management API](./content-management-api.md).
 
-Our APIs serve content via a powerful and robust [content delivery network (CDN)](/docs/developers/cdn-and-caching/what-is-cdn-and-how-it-works). Multiple datacenters around the world store a cached copy of your content. When a page request is made, the content is delivered to the user from the nearest server. This greatly accelerates content delivery and reduces latency.
+Our APIs serve content via a powerful and robust [content delivery network (CDN)](../../cs-docs/developers/cdn-and-caching/what-is-cdn-and-how-it-works.md). Multiple datacenters around the world store a cached copy of your content. When a page request is made, the content is delivered to the user from the nearest server. This greatly accelerates content delivery and reduces latency.
 
 **Warning:** The Content Delivery API (CDA), available at cdn.contentstack.io, should be used to only fetch content from Contentstack. We recommend users to NOT use this endpoint for any other content management activities, because all content management activities using this endpoint will be blocked soon.
 
@@ -81,7 +81,7 @@ While Content Delivery API requests may work with Access Token (instead of Deliv
 - Users will not be able to use Authtoken or Management Token to run Content Delivery API (CDA) requests. To make authorized CDA requests, use the value of the delivery token against the access_token key.
 - Users will not be able to use authentication parameters such as api_key (Stack API key), access_token (access token of the stack), authtoken (user generated authtoken), and authorization (management token of the stack) as query parameters for any stack-specific API requests. You must pass them as headers only, do not include them as query parameters in your API requests.
 
-**Note**: We have deprecated the usage of Access Tokens for all stacks. We strongly recommend that you use [**Delivery Tokens**](/docs/developers/create-tokens/about-delivery-tokens) for fetching published content via the Content Delivery API and [**Management Tokens**](/docs/developers/create-tokens/about-management-tokens) for fetching draft content via the Content Management API.
+**Note**: We have deprecated the usage of Access Tokens for all stacks. We strongly recommend that you use [**Delivery Tokens**](../../cs-docs/developers/create-tokens/about-delivery-tokens.md) for fetching published content via the Content Delivery API and [**Management Tokens**](../../cs-docs/developers/create-tokens/about-management-tokens.md) for fetching draft content via the Content Management API.
 
 #### How to Get API Key and Delivery Token
 
@@ -176,7 +176,7 @@ Also, if the content type doesn't exist within the stack, Contentstack returns t
 
 Contentstack offers you a Postman Collection that helps you try out our Content Delivery API. You can download this collection, connect to your Contentstack account, and try out the Content Delivery API with ease.
 
-Learn more about how to [get started with using the Postman Collection](/docs/developers/apis/content-delivery-api#postman-collection) for Contenstack Content Delivery API.
+Learn more about how to [get started with using the Postman Collection](./content-delivery-api.md#postman-collection) for Contenstack Content Delivery API.
 
 ### Using OpenAPI Files
 
@@ -194,7 +194,7 @@ Learn more about how to get started with using the [OpenAPI files for Contenstac
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack.
 
-**Note**: [Branches](/docs/developers/branches) is a plan-based feature that is available only in the new Contentstack interface.
+**Note**: [Branches](../developers/apis/content-management-api/branches.md) is a plan-based feature that is available only in the new Contentstack interface.
 
 Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -211,9 +211,9 @@ When executing the API call, you can add queries to extend the functionality of 
 
 **Tip**: If any of your content types contains a Global field and you wish to fetch the content schema of the Global field, then you need to pass theinclude_global_field_schema:true parameter. This parameter helps return the Global field's schema along with the content type schema.
 
-To query your content types, under the Query Parameters section, insert a parameter named query and provide the query in JSON format as the value. To learn more about the queries, refer to the [Queries section of the Content Delivery API doc](/docs/developers/apis/content-delivery-api#queries).
+To query your content types, under the Query Parameters section, insert a parameter named query and provide the query in JSON format as the value. To learn more about the queries, refer to the [Queries section of the Content Delivery API doc](./content-delivery-api.md#queries).
 
-**Note**: This API request will return a maximum of **100 content types**. To retrieve the next batch of content types, make use of the [skip](/docs/developers/apis/content-delivery-api#skip) parameter (or refer [Pagination](/docs/developers/apis/content-delivery-api#pagination) for more details).
+**Note**: This API request will return a maximum of **100 content types**. To retrieve the next batch of content types, make use of the [skip](./content-delivery-api.md#skip) parameter (or refer [Pagination](./content-delivery-api.md#pagination) for more details).
 
 ##### Query Parameters
 
@@ -1870,7 +1870,7 @@ A [Global](/docs/developers/global-field) field is a reusable field (or group of
 
 You can pass the **branch header** in API requests to fetch or manage modules within specific branches of the stack. Additionally, setting the include_branch query parameter to true includes the _branch key in the response, specifying the unique ID of the branch where the module resides.
 
-**Additional Resource**: You can create dynamic and flexible Global Fields by nesting Global fields within a [Modular Block,](/docs/developers/global-field/global-fields-as-blocks-within-modular-blocks)****[Global](/docs/developers/global-field/about-global-field/)**,**or a [Group](/docs/developers/global-field/group-fields-within-global-fields) fields.
+**Additional Resource**: You can create dynamic and flexible Global Fields by nesting Global fields within a [Modular Block,](../../cs-docs/developers/global-field/global-fields-as-blocks-within-modular-blocks.md)****[Global](../../cs-docs/developers/global-field/about-global-field.md)**,**or a [Group](../../cs-docs/developers/global-field/group-fields-within-global-fields.md) fields.
 
 
 #### All Global Fields
@@ -2049,11 +2049,11 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 
 ### Entries
 
-An [entry](/docs/content-managers/author-content/about-entries) is the actual piece of content created using one of the defined [content types](/docs/developers/create-content-types/about-content-types). 
+An [entry](../../cs-docs/content-managers/author-content/about-entries.md) is the actual piece of content created using one of the defined [content types](../../cs-docs/developers/create-content-types/about-content-types.md). 
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack.
 
-**Note**: [Branches](/docs/developers/branches) is a plan-based feature that is available only in the new Contentstack interface.
+**Note**: [Branches](../developers/apis/content-management-api/branches.md) is a plan-based feature that is available only in the new Contentstack interface.
 
 Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -2087,7 +2087,7 @@ If an entry is not published in a specific locale, make use of the “include_fa
 
 To include the publish details in the response, make use of the include_publish_details=true parameter. This will return the publishing details of the entry in every environment along with the version number that is published in each of the environments.
 
-You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
+You can add other [Queries](./content-delivery-api.md#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
 
 **When using Delivery Tokens**
 
@@ -2097,7 +2097,7 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 - If you specify a locale in the query, it returns the latest published version of the localized entry/entries
 - If an entry is not localized, make use of the include_fallback=true query parameter to fetch the published content from its fallback locale
 
-**Tip:** This request returns only the first 100 entries of the specified content type. Refer to the [Pagination](/docs/developers/apis/content-delivery-api#pagination) section to retrieve the rest of your entries in a paginated form.
+**Tip:** This request returns only the first 100 entries of the specified content type. Refer to the [Pagination](./content-delivery-api.md#pagination) section to retrieve the rest of your entries in a paginated form.
 
 ##### URL Parameters
 
@@ -2880,7 +2880,7 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 
 The Get a single entry request fetches a particular entry of a content type.
 
-**Tip**: To get a specific version, refer to the [Get a Single Entry](/docs/developers/apis/content-management-api/#get-a-single-entry) management API. This request returns only the latest version.
+**Tip**: To get a specific version, refer to the [Get a Single Entry](./content-management-api.md#get-a-single-entry) management API. This request returns only the latest version.
 
 Additionally, if you wish to fetch the metadata attached to each entry, then you need to pass include_metadata as a query parameter. Set this parameter to true to include the entry metadata along with all entries in the response body.
 
@@ -2905,7 +2905,7 @@ To include the publish details in the response, make use of the include_publish_
 
 **Note**: To retrieve an entry from a particular branch, provide the branch_uid under the branch header.
 
-You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
+You can add other [Queries](./content-delivery-api.md#queries) to extend the functionality of this API call. Add a query parameter named query and provide your query (in JSON format) as the value.
 
 **When using Delivery Tokens**
 
@@ -3058,7 +3058,7 @@ If your entry contains a Rich Text Editor field and you wish to fetch the conten
 
 You can view information about the embedded objects under the _embedded_items parameter in the JSON response body.
 
-**Note**: Contentstack’s [Content Delivery SDKs](/docs/developers/fetch-content#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the front end however required.
+**Note**: Contentstack’s [Content Delivery SDKs](../../cs-docs/developers/fetch-content.md#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the front end however required.
 
 ##### URL Parameters
 
@@ -3230,7 +3230,7 @@ query={
 }
 ```
 
-**Note**: Refer to the [Taxonomy Queries](/docs/developers/apis/content-delivery-api#taxonomy-queries) section for more query filters.
+**Note**: Refer to the [Taxonomy Queries](./content-delivery-api.md#taxonomy-queries) section for more query filters.
 
 ##### Query Parameters
 
@@ -3291,7 +3291,7 @@ Entry Variants allows you to create content variations for different audiences, 
 
 The Get all entry variants retrieves all variants of a given entry and their customizations.
 
-Pass your variant UID(s) or [aliases](/docs/personalize/glossary-key-features#variant-aliases) in the x-cs-variant-uid header to get all the variants applied to the entries.
+Pass your variant UID(s) or [aliases](../../cs-docs/personalize/glossary-key-features.md#variant-aliases) in the x-cs-variant-uid header to get all the variants applied to the entries.
 
 **Note**: By default you can add up to **3 variant UIDs or aliases** (comma-separated) simultaneously. The limit can vary based on your organization plan. The variant UID or alias added first takes priority and will be applied to the base entry fields. For example, if you pass UIDs for Red, Green, and Blue variants in that order, the Red variant will have the highest priority. Sample header request, x-cs-variant-uid: cs6c42daef493fb432, cs7697ce80c9bbcc3e, cs8697ce80c9bbcc4f or x-cs-variant-uid: cs_personalize_0_0, cs_personalize_0_1, cs_personalize_0_2.
 
@@ -3444,7 +3444,7 @@ Sample response when the show_errors=true query parameter is passed and allowed 
 
 The Get single entry variant request retrieves a single variant entry of a given base entry.
 
-Pass your variant UID(s) or [aliases](/docs/personalize/glossary-key-features#variant-aliases) in the x-cs-variant-uid header to get all the variants applied to the entries.
+Pass your variant UID(s) or [aliases](../../cs-docs/personalize/glossary-key-features.md#variant-aliases) in the x-cs-variant-uid header to get all the variants applied to the entries.
 
 **Note**: By default you can add up to **3 variant UIDs or aliases** (comma-separated) simultaneously. The limit can vary based on your organization plan. The variant UID or alias added first takes priority and will be applied to the base entry fields. For example, if you pass UIDs for Red, Green, and Blue variants in that order, the Red variant will have the highest priority. Sample header request, x-cs-variant-uid: cs6c42daef493fb432, cs7697ce80c9bbcc3e, cs8697ce80c9bbcc4f or x-cs-variant-uid: cs_personalize_0_0, cs_personalize_0_1, cs_personalize_0_2.
 
@@ -3592,7 +3592,7 @@ Sample response when the show_errors=true query parameter is passed and allowed 
 
 Taxonomy, simplifies the process of organizing content in your system, making it effortless to find and retrieve information. It allows you to arrange your web properties in a hierarchy according to your specific needs, whether it's their purpose, intended audience, or other aspects of your business.
 
-**Note**: Refer to the [Taxonomy Queries](/docs/developers/apis/content-delivery-api#taxonomy-queries) section for more query filters.
+**Note**: Refer to the [Taxonomy Queries](./content-delivery-api.md#taxonomy-queries) section for more query filters.
 
 
 #### Get all taxonomies
@@ -3618,7 +3618,7 @@ The Get all taxonomies request retrieves all published taxonomies for the given 
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](./content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 ##### Sample Response
@@ -3673,7 +3673,7 @@ The Get a single taxonomy request retrieves details of a single published taxono
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](./content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 ##### Sample Response
@@ -3728,7 +3728,7 @@ The Get all terms request retrieves all published terms in a taxonomy for the sp
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](./content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 ##### Sample Response
@@ -3790,7 +3790,7 @@ The Get a single term request retrieves a specific published term within a taxon
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](./content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 ##### Sample Response
@@ -3847,7 +3847,7 @@ The Get a single term in all locales request retrieves all localized versions of
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](./content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 ##### Sample Response
@@ -3918,7 +3918,7 @@ The Get descendants of a term request retrieves all descendant terms of a given 
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](./content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 ##### Sample Response
@@ -3981,7 +3981,7 @@ The Get ancestors of a term request retrieves all ancestor terms of a given term
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](./content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 ##### Sample Response
@@ -4017,11 +4017,11 @@ The Get ancestors of a term request retrieves all ancestor terms of a given term
 
 ### Assets
 
-[Assets](/docs/content-managers/author-content/#create-and-manage-assets) refer to all the media files (images, videos, PDFs, audio files, and so on) uploaded in your Contentstack repository for future use. These files can be attached and used in multiple [entries](/docs/content-managers/working-with-entries/about-entries).
+[Assets](/docs/content-managers/author-content/#create-and-manage-assets) refer to all the media files (images, videos, PDFs, audio files, and so on) uploaded in your Contentstack repository for future use. These files can be attached and used in multiple [entries](../../cs-docs/content-managers/author-content/about-entries.md).
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack.
 
-**Note**: [Branches](/docs/developers/branches) is a plan-based feature that is available only in the new Contentstack interface.
+**Note**: [Branches](../developers/apis/content-management-api/branches.md) is a plan-based feature that is available only in the new Contentstack interface.
 
 Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -5014,7 +5014,7 @@ Locale is **optional**
 
 The Get a single asset request fetches the latest version of a specific asset of a particular stack.
 
-**Tip**: If no version is mentioned, the request will retrieve the latest published version of the asset. To get a specific version of an asset, refer to the [Get a Single Asset](/docs/developers/apis/content-management-api#get-a-single-asset) management API.
+**Tip**: If no version is mentioned, the request will retrieve the latest published version of the asset. To get a specific version of an asset, refer to the [Get a Single Asset](./content-management-api.md#get-a-single-asset) management API.
 
 Additionally, if you wish to fetch the metadata attached to each asset, then you need to pass include_metadata as a query parameter. Set this parameter to true to include the asset metadata along with all assets in the response body.
 
@@ -5417,7 +5417,7 @@ Contentstack provides certain queries that you can use to fetch filtered results
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack.
 
-**Note**: [Branches](/docs/developers/branches) is a plan-based feature that is available only in the new Contentstack interface.
+**Note**: [Branches](../developers/apis/content-management-api/branches.md) is a plan-based feature that is available only in the new Contentstack interface.
 
 Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides
 
@@ -13109,7 +13109,7 @@ This query will work for entries only.
 
 When fetching an entry, the content of referred entries that are part of the parent entry is NOT included in the Response body; you only get their UIDs. To include the content of the referred entries in your response, you need to use the include[] parameter and specify the UID of the reference field as value.The API request should be as follows: https://cdn.contentstack.io/v3/content_types/product/entries?include[]={reference_field_UID. This query will work for entries only.
 
-**Example:** In the Product content type, there is a reference field called Categories, which refers entries of another content type. Let’s assume that you had created an entry for the Product content type, and the value selected in the Categories field was ‘Mobiles’. If you fetch the entry using the [Get a Single Entry](/docs/developers/apis/content-delivery-api#get-a-single-entry) API request, you would get all the details of the entry in the response, but the value against the Categories field would be UID of the referenced entry (i.e., UID of the ‘Mobiles’ entry in this case).
+**Example:** In the Product content type, there is a reference field called Categories, which refers entries of another content type. Let’s assume that you had created an entry for the Product content type, and the value selected in the Categories field was ‘Mobiles’. If you fetch the entry using the [Get a Single Entry](./content-delivery-api.md#get-a-single-entry) API request, you would get all the details of the entry in the response, but the value against the Categories field would be UID of the referenced entry (i.e., UID of the ‘Mobiles’ entry in this case).
 
 In order to fetch the details of the entry used in the Categories reference field, you need to use the include[] parameter in the following manner:
 
@@ -51569,7 +51569,7 @@ Some of the important variables that you need to set are as follows:
 | api_key | your_stack_api_key |
 | access_token | your_environment-specific_delivery_token |
 
-**Note:** The Contentstack Postman collection will require a valid environment-specific [Delivery token](/docs/developers/create-tokens/about-delivery-tokens) to make API calls. Check out the [Authentication](#authentication) section for more details.
+**Note:** The Contentstack Postman collection will require a valid environment-specific [Delivery token](../../cs-docs/developers/create-tokens/about-delivery-tokens.md) to make API calls. Check out the [Authentication](#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 

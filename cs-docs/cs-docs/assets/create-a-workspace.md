@@ -17,7 +17,7 @@ This page explains how to create a workspace in AM2.0 within a space so assets a
 
 ## Create a Workspace
 
-[Workspaces](/docs/assets/about-spaces-and-workspaces#workspaces) provide isolated environments within a space where assets and configurations can evolve independently. You can use workspaces to support campaign-specific collaboration, controlled experimentation, or parallel asset preparation, without disrupting ongoing work in the primary workspace.
+[Workspaces](./about-spaces-and-workspaces.md#workspaces) provide isolated environments within a space where assets and configurations can evolve independently. You can use workspaces to support campaign-specific collaboration, controlled experimentation, or parallel asset preparation, without disrupting ongoing work in the primary workspace.
 
 Why create a workspace:
 - **Campaign preparation**: Build a dedicated workspace for seasonal launches (eg., Spring Campaign) and manage all related assets in one place.

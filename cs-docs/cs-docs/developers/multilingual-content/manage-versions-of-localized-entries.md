@@ -19,7 +19,7 @@ This page explains how versioning works for entries saved in different languages
 
 Once an entry has been saved in a different language, it becomes independent of the master language or the fallback language. You can modify this data as per your requirement. Modifying and saving your entry multiple times will increment the version count. Therefore, each language entry has a separate versioning system. This enables you to compare your entry with earlier versions, if needed.
 
-**Note**: The [Content Manager](/docs/developers/invite-users-and-assign-roles/types-of-roles#content-manager) can view or create content in multiple languages only if the languages are added to the stack by the [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)/[Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer).
+**Note**: The [Content Manager](../invite-users-and-assign-roles/types-of-roles.md#content-manager) can view or create content in multiple languages only if the languages are added to the stack by the [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)/[Developer](../invite-users-and-assign-roles/types-of-roles.md#developer).
 
 You can view information about the localization status of an entry through the ‘Edit Entry’ page of an entry. To do so, click the ‘Entry Information’ tab on the right-hand side panel of the ‘Edit Entry’ page of your entry. Under the ‘Localization Status’ section, you will find a list of all the languages that are part of your stack.
 
@@ -44,5 +44,5 @@ Modifying and saving your entry multiple times will increment the version count.
 On the ‘Edit Entry’ page, click the ‘Entry Information’ tab and check the ‘Localization Status’ section.
 
 ### Who can add languages to the stack so Content Managers can work in multiple languages?
-The languages must be added to the stack by the [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)/[Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer).
+The languages must be added to the stack by the [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)/[Developer](../invite-users-and-assign-roles/types-of-roles.md#developer).
 

@@ -17,13 +17,13 @@ This page explains how to define which users or roles can edit an entry at diffe
 
 ## Set Edit Access Permissions for Workflow Stages
 
-You can define which users or roles can edit an entry on different stages of the workflow. This [stage access rule](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages#add-stage-transition-and-access-rules) ensures that only authorized users modify content when on a particular stage.
+You can define which users or roles can edit an entry on different stages of the workflow. This [stage access rule](./add-workflows-and-stages.md#add-stage-transition-and-access-rules) ensures that only authorized users modify content when on a particular stage.
 
 For example, you can allow only the users with the “Release Manager” role to edit an entry when on the “Ready for Publish” stage, or only “Editors” can make changes when the entry is on the “Ready for Review” stage.
 
 ## Set Edit Access Permissions on a Workflow Stage
 
-To set edit access permissions on an entry that has been moved to a particular Workflow stage, log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your [stack](/docs/developers/set-up-stack/about-stack) and follow the below steps:
+To set edit access permissions on an entry that has been moved to a particular Workflow stage, log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your [stack](../set-up-stack/about-stack.md) and follow the below steps:
 - Click the “Settings” icon on the left navigation panel, and select **Workflows**.
 - Under the **Workflows** tab, you will see a list of existing workflows, if already created. Click on the workflow you want to update.
 - To edit settings for a specific workflow stage, click on the “Edit” icon of that stage.
@@ -32,10 +32,10 @@ To set edit access permissions on an entry that has been moved to a particular W
 
 ****
 
-**Additional Resource**: Learn how to [add stage transition and access rules for each workflow stage](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages#add-stage-transition-and-access-rules) to create an efficient content lifecycle.
+**Additional Resource**: Learn how to [add stage transition and access rules for each workflow stage](./add-workflows-and-stages.md#add-stage-transition-and-access-rules) to create an efficient content lifecycle.
 - Once you have made the changes, click on **Done** and then **Save** the workflow changes.
 
-**Note**: Workflow [superusers](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages#add-workflow-superusers), [organization owners](/docs/owners-and-admins/organization-roles#organization-owner), and stack [owners](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner)/[admins](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) can edit or delete the entry in any workflow stage, irrespective of the stage access rules set for that stage.
+**Note**: Workflow [superusers](./add-workflows-and-stages.md#add-workflow-superusers), [organization owners](../organization/organization-roles.md#organization-owner), and stack [owners](../invite-users-and-assign-roles/types-of-roles.md#owner)/[admins](../invite-users-and-assign-roles/types-of-roles.md#admin) can edit or delete the entry in any workflow stage, irrespective of the stage access rules set for that stage.
 
 ## Common questions
 

@@ -41,7 +41,7 @@ You can enable the **Mandatory** property for the following field types:
 
 The mandatory setting applies during entry creation and editing workflows. It is especially useful for enforcing content standards across complex content types and multi-author teams.
 
-**Additional Resource**: You can combine the **Mandatory** property with **Validation (Regex)** to enforce advanced formatting rules on text fields, such as the Title. For implementation details, refer to our [validation](/docs/developers/create-content-types/validation-regex) documentation.
+**Additional Resource**: You can combine the **Mandatory** property with **Validation (Regex)** to enforce advanced formatting rules on text fields, such as the Title. For implementation details, refer to our [validation](./validation-regex.md) documentation.
 
 ## Common questions
 

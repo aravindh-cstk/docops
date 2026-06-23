@@ -28,7 +28,7 @@ The quality parameter lets you control the compression level of images that have
 2. The quality parameter is not applicable for the image types (GIF and PNG) that are not lossy.
 3. When only the quality parameter is specified, and if the output image is larger than the actual image, the original image will be returned.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 

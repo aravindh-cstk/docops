@@ -21,7 +21,7 @@ Images or assets served using Contentstack contain “contentstack.io” in the 
 
 'Masking' is the process in which the end-user gets an impression as if the content is being delivered directly from the client instead of Contentstack. For masking, you can set up a proxy.
 
-However, it is recommended not to set up a proxy, as it not only increases the overall infrastructure overheads but also slows down the performance of content delivery. Therefore, we strongly recommend using a [CDN](/docs/developers/cdn-and-caching/what-is-cdn-and-how-it-works) service such as Fastly to deliver content to the end-user quickly and efficiently.
+However, it is recommended not to set up a proxy, as it not only increases the overall infrastructure overheads but also slows down the performance of content delivery. Therefore, we strongly recommend using a [CDN](../cdn-and-caching/what-is-cdn-and-how-it-works.md) service such as Fastly to deliver content to the end-user quickly and efficiently.
 
 **Note**: Images here refer to the usual images that we use in our content, or something that has as extension .png, .jpg, .jpeg, and so on. Assets refer to anything that is not images, for example, PDFs.
 

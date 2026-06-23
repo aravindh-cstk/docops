@@ -15,11 +15,11 @@ last_updated: 2026-03-25
 
 This page explains how to create and configure Field Visibility Rules in Contentstack so authorized users can dynamically show or hide fields in entries based on conditions. It is intended for users who build or edit content types and global fields, and should be used when you need to streamline entry forms by controlling when fields appear.
 
-[Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) in Contentstack allow authorized users to dynamically show or hide fields within an entry based on predefined conditions, improving content management and user experience. By setting up rules, users can control when fields appear, streamline data entry, and reduce clutter.
+[Field Visibility Rules](./about-field-visibility-rules.md) in Contentstack allow authorized users to dynamically show or hide fields within an entry based on predefined conditions, improving content management and user experience. By setting up rules, users can control when fields appear, streamline data entry, and reduce clutter.
 
 This guide outlines the steps to create and configure these rules, including defining conditions, setting actions, and managing multiple rules effectively.
 
-When creating or editing a [content type](/docs/developers/create-content-types/about-content-types/) or a [global](/docs/developers/create-content-types/global/) field, you can define field visibility rules based on specific conditions in the respective **builder** page.
+When creating or editing a [content type](./about-content-types.md) or a [global](./global.md) field, you can define field visibility rules based on specific conditions in the respective **builder** page.
 
 **Note:** Only users with permission to create or edit content types can configure the field visibility rules.
 
@@ -27,7 +27,7 @@ When creating or editing a [content type](/docs/developers/create-content-types/
 
 To set up field visibility rules, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the "Content Models" icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the "Content Models" icon.
 - Click the title of a content type to open it. Alternatively, click the vertical ellipses in the **Actions** column next to the content type and select **Edit**.
 - Click **Field Visibility Rules** at the top of the page.
 - In the resulting modal, click **Create New Rule**.
@@ -43,7 +43,7 @@ Specify the conditions:
 - Select a **Field** from the dropdown. This is the operand to be evaluated.
 - Choose a **Condition**. This is an operator that defines the comparison.
 
-**Additional Resource:** Refer to the [Operand Fields and Supported Operators](/docs/developers/create-content-types/operand-fields-and-supported-operators) document for more details.
+**Additional Resource:** Refer to the [Operand Fields and Supported Operators](./operand-fields-and-supported-operators.md) document for more details.
 
 - Enter an expected **Value** that triggers the condition.
 
@@ -64,7 +64,7 @@ For example, if "Date" is Before "12-31-2024", **Show** the **Archive Notificati
 
 **Tip: **You can add more actions to a condition by clicking **+ Add Action** or remove an action by clicking the delete icon.
 
-**Note:** Refer to the [Limitations of Field Visibility Rules](/docs/developers/create-content-types/limitations-of-field-visibility-rules) document to know more about the validations on the operand field and target field.
+**Note:** Refer to the [Limitations of Field Visibility Rules](./limitations-of-field-visibility-rules.md) document to know more about the validations on the operand field and target field.
 
 **Tip:** You can add multiple rules to a content type by clicking **+ Add Another Rule** or remove a rule by clicking the **Delete Rule** option from the vertical ellipsis.
 
@@ -79,7 +79,7 @@ You want the LinkedIn and Twitter fields to appear only when **Has Social Links*
 
 To create this rule, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the "Content Models" icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the "Content Models" icon.
 - Click the title of a content type to open it. Alternatively, click the vertical ellipses in the **Actions** column next to the content type and select **Edit**.
 - Click **Field Visibility Rules** at the top of the page.
 - In the resulting modal, click **Create New Rule**.
@@ -100,7 +100,7 @@ If **Product Type** is **Physical**, show **Shipping Address** and if **Product 
 
 To create this rule, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the "Content Models" icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the "Content Models" icon.
 - Click the title of a content type to open it. Alternatively, click the vertical ellipses in the **Actions** column next to the content type and select **Edit**.
 - Click **Field Visibility Rules** at the top of the page.
 - In the resulting modal, click **Create New Rule**.

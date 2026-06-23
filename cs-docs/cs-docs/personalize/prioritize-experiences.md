@@ -29,10 +29,10 @@ By prioritizing your experiences, you can enhance user engagement and deliver mo
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to the Contentstack Organization that has Personalize enabled
 - Access to a project in Personalize
-- [Experiences](/docs/personalize/about-experiences) created in your Personalize project
+- [Experiences](./about-experiences.md) created in your Personalize project
 
 ## Steps for Execution
-**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
 For this guide, we are using the following example on your travel website with two experiences:
 - **Segmented Experience A (Rewards Program):** "70% off for Reward Members! Earn Points on Every Booking!". This is the experience which displays a personalized variant to the users who are part of the Reward Members Program.

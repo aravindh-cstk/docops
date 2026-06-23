@@ -30,19 +30,19 @@ Visual Editor allows you to edit and publish pages directly without switching to
 Both methods let you validate updates and publish updates directly within the Editor.
 
 To publish a page of your website, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
-- Use the **URL** bar to open the desired page.**Additional Resource:** If you do not have an existing page, refer to the [Create Page](/docs/content-managers/visual-builder/create-new-page) documentation to create one.
-- [Edit the page](/docs/content-managers/visual-builder/edit-page) directly on the canvas or use the [**Form**](https://www.contentstack.com/docs/content-managers/visual-builder/form) panel.
+- Use the **URL** bar to open the desired page.**Additional Resource:** If you do not have an existing page, refer to the [Create Page](./create-new-page.md) documentation to create one.
+- [Edit the page](./edit-page.md) directly on the canvas or use the [**Form**](./form.md) panel.
 - Click **Save** in the top-right corner and confirm your changes in the **Save Changes** modal.
 - Click **Publish**. This opens the **Publish Entries** modal.
 - Select the entries you want to publish and click **Proceed**.
 - If an entry contains errors, click the error message below the entry title. The entry form opens with errors listed at the top. Resolve the errors before proceeding.
-- In the **Publish Entries** modal, select the target [environments](/docs/developers/set-up-environments/about-environments) and click **Proceed**.
+- In the **Publish Entries** modal, select the target [environments](../../developers/set-up-environments/about-environments.md) and click **Proceed**.
 - For additional control, click the dropdown next to the **Publish** button, select **Advanced Publish**, choose the desired entries in the **Publish Entries** modal, and then click **Proceed**.
 - You get redirected to the **Entries** list page to complete the publishing process using the standard interface.
 
-**Additional Resource:** To learn more about publishing entries, refer to the [Publish an Entry](/docs/content-managers/author-content/publish-an-entry) document.
+**Additional Resource:** To learn more about publishing entries, refer to the [Publish an Entry](../author-content/publish-an-entry.md) document.
 
 By following these steps, you can efficiently publish updates to your web pages across environments while ensuring that content is validated and deployment-ready.
 

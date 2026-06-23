@@ -17,7 +17,7 @@ This page explains how to set up the Contentstack Launch connector trigger event
 
 ## Launch Trigger
 
-The Launch trigger lets you add Deployment and Environment based trigger events, such as create/update/delete/start/fail/complete, etc., for your [Contentstack Launch](/docs/developers/launch) projects.
+The Launch trigger lets you add Deployment and Environment based trigger events, such as create/update/delete/start/fail/complete, etc., for your [Contentstack Launch](../developers/launch.md) projects.
 
 With the Launch trigger, you can create trigger events when a deployment has started/failed/completed. Similarly, you can create trigger events when an environment is created/updated/deleted in the Contentstack Launch.
 
@@ -52,7 +52,7 @@ For Deployment, you will find the following sub-events:
 - Click **Test Trigger** to execute and test the trigger that you configured.
 - If successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.
 
-    **Note: **In the Contentstack Launch, you can either [import your project](/docs/developers/launch/import-project-using-github/) from a GitHub repository or [upload a zip file from your system](/docs/developers/launch/import-project-using-file-upload/).
+    **Note: **In the Contentstack Launch, you can either [import your project](../developers/launch/import-project-using-github.md) from a GitHub repository or [upload a zip file from your system](../developers/launch/import-project-using-file-upload.md).
 
 This sets your **Deployment** trigger.
 
@@ -78,7 +78,7 @@ For Environment, you will find the following sub-events:
 - Click **Proceed**.
 - Click **Test Trigger** to execute and test the trigger that you configured.
 
-    **Note:** While creating a new [environment](/docs/developers/launch/environments/) for a Launch project, you must [upload a zip file of your project](/docs/developers/launch/import-project-using-file-upload/). For projects deployed on GitHub, you must select a branch to fetch the project and create a new environment.
+    **Note:** While creating a new [environment](../developers/launch/environments.md) for a Launch project, you must [upload a zip file of your project](../developers/launch/import-project-using-file-upload.md). For projects deployed on GitHub, you must select a branch to fetch the project and create a new environment.
 - If successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.
 
 **Note:** After successfully configuring a trigger, if you re-configure any other trigger you will be prompted to revert to the previously configured trigger. You can revert back to the last trigger configurations by clicking the **Revert ****Changes **button.

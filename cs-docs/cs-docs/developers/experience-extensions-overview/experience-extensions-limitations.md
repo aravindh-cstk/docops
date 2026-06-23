@@ -16,7 +16,7 @@ This page lists the limitations for Experience Extensions, including maximum cou
 
 ## Experience Extensions Limitations
 
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations](/docs/developers/developer-hub/about-ui-locations/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations](../developer-hub/about-ui-locations.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 - The maximum number of extensions allowed per stack is **50**
 - The maximum character length of the title is **256**
@@ -27,7 +27,7 @@ This page lists the limitations for Experience Extensions, including maximum cou
 
 ### What should I use instead of Experience Extensions?
 
-We recommend using the [UI locations](/docs/developers/developer-hub/about-ui-locations/) for the Contentstack App Framework to extend the functionality of your apps.
+We recommend using the [UI locations](../developer-hub/about-ui-locations.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 ### How many extensions can I add to a stack?
 

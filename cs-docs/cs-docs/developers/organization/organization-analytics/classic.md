@@ -18,19 +18,19 @@ This page explains how to access and use the **Analytics** section in your Conte
 
 Organization Analytics | Classic
 
-The **Analytics** section provides an overview of how the users of your [Organization](https://www.contentstack.com/docs/owners-and-admins/about-organizations) are using Contentstack.
+The **Analytics** section provides an overview of how the users of your [Organization](../about-organizations.md) are using Contentstack.
 
 To access the analytics for your Organization, perform the following steps:
 - Log in to your [Contentstack account](https://app.contentstack.com/#!/login).
 - Click on the ORGANIZATION dropdown on the header, and click on the “Organization Settings” cog beside the Organization name that you need to open.
 - Click on **Analytics** tab to access the section.
 
-**Note**: Only Organization [Owner](https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/types-of-roles/#owner) and [Admins](https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/types-of-roles/#admin) can access this section.
+**Note**: Only Organization [Owner](../../invite-users-and-assign-roles/types-of-roles.md#owner) and [Admins](../../invite-users-and-assign-roles/types-of-roles.md#admin) can access this section.
 
 This section contains the following subsections:
-- **Usage Overview**: Displays the number of [stacks](https://www.contentstack.com/docs/developers/set-up-stack/about-stack/), [users](https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/about-stack-users/), [content types](https://www.contentstack.com/docs/developers/create-content-types/about-content-types/), [entries](https://www.contentstack.com/docs/content-managers/working-with-entries/about-entries/), [assets](https://www.contentstack.com/docs/content-managers/working-with-assets/about-assets/), and [environments](https://www.contentstack.com/docs/developers/set-up-environments/about-environments/) currently existing in the organization
-- **Usage by Stacks**: Provides detailed information of each stack created in the organization. The usage in terms of how many content types, entries, assets, environments, [locales](https://www.contentstack.com/docs/developers/restructure-your-data-to-use-contentstack-import-content-utility/#locales), and extensions have been created.
-- **API Usage by Type**: Provides details of the usage of various types of APIs ([Content Delivery](https://www.contentstack.com/docs/developers/apis/content-delivery-api/), [Content Management](https://www.contentstack.com/docs/developers/apis/content-management-api/), [Images](https://www.contentstack.com/docs/developers/apis/image-delivery-api/), and Assets).
+- **Usage Overview**: Displays the number of [stacks](../../set-up-stack/about-stack.md), [users](../../invite-users-and-assign-roles/about-stack-users.md), [content types](../../create-content-types/about-content-types.md), [entries](../../../content-managers/author-content/about-entries.md), [assets](https://www.contentstack.com/docs/content-managers/working-with-assets/about-assets/), and [environments](../../set-up-environments/about-environments.md) currently existing in the organization
+- **Usage by Stacks**: Provides detailed information of each stack created in the organization. The usage in terms of how many content types, entries, assets, environments, [locales](../../restructure-your-data-to-use-contentstack-import-content-utility.md#locales), and extensions have been created.
+- **API Usage by Type**: Provides details of the usage of various types of APIs ([Content Delivery](../../../../api-docs/api-detail/content-delivery-api.md), [Content Management](../../../../api-docs/api-detail/content-management-api.md), [Images](../../../../api-docs/api-detail/image-delivery-api.md), and Assets).
 - **Top URLs**: Provides details of the most frequently hit API calls.
 - **Apply Filter**: Filter out the API Usage and Top URLs data
 
@@ -42,7 +42,7 @@ This page also provides details of your subscription plan (i.e., maximum limits,
 
 ## Usage Overview
 
-The “Usage Overview” section provides an overview of the usage, along with the maximum allowed limit, of different types of entities within your organization, such as stacks, content types, [entries](https://www.contentstack.com/docs/content-managers/working-with-entries/about-entries/), assets, and [users](https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/about-stack-users/).
+The “Usage Overview” section provides an overview of the usage, along with the maximum allowed limit, of different types of entities within your organization, such as stacks, content types, [entries](../../../content-managers/author-content/about-entries.md), assets, and [users](../../invite-users-and-assign-roles/about-stack-users.md).
 
 ## Usage by Stacks
 

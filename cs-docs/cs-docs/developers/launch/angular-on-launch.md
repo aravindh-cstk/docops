@@ -33,7 +33,7 @@ Angular applications deployed on Launch can function as Single-Page Applications
 
 Launch supports Angular's Server-Side Rendering (SSR) approach. SSR allows Angular applications to render pages on the server, resulting in enhanced performance. After the rendered page is delivered to the client, Angular initializes the application and utilizes the data contained within the HTML page.
 
-**Additional Resource:** Please refer to the [Quick Start Guide with Angular](/docs/launch/quick-start-angular/) documentation for a step-by-step walkthrough to deploy an Angular Starter on Launch as an SSR-based application.
+**Additional Resource:** Please refer to the [Quick Start Guide with Angular](./quick-start-angular.md) documentation for a step-by-step walkthrough to deploy an Angular Starter on Launch as an SSR-based application.
 
 ## Launch Angular Application Specifications
 
@@ -49,7 +49,7 @@ The memory size for a Launch application is **1024 MB**.
 
 ### Runtime Environment
 
-The Launch runtime environment leverages [**Node.js**](/docs/launch/supported-nodejs-versions) to power its execution environment.
+The Launch runtime environment leverages [**Node.js**](./supported-nodejs-versions.md) to power its execution environment.
 
 ### File System
 
@@ -89,7 +89,7 @@ server.get('*', (req, res, next) => {
 
 ### Cache Revalidation
 
-As an Angular SSR user, you can also leverage [Launch’s cache revalidation feature](/docs/launch/revalidate-cdn-cache) to render new content updates on demand.
+As an Angular SSR user, you can also leverage [Launch’s cache revalidation feature](./revalidate-cdn-cache.md) to render new content updates on demand.
 
 **Note:** Please ensure that you also revalidate the cache for the data endpoint backing the content in addition to the page URL. This is important if you have cached API endpoints delivering data for the page.
 

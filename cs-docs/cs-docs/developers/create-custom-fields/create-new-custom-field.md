@@ -17,11 +17,11 @@ This page explains how to create a new Custom Field extension from scratch, inte
 
 ## Create New Custom Field
 
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](/docs/developers/developer-hub/custom-field-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](../developer-hub/custom-field-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 In this guide, we will learn how to develop a new custom field from the ground up.
 
-**Note:** When working within specific branches, extensions added or created will be available only within that particular branch. For example, you are working within the development branch, and you add new Custom Fields to this branch. These custom fields will be available only within the development branch. Refer to our [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) document for more information.
+**Note:** When working within specific branches, extensions added or created will be available only within that particular branch. For example, you are working within the development branch, and you add new Custom Fields to this branch. These custom fields will be available only within the development branch. Refer to our [Branch-specific Modules](../branches/branch-specific-modules.md) document for more information.
 
 ## Create Field UI
 
@@ -158,7 +158,7 @@ With this, the code for your custom field is ready. It’s now time to deploy it
 
 Pass the necessary configuration parameters for your Custom Field. These parameters will be applied globally to every instance of the Custom Field Extension within a stack.
 
-Alternatively, you can also define different configuration parameters for specific instance of your Custom Field extension. These instance-level configuration parameters will be applied only to that instance of the Custom Field, and will not affect any other instances of that Custom Field. To know more about it, read the [Config Parameters](/docs/developers/create-content-types/config-parameter-for-custom-fields-only) section.
+Alternatively, you can also define different configuration parameters for specific instance of your Custom Field extension. These instance-level configuration parameters will be applied only to that instance of the Custom Field, and will not affect any other instances of that Custom Field. To know more about it, read the [Config Parameters](../create-content-types/config-parameter-for-custom-fields-only.md) section.
 
 ## Deploy field
 
@@ -174,11 +174,11 @@ Let’s understand the two methods in detail.
 This method is suitable if you do not want to host the custom field extension code on Contentstack, but on an external server. In this case, you need to provide the URL of your externally-hosted extension.
 
 To deploy the custom field extension via this method, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), navigate to the “Settings” gear icon, and select **Extensions**.
+- Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” gear icon, and select **Extensions**.
 - On the **Extensions** page, click on the **+ Add Extension** button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one** link as shown below.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:  
-          **Title ***(required)*: Provide a suitable title for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+          **Title ***(required)*: Provide a suitable title for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
 - **Field data type ***(required)*****: Select the data type in which the input data of the field should be saved in Contentstack.**Note: **We only support these data types: Text, Number, Date, Boolean, Reference, File, and JSON.
 - **Multiple ***(optional)*: Select this if your custom field accepts multiple values, and the data type is not JSON.
 - **Hosting method ***(required)*: Select **External Hosting** as the hosting method for this content type.
@@ -191,7 +191,7 @@ To deploy the custom field extension via this method, log in to your [Contentsta
 
   However, for your instance-level configurations to be applicable, you need to mention in your custom field extension code to give precedence to and apply these parameters, if provided.****
 
-  **Additional Resource**: To learn more about this option, refer to the [Config Parameters](/docs/developers/create-content-types/config-parameter-for-custom-fields-only) section.
+  **Additional Resource**: To learn more about this option, refer to the [Config Parameters](../create-content-types/config-parameter-for-custom-fields-only.md) section.
 - **Save** your custom field.
 
 ### Hosted on Contentstack
@@ -200,7 +200,7 @@ Through this method, you can host your custom field code on Contentstack.
 
 To host a custom field on Contentstack, create a custom field by performing **steps 1 to 3** of the [aforementioned steps](#hosted-externally).  
 For **step 4**, on the **Create New Extension page** configure the following options:
-- **Title** *(required)*: Provide a suitable title for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+- **Title** *(required)*: Provide a suitable title for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
 - **Field data type ***(required)*:****Select the data type in which the input data of the field should be saved in Contentstack. **Note**: We only support these data types: Text, Number, Date, Boolean, Reference, File, and JSON.
 - **Multiple ***(optional)*: Select this if your custom field accepts multiple values, and the data type is not JSON.
 - **Hosting method ***(required)*: Select **Hosted on Contentstack** as the hosting method for this content type.
@@ -209,13 +209,13 @@ For **step 4**, on the **Create New Extension page** configure the following opt
 
 After filling in the details, **Save** the extension.
 
-**Note**: Custom field extensions hosted internally on Contentstack are uploaded using the srcdoc attribute, which is not supported on Internet Explorer and Microsoft Edge. Also, the maximum size of a custom field source doc cannot exceed 500 KB. To know more limitations, check the [Limitations](/docs/developers/create-custom-fields/limitations-of-custom-fields) section.
+**Note**: Custom field extensions hosted internally on Contentstack are uploaded using the srcdoc attribute, which is not supported on Internet Explorer and Microsoft Edge. Also, the maximum size of a custom field source doc cannot exceed 500 KB. To know more limitations, check the [Limitations](./limitations-of-custom-fields.md) section.
 
 Once your custom field is created by any of the methods, you will be able to use the custom field in your content types.
 
 ## Use Custom Field in Content Types
 
-Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, follow the steps mentioned in the [Use Custom Field in Content Types](/docs/developers/create-custom-fields/use-custom-field-in-content-types) article.
+Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, follow the steps mentioned in the [Use Custom Field in Content Types](./use-custom-field-in-content-types.md) article.
 
 **Note:** You can add a maximum of **10 **JSON type custom fields to a content type.
 
@@ -279,20 +279,20 @@ You should see your updated changes.
 ## List of Custom Fields
 
 Contentstack provides several prebuilt custom fields to use in your stack. Also, we support the implementation of custom fields using third-party services. Refer to the following links:
-- [Guides for Prebuilt Custom Fields](/docs/developers/create-custom-fields#guides-for-prebuilt-custom-fields)
-- [Custom Field Guide for External App](/docs/developers/create-custom-fields#custom-field-guide-for-external-apps)
+- [Guides for Prebuilt Custom Fields](../create-custom-fields.md#guides-for-prebuilt-custom-fields)
+- [Custom Field Guide for External App](../create-custom-fields.md#custom-field-guide-for-external-apps)
 
 ## API Reference
 
 To perform this create action via API, refer to the following API requests:
-- [Upload a custom field](/docs/developers/apis/content-management-api#upload-a-custom-field)
-- [Create a custom field with source URL](/docs/developers/apis/content-management-api#create-a-custom-field-with-source-url)
-- [Create a custom field with source code](/docs/developers/apis/content-management-api#create-a-custom-field-with-source-code)
+- [Upload a custom field](../../../api-docs/api-detail/content-management-api.md#upload-a-custom-field)
+- [Create a custom field with source URL](../../../api-docs/api-detail/content-management-api.md#create-a-custom-field-with-source-url)
+- [Create a custom field with source code](../../../api-docs/api-detail/content-management-api.md#create-a-custom-field-with-source-code)
 
 ## Common questions
 
 ### Should I use Experience Extensions or the Contentstack App Framework for new custom fields?
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](/docs/developers/developer-hub/custom-field-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](../developer-hub/custom-field-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 ### Are custom fields branch-specific?
 **Note:** When working within specific branches, extensions added or created will be available only within that particular branch.

@@ -20,7 +20,7 @@ This page explains how to use Contentstack’s **View Entry Collaborators** feat
 
 Contentstack’s **View Entry Collaborators** feature allows you to see which collaborators are currently viewing or editing the same entry. This helps teams work on shared content while reducing the risk of conflicting updates.
 
-When [Drafts and Auto Save](/docs/content-managers/author-content/about-drafts-and-auto-save) is enabled, collaborator presence indicators work with automatic draft synchronization and field-level locking to support collaborative editing.
+When [Drafts and Auto Save](./about-drafts-and-auto-save.md) is enabled, collaborator presence indicators work with automatic draft synchronization and field-level locking to support collaborative editing.
 
 ## Identify Collaborators in an Entry
 When you open an entry, collaborator initials appear at the **top of the entry page**.

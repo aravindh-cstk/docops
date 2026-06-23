@@ -17,7 +17,7 @@ This page provides a step-by-step guide for administrators and developers to con
 
 ## Set up SSO with Okta Native App
 
-This step-by-step guide explains how to set up [Single Sign-On](/docs/developers/single-sign-on) in Contentstack with Okta as your SAML 2.0 identity Provider (IdP).
+This step-by-step guide explains how to set up [Single Sign-On](../single-sign-on.md) in Contentstack with Okta as your SAML 2.0 identity Provider (IdP).
 
 The integration with Okta can be done in following easy steps:
 - [Create SSO Name and ACS URL in Contentstack](#create-sso-name-and-acs-url-in-contentstack)
@@ -65,7 +65,7 @@ For Name, enter “roles” Name.
 - For the **Filter**, select **Matches regex** and enter your regex term in the textbox beside it. For example, if all your **Contentstack** specific users are assigned roles that start with contentstack, enter the regex term `^contentstack.([^\s]+)*`.
 - This will retrieve all the groups that start with "contentstack".
 
-**Note:** Perform this step only if you want to enable [IdP Role Mapping](/docs/developers/single-sign-on/idp-role-mapping).
+**Note:** Perform this step only if you want to enable [IdP Role Mapping](./idp-role-mapping.md).
 - In the **Advance Sign-On** Settings, enter the following details:
 
 **Assertion Consumer Service URL**: Enter the Assertion Consumer Service (ACS) URL that you created in Contentstack in [Step 1](#create-sso-name-and-acs-url-in-contentstack).
@@ -101,7 +101,7 @@ But, if you want to perform IdP Role Mapping and allow user groups to directly l
 
 ***Perform this step only if IdP Role Mapping is part of your Contentstack plan.***
 
-[IdP Role Mapping](/docs/developers/single-sign-on/idp-role-mapping) is an alternate way of managing users and permissions of your SSO-enabled organization. This feature allows you to map your IdP roles to Contentstack roles while configuring SSO for your organization.
+[IdP Role Mapping](./idp-role-mapping.md) is an alternate way of managing users and permissions of your SSO-enabled organization. This feature allows you to map your IdP roles to Contentstack roles while configuring SSO for your organization.
 
 Go to the **Assignments** tab of your application, click the **Assign** dropdown in the application details section, and select **Assign to Groups**.
 - You will see a list of registered groups. Click the **Assign** button beside the group(s) to which you need to assign your application. Click **Done**.
@@ -112,21 +112,21 @@ You can now proceed to create role mappings in Contentstack for the IdP roles yo
 
 In the **User Management** section, you will see the following steps:
 
-**Strict Mode**: Enable [Strict Mode](/docs/developers/single-sign-on/set-up-sso-in-contentstack#strict-mode) if you do not want any users to access the organization without SSO login.
-- **Session Timeout**: The [Session Timeout](/docs/developers/single-sign-on/set-up-sso-in-contentstack#session-timeout) option lets you define the session duration for a user signed in through SSO. While the default is set to 12 hours, you can modify it as needed.
-- **Advanced Settings**: Click on the [advanced settings](/docs/developers/single-sign-on/set-up-sso-in-contentstack#advanced-settings) to expand the IdP Role Mapping section to map IdP roles to Contentstack.
+**Strict Mode**: Enable [Strict Mode](./set-up-sso-in-contentstack.md#strict-mode) if you do not want any users to access the organization without SSO login.
+- **Session Timeout**: The [Session Timeout](./set-up-sso-in-contentstack.md#session-timeout) option lets you define the session duration for a user signed in through SSO. While the default is set to 12 hours, you can modify it as needed.
+- **Advanced Settings**: Click on the [advanced settings](./set-up-sso-in-contentstack.md#advanced-settings) to expand the IdP Role Mapping section to map IdP roles to Contentstack.
 
 In the **Add Role Mapping** section, click on the **+ ADD ROLE MAPPING** link to add new IdP role mapping and enter the following details:
 - **IdP Role Identifier**: Enter the IdP group/role identifier, for example, “Contentstack Developers”. This should be the same as the name of the group assigned to the application on Okta.
 - **Organization Role**: Assign either the Admin or Member role to the mapped group/role.
 
-**Stack Roles (optional)**: Assign [stacks](/docs/developers/set-up-stack/about-stack) as well as the corresponding stack-level roles to this role.
+**Stack Roles (optional)**: Assign [stacks](../set-up-stack/about-stack.md) as well as the corresponding stack-level roles to this role.
 - Likewise, you can add more role mappings for your Contentstack organization. To add a new Role mapping, click on **+ ADD ROLE MAPPING** and enter the details.
 - Keep **Role Delimiter** blank as Okta usually returns roles in an array.
 - Finally, check the **Enable IdP Role Mapping** checkbox to enable the feature.
 - Click **Next** to continue further.
 
-While some details about these steps are given below, you can refer to our [general SSO guide](/docs/developers/single-sign-on) for more information.
+While some details about these steps are given below, you can refer to our [general SSO guide](../single-sign-on.md) for more information.
 
 ## Test and Enable SSO
 

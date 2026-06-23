@@ -16,18 +16,18 @@ This page explains how to clone an existing deployed Release in Contentstack so 
 
 ## Clone a Release
 
-Since deployed [Releases](/docs/developers/create-releases/about-releases) are “locked” (i.e., you cannot make any changes to Release items), the only way to reuse existing deployed Releases are to clone them.
+Since deployed [Releases](./about-releases.md) are “locked” (i.e., you cannot make any changes to Release items), the only way to reuse existing deployed Releases are to clone them.
 
 Cloning a Release means creating a copy of an existing Release along with all the items within it. After cloning a Release, you can make the necessary changes to its items, and then use the updated Release.
 
 To clone a Release, login to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), click on the “Releases” icon on the left navigation panel. This opens the **Releases** page where you can see a list of all the existing Releases. You can also use the shortcut key “alt + R” for Windows OS users, and “option + R” for Mac OS users to access Releases.
+- Go to your [stack](../set-up-stack/about-stack.md), click on the “Releases” icon on the left navigation panel. This opens the **Releases** page where you can see a list of all the existing Releases. You can also use the shortcut key “alt + R” for Windows OS users, and “option + R” for Mac OS users to access Releases.
 - Hover over the release you want to clone, click on the “Copy” icon that appears on the floating modal.
 - In the **Clone Release** window, provide a suitable **Name** (mandatory) and **Description** (optional) for the Release, and click **Save**.
 
 ## API Reference
 
-To clone a release via API, refer to the [Clone a Release](/docs/developers/apis/content-management-api#clone-a-release) API request.
+To clone a release via API, refer to the [Clone a Release](../../../api-docs/api-detail/content-management-api.md#clone-a-release) API request.
 
 ## Common questions
 
@@ -41,4 +41,4 @@ Cloning a Release means creating a copy of an existing Release along with all th
 In the **Clone Release** window, **Name** is mandatory and **Description** is optional.
 
 ### Is there an API to clone a Release?
-Yes. To clone a release via API, refer to the [Clone a Release](/docs/developers/apis/content-management-api#clone-a-release) API request.
+Yes. To clone a release via API, refer to the [Clone a Release](../../../api-docs/api-detail/content-management-api.md#clone-a-release) API request.

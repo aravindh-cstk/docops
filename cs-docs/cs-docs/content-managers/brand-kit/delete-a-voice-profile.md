@@ -23,9 +23,9 @@ In this guide, we will discuss the steps required to delete a Voice Profile from
 
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin)
 
-**Note**: Only Organization [Owners](/docs/developers/organization/organization-roles#organization-owner), [Admins](/docs/developers/organization/organization-roles#organization-admin), and Stack [Owners](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) can delete Voice Profiles.
+**Note**: Only Organization [Owners](../../developers/organization/organization-roles.md#organization-owner), [Admins](../../developers/organization/organization-roles.md#organization-admin), and Stack [Owners](../../developers/invite-users-and-assign-roles/types-of-roles.md#owner) can delete Voice Profiles.
 
 ## Steps for Execution
 

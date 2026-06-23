@@ -14,7 +14,7 @@ last_updated: 2026-03-25
 
 This page explains how App Releases work in Contentstack Developer Hub, including why releases matter and how to view and create releases for your app. It is intended for developers managing Public applications and should be used when you need to communicate updates, track versions, and submit releases for review and publication.
 
-**Note: **App Releases are only available for Public applications. To submit your private application for public listing, reference the [App Submission and Approval Guide](/docs/developers/marketplace-platform-guides/app-submission-and-approval-guide).
+**Note: **App Releases are only available for Public applications. To submit your private application for public listing, reference the [App Submission and Approval Guide](../marketplace-platform-guides/app-submission-and-approval-guide.md).
 
 ## Role of Releases in App Development
 Building a complex application is an ongoing project. New features, bug fixes, and refinements happen regularly. **Releases serve as milestones**, marking progress and providing a clear record of changes.
@@ -81,7 +81,7 @@ To create a new release, follow the steps below:
 - After the release is created successfully, the pop-up modal closes. You can see the latest changes in the releases table. The release status is automatically changed to the “Draft” mode upon creation.
 - In the **Actions **column, click the ellipses to edit, delete, or submit the app for review.
 
-Contentstack’s Marketplace team will review your app upon submission. Users are required to wait for a duration of 21 days to receive the status of their [app submission](/docs/developers/marketplace-platform-guides/app-submission-and-approval-guide). You will be notified about the status via email.
+Contentstack’s Marketplace team will review your app upon submission. Users are required to wait for a duration of 21 days to receive the status of their [app submission](../marketplace-platform-guides/app-submission-and-approval-guide.md). You will be notified about the status via email.
 
 **Note: **You cannot revoke or delete your app submission request. Reach out to our [Support Team](mailto:support@contentstack.com) if you have any concerns or queries.
 - Click the **Edit **icon. A pop-up screen appears. You can only update the **Title **and the **Release Note **of the release.Once a release is submitted for review, editing it is not possible. However, if the app releases submission is rejected, you can make edits to the releases.

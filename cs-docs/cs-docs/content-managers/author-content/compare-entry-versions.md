@@ -23,7 +23,7 @@ Contentstack enables you to compare any two versions of an entry side-by-side on
 You can also compare versions of the same entry in different languages. For instance, compare the version 4 in **English** with version 2 in **German** to spot differences across translations.
 
 To compare versions of an entry, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries”.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries”.
 - Navigate to the entry you want to compare.
 - Click the version icon in the top-right corner of the page or the “Versions” icon in the right sidebar.
 - Locate the entry you want to compare with the current selected version. Hover over it and click the “Compare” icon.

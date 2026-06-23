@@ -19,13 +19,13 @@ This page explains how to use the Sync API with the Contentstack Android SDK to 
 
 ## Use the Sync API With Android SDK
 
-The Sync API takes care of syncing your Contentstack data with your app and ensures that the data is always up-to-date by providing [delta updates](https://en.wikipedia.org/wiki/Delta_update). Contentstack’s [Android SDK](/docs/developers/sdks/content-delivery-sdk/android/about-android-sdk/) supports Sync API, which you can use to build powerful apps.
+The Sync API takes care of syncing your Contentstack data with your app and ensures that the data is always up-to-date by providing [delta updates](https://en.wikipedia.org/wiki/Delta_update). Contentstack’s [Android SDK](./about-android-sdk.md) supports Sync API, which you can use to build powerful apps.
 
 This guide will help you understand how to use the Sync API with Contentstack Android SDK.
 
 ## Initial sync
 
-The Initial sync request performs a complete sync of your app data. It returns all the published [entries](/docs/content-managers/working-with-entries/about-entries) and [assets](/docs/content-managers/working-with-assets/about-assets) of the specified [stack](/docs/developers/set-up-stack/about-stack) in response.
+The Initial sync request performs a complete sync of your app data. It returns all the published [entries](../../../../content-managers/author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets) of the specified [stack](../../../set-up-stack/about-stack.md) in response.
 
 To start the Initial sync process, use the sync method.
 
@@ -43,7 +43,7 @@ stack.sync(new SyncResultCallBack() {
 
 ```
 
-**Note**: Use the value of the [delivery token](/docs/developers/create-tokens/create-a-delivery-token) against the **access_token** key.
+**Note**: Use the value of the [delivery token](../../../create-tokens/create-a-delivery-token.md) against the **access_token** key.
 
 The response also contains a sync token, which you need to store, since this token is used to get subsequent delta updates later, as shown in the [Subsequent sync](#subsequent-sync) section below.
 
@@ -192,7 +192,7 @@ public void onCompletion(SyncStack syncStack, Error error) {
 ## More resources
 
 - [Android playground app](https://github.com/contentstack/contentstack-android-sync-playground.git)
-- [Android SDK API reference](/docs/developers/sdks/content-delivery-sdk/android/reference/)
+- [Android SDK API reference](../../../create-content-types/reference.md)
 - [View and Download Android SDK repository on GitHub](https://github.com/contentstack/contentstack-android)
 
 ## Common questions

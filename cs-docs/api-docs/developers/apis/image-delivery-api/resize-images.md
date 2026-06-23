@@ -33,7 +33,7 @@ In case the dimensions specified for the output image is greater than the dimens
 1. In case the dimensions specified for the output image is greater than the dimensions of the input image, the image will be upscaled.
 2. To disable upscaling, use the disable=upscale parameter.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 
@@ -66,7 +66,7 @@ In case the dimensions specified for the output image is greater than the dimens
 1. In case the dimensions specified for the output image is greater than the dimensions of the input image, the image will be upscaled.
 2. To disable upscaling, use the disable=upscale parameter.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 
@@ -92,7 +92,7 @@ As of now, there is only one value, i.e., upscale, that you can use with the dis
 
 To see this parameter in action, the height or width (or both) parameter should be used with it.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 

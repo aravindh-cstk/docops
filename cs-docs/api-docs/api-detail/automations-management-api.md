@@ -41,7 +41,7 @@ To use the Automations Management API, you need to authenticate yourself with an
 
 Contentstack provides token-based authentication that allows you to create, update, delete, and fetch the content of your [Contentstack account](https://www.contentstack.com/login). You can use the user Authtoken, to make Automations Management API requests.
 
-Authtokens are user-specific tokens generated when a user logs into Contentstack. Read more about the different [types of tokens](/docs/developers/create-tokens/types-of-tokens).
+Authtokens are user-specific tokens generated when a user logs into Contentstack. Read more about the different [types of tokens](../../cs-docs/developers/create-tokens/types-of-tokens.md).
 
 #### For API Key and Authtoken-based authentication
 
@@ -50,13 +50,13 @@ Authtokens are user-specific tokens generated when a user logs into Contentstack
 
 #### How to Get Authtoken
 
-To retrieve the authtoken, log into your Contentstack account by using the “[Log into your account](/docs/developers/apis/content-management-api/#logging-in-out)” request under “[User Session](/docs/developers/apis/content-management-api/#user-session).” This request will return the authtoken in the response body.
+To retrieve the authtoken, log into your Contentstack account by using the “[Log into your account](./content-management-api.md#logging-in-out)” request under “[User Session](./content-management-api.md#user-session).” This request will return the authtoken in the response body.
 
-You can generate multiple authtokens by executing the “[Log into your account](/docs/developers/apis/content-management-api/#logging-in-out)” request multiple times. These tokens do not have an expiration limit. However, currently, there is a maximum limit of 20 valid tokens that a user can use per account at a time to execute the CMA requests.
+You can generate multiple authtokens by executing the “[Log into your account](./content-management-api.md#logging-in-out)” request multiple times. These tokens do not have an expiration limit. However, currently, there is a maximum limit of 20 valid tokens that a user can use per account at a time to execute the CMA requests.
 
 **Note:** If you already have valid 20 tokens, creating a new authtoken will automatically expire the oldest authtoken without warning.
 
-For SSO-enabled organizations, the “[Log in to your account](/docs/developers/apis/content-management-api/#logging-in-out)” request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require a user authtoken will not work. The owner and users of the organization who have permission to access the organization without SSO can use the Content Management APIs. Learn more about [REST API Usage](/docs/developers/single-sign-on/rest-api-usage).
+For SSO-enabled organizations, the “[Log in to your account](./content-management-api.md#logging-in-out)” request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require a user authtoken will not work. The owner and users of the organization who have permission to access the organization without SSO can use the Content Management APIs. Learn more about [REST API Usage](../../cs-docs/developers/single-sign-on/rest-api-usage.md).
 
 ### Rate limiting
 

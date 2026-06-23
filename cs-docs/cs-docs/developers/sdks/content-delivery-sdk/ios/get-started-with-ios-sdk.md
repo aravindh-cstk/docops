@@ -16,7 +16,7 @@ This page explains how to install, configure, and initialize the Contentstack iO
 
 ## Get Started with iOS SDK
 
-This guide will help you get started with Contentstack [iOS SDK](/docs/developers/sdks/content-delivery-sdk/ios/about-objective-c-sdk/) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [iOS SDK](./about-objective-c-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 To get started with iOS SDK, you will need the following:
@@ -25,7 +25,7 @@ To get started with iOS SDK, you will need the following:
 - iOS 10 or later.
 
 ## SDK Installation and Setup
-Contentstack offers six [regions](/docs/developers/contentstack-regions/about-regions/) **AWS North America**,** AWS Europe**, **Azure North America**, **Azure Europe**, **GCP North America, **and **GCP Europe** as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.
+Contentstack offers six [regions](../../../contentstack-regions/about-regions.md) **AWS North America**,** AWS Europe**, **Azure North America**, **Azure Europe**, **GCP North America, **and **GCP Europe** as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.
 
 To use SDKs for the Europe, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.
 
@@ -59,7 +59,7 @@ import Contentstack
 ```
 
 ## Initialize SDK
-To initialize the SDK, specify **application context**, **the stack’s API key**, [**Delivery token**](/docs/developers/create-tokens/about-delivery-tokens/), and name of the [**environment**](/docs/developers/set-up-environments/about-environments/)** **where you will publish the content, as shown in the snippet below:
+To initialize the SDK, specify **application context**, **the stack’s API key**, [**Delivery token**](../../../create-tokens/about-delivery-tokens.md), and name of the [**environment**](../../../set-up-environments/about-environments.md)** **where you will publish the content, as shown in the snippet below:
 - Swift
 - ObjC
 
@@ -108,7 +108,7 @@ Let’s look at the various cache policies available for use:
 | CACHE_THEN_NETWORK | If you set CACHE_THEN_NETWORK as the cache policy, the SDK gets data from cache, and then makes a network call. (A success callback will be invoked twice.) |
 | CACHE_ONLY | If you set CACHE_ONLY as the cache policy, the SDK gets data from the cache. |
 
-You can set a cache policy on an [entry](/docs/content-managers/author-content/about-entries), an [asset](/docs/content-managers/author-content/about-assets), and/or a query object.
+You can set a cache policy on an [entry](../../../../content-managers/author-content/about-entries.md), an [asset](../../../../content-managers/author-content/about-assets.md), and/or a query object.
 
 ### Setting a cache policy on an entry
 To set the cache policy to all the query objects of an entry, refer to the code below:
@@ -193,10 +193,10 @@ Query* query = [contentType query];
 ```
 
 ## Basic Queries
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api/) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
 ### Get a Single Entry
-To retrieve a single entry from a [content type](/docs/developers/create-content-types/about-content-types/), refer to the code below::
+To retrieve a single entry from a [content type](../../../create-content-types/about-content-types.md), refer to the code below::
 - Swift
 - ObjC
 
@@ -242,10 +242,10 @@ Query *query = [contentType query];
 ```
 These were the examples of some of the basic queries of the iOS SDK. For advanced queries, refer to the Contentstack iOS [API reference](/docs/developers/ios/api-reference/).
 
-**Note:** For more information on how to query entries and assets, refer the [Queries](/docs/developers/apis/content-delivery-api/#queries) section of our [Content Delivery API](/docs/developers/apis/content-delivery-api/) documentation.
+**Note:** For more information on how to query entries and assets, refer the [Queries](../../../../../api-docs/api-detail/content-delivery-api.md#queries) section of our [Content Delivery API](../../../../../api-docs/api-detail/content-delivery-api.md) documentation.
 
 #### Paginating Responses
-In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified ContentType. You can paginate and retrieve the rest of the items in batches using the [skip](/docs/developers/sdks/content-delivery-sdk/ios/reference/#query-skipobjects) and [limit](/docs/developers/sdks/content-delivery-sdk/ios/reference/#query-limitobjects) parameters in subsequent requests.
+In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified ContentType. You can paginate and retrieve the rest of the items in batches using the [skip](../../../create-content-types/reference.md#query-skipobjects) and [limit](../../../create-content-types/reference.md#query-limitobjects) parameters in subsequent requests.
 - Swift
 - ObjC
 
@@ -276,7 +276,7 @@ Query *query = [contentType query];
 ## Limitations
 - We have a URL size limitation of 8KB on API Requests that hit our CDN services. Any Request URL that goes above this size limit will receive the `400 - Bad request` error response. Please make sure you limit the size of your API Requests.
 - The iOS SDK does not support multiple content types referencing in a single query.
-- Currently, the iOS SDK does not yet support querying Global Field schemas ([All Global Fields](/docs/developers/apis/content-delivery-api/#all-global-fields) and [Single Global Field](/docs/developers/apis/content-delivery-api/#single-global-field)). You can include these details when querying content type details ([All Content Types](/docs/developers/apis/content-delivery-api/#all-content-types) and [Single Content Type](/docs/developers/apis/content-delivery-api/#single-content-type)) with the `include_global_field_schema query parameter`.
+- Currently, the iOS SDK does not yet support querying Global Field schemas ([All Global Fields](../../../../../api-docs/api-detail/content-delivery-api.md#all-global-fields) and [Single Global Field](../../../../../api-docs/api-detail/content-delivery-api.md#single-global-field)). You can include these details when querying content type details ([All Content Types](../../../../../api-docs/api-detail/content-delivery-api.md#all-content-types) and [Single Content Type](../../../../../api-docs/api-detail/content-delivery-api.md#single-content-type)) with the `include_global_field_schema query parameter`.
 
 ## More Resources
 - [iOS News App](/docs/developers/sample-apps/build-an-ios-news-app-using-contentstacks-ios-sdk/)
@@ -286,8 +286,8 @@ Query *query = [contentType query];
 - [Swift SDK E-Commerce App](/docs/developers/sample-apps/build-an-e-commerce-app-using-contentstack-s-swift-sdk/)
 - [API Reference for IOS SDK](https://www.contentstack.com/docs/developers/ios/api-reference/)
 - [API Reference for Swift SDK](https://www.contentstack.com/docs/developers/swift/api-reference/)
-- [iOS SDK Change Log](/docs/developers/sdks/content-delivery-sdk/ios/ios-sdk-changelog/)
-- [Swift SDK Change Log](/docs/developers/sdks/content-delivery-sdk/ios/swift-sdk-changelog/)
+- [iOS SDK Change Log](./ios-sdk-changelog.md)
+- [Swift SDK Change Log](./swift-sdk-changelog.md)
 - [View and Download iOS SDK repository on GitHub](https://github.com/contentstack/contentstack-ios)
 
 ## Common questions

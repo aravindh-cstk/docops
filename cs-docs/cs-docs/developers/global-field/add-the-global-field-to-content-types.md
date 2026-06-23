@@ -26,12 +26,12 @@ To add a Global field to your content type, log in to your [Contentstack account
 - To modify the properties of the Global field, click the **Properties** icon. This opens a modal with two tabs: **Basic** and **Advanced**.
 - In the **Basic** tab, under **Select Global Field**, choose your Global field. The selected field appears in your content type as a field, containing the required sub-fields.**Note:** You can add up to **25 Global** fields in a content type.
 - You can modify the following properties of a Global field at any time:
-  - [**Display Name**](/docs/developers/create-content-types/display-name): Defines how the field appears in the UI.
-  - [**Unique ID**](/docs/developers/create-content-types/unique-id): A system-generated identifier for the field.
-  - [**Instruction Value**](/docs/developers/create-content-types/instruction-value): Guides users in filling the field.
-  - [**Help Text**](/docs/developers/create-content-types/help-text): Displays additional information to assist users.
-  - [**Multiple**](/docs/developers/create-content-types/multiple): Allows multiple instances for the field.
-  - [**Non-localizable**](/docs/developers/create-content-types/non-localizable): Set the field’s data only in the master-language entry.
+  - [**Display Name**](../create-content-types/display-name.md): Defines how the field appears in the UI.
+  - [**Unique ID**](../create-content-types/unique-id.md): A system-generated identifier for the field.
+  - [**Instruction Value**](../create-content-types/instruction-value.md): Guides users in filling the field.
+  - [**Help Text**](../create-content-types/help-text.md): Displays additional information to assist users.
+  - [**Multiple**](../create-content-types/multiple.md): Allows multiple instances for the field.
+  - [**Non-localizable**](../create-content-types/non-localizable.md): Set the field’s data only in the master-language entry.
 
 **Note:**
 - Any changes to a Global field, its subfields, or properties automatically apply to all content types using the field.

@@ -17,7 +17,7 @@ This page lists the supported Advanced Search operators in Contentstack for diff
 
 ## Supported Operators for Various Data Types
 
-When working with [Advanced Search](https://www.contentstack.com/docs/content-managers/search-content/advanced-search) in Contentstack, it is essential to understand the different operators available for querying fields across various data types. These operators enable you to filter data efficiently. The table below outlines the supported operators for each data type, helping you make the most out of Contentstack’s search and filtering capabilities:
+When working with [Advanced Search](./advanced-search.md) in Contentstack, it is essential to understand the different operators available for querying fields across various data types. These operators enable you to filter data efficiently. The table below outlines the supported operators for each data type, helping you make the most out of Contentstack’s search and filtering capabilities:
 
 | Fields | Supported Operators |
 |---|---|

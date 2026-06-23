@@ -46,8 +46,8 @@ Next, let's look at the steps to set up the trigger event.
 
 Click **Configure Trigger** from the left navigation panel.
 - Within the **Configure Trigger** step, click the **Contentstack** connector.
-- Add your Contentstack account. For more information, refer to the [Contentstack Trigger ](/docs/developers/automation-hub-connectors/contentstack-trigger/)documentation.
-- Once done, select** Entry** **Created** from the list of trigger events and define the rest of the steps needed to set up the trigger (refer to **steps 3 to 12** in [Contentstack Trigger](/docs/developers/automation-hub-connectors/contentstack-trigger/)).
+- Add your Contentstack account. For more information, refer to the [Contentstack Trigger ](./contentstack-trigger.md)documentation.
+- Once done, select** Entry** **Created** from the list of trigger events and define the rest of the steps needed to set up the trigger (refer to **steps 3 to 12** in [Contentstack Trigger](./contentstack-trigger.md)).
 - Click **Test Trigger** to execute and test the trigger that you configured.
 
 ## Set up the Algolia Action Connector
@@ -75,7 +75,7 @@ This sets the **Algolia** action connector.
 
 Now, let s see how you can test out your automation. To do so, perform the steps given below:
 
-Go to Contentstack and [create an entry](/docs/content-managers/author-content/create-an-entry) for the content type that you selected in your trigger event in step 2.
+Go to Contentstack and [create an entry](../content-managers/author-content/create-an-entry.md) for the content type that you selected in your trigger event in step 2.
 This should trigger your automation.
 - Now, navigate to Algolia, log in and check the latest indexed entry in your **Algolia Index** section. If your automation worked, you should see the following output:
 

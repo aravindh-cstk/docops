@@ -17,21 +17,21 @@ This page explains which identity providers (IdPs) are supported for Contentstac
 
 ## Supported Identity Providers
 
-You can integrate [Contentstack SSO](/docs/developers/single-sign-on/about-single-sign-on-sso) with all the identity providers (IdP) that support SAML 2.0 protocol. This includes all major IdPs such as **Okta**, **OneLogin**, **Azure AD**, **AD FS**, **Google G-Suite**, **Ping Identity**, **Ping Federate**, **Auth0**, **LastPass**, **Clear Login**, **Centrify**, and more.
+You can integrate [Contentstack SSO](./about-single-sign-on-sso.md) with all the identity providers (IdP) that support SAML 2.0 protocol. This includes all major IdPs such as **Okta**, **OneLogin**, **Azure AD**, **AD FS**, **Google G-Suite**, **Ping Identity**, **Ping Federate**, **Auth0**, **LastPass**, **Clear Login**, **Centrify**, and more.
 
 We have step-by-step SSO setup guides for some of the popular IdPs. You can check out the details in the corresponding articles given in the list below. Or you can refer to our general guide on setting up SSO with any IdP.
 
 ## Guides for setting up SSO with specific IdPs
 
-- [Set up SSO with Okta](/docs/developers/single-sign-on/set-up-sso-with-okta) (*supports IdP Role Mapping*)
-- [Set up SSO with OneLogin](/docs/developers/single-sign-on/set-up-sso-with-onelogin) (*supports IdP Role Mapping*)
-- [Set up SSO with Microsoft Azure AD](/docs/developers/single-sign-on/set-up-sso-with-microsoft-azure-ad) (*supports IdP Role Mapping*)
-- [Set up SSO with AD FS](/docs/developers/single-sign-on/set-up-sso-with-adfs) (*no support for IdP Role Mapping yet*)
-- [Set up SSO with Google G-Suite](/docs/developers/single-sign-on/set-up-sso-with-google-g-suite) (*no support for IdP Role Mapping yet*)
+- [Set up SSO with Okta](./set-up-sso-with-okta.md) (*supports IdP Role Mapping*)
+- [Set up SSO with OneLogin](./set-up-sso-with-onelogin.md) (*supports IdP Role Mapping*)
+- [Set up SSO with Microsoft Azure AD](./set-up-sso-with-microsoft-azure-ad.md) (*supports IdP Role Mapping*)
+- [Set up SSO with AD FS](./set-up-sso-with-adfs.md) (*no support for IdP Role Mapping yet*)
+- [Set up SSO with Google G-Suite](./set-up-sso-with-google-g-suite.md) (*no support for IdP Role Mapping yet*)
 
 ## Guide for setting up SSO with other SAML 2.0 IdPs
 
-- [Set up SSO with other SAML 2.0 IdP](/docs/developers/single-sign-on/set-up-sso-in-contentstack)
+- [Set up SSO with other SAML 2.0 IdP](./set-up-sso-in-contentstack.md)
 
 ## Common questions
 

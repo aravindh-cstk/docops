@@ -16,9 +16,9 @@ This page explains the **Boolean** input field in Contentstack, including what i
 
 ## Boolean
 
-The **Boolean **input [field](/docs/developers/create-content-types/about-fields) enables users to input a “true” or “false” value in an [entry](/docs/content-managers/working-with-entries/about-entries). When you [add this field in content type](/docs/developers/create-custom-fields/use-custom-field-in-content-types), it reflects as a toggle switch on the entry page.
+The **Boolean **input [field](./about-fields.md) enables users to input a “true” or “false” value in an [entry](../../content-managers/author-content/about-entries.md). When you [add this field in content type](../create-custom-fields/use-custom-field-in-content-types.md), it reflects as a toggle switch on the entry page.
 
-This field possesses certain [properties](/docs/developers/create-content-types/about-field-properties) that you can change at any time as per your needs. The properties that can be modified are “[Display Name](/docs/developers/create-content-types/display-name),” “[Unique ID](/docs/developers/create-content-types/unique-id),” “[Instruction Value](/docs/developers/create-content-types/instruction-value),” “[Help Text](/docs/developers/create-content-types/help-text),” “[Default Value](/docs/developers/create-content-types/default-value),” and “[Non-localizable](/docs/developers/create-content-types/non-localizable).”
+This field possesses certain [properties](./about-field-properties.md) that you can change at any time as per your needs. The properties that can be modified are “[Display Name](./display-name.md),” “[Unique ID](./unique-id.md),” “[Instruction Value](./instruction-value.md),” “[Help Text](./help-text.md),” “[Default Value](./default-value.md),” and “[Non-localizable](./non-localizable.md).”
 
 After adding this field in content type, you will see it on your entry page as shown below.
 
@@ -37,14 +37,14 @@ In this example, the users will have the liberty to choose to agree or disagree 
 
 Follow the steps to create a clickwrap Boolean field:
 
-- Log in to your [Contentstack account](https://www.contentstack.com/login/), [create a stack](/docs/developers/set-up-stack/create-a-new-stack), and [add a new content type](/docs/developers/create-content-types/create-a-content-type) to it.
+- Log in to your [Contentstack account](https://www.contentstack.com/login/), [create a stack](../set-up-stack/create-a-new-stack.md), and [add a new content type](./create-a-content-type.md) to it.
 - Click on the "**+" **symbol (**Insert a field**) and add the **Boolean** field along with other required fields.
 - When adding the Boolean field, under the **Boolean Properties** section add the following details:**Display Name**: Add a display name (For example, “I agree”)
 - **Unique ID**:* Default value*
 - **Help Text**: You can provide additional information about the field (for example, "Visit our website to learn more about our privacy policies")
 - **Instruction Value**: It helps you add instructions to this field (for example, “Confirm by checking if you have read and agreed to our Terms and Conditions”)
 - Click on the **Save and Close** button.
-- Finally, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) to see the Boolean field in action.
+- Finally, [create an entry](../../content-managers/author-content/create-an-entry.md) to see the Boolean field in action.
 
 ## Example 2 - Default Boolean Value
 
@@ -63,13 +63,13 @@ Follow the steps to create a default Boolean field:
 - Now, add a new** Boolean field **with **Display Name** (for example, “By clicking here you agree to our policies of service”).
 - Click on the **Save and Close **button.
 
-Now, [create an entry](https://www.contentstack.com/docs/content-managers/working-with-entries/create-an-entry/) and you will find the setup working. The default fields are predefined and can be seen as checked, while the undefined field is not checked as shown below.
+Now, [create an entry](../../content-managers/author-content/create-an-entry.md) and you will find the setup working. The default fields are predefined and can be seen as checked, while the undefined field is not checked as shown below.
 
 ## Additional Resources
 
-- Contentstack enables you to hide/show a field when certain conditions are met using [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules).
-- If you are adding this field to the content type using our [CMA request](https://www.contentstack.com/docs/developers/apis/content-management-api/#create-a-content-type), refer to the [JSON payload of the Boolean](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#boolean) field.
-- Editing any current field in existing Content Type might result in data loss. To prevent data loss, make sure to check out our [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide.
+- Contentstack enables you to hide/show a field when certain conditions are met using [Field Visibility Rules](./about-field-visibility-rules.md).
+- If you are adding this field to the content type using our [CMA request](../../../api-docs/api-detail/content-management-api.md#create-a-content-type), refer to the [JSON payload of the Boolean](./json-schema-for-creating-a-content-type.md#boolean) field.
+- Editing any current field in existing Content Type might result in data loss. To prevent data loss, make sure to check out our [Content Type Change Management](../content-modeling/content-type-change-management.md) guide.
 
 ## Common questions
 
@@ -83,4 +83,4 @@ The properties that can be modified are “Display Name,” “Unique ID,” “
 Yes, Contentstack allows you to have a **Default Value** of the radio button or Boolean field, and the value entered will appear by default while creating an entry for this content type.
 
 **Where can I find the JSON payload/schema for the Boolean field when using CMA?**  
-Refer to the [JSON payload of the Boolean](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#boolean) field.
+Refer to the [JSON payload of the Boolean](./json-schema-for-creating-a-content-type.md#boolean) field.

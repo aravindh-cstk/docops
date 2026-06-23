@@ -18,7 +18,7 @@ This page explains how to clone a Contentstack stack using the Contentstack Comm
 
 Contentstack allows you to create a copy of a stack (along with the data) or export all data of a stack into a new or existing empty stack by using the ‘stack-clone’ CLI command.
 
-**Note**: Before executing this command, ensure you have the required permissions for creating or accessing the destination stack. Refer to the [Stack Roles](/docs/developers/invite-users-and-assign-roles/types-of-roles) documentation to check permissions.
+**Note**: Before executing this command, ensure you have the required permissions for creating or accessing the destination stack. Refer to the [Stack Roles](../../invite-users-and-assign-roles/types-of-roles.md) documentation to check permissions.
 
 You can clone a stack by performing the following two steps:
 - [Log in to the CLI session](#log-in-to-the-cli-session)
@@ -67,7 +67,7 @@ Finally, the content of the source stack will be imported into the destination s
 
 ## Points to Remember
 - To import the exported content into an existing destination stack, make sure you have permission to create or update the content of the destination stack.
-- In case you want to create a new stack for storing the cloned content, make sure you have “[owner](/docs/owners-and-admins/organization-roles#organization-owner)” or “[admin](/docs/owners-and-admins/organization-roles#organization-admin)” rights in that organization.
+- In case you want to create a new stack for storing the cloned content, make sure you have “[owner](../../organization/organization-roles.md#organization-owner)” or “[admin](../../organization/organization-roles.md#organization-admin)” rights in that organization.
 - While importing workflows from one stack to another, admins and workflow stage users are not included. Therefore, admins and stage users of your workflows will not be migrated to the new stack.
 
 ## Common questions

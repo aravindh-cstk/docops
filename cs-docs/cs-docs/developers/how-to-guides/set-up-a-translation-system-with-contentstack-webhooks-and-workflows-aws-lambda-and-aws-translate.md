@@ -27,13 +27,13 @@ Set up a Translation System with Contentstack Webhooks and Workflows, AWS Lambda
 
 ##### Content
 
-**Note:** This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to use the [Translation](https://www.contentstack.com/docs/developers/marketplace-apps#translation) apps, visit our [Marketplace]( https://www.contentstack.com/docs/developers/marketplace-apps) documentation.
+**Note:** This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to use the [Translation](../marketplace-apps.md#translation) apps, visit our [Marketplace]( https://www.contentstack.com/docs/developers/marketplace-apps) documentation.
 
-While Contentstack does not offer translation services, it offers easy integration with third-party translation providers. In this guide, we will learn how to set up a translation system using Contentstack's [webhook](/docs/developers/set-up-webhooks/about-webhooks) and [workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) along with AWS Lambda and AWS Translate.
+While Contentstack does not offer translation services, it offers easy integration with third-party translation providers. In this guide, we will learn how to set up a translation system using Contentstack's [webhook](../set-up-webhooks/about-webhooks.md) and [workflows](../set-up-workflows-and-publish-rules/about-workflows.md) along with AWS Lambda and AWS Translate.
 
 **Additional Resource:** You can also set up a translation system using Memsource, read our guide on how to [Set up Translation System with Contentstack Webhooks, Memsource, and AWS Lambda](/docs/developers/how-to-guides/setting-up-translation-system-with-contentstack-webhooks-memsource-and-aws-lambda).
 
-Here's a quick overview of the process: When the [workflow stage](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages) of [entry](/docs/content-managers/author-content/about-entries) in the master locale changes to “Send to Translation,” a webhook is triggered, which invokes an AWS Lambda code. This code translates content using AWS Translate and then localizes the entry with the translated content using a Content Management API request. This also changes the workflow stage status of the entry to “Review Translation.”
+Here's a quick overview of the process: When the [workflow stage](../set-up-workflows-and-publish-rules/about-workflow-stages.md) of [entry](../../content-managers/author-content/about-entries.md) in the master locale changes to “Send to Translation,” a webhook is triggered, which invokes an AWS Lambda code. This code translates content using AWS Translate and then localizes the entry with the translated content using a Content Management API request. This also changes the workflow stage status of the entry to “Review Translation.”
 
 **Note**: SSO-enabled organizations can use the management token to make API requests.
 
@@ -50,15 +50,15 @@ Here's a quick overview of the process: When the [workflow stage](/docs/develope
 - [Trigger a Webhook to Initiate Translation](#trigger-a-webhook-to-initiate-translation)
 - [Tryout the Set up](#tryout-the-set-up)
 - ## Set up the Essentials
-First, [create a stack](/docs/developers/set-up-stack/create-a-new-stack), and [add a content type](/docs/developers/create-content-types) (in our example it is **AWS Translate**), [add entries](/docs/content-managers/working-with-entries/create-an-entry) to it, at least one additional [language](/docs/developers/multilingual-content), and a publishing [environment](/docs/developers/set-up-environments).
+First, [create a stack](../set-up-stack/create-a-new-stack.md), and [add a content type](/docs/developers/create-content-types) (in our example it is **AWS Translate**), [add entries](../../content-managers/author-content/create-an-entry.md) to it, at least one additional [language](/docs/developers/multilingual-content), and a publishing [environment](/docs/developers/set-up-environments).
 For this example you can add **French (fr)** and **German (de) **as two additional language.
 **Note: **Though Contentstack supports wide variety of languages, for this extension to work smoothly add [languages which are supported by AWS translate](https://docs.aws.amazon.com/translate/latest/dg/what-is.html).
 - For this exercise we have created a sample code, contact our [Support](mailto:support@contentstack.com) team to get the code. The support team will provide you **AWS Translate** zip file. Unzip the file and you will find the following folders:**global field: **This folder contains a file named** locale** which you can import as a global field in your stack.
 - **content type**: This folder contains a JSON file of the content type which you can import to your stack.
 - **lambda function**: Move inside the** lambda function **folder and upload the** index.zip** file in lambda function in step 3.
-- Goto the **Global Fields **section of your stack and[ import the global field](/docs/developers/global-field/import-a-global-field) file(in our example it is **Locale Field**) with a select field defined within it.
+- Goto the **Global Fields **section of your stack and[ import the global field](../global-field/import-a-global-field.md) file(in our example it is **Locale Field**) with a select field defined within it.
 This global field will display and let you select AWS supported languages in the field of your entry.
-- Now,[ import the content type](/docs/developers/create-content-types/import-a-content-type) file which we downloaded in the earlier step. After importing the content type file, [add the global field](/docs/developers/global-field/add-the-global-field-to-content-types) (**Locale Field**) to your **AWS Translate** content type.
+- Now,[ import the content type](../create-content-types/import-a-content-type.md) file which we downloaded in the earlier step. After importing the content type file, [add the global field](../global-field/add-the-global-field-to-content-types.md) (**Locale Field**) to your **AWS Translate** content type.
 After adding the global field to your content type, it should look similar to the one given below:
 
 Once you have these configured, then you're ready to begin the integration process for translation.
@@ -98,7 +98,7 @@ That's it! We have set up the lambda function and created an API Gateway to invo
 Once you do this setup, AWS Lambda will run the code that we have uploaded and translate the content.
 
 ## Trigger a Webhook to Initiate Translation
-We will now [set up a webhook](/docs/developers/set-up-webhooks/create-a-webhook) that triggers when the entry workflow stage is set to **Send to Translation**. To do this, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
+We will now [set up a webhook](../set-up-webhooks/create-a-webhook.md) that triggers when the entry workflow stage is set to **Send to Translation**. To do this, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
 Click “Settings” (or press “S”) and select **Webhooks **(press “alt + W” for Windows, and “option + W” for macOS).
 - Click on **+ New Webhook.**

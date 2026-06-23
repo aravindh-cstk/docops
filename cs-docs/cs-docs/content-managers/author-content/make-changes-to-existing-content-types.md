@@ -17,11 +17,11 @@ This page explains how to make changes to existing Content Types, who is allowed
 
 ## Make Changes to Existing Content Types
 
-**Note: **Only users with the [permissions to edit a Content Type](/docs/developers/invite-users-and-assign-roles/types-of-roles#stack-roles-and-permissions-overview) can perform this action.
+**Note: **Only users with the [permissions to edit a Content Type](../../developers/invite-users-and-assign-roles/types-of-roles.md#stack-roles-and-permissions-overview) can perform this action.
 
-If you have created and published entries using a [Content Type](/docs/developers/create-content-types/about-content-types), modifying its schema could potentially result in data loss for those existing entries. However, by adhering to specific guidelines, you can make schema changes safely—without risking data loss or affecting the live content on your website or app.
+If you have created and published entries using a [Content Type](../../developers/create-content-types/about-content-types.md), modifying its schema could potentially result in data loss for those existing entries. However, by adhering to specific guidelines, you can make schema changes safely—without risking data loss or affecting the live content on your website or app.
 
-To help you manage content type schema changes effectively, we have prepared a comprehensive guide outlining the steps for safe [content type change management](/docs/developers/how-to-guides/content-type-change-management).
+To help you manage content type schema changes effectively, we have prepared a comprehensive guide outlining the steps for safe [content type change management](../../developers/content-modeling/content-type-change-management.md).
 
 ## Common questions
 

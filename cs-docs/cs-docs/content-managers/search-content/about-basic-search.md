@@ -17,11 +17,11 @@ This page explains what Basic Search is, how it works for entries and assets, an
 
 ## About Basic Search
 
-Basic Search (press “**K**”) is a full-text search that compares every word of your search phrase with all the values used in all the fields of [entries](/docs/content-managers/working-with-entries/about-entries) or [assets](/docs/content-managers/working-with-assets/about-assets). It then sorts the results based on a robust algorithm created to provide the best-matched results first.
+Basic Search (press “**K**”) is a full-text search that compares every word of your search phrase with all the values used in all the fields of [entries](../author-content/about-entries.md) or [assets](/docs/content-managers/working-with-assets/about-assets). It then sorts the results based on a robust algorithm created to provide the best-matched results first.
 
-Hence, it saves the efforts of manually going through the “[Content Types](/docs/developers/create-content-types/about-content-types)” or “Assets” section to get a particular content.
+Hence, it saves the efforts of manually going through the “[Content Types](../../developers/create-content-types/about-content-types.md)” or “Assets” section to get a particular content.
 
-Let’s say, your [stack](/docs/developers/set-up-stack/about-stack) contains multiple Content Types with several entries and assets and you want to search for the “Smartphone” entry. In this case, you need not have to browse through your Content Types and navigate to that entry, instead you can use the “Basic Search” for simply locating that entry, thus reducing efforts and time.
+Let’s say, your [stack](../../developers/set-up-stack/about-stack.md) contains multiple Content Types with several entries and assets and you want to search for the “Smartphone” entry. In this case, you need not have to browse through your Content Types and navigate to that entry, instead you can use the “Basic Search” for simply locating that entry, thus reducing efforts and time.
 
 **Note:** You can use the **Entries** or **Assets** option from the drop-down menu located in the left corner of the search bar to narrow down your search results.
 

@@ -25,11 +25,11 @@ Add to Release in Visual Editor
 
 ##### Content
 
-[Visual Editor](/docs/content-managers/visual-editor/about-visual-editor) allows you to add one or more entries to a release directly from the page editing interface. This reduces context switching and helps content teams prepare and organize content for publishing without leaving the Visual Editor. Whether you are preparing a single update or coordinating changes across multiple entries, this feature simplifies release management within the editing workflow.
+[Visual Editor](./about-visual-editor.md) allows you to add one or more entries to a release directly from the page editing interface. This reduces context switching and helps content teams prepare and organize content for publishing without leaving the Visual Editor. Whether you are preparing a single update or coordinating changes across multiple entries, this feature simplifies release management within the editing workflow.
 
 ## Add Entries to a Release from Visual Editor
 To add multiple entries to a release using Visual Editor, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - Click the horizontal ellipsis and select **Add to Release**.
 - In the **Add to Release** modal, select one or more entries from the list.A green checkmark indicates the entry is ready to be added.

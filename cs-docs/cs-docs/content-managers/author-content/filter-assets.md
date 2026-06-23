@@ -17,13 +17,13 @@ This page explains how to filter and find assets in Contentstack using predefine
 
 ## Filter Assets
 
-Contentstack offers predefined [views](/docs/content-managers/search-content/about-views) tailored to common search scenarios. These **Popular Views** provide quick access to relevant information, reducing the need for extensive manual setup and enhancing navigation:
+Contentstack offers predefined [views](../search-content/about-views.md) tailored to common search scenarios. These **Popular Views** provide quick access to relevant information, reducing the need for extensive manual setup and enhancing navigation:
 - **All Assets**: Displays a list of all assets available in the stack.
 - **Modified by Me**: Lists assets modified by you.
 - **Published by Me**: Lists assets published by you.
 - **Not Published**: Displays a list of assets that have not been published in any environment.
 
-In the **My Views** section, you can [save](/docs/content-managers/search-content/save-your-views) and [manage](/docs/content-managers/search-content/use-saved-views) your customized views. After applying specific filters and advanced queries, you can save these configurations for quick access in the future.
+In the **My Views** section, you can [save](../search-content/save-your-views.md) and [manage](../search-content/use-saved-views.md) your customized views. After applying specific filters and advanced queries, you can save these configurations for quick access in the future.
 
 To access the search filters for assets, navigate to your stack and click the **Filters** tab in the left panel. Here’s what you will find:
 - **Asset Folders**: Lists all available asset folders in the stack.
@@ -49,7 +49,7 @@ Using filters effectively helps you manage and locate your assets with precision
 Navigate to your stack and click the **Filters** tab in the left panel.
 
 **Can I save my asset filter setup for later use?**  
-Yes. In the **My Views** section, you can [save](/docs/content-managers/search-content/save-your-views) and [manage](/docs/content-managers/search-content/use-saved-views) your customized views.
+Yes. In the **My Views** section, you can [save](../search-content/save-your-views.md) and [manage](../search-content/use-saved-views.md) your customized views.
 
 **How do I change which filters appear in the left panel?**  
 Click the **Manage Filters** button at the bottom of the panel, then select which filters to display and rearrange them.

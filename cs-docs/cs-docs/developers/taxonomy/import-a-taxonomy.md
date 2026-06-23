@@ -152,10 +152,10 @@ Now, to import this taxonomy into another stack. To achieve this, you will first
 
 **Additional Resource**:
 - To import your taxonomy in the CSV format, refer to our [template](https://assets.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1adbffddd5548b76/Taxonomy_Sample_CSV_Format.csv).
-- Refer to the [Restricted Keywords for UIDs](/docs/developers/create-content-types/restricted-keywords-for-uids) to avoid using reserved keywords.
+- Refer to the [Restricted Keywords for UIDs](../create-content-types/restricted-keywords-for-uids.md) to avoid using reserved keywords.
 
 To import a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to import a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to import a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Click the **Create New Taxonomy** button, then select **Import** from the drop-down menu.
 - In the **Import Taxonomy** modal, either drag and drop your CSV or JSON file or click **Choose a File** to browse for it.
 - To display your imported taxonomy at the top of the list, tick the box that says **Display this taxonomy at the top of the list**.
@@ -165,7 +165,7 @@ After successfully importing the taxonomy, you can start adding terms to it and 
 
 ## API Reference
 
-To import a taxonomy via API, refer to the [Import a Taxonomy](/docs/developers/apis/content-management-api#import-a-taxonomy) request.
+To import a taxonomy via API, refer to the [Import a Taxonomy](../../../api-docs/api-detail/content-management-api.md#import-a-taxonomy) request.
 
 ## Common questions
 
@@ -176,7 +176,7 @@ A: You can import a taxonomy from a CSV or JSON file.
 A: Go to your stack, navigate to the “Settings” icon (press “S”), select **Taxonomy**, then click **Create New Taxonomy** and choose **Import**.
 
 **Q: Can I import a taxonomy via API instead of the UI?**  
-A: Yes. Refer to the [Import a Taxonomy](/docs/developers/apis/content-management-api#import-a-taxonomy) request.
+A: Yes. Refer to the [Import a Taxonomy](../../../api-docs/api-detail/content-management-api.md#import-a-taxonomy) request.
 
 **Q: Is there a CSV template available for taxonomy import?**  
 A: Yes. Use the provided [template](https://assets.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1adbffddd5548b76/Taxonomy_Sample_CSV_Format.csv).

@@ -49,7 +49,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 
 ## Use the Calendar app within your Stack
 
-**Note**: Calendar is a Full Page Location app. For more information, refer to the [Full Page Location](https://www.contentstack.com/docs/developers/developer-hub/full-page-location/) documentation.
+**Note**: Calendar is a Full Page Location app. For more information, refer to the [Full Page Location](../developer-hub/full-page-location.md) documentation.
 
 To use the Calendar application in your stack, follow the steps given below:
 
@@ -64,7 +64,7 @@ The Calendar app shows the total number of events scheduled per day. By default,
 
 The app uses color codes and icons to differentiate the Task, Publish, and Release events. The workflow task remains always on top, and the scheduled events include all the publishing entries and releases to be deployed. Scheduled events are sequenced based on the time of publishing.
 
-**Additional Resource**: For more information about Task, Publish, and Release, please refer to the [Workflow Tasks](https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks/), [Publish an Entry](https://www.contentstack.com/docs/content-managers/author-content/publish-an-entry/), and [Releases](https://www.contentstack.com/docs/content-managers/create-and-manage-releases/about-releases/) documentation.
+**Additional Resource**: For more information about Task, Publish, and Release, please refer to the [Workflow Tasks](../set-up-workflows-and-publish-rules/about-workflow-tasks.md), [Publish an Entry](../../content-managers/author-content/publish-an-entry.md), and [Releases](../../content-managers/create-and-manage-releases/about-releases.md) documentation.
 
 ### Tasks
 

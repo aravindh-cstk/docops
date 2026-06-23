@@ -37,7 +37,7 @@ During the lockout period, login access is restricted. However, authorized users
 
 **Note:**
 - Starting from the **5th failed** login attempt, Contentstack sends an email notification for each additional failed attempt. The email includes the login attempt details, such as the browser, device, and IP address used, to help you identify suspicious activity.
-- After the **10th failed** attempt, the user account remains locked until manually reviewed. Contact your Contentstack organization [admin](/docs/developers/organization/organization-roles#organization-admin) or [owner](/docs/developers/organization/organization-roles#organization-owner) to get unlocked.
+- After the **10th failed** attempt, the user account remains locked until manually reviewed. Contact your Contentstack organization [admin](../organization/organization-roles.md#organization-admin) or [owner](../organization/organization-roles.md#organization-owner) to get unlocked.
 
 ## Unlock Users
 
@@ -64,7 +64,7 @@ To avoid account lockouts, follow these best practices to ensure secure and unin
 - Use a secure and updated password manager
 - Reset your password promptly if forgotten
 
-For additional security, enable [Multi-Factor Authentication (MFA)](/docs/developers/security/multi-factor-authentication) to protect your account with an extra layer of verification.
+For additional security, enable [Multi-Factor Authentication (MFA)](./multi-factor-authentication.md) to protect your account with an extra layer of verification.
 
 ## Common questions
 

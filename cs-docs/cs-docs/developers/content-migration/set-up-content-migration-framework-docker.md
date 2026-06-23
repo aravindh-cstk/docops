@@ -17,7 +17,7 @@ This page explains how to install the Contentstack Migration Framework using Doc
 
 ## Set Up Content Migration Framework (Docker)
 
-The **Contentstack Migration Framework** enables users to seamlessly migrate content from a legacy **Content Management System** (**CMS**) to Contentstack. The framework simplifies the migration process with an intuitive interface and step-by-step workflow for importing content, mapping content types, and migrating data into a [stack](/docs/developers/set-up-stack/about-stack) within Contentstack.
+The **Contentstack Migration Framework** enables users to seamlessly migrate content from a legacy **Content Management System** (**CMS**) to Contentstack. The framework simplifies the migration process with an intuitive interface and step-by-step workflow for importing content, mapping content types, and migrating data into a [stack](../set-up-stack/about-stack.md) within Contentstack.
 
 This guide outlines how to install the migration framework using Docker on Windows and macOS systems.
 
@@ -66,7 +66,7 @@ C:\\Users\\{{username}}\\data\\{{sitecore_export}}.zip
 **Note:** The file type may vary depending on your legacy CMS. For example, Sitecore data is exported in ZIP format, whereas Contentful data is exported in JSON.
 - Once the installation is complete, navigate to the `http://localhost:3000` URL to access Contentstack Migration Framework.
 
-This completes the installation of Contentstack Migration Framework. Refer to the [Perform Content Migration](/docs/developers/content-migration#perform-content-migration) section for further steps based on your legacy CMS.
+This completes the installation of Contentstack Migration Framework. Refer to the [Perform Content Migration](../content-migration.md#perform-content-migration) section for further steps based on your legacy CMS.
 
 ## Common questions
 

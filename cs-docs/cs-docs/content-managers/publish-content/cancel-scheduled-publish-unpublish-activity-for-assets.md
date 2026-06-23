@@ -25,14 +25,14 @@ Follow the below steps to cancel a scheduled publish or unpublish action for an 
 You can view the list of historical or current publishing or unpublishing activities on screen.
 - Under **FILTERS**, apply the date range filter to refine the publish queue results based on the specific date on which the asset is scheduled for publishing or unpublishing.
 - From the refined activity list, click on the **Cancel (x)** icon beside an asset that needs to be removed from the publish queue.  
-**Additional Resource**: Learn how to [cancel scheduled publishing or unpublishing activity for an asset](/docs/developers/apis/content-management-api#cancel-scheduled-action) using Contentstack's [Content Management API](/docs/developers/apis/content-management-api).
+**Additional Resource**: Learn how to [cancel scheduled publishing or unpublishing activity for an asset](../../../api-docs/api-detail/content-management-api.md#cancel-scheduled-action) using Contentstack's [Content Management API](../../../api-docs/api-detail/content-management-api.md).
 
 **Note**: You need to cancel scheduled publishing activity by performing the above steps for each individual asset in the publish queue.
 
 ## Cancel Scheduled Publish/Unpublish Activity Using the Content Management API
 
 To cancel the publishing or unpublishing action for assets using Contentstack’s Content Management API, perform the following steps:
-- Log in to Contentstack using the [Authtoken](/docs/developers/create-tokens/types-of-tokens#authentication-tokens-authtokens-) or use the stack’s [Management Token](/docs/developers/create-tokens/types-of-tokens#management-tokens) to authorize your API requests.
+- Log in to Contentstack using the [Authtoken](../../developers/create-tokens/types-of-tokens.md#authentication-tokens-authtokens-) or use the stack’s [Management Token](../../developers/create-tokens/types-of-tokens.md#management-tokens) to authorize your API requests.
 - Make a Content Management API request to retrieve details for publishing or unpublishing activities scheduled on or after a specific date. The API request will look as follows:
 
 ```
@@ -51,7 +51,7 @@ https://api.contentstack.io/v3/publish-queue/{publish_queue_UID}/unschedule
 
 ## API Reference
 
-To cancel scheduled publishing or unpublishing activity of an asset via the API, refer the [Cancel Scheduled Action](/docs/developers/apis/content-management-api#cancel-scheduled-action) API request.
+To cancel scheduled publishing or unpublishing activity of an asset via the API, refer the [Cancel Scheduled Action](../../../api-docs/api-detail/content-management-api.md#cancel-scheduled-action) API request.
 
 ## Common questions
 

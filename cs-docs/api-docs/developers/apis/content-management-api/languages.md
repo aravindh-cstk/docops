@@ -31,7 +31,7 @@ When executing the API call, under the 'Header' section, you need to enter the a
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
+To learn more about the queries, refer to the [Queries](../../../api-detail/content-delivery-api.md#queries) section of the Content Delivery API doc.
 
 #### Query Parameters
 
@@ -93,7 +93,7 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 
 **POST** `/locales`
 
-This call lets you add a new language to your stack. You can either add a [supported language](/docs/developers/multilingual-content/supported-languages) or a [custom language](/docs/developers/multilingual-content/add-a-custom-language) of your choice.  
+This call lets you add a new language to your stack. You can either add a [supported language](../../../../cs-docs/developers/multilingual-content/supported-languages.md) or a [custom language](../../../../cs-docs/developers/multilingual-content/add-a-custom-language.md) of your choice.  
 To configure the permissions for your application via OAuth, please include the cm.languages.management:write scope.
 
 When executing the API call, under the 'Header' section, you need to enter the API key of your stack and the authtoken that you receive after logging into your account.
@@ -328,7 +328,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 ## Fallback Languages
 
-Language fallback allows entries created in a particular language to initially inherit data from the fallback language instead of directly inheriting content from the master language. For more information, refer the documentation for [Fallback Language](/docs/developers/multilingual-content/about-fallback-languages).
+Language fallback allows entries created in a particular language to initially inherit data from the fallback language instead of directly inheriting content from the master language. For more information, refer the documentation for [Fallback Language](../../../../cs-docs/developers/multilingual-content/about-fallback-languages.md).
 
 ### Set a fallback language
 

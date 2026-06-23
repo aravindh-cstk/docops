@@ -37,7 +37,7 @@ Add a Review Comment
 
 Reviewers can provide feedback by adding comments to specific sections of the shared content. This feature promotes collaboration and ensures that all stakeholders contribute to content refinement.
 
-**Note**: Ensure that a preview of the content has been shared. Refer to the [Share a Preview](/docs/content-managers/preview-sharing/share-a-preview) document for more information.
+**Note**: Ensure that a preview of the content has been shared. Refer to the [Share a Preview](./share-a-preview.md) document for more information.
 
 To add a review comment, perform the following steps:
 - Open the **shared preview link** from your email.**Note**: When sharing a preview with external users who are not added to the stack or do not have a Contentstack account, they will be prompted to enter a display name before they can view or comment on the content.

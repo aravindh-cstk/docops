@@ -17,7 +17,7 @@ This page explains how to enable a subset of globally available Assets languages
 
 ## Add Languages to a Workspace
 
-Languages are first [added globally](/docs/assets/add-languages-in-assets) in Assets. These languages form the list of available locales. Spaces and their workspaces do not create languages independently; instead, they select from the available languages and enable only the ones they require.
+Languages are first [added globally](./add-languages-in-assets.md) in Assets. These languages form the list of available locales. Spaces and their workspaces do not create languages independently; instead, they select from the available languages and enable only the ones they require.
 
 Within a space, each workspace adds a subset of languages based on its specific requirements. Assets become available for localization only after languages are added to the workspace. This layered approach ensures controlled localization, avoids unnecessary language clutter, and supports focused regional or campaign-driven workflows.
 

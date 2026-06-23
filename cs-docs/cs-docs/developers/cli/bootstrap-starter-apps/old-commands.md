@@ -36,7 +36,7 @@ In this guide, we will discuss how to use this plugin and automate the process.
 
 ## Log in to Contentstack CLI session
 
-If you haven't installed the Contentstack CLI yet, follow the steps mentioned in the [CLI installation](/docs/developers/cli/install-the-cli) guide and get it installed.
+If you haven't installed the Contentstack CLI yet, follow the steps mentioned in the [CLI installation](../install-the-cli.md) guide and get it installed.
 
 After you have successfully installed the CLI on your machine, you have to log in to the CLI session to run the ‘Bootstrap’ command.
 
@@ -143,7 +143,7 @@ Download the website code from our [GitHub repository](https://codeload.github.c
 
 After downloading the website code, navigate to the root folder and **create** a configuration file named **.env.development.**,
 
-Provide your stack credentials like [API key](/docs/developers/set-up-stack/view-stack-details), [Delivery token](/docs/developers/create-tokens/about-delivery-tokens), and [environment](/docs/developers/set-up-environments/about-environments):
+Provide your stack credentials like [API key](../../set-up-stack/view-stack-details.md), [Delivery token](../../create-tokens/about-delivery-tokens.md), and [environment](../../set-up-environments/about-environments.md):
 
 ```
 REACT_APP_CONTENTSTACK_API_KEY =
@@ -187,7 +187,7 @@ Starter Apps
 **Limitations:**
 
 - When importing content to an existing stack, make sure you don't add duplicate content types. If you try to add similar content types, you'll get an error.
-- If you want to create a new stack for storing content, make sure you have the “[owner](/docs/owners-and-admins/organization-roles#organization-owner)” or “[admin](/docs/owners-and-admins/organization-roles#organization-admin)” rights in that organization.
+- If you want to create a new stack for storing content, make sure you have the “[owner](../../organization/organization-roles.md#organization-owner)” or “[admin](../../organization/organization-roles.md#organization-admin)” rights in that organization.
 
 ## Common questions
 

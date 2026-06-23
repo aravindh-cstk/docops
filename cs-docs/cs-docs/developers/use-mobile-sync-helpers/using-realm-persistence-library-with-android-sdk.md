@@ -17,9 +17,9 @@ This page explains how to use Contentstack’s Realm Persistence Library with th
 
 ## Using Realm Persistence Library With Android SDK
 
-Contentstack’s Realm Persistence Library for [Android SDK](/docs/developers/sdks/content-delivery-sdk/android/about-android-sdk/) helps you save the app data on the device that it is being accessed on. This enables your app to serve data offline, i.e., even when it is not connected to the internet.
+Contentstack’s Realm Persistence Library for [Android SDK](../sdks/content-delivery-sdk/android/about-android-sdk.md) helps you save the app data on the device that it is being accessed on. This enables your app to serve data offline, i.e., even when it is not connected to the internet.
 
-This Persistent Library contains methods that are required to map data fields of your [content types](/docs/developers/create-content-types/about-content-types) and Realm for data storage.
+This Persistent Library contains methods that are required to map data fields of your [content types](../create-content-types/about-content-types.md) and Realm for data storage.
 
 With this step-by-step guide you will learn how to use this library for your Contentstack-powered Android apps.
 
@@ -60,7 +60,7 @@ private String uid;
 
 ### Install Contentstack Android SDK and SyncManager
 As you are now done setting up the Realm SDK, let us look into the Contentstack SDK setup.
-- Download and set up the Contentstack [Android SDK](/docs/developers/android/get-started-with-android-sdk).
+- Download and set up the Contentstack [Android SDK](../sdks/content-delivery-sdk/android/get-started-with-android-sdk.md).
 - Download the [sync wrapper](https://github.com/contentstack/contentstack-android-persistence/tree/master/app/src/main/java/com/contentstack) files and unzip it. This folder contains the following four files:
 `RealmStore.java`
 - `SyncManager.java`
@@ -70,7 +70,7 @@ As you are now done setting up the Realm SDK, let us look into the Contentstack 
 Add this folder to your project.
 
 ## Map data
-To start mapping of data, first, you need to [create a content type](/docs/developers/create-content-types/create-a-content-type) schema (in Contentstack) as per your app design and [create entries](/docs/content-managers/working-with-entries/create-an-entry). For your convenience, we have already created the necessary content types. [Download](https://assets.contentstack.io/v3/assets/blt23180bf2502c7444/blt22c7854cf498d3bb/5ea04c6a6a64bf2a22a111ff/schema.zip) and [import them](/docs/developers/create-content-types/import-a-content-type) to your app’s [stack](/docs/developers/set-up-stack/about-stack) in Contentstack.
+To start mapping of data, first, you need to [create a content type](../create-content-types/create-a-content-type.md) schema (in Contentstack) as per your app design and [create entries](../../content-managers/author-content/create-an-entry.md). For your convenience, we have already created the necessary content types. [Download](https://assets.contentstack.io/v3/assets/blt23180bf2502c7444/blt22c7854cf498d3bb/5ea04c6a6a64bf2a22a111ff/schema.zip) and [import them](../create-content-types/import-a-content-type.md) to your app’s [stack](../set-up-stack/about-stack.md) in Contentstack.
 
 Next, create entries for the imported content types. In order to sync this data with Realm, we need to add data mappings. The three important items that we need to map in our Synchronization process are as follows:
 - Sync token/Pagination token
@@ -207,8 +207,8 @@ syncManager.stackRequest();
 Following are some related articles that can help you understand other functionalities using Android SDK:
 - [Android Persistence Library](https://github.com/contentstack/contentstack-android-persistence)
 - [Android persistence example app](https://github.com/contentstack/contentstack-android-persistence-example.git)
-- [Android SDK reference](/docs/developers/sdks/content-delivery-sdk/android/reference/)
-- [Sync API](/docs/developers/apis/content-delivery-api#synchronization)
+- [Android SDK reference](../create-content-types/reference.md)
+- [Sync API](../../../api-docs/api-detail/content-delivery-api.md#synchronization)
 
 ## Common questions
 

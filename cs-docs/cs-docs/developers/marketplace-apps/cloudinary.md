@@ -27,7 +27,7 @@ The Contentstack Marketplace lets you install the Cloudinary app and use it with
 
 - [Cloudinary account](https://cloudinary.com/users/login/)
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner)/[Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner)/[Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)
 
 This step-by-step guide explains how to install and configure Cloudinary within your stack.
 
@@ -102,7 +102,7 @@ From the left-hand side primary navigation, click the **Marketplace** icon.
 - Click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.  
   **Note**: The app requires at least one UI location to be enabled, otherwise you will not be able to save your app configuration settings.
-- If the webhook is enabled for your app, you can view the webhook logs under the Webhook tab.**Additional Resource**: For more information on UI locations and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the Webhook tab.**Additional Resource**: For more information on UI locations and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Cloudinary app.
 
 ## Use the Cloudinary App within your Stack
@@ -111,7 +111,7 @@ To use the Cloudinary app within an entry of your stack, follow the steps given 
 
 Go to your stack and click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
 
 There are two ways to use the Cloudinary app in your entry.
 
@@ -120,7 +120,7 @@ There are two ways to use the Cloudinary app in your entry.
 
 ### Steps to use the Cloudinary App as a Custom Field
 
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom/) field in your content type by clicking the **Insert** **a field** link represented by a +** **sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert** **a field** link represented by a +** **sign.
 - Under **Select Extension or App**, select **Cloudinary** and click the **Proceed** button.  
   Change the **Display Name** of the custom field to your choice, for example, **Cloudinary Custom Field**. Optionally, you can add **Help Text** and **Instruction Value** for your custom field. This adds the Cloudinary app in the custom field.
 - Under **Advanced** properties, you have the option to set the **Config Parameter** for all entries of a particular content type. If you do so, it overrides the default app configuration you set at the time of app installation on the Configuration screen.The `key:value` passed in the configuration object overrides the default app configuration settings.
@@ -208,7 +208,7 @@ There are two ways to use the Cloudinary app in your entry.
 
   **Additional Resource**: You can add more optional parameters within the `compact_view_options` object. For detailed description of these optional parameters, refer to the Cloudinary [Media Library Widget](https://cloudinary.com/documentation/media_library_widget#2_set_the_configuration_options) documentation.
 - After adding the app, click **Save** or **Save and Close** to save your changes.
-- To use the Cloudinary app, [create an entry](/docs/content-managers/author-content/create-an-entry) for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You will see the Cloudinary app added as a custom field in your entry page as shown below:
+- To use the Cloudinary app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You will see the Cloudinary app added as a custom field in your entry page as shown below:
 - Click the **+ Choose Asset(s)** button to select assets from your Cloudinary account.
 - If you are not logged into your Cloudinary account, it will ask you to enter your credentials. Once you do that, you are directed to your assets section. Then, select the image file(s) that you want to add and click the **Insert** button.  
   **Note**: If you have set the **Config Parameter** in the **Custom Field Advanced Properties**, you will directly land to the selected folder.
@@ -242,7 +242,7 @@ There are two ways to use the Cloudinary app in your entry.
 
 ### Steps to use the Cloudinary App as a JSON RTE Plugin
 
-- In the **Content Type Builder** page (while creating the content type), add [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) in your content type by clicking the **Insert a field** link represented by a **+ **sign.
+- In the **Content Type Builder** page (while creating the content type), add [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) in your content type by clicking the **Insert a field** link represented by a **+ **sign.
 - Under **Select Plugin**, select **Cloudinary**, and then click **Add Plugin(s)**.  
   To add the **Config Parameter** in the JSON RTE field, click the gear icon on the app plugin selector page.
 
@@ -301,7 +301,7 @@ There are two ways to use the Cloudinary app in your entry.
 
   This adds Cloudinary in the JSON Rich Text Editor.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
-- To use the Cloudinary app as a JSON RTE plugin, [create an entry](/docs/content-managers/author-content/create-an-entry) for this content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You will see the Cloudinary app icon inside the JSON RTE field in your entry page as shown below:
+- To use the Cloudinary app as a JSON RTE plugin, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You will see the Cloudinary app icon inside the JSON RTE field in your entry page as shown below:
 - Click the **Cloudinary** app icon to open the selector page or **Media Library**.
 - If you are not logged into your Cloudinary account, it will ask you to enter your credentials. Once you do that, you are directed to your assets section. Choose one or more media files from the **Media Library** folder and then click the **Insert** button.  
   **Note**: If you have set the **Config Parameter** in the JSON RTE field, you will directly land to the selected folder.
@@ -323,7 +323,7 @@ There are two ways to use the Cloudinary app in your entry.
 - Click the **Edit** icon to edit the image. Make the necessary changes and click the **Save** button.
 - Click the **Remove** icon to remove the selected image.
 
-  **Additional Resource**: You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field.
+  **Additional Resource**: You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field.
 - After adding the asset(s), **Save** and **Publish** your entry.
 
 **Note**:
@@ -334,7 +334,7 @@ There are two ways to use the Cloudinary app in your entry.
 ## Common questions
 
 ### What access level do I need to install the Cloudinary app?
-Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner)/[Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)
+Access to the Contentstack Organization/Stack as the [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner)/[Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)
 
 ### Which Cloudinary credentials are required during configuration?
 **Cloud Name** and **API Key**

@@ -64,12 +64,12 @@ yarn add @contentstack/delivery-sdk
 These tokens allow your front-end to securely request published and preview content from Contentstack.
 
 To create a Delivery and Preview token, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), navigate to the settings panel, and select **Tokens**.
-- Click **Delivery Token** to create a new token.**Tip:** If you are on the [Management Tokens](/docs/developers/create-tokens/about-management-tokens) tab, you can press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
+- Go to your [stack](../developers/set-up-stack/about-stack.md), navigate to the settings panel, and select **Tokens**.
+- Click **Delivery Token** to create a new token.**Tip:** If you are on the [Management Tokens](../developers/create-tokens/about-management-tokens.md) tab, you can press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
 - Enter a **Name** (required) and a **Description** (optional) for the Delivery Token.
-- In the **Scope** section, choose the [Branches](/docs/developers/branches/about-branches/) or [Aliases](/docs/developers/branches/about-aliases) you want to associate with this token.
+- In the **Scope** section, choose the [Branches](../developers/branches/about-branches.md) or [Aliases](../developers/branches/about-aliases.md) you want to associate with this token.
 - Select the **Publishing Environments** for which you want to generate the Delivery Token.
-- Enable the **Create Preview Token** toggle to generate a [Preview Token](/docs/developers/create-tokens/about-delivery-tokens#about-preview-tokens) associated with this Delivery Token.
+- Enable the **Create Preview Token** toggle to generate a [Preview Token](../developers/create-tokens/about-delivery-tokens.md#about-preview-tokens) associated with this Delivery Token.
 - Click **Generate Token**.
 
 A new token appears in both the **Delivery Token** and **Preview Token** fields. You can copy the tokens for later use in your SDK configuration.

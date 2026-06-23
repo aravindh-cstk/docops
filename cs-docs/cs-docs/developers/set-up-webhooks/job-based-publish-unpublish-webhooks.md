@@ -49,8 +49,8 @@ Follow the steps below to retrieve entry/asset information via `job_id`:
   "job_id": "00906443-2ba3-420e-a3bd-2b6b4cd7c5745"
 }
 ```
-- Use this `job_id` in the [Get job items status](/docs/developers/apis/content-management-api#get-job-items-status) API request to retrieve a list of entries and assets that were published or unpublished as part of the job.
-- Use the [Get a single entry](/docs/developers/apis/content-delivery-api#get-a-single-entry) or [Get a single asset](/docs/developers/apis/content-delivery-api#get-a-single-asset) APIs to further fetch the complete details.
+- Use this `job_id` in the [Get job items status](../../../api-docs/api-detail/content-management-api.md#get-job-items-status) API request to retrieve a list of entries and assets that were published or unpublished as part of the job.
+- Use the [Get a single entry](../../../api-docs/api-detail/content-delivery-api.md#get-a-single-entry) or [Get a single asset](../../../api-docs/api-detail/content-delivery-api.md#get-a-single-asset) APIs to further fetch the complete details.
 
 These steps help you retrieve full metadata and content for assets/entries within a job-based webhook.
 
@@ -63,7 +63,7 @@ Use job-based webhooks when you want a single notification after a bulk publish/
 Job-based webhook payloads include a summary such as the job ID and status counts, rather than full entry/asset details.
 
 ### How do I find which entries/assets were affected by a job-based webhook?
-Use the `job_id` from the webhook payload with the [Get job items status](/docs/developers/apis/content-management-api#get-job-items-status) API request to retrieve the list of items involved.
+Use the `job_id` from the webhook payload with the [Get job items status](../../../api-docs/api-detail/content-management-api.md#get-job-items-status) API request to retrieve the list of items involved.
 
 ### How do I fetch full details for an entry or asset from a job?
-Use the [Get a single entry](/docs/developers/apis/content-delivery-api#get-a-single-entry) or [Get a single asset](/docs/developers/apis/content-delivery-api#get-a-single-asset) APIs to fetch complete details.
+Use the [Get a single entry](../../../api-docs/api-detail/content-delivery-api.md#get-a-single-entry) or [Get a single asset](../../../api-docs/api-detail/content-delivery-api.md#get-a-single-asset) APIs to fetch complete details.

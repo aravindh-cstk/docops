@@ -23,13 +23,13 @@ Advanced Search in Contentstack enables precise, field-level searches on entries
 
 To conduct an advanced search, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-- Navigate to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and select the “[Entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries)” or “[Assets](https://www.contentstack.com/docs/content-managers/author-content/about-assets)” module.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the “[Entries](../author-content/about-entries.md)” or “[Assets](../author-content/about-assets.md)” module.
 - Click the **Advanced Search** button next to the search bar.
 - By default, you’ll see **Match All Conditions**, but you can switch to **Match Any Conditions** if needed.
 - Configure your search query:  
   **Content Type or Field**: Select from options like Content Type, Published Environment, Published At, Published By, Language, Modified At, Modified By, Created At, Created By, UID, and Tag.
 - **Operator**: Select an operator depending on the data type of the selected field.  
-  **Additional Resource:** Refer to our documentation on [**Supported Operators for Various Data Types**](/docs/content-managers/search-content/supported-operators-for-various-data-types) for more information.
+  **Additional Resource:** Refer to our documentation on [**Supported Operators for Various Data Types**](./supported-operators-for-various-data-types.md) for more information.
 - **Value**: Enter or select the appropriate value based on the field and operator.
 - To add multiple search queries, click **+ New Condition**.
 
@@ -42,7 +42,7 @@ To conduct an advanced search, log in to your [Contentstack account](https://www
 - Click **Reset** to reset your search query.
 
 **Additional Resource:** For a more detailed understanding of using Advanced Search effectively, refer to the  
-[**Real-world Scenarios**](/docs/content-managers/search-content/localization-operator-real-world-scenarios)  
+[**Real-world Scenarios**](./localization-operator-real-world-scenarios.md)  
 section.
 
 ## Common questions
@@ -57,4 +57,4 @@ Advanced Search enables precise, field-level searches using multiple conditions 
 **Note:** All conditions or queries added at the same level must use either the **ALL** operator or the **ANY** operator—mixing both is not supported.
 
 **Where can I learn more about operators and examples?**  
-Refer to [**Supported Operators for Various Data Types**](/docs/content-managers/search-content/supported-operators-for-various-data-types) and [**Real-world Scenarios**](/docs/content-managers/search-content/localization-operator-real-world-scenarios).
+Refer to [**Supported Operators for Various Data Types**](./supported-operators-for-various-data-types.md) and [**Real-world Scenarios**](./localization-operator-real-world-scenarios.md).

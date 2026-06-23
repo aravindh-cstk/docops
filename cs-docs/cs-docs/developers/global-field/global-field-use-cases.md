@@ -16,7 +16,7 @@ This page explains practical, real-world ways to implement Global Fields in Cont
 
 ## Global Field Use Cases
 
-A[Global field](/docs/developers/global-field/about-global-field) is a reusable set of fields that you define once and use in any [content type](/docs/developers/create-content-types/about-content-types) across your [stack](/docs/developers/set-up-stack/about-stack). It helps streamline your content modeling by eliminating the need to recreate the same field configuration multiple times.
+A[Global field](./about-global-field.md) is a reusable set of fields that you define once and use in any [content type](../create-content-types/about-content-types.md) across your [stack](../set-up-stack/about-stack.md). It helps streamline your content modeling by eliminating the need to recreate the same field configuration multiple times.
 
 You can modify key properties of a Global field at any time based on your requirements. These properties include **Select Global Field**, **Display Name**, **Unique ID**, **Instruction Value**, **Help Text**, **Multiple**, and **Non-localizable**.
 
@@ -28,23 +28,23 @@ Adding an SEO Global field to your content types helps enhance search engine vis
 
 - Log in to your [Contentstack account](https://www.contentstack.com/login) and open the **Content Models** module.
 - Go to the **Global Fields** tab and click **+ New Global Field**.
-- Add the following fields:[**Single Line Textbox**](/docs/developers/create-content-types/single-line-textbox): Title tag for your page.
-- [**Multi Line Textbox**](/docs/developers/create-content-types/multi-line-textbox): Meta description summarizing the page content.
+- Add the following fields:[**Single Line Textbox**](../create-content-types/single-line-textbox.md): Title tag for your page.
+- [**Multi Line Textbox**](../create-content-types/multi-line-textbox.md): Meta description summarizing the page content.
 - **Single Line Textbox**: Keywords to optimize SEO.
-- [**Boolean**](/docs/developers/create-content-types/boolean): Option to enable/disable search engine crawling.
+- [**Boolean**](../create-content-types/boolean.md): Option to enable/disable search engine crawling.
 - **Boolean**: Option to include/exclude content from internal search.
 - **Save** the Global field.
 - Go to the content type where you want to add SEO, insert the Global field, and select your SEO configuration.
 - Set a display name and modify other properties as needed.
-- Create an [entry](/docs/content-managers/author-content/about-entries) to see the SEO Global field in action.
+- Create an [entry](../../content-managers/author-content/about-entries.md) to see the SEO Global field in action.
 
 ## Example 2: Site Header as a Global Field
 
 Use a Site Header Global field to maintain consistency across website pages. The header may include a logo, navigation menu, and notification bar.
 
 - Create a Global field named **Header**.
-- Add the following fields:[**File**](/docs/developers/create-content-types/file): Upload your logo.
-- [**Group**](/docs/developers/create-content-types/group)** (Navigation Menu)**:**Single Line Textbox**: Title of the navigation item.
+- Add the following fields:[**File**](../create-content-types/file.md): Upload your logo.
+- [**Group**](../create-content-types/group.md)** (Navigation Menu)**:**Single Line Textbox**: Title of the navigation item.
 - **Reference Field**: Links to other content types or pages.
 - **Group (Notification Bar)**:**Rich Text Editor**: Add announcement content.
 - **Boolean**: Toggle visibility of the notification bar.
@@ -59,13 +59,13 @@ Organize content with a Taxonomy Global field to enhance navigation and user exp
 **Example:** Displaying sports categories on a sports website.
 
 - Create a Global field named **Sports Categories**.
-- Add a [**Modular Blocks**](/docs/developers/create-content-types/modular-blocks) field.
+- Add a [**Modular Blocks**](../create-content-types/modular-blocks.md) field.
 - Inside the block, add a **Group** field and enable **Multiple** selection.
-- In each group, add:[**Single Line Textbox**](/docs/developers/create-content-types/single-line-textbox): Name of the sport subcategory.
-- [**Link**](/docs/developers/create-content-types/link): URL to the landing page for that sport.
+- In each group, add:[**Single Line Textbox**](../create-content-types/single-line-textbox.md): Name of the sport subcategory.
+- [**Link**](../create-content-types/link.md): URL to the landing page for that sport.
 - Save and insert this Global field into the relevant content types.
 - Configure the display name and other properties.
-- Create an entry to implement content categorization using [taxonomy](/docs/developers/taxonomy/about-taxonomy).
+- Create an entry to implement content categorization using [taxonomy](../taxonomy/about-taxonomy.md).
 
 ## Example 4: Website Banner as a Global Field
 
@@ -74,7 +74,7 @@ Use a Global field for your website’s banner section, which typically appears 
 - Create a Global field named **Hero Banner**.
 - Add a **Modular Blocks** field and name it (e.g., Page Components).
 - In the Hero Banner block, add the following fields:**File**: Upload a banner image.
-- [**Custom**](/docs/developers/create-custom-fields/about-custom-fields): Use the Color Picker Custom Field Extension for background color.
+- [**Custom**](../create-custom-fields/about-custom-fields.md): Use the Color Picker Custom Field Extension for background color.
 - **Single Line Textbox**: Banner title.
 - **Multi-Line Textbox**: Banner description.
 - **Save** the Global field.
@@ -124,12 +124,12 @@ You can nest a Global field within another field such as a **Group** or **Modula
 
 This setup allows editors to build modular pages with pre-configured SEO capabilities. By nesting the SEO field, you maintain centralized control while giving editors flexibility to assemble content as needed.
 
-**Additional Resource:** Learn more about [Complex Fields](/docs/developers/global-field/about-complex-global-fields) and how they work inside Global fields to maximize reusability and flexibility.
+**Additional Resource:** Learn more about [Complex Fields](./about-complex-global-fields.md) and how they work inside Global fields to maximize reusability and flexibility.
 
 ## Common questions
 
 ### What is a Global field used for?
-A[Global field](/docs/developers/global-field/about-global-field) is a reusable set of fields that you define once and use in any [content type](/docs/developers/create-content-types/about-content-types) across your [stack](/docs/developers/set-up-stack/about-stack).
+A[Global field](./about-global-field.md) is a reusable set of fields that you define once and use in any [content type](../create-content-types/about-content-types.md) across your [stack](../set-up-stack/about-stack.md).
 
 ### Can I change a Global field after adding it to content types?
 You can modify key properties of a Global field at any time based on your requirements. These properties include **Select Global Field**, **Display Name**, **Unique ID**, **Instruction Value**, **Help Text**, **Multiple**, and **Non-localizable**.

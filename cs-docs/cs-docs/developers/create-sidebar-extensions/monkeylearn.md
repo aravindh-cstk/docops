@@ -17,9 +17,9 @@ This page explains how to install, configure, and use the legacy **Text Intellig
 
 ## MonkeyLearn
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched MonkeyLearn as a Marketplace App. For more information on MonkeyLearn, please refer to the [MonkeyLearn App Installation Guide](/docs/developers/marketplace-apps/monkeylearn).
+**Note**: This documentation uses the legacy approach with extensions. We have launched MonkeyLearn as a Marketplace App. For more information on MonkeyLearn, please refer to the [MonkeyLearn App Installation Guide](../marketplace-apps/monkeylearn.md).
 
-The **Text Intelligence**** (powered by MonkeyLearn)** Sidebar Extension lets you **analyze the content** of an [entry](/docs/content-managers/working-with-entries/about-entries) and **provide actionable insights**/recommendations using machine learning technologies. This Sidebar Extension uses **MonekyLearn APIs** to analyze data and recommend ideas.
+The **Text Intelligence**** (powered by MonkeyLearn)** Sidebar Extension lets you **analyze the content** of an [entry](../../content-managers/author-content/about-entries.md) and **provide actionable insights**/recommendations using machine learning technologies. This Sidebar Extension uses **MonekyLearn APIs** to analyze data and recommend ideas.
 
 This Sidebar Extension (powered by MonkeyLearn) offers a wide variety of text intelligence options that let you get more out of your content. Some of the things that you can do with the widget are listed below:
 - **Keyword Extraction**: This option extracts important keywords from the given text. This is especially helpful if you want highly-relevant SEO keywords for your entry.
@@ -32,7 +32,7 @@ This Sidebar Extension is available as a prebuilt template that you can configur
 
 ## Add Text Intelligence Sidebar Extension to your stack
 
-To add the Text Intelligence Sidebar Extension to your [stack](/docs/developers/set-up-stack/about-stack), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
+To add the Text Intelligence Sidebar Extension to your [stack](../set-up-stack/about-stack.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 - Go to your stack and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - Click on the **+ New Extension** button on the top-right corner and select **Use Prebuilt**.
@@ -58,7 +58,7 @@ To add the Text Intelligence Sidebar Extension to your [stack](/docs/developers/
 
 To use the Text Intelligence Sidebar Extension in any entry, follow the steps given below:
 
-- Create a new entry for a [content type](/docs/developers/create-content-types/about-content-types).****
+- Create a new entry for a [content type](../create-content-types/about-content-types.md).****
   **Note**: The content type should be within the scope of the Sidebar Extension.
 - Click on the  “Sidebar Extensions” icon located at the top right side of the page, and select **Text Intelligence** from the drop-down menu.
 - A sidebar appears where you can use the Sidebar Extension.
@@ -69,7 +69,7 @@ To use the Text Intelligence Sidebar Extension in any entry, follow the steps gi
 ## Common questions
 
 ### Is this documentation for the Marketplace App or the legacy extension?
-**Note**: This documentation uses the legacy approach with extensions. We have launched MonkeyLearn as a Marketplace App. For more information on MonkeyLearn, please refer to the [MonkeyLearn App Installation Guide](/docs/developers/marketplace-apps/monkeylearn).
+**Note**: This documentation uses the legacy approach with extensions. We have launched MonkeyLearn as a Marketplace App. For more information on MonkeyLearn, please refer to the [MonkeyLearn App Installation Guide](../marketplace-apps/monkeylearn.md).
 
 ### Where do I get the extension source code?
 Download the [source code](https://github.com/contentstack/extensions/tree/master/text-intelligence) for the extension.

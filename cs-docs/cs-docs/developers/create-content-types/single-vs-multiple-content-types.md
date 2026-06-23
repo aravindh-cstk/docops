@@ -16,7 +16,7 @@ This page explains how to choose between **Single** and **Multiple** when creati
 
 Single vs Multiple Content Types
 
-Irrespective of the type of [content type](/docs/developers/create-content-types/about-content-types) (“Webpage” or “Content Block”) you are creating, you should mark it as either **Single** or **Multiple**. “Single” lets you create a single [entry](/docs/content-managers/working-with-entries/about-entries), while “Multiple” aids in creating more than one entry of the same structure.
+Irrespective of the type of [content type](./about-content-types.md) (“Webpage” or “Content Block”) you are creating, you should mark it as either **Single** or **Multiple**. “Single” lets you create a single [entry](../../content-managers/author-content/about-entries.md), while “Multiple” aids in creating more than one entry of the same structure.
 
 ## Single
 
@@ -51,4 +51,4 @@ Use **Multiple** when you need to create more than one entry of the same structu
 Yes. Irrespective of whether you are creating a “Webpage” or “Content Block” content type, you should mark it as either **Single** or **Multiple**.
 
 ### What is the key difference between **Single** and **Multiple**?
-“Single” lets you create a single [entry](/docs/content-managers/working-with-entries/about-entries), while “Multiple” aids in creating more than one entry of the same structure.
+“Single” lets you create a single [entry](../../content-managers/author-content/about-entries.md), while “Multiple” aids in creating more than one entry of the same structure.

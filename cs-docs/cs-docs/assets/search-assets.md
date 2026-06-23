@@ -56,7 +56,7 @@ Example: Build a query to find:
 - Uploaded by John Doe (Created By = John Doe)
 - Between January 1–March 31, 2025 (Created At between dates)
 
-**Additional Resource:** Refer to the [Real-world Scenarios](/docs/content-managers/search-content/localization-operator-real-world-scenarios) section for more advanced search examples.
+**Additional Resource:** Refer to the [Real-world Scenarios](../content-managers/search-content/localization-operator-real-world-scenarios.md) section for more advanced search examples.
 
 ## Quick Search
 You can also perform a quick search from anywhere in Asset Management or your stack.
@@ -76,4 +76,4 @@ Yes. You can type the beginning of a keyword (e.g., “cat”) or use an asteris
 Press `Ctrl + K` (Windows/Linux) / `⌘ + K` (Mac) or click the “Quick search” icon to open quick search.
 
 ### Where can I find more advanced search examples?
-Refer to the [Real-world Scenarios](/docs/content-managers/search-content/localization-operator-real-world-scenarios) section for more advanced search examples.
+Refer to the [Real-world Scenarios](../content-managers/search-content/localization-operator-real-world-scenarios.md) section for more advanced search examples.

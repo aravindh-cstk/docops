@@ -19,7 +19,7 @@ This page explains how to access and use the Analytics dashboard for Brand Kit i
 
 The Analytics dashboard for Brand Kit offers a comprehensive overview of how your organization's Brand Kit is utilized. This dashboard includes key metrics essential for managing and optimizing your brand assets effectively.
 
-**Note:** Only the organization [Owner](/docs/developers/organization/organization-roles#organization-owner) or [Admin](/docs/developers/organization/organization-roles#organization-admin) roles can access the Analytics feature.
+**Note:** Only the organization [Owner](../developers/organization/organization-roles.md#organization-owner) or [Admin](../developers/organization/organization-roles.md#organization-admin) roles can access the Analytics feature.
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Navigate to **Analytics** through “App Switcher”.

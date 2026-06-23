@@ -22,7 +22,7 @@ Deleted terms are maintained in the Trash for up to **14 days** from the date of
 **Warning**: It is only possible to restore terms associated with existing taxonomies. For terms linked to deleted taxonomies, the taxonomy must be restored first
 
 To restore a deleted term from the Trash, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) where you want to restore a deleted term, navigate to the “Settings” icon (press “S”), and select **Trash** (or press “alt + T” for Windows OS, and “option + T” for Mac OS).
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to restore a deleted term, navigate to the “Settings” icon (press “S”), and select **Trash** (or press “alt + T” for Windows OS, and “option + T” for Mac OS).
 - Click on the **Taxonomies** tab, locate the term you want to restore, and click the vertical ellipsis in the **Actions** column.
 - You can also inspect the term by clicking **View Details**.
 - Click **Restore**, and in the modal that appears, choose between **Restore with Entry Association** or **Restore without Entry Association** based on your requirements.**Note**: Restoring with Entry Association will reconnect the term to the entries where they were previously referenced. This action will increase the entry version since the terms are added back to the entry.

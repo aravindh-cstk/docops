@@ -24,17 +24,17 @@ Use Prebuilt JSON RTE Plugins
 
 ##### Content
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [RTE UI Location](/docs/developers/developer-hub/rte-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [RTE UI Location](../developer-hub/rte-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
-Contentstack provides three prebuilt [JSON Rich Text Editor plugins](/docs/developers/json-rich-text-editor-plugins/about-json-rte-plugins) to get you started instantly instead of writing custom codes. You need to add these plugins to your stack and get started.
+Contentstack provides three prebuilt [JSON Rich Text Editor plugins](./about-json-rte-plugins.md) to get you started instantly instead of writing custom codes. You need to add these plugins to your stack and get started.
 
 Below is a list of the prebuilt JSON RTE plugins provided by Contentstack:
-- [Highlight](/docs/developers/json-rich-text-editor-plugins/highlight)
-- [Info Panel](/docs/developers/json-rich-text-editor-plugins/info-panel)
-- [Word Count](/docs/developers/json-rich-text-editor-plugins/word-count)
+- [Highlight](../marketplace-apps/highlight.md)
+- [Info Panel](../marketplace-apps/info-panel.md)
+- [Word Count](../marketplace-apps/word-count.md)
 
 To use a prebuilt JSON RTE plugin, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon on the left navigation panel.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon on the left navigation panel.
 - Select **Extensions**, and click on the **+ New Extension** button at the top-right corner of the page, and select the **Use Prebuilt** option.
 - In the following window, select **JSON RTE Plugin** from the drop-down menu.
 - Select any prebuilt plugin (for example, **Highlight**), and click on **+ Add Extension**.

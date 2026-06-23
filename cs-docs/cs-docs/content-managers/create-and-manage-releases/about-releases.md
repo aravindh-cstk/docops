@@ -16,11 +16,11 @@ This page explains what Releases are in Contentstack, why they are useful, and h
 
 ## About Releases
 
-A Release is a collection of [entries](/docs/content-managers/working-with-entries/about-entries/) and [assets](/docs/content-managers/working-with-assets/about-assets/) that you deploy together to a specific environment. Instead of [publishing](/docs/content-managers/working-with-entries/publish-an-entry/) or [unpublishing](/docs/content-managers/working-with-entries/unpublish-an-entry/) items individually, you can group related content and deploy it in a single action.
+A Release is a collection of [entries](../author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets/) that you deploy together to a specific environment. Instead of [publishing](../author-content/publish-an-entry.md) or [unpublishing](../author-content/unpublish-an-entry.md) items individually, you can group related content and deploy it in a single action.
 
 Managing updates such as product launches, press releases, or promotions often involves multiple content items. Handling each item separately increases effort and the risk of inconsistencies. Releases help you coordinate these updates by grouping related content and deploying it together.
 
-**Note:** Releases created within a branch are specific to that branch. For more information, refer to the [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) documentation.
+**Note:** Releases created within a branch are specific to that branch. For more information, refer to the [Branch-specific Modules](../../developers/branches/branch-specific-modules.md) documentation.
 
 ## When to Use Releases
 
@@ -39,7 +39,7 @@ A typical release workflow includes:
 
 This workflow helps you manage related updates as a single unit, ensuring consistent publishing across all items.
 
-**Additional Resource:** To learn how to add entries and assets to a release, refer to the [Add items to a release](/docs/content-managers/create-and-manage-releases/add-entry-asset-to-a-release) and [Bulk add to release](/docs/content-managers/author-content/bulk-add-to-release) documentation.
+**Additional Resource:** To learn how to add entries and assets to a release, refer to the [Add items to a release](./add-entry-asset-to-a-release.md) and [Bulk add to release](../author-content/bulk-add-to-release.md) documentation.
 
 Use Releases to manage content updates more efficiently. By grouping related items, you can deploy changes faster and maintain consistency across environments.
 

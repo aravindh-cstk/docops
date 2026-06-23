@@ -19,7 +19,7 @@ This page explains how to import a Global field into a stack using the Contentst
 Importing a Global field allows you to seamlessly integrate an existing JSON configuration into your stack, saving time and effort in content modeling.
 
 To import a Global field, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to import a Global field.
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to import a Global field.
 - Click the **Content Models** icon in the left navigation panel and select **Global Fields** in the left panel.
 - Click the **Import Global Field** icon at the top right corner.
 - In the **Import Global Field** modal, browse and select the JSON file of the Global field you want to import.
@@ -31,7 +31,7 @@ By following these steps, you can efficiently bring in existing Global fields an
 
 ## API Reference
 
-To import a Global field via API, refer to the [Import Global Field](/docs/developers/apis/content-management-api#import-global-field) API request.
+To import a Global field via API, refer to the [Import Global Field](../../../api-docs/api-detail/content-management-api.md#import-global-field) API request.
 
 ## Common questions
 
@@ -45,4 +45,4 @@ Click the **Content Models** icon in the left navigation panel, select **Global 
 Yes. When working with nested Global fields, ensure that all child Global fields are imported before attempting to import the parent Global field.
 
 ### Can I import a Global field using an API instead of the UI?
-Yes. Refer to the [Import Global Field](/docs/developers/apis/content-management-api#import-global-field) API request.
+Yes. Refer to the [Import Global Field](../../../api-docs/api-detail/content-management-api.md#import-global-field) API request.

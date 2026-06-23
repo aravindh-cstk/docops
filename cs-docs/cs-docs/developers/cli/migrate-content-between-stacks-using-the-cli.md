@@ -20,23 +20,23 @@ This document guides you through the process of migrating content from one Conte
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
-- Contentstack CLI [installed](/docs/developers/cli/install-the-cli) and [configured](/docs/developers/cli/configure-regions-in-the-cli/)
-- CLI [authenticated](/docs/developers/cli/cli-authentication#authentication)
+- Contentstack CLI [installed](./install-the-cli.md) and [configured](./configure-regions-in-the-cli.md)
+- CLI [authenticated](./cli-authentication.md#authentication)
 - Access to both source and target stacks
 - An empty target stack
 
 ## Steps for Execution
 To migrate all content from one stack to another quickly, follow the steps below:
-- [Export](/docs/developers/cli/export-content-using-the-cli) from source stack:
+- [Export](./export-content-using-the-cli.md) from source stack:
 ```
 csdx cm:stacks:export -k  -d ./export --branch main
 ```
-- [Audit](/docs/developers/cli/audit-plugin) the exported content (recommended):
+- [Audit](./audit-plugin.md) the exported content (recommended):
 ```
 csdx cm:stacks:audit -d ./export/main
 ```
-**Note:** The [audit](/docs/developers/cli/audit-plugin) process runs automatically during [import](/docs/developers/cli/import-content-using-the-cli) to validate and fix any issues.
-- [Import](/docs/developers/cli/import-content-using-the-cli) to target stack:
+**Note:** The [audit](./audit-plugin.md) process runs automatically during [import](./import-content-using-the-cli.md) to validate and fix any issues.
+- [Import](./import-content-using-the-cli.md) to target stack:
 ```
 csdx cm:stacks:import -k  -d ./export/main
 ```

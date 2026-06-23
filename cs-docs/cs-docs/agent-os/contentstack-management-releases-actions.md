@@ -16,7 +16,7 @@ This page explains how to use Contentstack Management Releases actions in Automa
 
 ## Contentstack Management - Releases Actions
 
-A [Release](/docs/content-managers/create-and-manage-releases/about-releases) comprises entries and assets that need to be deployed at the same time, either in a published or unpublished state, to a designated environment. You can perform release based operations using the Contentstack Management Releases actions.
+A [Release](../content-managers/create-and-manage-releases/about-releases.md) comprises entries and assets that need to be deployed at the same time, either in a published or unpublished state, to a designated environment. You can perform release based operations using the Contentstack Management Releases actions.
 
 Let’s look at each of these in detail.
 
@@ -130,7 +130,7 @@ This action fetches the details of a single release.
 ## Common questions
 
 ### What is a Release in Contentstack?
-A [Release](/docs/content-managers/create-and-manage-releases/about-releases) comprises entries and assets that need to be deployed at the same time, either in a published or unpublished state, to a designated environment.
+A [Release](../content-managers/create-and-manage-releases/about-releases.md) comprises entries and assets that need to be deployed at the same time, either in a published or unpublished state, to a designated environment.
 
 ### What happens if I leave the Branch field empty?
 **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).

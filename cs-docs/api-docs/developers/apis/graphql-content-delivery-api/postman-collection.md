@@ -103,7 +103,7 @@ Some of the important variables that you need to set are as follows:
 | access_token | your_environment-specific_delivery_token |
 | branch (optional) | your_unique_branch_ID |
 
-**Note:** The Contentstack Postman collection will require a valid environment-specific [Delivery token](/docs/developers/create-tokens/about-delivery-tokens) to make API calls. Check out the [Authentication](#authentication) section for more details.
+**Note:** The Contentstack Postman collection will require a valid environment-specific [Delivery token](../../../../cs-docs/developers/create-tokens/about-delivery-tokens.md) to make API calls. Check out the [Authentication](#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 

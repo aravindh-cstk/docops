@@ -16,9 +16,9 @@ This page explains the Contentstack Management connector’s Branch Alias action
 
 ## Contentstack Management - Branch Alias Actions
 
-Contentstack enables the assignment of [aliases](/docs/developers/branches/about-aliases) to any [branch](/docs/developers/branches/about-branches) of your stack, acting as pointers to specific branches. With the Branch Alias actions, you can retrieve details of all branch aliases, assign or reassign aliases to a specific branch, and delete them as required. These actions streamline branch control, ensuring an organized and efficient development process with Contentstack Management Branch Alias.
+Contentstack enables the assignment of [aliases](../developers/branches/about-aliases.md) to any [branch](../developers/branches/about-branches.md) of your stack, acting as pointers to specific branches. With the Branch Alias actions, you can retrieve details of all branch aliases, assign or reassign aliases to a specific branch, and delete them as required. These actions streamline branch control, ensuring an organized and efficient development process with Contentstack Management Branch Alias.
 
-**Note: **You must have the [Branches](/docs/developers/branches/about-branches/) feature enabled for your stack to use the Branch Alias actions. For more information, please reach out to our [Support Team](mailto:support@contentstack.com).
+**Note: **You must have the [Branches](../developers/branches/about-branches.md) feature enabled for your stack to use the Branch Alias actions. For more information, please reach out to our [Support Team](mailto:support@contentstack.com).
 
 Let’s look at the action in detail.
 
@@ -74,7 +74,7 @@ This action fetches the details of a single branch alias from a stack.
 ## Common questions
 
 ### Do I need any feature enabled to use these actions?
-Yes. **Note: **You must have the [Branches](/docs/developers/branches/about-branches/) feature enabled for your stack to use the Branch Alias actions.
+Yes. **Note: **You must have the [Branches](../developers/branches/about-branches.md) feature enabled for your stack to use the Branch Alias actions.
 
 ### What is the difference between Assign and Reassign?
 **Assign**: Select this option to assign a new alias name to a branch.  

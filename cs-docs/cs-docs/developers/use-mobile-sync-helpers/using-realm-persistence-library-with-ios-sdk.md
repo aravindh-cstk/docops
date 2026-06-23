@@ -17,9 +17,9 @@ This page explains how to use Contentstack’s Realm Persistence Library with th
 
 ## Using Realm Persistence Library With iOS SDK
 
-Contentstack’s Realm Persistence Library for [iOS SDK](/docs/developers/sdks/content-delivery-sdk/ios/) helps you save the app data on the device that it is being accessed on. This enables your app to serve data offline, i.e., even when it is not connected to the internet.
+Contentstack’s Realm Persistence Library for [iOS SDK](../sdks/content-delivery-sdk/ios.md) helps you save the app data on the device that it is being accessed on. This enables your app to serve data offline, i.e., even when it is not connected to the internet.
 
-This Persistent Library contains methods that are required to map data fields of your [content types](/docs/developers/create-content-types/about-content-types) and Realm for data storage.
+This Persistent Library contains methods that are required to map data fields of your [content types](../create-content-types/about-content-types.md) and Realm for data storage.
 
 Let’s look at how to use this library for your Contentstack-powered iOS apps.
 
@@ -28,7 +28,7 @@ Let’s look at how to use this library for your Contentstack-powered iOS apps.
 ## Prerequisites
 
 - [Latest version of Xcode](https://developer.apple.com/xcode/)
-- [Contentstack’s iOS SDK](/docs/developers/sdks/content-delivery-sdk/ios/)
+- [Contentstack’s iOS SDK](../sdks/content-delivery-sdk/ios.md)
 
 ## Installation and usage
 
@@ -82,7 +82,7 @@ Next, you will find the `ContentstackPersistenceRealm` folder, which contains th
 
 ## Map data
 
-To start mapping of data, first, you need to [create a content type](/docs/developers/create-content-types/create-a-content-type) schema (in Contentstack) as per your app design and [create entries](/docs/content-managers/author-content/create-an-entry/). For your convenience, we have already created the necessary content types. [Download](https://assets.contentstack.io/v3/assets/blt23180bf2502c7444/blt22c7854cf498d3bb/5ea04c6a6a64bf2a22a111ff/schema.zip) and [import them](/docs/developers/create-content-types/import-a-content-type) to your app’s stack in Contentstack.
+To start mapping of data, first, you need to [create a content type](../create-content-types/create-a-content-type.md) schema (in Contentstack) as per your app design and [create entries](../../content-managers/author-content/create-an-entry.md). For your convenience, we have already created the necessary content types. [Download](https://assets.contentstack.io/v3/assets/blt23180bf2502c7444/blt22c7854cf498d3bb/5ea04c6a6a64bf2a22a111ff/schema.zip) and [import them](../create-content-types/import-a-content-type.md) to your app’s stack in Contentstack.
 
 Next, create entries for the imported content types. In order to sync this data with Realm, we need to add data mappings. The three important items that we need to map in our Synchronization process are as follows:
 - Sync token/Pagination token
@@ -145,7 +145,7 @@ Similarly, we can add other entities and perform mapping for each entity.
 
 ### Asset mapping
 
-To save [assets](/docs/content-managers/author-content/about-assets/), create a new file (File > New > File) named `Assets` extending `RLMObject`, and add the following code to implement `AssetProtocol`.
+To save [assets](../../content-managers/author-content/about-assets.md), create a new file (File > New > File) named `Assets` extending `RLMObject`, and add the following code to implement `AssetProtocol`.
 
 ```
 class Assets: RLMObject, AssetProtocol{
@@ -179,8 +179,8 @@ Following are some related articles that can help you understand other functiona
 - [iOS Persistence Library](https://github.com/contentstack/contentstack-ios-persistence)
 - [iOS persistence example app (Realm)](https://github.com/contentstack/contentstack-ios-persistence-example.git)
 - [IOS persistence example app (CoreData)](https://github.com/contentstack/contentstack-ios-coredata-persistence-example)
-- [iOS SDK reference](/docs/developers/sdks/content-delivery-sdk/ios/reference/)
-- [Sync API](/docs/developers/apis/content-delivery-api#synchronization)
+- [iOS SDK reference](../create-content-types/reference.md)
+- [Sync API](../../../api-docs/api-detail/content-delivery-api.md#synchronization)
 
 ## Common questions
 

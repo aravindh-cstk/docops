@@ -16,7 +16,7 @@ This page explains how to create and use the Image Cropper custom field extensio
 
 Image Cropper
 
-The Image Cropper custom extension allows you to fetch and crop the images in your stack into a field of your [content type](/docs/developers/create-content-types/about-content-types). By using this extension, you can crop and add multiple images in the custom field of your entry.
+The Image Cropper custom extension allows you to fetch and crop the images in your stack into a field of your [content type](../create-content-types/about-content-types.md). By using this extension, you can crop and add multiple images in the custom field of your entry.
 
 Additionally, the image cropper extension also lets you set a focal point for the images you want to crop. The editor can choose a point in an image to focus on by using the focal point. Regardless of the image cropping, the focal point remains constant.
 
@@ -34,15 +34,15 @@ To set up the Image Cropper extension in Contentstack, log in to your [Contentst
 We have created the sample code for the extension. If Extensions are part of your plan, contact our [Support](mailto:support@contentstack.com) team to get the code for the extension. Our team will provide the source code which contains the following two files:
 
 - **image-cropper**: Navigate to **image-cropper/build/index.html** file. The code inside this file will be uploaded in the extension source code field of our extension in the next step.
-- **image-cropper-popup**: Navigate to **image-cropper-popup/build/index.html**. Upload this file as an asset in your stack by referring to the [Create/Upload Assets](/docs/content-managers/working-with-assets/create-upload-assets) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
+- **image-cropper-popup**: Navigate to **image-cropper-popup/build/index.html**. Upload this file as an asset in your stack by referring to the [Create/Upload Assets](../../content-managers/author-content/create-upload-assets.md) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
 
 Once you have logged in to your account, follow the steps given below:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), navigate to the “Settings” icon on the left navigation panel and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
+- Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” icon on the left navigation panel and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions **page, click on the **+ New Extension** button, and select **Create New**.
 - Click on the **Custom Field** option in the **Select Extension Type **window as shown below:
 - On the **Create New Extension** page, enter values in the fields as given below:
-- **Title** *(required)*: Provide a suitable title, for example “Image Cropper” for your custom field. This title will be visible when you select the extension in the [custom](/docs/developers/create-content-types/custom) field in your content type.
+- **Title** *(required)*: Provide a suitable title, for example “Image Cropper” for your custom field. This title will be visible when you select the extension in the [custom](../create-content-types/custom.md) field in your content type.
 - **Field data type** *(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple **: Leave this field unchecked.
 - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
@@ -65,11 +65,11 @@ Your extension is now ready, let's move ahead and use this extension in your con
 
 To use the extension, we will have to create a content type and add a custom field in it. Follow the steps given below to add one:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [Custom](/docs/developers/create-content-types/custom) field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the [Custom](../create-content-types/custom.md) field to it.
 
 - Under **Select Extension**, select the “Image Cropper” extension that you created and set other properties accordingly. You can add other fields if required.
 - Finally, click on **Save and Close** to save your changes.
-- Now [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Image Cropper** custom field in action.
+- Now [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Image Cropper** custom field in action.
 - Click on the **Crop Image** button and you will see the images stored in your stack.
 - Select and crop the image you want to add to this field. Set the focal point for the image you want to crop.
 

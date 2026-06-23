@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # GraphQL | Image Transformations
 
-You can use the parameters of Contentstack’s [Image Delivery API](/docs/developers/apis/image-delivery-api) in GraphQL queries to transform images while fetching them.  
+You can use the parameters of Contentstack’s [Image Delivery API](../../../api-detail/image-delivery-api.md) in GraphQL queries to transform images while fetching them.  
   
 The following table consists of the different parameters that Contentstack GraphQL supports for image delivery, along with their acceptable values:
 

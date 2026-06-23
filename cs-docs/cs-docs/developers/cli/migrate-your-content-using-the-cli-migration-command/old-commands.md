@@ -26,7 +26,7 @@ Developers can validate the deployment before pushing it on production, using a 
 
 ## Process Overview
 
-The first step is to write a migration script to perform content migration. We have provided sample migration scripts which you can refer [here](/docs/developers/cli/migrate-your-content-using-the-cli-migration-command#get-started-with-the-migration-script), or write custom scripts. Furthermore, you can use various methods and SDK instances to make your migration script easy to write and read.
+The first step is to write a migration script to perform content migration. We have provided sample migration scripts which you can refer [here](../migrate-your-content-using-the-cli-migration-command.md#get-started-with-the-migration-script), or write custom scripts. Furthermore, you can use various methods and SDK instances to make your migration script easy to write and read.
 
 After writing the migration script, use the CLI migration command to migrate your content to the destination stack.
 
@@ -45,11 +45,11 @@ Now let us understand how to migrate content from one stack to another using the
 
 ## Login to the Contentstack CLI session
 
-Firstly you should have the Contentstack CLI installed on your system. In case you haven't yet installed the Contentstack CLI, please follow the steps in the [CLI installation](/docs/developers/cli/install-the-cli) guide.
+Firstly you should have the Contentstack CLI installed on your system. In case you haven't yet installed the Contentstack CLI, please follow the steps in the [CLI installation](../install-the-cli.md) guide.
 
 After installing the CLI on your machine, log in to the CLI session to run the ‘Migration’ command.
 
-**Note**: By default, the CLI session will work for the app hosted in the **North America** region. If you want to switch to **Europe** or **Azure North America **region, follow the steps mentioned in the [Set Region](/docs/developers/cli/configure-regions-in-the-cli#set-region) command section.
+**Note**: By default, the CLI session will work for the app hosted in the **North America** region. If you want to switch to **Europe** or **Azure North America **region, follow the steps mentioned in the [Set Region](../configure-regions-in-the-cli.md#set-region) command section.
 
 Now log in to your Contentstack account, by running the following command in your terminal:
 
@@ -59,7 +59,7 @@ csdx auth:login
 
 Provide your Contentstack account’s email and password to successfully login to the CLI session.
 
-**Additional Resources**: To learn more about the CLI login command, refer to the [Login command](/docs/developers/cli/cli-authentication#login)section.
+**Additional Resources**: To learn more about the CLI login command, refer to the [Login command](../cli-authentication.md#login)section.
 
 ## Use the “Migration” Command
 
@@ -67,7 +67,7 @@ Once you log in to Contentstack, run the migration command to initiate the proce
 
 To perform the operation you have to write a migration script in your code editor, and mention its file path while using the migration command.
 
-**Tip: **We have created a sample migration script for you to get started, which we have discussed further in this guide. Refer [this](/docs/developers/cli/migrate-your-content-using-the-cli-migration-command#get-started-with-the-migration-script) section, to understand migration scripts and various methods you can use to execute your tasks.
+**Tip: **We have created a sample migration script for you to get started, which we have discussed further in this guide. Refer [this](../migrate-your-content-using-the-cli-migration-command.md#get-started-with-the-migration-script) section, to understand migration scripts and various methods you can use to execute your tasks.
 
 We assume that you have a migration script ready with you, to migrate the content.
 

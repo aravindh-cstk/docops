@@ -26,7 +26,7 @@ Use the Studio CLI to import design tokens from your local project files into yo
 Before you begin, ensure you have the following:
 - [Contentstack account](https://www.contentstack.com/login/)
 - [Node.js installed on your local machine](https://nodejs.org/en)
-- [**Contentstack CLI package**](/docs/developers/cli/install-the-cli)
+- [**Contentstack CLI package**](../developers/cli/install-the-cli.md)
 - Access to Studio for your organization.
 
 To import design tokens from your project file to the Studio project, perform the following steps:
@@ -34,7 +34,7 @@ To import design tokens from your project file to the Studio project, perform th
 ```
 csdx studio:design-token:add
 ```
-- The Studio CLI prompts you to include Studio’s [default design tokens](/docs/studio/styling-your-compositions#default-tokens-in-studio). Choose one of the following options:Enter **Y** to include Studio’s default design tokens along with the tokens in your project files.
+- The Studio CLI prompts you to include Studio’s [default design tokens](./styling-your-compositions.md#default-tokens-in-studio). Choose one of the following options:Enter **Y** to include Studio’s default design tokens along with the tokens in your project files.
 - Enter **N** to import only the tokens defined in your project files.
 - Select the level of design token access for content editors. The available options are:
   - `**dynamic**`**:** Allows content editors to use only the design options that come from the entries linked to the Studio project. They cannot access or apply custom colors or other styling available in the Studio editing canvas.

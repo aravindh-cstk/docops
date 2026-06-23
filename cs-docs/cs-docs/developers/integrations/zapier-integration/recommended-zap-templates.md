@@ -21,7 +21,7 @@ Zapier lets you connect Contentstack with thousands of other applications, openi
 To help you get started with Contentstack and Zapier, we have created some Zap templates that can help you automate some basic workflows.  
 Additionally, you can create custom Zaps by clicking on the **Make a Zap** button after logging in your Zapier account.
 
-**Additional Resource: **To learn more about Contentstack's Zapier integration, please read our detailed guides on[integrating Zapier with Contentstack](/docs/developers/integrations/zapier-integration/integrate-contentstack-with-other-apps-using-zapier)and learning to [build your own Zaps using Contentstack triggers and actions](/docs/developers/integrations/zapier-integration/contentstack-triggers-and-actions-for-zapier).
+**Additional Resource: **To learn more about Contentstack's Zapier integration, please read our detailed guides on[integrating Zapier with Contentstack](./integrate-contentstack-with-other-apps-using-zapier.md)and learning to [build your own Zaps using Contentstack triggers and actions](./contentstack-triggers-and-actions-for-zapier.md).
 
 Here are some recommended Zap templates you can use to connect Contentstack to other applications.
 

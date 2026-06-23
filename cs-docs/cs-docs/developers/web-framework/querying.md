@@ -16,7 +16,7 @@ This page explains how to use queries in the contentstack-express web framework 
 
 **Warning**: contentstack-express framework has been deprecated. We will soon stop supporting this framework. Instead, we recommend using [DataSync](/docs/developers/develop-apps-with-datasync), which is faster and more flexible than the web framework.
 
-Queries are requests that help you fetch published [content](/docs/content-managers/working-with-entries/about-entries) from your [stack](/docs/developers/set-up-stack/about-stack) in Contentstack. You can apply filters or perform custom search to get the required content for your website using these queries.
+Queries are requests that help you fetch published [content](../../content-managers/author-content/about-entries.md) from your [stack](../set-up-stack/about-stack.md) in Contentstack. You can apply filters or perform custom search to get the required content for your website using these queries.
 
 Let us look at some of the basic queries and advanced queries.
 

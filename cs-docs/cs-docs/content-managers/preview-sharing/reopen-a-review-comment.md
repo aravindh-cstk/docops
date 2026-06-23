@@ -19,7 +19,7 @@ This page explains how to reopen a review comment that has been marked as **Reso
 
 Once a review comment has been marked as **Resolved**, it is hidden from active discussions. However, if further input or clarification is needed, you can reopen the comment thread to continue the discussion.
 
-**Note**: Ensure that a preview of the content has been shared. Refer to the [Share a Preview](/docs/content-managers/preview-sharing/share-a-preview) document for more details.
+**Note**: Ensure that a preview of the content has been shared. Refer to the [Share a Preview](./share-a-preview.md) document for more details.
 
 To reopen a review comment, follow these steps:
 - Open the **shared preview link** from your email.
@@ -35,7 +35,7 @@ Once reopened, the comment will be visible in the active comment thread, allowin
 Once a review comment has been marked as **Resolved**, it is hidden from active discussions. Select **Resolved** from the dropdown menu to find it.
 
 ### Do I need a shared preview before I can reopen a comment?
-**Note**: Ensure that a preview of the content has been shared. Refer to the [Share a Preview](/docs/content-managers/preview-sharing/share-a-preview) document for more details.
+**Note**: Ensure that a preview of the content has been shared. Refer to the [Share a Preview](./share-a-preview.md) document for more details.
 
 ### Where do I reopen a resolved discussion from?
 Open the **shared preview link** from your email, then use the **Discussions** tab in the right navigation panel and click **Reopen** on the discussion you want to reopen.

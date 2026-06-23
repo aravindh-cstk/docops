@@ -20,14 +20,14 @@ This page explains how to edit an existing release in Contentstack, including up
 Contentstack allows you to edit release details such as release name and its description at any time.
 
 To edit a release, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Releases” icon on the left navigation panel.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Releases” icon on the left navigation panel.
 - Hover over a particular release name that you want to edit in the left-hand side panel.
 - Click on the "Edit" icon (pencil icon) from the popup. Alternatively, click the horizontal ellipsis in the top right corner and click **Edit**.
 - In the **Edit Release** modal, update the **Name** and **Description** and **Save** the changes.
 
 ## API Reference
 
-To edit the Release via API, refer to the [Update a Release](/docs/developers/apis/content-management-api#update-a-release) API request.
+To edit the Release via API, refer to the [Update a Release](../../../api-docs/api-detail/content-management-api.md#update-a-release) API request.
 
 ## Common questions
 
@@ -41,4 +41,4 @@ Hover over the release name in the left-hand side panel and click the "Edit" ico
 In the **Edit Release** modal, you can update the **Name** and **Description** and **Save** the changes.
 
 ### How do I edit a release using the API?
-Refer to the [Update a Release](/docs/developers/apis/content-management-api#update-a-release) API request.
+Refer to the [Update a Release](../../../api-docs/api-detail/content-management-api.md#update-a-release) API request.

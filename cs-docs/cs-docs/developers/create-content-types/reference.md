@@ -19,18 +19,18 @@ This page explains the Reference field in Contentstack, including how to configu
 The **Reference** field lets you link entries from the same or different content types. It enables structured relationships between content and allows you to reuse entries across your stack.
 
 You can update the following properties of a Reference field at any time:
-- [Display Name](/docs/developers/create-content-types/display-name)
-- [Unique ID](/docs/developers/create-content-types/unique-id)
-- [Placeholder Value](/docs/developers/create-content-types/placeholder-value)
-- [Instruction Value](/docs/developers/create-content-types/instruction-value)
-- [Help Text](/docs/developers/create-content-types/help-text)
-- [Multiple](/docs/developers/create-content-types/multiple)
-- [Mandatory](/docs/developers/create-content-types/mandatory)
-- [Referenced Content Type](/docs/developers/create-content-types/referenced-content-type)
+- [Display Name](./display-name.md)
+- [Unique ID](./unique-id.md)
+- [Placeholder Value](./placeholder-value.md)
+- [Instruction Value](./instruction-value.md)
+- [Help Text](./help-text.md)
+- [Multiple](./multiple.md)
+- [Mandatory](./mandatory.md)
+- [Referenced Content Type](./referenced-content-type.md)
 
 **Additional Resource**:
-- Use [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) to hide or show fields based on conditions.
-- Refer to [Reference vs Select vs Tags](/docs/developers/how-to-guides/reference-field-vs-select-field-vs-tags-field) fields to understand field differences.
+- Use [Field Visibility Rules](./about-field-visibility-rules.md) to hide or show fields based on conditions.
+- Refer to [Reference vs Select vs Tags](../how-to-guides/reference-field-vs-select-field-vs-tags-field.md) fields to understand field differences.
 
 Creating references within the same content type is known as **Self Referencing**, while referencing other content type(s) is known as **Include Referencing**.
 

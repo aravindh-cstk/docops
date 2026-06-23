@@ -17,7 +17,7 @@ This page explains how to set up and use the Variables plugin in Contentstack to
 
 ## Variables Plugin Usage Guide
 
-Variables plugin allows you to insert and configure varying values fetched from the referred content types within your [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor).
+Variables plugin allows you to insert and configure varying values fetched from the referred content types within your [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md).
 
 Consider a scenario where you have varying information on your ecommerce website. Changing every entry containing this varying content can be time-consuming. In this case, the Variable plugin can be helpful. Add the data for different variables to a content type, and refer these varying values within the JSON Rich Text Editor in multiple content types. This helps change the variable data in a centralized location instead of editing the content for various entries.
 
@@ -59,7 +59,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - To configure your plugin, enter the **Content Type UID** from which data for the variable will be rendered, and the **Field** name.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
 
-**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 
 - Click the **Save** button.
 - Click **Open Stack** to start using the plugin within your stack.

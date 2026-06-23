@@ -16,9 +16,9 @@ This page explains what the **Organization Settings** page is, who can access it
 
 ## Organization Settings Overview
 
-**Note**: This section is visible only to the [Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admin](/docs/developers/organization/organization-roles#organization-admin) users of the Organization.
+**Note**: This section is visible only to the [Owner](./organization-roles.md#organization-owner) and [Admin](./organization-roles.md#organization-admin) users of the Organization.
 
-The **Organization Settings** page will provide you with the details and settings related to your [Organization](/docs/developers/organization/about-organizations/).
+The **Organization Settings** page will provide you with the details and settings related to your [Organization](./about-organizations.md).
 
 To access the Organization Settings section, perform the following steps:
 - Log in to your [Contentstack Account](https://www.contentstack.com/login).
@@ -27,15 +27,15 @@ To access the Organization Settings section, perform the following steps:
 You will be redirected to the page where you can manage the organization's settings.
 
 In this section, Organization Owners/Admins can access the following sections:
-- [Organization Information](/docs/developers/organization/organization-information/)
-- [Product Analytics](/docs/developers/organization/product-analytics/)
-- [Organization Users](/docs/developers/organization/organization-users/)
-- [Organization Stacks](/docs/developers/organization/organization-stacks/)
+- [Organization Information](./organization-information.md)
+- [Product Analytics](./product-analytics.md)
+- [Organization Users](./organization-users.md)
+- [Organization Stacks](./organization-stacks.md)
 
 ## Common questions
 
 **Who can see the Organization Settings section?**  
-Only the [Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admin](/docs/developers/organization/organization-roles#organization-admin) users of the Organization.
+Only the [Owner](./organization-roles.md#organization-owner) and [Admin](./organization-roles.md#organization-admin) users of the Organization.
 
 **How do I open Organization Settings?**  
 Log in to your [Contentstack Account](https://www.contentstack.com/login), select the Organization from the dropdown on the header, and open “Org Admin” from the left navigation panel (or click the “Org Admin” cog beside the Organization).

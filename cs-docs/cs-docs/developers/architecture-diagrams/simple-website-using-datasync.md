@@ -20,7 +20,7 @@ A simple website represents a small or medium-sized app/website that uses a few 
 
 (Download Diagram: [PDF](https://assets.contentstack.io/v3/assets/blt23180bf2502c7444/blt9188e4f25a316b83/6113bb86461c9f13b0a14b48/Simple_Wesbite_Using_DataSync.pdf?disposition=download), [SVG](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb6c824e1d4a19bd0/6113bb85461c9f13b0a14b44/Simple_Wesbite_Using_DataSync-02.svg?disposition=download), and [JPEG](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltf21d615f77057d25/6113c92060bb0f13c2eabdf1/Simple_Wesbite_Using_DataSync-02.jpg?disposition=download))
 
-This diagram explains the architecture that you would need to set up a simple site using [DataSync](/docs/developers/develop-apps-with-datasync/about-contentstack-datasync). The DataSync utility allows you to store your Contentstack data in your local database, thus reducing API calls to the Contentstack server.
+This diagram explains the architecture that you would need to set up a simple site using [DataSync](../develop-apps-with-datasync/about-contentstack-datasync.md). The DataSync utility allows you to store your Contentstack data in your local database, thus reducing API calls to the Contentstack server.
 
 Let’s dig a little deeper into the architecture and understand the different components of the diagram.
 
@@ -52,11 +52,11 @@ Algolia** is one of the SaaS that helps you power search operations on your webs
 - **Search initiation**: Happens when the user from the website initiates the search request.
 - **Data indexing**: To index your website’s data, you can set up a webhook in Contentstack to trigger an action whenever you update/publish content or update your website’s code. Here, the POST call in your webhook should have the logic to index the data in Algolia.
 
-**Marketo Forms** is a SaaS provider that helps you create marketing forms (for product campaigns, etc.) for your website. Contentstack allows you to embed Marketo Forms in entries via a [custom field extension](/docs/developers/create-custom-fields/about-custom-fields). So whenever you create an entry in Contentstack, you’ll have the provision to select a form from several available form options and add it to your entry. Later, when the page loads on your frontend page, the forms load through the embedded code.
+**Marketo Forms** is a SaaS provider that helps you create marketing forms (for product campaigns, etc.) for your website. Contentstack allows you to embed Marketo Forms in entries via a [custom field extension](../create-custom-fields/about-custom-fields.md). So whenever you create an entry in Contentstack, you’ll have the provision to select a form from several available form options and add it to your entry. Later, when the page loads on your frontend page, the forms load through the embedded code.
 
 **
 
-Google Analytics** lets you analyze the performance of your website. Contentstack enables you to view Google Analytics data directly in your stack via a [custom widget](/docs/developers/create-sidebar-extensions/) or [dashboard widget](/docs/developers/create-dashboard-extensions/). You’ll get detailed analytics through a custom widget - user behavior, page load time, page views, etc. - of your specific entry within the entry page. You can get your website’s overall analytics on your Contentstack’s stack dashboard through the dashboard widget.
+Google Analytics** lets you analyze the performance of your website. Contentstack enables you to view Google Analytics data directly in your stack via a [custom widget](../create-sidebar-extensions.md) or [dashboard widget](../create-dashboard-extensions.md). You’ll get detailed analytics through a custom widget - user behavior, page load time, page views, etc. - of your specific entry within the entry page. You can get your website’s overall analytics on your Contentstack’s stack dashboard through the dashboard widget.
 
 **
 
@@ -90,20 +90,20 @@ Let’s have an overview of these components:
 ## Next Steps
 
 ### More Architecture Diagrams
-- [Static website architecture](/docs/developers/architecture-diagrams/static-website-detailed-architecture)
-- [Simple Website](/docs/developers/architecture-diagrams/simple-website-detailed-architecture)
-- [Dynamic website architecture](/docs/developers/architecture-diagrams/dynamic-website-detailed-architecture)
-- [Partially headless setup architecture](/docs/developers/architecture-diagrams/partially-headless-setup-detailed-architecture)
-- [Layered architecture for Contentstack-powered websites](/docs/developers/architecture-diagrams/contentstack-powered-website-layered-architecture)
-- [Cloud infrastructure diagram](/docs/developers/architecture-diagrams/cloud-infrastructure-architecture-for-contentstack-powered-websites)
-- [MACH System Architecture](/docs/developers/architecture-diagrams/mach-architecture-diagram)
-- [Mobile and Smart Devices System Architecture](/docs/developers/architecture-diagrams/mobile-and-smart-devices-system-architecture)
+- [Static website architecture](./static-website-detailed-architecture.md)
+- [Simple Website](./simple-website-detailed-architecture.md)
+- [Dynamic website architecture](./dynamic-website-detailed-architecture.md)
+- [Partially headless setup architecture](./partially-headless-setup-detailed-architecture.md)
+- [Layered architecture for Contentstack-powered websites](./contentstack-powered-website-layered-architecture.md)
+- [Cloud infrastructure diagram](./cloud-infrastructure-architecture-for-contentstack-powered-websites.md)
+- [MACH System Architecture](./mach-architecture-diagram.md)
+- [Mobile and Smart Devices System Architecture](./mobile-and-smart-devices-system-architecture.md)
 
 ### Resources to Get Started
-- [Quickstart in 5 minutes](/docs/developers/quickstart-in-5-mins)
+- [Quickstart in 5 minutes](../quickstart-in-5-mins.md)
 - [Sample applications](/docs/developers/sample-apps)
-- [How to start using Contentstack](/docs/developers/contentstack-basics/how-to-start-using-contentstack)[/docs/developers/develop-apps-with-datasync/get-started-with-contentstack-datasync](/docs/developers/develop-apps-with-datasync/get-started-with-contentstack-datasync)
-- [Contentstack DataSync](/docs/developers/develop-apps-with-datasync/get-started-with-contentstack-datasync)
+- [How to start using Contentstack](../contentstack-basics/how-to-start-using-contentstack.md)[/docs/developers/develop-apps-with-datasync/get-started-with-contentstack-datasync](../develop-apps-with-datasync/get-started-with-contentstack-datasync.md)
+- [Contentstack DataSync](../develop-apps-with-datasync/get-started-with-contentstack-datasync.md)
 
 ## Common questions
 

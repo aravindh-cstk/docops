@@ -28,12 +28,12 @@ Let's get started with the step-by-step instructions for deleting both reference
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to the Contentstack Organization that has Personalize enabled
 - Access to a project in Personalize
-- [Audience created](/docs/personalize/create-audience) in your Personalize project
+- [Audience created](./create-audience.md) in your Personalize project
 
 **Note:** Users with Owner and Member access to a Personalize project can delete existing audiences.
 
 ## Steps for Execution
-**Note:** For this guide, we have assumed that you have already [created a Personalize project](/docs/personalize/create-personalize-project) and [an experience](/docs/personalize/create-segmented-experience).
+**Note:** For this guide, we have assumed that you have already [created a Personalize project](./create-personalize-project.md) and [an experience](./create-segmented-experience.md).
 
 ### Delete a Non-Referenced Audience
 A non-referenced audience in Contentstack Personalize is an audience that is not currently being used in any experiences within your project.
@@ -68,7 +68,7 @@ To delete an existing referenced audience in an Experience draft, log in to your
 
 You will get a success message after the audience is deleted from Personalize.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#audiences) to create, edit, delete, and retrieve all existing audiences.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#audiences) to create, edit, delete, and retrieve all existing audiences.
 
 ## Common questions
 

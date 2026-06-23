@@ -18,10 +18,10 @@ This page explains how to delete entries and assets in bulk from Contentstack se
 ## Delete Entries and Assets in Bulk
 
 To delete entries and assets found in your search results in bulk, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Navigate to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and select the “[Entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries)” or “[Assets](https://www.contentstack.com/docs/content-managers/author-content/about-assets)” module.
-- Search for the entries and assets you want to delete. You can use [Basic Search](/docs/content-managers/search-content/basic-search), [Advanced Search](/docs/content-managers/search-content/advanced-search), [Filters](/docs/content-managers/search-content/use-filters), and [Views](/docs/content-managers/search-content/about-views) to refine your search results.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the “[Entries](../author-content/about-entries.md)” or “[Assets](../author-content/about-assets.md)” module.
+- Search for the entries and assets you want to delete. You can use [Basic Search](./basic-search.md), [Advanced Search](./advanced-search.md), [Filters](./use-filters.md), and [Views](./about-views.md) to refine your search results.
 - From the search results, select the entries or assets you want to delete. Click the **Delete** button on the floating bar at the top.
-- In the modal that appears, click the **Delete** button.**Note**: Deleted entries and assets are moved to the [trash](/docs/developers/manage-trash/about-trash) and remain there for **14** **days** before being permanently deleted.
+- In the modal that appears, click the **Delete** button.**Note**: Deleted entries and assets are moved to the [trash](../../developers/manage-trash/about-trash.md) and remain there for **14** **days** before being permanently deleted.
 
 ## Limitations for Deleting Entries and Assets in Bulk
 

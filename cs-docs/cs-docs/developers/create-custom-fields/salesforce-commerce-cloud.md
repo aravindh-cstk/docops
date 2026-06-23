@@ -15,11 +15,11 @@ last_updated: 2026-03-26
 
 This page explains how to create and configure a legacy Salesforce Commerce Cloud custom field extension in Contentstack so you can search, fetch, and select products from your Salesforce Commerce Cloud store inside entries. It is intended for developers setting up the extension (including AWS Lambda/API Gateway) and for teams who need to use the custom field in content types and entries.
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Salesforce Commerce as a Marketplace App. For more information on Salesforce Commerce, please refer to the [Salesforce Commerce App Installation Guide](/docs/developers/marketplace-apps/salesforce-commerce).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Salesforce Commerce as a Marketplace App. For more information on Salesforce Commerce, please refer to the [Salesforce Commerce App Installation Guide](../marketplace-apps/salesforce-commerce.md).
 
-The Salesforce Commerce Cloud extension lets you search and fetch the products of your Salesforce Commerce Cloud store and display them in your [entry](/docs/content-managers/working-with-entries/about-entries) page via a [custom field](/docs/developers/create-custom-fields/about-custom-fields).
+The Salesforce Commerce Cloud extension lets you search and fetch the products of your Salesforce Commerce Cloud store and display them in your [entry](../../content-managers/author-content/about-entries.md) page via a [custom field](./about-custom-fields.md).
 
-Thus, while creating [entries](/docs/content-managers/working-with-entries/about-entries) for this content type, you can select the products of your store as the input value for that field.
+Thus, while creating [entries](../../content-managers/author-content/about-entries.md) for this content type, you can select the products of your store as the input value for that field.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Thus, while creating [entries](/docs/content-managers/working-with-entries/about
 - [Access to AWS environment](https://aws.amazon.com/console/)
 - [Working knowledge of AWS lambda and AWS API Gateways](https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html)
 
-This step-by-step guide explains how to create a **Salesforce Commerce Cloud **custom field extension for your [content types](/docs/developers/create-content-types/about-content-types) in Contentstack.
+This step-by-step guide explains how to create a **Salesforce Commerce Cloud **custom field extension for your [content types](../create-content-types/about-content-types.md) in Contentstack.
 
 **Note**: For the Salesforce Commerce Cloud extension to work, you need to have a configured [Salesforce Commerce Cloud Account](https://account.demandware.com/dwsso/XUI/?realm=%2F&goto=https%3A%2F%2Faccount.demandware.com%3A443%2Fdwsso%2Foauth2%2Fauthorize%3Fresponse_type%3Dcode%26client_id%3D70e0d585-9115-4cd2-89cd-1c8758ed2ce2%26scope%3Dopenid%2520roles%2520tenantFilter%2520profile%26state%3D1RKcsb9dVFp9ONWjWzR0dKaXsZUISQZx7YQmeCLTUnA%253D%26redirect_uri%3Dhttps%253A%252F%252Faccount.demandware.com%253A443%252Fdw%252Foidc%252Fopenid_connect_login%26nonce%3DehlgJjEFAdpar2mB6PearQ8Gu-Dhc2oEXtAHUXEAzuQ#login/).
 
@@ -98,19 +98,19 @@ Click on the **Details** link, you will find your API endpoint. Make a note of i
 
 ## Add the “Salesforce Commerce Cloud” Custom Field Extension
 
-To add this extension to your stack, [log in](https://app.contentstack.com/#!/login) to your contentstack account, go to your [stack](/docs/developers/set-up-stack/about-stack)and perform the following steps:
+To add this extension to your stack, [log in](https://app.contentstack.com/#!/login) to your contentstack account, go to your [stack](../set-up-stack/about-stack.md)and perform the following steps:
 
 Along with the lambda code, our Support team will provide you with the source code that contains the following files that will help you set up the extension in Contenstack:
 
 - **salesforce**: Navigate to** salesforce/build/index.html** file. We will upload the code in this file in the extension source code field of our extension in the next step.
-- **salesforce-popup**: Navigate to **salesforce-popup/build/index.html**, upload this file as an asset in your stack by referring to the [Create/Upload Assets](/docs/content-managers/working-with-assets/create-upload-assets) guide. After uploading this file, to view the asset URL, open the asset and copy the File URL.
+- **salesforce-popup**: Navigate to **salesforce-popup/build/index.html**, upload this file as an asset in your stack by referring to the [Create/Upload Assets](../../content-managers/author-content/create-upload-assets.md) guide. After uploading this file, to view the asset URL, open the asset and copy the File URL.
 Make a note of the asset URL, we will be using it as a** redirectURL **in the config parameter while setting up the extension.
 - Click the “Settings” icon on the left navigation panel.
 - Select **Extensions.**
 - Now, click on the** + New Extension **button, and select **Create new**.
 - In the **Select Extension Type **window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:
-  - **Title ***(required)*: Provide a suitable title, for example, “Salesforce Commerce Cloud” for your custom field. This title will be visible when you select the extension in the [**Custom**](/docs/developers/create-content-types/custom) field in your content type.
+  - **Title ***(required)*: Provide a suitable title, for example, “Salesforce Commerce Cloud” for your custom field. This title will be visible when you select the extension in the [**Custom**](../create-content-types/custom.md) field in your content type.
   - **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
   - **Multiple ***(optional)*: Leave this field unchecked.
   - **Hosting Method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
@@ -143,7 +143,7 @@ Once you have added a custom field, you can use it in your content type. To add 
 
 - Click on the “Content Models” icon on the left navigation panel.
 - Click on the **+ New Content Type** button, enter the required details, and click **Proceed**.
-- Click on the “Insert a field” link (**+** sign), and add the [Custom](/docs/developers/create-content-types/custom) field to it.
+- Click on the “Insert a field” link (**+** sign), and add the [Custom](../create-content-types/custom.md) field to it.
 - Under the **Select Extension **drop-down menu in **Basic **properties, select the “Salesforce Commerce Cloud” extension field that you created.
 - Click on **Save and Close**.
 - Now, create an entry for this content type, and you will see the** Salesforce Commerce Cloud **custom field in action.
@@ -154,7 +154,7 @@ Once you have added a custom field, you can use it in your content type. To add 
 ## Common questions
 
 ### Is this the recommended way to integrate Salesforce Commerce Cloud with Contentstack?
-No. **Note**: This documentation uses the legacy approach with extensions. We have launched Salesforce Commerce as a Marketplace App. For more information on Salesforce Commerce, please refer to the [Salesforce Commerce App Installation Guide](/docs/developers/marketplace-apps/salesforce-commerce).
+No. **Note**: This documentation uses the legacy approach with extensions. We have launched Salesforce Commerce as a Marketplace App. For more information on Salesforce Commerce, please refer to the [Salesforce Commerce App Installation Guide](../marketplace-apps/salesforce-commerce.md).
 
 ### What do I need from Salesforce Commerce Cloud to configure the extension?
 You need **Client Id and Client Secret**, **Short Code**, **Organization Id**, and **Site Id**.

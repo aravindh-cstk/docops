@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # Administration | Organizations
 
-[Organization](/docs/owners-and-admins/about-organizations) is the top-level entity in the hierarchy of Contentstack, consisting of [stacks](/docs/developers/set-up-stack/about-stack) and stack resources, and users. Organization allows easy management of projects as well as users within the Organization.
+[Organization](../cs-docs/developers/organization/about-organizations.md) is the top-level entity in the hierarchy of Contentstack, consisting of [stacks](../cs-docs/developers/set-up-stack/about-stack.md) and stack resources, and users. Organization allows easy management of projects as well as users within the Organization.
 
 ## Get All Organizations
 
@@ -976,11 +976,11 @@ When executing the API call, provide the Organization UID.
 
 The Get organization log details request is used to retrieve the audit log details of an organization.
 
-You can apply queries to filter the results. Refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section for more details.
+You can apply queries to filter the results. Refer to the [Queries](./api-detail/content-delivery-api.md#queries) section for more details.
 
 When executing the API call, provide the Organization UID.
 
-**Tip**: This request returns only the first **25 audit log items** of the specified organization. If you get more than **25 items** in your response, refer to the [Pagination](/docs/developers/apis/content-delivery-api#pagination) section to retrieve all the log items in a paginated form.
+**Tip**: This request returns only the first **25 audit log items** of the specified organization. If you get more than **25 items** in your response, refer to the [Pagination](./api-detail/content-delivery-api.md#pagination) section to retrieve all the log items in a paginated form.
 
 #### URL Parameters
 

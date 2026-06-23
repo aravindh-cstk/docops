@@ -25,8 +25,8 @@ Voice Profiles allows you to define unique AI-generated brand voices that you ca
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
-- Access to Brand Kit as an invited [Collaborator](/docs/brand-kit/invite-collaborators)
+- Access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin)
+- Access to Brand Kit as an invited [Collaborator](./invite-collaborators.md)
 
 ## Steps for Execution
 
@@ -34,7 +34,7 @@ To create a Voice Profile in Brand Kit, log in to your [Contentstack account](ht
 - In the left navigation panel, click the **Brand Kit** icon.
 - Select the **Brand Kit** in which you want to create a Voice Profile.
 - You will be navigated to the **Voice Profile** landing page. If there are any Voice Profiles already created, they will appear here. To create a new one, click the **+ New Voice Profile** button and select **Add Manually**.  
-  **Additional Resource**: To import the Voice Profile, refer to the [Import a Voice Profile](/docs/brand-kit/import-a-voice-profile/) document
+  **Additional Resource**: To import the Voice Profile, refer to the [Import a Voice Profile](./import-a-voice-profile.md) document
 
 ### Create a Voice Profile
 
@@ -87,7 +87,7 @@ Playground lets you experiment with prompts to test and refine your Voice Profil
 - Once you have added these details to your Voice Profile, click **Save**.  
   You will get a success message after the Voice Profile is created. You can view its details by clicking the **Information** icon on the right-side navigation panel.
 
-**Additional Resource**: To generate content specifically in the entry’s [fields](/docs/developers/create-content-types/about-fields), refer to the [AI Assistant with Brand Kit](/docs/developers/marketplace-apps/ai-assistant-with-brand-kit) documentation.
+**Additional Resource**: To generate content specifically in the entry’s [fields](../../developers/create-content-types/about-fields.md), refer to the [AI Assistant with Brand Kit](../../developers/marketplace-apps/ai-assistant-with-brand-kit.md) documentation.
 
 ## Common questions
 
@@ -95,10 +95,10 @@ Playground lets you experiment with prompts to test and refine your Voice Profil
 Each organization can create a maximum of **100 Voice Profiles** within each Brand Kit.
 
 **What access is required to create a Voice Profile?**  
-Access to Organization that has Brand Kit enabled, access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin), and access to Brand Kit as an invited [Collaborator](/docs/brand-kit/invite-collaborators).
+Access to Organization that has Brand Kit enabled, access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin), and access to Brand Kit as an invited [Collaborator](./invite-collaborators.md).
 
 **Can I import a Voice Profile instead of adding it manually?**  
-Yes. **Additional Resource**: To import the Voice Profile, refer to the [Import a Voice Profile](/docs/brand-kit/import-a-voice-profile/) document
+Yes. **Additional Resource**: To import the Voice Profile, refer to the [Import a Voice Profile](./import-a-voice-profile.md) document
 
 **Is Playground-generated content saved automatically?**  
 No. **Warning**: The generated content will not be saved in the history and will be cleared once you click the **Save** button.

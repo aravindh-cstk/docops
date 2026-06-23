@@ -36,7 +36,7 @@ To retrieve the project UID, perform the steps given below:
 - Click the **Copy** icon to copy the project UID to your clipboard. We will need this UID while setting up the Personalize Edge SDK in the next step.
 
 ### Proxy Requests with Middleware
-[Middleware](https://nextjs.org/docs/app/building-your-application/routing/middleware) allows you to execute logic on the edge before each request on the website. Using this feature, we can make a call to the [Personalize Edge API](/docs/developers/apis/personalize-edge-api/) and fetch the [User Manifest](/docs/personalize/glossary-key-features#user-manifest) for each visitor. The User Manifest contains the selected Variant for each Experience. We can then pass these variants as the URL query parameters.
+[Middleware](https://nextjs.org/docs/app/building-your-application/routing/middleware) allows you to execute logic on the edge before each request on the website. Using this feature, we can make a call to the [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md) and fetch the [User Manifest](./glossary-key-features.md#user-manifest) for each visitor. The User Manifest contains the selected Variant for each Experience. We can then pass these variants as the URL query parameters.
 
 Let’s take a look at each one of these steps.
 - #### Install the Personalize SDK
@@ -46,7 +46,7 @@ To install the Personalize Edge SDK in your Next.js project:
 $ npm install @contentstack/personalize-edge-sdk
 ```
 
-**Additional Resource**: The [API Reference](/docs/developers/sdks/personalize-edge-sdk/javascript/reference/) for the SDK contains a lot of information on how to use the SDK.
+**Additional Resource**: The [API Reference](../developers/create-content-types/reference.md) for the SDK contains a lot of information on how to use the SDK.
 
 - #### Create the Middleware Handler
 The `middleware.ts` is to be created at the root folder of your website source code. To create the Middleware Handler:
@@ -83,7 +83,7 @@ export default async function middleware(req: NextRequest) {
 }
 ```
 
-Here, we initialize the Personalize Edge SDK. Notice how we are passing the `request` object along. As part of the initialization process, the user context is extracted from the `request` object and used to fetch the [User Manifest](/docs/personalize/glossary-key-features#user-manifest) from the Personalize Edge API. The Manifest provides a list of variants selected in each published experience.
+Here, we initialize the Personalize Edge SDK. Notice how we are passing the `request` object along. As part of the initialization process, the user context is extracted from the `request` object and used to fetch the [User Manifest](./glossary-key-features.md#user-manifest) from the Personalize Edge API. The Manifest provides a list of variants selected in each published experience.
 
 **Note**: You can also provide a different Edge API URL in case you are on a different Contentstack region. Here are the Edge API URLs for each region:
 
@@ -215,15 +215,15 @@ const Page = async ({
 };
 ```
 
-The above example shows how to fetch an entry variant instead of the base entry when variants are passed in the URL. We are converting the variant parameter passed in the URL to [variant aliases](/docs/personalize/glossary-key-features#variant-aliases) used in the SDK.
+The above example shows how to fetch an entry variant instead of the base entry when variants are passed in the URL. We are converting the variant parameter passed in the URL to [variant aliases](./glossary-key-features.md#variant-aliases) used in the SDK.
 
-**Note:** Optionally, if you want to enable Live Preview for your Personalize project, follow the steps in the [Get Started with TypeScript Delivery SDK and Live Preview](/docs/developers/sdks/content-delivery-sdk/typescript/get-started-with-typescript-delivery-sdk-and-live-preview#initializing-the-stack-with-live-preview) guide.
+**Note:** Optionally, if you want to enable Live Preview for your Personalize project, follow the steps in the [Get Started with TypeScript Delivery SDK and Live Preview](../developers/sdks/content-delivery-sdk/typescript/get-started-with-typescript-delivery-sdk-and-live-preview.md#initializing-the-stack-with-live-preview) guide.
 
 ### Setting Attributes and Triggering Events
 Setting attributes and triggering events can be done in the following ways:
-- Integrating with a [CDP](/docs/personalize/about-cdp-integration)
-- Using [Google Tag Manager](/docs/personalize/google-tag-manager-integration-with-personalize)
-- Using the SDK in the code ([JavaScript Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript))
+- Integrating with a [CDP](./about-cdp-integration.md)
+- Using [Google Tag Manager](./google-tag-manager-integration-with-personalize.md)
+- Using the SDK in the code ([JavaScript Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md))
 
 Below we have elaborated on the third approach.
 - #### Initialize the SDK
@@ -324,7 +324,7 @@ Any action performed by the user can be a conversion event if it leads to a posi
 'use client';import { useContext } from 'react';import { usePersonalize } from '../context/PersonalizeContext';const Page = () => {  const personalizeSdk = usePersonalize;  const onClickLearnMore = async (e: any) => {    e.preventDefault();    await personalizeSdk.triggerEvent('learnMoreClicked'); // here 'learnMoreClicked' is the eventKey  }  // render the component}
 ```
 
-Here, we are triggering an event on the click of the Learn More button. The `triggerEvent` method takes an `eventKey`. The `eventKey` is configured when you [create an event](/docs/personalize/get-started-with-personalize-with-ab-test-end-to-end-guide#create-an-event).
+Here, we are triggering an event on the click of the Learn More button. The `triggerEvent` method takes an `eventKey`. The `eventKey` is configured when you [create an event](./get-started-with-personalize-with-ab-test-end-to-end-guide.md#create-an-event).
 
 *Your Personalize Edge SDK is now set up and ready to interact with your Contentstack Personalize project and proceed with personalization for your website.*
 

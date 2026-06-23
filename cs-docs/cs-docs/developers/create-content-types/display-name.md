@@ -24,17 +24,17 @@ Display Name
 
 ##### Content
 
-In Contentstack, each [field](/docs/developers/create-content-types/about-fields) has a predefined name ([Single Line Textbox](/docs/developers/create-content-types/single-line-textbox), [Link](/docs/developers/create-content-types/link), [Markdown](/docs/developers/create-content-types/markdown), [Global Field](/docs/developers/create-content-types/global), etc.) which you can change and give it a custom name.
+In Contentstack, each [field](./about-fields.md) has a predefined name ([Single Line Textbox](./single-line-textbox.md), [Link](./link.md), [Markdown](./markdown.md), [Global Field](./global.md), etc.) which you can change and give it a custom name.
 
-**Example**: For a “Contact Us” page on a website, you need “Name,” “Email,” and “Body” fields in the form. To achieve this structure in Contentstack, you need two “Single Line Textbox” fields for “Name” and “Email,” and a “[Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox)” for the “Body” section.
+**Example**: For a “Contact Us” page on a website, you need “Name,” “Email,” and “Body” fields in the form. To achieve this structure in Contentstack, you need two “Single Line Textbox” fields for “Name” and “Email,” and a “[Multi Line Textbox](./multi-line-textbox.md)” for the “Body” section.
 
-While you [add these fields to your content type](/docs/developers/create-content-types/create-a-content-type), the **Properties **section opens automatically, and the **Display Name** box opens along with the other boxes. You can change the existing name of these fields to **Name**, **Email**, and **Body** accordingly.
+While you [add these fields to your content type](./create-a-content-type.md), the **Properties **section opens automatically, and the **Display Name** box opens along with the other boxes. You can change the existing name of these fields to **Name**, **Email**, and **Body** accordingly.
 
-**Additional Resource: **To know how to [set labels to content types](/docs/developers/create-content-types/create-and-apply-labels), read our documentation.
+**Additional Resource: **To know how to [set labels to content types](./create-and-apply-labels.md), read our documentation.
 
-Now, when you [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, you will see these fields on the [entry](/docs/content-managers/working-with-entries/about-entries) page as shown below:
+Now, when you [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, you will see these fields on the [entry](../../content-managers/author-content/about-entries.md) page as shown below:
 
-**Additional Resource:** You can read more about [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) in our documentation where we have covered it extensively.
+**Additional Resource:** You can read more about [Field Visibility Rules](./about-field-visibility-rules.md) in our documentation where we have covered it extensively.
 
 ## Common questions
 

@@ -16,7 +16,7 @@ This page explains how to copy an existing content type in a Contentstack stack.
 
 ## Copy a Content Type
 
-If you are working on a content structure similar to an existing content type in your [stack](/docs/developers/set-up-stack/about-stack), then it is best to copy the existing [content type](/docs/developers/create-content-types/about-content-types) and reuse it.
+If you are working on a content structure similar to an existing content type in your [stack](../set-up-stack/about-stack.md), then it is best to copy the existing [content type](./about-content-types.md) and reuse it.
 
 To create a copy of an existing content type, log in to your [Contentstack account](https://www.contentstack.com/login), go to your stack, and perform the following steps:
 - Click on the “Content Models” icon on the left navigation panel to view the list of available content types.

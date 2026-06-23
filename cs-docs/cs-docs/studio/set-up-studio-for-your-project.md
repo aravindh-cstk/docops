@@ -21,22 +21,22 @@ This page explains how to set up Contentstack Studio for your own project, inclu
 
 Studio is Contentstack’s unified environment for designing, structuring, and managing composable digital experiences.
 
-This guide demonstrates how to apply the foundational concepts from [Get Started with Studio](/docs/studio/get-started-with-studio) to set up your own project, including environment configuration, component registration, Figma sync, and workspace setup. You can use a CSR React project that leverages the Contentstack Delivery SDK to fetch and render data, and then use Contentstack Studio to add a new Feature section in the middle of the page.
+This guide demonstrates how to apply the foundational concepts from [Get Started with Studio](./get-started-with-studio.md) to set up your own project, including environment configuration, component registration, Figma sync, and workspace setup. You can use a CSR React project that leverages the Contentstack Delivery SDK to fetch and render data, and then use Contentstack Studio to add a new Feature section in the middle of the page.
 
 ## Prerequisites
 
 Before configuring your Studio project, verify that your environment is ready. This ensures you have the required access, integrations, and tools for a smooth setup.
 
-- You have [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) or [Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) access in Contentstack.
-- The [Studio](/docs/studio/about-studio) feature is enabled for your stack.
-- (Optional) You have access to the [Figma Plugin](/docs/studio/work-with-studio-figma-plugin) for component synchronization.
-- (Optional) The Contentstack [CLI](/docs/developers/cli/install-the-cli) is installed (**v2.0** or **later**).
+- You have [Admin](../developers/invite-users-and-assign-roles/types-of-roles.md#admin) or [Developer](../developers/invite-users-and-assign-roles/types-of-roles.md#developer) access in Contentstack.
+- The [Studio](./about-studio.md) feature is enabled for your stack.
+- (Optional) You have access to the [Figma Plugin](./work-with-studio-figma-plugin.md) for component synchronization.
+- (Optional) The Contentstack [CLI](../developers/cli/install-the-cli.md) is installed (**v2.0** or **later**).
 
 The setup process includes creating a project, defining your environment, registering components and tokens, creating compositions, and deciding how you’ll use them, either within the Playground Canvas or in a connected front-end.
 
 ## Create a Project
 
-A Studio project links your stack to a structured workspace where [compositions](/docs/studio/manage-a-composition), [components](/docs/studio/components), and [tokens](/docs/studio/styling-your-compositions) live.
+A Studio project links your stack to a structured workspace where [compositions](./manage-a-composition.md), [components](./components.md), and [tokens](./styling-your-compositions.md) live.
 
 To access and create with Studio, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
@@ -84,7 +84,7 @@ yarn add @contentstack/delivery-sdk
 Project Settings define how Studio connects to your Contentstack stack and rendering environment. Proper configuration ensures accurate previews, environment consistency, and correct localization when building or testing compositions to your linked stack.
 
 - In your Studio project, open the **Settings** tab.
-- Under **Configurations**, select the **Environment** and **Language** to load the correct **Base URL**.**Note**: You must [configure the environment](/docs/developers/set-up-environments/add-an-environment), base URL, and language in your stack settings.
+- Under **Configurations**, select the **Environment** and **Language** to load the correct **Base URL**.**Note**: You must [configure the environment](../developers/set-up-environments/add-an-environment.md), base URL, and language in your stack settings.
 - The **Base URL** configured against the selected environment is displayed.
 - Click **Save**.
 
@@ -94,7 +94,7 @@ Project Settings define how Studio connects to your Contentstack stack and rende
 
 Connecting Studio to your front-end enables live previews and deployment.
 
-- Install the **Studio SDK** and any required dependencies in your front-end codebase ([CSR](/docs/studio/set-up-studio-for-a-csr-project) or [SSR](/docs/studio/set-up-studio-for-a-ssr-project)).
+- Install the **Studio SDK** and any required dependencies in your front-end codebase ([CSR](./set-up-studio-for-a-csr-project.md) or [SSR](./set-up-studio-for-a-ssr-project.md)).
 - Add the generated **Composition UID** (covered later) to the appropriate route or page in your front-end code.
 - Ensure Studio has access to the correct **environment** and **locale** via the **Project Settings** tab.
 
@@ -203,7 +203,7 @@ After registration, run the CLI sync command to update your components across al
 csdx studio:component:sync --component-path=
 ```
 
-**Additional Resources**: Learn more in our [Register Component](/docs/studio/work-with-studio-cli#add-component) section in the Work with the Studio CLI documentation.
+**Additional Resources**: Learn more in our [Register Component](./work-with-studio-cli.md#add-component) section in the Work with the Studio CLI documentation.
 
 **Note**: When you export from Figma, it retains context of your components if they’ve been registered and synced with Studio.
 
@@ -241,7 +241,7 @@ registerDesignTokens(
 );
 ```
 
-**Additional Resource**: For more details, refer to the [Setting Design Guardrails](/docs/studio/styling-your-compositions#setting-design-guardrails) section in the [Styling Your Compositions](/docs/studio/styling-your-compositions) document.
+**Additional Resource**: For more details, refer to the [Setting Design Guardrails](./styling-your-compositions.md#setting-design-guardrails) section in the [Styling Your Compositions](./styling-your-compositions.md) document.
 
 - The `registerDesignTokens()` function also accepts an optional second parameter for configuration. You can use this parameter to set the `allowedValuesLevel` property to one of the following:dynamic allows adding values only from the CMS.
 - `tokens` enable design tokens in addition to CMS values.
@@ -285,13 +285,13 @@ When executed, this command analyzes your project, attempts to extract design to
 Compositions are structured layouts for pages. Create a linked composition template for content types with multiple entries, and use a freeform composition for single-entry (singleton) content types or standalone pages.
 
 - Open the **Compositions** tab and click **New Composition**.
-- Choose **Linked** (multiple entries share one template) or **Freeform** (one-off page).**Additional Resource**: Learn more about the [types of compositions](/docs/studio/manage-a-composition#composition-types) through our documentation.
+- Choose **Linked** (multiple entries share one template) or **Freeform** (one-off page).**Additional Resource**: Learn more about the [types of compositions](./manage-a-composition.md#composition-types) through our documentation.
 - Let’s select the **Freeform** composition for this setup.
 - Enter a **Name** and review the auto-generated **UID** (you can edit it).
 - For the **Freeform** composition, you need to define the **URL Path**. This URL acts as the place where this composition is hosted.
 - Click **Create** to open it in **Canvas**.
 
-**Tip**: If you plan to [bind content](/docs/studio/data-binding) immediately, ensure your content types and entries exist in the selected environment.
+**Tip**: If you plan to [bind content](./data-binding.md) immediately, ensure your content types and entries exist in the selected environment.
 
 To add a Features section to the homepage in Studio, create a freeform composition named **Features**, with the composition UID `features` and the URL path `/` to represent the homepage.
 
@@ -314,7 +314,7 @@ Best for quick prototyping and visual validation.
 Best for real previews, routes, and production publishing.
 
 - Open the file that corresponds to the URL path defined for the composition.
-- Fetch the spec using the `useCompositionData` function, since this example uses a CSR app.**Note:** For SSR implementations, refer to the [Fetch the Studio Spec in SSR](/docs/studio/set-up-studio-for-a-ssr-project#fetch-the-studio-spec-in-ssr) section for the required configurations.
+- Fetch the spec using the `useCompositionData` function, since this example uses a CSR app.**Note:** For SSR implementations, refer to the [Fetch the Studio Spec in SSR](./set-up-studio-for-a-ssr-project.md#fetch-the-studio-spec-in-ssr) section for the required configurations.
 
 Add the following code to the `Home.tsx` file:
 
@@ -345,7 +345,7 @@ return (
 
 Now, when you open the composition again in the Studio, you’ll see that a new drop zone has been added to the canvas.
 
-**Additional Resource**: For foundational concepts and examples, refer to [Get Started with Studio](/docs/studio/get-started-with-studio) (Create a Composition, Use the Composition UID in Code, and Preview and Deploy) document.
+**Additional Resource**: For foundational concepts and examples, refer to [Get Started with Studio](./get-started-with-studio.md) (Create a Composition, Use the Composition UID in Code, and Preview and Deploy) document.
 
 **Tip**: Ensure that the front-end preview URL matches the **Base URL** configured in Project Settings; otherwise, the Studio preview will not load correctly.
 

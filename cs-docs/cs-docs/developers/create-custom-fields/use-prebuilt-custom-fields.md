@@ -16,20 +16,20 @@ This page explains how to use Contentstack’s prebuilt custom field templates v
 
 ## Use Prebuilt Custom Fields
 
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](/docs/developers/developer-hub/custom-field-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](../developer-hub/custom-field-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
-Contentstack provides several prebuilt [custom field](/docs/developers/create-custom-fields/about-custom-fields) templates to get you started instantly instead of writing code. You just need to configure these templates a bit and get started.
+Contentstack provides several prebuilt [custom field](./about-custom-fields.md) templates to get you started instantly instead of writing code. You just need to configure these templates a bit and get started.
 
 Below is a list of some of the popular custom field templates provided by Contentstack:
-- [Ace Editor](/docs/developers/create-custom-fields/use-prebuilt-custom-fields/ace-editor)
-- [Color Picker](/docs/developers/create-custom-fields/use-prebuilt-custom-fields/color-picker)
-- [JSON Editor](/docs/developers/create-custom-fields/use-prebuilt-custom-fields/json-editor)
-- [Key-value Field](/docs/developers/create-custom-fields/use-prebuilt-custom-fields/key-value-field)
-- [Progress Bar](/docs/developers/create-custom-fields/use-prebuilt-custom-fields/progress-bar)
-- [Star Ratings](/docs/developers/create-custom-fields/use-prebuilt-custom-fields/star-ratings)
+- [Ace Editor](./use-prebuilt-custom-fields/ace-editor.md)
+- [Color Picker](./use-prebuilt-custom-fields/color-picker.md)
+- [JSON Editor](./use-prebuilt-custom-fields/json-editor.md)
+- [Key-value Field](./use-prebuilt-custom-fields/key-value-field.md)
+- [Progress Bar](./use-prebuilt-custom-fields/progress-bar.md)
+- [Star Ratings](./use-prebuilt-custom-fields/star-ratings.md)
 
 In order to use a pre-built custom field, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon on the left navigation panel.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon on the left navigation panel.
 - Select **Extensions**, and click on **+ New Extensions** button at the top-right corner of the page, and select **Use prebuilt** option.
 - In the following window, from the drop-down menu, select **Custom Field**.
 - Select any prebuilt template (for example, **Color Picker**), and click on **+ ****Add Extension**.

@@ -16,19 +16,19 @@ This page explains how to use the **Maximum Number of Terms** field property for
 
 ## Maximum Number of Terms
 
-The **Maximum Number of Terms** property allows you to specify a limit of maximum terms a user can [add to an entry](/docs/content-managers/author-content/adding-terms-to-entries-with-taxonomy/). Once you set this limit, users will be restricted from adding terms beyond the specified maximum.
+The **Maximum Number of Terms** property allows you to specify a limit of maximum terms a user can [add to an entry](../../content-managers/author-content/adding-terms-to-entries-with-taxonomy.md). Once you set this limit, users will be restricted from adding terms beyond the specified maximum.
 
 **Note**: The maximum number of terms allowed per entry is **25**.
 
 To set the maximum number of terms for a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login) and go to the stack. Perform the following steps in the stack:
 
 - Once the **Content Type** is created, add the required fields along with the Taxonomy field.
-- Within the Taxonomy field properties, add the necessary details for the [Display Name](/docs/developers/create-content-types/display-name/), [Help Text](/docs/developers/create-content-types/help-text/), and [Instruction Value](/docs/developers/create-content-types/instruction-value/) field properties.**Note**: By default, the UID for the taxonomy field is set to taxonomies and cannot be updated.
+- Within the Taxonomy field properties, add the necessary details for the [Display Name](./display-name.md), [Help Text](./help-text.md), and [Instruction Value](./instruction-value.md) field properties.**Note**: By default, the UID for the taxonomy field is set to taxonomies and cannot be updated.
 - Click on **+ Add Taxonomy**, and in the pop-up window, select a taxonomy from the drop down menu.
 - Within the **Maximum Number of Terms** field, enter the limit.
 - Once all the details are filled, click **Apply **to save the changes.
 
-**Additional Resource**: Refer to our [Add Taxonomy to a Content Type](/docs/developers/taxonomy/add-taxonomy-to-a-content-type) document for more information.
+**Additional Resource**: Refer to our [Add Taxonomy to a Content Type](../taxonomy/add-taxonomy-to-a-content-type.md) document for more information.
 
 ## Common questions
 
@@ -42,4 +42,4 @@ Once you set this limit, users will be restricted from adding terms beyond the s
 Within the Taxonomy field properties, use the **Maximum Number of Terms** field to enter the limit and click **Apply **to save the changes.
 
 **Where can I learn more about adding taxonomy to a content type?**  
-Refer to our [Add Taxonomy to a Content Type](/docs/developers/taxonomy/add-taxonomy-to-a-content-type) document for more information.
+Refer to our [Add Taxonomy to a Content Type](../taxonomy/add-taxonomy-to-a-content-type.md) document for more information.

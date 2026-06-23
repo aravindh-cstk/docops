@@ -16,16 +16,16 @@ This page explains how to use the Contentstack Command-line Interface (CLI) to p
 
 ## CLI for Launch
 
-[Launch](/docs/developers/launch/about-launch/) is a deployment platform that enables you to host your Contentstack-powered JAM stack website instantly. Launch hosts websites managed by any CMS (headless or traditional).
+[Launch](../launch/about-launch.md) is a deployment platform that enables you to host your Contentstack-powered JAM stack website instantly. Launch hosts websites managed by any CMS (headless or traditional).
 
-You can create a project in Launch by [connecting your GitHub repository](/docs/developers/launch/import-project-using-github/)—Launch deploys your site instantly. Alternatively, you can [upload a folder or .zip file](/docs/developers/launch/import-project-using-file-upload/) to create a project.
+You can create a project in Launch by [connecting your GitHub repository](../launch/import-project-using-github.md)—Launch deploys your site instantly. Alternatively, you can [upload a folder or .zip file](../launch/import-project-using-file-upload.md) to create a project.
 
 This step-by-step guide discusses how you can perform different operations in Launch using the CLI.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
-- [CLI installed](/docs/developers/cli/install-the-cli/) and [configured](/docs/developers/cli/configure-regions-in-the-cli/) for AWS (version 1.6.0 and above), Azure (version 1.23.0 and above), or GCP (version 1.31.0 and above)
-- [CLI authenticated](/docs/developers/cli/cli-authentication/) (the cli-launch plugin supports only login-based authentication)
+- [CLI installed](./install-the-cli.md) and [configured](./configure-regions-in-the-cli.md) for AWS (version 1.6.0 and above), Azure (version 1.23.0 and above), or GCP (version 1.31.0 and above)
+- [CLI authenticated](./cli-authentication.md) (the cli-launch plugin supports only login-based authentication)
 - Access to Launch for your organization
 - [GitHub account](https://github.com/login) where your website code is hosted**Note**: This prerequisite is applicable only if you are importing a project via GitHub.
 
@@ -41,7 +41,7 @@ Contentstack Launch lets you perform the following operations in Contentstack CL
 
 ### Launch (Create a Project)
 
-To begin with, create a project in Launch using the CLI by importing a project from [GitHub](/docs/developers/launch/import-project-using-github) or [uploading a file](/docs/developers/launch/import-project-using-file-upload/). To do this, follow the steps given below:
+To begin with, create a project in Launch using the CLI by importing a project from [GitHub](../launch/import-project-using-github.md) or [uploading a file](../launch/import-project-using-file-upload.md). To do this, follow the steps given below:
 - Open the terminal and fire the `launch` command:  
       Run the below command if you are in the current working directory.
 ```
@@ -98,7 +98,7 @@ csdx launch
 
 | Option | Description |
 |---|---|
-| `-a, --alias=alias_token` | [optional] Alias (name) for the [delivery token](/docs/developers/cli/cli-authentication#token-management). |
+| `-a, --alias=alias_token` | [optional] Alias (name) for the [delivery token](./cli-authentication.md#token-management). |
 | `-d, --data-dir=data-dir` | [optional] Current working directory. |
 | `-c, --config=config` | [optional] Path to the local '.cs-launch.json' file. |
 | `--type=type` | [optional] Type of adapters. <options: GitHub\|FileUpload> |
@@ -152,11 +152,11 @@ If the `cs-launch.json` file is present, then run the following command to redep
 csdx launch
 ```
 
-If you are using [GitHub](/docs/developers/launch/import-project-using-github/) projects, after running the command, you will see a prompt as shown in the screenshot below:
+If you are using [GitHub](../launch/import-project-using-github.md) projects, after running the command, you will see a prompt as shown in the screenshot below:
 - Press **Y** to redeploy using the latest commit on GitHub.
 - Press **n** to cancel the process.
 
-If you are using the [File Upload](/docs/developers/launch/import-project-using-file-upload/) projects, after running the command, you will see a prompt as shown in the screenshot below:
+If you are using the [File Upload](../launch/import-project-using-file-upload.md) projects, after running the command, you will see a prompt as shown in the screenshot below:
 - Press **Y** to redeploy the existing launch project.You will be prompted to select a redeployment method, as shown in the screenshot below:
 
       Select the preferred redeployment method and press **Enter**.
@@ -211,7 +211,7 @@ The Launch CLI can be utilized within CI environments to trigger redeployments f
 - **Environment Setup**
 
       Use the Launch UI to create the necessary environments for your Launch project. This is a one-time setup process.
-- For detailed steps, refer to the [Creating a New Environment](/docs/developers/launch/environments#create-an-environment) guide.
+- For detailed steps, refer to the [Creating a New Environment](../launch/environments.md#create-an-environment) guide.
 - **Configuration in Codebase**
 
       In the root directory of your project, create a configuration file named `cs-launch.json`.
@@ -251,11 +251,11 @@ The Launch CLI can be utilized within CI environments to trigger redeployments f
 #### Triggering Redeployments in CI
 
 Use the following steps to trigger a redeployment using the Launch CLI within your CI environment:
-- [**Set Region**](/docs/developers/cli/configure-regions-in-the-cli#set-region)  
+- [**Set Region**](./configure-regions-in-the-cli.md#set-region)  
     Configure the CLI to use the appropriate region.
 
     **Example:** `csdx config:set:region NA`
-- [**Authenticate**](/docs/developers/cli/cli-authentication#login)** with Launch CLI**  
+- [**Authenticate**](./cli-authentication.md#login)** with Launch CLI**  
     Use the `csdx auth:login` command to log in.
 
     **Example:** `csdx auth:login --username youremail@contentstack.com --password *****`
@@ -270,7 +270,7 @@ By following these steps, you can seamlessly integrate Launch redeployments into
 
 ### Logs
 
-You can fetch the previous [deployment logs](/docs/developers/launch/deployments#deployment-logs) and the latest server logs for Launch projects in CLI using the `launch:logs` command.
+You can fetch the previous [deployment logs](../launch/deployments.md#deployment-logs) and the latest server logs for Launch projects in CLI using the `launch:logs` command.
 - Open a terminal and fire the `launch:logs` command:
 ```
 csdx launch:logs
@@ -310,7 +310,7 @@ csdx launch:logs -e "environment number or uid" --deployment "deployment number 
 
 ### Functions
 
-You can test your Launch project [Cloud Functions](/docs/developers/launch/cloud-functions/) locally using the `launch:functions` command in CLI.
+You can test your Launch project [Cloud Functions](../launch/cloud-functions.md) locally using the `launch:functions` command in CLI.
 
 **Usage**
 
@@ -338,7 +338,7 @@ csdx launch:functions -p "port number"
 
 ### Deployments
 
-You can display the list of [deployments](/docs/developers/launch/deployments/) for an environment for Launch projects using the `launch:deployments` command in CLI.
+You can display the list of [deployments](../launch/deployments.md) for an environment for Launch projects using the `launch:deployments` command in CLI.
 - Open a terminal and fire the `launch:deployments` command:
 ```
 csdx launch:deployments
@@ -377,7 +377,7 @@ csdx launch:deployments -e "environment number or uid"
 
 ### Environments
 
-You can display the list of [environments](/docs/developers/launch/environments/) that are available for a particular project using the `launch:environments` command in CLI.
+You can display the list of [environments](../launch/environments.md) that are available for a particular project using the `launch:environments` command in CLI.
 - Open a terminal and fire the `launch:environments` command:
 ```
 csdx launch:environments
@@ -453,7 +453,7 @@ csdx launch:open --environment=environment --config
 
 ### Rollback
 
-You can roll back to a previous successful deployment for a Launch project using the `launch:rollback` command in the CLI. This performs an [instant rollback](/docs/launch/instant-rollbacks), restoring your application to a previously archived deployment without triggering a rebuild.
+You can roll back to a previous successful deployment for a Launch project using the `launch:rollback` command in the CLI. This performs an [instant rollback](../../launch/instant-rollbacks.md), restoring your application to a previously archived deployment without triggering a rebuild.
 - Open a terminal and run the `launch:rollback` command:
 ```
 csdx launch:rollback

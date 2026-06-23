@@ -21,8 +21,8 @@ In Contentstack, an **entry** is a specific piece of content created within a pr
 
 **Key Characteristics of Entries:**
 - **Content Representation:** Entries embody the actual content you intend to publish, following the blueprint established by their content type.
-- **Content Types Dependency:** You can create entries only within existing content types. Hence, it is essential to [define your content types](/docs/developers/create-content-types/create-a-content-type) before adding entries.
-- **Branch Specificity:** When working with branches, entries created or updated are [specific to that particular branch](/docs/developers/branches/branch-specific-modules). This means that an entry in one branch won't automatically appear in another, allowing for isolated development and content management.
+- **Content Types Dependency:** You can create entries only within existing content types. Hence, it is essential to [define your content types](../../developers/create-content-types/create-a-content-type.md) before adding entries.
+- **Branch Specificity:** When working with branches, entries created or updated are [specific to that particular branch](../../developers/branches/branch-specific-modules.md). This means that an entry in one branch won't automatically appear in another, allowing for isolated development and content management.
 
 **Tip:** If you plan to create multiple entries for a content type, ensure the **Multiple** option is selected during content type creation.
 
@@ -36,10 +36,10 @@ Entries can be edited, published, unpublished, and deleted as needed. By structu
 An **entry** is a specific piece of content created within a predefined content type.
 
 ### Do I need to create content types before creating entries?
-Yes. You can create entries only within existing content types, so it is essential to [define your content types](/docs/developers/create-content-types/create-a-content-type) before adding entries.
+Yes. You can create entries only within existing content types, so it is essential to [define your content types](../../developers/create-content-types/create-a-content-type.md) before adding entries.
 
 ### Are entries shared across branches automatically?
-No. When working with branches, entries created or updated are [specific to that particular branch](/docs/developers/branches/branch-specific-modules).
+No. When working with branches, entries created or updated are [specific to that particular branch](../../developers/branches/branch-specific-modules.md).
 
 ### What should I do if I plan to create multiple entries for a content type?
 Ensure the **Multiple** option is selected during content type creation.

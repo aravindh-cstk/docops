@@ -28,32 +28,32 @@ Learn more about [Integrations](/docs/developers/integrations/).
 
 A centralized hub with ready-to-use apps and other resources that enable you to extend and customize the functionality of our CMS. Employ these apps to improve the Contentstack experience by integrating numerous external services with quick one-click installations.
 
-Learn more about [Marketplace Guides](/docs/developers/marketplace-platform-guides/).
+Learn more about [Marketplace Guides](../developers/marketplace-platform-guides.md).
 
 ## Install and Use Third Party Apps
 
 The Contentstack Marketplace apps let you enhance and personalize the basic CMS's functionality. You can quickly and seamlessly integrate your preferred third-party platforms using these ready-to-use apps.
 
-Learn more about [Marketplace Apps](/docs/developers/marketplace-apps/).
+Learn more about [Marketplace Apps](../developers/marketplace-apps.md).
 
 ## Create your Own Apps
 
 Developers can utilize the app development framework to quickly create, host, and publish ready-to-use private or public apps by applying its app development APIs, SDKs, and other resources.
 
-Learn more about [Developer Hub](/docs/developers/developer-hub/).
+Learn more about [Developer Hub](../developers/developer-hub.md).
 
 ## App boilerplates
 
 Contentstack’s Developer Hub **App** **Boilerplates**, a powerful resource for transforming custom application development. These boilerplates are designed to streamline the process by offering pre-configured settings and essential functionalities. This allows developers to focus their efforts on building unique features and seamless integrations. Let’s explore the specific boilerplates and their impact on developing custom solutions:
-- [Marketplace App Boilerplate](/docs/developers/developer-hub/marketplace-app-boilerplate)
-- [Marketplace Ecommerce Boilerplate](/docs/developers/developer-hub/marketplace-ecommerce-app-boilerplate/)
-- [Marketplace DAM App Boilerplate](/docs/developers/developer-hub/marketplace-dam-app-boilerplate/)
+- [Marketplace App Boilerplate](../developers/developer-hub/marketplace-app-boilerplate.md)
+- [Marketplace Ecommerce Boilerplate](../developers/developer-hub/marketplace-ecommerce-app-boilerplate.md)
+- [Marketplace DAM App Boilerplate](../developers/developer-hub/marketplace-dam-app-boilerplate.md)
 
 ## How-to guides
 
 Use our step-by-step guides to set up or build websites for various pursuits, such as translation services, automation, collaborating with search engines, hosting, etc.
 
-Learn more about [How-to Guides](/docs/developers/how-to-guides/).
+Learn more about [How-to Guides](../developers/how-to-guides.md).
 
 ## Common questions
 

@@ -17,11 +17,11 @@ This page explains what Analytics in Contentstack is, what products it covers, a
 
 ## About Analytics
 
-Analytics in Contentstack offers a powerful, centralized platform for monitoring and analyzing the usage and performance of your organization’s key products: CMS, [Launch](/docs/developers/launch/about-launch), [Automate](/docs/developers/automation-hub-guides/about-automation-hub), [Personalize](/docs/personalize/about-personalize), [Brand Kit](/docs/content-managers/brand-kit/about-brand-kit), and other products within Contentstack. This feature combines the capabilities of the previously separate Product Analytics and Mission Control, offering a unified and streamlined experience for organization owners and admins.
+Analytics in Contentstack offers a powerful, centralized platform for monitoring and analyzing the usage and performance of your organization’s key products: CMS, [Launch](../developers/launch/about-launch.md), [Automate](/docs/developers/automation-hub-guides/about-automation-hub), [Personalize](../personalize/about-personalize.md), [Brand Kit](../content-managers/brand-kit/about-brand-kit.md), and other products within Contentstack. This feature combines the capabilities of the previously separate Product Analytics and Mission Control, offering a unified and streamlined experience for organization owners and admins.
 
 By integrating these metrics into a cohesive dashboard, Analytics delivers a holistic view of your organization’s activity, enabling you to make data-driven decisions more efficiently.
 
-**Note:** Only organization [Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admin](/docs/developers/organization/organization-roles#organization-admin) roles can access the Analytics feature.
+**Note:** Only organization [Owner](../developers/organization/organization-roles.md#organization-owner) and [Admin](../developers/organization/organization-roles.md#organization-admin) roles can access the Analytics feature.
 
 Organizing analytics data by product helps you allocate resources efficiently. For example, if a CMS stack uses more API requests, you can investigate and adjust. Understanding device usage patterns ensures your products are optimized for the most-used platforms.
 

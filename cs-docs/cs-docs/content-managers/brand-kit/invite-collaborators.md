@@ -21,7 +21,7 @@ Collaborators are individuals to whom you can give permission to help and manage
 
 This helps in ensuring that your brand's voice stays consistent across all your content irrespective of who's working on it.
 
-**Note**: Only the Brand Kit [Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admin](/docs/developers/organization/organization-roles#organization-admin) can add or remove these collaborators.
+**Note**: Only the Brand Kit [Owner](../../developers/organization/organization-roles.md#organization-owner) and [Admin](../../developers/organization/organization-roles.md#organization-admin) can add or remove these collaborators.
 
 ## Steps for Execution
 

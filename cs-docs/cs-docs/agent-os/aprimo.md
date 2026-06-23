@@ -65,7 +65,7 @@ https://eu-prod-automations-api.contentstack.com/userauths/auth/callback
 **Note:** It is mandatory to select the **OAuth Flow Type** as **Client Credential**. The credentials are activated after 15 minutes so you can use them to authorize your Aprimo account.
 - Enter an **Account Name **and then click **Save**.
 - Select an **Asset** which you want to update from the **Lookup** dropdown.
-**Note:** Contentstack Marketplace offers an [Aprimo](/docs/developers/marketplace-apps/aprimo/) app for its users, so they can fetch the assets/images into their Contentstack CMS entry. With the Aprimo connector, you can fetch the asset id from the Aprimo entry and you can edit the asset attributes.
+**Note:** Contentstack Marketplace offers an [Aprimo](../developers/marketplace-apps/aprimo.md) app for its users, so they can fetch the assets/images into their Contentstack CMS entry. With the Aprimo connector, you can fetch the asset id from the Aprimo entry and you can edit the asset attributes.
 - In the **Asset Attribute** field, provide the name of the attribute in the **Key** field and the value that you want to update in the **Value** field.
 - Click the **Proceed** button.
 - Click the **Test Action** button to test the configured action.

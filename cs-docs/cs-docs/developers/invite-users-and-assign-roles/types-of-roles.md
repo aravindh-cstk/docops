@@ -25,7 +25,7 @@ Let’s understand these roles in detail.
 
 ## Owner
 
-Each stack can have only one Owner. [Creating a stack](/docs/developers/set-up-stack/create-a-new-stack) in Contentstack makes you the Owner of the stack. The Owner has the following rights:
+Each stack can have only one Owner. [Creating a stack](../set-up-stack/create-a-new-stack.md) in Contentstack makes you the Owner of the stack. The Owner has the following rights:
 - Complete rights to the content and settings of a stack in addition to the combined rights of an "Admin", “Developer” and a “Content Manager.”
 - Right to delete a stack
 - Can create delivery and management tokens
@@ -34,27 +34,27 @@ Each stack can have only one Owner. [Creating a stack](/docs/developers/set-up-s
 ## Admin
 
 The Admin role has the following rights:
-- [Create](/docs/content-managers/working-with-entries/create-an-entry), [update](/docs/content-managers/working-with-entries/edit-an-entry), [delete](/docs/content-managers/working-with-entries/delete-an-entry), [publish](/docs/content-managers/working-with-entries/publish-an-entry), [unpublish](/docs/content-managers/working-with-entries/unpublish-an-entry) entries and assets
-- Create, update, delete [languages](/docs/developers/multilingual-content/about-languages), [environment](/docs/developers/set-up-environments/about-environments), [content types](/docs/developers/create-content-types/about-content-types) and [custom roles](#custom-role)
-- [Invite users](/docs/owners-and-admins/invite-users-to-organization) to and [remove users](/docs/developers/invite-users-and-assign-roles/remove-a-user) from the stack
+- [Create](../../content-managers/author-content/create-an-entry.md), [update](../../content-managers/author-content/edit-an-entry.md), [delete](../../content-managers/author-content/delete-an-entry.md), [publish](../../content-managers/author-content/publish-an-entry.md), [unpublish](../../content-managers/author-content/unpublish-an-entry.md) entries and assets
+- Create, update, delete [languages](../multilingual-content/about-languages.md), [environment](../set-up-environments/about-environments.md), [content types](../create-content-types/about-content-types.md) and [custom roles](#custom-role)
+- [Invite users](../organization/invite-users-to-organization.md) to and [remove users](./remove-a-user.md) from the stack
 - Create delivery and management tokens
 - View audit log and publish queue
 
-The Admin role has more rights than a Developer and fewer than the Owner. To know the difference, refer to the [Stack Admin vs Stack Owner](/docs/owners-and-admins/stack-admin-vs-stack-owner) section.
+The Admin role has more rights than a Developer and fewer than the Owner. To know the difference, refer to the [Stack Admin vs Stack Owner](../organization/stack-admin-vs-stack-owner.md) section.
 
 ## Developer
 
 A “Developer” is a person who creates the structure of the site or defines the way content will appear on the site. Hence, this role has the right to:
-- View [audit log](/docs/developers/set-up-stack/monitor-stack-activities-in-audit-log)
+- View [audit log](../set-up-stack/monitor-stack-activities-in-audit-log.md)
 - Create Roles
 - Invite users
 - Create/edit/delete languages, environments, and content types
-- Create/edit/delete/publish/unpublish [entries](/docs/content-managers/working-with-entries/about-entries) and [assets](/docs/content-managers/working-with-assets/about-assets)
+- Create/edit/delete/publish/unpublish [entries](../../content-managers/author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets)
 - Can create and manage delivery tokens
 - Cannot create management tokens
-- View [Publish Queue](https://www.contentstack.com/docs/content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue/)
+- View [Publish Queue](../../content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue.md)
 
-To know the difference between the Admin and Developer roles, refer to the [Stack Admin vs Stack Developer](/docs/owners-and-admins/stack-admin-vs-stack-developer) section.
+To know the difference between the Admin and Developer roles, refer to the [Stack Admin vs Stack Developer](../organization/stack-admin-vs-stack-developer.md) section.
 
 ## Content Manager
 
@@ -70,7 +70,7 @@ In addition to the predefined system roles (“Admin,” “Developer,” and �
 
 The best part about custom roles is that you have fine-grained control over permissions. You can assign permissions at entry, field, and asset level. For example, “ABC” role can READ only two entries of a content type, or EDIT only the SEO fields, or cannot READ any assets.
 
-To create a Custom role, follow the steps mentioned in the [Create a Role](/docs/developers/invite-users-and-assign-roles/create-a-role) section.
+To create a Custom role, follow the steps mentioned in the [Create a Role](./create-a-role.md) section.
 
 **Note:** While you can create multiple custom roles within a specific stack, please be aware that there is a maximum limit for customers as per plan outlined in the contract. We advise reviewing your contract details to understand the specific limitations applicable to your plan.
 
@@ -92,13 +92,13 @@ The following is a tabular summary that outlines the Stack roles and their permi
 
 Here are some relevant API requests that you can use when working with our Content Management APIs:
 
-[Create a Stack](/docs/developers/apis/content-management-api#create-stack)
+[Create a Stack](../../../api-docs/api-detail/content-management-api.md#create-stack)
 
-[Delete a Stack](/docs/developers/apis/content-management-api#delete-stack)
+[Delete a Stack](../../../api-docs/api-detail/content-management-api.md#delete-stack)
 
-[Update a stack](/docs/developers/apis/content-management-api#update-stack)
+[Update a stack](../../../api-docs/api-detail/content-management-api.md#update-stack)
 
-[Transfer Ownership](/docs/developers/apis/content-management-api#transfer-stack-ownership-to-other-users)
+[Transfer Ownership](../../../api-docs/api-detail/content-management-api.md#transfer-stack-ownership-to-other-users)
 
 ## Common questions
 

@@ -32,17 +32,17 @@ To invite users to an organization, log in to your [Contentstack account](https:
 
 The invited users will receive an email notification. After accepting the invitation, they will be added to the organization with the assigned roles and access.
 
-**Additional Resources: **Learn more about organization [roles](/docs/developers/organization/organization-roles/) in Contentstack.
+**Additional Resources: **Learn more about organization [roles](./organization-roles.md) in Contentstack.
 
 ## Invite Users to SSO-enabled Organizations
 
-For organizations with [Single Sign-On (SSO)](/docs/developers/single-sign-on/about-single-sign-on-sso/) enabled, the invitation process remains the same. However, if “[Strict Mode](/docs/developers/single-sign-on/set-up-sso-in-contentstack#user-management-in-contentstack)” is disabled, you see the **Allow Access without SSO** checkbox. Select this option to let the invited user access the SSO-enabled organization using their Contentstack credentials instead of IdP credentials.
+For organizations with [Single Sign-On (SSO)](../single-sign-on/about-single-sign-on-sso.md) enabled, the invitation process remains the same. However, if “[Strict Mode](../single-sign-on/set-up-sso-in-contentstack.md#user-management-in-contentstack)” is disabled, you see the **Allow Access without SSO** checkbox. Select this option to let the invited user access the SSO-enabled organization using their Contentstack credentials instead of IdP credentials.
 
 ## API Reference
 
-- To add users to the organization via API, refer to the [Add users to Organization](/docs/developers/apis/content-management-api#add-users-to-organization) request.
-- To resend pending organization invitations, via API refer to the [Resend pending Organization invitation](/docs/developers/apis/content-management-api#resend-pending-organization-invitation) request.
-- To get all organization invitations via API, refer to the [Get all Organization invitations](/docs/developers/apis/content-management-api#get-all-organization-invitations) request.
+- To add users to the organization via API, refer to the [Add users to Organization](../../../api-docs/api-detail/content-management-api.md#add-users-to-organization) request.
+- To resend pending organization invitations, via API refer to the [Resend pending Organization invitation](../../../api-docs/api-detail/content-management-api.md#resend-pending-organization-invitation) request.
+- To get all organization invitations via API, refer to the [Get all Organization invitations](../../../api-docs/api-detail/content-management-api.md#get-all-organization-invitations) request.
 
 ## Common questions
 

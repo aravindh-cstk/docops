@@ -29,7 +29,7 @@ This guide walks you through the steps required to delete non-referenced and ref
 **Note:** Users with Owner and Member access to a Personalize project can delete existing custom attributes.
 
 ## Steps for Execution
-**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
 ### Delete a Non-referenced Custom Attribute
 A non-referenced attribute in Contentstack Personalize is a custom attribute that is not currently being used in any audience rules or segmentations within your project.
@@ -65,7 +65,7 @@ To delete an existing referenced custom attribute, log in to your [Contentstack 
 
 You will get a success message after the custom attribute is deleted from Personalize.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#attributes) to create, edit, delete, and retrieve all existing attributes.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#attributes) to create, edit, delete, and retrieve all existing attributes.
 
 ## Common questions
 
@@ -79,4 +79,4 @@ A non-referenced attribute is not currently being used in any audience rules or 
 Deleting a referenced attribute requires first removing the attribute from any audience rules where it is used to ensure that existing audience definitions and personalization strategies are not disrupted.
 
 ### Can I manage attributes via an API instead of the UI?
-Yes. You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#attributes) to create, edit, delete, and retrieve all existing attributes.
+Yes. You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#attributes) to create, edit, delete, and retrieve all existing attributes.

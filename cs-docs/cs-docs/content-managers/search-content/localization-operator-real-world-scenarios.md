@@ -19,12 +19,12 @@ This page explains how the localization operator works in Contentstack Advanced 
 
 Explore how the localization operator can enhance search accuracy in Contentstack through these real-world examples.
 
-Consider a scenario where you have the following languages available within your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack): English (United States), French (France), Chinese (China), and Spanish (Spain). English (United States) is set as the master language of the stack.
-- English (United States) is a [fallback language](https://www.contentstack.com/docs/developers/multilingual-content/about-fallback-languages) of French (France);
+Consider a scenario where you have the following languages available within your [stack](../../developers/set-up-stack/about-stack.md): English (United States), French (France), Chinese (China), and Spanish (Spain). English (United States) is set as the master language of the stack.
+- English (United States) is a [fallback language](../../developers/multilingual-content/about-fallback-languages.md) of French (France);
 - French (France) is a fallback language of Chinese (China);
 - English (United States) is a fallback language for Spanish (Spain)
 
-You have created six [entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries) in a [content type](https://www.contentstack.com/docs/developers/create-content-types/about-content-types), and these entries are localized in different languages. The table below illustrates the localization and fallback relationships for each entry:
+You have created six [entries](../author-content/about-entries.md) in a [content type](../../developers/create-content-types/about-content-types.md), and these entries are localized in different languages. The table below illustrates the localization and fallback relationships for each entry:
 
 | Entry No. | Master Language | Localized in |
 |---|---|---|
@@ -35,7 +35,7 @@ You have created six [entries](https://www.contentstack.com/docs/content-manager
 | Entry 5 | English (United States) | - French (France)<br>- Chinese (China) |
 | Entry 6 | English (United States) | Spanish (Spain) |
 
-**Tip**: Before using the localization operator, get acquainted with [Advanced Search](/docs/content-managers/search-content/advanced-search) queries.
+**Tip**: Before using the localization operator, get acquainted with [Advanced Search](./advanced-search.md) queries.
 
 Now, let’s see some scenarios to understand how the localization operator will work in your search queries.
 
@@ -87,7 +87,7 @@ The search result will include the following entry versions:
 
 Here, only the entries present in Chinese (China) language that have been localized in French (France) appear in the search results.
 
-**Additional Resource**: Learn how [localization](/docs/developers/multilingual-content/about-localization) works in Contentstack.
+**Additional Resource**: Learn how [localization](../../developers/multilingual-content/about-localization.md) works in Contentstack.
 
 ## Common questions
 

@@ -19,7 +19,7 @@ The Get Single Group by ID request fetches details of a single group that exists
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.

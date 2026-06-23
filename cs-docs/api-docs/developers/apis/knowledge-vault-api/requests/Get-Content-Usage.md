@@ -16,7 +16,7 @@ last_updated: 2025-09-29
 
 The Get Content Usage request lets you fetch the details of content being used from the Knowledge Vault.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 ## Headers
 
@@ -24,7 +24,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (optional)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../../api-detail/knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 - **brand_kit_uid** (required)
   Enter the Brand Kit UID.

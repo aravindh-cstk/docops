@@ -24,7 +24,7 @@ You can find **Teams** under the “Stack Settings” navigation panel.
 ## Key Features
 
 Here are the key features of Teams:
-- Teams is an Organization-wide feature and can be accessed through [Organization Settings.](/docs/developers/organization/organization-settings-overview)
+- Teams is an Organization-wide feature and can be accessed through [Organization Settings.](../organization/organization-settings-overview.md)
 - Only owners and admins currently have permission to manage teams.
 - Teams let you assign both Organization-level and stack-level roles to the users.
 - Once a team is set up, members can be added and assigned roles.

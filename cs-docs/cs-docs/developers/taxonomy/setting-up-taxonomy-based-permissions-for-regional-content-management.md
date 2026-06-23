@@ -24,11 +24,11 @@ With this feature, you can set specific permissions for taxonomies as well as fo
 Consider a scenario where you have a "Regions" taxonomy and you have categorized entries based on the terms from this taxonomy. You want to allocate custom roles to your stack collaborators to give them permissions only to work on specific regional entries. You can easily do this with the taxonomy-based permissions feature.
 
 To customize taxonomy-based permissions for custom roles, log in to your [Contentstack account](https://www.contentstack.com/login) and follow the steps below:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to create a taxonomy-based role, navigate to the “Settings” icon (press “S”) on the left navigation panel, and select **Users & Roles**.
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to create a taxonomy-based role, navigate to the “Settings” icon (press “S”) on the left navigation panel, and select **Users & Roles**.
 - Select the **Roles** tab.
 - Click on the **+ New Role** button located at the top right corner of the page.
 - Enter a suitable **Name** and **Description** for the role.
-- Under Permissions, define the permissions that you want to assign to the new role. You can set permissions on [entries](/docs/content-managers/author-content/about-entries/), [assets](/docs/content-managers/author-content/about-assets/), and [asset folders](/docs/content-managers/author-content/create-a-folder/).
+- Under Permissions, define the permissions that you want to assign to the new role. You can set permissions on [entries](../../content-managers/author-content/about-entries.md), [assets](../../content-managers/author-content/about-assets.md), and [asset folders](../../content-managers/author-content/create-a-folder.md).
 - Within the **All Entries of Content Types / Taxonomies** field, configure the permissions as required.
 - Select whether you want to add these permissions to **All Taxonomies** or **Specific Taxonomies**. In our scenario, select **Specific Taxonomies**.
 - Select the **Regions** taxonomy from the list of available taxonomies.

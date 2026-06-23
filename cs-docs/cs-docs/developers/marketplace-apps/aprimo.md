@@ -90,7 +90,7 @@ In the left navigation panel, click the **Marketplace** icon.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.  
         **Note**: The app requires at least one UI location to be enabled; otherwise, you would not be able to save your app configuration settings.
 
-        **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+        **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Aprimo application.
 
 ## Use the Aprimo App within your Stack

@@ -27,7 +27,7 @@ These errors indicate that one or more audiences connected from **Data & Insight
 
 ### Why does this happen?
 
-Data & Insights (Lytics) audiences in Personalize are visible only when a **Personalize project** is linked to an active [Data Activation Layer (DAL)](/docs/data-and-insights/integrating-data-and-insights-lytics) connection. This connection lets you reference audiences from Data & Insights (Lytics) directly in your experiences.
+Data & Insights (Lytics) audiences in Personalize are visible only when a **Personalize project** is linked to an active [Data Activation Layer (DAL)](../data-and-insights/integrating-data-and-insights-lytics.md) connection. This connection lets you reference audiences from Data & Insights (Lytics) directly in your experiences.
 
 **Impacts by Experience State:**
 - **Draft:** Errors do not affect production since the experience is not yet active. You can safely edit the audience.

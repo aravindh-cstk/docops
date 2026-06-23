@@ -22,7 +22,7 @@ User session consists of calls that will help you to sign in and sign out of you
 
 The Log in to your account request is used to sign in to your Contentstack account and obtain the authtoken.
 
-**Note:** The authtoken is a mandatory parameter when executing Content Management API calls. However, when executing Content Delivery API calls, use [the Content Delivery base URL ](/docs/developers/apis/content-delivery-api/)for your region, and pass the environment-specific delivery token against the access_token key.
+**Note:** The authtoken is a mandatory parameter when executing Content Management API calls. However, when executing Content Delivery API calls, use [the Content Delivery base URL ](./api-detail/content-delivery-api.md)for your region, and pass the environment-specific delivery token against the access_token key.
 
 In the 'Body' section, enter the user credentials in JSON format. The JSON query will include the email address, the Contentstack user account password, and the two-factor authentication token (if enabled) received in the Authy app or SMS.
 
@@ -31,7 +31,7 @@ For SSO-enabled organizations, the ‘Log in to your account’ request will not
 - The owner of an organization can access the SSO-enabled organization through Contentstack credentials and retrieve the user authtoken to make Content Management API requests.
 - Disable 'Strict Mode' for an SSO-enabled organization, and users who have the ability to access their organization through Contentstack credentials can retrieve the authtoken to make Content Management API requests.
 
-For more details, refer the [REST API Usage - Content Management API](/docs/developers/single-sign-on/rest-api-usage#content-management-api) section in the Single Sign-On page.
+For more details, refer the [REST API Usage - Content Management API](../cs-docs/developers/single-sign-on/rest-api-usage.md#content-management-api) section in the Single Sign-On page.
 
 #### Headers
 

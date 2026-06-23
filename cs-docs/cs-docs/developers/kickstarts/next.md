@@ -75,7 +75,7 @@ After you clone the repo and install dependencies, your Next project should rese
 ```
 
 ### 3. Create a Contentstack Stack
-Next, set up a Contentstack Stack loaded with sample content for the Kickstart. Log in to your Contentstack account and [create a new Stack](/docs/developers/set-up-stack/create-a-new-stack). Follow these steps to seed your Stack with the necessary data:
+Next, set up a Contentstack Stack loaded with sample content for the Kickstart. Log in to your Contentstack account and [create a new Stack](../set-up-stack/create-a-new-stack.md). Follow these steps to seed your Stack with the necessary data:
 - Download the Stack seed data from GitHub.
 - Install the Contentstack CLI (if not already installed):
 ```
@@ -110,7 +110,7 @@ Need more information, watch a quick video on how to [seed a stack in the CLI](h
 If you want to run the code locally, and get set up in under a minute, you can also use the CLI bootstrap command.
 
 ### 4. Create a Delivery Token
-In your Contentstack stack, go to **Settings** > **Tokens** and create a new [Delivery Token](/docs/developers/create-tokens/create-a-delivery-token). Enable the **Preview** option for this token (toggle **Create Preview Token** on) so that it comes with an associated Preview token. Name it something like "Next Kickstart Token".
+In your Contentstack stack, go to **Settings** > **Tokens** and create a new [Delivery Token](../create-tokens/create-a-delivery-token.md). Enable the **Preview** option for this token (toggle **Create Preview Token** on) so that it comes with an associated Preview token. Name it something like "Next Kickstart Token".
 
 **Why?** The Delivery Token allows the Next.js app to fetch published content from Contentstack. The Preview Token, when enabled, allows the app to fetch **unpublished** changes for Live Preview.
 

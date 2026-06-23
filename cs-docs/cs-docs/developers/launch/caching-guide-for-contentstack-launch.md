@@ -30,7 +30,7 @@ Launch automatically caches content at the [CDN](https://developer.mozilla.org/e
 
 **Note:**
 
-- The same caching behavior applies to external URLs fetched via Launch [Edge Rewrites](/docs/launch/edge-url-rewrites/), [Redirects](/docs/launch/edge-url-redirects/), or [Edge Functions](/docs/launch/edge-functions/). These responses are cached at the CDN edge based on the `Cache-Control` headers returned by the external server.
+- The same caching behavior applies to external URLs fetched via Launch [Edge Rewrites](./edge-url-rewrites.md), [Redirects](./edge-url-redirects.md), or [Edge Functions](./edge-functions.md). These responses are cached at the CDN edge based on the `Cache-Control` headers returned by the external server.
 - Launch does not support **Next.js's ISR** or **App Router Data Cache**. Refer to the "*Does Launch support a data cache like Next.js App Router?*" query in the [Launch FAQs](/docs/faqs#launch-faqs) for alternatives.
 
 ## General Caching Strategies
@@ -58,7 +58,7 @@ Cache content at the edge for **60 seconds** (`s-max-age=60`).
 - Allow serving stale content while revalidating for **30 seconds** (`stale-while-revalidate=30`).
 - Always revalidate content at the browser level (`max-age=0`).
 
-**Additional Resource:** For a Next.js specific guide, follow [Next.js on Launch.](/docs/launch/nextjs-on-launch)
+**Additional Resource:** For a Next.js specific guide, follow [Next.js on Launch.](./nextjs-on-launch.md)
 
 ## Cache Revalidation
 
@@ -78,10 +78,10 @@ Cache content at the CDN for **5 minutes** (`s-max-age=300`).
 
 - ### On-Demand Revalidation
 
-Trigger revalidation dynamically using one of the following methods:Launch provides [deploy hooks](/docs/launch/deploy-hooks) to trigger redeployments on demand.
+Trigger revalidation dynamically using one of the following methods:Launch provides [deploy hooks](./deploy-hooks.md) to trigger redeployments on demand.
 
-- Launch supports a framework-agnostic approach to on-demand cache revalidation through [Automate](/docs/developers/automation-hub-connectors/launch-trigger).
-- If you're using Next.js, follow the [Next.js guide on Launch](/docs/launch/nextjs-on-launch#enabling-cache-revalidation-on-launch) to opt out of full-route caching. Alternatively, use `Cache-Control` headers for framework-agnostic caching, and let Automate handle the revalidation.
+- Launch supports a framework-agnostic approach to on-demand cache revalidation through [Automate](../../agent-os/launch-trigger.md).
+- If you're using Next.js, follow the [Next.js guide on Launch](./nextjs-on-launch.md#enabling-cache-revalidation-on-launch) to opt out of full-route caching. Alternatively, use `Cache-Control` headers for framework-agnostic caching, and let Automate handle the revalidation.
 
 ## Disabling Cache
 
@@ -104,12 +104,12 @@ Disabling cache can significantly impact performance and increase load on your o
 Cache purging methods include:
 
 - Redeploying your site (invalidates CDN cache).
-- Using [Automate](/docs/developers/automation-hub-connectors/launch-trigger) to trigger redeploy or webhook.
+- Using [Automate](../../agent-os/launch-trigger.md) to trigger redeploy or webhook.
 - Setting short TTLs for dynamic content.
 
 ## Best Practices
 
-- Prefer Server-Side Rendering (SSR) with custom `Cache-Control` headers for most use cases. SSR enables [on-demand CDN cache revalidation](/docs/launch/revalidate-cdn-cache) and handles dynamic routes efficiently.
+- Prefer Server-Side Rendering (SSR) with custom `Cache-Control` headers for most use cases. SSR enables [on-demand CDN cache revalidation](./revalidate-cdn-cache.md) and handles dynamic routes efficiently.
 - Use SSG only for simple sites with content that changes infrequently.
 - Always define explicit `Cache-Control` headers for dynamic content to ensure predictable caching behavior.
 - Avoid placing another CDN in front of Launch to prevent cache conflicts.
@@ -117,8 +117,8 @@ Cache purging methods include:
 
 **Additional Resources:**
 
-- [Next.js on Launch Documentation](/docs/launch/nextjs-on-launch)
-- [Revalidate CDN Cache](/docs/launch/revalidate-cdn-cache)
+- [Next.js on Launch Documentation](./nextjs-on-launch.md)
+- [Revalidate CDN Cache](./revalidate-cdn-cache.md)
 
 ## Common questions
 

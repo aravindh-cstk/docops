@@ -22,7 +22,7 @@ This page lists the limitations and constraints for environments, intended for d
 - Environments are stack-specific and cannot be shared between stacks.
 - Once an environment is deleted, it cannot be restored.
 - Any published content in the deleted environment remains in Contentstack but becomes inaccessible via that environment.
-- [Delivery tokens](/docs/developers/create-tokens/about-delivery-tokens) associated with the deleted environment become invalid, preventing API-based content retrieval.
+- [Delivery tokens](../create-tokens/about-delivery-tokens.md) associated with the deleted environment become invalid, preventing API-based content retrieval.
 
 ## Common questions
 
@@ -33,7 +33,7 @@ Environment names cannot use the following special characters: `#%^+\/?\*:|"'<>\
 No. Environments are stack-specific and cannot be shared between stacks.
 
 ### What happens to delivery tokens when an environment is deleted?
-[Delivery tokens](/docs/developers/create-tokens/about-delivery-tokens) associated with the deleted environment become invalid, preventing API-based content retrieval.
+[Delivery tokens](../create-tokens/about-delivery-tokens.md) associated with the deleted environment become invalid, preventing API-based content retrieval.
 
 ### Can a deleted environment be restored?
 No. Once an environment is deleted, it cannot be restored.

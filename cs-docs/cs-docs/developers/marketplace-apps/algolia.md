@@ -106,13 +106,13 @@ By default, the **Select for Asset(s)** checkbox is selected.
 - If this option is not selected, Asset(s) data will not be added to Algolia.
 - For existing users, a pop-up will appear on the **Configuration** screen while updating the app. Make sure to save the app to the latest settings, even if no changes are made.
 - After adding the configuration details, click the **Save** button.
-- On the **UI Locations** tab, you can see the predefined app location ([Full Page UI location](/docs/developers/developer-hub/full-page-location)). You can use the toggle button to enable or disable it based on your requirements.
+- On the **UI Locations** tab, you can see the predefined app location ([Full Page UI location](../developer-hub/full-page-location.md)). You can use the toggle button to enable or disable it based on your requirements.
 - If the branch feature is enabled for your organization, navigate to the **Webhook** tab to configure and trigger it on the required branches.Inside the **Configure Webhook** section, you can select the following options under **Branch Scope**:
 
 **All Branches:** If you want the webhook to trigger on all branches of the stack.
 - **Specific Branches:** If you want the webhook to trigger on a specific branches. You can add multiple branches.**Note:** When the webhook is triggered from the branch, Algolia's `ObjectId` value will have the branch uid appended at the end.
 
-**Additional Resource:** For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+**Additional Resource:** For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Algolia app.
 
 ## Use the Algolia App within your Stack

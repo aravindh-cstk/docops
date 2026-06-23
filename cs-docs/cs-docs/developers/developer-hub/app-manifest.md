@@ -164,7 +164,7 @@ Let’s look at an example of an App Manifest.
 
 **Type:** string
 
-**Description: **Specifies the [type](/docs/developer-hub/types-of-apps) of the app.
+**Description: **Specifies the [type](./types-of-apps.md) of the app.
 
 The Target Type property can be defined as either `"stack"` or `"organization"`. This specifies whether the app can be installed at the stack level or organization level. If this property is not specified, the app is considered a stack app by default. This property once defined, **cannot** be modified later.
 
@@ -202,7 +202,7 @@ The Visibility property can be defined as `private`, `public`, or `public_unlist
 
 **Description:** Specifies where the app will be visible.
 
-The UI Location specifies where the app appears in the product interface, and enables configuration of location-specific options. You can specify multiple locations for an app. Also, some framework APIs are available only to apps in certain locations. See [About UI Locations](/docs/developer-hub/about-ui-locations) for more information.
+The UI Location specifies where the app appears in the product interface, and enables configuration of location-specific options. You can specify multiple locations for an app. Also, some framework APIs are available only to apps in certain locations. See [About UI Locations](./about-ui-locations.md) for more information.
 
 The `ui_location` configuration contains a list of *locations*, each specifying its `type` and individual `meta` configurations.
 
@@ -227,7 +227,7 @@ Now, let's explore the list of all location types supported by a **stack** app:
 
 Properties that may be specified for each location:
 - `name` *(optional)*: Specifies the name of the location. This will be displayed at the location after app installation. If this property is not specified, the app name is used as the location name. For multiple configurations of the same location, ensure each has a distinct and appropriate unique name.
-- `signed` *(optional)*: When enabled, Contentstack adds a JWT Token to the initial HTTP request made for your app's first page. This token can be used to verify if the request originated from Contentstack. Please refer [Signed Locations](/docs/developer-hub/securing-your-app/) for more information.
+- `signed` *(optional)*: When enabled, Contentstack adds a JWT Token to the initial HTTP request made for your app's first page. This token can be used to verify if the request originated from Contentstack. Please refer [Signed Locations](./securing-your-app.md) for more information.
 - `path` (optional): Enables you to define the location relative to the base URL where the app is hosted. This is particularly useful when the developer intends the app to appear in multiple locations.
 - `enabled` *(*optional*)*: Allows you to define whether the location is visible after the app installation. By default, a location without this property is treated as enabled. Users can manage this option post-installation by accessing the UI Locations tab on the configuration screen.
 - `required `*(optional)*: When enabled, the location becomes mandatory and cannot be disabled after the app's installation. Locations without this property are, by default, considered optional.
@@ -256,7 +256,7 @@ Properties that may be specified for each location:
 
 ### Webhook (Optional)
 
-A [webhook](/docs/developer-hub/managing-webhooks-in-an-app) provides a mechanism or a method for enabling real-time communication and data exchange between Contentstack and your application.
+A [webhook](./managing-webhooks-in-an-app.md) provides a mechanism or a method for enabling real-time communication and data exchange between Contentstack and your application.
 
 Properties that can be specified for a webhook:
 - `enabled` *(*required*)*: Allows you to define whether the webhook is active after the app installation. Users can view execution logs of the webhook post-installation by accessing the Webhook tab on the configuration screen.
@@ -293,7 +293,7 @@ Properties that can be specified for a webhook:
 | branch_alias.assigned | When the branch alias is assigned |
 | branch_alias.unassigned | When the branch alias is unassigned |
 
-- `notifiers`** ***(optional)*: Notifiers specify the list of email addresses to notify whenever the [Circuit Breaker](/docs/developers/set-up-webhooks/webhook-circuit-breaker) disables the webhook. By default, the creator of the app and the user who installs it will receive notifications. However, for additional users to receive alerts, configuration is necessary. Contentstack sends the email alert to the specified user(s).
+- `notifiers`** ***(optional)*: Notifiers specify the list of email addresses to notify whenever the [Circuit Breaker](../set-up-webhooks/webhook-circuit-breaker.md) disables the webhook. By default, the creator of the app and the user who installs it will receive notifications. However, for additional users to receive alerts, configuration is necessary. Contentstack sends the email alert to the specified user(s).
 
 **Code:**
 
@@ -373,7 +373,7 @@ Advanced settings include the following properties:
 #### Variables (Optional)
 
 **Description:**
-[Variables](/docs/developer-hub/introduction-to-advanced-settings#variables) provide a secure way to store sensitive information, such as API keys, tokens, and secrets, as encrypted key–value pairs. These credentials are never exposed in the frontend and are automatically shared across all installations of an app.
+[Variables](./introduction-to-advanced-settings.md#variables) provide a secure way to store sensitive information, such as API keys, tokens, and secrets, as encrypted key–value pairs. These credentials are never exposed in the frontend and are automatically shared across all installations of an app.
 
 **Purpose:**
 Used to securely inject secrets into API requests made with `appSdk.api()`, eliminating the need to hardcode credentials in frontend code or maintain a custom backend for secret management.
@@ -381,7 +381,7 @@ Used to securely inject secrets into API requests made with `appSdk.api()`, elim
 #### Mappings (Optional)
 
 **Description:**
-[Mappings](/docs/developer-hub/introduction-to-advanced-settings#mappings) act as dynamic references to values defined in the **Server Configuration**. At runtime, each mapping automatically resolves to an installation-specific or environment-specific value.
+[Mappings](./introduction-to-advanced-settings.md#mappings) act as dynamic references to values defined in the **Server Configuration**. At runtime, each mapping automatically resolves to an installation-specific or environment-specific value.
 
 **Purpose:**
 Enables app administrators or customers to define flexible, context-dependent values, such as webhook URLs or tenant-specific API keys, without exposing them in frontend code.
@@ -389,7 +389,7 @@ Enables app administrators or customers to define flexible, context-dependent va
 #### Rewrites (Optional)
 
 **Description:**
-[Rewrites](/docs/developer-hub/introduction-to-advanced-settings#rewrites) define rules that transform incoming API request paths into destination URLs. They provide cleaner, consistent request patterns within the app while abstracting complex or changing external endpoints.
+[Rewrites](./introduction-to-advanced-settings.md#rewrites) define rules that transform incoming API request paths into destination URLs. They provide cleaner, consistent request patterns within the app while abstracting complex or changing external endpoints.
 
 **Purpose: **Simplifies and secures API routing by mapping user-friendly paths to complex or environment-specific endpoints behind the scenes.
 
@@ -516,7 +516,7 @@ For an app to be accessible, Contentstack needs to know the URL of the app. Init
 http://localhost:3000
 ```
 
-. You can later update it to match wherever your app is running. For frontend apps, there's also the option to [host directly with Launch](/docs/developer-hub/app-hosting#hosting-with-launch).
+. You can later update it to match wherever your app is running. For frontend apps, there's also the option to [host directly with Launch](./app-hosting.md#hosting-with-launch).
 
 Properties that may be required to be specified when configuring hosting:
 - `provider` *(required)*: A provider determines the type of hosting option you have configured. Currently, we support two providers: `launch` and `external`. When configuring hosting with Launch, you must provide details such as `project_uid`, `environment_uid`, and the deployment URL. However, if you opt for an external provider, only the deployment URL needs to be specified.

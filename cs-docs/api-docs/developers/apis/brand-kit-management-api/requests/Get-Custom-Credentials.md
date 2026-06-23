@@ -16,7 +16,7 @@ last_updated: 2024-11-11
 
 The Get Custom Credentials request fetches the custom credentials from a Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 ## URL Parameters
 
@@ -39,7 +39,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ## Sample Response

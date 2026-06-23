@@ -16,15 +16,15 @@ This page explains how to add the JSON Editor prebuilt custom field extension to
 
 ## JSON Editor
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched JSON Editor as a Marketplace App. For more information on JSON Editor, please refer to the [JSON Editor App Installation Guide](/docs/developers/marketplace-apps/json-editor/).
+**Note**: This documentation uses the legacy approach with extensions. We have launched JSON Editor as a Marketplace App. For more information on JSON Editor, please refer to the [JSON Editor App Installation Guide](../../marketplace-apps/json-editor.md).
 
-The JSON Editor custom field [extension](/docs/developers/about-experience-extensions) enables users to input data that is in JSON as well as in other formats such as normal “text,” “code,” “tree” format, “form,” and “view.”
+The JSON Editor custom field [extension](../../experience-extensions-overview/about-experience-extensions.md) enables users to input data that is in JSON as well as in other formats such as normal “text,” “code,” “tree” format, “form,” and “view.”
 
-This step-by-step guide explains how to create a JSON Editor custom field extension for your [content types](/docs/developers/create-content-types/about-content-types) in Contentstack:
+This step-by-step guide explains how to create a JSON Editor custom field extension for your [content types](../../create-content-types/about-content-types.md) in Contentstack:
 
 ## Add the “JSON Editor” custom field extension to your stack
 
-To add this custom field extension to your [stack](/docs/developers/set-up-stack/about-stack), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
+To add this custom field extension to your [stack](../../set-up-stack/about-stack.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
 Go to your stack and click the “Settings” icon on the left navigation panel.
 
@@ -49,29 +49,29 @@ To use JSON Editor custom field in your content type, perform the following step
 
 Click on the “Content Models” icon on the left navigation panel and click on **+ New Content Type** button.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below.
-- On the **Content Type Builder** page, add the [**Custom**](/docs/developers/create-content-types/custom) field to your content type by clicking on the “Insert a field” link denoted by a **+** sign and then clicking on **Custom**.
+- [Create a content type](../../create-content-types/create-a-content-type.md) by adding relevant details as displayed below.
+- On the **Content Type Builder** page, add the [**Custom**](../../create-content-types/custom.md) field to your content type by clicking on the “Insert a field” link denoted by a **+** sign and then clicking on **Custom**.
 - Select **JSON Editor** from the **Select Extension** dropdown menu, and configure other properties of your custom field.
 
-**Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](/docs/developers/create-content-types/config-parameter-for-custom-fields-only) section.
+**Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.
 
 - After adding other fields to your content type, click on either **Save **or **Save and Close** button. This will create a content type.
-- To use the JSON editor, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see this field on your entry page as shown below:
+- To use the JSON editor, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see this field on your entry page as shown below:
 
-**Additional Resource:** Refer to our guide on how to add the [Ace Editor](/docs/developers/create-custom-fields/use-prebuilt-custom-fields/ace-editor), a prebuilt custom field that includes features of code editors like Sublime and Vim.
+**Additional Resource:** Refer to our guide on how to add the [Ace Editor](./ace-editor.md), a prebuilt custom field that includes features of code editors like Sublime and Vim.
 
 ## Common questions
 
 ### Is this page for the Marketplace App or the legacy extension?
-**Note**: This documentation uses the legacy approach with extensions. We have launched JSON Editor as a Marketplace App. For more information on JSON Editor, please refer to the [JSON Editor App Installation Guide](/docs/developers/marketplace-apps/json-editor/).
+**Note**: This documentation uses the legacy approach with extensions. We have launched JSON Editor as a Marketplace App. For more information on JSON Editor, please refer to the [JSON Editor App Installation Guide](../../marketplace-apps/json-editor.md).
 
 ### What data formats can the JSON Editor custom field accept?
-The JSON Editor custom field [extension](/docs/developers/about-experience-extensions) enables users to input data that is in JSON as well as in other formats such as normal “text,” “code,” “tree” format, “form,” and “view.”
+The JSON Editor custom field [extension](../../experience-extensions-overview/about-experience-extensions.md) enables users to input data that is in JSON as well as in other formats such as normal “text,” “code,” “tree” format, “form,” and “view.”
 
 ### Where do I select the JSON Editor when adding it to a content type?
 Select **JSON Editor** from the **Select Extension** dropdown menu, and configure other properties of your custom field.
 
 ### Where can I find another prebuilt custom field for code editing?
-**Additional Resource:** Refer to our guide on how to add the [Ace Editor](/docs/developers/create-custom-fields/use-prebuilt-custom-fields/ace-editor), a prebuilt custom field that includes features of code editors like Sublime and Vim.
+**Additional Resource:** Refer to our guide on how to add the [Ace Editor](./ace-editor.md), a prebuilt custom field that includes features of code editors like Sublime and Vim.
 
 <!-- filename: extensions-json-editor.md -->

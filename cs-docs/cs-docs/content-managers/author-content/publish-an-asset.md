@@ -17,17 +17,17 @@ This page explains how to publish an uploaded asset in Contentstack to selected 
 
 ## Publish an Asset
 
-After uploading an [asset](/docs/content-managers/working-with-assets/about-assets), you can publish it to any of the [environments](/docs/developers/set-up-environments/about-environments) and locales configured in your stack. Publishing ensures the asset is accessible in the selected environments and locales.
+After uploading an [asset](/docs/content-managers/working-with-assets/about-assets), you can publish it to any of the [environments](../../developers/set-up-environments/about-environments.md) and locales configured in your stack. Publishing ensures the asset is accessible in the selected environments and locales.
 
 To publish an asset, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Assets” icon in the left navigation panel. You can also use the shortcut key “A” (for both Windows OS and Mac OS users) to access assets.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel. You can also use the shortcut key “A” (for both Windows OS and Mac OS users) to access assets.
 - Select the asset you want to publish and click **Publish**.
 - Under **Select Environment(s)** and **Select Language(s)**, select the environment(s) and the locale(s) for publishing.**Note:** You can select up to **10 environments** and **10 locales** for a single publishing action.
 - Under **Publish**, select one of the two available options:**Now**: Publish the asset immediately.
 - **Later**: Schedule the asset to be published at a specific date and time. If you select this option, additional fields appear where you can specify the date, time, and time zone.**Note:** Scheduled publishing dates cannot exceed **12 months** from the current date.
 
-If you select a time zone that follows [daylight saving time (DST)](/docs/content-managers/publish-content/daylight-saving-time-in-contentstack), you will see a help text at the bottom of the dialog that highlights the effective publishing date, time, and timezone.
+If you select a time zone that follows [daylight saving time (DST)](../publish-content/daylight-saving-time-in-contentstack.md), you will see a help text at the bottom of the dialog that highlights the effective publishing date, time, and timezone.
 
 **Note:** The DST time difference is **one hour**.
 
@@ -45,12 +45,12 @@ Alternatively, you can also publish an asset from the assets list page. To do so
 
 **Additional Resource:**
 
-- [Publish multiple assets in bulk](/docs/content-managers/author-content/bulk-publish-assets) across various languages and environments.
-- Refer to our documentation for detailed steps on [unpublishing assets](/docs/content-managers/author-content/unpublish-an-asset).
+- [Publish multiple assets in bulk](./bulk-publish-assets.md) across various languages and environments.
+- Refer to our documentation for detailed steps on [unpublishing assets](./unpublish-an-asset.md).
 
 ## API Reference
 
-To publish an asset via API, refer to the [Publish an asset](/docs/developers/apis/content-management-api#publish-an-asset) API request.
+To publish an asset via API, refer to the [Publish an asset](../../../api-docs/api-detail/content-management-api.md#publish-an-asset) API request.
 
 ## Common questions
 
@@ -64,4 +64,4 @@ Yes. Under **Publish**, select **Later** to schedule the asset to be published a
 Assets published to a production environment become publicly accessible, even if they are not referenced in an entry.
 
 ### Is there an API to publish assets?
-Yes. Use the [Publish an asset](/docs/developers/apis/content-management-api#publish-an-asset) API request.
+Yes. Use the [Publish an asset](../../../api-docs/api-detail/content-management-api.md#publish-an-asset) API request.

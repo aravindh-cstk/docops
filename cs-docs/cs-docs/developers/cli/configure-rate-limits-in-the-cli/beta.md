@@ -17,18 +17,18 @@ This page explains how to configure and manage rate limits in the Contentstack C
 
 ## Configure Rate Limits in the CLI | V2.x.x Beta
 
-[Rate Limit](/docs/developers/apis/content-management-api#rate-limiting) defines the maximum number of requests you can make using Contentstack's API within a specific time frame.
+[Rate Limit](../../../../api-docs/api-detail/content-management-api.md#rate-limiting) defines the maximum number of requests you can make using Contentstack's API within a specific time frame.
 
 This guide provides step-by-step instructions on how to configure and manage rate limits in the Contentstack Command Line Interface (CLI).
 
 By following these instructions, you can effectively control the number of requests made to the Contentstack API within a specified timeframe, ensuring optimal performance and preventing any disruptions due to exceeding rate limits.
 
-**Warning:** The CLI supports rate limit configuration only for the `bulkLimit` parameter, which is [used in bulk publish commands](/docs/developers/cli/configure-rate-limits-in-the-cli#using-rate-limits-for-enhanced-bulk-publishing-control) to control requests.
+**Warning:** The CLI supports rate limit configuration only for the `bulkLimit` parameter, which is [used in bulk publish commands](../configure-rate-limits-in-the-cli.md#using-rate-limits-for-enhanced-bulk-publishing-control) to control requests.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
-- [CLI installed](/docs/developers/cli/install-the-cli/) and [configured](/docs/developers/cli/configure-regions-in-the-cli/) (version 1.25.0 and above)
-- [CLI authenticated](/docs/developers/cli/cli-authentication/)
+- [CLI installed](../install-the-cli.md) and [configured](../configure-regions-in-the-cli.md) (version 1.25.0 and above)
+- [CLI authenticated](../cli-authentication.md)
 
 ## Commands
 

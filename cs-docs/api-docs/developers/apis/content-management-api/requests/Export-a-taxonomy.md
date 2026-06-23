@@ -21,7 +21,7 @@ The exported file doesn't download automatically. You can use a REST API client 
 ## URL Parameters
 
 - **taxonomy_uid** (required)
-  Enter the unique ID of the taxonomy you want to export. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Enter the unique ID of the taxonomy you want to export. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](../../../../api-detail/content-management-api.md#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
   Default: `sample_one`
 
 ## Query Parameters

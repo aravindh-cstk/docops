@@ -16,9 +16,9 @@ This page explains how to define a Contentstack content type using JSON schema (
 
 ## JSON Schema for Creating a Content Type
 
-Contentstack understands JSON data. If you want to [create a content type through API](/docs/developers/apis/content-management-api/#create-a-content-type) or a JSON file (instead of through the user interface), you need to create a JSON file that contains the content type schema and use the "[Import content type](/docs/developers/create-content-types/import-a-content-type)" option in the product or send the schema as the body in the API request.
+Contentstack understands JSON data. If you want to [create a content type through API](../../../api-docs/api-detail/content-management-api.md#create-a-content-type) or a JSON file (instead of through the user interface), you need to create a JSON file that contains the content type schema and use the "[Import content type](./import-a-content-type.md)" option in the product or send the schema as the body in the API request.
 
-Each [field](/docs/developers/create-content-types/about-fields) added in the content type has its schema. Let's look at them in detail in the following section.
+Each [field](./about-fields.md) added in the content type has its schema. Let's look at them in detail in the following section.
 
 ## JSON Schema of Fields
 
@@ -26,7 +26,7 @@ Here's the JSON schema of all the fields and how you can use them in the content
 
 ### Title
 
-The [Title](/docs/developers/create-content-types/title) field is the entry title and will have a unique value, i.e., entries cannot have the same title.
+The [Title](./title.md) field is the entry title and will have a unique value, i.e., entries cannot have the same title.
 
 The schema of the Title field is given as follows:
 
@@ -45,13 +45,13 @@ The schema of the Title field is given as follows:
 
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 To mark this field as non-unique, set the `unique` parameter to `false`.
 
 ### URL
 
-The [URL](/docs/developers/create-content-types/url) field allows you to enter a URL of the entry.
+The [URL](./url.md) field allows you to enter a URL of the entry.
 
 The schema of the URL field is as follows:
 
@@ -70,11 +70,11 @@ The schema of the URL field is as follows:
 
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 ### Single line textbox
 
-The [**Single Line Textbox**](/docs/developers/create-content-types/single-line-textbox)** **field supports only plain text and is used to enter some short text.
+The [**Single Line Textbox**](./single-line-textbox.md)** **field supports only plain text and is used to enter some short text.
 
 The schema of the Single line textbox field is given as follows:
 
@@ -98,13 +98,13 @@ The schema of the Single line textbox field is given as follows:
 
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section. This field possesses a couple of parameters that you can add as follows:
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section. This field possesses a couple of parameters that you can add as follows:
 - `format:` This parameter takes a regex that you can use to validate the value of a field.
 - `error_messages:` This parameter is the error message that will be displayed if a field value is not validated. You can set a format for it as well.
 
 ### Multi line textbox
 
-The [**Multi Line Textbox**](/docs/developers/create-content-types/multi-line-textbox)** **field accepts multi-line arbitrary text and enters a large chunk of data.
+The [**Multi Line Textbox**](./multi-line-textbox.md)** **field accepts multi-line arbitrary text and enters a large chunk of data.
 
 The schema of the Multi line textbox field is given as follows:
 
@@ -129,11 +129,11 @@ The schema of the Multi line textbox field is given as follows:
 
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section. This parameter possesses a couple of parameters, such as format and error_messages, common to the “Single Line Textbox” field.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section. This parameter possesses a couple of parameters, such as format and error_messages, common to the “Single Line Textbox” field.
 
 ### HTML-based Rich text editor
 
-The [**HTML-based Rich Text Editor**](/docs/developers/create-content-types/rich-text-editor) field accepts a variety of data types, such as text, images, and videos and allows you to format the content entered in the field.
+The [**HTML-based Rich Text Editor**](./rich-text-editor.md) field accepts a variety of data types, such as text, images, and videos and allows you to format the content entered in the field.
 
 The schema of the HTML-based Rich Text Editor field is given as follows:
 
@@ -156,7 +156,7 @@ The schema of the HTML-based Rich Text Editor field is given as follows:
 
 ```
 
-The parameters in the JSON body above are explained in the "[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)" section.
+The parameters in the JSON body above are explained in the "[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)" section.
 
 Within the field_metadata parameter, you can provide the keys given below:
 - ``allow_rich_text: This key determines whether the editor will support rich text and is set to true by default for Rich Text Editors.
@@ -194,7 +194,7 @@ The following table displays the various formatting options that can be added to
 
 ### JSON Rich Text Editor
 
-The [JSON Rich Text Editor](/docs/developers/create-content-types/json-rich-text-editor) field accepts a variety of data types, such as text, images, and videos and allows you to format the content entered in the field.
+The [JSON Rich Text Editor](../json-rich-text-editor.md) field accepts a variety of data types, such as text, images, and videos and allows you to format the content entered in the field.
 
 The schema for the JSON RTE field within a content type is as follows:
 
@@ -219,13 +219,13 @@ The schema for the JSON RTE field within a content type is as follows:
 }
 ```
 
-**Note:** The JSON Rich Text Editor will have the same formatting options as the [HTML-based RTE](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#rich-text-editor) that can be added to your customized RTE toolbar. The only difference would be that the JSON RTE will not have the HTML source code viewer.
+**Note:** The JSON Rich Text Editor will have the same formatting options as the [HTML-based RTE](./json-schema-for-creating-a-content-type.md#rich-text-editor) that can be added to your customized RTE toolbar. The only difference would be that the JSON RTE will not have the HTML source code viewer.
 
-**Additional Resource:**You can also migrate content from your HTML-based RTE to the new JSON RTE using our CLI. Read more about our [migration guide](/docs/developers/cli/migrate-content-from-html-rte-to-json-rte).
+**Additional Resource:**You can also migrate content from your HTML-based RTE to the new JSON RTE using our CLI. Read more about our [migration guide](../cli/migrate-content-from-html-rte-to-json-rte.md).
 
 ### Markdown
 
-The [**Markdown**](/docs/developers/create-content-types/markdown) field accepts text in markdown format which is an easy-to-read text that is marked with certain tags or formatting instructions.
+The [**Markdown**](./markdown.md) field accepts text in markdown format which is an easy-to-read text that is marked with certain tags or formatting instructions.
 
 The schema of the Markdown field is given as follows:
 
@@ -244,13 +244,13 @@ The schema of the Markdown field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 To enable the field to accept markdown content, you need to set a key, `"markdown": true`, in the `field_metadata` parameter.
 
 ### Select
 
-The [**Select**](/docs/developers/create-content-types/select)** **field allows users to choose one or more options from a set of predefined choices that can be displayed in the form of radio buttons, checkboxes, or dropdown options.
+The [**Select**](./select.md)** **field allows users to choose one or more options from a set of predefined choices that can be displayed in the form of radio buttons, checkboxes, or dropdown options.
 
 The schema of the **Select** field is given as follows:
 
@@ -317,7 +317,7 @@ The schema of such a Select field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 Additionally, you need to set the parameters given below:
 - `display_type:` This parameter allows you to assign a display type either in the form of radio button, checkboxes, or dropdown.
@@ -326,7 +326,7 @@ Additionally, you need to set the parameters given below:
 
 ### Modular Blocks
 
-The [**Modular Blocks**](/docs/developers/create-content-types/modular-blocks) field allows content managers to dynamically create and modify components of a page or app on the go.
+The [**Modular Blocks**](./modular-blocks.md) field allows content managers to dynamically create and modify components of a page or app on the go.
 
 The schema of a **Modular Blocks** field consisting of a **Single Line Textbox** and a **Rich Text Editor** is given as follows:
 
@@ -430,7 +430,7 @@ You need to mention the Global field that your parent content type will refer to
 
 ### Number
 
-The [**Number**](/docs/developers/create-content-types/number) field accepts numeric data where you can enter any kind of numbers such as phone number or zip code.
+The [**Number**](./number.md) field accepts numeric data where you can enter any kind of numbers such as phone number or zip code.
 
 The schema of the **Number** field is given as follows:
 
@@ -449,13 +449,13 @@ The schema of the **Number** field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 You need to enter the `data_type` parameter as `number`.
 
 ### Boolean
 
-The [**Boolean**](/docs/developers/create-content-types/boolean) field accepts a true or false value.
+The [**Boolean**](./boolean.md) field accepts a true or false value.
 
 The schema of the Boolean field is given as follows:
 
@@ -474,13 +474,13 @@ The schema of the Boolean field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 You need to enter the `data_type` parameter as `boolean`.
 
 ### Date
 
-The [**Date**](/docs/developers/create-content-types/date) field renders a calendar that allows the user to select a date and time, which is accepted in the ISO format
+The [**Date**](./date.md) field renders a calendar that allows the user to select a date and time, which is accepted in the ISO format
 
 The schema of the Date field is given as follows:
 
@@ -501,13 +501,13 @@ The schema of the Date field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 You need to enter the `data_type` parameter as `isodate`, and provide the startDate and endDate parameters if you want to display a date range.
 
 ### File
 
-The [**File**](/docs/developers/create-content-types/file)** **field lets you upload or use files in your entry.
+The [**File**](./file.md)** **field lets you upload or use files in your entry.
 
 The schema of the **File** field is given as follows:
 
@@ -527,13 +527,13 @@ The schema of the **File** field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 Set the `data_type` parameter as `file` and add the extensions parameter. Additionally, mention the `"rich_text_type": "standard"` key in the `field_metadata` parameter.
 
 ### Link
 
-The [**Link**](/docs/developers/create-content-types/link)** **field accepts a valid static or relative [URL](/docs/developers/create-content-types/about-urls) and a title.
+The [**Link**](./link.md)** **field accepts a valid static or relative [URL](./about-urls.md) and a title.
 
 The schema of the **Link** field is given as follows:
 
@@ -555,13 +555,13 @@ The schema of the **Link** field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 Set the data_type parameter as `link`link, and add `title` and `url` in the `default_value` key within the `field_metadata` parameter.
 
 ### Reference
 
-The [**Reference**](/docs/developers/create-content-types/reference)** **field allows you to create references to [entries](/docs/content-managers/working-with-entries/about-entries) of the same [content type](/docs/developers/create-content-types/about-content-types) or other content types.
+The [**Reference**](./reference.md)** **field allows you to create references to [entries](../../content-managers/author-content/about-entries.md) of the same [content type](./about-content-types.md) or other content types.
 
 The schema of the **Reference** field is given as follows:
 
@@ -580,13 +580,13 @@ The schema of the **Reference** field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 You need to mention either the same content type or another content type that your parent content type will refer to in the `reference_to` parameter.
 
 ### Group
 
-The [**Group**](/docs/developers/create-content-types/group)** **field allows you to create a group of multiple fields.
+The [**Group**](./group.md)** **field allows you to create a group of multiple fields.
 
 The schema of the **Group** field is given as follows:
 
@@ -618,13 +618,13 @@ The schema of the **Group** field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 The details of the fields that you need to add in the Group field are mentioned in the schema parameter.
 
 ### Global Field
 
-A [**Global**](/docs/developers/create-content-types/global)** **field is a reusable field (or group of fields) that you can define once and reuse in any content type within your [stack](/docs/developers/set-up-stack/about-stack).
+A [**Global**](./global.md)** **field is a reusable field (or group of fields) that you can define once and reuse in any content type within your [stack](../set-up-stack/about-stack.md).
 
 The schema of the **Global** field is given as follows:
 
@@ -640,13 +640,13 @@ The schema of the **Global** field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 The details of the fields that have to be added in the Global field are mentioned in the schema parameters.
 
 ### Taxonomy
 
-The [Taxonomy](/docs/developers/taxonomy/about-taxonomy) field allows users to categorize content within your stack to facilitate easy navigation, search, and retrieval of information.
+The [Taxonomy](../taxonomy/about-taxonomy.md) field allows users to categorize content within your stack to facilitate easy navigation, search, and retrieval of information.
 
 The schema of the Taxonomy field is given as follows:
 
@@ -671,7 +671,7 @@ The schema of the Taxonomy field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 ### Custom Field – Group Within Group
 
@@ -718,13 +718,13 @@ The schema of the **Group** Within **Group** field is given as follows:
 
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](./json-schema-for-creating-a-content-type.md#field-parameters-explained)” section.
 
 The `max_instance` parameter lets you decide the maximum limit for your internal Group, within the main Group schema.
 
 ### Custom Field - Global Field within Group Field
 
-You can create a [**Custom**](/docs/developers/create-content-types/custom)** **field by adding a **Global** field within another **Group** field.
+You can create a [**Custom**](./custom.md)** **field by adding a **Global** field within another **Group** field.
 
 The schema of the Global field within Group field is given as follows:
 
@@ -804,7 +804,7 @@ Each feature associated with a content type also has its own schema definition. 
 
 ### Options
 
-The “Options” schema allows you to define specific settings for your content type. You can either mark content types as [single](/docs/developers/create-content-types/single-vs-multiple-content-types#single) or [multiple](/docs/developers/create-content-types/single-vs-multiple-content-types#multiple), or define the type of your content type as [webpage](/docs/developers/create-content-types/webpage-vs-content-block#webpage) or [content block](/docs/developers/create-content-types/webpage-vs-content-block#content-block).
+The “Options” schema allows you to define specific settings for your content type. You can either mark content types as [single](./single-vs-multiple-content-types.md#single) or [multiple](./single-vs-multiple-content-types.md#multiple), or define the type of your content type as [webpage](/docs/developers/create-content-types/webpage-vs-content-block#webpage) or [content block](/docs/developers/create-content-types/webpage-vs-content-block#content-block).
 
 The “Options” schema looks as follows:
 
@@ -821,7 +821,7 @@ The “Options” schema looks as follows:
 
 ### Field Rules
 
-The “Field Rules” schema allows you to set [field visibility rules](/docs/developers/create-content-types/about-field-visibility-rules) for your content type. You can hide or display specific fields (target fields) on the entry page based on the values specified in other fields (operand fields) of the entry.
+The “Field Rules” schema allows you to set [field visibility rules](./about-field-visibility-rules.md) for your content type. You can hide or display specific fields (target fields) on the entry page based on the values specified in other fields (operand fields) of the entry.
 
 The “Field Rules” schema looks as follows:
 
@@ -864,7 +864,7 @@ Let’s understand the different schema parameters in detail:
 ## Common questions
 
 ### How do I create a content type using JSON instead of the UI?
-Create a JSON file that contains the content type schema and use the "[Import content type](/docs/developers/create-content-types/import-a-content-type)" option in the product or send the schema as the body in the API request.
+Create a JSON file that contains the content type schema and use the "[Import content type](./import-a-content-type.md)" option in the product or send the schema as the body in the API request.
 
 ### Where can I find what each field schema parameter means?
 Refer to the “Field Parameters Explained” section, which lists parameters such as `display_name`, `uid`, `data_type`, `field_metadata`, `multiple`, `mandatory`, and `unique`.

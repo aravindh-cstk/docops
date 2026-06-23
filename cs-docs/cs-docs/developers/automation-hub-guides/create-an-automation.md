@@ -28,7 +28,7 @@ First, perform the following steps to create an Automation:
 - [Configure Action](#configure-action)
 
 Let’s look at the above steps ‌in the next section.
-- **Note:** You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](/docs/developers/automation-hub-guides/throttle-execution) document.
+- **Note:** You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](../../agent-os/throttle-execution.md) document.
 
 ## Configure Trigger
 
@@ -39,10 +39,10 @@ Configuring a trigger can be broken into the following steps:
 Click **Configure Trigger** from the left navigation panel.
 - **Choose Connector**: Here, you can select Contentstack or an available third-party app or service which will serve as the trigger connector. For example, click **HTTP**.
 
-**Note:** For more details on the “HTTP” Connector and other available connectors, refer to [Automate Connectors](/docs/developers/automation-hub-connectors/).
+**Note:** For more details on the “HTTP” Connector and other available connectors, refer to [Automate Connectors](../automation-hub-connectors.md).
 - **Choose Trigger**: Select the Trigger or the webhook event listed under the selected connector. In our case, you will select the **HTTP Request Trigger.** This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.
 - **Configure Trigger**: Here, you need to provide additional details with respect to the trigger you selected in the above step. This section will differ for each trigger. For our example, click the displayed **Method**, i.e., **GET/POST**. You can also enable the **Secure HTTP Trigger** using the toggle to add security to the HTTP trigger and click **Proceed**.  
-**Note:** For more information, refer to the[HTTP Trigger](/docs/developers/automation-hub-connectors/http-trigger/) documentation.
+**Note:** For more information, refer to the[HTTP Trigger](../../agent-os/http-trigger.md) documentation.
 
 You will find the applicable **Input methods** and an **Input URL** in the **Test Trigger** section.
 
@@ -63,7 +63,7 @@ name:"john"`Here’s what you see:
 - Lastly, you can either pass a new query parameter and **Retest **the trigger or hit **Save and Exit** (see screenshot in **step 3**).
 - This completes your step of configuring your HTTP trigger.
 
-**Note:** You will find more details on how to [rename a trigger](/docs/developers/automation-hub-guides/rename-trigger/) and [delete a trigger](/docs/developers/automation-hub-guides/delete-trigger/) in the [Additional Functions on Triggers and Actions](/docs/developers/automation-hub-guides/) sections.
+**Note:** You will find more details on how to [rename a trigger](./rename-trigger.md) and [delete a trigger](./delete-trigger.md) in the [Additional Functions on Triggers and Actions](/docs/developers/automation-hub-guides/) sections.
 
 ## Configure Action
 

@@ -17,7 +17,7 @@ This page explains how to use the **Minimum** and **Maximum Limits** field prope
 
 ## Minimum and Maximum Limits
 
-The **Minimum** and **Maximum Limits** properties let you define the acceptable range for the number of instances a user can add when a field is marked as [Multiple](/docs/developers/create-content-types/multiple/). These settings help enforce structured data entry by ensuring users provide the expected number of values.
+The **Minimum** and **Maximum Limits** properties let you define the acceptable range for the number of instances a user can add when a field is marked as [Multiple](./multiple.md). These settings help enforce structured data entry by ensuring users provide the expected number of values.
 
 **Note**: These limits apply only when the **Multiple** option is enabled for a field. They are different from character or value limits set for single-instance fields.
 
@@ -42,7 +42,7 @@ You can configure minimum and maximum limits for fields that support multiple in
 The system validates these limits when users add content. If the number of instances exceeds the maximum or falls below the minimum, a validation message appears, and saving is blocked until the issue is resolved.
 
 To set minimum and maximum limits, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and open the content type where you want to set the limits.
+- Navigate to your [stack](../set-up-stack/about-stack.md) and open the content type where you want to set the limits.
 - Click the field you want to configure. The **Edit Properties** panel appears on the right.
 - In the **Advanced** tab, enable the **Multiple** toggle. The **Set Minimum Limit** and **Set Maximum Limit** fields will appear.
 - Under **Set Minimum Limit**, enter the minimum number of instances a user must add.

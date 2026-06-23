@@ -18,7 +18,7 @@ This page lists the languages and language codes supported by Contentstack for m
 
 Contentstack supports over 200 languages. The following table lists all the languages that you can use to localize your entries:
 
-**Additional Resource:** You can [add custom languages](/docs/developers/multilingual-content/add-a-custom-language) of your choice to your stack. Once generated, you will be able to create and publish entries in the custom language.
+**Additional Resource:** You can [add custom languages](./add-a-custom-language.md) of your choice to your stack. Once generated, you will be able to create and publish entries in the custom language.
 
 | Sr. No. | Supported Language | Language Code |
 |---:|---|---|
@@ -265,7 +265,7 @@ Contentstack supports over 200 languages. The following table lists all the lang
 Contentstack supports over 200 languages.
 
 **Can I add a language that is not listed in the table?**  
-Yes. **Additional Resource:** You can [add custom languages](/docs/developers/multilingual-content/add-a-custom-language) of your choice to your stack.
+Yes. **Additional Resource:** You can [add custom languages](./add-a-custom-language.md) of your choice to your stack.
 
 **What should I use the language code for?**  
 Use the language code to localize your entries.

@@ -16,7 +16,7 @@ last_updated: 2026-04-17
 
 The Get a single asset request fetches the latest version of a specific asset of a particular stack.
 
-**Tip**: If no version is mentioned, the request will retrieve the latest published version of the asset. To get a specific version of an asset, refer to the [Get a Single Asset](/docs/developers/apis/content-management-api#get-a-single-asset) management API.
+**Tip**: If no version is mentioned, the request will retrieve the latest published version of the asset. To get a specific version of an asset, refer to the [Get a Single Asset](../../../../api-detail/content-management-api.md#get-a-single-asset) management API.
 
 Additionally, if you wish to fetch the metadata attached to each asset, then you need to pass include_metadata as a query parameter. Set this parameter to true to include the asset metadata along with all assets in the response body.
 

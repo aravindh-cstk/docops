@@ -19,7 +19,7 @@ This page explains how to access and use the Analytics dashboard for Automations
 
 The Analytics dashboard for [Automations](/docs/developers/automation-hub-guides/about-automation-hub) is designed to provide comprehensive insights into the execution and performance of automation scripts within your organization. This tool allows you to monitor the efficiency and impact of automation by tracking various key metrics, ensuring that your automation processes are optimized for peak performance.
 
-**Note:** Only organization [Owner](/docs/developers/organization/organization-roles#organization-owner), [Admin](/docs/developers/organization/organization-roles#organization-admin), and Product Analytics Viewer roles can access Analytics.
+**Note:** Only organization [Owner](../developers/organization/organization-roles.md#organization-owner), [Admin](../developers/organization/organization-roles.md#organization-admin), and Product Analytics Viewer roles can access Analytics.
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to **Analytics** through the “App Switcher”.

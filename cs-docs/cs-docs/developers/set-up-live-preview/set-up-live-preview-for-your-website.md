@@ -22,7 +22,7 @@ Live Preview allows content managers to **see real-time updates** to their conte
 
 Live Preview seamlessly connects your Contentstack entry editor with your website, allowing **instant** previews of content updates. The setup varies based on the rendering technique your website uses.
 
-**Additional Resource**: You can also [open Live Preview in a new browser tab](/docs/developers/set-up-live-preview/open-live-preview-in-a-new-tab) for an iframe-free experience.
+**Additional Resource**: You can also [open Live Preview in a new browser tab](./open-live-preview-in-a-new-tab.md) for an iframe-free experience.
 
 ## GraphQL-based Live Preview
 For websites using **GraphQL APIs** to fetch and display content dynamically.
@@ -37,7 +37,7 @@ It is best to use CSR with GraphQL for:
 
 Best suited for **Single Page Applications** (SPAs) built with **React**, **Vue.js**, **Angular**, or other **JavaScript frameworks**.
 
-To learn how to configure Live Preview for CSR with GraphQL, refer to the [setup guide](https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-with-graphql-for-client-side-rendering/).
+To learn how to configure Live Preview for CSR with GraphQL, refer to the [setup guide](./set-up-live-preview-with-graphql-for-client-side-rendering.md).
 
 ### Server-Side Rendering (SSR) with GraphQL
 In **Server-side Rendering (SSR)**, pages are pre-rendered on the server before being sent to the browser. This improves SEO, performance, and initial load speed, as search engines and users receive fully rendered content on the first request.
@@ -49,7 +49,7 @@ It is best to use SSR with GraphQL for:
 
 Best suited for **SEO-focused websites**, **Next.js applications**, and **performance-first projects**.
 
-To learn how to configure Live Preview for SSR with GraphQL, refer to the [setup guide](https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-with-graphql-for-server-side-rendering/).
+To learn how to configure Live Preview for SSR with GraphQL, refer to the [setup guide](./set-up-live-preview-with-graphql-for-server-side-rendering.md).
 
 ## Gatsby-powered Sites
 Gatsby is a **React-based static site generator (SSG)** that pre-builds pages for faster performance. Since Gatsby sites do not update content dynamically, Live Preview runs in **Client-side Rendering (CSR)** mode, allowing real-time content previews without rebuilding the site.
@@ -61,7 +61,7 @@ It is best to use Live Preview with Gatsby for:
 
 Best suited for **blogs**, **documentation**, and **marketing pages**.
 
-To learn how to configure Live Preview for Gatsby, follow the [setup guide](https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-for-gatsby-powered-sites).
+To learn how to configure Live Preview for Gatsby, follow the [setup guide](./set-up-live-preview-for-gatsby-powered-sites.md).
 
 ## REST-based Live Preview
 **REST-Based Live Preview** allows websites that use REST APIs to fetch and display content dynamically to see real-time content updates before publishing.
@@ -76,7 +76,7 @@ It is best to use CSR with REST for:
 
 Best suited for **REST API-driven SPAs** and **dynamic websites** using **React**, **Vue.js**, or **Angular**.
 
-To learn how to configure Live Preview for CSR with REST, refer to the [setup guide](https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-with-rest-for-client-side-rendering/).
+To learn how to configure Live Preview for CSR with REST, refer to the [setup guide](./set-up-live-preview-with-rest-for-client-side-rendering.md).
 
 ### Server-Side Rendering (SSR) with REST
 In Server-side Rendering (SSR), pages are pre-rendered on the server before being sent to the client, improving SEO and load times. Live Preview ensures that real-time updates are reflected without delay.
@@ -88,7 +88,7 @@ It is best to use SSR with REST for:
 
 Best suited for **SEO-focused websites**, **Next.js/Nuxt.js apps**, **performance-first sites**.
 
-To learn how to configure Live Preview for SSR with REST, refer to the [setup guide](https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-with-rest-for-server-side-rendering/).
+To learn how to configure Live Preview for SSR with REST, refer to the [setup guide](./set-up-live-preview-with-rest-for-server-side-rendering.md).
 
 ## Static Site Generator (SSG)
 **Static Site Generators (SSGs)** generate HTML pages during the build process, which optimizes website performance and minimizes load times. Since SSG-based websites do not dynamically up date content, **Live Preview operates in Client-side Rendering (CSR) mode**, allowing content teams to see changes before deployment. This ensures accurate content validation without triggering a full rebuild.
@@ -100,7 +100,7 @@ It is best to use Live Preview with SSG for:
 
 Best suited for **blogs**, **documentation sites**, and **marketing landing pages**.
 
-To learn how to configure Live Preview for SSG, refer to the [setup guide](https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-preview-for-static-site-generator-ssg/).
+To learn how to configure Live Preview for SSG, refer to the [setup guide](./set-up-live-preview-for-static-site-generator-ssg.md).
 
 Live Preview is easy to implement and works across various tech stacks. Choose a setup that fits your needs and start previewing content instantly.
 
@@ -110,7 +110,7 @@ Live Preview is easy to implement and works across various tech stacks. Choose a
 A: **Note: **Live Preview currently supports only web-based applications. Support for mobile applications will be available in the future.
 
 **Q: Can I use Live Preview without an iframe?**  
-A: **Additional Resource**: You can also [open Live Preview in a new browser tab](/docs/developers/set-up-live-preview/open-live-preview-in-a-new-tab) for an iframe-free experience.
+A: **Additional Resource**: You can also [open Live Preview in a new browser tab](./open-live-preview-in-a-new-tab.md) for an iframe-free experience.
 
 **Q: Which setup guide should I use for a GraphQL site?**  
 A: Choose **Client-Side Rendering (CSR) with GraphQL** or **Server-Side Rendering (SSR) with GraphQL** based on your rendering technique and follow the linked setup guide in the relevant section.

@@ -83,7 +83,7 @@ ContentstackUIExtension.init().then((extension) => {
 ## Important Links
 
 - [Contentstack Venus Component Library](https://venus-storybook.contentstack.com/)
-- [Work with Contentstack UI Extensions](/docs/developers/all-contentstack-experience-extensions)
+- [Work with Contentstack UI Extensions](./experience-extensions-overview/all-contentstack-experience-extensions.md)
 
 ## Support and Feedback
 

@@ -20,9 +20,9 @@ last_updated: 2026-06-02
 
 **GET** `/analytics/v2/subscription?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
 
-The Subscription Usage request returns the total number of projects, environments, and domains under Launch within your organization till date. To get the details for CMS and Automate, you can use the [Usage Analytics](/docs/developers/apis/analytics-api#usage-analytics) request.
+The Subscription Usage request returns the total number of projects, environments, and domains under Launch within your organization till date. To get the details for CMS and Automate, you can use the [Usage Analytics](../../../api-detail/analytics-api.md#usage-analytics) request.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../../../api-detail/analytics-api.md#retrieve-data) endpoint.
 
 ```
 {

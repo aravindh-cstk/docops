@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # CMA | Entries
 
-An [entry](/docs/content-managers/author-content/) is the actual piece of content created using one of the defined [content types](/docs/developers/create-content-types/about-content-types).
+An [entry](/docs/content-managers/author-content/) is the actual piece of content created using one of the defined [content types](../../../../cs-docs/developers/create-content-types/about-content-types.md).
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -45,11 +45,11 @@ Example structure:
 
 You can also extend this API request by adding queries to filter or refine results. Use the query parameter in the URL and provide the query in JSON format.
 
-**Additional Resource**: For more information about supported queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API documentation.
+**Additional Resource**: For more information about supported queries, refer to the [Queries](../../../api-detail/content-delivery-api.md#queries) section of the Content Delivery API documentation.
 
 For example, to retrieve entries in a specific workflow stage, pass a query using _workflow.uid, where uid is the workflow stage UID.
 
-**Tip**: This request returns the first **100 entries** for the specified content type. To retrieve additional entries, use [pagination](/docs/developers/apis/content-delivery-api#pagination).
+**Tip**: This request returns the first **100 entries** for the specified content type. To retrieve additional entries, use [pagination](../../../api-detail/content-delivery-api.md#pagination).
 
 #### URL Parameters
 
@@ -82,7 +82,7 @@ For example, to retrieve entries in a specific workflow stage, pass a query usin
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication.](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -264,7 +264,7 @@ You will find the entry metadata under the _metadata key in the response. It wil
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: ` [Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -385,7 +385,7 @@ Here's the JSON schema for both the cases:
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -558,7 +558,7 @@ The schema to embed assets within the JSON RTE field is as follows:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -838,7 +838,7 @@ The schema to embed assets within the JSON RTE field is as follows:
 
 **POST** `/content_types/{content_type_uid}/entries`
 
-The Create an entry with master locale request lets you create an entry in the master language of your stack if it does not already exist or has been deleted. You can use the UID of a [localized entry](/docs/developers/multilingual-content/localize-an-entry) to convert it into a [master language entry](/docs/developers/multilingual-content/set-the-master-language).
+The Create an entry with master locale request lets you create an entry in the master language of your stack if it does not already exist or has been deleted. You can use the UID of a [localized entry](../../../../cs-docs/developers/multilingual-content/localize-an-entry.md) to convert it into a [master language entry](../../../../cs-docs/developers/multilingual-content/set-the-master-language.md).
 
 To configure the permissions for your application via OAuth, please include the cm.entries.management:write scope.   
 If the master language is not accessible or does not exist, a custom user role can still create an entry in any of the other available locales. However, the entry in the master language remains non-existent.
@@ -886,7 +886,7 @@ Here’s what your request body should look like:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -1221,7 +1221,7 @@ In the “Body” section, to update the taxonomy fields, use the following code
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1403,7 +1403,7 @@ The schema to update an embedded asset within the JSON RTE field is as follows:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -2379,7 +2379,7 @@ This API Request supports the following actions as well:
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -2400,7 +2400,7 @@ This API Request supports the following actions as well:
 
 Entry versions provide a history of changes made to an entry over time. You can view metadata for each version and assign custom names to specific versions to help identify key milestones or changes.
 
-To learn how to assign a name to a version, refer to the [Name Entry Version](/docs/content-managers/author-content/name-entry-versions) documentation.
+To learn how to assign a name to a version, refer to the [Name Entry Version](../../../../cs-docs/content-managers/author-content/name-entry-versions.md) documentation.
 
 ##### Set Version Name for Entry
 
@@ -2438,7 +2438,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -2514,7 +2514,7 @@ The Get Details of All Versions of an Entry request returns comprehensive inform
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication.](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **api_key** (required)
   Enter the API key of your stack.
@@ -2624,7 +2624,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 #### Sample Request
@@ -2704,7 +2704,7 @@ To include publish-related metadata for the referenced entry, set the include_pu
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **api_key** (required)
   Enter the API key of your stack.
@@ -2781,7 +2781,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -2815,7 +2815,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the "Body" parameter, you need to provide the content of your entry based on the content type.
 
-**Note**: When localizing an entry, if a **Group**, **Modular Blocks**, or **Global** field instance contains a field that is marked as non-localizable, you must include _metadata.uid for the field in the request payload to map that instance in child locale. This ensures that the non-localizable field retains its value from the master locale. You can find the metadata UID for each non-localizable field by using the [Get a Single Entry](/docs/developers/apis/content-management-api#get-a-single-entry) request for the master entry.
+**Note**: When localizing an entry, if a **Group**, **Modular Blocks**, or **Global** field instance contains a field that is marked as non-localizable, you must include _metadata.uid for the field in the request payload to map that instance in child locale. This ensures that the non-localizable field retains its value from the master locale. You can find the metadata UID for each non-localizable field by using the [Get a Single Entry](../../../api-detail/content-management-api.md#get-a-single-entry) request for the master entry.
 
 Here's a sample request body:
 
@@ -2835,9 +2835,9 @@ Here's a sample request body:
 }
 ```
 
-**Note:** This request will only create the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](/docs/content-managers/author-content/publish-an-entry) request and pass the respective locale code in the locale={locale_code} parameter.
+**Note:** This request will only create the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](../../../../cs-docs/content-managers/author-content/publish-an-entry.md) request and pass the respective locale code in the locale={locale_code} parameter.
 
-**Additional Resource:** Refer the [Localization](/docs/developers/multilingual-content/localize-an-entry) docs for more information.
+**Additional Resource:** Refer the [Localization](../../../../cs-docs/developers/multilingual-content/localize-an-entry.md) docs for more information.
 
 #### URL Parameters
 
@@ -2866,7 +2866,7 @@ Here's a sample request body:
   Enter your authtoken
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -2935,7 +2935,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the "Body" parameter, you need to provide the content of your entry based on the content type.
 
-**Important**: If a **Modular Blocks**, **Group**, or **Global** field (marked as multiple) contains a field marked as non-localizable, you must include both _metadata.uid and "non_localizable_content": true for that instance in the request payload. This ensures the non-localizable content continues to retrieve its value from the master locale. You can find the metadata UID for each instance by using the [Get a Single Entry](/docs/developers/apis/content-management-api#get-a-single-entry) request for the master entry.
+**Important**: If a **Modular Blocks**, **Group**, or **Global** field (marked as multiple) contains a field marked as non-localizable, you must include both _metadata.uid and "non_localizable_content": true for that instance in the request payload. This ensures the non-localizable content continues to retrieve its value from the master locale. You can find the metadata UID for each instance by using the [Get a Single Entry](../../../api-detail/content-management-api.md#get-a-single-entry) request for the master entry.
 
 Here's a sample request body:
 
@@ -2961,9 +2961,9 @@ Here's a sample request body:
 
 In this example, the group field is marked as multiple and contains a field (single_line) that is non-localizable. The non_localizable_content: true along with _metadata.uid ensures that the single_line field continues to pull its value from the master locale, while allowing updates to other fields like multi_line.
 
-**Note:** This request will only update the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](/docs/content-managers/author-content/publish-an-entry) request and pass the respective locale code in the locale={locale_code} parameter.
+**Note:** This request will only update the localized version of your entry and not publish it. To publish your localized entry, you need to use the [**Publish an entry**](../../../../cs-docs/content-managers/author-content/publish-an-entry.md) request and pass the respective locale code in the locale={locale_code} parameter.
 
-**Additional Resource:** Refer the [Localization](/docs/developers/multilingual-content/localize-an-entry) docs for more information.
+**Additional Resource:** Refer the [Localization](../../../../cs-docs/developers/multilingual-content/localize-an-entry.md) docs for more information.
 
 #### URL Parameters
 
@@ -2992,7 +2992,7 @@ In this example, the group field is marked as multiple and contains a field (sin
   Enter your authtoken
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -3056,7 +3056,7 @@ In this example, the group field is marked as multiple and contains a field (sin
 
 **POST** `/content_types/{content_type_uid}/entries/{entry_uid}/unlocalize?locale={locale_code}`
 
-The Unlocalize an entry request is used to unlocalize an existing entry. Read more about [Unlocalization](/docs/developers/multilingual-content/unlocalize-an-entry).   
+The Unlocalize an entry request is used to unlocalize an existing entry. Read more about [Unlocalization](../../../../cs-docs/developers/multilingual-content/unlocalize-an-entry.md).   
 To configure the permissions for your application via OAuth, please include the cm.entry:write scope.
 
 #### URL Parameters
@@ -3081,7 +3081,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -3132,7 +3132,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -3202,7 +3202,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`
@@ -3271,7 +3271,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`
@@ -3347,7 +3347,7 @@ In case of **Scheduled Publishing**, add the scheduled_at key and provide the da
 - **authtoken** (optional)
   Default: `your authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -3421,7 +3421,7 @@ Here are some additional parameters that you need to pass in the “Request Body
 - **authtoken** (optional)
   Default: `your authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -3495,7 +3495,7 @@ In case of **Scheduled Unpublishing**, add the scheduled_at key and provide the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`

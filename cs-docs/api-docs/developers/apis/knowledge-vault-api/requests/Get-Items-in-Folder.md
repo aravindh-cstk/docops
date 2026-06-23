@@ -16,7 +16,7 @@ last_updated: 2026-03-02
 
 The Get Items in Folder request retrieves all items contained within a specific folder in the Knowledge Vault of a brand kit.
 
-To configure the permissions for your app via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your app via [OAuth](../../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 ## URL Parameters
 
@@ -61,7 +61,7 @@ To configure the permissions for your app via [OAuth](/docs/developers/developer
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../../api-detail/knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 - **organization_uid** (required)
   Enter the Organization UID.

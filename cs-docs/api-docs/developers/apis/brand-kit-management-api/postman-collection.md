@@ -106,7 +106,7 @@ Some of the important variables that you need to set are as follows:
 
   
 
-**Note:** The Brand Kit Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) section for more details.
+**Note:** The Brand Kit Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](../../../api-detail/brand-kit-management-api.md#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 
@@ -159,12 +159,12 @@ If you want to prevent this action, perform the steps given below:
 
 This will allow you to access [cookies of this domain in scripts](https://learning.postman.com/docs/sending-requests/cookies/#accessing-cookies-in-scripts) programmatically.
 
-**Note:** To avoid this situation, we recommend you to use the Brand Kit UID along with the Authtoken to make valid Brand Kit Management API requests. For more information, refer to [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+**Note:** To avoid this situation, we recommend you to use the Brand Kit UID along with the Authtoken to make valid Brand Kit Management API requests. For more information, refer to [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
 
 
 
 ## Postman Collection Updates
 
-We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](/docs/developers/apis/brand-kit-management-api#download-latest-collection) again and you are good to go.
+We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](../../../api-detail/brand-kit-management-api.md#download-latest-collection) again and you are good to go.
 
 You can also choose to watch for the latest Postman Collection updates on our GitHub repository and get notifications of new releases or updates to the repository. The GitHub Readme doc will help you with the steps that you need to follow.

@@ -17,7 +17,7 @@ This page explains what Releases are in Contentstack, why they are useful for de
 
 ## About Releases
 
-You can define a “Release” as a set of [entries](https://www.contentstack.com/docs/content-managers/working-with-entries/about-entries/) and [assets](https://www.contentstack.com/docs/content-managers/working-with-assets/about-assets/) that needs to be deployed ([published](https://www.contentstack.com/docs/content-managers/working-with-entries/publish-an-entry/) or [unpublished](https://www.contentstack.com/docs/content-managers/working-with-entries/unpublish-an-entry/)) all at once to a particular [environment](https://www.contentstack.com/docs/developers/set-up-environments/about-environments/).
+You can define a “Release” as a set of [entries](../../content-managers/author-content/about-entries.md) and [assets](https://www.contentstack.com/docs/content-managers/working-with-assets/about-assets/) that needs to be deployed ([published](../../content-managers/author-content/publish-an-entry.md) or [unpublished](../../content-managers/author-content/unpublish-an-entry.md)) all at once to a particular [environment](../set-up-environments/about-environments.md).
 
 If you are using a CMS to manage and publish your content, you know that publishing large amounts of time-sensitive content (for example, when there’s a product launch, press release, or sales promotion) is a daunting task. You have to publish multiple entries/assets and their publishing status, and, in most cases, you have to find and keep track of the content pieces one by one. This is a time-consuming process and is prone to errors.
 

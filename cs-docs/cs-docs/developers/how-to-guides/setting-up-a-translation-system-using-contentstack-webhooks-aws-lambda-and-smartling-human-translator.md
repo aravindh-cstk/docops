@@ -16,7 +16,7 @@ This page explains how to set up a translation system that connects Contentstack
 
 ## Setting up a Translation System Using Contentstack Webhooks, AWS Lambda, and Smartling Human Translator
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to use the [Translation](/docs/developers/marketplace-apps#translation) apps, refer to the [Marketplace](/docs/developers/marketplace-apps) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to use the [Translation](../marketplace-apps.md#translation) apps, refer to the [Marketplace](../marketplace-apps.md) documentation.
 
 Smartling is one of the most widely used cloud-based language translation platforms. It helps you to localize content across different digital properties. Through the APIs provided by Contentstack and Smartling, it is possible to integrate these two powerful applications.
 
@@ -54,15 +54,15 @@ Let's get started!
 
 To set up the essentials, [log in to your Contentstack account](https://app.contentstack.com/#!/login) and follow the steps given below:
 
-[Create a stack](/docs/developers/set-up-stack/create-a-new-stack), add a [content type](/docs/developers/create-content-types) (for our exercise, we have [created](/docs/developers/create-content-types/create-a-content-type) a [Single Content Type](/docs/developers/create-content-types/single-vs-multiple-content-types#single) named **Smartling**).**Note**: In our example, we have used “title,” “url,” “single_line,” and “rich_text_editor,” fields. We will translate the content of these fields. Content of special fields such as File, Boolean, Reference, Select will not be translated.
+[Create a stack](../set-up-stack/create-a-new-stack.md), add a [content type](/docs/developers/create-content-types) (for our exercise, we have [created](../create-content-types/create-a-content-type.md) a [Single Content Type](../create-content-types/single-vs-multiple-content-types.md#single) named **Smartling**).**Note**: In our example, we have used “title,” “url,” “single_line,” and “rich_text_editor,” fields. We will translate the content of these fields. Content of special fields such as File, Boolean, Reference, Select will not be translated.
 
 - Next, [add two languages](/docs/developers/multilingual-content) (locales), in our example, we have added the following two languages:
 
 English [en-us] which is the source language.
 
 - French- France [fr-fr] is another language which will be our target language.**Note**: Ensure that the languages you add are [supported by Smartling](https://help.smartling.com/hc/en-us/articles/360049532693-Supported-Locales).
-- Once you have added the languages, go to your content type (**Smartling** in our example) and [create an entry](/docs/content-managers/working-with-entries/create-an-entry) in the en-us locale.
-- Lastly, [create a management token](/docs/developers/create-tokens/generate-a-management-token) for your stack which we will use later while setting up the lambda function.
+- Once you have added the languages, go to your content type (**Smartling** in our example) and [create an entry](../../content-managers/author-content/create-an-entry.md) in the en-us locale.
+- Lastly, [create a management token](../create-tokens/generate-a-management-token.md) for your stack which we will use later while setting up the lambda function.
 - With these steps, we have set up the essentials in Contentstack. Let's now move ahead with creating a workflow.
 
 ## Set up the Workflow for Translation in Contentstack
@@ -74,17 +74,17 @@ Click the “Settings” icon on the left navigation panel, and click on **Workf
 - On the **Workflow Settings** page, click on **+ New Workflow**.
 - Provide a suitable name to your workflow and an optional description.
 - Under the **Scope** option, select if this workflow should be applied to **All Content Types** or **Specific Content Type(s)**. For our example, we will select the **Specific Content Types(s)** option and then select our content type, **Smartling** from the dropdown menu, as shown below:
-- Inside the **WORKFLOW STAGES** option, [add four stages](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages#add-workflow-stages) (for example, Draft, Send for Translation, Review, and Completed) as shown below:
+- Inside the **WORKFLOW STAGES** option, [add four stages](../set-up-workflows-and-publish-rules/add-workflows-and-stages.md#add-workflow-stages) (for example, Draft, Send for Translation, Review, and Completed) as shown below:
 ****
 
-**Additional resource**: Learn more about workflow and its stages, refer to the [set up workflows](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages) guide.
+**Additional resource**: Learn more about workflow and its stages, refer to the [set up workflows](../set-up-workflows-and-publish-rules/add-workflows-and-stages.md) guide.
 
 - Lastly, click on the **Enable Workflow** checkbox and then on the **Save** button.
 - With these steps, our workflow is ready. Now when the editor changes the workflow stage from “Draft” to “Send for Translation,” the webhook will be triggered (we will set it up later in the guide) and call the first lambda function.
 - Now go back to the **Workflow Settings** page and note down the **WORKFLOW ID** that we just created as shown below:
 - We will need the UID of the **Review** stage which we will add as an environment variable while setting up our lambda function. To get the UID of the “Review” stage, open [Postman](https://www.postman.com/downloads/) or any other API collaboration & development platform and make a GET request on the following URL, enter the Workflow ID (highlighted above) at the end of the URL:
 - https://api.contentstack.io/v3/workflows/{YOUR WORKFLOW UID}
-- **Note**:Refer to our [workflow API documentation](/docs/developers/apis/content-management-api/#get-a-single-workflow) to learn more about the required headers to make an API request.
+- **Note**:Refer to our [workflow API documentation](../../../api-docs/api-detail/content-management-api.md#get-a-single-workflow) to learn more about the required headers to make an API request.
 - SSO-enabled organizations can use the management token to make API requests.
 - You will get the following response:
 - The highlighted UID in the above screenshot will be used in the lambda function's environment variable, so make note of it.
@@ -183,7 +183,7 @@ Follow similar steps to create an API trigger for this lambda function as well a
 
 ## Trigger a Webhook to Initiate Translation
 
-To create and [set up a webhook](/docs/developers/set-up-webhooks/create-a-webhook) in Contentstack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
+To create and [set up a webhook](../set-up-webhooks/create-a-webhook.md) in Contentstack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
 Hover over the “Settings” icon on the left navigation panel, and click on **Webhooks**.
 
@@ -210,7 +210,7 @@ Go to your entry in your content type (in our example, it is **Smartling** conte
 - Now come back to your project and refresh the page. The status has now changed to **Published** from **In-progress**. This change of status will invoke the second lambda function which will update the entry with translated content and also changes the workflow stage to "Review".
 - Go back to your entry in Contentstack and select **French - France** from the **locale** drop-down and you should see your entry translated in the target language, French and the workflow stage changed to **Review**.
 
-**Additional resource**: We have created similar guides that use [AWS Translate](/docs/developers/how-to-guides/set-up-a-translation-system-with-contentstack-webhooks-and-workflows-aws-lambda-and-aws-translate) and [Memsource](/docs/developers/how-to-guides/setting-up-translation-system-with-contentstack-webhooks-memsource-and-aws-lambda) for content translation for Contentstack-powered websites. If you use any other platform besides the ones mentioned, you can still create the integration by following the steps mentioned in our [Manage Content Translation in Contentstack](/docs/developers/how-to-guides/manage-content-translation-in-contentstack) guide.
+**Additional resource**: We have created similar guides that use [AWS Translate](./set-up-a-translation-system-with-contentstack-webhooks-and-workflows-aws-lambda-and-aws-translate.md) and [Memsource](/docs/developers/how-to-guides/setting-up-translation-system-with-contentstack-webhooks-memsource-and-aws-lambda) for content translation for Contentstack-powered websites. If you use any other platform besides the ones mentioned, you can still create the integration by following the steps mentioned in our [Manage Content Translation in Contentstack](/docs/developers/how-to-guides/manage-content-translation-in-contentstack) guide.
 
 ## Common questions
 

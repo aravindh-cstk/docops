@@ -31,7 +31,7 @@ You may need to change the project repository in the following scenarios:
 ## Prerequisites
 
 Before changing the project repository, ensure the following conditions are met:
-- Only users with [Owner](/docs/developers/organization/organization-roles#organization-owner) or [Admin](/docs/developers/organization/organization-roles#organization-admin) access in the organization can change the connected GitHub repository for a project.
+- Only users with [Owner](../developers/organization/organization-roles.md#organization-owner) or [Admin](../developers/organization/organization-roles.md#organization-admin) access in the organization can change the connected GitHub repository for a project.
 - The new GitHub repository exists and your GitHub account can access it.
 - Your GitHub account is already connected to Launch, or you are prepared to connect it during the process.
 - You must have Owner or Admin access in the organization that owns the target GitHub repository.
@@ -44,7 +44,7 @@ Before changing the project repository, ensure the following conditions are met:
 - Click **Save Changes** to apply the repository update.  
   To discard the change and revert to the previously connected repository, click **Reset**.
 - In the **Change Project Repository?** confirmation modal, review the current and new repository details and click **Change Repository** to confirm.
-- After the transfer is complete, the **Git Connection** section displays the updated repository.**Additional Resource:** To repair GitHub connection, refer to the [Repair GitHub Connection for Projects](/docs/developers/launch/repair-github-connection-for-projects) document.
+- After the transfer is complete, the **Git Connection** section displays the updated repository.**Additional Resource:** To repair GitHub connection, refer to the [Repair GitHub Connection for Projects](../developers/launch/repair-github-connection-for-projects.md) document.
 - If the newly connected repository uses a different framework or project structure, go to the **Environments** section and update the deployment commands under **Deployments** and the environment variables under **Environment Variables** accordingly.
 - Click **Environments** in the top panel, select your deployment, and click **Redeploy** to deploy the project with the required commit.
 

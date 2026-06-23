@@ -14,9 +14,9 @@ last_updated: 2026-03-26
 
 This page explains how to set up and use the legacy commercetools custom field extension in Contentstack to search, fetch, and store commercetools product (or category) data in entries. It is intended for developers configuring Contentstack stacks and content types, and should be used when implementing commercetools selection within a Custom field via extensions.
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched commercetools as a Marketplace App. For more information on commercetools, please refer to the [commercetools App Installation Guide](/docs/developers/marketplace-apps/commercetools).
+**Note**: This documentation uses the legacy approach with extensions. We have launched commercetools as a Marketplace App. For more information on commercetools, please refer to the [commercetools App Installation Guide](../marketplace-apps/commercetools.md).
 
-The commercetools extension lets you search and fetch the products of your commercetools store and display them in a [field](/docs/developers/create-content-types/about-fields) in your [content type](/docs/developers/create-content-types/about-content-types). Thus, while creating [entries](/docs/content-managers/working-with-entries/about-entries) for this content type, you can select one of your store’s products as the input value for that field.
+The commercetools extension lets you search and fetch the products of your commercetools store and display them in a [field](../create-content-types/about-fields.md) in your [content type](../create-content-types/about-content-types.md). Thus, while creating [entries](../../content-managers/author-content/about-entries.md) for this content type, you can select one of your store’s products as the input value for that field.
 
 ## Prerequisites
 - [commercetools](https://commercetools.com/) account
@@ -66,18 +66,18 @@ Navigate to commercetools **Project settings **page, and goto the **Storefront s
 
 To add this extension to your stack, perform the following steps:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack), navigate to the “Settings” gear icon, and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
+Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” gear icon, and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions **page, click on the **+ Add Extension **button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one **link as shown below.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:
 
-  **Title ***(required)*: Provide a suitable title, for example, “commercetools,” for your custom field. This title will be visible when you select the extension in the [**Custom**](/docs/developers/create-content-types/custom) field in your content type.
+  **Title ***(required)*: Provide a suitable title, for example, “commercetools,” for your custom field. This title will be visible when you select the extension in the [**Custom**](../create-content-types/custom.md) field in your content type.
 - **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple ***(optional)*: Leave this field unchecked.
 - **Hosting Method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
 - **Extension Source Code**: Specify the extension code here. If Extensions are part of your plan, contact our [Support](mailto:support@contentstack.com) team to get the code for the extension. The support team will provide you with the source code (src file). Copy the code from the `index.html` file located in the root folder and paste it into the **Extension source code** field.
 
-  **Note**: In the downloaded code, inside the root folder, there's a redirect HTML file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload](/docs/content-managers/working-with-assets/create-upload-assets) asset article. After uploading the file, you'll get a URL in the [asset details](/docs/content-managers/working-with-assets/create-upload-assets#asset-details) section. Make note of this URL.
+  **Note**: In the downloaded code, inside the root folder, there's a redirect HTML file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload](../../content-managers/author-content/create-upload-assets.md) asset article. After uploading the file, you'll get a URL in the [asset details](../../content-managers/author-content/create-upload-assets.md#asset-details) section. Make note of this URL.
 - **Config Parameter: **Provide values for the config parameters. Enter the configuration details retrieved in Step 1 in your extension settings.
 Please note we have added sample values in the example below to help you understand the config parameters. Copy and paste the configuration details and add your values wherever needed.
 
@@ -112,12 +112,12 @@ Please note we have added sample values in the example below to help you underst
 
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [**Custom**](/docs/developers/create-content-types/custom) field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
 - Under **Select Extension**, select the “commercetools” field that you created and set the other properties. You can add other fields as per requirement.
 - Finally, click on either **Save** or **Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **commercetools **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **commercetools **field in action.
 
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 
 ## Use the data saved by the extension
 
@@ -130,7 +130,7 @@ As shown in the image above, the extension-data.js file can be used to modify th
 ## Common questions
 
 ### Is this the recommended way to integrate commercetools with Contentstack?
-No. **Note**: This documentation uses the legacy approach with extensions. We have launched commercetools as a Marketplace App. For more information on commercetools, please refer to the [commercetools App Installation Guide](/docs/developers/marketplace-apps/commercetools).
+No. **Note**: This documentation uses the legacy approach with extensions. We have launched commercetools as a Marketplace App. For more information on commercetools, please refer to the [commercetools App Installation Guide](../marketplace-apps/commercetools.md).
 
 ### What data type should the custom field use for this extension?
 **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
@@ -139,4 +139,4 @@ No. **Note**: This documentation uses the legacy approach with extensions. We ha
 **Note**: By default, the **Storefront search Indexing **option is** **deactivated. Without activating the **Index status **you won't be able to search products in your commercetools extension.
 
 ### How much data can be stored in the JSON custom field?
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.

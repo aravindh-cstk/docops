@@ -19,7 +19,7 @@ This page explains how to install the AI Assistant app from the Contentstack Mar
 
 AI Assistant is an AI-based natural language processing platform that processes and transforms content. It can modify, generate, and alter your content into a readable format with more accuracy. It is efficient and capable of providing human-like responses for any query, making it even more popular.
 
-Contentstack Marketplace lets you install the AI Assistant application and use it within your entries to transform content. You can add the AI Assistant app in the [Field Modifier UI location](/docs/developers/developer-hub/field-modifier-location/) for different entry fields such as Title, Single Line Textbox, Multi-Line Textbox, HTML-based Rich Text Editor, JSON Rich Text Editor, and Markdown.
+Contentstack Marketplace lets you install the AI Assistant application and use it within your entries to transform content. You can add the AI Assistant app in the [Field Modifier UI location](../developer-hub/field-modifier-location.md) for different entry fields such as Title, Single Line Textbox, Multi-Line Textbox, HTML-based Rich Text Editor, JSON Rich Text Editor, and Markdown.
 
 You can instantly create high-quality content for an entry field based on another field such as outlines, summaries, headlines, and much more. The AI Assistant app also allows you to provide custom instructions on a particular field to manipulate the content based on your instructions.
 
@@ -63,7 +63,7 @@ After entering the details, click **Save and Proceed** to configure the app.
 - Click **Save **or **Save and Proceed** to save the configurations.
 - Once done, Click **Save **or **Open Stack** to start using the AI Assistant app.
 
-**Additional Resource:** You must configure and specify the field type(s) that will work for the [Field Modifier UI location](/docs/developers/developer-hub/field-modifier-location/) to use the AI Assistant app within your stack. Please refer to the Field Modifier UI location documentation to configure the AI Assistant app for the UI location.
+**Additional Resource:** You must configure and specify the field type(s) that will work for the [Field Modifier UI location](../developer-hub/field-modifier-location.md) to use the AI Assistant app within your stack. Please refer to the Field Modifier UI location documentation to configure the AI Assistant app for the UI location.
 
 ## Use AI Assistant within your Stack Entry
 
@@ -71,9 +71,9 @@ To use the AI Assistant application within an entry of your stack, follow the st
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- Create a [content type](/docs/developers/create-content-types/create-a-content-type/) by adding relevant details as displayed below and click the **Save and proceed** button.
-- To use the AI Assistant app, create an entry for the above content type. In the left navigation panel, navigate to the [Entries](/docs/content-managers/author-content/create-an-entry/) page, click **+ New Entry **to create a new entry for the above content type, and then click **Proceed**.
-- You can see the AI Assistant app in the [Field Modifier](https://www.contentstack.com/docs/developers/developer-hub/field-modifier-location) location. Provide some content in the configured fields of the entry and start using the app.
+- Create a [content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below and click the **Save and proceed** button.
+- To use the AI Assistant app, create an entry for the above content type. In the left navigation panel, navigate to the [Entries](../../content-managers/author-content/create-an-entry.md) page, click **+ New Entry **to create a new entry for the above content type, and then click **Proceed**.
+- You can see the AI Assistant app in the [Field Modifier](../developer-hub/field-modifier-location.md) location. Provide some content in the configured fields of the entry and start using the app.
   A pop-up appears. You can transform the content for a specific field by choosing the AI Assistant options.
 - You will see the custom actions that you configured in the entry field.
 
@@ -182,7 +182,7 @@ The user persona tags for the *Blog Content* field is generated based on the *Bl
 
 ### Steps to use AI Assistant within the JSON Rich Text Editor field
 
-- In the Content Type Builder page, add [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) in your content type by clicking the **Insert a field** link represented by a + sign.
+- In the Content Type Builder page, add [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) in your content type by clicking the **Insert a field** link represented by a + sign.
 - To add the AI Assistant plugin in JSON RTE, click the **Properties **icon of JSON RTE, and under **Select JSON RTE Plugin(s)**, choose the **AI Assistant** app, and then click the **Add Plugin(s) **button.
 - After adding the plugin, click **Save **or **Save and Close** to save your changes.
 - To use the AI Assistant app as a JSON RTE plugin, create an entry for this content type, and you can see the AI Assistant app icon in the JSON RTE field on your entry page as shown below. You can select the entire JSON RTE field content or a specific content to use AI.

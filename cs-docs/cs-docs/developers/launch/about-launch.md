@@ -21,44 +21,44 @@ This page introduces Contentstack Launch and explains its core features, benefit
 ## Core Features
 - **Project Bootstrap & Deployment**
 
-      Instant provisioning by [linking GitHub](/docs/launch/import-project-using-github) or [Bitbucket](/docs/launch/import-a-project-using-bitbucket-cloud) repositories, or [uploading ZIP files](/docs/launch/import-project-using-file-upload).
-- Full support for frameworks such as [Gatsby](/docs/launch/gatsby-on-launch), [Next.js](/docs/launch/nextjs-on-launch), [Vue](/docs/launch/vue-on-launch), [React](/docs/launch/create-react-app-on-launch), [Angular](/docs/launch/angular-on-launch), [Remix](/docs/launch/remix-on-launch), [Nuxt](/docs/launch/nuxt-on-launch), [client-side rendering (CSR)](/docs/launch/framework-agnostic-csr-hosting-on-launch).
+      Instant provisioning by [linking GitHub](./import-project-using-github.md) or [Bitbucket](./import-a-project-using-bitbucket-cloud.md) repositories, or [uploading ZIP files](./import-project-using-file-upload.md).
+- Full support for frameworks such as [Gatsby](./gatsby-on-launch.md), [Next.js](./nextjs-on-launch.md), [Vue](./vue-on-launch.md), [React](./create-react-app-on-launch.md), [Angular](./angular-on-launch.md), [Remix](./remix-on-launch.md), [Nuxt](./nuxt-on-launch.md), [client-side rendering (CSR)](./framework-agnostic-csr-hosting-on-launch.md).
 - **Multi-Environment Management**
 
-      Create distinct [environments](/docs/launch/environments) (e.g., dev, staging, prod), each accessible via a unique URL.
-- Configure branch, custom build commands, [environment variables](/docs/launch/environment-variables), and password protection.
-- **Advanced **[**Deployment **](/docs/launch/deployments)**& Logs**
+      Create distinct [environments](./environments.md) (e.g., dev, staging, prod), each accessible via a unique URL.
+- Configure branch, custom build commands, [environment variables](./environment-variables.md), and password protection.
+- **Advanced **[**Deployment **](./deployments.md)**& Logs**
 
       Detailed deployment history, statuses such as Live, Failed, or Queued, logs, and redeploy options via UI, Git commits, or deploy hooks.
-- [**Deploy Hooks**](/docs/launch/deploy-hooks)** Integration**
+- [**Deploy Hooks**](./deploy-hooks.md)** Integration**
 
       Unique HTTP trigger URLs to initiate deployments programmatically or via CI/CD (e.g., cron jobs or CMS webhooks).
-- [**Custom Domains**](/docs/launch/custom-domain)** & Auto HTTPS**
+- [**Custom Domains**](./custom-domain.md)** & Auto HTTPS**
 
       Set up branded domains with SSL by default.
 - Supports apex domain redirection.
-- [**Cloud Functions**](/docs/launch/cloud-functions)
+- [**Cloud Functions**](./cloud-functions.md)
 
       Run serverless functions to handle backend tasks or API integrations directly within Launch.
-- [**Edge Functions**](/docs/launch/edge-functions)
+- [**Edge Functions**](./edge-functions.md)
 
       Deploy custom logic at the CDN edge for real-time personalization, authentication, or URL rewrites with minimal latency.
-- [**CLI for Launch**](/docs/developers/cli/cli-for-launch)
+- [**CLI for Launch**](../cli/cli-for-launch.md)
 
       Use the Contentstack CLI to create, manage, and deploy Launch projects programmatically, or integrate commands into CI/CD workflows.
 - **Performance**
 
-      [**Cache Priming**](/docs/launch/cache-priming): Preloads key pages to the CDN during deployment for faster first-load times.
+      [**Cache Priming**](./cache-priming.md): Preloads key pages to the CDN during deployment for faster first-load times.
 - Launch uses a global CDN network to deliver content closest to the users.
 - **Observability & Scaling Tools**
 
-      [Log Targets](/docs/launch/log-targets): Send server or edge logs via OpenTelemetry to external monitoring services.
-- [Load-Testing Support](/docs/launch/load-testing): Includes a checklist and best practices to simulate peak traffic and validate scalability.
+      [Log Targets](./log-targets.md): Send server or edge logs via OpenTelemetry to external monitoring services.
+- [Load-Testing Support](./load-testing.md): Includes a checklist and best practices to simulate peak traffic and validate scalability.
 - **Security & Access Control**
 
-      [Password protect environments](/docs/launch/password-protection).
+      [Password protect environments](./password-protection.md).
 - [Role-based user management](/docs/launch/users) (Owner, Admin, Read-Only) with granular permissions.
-- [**Traffic Encryption**](/docs/launch/traffic-encryption): HTTPS/TLS 1.2 & 1.3 by default, with auto-upgrades.
+- [**Traffic Encryption**](./traffic-encryption.md): HTTPS/TLS 1.2 & 1.3 by default, with auto-upgrades.
 
 ## Key Benefits
 - **Speed & Simplicity:** One-click deployments, automatic builds triggered via Git, and instant rollbacks, simplify CI/CD and accelerate time to market.

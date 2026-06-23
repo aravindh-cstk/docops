@@ -52,17 +52,17 @@ Layered experiences require defining multi-condition audiences and setting up pr
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to the [Contentstack Organization](/docs/developers/organization/about-organizations) with Personalize enabled
-- Access to a [Personalize project](/docs/personalize/create-personalize-project) linked to your [Stack](/docs/developers/set-up-stack/about-stack)
-- [Linked Content Types](/docs/developers/variants/manage-variant-groups#linking-content-types) and published entry variants
-- [Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript) installed and integrated
+- Access to the [Contentstack Organization](../developers/organization/about-organizations.md) with Personalize enabled
+- Access to a [Personalize project](./create-personalize-project.md) linked to your [Stack](../developers/set-up-stack/about-stack.md)
+- [Linked Content Types](../developers/variants/manage-variant-groups.md#linking-content-types) and published entry variants
+- [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md) installed and integrated
 
 ## Steps to Implement
 
 ### Personalize - Create a Project connected to your Stack
 - Navigate to App Switcher → Personalize → + New Personalize Project
 
-**Additional Resource:** For more information, refer to [Create a Personalize Project](/docs/personalize/create-personalize-project).
+**Additional Resource:** For more information, refer to [Create a Personalize Project](./create-personalize-project.md).
 
 ### Personalize – Create Audiences
 - Navigate to Personalize → Audiences → + New Audience.
@@ -75,7 +75,7 @@ Layered experiences require defining multi-condition audiences and setting up pr
 - (Optional) Click **+ Add Group** to group rules for complex logic.
 - Save the audience.
 
-**Additional Resource:** For more information, refer to [Create an Audience](/docs/personalize/create-audience).
+**Additional Resource:** For more information, refer to [Create an Audience](./create-audience.md).
 
 ### Personalize - Create Experience with Audiences
 - Navigate to **Personalize → Experiences → + New Experience**.
@@ -88,25 +88,25 @@ Layered experiences require defining multi-condition audiences and setting up pr
 - In the CMS, each experience appears as a **Variant Group** with the same name.Create **Entry Variants** for each variant in the CMS before activation.
 - **Activate Draft** to go live.
 
-**Additional Resource:** For more information, refer to [Create a Segmented Experience](/docs/personalize/create-segmented-experience), [Create an A/B Test Experience](/docs/personalize/create-ab-test-experience).
+**Additional Resource:** For more information, refer to [Create a Segmented Experience](./create-segmented-experience.md), [Create an A/B Test Experience](./create-ab-test-experience.md).
 
 ### How Layering of Experiences Works
 When multiple experiences are active on a single page, layering comes into play.
 - If experiences target **different sections**, Personalize automatically layers them, displaying all relevant active variants.
 - If experiences target **the same section**, Personalize applies **experience prioritization**. When two variants resolve for the same section, the higher-priority experience takes precedence.
 
-**Additional Resource:** For more information, refer to [Prioritize Experiences](/docs/personalize/prioritize-experiences).
+**Additional Resource:** For more information, refer to [Prioritize Experiences](./prioritize-experiences.md).
 
 ### CMS - Link Content Types
 **Variant Groups** and **Variants** are automatically created in the CMS based on experiences and variants defined in Personalize. (This may take a few milliseconds to populate.)
 
-**Additional Resource:** For more information, refer to [Manage Variant Groups](/docs/developers/variants/manage-variant-groups).
+**Additional Resource:** For more information, refer to [Manage Variant Groups](../developers/variants/manage-variant-groups.md).
 - Navigate to the Experience → Click the **Info** icon → scroll to **Variant Group → Linked Content Types**.
 - If the link is not available, go to Stack → Settings → Variants → select Variant Group → Linked Content Types.
 - Select one or more content types to associate with the variant group.
 - Click **Apply → Save**.
 
-**Additional Resource:** For more information, refer to [Linking Content Types](/docs/developers/variants/manage-variant-groups#linking-content-types).
+**Additional Resource:** For more information, refer to [Linking Content Types](../developers/variants/manage-variant-groups.md#linking-content-types).
 
 ### CMS - Create Entry Variants
 - In **CMS → Entries**, create personalized entries for each audience combination (for example Banner - US Mobile Back-to-School).
@@ -115,19 +115,19 @@ When multiple experiences are active on a single page, layering comes into play.
 - Audience 2 → Entry 2
 - Once published, Personalize delivers the correct entry in real time based on layered audience rules.
 
-**Additional Resource:** For more information, refer to [Create an Entry Variant](/docs/content-managers/entry-variants/create-an-entry-variant).
+**Additional Resource:** For more information, refer to [Create an Entry Variant](../content-managers/entry-variants/create-an-entry-variant.md).
 
 ### Dev - Set up Personalize Edge SDK (Manifest and Impressions/Events)
-- **Install SDK**Add the Personalize SDK to your site using npm, yarn, or pnpm. You can also add it through [Google Tag Manager](/docs/personalize/google-tag-manager-integration-with-personalize) or another tag manager for impression and event tracking.
+- **Install SDK**Add the Personalize SDK to your site using npm, yarn, or pnpm. You can also add it through [Google Tag Manager](./google-tag-manager-integration-with-personalize.md) or another tag manager for impression and event tracking.
 - **Retrieve active variants**Initialize the SDK on each page load and retrieve active variant aliases for the visitor.
-- For server-side rendered (SSR) sites, run this logic at the edge using an edge function or middleware.**Additional Resource: **For more information, refer to [Server Side Rendering (SSR) with Edge Routing Technical Implementation Architecture](/docs/personalize/ssr-edge-routing-technical-implementation-architecture), [Setup Next.js Website with Personalize - Launch](/docs/personalize/setup-nextjs-website-with-personalize-launch).
+- For server-side rendered (SSR) sites, run this logic at the edge using an edge function or middleware.**Additional Resource: **For more information, refer to [Server Side Rendering (SSR) with Edge Routing Technical Implementation Architecture](./ssr-edge-routing-technical-implementation-architecture.md), [Setup Next.js Website with Personalize - Launch](./setup-nextjs-website-with-personalize-launch.md).
 - Pass the active variant aliases to the Contentstack Delivery SDK to fetch corresponding entry variants.
-- **Track Impressions** Call [triggerImpressions()](/docs/developers/sdks/personalize-edge-sdk/javascript/reference#triggerimpressions) when a variant is displayed.
+- **Track Impressions** Call [triggerImpressions()](../developers/create-content-types/reference.md#triggerimpressions) when a variant is displayed.
 
 **Note:** Tracking impressions is optional but helps measure visibility.
 - **Track Events (for A/B Test)**On user interaction call `triggerEvent('event_name', { experienceId, variantAlias })`
 
-**Additional Resource:** For more information, refer to [Get Started with Personalize SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk), [Manifest API](/docs/developers/apis/personalize-edge-api#manifest), [Dynamically Track Variant Impressions](/docs/personalize/dynamically-track-variant-impressions).
+**Additional Resource:** For more information, refer to [Get Started with Personalize SDK](../developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk.md), [Manifest API](../../api-docs/api-detail/personalize-edge-api.md#manifest), [Dynamically Track Variant Impressions](./dynamically-track-variant-impressions.md).
 
 ### Personalize - Activate the Experience
 - Go to **Personalize → Experiences → Your Experience**.
@@ -136,7 +136,7 @@ When multiple experiences are active on a single page, layering comes into play.
 - Confirm impressions and events are firing correctly.
 - Monitor Experience Analytics to track performance and declare the winning variant.
 
-**Additional Resource:** For more information, refer to [Experience Analytics](/docs/personalize/experience-analytics).
+**Additional Resource:** For more information, refer to [Experience Analytics](./experience-analytics.md).
 
 ## Reference Project
 You can refer to the following project for a reference implementation on [Layered Experiences GitHub repository](https://github.com/contentstack-personalize-examples/personalize-layered-experiences) hosted at [Personalize-layered-experiences.](https://personalize-layered-experiences.contentstackapps.com/)

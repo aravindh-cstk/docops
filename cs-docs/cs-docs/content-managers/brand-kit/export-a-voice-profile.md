@@ -22,12 +22,12 @@ Exporting a Voice Profile in Contentstack helps you reuse your brand’s tone an
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
-- Access to Brand Kit as an invited [Collaborator](/docs/brand-kit/invite-collaborators)
+- Access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin)
+- Access to Brand Kit as an invited [Collaborator](./invite-collaborators.md)
 
 ## Steps for Execution
 
-**Note**: For this guide, we have assumed that you have [created a Voice Profile](/docs/brand-kit/create-a-voice-profile) inside your Brand Kit.
+**Note**: For this guide, we have assumed that you have [created a Voice Profile](./create-a-voice-profile.md) inside your Brand Kit.
 
 To export a Voice Profile, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the left navigation panel, click the **Brand Kit** icon.
@@ -45,4 +45,4 @@ The selected Voice Profiles will be downloaded as `.json` files.
 Yes. Select the checkboxes for the desired Voice Profiles and click **Export** from the floating bar.
 
 ### What access do I need to export a Voice Profile?
-You need access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin) and access to Brand Kit as an invited [Collaborator](/docs/brand-kit/invite-collaborators).
+You need access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin) and access to Brand Kit as an invited [Collaborator](./invite-collaborators.md).

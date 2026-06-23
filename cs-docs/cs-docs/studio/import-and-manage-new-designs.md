@@ -31,22 +31,22 @@ This guide demonstrates two methods for bringing new designs into Studio:
 Before you begin, ensure you have the following:
 - Access to [Studio.](https://www.contentstack.com/login/)
 - [Node.js](https://nodejs.org) is installed on your local machine.
-- [Studio Figma Plugin](/docs/studio/work-with-studio-figma-plugin) is installed in your Figma account.
-- [Contentstack CLI package](/docs/developers/cli/install-the-cli) and the **Studio CLI plugin** are installed.
-- (Optional) [Studio React SDK](/docs/developers/sdks/studio-sdk/react/about-studio-react-sdk) setup in your project if you plan to generate JavaScript components.
-- [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) or [Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) permissions to modify the composition structure.
+- [Studio Figma Plugin](./work-with-studio-figma-plugin.md) is installed in your Figma account.
+- [Contentstack CLI package](../developers/cli/install-the-cli.md) and the **Studio CLI plugin** are installed.
+- (Optional) [Studio React SDK](../developers/sdks/studio-sdk/react/about-studio-react-sdk.md) setup in your project if you plan to generate JavaScript components.
+- [Admin](../developers/invite-users-and-assign-roles/types-of-roles.md#admin) or [Developer](../developers/invite-users-and-assign-roles/types-of-roles.md#developer) permissions to modify the composition structure.
 
 ## Import Designs Using the Studio Figma Plugin
 The Studio Figma Plugin converts Figma designs into Studio-compatible JSON, which can be pasted directly into the Studio Canvas. The plugin only converts the design visuals. To generate functional logic, refer to the “**Generate UI Code Using the Studio CLI**” section.
 
 To integrate Figma designs with Studio, open your Figma file and perform the following steps:
 - From the Figma menu, click **Actions**, search for **Contentstack Studio**, and select it.
-- A login modal appears where you can:Select the [region](/docs/developers/contentstack-regions/about-regions).
+- A login modal appears where you can:Select the [region](../developers/contentstack-regions/about-regions.md).
 - Authorize the connection.
 - Authenticate in the browser when redirected.
 - Select the organization to complete authorization.
 - After authorization, return to Figma. The plugin displays the list of projects linked to your organization in Studio. Select the Studio project and click **Proceed**.
-- Select a frame or component, or hold **Shift** and click to select multiple items. Alternatively, drag a selection box across the canvas to select multiple frames.**Tip**: If you use a custom design system, [map](/docs/studio/import-and-manage-new-designs#map-components-to-figma-plugin) your pre-built components and design tokens in Figma before generation. This avoids duplicate components and ensures consistency across the design system.
+- Select a frame or component, or hold **Shift** and click to select multiple items. Alternatively, drag a selection box across the canvas to select multiple frames.**Tip**: If you use a custom design system, [map](./import-and-manage-new-designs.md#map-components-to-figma-plugin) your pre-built components and design tokens in Figma before generation. This avoids duplicate components and ensures consistency across the design system.
 - Click **Generate Design**. The plugin converts the selected design into Studio-compatible JSON.
 - After generation, two options appear:**Copy to Studio**Copies the generated component as Composition JSON to the clipboard for use in the Studio Canvas.
 
@@ -127,7 +127,7 @@ csdx studio:design-token:add --design-token-id=
 
 The CLI can analyze your project files (JS/TS, CSS, global.css) to automatically extract design tokens and generate a token definition file that can be registered in Studio.
 
-**Additional Resource**: To learn more about importing design tokens from project files refer to the [Import Design Tokens from Project Files Using Studio CLI](/docs/studio/import-design-tokens-from-project-files-using-studio-cli) document.
+**Additional Resource**: To learn more about importing design tokens from project files refer to the [Import Design Tokens from Project Files Using Studio CLI](./import-design-tokens-from-project-files-using-studio-cli.md) document.
 
 ## End-to-End Workflow
 - Use the Studio plugin in Figma to generate code for selected components.

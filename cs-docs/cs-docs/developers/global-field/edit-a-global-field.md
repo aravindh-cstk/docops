@@ -16,13 +16,13 @@ This page explains how to edit a Global field in Contentstack, including what ch
 
 ## Edit a Global Field
 
-Once created, you can edit a Global field anytime. However, removing a field, changing its data type, or enabling the [Multiple](/docs/developers/create-content-types/multiple/) attribute may result in data loss.
+Once created, you can edit a Global field anytime. However, removing a field, changing its data type, or enabling the [Multiple](../create-content-types/multiple.md) attribute may result in data loss.
 
-**Additional Resource**: If a Global field is used in published entries within a content type, modifying its schema may cause data loss in those entries. To avoid issues, refer to the [content type change management](/docs/developers/how-to-guides/content-type-change-management) guide for best practices on updating content type schemas without impacting live content.
+**Additional Resource**: If a Global field is used in published entries within a content type, modifying its schema may cause data loss in those entries. To avoid issues, refer to the [content type change management](../content-modeling/content-type-change-management.md) guide for best practices on updating content type schemas without impacting live content.
 
 To edit a Global field, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to edit a Global field.
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to edit a Global field.
 - Click the **Content Models** icon in the left navigation panel and select **Global Fields** in the left panel.
 - Locate the Global field you want to edit. Click the vertical ellipsis in the **Actions** column next to it and select **Edit**.
 - Modify the **Name** or **Description** as needed.
@@ -38,7 +38,7 @@ To edit a Global field, log in to your [Contentstack account](https://www.conten
 
 ## API Reference
 
-To edit a Global field via API, refer to the [Update Global Field](/docs/developers/apis/content-management-api#update-a-global-field) API request.
+To edit a Global field via API, refer to the [Update Global Field](../../../api-docs/api-detail/content-management-api.md#update-a-global-field) API request.
 
 ## Common questions
 
@@ -52,4 +52,4 @@ Removing a field, changing its data type, or enabling the **Multiple** attribute
 Yes. Changing or removing a field in a Global field increases the version number of all entries where the Global field is used.
 
 ### How do I edit a Global field via API?
-Use the [Update Global Field](/docs/developers/apis/content-management-api#update-a-global-field) API request.
+Use the [Update Global Field](../../../api-docs/api-detail/content-management-api.md#update-a-global-field) API request.

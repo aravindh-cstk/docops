@@ -82,7 +82,7 @@ While this architecture is ideal for delivering fast, pre-built static content, 
 
 Real-time personalization requires server-side processing, dynamic content delivery, and low-latency performance, which are not easily achievable in this architecture.
 
-An alternative architecture like [Server-Side Rendering (SSR) with Edge Routing](/docs/personalize/ssr-edge-routing-technical-implementation-architecture/) would be more suited for personalized experiences, as they allow for real-time content adjustments based on user behavior.
+An alternative architecture like [Server-Side Rendering (SSR) with Edge Routing](./ssr-edge-routing-technical-implementation-architecture.md) would be more suited for personalized experiences, as they allow for real-time content adjustments based on user behavior.
 
 ## Technical Considerations
 
@@ -105,4 +105,4 @@ The flicker occurs because the static page renders first, and then client-side c
 Base content is fetched from the CMS Delivery API (Base only), while personalized content is determined via the Personalize Edge API and then delivered by the CMS Delivery API.
 
 ### What is a good alternative if I need real-time personalization?
-An alternative architecture like [Server-Side Rendering (SSR) with Edge Routing](/docs/personalize/ssr-edge-routing-technical-implementation-architecture/) would be more suited for personalized experiences.
+An alternative architecture like [Server-Side Rendering (SSR) with Edge Routing](./ssr-edge-routing-technical-implementation-architecture.md) would be more suited for personalized experiences.

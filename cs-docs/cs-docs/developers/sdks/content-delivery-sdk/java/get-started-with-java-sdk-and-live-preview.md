@@ -52,7 +52,7 @@ You can download the latest dependency version [here](https://search.maven.org/a
 
 ## Set the Configurations
 
-To initialize the [Live Preview](/docs/content-managers/live-preview/about-live-preview) feature, you need to configure certain settings:
+To initialize the [Live Preview](../../../../content-managers/author-content/about-live-preview.md) feature, you need to configure certain settings:
 
 ```
 Config livePreviewConfig = new Config()
@@ -62,11 +62,11 @@ Config livePreviewConfig = new Config()
 
 ```
 
-**Note**: By default, the setLivePreviewHost() method points to the North America endpoint. If your website is hosted on the [European](/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt) data center, then pass the European endpoint against this method.
+**Note**: By default, the setLivePreviewHost() method points to the North America endpoint. If your website is hosted on the [European](../../../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) data center, then pass the European endpoint against this method.
 
 ## Initializing the Stack with Live Preview
 
-Since the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk) is responsible for communication, you need to initialize it within your stack.
+Since the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) is responsible for communication, you need to initialize it within your stack.
 
 Use the following command to initialize the stack:
 
@@ -92,13 +92,13 @@ public class ServiceInterceptor implements HandlerInterceptor {
 
 ## For Server-side Rendered Websites
 
-To install and initialize the Live Preview Utils SDK, you can refer to our [SSR Live Preview Setup](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website#server-side-rendering-ssr-) documentation.
+To install and initialize the Live Preview Utils SDK, you can refer to our [SSR Live Preview Setup](../../../set-up-live-preview/set-up-live-preview-for-your-website.md#server-side-rendering-ssr-) documentation.
 
 ## Query Request
 
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
-To get an [entry](/docs/content-managers/working-with-entries/about-entries), you need to specify the [content type](/docs/developers/create-content-types/about-content-types) UID and the UID of the entry.
+To get an [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) UID and the UID of the entry.
 
 ```
 Entry entry = stack.contentType("contentType").entry();
@@ -110,12 +110,12 @@ entry.fetch(new EntryResultCallBack() {
 
 The Timeline Preview feature in the Java Delivery SDK allows you to preview different versions of an entry based on specific timestamps or scheduled releases—making it easier to test future or past content states.
 
-For more information, refer to our [Timeline Preview](/docs/developers/set-up-timeline) documentation
+For more information, refer to our [Timeline Preview](../../../set-up-timeline.md) documentation
 
 ## More Resources
-- [JavaScript Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk)
-- [Java Sample App](/docs/developers/java/java-sample-app)
-- [Java SDK API Reference](/docs/developers/sdks/content-delivery-sdk/java/reference/)
+- [JavaScript Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
+- [Java Sample App](./java-sample-app.md)
+- [Java SDK API Reference](../../../create-content-types/reference.md)
 - [View and Download Java Delivery SDK repository on GitHub](https://github.com/contentstack/contentstack-java)
 
 ## Common questions
@@ -130,4 +130,4 @@ Maven users need to add the above code in your `pom.xml` file under the `<depend
 You need to specify the content type UID and the UID of the entry.
 
 ### Where can I find more information about Timeline Preview?
-For more information, refer to our [Timeline Preview](/docs/developers/set-up-timeline) documentation
+For more information, refer to our [Timeline Preview](../../../set-up-timeline.md) documentation

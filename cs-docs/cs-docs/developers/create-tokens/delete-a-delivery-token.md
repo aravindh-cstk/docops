@@ -16,14 +16,14 @@ This page explains how to delete a Delivery Token in Contentstack (and what happ
 
 ## Delete a Delivery Token
 
-Contentstack allows you to remove unnecessary [Delivery Tokens](/docs/developers/create-tokens/about-delivery-tokens) and [Preview Tokens](https://www.contentstack.com/docs/developers/create-tokens/about-delivery-tokens#understanding-preview-tokens) to improve security and organization.
+Contentstack allows you to remove unnecessary [Delivery Tokens](./about-delivery-tokens.md) and [Preview Tokens](./about-delivery-tokens.md#understanding-preview-tokens) to improve security and organization.
 
 **Warning:** Deleting a Delivery Token will end all sessions associated with it.
 
-To delete a Delivery Token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To delete a Delivery Token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 - Click **Tokens** in the settings panel.
-- On the **Delivery Tokens** tab, click the vertical ellipsis in the **Actions** column and select **Delete**.**Tip:** If you are on the [Management Tokens](/docs/developers/create-tokens/about-management-tokens) tab, press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
+- On the **Delivery Tokens** tab, click the vertical ellipsis in the **Actions** column and select **Delete**.**Tip:** If you are on the [Management Tokens](./about-management-tokens.md) tab, press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
 - Confirm your action in the **Delete Delivery Token** modal.
 
 Once done, the Delivery Token and its associated Preview Token are deleted.
@@ -37,8 +37,8 @@ To remove only the Preview Token without deleting the Delivery Token, perform th
 
 ## API Reference
 
-- To delete a Delivery Token via API, refer to the [Delete Delivery Token](/docs/developers/apis/content-management-api#delete-delivery-token) API request.
-- To delete a Preview Token via API, refer to the [Delete Preview Token](/docs/developers/apis/content-management-api#delete-preview-token) API request.
+- To delete a Delivery Token via API, refer to the [Delete Delivery Token](../../../api-docs/api-detail/content-management-api.md#delete-delivery-token) API request.
+- To delete a Preview Token via API, refer to the [Delete Preview Token](../../../api-docs/api-detail/content-management-api.md#delete-preview-token) API request.
 
 ## Common questions
 
@@ -52,4 +52,4 @@ A: Once done, the Delivery Token and its associated Preview Token are deleted.
 A: Yes. Use the steps in **Delete Only the Preview Token** to remove only the Preview Token without deleting the Delivery Token.
 
 **Q: Where can I find the API requests to delete tokens?**  
-A: See **API Reference** for the [Delete Delivery Token](/docs/developers/apis/content-management-api#delete-delivery-token) and [Delete Preview Token](/docs/developers/apis/content-management-api#delete-preview-token) API requests.
+A: See **API Reference** for the [Delete Delivery Token](../../../api-docs/api-detail/content-management-api.md#delete-delivery-token) and [Delete Preview Token](../../../api-docs/api-detail/content-management-api.md#delete-preview-token) API requests.

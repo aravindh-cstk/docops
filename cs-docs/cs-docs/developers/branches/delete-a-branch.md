@@ -18,7 +18,7 @@ This page explains how to delete a branch in Contentstack, including prerequisit
 
 ## Delete a Branch
 
-Contentstack allows you to delete a [branch](/docs/developers/branches/about-branches)that you created in your [stack](/docs/developers/set-up-stack/about-stack).
+Contentstack allows you to delete a [branch](./about-branches.md)that you created in your [stack](../set-up-stack/about-stack.md).
 
 **Note:** Unless you are the Owner or Admin of the stack, you cannot delete branches created by other stakeholders.
 
@@ -32,7 +32,7 @@ To delete a branch, log in to your [Contentstack account](https://www.contentsta
 **Note:**
 - At a time only **one** branch can be deleted across an organization.
 - You can only delete child branches but not the parent (source) branches.
-- The deletion actions triggered for any other branches will remain in the “in-queue” state until the ongoing branch deletion action is completed. You can view the status of these actions within the [organization's bulk task queue](/docs/owners-and-admins/organization-bulk-task-queue).
+- The deletion actions triggered for any other branches will remain in the “in-queue” state until the ongoing branch deletion action is completed. You can view the status of these actions within the [organization's bulk task queue](../organization/organization-bulk-task-queue.md).
 
 ## Common questions
 

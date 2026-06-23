@@ -16,7 +16,7 @@ This page explains how to install and initialize the Contentstack PHP SDK and ru
 
 ## Get Started with PHP SDK
 
-This guide will help you get started with Contentstack [PHP SDK](/docs/developers/sdks/content-delivery-sdk/php/about-php-sdk/) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [PHP SDK](./about-php-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ composer require contentstack/contentstack
 ### Method 2: Downloading the zip file
 
 To download the PHP SDK, perform the following steps:
-- [Download](/docs/developers/sdks/content-delivery-sdk/php/download-php-sdk/) the PHP SDK.
+- [Download](./download-php-sdk.md) the PHP SDK.
 - Create the `dependencies` folder in your project directory and move the downloaded .zip file within the `dependencies` folder.
 - Download the [MabeEnum](https://github.com/marc-mabe/php-enum) class.
 - Create a folder named `marc-mabe` folder inside `dependencies`, and move the `php-enum` folder to `marc-mabe`.
@@ -51,7 +51,7 @@ Initialize the SDK by following either of the methods depending on the type of i
 
 ### Method 1: If installed using Composer
 
-To initialize the SDK, specify the [API Key](/docs/developers/set-up-stack/view-stack-details), [delivery token](/docs/developers/create-tokens/about-delivery-tokens), and [environment](/docs/developers/set-up-environments/about-environments) name of your stack.
+To initialize the SDK, specify the [API Key](../../../set-up-stack/view-stack-details.md), [delivery token](../../../create-tokens/about-delivery-tokens.md), and [environment](../../../set-up-environments/about-environments.md) name of your stack.
 
 ```
 use Contentstack\Contentstack;
@@ -80,11 +80,11 @@ static Stack = Contentstack::Stack('api_key', 'delivery_token', 'environment_nam
 
 ## Basic Queries
 
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
 ### Get a Single Entry
 
-To get a single [entry](/docs/content-managers/working-with-entries/about-entries), you need to specify the [content type](/docs/developers/create-content-types/about-content-types) and the UID of the entry:
+To get a single [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) and the UID of the entry:
 
 ```
 $result = $stack->ContentType(CONTENT_TYPE_UID)->Entry(ENTRY_UID)->toJSON()->fetch()
@@ -102,13 +102,13 @@ $result[1] - content type
 $result[2] - count of the entries
 ```
 
-These were examples of some of the basic queries of the SDK. For advanced queries, refer to the Contentstack PHP SDK [API reference](/docs/developers/sdks/content-delivery-sdk/php/reference/).
+These were examples of some of the basic queries of the SDK. For advanced queries, refer to the Contentstack PHP SDK [API reference](../../../create-content-types/reference.md).
 
-**Note:** Currently, the PHP SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](/docs/developers/apis/content-delivery-api#queries) section of our Content Delivery API documentation.
+**Note:** Currently, the PHP SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](../../../../../api-docs/api-detail/content-delivery-api.md#queries) section of our Content Delivery API documentation.
 
 #### Paginating Responses
 
-In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [limit](/docs/developers/sdks/content-delivery-sdk/php/reference/#query-limit) parameters in subsequent requests.
+In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [limit](../../../create-content-types/reference.md#query-limit) parameters in subsequent requests.
 
 ```
 $stack = Contentstack::Stack(API_KEY, DELIVERY_TOKEN, ENV_NAME);
@@ -119,14 +119,14 @@ $result = $stack->ContentType(CONTENT_TYPE_UID)->Query()->toJSON()->skip(20)->li
 
 - We have a URL size limitation of 8KB on API Requests that hit our CDN services. Any Request URL that goes above this size limit will receive the `400 - Bad request` error response. Please make sure you limit the size of your API Requests.
 - The PHP SDK does not support multiple content types referencing in a single query.
-- Currently, the PHP SDK does not yet support querying Global Field schemas ([All Global Fields](/docs/developers/apis/content-delivery-api#all-global-fields) and [Single Global Field](/docs/developers/apis/content-delivery-api#single-global-field)). You can include these details when querying content type details ([All Content Types](/docs/developers/apis/content-delivery-api#all-content-types) and [Single Content Type](/docs/developers/apis/content-delivery-api#single-content-type)) with the `include_global_field_schema query parameter`.
+- Currently, the PHP SDK does not yet support querying Global Field schemas ([All Global Fields](../../../../../api-docs/api-detail/content-delivery-api.md#all-global-fields) and [Single Global Field](../../../../../api-docs/api-detail/content-delivery-api.md#single-global-field)). You can include these details when querying content type details ([All Content Types](../../../../../api-docs/api-detail/content-delivery-api.md#all-content-types) and [Single Content Type](../../../../../api-docs/api-detail/content-delivery-api.md#single-content-type)) with the `include_global_field_schema query parameter`.
 
 ## More Resources
 
-- [Download PHP SDK](/docs/developers/php/download-php-sdk)
+- [Download PHP SDK](./download-php-sdk.md)
 - [Build a Blog using PHP SDK and Symfony Framework](/docs/developers/sample-apps/build-a-blog-demo-using-contentstacks-php-sdk-and-symfony-framework)
-- [PHP SDK API Reference](/docs/developers/sdks/content-delivery-sdk/php/reference/)
-- [PHP SDK Changelog](/docs/developers/sdks/content-delivery-sdk/php/php-sdk-changelog/)
+- [PHP SDK API Reference](../../../create-content-types/reference.md)
+- [PHP SDK Changelog](./php-sdk-changelog.md)
 - [View and Download PHP SDK repository on GitHub](https://github.com/contentstack/contentstack-php)
 
 ## Common questions

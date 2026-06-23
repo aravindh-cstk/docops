@@ -58,22 +58,22 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 **Note**: The Save In Entry configuration setting only applies to the variations field.
 - Click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Optimizely app.
 
 ## Use the Optimizely App within your Stack Entry
 To use the Optimizely app within an entry of your stack, follow the steps given below:
 
-Go to your stack, click the [Content Models](/docs/developers/marketplace-platform-guides/content-models/about-content-models) icon in the left navigation panel, and click the **+ New Content Type** button.
-- If you want to create a new content type, select **Create New**. To use the prebuilt one, click **Use Prebuilt**.**Additional Resource**: For more information on prebuilt content models, please refer to the [Import Prebuilt Content Models](/docs/developers/create-content-types/import-prebuilt-content-models) documentation.
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom/) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+Go to your stack, click the [Content Models](../marketplace-platform-guides/content-models/about-content-models.md) icon in the left navigation panel, and click the **+ New Content Type** button.
+- If you want to create a new content type, select **Create New**. To use the prebuilt one, click **Use Prebuilt**.**Additional Resource**: For more information on prebuilt content models, please refer to the [Import Prebuilt Content Models](../create-content-types/import-prebuilt-content-models.md) documentation.
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **Optimizely Audience**, and click the **Proceed** button.
 Change the **Display Name** of the custom field to your choice, for example, **Optimizely Audience Custom Field**. Optionally, you can add **Help Text** and **Instruction Value** for your custom field. This adds the Optimizely Audience in the custom field.
-- Add another [Custom](/docs/developers/create-content-types/custom/) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- Add another [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **Optimizely Variations**, and click the **Proceed** button.This adds the Optimizely Variations in the custom field. You can change the display name of the custom field as required.
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
-- To use the Optimizely app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](/docs/content-managers/author-content/create-an-entry) for the above content type, and then click **Proceed**.
+- To use the Optimizely app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.
 You can see the Optimizely app’s custom field on your entry page as shown below:
 - In the Optimizely Audience custom field, click the **+ Add Audience(s)** button.
 - Select the audiences and then click the **+ Add Audience(s)** button to add the audiences in the entry.The audience(s) you selected are referenced within your entry:

@@ -25,7 +25,7 @@ Suppose there is an active automation to publish entries to the Algolia dashboar
 
 In order to maintain the uninterrupted operation of live automation, it will be safeguarded against any modifications or adjustments. This means that you will **not **be able to make edits or changes to it.
 
-If you wish to make alterations to a live automation, you have two options. First, you can disable it, which will unlock it for editing. Alternatively, you can create a [clone of the automation](/docs/developers/automation-hub-guides/clone-an-automation), make your desired changes to the clone, and when you're ready, you can activate the clone (while deactivating the previous version).
+If you wish to make alterations to a live automation, you have two options. First, you can disable it, which will unlock it for editing. Alternatively, you can create a [clone of the automation](./clone-an-automation.md), make your desired changes to the clone, and when you're ready, you can activate the clone (while deactivating the previous version).
 
 You can view the automation in Live mode. The status of the automation is notified on the automation builder page.
 
@@ -46,10 +46,10 @@ Let’s look at each of them in detail:
 - Live mode is when an automation is **active**.
 - You can view automation configuration in Live mode.
 - You cannot add new steps or delete automation steps in the Live mode.
-- You can **only ******[Clone an Automation](/docs/developers/automation-hub-guides/clone-an-automation)****or [Throttle Execution](/docs/developers/automation-hub-guides/throttle-execution) in Live mode.
+- You can **only ******[Clone an Automation](./clone-an-automation.md)****or [Throttle Execution](./throttle-execution.md) in Live mode.
 - All the trigger and action steps are locked.
-- You cannot [edit](/docs/developers/automation-hub-guides/edit-automation-details) the Automation Title and Description.
-- You cannot [delete an automation](/docs/developers/automation-hub-guides/delete-automation).
+- You cannot [edit](../developers/automation-hub-guides/edit-automation-details.md) the Automation Title and Description.
+- You cannot [delete an automation](../developers/automation-hub-guides/delete-automation.md).
 - You cannot add a new step between existing automation steps.
 - The Delete Trigger and Delete Action icons will not be visible on hover.
 
@@ -65,10 +65,10 @@ You can check the status of the automation on the Automations listing page.
 No. In Live mode, the automation configuration is locked and you cannot add or delete steps or edit the Automation Title and Description.
 
 ### How can I change a Live automation safely?
-Disable it to unlock editing, or create a [clone of the automation](/docs/developers/automation-hub-guides/clone-an-automation), apply changes to the clone, then activate the clone while deactivating the previous version.
+Disable it to unlock editing, or create a [clone of the automation](./clone-an-automation.md), apply changes to the clone, then activate the clone while deactivating the previous version.
 
 ### What can I do in Live mode besides viewing the configuration?
-You can **only** [Clone an Automation](/docs/developers/automation-hub-guides/clone-an-automation) or [Throttle Execution](/docs/developers/automation-hub-guides/throttle-execution) in Live mode.
+You can **only** [Clone an Automation](./clone-an-automation.md) or [Throttle Execution](./throttle-execution.md) in Live mode.
 
 ### Where do I see whether an automation is Draft or Live?
 The status of the automation is notified on the automation builder page, and you can check the status of the automation on the Automations listing page.

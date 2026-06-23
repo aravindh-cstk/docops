@@ -21,7 +21,7 @@ The **JSON Rich Text Editor (RTE)** is a block-style editor that enables users t
 
 ## Key Features
 
-- **User-Friendly Editing**: Add and format content directly from the [entry](/docs/content-managers/working-with-entries/about-entries) page using a text area with built-in editing tools. No need to work with HTML tags, making content management more intuitive and efficient.
+- **User-Friendly Editing**: Add and format content directly from the [entry](../../content-managers/author-content/about-entries.md) page using a text area with built-in editing tools. No need to work with HTML tags, making content management more intuitive and efficient.
 - **HTML-Free Environment**: The JSON RTE eliminates the need to manage HTML code by removing the HTML source view option. This simplifies the workflow for content managers, reducing the likelihood of errors in source code.
 - **Structured Content**: Store content in JSON format, ensuring that text, media, and layouts are logically organized in reusable blocks.
 

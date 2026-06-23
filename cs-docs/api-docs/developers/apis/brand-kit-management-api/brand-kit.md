@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # Brand Kit | Brand Kit
 
-[Brand Kit](/docs/content-managers/brand-kit/about-brand-kit) serves as a centralized repository for your organization's brand identity and guidelines, offering a comprehensive array of product details and overall brand persona. By using the API requests, you can create, view, update, and delete one or more Brand Kits.
+[Brand Kit](../../../../cs-docs/content-managers/brand-kit/about-brand-kit.md) serves as a centralized repository for your organization's brand identity and guidelines, offering a comprehensive array of product details and overall brand persona. By using the API requests, you can create, view, update, and delete one or more Brand Kits.
 
 ## Get All Brand Kits
 
@@ -22,7 +22,7 @@ last_updated: 2026-06-02
 
 The Get All Brand Kits request fetches the list of all the Brand Kits in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 #### Query Parameters
 
@@ -57,7 +57,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Response
@@ -95,7 +95,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Get a Single Brand Kit request fetches the details of a specific Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 #### URL Parameters
 
@@ -112,7 +112,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]  `
 
 #### Sample Response
@@ -148,7 +148,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Create Brand Kit request lets you create a new Brand Kit in the specified organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body for creating a new Brand Kit:
 
@@ -174,7 +174,7 @@ Here’s an example of the Request Body for creating a new Brand Kit:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Request
@@ -224,7 +224,7 @@ Here’s an example of the Request Body for creating a new Brand Kit:
 
 The Update Brand Kit request lets you update an existing Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body that you can use to update a Brand Kit:
 
@@ -255,7 +255,7 @@ Here’s an example of the Request Body that you can use to update a Brand Kit:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Request
@@ -306,7 +306,7 @@ Here’s an example of the Request Body that you can use to update a Brand Kit:
 
 The Delete Brand Kit request lets you delete an existing Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 #### URL Parameters
 
@@ -323,7 +323,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Response

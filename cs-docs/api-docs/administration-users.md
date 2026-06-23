@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # Administration | Users
 
-All accounts registered with Contentstack are known as [Users](/docs/developers/invite-users-and-assign-roles/about-stack-users). A [stack](/docs/developers/set-up-stack/about-stack) can have many users with varying permissions and roles. 
+All accounts registered with Contentstack are known as [Users](../cs-docs/developers/invite-users-and-assign-roles/about-stack-users.md). A [stack](../cs-docs/developers/set-up-stack/about-stack.md) can have many users with varying permissions and roles. 
 
 **Note:**Before executing any calls, retrieve the authtoken by authenticating yourself via the Log in call of User Session. The authtoken is returned in the 'Response' body of the Log in call and is mandatory in all of the calls. Example: blt3cecf75b33bb2ebe
 
@@ -252,11 +252,11 @@ The Activate a user account call activates the account of a user after signing u
 
 The Request for a password API helps to get a temporary password to log into an account in case a user has forgotten the login password.
 
-Using this temporary password, you can log in to your account and [set a new password](/docs/developers/password-related-security/forgot-reset-password) for your Contentstack account.
+Using this temporary password, you can log in to your account and [set a new password](../cs-docs/developers/security/forgot-reset-password.md) for your Contentstack account.
 
 In the 'Body' section, provide the user's email address in JSON format.
 
-**Note:** The “**Reset password**” token that you receive in your email address is valid only for the **next 60 minutes** after it’s generated. Post that, it expires and you need to rerun the [Reset password](/docs/developers/apis/content-management-api/#reset-password) API request to generate a new token.
+**Note:** The “**Reset password**” token that you receive in your email address is valid only for the **next 60 minutes** after it’s generated. Post that, it expires and you need to rerun the [Reset password](./api-detail/content-management-api.md#reset-password) API request to generate a new token.
 
 #### Headers
 
@@ -292,7 +292,7 @@ In the 'Body' section, provide the user's email address in JSON format.
 
 The Reset password API request allows you to reset your Contentstack account password.
 
-******Note:**Before using this API request, you need to execute the [Request for a password](/docs/developers/apis/content-management-api/#request-for-a-password) API request to receive the reset password token in your registered email address.
+******Note:**Before using this API request, you need to execute the [Request for a password](./api-detail/content-management-api.md#request-for-a-password) API request to receive the reset password token in your registered email address.
 
 When executing the request, in the 'Body' section, you need to provide the token that you receive via email, your new password, and password confirmation in JSON format.
 

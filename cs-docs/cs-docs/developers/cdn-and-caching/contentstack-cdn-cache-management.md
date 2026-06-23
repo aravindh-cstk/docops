@@ -19,7 +19,7 @@ This page explains how Contentstack’s CDN caching works, when and how Contents
 
 A Content Delivery Network (CDN) ensures that a cache of your content is stored at various locations around the globe. Consequently, whenever there is a page request, the content is served from the cache of the nearest CDN server, rather than the origin server ensuring quicker content delivery.
 
-**Additional Resource:** Refer to our documentation about [What CDN is and How it Works](/docs/developers/cdn-and-caching/what-is-cdn-and-how-it-works) to learn more.
+**Additional Resource:** Refer to our documentation about [What CDN is and How it Works](./what-is-cdn-and-how-it-works.md) to learn more.
 
 ## How CDN Cache Works in Contentstack
 
@@ -29,7 +29,7 @@ When any user requests a piece of content, the nearest CDN server checks if it h
 
 A shield server is an extra layer of caching that reduces the load on the origin server. It is located near the origin server, and it saves the cache of content that it serves to any CDN server. So, if any other CDN server requests the same data, the shield server would serve the cached content.
 
-**Additional Resource:** Interested in learning how to set up your CDN for your Contentstack-powered websites? Refer to our guide on how to [set up a Content Delivery Network for Contentstack-powered Websites](/docs/developers/cdn-and-caching/set-up-a-content-delivery-network-for-contentstack-powered-websites).
+**Additional Resource:** Interested in learning how to set up your CDN for your Contentstack-powered websites? Refer to our guide on how to [set up a Content Delivery Network for Contentstack-powered Websites](./set-up-a-content-delivery-network-for-contentstack-powered-websites.md).
 
 This ensures that content is always available and delivered even in high visitor traffic, intermittent spikes and server outages, resulting in better customer experience and satisfaction.
 
@@ -37,7 +37,7 @@ This ensures that content is always available and delivered even in high visitor
 
 Purging refers to the removal of the cache from the cache servers. Contentstack purges cached data from the cache servers based on the occurrence of certain events.
 
-When a piece of content is [published](/docs/content-managers/publish-content), [unpublished](/docs/content-managers/working-with-entries/unpublish-an-entry), or [deleted](/docs/content-managers/working-with-entries/delete-an-entry), Contentstack purges the cache of only the changed content (and some other related content) from the [Content Delivery Network (CDN)](/docs/developers/cdn-and-caching/what-is-cdn-and-how-it-works) This ensures that the unchanged cache remains intact, and you hit fewer API requests to the origin server while fetching content.
+When a piece of content is [published](/docs/content-managers/publish-content), [unpublished](../../content-managers/author-content/unpublish-an-entry.md), or [deleted](../../content-managers/author-content/delete-an-entry.md), Contentstack purges the cache of only the changed content (and some other related content) from the [Content Delivery Network (CDN)](./what-is-cdn-and-how-it-works.md) This ensures that the unchanged cache remains intact, and you hit fewer API requests to the origin server while fetching content.
 
 The following table lists down the different circumstances under which cached content is purged from other cache servers:
 
@@ -62,7 +62,7 @@ The following table lists down the different circumstances under which cached co
 
 ### Determining the Timeouts and Retries for Content Delivery APIs
 
-You can set up timeouts and retries for [Content Delivery APIs](/docs/developers/apis/content-delivery-api) for your app depending on the time our CDN takes to serve content.
+You can set up timeouts and retries for [Content Delivery APIs](../../../api-docs/api-detail/content-delivery-api.md) for your app depending on the time our CDN takes to serve content.
 
 - **Requests served by the origin server**  
   **After a purge event, the first request coming to the origin server will take more time than requests served from the cache. This however does not exceed one sec (for regular requests with limited references).**

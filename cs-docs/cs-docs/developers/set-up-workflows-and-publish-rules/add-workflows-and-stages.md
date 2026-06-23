@@ -18,17 +18,17 @@ This page explains how to create and configure workflows in Contentstack, includ
 
 ## Add Workflows and Stages
 
-You can create [workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) in Contentstack to define the content approval and publishing process for your [stack](/docs/developers/set-up-stack/about-stack).
+You can create [workflows](./about-workflows.md) in Contentstack to define the content approval and publishing process for your [stack](../set-up-stack/about-stack.md).
 
 Before you get started, note the following:
-- Only the [stack owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and users with the [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) role can create and manage workflows.
-- [Content managers](/docs/developers/invite-users-and-assign-roles/types-of-roles#content-manager) and users with [custom roles](/docs/developers/invite-users-and-assign-roles/types-of-roles#custom-role) cannot view workflow settings. However, they can use workflows in entries and manage their [assigned tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks).
-- You can create multiple workflows within a stack. A [content type](/docs/developers/create-content-types/about-content-types) can be linked to more than one workflow if each workflow is associated with a different branch.
+- Only the [stack owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and users with the [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) role can create and manage workflows.
+- [Content managers](../invite-users-and-assign-roles/types-of-roles.md#content-manager) and users with [custom roles](../invite-users-and-assign-roles/types-of-roles.md#custom-role) cannot view workflow settings. However, they can use workflows in entries and manage their [assigned tasks](./about-workflow-tasks.md).
+- You can create multiple workflows within a stack. A [content type](../create-content-types/about-content-types.md) can be linked to more than one workflow if each workflow is associated with a different branch.
 
 ## Create a Workflow
 
 To create a workflow in your stack, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon or use the shortcut key “S” (for both Windows and Mac users).
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon or use the shortcut key “S” (for both Windows and Mac users).
 - Select **Workflows** (press **Alt + F** on Windows or **Option + F** on Mac).
 - On the **Workflow Settings** page, open the **Workflows** tab and click **+ New Workflow**.
 
@@ -100,7 +100,7 @@ Superusers have elevated privileges within a workflow.
 
 ## API Reference
 
-To create a workflow and add stages via API, refer to the [Create a workflow](/docs/developers/apis/content-management-api#create-a-workflow) API request.
+To create a workflow and add stages via API, refer to the [Create a workflow](../../../api-docs/api-detail/content-management-api.md#create-a-workflow) API request.
 
 ## Common questions
 
@@ -108,10 +108,10 @@ To create a workflow and add stages via API, refer to the [Create a workflow](/d
 You can add up to **20 stages** in a workflow.
 
 **Who can create and manage workflows?**  
-Only the [stack owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and users with the [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) role can create and manage workflows.
+Only the [stack owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and users with the [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) role can create and manage workflows.
 
 **Can a content type be linked to more than one workflow?**  
-A [content type](/docs/developers/create-content-types/about-content-types) can be linked to more than one workflow if each workflow is associated with a different branch.
+A [content type](../create-content-types/about-content-types.md) can be linked to more than one workflow if each workflow is associated with a different branch.
 
 **Where can I find the API request to create a workflow?**  
-Refer to the [Create a workflow](/docs/developers/apis/content-management-api#create-a-workflow) API request.
+Refer to the [Create a workflow](../../../api-docs/api-detail/content-management-api.md#create-a-workflow) API request.

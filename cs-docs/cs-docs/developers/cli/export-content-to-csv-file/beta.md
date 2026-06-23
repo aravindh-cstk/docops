@@ -17,19 +17,19 @@ This page explains how to use the Contentstack CLI `cm:export-to-csv` command to
 ## Export Content to CSV File Using the CLI | V2.x.x Beta
 
 The `cm:export-to-csv` command lets you export the following data into a CSV file using Contentstack CLI:
-- [Stack Entries](/docs/content-managers/author-content/about-entries)
-- [Organization users’ details](/docs/developers/organization/organization-users)
-- [Organization teams' details](/docs/developers/teams/about-teams)
-- [Taxonomy details](/docs/developers/taxonomy/about-taxonomy)
+- [Stack Entries](../../../content-managers/author-content/about-entries.md)
+- [Organization users’ details](../../organization/organization-users.md)
+- [Organization teams' details](../../teams/about-teams.md)
+- [Taxonomy details](../../taxonomy/about-taxonomy.md)
 
 You can use this to perform tasks such as creating content backups, analyzing data, and more.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- Contentstack CLI [installed](/docs/developers/cli/install-the-cli) and [configured](/docs/developers/cli/configure-regions-in-the-cli/)
-- CLI [authenticated](/docs/developers/cli/cli-authentication/)
+- Contentstack CLI [installed](../install-the-cli.md) and [configured](../configure-regions-in-the-cli.md)
+- CLI [authenticated](../cli-authentication.md)
 
-**Note:** Only the Organization [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin) has the permissions to export an organization’s user or teams’ data.
+**Note:** Only the Organization [Owner](../../organization/organization-roles.md#organization-owner)/[Admin](../../organization/organization-roles.md#organization-admin) has the permissions to export an organization’s user or teams’ data.
 
 ## Commands
 Contentstack CLI lets you export content from the source stack to a CSV file by running the following command in your terminal:
@@ -50,8 +50,8 @@ The CSV file gets generated in the following format:
 
 `<stack_name>_<content_type>_<language>_entries_exports.csv`
 
-You can also export entries to CSV using the [Management Token](/docs/developers/create-tokens/about-management-tokens) alias.
-- **Export organization users' data to a CSV file**: To use this option, you must be an [Organization Owner](/docs/developers/organization/organization-roles#organization-owner) or [Organization Admin](/docs/developers/organization/organization-roles#organization-admin). The command lists only the organization(s) for which you have either role.**Note:** You must be logged in to the Contentstack app to export organization users.
+You can also export entries to CSV using the [Management Token](../../create-tokens/about-management-tokens.md) alias.
+- **Export organization users' data to a CSV file**: To use this option, you must be an [Organization Owner](../../organization/organization-roles.md#organization-owner) or [Organization Admin](../../organization/organization-roles.md#organization-admin). The command lists only the organization(s) for which you have either role.**Note:** You must be logged in to the Contentstack app to export organization users.
 
 When prompted, select the organization containing the user data you want to export. The CSV file is generated in the following format:
 

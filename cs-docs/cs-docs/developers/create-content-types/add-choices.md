@@ -17,7 +17,7 @@ This page explains how to use the **Add Choices** property of the Select field w
 
 ## Add Choices
 
-The **Add Choices** property of the [Select](/docs/developers/create-content-types/select) field enables you to enter the options that will be visible to the [content managers](/docs/developers/invite-users-and-assign-roles/types-of-roles#content-manager) as choices to select from.
+The **Add Choices** property of the [Select](./select.md) field enables you to enter the options that will be visible to the [content managers](../invite-users-and-assign-roles/types-of-roles.md#content-manager) as choices to select from.
 
 **Warning**: If you change the data type after entering the choices, the values added as choices may be lost.
 
@@ -29,7 +29,7 @@ For example, we might want to specify the state code for a state while defining 
 
 **Note**: You can add up to **100** options that are up to **100** characters long.
 
-After you configure this property in your [content type](/docs/developers/create-content-types/about-content-types) and [create an entry](/docs/content-managers/working-with-entries/create-an-entry), you will see your entry page as shown below.
+After you configure this property in your [content type](./about-content-types.md) and [create an entry](../../content-managers/author-content/create-an-entry.md), you will see your entry page as shown below.
 
 ## Common questions
 

@@ -50,19 +50,19 @@ This component of the architecture diagram consists of your headless CMS.
 ## Next Steps
 
 ### More Architecture Diagrams
-- [Static website architecture](/docs/developers/architecture-diagrams/static-website-detailed-architecture)
-- [Simple Website](/docs/developers/architecture-diagrams/simple-website-detailed-architecture)
-- [Dynamic website architecture](/docs/developers/architecture-diagrams/dynamic-website-detailed-architecture)
-- [Partially headless setup architecture](/docs/developers/architecture-diagrams/partially-headless-setup-detailed-architecture)
-- [Layered architecture for Contentstack-powered websites](/docs/developers/architecture-diagrams/contentstack-powered-website-layered-architecture)
-- [Cloud infrastructure diagram](/docs/developers/architecture-diagrams/cloud-infrastructure-architecture-for-contentstack-powered-websites)
-- [Simple Website using DataSync](/docs/developers/architecture-diagrams/simple-website-using-datasync)
-- [MACH System Architecture](/docs/developers/architecture-diagrams/mach-architecture-diagram)
+- [Static website architecture](./static-website-detailed-architecture.md)
+- [Simple Website](./simple-website-detailed-architecture.md)
+- [Dynamic website architecture](./dynamic-website-detailed-architecture.md)
+- [Partially headless setup architecture](./partially-headless-setup-detailed-architecture.md)
+- [Layered architecture for Contentstack-powered websites](./contentstack-powered-website-layered-architecture.md)
+- [Cloud infrastructure diagram](./cloud-infrastructure-architecture-for-contentstack-powered-websites.md)
+- [Simple Website using DataSync](./simple-website-using-datasync.md)
+- [MACH System Architecture](./mach-architecture-diagram.md)
 
 ### Resources to Get Started
-- [Quickstart in 5 minutes](/docs/developers/quickstart-in-5-mins)
+- [Quickstart in 5 minutes](../quickstart-in-5-mins.md)
 - [Sample applications](/docs/developers/sample-apps)
-- [How to start using Contentstack](/docs/developers/contentstack-basics/how-to-start-using-contentstack)
+- [How to start using Contentstack](../contentstack-basics/how-to-start-using-contentstack.md)
 
 ## Common questions
 

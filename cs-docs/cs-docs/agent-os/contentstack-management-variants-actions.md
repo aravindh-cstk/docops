@@ -17,11 +17,11 @@ This page explains the Contentstack Management connector’s Variant Actions in 
 
 ## Contentstack Management - Variants Actions
 
-[Variants](/docs/personalize/about-variants) are the different variations of an entry displayed to different audiences created within a Personalize project.
+[Variants](../personalize/about-variants.md) are the different variations of an entry displayed to different audiences created within a Personalize project.
 
 The Contentstack Management Variant Actions lets you update, publish, and fetch the details of all the variants in a Variant Group.
 
-**Note:** You can create an [Entry Variant](/docs/content-managers/entry-variants/create-an-entry-variant) for Variant Groups via Automate or the CMS. However, audiences for Experiences can be created **only **via the Contentstack Personalize platform.
+**Note:** You can create an [Entry Variant](../content-managers/entry-variants/create-an-entry-variant.md) for Variant Groups via Automate or the CMS. However, audiences for Experiences can be created **only **via the Contentstack Personalize platform.
 
 Let’s look at each of them in detail.
 
@@ -70,7 +70,7 @@ This action publishes the entry’s existing variant(s).
       Click** + Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account to Automate](/docs/developers/automation-hub-connectors/contentstack-management#connect-your-contentstack-account-to-automate) step.
 - Select a **Stack**, **Branch**, **Content Type**, **Entry**, **Variant Group**, and **Variant(s)** from the **Lookup **list.
 - Select the **Locale(s)** and **Environment(s)** to publish the entry’s variant. You can select multiple locales and environments.
-- Optionally, enable the **Show Optional Fields** toggle button to schedule the publishing activity. You can mark the checkboxes for **Nested reference publishing**, **Publish latest base**, **Publish latest base conditionally**.**Additional Resource: **Refer to the [Publish an Entry Variant](https://www.contentstack.com/docs/content-managers/entry-variants/publish-an-entry-variant/) document to learn more.
+- Optionally, enable the **Show Optional Fields** toggle button to schedule the publishing activity. You can mark the checkboxes for **Nested reference publishing**, **Publish latest base**, **Publish latest base conditionally**.**Additional Resource: **Refer to the [Publish an Entry Variant](../content-managers/entry-variants/publish-an-entry-variant.md) document to learn more.
 - Once done, click **Proceed**.
 - Click **Test Action** to test the configured action.
 - The output will be shown as follows. Click the **Save and Exit** button.
@@ -109,7 +109,7 @@ This action updates the content of an entry’s existing variant in the Variant 
 ## Common questions
 
 ### What are Variants in this context?
-[Variants](/docs/personalize/about-variants) are the different variations of an entry displayed to different audiences created within a Personalize project.
+[Variants](../personalize/about-variants.md) are the different variations of an entry displayed to different audiences created within a Personalize project.
 
 ### Can I create audiences for Experiences via Automate or the CMS?
 No. Audiences for Experiences can be created **only **via the Contentstack Personalize platform.
@@ -118,5 +118,5 @@ No. Audiences for Experiences can be created **only **via the Contentstack Perso
 Change Set represents a subset of fields and their updated values from the entry data. It indicates that only certain fields are updated, while the rest of the data remains unchanged.
 
 ### Where can I learn more about publishing an entry variant?
-Refer to the [Publish an Entry Variant](https://www.contentstack.com/docs/content-managers/entry-variants/publish-an-entry-variant/) document to learn more.
+Refer to the [Publish an Entry Variant](../content-managers/entry-variants/publish-an-entry-variant.md) document to learn more.
 

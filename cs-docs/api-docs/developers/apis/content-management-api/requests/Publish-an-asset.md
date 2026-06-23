@@ -14,7 +14,7 @@ last_updated: 2024-02-20
 
 **POST** `/assets/{asset_uid}/publish`
 
-The Publish an asset call is used to publish a specific version of an asset on the desired [environment](/docs/developers/set-up-environments/about-environments) either immediately or at a later date/time.  
+The Publish an asset call is used to publish a specific version of an asset on the desired [environment](../../../../../cs-docs/developers/set-up-environments/about-environments.md) either immediately or at a later date/time.  
 To configure the permissions for your application via OAuth, please include the cm.asset:publish scope.
 
 **Note: **When you publish an asset, the associated metadata of that asset will also get published. However, when publishing assets in bulk, the associated metadata of the assets will not get published.

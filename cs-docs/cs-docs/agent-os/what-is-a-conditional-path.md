@@ -30,7 +30,7 @@ The Conditional Path feature in Automations, allows you to customize your automa
 
 With the Conditional Path feature, you can control the flow of your automation. Use a Conditional Path when you want to trigger specific actions only if a condition is met. For example, when a variable equals a specific value or exceeds a threshold.
 
-Refer to the [Using Conditional Paths to Customize Automations ](/docs/developers/automation-hub-guides/using-conditional-paths-to-customize-automations/)use case to narrow down your automation for specific tasks.
+Refer to the [Using Conditional Paths to Customize Automations ](./using-conditional-paths-to-customize-automations.md)use case to narrow down your automation for specific tasks.
 
 ## Common questions
 

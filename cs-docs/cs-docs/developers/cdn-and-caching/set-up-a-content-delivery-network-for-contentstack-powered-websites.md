@@ -19,7 +19,7 @@ This page explains how to set up a separate Content Delivery Network (CDN) for a
 
 To ensure blazing fast content delivery, Contentstack has set up a CDN for its APIs. So, if you are using Contentstack, fast content delivery comes by default. Contentstack has its CDN endpoints to deliver content.
 
-**Additional Resource:** Refer to our documentation about [What CDN is and How it Works](/docs/developers/cdn-and-caching/what-is-cdn-and-how-it-works) to learn more.
+**Additional Resource:** Refer to our documentation about [What CDN is and How it Works](./what-is-cdn-and-how-it-works.md) to learn more.
 
 If you want to accelerate the pace of delivery further and gain even more control over your digital properties, you can set a separate CDN for your project. This CDN ensures that a cache system is available between your web server and the browser. So, page requests come directly from the cache instead of the web server or the Contentstack server.
 
@@ -60,13 +60,13 @@ Connecting your website to the selected CDN depends on which one you have chosen
 
 ## Set Cache Data Purging Rules
 
-[Data Purging](/docs/developers/how-to-guides/contentstack-cdn-cache-management#cache-purging) refers to the flushing of the data from the CDN cache. You need to balance when and why data is purged from the cache to ensure users receive up-to-date content while keeping costs down and performance high.
+[Data Purging](./contentstack-cdn-cache-management.md#cache-purging) refers to the flushing of the data from the CDN cache. You need to balance when and why data is purged from the cache to ensure users receive up-to-date content while keeping costs down and performance high.
 
 You can choose to clear all cache data from the CDN whenever new content is published or any existing content is updated. The other option is to purge the cached data of only the content that has been updated. You can also schedule your purges as desired. So, for example, you can purge data every X minutes when the content is updated in Contentstack.
 
 If you get stuck, you can contact their support team. After your files have synced with the CDN provider, set up your website to ensure it creates a communication channel with the CDN so that content gets cached in your CDN correctly.
 
-You can use Contentstack [Webhooks](/docs/developers/set-up-webhooks/about-webhooks) to trigger that the cache is no longer valid and the CDN should purge the cache according to the rules you have set up.
+You can use Contentstack [Webhooks](../set-up-webhooks/about-webhooks.md) to trigger that the cache is no longer valid and the CDN should purge the cache according to the rules you have set up.
 
 **Note**: The above steps may vary depending upon the CDN service provider you choose.
 

@@ -16,7 +16,7 @@ This page explains how to delete a content type in Contentstack, including requi
 
 ## Delete a Content Type
 
-Contentstack allows you to delete a [content type](/docs/developers/create-content-types/about-content-types) that you created in your [stack](/docs/developers/set-up-stack/about-stack).
+Contentstack allows you to delete a [content type](./about-content-types.md) that you created in your [stack](../set-up-stack/about-stack.md).
 
 **Note**: Unless you are the Owner or Admin of the stack, you cannot delete content types created by other stakeholders.
 
@@ -26,11 +26,11 @@ To delete a content type, log in to your [Contentstack account](https://www.cont
 - Click on **Delete**.
 - Confirm the **Delete** action.
 
-**Warning:** These steps will move the content type along with all the [entries](/docs/content-managers/working-with-entries/about-entries) within it to the [trash](https://www.contentstack.com/docs/developers/manage-trash/about-trash). But, before you delete anything, we suggest you check out our article on [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management#make-major-changes-to-the-schema-of-a-content-type).
+**Warning:** These steps will move the content type along with all the [entries](../../content-managers/author-content/about-entries.md) within it to the [trash](../manage-trash/about-trash.md). But, before you delete anything, we suggest you check out our article on [Content Type Change Management](../content-modeling/content-type-change-management.md#make-major-changes-to-the-schema-of-a-content-type).
 
 ## API Reference
 
-To delete your content type via API request, refer to the [Delete a Content Type](/docs/developers/apis/content-management-api#delete-content-type) API request.
+To delete your content type via API request, refer to the [Delete a Content Type](../../../api-docs/api-detail/content-management-api.md#delete-content-type) API request.
 
 ## Common questions
 
@@ -41,7 +41,7 @@ Unless you are the Owner or Admin of the stack, you cannot delete content types 
 These steps will move the content type along with all the entries within it to the trash.
 
 **Where can I find the API request to delete a content type?**  
-Refer to the [Delete a Content Type](/docs/developers/apis/content-management-api#delete-content-type) API request.
+Refer to the [Delete a Content Type](../../../api-docs/api-detail/content-management-api.md#delete-content-type) API request.
 
 **What should I review before deleting a content type?**  
-Check out the article on [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management#make-major-changes-to-the-schema-of-a-content-type).
+Check out the article on [Content Type Change Management](../content-modeling/content-type-change-management.md#make-major-changes-to-the-schema-of-a-content-type).

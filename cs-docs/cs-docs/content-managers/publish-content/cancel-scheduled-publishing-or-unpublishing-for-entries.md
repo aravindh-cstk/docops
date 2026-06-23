@@ -30,7 +30,7 @@ You can cancel a scheduled action directly from the Publish Queue.
 
 **Note:** You must cancel each scheduled item individually in the publish queue.
 
-**Additional Resource:** Refer to the [Cancel Scheduled Action API](/docs/developers/apis/content-management-api#cancel-scheduled-action) for canceling schedules via the content management API.
+**Additional Resource:** Refer to the [Cancel Scheduled Action API](../../../api-docs/api-detail/content-management-api.md#cancel-scheduled-action) for canceling schedules via the content management API.
 
 ## Cancel Scheduling from the Entry Editor
 
@@ -45,7 +45,7 @@ A processing message appears, and you can track the change in the **Publish Queu
 ## Cancel Scheduling Using the Content Management API
 
 You can also cancel scheduled publish or unpublish actions using the Content Management API.
-- Log in to Contentstack using the [Authtoken](https://www.contentstack.com/docs/developers/create-tokens/types-of-tokens#authentication-tokens-auth-tokens), or use the stack’s [Management Token](/docs/developers/create-tokens/types-of-tokens#management-tokens) to authorize your requests.
+- Log in to Contentstack using the [Authtoken](../../developers/create-tokens/types-of-tokens.md#authentication-tokens-auth-tokens), or use the stack’s [Management Token](../../developers/create-tokens/types-of-tokens.md#management-tokens) to authorize your requests.
 - Make an API request to retrieve scheduled publishing or unpublishing activities on or after a specific date:
 ```
 GET https://api.contentstack.io/v3/publish-queue?query={"scheduled_at": {"$gte": "2025-09-07T12:00:00Z"}}
@@ -60,7 +60,7 @@ DELETE https://api.contentstack.io/v3/publish-queue/{publish_queue_UID}/unschedu
 
 ## API Reference
 
-To cancel scheduled actions via API, refer to the [Cancel Scheduled Action](/docs/developers/apis/content-management-api#cancel-scheduled-action) API Request.
+To cancel scheduled actions via API, refer to the [Cancel Scheduled Action](../../../api-docs/api-detail/content-management-api.md#cancel-scheduled-action) API Request.
 
 ## Common questions
 

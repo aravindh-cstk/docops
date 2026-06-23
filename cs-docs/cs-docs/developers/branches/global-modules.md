@@ -66,7 +66,7 @@ You can also assign both the delivery and the management tokens to specific alia
 
 ## Marketplace Apps
 
-In your organization, you have the option to install [marketplace apps](/docs/developers/marketplace-apps/) for a specific stack. Once installed, these apps can be utilized across all branches within the same stack.
+In your organization, you have the option to install [marketplace apps](../marketplace-apps.md) for a specific stack. Once installed, these apps can be utilized across all branches within the same stack.
 
 ## Common questions
 

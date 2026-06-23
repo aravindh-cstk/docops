@@ -25,9 +25,9 @@ As Contentstack is an Enterprise Content Management (ECM) system, it may have ma
 - Content Manager
 - User with custom permissions
 
-**Note:** A user added to a stack can access and perform actions across branches present in the stack as per the roles assigned to them. Refer to our [Global Modules](/docs/developers/branches/global-modules) document for more information.
+**Note:** A user added to a stack can access and perform actions across branches present in the stack as per the roles assigned to them. Refer to our [Global Modules](../branches/global-modules.md) document for more information.
 
-**Additional Resources:** View [Roles](/docs/developers/invite-users-and-assign-roles/types-of-roles) to learn more about the permissions of each type of users.
+**Additional Resources:** View [Roles](./types-of-roles.md) to learn more about the permissions of each type of users.
 
 ## Common questions
 
@@ -41,4 +41,4 @@ Users can be classified into five types: Owner, Admin, Developer, Content Manage
 A user added to a stack can access and perform actions across branches present in the stack as per the roles assigned to them.
 
 ### Where can I learn more about roles and permissions?
-Refer to [Roles](/docs/developers/invite-users-and-assign-roles/types-of-roles) and [Global Modules](/docs/developers/branches/global-modules) for more information.
+Refer to [Roles](./types-of-roles.md) and [Global Modules](../branches/global-modules.md) for more information.

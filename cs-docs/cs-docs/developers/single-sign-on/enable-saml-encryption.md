@@ -31,7 +31,7 @@ An IdP stores specific SAML attributes that help validate users during logins. A
 Once you enable the encryption, the IdP will encrypt the SAML attributes using the public key obtained from Contentstack.
 
 To enable SAML encryption, perform the following steps:
-- Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to the [Organization Settings](/docs/owners-and-admins/organization-settings-overview) page, and click on the **Single Sign-On** tab.
+- Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to the [Organization Settings](../organization/organization-settings-overview.md) page, and click on the **Single Sign-On** tab.
 
 **Note**: Only the owner of an organization can set up SSO.
 - Click on the **2. IdP Configuration** tab.

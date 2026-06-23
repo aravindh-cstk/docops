@@ -16,14 +16,14 @@ This page explains how a stack owner can transfer stack ownership to another use
 
 ## Transfer Stack Ownership to Other User
 
-If you are the [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) of a [stack](/docs/developers/set-up-stack/about-stack), you can transfer the ownership or make another user the owner of your stack in a few clicks. To achieve this, go to **Settings** > **Stack**, and click on **Transfer Ownership**. Enter the email address of the user you wish to transfer the stack's ownership to.
+If you are the [owner](./types-of-roles.md#owner) of a [stack](../set-up-stack/about-stack.md), you can transfer the ownership or make another user the owner of your stack in a few clicks. To achieve this, go to **Settings** > **Stack**, and click on **Transfer Ownership**. Enter the email address of the user you wish to transfer the stack's ownership to.
 
 Once you click on **Transfer**, an email request will be sent to the specified user for accepting the ownership. As soon as the user accepts this request, he/she becomes the owner of your stack. You, then, do not have the rights to make any changes to the stack or to the content within.
 
 ## Common questions
 
 ### Who can transfer stack ownership?
-Only the [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) of a [stack](/docs/developers/set-up-stack/about-stack) can transfer the ownership.
+Only the [owner](./types-of-roles.md#owner) of a [stack](../set-up-stack/about-stack.md) can transfer the ownership.
 
 ### What happens after I click **Transfer**?
 An email request will be sent to the specified user for accepting the ownership.

@@ -24,8 +24,8 @@ You can import content into your stack from the following sources:
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- Contentstack CLI [installed](/docs/developers/cli/install-the-cli/) and [configured](/docs/developers/cli/configure-regions-in-the-cli/)
-- CLI [authenticated](/docs/developers/cli/cli-authentication/)
+- Contentstack CLI [installed](./install-the-cli.md) and [configured](./configure-regions-in-the-cli.md)
+- CLI [authenticated](./cli-authentication.md)
 - [GitHub](https://github.com/) access and working knowledge
 
 ## Commands
@@ -46,10 +46,10 @@ csdx cm:stacks:seed
 
 After running the command, you’ll be prompted to complete the following steps:
 - **Stack to import**: Select a stack from the list of available source stacks.
-- **Organization name**: From the list of organizations you have access to, select the one where your source stack is located or where you want to create a new stack.**Note**: You must be an [owner](/docs/owners-and-admins/organization-roles/#organization-owner) or [admin](/docs/owners-and-admins/organization-roles/#organization-admin) of the selected organization.
+- **Organization name**: From the list of organizations you have access to, select the one where your source stack is located or where you want to create a new stack.**Note**: You must be an [owner](../organization/organization-roles.md#organization-owner) or [admin](../organization/organization-roles.md#organization-admin) of the selected organization.
 - **Stack preference**: You’ll be prompted to choose one of the following options.
       **Create a new stack**: Enter a name, and the CLI will begin the stack creation process.
-- **Use an existing stack**: Select a destination stack from the list of stacks you have access to within the selected organization. If the selected stack contains existing content, the CLI will prompt you to confirm before continuing.**Additional resource**: Refer to the [Stack Roles](/docs/developers/invite-users-and-assign-roles/types-of-roles) documentation to learn more about permissions.
+- **Use an existing stack**: Select a destination stack from the list of stacks you have access to within the selected organization. If the selected stack contains existing content, the CLI will prompt you to confirm before continuing.**Additional resource**: Refer to the [Stack Roles](../invite-users-and-assign-roles/types-of-roles.md) documentation to learn more about permissions.
 
 **Tip:** To minimize errors, we recommend creating a new destination stack. If importing content into an existing stack, ensure that it is empty.
 
@@ -129,7 +129,7 @@ Now any user can import your stack’s content to their stack by performing the 
 
 ## Points to Remember
 - To import content into an existing destination stack, ensure you have permission to create content in that stack.
-- To create a new stack for storing content, you must have “[owner](/docs/owners-and-admins/organization-roles#organization-owner)” or “[admin](/docs/owners-and-admins/organization-roles#organization-admin)” rights in that organization.
+- To create a new stack for storing content, you must have “[owner](../organization/organization-roles.md#organization-owner)” or “[admin](../organization/organization-roles.md#organization-admin)” rights in that organization.
 
 ## Common questions
 
@@ -140,7 +140,7 @@ Yes. **Note**: The GitHub repository must be public.
 Yes, but if the selected stack contains existing content, the CLI will prompt you to confirm before continuing, and you should ensure the stack is empty to minimize errors.
 
 ### What permissions do I need to create a new stack during seeding?
-You must be an [owner](/docs/owners-and-admins/organization-roles/#organization-owner) or [admin](/docs/owners-and-admins/organization-roles/#organization-admin) of the selected organization.
+You must be an [owner](../organization/organization-roles.md#organization-owner) or [admin](../organization/organization-roles.md#organization-admin) of the selected organization.
 
 ### How do I upload my stack’s content so others can import it?
 Export your stack’s content to a local `stack` folder and upload it to a public GitHub repository in the format `stack-<name>` using GitHub’s command-line steps.

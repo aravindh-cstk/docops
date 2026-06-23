@@ -20,7 +20,7 @@ This page explains how to unlock a release in Contentstack so you can modify the
 Unlocking a release enables you to make modifications to the items of a release.
 
 To unlock a release, log in to your [Contentstack account](https://www.contentstack.com/login) and follow these steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Releases” icon in the left navigation panel.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Releases” icon in the left navigation panel.
 - Hover over the release you want to unlock in the left panel.
 - Click the “Unlock” icon in the popup modal. Alternatively, click the horizontal ellipsis in the top right corner and click **Unlock**.
 - In the resulting **Unlock Release** modal, click the **Yes, Proceed** button to unlock your release.

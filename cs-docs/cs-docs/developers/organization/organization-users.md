@@ -25,7 +25,7 @@ Organization Users
 
 ##### Content
 
-The **Users** section displays all users in your [organization](/docs/owners-and-admins/about-organizations). It lets you invite, manage, and take action on organization users.
+The **Users** section displays all users in your [organization](./about-organizations.md). It lets you invite, manage, and take action on organization users.
 
 Navigate to **Administration** through “App Switcher”, then click the **Users** tab to view organization users.
 
@@ -51,9 +51,9 @@ To invite user(s) to your organization, perform the following steps:
 - Optionally, assign stack-specific roles to the user.
 - Click **Invite**.
 
-**Note:** Only the organization [owner](/docs/developers/organization/organization-roles#organization-owner) and users with [admin](/docs/developers/organization/organization-roles#organization-admin) roles can invite new users.
+**Note:** Only the organization [owner](./organization-roles.md#organization-owner) and users with [admin](./organization-roles.md#organization-admin) roles can invite new users.
 
-**Additional Resource:** See our [Invite Users to an Organization](/docs/owners-and-admins/invite-users-to-organization) document for more details, including steps for [Single Sign-On (SSO)](/docs/developers/single-sign-on/about-single-sign-on-sso) enabled organizations.
+**Additional Resource:** See our [Invite Users to an Organization](./invite-users-to-organization.md) document for more details, including steps for [Single Sign-On (SSO)](../single-sign-on/about-single-sign-on-sso.md) enabled organizations.
 
 ## Edit a User
 To update permissions for a user, perform the following steps:
@@ -108,14 +108,14 @@ Click the “Export” icon to download the CSV file with all organization users
 ## View Last Logged-in Details of Users
 The **Users** list also displays the most recent login timestamp for each user in the **Last Login At** column. You can sort the list by this column to easily identify recently or infrequently active users.
 
- **Additional Resource:** To perform bulk actions on organization users, refer to our [Bulk Operations on Organization Users](/docs/developers/organization/bulk-operations-on-organization-users) document for more details.
+ **Additional Resource:** To perform bulk actions on organization users, refer to our [Bulk Operations on Organization Users](./bulk-operations-on-organization-users.md) document for more details.
 
 ## API Reference
 To manage organization users via API, refer to the following API requests:
-- [Add users to Organization](/docs/developers/apis/content-management-api#add-users-to-organization)
-- [Resend pending Organization invitation](/docs/developers/apis/content-management-api#resend-pending-organization-invitation)
-- [Get all Organization invitations](/docs/developers/apis/content-management-api#get-all-organization-invitations)
-- [Get Organization users by email](/docs/developers/apis/content-management-api#get-organization-users-by-email)
+- [Add users to Organization](../../../api-docs/api-detail/content-management-api.md#add-users-to-organization)
+- [Resend pending Organization invitation](../../../api-docs/api-detail/content-management-api.md#resend-pending-organization-invitation)
+- [Get all Organization invitations](../../../api-docs/api-detail/content-management-api.md#get-all-organization-invitations)
+- [Get Organization users by email](../../../api-docs/api-detail/content-management-api.md#get-organization-users-by-email)
 
 ## Common questions
 

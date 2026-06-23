@@ -61,7 +61,7 @@ Action 2: Select the** Add Content to a Project** action:
 - Check if the details are correct. If yes, click **Test Action**.
 - Once set, click **Save and Exit**.
 
-To use the Pause connector to store the output from the previous action and use it as the input to download the translated content from the same project, refer to the [Pause Connector](/docs/developers/automation-hub-connectors/pause) documentation
+To use the Pause connector to store the output from the previous action and use it as the input to download the translated content from the same project, refer to the [Pause Connector](./pause.md) documentation
 
 This completes the setup for **Smartling** action connector.
 
@@ -77,4 +77,4 @@ A: **Title**, **User Identifier**, **User Secret ID**, and **Account UID**.
 A: Navigate to **Account Settings** > **API** > **Create Token** in your Smartling account.
 
 **Q: How can I reuse output from a previous action when downloading translated content?**  
-A: Use the Pause connector; refer to the [Pause Connector](/docs/developers/automation-hub-connectors/pause) documentation.
+A: Use the Pause connector; refer to the [Pause Connector](./pause.md) documentation.

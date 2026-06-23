@@ -19,7 +19,7 @@ This page explains how Entry Tabs work in the Contentstack entry editor, includi
 
 **Note:** The Entry Tab is a plan-based feature and may not be accessible to all users. For more information or to request access, contact our [support](mailto:support@contentstack.com) team.
 
-The **Tabs** layout in the entry editor helps you organize related fields into focused sections. When a field is configured with the [Show as Tab](/docs/developers/create-content-types/show-as-tab/) option in the [content type](/docs/developers/create-content-types/about-content-types) schema, it appears as a separate tab in the entry editor.
+The **Tabs** layout in the entry editor helps you organize related fields into focused sections. When a field is configured with the [Show as Tab](../../developers/create-content-types/show-as-tab.md) option in the [content type](../../developers/create-content-types/about-content-types.md) schema, it appears as a separate tab in the entry editor.
 
 This layout improves performance and usability for entries with many fields, allowing editors to work efficiently without scrolling through lengthy forms. Tabs also make it easier to view, edit, and manage related fields together.
 
@@ -36,7 +36,7 @@ All other fields appear under the **Default** tab.
 
 **Note:** Tabs work seamlessly with other features such as Workflows, Publishing Rules, and Entry References, without changing how content is saved or published.
 
-**Additional Resources:** Learn how to enable the [Show as Tab](/docs/developers/create-content-types/show-as-tab) property in your content type schema.
+**Additional Resources:** Learn how to enable the [Show as Tab](../../developers/create-content-types/show-as-tab.md) property in your content type schema.
 
 ## How Tabs Appear in the Entry Editor
 

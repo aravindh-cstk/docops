@@ -17,14 +17,14 @@ This page explains how to authenticate with the Contentstack Command-line Interf
 
 ## CLI Authentication and Adding Tokens | Beta Commands
 
-To start using CLI commands, you must first **authenticate** yourself after installing the CLI and configuring the region. The Contentstack CLI Authentication feature allows you to securely log in or use tokens—such as [Management](/docs/developers/create-tokens/about-management-tokens) or [Delivery tokens](/docs/developers/create-tokens/about-delivery-tokens)—to perform content management tasks via the terminal.
+To start using CLI commands, you must first **authenticate** yourself after installing the CLI and configuring the region. The Contentstack CLI Authentication feature allows you to securely log in or use tokens—such as [Management](../../create-tokens/about-management-tokens.md) or [Delivery tokens](../../create-tokens/about-delivery-tokens.md)—to perform content management tasks via the terminal.
 
-It supports login credentials, Two-Factor Authentication, and Single Sign-On (SSO). You can authenticate either by using the [login](/docs/developers/cli/cli-authentication#authentication) command or by adding a Management Token to the local config.
+It supports login credentials, Two-Factor Authentication, and Single Sign-On (SSO). You can authenticate either by using the [login](../cli-authentication.md#authentication) command or by adding a Management Token to the local config.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
-- CLI [installed](/docs/developers/cli/install-the-cli/)
-- [Set Region](/docs/developers/cli/configure-regions-in-the-cli#set-region)
+- CLI [installed](../install-the-cli.md)
+- [Set Region](../configure-regions-in-the-cli.md#set-region)
 
 ## Commands
 
@@ -34,9 +34,9 @@ It supports login credentials, Two-Factor Authentication, and Single Sign-On (SS
 
 The `auth:login` command lets you log in to Contentstack and save the login information in your local storage.
 
-**Note:** The Contentstack CLI supports [Two-factor Authentication](/docs/developers/two-factor-authentication) for enhanced security.
+**Note:** The Contentstack CLI supports [Two-factor Authentication](../../security/two-factor-authentication.md) for enhanced security.
 
-Open the terminal and run the following command to log in with your Contentstack account credentials. Once you log in, you can use the Contentstack CLI commands such as [export](/docs/developers/cli/export-content-using-the-cli/), [import](/docs/developers/cli/import-content-using-the-cli/), [clone](/docs/developers/cli/cloning-a-stack/), [bulk publish and unpublish](/docs/developers/cli/bulk-publish-and-unpublish-content/), [seed](/docs/developers/cli/import-content-using-the-seed-command/), [bootstrap](/docs/developers/cli/bootstrap-starter-apps/), [migration](/docs/developers/cli/migrate-your-content-using-the-cli-migration-command/), etc.
+Open the terminal and run the following command to log in with your Contentstack account credentials. Once you log in, you can use the Contentstack CLI commands such as [export](../export-content-using-the-cli.md), [import](../import-content-using-the-cli.md), [clone](../cloning-a-stack.md), [bulk publish and unpublish](../bulk-publish-and-unpublish-content.md), [seed](../import-content-using-the-seed-command.md), [bootstrap](../bootstrap-starter-apps.md), [migration](../migrate-your-content-using-the-cli-migration-command.md), etc.
 
 **Usage**
 
@@ -58,7 +58,7 @@ csdx login
 | `--password=password` | `-p` | Password of your Contentstack account. |
 | `--oauth` |  | Enables Single Sign-On (SSO) for the Contentstack CLI. |
 
-**Note:** To enable automatic OTP generation for MFA-enabled Contentstack accounts, set the `CONTENTSTACK_MFA_SECRET` environment variable using the [MFA secret key](/docs/developers/security/multi-factor-authentication) provided by Contentstack. This allows the Contentstack CLI to generate one-time passwords (OTPs) automatically, eliminating the need to enter them manually from an authenticator app.
+**Note:** To enable automatic OTP generation for MFA-enabled Contentstack accounts, set the `CONTENTSTACK_MFA_SECRET` environment variable using the [MFA secret key](../../security/multi-factor-authentication.md) provided by Contentstack. This allows the Contentstack CLI to generate one-time passwords (OTPs) automatically, eliminating the need to enter them manually from an authenticator app.
 
 **Examples**
 
@@ -134,7 +134,7 @@ csdx whoami
 
 #### Add Management Token
 
-**Note:** Ensure you have already [generated a Management Token](/docs/developers/create-tokens/generate-a-management-token) in your stack before running this command.
+**Note:** Ensure you have already [generated a Management Token](../../create-tokens/generate-a-management-token.md) in your stack before running this command.
 
 The following command lets you add an existing Management Token from your Contentstack account to the local config for further use.
 
@@ -168,7 +168,7 @@ csdx auth:tokens:add --management -a tokenname -k blt******** --token cs********
 
 #### Add Delivery Token
 
-**Note:** Ensure you have already [generated a Delivery Token](/docs/developers/create-tokens/create-a-delivery-token) in your stack before running this command.
+**Note:** Ensure you have already [generated a Delivery Token](../../create-tokens/create-a-delivery-token.md) in your stack before running this command.
 
 For CLI commands, you may use a Delivery Token instead of a Management Token. However, Delivery Tokens cannot be used for importing or exporting content.
 
@@ -260,7 +260,7 @@ Supported values:
 `yaml`
 
 ## Next Steps
-- [Export](/docs/developers/cli/export-content-using-the-cli) and [import](/docs/developers/cli/import-content-using-the-cli) content
+- [Export](../export-content-using-the-cli.md) and [import](../import-content-using-the-cli.md) content
 - [Publish entries/assets in bulk](/docs/developers/cli/bulk-publish-and-unpublish-using-cli)
 
 ## Common questions

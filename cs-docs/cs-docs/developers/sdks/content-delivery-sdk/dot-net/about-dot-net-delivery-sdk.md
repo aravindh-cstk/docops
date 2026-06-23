@@ -19,7 +19,7 @@ This page introduces the Contentstack .NET Delivery SDK, explains what it is use
 
 *Use Contentstack to power content for your .NET projects*
 
-Contentstack provides .NET SDK that Developers can use to develop .NET applications and power its content from Contentstack. The Contentstack .NET SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your .NET-based applications.
+Contentstack provides .NET SDK that Developers can use to develop .NET applications and power its content from Contentstack. The Contentstack .NET SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your .NET-based applications.
 
 **Note**: The Contentstack .NET SDK supports .NET version 2.0 or later
 
@@ -34,7 +34,7 @@ You can check out the [sample .NET apps](/docs/developers/dot-net#sample-apps-fo
 ## Common questions
 
 ### What does the Contentstack .NET SDK use to fetch content?
-The Contentstack .NET SDK uses the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to .NET-based applications.
+The Contentstack .NET SDK uses the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to .NET-based applications.
 
 ### What .NET versions are supported?
 **Note**: The Contentstack .NET SDK supports .NET version 2.0 or later

@@ -27,7 +27,7 @@ TypeScript Delivery
 
 Explore Contentstack's TypeScript SDK for efficient content delivery, enabling seamless integration and enhanced development experiences.
 
-**Note**: We recommend using the TypeScript Delivery SDK for optimal performance and enhanced functionality in your project. However, if you prefer, the [JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser) is also available.
+**Note**: We recommend using the TypeScript Delivery SDK for optimal performance and enhanced functionality in your project. However, if you prefer, the [JavaScript Delivery SDK](./javascript-browser.md) is also available.
 
 ##### Links section
 

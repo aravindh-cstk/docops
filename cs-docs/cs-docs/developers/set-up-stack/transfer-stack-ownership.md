@@ -18,10 +18,10 @@ This page explains how to transfer ownership of a Contentstack stack, including 
 
 You can transfer the stack ownership during role transitions, team restructuring, or organizational changes.
 
-**Note:** Only the stack [owners](https://www.contentstack.com/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) can perform this action.
+**Note:** Only the stack [owners](../invite-users-and-assign-roles/types-of-roles.md#owner) can perform this action.
 
 To transfer stack ownership, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for both Windows and Mac OS users).
+- Go to your [stack](./about-stack.md) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for both Windows and Mac OS users).
 - On the **Stack Settings** page, click **Transfer Ownership**.
 - Enter the recipient email address and click **Transfer Ownership.**
 
@@ -31,8 +31,8 @@ The recipient will receive an email request to accept the stack ownership. Once 
 
 ## API Reference
 
-- To transfer stack ownership via API, refer to the [Transfer Ownership API](https://www.contentstack.com/docs/developers/apis/content-management-api#transfer-stack-ownership-to-other-users) request.
-- To accept a stack ownership via API, refer to the [Accept Stack Ownership API](https://www.contentstack.com/docs/developers/apis/content-management-api#accept-stack-owned-by-other-user) request.
+- To transfer stack ownership via API, refer to the [Transfer Ownership API](../../../api-docs/api-detail/content-management-api.md#transfer-stack-ownership-to-other-users) request.
+- To accept a stack ownership via API, refer to the [Accept Stack Ownership API](../../../api-docs/api-detail/content-management-api.md#accept-stack-owned-by-other-user) request.
 
 ## Common questions
 

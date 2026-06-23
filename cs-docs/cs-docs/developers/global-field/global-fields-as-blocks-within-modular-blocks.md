@@ -16,21 +16,21 @@ This page explains how to use Global fields as blocks inside a Modular Blocks fi
 
 ## Global Fields as Blocks within Modular Blocks
 
-You can use [Global](/docs/developers/global-field/about-global-field) fields as blocks within the [Modular Blocks](/docs/developers/create-content-types/modular-blocks) field while building [content types](/docs/developers/create-content-types/about-content-types) in Contentstack. This setup allows you to reuse predefined field structures across different block types, ensuring consistency, scalability, and faster content modeling.
+You can use [Global](./about-global-field.md) fields as blocks within the [Modular Blocks](../create-content-types/modular-blocks.md) field while building [content types](../create-content-types/about-content-types.md) in Contentstack. This setup allows you to reuse predefined field structures across different block types, ensuring consistency, scalability, and faster content modeling.
 
 For example, an e-commerce site may need a structured approach to organize product pages. Instead of manually configuring each page, you can create three Global fields to streamline the process:
-- **Clothes Store:** Brand Name ([Single Line Textbox](/docs/developers/create-content-types/single-line-textbox)), Description ([JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor)), Apparel Image ([File](/docs/developers/create-content-types/file))
+- **Clothes Store:** Brand Name ([Single Line Textbox](../create-content-types/single-line-textbox.md)), Description ([JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md)), Apparel Image ([File](../create-content-types/file.md))
 - **Footwear Store:** Brand Name, Description
-- **Mobile Gallery:** Brand Name, Model Number ([Number](/docs/developers/create-content-types/number)) and, Mobile Image
+- **Mobile Gallery:** Brand Name, Model Number ([Number](../create-content-types/number.md)) and, Mobile Image
 
-Next, [create a content type](/docs/developers/create-content-types/create-a-content-type) and add a **Modular Blocks** field with three blocks: **Clothes**, **Footwear**, and **Mobiles**, each referring to its respective Global field.
+Next, [create a content type](../create-content-types/create-a-content-type.md) and add a **Modular Blocks** field with three blocks: **Clothes**, **Footwear**, and **Mobiles**, each referring to its respective Global field.
 
 With this setup, store owners can customize products across categories, streamlining product page creation while ensuring efficiency and flexibility in content management.
 
-**Note:** Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can create Global fields and Content Types.
+**Note:** Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can create Global fields and Content Types.
 
 To add Global fields within Modular Blocks, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon in the left navigation panel, or press “C” (Windows and Mac).
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon in the left navigation panel, or press “C” (Windows and Mac).
 - Open a **Content Type**, click the **Insert a field (+)** icon, select **Modular Blocks**, and enter a **Name **(eg., My Store).
 - Click the **+ New Block** icon inside Modular Blocks and add the following Global fields as individual blocks:**Clothes:** Select the **Clothes Store** Global Field.
 - **Footwear:** Select the **Footwear Store** Global Field.

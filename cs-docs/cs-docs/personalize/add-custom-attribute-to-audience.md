@@ -26,9 +26,9 @@ After successfully creating the custom attribute in Personalize, you can add it 
 - A custom attribute already created in Personalize
 
 ## Steps for Execution
-**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
-After [creating a custom attribute](/docs/personalize/create-custom-attribute/), you can add it to an Audience. Log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
+After [creating a custom attribute](./create-custom-attribute.md), you can add it to an Audience. Log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize.**
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to add the custom attribute.
 - Click the **Audiences** tab, and then click the **+ New Audience** button to create a new audience if you have not created one already.**Note:** If you have an existing Audience in your Personalize project, open it or click the corresponding vertical ellipses under the **Actions** section, select **Edit**, and jump directly to step 5.
@@ -42,12 +42,12 @@ Click the **Select attribute** dropdown.
 
 Similarly, you can add multiple attributes (preset and custom) to an Audience.
 
-**Additional Resource:** You can use the [Personalize Edge API](/docs/developers/apis/personalize-edge-api#user-attributes) to set and update user attributes.
+**Additional Resource:** You can use the [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md#user-attributes) to set and update user attributes.
 - Click **Save** to complete the setup.
 
 This adds the new custom attribute to your audience.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#attributes) to create or update audiences with a custom attribute, delete, and retrieve all existing attributes.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#attributes) to create or update audiences with a custom attribute, delete, and retrieve all existing attributes.
 
 ## Common questions
 

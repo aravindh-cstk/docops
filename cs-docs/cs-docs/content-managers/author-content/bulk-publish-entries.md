@@ -19,10 +19,10 @@ This page explains how to bulk publish multiple entries (optionally with referen
 
 The bulk publish feature allows you to publish multiple entries along with their linked or referenced content, ensuring a seamless and consistent publishing experience. This feature is ideal for bulk updates or managing releases with multiple content components efficiently.
 
-**Note**: [Nested Reference Publishing](/docs/content-managers/publish-content/about-nested-reference-publishing/) is a plan-based feature. Reach out to our [support](mailto:support@contentstack.com) team for more information.
+**Note**: [Nested Reference Publishing](../publish-content/about-nested-reference-publishing.md) is a plan-based feature. Reach out to our [support](mailto:support@contentstack.com) team for more information.
 
 To bulk publish entries, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
 - Use the checkboxes to select the entries you want to publish.
 - After selecting the entries, click the **Publish** option in the floating panel that appears.
 - In the **Publish Entries** modal:
@@ -41,8 +41,8 @@ To bulk publish entries, log in to your [Contentstack account](https://www.conte
 - When scheduling bulk publishing, the date cannot exceed **12 months** from the current date.
 
 **Additional Resource**:
-- For automated bulk publishing, refer to the [Bulk Publish and Unpublish Content](/docs/developers/cli/bulk-publish-and-unpublish-content/) guide.
-- To publish with entry variants, refer to our documentation on [Publish an Entry Variant](/docs/content-managers/entry-variants/publish-an-entry-variant) and [Understanding How Publishing Works with Entry Variants](/docs/content-managers/entry-variants/understanding-how-publishing-works-with-entry-variants).
+- For automated bulk publishing, refer to the [Bulk Publish and Unpublish Content](../../developers/cli/bulk-publish-and-unpublish-content.md) guide.
+- To publish with entry variants, refer to our documentation on [Publish an Entry Variant](../entry-variants/publish-an-entry-variant.md) and [Understanding How Publishing Works with Entry Variants](../entry-variants/understanding-how-publishing-works-with-entry-variants.md).
 
 ## Common questions
 

@@ -25,13 +25,13 @@ The **Now** option publishes/unpublishes an asset immediately, and the **Later**
 
 **Note:** When scheduling an asset publish/unpublish, the publishing/unpublishing date cannot extend beyond 12 months.
 
-On selecting a time zone that follows [daylight saving time (DST)](/docs/content-managers/publish-content/daylight-saving-time-in-contentstack), Contentstack will display a help text at the bottom of the textbox that highlights the effective publishing date, time, and time zone along with DST adjustments.
+On selecting a time zone that follows [daylight saving time (DST)](./daylight-saving-time-in-contentstack.md), Contentstack will display a help text at the bottom of the textbox that highlights the effective publishing date, time, and time zone along with DST adjustments.
 
 **Note:** The DST time difference is one hour.
 
 The effective publishing date specifies the publishing date in local time for the user publishing the entry.
 
-**Note:** Scheduled publishing/unpublishing is also available in [Releases](/docs/content-managers/create-and-manage-releases/deploy-a-release). This feature allows content managers to add multiple assets to Releases and then schedule them to be deployed in a future timeline.
+**Note:** Scheduled publishing/unpublishing is also available in [Releases](../create-and-manage-releases/deploy-a-release.md). This feature allows content managers to add multiple assets to Releases and then schedule them to be deployed in a future timeline.
 
 ## Common questions
 

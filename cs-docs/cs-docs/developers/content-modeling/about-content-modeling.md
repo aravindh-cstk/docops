@@ -18,7 +18,7 @@ This page explains what content modeling is in Contentstack and outlines a pract
 
 ## About Content Modeling
 
-Content modeling is the process of defining the structure of your [content types](/docs/developers/create-content-types/about-content-types) to suit your application's needs. A well-designed content model ensures that content is reusable, scalable, and seamlessly integrated with APIs, SDKs, and third-party tools.
+Content modeling is the process of defining the structure of your [content types](../create-content-types/about-content-types.md) to suit your application's needs. A well-designed content model ensures that content is reusable, scalable, and seamlessly integrated with APIs, SDKs, and third-party tools.
 
 Content modeling is a critical step in building a robust digital experience. Accurate modeling helps reduce development errors, optimize content delivery, and ensure consistency across channels.
 
@@ -61,7 +61,7 @@ To implement this News Article page you will need the following fields:
 
 Plan the structure of each content type, ensuring it is optimized for reuse and API integrations.
 
-**Additional Resource: **Refer to [content modeling best practices](/docs/developers/content-modeling/content-modeling-best-practices/) while building your content types.
+**Additional Resource: **Refer to [content modeling best practices](./content-modeling-best-practices.md) while building your content types.
 
 This section breaks down the process of planning and structuring content types into actionable steps. It guides users in defining content types, choosing field types, and planning relationships, ensuring the structure is optimized for reusability and integration.
 
@@ -79,35 +79,35 @@ This section breaks down the process of planning and structuring content types i
 
 ### Developing Content Types
 
-Create and configure [content types](/docs/developers/create-content-types/create-a-content-type) in Contentstack based on your identified structure.
+Create and configure [content types](../create-content-types/create-a-content-type.md) in Contentstack based on your identified structure.
 
 This section provides a detailed, easy-to-follow procedure for creating content types in Contentstack. It covers selecting the format, configuring fields, and organizing properties, empowering users to set up content types efficiently.
 
-**Select Content Type Format**:[Single](/docs/developers/create-content-types/single-vs-multiple-content-types#single): For unique content that needs only one entry (e.g., About Us page).
-- [Multiple](/docs/developers/create-content-types/single-vs-multiple-content-types#multiple): For content that requires multiple entries (e.g., blog posts, product listings).
+**Select Content Type Format**:[Single](../create-content-types/single-vs-multiple-content-types.md#single): For unique content that needs only one entry (e.g., About Us page).
+- [Multiple](../create-content-types/single-vs-multiple-content-types.md#multiple): For content that requires multiple entries (e.g., blog posts, product listings).
 
 **Note**: Contentstack no longer differentiates between “Webpage” and “Content Block.” If you need a web page, add a URL field manually.
 - **Add Fields**:Fields store specific types of content and can be customized for flexibility.
-- For each field, configure [Field Properties](/docs/developers/create-content-types/about-field-properties) (e.g., required, unique, default values).
-- Use [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) to dynamically show or hide fields based on conditions.
+- For each field, configure [Field Properties](../create-content-types/about-field-properties.md) (e.g., required, unique, default values).
+- Use [Field Visibility Rules](../create-content-types/about-field-visibility-rules.md) to dynamically show or hide fields based on conditions.
 
 **Example: **Consider you are creating a News Article content type. This example demonstrates how to create and configure fields based on the specific requirements of a news article. The aim is to build a content type that is structured, reusable, and optimized for seamless content delivery across platforms.
 - **Name**: News Article
 - **Type**: Multiple
-- **Fields**:**Title**: The [Title](/docs/developers/create-content-types/title) field will hold the headline of the news article. The headline is mostly short and simple. Probably, a simple textbox will be a great choice.
-- **Location**: Next, we can add the "Location" field. This field will display the location where the news article is based on. We will use a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) field and rename it as "Location."
-- **Date**: We will need the [Date](/docs/developers/create-content-types/date) field that will display the current date of the articles. We need to set this date such that when we enter a news article, this field will be auto-populated.
-- **Featured Image**: The Featured Image field is used to upload the primary image for the news article. Using the [File](/docs/developers/create-content-types/file) field ensures compatibility with various image formats and easy management of media assets.
-- **Featured Image Caption**: The Featured Image Caption field is used to provide a brief description or credit for the featured image. Using a [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) makes it easy to input short, concise captions.
-- **Article Body**: The body of the news article is the most important part of your content. You need a special field that'll allow you to enter a rich variety of content, such as text, images, and so on. So, we will use the [Rich Text Editor](/docs/developers/create-content-types/rich-text-editor) field and rename it as "Body."
-- **Author**: For "Author," we will use the [Reference](/docs/developers/create-content-types/reference) field. The "Reference" field helps you refer to entries of other content types. In another tab, you may probably want to create another content type named "Authors" (with fields name, image, and designation) and add entries for all existing authors. So, when selecting content in the "Author" field of the news article, you can choose an entry of the "Authors" content type instead of entering all the details manually.
-- **SEO**: Create a [Global field](/docs/developers/global-field/about-global-field) called “SEO” (with fields - “Meta Title” and “Meta Description”). Subsequently, when you use the “SEO” Global field within any content type, the subfields would appear automatically.
+- **Fields**:**Title**: The [Title](../create-content-types/title.md) field will hold the headline of the news article. The headline is mostly short and simple. Probably, a simple textbox will be a great choice.
+- **Location**: Next, we can add the "Location" field. This field will display the location where the news article is based on. We will use a [Single Line Textbox](../create-content-types/single-line-textbox.md) field and rename it as "Location."
+- **Date**: We will need the [Date](../create-content-types/date.md) field that will display the current date of the articles. We need to set this date such that when we enter a news article, this field will be auto-populated.
+- **Featured Image**: The Featured Image field is used to upload the primary image for the news article. Using the [File](../create-content-types/file.md) field ensures compatibility with various image formats and easy management of media assets.
+- **Featured Image Caption**: The Featured Image Caption field is used to provide a brief description or credit for the featured image. Using a [Single Line Textbox](../create-content-types/single-line-textbox.md) makes it easy to input short, concise captions.
+- **Article Body**: The body of the news article is the most important part of your content. You need a special field that'll allow you to enter a rich variety of content, such as text, images, and so on. So, we will use the [Rich Text Editor](../create-content-types/rich-text-editor.md) field and rename it as "Body."
+- **Author**: For "Author," we will use the [Reference](../create-content-types/reference.md) field. The "Reference" field helps you refer to entries of other content types. In another tab, you may probably want to create another content type named "Authors" (with fields name, image, and designation) and add entries for all existing authors. So, when selecting content in the "Author" field of the news article, you can choose an entry of the "Authors" content type instead of entering all the details manually.
+- **SEO**: Create a [Global field](../global-field/about-global-field.md) called “SEO” (with fields - “Meta Title” and “Meta Description”). Subsequently, when you use the “SEO” Global field within any content type, the subfields would appear automatically.
 
 **Additional Resource**:
-- Use [Labels](/docs/developers/create-content-types/about-labels) to categorize and organize the existing content types of your stack.
-- Use [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) to show or hide fields based on specific criteria.
+- Use [Labels](../create-content-types/about-labels.md) to categorize and organize the existing content types of your stack.
+- Use [Field Visibility Rules](../create-content-types/about-field-visibility-rules.md) to show or hide fields based on specific criteria.
 
-Once your content types are set up, you can start creating [entries](/docs/content-managers/author-content/about-entries) to populate your content.
+Once your content types are set up, you can start creating [entries](../../content-managers/author-content/about-entries.md) to populate your content.
 
 ## Common questions
 

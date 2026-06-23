@@ -39,7 +39,7 @@ Here’s a step-by-step guide that explains how you can do this.
 
 To allow provisioning of users in Contentstack’s organization through Microsoft Azure AD, you need to enable SCIM in Contentstack by performing the following steps:
 
-Log in to your [Contentstack account](https://www.contentstack.com/login/) and go to the [Organization Settings](/docs/owners-and-admins/organization-settings-overview) page.
+Log in to your [Contentstack account](https://www.contentstack.com/login/) and go to the [Organization Settings](../organization/organization-settings-overview.md) page.
 - Go to the SCIM tab and select the **Enable SCIM** option.
 - On the resulting **Enable SCIM **modal, click **Enable**.
 

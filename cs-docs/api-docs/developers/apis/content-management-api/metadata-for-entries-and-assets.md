@@ -16,9 +16,9 @@ Metadata is a piece of information that lets you describe or classify an asset/e
 
 You can manage your digital entities effectively and facilitate enhanced accessibility with additional metadata.
 
-**Note:** The Metadata feature allows users to update their [asset metadata](/docs/content-managers/author-content/additional-metadata-support-for-assets/) or [entry metadata](/docs/content-managers/working-with-entries/additional-metadata-support-for-entries/) without incrementing the asset or entry version.
+**Note:** The Metadata feature allows users to update their [asset metadata](../../../../cs-docs/content-managers/author-content/additional-metadata-support-for-assets.md) or [entry metadata](../../../../cs-docs/content-managers/working-with-entries/additional-metadata-support-for-entries.md) without incrementing the asset or entry version.
 
-**Note:** An [extension](/docs/developers/apis/content-management-api#extensions) or app is required to use Metadata APIs.
+**Note:** An [extension](../../../api-detail/content-management-api.md#extensions) or app is required to use Metadata APIs.
 
 ## Get Metadata
 

@@ -16,16 +16,16 @@ This page explains how to use Contentstack’s prebuilt custom Sidebar Extension
 
 ## Use Prebuilt Sidebar Extensions
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](/docs/developers/developer-hub/sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](../developer-hub/sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 Contentstack provides certain prebuilt [custom Sidebar Extensions](/docs/developers/create-custom-sidebar-extensions/about-custom-sidebar-extension) templates to help you get started instantly without the need to code. All you need to do is add them to your content type, configure them, and you are ready to go.
 
 Below is the list of prebuilt templates that Contentstack provides:
 - [Text Intelligence (MonkeyLearn)](/docs/developers/create-custom-sidebar-extensions/monkeylearn)
-- [Gatsby Preview](/docs/developers/create-custom-sidebar-extensions/gatsby-preview)
+- [Gatsby Preview](./gatsby-preview.md)
 
 To use a prebuilt custom Sidebar Extensions, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon on the left navigation panel.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon on the left navigation panel.
 - Click on **Extensions**.
 - Click on the **+ New Extensions** button at the top-right corner of the page, and select the **Use prebuilt** option.
 - In the **Prebuilt Extensions** window, select **Custom Sidebar Extensions** from the dropdown.
@@ -41,7 +41,7 @@ To use a prebuilt custom Sidebar Extensions, log in to your [Contentstack accoun
 ## Common questions
 
 **Q: Are prebuilt Sidebar Extensions part of the Contentstack App Framework?**  
-A: **Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](/docs/developers/developer-hub/sidebar-location/) for the Contentstack App Framework to extend the functionality of your apps.
+A: **Note**: Experience Extensions use the legacy approach with extensions. We recommend using the  [Sidebar UI Location](../developer-hub/sidebar-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 **Q: Do I need to write code to use a prebuilt custom Sidebar Extension?**  
 A: Contentstack provides certain prebuilt custom Sidebar Extensions templates to help you get started instantly without the need to code.

@@ -51,8 +51,8 @@ Once your DAL is active, you can monitor visitor behavior, adjust content strate
 
 ## What You Need Before Getting Started?
 Before getting started with DAL, make sure you have:
-- Access to the Contentstack Organization as the [Owner](https://www.contentstack.com/docs/developers/organization/organization-roles#organization-owner)/[Admin](https://www.contentstack.com/docs/developers/organization/organization-roles#organization-admin) with DAL enabled (contact our [support team](mailto:support@contentstack.com) to get this enabled for your organization)
-- A website or app where the DAL tag can be deployed (via [Launch](/docs/developers/launch/event-tracking-in-contentstack-launch/), Google Tag Manager, or directly in your code)
+- Access to the Contentstack Organization as the [Owner](../developers/organization/organization-roles.md#organization-owner)/[Admin](../developers/organization/organization-roles.md#organization-admin) with DAL enabled (contact our [support team](mailto:support@contentstack.com) to get this enabled for your organization)
+- A website or app where the DAL tag can be deployed (via [Launch](../developers/launch/event-tracking-in-contentstack-launch.md), Google Tag Manager, or directly in your code)
 - Lytics/DAL [Dev Tools Chrome extension](https://docs.lytics.com/docs/chrome-extension) installed for your browser
 
 ## Next Steps:

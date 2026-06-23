@@ -16,17 +16,17 @@ This page explains how to add reference fields within global fields in Contentst
 
 ## Reference Fields within Global Fields
 
-You can add [reference](/docs/developers/create-content-types/reference) fields within [global](/docs/developers/global-field/about-global-field) fields to link reusable content across multiple [content types consistently](/docs/developers/create-content-types/about-content-types). This method helps maintain uniformity and simplifies the process of updating related content, such as author details, categories, or tags, especially in large-scale websites and applications.
+You can add [reference](../create-content-types/reference.md) fields within [global](./about-global-field.md) fields to link reusable content across multiple [content types consistently](../create-content-types/about-content-types.md). This method helps maintain uniformity and simplifies the process of updating related content, such as author details, categories, or tags, especially in large-scale websites and applications.
 
 For example, if your blog frequently displays author information with each post, you can use a Global field that includes a Reference field linked to a content type (e.g., Author Details). Once set up, this ensures that all blog entries pull accurate, consistent author information from a single source. Any updates to the referenced entry automatically reflect wherever it’s used.
 
-**Note:** Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can create Global fields and content types.
+**Note:** Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can create Global fields and content types.
 
 To add a Reference field within Global fields, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
 ## Step 1: Create the Referenced Content Type
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon in the left navigation panel or use the shortcut key “C” (for Windows and Mac OS users).
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon in the left navigation panel or use the shortcut key “C” (for Windows and Mac OS users).
 - Click **+ New Content Type** and provide a **Name** (e.g., Author Details).
 - Click **Insert a field (+)** icon and add the following fields:**Single Line Textbox:** For Author Name
 - **Multi Line Textbox:** For Author Address
@@ -56,10 +56,10 @@ Using Reference Fields within Global Fields helps you centralize and reuse conte
 ## Common questions
 
 ### Can I use a Reference field inside a Global field to link to a content type?
-Yes, you can add [reference](/docs/developers/create-content-types/reference) fields within [global](/docs/developers/global-field/about-global-field) fields to link reusable content across multiple content types consistently.
+Yes, you can add [reference](../create-content-types/reference.md) fields within [global](./about-global-field.md) fields to link reusable content across multiple content types consistently.
 
 ### Who can create Global fields and content types?
-Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can create Global fields and content types.
+Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can create Global fields and content types.
 
 ### What is a common use case for Reference Fields within Global Fields?
 A common use case is linking reusable author information (for example, Author Details) so that all blog entries pull accurate, consistent author information from a single source.

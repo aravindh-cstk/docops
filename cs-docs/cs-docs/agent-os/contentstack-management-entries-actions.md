@@ -17,19 +17,19 @@ This page describes the Contentstack Management connector’s Entries actions av
 
 ## Contentstack Management - Entries Actions
 
-An [entry](/docs/content-managers/author-content/about-entries) is a specific piece of content that you intend to publish. This could be a blog post, article, product description, or any other type of content that you want to make available to your audience. You can perform entry based operations using the Contentstack Management Entries actions.
+An [entry](../content-managers/author-content/about-entries.md) is a specific piece of content that you intend to publish. This could be a blog post, article, product description, or any other type of content that you want to make available to your audience. You can perform entry based operations using the Contentstack Management Entries actions.
 
 Let’s look at each of these in detail.
 
 ## Create an Entry
 
-This action lets you create an entry automatically in your stack. To know more, visit [Create entries](/docs/content-managers/author-content/create-an-entry).
+This action lets you create an entry automatically in your stack. To know more, visit [Create entries](../content-managers/author-content/create-an-entry.md).
 - Under **Choose an Action** tab, select the **Create an Entry** action.
 - Click **+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account to Automate](/docs/developers/automation-hub-connectors/contentstack-management#connect-your-contentstack-account-to-automate) step.
 - Select a **Stack**, **Branch**, and **Content Type** from the **Lookup** list. Provide your entry data in the **Entry Data** field.
 You can fetch the UID for all the previously configured automation steps directly from the **Lookup** list as shown below:
 
-    **Note**: Provide your entry data as per your [content type schema](/docs/developers/create-content-types/json-schema-for-creating-a-content-type/) in JSON format only.
+    **Note**: Provide your entry data as per your [content type schema](../developers/create-content-types/json-schema-for-creating-a-content-type.md) in JSON format only.
 
     **Note: **By default, the **main** branch is selected (even if the **Branch** field is empty).
 - In the** Entry Data** field, you can add a predefined schema template for your entry data. This will add a structure to provide your entry data in a particular format for different fields.**Note:** You must manually configure the entry data for **JSON Rich Text Editor**, **Custom**, and **Experience Container** fields.
@@ -72,7 +72,7 @@ In the **Customized Data (query)** field, you can filter the entry based on Upda
 
     You can view the **Lookup **data for all the fields present in the content type including **Reference**, **Modular Blocks** and **Group **fields. Using the **Operator **filter you can sort the data.
 
-    **Additional Resource:** Refer to the [Content Delivery API Docs](/docs/developers/apis/content-delivery-api/#queries) for more information on Queries.
+    **Additional Resource:** Refer to the [Content Delivery API Docs](../../api-docs/api-detail/content-delivery-api.md#queries) for more information on Queries.
 
     In the **Reference** field, enter the ID of the reference field of your content type.
 
@@ -99,7 +99,7 @@ You can fetch the UID for all the previously configured automation steps directl
 
 ## Localize an Entry
 
-This action lets you create localized versions of your entries. Here’s a link to know more about [Localization](/docs/developers/multilingual-content/about-localization/).
+This action lets you create localized versions of your entries. Here’s a link to know more about [Localization](../developers/multilingual-content/about-localization.md).
 - Under **Choose an Action** tab, select the** Localize an Entry** action.
 - Click **+ Add New Account **button to connect your Contentstack account as shown in the [Connect your Contentstack Account to Automate](/docs/developers/automation-hub-connectors/contentstack-management#connect-your-contentstack-account-to-automate) step.
 - Select the **Stack**, **Branch** ,**Content Type**, **Entry**, and **Locale** from the **Lookup** list.
@@ -124,14 +124,14 @@ This action fetches all the entries present in the Publish Queue in Contentstack
 
         **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
 - **[Optional]** Enable the **Show Optional Fields** toggle button to display the **Customized Data (query)**, **Entry Limit**, and **Skip (Pagination)** fields. You can also include the count for the total number of entries by clicking the checkbox.
-- Provide your data in the **Customized Data (query)** field to filter the entry. Enter your data in a key-value pair in JSON format.**Additional Resource:** Refer to the [Content Delivery API](/docs/developers/apis/content-delivery-api#queries) documentation to know more about queries.
+- Provide your data in the **Customized Data (query)** field to filter the entry. Enter your data in a key-value pair in JSON format.**Additional Resource:** Refer to the [Content Delivery API](../../api-docs/api-detail/content-delivery-api.md#queries) documentation to know more about queries.
 - Once done, click **Proceed**.
 - Click **Test Action** to test the configured action.
 - The output will be shown as follows. Click the **Save and Exit** button.
 
 ## Publish an Entry
 
-This action lets you publish an entry automatically in your stack. To know more, visit [publish entries](/docs/content-managers/author-content/publish-an-entry).
+This action lets you publish an entry automatically in your stack. To know more, visit [publish entries](../content-managers/author-content/publish-an-entry.md).
 - Under **Choose an Action** tab, select the **Publish an Entry **action.
 - On the **Publish an Entry Configure Action** page, enter the details given below:
       Click **+ Add New Account **button to connect your Contentstack account as shown in the [Connect your Contentstack Account to Automate](/docs/developers/automation-hub-connectors/contentstack-management#connect-your-contentstack-account-to-automate) step.
@@ -140,7 +140,7 @@ You can fetch the UID for all the previously configured automation steps directl
 
         **Note: **By default, the **main** branch is selected (even if the **Branch** field is empty).
 - Select the **Environment(s) **and **Locale(s)** from the **Lookup **list where you want to publish the entry.
-- **[Optional]** Enable the **Show Optional Fields** toggle button to display the** Publish Schedule** field. Click the **Nested Reference Publishing** checkbox to publish the entry along with the referenced entries. Learn more about [Nested Reference Publishing](/docs/content-managers/publish-content/about-nested-reference-publishing).
+- **[Optional]** Enable the **Show Optional Fields** toggle button to display the** Publish Schedule** field. Click the **Nested Reference Publishing** checkbox to publish the entry along with the referenced entries. Learn more about [Nested Reference Publishing](../content-managers/publish-content/about-nested-reference-publishing.md).
 
         **Note: **You can select multiple **Environment(s) **and **Locale(s) **to publish the entry.
 - Once done, click **Proceed**.
@@ -149,7 +149,7 @@ You can fetch the UID for all the previously configured automation steps directl
 
 ## Remove Localization
 
-This action restores the entry to its initial non-localized state within a stack. For more information, refer to our [Localization](/docs/developers/multilingual-content/about-localization/) documentation.
+This action restores the entry to its initial non-localized state within a stack. For more information, refer to our [Localization](../developers/multilingual-content/about-localization.md) documentation.
 - Under **Choose an Action** tab, select the **Remove Localization** action.
 - On the **Remove Localization Configure Action **page, enter the details given below:
       Click **+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account to Automate](/docs/developers/automation-hub-connectors/contentstack-management#connect-your-contentstack-account-to-automate) step.
@@ -163,7 +163,7 @@ Locale provides a list of languages currently added in your stack for the select
 
 ## Set Entry Workflow
 
-This action lets you set the workflow stage for your entry. Read more about [workflow stages](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages).
+This action lets you set the workflow stage for your entry. Read more about [workflow stages](../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md).
 - Under **Choose an Action **tab, select the **Set Entry Workflow** action.
 - On the **Set Entry Workflow Configure Action **page, enter the details given below:
       Click **+ Add New Account **button to connect your Contentstack account as shown in the [Connect your Contentstack Account to Automate](/docs/developers/automation-hub-connectors/contentstack-management#connect-your-contentstack-account-to-automate) step.
@@ -185,7 +185,7 @@ With the **Assignee Role(s)**, you can add the users with similar roles, such as
 
 ## Unpublish an Entry
 
-This action lets you unpublish an entry automatically in your stack. To know more, visit [unpublish entries](/docs/content-managers/working-with-entries/unpublish-an-entry).
+This action lets you unpublish an entry automatically in your stack. To know more, visit [unpublish entries](../content-managers/author-content/unpublish-an-entry.md).
 - Under **Choose an Action** tab, select the **Unpublish an Entry **action.
 - On the** Unpublish an Entry Configure Action **page, enter the details given below:
       Click **+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account to Automate](/docs/developers/automation-hub-connectors/contentstack-management#connect-your-contentstack-account-to-automate) step.

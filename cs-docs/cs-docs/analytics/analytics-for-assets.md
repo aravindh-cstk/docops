@@ -19,7 +19,7 @@ This page explains how to access and use the Analytics dashboard for Assets in C
 
 The Analytics dashboard for Assets provides detailed insights into asset usage, storage consumption, API activity, and AI-enabled asset adoption across your organization. Use these metrics to monitor storage trends, bandwidth usage, API requests, and cache performance across your organization.
 
-**Note:** Only organization [Owner](/docs/developers/organization/organization-roles#organization-owner), [Admin](/docs/developers/organization/organization-roles#organization-admin), and Product Analytics Viewer roles can access Analytics.
+**Note:** Only organization [Owner](../developers/organization/organization-roles.md#organization-owner), [Admin](../developers/organization/organization-roles.md#organization-admin), and Product Analytics Viewer roles can access Analytics.
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to **Analytics** through the “App Switcher”.

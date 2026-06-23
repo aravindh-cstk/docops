@@ -12,15 +12,15 @@ last_updated: 2026-06-02
 
 # CMA | Extensions
 
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations ](/docs/developers/developer-hub/about-ui-locations/)for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations ](../../../../cs-docs/developers/developer-hub/about-ui-locations.md)for the Contentstack App Framework to extend the functionality of your apps.
 
-Extensions let you create custom fields and custom widgets that lets you customize Contentstack's default UI and behavior. Read more about [Extensions](/docs/developers/experience-extensions-overview/about-experience-extensions).
+Extensions let you create custom fields and custom widgets that lets you customize Contentstack's default UI and behavior. Read more about [Extensions](../../../../cs-docs/developers/experience-extensions-overview/about-experience-extensions.md).
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
 ## Custom Fields
 
-This type of extension lets you create custom fields that you can use in your content types. Read more [About Custom Fields](/docs/developers/create-custom-fields/about-custom-fields).
+This type of extension lets you create custom fields that you can use in your content types. Read more [About Custom Fields](../../../../cs-docs/developers/create-custom-fields/about-custom-fields.md).
 
 ### Get all custom fields
 
@@ -516,7 +516,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1640,7 +1640,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 ## JSON RTE Plugins
 
-This type of extension lets you add customized plugins to your JSON Rich Text Editor and extend its functionality. Read more [About JSON RTE Plugins](/docs/developers/json-rich-text-editor-plugins).
+This type of extension lets you add customized plugins to your JSON Rich Text Editor and extend its functionality. Read more [About JSON RTE Plugins](../../../../cs-docs/developers/json-rich-text-editor-plugins.md).
 
 ### Get all JSON RTE plugins
 
@@ -2095,7 +2095,7 @@ The schema for this is as follows:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.
@@ -2315,7 +2315,7 @@ The schema for this is as follows:
 
 ## Asset Sidebar Extensions
 
-This type of extension lets you add widgets with more capabilities or custom functionalities for editors to manage, transform, and optimize stack assets. Read more about [Asset Sidebar Extensions](/docs/developers/create-asset-sidebar-extensions).
+This type of extension lets you add widgets with more capabilities or custom functionalities for editors to manage, transform, and optimize stack assets. Read more about [Asset Sidebar Extensions](../../../../cs-docs/developers/create-asset-sidebar-extensions.md).
 
 ### Get all asset sidebar extensions
 

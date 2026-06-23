@@ -73,7 +73,7 @@ To demonstrate the above steps, we utilize a [Gatsby Starter app](https://www.co
 
 ### Creating a Stack
 
-A [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) in Contentstack is a container that holds all the content, assets, and configurations needed for your project. For our example use case, we will use the Gatsby Starter app to add content to our stack.
+A [stack](../set-up-stack/about-stack.md) in Contentstack is a container that holds all the content, assets, and configurations needed for your project. For our example use case, we will use the Gatsby Starter app to add content to our stack.
 
 - **Import a stack using the Contentstack app**:Open **Marketplace** and navigate to **Discover** | **Starters**.
 - Hover over the desired Gatsby Starter app and click the **Import** button.
@@ -95,7 +95,7 @@ In this step, we need to create a Jenkins server on an instance (Ubuntu22.04) in
 - Reference for installing Gatsby: [How to Install Gatsby on Ubuntu 22.04](https://www.linuxcloudvps.com/blog/how-to-install-gatsby-on-ubuntu-22-04/)
 - We rely on the power and efficiency of rsync for synchronizing our project files. Rsync is a versatile and robust file synchronization tool, serving as the cornerstone of our strategy, ensuring seamless synchronization.
 - **Security group inbound rules**:Allow your public IPv4 address on ports `22` and `8080`.
-- Allow Contentstack Prod NAT GW IPs on port `8080`.**Note**: Contact our [support](mailto:support@contentstack.com) team for the Contentstack NAT Gateway IPs depending on the [region](https://www.contentstack.com/docs/developers/contentstack-regions/login-endpoints) from where you are accessing your Contentstack account.
+- Allow Contentstack Prod NAT GW IPs on port `8080`.**Note**: Contact our [support](mailto:support@contentstack.com) team for the Contentstack NAT Gateway IPs depending on the [region](../contentstack-regions/login-endpoints.md) from where you are accessing your Contentstack account.
 
 **Create a Jenkins job build pipeline using the shell script**:
 
@@ -184,7 +184,7 @@ echo -e "SYNC COMPLETED SUCCESSFULLY... \n\n"
 
 **Webhook configuration in the stack**:
 
-- Navigate to **Webhooks** under **Settings** within your stack. And [create a webhook](https://www.contentstack.com/docs/developers/set-up-webhooks/create-a-webhook) as per below configurations.
+- Navigate to **Webhooks** under **Settings** within your stack. And [create a webhook](../set-up-webhooks/create-a-webhook.md) as per below configurations.
 - Our purpose is to send an HTTP POST request to the webhook URL (the Jenkins endpoint in this case) for any entry or asset being published/unpublished on the selected environment.
 - Create a webhook with the following configurations:**Name**: `jenkins-publish`
 - **URL to Notify**: `http://ec2-54-198-208-147.compute-1.amazonaws.com:8080/job/contentstack-gatsby-starter-app-build/build?token=xRPyRrQCDYxZdrYxcOAhxsyFG`

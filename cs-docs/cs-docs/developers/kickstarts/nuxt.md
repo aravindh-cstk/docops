@@ -65,7 +65,7 @@ After you clone the repo and install dependencies, your project should resemble 
 ```
 
 ### 3. Create a Stack
-Log in to your Contentstack account and [create a new Stack](/docs/developers/set-up-stack/create-a-new-stack). Follow these steps to seed your Stack with the necessary data:
+Log in to your Contentstack account and [create a new Stack](../set-up-stack/create-a-new-stack.md). Follow these steps to seed your Stack with the necessary data:
 - Download the Stack seed data from GitHub.
 - Install the Contentstack CLI:
 ```
@@ -96,7 +96,7 @@ csdx cm:stacks:seed --repo "contentstack/kickstart-stack-seed" --org "" -n "CS K
 Need more information, watch a quick video on how to [seed a stack in the CLI](https://youtu.be/2dQheUo7uH4).
 
 ### 4. Create a Delivery Token
-In you stack, go to **Settings** > **Tokens** in your Contentstack dashboard and [create a delivery token](/docs/developers/create-tokens/create-a-delivery-token) with the preview setting toggled to **On**.
+In you stack, go to **Settings** > **Tokens** in your Contentstack dashboard and [create a delivery token](../create-tokens/create-a-delivery-token.md) with the preview setting toggled to **On**.
 Alternatively, watch a quick step-by-step tutorial on [How to create delivery tokens](https://share.layerpath.com/share/cm4n0a7ta0001mk0cd8w85lf9/tour).
 
 ### 5. Setup environment variables

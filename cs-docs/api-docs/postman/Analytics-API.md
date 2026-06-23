@@ -13,7 +13,7 @@ last_updated: 2025-04-22
 # Analytics API
 
 
-The Contentstack Analytics Postman Collection is a set of preconfigured REST API requests that will make it easy for you to get started with the [Contentstack Analytics APIs](/docs/developers/apis/analytics-api) and try out our API requests through the [Postman](https://www.getpostman.com/) REST client.
+The Contentstack Analytics Postman Collection is a set of preconfigured REST API requests that will make it easy for you to get started with the [Contentstack Analytics APIs](../api-detail/analytics-api.md) and try out our API requests through the [Postman](https://www.getpostman.com/) REST client.
 
 **Postman Collection Details**
 

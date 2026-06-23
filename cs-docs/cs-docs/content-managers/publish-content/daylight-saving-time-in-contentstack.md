@@ -29,7 +29,7 @@ So, for example, if you're setting the date and time as ‘July 15, 2020, 5:00 P
 
 This ensures that the user is always clearly notified if there is any change in the selected time settings. There is never any confusion around date and time when DST is observed.
 
-Learn how to [schedule publish or unpublish entries](/docs/content-managers/publish-content/schedule-publish-unpublish-entries) when the timezone selected follows Daylight Saving Time (DST).
+Learn how to [schedule publish or unpublish entries](./schedule-publish-unpublish-entries.md) when the timezone selected follows Daylight Saving Time (DST).
 
 ## Common questions
 

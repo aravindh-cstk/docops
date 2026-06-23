@@ -16,7 +16,7 @@ This page explains how Contentstack branches work for creating multiple copies o
 
 ## Working with Branches
 
-Similar to GitHub, Contentstack provides "Branches" to create multiple copies of your stack content. Every [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack/classic/) has a **main branch** by default. To create a new branch, you can fork a branch off of the main branch.
+Similar to GitHub, Contentstack provides "Branches" to create multiple copies of your stack content. Every [stack](../developers/organization/organization-analytics/classic.md) has a **main branch** by default. To create a new branch, you can fork a branch off of the main branch.
 
 When you create a branch for the first time, the main branch becomes your source branch. For all subsequent branches you create, you need to specify a source branch from which it will inherit data.
 

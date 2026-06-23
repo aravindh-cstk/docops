@@ -19,8 +19,8 @@ This page explains how to build JSON Rich Text Editor (RTE) plugins using the Co
 This document outlines how to build JSON Rich Text Editor (RTE) plugins using the Contentstack App SDK. These plugins extend the editor’s functionality by enabling custom formatting, embeds, and interactions within the JSON RTE.
 
 ## Prerequisites
-- Basic understanding of [JSON RTE](/docs/developers/json-rich-text-editor/about-json-rich-text-editor)
-- [JSON structure](/docs/developers/json-rich-text-editor/schema-of-json-rich-text-editor) and terminology associated with it
+- Basic understanding of [JSON RTE](../../../json-rich-text-editor/about-json-rich-text-editor.md)
+- [JSON structure](../../../json-rich-text-editor/schema-of-json-rich-text-editor.md) and terminology associated with it
 
 ## Structure of JSON RTE
 
@@ -139,7 +139,7 @@ The `RTEPlugin` method allows you to create a JSON RTE plugin instance.
 
 **Returns:** Plugin Object
 
-**Parameter****Type****Description**`plugin_id``string`Unique ID for the plugin.`configCallback``(rte: IRteParam) => IConfig`This function receives an [RTE instance](/docs/developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk#rte-instance-rte) as an argument, and it expects you to return a [config object](/docs/developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk#configcallback-rte-irteparam-iconfig) that includes details like title, icon, render, etc.
+**Parameter****Type****Description**`plugin_id``string`Unique ID for the plugin.`configCallback``(rte: IRteParam) => IConfig`This function receives an [RTE instance](./json-rte-plugin-for-contentstack-app-sdk.md#rte-instance-rte) as an argument, and it expects you to return a [config object](./json-rte-plugin-for-contentstack-app-sdk.md#configcallback-rte-irteparam-iconfig) that includes details like title, icon, render, etc.
 
 ### configCallback: (rte: IRteParam) => IConfig
 The `IConfig` object is a user-defined object that contains metadata that controls how the plugin behaves and appears in the editor.
@@ -190,10 +190,10 @@ Access RTE methods using the `rte.methodName()` syntax. These methods allow you 
 | **Method** | **Description** | **Type** |
 |---|---|---|
 | `getPath` | Retrieves the path of the node | `(node: Node) => Path` |
-| `setAttrs` | Sets attributes for the node (e.g., `href` for links, `src` for images). | `(attrs: Object, options: Option) => void` Option: [NodeOptions](/docs/developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk#node-options) |
+| `setAttrs` | Sets attributes for the node (e.g., `href` for links, `src` for images). | `(attrs: Object, options: Option) => void` Option: [NodeOptions](./json-rte-plugin-for-contentstack-app-sdk.md#node-options) |
 | `isNodeOfType` | Checks if the node at the current selection matches the specified type. | `(type: string) => boolean` |
 | `getNode` | Retrieves the node at the specified location | `(location: Location) => Node` |
-| `getNodes` | Retrieves a [generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) of nodes that include the specified location in the options. <br><br>By default, it returns nodes at the current selection. | (options: Option) => Node[]<br><br>Option: [NodeOptions](/docs/developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk#node-options) |
+| `getNodes` | Retrieves a [generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) of nodes that include the specified location in the options. <br><br>By default, it returns nodes at the current selection. | (options: Option) => Node[]<br><br>Option: [NodeOptions](./json-rte-plugin-for-contentstack-app-sdk.md#node-options) |
 | `string` | String value of JSON in the given path | `(location: Location) => string` |
 | `addMark` | Adds formatting (e.g., `bold`, `italic`) to selected text. | `(key: string, val: any) => void` |
 | `removeMark` | Removes a formatting mark from the selected text. | `(key: string) => void` |
@@ -201,13 +201,13 @@ Access RTE methods using the `rte.methodName()` syntax. These methods allow you 
 | `insertText` | Inserts text at a specified location | `(text: string, location: Location) => void` |
 | `getText` | Retrieves text from the specified node location. | `() => string` |
 | `deleteText` | Deletes text from the selected range. | `() => void` |
-| `updateNode` | Updates nodes based on specified options. | `(type: string, attrs: Object, options: Option) => void` Option: [NodeOptions](/docs/developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk#node-options) |
-| `unsetNode` | Converts a node to a normal paragraph based on specified options | `(options: Option) => void` Option: [NodeOptions](/docs/developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk#node-options) |
-| `insertNode` | Inserts a node at a specified location.<br><br>Optional `select: true` selects the node after insertion. | `(node: Node, options?: Option) => void` Option: [NodeOptions](/docs/developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk#node-options) & { select?: boolean } |
+| `updateNode` | Updates nodes based on specified options. | `(type: string, attrs: Object, options: Option) => void` Option: [NodeOptions](./json-rte-plugin-for-contentstack-app-sdk.md#node-options) |
+| `unsetNode` | Converts a node to a normal paragraph based on specified options | `(options: Option) => void` Option: [NodeOptions](./json-rte-plugin-for-contentstack-app-sdk.md#node-options) |
+| `insertNode` | Inserts a node at a specified location.<br><br>Optional `select: true` selects the node after insertion. | `(node: Node, options?: Option) => void` Option: [NodeOptions](./json-rte-plugin-for-contentstack-app-sdk.md#node-options) & { select?: boolean } |
 | `deleteNode` | Removes a node from a specified location. | `(options: Option) => void` Option: { at?: Location, distance?: number, unit?: 'character' \| 'word' \| 'line' \| 'block' } |
-| `wrapNode` | Wraps a node using the provided options and the specified wrapper node. | `(node: Node, options: Option) => void` Option: [NodeOptions](/docs/developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk#node-options) |
-| `unWrapNode` | Unwraps a node from its parent using the specified options. | `(options: Option) => void` Option: [NodeOptions](/docs/developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk#node-options) |
-| `mergeNodes` | Merges nodes based on provided options. | `(options: Option) => void` Option: [NodeOptions](/docs/developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk#node-options) |
+| `wrapNode` | Wraps a node using the provided options and the specified wrapper node. | `(node: Node, options: Option) => void` Option: [NodeOptions](./json-rte-plugin-for-contentstack-app-sdk.md#node-options) |
+| `unWrapNode` | Unwraps a node from its parent using the specified options. | `(options: Option) => void` Option: [NodeOptions](./json-rte-plugin-for-contentstack-app-sdk.md#node-options) |
+| `mergeNodes` | Merges nodes based on provided options. | `(options: Option) => void` Option: [NodeOptions](./json-rte-plugin-for-contentstack-app-sdk.md#node-options) |
 | `getEmbeddedItems` | Gets details of embedded items JSON RTE. | `() => Object` |
 | `getVariable` | Retrieves a local variable. | `(name: string) => any` |
 | `setVariable` | Sets a local variable. | `(name: string, val: any) => void` |

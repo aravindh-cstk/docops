@@ -45,7 +45,7 @@ Contentstack’s **Image Delivery API** allows you to manipulate images stored i
 - GIF
 - AVIF
 
-If you are looking for APIs to deliver content to your web or mobile properties, use our [Content Delivery API](/docs/developers/apis/content-delivery-api), and to manage content, you should use the [Content Management API](/docs/developers/apis/content-management-api).
+If you are looking for APIs to deliver content to your web or mobile properties, use our [Content Delivery API](./content-delivery-api.md), and to manage content, you should use the [Content Management API](./content-management-api.md).
 
 ### Rate Limiting
 
@@ -117,7 +117,7 @@ Using the environment parameter ensures that requests are routed through Content
 - Avoids routing requests through the Content Management API (CMA), which can cause rate limit errors and timeouts.
 - Ensures higher rate limits and lower costs by serving images directly from the CDN.
 
-**Note**: The image must be [published](/docs/content-managers/author-content/publish-an-asset) in the environment which is being passed as a query parameter.
+**Note**: The image must be [published](../../cs-docs/content-managers/author-content/publish-an-asset.md) in the environment which is being passed as a query parameter.
 
 #### Understanding Different Strings in the Asset URL
 
@@ -133,7 +133,7 @@ If you notice the URL, you will see that it is made up of several strings. Here'
 {base_url}/v3/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename
 ```
 
-**Additional Resource**: Refer to [Understanding Asset URL](/docs/content-managers/author-content/understanding-asset-url) document to know more about asset URL structure.
+**Additional Resource**: Refer to [Understanding Asset URL](../../cs-docs/content-managers/author-content/understanding-asset-url.md) document to know more about asset URL structure.
 
 Please note that the above breakdown of strings of the asset URL is just for your understanding. This is the default pattern of all the asset URLs.
 
@@ -209,7 +209,7 @@ Let's try enabling the auto parameter along with the format parameter, for brows
 1. WEBP and AVIF formats are not supported by all browsers.
 2. If the format parameter is used with this parameter, the format parameter will be ignored in browsers that support WEBP and AVIF formats.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -241,7 +241,7 @@ The quality parameter lets you control the compression level of images that have
 2. The quality parameter is not applicable for the image types (GIF and PNG) that are not lossy.
 3. When only the quality parameter is specified, and if the output image is larger than the actual image, the original image will be returned.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -448,7 +448,7 @@ In case the dimensions specified for the output image is greater than the dimens
 1. In case the dimensions specified for the output image is greater than the dimensions of the input image, the image will be upscaled.
 2. To disable upscaling, use the disable=upscale parameter.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -480,7 +480,7 @@ In case the dimensions specified for the output image is greater than the dimens
 1. In case the dimensions specified for the output image is greater than the dimensions of the input image, the image will be upscaled.
 2. To disable upscaling, use the disable=upscale parameter.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -505,7 +505,7 @@ As of now, there is only one value, i.e., upscale, that you can use with the dis
 
 To see this parameter in action, the height or width (or both) parameter should be used with it.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -533,7 +533,7 @@ When simply cropping an image, use the query ?crop={width_value},{height_value} 
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 You can define the crop region by means of passing the aspect ratio for the image, for example, ?crop={width}:{height}. So, if you have set an aspect ratio of 1:3 for an image, it means that the image height will be three times the width of the image.
 
@@ -553,7 +553,7 @@ Along with the crop parameter, you also need to specify either the width or heig
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&crop={crop}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 You can set the X-axis and Y-axis position of the top left corner of the crop by using the query ?crop={width_value},{height_value},x{value},y{value}. This lets you define the starting point of the crop region. The x-axis value and y-axis value can be defined in pixels or percentage. An example of this would be ?crop=300,400,x150,y75 or ?crop=300,400,x0.50,y0.60.
 
@@ -577,7 +577,7 @@ You can set the X-axis and Y-axis position of the top left corner of the crop by
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 You can also set the horizontal and vertical offset of the crop region by using the query ?crop={width_value},{height_value},offset-x{value},offset-y{value}. This lets you define the center point of the crop area. The x-axis offset value and y-axis offset value can be defined only in percentage. An example of this would be ?crop=300,400,offset-x10.5,offset-y10.5.
 
@@ -599,11 +599,11 @@ For instance, if you crop an image with 2000 pixels width to 1000 pixels wide, a
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 You can append the safe parameter when cropping an image. This ensures that the output image never returns an error due to the specified crop area being out of bounds. The output image is returned as an intersection of the source image and the defined crop area.
 
-**Note**: When you use the safe parameter, the API request entirely avoids returning an incorrect output image, however the image returned may not match the defined dimensions. Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note**: When you use the safe parameter, the API request entirely avoids returning an incorrect output image, however the image returned may not match the defined dimensions. Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -646,7 +646,7 @@ Let us try to crop an image using aspect ratio and smart cropping algorithms.
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&crop={crop}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
   
 
@@ -688,7 +688,7 @@ If fit is set to bounds, it will constrain the given image into the specified he
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&fit={fit_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -746,7 +746,7 @@ If fit is set to crop, it will crop the given image to the defined height and wi
 
 1. The fit parameter requires both the height and the width parameters.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -819,7 +819,7 @@ Let’s try to change the orientation of the image. Use the request given below 
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 Now let’s flip the image horizontally.
 
@@ -837,7 +837,7 @@ Now let’s flip the image horizontally.
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 You can also use a combination of the two example given above. So, in the following API request, the image will be flipped horizontally, and then orient it right.
 
@@ -855,7 +855,7 @@ You can also use a combination of the two example given above. So, in the follow
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
   
 
@@ -892,7 +892,7 @@ The overlay parameter allows you to put one image on top of another. You need to
 
 1. By default, the cropping alignment will be middle, center. See overlay-align for more details.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -922,7 +922,7 @@ You can also specify two values for this parameter, for example ?overlay-align=l
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-align={overlay-align}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -952,7 +952,7 @@ Let’s use these different parameters to understand how they work. First, try t
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 Let us now try how the vertical repetition of overlay image works.
 
@@ -973,7 +973,7 @@ Let us now try how the vertical repetition of overlay image works.
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 Now, let’s see what happens to an image when the vertical as well as horizontal repetition is enabled for the overlay image.
 
@@ -994,7 +994,7 @@ Now, let’s see what happens to an image when the vertical as well as horizonta
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -1028,7 +1028,7 @@ In order to set the overlay image width to more than 99%, use the p parameter al
 2. To specify a width more than 100% of the original image, use the p parameter. For example, to get a width of 250%, use overlay-width=250p.
 3. If the overlay image used is larger than the actual image, the overlay image will be cropped to fit the actual image.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -1062,7 +1062,7 @@ In order to set the overlay image height to more than 99%, use the p parameter a
 2. To specify a height more than 100% of the original image, use the p parameter. For example, to get a height of 250%, use overlay-height=250p.
 3. If the overlay image used is larger than the actual image, the overlay image will be cropped to fit the actual image.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -1091,7 +1091,7 @@ It is important to note that by default the pad parameter applies white backgrou
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&pad={top_value},{right_value},{bottom_value},{left_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 To add a colored border, you need to use the bg-color parameter along with pad. For example, to add a red border, use the query ?pad=10&bg-color=FF0000. Also, note that if the canvas and pad parameters are used together, the pad parameter will be ignored.
 
@@ -1109,7 +1109,7 @@ To add a colored border, you need to use the bg-color parameter along with pad. 
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&pad={top_value},{right_value},{bottom_value},{left_value}&bg-color={value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
   
 
@@ -1158,7 +1158,7 @@ You can either specify all the four padding values (top, right, bottom, and left
 3. Values specified using CSS style shorthand are also acceptable.
 4. CSS shorthand allows you to specify values for all the edges in one property.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -1183,7 +1183,7 @@ The first type is the 3- or 6-digit hexadecimal value, for example ?bg-color=ccc
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.png?environment={environment_name}&bg-color={value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 The second type is the Red, Blue, Green value which defines the intensity of the corresponding color, with the value ranging anywhere between 0 and 255 for each. An example of this is ?bg-color=140,220,123.
 
@@ -1201,7 +1201,7 @@ The second type is the Red, Blue, Green value which defines the intensity of the
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.png?environment={environment_name}&bg-color={value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 And the last type is the Red, Blue, Green, Alpha value, which is an extension of the second type with an addition of the alpha element. The alpha value defines the transparency, with 0.0 being fully transparent and 1.0 being completely opaque. An example of this is ?bg-color=140,220,123,0.5.
 
@@ -1219,7 +1219,7 @@ And the last type is the Red, Blue, Green, Alpha value, which is an extension of
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.png?environment={environment_name}&bg-color={value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -1241,7 +1241,7 @@ For example, if the iPhone 6s has a device pixel ratio of 2, it means that the a
 
 The value for this parameter could be a whole number (between 1 and 10000) or any decimal number (between 0.0 and 9999.9999...).
 
-Along with the dpr parameter, you need to specify either the height or width parameter to dynamically resize the output image. If you only specify the height parameter, then the height parameter will automatically adjust the width of the image using the aspect ratio of the image. And if both the width and height parameters are specified, the given values will be used. Read more about [resizing images using the width and height parameters](/docs/developers/apis/image-delivery-api#resize-images).
+Along with the dpr parameter, you need to specify either the height or width parameter to dynamically resize the output image. If you only specify the height parameter, then the height parameter will automatically adjust the width of the image using the aspect ratio of the image. And if both the width and height parameters are specified, the given values will be used. Read more about [resizing images using the width and height parameters](./image-delivery-api.md#resize-images).
 
 The width or height of the output image changes depending on the values that you provide for dpr and height or width. For example, for a device pixel ratio of 2 and height 50, the height of the output image changes to 100.
 
@@ -1249,7 +1249,7 @@ The width or height of the output image changes depending on the values that you
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&dpr={dpr_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -1280,7 +1280,7 @@ To increase the blurriness of an image by 40, use the following query:
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&blur={blur}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -1312,7 +1312,7 @@ To extract the first frame from the following animated GIF: {GIF_name}, try the 
 1. The frame parameter only supports animated GIF file format.
 2. Currently, the frame parameter can only fetch the first frame from an animated GIF.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -1349,7 +1349,7 @@ Let us try to increase the sharpness of a given image by amount:2, radius:1000, 
 2. To specify the radius (size) of the sharpening area, you can use any decimal number (float) between 1 and 1000. You can also use percent style values to define the radius of the sharpening area, for example, 50p.
 3. To specify the threshold of the sharpening area, you can use any whole number (integer) between 0 and 255.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ##### Query Parameters
 
@@ -1374,7 +1374,7 @@ To increase the value of the saturation parameter of an image, pass a positive v
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&saturation={saturation_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 To decrease the value of the saturation parameter of an image, pass a negative value:
 
@@ -1392,7 +1392,7 @@ To decrease the value of the saturation parameter of an image, pass a negative v
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&saturation={saturation_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
   
 
@@ -1426,7 +1426,7 @@ To increase the value of the contrast parameter of an image, pass a positive val
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&contrast={contrast_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 To decrease the value of the contrast parameter of an image, pass a negative value:
 
@@ -1444,7 +1444,7 @@ To decrease the value of the contrast parameter of an image, pass a negative val
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&contrast={contrast_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
   
 
@@ -1478,7 +1478,7 @@ To increase the value of the brightness parameter of an image, pass a positive v
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&brightness={brightness_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 To decrease the value of the brightness parameter of an image, pass a negative value:
 
@@ -1496,7 +1496,7 @@ To decrease the value of the brightness parameter of an image, pass a negative v
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&brightness={brightness_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
   
 
@@ -1543,7 +1543,7 @@ Use the ?resize-filter=nearest query to generate an image using the nearest resi
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 Try the following query to see how the bilinear resizing filter works.
 
@@ -1567,7 +1567,7 @@ Try the following query to see how the bilinear resizing filter works.
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 Try the following query to see what happens to the given image when we use the bicubic resizing filter.
 
@@ -1591,7 +1591,7 @@ Try the following query to see what happens to the given image when we use the b
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 Let us also try out the lanczos resizing filter to check how it upscales a given image.
 
@@ -1615,7 +1615,7 @@ Let us also try out the lanczos resizing filter to check how it upscales a given
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
   
 
@@ -1659,7 +1659,7 @@ You can use the query ?canvas={width_value},{height_value} to set the height and
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={width_value},{height_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 To define the X-axis and Y-axis position of the top left corner of the canvas area, use the query ?canvas={width_value},{height_value},x{value},y{value}. This allows you to define the starting point of the canvas region. The x-axis value and y-axis value can be specified in pixels or percentage. An example of this would be ?canvas=700,800,x150,y75 or ?canvas=700,800,x0.60,y0.50.
 
@@ -1677,7 +1677,7 @@ To define the X-axis and Y-axis position of the top left corner of the canvas ar
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 You can set the horizontal and vertical offset of the canvas area by using the query ?canvas={width_value},{height_value},offset-x{value},offset-y{value}. This allows you to define the center point of the canvas area. The x-axis offset value and y-axis offset value can be defined only in percentage. An example of this would be ?canvas=700,800,offset-x0.65,offset-y0.80.
 
@@ -1695,7 +1695,7 @@ You can set the horizontal and vertical offset of the canvas area by using the q
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](./image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
   
 

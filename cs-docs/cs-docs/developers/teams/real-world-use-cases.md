@@ -16,7 +16,7 @@ This page explains real-world scenarios where the **Teams** feature helps you ma
 
 ## Teams Real World Use Cases
 
-The **Teams** feature simplifies the assignment of roles and permissions by grouping users. [Teams](/docs/developers/teams/about-teams) can be accessed through Organization settings and lets you assign both organization-level and stack-level roles to the users. Let's look at the following real-world use cases to learn how to work with Teams in Contentstack.
+The **Teams** feature simplifies the assignment of roles and permissions by grouping users. [Teams](./about-teams.md) can be accessed through Organization settings and lets you assign both organization-level and stack-level roles to the users. Let's look at the following real-world use cases to learn how to work with Teams in Contentstack.
 
 ## Example 1: Use Teams To Enable Cross-functional Project Collaboration
 
@@ -51,7 +51,7 @@ When the campaign ends, instead of taking away permissions one by one, you can s
 ## Common questions
 
 **Q: Where can I access Teams in Contentstack?**  
-A: [Teams](/docs/developers/teams/about-teams) can be accessed through Organization settings.
+A: [Teams](./about-teams.md) can be accessed through Organization settings.
 
 **Q: Can a Team be assigned both organization-level and stack-level roles?**  
 A: Yes, Teams lets you assign both organization-level and stack-level roles to the users.

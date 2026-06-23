@@ -29,7 +29,7 @@ For example, an e-commerce team updates the **Color** taxonomy by reorganizing i
 - When you publish an entry that references a taxonomy, Contentstack includes the entire referenced taxonomy, with all its terms, in the publish job, not only the term used by the entry. If the taxonomy is not localized in the entry's locale, the taxonomy-level publish job for that locale appears as Failed in the Publish Queue. To prevent the Failed status, localize the taxonomy in the target locale before publishing. Term-level localization is validated during deployment.
 
 To publish a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to publish a taxonomy, navigate to **Settings**, and select **Taxonomy**.
+- Go to your [stack](../developers/set-up-stack/about-stack.md) where you want to publish a taxonomy, navigate to **Settings**, and select **Taxonomy**.
 - Open the taxonomy you want to publish and click **Publish**.
 - In the **Publish Taxonomy** modal, select the **Branch**, **Environments**, and **Locales**.**Note:** Taxonomy is a global module. However, when publishing, selecting a branch determines the fallback hierarchy of the selected locales in that branch.
 - Choose **Now** to publish immediately or **Later** to schedule the publication.
@@ -39,11 +39,11 @@ Publishing a taxonomy ensures your updated term structure is available across se
 
 **Additional Resource:**
 - If an entry that references a taxonomy is published using **Send with References**, the referenced taxonomy, including all its terms, is included in the publish job. This ensures that the taxonomy structure used by the entry is available in the selected environments and locales.
-- You can also add taxonomies to a release and deploy them as part of a release workflow. This allows teams to manage taxonomy changes alongside related content updates and schedule deployments across environments and locales. For more information, refer to the [Add a Taxonomy to a Release](/docs/headless-cms/add-taxonomy-to-release) documentation.
+- You can also add taxonomies to a release and deploy them as part of a release workflow. This allows teams to manage taxonomy changes alongside related content updates and schedule deployments across environments and locales. For more information, refer to the [Add a Taxonomy to a Release](./add-taxonomy-to-release.md) documentation.
 
 ## API Reference
 
-To publish taxonomies via the API, refer to the [Publish a Taxonomy](/docs/developers/apis/content-management-api#publish-a-taxonomy) API request.
+To publish taxonomies via the API, refer to the [Publish a Taxonomy](../../api-docs/api-detail/content-management-api.md#publish-a-taxonomy) API request.
 
 ## Common questions
 

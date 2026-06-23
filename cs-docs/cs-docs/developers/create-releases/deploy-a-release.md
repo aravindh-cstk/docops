@@ -16,13 +16,13 @@ This page explains how to deploy a Release in Contentstack, including choosing e
 
 ## Deploy a Release
 
-Deploying a [Release](/docs/developers/create-releases/about-releases) means performing the selected action (publish/unpublish) to the items of a Release associated with an [environment](/docs/developers/set-up-environments/about-environments).
+Deploying a [Release](./about-releases.md) means performing the selected action (publish/unpublish) to the items of a Release associated with an [environment](../set-up-environments/about-environments.md).
 
 So, for instance, let’s assume that you have added five items to a Release (3 for publishing and 2 for unpublishing). When you deploy this Release, the three items added with the publish action will be published, and the two with the unpublish action will be unpublished, all at once.
 
 To deploy a release, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and click on the “Releases” icon on the left navigation panel**.** This opens the **Releases** page where you can see a list of existing Releases in the stack. You can also use the shortcut key “alt + R” for Windows OS users, and “option + R” for Mac OS users to access Releases.
+- Go to your [stack](../set-up-stack/about-stack.md), and click on the “Releases” icon on the left navigation panel**.** This opens the **Releases** page where you can see a list of existing Releases in the stack. You can also use the shortcut key “alt + R” for Windows OS users, and “option + R” for Mac OS users to access Releases.
 - Select the Release you want to deploy, and click on the **Deploy** button located at the top.
 - In the **Deploy Release** window, you will get the following options:**Select Environment(s**): Choose the environment(s) on which you want to deploy the release.
 - **Deploy**: Select if you want to deploy the Release **Now** or **Later**.
@@ -36,11 +36,11 @@ If you select **Later**, you need to specify the date and time at which the Rele
 **Note**: You can update the release items to their latest versions before you deploy the release. Refer to our [Update release items to their latest versions](https://app.contentstack.com/docs/content-managers/create-and-manage-releases/update-release-items-to-their-latest-versions/) documentation for more information.**
 **
 
-**Warning**: Once you deploy a Release on an environment, the items are locked. This means that you cannot add/remove items from this Release. You can, however, deploy items to another environment (or redeploy on the same environment) or [clone the Release](/docs/developers/create-releases/clone-a-release).
+**Warning**: Once you deploy a Release on an environment, the items are locked. This means that you cannot add/remove items from this Release. You can, however, deploy items to another environment (or redeploy on the same environment) or [clone the Release](./clone-a-release.md).
 
 ## API Reference
 
-To deploy the Release via API, refer to the [Deploy a Release](/docs/developers/apis/content-management-api#deploy-a-release) API request.
+To deploy the Release via API, refer to the [Deploy a Release](../../../api-docs/api-detail/content-management-api.md#deploy-a-release) API request.
 
 ## Common questions
 
@@ -54,4 +54,4 @@ Once you deploy a Release on an environment, the items are locked, meaning you c
 Yes. You can deploy items to another environment (or redeploy on the same environment).
 
 ### Is there an API to deploy a Release?
-Yes. Refer to the [Deploy a Release](/docs/developers/apis/content-management-api#deploy-a-release) API request.
+Yes. Refer to the [Deploy a Release](../../../api-docs/api-detail/content-management-api.md#deploy-a-release) API request.

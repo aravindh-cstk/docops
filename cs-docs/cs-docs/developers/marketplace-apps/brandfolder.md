@@ -72,24 +72,24 @@ If you select **Custom Fields**, then the **Brandfolder Keys** drop-down appears
 
 In the **Add Brandfolder Key Path** modal, enter the **Brandfolder Key Path** and click the **Create** button to create a new key.
 - After adding the configuration details, click the **Save** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Additional Resource**: For more information on UI locations, refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Additional Resource**: For more information on UI locations, refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Brandfolder app.
 
 ## Use the Brandfolder App within your Stack
 To use the Brandfolder app within an entry of your stack, follow the steps given below:
 
 Navigate to the stack dashboard, click **Content Models** in the header, then **New Content Type.** From the dropdown, select **Create New**.
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
 - There are two ways to use the Brandfolder app in your entry:[Custom Field](#use-the-brandfolder-app-as-a-custom-field)
 - [JSON Rich Text Editor field](#use-the-brandfolder-app-as-a-json-rte-plugin)
 
 ### Use the Brandfolder App as a Custom Field
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom/) field by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension or App**, select **Brandfolder** and click the **Proceed** button.Change the **Display Name** of the custom field to your choice, for example, **Brandfolder Custom Field**. Optionally, you can add **Help Text** and **Instruction Value** as required. This adds Brandfolder in the custom field.
 
 **Additional Resource:** To set the configuration object, refer to the [Set Advanced Config Object in Custom Field](#set-advanced-config-object-in-custom-field-optional) section.
 - After adding the app, click **Save** or **Save and Close** to save your changes.
-- To use the Brandfolder app, [create an entry](/docs/content-managers/author-content/create-an-entry) for this newly created content type. Navigate to **Entries** in the header, click **+ New Entry** to create an entry within the same content type, and click **Proceed**.You can see the Brandfolder app’s custom fields on your entry page as shown below:
+- To use the Brandfolder app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this newly created content type. Navigate to **Entries** in the header, click **+ New Entry** to create an entry within the same content type, and click **Proceed**.You can see the Brandfolder app’s custom fields on your entry page as shown below:
 - Click **+ Choose Asset(s)** button.
 - Choose the **Collection** to select the asset from your Brandfolder account to add them to your entry.You can add the Brandfolder assets in two ways:
 
@@ -183,13 +183,13 @@ The **key:value** passed in the configuration object overrides the default app c
 ```
 
 ### Use the Brandfolder app as a JSON RTE Plugin
-- In the **Content Type Builder** page, add a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field by clicking the **Insert a field** link represented by a** +** sign.
+- In the **Content Type Builder** page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field by clicking the **Insert a field** link represented by a** +** sign.
 - Click inside the **Select JSON RTE Plugin(s)** field to open the **Select Plugin** modal.
 - Select **Brandfolder** from the available options and click **Add Plugin(s)**.This adds Brandfolder in the JSON Rich Text Editor.
 
 **Additional Resource:** To set the configuration object, refer to the [Set Advanced Config Object in JSON RTE Plugin](#set-advanced-config-object-in-json-rte-plugin-optional) section.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
-- To use the Brandfolder app, [create an entry](/docs/content-managers/author-content/create-an-entry) for this content type. To do this, navigate to the **Entries** page, click **+ New Entry**, select the content type you created above, and then click **Proceed**.You will see the Brandfolder app icon inside the JSON RTE field in your entry page as shown below:
+- To use the Brandfolder app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. To do this, navigate to the **Entries** page, click **+ New Entry**, select the content type you created above, and then click **Proceed**.You will see the Brandfolder app icon inside the JSON RTE field in your entry page as shown below:
 - Choose the **Collection** to select the asset from your Brandfolder account to add them to your entry.You can add the Brandfolder asset(s) in two ways:
 
 Hover over the image, click the **three ellipses** icon, and then click **Place** to add the asset to your JSON Rich Text Editor field from the Brandfolder selector page.
@@ -204,7 +204,7 @@ The assets you select are added to your entry.
 - Click the **Edit** icon to edit the image. Make the necessary changes and click the **Save** button.
 - Click the **Remove** icon to remove the selected image.
 
-**Additional Resource**: You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field.
+**Additional Resource**: You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field.
 - After adding the asset(s), **Save** and** Publish** your entry.
 
 ### Set Advanced Config Object in JSON RTE Plugin (Optional)

@@ -28,7 +28,7 @@ This step-by-step guide explains how to use the Apollo client and Contentstack G
 
 ## Download your schema
 
-The first step is to construct a GraphQL schema file for your [content type](/docs/developers/create-content-types/about-content-types) and include this file in your project. This schema file is a JSON file named `schema.json` that contains the results of introspection queries and is used by Apollo iOS for the code generation process.
+The first step is to construct a GraphQL schema file for your [content type](../../create-content-types/about-content-types.md) and include this file in your project. This schema file is a JSON file named `schema.json` that contains the results of introspection queries and is used by Apollo iOS for the code generation process.
 
 `apolloClient` has generic `fetch(query:)` methods that take a query argument conforming to the `Apollo.GraphQLQuery` protocol.
 

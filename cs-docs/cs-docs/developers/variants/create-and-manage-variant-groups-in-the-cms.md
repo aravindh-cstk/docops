@@ -26,7 +26,7 @@ Variant groups help organize independent variations of content, such as platform
 This guide explains how to access variant groups, create a new variant group, add variants, and assign content types.
 
 To create and manage variant groups, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack) and click **Settings**.
+- Navigate to the desired [stack](../set-up-stack/about-stack.md) and click **Settings**.
 - Select **Variants** to open the **Variant Groups** list page.
 - On the **Variant Groups** page, click **New Variant Group**.**Note**: By default, the create variant groups button is visible only in the main branch.
 - In the modal, enter the **Variant Group Name**, and click **Create**.

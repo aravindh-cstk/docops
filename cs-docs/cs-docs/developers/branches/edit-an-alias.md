@@ -16,9 +16,9 @@ This page explains how to edit an alias in Contentstack Branches, including chan
 
 ## Edit an Alias
 
-Once created, you can edit an [alias](/docs/developers/branches/about-aliases)to make changes, such as edit the name, description, or change the target branch.
+Once created, you can edit an [alias](./about-aliases.md)to make changes, such as edit the name, description, or change the target branch.
 
-To edit an alias, log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your [stack](/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To edit an alias, log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon on the left navigation panel, select **Branches,** and click on the **Aliases** tab.
 - Hover over the alias you want to edit, and click on the “Edit” icon (pencil) that appears at the extreme right.
 - The **Edit Alias** form opens up where you can see the current target branch as well. Change the target branch as per your needs.  

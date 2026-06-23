@@ -17,10 +17,10 @@ This page explains how to enable or disable a workflow in Contentstack. It is in
 
 ## Enable or Disable a Workflow
 
-Contentstack allows you to enable and disable a [workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) as per your requirements.
+Contentstack allows you to enable and disable a [workflow](./about-workflows.md) as per your requirements.
 
 To enable or disable a workflow, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon (press “S”) on the left navigation panel.
+- Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon (press “S”) on the left navigation panel.
 - Click on **Workflows** (press “**alt + F**” for Windows OS, and “option + **F**” for Mac OS).
 - Hover over the workflow you want to enable/disable, and click on the “Power” icon to enable or disable the workflow
 - Alternatively, to enable or disable the workflow via the workflow page, you need to check or uncheck the **Enable Workflow** checkbox, respectively.
@@ -29,8 +29,8 @@ To enable or disable a workflow, log in to your [Contentstack account](https://a
 ## API Reference
 
 Here are the links to the API requests related to this action:
-- [Enable workflow](/docs/developers/apis/content-management-api#enable-workflow)
-- [Disable workflow](/docs/developers/apis/content-management-api#disable-workflow)
+- [Enable workflow](../../../api-docs/api-detail/content-management-api.md#enable-workflow)
+- [Disable workflow](../../../api-docs/api-detail/content-management-api.md#disable-workflow)
 
 ## Common questions
 
@@ -41,4 +41,4 @@ No. Disabling a workflow enables or disables the workflow; it does not indicate 
 You can use the “Power” icon from the workflows list, or check/uncheck the **Enable Workflow** checkbox on the workflow page.
 
 ### Are there API requests for enabling or disabling workflows?
-Yes. See the API Reference links for [Enable workflow](/docs/developers/apis/content-management-api#enable-workflow) and [Disable workflow](/docs/developers/apis/content-management-api#disable-workflow).
+Yes. See the API Reference links for [Enable workflow](../../../api-docs/api-detail/content-management-api.md#enable-workflow) and [Disable workflow](../../../api-docs/api-detail/content-management-api.md#disable-workflow).

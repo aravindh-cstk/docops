@@ -27,7 +27,7 @@ This step-by-step guide explains how to create a Color Picker app and use it to 
 - [Node.js version 16 or above](https://nodejs.org/en/)
 - Understanding of App SDK
 - Understanding of React.js
-- [Venus Component Library](/docs/developers/venus-component-library)for designing UI
+- [Venus Component Library](../venus-component-library.md)for designing UI
 
 ## Overview of steps:
 
@@ -40,7 +40,7 @@ This step-by-step guide explains how to create a Color Picker app and use it to 
 
 ## Setup a New Project
 
-As a first step, you need to create a project directory where you can work in. We will be using the [Marketplace App Boilerplate](/docs/developer-hub/marketplace-app-boilerplate/) for creating our project.
+As a first step, you need to create a project directory where you can work in. We will be using the [Marketplace App Boilerplate](./marketplace-app-boilerplate.md) for creating our project.
 
 ```
 git clone https://github.com/contentstack/marketplace-app-boilerplate.git color-picker
@@ -91,7 +91,7 @@ The **App Location(s)** section is enabled once you enter the App URL.
 - Hover over the **Custom Field** UI Location, and click the **+ Add** button.
 - Enter the details for the **Custom Field** configuration.
   **Name** (*optional*): By default, the app name is set as the location name. Enter appropriate names for the location, when you have more than one location of the same type.
-- **Signed** (*required*): When enabled, all the initial page load calls will contain a JWT token than can be used to verify whether the page load request originated from Contentstack itself. For more information, refer to the [Signed Locations](/docs/developer-hub/securing-your-app/) document.
+- **Signed** (*required*): When enabled, all the initial page load calls will contain a JWT token than can be used to verify whether the page load request originated from Contentstack itself. For more information, refer to the [Signed Locations](./securing-your-app.md) document.
 - **Path** (*optional*): Allows you to configure the location URL path relative to the App URL. This is particularly useful when the developer wants the app to appear in multiple locations. For example, enter the path as `/custom-field`.
 - **Data Type** (*required*): Define what kind of data type this custom field location is storing. For example, select the data type `JSON`.
 - **Description** (*optional*): Enter a suitable description for your UI location. This description will be visible on the entry page when the user uses the custom field location.
@@ -117,7 +117,7 @@ Now that you have installed the app, you can go ahead and add it to your content
 Click the **“**Content Models**”** icon on the left navigation panel, and click the **+ New Content Type** button.
 
 - Create a content type by adding relevant details as displayed below:
-- In the **Content Type Builder** page, add a [**Custom field**](/docs/developers/create-content-types/custom) to your content type by clicking the “Insert a field” link denoted by a **+** sign.
+- In the **Content Type Builder** page, add a [**Custom field**](../create-content-types/custom.md) to your content type by clicking the “Insert a field” link denoted by a **+** sign.
 - Under **Select Extension/App**, select the app you created.
 - After adding the fields, click either **Save** or **Save and Close** to save your changes.
 
@@ -282,12 +282,12 @@ $ npm start
 ## Next Steps
 
 **Secure your application**:
-Using the [signed support](https://www.contentstack.com/docs/developer-hub/securing-your-app/), you can learn how to secure calls to outgoing APIs from the Contentstack UI and backend using the Contentstack App Framework.
+Using the [signed support](./securing-your-app.md), you can learn how to secure calls to outgoing APIs from the Contentstack UI and backend using the Contentstack App Framework.
 
 - **Host the app**:
 Now that your app is ready, host it for your team to use. You can host the app on external services like Netlify, Vercel, etc.
 - **Submit for publishing**:
-Once your application is production-ready and you want to share your solution with Contentstack Marketplace, you can check the [App Submission and Approval Guide](/docs/developers/marketplace-platform-guides/app-submission-and-approval-guide).
+Once your application is production-ready and you want to share your solution with Contentstack Marketplace, you can check the [App Submission and Approval Guide](../marketplace-platform-guides/app-submission-and-approval-guide.md).
 
 ## Common questions
 

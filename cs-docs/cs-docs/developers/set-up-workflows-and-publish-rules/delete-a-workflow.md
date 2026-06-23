@@ -16,7 +16,7 @@ This page explains how to delete a workflow from a Contentstack stack, intended 
 
 ## Delete a Workflow
 
-You can delete a [workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) from the [stack](/docs/developers/set-up-stack/about-stack) if you no longer need it.
+You can delete a [workflow](./about-workflows.md) from the [stack](../set-up-stack/about-stack.md) if you no longer need it.
 
 To delete a workflow, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your stack, click on the “Settings” icon (press “S”) on the left navigation panel.
@@ -27,7 +27,7 @@ To delete a workflow, log in to your [Contentstack account](https://app.contents
 
 ## API Reference
 
-To delete a workflow from the stack via API, refer to the [Delete workflow](/docs/developers/apis/content-management-api#delete-workflow) API request.
+To delete a workflow from the stack via API, refer to the [Delete workflow](../../../api-docs/api-detail/content-management-api.md#delete-workflow) API request.
 
 ## Common questions
 
@@ -38,7 +38,7 @@ Yes. You can delete a workflow from the stack if you no longer need it.
 Go to your stack’s **Settings** and open **Workflows**, then hover over the workflow and click the “Delete” icon.
 
 ### Is there an API to delete a workflow?
-Yes. Use the [Delete workflow](/docs/developers/apis/content-management-api#delete-workflow) API request.
+Yes. Use the [Delete workflow](../../../api-docs/api-detail/content-management-api.md#delete-workflow) API request.
 
 ### What do I need to do to complete the deletion?
 After clicking the “Delete” icon, confirm the delete action by clicking **Proceed**.

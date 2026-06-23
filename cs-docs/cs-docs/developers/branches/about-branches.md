@@ -17,7 +17,7 @@ This page explains Contentstack Branches, including how branches inherit data, h
 
 ## About Branches
 
-Contentstack provides "Branches" to allow you to create multiple copies of your stack content. Every [stack](/docs/developers/set-up-stack/about-stack/) has a **main branch** by default. To create a new branch, you can fork a branch off of the main branch.
+Contentstack provides "Branches" to allow you to create multiple copies of your stack content. Every [stack](../set-up-stack/about-stack.md) has a **main branch** by default. To create a new branch, you can fork a branch off of the main branch.
 
 When you create a branch for the first time, the main branch becomes your source branch. For all subsequent branches you create, you need to specify a source branch from which it will inherit data.
 
@@ -29,9 +29,9 @@ Consider the following real-world use cases of branches to understand how they a
 - Developers can use a separate branch to remodel website content without affecting the live data
 - Developers and content managers can work concurrently on different copies of the same content to avoid data loss
 
-With the [compare branches](/docs/developers/branches/comparing-branches) feature, you can compare the differences between two branches. If you make changes to your content model in a branch and want to see what’s different, you can use the compare branches feature to do so. Once you are satisfied with your changes, you can integrate the changes in this branch into another branch using the [merge branches](/docs/developers/branches/merging-branches/)feature.
+With the [compare branches](./comparing-branches.md) feature, you can compare the differences between two branches. If you make changes to your content model in a branch and want to see what’s different, you can use the compare branches feature to do so. Once you are satisfied with your changes, you can integrate the changes in this branch into another branch using the [merge branches](./merging-branches.md)feature.
 
-**Note:** Both the Compare and Merge features are currently available only through [Content Management API](/docs/developers/apis/content-management-api/#comparing-branches) and [CLI commands](/docs/developers/cli/compare-and-merge-branches-using-the-cli/) for the content type and global field modules.
+**Note:** Both the Compare and Merge features are currently available only through [Content Management API](../../../api-docs/api-detail/content-management-api.md#comparing-branches) and [CLI commands](../cli/compare-and-merge-branches-using-the-cli.md) for the content type and global field modules.
 
 You can also assign aliases to your branches. An alias acts as a pointer to a target branch from which you have to pull content. You can point the alias to a specific branch within your frontend application code. The application then renders content to your website from the target branch.
 
@@ -48,13 +48,13 @@ Let's learn how to work with the Branches feature.
 ## Common questions
 
 ### What is the main branch in a stack?
-Every [stack](/docs/developers/set-up-stack/about-stack/) has a **main branch** by default.
+Every [stack](../set-up-stack/about-stack.md) has a **main branch** by default.
 
 ### What data does a child branch inherit from its source branch?
 Any child branch inherits all of the data from the source branch, including content types, global fields, entries, assets, languages, webhooks, and extensions.
 
 ### How can I compare or merge branches?
-You can use the [compare branches](/docs/developers/branches/comparing-branches) feature and integrate changes using the [merge branches](/docs/developers/branches/merging-branches/)feature.
+You can use the [compare branches](./comparing-branches.md) feature and integrate changes using the [merge branches](./merging-branches.md)feature.
 
 ### Where are Compare and Merge currently available?
-Both the Compare and Merge features are currently available only through [Content Management API](/docs/developers/apis/content-management-api/#comparing-branches) and [CLI commands](/docs/developers/cli/compare-and-merge-branches-using-the-cli/) for the content type and global field modules.
+Both the Compare and Merge features are currently available only through [Content Management API](../../../api-docs/api-detail/content-management-api.md#comparing-branches) and [CLI commands](../cli/compare-and-merge-branches-using-the-cli.md) for the content type and global field modules.

@@ -16,21 +16,21 @@ This page explains how to add a Global field within a Group field while creating
 
 ## Global Fields within Group Fields
 
-You can add a [Global](/docs/developers/global-field/about-global-field) field within a [Group](/docs/developers/create-content-types/group) field when creating a [content type](/docs/developers/create-content-types/about-content-types). This setup allows you to reuse predefined field sets while organizing them in a modular, structured layout. It improves consistency, simplifies maintenance, and accelerates content modeling across multiple content types.
+You can add a [Global](./about-global-field.md) field within a [Group](../create-content-types/group.md) field when creating a [content type](../create-content-types/about-content-types.md). This setup allows you to reuse predefined field sets while organizing them in a modular, structured layout. It improves consistency, simplifies maintenance, and accelerates content modeling across multiple content types.
 
 For example, to make SEO data reusable across web pages, you can create a Global field called **SEO Metadata**, which includes:
-- [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) for SEO Title
-- [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox) for Meta Description
+- [Single Line Textbox](../create-content-types/single-line-textbox.md) for SEO Title
+- [Multi Line Textbox](../create-content-types/multi-line-textbox.md) for Meta Description
 - Single Line Textbox for Meta Keywords
 
 Then, inside a content type like a web page, you can create a Group Field named **SEO Content** and insert the **SEO Metadata** Global Field into it. This approach encapsulates all SEO-related fields in one place, ensuring consistency across entries and making global updates fast and effortless.
 
 Integrating the Global field within the Group field ensures all associated fields are included in the content type, promoting consistency and simplifying updates.
 
-**Note:** Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can create Global fields and Content Types.
+**Note:** Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can create Global fields and Content Types.
 
 To add a Global field within a Group field, log in to your [Contentstack account](https://www.contentstack.com/login) and follow these steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon in the left navigation panel or press “C”.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon in the left navigation panel or press “C”.
 - On the **Content Models** page, select **Global Fields** and click **+ New Global Field**.
 - Enter a **Name** (e.g., SEO Metadata) and optional **Description**, then click **Proceed**.
 - Click the **Insert Field (+)** icon and add the following fields:**Single Line Textbox** for meta title
@@ -55,7 +55,7 @@ By adding Global Fields within Group Fields, you build modular, reusable, and ea
 ## Common questions
 
 ### Who can create Global fields and Content Types?
-Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can create Global fields and Content Types.
+Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can create Global fields and Content Types.
 
 ### Why add a Global field within a Group field?
 This setup allows you to reuse predefined field sets while organizing them in a modular, structured layout.

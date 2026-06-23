@@ -26,7 +26,7 @@ Polaris is built to address this gap by applying AI where it matters most: **ins
 
 Polaris is **Contentstack’s built-in AI co-pilot**, that offers:
 - **Faster CMS actions: **Perform real CMS operations directly within the interface quickly.
-- **Contextual assistance: **Al automatically understands the content ([Entry](/docs/content-managers/author-content/about-entries), [Asset](/docs/content-managers/author-content/about-assets), or [Visual Editor](/docs/content-managers/visual-builder/about-visual-builder)) a user is working on, eliminating the need to explain the task or location.
+- **Contextual assistance: **Al automatically understands the content ([Entry](../content-managers/author-content/about-entries.md), [Asset](../content-managers/author-content/about-assets.md), or [Visual Editor](/docs/content-managers/visual-builder/about-visual-builder)) a user is working on, eliminating the need to explain the task or location.
 - **Direct execution:** Execute complex CMS actions (updating fields, modifying metadata, applying visual changes) using the same rules and permissions as the Ul, unlike generic Al chat tools.
 
 ## What Can You Do with Polaris
@@ -50,7 +50,7 @@ A: No. **Agent OS** is currently in **Early Access**. Features may change and li
 A: Polaris applies AI **inside the CMS**, during real content operations, with awareness of structure, context, and governance.
 
 **Q: What types of items can Polaris understand contextually?**  
-A: Polaris automatically understands the content a user is working on, including [Entry](/docs/content-managers/author-content/about-entries), [Asset](/docs/content-managers/author-content/about-assets), or [Visual Editor](/docs/content-managers/visual-builder/about-visual-builder).
+A: Polaris automatically understands the content a user is working on, including [Entry](../content-managers/author-content/about-entries.md), [Asset](../content-managers/author-content/about-assets.md), or [Visual Editor](/docs/content-managers/visual-builder/about-visual-builder).
 
 **Q: Can Polaris execute changes directly?**  
 A: Yes. Polaris can execute complex CMS actions (updating fields, modifying metadata, applying visual changes) using the same rules and permissions as the Ul.

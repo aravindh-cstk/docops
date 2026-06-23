@@ -23,7 +23,7 @@ Secure Sockets Layer (SSL) Pinning is a security technique that involves incorpo
 This technique ensures that the client only connects to the server that matches the pinned certificate or public key, which prevents Man-in-the-Middle (MITM) attacks. Even if an attacker can intercept the SSL traffic, they cannot modify it because they do not have access to the server's private key.
 
 ## Prerequisites
-- Install and configure the [Contentstack Swift SDK](/docs/developers/sdks/content-delivery-sdk/swift/reference)
+- Install and configure the [Contentstack Swift SDK](../../../create-content-types/reference.md)
 - Ensure you have a valid `.cer` certificate file for `cdn.contentstack.io` or your custom domain
 
 ## Steps to Enable SSL Pinning

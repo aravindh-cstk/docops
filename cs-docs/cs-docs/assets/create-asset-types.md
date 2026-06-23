@@ -23,7 +23,7 @@ Create asset types to define how a file format is identified and which user-defi
 
 This approach gives you precise control over file identification while offering a familiar, accessible naming convention for users.
 
-Beyond naming, asset types also let you define which metadata [fields](/docs/assets/create-user-defined-fields) apply to a given file format. When users upload or edit a file, the system automatically recognizes its asset type, displays the associated fields, and enforces your rules for metadata entry. This ensures that every file includes the right information, keeping your asset library consistent, searchable, and reliable.
+Beyond naming, asset types also let you define which metadata [fields](./create-user-defined-fields.md) apply to a given file format. When users upload or edit a file, the system automatically recognizes its asset type, displays the associated fields, and enforces your rules for metadata entry. This ensures that every file includes the right information, keeping your asset library consistent, searchable, and reliable.
 
 To create asset types within Assets, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
 - Navigate to **Assets** through “App Switcher” and select the **Asset Types** tab.

@@ -20,15 +20,15 @@ The Contentstack CLI TSGen plugin generates TypeScript typings from REST API and
 
 With the TSGen plugin, you can annotate interfaces and fields with comments from the JSDoc library. Additionally, the TSGen plugin allows you to add prefixes to interfaces.
 
-**Note:** The Contentstack CLI uses the [introspection query](/docs/developers/apis/graphql-content-delivery-api/#introspection) to generate a GraphQL schema.
+**Note:** The Contentstack CLI uses the [introspection query](../../../api-docs/api-detail/graphql-content-delivery-api.md#introspection) to generate a GraphQL schema.
 
 This step-by-step guide lets you install and use the tsgen plugin in the CLI.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
-- [CLI installed](/docs/developers/cli/install-the-cli/) (version 1.1.0 and above)
-- [Delivery token](/docs/developers/create-tokens/create-a-delivery-token/)
+- [CLI installed](./install-the-cli.md) (version 1.1.0 and above)
+- [Delivery token](../create-tokens/create-a-delivery-token.md)
 
 ## Steps for execution
 
@@ -125,25 +125,25 @@ csdx tsgen -a "delivery token alias" -o "contentstack/generated.d.ts" --include-
 
 ## Supported Contentstack Fields
 
-- [Number](/docs/developers/create-content-types/number)
-- [Title](/docs/developers/create-content-types/title/)
-- [Date](/docs/developers/create-content-types/date/)
-- [Boolean](/docs/developers/create-content-types/boolean/)
-- [Single Select w/ String and Number Types](/docs/developers/create-content-types/single-line-textbox/)
-- [Multiple Select w/ String and Number Types](/docs/developers/create-content-types/multi-line-textbox/)
-- [Modular Block](/docs/developers/create-content-types/modular-blocks/)
-- [Global Field](/docs/developers/global-field/about-global-field/) (CLI supports [Nested Global Fields](/docs/developers/global-field/about-global-field#nested-global-fields) from v1.42.0)
-- [Group](/docs/developers/create-content-types/group/)
-- [Link](/docs/developers/create-content-types/link/)
-- [File](/docs/developers/create-content-types/file/)
-- [Reference](/docs/developers/create-content-types/reference/)
-- [Taxonomy](/docs/developers/taxonomy/about-taxonomy)
+- [Number](../create-content-types/number.md)
+- [Title](../create-content-types/title.md)
+- [Date](../create-content-types/date.md)
+- [Boolean](../create-content-types/boolean.md)
+- [Single Select w/ String and Number Types](../create-content-types/single-line-textbox.md)
+- [Multiple Select w/ String and Number Types](../create-content-types/multi-line-textbox.md)
+- [Modular Block](../create-content-types/modular-blocks.md)
+- [Global Field](../global-field/about-global-field.md) (CLI supports [Nested Global Fields](../global-field/about-global-field.md#nested-global-fields) from v1.42.0)
+- [Group](../create-content-types/group.md)
+- [Link](../create-content-types/link.md)
+- [File](../create-content-types/file.md)
+- [Reference](../create-content-types/reference.md)
+- [Taxonomy](../taxonomy/about-taxonomy.md)
 
 ## Supported Field Options
 
-- [Mandatory](/docs/developers/create-content-types/mandatory)
-- [Multiple](/docs/developers/create-content-types/multiple)
-- [Multiple Max Limit](/docs/developers/create-content-types/minimum-and-maximum-limit)
+- [Mandatory](../create-content-types/mandatory.md)
+- [Multiple](../create-content-types/multiple.md)
+- [Multiple Max Limit](../create-content-types/minimum-and-maximum-limit.md)
 - Description (used in JSDoc comment)
 
 **Additional Resource:** For a major TSGen version upgrade, refer to the [Migration.md](https://github.com/contentstack/contentstack-cli-tsgen/blob/master/MIGRATION.md) file in the GitHub repository.

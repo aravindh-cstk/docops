@@ -14,9 +14,9 @@ last_updated: 2026-03-26
 
 This page explains how to create and configure the legacy **Optimizely** extension (custom field) in Contentstack, how to use it in content types and entries, and how to query content by audience on the presentation layer. It is intended for developers setting up audience-based personalization using Optimizely audiences within Contentstack entries.
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Optimizely as a Marketplace App. For more information on Optimizely, please refer to the [Optimizely App Installation Guide](/docs/developers/marketplace-apps/optimizely).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Optimizely as a Marketplace App. For more information on Optimizely, please refer to the [Optimizely App Installation Guide](../marketplace-apps/optimizely.md).
 
-The **Optimizely** extension lets you serve personalized content by allowing you to select the audience for each entry. This extension fetches and displays your Optimizely audiences into a [field](/docs/developers/create-content-types/about-fields) in your [content type](/docs/developers/create-content-types/about-content-types). Thus, while creating [entries](/docs/content-managers/working-with-entries/about-entries), you can select audience(s) for each entry. Based on the selection, the entry will be visible only to the targeted audience when published.
+The **Optimizely** extension lets you serve personalized content by allowing you to select the audience for each entry. This extension fetches and displays your Optimizely audiences into a [field](../create-content-types/about-fields.md) in your [content type](../create-content-types/about-content-types.md). Thus, while creating [entries](../../content-managers/author-content/about-entries.md), you can select audience(s) for each entry. Based on the selection, the entry will be visible only to the targeted audience when published.
 
 This step-by-step guide explains how to create an **Optimizely** extension in Contentstack. The steps to be performed are as follows:
 - [Retrieve your project ID](#retrieve-your-project-id)
@@ -50,13 +50,13 @@ Note down this token, since you will need it while configuring the extension in 
 
 To add this extension to your stack, log in to your [Contentstack account](https://app.contentstack.com/) and perform the following steps:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack), click on the “Settings” icon on the left navigation panel.
+Go to your [stack](../set-up-stack/about-stack.md), click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**.
 - On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:
 
-**Title ***(required)*: Provide a suitable title, for example “Optimizely,” for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+**Title ***(required)*: Provide a suitable title, for example “Optimizely,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
 
 - **Field Data Type** *(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple ***(optional)*: Leave this field unchecked.
@@ -81,10 +81,10 @@ Now, let’s understand how you can start using your custom field extension in y
 
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [Custom](/docs/developers/create-content-types/custom) field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the [Custom](../create-content-types/custom.md) field to it.
 - Under **Select Extension**, select the “Optimizely” field that you created and set the other properties. You can add other fields as per requirements.
 - Finally, click on either **Save **or** Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry)for this content type, and you will see the **Optimizely **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md)for this content type, and you will see the **Optimizely **field in action.
 
 ## Use the extension on the presentation layer to serve personalized content
 
@@ -104,12 +104,12 @@ https://cdn.contentstack.io/v3/content_types/product/entries?api_key=blt20962a81
 
 ```
 
-**Additional Resource: **You can check out our documents that show how you can use Optimizely with Contentstack: [Optimizely Experiments](/docs/developers/create-sidebar-extensions/optimizely-experiments/), [A/B Testing Using Contentstack and Optimizely](/docs/developers/how-to-guides/a-b-testing-using-contentstack-and-optimizely), and [Implementing Personalization Using Optimizely on Your Website](/docs/developers/how-to-guides/implementing-personalization-using-optimizely-on-your-website).
+**Additional Resource: **You can check out our documents that show how you can use Optimizely with Contentstack: [Optimizely Experiments](../create-sidebar-extensions/optimizely-experiments.md), [A/B Testing Using Contentstack and Optimizely](/docs/developers/how-to-guides/a-b-testing-using-contentstack-and-optimizely), and [Implementing Personalization Using Optimizely on Your Website](/docs/developers/how-to-guides/implementing-personalization-using-optimizely-on-your-website).
 
 ## Common questions
 
 ### Is this the recommended way to use Optimizely with Contentstack?
-No. **Note**: This documentation uses the legacy approach with extensions. We have launched Optimizely as a Marketplace App. For more information on Optimizely, please refer to the [Optimizely App Installation Guide](/docs/developers/marketplace-apps/optimizely).
+No. **Note**: This documentation uses the legacy approach with extensions. We have launched Optimizely as a Marketplace App. For more information on Optimizely, please refer to the [Optimizely App Installation Guide](../marketplace-apps/optimizely.md).
 
 ### What do I need before configuring the extension?
 You will need the ID of your Optimizely project and your personal access token.

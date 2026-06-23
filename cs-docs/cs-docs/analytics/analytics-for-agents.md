@@ -19,7 +19,7 @@ This page explains how to access and use the Agents Analytics dashboard in Conte
 
 The Analytics dashboard for Agents provides detailed insights into how Contentstack Agents are used across your organization. Agents are intelligent systems built on four core components: triggers, instructions, tools, and AI model, that can reason, decide, and act across workflows. Use these metrics to monitor execution trends, token usage, AI model adoption, and overall agent activity across your organization.
 
-**Note:** Only organization [Owner](/docs/developers/organization/organization-roles#organization-owner), [Admin](/docs/developers/organization/organization-roles#organization-admin), and Product Analytics Viewer roles can access Analytics.
+**Note:** Only organization [Owner](../developers/organization/organization-roles.md#organization-owner), [Admin](../developers/organization/organization-roles.md#organization-admin), and Product Analytics Viewer roles can access Analytics.
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to **Analytics** through the “App Switcher”.

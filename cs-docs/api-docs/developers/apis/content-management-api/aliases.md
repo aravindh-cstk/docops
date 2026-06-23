@@ -12,9 +12,9 @@ last_updated: 2026-06-02
 
 # CMA | Aliases
 
-[](/docs/developers/branches/create-a-branch)
+[](../../../../cs-docs/developers/branches/create-a-branch.md)
 
-An [alias](/docs/developers/branches/#work-with-aliases) acts as a pointer to a particular branch. You can specify the alias ID in your frontend code to pull content from the target branch associated with an alias.
+An [alias](./branches.md#work-with-aliases) acts as a pointer to a particular branch. You can specify the alias ID in your frontend code to pull content from the target branch associated with an alias.
 
 ## Get All Aliases
 

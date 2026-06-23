@@ -22,10 +22,10 @@ Create a job in Data & Insights (Lytics) to import and synchronize your Contents
 This guide provides step-by-step instructions for creating a new 'Import Entries' Job along with the authorization for it. Channel tool [**authorizations**](https://docs.lytics.com/docs/keys-authorizations) refer to the permissions granted to various integrations that allow the Data & Insights (Lytics) platform to access and use data from third-party channels.
 
 ## Prerequisites
-- [Contentstack account](https://www.contentstack.com/login) with Data & Insights (Lytics) enabled and [created](/docs/data-and-insights/create-data-and-insights-lytics-integration)
+- [Contentstack account](https://www.contentstack.com/login) with Data & Insights (Lytics) enabled and [created](./create-data-and-insights-lytics-integration.md)
 - Your self-hosted site deployed
 - Stack connected to the deployed site
-- [Personalize project](/docs/personalize/create-personalize-project) created
+- [Personalize project](../personalize/create-personalize-project.md) created
 
 ## Create a New 'Import Entries' Job
 Once Data & Insights (Lytics) is enabled and configured for your organization, follow these steps:
@@ -38,8 +38,8 @@ Once Data & Insights (Lytics) is enabled and configured for your organization, f
 - In the Configure Authorization **Details** section, enter a **Label** and optional **Description** for the authorization.
 - In the **Configuration** section,**Region:** Select the region where your organization is located.
 - **Stack API Key:** Enter your stack API key (**Stack Settings > API Credentials**).
-- [**Delivery Token**](/docs/developers/create-tokens/create-a-delivery-token)**:** Enter the delivery token of your stack (**Stack Settings > Tokens > Delivery Token**).
-- [**Management Token**](/docs/developers/create-tokens/generate-a-management-token)**:** Enter your stack's management token (**Stack Settings > Tokens > Management Token**).
+- [**Delivery Token**](../developers/create-tokens/create-a-delivery-token.md)**:** Enter the delivery token of your stack (**Stack Settings > Tokens > Delivery Token**).
+- [**Management Token**](../developers/create-tokens/generate-a-management-token.md)**:** Enter your stack's management token (**Stack Settings > Tokens > Management Token**).
 **Tip:** Generate a new management token with Read permissions to avoid issues caused by hidden or obfuscated values. This ensures your sync is correctly tied to the domain and environment you authorized, and avoids misconfiguration due to multiple tokens or domains.
 - Click the **Save and Continue** button. You will see a success message pop-up: **Authorization saved successfully**.
 

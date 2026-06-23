@@ -16,15 +16,15 @@ This page explains what field properties are and how to access and use them when
 
 ## About Field Properties
 
-Field properties define the nature and behavior of the [field](/docs/developers/create-content-types/about-fields). These properties let you define the nature of a field by setting multiple attributes. This enables you to create a dynamic and flexible structure of your [Content Type](/docs/developers/create-content-types/about-content-types).
+Field properties define the nature and behavior of the [field](./about-fields.md). These properties let you define the nature of a field by setting multiple attributes. This enables you to create a dynamic and flexible structure of your [Content Type](./about-content-types.md).
 
 To access the field properties of a field, go to the "Content Type Schema" page, hover on the field you want, click on the cogwheel to access the **"basic"** or **"advanced" **properties.
 
 Some of the field properties are** "Display Name," "Unique ID," "Default Value," "Help Text," "Instruction Value,"** and many more.
 
 For example:
-- If you want to set a maximum number of characters in any text field, you can make use of the [**Number of Characters**](/docs/developers/create-content-types/number-of-characters) property.
-- To display a customized name of a field when content managers create an entry, you can set [**Display Name**](/docs/developers/create-content-types/display-name)
+- If you want to set a maximum number of characters in any text field, you can make use of the [**Number of Characters**](./number-of-characters.md) property.
+- To display a customized name of a field when content managers create an entry, you can set [**Display Name**](./display-name.md)
 - property.
 
 You can browse through the following topics mentioned in the "More Articles" section to learn which properties you can apply to fields.
@@ -35,10 +35,10 @@ You can browse through the following topics mentioned in the "More Articles" sec
 Go to the "Content Type Schema" page, hover on the field you want, and click on the cogwheel to access the **"basic"** or **"advanced" **properties.
 
 **What are field properties used for?**  
-Field properties define the nature and behavior of the [field](/docs/developers/create-content-types/about-fields) by setting multiple attributes.
+Field properties define the nature and behavior of the [field](./about-fields.md) by setting multiple attributes.
 
 **Which field property can I use to limit text length?**  
-You can make use of the [**Number of Characters**](/docs/developers/create-content-types/number-of-characters) property.
+You can make use of the [**Number of Characters**](./number-of-characters.md) property.
 
 **Which field property can I use to show a customized field name to content managers?**  
-You can set [**Display Name**](/docs/developers/create-content-types/display-name).
+You can set [**Display Name**](./display-name.md).

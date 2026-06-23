@@ -17,12 +17,12 @@ This page explains how to install and set up the Contentstack PHP SDK and config
 
 ## Get Started with PHP SDK and Live Preview
 
-This guide will help you get started with Contentstack [PHP SDK](/docs/developers/sdks/content-delivery-sdk/php/about-php-sdk/) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [PHP SDK](./about-php-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 To get started with PHP, you will need the following:
 - PHP version 5.5.0 or later
-- [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk)
+- [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
 
 ## SDK Installation and Setup
 To install the PHP SDK, choose either of the following methods:
@@ -36,7 +36,7 @@ composer require contentstack/contentstack
 
 ### Method 2: Downloading the zip file
 To download the PHP SDK, perform the following steps:
-- [Download](/docs/developers/sdks/content-delivery-sdk/php/download-php-sdk/) the PHP SDK.
+- [Download](./download-php-sdk.md) the PHP SDK.
 - Create the `dependencies` folder in your project directory and move the downloaded .zip file within the `dependencies` folder.
 - Download the [MabeEnum](https://github.com/marc-mabe/php-enum) class.
 - Create a folder named `marc-mabe` folder inside `dependencies`, and move the `php-enum` folder to `marc-mabe`.
@@ -44,7 +44,7 @@ To download the PHP SDK, perform the following steps:
 Let's get started with the implementation.
 
 ## Initializing the Stack with Live Preview
-Since the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk) is responsible for communication, you need to initialize it within your stack.
+Since the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) is responsible for communication, you need to initialize it within your stack.
 
 Use the following command to initialize the stack:
 
@@ -59,7 +59,7 @@ $stack = Contentstack::Stack('API_KEY', 'DELIVERY_TOKEN', 'ENVIRONMENT',
    )
 ));
 ```
-**Note**: By default, the `host` parameter points to the North America endpoint. If your website is hosted on the [European](/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt) data center, then pass the European endpoint against the `host` parameter.
+**Note**: By default, the `host` parameter points to the North America endpoint. If your website is hosted on the [European](../../../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) data center, then pass the European endpoint against the `host` parameter.
 
 ## Create the Contentstack Service
 You need to add a `Stack.php` service file within the `src/Service` file path. Within this service file, use the following code to create the Contentstack service:
@@ -153,9 +153,9 @@ To install and initialize the Live Preview Utils SDK, open `base.html.twig` and 
 **Note**: To learn how to install Encore, you can refer to the [Installing Encore](https://symfony.com/doc/current/frontend/encore/installation.html#installing-encore-in-symfony-applications) documentation.
 
 ## Query Request
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
-To get an [entry](/docs/content-managers/working-with-entries/about-entries), you need to specify the [content type](/docs/developers/create-content-types/about-content-types) UID and the UID of the entry.
+To get an [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) UID and the UID of the entry.
 
 ```
 $stack->ContentType('CONTENT_TYPE_UID')->Entry('ENTRY_UID')->toJSON()->fetch();
@@ -163,23 +163,23 @@ $stack->ContentType('CONTENT_TYPE_UID')->Query()->toJSON()->find();
 ```
 
 ## More Resources
-- [JavaScript Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk)
-- [Download PHP SDK](/docs/developers/php/download-php-sdk)
+- [JavaScript Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
+- [Download PHP SDK](./download-php-sdk.md)
 - [Build a Blog using PHP SDK and Symfony Framework](/docs/developers/sample-apps/build-a-blog-demo-using-contentstacks-php-sdk-and-symfony-framework)
-- [PHP SDK API Reference](/docs/developers/sdks/content-delivery-sdk/php/reference/)
-- [PHP SDK Changelog](/docs/developers/sdks/content-delivery-sdk/php/php-sdk-changelog/)
+- [PHP SDK API Reference](../../../create-content-types/reference.md)
+- [PHP SDK Changelog](./php-sdk-changelog.md)
 - [View and Download PHP SDK repository on GitHub](https://github.com/contentstack/contentstack-php)
 
 ## Common questions
 
 ### Do I need the Live Preview Utils SDK to use Live Preview with the PHP SDK?
-Yes. Since the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk) is responsible for communication, you need to initialize it within your stack.
+Yes. Since the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) is responsible for communication, you need to initialize it within your stack.
 
 ### What PHP version is required?
 PHP version 5.5.0 or later.
 
 ### What should I set for the `host` parameter?
-By default, the `host` parameter points to the North America endpoint. If your website is hosted on the [European](/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt) data center, then pass the European endpoint against the `host` parameter.
+By default, the `host` parameter points to the North America endpoint. If your website is hosted on the [European](../../../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) data center, then pass the European endpoint against the `host` parameter.
 
 ### How do I verify the kernel request listener is registered?
 Run the following command to check whether `ContentstackRequestListener` has been added to the kernel request:

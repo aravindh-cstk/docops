@@ -20,11 +20,11 @@ This page explains what the Contentstack Android Utils library is, what it inclu
 Contentstack provides the Android Utils library that contains all the utilities for the Android SDK.
 
 Features included:
-- **Embedded Object**: Allows you to fetch embedded [entries](/docs/content-managers/author-content/about-entries/)/[assets](/docs/content-managers/author-content/about-assets/) (placed inside the “[Rich Text Editor](/docs/developers/create-content-types/rich-text-editor)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](/docs/developers/create-content-types/rich-text-editor#embed-entries-in-the-rte) and [Embed Asset](/docs/developers/create-content-types/rich-text-editor#embed-assets-in-the-rte) documentation.
+- **Embedded Object**: Allows you to fetch embedded [entries](../../../../content-managers/author-content/about-entries.md)/[assets](../../../../content-managers/author-content/about-assets.md) (placed inside the “[Rich Text Editor](../../../create-content-types/rich-text-editor.md)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](../../../create-content-types/rich-text-editor.md#embed-entries-in-the-rte) and [Embed Asset](../../../create-content-types/rich-text-editor.md#embed-assets-in-the-rte) documentation.
 
 **Note**: The Contentstack Android Utils library supports Node.js version 10 or above.
 
-To use this Utils library in your application, follow the steps specified in the [Get Started with Android Utils library](/docs/developers/sdks/utils-sdk/android/get-started-with-android-utils-library/) guide.
+To use this Utils library in your application, follow the steps specified in the [Get Started with Android Utils library](./get-started-with-android-utils-library.md) guide.
 
 ## Common questions
 
@@ -32,10 +32,10 @@ To use this Utils library in your application, follow the steps specified in the
 A: It contains utilities for the Android SDK, including support for fetching embedded entries/assets from the Rich Text Editor (RTE) field.
 
 **Q: Where can I learn how to embed entries or assets in the RTE field?**  
-A: Refer to the [Embed Entry](/docs/developers/create-content-types/rich-text-editor#embed-entries-in-the-rte) and [Embed Asset](/docs/developers/create-content-types/rich-text-editor#embed-assets-in-the-rte) documentation.
+A: Refer to the [Embed Entry](../../../create-content-types/rich-text-editor.md#embed-entries-in-the-rte) and [Embed Asset](../../../create-content-types/rich-text-editor.md#embed-assets-in-the-rte) documentation.
 
 **Q: What Node.js version is supported by the Contentstack Android Utils library?**  
 A: Node.js version 10 or above.
 
 **Q: Where do I start to use this library in my application?**  
-A: Follow the [Get Started with Android Utils library](/docs/developers/sdks/utils-sdk/android/get-started-with-android-utils-library/) guide.
+A: Follow the [Get Started with Android Utils library](./get-started-with-android-utils-library.md) guide.

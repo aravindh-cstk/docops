@@ -16,7 +16,7 @@ last_updated: 2026-06-02
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
-These files can be attached and used in multiple [entries](/docs/content-managers/working-with-entries/about-entries).
+These files can be attached and used in multiple [entries](../../../../cs-docs/content-managers/author-content/about-entries.md).
 
 ## Get All Assets
 
@@ -46,7 +46,7 @@ You will find the asset metadata under the _metadata key in the response. It wil
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
+To learn more about the queries, refer to the [Queries](../../../api-detail/content-delivery-api.md#queries) section of the Content Delivery API doc.
 
 **Tip:** To include the publish details in the response, make use of the include_publish_details parameter and set its value to ‘true’. This query will return the publish details of the entry in every environment along with the version number that is published in each of the environment. When you publish an asset, the associated metadata of that asset will also get published.
 
@@ -90,7 +90,7 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -208,7 +208,7 @@ You will find the asset metadata under the _metadata key in the response. It wil
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -277,7 +277,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -360,7 +360,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -474,7 +474,7 @@ In the above cURL command, pass the necessary values within the curly brackets. 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Pass “multipart/form-data” to include form data body parameters.
@@ -559,7 +559,7 @@ Additionally, you can pass optional parameters such as asset[title] and asset[de
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `multipart/form-data`
@@ -634,7 +634,7 @@ https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
 #### URL Parameters
 
 - **asset_uid** (required)
-  Enter the UID of the asset for which you want to generate a permanent URL. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) request to get the UID of the asset.
+  Enter the UID of the asset for which you want to generate a permanent URL. Use the [Get All Assets](../../../api-detail/content-management-api.md#get-all-assets) request to get the UID of the asset.
   Default: `your_asset_uid`
 
 #### Query Parameters
@@ -652,7 +652,7 @@ https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter “application/json” to pass a Request body.
@@ -714,12 +714,12 @@ To configure the permissions for your application via OAuth, please include the 
 
 This request will return the most recent version of the asset, however, to download the latest published version of the asset, pass the environment query parameter with the environment name.
 
-**Note**: Before executing this API request, ensure to [create a permanent URL for the asset](/docs/developers/apis/content-management-api#generate-permanent-asset-url) you want to download.
+**Note**: Before executing this API request, ensure to [create a permanent URL for the asset](../../../api-detail/content-management-api.md#generate-permanent-asset-url) you want to download.
 
 #### URL Parameters
 
 - **asset_uid** (required)
-  Enter the UID of the asset you want to download. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) request to get the UID of the asset.
+  Enter the UID of the asset you want to download. Use the [Get All Assets](../../../api-detail/content-management-api.md#get-all-assets) request to get the UID of the asset.
   Default: `your_asset_uid`
 - **slug** (required)
   Enter the unique identifier of the asset.
@@ -774,7 +774,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -797,7 +797,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 **GET** `/assets/rt`
 
-The Get information on RTE assetscall returns comprehensive information on all assets uploaded through the [Rich Text Editor field](/docs/developers/create-content-types/rich-text-editor).  
+The Get information on RTE assetscall returns comprehensive information on all assets uploaded through the [Rich Text Editor field](../../../../cs-docs/developers/create-content-types/rich-text-editor.md).  
 To configure the permissions for your application via OAuth, please include the cm.assets.rt:read scope.
 
 #### Query Parameters
@@ -836,7 +836,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 Versioning helps you track changes made to assets over time. You can assign custom names to specific asset versions for easier identification and reference.
 
-For more details, refer to the [Name Asset Versions](/docs/content-managers/asset-versions/name-asset-versions) documentation.
+For more details, refer to the [Name Asset Versions](../../../../cs-docs/content-managers/author-content/name-asset-versions.md) documentation.
 
 ##### Set Version Name for Asset
 
@@ -1124,7 +1124,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
+To learn more about the queries, refer to the [Queries](../../../api-detail/content-delivery-api.md#queries) section of the Content Delivery API doc.
 
 #### URL Parameters
 
@@ -1145,7 +1145,7 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -1229,7 +1229,7 @@ Here's an example of the raw body:
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Pass “application/json” to enter JSON request body and “multipart/form-data” to include form data body parameters.
@@ -1284,9 +1284,9 @@ The Update asset request allows you to update the title and description of an as
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
 
 **Note: **Here are some points to keep in mind:  
-1. You can also use this request to [Generate a permanent URL](/docs/developers/apis/content-management-api#generate-permanent-asset-url)
+1. You can also use this request to [Generate a permanent URL](../../../api-detail/content-management-api.md#generate-permanent-asset-url)
  for your asset, which remains constant irrespective of any further updates to the asset.  
-2. This call updates only the meta data of an asset. To replace an asset, try the [Replace asset](/docs/developers/apis/content-management-api#replace-asset) request under **Asset Collection**.
+2. This call updates only the meta data of an asset. To replace an asset, try the [Replace asset](../../../api-detail/content-management-api.md#replace-asset) request under **Asset Collection**.
 
 Under 'Body', you need to pass the updated details of "Title" and "Description" is in the form of 'raw' body as follows:
 
@@ -1321,7 +1321,7 @@ Another way to provide a "Title" and a "Description" for the asset is to pass th
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Pass “multipart/form-data” as the value to this parameter to include form data body parameters.
@@ -1384,7 +1384,7 @@ Another way to provide a "Title" and a "Description" for the asset is to pass th
 
 **POST** `/assets/{asset_uid}/publish`
 
-The Publish an asset call is used to publish a specific version of an asset on the desired [environment](/docs/developers/set-up-environments/about-environments) either immediately or at a later date/time.  
+The Publish an asset call is used to publish a specific version of an asset on the desired [environment](../../../../cs-docs/developers/set-up-environments/about-environments.md) either immediately or at a later date/time.  
 To configure the permissions for your application via OAuth, please include the cm.asset:publish scope.
 
 **Note: **When you publish an asset, the associated metadata of that asset will also get published. However, when publishing assets in bulk, the associated metadata of the assets will not get published.
@@ -1449,7 +1449,7 @@ In the 'Body' section, enter the asset details, such as locales and environments
 
 **POST** `/assets/{asset_uid}/unpublish`
 
-The Unpublish an asset call is used to unpublish a specific version of an asset from a desired [environment](/docs/developers/set-up-environments/about-environments).  
+The Unpublish an asset call is used to unpublish a specific version of an asset from a desired [environment](../../../../cs-docs/developers/set-up-environments/about-environments.md).  
 To configure the permissions for your application via OAuth, please include the cm.asset:unpublish scope.
 
 In case of **Scheduled Unpublishing**, add the scheduled_at key and provide the date/time in the ISO format as its value. Example: "scheduled_at":"2016-10-07T12:34:36.000Z"
@@ -1540,7 +1540,7 @@ When executing the API call to search for a subfolder, you need to provide the p
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -1597,7 +1597,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -1656,7 +1656,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -1723,7 +1723,7 @@ If you want to place this folder within another folder, provide the UID of the p
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1801,7 +1801,7 @@ In the ‘Body’ section, you need to provide a new name for your folder, and i
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`
@@ -1864,7 +1864,7 @@ To configure the permissions for your application via OAuth, please include the 
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

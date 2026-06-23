@@ -33,7 +33,7 @@ Public apps are available for everyone to install. There are two types of public
 - **Listed Public Apps:** These apps are available in the Contentstack Marketplace. Any user with the organization owner/admin role can install the listed public apps.
 - **Unlisted Public Apps:** Unlisted apps are not available in the Contentstack Marketplace. Unlisted apps are beneficial if the integration starts from the developer's website or for apps like OAuth which need access to multiple regions.
 
-For details on submission and approval of Contentstack Marketplace public apps, please refer to our [App Submission and Approval Guide](/docs/developers/marketplace-platform-guides/app-submission-and-approval-guide).
+For details on submission and approval of Contentstack Marketplace public apps, please refer to our [App Submission and Approval Guide](../marketplace-platform-guides/app-submission-and-approval-guide.md).
 
 ## Common questions
 
@@ -47,4 +47,4 @@ No. **Note**: You cannot install private apps in another organization.
 Listed public apps are available in the Contentstack Marketplace, while unlisted public apps are not available in the Contentstack Marketplace.
 
 ### Where can I find details on submission and approval for public apps?
-Refer to the [App Submission and Approval Guide](/docs/developers/marketplace-platform-guides/app-submission-and-approval-guide).
+Refer to the [App Submission and Approval Guide](../marketplace-platform-guides/app-submission-and-approval-guide.md).

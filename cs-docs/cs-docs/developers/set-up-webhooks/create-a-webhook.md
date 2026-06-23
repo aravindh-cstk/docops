@@ -20,7 +20,7 @@ This page explains how to create a webhook in Contentstack, including configurat
 Contentstack allows you to create and send real-time data to any third-party application or service when a set event occurs.
 
 To create a webhook, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and click the “Settings” icon on the left navigation panel.
+- Go to your [stack](../set-up-stack/about-stack.md), and click the “Settings” icon on the left navigation panel.
 - Click **Webhooks**. You can also use the shortcut key “alt + W” for Windows OS users, and “option + W” for Mac OS users to access Webhooks.
 - Click the **+ New Webhook **button located at the top of the page.
 - Provide the following webhook details:**Name** (*required*): Provide a suitable name for your webhook.
@@ -38,11 +38,11 @@ To create a webhook, log in to your [Contentstack account](https://www.contentst
 
 **Note**: The Basic Auth method is available by default. To enable the additional OAuth 2.0 and Bearer Token authentication methods for your organization, please contact our [support](mailto: support@contentstack.com) team.
 - **Custom Headers** (*optional*): This field lets you add any additional header to the HTTP POST request. You can add multiple headers by clicking **+ Custom Header**.
-- **Email Addresses to Notify** (*optional*): Specify the email addresses of the users you want to notify whenever the [Webhook Circuit Breaker](/docs/developers/set-up-webhooks/webhook-circuit-breaker) disables the webhook.**Note**: You can enter a maximum of **10 email addresses** for a single webhook.
+- **Email Addresses to Notify** (*optional*): Specify the email addresses of the users you want to notify whenever the [Webhook Circuit Breaker](./webhook-circuit-breaker.md) disables the webhook.**Note**: You can enter a maximum of **10 email addresses** for a single webhook.
 - **Stack-level Scope**: Specify conditions for creating, deleting, assigning, or unassigning branches or branch aliases
 - **Branch-level Scope**: Select the branch for which this webhook is applicable and configure trigger conditions for the specific branch.**Note**: You can select only a single branch at a time.
-- **Trigger Conditions** (*required*): Set the conditions for the webhook to trigger. Here you need to define the event when the webhook will be triggered. For ease of use, we have two views under it: **Conditional View** and **Code View**. **Note**Refer the [Webhook Events](https://www.contentstack.com/docs/developers/set-up-webhooks/webhook-events) documentation for more information on the events and methods that can be added under **Code View**.
-- **Trigger Conditions** under **Branch-level Scope** are visible only when stacks have [branches](https://www.contentstack.com/docs/developers/branches/about-branches) enabled.
+- **Trigger Conditions** (*required*): Set the conditions for the webhook to trigger. Here you need to define the event when the webhook will be triggered. For ease of use, we have two views under it: **Conditional View** and **Code View**. **Note**Refer the [Webhook Events](./webhook-events.md) documentation for more information on the events and methods that can be added under **Code View**.
+- **Trigger Conditions** under **Branch-level Scope** are visible only when stacks have [branches](../branches/about-branches.md) enabled.
 - Toggle the **Send Concise Payload** switch to enable the webhook to return a concise JSON payload.
 - Lastly, toggle the **Enable Webhook** switch to enable your webhook and click **Save**.
 
@@ -50,9 +50,9 @@ To create a webhook, log in to your [Contentstack account](https://www.contentst
 
 ## API Reference
 
-To perform this create action via APIs, refer to the [Create a Webhook API request](/docs/developers/apis/content-management-api#create-a-webhook).
+To perform this create action via APIs, refer to the [Create a Webhook API request](../../../api-docs/api-detail/content-management-api.md#create-a-webhook).
 
-**Additional Resource**: After creating a webhook, you can refer to our [guide](/docs/developers/set-up-webhooks/webhook-integrations/) that lists various examples of automating particular tasks using Webhooks and third party services/apps.
+**Additional Resource**: After creating a webhook, you can refer to our [guide](./webhook-integrations.md) that lists various examples of automating particular tasks using Webhooks and third party services/apps.
 
 ## Common questions
 
@@ -66,4 +66,4 @@ Contentstack will establish an OAuth access token and cache it. If an invalid or
 **Note**: You can enter a maximum of **10 email addresses** for a single webhook.
 
 ### How can I create a webhook using the API instead of the UI?
-To perform this create action via APIs, refer to the [Create a Webhook API request](/docs/developers/apis/content-management-api#create-a-webhook).
+To perform this create action via APIs, refer to the [Create a Webhook API request](../../../api-docs/api-detail/content-management-api.md#create-a-webhook).

@@ -21,7 +21,7 @@ Use this guide to manage an existing Personalize project, navigate project areas
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to the Contentstack Organization as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin) that has Personalize enabled
+- Access to the Contentstack Organization as the [Owner](../developers/organization/organization-roles.md#organization-owner)/[Admin](../developers/organization/organization-roles.md#organization-admin) that has Personalize enabled
 - An existing stack you want to link to the Personalize project.
 
 ## Project Workspace
@@ -29,11 +29,11 @@ Use this guide to manage an existing Personalize project, navigate project areas
 - From the **Projects** list, select the project you want to manage.
 
 After opening a project, use the top navigation bar to switch between the following sections:
-- [**Experiences**](/docs/personalize/about-experiences): Create and manage segmented and A/B test experiences. From here, you can activate, pause, reprioritize, or archive experiences as requirements change or experiments conclude.
-- [**Audiences**](/docs/personalize/about-audiences): View the audience segments used for targeting experiences. This area helps you understand which audiences are in use, update targeting criteria, and archive segments that are no longer relevant.
-- [**Attributes**](/docs/personalize/about-attributes): Define and manage the user and contextual attributes that power audience evaluation and targeting decisions across experiences.
-- [**Events**](/docs/personalize/about-events): Configure and track events used for impressions, conversions, and performance measurement, enabling optimization over time.
-- [**Settings**](/docs/personalize/manage-personalize-project#settings): Manage project-level configuration and administration, including project details, CMS stack connection, user access, and lifecycle actions such as project deletion.
+- [**Experiences**](./about-experiences.md): Create and manage segmented and A/B test experiences. From here, you can activate, pause, reprioritize, or archive experiences as requirements change or experiments conclude.
+- [**Audiences**](./about-audiences.md): View the audience segments used for targeting experiences. This area helps you understand which audiences are in use, update targeting criteria, and archive segments that are no longer relevant.
+- [**Attributes**](./about-attributes.md): Define and manage the user and contextual attributes that power audience evaluation and targeting decisions across experiences.
+- [**Events**](./about-events.md): Configure and track events used for impressions, conversions, and performance measurement, enabling optimization over time.
+- [**Settings**](./manage-personalize-project.md#settings): Manage project-level configuration and administration, including project details, CMS stack connection, user access, and lifecycle actions such as project deletion.
 
 Most personalization activities occur in **Experiences**, **Audiences**, **Attributes**, and **Events. **Use **Settings** for administrative tasks that affect the project as a whole.
 
@@ -91,7 +91,7 @@ Project-level roles in Personalize inherit from Contentstack organization roles.
 
 **Modify user roles**
 
-Manage role and permission changes for existing users at the organization or stack level in Contentstack. For step-by-step instructions, refer to [Change Organization Role of Existing Users](/docs/developers/organization/change-organization-role-of-existing-users).
+Manage role and permission changes for existing users at the organization or stack level in Contentstack. For step-by-step instructions, refer to [Change Organization Role of Existing Users](../developers/organization/change-organization-role-of-existing-users.md).
 
 ## Common questions
 

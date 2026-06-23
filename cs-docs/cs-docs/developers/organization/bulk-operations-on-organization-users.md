@@ -17,7 +17,7 @@ This page explains how to perform bulk operations on Contentstack organization u
 
 ## Bulk Operations on Organization Users
 
-You can efficiently perform bulk operations to manage multiple [organization users](/docs/developers/organization/organization-users). These operations allow you to remove users, update their stack access, change their organization roles, force password resets, reset **Multi-Factor Authentication** (**MFA**) and much more in a single step.
+You can efficiently perform bulk operations to manage multiple [organization users](./organization-users.md). These operations allow you to remove users, update their stack access, change their organization roles, force password resets, reset **Multi-Factor Authentication** (**MFA**) and much more in a single step.
 
 **Note**: If any bulk action is not visible for your organization, please reach out to our [support](mailto:support@contentstack.com) team.
 

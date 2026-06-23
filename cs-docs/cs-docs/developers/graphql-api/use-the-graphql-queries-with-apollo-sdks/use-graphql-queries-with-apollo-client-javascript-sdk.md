@@ -18,7 +18,7 @@ This page explains how to use Apollo Client with Contentstack GraphQL queries in
 
 Apollo is a GraphQL client that helps you consume GraphQL APIs.
 
-This step-by-step guide explains how to use the Apollo client and Contentstack GraphQL queries to power the content of your [JavaScript SDK](/docs/developers/javascript-browser) apps.
+This step-by-step guide explains how to use the Apollo client and Contentstack GraphQL queries to power the content of your [JavaScript SDK](../../sdks/content-delivery-sdk/javascript-browser.md) apps.
 
 ## Prerequisites
 
@@ -71,7 +71,7 @@ const client = new ApolloClient({
 
 ## Fetch data using ApolloClient
 
-To fetch all entries of the “Product” [content type](/docs/developers/create-content-types/about-content-types), add the following code snippet in the server file `app.js.`
+To fetch all entries of the “Product” [content type](../../create-content-types/about-content-types.md), add the following code snippet in the server file `app.js.`
 
 ```
 // ... above is the instantiation of the client object.

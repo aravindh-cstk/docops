@@ -24,9 +24,9 @@ This step-by-step guide explains how to integrate Figma designs into Studio usin
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
 - [Install Node.js in your local machine](https://nodejs.org/en/download/)
-- [Install Contentstack CLI](/docs/developers/cli/install-the-cli)
+- [Install Contentstack CLI](../developers/cli/install-the-cli.md)
 - Access to Studio for your organization
-- [Install Studio Figma plugin](/docs/studio/work-with-studio-figma-plugin) within your Figma account
+- [Install Studio Figma plugin](./work-with-studio-figma-plugin.md) within your Figma account
 
 ## Overview of the CLI Workflow
 The following steps provide an overview of the CLI workflow for importing Figma designs into Studio.
@@ -99,7 +99,7 @@ csdx studio:project:set --project-id=
 
 Once the project is set, you can start using component and design token commands in your CLI session.
 
-**Additional Resource:** To get the project ID of your project, refer to the [Create a Project](/docs/studio/create-a-project) document.
+**Additional Resource:** To get the project ID of your project, refer to the [Create a Project](./create-a-project.md) document.
 
 ## Sync your Existing Components
 The `sync` command makes your existing local code components in your Studio project available to the Figma plugin for mapping.
@@ -112,7 +112,7 @@ csdx studio:component:sync --component-path=
 
 Once executed, the CLI registers and maps the specified component internally. The component appears in the plugin’s mapping dropdown, allowing designers to link Figma layers to corresponding code components.
 
-**Additional Resource:**To map components using the Figma plugin, refer to the [Work with the Studio Figma Plugin](/docs/studio/work-with-studio-figma-plugin) documentation.
+**Additional Resource:**To map components using the Figma plugin, refer to the [Work with the Studio Figma Plugin](./work-with-studio-figma-plugin.md) documentation.
 
 **Options**
 - `<path-to-file>` – The full path to a single component file. Required.
@@ -152,7 +152,7 @@ To add the design tokens to your project, perform the following steps:
 ```
 csdx studio:design-token:add --design-token-id=
 ```
-**Additional Resource:** To learn how to retrieve the design token ID, refer to the [Work with Studio Figma Plugin](/docs/studio/work-with-studio-figma-plugin) documentation.
+**Additional Resource:** To learn how to retrieve the design token ID, refer to the [Work with Studio Figma Plugin](./work-with-studio-figma-plugin.md) documentation.
 - The CLI fetches the design tokens and generates configuration files in your project directory.
 - Import the generated design token registry files (register-design-tokens) into your main codebase. This allows Studio to detect and apply them across your project.
 

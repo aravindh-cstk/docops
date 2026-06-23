@@ -17,9 +17,9 @@ This page explains how to edit an existing entry in a specific locale/language a
 
 ## Edit a Localized Entry
 
-Once you [create an entry](/docs/content-managers/working-with-entries/create-an-entry), you can localize and edit it.
+Once you [create an entry](../../content-managers/author-content/create-an-entry.md), you can localize and edit it.
 
-**Note**: Localizing an [entry](/docs/content-managers/working-with-entries/about-entries) does not create a separate item in the main list of entries. Under any given [content type](/docs/developers/create-content-types/about-content-types), you will only see the list of entries in the [master language](/docs/developers/multilingual-content/set-the-master-language).
+**Note**: Localizing an [entry](../../content-managers/author-content/about-entries.md) does not create a separate item in the main list of entries. Under any given [content type](../create-content-types/about-content-types.md), you will only see the list of entries in the [master language](./set-the-master-language.md).
 
 To edit a localized entry, perform the following steps:
 - Open the entry. By default, the entry will open in the master language.
@@ -29,7 +29,7 @@ To edit a localized entry, perform the following steps:
 ## Common questions
 
 ### Does localizing an entry create a new entry in the list?
-No. Localizing an [entry](/docs/content-managers/working-with-entries/about-entries) does not create a separate item in the main list of entries.
+No. Localizing an [entry](../../content-managers/author-content/about-entries.md) does not create a separate item in the main list of entries.
 
 ### What language does an entry open in by default?
 By default, the entry will open in the master language.

@@ -18,7 +18,7 @@ This page explains how Contentstack Assets uses role-based access control (RBAC)
 
 ## About Assets Roles
 
-Contentstack [Assets](/docs/assets/about-assets) uses **role-based access control** (**RBAC**) to manage who can access Assets and what actions they can perform. Permissions are applied at two levels:
+Contentstack [Assets](./about-assets.md) uses **role-based access control** (**RBAC**) to manage who can access Assets and what actions they can perform. Permissions are applied at two levels:
 - **Product-level roles**: These organization-level roles control product-wide capabilities across Assets, such as creating spaces, configuring asset types, managing Asset roles and users, and others.
 - **Space-level roles**: Controls access and actions within a specific space, such as uploading assets, managing workspaces, managing space languages, and managing space users and roles.
 

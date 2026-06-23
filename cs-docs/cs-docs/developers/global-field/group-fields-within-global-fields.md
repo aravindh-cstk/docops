@@ -16,20 +16,20 @@ This page explains how to use **Group** fields inside **Global** fields in Conte
 
 ## Group Fields within Global Fields
 
-Use [Group](/docs/developers/create-content-types/group) fields within [Global](/docs/developers/global-field/about-global-field) fields in Contentstack to streamline content modeling and reduce repetitive configurations. This approach lets you create reusable, structured field groups that can be referenced across multiple [content types](/docs/developers/create-content-types/about-content-types), ensuring consistency, simplifying maintenance, and speeding up content creation.
+Use [Group](../create-content-types/group.md) fields within [Global](./about-global-field.md) fields in Contentstack to streamline content modeling and reduce repetitive configurations. This approach lets you create reusable, structured field groups that can be referenced across multiple [content types](../create-content-types/about-content-types.md), ensuring consistency, simplifying maintenance, and speeding up content creation.
 
 For example, a healthcare website may need to display banners or advertisements with related links on every webpage. Instead of adding these elements separately to each content type, you can create a **Global** field that includes a **Group** field called **Banner** containing:
-- [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) (Banner Title)
-- [Rich Text Editor](https://www.contentstack.com/docs/developers/json-rich-text-editor/about-json-rich-text-editor) (Description)
-- [File field](/docs/developers/create-content-types/file) (Banner Image)
-- [Link field](/docs/developers/create-content-types/link) (Helpful Links)
+- [Single Line Textbox](../create-content-types/single-line-textbox.md) (Banner Title)
+- [Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) (Description)
+- [File field](../create-content-types/file.md) (Banner Image)
+- [Link field](../create-content-types/link.md) (Helpful Links)
 
 Once created, this Global field can be referenced in any content type, ensuring a uniform display of banners and related links across all web pages.
 
-**Note:** Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can create Global fields and Content Types.
+**Note:** Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can create Global fields and Content Types.
 
 To create a Group field within a Global field, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon in the left navigation panel or use the shortcut key “C” (for Windows and Mac OS users).
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon in the left navigation panel or use the shortcut key “C” (for Windows and Mac OS users).
 - On the **Content Models** page, select **Global Fields** and click **+ New Global Field**.
 - Enter a **Name** and **Description** (optional), and click **Proceed**.
 - Click the **Insert a Field (+)** icon and select **Group** field.

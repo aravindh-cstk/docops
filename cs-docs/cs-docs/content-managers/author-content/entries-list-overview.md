@@ -49,7 +49,7 @@ The **Actions** column provides quick access to key entry operations, enabling e
 - **Edit:** Opens the entry editor for making changes or updates to its content.
 - **Edit in Visual Builder:** Allows you to edit the entry in a visual, WYSIWYG (What You See Is What You Get) interface for easier design and layout adjustments.
 - **Preview:** Displays a live preview of the entry, showing how it will appear in its published format.
-- **Copy:** Creates a new [copy](/docs/content-managers/author-content/copy-an-entry/) of the entry with automatically updated titles and unique fields.
+- **Copy:** Creates a new [copy](./copy-an-entry.md) of the entry with automatically updated titles and unique fields.
 - **Publish:** Makes the entry available in the selected environments (e.g., Development, Production).
 - **Unpublish:** Removes the entry from the selected environments, making it inaccessible to users.
 - **Export:** Downloads the entry's content for external use or backup purposes.
@@ -81,7 +81,7 @@ The Views feature streamlines your content management by letting you save and re
 - **Saved Views:** Create and save custom filters for regular access to specific entry types, such as drafts or content types.
 - **Content Type Views:** Quickly locate entries by selecting a content type or grouping them by labels.
 
-For more details, refer to our documentation on [Views](/docs/content-managers/search-content/about-views).
+For more details, refer to our documentation on [Views](../search-content/about-views.md).
 
 ## Filtering and Sorting Entries
 
@@ -109,7 +109,7 @@ Combine multiple filters for tailored entry lists. This is particularly useful w
 
 ### Sorting Options
 
-The sorting feature in Contentstack allows you to efficiently organize and sort [entries](/docs/content-managers/author-content/about-entries) and [assets](/docs/content-managers/author-content/about-assets) using specific system-defined fields.
+The sorting feature in Contentstack allows you to efficiently organize and sort [entries](./about-entries.md) and [assets](./about-assets.md) using specific system-defined fields.
 
 You can sort using the following system-defined fields:
 
@@ -121,16 +121,16 @@ You can sort using the following system-defined fields:
 | Created By | Entries and Assets |
 | Modified At | Entries only |
 | Last Modified | Assets only |
-| [Content Type](/docs/developers/create-content-types/about-content-types) | Entries only |
-| [Language](/docs/developers/multilingual-content/about-languages) | Entries only |
+| [Content Type](../../developers/create-content-types/about-content-types.md) | Entries only |
+| [Language](../../developers/multilingual-content/about-languages.md) | Entries only |
 | Type | Assets only |
 | Filename | Assets only |
 
-**Note:** Sorting is not supported for user-defined fields or multi-valued system fields, such as Tags, [Taxonomies](/docs/developers/taxonomy/about-taxonomy), [Workflow Stages](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages), Publish Details, etc.
+**Note:** Sorting is not supported for user-defined fields or multi-valued system fields, such as Tags, [Taxonomies](../../developers/taxonomy/about-taxonomy.md), [Workflow Stages](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md), Publish Details, etc.
 
 To sort entries or assets, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select either “Entries” or “Assets.” You can also use the shortcut key “E” for Entries or “A” for Assets on both Windows and macOS.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select either “Entries” or “Assets.” You can also use the shortcut key “E” for Entries or “A” for Assets on both Windows and macOS.
 - Click the header of a supported column field:
   - **First click:** Sorts in ascending order (0–9 / A–Z).
   - **Second click:** Sorts in descending order (Z–A / 9–0).
@@ -148,7 +148,7 @@ A **sort icon** appears next to the column header indicating the sort order.
 
 The selected sort order persists, even when you switch modules or refresh the page.
 
-**Tip:** After sorting entries or assets, use the "[save as a new view](/docs/content-managers/search-content/save-your-views)" option to preserve the setup for future access.
+**Tip:** After sorting entries or assets, use the "[save as a new view](../search-content/save-your-views.md)" option to preserve the setup for future access.
 
 ## Display Options and Pagination
 

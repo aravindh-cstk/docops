@@ -25,15 +25,15 @@ By setting up Brand Kit, the AI Assistant applies your brand's guidelines, style
 
 You can install the AI Assistant app directly from our Marketplace and use it within your entries to generate brand-specific content.
 
-**Additional Resource**: For more details, refer to the [Brand Kit](/docs/content-managers/brand-kit/about-brand-kit) documentation.
+**Additional Resource**: For more details, refer to the [Brand Kit](../../content-managers/brand-kit/about-brand-kit.md) documentation.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
 - Brand Kit enabled for your Contentstack Organization
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../organization/organization-roles.md#organization-owner)/[Admin](../organization/organization-roles.md#organization-admin)
 
-**Note**: If Brand Kit is not enabled for your Organization, the AI Assistant app operates as usual. Please follow the [AI Assistant App Installation Guide](/docs/marketplace/ai-assistant) to see how it works in this scenario.
+**Note**: If Brand Kit is not enabled for your Organization, the AI Assistant app operates as usual. Please follow the [AI Assistant App Installation Guide](./ai-assistant.md) to see how it works in this scenario.
 
 Follow this step-by-step guide to install the AI Assistant app within your stack.
 
@@ -53,7 +53,7 @@ From the left-hand side primary navigation, click the **Marketplace** icon.
 - In the pop-up window, select the stack where you want to install the AI Assistant app, accept the **Terms of Service**, and click the **Install **button.
 - On the **Configuration** page, enter the following details:
 
-  **Platform Configuration**: You can manage the API Keys by enabling [Brand Kit](/docs/content-managers/brand-kit), or configure the app using a Contentstack-managed API Key or custom credentials:
+  **Platform Configuration**: You can manage the API Keys by enabling [Brand Kit](../../content-managers/brand-kit.md), or configure the app using a Contentstack-managed API Key or custom credentials:
 
   **Brand Kit Configuration (Overrides API Credentials)**: You can use Brand Kit’s API Key Credentials in the AI Assistant app.
 
@@ -68,7 +68,7 @@ From the left-hand side primary navigation, click the **Marketplace** icon.
 
   Enabling Brand Kit will automatically manage the AI Assistant app API settings, overriding any manual configurations. You can see a note in the **Select API Credentials** section.
 
-  **Additional Resource**: To view the Brand Kit API Key configurations, refer to the [Edit a Brand Kit](/docs/content-managers/brand-kit/edit-a-brand-kit/) document.
+  **Additional Resource**: To view the Brand Kit API Key configurations, refer to the [Edit a Brand Kit](../../content-managers/brand-kit/edit-a-brand-kit.md) document.
 
 - After adding the details, click **Save and Proceed**.
 - **Advanced Configuration**: You can create custom actions to use AI within your entry fields.Perform the following steps to create a Custom Action:
@@ -97,9 +97,9 @@ From the left-hand side primary navigation, click the **Marketplace** icon.
 
   **Additional Resource**:
 
-  To use the AI Assistant app in your stack, configure the field type(s) for the **Field Modifier UI Location**. Refer to the [Field Modifier UI Location](/docs/developers/developer-hub/field-modifier-location) documentation for details.
+  To use the AI Assistant app in your stack, configure the field type(s) for the **Field Modifier UI Location**. Refer to the [Field Modifier UI Location](../developer-hub/field-modifier-location.md) documentation for details.
 
-- For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - You must update the AI Assistant app manually, if available, to install the latest release enhancements.
   If there is any updated version available for installation, you will see a red dot on the stack name.
 - If you ignore the update requirement and directly go to the app configuration by clicking the gear icon, you will get instructions to update the app first.
@@ -113,17 +113,17 @@ To use the AI Assistant app within the entry of a stack, follow the steps given 
 
 Go to the stack where you have installed the AI Assistant app, click the **Content Models** icon from the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type/) by adding relevant details as displayed below:
-- To use the AI Assistant app, let's create an entry in the newly created content type. In the left navigation panel, navigate to the [Entries](/docs/content-managers/author-content/create-an-entry/) page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.
-- You can see the AI Assistant app in the [Field Modifier](/docs/developers/developer-hub/field-modifier-location) location.
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- To use the AI Assistant app, let's create an entry in the newly created content type. In the left navigation panel, navigate to the [Entries](../../content-managers/author-content/create-an-entry.md) page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.
+- You can see the AI Assistant app in the [Field Modifier](../developer-hub/field-modifier-location.md) location.
 - Click the **AI Assistant** app icon, a pop-up appears.
 - A panel opens up. Click the **Brand Kits** drop-down and select the required Brand Kit. Then, from the **Voice Profiles** drop-down, select the applicable Voice Profile. If you want to generate content from the **Knowledge Vault**, enable it. If you disable it, the AI Assistant app will generate content directly from the LLM (Large Language Models).
 
   **Additional Resource**:
 
-  To know more about Brand Kit, Voice Profile, and Knowledge Vault, refer to the [Brand Kit](/docs/content-managers/brand-kit/about-brand-kit), [Voice Profile](/docs/content-managers/brand-kit/about-voice-profile), and [Knowledge Vault](/docs/content-managers/brand-kit/about-knowledge-vault) documentation.
+  To know more about Brand Kit, Voice Profile, and Knowledge Vault, refer to the [Brand Kit](../../content-managers/brand-kit/about-brand-kit.md), [Voice Profile](../../content-managers/brand-kit/about-voice-profile.md), and [Knowledge Vault](../../content-managers/brand-kit/about-knowledge-vault.md) documentation.
 
-- To start using the Brand Kit with the AI Assistant app, refer to the [Get Started with Brand Kit](/docs/content-managers/brand-kit/get-started-with-brand-kit) documentation.
+- To start using the Brand Kit with the AI Assistant app, refer to the [Get Started with Brand Kit](../../content-managers/brand-kit/get-started-with-brand-kit.md) documentation.
 
   **Note**: If you don't want to use Brand Kit or if it is disabled for you, you can still use all the AI Assistant options for creating generic or non-brand specific content.
 
@@ -147,7 +147,7 @@ The AI Assistant app categorize the content generation in three categories:
 
 You can see the Custom Actions that you configured in the advanced configuration settings in [step 1](#install-the-ai-assistant-app-in-marketplace).
 
-**Note**: The AI Assistant options in the UI can be changed or edited by the Contentstack authorized team member or an Organization [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin).
+**Note**: The AI Assistant options in the UI can be changed or edited by the Contentstack authorized team member or an Organization [Owner](../organization/organization-roles.md#organization-owner)/[Admin](../organization/organization-roles.md#organization-admin).
 
 You can use the **Custom Actions** defined in the configuration and transform your content.
 

@@ -16,13 +16,13 @@ This page explains the **Non-localizable** field property, who it applies to (de
 
 ### Non-localizable
 
-The **Non-localizable** property lets you set the field’s data only in the **master language entry**. This means it **cannot be edited** (or translated) in the localized copies of the [entry](/docs/content-managers/working-with-entries/about-entries).
+The **Non-localizable** property lets you set the field’s data only in the **master language entry**. This means it **cannot be edited** (or translated) in the localized copies of the [entry](../../content-managers/author-content/about-entries.md).
 
-The [field](/docs/developers/create-content-types/about-fields) data provided in the master language entry is automatically reflected in all [localized](/docs/developers/multilingual-content/about-localization) copies of the entry. In localized entries, the field remains in a **disabled (non-editable) mode**.
+The [field](./about-fields.md) data provided in the master language entry is automatically reflected in all [localized](../multilingual-content/about-localization.md) copies of the entry. In localized entries, the field remains in a **disabled (non-editable) mode**.
 
 **Warning**: If you edit the data of a Non-localizable field in the master-language entry and save the entry, the field data in all localized copies automatically updates, and the **version number** of the localized entries will **increment by 1**.
 
-**Note**: In some cases, such as when you add a new instance of a Group, Modular Block, or Global in a localized entry, **Non-localizable behavior may not apply**. The new instance is treated as a localized addition, and its fields—including those marked Non-localizable—can be edited. For more details, refer to [Managing Non-Localizable Fields](/docs/developers/create-content-types/managing-non-localizable-fields).
+**Note**: In some cases, such as when you add a new instance of a Group, Modular Block, or Global in a localized entry, **Non-localizable behavior may not apply**. The new instance is treated as a localized addition, and its fields—including those marked Non-localizable—can be edited. For more details, refer to [Managing Non-Localizable Fields](./managing-non-localizable-fields.md).
 
 **Important**: The ability to mark fields as **Non-localizable** within **Group** (**Multiple**), **Modular Blocks**, and **Global** fields (**Multiple**) is plan based. If this feature is not working in your stack, it may not be enabled for your organization. To access it, please contact our [support](mailto:support@contentstack.com) team.For users on older plan, the following limitations apply:
 - Fields inside a **Modular Blocks** field cannot be marked as Non-localizable

@@ -26,7 +26,7 @@ Additionally, you can also set the query parameters: includeUserDetails or inclu
   Enter the UID of your Organization.
   Default: `your_organization_uid`
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](../../../../api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
   Default: `team_uid`
 
 ## Query Parameters

@@ -20,8 +20,8 @@ This page explains how to import an entry in Contentstack by uploading a JSON fi
 Importing an entry in Contentstack allows you to add content by uploading a JSON file. This feature simplifies content migration, updates existing entries, or creates new entries efficiently.
 
 To import an entry, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
-- Click the **+ New Entry** button at the top-right corner of the page, select the required [content type](/docs/developers/create-content-types/about-content-types) and click **Proceed**.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
+- Click the **+ New Entry** button at the top-right corner of the page, select the required [content type](../../developers/create-content-types/about-content-types.md) and click **Proceed**.
 - Click the **horizontal ellipses** at the bottom of the entry editor, and select **Import**.
 - In the **Import Entry** modal, click **Choose a file**, and select the JSON file from your system.
 - Click **Import** to complete the process.
@@ -37,11 +37,11 @@ To import content into an existing entry:
 - Importing an entry replaces the content of the existing entry with the new content provided in the uploaded JSON file.
 - The import process fails if the JSON file references entries or assets outside the current stack or contains incorrect or invalid formatting. Import all referenced entries or assets first.
 
-**Additional Resources:** For details on entry format or schema,, refer to our documentation on [Schema of JSON RTE](/docs/developers/json-rich-text-editor/schema-of-json-rich-text-editor/) and [JSON Schema of Fields](/docs/developers/create-content-types/json-schema-for-creating-a-content-type/#json-schema-of-fields) documentation.
+**Additional Resources:** For details on entry format or schema,, refer to our documentation on [Schema of JSON RTE](../../developers/json-rich-text-editor/schema-of-json-rich-text-editor.md) and [JSON Schema of Fields](../../developers/create-content-types/json-schema-for-creating-a-content-type.md#json-schema-of-fields) documentation.
 
 ## API Reference
 
-To import an entry via API, refer to the [Import an entry](/docs/developers/apis/content-management-api#import-an-entry) API request.
+To import an entry via API, refer to the [Import an entry](../../../api-docs/api-detail/content-management-api.md#import-an-entry) API request.
 
 ## Common questions
 

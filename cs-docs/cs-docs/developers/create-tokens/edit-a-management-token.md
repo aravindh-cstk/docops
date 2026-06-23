@@ -18,7 +18,7 @@ This page explains how to edit an existing management token in Contentstack, inc
 
 In Contentstack, you can update the management token details after it is generated. However, you cannot modify the token value itself.
 
-To edit an existing management token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To edit an existing management token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon in the left navigation panel.
 - Select **Tokens** from the list.
 - Navigate to the **Management Tokens** tab and click a management token you want to edit.

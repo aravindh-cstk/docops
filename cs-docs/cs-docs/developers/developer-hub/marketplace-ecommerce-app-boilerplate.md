@@ -23,7 +23,7 @@ They can define project-level elements or standard methods for one or more proje
 The following guide shows how to build an ecommerce marketplace app using our Marketplace Ecommerce App Boilerplate. For more information about the Marketplace Ecommerce App Boilerplate, you can check the GitHub repository [here](https://github.com/contentstack/marketplace-ecomm-boilerplate-app).
 
 ## Why should you use the Marketplace Ecommerce App Boilerplate?
-- The ecommerce app boilerplate provides a standard code structure for all the required [UI locations](https://www.contentstack.com/docs/developer-hub/about-ui-locations) of the app. You can quickly start developing the app by changing the `root_config` files as needed for the third-party ecommerce system.
+- The ecommerce app boilerplate provides a standard code structure for all the required [UI locations](./about-ui-locations.md) of the app. You can quickly start developing the app by changing the `root_config` files as needed for the third-party ecommerce system.
 - Creating any application is prompt since you only need to use the required routes and corresponding components.
 - We have built a boilerplate that incorporates all the best practices you can use while building your application in Contentstack.
 - With this template, you can save a considerable amount of development time.
@@ -298,9 +298,9 @@ You can enter the Client ID fetched from the third-party ecommerce website and s
 - **Sample Ecommerce App Client Secret:**
 You can use this field to enter Client Secret fetched from third-party ecommerce websites. You can also customize the app configuration with your dedicated fields.
 
-**Note: **With **Save in Entry** field, If you select the ''Custom Fields'' option, you can select the structure of the data you want to save in the entry. If the 'All Fields' option is selected, you might be able to add limited products in the custom field depending on the size of the data (Refer to the [Custom Fields Limitations](/docs/developers/create-custom-fields/limitations-of-custom-fields) documentation, for more details). To increase this limit, **Items Per Page** defines the number of products to be displayed on the selector screen.
+**Note: **With **Save in Entry** field, If you select the ''Custom Fields'' option, you can select the structure of the data you want to save in the entry. If the 'All Fields' option is selected, you might be able to add limited products in the custom field depending on the size of the data (Refer to the [Custom Fields Limitations](../create-custom-fields/limitations-of-custom-fields.md) documentation, for more details). To increase this limit, **Items Per Page** defines the number of products to be displayed on the selector screen.
 
-**Additional Resource:** To learn more, refer to the [App Configuration](/docs/developer-hub/app-config-location) document.
+**Additional Resource:** To learn more, refer to the [App Configuration](./app-config-location.md) document.
 
 Having the basic ecommerce app setup ready, you can now update `root_config` files in the UI and API directories. You can go through the [Template.MD file in our code repository](https://github.com/contentstack/marketplace-ecomm-boilerplate-app/blob/main/TEMPLATE.md) documentation for complete details on `root_config` and update it as per the ecommerce platform that you are trying to integrate.
 

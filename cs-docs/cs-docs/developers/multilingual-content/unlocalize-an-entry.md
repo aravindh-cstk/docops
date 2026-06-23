@@ -21,7 +21,7 @@ When a localized entry is unlocalized, it loses its localized content and starts
 
 **Note:** If there is no data in the fallback locale, the entry inherits content from the master locale entry.
 
-Once you have [created an entry](https://www.contentstack.com/docs/content-managers/work-with-entries/create-an-entry) and localized it in a particular language, you can unlocalize it by performing the following steps:
+Once you have [created an entry](../../content-managers/author-content/create-an-entry.md) and localized it in a particular language, you can unlocalize it by performing the following steps:
 - Open the entry, navigate to the language selector dropdown at the top, and select the language of which you want to unlocalize the entry.
 - The localized copy of the entry in that language will open. Click on the **Unlocalize **button located at the bottom of the page.
 - Confirm your action by clicking on **Unlocalize**.
@@ -33,7 +33,7 @@ Alternatively, you can also unlocalize an entry from the list page. To do so, pe
 
 This will delete the localized content of the entry and will start reflecting the content of the entry in the fallback language.
 
-**Note:** The **Unlocalize** button (inside the Entry Editor) and the **Delete** button (in the Entry list page) though named differently, share the same core function within the system i.e., removing the specific localized content. You can restore/retrieve both deleted as well as unlocalized entries from [Trash](https://www.contentstack.com/docs/developers/manage-trash/about-trash) within 14 days after deletion before they are permanently deleted.
+**Note:** The **Unlocalize** button (inside the Entry Editor) and the **Delete** button (in the Entry list page) though named differently, share the same core function within the system i.e., removing the specific localized content. You can restore/retrieve both deleted as well as unlocalized entries from [Trash](../manage-trash/about-trash.md) within 14 days after deletion before they are permanently deleted.
 
 ## Difference Between Deleting And Unlocalizing An Entry
 
@@ -52,8 +52,8 @@ Additionally, the term “Unlocalize” makes it easier for content managers to 
 ## API Reference
 
 Here are the links to the API requests related to this action:
-- [Unlocalize an entry](/docs/developers/apis/content-management-api#unlocalize-an-entry)
-- [Localize an entry](/docs/developers/apis/content-management-api#localize-an-entry)
+- [Unlocalize an entry](../../../api-docs/api-detail/content-management-api.md#unlocalize-an-entry)
+- [Localize an entry](../../../api-docs/api-detail/content-management-api.md#localize-an-entry)
 
 ## Common questions
 
@@ -64,7 +64,7 @@ No. Unlocalizing an entry deletes only the localized content for a specific lang
 If there is no data in the fallback locale, the entry inherits content from the master locale entry.
 
 ### Can I recover an unlocalized or deleted localized entry?
-Yes. You can restore/retrieve both deleted as well as unlocalized entries from [Trash](https://www.contentstack.com/docs/developers/manage-trash/about-trash) within 14 days after deletion before they are permanently deleted.
+Yes. You can restore/retrieve both deleted as well as unlocalized entries from [Trash](../manage-trash/about-trash.md) within 14 days after deletion before they are permanently deleted.
 
 ### Is “Unlocalize” different from “Delete” in the UI?
 The **Unlocalize** button (inside the Entry Editor) and the **Delete** button (in the Entry list page) though named differently, share the same core function within the system i.e., removing the specific localized content.

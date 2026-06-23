@@ -68,7 +68,7 @@ Sample data:
 - In the Conditional Path, conditions are checked, and if the condition matches, the IF block is executed; if not, the flow moves to the ELSE block. Whereas in Continue Automation If, if the condition is true, it executes the succeeding step, and if it is false, the automation exits completely.
 - Configure the **HTTP Trigger** connector.
 
-    **Additional Resource: **Refer to the [HTTP Trigger connector](https://www.contentstack.com/docs/developers/automation-hub-connectors/http-trigger/) documentation for more details.
+    **Additional Resource: **Refer to the [HTTP Trigger connector](./http-trigger.md) documentation for more details.
 - Under the **Choose Trigger **tab, select the **HTTP Request Trigger** action. Select **HTTP Request Trigger**. This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.
 - Select a **Method**,** **i.e., GET/POST.
 - You will find the applicable** **input “URL.” This URL will be the webhook URL to trigger the automation. You can send your Postman data via this trigger URL.
@@ -164,7 +164,7 @@ Sample data to be sent via Postman:
 ```
 - Configure the **HTTP Trigger** connector.
 
-    **Additional Resource: **Refer to the [HTTP Trigger connector](https://www.contentstack.com/docs/developers/automation-hub-connectors/http-trigger/) documentation for more details.
+    **Additional Resource: **Refer to the [HTTP Trigger connector](./http-trigger.md) documentation for more details.
 - Under the **Choose Trigger **tab, select the **HTTP Request Trigger** action. Select **HTTP Request Trigger**. This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.
 - Select a **Method**, i.e., GET/POST.
 - You will find the applicable** **input “URL.” This URL will be the webhook URL to trigger the automation. You can send your Postman data via this trigger URL.
@@ -248,7 +248,7 @@ Wait action is useful while working with bulk data. Previously, if the number of
 In this example, we are sending bulk data through the HTTP action with a limitation of 5 API requests per second, and we will use the Wait action to delay the API request per second in order to create multiple entries in Contentstack. We will also see how the user receives an error message in the Execution Log section for exceeding the rate limit.
 
 **Note:** Rate Limit is organization based and needs to be set as per the requirement.
-- Configure the HTTP Trigger connector. For more details, refer to the [HTTP Trigger connector](/docs/developers/automation-hub-connectors/http-trigger/)documentation.
+- Configure the HTTP Trigger connector. For more details, refer to the [HTTP Trigger connector](./http-trigger.md)documentation.
 - Once the trigger is configured, configure an** Action Step** and click the **HTTP** action connector.
 - Under **Choose an Action **step, select the **HTTP Request** action.
 - Under the Select Account drop-down, select one of the accounts connected to your project. The sensitive information, such as access code, secret key, API key, etc., can be fetched from the selected account.**Note:** Select Account is an optional field. You can still configure the action without selecting an account.

@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # GraphQL | Retrieving Referenced Entries or Assets
 
-In this section, we learn how to fetch one or more [entries](/docs/content-managers/working-with-entries/about-entries) referred in the [reference](/docs/developers/create-content-types/reference) fields or [assets](/docs/content-managers/working-with-assets/about-assets) used in the entries while retrieving the entries of a [content type](/docs/developers/create-content-types/about-content-types). We also learn how to retrieve entries and assets referenced inside the JSON Rich Text Editor fields of the content type. Contentstack’s GraphQL API uses [relay type connection specification](https://relay.dev/docs/guides/graphql-server-specification/) to fetch referred content.
+In this section, we learn how to fetch one or more [entries](../../../../cs-docs/content-managers/author-content/about-entries.md) referred in the [reference](../../../../cs-docs/developers/create-content-types/reference.md) fields or [assets](/docs/content-managers/working-with-assets/about-assets) used in the entries while retrieving the entries of a [content type](../../../../cs-docs/developers/create-content-types/about-content-types.md). We also learn how to retrieve entries and assets referenced inside the JSON Rich Text Editor fields of the content type. Contentstack’s GraphQL API uses [relay type connection specification](https://relay.dev/docs/guides/graphql-server-specification/) to fetch referred content.
 
 **Relay specification** measures the Reference-Graph-Object structure for an application. The data graph specifies the different connections that exist between each entity of the stack. The following entities form a part of the graph structure:
 
@@ -20,7 +20,7 @@ In this section, we learn how to fetch one or more [entries](/docs/content-manag
 - Edges: Edges represent the connection between two content types, for instance, when a Product content type refers to the entries of another content type (e.g., Category).
 - Connection: Connection represents the one-to-many relationships between a parent content type and its referenced child content types.
 
-You can paginate the list of referenced entries or assets returned in the response body using the [skip](/docs/developers/apis/graphql-content-delivery-api#skip-operator) and [limit](/docs/developers/apis/graphql-content-delivery-api#limit-operator) parameters.
+You can paginate the list of referenced entries or assets returned in the response body using the [skip](../../../api-detail/graphql-content-delivery-api.md#skip-operator) and [limit](../../../api-detail/graphql-content-delivery-api.md#limit-operator) parameters.
 
 **Note**: You can only paginate the response returned for reference fields (referencing entries/assets) that have been marked as “Multiple”.
 
@@ -54,11 +54,11 @@ The above query will paginate all the referenced blog content irrespective of wh
 
 **Note**: To query Reference fields, you need to append the Connection term to the reference field UID as postfix (e.g., **related_blogsConnection**). Subsequently, you need to specify the name of the referenced content type in [PascalCase](https://techterms.com/definition/pascalcase#:~:text=PascalCase%20is%20a%20naming%20convention,in%20PascalCase%20is%20always%20capitalized.) to fetch referenced data through the node (e.g., **SalesBlogs**).
 
-To fetch entries or assets embedded inside a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor), you need to specify the reference connections under the embedded_itemsConnection field. For entries, specify the content type name; and for assets, specify the system-generated SysAsset typename in Pascal casing format, e.g. SysAsset.
+To fetch entries or assets embedded inside a [JSON Rich Text Editor](../../../../cs-docs/developers/json-rich-text-editor.md), you need to specify the reference connections under the embedded_itemsConnection field. For entries, specify the content type name; and for assets, specify the system-generated SysAsset typename in Pascal casing format, e.g. SysAsset.
 
 **Note**: You cannot filter the GraphQL query response based on embedded items or references inside an embedded entry.
 
-If the field has been marked as "Multiple", use the [skip](/docs/developers/apis/graphql-content-delivery-api#skip-operator) and [limit](/docs/developers/apis/graphql-content-delivery-api#limit-operator) parameters to paginate the list of embedded items returned in the response.
+If the field has been marked as "Multiple", use the [skip](../../../api-detail/graphql-content-delivery-api.md#skip-operator) and [limit](../../../api-detail/graphql-content-delivery-api.md#limit-operator) parameters to paginate the list of embedded items returned in the response.
 
 For instance, the **Recent Articles** JSON Rich Text Editor provides a snapshot of the recently published articles for a news-related website. Each snapshot is represented by embedded items within the rich text editor, along with an embedded asset to make for better reading. To fetch only the last five recently published articles, your query will look as follows:
 
@@ -104,9 +104,9 @@ Let us fetch reference fields and assets while retrieving entries.
 
 Get entries of a content type along with the comprehensive details of the specified referenced entry. This query uses [relay specification](https://relay.dev/docs/guides/graphql-server-specification/) to retrieve the details of the entries referred in reference fields.
 
-**Note**: You can use the skip and limit parameters while querying [Reference](/docs/developers/create-content-types/reference) fields that refer to a single content type and have been marked as “Multiple”.
+**Note**: You can use the skip and limit parameters while querying [Reference](../../../../cs-docs/developers/create-content-types/reference.md) fields that refer to a single content type and have been marked as “Multiple”.
 
-If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](/docs/developers/create-content-types/reference-field-upgradation) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
+If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](../../../../cs-docs/developers/create-content-types/reference-field-upgradation.md) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
 
 **Example**: In the **Product** content type, there is a reference field called **Categories**, which refers entries of another content type named **Category**.
 
@@ -245,7 +245,7 @@ The response body of this query will include details of the ‘Title’ field of
 
 **** `/stacks/apiKey/explore`
 
-Get entries of a content type along with the comprehensive details of the embedded entries and assets referenced inside the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor). This query uses inline fragments and relay specification to retrieve details of rich text editors that refer to multiple embedded items.
+Get entries of a content type along with the comprehensive details of the embedded entries and assets referenced inside the [JSON Rich Text Editor](../../../../cs-docs/developers/json-rich-text-editor.md). This query uses inline fragments and relay specification to retrieve details of rich text editors that refer to multiple embedded items.
 
 **Note**: You cannot filter the GraphQL query response based on embedded items or references inside an embedded entry.
 
@@ -315,7 +315,7 @@ query {
 
 Get entries having values based on referenced fields. This query retrieves all entries that satisfy query conditions made on referenced fields that refer to a single content type.
 
-**Note**: If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](/docs/developers/create-content-types/reference-field-upgradation) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
+**Note**: If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](../../../../cs-docs/developers/create-content-types/reference-field-upgradation.md) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
 
 Let us use the equals operator to search based on the **Title** field of the referenced content type, **Category**.
 

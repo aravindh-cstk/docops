@@ -98,7 +98,7 @@ Some of the important variables that you need to set are as follows:
 | api_key | your_stack_api_key |
 | authorization | your_management_token |
 
-**Note:** The Contentstack Postman Collection will require a valid [Management token](/docs/developers/create-tokens/about-management-tokens) to make API calls. Check out the [Authentication](#authentication) section for more details.
+**Note:** The Contentstack Postman Collection will require a valid [Management token](../../../../cs-docs/developers/create-tokens/about-management-tokens.md) to make API calls. Check out the [Authentication](#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 

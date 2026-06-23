@@ -16,7 +16,7 @@ This page explains how to create an **Ooyala** custom field extension in Content
 
 ## Ooyala
 
-The Ooyala custom field [extensions](/docs/developers/about-experience-extensions) allows you to fetch Ooyala videos and display them into a [field](/docs/developers/create-content-types/about-fields) of your [Content Type](/docs/developers/create-content-types/about-content-types). Thus, while creating [entries](/docs/content-managers/working-with-entries/about-entries), you can select one or more videos as input value for the field.
+The Ooyala custom field [extensions](../experience-extensions-overview/about-experience-extensions.md) allows you to fetch Ooyala videos and display them into a [field](../create-content-types/about-fields.md) of your [Content Type](../create-content-types/about-content-types.md). Thus, while creating [entries](../../content-managers/author-content/about-entries.md), you can select one or more videos as input value for the field.
 
 This step-by-step guide explains how to create an **Ooyala** custom field extension for your content types in Contentstack. The steps performed are as follows:
 - [Add the “Ooyala” custom field extension to your stack](#add-the-ooyala-extension-to-your-stack)
@@ -26,12 +26,12 @@ This step-by-step guide explains how to create an **Ooyala** custom field extens
 
 To add this extension to your stack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:
-  - **Title ***(required)*: Provide a suitable title, for example “Ooyala,” for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+  - **Title ***(required)*: Provide a suitable title, for example “Ooyala,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
   - **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **Text**.
   - ******Multiple ***(optional)*: Leave this field unchecked.
   - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
@@ -59,14 +59,14 @@ Now, let’s understand how you can start using this custom field in your conten
 
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [**Custom**](/docs/developers/create-content-types/custom) field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
 - Under **Select Extension**, select the “Ooyala” field that you created and set the other properties. You can add other fields as per requirements.
 - Finally, click on either **Save** or **Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Ooyala **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Ooyala **field in action.
 
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only **10 KB** of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only **10 KB** of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 
-**Additional Resource: **You can also refer to our other documents on custom video extensions such as [YouTube](/docs/developers/create-custom-fields/youtube), [Brightcove](/docs/developers/create-custom-fields/brightcove), and [Vimeo](/docs/developers/create-custom-fields/vimeo).
+**Additional Resource: **You can also refer to our other documents on custom video extensions such as [YouTube](./youtube.md), [Brightcove](./brightcove.md), and [Vimeo](./vimeo.md).
 
 ## Common questions
 

@@ -24,7 +24,7 @@ Stack Administrators can control whether **Drafts and Auto Save** is available f
 When enabled, Contentstack automatically saves entry changes as drafts while users edit content. This helps prevent data loss and supports collaborative editing.
 
 To enable or disable Drafts and Auto Save, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and click **Entries** or use the shortcut key “E” (for both Windows and Mac users).
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and click **Entries** or use the shortcut key “E” (for both Windows and Mac users).
 - Click **Settings** and select **Entries**.
 - Enable or disable the **Drafts and Auto Save** option.
 - **Save** your changes.

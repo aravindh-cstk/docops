@@ -19,10 +19,10 @@ This page explains how to use the Automate feature in Contentstack’s Visual Ed
 
 The Visual Editor enables you to run automation workflows configured by your team directly from the page editing interface. By accessing the Automate App, you can trigger actions such as validations, approvals, or custom processes. Automating common tasks saves time and ensures consistency.
 
-**Note:** The Automate app reflects workflows configured in your stack. If no automation is available, you can [create new workflows](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages) to begin streamlining your content operations.
+**Note:** The Automate app reflects workflows configured in your stack. If no automation is available, you can [create new workflows](../../developers/set-up-workflows-and-publish-rules/add-workflows-and-stages.md) to begin streamlining your content operations.
 
 To access the Automate feature in Visual Editor, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - In the right panel, click the **Automate** icon.
 - The sidebar shows available workflows or automation triggers for the current entry variant. Click the “Run” icon to trigger automation.

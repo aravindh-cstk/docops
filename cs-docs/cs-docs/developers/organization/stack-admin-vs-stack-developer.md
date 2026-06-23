@@ -16,7 +16,7 @@ This page explains how the Stack Admin and Stack Developer roles differ in their
 
 ## Stack Admin vs Stack Developer
 
-The [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) and [Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) of a stack have different rights. The following table highlights the rights of a Stack Admin and Developer:
+The [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin) and [Developer](../invite-users-and-assign-roles/types-of-roles.md#developer) of a stack have different rights. The following table highlights the rights of a Stack Admin and Developer:
 
 | Rights | Admin | Developer |
 |---|---|---|

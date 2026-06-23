@@ -14,7 +14,7 @@ last_updated: 2024-02-28
 
 **POST** `/locales`
 
-This call lets you add a new language to your stack. You can either add a [supported language](/docs/developers/multilingual-content/supported-languages) or a [custom language](/docs/developers/multilingual-content/add-a-custom-language) of your choice.  
+This call lets you add a new language to your stack. You can either add a [supported language](../../../../../cs-docs/developers/multilingual-content/supported-languages.md) or a [custom language](../../../../../cs-docs/developers/multilingual-content/add-a-custom-language.md) of your choice.  
 To configure the permissions for your application via OAuth, please include the cm.languages.management:write scope.
 
 When executing the API call, under the 'Header' section, you need to enter the API key of your stack and the authtoken that you receive after logging into your account.

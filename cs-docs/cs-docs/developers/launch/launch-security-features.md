@@ -84,19 +84,19 @@ When an Application Layer DDoS attack is detected:
 
 This approach gives users visibility into security incidents without generating excessive notifications.
 
-**Additional Resource:** Learn more about [managing notifications](/docs/manage-notifications).
+**Additional Resource:** Learn more about [managing notifications](../../headless-cms/manage-notifications.md).
 
 ### Recommended Practices Using Launch
 
 While DDoS mitigation is handled automatically, users can further strengthen application resilience using Launch-native capabilities:
-- Apply request validation or routing logic using [Edge Functions](/docs/launch/edge-functions).
-- Restrict access to trusted networks using [IP-based access control](/docs/launch/ip-based-access-control-using-edge-functions).
-- Restrict access to bot and automated traffic using [AI crawler and bot](/docs/launch/blocking-ai-crawlers) access controls.
-- Limit the exposure of backend logic implemented through [Cloud Functions](/docs/launch/cloud-functions).
+- Apply request validation or routing logic using [Edge Functions](./edge-functions.md).
+- Restrict access to trusted networks using [IP-based access control](./ip-based-access-control-using-edge-functions.md).
+- Restrict access to bot and automated traffic using [AI crawler and bot](./blocking-ai-crawlers.md) access controls.
+- Limit the exposure of backend logic implemented through [Cloud Functions](./cloud-functions.md).
 
 ## IP-Based Access Control
 
-Contentstack Launch supports [IP-based access control](/docs/launch/ip-based-access-control-using-edge-functions) using [Edge Functions](/docs/launch/edge-functions), allowing you to restrict access to applications based on IP address rules.
+Contentstack Launch supports [IP-based access control](./ip-based-access-control-using-edge-functions.md) using [Edge Functions](./edge-functions.md), allowing you to restrict access to applications based on IP address rules.
 
 This is commonly used to:
 - Protect internal or non-production environments.
@@ -107,7 +107,7 @@ IP-based rules are evaluated at the **edge**, ensuring requests are filtered bef
 
 ## Bot and Automated Traffic Management
 
-Applications hosted on Launch benefit from **CDN-level bot detection and mitigation**, which helps reduce unwanted automated traffic. Additionally, Launch enables the [blocking or controlling of bot traffic](/docs/launch/blocking-ai-crawlers), including **AI crawlers**, using [Edge Functions](/docs/launch/edge-functions).
+Applications hosted on Launch benefit from **CDN-level bot detection and mitigation**, which helps reduce unwanted automated traffic. Additionally, Launch enables the [blocking or controlling of bot traffic](./blocking-ai-crawlers.md), including **AI crawlers**, using [Edge Functions](./edge-functions.md).
 
 This helps protect applications from:
 - Unwanted scraping
@@ -116,15 +116,15 @@ This helps protect applications from:
 
 ## Geolocation-based Traffic Control
 
-Contentstack Launch automatically includes [geolocation headers](/docs/launch/geolocation-headers) with incoming requests, providing geographic information such as **country**, **region**, and **city** based on the **visitor’s IP address**.
+Contentstack Launch automatically includes [geolocation headers](./geolocation-headers.md) with incoming requests, providing geographic information such as **country**, **region**, and **city** based on the **visitor’s IP address**.
 
-These headers can be used in [Edge Functions](/docs/launch/edge-functions) or application logic to apply geolocation-based access and routing controls, such as allowing or blocking traffic from specific countries or regions.
+These headers can be used in [Edge Functions](./edge-functions.md) or application logic to apply geolocation-based access and routing controls, such as allowing or blocking traffic from specific countries or regions.
 
 Geolocation rules are evaluated before requests reach the application runtime, helping enforce region-specific access policies and reduce unwanted traffic.
 
 ## Password Protection
 
-Contentstack Launch supports [password protection](/docs/launch/password-protection) for environments, allowing you to restrict access to specific deployments using a password prompt.
+Contentstack Launch supports [password protection](./password-protection.md) for environments, allowing you to restrict access to specific deployments using a password prompt.
 
 This feature is commonly used to:
 - Restrict access to staging or review environments.
@@ -135,7 +135,7 @@ Password protection operates at the **edge**, ensuring requests are validated be
 
 Password protection is configured per environment and can be enabled or disabled through the Launch dashboard.
 
-In addition, Launch allows you to apply password protection to specific domains within an environment using [Edge Functions](/docs/launch/edge-functions). This enables more granular access control when an environment is associated with multiple domains.
+In addition, Launch allows you to apply password protection to specific domains within an environment using [Edge Functions](./edge-functions.md). This enables more granular access control when an environment is associated with multiple domains.
 
 **Additional Resource:** Learn more about password protection with an [example](https://github.com/contentstack-launch-examples/Launch-Edge-custom-Password-Protection-example).
 
@@ -156,7 +156,7 @@ CSP rules should be configured based on application requirements and third-party
 
 When a custom domain is removed from a Launch environment, associated DNS records should also be removed from your DNS provider.
 
-After [deleting a domain](/docs/launch/custom-domain#delete-a-custom-domain) in Launch, **remove all related DNS records** (such as A, CNAME, ALIAS, or TXT records) from your DNS provider to prevent them from inadvertently pointing to your application or exposing unused endpoints.
+After [deleting a domain](./custom-domain.md#delete-a-custom-domain) in Launch, **remove all related DNS records** (such as A, CNAME, ALIAS, or TXT records) from your DNS provider to prevent them from inadvertently pointing to your application or exposing unused endpoints.
 
 Proper DNS housekeeping helps reduce the risk of domain hijacking and prevents unintended traffic from being routed to stale or deprecated resources.
 
@@ -180,7 +180,7 @@ Launch supports modern versions of the **Transport Layer Security (TLS)** protoc
 
 This helps protect applications from network-based eavesdropping and man-in-the-middle attacks, supporting secure delivery and compliance with modern security standards.
 
-**Additional Resource:** Learn more about [traffic encryption](/docs/launch/traffic-encryption) in Launch.
+**Additional Resource:** Learn more about [traffic encryption](./traffic-encryption.md) in Launch.
 
 ## Runtime and Platform Security
 
@@ -206,7 +206,7 @@ Customers are responsible for addressing vulnerabilities related to:
 
 ### Environment Variables and Secrets
 
-Launch provides secure management of [environment variables](/docs/launch/environment-variables) at the [environment](/docs/launch/environments) level.
+Launch provides secure management of [environment variables](./environment-variables.md) at the [environment](./environments.md) level.
 
 **Best practices:**
 - Store secrets and credentials as environment variables.
@@ -235,7 +235,7 @@ No. All applications hosted on Contentstack Launch are protected by a **CDN laye
 No. **A notification is sent when a DDoS attack starts, but not when it ends.** Ensure you monitor the system manually to confirm when the attack has stopped.
 
 ### Where should I store secrets for my Launch application?
-Use Launch [environment variables](/docs/launch/environment-variables) and follow the listed best practices (store secrets and credentials as environment variables, avoid hardcoding sensitive values, and scope sensitive values only to the environments that require them).
+Use Launch [environment variables](./environment-variables.md) and follow the listed best practices (store secrets and credentials as environment variables, avoid hardcoding sensitive values, and scope sensitive values only to the environments that require them).
 
 ### Who is responsible for fixing vulnerabilities in third-party libraries used by my application?
 Customers are responsible for addressing vulnerabilities related to **third-party libraries and dependencies used within the application**, and any vulnerabilities identified in the customer-managed code must be fixed and redeployed by the user.

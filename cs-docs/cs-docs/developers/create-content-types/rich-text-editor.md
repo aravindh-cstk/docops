@@ -17,9 +17,9 @@ This page explains how the HTML-based Rich Text Editor (RTE) field works in Cont
 
 ## HTML-based Rich Text Editor
 
-The **HTML-based Rich Text Editor **(**RTE**) field enables users to input different types of content such as text, image, videos, and so on. When you add a HTML-based RTE field in a [content type](/docs/developers/create-content-types/about-content-types), it displays a text area with editing and formatting options in the [entry](/docs/content-managers/working-with-entries/about-entries/) page. This field allows you to edit and format content entered in the field without using HTML tags (however, you can use HTML tags in the HTML mode, if needed).
+The **HTML-based Rich Text Editor **(**RTE**) field enables users to input different types of content such as text, image, videos, and so on. When you add a HTML-based RTE field in a [content type](./about-content-types.md), it displays a text area with editing and formatting options in the [entry](../../content-managers/author-content/about-entries.md) page. This field allows you to edit and format content entered in the field without using HTML tags (however, you can use HTML tags in the HTML mode, if needed).
 
-**Note:** We now have a **JSON Rich Text Editor** that stores content in structured JSON blocks and returns clean data in the response body. You can also migrate content from your HTML-based RTE to the new JSON RTE using our CLI. Read more about our [JSON Rich Text Editor](/docs/developers/json-rich-text-editor) and [migration guide](/docs/developers/cli/migrate-content-from-html-rte-to-json-rte).
+**Note:** We now have a **JSON Rich Text Editor** that stores content in structured JSON blocks and returns clean data in the response body. You can also migrate content from your HTML-based RTE to the new JSON RTE using our CLI. Read more about our [JSON Rich Text Editor](../json-rich-text-editor.md) and [migration guide](../cli/migrate-content-from-html-rte-to-json-rte.md).
 
 ## Customized HTML-based Rich Text Editor
 
@@ -27,7 +27,7 @@ Apart from choosing between the **Basic** and **Advanced** editors, developers c
 
 The **Custom** editor allows you to choose from the various formatting options, and control what will be available in the HTML-based RTE toolbar for content managers.
 
-**Note**: Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admins](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and users assigned “[Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer)” roles have the right to customize the RTE field.
+**Note**: Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admins](../invite-users-and-assign-roles/types-of-roles.md#admin), and users assigned “[Developer](../invite-users-and-assign-roles/types-of-roles.md#developer)” roles have the right to customize the RTE field.
 
 To customize the HTML-based RTE field, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - In the Content Type Builder page, add the **Rich Text Editor** (RTE) field to it.
@@ -35,9 +35,9 @@ To customize the HTML-based RTE field, log in to your [Contentstack account](htt
 - To select all the formatting options, check the **Select All** box.
 - After adding and configuring the fields, click either **Save** or **Save and Close** button to save your content type.
 
-Now, when the [content managers](/docs/developers/invite-users-and-assign-roles/types-of-roles#content-manager) edit or [create an entry](/docs/content-managers/working-with-entries/create-an-entry) of this content type, they will see the HTML-based RTE with the formatting/inserting options that you selected in the above step.
+Now, when the [content managers](../invite-users-and-assign-roles/types-of-roles.md#content-manager) edit or [create an entry](../../content-managers/author-content/create-an-entry.md) of this content type, they will see the HTML-based RTE with the formatting/inserting options that you selected in the above step.
 
-**Additional Resource:** You can read more about [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) in our documentation where we have covered it extensively.
+**Additional Resource:** You can read more about [Field Visibility Rules](./about-field-visibility-rules.md) in our documentation where we have covered it extensively.
 
 ## Working with Copy-Paste in HTML-based Rich Text Editor
 
@@ -97,11 +97,11 @@ If pasted content does not render as expected:
 - Recreate complex elements such as nested lists or tables.
 - Adjust frontend styles (for example, margin or padding) if needed.
 
-**Note:** Due to differences in how external tools generate HTML, achieving consistent formatting across all sources is not always possible. Results may vary depending on the content source and structure. For more structured and consistent content handling, consider using the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor).
+**Note:** Due to differences in how external tools generate HTML, achieving consistent formatting across all sources is not always possible. Results may vary depending on the content source and structure. For more structured and consistent content handling, consider using the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md).
 
 ## Embed Entries or Assets within HTML-based Rich Text Editor
 
-Contentstack allows you to embed [entries](/docs/content-managers/working-with-entries/about-entries) and [assets](/docs/content-managers/working-with-assets/about-assets) within the HTML-based Rich Text Editor field. Embedded entries and assets are automatically updated within the Rich Text Editor field whenever the source entry or asset is updated.
+Contentstack allows you to embed [entries](../../content-managers/author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets) within the HTML-based Rich Text Editor field. Embedded entries and assets are automatically updated within the Rich Text Editor field whenever the source entry or asset is updated.
 
 The HTML-based RTE field lets you embed entries inline within the flow of text, as a separate content block, or as a dynamic hyperlink.
 
@@ -209,10 +209,10 @@ Yes, when you publish the updated asset, the older published version gets purged
 - **Can I publish an embedded entry along with its references?**  
 Yes, you can publish an embedded entry along with its references. However, Contentstack only resolves referenced entries that lie up to one level deep when publishing embedded entries and their references.
 - **Do embedded entries follow the fallback logic?**  
-Yes, embedded entries follow the fallback logic. For example, when an embedded entry (hyperlink, inline, or block) is not published in a specific language, you can fetch content from its fallback language (only if it is published) in the same [Content Delivery API](/docs/developers/apis/content-delivery-api) request.
+Yes, embedded entries follow the fallback logic. For example, when an embedded entry (hyperlink, inline, or block) is not published in a specific language, you can fetch content from its fallback language (only if it is published) in the same [Content Delivery API](../../../api-docs/api-detail/content-delivery-api.md) request.
 - **Does this have GraphQL support?**  
-We only supporting this feature via REST API. GraphQL support for embedded entries will be available via our new [JSON-based Rich Text Editor](/docs/developers/json-rich-text-editor). You can refer to the following API requests to learn how to fetch embedded entries or assets:[Get JSON RTE Fields while Retrieving Entries](/docs/developers/apis/graphql-content-delivery-api#get-json-rte-fields-while-retrieving-entries)
-- [Include Embedded RTE Items](/docs/developers/apis/graphql-content-delivery-api#include-embedded-rte-items)
+We only supporting this feature via REST API. GraphQL support for embedded entries will be available via our new [JSON-based Rich Text Editor](../json-rich-text-editor.md). You can refer to the following API requests to learn how to fetch embedded entries or assets:[Get JSON RTE Fields while Retrieving Entries](../../../api-docs/api-detail/graphql-content-delivery-api.md#get-json-rte-fields-while-retrieving-entries)
+- [Include Embedded RTE Items](../../../api-docs/api-detail/graphql-content-delivery-api.md#include-embedded-rte-items)
 
 ## Social Embeds
 
@@ -252,7 +252,7 @@ You can indent or outdent content using the **Indent** and **Outdent** icons in 
 
 ## Limitations for HTML-based RTE
 
-- Malicious content will be removed from the `<a>`, `<b>`, `<i>`, `<img>`, `<svg>`, and `<details>` tags. For example, any JavaScript code within the `href` attribute of `<a>` tag will no longer be visible. You can recover this code from previous versions of the entry by referring to the [Compare Entry Versions](https://www.contentstack.com/docs/content-managers/entry-versions/compare-entry-versions) document.
+- Malicious content will be removed from the `<a>`, `<b>`, `<i>`, `<img>`, `<svg>`, and `<details>` tags. For example, any JavaScript code within the `href` attribute of `<a>` tag will no longer be visible. You can recover this code from previous versions of the entry by referring to the [Compare Entry Versions](../../content-managers/author-content/compare-entry-versions.md) document.
 - All event listeners such as `onload`, `onerror`, `ontoggle`, `onwheel`, `onmouseover`, `oncopy`, etc. attached to any tags will be removed to prevent XSS attacks.
 - Indentation is disabled if text alignment (left, center, right, justify) is applied.
 - Alignment options are disabled for indented blocks.

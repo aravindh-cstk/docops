@@ -26,7 +26,7 @@ Every time you save a content type, Contentstack automatically creates a new ver
 **Note:** You **cannot revert** a content type to a previous version.
 
 To compare two versions of a content type, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon.
 - Open the content type you want to compare.
 - Make a change and click **Save** to create another version.
 - If only one version exists, the **Compare Versions** option is not available.

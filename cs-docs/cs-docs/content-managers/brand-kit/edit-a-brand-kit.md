@@ -23,13 +23,13 @@ You can edit certain details of a Brand Kit from the Brand Kit settings page.
 
 * [Contentstack account](https://www.contentstack.com/login/)
 * Access to Organization that has Brand Kit enabled
-* Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+* Access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin)
 
-**Note**: Only Organization [Owners](/docs/developers/organization/organization-roles#organization-owner) and [Admins](/docs/developers/organization/organization-roles#organization-admin) can view and edit Brand Kits, whereas Organization [Members](/docs/developers/organization/organization-roles#organization-member) can only view their respective Brand Kits.
+**Note**: Only Organization [Owners](../../developers/organization/organization-roles.md#organization-owner) and [Admins](../../developers/organization/organization-roles.md#organization-admin) can view and edit Brand Kits, whereas Organization [Members](../../developers/organization/organization-roles.md#organization-member) can only view their respective Brand Kits.
 
 ### Steps for Execution
 
-**Note**: For this guide, we have assumed that you have already created a Brand Kit. Refer to the [Create a Brand Kit](/docs/brand-kit/create-a-brand-kit) document.
+**Note**: For this guide, we have assumed that you have already created a Brand Kit. Refer to the [Create a Brand Kit](./create-a-brand-kit.md) document.
 
 To edit a Brand Kit, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 

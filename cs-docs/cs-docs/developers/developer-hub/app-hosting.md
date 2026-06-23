@@ -17,9 +17,9 @@ This page explains how to host the UI code for UI Locations using App Hosting in
 
 ## App Hosting in Developer Hub
 
-[UI Locations](/docs/developer-hub/about-ui-locations) are integral to the customization of the Contentstack that allow you to enhance the Contentstack user interface with custom-built elements, providing an enriched user experience. They refer to specific places within the Contentstack dashboard where custom UI components can be embedded. To ensure these components operate seamlessly, their corresponding UI code must be hosted properly.
+[UI Locations](./about-ui-locations.md) are integral to the customization of the Contentstack that allow you to enhance the Contentstack user interface with custom-built elements, providing an enriched user experience. They refer to specific places within the Contentstack dashboard where custom UI components can be embedded. To ensure these components operate seamlessly, their corresponding UI code must be hosted properly.
 
-The App Hosting feature in Contentstack enables you to host your app via Contentstack’s [Launch](/docs/developers/launch#launch-overview) platform or an external web hosting provider.
+The App Hosting feature in Contentstack enables you to host your app via Contentstack’s [Launch](../launch.md#launch-overview) platform or an external web hosting provider.
 
 Contentstack Developer Hub offers two hosting options to cater to your specific needs:
 - Custom Hosting
@@ -42,7 +42,7 @@ A self-managed solution if you require hosting on your own servers or need speci
 
 ### Steps for Custom Hosting
 
-Log in to your [Contentstack account](https://contentstack.com/login), [create an app](/docs/developer-hub/creating-an-app-in-developer-hub/) in the Developer Hub and follow the steps below to host your app:
+Log in to your [Contentstack account](https://contentstack.com/login), [create an app](./creating-an-app-in-developer-hub.md) in the Developer Hub and follow the steps below to host your app:
 - Navigate to the app you created. In the left navigation panel, you will find the icon for **Developer Hub**. Click the icon to navigate to Developer Hub.
 - You will be directed to the app dashboard where you will see all apps created so far. Select an app to get started.
 - In the left navigation panel, click the **Hosting **tab.
@@ -72,7 +72,7 @@ Managed hosting solution recommended for those who wish to leverage Contentstack
 - In the Hosting Type, select **Hosting with Launch**.
 - Select a **Launch Project **from the dropdown. This will fetch all the projects deployed in your Launch platform.To create a new project in Launch, follow the steps below:
 
-Click** + Create a New Project**.**Additional Resource:** Launch allows you to create a project by importing the website code from GitHub or by uploading a zip file. Please refer to the [Create a Project using GitHub](/docs/developers/launch/import-project-using-github/) and [Create a Project using File Upload](/docs/developers/launch/import-project-using-file-upload/) documentation for detailed step by step.
+Click** + Create a New Project**.**Additional Resource:** Launch allows you to create a project by importing the website code from GitHub or by uploading a zip file. Please refer to the [Create a Project using GitHub](../launch/import-project-using-github.md) and [Create a Project using File Upload](../launch/import-project-using-file-upload.md) documentation for detailed step by step.
 - You will see a pop-up to fetch the project from GitHub/Bitbucket or upload a zip file. Click **Next **to proceed further.
 **Note: **When deploying an app via **Launch** in **Developer Hub**, the default output directory is `./build`. Depending on the selected **Framework** **Preset**, this may automatically update (for example, to ./dist). Users can always **override** or **modify** the output directory as needed to match their framework’s build configuration.
 

@@ -23,7 +23,7 @@ The Discussions panel allows you to collaborate with team members by adding, vie
 It simplifies the review process by organizing discussions, tracking their status, and maintaining context all within the Visual Editor environment.
 
 To access the Discussions panel, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - Use the website navigation or the **URL bar** to locate the page for which you want to view the comments.
 - In the right sidebar, click the **Discussions** icon.

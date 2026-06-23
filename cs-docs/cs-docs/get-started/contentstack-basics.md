@@ -138,7 +138,7 @@ Contentstack is an API-based, headless content management platform that allows d
 - Content Management: Content Managers add content and manage content.
 - Content Publishing: Once content is created, it can be published to your website, app, or another channel.
 
-Learn more about [Contentstack Basics](/docs/developers/contentstack-basics/).
+Learn more about [Contentstack Basics](../developers/contentstack-basics.md).
 
 ## Common questions
 

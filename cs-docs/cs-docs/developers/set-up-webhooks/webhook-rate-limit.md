@@ -17,7 +17,7 @@ This page explains what the Webhook Rate Limit is in Contentstack, who it applie
 
 ## Webhook Rate Limit
 
-The webhook rate limit is the maximum number of [webhook](/docs/developers/set-up-webhooks/about-webhooks) executions that an organization can perform per minute. It ensures that all organizations get a fair chance in executing their webhooks. Till now, Contentstack used shared resources to execute webhooks for all the organizations and this mutual dependency in turn affects the overall productivity.
+The webhook rate limit is the maximum number of [webhook](./about-webhooks.md) executions that an organization can perform per minute. It ensures that all organizations get a fair chance in executing their webhooks. Till now, Contentstack used shared resources to execute webhooks for all the organizations and this mutual dependency in turn affects the overall productivity.
 
 If there is no rate limit, then there are no restrictions on the webhook executions for any organization. This means that any organization can lead and flood the network that causes a delay in the webhook executions of other organizations.
 

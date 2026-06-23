@@ -53,7 +53,7 @@ Custom Preview URLs resolve the final preview URL through the following phases:
 ## Configure Custom Preview URLs
 
 To configure Custom Preview URLs, log in to your [Contentstack Account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click “Settings”.
+- Go to your [stack](../set-up-stack/about-stack.md) and click “Settings”.
 - Navigate to **Visual Experience** and select the **Preview URL** tab.
 - Enable the **Custom Preview URL** toggle.
 - Under **Base URL**, define one or more aliases. Aliases allow you to define multiple hostnames for the same content. Each alias contains a **name** (identifier) and a **base URL pattern**.**Tip**: Use aliases to preview the same content across multiple domains or brand-specific hostnames.

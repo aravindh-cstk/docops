@@ -16,7 +16,7 @@ This page explains how to install and start using the Contentstack Ruby SDK and 
 
 ## Get Started with Ruby SDK and Live Preview
 
-This guide will help you get started with Contentstack [Ruby SDK](/docs/developers/sdks/content-delivery-sdk/ruby/about-ruby-sdk/) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Ruby SDK](./about-ruby-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ Let's get started with the implementation.
 
 ## Initializing the Stack with Live Preview
 
-Since the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk) is responsible for communication, you need to initialize it within your stack.
+Since the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) is responsible for communication, you need to initialize it within your stack.
 
 Use the following command to initialize the stack:
 
@@ -49,7 +49,7 @@ $client = Contentstack::Client.new("api_key", "delivery_token", "enviroment_name
 })
 ```
 
-**Note**: By default, the `host` parameter points to the North America endpoint. If your website is hosted on the [European](/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt) data center, then pass the European endpoint against the `host` parameter.
+**Note**: By default, the `host` parameter points to the North America endpoint. If your website is hosted on the [European](../../../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) data center, then pass the European endpoint against the `host` parameter.
 
 ## Add Custom Middleware
 
@@ -88,13 +88,13 @@ end
 
 ## For Server-side Rendered Websites
 
-To install and initialize the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk), you can refer to our [SSR Live Preview Setup](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website#server-side-rendering-ssr-) documentation.
+To install and initialize the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md), you can refer to our [SSR Live Preview Setup](../../../set-up-live-preview/set-up-live-preview-for-your-website.md#server-side-rendering-ssr-) documentation.
 
 ## Query Request
 
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
-To get an [entry](/docs/content-managers/author-content/about-entries), you need to specify the [content type](/docs/developers/create-content-types/about-content-types) UID, locale code, and the UID of the entry.
+To get an [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) UID, locale code, and the UID of the entry.
 
 ```
 entry = $client.content_type('content_type_uid')
@@ -109,10 +109,10 @@ entry = $client.content_type('content_type_uid')
 
 ## More Resources
 
-- [JavaScript Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk)
+- [JavaScript Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
 - [Product Catalog using Ruby SDK and Contentstack](/docs/developers/sample-apps/build-a-product-catalog-using-ruby-on-rails-and-contentstack)
 - [Ruby SDK API Reference](https://www.rubydoc.info/gems/contentstack/Contentstack)
-- [Ruby SDK Changelog](/docs/developers/sdks/content-delivery-sdk/ruby/ruby-sdk-changelog/)
+- [Ruby SDK Changelog](./ruby-sdk-changelog.md)
 - [View and Download Ruby SDK repository on GitHub](https://github.com/contentstack/contentstack-ruby)
 
 ## Common questions

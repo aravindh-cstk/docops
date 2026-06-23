@@ -16,9 +16,9 @@ This page explains how to develop a new JSON Rich Text Editor (JSON RTE) plugin,
 
 ## Create New JSON RTE Plugin
 
-In this guide, we will learn how to develop a new [JSON Rich Text Editor plugin](/docs/developers/json-rich-text-editor-plugins/about-json-rte-plugins) from the ground up.
+In this guide, we will learn how to develop a new [JSON Rich Text Editor plugin](./about-json-rte-plugins.md) from the ground up.
 
-**Note:** When working within specific branches, plugins added or created will be available only within that particular branch. For example, you are working within the development branch, and you add new JSON RTE Plugins to this branch. These JSON RTE plugins will be available only within the development branch. Refer to our [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) document for more information.
+**Note:** When working within specific branches, plugins added or created will be available only within that particular branch. For example, you are working within the development branch, and you add new JSON RTE Plugins to this branch. These JSON RTE plugins will be available only within the development branch. Refer to our [Branch-specific Modules](../branches/branch-specific-modules.md) document for more information.
 
 ## Prerequisites
 
@@ -135,7 +135,7 @@ There are two ways to host your custom JSON RTE plugin code:
 - GCP NA region - `https://gcp-na-rte-extension.contentstack.com`
 - GCP EU region - `https://gcp-eu-rte-extension.contentstack.com`
 
-- **Host on Contentstack:** Through this method, you can host your custom JSON RTE plugin code on Contentstack. To do this, you need to upload the dist/plugin.system.js file to Contentstack’s [Assets](/docs/content-managers/working-with-assets/create-upload-assets) repository. Now, you can use the file URL for your JSON RTE plugin.
+- **Host on Contentstack:** Through this method, you can host your custom JSON RTE plugin code on Contentstack. To do this, you need to upload the dist/plugin.system.js file to Contentstack’s [Assets](../../content-managers/author-content/create-upload-assets.md) repository. Now, you can use the file URL for your JSON RTE plugin.
 
 ### Add JSON RTE Plugin to a Stack
 
@@ -158,21 +158,21 @@ The settings provided in this field will act as the default configuration settin
 
 ### Use Custom JSON RTE Plugins in Content Types
 
-Once you have added a custom JSON RTE plugin, you can use it in your content type’s JSON Rich Text Editor field(s). To add a custom JSON RTE plugin in your content type, follow the steps mentioned in the [Use JSON RTE Plugins in Content Types](/docs/developers/json-rich-text-editor-plugins/use-json-rte-plugins-in-content-types) article.
+Once you have added a custom JSON RTE plugin, you can use it in your content type’s JSON Rich Text Editor field(s). To add a custom JSON RTE plugin in your content type, follow the steps mentioned in the [Use JSON RTE Plugins in Content Types](./use-json-rte-plugins-in-content-types.md) article.
 
 **Note:** You can add a maximum of **five** plugins to a single JSON RTE field in a content type.
 
 ## API Reference
 
-To retrieve, add or update JSON RTE plugins within your stack via API request, refer to the [JSON RTE Plugins collection](/docs/developers/apis/content-management-api/#json-rte-plugins) or the following API requests in our CMA API documentation:
+To retrieve, add or update JSON RTE plugins within your stack via API request, refer to the [JSON RTE Plugins collection](../../../api-docs/api-detail/content-management-api.md#json-rte-plugins) or the following API requests in our CMA API documentation:
 
-[Get all JSON RTE plugins](/docs/developers/apis/content-management-api#get-all-json-rte-plugins)
+[Get all JSON RTE plugins](../../../api-docs/api-detail/content-management-api.md#get-all-json-rte-plugins)
 
-- [Get a single JSON RTE plugin](/docs/developers/apis/content-management-api#get-a-single-json-rte-plugin)
-- [Create a custom JSON RTE plugin with source URL](/docs/developers/apis/content-management-api#create-a-json-rte-plugin-with-source-url)
-- [Update a custom JSON RTE plugin](/docs/developers/apis/content-management-api#update-a-json-rte-plugin)
-- [Delete custom JSON RTE plugin](/docs/developers/apis/content-management-api#delete-json-rte-plugin)
-- [Create Content Type with JSON RTE plugin](/docs/developers/apis/content-management-api#create-content-type-with-json-rte-plugin)
+- [Get a single JSON RTE plugin](../../../api-docs/api-detail/content-management-api.md#get-a-single-json-rte-plugin)
+- [Create a custom JSON RTE plugin with source URL](../../../api-docs/api-detail/content-management-api.md#create-a-json-rte-plugin-with-source-url)
+- [Update a custom JSON RTE plugin](../../../api-docs/api-detail/content-management-api.md#update-a-json-rte-plugin)
+- [Delete custom JSON RTE plugin](../../../api-docs/api-detail/content-management-api.md#delete-json-rte-plugin)
+- [Create Content Type with JSON RTE plugin](../../../api-docs/api-detail/content-management-api.md#create-content-type-with-json-rte-plugin)
 
 **Additional Resource:** If you want to customize your JSON RTE plugin, refer to the [JSON RTE Plugin SDK API Reference](https://github.com/contentstack/rte-plugin-boilerplate/blob/main/docs/api-reference.md#contentstack-json-rte-plugins-sdk-api-reference).
 

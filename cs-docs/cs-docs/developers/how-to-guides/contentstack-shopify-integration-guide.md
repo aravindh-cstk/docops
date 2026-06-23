@@ -24,7 +24,7 @@ The Contentstack Shopify Integration enables seamless two-way syncing of product
 - [Shopify account](https://accounts.shopify.com/)
 - [Shopify store](https://accounts.shopify.com/store-login)
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Contentstack Organization and Stack as the [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner)/[Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)
+- Access to the Contentstack Organization and Stack as the [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner)/[Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)
 
 ## Steps for Executions
 
@@ -65,7 +65,7 @@ Log in to your [Shopify account](https://accounts.shopify.com/store-login).
 - Click the **Sync Now** button to initiate the syncing process between Contentstack and Shopify.  
   If some Products or Collections are available in Contentstack, but not in Shopify, they will be created in Shopify. Click **Confirm** to proceed with the syncing process.  
 
-  **Note**: All Contentstack [Fields](/docs/developers/create-content-types#fields) support this transition from Contentstack to Shopify except [Custom](/docs/developers/create-content-types/custom) and [Taxonomy](/docs/developers/create-content-types/taxonomy) fields.
+  **Note**: All Contentstack [Fields](/docs/developers/create-content-types#fields) support this transition from Contentstack to Shopify except [Custom](../create-content-types/custom.md) and [Taxonomy](../create-content-types/taxonomy.md) fields.
 - After the syncing process is complete, it will show a **Success** status with the day, date, and time.
 - Click the **Disconnect** button to stop the syncing process without updating the data in Shopify and Contentstack.  
   In the modal, click the **Disconnect** button again to stop the sync.  
@@ -90,7 +90,7 @@ In Shopify, **Meta Fields** are custom data structures used to store additional 
 
 In Shopify, **Meta Objects** are custom data structures used to store additional information of complex fields of products and collections from Contentstack along with other content types. This allows for a seamless flow of content between Shopify and Contentstack’s CMS. Through the Shopify admin interface or API, these Meta Objects are attached to products, enabling additional content, like data from Contentstack, to enhance the overall customer experience.
 
-Contentstack transfers data to Shopify's Meta Objects using [Webhooks](/docs/developers/set-up-webhooks/about-webhooks). These webhooks trigger automatically whenever content is updated or published in Contentstack, ensuring real-time synchronization within Shopify. In case of Webhooks failure, you can sync the data manually again by clicking the **Sync Now** button.
+Contentstack transfers data to Shopify's Meta Objects using [Webhooks](../set-up-webhooks/about-webhooks.md). These webhooks trigger automatically whenever content is updated or published in Contentstack, ensuring real-time synchronization within Shopify. In case of Webhooks failure, you can sync the data manually again by clicking the **Sync Now** button.
 
 **Additional Resource**: For more information, refer to the [Shopify Meta Objects](https://help.shopify.com/en/manual/custom-data/metaobjects) documentation.
 
@@ -98,8 +98,8 @@ Contentstack transfers data to Shopify's Meta Objects using [Webhooks](/docs/dev
 
 To handle smooth synchronization with Shopify, Contentstack defined naming conventions.
 
-- **Title**: Shopify allows duplicate names in Product Titles, but Contentstack requires each entry [Title](/docs/developers/create-content-types/title) to be unique. To address this in the Contentstack entry, the **Product ID** is appended to the **Title**, separated by a hyphen (-).Example: *SampleProduct* becomes *SampleProduct-1234567890123*
-- **URL**: If you enter an incorrect URL in the Contentstack entry, an error will occur during the sync with Shopify. The [URL](/docs/developers/create-content-types/url) must start with “**https:**”, “**http:**”, “**mailto:**”, “**sms:**”, or “**tel:**”.Example: [https://www.contentstack.com](https://www.contentstack.com)
+- **Title**: Shopify allows duplicate names in Product Titles, but Contentstack requires each entry [Title](../create-content-types/title.md) to be unique. To address this in the Contentstack entry, the **Product ID** is appended to the **Title**, separated by a hyphen (-).Example: *SampleProduct* becomes *SampleProduct-1234567890123*
+- **URL**: If you enter an incorrect URL in the Contentstack entry, an error will occur during the sync with Shopify. The [URL](../create-content-types/url.md) must start with “**https:**”, “**http:**”, “**mailto:**”, “**sms:**”, or “**tel:**”.Example: [https://www.contentstack.com](https://www.contentstack.com)
 - **Group**: Group field can be used to hold and transfer grouped data, like product specifications or attributes, within Shopify’s meta objects.Meta Objects Name Format for Group field:`<content_type_uid>-<group_uid>`
 
   Example: *sample_content_type-sample_group*
@@ -107,14 +107,14 @@ To handle smooth synchronization with Shopify, Contentstack defined naming conve
   **For Nested Groups**
 
   Meta Objects Field Name Example: *sample_content_type-group_1-group_2-group_3.field_1*
-- **Modular Block**: [Modular Block](/docs/developers/create-content-types/modular-blocks) field can store and sync complex, multi-part content like product descriptions, specifications, promotional, or other details.Meta Objects Name Format for Modular Block field:`<content_type_uid>-<modular_block_uid>-<block_uid>`
+- **Modular Block**: [Modular Block](../create-content-types/modular-blocks.md) field can store and sync complex, multi-part content like product descriptions, specifications, promotional, or other details.Meta Objects Name Format for Modular Block field:`<content_type_uid>-<modular_block_uid>-<block_uid>`
 
   Example: *sample_content_type-modular_blocks-block_1*
-- **Global Field**: Contentstack’s [Global](/docs/developers/create-content-types/global) Field is similar to Shopify’s Global field. It can store common data applicable to multiple products or collections, such as brand information, pricing models, or universal tags.
+- **Global Field**: Contentstack’s [Global](../create-content-types/global.md) Field is similar to Shopify’s Global field. It can store common data applicable to multiple products or collections, such as brand information, pricing models, or universal tags.
 
 These naming conventions help maintain consistency and readability across both Shopify and Contentstack platforms.
 
-**Note**: If the [Multiple](/docs/developers/create-content-types/multiple) property is enabled or selected under **Advanced** properties in the [URL](/docs/developers/create-content-types/url), [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox), [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox), [Rich Text Editor](/docs/developers/create-content-types/rich-text-editor), [JSON Rich Text Editor, Markdown](/docs/developers/json-rich-text-editor/about-json-rich-text-editor), [Select](/docs/developers/create-content-types/select), [Number](/docs/developers/create-content-types/number), and [Boolean](/docs/developers/create-content-types/boolean) fields, the sync will fail as Shopify does not support this functionality.
+**Note**: If the [Multiple](../create-content-types/multiple.md) property is enabled or selected under **Advanced** properties in the [URL](../create-content-types/url.md), [Single Line Textbox](../create-content-types/single-line-textbox.md), [Multi Line Textbox](../create-content-types/multi-line-textbox.md), [Rich Text Editor](../create-content-types/rich-text-editor.md), [JSON Rich Text Editor, Markdown](../json-rich-text-editor/about-json-rich-text-editor.md), [Select](../create-content-types/select.md), [Number](../create-content-types/number.md), and [Boolean](../create-content-types/boolean.md) fields, the sync will fail as Shopify does not support this functionality.
 
 ## Common questions
 

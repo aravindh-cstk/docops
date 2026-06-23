@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # Brand Kit | Voice Profile
 
-[Voice Profiles](/docs/content-managers/brand-kit/about-voice-profile) allows you to define unique AI-generated brand voices that you can apply to your content. By using the API requests, you can create, view, update, and delete the Voice Profile in a Brand Kit.
+[Voice Profiles](../../../../cs-docs/content-managers/brand-kit/about-voice-profile.md) allows you to define unique AI-generated brand voices that you can apply to your content. By using the API requests, you can create, view, update, and delete the Voice Profile in a Brand Kit.
 
 ## Get All Voice Profiles
 
@@ -22,7 +22,7 @@ last_updated: 2026-06-02
 
 The Get All Voice Profiles request fetches the list of all Voice Profiles in a Brand Kit within an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 #### URL Parameters
 
@@ -63,7 +63,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]  `
 
 #### Sample Response
@@ -101,7 +101,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Get a Single Voice Profile request fetches the specific Voice Profile from a Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 #### URL Parameters
 
@@ -127,7 +127,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Response
@@ -165,7 +165,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Create Voice Profile request lets you create a new Voice Profile in a Brand Kit within an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body for creating a new Voice Profile:
 
@@ -199,7 +199,7 @@ Here’s an example of the Request Body for creating a new Voice Profile:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Request
@@ -255,7 +255,7 @@ Here’s an example of the Request Body for creating a new Voice Profile:
 
 The Update Voice Profile request lets you update an existing Voice Profile from the Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body for updating a Voice Profile:
 
@@ -293,7 +293,7 @@ Here’s an example of the Request Body for updating a Voice Profile:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Request
@@ -353,7 +353,7 @@ Here’s an example of the Request Body for updating a Voice Profile:
 
 The Delete Voice Profile request lets you delete an existing Voice Profile from the Brand Kits in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 #### URL Parameters
 
@@ -373,7 +373,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../../../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 #### Sample Response

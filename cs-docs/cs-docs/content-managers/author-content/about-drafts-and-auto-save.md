@@ -24,7 +24,7 @@ Drafts and Auto Save automatically captures your changes while you edit an entry
 
 As you edit, Contentstack saves draft changes in the background. The entry remains in the draft stage until you click **Save**. Clicking **Save** confirms your edits and creates a new major version.
 
-**Note**: Administrators can [manage](/docs/content-managers/author-content/enable-drafts-and-auto-save) the feature at the stack level. To review or update the setting, navigate to **Settings**, then **Entries** and enable the **Drafts and Auto Save** checkbox.
+**Note**: Administrators can [manage](./enable-drafts-and-auto-save.md) the feature at the stack level. To review or update the setting, navigate to **Settings**, then **Entries** and enable the **Drafts and Auto Save** checkbox.
 
 Drafts and Auto Save combines automatic draft protection with structured version control.
 

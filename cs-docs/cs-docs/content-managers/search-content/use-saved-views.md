@@ -20,7 +20,7 @@ This page explains how to use, modify, and manage Saved Views in Contentstack’
 Saved Views in Contentstack let you quickly access customized search settings and filters, streamlining your content management process. By using saved views, you can efficiently navigate through entries and assets, saving time and enhancing your workflow.
 
 To make the most of your saved views, log in to your [Contentstack account](https://www.contentstack.com/login) and follow the steps given below:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select the “Entries” or “Assets” module.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the “Entries” or “Assets” module.
 - Within the **Views** tab, you will find a list of predefined views under **Popular Views** and your saved views under **Saved Views**.
 - Select a saved view to immediately apply the search settings and filters you configured earlier. This allows you to pick up exactly where you left off.
 
@@ -36,7 +36,7 @@ After selecting a view, any changes you make to the search settings or filters w
 
 For any saved view, click the vertical ellipsis next to it to see the following options:
 - **Rename**: Change the name of your saved view.
-- **Share**: [Share](/docs/content-managers/search-content/shared-views) the view with users or roles in your stack.
+- **Share**: [Share](./shared-views.md) the view with users or roles in your stack.
 - **Copy Link**: Share the view link with collaborators for quick access.**Note**: Anyone with the link can access the view and save it as a new view.
 - **View Details**: See key information, including the creator, last modified date, and access permissions.
 - **Delete**: Permanently remove the view if it’s no longer needed. For shared views, the owner can either remove it for all users or transfer ownership to another user before removing it for themselves.

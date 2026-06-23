@@ -24,7 +24,7 @@ JSON Rich Text Editor Plugins
 
 ##### Introduction
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [RTE UI Location](/docs/developers/developer-hub/rte-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [RTE UI Location](./developer-hub/rte-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 The JSON Rich Text Editor Plugins extension lets you add/create customized plugins to extend the functionality of your JSON RTE.
 

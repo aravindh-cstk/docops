@@ -19,10 +19,10 @@ This page explains how content managers can delete multiple entries at once in a
 Deleting multiple entries at once simplifies bulk content cleanup, saving time and effort while streamlining content management.
 
 To bulk delete entries from your stack, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
 - Use the checkboxes to select the entries you want to delete.
 - After selecting the entries, click the **Delete** option in the floating panel that appears.
-- A confirmation dialog will appear. Click **Delete** to move the selected entries to the [Trash](https://www.contentstack.com/docs/developers/manage-trash/about-trash).
+- A confirmation dialog will appear. Click **Delete** to move the selected entries to the [Trash](../../developers/manage-trash/about-trash.md).
 
 **Note**:
 - Deleted entries are moved to the trash and can be restored within **14 days**. After this period, they will be permanently deleted.

@@ -22,13 +22,13 @@ Managing comments in Contentstack allows users to maintain clear and relevant di
 **Note:** Only the user who posted the comment can edit or delete it.
 
 To edit or delete a comment, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and edit an existing entry.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and edit an existing entry.
 - Open an entry and click the “Comment” icon of the field where you want to update the comments.
 - Hover over the comment you want to edit or delete, then click the "Edit" or "Delete" icon. After editing the comment, click **Update**.
 
 **Note:** Deleted comments are permanently removed and cannot be restored.
 
-**Additional Resource:** Refer to the [JSON RTE comments](/docs/developers/json-rich-text-editor/json-rte-comments#edit-or-delete-a-json-rte-comment/) document for editing or deleting comments in JSON Rich Text Editor.
+**Additional Resource:** Refer to the [JSON RTE comments](../../developers/json-rich-text-editor/json-rte-comments.md#edit-or-delete-a-json-rte-comment/) document for editing or deleting comments in JSON Rich Text Editor.
 
 ## Common questions
 
@@ -42,4 +42,4 @@ No. Deleted comments are permanently removed and cannot be restored.
 Open the entry, click the “Comment” icon for the relevant field, then hover over the comment and click the "Edit" or "Delete" icon.
 
 **What if my comment is in the JSON Rich Text Editor?**  
-Refer to the [JSON RTE comments](/docs/developers/json-rich-text-editor/json-rte-comments#edit-or-delete-a-json-rte-comment/) document for editing or deleting comments in JSON Rich Text Editor.
+Refer to the [JSON RTE comments](../../developers/json-rich-text-editor/json-rte-comments.md#edit-or-delete-a-json-rte-comment/) document for editing or deleting comments in JSON Rich Text Editor.

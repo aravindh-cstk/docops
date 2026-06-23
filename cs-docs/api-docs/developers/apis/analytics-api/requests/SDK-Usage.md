@@ -16,7 +16,7 @@ last_updated: 2025-02-25
 
 The SDK Usage request gets you the number of requests that were made using the SDKs. It helps you get an overview of the SDK usage by your customers.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../../../../api-detail/analytics-api.md#retrieve-data) endpoint.
 
 ```
 {

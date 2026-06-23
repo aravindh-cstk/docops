@@ -20,7 +20,7 @@ This page explains how to create a taxonomy term in Contentstack (including pare
 Terms serve as the primary classification elements within a taxonomy, allowing you to establish hierarchical structures and incorporate them into entries.
 
 To create a term, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to create a term, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to create a term, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Create a new taxonomy or select an existing taxonomy in which you want to create terms.
 - Click the **Add Term** button.
 - Enter the **Name** for the term. Contentstack auto-generates a **Unique ID**, which you can edit before saving.**Note**: Once saved, you cannot change the UID.
@@ -30,7 +30,7 @@ To create a term, log in to your [Contentstack account](https://www.contentstack
 
 ## API Reference
 
-To create terms via API, refer to the [Create a Term](/docs/developers/apis/content-management-api#create-a-term) API request.
+To create terms via API, refer to the [Create a Term](../../../api-docs/api-detail/content-management-api.md#create-a-term) API request.
 
 ## Common questions
 
@@ -44,4 +44,4 @@ Click the vertical ellipsis next to an existing term and select **Create Sibling
 Click the vertical ellipsis next to the parent term and select **Create Child**, then enter the details for the child term.
 
 ### Can I create terms using an API instead of the UI?
-Yes. To create terms via API, refer to the [Create a Term](/docs/developers/apis/content-management-api#create-a-term) API request.
+Yes. To create terms via API, refer to the [Create a Term](../../../api-docs/api-detail/content-management-api.md#create-a-term) API request.

@@ -22,7 +22,7 @@ In this guide, you will learn about the different update types (Major, Minor, or
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../organization/organization-roles.md#organization-owner)/[Admin](../organization/organization-roles.md#organization-admin)
 
 ## Steps for Execution
 To view the latest releases of an app, log in to your [Contentstack account](https://www.contentstack.com/login) and follow the steps below:
@@ -45,7 +45,7 @@ There are three Release types: **Major** (1.0.0), **Minor** (1.1.0), and **Patch
 Click **Manage** from the left panel, select **Installed Apps**, open the app modal, and then click the **Releases** tab.
 
 ### Who needs access to view app releases in the Marketplace?
-You need access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin).
+You need access to the Contentstack Organization/Stack as the [Owner](../organization/organization-roles.md#organization-owner)/[Admin](../organization/organization-roles.md#organization-admin).
 
 ### What should I do after reviewing the app release details?
 After reviewing the app release details, click the **Install** button to install and configure the latest version of the app.

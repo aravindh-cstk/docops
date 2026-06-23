@@ -17,13 +17,13 @@ This page explains how to leave a Contentstack stack when you no longer need acc
 ### Leave a Stack
 
 You can leave a stack when you no longer need access or want to stop collaborating. However, stack
-[owners](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) cannot exit directly. They must
-[transfer ownership](/docs/developers/set-up-stack/transfer-stack-ownership) to another user or
-[delete the stack](/docs/developers/organization/organization-stacks#delete-a-stack).
+[owners](../invite-users-and-assign-roles/types-of-roles.md#owner) cannot exit directly. They must
+[transfer ownership](./transfer-stack-ownership.md) to another user or
+[delete the stack](../organization/organization-stacks.md#delete-a-stack).
 
 To leave a stack, log in to your
 [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
+- Go to your [stack](./about-stack.md) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 - Click **Leave Stack** and confirm your action.
 
 Once you leave the stack, you will lose access to its content. This action **cannot** be undone.
@@ -31,10 +31,10 @@ Once you leave the stack, you will lose access to its content. This action **can
 ## Common questions
 
 **Q: Can a stack owner leave a stack directly?**  
-A: No. Stack [owners](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) cannot exit directly; they must [transfer ownership](/docs/developers/set-up-stack/transfer-stack-ownership) or [delete the stack](/docs/developers/organization/organization-stacks#delete-a-stack).
+A: No. Stack [owners](../invite-users-and-assign-roles/types-of-roles.md#owner) cannot exit directly; they must [transfer ownership](./transfer-stack-ownership.md) or [delete the stack](../organization/organization-stacks.md#delete-a-stack).
 
 **Q: What happens after I leave a stack?**  
 A: Once you leave the stack, you will lose access to its content. This action **cannot** be undone.
 
 **Q: Where do I find the option to leave a stack?**  
-A: Go to your [stack](/docs/developers/set-up-stack/about-stack), open “Settings” (or press “S”), then click **Leave Stack** and confirm your action.
+A: Go to your [stack](./about-stack.md), open “Settings” (or press “S”), then click **Leave Stack** and confirm your action.

@@ -101,7 +101,7 @@ attrs": {
 
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
 
-  **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+  **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click the **Save** button.
 - Click **Open Stack** to start using the YouTube application.
 
@@ -120,7 +120,7 @@ There are two ways to use the YouTube application in your entry:
 
 ### Steps to use the YouTube application using a Custom field
 
-- In the Content Type Builder page, add a [Custom](/docs/developers/create-custom-fields/about-custom-fields/) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the Content Type Builder page, add a [Custom](../create-custom-fields/about-custom-fields.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **YouTube** and click the **Proceed** button.
 
 This adds YouTube in the custom field.
@@ -162,7 +162,7 @@ Delete action generates a prompt modal for confirmation. Click the **Delete** bu
 
 ### Steps to use the YouTube application in a JSON Rich Text Editor field
 
-- In the Content Type Builder page, add a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the Content Type Builder page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select JSON RTE Plugin(s)**, select **YouTube**, and then click **Add Plugin(s)**.
 
 This adds YouTube in the JSON Rich Text Editor field.

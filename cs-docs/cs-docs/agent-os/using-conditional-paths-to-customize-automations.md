@@ -49,7 +49,7 @@ Log in to your [Contentstack account ](https://www.contentstack.com/login/)and c
 - Select **Configure Trigger **from the left navigation panel.
 - Within the **Configure Trigger **step, click the **Contentstack** connector.
 - Click **Entry Trigger** from the list of trigger events.
-- Add your Contentstack account. For more information, refer to the [Contentstack Trigger](/docs/developers/automation-hub-connectors/contentstack-trigger/) documentation.
+- Add your Contentstack account. For more information, refer to the [Contentstack Trigger](./contentstack-trigger.md) documentation.
 - Select **Entry Created** event from the list of events. Select a **Stack, **and a **Branch** from the **Lookup** dropdown.
 - Once done, click **Proceed**.
 - Click **Test Trigger** to test the configured trigger.
@@ -71,7 +71,7 @@ When the conditional path configurations are met, the If step action of sending 
 Click **+ Add Step** under the If step from the left navigation panel.
 - Within the **Configure Action Step**, click the **Slack** connector.******Note:** You can sort and search the connector(s) based on the filter.
 - Under **Choose an Action**, select the **Send Message** action.
-- In the **Configure Action** tab, add your Slack account. For instructions on adding your account, refer to the [Slack](/docs/developers/automation-hub-connectors/slack/) connector documentation.
+- In the **Configure Action** tab, add your Slack account. For instructions on adding your account, refer to the [Slack](./slack.md) connector documentation.
 - Select a **Channel** from the **Lookup** list where you want to send the message. Enter the message in the **Message** field.
 - Click **Proceed**.
 - Click **Test Action** to test the configured action.

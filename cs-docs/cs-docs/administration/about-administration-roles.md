@@ -56,9 +56,9 @@ A user's effective access is determined by the combination of their Administrati
 
 For example, a user with the Member Administration role and the CMS Content Manager product role can work with content in their assigned stacks but cannot manage organization users or settings. A user with the Admin Administration role can manage the organization regardless of their product roles.
 
-**Additional Resource:** To learn about the default roles available for each product, refer to the [About Product Roles](/docs/administration/about-product-roles) documentation.
+**Additional Resource:** To learn about the default roles available for each product, refer to the [About Product Roles](./about-product-roles.md) documentation.
 
-**Additional Resource:** To assign Administration roles when onboarding users, refer to the [Invite Users to Organization](/docs/developers/organization/invite-users-to-organization) documentation.
+**Additional Resource:** To assign Administration roles when onboarding users, refer to the [Invite Users to Organization](../developers/organization/invite-users-to-organization.md) documentation.
 
 ## Common questions
 

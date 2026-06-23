@@ -16,9 +16,9 @@ This page explains how to set up a “Single sync in multiple servers” deploym
 
 **Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release.
 
-Contentstack is a SaaS-based, [headless content management](/docs/overview/what-is-headless-cms) platform that stores and manages content in the cloud. This setup enables users to retrieve and deliver content to any channel (web, mobile, devices, etc.) via Contentstack's [Content Delivery APIs](/docs/developers/apis/content-delivery-api).
+Contentstack is a SaaS-based, [headless content management](../../overview/what-is-headless-cms.md) platform that stores and manages content in the cloud. This setup enables users to retrieve and deliver content to any channel (web, mobile, devices, etc.) via Contentstack's [Content Delivery APIs](../../../api-docs/api-detail/content-delivery-api.md).
 
-Contentstack provides a Node.js-based web application framework [contentstack-express](/docs/developers/about-web-framework) for building websites with [push-publishing](/docs/developers/contentstack-basics/architecture-planning-deployment-models#push-publishing). This framework lets you save the content you [publish](/docs/content-managers/publish-content) via Contentstack in the local file system of a web server. Subsequently, for every incoming page request on the website, the content is retrieved and rendered directly from the local storage instead of fetching it from the Contentstack database via APIs.
+Contentstack provides a Node.js-based web application framework [contentstack-express](../web-framework/about-web-framework.md) for building websites with [push-publishing](../contentstack-basics/architecture-planning-deployment-models.md#push-publishing). This framework lets you save the content you [publish](/docs/content-managers/publish-content) via Contentstack in the local file system of a web server. Subsequently, for every incoming page request on the website, the content is retrieved and rendered directly from the local storage instead of fetching it from the Contentstack database via APIs.
 
 **Warning:** **contentstack-express** framework has been deprecated. We will soon stop supporting this framework. Instead, we recommend using [DataSync](/docs/developers/develop-apps-with-datasync), which is faster and more flexible than the web framework.
 
@@ -51,7 +51,7 @@ When setting up the “Single sync in multiple servers” architecture, you need
 - **Linux**: PORT=8000 node app.js
 - **Windows**: set PORT=8000; node app.js
 
-This server will connect with Contentstack’s real-time servers and sync (i.e., read/write on storage) the published, [unpublished](/docs/content-managers/working-with-entries/unpublish-an-entry), and deleted contents. Only this server will be able to write on the database.
+This server will connect with Contentstack’s real-time servers and sync (i.e., read/write on storage) the published, [unpublished](../../content-managers/author-content/unpublish-an-entry.md), and deleted contents. Only this server will be able to write on the database.
 
 On the other hand, the rest of the servers will run on another port and their “SYNC” environment variable set to “false”.
 

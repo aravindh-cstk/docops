@@ -16,7 +16,7 @@ This page explains the differences between Contentstack Marketplace Apps and Ext
 
 ## Difference Between Marketplace Apps and Extensions
 
-**Note**: Extensions are no longer actively maintained. We recommend using [Marketplace Apps](/docs/developers/marketplace-apps) for all new implementations. While existing extensions will continue to work, we encourage migrating to [Marketplace Apps](/docs/developers/marketplace-apps) for improved functionality, security, and support.
+**Note**: Extensions are no longer actively maintained. We recommend using [Marketplace Apps](../marketplace-apps.md) for all new implementations. While existing extensions will continue to work, we encourage migrating to [Marketplace Apps](../marketplace-apps.md) for improved functionality, security, and support.
 
 Apps are the future of integrating and implementing third-party solutions within your CMS. In comparison to extensions, apps offer advanced functionalities as they extend all the features of your current extensions and more to provide a seamless integration with your favorite third party platforms.
 
@@ -39,7 +39,7 @@ Here are a few important points that explain how apps can prove beneficial over 
 
 ### Packaging UI Locations
 
-- Extensions are now added as [UI Locations](/docs/developers/developer-hub/about-ui-locations) inside an app. This lets you pack and install multiple instances of UI locations from a single app, which means that a single app can be used as a custom field, sidebar extension, dashboard extension, etc.
+- Extensions are now added as [UI Locations](../developer-hub/about-ui-locations.md) inside an app. This lets you pack and install multiple instances of UI locations from a single app, which means that a single app can be used as a custom field, sidebar extension, dashboard extension, etc.
 - As different UI locations can be merged and packaged into a single app, they can be installed/ uninstalled with a single click.
 - As you can package UI locations together for apps, you only need to configure the apps once and use them in multiple forms.
 
@@ -50,7 +50,7 @@ Here are a few important points that explain how apps can prove beneficial over 
 - Apps offer more security features and are scalable than extensions.
 
 **Note:** We strongly recommend you to create and use Contentstack Marketplace apps instead of extensions.  
-Refer to our detailed guide on how to [convert extensions into Marketplace apps](/docs/developers/developer-hub/guide-to-convert-contentstack-extensions-to-marketplace-apps).
+Refer to our detailed guide on how to [convert extensions into Marketplace apps](../developer-hub/guide-to-convert-contentstack-extensions-to-marketplace-apps.md).
 
 Now, let’s understand some core differences between Apps and Extensions.
 
@@ -67,18 +67,18 @@ The following table lists down the main differences between App and Extension:
 | You can open an app in a configuration window using your app's UI Locations feature during each installation. There is no need to provide it in the config file while creating the app. | You can open an extension in a pop-up window using a separate URL that you can provide in config while creating your extension. |
 | Here's an example of how you can use app-sdk and initialize it:  ``` npm install @Contentstack_automation_test /app-sdk import ContentstackAppSdk from ' @Contentstack_automation_test /app-sdk'; ContentstackAppSdk.init().then(function (appSdk) {    // Your UI logic goes here}); ``` | Here's an example of how you can use extension-sdk and initialize it:  ```  ContentstackUIExtension.init().then(function (extension) { // Your UI logic goes here}) ``` |
 
-**Additional Resource:** Refer to our [App Development pages](/docs/developers/developer-hub), to learn how to build an app for Contentstack Marketplace.
+**Additional Resource:** Refer to our [App Development pages](../developer-hub.md), to learn how to build an app for Contentstack Marketplace.
 
 ## Common questions
 
 **Q: Are Extensions still supported?**  
-A: **Note**: Extensions are no longer actively maintained. While existing extensions will continue to work, we encourage migrating to [Marketplace Apps](/docs/developers/marketplace-apps).
+A: **Note**: Extensions are no longer actively maintained. While existing extensions will continue to work, we encourage migrating to [Marketplace Apps](../marketplace-apps.md).
 
 **Q: Why should I use Marketplace Apps for new implementations?**  
-A: We recommend using [Marketplace Apps](/docs/developers/marketplace-apps) for all new implementations for improved functionality, security, and support.
+A: We recommend using [Marketplace Apps](../marketplace-apps.md) for all new implementations for improved functionality, security, and support.
 
 **Q: Can I package multiple UI locations together?**  
-A: Yes. Extensions are now added as [UI Locations](/docs/developers/developer-hub/about-ui-locations) inside an app, which lets you pack and install multiple instances of UI locations from a single app.
+A: Yes. Extensions are now added as [UI Locations](../developer-hub/about-ui-locations.md) inside an app, which lets you pack and install multiple instances of UI locations from a single app.
 
 **Q: Where can I learn how to migrate?**  
-A: Refer to our detailed guide on how to [convert extensions into Marketplace apps](/docs/developers/developer-hub/guide-to-convert-contentstack-extensions-to-marketplace-apps).
+A: Refer to our detailed guide on how to [convert extensions into Marketplace apps](../developer-hub/guide-to-convert-contentstack-extensions-to-marketplace-apps.md).

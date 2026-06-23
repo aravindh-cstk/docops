@@ -16,7 +16,7 @@ This page explains how to install, initialize, and use the Contentstack .NET Del
 
 ## Get Started with .NET Delivery SDK
 
-This guide will help you get started with the [Contentstack .NET SDK](/docs/developers/sdks/content-delivery-sdk/dot-net/about-dot-net-delivery-sdk/) to build .NET apps powered by Contentstack.
+This guide will help you get started with the [Contentstack .NET SDK](./about-dot-net-delivery-sdk.md) to build .NET apps powered by Contentstack.
 
 ## Prerequisites
 - .NET version 2.0 or later
@@ -47,7 +47,7 @@ using Contentstack.Core.Configuration; // ContentstackOptions
 ```
 
 ## Initialize SDK
-To initialize the SDK, you will need to specify the stack’s **API Key, **[**delivery token**](/docs/developers/create-tokens/about-delivery-tokens)**,** and name of the [**environment**](/docs/developers/set-up-environments/about-environments) where you have published the content.
+To initialize the SDK, you will need to specify the stack’s **API Key, **[**delivery token**](../../../create-tokens/about-delivery-tokens.md)**,** and name of the [**environment**](../../../set-up-environments/about-environments.md) where you have published the content.
 
 ```
 // Initialize the Contentstack
@@ -98,10 +98,10 @@ ContentstackClient stack = new ContentstackClient(options);
 ```
 
 ## Basic Queries
-The Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+The Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
 ### Get a Single Entry
-To retrieve a single [entry](/docs/content-managers/author-content/about-entries) from a [content type](/docs/developers/create-content-types/about-content-types), use the code snippet given below:
+To retrieve a single [entry](../../../../content-managers/author-content/about-entries.md) from a [content type](../../../create-content-types/about-content-types.md), use the code snippet given below:
 
 ```
 Entry entry = client.ContentType("blog").Entry("blta464e9fbd048668c");
@@ -128,12 +128,12 @@ query.Find().ContinueWith((t) => {
 });
 ```
 
-These were the examples of some of the basic queries of the SDK. For advanced queries, refer to the Contentstack .NET SDK [API reference](/docs/developers/sdks/content-delivery-sdk/dot-net/reference/).
+These were the examples of some of the basic queries of the SDK. For advanced queries, refer to the Contentstack .NET SDK [API reference](../../../create-content-types/reference.md).
 
-**Note:** Currently, the .NET SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](/docs/developers/apis/content-delivery-api#queries) section of our Content Delivery API documentation.
+**Note:** Currently, the .NET SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](../../../../../api-docs/api-detail/content-delivery-api.md#queries) section of our Content Delivery API documentation.
 
 #### Paginating Responses
-In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](/docs/developers/sdks/content-delivery-sdk/dot-net/reference/#query-skip) and [limit](/docs/developers/sdks/content-delivery-sdk/dot-net/reference/#query-limit) parameters in subsequent requests.
+In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](../../../create-content-types/reference.md#query-skip) and [limit](../../../create-content-types/reference.md#query-limit) parameters in subsequent requests.
 
 ```
 Query query = client.ContentType("blog").Query();
@@ -152,15 +152,15 @@ We have a URL size limitation of 8KB on API Requests that hit our CDN services. 
 
 The .NET SDK does not support multiple content types referencing in a single query.
 
-Currently, the .NET SDK does not yet support querying Global Field schemas ([All Global Fields](/docs/developers/apis/content-delivery-api#all-global-fields) and [Single Global Field](/docs/developers/apis/content-delivery-api#single-global-field)). You can include these details when querying content type details ([All Content Types](/docs/developers/apis/content-delivery-api#all-content-types) and [Single Content Type](/docs/developers/apis/content-delivery-api#single-content-type)) with the `include_global_field_schema query parameter`.
+Currently, the .NET SDK does not yet support querying Global Field schemas ([All Global Fields](../../../../../api-docs/api-detail/content-delivery-api.md#all-global-fields) and [Single Global Field](../../../../../api-docs/api-detail/content-delivery-api.md#single-global-field)). You can include these details when querying content type details ([All Content Types](../../../../../api-docs/api-detail/content-delivery-api.md#all-content-types) and [Single Content Type](../../../../../api-docs/api-detail/content-delivery-api.md#single-content-type)) with the `include_global_field_schema query parameter`.
 
 ## More Resources
-- [.NET News App](/docs/developers/dot-net/get-started-with-dot-net-delivery-sdk)
+- [.NET News App](./get-started-with-dot-net-delivery-sdk.md)
 - [.NET Liquid Template Website](/docs/developers/sample-apps/build-a-liquid-template-example-using-contentstack-dot-net-sdk)
 - [Product Catalog App Using GraphQL Client and .Net](/docs/developers/sample-apps/build-a-product-catalog-app-using-graphql-client-and-net)
 - [Product Catalog Website Using ASP.Net Razor Pages and Contentstack .Net SDK](/docs/developers/sample-apps/build-a-product-catalog-website-using-asp-net-razor-pages-and-contentstack-net-sdk)
-- [API Reference](/docs/developers/sdks/content-delivery-sdk/dot-net/reference/)
-- [.NET SDK Changelog](/docs/developers/sdks/content-delivery-sdk/dot-net/dot-net-sdk-changelog/)
+- [API Reference](../../../create-content-types/reference.md)
+- [.NET SDK Changelog](./dot-net-sdk-changelog.md)
 - [View and Download .NET SDK repository on GitHub](https://github.com/contentstack/contentstack-dotnet)
 
 ## Common questions
@@ -169,10 +169,10 @@ Currently, the .NET SDK does not yet support querying Global Field schemas ([All
 - .NET version 2.0 or later
 
 ### What do I need to initialize the SDK?
-You will need to specify the stack’s **API Key, **[**delivery token**](/docs/developers/create-tokens/about-delivery-tokens)**,** and name of the [**environment**](/docs/developers/set-up-environments/about-environments) where you have published the content.
+You will need to specify the stack’s **API Key, **[**delivery token**](../../../create-tokens/about-delivery-tokens.md)**,** and name of the [**environment**](../../../set-up-environments/about-environments.md) where you have published the content.
 
 ### How do I retrieve more than 100 items from a content type?
-You can paginate and retrieve the rest of the items in batches using the [skip](/docs/developers/sdks/content-delivery-sdk/dot-net/reference/#query-skip) and [limit](/docs/developers/sdks/content-delivery-sdk/dot-net/reference/#query-limit) parameters in subsequent requests.
+You can paginate and retrieve the rest of the items in batches using the [skip](../../../create-content-types/reference.md#query-skip) and [limit](../../../create-content-types/reference.md#query-limit) parameters in subsequent requests.
 
 ### What are key limitations to be aware of?
 We have a URL size limitation of 8KB on API Requests that hit our CDN services, and the .NET SDK does not support multiple content types referencing in a single query.

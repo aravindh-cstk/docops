@@ -22,16 +22,16 @@ Building Marketplace apps for Contentstack often requires connecting to external
 - You want per-customer configuration.
 - You want to avoid managing backend infrastructure.
 
-**Additional Resources:** Refer to the [Introduction to Advanced Settings](/docs/developer-hub/introduction-to-advanced-settings) document to learn more.
+**Additional Resources:** Refer to the [Introduction to Advanced Settings](./introduction-to-advanced-settings.md) document to learn more.
 
 This guide will take you through building an application using Advanced Settings.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login) with access to Developer Hub
 - [Peekalink account](https://www.peekalink.io/) for API key
-- Understanding [Contentstack App Development](/docs/developer-hub)
+- Understanding [Contentstack App Development](../developer-hub.md)
 - Understanding of [Contentstack App SDK](https://github.com/contentstack/app-sdk-docs)
-- Understanding of [Server Configuration](/docs/developer-hub/app-config-location)
+- Understanding of [Server Configuration](./app-config-location.md)
 - Marketplace App Boilerplate [GitHub](https://github.com/contentstack/marketplace-app-boilerplate.git) Repository
 
 ## Quick Web Lookup
@@ -60,19 +60,19 @@ To register an app in Developer Hub, perform the steps given below:
 - Log in to your [Contentstack account](https://www.contentstack.com/login).
 - On the Dashboard page, click the **Developer Hub** icon.
 - Click the** + New App **button.
-- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](/docs/developer-hub/introduction-to-contentstack-applications). Here, we will use the **Standard** application.**Additional Resource: **Refer to the [Creating an App in Developer Hub](/docs/developer-hub/creating-an-app-in-developer-hub) documentation to know more about **Standard** and **Machine to Machine **app categories.
+- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](./introduction-to-contentstack-applications.md). Here, we will use the **Standard** application.**Additional Resource: **Refer to the [Creating an App in Developer Hub](./creating-an-app-in-developer-hub.md) documentation to know more about **Standard** and **Machine to Machine **app categories.
 - In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** (Quick Web Lookup) and an optional **Description** as shown below:
 - Click **Create**. You are redirected to the** UI Locations **landing page.
 - Navigate back to the UI Locations tab, click the vertical ellipses in the App Configuration UI location, then click the **+ Add UI Location** button to add as needed. **App Configuration:** Enter `/app-configuration`as the **Path**, then click **Save** to apply and store your configuration. This setup displays a dedicated app configuration page (after app installation) where you can manage app configuration.**Note:** The **App Configuration** UI location lets you add a **Peekalink API** key for the Quick Web Lookup app.
 - **Entry Sidebar: **Enter a **Name** and use `/entry-sidebar` as the **Path**, then click **Save** to apply and store your configuration. This setup ensures your app appears in the sidebar of the entry editor, allowing you to perform actions or view information related to an entry.**Note: **The Entry Sidebar UI location allows you to view the app in the Entry Sidebar of an entry.
-- Navigate to the **Hosting** tab. You will see [Hosting with Launch](/docs/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developer-hub/app-hosting#custom-hosting) options. Select the **Custom Hosting** option to enter the hosted URL of your application.Enter the **App URL** and click **Save** to apply and confirm your hosting configuration. While running the application locally, select Custom Hosting and use your local app URL (for example, `http://localhost:3000`).
+- Navigate to the **Hosting** tab. You will see [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom Hosting** option to enter the hosted URL of your application.Enter the **App URL** and click **Save** to apply and confirm your hosting configuration. While running the application locally, select Custom Hosting and use your local app URL (for example, `http://localhost:3000`).
 
-After development, you can host your application using Contentstack [Launch](/docs/developers/launch).
+After development, you can host your application using Contentstack [Launch](../launch.md).
 
 ### Configure Advanced Settings
 Advanced Settings comprises three features: **Variables**, **Mappings**, and **Rewrites**.
 
-**Additional Resource: **Refer to the [Introduction to Advanced Settings](/docs/developer-hub/introduction-to-advanced-settings) document to learn more.
+**Additional Resource: **Refer to the [Introduction to Advanced Settings](./introduction-to-advanced-settings.md) document to learn more.
 
 **Configure Mappings:** For the Quick Web Lookup app, configure a new mapping, `API_KEY` which will be linked to `peekalink_api_key` stored in the server configuration. Later, we will use the same key to store the configuration in the next step.
 
@@ -111,7 +111,7 @@ const AppConfiguration: React.FC = () => {
 };
 export default AppConfiguration;
 ```
-- **Fetch and show link preview**Iterate through all URLs in the entry and fetch meta data from Peekalink API for preview details.**Additional Resource:** Refer to [this](https://github.com/contentstack/quick-web-lookup/blob/main/src/containers/SidebarWidget/EntrySidebar.tsx) document to check the Reference code for fetching API using Contentstack App [SDK](/docs/developer-hub/api-integration-in-developer-hub-apps).
+- **Fetch and show link preview**Iterate through all URLs in the entry and fetch meta data from Peekalink API for preview details.**Additional Resource:** Refer to [this](https://github.com/contentstack/quick-web-lookup/blob/main/src/containers/SidebarWidget/EntrySidebar.tsx) document to check the Reference code for fetching API using Contentstack App [SDK](./api-integration-in-developer-hub-apps.md).
 
 ```
 import React from 'react';
@@ -150,11 +150,11 @@ const EntrySidebarExtension: React.FC = () => {
 
 ### Install and Test Your App
 To install and test the app, follow the steps below:
-- Navigate to [Developer Hub](/docs/developer-hub) in Contentstack.
+- Navigate to [Developer Hub](../developer-hub.md) in Contentstack.
 - Go to the app, and click the **Install App **button.
 - On the permissions screen, select a **Stack** and mark the checkbox to accept the **Terms of Service** and **Privacy Policy**. Once done, click the **Install** button.
 - You will be redirected to the **App Configuration** Screen. Enter the Peekalink API Key and click **Save**. Click **Open Stack**.**Additional Resource: **Refer to the [Peekalink site](https://www.peekalink.io/) to fetch the API Key. You **must** create an account to get the API Key.
-- Navigate to the [Entries](/docs/content-managers/author-content/about-entries) page. Open any entry with a URL. From the right-hand side panel, click the **Apps** icon.
+- Navigate to the [Entries](../../content-managers/author-content/about-entries.md) page. Open any entry with a URL. From the right-hand side panel, click the **Apps** icon.
 - Click the **Quick Web Lookup** app under the **All Apps **section.
 - You will see previews of all the links present in your entry, fetched securely without exposing sensitive front-end data by the app.This app connects to third-party APIs securely using Contentstack’s app and server configuration, without building or deploying a custom backend or worrying about future maintenance.
 
@@ -175,9 +175,9 @@ To install and test the app, follow the steps below:
 - The client should never call Peekalink directly.
 
 ## Further Resources and Links
-- [Advanced Settings Overview](/docs/developer-hub/introduction-to-advanced-settings)
-- [How to Use Advanced Settings](/docs/developer-hub/api-integration-in-developer-hub-apps)
-- [Marketplace App Boilerplate](/docs/developer-hub/marketplace-app-boilerplate)
+- [Advanced Settings Overview](./introduction-to-advanced-settings.md)
+- [How to Use Advanced Settings](./api-integration-in-developer-hub-apps.md)
+- [Marketplace App Boilerplate](./marketplace-app-boilerplate.md)
 
 ## Common questions
 

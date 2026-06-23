@@ -14,7 +14,7 @@ last_updated: 2026-06-02
 
 The **Publish Queue** displays the historical and current details of activities such as publish, unpublish, or delete that can be performed on entries and/or assets. It also shows details of Release deployments. These details include time, entry, content type, version, language, user, environment, and status.  
   
-For more details, refer the [Publish Queue](/docs/content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue) documentation.
+For more details, refer the [Publish Queue](../../../../cs-docs/content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue.md) documentation.
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -29,7 +29,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: You can retrieve the publish queue details for activities performed on entries and/or assets of your stack in the last 30 days. To retrieve publish queue details for nested reference published tasks, pass api_version parameter as **3.2** in the **Headers** section.
 
-You can apply various queries such as [count](../../../api-detail/content-delivery-api.md#count), [limit](../../../api-detail/content-delivery-api.md#limit), bulkJobId, include_job_details: true/false, etc. to filter the results. Refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section for more details.
+You can apply various queries such as [count](../../../api-detail/content-delivery-api.md#count), [limit](../../../api-detail/content-delivery-api.md#limit), bulkJobId, include_job_details: true/false, etc. to filter the results. Refer to the [Queries](../../../api-detail/content-delivery-api.md#queries) section for more details.
 
 Now, you can limit the number of bulk job details in the response body to **25** items. Also, you can view the summary of your bulk jobs within the summary key in the response body.
 
@@ -954,12 +954,12 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: You can retrieve the publish queue details for activities performed in the last **30** days only.
 
-You can apply queries to filter the results. Refer to the [Queries](/docs/developers/apis/content-management-api#authentication) section for more details.
+You can apply queries to filter the results. Refer to the [Queries](../../../api-detail/content-management-api.md#authentication) section for more details.
 
 #### URL Parameters
 
 - **publish_queue_uid** (required)
-  Enter the UID of a specific publish queue activity of which you want to retrieve the details. Execute the [Get publish queue](/docs/developers/apis/content-management-api#get-publish-queue) API request to retrieve the UID of a particular publish queue activity.
+  Enter the UID of a specific publish queue activity of which you want to retrieve the details. Execute the [Get publish queue](../../../api-detail/content-management-api.md#get-publish-queue) API request to retrieve the UID of a particular publish queue activity.
   Default: `your_publish_queue_uid`
 
 #### Query Parameters

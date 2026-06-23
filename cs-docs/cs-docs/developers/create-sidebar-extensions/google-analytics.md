@@ -16,9 +16,9 @@ This page explains how to create and configure the legacy Google Analytics sideb
 
 ## Google Analytics
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Google Analytics as a Marketplace App. For more information on Google Analytics, please refer to the [Google Analytics App Installation Guide](/docs/developers/marketplace-apps/google-analytics).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Google Analytics as a Marketplace App. For more information on Google Analytics, please refer to the [Google Analytics App Installation Guide](../marketplace-apps/google-analytics.md).
 
-The **Google Analytics** widget retrieves the Google Analytics data of your [entry](/docs/content-managers/working-with-entries/about-entries) (if it is published) using the Reporting API and displays the common metrics data (such as **Pageviews**, **New Users**) and user behaviors (such as **Avg. Time on Page**) on the sidebar of your entry page. The URL of your entry is set as the pagePath filter in Google Analytics.
+The **Google Analytics** widget retrieves the Google Analytics data of your [entry](../../content-managers/author-content/about-entries.md) (if it is published) using the Reporting API and displays the common metrics data (such as **Pageviews**, **New Users**) and user behaviors (such as **Avg. Time on Page**) on the sidebar of your entry page. The URL of your entry is set as the pagePath filter in Google Analytics.
 
 This step-by-step guide explains how to create the Google Analytics widget extension in Contentstack.
 
@@ -101,7 +101,7 @@ Login to your [AWS Management Console](https://signin.aws.amazon.com/signin?redi
 
 To add Google Analytics widget to your stack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on **CONTENT** at the header
+Go to your [stack](../set-up-stack/about-stack.md) and click on **CONTENT** at the header
 - Hover over the “Settings**”** gear icon and click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - Click on the **+ Add Extension** button on the top-right corner and select **Create new**
 - On the **Create New Extension** details page enter the following details in the:
@@ -128,7 +128,7 @@ Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on **CON
 
 ## Use the extension
 
-Once you have added your Sidebar Extension, you can use it in your [entries](https://www.contentstack.com/docs/content-managers/working-with-entries/about-entries/) of the selected content type(s). To use the Sidebar Extension log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
+Once you have added your Sidebar Extension, you can use it in your [entries](../../content-managers/author-content/about-entries.md) of the selected content type(s). To use the Sidebar Extension log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
 Click on the content type for which you have enabled the Sidebar Extension.
 - Click on an entry. You will see the **Widgets** dropdown at the top. Click on it and select **Google Analytics**.
@@ -144,7 +144,7 @@ You can also integrate Google Analytics, via GTM (Google Tag Manager), into Cont
 ## Common questions
 
 ### Is this the recommended way to integrate Google Analytics with Contentstack?
-No. **Note**: This documentation uses the legacy approach with extensions. We have launched Google Analytics as a Marketplace App. For more information on Google Analytics, please refer to the [Google Analytics App Installation Guide](/docs/developers/marketplace-apps/google-analytics).
+No. **Note**: This documentation uses the legacy approach with extensions. We have launched Google Analytics as a Marketplace App. For more information on Google Analytics, please refer to the [Google Analytics App Installation Guide](../marketplace-apps/google-analytics.md).
 
 ### What do I need from Google Analytics to configure the extension?
 You will need the Google Service account key (including the **client_email** value) and the **View ID** from Google Analytics.

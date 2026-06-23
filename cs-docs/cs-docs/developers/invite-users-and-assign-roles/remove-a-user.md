@@ -16,9 +16,9 @@ This page explains how to remove an existing user from a stack in Contentstack, 
 
 ## Remove a User
 
-A [user](/docs/developers/invite-users-and-assign-roles/about-stack-users) with the required permissions can remove an existing user from the [stack](/docs/developers/set-up-stack/about-stack).
+A [user](./about-stack-users.md) with the required permissions can remove an existing user from the [stack](../set-up-stack/about-stack.md).
 
-**Note**: The [stack owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to remove any user from a stack. But, an admin or developer can only remove a user whom they added.
+**Note**: The [stack owner](./types-of-roles.md#owner) has the right to remove any user from a stack. But, an admin or developer can only remove a user whom they added.
 
 To remove a user, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to the stack from which you want to remove the user.
@@ -28,7 +28,7 @@ To remove a user, log in to your [Contentstack account](https://app.contentstack
 
 ## API Reference
 
-To remove a user from the stack via API request, refer to the [Unshare a stack](/docs/developers/apis/content-management-api#unshare-a-stack) API request.
+To remove a user from the stack via API request, refer to the [Unshare a stack](../../../api-docs/api-detail/content-management-api.md#unshare-a-stack) API request.
 
 ## Common questions
 
@@ -36,10 +36,10 @@ To remove a user from the stack via API request, refer to the [Unshare a stack](
 No. An admin or developer can only remove a user whom they added.
 
 **Who can remove any user from a stack?**  
-The [stack owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to remove any user from a stack.
+The [stack owner](./types-of-roles.md#owner) has the right to remove any user from a stack.
 
 **Where do I remove users in the Contentstack UI?**  
 Go to the stack, click the “Settings” icon, and select **Users & Roles**.
 
 **Is there an API to remove a user from a stack?**  
-Yes. Refer to the [Unshare a stack](/docs/developers/apis/content-management-api#unshare-a-stack) API request.
+Yes. Refer to the [Unshare a stack](../../../api-docs/api-detail/content-management-api.md#unshare-a-stack) API request.

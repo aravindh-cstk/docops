@@ -17,11 +17,11 @@ This page explains how to change an entry’s workflow stage in Contentstack, in
 
 ## Change Entry Workflow Stage
 
-A [workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) lets you manage the [stages](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages) through which your content will move in the content creation process.
+A [workflow](../../developers/set-up-workflows-and-publish-rules/about-workflows.md) lets you manage the [stages](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md) through which your content will move in the content creation process.
 
 Once you are done working on an entry at a particular stage (e.g., “Draft”), you can change its workflow stage (e.g., “Ready for Review”), assign a user to work on the next stage, and even add a due date if needed.
 
-To change the workflow stage of an [entry](/docs/content-managers/working-with-entries/about-entries), log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack/), and perform the following steps:
+To change the workflow stage of an [entry](../author-content/about-entries.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your [stack](../../developers/set-up-stack/about-stack.md), and perform the following steps:
 - Open the entry workflow stage of which you want to update.
 - On the entry page, go to the **Workflow Details** section under the **Status** panel on the right. You will see the current stage of the entry, along with the stage’s color label as shown below:
 - Click on the **Change **link located beside the workflow stage’s name. This will open the **Entry Workflow Settings** section with the following sections:**Set Workflow Stage**: Select the next stage you want to set for this entry.
@@ -30,13 +30,13 @@ To change the workflow stage of an [entry](/docs/content-managers/working-with-e
 - **Add Comment**: Add any comment if you want to send a short description or guidelines to the assignee on what needs to be done in the next stage.
 - Finally, click on **Update**.
 
-As soon as an entry stage is assigned to a user, it is added as a new task in the [Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks) section of the assignee.
+As soon as an entry stage is assigned to a user, it is added as a new task in the [Tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md) section of the assignee.
 
-**Additional Resources**: You can get familiar with the [workflow use cases](/docs/developers/set-up-workflows-and-publish-rules/workflows-use-cases) to learn how to efficiently work with the workflows. Also, you can check out the [Limitations](/docs/developers/set-up-workflows-and-publish-rules/workflows-limitations) and [FAQs](/docs/faqs/#workflows-faqs) section.
+**Additional Resources**: You can get familiar with the [workflow use cases](../../developers/set-up-workflows-and-publish-rules/workflows-use-cases.md) to learn how to efficiently work with the workflows. Also, you can check out the [Limitations](../../developers/set-up-workflows-and-publish-rules/workflows-limitations.md) and [FAQs](/docs/faqs/#workflows-faqs) section.
 
 ## API Reference
 
-To change the workflow stage of an entry via API, refer to the [Set entry workflow stage](/docs/developers/apis/content-management-api#set-entry-workflow-stage) API request.
+To change the workflow stage of an entry via API, refer to the [Set entry workflow stage](../../../api-docs/api-detail/content-management-api.md#set-entry-workflow-stage) API request.
 
 ## Common questions
 
@@ -50,4 +50,4 @@ Yes. Use **Set Due Date** to select the due date for the next stage via the date
 If you want to send an email notification to the assignee, check the **Notify via Email** box.
 
 ### Where can the assignee see the newly assigned stage?
-As soon as an entry stage is assigned to a user, it is added as a new task in the [Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks) section of the assignee.
+As soon as an entry stage is assigned to a user, it is added as a new task in the [Tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md) section of the assignee.

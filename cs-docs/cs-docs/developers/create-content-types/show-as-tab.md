@@ -29,7 +29,7 @@ Show as Tab
 
 The **Show as Tab** option allows you to organize entry fields into separate tabs within the entry editor. This feature helps simplify large content types with multiple fields by grouping related sections (such as SEO settings or metadata) into individual tabs. The tab layout improves focus and reduces the need to scroll through the entire entry.
 
-Each tab includes the fields contained in the selected [Group](/docs/developers/create-content-types/group), [Modular Block](/docs/developers/create-content-types/modular-blocks), or [Global Field](/docs/developers/create-content-types/global).
+Each tab includes the fields contained in the selected [Group](./group.md), [Modular Block](./modular-blocks.md), or [Global Field](./global.md).
 
 **Note:** The **Show as Tab** option is available **only for root-level fields**, that is, fields not nested inside another Group, Modular Block, or Global fields.
 
@@ -37,7 +37,7 @@ Each tab includes the fields contained in the selected [Group](/docs/developers/
 
 To enable the show as tab option, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and open the content type where you want to enable this option.
+- Navigate to your [stack](../set-up-stack/about-stack.md) and open the content type where you want to enable this option.
 - Hover over a **Group**, **Modular Block**, or **Global Field**, then click the **Properties** icon.
 - Switch to the **Advanced** tab in the **Field Properties** modal, and enable the **Show as Tab** toggle.
 - Click **Save** or **Save and Close** to update the content type.

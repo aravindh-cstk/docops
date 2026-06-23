@@ -17,7 +17,7 @@ last_updated: 2024-03-21
 The Set Field Visibility Rule for Content Type API request lets you add Field Visibility Rules to existing content types. These rules allow you to show and hide fields based on the state or value of certain fields.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-[Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) can be set while creating your content type (via UI, only after you’ve added all the required fields to the content type and saved it) or while editing a content type (both via UI and API).
+[Field Visibility Rules](../../../../../cs-docs/developers/create-content-types/about-field-visibility-rules.md) can be set while creating your content type (via UI, only after you’ve added all the required fields to the content type and saved it) or while editing a content type (both via UI and API).
 
 To set a Field Visibility Rule, you need to add the following code snippet in the Request body of the content type:
 
@@ -60,7 +60,7 @@ Let’s look at the keys used in the above code snippet:
 - action: You need to pass either show or hide depending on whether you want to show or hide the Target field.
 - target_field: Pass the UID of the Target field (target_field_uid) i.e., the field on which you want to perform the action.
 
-For more details, check out the [Define Conditions](/docs/developers/create-content-types/add-a-field-visibility-rule#define-conditions) section when adding a Field Visibility Rule.
+For more details, check out the [Define Conditions](../../../../../cs-docs/developers/create-content-types/add-a-field-visibility-rule.md#define-conditions) section when adding a Field Visibility Rule.
 
 ## URL Parameters
 
@@ -83,7 +83,7 @@ For more details, check out the [Define Conditions](/docs/developers/create-cont
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.

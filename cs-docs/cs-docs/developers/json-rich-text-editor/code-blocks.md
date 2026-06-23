@@ -21,7 +21,7 @@ The JSON RTE in Contentstack offers a powerful way to manage and display rich co
 To add a code block within your JSON RTE, log in to your
 [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
 
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries** icon in the left navigation panel.
+- Navigate to the desired [stack](../set-up-stack/about-stack.md), then click the **Entries** icon in the left navigation panel.
 - Create a new entry or open an existing one containing a JSON RTE field.
 - Select the relevant content, click the **Format** icon in the toolbar, and select **Code Snippet** from the dropdown menu.
 - Alternatively, you can use keyboard shortcut **Cmd + Opt + 8** for Mac users or **Ctrl + Alt + 8** for Windows users.

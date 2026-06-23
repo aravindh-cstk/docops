@@ -16,7 +16,7 @@ This page explains how to edit an existing webhook in Contentstack. It is intend
 
 ## Edit a Webhook
 
-You can always edit an existing [webhook](/docs/developers/set-up-webhooks/about-webhooks) of your [stack](/docs/developers/set-up-stack/about-stack).
+You can always edit an existing [webhook](./about-webhooks.md) of your [stack](../set-up-stack/about-stack.md).
 
 To edit a webhook, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your stack and click the “Settings” icon on the left navigation panel.
@@ -27,13 +27,13 @@ To edit a webhook, log in to your [Contentstack account](https://www.contentstac
 ## API Reference
 
 Here are the links to the API requests related to this action:
-- [Update a webhook](/docs/developers/apis/content-management-api#update-webhook)
-- [Create a webhook](/docs/developers/apis/content-management-api#create-a-webhook)
+- [Update a webhook](../../../api-docs/api-detail/content-management-api.md#update-webhook)
+- [Create a webhook](../../../api-docs/api-detail/content-management-api.md#create-a-webhook)
 
 ## Common questions
 
 ### Can I edit any existing webhook in my stack?
-You can always edit an existing [webhook](/docs/developers/set-up-webhooks/about-webhooks) of your [stack](/docs/developers/set-up-stack/about-stack).
+You can always edit an existing [webhook](./about-webhooks.md) of your [stack](../set-up-stack/about-stack.md).
 
 ### Where do I find the Webhooks section in Contentstack?
 Go to your stack and click the “Settings” icon on the left navigation panel, then click **Webhooks**.
@@ -42,5 +42,5 @@ Go to your stack and click the “Settings” icon on the left navigation panel,
 Yes. You can use the shortcut keys “alt + W” for Windows OS users, and “option + W” for Mac OS users to access webhooks.
 
 ### Which API requests are related to editing a webhook?
-- [Update a webhook](/docs/developers/apis/content-management-api#update-webhook)
-- [Create a webhook](/docs/developers/apis/content-management-api#create-a-webhook)
+- [Update a webhook](../../../api-docs/api-detail/content-management-api.md#update-webhook)
+- [Create a webhook](../../../api-docs/api-detail/content-management-api.md#create-a-webhook)

@@ -17,10 +17,10 @@ This page explains how to export the JSON schema for an existing content type in
 
 ## Export a Content Type
 
-You can export the JSON schema of any existing [content type](/docs/developers/create-content-types/about-content-types) in your stack.
+You can export the JSON schema of any existing [content type](./about-content-types.md) in your stack.
 
 To export an existing content type, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the "Content Models" icon.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the "Content Models" icon.
 - Click the vertical ellipsis in the **Actions** column next to the content type you want to export and select **Export**.
 
 The JSON file downloads to your local system. Changes made to this file are retained when you import it back into Contentstack.
@@ -31,7 +31,7 @@ Exporting a content type in Contentstack helps you back up schemas, share models
 
 ## API Reference
 
-To export a content type via API, refer to the [Export a Content Type](/docs/developers/apis/content-management-api#export-a-content-type) API Request.
+To export a content type via API, refer to the [Export a Content Type](../../../api-docs/api-detail/content-management-api.md#export-a-content-type) API Request.
 
 ## Common questions
 
@@ -45,4 +45,4 @@ Yes. The JSON file downloads to your local system. Changes made to this file are
 Go to your stack, open **Content Models**, then use the vertical ellipsis in the **Actions** column next to the content type and select **Export**.
 
 ### Is there an API to export a content type?
-Yes. Refer to the [Export a Content Type](/docs/developers/apis/content-management-api#export-a-content-type) API Request.
+Yes. Refer to the [Export a Content Type](../../../api-docs/api-detail/content-management-api.md#export-a-content-type) API Request.

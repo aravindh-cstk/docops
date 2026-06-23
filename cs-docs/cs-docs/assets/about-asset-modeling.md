@@ -39,7 +39,7 @@ Key features:
 - Boolean
 - Group
 
-**Additional Resource: **Refer to the [Field Types](/docs/assets/field-types) document for more information on how to use these fields.
+**Additional Resource: **Refer to the [Field Types](./field-types.md) document for more information on how to use these fields.
 
 ## Understand Asset Types
 

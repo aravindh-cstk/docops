@@ -17,9 +17,9 @@ This page provides a simplified, high-level introduction to how Contentstack del
 
 ## Delivering Personalized Experiences: An overview
 
-Delivering a personalized experience that is both instant and deeply relevant is a significant technical challenge. Contentstack, powered by [Data & Insights (Lytics)](/docs/data-and-insights) and the [Personalize](/docs/personalize/about-personalize) engine, enables this through an edge-based personalization architecture.
+Delivering a personalized experience that is both instant and deeply relevant is a significant technical challenge. Contentstack, powered by [Data & Insights (Lytics)](/docs/data-and-insights) and the [Personalize](./about-personalize.md) engine, enables this through an edge-based personalization architecture.
 
-**Note:**This is a simplified, high-level overview intended as an introduction to Contentstack’s personalization architecture. For a complete end-to-end reference, including detailed diagrams, SDK examples, and API specifications, see the [E2E Personalization Delivery Guide.](/docs/personalize/end-to-end-personalization-delivery)
+**Note:**This is a simplified, high-level overview intended as an introduction to Contentstack’s personalization architecture. For a complete end-to-end reference, including detailed diagrams, SDK examples, and API specifications, see the [E2E Personalization Delivery Guide.](./end-to-end-personalization-delivery.md)
 
 ## Technical Architecture
 
@@ -30,8 +30,8 @@ This overview explains how **Contentstack** integrates with personalization tool
 - **Data & Insights (Lytics)** for tracking user behavior and determining audience membership.
 - **Contentstack Personalize** for managing experiences, variants, audiences, and personalization rules.**Personalize Admin UI** or the **Personalize Management API** for creating and managing experiences and rules.
 - **Personalize Edge API** for determining active variants in real time using configuration synced from the Admin/Management API.
-- [Contentstack CMS](/docs/overview/what-is-headless-cms) for creating and storing entry variants.
-- [Contentstack Delivery API (CDA)](/docs/developers/apis/content-delivery-api) for retrieving personalized content.
+- [Contentstack CMS](../overview/what-is-headless-cms.md) for creating and storing entry variants.
+- [Contentstack Delivery API (CDA)](../../api-docs/api-detail/content-delivery-api.md) for retrieving personalized content.
 
 This integration adjusts each user’s content experience based on their audience membership and profile data, while maintaining low latency and global scalability.
 
@@ -45,32 +45,32 @@ The [Lytics JS Tag](https://docs.lytics.com/docs/developer-quickstart-3-install-
 
 This contextual information becomes part of the personalization flow.
 
-- **Fetch Active Variants from the Personalize Edge API**Your application, preferably an **Edge Function**, calls the [Personalize Edge API](/docs/developers/apis/personalize-edge-api), ideally using the [JavaScript Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript).
+- **Fetch Active Variants from the Personalize Edge API**Your application, preferably an **Edge Function**, calls the [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md), ideally using the [JavaScript Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md).
 
 The SDK passes the audience membership data from cookies to the Edge API for variant calculation.
 
-- **Active Variant Calculation**The [Personalize Edge API](/docs/developers/apis/personalize-edge-api) calculates the active variants for the user.
+- **Active Variant Calculation**The [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md) calculates the active variants for the user.
 
 All experiences, audiences, and rules created in **Personalize Admin** are synced to and stored at the edge. This enables real-time personalization globally without depending on the origin.
 
 The Edge API uses these rules, along with audience membership, to determine the appropriate active variants for the visitor.
 
-- **Content Fetching from the Contentstack Delivery API (CDA)**Your application, typically the origin server, calls the [Contentstack Delivery API (CDA)](/docs/developers/apis/content-delivery-api) and passes the [variant aliases](/docs/personalize/glossary-key-features#variant-aliases) returned by the Personalize Edge API.
+- **Content Fetching from the Contentstack Delivery API (CDA)**Your application, typically the origin server, calls the [Contentstack Delivery API (CDA)](../../api-docs/api-detail/content-delivery-api.md) and passes the [variant aliases](./glossary-key-features.md#variant-aliases) returned by the Personalize Edge API.
 
-The CDA returns the corresponding personalized entry variants from [Contentstack CMS](/docs/overview/what-is-headless-cms), which your application then assembles into the final response.
+The CDA returns the corresponding personalized entry variants from [Contentstack CMS](../overview/what-is-headless-cms.md), which your application then assembles into the final response.
 
-**Note: **Entry variants must be configured in the CMS. Refer to the [Variants documentation](/docs/personalize/about-variants) for guidance.
+**Note: **Entry variants must be configured in the CMS. Refer to the [Variants documentation](./about-variants.md) for guidance.
 
-- **Tracking Events**After personalized content is rendered, track the performance of your experiences by triggering [impression](/docs/personalize/about-events#impressions) and [conversion](/docs/personalize/about-events#conversions) events from the browser.
+- **Tracking Events**After personalized content is rendered, track the performance of your experiences by triggering [impression](./about-events.md#impressions) and [conversion](./about-events.md#conversions) events from the browser.
 
-These events power [Experience Analytics](/docs/personalize/experience-analytics), enabling you to measure effectiveness and optimize your personalization strategy.
+These events power [Experience Analytics](./experience-analytics.md), enabling you to measure effectiveness and optimize your personalization strategy.
 
 By combining audience intelligence with edge-based decisioning and structured content delivery, Contentstack delivers content tailored to audience context. Use this framework to guide your next steps in building personalized journeys.
 
 ## Next Steps
 
-- Check out the detailed end-to-end guide that goes deeper into each of the above steps [here](/docs/personalize/end-to-end-personalization-delivery).
-- Check out the step-by-step implementation guide for a Next.js application hosted on Contentstack Launch [here](/docs/personalize/setup-nextjs-website-with-personalize-launch).
+- Check out the detailed end-to-end guide that goes deeper into each of the above steps [here](./end-to-end-personalization-delivery.md).
+- Check out the step-by-step implementation guide for a Next.js application hosted on Contentstack Launch [here](./setup-nextjs-website-with-personalize-launch.md).
 
 ## Common questions
 
@@ -84,6 +84,6 @@ Audience membership is determined by Data & Insights (Lytics) and is pulled back
 The application calls the Contentstack Delivery API (CDA) and passes the variant aliases returned by the Personalize Edge API to retrieve the corresponding personalized entry variants.
 
 ### What should I read next for a complete implementation reference?
-See the [E2E Personalization Delivery Guide.](/docs/personalize/end-to-end-personalization-delivery) and the Next.js implementation guide linked in the Next Steps section.
+See the [E2E Personalization Delivery Guide.](./end-to-end-personalization-delivery.md) and the Next.js implementation guide linked in the Next Steps section.
 
 <!-- filename: personalize-delivering-personalized-experiences-an-overview.md -->

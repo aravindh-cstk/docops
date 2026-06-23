@@ -34,7 +34,7 @@ Here’s a step-by-step guide that explains how you can do this.
 
 ## Enable SCIM in Contentstack
 
-**Note**: Only the [Owner](/docs/developers/organization/organization-roles#organization-owner) or [Admin](/docs/developers/organization/organization-roles#organization-admin) users of an organization in Contentstack can perform this step.
+**Note**: Only the [Owner](../organization/organization-roles.md#organization-owner) or [Admin](../organization/organization-roles.md#organization-admin) users of an organization in Contentstack can perform this step.
 
 To allow provisioning of users in Contentstack’s organization through Okta Native App, you need to enable SCIM in Contentstack by performing the following steps:
 

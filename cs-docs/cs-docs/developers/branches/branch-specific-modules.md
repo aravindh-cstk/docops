@@ -71,7 +71,7 @@ For example, you are working within the development branch, and you add new lang
 
 You can add experience extensions specific to a branch.
 
-For example, you are working within the development branch, and you add new extensions ([Custom Fields](/docs/developers/create-custom-fields/about-custom-fields/), [Sidebar Extensions](/docs/developers/create-sidebar-extensions/about-sidebar-extensions/), and [Dashboard Extensions](/docs/developers/create-dashboard-extensions/about-dashboard-extensions/)) to this branch. These extensions will be available only within the development branch.
+For example, you are working within the development branch, and you add new extensions ([Custom Fields](../create-custom-fields/about-custom-fields.md), [Sidebar Extensions](../create-sidebar-extensions/about-sidebar-extensions.md), and [Dashboard Extensions](../create-dashboard-extensions/about-dashboard-extensions.md)) to this branch. These extensions will be available only within the development branch.
 
 ## Audit Logs
 

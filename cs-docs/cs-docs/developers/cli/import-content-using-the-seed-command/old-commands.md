@@ -32,7 +32,7 @@ Now let’s import content to your stack by performing the following steps:
 - CLI installed on your machine: **npm install -g @contentstack/cli**
 
 ## Log in to the CLI Session
-To use the "seed" command, you will first have to generate the [authtoken](/docs/developers/create-tokens/types-of-tokens#authentication-tokens-authtokens-).
+To use the "seed" command, you will first have to generate the [authtoken](../../create-tokens/types-of-tokens.md#authentication-tokens-authtokens-).
 
 **Note**: By default, this CLI session will work for the app hosted in the **North America** region. If you want to switch to **Europe **or **Azure North America **region, follow the steps mentioned in the [Set Region](/docs/developers/cli/configure-the-cli#set-region) command section.
 
@@ -65,8 +65,8 @@ csdx cm:seed
 
 After running the above command, it will ask you to provide the following inputs:
 - **Organization name**: You’ll get a list of organizations to which you have access. Select the one from the list where your source stack is located. You can also create a new stack if required.
-- **Stack preference**: Next, you need to select your choice to create a new stack:If you select **Yes**, you’ll receive a list of all organizations you are a member of. You can choose an organization to which you either have the [owner](/docs/owners-and-admins/organization-roles#organization-owner) or the [admin](/docs/owners-and-admins/organization-roles#organization-admin) rights to create a new stack. Then, provide a name to the newly created stack.
-- If you select **No**, you need to choose the organization where your destination stack resides. You will then need to select that particular stack on which you have permission to import content. Refer to the [Stack Roles](/docs/developers/invite-users-and-assign-roles/types-of-roles) documentation to learn more about permissions.
+- **Stack preference**: Next, you need to select your choice to create a new stack:If you select **Yes**, you’ll receive a list of all organizations you are a member of. You can choose an organization to which you either have the [owner](../../organization/organization-roles.md#organization-owner) or the [admin](../../organization/organization-roles.md#organization-admin) rights to create a new stack. Then, provide a name to the newly created stack.
+- If you select **No**, you need to choose the organization where your destination stack resides. You will then need to select that particular stack on which you have permission to import content. Refer to the [Stack Roles](../../invite-users-and-assign-roles/types-of-roles.md) documentation to learn more about permissions.
 
 **Tip**: To ensure the above operations are error-free, we recommend that you select the option of creating a new destination stack. This is because the new stack will be empty and you can easily import content to it. If you choose to import content to an existing stack, you first need to ensure that the stack is empty and then proceed with the import operation.
 
@@ -150,7 +150,7 @@ Now any user can import your stack’s content to their stack by performing the 
 
 ## Points to Remember
 - To import content into an existing destination stack, make sure you have permissions to create content in the destination stack.
-- If you want to create a new stack for storing content, make sure you have the “[owner](/docs/owners-and-admins/organization-roles#organization-owner)” or “[admin](/docs/owners-and-admins/organization-roles#organization-admin)” rights in that organization.
+- If you want to create a new stack for storing content, make sure you have the “[owner](../../organization/organization-roles.md#organization-owner)” or “[admin](../../organization/organization-roles.md#organization-admin)” rights in that organization.
 
 ## Common questions
 

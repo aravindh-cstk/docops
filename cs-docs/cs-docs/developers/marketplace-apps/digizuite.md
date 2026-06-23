@@ -27,7 +27,7 @@ After installing the Digizuite app from the Contentstack Marketplace, you can us
 
 - [Digizuite account](https://www.digizuite.com/)
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../organization/organization-roles.md#organization-owner)/[Admin](../organization/organization-roles.md#organization-admin)
 
 Let's follow this step-by-step guide to install and configure the Digizuite app within your stack.
 
@@ -73,7 +73,7 @@ To use the Digizuite app within an entry of your stack, follow the steps given b
 
 Go to your stack, click the **Content Models** icon from the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
 
 There are two ways to use the Digizuite app in your entry:
 
@@ -82,7 +82,7 @@ There are two ways to use the Digizuite app in your entry:
 
 ### Steps to Use the Digizuite App in a Custom Field
 
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom/) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension or App**, select **Digizuite** and click the **Proceed** button.This adds Digizuite to the custom field.
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
 - To use the Digizuite app, create an entry in this newly created content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Digizuite app’s custom fields on your entry page, as shown below:
@@ -107,7 +107,7 @@ The assets you select get added to your entry in the list view.
 
 ### Steps to Use the Digizuite App in a JSON Rich Text Editor Field
 
-- In the **Content Type Builder** page, add [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Plugin(s)**, select **Digizuite**, and then click **Add Plugin(s)**.This adds Digizuite in the JSON Rich Text Editor.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
 - To use the Digizuite app, create an entry for this content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Digizuite icon in the JSON Rich Text Editor field on your entry page, as shown below:
@@ -117,7 +117,7 @@ The assets you select get added to your entry in the list view.
 - In the **Insert rendition** modal, confirm the final version and click **Insert** to add assets in the entry.
 - Also, you can view all the selected assets by clicking the **Selected** dropdown, and then select the **Show Selection** option.
 - The assets you select get added to your entry.
-- To resize the image, drag the corner of the image and adjust the size as required. Hover over the image to view the options to **Preview**, **Edit**, and **Remove** the asset.**Additional Resource**: You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field.
+- To resize the image, drag the corner of the image and adjust the size as required. Hover over the image to view the options to **Preview**, **Edit**, and **Remove** the asset.**Additional Resource**: You can use alignment and inline asset features to edit the asset placement within the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field.
 - After adding the asset(s), **Save** and **Publish** your entry.
 
 ## Common questions
@@ -126,7 +126,7 @@ The assets you select get added to your entry in the list view.
 You will be provided with a **Unified Dam URL **and **Media Format ID** by the Digizuite team.
 
 ### Which Contentstack roles can install and configure the Digizuite app?
-Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+Access to the Contentstack Organization/Stack as the [Owner](../organization/organization-roles.md#organization-owner)/[Admin](../organization/organization-roles.md#organization-admin)
 
 ### Where can I use the Digizuite app inside Contentstack entries?
 There are two ways to use the Digizuite app in your entry:

@@ -57,7 +57,7 @@ Let's try enabling the auto parameter along with the format parameter, for brows
 1. WEBP and AVIF formats are not supported by all browsers.
 2. If the format parameter is used with this parameter, the format parameter will be ignored in browsers that support WEBP and AVIF formats.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 

@@ -16,11 +16,11 @@ This page explains what the **Unique ID (UID)** property is for fields, how it i
 
 ## Unique ID
 
-The **Unique ID** (**UID**) property represents a unique alphanumeric string that is associated with a [field](/docs/developers/create-content-types/about-fields). The system identifies each field with its UID.
+The **Unique ID** (**UID**) property represents a unique alphanumeric string that is associated with a [field](./about-fields.md). The system identifies each field with its UID.
 
-By default, the UID of each field is the same as the [display name](/docs/developers/create-content-types/display-name) of the field. While you can change the UID as per your requirements, you cannot have two fields with the same UID within a content type.
+By default, the UID of each field is the same as the [display name](./display-name.md) of the field. While you can change the UID as per your requirements, you cannot have two fields with the same UID within a content type.
 
-**Warning**: If you change the UID after an entry has been saved under a [content type](/docs/developers/create-content-types/about-content-types), the data for that field will be lost and you will have to enter it again. Also, there are certain restrictions when providing a user-defined UID. These restrictions are covered in the [**Restricted keywords for UIDs**](/docs/developers/create-content-types/restricted-keywords-for-uids) section.
+**Warning**: If you change the UID after an entry has been saved under a [content type](./about-content-types.md), the data for that field will be lost and you will have to enter it again. Also, there are certain restrictions when providing a user-defined UID. These restrictions are covered in the [**Restricted keywords for UIDs**](./restricted-keywords-for-uids.md) section.
 
 ## Common questions
 

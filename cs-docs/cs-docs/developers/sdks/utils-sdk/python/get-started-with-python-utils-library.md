@@ -17,7 +17,7 @@ This page explains how to install, set up, and use the Contentstack Python Utils
 
 ## Get Started with Python Utils Library
 
-This guide will help you get started with Contentstack [Python Utils SDK](/docs/developers/python/about-python-utils-library) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Python Utils SDK](./about-python-utils-library.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 - The latest version of [PyCharm](https://www.jetbrains.com/pycharm/download) or [Visual Studio Code](https://code.visualstudio.com/download)

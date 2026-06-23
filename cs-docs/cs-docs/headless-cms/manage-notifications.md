@@ -25,7 +25,7 @@ You can access notifications by clicking the bell icon in the top right corner o
 ## View and Interact with Notifications
 Notifications provide detailed insights into various account activities, such as mentions in discussions, which can be accessed by clicking directly on the notification. Some notifications, like app installation requests or collaboration invitations, include actionable buttons that let you respond immediately.
 
-**Note**: Only the Organization [Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admins](/docs/developers/organization/organization-roles#organization-admin) can view organization-level notifications.
+**Note**: Only the Organization [Owner](../developers/organization/organization-roles.md#organization-owner) and [Admins](../developers/organization/organization-roles.md#organization-admin) can view organization-level notifications.
 
 You can take control of your notifications with these simple actions:
 - **Mark as Read**: Use the ellipsis (three dots) next to each notification to mark individual notifications as read.

@@ -30,7 +30,7 @@ The Form panel includes several capabilities that help you edit efficiently with
 - **Entry Management Tools**: Import, export, unlocalize, version, and delete entries, directlyall from within the Form panel.
 
 To access the Form panel, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - Use **URL bar** to locate the page you want to update the content.
 - In the right sidebar, click the **Form** icon to open the entry editor.

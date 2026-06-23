@@ -18,7 +18,7 @@ This page explains what Contentstack Content Models are and provides step-by-ste
 ## How to Import a Content Model
 
 The Contentstack Content Models are a blueprint or schema of a content type that defines the structure, fields, and relationships of the content. It is a visual representation of the content type and helps content editors and developers to create and manage content in a structured and organized manner. Content Models allow you to define custom fields, data types, validation rules, and other settings that are specific to the content structure. It enables complete control over how the content is structured and ensures consistency across all the content entries.  
-With the Contentstack Marketplace Content Models, you can import, view and edit their schema, and use them within your stack. The Content Models include the [Content Types](/docs/developers/create-content-types/about-content-types/), [Global Fields](/docs/developers/create-content-types/global/), [Labels](/docs/developers/create-content-types/about-labels/), and [Extensions](/docs/developers/experience-extensions-overview/about-experience-extensions/).
+With the Contentstack Marketplace Content Models, you can import, view and edit their schema, and use them within your stack. The Content Models include the [Content Types](../../create-content-types/about-content-types.md), [Global Fields](../../create-content-types/global.md), [Labels](../../create-content-types/about-labels.md), and [Extensions](../../experience-extensions-overview/about-experience-extensions.md).
 
 ## Prerequisites
 
@@ -46,12 +46,12 @@ Let's follow this step-by-step guide to import and configure Content Models with
 - Select the** Footer** content type** **from the list of content types displayed and click the **Proceed **button.You have created an entry for the **Footer** content type.
 - Enter the required content, then **Save** and **Publish** the entry.
 
-Alternatively, you can import the prebuilt Content Models by clicking the **+ New Content Type** button and then click **Use Prebuilt** within your stack via the CMS. For more information, please refer to the [Import Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models) documentation.
+Alternatively, you can import the prebuilt Content Models by clicking the **+ New Content Type** button and then click **Use Prebuilt** within your stack via the CMS. For more information, please refer to the [Import Content Models to your Stack](../../create-content-types/import-prebuilt-content-models.md) documentation.
 
 ## Common questions
 
 **Q: What is included in Contentstack Marketplace Content Models?**  
-A: The Content Models include the [Content Types](/docs/developers/create-content-types/about-content-types/), [Global Fields](/docs/developers/create-content-types/global/), [Labels](/docs/developers/create-content-types/about-labels/), and [Extensions](/docs/developers/experience-extensions-overview/about-experience-extensions/).
+A: The Content Models include the [Content Types](../../create-content-types/about-content-types.md), [Global Fields](../../create-content-types/global.md), [Labels](../../create-content-types/about-labels.md), and [Extensions](../../experience-extensions-overview/about-experience-extensions.md).
 
 **Q: Who can import Content Models into a stack?**  
 A: Users with access to the Contentstack Organization/Stack as the Owner/Admin or Stack Developer.

@@ -19,12 +19,12 @@ This page explains how to install and configure Contentstack’s Table app from 
 
 Contentstack’s Table app enables you to add a table as a custom field in your content type, allowing Content Managers to input data in a tabular format within entries. The Table app lets you add table headings in rows and subsequent data in columns. You can perform various operations such as sorting, inserting, and deleting rows and columns.
 
-**Note: **The number of rows and columns in a table depends on the size of the JSON data to be stored. Currently, only **10 KB** of JSON data can be stored via the Custom Field. For more details, refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) documentation.
+**Note: **The number of rows and columns in a table depends on the size of the JSON data to be stored. Currently, only **10 KB** of JSON data can be stored via the Custom Field. For more details, refer to our [Custom Field Limitation](../create-custom-fields/limitations-of-custom-fields.md) documentation.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner)/[Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner)/[Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)
 
 Let's follow this step-by-step guide to install and configure the Table app within your stack.
 
@@ -43,7 +43,7 @@ To install the app, log in to your [Contentstack account](https://www.contentsta
 - In the pop-up window, select the stack where you want to install the Table app, accept the **Terms of Service**, and click the **Install** button.
 - On the **UI Locations** tab, you can see the predefined app location. The only available UI location for the Table app is the **Custom Field**. If you disable this UI location, you will not be able to save the configuration as it requires at least one UI location to be enabled.
 
-  **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+  **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 
 - Click **Open Stack** to start using the Table application.
 
@@ -52,8 +52,8 @@ To install the app, log in to your [Contentstack account](https://www.contentsta
 To use the Table app within an entry of your stack, follow the steps given below:
 
 - Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
-- In the **Content Type Builder** page, add a [Custom field](/docs/developers/create-content-types/custom) in your content type by clicking the **Insert a field **link represented by a + sign.
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- In the **Content Type Builder** page, add a [Custom field](../create-content-types/custom.md) in your content type by clicking the **Insert a field **link represented by a + sign.
 - On the **Custom Field Editor Properties** modal:  
   Enter a **Display Name **for the field, for example Table.
 - (Optional) Enter an **Instruction Value **and **Help Text **for the field.
@@ -63,7 +63,7 @@ To use the Table app within an entry of your stack, follow the steps given below
   This adds Table to the custom field.
 
 - After adding the app in a custom field, click **Save **or **Save and Close** to save your changes.
-- To use the Table app, [create an entry](/docs/content-managers/author-content/create-an-entry) for this content type. In the left navigation panel, go to the **Entries **page and click **+ New Entry**.
+- To use the Table app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. In the left navigation panel, go to the **Entries **page and click **+ New Entry**.
 - In the **Select Content Type** modal, select the content type that we created above and click the **Proceed **button.
 - The entry opens. You will see the custom field with the **+ Add Table** button. Click on it to add the new table.
 
@@ -83,7 +83,7 @@ To use the Table app within an entry of your stack, follow the steps given below
 ## Common questions
 
 ### Who can install the Table app in a stack?
-Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner)/[Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin).
+Access to the Contentstack Organization/Stack as the [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner)/[Admin](../invite-users-and-assign-roles/types-of-roles.md#admin).
 
 ### Where can the Table app be used in the UI?
 The only available UI location for the Table app is the **Custom Field**.

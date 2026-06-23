@@ -19,7 +19,7 @@ This page explains what Gatsby is and how to use it with Contentstack via the co
 
 Gatsby is an open-source framework, based on React, that helps developers build blazing-fast websites and apps. Gatsby provides plugins to extend the functionality of the Gatsby-based websites.
 
-Contentstack provides [**contentstack-gatsby**](https://github.com/contentstack/gatsby-source-contentstack) plugin that allows you to build a static site by fetching content from Contentstack using [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and delivering it to your Gatsby-based website.
+Contentstack provides [**contentstack-gatsby**](https://github.com/contentstack/gatsby-source-contentstack) plugin that allows you to build a static site by fetching content from Contentstack using [Content Delivery APIs](../../../api-docs/api-detail/content-delivery-api.md) and delivering it to your Gatsby-based website.
 
 To learn about implementation of Gasby websites, we have developed a sample website for you to explore as follows:
 - [Gatsby+Contentstack starter website](/docs/developers/sample-apps/get-started-with-gatsby-and-contentstack)
@@ -32,7 +32,7 @@ If you want to start developing a basic website that fetches content from Conten
 Use the [**contentstack-gatsby**](https://github.com/contentstack/gatsby-source-contentstack) plugin.
 
 ### Which APIs does the plugin use to fetch content?
-It fetches content from Contentstack using [Content Delivery APIs](/docs/developers/apis/content-delivery-api).
+It fetches content from Contentstack using [Content Delivery APIs](../../../api-docs/api-detail/content-delivery-api.md).
 
 ### Is there a sample Gatsby + Contentstack project to reference?
 Yes, see the [Gatsby+Contentstack starter website](/docs/developers/sample-apps/get-started-with-gatsby-and-contentstack).

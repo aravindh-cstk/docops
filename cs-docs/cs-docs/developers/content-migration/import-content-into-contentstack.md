@@ -17,9 +17,9 @@ This page explains how to import previously exported content into Contentstack u
 
 ## Import Content into Contentstack
 
-Once you have exported content using one of the exporting utility tools, the next step is to import this data into [Contentstack](/docs). If you have used any other exporting tool (other than Contentstack’s import utility), refer to this guide to understand [how to restructure your data](/docs/developers/restructure-your-data-to-use-contentstack-import-content-utility) in the format that Contentstack’s import utility will understand.
+Once you have exported content using one of the exporting utility tools, the next step is to import this data into [Contentstack](/docs). If you have used any other exporting tool (other than Contentstack’s import utility), refer to this guide to understand [how to restructure your data](../restructure-your-data-to-use-contentstack-import-content-utility.md) in the format that Contentstack’s import utility will understand.
 
-**Warning: **This document has been deprecated. We will soon stop supporting this approach. Check out our detailed documentation on how to [import](/docs/developers/cli/import-content-using-the-cli) content in your stack using the command-line interface (CLI).
+**Warning: **This document has been deprecated. We will soon stop supporting this approach. Check out our detailed documentation on how to [import](../cli/import-content-using-the-cli.md) content in your stack using the command-line interface (CLI).
 
 Once you restructure the entry data (or if you have used Contentstack’s export tool to export the entry JSON), refer to the steps given below to import content into Contentstack.
 
@@ -85,7 +85,7 @@ Here's a brief of what values you need to provide for the above configuration pa
 `master_locale`
 : Enter the name and code of the
 
-[master locale](/docs/developers/multilingual-content/set-the-master-language)
+[master locale](../multilingual-content/set-the-master-language.md)
 of your stack in the parameters given below:
 
 `name`: The name of the master locale (e.g. English - United States)
@@ -156,7 +156,7 @@ In this folder, as our script executes on every module (assets, entries, webhook
 ## Common questions
 
 ### Is this import approach still supported?
-No. **Warning: **This document has been deprecated. We will soon stop supporting this approach. Check out our detailed documentation on how to [import](/docs/developers/cli/import-content-using-the-cli) content in your stack using the command-line interface (CLI).
+No. **Warning: **This document has been deprecated. We will soon stop supporting this approach. Check out our detailed documentation on how to [import](../cli/import-content-using-the-cli.md) content in your stack using the command-line interface (CLI).
 
 ### What format must my content be in to import it?
 Content will be imported into Contentstack only if it is saved in the JSON format.

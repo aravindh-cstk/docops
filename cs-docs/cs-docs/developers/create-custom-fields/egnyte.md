@@ -16,9 +16,9 @@ This page explains how to create and configure the legacy Egnyte custom field ex
 
 ## Egnyte
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Egnyte as a Marketplace App. For more information on Egnyte, please refer to the [Egnyte App Installation Guide](/docs/developers/marketplace-apps/egnyte).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Egnyte as a Marketplace App. For more information on Egnyte, please refer to the [Egnyte App Installation Guide](../marketplace-apps/egnyte.md).
 
-Egnyte extension allows you to fetch the files stored in your Egnyte account and display them into a field in your [content type](/docs/developers/create-content-types/about-content-types). Thus, while creating [entries](/docs/content-managers/working-with-entries/about-entries), you can select one or more files as input value for the field.
+Egnyte extension allows you to fetch the files stored in your Egnyte account and display them into a field in your [content type](../create-content-types/about-content-types.md). Thus, while creating [entries](../../content-managers/author-content/about-entries.md), you can select one or more files as input value for the field.
 
 This step-by-step guide explains how to create an **Egnyte** custom field extension for your content types in Contentstack. The steps performed are as follows:
 - [Create an account in Egnyte](#create-an-account-in-egnyte)
@@ -55,7 +55,7 @@ Now that we have set up the account in Egnyte and got yourself registered, let's
 
 ## Add the “Egnyte” Custom Field Extension to your Stack
 
-To add this custom field to your [stack](/docs/developers/set-up-stack/about-stack), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
+To add this custom field to your [stack](../set-up-stack/about-stack.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
 Go to your stack and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
@@ -67,7 +67,7 @@ Go to your stack and click on the “Settings” icon on the left navigation pan
 - **Field Data Type ***(required)*:** ** Select the data type in which the input data of the field should be saved in Contentstack. Select **JSON** in this case.
 - **Multiple ***(optional)*: Leave this checkbox unchecked.
 - **Hosting Method ***(required)*: Select **Hosted By Contentstack**.
-- **Extension Source Code ***(required)*: In this field, you need to **enter the extension code.** If Extensions are part of your plan, contact our [Support](mailto:support@contentstack.com) team to get the code for the extension.**Note**: In the code, locate the `redirect.html` file inside the `**source**` folder, and upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload asset](/docs/content-managers/working-with-assets/create-upload-assets) article. After uploading the file, you'll get a URL in the [asset details](/docs/content-managers/working-with-assets/create-upload-assets#asset-details) section, make note of this URL.
+- **Extension Source Code ***(required)*: In this field, you need to **enter the extension code.** If Extensions are part of your plan, contact our [Support](mailto:support@contentstack.com) team to get the code for the extension.**Note**: In the code, locate the `redirect.html` file inside the `**source**` folder, and upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload asset](../../content-managers/author-content/create-upload-assets.md) article. After uploading the file, you'll get a URL in the [asset details](../../content-managers/author-content/create-upload-assets.md#asset-details) section, make note of this URL.
 - **Config Parameter ***(required)*: Enter the following details as your config parameters:
 
 ```
@@ -91,24 +91,24 @@ Now, let’s understand how you can start using this custom field in your conten
 
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [**Custom**](/docs/developers/create-content-types/custom) field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
 - In the **Edit Properties** section, under **Select Extension**, select **Egnyte** from the drop-down and set the other properties of your custom field.
 - After adding other relevant fields in your content type, click on either **Save** or **Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Egnyte **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Egnyte **field in action.
 
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 
 ## More Articles
 
 You can also visit our collection of similar other articles:
-- [Eloquoa](/docs/developers/create-custom-fields/eloqua)
-- [Brandfolder](/docs/developers/create-custom-fields/brandfolder)
-- [Marketo](/docs/developers/create-custom-fields/marketo-forms)
+- [Eloquoa](./eloqua.md)
+- [Brandfolder](./brandfolder.md)
+- [Marketo](./marketo-forms.md)
 
 ## Common questions
 
 ### Is this Egnyte documentation current?
-**Note**: This documentation uses the legacy approach with extensions. We have launched Egnyte as a Marketplace App. For more information on Egnyte, please refer to the [Egnyte App Installation Guide](/docs/developers/marketplace-apps/egnyte).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Egnyte as a Marketplace App. For more information on Egnyte, please refer to the [Egnyte App Installation Guide](../marketplace-apps/egnyte.md).
 
 ### What config parameters are required for the extension?
 ```
@@ -123,4 +123,4 @@ You can also visit our collection of similar other articles:
 After completion of the registration, you will get a “Key” (**client ID**) to use as a config parameter while setting up the extension in Contentstack.
 
 ### Why can I only select a limited number of items?
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.

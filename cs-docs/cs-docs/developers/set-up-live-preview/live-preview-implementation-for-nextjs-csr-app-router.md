@@ -23,8 +23,8 @@ Client-side rendering (CSR) means your website loads data and builds pages direc
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to [stack settings](/docs/developers/set-up-stack/view-stack-details)
-- [Preview token](/docs/developers/create-tokens/about-delivery-tokens#understanding-preview-tokens)
+- Access to [stack settings](../set-up-stack/view-stack-details.md)
+- [Preview token](../create-tokens/about-delivery-tokens.md#understanding-preview-tokens)
 - Website that uses [Contentstack Delivery SDKs](https://www.contentstack.com/docs/developers/sdks)
 - IFrame-compatible website to avoid [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors
 
@@ -39,7 +39,7 @@ Create a preview token by navigating to **Settings **> **Tokens **> **Delivery T
 
 Each preview token is associated with a delivery token and shares access to the specific environment. If a delivery token doesn't exist, create one and enable the **Create Preview Token** toggle. For an existing delivery token, use the **+ Create Preview Token** option and copy the generated token.
 - ### Update Contentstack's Delivery SDK:
-Add the Live Preview configuration inside the `Contentstack.Stack()` method when configuring Contentstack’s Delivery SDK. For example, here’s a sample configuration using the [JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk/):
+Add the Live Preview configuration inside the `Contentstack.Stack()` method when configuring Contentstack’s Delivery SDK. For example, here’s a sample configuration using the [JavaScript Delivery SDK](../sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk.md):
 
 ```
 // utils.js
@@ -75,11 +75,11 @@ Contentstack.Stack({
   }
 })
 ```
-**Additional Resource: **For detailed information on migrating to the preview service refer to the[ Migrate to Preview Service](/docs/developers/set-up-live-preview/migrate-to-preview-service/) documentation.
+**Additional Resource: **For detailed information on migrating to the preview service refer to the[ Migrate to Preview Service](./migrate-to-preview-service.md) documentation.
 
 **Warning:** Upgrading to the latest SDK version won't disrupt your existing configuration, but you might notice suboptimal performance in live preview within references and other operations. To enhance efficiency, update the host and replace `management_token` with `preview_token`.
 - ### Install and Initialize the Live Preview Utils SDK:
-Use the [Live Preview Utils SDK](/docs/developers/set-up-live-preview/get-started-with-live-preview-utils-sdk-v3) to listen for content updates and fetch real-time preview data on the client side.
+Use the [Live Preview Utils SDK](./get-started-with-live-preview-utils-sdk-v3.md) to listen for content updates and fetch real-time preview data on the client side.
 
 You can either use** **`npm` or `yarn `to install the Live Preview Utils SDK`.`
 
@@ -137,12 +137,12 @@ In the example below, an `updateData()` function handles the data fetch and stat
         };
 ```
 - ## Host the Website
-To host a website, you can simply use [launch](/docs/developers/launch) or any other website hosting service.
+To host a website, you can simply use [launch](../launch.md) or any other website hosting service.
 - ## Update Stack Settings
 To set up Live Preview for the entries of your stack, perform the following steps:
 
 Navigate to **Settings **and select** Environments**.
-- [Set the base URL](/docs/developers/set-up-environments/add-an-environment/)s for different locales, and click **Update**.
+- [Set the base URL](../set-up-environments/add-an-environment.md)s for different locales, and click **Update**.
 - Select **Visual Experience** from the stack settings.
 - In the **General** tab, select the **Enable Live Preview** checkbox.
 - Set the **Default Preview Environment** and click **Save** to save the settings.**Tip:** You can also update the preview URL and environment from the preview settings available on the entry page.
@@ -150,7 +150,7 @@ Navigate to **Settings **and select** Environments**.
 - ## Live Edit Tags for Entries (recommended)
 Live Edit tags allow editors to directly jump from the Live Preview pane to the corresponding content fields in the entry editor. Clicking the **Edit** button next to a content block automatically opens the relevant field. If the field refers to another entry, you’ll be redirected to that entry’s editor page.
 
-**Additional Resource:** For detailed information on how to set up Live Edit tags, please refer to our documentation on [Set Up Live Edit Tags for Entries with REST](/docs/developers/set-up-live-preview/set-up-live-edit-tags-for-entries-with-rest)
+**Additional Resource:** For detailed information on how to set up Live Edit tags, please refer to our documentation on [Set Up Live Edit Tags for Entries with REST](./set-up-live-edit-tags-for-entries-with-rest.md)
 
 ## Common questions
 

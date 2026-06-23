@@ -23,7 +23,7 @@ Utilizing Contentstack's [Workflow](/docs/content-managers/use-workflows) will e
 
 ## Initial Setup
 
-To demonstrate this flow, we will create a [Content Model](/docs/developers/marketplace-platform-guides/content-models) that accepts the following data:
+To demonstrate this flow, we will create a [Content Model](../marketplace-platform-guides/content-models.md) that accepts the following data:
 - Headline (Single Line Textbox)
 - Description (Multi Line Textbox)
 
@@ -45,7 +45,7 @@ Fill the required fields and then set the workflow stage to “Ready for Transla
 
 - **Get the Content to be translated**  
 Choose Connector → Contentstack → Get Single Entry.  
-Configure the [Get Single Entry action](/docs/developers/automation-hub-connectors/contentstack-trigger#entry-trigger) to get the data of the entry.
+Configure the [Get Single Entry action](../../agent-os/contentstack-trigger.md#entry-trigger) to get the data of the entry.
 
 - **Translate the Content using ChatGPT**  
 Choose Connector → ChatGPT → Configure Action.  

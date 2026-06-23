@@ -20,7 +20,7 @@ This page explains how to use the taxonomy feature in Contentstack to filter and
 Utilizing the new taxonomy feature, you gain the ability to organize and access your entries based on their assigned classifications.
 
 Log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Navigate to the [stack](/docs/developers/set-up-stack/about-stack) where you've categorized your entries, then click the "Entries" icon located in the left-hand navigation panel.
+- Navigate to the [stack](../../developers/set-up-stack/about-stack.md) where you've categorized your entries, then click the "Entries" icon located in the left-hand navigation panel.
 - On the entries list page, the left panel now displays all the taxonomies you've created within the stack.
 - You can now choose specific terms from these taxonomies to filter and view entries that match those criteria. This customization allows you to have a tailored view of all your entries that have been categorized using taxonomies.
 

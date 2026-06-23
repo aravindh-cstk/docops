@@ -20,7 +20,7 @@ This page explains how to create a Team in Contentstack, configure its role mapp
 A Team lets you assign a specific set of Organization- and Stack-level role(s) to a group of users.
 
 To create a Team, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [Organization](/docs/developers/organization/about-organizations) where you want to create a Team, click on the “Org Admin” icon on the left navigation panel and select **Teams **from the menu.
+- Go to your [Organization](../organization/about-organizations.md) where you want to create a Team, click on the “Org Admin” icon on the left navigation panel and select **Teams **from the menu.
 - Click the **+ New Team** button.
 - In the **Create New Team** modal that appears, enter the **Team Name** and **Description** (optional) for your team.
 - Finally, click **Create Team**.
@@ -41,7 +41,7 @@ The **Users **tab is for adding users to the Teams. To add users to your team, f
 
 In the **Invite Users** modal, add the email IDs of users you want to add to the team and click the **Invite** button.
 
-**Additional Resource**: You can also create teams via the [Create a team](/docs/developers/apis/content-management-api#create-a-team) API request.
+**Additional Resource**: You can also create teams via the [Create a team](../../../api-docs/api-detail/content-management-api.md#create-a-team) API request.
 
 ## Common questions
 
@@ -55,4 +55,4 @@ The **Team** tab is used for role mappings, while the **Users **tab is used to i
 Yes. You can assign an organization role in **Assign Organization Role** and assign stack(s) and corresponding role(s) in **Invite to stacks**.
 
 ### Can I create Teams using an API instead of the UI?
-Yes. You can create teams via the [Create a team](/docs/developers/apis/content-management-api#create-a-team) API request.
+Yes. You can create teams via the [Create a team](../../../api-docs/api-detail/content-management-api.md#create-a-team) API request.

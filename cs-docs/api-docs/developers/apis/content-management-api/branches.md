@@ -12,7 +12,7 @@ last_updated: 2026-06-02
 
 # CMA | Branches
 
-[Branches](/docs/developers/branches) allows you to isolate and easily manage your “in-progress” work from your stable, live work in the production environment. It helps multiple development teams to work in parallel in a more collaborative, organized, and structured manner without impacting each other.
+[Branches](./branches.md) allows you to isolate and easily manage your “in-progress” work from your stable, live work in the production environment. It helps multiple development teams to work in parallel in a more collaborative, organized, and structured manner without impacting each other.
 
 ## Get All Branches
 
@@ -22,7 +22,7 @@ last_updated: 2026-06-02
 
 The Get all branches request returns comprehensive information of all the branches available in a particular stack in your account.
 
-You can add queries to extend the functionality of this API call. Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (Refer [Queries](/docs/developers/apis/content-delivery-api#queries))  
+You can add queries to extend the functionality of this API call. Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (Refer [Queries](../../../api-detail/content-delivery-api.md#queries))  
 To configure the permissions for your application via OAuth, please include the cm.branches.management:read scope.
 
 #### Query Parameters
@@ -201,7 +201,7 @@ To confirm the deletion of a branch, you need to specify the force=true query pa
 **Note:** You need to delete the child branches before deleting the parent branch. If a branch is the source for any other branch, irrespective of whether you pass a force parameter or not, the API will not allow you to delete that branch.  
  You must only use the authtoken to delete a branch.
 
-**Additional Resource:** Deleting a branch also deletes the [alias](/docs/developers/branches/#work-with-aliases) pointing towards it.
+**Additional Resource:** Deleting a branch also deletes the [alias](./branches.md#work-with-aliases) pointing towards it.
 
 When executing the API call, in the “URL Parameters” section, provide the UID of your branch.
 
@@ -239,7 +239,7 @@ When executing the API call, in the “URL Parameters” section, provide the UI
 
 ## Comparing Branches
 
-With the [Comparing Branches](/docs/developers/branches/comparing-branches) functionality, you can compare and check the differences between any two branches.
+With the [Comparing Branches](../../../../cs-docs/developers/branches/comparing-branches.md) functionality, you can compare and check the differences between any two branches.
 
 ### Compare branches
 
@@ -798,7 +798,7 @@ The  Compare specific global field between branches request returns all the diff
 
 ## Merging Branches
 
-The [Merging Branches ](/docs/developers/branches/merging-branches)functionality enables you to merge two branches, integrating the development changes made in the compare branch into the base branch.
+The [Merging Branches ](../../../../cs-docs/developers/branches/merging-branches.md)functionality enables you to merge two branches, integrating the development changes made in the compare branch into the base branch.
 
 ### Merge branches
 
@@ -806,7 +806,7 @@ The [Merging Branches ](/docs/developers/branches/merging-branches)functionality
 
 The Merge branches request merges the specified two branches as per the merge strategy selected.
 
-**Additional Resource:** To learn how to select and use the merge strategies, refer to our documentation on [Merging Branches](/docs/developers/branches/merging-branches/).
+**Additional Resource:** To learn how to select and use the merge strategies, refer to our documentation on [Merging Branches](../../../../cs-docs/developers/branches/merging-branches.md).
 
 You can pass ignore in the default_merge_strategy query parameter, and pass the item_merge_strategies in the request body to override the default strategy and use a different merge strategy for specific content types or global fields.
 

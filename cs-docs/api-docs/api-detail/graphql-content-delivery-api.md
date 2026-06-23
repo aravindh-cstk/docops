@@ -37,7 +37,7 @@ The GraphQL Content Delivery API offers live preview functionality, enabling use
 - GCP Europe (GCP EU): https://gcp-eu-graphql-preview.contentstack.com/
 - AWS Australia (AWS AU): https://au-api.contentstack.com/
 
-**Additional Resource**: You can refer to our documentation on [Live Preview](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website/) for more information.
+**Additional Resource**: You can refer to our documentation on [Live Preview](../../cs-docs/developers/set-up-live-preview/set-up-live-preview-for-your-website.md) for more information.
 
 ### Overview
 
@@ -51,7 +51,7 @@ GraphQL is a flexible, customizable API query language. Contentstack’s GraphQL
 
 If you are familiar with GraphQL, and want to get a hands-on experience of the API, here’s a quick link to our sample stack:
 
-[Query our sample stack](/docs/developers/apis/graphql-content-delivery-api/explorer)
+[Query our sample stack](./graphql-content-delivery-api/explorer.md)
 
 ### Authentication
 
@@ -61,7 +61,7 @@ GraphQL API requests must be authenticated using the following details:
 - Environment
 - Delivery token of the concerned environment
 
-You need to pass the [stack API Key](/docs/developers/set-up-stack/view-stack-details) in the URL and the [publishing environment](/docs/developers/set-up-environments/about-environments) as a query parameter. Use the value of the [delivery token](/docs/developers/create-tokens#work-with-delivery-tokens) against the access_token key in the header to authenticate your API request.
+You need to pass the [stack API Key](../../cs-docs/developers/set-up-stack/view-stack-details.md) in the URL and the [publishing environment](../../cs-docs/developers/set-up-environments/about-environments.md) as a query parameter. Use the value of the [delivery token](/docs/developers/create-tokens#work-with-delivery-tokens) against the access_token key in the header to authenticate your API request.
 
 **Note**: To fetch entries of a specific branch in your stack, you can pass the branch header while running the API request. This is an optional header that accepts the branch unique ID as value. You can also pass the alias ID as value for the branch header while querying the GraphQL API. If the branch header is not passed, then the API fetches details from the main branch by default.
 
@@ -225,7 +225,7 @@ Introspection system offers the ability to introspect what type of queries can r
 
 For example, each content type in your stack has a corresponding GraphQL type and name. The introspection system would help you understand what fields can be queried, the arguments supported by those fields, and what output types can be returned by them.
 
-We recommend that you structure your GraphQL queries by referring to the introspection schema. To explore the schema, you can run the following introspection query in [Contentstack’s GraphiQL explorer](/docs/developers/apis/graphql-content-delivery-api#graphiql-explorer):
+We recommend that you structure your GraphQL queries by referring to the introspection schema. To explore the schema, you can run the following introspection query in [Contentstack’s GraphiQL explorer](./graphql-content-delivery-api.md#graphiql-explorer):
 
 ```
 query IntrospectionQuery {
@@ -341,13 +341,13 @@ Contentstack’s GraphiQL explorer allows you to explore the GraphQL Content Del
 
 The GraphiQL explorer provides information about the content types and fields that are part of the schema.
 
-You can also enter your own stack details and the required parameters in the [GraphQL Explorer](/docs/developers/apis/graphql-content-delivery-api/explorer) to try out the API.
+You can also enter your own stack details and the required parameters in the [GraphQL Explorer](./graphql-content-delivery-api/explorer.md) to try out the API.
 
 ### Using Postman Collection
 
 Contentstack offers you a Postman Collection that helps you try out our GraphQL Content Delivery API. You can download this collection, connect to your Contentstack account, and try out the GraphQL API with ease.
 
-Learn more about how to [get started with using the Postman Collection](/docs/developers/apis/graphql-content-delivery-api#postman-collection) for Contenstack GraphQL Content Delivery API.
+Learn more about how to [get started with using the Postman Collection](./graphql-content-delivery-api.md#postman-collection) for Contenstack GraphQL Content Delivery API.
 
 ## API Reference
 
@@ -386,7 +386,7 @@ Here’s a list of all the Contentstack field types and their corresponding Grap
 
 #### Naming Convention
 
-GraphQL has its own schema language, which has naming conventions of its own. Thus, the typenames of your content types and fields may differ from their [unique IDs](/docs/developers/create-content-types/unique-id) (UIDs).
+GraphQL has its own schema language, which has naming conventions of its own. Thus, the typenames of your content types and fields may differ from their [unique IDs](../../cs-docs/developers/create-content-types/unique-id.md) (UIDs).
 
 Let us understand how Contentstack converts the unique IDs of complex objects from your schema to GraphQL typenames.
 
@@ -638,14 +638,14 @@ fragment SmartphonesFragment on Smartphones {
 }
 ```
 
-Learn more about querying reference fields in the [Retrieving Referenced Entries or Assets](/docs/developers/apis/graphql-content-delivery-api#retrieving-referenced-entries-or-assets) section.
+Learn more about querying reference fields in the [Retrieving Referenced Entries or Assets](./graphql-content-delivery-api.md#retrieving-referenced-entries-or-assets) section.
 
 
 #### System-defined Fields
 
 Certain fields in Contentstack are predefined. Their GraphQL type names are reserved and any user-defined fields that result in the same type will return the SCHEMA_BUILD_ERROR error message.
 
-**Tip**: You can use an API client, such as [GraphiQL Explorer](/docs/developers/apis/graphql-content-delivery-api#graphiql-explorer), to run queries and explore Contentstack's GraphQL Content Delivery API before writing your application code. This helps detect and avoid the use of any reserved GraphQL typenames or user-defined fields.
+**Tip**: You can use an API client, such as [GraphiQL Explorer](./graphql-content-delivery-api.md#graphiql-explorer), to run queries and explore Contentstack's GraphQL Content Delivery API before writing your application code. This helps detect and avoid the use of any reserved GraphQL typenames or user-defined fields.
 
 Here’s a list of system-defined fields generated by Contentstack’s GraphQL Content Delivery API:
 
@@ -819,7 +819,7 @@ type SysTaxonomies {
 
 ### Queries
 
-In this section, we learn how to fetch one or more [entries](/docs/content-managers/author-content/about-entries) or specific [fields](/docs/developers/create-content-types/about-fields) of those entries. We also learn how to fetch entries from multiple [content types](/docs/developers/create-content-types/about-content-types).
+In this section, we learn how to fetch one or more [entries](../../cs-docs/content-managers/author-content/about-entries.md) or specific [fields](../../cs-docs/developers/create-content-types/about-fields.md) of those entries. We also learn how to fetch entries from multiple [content types](../../cs-docs/developers/create-content-types/about-content-types.md).
 
 
 #### Get a List of Entries
@@ -1103,7 +1103,7 @@ query Query_2 {
 
 #### Get Entries from Multiple Languages
 
-You can fetch [localized](/docs/developers/multilingual-content/about-localization) versions of entries present in a single or multiple content types through a single API request. This query uses GraphQL’s [aliases](https://graphql.org/learn/queries/#aliases) to identify each set of localized entry versions.
+You can fetch [localized](../../cs-docs/developers/multilingual-content/about-localization.md) versions of entries present in a single or multiple content types through a single API request. This query uses GraphQL’s [aliases](https://graphql.org/learn/queries/#aliases) to identify each set of localized entry versions.
 
 You can use a [fragment](https://graphql.org/learn/queries/#fragments) to define fields such as “Title” and “Launch Date” and reuse it to query across multiple locales.
 
@@ -1244,7 +1244,7 @@ query {
 
 #### Get Group Fields while Retrieving Entries
 
-You can fetch data of only certain fields of a **Group** field that is used within a specific entry of a content type. To do this, you need to specify the content type UID, the entry UID, the Group field UID, and the UIDs of the fields that are part of the Group field in the query. Read more about [Group fields](/docs/developers/create-content-types/group).
+You can fetch data of only certain fields of a **Group** field that is used within a specific entry of a content type. To do this, you need to specify the content type UID, the entry UID, the Group field UID, and the UIDs of the fields that are part of the Group field in the query. Read more about [Group fields](../../cs-docs/developers/create-content-types/group.md).
 
 So, for instance, the **Product** content type has a Group field named **Bank Offers** and, within this Group field, we have a subfield named **Card Type**. If you want to retrieve the entries in which the value for the Card Type field is **Debit Card**, the query for this request would look as follows:
 
@@ -1274,11 +1274,11 @@ query {
 
 #### Get JSON RTE Fields while Retrieving Entries
 
-You can fetch the JSON-formatted data of a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor) (RTE) field added to the entries of a content type. To do this, you need to specify the **content type UID**, the **JSON RTE field UID**, and the **json** field.
+You can fetch the JSON-formatted data of a [JSON Rich Text Editor](../../cs-docs/developers/json-rich-text-editor.md) (RTE) field added to the entries of a content type. To do this, you need to specify the **content type UID**, the **JSON RTE field UID**, and the **json** field.
 
 The json field returns all the content blocks present inside the JSON RTE in the API response.
 
-**Note**: To fetch entries or assets embedded within the JSON RTE, you need to specify the embedded_itemsConnection field. Refer to the [Include Embedded RTE Items](/docs/developers/apis/graphql-content-delivery-api#include-embedded-rte-items) section for more information.
+**Note**: To fetch entries or assets embedded within the JSON RTE, you need to specify the embedded_itemsConnection field. Refer to the [Include Embedded RTE Items](./graphql-content-delivery-api.md#include-embedded-rte-items) section for more information.
 
 **Example**: In the **Product** content type, we have a "JSON Rich Text Editor" field named **Cart Items**. This field stores information about products that you have already added to your cart (kitchen appliances in this example), and also contains a company logo.
 
@@ -1313,7 +1313,7 @@ query {
 
 The response body of this query will include details of the embedded appliance entries and company logo asset. The json field inside the **Cart Items** JSON RTE returns all your editor content in JSON format.
 
-**Additional Resource**: Refer to the [JSON RTE schema](/docs/developers/json-rich-text-editor) documentation to understand how it stores and returns content.
+**Additional Resource**: Refer to the [JSON RTE schema](../../cs-docs/developers/json-rich-text-editor.md) documentation to understand how it stores and returns content.
 
 #### Get JSON RTE Fields while Retrieving Entries
 
@@ -1323,9 +1323,9 @@ The response body of this query will include details of the embedded appliance e
 
 #### Get Custom Fields while Retrieving Entries
 
-You can fetch the data of [Custom Field Extensions](/docs/developers/create-custom-fields/about-custom-fields) added to the entries of a content type. To do this, you need to specify the content type UID, the extension UID, and the UIDs of other fields that you want to fetch in the query.
+You can fetch the data of [Custom Field Extensions](../../cs-docs/developers/create-custom-fields/about-custom-fields.md) added to the entries of a content type. To do this, you need to specify the content type UID, the extension UID, and the UIDs of other fields that you want to fetch in the query.
 
-Contentstack allows you to retrieve the details of custom fields with input datatypes such as Number, Text, Boolean, Date, File, Reference, and JSON. Read more about [Extensions](/docs/developers/about-experience-extensions).
+Contentstack allows you to retrieve the details of custom fields with input datatypes such as Number, Text, Boolean, Date, File, Reference, and JSON. Read more about [Extensions](../../cs-docs/developers/experience-extensions-overview/about-experience-extensions.md).
 
 **Example**: In the **Product** content type, we have a "JSON Editor" custom field named **Helpful Links**. This field stores links to seller information as well as return policy norms for a specific product. If, for instance, you want to retrieve the value for this field, your query will look as follows:
 
@@ -1437,7 +1437,7 @@ Enabling non-nullable fields ensures more predictable API responses and prevents
 
 ### Retrieving Referenced Entries or Assets
 
-In this section, we learn how to fetch one or more [entries](/docs/content-managers/working-with-entries/about-entries) referred in the [reference](/docs/developers/create-content-types/reference) fields or [assets](/docs/content-managers/working-with-assets/about-assets) used in the entries while retrieving the entries of a [content type](/docs/developers/create-content-types/about-content-types). We also learn how to retrieve entries and assets referenced inside the JSON Rich Text Editor fields of the content type. Contentstack’s GraphQL API uses [relay type connection specification](https://relay.dev/docs/guides/graphql-server-specification/) to fetch referred content.
+In this section, we learn how to fetch one or more [entries](../../cs-docs/content-managers/author-content/about-entries.md) referred in the [reference](../../cs-docs/developers/create-content-types/reference.md) fields or [assets](/docs/content-managers/working-with-assets/about-assets) used in the entries while retrieving the entries of a [content type](../../cs-docs/developers/create-content-types/about-content-types.md). We also learn how to retrieve entries and assets referenced inside the JSON Rich Text Editor fields of the content type. Contentstack’s GraphQL API uses [relay type connection specification](https://relay.dev/docs/guides/graphql-server-specification/) to fetch referred content.
 
 **Relay specification** measures the Reference-Graph-Object structure for an application. The data graph specifies the different connections that exist between each entity of the stack. The following entities form a part of the graph structure:
 
@@ -1445,7 +1445,7 @@ In this section, we learn how to fetch one or more [entries](/docs/content-manag
 - Edges: Edges represent the connection between two content types, for instance, when a Product content type refers to the entries of another content type (e.g., Category).
 - Connection: Connection represents the one-to-many relationships between a parent content type and its referenced child content types.
 
-You can paginate the list of referenced entries or assets returned in the response body using the [skip](/docs/developers/apis/graphql-content-delivery-api#skip-operator) and [limit](/docs/developers/apis/graphql-content-delivery-api#limit-operator) parameters.
+You can paginate the list of referenced entries or assets returned in the response body using the [skip](./graphql-content-delivery-api.md#skip-operator) and [limit](./graphql-content-delivery-api.md#limit-operator) parameters.
 
 **Note**: You can only paginate the response returned for reference fields (referencing entries/assets) that have been marked as “Multiple”.
 
@@ -1479,11 +1479,11 @@ The above query will paginate all the referenced blog content irrespective of wh
 
 **Note**: To query Reference fields, you need to append the Connection term to the reference field UID as postfix (e.g., **related_blogsConnection**). Subsequently, you need to specify the name of the referenced content type in [PascalCase](https://techterms.com/definition/pascalcase#:~:text=PascalCase%20is%20a%20naming%20convention,in%20PascalCase%20is%20always%20capitalized.) to fetch referenced data through the node (e.g., **SalesBlogs**).
 
-To fetch entries or assets embedded inside a [JSON Rich Text Editor](/docs/developers/json-rich-text-editor), you need to specify the reference connections under the embedded_itemsConnection field. For entries, specify the content type name; and for assets, specify the system-generated SysAsset typename in Pascal casing format, e.g. SysAsset.
+To fetch entries or assets embedded inside a [JSON Rich Text Editor](../../cs-docs/developers/json-rich-text-editor.md), you need to specify the reference connections under the embedded_itemsConnection field. For entries, specify the content type name; and for assets, specify the system-generated SysAsset typename in Pascal casing format, e.g. SysAsset.
 
 **Note**: You cannot filter the GraphQL query response based on embedded items or references inside an embedded entry.
 
-If the field has been marked as "Multiple", use the [skip](/docs/developers/apis/graphql-content-delivery-api#skip-operator) and [limit](/docs/developers/apis/graphql-content-delivery-api#limit-operator) parameters to paginate the list of embedded items returned in the response.
+If the field has been marked as "Multiple", use the [skip](./graphql-content-delivery-api.md#skip-operator) and [limit](./graphql-content-delivery-api.md#limit-operator) parameters to paginate the list of embedded items returned in the response.
 
 For instance, the **Recent Articles** JSON Rich Text Editor provides a snapshot of the recently published articles for a news-related website. Each snapshot is represented by embedded items within the rich text editor, along with an embedded asset to make for better reading. To fetch only the last five recently published articles, your query will look as follows:
 
@@ -1530,9 +1530,9 @@ Let us fetch reference fields and assets while retrieving entries.
 
 Get entries of a content type along with the comprehensive details of the specified referenced entry. This query uses [relay specification](https://relay.dev/docs/guides/graphql-server-specification/) to retrieve the details of the entries referred in reference fields.
 
-**Note**: You can use the skip and limit parameters while querying [Reference](/docs/developers/create-content-types/reference) fields that refer to a single content type and have been marked as “Multiple”.
+**Note**: You can use the skip and limit parameters while querying [Reference](../../cs-docs/developers/create-content-types/reference.md) fields that refer to a single content type and have been marked as “Multiple”.
 
-If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](/docs/developers/create-content-types/reference-field-upgradation) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
+If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](../../cs-docs/developers/create-content-types/reference-field-upgradation.md) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
 
 **Example**: In the **Product** content type, there is a reference field called **Categories**, which refers entries of another content type named **Category**.
 
@@ -1668,7 +1668,7 @@ The response body of this query will include details of the ‘Title’ field of
 
 **** `/stacks/apiKey/explore`
 
-Get entries of a content type along with the comprehensive details of the embedded entries and assets referenced inside the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor). This query uses inline fragments and relay specification to retrieve details of rich text editors that refer to multiple embedded items.
+Get entries of a content type along with the comprehensive details of the embedded entries and assets referenced inside the [JSON Rich Text Editor](../../cs-docs/developers/json-rich-text-editor.md). This query uses inline fragments and relay specification to retrieve details of rich text editors that refer to multiple embedded items.
 
 **Note**: You cannot filter the GraphQL query response based on embedded items or references inside an embedded entry.
 
@@ -1737,7 +1737,7 @@ query {
 
 Get entries having values based on referenced fields. This query retrieves all entries that satisfy query conditions made on referenced fields that refer to a single content type.
 
-**Note**: If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](/docs/developers/create-content-types/reference-field-upgradation) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
+**Note**: If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](../../cs-docs/developers/create-content-types/reference-field-upgradation.md) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
 
 Let us use the equals operator to search based on the **Title** field of the referenced content type, **Category**.
 
@@ -1958,7 +1958,7 @@ Contentstack classifies content types, group fields, global fields, assets, refe
 
 Each of these fields has its own set of filters. Filter names typically follow this pattern and are postfixed by Where. For example, ContentType.Group.Reference is equivalent to ProductGroupReferenceWhere in GraphQL.
 
-Each filter has a subcategory of available filter types based on the fields that make up the complex type. You can refer to the [Naming Convention](/docs/developers/apis/graphql-content-delivery-api#naming-convention) section to know more about how filter names are generated.
+Each filter has a subcategory of available filter types based on the fields that make up the complex type. You can refer to the [Naming Convention](./graphql-content-delivery-api.md#naming-convention) section to know more about how filter names are generated.
 
 Let’s understand how to use these query operators with GraphQL.
 
@@ -4857,7 +4857,7 @@ The **total** field will display the number of entries where the ‘Price in USD
 
 ### Image Transformations
 
-You can use the parameters of Contentstack’s [Image Delivery API](/docs/developers/apis/image-delivery-api) in GraphQL queries to transform images while fetching them.   
+You can use the parameters of Contentstack’s [Image Delivery API](./image-delivery-api.md) in GraphQL queries to transform images while fetching them.   
   
 The following table consists of the different parameters that Contentstack GraphQL supports for image delivery, along with their acceptable values:
 
@@ -4994,7 +4994,7 @@ This query will place the image lying at the specified URL on top of the origina
 
 Contentstack GraphQL API now allows you to fetch content that belongs to a specific branch in your stack. To do so, you can pass the branch ID as the value of the branch key in the header of the API request.
 
-You can [query our sample stack](https://www.contentstack.com/docs/developers/apis/graphql-content-delivery-api/explorer) to fetch data present across different branches.
+You can [query our sample stack](./graphql-content-delivery-api/explorer.md) to fetch data present across different branches.
 
 #### July 17, 2021 - Removal of GraphQL Beta Support
 
@@ -5355,11 +5355,11 @@ The possible values for this header can be of string datatype, for example, **bl
 
 **x-query-complexity**
 
-This header calculates the complexity value for each API request made to the Contentstack database server. It represents the total number of entries and/or assets that were retrieved from the server by a specific GraphQL API request. Read more about it in the [Query Complexity and Cost Calculation](/docs/developers/apis/graphql-content-delivery-api#query-complexity-and-cost-calculation) section.
+This header calculates the complexity value for each API request made to the Contentstack database server. It represents the total number of entries and/or assets that were retrieved from the server by a specific GraphQL API request. Read more about it in the [Query Complexity and Cost Calculation](./graphql-content-delivery-api.md#query-complexity-and-cost-calculation) section.
 
 **x-resolver-cost**
 
-This header calculates the total number of database calls that need to be made to fetch the data requested by a specific GraphQL API request. Read more about it in the [Query Complexity and Cost Calculation](/docs/developers/apis/graphql-content-delivery-api#query-complexity-and-cost-calculation) section.
+This header calculates the total number of database calls that need to be made to fetch the data requested by a specific GraphQL API request. Read more about it in the [Query Complexity and Cost Calculation](./graphql-content-delivery-api.md#query-complexity-and-cost-calculation) section.
 
 **x-reference-depth**
 
@@ -5908,7 +5908,7 @@ Some of the important variables that you need to set are as follows:
 | access_token | your_environment-specific_delivery_token |
 | branch (optional) | your_unique_branch_ID |
 
-**Note:** The Contentstack Postman collection will require a valid environment-specific [Delivery token](/docs/developers/create-tokens/about-delivery-tokens) to make API calls. Check out the [Authentication](#authentication) section for more details.
+**Note:** The Contentstack Postman collection will require a valid environment-specific [Delivery token](../../cs-docs/developers/create-tokens/about-delivery-tokens.md) to make API calls. Check out the [Authentication](#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 

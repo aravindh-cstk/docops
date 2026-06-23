@@ -31,7 +31,7 @@ To extract the first frame from the following animated GIF: {GIF_name}, try the 
 1. The frame parameter only supports animated GIF file format.
 2. Currently, the frame parameter can only fetch the first frame from an animated GIF.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 

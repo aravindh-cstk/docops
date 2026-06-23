@@ -19,7 +19,7 @@ This page explains how to change an existing user’s organization role (Admin o
 
 You can update the organization role of an existing user. Along with that, you can also update the stack-level permissions for a user.
 
-To change [organization role](/docs/owners-and-admins/organization-roles) of a user, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
+To change [organization role](./organization-roles.md) of a user, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Select the organization from the dropdown in the header, and click on the “Org Admin” icon on the left navigation panel.
 - In the **Settings** page, click on **Users**. This displays the list of users within the organization.
 - Click on the user whose role you want to change. This opens the **Edit user** page.
@@ -28,7 +28,7 @@ To change [organization role](/docs/owners-and-admins/organization-roles) of a u
 
 ## API Reference
 
-You can refer the [Get all roles in an Organization](/docs/developers/apis/content-management-api#get-all-roles-in-an-organization) API request
+You can refer the [Get all roles in an Organization](../../../api-docs/api-detail/content-management-api.md#get-all-roles-in-an-organization) API request
 
 ## Common questions
 
@@ -42,4 +42,4 @@ A: In the **Settings** page, click on **Users** to view the list of users within
 A: You can change the organization role to **Admin** or **Member**.
 
 **Q: Is there an API related to organization roles?**  
-A: Yes, you can refer the [Get all roles in an Organization](/docs/developers/apis/content-management-api#get-all-roles-in-an-organization) API request.
+A: Yes, you can refer the [Get all roles in an Organization](../../../api-docs/api-detail/content-management-api.md#get-all-roles-in-an-organization) API request.

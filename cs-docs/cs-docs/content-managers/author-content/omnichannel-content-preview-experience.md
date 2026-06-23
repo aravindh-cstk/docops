@@ -27,7 +27,7 @@ Contentstack's Live Preview is an intuitive tool that allows content creators to
 By streamlining the content review process, Live Preview helps maintain a consistent presentation across multiple platforms, enhances brand trust, and enables you to tailor content for optimal engagement on any device.
 
 To preview your content, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
 - Select an existing entry and click the **Live Preview** icon.
 - In the upper right corner of the preview window, click the **Toggle Viewport** button to access different preview modes for your webpage.
 - Choose a preview mode from the dropdown menu:**Responsive Mode**:

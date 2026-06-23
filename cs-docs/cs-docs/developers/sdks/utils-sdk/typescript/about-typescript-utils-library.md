@@ -17,7 +17,7 @@ This page introduces the Contentstack TypeScript Utils SDK, explains what it ext
 
 ## About Typescript Utils Library
 
-The Contentstack [TypeScript Utils SDK](/docs/developers/sdks/content-delivery-sdk/typescript/about-typescript-delivery-sdk) extends the capabilities of the TypeScript Delivery SDK by offering a range of utility functions specifically tailored for TypeScript projects. This SDK simplifies complex tasks, such as managing embedded entries, assets, and references within your content, streamlining the use of Contentstack's [Content Delivery APIs](/docs/developers/apis/content-delivery-api/).
+The Contentstack [TypeScript Utils SDK](../../content-delivery-sdk/typescript/about-typescript-delivery-sdk.md) extends the capabilities of the TypeScript Delivery SDK by offering a range of utility functions specifically tailored for TypeScript projects. This SDK simplifies complex tasks, such as managing embedded entries, assets, and references within your content, streamlining the use of Contentstack's [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md).
 
 ## Key Features
 

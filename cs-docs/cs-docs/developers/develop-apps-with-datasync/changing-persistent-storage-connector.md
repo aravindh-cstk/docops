@@ -20,7 +20,7 @@ This guide will take you through the steps required to change the storage connec
 
 ## From Filesystem to MongoDB
 
-The boilerplate uses Filesystem as the default database system. If you want to set up [Contentstack DataSync](/docs/developers/develop-apps-with-datasync/about-contentstack-datasync) with MongoDB, perform the following steps:
+The boilerplate uses Filesystem as the default database system. If you want to set up [Contentstack DataSync](./about-contentstack-datasync.md) with MongoDB, perform the following steps:
 - Delete the `**.token**` and `**_contents**` folders before switching to MongoDB.
 - Setup the MongoDB server and have it running.
 - Go to the `**config**` folder, open the **index.js** file, and add the following line of code to switch to MongoDB:

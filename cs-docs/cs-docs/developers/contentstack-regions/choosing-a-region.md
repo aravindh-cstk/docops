@@ -16,7 +16,7 @@ This page explains how to choose a region for your organization data during Cont
 
 ## Choosing a Region
 
-You can choose a [region](/docs/developers/contentstack-regions/about-regions) for your organization data while subscribing for a [Contentstack (organization) account](https://app.contentstack.com/#!/login).
+You can choose a [region](./about-regions.md) for your organization data while subscribing for a [Contentstack (organization) account](https://app.contentstack.com/#!/login).
 
 Contact our [support team](mailto:support@contentstack.com) for more details.
 
@@ -26,7 +26,7 @@ Contact our [support team](mailto:support@contentstack.com) for more details.
 Contact our [support team](mailto:support@contentstack.com) for more details.
 
 ### Where do I choose the region during signup?
-You can choose a [region](/docs/developers/contentstack-regions/about-regions) for your organization data while subscribing for a [Contentstack (organization) account](https://app.contentstack.com/#!/login).
+You can choose a [region](./about-regions.md) for your organization data while subscribing for a [Contentstack (organization) account](https://app.contentstack.com/#!/login).
 
 ### Who can help me decide which region to use?
 Contact our [support team](mailto:support@contentstack.com) for more details.

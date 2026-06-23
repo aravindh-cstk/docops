@@ -44,7 +44,7 @@ In the 'Body' section, you need to provide the details of the workflow stage. En
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (optional)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`

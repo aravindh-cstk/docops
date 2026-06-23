@@ -18,15 +18,15 @@ This page explains what a fallback language is and how to set it when adding lan
 
 Fallback language is the parent language from which any given language inherits data.
 
-When you [add a language](/docs/developers/multilingual-content/add-a-language) in the [stack](/docs/developers/set-up-stack/about-stack), you are prompted to set the fallback language.
+When you [add a language](./add-a-language.md) in the [stack](../set-up-stack/about-stack.md), you are prompted to set the fallback language.
 
 **Note**: You can only set a language as the fallback language if that language is already added in your stack.
 
-If you want to update the fallback language of an existing language, follow the steps mentioned in the [Update Fallback Language](/docs/developers/multilingual-content/update-fallback-language) article.
+If you want to update the fallback language of an existing language, follow the steps mentioned in the [Update Fallback Language](./update-fallback-language.md) article.
 
 ## API Reference
 
-To set a fallback language for a language via API request, refer to the [Set a fallback language](/docs/developers/apis/content-management-api#set-a-fallback-language) API request.
+To set a fallback language for a language via API request, refer to the [Set a fallback language](../../../api-docs/api-detail/content-management-api.md#set-a-fallback-language) API request.
 
 ## Common questions
 
@@ -36,7 +36,7 @@ Fallback language is the parent language from which any given language inherits 
 
 ### When do I set the fallback language?
 
-When you [add a language](/docs/developers/multilingual-content/add-a-language) in the [stack](/docs/developers/set-up-stack/about-stack), you are prompted to set the fallback language.
+When you [add a language](./add-a-language.md) in the [stack](../set-up-stack/about-stack.md), you are prompted to set the fallback language.
 
 ### Can I set any language as the fallback language?
 
@@ -44,4 +44,4 @@ When you [add a language](/docs/developers/multilingual-content/add-a-language) 
 
 ### How do I set a fallback language via API?
 
-To set a fallback language for a language via API request, refer to the [Set a fallback language](/docs/developers/apis/content-management-api#set-a-fallback-language) API request.
+To set a fallback language for a language via API request, refer to the [Set a fallback language](../../../api-docs/api-detail/content-management-api.md#set-a-fallback-language) API request.

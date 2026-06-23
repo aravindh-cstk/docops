@@ -28,7 +28,7 @@ Contentstack Personalize empowers you to refine your event strategy on the fly. 
 **Note: **Users with Owner and Member access to a Personalize project can edit existing events.
 
 ## Steps for Execution
-**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
 To edit an existing event, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
@@ -36,11 +36,11 @@ To edit an existing event, log in to your [Contentstack account](https://www.con
 - Click the **Events **tab.
 - You can edit an existing Event by clicking your event to open it or by clicking the corresponding vertical ellipses under the **Actions **section and selecting **Edit**.
 - In the **Edit Event** modal, make the necessary changes to the **Key **and **Description **fields.
-- Click **Save **to complete the setup.**Warning:** Modifying an event tied to A/B tests can impact your metrics. Before editing, update all references to it in your experiments. Reset the Event Key used in `triggerImpressions` and `triggerEvent` via the [Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/). This prevents skewed metrics and keeps your personalization on track.
+- Click **Save **to complete the setup.**Warning:** Modifying an event tied to A/B tests can impact your metrics. Before editing, update all references to it in your experiments. Reset the Event Key used in `triggerImpressions` and `triggerEvent` via the [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md). This prevents skewed metrics and keeps your personalization on track.
 
 You will get a success message after the Event is edited.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#events) to create, edit, delete, and get all existing events.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#events) to create, edit, delete, and get all existing events.
 
 ## Common questions
 
@@ -51,7 +51,7 @@ Users with Owner and Member access to a Personalize project can edit existing ev
 You can make changes to the **Key **and **Description **fields in the **Edit Event** modal.
 
 ### What should I consider before editing an event used in A/B tests?
-Modifying an event tied to A/B tests can impact your metrics. Before editing, update all references to it in your experiments and reset the Event Key used in `triggerImpressions` and `triggerEvent` via the [Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/).
+Modifying an event tied to A/B tests can impact your metrics. Before editing, update all references to it in your experiments and reset the Event Key used in `triggerImpressions` and `triggerEvent` via the [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md).
 
 ### Can I edit events using an API instead of the UI?
-You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#events) to create, edit, delete, and get all existing events.
+You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#events) to create, edit, delete, and get all existing events.

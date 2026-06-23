@@ -19,12 +19,12 @@ This page explains how to add a publish rule in Contentstack Workflows to enforc
 
 Adding a publish rule lets you define approval or workflow requirements before entries can be published or unpublished. This ensures compliance and quality by enforcing organizational standards requiring each entry to meet the designated workflow stage before it can be published or unpublished.
 
-**Note:** Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), or [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can add a publish rule.
+**Note:** Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), or [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can add a publish rule.
 
 Setting up publish rules within a workflow is optional. However, because publishing and unpublishing are critical to content operations, publish rules are managed within the **Workflows** feature.
 
 To add a publish rule in your stack, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon or use the shortcut key “S” (for both Windows and Mac users).
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon or use the shortcut key “S” (for both Windows and Mac users).
 - Select **Workflows** and go to the **Publish Rules** tab.
 - Click **+ New Publish Rule**.
 - On the **Rule Details** page:**Branch(es):** Select one or more branches to apply the rule.**Tip:** You can select multiple branches.
@@ -57,7 +57,7 @@ Your team creates a blog post titled **“Holiday Sale Preview.”** The publish
 - If the post is edited (e.g., updating prices or images), a **new version** is created. The rule is enforced again, requiring fresh approval and workflow validation.
 
 ## API Reference
-To add a publish rule via API, refer to the [Create publish rules](/docs/developers/apis/content-management-api#create-publish-rules) API request.
+To add a publish rule via API, refer to the [Create publish rules](../../../api-docs/api-detail/content-management-api.md#create-publish-rules) API request.
 
 ## Common questions
 

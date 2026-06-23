@@ -26,7 +26,7 @@ Let’s dive in and start automating!
 
 ## Prerequisites:
 - [Contentstack account](https://www.contentstack.com/login)
-- [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) access for the Contentstack stack
+- [Admin](../developers/invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../developers/invite-users-and-assign-roles/types-of-roles.md#owner) access for the Contentstack stack
 
 The basic steps of the workflow can be broadly classified into the following:
 - [Create Project](#create-project)
@@ -62,7 +62,7 @@ First, perform the following steps to create an Automation:
       [Configure Trigger](#configure-trigger)
 - [Configure Action Step](#configure-action-step)
 
-    **Note: **You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](/docs/developers/automation-hub-guides/throttle-execution) document.
+    **Note: **You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](./throttle-execution.md) document.
 
     Let’s look at the above steps ‌in the next section.
 
@@ -74,9 +74,9 @@ First, perform the following steps to create an Automation:
 
     Configuring a trigger can be broken into the following steps:
 - Click **Configure Trigger** from the left navigation panel.
-- **Choose Connector**: Here, you can select Contentstack or an available third-party app or service which will serve as the trigger connector. For example, click **HTTP**.**Note:** For more details on the “HTTP” Connector and other available connectors, refer to [Automate Connectors](/docs/developers/automation-hub-connectors/).
+- **Choose Connector**: Here, you can select Contentstack or an available third-party app or service which will serve as the trigger connector. For example, click **HTTP**.**Note:** For more details on the “HTTP” Connector and other available connectors, refer to [Automate Connectors](../developers/automation-hub-connectors.md).
 - **Choose Trigger**: Select the Trigger or the webhook event listed under the selected connector. In our case, you will select the **HTTP Request Trigger.** This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.
-- **Configure Trigger**: Here, you need to provide additional details with respect to the trigger you selected in the above step. This section will differ for each trigger. For our example, click the displayed **Method**, i.e., **GET/POST**. You can also enable the **Secure HTTP Trigger** using the toggle to add security to the HTTP trigger and click **Proceed**.**Note:** For more information, refer to the[ HTTP Trigger](/docs/developers/automation-hub-connectors/http-trigger/) documentation.
+- **Configure Trigger**: Here, you need to provide additional details with respect to the trigger you selected in the above step. This section will differ for each trigger. For our example, click the displayed **Method**, i.e., **GET/POST**. You can also enable the **Secure HTTP Trigger** using the toggle to add security to the HTTP trigger and click **Proceed**.**Note:** For more information, refer to the[ HTTP Trigger](./http-trigger.md) documentation.
 
         You will find the applicable **Input methods** and an **Input URL** in the **Test Trigger** section.
 
@@ -100,7 +100,7 @@ name:"john"`
 `query.name | Matches (Text) | scott`
 - Lastly, you can either pass a new query parameter and **Retest **the trigger or hit **Save and Exit** (see screenshot in **step 3**).
 - This completes your step of configuring your HTTP trigger.
-- **Note:** You will find more details on how to [rename a trigger](/docs/developers/automation-hub-guides/rename-trigger/) and [delete a trigger](/docs/developers/automation-hub-guides/delete-trigger/) in the "[Working with Automate](https://www.contentstack.com/docs/developers/automation-hub-guides#working-with-automate)" section.
+- **Note:** You will find more details on how to [rename a trigger](../developers/automation-hub-guides/rename-trigger.md) and [delete a trigger](../developers/automation-hub-guides/delete-trigger.md) in the "[Working with Automate](https://www.contentstack.com/docs/developers/automation-hub-guides#working-with-automate)" section.
 
 ### Configure Action Step
 
@@ -138,7 +138,7 @@ The action is now tested. If you hover over the number (2), the message “Teste
 
 Once done, on the left panel of the page, you will see the Automation Steps summarizing the trigger and actions used in the automation.
 
-**Note:** You will find more details on how to [edit automation details](/docs/developers/automation-hub-guides/edit-automation-details/), how to [delete an automation](/docs/developers/automation-hub-guides/delete-automation/), and other actions in the [Additional functions on Triggers and Actions](/docs/developers/automation-hub-connectors/) section.
+**Note:** You will find more details on how to [edit automation details](../developers/automation-hub-guides/edit-automation-details.md), how to [delete an automation](../developers/automation-hub-guides/delete-automation.md), and other actions in the [Additional functions on Triggers and Actions](../developers/automation-hub-connectors.md) section.
 
 You can add a new step in between the configured automation steps. Suppose, you want a add a new action step in between two configured actions, then hover over the line between the two steps and click the **+** sign as shown below:
 
@@ -174,22 +174,22 @@ You can also activate an automation on the **Automations** homepage as follows:
 - **Usage Throttling: **For large-scale automations, use the throttling feature to prevent rate limits and avoid system overloads.
 
 ## Additional Resources and Warnings:
-- **Documentation for Connectors: **Refer to Contentstack’s [documentation](/docs/developers/automation-hub-connectors/) on available connectors (e.g., HTTP Trigger, Slack) for in-depth details on setup and customization.
+- **Documentation for Connectors: **Refer to Contentstack’s [documentation](../developers/automation-hub-connectors.md) on available connectors (e.g., HTTP Trigger, Slack) for in-depth details on setup and customization.
 - **Rate Limits and API Quotas:** Be aware of rate limits, especially when using third-party APIs or high-volume automations. Monitor usage to avoid interruptions.
 - **Security Warnings: **Always configure secure triggers (e.g., Secure HTTP Trigger) when handling sensitive data or user-specific workflows.
 
 ## Common questions
 
 ### Who can create and manage automations?
-You need a [Contentstack account](https://www.contentstack.com/login) and [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) access for the Contentstack stack.
+You need a [Contentstack account](https://www.contentstack.com/login) and [Admin](../developers/invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../developers/invite-users-and-assign-roles/types-of-roles.md#owner) access for the Contentstack stack.
 
 ### What are the main steps to set up an automation?
 The basic steps of the workflow can be broadly classified into the following: Create Project, Create Automation, Test Automation, and Activate Automation.
 
 ### Where can I find details about available connectors?
-Refer to Contentstack’s [documentation](/docs/developers/automation-hub-connectors/) on available connectors (e.g., HTTP Trigger, Slack) for in-depth details on setup and customization.
+Refer to Contentstack’s [documentation](../developers/automation-hub-connectors.md) on available connectors (e.g., HTTP Trigger, Slack) for in-depth details on setup and customization.
 
 ### How can I avoid rate limits when running automations?
-**Note: **You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](/docs/developers/automation-hub-guides/throttle-execution) document.
+**Note: **You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](./throttle-execution.md) document.
 
 <!-- filename: automations-guides-and-connectors-get-started-with-automations.md -->

@@ -37,11 +37,11 @@ Example structure:
 
 You can also extend this API request by adding queries to filter or refine results. Use the query parameter in the URL and provide the query in JSON format.
 
-**Additional Resource**: For more information about supported queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API documentation.
+**Additional Resource**: For more information about supported queries, refer to the [Queries](../../../../api-detail/content-delivery-api.md#queries) section of the Content Delivery API documentation.
 
 For example, to retrieve entries in a specific workflow stage, pass a query using _workflow.uid, where uid is the workflow stage UID.
 
-**Tip**: This request returns the first **100 entries** for the specified content type. To retrieve additional entries, use [pagination](/docs/developers/apis/content-delivery-api#pagination).
+**Tip**: This request returns the first **100 entries** for the specified content type. To retrieve additional entries, use [pagination](../../../../api-detail/content-delivery-api.md#pagination).
 
 ## URL Parameters
 
@@ -74,7 +74,7 @@ For example, to retrieve entries in a specific workflow stage, pass a query usin
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication.](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`

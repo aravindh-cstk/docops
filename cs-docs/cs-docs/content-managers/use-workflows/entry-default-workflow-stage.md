@@ -16,26 +16,26 @@ This page explains what the entry default workflow stage is, what happens when y
 
 ## Entry Default Workflow Stage
 
-**Note**: Before you get to know what the default workflow stage means, you should know the basics of [workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows), its [stages, ](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages)and [tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks).
+**Note**: Before you get to know what the default workflow stage means, you should know the basics of [workflows](../../developers/set-up-workflows-and-publish-rules/about-workflows.md), its [stages, ](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md)and [tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md).
 
-When you [create a new entry](/docs/content-managers/working-with-entries/create-an-entry) and save it, the entry is, by default, assigned the first stage of your [workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows).
+When you [create a new entry](../author-content/create-an-entry.md) and save it, the entry is, by default, assigned the first stage of your [workflow](../../developers/set-up-workflows-and-publish-rules/about-workflows.md).
 
-Initially, no [user](/docs/developers/invite-users-and-assign-roles/about-stack-users)(s) and/or [role](/docs/developers/invite-users-and-assign-roles/about-stack-roles)(s) are assigned to the first stage of the Workflow as seen in the **Assigned To** section. You can assign user(s) and/or role(s) as per your need.
+Initially, no [user](../../developers/invite-users-and-assign-roles/about-stack-users.md)(s) and/or [role](../../developers/invite-users-and-assign-roles/about-stack-roles.md)(s) are assigned to the first stage of the Workflow as seen in the **Assigned To** section. You can assign user(s) and/or role(s) as per your need.
 
-Also, the due date is not set for this [workflow stage](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages). So, you can assign a due date to the workflow stage as per your requirement.
+Also, the due date is not set for this [workflow stage](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md). So, you can assign a due date to the workflow stage as per your requirement.
 
-To update this stage, refer to our [Change Entry Workflow Stage](/docs/content-managers/use-workflows/change-entry-workflow-stage) section.
+To update this stage, refer to our [Change Entry Workflow Stage](./change-entry-workflow-stage.md) section.
 
 ## Common questions
 
 ### What workflow stage is assigned when I create and save a new entry?
-When you [create a new entry](/docs/content-managers/working-with-entries/create-an-entry) and save it, the entry is, by default, assigned the first stage of your [workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows).
+When you [create a new entry](../author-content/create-an-entry.md) and save it, the entry is, by default, assigned the first stage of your [workflow](../../developers/set-up-workflows-and-publish-rules/about-workflows.md).
 
 ### Are users or roles assigned to the first workflow stage by default?
-Initially, no [user](/docs/developers/invite-users-and-assign-roles/about-stack-users)(s) and/or [role](/docs/developers/invite-users-and-assign-roles/about-stack-roles)(s) are assigned to the first stage of the Workflow as seen in the **Assigned To** section.
+Initially, no [user](../../developers/invite-users-and-assign-roles/about-stack-users.md)(s) and/or [role](../../developers/invite-users-and-assign-roles/about-stack-roles.md)(s) are assigned to the first stage of the Workflow as seen in the **Assigned To** section.
 
 ### Is a due date set automatically for the default workflow stage?
-Also, the due date is not set for this [workflow stage](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages).
+Also, the due date is not set for this [workflow stage](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md).
 
 ### Where do I go to change an entry’s workflow stage?
-To update this stage, refer to our [Change Entry Workflow Stage](/docs/content-managers/use-workflows/change-entry-workflow-stage) section.
+To update this stage, refer to our [Change Entry Workflow Stage](./change-entry-workflow-stage.md) section.

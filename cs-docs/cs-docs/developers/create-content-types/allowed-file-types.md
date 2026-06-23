@@ -16,24 +16,24 @@ This page explains the **Allowed file type(s)** property for the **File** field,
 
 ## Allowed file type(s)
 
-The **Allowed file type(s)** property allows you to specify the file types that the user can upload using the [File](/docs/developers/create-content-types/file) field. Once you set the permitted file types for a field, users will not be able to upload any other file types apart from the ones mentioned in this property.
+The **Allowed file type(s)** property allows you to specify the file types that the user can upload using the [File](./file.md) field. Once you set the permitted file types for a field, users will not be able to upload any other file types apart from the ones mentioned in this property.
 
-For example, if you set the values for this property as "pdf, png, md," the user will only be able to upload files PDF documents, PNG graphic images, and Markdown files on the [entry](/docs/content-managers/working-with-entries/about-entries) page.
+For example, if you set the values for this property as "pdf, png, md," the user will only be able to upload files PDF documents, PNG graphic images, and Markdown files on the [entry](../../content-managers/author-content/about-entries.md) page.
 
-**Additional Resources**: Validations let you eliminate errors while writing content. You can check out the [Validations](/docs/developers/how-to-guides/validations) guide to know more.
+**Additional Resources**: Validations let you eliminate errors while writing content. You can check out the [Validations](../security/validations.md) guide to know more.
 
-Making changes in existing field properties may result in data loss. To prevent this, make sure you go through our [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide before you go ahead.
+Making changes in existing field properties may result in data loss. To prevent this, make sure you go through our [Content Type Change Management](../content-modeling/content-type-change-management.md) guide before you go ahead.
 
 ## Common questions
 
 ### What field does the Allowed file type(s) property apply to?
-It applies to the [File](/docs/developers/create-content-types/file) field.
+It applies to the [File](./file.md) field.
 
 ### What happens if a user tries to upload a file type not listed?
 Users will not be able to upload any other file types apart from the ones mentioned in this property.
 
 ### Where do users upload files after this is configured?
-Users upload files on the [entry](/docs/content-managers/working-with-entries/about-entries) page.
+Users upload files on the [entry](../../content-managers/author-content/about-entries.md) page.
 
 ### Where can I learn more about validations and safe changes?
-See the [Validations](/docs/developers/how-to-guides/validations) guide and the [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide.
+See the [Validations](../security/validations.md) guide and the [Content Type Change Management](../content-modeling/content-type-change-management.md) guide.

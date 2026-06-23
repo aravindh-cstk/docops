@@ -16,9 +16,9 @@ This page explains how to configure an AWS webhook listener (API Gateway + Lambd
 
 ## Set up AWS Webhook Listener to Test Contentstack Webhook URLs
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to configure and manage webhook integrations in Contentstack, refer to the [Webhooks](/docs/developers/webhooks) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to configure and manage webhook integrations in Contentstack, refer to the [Webhooks](../../../api-docs/developers/apis/content-management-api/webhooks.md) documentation.
 
-Using Contentstack [Webhooks](/docs/developers/set-up-webhooks/about-webhooks), you can post data to AWS when an event occurs in your stack. AWS responds to the payload from Contentstack Webhook Dispatcher by returning the appropriate data.
+Using Contentstack [Webhooks](../set-up-webhooks/about-webhooks.md), you can post data to AWS when an event occurs in your stack. AWS responds to the payload from Contentstack Webhook Dispatcher by returning the appropriate data.
 
 In this guide, let's understand how to configure a webhook listener in AWS, that listens for incoming requests from Contentstack and validates the request.
 
@@ -30,7 +30,7 @@ We will set up an AWS API Gateway URL using [AWS CLI](https://aws.amazon.com/cli
 
 - AWS CLI [installed](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) and [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
 - Basic lambda function with **nodejs v14**
-- Setup a [Webhook](/docs/developers/set-up-webhooks/about-webhooks) in your Stack
+- Setup a [Webhook](../set-up-webhooks/about-webhooks.md) in your Stack
 
 ## Steps for Execution:
 

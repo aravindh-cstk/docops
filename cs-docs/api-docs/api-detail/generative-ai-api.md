@@ -35,7 +35,7 @@ The Generative AI API requests link your Vector database with a **Large Language
 
 ### Authentication
 
-Generative AI uses token-based authentication. You can use the Authtoken along with the Organization UID to make API requests. Read more about the different [types of tokens](/docs/developers/create-tokens/types-of-tokens).
+Generative AI uses token-based authentication. You can use the Authtoken along with the Organization UID to make API requests. Read more about the different [types of tokens](../../cs-docs/developers/create-tokens/types-of-tokens.md).
 
 #### For Authtoken-based authentication
 
@@ -45,13 +45,13 @@ Generative AI uses token-based authentication. You can use the Authtoken along w
 
 #### How to Get Authtoken
 
-To retrieve the authtoken, log in to your Contentstack account by using the [Log into your account](/docs/developers/apis/content-management-api/#logging-in-out) request under [User Session](/docs/developers/apis/content-management-api/#user-session). This request will return the authtoken in the response body.
+To retrieve the authtoken, log in to your Contentstack account by using the [Log into your account](./content-management-api.md#logging-in-out) request under [User Session](./content-management-api.md#user-session). This request will return the authtoken in the response body.
 
-You can generate multiple authtokens by executing the [Log into your account](/docs/developers/apis/content-management-api/#logging-in-out) request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of 20 valid tokens that a user can use per account at a time, to execute CMA requests.
+You can generate multiple authtokens by executing the [Log into your account](./content-management-api.md#logging-in-out) request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of 20 valid tokens that a user can use per account at a time, to execute CMA requests.
 
 **Note**: If you already have valid 20 tokens, creating a new authtoken will automatically cause the oldest authtoken to expire without warning.
 
-For SSO-enabled organizations, the [Log into your account](/docs/developers/apis/content-management-api/#logging-in-out) request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require a user authtoken will not work. Only the owner of the organization and users with permission to access the Organization without SSO can use these APIs. Learn more about [REST API Usage](/docs/developers/single-sign-on/rest-api-usage).
+For SSO-enabled organizations, the [Log into your account](./content-management-api.md#logging-in-out) request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require a user authtoken will not work. Only the owner of the organization and users with permission to access the Organization without SSO can use these APIs. Learn more about [REST API Usage](../../cs-docs/developers/single-sign-on/rest-api-usage.md).
 
 ### Rate Limiting
 
@@ -118,7 +118,7 @@ The Generate AI works as a communication channel between your Vector database an
 
 The GenAI request carries prompts, processes them, retrieves relevant data, and returns the processed data.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 Here’s an example of the Request Body for using GenAI request:
 
@@ -139,7 +139,7 @@ Here’s an example of the Request Body for using GenAI request:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (optional)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/generative-ai-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./generative-ai-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Request
@@ -249,7 +249,7 @@ Some of the important variables that you need to set are as follows:
 
   
 
-**Note:** The Generative AI Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](/docs/developers/apis/generative-ai-api#authentication) section for more details.
+**Note:** The Generative AI Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](./generative-ai-api.md#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 
@@ -298,11 +298,11 @@ If you want to prevent this action, perform the steps given below:
 
 This will allow you to access [cookies of this domain in scripts](https://learning.postman.com/docs/sending-requests/cookies/#accessing-cookies-in-scripts) programmatically.
 
-**Note:** To avoid this situation, we recommend you to use the Brand Kit UID along with the Authtoken to make valid Generative AI API requests. For more information, refer to [Authentication](/docs/developers/apis/generative-ai-api#authentication).
+**Note:** To avoid this situation, we recommend you to use the Brand Kit UID along with the Authtoken to make valid Generative AI API requests. For more information, refer to [Authentication](./generative-ai-api.md#authentication).
 
 ### Postman Collection Updates
 
-We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](/docs/developers/apis/generative-ai-api#download-latest-collection) again and you are good to go.
+We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](./generative-ai-api.md#download-latest-collection) again and you are good to go.
 
 You can also choose to watch for the latest Postman Collection updates on our GitHub repository and get notifications of new releases or updates to the repository. The GitHub Readme doc will help you with the steps that you need to follow.
 

@@ -15,9 +15,9 @@ last_updated: 2026-03-26
 
 This page explains how to set up and use the legacy Vimeo custom field extension in Contentstack, including generating a Vimeo access token, adding the extension to your stack, and using the custom field in a content type. It is intended for developers configuring extensions and content managers who will select Vimeo videos while creating entries.
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Vimeo as a Marketplace App. For more information on Vimeo, please refer to the [Vimeo App Installation Guide](/docs/developers/marketplace-apps/vimeo).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Vimeo as a Marketplace App. For more information on Vimeo, please refer to the [Vimeo App Installation Guide](../marketplace-apps/vimeo.md).
 
-The Vimeo [custom](/docs/developers/create-custom-fields/about-custom-fields) extension lets you fetch Vimeo videos and display them into a field in your [content type](/docs/developers/create-content-types/about-content-types). Subsequently, while creating [entries](/docs/content-managers/working-with-entries/about-entries), [content managers](/docs/developers/invite-users-and-assign-roles/types-of-roles#content-manager) can select multiple videos at a time as the input value for that field.
+The Vimeo [custom](./about-custom-fields.md) extension lets you fetch Vimeo videos and display them into a field in your [content type](../create-content-types/about-content-types.md). Subsequently, while creating [entries](../../content-managers/author-content/about-entries.md), [content managers](../invite-users-and-assign-roles/types-of-roles.md#content-manager) can select multiple videos at a time as the input value for that field.
 
 This step-by-step guide explains how to create a Vimeo custom field extension for your content types in Contentstack.
 
@@ -56,13 +56,13 @@ To add the Vimeo Custom field to your stack, log in to your [Contentstack accoun
 For this extension, we have created the example code. If Extensions are part of your plan, contact our [Support](mailto:support@contentstack.com) team to get the code for the extension. You'll be provided the source code that contains the following files:
 
 - **vimeo**: Navigate to **vimeo/build/index.html** file. We will upload the code in this file in the extension source code field of our extension in the next step.
-- **vimeo-popup**: Navigate to **vimeo-popup/build/index.html**, upload this file as an asset in your stack by referring to the [Create/Upload](/docs/content-managers/working-with-assets/create-upload-assets) Assets guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+- **vimeo-popup**: Navigate to **vimeo-popup/build/index.html**, upload this file as an asset in your stack by referring to the [Create/Upload](../../content-managers/author-content/create-upload-assets.md) Assets guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
+- Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:
-  - **Title ***(required)*: Provide a suitable title, for example “Vimeo,” for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+  - **Title ***(required)*: Provide a suitable title, for example “Vimeo,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
   - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
   - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
   - **Extension source code** *(required)*: Enter the downloaded extension source code here. Navigate to **vimeo/build/path** from the downloaded folder, copy and add the code of the** index.html **file here.
@@ -87,18 +87,18 @@ Now, let’s understand how you can start using this custom field in your conten
 
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [**Custom**](/docs/developers/create-content-types/custom) field to it.
+- [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
 - Under **Select Extension**, select the “Vimeo” field that you created and set the other properties. You can add other fields as per requirements.
 - Finally, click on either **Save **or** Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Vimeo **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Vimeo **field in action.
 - Click **Choose Video**. This will redirect you to a new page which displays a list of videos.
 - You can also choose the grid view for easy access. Select the videos you want to add and click on **Add Selected Videos**. The videos will be displayed in your custom field.
-- **Additional Resource: **You can also refer to our other documents on custom video extensions such as [YouTube](/docs/developers/create-custom-fields/youtube), [Brightcove](/docs/developers/create-custom-fields/brightcove), and [Ooyala](/docs/developers/create-custom-fields/ooyala).
+- **Additional Resource: **You can also refer to our other documents on custom video extensions such as [YouTube](./youtube.md), [Brightcove](./brightcove.md), and [Ooyala](./ooyala.md).
 
 ## Common questions
 
 **Q: Is this guide for the Marketplace App or the legacy extension approach?**  
-A: **Note**: This documentation uses the legacy approach with extensions. We have launched Vimeo as a Marketplace App. For more information on Vimeo, please refer to the [Vimeo App Installation Guide](/docs/developers/marketplace-apps/vimeo).
+A: **Note**: This documentation uses the legacy approach with extensions. We have launched Vimeo as a Marketplace App. For more information on Vimeo, please refer to the [Vimeo App Installation Guide](../marketplace-apps/vimeo.md).
 
 **Q: What data type should I select for the Vimeo custom field extension?**  
 A: **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.

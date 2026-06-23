@@ -17,13 +17,13 @@ This page explains how to create and configure a Brandfolder custom field extens
 
 Brandfolder
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Brandfolder as a Marketplace App. For more information on Brandfolder, please refer to the [Brandfolder App Installation Guide](/docs/developers/marketplace-apps/brandfolder).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Brandfolder as a Marketplace App. For more information on Brandfolder, please refer to the [Brandfolder App Installation Guide](../marketplace-apps/brandfolder.md).
 
 Brandfolder is a popular Digital Asset Management platform that offers several features to help marketing, branding, and creative teams to streamline their workflow and make it easier.
 
 Along with providing storage for your digital assets, Brandfolder helps in organizing, manipulating, analyzing, and distributing the company's important digital collateral.
 
-With its flexible architecture, it is possible to add a Brandfolder [custom field](/docs/developers/create-custom-fields/about-custom-fields) extension to your [stack](/docs/developers/set-up-stack/about-stack) that allows you to fetch [assets](/docs/content-managers/working-with-assets/about-assets) from Brandfolder and display them into a field in your [content type](/docs/developers/create-content-types/about-content-types). Subsequently, while creating [entries](/docs/content-managers/working-with-entries/about-entries), you can select one or more assets as the input value for the field.
+With its flexible architecture, it is possible to add a Brandfolder [custom field](./about-custom-fields.md) extension to your [stack](../set-up-stack/about-stack.md) that allows you to fetch [assets](/docs/content-managers/working-with-assets/about-assets) from Brandfolder and display them into a field in your [content type](../create-content-types/about-content-types.md). Subsequently, while creating [entries](../../content-managers/author-content/about-entries.md), you can select one or more assets as the input value for the field.
 
 This step-by-step guide explains how to create a Brandfolder custom field extension for your content types in Contentstack. The steps performed are as follows:
 - [Create a Brandfolder account](#create-a-brandfolder-account)
@@ -48,7 +48,7 @@ Now, let's move ahead and set up our extension.
 
 ## Add the Brandfolder Custom Field Extension to your Stack
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel
+Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel
 - Select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions** page, click on the **+ New Extension** button and then on **Create new** as shown below. Alternatively, you can click on the **+ New Extension** link.
 - On the **Select Extension Type** screen, select **Custom Field**.
@@ -62,7 +62,7 @@ Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the �
 
 The support team will provide you with the source code. Copy the code from the **index.html** file located in the root folder and paste it in the Extension source code field.
 
-**Note**: In the downloaded code, inside the **source** folder, there's a **brandfolder** HTML file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload asset](/docs/content-managers/working-with-assets/create-upload-assets) article. After uploading the file, you'll get a URL in the [asset details](/docs/content-managers/working-with-assets/create-upload-assets#asset-details) section, make note of this URL.
+**Note**: In the downloaded code, inside the **source** folder, there's a **brandfolder** HTML file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload asset](../../content-managers/author-content/create-upload-assets.md) article. After uploading the file, you'll get a URL in the [asset details](../../content-managers/author-content/create-upload-assets.md#asset-details) section, make note of this URL.
 - **Config parameter**: Enter the following configuration details as the extension's config parameter:
 
 ```
@@ -96,12 +96,12 @@ This leads you to the Content Type Builder page where you can add the relevant f
 - Now open the content type and create an entry as usual. You will see the Brandfolder extension field in your entry as shown below:
 - Click on **Choose Assets**. From the Brandfolder modal that opens, you will be able to select and insert the required assets into the field.
 
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 
 ## Common questions
 
 ### Is this documentation for the Marketplace App or the legacy extension?
-**Note**: This documentation uses the legacy approach with extensions. We have launched Brandfolder as a Marketplace App. For more information on Brandfolder, please refer to the [Brandfolder App Installation Guide](/docs/developers/marketplace-apps/brandfolder).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Brandfolder as a Marketplace App. For more information on Brandfolder, please refer to the [Brandfolder App Installation Guide](../marketplace-apps/brandfolder.md).
 
 ### What do I need from Brandfolder to configure the extension?
 You need access to your Brandfolder API key.
@@ -110,4 +110,4 @@ You need access to your Brandfolder API key.
 The value for widgetURL is the URL of the brandfolder HTML file which you just uploaded as an asset.
 
 ### Is there a limit on how many assets I can select?
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.

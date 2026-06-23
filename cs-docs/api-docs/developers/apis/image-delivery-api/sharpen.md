@@ -36,7 +36,7 @@ Let us try to increase the sharpness of a given image by amount:2, radius:1000, 
 2. To specify the radius (size) of the sharpening area, you can use any decimal number (float) between 1 and 1000. You can also use percent style values to define the radius of the sharpening area, for example, 50p.
 3. To specify the threshold of the sharpening area, you can use any whole number (integer) between 0 and 255.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 

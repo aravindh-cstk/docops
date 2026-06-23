@@ -22,7 +22,7 @@ This page explains how to access and manage Variant Groups in Contentstack Varia
 The **Variants** page in Contentstack allows you to view all variant groups and the variants associated with them. Variant groups may originate from a linked **Personalize** project or be created independently within the CMS UI to support content modeling workflows.
 
 **Note:**
-- Each [experience](/docs/personalize/about-experiences) created in your Personalize project appears as a **Variant Group** with the same name as the experience in the linked stack.
+- Each [experience](../../personalize/about-experiences.md) created in your Personalize project appears as a **Variant Group** with the same name as the experience in the linked stack.
 - When a stack is linked to a Personalize project, you cannot create, edit, or delete the **title** or **description** of variant groups or variants that originate from Personalize.
 
 ## Accessing Variant Groups
@@ -30,7 +30,7 @@ The **Variants** page in Contentstack allows you to view all variant groups and 
 The **Variant Groups** page in the stack settings displays all available variant groups, including those linked to Personalize and those created independently in the CMS.
 
 To access the variant groups, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack).
+- Navigate to the desired [stack](../set-up-stack/about-stack.md).
 - Click **Settings**.
 - Select **Variants**.
 
@@ -98,11 +98,11 @@ From this section, you can perform the following actions:
 
 After linking a variant group to a content type, a **Variants** dropdown appears in the entry editor. This allows you to create and manage entry variants for that content type.
 
-For more information, refer to [Create an Entry Variant](/docs/content-managers/entry-variants/create-an-entry-variant).
+For more information, refer to [Create an Entry Variant](../../content-managers/entry-variants/create-an-entry-variant.md).
 
 ## API Reference
 
-To manage variant groups via API, refer to the [Variant Group](/docs/developers/apis/content-management-api#variant-groups) API requests.
+To manage variant groups via API, refer to the [Variant Group](../../../api-docs/api-detail/content-management-api.md#variant-groups) API requests.
 
 ## Common questions
 
@@ -116,6 +116,6 @@ No. Content type assignments are **branch-specific**, meaning changes in one bra
 Unlinked variants appear in the **Unlinked Variants** section and unlinked content types appear in the **Unlinked Content Types** section, where you can **Re-link** or **Remove** them.
 
 ### Where do I find the API to manage variant groups?
-Use the [Variant Group](/docs/developers/apis/content-management-api#variant-groups) API requests in the Content Management API reference.
+Use the [Variant Group](../../../api-docs/api-detail/content-management-api.md#variant-groups) API requests in the Content Management API reference.
 
 <!-- filename: variants-cms-manage-variant-groups.md -->

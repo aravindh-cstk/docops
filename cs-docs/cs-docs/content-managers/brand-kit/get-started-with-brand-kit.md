@@ -26,7 +26,7 @@ By the end of this guide, you will have the knowledge and skills to leverage Con
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/) with access to Brand Kit
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin)
 
 ## Steps for Execution
 - [Create Brand Kit](#create-brand-kit)
@@ -65,7 +65,7 @@ AI Assistant is an app available in Contentstack Marketplace. It provides AI-pow
 
 It offers functionalities such as SEO metadata generation, content optimization suggestions, blog post content generation, user persona tag creation, and more.
 
-To install and configure the AI Assistant app, follow the step-by-step process defined in the [AI Assistant with Brand Kit](/docs/developers/marketplace-apps/ai-assistant-with-brand-kit#install-the-ai-assistant-app-in-marketplace) documentation.
+To install and configure the AI Assistant app, follow the step-by-step process defined in the [AI Assistant with Brand Kit](../../developers/marketplace-apps/ai-assistant-with-brand-kit.md#install-the-ai-assistant-app-in-marketplace) documentation.
 
 **Note**: To use Brand Kit efficiently, select the **Managed by Contentstack** option under **Platform Configuration** settings on the AI Assistant app **Configuration** page and then enable the **Brand Kit: On-brand Generative AI** settings.
 
@@ -73,9 +73,9 @@ To install and configure the AI Assistant app, follow the step-by-step process d
 
 To use Brand Kit within the AI Assistant app within an entry of your stack, follow the steps given below:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type/) by adding relevant details as displayed below and click the **Save and proceed** button.
-- To use the AI Assistant app, create an entry for the above content type. In the left navigation panel, navigate to the [Entries](/docs/content-managers/author-content/create-an-entry/) page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.
-- You can see the AI Assistant app icon in the [Field Modifier Location](/docs/developers/developer-hub/field-modifier-location).
+[Create a content type](../../developers/create-content-types/create-a-content-type.md) by adding relevant details as displayed below and click the **Save and proceed** button.
+- To use the AI Assistant app, create an entry for the above content type. In the left navigation panel, navigate to the [Entries](../author-content/create-an-entry.md) page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.
+- You can see the AI Assistant app icon in the [Field Modifier Location](../../developers/developer-hub/field-modifier-location.md).
 - To generate Brand Kit specific content, provide the following details:  
   Select the **Brand Kit** from the dropdown.
 - Select the relevant **Voice Profile** from the dropdown.
@@ -85,14 +85,14 @@ To use Brand Kit within the AI Assistant app within an entry of your stack, foll
 - After adding the content, **Save** and **Publish** your entry.
 
 **Additional Resource**:
-- For details on the Brand Kit, refer to the [Brand Kit](/docs/brand-kit/about-brand-kit), [Voice Profile](/docs/brand-kit/about-voice-profile), and [Knowledge Vault](/docs/brand-kit/about-knowledge-vault) documentation.
-- For AI Assistant app related information, refer to the [AI Assistant with Brand Kit](/docs/developers/marketplace-apps/ai-assistant-with-brand-kit) documentation.
+- For details on the Brand Kit, refer to the [Brand Kit](./about-brand-kit.md), [Voice Profile](./about-voice-profile.md), and [Knowledge Vault](./about-knowledge-vault.md) documentation.
+- For AI Assistant app related information, refer to the [AI Assistant with Brand Kit](../../developers/marketplace-apps/ai-assistant-with-brand-kit.md) documentation.
 - For more queries, refer to the [Brand Kit FAQs](/docs/faqs#brand-kit-faqs) documentation.
 
 ## Common questions
 
 **Q: What do I need before I can create a Brand Kit?**  
-A: You need a [Contentstack account](https://www.contentstack.com/login/) with access to Brand Kit and access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin).
+A: You need a [Contentstack account](https://www.contentstack.com/login/) with access to Brand Kit and access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin).
 
 **Q: Why do I need to select stacks when creating a Brand Kit?**  
 A: **Note**: When creating a Brand Kit, selecting one or multiple stacks will synchronize the associated stack content and its environment settings.

@@ -18,7 +18,7 @@ This page explains the essential text styles and structural formatting options a
 This guide explains the essential text styles and structural formatting options available in the Contentstack JSON Rich Text Editor (RTE). These features help ensure your content is both visually appealing and well-organized, offering flexibility for various editorial needs.
 
 ## Text Styles
-The following [inline text styles](/docs/developers/json-rich-text-editor/about-block-and-inline-elements#inline-elements) are supported to enhance the appearance and readability of your content.
+The following [inline text styles](./about-block-and-inline-elements.md#inline-elements) are supported to enhance the appearance and readability of your content.
 - **Bold**: Used to emphasize key points or important content.
 - **Italic**: Used for emphasis or to indicate thoughts and citations.
 - **Underline**: Helps to highlight important terms or phrases.
@@ -37,7 +37,7 @@ The following block-level formatting options enhance the content structure.
 ## Layout and Spacing
 Layout and spacing options control how content is visually positioned within the editor.
 
-**Additional Resource**: To understand how line breaks, new paragraphs, and list item behavior work (including the difference between `Enter` and `Shift + Enter`), refer to the [Keyboard Shortcuts for JSON Rich Text Editor](/docs/developers/json-rich-text-editor/keyboard-shortcuts-for-json-rich-text-editor) documentation.
+**Additional Resource**: To understand how line breaks, new paragraphs, and list item behavior work (including the difference between `Enter` and `Shift + Enter`), refer to the [Keyboard Shortcuts for JSON Rich Text Editor](./keyboard-shortcuts-for-json-rich-text-editor.md) documentation.
 
 ### Indentation and Outdentation
 Indentation visually offsets content to improve readability and reflect hierarchy. You can apply it using the toolbar icons or keyboard shortcuts.

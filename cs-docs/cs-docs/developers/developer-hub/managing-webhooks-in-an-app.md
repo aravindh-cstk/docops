@@ -33,7 +33,7 @@ Enter a valid **URL to Notify** (mandatory fields).
 - **Branch-level Scope** will allow the webhook event to be triggered on the selected branch only, i.e. Main Branch, All branches.
 - Webhook will be triggered for any** Branch Event(s) **such as Created and Deleted.
 - Webhook will be triggered on any **Branch Alias(es) Event(s)** such as assigned and unassigned.
-- You can specify the email addresses of the users under the **User(s) to Notify** section whenever the [Circuit Breaker](/docs/developers/set-up-webhooks/webhook-circuit-breaker) disables any webhook. Contentstack sends the email alert to the specified user(s).
+- You can specify the email addresses of the users under the **User(s) to Notify** section whenever the [Circuit Breaker](../set-up-webhooks/webhook-circuit-breaker.md) disables any webhook. Contentstack sends the email alert to the specified user(s).
 - Configure the webhook information.
 - Click **Save** to save your webhook details in the manifest.You will see the details of the webhook logs on the **Webhooks** tab in the **App Configuration** screen after installing the app.
 

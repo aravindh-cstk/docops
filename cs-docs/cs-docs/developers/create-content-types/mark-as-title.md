@@ -43,18 +43,18 @@ The **Mark as title** property lets you display the value of a specific field as
 When enabled, the selected field's value appears as the display title for each instance in the entry editor.
 
 The toggle appears in the **Advanced** section of the field properties panel for the following supported field types:
-- [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox)
-- [Multi Line Textbox](/docs/developers/create-content-types/multi-line-textbox)
-- [Number](/docs/developers/create-content-types/number)
-- [File](/docs/developers/create-content-types/file)
-- [Boolean](/docs/developers/create-content-types/boolean)
-- [Rich Text Editor](/docs/developers/create-content-types/rich-text-editor)
-- [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor)
-- [Markdown](/docs/developers/create-content-types/markdown)
-- [Reference](/docs/developers/create-content-types/reference)
-- [Select](/docs/developers/create-content-types/select)
-- [Date](/docs/developers/create-content-types/date)
-- [Link](/docs/developers/create-content-types/link)
+- [Single Line Textbox](./single-line-textbox.md)
+- [Multi Line Textbox](./multi-line-textbox.md)
+- [Number](./number.md)
+- [File](./file.md)
+- [Boolean](./boolean.md)
+- [Rich Text Editor](./rich-text-editor.md)
+- [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md)
+- [Markdown](./markdown.md)
+- [Reference](./reference.md)
+- [Select](./select.md)
+- [Date](./date.md)
+- [Link](./link.md)
 
 ## Mark as Group Title
 The **Mark as Group title** toggle appears for supported fields inside a Group field, but only when the Group is marked as **Multiple**.
@@ -84,7 +84,7 @@ The selected field’s value is displayed as the title when the Global field is 
 Consider a Global field used to define author bios, including **Author Name**, **Bio**, and **Profile Picture**. When this Global field is reused across entries, setting **Author Name** as the **title** makes it easier to identify which author is referenced when the field is expanded in the entry editor.
 
 **Note:**
-- Updating field properties may lead to data loss. Before making changes, refer to the [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide.
+- Updating field properties may lead to data loss. Before making changes, refer to the [Content Type Change Management](../content-modeling/content-type-change-management.md) guide.
 - Only **one** field can be marked as the title within a Group, Modular Block, or Global field.
 - The toggle appears only for supported field types.
 

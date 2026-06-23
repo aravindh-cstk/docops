@@ -19,10 +19,10 @@ This page explains how to use the Audiences feature in Contentstack Visual Edito
 
 The Audiences feature in Visual Editor allows you to customize content for various user segments or groups, such as geographic regions, customer types, or languages configured in Personalize. This functionality helps you create content variations for different audiences, ensuring each group receives the most relevant and engaging experience.
 
-**Note:** To view [audiences](/docs/personalize/about-audiences), enable [Personalize](/docs/personalize/about-personalize) for your organization, and link an [experience](/docs/personalize/about-experiences) to your stack.
+**Note:** To view [audiences](../../personalize/about-audiences.md), enable [Personalize](../../personalize/about-personalize.md) for your organization, and link an [experience](../../personalize/about-experiences.md) to your stack.
 
 To access the Audiences feature within Visual Editor, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - In the right sidebar, click the “Audiences” icon.
 - From the **Audiences** dropdown, select one or more predefined audiences (for example, Mobile, iOS, India, US) to determine which variant displays.
@@ -32,14 +32,14 @@ To access the Audiences feature within Visual Editor, log in to your [Contentsta
 - Enable the **Highlight variant fields** toggle to highlight the variant fields in purple.
 - Make the necessary edits. These updates apply to both the entry variants and base entries in real time.
 - Review the changes, then click **Save**.
-- Click [Publish](/docs/content-managers/visual-builder/publish-page) to make the content live for the selected audiences, ensuring each user segment sees the most relevant version of your content.
+- Click [Publish](./publish-page.md) to make the content live for the selected audiences, ensuring each user segment sees the most relevant version of your content.
 
 Using the **Audiences** feature in Visual Editor helps you efficiently create, edit, and preview personalized content experiences, ensuring each audience receives content that meets their needs.
 
 ## Common questions
 
 ### Do I need Personalize enabled to use Audiences in Visual Editor?
-Yes. **Note:** To view [audiences](/docs/personalize/about-audiences), enable [Personalize](/docs/personalize/about-personalize) for your organization, and link an [experience](/docs/personalize/about-experiences) to your stack.
+Yes. **Note:** To view [audiences](../../personalize/about-audiences.md), enable [Personalize](../../personalize/about-personalize.md) for your organization, and link an [experience](../../personalize/about-experiences.md) to your stack.
 
 ### Can I select more than one audience at a time?
 Yes. From the **Audiences** dropdown, select one or more predefined audiences (for example, Mobile, iOS, India, US) to determine which variant displays.

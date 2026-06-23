@@ -83,7 +83,7 @@ The various statuses shown are as follows:
 - **Streamlined workflow:** Simplifies the publishing process by allowing you to manage all inter-linked entries and assets in one place, reducing the risk of errors or omissions.
 - **Improved collaboration:** With Nested Reference Publishing, teams can collaborate more effectively by easily viewing and publishing all related entries and assets, ensuring everyone is on the same page.
 
-Overall, the Nested Reference Publishing feature is packed with many benefits. However, we are still working to make it even better. Learn more about the [Limitations of Nested Reference Publishing](/docs/content-managers/publish-content/limitations-for-nested-reference-publishing/).
+Overall, the Nested Reference Publishing feature is packed with many benefits. However, we are still working to make it even better. Learn more about the [Limitations of Nested Reference Publishing](./limitations-for-nested-reference-publishing.md).
 
 ## Common questions
 

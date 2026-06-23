@@ -21,15 +21,15 @@ Integrating Personalize with **Google Tag Manager (GTM)** allows you to unlock a
 
 This guide provides step-by-step instructions to add the Personalize Edge SDK to your website using the [Contentstack Personalize Actions GTM Template](https://tagmanager.google.com/gallery/#/owners/contentstack/templates/personalize-actions-gtm-template).
 
-For an example Stack, Personalize project, and GTM container, see the [Reference Project section](/docs/personalize/google-tag-manager-integration-with-personalize#reference-project) at the bottom of this page.
+For an example Stack, Personalize project, and GTM container, see the [Reference Project section](./google-tag-manager-integration-with-personalize.md#reference-project) at the bottom of this page.
 
 ### Prerequisites
 
 * [Contentstack account](https://www.contentstack.com/login/)
 * Access to the Contentstack Organization that has Personalize enabled
 * Access to a project in Personalize
-* [Event created](/docs/personalize/create-event) in your Personalize project
-* [Attribute created](/docs/personalize/create-custom-attribute) in your Personalize project
+* [Event created](./create-event.md) in your Personalize project
+* [Attribute created](./create-custom-attribute.md) in your Personalize project
 * Access to your [Google Tag Manager](https://tagmanager.google.com/#/home) account
 
 ### Steps for Execution

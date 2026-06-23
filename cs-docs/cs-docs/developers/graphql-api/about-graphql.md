@@ -38,7 +38,7 @@ This page explains what GraphQL is in the context of Contentstack and why you mi
 
 GraphQL is an intuitive query language that helps you define the response data of your GET API calls. Instead of querying the whole data, it allows you to query a module of your data. Using GraphQL you can structure the response according to your technical requirements and use cases.
 
-For example, you can fetch the values of the **Title** and **Description** [fields](/docs/developers/create-content-types/about-fields) of [entries](/docs/content-managers/working-with-entries/about-entries), instead of the values of all fields. It also helps you fetch data of referenced and multiple [content types](/docs/developers/create-content-types/about-content-types)[/docs/developers/create-content-types/about-content-types](/docs/developers/create-content-types/about-content-types).
+For example, you can fetch the values of the **Title** and **Description** [fields](../create-content-types/about-fields.md) of [entries](../../content-managers/author-content/about-entries.md), instead of the values of all fields. It also helps you fetch data of referenced and multiple [content types](../create-content-types/about-content-types.md)[/docs/developers/create-content-types/about-content-types](../create-content-types/about-content-types.md).
 
 If you haven’t worked with GraphQL before, we highly recommend reading the following resources:
 - [Introduction to GraphQL](https://graphql.org/learn/)

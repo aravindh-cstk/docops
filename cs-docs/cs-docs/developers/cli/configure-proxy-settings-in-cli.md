@@ -42,7 +42,7 @@ csdx config:remove:proxy
 ```
 
 ## Prerequisites
-- **Contentstack CLI installed and configured**CLI version **1.55.0** or above (see [Install the CLI](/docs/developers/cli/install-the-cli))
+- **Contentstack CLI installed and configured**CLI version **1.55.0** or above (see [Install the CLI](./install-the-cli.md))
 - **Proxy server details**Proxy host
 - Proxy port
 - Proxy protocol (http or https)

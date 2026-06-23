@@ -22,11 +22,11 @@ Contentstack provides the Live Preview Utils SDK to establish a communication ch
 
 The Live Preview Utils SDK package can be loaded for any application project that uses Contentstack SDKs. To use edit tags while previewing entry content, you need a valid stack API Key.
 
-In order to integrate your JavaScript app with Contentstack [JavaScript Delivery SDK](https://github.com/contentstack/contentstack-javascript) and Live Preview Utils SDK, follow the steps mentioned in the [Get Started](/docs/developers/javascript-browser/get-started-with-javascript-live-preview-utils-sdk) section.
+In order to integrate your JavaScript app with Contentstack [JavaScript Delivery SDK](https://github.com/contentstack/contentstack-javascript) and Live Preview Utils SDK, follow the steps mentioned in the [Get Started](./get-started-with-javascript-live-preview-utils-sdk.md) section.
 
 For more information on the JavaScript Live Preview Utils SDK, you can refer to our [GitHub reference documentation](https://github.com/contentstack/live-preview-sdk).
 
-**Additional Resource**: Learn more about how you can use [Live Preview](/docs/content-managers/live-preview/about-live-preview) to preview your entry content in real-time.
+**Additional Resource**: Learn more about how you can use [Live Preview](../../../../content-managers/author-content/about-live-preview.md) to preview your entry content in real-time.
 
 ## Common questions
 

@@ -34,7 +34,7 @@ These plugins offer the following capabilities:
 - [Node.js version 22.x and above](https://nodejs.org/en/download/)
 - [Contentstack account](https://www.contentstack.com/login/)
 - Familiarity with the oclif CLI framework (recommended)
-- Contentstack CLI [installed](/docs/developers/cli/install-the-cli)
+- Contentstack CLI [installed](./install-the-cli.md)
 
 ## Plugin Structure
 
@@ -233,17 +233,17 @@ npm test
 ### Production Testing
 
 To simulate the end-user experience, follow these steps to test your published plugin:
-- [**Install the Contentstack CLI globally**](/docs/developers/cli/install-the-cli):
+- [**Install the Contentstack CLI globally**](./install-the-cli.md):
 
 ```
 npm i -g @contentstack/cli
 ```
-- [**Set the region**](/docs/developers/cli/configure-regions-in-the-cli#set-region):
+- [**Set the region**](./configure-regions-in-the-cli.md#set-region):
 
 ```
 csdx config:set:region
 ```
-- [**Authenticate**](/docs/developers/cli/cli-authentication#authentication):
+- [**Authenticate**](./cli-authentication.md#authentication):
 
 ```
 csdx login
@@ -293,12 +293,12 @@ csdx myplugin:do --help
 ### Region and Authentication
 
 Core plugins handle region and authentication automatically. Before using any command, ensure the user has configured the region and completed authentication.
-- [**Set the region**](/docs/developers/cli/configure-regions-in-the-cli#set-region):
+- [**Set the region**](./configure-regions-in-the-cli.md#set-region):
 
 ```
 csdx config:set:region
 ```
-- [**Authenticate**](/docs/developers/cli/cli-authentication#authentication):
+- [**Authenticate**](./cli-authentication.md#authentication):
 
 ```
 csdx login

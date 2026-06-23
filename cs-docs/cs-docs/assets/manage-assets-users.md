@@ -25,7 +25,7 @@ Manage Assets Users
 
 ##### Content
 
-Assets user management is handled through Contentstack [Administration](/docs/developers/organization/invite-users-to-organization), where organization-level access, product roles, and space-level permissions can be viewed and updated in one place.
+Assets user management is handled through Contentstack [Administration](../developers/organization/invite-users-to-organization.md), where organization-level access, product roles, and space-level permissions can be viewed and updated in one place.
 
 Administrators can review who has access to Assets, modify roles and space assignments, or completely remove a user from the organization.
 

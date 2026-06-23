@@ -17,18 +17,18 @@ This page explains how to change the workflow of a web page using Contentstack V
 
 ### Change Workflow
 
-[Visual Editor](/docs/content-managers/visual-editor/about-visual-editor) allows you to change the [workflow](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) of a web page directly within the page editing interface. This feature streamlines task assignment, progress tracking, and team collaboration without switching interfaces.
+[Visual Editor](./about-visual-editor.md) allows you to change the [workflow](../../developers/set-up-workflows-and-publish-rules/about-workflows.md) of a web page directly within the page editing interface. This feature streamlines task assignment, progress tracking, and team collaboration without switching interfaces.
 
 To change the workflow of a web page using Visual Editor, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - Use the **URL bar** to open the page for which you want to update the workflow.
 - Click the “horizontal ellipses” icon and select **Change Workflow.**
-- In the **Change Workflow Details** modal, perform the following steps:Select one or more [entries](/docs/content-managers/author-content/about-entries) and click **Next**.
-- Choose the appropriate [Workflow Stage](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages).
+- In the **Change Workflow Details** modal, perform the following steps:Select one or more [entries](../author-content/about-entries.md) and click **Next**.
+- Choose the appropriate [Workflow Stage](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md).
 - Optionally, set the due date using the **Date Picker** tool.
 - Assign the stage using one or both of the following dropdowns:**User(s):** Assigns the stage to selected individual users.
-- **Role(s):** Assigns the stage to all users associated with the selected roles.**Tip:** The assigned workflow appears in the user’s [**Tasks**](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks) section.
+- **Role(s):** Assigns the stage to all users associated with the selected roles.**Tip:** The assigned workflow appears in the user’s [**Tasks**](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md) section.
 - Check **Notify via email** to send email notifications to the assignees.
 - Optionally, provide any additional information or instructions in the **Add comment** field.
 - Click **Update Workflow** to apply your changes.

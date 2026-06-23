@@ -20,7 +20,7 @@ This page explains how to use the Drafts panel in Contentstack’s Visual Editor
 The Drafts panel allows you to track and manage unsaved content changes before publishing. It helps you compare versions, highlight differences, and restore saved content when needed.
 
 To access the Drafts panel, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and select **Visual Experience**.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - In the right sidebar, click the **Drafts** icon to view the list of modified fields.
 - Click “Compare” next to an entry. A side-by-side view opens, showing the saved version and the current draft. Draft changes appear in red for quick identification.**Tip:** Modified fields are outlined in red on the canvas to help you quickly identify changes.

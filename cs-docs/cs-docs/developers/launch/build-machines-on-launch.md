@@ -46,7 +46,7 @@ Build Machines determine the compute resources (CPU, memory, and disk) allocated
 
 Launch does **not impose a fixed limit on concurrent builds**.
 
-You can run multiple builds simultaneously as long as your available monthly [build hours quota](/docs/analytics/analytics-for-launch) has not been exhausted.
+You can run multiple builds simultaneously as long as your available monthly [build hours quota](../../analytics/analytics-for-launch.md) has not been exhausted.
 
 ### Maximum Build Duration
 

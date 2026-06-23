@@ -12,11 +12,11 @@ last_updated: 2026-06-02
 
 # CDA | Assets
 
-[Assets](/docs/content-managers/author-content/#create-and-manage-assets) refer to all the media files (images, videos, PDFs, audio files, and so on) uploaded in your Contentstack repository for future use. These files can be attached and used in multiple [entries](/docs/content-managers/working-with-entries/about-entries).
+[Assets](/docs/content-managers/author-content/#create-and-manage-assets) refer to all the media files (images, videos, PDFs, audio files, and so on) uploaded in your Contentstack repository for future use. These files can be attached and used in multiple [entries](../../../../cs-docs/content-managers/author-content/about-entries.md).
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack.
 
-**Note**: [Branches](/docs/developers/branches) is a plan-based feature that is available only in the new Contentstack interface.
+**Note**: [Branches](../content-management-api/branches.md) is a plan-based feature that is available only in the new Contentstack interface.
 
 Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.
 
@@ -1009,7 +1009,7 @@ Locale is **optional**
 
 The Get a single asset request fetches the latest version of a specific asset of a particular stack.
 
-**Tip**: If no version is mentioned, the request will retrieve the latest published version of the asset. To get a specific version of an asset, refer to the [Get a Single Asset](/docs/developers/apis/content-management-api#get-a-single-asset) management API.
+**Tip**: If no version is mentioned, the request will retrieve the latest published version of the asset. To get a specific version of an asset, refer to the [Get a Single Asset](../../../api-detail/content-management-api.md#get-a-single-asset) management API.
 
 Additionally, if you wish to fetch the metadata attached to each asset, then you need to pass include_metadata as a query parameter. Set this parameter to true to include the asset metadata along with all assets in the response body.
 

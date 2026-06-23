@@ -40,7 +40,7 @@ Follow the steps given below to install the Bitbucket Cloud app from Contetnstac
 
 ## Connect your Bitbucket Cloud Account to Launch
 
-**Note:** Only the Organization [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles/#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to create projects in a stack for Launch.
+**Note:** Only the Organization [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) has the right to create projects in a stack for Launch.
 
 Now that the app is installed, let's follow the steps given below to establish a connection between your Bitbucket Cloud and Contentstack Launch.
 
@@ -82,7 +82,7 @@ Below, we have listed some common issues you might encounter, along with their s
 - **Connection Failure**:  
   Ensure the Marketplace app is installed and active in your Bitbucket Cloud organization.
 - Verify that you have granted the necessary permissions during the app installation.
-- [Repair Bitbucket connection](/docs/launch/repair-git-provider-connection-for-projects).
+- [Repair Bitbucket connection](./repair-git-provider-connection-for-projects.md).
 - **Repository Not Found**:  
   Confirm that the repository is hosted in the authenticated Bitbucket Cloud account.
 - Ensure you have Product admin access to access the repository.
@@ -90,13 +90,13 @@ Below, we have listed some common issues you might encounter, along with their s
 ## Common questions
 
 ### Who can create projects in Launch when using Bitbucket Cloud?
-Only the Organization [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles/#admin)/[Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) has the right to create projects in a stack for Launch.
+Only the Organization [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) has the right to create projects in a stack for Launch.
 
 ### Why do I need to install a Marketplace app for Bitbucket Cloud?
 Unlike GitHub, which allows direct connections, Bitbucket Cloud requires installing a Marketplace app at the organizational level to establish the connection.
 
 ### What should I do if Launch can’t connect to Bitbucket Cloud?
-Ensure the Marketplace app is installed and active in your Bitbucket Cloud organization, verify that you have granted the necessary permissions during the app installation, and use [Repair Bitbucket connection](/docs/launch/repair-git-provider-connection-for-projects).
+Ensure the Marketplace app is installed and active in your Bitbucket Cloud organization, verify that you have granted the necessary permissions during the app installation, and use [Repair Bitbucket connection](./repair-git-provider-connection-for-projects.md).
 
 ### What if my repository doesn’t appear during import?
 Confirm that the repository is hosted in the authenticated Bitbucket Cloud account and ensure you have Product admin access to access the repository.

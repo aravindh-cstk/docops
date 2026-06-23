@@ -20,20 +20,20 @@ This page explains how to access and use the Audit Log in a Contentstack stack, 
 The Audit Log page helps teams review content updates, user actions, and system changes, aiding in troubleshooting, compliance, and auditing.
 
 To access the audit logs, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for both Windows OS and Mac OS users).
+- Go to your [stack](./about-stack.md) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for both Windows OS and Mac OS users).
 - Click the **Audit Log** tab or use the shortcut key “alt + A” for Windows OS users, and “option + A” for Mac OS users.
 
 The **Audit Log** page provides the following details of the events that occurred within the stack:
 - **Date**: Displays the date and time of the event.
 - **Action**: Specifies the action performed, such as create, update, delete, etc.
-- **Module**: Identifies the module affected, such as [Content Type](/docs/developers/create-content-types/about-content-types), [Entry](/docs/content-managers/author-content/about-entries), [Asset](/docs/content-managers/author-content/about-assets), etc.
+- **Module**: Identifies the module affected, such as [Content Type](../create-content-types/about-content-types.md), [Entry](../../content-managers/author-content/about-entries.md), [Asset](../../content-managers/author-content/about-assets.md), etc.
 - **Title**: Specifies the title of a particular module.**Information Icon (i):****Entry Module:** Shows Content Type, version, and language details.
 - **User Module:** Displays assigned roles for users.
 - **Remote Address**: Specifies the IP address of the node where the event occurred.
 
 The audit log helps track all published items, updates, deletions, and the current status of existing content.
 
-**Note:** Audit logs are branch-specific, showing activity logs for the branch you are working in. For example, if you work in the development branch, you see audit logs only for that branch. Refer to our [Branch-specific Modules](/docs/developers/branches/branch-specific-modules#audit-logs) document for more details.
+**Note:** Audit logs are branch-specific, showing activity logs for the branch you are working in. For example, if you work in the development branch, you see audit logs only for that branch. Refer to our [Branch-specific Modules](../branches/branch-specific-modules.md#audit-logs) document for more details.
 
 ## Filter Audit Log
 
@@ -76,7 +76,7 @@ The Audit Log tracks and displays all the events performed in a stack. The follo
 | Entry Comments and Discussions | - Create Discussion<br>- Update Discussion<br>- Delete Discussion<br>- Update Comment<br>- Delete Comment |
 | Assets | - Create/Upload Asset<br>- Update Asset<br>- Move Asset<br>- Delete Asset<br>- Create Asset Folder<br>- Update Asset Folder<br>- Move Asset Folder<br>- Delete Asset Folder |
 | Additional Metadata For Entries and Assets | - Create Metadata<br>- Update Metadata<br>- Delete Metadata |
-| Bulk Operations | - Bulk-delete Entries or Assets<br>- Bulk-move Assets to Folder**Note**: Bulk publish and unpublish entries/assets actions are logged in [Publish Queue](/docs/content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue). |
+| Bulk Operations | - Bulk-delete Entries or Assets<br>- Bulk-move Assets to Folder**Note**: Bulk publish and unpublish entries/assets actions are logged in [Publish Queue](../../content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue.md). |
 | Extensions | - Create Extensions<br>- Update Extensions<br>- Delete Extensions |
 | Releases | - Create Release<br>- Update Release<br>- Delete Release<br>- Add Items to Release<br>- Delete Items from Release |
 | Environments | - Create Environment<br>- Update Environment<br>- Delete Environment |
@@ -101,4 +101,4 @@ By default, the audit log displays data for the past 7 days.
 Yes. The available filters include **Users** and **Modules** (as well as **Actions**, **Languages**, and **Content Types**).
 
 ### Where are bulk publish and unpublish actions logged?
-**Note**: Bulk publish and unpublish entries/assets actions are logged in [Publish Queue](/docs/content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue).
+**Note**: Bulk publish and unpublish entries/assets actions are logged in [Publish Queue](../../content-managers/publish-content/view-publish-status-of-entries-assets-in-publish-queue.md).

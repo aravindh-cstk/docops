@@ -29,7 +29,7 @@ Once you are done working on a particular stage of an entry (e.g., Draft), you c
 - Lastly, add any comments in the **Add Comments** field. A comment could be a short description or guidelines to the assignee on what needs to be done in the next stage.
 - Click on **Update** to update the Workflow Stage of the entry.
 
-As soon as an entry stage is assigned to a user, it is added as a new task in the **Tasks** section of the assignee. Learn more about [Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks) later in the document.
+As soon as an entry stage is assigned to a user, it is added as a new task in the **Tasks** section of the assignee. Learn more about [Tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md) later in the document.
 
 ## Common questions
 

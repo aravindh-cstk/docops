@@ -19,10 +19,10 @@ This page explains how to update an existing workflow in Contentstack, including
 
 You can update an existing workflow in Contentstack to modify its configuration as your content processes evolve. Update workflow details such as the name, description, associated branches, content types, or stage-level rules to match your team’s publishing and review needs.
 
-**Note:** By default, the [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [Developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) roles can update workflows in a stack.
+**Note:** By default, the [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and [Developer](../invite-users-and-assign-roles/types-of-roles.md#developer) roles can update workflows in a stack.
 
 To update a workflow in your stack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Settings” icon or use the shortcut key “S” (for both Windows and Mac users).
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon or use the shortcut key “S” (for both Windows and Mac users).
 - Select **Workflows** (press **Alt + F** on Windows or **Option + F** on Mac).
 - Under the **Workflows** tab, click the workflow you want to update from the list of existing workflows.
 - Make the required changes to your workflow. For example, you can:Edit the workflow **name** or **description**
@@ -41,7 +41,7 @@ The updated workflow settings automatically apply to entries associated with the
 
 ## API Reference
 
-To update a workflow and add stages via API, refer to the [Update a workflow](/docs/developers/apis/content-management-api#add-or-update-workflow-details) API request.
+To update a workflow and add stages via API, refer to the [Update a workflow](../../../api-docs/api-detail/content-management-api.md#add-or-update-workflow-details) API request.
 
 ## Common questions
 

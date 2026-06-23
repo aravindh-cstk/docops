@@ -16,19 +16,19 @@ This page explains how to enable and use Contentstack’s Timeline feature in a 
 
 Set Up Timeline without Contentstack SDK
 
-The [Timeline](/docs/content-managers/timeline/about-timeline) feature enables you to see how your site will appear once scheduled updates are made live, providing a comprehensive view of upcoming content transformations. This guide helps you set up the Timeline feature for your stack without using the Contentstack SDK.
+The [Timeline](../../content-managers/timeline/about-timeline.md) feature enables you to see how your site will appear once scheduled updates are made live, providing a comprehensive view of upcoming content transformations. This guide helps you set up the Timeline feature for your stack without using the Contentstack SDK.
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to [stack settings](/docs/developers/set-up-stack/view-stack-details)
-- [Preview token](/docs/developers/create-tokens/about-delivery-tokens#about-preview-tokens)
+- Access to [stack settings](../set-up-stack/view-stack-details.md)
+- [Preview token](../create-tokens/about-delivery-tokens.md#about-preview-tokens)
 - IFrame-compatible website to avoid [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors
 
 To enable the timeline feature, you need to include the `preview_timestamp` property in the headers of your API calls. This property holds a datetime value in ISO format, which can be extracted from the URL parameters when your site is loaded in the Timeline.
 
 ## Install or Update Live Preview Utils SDK
 
-Install [live preview utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk/) version **2.0** or above if not done already. To install it, you can either use `npm` or import it using the script tag in your HTML page code.
+Install [live preview utils SDK](../sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) version **2.0** or above if not done already. To install it, you can either use `npm` or import it using the script tag in your HTML page code.
 
 **Using npm**: Alternatively, you can install the Live Preview Utils SDK package via `npm` using the following command:
 ```
@@ -267,7 +267,7 @@ const Home = () => {
 export default Home;
 ```
 
-**Additional Resource**: If you want to use the tree shaking technique and customize the color for the highlight differences functionality, refer to the [Set Up Timeline for your Website](/docs/developers/set-up-timeline/set-up-timeline-for-your-website/) document.
+**Additional Resource**: If you want to use the tree shaking technique and customize the color for the highlight differences functionality, refer to the [Set Up Timeline for your Website](./set-up-timeline-for-your-website.md) document.
 
 By following the steps outlined above, you can set up the timeline feature for your website without using the Contentstack SDK. This will allow you to preview content at different points in time by providing a timestamp value in the API request headers.
 

@@ -45,7 +45,7 @@ Your final web page will look like below:
 Let’s get started!
 
 ## Set Up Contentstack
-This section will guide you through the process of [creating a new stack](/docs/developers/set-up-stack/create-a-new-stack) in Contentstack, which will function as the central repository for your website's content.
+This section will guide you through the process of [creating a new stack](../set-up-stack/create-a-new-stack.md) in Contentstack, which will function as the central repository for your website's content.
 
 ### Create a New Stack
 **Note:** If you are using a trial account with a sample stack, you can select that stack and move on to the next step.
@@ -55,10 +55,10 @@ Perform the steps given below to start creating your stack:
 - Click on either the **+ New Stack** button located at the top-right corner or in the middle of the page, and select **Create New**.
 - In the **Create New Stack** dialog box that appears, enter the following details:**Name** (mandatory): Enter a name for the stack
 - **Description** (optional): Enter a relevant description for the stack
-- **Set Master Language** (mandatory): Select a [master language](/docs/developers/multilingual-content/set-the-master-language) that you want to set as the primary language of the stack
+- **Set Master Language** (mandatory): Select a [master language](../multilingual-content/set-the-master-language.md) that you want to set as the primary language of the stack
 - Click on **Create**.
 
-Congratulations! You've successfully created a new stack in Contentstack. You will be redirected to the [Stack Dashboard](/docs/developers/set-up-stack/about-stack-dashboard).
+Congratulations! You've successfully created a new stack in Contentstack. You will be redirected to the [Stack Dashboard](../set-up-stack/about-stack-dashboard.md).
 
 The next step will be exploring Contentstack's content modeling features to define the structure of your website's content.
 
@@ -76,13 +76,13 @@ After importing all the Content Types, you will see them in your Stack as follow
 ### Create Environment and Delivery Token
 To fetch content from Contentstack for your website/app via Contentstack APIs, create an environment and generate a Delivery Token.
 
-First, perform the steps in the [create an environment](/docs/developers/set-up-environments/add-an-environment) guide. In the **Create Environment** modal, enter the following details, and click on **Create**:
+First, perform the steps in the [create an environment](../set-up-environments/add-an-environment.md) guide. In the **Create Environment** modal, enter the following details, and click on **Create**:
 - **Name**: development
 - **Base URL**: `http://localhost:3000/`
 
 Here's how the modal will look like:
 
-Next, perform the steps in the [generate a Delivery Token](/docs/developers/create-tokens/create-a-delivery-token) guide. In the **Create New Delivery Token** page, enter/select the following values for these fields:
+Next, perform the steps in the [generate a Delivery Token](../create-tokens/create-a-delivery-token.md) guide. In the **Create New Delivery Token** page, enter/select the following values for these fields:
 - **Name**: Enter “PlateStack”
 - **Description**: Enter “A Delivery Token Created to fetch the Content for the PlateStack Restaurant Website”
 - **Branch**: Select **main** from the dropdown
@@ -116,7 +116,7 @@ Instance 1: (**Title**: Home, **URL**: /)
 - Instance 4: (**Title**: Contact, **URL**: /contact)
 - After successfully entering the details of the entry, click on **Publish**.
 - Select the **development** environment and click on **Send**.
-- You need to publish this entry along with its references, i.e., the Asset file. So, click on **Send With References.****Note:** By clicking on **Send with References**, you can publish all referenced entries along with their parent entry, all at once. For more information, you can read our guides on [publishing referenced entries](/docs/content-managers/author-content/publish-an-entry#publish-referenced-entries) and [publishing nested references](/docs/content-managers/author-content/publish-an-entry#publish-entries-with-nested-references).
+- You need to publish this entry along with its references, i.e., the Asset file. So, click on **Send With References.****Note:** By clicking on **Send with References**, you can publish all referenced entries along with their parent entry, all at once. For more information, you can read our guides on [publishing referenced entries](../../content-managers/author-content/publish-an-entry.md#publish-referenced-entries) and [publishing nested references](../../content-managers/author-content/publish-an-entry.md#publish-entries-with-nested-references).
 
 #### Create Entries for the “Footer” Content Type
 Similarly, to create an entry for the “Footer” content type, you need to follow the same process as performed in **step 2** of the [Create Entries for the “Header” Content Type](#create-entries-for-the-header-content-type) section.
@@ -134,7 +134,7 @@ Instance 1: (**Title**: Home, **URL**: /)
 - Instance 2: (**Title**: Menu, **URL**: /menu)
 - Instance 3: (**Title**: About us, **URL**: /about-us)
 - Instance 4: (**Title**: Contact, **URL**: /contact)
-- **Information Section**: You will need to add the values mentioned below.**Logo**: To upload the logo, perform the following set of actions (refer [About File Field](/docs/developers/create-content-types/file))Click on **Upload a new file**.
+- **Information Section**: You will need to add the values mentioned below.**Logo**: To upload the logo, perform the following set of actions (refer [About File Field](../create-content-types/file.md))Click on **Upload a new file**.
 - Click on **Choose files** and select the desired asset file (in our case, select the Assets/Footer/Footer Logo.png), then click on **Open**.
 - **Description**: Enter “At PlateStack, we’ve got great food and a better experience.”
 - **Timings**: Enter “Tue - Sun ( 16:00 - 22:00 )”
@@ -223,7 +223,7 @@ You should see the message “No issues found” on your terminal and see the ap
 Congratulations! You've successfully run the starter application in your local machine. The next step is to deploy your application using Launch.
 
 ## Deploy and Host the Application Using Launch
-To deploy your app using Launch, you need to first [create a project in Launch and link your GitHub repository](/docs/developers/launch/import-project-using-github#connect-your-github-account-to-launch-and-deploy-a-project) to it.
+To deploy your app using Launch, you need to first [create a project in Launch and link your GitHub repository](../launch/import-project-using-github.md#connect-your-github-account-to-launch-and-deploy-a-project) to it.
 
 To do so, perform the following set of steps:
 - Go to [Launch](https://app.contentstack.com/#!/launch) and click on **+ New Project** and select **Import from a Git Repository**.**Note:** Connecting your Git repository with Launch provides various benefits like easy tracking and auto deployment.
@@ -255,7 +255,7 @@ Congratulations! You have successfully connected your Github repository with Lau
 Since you have linked your GitHub repository with Launch, whenever new code changes are pushed to the main branch, Launch will automatically detect and redeploy the new changes to keep your application up-to-date. You can disable this in Settings if you prefer not to automatically redeploy.
 
 ## Next Steps
-[Project Structure of Getting Started With Building Your Sample Website](/docs/developers/building-apps/project-structure-of-getting-started-with-building-your-sample-website/)
+[Project Structure of Getting Started With Building Your Sample Website](../building-apps/project-structure-of-getting-started-with-building-your-sample-website.md)
 
 ## Common questions
 

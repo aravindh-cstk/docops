@@ -92,7 +92,7 @@ Click **+ Add Step** under the Repeat Path from the left navigation panel.
 - In the pop-up that appears, view the module-specific access rights provided to the app. Click **Authorize **to complete authorization.
 - Provide an **Account Name** and click the **Save **button.
 - Select a **Stack**, **Branch**, and a **Content Type **from the **Lookup **list.
-- Provide your entry data in the **Entry Data** field. Fetch the data from the Repeat Path step.**Note:** Provide your entry data as per your content type schema in [JSON format](/docs/developers/create-content-types/json-schema-for-creating-a-content-type/) only.
+- Provide your entry data in the **Entry Data** field. Fetch the data from the Repeat Path step.**Note:** Provide your entry data as per your content type schema in [JSON format](../developers/create-content-types/json-schema-for-creating-a-content-type.md) only.
 - Click the **Proceed **button.
 - Click the **Test Action** button to test the configured action.
 - Click the **Save and Exit** button.

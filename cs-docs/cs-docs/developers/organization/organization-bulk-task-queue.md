@@ -36,9 +36,9 @@ Organization Bulk Task Queue
 ##### Content
 
 The **Bulk Task Queue** section displays the queue of bulk operations that the users of your organization perform. Examples of such operations include:
-- Large [bulk operations](/docs/content-managers/bulk-operations-on-entries-and-assets) such as publish, unpublish, or delete on [entries](/docs/content-managers/working-with-entries/about-entries) or [assets](/docs/content-managers/working-with-assets/about-assets)
-- [Non-localizable](/docs/developers/multilingual-content/non-localizable-field) field updates in a [content type](/docs/developers/create-content-types/about-content-types) with a large number of [localized](/docs/developers/multilingual-content/localize-an-entry) entries
-- [Release deployment](/docs/content-managers/create-and-manage-releases/deploy-a-release) (publish or unpublish) with a large set of entries and assets
+- Large [bulk operations](/docs/content-managers/bulk-operations-on-entries-and-assets) such as publish, unpublish, or delete on [entries](../../content-managers/author-content/about-entries.md) or [assets](/docs/content-managers/working-with-assets/about-assets)
+- [Non-localizable](../multilingual-content/non-localizable-field.md) field updates in a [content type](../create-content-types/about-content-types.md) with a large number of [localized](../multilingual-content/localize-an-entry.md) entries
+- [Release deployment](../../content-managers/create-and-manage-releases/deploy-a-release.md) (publish or unpublish) with a large set of entries and assets
 
 This section acts as a queuing system for each organization, which processes complex bulk operations as and when resources permit.
 
@@ -46,7 +46,7 @@ To access the bulk task queue for your organization, log in to your [Contentstac
 - Select the Organization from the dropdown on the header, and click on the “Org Admin” icon on the left navigation panel.
 - Click on the **Bulk Task Queue** tab to access the section.
 
-**Note**: Only the Organization [Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admins](/docs/developers/organization/organization-roles#organization-admin) can access the “Bulk Task Queue” section.
+**Note**: Only the Organization [Owner](./organization-roles.md#organization-owner) and [Admins](./organization-roles.md#organization-admin) can access the “Bulk Task Queue” section.
 
 You will be able to see two tabs: **Ongoing** (for tasks in queue) and **Completed** (for completed tasks).
 

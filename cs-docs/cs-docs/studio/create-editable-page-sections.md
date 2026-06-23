@@ -38,7 +38,7 @@ Before exposing editable sections:
 
 The previous article introduced an empty section by creating a composition and linking it to the front-end code using the generated composition UID in the URL path file.
 
-**Additional Resource**: To learn how to create a composition and embed it in the code for use in Studio Canvas, refer to the [Set Up Studio for Your Project](/docs/studio/set-up-studio-for-your-project) use-case.
+**Additional Resource**: To learn how to create a composition and embed it in the code for use in Studio Canvas, refer to the [Set Up Studio for Your Project](./set-up-studio-for-your-project.md) use-case.
 
 With the foundation in place, it's time to construct and configure a page section using components, content bindings, and design tools.
 
@@ -64,7 +64,7 @@ Registered components are custom React components built and registered via the S
 ### Building the Page Section
 Components are accessible from the left panel. After placing them on the canvas, a structural layout is established, design and data can be applied in later steps.
 
-**Additional Resource**: Learn more about the [components](/docs/studio/components) through our documentation.
+**Additional Resource**: Learn more about the [components](./components.md) through our documentation.
 
 ## Adding Entries from the Page Data Tab
 The **Page Data** tab defines a page’s structure, identity, and runtime behavior. It includes:
@@ -76,7 +76,7 @@ The **Page Data** tab defines a page’s structure, identity, and runtime behavi
 
 In this example, an existing homepage entry is used. Data from its modular block is linked to render the feature section.
 
-**Additional Resource:** Learn more about the [Page Data](/docs/studio/page-data) through our documentation.
+**Additional Resource:** Learn more about the [Page Data](./page-data.md) through our documentation.
 
 ## Linking Entry Data to Fields
 Use the **Settings** tab to control component behavior, appearance, and data bindings, without writing code.
@@ -87,7 +87,7 @@ This approach allows customization for each instance while keeping logic consist
 
 Each component property is mapped to the corresponding field in the features modular block.
 
-**Additional Resource**: Learn more about the [Settings](/docs/studio/settings) through our documentation.
+**Additional Resource**: Learn more about the [Settings](./settings.md) through our documentation.
 
 ## Applying Design to Components
 The **Design** tab provides control over visual styling without the need for CSS. When a component is selected, relevant design tokens appear in the Design tab.

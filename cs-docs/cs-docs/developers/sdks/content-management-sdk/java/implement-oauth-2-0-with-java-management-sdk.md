@@ -17,12 +17,12 @@ This page explains how to use OAuth 2.0 with the Java Management SDK to authenti
 
 ## Implement OAuth 2.0 with Java Management SDK
 
-Use OAuth 2.0 in the [Java Management SDK](/docs/developers/sdks/content-management-sdk/java/about-java-management-sdk) to securely access Contentstack [Content Management APIs](/docs/developers/apis/content-management-api) through token-based authentication. The SDK handles token acquisition, refresh, and management for you, so developers can focus on building features instead of handling authentication.
+Use OAuth 2.0 in the [Java Management SDK](./about-java-management-sdk.md) to securely access Contentstack [Content Management APIs](../../../../../api-docs/api-detail/content-management-api.md) through token-based authentication. The SDK handles token acquisition, refresh, and management for you, so developers can focus on building features instead of handling authentication.
 
 ## Prerequisites
 
 - Install [**contentstack-management-java v1.8.0 or later**](https://central.sonatype.com/artifact/com.contentstack.sdk/cms)
-- [Register an OAuth application](/docs/developers/developer-hub/contentstack-oauth) in Contentstack
+- [Register an OAuth application](../../../developer-hub/contentstack-oauth.md) in Contentstack
 - Collect required credentials:`client_id`
 - `client_secret` (optional, not needed for PKCE flow)
 - `app_id`

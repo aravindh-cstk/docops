@@ -16,11 +16,11 @@ last_updated: 2023-05-15
 
 The Request for a password API helps to get a temporary password to log into an account in case a user has forgotten the login password.
 
-Using this temporary password, you can log in to your account and [set a new password](/docs/developers/password-related-security/forgot-reset-password) for your Contentstack account.
+Using this temporary password, you can log in to your account and [set a new password](../../../../../cs-docs/developers/security/forgot-reset-password.md) for your Contentstack account.
 
 In the 'Body' section, provide the user's email address in JSON format.
 
-**Note:** The “**Reset password**” token that you receive in your email address is valid only for the **next 60 minutes** after it’s generated. Post that, it expires and you need to rerun the [Reset password](/docs/developers/apis/content-management-api/#reset-password) API request to generate a new token.
+**Note:** The “**Reset password**” token that you receive in your email address is valid only for the **next 60 minutes** after it’s generated. Post that, it expires and you need to rerun the [Reset password](../../../../api-detail/content-management-api.md#reset-password) API request to generate a new token.
 
 ## Headers
 

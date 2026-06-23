@@ -25,7 +25,7 @@ Saving in-progress entries helps preserve unfinished work so you can return late
 
 ## In-Progress Entries with Drafts and Auto Save
 
-If [Drafts and Auto Save](/docs/content-managers/author-content/about-drafts-and-auto-save) is enabled in your stack, a draft entry is automatically created when you click **New Entry**. As you edit the entry, your changes are saved automatically as draft updates.
+If [Drafts and Auto Save](./about-drafts-and-auto-save.md) is enabled in your stack, a draft entry is automatically created when you click **New Entry**. As you edit the entry, your changes are saved automatically as draft updates.
 
 This allows you to begin working on an entry immediately without manually saving it first. The entry remains in **draft state** until you explicitly click **Save** or **Publish**, which creates a version of the entry.
 

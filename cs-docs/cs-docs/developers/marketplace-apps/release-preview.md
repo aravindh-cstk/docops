@@ -17,7 +17,7 @@ This page explains how to install, configure, and use the Release Preview app (a
 
 ## Release Preview App Installation Guide
 
-**Note**: The Release Preview app in Marketplace is now deprecated and no longer supported. We encourage you to use the Contentstack [Timeline](/docs/content-managers/timeline/about-timeline) feature.
+**Note**: The Release Preview app in Marketplace is now deprecated and no longer supported. We encourage you to use the Contentstack [Timeline](../../content-managers/timeline/about-timeline.md) feature.
 
 The Release Preview app displays the release date and time in a calendar format. It also shows other release details, such as entries or assets that are added to a release with their specific titles, content types, and versions within your Contentstack environment. With the Release Preview app, you can preview your website prior to a scheduled release and compare the changes scheduled for your stack in the upcoming releases.
 
@@ -58,7 +58,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, you will find the **Releases** icon (as shown below). Click the icon to go to the Releases.
 - Within the Releases, you will be able to add a new release by clicking the** + New Release** button.
 - Create a new release, enter the details, and click the **Create** button.
-- [Add entries to the release](/docs/content-managers/create-and-manage-releases/add-entry-asset-to-a-release/) for bulk publishing.
+- [Add entries to the release](../../content-managers/create-and-manage-releases/add-entry-asset-to-a-release.md) for bulk publishing.
 - To schedule and lock the release for publishing, click the **Deploy** button.Select the environment(s), then select **Later**, choose the release date and time, and then click the **Deploy **button.
 
 **Note**: If the release date is not confirmed, you can use the Release Preview app to quickly set a tentative date and time.
@@ -67,13 +67,13 @@ The release is now locked. You cannot add, update or delete any entry or asset f
 
 ### Release Preview Calendar
 
-- Now go to the stack dashboard. In the left-hand side primary navigation, you will find the **Release Preview** app icon (as shown below).**Note**: Release Preview is a Full Page Location app. For more information, refer to the [Full Page Location](/docs/developers/developer-hub/full-page-location/) documentation.
+- Now go to the stack dashboard. In the left-hand side primary navigation, you will find the **Release Preview** app icon (as shown below).**Note**: Release Preview is a Full Page Location app. For more information, refer to the [Full Page Location](../developer-hub/full-page-location.md) documentation.
 - Click the app icon to view the Release Preview app within your CMS.
 - The Release Preview Dashboard will show a list of all the scheduled (locked), tentative scheduled, and unscheduled releases in the left side panel and display all the scheduled (locked) and tentatively scheduled releases in the calendar view.  
   Also, all the scheduled publishing events will be displayed in the calendar.  
   By default, the format to view the Release Preview Calendar is set to **Month**.  
   You can click the top-right dropdown in the Release Preview app and select the **Week **option to view the calendar in the week format.
-- If you click any scheduled or locked release from the Release Preview app calendar, it redirects you to the website preview of that release.To preview the website, you must configure the **Base URL** and select the corresponding **Language** in the [**Environment**](/docs/developers/set-up-environments/about-environments/) settings of your stack.
+- If you click any scheduled or locked release from the Release Preview app calendar, it redirects you to the website preview of that release.To preview the website, you must configure the **Base URL** and select the corresponding **Language** in the [**Environment**](../set-up-environments/about-environments.md) settings of your stack.
 
 ### Release Preview Timeline
 
@@ -117,7 +117,7 @@ An additional Release Preview Plugin setup needs to be configured to preview the
 
 - [Server-side Rendering (SSR)](#server-side-rendering-ssr)
 
-**Note**: The [JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk/) supports plugins like the [Release Preview Plugin](https://www.npmjs.com/package/@contentstack/delivery-plugin-release-preview) from version 3.16.0.
+**Note**: The [JavaScript Delivery SDK](../sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk.md) supports plugins like the [Release Preview Plugin](https://www.npmjs.com/package/@contentstack/delivery-plugin-release-preview) from version 3.16.0.
 
 ### Client-side Rendering (CSR)
 
@@ -344,7 +344,7 @@ Now you can compare the website changes between the current and upcoming release
    **Note**: No additional configuration is required to use the Release Preview app.
 
 3. **What do I need to preview the website from the Release Preview app calendar?**  
-   To preview the website, you must configure the **Base URL** and select the corresponding **Language** in the [**Environment**](/docs/developers/set-up-environments/about-environments/) settings of your stack.
+   To preview the website, you must configure the **Base URL** and select the corresponding **Language** in the [**Environment**](../set-up-environments/about-environments.md) settings of your stack.
 
 4. **Does the compare feature support assets?**  
    **Note**: The compare feature does not support the **Assets** Item Type.

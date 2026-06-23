@@ -19,14 +19,14 @@ This page explains how to edit an existing taxonomy in Contentstack, including w
 Once created, you can edit a taxonomy to make changes such as update its name or description.
 
 To edit a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to edit a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to edit a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Select the taxonomy you want to edit and click the vertical ellipsis in the **Actions **column.
 - Click the **Edit** button.
 - In the **Edit Taxonomy** modal, you can edit the Taxonomy **Name **or **Description** but not the Taxonomy **UID**. Once done, click **Update** to save your changes.
 
 ## API Reference
 
-To edit taxonomies via the API, refer to the [Update a Taxonomy](/docs/developers/apis/content-management-api#update-a-taxonomy) API request.
+To edit taxonomies via the API, refer to the [Update a Taxonomy](../../../api-docs/api-detail/content-management-api.md#update-a-taxonomy) API request.
 
 ## Common questions
 
@@ -37,7 +37,7 @@ No. In the **Edit Taxonomy** modal, you can edit the Taxonomy **Name **or **Desc
 Navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 
 ### Is there an API to edit taxonomies?
-Yes. Refer to the [Update a Taxonomy](/docs/developers/apis/content-management-api#update-a-taxonomy) API request.
+Yes. Refer to the [Update a Taxonomy](../../../api-docs/api-detail/content-management-api.md#update-a-taxonomy) API request.
 
 ### What changes can I make when editing a taxonomy?
 You can update its name or description.

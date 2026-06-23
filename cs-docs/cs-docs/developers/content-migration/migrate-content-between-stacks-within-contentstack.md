@@ -18,11 +18,11 @@ This page explains how to migrate content from one stack to another within Conte
 
 In this section, we will cover how to migrate your content from one stack to another within Contentstack. To migrate content, you will need to use the “contentstack-export” and “contentstack-import” tools that are provided by Contentstack.
 
-**Warning:** This document has been deprecated. We will soon stop supporting this approach. Check out our detailed documentation on how to migrate content ([export](/docs/developers/cli/export-content-using-the-cli) and [import](/docs/developers/cli/import-content-using-the-cli) content) between stacks within Contentstack using the command-line interface (CLI).
+**Warning:** This document has been deprecated. We will soon stop supporting this approach. Check out our detailed documentation on how to migrate content ([export](../cli/export-content-using-the-cli.md) and [import](../cli/import-content-using-the-cli.md) content) between stacks within Contentstack using the command-line interface (CLI).
 
 ## Export Content from Contentstack
 
-To migrate your content from one [stack](/docs/developers/set-up-stack/about-stack) to another, you need to first export content from the source stack and then importing this exported content into the destination stack. To do so, you need to perform the steps given below:
+To migrate your content from one [stack](../set-up-stack/about-stack.md) to another, you need to first export content from the source stack and then importing this exported content into the destination stack. To do so, you need to perform the steps given below:
 
 **Download the utility**: To export your content from a stack in Contentstack, you need to first download the “contentstack-export” utility tool from [GitHub](https://github.com/builtio-contentstack/contentstack-export). This utility tool consists of modules that will help you to download the data from your stack and save it in JSON format in your file system. JSON format makes it easier to import data into Contentstack.
 
@@ -80,7 +80,7 @@ To migrate your content from one [stack](/docs/developers/set-up-stack/about-sta
   - `master_locale`
     : Enter the name and code of the
 
-    [master locale](/docs/developers/multilingual-content/set-the-master-language)
+    [master locale](../multilingual-content/set-the-master-language.md)
     of your stack in the parameters given below:
 
     `name`: The name of the master locale (e.g. English - United States)
@@ -119,13 +119,13 @@ To migrate your content from one [stack](/docs/developers/set-up-stack/about-sta
     When exporting modules individually, make sure you follow the module sequence as given below, for example, before exporting entries, you must have had exported assets, environments, locales, extensions, webhooks, global fields, and content types:
 
     - [Assets](/docs/content-managers/working-with-assets/about-assets)
-    - [Environments](/docs/developers/set-up-environments/about-environments)
-    - [Locales](/docs/developers/multilingual-content/about-localization)
-    - [Extensions](/docs/developers/about-experience-extensions)
-    - [Webhooks](/docs/developers/set-up-webhooks/about-webhooks)
-    - [Global Fields](/docs/developers/create-content-types/global)
-    - [Content Types](/docs/developers/create-content-types/about-content-types)
-    - [Entries](/docs/content-managers/working-with-entries/about-entries)
+    - [Environments](../set-up-environments/about-environments.md)
+    - [Locales](../multilingual-content/about-localization.md)
+    - [Extensions](../experience-extensions-overview/about-experience-extensions.md)
+    - [Webhooks](../set-up-webhooks/about-webhooks.md)
+    - [Global Fields](../create-content-types/global.md)
+    - [Content Types](../create-content-types/about-content-types.md)
+    - [Entries](../../content-managers/author-content/about-entries.md)
 
   **Note:** This utility tool can be used to extract only the latest published version of an entry.
 
@@ -133,7 +133,7 @@ To migrate your content from one [stack](/docs/developers/set-up-stack/about-sta
 
 The exported content is now ready to be imported into Contentstack. This content will be in JSON format and stored at the location provided in the “index.json” configuration file from where you can later import the data into Contentstack.
 
-To import the content, follow the steps mentioned in the [Import Content into Contentstack](/docs/developers/import-content-into-contentstack) document.
+To import the content, follow the steps mentioned in the [Import Content into Contentstack](./import-content-into-contentstack.md) document.
 
 ## Common questions
 
@@ -147,4 +147,4 @@ A: You will need to use the “contentstack-export” and “contentstack-import
 A: `npm run export`
 
 **Q: Where do I find the recommended CLI-based export/import documentation?**  
-A: Check out our detailed documentation on how to migrate content ([export](/docs/developers/cli/export-content-using-the-cli) and [import](/docs/developers/cli/import-content-using-the-cli) content) between stacks within Contentstack using the command-line interface (CLI).
+A: Check out our detailed documentation on how to migrate content ([export](../cli/export-content-using-the-cli.md) and [import](../cli/import-content-using-the-cli.md) content) between stacks within Contentstack using the command-line interface (CLI).

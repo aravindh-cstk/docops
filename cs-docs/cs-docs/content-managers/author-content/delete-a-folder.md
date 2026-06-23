@@ -20,15 +20,15 @@ This page explains how to delete an asset folder in Contentstack (including what
 Contentstack allows you to delete asset folders that are no longer required. Deleting a folder will also delete all its contents.
 
 To delete an asset folder, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Assets” icon in the left navigation panel to view the list of available assets.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel to view the list of available assets.
 - Locate the folder you want to delete, click the **vertical ellipses** under **Actions**, and select **Delete**.
 - In the **Delete Asset Folder** modal, click **Delete** to confirm the action.
 
-**Note**: Deleted asset folders, along with their contents, are moved to the [Trash](/docs/developers/manage-trash/about-trash) and can be restored within **14 days**. After this timeframe, they are permanently deleted.
+**Note**: Deleted asset folders, along with their contents, are moved to the [Trash](../../developers/manage-trash/about-trash.md) and can be restored within **14 days**. After this timeframe, they are permanently deleted.
 
 ## API Reference
 
-To delete an asset folder via API, refer to the [Delete a folder](/docs/developers/apis/content-management-api#delete-a-folder) API request.
+To delete an asset folder via API, refer to the [Delete a folder](../../../api-docs/api-detail/content-management-api.md#delete-a-folder) API request.
 
 ## Common questions
 
@@ -42,4 +42,4 @@ Yes. Deleted asset folders, along with their contents, are moved to the Trash an
 After this timeframe, they are permanently deleted.
 
 ### Where can I find the API request to delete a folder?
-Refer to the API Reference section and the [Delete a folder](/docs/developers/apis/content-management-api#delete-a-folder) API request link.
+Refer to the API Reference section and the [Delete a folder](../../../api-docs/api-detail/content-management-api.md#delete-a-folder) API request link.

@@ -42,7 +42,7 @@ Perform the following steps to configure the Box action:
 - To execute and test the configured action, click the **Test Action** button.
 - On successful configuration, you can see the below output. Click the **Save and Exit** button.
 
-Additionally, you can use the [Box Trigger](/docs/developers/automation-hub-connectors/box-trigger) with the Box Connector to generate the file download URL. For example, select the “File Uploaded” event in the Box trigger and configure the Box action to fetch the file download URL.
+Additionally, you can use the [Box Trigger](./box-trigger.md) with the Box Connector to generate the file download URL. For example, select the “File Uploaded” event in the Box trigger and configure the Box action to fetch the file download URL.
 
 This sets the **Box **action connector.
 
@@ -58,4 +58,4 @@ Under **Choose an Action** tab, select the **Get File URL **action.
 Yes. Enable **Show Optional Fields** to display **File Version **, then select a version in the **File Version** drop-down.
 
 ### Can I use Box Trigger with Box Action to generate a download URL automatically?
-Yes. You can use the [Box Trigger](/docs/developers/automation-hub-connectors/box-trigger) with the Box Connector to generate the file download URL (for example, using the “File Uploaded” event).
+Yes. You can use the [Box Trigger](./box-trigger.md) with the Box Connector to generate the file download URL (for example, using the “File Uploaded” event).

@@ -80,7 +80,7 @@ These visual indicators help teams quickly identify realized value, adoption opp
 | No Recent Activity | The feature is enabled but has not shown qualifying activity recently. |
 | Requires Plan Upgrade | The feature is not available in your current plan. |
 
-**Additional Resource**: Refer to the [Feature Activity Definitions](/docs/administration/feature-activity-definitions) documentation for detailed criteria used to determine feature statuses.
+**Additional Resource**: Refer to the [Feature Activity Definitions](./feature-activity-definitions.md) documentation for detailed criteria used to determine feature statuses.
 
 ## Common questions
 
@@ -94,4 +94,4 @@ It indicates the feature is enabled but has not shown qualifying activity recent
 It indicates the feature is unavailable in the current subscription plan, and you may need a plan upgrade to access it.
 
 ### Where can I find the criteria used to determine feature statuses?
-Refer to the **Additional Resource** link to the [Feature Activity Definitions](/docs/administration/feature-activity-definitions) documentation.
+Refer to the **Additional Resource** link to the [Feature Activity Definitions](./feature-activity-definitions.md) documentation.

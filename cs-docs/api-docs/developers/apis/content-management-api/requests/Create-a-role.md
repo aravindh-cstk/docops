@@ -19,7 +19,7 @@ The Create a role request creates a new role in a stack.
 In the 'Body' section, mention the role name, description, users, additional roles, rules (includes the actions that can be performed on entries, fields, and/or assets), and permissions (which include the details of the content types, taxonomies, environments, and languages that are accessible).
 To configure the permissions for your application via OAuth, please include the cm.roles.management:write scope.
 
-**Note**: You can also restrict access to the [master language entry](/docs/developers/multilingual-content/set-the-master-language) while defining permissions for a new role. Refer to our [Manage Language Permissions](/docs/developers/multilingual-content/manage-language-permissions) documentation for more details.
+**Note**: You can also restrict access to the [master language entry](../../../../../cs-docs/developers/multilingual-content/set-the-master-language.md) while defining permissions for a new role. Refer to our [Manage Language Permissions](../../../../../cs-docs/developers/multilingual-content/manage-language-permissions.md) documentation for more details.
 
 To add customized exceptions for all or specific languages, add an additional locale module in the request body. Under this module, pass the following parameters:
 
@@ -48,7 +48,7 @@ Here’s what your request body should look like:
 }
 ```
 
-**Note**: [Language-related exceptions](/docs/developers/invite-users-and-assign-roles/create-a-role#exceptions-on-languages) can be added only for custom roles and the developer and content manager system roles.
+**Note**: [Language-related exceptions](../../../../../cs-docs/developers/invite-users-and-assign-roles/create-a-role.md#exceptions-on-languages) can be added only for custom roles and the developer and content manager system roles.
 
 When creating a user role, you need to specify the branch and alias scope through the following schema in the request body:
 

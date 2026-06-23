@@ -23,7 +23,7 @@ last_updated: 2025-08-28
 3. Values specified using CSS style shorthand are also acceptable.
 4. CSS shorthand allows you to specify values for all the edges in one property.
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ## Query Parameters
 

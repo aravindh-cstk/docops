@@ -30,7 +30,7 @@ To clone an automation, perform the steps given below:
 - You can see the clone created for the automation in the selected project.
 - Alternatively, go to the automation **Settings** page and click **Clone Automation** to duplicate the automation.
 
-**Note:** You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](/docs/developers/automation-hub-guides/throttle-execution) document.
+**Note:** You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](./throttle-execution.md) document.
 
 If the automation is cloned in the same project, some steps may appear as tested and untested. If any action has a dependency on the previous step and that step remains untested, then all the subsequent steps become untested.
 

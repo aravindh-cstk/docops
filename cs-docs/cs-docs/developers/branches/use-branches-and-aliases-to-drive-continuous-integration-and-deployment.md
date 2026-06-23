@@ -39,7 +39,7 @@ Contentstack allows you to create a copy of the main branch content in a separat
 
 **Note:** The main branch is the default branch for any stack.
 
-To create a branch, log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your [stack](/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To create a branch, log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 
 - Click the “Settings” icon on the left navigation panel, and select **Branches**.
 - Click on **+ New Branch**.
@@ -99,13 +99,13 @@ You can test the changes until they are ready to deploy to production.
 
 For major changes to the stack, e.g., redesigning the marketing website, you usually add or remove content types along with their entries. You will add or update content types or entries on the "development" or "redesign" branch.
 
-Once the "development" branch changes have been tested and are ready for production, you can use the [Contentstack interface](/docs/new-contentstack) or [Content Management API](/docs/developers/apis/content-management-api) to change the target branch that supplies data to the front-end application. You don't need to make changes to your code every time you have to update live data.
+Once the "development" branch changes have been tested and are ready for production, you can use the [Contentstack interface](/docs/new-contentstack) or [Content Management API](../../../api-docs/api-detail/content-management-api.md) to change the target branch that supplies data to the front-end application. You don't need to make changes to your code every time you have to update live data.
 
 **Note**: Before you apply the content modeling changes to your production data, you need to ensure that your frontend website code is updated with the corresponding changes required for implementation. To ensure that you can revert to the original content model in case of any issues, you must ensure that the code is backward compatible.
 
 Instead, you can change the target branch associated with the "deploy" alias to the "development" or "redesign" branch to make it the main branch for the production environment. Your frontend application will immediately start rendering content from the new target branch.
 
-**Additional Resource**: Learn more about how you can update the target branch for aliases in the [Edit an Alias](/docs/developers/branches/edit-an-alias) section of our documentation. To update the target branch for an alias via API, refer to the [Assign or Update an Alias](/docs/developers/apis/content-management-api#assign-or-update-an-alias) API document.
+**Additional Resource**: Learn more about how you can update the target branch for aliases in the [Edit an Alias](./edit-an-alias.md) section of our documentation. To update the target branch for an alias via API, refer to the [Assign or Update an Alias](../../../api-docs/api-detail/content-management-api.md#assign-or-update-an-alias) API document.
 
 Once you have applied the content schema changes to the production environment, content managers can begin adding and updating entries within the updated content types.
 
@@ -140,4 +140,4 @@ No. You can change the target branch associated with the alias so the frontend a
 Assign the alias (for example, "deploy") back to the original "production" branch to roll back the changes made to the live website.
 
 ### Where can I update an alias target branch?
-You can use the Contentstack interface or run the Assign or Update an alias API request, and you can refer to the [Edit an Alias](/docs/developers/branches/edit-an-alias) section.
+You can use the Contentstack interface or run the Assign or Update an alias API request, and you can refer to the [Edit an Alias](./edit-an-alias.md) section.

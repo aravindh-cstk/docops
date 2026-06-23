@@ -16,7 +16,7 @@ last_updated: 2023-02-02
 
 The Add or Update Workflow Stages request allows you to add or update the workflow stages.
 
-**Note**: You need to use either the stack’s Management Token or the user Authtoken (any one is mandatory), along with the stack API key, to make a valid Content Management API request. Read more about [authentication](/docs/developers/apis/content-management-api/#authentication).
+**Note**: You need to use either the stack’s Management Token or the user Authtoken (any one is mandatory), along with the stack API key, to make a valid Content Management API request. Read more about [authentication](../../../../api-detail/content-management-api.md#authentication).
 
 ## Headers
 

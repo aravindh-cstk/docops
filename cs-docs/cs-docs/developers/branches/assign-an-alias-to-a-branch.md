@@ -16,9 +16,9 @@ This page explains how to assign an alias to a branch in Contentstack so the ali
 
 ## Assign an Alias to a Branch
 
-An [Alias](/docs/developers/branches/about-aliases)helps point to a particular [branch](/docs/developers/branches/about-branches)in your stack. When your alias points to a specific branch, that branch acts as the primary branch from which you deliver content to your website. You can display the modifications made in this branch on your website without the need to alter any code.
+An [Alias](./about-aliases.md)helps point to a particular [branch](./about-branches.md)in your stack. When your alias points to a specific branch, that branch acts as the primary branch from which you deliver content to your website. You can display the modifications made in this branch on your website without the need to alter any code.
 
-To create an alias, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To create an alias, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon on the left navigation panel, select **Branches,** and click on the **Aliases** tab.
 - Click on **+ Assign Alias**.
 - The **Assign New Alias** form appears for you to add the following details:
@@ -29,8 +29,8 @@ To create an alias, log in to your [Contentstack account](https://www.contentsta
 ## API Reference
 
 To perform operations related to aliases within your stack via API, refer to the following documents:
-- [Aliases collection](/docs/developers/apis/content-management-api#aliases) in our Content Management API
-- [GraphQL API](/docs/developers/apis/graphql-content-delivery-api)
+- [Aliases collection](../../../api-docs/api-detail/content-management-api.md#aliases) in our Content Management API
+- [GraphQL API](../../../api-docs/api-detail/graphql-content-delivery-api.md)
 
 ## Common questions
 
@@ -44,4 +44,4 @@ Click the “Settings” icon on the left navigation panel, select **Branches,**
 You need an **Alias ID** and a **Target Branch**, then click **Save** to save your alias.
 
 ### Where can I manage aliases via API?
-Refer to the [Aliases collection](/docs/developers/apis/content-management-api#aliases) in the Content Management API and the [GraphQL API](/docs/developers/apis/graphql-content-delivery-api).
+Refer to the [Aliases collection](../../../api-docs/api-detail/content-management-api.md#aliases) in the Content Management API and the [GraphQL API](../../../api-docs/api-detail/graphql-content-delivery-api.md).

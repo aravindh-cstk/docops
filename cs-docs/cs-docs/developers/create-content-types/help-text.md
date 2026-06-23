@@ -17,11 +17,11 @@ This page explains the **Help Text** property available when configuring fields 
 
 ## Help Text
 
-The **Help Text** property gives you the provision to add additional help text to a [field](/docs/developers/create-content-types/about-fields).
+The **Help Text** property gives you the provision to add additional help text to a [field](./about-fields.md).
 
-When you [create a content type](/docs/developers/create-content-types/create-a-content-type) and add a field to it, in the **Edit Properties** section, you will see this property.
+When you [create a content type](./create-a-content-type.md) and add a field to it, in the **Edit Properties** section, you will see this property.
 
-After you configure a field with this property and [create an entry](/docs/content-managers/working-with-entries/create-an-entry), then on the [entry](/docs/content-managers/working-with-entries/about-entries) page you will see a help text icon (a question mark, "?") that appears beside the field name. When the user hovers over this icon, the description appears as a tooltip, as shown below:
+After you configure a field with this property and [create an entry](../../content-managers/author-content/create-an-entry.md), then on the [entry](../../content-managers/author-content/about-entries.md) page you will see a help text icon (a question mark, "?") that appears beside the field name. When the user hovers over this icon, the description appears as a tooltip, as shown below:
 
 ## Common questions
 

@@ -26,9 +26,9 @@ The Contentstack App SDK `.api()` method offers a unified approach for making in
 ## Prerequisites
 
 Before making API calls, ensure the following:
-- A [Developer Hub](/docs/developer-hub) App already created
-- **For internal calls**, App Permissions properly configured in the [app manifest](/docs/developer-hub/app-manifest/)
-- **For external calls**, [Advanced Settings](/docs/developer-hub/introduction-to-advanced-settings) set up with Variables, Mappings, and Rewrites as needed
+- A [Developer Hub](../developer-hub.md) App already created
+- **For internal calls**, App Permissions properly configured in the [app manifest](./app-manifest.md)
+- **For external calls**, [Advanced Settings](./introduction-to-advanced-settings.md) set up with Variables, Mappings, and Rewrites as needed
 - The **App SDK **initialized in your application
 
 **Additional Resource: **Refer to the [App SDK](https://github.com/contentstack/app-sdk-docs/) documentation to learn more.
@@ -240,8 +240,8 @@ async function makeApiCallWithRetry(url, options, maxRetries = 3) {
 - Wrap API calls in **try-catch** blocks with detailed error logging for better traceability
 
 ### Getting Help
-- Refer to the [App Permissions](/docs/developer-hub/build-an-app-using-app-permissions) documentation
-- Refer to the [Introduction to Advanced Settings](/docs/developer-hub/introduction-to-advanced-settings) in Developer Hub
+- Refer to the [App Permissions](./build-an-app-using-app-permissions.md) documentation
+- Refer to the [Introduction to Advanced Settings](./introduction-to-advanced-settings.md) in Developer Hub
 - Contact the [support team](mailto:support@contentstack.com) with specific error messages and request details
 
 ## Common questions

@@ -16,15 +16,15 @@ This page explains how to add the “Color Picker” prebuilt custom field exten
 
 ## Color Picker
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Color Picker as a Marketplace App. For more information on Color Picker, please refer to the [Color Picker App Installation Guide](/docs/developers/marketplace-apps/color-picker).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Color Picker as a Marketplace App. For more information on Color Picker, please refer to the [Color Picker App Installation Guide](../../marketplace-apps/color-picker.md).
 
-Color Picker [custom field](/docs/developers/create-content-types/custom) extension provides a native color picker polyfill that Contentstack users can use as a field within a [content ](/docs/developers/create-content-types/about-content-types)[type](/docs/developers/create-content-types/about-content-types).
+Color Picker [custom field](../../create-content-types/custom.md) extension provides a native color picker polyfill that Contentstack users can use as a field within a [content ](../../create-content-types/about-content-types.md)[type](../../create-content-types/about-content-types.md).
 
 This step-by-step guide explains how to create a Color Picker custom field extension for your content types.
 
 ## Add the “Color Picker” custom field extension to your stack
 
-To add this custom field extension to your [stack](/docs/developers/set-up-stack/about-stack), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
+To add this custom field extension to your [stack](../../set-up-stack/about-stack.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
 Go to your stack and click the “Settings” icon on the left navigation panel.
 
@@ -48,22 +48,22 @@ To use Color picker custom field in your content type, perform the following ste
 
 Click on the “Content Models” icon on the left navigation panel and click on the **+ New Content Type** button.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
-- On the **Content Type Builder** page, add the [**Custom**](/docs/developers/create-content-types/custom) field to your content type by clicking on the “Insert a field” link denoted by a **+** sign. Then click on **Custom**.
-- Select **Color Picker** from the **Select Extension** dropdown menu, and configure other properties of your custom field.  **Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](/docs/developers/create-content-types/config-parameter-for-custom-fields-only) section.
+- [Create a content type](../../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- On the **Content Type Builder** page, add the [**Custom**](../../create-content-types/custom.md) field to your content type by clicking on the “Insert a field” link denoted by a **+** sign. Then click on **Custom**.
+- Select **Color Picker** from the **Select Extension** dropdown menu, and configure other properties of your custom field.  **Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.
 - After adding other fields to your content type, click on either **Save **or **Save and Close** button. This will create a content type.
-- To use the Color Picker, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the this field on your entry page as shown below:
+- To use the Color Picker, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the this field on your entry page as shown below:
 
 ## Common questions
 
 ### Is this page for the Marketplace App or the legacy extension?
-**Note**: This documentation uses the legacy approach with extensions. We have launched Color Picker as a Marketplace App. For more information on Color Picker, please refer to the [Color Picker App Installation Guide](/docs/developers/marketplace-apps/color-picker).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Color Picker as a Marketplace App. For more information on Color Picker, please refer to the [Color Picker App Installation Guide](../../marketplace-apps/color-picker.md).
 
 ### Where do I add the Color Picker extension in Contentstack?
 Go to your stack and click the “Settings” icon on the left navigation panel, then click on **Extensions**, click on the **+ New Extensions** button, and select **Use prebuilt.**
 
 ### How do I use the Color Picker in a content type?
-On the **Content Type Builder** page, add the [**Custom**](/docs/developers/create-content-types/custom) field to your content type, then select **Color Picker** from the **Select Extension** dropdown menu.
+On the **Content Type Builder** page, add the [**Custom**](../../create-content-types/custom.md) field to your content type, then select **Color Picker** from the **Select Extension** dropdown menu.
 
 ### Can I configure instance-level settings for the Color Picker custom field?
-**Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](/docs/developers/create-content-types/config-parameter-for-custom-fields-only) section.
+**Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.

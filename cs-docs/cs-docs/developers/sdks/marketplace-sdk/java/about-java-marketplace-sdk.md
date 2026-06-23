@@ -24,9 +24,9 @@ It houses third-party integrations, UI extensions (such as dashboard, sidebar, c
 - **Operation on Apps: **Using the Java Marketplace SDK, you have the capability to execute various operations on Marketplace apps, including Installation, Authorization, Configuration, and more.
 - **Operation App Request:** A user who does not have access to install apps from the Marketplace can request the stack or organization admin to get the app installed. Only organization admins can accept or reject the request raised by the user.
 - **Operation on authorization:** When authorizing a Contentstack app, the app requests access to perform specific operations on behalf of the user. After the user authenticates and grants access, the app receives an access token. This token is then used as a credential when making calls to the Contentstack APIs.
-- **Operation on installation: **Starter Apps can be installed via the Marketplace. Additionally you can [Install Starter via Stack Creation Experience](/docs/developers/marketplace-platform-guides/installing-a-starter#install-starter-via-stack-creation-experience) as well.
+- **Operation on installation: **Starter Apps can be installed via the Marketplace. Additionally you can [Install Starter via Stack Creation Experience](../../../marketplace-platform-guides/installing-a-starter.md#install-starter-via-stack-creation-experience) as well.
 
-To integrate your Java app with Contentstack Java Management SDK, follow the steps mentioned in the [Get Started with Java Marketplace SDK](/docs/developers/sdks/marketplace-sdk/java/get-started-with-java-marketplace-sdk) document
+To integrate your Java app with Contentstack Java Management SDK, follow the steps mentioned in the [Get Started with Java Marketplace SDK](./get-started-with-java-marketplace-sdk.md) document
 
 ## Quickstart with Java Marketplace SDK
 Here is an example of how you can start working with the Java Marketplace SDK
@@ -78,4 +78,4 @@ Yes, you can pass the app UID to retrieve a specific app.
 [Java Marketplace SDK GitHub Repository](https://github.com/contentstack/contentstack-marketplace-java)
 
 ### Where do I go next after this page?
-Follow the steps mentioned in the [Get Started with Java Marketplace SDK](/docs/developers/sdks/marketplace-sdk/java/get-started-with-java-marketplace-sdk) document.
+Follow the steps mentioned in the [Get Started with Java Marketplace SDK](./get-started-with-java-marketplace-sdk.md) document.

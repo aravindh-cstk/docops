@@ -19,13 +19,13 @@ This page explains how content managers can reply to comments inside Contentstac
 This feature lets you engage in collaborative discussions directly within your content entries. It addresses feedback, clarifies doubts, or continues conversations, ensuring smoother content reviews and updates.
 
 To reply to a comment, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
 - Open an entry with comments, click the “Comment” icon next to the relevant field, and enter your comments in the textbox.
 
 **Note:** The maximum length of a comment is **500 characters**.
 - Click **Post** to reply to a comment.
 
-**Additional Resource: **Refer to our [JSON RTE comments](/docs/developers/json-rich-text-editor/json-rte-comments) document to manage comments within the JSON Rich Text Editor.
+**Additional Resource: **Refer to our [JSON RTE comments](../../developers/json-rich-text-editor/json-rte-comments.md) document to manage comments within the JSON Rich Text Editor.
 
 ## Common questions
 
@@ -36,4 +36,4 @@ The maximum length of a comment is **500 characters**.
 Go to your stack and click the “Entries” icon in the left navigation panel, or use the shortcut key “E”.
 
 **Can I manage comments in the JSON Rich Text Editor?**  
-Yes. Refer to the [JSON RTE comments](/docs/developers/json-rich-text-editor/json-rte-comments) document to manage comments within the JSON Rich Text Editor.
+Yes. Refer to the [JSON RTE comments](../../developers/json-rich-text-editor/json-rte-comments.md) document to manage comments within the JSON Rich Text Editor.

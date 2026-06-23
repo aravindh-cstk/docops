@@ -90,7 +90,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - You cannot select products based on the collection.
 - The app does not support multiple configurations.
 - Click the **Save** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Shopify app.
 
 ## Use Shopify within your Stack
@@ -99,13 +99,13 @@ To use the Shopify app within an entry of your stack, follow the steps given bel
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 - Create a content type by adding relevant details as displayed below:
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom) field for product in your content type by clicking the **Insert a field** link represented by a **+ **sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field for product in your content type by clicking the **Insert a field** link represented by a **+ **sign.
 - Under **Select Extension or App**, select **Shopify-Product Field **and click the **Proceed **button.  
   This adds Shopify-Product Field in the custom field.
-- Add another [Custom](/docs/developers/create-content-types/custom) field for collection in your content type by clicking the **Insert a field** link represented by a + sign.
+- Add another [Custom](../create-content-types/custom.md) field for collection in your content type by clicking the **Insert a field** link represented by a + sign.
 - Under **Select Extension or App**, select **Shopify-Collection Field** and click the **Proceed** button.  
   This adds Shopify-Collection Field in the custom field.
-- To add a deprecated version of the Shopify app to your entry, add yet another [Custom](/docs/developers/create-content-types/custom) field in your content type by clicking the **Insert a field** link represented by a + sign.
+- To add a deprecated version of the Shopify app to your entry, add yet another [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a + sign.
 - Under **Select Extension or App**, select **Shopify-Deprecated** and click the **Proceed** button.  
   This adds Shopify-Deprecated in the custom field.
 - After adding the app, click **Save** or **Save and Close** to save your changes.

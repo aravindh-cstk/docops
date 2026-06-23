@@ -25,8 +25,8 @@ This guide walks you through setting up Studio, including project configuration,
 
 Before starting, ensure your environment and permissions are correctly configured. This section lists what you’ll need to access, configure, and use Studio effectively.
 
-- A [Stack](/docs/developers/set-up-stack/about-stack/) where your content and compositions will reside
-- [Roles](/docs/developers/invite-users-and-assign-roles/about-stack-users/) and [permissions](/docs/developers/invite-users-and-assign-roles/about-stack-roles/) with read/write access to entries and environments
+- A [Stack](../developers/set-up-stack/about-stack.md) where your content and compositions will reside
+- [Roles](../developers/invite-users-and-assign-roles/about-stack-users.md) and [permissions](../developers/invite-users-and-assign-roles/about-stack-roles.md) with read/write access to entries and environments
 - A **front-end project** (CSR or SSR) with Studio SDK installed (for live preview and deployment)
 
 Follow these steps to get started with Studio for your project:
@@ -55,7 +55,7 @@ By default, Studio provides a built-in playground where you can create and exper
 
 **Note:** This step is optional if you plan to use Studio as a standalone playground for testing.
 
-Install the **Studio SDK** and any required dependencies in your front-end codebase ([CSR](/docs/studio/set-up-studio-for-a-csr-project) or [SSR](/docs/studio/set-up-studio-for-a-ssr-project)).
+Install the **Studio SDK** and any required dependencies in your front-end codebase ([CSR](./set-up-studio-for-a-csr-project.md) or [SSR](./set-up-studio-for-a-ssr-project.md)).
 
 - Ensure Studio has access to the correct **environment** and **locale** via the **Project Settings** tab.**Tip:** If you don’t have front-end access, you can still use Studio to build and preview compositions directly within the playground Canvas.
 
@@ -65,7 +65,7 @@ Studio requires the base URL of the website you want to integrate with. You can 
 
 In your Studio project, open the **Settings** tab.
 
-- Under **Configurations**, select the **Environment** and **Language**.**Note:** You must [configure the environment](/docs/developers/set-up-environments/add-an-environment), base URL, and language in your stack settings.
+- Under **Configurations**, select the **Environment** and **Language**.**Note:** You must [configure the environment](../developers/set-up-environments/add-an-environment.md), base URL, and language in your stack settings.
 - The **Base URL** configured against the selected environment is displayed.
 - Click **Save**.**Note:** This step can be skipped if you are using Studio as a playground. However, real projects with front-end integration require this configuration for proper rendering and deployment.
 
@@ -75,9 +75,9 @@ Components and tokens form the foundation of your design system within Studio. R
 
 To use your own components and design tokens:
 
-**Register components via CLI:** Add your own React components using the [Agentic CLI](/docs/studio/work-with-studio-cli).
+**Register components via CLI:** Add your own React components using the [Agentic CLI](./work-with-studio-cli.md).
 
-- **Import designs and tokens:** Use the [Agentic CLI](/docs/studio/work-with-studio-cli) to create and register design tokens directly from your project.**Tip:** You can skip this step for prototyping with built-in components in Canvas.
+- **Import designs and tokens:** Use the [Agentic CLI](./work-with-studio-cli.md) to create and register design tokens directly from your project.**Tip:** You can skip this step for prototyping with built-in components in Canvas.
 
 **When to Use**:
 
@@ -90,7 +90,7 @@ Compositions define page layouts in Studio. You can create **Linked Compositions
 
 Click **New Composition** to create your composition.
 
-- In the modal, select the [type of composition](/docs/studio/manage-a-composition#composition-types): **Linked** or **Freeform**.
+- In the modal, select the [type of composition](./manage-a-composition.md#composition-types): **Linked** or **Freeform**.
 - Select the **Composition Type**:**Linked Composition:** Best for dynamic templates that reuse the same layout.Select the **Content Type** and specify a `/blog/*` URL Slug.
 - **Freeform Composition:** Ideal for standalone pages or specific sections.Provide a custom URL Path (e.g., `/marketing/launch`).
 - Enter the **Name** of your composition.
@@ -104,13 +104,13 @@ The **Composition UID** connects Studio compositions to your front-end code via 
 Open the file that handles the composition’s URL path.
 
 - Copy the **Composition UID** from the listing page.
-- Use the UID to render the composition based on your [CSR](/docs/studio/set-up-studio-for-a-csr-project#render-the-composition) or [SSR](/docs/studio/set-up-studio-for-a-ssr-project#render-the-composition-in-your-page) setup.**Note:** This step is optional unless you have front-end access.
+- Use the UID to render the composition based on your [CSR](./set-up-studio-for-a-csr-project.md#render-the-composition) or [SSR](./set-up-studio-for-a-ssr-project.md#render-the-composition-in-your-page) setup.**Note:** This step is optional unless you have front-end access.
 
 ## Studio Migration and CLI Support
 
 To streamline development workflows, Studio supports CLI-based migration of configurations and compositions across stacks. This is useful when promoting changes between environments, replicating setups, or testing new configurations. You can use the Agentic CLI to export efficiently, import, or clone Studio project settings and assets.
 
-**Additional Resource**: For a detailed list of supported operations and usage instructions, refer to the [CLI-Supported Features for Export, Import, and Clone Operations](https://www.contentstack.com/docs/developers/cli/cli-supported-features-for-export-import-and-clone-operations#studio) document.
+**Additional Resource**: For a detailed list of supported operations and usage instructions, refer to the [CLI-Supported Features for Export, Import, and Clone Operations](../developers/cli/cli-supported-features-for-export-import-and-clone-operations.md#studio) document.
 
 ## Design the Composition in Canvas
 
@@ -118,8 +118,8 @@ The **Canvas** is a visual drag-and-drop interface for building layouts without 
 
 Drag and drop components from the left panel.
 
-- **Bind content:** Use the [Page Data](/docs/studio/page-data) tab and [link](/docs/studio/data-binding) a CMS entry. Then go to [Settings](/docs/studio/settings) to bind fields.
-- **Apply design styles:** Use the [Design](/docs/studio/design) tab:**Design tokens** like color, spacing, typography
+- **Bind content:** Use the [Page Data](./page-data.md) tab and [link](./data-binding.md) a CMS entry. Then go to [Settings](./settings.md) to bind fields.
+- **Apply design styles:** Use the [Design](./design.md) tab:**Design tokens** like color, spacing, typography
 - **Component props** for variations
 
 ## Preview and Deploy (Optional for Playground Use)

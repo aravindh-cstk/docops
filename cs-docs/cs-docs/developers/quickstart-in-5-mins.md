@@ -23,7 +23,7 @@ By completing this guide, you will:
 - Build a webpage and structure its content.
 - Manage and retrieve content seamlessly.
 
-**Tip:** To speed up the project setup, use the [Bootstrap plugin](/docs/developers/cli/bootstrap-starter-apps) in the Contentstack CLI.
+**Tip:** To speed up the project setup, use the [Bootstrap plugin](./cli/bootstrap-starter-apps.md) in the Contentstack CLI.
 
 ## Steps to Get Started
 Through this guide, you will learn how to:
@@ -40,16 +40,16 @@ Let’s dive into each step.
 ## Create a Stack
 A **Stack** is a container for all your project’s content, including content types, entries, assets, etc.
 
-**Note:** If you are using a trial account with a sample stack, select the existing stack and proceed to the [next step](/docs/developers/quickstart-in-5-mins#create-a-content-type).
+**Note:** If you are using a trial account with a sample stack, select the existing stack and proceed to the [next step](./quickstart-in-5-mins.md#create-a-content-type).
 
 To create a new stack, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Click **+ New Stack** in the top right corner and click **Create New** to create a new stack.**Note:** Alternatively, for the **Use Prebuilt** option, refer to the [import a prebuilt stack](/docs/developers/marketplace-platform-guides/installing-a-starter#install-starter-via-stack-creation-experience) document.
+- Click **+ New Stack** in the top right corner and click **Create New** to create a new stack.**Note:** Alternatively, for the **Use Prebuilt** option, refer to the [import a prebuilt stack](./marketplace-platform-guides/installing-a-starter.md#install-starter-via-stack-creation-experience) document.
 - In the **Create New Stack** modal, enter the following details:Enter a **Name** (e.g., My Website).
 - [Optional] Add a **Description** (e.g., Content for my website).
 - **Set Master Language** (e.g., English - United States).
 - Click **Create**.
 
-For more details, refer to the [Stacks](/docs/developers/set-up-stack/about-stack) documentation.
+For more details, refer to the [Stacks](./set-up-stack/about-stack.md) documentation.
 
 Next, let’s create the structure of the web pages by creating content types.
 
@@ -58,18 +58,18 @@ A **Content Type** defines the structure of your webpage.
 
 To create an **About Us** content type, perform the following steps:
 - Click the “Content Models” icon in the left navigation panel.
-- Click **+ New Content Type** button and from the dropdown, select **Create New** to create a new content type.**Note:** Alternatively, for the **Use Prebuilt** option, refer to the [import a prebuilt content model](/docs/developers/create-content-types/import-prebuilt-content-models) document.
+- Click **+ New Content Type** button and from the dropdown, select **Create New** to create a new content type.**Note:** Alternatively, for the **Use Prebuilt** option, refer to the [import a prebuilt content model](./create-content-types/import-prebuilt-content-models.md) document.
 - In the **Create New Content Type** modal, perform the following steps:Enter a **Name** (e.g., About Us).
 - The UID (Unique ID) is auto-generated, however, you can make changes if needed.**Note:** The UID cannot be modified once the content type is saved.
 - [Optional] Add a **Description** (e.g., Organizational details).
 - Under **Type**, choose either **Single** (for a single entry) or **Multiple** (for multiple entries).
 - Click **Save and proceed**.
-- In the “Content Type Builder” page, select the [fields](/docs/developers/create-content-types/about-fields) you want by clicking the “Insert a field” (+ icon) to add fields. Customize fields by modifying their [Properties](/docs/developers/create-content-types/about-field-properties) icon.
+- In the “Content Type Builder” page, select the [fields](./create-content-types/about-fields.md) you want by clicking the “Insert a field” (+ icon) to add fields. Customize fields by modifying their [Properties](./create-content-types/about-field-properties.md) icon.
 - Click **Save** or **Save and Close** to save your content type.
 
 **Tip:** You can use [Contentstack Automate](/docs/developers/automation-hub-guides/about-automation-hub) to streamline content modeling and reduce manual effort.
 
-For more details, refer to the [Content Modeling](/docs/developers/how-to-guides/content-modeling) and [Create a Content Type](/docs/developers/create-content-types/create-a-content-type) documentation.
+For more details, refer to the [Content Modeling](/docs/developers/how-to-guides/content-modeling) and [Create a Content Type](./create-content-types/create-a-content-type.md) documentation.
 
 ## Add an Environment
 An **Environment** is the space to publish your content.
@@ -83,10 +83,10 @@ To create an environment, perform the following steps:
 - Select a **Language** (e.g., English - United States).
 - Click **Create**.
 
-For more details, refer to the [About Environments](/docs/developers/set-up-environments/about-environments) document.
+For more details, refer to the [About Environments](./set-up-environments/about-environments.md) document.
 
 ## Create Content
-Your content comprises [entries](/docs/content-managers/author-content/about-entries) and/or [assets](/docs/content-managers/author-content/about-assets).
+Your content comprises [entries](../content-managers/author-content/about-entries.md) and/or [assets](../content-managers/author-content/about-assets.md).
 
 To create an **entry** in the “About Us” content type, perform the following steps:
 - Click the “Entries” icon in the left navigation panel.
@@ -96,7 +96,7 @@ To create an **entry** in the “About Us” content type, perform the following
 - [Optional] Add **Page Components** as needed and **Tags** for easier search and filtering (e.g., Org).
 - Click **Save**.
 
-**Tip:** You can use [Contentstack Workflows](/docs/developers/set-up-workflows-and-publish-rules/about-workflows) to streamline content approvals and collaboration.
+**Tip:** You can use [Contentstack Workflows](./set-up-workflows-and-publish-rules/about-workflows.md) to streamline content approvals and collaboration.
 
 ## Publish Content
 To publish an entry, perform the following steps:
@@ -106,7 +106,7 @@ To publish an entry, perform the following steps:
 - Under **Publish**, choose **Now** (immediate) or **Later** (schedule for later).
 - Click **Send**.
 
-For more details, refer to the [Publish an Entry](/docs/content-managers/author-content/publish-an-entry) document.
+For more details, refer to the [Publish an Entry](../content-managers/author-content/publish-an-entry.md) document.
 
 **Tip:** Use [Contentstack Automate](/docs/developers/automation-hub-guides/about-automation-hub) to create and optimize workflows for efficiently managing and publishing content.
 
@@ -116,7 +116,7 @@ Now that your content is ready, you can use the following tools to further enhan
 - **CSS**: Control the visual styling and layout.
 - **JavaScript** (or jQuery): Add interactivity and dynamic functionality.
 
-Once your page is ready, you can host it using a platform such as [Contentstack Launch](/docs/developers/launch/about-launch) that will help deploy and manage your environments effortlessly with enterprise-grade security.
+Once your page is ready, you can host it using a platform such as [Contentstack Launch](./launch/about-launch.md) that will help deploy and manage your environments effortlessly with enterprise-grade security.
 
 A sample demo of a web page is available on [CodeSandbox](https://codesandbox.io/p/sandbox/contentstack-jtw5q?from-embed).
 
@@ -136,14 +136,14 @@ To locate the required `content_type_uid` and `entry_uid`:
 
 **Note:** Make sure to pass the Stack’s API key and environment-specific delivery token in your client.
 
-For more details, refer to the [Authentication](/docs/developers/apis/content-delivery-api#authentication) and [Content Delivery API](/docs/developers/apis/content-delivery-api) documentation.
+For more details, refer to the [Authentication](../../api-docs/api-detail/content-delivery-api.md#authentication) and [Content Delivery API](../../api-docs/api-detail/content-delivery-api.md) documentation.
 
 ## What’s Next?
 Enhance your Contentstack experience:
-- [Contentstack Live Preview](/docs/content-managers/author-content/about-live-preview): Instantly see how your content changes appear on your website without publishing.
+- [Contentstack Live Preview](../content-managers/author-content/about-live-preview.md): Instantly see how your content changes appear on your website without publishing.
 - [Visual Builder](/docs/content-managers/visual-builder/about-visual-builder): Use Visual Builder to design and configure your webpages effortlessly with a drag-and-drop interface.
-- [Marketplace](/docs/developers/marketplace-platform-guides/about-marketplace): Explore integrations and extensions to enhance Contentstack’s capabilities with additional features such as translation, personalization, and automation tools.
-- [GraphQL API](/docs/developers/graphql-api/about-graphql): Learn how to fetch structured data efficiently using **GraphQL**, enabling optimized querying for large-scale projects.
+- [Marketplace](./marketplace-platform-guides/about-marketplace.md): Explore integrations and extensions to enhance Contentstack’s capabilities with additional features such as translation, personalization, and automation tools.
+- [GraphQL API](./graphql-api/about-graphql.md): Learn how to fetch structured data efficiently using **GraphQL**, enabling optimized querying for large-scale projects.
 - [SDKs](/docs/developers/sdks): Utilize Contentstack's **SDKs** to streamline development across various programming languages and platforms.
 
 **Additional Resource:** Explore [Contentstack Academy](https://www.contentstack.com/academy), where you can find courses, tutorials, and certification programs to deepen your understanding of Contentstack’s features and best practices.
@@ -151,7 +151,7 @@ Enhance your Contentstack experience:
 ## Common questions
 
 ### Do I need to create a new stack if I’m using a trial account?
-No. **Note:** If you are using a trial account with a sample stack, select the existing stack and proceed to the [next step](/docs/developers/quickstart-in-5-mins#create-a-content-type).
+No. **Note:** If you are using a trial account with a sample stack, select the existing stack and proceed to the [next step](./quickstart-in-5-mins.md#create-a-content-type).
 
 ### What do I need to retrieve published content using the Content Delivery API?
 **Note:** Make sure to pass the Stack’s API key and environment-specific delivery token in your client.

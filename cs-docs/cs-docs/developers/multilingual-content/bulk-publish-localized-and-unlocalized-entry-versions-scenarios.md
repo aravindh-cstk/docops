@@ -17,13 +17,13 @@ This page explains real-world scenarios for bulk publishing localized and unloca
 
 ## Bulk Publish Localized and Unlocalized Entry Versions Scenarios
 
-Now, let’s see some real-world scenarios to understand how [publishing entries](/docs/content-managers/working-with-entries/publish-an-entry) on multiple [locales](/docs/developers/multi-language-content/about-localization) works with your localized and unlocalized content.
+Now, let’s see some real-world scenarios to understand how [publishing entries](../../content-managers/author-content/publish-an-entry.md) on multiple [locales](./about-localization.md) works with your localized and unlocalized content.
 
 In this section, we will look at a few scenarios and learn how this feature works in Contentstack.
 
 **Scenario 1: Publishing localized and unlocalized entry versions from the publishing modal of the master language**
 
-Consider a scenario where you have the following languages available within your [stack](/docs/developers/set-up-stack/about-stack): English (United States), French (France), Chinese (China), and Spanish (Spain). English (United States) is [set as the master language](/docs/developers/multilingual-content/set-the-master-language) of the stack, while Spanish (Spain) is set as the [fallback language](/docs/developers/multilingual-content/about-fallback-languages) for French (France).
+Consider a scenario where you have the following languages available within your [stack](../set-up-stack/about-stack.md): English (United States), French (France), Chinese (China), and Spanish (Spain). English (United States) is [set as the master language](./set-the-master-language.md) of the stack, while Spanish (Spain) is set as the [fallback language](./about-fallback-languages.md) for French (France).
 
 When you open the entry page of the master entry [English (United States)], and click on “Publish”, you can select all the other available languages to which you want to publish the entry. Now, consider the following scenario:
 - The entry version present in French (France) is a localized version

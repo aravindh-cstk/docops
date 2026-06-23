@@ -18,9 +18,9 @@ This page explains how to use **File** as the field data type when creating a cu
 
 **Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release.
 
-The Extension SDK allows you to extend the functionality of Contentstack by enabling you to create a [Custom Fields](/docs/developers/create-custom-fields/about-custom-fields), [Custom Sidebar Extensions](/docs/developers/create-sidebar-extensions/about-sidebar-extensions), and [Dashboard Extensions](/docs/developers/create-dashboard-extensions/about-custom-dashboard-extensions).
+The Extension SDK allows you to extend the functionality of Contentstack by enabling you to create a [Custom Fields](../create-custom-fields/about-custom-fields.md), [Custom Sidebar Extensions](../create-sidebar-extensions/about-sidebar-extensions.md), and [Dashboard Extensions](/docs/developers/create-dashboard-extensions/about-custom-dashboard-extensions).
 
-While creating an extension in Contentstack, you can select **File** for the **Field data type** field. This ensures that the input data of the [field](/docs/developers/create-content-types/about-fields) to be saved in Contentstack is of type **file**.
+While creating an extension in Contentstack, you can select **File** for the **Field data type** field. This ensures that the input data of the [field](../create-content-types/about-fields.md) to be saved in Contentstack is of type **file**.
 
 In this document, we will learn how to use **File** as the Field data type while creating an Extension, custom field.
 
@@ -28,13 +28,13 @@ In this document, we will learn how to use **File** as the Field data type while
 
 Follow the steps given below to create a custom field extension:
 
-In your [stack](/docs/developers/set-up-stack/about-stack), navigate to the “Settings” icon on the left navigation panel, and select **Extentions**.
+In your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” icon on the left navigation panel, and select **Extentions**.
 
 - On the **Extensions** page, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension** page, enter values in the fields as given below:
 
-**Title**: Provide a suitable title for your custom field. This title will be visible when you select the extension in the custom field in your [content type](/docs/developers/create-content-types/about-content-types).
+**Title**: Provide a suitable title for your custom field. This title will be visible when you select the extension in the custom field in your [content type](../create-content-types/about-content-types.md).
 
 - **Field data type**: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select File.
 - **Multiple**: You can leave this field unchecked or select it if your custom field will expect multiple values. In such a case, the field will save the input values in an array.

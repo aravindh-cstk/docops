@@ -27,9 +27,9 @@ This guide explains how to log in, manage access, and understand role permission
 
 ## Prerequisites
 
-- [Data & Insights (Lytics) ](/docs/data-and-insights/integrating-data-and-insights-lytics)enabled for your organization
+- [Data & Insights (Lytics) ](./integrating-data-and-insights-lytics.md)enabled for your organization
 - The web domain of your digital property (e.g. example.com)
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner) / [Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../developers/organization/organization-roles.md#organization-owner) / [Admin](../developers/organization/organization-roles.md#organization-admin)
 
 ## How Authentication Works
 
@@ -44,7 +44,7 @@ When you launch Data & Insights (Lytics) from within Contentstack:
 **Note:**
 
 - Direct login attempts via [Data & Insights (Lytics)](https://www.lytics.com/) are not supported for Contentstack-managed accounts. Always access Data & Insights through the Contentstack App Switcher.
-- On your first access, you may see a prompt asking you to [Authorize or Grant Access for Lytics to connect with Contentstack](/docs/data-and-insights/create-data-and-insights-lytics-integration#authorize-and-configure-content-classification-for-your-dal-connection). Click **Accept** to establish the OAuth connection. This step appears only once.
+- On your first access, you may see a prompt asking you to [Authorize or Grant Access for Lytics to connect with Contentstack](./create-data-and-insights-lytics-integration.md#authorize-and-configure-content-classification-for-your-dal-connection). Click **Accept** to establish the OAuth connection. This step appears only once.
 
 ## Accessing Data & Insights (Lytics) through Contentstack
 
@@ -55,7 +55,7 @@ When you launch Data & Insights (Lytics) from within Contentstack:
 
 ## Verifying Account Connection
 
-To confirm that your [Data & Insights (Lytics) account](/docs/data-and-insights/create-data-and-insights-lytics-integration) is properly linked to your Contentstack organization:
+To confirm that your [Data & Insights (Lytics) account](./create-data-and-insights-lytics-integration.md) is properly linked to your Contentstack organization:
 
 - Log in to [Contentstack](https://www.contentstack.com/login).
 - From the **App Switcher,** click the **Data & Insights **icon.

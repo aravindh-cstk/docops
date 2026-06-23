@@ -16,19 +16,19 @@ This page provides an overview of Experience Extensions in Contentstack, includi
 
 ## Experience Extensions Overview
 
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations](/docs/developers/developer-hub/about-ui-locations/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations](./developer-hub/about-ui-locations.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 Contentstack lets you extend the and customize the the Contentstack experience with Experience Extensions.
 
 These extensions enable you to customize the Contentstack experience, by customizing Contentstack's default UI and behavior.
 
-You can create different types of Experience Extensions within Contentstack: [Custom Fields](/docs/developers/create-custom-fields/about-custom-fields), [Sidebar Extensions](/docs/developers/create-sidebar-extensions/), [Dashboard Extensions](/docs/developers/create-dashboard-extensions), [JSON RTE Plugins,](/docs/developers/json-rich-text-editor-plugins/about-json-rte-plugins) [Field Modifier Location](/docs/developers/developer-hub/field-modifier-location/) and [Full Page Location](/docs/developers/developer-hub/full-page-location/).
+You can create different types of Experience Extensions within Contentstack: [Custom Fields](./create-custom-fields/about-custom-fields.md), [Sidebar Extensions](./create-sidebar-extensions.md), [Dashboard Extensions](./create-dashboard-extensions.md), [JSON RTE Plugins,](./json-rich-text-editor-plugins/about-json-rte-plugins.md) [Field Modifier Location](./developer-hub/field-modifier-location.md) and [Full Page Location](./developer-hub/full-page-location.md).
 
-**Note:** When working within specific branches, extensions added or created will be available only within that particular branch. For example, you are working within the development branch, and you add new extensions ([Custom Fields](/docs/developers/create-custom-fields/create-new-custom-field), [Custom Widgets](/docs/developers/create-sidebar-extensions/), [Dashboard Widget](/docs/developers/create-dashboard-extensions/create-a-new-dashboard-extension), [JSON RTE Plugins,](/docs/developers/json-rich-text-editor-plugins/create-new-json-rte-plugin) [Field Modifier Location](/docs/developers/developer-hub/field-modifier-location/) and [Full Page Location](/docs/developers/developer-hub/full-page-location/)) to this branch. These extensions will be available only within the development branch. Refer to our [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) document for more information.
+**Note:** When working within specific branches, extensions added or created will be available only within that particular branch. For example, you are working within the development branch, and you add new extensions ([Custom Fields](./create-custom-fields/create-new-custom-field.md), [Custom Widgets](./create-sidebar-extensions.md), [Dashboard Widget](./create-dashboard-extensions/create-a-new-dashboard-extension.md), [JSON RTE Plugins,](./json-rich-text-editor-plugins/create-new-json-rte-plugin.md) [Field Modifier Location](./developer-hub/field-modifier-location.md) and [Full Page Location](./developer-hub/full-page-location.md)) to this branch. These extensions will be available only within the development branch. Refer to our [Branch-specific Modules](./branches/branch-specific-modules.md) document for more information.
 
-Contentstack provides certain prebuilt, ready-to-use, extensions for you to use in your [content types](/docs/developers/create-content-types/about-content-types). You can select and use any extension from this list. Also, you can create a custom extension either by writing the code directly in Contentstack’s repository, or you can host it on a URL of your choice and provide this URL when configuring your extension in Contentstack.
+Contentstack provides certain prebuilt, ready-to-use, extensions for you to use in your [content types](./create-content-types/about-content-types.md). You can select and use any extension from this list. Also, you can create a custom extension either by writing the code directly in Contentstack’s repository, or you can host it on a URL of your choice and provide this URL when configuring your extension in Contentstack.
 
-Refer to the list of all the [Experience Extensions](/docs/developers/all-contentstack-experience-extensions) supported by Contentstack.
+Refer to the list of all the [Experience Extensions](./experience-extensions-overview/all-contentstack-experience-extensions.md) supported by Contentstack.
 
 ## Work with Experience Extensions
 
@@ -49,10 +49,10 @@ Refer to the list of all the [Experience Extensions](/docs/developers/all-conten
 ## Common questions
 
 ### Should I use Experience Extensions or UI locations?
-Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations](/docs/developers/developer-hub/about-ui-locations/) for the Contentstack App Framework to extend the functionality of your apps.
+Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations](./developer-hub/about-ui-locations.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 ### What types of Experience Extensions can I create?
-You can create different types of Experience Extensions within Contentstack: [Custom Fields](/docs/developers/create-custom-fields/about-custom-fields), [Sidebar Extensions](/docs/developers/create-sidebar-extensions/), [Dashboard Extensions](/docs/developers/create-dashboard-extensions), [JSON RTE Plugins,](/docs/developers/json-rich-text-editor-plugins/about-json-rte-plugins) [Field Modifier Location](/docs/developers/developer-hub/field-modifier-location/) and [Full Page Location](/docs/developers/developer-hub/full-page-location/).
+You can create different types of Experience Extensions within Contentstack: [Custom Fields](./create-custom-fields/about-custom-fields.md), [Sidebar Extensions](./create-sidebar-extensions.md), [Dashboard Extensions](./create-dashboard-extensions.md), [JSON RTE Plugins,](./json-rich-text-editor-plugins/about-json-rte-plugins.md) [Field Modifier Location](./developer-hub/field-modifier-location.md) and [Full Page Location](./developer-hub/full-page-location.md).
 
 ### Are extensions branch-specific?
 When working within specific branches, extensions added or created will be available only within that particular branch.

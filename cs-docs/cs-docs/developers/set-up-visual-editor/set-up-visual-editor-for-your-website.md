@@ -24,9 +24,9 @@ This guide outlines the steps to set up and configure Visual Editor for your web
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login/)
-- Access to [stack settings](/docs/developers/set-up-stack/view-stack-details)
-- [Live Preview](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website) must be set up for your website
-- [Preview token](/docs/developers/create-tokens/about-delivery-tokens#about-preview-tokens)
+- Access to [stack settings](../set-up-stack/view-stack-details.md)
+- [Live Preview](../set-up-live-preview/set-up-live-preview-for-your-website.md) must be set up for your website
+- [Preview token](../create-tokens/about-delivery-tokens.md#about-preview-tokens)
 - IFrame-compatible website to avoid [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors
 
 ## Upgrade Delivery and Live Preview SDKs
@@ -55,8 +55,8 @@ ContentstackLivePreview.init({
 ...
 ```
 
-**Note**: To explore the different configuration properties, refer to the [config](/docs/developers/set-up-live-preview/get-started-with-live-preview-utils-sdk-v3#config) section.
-Ensure Live Preview is set up for your website. Refer [Set Up Live Preview for Your Website](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website) for more information.
+**Note**: To explore the different configuration properties, refer to the [config](../set-up-live-preview/get-started-with-live-preview-utils-sdk-v3.md#config) section.
+Ensure Live Preview is set up for your website. Refer [Set Up Live Preview for Your Website](../set-up-live-preview/set-up-live-preview-for-your-website.md) for more information.
 
 ## Set Up Edit Tags
 
@@ -74,7 +74,7 @@ Setting up edit tags will enable edit functionalities within your website.
 
 ```
 
-When your website runs in production, you should remove the edit tags. This will throw an error when you try to destructure an `undefined` value. Hence, we use the [Nullish coalescing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) and pass an empty object value.Refer to [Set Up Live Edit Tags for Entries with REST](/docs/developers/set-up-live-preview/set-up-live-edit-tags-for-entries-with-rest) to configure your tags. To enable actions like adding, deleting, and ordering an instance of a multiple field type, add live edit tags for each instance of the field. Refer to the [Enable Support for Multiple Field Actions in Visual Editor](/docs/developers/set-up-live-preview/set-up-live-edit-tags-for-entries-with-rest#enable-support-for-multiple-field-actions-in-visual-editor) section for more information.By following these steps, you can fully configure the Visual Editor for your website, allowing seamless content management and live preview capabilities.
+When your website runs in production, you should remove the edit tags. This will throw an error when you try to destructure an `undefined` value. Hence, we use the [Nullish coalescing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) and pass an empty object value.Refer to [Set Up Live Edit Tags for Entries with REST](../set-up-live-preview/set-up-live-edit-tags-for-entries-with-rest.md) to configure your tags. To enable actions like adding, deleting, and ordering an instance of a multiple field type, add live edit tags for each instance of the field. Refer to the [Enable Support for Multiple Field Actions in Visual Editor](../set-up-live-preview/set-up-live-edit-tags-for-entries-with-rest.md#enable-support-for-multiple-field-actions-in-visual-editor) section for more information.By following these steps, you can fully configure the Visual Editor for your website, allowing seamless content management and live preview capabilities.
 
 ## [Optional] Enable Empty Placeholder for Multiple Fields
 
@@ -99,7 +99,7 @@ Once added, you should see a empty placeholder for multiple fields.
 ## Common questions
 
 ### Do I need Live Preview set up before using Visual Editor?
-Yes. “[Live Preview](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website) must be set up for your website” before configuring Visual Editor.
+Yes. “[Live Preview](../set-up-live-preview/set-up-live-preview-for-your-website.md) must be set up for your website” before configuring Visual Editor.
 
 ### What SDK versions are required for Visual Editor?
 “The Visual Editor requires Live Preview Utils version **3.0** or above and delivery SDK version 3.20.3 or above.”

@@ -26,7 +26,7 @@ Fields are of various types, designed to handle the most shared content input ne
 
 Each field possesses specific properties, such as “Display Name,” “Unique ID,” “Default Value,” “Help Text,” “Mandatory,” and so on. These properties are editable, providing flexibility to customize the nature of the field.
 
-**Additional Resource**: You can check out the [Field Properties](/docs/developers/create-content-types/about-field-properties) section to learn how you can use and set them for a particular task.
+**Additional Resource**: You can check out the [Field Properties](./about-field-properties.md) section to learn how you can use and set them for a particular task.
 
 ## Common questions
 
@@ -40,4 +40,4 @@ Fields are the building blocks for structured content, and all the content you w
 Each field type determines the type of data it can store (for example, the Number field type accepts only numeric characters).
 
 ### Where can I learn about field properties?
-You can check out the [Field Properties](/docs/developers/create-content-types/about-field-properties) section to learn how you can use and set them for a particular task.
+You can check out the [Field Properties](./about-field-properties.md) section to learn how you can use and set them for a particular task.

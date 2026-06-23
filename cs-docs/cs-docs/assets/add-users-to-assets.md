@@ -35,7 +35,7 @@ Add Users to Assets
 
 ##### Content
 
-Users are added to Assets through Contentstack [Administration](/docs/developers/organization/invite-users-to-organization). During the invitation flow, roles are assigned at two levels:
+Users are added to Assets through Contentstack [Administration](../developers/organization/invite-users-to-organization.md). During the invitation flow, roles are assigned at two levels:
 - **Product-level**: Organization-specific **Administration** and **Assets** roles
 - **Space level (optional)**: Space-specific roles applied per selected space
 

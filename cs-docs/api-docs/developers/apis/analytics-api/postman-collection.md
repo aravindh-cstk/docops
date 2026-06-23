@@ -93,7 +93,7 @@ Some of the important variables that you need to set are as follows:
 | organization_uid  | your_organization_uid |
 | authtoken | your_authtoken |
 
-**Note:** The Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](/docs/developers/apis/analytics-api#authentication) section for more details.
+**Note:** The Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](../../../api-detail/analytics-api.md#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 
@@ -147,10 +147,10 @@ If you want to prevent this action, perform the steps given below:
 
 This will allow you to access [cookies of this domain in scripts](https://learning.postman.com/docs/sending-requests/cookies/#accessing-cookies-in-scripts) programmatically.
 
-**Note:** To avoid this situation, we recommend you to use the organization UID along with the Authtoken to make valid Analytics API requests. For more information, refer to [Authentication](/docs/developers/apis/analytics-api#authentication).
+**Note:** To avoid this situation, we recommend you to use the organization UID along with the Authtoken to make valid Analytics API requests. For more information, refer to [Authentication](../../../api-detail/analytics-api.md#authentication).
 
 
 
 ## Postman Collection Updates
 
-We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](/docs/developers/apis/analytics-api#download-latest-collection) again and you are good to go.
+We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](../../../api-detail/analytics-api.md#download-latest-collection) again and you are good to go.

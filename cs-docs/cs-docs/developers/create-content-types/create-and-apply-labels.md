@@ -16,12 +16,12 @@ This page explains how to create and apply labels to content types using the Con
 
 ## Create and Apply Labels
 
-When you [create](/docs/developers/create-content-types/create-a-content-type) or [edit](/docs/developers/create-content-types/edit-a-content-type) a [content type](/docs/developers/create-content-types/about-content-types), the Content Type Builder page displays an **Apply Label** option at the top-right corner. Clicking this option displays a list of existing labels, if available.
+When you [create](./create-a-content-type.md) or [edit](./edit-a-content-type.md) a [content type](./about-content-types.md), the Content Type Builder page displays an **Apply Label** option at the top-right corner. Clicking this option displays a list of existing labels, if available.
 
-**Note:** Labels are branch-specific. Labels created in one branch, such as the development branch, can only be applied to content types within that same branch. For more details, refer to the [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) document.
+**Note:** Labels are branch-specific. Labels created in one branch, such as the development branch, can only be applied to content types within that same branch. For more details, refer to the [Branch-specific Modules](../branches/branch-specific-modules.md) document.
 
 To create a new label, log in to your [Contentstack account](https://app.contentstack.com/#!/stacks) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), click the “Content Models” icon on the left navigation panel, and open the **Content Type Builder** page for the content type to which you want to apply the label.
+- Go to your [stack](../set-up-stack/about-stack.md), click the “Content Models” icon on the left navigation panel, and open the **Content Type Builder** page for the content type to which you want to apply the label.
 - Click the **Apply Label** dropdown on the top-right corner to apply an existing label or click **+ New Label**.
 - In the dialog box that appears, fill in the following details:**Name** (required): Provide a suitable name for the label.
 - **Nest Label Under** (optional): If you want to nest this label under an existing label, select it from the dropdown. Leave this blank if creating a standalone label.
@@ -31,8 +31,8 @@ To create a new label, log in to your [Contentstack account](https://app.content
 ## API Reference
 
 To create and apply labels via API, refer to the following API requests:
-- [Add label](/docs/developers/apis/content-management-api#add-label)
-- [Update label](/docs/developers/apis/content-management-api#update-label)
+- [Add label](../../../api-docs/api-detail/content-management-api.md#add-label)
+- [Update label](../../../api-docs/api-detail/content-management-api.md#update-label)
 
 ## Common questions
 
@@ -46,4 +46,4 @@ In the Content Type Builder page, use the **Apply Label** option at the top-righ
 Yes. Use **Create & Apply:** Saves the label and immediately applies it to the content type.
 
 ### Which API endpoints are relevant for labels?
-Use the API requests listed under **API Reference**: [Add label](/docs/developers/apis/content-management-api#add-label) and [Update label](/docs/developers/apis/content-management-api#update-label).
+Use the API requests listed under **API Reference**: [Add label](../../../api-docs/api-detail/content-management-api.md#add-label) and [Update label](../../../api-docs/api-detail/content-management-api.md#update-label).

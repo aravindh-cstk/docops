@@ -28,19 +28,19 @@ To add the Content Type Sidebar location to your app via the Developer Hub conso
       Click the **Developer Hub** icon on the left navigation panel.
 - Select an application for which you want to add the Content Type Sidebar location.
 - Click the **UI Locations **tab. To set the **App URL**, click the **View Hosting** link. You will be redirected to the **Hosting **tab.
-- In the **Hosting **tab, you can select [Hosting with Launch](/docs/developer-hub/app-hosting#hosting-with-launch) or [Custom Hosting](/docs/developer-hub/app-hosting#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.
+- In the **Hosting **tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.
 - Navigate to the UI Locations tab to configure the Content Type Sidebar location.
 - Click the three dots and click the** + Add UI Location **button as shown below:
 - On the resulting **Configuration **page, set up the configurations for the Content Type Sidebar location by providing details such as **Name**, **Path**, and **Description**. You can also enable the configuration using the **Enabled **toggle button.Properties that can be specified for this UI location:
 
           **Name (optional)**: It specifies the name of the UI location. This name will be displayed at the location after the app is installed. If not provided, the app name will be used. Ensure you use unique names for multiple configurations of the same location.
-- **Signed (optional)**: When enabled, Contentstack adds a JWT token to the initial HTTP request made for your app's first page. This token can be used to verify that the request originated from Contentstack. For more information, please refer to [Signed Locations](/docs/developer-hub/securing-your-app/).
+- **Signed (optional)**: When enabled, Contentstack adds a JWT token to the initial HTTP request made for your app's first page. This token can be used to verify that the request originated from Contentstack. For more information, please refer to [Signed Locations](./securing-your-app.md).
 - **Path (optional)**: This property enables you to define the location relative to the base URL where the app is hosted. This is particularly useful when the developer intends the app to appear in multiple locations.
 - **Enabled (optional)**: It determines whether the location is visible after the app is installed. If not specified, the location is enabled by default. Users can manage this option post-installation via the **UI** **Locations** tab on the app’s configuration screen.
 
         You can configure any UI location as **mandatory **using the **Required **toggle button. If the toggle is enabled, the location becomes mandatory and cannot be disabled. Whereas, if the toggle is disabled, the UI location is available to use but not mandatory.
 
-        **Additional Resource:** Refer to the [Marketplace App Manifest](/docs/developer-hub/app-manifest) documentation for comprehensive details.
+        **Additional Resource:** Refer to the [Marketplace App Manifest](./app-manifest.md) documentation for comprehensive details.
 - Finally, click **Save** to save the Content Type Sidebar location’s configuration details.You will see the details of the configured UI location on the **UI** **Locations** tab in the **App** **Configuration** screen after installing the app.
 
         You can enable or disable the non-required UI locations.

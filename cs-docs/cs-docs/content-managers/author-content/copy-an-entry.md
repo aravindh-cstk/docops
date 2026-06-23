@@ -21,9 +21,9 @@ Copying an entry in Contentstack allows you to reuse existing content quickly wi
 
 The copy behavior varies based on the option you choose in the **Copy Entry** modal.
 
-To copy an [entry](/docs/content-managers/working-with-entries/about-entries), log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
+To copy an [entry](./about-entries.md), log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
-1. Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the **Entries** icon, or press **E** on your keyboard (available for both Windows and Mac).
+1. Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the **Entries** icon, or press **E** on your keyboard (available for both Windows and Mac).
 2. Find the entry you want to copy.
 3. Open the entry, click the horizontal ellipsis at the bottom of the editor, and select **Copy**.
 4. Alternatively, from the Entries list page, click the vertical ellipsis in the **Actions** column next to the entry, and select **Copy**.

@@ -36,7 +36,7 @@ Custom metadata can be added to assets via the API, without affecting their vers
 - **Flexible Tagging:** Define metadata such as asset type, SEO tags, or owner details to suit your specific needs.
 
 **Note:**
-- Metadata can only be created via the [Metadata Content Management API](/docs/developers/apis/content-management-api#metadata-for-entries-and-assets) requests and is not accessible through the Contentstack UI.
+- Metadata can only be created via the [Metadata Content Management API](../../../api-docs/api-detail/content-management-api.md#metadata-for-entries-and-assets) requests and is not accessible through the Contentstack UI.
 - Metadata must be associated with an extension, and the maximum allowed size per extension per entry/asset is **5 KB**.
 
 ## Adding Metadata to Assets
@@ -48,22 +48,22 @@ Examples of metadata you can add include:
 - **Copyright Information:** Specify copyright details for intellectual property protection.
 - **Custom Tags or Labels:** Create unique tags for enhanced categorization.
 
-**Additional Resource**: To add custom metadata for your entries, refer to the [Additional Metadata Support for Entries](/docs/content-managers/working-with-entries/additional-metadata-support-for-entries) document.
+**Additional Resource**: To add custom metadata for your entries, refer to the [Additional Metadata Support for Entries](../working-with-entries/additional-metadata-support-for-entries.md) document.
 
 ## API Reference
 
 Use the following API requests to manage your metadata effectively:
-- [Create Metadata](/docs/developers/apis/content-management-api#create-metadata)
-- [Get Metadata](/docs/developers/apis/content-management-api#get-metadata)
-- [Update Metadata](/docs/developers/apis/content-management-api#update-metadata)
-- [Delete Metadata](/docs/developers/apis/content-management-api#delete-metadata)
-- [Publish Metadata](/docs/developers/apis/content-management-api#publish-metadata)
-- [Unpublish Metadata](/docs/developers/apis/content-management-api#unpublish-metadata)
+- [Create Metadata](../../../api-docs/api-detail/content-management-api.md#create-metadata)
+- [Get Metadata](../../../api-docs/api-detail/content-management-api.md#get-metadata)
+- [Update Metadata](../../../api-docs/api-detail/content-management-api.md#update-metadata)
+- [Delete Metadata](../../../api-docs/api-detail/content-management-api.md#delete-metadata)
+- [Publish Metadata](../../../api-docs/api-detail/content-management-api.md#publish-metadata)
+- [Unpublish Metadata](../../../api-docs/api-detail/content-management-api.md#unpublish-metadata)
 
 ## Common questions
 
 **Q: Is Additional Metadata Support available in the Contentstack UI?**  
-A: No. Metadata can only be created via the [Metadata Content Management API](/docs/developers/apis/content-management-api#metadata-for-entries-and-assets) requests and is not accessible through the Contentstack UI.
+A: No. Metadata can only be created via the [Metadata Content Management API](../../../api-docs/api-detail/content-management-api.md#metadata-for-entries-and-assets) requests and is not accessible through the Contentstack UI.
 
 **Q: Does adding custom metadata affect an asset’s version history?**  
 A: No. Custom metadata can be added to assets via the API, without affecting their version history.

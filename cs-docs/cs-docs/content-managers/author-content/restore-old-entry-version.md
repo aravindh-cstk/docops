@@ -20,7 +20,7 @@ This page explains how to restore (roll back) an entry to a previously saved ver
 In Contentstack, every update to an entry is saved as a version, allowing you to track changes and restore previous states if needed. This feature helps you recover earlier content versions efficiently.
 
 To restore or rollback to an earlier saved version of an entry, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries”.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries”.
 - Navigate to the entry you want to modify.
 - Click the version icon in the top-right corner of the page or the “Versions” icon in the right sidebar.
 - Locate the entry you want to restore and click it.

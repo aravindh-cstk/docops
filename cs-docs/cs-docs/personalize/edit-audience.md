@@ -26,12 +26,12 @@ This guide provides a step-by-step walkthrough for editing audiences in Contents
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to the Contentstack Organization that has Personalize enabled
 - Access to a project in Personalize
-- [Audience created](/docs/personalize/create-audience) in your Personalize project
+- [Audience created](./create-audience.md) in your Personalize project
 
 **Note:** Users with Owner and Member access to a Personalize project can edit existing audiences.
 
 ## Steps for Execution
-**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
 To edit an existing audience, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
@@ -45,7 +45,7 @@ To edit an existing audience, log in to your [Contentstack account](https://www.
 
 You will get a success message after the audience has been successfully updated.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#audiences) to create, edit, delete, and retrieve all existing audiences.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#audiences) to create, edit, delete, and retrieve all existing audiences.
 
 ## Common questions
 
@@ -59,4 +59,4 @@ A: Open your project, go to the **Audiences** tab, then open the audience or use
 A: Editing an audience referenced in an experience might affect active segmentation, A/B tests, and analytics, so update any references accordingly.
 
 **Q: Can I edit audiences via an API?**  
-A: Yes, you can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#audiences) to create, edit, delete, and retrieve audiences.
+A: Yes, you can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#audiences) to create, edit, delete, and retrieve audiences.

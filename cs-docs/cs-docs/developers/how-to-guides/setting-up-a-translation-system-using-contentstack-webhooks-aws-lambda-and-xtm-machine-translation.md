@@ -90,7 +90,7 @@ Let's move ahead and set up the essentials in Contentstack.
 
 To set up the essentials, [log in to your Contentstack account](https://app.contentstack.com/#!/login) and follow the steps given below:
 
-[Create a stack](/docs/developers/set-up-stack/create-a-new-stack), add a [content type](/docs/developers/create-content-types) (for our exercise, we have created a [Single Content Type](/docs/developers/create-content-types/single-vs-multiple-content-types#single) named **XTM**).
+[Create a stack](../set-up-stack/create-a-new-stack.md), add a [content type](/docs/developers/create-content-types) (for our exercise, we have created a [Single Content Type](../create-content-types/single-vs-multiple-content-types.md#single) named **XTM**).
 
 In our example, we have used “title,” “url,” “single_line (named Heading),” “rich_text_editor (named Body)”, and Select fields. We will translate the content of these fields. Content of special fields such as File, Boolean, Reference, Select will not be translated.
 
@@ -99,10 +99,10 @@ The Select field that we have added (named **XTM Project Templates** in the abov
 If you are using our code example, ensure that the format of adding the IDs is similar to the one shown below:
 
 **Note**: You can add Template-33928, Template-30684, and so on so that it's easier for you to identify and select the required template in the entry. We will use the ID separated by a hyphen for identifying them in the entry page.
-- [Create a management token](/docs/developers/create-tokens/generate-a-management-token) for your stack which we will use later while setting up the lambda function.
-- Next, [create languages](/docs/developers/multilingual-content/add-a-language) (locales) in your content type (XTM). In our example, we have added a few languages:
+- [Create a management token](../create-tokens/generate-a-management-token.md) for your stack which we will use later while setting up the lambda function.
+- Next, [create languages](../multilingual-content/add-a-language.md) (locales) in your content type (XTM). In our example, we have added a few languages:
 
-English [en-us] which is the source and our [master language](/docs/developers/multilingual-content/set-the-master-language)  
+English [en-us] which is the source and our [master language](../multilingual-content/set-the-master-language.md)  
 Chinese - China [zh-cn] is another language  
 French - France [fr-fr] which will be our target language
 
@@ -118,9 +118,9 @@ Hover over the **Settings** gear icon and click on **Workflows**.
 - On the **Workflow Settings** page, click on **+ ADD WORKFLOW**.
 - Provide a suitable name to your workflow and an optional description.
 - Under the **Scope** option, select if this workflow should be applied to **All Content Types** or **Specific Content Type(s)**. For our example, we will select the **Specific Content Types(s)** option and then select our content type, **XTM**, and then click on **Ad**d as shown below:
-- Inside the **WORKFLOW STAGES** option, [add four stages](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages#add-workflow-stages) (for example, Draft, Send for Translation, Review, and Completed).
+- Inside the **WORKFLOW STAGES** option, [add four stages](../set-up-workflows-and-publish-rules/add-workflows-and-stages.md#add-workflow-stages) (for example, Draft, Send for Translation, Review, and Completed).
 
-  **Additional resource**: Learn more about workflow and its stages, refer to the [set up workflows](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages) guide.
+  **Additional resource**: Learn more about workflow and its stages, refer to the [set up workflows](../set-up-workflows-and-publish-rules/add-workflows-and-stages.md) guide.
 - Lastly, click on the **Enable Workflow** checkbox and then on the **Save** button.
 
 With these steps, our workflow is ready. When the editor changes the workflow stage from “Draft” to “Send for Translation,” the webhook will be triggered and call the lambda function (we will set these up later in the guide).
@@ -185,7 +185,7 @@ Let's now move ahead and create a webhook that will invoke the lambda function o
 
 ## Trigger a Webhook to Initiate Translation
 
-To create and [set up a webhook](/docs/developers/set-up-webhooks/create-a-webhook) in Contentstack, log in to your Contentstack account and perform the following steps:
+To create and [set up a webhook](../set-up-webhooks/create-a-webhook.md) in Contentstack, log in to your Contentstack account and perform the following steps:
 
 Hover over the **Settings** gear icon, click on **Webhooks**, and on the **Webhooks** page, click on **+ New Webhook**.
 - On the **Create Webhook** page, fill up the **Name** field (for example, XTM Translation).
@@ -199,7 +199,7 @@ With these steps, we have completed the entire set up and now we are ready to tr
 
 We are now ready to test the setup.
 
-[Create an entry](/docs/content-managers/working-with-entries/create-an-entry) inside the content type (in the en-us locale). Select the XTM template and after you have added the details in other fields, change the workflow stage by selecting **Send for Translation** from the **WORKFLOW DETAILS** section on the right side.
+[Create an entry](../../content-managers/author-content/create-an-entry.md) inside the content type (in the en-us locale). Select the XTM template and after you have added the details in other fields, change the workflow stage by selecting **Send for Translation** from the **WORKFLOW DETAILS** section on the right side.
 
 **Note**: You can send content from your master locale only to XTM for translation. If you send the data from other locales, it will not be translated and the webhook will throw an error.
 - This will trigger the webhook and it will invoke the lambda function. The lambda function will generate the JSON file of the entry and place it in the XTM account for translation.

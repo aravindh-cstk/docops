@@ -51,8 +51,8 @@ Contentstack Personalize makes location-based personalization straightforward, e
 ## Level of Effort: Easy
 **Prerequisites:**
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to the [Contentstack Organization](/docs/developers/organization/about-organizations) that has Personalize enabled
-- Access to a [project](/docs/personalize/create-personalize-project) in Personalize.
+- Access to the [Contentstack Organization](../developers/organization/about-organizations.md) that has Personalize enabled
+- Access to a [project](./create-personalize-project.md) in Personalize.
 
 **This setup requires:**
 - Installing the SDK
@@ -65,7 +65,7 @@ Contentstack Personalize makes location-based personalization straightforward, e
 ### Personalize - Create a Project connected to your Stack
 - Navigate to App Switcher → Personalize → + New Personalize Project
 
-**Additional Resource:** For more information, refer to [Create a Personalize Project.](/docs/personalize/create-personalize-project)
+**Additional Resource:** For more information, refer to [Create a Personalize Project.](./create-personalize-project.md)
 
 ### Create location-based audiences
 - Go to **Personalize → Audiences → + New Audience**.
@@ -77,7 +77,7 @@ Contentstack Personalize makes location-based personalization straightforward, e
 - city = Los Angeles
 - Save the audience.
 
-**Additional Resource:** For more information, refer to [Create an Audience.](/docs/personalize/create-audience)
+**Additional Resource:** For more information, refer to [Create an Audience.](./create-audience.md)
 
 ### Personalize – Create Experience targeted to the Audiences
 - Go to **Personalize → Experiences → + New Experience**.
@@ -89,15 +89,15 @@ Contentstack Personalize makes location-based personalization straightforward, e
 - Drag and drop to order variants by priority. This is important in cases where a visitor matches the conditions for multiple variants (for example, if a Variant targets California and another the city of Los Angeles, and the visitor is currently in Los Angeles), then the Variant higher up in the list will be shown to the visitor.
 - Save Draft.
 
-**Additional Resource:** For more information, refer to  [Create a Segmented Experience](/docs/personalize/create-segmented-experience)
+**Additional Resource:** For more information, refer to  [Create a Segmented Experience](./create-segmented-experience.md)
 
 ### CMS - Link Content Types
 - Navigate to the desired Stack → Settings → Variants → select the associated Variant Group → Linked Content Types.
-**Note:** Variant Groups and Variants are automatically created for you based on the Experiences and Variants you define in Personalize.**Additional Resource:** For more information, refer to [Manage Variant Groups](/docs/developers/variants/manage-variant-groups).
+**Note:** Variant Groups and Variants are automatically created for you based on the Experiences and Variants you define in Personalize.**Additional Resource:** For more information, refer to [Manage Variant Groups](../developers/variants/manage-variant-groups.md).
 - In the **Linked Content Types** field, select the content types whose entries you wish to personalize.
 - Click **Apply → Save.**
 
-**Additional Resource:** For more information, refer to [Linking Content Types.](/docs/developers/variants/manage-variant-groups#linking-content-types)
+**Additional Resource:** For more information, refer to [Linking Content Types.](../developers/variants/manage-variant-groups.md#linking-content-types)
 
 ### CMS - Create Personalized Content in Entry Variants
 - Go to **CMS → Entries → **[Your Entry with content that needs to be personalized].
@@ -107,18 +107,18 @@ Contentstack Personalize makes location-based personalization straightforward, e
 
 Once published, the mapping between Personalize Experiences and Entry Variants determines which personalized content each visitor sees in real time based on their location.
 
-**Additional Resource:** For more information, refer to [Create an Entry Variant.](/docs/content-managers/entry-variants/create-an-entry-variant)
+**Additional Resource:** For more information, refer to [Create an Entry Variant.](../content-managers/entry-variants/create-an-entry-variant.md)
 
 ### Dev – Set up Personalize Edge SDK (Retrieve active variants and Track impressions)
-- **Install SDK**Add the Personalize SDK via npm/yarn/pnpm to your site’s codebase. For frontend code, you can also use [Google Tag Manager](/docs/personalize/google-tag-manager-integration-with-personalize) or a preferred tag manager for easier impression and event tracking.
+- **Install SDK**Add the Personalize SDK via npm/yarn/pnpm to your site’s codebase. For frontend code, you can also use [Google Tag Manager](./google-tag-manager-integration-with-personalize.md) or a preferred tag manager for easier impression and event tracking.
 - **Retrieve active variants**Initialize the SDK on every new page load and get the active variants aliases for the current visitor. We recommend server-side rendered (SSR) sites place this logic at the edge using middleware.
 - Pass the active variant aliases to the Contentstack Delivery SDK to fetch corresponding entry variants.
 
-**Additional Resource:** For more information, refer to S[erver Side Rendering (SSR) with Edge Routing Technical Implementation Architecture](/docs/personalize/ssr-edge-routing-technical-implementation-architecture), [Setup Next.js Website with Personalize - Launch](/docs/personalize/setup-nextjs-website-with-personalize-launch).
-- **Track Impressions**When displaying a banner, track an impression using [triggerImpressions()](/docs/developers/sdks/personalize-edge-sdk/javascript/reference#triggerimpressions).**Note:** Tracking impressions is optional but recommended to measure which variants are viewed most frequently.
+**Additional Resource:** For more information, refer to S[erver Side Rendering (SSR) with Edge Routing Technical Implementation Architecture](./ssr-edge-routing-technical-implementation-architecture.md), [Setup Next.js Website with Personalize - Launch](./setup-nextjs-website-with-personalize-launch.md).
+- **Track Impressions**When displaying a banner, track an impression using [triggerImpressions()](../developers/create-content-types/reference.md#triggerimpressions).**Note:** Tracking impressions is optional but recommended to measure which variants are viewed most frequently.
 - **Track Events (for A/B Test)**On click, call `triggerEvent('event_name', { experienceId, variantAlias })`.
 
-**Additional Resource: **For more information, refer to [Get Started with Personalize SDK ](/docs/developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk), [Manifest API](/docs/developers/apis/personalize-edge-api#manifest), [Dynamically Track Variant Impressions.](/docs/personalize/dynamically-track-variant-impressions)
+**Additional Resource: **For more information, refer to [Get Started with Personalize SDK ](../developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk.md), [Manifest API](../../api-docs/api-detail/personalize-edge-api.md#manifest), [Dynamically Track Variant Impressions.](./dynamically-track-variant-impressions.md)
 
 ### Personalize - Activate the Experience
 - In Personalize → Experiences → Your Experience
@@ -127,7 +127,7 @@ Once published, the mapping between Personalize Experiences and Entry Variants d
 - Visit your personalized site and confirm impressions are tracked correctly.
 - Monitor Experience Analytics to measure performance and engagement.
 
-**Additional Resource:** For more information, refer to [Experience Analytics.](/docs/personalize/experience-analytics)
+**Additional Resource:** For more information, refer to [Experience Analytics.](./experience-analytics.md)
 
 ## Reference Project
 You can refer to the following project for a reference implementation: [Geolocation Inspiration GitHub repository](https://github.com/contentstack-personalize-examples/personalize-geolocation-inspiration), hosted at [Personalize-geolocation-inspiration.](https://personalize-geolocation-inspiration.contentstackapps.com/)

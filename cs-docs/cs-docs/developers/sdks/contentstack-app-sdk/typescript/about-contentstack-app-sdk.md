@@ -33,16 +33,16 @@ The SDK is designed for apps distributed through the Contentstack or managed thr
 ## Supported UI Locations
 
 The Contentstack App SDK supports the following UI locations:
-- [**Custom Field**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#customfield): Build custom fields for content types
-- [**Dashboard**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#dashboardwidget): Create widgets for the stack dashboard
-- [**Asset Sidebar**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#assetsidebarwidget): Extend asset management workflows
-- [**Sidebar**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#sidebarwidget): Add contextual tools to the entry editor
-- [**JSON RTE**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#rich-text-editor): Create plugins for the Rich Text Editor
-- [**Field Modifier**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#fieldmodifierlocation): Modify entry field behavior dynamically
-- [**App Configuration**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#appconfigwidget): Manage app-wide settings
-- [**Full Page**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#fullpage): Render full-page applications inside a stack
-- [**Global Full Page**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#globalfullpagelocation)**:** Build cross-stack apps at the organization level
-- [**Content Type Sidebar**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#contenttypesidebarwidget)**:** Add schema tools to the Content Type builder
+- [**Custom Field**](../../../create-content-types/reference.md#customfield): Build custom fields for content types
+- [**Dashboard**](../../../create-content-types/reference.md#dashboardwidget): Create widgets for the stack dashboard
+- [**Asset Sidebar**](../../../create-content-types/reference.md#assetsidebarwidget): Extend asset management workflows
+- [**Sidebar**](../../../create-content-types/reference.md#sidebarwidget): Add contextual tools to the entry editor
+- [**JSON RTE**](../../../create-content-types/reference.md#rich-text-editor): Create plugins for the Rich Text Editor
+- [**Field Modifier**](../../../create-content-types/reference.md#fieldmodifierlocation): Modify entry field behavior dynamically
+- [**App Configuration**](../../../create-content-types/reference.md#appconfigwidget): Manage app-wide settings
+- [**Full Page**](../../../create-content-types/reference.md#fullpage): Render full-page applications inside a stack
+- [**Global Full Page**](../../../create-content-types/reference.md#globalfullpagelocation)**:** Build cross-stack apps at the organization level
+- [**Content Type Sidebar**](../../../create-content-types/reference.md#contenttypesidebarwidget)**:** Add schema tools to the Content Type builder
 
 Each UI location provides access to specific context objects and APIs through the SDK.
 
@@ -65,14 +65,14 @@ Use the Contentstack App SDK when you want to:
 
 ## Next Steps
 
-- Install and initialize using the [**Get Started with Contentstack App SDK**](/docs/developers/sdks/contentstack-app-sdk/typescript/get-started-with-contentstack-app-sdk) document.
-- Refer to the [**App SDK API Reference**](/docs/developers/sdks/contentstack-app-sdk/typescript/reference) for detailed method and property documentation.
-- Refer to the [**App SDK v2.x Migration Guide**](/docs/developers/sdks/contentstack-app-sdk/typescript/contentstack-app-sdk-v2.0.0-migration-guide) if you are upgrading an existing app.
+- Install and initialize using the [**Get Started with Contentstack App SDK**](./get-started-with-contentstack-app-sdk.md) document.
+- Refer to the [**App SDK API Reference**](../../../create-content-types/reference.md) for detailed method and property documentation.
+- Refer to the [**App SDK v2.x Migration Guide**](./contentstack-app-sdk-v2.0.0-migration-guide.md) if you are upgrading an existing app.
 
 ## Common questions
 
 **How do I start using the Contentstack App SDK?**  
-Install and initialize using the [**Get Started with Contentstack App SDK**](/docs/developers/sdks/contentstack-app-sdk/typescript/get-started-with-contentstack-app-sdk) document.
+Install and initialize using the [**Get Started with Contentstack App SDK**](./get-started-with-contentstack-app-sdk.md) document.
 
 **Where can my app run inside Contentstack?**  
 The SDK supports multiple UI locations such as Custom Field, Dashboard, Asset Sidebar, Sidebar, JSON RTE, Field Modifier, App Configuration, Full Page, Global Full Page, and Content Type Sidebar.

@@ -29,7 +29,7 @@ Your password has been successfully reset. Sign in using your new credentials.
 
 ## API Reference
 
-To reset your password via API, refer to the [Reset Password](/docs/developers/apis/content-management-api#reset-password) API request.
+To reset your password via API, refer to the [Reset Password](../../../api-docs/api-detail/content-management-api.md#reset-password) API request.
 
 ## Common questions
 
@@ -43,4 +43,4 @@ Repeat the steps above to generate a new link.
 Yes. Resetting your password signs you out of all active sessions across browsers, tabs, and devices.
 
 **Can I reset my password using an API instead of the UI?**  
-Yes. Refer to the [Reset Password](/docs/developers/apis/content-management-api#reset-password) API request.
+Yes. Refer to the [Reset Password](../../../api-docs/api-detail/content-management-api.md#reset-password) API request.

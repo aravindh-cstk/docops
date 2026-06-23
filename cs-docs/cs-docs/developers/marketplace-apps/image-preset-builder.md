@@ -18,7 +18,7 @@ This page explains how to install, configure, and use the Image Preset Builder a
 
 A preset is a customized version of an image, pre-configured with specific formatting and sizing constraints. You can build customized presets for any image file to tailor your assets as per your business requirements.
 
-The Image Preset Builder app helps you to create and optimize image presets using the [Assets Sidebar Widget](/docs/developers/create-asset-sidebar-extensions/about-asset-sidebar-extensions/) within the Contentstack environment. It allows you to define parameters such as size, format, quality, compression level, background color, contrast, and other settings of the images in a preset configuration file. It ensures that all images are optimized for web performance while maintaining visual appeal. The app supports JPG, JPEG, and PNG image file formats.
+The Image Preset Builder app helps you to create and optimize image presets using the [Assets Sidebar Widget](../create-asset-sidebar-extensions/about-asset-sidebar-extensions.md) within the Contentstack environment. It allows you to define parameters such as size, format, quality, compression level, background color, contrast, and other settings of the images in a preset configuration file. It ensures that all images are optimized for web performance while maintaining visual appeal. The app supports JPG, JPEG, and PNG image file formats.
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the popup window, select the stack where you want to install the Image Preset Builder app and click the **Install** button.
 - The Image Preset Builder app is auto configured.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
-- **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click the **Save** button.
 - Click **Open Stack** to start using the Image Preset Builder application.
 
@@ -70,7 +70,7 @@ You can edit, copy, delete the image preset, and copy the image preset URL.
 
 ## Use Image Presets within your Entry
 
-Image Preset Builder allows you to use varied preset versions of assets across your entries. With the help of this app, you can add image presets to fields such as [Custom](/docs/developers/create-content-types/custom/) field and [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field.
+Image Preset Builder allows you to use varied preset versions of assets across your entries. With the help of this app, you can add image presets to fields such as [Custom](../create-content-types/custom.md) field and [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field.
 
 To use the Image Presets Builder application within an entry of your stack, follow the steps given below:
 
@@ -263,7 +263,7 @@ Access to the Contentstack Organization/ Stack as the Owner/ Admin.
 The app supports JPG, JPEG, and PNG image file formats.
 
 ### Where can I use Image Preset Picker in entries?
-You can add image presets to fields such as [Custom](/docs/developers/create-content-types/custom/) field and [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor/) field.
+You can add image presets to fields such as [Custom](../create-content-types/custom.md) field and [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field.
 
 ### Where do I get the utilities to render image presets in my project?
 Go to [image-preset-builder](https://github.com/contentstack/app-utils/tree/main/image-preset-builder) inside the [@contentstack/app-utils](https://github.com/contentstack/app-utils/) repository in GitHub.

@@ -17,7 +17,7 @@ This page explains how to use the Contentstack Migration Framework to migrate co
 
 ## AEM to Contentstack
 
-The **Contentstack Migration Framework** is designed to help users seamlessly migrate content from a legacy **Content Management System** (**CMS**) to Contentstack. The framework simplifies the migration process by providing an intuitive interface and step-by-step workflow for importing content, mapping content types, and migrating data into a [stack](/docs/developers/set-up-stack/about-stack) within Contentstack. This guide outlines the process for performing a content migration.
+The **Contentstack Migration Framework** is designed to help users seamlessly migrate content from a legacy **Content Management System** (**CMS**) to Contentstack. The framework simplifies the migration process by providing an intuitive interface and step-by-step workflow for importing content, mapping content types, and migrating data into a [stack](../set-up-stack/about-stack.md) within Contentstack. This guide outlines the process for performing a content migration.
 
 ## Tutorial Video
 
@@ -27,10 +27,10 @@ Watch the tutorial video to get a complete walkthrough of the framework.
 
 Before you begin the installation and migration process, ensure that you have the following prerequisites:
 
-- **Contentstack Account**: [Admin](/docs/developers/organization/organization-roles#organization-admin) or [Owner](/docs/developers/organization/organization-roles#organization-owner) role access
+- **Contentstack Account**: [Admin](../organization/organization-roles.md#organization-admin) or [Owner](../organization/organization-roles.md#organization-owner) role access
 - **Asset Migration**: Assets must be extracted from the DAM using the provided [script](https://github.com/contentstack-expert-services/Universal-Dynamic-Asset-Downloader). Migration will fail if assets are not extracted.
 
-**Note:** The Migration Framework must be installed and running on your system. Refer to the [Setup Guides](/docs/developers/content-migration#setup-guides) for installation instructions.
+**Note:** The Migration Framework must be installed and running on your system. Refer to the [Setup Guides](../content-migration.md#setup-guides) for installation instructions.
 
 ## Limitations
 
@@ -62,7 +62,7 @@ Follow these steps to perform the content migration for AEM:
 ### Step 4 - Select and Validate Legacy CMS Data
 
 - By default AEM will be selected as your legacy CMS.
-- Add a **2–5 character affix** for the source name. Use only letters, no numbers or special characters. Make sure the affix does not match with one of the [restricted keywords](/docs/developers/create-content-types/restricted-keywords-for-uids).**Note:** The affix will function as a prefix if the content type UID matches with restricted UIDs. The affix will function as a suffix for field UIDs. If no affix is added, `cs` is affixed by the system.
+- Add a **2–5 character affix** for the source name. Use only letters, no numbers or special characters. Make sure the affix does not match with one of the [restricted keywords](../create-content-types/restricted-keywords-for-uids.md).**Note:** The affix will function as a prefix if the content type UID matches with restricted UIDs. The affix will function as a suffix for field UIDs. If no affix is added, `cs` is affixed by the system.
 - Click **Validate File** to validate the exported content. A success message appears once validation is completed.**Note:** If validation fails, it may be caused by one or more of the following issues:**File Format Error**: Ensure the file is in the desired format.
 - **Missing Content**: Ensure the exported data contains all required content.
 - **Incomplete Files**: Verify that no files are missing or corrupted.
@@ -145,7 +145,7 @@ Happy migrating!
 ## Common questions
 
 ### Who can run an AEM to Contentstack migration?
-You need a Contentstack account with [Admin](/docs/developers/organization/organization-roles#organization-admin) or [Owner](/docs/developers/organization/organization-roles#organization-owner) role access.
+You need a Contentstack account with [Admin](../organization/organization-roles.md#organization-admin) or [Owner](../organization/organization-roles.md#organization-owner) role access.
 
 ### What happens if assets are not extracted from the DAM?
 Migration will fail if assets are not extracted.

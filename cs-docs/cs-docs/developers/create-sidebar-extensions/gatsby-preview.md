@@ -66,7 +66,7 @@ Next, you need to set up the environment variables in Gatsby Preview. This varia
 
 Gatsby Cloud will automatically try and detect environment variables that are present in your gatsby-config.js file.
 
-Now, you need to [create the corresponding environment](/docs/developers/set-up-environments/add-an-environment) (say, “Preview”) and its [specific token](/docs/developers/create-tokens) in Contentstack.
+Now, you need to [create the corresponding environment](../set-up-environments/add-an-environment.md) (say, “Preview”) and its [specific token](/docs/developers/create-tokens) in Contentstack.
 
 **Note:** When creating the environment, leave the **Base URL** part blank for now as we will add here the Preview instance URL that will be generated after configuring the environment variable in Gatsby Preview.
 
@@ -78,7 +78,7 @@ If not present in your gatsby-config.js file, provide the API Key of the stack, 
 
 After creating your “Gatsby Preview instance URL”, you need to configure your Contentstack Preview environment. To do so, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Environments****.**
 - Select the **Preview** environment, and paste the “Gatsby Preview instance URL” under **Base URL**.
 
@@ -89,7 +89,7 @@ This configures your Contentstack Preview environment. Similarly, you can create
 Now, you need to add preview webhooks in Contentstack that will notify Gatsby Preview whenever you make changes to your website. To do so, perform the steps given below:
 
 Open the **Settings** page of your Gatsby Preview instance and copy the webhook URL****
-- Navigate to Contentstack and [create a new “Gatsby Preview” webhook](/docs/developers/set-up-webhooks/create-a-webhook) in Contentstack. Under **URL to notify**, add the copied Webhook URL.
+- Navigate to Contentstack and [create a new “Gatsby Preview” webhook](../set-up-webhooks/create-a-webhook.md) in Contentstack. Under **URL to notify**, add the copied Webhook URL.
 
 You can add multiple webhooks that cater to different events, such as create, update, delete, publish, and unpublish, that you can perform on your content.
 
@@ -119,7 +119,7 @@ The support team will provide you with the source code (src file). Copy the **co
 }
 ```
 
-- **Scope**: You can choose to incorporate this Sidebar Extension in either **All Content Types** or **Specific Content Types**. Selecting the latter option displays a list of [content types](/docs/developers/create-content-types/about-content-types) from which you can select the required ones.
+- **Scope**: You can choose to incorporate this Sidebar Extension in either **All Content Types** or **Specific Content Types**. Selecting the latter option displays a list of [content types](../create-content-types/about-content-types.md) from which you can select the required ones.
 - Click on **Save**. This will create your extension.
 
 Now, let’s understand how to use this Sidebar Extension in your entries.
@@ -129,7 +129,7 @@ Now, let’s understand how to use this Sidebar Extension in your entries.
 Once you have added this Sidebar Extension, you can use it in the entries of the selected content type(s). Let’s look at the steps involved in using this widget.
 
 	Go to your stack and click on the “Entries” icon on the left navigation panel.
-- Click on the content type for which you have enabled the Sidebar Extension and click on an [entry](/docs/content-managers/working-with-entries/about-entries)
+- Click on the content type for which you have enabled the Sidebar Extension and click on an [entry](../../content-managers/author-content/about-entries.md)
 - Click the “Sidebar Extensions” icon on the right-hand side of the page to expand the sidebar.
 - Select **Gatsby Preview** from the drop-down menu.
 - The selected Sidebar Extension expands on the sidebar and you’ll see the **Open Preview **button.

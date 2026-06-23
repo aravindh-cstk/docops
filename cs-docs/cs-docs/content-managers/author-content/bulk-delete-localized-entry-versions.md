@@ -17,19 +17,19 @@ This page explains how to delete multiple localized and unlocalized versions of 
 
 ## Bulk Delete Localized Entry Versions
 
-You can delete multiple localized and unlocalized versions of an entry directly from the “Delete” modal of the entry's [master language](/docs/developers/multilingual-content/set-the-master-language) version.
+You can delete multiple localized and unlocalized versions of an entry directly from the “Delete” modal of the entry's [master language](../../developers/multilingual-content/set-the-master-language.md) version.
 
-**Note**: When you delete only selected localized versions of an [entry](/docs/content-managers/working-with-entries/about-entries), the remaining localized versions of the entry continue to exist within the stack.
+**Note**: When you delete only selected localized versions of an [entry](./about-entries.md), the remaining localized versions of the entry continue to exist within the stack.
 
 To bulk delete localized and unlocalized entries, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
 - Open the entry you want to delete.
 - In the top-right corner of the page, select the master language from the **language dropdown**. The master language is marked with an **(M)** at the end.
 - Click the **horizontal ellipses** located at the bottom of the entry editor, and click **Delete**.
 - In the **Delete Entry** modal, click **Select all languages** and then **Delete**.
 
 **Note**:
-- Deleting a master language entry moves it and all its localized versions to the [Trash](/docs/developers/manage-trash/about-trash). These can be restored within **14 days**. After that, they will be permanently deleted.
+- Deleting a master language entry moves it and all its localized versions to the [Trash](../../developers/manage-trash/about-trash.md). These can be restored within **14 days**. After that, they will be permanently deleted.
 - Localized entry versions can only be deleted through the “Delete” modal of the master language entry. They cannot be deleted directly from the “Delete” modal of the localized entries themselves.
 - When deleting entries in bulk from the entry list page, you cannot delete the corresponding localized versions of the selected entries.
 

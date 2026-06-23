@@ -48,6 +48,6 @@ Contentstack provides a read-only set of APIs that allows you to fetch a customi
 
 To get started with the GraphQL Postman collection, you need the latest version of Postman. Click on the following button to download and install our GraphQL Postman collection.
 
-Read our [GraphQL Content Delivery API](/docs/developers/apis/graphql-content-delivery-api/#postman-collection) Documentation to learn more.
+Read our [GraphQL Content Delivery API](./api-detail/graphql-content-delivery-api.md#postman-collection) Documentation to learn more.
 
 **Note**: If you do not use Postman, you can also download the [JSON files for the GraphQL Postman collection](https://github.com/contentstack/contentstack-postman-collections/blob/collections/graphql-collection.json) separately.

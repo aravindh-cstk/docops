@@ -17,24 +17,24 @@ This page explains how to dynamically track variant impressions in Contentstack 
 
 ## Dynamically Track Variant Impressions Based On Entry Variant Shown
 
-Use dynamic impression tracking with the Personalize Edge SDK’s [triggerImpression()](/docs/developers/sdks/personalize-edge-sdk/javascript/reference#personalize-triggerimpression) method to support entries with multiple experiences and variants. You can extract the applied variants from the [Content Delivery API (CDA)](/docs/developers/apis/content-delivery-api) response and programmatically trigger impressions based on the resolved [variant aliases](/docs/personalize/glossary-key-features#variant-aliases).
+Use dynamic impression tracking with the Personalize Edge SDK’s [triggerImpression()](../developers/create-content-types/reference.md#personalize-triggerimpression) method to support entries with multiple experiences and variants. You can extract the applied variants from the [Content Delivery API (CDA)](../../api-docs/api-detail/content-delivery-api.md) response and programmatically trigger impressions based on the resolved [variant aliases](./glossary-key-features.md#variant-aliases).
 
 We **recommend** this approach to minimize developer involvement when rolling out new and updated experiences. The CDA response includes a `publish_details.variants` object, which shows the resolved variant(s) for a specific entry based on active experiences and audience conditions determined by Personalize.
 
 ### This guide explains how to:
-- Retrieve the active variant data for a user from the **Personalize Edge API – **[Manifest](/docs/personalize/glossary-key-features#user-manifest) **endpoint**
+- Retrieve the active variant data for a user from the **Personalize Edge API – **[Manifest](./glossary-key-features.md#user-manifest) **endpoint**
 - Identify the applied variants dynamically from the entry response
 - Use `triggerImpressions()` to register impressions for each visible variant
 
 ### Why This Is Important
-When using **Personalize**, [experiences](/docs/personalize/about-experiences) and [variants](/docs/personalize/about-variants) are resolved dynamically at runtime based on the user’s audience membership. Because the content served can be a dynamic mix of variants, it is essential to extract the applied variants from the **CDA** response. This ensures your impression tracking reflects exactly what was shown to the user, enabling accurate measurement and analytics.
+When using **Personalize**, [experiences](./about-experiences.md) and [variants](./about-variants.md) are resolved dynamically at runtime based on the user’s audience membership. Because the content served can be a dynamic mix of variants, it is essential to extract the applied variants from the **CDA** response. This ensures your impression tracking reflects exactly what was shown to the user, enabling accurate measurement and analytics.
 
 ## Prerequisites
-- Contentstack [Personalize SDK initialized](/docs/developers/sdks/personalize-edge-sdk/javascript/reference#personalize-init) on the page
-- [Entry](/docs/developers/apis/content-delivery-api#entries) retrieved via Contentstack CDA (REST, GraphQL, or SDK)
-- [Experience(s)](/docs/personalize/about-experiences) configured in Personalize
-- At least one [variant](/docs/personalize/about-variants) created and applied on the entry
-- [JavaScript runtime](/docs/developers/sdks/content-delivery-sdk/javascript-browser) (Node/browser) (optional)
+- Contentstack [Personalize SDK initialized](../developers/create-content-types/reference.md#personalize-init) on the page
+- [Entry](../../api-docs/api-detail/content-delivery-api.md#entries) retrieved via Contentstack CDA (REST, GraphQL, or SDK)
+- [Experience(s)](./about-experiences.md) configured in Personalize
+- At least one [variant](./about-variants.md) created and applied on the entry
+- [JavaScript runtime](../developers/sdks/content-delivery-sdk/javascript-browser.md) (Node/browser) (optional)
 
 ## Steps for Execution
 - [Retrieve the active variants for a user using Personalize Edge](#retrieve-the-active-variants-for-a-user-using-personalize-edge)
@@ -43,7 +43,7 @@ When using **Personalize**, [experiences](/docs/personalize/about-experiences) a
 - [Trigger Impressions](#trigger-impressions)
 
 ## Retrieve the Active Variants for a User Using Personalize Edge
-The GET Manifest endpoint, also known as the [Manifest API](/docs/developers/apis/personalize-edge-api#get-manifest), returns the active variants for a user. When a user visits your site, Personalize evaluates all Active Experiences configured for that page and determines which variant to show for each experience.
+The GET Manifest endpoint, also known as the [Manifest API](../../api-docs/api-detail/personalize-edge-api.md#get-manifest), returns the active variants for a user. When a user visits your site, Personalize evaluates all Active Experiences configured for that page and determines which variant to show for each experience.
 
 This variant alias can then be used to request the personalized entry content from the Contentstack Content Delivery API (CDA).
 
@@ -70,10 +70,10 @@ curl -X GET 'https://personalize-edge.contentstack.com/manifest' \  -H 'X-Projec
 **Note:** Replace the request URL domain, x-project-uid header, and cs_personalize_user_uid cookie with actual values.
 
 ## Query the Entry via CDA
-Use the active variants to fetch personalized entry data via the [Contentstack CDA](/docs/developers/apis/content-delivery-api) (REST, GraphQL, or SDK). Make sure to include the publish_details field to access applied variant metadata.
+Use the active variants to fetch personalized entry data via the [Contentstack CDA](../../api-docs/api-detail/content-delivery-api.md) (REST, GraphQL, or SDK). Make sure to include the publish_details field to access applied variant metadata.
 
-**REST API:** [Entry variant API](/docs/developers/apis/content-delivery-api#entry-variants)  
-**SDK:** [Get Variants](/docs/developers/sdks/content-delivery-sdk/typescript/reference#variants)
+**REST API:** [Entry variant API](../../api-docs/api-detail/content-delivery-api.md#entry-variants)  
+**SDK:** [Get Variants](../developers/create-content-types/reference.md#variants)
 
 Each key in the variants object is a **Variant UID**. Each value includes an alias in the format cs_personalize_<experience_uid>_<variant_uid>.
 
@@ -116,10 +116,10 @@ Replace all placeholder values with the actual values from your project setup.
 - Use the CDA response only if content rendering depends on the returned entry structure.
 
 ### Additional Resources
-- [Variant aliases](/docs/personalize/glossary-key-features#variant-aliases)
-- [Personalize SDK: triggerImpression() method](/docs/developers/sdks/personalize-edge-sdk/javascript/reference#personalize-triggerimpression)
-- [Set up Next.js website with Personalize (Launch)](/docs/personalize/setup-nextjs-website-with-personalize-launch)
-- [Set up Next.js website with Personalize (Vercel)](/docs/personalize/setup-nextjs-website-with-personalize-vercel)
+- [Variant aliases](./glossary-key-features.md#variant-aliases)
+- [Personalize SDK: triggerImpression() method](../developers/create-content-types/reference.md#personalize-triggerimpression)
+- [Set up Next.js website with Personalize (Launch)](./setup-nextjs-website-with-personalize-launch.md)
+- [Set up Next.js website with Personalize (Vercel)](./setup-nextjs-website-with-personalize-vercel.md)
 
 ## Common questions
 

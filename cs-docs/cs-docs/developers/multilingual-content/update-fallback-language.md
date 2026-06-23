@@ -18,7 +18,7 @@ This page explains how to update the fallback language for an existing language 
 ## Update Fallback Language
 
 To update the fallback language of an existing language in your stack, perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), click to the “Settings” icon on the left navigation panel, and select **Languages**. You can also use the shortcut keys “alt + L” for Windows OS users, and “option + L” for Mac OS users to access languages.
+- Go to your [stack](../set-up-stack/about-stack.md), click to the “Settings” icon on the left navigation panel, and select **Languages**. You can also use the shortcut keys “alt + L” for Windows OS users, and “option + L” for Mac OS users to access languages.
 - Click on the language you wish to update.
 - In the **Edit Language** window, click on the **Select Fallback Language** dropdown and select a fallback language from the list of available languages.
 - **Save** the changes.
@@ -28,8 +28,8 @@ The entries of the set fallback language will act as the parent from which the n
 ## API Reference
 
 Here are the links to the API requests related to this action:
-- [Update fallback language](/docs/developers/apis/content-management-api#update-fallback-language)
-- [Set a fallback language](/docs/developers/apis/content-management-api#set-a-fallback-language)
+- [Update fallback language](../../../api-docs/api-detail/content-management-api.md#update-fallback-language)
+- [Set a fallback language](../../../api-docs/api-detail/content-management-api.md#set-a-fallback-language)
 
 ## Common questions
 
@@ -43,4 +43,4 @@ Go to your stack, click to the “Settings” icon on the left navigation panel,
 Yes. Use “alt + L” for Windows OS users, and “option + L” for Mac OS users to access languages.
 
 ### Is there an API for updating or setting a fallback language?
-Yes. See **API Reference**: [Update fallback language](/docs/developers/apis/content-management-api#update-fallback-language) and [Set a fallback language](/docs/developers/apis/content-management-api#set-a-fallback-language).
+Yes. See **API Reference**: [Update fallback language](../../../api-docs/api-detail/content-management-api.md#update-fallback-language) and [Set a fallback language](../../../api-docs/api-detail/content-management-api.md#set-a-fallback-language).

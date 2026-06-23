@@ -16,11 +16,11 @@ This page explains how a Management Token differs from an Authtoken, including h
 
 ## How is it different from Authtoken
 
-A [Management Token](/docs/developers/create-tokens/about-management-tokens) is a stack-level token used primarily for automation scripts, third-party app integrations, and [Single Sign On](/docs/developers/single-sign-on/about-single-sign-on-sso/) (SSO)-enabled organizations. Unlike an [Authtoken](/docs/developers/create-tokens/types-of-tokens#authentication-tokens-auth-tokens), which is a read-write, user-specific token used to make authorized [CMA requests](/docs/developers/apis/content-management-api), a management token is not linked to any individual user. This means no personal user details are attached to API requests made using a management token.
+A [Management Token](./about-management-tokens.md) is a stack-level token used primarily for automation scripts, third-party app integrations, and [Single Sign On](../single-sign-on/about-single-sign-on-sso.md) (SSO)-enabled organizations. Unlike an [Authtoken](./types-of-tokens.md#authentication-tokens-auth-tokens), which is a read-write, user-specific token used to make authorized [CMA requests](../../../api-docs/api-detail/content-management-api.md), a management token is not linked to any individual user. This means no personal user details are attached to API requests made using a management token.
 
-If someone gains access to your authtoken and knows the [Stack](/docs/developers/set-up-stack/about-stack) API key, they can make API requests that appear to originate from you. Management Tokens, however, are not tied to specific users, and therefore, role-specific permissions are not applicable. These tokens can perform all actions that authtokens can, except for a few exceptions related to Users, Workflows, and Publish Rules.
+If someone gains access to your authtoken and knows the [Stack](../set-up-stack/about-stack.md) API key, they can make API requests that appear to originate from you. Management Tokens, however, are not tied to specific users, and therefore, role-specific permissions are not applicable. These tokens can perform all actions that authtokens can, except for a few exceptions related to Users, Workflows, and Publish Rules.
 
-**Note:** Only the [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) or [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) of a stack can create Management Tokens.
+**Note:** Only the [owner](../invite-users-and-assign-roles/types-of-roles.md#owner) or [admin](../invite-users-and-assign-roles/types-of-roles.md#admin) of a stack can create Management Tokens.
 
 ## Common questions
 
@@ -34,4 +34,4 @@ No. Management Tokens are not tied to specific users, and therefore, role-specif
 Management Tokens can perform all actions that authtokens can, except for a few exceptions related to Users, Workflows, and Publish Rules.
 
 ### Who can create Management Tokens?
-Only the [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) or [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) of a stack can create Management Tokens.
+Only the [owner](../invite-users-and-assign-roles/types-of-roles.md#owner) or [admin](../invite-users-and-assign-roles/types-of-roles.md#admin) of a stack can create Management Tokens.

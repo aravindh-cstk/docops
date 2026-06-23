@@ -17,7 +17,7 @@ This page explains what the Contentstack Europe region is and what it isn’t, h
 
 ## Europe Region — What it is and What it isn't
 
-Contentstack recently announced the Europe region. Let’s learn more about this [region](/docs/developers/contentstack-regions/about-regions):
+Contentstack recently announced the Europe region. Let’s learn more about this [region](./about-regions.md):
 
 **What it is**
 - Although the European data center is installed in the European region, it's capable of serving customers across all of Europe and other continents.
@@ -29,7 +29,7 @@ Contentstack recently announced the Europe region. Let’s learn more about this
 - It is an independent data center and therefore doesn't work as the fallback or disaster recovery option for the North America region.
 - It is not a backup of the North America region and the data stored in the European region cannot be accessed by anyone from the North America region.
 - You cannot store a part of your organization's content in the European region and the other part in the North American region. If you choose the European data center as your region, all of your organization's data will reside in the European region.
-- The API endpoints for the North American region will not work for the European region. The European region has its own separate, dedicated [API endpoints](/docs/developers/contentstack-regions/api-endpoints).
+- The API endpoints for the North American region will not work for the European region. The European region has its own separate, dedicated [API endpoints](./api-endpoints.md).
 
 ## Common questions
 
@@ -43,4 +43,4 @@ No. It is an independent data center and therefore doesn't work as the fallback 
 No. You cannot store a part of your organization's content in the European region and the other part in the North American region.
 
 ### Will North American API endpoints work for the Europe region?
-No. The API endpoints for the North American region will not work for the European region. The European region has its own separate, dedicated [API endpoints](/docs/developers/contentstack-regions/api-endpoints).
+No. The API endpoints for the North American region will not work for the European region. The European region has its own separate, dedicated [API endpoints](./api-endpoints.md).

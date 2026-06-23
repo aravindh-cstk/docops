@@ -16,15 +16,15 @@ This page explains what the master language is in a Contentstack stack, when you
 
 ## Set the Master Language
 
-Master language is the primary language of your [stack](/docs/developers/set-up-stack/about-stack).
+Master language is the primary language of your [stack](../set-up-stack/about-stack.md).
 
-When you [create a stack](/docs/developers/set-up-stack/create-a-new-stack) in Contentstack, you are prompted to set a language as the master language of the stack. Later, you can add other languages for the purpose of localization.
+When you [create a stack](../set-up-stack/create-a-new-stack.md) in Contentstack, you are prompted to set a language as the master language of the stack. Later, you can add other languages for the purpose of localization.
 
 **Warning**: You cannot change the master language of a stack once it has been set.
 
 For example, a Japanese user can set the master language of the stack to “Japanese” and can publish content in Japanese language. The user can later add “English (United States)” or any other language as an additional language, and publish content in these languages, too.
 
-**Additional Resource**: To learn how you can localize an entry, refer to the [Localization](/docs/developers/multilingual-content/about-localization) guide.
+**Additional Resource**: To learn how you can localize an entry, refer to the [Localization](./about-localization.md) guide.
 
 ## Common questions
 
@@ -32,10 +32,10 @@ For example, a Japanese user can set the master language of the stack to “Japa
 No. **Warning**: You cannot change the master language of a stack once it has been set.
 
 ### When do I choose the master language?
-When you [create a stack](/docs/developers/set-up-stack/create-a-new-stack) in Contentstack, you are prompted to set a language as the master language of the stack.
+When you [create a stack](../set-up-stack/create-a-new-stack.md) in Contentstack, you are prompted to set a language as the master language of the stack.
 
 ### Can I add more languages later for localization?
 Yes. Later, you can add other languages for the purpose of localization.
 
 ### Where can I learn how to localize an entry?
-Refer to the [Localization](/docs/developers/multilingual-content/about-localization) guide.
+Refer to the [Localization](./about-localization.md) guide.

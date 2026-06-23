@@ -24,8 +24,8 @@ This step-by-step guide lets you configure and use the Early Access header in th
 
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
-- [CLI installed](/docs/developers/cli/install-the-cli/) and [configured](/docs/developers/cli/configure-regions-in-the-cli/) (version 1.12.1 and above)
-- [CLI authenticated](/docs/developers/cli/cli-authentication/)
+- [CLI installed](./install-the-cli.md) and [configured](./configure-regions-in-the-cli.md) (version 1.12.1 and above)
+- [CLI authenticated](./cli-authentication.md)
 
 ## Commands
 

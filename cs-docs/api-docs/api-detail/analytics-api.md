@@ -35,9 +35,9 @@ With the Analytics APIs, you can access detailed information such as API usage, 
 
 By exposing these metrics through APIs, Contentstack empowers you to move beyond the default dashboard and build tailored monitoring and reporting workflows. Whether you are tracking performance anomalies, optimizing resource allocation, or automating alerts, the Analytics APIs enable data-driven decision-making with real-time and historical insights.
 
-**Note**: Only the organization [Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admin](/docs/developers/organization/organization-roles#organization-admin) roles can access these endpoints.
+**Note**: Only the organization [Owner](../../cs-docs/developers/organization/organization-roles.md#organization-owner) and [Admin](../../cs-docs/developers/organization/organization-roles.md#organization-admin) roles can access these endpoints.
 
-The v2 analytics APIs fetch data asynchronously. All requests, except [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data), under this section will return a jobId value in the response. You must use this jobId to fetch the actual data using the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+The v2 analytics APIs fetch data asynchronously. All requests, except [Retrieve Data](./analytics-api.md#retrieve-data), under this section will return a jobId value in the response. You must use this jobId to fetch the actual data using the [Retrieve Data](./analytics-api.md#retrieve-data) endpoint.
 
 ### Authentication
 
@@ -45,17 +45,17 @@ Contentstack uses the authtoken or OAuth token, API key, and Organization ID to 
 
 #### How to Get Authtoken
 
-Authtokens are user-specific tokens generated when user logs in to Contentstack. To retrieve the authtoken, log in to your Contentstack account by using the "[Log in to your account](/docs/developers/apis/content-management-api/#logging-in-out)" request. This request will return the authtoken in the response body.
+Authtokens are user-specific tokens generated when user logs in to Contentstack. To retrieve the authtoken, log in to your Contentstack account by using the "[Log in to your account](./content-management-api.md#logging-in-out)" request. This request will return the authtoken in the response body.
 
 You can generate multiple authtokens by executing the "Log in to your account" request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of **20****valid tokens** that a user can use per account at a time, to execute Analytics requests. If you already have valid 20 tokens, creating a new authtoken will automatically cause the oldest authtoken to expire without warning.
 
-For SSO-enabled organizations, the "Log in to your account" request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require user authtoken will not work. Only the owner of the organization and users with permission to access the organization without SSO can use the Analytics APIs. Learn more about [REST API Usage](/docs/developers/single-sign-on/rest-api-usage).
+For SSO-enabled organizations, the "Log in to your account" request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require user authtoken will not work. Only the owner of the organization and users with permission to access the organization without SSO can use the Analytics APIs. Learn more about [REST API Usage](../../cs-docs/developers/single-sign-on/rest-api-usage.md).
 
 **Tip**: An alternate way to retrieve the authtoken is via **Inspect** element. If you are logged in through your browser, right-click and select **Inspect** or press “F12” to open developer tools, and select the **Network** tab.
 
 #### M2M OAuth Token
 
-**Machine-to-Machine** (**M2M**) apps are designed for secure server-to-server communication, eliminating the need for user intervention. These apps use the OAuth 2.0 protocol for authentication and authorization, making them highly secure and reliable for machine-to-machine interactions. Refer to our guide on [Machine-to-Machine Apps](/docs/developers/developer-hub/machine-to-machine-apps) for more information.
+**Machine-to-Machine** (**M2M**) apps are designed for secure server-to-server communication, eliminating the need for user intervention. These apps use the OAuth 2.0 protocol for authentication and authorization, making them highly secure and reliable for machine-to-machine interactions. Refer to our guide on [Machine-to-Machine Apps](../../cs-docs/developers/developer-hub/machine-to-machine-apps.md) for more information.
 
 **Note**: The M2M app is currently in Beta. Reach out to our [support](mailto:support@contentstack.com) team to enable it for your organization.
 
@@ -67,7 +67,7 @@ To retrieve the stack API key, perform the steps given below:
 2. Navigate to Settings > Stack.
 3. On the right-hand side of the page, under API Credentials, you will get the API Key of your stack.
 
-**Note**: Only the [developers](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer), [admins](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and stack [owners](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner) can view the API key.
+**Note**: Only the [developers](../../cs-docs/developers/invite-users-and-assign-roles/types-of-roles.md#developer), [admins](../../cs-docs/developers/invite-users-and-assign-roles/types-of-roles.md#admin), and stack [owners](../../cs-docs/developers/invite-users-and-assign-roles/types-of-roles.md#owner) can view the API key.
 
 #### How to Get Organization ID
 
@@ -127,7 +127,7 @@ Let’s look at the error code and their meanings.
 
 Contentstack offers you a Postman Collection that helps you try out our Analytics API. You can download this collection, connect to your Contentstack account, and try out the Analytics API with ease.
 
-Learn more about how to get started with using the [Postman Collection](/docs/developers/apis/analytics-api#postman-collection) for Contentstack Analytics API.
+Learn more about how to get started with using the [Postman Collection](./analytics-api.md#postman-collection) for Contentstack Analytics API.
 
 ## API Reference 
 
@@ -137,9 +137,9 @@ Learn more about how to get started with using the [Postman Collection](/docs/de
 
 **GET** `/analytics/v2/subscription?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
 
-The Subscription Usage request returns the total number of projects, environments, and domains under Launch within your organization till date. To get the details for CMS and Automate, you can use the [Usage Analytics](/docs/developers/apis/analytics-api#usage-analytics) request.
+The Subscription Usage request returns the total number of projects, environments, and domains under Launch within your organization till date. To get the details for CMS and Automate, you can use the [Usage Analytics](./analytics-api.md#usage-analytics) request.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](./analytics-api.md#retrieve-data) endpoint.
 
 ```
 {
@@ -203,7 +203,7 @@ This response gives a clear view of how Launch resources are utilized within the
 
 The Device Usage request helps you get a list of devices that your organization users are using to access Contentstack services.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](./analytics-api.md#retrieve-data) endpoint.
 
 ```
 {
@@ -314,7 +314,7 @@ This data helps you track and analyze device and environment usage, supporting p
 
 The Usage Analytics request gives a quick usage overview of your bandwidth and API utilization over a particular period of time.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](./analytics-api.md#retrieve-data) endpoint.
 
 ```
 {
@@ -444,7 +444,7 @@ This data helps monitor and analyze the usage patterns of API and CDN resources,
 
 The Top URLs request gets you the number of requests made from your URLs for the given services.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](./analytics-api.md#retrieve-data) endpoint.
 
 ```
 {
@@ -541,7 +541,7 @@ This data helps organizations monitor traffic, identify frequently accessed URLs
 
 The Status Code request will show the count for the number of API requests made for each HTTP status code. For example, 200, 201, 400, 404, and so on. You can use the httpStatusCode parameter to get the count for a specific status code instead of all status codes.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](./analytics-api.md#retrieve-data) endpoint.
 
 ```
 {
@@ -639,7 +639,7 @@ This information helps you monitor the frequency of specific HTTP status codes a
 
 The Cache Usage request will show the number of HIT/MISS instances for your cache. Number of HIT indicates that responses were received from the cache and MISS indicates the number of responses retrieved from the database.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](./analytics-api.md#retrieve-data) endpoint.
 
 ```
 {
@@ -743,7 +743,7 @@ This information helps analyze cache efficiency by detailing the number of HITs 
 
 The SDK Usage request gets you the number of requests that were made using the SDKs. It helps you get an overview of the SDK usage by your customers.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](./analytics-api.md#retrieve-data) endpoint.
 
 ```
 {
@@ -987,7 +987,7 @@ Some of the important variables that you need to set are as follows:
 | organization_uid  | your_organization_uid |
 | authtoken | your_authtoken |
 
-**Note:** The Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](/docs/developers/apis/analytics-api#authentication) section for more details.
+**Note:** The Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](./analytics-api.md#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 
@@ -1037,11 +1037,11 @@ If you want to prevent this action, perform the steps given below:
 
 This will allow you to access [cookies of this domain in scripts](https://learning.postman.com/docs/sending-requests/cookies/#accessing-cookies-in-scripts) programmatically.
 
-**Note:** To avoid this situation, we recommend you to use the organization UID along with the Authtoken to make valid Analytics API requests. For more information, refer to [Authentication](/docs/developers/apis/analytics-api#authentication).
+**Note:** To avoid this situation, we recommend you to use the organization UID along with the Authtoken to make valid Analytics API requests. For more information, refer to [Authentication](./analytics-api.md#authentication).
 
 ### Postman Collection Updates
 
-We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](/docs/developers/apis/analytics-api#download-latest-collection) again and you are good to go.
+We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](./analytics-api.md#download-latest-collection) again and you are good to go.
 
 ## Regions
 

@@ -16,7 +16,7 @@ This page explains scenarios where editing a Contentstack content type (or field
 
 ## Scenarios Where Editing a Content Type Is Unsafe
 
-[Editing a content type](https://www.contentstack.com/docs/developers/create-content-types/edit-a-content-type) or the [properties](https://www.contentstack.com/docs/developers/create-content-types/about-field-properties) of any [field](https://www.contentstack.com/docs/developers/create-content-types/about-fields) of the [content type](https://www.contentstack.com/docs/developers/create-content-types/about-content-types) may result in data loss or invalidate [Field visibility rules](https://www.contentstack.com/docs/developers/create-content-types/about-field-visibility-rules) if you have set any.
+[Editing a content type](./edit-a-content-type.md) or the [properties](./about-field-properties.md) of any [field](./about-fields.md) of the [content type](./about-content-types.md) may result in data loss or invalidate [Field visibility rules](./about-field-visibility-rules.md) if you have set any.
 
 Let’s look at the properties that are not safe to edit while editing a content type.
 
@@ -29,7 +29,7 @@ While you edit a content type, you might end up losing data if you do the follow
 
 ## When Field Visibility Rules Are Invalidated
 
-If you have added specific [Field visibility rules](https://www.contentstack.com/docs/developers/create-content-types/about-field-visibility-rules/) to your content type, and subsequently, you make changes to the [properties](https://www.contentstack.com/docs/developers/create-content-types/about-field-properties/) of the fields (used in the rule), the rule may become invalid in the following cases:
+If you have added specific [Field visibility rules](./about-field-visibility-rules.md) to your content type, and subsequently, you make changes to the [properties](./about-field-properties.md) of the fields (used in the rule), the rule may become invalid in the following cases:
 
 - The operand or the target field is deleted or removed
 - The operand field is marked as multiple

@@ -21,7 +21,7 @@ Contentstack enables you to create and manage multiple versions of an entry. Thi
 
 By default, entry versions are automatically assigned sequential numbers each time an entry is saved (e.g., Version 1, Version 2, and so on).
 
-When [Drafts and Auto Save](/docs/content-managers/author-content/about-drafts-and-auto-save) is enabled, Contentstack may also capture draft updates while you edit an entry. These draft changes represent in-progress work and do not create new versions until the entry is explicitly saved or published.
+When [Drafts and Auto Save](./about-drafts-and-auto-save.md) is enabled, Contentstack may also capture draft updates while you edit an entry. These draft changes represent in-progress work and do not create new versions until the entry is explicitly saved or published.
 
 ## Draft Updates vs Entry Versions
 
@@ -49,31 +49,31 @@ To make version identification easier, you can assign meaningful names to specif
 
 **Note**: Custom version names have a maximum limit of **32 characters**.
 
-Learn how to [assign names](/docs/content-managers/entry-versions/name-entry-versions) to entry versions.
+Learn how to [assign names](./name-entry-versions.md) to entry versions.
 
 ## Renaming Entry Versions
 
 If needed, you can rename an entry version. Renaming an entry version allows you to update or refine its description to better reflect its purpose or status.
 
-Learn how to [rename entry versions](/docs/content-managers/entry-versions/rename-entry-versions).
+Learn how to [rename entry versions](./rename-entry-versions.md).
 
 ## Removing Entry Version Names
 
 You can remove a name assigned to an entry version. Once removed, the version will display its default numeric identifier.
 
-Learn how to [remove entry version names](/docs/content-managers/entry-versions/remove-entry-version-names).
+Learn how to [remove entry version names](./remove-entry-version-names.md).
 
 ## Comparing Entry Versions
 
 Contentstack provides a **side-by-side comparison view** for any two entry versions. This view highlights the differences with color-coded indicators, making it easy to identify changes.
 
-Learn how to [compare entry versions](/docs/content-managers/entry-versions/compare-entry-versions).
+Learn how to [compare entry versions](./compare-entry-versions.md).
 
 ## Restoring Old Entry Versions
 
 If necessary, you can **roll back** or restore an entry to any previously saved version, ensuring you always have access to earlier content states.
 
-Learn how to [restore old entry versions](/docs/content-managers/entry-versions/restore-old-entry-version).
+Learn how to [restore old entry versions](./restore-old-entry-version.md).
 
 Contentstack’s entry versioning lets you efficiently manage content changes. By naming, renaming, removing names, comparing, restoring, and browsing via the version history panel, you maintain control and consistency across your projects.
 

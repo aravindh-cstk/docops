@@ -59,7 +59,7 @@ For example, `home.blt80654132ff521260.en-us.json_rte`
 {modular_block_field_UID}.{block_UID}.{field_UID}
 ```
 
-For a website built using [Contentstack's JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk/), use the `addEditableTags()` method to automatically generate the edit tag. The following section explains how you can set up live edit tags using `addEditableTags()`.
+For a website built using [Contentstack's JavaScript Delivery SDK](../sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk.md), use the `addEditableTags()` method to automatically generate the edit tag. The following section explains how you can set up live edit tags using `addEditableTags()`.
 
 ## Set Up Live Editing Using the addEditableTags Method
 
@@ -72,7 +72,7 @@ For a website built using [Contentstack's JavaScript Delivery SDK](/docs/develop
   const addEditableTags = Contentstack.Utils.addEditableTags
   ```
 
-  **Note**: The `addEditableTags()` method is also available in the [Contentstack JavaScript Utils SDK](/docs/developers/javascript-browser/get-started-with-javascript-utils-library/) package.
+  **Note**: The `addEditableTags()` method is also available in the [Contentstack JavaScript Utils SDK](../sdks/utils-sdk/javascript/get-started-with-javascript-utils-library.md) package.
 
 - ### Locate the Stack.ContentType() Method
 
@@ -97,7 +97,7 @@ For a website built using [Contentstack's JavaScript Delivery SDK](/docs/develop
 
 - ### Generate Edit Tags for Previewed Entry Content
 
-  After retrieving data using the Contentstack [JavaScript Delivery SDK](/docs/developers/javascript-browser/get-started-with-javascript-delivery-sdk/), pass the resultant entry to the `addEditableTags()` function to add edit tags to the previewed entry content:
+  After retrieving data using the Contentstack [JavaScript Delivery SDK](../sdks/content-delivery-sdk/javascript-browser/get-started-with-javascript-delivery-sdk.md), pass the resultant entry to the `addEditableTags()` function to add edit tags to the previewed entry content:
 
   ```
   addEditableTags(entry, content_type_uid, tagsAsObject, locale)
@@ -281,7 +281,7 @@ For a website built using [Contentstack's JavaScript Delivery SDK](/docs/develop
 
 ## Configure the Edit Button using the editButton Object
 
-The `editButton` object, in the[Live Preview Utils SDK](/docs/developers/set-up-live-preview/get-started-with-live-preview-utils-sdk/), allows you to manage and customize the **Edit** button for both the Live Preview portal and external apps.
+The `editButton` object, in the[Live Preview Utils SDK](./get-started-with-live-preview-utils-sdk.md), allows you to manage and customize the **Edit** button for both the Live Preview portal and external apps.
 
 It offers the following features:
 - Enable/disable the **Edit** button

@@ -30,7 +30,7 @@ In the **General** section, you can edit or generate common metadata fields:
 
 ## User-Defined Metadata
 
-The **User-Defined Metadata** section displays fields associated with the asset type. These fields come from your [asset modeling](/docs/assets/about-asset-modeling) setup, where admins define reusable custom fields and assign them to asset types. You can edit these fields directly when working with the asset.
+The **User-Defined Metadata** section displays fields associated with the asset type. These fields come from your [asset modeling](./about-asset-modeling.md) setup, where admins define reusable custom fields and assign them to asset types. You can edit these fields directly when working with the asset.
 
 ### Example: Product Asset with 3MF 3D Model Type
 

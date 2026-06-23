@@ -18,9 +18,9 @@ The Update asset request allows you to update the title and description of an as
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
 
 **Note: **Here are some points to keep in mind:  
-1. You can also use this request to [Generate a permanent URL](/docs/developers/apis/content-management-api#generate-permanent-asset-url)
+1. You can also use this request to [Generate a permanent URL](../../../../api-detail/content-management-api.md#generate-permanent-asset-url)
  for your asset, which remains constant irrespective of any further updates to the asset.  
-2. This call updates only the meta data of an asset. To replace an asset, try the [Replace asset](/docs/developers/apis/content-management-api#replace-asset) request under **Asset Collection**.
+2. This call updates only the meta data of an asset. To replace an asset, try the [Replace asset](../../../../api-detail/content-management-api.md#replace-asset) request under **Asset Collection**.
 
 Under 'Body', you need to pass the updated details of "Title" and "Description" is in the form of 'raw' body as follows:
 
@@ -55,7 +55,7 @@ Another way to provide a "Title" and a "Description" for the asset is to pass th
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Pass “multipart/form-data” as the value to this parameter to include form data body parameters.

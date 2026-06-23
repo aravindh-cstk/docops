@@ -29,7 +29,7 @@ Roles define the scope of actions users can perform based on their level of acce
 | Admin | Can perform all actions and manage settings, except deleting a project or repairing the Git connection. |
 | Read-Only | Can view environments, deployments, and settings but cannot create, update, or delete anything. |
 
-**Note**: Only the Launch Project Owner, [Organization Owner](/docs/developers/organization/organization-roles#organization-owner) and [Organization Admin](/docs/developers/organization/organization-roles#organization-admin) can add or remove users.
+**Note**: Only the Launch Project Owner, [Organization Owner](../organization/organization-roles.md#organization-owner) and [Organization Admin](../organization/organization-roles.md#organization-admin) can add or remove users.
 
 ## User Permissions
 

@@ -81,7 +81,7 @@ If you select **Custom Fields**, then the **Marketo Forms Keys** dropdown appear
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
 - If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.
 
-**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 
 - Click the **Save** button.
 - Click **Open Stack** to start using the Marketo Forms application.
@@ -90,16 +90,16 @@ If you select **Custom Fields**, then the **Marketo Forms Keys** dropdown appear
 
 To use the  Marketo Forms application within an entry of your stack, follow the steps given below:
 
-Go to your stack, click the [Content Models](/docs/developers/marketplace-platform-guides/content-models/about-content-models) icon in the left navigation panel, and click the **+ New Content Type** button.
+Go to your stack, click the [Content Models](../marketplace-platform-guides/content-models/about-content-models.md) icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom/) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **Marketo Forms**, and click the **Proceed** button.
 
 Change the **Display Name** of the custom field to your choice, for example, **Marketo Forms Custom Field**. Optionally, you can add **Help Text** and **Instruction Value** for your custom field. This adds the Marketo Forms app in the custom field.
 
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
-- To use the Marketo Forms app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](/docs/content-managers/author-content/create-an-entry) for the above content type, and then click **Proceed**.
+- To use the Marketo Forms app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.
 
 You can see the Marketo Forms app’s custom field on your entry page as shown below:
 

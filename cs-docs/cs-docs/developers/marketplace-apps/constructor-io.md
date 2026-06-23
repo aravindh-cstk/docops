@@ -78,8 +78,8 @@ In the left-hand side primary navigation, click the **Marketplace** icon.
 - In the pop-up window, select the stack where you want to install the Constructor app, accept the **Terms of Service**, and click the **Authorize & Install** button.
 - On the **Configuration** screen, enter the **API Token**, **API Key**, and **Index Section Name** retrieved in [step 1](#retrieve-your-credentials-from-constructor), and then click **Finish**.**Additional Resource:** If you want to save your published Contentstack entries in Constructor, then refer to the [Map and Save Entries from Contentstack to Constructor](#map-and-save-entries-from-contentstack-to-constructor) section.
 - After adding the configuration details, click the **Save** button.
-- On the **UI Locations** tab, you can see the predefined app location ([Custom Field Location](/docs/developers/developer-hub/custom-field-location)). You can use the toggle button to enable or disable it based on your requirements.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource:** For more information on UI location and webhooks, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+- On the **UI Locations** tab, you can see the predefined app location ([Custom Field Location](../developer-hub/custom-field-location.md)). You can use the toggle button to enable or disable it based on your requirements.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource:** For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Constructor app.
 
 ## Map and Save Entries from Contentstack to Constructor
@@ -137,10 +137,10 @@ To use the Constructor app within an entry of your stack, follow the steps given
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 - Create a content type by adding relevant details as displayed below:
-- In the **Content Type Builder** page, add a [Custom](/docs/developers/create-content-types/custom) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension or App**, select **Constructor** and click **Proceed**.This adds Constructor in the custom field.
 - After adding the app, click **Save** or **Save and Close** to save your changes.
-- In the left navigation panel, navigate to the **Entries** page and click **+ New Entry** to [create a new entry](/docs/content-managers/author-content/create-an-entry) for the above content type, and then click **Proceed**.You can see the Constructor custom fields on your entry page.
+- In the left navigation panel, navigate to the **Entries** page and click **+ New Entry** to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.You can see the Constructor custom fields on your entry page.
 - Under the **Collections** custom field, select the collection from your Constructor account and link them to your entry.The collection you selected is linked to your entry.
 - You can now **Save** and **Publish** your entry.
 

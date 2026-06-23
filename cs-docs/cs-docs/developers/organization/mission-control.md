@@ -28,7 +28,7 @@ To access the Mission Control section of your Organization, perform the followin
 - Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - Click the **Organization** drop-down on the header, and click the “Org Admin” icon beside the Organization name that you need to open.
 - Click the **Mission Control** tab to access the section.
-**Note: **Only Organization [Owners](/docs/developers/organization/organization-roles#organization-owner) and [Admins](/docs/developers/organization/organization-roles#organization-admin) can access this section.
+**Note: **Only Organization [Owners](./organization-roles.md#organization-owner) and [Admins](./organization-roles.md#organization-admin) can access this section.
 
 The following data metrics are available on the Mission Control dashboard:
 - [Status Code](#status-code)
@@ -103,7 +103,7 @@ Click the **Export **icon in the right top corner of the page to download a PDF 
 ## Common questions
 
 ### Who can access the Mission Control section?
-Only Organization [Owners](/docs/developers/organization/organization-roles#organization-owner) and [Admins](/docs/developers/organization/organization-roles#organization-admin) can access this section.
+Only Organization [Owners](./organization-roles.md#organization-owner) and [Admins](./organization-roles.md#organization-admin) can access this section.
 
 ### Is Mission Control available on all plans?
 The **Mission Control dashboard is a plan-based feature. If it is not part of your existing plan, get in touch with our [support team](mailto:support@contentstack.com) to enable it.

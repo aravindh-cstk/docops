@@ -60,7 +60,7 @@ This allows you to:
 - Maintain consistency with your website structure
 - Adjust URLs for specific use cases
 
-To configure URL patterns, refer to the [URL pattern configuration](/docs/developers/create-content-types/use-default-url-pattern) documentation.
+To configure URL patterns, refer to the [URL pattern configuration](./use-default-url-pattern.md) documentation.
 
 ## Common questions
 

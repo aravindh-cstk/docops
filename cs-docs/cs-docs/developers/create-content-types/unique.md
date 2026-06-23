@@ -34,7 +34,7 @@ When you mark a field as **Unique** in a content type, Contentstack enforces the
 - If you enter a value that already exists, Contentstack displays a warning and blocks the save action until the value is changed.
 
 **Note:**
-- The Unique property does not apply to fields marked as [Multiple](/docs/developers/create-content-types/multiple).
+- The Unique property does not apply to fields marked as [Multiple](./multiple.md).
 - You can save the entry even if non-mandatory fields marked as **Unique** are left empty.
 
 ## Unique Fields While Copying an Entry
@@ -61,7 +61,7 @@ The **Unique** property helps maintain data accuracy by preventing duplicate val
 You can save the entry even if non-mandatory fields marked as **Unique** are left empty.
 
 ### Does Unique apply to fields marked as Multiple?
-No. The Unique property does not apply to fields marked as [Multiple](/docs/developers/create-content-types/multiple).
+No. The Unique property does not apply to fields marked as [Multiple](./multiple.md).
 
 ### What happens to Unique fields when I copy an entry?
 Contentstack automatically appends a timestamp to fields marked as **Unique** to prevent conflicts and ensure the copied entry can be saved successfully.

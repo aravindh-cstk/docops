@@ -38,15 +38,15 @@ By carefully considering these factors, you can determine whether Segmented Expe
 * [Contentstack account](https://www.contentstack.com/login/)
 * Access to the Contentstack Organization that has Personalize enabled
 * Access to a project in Personalize
-* [Audience created](/docs/personalize/create-audience) in your Personalize project
+* [Audience created](./create-audience.md) in your Personalize project
 
 **Note:** Users with Owner and Member access to a Personalize project can create a Segmented Experience.
 
 ### Steps for Execution
 
-**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
-**Note:** To preview how your experience appears for different audiences and manage its content in real time, or to control variants visually, make sure [Live Preview](/docs/content-managers/author-content/about-live-preview) and [Visual Builder](/docs/content-managers/visual-builder/about-visual-builder) are enabled and set up on your stack.
+**Note:** To preview how your experience appears for different audiences and manage its content in real time, or to control variants visually, make sure [Live Preview](../content-managers/author-content/about-live-preview.md) and [Visual Builder](/docs/content-managers/visual-builder/about-visual-builder) are enabled and set up on your stack.
 
 To create a Segmented Experience, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
@@ -56,8 +56,8 @@ To create a Segmented Experience, log in to your [Contentstack account](https://
 4. In the **Select Experience Type** modal, click the **Segmented** experience type.![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcEAcWcIPprIMs1uBBB6Wj8TDq4DxBlkXJ1peQ-bzsrju5UzVZm2LDluSnPwYaGwJObjg2HZogqn1QdNt4yVFHrspQi1OWx-mlTmZ24-wVfgl0iyHRVCjAXB4b4QL4covcaQmTRRxPjxFaZ786mffu-lts?key=eVzPWtXYIm1CLs8J22GD7Q)
 5. On the experience draft page, in the **Overview** tab, provide a suitable **Name** and an optional **Description** for the experience and then click the **Save General Details** button.![rewards_program.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0ed4477d03756530/68cb9c115e308629eb708fc2/rewards_program.png)
 6. Click the **Configuration** tab.
-7. To create variants for your experience, click the **+ Add Variant** button. **Variants** are alternative versions ([CMS Entry Variants](/docs/content-managers/entry-variants/about-entry-variants)) of content or experiences designed to cater to specific audiences. You need to provide a combination of conditions and audiences as follows:
-   1. **Short UID:** This unique ID is automatically assigned to each variant and used in [Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript) and [Personalize AP](/docs/developers/apis/personalize-management-api)I requests.
+7. To create variants for your experience, click the **+ Add Variant** button. **Variants** are alternative versions ([CMS Entry Variants](../content-managers/entry-variants/about-entry-variants.md)) of content or experiences designed to cater to specific audiences. You need to provide a combination of conditions and audiences as follows:
+   1. **Short UID:** This unique ID is automatically assigned to each variant and used in [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md) and [Personalize AP](../../api-docs/api-detail/personalize-management-api.md)I requests.
    2. **Variant Name:** Provide a meaningful name for the variant. This name will be reflected in the Entry Editor for the Entry Variants in the CMS.
 
       **Note:** Each Segmented Experience must contain at least **1** variant. Each experience is reflected in the CMS as the Variant Group with the same experience name and you can create Entry Variants for each of these variants via the Entry Editor.
@@ -70,11 +70,11 @@ To create a Segmented Experience, log in to your [Contentstack account](https://
       **Note:** Personalize adds metadata to the Variant Group, including the Personalize project UID, experience UID, and experience short UID.
 8. If you want to activate the draft now, click the **Activate Draft** button, and click **Activate**. This will activate the experience on your site for your visitors.
 
-   **Note:** Ensure you [create Entry Variants](/docs/content-managers/entry-variants/create-an-entry-variant) in the CMS before activating an experience for a seamless personalized campaign for your visitors.
+   **Note:** Ensure you [create Entry Variants](../content-managers/entry-variants/create-an-entry-variant.md) in the CMS before activating an experience for a seamless personalized campaign for your visitors.
 
-This creates a new Segmented Experience in your Personalize project. For managing experience versions (activated/draft/paused), please refer to [this guide](/docs/personalize/experience-versioning).
+This creates a new Segmented Experience in your Personalize project. For managing experience versions (activated/draft/paused), please refer to [this guide](./experience-versioning.md).
 
-**Additional Information:** To achieve optimal personalization for your users, prioritize experiences and variants independently. Use experience priority when multiple experiences customize the same element on a digital property, and apply variant priority when audience conditions match multiple variants. For more details, please refer to [this guide](/docs/personalize/prioritize-experiences).
+**Additional Information:** To achieve optimal personalization for your users, prioritize experiences and variants independently. Use experience priority when multiple experiences customize the same element on a digital property, and apply variant priority when audience conditions match multiple variants. For more details, please refer to [this guide](./prioritize-experiences.md).
 
 After activating your Segmented Experience, the Analytics are updated within a few minutes when your visitors start accessing and interacting with your content.
 
@@ -84,7 +84,7 @@ After activating your Segmented Experience, the Analytics are updated within a f
 * The default number of Experiences allowed per project is **100**. To increase this limit, please contact our [support team](mailto:support@contact.com). By Contentstack permissions, they can be extended till **1000** per project.
 * The default number of Variants allowed per experience is **20**. To increase this limit, please contact our [support team](mailto:support@contact.com). And each variant can be mapped to a maximum of **50** **audiences**.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#experiences) to create, edit, delete, and retrieve all existing experiences.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#experiences) to create, edit, delete, and retrieve all existing experiences.
 
 ## Common questions
 ### What is covered in [Personalize] - Create a Segmented Experience?

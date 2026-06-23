@@ -31,18 +31,18 @@ The website header is a consistent presence atop every page, featuring essential
 - Access to the Contentstack Organization/Stack as the Owner/Admin or Stack Developer
 
 ## Schema for Website Header Content Model
-The Website Header Content Model contains one [Content Type](/docs/developers/create-content-types/about-content-types/) named **Header**.
+The Website Header Content Model contains one [Content Type](../../create-content-types/about-content-types.md) named **Header**.
 
 ### Schema for Header Content Type
-- **Title**: This is a [Title](/docs/developers/create-content-types/title) field that displays the title of the website header entry. This is a mandatory field and must be unique.
-- **Logo**: Logo is a [File](/docs/developers/create-content-types/file/) field that allows you to choose the website logo and add it to the entry. This is a mandatory field. Ideally, the image file for the logo should be less than 100KB in a PNG format.
-- **Navigation Menu**: This is a [Group](/docs/developers/create-content-types/group/) field which can be used to add multiple navigation items, with the following fields in it:**Label**: This [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox/) field is used to name the navigation items in the Navigation Menu.
-- **Call To Action**: This is a [Link](/docs/developers/create-content-types/link/) field where you can add the URLs to the navigation items in the Navigation Menu.
-- **Open in New Tab**: This is a [Boolean](/docs/developers/create-content-types/boolean/) field that, if enabled, lets you open the link in a new tab.
-- **Notification Bar**: This is a [Group field](/docs/developers/create-content-types/group/) with the following fields in it:**Announcement Text**: You can add any announcement to your website using this [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/) field.
-- **Show Announcement?**: You can enable or disable the announcement in this [Boolean](/docs/developers/create-content-types/boolean/) field.
+- **Title**: This is a [Title](../../create-content-types/title.md) field that displays the title of the website header entry. This is a mandatory field and must be unique.
+- **Logo**: Logo is a [File](../../create-content-types/file.md) field that allows you to choose the website logo and add it to the entry. This is a mandatory field. Ideally, the image file for the logo should be less than 100KB in a PNG format.
+- **Navigation Menu**: This is a [Group](../../create-content-types/group.md) field which can be used to add multiple navigation items, with the following fields in it:**Label**: This [Single Line Textbox](../../create-content-types/single-line-textbox.md) field is used to name the navigation items in the Navigation Menu.
+- **Call To Action**: This is a [Link](../../create-content-types/link.md) field where you can add the URLs to the navigation items in the Navigation Menu.
+- **Open in New Tab**: This is a [Boolean](../../create-content-types/boolean.md) field that, if enabled, lets you open the link in a new tab.
+- **Notification Bar**: This is a [Group field](../../create-content-types/group.md) with the following fields in it:**Announcement Text**: You can add any announcement to your website using this [JSON Rich Text Editor](../../json-rich-text-editor.md) field.
+- **Show Announcement?**: You can enable or disable the announcement in this [Boolean](../../create-content-types/boolean.md) field.
 
-**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)). Refer the [Website Header Content Modeling](/docs/developers/content-modeling/website-header/) documentation to understand how to model the "Website Header".
+**Additional Resource**: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](./how-to-import-content-model.md)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](../../create-content-types/import-prebuilt-content-models.md)). Refer the [Website Header Content Modeling](../../content-modeling/website-header.md) documentation to understand how to model the "Website Header".
 
 Here’s how your Website Header looks after you publish the entry:
 
@@ -52,10 +52,10 @@ Here’s how your Website Header looks after you publish the entry:
 A: Access to the Contentstack Organization/Stack as the Owner/Admin or Stack Developer.
 
 **Q: What content type is included in the Website Header Content Model?**  
-A: The Website Header Content Model contains one [Content Type](/docs/developers/create-content-types/about-content-types/) named **Header**.
+A: The Website Header Content Model contains one [Content Type](../../create-content-types/about-content-types.md) named **Header**.
 
 **Q: How can I import the prebuilt Website Header Content Model?**  
-A: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace-platform-guides/content-models/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/developers/create-content-types/import-prebuilt-content-models)).
+A: You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](./how-to-import-content-model.md)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](../../create-content-types/import-prebuilt-content-models.md)).
 
 **Q: Where can I learn more about modeling the "Website Header"?**  
-A: Refer the [Website Header Content Modeling](/docs/developers/content-modeling/website-header/) documentation to understand how to model the "Website Header".
+A: Refer the [Website Header Content Modeling](../../content-modeling/website-header.md) documentation to understand how to model the "Website Header".

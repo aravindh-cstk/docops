@@ -17,7 +17,7 @@ This page explains how to configure Contentstack as a provisioning app in Okta u
 
 ## Set Up SCIM Provisioning with Okta
 
-**Warning**: This set up guide is deprecated. Please visit our documentation on [Set Up SCIM Provisioning with Okta Native App](/docs/developers/scim/set-up-scim-provisioning-with-okta-native-app).
+**Warning**: This set up guide is deprecated. Please visit our documentation on [Set Up SCIM Provisioning with Okta Native App](./set-up-scim-provisioning-with-okta-native-app.md).
 
 You can configure Contentstack as a provisioning app in Okta. This allows you to use Okta to provision or deprovision users automatically with Contentstack.
 
@@ -40,7 +40,7 @@ Here’s a step-by-step guide that explains how you can do this.
 
 To allow provisioning of users in Contentstack’s organization through Okta, you need to enable SCIM in Contentstack by performing the following steps:
 
-Log in to your Contentstack account and go to the [Organization Settings](/docs/owners-and-admins/organization-settings-overview) page.
+Log in to your Contentstack account and go to the [Organization Settings](../organization/organization-settings-overview.md) page.
 - Go to the **SCIM** tab and select the **Enable SCIM** option.
 - On the resulting **Enable SCIM **modal, click **Enable**.
 
@@ -51,7 +51,7 @@ On the left navigation panel, click the "Marketplace" icon and then **Apps**. Ty
 - A **SCIM URL** and a **Secret Token** are generated on the successful installation of the app. Copy them both for future reference.
 
 ## Add the Contentstack App to Okta
-**Note**: In order to add Contentstack to the Okta application integration, you must be an administrator. To set up an app for Contentstack to use single sign-on (SSO), refer to our [Configure Contentstack App in Okta](/docs/developers/single-sign-on/set-up-sso-with-okta/#configure-contentstack-app-in-okta). If you've already created an app for Contentstack, you can skip this step.
+**Note**: In order to add Contentstack to the Okta application integration, you must be an administrator. To set up an app for Contentstack to use single sign-on (SSO), refer to our [Configure Contentstack App in Okta](../single-sign-on/set-up-sso-with-okta.md#configure-contentstack-app-in-okta). If you've already created an app for Contentstack, you can skip this step.
 
 ## Configure Provisioning in Okta
 To enable your app to use the provisioning feature, before adding or removing a user from the Contentstack organization, you need to perform the following steps:
@@ -100,7 +100,7 @@ This process sets up the SCIM Provisioning for your Contenstack account with the
 ## Common questions
 
 ### Is this guide current?
-**Warning**: This set up guide is deprecated. Please visit our documentation on [Set Up SCIM Provisioning with Okta Native App](/docs/developers/scim/set-up-scim-provisioning-with-okta-native-app).
+**Warning**: This set up guide is deprecated. Please visit our documentation on [Set Up SCIM Provisioning with Okta Native App](./set-up-scim-provisioning-with-okta-native-app.md).
 
 ### Who can enable SCIM in Contentstack?
 **Note**: Only the Owner or Admin users of an organization in Contentstack can perform this step.

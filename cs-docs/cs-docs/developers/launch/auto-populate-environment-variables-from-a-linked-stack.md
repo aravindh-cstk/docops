@@ -36,7 +36,7 @@ Follow the steps to link a stack to your project:
 
 - Click **Launch** from the dashboard.
 - Click the **+ New Project** button.
-- Select [Import from a Git Repository](/docs/launch/import-project-using-github) or [Upload a file](/docs/launch/import-project-using-file-upload) as usual from the **Create New Project** modal.
+- Select [Import from a Git Repository](./import-project-using-github.md) or [Upload a file](./import-project-using-file-upload.md) as usual from the **Create New Project** modal.
 - In the **Environment Variables** section, click the **Connect and Import Variables** button.
 - Select the **Stack** which has the Starter app installed and then select the **Delivery Token** for your stack.**Note**: On selecting a delivery token, Launch automatically selects a Stack environment available for the selected token.
 - Click the **Import Variables** button.  

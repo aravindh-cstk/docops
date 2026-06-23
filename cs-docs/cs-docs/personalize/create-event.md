@@ -28,7 +28,7 @@ Events in Contentstack Personalize A/B Test experiences let you capture and moni
 **Note: **Users with Owner and Member access to a Personalize project can create new events.
 
 ## Steps for Execution
-**Note: **For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note: **For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
 To create an event, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
@@ -43,10 +43,10 @@ This creates a new event in your Personalize project.
 - Users with Owner and Member access to a Personalize project can create new events, and edit/delete existing events.
 - The default number of Events allowed per project is **100**.
 
-**Additional Resource:** You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#events) to create, edit, delete, and retrieve all existing events.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#events) to create, edit, delete, and retrieve all existing events.
 
 ## Next Steps
-You can now [add the event to an A/B Test experience](/docs/personalize/add-event-to-ab-test-experience/) as a Metric to evaluate the variant performance for impressions and conversions.
+You can now [add the event to an A/B Test experience](./add-event-to-ab-test-experience.md) as a Metric to evaluate the variant performance for impressions and conversions.
 
 ## Common questions
 
@@ -57,7 +57,7 @@ Users with Owner and Member access to a Personalize project can create new event
 The default number of Events allowed per project is **100**.
 
 ### Can I manage events via an API instead of the UI?
-Yes. You can use the [Personalize Management API](/docs/developers/apis/personalize-management-api#events) to create, edit, delete, and retrieve all existing events.
+Yes. You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#events) to create, edit, delete, and retrieve all existing events.
 
 ### What do I do after creating an event?
-You can now [add the event to an A/B Test experience](/docs/personalize/add-event-to-ab-test-experience/) as a Metric to evaluate the variant performance for impressions and conversions.
+You can now [add the event to an A/B Test experience](./add-event-to-ab-test-experience.md) as a Metric to evaluate the variant performance for impressions and conversions.

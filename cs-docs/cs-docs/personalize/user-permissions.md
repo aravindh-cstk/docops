@@ -69,7 +69,7 @@ The following table outlines the permissions for each role across various resour
 
 ## Managing Users
 
-To manage users in a Personalize project, you must be an [Organization Owner](/docs/developers/organization/organization-roles#organization-owner) or [Organization Admin](/docs/developers/organization/organization-roles#organization-admin) or a Project Owner.
+To manage users in a Personalize project, you must be an [Organization Owner](../developers/organization/organization-roles.md#organization-owner) or [Organization Admin](../developers/organization/organization-roles.md#organization-admin) or a Project Owner.
 
 ### Invite a User to the Project
 

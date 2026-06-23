@@ -45,7 +45,7 @@ You can easily identify such pieces of content that will not change often. Those
 
 ### Use Contentstack Webhooks for Tracking Changes
 
-Contentstack [webhooks](/docs/developers/set-up-webhooks/about-webhooks) can be used to keep track of changes. You can set webhooks when any changes are made to content or code and then react as required. For example, you can create a webhook that will notify the system when the import operation completes successfully.
+Contentstack [webhooks](../set-up-webhooks/about-webhooks.md) can be used to keep track of changes. You can set webhooks when any changes are made to content or code and then react as required. For example, you can create a webhook that will notify the system when the import operation completes successfully.
 
 The app after receiving this notification, can fetch the details as desired instead of waiting for the app's API instance to check for job status periodically and then fetch the data. Webhooks can help you in such situations by notifying you as and when the job gets completed.
 
@@ -59,7 +59,7 @@ This approach can be useful in reducing the number of includes that will be invo
 
 ### Avoid Retrieving Multiple Levels in Referencing
 
-[Referencing](/docs/developers/create-content-types/reference) is a powerful Contentstack feature that allows you to create references. It helps you in categorization and to avoid rework in case of changes as you just have to make changes in the referenced content type instead of all entries where it is referred.
+[Referencing](../create-content-types/reference.md) is a powerful Contentstack feature that allows you to create references. It helps you in categorization and to avoid rework in case of changes as you just have to make changes in the referenced content type instead of all entries where it is referred.
 
  However, if they are not needed and can be a part of the parent type, we encourage you to move the field from the referenced content type up to the parent type. In this way, you can achieve optimization in making API requests and unnecessary references will not be reflected in the response.
 
@@ -69,7 +69,7 @@ The number of includes in case of referencing is one thing, but the depth of a s
 
 We make use of referenced content types and refer to the entries of these content types in the entries of other content types. These content types can have a different schema. While making a call, we have to include these content types as well. This increases the number of includes that we have to include in a call.
 
-This case can be handled efficiently by using a [Modular Blocks](/docs/developers/create-content-types/modular-blocks). They can be used with other modules to construct a complete webpage. You can create multiple blocks (let's say, B1, B2, B3, and so on with each block with a different schema) within a modular block while creating a content type.
+This case can be handled efficiently by using a [Modular Blocks](../create-content-types/modular-blocks.md). They can be used with other modules to construct a complete webpage. You can create multiple blocks (let's say, B1, B2, B3, and so on with each block with a different schema) within a modular block while creating a content type.
 
 While creating an entry in this content type, you can add data to any of the blocks (B1, B2, B3) and keep other blocks empty. And now when you make a call, you don't have to include the referenced content types in your call. This is another way of minimizing the includes in your call or queries.
 

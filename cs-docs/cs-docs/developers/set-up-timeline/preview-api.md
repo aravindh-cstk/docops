@@ -17,7 +17,7 @@ This page explains how to use Contentstack’s Preview Service API (Preview API)
 
 ## Preview API
 
-This document serves as a comprehensive guide to Contentstack's Preview API. The Preview Service API enables the retrieval of content for previewing from your Contentstack account. Both [Live Preview](/docs/content-managers/live-preview/about-live-preview/) and [Timeline](/docs/content-managers/timeline/about-timeline) utilize this service to display pertinent data.
+This document serves as a comprehensive guide to Contentstack's Preview API. The Preview Service API enables the retrieval of content for previewing from your Contentstack account. Both [Live Preview](../../content-managers/author-content/about-live-preview.md) and [Timeline](../../content-managers/timeline/about-timeline.md) utilize this service to display pertinent data.
 
 The Preview Service API supports all routes of the Content Delivery API. By switching the host from CDN to the preview hosts specified below and including the headers provided, you can access content for preview.
 
@@ -42,7 +42,7 @@ Since the Preview Service APIs are private, you must include specific HTTP heade
 
 The **API Key** is a unique key assigned to each stack. The **Preview Token** is a read-only credential that can be created alongside the Delivery Token.
 
-**Additional Resource**: Learn more about [creating preview tokens](/docs/developers/create-tokens/create-a-delivery-token).
+**Additional Resource**: Learn more about [creating preview tokens](../create-tokens/create-a-delivery-token.md).
 
 ## HTTP Headers
 

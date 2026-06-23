@@ -19,7 +19,7 @@ This page introduces the core concepts used in Contentstack Personalize and is i
 This guide introduces the core concepts used in Personalize. It provides definitions and context to help you understand how experiences, audiences, variants, attributes, and events work together to deliver personalization.
 
 ## Experiences
-An [Experience](/docs/personalize/about-experiences) is the top-level configuration where you define variants, target them to audiences, and set traffic distribution rules for A/B testing. Each experience represents a personalization setup applied to your digital property.
+An [Experience](./about-experiences.md) is the top-level configuration where you define variants, target them to audiences, and set traffic distribution rules for A/B testing. Each experience represents a personalization setup applied to your digital property.
 
 Experiences help you deliver content to specific audience segments through conditions you define. They support audience segmentation, experimentation, and targeted delivery.
 
@@ -30,7 +30,7 @@ Personalize supports two types of experiences:
 - A/B test experiences
 
 ### Segmented Experiences
-[Segmented Experiences](/docs/personalize/create-segmented-experience) enable you to deliver precisely targeted, personalized content to specific audience groups. By dynamically showcasing tailored content variations based on demographics, referral sources, behaviors, and other key attributes, you can:
+[Segmented Experiences](./create-segmented-experience.md) enable you to deliver precisely targeted, personalized content to specific audience groups. By dynamically showcasing tailored content variations based on demographics, referral sources, behaviors, and other key attributes, you can:
 - Drive higher engagement
 - Increase conversions
 - Improve overall customer satisfaction
@@ -52,10 +52,10 @@ For an experience, only one variant is deemed active at a time. If match conditi
 
 A visitor who is both a VIP and located in the UK qualifies for both variants. By prioritizing “VIP Customers” above “UK Visitors,” the user sees the VIP version.
 
-**Additional Resource:** For more information, refer to [Create a Segmented Experience](/docs/personalize/create-segmented-experience#steps-for-execution).
+**Additional Resource:** For more information, refer to [Create a Segmented Experience](./create-segmented-experience.md#steps-for-execution).
 
 ### A/B Test Experiences
-[An A/B test experience](/docs/personalize/create-ab-test-experience) is a controlled experiment that allows you to present two or more content variants of a webpage or app to different user groups simultaneously, helping you evaluate which version performs best.
+[An A/B test experience](./create-ab-test-experience.md) is a controlled experiment that allows you to present two or more content variants of a webpage or app to different user groups simultaneously, helping you evaluate which version performs best.
 
 In Contentstack Personalize, A/B Testing enables data-driven decision-making and helps you optimize content strategy by testing and comparing multiple content variations.
 
@@ -86,7 +86,7 @@ This approach allows you to optimize for conversions while the experiment is run
 
 **Note: **Multi-Armed Bandit **does not** change how A/B tests end or how winners are determined. Test duration and winner declaration follow the same rules as standard A/B Test experiences.
 
-**Additional Resource: **For more information, refer to [Create an A/B Test Experience.](/docs/personalize/create-ab-test-experience)
+**Additional Resource: **For more information, refer to [Create an A/B Test Experience.](./create-ab-test-experience.md)
 
 #### Impressions
 **Impressions** track how often personalized content is displayed to users.
@@ -109,10 +109,10 @@ In A/B Test experiences, conversions help identify which variant performs better
 ### Resolving conflicts when multiple Experiences target the same content
 When multiple experiences are active on a page, layering and prioritization of experiences ensure optimal personalization for your users as it helps reflect the whole visitor context on the content.
 - **Scenario 1:** Multiple experiences target different contents on the page.Personalize and the CMS automatically layer these experiences, optimizing each section based on the respective active variant.
-- **Scenario 2:** Multiple experiences target the same content on the page.Personalize uses the experience [prioritization](/docs/personalize/prioritize-experiences) order defined by you, so the variant from the higher-priority experience is displayed. You can adjust the order of experiences in Personalize to control which content is shown when multiple experiences are active.
+- **Scenario 2:** Multiple experiences target the same content on the page.Personalize uses the experience [prioritization](./prioritize-experiences.md) order defined by you, so the variant from the higher-priority experience is displayed. You can adjust the order of experiences in Personalize to control which content is shown when multiple experiences are active.
 
 ## Audiences
-[Audiences](/docs/personalize/about-audiences) are groups of users who share attributes, behaviors, or contextual characteristics. They determine who qualifies to see particular variants.
+[Audiences](./about-audiences.md) are groups of users who share attributes, behaviors, or contextual characteristics. They determine who qualifies to see particular variants.
 
 Personalize supports two audience types:
 - **Personalize audiences**
@@ -153,7 +153,7 @@ Personalize audiences are evaluated at the edge and are designed for first-page 
 - **Custom Attributes:** Use custom attributes defined in Personalize to tailor content on first page render. This could be useful when you don’t want to wait until syncing of the attributes are done at the edge, but rather reflect that user context on the page immediately.
 
 ## Attributes
-[**Attributes**](/docs/personalize/about-attributes) are key-value pairs that define the characteristics, behaviors, or preferences of users interacting with your website or application. They form the foundation for building audience segments that enable targeted content delivery and personalized experiences.
+[**Attributes**](./about-attributes.md) are key-value pairs that define the characteristics, behaviors, or preferences of users interacting with your website or application. They form the foundation for building audience segments that enable targeted content delivery and personalized experiences.
 
 Attributes can be applied across various use cases, including:
 - **User Attributes:** Inherent visitor traits such as demographics (age, gender, location), firmographics (company size, industry), or technographics (browser type, device).
@@ -163,7 +163,7 @@ Attributes can be applied across various use cases, including:
 By combining **preset** (contextual) and **custom attributes** (defined by the user), you can create highly detailed audience segments and serve content that feels personally relevant, driving greater engagement, higher conversions, and improved customer satisfaction.
 
 ## Events
-[**Events**](/docs/personalize/about-events) allow you to capture and track every interaction a user has with your website or application. In **Contentstack Personalize**, events play a vital role in evaluating the performance of your **A/B tests**.
+[**Events**](./about-events.md) allow you to capture and track every interaction a user has with your website or application. In **Contentstack Personalize**, events play a vital role in evaluating the performance of your **A/B tests**.
 
 By recording key user actions, such as clicks, form submissions, or video plays, as events, you can accurately assess which content variant delivers better results.
 
@@ -174,7 +174,7 @@ Contentstack Personalize supports tracking two primary types of user interaction
 These metrics together provide a clear picture of how users engage with your personalized experiences and which variations drive the most impact.
 
 ## CMS Entry Variants
-In **Contentstack CMS**, [**Variants**](/docs/personalize/about-variants) are alternative versions of content created to engage specific audience segments. Each experience you build within a Personalize project appears in the CMS as a **Variant Group** named after that experience, allowing you to create and manage individual **entry variants** directly from the Entry Editor.
+In **Contentstack CMS**, [**Variants**](./about-variants.md) are alternative versions of content created to engage specific audience segments. Each experience you build within a Personalize project appears in the CMS as a **Variant Group** named after that experience, allowing you to create and manage individual **entry variants** directly from the Entry Editor.
 
 Variant Groups and Variants are automatically created and synced for you based on the Experiences and Variants you define in Personalize, given that the Personalize Project is connected with the specific CMS Stack. Once created, you can create entry variants by making changes to the content you want to be personalized. The entry editor will display content from the base entry by default. You can enter or edit content in the fields as per the variant you want the content to be personalized for.
 

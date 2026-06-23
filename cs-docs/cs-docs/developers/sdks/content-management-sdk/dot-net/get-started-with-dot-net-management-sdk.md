@@ -43,7 +43,7 @@ This page explains how to install, authenticate, and initialize the Contentstack
 
 ## Get Started with .NET Management SDK
 
-This guide helps you get started with the Contentstack [.NET Management SDK](/docs/developers/dot-net/about-dot-net-management-sdk), which uses the Content Management APIs (CMA) to create, update, delete, and fetch content.
+This guide helps you get started with the Contentstack [.NET Management SDK](./about-dot-net-management-sdk.md), which uses the Content Management APIs (CMA) to create, update, delete, and fetch content.
 
 ## Prerequisite
 
@@ -100,7 +100,7 @@ You can authenticate with one of these methods:
 
 ### Authtoken
 
-An [authtoken](/docs/developers/create-tokens/types-of-tokens#authentication-tokens-authtokens) is a user-specific read-write token for CMA requests.
+An [authtoken](../../../create-tokens/types-of-tokens.md#authentication-tokens-authtokens) is a user-specific read-write token for CMA requests.
 
 ```csharp
 using Contentstack.Management.Core;
@@ -136,7 +136,7 @@ catch (Exception)
 
 ### Management Token
 
-[Management tokens](/docs/developers/create-tokens/about-management-tokens) are stack-level tokens not tied to a user.
+[Management tokens](../../../create-tokens/about-management-tokens.md) are stack-level tokens not tied to a user.
 
 ```csharp
 using Contentstack.Management.Core;
@@ -207,7 +207,7 @@ var client = new ContentstackClient(options);
 Stack stack = client.Stack("API_KEY", "MANAGEMENT_TOKEN", "BRANCH");
 ```
 
-For region configuration guidance across SDKs, see [Selecting Region in SDKs](/docs/developers/contentstack-regions/selecting-region-in-sdks).
+For region configuration guidance across SDKs, see [Selecting Region in SDKs](../../../contentstack-regions/selecting-region-in-sdks.md).
 
 ### Set Branch
 

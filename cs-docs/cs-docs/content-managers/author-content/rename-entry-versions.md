@@ -20,7 +20,7 @@ This page explains how to rename an existing version of an entry in Contentstack
 You can rename an existing version of an entry in Contentstack. Renaming versions can help you better organize and identify specific versions of your entries for improved content management.
 
 To rename an existing version, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon.
 - Navigate to the entry you want to modify.
 - Click the version icon in the top-right corner of the entry editor, or use the “Versions” icon in the right sidebar to open the **Version History** panel.
 - In the list of saved versions, locate the version you want to rename. Hover over it and click the “Rename” icon.

@@ -66,7 +66,7 @@ The schema of the **Select** field that contains key-value pairs will look as fo
 
   
 
-**Additional Resource:** In the “Body” section, you need to provide the updated schema of your content type with the select field schema. You can refer to the [Select field JSON schema](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#select) document to know how you can add/update schema for the Select field in your content type through API.
+**Additional Resource:** In the “Body” section, you need to provide the updated schema of your content type with the select field schema. You can refer to the [Select field JSON schema](../../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md#select) document to know how you can add/update schema for the Select field in your content type through API.
 
 ##### Create Content Type with JSON RTE
 
@@ -85,7 +85,7 @@ The schema of the **Select** field that contains key-value pairs will look as fo
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.

@@ -25,7 +25,7 @@ So, download the boilerplate code, configure it as required, and get started wit
 ## Prerequisites
 
 - [Node.js version 20 or above](https://nodejs.org/en/download/)
-- [Contentstack DataSync](/docs/developers/develop-apps-with-datasync/get-started-with-contentstack-datasync) should be up and running
+- [Contentstack DataSync](./get-started-with-contentstack-datasync.md) should be up and running
 - [Mongodb](https://www.mongodb.com/download-center) version 3.6 or above
 
 ## Set up the Server
@@ -61,7 +61,7 @@ npm install
 ```
 
 - **Edit the ****“development.js” ****file**  
-  By default, the app runs in the development [environment](/docs/developers/set-up-environments/about-environments). So go to the `config` folder, edit the `development.js` file, and specify details of your [stack](/docs/developers/set-up-stack/about-stack). Here is the sample configuration code for datasync-filesystem-sdk:
+  By default, the app runs in the development [environment](../set-up-environments/about-environments.md). So go to the `config` folder, edit the `development.js` file, and specify details of your [stack](../set-up-stack/about-stack.md). Here is the sample configuration code for datasync-filesystem-sdk:
 
 ```
 const config = {
@@ -95,7 +95,7 @@ module.exports = config
 You need to specify the path inside the `baseDir` parameter. This is the location from where your synced data will be fetched.
 
 - **Create an example web page “about”**  
-  Let's consider you are creating an 'about' web page. Import the 'about' content type and its entry from the `schemaNentries` folder to your stack. Also, import the content type and entries of header and footer to your stack.**Additional Resource**: To import data into Contentstack, refer to the [Import an Entry](/docs/content-managers/working-with-entries/import-an-entry) and [Import a Content type](/docs/developers/create-content-types/import-a-content-type) section.
+  Let's consider you are creating an 'about' web page. Import the 'about' content type and its entry from the `schemaNentries` folder to your stack. Also, import the content type and entries of header and footer to your stack.**Additional Resource**: To import data into Contentstack, refer to the [Import an Entry](../../content-managers/author-content/import-an-entry.md) and [Import a Content type](../create-content-types/import-a-content-type.md) section.
 
 **Create an “about” page**  
 Inside the `routes` folder, create an `about.js` file, and copy-paste the following code in the file:

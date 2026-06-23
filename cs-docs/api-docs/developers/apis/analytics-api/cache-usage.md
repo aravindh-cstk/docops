@@ -22,7 +22,7 @@ last_updated: 2026-06-02
 
 The Cache Usage request will show the number of HIT/MISS instances for your cache. Number of HIT indicates that responses were received from the cache and MISS indicates the number of responses retrieved from the database.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../../../api-detail/analytics-api.md#retrieve-data) endpoint.
 
 ```
 {

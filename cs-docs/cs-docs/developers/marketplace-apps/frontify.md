@@ -74,7 +74,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - With **Single Select**, you can select a single asset at a time from your media gallery.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
 
-**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](/docs/developers/marketplace-platform-guides/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
+**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 
 - Click the **Save** button.
 - Click **Open Stack** to start using the Frontify application.

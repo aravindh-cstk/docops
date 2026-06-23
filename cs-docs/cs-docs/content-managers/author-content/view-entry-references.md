@@ -22,7 +22,7 @@ The **View Entry References** feature helps you understand how entries are conne
 This helps you manage interconnected content more efficiently by identifying parent and child relationships before making updates.
 
 To view references, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
-- Navigate to your [stack](/docs/developers/set-up-stack/about-stack) and open the desired entry.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and open the desired entry.
 - Click the **Information** tab (represented by the **i** icon).
 - Scroll to the **Referenced In** section. This section lists all entries that reference the current entry. Each entry name is clickable, allowing you to open and edit the referencing entry directly.
 - To visualize relationships, click **View Reference Map**. This option is also available within applicable **Reference** fields.

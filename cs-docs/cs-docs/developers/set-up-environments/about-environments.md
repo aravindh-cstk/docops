@@ -16,13 +16,13 @@ This page explains what publishing environments are in Contentstack, how they’
 
 ## About Environments
 
-A publishing environment is a specific destination where your content (such as [entries](/docs/content-managers/author-content/about-entries) or [assets](/docs/content-managers/author-content/about-assets)) is delivered when published. Environments act as distinct channels tailored to specific publishing needs.
+A publishing environment is a specific destination where your content (such as [entries](../../content-managers/author-content/about-entries.md) or [assets](../../content-managers/author-content/about-assets.md)) is delivered when published. Environments act as distinct channels tailored to specific publishing needs.
 
 For example, you can use environments to preview content on an internal channel, such as a **staging** or **pre-production** website, accessible only to authorized users.
 
 Organizations have complete control over the **environments** they create and how they use them to align with their requirements and workflows.
 
-**Note:** Environments are [global modules](/docs/developers/branches/global-modules) available across all branches of your [stack](/docs/developers/set-up-stack/about-stack). Any environment created in the main branch is accessible in all other [branches](/docs/developers/branches/about-branches).
+**Note:** Environments are [global modules](../branches/global-modules.md) available across all branches of your [stack](../set-up-stack/about-stack.md). Any environment created in the main branch is accessible in all other [branches](../branches/about-branches.md).
 
 ## Publishing Across Multiple Environments
 
@@ -36,7 +36,7 @@ For example, if your website has **development** and **production** environments
 
 In Contentstack, you can create specialized publishing environments customized for specific channels or purposes, such as mobile apps or social media.
 
-**Note:** Contentstack's [Automate](/docs/developers/automation-hub-guides/about-automation-hub) and [Webhooks](/docs/developers/set-up-webhooks/about-webhooks) can automatically publish your content to social media platforms, simplifying content distribution.
+**Note:** Contentstack's [Automate](/docs/developers/automation-hub-guides/about-automation-hub) and [Webhooks](../set-up-webhooks/about-webhooks.md) can automatically publish your content to social media platforms, simplifying content distribution.
 
 ## Using Server for Multi-server Deployments
 
@@ -44,12 +44,12 @@ You can use Webhooks to deploy published content simultaneously across multiple 
 
 Imagine your company runs a website on several servers in different regions, like the US, Europe, and Asia. When you publish new content in an environment, webhooks instantly alert all servers. This triggers each server to fetch and deploy the content immediately, ensuring efficient and synchronized global updates.
 
-**Additional Resource: **Use our [Live Preview](/docs/content-managers/author-content/about-live-preview) feature to view your content in real time without saving or publishing it to any environment.
+**Additional Resource: **Use our [Live Preview](../../content-managers/author-content/about-live-preview.md) feature to view your content in real time without saving or publishing it to any environment.
 
 ## Common questions
 
 ### Are environments shared across branches?
-Yes. **Note:** Environments are [global modules](/docs/developers/branches/global-modules) available across all branches of your [stack](/docs/developers/set-up-stack/about-stack). Any environment created in the main branch is accessible in all other [branches](/docs/developers/branches/about-branches).
+Yes. **Note:** Environments are [global modules](../branches/global-modules.md) available across all branches of your [stack](../set-up-stack/about-stack.md). Any environment created in the main branch is accessible in all other [branches](../branches/about-branches.md).
 
 ### Does publishing to an environment automatically update my website or app?
 No. **Note:** Content published in Contentstack doesn't automatically appear on your website or app. Your website or application must have specific code to fetch this content from Contentstack.

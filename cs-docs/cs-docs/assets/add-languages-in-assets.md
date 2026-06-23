@@ -27,7 +27,7 @@ To add languages, log in to your [Contentstack account](https://www.contentstack
 - Select a **Fallback Language**.**Note**: The system uses the fallback language when localized content is unavailable.
 - Click **Add**.
 
-The system adds the language to the space and makes it available for configuration in workspaces. Refer to the [Add Languages to a Workspace](/docs/assets/add-languages-to-a-workspace) document to get started with asset localization.
+The system adds the language to the space and makes it available for configuration in workspaces. Refer to the [Add Languages to a Workspace](./add-languages-to-a-workspace.md) document to get started with asset localization.
 
 ## Common questions
 

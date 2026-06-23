@@ -16,9 +16,9 @@ This page explains how to use the legacy (extensions-based) Star Ratings prebuil
 
 ## Star Ratings
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Star Ratings as a Marketplace App. For more information on Star Ratings, please refer to the [Star Ratings App Installation Guide](/docs/developers/marketplace-apps/star-ratings).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Star Ratings as a Marketplace App. For more information on Star Ratings, please refer to the [Star Ratings App Installation Guide](../../marketplace-apps/star-ratings.md).
 
-Star Ratings [custom field](/docs/developers/create-custom-fields/about-custom-fields) [extension](/docs/developers/about-experience-extensions) allows Contentstack users to provide a star-rating system as an input field in the [content types](/docs/developers/create-content-types/about-content-types) of a [stack](/docs/developers/set-up-stack/about-stack).
+Star Ratings [custom field](../about-custom-fields.md) [extension](../../experience-extensions-overview/about-experience-extensions.md) allows Contentstack users to provide a star-rating system as an input field in the [content types](../../create-content-types/about-content-types.md) of a [stack](../../set-up-stack/about-stack.md).
 
 This step-by-step guide explains how to create a Star Ratings custom field extension for your content types:
 
@@ -46,17 +46,17 @@ After saving the custom field, let’s learn how to start using this custom fiel
 To use this custom field in your content type, perform the following steps:
 
 Click on the “Content Models” icon on the left navigation panel and click the **+ New Content Type** button.
-- [Create a content type](/docs/developers/create-content-types/create-a-content-type) by adding relevant details as displayed below:
-- On the **Content Type Builder** page, add the [Custom](/docs/developers/create-content-types/custom) field to your content type by clicking on the “Insert a field” link denoted by a **+** sign and then clicking on **Custom**.
+- [Create a content type](../../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- On the **Content Type Builder** page, add the [Custom](../../create-content-types/custom.md) field to your content type by clicking on the “Insert a field” link denoted by a **+** sign and then clicking on **Custom**.
 - Select **Star Ratings** from the **Select Extension** dropdown menu, and configure other properties of your custom field.
-**Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](/docs/developers/create-content-types/config-parameter-for-custom-fields-only) section.
+**Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.
 - After adding other fields to your content type, click on either **Save **or **Save and Close** button. This will create a content type.
-- To use this field, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see this field on your entry page as shown below:
+- To use this field, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see this field on your entry page as shown below:
 
 ## Common questions
 
 ### Is this Star Ratings documentation for the Marketplace App or the legacy extension?
-**Note**: This documentation uses the legacy approach with extensions. We have launched Star Ratings as a Marketplace App. For more information on Star Ratings, please refer to the [Star Ratings App Installation Guide](/docs/developers/marketplace-apps/star-ratings).
+**Note**: This documentation uses the legacy approach with extensions. We have launched Star Ratings as a Marketplace App. For more information on Star Ratings, please refer to the [Star Ratings App Installation Guide](../../marketplace-apps/star-ratings.md).
 
 ### What data type does the Star Ratings custom field use by default?
 By default, the data type for the input data is set as “Number.”
@@ -65,4 +65,4 @@ By default, the data type for the input data is set as “Number.”
 Select **Star Ratings** from the **Select Extension** dropdown menu, and configure other properties of your custom field.
 
 ### Can I configure instance-level settings for the Star Ratings custom field?
-You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](/docs/developers/create-content-types/config-parameter-for-custom-fields-only) section.
+You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.

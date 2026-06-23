@@ -21,13 +21,13 @@ This page explains what SCIM is and how Contentstack’s SCIM integration suppor
 
 Contentstack’s SCIM integration, allows you to manage users of your Contentstack organization via your IdP (Identity Provider) such as OneLogin. So, whenever new users are added or removed from your IdP, they are automatically added or removed from the Contentstack organization, respectively.
 
-**Note**: Only the [Organization owner](/docs/owners-and-admins/organization-roles#organization-owner) and [Organization admin(s)](/docs/owners-and-admins/organization-roles#organization-admin) have the right to use set up SCIM.
+**Note**: Only the [Organization owner](../organization/organization-roles.md#organization-owner) and [Organization admin(s)](../organization/organization-roles.md#organization-admin) have the right to use set up SCIM.
 
-Setting up SCIM requires configuring it from your Contentstack organization’s settings. Here are the detailed guides that outline how you can set up SCIM with [OneLogin](/docs/developers/scim/set-up-scim-provisioning-with-onelogin/), [Microsoft Azure AD](/docs/developers/scim/set-up-scim-provisioning-with-microsoft-azure-ad/), and [Okta](/docs/developers/scim/set-up-scim-provisioning-with-okta/).
+Setting up SCIM requires configuring it from your Contentstack organization’s settings. Here are the detailed guides that outline how you can set up SCIM with [OneLogin](./set-up-scim-provisioning-with-onelogin.md), [Microsoft Azure AD](./set-up-scim-provisioning-with-microsoft-azure-ad.md), and [Okta](./set-up-scim-provisioning-with-okta.md).
 
 **Note**: SCIM is a plan-based feature. If you cannot see these settings, please contact [Contentstack support](mailto:support@contentstack.com) to enable this feature for your organization.
 
-We also provide [SCIM APIs](/docs/developers/apis/scim-api) so you can manage user provisioning with custom IdP clients or manage provisioning programmatically.
+We also provide [SCIM APIs](../../../api-docs/api-detail/scim-api.md) so you can manage user provisioning with custom IdP clients or manage provisioning programmatically.
 
 ## Common questions
 

@@ -20,17 +20,17 @@ This page explains how to create a taxonomy in Contentstack to organize and stru
 A taxonomy defines the categorical container to organize and structure your website’s content.
 
 To create a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) where you want to create a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
+- Go to your [stack](../set-up-stack/about-stack.md) where you want to create a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Click the **New Taxonomy** button.
-- In the **Create New Taxonomy** modal that appears, add the following details:Enter the **Name** for the taxonomy. The **Unique ID** will be auto-generated and can be edited until it's saved.**Note**: Refer to the [Restricted Keywords for UIDs](/docs/developers/create-content-types/restricted-keywords-for-uids) to avoid using reserved keywords. Once saved, you cannot change the UID.
+- In the **Create New Taxonomy** modal that appears, add the following details:Enter the **Name** for the taxonomy. The **Unique ID** will be auto-generated and can be edited until it's saved.**Note**: Refer to the [Restricted Keywords for UIDs](../create-content-types/restricted-keywords-for-uids.md) to avoid using reserved keywords. Once saved, you cannot change the UID.
 - Add a **Description** for your taxonomy. This is an optional step.
 - Finally, click **Create Taxonomy**.
 
-Within a taxonomy, you can [create terms](/docs/developers/taxonomy/create-a-term) associated with the taxonomy. For instance, if your taxonomy is based on Regions, you can create terms such as USA, Australia, India, Europe, etc.
+Within a taxonomy, you can [create terms](./create-a-term.md) associated with the taxonomy. For instance, if your taxonomy is based on Regions, you can create terms such as USA, Australia, India, Europe, etc.
 
 ## API Reference
 
-To create taxonomies via the API, refer to the [Create a Taxonomy](/docs/developers/apis/content-management-api#create-a-taxonomy) API request.
+To create taxonomies via the API, refer to the [Create a Taxonomy](../../../api-docs/api-detail/content-management-api.md#create-a-taxonomy) API request.
 
 ## Common questions
 
@@ -44,4 +44,4 @@ No. The **Unique ID** can be edited until it's saved. Once saved, you cannot cha
 No. Adding a **Description** is an optional step.
 
 **What should I do if I want to create taxonomies programmatically?**  
-Refer to the [Create a Taxonomy](/docs/developers/apis/content-management-api#create-a-taxonomy) API request.
+Refer to the [Create a Taxonomy](../../../api-docs/api-detail/content-management-api.md#create-a-taxonomy) API request.

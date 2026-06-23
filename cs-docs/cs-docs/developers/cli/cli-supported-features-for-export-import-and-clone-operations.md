@@ -16,7 +16,7 @@ This page describes the CLI-supported features available when running export, im
 
 ## CLI-Supported Features for Export, Import, and Clone Operations
 
-Contentstack CLI offers support for [export](/docs/developers/cli/export-content-using-the-cli/), [import](/docs/developers/cli/import-content-using-the-cli), and [clone](/docs/developers/cli/cloning-a-stack/) operations, including Marketplace apps, module-wise imports, error handling, and Personalize project integration.  
+Contentstack CLI offers support for [export](./export-content-using-the-cli.md), [import](./import-content-using-the-cli.md), and [clone](./cloning-a-stack.md) operations, including Marketplace apps, module-wise imports, error handling, and Personalize project integration.  
 This guide outlines these features to help you manage content migration operations with flexibility and control.
 
 ## Marketplace Apps
@@ -25,8 +25,8 @@ You can export/import public and private Marketplace apps into a stack using CLI
 
 ### Prerequisites
 
-- [Logged in](/docs/developers/cli/cli-authentication#authentication) to your [Contentstack account](https://www.contentstack.com/login/)
-- [Owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner)/[Admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin) rights to export Marketplace apps
+- [Logged in](./cli-authentication.md#authentication) to your [Contentstack account](https://www.contentstack.com/login/)
+- [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner)/[Admin](../invite-users-and-assign-roles/types-of-roles.md#admin) rights to export Marketplace apps
 - Marketplace apps support enabled in the destination organization
 
 **Note:**
@@ -72,17 +72,17 @@ If an error occurs while importing a public or private app:
 
 ## Personalize and Entry Variants
 
-When working with stacks that are synced with a [Personalize](/docs/personalize/about-personalize) project, certain modules and configurations are automatically handled during export and import operations:
+When working with stacks that are synced with a [Personalize](../../personalize/about-personalize.md) project, certain modules and configurations are automatically handled during export and import operations:
 
 ### Exporting
 
 If the stack you're exporting is linked to a Personalize project, the following items will be exported:
 
 - The associated Personalize project
-- The following modules within the Personalize project:[Experiences](/docs/personalize/about-experiences/)
-- [Audience](/docs/personalize/about-audiences/)
-- [Attributes](/docs/personalize/about-attributes/)
-- [Events](/docs/personalize/about-events/)
+- The following modules within the Personalize project:[Experiences](../../personalize/about-experiences.md)
+- [Audience](../../personalize/about-audiences.md)
+- [Attributes](../../personalize/about-attributes.md)
+- [Events](../../personalize/about-events.md)
 - [Entry Variants](/docs/content-managers/entry-variants) (exported from the stack as part of entries)
 
 ### Importing
@@ -103,11 +103,11 @@ If the content you're importing is associated or synced with a Personalize proje
 
 ### Personalize and Entry Variants Limitation
 
-The `-a <alias>` flag skips Personalize modules as they require an [auth token for import](/docs/developers/cli/import-content-using-the-cli#import-content-using-auth-token) and cannot be imported using a management token.
+The `-a <alias>` flag skips Personalize modules as they require an [auth token for import](./import-content-using-the-cli.md#import-content-using-auth-token) and cannot be imported using a management token.
 
 ## Studio
 
-[Studio](/docs/studio/about-studio) is Contentstack’s visual composition builder for creating digital experiences using predefined configurations, including [components](/docs/studio/components), [layout structures](/docs/studio/layers), and [page data](/docs/studio/page-data).
+[Studio](../../studio/about-studio.md) is Contentstack’s visual composition builder for creating digital experiences using predefined configurations, including [components](../../studio/components.md), [layout structures](../../studio/layers.md), and [page data](../../studio/page-data.md).
 
 When a stack is connected to Studio, its project configuration becomes part of the Studio setup, and it must be included during migration to ensure the target stack can accurately reproduce the source project’s structure and page layouts.
 
@@ -116,7 +116,7 @@ When a stack is connected to Studio, its project configuration becomes part of t
 When exporting a stack that is connected to Studio, the CLI automatically includes the following:
 
 - Project, including its configuration files.
-- All [Compositions](/docs/studio/manage-a-composition) linked to the project.
+- All [Compositions](../../studio/manage-a-composition.md) linked to the project.
 
 These items get exported along with the standard stack modules.
 
@@ -124,8 +124,8 @@ These items get exported along with the standard stack modules.
 
 When importing content into a stack, the CLI handles Studio-related modules based on the destination stack’s setup. The behaviour varies across the following scenarios:
 
-- **Destination Stack With **[**Studio Enabled**](/docs/studio/get-started-with-studio)**:** The CLI creates a new Studio project in the destination stack using the configuration from the source stack. It then imports all compositions associated with that project into the newly created Studio project.
-- **Destination Stack Without Studio Enabled:** The Studio modules are skipped during import. This does not affect the import of other [modules](/docs/developers/cli/import-content-using-the-cli#supported-modules).**Tip:** Enable Studio in the destination stack before running the import to migrate Studio projects and compositions.
+- **Destination Stack With **[**Studio Enabled**](../../studio/get-started-with-studio.md)**:** The CLI creates a new Studio project in the destination stack using the configuration from the source stack. It then imports all compositions associated with that project into the newly created Studio project.
+- **Destination Stack Without Studio Enabled:** The Studio modules are skipped during import. This does not affect the import of other [modules](./import-content-using-the-cli.md#supported-modules).**Tip:** Enable Studio in the destination stack before running the import to migrate Studio projects and compositions.
 - **Destination Stack Already Connected to a Studio Project:** The CLI skips the Studio modules to avoid overwriting the existing connection.
 
 **Note:** Studio migration currently supports only basic authentication (username and password).

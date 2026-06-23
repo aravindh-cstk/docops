@@ -16,9 +16,9 @@ This page describes the available Contentstack Management Branches actions in Au
 
 ## Contentstack Management - Branches Actions
 
-[Branches](/docs/developers/branches/about-branches) offer isolated workspaces for safe, independent development of new features or updates. With branches you can create multiple copies of your stack content. You can perform branch-based operations using the following Contentstack Management Branches actions.
+[Branches](../developers/branches/about-branches.md) offer isolated workspaces for safe, independent development of new features or updates. With branches you can create multiple copies of your stack content. You can perform branch-based operations using the following Contentstack Management Branches actions.
 
-**Note: **You must have the [Branches](/docs/developers/branches/about-branches/) feature enabled for your stack. For more information, please reach out to our [Support Team](mailto:support@contentstack.com).
+**Note: **You must have the [Branches](../developers/branches/about-branches.md) feature enabled for your stack. For more information, please reach out to our [Support Team](mailto:support@contentstack.com).
 
 Let’s look at each of them in detail.
 
@@ -104,7 +104,7 @@ This action fetches the details of a single merge job in a stack.
 ## Common questions
 
 ### Do I need to enable anything before using these actions?
-Yes. **Note: **You must have the [Branches](/docs/developers/branches/about-branches/) feature enabled for your stack.
+Yes. **Note: **You must have the [Branches](../developers/branches/about-branches.md) feature enabled for your stack.
 
 ### What happens if I delete a branch?
 **Warning: **This deletes all the content types and assets in the selected branch.

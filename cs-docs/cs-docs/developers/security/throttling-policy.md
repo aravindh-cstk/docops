@@ -18,7 +18,7 @@ This page describes Contentstack’s throttling policy and the actions Contentst
 ## Throttling Policy
 
 In accordance with our Master Service Agreement, in the unlikely event of any threat to the security or stability of the Contentstack services caused by a customer or otherwise, Contentstack reserves the right to take the following actions in response:
-- Throttle the number of [users](/docs/developers/invite-users-and-assign-roles/about-stack-users), amount of data, access, or throughput.
+- Throttle the number of [users](../invite-users-and-assign-roles/about-stack-users.md), amount of data, access, or throughput.
 - Reduce the number of users, amount of data, access, or throughput.
 - Limit the amount of data, access, throughput, or access by Users.
 - Freeze or suspend a user account or access.

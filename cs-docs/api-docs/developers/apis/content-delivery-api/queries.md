@@ -16,7 +16,7 @@ Contentstack provides certain queries that you can use to fetch filtered results
 
 You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack.
 
-**Note**: [Branches](/docs/developers/branches) is a plan-based feature that is available only in the new Contentstack interface.
+**Note**: [Branches](../content-management-api/branches.md) is a plan-based feature that is available only in the new Contentstack interface.
 
 Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides
 
@@ -7712,7 +7712,7 @@ This query will work for entries only.
 
 When fetching an entry, the content of referred entries that are part of the parent entry is NOT included in the Response body; you only get their UIDs. To include the content of the referred entries in your response, you need to use the include[] parameter and specify the UID of the reference field as value.The API request should be as follows: https://cdn.contentstack.io/v3/content_types/product/entries?include[]={reference_field_UID. This query will work for entries only.
 
-**Example:** In the Product content type, there is a reference field called Categories, which refers entries of another content type. Let’s assume that you had created an entry for the Product content type, and the value selected in the Categories field was ‘Mobiles’. If you fetch the entry using the [Get a Single Entry](/docs/developers/apis/content-delivery-api#get-a-single-entry) API request, you would get all the details of the entry in the response, but the value against the Categories field would be UID of the referenced entry (i.e., UID of the ‘Mobiles’ entry in this case).
+**Example:** In the Product content type, there is a reference field called Categories, which refers entries of another content type. Let’s assume that you had created an entry for the Product content type, and the value selected in the Categories field was ‘Mobiles’. If you fetch the entry using the [Get a Single Entry](../../../api-detail/content-delivery-api.md#get-a-single-entry) API request, you would get all the details of the entry in the response, but the value against the Categories field would be UID of the referenced entry (i.e., UID of the ‘Mobiles’ entry in this case).
 
 In order to fetch the details of the entry used in the Categories reference field, you need to use the include[] parameter in the following manner:
 

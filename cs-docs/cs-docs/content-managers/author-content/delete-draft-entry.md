@@ -29,8 +29,8 @@ This guide explains:
 **Warning:** Discarding a draft permanently removes all unsaved changes. This action cannot be undone.
 
 To delete a draft entry, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel.
-- On the [Entry Listing](/docs/content-managers/author-content/entries-list-overview) page, review the **Version** column. Entries with draft changes display a **Draft** pill next to the version number.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel.
+- On the [Entry Listing](./entries-list-overview.md) page, review the **Version** column. Entries with draft changes display a **Draft** pill next to the version number.
 - Open the entry that contains draft changes.
 - In the entry editor, click the horizontal ellipsis.
 - Select **Discard Draft**.
@@ -63,7 +63,7 @@ No. Deleting a draft removes auto-saved/unsaved changes and restores the entry t
 No. **Warning:** Discarding a draft permanently removes all unsaved changes. This action cannot be undone.
 
 ### How can I find entries that have draft changes?
-Review the **Version** column on the [Entry Listing](/docs/content-managers/author-content/entries-list-overview) page for a **Draft** pill, or use **Advanced Search** to filter entries that contain draft changes.
+Review the **Version** column on the [Entry Listing](./entries-list-overview.md) page for a **Draft** pill, or use **Advanced Search** to filter entries that contain draft changes.
 
 ### Why might I be unable to discard a draft?
 If another user is actively editing the entry, field-level locks may restrict certain actions. Confirm that no active edits are in progress before discarding a draft.

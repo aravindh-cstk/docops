@@ -16,7 +16,7 @@ This page explains the different types of tokens Contentstack provides to author
 
 ## Types of Tokens
 
-Contentstack uses different types of tokens to authorize and authenticate API requests for accessing or managing content within a [stack](/docs/developers/set-up-stack/about-stack). Each token type has a specific purpose and serves different levels of access.
+Contentstack uses different types of tokens to authorize and authenticate API requests for accessing or managing content within a [stack](../set-up-stack/about-stack.md). Each token type has a specific purpose and serves different levels of access.
 
 This section provides a quick overview of the token types, their uses, limitations, and the roles that can create or manage them.
 
@@ -31,11 +31,11 @@ The following table provides a quick comparison of the different token types ava
 | Auth Token | Read/Write | Stack-level and specific to a user. | Both Published and Unpublished | No (the oldest one expires when the limit is reached) | Generated via login; only eligible users can retrieve |
 | Management Token | Read/Write (configurable) | Stack-level | Both Published and Unpublished (excluding some modules) | Yes (during creation) | Stack owners, Admins only |
 
-**Note:** Both [Delivery Tokens](/docs/developers/create-tokens/about-delivery-tokens) and [Management Tokens](/docs/developers/create-tokens/about-management-tokens) can be assigned to all [branches](/docs/developers/branches/about-branches) or a specific branch. Similarly, they can be assigned to all [aliases](/docs/developers/branches/about-aliases) or specific aliases. This lets you fetch or manage data from their associated branches efficiently.
+**Note:** Both [Delivery Tokens](./about-delivery-tokens.md) and [Management Tokens](./about-management-tokens.md) can be assigned to all [branches](../branches/about-branches.md) or a specific branch. Similarly, they can be assigned to all [aliases](../branches/about-aliases.md) or specific aliases. This lets you fetch or manage data from their associated branches efficiently.
 
 ## Delivery Tokens
 
-A Delivery Token is a **read-only**, **environment-specific** token used to fetch published content from a particular [environment](/docs/developers/set-up-environments/about-environments) via [Content Delivery APIs](/docs/developers/apis/content-delivery-api).
+A Delivery Token is a **read-only**, **environment-specific** token used to fetch published content from a particular [environment](../set-up-environments/about-environments.md) via [Content Delivery APIs](../../../api-docs/api-detail/content-delivery-api.md).
 
 It ensures secure access to published content from specific environments such as staging or production, without exposing draft or unpublished data.
 
@@ -45,7 +45,7 @@ It ensures secure access to published content from specific environments such as
 - Can only fetch published content (no access to drafts or unpublished data).
 - Each delivery token is scoped to a specific environment and cannot be shared across multiple environments.
 - Multiple Delivery Tokens can be created and associated with the same environment.
-- Can be created by Stack [Owners](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [Admins](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [Developers](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer).
+- Can be created by Stack [Owners](../invite-users-and-assign-roles/types-of-roles.md#owner), [Admins](../invite-users-and-assign-roles/types-of-roles.md#admin), and [Developers](../invite-users-and-assign-roles/types-of-roles.md#developer).
 
 ### Limitations
 
@@ -76,7 +76,7 @@ An Access Token is a **read-only**, **stack-level token** used to fetch both pub
 
 ## Authentication Tokens (Auth Tokens)
 
-An Authtoken is a **user-specific**, **read/write token** used to perform authorized operations via the [Content Management API](/docs/developers/apis/content-management-api). It allows users to create, read, update, or delete content in a stack based on their permissions.
+An Authtoken is a **user-specific**, **read/write token** used to perform authorized operations via the [Content Management API](../../../api-docs/api-detail/content-management-api.md). It allows users to create, read, update, or delete content in a stack based on their permissions.
 
 ### Usage Characteristics
 
@@ -85,13 +85,13 @@ An Authtoken is a **user-specific**, **read/write token** used to perform author
 
 ### Generation and Expiry
 
-- An Authtoken is generated when a user logs in using the [Log in to your account](/docs/developers/apis/content-management-api#log-in-to-your-account) API request.
+- An Authtoken is generated when a user logs in using the [Log in to your account](../../../api-docs/api-detail/content-management-api.md#log-in-to-your-account) API request.
 - The maximum number of active Authtokens a user can hold is **20**.
 - When the 21st token is generated, the oldest token is automatically expired.
 
 ### Limitations
 
-- In [SSO](/docs/developers/single-sign-on/about-single-sign-on-sso)-enabled organizations, only the owner and users with permission to access the organization without SSO can generate Authtokens.
+- In [SSO](../single-sign-on/about-single-sign-on-sso.md)-enabled organizations, only the owner and users with permission to access the organization without SSO can generate Authtokens.
 - Users logging in using an Identity Provider (IdP) such as Google or Okta cannot generate Authtokens.
 
 ### Example Use Case
@@ -108,7 +108,7 @@ This setup ensures secure automated updates without manual intervention.
 
 ## Management Tokens
 
-A [Management Token](/docs/developers/create-tokens/about-management-tokens) is a **stack-level**, **read-write** token used to perform various content management operations such as creating, reading, updating, and deleting content within your stack.
+A [Management Token](./about-management-tokens.md) is a **stack-level**, **read-write** token used to perform various content management operations such as creating, reading, updating, and deleting content within your stack.
 
 It is ideal for use in integrations, scripts, and third-party services that require authenticated access without relying on user-specific Authtokens.
 

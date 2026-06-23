@@ -16,13 +16,13 @@ This page explains how to configure Contentstack Live Preview for Gatsby-powered
 
 ## Set Up Live Preview for Gatsby-Powered Sites
 
-Gatsby is an open-source framework that combines functionality from React, [GraphQL](/docs/developers/graphql-api/about-graphql), and Webpack into a single tool for building static websites and apps. This guide explains how to configure [Live Preview](/docs/content-managers/author-content/about-live-preview) for your Gatsby-powered websites using Contentstack.
+Gatsby is an open-source framework that combines functionality from React, [GraphQL](../graphql-api/about-graphql.md), and Webpack into a single tool for building static websites and apps. This guide explains how to configure [Live Preview](../../content-managers/author-content/about-live-preview.md) for your Gatsby-powered websites using Contentstack.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to [stack settings](/docs/developers/set-up-stack/view-stack-details)
-- [Preview token](https://www.contentstack.com/docs/developers/create-tokens/about-delivery-tokens#understanding-preview-tokens)
+- Access to [stack settings](../set-up-stack/view-stack-details.md)
+- [Preview token](../create-tokens/about-delivery-tokens.md#understanding-preview-tokens)
 - Website that uses [Contentstack Delivery SDKs](/docs/developers/sdks)
 - IFrame-compatible website to avoid [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors
 
@@ -63,7 +63,7 @@ export const getCSData = new ContentstackGatsby({
 - **GCP EU:** `gcp-eu-rest-preview.contentstack.com`
 
 - ### Install and Initialize the Live Preview Utils SDK  
-  Use the [Live Preview Utils SDK](/docs/developers/set-up-live-preview/get-started-with-live-preview-utils-sdk-v3) to listen for content updates and fetch real-time preview data on the client side.
+  Use the [Live Preview Utils SDK](./get-started-with-live-preview-utils-sdk-v3.md) to listen for content updates and fetch real-time preview data on the client side.
 
 Install the Live Preview Utils SDK package via npm by running the following command:
 
@@ -175,13 +175,13 @@ export default Home;
 - If your content model supports multiple locales, make sure to pass the locale explicitly in the object passed to getCSData.get(). Omitting the locale may cause the SDK to fetch data incorrectly or fail altogether, especially if no default locale fallback is configured.
 
 - ## Host the Website  
-  To host a website, you can simply use [launch](/docs/developers/launch) or any other website hosting service.
+  To host a website, you can simply use [launch](../launch.md) or any other website hosting service.
 
 - ## Update Stack Settings  
   To set up Live Preview for the entries of your stack, perform the following steps:
 
 Navigate to **Settings** and select **Environments**.
-- [**Set the base URLs**](/docs/developers/set-up-environments/add-an-environment/) for different locales, and click **Update**.
+- [**Set the base URLs**](../set-up-environments/add-an-environment.md) for different locales, and click **Update**.
 - Select **Visual Experience** from the stack settings.
 - In the **General** tab, select the **Enable Live Preview** checkbox.
 - Set the **Default Preview Environment** and click **Save** to save the settings.**Tip:** You can also update the preview URL and environment from the preview settings available on the entry page.
@@ -190,7 +190,7 @@ Navigate to **Settings** and select **Environments**.
 - ## Live Edit Tags for Entries (recommended)  
   Live Edit tags allow editors to directly jump from the Live Preview pane to the corresponding content fields in the entry editor. Clicking the **Edit** button next to a content block automatically opens the relevant field. If the field refers to another entry, you’ll be redirected to that entry’s editor page.
 
-Edit tags contain the location where the corresponding field lies within the entry. The [Live Preview Utils SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-live-preview-utils-sdk) searches for the elements which contain the edit tags referred to as `data-cslp`.
+Edit tags contain the location where the corresponding field lies within the entry. The [Live Preview Utils SDK](../sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) searches for the elements which contain the edit tags referred to as `data-cslp`.
 
 The structure of the **edit tag** (field location in the entry) you can pass against the `data-cslp` attribute is as follows:
 
@@ -206,7 +206,7 @@ home.blt80654132ff521260.en-us.modular_blocks.block_1.media_group_uid.image_uid
 
 **Note**: If the field is nested within another complex field, such as Modular Blocks, provide the field path as follows: `{modular_block_field_UID}.{block_UID}.{field_UID}`.
 
-For a website built using Contentstack's [JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk/), you can use the `addEditableTags()` method to automatically generate the edit tag for you. The following section explains how you can set up live edit tags using `addEditableTags()`.
+For a website built using Contentstack's [JavaScript Delivery SDK](../sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk.md), you can use the `addEditableTags()` method to automatically generate the edit tag for you. The following section explains how you can set up live edit tags using `addEditableTags()`.
 
 #### Set Up Live Editing Using the addEditableTags Method
 
@@ -337,7 +337,7 @@ ContentstackLivePreview.init({
 })
 ```
 
-Here, the `clientUrlParams` key is optional and is set for the North America region. For other [regions](/docs/developers/contentstack-regions/about-regions), you can use the following configurations for `clientUrlParams`.
+Here, the `clientUrlParams` key is optional and is set for the North America region. For other [regions](../contentstack-regions/about-regions.md), you can use the following configurations for `clientUrlParams`.
 For Europe region, use the following config:
 
 ```

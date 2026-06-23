@@ -21,9 +21,9 @@ Assigning custom names to versions can help you better organize and identify spe
 
 By default, Contentstack assigns a version number to each asset (e.g., "Version 1," "Version 2," etc.) . To make versions easier to identify, you can assign custom names, such as "Initial Image for Banner" or "Do Not Edit."
 
-To assign a name to an [asset](/docs/content-managers/author-content/about-assets) version, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
+To assign a name to an [asset](./about-assets.md) version, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Assets” icon in the left navigation panel.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel.
 - Navigate to the asset you want to modify.
 - Click the **version** **dropdown **located in the top-right corner of the page.
 - From the dropdown menu, view the list of all asset versions. Click the **Rename** icon next to the asset version you want to rename.

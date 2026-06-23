@@ -29,7 +29,7 @@ When a field is marked as **Non-localizable**, you can enter data only in the **
 
 You can enable the **Non-localizable** option to restrict field editing in localized entries. The field remains editable only in the **master-language entry**, and its value automatically reflects in localized versions.
 
-To mark a field as non-localizable, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](/docs/developers/set-up-stack/about-stack/), and perform the following steps:
+To mark a field as non-localizable, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Open the **Content Type Builder** page of the content type where you want to mark a non-localizable field.
 - Hover over the field you want to mark as **Non-localizable** and click the **Settings** (gear) icon.
 - Toggle the **Non-localizable** property.
@@ -64,7 +64,7 @@ If you **delete all languages** from your stack, leaving only the **master langu
 - The **Non-localizable** tag disappears from the field in the **master-language entry**.
 - If you **re-add the deleted language**, all previously deleted entries are **restored**, including the **Non-localizable** field, which continues to function as before.
 
-**Note:** In some cases, such as when you add a new instance of a Group, Modular Block, or Global in a localized entry, **Non-localizable behavior may not apply**. The new instance is treated as a localized addition, and its fields—including those marked Non-localizable—can be edited. For more details, refer to [Managing Non-Localizable Fields](/docs/developers/create-content-types/managing-non-localizable-fields).
+**Note:** In some cases, such as when you add a new instance of a Group, Modular Block, or Global in a localized entry, **Non-localizable behavior may not apply**. The new instance is treated as a localized addition, and its fields—including those marked Non-localizable—can be edited. For more details, refer to [Managing Non-Localizable Fields](../create-content-types/managing-non-localizable-fields.md).
 
 ## Common questions
 

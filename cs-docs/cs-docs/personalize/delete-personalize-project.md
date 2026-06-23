@@ -24,7 +24,7 @@ Deleting a project in Contentstack Personalize removes all personalization confi
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to the Contentstack Organization as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin) that has Personalize enabled.
+- Access to the Contentstack Organization as the [Owner](../developers/organization/organization-roles.md#organization-owner)/[Admin](../developers/organization/organization-roles.md#organization-admin) that has Personalize enabled.
 
 ## Steps for Execution
 

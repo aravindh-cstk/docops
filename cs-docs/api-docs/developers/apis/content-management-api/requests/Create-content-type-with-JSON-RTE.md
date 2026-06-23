@@ -17,7 +17,7 @@ last_updated: 2024-03-21
 The Create content type with JSON RTE request shows you how to add a JSON RTE field while creating a content type.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-In the “Body” section, you need to provide the complete schema of the content type with the JSON RTE schema as follows. You can find more details in the [JSON schema of the JSON RTE](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#json-rich-text-editor) document.
+In the “Body” section, you need to provide the complete schema of the content type with the JSON RTE schema as follows. You can find more details in the [JSON schema of the JSON RTE](../../../../../cs-docs/developers/create-content-types/json-schema-for-creating-a-content-type.md#json-rich-text-editor) document.
 
 ```
 {
@@ -59,7 +59,7 @@ Under the reference_to parameter, mention the UIDs of the content types whose en
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a Request body.

@@ -18,15 +18,15 @@ This page explains the **Number** field used in content types, including what it
 
 The **Number **field enables users to enter numeric data, for example, phone number or ZIP code.
 
-This field possesses certain [properties](/docs/developers/create-content-types/about-field-properties) that you can change any time as per your needs. The properties that can be modified are “[Display Name](/docs/developers/create-content-types/display-name),” “[Unique ID](/docs/developers/create-content-types/unique-id),” “[Placeholder Value](/docs/developers/create-content-types/placeholder-value),” “[Instruction Value](/docs/developers/create-content-types/instruction-value),” “[Help Text](/docs/developers/create-content-types/help-text),” “Range” “[Default Value](/docs/developers/create-content-types/default-value),” “[Mandatory](/docs/developers/create-content-types/mandatory),” “[Multiple](/docs/developers/create-content-types/multiple),” and “[Non-localizable](/docs/developers/create-content-types/non-localizable).”
+This field possesses certain [properties](./about-field-properties.md) that you can change any time as per your needs. The properties that can be modified are “[Display Name](./display-name.md),” “[Unique ID](./unique-id.md),” “[Placeholder Value](./placeholder-value.md),” “[Instruction Value](./instruction-value.md),” “[Help Text](./help-text.md),” “Range” “[Default Value](./default-value.md),” “[Mandatory](./mandatory.md),” “[Multiple](./multiple.md),” and “[Non-localizable](./non-localizable.md).”
 
-After you add this field in [content type](/docs/developers/create-content-types/about-content-types), you will see it on your [entry](/docs/content-managers/working-with-entries/about-entries) page as shown in the example below. The **Customer Number** entry is the **Number** field content type.
+After you add this field in [content type](./about-content-types.md), you will see it on your [entry](../../content-managers/author-content/about-entries.md) page as shown in the example below. The **Customer Number** entry is the **Number** field content type.
 
 **Additional Resources**:
-- If you want to hide/show a field when certain conditions are met, you can use [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules).
-- To add this field to the content type using our [CMA request](/docs/developers/apis/content-management-api#create-a-content-type), refer to the [JSON payload of the Number](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#number) field.
+- If you want to hide/show a field when certain conditions are met, you can use [Field Visibility Rules](./about-field-visibility-rules.md).
+- To add this field to the content type using our [CMA request](../../../api-docs/api-detail/content-management-api.md#create-a-content-type), refer to the [JSON payload of the Number](./json-schema-for-creating-a-content-type.md#number) field.
 - You can check out our [Content Modeling](/docs/developers/how-to-guides/content-modeling) guide to learn how you can map your webpage’s layout with your Content Type.
-- Editing any current field in existing Content Type might result in data loss. To avoid such, make sure to check out the [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide.
+- Editing any current field in existing Content Type might result in data loss. To avoid such, make sure to check out the [Content Type Change Management](../content-modeling/content-type-change-management.md) guide.
 
 ## Common questions
 
@@ -34,10 +34,10 @@ After you add this field in [content type](/docs/developers/create-content-types
 Use the **Number **field to enter numeric data, for example, phone number or ZIP code.
 
 ### Which properties of the Number field can I change later?
-You can modify the field’s [properties](/docs/developers/create-content-types/about-field-properties) such as “[Display Name](/docs/developers/create-content-types/display-name),” “[Unique ID](/docs/developers/create-content-types/unique-id),” “[Placeholder Value](/docs/developers/create-content-types/placeholder-value),” “[Instruction Value](/docs/developers/create-content-types/instruction-value),” “[Help Text](/docs/developers/create-content-types/help-text),” “Range” “[Default Value](/docs/developers/create-content-types/default-value),” “[Mandatory](/docs/developers/create-content-types/mandatory),” “[Multiple](/docs/developers/create-content-types/multiple),” and “[Non-localizable](/docs/developers/create-content-types/non-localizable).”
+You can modify the field’s [properties](./about-field-properties.md) such as “[Display Name](./display-name.md),” “[Unique ID](./unique-id.md),” “[Placeholder Value](./placeholder-value.md),” “[Instruction Value](./instruction-value.md),” “[Help Text](./help-text.md),” “Range” “[Default Value](./default-value.md),” “[Mandatory](./mandatory.md),” “[Multiple](./multiple.md),” and “[Non-localizable](./non-localizable.md).”
 
 ### How do I add a Number field via API?
-To add this field to the content type using our [CMA request](/docs/developers/apis/content-management-api#create-a-content-type), refer to the [JSON payload of the Number](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#number) field.
+To add this field to the content type using our [CMA request](../../../api-docs/api-detail/content-management-api.md#create-a-content-type), refer to the [JSON payload of the Number](./json-schema-for-creating-a-content-type.md#number) field.
 
 ### Where can I learn about managing changes to content types safely?
-Editing any current field in existing Content Type might result in data loss. To avoid such, make sure to check out the [Content Type Change Management](/docs/developers/how-to-guides/content-type-change-management) guide.
+Editing any current field in existing Content Type might result in data loss. To avoid such, make sure to check out the [Content Type Change Management](../content-modeling/content-type-change-management.md) guide.

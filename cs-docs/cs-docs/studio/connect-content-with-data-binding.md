@@ -156,7 +156,7 @@ Data binding in Studio makes composable pages dynamic, scalable, and efficient. 
 
 Design-side bindings further enhance flexibility, allowing both developers and designers to manage dynamic layouts visually.
 
-For next steps, refer to the [Import and Manage New Designs](/docs/studio/import-and-manage-new-designs) guide to continue optimizing Studio configurations and design consistency.
+For next steps, refer to the [Import and Manage New Designs](./import-and-manage-new-designs.md) guide to continue optimizing Studio configurations and design consistency.
 
 ## Common questions
 

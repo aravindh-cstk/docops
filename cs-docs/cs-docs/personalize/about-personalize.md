@@ -22,7 +22,7 @@ Contentstack Personalize is an edge-optimized personalization engine designed to
 
 With Personalize, you can create and manage audiences, define audience attributes, and develop personalized experiences within your project. You can then link these experiences to your Content Types in Contentstack through Variants, allowing you to create content variations for dynamically delivering personalized content to visitors in real-time based on demographics, behavior, and preferences.
 
-You can also [import](/docs/developers/cli/import-content-using-the-cli#support-for-variants) and [export](/docs/developers/cli/export-content-using-the-cli#support-for-variants) data for the Personalize modules (Experiences, Audiences, Attributes, and Events) linked to a stack containing your Variants via the CLI.
+You can also [import](../developers/cli/import-content-using-the-cli.md#support-for-variants) and [export](../developers/cli/export-content-using-the-cli.md#support-for-variants) data for the Personalize modules (Experiences, Audiences, Attributes, and Events) linked to a stack containing your Variants via the CLI.
 
 **Note**: To enable Personalize for your organization, reach out to our [support](mailto:support@contentstack.com) team.
 
@@ -43,7 +43,7 @@ To enable Personalize for your organization, reach out to the [support](mailto:s
 In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 
 ### Can I import and export Personalize data?
-You can [import](/docs/developers/cli/import-content-using-the-cli#support-for-variants) and [export](/docs/developers/cli/export-content-using-the-cli#support-for-variants) data for the Personalize modules (Experiences, Audiences, Attributes, and Events) linked to a stack containing your Variants via the CLI.
+You can [import](../developers/cli/import-content-using-the-cli.md#support-for-variants) and [export](../developers/cli/export-content-using-the-cli.md#support-for-variants) data for the Personalize modules (Experiences, Audiences, Attributes, and Events) linked to a stack containing your Variants via the CLI.
 
 ### How do Personalize experiences connect to Contentstack content?
 You can link experiences to your Content Types in Contentstack through Variants, allowing you to create content variations for dynamically delivering personalized content to visitors in real-time based on demographics, behavior, and preferences.

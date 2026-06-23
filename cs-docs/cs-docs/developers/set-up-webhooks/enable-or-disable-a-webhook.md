@@ -16,9 +16,9 @@ This page explains how to enable or disable a webhook in Contentstack. It is int
 
 ## Enable or Disable a Webhook
 
-Contentstack allows you to enable and disable a [webhook](/docs/developers/set-up-webhooks/about-webhooks) as per your requirements.
+Contentstack allows you to enable and disable a [webhook](./about-webhooks.md) as per your requirements.
 
-To enable or disable a webhook, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](/docs/developers/set-up-stack/about-stack) and perform the following steps:
+To enable or disable a webhook, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md) and perform the following steps:
 - Click the “Settings” icon on the left navigation panel, and select **Webhooks**. This will display a list of your existing webhooks. You can also use the shortcut keys “alt + W” for Windows OS users, and “option + W” for Mac OS users to access webhooks.
 - Click the vertical ellipses in the **Actions** column for the webhook you want to enable/disable, then select the **Enable**/**Disable** option.
 - Alternatively, to enable or disable the webhook via the webhook page, use the **Enable Webhook** toggle.
@@ -27,8 +27,8 @@ To enable or disable a webhook, log in to your [Contentstack account](https://ww
 ## API Reference
 
 Here are the links to the API requests related to this action:
-- [Create a webhook](/docs/developers/apis/content-management-api#create-a-webhook)
-- [Update a webhook](/docs/developers/apis/content-management-api#update-webhook)
+- [Create a webhook](../../../api-docs/api-detail/content-management-api.md#create-a-webhook)
+- [Update a webhook](../../../api-docs/api-detail/content-management-api.md#update-webhook)
 
 ## Common questions
 
@@ -42,4 +42,4 @@ Click the vertical ellipses in the **Actions** column for the webhook you want t
 Yes, use the **Enable Webhook** toggle.
 
 **Which API endpoints are related to creating or updating webhooks?**  
-See: [Create a webhook](/docs/developers/apis/content-management-api#create-a-webhook) and [Update a webhook](/docs/developers/apis/content-management-api#update-webhook).
+See: [Create a webhook](../../../api-docs/api-detail/content-management-api.md#create-a-webhook) and [Update a webhook](../../../api-docs/api-detail/content-management-api.md#update-webhook).

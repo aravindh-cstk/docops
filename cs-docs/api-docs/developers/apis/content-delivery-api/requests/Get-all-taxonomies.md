@@ -31,7 +31,7 @@ The Get all taxonomies request retrieves all published taxonomies for the given 
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](../../../../api-detail/content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 ## Sample Response

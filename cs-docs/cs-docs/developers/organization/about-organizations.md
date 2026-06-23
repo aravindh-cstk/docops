@@ -17,15 +17,15 @@ This page explains what Organizations are in Contentstack, how they fit into the
 
 ## About Organizations
 
-Organizations form the highest tier in Contentstack's entity hierarchy. [Users](/docs/developers/invite-users-and-assign-roles/about-stack-users), [stacks](/docs/developers/set-up-stack/about-stack), and all associated resources reside within an Organization. This centralized structure allows management of users and stacks through a single administrative panel.
+Organizations form the highest tier in Contentstack's entity hierarchy. [Users](../invite-users-and-assign-roles/about-stack-users.md), [stacks](../set-up-stack/about-stack.md), and all associated resources reside within an Organization. This centralized structure allows management of users and stacks through a single administrative panel.
 
-The Organization feature is primarily for administrators ([Owner](/docs/developers/organization/organization-roles#organization-owner) and [Admins](/docs/developers/organization/organization-roles#organization-admin)), allowing them to manage roles and permissions for the users and stacks of the account.
+The Organization feature is primarily for administrators ([Owner](./organization-roles.md#organization-owner) and [Admins](./organization-roles.md#organization-admin)), allowing them to manage roles and permissions for the users and stacks of the account.
 
 Organizations serve two main purposes:
 - Simplify the process of managing stacks and permissions for a group of users or a company
 - View consolidated subscription plan and usage information
 
-If you have required rights, you can access the [Organization Settings](/docs/developers/organization/organization-settings-overview) to learn about Organization, users associated with it, and more.
+If you have required rights, you can access the [Organization Settings](./organization-settings-overview.md) to learn about Organization, users associated with it, and more.
 
 ## Common questions
 

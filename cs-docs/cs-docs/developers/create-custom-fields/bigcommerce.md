@@ -16,9 +16,9 @@ This page explains how to create and configure a legacy BigCommerce custom field
 
 ## BigCommerce
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched BigCommerce as a Marketplace App and Automate Connector. For more information on BigCommerce, please refer to the [BigCommerce App Installation Guide](/docs/developers/marketplace-apps/bigcommerce) for Marketplace and [BigCommerce Connector](/docs/developers/automation-hub-connectors/bigcommerce/) documentation for Automate.
+**Note**: This documentation uses the legacy approach with extensions. We have launched BigCommerce as a Marketplace App and Automate Connector. For more information on BigCommerce, please refer to the [BigCommerce App Installation Guide](../marketplace-apps/bigcommerce.md) for Marketplace and [BigCommerce Connector](/docs/developers/automation-hub-connectors/bigcommerce/) documentation for Automate.
 
-The BigCommerce extension lets you search and fetch the products of your BigCommerce store and display them in your [entry](/docs/content-managers/working-with-entries/about-entries) page via a [custom field](/docs/developers/create-custom-fields/about-custom-fields). Thus, while creating [entries](/docs/content-managers/working-with-entries/about-entries) for this content type, you can select a single/ multiple products or categories of your store as the input value for that field.
+The BigCommerce extension lets you search and fetch the products of your BigCommerce store and display them in your [entry](../../content-managers/author-content/about-entries.md) page via a [custom field](./about-custom-fields.md). Thus, while creating [entries](../../content-managers/author-content/about-entries.md) for this content type, you can select a single/ multiple products or categories of your store as the input value for that field.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ The BigCommerce extension lets you search and fetch the products of your BigComm
 - Access to AWS environment
 - [Working knowledge of AWS lambda and AWS API Gateways](https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html)
 
-This step-by-step guide explains how to create a **BigCommerce** custom field extension for your [content types](/docs/developers/create-content-types/about-content-types) in Contentstack.
+This step-by-step guide explains how to create a **BigCommerce** custom field extension for your [content types](../create-content-types/about-content-types.md) in Contentstack.
 
 ## Steps for Execution
 
@@ -71,20 +71,20 @@ Log in to your [AWS Management Console](https://signin.aws.amazon.com/signin?red
 
 ## Add the “BigCommerce” Custom Field Extension to your Stack
 
-To add this extension to your stack, log in to your [Contentstack account](https://app.contentstack.com/#!/stacks), go to your [stack](/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To add this extension to your stack, log in to your [Contentstack account](https://app.contentstack.com/#!/stacks), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 
 Click the “Settings” icon on the left navigation panel.
 
 - Select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - Now, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
-- On the **Create New Extension **page, enter values in the fields as given below:**Title ***(required)*: Provide a suitable title, for example, “BigCommerce,” for your custom field. This title will be visible when you select the extension in the [**Custom**](/docs/developers/create-content-types/custom) field in your content type.
+- On the **Create New Extension **page, enter values in the fields as given below:**Title ***(required)*: Provide a suitable title, for example, “BigCommerce,” for your custom field. This title will be visible when you select the extension in the [**Custom**](../create-content-types/custom.md) field in your content type.
 - **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple ***(optional)*: Leave this field unchecked.
 - **Hosting Method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
 - **Extension Source Code**: Specify the extension code here. Copy the source code from the index.html file located in the root folder that you get from our [Support](mailto:support@contentstack.com)team, and paste it into the **Extension source code** field.
 
-**Note**: The root folder contains a redirect HTML file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload](/docs/content-managers/working-with-assets/create-upload-assets) asset article. After uploading the file, you'll get a URL in the [asset details](/docs/content-managers/working-with-assets/create-upload-assets#asset-details) section, make note of this URL.
+**Note**: The root folder contains a redirect HTML file. Upload this file as an asset in Contentstack by following the steps mentioned in the [Create/Upload](../../content-managers/author-content/create-upload-assets.md) asset article. After uploading the file, you'll get a URL in the [asset details](../../content-managers/author-content/create-upload-assets.md#asset-details) section, make note of this URL.
 
 - **Config Parameter**: Provide values for the config parameters.
 
@@ -114,7 +114,7 @@ Once you have added a custom field, you can use it in your content type. To add 
 Click on the “Content Models” icon on the left navigation panel.
 
 - Click on the **+ New Content Type** button, enter the required details, and click **Proceed**.
-- Click on the “Insert a field” link (**+** sign), and add the [**Custom**](/docs/developers/create-content-types/custom) field to it.
+- Click on the “Insert a field” link (**+** sign), and add the [**Custom**](../create-content-types/custom.md) field to it.
 - Under **Select Extension** drop-down menu in **Basic** properties, select the “BigCommerce” extension field that you created.
 - Finally, click on **Save and Close**.
 - Now create an entry for this content type, and you will see the **BigCommerce **custom field in action.
@@ -122,12 +122,12 @@ Click on the “Content Models” icon on the left navigation panel.
 - Select the products of your choice and click on the **Add Product(s)** button.
 - Finally, click on the **Save** button to save your entry.
 
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more details.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more details.
 
 ## Common questions
 
 ### Is this BigCommerce documentation for the Marketplace App or Automate Connector?
-**Note**: This documentation uses the legacy approach with extensions. We have launched BigCommerce as a Marketplace App and Automate Connector. For more information on BigCommerce, please refer to the [BigCommerce App Installation Guide](/docs/developers/marketplace-apps/bigcommerce) for Marketplace and [BigCommerce Connector](/docs/developers/automation-hub-connectors/bigcommerce/) documentation for Automate.
+**Note**: This documentation uses the legacy approach with extensions. We have launched BigCommerce as a Marketplace App and Automate Connector. For more information on BigCommerce, please refer to the [BigCommerce App Installation Guide](../marketplace-apps/bigcommerce.md) for Marketplace and [BigCommerce Connector](/docs/developers/automation-hub-connectors/bigcommerce/) documentation for Automate.
 
 ### What BigCommerce credentials are required for this extension?
 The credentials include the **API Path URL** and **access token** of your BigCommerce store API client.
@@ -136,4 +136,4 @@ The credentials include the **API Path URL** and **access token** of your BigCom
 "url": Enter the lambda API endpoint URL that we got in [Step 2](#set-up-a-lambda-function-and-an-api-gateway-trigger).
 
 ### Why can only a limited number of items be selected in the custom field?
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more details.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more details.

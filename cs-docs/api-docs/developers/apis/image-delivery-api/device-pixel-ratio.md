@@ -20,7 +20,7 @@ For example, if the iPhone 6s has a device pixel ratio of 2, it means that the a
 
 The value for this parameter could be a whole number (between 1 and 10000) or any decimal number (between 0.0 and 9999.9999...).
 
-Along with the dpr parameter, you need to specify either the height or width parameter to dynamically resize the output image. If you only specify the height parameter, then the height parameter will automatically adjust the width of the image using the aspect ratio of the image. And if both the width and height parameters are specified, the given values will be used. Read more about [resizing images using the width and height parameters](/docs/developers/apis/image-delivery-api#resize-images).
+Along with the dpr parameter, you need to specify either the height or width parameter to dynamically resize the output image. If you only specify the height parameter, then the height parameter will automatically adjust the width of the image using the aspect ratio of the image. And if both the width and height parameters are specified, the given values will be used. Read more about [resizing images using the width and height parameters](../../../api-detail/image-delivery-api.md#resize-images).
 
 The width or height of the output image changes depending on the values that you provide for dpr and height or width. For example, for a device pixel ratio of 2 and height 50, the height of the output image changes to 100.
 
@@ -30,7 +30,7 @@ The width or height of the output image changes depending on the values that you
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&dpr={dpr_value}`
 
-**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 #### Query Parameters
 

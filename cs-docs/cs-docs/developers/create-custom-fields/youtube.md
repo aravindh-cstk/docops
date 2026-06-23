@@ -17,9 +17,9 @@ This page explains how to create and configure a legacy YouTube custom field ext
 
 YouTube
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched YouTube as a Marketplace App. For more information on YouTube, please refer to the [YouTube App Installation Guide](/docs/developers/marketplace-apps/youtube/).
+**Note**: This documentation uses the legacy approach with extensions. We have launched YouTube as a Marketplace App. For more information on YouTube, please refer to the [YouTube App Installation Guide](../marketplace-apps/youtube.md).
 
-The YouTube extension lets you fetch YouTube videos from your account and display them on your entry page. When you [create an entry](/docs/content-managers/working-with-entries/create-an-entry), you can select only one of the listed videos at a time as the input for that field, and the details of the video will be saved in JSON format in Contentstack.
+The YouTube extension lets you fetch YouTube videos from your account and display them on your entry page. When you [create an entry](../../content-managers/author-content/create-an-entry.md), you can select only one of the listed videos at a time as the input for that field, and the details of the video will be saved in JSON format in Contentstack.
 
 This step-by-step guide explains how to create a YouTube custom field extension for your content types in Contentstack.
 - [Get YouTube API key](#get-youtube-api-key)
@@ -60,13 +60,13 @@ To add the YouTube custom field to your stack, log in to your [Contentstack acco
 
 For this guide we have created a sample code, which you can download from our [GitHub](https://github.com/contentstack/extensions/tree/master/youtube) repository. The source code contains the following files:
 - **youtube-extension**: Navigate to youtube/build/index.html file. We will upload the code in this file in the extension source code field of our extension in the next step.
-- **youtube-extension-popup**: Navigate to youtube-popup/build/index.html, upload this file as an asset in your stack by referring to the [Create/Upload Assets](/docs/content-managers/working-with-assets/create-upload-assets) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and click on the “Settings” icon on the left navigation panel and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
+- **youtube-extension-popup**: Navigate to youtube-popup/build/index.html, upload this file as an asset in your stack by referring to the [Create/Upload Assets](../../content-managers/author-content/create-upload-assets.md) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
+- Go to your [stack](../set-up-stack/about-stack.md), and click on the “Settings” icon on the left navigation panel and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions **page, click on the **+ New Extension** button, and select **Create New**.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:
 
-  - **Title ***(required)*: Provide a suitable title, for example “Youtube,” for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom)** **field in your content type.
+  - **Title ***(required)*: Provide a suitable title, for example “Youtube,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md)** **field in your content type.
   - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
   - **Multiple ***(optional)*: Check this field.
   - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
@@ -94,19 +94,19 @@ For this guide we have created a sample code, which you can download from our [G
 
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [**Custom**](/docs/developers/create-content-types/custom)** **field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md)** **field to it.
 - Under **Select Extension**, select the “Youtube” field that you created and set the other properties. You can add other fields as per requirements.
 - Finally, click on either **Save** or **Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Youtube **field in action. Click the **Choose Video** button to display all the videos of the specified channel ID as follows:
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Youtube **field in action. Click the **Choose Video** button to display all the videos of the specified channel ID as follows:
 - After clicking **Choose Video**, it will redirect you to a new page which displays a list of videos.
 - You can also choose the grid view for easy access. Select the videos you want to add and click on **Add Selected Videos**. The videos will be displayed in your custom field:
 
-**Additional Resource: **You can also refer to our other documents on custom video extensions such as [Ooyala](/docs/developers/create-custom-fields/ooyala), [Brightcove](/docs/developers/create-custom-fields/brightcove), and [Vimeo](/docs/developers/create-custom-fields/vimeo).
+**Additional Resource: **You can also refer to our other documents on custom video extensions such as [Ooyala](./ooyala.md), [Brightcove](./brightcove.md), and [Vimeo](./vimeo.md).
 
 ## Common questions
 
 **Q: Is this guide for the Marketplace App or the legacy extension approach?**  
-A: **Note**: This documentation uses the legacy approach with extensions. We have launched YouTube as a Marketplace App. For more information on YouTube, please refer to the [YouTube App Installation Guide](/docs/developers/marketplace-apps/youtube/).
+A: **Note**: This documentation uses the legacy approach with extensions. We have launched YouTube as a Marketplace App. For more information on YouTube, please refer to the [YouTube App Installation Guide](../marketplace-apps/youtube.md).
 
 **Q: What data type should be used for the YouTube custom field extension?**  
 A: **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.

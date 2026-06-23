@@ -16,9 +16,9 @@ This page explains how to create and use a Cloudinary custom field extension in 
 
 ## Cloudinary
 
-**Note**: This documentation uses the legacy approach with extensions. We have launched Cloudinary as a Marketplace App and Automate Connector. For more information on Cloudinary, please refer to the [Cloudinary App Installation Guide](/docs/developers/marketplace-apps/cloudinary) for Marketplace and [Cloudinary Connector](/docs/developers/automation-hub-connectors/cloudinary/) documentation for Automate.
+**Note**: This documentation uses the legacy approach with extensions. We have launched Cloudinary as a Marketplace App and Automate Connector. For more information on Cloudinary, please refer to the [Cloudinary App Installation Guide](../marketplace-apps/cloudinary.md) for Marketplace and [Cloudinary Connector](/docs/developers/automation-hub-connectors/cloudinary/) documentation for Automate.
 
-The Cloudinary custom field extensions allows you to fetch data (videos and images) from Cloudinary and display them into a [field](/docs/developers/create-content-types/about-fields) of your [Content type](/docs/developers/create-content-types/about-content-types). Thus, while creating [entries](/docs/content-managers/working-with-entries/about-entries), you can select one or more images or videos as the input value for the field.
+The Cloudinary custom field extensions allows you to fetch data (videos and images) from Cloudinary and display them into a [field](../create-content-types/about-fields.md) of your [Content type](../create-content-types/about-content-types.md). Thus, while creating [entries](../../content-managers/author-content/about-entries.md), you can select one or more images or videos as the input value for the field.
 
 This step-by-step guide explains how to create a Cloudinary custom field extension for your content types in Contentstack. The steps performed are as follows:
 - [Create a Cloudinary account](#create-a-cloudinary-account)
@@ -47,19 +47,19 @@ These details will be required when we set up our extension, so make a note of t
 
 To add this extension to your stack, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 
-Go to your [stack](/docs/developers/set-up-stack/about-stack) and click on the “Settings” icon on the left navigation panel.
+Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
 - On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
 - In the **Select Extension Type** window, select **Custom Field**.
 - On the **Create New Extension **page, enter values in the fields as given below:
 
-**Title ***(required)*: Provide a suitable title, for example “Cloudinary,” for your custom field. This title will be visible when you select the extension in the [**custom**](/docs/developers/create-content-types/custom) field in your content type.
+**Title ***(required)*: Provide a suitable title, for example “Cloudinary,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
 - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple ***(optional)*: Leave this field unchecked.
 - **Hosting method ***(required)*: Select **Hosted by Contentstack** as the hosting method for this content type.
 - **Extension Source Code ***(required)*: Specify the extension code here. If Extensions are part of your plan, contact our [Support](mailto:support@contentstack.com) team to get the code for the extension. The support team will provide you with the source code (src file). Copy the code from the index.html file located in the root folder and paste it in the **Extension source code** field.
 
-In the downloaded code inside the **source** folder, there's a **cloudinary-widget** HTML file. Upload this file as an asset in Contentstack, as discussed in our [Create/Upload Assets](/docs/content-managers/working-with-assets/create-upload-assets) documentation. After uploading the file, you'll get a URL in the [asset details](/docs/content-managers/working-with-assets/create-upload-assets#asset-details) section, make note of this URL.
+In the downloaded code inside the **source** folder, there's a **cloudinary-widget** HTML file. Upload this file as an asset in Contentstack, as discussed in our [Create/Upload Assets](../../content-managers/author-content/create-upload-assets.md) documentation. After uploading the file, you'll get a URL in the [asset details](../../content-managers/author-content/create-upload-assets.md#asset-details) section, make note of this URL.
 - **Config Parameter ***(required)*: Enter the following configuration details as the extension's config parameter:
 
 ```
@@ -79,20 +79,20 @@ Now, let’s understand how you can start using this custom field in your conten
 
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
-[Create a content type](/docs/developers/create-content-types/create-a-content-type) and add the [**Custom**](/docs/developers/create-content-types/custom) field to it.
+[Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
 - Under **Select Extension**, select the “Cloudinary” field that you created and set the other properties. You can add other fields as per requirements.
 - Finally, click on either **Save** or **Save and Close** to save your changes.
-- Next, [create an entry](/docs/content-managers/working-with-entries/create-an-entry) for this content type, and you will see the **Cloudinary **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Cloudinary **field in action.
 - Click on **Choose Assets**. If you are still logged into Cloudinary, it will open inside your entry page, from where you can select multiple images and insert them in your entry.
 
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 
-**Additional Resource:** Amason S3 is another technology similar to Cloudinary which allows user to fetch and display data in their content types, Read our guide on how to create a custom field using [Amazon S3](/docs/developers/create-custom-fields/amazon-s3).
+**Additional Resource:** Amason S3 is another technology similar to Cloudinary which allows user to fetch and display data in their content types, Read our guide on how to create a custom field using [Amazon S3](./amazon-s3.md).
 
 ## Common questions
 
 ### Is this the recommended way to integrate Cloudinary?
-No. **Note**: This documentation uses the legacy approach with extensions. We have launched Cloudinary as a Marketplace App and Automate Connector. For more information on Cloudinary, please refer to the [Cloudinary App Installation Guide](/docs/developers/marketplace-apps/cloudinary) for Marketplace and [Cloudinary Connector](/docs/developers/automation-hub-connectors/cloudinary/) documentation for Automate.
+No. **Note**: This documentation uses the legacy approach with extensions. We have launched Cloudinary as a Marketplace App and Automate Connector. For more information on Cloudinary, please refer to the [Cloudinary App Installation Guide](../marketplace-apps/cloudinary.md) for Marketplace and [Cloudinary Connector](/docs/developers/automation-hub-connectors/cloudinary/) documentation for Automate.
 
 ### What data type should the custom field use?
 **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
@@ -107,4 +107,4 @@ No. **Note**: This documentation uses the legacy approach with extensions. We ha
 ```
 
 ### Is there a limit on how many items can be selected?
-**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](/docs/developers/create-custom-fields/limitations-of-custom-fields) doc for more detail.
+**Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.

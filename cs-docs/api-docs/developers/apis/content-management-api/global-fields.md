@@ -14,11 +14,11 @@ last_updated: 2026-06-02
 
 A Global field is a reusable field (or group of fields) that you can define once and reuse across multiple content types within your stack. This eliminates the need to recreate the same set of fields multiple times, saving effort and ensuring consistency.
 
-**Note**: If your Global field contains [nested Global fields](/docs/developers/global-field/about-global-field#nested-global-fields), they will appear as part of the schema in the API response.
+**Note**: If your Global field contains [nested Global fields](../../../../cs-docs/developers/global-field/about-global-field.md#nested-global-fields), they will appear as part of the schema in the API response.
 
 You can pass the **branch header** in API requests to fetch or manage modules within specific branches of the stack. Additionally, setting the include_branch query parameter to true includes the _branch key in the response, specifying the unique ID of the branch where the module resides.
 
-**Additional Resource**: You can create dynamic and flexible Global Fields by nesting Global fields within a [Modular Block](/docs/developers/global-field/global-fields-as-blocks-within-modular-blocks), [Global](/docs/developers/global-field/about-global-field/), or a [Group](/docs/developers/global-field/group-fields-within-global-fields) fields.
+**Additional Resource**: You can create dynamic and flexible Global Fields by nesting Global fields within a [Modular Block](../../../../cs-docs/developers/global-field/global-fields-as-blocks-within-modular-blocks.md), [Global](../../../../cs-docs/developers/global-field/about-global-field.md), or a [Group](../../../../cs-docs/developers/global-field/group-fields-within-global-fields.md) fields.
 
 ## Get All Global Fields
 
@@ -64,7 +64,7 @@ The Get all global fields request returns comprehensive information of all the g
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -140,7 +140,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 #### URL Parameters
 
 - **global_field_uid** (required)
-  Enter the unique ID of the Global field of which you want to retrieve the details. The UID of a Global field is unique across a stack. Execute the '[Get all Global fields](/docs/developers/apis/content-management-api#get-all-global-fields)' request to retrieve the UID of a Global field.
+  Enter the unique ID of the Global field of which you want to retrieve the details. The UID of a Global field is unique across a stack. Execute the '[Get all Global fields](../../../api-detail/content-management-api.md#get-all-global-fields)' request to retrieve the UID of a Global field.
   Default: `category`
 
 #### Query Parameters
@@ -173,7 +173,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -298,7 +298,7 @@ To create a nested global field, follow the schema in the request body:
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -443,7 +443,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -564,7 +564,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.
@@ -694,7 +694,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `Your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

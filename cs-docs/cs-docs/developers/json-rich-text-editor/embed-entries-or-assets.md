@@ -18,9 +18,9 @@ This page explains how to embed entries and assets inside Contentstack’s JSON 
 ## Embed Entries or Assets
 
 Contentstack allows you to embed
-  [entries](/docs/content-managers/working-with-entries/about-entries) and
-  [assets](/docs/content-managers/author-content/about-assets/) directly within the
-  [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) field. These embedded items are dynamically updated whenever the source entry or asset is modified, ensuring your content stays in sync.
+  [entries](../../content-managers/author-content/about-entries.md) and
+  [assets](../../content-managers/author-content/about-assets.md) directly within the
+  [JSON Rich Text Editor](./about-json-rich-text-editor.md) field. These embedded items are dynamically updated whenever the source entry or asset is modified, ensuring your content stays in sync.
 
   The JSON RTE field lets you embed entries inline within the flow of text, as a separate content block, or as a dynamic hyperlink.
 
@@ -51,7 +51,7 @@ Here are some examples of how embedded entries can enhance content:
 
   To embed an entry within your JSON RTE, log in to your
   [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries** icon in the left navigation panel.
+- Navigate to the desired [stack](../set-up-stack/about-stack.md), then click the **Entries** icon in the left navigation panel.
 - Create a new entry or open an existing one containing a JSON RTE field.
 - In the **JSON RTE field**, click the **Embed Entry** icon in the toolbar.
 - In the **Select Entry** modal that appears, select the content type from which you want to embed an entry.
@@ -76,7 +76,7 @@ Here are some examples of how embedded assets can enhance content:
 
   To embed an asset within your JSON RTE, log in to your
   [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
-- Navigate to the desired [stack](/docs/developers/set-up-stack/about-stack), then click the **Entries** icon in the left navigation panel.
+- Navigate to the desired [stack](../set-up-stack/about-stack.md), then click the **Entries** icon in the left navigation panel.
 - Create a new entry or open an existing one containing a JSON RTE field.
 - In the **JSON RTE field**, click the **Asset** icon in the toolbar.
 - From the dropdown menu, select **Choose from assets** or **Upload new asset(s)**.

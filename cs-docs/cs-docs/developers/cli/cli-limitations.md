@@ -316,7 +316,7 @@ nvm use 20
 
 **Workaround:**
 - Other modules, such as extensions and assets, are automatically handled as dependencies.
-- To [import](/docs/developers/cli/import-content-using-the-cli) other modules, use the full import command without **import setup**.
+- To [import](./import-content-using-the-cli.md) other modules, use the full import command without **import setup**.
 
 **Code Evidence:**
 - `cli/packages/contentstack-import-setup/src/commands/cm/stacks/import-setup.ts`, lines 42-47: Module options are restricted to three.

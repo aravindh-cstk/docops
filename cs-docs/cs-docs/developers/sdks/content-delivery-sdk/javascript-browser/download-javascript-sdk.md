@@ -16,7 +16,7 @@ This page explains how to download the Contentstack JavaScript (Browser) SDK use
 
 ## Download JavaScript SDK
 
-The [JavaScript (Browser) SDK](https://github.com/contentstack/contentstack-javascript) interacts with and uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack. Build amazing JavaScript apps and power its content from Contentstack by downloading the SDK.
+The [JavaScript (Browser) SDK](https://github.com/contentstack/contentstack-javascript) interacts with and uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack. Build amazing JavaScript apps and power its content from Contentstack by downloading the SDK.
 
 [Download JavaScript (Browser) SDK](https://assets.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfdab91eaab6a564e/639d6efa970241131cd5af49/contentstack-v3.15.0.min.js)
 
@@ -30,7 +30,7 @@ The [JavaScript (Browser) SDK](https://github.com/contentstack/contentstack-java
 Use the provided link: [Download JavaScript (Browser) SDK](https://assets.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfdab91eaab6a564e/639d6efa970241131cd5af49/contentstack-v3.15.0.min.js)
 
 **What APIs does the JavaScript (Browser) SDK use?**  
-It interacts with and uses the [Content Delivery APIs](/docs/developers/apis/content-delivery-api).
+It interacts with and uses the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md).
 
 **Where can I find the SDK source code and repository?**  
 See: [View and Download JavaScript Delivery SDK repository on GitHub](https://github.com/contentstack/contentstack-javascript)

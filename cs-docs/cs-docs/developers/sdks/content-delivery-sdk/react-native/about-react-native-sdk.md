@@ -20,24 +20,24 @@ This page introduces the Contentstack React Native SDK, explains what it is used
 
 *Use Contentstack to power content for your React Native projects*
 
-Contentstack provides React Native SDK that Developers can use to develop React Native applications and power its content from Contentstack. The Contentstack React Native SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your React Native-based applications.
+Contentstack provides React Native SDK that Developers can use to develop React Native applications and power its content from Contentstack. The Contentstack React Native SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your React Native-based applications.
 
 **Note**: The Contentstack React Native SDK supports NodeJS 4.4.7 or later.
 
-In order to integrate your React Native app with Contentstack React Native SDK, follow the steps mentioned in the [Get Started](/docs/developers/sdks/content-delivery-sdk/react-native/get-started-with-react-native-sdk/) section.
+In order to integrate your React Native app with Contentstack React Native SDK, follow the steps mentioned in the [Get Started](./get-started-with-react-native-sdk.md) section.
 
-You can check out the [sample React Native apps](/docs/developers/sdks/content-delivery-sdk/react-native/#sample-apps-for-react-native) that Contentstack have developed to see React Native SDK in action.
+You can check out the [sample React Native apps](../react-native.md#sample-apps-for-react-native) that Contentstack have developed to see React Native SDK in action.
 
 ## Common questions
 
 ### What does the Contentstack React Native SDK use to fetch content?
-It uses the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to React Native-based applications.
+It uses the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to React Native-based applications.
 
 ### What NodeJS versions are supported by the React Native SDK?
 **Note**: The Contentstack React Native SDK supports NodeJS 4.4.7 or later.
 
 ### Where do I start to integrate the SDK into my React Native app?
-Follow the steps mentioned in the [Get Started](/docs/developers/sdks/content-delivery-sdk/react-native/get-started-with-react-native-sdk/) section.
+Follow the steps mentioned in the [Get Started](./get-started-with-react-native-sdk.md) section.
 
 ### Are there sample apps available to see the SDK in action?
-Yes, you can check out the [sample React Native apps](/docs/developers/sdks/content-delivery-sdk/react-native/#sample-apps-for-react-native) that Contentstack have developed to see React Native SDK in action.
+Yes, you can check out the [sample React Native apps](../react-native.md#sample-apps-for-react-native) that Contentstack have developed to see React Native SDK in action.

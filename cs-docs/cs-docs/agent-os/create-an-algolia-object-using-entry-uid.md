@@ -40,8 +40,8 @@ Next, lets look at the steps to set up the trigger event.
 
 Click **Configure Trigger** from the left navigation panel.
 - Within the **Configure Trigger** step, click the **Contentstack** connector.
-- Add your [Contentstack account](https://app.contentstack.com/#!/login). For more information, refer to the [Contentstack Trigger](https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-trigger/) documentation.
-- Once done, select **All**from the list of trigger events and define the rest of the steps needed to set up the trigger (refer **steps 3 to 12** in [Contentstack Trigger](https://www.contentstack.com/docs/developers/automation-hub-connectors/contentstack-trigger/)).
+- Add your [Contentstack account](https://app.contentstack.com/#!/login). For more information, refer to the [Contentstack Trigger](./contentstack-trigger.md) documentation.
+- Once done, select **All**from the list of trigger events and define the rest of the steps needed to set up the trigger (refer **steps 3 to 12** in [Contentstack Trigger](./contentstack-trigger.md)).
 - Click**Test Trigger** to execute and test the trigger that you configured.
 - Click **Save and Exit**.
 

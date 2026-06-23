@@ -46,7 +46,7 @@ The Contentstack Marketplace team will provide you detailed documentation on app
 ### Metadata Content
 
 As a pre-requisites for submitting Apps for the public Marketplace, the Partner is required to provide the Metadata content (descriptions) of your app.
-- Fill the Metadata content [form](https://docs.google.com/forms/d/e/1FAIpQLSf7JdG2sA-6CXTlH75O_KRum9WtpMgxVH9h78yRaTvregjfuQ/viewform) with the appropriate details by following our [guidelines](/docs/marketplace-platform-guides/app-submission-and-approval-guide#metadata-content-descriptions).
+- Fill the Metadata content [form](https://docs.google.com/forms/d/e/1FAIpQLSf7JdG2sA-6CXTlH75O_KRum9WtpMgxVH9h78yRaTvregjfuQ/viewform) with the appropriate details by following our [guidelines](./app-submission-and-approval-guide.md#metadata-content-descriptions).
 
 ### On-boarding
 
@@ -60,7 +60,7 @@ Your app details will be displayed on your Marketplace listing once your app is 
 ## App Review
 
 Metadata and marketing content of the app will be reviewed and verified simultaneously.
-- In case the app details or the content are not approved then the Marketplace team will send a feedback to the Partner.**Additional Resource: **Read our detailed guide on [App Development Best Practices](/docs/developers/developer-hub/app-development-best-practices) to ensure you build the app according to our guidelines.
+- In case the app details or the content are not approved then the Marketplace team will send a feedback to the Partner.**Additional Resource: **Read our detailed guide on [App Development Best Practices](../developer-hub/app-development-best-practices.md) to ensure you build the app according to our guidelines.
 
 ## App Testing and Security Checks
 

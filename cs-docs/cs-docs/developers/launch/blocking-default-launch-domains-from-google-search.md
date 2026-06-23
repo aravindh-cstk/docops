@@ -118,7 +118,7 @@ If your site uses an external CDN (like CloudFront, Fastly, or Akamai) that prox
 - Add a custom header in your CDN configuration:  
 `X-Launch-Auth-Key: <unique-secret-value>`
 
-- Create an [Edge Function](/docs/launch/edge-functions) in Launch:
+- Create an [Edge Function](./edge-functions.md) in Launch:
 
 ```
 export default async function handler(request, context) {

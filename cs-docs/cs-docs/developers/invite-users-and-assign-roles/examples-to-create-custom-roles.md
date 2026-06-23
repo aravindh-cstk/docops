@@ -189,9 +189,9 @@ To create this role, log in to your [Contentstack account](https://app.contentst
 
 ## API Reference
 To perform role management operations via API, refer to the following API requests:
-- [Create role](/docs/developers/apis/content-management-api#create-a-role)
-- [Update role](/docs/developers/apis/content-management-api#update-role)
-- [Delete role](/docs/developers/apis/content-management-api#delete-role)
+- [Create role](../../../api-docs/api-detail/content-management-api.md#create-a-role)
+- [Update role](../../../api-docs/api-detail/content-management-api.md#update-role)
+- [Delete role](../../../api-docs/api-detail/content-management-api.md#delete-role)
 
 Custom roles help you control access across entries, assets, languages, and taxonomies while ensuring users only have the permissions required for their responsibilities. By combining permissions and exceptions, you can create flexible access models that align with your organization’s workflows and governance requirements.
 
@@ -208,8 +208,8 @@ Use exceptions when users should have broad access but must be restricted from a
 
 ### Where can I find API operations for role management?
 To perform role management operations via API, refer to the following API requests:
-- [Create role](/docs/developers/apis/content-management-api#create-a-role)
-- [Update role](/docs/developers/apis/content-management-api#update-role)
-- [Delete role](/docs/developers/apis/content-management-api#delete-role)
+- [Create role](../../../api-docs/api-detail/content-management-api.md#create-a-role)
+- [Update role](../../../api-docs/api-detail/content-management-api.md#update-role)
+- [Delete role](../../../api-docs/api-detail/content-management-api.md#delete-role)
 
 <!-- Filename: stack-roles-examples-to-create-custom-roles.md -->

@@ -19,7 +19,7 @@ This page explains what Permanent Asset URLs are in Contentstack, why they provi
 
 Contentstack allows you to assign a permanent URL to an [asset](/docs/content-managers/working-with-assets/about-assets), ensuring a stable reference that remains unchanged even when an asset is updated or replaced. With permanent URLs, you don’t need to manually update asset references in entries after making changes to the asset.
 
-When you [generate a permanent URL](/docs/content-managers/author-content/generate-a-permanent-asset-url), you can access the same asset using the following URLs:
+When you [generate a permanent URL](./generate-a-permanent-asset-url.md), you can access the same asset using the following URLs:
 - **Auto-generated asset URL**: The default URL for the asset, which changes every time the asset is replaced or updated.
 - **Permanent asset URL**: A constant, non-editable URL that remains unchanged, regardless of any replacements or updates made to the asset file.
 

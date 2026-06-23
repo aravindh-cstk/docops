@@ -29,7 +29,7 @@ This approach helps you maximize your website’s performance in terms of user e
 
 This is the most robust option and will also deliver the smoothest user experience for your users by eliminating loading screens or flickers, all while enabling real-time personalization.
 
-**Note:** This document provides a high-level overview. For details on how to use Personalize and other best practices, refer to Contentstack's [official documentation](/docs/personalize) and consult with our support team.
+**Note:** This document provides a high-level overview. For details on how to use Personalize and other best practices, refer to Contentstack's [official documentation](../agent-os/personalize.md) and consult with our support team.
 
 ### What is the Edge?
 
@@ -45,7 +45,7 @@ This architecture offers multiple benefits, below we have listed some of the imp
 
 #### Real-time Personalization
 
-As every request for a web page goes through the Edge, this architecture makes sure that the [Personalize Edge API](/docs/developers/apis/personalize-edge-api/) (which is in charge of making personalization decisions about which variants are to be shown to a user) is called every time a user opens or refreshes a page on your website.
+As every request for a web page goes through the Edge, this architecture makes sure that the [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md) (which is in charge of making personalization decisions about which variants are to be shown to a user) is called every time a user opens or refreshes a page on your website.
 
 This means the variants to be shown to the user are decided in real-time, with the latest available context. If a new attribute is set for the user just before they visited the page, it will have an impact on the content shown on that page.
 
@@ -53,7 +53,7 @@ If there are dynamic factors, such as date and time, that affect the personaliza
 
 #### Best in Class Lighthouse Scores
 
-Making personalization decisions at the Edge, in a location as close as possible to your users, helps keep the overhead introduced for personalization to a minimum. Additionally, the [Personalize Edge API](/docs/developers/apis/personalize-edge-api/) has been built for high performance.
+Making personalization decisions at the Edge, in a location as close as possible to your users, helps keep the overhead introduced for personalization to a minimum. Additionally, the [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md) has been built for high performance.
 
 The page that loads in the browser for the user is already personalized for them, as compared to other implementations where the base page loads first, and personalizations are applied afterward.
 
@@ -83,7 +83,7 @@ Over time, the number of personalizations and experiments on your website will g
 
 The architecture we recommend requires only an initial setup on your backend origin code and to add a simple common Edge function to personalize your entire website. Once set up, you can create as many personalizations and experiments as you wish without needing to change existing or add code for every new element you personalize.
 
-**Note:** Triggering new impressions and conversion events may require additional code changes, but these are minimal and can also be managed through [Google Tag Manager](/docs/personalize/google-tag-manager-integration-with-personalize) in a low-code manner.
+**Note:** Triggering new impressions and conversion events may require additional code changes, but these are minimal and can also be managed through [Google Tag Manager](./google-tag-manager-integration-with-personalize.md) in a low-code manner.
 
 #### SEO Friendliness
 
@@ -93,7 +93,7 @@ As the website (with and without personalization) is server-side rendered, it ge
 
 To get started, this implementation requires minimal code changes in your front-end. You do not need to make any changes in your browser code to render personalized content (tracking events does require changes in browser code).
 
-A common Edge function can be added, which requests the user’s variants from Contentstack Personalize, regardless of the page they are visiting. On the server side, it only requires a one-time setup to extract the user’s variants added to the request by the Edge function and pass them to the [Contentstack Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference) or [API](/docs/developers/apis/content-delivery-api).
+A common Edge function can be added, which requests the user’s variants from Contentstack Personalize, regardless of the page they are visiting. On the server side, it only requires a one-time setup to extract the user’s variants added to the request by the Edge function and pass them to the [Contentstack Delivery SDK](../developers/create-content-types/reference.md) or [API](../../api-docs/api-detail/content-delivery-api.md).
 
 Since entry variants are simply entries with different content, they can be rendered exactly as your base content. This means that the code that renders the content retrieved from the CMS does not need to change at all, or even know that it is rendering personalized content.
 
@@ -103,7 +103,7 @@ If you already have a server-side rendered website, adopting this architecture c
 
 If your website is hosted with a provider, these popular hosting providers offer Edge function options:
 
-* Contentstack Launch ([Edge Functions](/docs/developers/launch/edge-functions))
+* Contentstack Launch ([Edge Functions](../developers/launch/edge-functions.md))
 * Vercel ([Edge Middleware](https://vercel.com/docs/functions/edge-middleware))
 * Netlify ([Edge Functions](https://docs.netlify.com/edge-functions/overview/))
 
@@ -124,10 +124,10 @@ This builds on top of a traditional server-side architecture, by adding a very l
   It can also detect the user's variant information in the request URL’s query parameters. If it recognizes variants it has cached before, the cached personalized page is returned to the user almost immediately. If not, it forwards the request to the origin, which generates the personalized page, and the CDN stores it for future requests.  
   One of the Edge-based architecture’s biggest advantages is its ability to leverage this cache for personalized content while maintaining real-time personalization.
 * **Your SSR Origin**: The application server dynamically generates HTML pages with personalized or non-personalized content created in the CMS. It extracts the variant information passed to it by the Edge function and retrieves appropriate entry variants from the CDA. It does not need any user-specific context, only the variants to be displayed.
-* **Contentstack Personalize Edge API and SDK**: The [Personalize Edge API](/docs/developers/apis/personalize-edge-api/) is the decision engine for real-time personalization. To minimize overhead on your user’s requests, it exists at the Edge, as close as possible to your users and your Edge—the two locations where you’ll interact with it.  
-  Given the user UID and other context, such as the page URL, referrer, etc., it responds with the UIDs of each experience’s variant that the visitor should see. Read more about the Edge API [here](/docs/developers/apis/personalize-edge-api).  
-  We recommend using our [JavaScript Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript), which handles communication with the Edge API, providing it the necessary context on your behalf.
-* **Contentstack CMS Content Delivery API (CDA)**: Contentstack's CDA delivers the content (articles, products, etc.) — both [base and personalized variants](/docs/developers/apis/content-delivery-api#entry-variants). Your SSR process combines this content with your page layout or components to generate the final personalized page shown to the user.
+* **Contentstack Personalize Edge API and SDK**: The [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md) is the decision engine for real-time personalization. To minimize overhead on your user’s requests, it exists at the Edge, as close as possible to your users and your Edge—the two locations where you’ll interact with it.  
+  Given the user UID and other context, such as the page URL, referrer, etc., it responds with the UIDs of each experience’s variant that the visitor should see. Read more about the Edge API [here](../../api-docs/api-detail/personalize-edge-api.md).  
+  We recommend using our [JavaScript Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md), which handles communication with the Edge API, providing it the necessary context on your behalf.
+* **Contentstack CMS Content Delivery API (CDA)**: Contentstack's CDA delivers the content (articles, products, etc.) — both [base and personalized variants](../../api-docs/api-detail/content-delivery-api.md#entry-variants). Your SSR process combines this content with your page layout or components to generate the final personalized page shown to the user.
 
 #### Request Flows
 
@@ -158,13 +158,13 @@ The next time any user requests the same page and is resolved to the same varian
 Here is a list of some things to consider:
 
 * **Tracking Analytics**: Now that the rendering of personalized content is taken care of, you need to track how your variants are performing. This involves triggering impression and conversion events from the browser when the user views personalized content or performs a conversion action.  
-  This can be done by calling the Edge SDK’s triggerImpressions and triggerEvent methods, but this can become cumbersome over time. Alternatively, these can be managed via [Google Tag Manager](/docs/personalize/google-tag-manager-integration-with-personalize).
+  This can be done by calling the Edge SDK’s triggerImpressions and triggerEvent methods, but this can become cumbersome over time. Alternatively, these can be managed via [Google Tag Manager](./google-tag-manager-integration-with-personalize.md).
 * **User Data Management**: Ensure secure and compliant handling of user data for personalization. Avoid storing any personally identifiable information with Contentstack Personalize to facilitate personalization decisions.
 * **Fallbacks and Error Handling**: Design robust fallback mechanisms with error handling in all the appropriate places to ensure a seamless user experience. Should any part of the system not work as expected, it’s important to be able to fall back to showing the users the default content (base entries) instead of an imprecise or incomplete personalized experience.
 
 ### Example Application with Code
 
-We have created a sample app which implements this architecture. Please check out the [repository](https://github.com/contentstack-personalize-examples/nextjs-example) and our [sample app](https://personalize-demo.vercel.app/) for more information. You can also find a detailed guide that walks you through setting up the example application [here](/docs/personalize/setup-nextjs-website-with-personalize-vercel).
+We have created a sample app which implements this architecture. Please check out the [repository](https://github.com/contentstack-personalize-examples/nextjs-example) and our [sample app](https://personalize-demo.vercel.app/) for more information. You can also find a detailed guide that walks you through setting up the example application [here](./setup-nextjs-website-with-personalize-vercel.md).
 
 ## Common questions
 ### What is covered in [Personalize] - Server Side Rendering (SSR) with Edge Routing Technical Implementation Architecture?

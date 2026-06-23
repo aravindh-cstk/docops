@@ -19,13 +19,13 @@ This page explains what the Contentstack JavaScript Utils library is, what it in
 Contentstack provides the JavaScript Utils library that contains all the utilities for the [JavaScript Delivery SDK](https://github.com/contentstack/contentstack-javascript).
 
 Features included:
-- **Embedded Object**: Allows you to fetch embedded [entries](/docs/content-managers/author-content/about-entries)/[assets](/docs/content-managers/author-content/about-assets) (placed inside the “[Rich Text Editor](/docs/developers/create-content-types/rich-text-editor)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](/docs/developers/create-content-types/rich-text-editor#embed-entries-in-the-rte) and [Embed Asset](/docs/developers/create-content-types/rich-text-editor#embed-assets-in-the-rte) documentation.
+- **Embedded Object**: Allows you to fetch embedded [entries](../../../../content-managers/author-content/about-entries.md)/[assets](../../../../content-managers/author-content/about-assets.md) (placed inside the “[Rich Text Editor](../../../create-content-types/rich-text-editor.md)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](../../../create-content-types/rich-text-editor.md#embed-entries-in-the-rte) and [Embed Asset](../../../create-content-types/rich-text-editor.md#embed-assets-in-the-rte) documentation.
 
 **Note**:
 - The Contentstack [JavaScript Utils SDK](https://github.com/contentstack/contentstack-utils-javascript) supports [Node.js](https://nodejs.org/en) version 22 or above.
 - The Contentstack Delivery SDK incorporates the features of the Utils SDK, eliminating the need for a separate installation of the Utils SDK
 
-To use this Utils SDK in your application, follow the steps specified in the [Get Started with JavaScript Utils library](/docs/developers/javascript-browser/get-started-with-javascript-utils-library/) guide
+To use this Utils SDK in your application, follow the steps specified in the [Get Started with JavaScript Utils library](./get-started-with-javascript-utils-library.md) guide
 
 ## Common questions
 

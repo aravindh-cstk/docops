@@ -19,7 +19,7 @@ This page explains how to delete a language from a Contentstack stack, including
 
 **Warning**: If you delete a language, all the localized entries created for the language will get deleted. However, adding back the deleted language will restore all the lost localized entries related to the specific language.
 
-To delete a [language](/docs/developers/multilingual-content/about-languages) from the [stack](/docs/developers/set-up-stack/about-stack), log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
+To delete a [language](./about-languages.md) from the [stack](../set-up-stack/about-stack.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your stack, click the “Settings” icon (press “S”) on the left navigation panel, and select **Languages** (or press “**alt + L**” for Windows OS, and “option + **L**” for Mac OS).
 - On the **Languages** page. hover over the language you want to delete, click on the “Delete” icon (trash bin) that appears at the extreme right end.
 - Click **Remove** to confirm the delete action.
@@ -28,7 +28,7 @@ To delete a [language](/docs/developers/multilingual-content/about-languages) fr
 
 ## API Reference
 
-To perform the delete action via API request, refer to the [Delete language](/docs/developers/apis/content-management-api#delete-language) API request.
+To perform the delete action via API request, refer to the [Delete language](../../../api-docs/api-detail/content-management-api.md#delete-language) API request.
 
 ## Common questions
 
@@ -42,4 +42,4 @@ No. You cannot delete the master language.
 Make sure that it is not being used as a fallback language for any other language(s).
 
 ### Is there an API to delete a language?
-Yes. Refer to the [Delete language](/docs/developers/apis/content-management-api#delete-language) API request.
+Yes. Refer to the [Delete language](../../../api-docs/api-detail/content-management-api.md#delete-language) API request.

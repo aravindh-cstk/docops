@@ -14,7 +14,7 @@ last_updated: unknown
 
 This page explains how to secure Contentstack webhooks using supported authentication and verification methods. It is intended for developers configuring webhook endpoints and should be used when setting up or hardening webhook security for receiving applications or servers.
 
-[Webhooks](https://www.contentstack.com/docs/developers/set-up-webhooks/about-webhooks) are an ideal way to send information automatically to an external application. However, it is critical to ensure that the receiving app or server validates the source before accepting requests. To avoid potential security threats, users can secure your webhooks.
+[Webhooks](./about-webhooks.md) are an ideal way to send information automatically to an external application. However, it is critical to ensure that the receiving app or server validates the source before accepting requests. To avoid potential security threats, users can secure your webhooks.
 
 Contentstack offers some highly recommended security measures that you can implement when setting up a webhook. These include **Basic Auth**, **OAuth 2.0 Client Credential**, **Bearer Token**, **Custom Headers**, **Webhook Signature**, **Time Stamped Messages**, and **IP Whitelisting**.
 
@@ -24,7 +24,7 @@ Let’s look at the ways you can secure your webhook event data in detail.
 
 When setting up a webhook, basic authentication, i.e., **Basic Auth**, allows users to set a username and password associated with your HTTP endpoint. With this method, your basic auth field values are included in the header of the HTTP request.
 
-To configure this method, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To configure this method, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 
 - Navigate to **Settings** > **Webhooks**, then click on **+ New Webhook** and select the **Basic Auth** method.
 - Here, you can add the basic auth details by providing the values for the following fields:HTTP Basic Auth Username
@@ -38,7 +38,7 @@ OAuth 2.0 provides a more secure and robust authentication method by allowing yo
 
 **Note**: The Basic Auth method is available by default. To enable the OAuth 2.0 authentication method for your organization, please contact our [support](mailto: support@contentstack.com) team.
 
-To configure this method, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To configure this method, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 
 - Navigate to **Settings** > **Webhooks**, then click on **+ New Webhook** and select the **OAuth 2.0 Client Credential** method.
 - Here, you can add the client credential details by providing the values for the following fields:Access Token URL
@@ -54,7 +54,7 @@ Bearer token is an authentication method that allows you to securely pass a toke
 
 **Note**: The Basic Auth method is available by default. To enable the Bearer Token authentication method for your organization, please contact our [support](mailto: support@contentstack.com) team.
 
-To configure this method, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To configure this method, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 
 - Navigate to **Settings** > **Webhooks**, then click on **+ New Webhook** and select the **Bearer Token** method.
 - Here, you can add the **Bearer Token**.
@@ -65,7 +65,7 @@ As an additional method of security, you can specify custom headers that Content
 
 Custom headers are key-value parameters that you send/receive in the header of each call of your notifying URL.
 
-To set this method, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To set this method, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 
 - Navigate to **Settings** > **Webhooks**, then click on **+ New Webhook**.
 - Here, you can add custom headers by providing the values for the following fields under **Custom Headers**:Key
@@ -102,7 +102,7 @@ To verify a webhook signature, you need to use the Contentstack Signing Public K
 https://[DOMAIN]/.well-known/public-keys.json
 ```
 
-**Note:** Here, `DOMAIN` refers to the host in the [region-specific login endpoint](/docs/developers/contentstack-regions/login-endpoints) that you are currently using to access the Contentstack app.
+**Note:** Here, `DOMAIN` refers to the host in the [region-specific login endpoint](../contentstack-regions/login-endpoints.md) that you are currently using to access the Contentstack app.
 
 The above API endpoint returns the signing public key in the response body:
 
@@ -290,7 +290,7 @@ To protect your domain from potential attacks, Contentstack will provide you wit
 
 To receive the Contentstack IPs, contact our [Support](mailto:support@contentstack.com) team today.
 
-**Additional Resource: **You can also read on how to [Pass Contentstack Webhooks through Firewall](/docs/developers/how-to-guides/pass-contentstack-webhooks-through-firewalls), in our detailed documentation.
+**Additional Resource: **You can also read on how to [Pass Contentstack Webhooks through Firewall](../how-to-guides/pass-contentstack-webhooks-through-firewalls.md), in our detailed documentation.
 
 ## Common questions
 

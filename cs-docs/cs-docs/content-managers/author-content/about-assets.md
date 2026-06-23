@@ -40,7 +40,7 @@ Contentstack provides a centralized **Assets** repository where you can store an
 
 These capabilities ensure that your assets are well-organized, accessible, and reusable, enhancing the efficiency of your content creation and management processes.
 
-**Note**: Assets added or updated in specific branches are branch-specific, with URLs reflecting the branch name, except for assets in the main branch. Refer to our document on [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) for details.
+**Note**: Assets added or updated in specific branches are branch-specific, with URLs reflecting the branch name, except for assets in the main branch. Refer to our document on [Branch-specific Modules](../../developers/branches/branch-specific-modules.md) for details.
 
 ## Common questions
 
@@ -54,4 +54,4 @@ Yes, you can attach uploaded assets to entries seamlessly, allowing you to reuse
 Yes. Assets added or updated in specific branches are branch-specific, with URLs reflecting the branch name, except for assets in the main branch.
 
 ### Where can I learn more about branch-specific behavior?
-Refer to the document on [Branch-specific Modules](/docs/developers/branches/branch-specific-modules) for details.
+Refer to the document on [Branch-specific Modules](../../developers/branches/branch-specific-modules.md) for details.

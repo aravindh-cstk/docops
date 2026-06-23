@@ -54,7 +54,7 @@ To use the Ace Editor application within an entry of your stack, follow the step
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
 - Create a content type by adding relevant details as displayed below:
-- In the Content Type Builder page, add a [Custom](/docs/developers/create-content-types/custom/) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
+- In the Content Type Builder page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **Ace Editor**, and click the **Proceed** button.
 
 Ace Editor is added in the custom field.
@@ -82,7 +82,7 @@ You can view the contact form on the web page.
 **Note**: No additional configuration is required to use the Ace Editor app.
 
 ### Where can I add the Ace Editor app in my content type?
-In the Content Type Builder page, add a [Custom](/docs/developers/create-content-types/custom/) field in your content type and under **Select Extension/App**, select **Ace Editor**.
+In the Content Type Builder page, add a [Custom](../create-content-types/custom.md) field in your content type and under **Select Extension/App**, select **Ace Editor**.
 
 ### Who can install the Ace Editor app in Contentstack?
 Access to the Contentstack Organization/Stack as the Owner/Admin is required.

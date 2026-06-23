@@ -27,7 +27,7 @@ Perform the following steps to configure the Sub Automation trigger:
 - Click **Configure Trigger** from the left navigation panel.
 - Within the **Configure Trigger **step, click the **Sub Automation** connector.
 - Under **Choose Trigger** tab, select the **Sub Automation Trigger**.
-- Enter the **Description **of the trigger.**Note: **The description in the schema can be helpful while using the [ChatGPT](/docs/developers/automation-hub-connectors/chatgpt#action-4-select-the-function-calling-action) Function Calling action to briefly describe the schema defined in the sub automation trigger.
+- Enter the **Description **of the trigger.**Note: **The description in the schema can be helpful while using the [ChatGPT](./chatgpt.md#action-4-select-the-function-calling-action) Function Calling action to briefly describe the schema defined in the sub automation trigger.
 - Under the **Schema **field, enter the value in the **Key **field and select the **Type **from the dropdown. Click **+ Add Schema **button to add multiple values.
 Additionally, you can also mark the **Required **checkbox to make it mandatory.
 - Click the **Proceed **button.
@@ -49,10 +49,10 @@ Follow the steps below to configure the sub automation trigger:
 - Click the** Test Trigger **button to test the configured trigger.
 - Click the **Save and Exit **button.
 
-Let’s configure the [ChatGPT](/docs/developers/automation-hub-connectors/chatgpt) connector to view the converted text.
+Let’s configure the [ChatGPT](./chatgpt.md) connector to view the converted text.
 - Within the **Configure Action Step**, click the **ChatGPT **connector.
 - Under **Choose an Action** tab, select the **Chat **action.
-- Click the **+ Add New Account **button to add your ChatGPT account.**Additional Resource:** Refer to the [ChatGPT](/docs/developers/automation-hub-connectors/chatgpt) connector documentation for adding the account.
+- Click the **+ Add New Account **button to add your ChatGPT account.**Additional Resource:** Refer to the [ChatGPT](./chatgpt.md) connector documentation for adding the account.
 - Select the **API Model** from the dropdown list to generate content for the chat responses.**Note: **Different models are available to different users based on the account the user holds such as paid accounts. You must check the account access before selecting the model.
 - Provide the **Prompt Text **to generate the chat response(s). You must select the output from the sub automation trigger. For example, convert the given string into German.
 - Select the **Role **from the dropdown options to send to the API model request. By default, the role is set to the user.**Additional Resource: **There are three different types of roles provided by the OpenAI platform. The **system **role sets the response context, the **assistant **role provides the response content, and the **user **role asks the prompt.
@@ -81,7 +81,7 @@ It is used to invoke sub automation and define the schema of the sub automation 
 Yes. You can mark the **Required **checkbox to make it mandatory.
 
 ### Why should I add a description to the trigger schema?
-**Note: **The description in the schema can be helpful while using the [ChatGPT](/docs/developers/automation-hub-connectors/chatgpt#action-4-select-the-function-calling-action) Function Calling action to briefly describe the schema defined in the sub automation trigger.
+**Note: **The description in the schema can be helpful while using the [ChatGPT](./chatgpt.md#action-4-select-the-function-calling-action) Function Calling action to briefly describe the schema defined in the sub automation trigger.
 
 ### What happens if I re-configure another trigger after configuring one?
 **Note: **After successfully configuring a trigger, if you re-configure any other trigger you will be prompted to revert to the previously configured trigger. You can revert back to the last trigger configurations by clicking the **Revert Changes **button.

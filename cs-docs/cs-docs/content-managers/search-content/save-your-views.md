@@ -19,9 +19,9 @@ This page explains how to use the Views feature in Contentstack to save your sea
 The Views feature in Contentstack allows you to save your search settings for easy access later.
 
 To save a view, log in to your [Contentstack account](https://www.contentstack.com/login) and follow these steps:
-- Navigate to your [stack](https://www.contentstack.com/docs/developers/set-up-stack/about-stack) and select the “[Entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries)” or “[Assets](https://www.contentstack.com/docs/content-managers/author-content/about-assets)” module.
+- Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the “[Entries](../author-content/about-entries.md)” or “[Assets](../author-content/about-assets.md)” module.
 - By default, you will see the **Views** tab in the left panel. Here, you will see a list of **Popular Views**. Consider you select the **Last Modified by Me** view.
-- Apply filters or perform [advanced search](https://www.contentstack.com/docs/content-managers/search-content/advanced-search) to further refine the **Last Modified by Me** search results. Here are the list of changes or preference that you can apply to the entries or assets list page and save the view:Search text results
+- Apply filters or perform [advanced search](./advanced-search.md) to further refine the **Last Modified by Me** search results. Here are the list of changes or preference that you can apply to the entries or assets list page and save the view:Search text results
 - Applied filters
 - Advanced search results
 - Customized filters preferences (applied through “Manage Filters”)

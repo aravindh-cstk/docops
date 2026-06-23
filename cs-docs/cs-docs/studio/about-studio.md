@@ -22,7 +22,7 @@ Studio is a web experience builder designed for enterprise use. It enables devel
 
 With its intuitive visual interface, teams can drag and drop components to build structured layouts. Developers can layer in business logic and integrations where needed, enabling business users to create pages and layouts within defined guardrails, without compromising code quality.
 
-You can create projects, link them to a [stack](/docs/developers/set-up-stack/about-stack), and build dynamic pages from scratch or with pre-built templates. Features like content type support, real-time data binding, and responsive layouts make it easy to design and launch content-rich pages, without writing code.
+You can create projects, link them to a [stack](../developers/set-up-stack/about-stack.md), and build dynamic pages from scratch or with pre-built templates. Features like content type support, real-time data binding, and responsive layouts make it easy to design and launch content-rich pages, without writing code.
 
 ## Who Is It For?
 

@@ -16,13 +16,13 @@ This page explains how to configure Contentstack Live Preview with GraphQL for a
 
 ## Set Up Live Preview with GraphQL for CSR
 
-Use [GraphQL APIs](https://www.contentstack.com/docs/developers/graphql-api/about-graphql) to preview content in real time with [Live Preview](https://www.contentstack.com/docs/content-managers/author-content/about-live-preview). This guide explains how to configure Live Preview with GraphQL for a Client-side Rendering (CSR) website.
+Use [GraphQL APIs](../graphql-api/about-graphql.md) to preview content in real time with [Live Preview](../../content-managers/author-content/about-live-preview.md). This guide explains how to configure Live Preview with GraphQL for a Client-side Rendering (CSR) website.
 
 ## Prerequisites
 
 - [Contentstack account](https://www.contentstack.com/login)
-- Access to [stack settings](/docs/developers/set-up-stack/view-stack-details)
-- [Preview token](https://www.contentstack.com/docs/developers/create-tokens/about-delivery-tokens#understanding-preview-tokens)
+- Access to [stack settings](../set-up-stack/view-stack-details.md)
+- [Preview token](../create-tokens/about-delivery-tokens.md#understanding-preview-tokens)
 - IFrame-compatible website to avoid [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors
 
 Follow these steps to configure Live Preview with GraphQL for your CSR website:
@@ -180,7 +180,7 @@ export const gqlRequest = async (gql) => {
 
 In this example, ContentstackLivePreview.hash detects when the website runs inside the preview panel. When this value is present, it switches the hostname and adds both the live_preview and preview_token headers to enable Live Preview.
 
-**Note:** Always use a preview token for Live Preview instead of a read-only management token. For region-specific hostnames, refer to the [Base URLs for Live Preview](/docs/developers/apis/graphql-content-delivery-api#base-urls-for-live-preview) section.
+**Note:** Always use a preview token for Live Preview instead of a read-only management token. For region-specific hostnames, refer to the [Base URLs for Live Preview](../../../api-docs/api-detail/graphql-content-delivery-api.md#base-urls-for-live-preview) section.
 
 ### Configure Live Preview across Each Webpage
 
@@ -229,7 +229,7 @@ setData(fetchedData);
 
 ## Host the Website
 
-To host a website, you can simply use [launch](/docs/developers/launch) or any other website hosting service.
+To host a website, you can simply use [launch](../launch.md) or any other website hosting service.
 
 ## Update Stack Settings
 
@@ -418,7 +418,7 @@ ContentstackLivePreview.init({
 
 Here, the `clientUrlParams` key is optional and is set for the North America region.
 
-For other [Europe](/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt) region, you can use the following configurations for `clientUrlParams`:.
+For other [Europe](../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) region, you can use the following configurations for `clientUrlParams`:.
 
 ```
 {

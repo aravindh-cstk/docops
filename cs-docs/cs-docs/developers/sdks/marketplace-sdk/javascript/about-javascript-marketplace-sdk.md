@@ -26,7 +26,7 @@ It houses third-party integrations, UI extensions (such as dashboard, sidebar, c
 - **Perform operations on Apps:** Using the JavaScript Marketplace SDK, you have the capability to execute various operations on Marketplace apps, including Installation, Authorization, Configuration, and more.
 - **Easy Request for App Installation: **A user who does not have access to install apps from the Marketplace can request the stack or organization admin to get the app installed. Only organization admins can accept or reject the request raised by the user.
 - **Secured access with authorization: **When authorizing a Contentstack app, the app requests access to perform specific operations on behalf of the user. After the user authenticates and grants access, the app receives an access token. This token is then used as a credential when making calls to the Contentstack APIs.
-- **Install Marketplace Apps with Ease: **Starter Apps can be [installed via the Marketplace](/docs/developers/marketplace-platform-guides/installing-a-starter#install-starter-via-marketplace-app). Additionally you can [Install Starter via Stack Creation Experience](/docs/developers/marketplace-platform-guides/installing-a-starter#install-starter-via-stack-creation-experience) as well.
+- **Install Marketplace Apps with Ease: **Starter Apps can be [installed via the Marketplace](../../../marketplace-platform-guides/installing-a-starter.md#install-starter-via-marketplace-app). Additionally you can [Install Starter via Stack Creation Experience](../../../marketplace-platform-guides/installing-a-starter.md#install-starter-via-stack-creation-experience) as well.
 
 ## Quickstart With JavaScript Marketplace SDK
 

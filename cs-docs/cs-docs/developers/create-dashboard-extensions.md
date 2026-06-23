@@ -24,7 +24,7 @@ Create Dashboard Extensions
 
 ##### Introduction
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Dashboard UI Location](/docs/developers/developer-hub/dashboard-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [Dashboard UI Location](./developer-hub/dashboard-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 The Dashboard Extension is a type of extension that lets you create widgets for your stack dashboard.
 

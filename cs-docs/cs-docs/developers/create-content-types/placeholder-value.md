@@ -24,9 +24,9 @@ Placeholder Value
 
 #### Content
 
-The **Placeholder Value** enables you to provide a hint text about the values that need to be entered in an input field. On the [entry](/docs/content-managers/working-with-entries/about-entries) page, this text is visible inside the input area, and disappears once the user starts typing in the field.
+The **Placeholder Value** enables you to provide a hint text about the values that need to be entered in an input field. On the [entry](../../content-managers/author-content/about-entries.md) page, this text is visible inside the input area, and disappears once the user starts typing in the field.
 
-For example, for a **Name **([Group](/docs/developers/create-content-types/group)) field, you have two fields for **First** and **Last **name, you can use placeholder values for both the fields. After you configure these fields and [create an entry](/docs/content-managers/working-with-entries/create-an-entry), you will see this property on the entry page as shown below:
+For example, for a **Name **([Group](./group.md)) field, you have two fields for **First** and **Last **name, you can use placeholder values for both the fields. After you configure these fields and [create an entry](../../content-managers/author-content/create-an-entry.md), you will see this property on the entry page as shown below:
 
 ## Common questions
 
@@ -34,7 +34,7 @@ For example, for a **Name **([Group](/docs/developers/create-content-types/group
 It enables you to provide a hint text about the values that need to be entered in an input field.
 
 ### Where is the Placeholder Value shown?
-On the [entry](/docs/content-managers/working-with-entries/about-entries) page, it is visible inside the input area, and disappears once the user starts typing in the field.
+On the [entry](../../content-managers/author-content/about-entries.md) page, it is visible inside the input area, and disappears once the user starts typing in the field.
 
 ### Can I use Placeholder Value for fields inside a Group?
-Yes. For example, for a **Name **([Group](/docs/developers/create-content-types/group)) field with **First** and **Last **name fields, you can use placeholder values for both the fields.
+Yes. For example, for a **Name **([Group](./group.md)) field with **First** and **Last **name fields, you can use placeholder values for both the fields.

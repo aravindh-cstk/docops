@@ -14,7 +14,7 @@ last_updated: 2026-03-25
 
 This page explains the different ways developers can fetch content from Contentstack (APIs, SDKs, and other tools). It is intended for developers integrating Contentstack into web, mobile, or backend systems and should be used when choosing the right content retrieval method for your application’s architecture and delivery needs.
 
-Contentstack is an **API-first **[**headless CMS**](/docs/overview/what-is-headless-cms) that separates your content backend from the frontend, giving developers complete flexibility in delivering content across various channels.
+Contentstack is an **API-first **[**headless CMS**](../overview/what-is-headless-cms.md) that separates your content backend from the frontend, giving developers complete flexibility in delivering content across various channels.
 
 You can fetch content using a variety of APIs and tools, depending on your application’s structure and requirements—whether you’re building a dynamic web app, mobile application, or syncing content to a local environment.
 
@@ -24,59 +24,59 @@ Contentstack offers multiple read-only APIs that let you fetch content in variou
 
 ### Content Delivery API
 
-Use the [Content Delivery API](/docs/developers/apis/content-delivery-api) to retrieve live, published content from your [stack](/docs/developers/set-up-stack/about-stack) and deliver it to your digital properties.
+Use the [Content Delivery API](../../api-docs/api-detail/content-delivery-api.md) to retrieve live, published content from your [stack](./set-up-stack/about-stack.md) and deliver it to your digital properties.
 - Read-only API for published content
 - Supports multiple platforms: web, mobile, smart displays, wearables, etc.
 - Ideal for delivering real-time content directly from Contentstack to your frontend
 
 ### GraphQL Delivery API
 
-The [GraphQL Content Delivery API](/docs/developers/apis/graphql-content-delivery-api) lets you fetch precise, structured content from multiple types using a single query.
-- Fetch customized content using a single read-only [API endpoint](/docs/developers/contentstack-regions/api-endpoints)
-- Retrieve entries and assets from multiple [content types](/docs/developers/create-content-types/about-content-types)
+The [GraphQL Content Delivery API](../../api-docs/api-detail/graphql-content-delivery-api.md) lets you fetch precise, structured content from multiple types using a single query.
+- Fetch customized content using a single read-only [API endpoint](./contentstack-regions/api-endpoints.md)
+- Retrieve entries and assets from multiple [content types](./create-content-types/about-content-types.md)
 - Fetch nested or related resources without multiple API calls
 
 ### Synchronization API
 
-Use the [Synchronization API](/docs/developers/apis/content-delivery-api#synchronization) to keep your local app data in sync with Contentstack by fetching only the latest updates.
+Use the [Synchronization API](../../api-docs/api-detail/content-delivery-api.md#synchronization) to keep your local app data in sync with Contentstack by fetching only the latest updates.
 - Read-only API for delta content updates
 - Efficient for apps that require offline access or local caching
 - Suitable for mobile apps, kiosks, or distributed systems
 
 ### Image Delivery API
 
-Manipulate and deliver images stored in your Contentstack stack using the [Image Delivery API](/docs/developers/apis/image-delivery-api).
+Manipulate and deliver images stored in your Contentstack stack using the [Image Delivery API](../../api-docs/api-detail/image-delivery-api.md).
 - Read-only API for image retrieval
 - Supports real-time manipulation via URL parameters
 - Optimize image performance with resizing, cropping, trimming, quality control, and DPR adjustments
 
 ### Content Management API
 
-The [Content Management API](/docs/developers/apis/content-management-api) gives you complete control over managing the content of your Contentstack account.
-- Read-write API to create, update, and delete [entries](https://www.contentstack.com/docs/content-managers/author-content/about-entries) and [assets](/docs/content-managers/author-content/about-assets)
-- Supports content types, [workflows](https://www.contentstack.com/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks), and user management
+The [Content Management API](../../api-docs/api-detail/content-management-api.md) gives you complete control over managing the content of your Contentstack account.
+- Read-write API to create, update, and delete [entries](../content-managers/author-content/about-entries.md) and [assets](../content-managers/author-content/about-assets.md)
+- Supports content types, [workflows](./set-up-workflows-and-publish-rules/about-workflow-tasks.md), and user management
 - Fetches both draft and published content
 - Ideal for admin operations, automation, and custom CMS tooling
 
 ## Fetch Content Using SDKs
 
-To simplify integration, Contentstack offers [SDKs](/docs/developers/sdks) across multiple [languages](/docs/developers/multilingual-content/about-languages) and platforms to simplify content retrieval and management within your development environment.
+To simplify integration, Contentstack offers [SDKs](/docs/developers/sdks) across multiple [languages](./multilingual-content/about-languages.md) and platforms to simplify content retrieval and management within your development environment.
 
 Each SDK includes API references, [sample apps](/docs/developers/sample-apps/), and installation guides for quick setup.
 
 **Available SDKs:**
-- [TypeScript](/docs/developers/sdks/content-delivery-sdk/typescript/)
-- [JavaScript](/docs/developers/sdks/content-delivery-sdk/javascript-browser/)
-- [Node.js](/docs/developers/sdks/content-delivery-sdk/nodejs/)
-- [PHP](/docs/developers/sdks/content-delivery-sdk/php/)
-- [Java](/docs/developers/sdks/content-delivery-sdk/java/)
-- [.NET](/docs/developers/sdks/content-delivery-sdk/dot-net/)
-- [Python](/docs/developers/sdks/content-delivery-sdk/python/)
-- [Ruby](/docs/developers/sdks/content-delivery-sdk/ruby/)
-- [Android](/docs/developers/sdks/content-delivery-sdk/android/)
-- [iOS](/docs/developers/sdks/content-delivery-sdk/ios/)
-- [Dart](/docs/developers/sdks/content-delivery-sdk/dart/)
-- [React Native](/docs/developers/sdks/content-delivery-sdk/react-native/)
+- [TypeScript](./sdks/content-delivery-sdk/typescript.md)
+- [JavaScript](./sdks/content-delivery-sdk/javascript-browser.md)
+- [Node.js](./sdks/content-delivery-sdk/nodejs.md)
+- [PHP](./sdks/content-delivery-sdk/php.md)
+- [Java](./sdks/content-delivery-sdk/java.md)
+- [.NET](./sdks/content-delivery-sdk/dot-net.md)
+- [Python](./sdks/content-delivery-sdk/python.md)
+- [Ruby](./sdks/content-delivery-sdk/ruby.md)
+- [Android](./sdks/content-delivery-sdk/android.md)
+- [iOS](./sdks/content-delivery-sdk/ios.md)
+- [Dart](./sdks/content-delivery-sdk/dart.md)
+- [React Native](./sdks/content-delivery-sdk/react-native.md)
 
 ## Fetch Content Using Other Tools
 
@@ -84,7 +84,7 @@ In addition to APIs and SDKs, Contentstack provides other tools to help automate
 
 ### Webhooks
 
-[Webhooks](https://www.contentstack.com/docs/developers/set-up-webhooks/about-webhooks) let you send real-time notifications to custom endpoints when specific events occur in Contentstack.
+[Webhooks](./set-up-webhooks/about-webhooks.md) let you send real-time notifications to custom endpoints when specific events occur in Contentstack.
 - Trigger actions on content publishing, deletion, and more
 - Integrate with third-party services or CI/CD pipelines
 
@@ -92,7 +92,7 @@ Use for triggering deployments, alerts, or syncing changes with external systems
 
 ### Contentstack DataSync
 
-[DataSync](/docs/developers/develop-apps-with-datasync/about-contentstack-datasync) helps you sync published content from your stack to local backends like MongoDB or file systems.
+[DataSync](./develop-apps-with-datasync/about-contentstack-datasync.md) helps you sync published content from your stack to local backends like MongoDB or file systems.
 - Keeps local databases updated with the latest published changes
 - Suitable for offline or low-connectivity environments
 - Ideal for applications that require fast, reliable access to synced content

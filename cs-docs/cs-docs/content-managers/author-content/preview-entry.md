@@ -25,10 +25,10 @@ Preview Entry
 
 ##### Content
 
-With Contentstack's [Timeline](/docs/content-managers/timeline/about-timeline) feature, you can now see how changes made to any entry will appear on your website in the future. Follow these steps to preview an entry:
+With Contentstack's [Timeline](../timeline/about-timeline.md) feature, you can now see how changes made to any entry will appear on your website in the future. Follow these steps to preview an entry:
 
 To preview an entry, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Click on the [Entries](/docs/content-managers/author-content/about-entries) icon in the left navigation panel or use the shortcut key “E” (applicable for both Windows and Mac OS users).
+- Click on the [Entries](./about-entries.md) icon in the left navigation panel or use the shortcut key “E” (applicable for both Windows and Mac OS users).
 - Navigate to the entry you want to preview. Click on the “vertical ellipsis” in the **Actions** column and select **Preview**.**Note**: You can preview only the latest versions of your entry.
 
 Depending on the scenario of your entry’s publish status you will see the following modals:

@@ -17,17 +17,17 @@ This page explains how to rename an existing language in a Contentstack stack, i
 
 ## Rename a Language
 
-Contentstack allows you to rename the existing [languages](/docs/developers/multilingual-content/about-languages) of your [stack](/docs/developers/set-up-stack/about-stack).
+Contentstack allows you to rename the existing [languages](./about-languages.md) of your [stack](../set-up-stack/about-stack.md).
 
 To rename a language, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to your stack, click the “Settings” icon (press “S”) on the left navigation panel, and select **Languages **(or press “**alt + L**” for Windows OS, and “option + **L**” for Mac OS). You will see the default [master language](/docs/developers/multilingual-content/set-the-master-language) along with other added language(s).
+- Go to your stack, click the “Settings” icon (press “S”) on the left navigation panel, and select **Languages **(or press “**alt + L**” for Windows OS, and “option + **L**” for Mac OS). You will see the default [master language](./set-the-master-language.md) along with other added language(s).
 - This opens the **Languages** page that displays the list of languages added to the stack. Click on a language to rename it.
 - Provide a suitable **Name** for the language. For example, **Hindi - India** can be renamed to **Hindi**.**Note**: You cannot edit the code of a language
 - Click on **Save**.
 
 ## API Reference
 
-To rename a language via API request, refer to [Update language](/docs/developers/apis/content-management-api#update-language).
+To rename a language via API request, refer to [Update language](../../../api-docs/api-detail/content-management-api.md#update-language).
 
 ## Common questions
 
@@ -38,7 +38,7 @@ No. **Note**: You cannot edit the code of a language
 Go to your stack, click the “Settings” icon (press “S”) on the left navigation panel, and select **Languages **.
 
 ### Is there an API to rename a language?
-Yes. To rename a language via API request, refer to [Update language](/docs/developers/apis/content-management-api#update-language).
+Yes. To rename a language via API request, refer to [Update language](../../../api-docs/api-detail/content-management-api.md#update-language).
 
 ### Do I need to be in a specific stack to rename a language?
 Yes. Go to your stack and then open **Languages** from **Settings**.

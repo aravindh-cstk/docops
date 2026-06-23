@@ -29,13 +29,13 @@ Learn more about [Automate](/docs/developers/automation-hub-guides/).
 
 Third-party applications are used as connectors to set up a trigger and action-based automation for automating tasks that you can use within Automate.
 
-Learn how to use [Automate Connectors](/docs/developers/automation-hub-connectors/).
+Learn how to use [Automate Connectors](../developers/automation-hub-connectors.md).
 
 ## Set up a Trigger based Event
 
 Using a webhook, you can keep your third-party application in sync with your Contentstack account by sending real-time information to any third-party app or service with user-defined HTTP callbacks.
 
-Learn more about [Setting up Webhooks](/docs/developers/set-up-webhooks/) and [Various Webhook Integrations](/docs/developers/set-up-webhooks/webhook-integrations/).
+Learn more about [Setting up Webhooks](/docs/developers/set-up-webhooks/) and [Various Webhook Integrations](../developers/set-up-webhooks/webhook-integrations.md).
 
 ## Common questions
 
@@ -49,4 +49,4 @@ Connectors are third-party applications used to set up trigger and action-based 
 Use webhooks when you want to keep a third-party application in sync with your Contentstack account by sending real-time information using user-defined HTTP callbacks.
 
 ### Where can I learn more about Automate, connectors, and webhooks?
-Use the links in this page: [Automate](/docs/developers/automation-hub-guides/), [Automate Connectors](/docs/developers/automation-hub-connectors/), [Setting up Webhooks](/docs/developers/set-up-webhooks/), and [Various Webhook Integrations](/docs/developers/set-up-webhooks/webhook-integrations/).
+Use the links in this page: [Automate](/docs/developers/automation-hub-guides/), [Automate Connectors](../developers/automation-hub-connectors.md), [Setting up Webhooks](/docs/developers/set-up-webhooks/), and [Various Webhook Integrations](../developers/set-up-webhooks/webhook-integrations.md).

@@ -16,7 +16,7 @@ This page lists reserved/restricted keywords you must avoid when defining user-d
 
 ## Restricted Keywords for UIDs
 
-When providing user-defined unique IDs (UIDs) for [content type](/docs/developers/create-content-types/about-content-types), [fields](/docs/developers/create-content-types/about-fields/), and [taxonomies](/docs/developers/taxonomy/about-taxonomy), avoid using certain reserved keywords.
+When providing user-defined unique IDs (UIDs) for [content type](./about-content-types.md), [fields](./about-fields.md), and [taxonomies](../taxonomy/about-taxonomy.md), avoid using certain reserved keywords.
 
 **Warning**: Avoid using these keywords as their usage may lead to code failure.
 

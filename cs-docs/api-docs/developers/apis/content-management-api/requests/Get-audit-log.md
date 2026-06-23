@@ -16,7 +16,7 @@ last_updated: 2024-02-29
 
 The Get audit log request is used to retrieve the audit log of a stack.
 
-You can apply queries to filter the results. Refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section for more details.  
+You can apply queries to filter the results. Refer to the [Queries](../../../../api-detail/content-delivery-api.md#queries) section for more details.  
 To configure the permissions for your application via OAuth, please include the cm.audit-logs:read scope.
 
 **Note:** You can retrieve audit log information only for 30 days prior to the current day (for an organization).

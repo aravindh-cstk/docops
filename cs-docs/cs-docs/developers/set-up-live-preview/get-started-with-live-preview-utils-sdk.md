@@ -16,7 +16,7 @@ This page explains how to install, initialize, and use the Live Preview Utils SD
 
 ## Get Started with Live Preview Utils SDK V2.0
 
-**Note:** Use [Live Preview Utils SDK version 3.0](/docs/developers/set-up-live-preview/get-started-with-live-preview-utils-sdk-v3/) or later for improved compatibility with the latest feature updates.
+**Note:** Use [Live Preview Utils SDK version 3.0](./get-started-with-live-preview-utils-sdk-v3.md) or later for improved compatibility with the latest feature updates.
 
 The Live Preview Utils SDK version 2 allows you to listen to entry change events triggered by the Contentstack app and update your website in real time. You can also configure the “Edit” button functionality to enhance collaboration and content editing workflows.
 
@@ -84,7 +84,7 @@ The `enable` property determines enablement or disablement of Live Preview commu
 
 #### ssr
 
-The `ssr` property defines the data update strategy for previewed content based on your app's rendering approach ([Server-Side Rendering](/docs/developers/set-up-live-preview/set-up-live-preview-with-rest-for-server-side-rendering/) or [Client-Side Rendering](/docs/developers/set-up-live-preview/set-up-live-preview-with-rest-for-client-side-rendering/)).
+The `ssr` property defines the data update strategy for previewed content based on your app's rendering approach ([Server-Side Rendering](./set-up-live-preview-with-rest-for-server-side-rendering.md) or [Client-Side Rendering](./set-up-live-preview-with-rest-for-client-side-rendering.md)).
 
 | Type | Default | Optional |
 | --- | --- | --- |
@@ -161,7 +161,7 @@ The `cleanCslpOnProduction` object removes `data-cslp` attributes from the websi
 
 #### stackDetails
 
-The `stackDetails` object contains stack-specific information for redirection to the corresponding entry whenever you use [edit tags](/docs/developers/set-up-live-preview/set-up-live-edit-tags-for-entries-with-rest/) within your website.
+The `stackDetails` object contains stack-specific information for redirection to the corresponding entry whenever you use [edit tags](./set-up-live-edit-tags-for-entries-with-rest.md) within your website.
 
 ```
 stackDetails: {

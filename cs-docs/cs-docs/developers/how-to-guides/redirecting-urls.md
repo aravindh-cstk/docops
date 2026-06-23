@@ -16,7 +16,7 @@ This page explains how to manage URL redirects in Contentstack-powered websites 
 
 **Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release.
 
-If you happen to change the URL of any already-published [entry](/docs/content-managers/author-content/about-entries), it is recommended that you redirect the previous URL to the newer one. This is considered as an appropriate SEO best practice as users trying to visit the older link to the website will be automatically taken to the newer link, instead of seeing a “Page not found” error.
+If you happen to change the URL of any already-published [entry](../../content-managers/author-content/about-entries.md), it is recommended that you redirect the previous URL to the newer one. This is considered as an appropriate SEO best practice as users trying to visit the older link to the website will be automatically taken to the newer link, instead of seeing a “Page not found” error.
 
 **Additional Resource:** If you're interested in knowing what are the best practices when it comes to managing SEO for your content, here's our [SEO Best Practices for Contentstack-powered Websites](/docs/developers/how-to-guides/seo-best-practices-for-contentstack-powered-websites) guide that you can refer to.
 
@@ -24,21 +24,21 @@ Let’s learn how to manage URL redirects using your Contentstack-powered websit
 
 ## Create a content type to handle URL redirects
 
-You need to create a separate [content type](/docs/developers/create-content-types/create-a-content-type/) to manage the redirection of the changed URLs.
+You need to create a separate [content type](../create-content-types/create-a-content-type.md) to manage the redirection of the changed URLs.
 
-- [Create a new content type](/docs/developers/create-content-types/create-a-content-type) within your Contentstack [stack](/docs/developers/set-up-stack/about-stack)
+- [Create a new content type](../create-content-types/create-a-content-type.md) within your Contentstack [stack](../set-up-stack/about-stack.md)
 - Provide a suitable name for the content type, such as **Redirect**
-- Set it as a [Multiple](/docs/developers/create-content-types/multiple) content type of [Content Block](/docs/developers/create-content-types/webpage-vs-content-block) type
-- Add two [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) fields to the content type and name them **From** and **To**, respectively
+- Set it as a [Multiple](../create-content-types/multiple.md) content type of [Content Block](/docs/developers/create-content-types/webpage-vs-content-block) type
+- Add two [Single Line Textbox](../create-content-types/single-line-textbox.md) fields to the content type and name them **From** and **To**, respectively
 
 This creates your Redirect content type. You can now add your redirect links as entries.
 
 ## Create entries to manage redirection of URLs
 
-If you change the URL of any [published entry](/docs/content-managers/working-with-entries/publish-an-entry), perform the following steps to manage URL redirects:
+If you change the URL of any [published entry](../../content-managers/author-content/publish-an-entry.md), perform the following steps to manage URL redirects:
 
-- [Create an entry](/docs/content-managers/working-with-entries/create-an-entry) for your **Redirect** content type.
-- In the **From** [field](/docs/developers/create-content-types/about-fields), mention the URL that has been modified or no longer exists.
+- [Create an entry](../../content-managers/author-content/create-an-entry.md) for your **Redirect** content type.
+- In the **From** [field](../create-content-types/about-fields.md), mention the URL that has been modified or no longer exists.
 - In the **To** field, mention the new URL.
 - After you enter relevant content in all the available fields, save and publish the entry to the specified publishing environment.
 
@@ -75,7 +75,7 @@ No. **Note: **This page is no longer maintained, and the underlying code may be 
 It is recommended that you redirect the previous URL to the newer one as an appropriate SEO best practice so users visiting the older link are automatically taken to the newer link instead of seeing a “Page not found” error.
 
 ### What fields are required in the Redirect content type?
-Add two [Single Line Textbox](/docs/developers/create-content-types/single-line-textbox) fields to the content type and name them **From** and **To**, respectively.
+Add two [Single Line Textbox](../create-content-types/single-line-textbox.md) fields to the content type and name them **From** and **To**, respectively.
 
 ### How does the script decide between a temporary and permanent redirect?
 The script checks if the URL is temporary or permanent (using the code 301 and 302), and you can add a Boolean field in the Redirect content type to indicate whether 302 (temporary) or 301 (permanent) should be used.

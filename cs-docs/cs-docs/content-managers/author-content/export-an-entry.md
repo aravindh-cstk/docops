@@ -20,17 +20,17 @@ This page explains how to export an existing entry from Contentstack as a JSON f
 Exporting an entry in Contentstack allows you to download its data in JSON format, making content migration, backup, or reuse seamless.
 
 To export an existing entry, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
 - Select the entry you want to export.
 - Click the **horizontal ellipses** at the bottom of the entry editor, and select **Export**.
 - You get a JSON file of the entry in your local system. You can modify this file as needed and import it to the stack.
 - Alternatively, you can also export the entry from the entry list page.Locate the entry you want to export and click the **vertical ellipsis** in the **Actions** column
 - From the dropdown menu, select **Export**.
 
-**Additional Resource: **To export content types or multiple entries, refer to the [Export Content Using the CLI](/docs/developers/cli/export-content-using-the-cli/) documentation.
+**Additional Resource: **To export content types or multiple entries, refer to the [Export Content Using the CLI](../../developers/cli/export-content-using-the-cli.md) documentation.
 
 ## API Reference
-To export an entry via API, refer to the [Export an entry](/docs/developers/apis/content-management-api#export-entry) API request.
+To export an entry via API, refer to the [Export an entry](../../../api-docs/api-detail/content-management-api.md#export-entry) API request.
 
 ## Common questions
 
@@ -44,6 +44,6 @@ Locate the entry you want to export and click the **vertical ellipsis** in the *
 You get a JSON file of the entry in your local system.
 
 **Where can I find instructions to export multiple entries or content types?**  
-Refer to the [Export Content Using the CLI](/docs/developers/cli/export-content-using-the-cli/) documentation.
+Refer to the [Export Content Using the CLI](../../developers/cli/export-content-using-the-cli.md) documentation.
 
 <!-- filename: author-content-export-an-entry.md -->

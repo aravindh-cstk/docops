@@ -29,7 +29,7 @@ This guide provides a step-by-step walkthrough for editing custom attributes in 
 **Note:** Users with Owner and Member access to a Personalize project can edit existing custom attributes.
 
 ## Steps for Execution
-**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](/docs/personalize/create-personalize-project) and create a project in Personalize.
+**Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
 To edit an existing custom attribute, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
@@ -37,11 +37,11 @@ To edit an existing custom attribute, log in to your [Contentstack account](http
 - Click the **Attributes** tab.
 - You can edit an existing custom attribute by clicking your attribute to open it or by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Edit**.
 - In the **Edit Attribute** modal, make the necessary changes to the **Name**, **Key**, or **Description** fields.
-- Once you have done that, click the **Save** button to apply the changes.**Warning:** Editing a custom attribute (especially the key) that is referenced in an Audience or Experience might affect your audience segmentation and personalized experiences. Ensure you update any references to the modified attribute accordingly. You must reset the Attribute Key used in the `Set and Update User Attributes` request via the [Personalize Edge API](/docs/developers/apis/personalize-edge-api#user-attributes) and the `set` method via the Personalize Edge SDK.
+- Once you have done that, click the **Save** button to apply the changes.**Warning:** Editing a custom attribute (especially the key) that is referenced in an Audience or Experience might affect your audience segmentation and personalized experiences. Ensure you update any references to the modified attribute accordingly. You must reset the Attribute Key used in the `Set and Update User Attributes` request via the [Personalize Edge API](../../api-docs/api-detail/personalize-edge-api.md#user-attributes) and the `set` method via the Personalize Edge SDK.
 
 You will get a success message after the Custom Attribute has been successfully edited.
 
-**Additional Resource:** You can use the [Personalize Management API](https://www.contentstack.com/docs/developers/apis/personalize-management-api#attributes) to create, edit, delete, and retrieve all existing attributes.
+**Additional Resource:** You can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#attributes) to create, edit, delete, and retrieve all existing attributes.
 
 ## Common questions
 
@@ -55,4 +55,4 @@ In the **Edit Attribute** modal, you can make changes to the **Name**, **Key**, 
 Editing a custom attribute (especially the key) that is referenced in an Audience or Experience might affect your audience segmentation and personalized experiences, and you must update any references accordingly.
 
 ### Is there an API to manage attributes instead of using the UI?
-Yes, you can use the [Personalize Management API](https://www.contentstack.com/docs/developers/apis/personalize-management-api#attributes) to create, edit, delete, and retrieve all existing attributes.
+Yes, you can use the [Personalize Management API](../../api-docs/api-detail/personalize-management-api.md#attributes) to create, edit, delete, and retrieve all existing attributes.

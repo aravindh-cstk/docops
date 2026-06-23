@@ -19,7 +19,7 @@ Analytics for Digital Concierge
 
 This dashboard provides detailed insights into how Digital Concierge is used across your organization. Digital Concierge is a knowledge-first chatbot built on Contentstack Agent OS that delivers responses using indexed knowledge sources. Use these metrics to monitor agent activity, conversation trends, knowledge base updates, and overall Digital Concierge usage across your organization.
 
-**Note:** Only organization [Owner](/docs/developers/organization/organization-roles#organization-owner), [Admin](/docs/developers/organization/organization-roles#organization-admin), and Product Analytics Viewer roles can access Analytics.
+**Note:** Only organization [Owner](../developers/organization/organization-roles.md#organization-owner), [Admin](../developers/organization/organization-roles.md#organization-admin), and Product Analytics Viewer roles can access Analytics.
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to **Analytics** through the “App Switcher”.

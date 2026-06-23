@@ -16,7 +16,7 @@ This page explains what the Sub Automation action connector is and how to config
 
 ## Sub Automation Action
 
-A sub automation involves creating smaller, specialized automation tasks as part of a larger automation process. These sub automations help break down complex tasks into more manageable steps, making it easier to design, implement, and maintain the overall automation process. The Automate Sub Automation action connector lets you fetch the sub automation created in a project. This can be useful while working with the ChatGPT based [Function Calling](/docs/developers/automation-hub-connectors/chatgpt#action-4-select-the-function-calling-action) action.
+A sub automation involves creating smaller, specialized automation tasks as part of a larger automation process. These sub automations help break down complex tasks into more manageable steps, making it easier to design, implement, and maintain the overall automation process. The Automate Sub Automation action connector lets you fetch the sub automation created in a project. This can be useful while working with the ChatGPT based [Function Calling](./chatgpt.md#action-4-select-the-function-calling-action) action.
 
 ## Set up the Sub Automation Action
 
@@ -42,7 +42,7 @@ In this use case, we will cover a scenario where, if a user creates a new entry 
 - Click **Configure Trigger** from the left navigation panel.
 - Within the **Configure Trigger** **Step**, click the **Contentstack **connector.
 - Under the **Choose Trigger** step, select the **Entry Trigger**.
-- Click **+ Add New Account** to add your Contentstack account. For more information refer to the [Contentstack Trigger](/docs/developers/automation-hub-connectors/contentstack-trigger) documentation.
+- Click **+ Add New Account** to add your Contentstack account. For more information refer to the [Contentstack Trigger](./contentstack-trigger.md) documentation.
 - Select the **Event **and the **Stack **for which you want to configure the trigger.
 - Optionally enable the **Show Optional Fields** toggle to select the Content Type in which you want to create an entry.
 - Click the **Proceed **button.
@@ -55,7 +55,7 @@ In this use case, we will cover a scenario where, if a user creates a new entry 
 - Within the **Configure Action step**, click the **Sub Automation **connector.
 - Under **Choose an Action**, select the **Sub Automation **action.
 - Select the **Sub Automation **from the Lookup dropdown. You see a list of all the sub automations created in a project.
-- Enter the data in the **Sub Automation Template**. This fetches the template for the selected sub automation. In our case, we are using a [Sub Automation](/docs/developers/automation-hub-connectors/sub-automation-trigger) trigger.
+- Enter the data in the **Sub Automation Template**. This fetches the template for the selected sub automation. In our case, we are using a [Sub Automation](./sub-automation-trigger.md) trigger.
   In the **Value **field, select the entry name created in the entry trigger as shown below:
 - Click the **Proceed **button.
 - Click the **Test Action **button.
@@ -91,4 +91,4 @@ These sub automations help break down complex tasks into more manageable steps, 
 **Note:** Only **Live **Sub Automation(s) will be displayed in the drop-down menu.
 
 ### Can this be used with ChatGPT Function Calling?
-This can be useful while working with the ChatGPT based [Function Calling](/docs/developers/automation-hub-connectors/chatgpt#action-4-select-the-function-calling-action) action.
+This can be useful while working with the ChatGPT based [Function Calling](./chatgpt.md#action-4-select-the-function-calling-action) action.

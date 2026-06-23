@@ -17,9 +17,9 @@ This page explains how to export a Contentstack webhook in JSON format. It is in
 
 ## Export a Webhook
 
-Contentstack allows you to export a [webhook](/docs/developers/set-up-webhooks/about-webhooks) in JSON format.
+Contentstack allows you to export a [webhook](./about-webhooks.md) in JSON format.
 
-To export a webhook, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](/docs/developers/set-up-stack/about-stack), and perform the following steps:
+To export a webhook, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon (press “S”) on the left navigation panel, and select **Webhooks **(press “alt + W” for Windows OS, and “option + W” for Mac OS).
 - Click the vertical ellipses in the **Actions** column for the webhook you want to export, then select the **Export** option from the dropdown menu.
 
@@ -30,8 +30,8 @@ This will download the JSON file of the webhook into your local storage system.
 ## API Reference
 
 Here are the links to the API requests related to this action:
-- [Export a webhook](/docs/developers/apis/content-management-api#export-a-webhook)
-- [Import a webhook](/docs/developers/apis/content-management-api#import-a-webhook)
+- [Export a webhook](../../../api-docs/api-detail/content-management-api.md#export-a-webhook)
+- [Import a webhook](../../../api-docs/api-detail/content-management-api.md#import-a-webhook)
 
 ## Common questions
 
@@ -45,4 +45,4 @@ A: From **Settings** → **Webhooks**, use the **Actions** column menu for the w
 A: This will download the JSON file of the webhook into your local storage system.
 
 **Q: Is there an API for exporting or importing webhooks?**  
-A: Yes. See **API Reference** links for [Export a webhook](/docs/developers/apis/content-management-api#export-a-webhook) and [Import a webhook](/docs/developers/apis/content-management-api#import-a-webhook).
+A: Yes. See **API Reference** links for [Export a webhook](../../../api-docs/api-detail/content-management-api.md#export-a-webhook) and [Import a webhook](../../../api-docs/api-detail/content-management-api.md#import-a-webhook).

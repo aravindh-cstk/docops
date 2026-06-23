@@ -40,7 +40,7 @@ Redirecting to a subdomain offers several benefits:
 
 Launch supports redirection to any valid URL—not just to `www` subdomains.
 
-**Additional Resource:** To configure apex domain redirection, refer to the [Apex Domain Redirection Guide](/docs/launch/custom-domain#adding-apex-domains-with-redirects).
+**Additional Resource:** To configure apex domain redirection, refer to the [Apex Domain Redirection Guide](./custom-domain.md#adding-apex-domains-with-redirects).
 
 ### Subdomain Routing
 
@@ -53,7 +53,7 @@ To add a subdomain:
 - Create a custom domain within the environment settings.
 - Point the subdomain to Launch using a CNAME record.
 
-**Additional Resource:** For step-by-step instructions, refer to the [Custom Subdomain Guide](/docs/launch/custom-domain#add-a-custom-subdomain).
+**Additional Resource:** For step-by-step instructions, refer to the [Custom Subdomain Guide](./custom-domain.md#add-a-custom-subdomain).
 
 ### URL Path Routing
 
@@ -67,8 +67,8 @@ Supported proxy sources include:
 
 You can implement path-based routing using one of the following approaches:
 
-- **Edge URL Rewrites**: Use a configuration file to define flexible, regex-based routing rules. Refer to the [Edge URL Rewrites](/docs/launch/edge-url-rewrites) for details.
-- **Edge Functions**: Write JavaScript logic for more advanced routing needs. Use this approach when configuration-based rewrites are not sufficient. Refer to the [Edge Functions](/docs/launch/edge-functions) to get started.
+- **Edge URL Rewrites**: Use a configuration file to define flexible, regex-based routing rules. Refer to the [Edge URL Rewrites](./edge-url-rewrites.md) for details.
+- **Edge Functions**: Write JavaScript logic for more advanced routing needs. Use this approach when configuration-based rewrites are not sufficient. Refer to the [Edge Functions](./edge-functions.md) to get started.
 
 Both methods are processed at the edge layer, which means the HTTP request never reaches the Launch origin. This ensures a high-performance, low-latency setup optimized for speed and scalability.
 
@@ -98,7 +98,7 @@ Pre-Provisioned Certificates are TLS certificates generated and set up in advanc
 To ensure a seamless cutover:
 
 - **Create a custom domain** in Launch.
-- **Generate the TXT records** required for domain validation directly through the Launch UI. For detailed steps, see [Adding apex domains with redirects](/docs/launch/custom-domain#adding-apex-domains-with-redirects).
+- **Generate the TXT records** required for domain validation directly through the Launch UI. For detailed steps, see [Adding apex domains with redirects](./custom-domain.md#adding-apex-domains-with-redirects).
 - **Add the TXT records** to your DNS settings to verify domain ownership.
 - Once the certificate is issued and marked active, **update your DNS records** to point to Launch’s CDN.
 
@@ -159,24 +159,24 @@ Before going live, thoroughly test your application in all configured environmen
 - Set up health checks for critical endpoints to monitor availability.
 - Configure alerts for system failures or anomalies.
 - Continuously monitor all external dependencies, such as APIs, databases, and third-party services.
-- Use the [Log Target](/docs/launch/log-targets) feature to forward logs to a monitoring service, enabling real-time tracking and alerting based on error logs.
+- Use the [Log Target](./log-targets.md) feature to forward logs to a monitoring service, enabling real-time tracking and alerting based on error logs.
 
 ### Performance Optimization
 
 There are several ways to optimize your site's performance while fully leveraging Launch's capabilities:
 
 - **Caching Strategy**: Configure caching headers and cache-control rules to reduce origin requests and improve load times.
-- **Optimize Images**: Use Contentstack’s [Image Delivery API](/docs/developers/apis/image-delivery-api) to serve optimized image formats for faster loading.
+- **Optimize Images**: Use Contentstack’s [Image Delivery API](../../../api-docs/api-detail/image-delivery-api.md) to serve optimized image formats for faster loading.
 - **Improve Script & Font Loading**: Defer or asynchronously load non-critical scripts. Serve fonts locally to reduce external requests and enhance privacy.
-- **Configure Launch Edge Features**: Set up and test [Redirects](/docs/launch/edge-url-redirects), [Rewrites](/docs/launch/edge-url-rewrites), or [Edge functions](/docs/launch/edge-functions) to ensure smooth operation.
-- **Enable CDN Cache Revalidation**: Ensure that [cache revalidation in Launch](/docs/launch/revalidate-cdn-cache) is enabled so outdated content is not served.
-- **Perform Load Test**: [Load testing](/docs/launch/load-testing) is essential to assess your application's performance, scalability, and reliability under expected traffic conditions. By simulating high traffic, it helps identify potential bottlenecks and ensures readiness for real-world scenarios.
-- **Search Engine Optimization**: After setting up a custom domain, the default `*.contentstackapps.com` domain remains accessible. To prevent duplicate content issues and ensure the default domain is not indexed by search engines, follow the [Blocking Default Launch Domains From Google Search](/docs/launch/blocking-default-launch-domains-from-google-search) guide.
+- **Configure Launch Edge Features**: Set up and test [Redirects](./edge-url-redirects.md), [Rewrites](./edge-url-rewrites.md), or [Edge functions](./edge-functions.md) to ensure smooth operation.
+- **Enable CDN Cache Revalidation**: Ensure that [cache revalidation in Launch](./revalidate-cdn-cache.md) is enabled so outdated content is not served.
+- **Perform Load Test**: [Load testing](./load-testing.md) is essential to assess your application's performance, scalability, and reliability under expected traffic conditions. By simulating high traffic, it helps identify potential bottlenecks and ensures readiness for real-world scenarios.
+- **Search Engine Optimization**: After setting up a custom domain, the default `*.contentstackapps.com` domain remains accessible. To prevent duplicate content issues and ensure the default domain is not indexed by search engines, follow the [Blocking Default Launch Domains From Google Search](./blocking-default-launch-domains-from-google-search.md) guide.
 
 ### Plans and Entitlements
 
 - Ensure your Launch plan and resource limits align with your project requirements to avoid service interruptions.
-- Check the Product Analytics section on Contentstack to review your usage and limits. For more details, refer to the [Product Analytics](/docs/developers/organization/product-analytics) guide.
+- Check the Product Analytics section on Contentstack to review your usage and limits. For more details, refer to the [Product Analytics](../organization/product-analytics.md) guide.
 - Contact [support](mailto:support@contentstack.com) if any limits appear incorrect.
 
 ### Cutover With Online Support

@@ -17,7 +17,7 @@ This page explains how to include Modular Blocks within a Global Field in Conten
 
 ## Modular Blocks within Global Fields
 
-You can include [Modular Blocks](/docs/developers/create-content-types/modular-blocks) within a [Global Field](/docs/developers/global-field/about-global-field) to create a reusable structure across multiple [content types](/docs/developers/create-content-types/about-content-types). This approach enables teams to manage dynamic, repeatable components from a single source, ensuring consistency and saving time.
+You can include [Modular Blocks](../create-content-types/modular-blocks.md) within a [Global Field](./about-global-field.md) to create a reusable structure across multiple [content types](../create-content-types/about-content-types.md). This approach enables teams to manage dynamic, repeatable components from a single source, ensuring consistency and saving time.
 
 For example, a car manufacturing company might need to manage the following across various web pages:
 - **Car Brands**: To display brand names and logos
@@ -26,10 +26,10 @@ For example, a car manufacturing company might need to manage the following acro
 
 Instead of adding these components separately to each content type, you can use a Global Field with Modular Blocks. Content managers can select, update, and maintain these shared components in one place. This reduces redundancy, improves consistency, and simplifies content maintenance.
 
-**Note:** Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can create Global fields and content types.
+**Note:** Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can create Global fields and content types.
 
 To add Modular Blocks within Global fields, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Content Models” icon in the left navigation panel or use the shortcut key “C”.
+- Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon in the left navigation panel or use the shortcut key “C”.
 - On the **Content Models** page, select **Global Fields** and click **+ New Global Field**.
 - Enter a **Name** and **Description** (optional), then click **Proceed**.
 - Click **Insert a field (+)**, select **Modular Blocks**, and enter a name.**Note:** You can add up to **5 Modular Blocks** fields in a content type.
@@ -59,7 +59,7 @@ By using Modular Blocks within Global fields, you can build dynamic, reusable co
 You can add up to **5 Modular Blocks** fields in a content type.
 
 **Who can create Global fields and content types?**  
-Only the stack [owner](/docs/developers/invite-users-and-assign-roles/types-of-roles#owner), [admin](/docs/developers/invite-users-and-assign-roles/types-of-roles#admin), and [developer](/docs/developers/invite-users-and-assign-roles/types-of-roles#developer) can create Global fields and content types.
+Only the stack [owner](../invite-users-and-assign-roles/types-of-roles.md#owner), [admin](../invite-users-and-assign-roles/types-of-roles.md#admin), and [developer](../invite-users-and-assign-roles/types-of-roles.md#developer) can create Global fields and content types.
 
 **Can I reference the same Global Field more than once?**  
 Yes, you can reference the same Global Field more than once in a content type or within a single Modular Blocks field.

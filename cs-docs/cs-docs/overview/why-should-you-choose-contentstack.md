@@ -160,7 +160,7 @@ The list can go on and on!
 
 If you are convinced by now that Contentstack is the ideal CMS solution to you, you can contact our [Support team](mailto:support@contentstack.com) to get a demonstration.
 
-If you are already using a CMS such as WordPress or Drupal, you can migrate your content to Contentstack. Refer our [Content Migration](/docs/developers/content-migration) docs for a detailed step-by-step process on how to get started with Contentstack.
+If you are already using a CMS such as WordPress or Drupal, you can migrate your content to Contentstack. Refer our [Content Migration](../developers/content-migration.md) docs for a detailed step-by-step process on how to get started with Contentstack.
 
 ## Common questions
 
@@ -178,4 +178,4 @@ Contentstack benefits both Developers and Content Managers equally.
 
 ### How can I get started or migrate to Contentstack?
 
-You can contact the [Support team](mailto:support@contentstack.com) to get a demonstration, and if you are already using a CMS such as WordPress or Drupal, you can migrate your content to Contentstack by referring the [Content Migration](/docs/developers/content-migration) docs.
+You can contact the [Support team](mailto:support@contentstack.com) to get a demonstration, and if you are already using a CMS such as WordPress or Drupal, you can migrate your content to Contentstack by referring the [Content Migration](../developers/content-migration.md) docs.

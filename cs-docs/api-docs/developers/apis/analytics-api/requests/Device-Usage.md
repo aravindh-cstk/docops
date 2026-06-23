@@ -16,7 +16,7 @@ last_updated: 2026-04-14
 
 The Device Usage request helps you get a list of devices that your organization users are using to access Contentstack services.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](/docs/developers/apis/analytics-api#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../../../../api-detail/analytics-api.md#retrieve-data) endpoint.
 
 ```
 {

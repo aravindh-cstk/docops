@@ -17,7 +17,7 @@ This page explains how Contentstack retries failed webhook deliveries using an e
 
 ## Webhook Retry Policy
 
-Contentstack follows an **exponential webhook retry policy** whenever any [webhook](/docs/developers/set-up-webhooks/about-webhooks) fails to send data to the desired notification URL or a session timeout occurs. We trigger the retry policy whenever a webhook request returns a non-2XX status code, i.e. 4XX or 5XX error codes, in the response.
+Contentstack follows an **exponential webhook retry policy** whenever any [webhook](./about-webhooks.md) fails to send data to the desired notification URL or a session timeout occurs. We trigger the retry policy whenever a webhook request returns a non-2XX status code, i.e. 4XX or 5XX error codes, in the response.
 
 **Note**: Contentstack waits for **30 seconds** to receive data from the destination server. If the destination server fails to send data within this timeframe, then the webhook request is timed out.
 
@@ -38,7 +38,7 @@ For instance, if the resend interval lasts for 5 seconds and the webhook can ret
 | 3 | 125 |
 | 4 | 625 |
 
-If the webhook request fails to run successfully after the last retry attempt, Contentstack stops retrying and marks the request with a failed status. You can [view the webhook logs](/docs/developers/set-up-webhooks/view-webhook-logs) to get more details on the failed request.
+If the webhook request fails to run successfully after the last retry attempt, Contentstack stops retrying and marks the request with a failed status. You can [view the webhook logs](./view-webhook-logs.md) to get more details on the failed request.
 
 ## Common questions
 
@@ -52,4 +52,4 @@ Contentstack waits for **30 seconds** to receive data from the destination serve
 The exponential retry policy attempts to send data to the destination URL again **four** more times after certain intervals.
 
 ### Where can I find details about failed webhook requests?
-You can [view the webhook logs](/docs/developers/set-up-webhooks/view-webhook-logs) to get more details on the failed request.
+You can [view the webhook logs](./view-webhook-logs.md) to get more details on the failed request.

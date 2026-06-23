@@ -50,8 +50,8 @@ SDK Resources For iOS
 
 ###### Links
 
-- [API Reference for iOS SDK](/docs/developers/sdks/content-delivery-sdk/ios/reference/)
-- [API Reference for Swift SDK](/docs/developers/sdks/content-delivery-sdk/swift/reference/)
+- [API Reference for iOS SDK](../../create-content-types/reference.md)
+- [API Reference for Swift SDK](../../create-content-types/reference.md)
 
 ###### Do More with iOS SDK
 

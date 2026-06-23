@@ -16,7 +16,7 @@ This page describes the Contentstack Management connector actions available for 
 
 ## Contentstack Management - Assets Actions
 
-Within Contentstack, all uploaded files such as images, videos, PDFs, audio files, and more are stored in your repository for later access. This repository, where uploaded files reside, is referred to as [Assets](/docs/content-managers/author-content/about-assets/). You can perform asset based operations using the following Contentstack Management Assets actions.
+Within Contentstack, all uploaded files such as images, videos, PDFs, audio files, and more are stored in your repository for later access. This repository, where uploaded files reside, is referred to as [Assets](../content-managers/author-content/about-assets.md). You can perform asset based operations using the following Contentstack Management Assets actions.
 
 Let’s look at each of them in detail.
 
@@ -84,14 +84,14 @@ This action lets you fetch details of all entries in which the selected asset is
         If you have assets stored in nested folders within your Contentstack CMS, you can also select those assets.
 
         **Note:** By default, the main branch is selected (even if the Branch field is empty).
-- Optionally, enable the **Show Optional Fields** toggle button to display the **Version **field. Here, you can enter the asset [Version](/docs/content-managers/author-content/about-asset-versioning) to fetch the details of the asset.
+- Optionally, enable the **Show Optional Fields** toggle button to display the **Version **field. Here, you can enter the asset [Version](../content-managers/author-content/about-asset-versioning.md) to fetch the details of the asset.
 - Once done, click **Proceed**.
 - Click **Test Action** to test the configured action.
 - The output will be shown as follows. Click the **Save and Exit** button.
 
 ## Publish an Asset
 
-This action lets you publish an asset automatically in your stack. To know more, visit [publish assets](/docs/content-managers/working-with-assets/publish-an-asset).
+This action lets you publish an asset automatically in your stack. To know more, visit [publish assets](../content-managers/author-content/publish-an-asset.md).
 - Under **Choose an Action** tab, select the **Publish an Asset **action.
 - On the **Publish an Asset Configure Action **page, enter the details given below:
       Click **+ Add New Account **button to connect your Contentstack account as shown in the [Connect your Contentstack Account to Automate](/docs/developers/automation-hub-connectors/contentstack-management#connect-your-contentstack-account-to-automate) step.

@@ -22,33 +22,33 @@ Contentstack uses token-based authentication to ensure secure access and operati
 
 ## Content Delivery API Authentication
 
-You need a [Delivery Token](/docs/developers/create-tokens/about-delivery-tokens) to authenticate the [Content Delivery API](/docs/developers/apis/content-delivery-api) request. This token is environment-specific, so you must assign it to a publishing [environment](/docs/developers/set-up-environments/about-environments) from which you want to retrieve content.
+You need a [Delivery Token](./about-delivery-tokens.md) to authenticate the [Content Delivery API](../../../api-docs/api-detail/content-delivery-api.md) request. This token is environment-specific, so you must assign it to a publishing [environment](../set-up-environments/about-environments.md) from which you want to retrieve content.
 
 ## Content Management API Authentication
 
-You can authenticate requests to the [Content Management API](/docs/developers/apis/content-management-api) using one of the following methods:
+You can authenticate requests to the [Content Management API](../../../api-docs/api-detail/content-management-api.md) using one of the following methods:
 
 ### Method 1: API Key + Authtoken
 
 Use the following parameters in your request headers:
 - `api_key:` The stack’s API Key.
-- `authtoken:` The user’s [Authtoken](https://www.contentstack.com/docs/developers/create-tokens/types-of-tokens#authentication-tokens-auth-tokens).
+- `authtoken:` The user’s [Authtoken](./types-of-tokens.md#authentication-tokens-auth-tokens).
 
 ### Method 2: API Key + Management Token
 
 Use the following parameters in your request headers:
 - `api_key:` The stack’s API Key.
-- `authorization:` The [Management Token](https://www.contentstack.com/docs/developers/create-tokens/types-of-tokens#management-tokens) value.
+- `authorization:` The [Management Token](./types-of-tokens.md#management-tokens) value.
 
-**Note:** Management Tokens are restricted to the [stack](/docs/developers/set-up-stack/about-stack) in which they were generated. They cannot be shared across other stacks or used with unrelated Content Management API modules such as [organization management](/docs/developers/apis/content-management-api#organizations), [user sessions](/docs/developers/apis/content-management-api#user-session), or token generation.
+**Note:** Management Tokens are restricted to the [stack](../set-up-stack/about-stack.md) in which they were generated. They cannot be shared across other stacks or used with unrelated Content Management API modules such as [organization management](../../../api-docs/api-detail/content-management-api.md#organizations), [user sessions](../../../api-docs/api-detail/content-management-api.md#user-session), or token generation.
 
 ## Common questions
 
 ### Which token do I need for the Content Delivery API?
-You need a [Delivery Token](/docs/developers/create-tokens/about-delivery-tokens) to authenticate the [Content Delivery API](/docs/developers/apis/content-delivery-api) request.
+You need a [Delivery Token](./about-delivery-tokens.md) to authenticate the [Content Delivery API](../../../api-docs/api-detail/content-delivery-api.md) request.
 
 ### Can I use a Management Token across multiple stacks?
-No. **Management Tokens are restricted to the [stack](/docs/developers/set-up-stack/about-stack) in which they were generated.**
+No. **Management Tokens are restricted to the [stack](../set-up-stack/about-stack.md) in which they were generated.**
 
 ### What headers are used for Content Management API authentication?
 You can use either:
@@ -56,4 +56,4 @@ You can use either:
 - `api_key:` + `authorization:` (Management Token)
 
 ### Can a Management Token be used with organization management or user sessions modules?
-No. Management Tokens cannot be used with unrelated Content Management API modules such as [organization management](/docs/developers/apis/content-management-api#organizations) or [user sessions](/docs/developers/apis/content-management-api#user-session).
+No. Management Tokens cannot be used with unrelated Content Management API modules such as [organization management](../../../api-docs/api-detail/content-management-api.md#organizations) or [user sessions](../../../api-docs/api-detail/content-management-api.md#user-session).

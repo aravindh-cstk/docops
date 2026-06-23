@@ -67,7 +67,7 @@ try{
 
 ```
 
-**Note**: For such scenarios, using the HTTP Action connector is preferable. For more information, please refer to the [HTTP Action Connector](/docs/developers/automation-hub-connectors/http-action/) document.
+**Note**: For such scenarios, using the HTTP Action connector is preferable. For more information, please refer to the [HTTP Action Connector](./http-action.md) document.
 
 ### Using regular expressions to check whether the email is valid
 

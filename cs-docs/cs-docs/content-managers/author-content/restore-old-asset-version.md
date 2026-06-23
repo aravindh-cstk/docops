@@ -19,8 +19,8 @@ This page explains how to restore (rollback) an asset to a previously saved vers
 
 In Contentstack, every update to an asset is saved as a version, allowing you to track changes and restore previous states if needed. This feature helps you recover earlier content versions efficiently.
 
-To restore or rollback to an earlier saved version of an [asset](/docs/content-managers/author-content/about-assets), log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack) and click the “Assets” icon in the left navigation panel.
+To restore or rollback to an earlier saved version of an [asset](./about-assets.md), log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel.
 - Navigate to the asset you want to modify.
 - Click the v**ersion** **dropdown** in the top-right corner of the page.
 - From the dropdown menu, view the list of all asset versions. Click the version you want to restore. You can modify the details of the asset if needed.

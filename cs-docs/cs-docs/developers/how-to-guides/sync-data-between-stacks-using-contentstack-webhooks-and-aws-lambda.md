@@ -16,7 +16,7 @@ This page explains how to sync content between multiple Contentstack stacks by t
 
 ## Sync Data Between Stacks Using Contentstack Webhooks and AWS Lambda
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to automate workflows in Contentstack, refer to the [Connectors](/docs/developers/automation-hub-connectors) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to automate workflows in Contentstack, refer to the [Connectors](../automation-hub-connectors.md) documentation.
 
 AWS Lambda is a cloud computing platform, which is serverless, offered as part of Amazon Web Services. It is event-driven which means that it runs your code in response to events.
 
@@ -31,7 +31,7 @@ This means if we have multiple stacks and when we make changes in one of the sta
 - [AWS Lambda](https://aws.amazon.com/lambda/) account
 - Working knowledge of AWS Lambda and API-Gateways
 - [Contentstack account](https://app.contentstack.com/#!/login)
-- [Contentstack CLI](/docs/developers/cli/install-the-cli)
+- [Contentstack CLI](../cli/install-the-cli.md)
 
 ## Steps for Execution
 
@@ -50,13 +50,13 @@ Replicate the code into two more copies and name them something like “Global S
 
 ### Import Entries and Assets in Stacks
 
-The next step is to create the stacks and import [entries](/docs/content-managers/working-with-entries/about-entries) and assets from the downloaded code bundle. For this exercise we need three stacks, a Global Stack and two child stacks Stack A and Stack B. Log in to your [Contentstack account](https://app.contentstack.com/) and follow the steps mentioned in the [create a stack](/docs/developers/set-up-stack/create-a-new-stack) guide.
+The next step is to create the stacks and import [entries](../../content-managers/author-content/about-entries.md) and assets from the downloaded code bundle. For this exercise we need three stacks, a Global Stack and two child stacks Stack A and Stack B. Log in to your [Contentstack account](https://app.contentstack.com/) and follow the steps mentioned in the [create a stack](../set-up-stack/create-a-new-stack.md) guide.
 
 After you create the stacks, use the Contentstack CLI to import entries and [assets](/docs/content-managers/working-with-assets/about-assets) to the Global Stack as well as to the child stacks, Stack A and Stack B. Perform the following steps in order to do this:
 
 Navigate to the downloaded folder and access the folder named “stack-data.”
 
-- **Note:** Before importing the data, make sure that you are [authenticated](/docs/developers/cli/cli-authentication) and have [added the stack management tokens](/docs/developers/cli/cli-authentication) for the parent Stack and the Child stacks A and B in CLI session.
+- **Note:** Before importing the data, make sure that you are [authenticated](../cli/cli-authentication.md) and have [added the stack management tokens](../cli/cli-authentication.md) for the parent Stack and the Child stacks A and B in CLI session.
 - Fire up the command prompt and run the following command and hit enter.
 - ```
   csdx cm:import -a
@@ -65,7 +65,7 @@ Navigate to the downloaded folder and access the folder named “stack-data.”
 
 Repeat the above steps again to import content types, Entries, and Assets in the Child stacks - Stack A, and Stack B.
 
-We have created the following [content types](/docs/developers/create-content-types/about-content-types) for this exercise:
+We have created the following [content types](../create-content-types/about-content-types.md) for this exercise:
 
 - Header
 - Home
@@ -115,13 +115,13 @@ With this, we’ve completed the lambda setup.
 
 ### Set up a Webhook in the Parent Stack
 
-Now that you’re done with creating the stacks and importing its entries, let’s create a [webhook](/docs/developers/set-up-webhooks/about-webhooks) in the Global stack which will sync the Header, Footer, and the Privacy page of the child stacks.
+Now that you’re done with creating the stacks and importing its entries, let’s create a [webhook](../set-up-webhooks/about-webhooks.md) in the Global stack which will sync the Header, Footer, and the Privacy page of the child stacks.
 
 To do this, in your [Contentstack account](https://app.contentstack.com/), go to your Global stack and perform the following steps:
 
 Click on the “settings” icon on the left panel and click on **Webhooks**.
 
-- Click on **+ New Webhook** and enter the details in the name [field](/docs/developers/create-content-types/about-fields).
+- Click on **+ New Webhook** and enter the details in the name [field](../create-content-types/about-fields.md).
 - Create custom headers as shown below:
 - Paste the API endpoint URL in the **URL to notify** field.
 - Next, add the conditions for triggering the webhook as shown below in the **Conditional View** section: Note that we’ve added four conditions. This is because we have four content types, we want both the child stacks to be updated whenever any or all of the entries within these content types are changed.
@@ -133,7 +133,7 @@ Now, let us configure the Global Stack sample app by performing the following st
 
 In the root folder of the Global Stack sample app, open the **config.js** file with any code editor utility.
 
-- Enter the values for **port**, **apiKey**, **accessToken**, and [**Environment**](/docs/developers/set-up-environments/about-environments) as shown below:
+- Enter the values for **port**, **apiKey**, **accessToken**, and [**Environment**](../set-up-environments/about-environments.md) as shown below:
 
 Next, enter the details for the content type UIDs as shown in the previous image. Repeat this for the **config.js** files of Stack A and Stack B by using the port numbers 4000, and 5000 for Stack A and Stack B respectively.
 
@@ -153,4 +153,4 @@ A webhook in the Global (parent) stack triggers an AWS Lambda function, which up
 Three stacks: one Global Stack (parent) and two child stacks (Stack A and Stack B).
 
 ### What do I need before starting?
-An [AWS Lambda](https://aws.amazon.com/lambda/) account, working knowledge of AWS Lambda and API-Gateways, a [Contentstack account](https://app.contentstack.com/#!/login), and the [Contentstack CLI](/docs/developers/cli/install-the-cli).
+An [AWS Lambda](https://aws.amazon.com/lambda/) account, working knowledge of AWS Lambda and API-Gateways, a [Contentstack account](https://app.contentstack.com/#!/login), and the [Contentstack CLI](../cli/install-the-cli.md).

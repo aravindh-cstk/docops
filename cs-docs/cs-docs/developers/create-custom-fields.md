@@ -24,7 +24,7 @@ Create Custom Fields
 
 ##### Introduction
 
-**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](/docs/developers/developer-hub/custom-field-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [Custom Field UI location](./developer-hub/custom-field-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
 The Custom Fields extension lets you add/create custom fields that you can use in your content type.
 

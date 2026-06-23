@@ -25,7 +25,7 @@ Brand Kit is a powerful tool that serves as a centralized hub for your organizat
 
 Voice Profile lets you create distinct AI-generated brand voices for your content. You can use the API requests in this doc to manage these profiles within a Brand Kit.
 
-Learn more about [Brand Kit](/docs/content-managers/brand-kit/about-brand-kit).
+Learn more about [Brand Kit](../../cs-docs/content-managers/brand-kit/about-brand-kit.md).
 
 ### Base URL
 
@@ -39,7 +39,7 @@ Learn more about [Brand Kit](/docs/content-managers/brand-kit/about-brand-kit).
 
 ### Authentication
 
-Brand Kit uses token-based authentication. You can use the Authtoken along with the Organization UID to make API requests. Read more about the different [types of tokens](/docs/developers/create-tokens/types-of-tokens).
+Brand Kit uses token-based authentication. You can use the Authtoken along with the Organization UID to make API requests. Read more about the different [types of tokens](../../cs-docs/developers/create-tokens/types-of-tokens.md).
 
 #### For Authtoken-based authentication
 
@@ -50,13 +50,13 @@ Brand Kit uses token-based authentication. You can use the Authtoken along with 
 
 #### How to Get Authtoken
 
-To retrieve the authtoken, log in to your Contentstack account by using the [Log into your account](/docs/developers/apis/content-management-api/#logging-in-out) request under [User Session](/docs/developers/apis/content-management-api/#user-session). This request will return the authtoken in the response body.
+To retrieve the authtoken, log in to your Contentstack account by using the [Log into your account](./content-management-api.md#logging-in-out) request under [User Session](./content-management-api.md#user-session). This request will return the authtoken in the response body.
 
-You can generate multiple authtokens by executing the [Log into your account](/docs/developers/apis/content-management-api/#logging-in-out) request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of 20 valid tokens that a user can use per account at a time, to execute CMA requests.
+You can generate multiple authtokens by executing the [Log into your account](./content-management-api.md#logging-in-out) request multiple times. These tokens do not have an expiration time limit. However, currently, there is a maximum limit of 20 valid tokens that a user can use per account at a time, to execute CMA requests.
 
 **Note**: If you already have valid 20 tokens, creating a new authtoken will automatically cause the oldest authtoken to expire without warning.
 
-For SSO-enabled organizations, the [Log into your account](/docs/developers/apis/content-management-api/#logging-in-out) request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require a user authtoken will not work. Only the owner of the organization and users with permission to access the Organization without SSO can use these APIs. Learn more about [REST API Usage](/docs/developers/single-sign-on/rest-api-usage).
+For SSO-enabled organizations, the [Log into your account](./content-management-api.md#logging-in-out) request will not return the user authtoken for users who access the organization through Identity Provider login credentials. Consequently, any requests that require a user authtoken will not work. Only the owner of the organization and users with permission to access the Organization without SSO can use these APIs. Learn more about [REST API Usage](../../cs-docs/developers/single-sign-on/rest-api-usage.md).
 
 ### Rate Limiting
 
@@ -105,13 +105,13 @@ Let’s look at the error code and their meanings.
 
 Contentstack offers you a Postman Collection that helps you try out our Brand Kit Management API. You can download this collection, connect to your Contentstack account, and try out the Brand Kit API with ease.
 
-Learn more about [how to get started with using the Postman Collection](/docs/developers/apis/brand-kit-management-api#postman-collection) for Brand Kit Management API.
+Learn more about [how to get started with using the Postman Collection](./brand-kit-management-api.md#postman-collection) for Brand Kit Management API.
 
 ## API Reference
 
 ### Brand Kit
 
-[Brand Kit](/docs/content-managers/brand-kit/about-brand-kit) serves as a centralized repository for your organization's brand identity and guidelines, offering a comprehensive array of product details and overall brand persona. By using the API requests, you can create, view, update, and delete one or more Brand Kits.
+[Brand Kit](../../cs-docs/content-managers/brand-kit/about-brand-kit.md) serves as a centralized repository for your organization's brand identity and guidelines, offering a comprehensive array of product details and overall brand persona. By using the API requests, you can create, view, update, and delete one or more Brand Kits.
 
 
 #### Get All Brand Kits
@@ -122,7 +122,7 @@ Learn more about [how to get started with using the Postman Collection](/docs/de
 
 The Get All Brand Kits request fetches the list of all the Brand Kits in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 ##### Query Parameters
 
@@ -157,7 +157,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Response
@@ -194,7 +194,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Get a Single Brand Kit request fetches the details of a specific Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 ##### URL Parameters
 
@@ -211,7 +211,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]  `
 
 ##### Sample Response
@@ -246,7 +246,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Create Brand Kit request lets you create a new Brand Kit in the specified organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body for creating a new Brand Kit:
 
@@ -272,7 +272,7 @@ Here’s an example of the Request Body for creating a new Brand Kit:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Request
@@ -321,7 +321,7 @@ Here’s an example of the Request Body for creating a new Brand Kit:
 
 The Update Brand Kit request lets you update an existing Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body that you can use to update a Brand Kit:
 
@@ -352,7 +352,7 @@ Here’s an example of the Request Body that you can use to update a Brand Kit:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Request
@@ -402,7 +402,7 @@ Here’s an example of the Request Body that you can use to update a Brand Kit:
 
 The Delete Brand Kit request lets you delete an existing Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 ##### URL Parameters
 
@@ -419,7 +419,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Response
@@ -433,7 +433,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 ### Voice Profile
 
-[Voice Profiles](/docs/content-managers/brand-kit/about-voice-profile) allows you to define unique AI-generated brand voices that you can apply to your content. By using the API requests, you can create, view, update, and delete the Voice Profile in a Brand Kit.
+[Voice Profiles](../../cs-docs/content-managers/brand-kit/about-voice-profile.md) allows you to define unique AI-generated brand voices that you can apply to your content. By using the API requests, you can create, view, update, and delete the Voice Profile in a Brand Kit.
 
 
 #### Get All Voice Profiles
@@ -444,7 +444,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Get All Voice Profiles request fetches the list of all Voice Profiles in a Brand Kit within an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 ##### URL Parameters
 
@@ -485,7 +485,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]  `
 
 ##### Sample Response
@@ -522,7 +522,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Get a Single Voice Profile request fetches the specific Voice Profile from a Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 ##### URL Parameters
 
@@ -548,7 +548,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Response
@@ -585,7 +585,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Create Voice Profile request lets you create a new Voice Profile in a Brand Kit within an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body for creating a new Voice Profile:
 
@@ -619,7 +619,7 @@ Here’s an example of the Request Body for creating a new Voice Profile:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Request
@@ -674,7 +674,7 @@ Here’s an example of the Request Body for creating a new Voice Profile:
 
 The Update Voice Profile request lets you update an existing Voice Profile from the Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body for updating a Voice Profile:
 
@@ -712,7 +712,7 @@ Here’s an example of the Request Body for updating a Voice Profile:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Request
@@ -771,7 +771,7 @@ Here’s an example of the Request Body for updating a Voice Profile:
 
 The Delete Voice Profile request lets you delete an existing Voice Profile from the Brand Kits in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 ##### URL Parameters
 
@@ -791,7 +791,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Response
@@ -816,7 +816,7 @@ Custom Credentials (LLM) Configuration allows you to integrate your own Large La
 
 The Get Custom Credentials request fetches the custom credentials from a Brand Kit in an organization.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
 
 ##### URL Parameters
 
@@ -839,7 +839,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Response
@@ -878,7 +878,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 The Set Custom Credentials request lets you configure the custom API credentials for Brand Kit.
 
-To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
+To configure the permissions for your application via [OAuth](../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
 
 Here’s an example of the Request Body for configuring the Brand Kit using **OpenAI** API provider:
 
@@ -913,7 +913,7 @@ Here’s an example of the Request Body for configuring the Brand Kit using **Op
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Enter your OAuth token. Learn more about [Authentication](./brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ##### Sample Request
@@ -1050,7 +1050,7 @@ Some of the important variables that you need to set are as follows:
 
   
 
-**Note:** The Brand Kit Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) section for more details.
+**Note:** The Brand Kit Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](./brand-kit-management-api.md#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 
@@ -1099,11 +1099,11 @@ If you want to prevent this action, perform the steps given below:
 
 This will allow you to access [cookies of this domain in scripts](https://learning.postman.com/docs/sending-requests/cookies/#accessing-cookies-in-scripts) programmatically.
 
-**Note:** To avoid this situation, we recommend you to use the Brand Kit UID along with the Authtoken to make valid Brand Kit Management API requests. For more information, refer to [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+**Note:** To avoid this situation, we recommend you to use the Brand Kit UID along with the Authtoken to make valid Brand Kit Management API requests. For more information, refer to [Authentication](./brand-kit-management-api.md#authentication).
 
 ### Postman Collection Updates
 
-We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](/docs/developers/apis/brand-kit-management-api#download-latest-collection) again and you are good to go.
+We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](./brand-kit-management-api.md#download-latest-collection) again and you are good to go.
 
 You can also choose to watch for the latest Postman Collection updates on our GitHub repository and get notifications of new releases or updates to the repository. The GitHub Readme doc will help you with the steps that you need to follow.
 

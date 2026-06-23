@@ -17,7 +17,7 @@ This page explains how to set up and run a demo Java terminal app that uses Cont
 
 ## Java Sample App
 
-This demo Java terminal app works using Contentstack’s [Java SDK](/docs/developers/sdks/content-delivery-sdk/java/). It uses Contentstack to store and deliver the content of the news app.
+This demo Java terminal app works using Contentstack’s [Java SDK](../java.md). It uses Contentstack to store and deliver the content of the news app.
 
 ## Quickstart
 To help you get started, we have provided a [Java code snippet](https://github.com/contentstack/contentstack-java-news-web-app-example.git) that shows how to generate queries and fetch entries from Contentstack.
@@ -52,7 +52,7 @@ Create a new project under **File > New > Project > Java** and provide a name fo
 You can skip setting up the project (as mentioned above) and [create the web app quickly](https://start.spring.io/), with a sample app with the required details for quick integration.
 
 ## Create a Stack
-Log in to your Contentstack account, and [create a new stack](/docs/developers/set-up-stack/create-a-new-stack). This stack will hold all the data specific to your website.
+Log in to your Contentstack account, and [create a new stack](../../../set-up-stack/create-a-new-stack.md). This stack will hold all the data specific to your website.
 
 ## Add a Publishing Environment
 To add an [environment](/docs/developers/set-up-environments) in Contentstack:
@@ -66,10 +66,10 @@ Navigate to **Settings** and then **Environment**.
 ## Import Content Type
 A [content type](/docs/developers/create-content-types) is like the structure or blueprint of a page or a section of your web or mobile property. For this app, we need one content type named News. We need this content type to add the content for our app.
 
-For quick integration, we have already created the content type. [Download the content type](https://github.com/contentstack/contentstack-java-news-web-app-example/blob/master/asset/news.zip) and [import it to your stack](/docs/developers/create-content-types/import-a-content-type). You can also [create your own content type](/docs/developers/create-content-types/create-a-content-type) if required. Now that your content type is ready, let’s add some content to your app.
+For quick integration, we have already created the content type. [Download the content type](https://github.com/contentstack/contentstack-java-news-web-app-example/blob/master/asset/news.zip) and [import it to your stack](../../../create-content-types/import-a-content-type.md). You can also [create your own content type](../../../create-content-types/create-a-content-type.md) if required. Now that your content type is ready, let’s add some content to your app.
 
 ## Add Content
-[Create](/docs/content-managers/working-with-entries/create-an-entry) and [publish](/docs/content-managers/working-with-entries/publish-an-entry) entries for the News content type you just downloaded and imported, as discussed in the above step.
+[Create](../../../../content-managers/author-content/create-an-entry.md) and [publish](../../../../content-managers/author-content/publish-an-entry.md) entries for the News content type you just downloaded and imported, as discussed in the above step.
 
 Now that we have created the sample data, it’s time to configure the presentation layer.
 
@@ -81,7 +81,7 @@ git clone https://github.com/contentstack/contentstack-java-news-web-app-example
 ```
 Once the project has been downloaded, move inside the project directory (cd into `contentstack-java-news-web-app-example root directory`).
 
-Then open the MainApp.java file which is inside the \contentstack-java-news-web-app-example\src\main\java\io\contentstack\webapp folder and update your stack credentials ([Stack API key](/docs/developers/set-up-stack/view-stack-details), [Delivery Token](/docs/developers/create-tokens/about-delivery-tokens), and [Environment](/docs/developers/set-up-environments/about-environments) name) as follows:
+Then open the MainApp.java file which is inside the \contentstack-java-news-web-app-example\src\main\java\io\contentstack\webapp folder and update your stack credentials ([Stack API key](../../../set-up-stack/view-stack-details.md), [Delivery Token](../../../create-tokens/about-delivery-tokens.md), and [Environment](../../../set-up-environments/about-environments.md) name) as follows:
 
 ```
 public static void main(String[] args) throws Exception {
@@ -123,7 +123,7 @@ $ curl localhost:8080
 ```
 You will see the application running at port 8080 as shown below:
 
-**Additional Resource**: You can also use the [Contentstack Java SDK](/docs/developers/sdks/content-delivery-sdk/java/) to build a news app. Read our [Build a news app using Contentstack and Contentstack Java SDK](/docs/developers/sample-apps/build-a-news-app-for-java-using-contentstack-and-contentstack-java-sdk) guide for more details.
+**Additional Resource**: You can also use the [Contentstack Java SDK](../java.md) to build a news app. Read our [Build a news app using Contentstack and Contentstack Java SDK](/docs/developers/sample-apps/build-a-news-app-for-java-using-contentstack-and-contentstack-java-sdk) guide for more details.
 
 ## More resources
 - [View and Download Java Delivery SDK repository on GitHub](https://github.com/contentstack/contentstack-java)
@@ -131,7 +131,7 @@ You will see the application running at port 8080 as shown below:
 ## Common questions
 
 ### Where do I get the Stack API key, Delivery Token, and Environment name?
-Use the linked docs in the “Download the Code and Configure the App” section: [Stack API key](/docs/developers/set-up-stack/view-stack-details), [Delivery Token](/docs/developers/create-tokens/about-delivery-tokens), and [Environment](/docs/developers/set-up-environments/about-environments).
+Use the linked docs in the “Download the Code and Configure the App” section: [Stack API key](../../../set-up-stack/view-stack-details.md), [Delivery Token](../../../create-tokens/about-delivery-tokens.md), and [Environment](../../../set-up-environments/about-environments.md).
 
 ### Can I use Gradle or Maven to run the app?
 Yes. The page includes commands for both: `./gradlew bootRun` (Gradle) and `./mvnw spring-boot:run` (Maven).

@@ -22,7 +22,7 @@ Contentstack Launch offers robust support for hosting applications built with Vu
 
 Launch simplifies the deployment process by automatically detecting applications built using Vue on project import or upload.
 
-**Additional Resource:** Please refer to the [Quick Start Guide with Vue](/docs/launch/quick-start-vue/) documentation for a step-by-step walkthrough to deploy a Vue.js Starter on Launch.
+**Additional Resource:** Please refer to the [Quick Start Guide with Vue](./quick-start-vue.md) documentation for a step-by-step walkthrough to deploy a Vue.js Starter on Launch.
 
 ## Limitations
 

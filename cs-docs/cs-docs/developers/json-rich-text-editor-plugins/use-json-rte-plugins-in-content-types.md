@@ -16,9 +16,9 @@ This page explains how to add and use custom JSON Rich Text Editor (JSON RTE) pl
 
 ## Use JSON RTE Plugins in Content Types
 
-**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [RTE UI Location](/docs/developers/developer-hub/rte-location/) for the Contentstack App Framework to extend the functionality of your apps.
+**Note**: Experience Extensions use the legacy approach with extensions. We recommend using the [RTE UI Location](../developer-hub/rte-location.md) for the Contentstack App Framework to extend the functionality of your apps.
 
-Once you have added a custom JSON RTE plugin to your [stack](/docs/developers/set-up-stack/about-stack), you can use it in the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) field of your [content type](/docs/developers/create-content-types/about-content-types).
+Once you have added a custom JSON RTE plugin to your [stack](../set-up-stack/about-stack.md), you can use it in the [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field of your [content type](../create-content-types/about-content-types.md).
 
 To add a JSON RTE plugin within a JSON Rich Text Editor in a content type, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 - Go to your stack and click the “Content Models” icon on the left navigation panel.
@@ -44,4 +44,4 @@ A maximum of five plugins can be added to a single JSON RTE field in a content t
 In the Content Type Builder page, under **Select Plugin(s)**, select the plugins you want to add within the JSON Rich Text Editor.
 
 ### What is recommended instead of the legacy Experience Extensions approach?
-The page recommends using the [RTE UI Location](/docs/developers/developer-hub/rte-location/) for the Contentstack App Framework to extend the functionality of your apps.
+The page recommends using the [RTE UI Location](../developer-hub/rte-location.md) for the Contentstack App Framework to extend the functionality of your apps.

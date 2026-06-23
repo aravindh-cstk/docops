@@ -16,14 +16,14 @@ This page explains how to approve or reject edit access requests for an entry wh
 
 ## Approve Edit Access Request for an Entry
 
-**Note**: It is important to familiarize yourself with the basic concepts of Workflows before starting to work with them. You can refer to these articles: [Workflows,](/docs/developers/set-up-workflows-and-publish-rules/about-workflows)[Workflow Stages](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-stages), and [Tasks](/docs/developers/set-up-workflows-and-publish-rules/about-workflow-tasks).
+**Note**: It is important to familiarize yourself with the basic concepts of Workflows before starting to work with them. You can refer to these articles: [Workflows,](../../developers/set-up-workflows-and-publish-rules/about-workflows.md)[Workflow Stages](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md), and [Tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md).
 
 When a stage access rule is set for an entry on a particular workflow stage, only users or roles with workflow stage transition rights over an entry have edit access rights. Other users have to request them to grant edit access rights to the entry over that stage of the workflow.
 
-**Additional Resource**: Learn more about [how stage access rules work](/docs/developers/set-up-workflows-and-publish-rules/add-workflows-and-stages#add-stage-transition-and-access-rules).
+**Additional Resource**: Learn more about [how stage access rules work](../../developers/set-up-workflows-and-publish-rules/add-workflows-and-stages.md#add-stage-transition-and-access-rules).
 
 To approve an edit access request for an entry, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
-- Go to your [stack](/docs/developers/set-up-stack/about-stack), and open the entry.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md), and open the entry.
 - On the entry page, click on the “Information” icon on the right panel.
 
 The **Pending Access Requests** dialog box appears on screen.

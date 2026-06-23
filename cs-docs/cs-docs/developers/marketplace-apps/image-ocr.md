@@ -19,7 +19,7 @@ This page explains how to install and use the Contentstack Marketplace Image OCR
 
 Image OCR (Optical Character Recognition) allows you to extract text and colors from images. The extracted text can then be used in your website or application. The Image OCR app supports the JPEG, JPG, PNG, and SVG image formats. It can be used for applications such as automatic digitization of images, form processing, handwriting recognition, and automated translation.
 
-With the Contentstack Marketplace Image OCR app, you can extract text and color codes with their percentages, and save them in the [asset metadata](/docs/content-managers/working-with-assets/additional-metadata-support-for-assets/) within the [Asset Sidebar Widget](/docs/developers/create-asset-sidebar-extensions/about-asset-sidebar-extensions/).
+With the Contentstack Marketplace Image OCR app, you can extract text and color codes with their percentages, and save them in the [asset metadata](../../content-managers/author-content/additional-metadata-support-for-assets.md) within the [Asset Sidebar Widget](../create-asset-sidebar-extensions/about-asset-sidebar-extensions.md).
 
 **Note**: Image OCR app does not support GIF, TIFF, PDF, JSON, and XML file formats.
 
@@ -52,7 +52,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 
 To use the Image OCR app within your stack, follow the steps given below:
 
-Go to your stack dashboard and click the **Assets** icon from the left navigation panel. You can [add a new image](/docs/content-managers/author-content/create-upload-assets) file or use an existing one.
+Go to your stack dashboard and click the **Assets** icon from the left navigation panel. You can [add a new image](../../content-managers/author-content/create-upload-assets.md) file or use an existing one.
 
 - To upload a new asset, click **+ New Asset**. The **Upload Asset(s)** modal opens. You can upload new assets by clicking the **Choose files** button.
 
@@ -72,7 +72,7 @@ Scroll down to view the **Color** palette. It contains  the hexadecimal code for
 
 When you open the asset next time, you can see the updated information in the widget.
 
-**Additional Resource**: You can fetch the saved asset metadata using the Contentstack Delivery API. Please refer to the [Get a Single Asset](/docs/developers/apis/content-delivery-api/#get-a-single-asset) API documentation.
+**Additional Resource**: You can fetch the saved asset metadata using the Contentstack Delivery API. Please refer to the [Get a Single Asset](../../../api-docs/api-detail/content-delivery-api.md#get-a-single-asset) API documentation.
 
 ## Common questions
 
@@ -83,7 +83,7 @@ When you open the asset next time, you can see the updated information in the wi
 The Image OCR app supports the JPEG, JPG, PNG, and SVG image formats.
 
 ### Where does the Image OCR app save extracted text and colors?
-It can save them in the [asset metadata](/docs/content-managers/working-with-assets/additional-metadata-support-for-assets/) within the [Asset Sidebar Widget](/docs/developers/create-asset-sidebar-extensions/about-asset-sidebar-extensions/).
+It can save them in the [asset metadata](../../content-managers/author-content/additional-metadata-support-for-assets.md) within the [Asset Sidebar Widget](../create-asset-sidebar-extensions/about-asset-sidebar-extensions.md).
 
 ### How can I fetch the saved asset metadata?
-You can fetch the saved asset metadata using the Contentstack Delivery API. Please refer to the [Get a Single Asset](/docs/developers/apis/content-delivery-api/#get-a-single-asset) API documentation.
+You can fetch the saved asset metadata using the Contentstack Delivery API. Please refer to the [Get a Single Asset](../../../api-docs/api-detail/content-delivery-api.md#get-a-single-asset) API documentation.

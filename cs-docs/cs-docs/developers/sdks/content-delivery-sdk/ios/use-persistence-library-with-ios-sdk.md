@@ -29,7 +29,7 @@ Let’s look at how to use this library for your Contentstack-powered iOS apps.
 ## Prerequisites
 
 - [Latest version of Xcode](https://developer.apple.com/xcode/)
-- [Contentstack’s iOS SDK](/docs/developers/sdks/content-delivery-sdk/ios/)
+- [Contentstack’s iOS SDK](../ios.md)
 
 ## Installation and usage
 
@@ -86,9 +86,9 @@ Next, you will find the `ContentstackPersistenceRealm` folder, which contains th
 
 ## Map data
 
-To start mapping of data, first, you need to create a content type schema (in Contentstack) as per your app design and create entries. For your convenience, we have already created the necessary content types. Download them from [here](https://drive.google.com/open?id=1jnpNIHRb4kNcP3r0I2QMatGzPwNXxpzS) and [import them](/docs/developers/create-content-types/import-a-content-type) to your app’s stack in Contentstack.
+To start mapping of data, first, you need to create a content type schema (in Contentstack) as per your app design and create entries. For your convenience, we have already created the necessary content types. Download them from [here](https://drive.google.com/open?id=1jnpNIHRb4kNcP3r0I2QMatGzPwNXxpzS) and [import them](../../../create-content-types/import-a-content-type.md) to your app’s stack in Contentstack.
 
-Next, [create entries](/docs/content-managers/author-content/about-entries) for the imported content types. In order to sync this data with Realm, we need to add data mappings. The three important items to be mapped in our Synchronization process are as follows:
+Next, [create entries](../../../../content-managers/author-content/about-entries.md) for the imported content types. In order to sync this data with Realm, we need to add data mappings. The three important items to be mapped in our Synchronization process are as follows:
 
 - Sync token/Pagination token
 - Entries

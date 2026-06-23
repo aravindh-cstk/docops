@@ -31,7 +31,7 @@ This step-by-step guide lets you redeploy automatically when content is publishe
 
 Follow the steps to redeploy automatically when content is published.
 
-- Create a [deploy hook](/docs/launch/deploy-hooks) in Launch.
+- Create a [deploy hook](./deploy-hooks.md) in Launch.
 - Follow the steps to add the deploy hook as a Webhook to Contentstack CMS.  
   Copy the **deploy hook URL**.
 - Go to your stack and then go to **Settings > Webhooks**.

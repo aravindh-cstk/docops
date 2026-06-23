@@ -52,7 +52,7 @@ Compositions define the structure and layout of a page in Studio. This section e
 - Click **New Composition**.
 - Select **Composition Type**: select **Freeform**.
 - Enter a **Name** (e.g., “About Us” or “Product Overview”).
-- Define the **URL Path** (e.g., `/about-us`). This path not only opens the page in the [composition editor](/docs/studio/composition-editor-overview) but also serves as the live URL for the About Us page.
+- Define the **URL Path** (e.g., `/about-us`). This path not only opens the page in the [composition editor](./composition-editor-overview.md) but also serves as the live URL for the About Us page.
 - Click **Create**.
 
 In this use case, the **About Us** page requires a freeform composition, which has been created accordingly.
@@ -186,7 +186,7 @@ function App() {
 
 After completing this setup, create new compositions in the Studio app. They will render in the Studio canvas based on the route, no additional code changes required.
 
-**Additional Resource**: Refer to the [Create Editable Page Sections](/docs/studio/create-editable-page-sections) use-case for examples of how to design compositions in the Studio canvas.
+**Additional Resource**: Refer to the [Create Editable Page Sections](./create-editable-page-sections.md) use-case for examples of how to design compositions in the Studio canvas.
 
 ## Create Reusable Templates
 

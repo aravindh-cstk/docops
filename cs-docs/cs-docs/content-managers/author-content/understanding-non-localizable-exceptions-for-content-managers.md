@@ -19,7 +19,7 @@ This page explains how Contentstack’s non-localizable fields behave across loc
 
 **Note**: This feature is plan based and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
 
-The non-localizable property in Contentstack ensures that specific fields within a content type maintain consistency across all localized entries. You can also mark individual fields inside [**Group**](/docs/developers/create-content-types/group/)** (Multiple)**, [**Modular Blocks**](/docs/developers/create-content-types/modular-blocks/), and [**Global**](/docs/developers/create-content-types/global/) fields as non-localizable.
+The non-localizable property in Contentstack ensures that specific fields within a content type maintain consistency across all localized entries. You can also mark individual fields inside [**Group**](../../developers/create-content-types/group.md)** (Multiple)**, [**Modular Blocks**](../../developers/create-content-types/modular-blocks.md), and [**Global**](../../developers/create-content-types/global.md) fields as non-localizable.
 
 There are, however, some scenarios under which the non-localizable field may work differently.
 
@@ -38,7 +38,7 @@ Imagine you are managing a **"Product Details"** content type that includes a **
 
 The **SKU** field is crucial for product tracking and must remain consistent across all languages, so it is marked as **Non Localizable**.
 
-**Additional Resource**: Learn more about [Managing Non-localizable Fields](/docs/developers/create-content-types/managing-non-localizable-fields).
+**Additional Resource**: Learn more about [Managing Non-localizable Fields](../../developers/create-content-types/managing-non-localizable-fields.md).
 
 Now, let’s explore how this setup behaves in different scenarios.
 
@@ -46,7 +46,7 @@ Now, let’s explore how this setup behaves in different scenarios.
 
 When you mark a field as non-localizable within a **Group (Multiple)**, **Modular Blocks**, or **Global** field, its data always comes from the master locale.
 
-**Note**: When localizing an entry via API, if a **Group (Multiple)**, **Modular Block,** or **Global** field contains a non-localizable field, you must include the field’s `_metadata.uid` in the request payload to map that instance in child locale. Refer to the [Localize an Entry](/docs/developers/apis/content-management-api#localize-an-entry) API reference for more information.
+**Note**: When localizing an entry via API, if a **Group (Multiple)**, **Modular Block,** or **Global** field contains a non-localizable field, you must include the field’s `_metadata.uid` in the request payload to map that instance in child locale. Refer to the [Localize an Entry](../../../api-docs/api-detail/content-management-api.md#localize-an-entry) API reference for more information.
 
 Any updates made in the master locale automatically reflect in all localized versions.
 - These fields remain **uneditable** in localized entries, ensuring uniformity across languages.

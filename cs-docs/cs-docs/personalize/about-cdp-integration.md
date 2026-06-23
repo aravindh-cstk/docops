@@ -57,7 +57,7 @@ Organizations integrating CDPs with Data & Insights (Lytics) and Personalize typ
 
 If you currently use a CDP such as Segment, Salesforce, or another provider, Contentstack recommends routing your integration through **Data & Insights (Lytics)** instead of connecting directly to Personalize. This approach standardizes data ingestion, ensures consistent audience logic, and provides a single hub to manage segmentation and profile enrichment.
 
-Data & Insights (Lytics) acts as the bridge between your CDP and Contentstack Personalize. You can configure Lytics to ingest data, compute traits, build audiences, and push enriched data to Personalize via the [Data Activation Layer (DAL)](/docs/data-and-insights/integrating-data-and-insights-lytics).
+Data & Insights (Lytics) acts as the bridge between your CDP and Contentstack Personalize. You can configure Lytics to ingest data, compute traits, build audiences, and push enriched data to Personalize via the [Data Activation Layer (DAL)](../data-and-insights/integrating-data-and-insights-lytics.md).
 
 ## Integration Path
 
@@ -67,7 +67,7 @@ To personalize experiences using customer data, connect your CDP through Data & 
 
 - If you are using Segment or another CDP, refer to the [Lytics Destination documentation on Segment](https://segment.com/docs/connections/destinations/catalog/lytics/#lytics-destination) for instructions on routing CDP data through Lytics.
 
-For setup steps, refer to the [End-to-end Guide for Data & Insights (Lytics)](/docs/data-and-insights/end-to-end-guide-data-and-insights).
+For setup steps, refer to the [End-to-end Guide for Data & Insights (Lytics)](../data-and-insights/end-to-end-guide-data-and-insights.md).
 
 ## Common questions
 
@@ -81,4 +81,4 @@ Data & Insights (Lytics) serves as the central hub for behavioral data and audie
 **Your CDP → Data & Insights (Lytics) → Contentstack Personalize**
 
 ### Where can I find setup instructions?
-Refer to the [End-to-end Guide for Data & Insights (Lytics)](/docs/data-and-insights/end-to-end-guide-data-and-insights) and, if applicable, the [Lytics Destination documentation on Segment](https://segment.com/docs/connections/destinations/catalog/lytics/#lytics-destination).
+Refer to the [End-to-end Guide for Data & Insights (Lytics)](../data-and-insights/end-to-end-guide-data-and-insights.md) and, if applicable, the [Lytics Destination documentation on Segment](https://segment.com/docs/connections/destinations/catalog/lytics/#lytics-destination).

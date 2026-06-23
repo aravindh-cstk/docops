@@ -16,9 +16,9 @@ This page explains how to install, initialize, and use the Contentstack JavaScri
 
 ## Get Started with JavaScript Delivery SDK
 
-**Note**: We recommend using the [TypeScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/typescript) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project. Learn to seamlessly [migrate from JavaScript to TypeScript](/docs/developers/sdks/content-delivery-sdk/typescript/migrate-from-javascript-to-typescript/).
+**Note**: We recommend using the [TypeScript Delivery SDK](../typescript.md) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project. Learn to seamlessly [migrate from JavaScript to TypeScript](../typescript/migrate-from-javascript-to-typescript.md).
 
-This guide will help you get started with Contentstack [JavaScript Delivery SDK](/docs/developers/javascript-browser/about-javascript-delivery-sdk) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [JavaScript Delivery SDK](./about-javascript-delivery-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ To use the JavaScript Delivery SDK, [download](/docs/developers/javascript-brows
 
 ## Initialize SDK
 
-To initialize the SDK, you will need to specify the **stack’s API key**, [**delivery token**](/docs/developers/create-tokens/about-delivery-tokens), and name of the [**environment**](/docs/developers/set-up-environments/about-environments) where you will publish the content:
+To initialize the SDK, you will need to specify the **stack’s API key**, [**delivery token**](../../../create-tokens/about-delivery-tokens.md), and name of the [**environment**](../../../set-up-environments/about-environments.md) where you will publish the content:
 
 ```
 const Stack = Contentstack.Stack("api_key", "delivery_token", "environment_name");
@@ -45,11 +45,11 @@ const Stack = Contentstack.Stack("api_key", "delivery_token", "environment_name"
 
 **Note**: By default, the SDK uses the North American region. Configuration changes are not required for North American region users.
 
-For Europe, Azure North America, or Azure Europe, check the [code of your region](/docs/developers/contentstack-regions/selecting-region-in-sdks#js-react-native-node-js) and configure your SDK.
+For Europe, Azure North America, or Azure Europe, check the [code of your region](../../../contentstack-regions/selecting-region-in-sdks.md#js-react-native-node-js) and configure your SDK.
 
 Once you have initialized the SDK, you can query entries to fetch the required content.
 
-For setting the branch for Europe, Azure North America, or Azure Europe, check the [code of your region](/docs/developers/contentstack-regions/selecting-region-in-sdks#js-react-native-node-js) and initialize SDK in a particular branch.
+For setting the branch for Europe, Azure North America, or Azure Europe, check the [code of your region](../../../contentstack-regions/selecting-region-in-sdks.md#js-react-native-node-js) and initialize SDK in a particular branch.
 
 ### Proxy Configuration
 
@@ -143,11 +143,11 @@ Query.setCachePolicy(Contentstack.CachePolicy.CACHE_THEN_NETWORK)
 
 ## Basic Queries
 
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
 ### Get a Single Entry
 
-To get a single [entry](/docs/content-managers/working-with-entries/about-entries), you need to specify the [content type](/docs/developers/create-content-types/about-content-types) and the id of the entry.
+To get a single [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) and the id of the entry.
 
 ```
 const Query = Stack.ContentType("content_type_uid").Entry("entry_uid")
@@ -187,13 +187,13 @@ Query
  });
 ```
 
-These were examples of some of the basic queries of the SDK. For advanced queries, refer to the Contentstack JavaScript Delivery SDK [API reference](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/).
+These were examples of some of the basic queries of the SDK. For advanced queries, refer to the Contentstack JavaScript Delivery SDK [API reference](../../../create-content-types/reference.md).
 
-**Note:** Currently, the JavaScript SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](/docs/developers/apis/content-delivery-api#queries) section of our Content Delivery API documentation.
+**Note:** Currently, the JavaScript SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](../../../../../api-docs/api-detail/content-delivery-api.md#queries) section of our Content Delivery API documentation.
 
 #### Paginating Responses
 
-In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/#query-skip) and [limit](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/#query-limit) parameters in subsequent requests.
+In a single instance, the [Get Multiple Entries](#get-multiple-entries) query will **retrieve only the first 100 items **of the specified content type. You can paginate and retrieve the rest of the items in batches using the [skip](../../../create-content-types/reference.md#query-skip) and [limit](../../../create-content-types/reference.md#query-limit) parameters in subsequent requests.
 
 ```
 const Stack = Contentstack.Stack("stack_api_key", "delivery_token", "environment_name");
@@ -208,7 +208,7 @@ let blogQuery = Stack.ContentType('example').Query();
 ## Limitations
 - We have a URL size limitation of 8KB on API Requests that hit our CDN services. Any Request URL that goes above this size limit will receive the `400 - Bad request` error response. Please make sure you limit the size of your API Requests.
 - The JavaScript Delivery SDK does not support multiple content types referencing in a single query.
-- Currently, the JavaScript Delivery SDK does not yet support querying Global Field schemas ([All Global Fields](/docs/developers/apis/content-delivery-api#all-global-fields) and [Single Global Field](/docs/developers/apis/content-delivery-api#single-global-field)). You can include these details when querying content type details ([All Content Types](/docs/developers/apis/content-delivery-api#all-content-types) and [Single Content Type](/docs/developers/apis/content-delivery-api#single-content-type)) with the `include_global_field_schema query parameter`.
+- Currently, the JavaScript Delivery SDK does not yet support querying Global Field schemas ([All Global Fields](../../../../../api-docs/api-detail/content-delivery-api.md#all-global-fields) and [Single Global Field](../../../../../api-docs/api-detail/content-delivery-api.md#single-global-field)). You can include these details when querying content type details ([All Content Types](../../../../../api-docs/api-detail/content-delivery-api.md#all-content-types) and [Single Content Type](../../../../../api-docs/api-detail/content-delivery-api.md#single-content-type)) with the `include_global_field_schema query parameter`.
 
 ## More Resources
 - [Static Corporate Website](/docs/developers/sample-apps/build-a-corporate-website-using-contentstack-express-framework)
@@ -216,8 +216,8 @@ let blogQuery = Stack.ContentType('example').Query();
 - [Universal React.js Website - Next.js](/docs/developers/sample-apps/build-a-website-using-next-js-and-contentstack)
 - [JavaScript Playground App](https://github.com/contentstack/contentstack-js-sync-playground)
 - [TypeScript News App](/docs/developers/sample-apps/build-a-news-app-using-typescript-react-and-contentstack)
-- [API Reference for JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/)
-- [JavaScript SDK Changelog](/docs/developers/javascript/javascript-sdk-changelog)
+- [API Reference for JavaScript Delivery SDK](../../../create-content-types/reference.md)
+- [JavaScript SDK Changelog](./javascript-sdk-changelog.md)
 - [View and Download JavaScript Delivery SDK repository on GitHub](https://github.com/contentstack/contentstack-javascript)
 
 ## Common questions

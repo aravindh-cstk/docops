@@ -17,7 +17,7 @@ This page explains how to view webhook execution logs in Contentstack, what each
 
 ## View Webhook Logs
 
-Contentstack keeps a log of all the triggered [webhooks](/docs/developers/set-up-webhooks/about-webhooks) in your [stack](/docs/developers/set-up-stack/about-stack).
+Contentstack keeps a log of all the triggered [webhooks](./about-webhooks.md) in your [stack](../set-up-stack/about-stack.md).
 
 To view the log of a webhook, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your stack, navigate to the “Settings” icon (press “S”) on the left navigation panel, and select **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS).
@@ -34,7 +34,7 @@ To view the log of a webhook, log in to your [Contentstack account](https://www.
 You can retrieve webhook log information only for **30 days** prior to the current day.
 
 - In case of a failure or if a session timeout occurs (webhook request timeout is **30** seconds), the webhook will immediately retry to send data to the destination URL again for **four** more times. The interval time between two retries increases **exponentially** according to the retry attempt number.
-- Contentstack follows an exponential retry policy when any webhook fails to send data to the destination server. Refer to the [Webhook Retry Policy](/docs/developers/set-up-webhooks/webhook-retry-policy) section to better understand how retries work.
+- Contentstack follows an exponential retry policy when any webhook fails to send data to the destination server. Refer to the [Webhook Retry Policy](./webhook-retry-policy.md) section to better understand how retries work.
 - To view the details of the webhook call, click the vertical ellipses in the **Actions** column for the log you want to see the details for, then select **See Details**.
 - It will display the request details of the webhook call as well as the response details received.
 
@@ -42,7 +42,7 @@ You can retrieve webhook log information only for **30 days** prior to the curre
 
 ## API Reference
 
-To get webhook logs via API, refer to the [Get executions of a webhook](/docs/developers/apis/content-management-api#get-executions-of-a-webhook) API request.
+To get webhook logs via API, refer to the [Get executions of a webhook](../../../api-docs/api-detail/content-management-api.md#get-executions-of-a-webhook) API request.
 
 ## Common questions
 

@@ -16,7 +16,7 @@ This page explains how to quickly create and deploy a Nuxt project in Contentsta
 
 ## Launch Quick Start Guide with Nuxt
 
-The fastest way to get started with Nuxt on Launch is by creating a project and importing your website code from [GitHub](https://github.com/AryanBansal-launch/kickstart-nuxt-Tim.git) or [Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud/).
+The fastest way to get started with Nuxt on Launch is by creating a project and importing your website code from [GitHub](https://github.com/AryanBansal-launch/kickstart-nuxt-Tim.git) or [Bitbucket Cloud](./import-a-project-using-bitbucket-cloud.md).
 
 This document guides you through the process of creating a project using GitHub.
 
@@ -29,16 +29,16 @@ This document guides you through the process of creating a project using GitHub.
 
 Follow the steps given below to deploy your first Launch project using GitHub:
 
-**Note:** Only the Organization [Admin](/docs/developers/organization/organization-roles#organization-admin)/[Owner](/docs/developers/organization/organization-roles#organization-owner) has the right to create projects in a stack for Launch.
+**Note:** Only the Organization [Admin](../organization/organization-roles.md#organization-admin)/[Owner](../organization/organization-roles.md#organization-owner) has the right to create projects in a stack for Launch.
 - [Log in to Contentstack](https://www.contentstack.com/login/) and click the **Launch** icon from the dashboard, as shown below:  
 Alternatively, go to the **App Switcher** in the top panel and click the **Launch** icon.
 - On the **Launch** **Projects** screen, click the **+ New Project** button to initiate the project creation process.
 - From the **Create New Project** modal, click **Import from a Git Repository**.
 
-  **Note:** You can also choose to [upload a .zip file to import a project](/docs/launch/import-project-using-file-upload/).
+  **Note:** You can also choose to [upload a .zip file to import a project](./import-project-using-file-upload.md).
 - Click **GitHub**.
 
-  **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud) guide to proceed.
+  **Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](./import-a-project-using-bitbucket-cloud.md) guide to proceed.
 
   A new page opens. **Sign in** or **create a new GitHub account**.
 - Enter your credentials and log in.
@@ -80,7 +80,7 @@ If you want to deploy the changes from any other commits, you can click the **Re
 
 **Note:** The log details of the current deployment can be found under the **Logs** section.
 
-**Additional Resource:** Explore our [Kickstart Nuxt](/docs/developers/kickstarts/nuxt) guide for step-by-step instructions to set up and run a Nuxt project integrated with Contentstack.
+**Additional Resource:** Explore our [Kickstart Nuxt](../kickstarts/nuxt.md) guide for step-by-step instructions to set up and run a Nuxt project integrated with Contentstack.
 
 ## Common questions
 

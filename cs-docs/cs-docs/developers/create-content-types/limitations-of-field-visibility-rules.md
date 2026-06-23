@@ -17,26 +17,26 @@ This page lists the limitations and restrictions for Field Visibility Rules, inc
 
 ## Limitations of Field Visibility Rules
 
-- You can add a maximum of **10 rules** per [content type](/docs/developers/create-content-types/about-content-types).
+- You can add a maximum of **10 rules** per [content type](./about-content-types.md).
 - You can add a maximum of **5 conditions** per rule.
 - You can add a maximum of **5 target fields** per rule.
-- The target [field](/docs/developers/create-content-types/about-fields) and the operand field cannot be the same within a rule.
-- In case of contradictions, the action defined for the parent field takes precedence over the action defined for the child field. For example, if your rule says to hide the [Group](/docs/developers/create-content-types/group) field and show a sub-field of that Group field when a condition is met, it will not show the sub-field.
-- If you delete a field or edit its [properties](/docs/developers/create-content-types/about-field-properties) when it is used as an operand or target field, the rule becomes invalid. You must delete the rule in such a case.
+- The target [field](./about-fields.md) and the operand field cannot be the same within a rule.
+- In case of contradictions, the action defined for the parent field takes precedence over the action defined for the child field. For example, if your rule says to hide the [Group](./group.md) field and show a sub-field of that Group field when a condition is met, it will not show the sub-field.
+- If you delete a field or edit its [properties](./about-field-properties.md) when it is used as an operand or target field, the rule becomes invalid. You must delete the rule in such a case.
 
 ## Limitations on Operand Field
 
-- You cannot use the [Rich-Text Editor](/docs/developers/create-content-types/rich-text-editor), [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor), [Markdown](/docs/developers/create-content-types/markdown), [File](/docs/developers/create-content-types/file), [Link](/docs/developers/create-content-types/link), [Custom](/docs/developers/create-custom-fields/about-custom-fields), [Taxonomy](/docs/developers/create-content-types/taxonomy) fields as the operand fields.
-- The operand field cannot be any field marked as [Multiple](/docs/developers/create-content-types/multiple).
+- You cannot use the [Rich-Text Editor](./rich-text-editor.md), [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md), [Markdown](./markdown.md), [File](./file.md), [Link](./link.md), [Custom](../create-custom-fields/about-custom-fields.md), [Taxonomy](./taxonomy.md) fields as the operand fields.
+- The operand field cannot be any field marked as [Multiple](./multiple.md).
 - The operand field can be a sub-field of a Group or Global field, but the parent field should not be marked as Multiple.
 - The operand field cannot be a field that is of JSON data type.
 - You can use the **Group** parent as an operand only when the Group field is marked as **Single**.
 - You **cannot use** the parent Modular Block or its individual child blocks as operands.
-- The operand field cannot be a [Select](/docs/developers/create-content-types/select) field where the **Selection Type** is set to **Multiple Choices**.
+- The operand field cannot be a [Select](./select.md) field where the **Selection Type** is set to **Multiple Choices**.
 
 ## Limitations on Target Field
 
-- The target field cannot be any field marked as [Mandatory](/docs/developers/create-content-types/mandatory). This is because when a target field is hidden, the entry is saved with an empty value for that field.
+- The target field cannot be any field marked as [Mandatory](./mandatory.md). This is because when a target field is hidden, the entry is saved with an empty value for that field.
 - The target field cannot be a sub-field of a Modular Block, Group, or Global field marked as **Multiple**, unless both the operand and target fields belong to the same block, group, or global field.
 - If a field is marked as **Mandatory**, has **validation applied**, or is set to **Multiple**, placing that field inside a container such as a **Group** or **Modular Block** does not bypass the restriction.
 - You cannot set a field as a target more than once in a content type. This includes fields targeted by rules created directly in the Content Type as well as rules inherited from referenced Global fields.

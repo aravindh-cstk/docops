@@ -22,9 +22,9 @@ In this guide, we will discuss the steps required to delete a Brand Kit.
 ## Prerequisites
 - [Contentstack account](https://www.contentstack.com/login/)
 - Access to Organization that has Brand Kit enabled
-- Access to the Contentstack Organization/Stack as the [Owner](/docs/developers/organization/organization-roles#organization-owner)/[Admin](/docs/developers/organization/organization-roles#organization-admin)
+- Access to the Contentstack Organization/Stack as the [Owner](../../developers/organization/organization-roles.md#organization-owner)/[Admin](../../developers/organization/organization-roles.md#organization-admin)
 
-**Note**: Only Organization [Owners](/docs/developers/organization/organization-roles#organization-owner) and [Admins](/docs/developers/organization/organization-roles#organization-admin) can view and edit Brand Kits, whereas Organization [Members](/docs/developers/organization/organization-roles#organization-member) can only view their respective Brand Kits.
+**Note**: Only Organization [Owners](../../developers/organization/organization-roles.md#organization-owner) and [Admins](../../developers/organization/organization-roles.md#organization-admin) can view and edit Brand Kits, whereas Organization [Members](../../developers/organization/organization-roles.md#organization-member) can only view their respective Brand Kits.
 
 ## Steps for Execution
 

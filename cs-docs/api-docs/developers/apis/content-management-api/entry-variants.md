@@ -24,7 +24,7 @@ Entry Variants allows you to create content variations for different audiences, 
 
 The Create entry variant request lets you create an entry variant of your existing base entry.
 
-**Note**: You must have variant groups linked to relevant content type(s). If you have not linked your content types to a variant group yet, refer to the [Link Content Type](/docs/developers/apis/content-management-api#link-content-types) request.
+**Note**: You must have variant groups linked to relevant content type(s). If you have not linked your content types to a variant group yet, refer to the [Link Content Type](../../../api-detail/content-management-api.md#link-content-types) request.
 
 In the “Body” section, include only the fields that require updating for the entry variant. The system detects changes automatically based on the values provided. All other fields inherit their values from the base entry. For Group and Modular Blocks fields with multiple instances, use the _order property to define the preferred sequence of instance UIDs.
 
@@ -210,7 +210,7 @@ In the “Body” section, include only the fields that require updating for the
 
 The Update entry variant request lets you update an entry variant of your existing base entry.
 
-**Note**: You must have variant groups linked to relevant content type(s). If you have not linked your content types to a variant group yet, refer to the [Link Content Type](/docs/developers/apis/content-management-api#link-content-types) request.
+**Note**: You must have variant groups linked to relevant content type(s). If you have not linked your content types to a variant group yet, refer to the [Link Content Type](../../../api-detail/content-management-api.md#link-content-types) request.
 
 In the “Body” section, include only the fields that require updating for the entry variant. The system detects changes automatically based on the values provided. All other fields inherit their values from the base entry. For Group and Modular Blocks fields with multiple instances, use the _order property to define the preferred sequence of instance UIDs.
 

@@ -17,7 +17,7 @@ This page explains how to install the Contentstack Migration Tool for migrating 
 
 ## Set Up Content Migration Framework (Drupal)
 
-The **Contentstack Migration Tool** enables users to seamlessly migrate content from a legacy **Content Management System** (**CMS**) to Contentstack. The tool simplifies the migration process with an intuitive interface and step-by-step workflow for importing content, mapping content types, and migrating data into a [stack](/docs/developers/set-up-stack/about-stack) within Contentstack.
+The **Contentstack Migration Tool** enables users to seamlessly migrate content from a legacy **Content Management System** (**CMS**) to Contentstack. The tool simplifies the migration process with an intuitive interface and step-by-step workflow for importing content, mapping content types, and migrating data into a [stack](../developers/set-up-stack/about-stack.md) within Contentstack.
 
 This guide outlines how to install the migration tool using Windows and macOS systems for Drupal migration.
 
@@ -62,7 +62,7 @@ git clone  https://github.com/contentstack/migration-v2.git && cd migration-v2 &
 - Confirm the inputs. The script installs dependencies, writes the configuration, and starts the upload and migration API servers.
 - Once the installation is complete, navigate to http://localhost:3000 to access the Contentstack Migration Tool.
 
-This completes the installation of Contentstack Migration Framework. Refer to the [Perform Content Migration](/docs/headless-cms/drupal-to-contentstack) section for further steps.
+This completes the installation of Contentstack Migration Framework. Refer to the [Perform Content Migration](./drupal-to-contentstack.md) section for further steps.
 
 ## Common questions
 

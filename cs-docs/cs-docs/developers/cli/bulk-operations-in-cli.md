@@ -42,8 +42,8 @@ By the end of this guide, you can:
 ### Prerequisites
 Before you begin, make sure you have the following:
 - [Node.js version 22 or above](https://nodejs.org/en/download/)
-- [Contentstack CLI installed](/docs/developers/cli/install-the-cli)
-- [Contentstack account](https://www.contentstack.com/login) with [Management Token](/docs/developers/create-tokens/about-management-tokens) or [Stack API Key](/docs/developers/set-up-stack/view-stack-details)
+- [Contentstack CLI installed](./install-the-cli.md)
+- [Contentstack account](https://www.contentstack.com/login) with [Management Token](../create-tokens/about-management-tokens.md) or [Stack API Key](../set-up-stack/view-stack-details.md)
 
 ### Install Plugin
 
@@ -259,7 +259,7 @@ csdx cm:stacks:bulk-assets [OPTIONS]
 ```
 
 #### Required Options
-Same as bulk entries, see [Required Options ](/docs/developers/cli/bulk-operations-in-cli#bulk-entries).
+Same as bulk entries, see [Required Options ](./bulk-operations-in-cli.md#bulk-entries).
 
 #### Asset-Specific Options
 
@@ -298,7 +298,7 @@ csdx cm:stacks:bulk-assets \
   --locales en-us \
   -k blt*******
 ```
-**Note:** See Example 4 in the [Bulk Entries](/docs/developers/cli/bulk-operations-in-cli#bulk-entries) section to set up the delivery token alias.
+**Note:** See Example 4 in the [Bulk Entries](./bulk-operations-in-cli.md#bulk-entries) section to set up the delivery token alias.
 
 **4. Unpublish assets**
 

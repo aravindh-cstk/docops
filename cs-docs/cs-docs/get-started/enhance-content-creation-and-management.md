@@ -25,14 +25,14 @@ Learn how to retrieve and manage your content using CDNs, Tokens, APIs, and Data
 
 A content delivery network (CDN), sometimes known as a content distribution network (CDN), is a massive global network of servers that stores cached copies of the content from your website. This fully functional CDN platform speeds up content delivery processes and provides pre-configured content per your requirement.
 
-Learn more about [CDN](/docs/developers/cdn-and-caching/what-is-cdn-and-how-it-works/).
+Learn more about [CDN](../developers/cdn-and-caching/what-is-cdn-and-how-it-works.md).
 
 ### Authorize your API Requests
 
 To access and/or manage the content of your Contentstack account, Contentstack offers Content Delivery and Content Management APIs. Different types of tokens are required to authorize these API requests.
 
-- [Overview of Tokens](/docs/developers/create-tokens/overview-of-tokens)
-- [Types of Tokens](/docs/developers/create-tokens/types-of-tokens)
+- [Overview of Tokens](../developers/create-tokens/overview-of-tokens.md)
+- [Types of Tokens](../developers/create-tokens/types-of-tokens.md)
 
 Learn more about [Tokens](/docs/developers/create-tokens/).
 
@@ -40,11 +40,11 @@ Learn more about [Tokens](/docs/developers/create-tokens/).
 
 The Contentstack platform is a CMS focused on APIs. In essence, this implies it offers REST APIs for any actions you want to take with your content. Our APIs are divided into two groups for convenience: Content Management API and Content Delivery API. Our APIs provide content via a robust and resilient content delivery network (CDN) that stores a cached copy of your content in various data centers worldwide. The delivery of content is substantially accelerated, and latency is decreased.
 
-- [Content Delivery API](/docs/developers/apis/content-delivery-api/)
-- [GraphQL Content Delivery API](/docs/developers/apis/graphql-content-delivery-api/)
-- [Content Management API](/docs/developers/apis/content-management-api/)
-- [SCIM API](/docs/developers/scim/about-scim/)
-- [Image Delivery API](https://www.contentstack.com/docs/developers/apis/image-delivery-api/)
+- [Content Delivery API](../../api-docs/api-detail/content-delivery-api.md)
+- [GraphQL Content Delivery API](../../api-docs/api-detail/graphql-content-delivery-api.md)
+- [Content Management API](../../api-docs/api-detail/content-management-api.md)
+- [SCIM API](../developers/scim/about-scim.md)
+- [Image Delivery API](../../api-docs/api-detail/image-delivery-api.md)
 
 ### Sync your Data
 
@@ -62,13 +62,13 @@ Learn more about [Workflows and Publish Rules](/docs/developers/set-up-workflows
 
 With Contentstack, you can create and publish entries in any language courtesy of its advanced multilingual capability. Set create multilingual websites and cater to a wide range of audiences by presenting content in their native language(s).
 
-Learn more about [Languages](/docs/developers/multilingual-content/how-languages-work-in-contentstack) and [Localization](/docs/developers/multilingual-content/about-localization).
+Learn more about [Languages](../developers/multilingual-content/how-languages-work-in-contentstack.md) and [Localization](../developers/multilingual-content/about-localization.md).
 
 ## Create Multiple Copies of your Stack
 
 Access independent workspaces for developers and content managers to collaborate on redesigning content models and data by creating multiple copies of your stack content and synchronizing the development of websites within a single stack.
 
-Learn more about [Branches](/docs/developers/branches/).
+Learn more about [Branches](../../api-docs/developers/apis/content-management-api/branches.md).
 
 ## Analyze your Organization
 
@@ -86,7 +86,7 @@ Learn more about [Global Fields](/docs/developers/global-field/).
 
 A block-style rich text editor that enables users to add different types of content that are stored in structured JSON blocks. Add and format content of any kind, including text, images, videos, and more.
 
-Learn more about [JSON RTE](/docs/developers/json-rich-text-editor/).
+Learn more about [JSON RTE](../developers/json-rich-text-editor.md).
 
 ## Common questions
 

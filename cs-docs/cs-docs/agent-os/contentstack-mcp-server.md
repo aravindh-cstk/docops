@@ -60,11 +60,11 @@ After authentication, let’s see how to configure the MCP Server for the Claude
 Update your `claude_desktop_config.json` with the required values.
 
 **Note**: Refer to the following documentations for more information:
-- [Stack Settings (For API Key)](/docs/developers/set-up-stack/view-stack-details)
-- [Create a Delivery Token](/docs/developers/create-tokens/create-a-delivery-token)
-- [Brand Kit](/docs/content-managers/brand-kit/edit-a-brand-kit)
-- [Launch (Project Settings)](/docs/developers/launch#launch-overview)
-- [Personalize (Project Settings)](/docs/personalize/about-personalize)
+- [Stack Settings (For API Key)](../developers/set-up-stack/view-stack-details.md)
+- [Create a Delivery Token](../developers/create-tokens/create-a-delivery-token.md)
+- [Brand Kit](../content-managers/brand-kit/edit-a-brand-kit.md)
+- [Launch (Project Settings)](../developers/launch.md#launch-overview)
+- [Personalize (Project Settings)](../personalize/about-personalize.md)
 - [Data and Insights (Lytics) (Lytics Website)](/docs/data-and-insights)
 
 ```

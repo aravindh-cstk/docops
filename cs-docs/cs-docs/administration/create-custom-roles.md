@@ -44,7 +44,7 @@ After you create an organization-level custom role, it becomes available for sel
 
 **Note**: Only organization-level (product-level) custom roles can be created through Administration. Project-level custom roles, such as custom stack, space, or AgentOS project roles, must be created from the respective project or its per-product settings page. Project-level custom roles appear in the invitation flow once created, but you cannot create them from Administration.
 
-**Additional Resource**: To assign roles when onboarding users, refer to the [Invite Users to Organization](/docs/developers/organization/invite-users-to-organization) documentation.
+**Additional Resource**: To assign roles when onboarding users, refer to the [Invite Users to Organization](../developers/organization/invite-users-to-organization.md) documentation.
 
 ## Common questions
 

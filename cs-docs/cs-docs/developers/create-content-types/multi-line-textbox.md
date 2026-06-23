@@ -29,15 +29,15 @@ The **Multi Line Textbox** field enables users to enter multi-line arbitrary tex
 
 **Note**: This field does not provide any formatting options.
 
-When you [add this field in content type](/docs/developers/create-custom-fields/use-custom-field-in-content-types), it displays a text area on the [entry](/docs/content-managers/working-with-entries/about-entries) page to enter a large chunk of data, for example, an address.
+When you [add this field in content type](../create-custom-fields/use-custom-field-in-content-types.md), it displays a text area on the [entry](../../content-managers/author-content/about-entries.md) page to enter a large chunk of data, for example, an address.
 
-This field possesses certain [properties](/docs/developers/create-content-types/about-field-properties) that you can change at any time as per your needs. The properties that can be modified are “[Display Name](/docs/developers/create-content-types/display-name),” “[Unique ID](/docs/developers/create-content-types/unique-id),” “[Placeholder Value](/docs/developers/create-content-types/placeholder-value),” “[Instruction Value](/docs/developers/create-content-types/instruction-value),” “[Help Text](/docs/developers/create-content-types/help-text),” “[Number of Characters](/docs/developers/create-content-types/number-of-characters),” “[Validation (Regex)](/docs/developers/create-content-types/validation-regex),” “[Validation Error Message](/docs/developers/create-content-types/validation-error-message),” “[Default Value](/docs/developers/create-content-types/default-value),” “[Mandatory](/docs/developers/create-content-types/mandatory),” “[Multiple](/docs/developers/create-content-types/multiple),” and “[Non-localizable](/docs/developers/create-content-types/non-localizable).”
+This field possesses certain [properties](./about-field-properties.md) that you can change at any time as per your needs. The properties that can be modified are “[Display Name](./display-name.md),” “[Unique ID](./unique-id.md),” “[Placeholder Value](./placeholder-value.md),” “[Instruction Value](./instruction-value.md),” “[Help Text](./help-text.md),” “[Number of Characters](./number-of-characters.md),” “[Validation (Regex)](./validation-regex.md),” “[Validation Error Message](./validation-error-message.md),” “[Default Value](./default-value.md),” “[Mandatory](./mandatory.md),” “[Multiple](./multiple.md),” and “[Non-localizable](./non-localizable.md).”
 
-**Additional Resource:** You can read more about [Field Visibility Rules](/docs/developers/create-content-types/about-field-visibility-rules) in our documentation where we have covered them extensively
+**Additional Resource:** You can read more about [Field Visibility Rules](./about-field-visibility-rules.md) in our documentation where we have covered them extensively
 
 After adding this field in content type, you will see it on your entry page.
 
-**Additional Resource:** You can use [Validation (Regex)](/docs/developers/create-content-types/validation-regex) with the title field. To know more, read our documentation.
+**Additional Resource:** You can use [Validation (Regex)](./validation-regex.md) with the title field. To know more, read our documentation.
 
 ## Common questions
 

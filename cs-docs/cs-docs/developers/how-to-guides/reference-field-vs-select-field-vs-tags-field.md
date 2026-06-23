@@ -17,19 +17,19 @@ This page explains the differences between Reference fields, Select fields, and 
 
 **Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn more about Reference, Select, and Tags fields, refer to the [Fields](/docs/developers/create-content-types#fields) documentation.
 
-The “Reference” field, the “[Select](/docs/developers/create-content-types/select)” field, and the default “Tags” field of a content type serve different purposes. However, since they have something in common (i.e., selecting among the given options or categorizing entries), it may be a confusing and challenging decision on which [field](/docs/developers/create-content-types/about-fields) to use for your use case.
+The “Reference” field, the “[Select](../create-content-types/select.md)” field, and the default “Tags” field of a content type serve different purposes. However, since they have something in common (i.e., selecting among the given options or categorizing entries), it may be a confusing and challenging decision on which [field](../create-content-types/about-fields.md) to use for your use case.
 
 Let’s have a look at the characteristics of these three fields and their usage recommendations.
 
 ## Reference Fields
-- [Reference fields](/docs/developers/create-content-types/reference) are commonly used to add references to other [entries](/docs/content-managers/author-content/about-entries).
-- On the entry page, the reference field is like a dropdown list that shows all entries of the referred [content type(s)](/docs/developers/create-content-types/about-content-types) as available options.
+- [Reference fields](../create-content-types/reference.md) are commonly used to add references to other [entries](../../content-managers/author-content/about-entries.md).
+- On the entry page, the reference field is like a dropdown list that shows all entries of the referred [content type(s)](../create-content-types/about-content-types.md) as available options.
 - When an option is selected, a reference to that entry is stored in the backend.
 - **Examples of usage**:“Category” field within Blog content type
 - “Author” field within Blog content type
 - “Store Location” field within Product content type
 - For navigation of a site
-- **Using a reference field helps in**:**Avoiding rework in case of changes**: If there is any change in the [referred entry](/docs/content-managers/working-with-entries/view-entry-references), it automatically gets reflected in all the entries where it was referred. For example, if the author changes her profile image, it would reflect in all the entries where the author’s entry was referred to.
+- **Using a reference field helps in**:**Avoiding rework in case of changes**: If there is any change in the [referred entry](../../content-managers/author-content/view-entry-references.md), it automatically gets reflected in all the entries where it was referred. For example, if the author changes her profile image, it would reflect in all the entries where the author’s entry was referred to.
 - **Avoiding manual work of adding data repeatedly**: Instead of repeatedly adding author details on each blog post, select the relevant author entry from the list.
 - **Avoiding manual work when the selected list of values change**: When the set of predefined choices constantly changes, use a Reference field instead of a Select field. For example, Suppose a store manager constantly updates a list of store locations with newly added stores. In that case a Reference field helps to select the store location from the referred entry list.
 
@@ -53,7 +53,7 @@ Let’s have a look at the characteristics of these three fields and their usage
 - Use the **Select** field when the options are predefined and are not likely to change. Any changes require a developer to update the content type constantly.
 - Avoid **Tags** unless you want to search entries by tags using Contentstack’s [Advanced Search](/docs/content-managers/search-content/about-advanced-search).
 
-**Additional Resource:** If you want to learn more about fields, refer to our documentation on [Field Properties](/docs/developers/create-content-types/about-field-properties).
+**Additional Resource:** If you want to learn more about fields, refer to our documentation on [Field Properties](../create-content-types/about-field-properties.md).
 
 ## Common questions
 

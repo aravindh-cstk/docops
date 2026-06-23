@@ -116,7 +116,7 @@ Activate Automation to run in a live environment.
 **Related guides:**
 - [Automate Guides](https://www.contentstack.com/docs/developers/automation-hub-guides)
 - [Updating existing content with a CloudFront distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/UpdatingExistingObjects.html)
-- [Layered Diagram](https://www.contentstack.com/docs/developers/architecture-diagrams/contentstack-powered-website-layered-architecture)
+- [Layered Diagram](../architecture-diagrams/contentstack-powered-website-layered-architecture.md)
 
 ## Common questions
 
