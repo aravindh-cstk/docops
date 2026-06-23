@@ -20,7 +20,7 @@ This guide explains how to install the Contentstack App SDK, initialize it, and 
 
 ## Prerequisites
 To get started with the TypeScript Delivery SDK, you will need the following:
-- [Contentstack account](https://www.contentstack.com/login/) with access to [Marketplace apps](/docs/developers/marketplace-apps)
+- [Contentstack account](https://www.contentstack.com/login/) with access to [Marketplace apps](../../../marketplace-apps.md)
 - [Node.js](https://nodejs.org/) version 22 or later
 - Basic knowledge of TypeScript
 
@@ -45,7 +45,7 @@ if (customField) {
   const entry = customField.entry;
 }
 ```
-After initializing the SDK, you can use the available UI location APIs to build custom behavior for your app. Refer to the [Overview of UI Locations](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#overview-of-ui-locations) section to explore supported locations and their capabilities.
+After initializing the SDK, you can use the available UI location APIs to build custom behavior for your app. Refer to the [Overview of UI Locations](../../../create-content-types/reference.md#overview-of-ui-locations) section to explore supported locations and their capabilities.
 
 ## Common questions
 
@@ -59,4 +59,4 @@ A Contentstack account with access to Marketplace apps, Node.js version 22 or la
 Initialize the SDK and use `sdk.location.CustomField` to access the current entry and field values.
 
 ### Where can I learn about other supported UI locations?
-Refer to the [Overview of UI Locations](/docs/developers/sdks/contentstack-app-sdk/typescript/reference#overview-of-ui-locations) section.
+Refer to the [Overview of UI Locations](../../../create-content-types/reference.md#overview-of-ui-locations) section.

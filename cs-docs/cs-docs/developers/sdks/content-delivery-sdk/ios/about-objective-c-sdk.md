@@ -19,13 +19,13 @@ This page explains what the Contentstack iOS Objective-C SDK is, what platforms 
 
 *Use Contentstack to power content for your iOS projects*
 
-Contentstack provides iOS SDK that Developers can use to develop iOS applications and power its content from Contentstack. The Contentstack iOS SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your iOS-based applications.
+Contentstack provides iOS SDK that Developers can use to develop iOS applications and power its content from Contentstack. The Contentstack iOS SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your iOS-based applications.
 
 **Note**: The Contentstack iOS SDK supports objC and Swift 4.2 and iOS 10 or later.
 
-In order to integrate your iOS app with Contentstack iOS SDK, follow the steps mentioned in the [Get Started](/docs/developers/sdks/content-delivery-sdk/ios/get-started-with-ios-sdk/) section.
+In order to integrate your iOS app with Contentstack iOS SDK, follow the steps mentioned in the [Get Started](./get-started-with-ios-sdk.md) section.
 
-You can check out the [sample iOS apps](/docs/developers/sdks/content-delivery-sdk/ios/#sample-apps-for-ios) that Contentstack have developed to see iOS SDK in action.
+You can check out the [sample iOS apps](../ios.md#sample-apps-for-ios) that Contentstack have developed to see iOS SDK in action.
 
 ## More resources
 
@@ -34,7 +34,7 @@ You can check out the [sample iOS apps](/docs/developers/sdks/content-delivery-s
 ## Common questions
 
 **How does the Contentstack iOS SDK fetch content?**  
-It uses the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to iOS-based applications.
+It uses the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to iOS-based applications.
 
 **What iOS versions are supported by the Contentstack iOS SDK?**  
 iOS 10 or later.
@@ -43,4 +43,4 @@ iOS 10 or later.
 Yes, it supports objC and Swift 4.2.
 
 **Where can I find a working example?**  
-You can check the [sample iOS apps](/docs/developers/sdks/content-delivery-sdk/ios/#sample-apps-for-ios) and the GitHub repository: https://github.com/contentstack/contentstack-ios
+You can check the [sample iOS apps](../ios.md#sample-apps-for-ios) and the GitHub repository: https://github.com/contentstack/contentstack-ios

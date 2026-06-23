@@ -16,7 +16,7 @@ This page explains how to install and use the Contentstack .NET Model Generator 
 
 ## Contentstack .NET Model Generator
 
-Use the Contentstack .NET Model Generator to create C# model classes from content types in your [stack](/docs/developers/set-up-stack/about-stack).
+Use the Contentstack .NET Model Generator to create C# model classes from content types in your [stack](../../../set-up-stack/about-stack.md).
 
 **Note:** Ensure .NET version **7.0 or later** is installed before executing the commands.
 
@@ -48,7 +48,7 @@ The Contentstack Model Generator supports two authentication methods:
 
 | Short key | Long Key | Description |
 |---|---|---|
-| -a | --api-key | The stack API key for the [Content Management API](/docs/developers/apis/content-management-api). This key is required for both traditional (Authtoken-based) and OAuth 2.0 authentication methods. |
+| -a | --api-key | The stack API key for the [Content Management API](../../../../../api-docs/api-detail/content-management-api.md). This key is required for both traditional (Authtoken-based) and OAuth 2.0 authentication methods. |
 | -A | --authtoken | Specifies the authtoken used for traditional API key authentication with the Content Management API. |
 | -b | --branch | Specifies a branch of the stack to fetch content types and generate models. |
 | -e | --endpoint | The Contentstack host for the Content Management API. The default value used is `api.contentstack.io.` |
@@ -123,8 +123,8 @@ contentstack.model.generator -a  -A  -N
 ### OAuth 2.0 Setup
 
 #### Prerequisites
-- [Contentstack account](/docs/get-started/set-up-your-account) with OAuth enabled.
-- [Create an OAuth application](https://www.contentstack.com/docs/developers/developer-hub/contentstack-oauth) in your Contentstack dashboard
+- [Contentstack account](../../../../get-started/set-up-your-account.md) with OAuth enabled.
+- [Create an OAuth application](../../../developer-hub/contentstack-oauth.md) in your Contentstack dashboard
 
 #### OAuth Flow
 - **Authorization**: The tool displays the Contentstack OAuth authorization URL for you to open manually

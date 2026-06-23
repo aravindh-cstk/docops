@@ -92,7 +92,7 @@ const renderOption = {
 ```
 
 ## Basic Queries
-Contentstack Utils SDK lets you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api/) and retrieve embedded items from the RTE field of an entry. This section explains how to handle both HTML and JSON RTE content from single or multiple entries.
+Contentstack Utils SDK lets you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve embedded items from the RTE field of an entry. This section explains how to handle both HTML and JSON RTE content from single or multiple entries.
 
 ### Fetch Embedded Item(s) from a Single Entry
 

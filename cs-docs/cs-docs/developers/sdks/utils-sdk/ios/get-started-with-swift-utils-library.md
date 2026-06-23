@@ -20,7 +20,7 @@ This page explains how to install and start using the Contentstack Swift Utils S
 
 Get Started with iOS Utils Library
 
-This guide will help you get started with Contentstack [Swift Utils SDK](/docs/developers/sdks/utils-sdk/ios/about-ios-utils-library/) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Swift Utils SDK](./about-ios-utils-library.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 

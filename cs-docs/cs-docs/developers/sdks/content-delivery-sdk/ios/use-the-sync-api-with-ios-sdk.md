@@ -65,7 +65,7 @@ stack.sync({
 }];
 ```
 
-**Note**: Use the value of the delivery token against the **access_token** key. Learn [how to create a delivery token](/docs/developers/create-tokens/create-a-delivery-token).
+**Note**: Use the value of the delivery token against the **access_token** key. Learn [how to create a delivery token](../../../create-tokens/create-a-delivery-token.md).
 
 The response also contains a sync token, which you need to store since this token is used to get subsequent delta updates later, as shown in the [Subsequent sync](#subsequent-sync) section below.
 
@@ -392,7 +392,7 @@ stack.syncOnly(  , locale: ENGLISH_UNITED_STATES , from:  , publishType:ENTRY_PU
 ## More resources
 
 - [iOS playground app](https://github.com/contentstack/contentstack-ios-sync-playground.git)
-- [iOS SDK API reference](/docs/developers/sdks/content-delivery-sdk/ios/reference/)
+- [iOS SDK API reference](../../../create-content-types/reference.md)
 - [View and Download iOS SDK repository on GitHub](https://github.com/contentstack/contentstack-ios)
 
 ## Common questions

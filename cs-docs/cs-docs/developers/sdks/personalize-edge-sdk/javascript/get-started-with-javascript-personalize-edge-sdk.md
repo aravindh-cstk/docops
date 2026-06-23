@@ -19,11 +19,11 @@ This page explains how to install, initialize, and use the JavaScript Personaliz
 
 ## Get Started with JavaScript Personalize Edge SDK
 
-The SDK is a wrapper over the [Personalize Edge API](/docs/developers/apis/personalize-edge-api), which is the decision engine that determines the variants to be shown to a user as well as the endpoint to track user impressions and events.
+The SDK is a wrapper over the [Personalize Edge API](../../../../../api-docs/api-detail/personalize-edge-api.md), which is the decision engine that determines the variants to be shown to a user as well as the endpoint to track user impressions and events.
 This step-by-step guide will help you get started with the JavaScript Personalize Edge SDK and build personalized applications powered by Contentstack.
 
 ## Prerequisites
-- Website content sourced from a Contentstack [stack](/docs/developers/set-up-stack/about-stack)
+- Website content sourced from a Contentstack [stack](../../../set-up-stack/about-stack.md)
 - Personalize project created and connected to a stack
 - Personalize Project UID
 
@@ -41,7 +41,7 @@ $ npm i @contentstack/personalize-edge-sdk
 
 Initialization creates an instance of the SDK which can then be used to retrieve user specific experiences, track impressions, and log events. The initialization process varies depending on the context in which the SDK is being used, such as edge middleware, backend, or frontend.
 
-Initialization involves an API call to the Edge API to fetch the [manifest](/docs/personalize/glossary-key-features#user-manifest) for the current user. This manifest is maintained throughout the SDK’s lifespan. Methods such as `getExperiences` and `getVariantAliases` rely on this manifest to provide their outputs.
+Initialization involves an API call to the Edge API to fetch the [manifest](../../../../personalize/glossary-key-features.md#user-manifest) for the current user. This manifest is maintained throughout the SDK’s lifespan. Methods such as `getExperiences` and `getVariantAliases` rely on this manifest to provide their outputs.
 
 To start using the SDK, import and configure Personazlize with your **Project UID**:
 
@@ -129,12 +129,12 @@ await personalizeSdk.triggerEvent('clickCTA');
 ```
 
 ## Resources
-- [Setup Next.js Website with Personalize - Launch](/docs/personalize/setup-nextjs-website-with-personalize-launch)
-- [Setup Next.js Website with Personalize - Vercel](/docs/personalize/setup-nextjs-website-with-personalize-vercel)
+- [Setup Next.js Website with Personalize - Launch](../../../../personalize/setup-nextjs-website-with-personalize-launch.md)
+- [Setup Next.js Website with Personalize - Vercel](../../../../personalize/setup-nextjs-website-with-personalize-vercel.md)
 
 ## Next Steps
 
-[Personalize Edge SDK API Reference](/docs/developers/sdks/personalize-edge-sdk/javascript/reference)
+[Personalize Edge SDK API Reference](../../../create-content-types/reference.md)
 
 ## Common questions
 

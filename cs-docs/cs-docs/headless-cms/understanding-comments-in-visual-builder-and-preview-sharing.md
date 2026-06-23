@@ -23,7 +23,7 @@ Contentstack offers two distinct commenting features designed to enhance collabo
 
 ## Visual Builder Discussions
 
-Visual Builder [Discussions](/docs/content-managers/visual-builder/discussions/) enable internal teams to provide structured comments to fields in the webpage directly within Contentstack’s Visual Builder interface.
+Visual Builder [Discussions](../content-managers/visual-editor/discussions.md) enable internal teams to provide structured comments to fields in the webpage directly within Contentstack’s Visual Builder interface.
 
 - **In-Context Comments:** Comment directly on **fields**, **sections**, or **components**.
 - **For Internal Teams:** Designed for **content managers**, **developers**, and **designers**.
@@ -32,7 +32,7 @@ Visual Builder [Discussions](/docs/content-managers/visual-builder/discussions/)
 
 ## Preview Sharing Comments
 
-Preview Sharing [Comments](/docs/content-managers/preview-sharing/add-a-review-comment) allow you to share website previews with both **internal users** and **external stakeholders**. Internal users are those who have access to Contentstack, while external stakeholders can review and comment on the shared content without needing a Contentstack account. This simplifies collaboration by enabling feedback from all relevant parties, regardless of their access level.
+Preview Sharing [Comments](../content-managers/preview-sharing/add-a-review-comment.md) allow you to share website previews with both **internal users** and **external stakeholders**. Internal users are those who have access to Contentstack, while external stakeholders can review and comment on the shared content without needing a Contentstack account. This simplifies collaboration by enabling feedback from all relevant parties, regardless of their access level.
 
 Unlike Visual Builder comments, Preview Sharing comments can be added anywhere on the page, offering greater flexibility for content review and feedback.
 

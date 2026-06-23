@@ -19,13 +19,13 @@ This page introduces the Contentstack Java Delivery SDK, explains what it is use
 
 *Use Contentstack to power content for your Java projects*
 
-Contentstack provides Java SDK that Developers can use to develop Java applications and power its content from Contentstack. The Contentstack Java SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your Java-based applications.
+Contentstack provides Java SDK that Developers can use to develop Java applications and power its content from Contentstack. The Contentstack Java SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your Java-based applications.
 
 **Note**: The Contentstack Java SDK supports Java version 1.8 or later.
 
 In order to integrate your Java app with Contentstack Java SDK, follow the steps mentioned in the [Get Started](/docs/developers/java/get-started-with-java-sdk) section.
 
-You can check out the [sample Java apps](/docs/developers/sdks/content-delivery-sdk/java/#sample-apps-for-java) that Contentstack have developed to see Java SDK in action.
+You can check out the [sample Java apps](../java.md#sample-apps-for-java) that Contentstack have developed to see Java SDK in action.
 
 ## More resources
 
@@ -34,7 +34,7 @@ You can check out the [sample Java apps](/docs/developers/sdks/content-delivery-
 ## Common questions
 
 **How does the Contentstack Java SDK fetch content?**  
-The Contentstack Java SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your Java-based applications.
+The Contentstack Java SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your Java-based applications.
 
 **What Java versions are supported by the Contentstack Java SDK?**  
 **Note**: The Contentstack Java SDK supports Java version 1.8 or later.

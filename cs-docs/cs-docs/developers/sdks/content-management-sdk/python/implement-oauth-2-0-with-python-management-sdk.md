@@ -17,14 +17,14 @@ This page explains how to use OAuth 2.0 with the Contentstack Python Management 
 
 ## Implement OAuth 2.0 with Python Management SDK
 
-Use OAuth 2.0 with the [Python Management SDK](/docs/developers/sdks/content-management-sdk/python/about-python-management-sdk) to authenticate applications with [Contentstack’s Content Management API](/docs/developers/apis/content-management-api) (CMA). The SDK helps you obtain and refresh tokens, store them securely, and make authorized API requests.
+Use OAuth 2.0 with the [Python Management SDK](./about-python-management-sdk.md) to authenticate applications with [Contentstack’s Content Management API](../../../../../api-docs/api-detail/content-management-api.md) (CMA). The SDK helps you obtain and refresh tokens, store them securely, and make authorized API requests.
 
 Apply this flow in server-side applications, CLI tools, and other Python environments to control access with scoped permissions.
 
 ## Prerequisites
 
 - Install [`contentstack-management`](https://pypi.org/project/contentstack-management/) **v1.7.0** or **later**.
-- [Register an OAuth application.](/docs/developers/developer-hub/contentstack-oauth) If none is registered, the SDK defaults to the Contentstack CLI App.
+- [Register an OAuth application.](../../../developer-hub/contentstack-oauth.md) If none is registered, the SDK defaults to the Contentstack CLI App.
 - Ensure you have the following credentials:`client_id`
 - `client_secret` (optional)
 - `app_id`

@@ -17,20 +17,20 @@ This page explains how to fetch content using GraphQL queries (via a GraphQL-pow
 
 ## Use GraphQL Queries with JavaScript Utils SDK to Render JSON RTE Content
 
-This step-by-step guide explains how to use a GraphQL-powered Delivery SDK to deliver content to your [JavaScript SDK](https://github.com/contentstack/contentstack-javascript) apps and the [JavaScript Utils SDK](https://github.com/contentstack/contentstack-utils-javascript) to render [JSON Rich Text Editor](/docs/developers/json-rich-text-editor/about-json-rich-text-editor) content.
+This step-by-step guide explains how to use a GraphQL-powered Delivery SDK to deliver content to your [JavaScript SDK](https://github.com/contentstack/contentstack-javascript) apps and the [JavaScript Utils SDK](https://github.com/contentstack/contentstack-utils-javascript) to render [JSON Rich Text Editor](../../../json-rich-text-editor/about-json-rich-text-editor.md) content.
 
 **Note**: We recommend that you either use GraphQL queries with “Apollo Client SDK” or “[JavaScript Delivery SDK](https://github.com/contentstack/contentstack-javascript)” to fetch and deliver content to your frontend website. To render JSON RTE content, we must use the Contentstack Utils SDK.
 
 ## Prerequisites
 
 To get started with the [JavaScript Utils SDK](https://github.com/contentstack/contentstack-utils-javascript), you will need:
-- [Node.js](https://www.contentstack.com/docs/developers/sdks/utils-sdk/javascript/use-graphql-queries-with-javascript-utils-sdk-to-render-json-rte-content) version 20 or later
+- [Node.js](./use-graphql-queries-with-javascript-utils-sdk-to-render-json-rte-content.md) version 20 or later
 
 ## SDK Installation and Setup
 
-To consume content delivered by the GraphQL Content Delivery API, you need to use [GraphQL queries with the Apollo Client JavaScript SDK](/docs/developers/graphql-api/use-the-graphql-queries-with-apollo-sdks/use-graphql-queries-with-apollo-client-javascript-sdk).
+To consume content delivered by the GraphQL Content Delivery API, you need to use [GraphQL queries with the Apollo Client JavaScript SDK](../../../graphql-api/use-the-graphql-queries-with-apollo-sdks/use-graphql-queries-with-apollo-client-javascript-sdk.md).
 
-Subsequently, to render JSON RTE content while delivering data to the front-end website, you need to use the [Contentstack JavaScript Utils SDK](/docs/developers/javascript-browser/about-javascript-utils-library). To install the [JavaScript Utils SDK](https://github.com/contentstack/contentstack-utils-javascript), run the following command:
+Subsequently, to render JSON RTE content while delivering data to the front-end website, you need to use the [Contentstack JavaScript Utils SDK](./about-javascript-utils-library.md). To install the [JavaScript Utils SDK](https://github.com/contentstack/contentstack-utils-javascript), run the following command:
 
 ```
 npm i @contentstack/utils
@@ -38,7 +38,7 @@ npm i @contentstack/utils
 
 ## Usage
 
-Let’s learn how you can use [GraphQL queries](/docs/developers/apis/graphql-content-delivery-api#queries) to fetch entry content and Javascript Utils SDK to render JSON Rich Text Editor content.
+Let’s learn how you can use [GraphQL queries](../../../../../api-docs/api-detail/graphql-content-delivery-api.md#queries) to fetch entry content and Javascript Utils SDK to render JSON Rich Text Editor content.
 
 ### Create Render Option
 
@@ -160,7 +160,7 @@ embedded_itemsConnection(skip: 1, limit: 3) {
         }
 ```
 
-**Additional Resource**: For more information on querying embedded items, you can refer to the [Include Embedded RTE Items](/docs/developers/apis/graphql-content-delivery-api#include-embedded-rte-items) documentation.
+**Additional Resource**: For more information on querying embedded items, you can refer to the [Include Embedded RTE Items](../../../../../api-docs/api-detail/graphql-content-delivery-api.md#include-embedded-rte-items) documentation.
 
 ## Common questions
 
@@ -168,7 +168,7 @@ embedded_itemsConnection(skip: 1, limit: 3) {
 Yes. **Note**: We recommend that you either use GraphQL queries with “Apollo Client SDK” or “[JavaScript Delivery SDK](https://github.com/contentstack/contentstack-javascript)” to fetch and deliver content to your frontend website. To render JSON RTE content, we must use the Contentstack Utils SDK.
 
 ### What Node.js version is required?
-- [Node.js](https://www.contentstack.com/docs/developers/sdks/utils-sdk/javascript/use-graphql-queries-with-javascript-utils-sdk-to-render-json-rte-content) version 20 or later
+- [Node.js](./use-graphql-queries-with-javascript-utils-sdk-to-render-json-rte-content.md) version 20 or later
 
 ### Which function is used to render JSON Rich Text Editor content?
 To render the JSON Rich Text Editor content along with other entry data, use the Utils.jsonToHtml function as shown below:

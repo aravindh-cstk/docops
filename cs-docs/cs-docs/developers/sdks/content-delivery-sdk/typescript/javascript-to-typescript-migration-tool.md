@@ -29,7 +29,7 @@ This guide provides an overview of the conversion engine and explains the steps 
 
 ## Key Capabilities
 - Consistent JS to TS conversion using a fixed-seed evaluation model, ensuring deterministic and reproducible output
-- Supports conversion for more than [50 Delivery SDK methods](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference)
+- Supports conversion for more than [50 Delivery SDK methods](../../../create-content-types/reference.md)
 - The tool uses multiple rule-based approaches to analyze and convert code
 - Execution support for JavaScript and TypeScript in a controlled sandbox
 - TypeScript output structured according to the Delivery SDK method and typing conventions
@@ -65,7 +65,7 @@ In this step, the converter verifies that the generated TypeScript meets the req
 ## Using the JS-to-TS Migration Tool
 To convert JavaScript code to TypeScript, perform the following steps:
 - Copy and paste your Contentstack JavaScript SDK code into the input field, then click **Convert to TypeScript**.
-- To run and compare both versions in the sandbox, enter your stack details, including your [API Key](/docs/developers/set-up-stack/view-stack-details), [Environment](/docs/developers/set-up-environments/about-environments), and [Delivery Token](/docs/developers/create-tokens/about-delivery-tokens).
+- To run and compare both versions in the sandbox, enter your stack details, including your [API Key](../../../set-up-stack/view-stack-details.md), [Environment](../../../set-up-environments/about-environments.md), and [Delivery Token](../../../create-tokens/about-delivery-tokens.md).
 
 ## Example Conversion Scenarios
 The following examples show how the tool transforms common JavaScript patterns into structured TypeScript. Code is represented as placeholders.

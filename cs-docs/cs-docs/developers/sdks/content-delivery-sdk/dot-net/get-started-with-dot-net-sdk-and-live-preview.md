@@ -17,11 +17,11 @@ This page explains how to install and set up the Contentstack .NET SDK with Live
 
 ## Get Started with .NET SDK and Live Preview
 
-This guide will help you get started with [Contentstack .NET SDK](/docs/developers/sdks/content-delivery-sdk/dot-net/about-dot-net-delivery-sdk/) to build apps powered by Contentstack.
+This guide will help you get started with [Contentstack .NET SDK](./about-dot-net-delivery-sdk.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 - .NET version 2.0 or later
-- [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk)
+- [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
 
 ## SDK Installation and Setup
 
@@ -47,7 +47,7 @@ using Contentstack.Core.Configuration; // ContentstackOptions
 
 ## Initializing the Stack with Live Preview
 
-Since the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk) is responsible for communication, you need to initialize it within your stack.
+Since the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) is responsible for communication, you need to initialize it within your stack.
 
 Add the `appsettings.json` command to initialize the stack:
 
@@ -66,7 +66,7 @@ Add the `appsettings.json` command to initialize the stack:
 }
 ```
 
-**Note**: By default, the `Host` parameter points to the North America endpoint. If your website is hosted on the European data center, then pass the [European](/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt) endpoint against the `Host` parameter.
+**Note**: By default, the `Host` parameter points to the North America endpoint. If your website is hosted on the European data center, then pass the [European](../../../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) endpoint against the `Host` parameter.
 
 ## Configure the HTTP Request Pipeline
 
@@ -115,7 +115,7 @@ public class Startup
 
 ## For Server-side Rendered Websites
 
-To install and initialize the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk), you can refer to our [SSR Live Preview Setup](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website#server-side-rendering-ssr-) documentation.
+To install and initialize the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md), you can refer to our [SSR Live Preview Setup](../../../set-up-live-preview/set-up-live-preview-for-your-website.md#server-side-rendering-ssr-) documentation.
 
 Add the following script within the `head` tag of the “`_Host.chtml`” or “`Index.chtml`” file:
 
@@ -133,9 +133,9 @@ ContentstackLivePreview.init({
 
 ## Query Request
 
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
-To get an [entry](/docs/content-managers/author-content/about-entries), you need to specify the [content type](/docs/developers/create-content-types/about-content-types) UID and the UID of the entry.
+To get an [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) UID and the UID of the entry.
 
 ```
 client.ContentType("CONTENT_TYPE_UID").Query().Find();
@@ -146,26 +146,26 @@ client.ContentType("CONTENT_TYPE_UID").Entry(“ENTRY_UID”).Find();
 
 The Timeline Preview feature in the DotNet Delivery SDK allows you to preview different versions of an entry based on specific timestamps or scheduled releases—making it easier to test future or past content states.
 
-For more information, refer to our [Timeline Preview](/docs/developers/set-up-timeline) documentation
+For more information, refer to our [Timeline Preview](../../../set-up-timeline.md) documentation
 
 ## More Resources
-- [JavaScript Live Preview Utils SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-live-preview-utils-sdk)
+- [JavaScript Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
 - [.NET News App](/docs/developers/dot-net/get-started-with-dot-net-sdk)
-- [.NET Liquid Template Website](/docs/developers/sample-apps/build-a-liquid-template-example-using-contentstack-dot-net-sdk)
-- [API Reference](/docs/developers/sdks/content-delivery-sdk/dot-net/reference/)
-- [.NET SDK Changelog](/docs/developers/sdks/content-delivery-sdk/dot-net/dot-net-sdk-changelog/)
+- [.NET Liquid Template Website](../../../sample-apps/build-a-liquid-template-example-using-contentstack-dot-net-sdk.md)
+- [API Reference](../../../create-content-types/reference.md)
+- [.NET SDK Changelog](./dot-net-sdk-changelog.md)
 - [View and Download .NET SDK repository on GitHub](https://github.com/contentstack/contentstack-dotnet)
 
 ## Common questions
 
 ### Do I need the Live Preview Utils SDK to use Live Preview with the .NET SDK?
-Yes. “Since the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk) is responsible for communication, you need to initialize it within your stack.”
+Yes. “Since the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) is responsible for communication, you need to initialize it within your stack.”
 
 ### Where do I configure the Live Preview host and preview token?
 In `appsettings.json` under `ContentstackOptions` → `LivePreview`, including `PreviewToken`, `Enable`, and `Host`.
 
 ### What should I do if my website is hosted on the European data center?
-Use the [European](/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt) endpoint against the `Host` parameter instead of the default North America endpoint.
+Use the [European](../../../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) endpoint against the `Host` parameter instead of the default North America endpoint.
 
 ### How do I fetch entries using the .NET SDK?
 Use the content type UID and entry UID, for example:

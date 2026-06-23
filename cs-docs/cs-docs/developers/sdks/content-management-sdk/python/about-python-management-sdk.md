@@ -17,7 +17,7 @@ This page introduces the Contentstack Python Management SDK, highlighting what i
 
 ## About Python Management SDK
 
-Contentstack offers the Python Management SDK that leverages [Content Management APIs](/docs/developers/apis/content-management-api) to help you efficiently manage your content within your Contentstack account.
+Contentstack offers the Python Management SDK that leverages [Content Management APIs](../../../../../api-docs/api-detail/content-management-api.md) to help you efficiently manage your content within your Contentstack account.
 
 With this SDK, you can seamlessly create, update, delete, and retrieve content.
 
@@ -25,7 +25,7 @@ Explore our tutorials and guides for seamless integration with Contentstack's su
 
 **Note:** The Contentstack Python Management SDK supports [Python 3 version 3.7](https://www.python.org/downloads/release/python-370/) or later.
 
-To seamlessly integrate your Python application with Contentstack’s Python Management SDK, follow the steps outlined in the [Get Started with Python Management SDK](/docs/developers/sdks/content-management-sdk/python/get-started-with-python-management-sdk) documentation.
+To seamlessly integrate your Python application with Contentstack’s Python Management SDK, follow the steps outlined in the [Get Started with Python Management SDK](./get-started-with-python-management-sdk.md) documentation.
 
 ## Key Features
 
@@ -88,7 +88,7 @@ It helps you manage content within your Contentstack account by using Content Ma
 **Note:** The Contentstack Python Management SDK supports [Python 3 version 3.7](https://www.python.org/downloads/release/python-370/) or later.
 
 ### Where do I start to integrate the SDK into my Python application?
-Follow the steps outlined in the [Get Started with Python Management SDK](/docs/developers/sdks/content-management-sdk/python/get-started-with-python-management-sdk) documentation.
+Follow the steps outlined in the [Get Started with Python Management SDK](./get-started-with-python-management-sdk.md) documentation.
 
 ### Where can I find the source code or repository?
 [Python Management Github Repository](https://github.com/contentstack/contentstack-management-python)

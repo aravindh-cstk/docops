@@ -16,7 +16,7 @@ This page explains how to install and use the Contentstack PHP Utils SDK to rend
 
 ## Get Started with PHP Utils Library
 
-This guide will help you get started with Contentstack [PHP Utils SDK](/docs/developers/php/about-php-utils-library) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [PHP Utils SDK](./about-php-utils-library.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 - PHP version 5.5.0 or later

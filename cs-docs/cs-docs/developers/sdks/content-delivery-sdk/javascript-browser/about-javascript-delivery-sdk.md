@@ -17,15 +17,15 @@ This page explains what the Contentstack JavaScript Delivery SDK is, what it’s
 
 ## About JavaScript Delivery SDK
 
-**Note**: We recommend using the [TypeScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/typescript) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project. Learn to seamlessly [migrate from JavaScript to TypeScript](/docs/developers/sdks/content-delivery-sdk/typescript/migrate-from-javascript-to-typescript/).
+**Note**: We recommend using the [TypeScript Delivery SDK](../typescript.md) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project. Learn to seamlessly [migrate from JavaScript to TypeScript](../typescript/migrate-from-javascript-to-typescript.md).
 
-Contentstack provides JavaScript Delivery SDK that Developers can use to develop JavaScript applications and power its content from Contentstack. The Contentstack JavaScript Delivery SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your JavaScript-based applications.
+Contentstack provides JavaScript Delivery SDK that Developers can use to develop JavaScript applications and power its content from Contentstack. The Contentstack JavaScript Delivery SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your JavaScript-based applications.
 
 **Note**: The Contentstack JavaScript SDK supports [NodeJS](https://nodejs.org/en) version 22 or later.
 
-In order to integrate your JavaScript app with Contentstack JavaScript Delivery SDK, follow the steps mentioned in the [Get Started](/docs/developers/javascript-browser/get-started-with-javascript-delivery-sdk) section.
+In order to integrate your JavaScript app with Contentstack JavaScript Delivery SDK, follow the steps mentioned in the [Get Started](./get-started-with-javascript-delivery-sdk.md) section.
 
-You can check out the [sample JavaScript apps](/docs/developers/sdks/content-delivery-sdk/javascript-browser/#sample-apps-for-javascript) that Contentstack have developed to see JavaScript Delivery SDK in action.
+You can check out the [sample JavaScript apps](../javascript-browser.md#sample-apps-for-javascript) that Contentstack have developed to see JavaScript Delivery SDK in action.
 
 ## More Resources
 
@@ -34,13 +34,13 @@ You can check out the [sample JavaScript apps](/docs/developers/sdks/content-del
 ## Common questions
 
 ### Should I use the JavaScript Delivery SDK or the TypeScript Delivery SDK?
-**Note**: We recommend using the [TypeScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/typescript) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project.
+**Note**: We recommend using the [TypeScript Delivery SDK](../typescript.md) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project.
 
 ### What APIs does the Contentstack JavaScript Delivery SDK use?
-The Contentstack JavaScript Delivery SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your JavaScript-based applications.
+The Contentstack JavaScript Delivery SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your JavaScript-based applications.
 
 ### What NodeJS versions are supported?
 **Note**: The Contentstack JavaScript SDK supports [NodeJS](https://nodejs.org/en) version 22 or later.
 
 ### Where can I find sample apps and the SDK source code?
-You can check out the [sample JavaScript apps](/docs/developers/sdks/content-delivery-sdk/javascript-browser/#sample-apps-for-javascript) that Contentstack have developed to see JavaScript Delivery SDK in action, and you can also [View and Download JavaScript Delivery SDK repository on GitHub](https://github.com/contentstack/contentstack-javascript).
+You can check out the [sample JavaScript apps](../javascript-browser.md#sample-apps-for-javascript) that Contentstack have developed to see JavaScript Delivery SDK in action, and you can also [View and Download JavaScript Delivery SDK repository on GitHub](https://github.com/contentstack/contentstack-javascript).

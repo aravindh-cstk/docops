@@ -16,7 +16,7 @@ This page explains how to integrate Live Preview with the Contentstack Python SD
 
 ## Get Started with Python SDK and Live Preview
 
-This guide explains how to integrate Live Preview with the  [Python SDK](/docs/developers/sdks/content-delivery-sdk/python/about-python-sdk/) using Flask. Live Preview enables real-time content updates before publishing, helping developers and editors preview changes instantly.
+This guide explains how to integrate Live Preview with the  [Python SDK](./about-python-sdk.md) using Flask. Live Preview enables real-time content updates before publishing, helping developers and editors preview changes instantly.
 
 ## Pre-requisites
 - [Contentstack account](https://app.contentstack.com/#!/login)
@@ -55,7 +55,7 @@ pip install contentstack flask
 You can download the latest dependency version [here](https://pypi.org/project/Contentstack/).
 
 ## Initializing the Stack with Live Preview
-Since the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk) is responsible for communication, you need to initialize it within your stack.
+Since the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) is responsible for communication, you need to initialize it within your stack.
 
 Use the following command to initialize the stack:
 
@@ -72,7 +72,7 @@ stack = contentstack.Stack(
     }
 )
 ```
-**Note**: By default, the `host` parameter points to the North America endpoint. If your website is hosted on the European data center, then pass the [European](/docs/developers/contentstack-regions/europe-region-what-it-is-and-what-it-isnt) endpoint against the `host` parameter.
+**Note**: By default, the `host` parameter points to the North America endpoint. If your website is hosted on the European data center, then pass the [European](../../../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) endpoint against the `host` parameter.
 
 ## Live Preview Query Setup
 The live_preview_query() method ensures that the SDK fetches draft (unpublished) content updates in real time.
@@ -156,12 +156,12 @@ python app.py
 Open a browser and go to `http://localhost:5000`.Modify the entry in Contentstack and observe real-time changes.
 
 ## For Server-side Rendered Websites
-To install and initialize the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk), you can refer to our [SSR Live Preview Setup](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website#server-side-rendering-ssr-) documentation.
+To install and initialize the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md), you can refer to our [SSR Live Preview Setup](../../../set-up-live-preview/set-up-live-preview-for-your-website.md#server-side-rendering-ssr-) documentation.
 
 ## Query Request
-Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
-To get an [entry](/docs/content-managers/author-content/about-entries), you need to specify the [content type](/docs/developers/create-content-types/about-content-types) UID and the UID of the entry.
+To get an [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) UID and the UID of the entry.
 
 ```
 entry = stack.content_type("content_type_uid").entry();
@@ -171,13 +171,13 @@ result = entry.fetch()
 ## Timeline Preview
 The Timeline Preview feature in the Python Delivery SDK allows you to preview different versions of an entry based on specific timestamps or scheduled releases—making it easier to test future or past content states.
 
-For more information, refer to our [Timeline Preview](/docs/developers/set-up-timeline) documentation
+For more information, refer to our [Timeline Preview](../../../set-up-timeline.md) documentation
 
 ## More Resources
-- [JavaScript Live Preview Utils SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-live-preview-utils-sdk)
-- [Python News App Using Contentstack’s Python SDK](/docs/developers/sample-apps/build-a-python-news-app-using-contentstack-python-sdk)
+- [JavaScript Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
+- [Python News App Using Contentstack’s Python SDK](../../../sample-apps/build-a-python-news-app-using-contentstack-python-sdk.md)
 - [API Reference](/docs/developers/python/api-reference/)
-- [Python SDK Changelog](/docs/developers/sdks/content-delivery-sdk/python/python-sdk-changelog/)
+- [Python SDK Changelog](./python-sdk-changelog.md)
 - [View and Download Python SDK repository on GitHub](https://github.com/contentstack/contentstack-python)
 
 ## Common questions

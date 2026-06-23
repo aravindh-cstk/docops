@@ -17,7 +17,7 @@ This page explains how to install and set up the Java Marketplace SDK, initializ
 
 ## Get Started with Java Marketplace SDK
 
-This step-by-step guide will help you get started with the [Java Marketplace SDK](/docs/developers/sdks/marketplace-sdk/java/about-java-marketplace-sdk) and build apps powered by Contentstack.
+This step-by-step guide will help you get started with the [Java Marketplace SDK](./about-java-marketplace-sdk.md) and build apps powered by Contentstack.
 
 ## Prerequisites
 - [Java version 8](https://www.java.com/download/ie_manual.jsp)or later.
@@ -85,7 +85,7 @@ Marketplace marketplace = new Marketplace.Builder("organisationId").host("api.co
 ```
 
 ### Regions
-Contentstack offers four [regions](/docs/developers/contentstack-regions/about-regions), North America (NA), Europe (EU), Azure North America (Azure NA), and Azure Europe (Azure EU) as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions on how to use Contentstack SDKs.
+Contentstack offers four [regions](../../../contentstack-regions/about-regions.md), North America (NA), Europe (EU), Azure North America (Azure NA), and Azure Europe (Azure EU) as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions on how to use Contentstack SDKs.
 
 **Note:** Users using the NA region do not need to make any configuration changes as the SDK considers this region by default. This means, you need not pass the region parameter in the following code.
 
@@ -154,7 +154,7 @@ AppRequest appRequest = marketplace.request();
 [Java Marketplace Github Repository](https://github.com/contentstack/contentstack-marketplace-java)
 
 ## Next Steps
-[Java Marketplace SDK API Reference](/docs/developers/sdks/marketplace-sdk/java/reference/)
+[Java Marketplace SDK API Reference](../../../create-content-types/reference.md)
 
 ## Common questions
 
@@ -168,4 +168,4 @@ AppRequest appRequest = marketplace.request();
 [Java Marketplace Github Repository](https://github.com/contentstack/contentstack-marketplace-java)
 
 ### Where is the API reference for the Java Marketplace SDK?
-[Java Marketplace SDK API Reference](/docs/developers/sdks/marketplace-sdk/java/reference/)
+[Java Marketplace SDK API Reference](../../../create-content-types/reference.md)

@@ -20,7 +20,7 @@ This page explains what the Contentstack iOS Utils library is, what it includes,
 Contentstack provides the iOS Utils library that contains all the utilities for the iOS SDK.
 
 Features included:
-- **Embedded Object**: Allows you to fetch embedded [entries](/docs/content-managers/author-content/about-entries/)/[assets](/docs/content-managers/author-content/about-assets/) (placed inside the “[Rich Text Editor](/docs/developers/create-content-types/rich-text-editor)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](/docs/developers/create-content-types/rich-text-editor/#embed-entries-or-assets-within-html-based-rich-text-editor) and [Embed Asset](/docs/developers/create-content-types/rich-text-editor/#embed-assets-in-the-html-based-rte) documentation.
+- **Embedded Object**: Allows you to fetch embedded [entries](../../../../content-managers/author-content/about-entries.md)/[assets](../../../../content-managers/author-content/about-assets.md) (placed inside the “[Rich Text Editor](../../../create-content-types/rich-text-editor.md)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](../../../create-content-types/rich-text-editor.md#embed-entries-or-assets-within-html-based-rich-text-editor) and [Embed Asset](../../../create-content-types/rich-text-editor.md#embed-assets-in-the-html-based-rte) documentation.
 
 **Note**: The Contentstack iOS Utils library supports Node.js version 10 or above.
 

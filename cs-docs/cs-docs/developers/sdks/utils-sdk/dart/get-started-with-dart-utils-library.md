@@ -18,7 +18,7 @@ This page explains how to set up and use the Contentstack Dart Utils SDK to rend
 
 ## Get Started with Dart Utils Library
 
-This guide will help you get started with Contentstack [Dart Utils SDK](/docs/developers/dart/about-dart-utils-library) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Dart Utils SDK](./about-dart-utils-library.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 - Latest version of Android Studio or IntelliJ IDEA or Visual Studio Code

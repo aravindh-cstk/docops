@@ -21,11 +21,11 @@ Contentstack provides plugins to build websites using [static site generators](/
 
 ## Gatsby
 
-- [Get started with Gatsby and Contentstack](/docs/developers/sample-apps/get-started-with-gatsby-and-contentstack)
+- [Get started with Gatsby and Contentstack](../../../sample-apps/get-started-with-gatsby-and-contentstack.md)
 
 ## Metalsmith
 
-- [Build a website using Metalsmith and Contentstack](/docs/developers/sample-apps/build-a-website-using-metalsmith-and-contentstack)
+- [Build a website using Metalsmith and Contentstack](../../../sample-apps/build-a-website-using-metalsmith-and-contentstack.md)
 
 ## More resources
 

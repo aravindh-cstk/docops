@@ -17,7 +17,7 @@ This page explains how to install and set up the Contentstack Java Utils SDK and
 
 ## Get Started with Java Utils Library
 
-This guide will help you get started with Contentstack [Java Utils SDK](/docs/developers/java/about-java-utils-library) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Java Utils SDK](./about-java-utils-library.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 To get started with the Java Utils SDK, you will need:
@@ -38,7 +38,7 @@ To setup Utils SDK in your Java project, add the following dependency in the pom
   latest
 
 ```
-**Note:** If you are using the [Java Contentstack SDK](/docs/developers/sdks/content-delivery-sdk/java/about-java-delivery-sdk), you don’t need to run the java-utils dependencies as 'com.contentstack.sdk:utils:[LATEST_VERSION]' is already imported in the SDK.
+**Note:** If you are using the [Java Contentstack SDK](../../content-delivery-sdk/java/about-java-delivery-sdk.md), you don’t need to run the java-utils dependencies as 'com.contentstack.sdk:utils:[LATEST_VERSION]' is already imported in the SDK.
 
 ```
 
@@ -209,7 +209,7 @@ query.find(new QueryResultsCallBack() {
 ## Common questions
 
 ### Do I need to add the java-utils dependency if I already use the Java Contentstack SDK?
-**Note:** If you are using the [Java Contentstack SDK](/docs/developers/sdks/content-delivery-sdk/java/about-java-delivery-sdk), you don’t need to run the java-utils dependencies as 'com.contentstack.sdk:utils:[LATEST_VERSION]' is already imported in the SDK.
+**Note:** If you are using the [Java Contentstack SDK](../../content-delivery-sdk/java/about-java-delivery-sdk.md), you don’t need to run the java-utils dependencies as 'com.contentstack.sdk:utils:[LATEST_VERSION]' is already imported in the SDK.
 
 ### Where can I find the latest SDK dependency?
 Get the latest sdk dependency from [here](https://search.maven.org/artifact/com.contentstack.sdk/java).

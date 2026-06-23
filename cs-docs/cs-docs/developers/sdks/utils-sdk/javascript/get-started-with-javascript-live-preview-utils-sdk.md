@@ -18,7 +18,7 @@ This page explains how to install and initialize the Contentstack JavaScript Liv
 
 Contentstack is a headless CMS with an API-first approach. It is a CMS that developers can use to build powerful cross-platform applications in their favorite languages. Build your application frontend, and Contentstack will take care of the rest.
 
-**Additional Resource**: Refer to our documentation on [Omnichannel Content Preview Experience](/docs/content-managers/live-preview/omnichannel-content-preview-experience) to learn how we help speed up the content creation process.
+**Additional Resource**: Refer to our documentation on [Omnichannel Content Preview Experience](../../../../content-managers/author-content/omnichannel-content-preview-experience.md) to learn how we help speed up the content creation process.
 
 Contentstack provides the Live Preview Utils SDK to establish a communication channel between the various Contentstack SDKs and your website, transmitting live changes to the preview pane in the entry editor.
 
@@ -77,15 +77,15 @@ Alternatively, if you want to initialize the SDK directly in the HTML tag, use t
 
 ## Live Editing
 
-[Live Preview](/docs/content-managers/live-preview/about-live-preview) allows you to click on edit tags beside specific content blocks in the preview window to quickly scroll to the corresponding field. You can edit and preview the content changes side by side. Live edit tags are identified through the data-cslp attribute within the HTML tags.
+[Live Preview](../../../../content-managers/author-content/about-live-preview.md) allows you to click on edit tags beside specific content blocks in the preview window to quickly scroll to the corresponding field. You can edit and preview the content changes side by side. Live edit tags are identified through the data-cslp attribute within the HTML tags.
 
-To learn how to add live edit tags and configure them for different frameworks or tools, refer to[ Set Up Live Edit Tags for Entries with REST](https://www.contentstack.com/docs/developers/set-up-live-preview/set-up-live-edit-tags-for-entries-with-rest) documentation
+To learn how to add live edit tags and configure them for different frameworks or tools, refer to[ Set Up Live Edit Tags for Entries with REST](../../../set-up-live-preview/set-up-live-edit-tags-for-entries-with-rest.md) documentation
 
 **Additional Resource**: For more information on the JavaScript Live Preview Utils SDK, refer to our [GitHub reference documentation](https://github.com/contentstack/live-preview-sdk).
 
 ## More Resources
 
-- [Get Started with JavaScript Delivery SDK and Live Preview](/docs/developers/javascript-browser/get-started-with-javascript-delivery-sdk-and-live-preview)
+- [Get Started with JavaScript Delivery SDK and Live Preview](../../content-delivery-sdk/javascript-browser/get-started-with-javascript-delivery-sdk-and-live-preview.md)
 
 ## Common questions
 

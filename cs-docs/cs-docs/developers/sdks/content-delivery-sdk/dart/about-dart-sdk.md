@@ -20,13 +20,13 @@ This page introduces the Contentstack Dart SDK, explains what it is used for, an
 
 *Use Contentstack to power content for your Dart projects.*
 
-Contentstack offers Dart SDK that developers can use to develop Flutter applications and power content through Contentstack. The Contentstack Dart SDK uses our [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack and deliver it to your Flutter-based applications.
+Contentstack offers Dart SDK that developers can use to develop Flutter applications and power content through Contentstack. The Contentstack Dart SDK uses our [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack and deliver it to your Flutter-based applications.
 
 **Note**: The Contentstack Dart SDK supports Dart version 2 or above.
 
-In order to integrate your Flutter app with the Contentstack Dart SDK, follow the steps mentioned in the [Get Started](/docs/developers/dart/get-started-with-dart-sdk) section.
+In order to integrate your Flutter app with the Contentstack Dart SDK, follow the steps mentioned in the [Get Started](./get-started-with-dart-sdk.md) section.
 
-You can check out the [Sample Flutter app](/docs/developers/sample-apps/build-a-flutter-e-commerce-app-using-contentstack-s-dart-sdk) that Contentstack has developed to see Dart SDK in action.
+You can check out the [Sample Flutter app](../../../sample-apps/build-a-flutter-e-commerce-app-using-contentstack-s-dart-sdk.md) that Contentstack has developed to see Dart SDK in action.
 
 ## More resources
 
@@ -35,13 +35,13 @@ You can check out the [Sample Flutter app](/docs/developers/sample-apps/build-a-
 ## Common questions
 
 ### What does the Contentstack Dart SDK use to fetch content?
-The Contentstack Dart SDK uses the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch content from Contentstack.
+The Contentstack Dart SDK uses the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch content from Contentstack.
 
 ### What Dart versions are supported by the Contentstack Dart SDK?
 **Note**: The Contentstack Dart SDK supports Dart version 2 or above.
 
 ### Where do I start to integrate the Dart SDK into a Flutter app?
-Follow the steps mentioned in the [Get Started](/docs/developers/dart/get-started-with-dart-sdk) section.
+Follow the steps mentioned in the [Get Started](./get-started-with-dart-sdk.md) section.
 
 ### Is there a sample app available to see the Dart SDK in action?
-You can check out the [Sample Flutter app](/docs/developers/sample-apps/build-a-flutter-e-commerce-app-using-contentstack-s-dart-sdk) that Contentstack has developed to see Dart SDK in action.
+You can check out the [Sample Flutter app](../../../sample-apps/build-a-flutter-e-commerce-app-using-contentstack-s-dart-sdk.md) that Contentstack has developed to see Dart SDK in action.

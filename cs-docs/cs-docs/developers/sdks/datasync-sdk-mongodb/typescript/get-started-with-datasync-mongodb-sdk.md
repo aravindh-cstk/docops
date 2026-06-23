@@ -23,7 +23,7 @@ The Contentstack DataSync MongoDB SDK enables developers to synchronize and quer
 ## Prerequisites
 - [Node.js](https://nodejs.org/en/download/) version 20 or higher.
 - [MongoDB](https://www.mongodb.com/products/self-managed/community-edition) version 3.6 or higher.
-- Data synchronized through [Contentstack DataSync](/docs/developers/develop-apps-with-datasync/about-contentstack-datasync)
+- Data synchronized through [Contentstack DataSync](../../../develop-apps-with-datasync/about-contentstack-datasync.md)
 
 ## Installation and Setup
 To use the DataSync MongoDB SDK, integrate it into the DataSync Boilerplate to query content synchronized with MongoDB.

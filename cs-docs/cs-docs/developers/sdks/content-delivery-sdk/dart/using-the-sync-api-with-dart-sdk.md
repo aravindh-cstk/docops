@@ -18,7 +18,7 @@ This page explains how to use the Sync API with the Contentstack Dart SDK to kee
 
 ## Using the Sync API with Dart SDK
 
-The Sync API takes care of syncing your Contentstack data with your application and ensures that the data is always up-to-date by providing delta updates. Contentstack's [Dart SDK](/docs/developers/dart/about-dart-sdk) supports Sync API, which you can use to build powerful applications.
+The Sync API takes care of syncing your Contentstack data with your application and ensures that the data is always up-to-date by providing delta updates. Contentstack's [Dart SDK](./about-dart-sdk.md) supports Sync API, which you can use to build powerful applications.
 
 This guide will help you understand how to use the Sync API with Contentstack Dart SDK.
 

@@ -26,8 +26,8 @@ In this guide, you will:
 
 ## Prerequisites
 Before you begin, ensure the following requirements are met:
-- A [Contentstack stack](/docs/developers/set-up-stack/about-stack) is set up, and you have valid API credentials.
-- The [Contentstack Delivery SDK (TypeScript)](/docs/developers/sdks/content-delivery-sdk/typescript) is installed and imported into your React app.
+- A [Contentstack stack](../../../set-up-stack/about-stack.md) is set up, and you have valid API credentials.
+- The [Contentstack Delivery SDK (TypeScript)](../../content-delivery-sdk/typescript.md) is installed and imported into your React app.
 - Live Preview is enabled in the Delivery SDK configuration.
 - [**Node.js v18 or later**](https://nodejs.org/en) is running in your development environment.
 

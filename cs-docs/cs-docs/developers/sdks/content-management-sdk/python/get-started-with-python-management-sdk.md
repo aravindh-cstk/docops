@@ -17,9 +17,9 @@ This page provides a step-by-step guide to install and set up the Python Managem
 
 ## Get Started with Python Management SDK
 
-This step-by-step guide will help you get started with the [Python Management SDK](/docs/developers/sdks/content-management-sdk/python/about-python-management-sdk), which utilizes [Content Management APIs](/docs/developers/apis/content-management-api) (CMA), for managing Python applications powered by Contentstack.
+This step-by-step guide will help you get started with the [Python Management SDK](./about-python-management-sdk.md), which utilizes [Content Management APIs](../../../../../api-docs/api-detail/content-management-api.md) (CMA), for managing Python applications powered by Contentstack.
 
-**Note:** If you intend to only fetch data without performing any CRUD operations, please use the [Contentstack Python Delivery SDK](/docs/developers/sdks/content-delivery-sdk/python/about-python-sdk).
+**Note:** If you intend to only fetch data without performing any CRUD operations, please use the [Contentstack Python Delivery SDK](../../content-delivery-sdk/python/about-python-sdk.md).
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ Let’s look at each of them in detail.
 
 ### Authtoken
 
-An [AuthToken](/docs/developers/create-tokens/types-of-tokens#authentication-tokens-authtokens) is a user-specific, read-write token used to make authorized Content Management API requests. You can retrieve an Authtoken by logging in to Contentstack using the “Log in to your account” request.
+An [AuthToken](../../../create-tokens/types-of-tokens.md#authentication-tokens-authtokens) is a user-specific, read-write token used to make authorized Content Management API requests. You can retrieve an Authtoken by logging in to Contentstack using the “Log in to your account” request.
 
 ```
 client = contentstack_management.Client(authtoken='authtoken')
@@ -69,7 +69,7 @@ client.login(email="email", password="password")
 
 ### Management Token
 
-[Management Tokens](/docs/developers/create-tokens/about-management-tokens) are credentials that grant you read-write access to your stack's content. When used in conjunction with the stack API key, they enable authorized CMA requests for managing your stack's content.
+[Management Tokens](../../../create-tokens/about-management-tokens.md) are credentials that grant you read-write access to your stack's content. When used in conjunction with the stack API key, they enable authorized CMA requests for managing your stack's content.
 
 ```
 result = client.stack(api_key='api_key', management_token='management_token' ).content_type('content_type_uid')
@@ -134,7 +134,7 @@ result = asset.upload(asset)
 
 ## Next Steps
 
-[Python Management SDK API Reference](/docs/developers/sdks/content-management-sdk/python/reference/)
+[Python Management SDK API Reference](../../../create-content-types/reference.md)
 
 ## Common questions
 
@@ -148,4 +148,4 @@ You can authenticate using Authtoken, Login Credentials (your login email and pa
 You need a Contentstack account and Python 3 version 3.7 or later.
 
 ### Where can I find more examples and reference documentation?
-See the [Python Management Github Repository](https://github.com/contentstack/contentstack-management-python) and the [Python Management SDK API Reference](/docs/developers/sdks/content-management-sdk/python/reference/).
+See the [Python Management Github Repository](https://github.com/contentstack/contentstack-management-python) and the [Python Management SDK API Reference](../../../create-content-types/reference.md).

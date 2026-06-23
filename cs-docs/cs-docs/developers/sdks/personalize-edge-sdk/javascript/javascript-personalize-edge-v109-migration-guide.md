@@ -16,11 +16,11 @@ This page explains how to migrate JavaScript Personalize Edge SDK usage from the
 
 ## JavaScript Personalize Edge SDK v1.0.9+ Migration Guide
 
-**Note:** This guide applies to **v1.x.x** of the Personalize Edge SDK using **global functions** in the Personalize namespace. For implementation details refer to the [Get Started with JavaScript Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk/) and [JavaScript Personalize Edge SDK API Reference](/docs/developers/sdks/personalize-edge-sdk/javascript/reference/) documentation.
+**Note:** This guide applies to **v1.x.x** of the Personalize Edge SDK using **global functions** in the Personalize namespace. For implementation details refer to the [Get Started with JavaScript Personalize Edge SDK](./get-started-with-javascript-personalize-edge-sdk.md) and [JavaScript Personalize Edge SDK API Reference](../../../create-content-types/reference.md) documentation.
 
 JavaScript Personalize Edge SDK version 1.0.9 introduces a new instance-based approach, replacing the global `Personalize` namespace. You should now create an SDK class instance and call its methods.
 
-**Warning:** The global functions are now **deprecated** and will be removed in the next major release, for the exact list of deprecated methods, see [Deprecated Global Functions](/docs/developers/sdks/personalize-edge-sdk/javascript/javascript-personalize-edge-v109-migration-guide#deprecated-global-functions) section.
+**Warning:** The global functions are now **deprecated** and will be removed in the next major release, for the exact list of deprecated methods, see [Deprecated Global Functions](./javascript-personalize-edge-v109-migration-guide.md#deprecated-global-functions) section.
 
 **Example**
 
@@ -129,9 +129,9 @@ The following functions should be called on the SDK instance instead of the `Per
 
 ## More Resources
 
-- [JavaScript Personalize Edge SDK API Reference](https://www.contentstack.com/docs/developers/sdks/personalize-edge-sdk/javascript/reference)
-- [Get Started with JavaScript Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk/)
-- [Setup Next.js Website with Personalize - Launch](/docs/personalize/setup-nextjs-website-with-personalize-launch/)
+- [JavaScript Personalize Edge SDK API Reference](../../../create-content-types/reference.md)
+- [Get Started with JavaScript Personalize Edge SDK](./get-started-with-javascript-personalize-edge-sdk.md)
+- [Setup Next.js Website with Personalize - Launch](../../../../personalize/setup-nextjs-website-with-personalize-launch.md)
 
 ## Common questions
 

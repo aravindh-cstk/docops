@@ -23,7 +23,7 @@ Contentstack provides a JavaScript Management SDK (that uses Content Management 
 
 **Note**: The Contentstack JavaScript Management SDK supports [Node.js](https://nodejs.org/en) 22 or above.
 
-In order to integrate your JavaScript app with Contentstack JavaScript Management SDK, follow the steps mentioned in the [Get Started](/docs/developers/nodejs/get-started-with-javascript-management-sdk) section.
+In order to integrate your JavaScript app with Contentstack JavaScript Management SDK, follow the steps mentioned in the [Get Started](./get-started-with-javascript-management-sdk.md) section.
 
 ## Common questions
 
@@ -34,4 +34,4 @@ It is used to manage the content of your Contentstack account, including creatin
 **Note**: The Contentstack JavaScript Management SDK supports [Node.js](https://nodejs.org/en) 22 or above.
 
 ### Where do I start to integrate the SDK into my app?
-Follow the steps mentioned in the [Get Started](/docs/developers/nodejs/get-started-with-javascript-management-sdk) section.
+Follow the steps mentioned in the [Get Started](./get-started-with-javascript-management-sdk.md) section.

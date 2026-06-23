@@ -17,13 +17,13 @@ This page explains how to use Contentstack’s Sync API via the Python SDK to ke
 
 ## Using the Sync API with Python SDK
 
-The Sync API takes care of syncing your Contentstack data with your application and ensures that the data is always up-to-date by providing delta updates. Contentstack’s [Python SDK](/docs/developers/python/about-python-sdk) supports Sync API, which you can use to build powerful applications.
+The Sync API takes care of syncing your Contentstack data with your application and ensures that the data is always up-to-date by providing delta updates. Contentstack’s [Python SDK](./about-python-sdk.md) supports Sync API, which you can use to build powerful applications.
 
 This guide will help you understand how to use the Sync API with Contentstack Python SDK.
 
 ## Initial Sync
 
-The Initial sync request performs complete sync of your application data. The initial sync returns only 100 items. If the item count exceeds 100, the pagination token is provided to paginate the rest of the data ([entries](/docs/content-managers/working-with-entries/about-entries) and [assets](/docs/content-managers/working-with-assets/about-assets)).
+The Initial sync request performs complete sync of your application data. The initial sync returns only 100 items. If the item count exceeds 100, the pagination token is provided to paginate the rest of the data ([entries](../../../../content-managers/author-content/about-entries.md) and [assets](/docs/content-managers/working-with-assets/about-assets)).
 
 To start the initial sync process, use the sync method.
 
@@ -37,7 +37,7 @@ if result is not None:
         logger.error(result)
 ```
 
-**Note**: Use the value of the [delivery token](/docs/developers/create-tokens/create-a-delivery-token) against the **access_token** key.
+**Note**: Use the value of the [delivery token](../../../create-tokens/create-a-delivery-token.md) against the **access_token** key.
 
 ## Pagination Sync
 
@@ -95,7 +95,7 @@ else:
 ## Common questions
 
 ### Which token should I use for `access_token` in the Python SDK Stack initialization?
-Use the value of the [delivery token](/docs/developers/create-tokens/create-a-delivery-token) against the **access_token** key.
+Use the value of the [delivery token](../../../create-tokens/create-a-delivery-token.md) against the **access_token** key.
 
 ### Why do I only get 100 items from the initial sync?
 The initial sync returns only 100 items. If the item count exceeds 100, the pagination token is provided to paginate the rest of the data.

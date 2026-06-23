@@ -29,17 +29,17 @@ In this tutorial, we will first go through the steps involved in configuring Con
 
 ## Create a Stack
 
-Log in to your Contentstack account, and create a new stack. This stack will hold all the data, specific to your website. Learn more on [how to create a stack](/docs/developers/set-up-stack/create-a-new-stack).
+Log in to your Contentstack account, and create a new stack. This stack will hold all the data, specific to your website. Learn more on [how to create a stack](../../../set-up-stack/create-a-new-stack.md).
 
 ## Add a Publishing Environment
 
-To add an environment in Contentstack, go to your stack and click the “Settings” icon on the left navigation panel**.** Select **Environments**, and click on the **+ New Environment** button. Provide a suitable name for your environment, say “staging”. Specify the base URL (e.g., “[http://YourDomainName.com](http://YourDomainName.com)”), and select the language (e.g., English - United States). Then, click on **Save**. Read more about [environments](/docs/developers/set-up-environments/about-environments).
+To add an environment in Contentstack, go to your stack and click the “Settings” icon on the left navigation panel**.** Select **Environments**, and click on the **+ New Environment** button. Provide a suitable name for your environment, say “staging”. Specify the base URL (e.g., “[http://YourDomainName.com](http://YourDomainName.com)”), and select the language (e.g., English - United States). Then, click on **Save**. Read more about [environments](../../../set-up-environments/about-environments.md).
 
 ## Import Content Types
 
 For this website, two basic content types are required: ‘Category’ and ‘News’. Read more about [Content Types](/docs/developers/create-content-types).
 
-For quick integration, we have already [created these content types](/docs/developers/create-content-types/create-a-content-type). You can [import these content types](/docs/developers/create-content-types/import-a-content-type) into your project stack in Contentstack.
+For quick integration, we have already [created these content types](../../../create-content-types/create-a-content-type.md). You can [import these content types](../../../create-content-types/import-a-content-type.md) into your project stack in Contentstack.
 
 Here’s a brief overview of the content types required for this project.
 
@@ -50,7 +50,7 @@ Here’s a brief overview of the content types required for this project.
 
 **Create and publish entries for the ‘News’ and ‘Category’ content types**
 
-Add a few dummy entries for news articles for the ‘News’ content type. Save and publish these entries. Learn how to [create](/docs/content-managers/author-content/create-an-entry) and [publish](/docs/content-managers/author-content/publish-an-entry) entries.
+Add a few dummy entries for news articles for the ‘News’ content type. Save and publish these entries. Learn how to [create](../../../../content-managers/author-content/create-an-entry.md) and [publish](../../../../content-managers/author-content/publish-an-entry.md) entries.
 
 With this step, you have created sample data for your website. Now, it’s time to use and configure the presentation layer.
 
@@ -81,7 +81,7 @@ using Contentstack.Core.Configuration; // ContentstackOptions
 
 ## Initialize SDK
 
-You will need to specify the API key, delivery token, and the environment Name of your stack to initialize the SDK. (Learn how to find your Stack's [API Key and Delivery Token](/docs/developers/set-up-stack/edit-a-stack). Read more about [Environments](/docs/developers/set-up-environments).)
+You will need to specify the API key, delivery token, and the environment Name of your stack to initialize the SDK. (Learn how to find your Stack's [API Key and Delivery Token](../../../set-up-stack/edit-a-stack.md). Read more about [Environments](/docs/developers/set-up-environments).)
 
 ```
 // Initialize the Contentstack Stack
@@ -165,7 +165,7 @@ Here's a screenshot that shows how your output will look like:
 
 Now that we have a working project, you can fire queries to see how it works.
 
-**Additional Resource:** Java SDK is another tool that is used to build similar apps. To know more, refer to our guide on [how to build a news app using Contentstack and Contentstack Java SDK](/docs/developers/sample-apps/build-a-news-app-for-java-using-contentstack-and-contentstack-java-sdk).
+**Additional Resource:** Java SDK is another tool that is used to build similar apps. To know more, refer to our guide on [how to build a news app using Contentstack and Contentstack Java SDK](../../../sample-apps/build-a-news-app-for-java-using-contentstack-and-contentstack-java-sdk.md).
 
 ## More resources
 - [View and Download .NET SDK repository on GitHub](https://github.com/contentstack/contentstack-dotnet)

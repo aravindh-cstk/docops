@@ -17,7 +17,7 @@ This page explains how to set up and use the Contentstack Ruby Utils SDK to rend
 
 ## Get Started with Ruby Utils Library
 
-This guide will help you get started with Contentstack [Ruby Utils SDK](/docs/developers/ruby/about-ruby-utils-library) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Ruby Utils SDK](./about-ruby-utils-library.md) to build apps powered by Contentstack.
 
 ## Prerequisites
 - Ruby version 2.0 or later

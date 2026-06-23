@@ -17,11 +17,11 @@ This page introduces Contentstack’s TypeScript Delivery SDK, highlights its ke
 
 ## About TypeScript Delivery SDK
 
-Contentstack's TypeScript Delivery SDK lets you harness the power of Contentstack by utilizing the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to efficiently fetch and deliver content to your TypeScript-based applications. In our comprehensive tutorials and guides, you will find valuable information on the various tools and integrations supported by Contentstack, along with TypeScript SDK example apps, empowering you to kickstart your project with ease.
+Contentstack's TypeScript Delivery SDK lets you harness the power of Contentstack by utilizing the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to efficiently fetch and deliver content to your TypeScript-based applications. In our comprehensive tutorials and guides, you will find valuable information on the various tools and integrations supported by Contentstack, along with TypeScript SDK example apps, empowering you to kickstart your project with ease.
 
 **Note:** The Contentstack TypeScript SDK supports [Node.js](https://nodejs.org/) 22 or later.
 
-To integrate your TypeScript application with Contentstack’s TypeScript Delivery SDK, follow the steps mentioned in the [Get Started with Typescript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/typescript/get-started-with-typescript-delivery-sdk/) documentation.
+To integrate your TypeScript application with Contentstack’s TypeScript Delivery SDK, follow the steps mentioned in the [Get Started with Typescript Delivery SDK](./get-started-with-typescript-delivery-sdk.md) documentation.
 
 ## Key Features
 
@@ -71,13 +71,13 @@ const result = stack.asset('asset_uid').includeDimension().fetch();
 ## Common questions
 
 ### What APIs does the TypeScript Delivery SDK use?
-It utilizes the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to fetch and deliver content to TypeScript-based applications.
+It utilizes the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) to fetch and deliver content to TypeScript-based applications.
 
 ### What Node.js version is required?
 **Note:** The Contentstack TypeScript SDK supports [Node.js](https://nodejs.org/) 22 or later.
 
 ### Where do I start to integrate the SDK?
-Follow the steps mentioned in the [Get Started with Typescript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/typescript/get-started-with-typescript-delivery-sdk/) documentation.
+Follow the steps mentioned in the [Get Started with Typescript Delivery SDK](./get-started-with-typescript-delivery-sdk.md) documentation.
 
 ### Where can I find the SDK source code?
 [Typescript GitHub Repository](https://github.com/contentstack/contentstack-typescript)

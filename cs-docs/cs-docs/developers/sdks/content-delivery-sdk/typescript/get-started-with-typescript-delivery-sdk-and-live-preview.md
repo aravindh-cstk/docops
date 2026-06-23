@@ -16,7 +16,7 @@ This page explains how to use the Contentstack TypeScript Delivery SDK to retrie
 
 ## Get Started with TypeScript Delivery SDK and Live Preview
 
-This guide explains how to use the Contentstack [TypeScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/typescript/about-typescript-delivery-sdk) to retrieve published content and configure Live Preview for real-time content updates in your application.
+This guide explains how to use the Contentstack [TypeScript Delivery SDK](./about-typescript-delivery-sdk.md) to retrieve published content and configure Live Preview for real-time content updates in your application.
 
 ## Prerequisites
 To get started with TypeScript, ensure the following:
@@ -36,14 +36,14 @@ npm install @contentstack/delivery-sdk
 After installing the required packages, initialize your stack configuration and enable Live Preview as needed.
 
 ## Initialize the Stack and Enable Live Preview
-[Live Preview](/docs/content-managers/author-content/about-live-preview) enables editors to view content changes in real time before publishing.
+[Live Preview](../../../../content-managers/author-content/about-live-preview.md) enables editors to view content changes in real time before publishing.
 
 To use Live Preview, configure the following parameters in your stack configuration:
 - `enable`
 - `preview_token`
 - `host`
 
-Initialize the [Live Preview Utils SDK](/docs/developers/javascript-browser/about-javascript-live-preview-utils-sdk) separately within your project. The SDK manages communication between your application and Contentstack to support Live Preview functionality.
+Initialize the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) separately within your project. The SDK manages communication between your application and Contentstack to support Live Preview functionality.
 
 Use the following command to initialize the stack:
 
@@ -65,7 +65,7 @@ const Stack = contentstack.stack({
 - North America: `rest-preview.contentstack.com`
 - Europe: `eu-rest-preview.contentstack.com`
 
-Refer to the [About Regions](/docs/developers/contentstack-regions/about-regions) document to learn more about other regions.
+Refer to the [About Regions](../../../contentstack-regions/about-regions.md) document to learn more about other regions.
 
 When using the TypeScript Delivery SDK with the Live Preview Utils SDK, pass `Stack.config` (with type assertion to `IStackSdk`) instead of the whole `Stack` instance during initialization.
 
@@ -91,7 +91,7 @@ app.use((req, response, next) => {
   next()
 });
 ```
-To install and initialize the Live Preview Utils SDK, refer to the [SSR Live Preview Setup](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website/#server-side-rendering-ssr) documentation.
+To install and initialize the Live Preview Utils SDK, refer to the [SSR Live Preview Setup](../../../set-up-live-preview/set-up-live-preview-for-your-website.md#server-side-rendering-ssr) documentation.
 
 When using Live Preview in server-side environments, you must manage SDK instances carefully to prevent configuration leakage between requests.
 
@@ -132,7 +132,7 @@ Creating a new instance for each request:
 The above guidance applies only to server-side environments. If your application uses client-side rendering, refer to the setup below.
 
 ## Configure Live Preview for Client-Side Rendering (CSR)
-For client-side rendered (CSR) applications, refer to the [CSR Live Preview Setup](/docs/developers/set-up-live-preview/set-up-live-preview-for-your-website/#client-side-rendering-csr) guide.
+For client-side rendered (CSR) applications, refer to the [CSR Live Preview Setup](../../../set-up-live-preview/set-up-live-preview-for-your-website.md#client-side-rendering-csr) guide.
 
 ## Retrieve Published Content Using the Delivery SDK
 After configuring the SDK and setting up Live Preview, you can retrieve published content using the Contentstack Delivery SDK. The SDK communicates with the Content Delivery APIs to fetch read-only content from your stack.

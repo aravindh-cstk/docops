@@ -20,11 +20,11 @@ This page describes what the Contentstack PHP Utils library is, what features it
 Contentstack provides the PHP Utils library that contains all the utilities for the PHP SDK.
 
 Features included:
-- **Embedded Objects**: Allows you to fetch embedded [entries](/docs/content-managers/author-content/about-entries)/[assets](/docs/content-managers/author-content/about-assets) (placed inside the “[Rich Text Editor](/docs/developers/create-content-types/rich-text-editor)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](/docs/developers/create-content-types/rich-text-editor#embed-entries-in-the-rte) and [Embed Asset](/docs/developers/create-content-types/rich-text-editor#embed-assets-in-the-rte) documentation.
+- **Embedded Objects**: Allows you to fetch embedded [entries](../../../../content-managers/author-content/about-entries.md)/[assets](../../../../content-managers/author-content/about-assets.md) (placed inside the “[Rich Text Editor](../../../create-content-types/rich-text-editor.md)” (RTE) field) and display them on your frontend application. To learn how to embed entries/assets in the RTE field, refer to the [Embed Entry](../../../create-content-types/rich-text-editor.md#embed-entries-in-the-rte) and [Embed Asset](../../../create-content-types/rich-text-editor.md#embed-assets-in-the-rte) documentation.
 
 **Note**: The Contentstack PHP Utils library supports Node.js version 10 or above.
 
-To use the PHP Utils library in your application, follow the steps specified in the [Get Started with PHP Utils library](/docs/developers/php/get-started-with-php-utils-library) guide.
+To use the PHP Utils library in your application, follow the steps specified in the [Get Started with PHP Utils library](./get-started-with-php-utils-library.md) guide.
 
 ## Common questions
 
@@ -35,7 +35,7 @@ It contains utilities for the PHP SDK, including support for working with embedd
 Embedded Objects allow you to fetch embedded entries/assets placed inside the “Rich Text Editor” (RTE) field and display them on your frontend application.
 
 ### Where do I start to use the PHP Utils library?
-Follow the steps specified in the [Get Started with PHP Utils library](/docs/developers/php/get-started-with-php-utils-library) guide.
+Follow the steps specified in the [Get Started with PHP Utils library](./get-started-with-php-utils-library.md) guide.
 
 ### What runtime version is required?
 The Contentstack PHP Utils library supports Node.js version 10 or above.
