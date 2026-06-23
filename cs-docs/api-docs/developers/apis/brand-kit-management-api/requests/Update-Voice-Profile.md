@@ -12,9 +12,7 @@ last_updated: 2025-11-21
 
 # Update Voice Profile
 
-
-**Method:** `PUT`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/voice-profiles/{voice_profile_uid}`
+**PUT** `/v1/brand-kits/{brand_kit_uid}/voice-profiles/{voice_profile_uid}`
 
 The Update Voice Profile request lets you update an existing Voice Profile from the Brand Kit in an organization.
 
@@ -38,22 +36,28 @@ Here’s an example of the Request Body for updating a Voice Profile:
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
+- **voice_profile_uid** (required)
+  Enter the Voice Profile UID.
+  Default: `your_voice_profile_uid`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+## Headers
 
-| authtoken | your_authtoken | Enter the authtoken. |
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
 
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication). |
-
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-
-| voice_profile_uid | your_voice_profile_uid | Enter the Voice Profile UID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -71,7 +75,7 @@ Here’s an example of the Request Body for updating a Voice Profile:
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -98,3 +102,4 @@ Here’s an example of the Request Body for updating a Voice Profile:
     }
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Update embedded RTE objects
 
-
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
 
 The Update embedded RTE objects request lets you update the embedded entries or assets placed inside the Rich Text Editor field of an entry.
 
@@ -35,30 +33,43 @@ Updated embedded entry inline with text:
 "
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to update an entry. The uid is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry of which you want to update embedded objects.
+  Default: `blt9965f5f9840923ba`
 
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale_code** (optional)
+  Enter the code of the language of which you want to update an entry.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type of which you want to update an entry. The uid is generated based on the title of the content type. The unique ID of a co |
-
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry of which you want to update embedded objects. |
-
-| locale_code | en-us | Enter the code of the language of which you want to update an entry. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -71,7 +82,7 @@ Updated embedded entry inline with text:
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -93,3 +104,4 @@ Updated embedded entry inline with text:
     }
 }
 ```
+

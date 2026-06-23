@@ -12,9 +12,7 @@ last_updated: 2023-11-28
 
 # Create an entry with taxonomy
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries`
+**POST** `/content_types/{content_type_uid}/entries`
 
 The Create an entry with taxonomy request lets you create a new entry for a selected content type that contains a taxonomy field.
 
@@ -43,22 +41,24 @@ In the “Body” section, you need to provide the content of your entry based o
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `your_content_type_uid`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | Your_Authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Default: `Your_Management_Token`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| authorization | Your_Management_Token |  |
-
-| Content-Type | application/json |  |
-
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -82,7 +82,7 @@ In the “Body” section, you need to provide the content of your entry based o
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -116,3 +116,4 @@ In the “Body” section, you need to provide the content of your entry based o
     }
 }
 ```
+

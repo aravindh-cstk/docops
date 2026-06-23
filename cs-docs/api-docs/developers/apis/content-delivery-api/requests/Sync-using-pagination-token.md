@@ -12,9 +12,7 @@ last_updated: 2026-02-19
 
 # Sync using pagination token
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/sync?pagination_token={pagination_token}`
+**GET** `/stacks/sync?pagination_token={pagination_token}`
 
 When running the [Initial Synchronization](#initial-synchronization) or the [Subsequent Sync](#subsequent-sync) request, if the result of the sync (initial or subsequent) request exceeds 100 records you will get a pagination_token.
 
@@ -22,20 +20,24 @@ The Sync using pagination token request uses the pagination_token to retrieve th
 
 **Note:** When executing the API request, pass the Delivery Token as the value to the access_token parameter.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **pagination_token** (required)
+  Enter the pagination token that you received in the response body of the previous sync process.
+  Default: `cs45036e6b26c1396296ff34bb875480cd`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of stack of your stack. |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **api_key** (required)
+  Enter the API key of stack of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Default: `main`
 
-| branch | main |  |
-
-| pagination_token | cs45036e6b26c1396296ff34bb875480cd | Enter the pagination token that you received in the response body of the previous sync process. |
-
-**Response:**
+## Sample Response
 
 ```json
 {
@@ -101,3 +103,4 @@ The Sync using pagination token request uses the pagination_token to retrieve th
 	"pagination_token": "blt122334455667"
 }
 ```
+

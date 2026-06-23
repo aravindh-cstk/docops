@@ -12,52 +12,68 @@ last_updated: 2025-11-13
 
 # Get all taxonomies
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies?include_terms_count={boolean_value}&include_count={boolean_value}&deleted={boolean_value}&limit={limit_value}&skip={skip_value}`
+**GET** `/taxonomies?include_terms_count={boolean_value}&include_count={boolean_value}&deleted={boolean_value}&limit={limit_value}&skip={skip_value}`
 
 The Get all taxonomies request returns comprehensive information of all the taxonomies available in a particular stack in your organization.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **locale** (optional)
+  Locale from which to fetch the taxonomies. If not specified, the default locale is used.
+  Default: `es-es`
+- **include_fallback** (optional)
+  Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the taxonomy is not available in the given locale.
+  Default: `true`
+- **include_terms_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms available in a taxonomy.
+  Default: `true`
+- **include_referenced_terms_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms referenced in entry(ies).
+  Default: `false`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which terms are added.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of taxonomies available in a stack.
+  Default: `true`
+- **deleted** (optional)
+  Set this parameter to 'true' to retrieve only deleted taxonomies within a stack.
+  Default: `false`
+- **asc** (optional)
+  Sort the response in ascending order.
+  Default: `created_at`
+- **desc** (optional)
+  Sort the response in descending order.
+  Default: `created_at`
+- **query** (optional)
+  Provide a custom query for the taxonomy_uid in string format.
+  Default: `{"uid":{"$in":["taxonomy_1","taxonomy_2"]}}`
+- **typeahead** (optional)
+  Retrieves responses that match the provided string.
+  Default: `sample`
+- **limit** (optional)
+  Enter the maximum number of taxonomies to be returned.
+  Default: `2`
+- **skip** (optional)
+  Enter the number of taxonomies to be skipped from the response body.
+  Default: `2`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
 
-| authorization | your_management_token | Enter your management token. |
-
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default. |
-
-| locale | es-es | Locale from which to fetch the taxonomies. If not specified, the default locale is used. |
-
-| include_fallback | true | Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the taxonomy is not available in the given locale. |
-
-| include_terms_count | true | Set this parameter to 'true' to include in response the total count of terms available in a taxonomy. |
-
-| include_referenced_terms_count | false | Set this parameter to 'true' to include in response the total count of terms referenced in entry(ies). |
-
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which terms are added. |
-
-| include_count | true | Set this parameter to 'true' to include in response the total count of taxonomies available in a stack. |
-
-| deleted | false | Set this parameter to 'true' to retrieve only deleted taxonomies within a stack. |
-
-| asc | created_at | Sort the response in ascending order. |
-
-| desc | created_at | Sort the response in descending order. |
-
-| query | {"uid":{"$in":["taxonomy_1","taxonomy_2"]}} | Provide a custom query for the taxonomy_uid in string format. |
-
-| typeahead | sample | Retrieves responses that match the provided string. |
-
-| limit | 2 | Enter the maximum number of taxonomies to be returned. |
-
-| skip | 2 | Enter the number of taxonomies to be skipped from the response body. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -112,3 +128,4 @@ The Get all taxonomies request returns comprehensive information of all the taxo
     "count": 4
 }
 ```
+

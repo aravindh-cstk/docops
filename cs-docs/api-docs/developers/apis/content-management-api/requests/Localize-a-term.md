@@ -12,34 +12,43 @@ last_updated: 2025-11-13
 
 # Localize a term
 
-
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+**POST** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Localize a term request is used to add translated taxonomy terms to specific locales available within a stack.
 
 ##### Unlocalize a term
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `global_content_topics`
+- **term_uid** (required)
+  Enter the unique ID of the term you want to localize. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `artificial_intelligence`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale** (required)
+  The locale in which you want to localize the taxonomy term.
+  Default: `es-es`
 
-| authorization | your_management_token	 | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| taxonomy_uid | global_content_topics | Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies) |
-
-| term_uid | artificial_intelligence | Enter the unique ID of the term you want to localize. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' re |
-
-| locale | es-es | The locale in which you want to localize the taxonomy term. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -52,7 +61,7 @@ The Localize a term request is used to add translated taxonomy terms to specific
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -69,3 +78,4 @@ The Localize a term request is used to add translated taxonomy terms to specific
     }
 }
 ```
+

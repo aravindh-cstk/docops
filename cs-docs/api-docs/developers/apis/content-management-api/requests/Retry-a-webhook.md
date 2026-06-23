@@ -12,9 +12,7 @@ last_updated: 2024-07-26
 
 # Retry a webhook
 
-
-**Method:** `POST`  
-**Endpoint:** `/webhooks/{execution_uid}/retry`
+**POST** `/webhooks/{execution_uid}/retry`
 
 This call makes a manual attempt to execute a webhook after the webhook has finished executing its automatic attempts.
 
@@ -22,23 +20,28 @@ When executing the API call, in the 'URL Parameter' section, enter the execution
 
 To configure the permissions for your application via OAuth, please include the cm.webhooks.management:write scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **execution_uid** (required)
+  Enter the execution unique ID of the webhook that you want to retry. Execute the [Get executions of a webhook](https://www.contentstack.com/docs/developers/apis/content-management-api#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
+  Default: `cs2642bec9-c336-4da1-8aad-fded56c7d50e`
 
-| api_key | Enter the API key of your stack |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `Enter the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| execution_uid | cs2642bec9-c336-4da1-8aad-fded56c7d50e | Enter the execution unique ID of the webhook that you want to retry. Execute the [Get executions of a webhook](https://www.contentstack.com/docs/developers/apis |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
   "notice": "Webhook retry scheduled"
 }
 ```
+

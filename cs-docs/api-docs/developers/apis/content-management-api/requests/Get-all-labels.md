@@ -12,9 +12,7 @@ last_updated: 2025-07-29
 
 # Get all labels
 
-
-**Method:** `GET`  
-**Endpoint:** `/labels?include_count={boolean_value}`
+**GET** `/labels?include_count={boolean_value}`
 
 The Get all labels call fetches all the existing labels of the stack.
 
@@ -25,26 +23,36 @@ You can add queries to extend the functionality of this API call. Under the URL 
 
 To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (optional)
+  Query to retrieve all labels of the stack.
+  Default: `{"type":"dashboard", "enable": true}`
 
-| api_key | the API key of the stack |  |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of labels applied to content types.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `the API key of the stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| query | {"type":"dashboard", "enable": true} | Query to retrieve all labels of the stack. |
-
-| include_count | false | Set this parameter to 'true' to include in response the total count of labels applied to content types. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -99,3 +107,4 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 	]
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2023-03-09
 
 # Update stack
 
-
-**Method:** `PUT`  
-**Endpoint:** `/stacks`
+**PUT** `/stacks`
 
 The Update stack call lets you update the name and description of an existing stack.
 
@@ -22,18 +20,19 @@ In the 'Body' section, provide the updated schema of the stack in JSON format.
 
 **Warning:** The master locale cannot be changed once it is set while stack creation. So, you cannot use this call to change/update the master language.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| api_key | API_key_of_your_stack | Enter the API key of your stack. |
-
-| authtoken | Your_Authtoken | Enter your authtoken. |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -44,7 +43,7 @@ In the 'Body' section, provide the updated schema of the stack in JSON format.
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -124,3 +123,4 @@ In the 'Body' section, provide the updated schema of the stack in JSON format.
     }
 }
 ```
+

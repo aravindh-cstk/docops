@@ -12,32 +12,35 @@ last_updated: 2025-07-01
 
 # Delete asset
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/assets/{asset_uid}`
+**DELETE** `/assets/{asset_uid}`
 
 The Delete asset call will delete an existing asset from the stack.  
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_uid** (required)
+  Enter the unique ID of the asset that you want to delete.
+  Default: `blt91af1e5af9c3639f`
 
-| api_key | the API key of the stack that holds the asset |  |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Default: `the API key of the stack that holds the asset`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| branch | main | Enter your branch unique ID. |
-
-| asset_uid | blt91af1e5af9c3639f | Enter the unique ID of the asset that you want to delete. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
   "notice": "Asset deleted successfully."
 }
 ```
+

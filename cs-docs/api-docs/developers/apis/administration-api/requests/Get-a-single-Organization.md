@@ -12,24 +12,29 @@ last_updated: 2026-04-07
 
 # Get a single Organization
 
-
-**Method:** `GET`  
-**Endpoint:** `/organizations/{organization_uid}?include_plan={boolean_value}`
+**GET** `/organizations/{organization_uid}?include_plan={boolean_value}`
 
 The Get a single organization call gets the comprehensive details of a specific organization related to the system user.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of the organization that you want to retrieve.
+  Default: `enter_the_organization_uid`
 
-| authtoken | your_authtoken | Enter the authtoken of the user. |
+## Query Parameters
 
-| organization_uid | enter_the_organization_uid | Enter the UID of the organization that you want to retrieve. |
+- **include_plan** (optional)
+  The include_plan parameter includes the details of the plan that the organization has subscribed to. To include the details of the subscribed plan in the Response body, enter ‘true’.
+  Default: `true`
 
-| include_plan | true | The include_plan parameter includes the details of the plan that the organization has subscribed to. To include the details of the subscribed plan in the Respon |
+## Headers
 
-**Response (200):**
+- **authtoken** (required)
+  Enter the authtoken of the user.
+  Default: `your_authtoken`
+
+## Sample Response
 
 ```json
 {
@@ -268,3 +273,4 @@ The Get a single organization call gets the comprehensive details of a specific 
 	}]
 }
 ```
+

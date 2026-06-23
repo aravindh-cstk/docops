@@ -12,33 +12,42 @@ last_updated: 2024-02-20
 
 # Get a single JSON RTE plugin
 
-
-**Method:** `GET`  
-**Endpoint:** `/extensions/{json_rte_plugin_uid}`
+**GET** `/extensions/{json_rte_plugin_uid}`
 
 The Get a single JSON RTE plugin request gets the comprehensive details of a specific JSON Rich Text Editor plugin.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **json_rte_plugin_uid** (required)
+  Enter the UID of the JSON RTE plugin of which you want to retrieve details.
+  Default: `blt123ea123b123a123f`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| json_rte_plugin_uid | blt123ea123b123a123f | Enter the UID of the JSON RTE plugin of which you want to retrieve details. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -64,3 +73,4 @@ To configure the permissions for your application via OAuth, please include the 
   }
 }
 ```
+

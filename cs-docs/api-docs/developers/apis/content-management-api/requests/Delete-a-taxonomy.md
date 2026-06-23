@@ -12,23 +12,30 @@ last_updated: 2023-12-15
 
 # Delete a taxonomy
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+**DELETE** `/taxonomies/{taxonomy_uid}`
 
 The Delete a taxonomy request deletes an existing taxonomy and all the terms within it. To confirm the deletion of a taxonomy, you need to specify the force=true query parameter.
 
 **Note:** When you delete a taxonomy, its existing associations with content types are removed. Additionally, the child terms will also eliminate associations with existing entries.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **force** (required)
+  Enter 'true' to force delete a taxonomy.
+  Default: `false`
 
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)'  |
+## Headers
 
-| force | false | Enter 'true' to force delete a taxonomy. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+

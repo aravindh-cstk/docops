@@ -12,28 +12,31 @@ last_updated: 2024-02-22
 
 # Get a single account
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/accounts/{account_uid}`
+**GET** `/v1/projects/{project_uid}/accounts/{account_uid}`
 
 The Get a single account request fetches a specific account in a project.
 
 To configure the permissions for your application via OAuth, include the automationhub.accounts:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **account_uid** (required)
+  Enter the UID of the account.
+  Default: `94c48b974b9045b3a1327eeb10ada605`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
+## Headers
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
 
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-
-| account_uid | 94c48b974b9045b3a1327eeb10ada605 | Enter the UID of the account. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -54,3 +57,4 @@ To configure the permissions for your application via OAuth, include the automat
     "updated_by": "blt******dae71c6b33"
 }
 ```
+

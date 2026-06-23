@@ -12,9 +12,7 @@ last_updated: 2024-09-24
 
 # Unlink content types
 
-
-**Method:** `PUT`  
-**Endpoint:** `/variant_groups/{variant_group_uid}/variants`
+**PUT** `/variant_groups/{variant_group_uid}/variants`
 
 The Unlink content types request allows you to unlink content types to your variant group.
 
@@ -31,22 +29,28 @@ In the “Body” section, enter the content type UID(s) in the following format
         }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **variant_group_uid** (required)
+  Enter the unique ID for your variant group.
+  Default: `your_variant_group_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
 
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Pass application/json value. |
-
-| variant_group_uid | your_variant_group_uid | Enter the unique ID for your variant group. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -67,7 +71,7 @@ In the “Body” section, enter the content type UID(s) in the following format
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -97,3 +101,4 @@ In the “Body” section, enter the content type UID(s) in the following format
     "variants": []
 }
 ```
+

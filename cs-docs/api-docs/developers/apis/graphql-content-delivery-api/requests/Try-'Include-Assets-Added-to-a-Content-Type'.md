@@ -12,9 +12,7 @@ last_updated: 2023-03-29
 
 # Try 'Include Assets Added to a Content Type'
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries of a content type along with the comprehensive details of an asset that has been used in the entries. This query uses [relay specification](https://relay.dev/docs/guides/graphql-server-specification/) to fetch asset details such as the title of an asset or its URL.
 
@@ -45,3 +43,4 @@ query {
 ```
 
 The response body of this query will include details of the ‘Title’ field of the Product content type and the ‘Title’ and ‘Description’ of the assets stored in the Images field. It will only return the first five assets.
+

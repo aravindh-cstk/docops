@@ -12,9 +12,7 @@ last_updated: 2023-09-04
 
 # Merge branches
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/branches_merge?base_branch=main&compare_branch=redesign&default_merge_strategy=merge_prefer_compare&merge_comment=sample comment`
+**POST** `/stacks/branches_merge?base_branch=main&compare_branch=redesign&default_merge_strategy=merge_prefer_compare&merge_comment=sample comment`
 
 The Merge branches request merges the specified two branches as per the merge strategy selected.
 
@@ -41,26 +39,34 @@ Here are the details of available merge strategies and what each strategy does:
 
 ##### Get all Merge Jobs
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **base_branch** (optional)
+  The base branch serves as the foundation where changes can be merged.
+  Default: `main`
+- **compare_branch** (required)
+  Enter the branch from which you want to merge changes into the base branch.
+  Default: `redesign`
+- **default_merge_strategy** (required)
+  Specify the merge strategy to apply for the merge action.
+  Default: `merge_prefer_base`
+- **merge_comment** (required)
+  Enter the comment to be displayed for the merge action.
+  Default: `merge_comment`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
 
-| authorization | your_management_token | Enter your management token. |
-
-| base_branch | main | The base branch serves as the foundation where changes can be merged. |
-
-| compare_branch | redesign | Enter the branch from which you want to merge changes into the base branch. |
-
-| default_merge_strategy | merge_prefer_base | Specify the merge strategy to apply for the merge action. |
-
-| merge_comment | merge_comment | Enter the comment to be displayed for the merge action. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -79,7 +85,7 @@ Here are the details of available merge strategies and what each strategy does:
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -97,3 +103,4 @@ Here are the details of available merge strategies and what each strategy does:
    "merge_comment":"sample"
 }
 ```
+

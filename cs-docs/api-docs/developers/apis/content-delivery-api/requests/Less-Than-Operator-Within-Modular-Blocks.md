@@ -12,9 +12,7 @@ last_updated: 2024-07-01
 
 # Less Than Operator Within Modular Blocks
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$lt": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$lt": "value" }}`
 
 Get entries in which the value of a field is lesser than the value provided in the condition.  
   
@@ -26,26 +24,37 @@ This query is specifically for fields that are part of any block within a Modula
 
 **Note:** Avoid using seconds and milliseconds in date/time queries. We recommend to round off to the nearest minute (at most 5 minutes).
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.rating.stars": { "$lt": 3 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed. |
-
-| query | { "additional_info.rating.stars": { "$lt": 3 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -521,3 +530,4 @@ This query is specifically for fields that are part of any block within a Modula
   ]
 }
 ```
+

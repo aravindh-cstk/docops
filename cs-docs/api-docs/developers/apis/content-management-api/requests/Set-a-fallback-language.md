@@ -12,9 +12,7 @@ last_updated: 2024-02-28
 
 # Set a fallback language
 
-
-**Method:** `POST`  
-**Endpoint:** `/locales`
+**POST** `/locales`
 
 The Set a fallback language request allows you to assign a fallback language for an entry in a particular language.
 
@@ -25,24 +23,42 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: The language set as a fallback language will always inherit data from the master language if it does not have localized content.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_language** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | the API key of your stack |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Sample Request
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+```json
+{
+  "locale": {
+    "name": "German - German",
+    "code": "de-de",
+    "fallback_locale": "de-en"
+  }
+}
+```
 
-| branch | main | Enter your branch unique ID. |
-
-| include_language | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Response
 
 ```json
 {
@@ -54,14 +70,3 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
-
-```json
-{
-  "locale": {
-    "name": "German - German",
-    "code": "de-de",
-    "fallback_locale": "de-en"
-  }
-}
-```

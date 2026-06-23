@@ -12,9 +12,7 @@ last_updated: 2024-02-22
 
 # Update a project
 
-
-**Method:** `PUT`  
-**Endpoint:** `/v1/projects/{project_uid}`
+**PUT** `/v1/projects/{project_uid}`
 
 The Update a project request lets you update certain details such as the description, tags, and title of an existing project in an Organization.
 
@@ -30,20 +28,25 @@ Here’s an example of the Request body:
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
+## Headers
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -53,7 +56,7 @@ Here’s an example of the Request body:
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -72,3 +75,4 @@ Here’s an example of the Request body:
     "id": "05732fe9f7d***791715b09a3792f52"
 }
 ```
+

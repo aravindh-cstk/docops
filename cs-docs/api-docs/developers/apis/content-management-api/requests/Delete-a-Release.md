@@ -12,9 +12,7 @@ last_updated: 2026-01-06
 
 # Delete a Release
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/releases/{release_uid}`
+**DELETE** `/releases/{release_uid}`
 
 The Delete a Release request allows you to delete a specific Release from a stack.
 
@@ -22,27 +20,35 @@ When executing the API request, provide the Release UID.
 
 To configure the permissions for your application via OAuth, please include the cm.releases.management:write scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **release_uid** (required)
+  Enter the unique ID of the release that you want to delete.
+  Default: `blt719af000dcde0000`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| release_version | 2.0 | Enter the release version. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | your_management_token | Enter your management token. |
-
-| branch | main | Enter your branch unique ID. |
-
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release that you want to delete. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Release deleted successfully."
 }
 ```
+

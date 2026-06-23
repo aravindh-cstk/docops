@@ -12,9 +12,7 @@ last_updated: 2024-04-17
 
 # Try 'NIN' Operator [Terms]
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### NIN Operator [Terms]
 
@@ -45,3 +43,4 @@ query {
   }
 }
 ```
+

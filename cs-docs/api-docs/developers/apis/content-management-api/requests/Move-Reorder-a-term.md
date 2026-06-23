@@ -12,9 +12,7 @@ last_updated: 2025-11-13
 
 # Move/Reorder a term
 
-
-**Method:** `PUT`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/move`
+**PUT** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/move`
 
 The Reorder a term request is used to reposition an existing term available in a particular taxonomy.
 
@@ -57,26 +55,37 @@ When reordering terms under an existing term on the same level (reorder term), t
 
 ##### Delete a term
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy of which you want to move or reorder the terms. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
+- **term_uid** (required)
+  Enter the unique ID of the term you want to move or reorder. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `term_a`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **force** (optional)
+  Enter 'true' to force a term to be reordered.
+  Default: `false`
 
-| authorization | your_management_token	 | Enter your management token. |
+## Headers
 
-| Content-Type  | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **Content-Type ** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy of which you want to move or reorder the terms. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxono |
-
-| term_uid | term_a | Enter the unique ID of the term you want to move or reorder. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxono |
-
-| force | false | Enter 'true' to force a term to be reordered. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -87,7 +96,7 @@ When reordering terms under an existing term on the same level (reorder term), t
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -105,3 +114,4 @@ When reordering terms under an existing term on the same level (reorder term), t
     }
 }
 ```
+

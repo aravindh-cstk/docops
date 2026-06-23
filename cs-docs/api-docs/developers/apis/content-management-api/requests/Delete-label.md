@@ -12,34 +12,38 @@ last_updated: 2025-07-25
 
 # Delete label
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/labels/{label_uid}`
+**DELETE** `/labels/{label_uid}`
 
 The Delete label call is used to delete a specific label.
 
 When executing the API call, add the management_token in the Authorization parameters.  
 To configure the permissions for your application via OAuth, please include the cm.labels.management:writescope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **label_uid** (required)
+  Enter the unique ID of the label that you want to delete.
+  Default: `blt5d1761bce4b36d57`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| branch | main | Enter your branch unique ID. |
-
-| label_uid | blt5d1761bce4b36d57 | Enter the unique ID of the label that you want to delete. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
   "notice": "Label deleted successfully."
 }
 ```
+

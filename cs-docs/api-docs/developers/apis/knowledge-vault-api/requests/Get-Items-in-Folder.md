@@ -12,50 +12,65 @@ last_updated: 2026-03-02
 
 # Get Items in Folder
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/knowledge-vault/folders/{folder_uid}?folder_depth={number}&limit={limit}&skip={index}&sort={string}&order={string}&date_range={dateRange}&filter_users={string}&filter_field={string}&include_users={boolean}&typeahead={string}`
+**GET** `/v1/knowledge-vault/folders/{folder_uid}?folder_depth={number}&limit={limit}&skip={index}&sort={string}&order={string}&date_range={dateRange}&filter_users={string}&filter_field={string}&include_users={boolean}&typeahead={string}`
 
 The Get Items in Folder request retrieves all items contained within a specific folder in the Knowledge Vault of a brand kit.
 
 To configure the permissions for your app via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **folder_uid** (required)
+  Enter the parent folder UID.
+  Default: `dir0000000000000`
 
-| authtoken | your_authtoken | Enter the authtoken. |
+## Query Parameters
 
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication). |
+- **limit** (optional)
+  Enter the maximum number of content items to return.
+  Default: `10`
+- **skip** (optional)
+  Enter the number of content items to be skipped from the response body.
+  Default: `0`
+- **sort** (optional)
+  Enter the value on the basis of which you want to sort your content items.
+  Default: `created_at`
+- **order** (optional)
+  Enter the ascending or descending order to organize your content items.
+  Default: `asc`
+- **include_users** (optional)
+  This parameter lets you include user information in the response. Set to true if you want to include the user information, else set to false.
+  Default: `false`
+- **folder_depth** (optional)
+  Number of folder levels to traverse (1 = only direct children).
+  Default: `1`
+- **date_range** (optional)
+  You can filter the response by date range. The format must be YYYY-MM-DD.
+  Default: `2025-12-01`
+- **filter_users ** (optional)
+  You can filter the response based on the comma-separated user UIDs.
+- **filter_field** (optional)
+  You can filter the response based on the user fields like created or updated.
+- **typeahead** (optional)
+  Text-based search across content item title or name.
+  Default: `AI Tools`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+## Headers
 
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-| folder_uid | dir0000000000000 | Enter the parent folder UID. |
-
-| limit | 10 | Enter the maximum number of content items to return. |
-
-| skip | 0 | Enter the number of content items to be skipped from the response body. |
-
-| sort | created_at | Enter the value on the basis of which you want to sort your content items. |
-
-| order | asc | Enter the ascending or descending order to organize your content items. |
-
-| include_users | false | This parameter lets you include user information in the response. Set to true if you want to include the user information, else set to false. |
-
-| folder_depth | 1 | Number of folder levels to traverse (1 = only direct children). |
-
-| date_range | 2025-12-01 | You can filter the response by date range. The format must be YYYY-MM-DD. |
-
-| filter_users  |  | You can filter the response based on the comma-separated user UIDs. |
-
-| filter_field |  | You can filter the response based on the user fields like created or updated. |
-
-| typeahead | AI Tools | Text-based search across content item title or name. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -99,3 +114,4 @@ To configure the permissions for your app via [OAuth](/docs/developers/developer
    }
 }
 ```
+

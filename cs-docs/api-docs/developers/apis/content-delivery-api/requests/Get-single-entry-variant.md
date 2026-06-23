@@ -12,9 +12,7 @@ last_updated: 2025-09-17
 
 # Get single entry variant
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}`
 
 The Get single entry variant request retrieves a single variant entry of a given base entry.
 
@@ -66,36 +64,52 @@ Sample response when the show_errors=true query parameter is passed and allowed 
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the entries. The UID is often based on the title of the content type and it is unique across a stack.
+  Default: `home_page`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `blt3e91e3812a44ba90`
 
-| api_key | blte5318f6d4fcd10db | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | csdb72e2bdb75536c727b9129d | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **environment** (optional)
+  Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production environment, pass the value as production.
+  Default: `production`
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en`
+- **include_fallback** (optional)
+  Enter “true” to include the published localized content from the fallback locale when the specified locale does not contain published content.
+  Default: `true`
+- **include_publish_details** (optional)
+  Enter “true” to include the publish details of the entry.
+  Default: `true`
+- **include_rules** (optional)
+  Enter “true” to include the publishing rules for the entry.
+  Default: `true`
+- **include_metadata** (optional)
+  Pass this as "true" to fetch the metadata attached to each entry.
+  Default: `true`
+- **show_errors** (optional)
+  Pass this as true to include the errors array in the response.
+  Default: `true`
 
-| x-cs-variant-uid | csa639040f051b6db6, csbf165536748bdee2, cs619c85c94f383934, cs669f1759b774fe1d | Enter the variant UID linked with your content type. |
+## Headers
 
-| content_type_uid | home_page | Enter the unique ID of the content type of which you want to retrieve the entries. The UID is often based on the title of the content type and it is unique acro |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blte5318f6d4fcd10db`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `csdb72e2bdb75536c727b9129d`
+- **x-cs-variant-uid** (required)
+  Enter the variant UID linked with your content type.
+  Default: `csa639040f051b6db6, csbf165536748bdee2, cs619c85c94f383934, cs669f1759b774fe1d`
 
-| entry_uid | blt3e91e3812a44ba90 | Enter the unique ID of your entry. |
-
-| environment | production | Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production environment, pass the value as production. |
-
-| locale | en | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed. |
-
-| include_fallback | true | Enter “true” to include the published localized content from the fallback locale when the specified locale does not contain published content. |
-
-| include_publish_details | true | Enter “true” to include the publish details of the entry. |
-
-| include_rules | true | Enter “true” to include the publishing rules for the entry. |
-
-| include_metadata | true | Pass this as "true" to fetch the metadata attached to each entry. |
-
-| show_errors | true | Pass this as true to include the errors array in the response. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -144,3 +158,4 @@ Sample response when the show_errors=true query parameter is passed and allowed 
     }
 }
 ```
+

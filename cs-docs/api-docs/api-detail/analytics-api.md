@@ -135,8 +135,7 @@ Learn more about how to get started with using the [Postman Collection](/docs/de
 
 #### Subscription Usage
 
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/subscription?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
+**GET** `/analytics/v2/subscription?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
 
 The Subscription Usage request returns the total number of projects, environments, and domains under Launch within your organization till date. To get the details for CMS and Automate, you can use the [Usage Analytics](/docs/developers/apis/analytics-api#usage-analytics) request.
 
@@ -168,16 +167,25 @@ The response body provides an overview of the resources in the Launch section wi
 
 This response gives a clear view of how Launch resources are utilized within the specified date range.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
@@ -186,12 +194,12 @@ This response gives a clear view of how Launch resources are utilized within the
 }
 ```
 
+
 ### Device Usage
 
 #### Device Usage
 
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/devices?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
+**GET** `/analytics/v2/devices?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
 
 The Device Usage request helps you get a list of devices that your organization users are using to access Contentstack services.
 
@@ -258,20 +266,37 @@ The response body provides detailed insights into users accessing Contentstack e
 
 This data helps you track and analyze device and environment usage, supporting performance and user experience optimization.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-| services | ["cdn","cma"] | Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets" |
-| duration | day | Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch. |
-| includeCount | true | Set this parameter to true to include the total count of users in the response. |
-| orderBy | -1 | Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the  |
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
+- **services** (optional)
+  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
+  Default: `["cdn","cma"]`
+- **duration** (optional)
+  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
+  Default: `day`
+- **includeCount** (optional)
+  Set this parameter to true to include the total count of users in the response.
+  Default: `true`
+- **orderBy** (optional)
+  Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the value is set to -1, which orders the response in descending order.
+  Default: `-1`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
@@ -280,12 +305,12 @@ This data helps you track and analyze device and environment usage, supporting p
 }
 ```
 
+
 ### Usage Analytics
 
 #### Usage Analytics
 
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/usage?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}`
+**GET** `/analytics/v2/usage?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}`
 
 The Usage Analytics request gives a quick usage overview of your bandwidth and API utilization over a particular period of time.
 
@@ -365,22 +390,43 @@ This data helps monitor and analyze the usage patterns of API and CDN resources,
 - The apiKey cannot be used with the services ["automations", "launch"] simultaneously.
 - The apiKey and environmentUid parameters are only applicable to the ["launch"] service.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-| services | ["cdn","cma"] | Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets" |
-| includeCount | true | Set this parameter to true to include the total count of users in the response. |
-| duration | day | Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch. |
-| apiKey | your_stack_api_key | Enter the API key of the stack. |
-| projectUid | your_project_uid | Enter the Launch project UID to retrieve data from that specific project. |
-| environmentUid | your_environment_uid | Enter the environment UID of the Launch project. |
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
+- **services** (optional)
+  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
+  Default: `["cdn","cma"]`
+- **includeCount** (optional)
+  Set this parameter to true to include the total count of users in the response.
+  Default: `true`
+- **duration** (optional)
+  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
+  Default: `day`
+- **apiKey** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **projectUid** (optional)
+  Enter the Launch project UID to retrieve data from that specific project.
+  Default: `your_project_uid`
+- **environmentUid** (optional)
+  Enter the environment UID of the Launch project.
+  Default: `your_environment_uid`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
@@ -389,12 +435,12 @@ This data helps monitor and analyze the usage patterns of API and CDN resources,
 }
 ```
 
+
 ### Top URLs
 
 #### Top URLs
 
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/url?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}&includeTotalCount={boolean_value}`
+**GET** `/analytics/v2/url?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}&includeTotalCount={boolean_value}`
 
 The Top URLs request gets you the number of requests made from your URLs for the given services.
 
@@ -444,21 +490,40 @@ The response body provides a detailed summary of the number of requests made to 
 
 This data helps organizations monitor traffic, identify frequently accessed URLs, and optimize performance.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-| includeTotalCount | true | Set this parameter to true to include the total count of users in the response. |
-| duration | day | Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch. |
-| services | ["cdn","cma"] | Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets" |
-| apiKey | your_stack_api_key | Enter the API key of the stack. |
-| orderBy | 1 | Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the  |
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
+- **includeTotalCount** (required)
+  Set this parameter to true to include the total count of users in the response.
+  Default: `true`
+- **duration** (optional)
+  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
+  Default: `day`
+- **services** (optional)
+  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
+  Default: `["cdn","cma"]`
+- **apiKey** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **orderBy** (optional)
+  Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the value is set to -1, which orders the response in descending order.
+  Default: `1`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
@@ -467,12 +532,12 @@ This data helps organizations monitor traffic, identify frequently accessed URLs
 }
 ```
 
+
 ### Status Code
 
 #### Status Code
 
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/http-statuses?from={YYYY-MM-DD}&to={YYYY-MM-DD}&duration={duration}&orgUid={organization_uid}&services={["cdn","cma"]}`
+**GET** `/analytics/v2/http-statuses?from={YYYY-MM-DD}&to={YYYY-MM-DD}&duration={duration}&orgUid={organization_uid}&services={["cdn","cma"]}`
 
 The Status Code request will show the count for the number of API requests made for each HTTP status code. For example, 200, 201, 400, 404, and so on. You can use the httpStatusCode parameter to get the count for a specific status code instead of all status codes.
 
@@ -526,20 +591,37 @@ The response body provides detailed statistics on the number of API requests exe
 
 This information helps you monitor the frequency of specific HTTP status codes and track the performance and errors of your API requests.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-| duration | day | Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch. |
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
-| services | ["cdn","cma"] | Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets" |
-| httpStatusCode | 200 | Enter an HTTP status code to filter the response. |
-| apiKey | your_stack_api_key | Enter your stack API key to get data for that specific stack. |
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
+- **duration** (required)
+  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
+  Default: `day`
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **services** (required)
+  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
+  Default: `["cdn","cma"]`
+- **httpStatusCode** (optional)
+  Enter an HTTP status code to filter the response.
+  Default: `200`
+- **apiKey** (optional)
+  Enter your stack API key to get data for that specific stack.
+  Default: `your_stack_api_key`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
@@ -548,12 +630,12 @@ This information helps you monitor the frequency of specific HTTP status codes a
 }
 ```
 
+
 ### Cache Usage
 
 #### Cache Usage
 
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/hit-miss-ratio?orgUid={organization_uid}&services={["cdn","cma"]}&from={YYYY-MM-DD}&duration={duration}&to={YYYY-MM-DD}`
+**GET** `/analytics/v2/hit-miss-ratio?orgUid={organization_uid}&services={["cdn","cma"]}&from={YYYY-MM-DD}&duration={duration}&to={YYYY-MM-DD}`
 
 The Cache Usage request will show the number of HIT/MISS instances for your cache. Number of HIT indicates that responses were received from the cache and MISS indicates the number of responses retrieved from the database.
 
@@ -613,20 +695,37 @@ The response body provides insights into how effectively the cache is being util
 
 This information helps analyze cache efficiency by detailing the number of HITs and MISSes, aiding in optimizing the cache strategy and understanding cache utilization.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-| duration | day | Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch. |
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-| services | ["cdn","cma"] | Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets" |
-| apiKey | your_stack_api_key | Enter your stack API key to get data for that specific stack. |
-| cache | HIT | Enter the value as HIT for this param if you want to get the number of hit API calls and MISS to get the number of misse |
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **duration** (required)
+  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
+  Default: `day`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
+- **services** (required)
+  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
+  Default: `["cdn","cma"]`
+- **apiKey** (optional)
+  Enter your stack API key to get data for that specific stack.
+  Default: `your_stack_api_key`
+- **cache** (optional)
+  Enter the value as HIT for this param if you want to get the number of hit API calls and MISS to get the number of missed API calls.
+  Default: `HIT`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
@@ -635,12 +734,12 @@ This information helps analyze cache efficiency by detailing the number of HITs 
 }
 ```
 
+
 ### SDK Usage
 
 #### SDK Usage
 
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/sdk?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}&includeCount={boolean_value}&services={["cdn","cma"]}&duration={duration}`
+**GET** `/analytics/v2/sdk?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}&includeCount={boolean_value}&services={["cdn","cma"]}&duration={duration}`
 
 The SDK Usage request gets you the number of requests that were made using the SDKs. It helps you get an overview of the SDK usage by your customers.
 
@@ -703,23 +802,46 @@ The response body provides detailed insights into how SDKs are being used across
 
 This response helps organizations track SDK adoption and effectiveness by revealing usage patterns and frequency.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
-| includeCount | true | Set this parameter to true to include the total count of users in the response. |
-| services | ["cdn","cma"] | Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets" |
-| duration | day | Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch. |
-| orderBy | -1 | Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the  |
-| limit | 20 | Specify the number of items you wish to fetch per request. The maximum limit is 900. |
-| skip | 10 | Enter the number of items to skip. For example, a skip value of 10 will skip the first 10 items. |
-| apiKey | your_stack_api_key | Enter your stack API key to get data for that specific stack. |
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **includeCount** (required)
+  Set this parameter to true to include the total count of users in the response.
+  Default: `true`
+- **services** (required)
+  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
+  Default: `["cdn","cma"]`
+- **duration** (required)
+  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
+  Default: `day`
+- **orderBy** (optional)
+  Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the value is set to -1, which orders the response in descending order.
+  Default: `-1`
+- **limit** (optional)
+  Specify the number of items you wish to fetch per request. The maximum limit is 900.
+  Default: `20`
+- **skip** (optional)
+  Enter the number of items to skip. For example, a skip value of 10 will skip the first 10 items.
+  Default: `10`
+- **apiKey** (optional)
+  Enter your stack API key to get data for that specific stack.
+  Default: `your_stack_api_key`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
@@ -728,12 +850,12 @@ This response helps organizations track SDK adoption and effectiveness by reveal
 }
 ```
 
+
 ### Retrieve Data
 
 #### Retrieve Data
 
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/job/{jobId}/data?orgUid=<string>&page=0`
+**GET** `/analytics/v2/job/{jobId}/data?orgUid=<string>&page=0`
 
 The Retrieve Data request will take the jobId value that was generated in your response, as a part of its URL and will get you the actual response data for that jobId without any processing delay. Due to the async nature of the APIs, this GET data request acts as an additional step to retrieve your actual response.
 
@@ -745,16 +867,28 @@ The Retrieve Data request will take the jobId value that was generated in your r
 
 You will receive the response depending on your request and relevant jobId.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| jobId | job_0******9-b**d-4**b-9**0-4**********2 | Enter your job ID. |
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
-| page | 1 | Enter the page number you want to retrieve in the response. |
+- **jobId** (required)
+  Enter your job ID.
+  Default: `job_0******9-b**d-4**b-9**0-4**********2`
 
-**Response (200):**
+##### Query Parameters
+
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **page** (optional)
+  Enter the page number you want to retrieve in the response.
+  Default: `1`
+
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
@@ -776,6 +910,7 @@ You will receive the response depending on your request and relevant jobId.
     "uid": "c13878ab-ff27-4b9c-ae99-a085c8f75f7d"
 }
 ```
+
 
 ## Postman Collection
 

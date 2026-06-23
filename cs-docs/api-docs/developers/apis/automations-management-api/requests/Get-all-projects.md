@@ -12,9 +12,7 @@ last_updated: 2024-02-22
 
 # Get all projects
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/projects?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
+**GET** `/v1/projects?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
 
 The Get all projects request returns comprehensive information of all the projects related to the Organization in which they are created.
 
@@ -22,26 +20,34 @@ To configure the permissions for your application via OAuth, include the automat
 
 **Note:** If you do not specify a value for the optional “limit” query parameter, the API request will by default return the initial 100 items.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **limit** (optional)
+  The “limit” parameter will return a specific number of projects (in between 0-100) in your response based on the value you provide. If there are 100 projects and you want to fetch only 30 projects, set the limit as 30.
+  Default: `30`
+- **skip** (optional)
+  The “skip” parameter will skip a specific number of projects and return the remaining ones in your response based on the value you provide.  If there are 12 projects and you want to exclude the first 2 projects, set this to 2 to fetch the remaining 10 projects.
+  Default: `2`
+- **asc** (optional)
+  The “asc” parameter allows you to sort the list of projects in the ascending order with respect to the value of a specific field. The projects can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **desc** (optional)
+  The “desc” parameter allows you to sort the list of projects in the descending order with respect to the value of a specific field. The projects can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **include_count** (optional)
+  Set this to “true” to include the total number (count) of projects in an organization.
+  Default: `true`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
+## Headers
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
 
-| limit | 30 | The “limit” parameter will return a specific number of projects (in between 0-100) in your response based on the value you provide. If there are 100 projects an |
-
-| skip | 2 | The “skip” parameter will skip a specific number of projects and return the remaining ones in your response based on the value you provide.  If there are 12 pro |
-
-| asc | created_at | The “asc” parameter allows you to sort the list of projects in the ascending order with respect to the value of a specific field. The projects can be sorted by  |
-
-| desc | created_at | The “desc” parameter allows you to sort the list of projects in the descending order with respect to the value of a specific field. The projects can be sorted b |
-
-| include_count | true | Set this to “true” to include the total number (count) of projects in an organization. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -97,3 +103,4 @@ To configure the permissions for your application via OAuth, include the automat
     ] 
 }
 ```
+

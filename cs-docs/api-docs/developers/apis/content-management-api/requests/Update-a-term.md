@@ -12,34 +12,43 @@ last_updated: 2025-11-13
 
 # Update a term
 
-
-**Method:** `PUT`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+**PUT** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Update a term request is used to update the details of an existing term available in a particular taxonomy.
 
 ##### Localize a term
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
+- **term_uid** (required)
+  Enter the unique ID of the term you want to update. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `term_a`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale** (optional)
+  Locale in which to update the taxonomy term. If not specified, the master locale is used.
+  Default: `es`
 
-| authorization | your_management_token	 | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)'  |
-
-| term_uid | term_a | Enter the unique ID of the term you want to update. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' requ |
-
-| locale | es | Locale in which to update the taxonomy term. If not specified, the master locale is used. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -49,7 +58,7 @@ The Update a term request is used to update the details of an existing term avai
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -66,3 +75,4 @@ The Update a term request is used to update the details of an existing term avai
     }
 }
 ```
+

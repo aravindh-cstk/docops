@@ -12,9 +12,7 @@ last_updated: 2024-02-27
 
 # Create publish rules
 
-
-**Method:** `POST`  
-**Endpoint:** `/workflows/publishing_rules`
+**POST** `/workflows/publishing_rules`
 
 The Create Publish Rules request allows you to create publish rules for the workflow of a stack.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.publishing-rules:write scope.
@@ -28,18 +26,17 @@ To define the branch scope, specify the unique IDs of the branches for which the
 ]
 ```
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| api_key | blt20962a819b57e233 |  |
-
-| authtoken | your_authtoken |  |
-
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -71,7 +68,7 @@ To define the branch scope, specify the unique IDs of the branches for which the
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -109,3 +106,4 @@ To define the branch scope, specify the unique IDs of the branches for which the
     }
 }
 ```
+

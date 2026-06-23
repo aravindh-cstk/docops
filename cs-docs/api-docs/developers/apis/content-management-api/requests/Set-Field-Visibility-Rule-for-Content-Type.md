@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Set Field Visibility Rule for Content Type
 
-
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}`
+**PUT** `/content_types/{content_type_uid}`
 
 The Set Field Visibility Rule for Content Type API request lets you add Field Visibility Rules to existing content types. These rules allow you to show and hide fields based on the state or value of certain fields.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
@@ -64,26 +62,37 @@ Let’s look at the keys used in the above code snippet:
 
 For more details, check out the [Define Conditions](/docs/developers/create-content-types/add-a-field-visibility-rule#define-conditions) section when adding a Field Visibility Rule.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you want to add field rules. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-| api_key | your_stack_api_key | Enter the API key of your stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type in which you want to add field rules. The unique ID of a content type is unique across a stack. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -157,7 +166,7 @@ For more details, check out the [Define Conditions](/docs/developers/create-cont
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -298,3 +307,4 @@ For more details, check out the [Define Conditions](/docs/developers/create-cont
 	}
 }
 ```
+

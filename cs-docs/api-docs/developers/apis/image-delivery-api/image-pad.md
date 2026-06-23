@@ -20,6 +20,52 @@ You can also combine two or more values. For example, to add padding to the top 
 
 It is important to note that by default the pad parameter applies white background. If the given image contains transparent background, and the output image also has transparency, then transparent padding will be applied.
 
-## Related Pages
+## API Endpoints
 
-- [](https://www.contentstack.com/docs)
+### Add padding
+
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&pad={top_value},{right_value},{bottom_value},{left_value}`
+
+**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+
+To add a colored border, you need to use the bg-color parameter along with pad. For example, to add a red border, use the query ?pad=10&bg-color=FF0000. Also, note that if the canvas and pad parameters are used together, the pad parameter will be ignored.
+
+#### Query Parameters
+
+- **pad** (optional)
+  Enter value for top, left, bottom and right edges for which padding needs to be applied
+  Default: `25,50,75,100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
+
+### Add padding and background color
+
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&pad={top_value},{right_value},{bottom_value},{left_value}&bg-color={value}`
+
+**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+
+  
+
+##### Additional Notes
+
+  
+
+1. By default, this parameter applies padding in white color.
+2. If the given image contains transparent background and the output image also has transparency, then transparent padding will be applied.
+3. CSS style shorthand values are also acceptable.
+4. If the pad and the canvas parameters are used together in the same request, the pad parameter will be ignored.
+
+#### Query Parameters
+
+- **pad** (optional)
+  Enter the values for top, left, bottom and right edges for which padding needs to be applied.
+  Default: `25,50,75,100`
+- **bg-color** (optional)
+  Enter the values for background color for padding.
+  Default: `FF0000`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+

@@ -12,32 +12,38 @@ last_updated: 2023-01-05
 
 # Get all Organizations
 
-
-**Method:** `GET`  
-**Endpoint:** `/organizations?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}`
+**GET** `/organizations?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}`
 
 The Get all organizations call lists all organizations related to the system user in the order that they were created.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **limit** (optional)
+  The ‘limit’ parameter will return a specific number of entries in the output. Example, if there are 10 organizations and you wish to fetch only the first 2, you need to specify '2' as the value in this parameter.
+  Default: `1`
+- **skip** (optional)
+  The ‘skip’ parameter will skip a specific number of organizations in the output. Example, if there are 12 organizations and you want to skip the first 2 to get only the last 10 in the response body, you need to specify ‘2’ here.
+  Default: `1`
+- **asc** (optional)
+  The ‘asc’ parameter allows you to sort the list of organizations in the ascending order with respect to the value of a specific field.
+  Default: `created_at`
+- **desc** (optional)
+  The ‘desc’ parameter allows you to sort the list of Organizations in the descending order with respect to the value of a specific field.
+  Default: `update_at`
+- **include_count** (optional)
+  The ‘include_count’ parameter returns the total number of organizations related to the user. Example: If you wish to know the total number of organizations, you need to mention ‘true’.
+  Default: `true`
+- **typeahead** (optional)
+  The typeahead parameter is a type of filter that allows you to perform a name-based search on all organizations based on the value provided. Example, if we have four organizations named ‘ABC’, ‘ABC1’, ‘XYZ’, and ‘ACC’, and we provide ‘ABC’ as the value to this parameter, the search result will return the organizations ‘ABC’ and ‘ABC1’ as the output.
+  Default: `Contentstack`
 
-| authtoken | your_authtoken | Enter the authtoken of the user. |
+## Headers
 
-| limit | 1 | The ‘limit’ parameter will return a specific number of entries in the output. Example, if there are 10 organizations and you wish to fetch only the first 2, you |
+- **authtoken** (required)
+  Enter the authtoken of the user.
+  Default: `your_authtoken`
 
-| skip | 1 | The ‘skip’ parameter will skip a specific number of organizations in the output. Example, if there are 12 organizations and you want to skip the first 2 to get  |
-
-| asc | created_at | The ‘asc’ parameter allows you to sort the list of organizations in the ascending order with respect to the value of a specific field. |
-
-| desc | update_at | The ‘desc’ parameter allows you to sort the list of Organizations in the descending order with respect to the value of a specific field. |
-
-| include_count | true | The ‘include_count’ parameter returns the total number of organizations related to the user. Example: If you wish to know the total number of organizations, you |
-
-| typeahead | Contentstack | The typeahead parameter is a type of filter that allows you to perform a name-based search on all organizations based on the value provided. Example, if we have |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -97,3 +103,4 @@ The Get all organizations call lists all organizations related to the system use
   ]
 }
 ```
+

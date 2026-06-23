@@ -12,28 +12,35 @@ last_updated: 2023-01-05
 
 # Get a single content type
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}`
+**GET** `/content_types/{content_type_uid}`
 
 This call returns information of a specific content type. It returns the content type schema, but does not include its entries.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `product`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type. The unique ID of |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -512,3 +519,4 @@ This call returns information of a specific content type. It returns the content
   }
 }
 ```
+

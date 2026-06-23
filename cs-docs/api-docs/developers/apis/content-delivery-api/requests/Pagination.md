@@ -12,9 +12,7 @@ last_updated: 2024-07-01
 
 # Pagination
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale}&include_count={boolean_value}&skip={skip_value}&limit={limit_value}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale}&include_count={boolean_value}&skip={skip_value}&limit={limit_value}`
 
 The 'Get all entries' API request returns only the first 100 entries of the specified content type. Similarly, the 'Get all assets' request fetches the first 100 assets of a particular stack.
 
@@ -29,30 +27,43 @@ The syntax of the pagination request will look like the following:
 - For entries: https://cdn.contentstack.io/v3/content_types/product/entries?environment={environment}&locale={locale}&include_count=true&skip={skip_value}&limit={limit_value}
 - For assets: https://cdn.contentstack.io/v3/assets?environment={environment_name}&include_dimension={boolean_value}&include_count=true&skip={skip_value}&limit={limit_value}
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include_count** (required)
+  Set this parameter to 'true' to include in response the total count of entries available in a content type.
+  Default: `true`
+- **skip** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `2`
+- **limit** (required)
+  Enter the maximum number of entries to be returned.
+  Default: `7`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed. |
-
-| include_count | true | Set this parameter to 'true' to include in response the total count of entries available in a content type. |
-
-| skip | 2 | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-
-| limit | 7 | Enter the maximum number of entries to be returned. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -852,3 +863,4 @@ The syntax of the pagination request will look like the following:
   "count": 7
 }
 ```
+

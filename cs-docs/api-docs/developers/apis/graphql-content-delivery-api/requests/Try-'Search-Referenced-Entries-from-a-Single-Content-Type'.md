@@ -12,9 +12,7 @@ last_updated: 2023-03-28
 
 # Try 'Search Referenced Entries from a Single Content Type'
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries having values based on referenced fields. This query retrieves all entries that satisfy query conditions made on referenced fields that refer to a single content type.
 
@@ -50,3 +48,4 @@ query {
 The response body will include all entries of the Product content type that satisfy the query, and will include details of just the ‘Title’ field of the Category content type. Similarly, all the query operators listed in this guide can be applied to search based on the values of referenced fields.
 
 **Note**: Only up to **three** levels deep of referenced fields can be used within the where argument to filter the requested entries.
+

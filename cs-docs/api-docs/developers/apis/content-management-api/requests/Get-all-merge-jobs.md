@@ -12,9 +12,7 @@ last_updated: 2023-07-26
 
 # Get all merge jobs
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_queue`
+**GET** `/stacks/branches_queue`
 
 The Get all merge jobs request returns a list of all the recent merge jobs within a specific period.
 
@@ -22,18 +20,19 @@ The Get all merge jobs request returns a list of all the recent merge jobs withi
 
 ##### Get a Single Merge Job
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | your_management_token | Enter your management token. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -338,3 +337,4 @@ The Get all merge jobs request returns a list of all the recent merge jobs withi
     ]
 }
 ```
+

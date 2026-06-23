@@ -12,29 +12,31 @@ last_updated: 2024-07-25
 
 # Get webhook
 
-
-**Method:** `GET`  
-**Endpoint:** `/webhooks/{webhook_uid}`
+**GET** `/webhooks/{webhook_uid}`
 
 The Get webhook request returns comprehensive information on a specific webhook.
 
 When executing the API call, under the 'Header' section, you need to enter the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.webhooks.management:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **webhook_uid** (required)
+  Enter the unique ID of the webhook of which you want to retrieve the details. Execute the 'Get all webhooks' call to retrieve the UID of a webhook.
+  Default: `cscb27cf54-3abd-46b4-970e-1f11a11e2905`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| webhook_uid | cscb27cf54-3abd-46b4-970e-1f11a11e2905 | Enter the unique ID of the webhook of which you want to retrieve the details. Execute the 'Get all webhooks' call to retrieve the UID of a webhook. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -79,3 +81,4 @@ To configure the permissions for your application via OAuth, please include the 
     }
 }
 ```
+

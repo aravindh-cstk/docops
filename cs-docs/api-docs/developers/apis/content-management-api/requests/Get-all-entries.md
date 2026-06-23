@@ -12,9 +12,7 @@ last_updated: 2026-03-16
 
 # Get all entries
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?apply_draft={boolean_value}&locale={language_code}&include_workflow={boolean_value}&include_publish_details={boolean_value}`
+**GET** `/content_types/{content_type_uid}/entries?apply_draft={boolean_value}&locale={language_code}&include_workflow={boolean_value}&include_publish_details={boolean_value}`
 
 The Get all entries API retrieves all entries for a specified content type in a stack. The response returns entry data in JSON format. You can also specify parameters such as locale, environment, workflow details, and draft merging to customize the results.
 
@@ -45,34 +43,46 @@ For example, to retrieve entries in a specific workflow stage, pass a query usin
 
 **Tip**: This request returns the first **100 entries** for the specified content type. To retrieve additional entries, use [pagination](/docs/developers/apis/content-delivery-api#pagination).
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  The unique ID of the content type whose entries you want to retrieve. The UID is generated from the title of the content type and is unique within a stack.
+  Default: `product`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | Your_Authtoken |  |
+- **apply_draft** (optional)
+  Set to true to retrieve and merge the draft entry (if it exists) with the base entry.
+  Default: `true`
+- **locale** (optional)
+  Specify the locale from which to retrieve entries. If not provided, the master locale is used.
+  Default: `en-us`
+- **include_workflow** (optional)
+  Set to true to include workflow details for each entry in the response.
+  Default: `false`
+- **include_publish_details** (optional)
+  Set to true to include publish details for each entry.
+  Default: `true`
+- **include_branch** (optional)
+  Set to true to include the _branch top-level key in the response. This key contains the unique ID of the branch where the entry resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | product | The unique ID of the content type whose entries you want to retrieve. The UID is generated from the title of the content type and is unique within a stack. |
-
-| apply_draft | true | Set to true to retrieve and merge the draft entry (if it exists) with the base entry. |
-
-| locale | en-us | Specify the locale from which to retrieve entries. If not provided, the master locale is used. |
-
-| include_workflow | false | Set to true to include workflow details for each entry in the response. |
-
-| include_publish_details | true | Set to true to include publish details for each entry. |
-
-| include_branch | false | Set to true to include the _branch top-level key in the response. This key contains the unique ID of the branch where the entry resides. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -178,3 +188,4 @@ For example, to retrieve entries in a specific workflow stage, pass a query usin
     ]
 }
 ```
+

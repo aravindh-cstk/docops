@@ -12,9 +12,7 @@ last_updated: 2024-07-30
 
 # OR Operator [Taxonomy]
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"$or": {"taxonomies.taxonomy_uid_1" : "term_uid1" }, {"taxonomies.taxonomy_uid_2" : "term_uid2" }]}`
+**GET** `/taxonomies/entries?query={"$or": {"taxonomies.taxonomy_uid_1" : "term_uid1" }, {"taxonomies.taxonomy_uid_2" : "term_uid2" }]}`
 
 Get all entries for a specific taxonomy that satisfy at least one of the given conditions provided in the “$or” query.
 
@@ -42,18 +40,22 @@ query={
 
 ##### AND Operator [Taxonomy]
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"$or": [{ "taxonomies.color" : "black" },{ "taxonomies.size" : "small" }]}`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
 
-| query | {"$or": [{ "taxonomies.color" : "black" },{ "taxonomies.size" : "small" }]} | Provide a custom query in the string format. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -108,3 +110,4 @@ query={
     ]
 }
 ```
+

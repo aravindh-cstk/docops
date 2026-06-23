@@ -12,9 +12,7 @@ last_updated: 2025-02-17
 
 # Try 'Order by Desc' Operator
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 When fetching entries, you can sort them in the descending order with respect to the value of the following system-defined fields in the response body:
 
@@ -45,3 +43,4 @@ query {
 ```
 
 The response body of this query will display all the entries of the **Product** content type that satisfy the query in a descending order, including details of just the ‘Title’ and ‘Price in USD’ fields.
+

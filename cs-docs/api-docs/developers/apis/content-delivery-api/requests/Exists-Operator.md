@@ -12,9 +12,7 @@ last_updated: 2023-11-20
 
 # Exists Operator
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={{"taxonomies.taxonomy_uid" : { "$exists": true }}`
+**GET** `/taxonomies/entries?query={{"taxonomies.taxonomy_uid" : { "$exists": true }}`
 
 Get all entries for a specific taxonomy that if the value of the field, mentioned in the condition, exists.
 
@@ -32,18 +30,22 @@ query={"taxonomies.color" : { "$exists": true }}
 
 ##### Equal and Below Operator
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"taxonomies.color" : { "$exists": true }}`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
 
-| query | {"taxonomies.color" : { "$exists": true }} | Provide a custom query in the string format. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -169,3 +171,4 @@ query={"taxonomies.color" : { "$exists": true }}
     ]
 }
 ```
+

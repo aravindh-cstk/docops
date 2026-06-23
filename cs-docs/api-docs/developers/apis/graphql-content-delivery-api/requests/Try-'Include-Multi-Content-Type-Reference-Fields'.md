@@ -12,9 +12,7 @@ last_updated: 2023-03-29
 
 # Try 'Include Multi Content Type Reference Fields'
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries of a content type along with the comprehensive details of the specified referenced entries. This query uses inline fragments and relay specification to retrieve details of entries referring to multiple content types.
 
@@ -66,3 +64,4 @@ query {
 ```
 
 **Note**: When you query reference fields that refer to content types other than the first **100** available, the response body will return an error. If referenced entries are not published or have been deleted, then the query will return { edges: [] }.
+

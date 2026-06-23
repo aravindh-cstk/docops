@@ -12,9 +12,7 @@ last_updated: 2023-07-17
 
 # Import a global field
 
-
-**Method:** `POST`  
-**Endpoint:** `/global_fields/import`
+**POST** `/global_fields/import`
 
 The Import a global field call imports a global field into a stack.
 
@@ -22,24 +20,28 @@ To import, you need to provide/upload a JSON file that contains the schema of th
 
 **Tip**: You can try the call manually in any REST API client, such as Postman, by passing a 'Body' parameter named global_field and selecting the input type as 'File'. Then, select the JSON file of the global field that you wish to import.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | Your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Default: `Your_management_token`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | Your_management_token |  |
-
-| Content-Type | multipart/form-data |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -86,3 +88,4 @@ To import, you need to provide/upload a JSON file that contains the schema of th
   }
 }
 ```
+

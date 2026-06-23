@@ -12,28 +12,35 @@ last_updated: 2026-04-07
 
 # Update a team
 
-
-**Method:** `PUT`  
-**Endpoint:** `/organizations/{organization_uid}/teams/{team_uid}`
+**PUT** `/organizations/{organization_uid}/teams/{team_uid}`
 
 The Update a team request is used to modify details, such as adding or removing users from a team, assigning or removing stack roles within a team, updating team descriptions, and updating organization roles for an existing team within a specific organization.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **team_uid** (required)
+  Enter the UID of the team you want to update. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Default: `team_uid`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Query Parameters
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **includeUserDetails** (optional)
+  Set this parameter to “true” to include the details of users in the response.
+  Default: `true`
 
-| organization_uid | your_organization_uid | Enter the UID of your Organization. |
+## Headers
 
-| team_uid | team_uid | Enter the UID of the team you want to update. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-mana |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| includeUserDetails | true | Set this parameter to “true” to include the details of users in the response. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -55,7 +62,7 @@ The Update a team request is used to modify details, such as adding or removing 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -84,3 +91,4 @@ The Update a team request is used to modify details, such as adding or removing 
     "updatedByUserName": "Jane Doe"
 }
 ```
+

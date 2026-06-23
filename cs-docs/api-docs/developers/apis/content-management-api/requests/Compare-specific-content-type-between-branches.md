@@ -12,32 +12,40 @@ last_updated: 2023-06-09
 
 # Compare specific content type between branches
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_compare/content_types/{content_type_uid}?base_branch=main&compare_branch=redesign&include_schemas=true`
+**GET** `/stacks/branches_compare/content_types/{content_type_uid}?base_branch=main&compare_branch=redesign&include_schemas=true`
 
 The Compare specific content type between branches request returns all the differences of the specified content type between the two specified branches.
 
 ##### Compare Specific Global Fields between Branches
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the difference. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `content_type_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **base_branch** (optional)
+  The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default.
+  Default: `main`
+- **compare_branch** (required)
+  Enter the branch you want to compare with the base branch.
+  Default: `redesign`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| content_type_uid | content_type_uid | Enter the unique ID of the content type of which you want to retrieve the difference. The UID is generated based on the title of the content type. The unique ID |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
 
-| base_branch | main | The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default. |
-
-| compare_branch | redesign | Enter the branch you want to compare with the base branch. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -179,3 +187,4 @@ The Compare specific content type between branches request returns all the diffe
    }
 }
 ```
+

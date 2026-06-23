@@ -12,9 +12,7 @@ last_updated: 2023-03-30
 
 # Try 'Format' Parameter
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Let’s get started by using a single format parameter to understand how these parameters function.
 
@@ -33,3 +31,4 @@ query {
 ```
 
 This query will convert the current image format to a GIF format.
+

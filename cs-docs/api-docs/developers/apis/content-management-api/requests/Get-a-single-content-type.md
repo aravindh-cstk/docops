@@ -12,9 +12,7 @@ last_updated: 2025-01-08
 
 # Get a single content type
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}?version={content_type_version}`
+**GET** `/content_types/{content_type_uid}?version={content_type_version}`
 
 The Get a single content type call returns information of a specific content type.
 
@@ -30,28 +28,38 @@ To learn more about the queries, refer to the [Queries section of the Content De
 
 **Note**: Information about content types can be retrieved by all roles except for custom roles where access to certain or all content types is restricted.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the details. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `product`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | Your_Authtoken |  |
+- **version** (optional)
+  Enter the version of the content type of which you want to retrieve the details. If no version is specified, you will get the latest version of the content type.
+  Default: `1`
+- **include_global_field_schema** (optional)
+  Set this to 'true' to include in response the details of all the fields within the Global field's schema.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| content_type_uid | product | Enter the unique ID of the content type of which you want to retrieve the details. The UID is generated based on the title of the content type. The unique ID of |
-
-| version | 1 | Enter the version of the content type of which you want to retrieve the details. If no version is specified, you will get the latest version of the content type |
-
-| include_global_field_schema | true | Set this to 'true' to include in response the details of all the fields within the Global field's schema. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -482,3 +490,4 @@ To learn more about the queries, refer to the [Queries section of the Content De
 	}
 }
 ```
+

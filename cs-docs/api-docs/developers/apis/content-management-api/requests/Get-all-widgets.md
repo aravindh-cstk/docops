@@ -12,31 +12,34 @@ last_updated: 2024-04-25
 
 # Get all widgets
 
-
-**Method:** `GET`  
-**Endpoint:** `/extensions?query={"type":"widget"}`
+**GET** `/extensions?query={"type":"widget"}`
 
 The Get widgets request is used to get the information of all custom widgets created in a stack.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (required)
+  Parameter for custom widgets.
+  Default: `{"type":"widget"}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | Your_Authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| branch | main | Enter your branch unique ID. |
-
-| query | {"type":"widget"} | Parameter for custom widgets. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -94,3 +97,4 @@ To configure the permissions for your application via OAuth, please include the 
 	]
 }
 ```
+

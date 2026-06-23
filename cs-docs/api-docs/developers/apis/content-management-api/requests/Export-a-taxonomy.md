@@ -12,34 +12,43 @@ last_updated: 2025-11-13
 
 # Export a taxonomy
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/export`
+**GET** `/taxonomies/{taxonomy_uid}/export`
 
 The Export a taxonomy request is used to export a specific taxonomy and its terms. in JSON or CSV format.
 
 The exported file doesn't download automatically. You can use a REST API client such as Postman to manually download it.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to export. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **format** (optional)
+  Enter the file format for exporting the taxonomy. The default format is JSON.
+  Default: `json or csv`
+- **locale** (optional)
+  Exports the taxonomy in the specified locale. If not provided, the system uses the master locale by default (en-us).
+  Default: `es`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
 
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to export. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/ |
-
-| format | json or csv | Enter the file format for exporting the taxonomy. The default format is JSON. |
-
-| locale | es | Exports the taxonomy in the specified locale. If not provided, the system uses the master locale by default (en-us). |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -71,3 +80,4 @@ The exported file doesn't download automatically. You can use a REST API client 
     ]
 }
 ```
+

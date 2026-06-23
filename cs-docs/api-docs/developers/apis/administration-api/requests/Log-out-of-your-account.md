@@ -12,23 +12,20 @@ last_updated: 2026-04-07
 
 # Log out of your account
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/user-session`
+**DELETE** `/user-session`
 
 The Log out of your account call is used to sign out the user of Contentstack account.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **authtoken** (required)
+  Default: `your_authtoken`
 
-| authtoken | your_authtoken |  |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "You've logged out successfully!"
 }
 ```
+

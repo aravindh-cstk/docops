@@ -12,9 +12,7 @@ last_updated: 2023-03-28
 
 # Try 'Not In' Operator within Group
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Not In Operator within Group
 
@@ -40,3 +38,4 @@ query {
 ```
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Color’ fields.
+

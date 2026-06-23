@@ -12,30 +12,37 @@ last_updated: 2024-02-22
 
 # Get a single automation
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/automations/{automation_uid}?show_steps={boolean_value}`
+**GET** `/v1/projects/{project_uid}/automations/{automation_uid}?show_steps={boolean_value}`
 
 The Get a single automation request fetches a specific automation from a project in which it was created.
 
 To configure the permissions for your application via OAuth, include the automationhub.automations:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **automation_uid** (required)
+  Enter the Automation UID.
+  Default: `e82a0f19673b4a808cd39743b71ae624`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
+## Query Parameters
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+- **show_steps** (optional)
+  Set this to “true” to return all the steps, triggers associated with each automation in a project.
+  Default: `true`
 
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
+## Headers
 
-| automation_uid | e82a0f19673b4a808cd39743b71ae624 | Enter the Automation UID. |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
 
-| show_steps | true | Set this to “true” to return all the steps, triggers associated with each automation in a project. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -52,3 +59,4 @@ To configure the permissions for your application via OAuth, include the automat
     "updated_at": "2024-02-22T12:12:24.422Z"
 }
 ```
+

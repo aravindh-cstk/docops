@@ -12,31 +12,36 @@ last_updated: 2026-02-18
 
 # Delete asset sidebar extension
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/extensions/{asset_sidebar_extension_uid}`
+**DELETE** `/extensions/{asset_sidebar_extension_uid}`
 
 The Delete asset sidebar extension request allows you to delete a specific asset sidebar extension.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_sidebar_extension_uid** (required)
+  Enter the UID of the asset sidebar extension that you want to delete.
+  Default: `blt123ea123b123a123f`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| authorization | your_management_token | Enter your management token. |
-
-| branch | main | Enter your branch or alias unique ID. |
-
-| asset_sidebar_extension_uid | blt123ea123b123a123f | Enter the UID of the asset sidebar extension that you want to delete. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
     "notice": "Extension deleted successfully."
 }
 ```
+

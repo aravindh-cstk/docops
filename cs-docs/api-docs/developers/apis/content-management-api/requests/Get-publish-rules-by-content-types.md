@@ -12,37 +12,45 @@ last_updated: 2024-02-27
 
 # Get publish rules by content types
 
-
-**Method:** `GET`  
-**Endpoint:** `/workflows/content_type/{content_type_uid}?action=(publish/unpublish)&locale={locale_code}&environment={environment_uid}`
+**GET** `/workflows/content_type/{content_type_uid}?action=(publish/unpublish)&locale={locale_code}&environment={environment_uid}`
 
 The Get Publish Rules by Content Types request allows you to retrieve details of a Publish Rule applied to a specific content type of your stack.
 
 When executing the API request, in the 'Header' section, you need to provide the API Key of your stack and the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.management:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the UID of the content type of which you want to retrieve the Publishing Rule.
+  Default: `content_type_uid`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **action** (required)
+  Enter the action that has been set in the Publishing Rule.
+  Default: `publish/unpublish`
+- **locale** (optional)
+  Enter the code of the locale where your Publishing Rule will be applicable.
+  Default: `en-us`
+- **environment** (optional)
+  Enter the UID of the environment where your Publishing Rule will be applicable.
+  Default: `production`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Headers
 
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| content_type_uid | content_type_uid | Enter the UID of the content type of which you want to retrieve the Publishing Rule. |
-
-| action | publish/unpublish | Enter the action that has been set in the Publishing Rule. |
-
-| locale | en-us | Enter the code of the locale where your Publishing Rule will be applicable. |
-
-| environment | production | Enter the UID of the environment where your Publishing Rule will be applicable. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -76,3 +84,4 @@ To configure the permissions for your application via OAuth, please include the 
 	]
 }
 ```
+

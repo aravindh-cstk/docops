@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Get all apps details
 
-
-**Method:** `GET`  
-**Endpoint:** `/apps`
+**GET** `/apps`
 
 The **Get all app details** request is used to retrieve details of all the apps in a particular organization.
 
@@ -25,26 +23,29 @@ The **Get all app details** request is used to retrieve details of all the apps 
 - Stack Owners
 - Stack Admins
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **search** (optional)
+  Searches app details using its name and description.
+- **limit** (optional)
+  Sets response limit. Default: 50 Not greater than 50
+- **skip** (optional)
+  Skips the response by offset. Default value: 0
+- **order** (optional)
+  Defines the response order.  One of the below array:: [“asc“, “desc“, “ASC“, “DESC“ ]
+- **sort** (optional)
+  Sorts the response based on the passed option.  One of the below array:: [“name“, “updated_at“, “created_at“]
 
-| authtoken | your_authtoken | Enter your management token. |
+## Headers
 
-| organization_uid | your_organization_uid | The UID of the organization. |
+- **authtoken** (required)
+  Enter your management token.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  The UID of the organization.
+  Default: `your_organization_uid`
 
-| search |  | Searches app details using its name and description. |
-
-| limit |  | Sets response limit. Default: 50  Not greater than 50 |
-
-| skip |  | Skips the response by offset. Default value: 0 |
-
-| order |  | Defines the response order.   One of the below array::  [“asc“, “desc“, “ASC“, “DESC“ ] |
-
-| sort |  | Sorts the response based on the passed option.   One of the below array::  [“name“, “updated_at“, “created_at“] |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -189,3 +190,4 @@ The **Get all app details** request is used to retrieve details of all the apps 
     "count": 2
 }
 ```
+

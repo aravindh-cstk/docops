@@ -12,33 +12,40 @@ last_updated: 2024-03-21
 
 # Update a global field
 
-
-**Method:** `PUT`  
-**Endpoint:** `/global_fields/{global_field_uid}`
+**PUT** `/global_fields/{global_field_uid}`
 
 The Update a global field request allows you to update the schema of an existing global field.   
 To configure the permissions for your application via OAuth, please include the cm.global-fields.management:write scope.
 
 When executing the API call, in the 'URL Parameters' section, provide the unique ID of your global field.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **global_field_uid** (required)
+  Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global field. The unique ID of a global field is unique across a stack.
+  Default: `global_field_uid`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | Your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| global_field_uid | global_field_uid | Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global field. The unique ID of a global field is |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -69,7 +76,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
     }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -115,3 +122,4 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
     }
 }
 ```
+

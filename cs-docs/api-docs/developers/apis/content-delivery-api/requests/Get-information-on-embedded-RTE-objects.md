@@ -12,9 +12,7 @@ last_updated: 2024-06-21
 
 # Get information on embedded RTE objects
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?&locale={locale_code}&include_embedded_items[]=BASE`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}?&locale={locale_code}&include_embedded_items[]=BASE`
 
 The Get information on embedded RTE objects request returns comprehensive information on all entries and/or assets embedded within the Rich Text Editor field.
 
@@ -24,28 +22,40 @@ You can view information about the embedded objects under the _embedded_items pa
 
 **Note**: Contentstack’s [Content Delivery SDKs](/docs/developers/fetch-content#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the front end however required.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the entries. The content type UID is often based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you want to fetch.
+  Default: `blta250054cfa4f5aab`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **locale** (optional)
+  Enter the code of the language of which you want to include the entries.
+  Default: `en-us`
+- **include_embedded_items[]** (optional)
+  Enter ‘BASE’ to include entries and assets embedded inside the Rich Text Editor field.
+  Default: `BASE`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| content_type_uid | product | Enter the unique ID of the content type of which you want to retrieve the entries. The content type UID is often based on the title of the content type and it i |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| entry_uid | blta250054cfa4f5aab | Enter the unique ID of the entry that you want to fetch. |
-
-| locale | en-us | Enter the code of the language of which you want to include the entries. |
-
-| include_embedded_items[] | BASE | Enter ‘BASE’ to include entries and assets embedded inside the Rich Text Editor field. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -135,3 +145,4 @@ You can view information about the embedded objects under the _embedded_items pa
     }
 }
 ```
+

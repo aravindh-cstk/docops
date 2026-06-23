@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Update an app
 
-
-**Method:** `PUT`  
-**Endpoint:** `/apps/{app_uid}`
+**PUT** `/apps/{app_uid}`
 
 The **Update an app** request is used to update app details such as name, description, icon, etc.
 
@@ -25,18 +23,21 @@ The **Update an app** request is used to update app details such as name, descri
 - Stack Owners
 - Stack Admins
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **app_uid** (required)
+  The UID of the app to be updated.
 
-| authtoken | your_authtoken | Enter your management token. |
+## Headers
 
-| organization_uid | your_organization_uid | The UID of the organization. |
+- **authtoken** (required)
+  Enter your management token.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  The UID of the organization.
+  Default: `your_organization_uid`
 
-| app_uid |  | The UID of the app to be updated. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -113,3 +114,4 @@ The **Update an app** request is used to update app details such as name, descri
 	}
 }
 ```
+

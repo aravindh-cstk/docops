@@ -12,9 +12,7 @@ last_updated: 2024-04-17
 
 # Try 'Taxonomy Fields'
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Taxonomy Fields
 
@@ -37,3 +35,4 @@ query {
   }
 }
 ```
+

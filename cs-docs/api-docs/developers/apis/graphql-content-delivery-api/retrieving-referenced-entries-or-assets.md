@@ -96,13 +96,414 @@ The above query will paginate all the embedded entries and assets returned in th
 
 Let us fetch reference fields and assets while retrieving entries.
 
-## Related Pages
+## Include Single Content Type Reference Fields
 
-- [Include Single Content Type Reference Fields](https://www.contentstack.com/docs)
-- [Include Multi Content Type Reference Fields](https://www.contentstack.com/docs)
-- [Include Assets Added to a Content Type](https://www.contentstack.com/docs)
-- [Include Embedded RTE Items](https://www.contentstack.com/docs)
-- [Search within Referenced Entries from a Single Content Type](https://www.contentstack.com/docs)
-- [Search within Referenced Entries from Multiple Content Types](https://www.contentstack.com/docs)
-- [Get Entries by Referenced Asset](https://www.contentstack.com/docs)
-- [Nested Reference Filtering](https://www.contentstack.com/docs)
+### Try 'Include Single Content Type Reference Fields'
+
+**** `/stacks/apiKey/explore`
+
+Get entries of a content type along with the comprehensive details of the specified referenced entry. This query uses [relay specification](https://relay.dev/docs/guides/graphql-server-specification/) to retrieve the details of the entries referred in reference fields.
+
+**Note**: You can use the skip and limit parameters while querying [Reference](/docs/developers/create-content-types/reference) fields that refer to a single content type and have been marked as “Multiple”.
+
+If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](/docs/developers/create-content-types/reference-field-upgradation) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
+
+**Example**: In the **Product** content type, there is a reference field called **Categories**, which refers entries of another content type named **Category**.
+
+**Note**: When you query reference fields that refer to content types other than the first **100** available, the query will return an error in the response body of the GraphQL API request. If referenced entries are not published or have been deleted, then the query will return { edges: [] }.
+
+To fetch all entries of the “Product” content type along with the corresponding referenced entry from the “Category” content type, you can run the following query:
+
+```
+query {
+  all_product {
+    total
+    items {
+      title
+      categoriesConnection {
+        totalCount
+        edges {
+          node {
+           title
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+The totalCount field returns the number of referenced entries for a specific Reference field.
+
+**Note**: Contentstack’s GraphQL queries can fetch referenced entries up to **three** levels deep.
+
+
+
+
+## Include Multi Content Type Reference Fields
+
+### Try 'Include Multi Content Type Reference Fields'
+
+**** `/stacks/apiKey/explore`
+
+Get entries of a content type along with the comprehensive details of the specified referenced entries. This query uses inline fragments and relay specification to retrieve details of entries referring to multiple content types.
+
+**Note**: Contentstack’s GraphQL queries can fetch referenced entries up to three levels deep.
+
+Within the inline fragments section, you need to specify the name of the content type. Subsequently, you need to append the Connection term as postfix for the content type UID.
+
+```
+{reference_field_UID}Connection {
+        totalCount
+        edges {
+          node {
+            ... on {Referenced_Content_Type_Name_in_PascalCase} {
+              {field_name}
+            }
+          }
+        }
+      }
+```
+
+The node specifies the referenced content types related to the parent content type.
+
+**Example**: In the **Product** content type, we have a multi content type Reference field named **Frequently Bought Together**. This Reference field refers to entries of the following content types: **Electronics** and **Kitchen Appliances**.
+
+So, for instance, if you need to fetch referenced entries from both content types, **Electronics** and **Kitchen Appliances**, your query will look as follows:
+
+```
+query {
+  all_product {
+    items {
+      title
+      frequently_bought_togetherConnection {
+        edges {
+          node {
+            ... on KitchenAppliances {
+              title
+              kitchen_appliance_details
+            }
+            ... on Electronics {
+              title
+              appliance_details
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Note**: When you query reference fields that refer to content types other than the first **100** available, the response body will return an error. If referenced entries are not published or have been deleted, then the query will return { edges: [] }.
+
+
+
+
+## Include Assets Added to a Content Type
+
+### Try 'Include Assets Added to a Content Type'
+
+**** `/stacks/apiKey/explore`
+
+Get entries of a content type along with the comprehensive details of an asset that has been used in the entries. This query uses [relay specification](https://relay.dev/docs/guides/graphql-server-specification/) to fetch asset details such as the title of an asset or its URL.
+
+Specify the asset UID while retrieving the asset information. Subsequently, you need to append the Connection term to the asset UID as a postfix.
+
+**Note**: You can use the skip and limit pagination parameters only while querying assets that have been marked as “Multiple”.
+
+**Example**: In the **Product** content type, you need to retrieve all entries along with comprehensive details of the image stored within the **Images** field. To fetch only the first **five** assets while retrieving the entries, use the limit parameter.
+
+Your query will look as follows:
+
+```
+query {
+  all_product {
+    items {
+      title
+      imagesConnection(limit: 5) {
+        edges {
+          node {
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+The response body of this query will include details of the ‘Title’ field of the Product content type and the ‘Title’ and ‘Description’ of the assets stored in the Images field. It will only return the first five assets.
+
+
+
+
+## Include Embedded RTE Items
+
+### Include Embedded RTE Items
+
+**** `/stacks/apiKey/explore`
+
+Get entries of a content type along with the comprehensive details of the embedded entries and assets referenced inside the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor). This query uses inline fragments and relay specification to retrieve details of rich text editors that refer to multiple embedded items.
+
+**Note**: You cannot filter the GraphQL query response based on embedded items or references inside an embedded entry.
+
+You can specify the name of the content types to which the embedded entries belong under the embedded_itemsConnection field schema. To fetch embedded assets, provide the system-generated typename, SysAsset.
+
+```
+embedded_itemsConnection(skip: 1, limit: 3) {
+          edges {
+            node {
+              ... on KitchenAppliances {
+                title
+                kitchen_appliance_price_in_usd
+              }
+              ... on SysAsset {
+                title
+              }
+            }
+          }
+        }
+```
+
+Each node either specifies the referenced content type or the system-generated typename.
+
+**Example**: In the **Product** content type, we have a **Cart Items** JSON Rich Text Editor field. This field stores information about products that you have already added to your cart (electronic appliances in this example), and also contains a company logo.
+
+If, for instance, you want to retrieve the embedded product details inside this field (along with the company logo), your query will look as follows:
+
+```
+query {
+  all_product {
+    total
+    items {
+      title
+      url
+      cart_items {
+        embedded_itemsConnection(skip: 1, limit: 3) {
+          edges {
+            node {
+              ... on Electronics {
+                title
+                appliance_price_in_usd
+                appliance_details
+              }
+              ... on SysAsset {
+                title
+                file_size
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Note**: You can retrieve a maximum of **100** embedded items (entries or assets) in a single GraphQL API request.
+
+
+
+
+## Search within Referenced Entries from a Single Content Type
+
+### Try 'Search Referenced Entries from a Single Content Type'
+
+**** `/stacks/apiKey/explore`
+
+Get entries having values based on referenced fields. This query retrieves all entries that satisfy query conditions made on referenced fields that refer to a single content type.
+
+**Note**: If your stack was created after **29th July, 2019**, then you will automatically be using the [upgraded Reference field](/docs/developers/create-content-types/reference-field-upgradation) that refers to multiple content types. However, for older stacks with single content type referencing fields, you can still query the traditional Reference fields using relay specification logic.
+
+Let us use the equals operator to search based on the **Title** field of the referenced content type, **Category**.
+
+**Example**: In the Product content type, if you wish to retrieve all entries that have their category title set to ‘Mobiles’, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      categories: {
+        title: "Mobiles"
+      }
+    }) {
+    total
+    items {
+      title
+      categoriesConnection {
+        edges {
+          node {
+            title
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+The response body will include all entries of the Product content type that satisfy the query, and will include details of just the ‘Title’ field of the Category content type. Similarly, all the query operators listed in this guide can be applied to search based on the values of referenced fields.
+
+**Note**: Only up to **three** levels deep of referenced fields can be used within the where argument to filter the requested entries.
+
+
+
+
+## Search within Referenced Entries from Multiple Content Types
+
+### Try 'Search Referenced Entries from Multiple Content Types'
+
+**** `/stacks/apiKey/explore`
+
+Get entries having values based on referenced fields. This query uses [inline fragments](https://graphql.org/learn/queries/#inline-fragments) to retrieve all entries that satisfy query conditions made on referenced fields that refer to multiple content types.
+
+**Example**: In the **Product** content type, we have a multi content type Reference field named **Frequently Bought Together**. This Reference field refers to entries of the following content types: **Electronics** and **Kitchen Appliances**.
+
+Let us use the **MATCH** operator to search entries of the two referenced content types: **Electronics** and **Kitchen****Appliances** on the basis of their **Title** field. The “Match” operator filters the entries to return only the entries that match the specified condition(s). You can enter the following values for the Match operator:
+
+- ALL: The ALL option returns only those entries that match all the conditions specified
+- ANY: The ANY option returns only those entries that match any one of the conditions specified
+
+If you do not specify the MATCH operator, then the query uses the ALL option by default.
+
+To fetch the referenced entries where the value of the **Title** field is one among the following: **Sony Bravia LED Smart TV** and **Glenmark Cooktop**, set the MATCH operator to ANY. Your query will appear as follows:
+
+```
+query {
+  all_product(
+    where: {
+      frequently_bought_together: {
+        MATCH: ANY,
+        electronics: {
+          title: "Sony Bravia LED Smart TV"
+        },
+        kitchen_appliances: {
+          title: "Glenmark Cooktop"
+        }
+      }
+    }) {
+    items {
+      title
+      frequently_bought_togetherConnection {
+        edges {
+          node {
+            ... on KitchenAppliances {
+              title
+              kitchen_appliance_details
+            }
+            ... on Electronics {
+              title
+              appliance_details
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+The response body will include all entries of the Electronics and Kitchen Appliances content types that satisfy the query, and will include details of just the “Title” field of these content types. Similarly, all the query operators listed in this guide can be applied to search based on the values of referenced fields.
+
+**Note**: Only up to **three** levels deep of referenced fields can be used within the where argument to filter the requested entries.
+
+
+
+
+## Get Entries by Referenced Asset
+
+### Get Entries by Referenced Asset
+
+**** `/stacks/apiKey/explore`
+
+Get entries by using asset data to query a content type.
+
+**Example**: In the **Product** content type, if you wish to retrieve all referenced entries that have an image stored by the name **in-galaxy-note-5-n9208-sm-n9208zdvins-000000003-back-gold.jpg** within the **Images** field, your query will look as follows:
+
+```
+query {
+  all_product(
+    where: {
+      images: {
+        title: "in-galaxy-note-5-n9208-sm-n9208zdvins-000000003-back-gold.jpg"
+      }
+    }) {
+    total
+    items {
+      title
+      categoriesConnection {
+        edges {
+          node {
+            ...on Category {
+              title
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the 'Title' field of the **Category** content type.
+
+**Note**: You cannot query content types based on the URL field of an asset.
+
+
+
+
+## Nested Reference Filtering
+
+### Nested Reference Filtering
+
+**** `/stacks/apiKey/explore`
+
+Nested reference filtering allows you to filter referenced entries within a reference field, returning relevant entries matching specific criteria. This feature does not affect the parent or child documents, making it easier to retrieve only the necessary data.
+
+**Note**: This is a plan-based feature, reach out to our [support](mailto:support@contentstack.com) team to enable this feature for your organization.
+
+Consider a **Product**content type with a reference field named **Categories**, which refers to entries from another content type named **Category**.
+
+You can use nested reference filtering to retrieve specific referenced entries based on certain conditions, such as:
+
+- Fetch all Product entries where the referenced Category entries title matches Electronics.
+- Further refine the referenced Category entries to include only those where the cost is $20 and above.
+
+```
+{
+    all_product(
+        where: {
+            reference: {
+                categories: {
+                    section: "Electronics"
+                }
+            }
+        }
+    ) {
+        items {
+            title
+            categoriesConnection(
+              where: { 
+                cost_gte: 20
+              }
+            ) {
+                edges {
+                    node {
+                        ... on Category {
+                           title
+				section
+				cost
+                                description
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+**Note**: Nested reference filtering does not support **File**, **Reference**, or **JSON RTE** fields.
+

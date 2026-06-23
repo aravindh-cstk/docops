@@ -12,9 +12,7 @@ last_updated: 2024-09-18
 
 # Subscription Usage
 
-
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/subscription?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
+**GET** `/analytics/v2/subscription?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
 
 The Subscription Usage request returns the total number of projects, environments, and domains under Launch within your organization till date. To get the details for CMS and Automate, you can use the [Usage Analytics](/docs/developers/apis/analytics-api#usage-analytics) request.
 
@@ -46,20 +44,25 @@ The response body provides an overview of the resources in the Launch section wi
 
 This response gives a clear view of how Launch resources are utilized within the specified date range.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -67,3 +70,4 @@ This response gives a clear view of how Launch resources are utilized within the
     "paginated": false
 }
 ```
+

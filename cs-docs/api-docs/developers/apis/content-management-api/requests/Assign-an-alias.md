@@ -12,28 +12,31 @@ last_updated: 2023-04-27
 
 # Assign an alias
 
-
-**Method:** `PUT`  
-**Endpoint:** `/stacks/branch_aliases/{branch_alias_uid}`
+**PUT** `/stacks/branch_aliases/{branch_alias_uid}`
 
 The Assign an alias request creates a new alias in a particular stack of your organization. This alias can point to any existing branch (target branch) of your stack.
 
 **Note:** Only stack owners, admins, and developers can assign a new alias to a branch. You must only use the authtoken to assign an alias.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **branch_alias_uid** (required)
+  Enter the unique ID of the alias you want to assign or update. The UID of an alias is unique across a stack. Execute the [Get all aliases](#get-all-aliases) call to retrieve the UID of an alias.
+  Default: `your_branch_alias_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
 
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-
-| branch_alias_uid | your_branch_alias_uid | Enter the unique ID of the alias you want to assign or update. The UID of an alias is unique across a stack. Execute the [Get all aliases](#get-all-aliases) cal |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -43,7 +46,7 @@ The Assign an alias request creates a new alias in a particular stack of your or
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -60,3 +63,4 @@ The Assign an alias request creates a new alias in a particular stack of your or
     }
 }
 ```
+

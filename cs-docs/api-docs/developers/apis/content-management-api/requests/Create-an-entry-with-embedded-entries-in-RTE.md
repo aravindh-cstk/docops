@@ -12,9 +12,7 @@ last_updated: 2025-07-01
 
 # Create an entry with embedded entries in RTE
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries?locale={locale_code}`
 
 The Create an entry with embedded RTE entries request allows you to embed entries inside the Rich Text Editor field while creating a new entry for the selected content type.
 
@@ -54,28 +52,40 @@ The above Rich Text Editor contains entries embedded as a separate content block
 
 **Note**: Contentstack’s [SDKs](/docs/developers/#platforms-and-sdks) help consume the response returned when you create an entry containing embedded objects. You can then decide what content (fields of the embedded entry, for instance) should be rendered on the frontend.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type for which you want to create an entry. The uid is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale_code** (optional)
+  Enter the code of the language in the which you want to create the entry.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type for which you want to create an entry. The uid is generated based on the title of the content type. The unique ID of a c |
-
-| locale_code | en-us | Enter the code of the language in the which you want to create the entry. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -88,7 +98,7 @@ The above Rich Text Editor contains entries embedded as a separate content block
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -110,3 +120,4 @@ The above Rich Text Editor contains entries embedded as a separate content block
 	}
 }
 ```
+

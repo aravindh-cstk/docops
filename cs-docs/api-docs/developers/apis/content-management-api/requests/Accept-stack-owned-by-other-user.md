@@ -12,9 +12,7 @@ last_updated: 2023-05-26
 
 # Accept stack owned by other user
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/accept_ownership/{ownership_token}?api_key={api_key}&uid={user_uid}`
+**GET** `/stacks/accept_ownership/{ownership_token}?api_key={api_key}&uid={user_uid}`
 
 The Accept stack owned by other user call allows a user to accept the ownership of a particular stack via an email invitation.
 
@@ -24,21 +22,26 @@ Once the user accepts the invitation by clicking on the link, the ownership is t
 
 When executing the API call, in the 'URL Parameters' section, you need to provide the ownership token and the user uid that you received in the invitation mail.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **ownership_token** (required)
+  Enter the ownership token received via email by another user.
+  Default: `blt2add6864996aa9f2`
 
-| ownership_token | blt2add6864996aa9f2 | Enter the ownership token received via email by another user. |
+## Query Parameters
 
-| api_key | blt9f902ab2842258eb | Enter the stack API key. |
+- **api_key** (required)
+  Enter the stack API key.
+  Default: `blt9f902ab2842258eb`
+- **uid** (required)
+  Enter the user uid.
+  Default: `Enter_your_user_uid`
 
-| uid | Enter_your_user_uid | Enter the user uid. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Ownership transferred successfully."
 }
 ```
+

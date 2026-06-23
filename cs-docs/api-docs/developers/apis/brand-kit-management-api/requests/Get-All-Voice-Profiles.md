@@ -12,42 +12,55 @@ last_updated: 2025-11-21
 
 # Get All Voice Profiles
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/voice-profiles?skip={index}&limit={limit}&include_users={boolean}&include_count={boolean}&typeahead={string}&sort={string}&order={string}`
+**GET** `/v1/brand-kits/{brand_kit_uid}/voice-profiles?skip={index}&limit={limit}&include_users={boolean}&include_count={boolean}&typeahead={string}&sort={string}&order={string}`
 
 The Get All Voice Profiles request fetches the list of all Voice Profiles in a Brand Kit within an organization.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter the authtoken. |
+- **skip** (optional)
+  Enter the number of Voice Profiles to be skipped from the response body.
+  Default: `0`
+- **limit** (optional)
+  Enter the maximum number of Voice Profiles to be returned.
+  Default: `2`
+- **include_users** (optional)
+  The “include_users” parameter allows you to fetch users information.
+  Default: `true`
+- **include_count** (optional)
+  The “include_count” parameter allows you to fetch the total count of the stacks owned by or shared with a user account.
+  Default: `true`
+- **typeahead** (optional)
+  The “typeahead” parameter retrieves responses that match the provided string.
+  Default: `sample`
+- **sort** (optional)
+  Enter the value on the basis of which you want to sort your Voice Profiles. The voice profiles can be sorted by created_at, updated_at, and name values. The default value is updated_at.
+  Default: `created_at`
+- **order** (optional)
+  Specify how you want to order your Voice Profiles; asc for ascending order and desc for descending order. The default value is desc.
+  Default: `asc`
 
-| authorization | [Bearer <OAuth token>]   | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication). |
+## Headers
 
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]  `
 
-| skip | 0 | Enter the number of Voice Profiles to be skipped from the response body. |
-
-| limit | 2 | Enter the maximum number of Voice Profiles to be returned. |
-
-| include_users | true | The “include_users” parameter allows you to fetch users information. |
-
-| include_count | true | The “include_count” parameter allows you to fetch the total count of the stacks owned by or shared with a user account. |
-
-| typeahead | sample | The “typeahead” parameter retrieves responses that match the provided string. |
-
-| sort | created_at | Enter the value on the basis of which you want to sort your Voice Profiles. The voice profiles can be sorted by created_at, updated_at, and name values. The def |
-
-| order | asc | Specify how you want to order your Voice Profiles; asc for ascending order and desc for descending order. The default value is desc. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -70,3 +83,4 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
     }
 }
 ```
+

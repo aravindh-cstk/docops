@@ -12,9 +12,7 @@ last_updated: 2023-04-27
 
 # Delete an alias
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/stacks/branch_aliases/{branch_alias_uid}?force={boolean_value}`
+**DELETE** `/stacks/branch_aliases/{branch_alias_uid}?force={boolean_value}`
 
 The Delete an alias request deletes an existing alias.
 
@@ -24,23 +22,32 @@ When executing the API call, in the “URL Parameters” section, provide the UI
 
 **Note**: You must only use the authtoken to delete an alias.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **branch_alias_uid** (required)
+  Enter the unique ID of the alias that you want to delete. The UID of an alias is unique across a stack. Execute the [Get all aliases](#get-all-aliases) call to retrieve the UID of an alias.
+  Default: `your_branch_alias_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **force** (required)
+  Enter 'true' to force delete an alias.
+  Default: `true`
 
-| branch_alias_uid | your_branch_alias_uid | Enter the unique ID of the alias that you want to delete. The UID of an alias is unique across a stack. Execute the [Get all aliases](#get-all-aliases) call to  |
+## Headers
 
-| force | true | Enter 'true' to force delete an alias. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
     "notice": "Branch alias deleted successfully."
 }
 ```
+

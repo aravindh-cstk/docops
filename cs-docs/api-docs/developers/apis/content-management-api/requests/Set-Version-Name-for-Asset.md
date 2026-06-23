@@ -12,9 +12,7 @@ last_updated: 2025-07-01
 
 # Set Version Name for Asset
 
-
-**Method:** `POST`  
-**Endpoint:** `/assets/{asset_uid}/versions/{version_number}/name`
+**POST** `/assets/{asset_uid}/versions/{version_number}/name`
 
 The Set Version Name for Asset request allows you to assign a name to a specific version of an asset.
 
@@ -24,26 +22,32 @@ To configure the permissions for your application via OAuth, please include the 
 
 ##### Get Details of All Versions of an Asset
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_uid** (required)
+  Enter the UID of the asset of which you want to assign a name to a specific asset version.
+  Default: `blt04d762f8af902c97`
+- **version_number** (required)
+  Enter the version number of the asset version that you want to assign a name to.
+  Default: `2`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | Your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| asset_uid | blt04d762f8af902c97 | Enter the UID of the asset of which you want to assign a name to a specific asset version. |
-
-| version_number | 2 | Enter the version number of the asset version that you want to assign a name to. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -53,10 +57,11 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
 	"notice": "Version name assigned successfully."
 }
 ```
+

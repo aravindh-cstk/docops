@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Get OAuth configuration of an app
 
-
-**Method:** `GET`  
-**Endpoint:** `/apps/{app_uid}/oauth`
+**GET** `/apps/{app_uid}/oauth`
 
 The **Get OAuth configuration of an app** request is used to retrieve the OAuth details of an app.
 
@@ -25,18 +23,21 @@ The **Get OAuth configuration of an app** request is used to retrieve the OAuth 
 - Stack Owners
 - Stack Admins
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **app_uid** (required)
+  The UID of the app to be updated.
 
-| authtoken | your_authtoken | Enter your management token. |
+## Headers
 
-| organization_uid | your_organization_uid | The UID of the organization. |
+- **authtoken** (required)
+  Enter your management token.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  The UID of the organization.
+  Default: `your_organization_uid`
 
-| app_uid |  | The UID of the app to be updated. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -62,3 +63,4 @@ The **Get OAuth configuration of an app** request is used to retrieve the OAuth 
     }
 }
 ```
+

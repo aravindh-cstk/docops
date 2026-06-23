@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Request/Accept/Reject Entry Publish Request
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/workflow?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/workflow?locale={locale_code}`
 
 This multipurpose request allows you to either send a publish request or accept/reject a received publish request.
 
@@ -22,24 +20,31 @@ When executing the API request, in the 'Header' section, you need to provide the
 
 In the 'Body' section, you need to provide the details of the publish rule, such as its UID, action (‘publish’, ‘unpublish’, or ’both’), status (this could be ‘0’ for Approval Requested, ‘1’ for ‘Approval Accepted’, and ‘-1’ for ‘Approval Rejected’), notification setting, and comment for the approver.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type to which the entry belongs.
+  Default: `content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry on which the Publishing Rule is applicable.
+  Default: `entry_uid`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | your_authtoken |  |
+- **locale** (optional)
+  Enter the code of the locale that the entry belongs to.
+  Default: `en-us`
 
-| Content-Type | application/json |  |
+## Headers
 
-| content_type_uid | content_type_uid | Enter the unique ID of the content type to which the entry belongs. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| entry_uid | entry_uid | Enter the unique ID of the entry on which the Publishing Rule is applicable. |
-
-| locale | en-us | Enter the code of the locale that the entry belongs to. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -55,7 +60,7 @@ In the 'Body' section, you need to provide the details of the publish rule, such
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 [{
@@ -69,3 +74,4 @@ In the 'Body' section, you need to provide the details of the publish rule, such
 	}
 ]
 ```
+

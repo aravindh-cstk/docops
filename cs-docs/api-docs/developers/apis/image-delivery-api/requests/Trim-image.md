@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Trim image
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&trim={top_value},{right_value},{bottom_value},{left_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&trim={top_value},{right_value},{bottom_value},{left_value}`
 
 **Additional Notes**
   
@@ -22,11 +20,12 @@ last_updated: 2025-08-28
 - CSS style shorthand values are also acceptable.
 - Check out the limitations that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **trim** (optional)
+  Enter value for top, right, bottom, and left edges that needs to be trimmed.
+  Default: `25,50,75,100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| trim | 25,50,75,100 | Enter value for top, right, bottom, and left edges that needs to be trimmed. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

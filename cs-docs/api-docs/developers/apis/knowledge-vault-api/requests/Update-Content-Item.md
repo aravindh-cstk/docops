@@ -12,28 +12,31 @@ last_updated: 2025-12-12
 
 # Update Content Item
 
-
-**Method:** `PUT`  
-**Endpoint:** `/v1/knowledge-vault/{content_uid}`
+**PUT** `/v1/knowledge-vault/{content_uid}`
 
 The Update Content request lets you update a specific content stored in the Knowledge Vault.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_uid** (optional)
+  Enter the Content UID.
+  Default: `your_content_uid`
 
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
+## Headers
 
-| authtoken | your_authtoken | Enter the authtoken. |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Default: `[Bearer <OAuth token>]`
 
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication). |
-
-| content_uid | your_content_uid | Enter the Content UID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -44,7 +47,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -58,3 +61,4 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
     }
 }
 ```
+

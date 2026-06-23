@@ -12,9 +12,7 @@ last_updated: 2025-07-15
 
 # Below Operator
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"taxonomies.taxonomy_uid" : { "$below": "term_uid", "levels" : 2}}`
+**GET** `/taxonomies/entries?query={"taxonomies.taxonomy_uid" : { "$below": "term_uid", "levels" : 2}}`
 
 Get all entries for a specific taxonomy that match all of their descendant terms by specifying only the target term and a specific level.
 
@@ -36,18 +34,22 @@ query={
 
 ##### Equal and Above Operator
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (required)
+  Provide a custom query in the string format.
+  Default: `{"taxonomies.color" : { "$below": "blue" }}`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
 
-| query | {"taxonomies.color" : { "$below": "blue" }} | Provide a custom query in the string format. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -200,3 +202,4 @@ query={
     ]
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-02-22
 
 # Get audit log
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/audit-logs?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
+**GET** `/v1/projects/{project_uid}/audit-logs?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
 
 The Get audit log request returns the audit log of a specific project.
 
@@ -22,28 +20,40 @@ To configure the permissions for your application via OAuth, include the automat
 
 **Note:** If you do not specify a value for the optional “limit” query parameter, the API request will by default return the initial 30 items.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
+## Query Parameters
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+- **limit** (optional)
+  The “limit” parameter will return a specific number of audit log (in between 0-100) in your response based on the value you provide. If there are 100 audit log and you want to fetch only 30 audit log, set the limit as 30.
+  Default: `30`
+- **skip** (optional)
+  The “skip” parameter will skip a specific number of audit log and return the remaining ones in your response based on the value you provide.  If there are 12 audit log and you want to exclude the first 2 audit log, set this to 2 to fetch the remaining 10 audit log.
+  Default: `2`
+- **asc** (optional)
+  The “asc” parameter allows you to sort the list of audit log in the ascending order with respect to the value of a specific field. The audit log can be sorted only by _created_at_value.
+  Default: `created_at`
+- **desc** (optional)
+  The “desc” parameter allows you to sort the list of audit log in the descending order with respect to the value of a specific field. The audit log can be sorted only by _created_at_value.
+  Default: `created_at`
+- **include_count** (optional)
+  Set this to “true” to include the total number (count) of audit log in an organization.
+  Default: `true`
 
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
+## Headers
 
-| limit | 30 | The “limit” parameter will return a specific number of audit log (in between 0-100) in your response based on the value you provide. If there are 100 audit log  |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
 
-| skip | 2 | The “skip” parameter will skip a specific number of audit log and return the remaining ones in your response based on the value you provide.  If there are 12 au |
-
-| asc | created_at | The “asc” parameter allows you to sort the list of audit log in the ascending order with respect to the value of a specific field. The audit log can be sorted o |
-
-| desc | created_at | The “desc” parameter allows you to sort the list of audit log in the descending order with respect to the value of a specific field. The audit log can be sorted |
-
-| include_count | true | Set this to “true” to include the total number (count) of audit log in an organization. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -489,3 +499,4 @@ To configure the permissions for your application via OAuth, include the automat
     ]
 }
 ```
+

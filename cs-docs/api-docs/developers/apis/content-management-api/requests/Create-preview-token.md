@@ -12,28 +12,32 @@ last_updated: 2024-02-02
 
 # Create preview token
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/delivery_tokens/{delivery_token_uid}/preview_token`
+**POST** `/stacks/delivery_tokens/{delivery_token_uid}/preview_token`
 
 The Create preview token request creates a Preview token for a particular Delivery token in a stack of your organization.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **delivery_token_uid** (required)
+  Enter the UID of the delivery token for which you want to delete the preview token.
+  Default: `your_delivery_token_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (optional)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| delivery_token_uid | your_delivery_token_uid | Enter the UID of the delivery token for which you want to delete the preview token. |
-
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -83,3 +87,4 @@ The Create preview token request creates a Preview token for a particular Delive
     }
 }
 ```
+

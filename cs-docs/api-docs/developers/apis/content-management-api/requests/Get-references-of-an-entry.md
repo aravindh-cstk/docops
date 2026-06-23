@@ -12,9 +12,7 @@ last_updated: 2025-06-10
 
 # Get references of an entry
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/references`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}/references`
 
 The Get references of an entry request retrieves a list of entries and content types that reference the specified entry.
 
@@ -31,36 +29,52 @@ To include publish-related metadata for the referenced entry, set the include_pu
 - version: Version number that was published
 - version_name: Metadata about the published version, including title, updated_by, and updated_at
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry to find where it is referenced across entries and content types.
+  Default: `blt**************ba`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Query Parameters
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total number of versions of the specified entry.
+  Default: `true`
+- **locale** (optional)
+  Enter the locale of the entry. If not provided it uses the master_locale of stack.
+  Default: `en-us`
+- **deleted** (optional)
+  Set this parameter to 'true' to include in response the timestamps for when each version was updated.
+  Default: `true`
+- **include_branch** (optional)
+  Set this parameter to 'true' to include the _branch top-level key in the response.
+  Default: `true`
+- **include_publish_details** (optional)
+  Set this parameter to 'true' to include publish-related metadata for each referenced entry in the response.
+  Default: `true`
 
-| api_key | your_api_key | Enter the API key of your stack. |
+## Headers
 
-| Content-Type | application/json | Pass application/json value. |
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type. |
-
-| entry_uid | blt**************ba | Enter the unique ID of the entry to find where it is referenced across entries and content types. |
-
-| include_count | true | Set this parameter to 'true' to include in response the total number of versions of the specified entry. |
-
-| locale | en-us | Enter the locale of the entry. If not provided it uses the master_locale of stack. |
-
-| deleted | true | Set this parameter to 'true' to include in response the timestamps for when each version was updated. |
-
-| include_branch | true | Set this parameter to 'true' to include the _branch top-level key in the response. |
-
-| include_publish_details | true | Set this parameter to 'true' to include publish-related metadata for each referenced entry in the response. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -96,3 +110,4 @@ To include publish-related metadata for the referenced entry, set the include_pu
   "count": 1
 }
 ```
+

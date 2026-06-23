@@ -12,9 +12,7 @@ last_updated: 2024-02-13
 
 # Update a stack role mapping
 
-
-**Method:** `POST`  
-**Endpoint:** `/organizations/{organization_uid}/teams/{team_uid}/stack_role_mappings/{stack_api_key}`
+**POST** `/organizations/{organization_uid}/teams/{team_uid}/stack_role_mappings/{stack_api_key}`
 
 The Update a stack role mapping request allows you to update the stack roles for a specific stack in your organization. You need to pass the role UIDs in the request body as follows:
 
@@ -28,22 +26,28 @@ The Update a stack role mapping request allows you to update the stack roles for
 
 ##### Remove a stack role mapping
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **team_uid** (required)
+  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Default: `team_uid`
+- **stack_api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| organization_uid | your_organization_uid | Enter the UID of your Organization. |
-
-| team_uid | team_uid | Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/ |
-
-| stack_api_key | your_stack_api_key | Enter the API key of the stack. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -54,7 +58,7 @@ The Update a stack role mapping request allows you to update the stack roles for
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -67,3 +71,4 @@ The Update a stack role mapping request allows you to update the stack roles for
     }
 }
 ```
+

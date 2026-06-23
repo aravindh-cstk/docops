@@ -12,9 +12,7 @@ last_updated: 2024-10-08
 
 # Exclude operator
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale}&except[BASE][]=field_UID`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale}&except[BASE][]=field_UID`
 
 The except[][] parameter will exclude the data of the specified fields for each entry and will include the data of the rest of the fields. There are two approaches to this parameter. Firstly, we have the except[BASE][] parameter, where 'BASE' is the default value and refers to the top-level fields of the schema. Secondly, we have the except[Reference_field_uid][] parameter, where you need to enter the UID of the reference field in place of Reference_field_uid.This query will work for entries only.
 
@@ -28,26 +26,37 @@ https://cdn.contentstack.io/v3/content_types/author/entries?environment=producti
 
 ##### Exclude Operator Within Group
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **except[BASE][]** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `price_in_usd`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed. |
-
-| except[BASE][] | price_in_usd | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -1121,3 +1130,4 @@ https://cdn.contentstack.io/v3/content_types/author/entries?environment=producti
   ]
 }
 ```
+

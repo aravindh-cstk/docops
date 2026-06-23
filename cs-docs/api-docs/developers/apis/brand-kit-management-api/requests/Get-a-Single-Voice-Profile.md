@@ -12,32 +12,40 @@ last_updated: 2025-11-21
 
 # Get a Single Voice Profile
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/voice-profiles/{voice_profile_uid}?include_users={boolean}`
+**GET** `/v1/brand-kits/{brand_kit_uid}/voice-profiles/{voice_profile_uid}?include_users={boolean}`
 
 The Get a Single Voice Profile request fetches the specific Voice Profile from a Brand Kit in an organization.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
+- **voice_profile_uid** (required)
+  Enter the Voice Profile UID.
+  Default: `your_voice_profile_uid`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter the authtoken. |
+- **include_users** (optional)
+  The “include_users” parameter allows you to fetch users information.
+  Default: `true`
 
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication). |
+## Headers
 
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
 
-| voice_profile_uid | your_voice_profile_uid | Enter the Voice Profile UID. |
-
-| include_users | true | The “include_users” parameter allows you to fetch users information. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -60,3 +68,4 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
     }
 }
 ```
+

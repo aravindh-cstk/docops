@@ -12,9 +12,7 @@ last_updated: 2026-01-13
 
 # Create a Space
 
-
-**Method:** `POST`  
-**Endpoint:** `/v4/spaces`
+**POST** `/v4/spaces`
 
 The Create a space request allows you to create a new space within Asset Management.
 
@@ -32,20 +30,22 @@ Sample request body:
 }
 ```
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **x-cs-api-version** (required)
+  Pass the API version to be used for the request.
+  Default: `4`
+- **organization_uid** (required)
+  Enter your organization UID.
+  Default: `your_organization_uid`
+- **access_token** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **content-type** (required)
+  Pass application/json value.
+  Default: `application/json`
 
-| x-cs-api-version | 4 | Pass the API version to be used for the request. |
-
-| organization_uid | your_organization_uid | Enter your organization UID. |
-
-| access_token | your_authtoken | Enter your authtoken. |
-
-| content-type | application/json | Pass application/json value. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -54,7 +54,7 @@ Sample request body:
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -91,3 +91,4 @@ Sample request body:
     }
 }
 ```
+

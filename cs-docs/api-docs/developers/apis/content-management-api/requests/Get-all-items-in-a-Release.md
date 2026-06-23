@@ -12,9 +12,7 @@ last_updated: 2026-01-06
 
 # Get all items in a Release
 
-
-**Method:** `GET`  
-**Endpoint:** `/releases/{release_uid}/items`
+**GET** `/releases/{release_uid}/items`
 
 The Get all items in a Release request retrieves a list of all items (entries and assets) that are part of a specific Release.
 
@@ -22,26 +20,37 @@ When executing the API request, you need to provide the Release UID.
 
 To configure the permissions for your application via OAuth, please include the cm.release:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **release_uid** (required)
+  Enter the unique ID of the release of which you want to retrieve the items.
+  Default: `blt719af000dcde0000`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| release_version | 2.0 | Enter the release version. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| authorization | your_management_token | Enter your management token. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release of which you want to retrieve the items. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -73,3 +82,4 @@ To configure the permissions for your application via OAuth, please include the 
     ]
 }
 ```
+

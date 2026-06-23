@@ -12,30 +12,35 @@ last_updated: 2025-07-18
 
 # Get all asset sidebar extensions
 
-
-**Method:** `GET`  
-**Endpoint:** `/extensions?query={"type":"asset_sidebar_widget"}`
+**GET** `/extensions?query={"type":"asset_sidebar_widget"}`
 
 The Get all asset sidebar extensions request is used to get the information of all the asset sidebar extensions created in a stack.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (required)
+  Pass the query to retrieve all  asset sidebar extensions.
+  Default: `{"type":"asset_sidebar_widget"}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| authorization | your_management_token | Enter your management token. |
-
-| branch | main | Enter your branch or alias unique ID. |
-
-| query | {"type":"asset_sidebar_widget"} | Pass the query to retrieve all  asset sidebar extensions. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -87,3 +92,4 @@ The Get all asset sidebar extensions request is used to get the information of a
   ]
 }
 ```
+

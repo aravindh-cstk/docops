@@ -12,9 +12,7 @@ last_updated: 2023-12-15
 
 # Delete a term
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+**DELETE** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Delete a term request deletes an existing term and all the child terms within it.
 
@@ -24,17 +22,27 @@ To confirm the deletion of a term, you need to specify the force=true query para
 
 ##### Get all terms across all taxonomies
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy which you want to delete. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
+- **term_uid** (required)
+  Enter the unique ID of the term of which you want to delete. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `term_a`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **force** (required)
+  Enter 'true' to force delete a term.
+  Default: `false`
 
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy which you want to delete. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonom |
+## Headers
 
-| term_uid | term_a | Enter the unique ID of the term of which you want to delete. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxono |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| force | false | Enter 'true' to force delete a term. |

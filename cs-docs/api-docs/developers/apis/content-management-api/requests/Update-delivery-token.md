@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Update delivery token
 
-
-**Method:** `PUT`  
-**Endpoint:** `/stacks/delivery_tokens/{token_uid}`
+**PUT** `/stacks/delivery_tokens/{token_uid}`
 
 The Update delivery token request lets you update the details of a delivery token.
 
@@ -46,20 +44,22 @@ the branch and alias scope for your delivery token through the following schema 
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **token_uid** (required)
+  Enter the UID of the token that you want to update.
+  Default: `blt12312ecd31a2ccd123`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | Your_Authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| Content-Type | application/json |  |
-
-| token_uid | blt12312ecd31a2ccd123 | Enter the UID of the token that you want to update. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -100,7 +100,7 @@ the branch and alias scope for your delivery token through the following schema 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -181,3 +181,4 @@ the branch and alias scope for your delivery token through the following schema 
     ]
 }
 ```
+

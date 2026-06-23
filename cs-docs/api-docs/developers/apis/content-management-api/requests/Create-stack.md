@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Create stack
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks`
+**POST** `/stacks`
 
 The Create stack call creates a new stack in your Contentstack account.
 
@@ -22,18 +20,17 @@ In the 'Body' section, provide the schema of the stack in JSON format.
 
 **Note**: At any given point of time, an organization can create only one stack per minute.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **organization_uid** (required)
+  Enter the uid of your organization.
+  Default: `Your_Organization_uid`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| authtoken | Your_Authtoken |  |
-
-| organization_uid | Your_Organization_uid | Enter the uid of your organization. |
-
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -45,7 +42,7 @@ In the 'Body' section, provide the schema of the stack in JSON format.
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -103,3 +100,4 @@ In the 'Body' section, provide the schema of the stack in JSON format.
   }
 }
 ```
+

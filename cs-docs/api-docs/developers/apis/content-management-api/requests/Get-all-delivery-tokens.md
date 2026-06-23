@@ -12,22 +12,18 @@ last_updated: 2023-01-05
 
 # Get all delivery tokens
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/delivery_tokens`
+**GET** `/stacks/delivery_tokens`
 
 The Get all delivery tokens request returns the details of all the delivery tokens created in a stack.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
 
-| api_key | blt20962a819b57e233 |  |
-
-| authtoken | Your_Authtoken |  |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -108,3 +104,4 @@ The Get all delivery tokens request returns the details of all the delivery toke
     ]
 }
 ```
+

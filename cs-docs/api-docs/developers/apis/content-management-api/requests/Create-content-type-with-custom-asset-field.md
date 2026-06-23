@@ -12,32 +12,37 @@ last_updated: 2023-11-20
 
 # Create content type with custom asset field
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create content type with custom asset field request is used to create a content type with a custom field that accepts data of type asset.
 
 ##### Create content type with taxonomy
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-
-| branch | main | Enter your branch or alias unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -92,7 +97,7 @@ The Create content type with custom asset field request is used to create a cont
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -196,3 +201,4 @@ The Create content type with custom asset field request is used to create a cont
   }
 }
 ```
+

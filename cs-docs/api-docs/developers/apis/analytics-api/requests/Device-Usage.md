@@ -12,9 +12,7 @@ last_updated: 2026-04-14
 
 # Device Usage
 
-
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/devices?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
+**GET** `/analytics/v2/devices?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
 
 The Device Usage request helps you get a list of devices that your organization users are using to access Contentstack services.
 
@@ -81,28 +79,37 @@ The response body provides detailed insights into users accessing Contentstack e
 
 This data helps you track and analyze device and environment usage, supporting performance and user experience optimization.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
+- **services** (optional)
+  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
+  Default: `["cdn","cma"]`
+- **duration** (optional)
+  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
+  Default: `day`
+- **includeCount** (optional)
+  Set this parameter to true to include the total count of users in the response.
+  Default: `true`
+- **orderBy** (optional)
+  Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the value is set to -1, which orders the response in descending order.
+  Default: `-1`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-
-| services | ["cdn","cma"] | Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"]. |
-
-| duration | day | Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch. |
-
-| includeCount | true | Set this parameter to true to include the total count of users in the response. |
-
-| orderBy | -1 | Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the value is set to -1, which orders the res |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -110,3 +117,4 @@ This data helps you track and analyze device and environment usage, supporting p
     "paginated": true
 }
 ```
+

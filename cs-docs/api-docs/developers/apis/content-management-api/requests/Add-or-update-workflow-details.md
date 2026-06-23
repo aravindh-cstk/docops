@@ -12,9 +12,7 @@ last_updated: 2025-07-25
 
 # Add or update workflow details
 
-
-**Method:** `PUT`  
-**Endpoint:** `/workflows/{workflow_uid}`
+**PUT** `/workflows/{workflow_uid}`
 
 The Add or Update Workflow request allows you to add a workflow stage or update the details of the existing stages of a workflow.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.management:writescope.
@@ -41,20 +39,23 @@ You can assign any one of the following values to this parameter:
 
 **Note**: The entry is available for editing, by default, in the first stage that you create in your workflow. As a result, the entry_lock parameter is set to $none for the first stage in the workflow.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **workflow_uid** (required)
+  Enter the UID of your workflow whose details you want to update.
+  Default: `blt53e09746340f82d9`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `your_authtoken`
+- **authorization** (optional)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| workflow_uid | blt53e09746340f82d9 | Enter the UID of your workflow whose details you want to update. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -133,7 +134,7 @@ You can assign any one of the following values to this parameter:
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -289,3 +290,4 @@ You can assign any one of the following values to this parameter:
     }
 }
 ```
+

@@ -12,25 +12,22 @@ last_updated: 2023-01-05
 
 # Delete stack
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/stacks`
+**DELETE** `/stacks`
 
 The Delete stack call is used to delete an existing stack permanently from your Contentstack account.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
 
-| api_key | API_key_of_your_stack |  |
-
-| authtoken | Your_Authtoken |  |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Stack deleted successfully!"
 }
 ```
+

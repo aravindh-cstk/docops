@@ -12,9 +12,7 @@ last_updated: 2024-09-10
 
 # Set entry workflow stage
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/workflow?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/workflow?locale={locale_code}`
 
 The Set Entry Workflow Stage request allows you to either set a particular workflow stage of an entry or update the workflow stage details of an entry.   
 To configure the permissions for your application via OAuth, please include the cm.entry.workflow:write scope.
@@ -23,26 +21,35 @@ In the 'Body' section, you need to provide the details of the workflow stage. En
 
 **Note**: The request operates using a management token only when the transition rule is configured to "All users/roles."
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the content type UID of the entry of which you want to change the workflow stage.
+  Default: `blt53e09746340f82d9`
+- **entry_uid** (required)
+  Enter the UID of the entry of which you want to change the workflow stage.
+  Default: `blt01638c90cc28fb6d`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale** (optional)
+  Enter you locale.
+  Default: `en-us`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (optional)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| content_type_uid | blt53e09746340f82d9 | Enter the content type UID of the entry of which you want to change the workflow stage. |
-
-| entry_uid | blt01638c90cc28fb6d | Enter the UID of the entry of which you want to change the workflow stage. |
-
-| locale | en-us | Enter you locale. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -66,10 +73,11 @@ In the 'Body' section, you need to provide the details of the workflow stage. En
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Workflow stage updated successfully."
 }
 ```
+

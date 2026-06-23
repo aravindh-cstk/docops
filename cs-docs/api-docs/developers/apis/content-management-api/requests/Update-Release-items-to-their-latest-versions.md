@@ -12,9 +12,7 @@ last_updated: 2024-11-14
 
 # Update Release items to their latest versions
 
-
-**Method:** `PUT`  
-**Endpoint:** `/releases/{release_uid}/update_items`
+**PUT** `/releases/{release_uid}/update_items`
 
 The Update Release items to their latest versions request let you update all the release items (entries and assets) to their latest versions before deployment.
 
@@ -40,28 +38,40 @@ In case an un-localized entry in the release has been localized later, this requ
 - You cannot update the items in a release once you deploy it.
 - If the latest version of an entry is in the in-progress state, this API request doesn't update the entry.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **release_uid** (required)
+  Enter the unique ID of the release of which you want to update the items (entries and assets) to their latest versions. You can find the release uid by running the [Get all Releases](/docs/developers/apis/content-management-api#releases-collection) API request.
+  Default: `blt045d036eb8f2f9df`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| release_version | 2.0 | Enter the release version. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| authorization | your_management_token | Enter your management token. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| Content-Type | application/json | Enter application/json to pass a request body. |
-
-| branch | main | Enter your branch unique ID. |
-
-| release_uid | blt045d036eb8f2f9df | Enter the unique ID of the release of which you want to update the items (entries and assets) to their latest versions. You can find the release uid by running  |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -71,7 +81,7 @@ In case an un-localized entry in the release has been localized later, this requ
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -110,3 +120,4 @@ In case an un-localized entry in the release has been localized later, this requ
   }
 }
 ```
+

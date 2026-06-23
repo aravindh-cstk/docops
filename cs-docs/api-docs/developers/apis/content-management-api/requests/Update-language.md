@@ -12,9 +12,7 @@ last_updated: 2024-02-28
 
 # Update language
 
-
-**Method:** `PUT`  
-**Endpoint:** `/locales/{code}`
+**PUT** `/locales/{code}`
 
 The Update language call will let you update the details (such as display name) and the fallback language of an existing language of your stack.  
 To configure the permissions for your application via OAuth, please include the cm.languages.management:write scope.
@@ -23,26 +21,37 @@ When executing the API call, under the 'Header' section, you need to enter the a
 
 In the 'Body' section, enter the updated details of your language name and fallback language in JSON format.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **code** (required)
+  Enter the code of the language that you wish to update.
+  Default: `your_language_code`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| code | your_language_code | Enter the code of the language that you wish to update. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -53,7 +62,7 @@ In the 'Body' section, enter the updated details of your language name and fallb
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -72,3 +81,4 @@ In the 'Body' section, enter the updated details of your language name and fallb
     }
 }
 ```
+

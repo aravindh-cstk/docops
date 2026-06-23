@@ -12,28 +12,31 @@ last_updated: 2023-01-05
 
 # Get Single User By ID
 
-
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
+**GET** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
 
 The Get Single User by ID request returns comprehensive information of a specific user that exists in the organization.
 
 You need to pass the ID of the user as the URL parameter.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **user_id** (required)
+  The ID of the user whose details you want to fetch. Refer to the [Get All Users](#get-all-users) request to get the user ID.
+  Default: `id_of_user`
 
-| Content-Type | application/json | The format of the response content. |
+## Headers
 
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
 
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the o |
-
-| user_id | id_of_user | The ID of the user whose details you want to fetch. Refer to the [Get All Users](#get-all-users) request to get the user ID. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -62,3 +65,4 @@ You need to pass the ID of the user as the URL parameter.
     }
 }
 ```
+

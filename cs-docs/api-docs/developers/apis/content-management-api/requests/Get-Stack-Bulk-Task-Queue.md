@@ -12,44 +12,56 @@ last_updated: 2025-03-11
 
 # Get Stack Bulk Task Queue
 
-
-**Method:** `GET`  
-**Endpoint:** `/bulk/jobs`
+**GET** `/bulk/jobs`
 
 The Get Stack Bulk Task Queue request retrieves a list of all the bulk actions performed on entries and assets within a stack.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_count** (optional)
+  Set this parameter to true to include the total count of items within the job.
+  Default: `true`
+- **skip** (optional)
+  Enter the number of items to be skipped from the response body.
+  Default: `2`
+- **limit** (optional)
+  Enter the maximum number of items to be returned.
+  Default: `10`
+- **asc** (optional)
+  Sort the response in ascending order. Options include created_at, updated_at, status, created_by, and action.
+  Default: `created_at`
+- **desc** (optional)
+  Sort the response in descending order. Options include created_at, updated_at, status, created_by, and action.
+  Default: `updated_at`
+- **status** (optional)
+  Filter results by integers (1-6) separated by a comma to represent statuses: 1 - Waiting, 2 - In Queue, 3 - In Progress, 4 - Completed, 5 - Partial Complete, 6 - Failed.
+  Default: `4,2`
+- **users** (optional)
+  Filter results by user IDs, provided as a single ID or comma-separated IDs.
+  Default: `blt**************53`
+- **from** (optional)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-05-13`
+- **to** (optional)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-06-13`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authorization | your_management_token | Enter your management token. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **bulk_version** (required)
+  Pass bulk_version parameter as 2.0.
+  Default: `2.0`
 
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| bulk_version | 2.0 | Pass bulk_version parameter as 2.0. |
-
-| include_count | true | Set this parameter to true to include the total count of items within the job. |
-
-| skip | 2 | Enter the number of items to be skipped from the response body. |
-
-| limit | 10 | Enter the maximum number of items to be returned. |
-
-| asc | created_at | Sort the response in ascending order. Options include created_at, updated_at, status, created_by, and action. |
-
-| desc | updated_at | Sort the response in descending order. Options include created_at, updated_at, status, created_by, and action. |
-
-| status | 4,2 | Filter results by integers (1-6) separated by a comma to represent statuses: 1 - Waiting, 2 - In Queue, 3 - In Progress, 4 - Completed, 5 - Partial Complete, 6  |
-
-| users | blt**************53 | Filter results by user IDs, provided as a single ID or comma-separated IDs. |
-
-| from | 2024-05-13 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-
-| to | 2024-06-13 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -114,3 +126,4 @@ The Get Stack Bulk Task Queue request retrieves a list of all the bulk actions p
     ]
 }
 ```
+

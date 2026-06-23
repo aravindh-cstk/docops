@@ -12,26 +12,27 @@ last_updated: 2023-04-27
 
 # Add users to Organization
 
-
-**Method:** `POST`  
-**Endpoint:** `/organizations/{organization_uid}/share`
+**POST** `/organizations/{organization_uid}/share`
 
 The Add users to organization request allows you to send invitations to add users to your organization. Only the owner or the admin of the organization can add users.
 
 When executing the API request, in the request body, provide the organization admin/member role ID, obtained from the Get all roles in an Organization request. Also, provide the stack role UID of the user in the request body, obtained from the Get all roles request.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of the organization to which you want to add users.
+  Default: `bltad182661f48a9afe1d00cdc2`
 
-| authtoken | your_authtoken | Enter the authtoken of the user. |
+## Headers
 
-| Content-Type | application/json |  |
+- **authtoken** (required)
+  Enter the authtoken of the user.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| organization_uid | bltad182661f48a9afe1d00cdc2 | Enter the UID of the organization to which you want to add users. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -54,7 +55,7 @@ When executing the API request, in the request body, provide the organization ad
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -106,3 +107,4 @@ When executing the API request, in the request body, provide the organization ad
 	]
 }
 ```
+

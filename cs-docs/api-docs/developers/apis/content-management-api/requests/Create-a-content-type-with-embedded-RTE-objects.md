@@ -12,9 +12,7 @@ last_updated: 2025-07-01
 
 # Create a content type with embedded RTE objects
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create a content type with embedded RTE objects request lets you create a content type, which supports embedded objects inside its RTE field.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
@@ -48,24 +46,31 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
 
 **Additional Resource**: Refer to the [Rich Text Field Schema](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#html-based-rich-text-editor) guide to understand how you can format the content entered in the field.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -129,7 +134,7 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -283,3 +288,4 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
     }
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2023-03-28
 
 # Try 'Total' Function
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 The **total** field returns the number of entries for a specified content type.
 
@@ -36,3 +34,4 @@ query {
 ```
 
 The **total** field will display the number of entries where the ‘Price in USD’ field exists for a product within the response body, including details of just the ‘Title’ and ‘Price in USD’ fields.
+

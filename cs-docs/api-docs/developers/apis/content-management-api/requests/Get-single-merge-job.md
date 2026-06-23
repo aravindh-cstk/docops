@@ -12,26 +12,28 @@ last_updated: 2023-07-26
 
 # Get single merge job
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_queue/your_merge_job_uid`
+**GET** `/stacks/branches_queue/your_merge_job_uid`
 
 The Get single merge job request returns the status and configuration details of a particular merge job.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **merge_job_uid** (required)
+  Default: `your_merge_job_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
 
-| authorization | your_management_token | Enter your management token. |
-
-| merge_job_uid | your_merge_job_uid |  |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -60,3 +62,4 @@ The Get single merge job request returns the status and configuration details of
     ]
 }
 ```
+

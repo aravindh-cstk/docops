@@ -12,9 +12,7 @@ last_updated: 2024-11-14
 
 # Update a Release
 
-
-**Method:** `PUT`  
-**Endpoint:** `/releases/{release_uid}`
+**PUT** `/releases/{release_uid}`
 
 The Update a Release call allows you to update the details of a Release, i.e., the ‘name’ and ‘description’.
 
@@ -22,26 +20,37 @@ When executing this API request, provide the Release UID as parameter. In the 'B
 
 To configure the permissions for your application via OAuth, please include the cm.releases.management:write scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **release_uid** (required)
+  Enter the unique ID of the release that you want to update the details of.
+  Default: `blt719af000dcde0000`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| release_version | 2.0 | Enter the release version. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| authorization | your_management_token | Enter your management token. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
 
-| Content-Type | application/json | Enter application/json to pass a request body. |
-
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release that you want to update the details of. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -52,7 +61,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -71,3 +80,4 @@ To configure the permissions for your application via OAuth, please include the 
     }
 }
 ```
+

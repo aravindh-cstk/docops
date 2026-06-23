@@ -12,9 +12,7 @@ last_updated: 2026-01-20
 
 # Get all assets
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets?folder={folder_uid}&include_folders={boolean_value}&environment={environment}&version={version_number}&include_publish_details={boolean_value}&include_count={include_count}&relative_urls={relative_urls}&asc={asc_field_uid}&desc={desc_field_uid}`
+**GET** `/assets?folder={folder_uid}&include_folders={boolean_value}&environment={environment}&version={version_number}&include_publish_details={boolean_value}&include_count={include_count}&relative_urls={relative_urls}&asc={asc_field_uid}&desc={desc_field_uid}`
 
 The Get all assets request returns comprehensive information on all assets available in a stack.
 
@@ -42,40 +40,53 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 
 **Tip:** To include the publish details in the response, make use of the include_publish_details parameter and set its value to ‘true’. This query will return the publish details of the entry in every environment along with the version number that is published in each of the environment. When you publish an asset, the associated metadata of that asset will also get published.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **folder** (optional)
+  Enter either the UID of a specific folder to get the assets of that folder, or enter ‘cs_root’ to get all assets and their folder details from the root folder.
+  Default: `bltd7854a4567gh7`
+- **include_folders** (optional)
+  Set this parameter to ‘true’ to include the details of the created folders along with the details of the assets.
+  Default: `true`
+- **environment** (optional)
+  Enter the name of the environment to retrieve the assets published on them. You can enter multiple environments.
+  Default: `production`
+- **version** (optional)
+  Specify the version number of the asset that you want to retrieve. If the version is not specified, the details of the latest version will be retrieved.
+  Default: `1`
+- **include_publish_details** (optional)
+  Enter 'true' to include the publish details of the entry.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include the total number of assets available in your stack in the response body.
+  Default: `false`
+- **relative_urls** (optional)
+  Set this to 'true' to display the relative URL of the asset.
+  Default: `false`
+- **asc** (optional)
+  Enter the unique ID of the field for sorting the assets in ascending order by that field.
+  Default: `created_at`
+- **desc** (optional)
+  Enter the unique ID of the field for sorting the assets in descending order by that field.
+  Default: `file_size`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| branch | main | Enter your branch unique ID. |
-
-| folder | bltd7854a4567gh7 | Enter either the UID of a specific folder to get the assets of that folder, or enter ‘cs_root’ to get all assets and their folder details from the root folder. |
-
-| include_folders | true | Set this parameter to ‘true’ to include the details of the created folders along with the details of the assets. |
-
-| environment | production | Enter the name of the environment to retrieve the assets published on them. You can enter multiple environments. |
-
-| version | 1 | Specify the version number of the asset that you want to retrieve. If the version is not specified, the details of the latest version will be retrieved. |
-
-| include_publish_details | true | Enter 'true' to include the publish details of the entry. |
-
-| include_count | false | Set this parameter to 'true' to include the total number of assets available in your stack in the response body. |
-
-| relative_urls | false | Set this to 'true' to display the relative URL of the asset. |
-
-| asc | created_at | Enter the unique ID of the field for sorting the assets in ascending order by that field. |
-
-| desc | file_size | Enter the unique ID of the field for sorting the assets in descending order by that field. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -120,3 +131,4 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 	]
 }
 ```
+

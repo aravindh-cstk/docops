@@ -12,9 +12,7 @@ last_updated: 2024-04-17
 
 # Try 'Exists' Operator [Taxonomy]
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Exists Operator [Taxonomy]
 
@@ -41,3 +39,4 @@ query {
   }
 }
 ```
+

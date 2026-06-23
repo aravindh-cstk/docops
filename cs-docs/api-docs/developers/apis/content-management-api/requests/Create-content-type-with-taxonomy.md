@@ -12,9 +12,7 @@ last_updated: 2023-11-20
 
 # Create content type with taxonomy
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create content type with taxonomy request shows you how to add a taxonomy field while creating a content type.
 
@@ -41,20 +39,20 @@ In the “Body” section, you need to provide the complete schema of the conten
 }
 ```
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API Key of the stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| api_key | blt20962a819b57e233 | Enter the API Key of the stack. |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | your_management_token |  |
-
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -117,7 +115,7 @@ In the “Body” section, you need to provide the complete schema of the conten
     }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -228,3 +226,4 @@ In the “Body” section, you need to provide the complete schema of the conten
     }
 }
 ```
+

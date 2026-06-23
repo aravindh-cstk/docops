@@ -12,9 +12,7 @@ last_updated: 2026-05-18
 
 # Publish a taxonomy
 
-
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/publish`
+**POST** `/taxonomies/publish`
 
 The Publish a taxonomy request  initiates a job to publish one or more taxonomies to the specified environments, locales, and branches.
 
@@ -27,22 +25,25 @@ The Publish a taxonomy request  initiates a job to publish one or more taxonomie
 - The scheduled_at parameter is optional.
 - Although taxonomy is global, branch selection determines locale availability and the fallback hierarchy during publishing.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -59,3 +60,4 @@ The Publish a taxonomy request  initiates a job to publish one or more taxonomie
   ]
 }
 ```
+

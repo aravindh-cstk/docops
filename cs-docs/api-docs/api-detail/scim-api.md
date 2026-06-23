@@ -106,22 +106,28 @@ Use the SCIM API requests to provision, deprovison, and perform other operations
 
 #### Provision User into Organization
 
-**Method:** `POST`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users`
+**POST** `scim/v2.0/organizations/{organization_uid}/Users`
 
 The Provision User into Organization request adds the user to a Contentstack organization.
 
 If the user does not already exist in Contentstack, you can add the new user to the organization by using this request.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-**Request Body:**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Request
 
 ```json
 {
@@ -134,7 +140,7 @@ If the user does not already exist in Contentstack, you can add the new user to 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -165,26 +171,40 @@ If the user does not already exist in Contentstack, you can add the new user to 
 ```
 
 
-#### Get All Users
 
 #### Get All Users
 
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users`
+#### Get All Users
+
+**GET** `scim/v2.0/organizations/{organization_uid}/Users`
 
 The Get All Users request fetches the list of all users (along with details such as name, user ID, and email address) of your Contentstack organization.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| count | 2 | To fetch a certain number of users in a single request. You can fetch a maximum of 100 users at a time. |
-| startIndex | 2 | It is the index number from which you want to fetch user details.  By default, the value is 1. Example: If you specify 2 |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **count** (optional)
+  To fetch a certain number of users in a single request. You can fetch a maximum of 100 users at a time.
+  Default: `2`
+- **startIndex** (optional)
+  It is the index number from which you want to fetch user details. By default, the value is 1. Example: If you specify 2, you will get details starting from the second user in the list.
+  Default: `2`
+
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Response
 
 ```json
 {
@@ -250,27 +270,36 @@ The Get All Users request fetches the list of all users (along with details such
 ```
 
 
-#### Get Single User By ID
 
 #### Get Single User By ID
 
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
+#### Get Single User By ID
+
+**GET** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
 
 The Get Single User by ID request returns comprehensive information of a specific user that exists in the organization.
 
 You need to pass the ID of the user as the URL parameter.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| user_id | id_of_user | The ID of the user whose details you want to fetch. Refer to the [Get All Users](#get-all-users) request to get the user |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **user_id** (required)
+  The ID of the user whose details you want to fetch. Refer to the [Get All Users](#get-all-users) request to get the user ID.
+  Default: `id_of_user`
 
-**Response (200):**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Response
 
 ```json
 {
@@ -301,27 +330,39 @@ You need to pass the ID of the user as the URL parameter.
 ```
 
 
-#### Get Single User By Username
 
 #### Get Single User By Username
 
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users?filter=userName eq "<<email-address>>"`
+#### Get Single User By Username
+
+**GET** `scim/v2.0/organizations/{organization_uid}/Users?filter=userName eq "<<email-address>>"`
 
 The Get Single User by Username request returns comprehensive details of a specific user that exists in the Contentstack organization.
 
 You need to pass the username as a query parameter.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| filter | userName eq "user.name@contentstack.com" | Specify the type of filter you want to use. In this case, the filter will be “userName eq” |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **filter** (required)
+  Specify the type of filter you want to use. In this case, the filter will be “userName eq”
+  Default: `userName eq "user.name@contentstack.com"`
+
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Response
 
 ```json
 {
@@ -362,12 +403,12 @@ You need to pass the username as a query parameter.
 ```
 
 
-#### Update User By ID (PUT)
 
 #### Update User By ID (PUT)
 
-**Method:** `PUT`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
+#### Update User By ID (PUT)
+
+**PUT** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
 
 The Update User Using PUT request lets you update the details of a specific user by using the PUT request type.
 
@@ -375,16 +416,25 @@ In the “Body” section, you need to provide the updated schema of the user in
 
 **Note**: As no user attributes, like name and email, are liable to change, this endpoint is currently provided for identity provider compatibility. Set the active flag to “False” to deprovision a user.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| user_id | id_of_user | The ID of the user whose details you want to update. Refer to the [Get All Users](#get-all-users) request to get the use |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **user_id** (required)
+  The ID of the user whose details you want to update. Refer to the [Get All Users](#get-all-users) request to get the user ID.
+  Default: `id_of_user`
 
-**Request Body:**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Request
 
 ```json
 {
@@ -398,7 +448,7 @@ In the “Body” section, you need to provide the updated schema of the user in
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -429,12 +479,12 @@ In the “Body” section, you need to provide the updated schema of the user in
 ```
 
 
-#### Update User By ID (PATCH)
 
 #### Update User By ID (PATCH)
 
-**Method:** `PATCH`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
+#### Update User By ID (PATCH)
+
+**PATCH** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
 
 The Update User Using PATCH request lets you update the details of a specific user by using the PATCH request type.
 
@@ -442,16 +492,25 @@ In the “Body” section, you need to provide the updated schema of the user in
 
 **Note**: As no user attributes, like name and email, are liable to change, this endpoint is currently provided for identity provider compatibility. You can deprovision a user by sending the 'Replace' operation to the path 'active' with the value 'false'.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| user_id | id_of_user | The ID of the user whose details you want to update. Refer to the [Get All Users](#get-all-users) request to get the use |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **user_id** (required)
+  The ID of the user whose details you want to update. Refer to the [Get All Users](#get-all-users) request to get the user ID.
+  Default: `id_of_user`
 
-**Request Body:**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Request
 
 ```json
 {
@@ -467,7 +526,7 @@ In the “Body” section, you need to provide the updated schema of the user in
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -498,24 +557,32 @@ In the “Body” section, you need to provide the updated schema of the user in
 ```
 
 
-#### Deprovision User
 
 #### Deprovision User
 
-**Method:** `DELETE`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
+#### Deprovision User
+
+**DELETE** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
 
 The Deprovision User request lets you remove a user from a Contentstack organization.
 
 This will remove the user from all the assigned stacks, but the user will continue to have a Contentstack account.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| user_id | id_of_user | The ID of the user you want to remove. Refer to the [Get All Users](#get-all-users) request to get the user ID. |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **user_id** (required)
+  The ID of the user you want to remove. Refer to the [Get All Users](#get-all-users) request to get the user ID.
+  Default: `id_of_user`
+
+##### Headers
+
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
 
 ### Groups
 
@@ -526,22 +593,28 @@ Use the SCIM API requests to create groups, manage users within it, and perform 
 
 #### Create Group
 
-**Method:** `POST`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups`
+**POST** `scim/v2.0/organizations/{organization_uid}/Groups`
 
 The Create Group request lets you create a group in your IdP client and add users to it.
 
 In the "Request Body" section, you need to pass the ID of the user in Contentstack as the value. Refer to the [Get All Users](#get-all-users) request to get the user ID. Also, provide a name to the group in the displayName key.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-**Request Body:**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Request
 
 ```json
 {
@@ -555,7 +628,7 @@ In the "Request Body" section, you need to pass the ID of the user in Contentsta
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -578,27 +651,43 @@ In the "Request Body" section, you need to pass the ID of the user in Contentsta
 ```
 
 
-#### Get All Groups
 
 #### Get All Groups
 
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups`
+#### Get All Groups
+
+**GET** `scim/v2.0/organizations/{organization_uid}/Groups`
 
 The Get All Groups request fetches details of all groups that exist in the IdP client account.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| count | 2 | To fetch a certain number of groups in a single request.  For example, if you specify 2, you will receive details of two |
-| startIndex | 2 | It is the index number from which you want to fetch group details.  By default, the value is 1. If you specify 5, you wi |
-| excludedAttributes | members | It is a list of strings indicating which resource attributes should be removed from the default set of attributes to be  |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **count** (optional)
+  To fetch a certain number of groups in a single request. For example, if you specify 2, you will receive details of two groups in a single request. You can fetch a maximum of 100 groups at once.
+  Default: `2`
+- **startIndex** (optional)
+  It is the index number from which you want to fetch group details. By default, the value is 1. If you specify 5, you will get details starting from the fifth group.
+  Default: `2`
+- **excludedAttributes** (optional)
+  It is a list of strings indicating which resource attributes should be removed from the default set of attributes to be returned. Currently, we support excluding only the 'members' attribute.
+  Default: `members`
+
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Response
 
 ```json
 {
@@ -633,26 +722,40 @@ The Get All Groups request fetches details of all groups that exist in the IdP c
 ```
 
 
-#### Get Single Group By ID
 
 #### Get Single Group By ID
 
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+#### Get Single Group By ID
+
+**GET** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
 The Get Single Group by ID request fetches details of a single group that exists in the IdP client account.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| group_id | your_group_id | The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID. |
-| excludedAttributes | members | It is a list of strings indicating which resource attributes should be removed from the default set of attributes to be  |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **group_id** (required)
+  The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
+  Default: `your_group_id`
 
-**Response (200):**
+##### Query Parameters
+
+- **excludedAttributes** (optional)
+  It is a list of strings indicating which resource attributes should be removed from the default set of attributes to be returned. Currently, we support excluding only the 'members' attribute.
+  Default: `members`
+
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Response
 
 ```json
 {
@@ -687,27 +790,39 @@ The Get Single Group by ID request fetches details of a single group that exists
 ```
 
 
-#### Get Single Group By Display Name
 
 #### Get Single Group By Display Name
 
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups?filter=displayName Eq "<<group_name>>"`
+#### Get Single Group By Display Name
+
+**GET** `scim/v2.0/organizations/{organization_uid}/Groups?filter=displayName Eq "<<group_name>>"`
 
 The Get Single Group By Display Name returns comprehensive details of a specific group that exists in the IdP client account, which is mapped in your Contentstack organization.
 
 You need to pass the displayname as a query parameter.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| filter | displayName Eq "name_of_group" | Specify the type of filter you want to use. In this case, the filter will be “displayName Eq” |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **filter** (required)
+  Specify the type of filter you want to use. In this case, the filter will be “displayName Eq”
+  Default: `displayName Eq "name_of_group"`
+
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Response
 
 ```json
 {
@@ -737,12 +852,12 @@ You need to pass the displayname as a query parameter.
 ```
 
 
-#### Add Users to Group
 
 #### Add Users to Group
 
-**Method:** `PATCH`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+#### Add Users to Group
+
+**PATCH** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
 The Add Users to Group request adds the user(s) to a group.
 
@@ -750,16 +865,25 @@ The specified user will then have the permissions (at the stack level and at the
 
 In the "Request Body", you need to pass the ID of the user in the value key.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| group_id | your_group_id | The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID. |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **group_id** (required)
+  The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
+  Default: `your_group_id`
 
-**Request Body:**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Request
 
 ```json
 {
@@ -780,7 +904,7 @@ In the "Request Body", you need to pass the ID of the user in the value key.
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -805,27 +929,36 @@ In the "Request Body", you need to pass the ID of the user in the value key.
 ```
 
 
-#### Rename Group
 
 #### Rename Group
 
-**Method:** `PATCH`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+#### Rename Group
+
+**PATCH** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
 The Rename Group request lets you change the name of a group.
 
 In the "Request Body", you need to pass a new name for the group in the value key.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| group_id | your_group_id | The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID. |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **group_id** (required)
+  The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
+  Default: `your_group_id`
 
-**Request Body:**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Request
 
 ```json
 {
@@ -842,7 +975,7 @@ In the "Request Body", you need to pass a new name for the group in the value ke
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -862,27 +995,36 @@ In the "Request Body", you need to pass a new name for the group in the value ke
 ```
 
 
-#### Remove All Users from Group
 
 #### Remove All Users from Group
 
-**Method:** `PATCH`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+#### Remove All Users from Group
+
+**PATCH** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
 The Remove All Users from Group request removes all the existing users from a group.
 
 This also revokes admin access for users with admin roles, unless those users have been assigned the admin role by some other group. The same logic applies to stack roles as well.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| group_id | your_group_id | The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID. |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **group_id** (required)
+  The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
+  Default: `your_group_id`
 
-**Request Body:**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Request
 
 ```json
 {
@@ -898,7 +1040,7 @@ This also revokes admin access for users with admin roles, unless those users ha
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -917,12 +1059,12 @@ This also revokes admin access for users with admin roles, unless those users ha
 ```
 
 
-#### Remove User from Group
 
 #### Remove User from Group
 
-**Method:** `PATCH`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+#### Remove User from Group
+
+**PATCH** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
 The Remove User from Group request removes a user from a group.
 
@@ -930,16 +1072,25 @@ In the "Request Body", you need to pass the ID of the user you want to remove fr
 
 This also revokes admin access for the user with an admin role, unless that user has been assigned an admin role by some other group as well. The same logic applies to stack roles as well.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| group_id | your_group_id | The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID. |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **group_id** (required)
+  The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
+  Default: `your_group_id`
 
-**Request Body:**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Request
 
 ```json
 {
@@ -955,7 +1106,7 @@ This also revokes admin access for the user with an admin role, unless that user
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -975,12 +1126,12 @@ This also revokes admin access for the user with an admin role, unless that user
 ```
 
 
-#### Replace Users in Group
 
 #### Replace Users in Group
 
-**Method:** `PATCH`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+#### Replace Users in Group
+
+**PATCH** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
 The Replace Users in Group request replaces the existing set of users with a new set of users.
 
@@ -990,16 +1141,25 @@ This request removes all the existing users from a group and replaces them with 
 
 This also revokes admin access for users with admin role, unless that user has been assigned an admin role by some other group as well. The same logic applies to stack roles as well.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| group_id | your_group_id | The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID. |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **group_id** (required)
+  The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
+  Default: `your_group_id`
 
-**Request Body:**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Request
 
 ```json
 {
@@ -1023,7 +1183,7 @@ This also revokes admin access for users with admin role, unless that user has b
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -1052,25 +1212,35 @@ This also revokes admin access for users with admin role, unless that user has b
 ```
 
 
-#### Delete Group
 
 #### Delete Group
 
-**Method:** `DELETE`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+#### Delete Group
+
+**DELETE** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
 The Delete Group request deletes an existing group from the SCIM. This will remove all the users from that group.
 
 **Note**: This API request will not remove users from the organization or from the Contentstack account.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organi |
-| group_id | your_group_id | The ID of the group you want to delete. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID. |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **group_id** (required)
+  The ID of the group you want to delete. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
+  Default: `your_group_id`
+
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
 
 ### Schema Discovery
 
@@ -1081,20 +1251,26 @@ Use the SCIM API requests to retrieve information about SCIM schemas supported b
 
 #### Get Schemas
 
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Schemas`
+**GET** `scim/v2.0/organizations/{organization_uid}/Schemas`
 
 The Get Schemas request fetches a list of schemas for all supported resources, which can be used to introspect resources and attribute extensions
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](https://app.contentstack.com/docs/developers/apis/content-m |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](https://app.contentstack.com/docs/developers/apis/content-management-api/#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-**Response (200):**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Response
 
 ```json
 {
@@ -1262,24 +1438,31 @@ The Get Schemas request fetches a list of schemas for all supported resources, w
 ```
 
 
-#### Get Resource Types
 
 #### Get Resource Types
 
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/ResourceTypes`
+#### Get Resource Types
+
+**GET** `scim/v2.0/organizations/{organization_uid}/ResourceTypes`
 
 The Get Resource Types request returns the list of available resource types like Users or Groups.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| Content-Type | application/json | The format of the response content. |
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](https://app.contentstack.com/docs/developers/apis/content-m |
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](https://app.contentstack.com/docs/developers/apis/content-management-api/#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-**Response (200):**
+##### Headers
+
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
+
+##### Sample Response
 
 ```json
 {
@@ -1319,6 +1502,7 @@ The Get Resource Types request returns the list of available resource types like
     ]
 }
 ```
+
 
 ## Regions
 

@@ -12,9 +12,7 @@ last_updated: 2023-03-29
 
 # Try 'Search Referenced Entries from Multiple Content Types'
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries having values based on referenced fields. This query uses [inline fragments](https://graphql.org/learn/queries/#inline-fragments) to retrieve all entries that satisfy query conditions made on referenced fields that refer to multiple content types.
 
@@ -67,3 +65,4 @@ query {
 The response body will include all entries of the Electronics and Kitchen Appliances content types that satisfy the query, and will include details of just the “Title” field of these content types. Similarly, all the query operators listed in this guide can be applied to search based on the values of referenced fields.
 
 **Note**: Only up to **three** levels deep of referenced fields can be used within the where argument to filter the requested entries.
+

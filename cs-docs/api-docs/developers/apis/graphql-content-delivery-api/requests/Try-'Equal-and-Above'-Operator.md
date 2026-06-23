@@ -12,9 +12,7 @@ last_updated: 2024-04-17
 
 # Try 'Equal and Above' Operator
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Equal and Above Operator
 
@@ -48,3 +46,4 @@ query TermEqualAbove {
   }
 }
 ```
+

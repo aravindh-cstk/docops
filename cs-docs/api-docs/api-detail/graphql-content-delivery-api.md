@@ -860,8 +860,8 @@ The ‘total’ parameter in the above query fetches the total count of all the 
 
 #### Get a List of Entries
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get a Single Entry
@@ -894,8 +894,8 @@ The “locale” parameter in the argument helps you fetch the content of only a
 
 #### Get a Single Entry
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get Entry List with Variants
@@ -946,8 +946,8 @@ query {
 
 #### Get Entry List with Variants
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get Single Entry with Variant
@@ -986,8 +986,8 @@ query {
 
 #### Get Single Entry with Variant
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get Entries from Multiple Content Types
@@ -1031,8 +1031,8 @@ The total parameter in the above query fetches the total number of entries avail
 
 #### Get Entries from Multiple Content Types
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Query Batching
@@ -1097,8 +1097,8 @@ query Query_2 {
 
 #### Try 'Query Batching'
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get Entries from Multiple Languages
@@ -1138,8 +1138,8 @@ fragment productFields on Product {
 
 #### Get Entries from Multiple Languages
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get a List of Assets
@@ -1173,8 +1173,8 @@ The ‘total’ parameter in the above query fetches the total count of all the 
 
 #### Get a List of Assets
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get a Single Asset
@@ -1199,8 +1199,8 @@ query {
 
 #### Get a Single Asset
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get Global Fields while Retrieving Entries
@@ -1238,8 +1238,8 @@ query {
 
 #### Get Global Fields while Retrieving Entries
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get Group Fields while Retrieving Entries
@@ -1268,8 +1268,8 @@ query {
 
 #### Get Group Fields while Retrieving Entries
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get JSON RTE Fields while Retrieving Entries
@@ -1317,8 +1317,8 @@ The response body of this query will include details of the embedded appliance e
 
 #### Get JSON RTE Fields while Retrieving Entries
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get Custom Fields while Retrieving Entries
@@ -1344,8 +1344,8 @@ The response body of this query will include details of the ‘Helpful Links’ 
 
 #### Get Custom Fields while Retrieving Entries
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Get System defined Fields
@@ -1407,8 +1407,8 @@ Along with the entry UIDs and asset UIDs, the above query also fetches the publi
 
 #### Get System defined Fields
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 ### Non-Nullable Fields
 
@@ -1526,8 +1526,7 @@ Let us fetch reference fields and assets while retrieving entries.
 
 #### Try 'Include Single Content Type Reference Fields'
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries of a content type along with the comprehensive details of the specified referenced entry. This query uses [relay specification](https://relay.dev/docs/guides/graphql-server-specification/) to retrieve the details of the entries referred in reference fields.
 
@@ -1565,12 +1564,12 @@ The totalCount field returns the number of referenced entries for a specific Ref
 **Note**: Contentstack’s GraphQL queries can fetch referenced entries up to **three** levels deep.
 
 
+
 #### Include Multi Content Type Reference Fields
 
 #### Try 'Include Multi Content Type Reference Fields'
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries of a content type along with the comprehensive details of the specified referenced entries. This query uses inline fragments and relay specification to retrieve details of entries referring to multiple content types.
 
@@ -1624,12 +1623,12 @@ query {
 **Note**: When you query reference fields that refer to content types other than the first **100** available, the response body will return an error. If referenced entries are not published or have been deleted, then the query will return { edges: [] }.
 
 
+
 #### Include Assets Added to a Content Type
 
 #### Try 'Include Assets Added to a Content Type'
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries of a content type along with the comprehensive details of an asset that has been used in the entries. This query uses [relay specification](https://relay.dev/docs/guides/graphql-server-specification/) to fetch asset details such as the title of an asset or its URL.
 
@@ -1662,12 +1661,12 @@ query {
 The response body of this query will include details of the ‘Title’ field of the Product content type and the ‘Title’ and ‘Description’ of the assets stored in the Images field. It will only return the first five assets.
 
 
-#### Include Embedded RTE Items
 
 #### Include Embedded RTE Items
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+#### Include Embedded RTE Items
+
+**** `/stacks/apiKey/explore`
 
 Get entries of a content type along with the comprehensive details of the embedded entries and assets referenced inside the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor). This query uses inline fragments and relay specification to retrieve details of rich text editors that refer to multiple embedded items.
 
@@ -1729,12 +1728,12 @@ query {
 **Note**: You can retrieve a maximum of **100** embedded items (entries or assets) in a single GraphQL API request.
 
 
+
 #### Search within Referenced Entries from a Single Content Type
 
 #### Try 'Search Referenced Entries from a Single Content Type'
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries having values based on referenced fields. This query retrieves all entries that satisfy query conditions made on referenced fields that refer to a single content type.
 
@@ -1772,12 +1771,12 @@ The response body will include all entries of the Product content type that sati
 **Note**: Only up to **three** levels deep of referenced fields can be used within the where argument to filter the requested entries.
 
 
+
 #### Search within Referenced Entries from Multiple Content Types
 
 #### Try 'Search Referenced Entries from Multiple Content Types'
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries having values based on referenced fields. This query uses [inline fragments](https://graphql.org/learn/queries/#inline-fragments) to retrieve all entries that satisfy query conditions made on referenced fields that refer to multiple content types.
 
@@ -1832,12 +1831,12 @@ The response body will include all entries of the Electronics and Kitchen Applia
 **Note**: Only up to **three** levels deep of referenced fields can be used within the where argument to filter the requested entries.
 
 
-#### Get Entries by Referenced Asset
 
 #### Get Entries by Referenced Asset
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+#### Get Entries by Referenced Asset
+
+**** `/stacks/apiKey/explore`
 
 Get entries by using asset data to query a content type.
 
@@ -1873,12 +1872,12 @@ The response body of this query will include all entries of the **Product** cont
 **Note**: You cannot query content types based on the URL field of an asset.
 
 
-#### Nested Reference Filtering
 
 #### Nested Reference Filtering
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+#### Nested Reference Filtering
+
+**** `/stacks/apiKey/explore`
 
 Nested reference filtering allows you to filter referenced entries within a reference field, returning relevant entries matching specific criteria. This feature does not affect the parent or child documents, making it easier to retrieve only the necessary data.
 
@@ -1927,6 +1926,7 @@ You can use nested reference filtering to retrieve specific referenced entries b
 
 **Note**: Nested reference filtering does not support **File**, **Reference**, or **JSON RTE** fields.
 
+
 ### Query Operators
 
 Query operators allow you to filter a list of entries or assets by specifying filter conditions in the root content type’s query. You can postfix each of these operators to the field UIDs.
@@ -1969,8 +1969,7 @@ Taxonomy simplifies the process of organizing content in your system, making it 
 
 #### Try 'Taxonomy Fields'
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Taxonomy Fields
 
@@ -1994,10 +1993,10 @@ query {
 }
 ```
 
+
 #### Try 'Equals' Operator [Taxonomy]
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Equals Operator [Taxonomy]
 
@@ -2027,10 +2026,10 @@ query {
 }
 ```
 
+
 #### Try 'Not Equals' Operator [Taxonomy]
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Not Equals Operator [Taxonomy]
 
@@ -2060,10 +2059,10 @@ query {
 }
 ```
 
+
 #### Try 'IN' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### IN Operator
 
@@ -2093,10 +2092,10 @@ query {
 }
 ```
 
+
 #### Try 'NIN' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### NIN Operator
 
@@ -2126,10 +2125,10 @@ query {
 }
 ```
 
+
 #### Try 'Exists' Operator [Taxonomy]
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Exists Operator [Taxonomy]
 
@@ -2158,14 +2157,14 @@ query {
 ```
 
 
+
 #### Terms
 
 Terms are the primary classification elements you generate within a taxonomy. They serve the purpose of categorizing entries.
 
 #### Try 'Equals' Operator [Terms]
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Equals Operator [Terms]
 
@@ -2197,10 +2196,10 @@ query {
 }
 ```
 
+
 #### Try 'Not Equals' Operator [Terms]
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Not Equals Operator [Terms]
 
@@ -2232,10 +2231,10 @@ query {
 }
 ```
 
+
 #### Try 'IN' Operator [Terms]
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### IN Operator [Terms]
 
@@ -2267,10 +2266,10 @@ query {
 }
 ```
 
+
 #### Try 'NIN' Operator [Terms]
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### NIN Operator [Terms]
 
@@ -2302,10 +2301,10 @@ query {
 }
 ```
 
+
 #### Try 'Below' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Below Operator
 
@@ -2340,10 +2339,10 @@ query TermBelow {
 }
 ```
 
+
 #### Try 'Equal and Below' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Equal and Below Operator
 
@@ -2378,10 +2377,10 @@ query TermEqualBelow {
 }
 ```
 
+
 #### Try 'Above' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Above Operator
 
@@ -2416,10 +2415,10 @@ query TermAbove {
 }
 ```
 
+
 #### Try 'Equal and Above' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Equal and Above Operator
 
@@ -2455,12 +2454,12 @@ query TermEqualAbove {
 ```
 
 
+
 #### Equals Operator
 
 #### Try 'Equals' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get data of entries containing the field values matching the specified condition.
 
@@ -2482,10 +2481,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query and include details of just the ‘Title’ and ‘Price in USD’ fields.
 
+
 #### Try 'Equals' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Equals Operator within Group
 
@@ -2511,10 +2510,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and include details of just the ‘Price in USD’ and ‘Description’ fields.
 
+
 #### Try 'Equals' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Equals Operator within Modular Blocks
 
@@ -2567,10 +2566,10 @@ query {
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields from the ‘Deals’ block of the modular block named ‘Additional Info.’
 
+
 #### Try 'Equals' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Equals Operator within Nested Modular Blocks
 
@@ -2645,12 +2644,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### Not-equals Operator
 
 #### Try 'Not Equals' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get all the entries in which the value of a field does not match the value provided in the condition.
 
@@ -2673,10 +2672,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title,’ ‘Size,’ and ‘Color’ fields.
 
+
 #### Try 'Not Equals' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Not-equals Operator within Group
 
@@ -2702,10 +2701,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Color’ fields.
 
+
 #### Try 'Not Equals' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Not-equals Operator within Modular Blocks
 
@@ -2757,10 +2756,10 @@ query {
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
 
+
 #### Try 'Not Equals' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **Not-equals Operator within Nested Modular Blocks**
 
@@ -2835,12 +2834,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### In Operator
 
 #### Try 'In' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries in which the value of a field matches any of the given values. This parameter will compare field values of entries to that of the values provided in the condition.
 
@@ -2863,10 +2862,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query and will include details of just the 'Title,' 'Size,' and ‘Color’ fields.
 
+
 #### Try 'In' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### In Operator within Group
 
@@ -2893,10 +2892,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Color’ fields.
 
+
 #### Try 'In' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### In Operator within Modular Blocks
 
@@ -2950,10 +2949,10 @@ query {
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
 
+
 #### Try 'In' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **In Operator within****Nested Modular Blocks**
 
@@ -3028,12 +3027,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### Not In Operator
 
 #### Try 'Not In' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get all entries in which the value of a field does not match any of the given values. This parameter will compare field values of entries to that of the values provided in the condition, and the query will retrieve entries that have field values that do not match any of the values provided.
 
@@ -3057,10 +3056,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the 'Title', ‘Price in USD’, Size, and ‘Color’ fields.
 
+
 #### Try 'Not In' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Not In Operator within Group
 
@@ -3087,10 +3086,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Color’ fields.
 
+
 #### Try 'Not In' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Not In Operator within Modular Blocks
 
@@ -3144,10 +3143,10 @@ query {
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
 
+
 #### Try 'Not In' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **Not In Operator within Nested Modular Blocks**
 
@@ -3222,12 +3221,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### AND Operator
 
 #### Try 'AND' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries that satisfy all the conditions provided in the 'AND' query.
 
@@ -3257,10 +3256,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’, ‘Size’, and ‘Price in USD’ fields.
 
+
 #### Try 'AND' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### AND Operator within Group
 
@@ -3295,10 +3294,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Price in USD’ fields.
 
+
 #### Try 'AND' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### AND Operator within Modular Blocks
 
@@ -3361,10 +3360,10 @@ query {
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
 
+
 #### Try 'AND' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **AND Operator within Nested Modular Blocks**
 
@@ -3454,12 +3453,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### OR Operator
 
 #### Try 'OR' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get all entries that satisfy at least one of the given conditions provided in the 'OR' query.
 
@@ -3489,10 +3488,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’, ‘Color’, and ‘Price in USD’ fields.
 
+
 #### Try 'OR' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### OR Operator within Group
 
@@ -3528,10 +3527,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’, ‘Color’, and ‘Price in USD’ fields.
 
+
 #### Try 'OR' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### OR Operator within Modular Blocks
 
@@ -3594,10 +3593,10 @@ query {
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
 
+
 #### Try 'OR' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **OR Operator within Nested Modular Blocks**
 
@@ -3687,12 +3686,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### Less Than Operator
 
 #### Try 'Less Than' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries in which the value of a field is lesser than the value provided in the condition.
 
@@ -3714,10 +3713,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Price in USD’ fields.
 
+
 #### Try 'Less Than' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Less Than Operator within Group
 
@@ -3743,10 +3742,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Color’ fields.
 
+
 #### Try 'Less Than' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Less Than Operator within Modular Blocks
 
@@ -3798,10 +3797,10 @@ query {
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
 
+
 #### Try 'Less Than' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **Less Than Operator within Nested Modular Blocks**
 
@@ -3876,12 +3875,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### Less Than Or Equal To Operator
 
 #### Try 'Less Than Or Equal To' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries in which the value of a field is lesser than or equal to the value provided in the condition.
 
@@ -3903,10 +3902,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Price in USD’ fields.
 
+
 #### Try 'Less Than Or Equal To' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Less Than Or Equal To Operator within Group
 
@@ -3932,10 +3931,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Color’ fields.
 
+
 #### Try 'Less Than Or Equal To' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Less Than Or Equal To Operator within Modular Blocks
 
@@ -3987,10 +3986,10 @@ query {
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
 
+
 #### Try 'Less Than Or Equal To' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **Less Than Or Equal To Operator within Nested Modular Blocks**
 
@@ -4065,12 +4064,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### Greater Than Operator
 
 #### Try 'Greater Than' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries in which the value for a field is greater than the value provided in the condition.
 
@@ -4093,10 +4092,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’, ‘Price in USD’, and ‘Color’ fields.
 
+
 #### Try 'Greater Than' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Greater Than Operator within Group
 
@@ -4123,10 +4122,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’, ‘Price in USD’, and ‘Color’ fields.
 
+
 #### Try 'Greater Than' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Greater Than Operator within Modular Blocks
 
@@ -4178,10 +4177,10 @@ query {
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
 
+
 #### Try 'Greater Than' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **Greater Than Operator within Nested Modular Blocks**
 
@@ -4256,12 +4255,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### Greater Than Or Equal To Operator
 
 #### Try 'Greater Than Or Equal To' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries in which the value of a field is greater than or equal to the value provided in the condition.
 
@@ -4283,10 +4282,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Price in USD’ fields.
 
+
 #### Try 'Greater Than Or Equal To' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Greater Than Or Equal To Operator within Group
 
@@ -4312,10 +4311,10 @@ query {
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Price in USD’ fields.
 
+
 #### Try 'Greater Than Or Equal To' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Greater Than Or Equal To Operator within Modular Blocks
 
@@ -4367,10 +4366,10 @@ query {
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
 
+
 #### Try 'Greater Than Or Equal To' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **Greater Than Or Equal To Operator within Nested Modular Blocks**
 
@@ -4445,12 +4444,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### Limit Operator
 
 #### Try 'Limit' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 The limit parameter will return a specific number of entries in the output. So for example, if the content type contains **more than 100** entries and you wish to fetch only the **first 2** entries, you need to specify '2' as the value in this parameter. Your query will look as follows:
 
@@ -4470,12 +4469,12 @@ query {
 The response body of this query will include only the first two entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Description’ fields.
 
 
+
 #### Skip Operator
 
 #### Try 'Skip' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 The skip parameter will skip a specific number of entries in the output. So, for example, if the content type contains around **12 entries** and you want to skip the **first 5** entries to get only the last 7 in the response body, you need to specify ‘5’ here. Your query will look as follows:
 
@@ -4495,12 +4494,12 @@ query {
 The response body of this query will skip the first five entries and only include the last seven entries of the **Product** content type that satisfy the query, displaying details of just the ‘Title’ and ‘Color’ fields.
 
 
+
 #### Order by Asc Operator
 
 #### Try 'Order by Asc' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 When fetching entries, you can sort them in the ascending order with respect to the value of the following system-defined fields in the response body:
 
@@ -4534,12 +4533,12 @@ query {
 The response body of this query will display all the entries of the Product content type that satisfy the query in an ascending order, including details of just the ‘Title’, ‘Color’, and ‘Price in USD’ fields.
 
 
+
 #### Order by Desc Operator
 
 #### Try 'Order by Desc' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 When fetching entries, you can sort them in the descending order with respect to the value of the following system-defined fields in the response body:
 
@@ -4572,12 +4571,12 @@ query {
 The response body of this query will display all the entries of the **Product** content type that satisfy the query in a descending order, including details of just the ‘Title’ and ‘Price in USD’ fields.
 
 
+
 #### Exists Operator
 
 #### Try 'Exists' Operator
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries if the value of the field mentioned in the condition exists.
 
@@ -4599,10 +4598,10 @@ query {
 
 The response body of this query will display all the entries of the **Product** content type that satisfy the query, including details of just the ‘Title’ and ‘Color’ fields.
 
+
 #### Try 'Exists' Operator within Group
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Exists Operator within Group
 
@@ -4629,10 +4628,10 @@ query {
 
 The response body of this query will display all the entries of the **Product** content type that satisfy the query, including details of just the ‘Title’, ‘Color’, and ‘Description’ fields.
 
+
 #### Try 'Exists' Operator within Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Exists Operator within Modular Blocks
 
@@ -4682,10 +4681,10 @@ query {
 
 The response body of this query will display details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
 
+
 #### Try 'Exists' Operator within Nested Modular Blocks
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **Exists Operator within Nested Modular Blocks**
 
@@ -4760,12 +4759,12 @@ query {
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
 
 
+
 #### Total
 
 #### Try 'Total' Function
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 The **total** field returns the number of entries for a specified content type.
 
@@ -4787,6 +4786,7 @@ query {
 ```
 
 The **total** field will display the number of entries where the ‘Price in USD’ field exists for a product within the response body, including details of just the ‘Title’ and ‘Price in USD’ fields.
+
 
 
 #### Count
@@ -4817,16 +4817,15 @@ The **count** field will display the entry details of the **Product** content ty
 
 #### Try 'Count' Function
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
+
 
 
 #### Pagination
 
 #### Try "Pagination"
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 When fetching all the entries of a particular content type, the GraphQL API allows you to provide arguments that paginate the response body.
 
@@ -4854,6 +4853,7 @@ query {
 ```
 
 The **total** field will display the number of entries where the ‘Price in USD’ field exists for a product within the response body, including details of just the ‘Title’, ‘Brand’, and ‘Price in USD’ fields. However, through the use of the skip and limit parameters, the response body will now only show the first seven matching entries initially.
+
 
 ### Image Transformations
 
@@ -4912,8 +4912,7 @@ Let us look at a few simple and complex examples to understand how Contentstack�
 
 #### Try 'Format' Parameter
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Let’s get started by using a single format parameter to understand how these parameters function.
 
@@ -4934,12 +4933,12 @@ query {
 This query will convert the current image format to a GIF format.
 
 
+
 #### Using Multiple Parameters
 
 #### Try 'Width' and 'Height' Parameters
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Let’s look at a few sample GraphQL queries that make use of multiple parameters.
 
@@ -4963,10 +4962,10 @@ This query will render an output image with width and height values of 650 and 4
 
 **Note**: We have also set the disable parameter to UPSCALE to disable the upscale image feature for the output image in the above image transformation query.
 
+
 #### Try 'Overlay' and 'Overlay Align' Parameters
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Using the Overlay and Overlay Align Parameters
 
@@ -4987,6 +4986,7 @@ query {
 ```
 
 This query will place the image lying at the specified URL on top of the original image. It will also align the overlay image toward the left side of the original image.
+
 
 ### Change Log
 

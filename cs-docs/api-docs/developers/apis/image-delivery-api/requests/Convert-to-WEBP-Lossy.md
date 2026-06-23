@@ -12,17 +12,16 @@ last_updated: 2025-08-28
 
 # Convert to WEBP Lossy
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
 
 Now let’s convert an image to **WEBP Lossless** format.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `webply`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| format | webply | Enter the format into which the source image needs to be converted. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

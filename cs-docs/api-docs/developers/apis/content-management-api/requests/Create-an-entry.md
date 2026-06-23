@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Create an entry
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries?locale={locale_code}`
 
 The Create an entry call creates a new entry for the selected content type.
 
@@ -73,28 +71,37 @@ Here's the JSON schema for both the cases:
 
 ##### Create an Entry with JSON RTE
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | Your_Authtoken |  |
+- **locale** (required)
+  Enter the code of the language in which you want your entry to be localized in.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique  |
-
-| locale | en-us | Enter the code of the language in which you want your entry to be localized in. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -105,7 +112,7 @@ Here's the JSON schema for both the cases:
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -126,3 +133,4 @@ Here's the JSON schema for both the cases:
 	}
 }
 ```
+

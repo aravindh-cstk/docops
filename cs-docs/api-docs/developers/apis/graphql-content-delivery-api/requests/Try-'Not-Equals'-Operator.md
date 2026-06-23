@@ -12,9 +12,7 @@ last_updated: 2023-03-28
 
 # Try 'Not Equals' Operator
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get all the entries in which the value of a field does not match the value provided in the condition.
 
@@ -36,3 +34,4 @@ query {
 ```
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title,’ ‘Size,’ and ‘Color’ fields.
+

@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Enable auto optimization and encode to progressive JPEG
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}&auto={auto}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}&auto={auto}`
 
 ##### Additional Notes
 
@@ -23,13 +21,15 @@ last_updated: 2025-08-28
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **auto** (optional)
+  Enter value for auto optimization of the image. It can either be webp or avif.
+  Default: `webp`
+- **format** (optional)
+  Enter the format that the image needs to be converted to for browsers that don’t support WEBP or AVIF.
+  Default: `pjpg`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| auto | webp | Enter value for auto optimization of the image. It can either be webp or avif. |
-
-| format | pjpg | Enter the format that the image needs to be converted to for browsers that don’t support WEBP or AVIF. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

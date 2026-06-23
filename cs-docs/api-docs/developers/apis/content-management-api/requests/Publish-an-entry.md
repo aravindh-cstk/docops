@@ -12,9 +12,7 @@ last_updated: 2025-09-23
 
 # Publish an entry
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/publish`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/publish`
 
 The Publish an entry request lets you publish an entry either immediately or schedule it for a later date/time.
 
@@ -35,28 +33,34 @@ In case of **Scheduled Publishing**, add the scheduled_at key and provide the da
 
 **Note**: To publish localized entries, you must include the publish_all_localized=true query parameter. This feature is plan-based and might not be enabled by default for your organization. Reach out to our [support](mailto:support@contentstack.com) team to enable this feature for your organization.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to publish **Note:** In case you do not know the UID of your entry, use the ‘Get Entries’ call to get all the entries (along with the UIDs).
+  Default: `blt9965f5f9840923ba`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **api_version** (required)
+  Enter the API version to enable Nested Reference Publishing.
+  Default: `3.2`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| Content-Type | application/json |  |
-
-| api_version | 3.2 | Enter the API version to enable Nested Reference Publishing. |
-
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | product | Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of the content type and it is unique across |
-
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to publish **Note:** In case you do not know the UID of your entry, use the ‘Get Entries’ call to get all the ent |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -70,10 +74,11 @@ In case of **Scheduled Publishing**, add the scheduled_at key and provide the da
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
 	"notice": "The requested action has been performed."
 }
 ```
+

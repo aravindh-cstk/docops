@@ -12,24 +12,26 @@ last_updated: 2023-01-05
 
 # Get Resource Types
 
-
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/ResourceTypes`
+**GET** `scim/v2.0/organizations/{organization_uid}/ResourceTypes`
 
 The Get Resource Types request returns the list of available resource types like Users or Groups.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](https://app.contentstack.com/docs/developers/apis/content-management-api/#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-| Content-Type | application/json | The format of the response content. |
+## Headers
 
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
 
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](https://app.contentstack.com/docs/developers/apis/content-management-api/#get-all-organizations) re |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -69,3 +71,4 @@ The Get Resource Types request returns the list of available resource types like
     ]
 }
 ```
+

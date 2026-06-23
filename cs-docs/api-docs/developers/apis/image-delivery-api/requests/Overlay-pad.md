@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Overlay pad
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-pad={top_value},{right_value},{bottom_value},{left_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-pad={top_value},{right_value},{bottom_value},{left_value}`
 
 ##### Additional Notes
 
@@ -27,13 +25,15 @@ last_updated: 2025-08-28
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **overlay** (optional)
+  Specify the relative URL of the image that needs to be set as overlay image.
+  Default: `/v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png`
+- **overlay-pad** (optional)
+  Specify padding values for top, right, bottom, and left edges of the overlay image in pixels or percentage.
+  Default: `25,50,75,100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| overlay | /v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png | Specify the relative URL of the image that needs to be set as overlay image. |
-
-| overlay-pad | 25,50,75,100 | Specify padding values for top, right, bottom, and left edges of the overlay image in pixels or percentage. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

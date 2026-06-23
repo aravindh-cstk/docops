@@ -12,9 +12,7 @@ last_updated: 2023-12-05
 
 # Create a term
 
-
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms`
+**POST** `/taxonomies/{taxonomy_uid}/terms`
 
 The Create a term request creates a term in a particular taxonomy within your stack.
 
@@ -50,26 +48,37 @@ When creating terms at the child level, the request body should look like this:
 
 ##### Update a term
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_children_count** (optional)
+  Set this parameter to 'true' to include in response the total count of child terms available in the parent term.
+  Default: `true`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which the term is added.
+  Default: `true`
 
-| authorization | your_management_token	 | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)'  |
-
-| include_children_count | true | Set this parameter to 'true' to include in response the total count of child terms available in the parent term. |
-
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which the term is added. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -82,7 +91,7 @@ When creating terms at the child level, the request body should look like this:
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -98,3 +107,4 @@ When creating terms at the child level, the request body should look like this:
     }
 }
 ```
+

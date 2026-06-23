@@ -12,38 +12,50 @@ last_updated: 2024-10-16
 
 # Get single entry variant
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/variants/{variant_uid}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}/variants/{variant_uid}`
 
 The Get single entry variant request retrieves a single variant entry of a given base entry.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `your_entry_uid`
+- **variant_uid** (required)
+  Enter the unique ID of your variant.
+  Default: `your_variant_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale** (optional)
+  Enter the code of the language for the entry you want to update.
+  Default: `en-us`
+- **include_workflow** (optional)
+  Enter “true” to include the workflow details of the entry.
+  Default: `true`
+- **include_publish_details** (optional)
+  Enter “true” to include the publish details of the entry.
+  Default: `true`
+- **include_rules** (optional)
+  Enter “true” to include the publishing rules for the entry.
+  Default: `true`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| content_type_uid | your_content_type_uid | Enter the unique ID of your content type. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
 
-| entry_uid | your_entry_uid | Enter the unique ID of your entry. |
-
-| variant_uid | your_variant_uid | Enter the unique ID of your variant. |
-
-| locale | en-us | Enter the code of the language for the entry you want to update. |
-
-| include_workflow | true | Enter “true” to include the workflow details of the entry. |
-
-| include_publish_details | true | Enter “true” to include the publish details of the entry. |
-
-| include_rules | true | Enter “true” to include the publishing rules for the entry. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -100,3 +112,4 @@ The Get single entry variant request retrieves a single variant entry of a given
     }
 }
 ```
+

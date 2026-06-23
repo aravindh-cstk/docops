@@ -12,9 +12,7 @@ last_updated: 2025-07-25
 
 # Get a single label
 
-
-**Method:** `GET`  
-**Endpoint:** `/labels/{label_uid}`
+**GET** `/labels/{label_uid}`
 
 The Get a single label call returns information about a particular label of a stack.
 
@@ -22,24 +20,33 @@ When executing the API call, add the label_uid as a URL parameter and management
 
 To configure the permissions for your application via OAuth, please include the cm.labels.management:readscope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **label_uid** (required)
+  Enter the unique ID of the label that you want to retrieve.
+  Default: `blt5d1761bce4b36d57`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| label_uid | blt5d1761bce4b36d57 | Enter the unique ID of the label that you want to retrieve. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -56,3 +63,4 @@ To configure the permissions for your application via OAuth, please include the 
 	}]
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Unpublish entries and assets in bulk
 
-
-**Method:** `POST`  
-**Endpoint:** `/bulk/unpublish?skip_workflow_stage_check={boolean_value}&approvals={boolean_value}`
+**POST** `/bulk/unpublish?skip_workflow_stage_check={boolean_value}&approvals={boolean_value}`
 
 The Unpublish entries and assets in bulk request allows you to unpublish multiple entries and assets at the same time.   
 To configure the permissions for your application via OAuth, please include the cm.bulk-operations:unpublish scope.
@@ -35,26 +33,34 @@ When you use skip_workflow_stage_check=true as a query parameter, the entries th
 
 When you use approvals=true as a query parameter, the entries that satisfy the publish rules are sent for unpublishing, while those entries that have not yet received authorization from the approver assigned to them will not be sent for unpublishing. However, if you set this parameter to false and some of the entries included in the bulk unpublish request have not yet received authorization from the approver assigned to them, then all the entries selected will not be sent for unpublishing.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **skip_workflow_stage_check** (optional)
+  Set this to 'true' to publish the entries that are at a workflow stage where they satisfy the applied publish rules.
+  Default: `true`
+- **approvals** (optional)
+  Set this to 'true' to publish the entries that do not require an approval to be published.
+  Default: `true`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+- **api_version** (optional)
+  Enter the API version to enable Nested Reference Publishing.
+  Default: `3.2`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| branch | main | Enter your branch unique ID. |
-
-| api_version | 3.2 | Enter the API version to enable Nested Reference Publishing. |
-
-| skip_workflow_stage_check | true | Set this to 'true' to publish the entries that are at a workflow stage where they satisfy the applied publish rules. |
-
-| approvals | true | Set this to 'true' to publish the entries that do not require an approval to be published. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -100,7 +106,7 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -108,3 +114,4 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
     "job_id": "24bdfd068-95b2-4fbd-c47a-365e0534dcb3"
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-07-30
 
 # IN Operator
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"taxonomies.taxonomy_uid" : { "$in" : ["term_uid1" , "term_uid2" ] }}`
+**GET** `/taxonomies/entries?query={"taxonomies.taxonomy_uid" : { "$in" : ["term_uid1" , "term_uid2" ] }}`
 
 Get all entries for a specific taxonomy that satisfy the given conditions provided in the "$in" query.
 
@@ -32,18 +30,22 @@ query={"taxonomies.color" : { "$in" : ["red" , "yellow" ] }}
 
 ##### OR Operator [Taxonomy]
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"taxonomies.color" : { "$in" : ["red" , "yellow" ] }}`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
 
-| query | {"taxonomies.color" : { "$in" : ["red" , "yellow" ] }} | Provide a custom query in the string format. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -98,3 +100,4 @@ query={"taxonomies.color" : { "$in" : ["red" , "yellow" ] }}
     ]
 }
 ```
+

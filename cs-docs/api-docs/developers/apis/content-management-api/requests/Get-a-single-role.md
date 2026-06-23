@@ -12,31 +12,38 @@ last_updated: 2024-02-28
 
 # Get a single role
 
-
-**Method:** `GET`  
-**Endpoint:** `/roles/{role_uid}?include_permissions={include_permissions}&include_rules={include_rules}`
+**GET** `/roles/{role_uid}?include_permissions={include_permissions}&include_rules={include_rules}`
 
 The Get a single role request returns comprehensive information on a specific role.  
 To configure the permissions for your application via OAuth, please include the cm.roles.management:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **role_uid** (required)
+  Enter the unique ID of the role of which you want to retrieve the details.
+  Default: `blt0123123b123733`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_permissions** (optional)
+  Set this parameter to 'true' to include the details of the permissions assigned to a particular role.
+  Default: `true`
+- **include_rules** (optional)
+  Set this to ‘true’ to include the details of the rules assigned to a particular role.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Headers
 
-| role_uid | blt0123123b123733 | Enter the unique ID of the role of which you want to retrieve the details. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| include_permissions | true | Set this parameter to 'true' to include the details of the permissions assigned to a particular role. |
-
-| include_rules | false | Set this to ‘true’ to include the details of the rules assigned to a particular role. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -102,3 +109,4 @@ To configure the permissions for your application via OAuth, please include the 
   }
 }
 ```
+

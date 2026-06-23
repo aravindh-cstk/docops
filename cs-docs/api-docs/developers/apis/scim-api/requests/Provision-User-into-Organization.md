@@ -12,26 +12,28 @@ last_updated: 2023-01-05
 
 # Provision User into Organization
 
-
-**Method:** `POST`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users`
+**POST** `scim/v2.0/organizations/{organization_uid}/Users`
 
 The Provision User into Organization request adds the user to a Contentstack organization.
 
 If the user does not already exist in Contentstack, you can add the new user to the organization by using this request.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-| Content-Type | application/json | The format of the response content. |
+## Headers
 
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
 
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the o |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -44,7 +46,7 @@ If the user does not already exist in Contentstack, you can add the new user to 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -73,3 +75,4 @@ If the user does not already exist in Contentstack, you can add the new user to 
     }
 }
 ```
+

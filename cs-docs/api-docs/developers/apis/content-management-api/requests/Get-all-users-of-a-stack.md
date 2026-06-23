@@ -12,24 +12,20 @@ last_updated: 2023-01-31
 
 # Get all users of a stack
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/users`
+**GET** `/stacks/users`
 
 The Get all users of a stack call fetches the list of all users of a particular stack
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| api_key | API_key_of_your_stack |  |
-
-| authtoken | Your_Authtoken |  |
-
-| Content-Type | application/json |  |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -55,3 +51,4 @@ The Get all users of a stack call fetches the list of all users of a particular 
 	}]
 }
 ```
+

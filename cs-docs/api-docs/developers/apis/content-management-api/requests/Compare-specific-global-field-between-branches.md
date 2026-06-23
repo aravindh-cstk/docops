@@ -12,30 +12,38 @@ last_updated: 2023-07-26
 
 # Compare specific global field between branches
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_compare/global_fields/{global_field_uid}?base_branch=main&compare_branch=redesign&include_schemas=true`
+**GET** `/stacks/branches_compare/global_fields/{global_field_uid}?base_branch=main&compare_branch=redesign&include_schemas=true`
 
 The  Compare specific global field between branches request returns all the differences of the specified global field between the two specified branches.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **global_field_uid** (required)
+  Enter the unique ID of the global field  of which you want to retrieve the difference. The UID is generated based on the title of the global field. The unique ID of a global field is unique across a stack.
+  Default: `global_field_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **base_branch** (optional)
+  The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default.
+  Default: `main`
+- **compare_branch** (required)
+  Enter the branch you want to compare with the base branch.
+  Default: `redesign`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| global_field_uid | global_field_uid | Enter the unique ID of the global field  of which you want to retrieve the difference. The UID is generated based on the title of the global field. The unique I |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
 
-| base_branch | main | The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default. |
-
-| compare_branch | redesign | Enter the branch you want to compare with the base branch. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -147,3 +155,4 @@ The  Compare specific global field between branches request returns all the diff
    }
 }
 ```
+

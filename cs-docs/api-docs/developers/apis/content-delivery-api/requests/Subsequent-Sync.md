@@ -12,9 +12,7 @@ last_updated: 2026-02-19
 
 # Subsequent Sync
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/sync?sync_token={sync_token}`
+**GET** `/stacks/sync?sync_token={sync_token}`
 
 The Subsequent Sync request is used to retrieve the updated content (i.e., published or unpublished content, or any published content that has been deleted) since the last performed complete Sync.
 
@@ -22,20 +20,24 @@ In this API request, you need to provide the sync_token that you received in the
 
 **Tip:** Once you have performed the Initial Sync process, you do not need to perform it again. For retrieving the subsequent delta changes, use the sync_token received either in the Initial Sync process or the previous Subsequent Sync requests to sync new changes. Also, when executing the API request, pass the Delivery Token as the value to the access_token parameter.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **sync_token** (required)
+  Enter the sync token that you received in the response body of the previous completed Synchronization process to get the delta updates
+  Default: `csb17b3a47ffa057cb0b9d938c59e13ed3`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Default: `main`
 
-| branch | main |  |
-
-| sync_token | csb17b3a47ffa057cb0b9d938c59e13ed3 | Enter the sync token that you received in the response body of the previous completed Synchronization process to get the delta updates |
-
-**Response:**
+## Sample Response
 
 ```json
 {
@@ -72,3 +74,4 @@ In this API request, you need to provide the sync_token that you received in the
 	"sync_token": "blt1223344556677"
 }
 ```
+

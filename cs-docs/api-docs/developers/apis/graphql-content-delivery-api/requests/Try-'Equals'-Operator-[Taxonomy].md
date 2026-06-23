@@ -12,9 +12,7 @@ last_updated: 2024-04-17
 
 # Try 'Equals' Operator [Taxonomy]
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Equals Operator [Taxonomy]
 
@@ -43,3 +41,4 @@ query {
   }
 }
 ```
+

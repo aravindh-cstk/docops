@@ -12,9 +12,7 @@ last_updated: 2024-04-25
 
 # Upload Dashboard Widget
 
-
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Upload Dashboard Widget request uploads the widget to the Stack Dashboard.
 
@@ -27,24 +25,29 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 - extension[tags]: Enter the tags that you want to assign to the widget.
 - extension[type]: Enter type as ‘dashboard’, since this is a custom widget extension.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | multipart/form-data |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {  
@@ -74,3 +77,4 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
    }
 }
 ```
+

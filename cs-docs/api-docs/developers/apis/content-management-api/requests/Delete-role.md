@@ -12,30 +12,33 @@ last_updated: 2024-02-29
 
 # Delete role
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/roles/{role_uid}`
+**DELETE** `/roles/{role_uid}`
 
 The Delete role call deletes an existing role from your stack.  
 To configure the permissions for your application via OAuth, please include the cm.roles.management:write scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **role_uid** (required)
+  Enter the unique ID of the role that you want to delete.
+  Default: `bltc7aa14ea1959b252`
 
-| api_key | Enter the API key of your stack |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `Enter the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| role_uid | bltc7aa14ea1959b252 | Enter the unique ID of the role that you want to delete. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
   "notice": "The role deleted successfully."
 }
 ```
+

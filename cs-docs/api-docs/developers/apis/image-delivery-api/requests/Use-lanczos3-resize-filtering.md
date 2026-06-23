@@ -12,15 +12,14 @@ last_updated: 2025-08-28
 
 # Use lanczos3 resize filtering
 
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&resize-filter={value}`
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&resize-filter={value}`
+## Query Parameters
 
-**Parameters:**
+- **resize-filter** (optional)
+  Enter the filter that needs to be used for resizing the image.
+  Default: `lanczos3`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| Key | Value | Description |
-|-----|-------|-------------|
-
-| resize-filter | lanczos3 | Enter the filter that needs to be used for resizing the image. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

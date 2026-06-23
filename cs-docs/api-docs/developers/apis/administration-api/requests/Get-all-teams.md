@@ -12,38 +12,50 @@ last_updated: 2026-04-07
 
 # Get all teams
 
-
-**Method:** `GET`  
-**Endpoint:** `/organizations/{organization_uid}/teams`
+**GET** `/organizations/{organization_uid}/teams`
 
 The Get all teams request returns comprehensive information of all the teams available in your organization.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Query Parameters
 
-| api_version | 1.1 | Enter the API version. |
+- **includeUserDetails** (optional)
+  Set this parameter to “true” to include the details of users in the response.
+  Default: `true`
+- **asc** (optional)
+  Sort the response in ascending order.
+  Default: `created_at`
+- **desc** (optional)
+  Sort the response in descending order.
+  Default: `created_at`
+- **typeahead** (optional)
+  Retrieves responses that match the provided string.
+  Default: `sample`
+- **limit** (optional)
+  Enter the maximum number of teams to be returned.
+  Default: `2`
+- **skip** (optional)
+  Enter the number of teams to be skipped from the response body.
+  Default: `2`
+- **user_uid** (optional)
+  Enter the user UIDs in string format, separated by commas, for filtering.
+  Default: `user_uid_1, user_uid_2`
 
-| organization_uid | your_organization_uid | Enter the UID of your Organization. |
+## Headers
 
-| includeUserDetails | true | Set this parameter to “true” to include the details of users in the response. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **api_version** (required)
+  Enter the API version.
+  Default: `1.1`
 
-| asc | created_at | Sort the response in ascending order. |
-
-| desc | created_at | Sort the response in descending order. |
-
-| typeahead | sample | Retrieves responses that match the provided string. |
-
-| limit | 2 | Enter the maximum number of teams to be returned. |
-
-| skip | 2 | Enter the number of teams to be skipped from the response body. |
-
-| user_uid | user_uid_1, user_uid_2 | Enter the user UIDs in string format, separated by commas, for filtering. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -101,3 +113,4 @@ The Get all teams request returns comprehensive information of all the teams ava
     ]
 }
 ```
+

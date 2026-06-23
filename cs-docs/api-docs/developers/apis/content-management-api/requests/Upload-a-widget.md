@@ -12,9 +12,7 @@ last_updated: 2024-02-22
 
 # Upload a widget
 
-
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Upload a widget request is used to upload a new custom widget to a stack.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
@@ -29,24 +27,28 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 
 **Tip**: You can try the call manually in any REST API client, such as Postman. Under 'Body', for the extension[upload] parameter, select the input type as 'File'. This will enable you to select the file that you wish to import.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | Your_Authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | multipart/form-data |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -78,3 +80,4 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 	}
 }
 ```
+

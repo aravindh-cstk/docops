@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Resize image by lanczos
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -29,15 +27,18 @@ last_updated: 2025-08-28
 3. You can use the nearest filter to provide a natural pixelation effect while resizing the number of pixels in the given image.
 4. You can use the lanczos filter when you need to generate a new image with the best quality. The default value for this filter is lanczos3.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `500`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `550`
+- **resize-filter** (optional)
+  Enter the value for the resizing filter to be used to resize the image. The format of the parameter is: resize-filter={resize-filter_value}
+  Default: `lanczos3`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| width | 500 | Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p. |
-
-| height | 550 | Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p. |
-
-| resize-filter | lanczos3 | Enter the value for the resizing filter to be used to resize the image.  The format of the parameter is: resize-filter={resize-filter_value} |
-
-| environment | production | Enter the environment scoped to your delivery token. |

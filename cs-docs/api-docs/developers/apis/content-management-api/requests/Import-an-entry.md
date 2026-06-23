@@ -12,37 +12,46 @@ last_updated: 2024-03-21
 
 # Import an entry
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/import?locale={locale_code}&overwrite={overwrite}`
+**POST** `/content_types/{content_type_uid}/entries/import?locale={locale_code}&overwrite={overwrite}`
 
 The Import an entry call is used to import an entry. To import an entry, you need to upload a JSON file that has entry data in the format that fits the schema of the content type it is being imported to.   
 To configure the permissions for your application via OAuth, please include the cm.entries:import scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
 
-| api_key | blt20962a819b57e233 | Enter the API key of stack of which you wish to retrieve the content types. |
+## Query Parameters
 
-| authtoken | Your_Authtoken |  |
+- **locale** (optional)
+  Enter the code of the language to import the entry of that particular language.
+  Default: `en-us`
+- **overwrite** (optional)
+  Select 'true' to replace an existing entry with the imported entry file.
+  Default: `false`
+- **inclue_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | multipart/form-data |  |
+- **api_key** (required)
+  Enter the API key of stack of which you wish to retrieve the content types.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | product | Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of the content type and it is unique across |
-
-| locale | en-us | Enter the code of the language to import the entry of that particular language. |
-
-| overwrite | false | Select 'true' to replace an existing entry with the imported entry file. |
-
-| inclue_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -65,3 +74,4 @@ To configure the permissions for your application via OAuth, please include the 
 	}
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-08-09
 
 # Update webhook
 
-
-**Method:** `PUT`  
-**Endpoint:** `/webhooks/{webhook_uid}`
+**PUT** `/webhooks/{webhook_uid}`
 
 The Update webhook request allows you to update the details of an existing webhook in the stack.
 
@@ -96,22 +94,28 @@ When updating a webhook, you can specify the branch scope through the following 
 
 **Note**: To configure the permissions for applications that are using Contentstack OAuth, add the cm.webhooks.management:write user-related permission scope under the OAuth settings of your app in Developer Hub. For more details, refer to the [Contentstack OAuth documentation](https://www.contentstack.com/docs/developers/developer-hub/contentstack-oauth).
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **webhook_uid** (required)
+  Enter the UID of the webhook that you want to update. Execute the “Get all webhooks” request to retrieve the UID of a webhook.
+  Default: `csbe27cf64-3abd-86b4-970e-1f11b14e2705`
 
-| api_key | your_stack_api_key | Enter the API key of your stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| webhook_uid | csbe27cf64-3abd-86b4-970e-1f11b14e2705 | Enter the UID of the webhook that you want to update. Execute the “Get all webhooks” request to retrieve the UID of a webhook. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -145,7 +149,7 @@ When updating a webhook, you can specify the branch scope through the following 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -189,3 +193,4 @@ When updating a webhook, you can specify the branch scope through the following 
     }
 }
 ```
+

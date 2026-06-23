@@ -12,9 +12,7 @@ last_updated: 2024-02-28
 
 # Update fallback language
 
-
-**Method:** `PUT`  
-**Endpoint:** `/locales/{locale_uid}`
+**PUT** `/locales/{locale_uid}`
 
 The Update fallback language request allows you to update the fallback language for an existing language of your stack.
 
@@ -25,26 +23,36 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: The language set as a fallback language will always inherit data from the master language if it does not have localized content.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **locale_code** (required)
+  Enter the language code of the language that you want to assign as a fallback language for an existing language of your stack.
+  Default: `zh-cn`
 
-| api_key | the API key of your stack |  |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Default: `the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| locale_code | zh-cn | Enter the language code of the language that you want to assign as a fallback language for an existing language of your stack. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -56,7 +64,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -75,3 +83,4 @@ To configure the permissions for your application via OAuth, please include the 
     }
 }
 ```
+

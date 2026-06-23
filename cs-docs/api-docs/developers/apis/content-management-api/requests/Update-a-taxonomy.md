@@ -12,30 +12,38 @@ last_updated: 2025-11-13
 
 # Update a taxonomy
 
-
-**Method:** `PUT`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+**PUT** `/taxonomies/{taxonomy_uid}`
 
 The Update a taxonomy request is used to update the details of an existing taxonomy available in a particular stack.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale** (optional)
+  Locale in which to update the taxonomy. If not specified, the master locale is used.
+  Default: `es-es`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)'  |
-
-| locale | es-es | Locale in which to update the taxonomy. If not specified, the master locale is used. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -46,7 +54,7 @@ The Update a taxonomy request is used to update the details of an existing taxon
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -62,3 +70,4 @@ The Update a taxonomy request is used to update the details of an existing taxon
     }
 }
 ```
+

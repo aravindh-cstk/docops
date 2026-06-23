@@ -12,9 +12,7 @@ last_updated: 2025-05-13
 
 # Add stack settings
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/settings`
+**POST** `/stacks/settings`
 
 The Add stack settings request lets you add additional settings for your existing stack.
 
@@ -66,18 +64,19 @@ Here’s a sample of the Request Body:
 
 If you exclusively set "cs_only_breakline": true within the "rte" parameter, it ensures that only a <br> tag is inserted in the "Rich Text Editor" field when the content manager presses "Enter". Conversely, when this parameter is set to false, the <br> tag is substituted with <p></p>.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| api_key | API_key_of_your_stack | Enter the API key of your stack. |
-
-| authtoken | Your_Authtoken | Enter your authtoken. |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -100,7 +99,7 @@ If you exclusively set "cs_only_breakline": true within the "rte" parameter, it 
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -128,3 +127,4 @@ If you exclusively set "cs_only_breakline": true within the "rte" parameter, it 
     }
 }
 ```
+

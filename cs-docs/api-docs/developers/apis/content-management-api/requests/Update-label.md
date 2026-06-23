@@ -12,9 +12,7 @@ last_updated: 2025-07-25
 
 # Update label
 
-
-**Method:** `PUT`  
-**Endpoint:** `/labels/{label_uid}`
+**PUT** `/labels/{label_uid}`
 
 The Update label call is used to update an existing label.
 
@@ -23,26 +21,36 @@ When executing the API call add the label_uid as a URL parameter and management_
 In the 'Body' section, enter the updated details of your label, which include the name of the label, the uid of the parent label, and the content types that need to be included in the label. These details need to be provided in JSON format.  
 To configure the permissions for your application via OAuth, please include the cm.labels.management:writescope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **label_uid** (required)
+  Enter the unique ID of the label that needs to be updated.
+  Default: `blt5d1761bce4b36d57`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| label_uid | blt5d1761bce4b36d57 | Enter the unique ID of the label that needs to be updated. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -58,7 +66,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -79,3 +87,4 @@ To configure the permissions for your application via OAuth, please include the 
 	}
 }
 ```
+

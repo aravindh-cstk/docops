@@ -12,27 +12,30 @@ last_updated: 2024-02-22
 
 # Delete a project
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/v1/projects/{project_uid}`
+**DELETE** `/v1/projects/{project_uid}`
 
 The Delete a project request lets you delete an existing project in an organization.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `f208798e666b45c89c66e66752dd4422`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
+## Headers
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
 
-| project_uid | f208798e666b45c89c66e66752dd4422 | Enter the Project UID. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
     "message": "Project deleted successfully."
 }
 ```
+

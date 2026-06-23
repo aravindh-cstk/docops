@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Canvas and offset
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -33,11 +31,12 @@ last_updated: 2025-08-28
 7. The x parameter can be used without y (and vice versa), and the offset-x parameter can be used without offset-y (and vice versa).
 8. The canvas parameter takes precedence over the pad parameter if both are used in the same request.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **canvas** (optional)
+  Enter the width, height, horizontal offset, vertical offset of the canvas area in pixels or percentage. The format of the parameter is:canvas={width_value},{height_value},offset-x{value},offset-y{value}
+  Default: `700,800,offset-x0.65,offset-y0.80`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| canvas | 700,800,offset-x0.65,offset-y0.80 | Enter the width, height, horizontal offset, vertical offset of the canvas area in pixels or percentage.  The format of the parameter is:canvas={width_value},{he |
-
-| environment | production | Enter the environment scoped to your delivery token. |

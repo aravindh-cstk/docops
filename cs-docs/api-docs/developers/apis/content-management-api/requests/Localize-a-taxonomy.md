@@ -12,30 +12,38 @@ last_updated: 2025-11-13
 
 # Localize a taxonomy
 
-
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+**POST** `/taxonomies/{taxonomy_uid}`
 
 The Localize a taxonomy request is used to add translated values to a taxonomy for specific locales available in your stack.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `global_content_topics`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale** (required)
+  The locale in which the taxonomy should be localized.
+  Default: `fr-fr`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| taxonomy_uid | global_content_topics | Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/api |
-
-| locale | fr-fr | The locale in which the taxonomy should be localized. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -47,7 +55,7 @@ The Localize a taxonomy request is used to add translated values to a taxonomy f
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -63,3 +71,4 @@ The Localize a taxonomy request is used to add translated values to a taxonomy f
     }
 }
 ```
+

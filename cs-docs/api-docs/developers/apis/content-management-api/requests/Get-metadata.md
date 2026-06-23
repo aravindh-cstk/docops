@@ -12,9 +12,7 @@ last_updated: 2025-07-28
 
 # Get metadata
 
-
-**Method:** `GET`  
-**Endpoint:** `/metadata/{metadata_uid}`
+**GET** `/metadata/{metadata_uid}`
 
 The Get metadata request fetches the metadata attached to a specific asset or entry of a stack.
 
@@ -25,28 +23,40 @@ Keep the following points in mind when getting metadata:
 - To retrieve metadata for a specific entry or asset, you need to have read access to that entry or asset.
 - You must pass the include_publish_details query parameter to fetch the metadata publishing details in the response.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **metadata_uid** (required)
+  Enter the unique ID of the metadata that you want to fetch. You can find the metadata UID by running the [Get all assets](#get-all-assets) API request or [Get all entries](#get-all-entries) API request.
+  Default: `cs3cbeeef5a398bf0f`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+- **include_publish_details** (optional)
+  Enter 'true' to include the publish details of the entry.
+  Default: `false`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch or alias unique ID. |
-
-| metadata_uid | cs3cbeeef5a398bf0f | Enter the unique ID of the metadata that you want to fetch. You can find the metadata UID by running the [Get all assets](#get-all-assets) API request or [Get a |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-| include_publish_details | false | Enter 'true' to include the publish details of the entry. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -75,3 +85,4 @@ Keep the following points in mind when getting metadata:
     }
 }
 ```
+

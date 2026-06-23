@@ -12,9 +12,7 @@ last_updated: 2023-03-30
 
 # Try 'Less Than Or Equal To' Operator within Modular Blocks
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Less Than Or Equal To Operator within Modular Blocks
 
@@ -65,3 +63,4 @@ query {
 ```
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields of the ‘Deals’ block.
+

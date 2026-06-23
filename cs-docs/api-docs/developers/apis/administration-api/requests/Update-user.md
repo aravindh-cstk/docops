@@ -12,9 +12,7 @@ last_updated: 2026-04-07
 
 # Update user
 
-
-**Method:** `PUT`  
-**Endpoint:** `/user`
+**PUT** `/user`
 
 The Update User API Request updates the details of an existing user account. Only the information entered here will be updated, the existing data will remain unaffected.
 
@@ -22,16 +20,14 @@ When executing the API call, under the 'Body' section, enter the information of 
 
 **Additional Resource:** To update the role of an existing user, refer to the [Update Existing User Role](#update-existing-user-role) API Request.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **authtoken** (required)
+  Default: `Enter_your_authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| authtoken | Enter_your_authtoken |  |
-
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -41,7 +37,7 @@ When executing the API call, under the 'Body' section, enter the information of 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -105,3 +101,4 @@ When executing the API call, under the 'Body' section, enter the information of 
         "password_reset_required": false
 }
 ```
+

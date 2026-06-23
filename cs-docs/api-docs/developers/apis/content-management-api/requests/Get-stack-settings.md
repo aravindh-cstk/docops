@@ -12,22 +12,18 @@ last_updated: 2023-03-11
 
 # Get stack settings
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/settings`
+**GET** `/stacks/settings`
 
 The Get stack settings call retrieves the configuration settings of an existing stack.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
 
-| api_key | API_key_of_your_stack |  |
-
-| authtoken | Your_Authtoken |  |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -49,3 +45,4 @@ The Get stack settings call retrieves the configuration settings of an existing 
     }
 }
 ```
+

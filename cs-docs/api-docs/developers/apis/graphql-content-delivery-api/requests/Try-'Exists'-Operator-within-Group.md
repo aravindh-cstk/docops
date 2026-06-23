@@ -12,9 +12,7 @@ last_updated: 2023-03-28
 
 # Try 'Exists' Operator within Group
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Exists Operator within Group
 
@@ -40,3 +38,4 @@ query {
 ```
 
 The response body of this query will display all the entries of the **Product** content type that satisfy the query, including details of just the ‘Title’, ‘Color’, and ‘Description’ fields.
+

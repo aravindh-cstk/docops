@@ -12,6 +12,5 @@ last_updated: 2024-10-18
 
 # Get Entry List with Variants
 
+**** `/stacks/apiKey/explore`
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`

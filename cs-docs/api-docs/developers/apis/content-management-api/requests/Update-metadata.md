@@ -12,9 +12,7 @@ last_updated: 2025-10-01
 
 # Update metadata
 
-
-**Method:** `PUT`  
-**Endpoint:** `/metadata/{metadata_uid}`
+**PUT** `/metadata/{metadata_uid}`
 
 The Update metadata request lets you update the metadata for a specific entry or asset.
 
@@ -34,24 +32,31 @@ Keep the following points in mind when updating metadata:
 - Once a metadata is updated, the associated entry or asset must be published or republished for the metadata to take effect.
 - You can provide any key name to store the metadata for your entry or asset except the following prebuilt keys: created_by, updated_by, created_at, updated_at, deleted_at, api_key, scope, locale, type, extension_uid, _version, publish_details.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **metadata_uid** (required)
+  Enter the unique ID of the metadata that you want to update. You can find the metadata UID by running the [Get all assets](#get-all-assets) or [Get all entries](#get-all-entries) API request.
+  Default: `cs112ba1c547a3488c`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-
-| branch | main | Enter your branch or alias unique ID. |
-
-| metadata_uid | cs112ba1c547a3488c | Enter the unique ID of the metadata that you want to update. You can find the metadata UID by running the [Get all assets](#get-all-assets) or [Get all entries] |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -88,7 +93,7 @@ Keep the following points in mind when updating metadata:
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -134,3 +139,4 @@ Keep the following points in mind when updating metadata:
     }
 }
 ```
+

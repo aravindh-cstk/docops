@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Replace Users in Group
 
-
-**Method:** `PATCH`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+**PATCH** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
 The Replace Users in Group request replaces the existing set of users with a new set of users.
 
@@ -24,20 +22,25 @@ This request removes all the existing users from a group and replaces them with 
 
 This also revokes admin access for users with admin role, unless that user has been assigned an admin role by some other group as well. The same logic applies to stack roles as well.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **group_id** (required)
+  The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
+  Default: `your_group_id`
 
-| Content-Type | application/json | The format of the response content. |
+## Headers
 
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
 
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the o |
-
-| group_id | your_group_id | The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -61,7 +64,7 @@ This also revokes admin access for users with admin role, unless that user has b
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -88,3 +91,4 @@ This also revokes admin access for users with admin role, unless that user has b
     }
 }
 ```
+

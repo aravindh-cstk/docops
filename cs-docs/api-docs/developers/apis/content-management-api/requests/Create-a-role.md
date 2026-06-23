@@ -12,9 +12,7 @@ last_updated: 2024-06-10
 
 # Create a role
 
-
-**Method:** `POST`  
-**Endpoint:** `/roles`
+**POST** `/roles`
 
 The Create a role request creates a new role in a stack.
 
@@ -110,20 +108,22 @@ To add taxonomy specific permissions, follow the following schema in your reques
     }
 ```
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **api_key** (required)
+  Enter the API key of your stack
+  Default: `your_api_key`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| api_key | your_api_key | Enter the API key of your stack |
-
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -207,7 +207,7 @@ To add taxonomy specific permissions, follow the following schema in your reques
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -307,3 +307,4 @@ To add taxonomy specific permissions, follow the following schema in your reques
     }
 }
 ```
+

@@ -12,28 +12,34 @@ last_updated: 2023-01-05
 
 # Get Single User By Username
 
-
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users?filter=userName eq "<<email-address>>"`
+**GET** `scim/v2.0/organizations/{organization_uid}/Users?filter=userName eq "<<email-address>>"`
 
 The Get Single User by Username request returns comprehensive details of a specific user that exists in the Contentstack organization.
 
 You need to pass the username as a query parameter.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-| Content-Type | application/json | The format of the response content. |
+## Query Parameters
 
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
+- **filter** (required)
+  Specify the type of filter you want to use. In this case, the filter will be “userName eq”
+  Default: `userName eq "user.name@contentstack.com"`
 
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the o |
+## Headers
 
-| filter | userName eq "user.name@contentstack.com" | Specify the type of filter you want to use. In this case, the filter will be “userName eq” |
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -72,3 +78,4 @@ You need to pass the username as a query parameter.
     ]
 }
 ```
+

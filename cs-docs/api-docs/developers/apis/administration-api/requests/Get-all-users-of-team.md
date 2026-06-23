@@ -12,9 +12,7 @@ last_updated: 2026-04-07
 
 # Get all users of team
 
-
-**Method:** `GET`  
-**Endpoint:** `/organizations/{organization_uid}/teams/{team_uid}/users`
+**GET** `/organizations/{organization_uid}/teams/{team_uid}/users`
 
 The Get all users of team request retrieves information about all the users associated with a particular team.
 
@@ -22,22 +20,31 @@ Additionally, you can also set the query parameters: includeUserDetails or inclu
 
 ##### Add users to team
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **team_uid** (required)
+  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Default: `team_uid`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Query Parameters
 
-| organization_uid | your_organization_uid | Enter the UID of your Organization. |
+- **includeUserDetails** (optional)
+  Set this parameter to “true” to include the details of users in the response.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to “true” to include the total count of users in the response.
+  Default: `true`
 
-| team_uid | team_uid | Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/ |
+## Headers
 
-| includeUserDetails | true | Set this parameter to “true” to include the details of users in the response. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| include_count | true | Set this parameter to “true” to include the total count of users in the response. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -82,3 +89,4 @@ Additionally, you can also set the query parameters: includeUserDetails or inclu
     "count": 4
 }
 ```
+

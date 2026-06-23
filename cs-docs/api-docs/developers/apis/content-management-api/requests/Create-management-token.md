@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Create management token
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/management_tokens`
+**POST** `/stacks/management_tokens`
 
 The Create management token request is used to create a management token in a stack. This token provides you with read-write access to the content of your stack.
 
@@ -50,18 +48,19 @@ the branch and alias scope for your management token through the following schem
 
 **Note**: You can generate a maximum of 10 management tokens for a specific stack within your organization.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -103,7 +102,7 @@ the branch and alias scope for your management token through the following schem
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -151,3 +150,4 @@ the branch and alias scope for your management token through the following schem
     }
 }
 ```
+

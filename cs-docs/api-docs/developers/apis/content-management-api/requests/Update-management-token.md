@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Update management token
 
-
-**Method:** `PUT`  
-**Endpoint:** `/stacks/management_tokens/{token_uid}`
+**PUT** `/stacks/management_tokens/{token_uid}`
 
 The Update management token request lets you update the details of a management token. You can change the name and description of the token; update the stack-level permissions assigned to the token; and change the expiry date of the token (if set).
 
@@ -45,20 +43,25 @@ To specify the updated branch and alias scope for your management token, use the
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **token_uid** (required)
+  Enter the UID of the management token that you want to update.
+  Default: `blt3c33b3833884482`
 
-| api_key | your_stack_api_key | Enter the API key of your stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| token_uid | blt3c33b3833884482 | Enter the UID of the management token that you want to update. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -106,7 +109,7 @@ To specify the updated branch and alias scope for your management token, use the
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -159,3 +162,4 @@ To specify the updated branch and alias scope for your management token, use the
     }
 }
 ```
+

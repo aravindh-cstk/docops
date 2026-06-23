@@ -118,8 +118,7 @@ Learn more about how to [get started with using the Postman Collection](/docs/de
 
 #### Get all projects
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
+**GET** `/v1/projects?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
 
 The Get all projects request returns comprehensive information of all the projects related to the Organization in which they are created.
 
@@ -127,19 +126,34 @@ To configure the permissions for your application via OAuth, include the automat
 
 **Note:** If you do not specify a value for the optional “limit” query parameter, the API request will by default return the initial 100 items.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| limit | 30 | The “limit” parameter will return a specific number of projects (in between 0-100) in your response based on the value y |
-| skip | 2 | The “skip” parameter will skip a specific number of projects and return the remaining ones in your response based on the |
-| asc | created_at | The “asc” parameter allows you to sort the list of projects in the ascending order with respect to the value of a specif |
-| desc | created_at | The “desc” parameter allows you to sort the list of projects in the descending order with respect to the value of a spec |
-| include_count | true | Set this to “true” to include the total number (count) of projects in an organization. |
+- **limit** (optional)
+  The “limit” parameter will return a specific number of projects (in between 0-100) in your response based on the value you provide. If there are 100 projects and you want to fetch only 30 projects, set the limit as 30.
+  Default: `30`
+- **skip** (optional)
+  The “skip” parameter will skip a specific number of projects and return the remaining ones in your response based on the value you provide.  If there are 12 projects and you want to exclude the first 2 projects, set this to 2 to fetch the remaining 10 projects.
+  Default: `2`
+- **asc** (optional)
+  The “asc” parameter allows you to sort the list of projects in the ascending order with respect to the value of a specific field. The projects can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **desc** (optional)
+  The “desc” parameter allows you to sort the list of projects in the descending order with respect to the value of a specific field. The projects can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **include_count** (optional)
+  Set this to “true” to include the total number (count) of projects in an organization.
+  Default: `true`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -197,26 +211,33 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Get a Single Project
 
 #### Get a single project
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}`
+**GET** `/v1/projects/{project_uid}`
 
 The Get a single project request fetches a specific project created in your organization. When executing the API request, you need to provide the organization UID and your authtoken in the Request Header.
 
 To configure the permissions for your application via OAuth, include the automationhub.projects.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -235,26 +256,30 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Create a Project
 
 #### Create a project
 
-**Method:** `POST`  
-**Endpoint:** `/v1/projects`
+**POST** `/v1/projects`
 
 The Create a project request lets you create a project in your organization.
 
 To configure the permissions for your application via OAuth, include the automationhub.projects.management:writescope.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -264,7 +289,7 @@ To configure the permissions for your application via OAuth, include the automat
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -284,12 +309,12 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Update a Project
 
 #### Update a project
 
-**Method:** `PUT`  
-**Endpoint:** `/v1/projects/{project_uid}`
+**PUT** `/v1/projects/{project_uid}`
 
 The Update a project request lets you update certain details such as the description, tags, and title of an existing project in an Organization.
 
@@ -305,16 +330,25 @@ Here’s an example of the Request body:
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-**Request Body:**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -324,7 +358,7 @@ Here’s an example of the Request body:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -345,30 +379,38 @@ Here’s an example of the Request body:
 ```
 
 
+
 #### Delete a Project
 
 #### Delete a project
 
-**Method:** `DELETE`  
-**Endpoint:** `/v1/projects/{project_uid}`
+**DELETE** `/v1/projects/{project_uid}`
 
 The Delete a project request lets you delete an existing project in an organization.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | f208798e666b45c89c66e66752dd4422 | Enter the Project UID. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `f208798e666b45c89c66e66752dd4422`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
     "message": "Project deleted successfully."
 }
 ```
+
 
 ### Automations
 
@@ -377,8 +419,7 @@ The Delete a project request lets you delete an existing project in an organizat
 
 #### Get all automations
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/automations?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&show_steps={boolean_value}`
+**GET** `/v1/projects/{project_uid}/automations?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&show_steps={boolean_value}`
 
 The Get all automations request returns comprehensive information of all the automations created in a project.
 
@@ -388,21 +429,43 @@ To get a list of automations that are active, you need to pass the query={'activ
 
 **Note:** If you do not specify a value for the optional “limit” query parameter, the API request will by default return the initial 100 items.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID of the project. |
-| limit | 30 | The “limit” parameter will return a specific number of automations (in between 0-100) in your response based on the valu |
-| skip | 2 | The “skip” parameter will skip a specific number of automations and return the remaining ones in your response based on  |
-| asc | created_at | The “asc” parameter allows you to sort the list of automations in the ascending order with respect to the value of a spe |
-| desc | created_at | The “desc” parameter allows you to sort the list of automations in the descending order with respect to the value of a s |
-| include_count | true | Set this to “true” to include the total number (count) of automations present in a project accessible in an organization |
-| show_steps | true | Set this to “true” to return all the steps, triggers associated with each automation in a project. |
+- **project_uid** (required)
+  Enter the Project UID of the project.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  The “limit” parameter will return a specific number of automations (in between 0-100) in your response based on the value you provide. If there are 100 automations and you want to fetch only 30 automations, set the limit as 30.
+  Default: `30`
+- **skip** (optional)
+  The “skip” parameter will skip a specific number of automations and return the remaining ones in your response based on the value you provide. If there are 12 automations and you want to exclude the first 2 automations, set this to 2 to fetch the remaining 10 automations.
+  Default: `2`
+- **asc** (optional)
+  The “asc” parameter allows you to sort the list of automations in the ascending order with respect to the value of a specific field. The automations can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **desc** (optional)
+  The “desc” parameter allows you to sort the list of automations in the descending order with respect to the value of a specific field. The automations can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **include_count** (optional)
+  Set this to “true” to include the total number (count) of automations present in a project accessible in an organization.
+  Default: `true`
+- **show_steps** (optional)
+  Set this to “true” to return all the steps, triggers associated with each automation in a project.
+  Default: `true`
+
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -438,28 +501,42 @@ To get a list of automations that are active, you need to pass the query={'activ
 ```
 
 
+
 #### Get a Single Automation
 
 #### Get a single automation
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/automations/{automation_uid}?show_steps={boolean_value}`
+**GET** `/v1/projects/{project_uid}/automations/{automation_uid}?show_steps={boolean_value}`
 
 The Get a single automation request fetches a specific automation from a project in which it was created.
 
 To configure the permissions for your application via OAuth, include the automationhub.automations:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| automation_uid | e82a0f19673b4a808cd39743b71ae624 | Enter the Automation UID. |
-| show_steps | true | Set this to “true” to return all the steps, triggers associated with each automation in a project. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **automation_uid** (required)
+  Enter the Automation UID.
+  Default: `e82a0f19673b4a808cd39743b71ae624`
 
-**Response (200):**
+##### Query Parameters
+
+- **show_steps** (optional)
+  Set this to “true” to return all the steps, triggers associated with each automation in a project.
+  Default: `true`
+
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -478,12 +555,12 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Activate/Deactivate an Automation
 
 #### Activate/Deactivate an automation
 
-**Method:** `PATCH`  
-**Endpoint:** `/v1/projects/{project_uid}/automations/{automation_uid}`
+**PATCH** `/v1/projects/{project_uid}/automations/{automation_uid}`
 
 The Activate/Deactivate an automation request sets an automation to an active or inactive state.
 
@@ -491,16 +568,25 @@ To configure the permissions for your application via OAuth, include the automat
 
 **Note:** To activate/deactivate an automation, you must have a trigger and an action configured in your project.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| automation_uid | bb27e85b4b3b4fdbac4c19b7765b1d0f | Enter the Automation UID. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **automation_uid** (required)
+  Enter the Automation UID.
+  Default: `bb27e85b4b3b4fdbac4c19b7765b1d0f`
 
-**Request Body:**
+##### Headers
+
+- **authtoken** (optional)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Request
 
 ```json
 {
@@ -508,13 +594,14 @@ To configure the permissions for your application via OAuth, include the automat
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
     "message": "automation has been activated successfully"
 }
 ```
+
 
 ### Execution Logs
 
@@ -523,8 +610,7 @@ To configure the permissions for your application via OAuth, include the automat
 
 #### Get execution log
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/executions?&limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
+**GET** `/v1/projects/{project_uid}/executions?&limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
 
 The Get execution log request is used to retrieve the execution log of a project.
 
@@ -532,20 +618,40 @@ To configure the permissions for your application via OAuth, include the automat
 
 **Note:** If you do not specify a value for the optional “limit” query parameter, the API request will by default return the initial 100 items.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| limit | 30 | The “limit” parameter will return a specific number of execution log (in between 0-100) in your response based on the va |
-| skip | 2 | The “skip” parameter will skip a specific number of execution log and return the remaining ones in your response based o |
-| asc | created_at | The “asc” parameter allows you to sort the list of execution log in the ascending order with respect to the value of a s |
-| desc | created_at | The “desc” parameter allows you to sort the list of execution log in the descending order with respect to the value of a |
-| include_count | true | Set this to “true” to include the total number (count) of execution log in an organization. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  The “limit” parameter will return a specific number of execution log (in between 0-100) in your response based on the value you provide. If there are 100 execution log and you want to fetch only 30 execution log, set the limit as 30.
+  Default: `30`
+- **skip** (optional)
+  The “skip” parameter will skip a specific number of execution log and return the remaining ones in your response based on the value you provide. If there are 12 log and you want to exclude the first 2 log, set this to 2 to fetch the remaining 10 log.
+  Default: `2`
+- **asc** (optional)
+  The “asc” parameter allows you to sort the list of execution log in the ascending order with respect to the value of a specific field. The execution log can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **desc** (optional)
+  The “desc” parameter allows you to sort the list of execution log in the descending order with respect to the value of a specific field. The execution log can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **include_count** (optional)
+  Set this to “true” to include the total number (count) of execution log in an organization.
+  Default: `true`
+
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -603,27 +709,36 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Get an Execution Log Item
 
 #### Get an execution log item
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/executions/{execution_uid}`
+**GET** `/v1/projects/{project_uid}/executions/{execution_uid}`
 
 The Get an execution log item request is used to retrieve a specific item from the execution log of a project.
 
 To configure the permissions for your application via OAuth, include the automationhub.executions:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| execution_uid | 050efa54ebe646349619e1eaf40cd130 | Enter the UID of the specific execution log. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **execution_uid** (required)
+  Enter the UID of the specific execution log.
+  Default: `050efa54ebe646349619e1eaf40cd130`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -676,6 +791,7 @@ To configure the permissions for your application via OAuth, include the automat
 }
 ```
 
+
 ### Audit Logs
 
 
@@ -683,8 +799,7 @@ To configure the permissions for your application via OAuth, include the automat
 
 #### Get audit log
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/audit-logs?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
+**GET** `/v1/projects/{project_uid}/audit-logs?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
 
 The Get audit log request returns the audit log of a specific project.
 
@@ -692,20 +807,40 @@ To configure the permissions for your application via OAuth, include the automat
 
 **Note:** If you do not specify a value for the optional “limit” query parameter, the API request will by default return the initial 30 items.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| limit | 30 | The “limit” parameter will return a specific number of audit log (in between 0-100) in your response based on the value  |
-| skip | 2 | The “skip” parameter will skip a specific number of audit log and return the remaining ones in your response based on th |
-| asc | created_at | The “asc” parameter allows you to sort the list of audit log in the ascending order with respect to the value of a speci |
-| desc | created_at | The “desc” parameter allows you to sort the list of audit log in the descending order with respect to the value of a spe |
-| include_count | true | Set this to “true” to include the total number (count) of audit log in an organization. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  The “limit” parameter will return a specific number of audit log (in between 0-100) in your response based on the value you provide. If there are 100 audit log and you want to fetch only 30 audit log, set the limit as 30.
+  Default: `30`
+- **skip** (optional)
+  The “skip” parameter will skip a specific number of audit log and return the remaining ones in your response based on the value you provide.  If there are 12 audit log and you want to exclude the first 2 audit log, set this to 2 to fetch the remaining 10 audit log.
+  Default: `2`
+- **asc** (optional)
+  The “asc” parameter allows you to sort the list of audit log in the ascending order with respect to the value of a specific field. The audit log can be sorted only by _created_at_value.
+  Default: `created_at`
+- **desc** (optional)
+  The “desc” parameter allows you to sort the list of audit log in the descending order with respect to the value of a specific field. The audit log can be sorted only by _created_at_value.
+  Default: `created_at`
+- **include_count** (optional)
+  Set this to “true” to include the total number (count) of audit log in an organization.
+  Default: `true`
+
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -1153,27 +1288,36 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Get an Audit Log Item
 
 #### Get an audit log item
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/audit-logs/{auditlog_uid}`
+**GET** `/v1/projects/{project_uid}/audit-logs/{auditlog_uid}`
 
 The Get an audit log item request is used to retrieve a specific item from the audit log of a project.
 
 To configure the permissions for your application via OAuth, include the automationhub.audit-logs:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| auditlog_uid | cslscb28b96f-f29c-4f68-bfc8-845a8085e948 | Enter the UID of the specific log you want to retrieve. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **auditlog_uid** (required)
+  Enter the UID of the specific log you want to retrieve.
+  Default: `cslscb28b96f-f29c-4f68-bfc8-845a8085e948`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -1237,6 +1381,7 @@ To configure the permissions for your application via OAuth, include the automat
 }
 ```
 
+
 ### Project Variables
 
 
@@ -1244,8 +1389,7 @@ To configure the permissions for your application via OAuth, include the automat
 
 #### Get all project variables
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/variables?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
+**GET** `/v1/projects/{project_uid}/variables?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
 
 The Get all project variables request returns comprehensive information of all the project variables defined in a project.
 
@@ -1253,20 +1397,39 @@ To configure the permissions for your application via OAuth, include the automat
 
 **Note:** If you do not specify a value for the optional “limit” query parameter, the API request will by default return the initial 100 items.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter your Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 |  |
-| limit | 30 | The “limit” parameter will return a specific number of project variables (in between 0-100) in your response based on th |
-| skip | 2 | The “skip” parameter will skip a specific number of project variables and return the remaining ones in your response bas |
-| asc | created_at | The “asc” parameter allows you to sort the list of project variables in the ascending order with respect to the value of |
-| desc | created_at | The “desc” parameter allows you to sort the list of project variables in the descending order with respect to the value  |
-| include_count | true | Set this to “true” to include the total number (count) of project variables in an organization. |
+- **project_uid** (required)
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  The “limit” parameter will return a specific number of project variables (in between 0-100) in your response based on the value you provide. If there are 100 project variables and you want to fetch only 30 project variables, set the limit as 30.
+  Default: `30`
+- **skip** (optional)
+  The “skip” parameter will skip a specific number of project variables and return the remaining ones in your response based on the value you provide. If there are 12 project variables and you want to exclude the first 2 project variables, set this to 2 to fetch the remaining 10 project variables.
+  Default: `2`
+- **asc** (optional)
+  The “asc” parameter allows you to sort the list of project variables in the ascending order with respect to the value of a specific field. The project variables can be sorted by _created_at_and _updated_at_values.
+  Default: `created_at`
+- **desc** (optional)
+  The “desc” parameter allows you to sort the list of project variables in the descending order with respect to the value of a specific field. The project variables can be sorted by _created_at_and _updated_at_values.
+  Default: `created_at`
+- **include_count** (optional)
+  Set this to “true” to include the total number (count) of project variables in an organization.
+  Default: `true`
+
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter your Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -1296,27 +1459,36 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Get a Single Project Variable
 
 #### Get a single project variable
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/variables/{variable_uid}`
+**GET** `/v1/projects/{project_uid}/variables/{variable_uid}`
 
 The Get a single project variable request fetches a specific project variable defined in a project.
 
 To configure the permissions for your application via OAuth, include the automationhub.variables:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| variable_uid | f7bbf2d9cb894b5aa34b3d28603ae174 | Enter the UID of the project variable. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **variable_uid** (required)
+  Enter the UID of the project variable.
+  Default: `f7bbf2d9cb894b5aa34b3d28603ae174`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -1332,27 +1504,36 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Create a Project Variable
 
 #### Create a project variable
 
-**Method:** `POST`  
-**Endpoint:** `/v1/projects/{project_uid}/variables`
+**POST** `/v1/projects/{project_uid}/variables`
 
 The Create a project variable request lets you create a project variable in a project.
 
 To configure the permissions for your application via OAuth, include the automationhub.variables:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-**Request Body:**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -1362,7 +1543,7 @@ To configure the permissions for your application via OAuth, include the automat
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -1378,28 +1559,39 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Update a Project Variable
 
 #### Update a project variable
 
-**Method:** `PUT`  
-**Endpoint:** `/v1/projects/{project_uid}/variables/{variable_uid}`
+**PUT** `/v1/projects/{project_uid}/variables/{variable_uid}`
 
 The Update a project variable request lets you update the key, value and type of a project variable.
 
 To configure the permissions for your application via OAuth, include the automationhub.variables:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| variable_uid | bd0ce37910cb4172b844308aa07e6bf7 | Enter the UID of the project variable. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **variable_uid** (required)
+  Enter the UID of the project variable.
+  Default: `bd0ce37910cb4172b844308aa07e6bf7`
 
-**Request Body:**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -1409,7 +1601,7 @@ To configure the permissions for your application via OAuth, include the automat
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -1425,33 +1617,43 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Delete a Project Variable
 
 #### Delete a project variable
 
-**Method:** `DELETE`  
-**Endpoint:** `/v1/projects/{project_uid}/variables/{variable_uid}`
+**DELETE** `/v1/projects/{project_uid}/variables/{variable_uid}`
 
 The Delete a project variable request lets you delete a specific project variable from a project.
 
 To configure the permissions for your application via OAuth, include the automationhub.variables:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| variable_uid | bd0ce37910cb4172b844308aa07e6bf7 | Enter the UID of the project variable. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **variable_uid** (required)
+  Enter the UID of the project variable.
+  Default: `bd0ce37910cb4172b844308aa07e6bf7`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
     "message": "Project variable deleted successfully."
 }
 ```
+
 
 ### Accounts
 
@@ -1460,8 +1662,7 @@ To configure the permissions for your application via OAuth, include the automat
 
 #### Get all accounts
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/accounts?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
+**GET** `/v1/projects/{project_uid}/accounts?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
 
 The Get all accounts request returns comprehensive information of all the accounts in a project.
 
@@ -1469,20 +1670,40 @@ To configure the permissions for your application via OAuth, include the automat
 
 **Note:** If you do not specify a value for the optional “limit” query parameter, the API request will by default return the initial 100 items.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| limit | 30 | The “limit” parameter will return a specific number of accounts (in between 0-100) in your response based on the value y |
-| skip | 2 | The “skip” parameter will skip a specific number of accounts and return the remaining ones in your response based on the |
-| asc | created_at | The “asc” parameter allows you to sort the list of accounts in the ascending order with respect to the value of a specif |
-| desc | created_at | The “desc” parameter allows you to sort the list of accounts in the descending order with respect to the value of a spec |
-| include_count | true | Set this to “true” to include the total number (count) of accounts in an organization. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  The “limit” parameter will return a specific number of accounts (in between 0-100) in your response based on the value you provide. If there are 100 accounts and you want to fetch only 30 accounts, set the limit as 30.
+  Default: `30`
+- **skip** (optional)
+  The “skip” parameter will skip a specific number of accounts and return the remaining ones in your response based on the value you provide.  If there are 12 accounts and you want to exclude the first 2 accounts, set this to 2 to fetch the remaining 10 accounts.
+  Default: `2`
+- **asc** (optional)
+  The “asc” parameter allows you to sort the list of accounts in the ascending order with respect to the value of a specific field. The accounts can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **desc** (optional)
+  The “desc” parameter allows you to sort the list of accounts in the descending order with respect to the value of a specific field. The accounts can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **include_count** (optional)
+  Set this to “true” to include the total number (count) of accounts in an organization.
+  Default: `true`
+
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -1526,27 +1747,36 @@ To configure the permissions for your application via OAuth, include the automat
 ```
 
 
+
 #### Get a Single Account
 
 #### Get a single account
 
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/accounts/{account_uid}`
+**GET** `/v1/projects/{project_uid}/accounts/{account_uid}`
 
 The Get a single account request fetches a specific account in a project.
 
 To configure the permissions for your application via OAuth, include the automationhub.accounts:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for mor |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-| account_uid | 94c48b974b9045b3a1327eeb10ada605 | Enter the UID of the account. |
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **account_uid** (required)
+  Enter the UID of the account.
+  Default: `94c48b974b9045b3a1327eeb10ada605`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -1567,6 +1797,7 @@ To configure the permissions for your application via OAuth, include the automat
     "updated_by": "blt******dae71c6b33"
 }
 ```
+
 
 ## Postman Collection
 

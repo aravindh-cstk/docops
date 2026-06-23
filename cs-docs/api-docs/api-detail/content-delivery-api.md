@@ -7,7 +7,7 @@ doc_type: api-detail
 audience:
   - developers
 version: [API VERSION : 3.0.0]
-last_updated: 2025-08-18
+last_updated: 2026-06-08
 ---
 
 # Content Delivery API
@@ -106,7 +106,7 @@ Rate limiting defines the maximum number of API requests your organization can m
 
 **Default Limits**
 
-By default, origin server requests are limited to **80 requests per second per organization**. All requests made from the CDA and Image Delivery API endpoints counts towards this rate limit excluding GraphQL. The exact rate limit depends on your plan. If required, you can request an increase by contacting [support](mailto:support@contentstack.com).
+By default, origin server requests are limited to **100 requests per second per organization**. All requests made from the CDA and Image Delivery API endpoints counts towards this rate limit excluding GraphQL. The exact rate limit depends on your plan. If required, you can request an increase by contacting [support](mailto:support@contentstack.com).
 
 **Note**: While CDN requests are not rate-limited, all API requests (CDN and origin) count toward your organization’s overall API usage quota.
 
@@ -203,8 +203,7 @@ Additionally, you can also set the include_branch query parameter to true to inc
 
 #### Get all content types
 
-**Method:** `GET`  
-**Endpoint:** `/content_types?include_count={boolean_value}`
+**GET** `/content_types?include_count={boolean_value}`
 
 The Get all content types call returns comprehensive information of all the content types available in a particular stack in your account.
 
@@ -216,17 +215,28 @@ To query your content types, under the Query Parameters section, insert a parame
 
 **Note**: This API request will return a maximum of **100 content types**. To retrieve the next batch of content types, make use of the [skip](/docs/developers/apis/content-delivery-api#skip) parameter (or refer [Pagination](/docs/developers/apis/content-delivery-api#pagination) for more details).
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| include_count | false | Set this to 'true' to include in response the total count of content types available in your stack. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **include_count** (required)
+  Set this to 'true' to include in response the total count of content types available in your stack.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -1340,26 +1350,40 @@ To query your content types, under the Query Parameters section, insert a parame
 ```
 
 
+
 #### Single Content Type
 
 #### Get a single content type
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}`
+**GET** `/content_types/{content_type_uid}`
 
 This call returns information of a specific content type. It returns the content type schema, but does not include its entries.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the tit |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -1839,6 +1863,7 @@ This call returns information of a specific content type. It returns the content
 }
 ```
 
+
 ### Global Fields
 
 A [Global](/docs/developers/global-field) field is a reusable field (or group of fields) that you can define once and reuse across multiple content types within your stack. This eliminates the need to recreate the same set of fields multiple times, saving effort and ensuring consistency.
@@ -1852,8 +1877,7 @@ You can pass the **branch header** in API requests to fetch or manage modules wi
 
 #### Get all global fields
 
-**Method:** `GET`  
-**Endpoint:** `/global_fields`
+**GET** `/global_fields`
 
 The Get all global fields request returns comprehensive information of all the global fields available in a particular stack in your organization. If you have nested global fields, it appears in the response.
 
@@ -1862,17 +1886,28 @@ The Get all global fields request returns comprehensive information of all the g
 - Information about Global fields can be retrieved by all users, regardless of their role or access level.
 - If your Global field contains nested Global fields, they will appear as part of the schema in the API response.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_api_key | Enter the API key of your stack. |
-| access_token | your_delivery_token | Enter the environment-specific delivery token of your stack. Refer to the [Authentication](#authentication) section for  |
-| branch | main | Enter your branch unique ID. |
-| include_global_field_schema | true | Set this parameter to 'true' to include in response the schema of the Global field. |
-| include_branch | true | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_global_field_schema** (optional)
+  Set this parameter to 'true' to include in response the schema of the Global field.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the Global field resides.
+  Default: `true`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Refer to the [Authentication](#authentication) section for more details.
+  Default: `your_delivery_token`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -1921,12 +1956,12 @@ The Get all global fields request returns comprehensive information of all the g
 ```
 
 
+
 #### Single Global Field
 
 #### Get a single global field
 
-**Method:** `GET`  
-**Endpoint:** `/global_fields/{global_field_uid}`
+**GET** `/global_fields/{global_field_uid}`
 
 The Get a single global field request allows you to fetch comprehensive details of a specific global field.
 
@@ -1938,18 +1973,34 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 - Information about Global fields can be retrieved by all users, regardless of their role or access level.
 - If your Global field contains nested Global fields, they will appear as part of the schema in the API response.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_api_key | Enter the API key of your stack. |
-| access_token | your_delivery_token | Enter the environment-specific delivery token of your stack. Refer to the [Authentication](#authentication) section for  |
-| branch | main | Enter your branch unique ID. |
-| global_field_uid | seo | Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global f |
-| include_global_field_schema | true | Set this parameter to 'true' to include in response the schema of the Global field. |
-| include_branch | ture | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **global_field_uid** (required)
+  Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global field. The unique ID of a global field is unique across a stack.
+  Default: `seo`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_global_field_schema** (optional)
+  Set this parameter to 'true' to include in response the schema of the Global field.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the Global field resides.
+  Default: `ture`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Refer to the [Authentication](#authentication) section for more details.
+  Default: `your_delivery_token`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -1995,6 +2046,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 }
 ```
 
+
 ### Entries
 
 An [entry](/docs/content-managers/author-content/about-entries) is the actual piece of content created using one of the defined [content types](/docs/developers/create-content-types/about-content-types). 
@@ -2010,8 +2062,7 @@ Additionally, you can also set the include_branch query parameter to true to inc
 
 #### Get all entries
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&include_fallback=true`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&include_fallback=true`
 
 The Get all entries request fetches the list of all the entries of a particular content type. It returns the content of each entry in JSON format.
 
@@ -2048,20 +2099,40 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 
 **Tip:** This request returns only the first 100 entries of the specified content type. Refer to the [Pagination](/docs/developers/apis/content-delivery-api#pagination) section to retrieve the rest of your entries in a paginated form.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you want to retrieve the entries. The UID is often based on the title o |
-| environment | production | Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production env |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| include_fallback | true | Enter 'true' to include the published localized content from the fallback locale when the specified locale does not cont |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the entries. The UID is often based on the title of the content type and it is unique across a stack.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **environment** (optional)
+  Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production environment, pass the value as production.
+  Default: `production`
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include_fallback** (optional)
+  Enter 'true' to include the published localized content from the fallback locale when the specified locale does not contain published content.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -2800,12 +2871,12 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 ```
 
 
+
 #### Single Entry
 
 #### Get a single entry
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}`
 
 The Get a single entry request fetches a particular entry of a content type.
 
@@ -2844,21 +2915,43 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 - If you specify a locale in the query, it returns the latest published version of the localized entry/entries
 - If an entry is not localized, make use of the include_fallback=true query parameter to fetch the published content from its fallback locale
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you want to retrieve the entries. The content type UID is often based o |
-| entry_uid | blta250054cfa4f5aab | Enter the unique ID of the entry that you want to fetch. |
-| environment | production | Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production env |
-| locale | en-us | Enter the code of the language of which you want to include the entries. Only the published localized entries will be di |
-| include_fallback | true | Enter 'true' to include the published localized content from the fallback locale when the specified locale does not cont |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the entries. The content type UID is often based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you want to fetch.
+  Default: `blta250054cfa4f5aab`
 
-**Response (200):**
+##### Query Parameters
+
+- **environment** (optional)
+  Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production environment, pass the value as production.
+  Default: `production`
+- **locale** (optional)
+  Enter the code of the language of which you want to include the entries. Only the published localized entries will be displayed.
+  Default: `en-us`
+- **include_fallback** (optional)
+  Enter 'true' to include the published localized content from the fallback locale when the specified locale does not contain published content.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -2952,12 +3045,12 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 ```
 
 
-#### Get information on embedded RTE objects
 
 #### Get information on embedded RTE objects
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?&locale={locale_code}&include_embedded_items[]=BASE`
+#### Get information on embedded RTE objects
+
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}?&locale={locale_code}&include_embedded_items[]=BASE`
 
 The Get information on embedded RTE objects request returns comprehensive information on all entries and/or assets embedded within the Rich Text Editor field.
 
@@ -2967,20 +3060,40 @@ You can view information about the embedded objects under the _embedded_items pa
 
 **Note**: Contentstack’s [Content Delivery SDKs](/docs/developers/fetch-content#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the front end however required.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you want to retrieve the entries. The content type UID is often based o |
-| entry_uid | blta250054cfa4f5aab | Enter the unique ID of the entry that you want to fetch. |
-| locale | en-us | Enter the code of the language of which you want to include the entries. |
-| include_embedded_items[] | BASE | Enter ‘BASE’ to include entries and assets embedded inside the Rich Text Editor field. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the entries. The content type UID is often based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you want to fetch.
+  Default: `blta250054cfa4f5aab`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which you want to include the entries.
+  Default: `en-us`
+- **include_embedded_items[]** (optional)
+  Enter ‘BASE’ to include entries and assets embedded inside the Rich Text Editor field.
+  Default: `BASE`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -3072,12 +3185,12 @@ You can view information about the embedded objects under the _embedded_items pa
 ```
 
 
-#### Get all entries with defined taxonomies
 
 #### Get all entries with defined taxonomies
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"taxonomies.taxonomy_uid": "term_uid"}`
+#### Get all entries with defined taxonomies
+
+**GET** `/taxonomies/entries?query={"taxonomies.taxonomy_uid": "term_uid"}`
 
 The Get all entries with defined taxonomies request returns comprehensive information of all the entries associated with a specific taxonomy or term available in a particular stack in your organization.
 
@@ -3119,17 +3232,28 @@ query={
 
 **Note**: Refer to the [Taxonomy Queries](/docs/developers/apis/content-delivery-api#taxonomy-queries) section for more query filters.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| query | {"taxonomies.taxonomy_uid" : "term_uid"} | Provide a custom query in string format. |
-| resolve_terms | true | If true, includes resolved term metadata (name, depth, order) for each taxonomy field. |
+- **query** (optional)
+  Provide a custom query in string format.
+  Default: `{"taxonomies.taxonomy_uid" : "term_uid"}`
+- **resolve_terms** (optional)
+  If true, includes resolved term metadata (name, depth, order) for each taxonomy field.
+  Default: `true`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -3151,6 +3275,7 @@ query={
 }
 ```
 
+
 ### Entry Variants
 
 Entry Variants allows you to create content variations for different audiences, languages, and marketing experiments. The key concepts include **Base Entry**, **Entry Variant**, and **Variant Group**. This feature streamlines personalized content management, improves consistency, and simplifies updates.
@@ -3162,8 +3287,7 @@ Entry Variants allows you to create content variations for different audiences, 
 
 #### Get multiple variants of an entry
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries`
+**GET** `/content_types/{content_type_uid}/entries`
 
 The Get all entry variants retrieves all variants of a given entry and their customizations.
 
@@ -3215,23 +3339,49 @@ Sample response when the show_errors=true query parameter is passed and allowed 
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blte5318f6d4fcd10db | Enter the API key of your stack. |
-| access_token | csdb72e2bdb75536c727b9129d | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| x-cs-variant-uid | csa639040f051b6db6, csbf165536748bdee2, cs619c85c94f383934, cs669f1759b774fe1d | Enter the variant UID linked with your content type. |
-| content_type_uid | home_page | Enter the unique ID of the content type of which you want to retrieve the entries. The UID is often based on the title o |
-| environment | production | Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production env |
-| locale | en | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| include_fallback | true | Enter 'true' to include the published localized content from the fallback locale when the specified locale does not cont |
-| include_publish_details | true | Enter “true” to include the publish details of the entry. |
-| include_rules | true | Enter “true” to include the publishing rules for the entry. |
-| include_metadata | true | Pass this as "true" to fetch the metadata attached to each entry. |
-| show_errors | true | Pass this as true to include the errors array in the response. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the entries. The UID is often based on the title of the content type and it is unique across a stack.
+  Default: `home_page`
 
-**Response (200):**
+##### Query Parameters
+
+- **environment** (optional)
+  Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production environment, pass the value as production.
+  Default: `production`
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en`
+- **include_fallback** (optional)
+  Enter 'true' to include the published localized content from the fallback locale when the specified locale does not contain published content.
+  Default: `true`
+- **include_publish_details** (optional)
+  Enter “true” to include the publish details of the entry.
+  Default: `true`
+- **include_rules** (optional)
+  Enter “true” to include the publishing rules for the entry.
+  Default: `true`
+- **include_metadata** (optional)
+  Pass this as "true" to fetch the metadata attached to each entry.
+  Default: `true`
+- **show_errors** (optional)
+  Pass this as true to include the errors array in the response.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blte5318f6d4fcd10db`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `csdb72e2bdb75536c727b9129d`
+- **x-cs-variant-uid** (required)
+  Enter the variant UID linked with your content type.
+  Default: `csa639040f051b6db6, csbf165536748bdee2, cs619c85c94f383934, cs669f1759b774fe1d`
+
+##### Sample Response
 
 ```json
 {
@@ -3285,12 +3435,12 @@ Sample response when the show_errors=true query parameter is passed and allowed 
 ```
 
 
+
 #### Get Single Entry Variant
 
 #### Get single entry variant
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}`
 
 The Get single entry variant request retrieves a single variant entry of a given base entry.
 
@@ -3342,24 +3492,52 @@ Sample response when the show_errors=true query parameter is passed and allowed 
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blte5318f6d4fcd10db | Enter the API key of your stack. |
-| access_token | csdb72e2bdb75536c727b9129d | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| x-cs-variant-uid | csa639040f051b6db6, csbf165536748bdee2, cs619c85c94f383934, cs669f1759b774fe1d | Enter the variant UID linked with your content type. |
-| content_type_uid | home_page | Enter the unique ID of the content type of which you want to retrieve the entries. The UID is often based on the title o |
-| entry_uid | blt3e91e3812a44ba90 | Enter the unique ID of your entry. |
-| environment | production | Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production env |
-| locale | en | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| include_fallback | true | Enter “true” to include the published localized content from the fallback locale when the specified locale does not cont |
-| include_publish_details | true | Enter “true” to include the publish details of the entry. |
-| include_rules | true | Enter “true” to include the publishing rules for the entry. |
-| include_metadata | true | Pass this as "true" to fetch the metadata attached to each entry. |
-| show_errors | true | Pass this as true to include the errors array in the response. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the entries. The UID is often based on the title of the content type and it is unique across a stack.
+  Default: `home_page`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `blt3e91e3812a44ba90`
 
-**Response (200):**
+##### Query Parameters
+
+- **environment** (optional)
+  Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production environment, pass the value as production.
+  Default: `production`
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en`
+- **include_fallback** (optional)
+  Enter “true” to include the published localized content from the fallback locale when the specified locale does not contain published content.
+  Default: `true`
+- **include_publish_details** (optional)
+  Enter “true” to include the publish details of the entry.
+  Default: `true`
+- **include_rules** (optional)
+  Enter “true” to include the publishing rules for the entry.
+  Default: `true`
+- **include_metadata** (optional)
+  Pass this as "true" to fetch the metadata attached to each entry.
+  Default: `true`
+- **show_errors** (optional)
+  Pass this as true to include the errors array in the response.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blte5318f6d4fcd10db`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `csdb72e2bdb75536c727b9129d`
+- **x-cs-variant-uid** (required)
+  Enter the variant UID linked with your content type.
+  Default: `csa639040f051b6db6, csbf165536748bdee2, cs619c85c94f383934, cs669f1759b774fe1d`
+
+##### Sample Response
 
 ```json
 {
@@ -3409,6 +3587,7 @@ Sample response when the show_errors=true query parameter is passed and allowed 
 }
 ```
 
+
 ### Taxonomy
 
 Taxonomy, simplifies the process of organizing content in your system, making it effortless to find and retrieve information. It allows you to arrange your web properties in a hierarchy according to your specific needs, whether it's their purpose, intended audience, or other aspects of your business.
@@ -3420,21 +3599,29 @@ Taxonomy, simplifies the process of organizing content in your system, making it
 
 #### Get all taxonomies
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies`
+**GET** `/taxonomies`
 
 The Get all taxonomies request retrieves all published taxonomies for the given environment.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| access_token | your_access_token | Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authen |
-| limit | 5 | Number of results to return. |
-| skip | 5 | Number of results to skip (for pagination). |
+- **limit** (optional)
+  Number of results to return.
+  Default: `5`
+- **skip** (optional)
+  Number of results to skip (for pagination).
+  Default: `5`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **access_token** (optional)
+  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Default: `your_access_token`
+
+##### Sample Response
 
 ```json
 {
@@ -3456,26 +3643,40 @@ The Get all taxonomies request retrieves all published taxonomies for the given 
 ```
 
 
-#### Get a single taxonomy
 
 #### Get a single taxonomy
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+#### Get a single taxonomy
+
+**GET** `/taxonomies/{taxonomy_uid}`
 
 The Get a single taxonomy request retrieves details of a single published taxonomy.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| access_token | your_access_token | Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authen |
-| taxonomy_uid | categories | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. |
-| limit | 5 | Number of results to return. |
-| skip | 5 | Number of results to skip (for pagination). |
+- **taxonomy_uid** (optional)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack.
+  Default: `categories`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  Number of results to return.
+  Default: `5`
+- **skip** (optional)
+  Number of results to skip (for pagination).
+  Default: `5`
+
+##### Headers
+
+- **api_key** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **access_token** (optional)
+  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Default: `your_access_token`
+
+##### Sample Response
 
 ```json
 {
@@ -3494,27 +3695,43 @@ The Get a single taxonomy request retrieves details of a single published taxono
 ```
 
 
-#### Get all terms
 
 #### Get all terms
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms`
+#### Get all terms
+
+**GET** `/taxonomies/{taxonomy_uid}/terms`
 
 The Get all terms request retrieves all published terms in a taxonomy for the specified environment and locale.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| access_token | your_access_token | Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authen |
-| taxonomy_uid | categories | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. |
-| limit | 5 | Number of results to return. |
-| skip | 5 | Number of results to skip (for pagination). |
-| depth | 2 | Depth of term hierarchy to retrieve. |
+- **taxonomy_uid** (optional)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack.
+  Default: `categories`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  Number of results to return.
+  Default: `5`
+- **skip** (optional)
+  Number of results to skip (for pagination).
+  Default: `5`
+- **depth** (optional)
+  Depth of term hierarchy to retrieve.
+  Default: `2`
+
+##### Headers
+
+- **api_key** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **access_token** (optional)
+  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Default: `your_access_token`
+
+##### Sample Response
 
 ```json
 {
@@ -3537,28 +3754,46 @@ The Get all terms request retrieves all published terms in a taxonomy for the sp
 ```
 
 
-#### Get a single term
 
 #### Get a single term
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+#### Get a single term
+
+**GET** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Get a single term request retrieves a specific published term within a taxonomy.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| access_token | your_access_token | Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authen |
-| taxonomy_uid | categories | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. |
-| term_uid | gaming_laptops | Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. |
-| limit | 5 | Number of results to return. |
-| skip | 5 | Number of results to skip (for pagination). |
-| depth | 2 | Depth of term hierarchy to retrieve. |
+- **taxonomy_uid** (optional)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack.
+  Default: `categories`
+- **term_uid** (optional)
+  Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack.
+  Default: `gaming_laptops`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  Number of results to return.
+  Default: `5`
+- **skip** (optional)
+  Number of results to skip (for pagination).
+  Default: `5`
+- **depth** (optional)
+  Depth of term hierarchy to retrieve.
+  Default: `2`
+
+##### Headers
+
+- **api_key** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **access_token** (optional)
+  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Default: `your_access_token`
+
+##### Sample Response
 
 ```json
 {
@@ -3579,27 +3814,43 @@ The Get a single term request retrieves a specific published term within a taxon
 ```
 
 
-#### Get a single term in all locales
 
 #### Get a single term in all locales
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/locales`
+#### Get a single term in all locales
+
+**GET** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/locales`
 
 The Get a single term in all locales request retrieves all localized versions of a published term.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| access_token | your_access_token | Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authen |
-| taxonomy_uid | categories | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. |
-| term_uid | gaming_laptops | Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. |
-| limit | 5 | Number of results to return. |
-| skip | 5 | Number of results to skip (for pagination). |
+- **taxonomy_uid** (optional)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack.
+  Default: `categories`
+- **term_uid** (optional)
+  Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack.
+  Default: `gaming_laptops`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  Number of results to return.
+  Default: `5`
+- **skip** (optional)
+  Number of results to skip (for pagination).
+  Default: `5`
+
+##### Headers
+
+- **api_key** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **access_token** (optional)
+  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Default: `your_access_token`
+
+##### Sample Response
 
 ```json
 {
@@ -3631,28 +3882,46 @@ The Get a single term in all locales request retrieves all localized versions of
 ```
 
 
-#### Get descendants of a term
 
 #### Get descendants of a term
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/descendants`
+#### Get descendants of a term
+
+**GET** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/descendants`
 
 The Get descendants of a term request retrieves all descendant terms of a given term.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| access_token | your_access_token | Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authen |
-| taxonomy_uid | categories | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. |
-| term_uid | gaming_laptops | Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. |
-| limit | 5 | Number of results to return. |
-| skip | 5 | Number of results to skip (for pagination). |
-| depth | 2 | Depth of term hierarchy to retrieve. |
+- **taxonomy_uid** (optional)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack.
+  Default: `categories`
+- **term_uid** (optional)
+  Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack.
+  Default: `gaming_laptops`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  Number of results to return.
+  Default: `5`
+- **skip** (optional)
+  Number of results to skip (for pagination).
+  Default: `5`
+- **depth** (optional)
+  Depth of term hierarchy to retrieve.
+  Default: `2`
+
+##### Headers
+
+- **api_key** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **access_token** (optional)
+  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Default: `your_access_token`
+
+##### Sample Response
 
 ```json
 {
@@ -3676,28 +3945,46 @@ The Get descendants of a term request retrieves all descendant terms of a given 
 ```
 
 
-#### Get ancestors of a term
 
 #### Get ancestors of a term
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/ancestors`
+#### Get ancestors of a term
+
+**GET** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/ancestors`
 
 The Get ancestors of a term request retrieves all ancestor terms of a given term up to the root.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| access_token | your_access_token | Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authen |
-| taxonomy_uid | categories | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. |
-| term_uid | gaming_laptops | Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. |
-| limit | 5 | Number of results to return. |
-| skip | 5 | Number of results to skip (for pagination). |
-| depth | 2 | Depth of term hierarchy to retrieve. |
+- **taxonomy_uid** (optional)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack.
+  Default: `categories`
+- **term_uid** (optional)
+  Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack.
+  Default: `gaming_laptops`
 
-**Response (200):**
+##### Query Parameters
+
+- **limit** (optional)
+  Number of results to return.
+  Default: `5`
+- **skip** (optional)
+  Number of results to skip (for pagination).
+  Default: `5`
+- **depth** (optional)
+  Depth of term hierarchy to retrieve.
+  Default: `2`
+
+##### Headers
+
+- **api_key** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **access_token** (optional)
+  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Default: `your_access_token`
+
+##### Sample Response
 
 ```json
 {
@@ -3727,6 +4014,7 @@ The Get ancestors of a term request retrieves all ancestor terms of a given term
 }
 ```
 
+
 ### Assets
 
 [Assets](/docs/content-managers/author-content/#create-and-manage-assets) refer to all the media files (images, videos, PDFs, audio files, and so on) uploaded in your Contentstack repository for future use. These files can be attached and used in multiple [entries](/docs/content-managers/working-with-entries/about-entries).
@@ -3742,8 +4030,7 @@ Additionally, you can also set the include_branch query parameter to true to inc
 
 #### Get all assets
 
-**Method:** `GET`  
-**Endpoint:** `/assets?environment={environment_name}&include_fallback=true&include_dimension={boolean_value}`
+**GET** `/assets?environment={environment_name}&include_fallback=true&include_dimension={boolean_value}`
 
 The Get all assets request fetches the list of all the assets of a particular stack. It returns the content of each asset in JSON format. You can also specify the environment of which you want to get the assets.
 
@@ -3779,19 +4066,34 @@ Locale is **optional**
 - If you specify a locale in the query, it returns the latest published version of the localized asset/assets
 - If an asset is not localized, make use of the include_fallback=true query parameter to fetch the published asset from its fallback locale
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| environment | production | Enter the name of the environment if you want to retrieve the assets published in a particular environment. |
-| include_fallback | true | Enter 'true' to include the published asset details from the fallback locale when the specified locale does not contain  |
-| include_dimension | true | Enter 'true' to include the dimensions (height and width) of the image in the response. Supported image types: JPG, GIF, |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **environment** (required)
+  Enter the name of the environment if you want to retrieve the assets published in a particular environment.
+  Default: `production`
+- **include_fallback** (optional)
+  Enter 'true' to include the published asset details from the fallback locale when the specified locale does not contain published content.
+  Default: `true`
+- **include_dimension** (optional)
+  Enter 'true' to include the dimensions (height and width) of the image in the response. Supported image types: JPG, GIF, PNG, WebP, BMP, TIFF, SVG, and PSD.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -4703,12 +5005,12 @@ Locale is **optional**
 ```
 
 
+
 #### Single Asset
 
 #### Get a single asset
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{asset_uid}?environment={environment_name}&version={version}&include_fallback=true&include_dimension={boolean_value}`
+**GET** `/assets/{asset_uid}?environment={environment_name}&version={version}&include_fallback=true&include_dimension={boolean_value}`
 
 The Get a single asset request fetches the latest version of a specific asset of a particular stack.
 
@@ -4744,22 +5046,46 @@ Locale is **optional**
 - If you specify a locale in the query, it returns the latest published version of the localized asset
 - If an asset is not localized, make use of the include_fallback=true query parameter to fetch the published asset from its fallback locale
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | blt19c34e5374418484 | Enter the unique ID of the asset of which you want to retrieve the details. |
-| environment | production | Enter the name of the environment if you want to retrieve an asset published in a particular environment. |
-| version | 1 | Specify the version number of the asset that you want to retrieve. To retrieve a specific version, keep the environment  |
-| include_fallback | true | Enter 'true' to include published asset details from the fallback locale when the specified locale does not contain publ |
-| include_dimension | true | Enter 'true' to include the dimensions (height and width) of the image in the response. Supported image types: JPG, GIF, |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
-| include_metadata | true | Set this parameter to true to include the asset metadata along with all assets in the response body. |
+- **asset_uid** (required)
+  Enter the unique ID of the asset of which you want to retrieve the details.
+  Default: `blt19c34e5374418484`
 
-**Response (200):**
+##### Query Parameters
+
+- **environment** (required)
+  Enter the name of the environment if you want to retrieve an asset published in a particular environment.
+  Default: `production`
+- **version** (optional)
+  Specify the version number of the asset that you want to retrieve. To retrieve a specific version, keep the environment parameter blank. If the version is not specified, the details of the latest version will be retrieved.
+  Default: `1`
+- **include_fallback** (optional)
+  Enter 'true' to include published asset details from the fallback locale when the specified locale does not contain published information.
+  Default: `true`
+- **include_dimension** (optional)
+  Enter 'true' to include the dimensions (height and width) of the image in the response. Supported image types: JPG, GIF, PNG, WebP, BMP, TIFF, SVG, and PSD.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+- **include_metadata** (optional)
+  Set this parameter to true to include the asset metadata along with all assets in the response body.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -4807,6 +5133,7 @@ Locale is **optional**
 }
 ```
 
+
 ### Synchronization
 
 The Sync API takes care of syncing your Contentstack data with your app and ensures that the data is always up-to-date by providing delta updates.
@@ -4818,8 +5145,7 @@ The Sync API takes care of syncing your Contentstack data with your app and ensu
 
 #### Initial Sync
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/sync?init=true&content_type_uid={content_type_uid}&locale={locale_code}&start_from={iso_date}&type={type}`
+**GET** `/stacks/sync?init=true&content_type_uid={content_type_uid}&locale={locale_code}&start_from={iso_date}&type={type}`
 
 The Initial Sync request syncs the entries and assets of a stack, published on a specific environment.
 
@@ -4844,20 +5170,36 @@ You can use the sync_token later to perform subsequent sync, which fetches only 
 
 If there are more than 100 records, you get a pagination_token in response. This token can be used to fetch the next batch of data. Read [Sync using pagination token](#sync-using-pagination-token) for more details.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the delivery token of the publishing environment. [Read more](https://www.contentstack.com/developers/create-token |
-| branch | main |  |
-| init | true | Enter ‘true’ to perform a complete sync of all your app data. |
-| content_type_uid | for_synchronization_calls | Enter the content type UID, if you want to sync entries of specific content types. |
-| locale | en-us | Enter the locale to retrieve and sync the content published on a specific locale. |
-| start_from | 2018-01-14T00:00:00.000Z | Specify the start date, if you want to retrieve and sync data starting from a specific date. |
-| type | entry_published, entry_unpublished, asset_published | Enter the type(s) of content you want to retrieve and sync. You can pass multiple types as comma-separated values. |
+- **init** (required)
+  Enter ‘true’ to perform a complete sync of all your app data.
+  Default: `true`
+- **content_type_uid** (optional)
+  Enter the content type UID, if you want to sync entries of specific content types.
+  Default: `for_synchronization_calls`
+- **locale** (optional)
+  Enter the locale to retrieve and sync the content published on a specific locale.
+  Default: `en-us`
+- **start_from** (optional)
+  Specify the start date, if you want to retrieve and sync data starting from a specific date.
+  Default: `2018-01-14T00:00:00.000Z`
+- **type** (optional)
+  Enter the type(s) of content you want to retrieve and sync. You can pass multiple types as comma-separated values.
+  Default: `entry_published, entry_unpublished, asset_published`
 
-**Response:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the delivery token of the publishing environment. [Read more](https://www.contentstack.com/developers/create-tokens/types-of-tokens#access-tokens).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -4902,12 +5244,12 @@ If there are more than 100 records, you get a pagination_token in response. This
 ```
 
 
-#### Sync using pagination token
 
 #### Sync using pagination token
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/sync?pagination_token={pagination_token}`
+#### Sync using pagination token
+
+**GET** `/stacks/sync?pagination_token={pagination_token}`
 
 When running the [Initial Synchronization](#initial-synchronization) or the [Subsequent Sync](#subsequent-sync) request, if the result of the sync (initial or subsequent) request exceeds 100 records you will get a pagination_token.
 
@@ -4915,16 +5257,24 @@ The Sync using pagination token request uses the pagination_token to retrieve th
 
 **Note:** When executing the API request, pass the Delivery Token as the value to the access_token parameter.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of stack of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main |  |
-| pagination_token | cs45036e6b26c1396296ff34bb875480cd | Enter the pagination token that you received in the response body of the previous sync process. |
+- **pagination_token** (required)
+  Enter the pagination token that you received in the response body of the previous sync process.
+  Default: `cs45036e6b26c1396296ff34bb875480cd`
 
-**Response:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of stack of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -4992,12 +5342,12 @@ The Sync using pagination token request uses the pagination_token to retrieve th
 ```
 
 
-#### Subsequent Sync
 
 #### Subsequent Sync
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/sync?sync_token={sync_token}`
+#### Subsequent Sync
+
+**GET** `/stacks/sync?sync_token={sync_token}`
 
 The Subsequent Sync request is used to retrieve the updated content (i.e., published or unpublished content, or any published content that has been deleted) since the last performed complete Sync.
 
@@ -5005,16 +5355,24 @@ In this API request, you need to provide the sync_token that you received in the
 
 **Tip:** Once you have performed the Initial Sync process, you do not need to perform it again. For retrieving the subsequent delta changes, use the sync_token received either in the Initial Sync process or the previous Subsequent Sync requests to sync new changes. Also, when executing the API request, pass the Delivery Token as the value to the access_token parameter.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main |  |
-| sync_token | csb17b3a47ffa057cb0b9d938c59e13ed3 | Enter the sync token that you received in the response body of the previous completed Synchronization process to get the |
+- **sync_token** (required)
+  Enter the sync token that you received in the response body of the previous completed Synchronization process to get the delta updates
+  Default: `csb17b3a47ffa057cb0b9d938c59e13ed3`
 
-**Response:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -5052,6 +5410,7 @@ In this API request, you need to provide the sync_token that you received in the
 }
 ```
 
+
 ### Queries
 
 Contentstack provides certain queries that you can use to fetch filtered results. Queries can be used across all CDA API requests. 
@@ -5081,8 +5440,7 @@ You can retrieve filtered entries using taxonomy through two different endpoints
 
 #### IN Operator
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"taxonomies.taxonomy_uid" : { "$in" : ["term_uid1" , "term_uid2" ] }}`
+**GET** `/taxonomies/entries?query={"taxonomies.taxonomy_uid" : { "$in" : ["term_uid1" , "term_uid2" ] }}`
 
 Get all entries for a specific taxonomy that satisfy the given conditions provided in the "$in" query.
 
@@ -5100,15 +5458,22 @@ query={"taxonomies.color" : { "$in" : ["red" , "yellow" ] }}
 
 ##### OR Operator [Taxonomy]
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| query | {"taxonomies.color" : { "$in" : ["red" , "yellow" ] }} | Provide a custom query in the string format. |
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"taxonomies.color" : { "$in" : ["red" , "yellow" ] }}`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+
+##### Sample Response
 
 ```json
 {
@@ -5164,10 +5529,10 @@ query={"taxonomies.color" : { "$in" : ["red" , "yellow" ] }}
 }
 ```
 
+
 #### OR Operator [Taxonomy]
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"$or": {"taxonomies.taxonomy_uid_1" : "term_uid1" }, {"taxonomies.taxonomy_uid_2" : "term_uid2" }]}`
+**GET** `/taxonomies/entries?query={"$or": {"taxonomies.taxonomy_uid_1" : "term_uid1" }, {"taxonomies.taxonomy_uid_2" : "term_uid2" }]}`
 
 Get all entries for a specific taxonomy that satisfy at least one of the given conditions provided in the “$or” query.
 
@@ -5195,15 +5560,22 @@ query={
 
 ##### AND Operator [Taxonomy]
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| query | {"$or": [{ "taxonomies.color" : "black" },{ "taxonomies.size" : "small" }]} | Provide a custom query in the string format. |
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"$or": [{ "taxonomies.color" : "black" },{ "taxonomies.size" : "small" }]}`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+
+##### Sample Response
 
 ```json
 {
@@ -5259,10 +5631,10 @@ query={
 }
 ```
 
+
 #### AND Operator [Taxonomy]
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"$and": [{ "taxonomies.taxonomy_uid_1" : "term_uid1" }, { "taxonomies.taxonomy_uid_2" : "term_uid2" }]}`
+**GET** `/taxonomies/entries?query={"$and": [{ "taxonomies.taxonomy_uid_1" : "term_uid1" }, { "taxonomies.taxonomy_uid_2" : "term_uid2" }]}`
 
 Get all entries for a specific taxonomy that satisfy all the conditions provided in the “$and” query.
 
@@ -5290,15 +5662,22 @@ query={
 
 ##### Exists Operator
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| query | {"$and": [{"taxonomies.color" : "black" }, { "taxonomies.category" : "mobile" }]} | Provide a custom query in the string format. |
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"$and": [{"taxonomies.color" : "black" }, { "taxonomies.category" : "mobile" }]}`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+
+##### Sample Response
 
 ```json
 {
@@ -5354,10 +5733,10 @@ query={
 }
 ```
 
+
 #### Exists Operator
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={{"taxonomies.taxonomy_uid" : { "$exists": true }}`
+**GET** `/taxonomies/entries?query={{"taxonomies.taxonomy_uid" : { "$exists": true }}`
 
 Get all entries for a specific taxonomy that if the value of the field, mentioned in the condition, exists.
 
@@ -5375,15 +5754,22 @@ query={"taxonomies.color" : { "$exists": true }}
 
 ##### Equal and Below Operator
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| query | {"taxonomies.color" : { "$exists": true }} | Provide a custom query in the string format. |
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"taxonomies.color" : { "$exists": true }}`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+
+##### Sample Response
 
 ```json
 {
@@ -5510,10 +5896,10 @@ query={"taxonomies.color" : { "$exists": true }}
 }
 ```
 
+
 #### Equal and Below Operator
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"taxonomies.taxonomy_uid" : { "$eq_below": "term_uid", "levels" : level_number}}`
+**GET** `/taxonomies/entries?query={"taxonomies.taxonomy_uid" : { "$eq_below": "term_uid", "levels" : level_number}}`
 
 Get all entries for a specific taxonomy that match a specific term and all its descendant terms, requiring only the target term and a specified level.
 
@@ -5535,15 +5921,22 @@ query={
 
 ##### Below Operator
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| query | {"taxonomies.color" : { "$eq_below": "blue" }} | Provide a custom query in the string format. |
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"taxonomies.color" : { "$eq_below": "blue" }}`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+
+##### Sample Response
 
 ```json
 {
@@ -5717,10 +6110,10 @@ query={
 }
 ```
 
+
 #### Below Operator
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"taxonomies.taxonomy_uid" : { "$below": "term_uid", "levels" : 2}}`
+**GET** `/taxonomies/entries?query={"taxonomies.taxonomy_uid" : { "$below": "term_uid", "levels" : 2}}`
 
 Get all entries for a specific taxonomy that match all of their descendant terms by specifying only the target term and a specific level.
 
@@ -5742,15 +6135,22 @@ query={
 
 ##### Equal and Above Operator
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| query | {"taxonomies.color" : { "$below": "blue" }} | Provide a custom query in the string format. |
+- **query** (required)
+  Provide a custom query in the string format.
+  Default: `{"taxonomies.color" : { "$below": "blue" }}`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+
+##### Sample Response
 
 ```json
 {
@@ -5904,10 +6304,10 @@ query={
 }
 ```
 
+
 #### Equal and Above Operator
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"taxonomies.taxonomy_uid": { "$eq_above": "term_uid", "levels": 2 }}`
+**GET** `/taxonomies/entries?query={"taxonomies.taxonomy_uid": { "$eq_above": "term_uid", "levels": 2 }}`
 
 Get all entries for a specific taxonomy that match a specific term and all its ancestor terms, requiring only the target term and a specified level.
 
@@ -5929,15 +6329,22 @@ query = {
 
 ##### Above Operator
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| query | {"taxonomies.color": { "$eq_above": "navy_blue"}} | Provide a custom query in the string format. |
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"taxonomies.color": { "$eq_above": "navy_blue"}}`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+
+##### Sample Response
 
 ```json
 {
@@ -6028,10 +6435,10 @@ query = {
 }
 ```
 
+
 #### Above Operator
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={ "taxonomies.taxonomy_uid": { "$above": "term_uid", "levels": 2 }}`
+**GET** `/taxonomies/entries?query={ "taxonomies.taxonomy_uid": { "$above": "term_uid", "levels": 2 }}`
 
 Get all entries for a specific taxonomy that match only the parent term(s) of a specified target term, excluding the target term itself. You can also specify a specific level.
 
@@ -6051,15 +6458,22 @@ query = {
 }
 ```
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| query | {"taxonomies.color": { "$above": "navy_blue" }} | Provide a custom query in the string format. |
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"taxonomies.color": { "$above": "navy_blue" }}`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+
+##### Sample Response
 
 ```json
 {
@@ -6151,12 +6565,12 @@ query = {
 ```
 
 
-#### Equals Operator
 
 #### Equals Operator
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": "value"}`
+#### Equals Operator
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": "value"}`
 
 Get entries containing the field values matching the condition in the query.  
 This query will work for both entries as well as assets.
@@ -6173,19 +6587,37 @@ This will give you all the entries where the start date is 8th December, 2017.
 
 ##### Equals Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"title": "Redmi 3S"} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"title": "Redmi 3S"}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -6291,10 +6723,10 @@ This will give you all the entries where the start date is 8th December, 2017.
 }
 ```
 
+
 #### Equals Operator Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": "value"}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": "value"}`
 
 Get entries where the value of a field within a Group field matches the condition in the query. This query is specifically for fields that are part of the Group field.
 
@@ -6306,19 +6738,37 @@ This query will work for entries only.
 
 ##### Equals Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"bank_offers.card_type": "Debit Card"} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"bank_offers.card_type": "Debit Card"}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -6863,10 +7313,10 @@ This query will work for entries only.
 }
 ```
 
+
 #### Equals Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": "value"}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": "value"}`
 
 Get entries where the value of a field within a Modular Blocks field matches the condition in the query. This query is specifically for fields that are part of the Modular Blocks field.
 
@@ -6876,19 +7326,37 @@ This query will work for entries only.
 
 {"additional_info.deals.deal_name": "Christmas Deal"}
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"additional_info.deals.deal_name": "Christmas Deal"} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"additional_info.deals.deal_name": "Christmas Deal"}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -7118,12 +7586,12 @@ This query will work for entries only.
 ```
 
 
-#### Not-equals Operator
 
 #### Not-equals Operator
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$ne": "value"}}`
+#### Not-equals Operator
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$ne": "value"}}`
 
 Get all the entries in which the value of a field does not match the value provided in the condition.
        
@@ -7145,19 +7613,37 @@ This will give you all the entries where the start date is not 8th December, 201
 
 ##### Not-equals Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "price_in_usd": { "$ne": 146 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "price_in_usd": { "$ne": 146 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -7799,10 +8285,10 @@ This will give you all the entries where the start date is not 8th December, 201
 }
 ```
 
+
 #### Not-equals Operator Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$ne": "value"}}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$ne": "value"}}`
 
 Get entries where the value of a field does not match the value provided in the condition. This query is specifically for fields that are part of the Group field.  
   
@@ -7814,19 +8300,37 @@ This query will work for entries only.
 
 ##### Not-equals Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "bank_offers.card_type": { "$ne": "Debit Card" } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (199):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "bank_offers.card_type": { "$ne": "Debit Card" } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -8028,10 +8532,10 @@ This query will work for entries only.
 }
 ```
 
+
 #### Not-equals Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$ne": "value"}}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$ne": "value"}}`
 
 Get entries where the value of a field within the Modular Blocks field does not match the condition in the query. This query is specifically for fields that are part of any block within a Modular Block field.This query will work for entries only.
 
@@ -8039,19 +8543,37 @@ Get entries where the value of a field within the Modular Blocks field does not 
 
 {"additional_info.deals.deal_name": {"$ne": "Christmas Deal"}}
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "additional_info.deals.deal_name": { "$ne": "Christmas Deal" } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.deals.deal_name": { "$ne": "Christmas Deal" } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -8854,12 +9376,12 @@ Get entries where the value of a field within the Modular Blocks field does not 
 ```
 
 
-#### Array Equals Operator
 
 #### Array Equals Operator
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "field_UID": { "$in": [ value1, value2, ...] } }`
+#### Array Equals Operator
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "field_UID": { "$in": [ value1, value2, ...] } }`
 
 Get entries in which the value of a field matches to any of the given values. This parameter will compare field values of entries to that of the values provided in the condition.  
 This query will work for entries only.
@@ -8872,19 +9394,37 @@ This will retrieve all the entries that have the value of Price in USD field set
 
 ##### Array Equals Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "price_in_usd": { "$in": [ 101, 749 ] } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "price_in_usd": { "$in": [ 101, 749 ] } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -9246,10 +9786,10 @@ This will retrieve all the entries that have the value of Price in USD field set
 }
 ```
 
+
 #### Array Equals Operator Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "group_UID.field_UID": { "$in": [ value1, value2, ...] } }`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "group_UID.field_UID": { "$in": [ value1, value2, ...] } }`
 
 Get entries where the value of a field, within a Group field, matches any of the given values. This parameter will compare field values of entries to that of the values provided in the condition. This query is specifically for fields that are part of the Group field.  
   
@@ -9261,19 +9801,37 @@ This query will work for entries only.
 
 ##### Array Equals Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "bank_offers.card_type": { "$in": [ "Credit Card", "Debit Card"] } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "bank_offers.card_type": { "$in": [ "Credit Card", "Debit Card"] } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -10355,10 +10913,10 @@ This query will work for entries only.
 }
 ```
 
+
 #### Array Equals Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "modular_block_UID.block_UID.field_UID": { "$in": [ value1, value2, ...] } }`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "modular_block_UID.block_UID.field_UID": { "$in": [ value1, value2, ...] } }`
 
 Get entries where the value of a field within Modular Blocks matches to any of the given values. This query is specifically for fields that are part of any block within a Modular Block field.  
   
@@ -10368,19 +10926,37 @@ This query will work for entries only.
 
 {"additional_info.deals.deal_name": {"$in": ["Christmas Deal", "Summer Deal"]}}
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "additional_info.deals.deal_name": { "$in": [ "Christmas Deal", "Summer Deal"] } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.deals.deal_name": { "$in": [ "Christmas Deal", "Summer Deal"] } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -10868,12 +11444,12 @@ This query will work for entries only.
 ```
 
 
-#### Array Not-equals Operator
 
 #### Array Not-equals Operator
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "field_UID": { "$nin": [ value1, value2, ...]}}`
+#### Array Not-equals Operator
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "field_UID": { "$nin": [ value1, value2, ...]}}`
 
 Get all entries in which the value of a field does not match to any of the given values. This parameter will compare field values of entries to that of the values provided in the condition, and the query will retrieve entries that have field values that does not match to any of the values provided.
   
@@ -10889,19 +11465,37 @@ This will give you all the entries that do not have the value for Price in USD s
 
 ##### Array Not-equals Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "price_in_usd": { "$nin": [ 101, 749 ] } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "price_in_usd": { "$nin": [ 101, 749 ] } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -11648,10 +12242,10 @@ This will give you all the entries that do not have the value for Price in USD s
 }
 ```
 
+
 #### Array Not-equals Operator Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "group_UID.field_UID": { "$nin": [ value1, value2, ...]}}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "group_UID.field_UID": { "$nin": [ value1, value2, ...]}}`
 
 Get entries in which the value of a field does not match any of the values provided in the condition. This query is specifically for fields that are part of the Group field.  
 This query will work for entries only.
@@ -11662,19 +12256,37 @@ This query will work for entries only.
 
 ##### Array Not-equals Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "bank_offers.card_type": { "$nin": ["Debit Card"] } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "bank_offers.card_type": { "$nin": ["Debit Card"] } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -11841,10 +12453,10 @@ This query will work for entries only.
 }
 ```
 
+
 #### Array Not-equals Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "modular_block_UID.block_UID.field_UID": { "$nin": [ value1, value2, ...]}}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "modular_block_UID.block_UID.field_UID": { "$nin": [ value1, value2, ...]}}`
 
 Get entries where the values of the fields within Modular Blocks does not match the condition in the query. This query is specifically for fields that are part of any block within a Modular Block field.  
 This query will work for entries only.
@@ -11853,19 +12465,37 @@ This query will work for entries only.
 
 { "additional_info.deals.deal_name": { "$nin": [ "Christmas Deal", "Summer Deal" ] } }
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "additional_info.deals.deal_name": { "$nin": [ "Christmas Deal", "Summer Deal" ] } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (optional)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.deals.deal_name": { "$nin": [ "Christmas Deal", "Summer Deal" ] } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12470,12 +13100,12 @@ This query will work for entries only.
 ```
 
 
-#### Include Reference
 
 #### Include Reference
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&include[]={reference_field_UID}`
+#### Include Reference
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&include[]={reference_field_UID}`
 
 When fetching an entry, the content of referred entries that are part of the parent entry is NOT included in the Response body; you only get their UIDs. To include the content of the referred entries in your response, you need to use the include[] parameter and specify the UID of the reference field as value.The API request should be as follows: https://cdn.contentstack.io/v3/content_types/product/entries?include[]={reference_field_UID. This query will work for entries only.
 
@@ -12496,19 +13126,37 @@ https://cdn.contentstack.io/v3/content_types/product/entries?include[]=categorie
 
 ##### Include Reference Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| include[] | categories | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include[]** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `categories`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -13760,10 +14408,10 @@ https://cdn.contentstack.io/v3/content_types/product/entries?include[]=categorie
 }
 ```
 
+
 #### Include Reference Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&include[]={reference_group_UID.field_UID OR group_uid.reference_group_UID.field_uid}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&include[]={reference_group_UID.field_UID OR group_uid.reference_group_UID.field_uid}`
 
 If the reference field is part of a Group field, you need to use the Group field UID as well as the reference field UID using a dot operator.
 
@@ -13791,19 +14439,37 @@ https://cdn.contentstack.io/v3/content_types/content_type_uid/entries?include[]=
 
 ##### Include Reference Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| include[] | bank_offers.bank | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include[]** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `bank_offers.bank`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -14416,10 +15082,10 @@ https://cdn.contentstack.io/v3/content_types/content_type_uid/entries?include[]=
 }
 ```
 
+
 #### Include Reference Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&include[]={modular_block_UID.block_UID.reference_field_uid}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&include[]={modular_block_UID.block_UID.reference_field_uid}`
 
 If the reference field is part of a Modular Blocks field, you need to use the Modular Blocks UID, Block UID, as well as the reference field UID using a dot operator.
   
@@ -14431,19 +15097,37 @@ This query will work for entries only.
 
 https://cda.contentstack.io/v3/content_types/product/entries?include[]=additional_info.related_products.products
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| include[] | additional_info.related_products.products | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include[]** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `additional_info.related_products.products`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -17155,12 +17839,12 @@ https://cda.contentstack.io/v3/content_types/product/entries?include[]=additiona
 ```
 
 
+
 #### Include All References
 
 #### Include all references
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?include_all=true&include_all_depth=3`
+**GET** `/content_types/{content_type_uid}/entries?include_all=true&include_all_depth=3`
 
 When fetching an entry or a list of entries, the referenced entries are not included in the response by default—you only get their UIDs.
 
@@ -17180,20 +17864,40 @@ Each level reflects a reference chain—for example, an entry referencing a blog
 https://cdn.contentstack.io/v3/content_types/home/entries/?include_all=true&include_all_depth=3
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | home | Enter the unique ID of the content type in which you wish to search for entries. |
-| include_all | true | Set this to true to include referenced entries. |
-| include_all_depth | 3 | Enter a value between 1 to 5 to specify levels of referenced entries to include in the response. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `home`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_all** (required)
+  Set this to true to include referenced entries.
+  Default: `true`
+- **include_all_depth** (optional)
+  Enter a value between 1 to 5 to specify levels of referenced entries to include in the response.
+  Default: `3`
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -17289,12 +17993,12 @@ https://cdn.contentstack.io/v3/content_types/home/entries/?include_all=true&incl
 ```
 
 
-#### Reference Search Equals
 
 #### Reference Search Equals
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"reference_field_uid":{"$in_query":{"referenced_content_type's_field_uid":"value"}}}`
+#### Reference Search Equals
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"reference_field_uid":{"$in_query":{"referenced_content_type's_field_uid":"value"}}}`
 
 Get entries having values based on referenced fields. This query retrieves all entries that satisfy the query conditions made on referenced fields.  
 This query will work for entries only.
@@ -17339,19 +18043,37 @@ In the above query, ‘[Search by Regex](#search-by-regex)’ query has been app
 
 ##### Reference Search Equals Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"brand":{"$in_query":{"title":"Apple Inc."}}} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"brand":{"$in_query":{"title":"Apple Inc."}}}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -17673,10 +18395,10 @@ In the above query, ‘[Search by Regex](#search-by-regex)’ query has been app
 }
 ```
 
+
 #### Reference Search Equals Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_field_id"."reference_field_uid":{"$in_query":{"referenced_content_type's_group_uid.field_uid":"value"}}}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_field_id"."reference_field_uid":{"$in_query":{"referenced_content_type's_group_uid.field_uid":"value"}}}`
 
 Get entries having values based on referenced fields. This query retrieves all entries that satisfy query conditions made on referenced fields.
 
@@ -17689,18 +18411,33 @@ If the reference field is part of a Group field, you need to mention the Group f
 
 ##### Reference Search Equals Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of stack of which you wish to retrieve the content types. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main |  |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"bank_offers.bank":{"$in_query":{"title":"Citigroup"}}} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"bank_offers.bank":{"$in_query":{"title":"Citigroup"}}}`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of stack of which you wish to retrieve the content types.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -18006,10 +18743,10 @@ If the reference field is part of a Group field, you need to mention the Group f
 }
 ```
 
+
 #### Reference Search Equals Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_uid.block_uid.reference_field_uid":{"$in_query":{"referenced_content_type's_field_uid":"value"}}}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_uid.block_uid.reference_field_uid":{"$in_query":{"referenced_content_type's_field_uid":"value"}}}`
 
 Get entries having values based on referenced fields. This query retrieves all entries that satisfy query conditions made on referenced fields.If the reference is part of a Modular Blocks field, you need to mention the Modular Blocks UID, Block UID, as well as the reference field UID using a dot operatorNote that this query will work for entries only.
 
@@ -18018,19 +18755,37 @@ Get entries having values based on referenced fields. This query retrieves all e
 - General query: {"additional_info.related_products.products": {"$in_query": { "title": "iPhone 7 128GB"}}}
 - Multiple content type referencing query: {"additional_info.related_products.products":{"$in_query":{"title":"iPhone 7 128GB", "_content_type_uid": "product"}, "_content_type_uid": "electronics"}}
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of stack of which you wish to retrieve the content types. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"additional_info.related_products.products":{"$in_query":{"title":"iPhone 7 128GB"}}} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"additional_info.related_products.products":{"$in_query":{"title":"iPhone 7 128GB"}}}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of stack of which you wish to retrieve the content types.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -18189,12 +18944,12 @@ Get entries having values based on referenced fields. This query retrieves all e
 ```
 
 
-#### Reference Search Not-equals
 
 #### Reference Search Not-equals
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?environment={environment_name}&locale={locale_code}&query={"reference_field_uid":{"$nin_query":{"referenced_content_type's_field_uid":"value"}}}`
+#### Reference Search Not-equals
+
+**GET** `/content_types/{content_type_uid}/entries?environment={environment_name}&locale={locale_code}&query={"reference_field_uid":{"$nin_query":{"referenced_content_type's_field_uid":"value"}}}`
 
 Get entries having values based on referenced fields. This query works the opposite of $in_query and retrieves all entries that does not satisfy query conditions made on referenced fields.
   
@@ -18211,20 +18966,40 @@ Note that this query will work for entries only.
 
 ##### Reference Search Not-equals Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| environment | production | Enter the name of the environment of which the entries needs to be included. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"brand":{"$nin_query":{"title":"Apple Inc."}}} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **environment** (required)
+  Enter the name of the environment of which the entries needs to be included.
+  Default: `production`
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"brand":{"$nin_query":{"title":"Apple Inc."}}}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -18993,10 +19768,10 @@ Note that this query will work for entries only.
 }
 ```
 
+
 #### Reference Search Not-equals Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_field_id"."reference_field_uid":{"$nin_query":{"referenced_content_type's_group_uid.field_uid":"value"}}}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_field_id"."reference_field_uid":{"$nin_query":{"referenced_content_type's_group_uid.field_uid":"value"}}}`
 
 Get entries having values based on referenced fields. This query works the opposite of $in_query and retrieves all entries that does not satisfy query conditions made on referenced fields.Note that this query will work for entries only.If the reference is part of a Group field, you need to use the Group field UID as well as the reference field UID using a dot operator.
 
@@ -19007,19 +19782,37 @@ Get entries having values based on referenced fields. This query works the oppos
 
 ##### Reference Search Not-equals Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the reference field. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"bank_offers.bank":{"$nin_query":{"title":"Citigroup"}}} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the reference field.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"bank_offers.bank":{"$nin_query":{"title":"Citigroup"}}}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -19804,10 +20597,10 @@ Get entries having values based on referenced fields. This query works the oppos
 }
 ```
 
+
 #### Reference Search Not-equals Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_uid.block_uid.reference_field_uid":{"$nin_query":{"referenced_content_type's_field_uid":"value"}}}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_uid.block_uid.reference_field_uid":{"$nin_query":{"referenced_content_type's_field_uid":"value"}}}`
 
 Get entries having values based on referenced fields. This query works the opposite of $in_query and retrieves all entries that does not satisfy query conditions made on referenced fields.
 
@@ -19820,19 +20613,37 @@ If the reference is part of a Modular Blocks field, you need to use the Modular 
 - General query: { "additional_info.related_products.products": {"$nin_query": {"title": "iPhone 7 128GB"}}}
 - Multiple content type referencing query: { "additional_info.related_products.products": {"$nin_query": {"title": "iPhone 7 128GB", "_content_type_uid": "UID_of_referred_content_type"}, "_content_type_uid": "UID_of_parent_content_type"}}
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"additional_info.related_products.products":{"$nin_query":{"title":"iPhone 7 128GB"}}} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"additional_info.related_products.products":{"$nin_query":{"title":"iPhone 7 128GB"}}}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -20766,12 +21577,12 @@ If the reference is part of a Modular Blocks field, you need to use the Modular 
 ```
 
 
-#### Search by Regex
 
 #### Search by Regex
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "field_UID": { "$regex": "value" } }`
+#### Search by Regex
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "field_UID": { "$regex": "value" } }`
 
 Get entries by using regular expressions to query fields of a content type. These regex queries will help to retrieve all the entries of a content type that have field values matching the condition provided in the query parameter.This query will work for both entries as well as assets.
 
@@ -20787,19 +21598,37 @@ Now, in order to perform a case-insensitive search, you can use the $options key
 
 ##### Search by Regex Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "color": { "$regex": "^Bla" } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "color": { "$regex": "^Bla" } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -21254,10 +22083,10 @@ Now, in order to perform a case-insensitive search, you can use the $options key
 }
 ```
 
+
 #### Search By Regex Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "group_UID.field_UID": { "$regex": "value" } }`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "group_UID.field_UID": { "$regex": "value" } }`
 
 Get entries by using regular expressions to query fields of a Group field. These regex queries will help to retrieve all the entries of a content type that have field values matching the condition provided in the query parameter.
 
@@ -21269,19 +22098,37 @@ Get entries by using regular expressions to query fields of a Group field. These
 
 ##### Search by Regex Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "bank_offers.card_type": { "$regex": "^Credit Card" } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "bank_offers.card_type": { "$regex": "^Credit Card" } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -22900,10 +23747,10 @@ Get entries by using regular expressions to query fields of a Group field. These
 }
 ```
 
+
 #### Search by Regex Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "modular_block_UID.block_UID.field_UID": { "$regex": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "modular_block_UID.block_UID.field_UID": { "$regex": "value" }}`
 
 Get entries by using regular expressions to query fields of a Modular Block. These Regex queries will help to retrieve all the entries of a content type that have field values matching the condition provided in the query parameter.   
   
@@ -22913,19 +23760,37 @@ This query will work for entries only and works specifically for fields that are
 
 { "additional_info.deals.deal_name": { "$regex": "^Christmas Deal" }}
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "additional_info.deals.deal_name": { "$regex": "^Christmas Deal" } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.deals.deal_name": { "$regex": "^Christmas Deal" } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -23255,12 +24120,12 @@ This query will work for entries only and works specifically for fields that are
 ```
 
 
+
 #### AND Operator
 
 #### AND operator
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$and":[{"field1_UID": "value1"},{"field2_UID": "value2"}]}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$and":[{"field1_UID": "value1"},{"field2_UID": "value2"}]}`
 
 Get entries that satisfy all the conditions provided in the '$and' query.This query will work for both entries as well as assets.
 
@@ -23272,19 +24137,37 @@ The response will contain the entries where the values for Title is 'Redmi Note 
 
 ##### AND Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"$and":[{"title": "Redmi Note 3"},{"color": "Gold"}]} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"$and":[{"title": "Redmi Note 3"},{"color": "Gold"}]}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -23451,10 +24334,10 @@ The response will contain the entries where the values for Title is 'Redmi Note 
 }
 ```
 
+
 #### AND Operator Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$and":[{"group_UID.field1_UID": "value1"},{"group_UID.field2_UID": "value2"}]}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$and":[{"group_UID.field1_UID": "value1"},{"group_UID.field2_UID": "value2"}]}`
 
 Get entries that satisfy all the conditions provided in the $and query.This query is specifically for entries and works on fields that are part of the Group field.
 
@@ -23464,19 +24347,37 @@ Get entries that satisfy all the conditions provided in the $and query.This quer
 
 ##### AND Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"$and":[{"bank_offers.card_type": "Credit Card"},{"bank_offers.discount_in_percentage": 12}]} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"$and":[{"bank_offers.card_type": "Credit Card"},{"bank_offers.discount_in_percentage": 12}]}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -23643,10 +24544,10 @@ Get entries that satisfy all the conditions provided in the $and query.This quer
 }
 ```
 
+
 #### AND Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$and":[{"modular_block_UID.block_UID.field1_UID": "value1"},{"modular_block_UID.block_UID.field2_UID": "value2"}]}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$and":[{"modular_block_UID.block_UID.field1_UID": "value1"},{"modular_block_UID.block_UID.field2_UID": "value2"}]}`
 
 Get entries that satisfy all the conditions provided in the $and query.This query is specifically for entries and works on fields that are part of any block within a Modular Block field.
 
@@ -23654,19 +24555,37 @@ Get entries that satisfy all the conditions provided in the $and query.This quer
 
 {"$and":[{"additional_info.deals.deal_name": "Christmas Deal"},{"additional_info.rating.stars": 2}]}
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | {"$and":[{"additional_info.deals.deal_name": "Christmas Deal"},{"additional_info.rating.stars": 2}]} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"$and":[{"additional_info.deals.deal_name": "Christmas Deal"},{"additional_info.rating.stars": 2}]}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -23847,12 +24766,12 @@ Get entries that satisfy all the conditions provided in the $and query.This quer
 ```
 
 
-#### OR Operator
 
 #### OR Operator
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$or":[{"field1_UID": "value1"},{"field2_UID": "value2"}]}`
+#### OR Operator
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$or":[{"field1_UID": "value1"},{"field2_UID": "value2"}]}`
 
 Get all entries that satisfy at least one of the given conditions provided in the '$or' query.
        
@@ -23868,19 +24787,37 @@ The response will contain the entries that have their Color fields set to either
 
 ##### OR Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "$or": [{ "color": "Gold" }, { "color": "Black" }] } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "$or": [{ "color": "Gold" }, { "color": "Black" }] }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -24664,10 +25601,10 @@ The response will contain the entries that have their Color fields set to either
 }
 ```
 
+
 #### OR Operator Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$or":[{"group_UID.field1_UID": "value1"},{"group_UID.field2_UID": "value2"}]}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$or":[{"group_UID.field1_UID": "value1"},{"group_UID.field2_UID": "value2"}]}`
 
 Get all entries that satisfy at least one of the given conditions provided in the $or query.
   
@@ -24681,19 +25618,37 @@ This query is specifically for entries and works for fields that are part of the
 
 ##### OR Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "$or": [{ "bank_offers.card_type": "Debit Card" }, { "bank_offers.discount_in_percentage": 12}] } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "$or": [{ "bank_offers.card_type": "Debit Card" }, { "bank_offers.discount_in_percentage": 12}] }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -25775,10 +26730,10 @@ This query is specifically for entries and works for fields that are part of the
 }
 ```
 
+
 #### OR Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$or":[{"modular_block_UID.block_UID.field1_UID": "value1"},{"modular_block_UID.block_UID.field2_UID": "value2"}]}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"$or":[{"modular_block_UID.block_UID.field1_UID": "value1"},{"modular_block_UID.block_UID.field2_UID": "value2"}]}`
 
 Get all entries that satisfy at least one of the given conditions provided in the '$or' query.
   
@@ -25790,19 +26745,37 @@ This query is specifically for entries and works on fields that are part of any 
 
 {"$or":[{"additional_info.deals.deal_name": "Christmas Deal"},{"additional_info.rating.stars": 2}]}
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "$or": [{ "additional_info.deals.deal_name": "Christmas Deal" }, { "additional_info.rating.stars": 2}] } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "$or": [{ "additional_info.deals.deal_name": "Christmas Deal" }, { "additional_info.rating.stars": 2}] }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -26265,12 +27238,12 @@ This query is specifically for entries and works on fields that are part of any 
 ```
 
 
-#### Less Than
 
 #### Less Than
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$lt": "value" }}`
+#### Less Than
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$lt": "value" }}`
 
 Get entries in which the value of a field is lesser than the value provided in the condition.
        
@@ -26294,19 +27267,37 @@ This will give you all the entries where the start date is before 8th December, 
 
 ##### Less Than Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "price_in_usd": { "$lt": 600 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "price_in_usd": { "$lt": 600 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -27075,10 +28066,10 @@ This will give you all the entries where the start date is before 8th December, 
 }
 ```
 
+
 #### Less Than Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$lt": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$lt": "value" }}`
 
 Get entries in which the value of a field is lesser than the value provided in the condition.  
   
@@ -27092,19 +28083,37 @@ This query is specifically for fields that are part of the Group field.
 
 ##### Less Than Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "bank_offers.discount_in_percentage": { "$lt": 25 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "bank_offers.discount_in_percentage": { "$lt": 25 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -27888,10 +28897,10 @@ This query is specifically for fields that are part of the Group field.
 }
 ```
 
+
 #### Less Than Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$lt": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$lt": "value" }}`
 
 Get entries in which the value of a field is lesser than the value provided in the condition.  
   
@@ -27903,19 +28912,37 @@ This query is specifically for fields that are part of any block within a Modula
 
 **Note:** Avoid using seconds and milliseconds in date/time queries. We recommend to round off to the nearest minute (at most 5 minutes).
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "additional_info.rating.stars": { "$lt": 3 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.rating.stars": { "$lt": 3 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -28393,12 +29420,12 @@ This query is specifically for fields that are part of any block within a Modula
 ```
 
 
+
 #### Less Than Or Equal To
 
 #### Less Than or Equal To
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$lte": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$lte": "value" }}`
 
 Get entries in which the value of a field is lesser than or equal to the value provided in the condition.This query will work for both entries as well as assets.
 
@@ -28418,19 +29445,37 @@ This will give you all the entries before 8th December, 2017, along with the ent
 
 ##### Less Than Or Equal To Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "price_in_usd": { "$lte": 146 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "price_in_usd": { "$lte": 146 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -29050,10 +30095,10 @@ This will give you all the entries before 8th December, 2017, along with the ent
 }
 ```
 
+
 #### Less Than Or Equal To Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$lte": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$lte": "value" }}`
 
 Get entries in which the value of a field is lesser than or equal to the value provided in the condition.This query is specifically for fields that are part of the Group field.
 
@@ -29065,19 +30110,37 @@ Get entries in which the value of a field is lesser than or equal to the value p
 
 ##### Less Than Or Equal To Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "bank_offers.discount_in_percentage": { "$lte": 27 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "bank_offers.discount_in_percentage": { "$lte": 27 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -29861,10 +30924,10 @@ Get entries in which the value of a field is lesser than or equal to the value p
 }
 ```
 
+
 #### Less Than Or Equal To Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$lte": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$lte": "value" }}`
 
 Get entries in which the value of a field is lesser than or equal to the value provided in the condition.This query is specifically for entries and works on fields that are part of any block within a Modular Block field.
 
@@ -29874,19 +30937,37 @@ Get entries in which the value of a field is lesser than or equal to the value p
 
 **Note:** Avoid using seconds and milliseconds in date/time queries. We recommend to round off to the nearest minute (at most 5 minutes).
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "additional_info.rating.stars": { "$lte": 3 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.rating.stars": { "$lte": 3 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -30513,12 +31594,12 @@ Get entries in which the value of a field is lesser than or equal to the value p
 ```
 
 
-#### Greater Than
 
 #### Greater Than
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$gt": "value" }}`
+#### Greater Than
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$gt": "value" }}`
 
 Get entries in which the value for a field is greater than the value provided in the condition.This query will work for both entries as well as assets.
 
@@ -30538,19 +31619,37 @@ This will give you all the entries after 8th December, 2017.
 
 ##### Greater Than Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "price_in_usd": { "$gt": 146 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "price_in_usd": { "$gt": 146 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -31021,10 +32120,10 @@ This will give you all the entries after 8th December, 2017.
 }
 ```
 
+
 #### Greater Than Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$gt": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$gt": "value" }}`
 
 Get entries in which the value for a field is greater than the value provided in the condition.This query is specifically for entries and works on fields that are part of the Group field.
 
@@ -31036,19 +32135,37 @@ Get entries in which the value for a field is greater than the value provided in
 
 ##### Greater Than Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "bank_offers.discount_in_percentage": { "$gt": 20 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "bank_offers.discount_in_percentage": { "$gt": 20 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -31488,10 +32605,10 @@ Get entries in which the value for a field is greater than the value provided in
 }
 ```
 
+
 #### Greater Than Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$gt": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$gt": "value" }}`
 
 Get entries in which the value for a field is greater than the value provided in the condition.This query is specifically for entries and works on fields that are part of any block within a Modular Block field.
 
@@ -31501,19 +32618,37 @@ Get entries in which the value for a field is greater than the value provided in
 
 **Note:** Avoid using seconds and milliseconds in date/time queries. We recommend to round off to the nearest minute (at most 5 minutes).
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "additional_info.rating.stars": { "$gt": 3 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.rating.stars": { "$gt": 3 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -31979,12 +33114,12 @@ Get entries in which the value for a field is greater than the value provided in
 ```
 
 
+
 #### Greater Than Or Equal To
 
 #### Greater Than or Equal To
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$gte": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$gte": "value" }}`
 
 Get entries in which the value of a field is greater than or equal to the value provided in the condition.  
 This query will work for both entries as well as assets.
@@ -32005,19 +33140,37 @@ This will give you all the entries where the start date falls after 8th December
 
 ##### Greater Than Or Equal To Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "price_in_usd": { "$gte": 146 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "price_in_usd": { "$gte": 146 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -32646,10 +33799,10 @@ This will give you all the entries where the start date falls after 8th December
 }
 ```
 
+
 #### Greater Than Or Equal To Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$gte": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$gte": "value" }}`
 
 Get entries in which the value of a field is greater than or equal to the value provided in the condition.This query is specifically for fields that are part of the Group field.
 
@@ -32661,19 +33814,37 @@ Get entries in which the value of a field is greater than or equal to the value 
 
 ##### Greater Than Or Equal To Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "bank_offers.discount_in_percentage": { "$gte": 20 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "bank_offers.discount_in_percentage": { "$gte": 20 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -33113,10 +34284,10 @@ Get entries in which the value of a field is greater than or equal to the value 
 }
 ```
 
+
 #### Greater Than Or Equal To Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$gte": "value" }}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$gte": "value" }}`
 
 Get entries in which the value of a field is greater than or equal to the value provided in the condition.
   
@@ -33128,19 +34299,37 @@ This query is specifically for fields that are part of any block within a Modula
 
 **Note:** Avoid using seconds and milliseconds in date/time queries. We recommend to round off to the nearest minute (at most 5 minutes).
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "additional_info.rating.stars": { "$gte": 3 } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.rating.stars": { "$gte": 3 } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -33755,12 +34944,12 @@ This query is specifically for fields that are part of any block within a Modula
 ```
 
 
-#### Limit
 
 #### Limit
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&limit={limit_value}`
+#### Limit
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&limit={limit_value}`
 
 The limit parameter will return a specific number of entries in the output. So for example, if the content type contains more than 100 entries and you wish to fetch only the first 2 entries, you need to specify '2' as value in this parameter.
 
@@ -33772,19 +34961,37 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 
 **Note**: By default, the limit for response details per request is 100.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| limit | 2 | Enter the maximum number of entries to be returned. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **limit** (required)
+  Enter the maximum number of entries to be returned.
+  Default: `2`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -34076,12 +35283,12 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 ```
 
 
-#### Skip
 
 #### Skip
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&skip={skip_value}`
+#### Skip
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&skip={skip_value}`
 
 The skip parameter will skip a specific number of entries in the output. So, for example, if the content type contains around 12 entries and you want to skip the first 2 entries to get only the last 10 in the response body, you need to specify ‘2’ here.This query will work for both entries as well as assets.
 
@@ -34089,19 +35296,37 @@ The skip parameter will skip a specific number of entries in the output. So, for
 
 https://cdn.contentstack.io/v3/content_types/product/entries?environment=production&skip=2
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| skip | 2 | Enter the number of entries to be skipped. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **skip** (required)
+  Enter the number of entries to be skipped.
+  Default: `2`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -34902,12 +36127,12 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 ```
 
 
-#### Order by asc
 
 #### Order by asc
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&asc={field_UID}`
+#### Order by asc
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&asc={field_UID}`
 
 When fetching entries, you can sort them in the ascending order with respect to the value of a specific field in the response body.
 
@@ -34923,19 +36148,37 @@ This will give you all the entries sorted in the ascending order with respect to
 
 ##### Order by asc Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| asc | price_in_usd | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **asc** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `price_in_usd`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -36017,10 +37260,10 @@ This will give you all the entries sorted in the ascending order with respect to
 }
 ```
 
+
 #### Order by asc Operator Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?environment={environment_name}&locale={locale_code}&asc={group_UID.field_UID}`
+**GET** `/content_types/{content_type_uid}/entries?environment={environment_name}&locale={locale_code}&asc={group_UID.field_UID}`
 
 Sort your fetched entries in the ascending order with respect to the value of a specific field in the response body.This query is specifically for entries and works on fields that are part of the Group field.
 
@@ -36030,19 +37273,37 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 
 ##### Order by asc Operator within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| asc | bank_offers.discount_in_percentage | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **asc** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `bank_offers.discount_in_percentage`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -37124,10 +38385,10 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 }
 ```
 
+
 #### Order by asc Operator within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&asc={modular_block_UID.block_UID.field_UID}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&asc={modular_block_UID.block_UID.field_UID}`
 
 When fetching entries, you can sort your fetched entries in the ascending order with respect to the values of any block within a Modular Block field.
 
@@ -37139,19 +38400,37 @@ This query is specifically for entries and works on fields that are part of any 
 
 https://cdn.contentstack.io/v3/content_types/product/entries?environment=production&asc=additional_info.rating.stars
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries need to be included. Only the entries published in this locale will  |
-| asc | additional_info.rating.stars | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries need to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **asc** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `additional_info.rating.stars`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -37749,12 +39028,12 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 ```
 
 
-#### Order by desc
 
 #### Order by desc
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&desc={field_UID}`
+#### Order by desc
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&desc={field_UID}`
 
 When fetching entries, you can sort them in the descending order with respect to the value of a specific field in the response body.
 
@@ -37770,19 +39049,37 @@ This will give you all the entries sorted in the descending order with respect t
 
 ##### Order by desc Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| desc | price_in_usd | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **desc** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `price_in_usd`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -38864,10 +40161,10 @@ This will give you all the entries sorted in the descending order with respect t
 }
 ```
 
+
 #### Order By desc Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&desc={group_UID.field_UID}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&desc={group_UID.field_UID}`
 
 Sort your fetched entries in the descending order with respect to the value of a specific field in the response body.This query is specifically for entries and works on fields that are part of the Group field.
 
@@ -38877,19 +40174,37 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 
 ##### Order by desc Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| desc | bank_offers.discount_in_percentage | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **desc** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `bank_offers.discount_in_percentage`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -39971,10 +41286,10 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 }
 ```
 
+
 #### Order by desc Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&desc={modular_block_UID.block_UID.field_UID}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&desc={modular_block_UID.block_UID.field_UID}`
 
 Sort your fetched entries in the descending order with respect to the value of a specific field in the response body.This query is specifically for entries and works on fields that are part of any block within a Modular Block field.
 
@@ -39984,19 +41299,37 @@ Sort your fetched entries in the descending order with respect to the value of a
 
 https://cdn.contentstack.io/v3/content_types/product/entries?environment=production&desc=additional_info.rating.stars
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| desc | additional_info.rating.stars | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **desc** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `additional_info.rating.stars`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -41079,12 +42412,12 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 ```
 
 
-#### Exists
 
 #### Exists
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$exists": true } }`
+#### Exists
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"field_UID": { "$exists": true } }`
 
 Get entries if value of the field, mentioned in the condition, exists.This query will work for entries only.
 
@@ -41094,19 +42427,37 @@ Get entries if value of the field, mentioned in the condition, exists.This query
 
 ##### Exists Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "price_in_usd": { "$exists": true } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "price_in_usd": { "$exists": true } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -42188,10 +43539,10 @@ Get entries if value of the field, mentioned in the condition, exists.This query
 }
 ```
 
+
 #### Exists Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$exists": true } }`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_UID.field_UID": { "$exists": true } }`
 
 Get entries if value of the field, mentioned in the condition, exists.This query is specifically for entries and work on fields that are part of the Group field.
 
@@ -42201,19 +43552,37 @@ Get entries if value of the field, mentioned in the condition, exists.This query
 
 ##### Exists Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "bank_offers.discount_in_percentage": { "$exists": true } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "bank_offers.discount_in_percentage": { "$exists": true } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -43295,10 +44664,10 @@ Get entries if value of the field, mentioned in the condition, exists.This query
 }
 ```
 
+
 #### Exists Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$exists": true } }`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_UID.block_UID.field_UID": { "$exists": true } }`
 
 Get entries if value of the field, mentioned in the condition, exists.This query is specifically for entries and works on fields that are part of any block within a Modular Block field.
 
@@ -43306,19 +44675,37 @@ Get entries if value of the field, mentioned in the condition, exists.This query
 
 {"additional_info.rating.stars": {"$exists": true }}
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| query | { "additional_info.rating.stars": { "$exists": true } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.rating.stars": { "$exists": true } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -44401,12 +45788,12 @@ Get entries if value of the field, mentioned in the condition, exists.This query
 ```
 
 
+
 #### Only Operator
 
 #### Only operator
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale}&only[BASE][]=field_UID`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale}&only[BASE][]=field_UID`
 
 The only[][] parameter will include the data of only the specified fields for each entry and exclude the data of all other fields. There are two approaches to this parameter. Firstly, we have the only[BASE][] parameter, where 'BASE' is the default value and refers to the top-level fields of the schema. Secondly, we have the only[Reference_field_uid][] parameter, where you need to enter the UID of the reference field in place of "Reference_field_uid".This query will work for entries only.
 
@@ -44420,19 +45807,37 @@ https://cdn.contentstack.io/v3/content_types/author/entries?environment=producti
 
 ##### Only Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| only[BASE][] | price_in_usd | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **only[BASE][]** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `price_in_usd`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -44469,10 +45874,10 @@ https://cdn.contentstack.io/v3/content_types/author/entries?environment=producti
 }
 ```
 
+
 #### Only Operator Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale}&only[BASE][]=group_UID.field_UID`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale}&only[BASE][]=group_UID.field_UID`
 
 Get entries in which the data of a specific field is included in the response JSON.This query is specifically for entries and works on fields that are part of the Group field.
 
@@ -44482,19 +45887,37 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 
 ##### Only Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| only[BASE][] | bank_offers.discount_in_percentage | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **only[BASE][]** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `bank_offers.discount_in_percentage`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -44568,10 +45991,10 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 }
 ```
 
+
 #### Only Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale}&only[BASE][]=modular_block_UID.block_UID.field_UID`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale}&only[BASE][]=modular_block_UID.block_UID.field_UID`
 
 Get entries in which the data of a specific field is included in the response JSON.This query is specifically for fields that are part of any block within a Modular Block field.
 
@@ -44579,19 +46002,37 @@ Get entries in which the data of a specific field is included in the response JS
 
 https://cdn.contentstack.io/v3/content_types/product/entries?environment=production&only[BASE][]=additional_info.rating.stars
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| only[BASE][] | additional_info.rating.stars | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **only[BASE][]** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `additional_info.rating.stars`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -44678,12 +46119,12 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 ```
 
 
+
 #### Exclude Operator
 
 #### Exclude operator
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale}&except[BASE][]=field_UID`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale}&except[BASE][]=field_UID`
 
 The except[][] parameter will exclude the data of the specified fields for each entry and will include the data of the rest of the fields. There are two approaches to this parameter. Firstly, we have the except[BASE][] parameter, where 'BASE' is the default value and refers to the top-level fields of the schema. Secondly, we have the except[Reference_field_uid][] parameter, where you need to enter the UID of the reference field in place of Reference_field_uid.This query will work for entries only.
 
@@ -44697,19 +46138,37 @@ https://cdn.contentstack.io/v3/content_types/author/entries?environment=producti
 
 ##### Exclude Operator Within Group
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| except[BASE][] | price_in_usd | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **except[BASE][]** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `price_in_usd`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -45784,10 +47243,10 @@ https://cdn.contentstack.io/v3/content_types/author/entries?environment=producti
 }
 ```
 
+
 #### Exclude Operator Within Group
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale}&except[BASE][]=group_UID.field_UID`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale}&except[BASE][]=group_UID.field_UID`
 
 Get entries in which the data of a specific field is excluded from the response JSON, but the data of the rest of the fields are included.This query is specifically for entries and works with fields that are part of the Group field.
 
@@ -45797,19 +47256,37 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 
 ##### Exclude Operator Within Modular Blocks
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| except[BASE][] | bank_offers.discount_in_percentage | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **except[BASE][]** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `bank_offers.discount_in_percentage`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -46880,10 +48357,10 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 }
 ```
 
+
 #### Exclude Operator Within Modular Blocks
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale}&except[BASE][]=modular_block_UID.block_UID.field_UID`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale}&except[BASE][]=modular_block_UID.block_UID.field_UID`
 
 Get entries in which the data of a specific field is excluded from the response JSON, but the data of the rest of the fields are included.This query is specifically for entries and works with fields that are part of any block within a Modular Block field.
 
@@ -46891,19 +48368,37 @@ Get entries in which the data of a specific field is excluded from the response 
 
 https://cdn.contentstack.io/v3/content_types/product/entries?environment=production&except[BASE][]=additional_info.rating.stars
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| except[BASE][] | additional_info.rating.stars | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **except[BASE][]** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `additional_info.rating.stars`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -47972,12 +49467,12 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 ```
 
 
-#### Count
 
 #### Count
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale}&include_count={boolean_value}`
+#### Count
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale}&include_count={boolean_value}`
 
 To retrieve the count of entries, we have two parameters: include_count (retrieves entries' details and their count) and count (retrieves only the count of entries).This query will work for both entries as well as assets.
 
@@ -47993,20 +49488,40 @@ To get only the count, run the following API request:
 https://cdn.contentstack.io/v3/content_types/product/entries?environment={environment}&count=true
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| include_count | true | Enter 'true' to get the total count of the entries and their details. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
-| count | false | Enter 'true' to only get the count of entries. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include_count** (required)
+  Enter 'true' to get the total count of the entries and their details.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+- **count** (optional)
+  Enter 'true' to only get the count of entries.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -49090,12 +50605,12 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment={enviro
 ```
 
 
-#### Pagination
 
 #### Pagination
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale}&include_count={boolean_value}&skip={skip_value}&limit={limit_value}`
+#### Pagination
+
+**GET** `/content_types/{content_type_uid}/entries?locale={locale}&include_count={boolean_value}&skip={skip_value}&limit={limit_value}`
 
 The 'Get all entries' API request returns only the first 100 entries of the specified content type. Similarly, the 'Get all assets' request fetches the first 100 assets of a particular stack.
 
@@ -49110,21 +50625,43 @@ The syntax of the pagination request will look like the following:
 - For entries: https://cdn.contentstack.io/v3/content_types/product/entries?environment={environment}&locale={locale}&include_count=true&skip={skip_value}&limit={limit_value}
 - For assets: https://cdn.contentstack.io/v3/assets?environment={environment_name}&include_dimension={boolean_value}&include_count=true&skip={skip_value}&limit={limit_value}
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will |
-| include_count | true | Set this parameter to 'true' to include in response the total count of entries available in a content type. |
-| skip | 2 | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-| limit | 7 | Enter the maximum number of entries to be returned. |
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include_count** (required)
+  Set this parameter to 'true' to include in response the total count of entries available in a content type.
+  Default: `true`
+- **skip** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `2`
+- **limit** (required)
+  Enter the maximum number of entries to be returned.
+  Default: `7`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -49924,6 +51461,7 @@ The syntax of the pagination request will look like the following:
   "count": 7
 }
 ```
+
 
 ### All Query Parameters
 

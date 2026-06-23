@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Increase sharpness
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&sharpen={sharpen}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&sharpen={sharpen}`
 
 ##### Things to Keep in Mind
 
@@ -26,11 +24,12 @@ last_updated: 2025-08-28
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **sharpen** (optional)
+  Enter the value for the amount (for e.g. a5 ) of increase in contrast, the radius (for e.g. r1000) of the image edges to be sharpened, and the threshold (for e.g. t2) range of the image edges that need to be ignored while sharpening. The format of this parameter is: sharpen=a{amount_value},r{radius_value},t{threshold_value}
+  Default: `a5,r1000,t2`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| sharpen | a5,r1000,t2 | Enter the value for the amount (for e.g. a5 ) of increase in contrast, the radius (for e.g. r1000) of the image edges to be sharpened, and the threshold (for e. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

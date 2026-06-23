@@ -12,9 +12,7 @@ last_updated: 2026-05-18
 
 # Get all entries with defined taxonomies
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"taxonomies.taxonomy_uid": "term_uid"}`
+**GET** `/taxonomies/entries?query={"taxonomies.taxonomy_uid": "term_uid"}`
 
 The Get all entries with defined taxonomies request returns comprehensive information of all the entries associated with a specific taxonomy or term available in a particular stack in your organization.
 
@@ -56,22 +54,28 @@ query={
 
 **Note**: Refer to the [Taxonomy Queries](/docs/developers/apis/content-delivery-api#taxonomy-queries) section for more query filters.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (optional)
+  Provide a custom query in string format.
+  Default: `{"taxonomies.taxonomy_uid" : "term_uid"}`
+- **resolve_terms** (optional)
+  If true, includes resolved term metadata (name, depth, order) for each taxonomy field.
+  Default: `true`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| query | {"taxonomies.taxonomy_uid" : "term_uid"} | Provide a custom query in string format. |
-
-| resolve_terms | true | If true, includes resolved term metadata (name, depth, order) for each taxonomy field. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -92,3 +96,4 @@ query={
   ]
 }
 ```
+

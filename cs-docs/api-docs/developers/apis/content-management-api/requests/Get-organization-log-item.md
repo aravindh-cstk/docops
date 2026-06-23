@@ -12,26 +12,28 @@ last_updated: 2025-07-09
 
 # Get organization log item
 
-
-**Method:** `GET`  
-**Endpoint:** `/organizations/{organization_uid}/logs/{log_uid}`
+**GET** `/organizations/{organization_uid}/logs/{log_uid}`
 
 The Get organization log item request is used to retrieve a specific item from the audit log of an organization.
 
 When executing the Get organization log details request, you get the Organization UID and Log UID. Use these values to execute the Get organization log item API request.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of a specific organization of which you want to retrieve the audit log details.
+  Default: `656s5d1c65ea6ddf287`
+- **log_uid** (required)
+  Enter the UID of a specific log item of which you want to retrieve the details.
+  Default: `bget22758ff32ccd88ece`
 
-| authtoken | Your_authtoken | Enter your authtoken. |
+## Headers
 
-| organization_uid | 656s5d1c65ea6ddf287 | Enter the UID of a specific organization of which you want to retrieve the audit log details. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `Your_authtoken`
 
-| log_uid | bget22758ff32ccd88ece | Enter the UID of a specific log item of which you want to retrieve the details. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -74,3 +76,4 @@ When executing the Get organization log details request, you get the Organizatio
 	}
 }
 ```
+

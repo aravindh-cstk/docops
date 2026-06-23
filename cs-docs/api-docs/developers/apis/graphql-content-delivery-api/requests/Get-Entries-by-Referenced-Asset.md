@@ -12,9 +12,7 @@ last_updated: 2023-03-29
 
 # Get Entries by Referenced Asset
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries by using asset data to query a content type.
 
@@ -48,3 +46,4 @@ query {
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and will include details of just the 'Title' field of the **Category** content type.
 
 **Note**: You cannot query content types based on the URL field of an asset.
+

@@ -12,28 +12,27 @@ last_updated: 2024-07-25
 
 # Import a Webhook
 
-
-**Method:** `POST`  
-**Endpoint:** `/webhooks/import`
+**POST** `/webhooks/import`
 
 The Import Webhook request imports a webhook. To import a webhook, you need to upload a JSON file with the webhook data.
 
 To configure the permissions for your application via OAuth, please include the cm.webhooks:import scope.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "multipart/form-data" to pass form-data params.
+  Default: `multipart/form-data`
 
-| api_key | blt20962a819b57e233 |  |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | multipart/form-data | Enter "multipart/form-data" to pass form-data params. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -74,3 +73,4 @@ To configure the permissions for your application via OAuth, please include the 
     }
 }
 ```
+

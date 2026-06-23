@@ -12,9 +12,7 @@ last_updated: 2024-11-14
 
 # Deploy a Release
 
-
-**Method:** `POST`  
-**Endpoint:** `/releases/{release_uid}/deploy`
+**POST** `/releases/{release_uid}/deploy`
 
 The Deploy a Release request deploys a specific Release to specific environment(s) and locale(s).
 
@@ -22,26 +20,34 @@ When executing the API request, provide the Release UID. In the 'Body' section, 
 
 To configure the permissions for your application via OAuth, please include the cm.release:deploy scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **release_uid** (required)
+  Enter the unique ID of the release which you want to deploy on a specific environment and locale.
+  Default: `blt719af000dcde0000`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| release_version | 2.0 | Enter the release version. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Enter application/json to pass a request body. |
-
-| branch | main | Enter your branch unique ID. |
-
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release which you want to deploy on a specific environment and locale. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -56,10 +62,11 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Release sent successfully for deployment."
 }
 ```
+

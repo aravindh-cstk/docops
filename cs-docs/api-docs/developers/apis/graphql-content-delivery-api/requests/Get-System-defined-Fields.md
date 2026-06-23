@@ -12,6 +12,5 @@ last_updated: 2023-08-07
 
 # Get System defined Fields
 
+**** `/stacks/apiKey/explore`
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`

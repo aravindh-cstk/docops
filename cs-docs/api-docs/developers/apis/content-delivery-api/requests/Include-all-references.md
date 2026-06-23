@@ -12,9 +12,7 @@ last_updated: 2025-11-06
 
 # Include all references
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?include_all=true&include_all_depth=3`
+**GET** `/content_types/{content_type_uid}/entries?include_all=true&include_all_depth=3`
 
 When fetching an entry or a list of entries, the referenced entries are not included in the response by default—you only get their UIDs.
 
@@ -34,28 +32,40 @@ Each level reflects a reference chain—for example, an entry referencing a blog
 https://cdn.contentstack.io/v3/content_types/home/entries/?include_all=true&include_all_depth=3
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `home`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **include_all** (required)
+  Set this to true to include referenced entries.
+  Default: `true`
+- **include_all_depth** (optional)
+  Enter a value between 1 to 5 to specify levels of referenced entries to include in the response.
+  Default: `3`
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| content_type_uid | home | Enter the unique ID of the content type in which you wish to search for entries. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| include_all | true | Set this to true to include referenced entries. |
-
-| include_all_depth | 3 | Enter a value between 1 to 5 to specify levels of referenced entries to include in the response. |
-
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -149,3 +159,4 @@ https://cdn.contentstack.io/v3/content_types/home/entries/?include_all=true&incl
     ]
 }
 ```
+

@@ -225,7 +225,82 @@ async function writeFile(parts, content) {
 }
 
 // ---------------------------------------------------------------------------
+// Render a single api_requests_* entry as markdown at the given heading level
+// Matches the live Contentstack docsite .md format exactly:
+//   H{level}   = API request title
+//   **METHOD** `endpoint`
+//   summary (HTML → md)
+//   H{level+1} URL Parameters / Query Parameters / Headers  (bullet lists)
+//   H{level+1} Sample Request / Sample Response  (```json blocks)
+// ---------------------------------------------------------------------------
+function renderApiRequest(req, headingLevel) {
+  const h  = '#'.repeat(headingLevel);
+  const hh = '#'.repeat(headingLevel + 1);
+  const lines = [];
+
+  const method   = req.method && req.method.select ? req.method.select : (req.method || '');
+  const endpoint = req.api_endpoint || req.url || '';
+
+  lines.push(`${h} ${req.title || 'API Request'}`);
+  lines.push('');
+
+  if (method || endpoint) {
+    lines.push(`**${method}** \`${endpoint}\``);
+    lines.push('');
+  }
+
+  if (req.summary) {
+    lines.push(htmlToMarkdown(req.summary).trim());
+    lines.push('');
+  }
+
+  // Parameters — first region (North America) is canonical
+  const params = req.parameters && req.parameters[0] && req.parameters[0].api_parameters;
+  if (params) {
+    const renderParamList = (list, sectionTitle) => {
+      if (!list || !list.length) return;
+      lines.push(`${hh} ${sectionTitle}`);
+      lines.push('');
+      for (const p of list) {
+        const reqOpt = p.required ? 'required' : 'optional';
+        lines.push(`- **${p.key}** (${reqOpt})`);
+        const desc = htmlToMarkdown(p.description || '').replace(/\n+/g, ' ').trim();
+        if (desc) lines.push(`  ${desc}`);
+        if (p.value) lines.push(`  Default: \`${p.value}\``);
+      }
+      lines.push('');
+    };
+
+    renderParamList(params.url_parameters,   'URL Parameters');
+    renderParamList(params.query_parameters, 'Query Parameters');
+    renderParamList(params.headers,          'Headers');
+  }
+
+  if (req.request_body && String(req.request_body).trim()) {
+    lines.push(`${hh} Sample Request`);
+    lines.push('');
+    lines.push('```json');
+    lines.push(String(req.request_body).trim());
+    lines.push('```');
+    lines.push('');
+  }
+
+  if (req.response_body && String(req.response_body).trim()) {
+    lines.push(`${hh} Sample Response`);
+    lines.push('');
+    lines.push('```json');
+    lines.push(String(req.response_body).trim());
+    lines.push('```');
+    lines.push('');
+  }
+
+  return lines.join('\n');
+}
+
+// ---------------------------------------------------------------------------
 // Export: cda_api_reference_pages (106 entries)
+// Each entry = one section page; sub_items contain api_details references
+// that must be resolved and inlined (not linked) to match the live docsite.
 // ---------------------------------------------------------------------------
 async function exportCdaApiReferencePages() {
   console.log('\n[1/5] Exporting cda_api_reference_pages...');
@@ -251,17 +326,32 @@ async function exportCdaApiReferencePages() {
 
       const bodyMd = htmlToMarkdown(entry.description || '');
 
-      // sub_items (linked reference pages listed under this entry)
-      let subItemsMd = '';
+      // sub_items: each becomes an ## H2 section; api_details refs are resolved and inlined
+      const subParts = [];
       if (Array.isArray(entry.sub_items) && entry.sub_items.length) {
-        subItemsMd = '\n\n## Related Pages\n\n' +
-          entry.sub_items.map(si => {
-            const siUrl = si.url || '';
-            return `- [${si.title || siUrl}](https://www.contentstack.com/docs${siUrl})`;
-          }).join('\n');
+        for (const si of entry.sub_items) {
+          subParts.push(`\n\n## ${si.title || 'API Endpoints'}`);
+          if (si.description) {
+            const siDesc = htmlToMarkdown(si.description).trim();
+            if (siDesc) subParts.push(siDesc);
+          }
+
+          if (Array.isArray(si.api_details)) {
+            for (const ref of si.api_details) {
+              if (ref.uid && ref._content_type_uid) {
+                try {
+                  const req = await fetchEntry(ref._content_type_uid, ref.uid);
+                  if (req) subParts.push(renderApiRequest(req, 3));
+                } catch (err) {
+                  console.warn(`    Could not resolve ${ref._content_type_uid}/${ref.uid}: ${err.message}`);
+                }
+              }
+            }
+          }
+        }
       }
 
-      const content = `${frontmatter}\n\n# ${entry.title}\n\n${bodyMd}${subItemsMd}\n`;
+      const content = `${frontmatter}\n\n# ${entry.title}\n\n${bodyMd}${subParts.join('\n\n')}\n`;
       await writeFile(parts, content);
     } catch (err) {
       console.error('  Failed entry:', entry.uid, err.message);
@@ -325,47 +415,8 @@ async function exportApiRequests() {
           lastUpdated: formatDate(entry.updated_at),
         });
 
-        const bodyParts = [`# ${entry.title}\n`];
-
-        if (method || endpoint) {
-          bodyParts.push(`**Method:** \`${method}\`  \n**Endpoint:** \`${endpoint}\``);
-        }
-
-        if (entry.summary) {
-          bodyParts.push(htmlToMarkdown(entry.summary));
-        }
-
-        // Parameters table (first region / default)
-        if (Array.isArray(entry.parameters) && entry.parameters.length) {
-          const paramBlock = entry.parameters[0];
-          const p = paramBlock.api_parameters || paramBlock;
-          const allParams = [
-            ...(p.headers || []),
-            ...(p.url_parameters || []),
-            ...(p.query_parameters || []),
-          ];
-          if (allParams.length) {
-            const rows = allParams.map(param => {
-              const key = (param.key || '').replace(/\|/g, '\\|');
-              const value = (param.value || '').replace(/\|/g, '\\|');
-              const desc = htmlToMarkdown(param.description || '').replace(/\n/g, ' ').slice(0, 160).replace(/\|/g, '\\|');
-              return `| ${key} | ${value} | ${desc} |`;
-            });
-            bodyParts.push('**Parameters:**\n\n| Key | Value | Description |\n|-----|-------|-------------|');
-            bodyParts.push(...rows);
-          }
-        }
-
-        if (entry.request_body && String(entry.request_body).trim()) {
-          bodyParts.push(`**Request Body:**\n\n\`\`\`json\n${String(entry.request_body).trim()}\n\`\`\``);
-        }
-
-        if (entry.response_body && String(entry.response_body).trim()) {
-          const sc = entry.status_code ? ` (${entry.status_code})` : '';
-          bodyParts.push(`**Response${sc}:**\n\n\`\`\`json\n${String(entry.response_body).trim()}\n\`\`\``);
-        }
-
-        const content = `${frontmatter}\n\n${bodyParts.join('\n\n')}\n`;
+        const body = renderApiRequest(entry, 1);
+        const content = `${frontmatter}\n\n${body}\n`;
         await writeFile(parts, content);
       } catch (err) {
         console.error(`  Failed ${contentTypeUid} entry:`, entry.uid, err.message);
@@ -472,53 +523,8 @@ async function resolveMainSectionUsageInstructions(entry) {
 async function resolveApiRequest(contentTypeUid, uid) {
   const req = await fetchEntry(contentTypeUid, uid);
   if (!req) return '';
-
-  const lines = [];
-  lines.push(`#### ${req.title || 'API Request'}`);
-
-  const method = req.method && req.method.select ? req.method.select : req.method || '';
-  const endpoint = req.api_endpoint || req.url || '';
-  if (method || endpoint) {
-    lines.push(`\n**Method:** \`${method}\`  \n**Endpoint:** \`${endpoint}\``);
-  }
-
-  if (req.summary) {
-    lines.push('\n' + htmlToMarkdown(req.summary));
-  }
-
-  // Parameters (first region's headers/query params as a table)
-  if (Array.isArray(req.parameters) && req.parameters.length) {
-    const paramBlock = req.parameters[0];
-    const p = paramBlock.api_parameters || paramBlock;
-    const allParams = [
-      ...(p.headers || []),
-      ...(p.url_parameters || []),
-      ...(p.query_parameters || []),
-    ];
-    if (allParams.length) {
-      const rows = allParams.map(param => {
-        const key = param.key || '';
-        const value = param.value || '';
-        const desc = htmlToMarkdown(param.description || '').replace(/\n/g, ' ').slice(0, 120);
-        return `| ${key} | ${value} | ${desc} |`;
-      });
-      lines.push('\n**Parameters:**\n\n| Key | Value | Description |\n|-----|-------|-------------|');
-      lines.push(...rows);
-    }
-  }
-
-  if (req.request_body && String(req.request_body).trim()) {
-    const body = String(req.request_body).trim();
-    lines.push(`\n**Request Body:**\n\n\`\`\`json\n${body}\n\`\`\``);
-  }
-
-  if (req.response_body && String(req.response_body).trim()) {
-    const body = String(req.response_body).trim();
-    const statusCode = req.status_code || '';
-    lines.push(`\n**Response${statusCode ? ` (${statusCode})` : ''}:**\n\n\`\`\`json\n${body}\n\`\`\``);
-  }
-
-  return lines.join('\n');
+  // api_detail_page nests requests at H4 (inside H3 sub-sections)
+  return renderApiRequest(req, 4);
 }
 
 async function resolveMainSectionApiReferences(entry) {

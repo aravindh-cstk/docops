@@ -12,9 +12,7 @@ last_updated: 2024-02-28
 
 # Add an environment
 
-
-**Method:** `POST`  
-**Endpoint:** `/environments`
+**POST** `/environments`
 
 The Add an environment call will add a publishing environment for a stack.
 
@@ -23,20 +21,21 @@ When executing the API call, under the 'Header' section, you need to enter the A
 In the 'Body' section, mention the environment name, the URLs (which include the language code and the URL of the server).  
 To configure the permissions for your application via OAuth, please include the cm.environments.management:write scope.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| api_key | the API key of your stack |  |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -50,7 +49,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -74,3 +73,4 @@ To configure the permissions for your application via OAuth, please include the 
   }
 }
 ```
+

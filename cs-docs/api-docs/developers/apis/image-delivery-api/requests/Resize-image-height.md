@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Resize image height
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&height={height_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&height={height_value}`
 
 ##### Additional Notes
 
@@ -23,11 +21,12 @@ last_updated: 2025-08-28
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. Example 100 or 0.90 or 250p
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| height | 100 | Enter the value of the image height in pixels or percentage. Example 100 or 0.90 or 250p |
-
-| environment | production | Enter the environment scoped to your delivery token. |

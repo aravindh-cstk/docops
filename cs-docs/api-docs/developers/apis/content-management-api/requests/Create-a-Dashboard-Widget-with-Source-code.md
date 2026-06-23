@@ -12,9 +12,7 @@ last_updated: 2025-07-29
 
 # Create a Dashboard Widget with Source code
 
-
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Create dashboard widget with source code request is used to create a widget in Contentstack by providing the source code. This source code will be hosted on Contentstack.
 
@@ -22,24 +20,28 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the ‘Body’ section, you need to provide details of the widget, such as its tags, title, source code of the widget, configuration details, set if the extension is a widget or field, enable the extension, and set the default width of the viewport to either full or half.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -58,7 +60,7 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -84,3 +86,4 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
     }
 }
 ```
+

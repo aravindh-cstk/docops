@@ -12,17 +12,19 @@ last_updated: 2023-01-05
 
 # Delete an app
 
+**DELETE** `/apps/{app_uid}`
 
-**Method:** `DELETE`  
-**Endpoint:** `/apps/{app_uid}`
+## URL Parameters
 
-**Parameters:**
+- **app_uid** (required)
+  The UID of the app to be updated.
 
-| Key | Value | Description |
-|-----|-------|-------------|
+## Headers
 
-| authtoken | your_authtoken | Enter your management token. |
+- **authtoken** (required)
+  Enter your management token.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  The UID of the organization.
+  Default: `your_organization_uid`
 
-| organization_uid | your_organization_uid | The UID of the organization. |
-
-| app_uid |  | The UID of the app to be updated. |

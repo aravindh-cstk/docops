@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Create an app
 
-
-**Method:** `POST`  
-**Endpoint:** `/apps`
+**POST** `/apps`
 
 The **Create an app** request is used for creating a new app in your Contentstack organization.
 
@@ -25,16 +23,16 @@ The **Create an app** request is used for creating a new app in your Contentstac
 - Stack Owners
 - Stack Admins
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **authtoken** (required)
+  Enter your management token.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  The UID of the organization.
+  Default: `your_organization_uid`
 
-| authtoken | your_authtoken | Enter your management token. |
-
-| organization_uid | your_organization_uid | The UID of the organization. |
-
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -124,3 +122,4 @@ The **Create an app** request is used for creating a new app in your Contentstac
   }
 }
 ```
+

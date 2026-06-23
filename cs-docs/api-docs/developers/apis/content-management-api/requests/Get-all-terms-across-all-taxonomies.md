@@ -12,9 +12,7 @@ last_updated: 2025-11-13
 
 # Get all terms across all taxonomies
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/$all/terms?typeahead={term}`
+**GET** `/taxonomies/$all/terms?typeahead={term}`
 
 The Get all terms across all taxonomies request returns comprehensive information of all the terms across all taxonomy available in a particular stack in your organization.
 
@@ -23,36 +21,49 @@ The Get all terms across all taxonomies request returns comprehensive informatio
 - The parameter $all in the URL is a reserved keyword in this context. It is used to refer to all taxonomies.
 - In the Query Parameters section, you must pass either the query or typeahead parameter.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **locale** (optional)
+  Specifies the locale from which to fetch the terms. If not provided, the system uses the master locale.
+  Default: `en-us`
+- **include_fallback** (optional)
+  Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is not available in the given locale.
+  Default: `true`
+- **include_children_count** (optional)
+  Set this parameter to 'true' to include in response the total count of child terms available in the parent term.
+  Default: `true`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which the term is added.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms available in the specified taxonomy.
+  Default: `true`
+- **query** (optional)
+  Provide a custom query for the taxonomy_uid and term_uid in string format.
+  Default: `{"$or":[{"taxonomy_uid":"taxonomy_1","uid":{"$in":["term_1", “term_2”]}}]}`
+- **typeahead** (optional)
+  Retrieves responses that match the provided string.
+  Default: `sample`
+- **limit** (optional)
+  Enter the maximum number of terms to be returned.
+  Default: `2`
+- **skip** (optional)
+  Enter the number of terms to be skipped from the response body.
+  Default: `2`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
 
-| authorization | your_management_token	 | Enter your management token. |
-
-| locale | en-us | Specifies the locale from which to fetch the terms. If not provided, the system uses the master locale. |
-
-| include_fallback | true | Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is not available in the given locale. |
-
-| include_children_count | true | Set this parameter to 'true' to include in response the total count of child terms available in the parent term. |
-
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which the term is added. |
-
-| include_count | true | Set this parameter to 'true' to include in response the total count of terms available in the specified taxonomy. |
-
-| query | {"$or":[{"taxonomy_uid":"taxonomy_1","uid":{"$in":["term_1", “term_2”]}}]} | Provide a custom query for the taxonomy_uid and term_uid in string format. |
-
-| typeahead | sample | Retrieves responses that match the provided string. |
-
-| limit | 2 | Enter the maximum number of terms to be returned. |
-
-| skip | 2 | Enter the number of terms to be skipped from the response body. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -157,3 +168,4 @@ The Get all terms across all taxonomies request returns comprehensive informatio
     "count": 17
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2023-03-30
 
 # Try 'Overlay' and 'Overlay Align' Parameters
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Using the Overlay and Overlay Align Parameters
 
@@ -35,3 +33,4 @@ query {
 ```
 
 This query will place the image lying at the specified URL on top of the original image. It will also align the overlay image toward the left side of the original image.
+

@@ -12,26 +12,32 @@ last_updated: 2026-04-07
 
 # Create a team
 
-
-**Method:** `POST`  
-**Endpoint:** `/organizations/{organization_uid}/teams`
+**POST** `/organizations/{organization_uid}/teams`
 
 The Create a team request creates a team in the specified organization.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Query Parameters
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **includeUserDetails** (optional)
+  Set this parameter to “true” to include the details of users in the response.
+  Default: `true`
 
-| organization_uid | your_organization_uid | Enter the UID of your Organization. |
+## Headers
 
-| includeUserDetails | true | Set this parameter to “true” to include the details of users in the response. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -47,7 +53,7 @@ The Create a team request creates a team in the specified organization.
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -76,3 +82,4 @@ The Create a team request creates a team in the specified organization.
     "updatedByUserName": "Jane Doe"
 }
 ```
+

@@ -12,34 +12,37 @@ last_updated: 2024-04-25
 
 # Get All Dashboard Widgets
 
-
-**Method:** `GET`  
-**Endpoint:** `/extensions?query={"type":"dashboard", "enable": true}`
+**GET** `/extensions?query={"type":"dashboard", "enable": true}`
 
 The Get All Dashboard Widgets request is used to get the information of all the enabled custom dashboard extension.
 
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (required)
+  Query to retrieve all dashboard widgets.
+  Default: `{"type":"dashboard", "enable": true}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| query | {"type":"dashboard", "enable": true} | Query to retrieve all dashboard widgets. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {  
@@ -70,3 +73,4 @@ To configure the permissions for your application via OAuth, please include the 
    ]
 }
 ```
+

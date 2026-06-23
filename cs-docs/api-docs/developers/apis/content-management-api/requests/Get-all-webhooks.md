@@ -12,9 +12,7 @@ last_updated: 2024-07-25
 
 # Get all webhooks
 
-
-**Method:** `GET`  
-**Endpoint:** `/webhooks`
+**GET** `/webhooks`
 
 The Get all Webhooks request returns comprehensive information on all the available webhooks in the specified stack.
 
@@ -23,20 +21,21 @@ The Get all Webhooks request returns comprehensive information on all the availa
 When executing the API call, under the 'Header' section, you need to enter the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.webhooks.management:read scope.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| api_key | blt20962a819b57e233 |  |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -115,3 +114,4 @@ To configure the permissions for your application via OAuth, please include the 
     "destination": {}
 }
 ```
+

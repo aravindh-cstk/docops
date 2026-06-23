@@ -12,35 +12,42 @@ last_updated: 2024-02-22
 
 # Update a custom field
 
-
-**Method:** `PUT`  
-**Endpoint:** `/extensions/{custom_field_uid}`
+**PUT** `/extensions/{custom_field_uid}`
 
 The Update a custom field request is used to update the details of a custom field.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
 
 In the ‘Body’ section, you need to provide details of the custom field, such as its tags, data type, title, external source link (or the updated external source code), set if the field is to take multiple values or not, and configuration details.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **custom_field_uid** (required)
+  Enter the UID of the custom field that you want to update.
+  Default: `bltcd0ac000b000b00e`
 
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
+## Query Parameters
 
-| authtoken | your_authtoken |  |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Headers
 
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| custom_field_uid | bltcd0ac000b000b00e | Enter the UID of the custom field that you want to update. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -59,7 +66,7 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -85,3 +92,4 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 	}
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2025-12-22
 
 # Get all content types
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types?include_count={boolean_value}`
+**GET** `/content_types?include_count={boolean_value}`
 
 The Get all content types call returns comprehensive information of all the content types available in a particular stack in your account.
 
@@ -26,22 +24,28 @@ To query your content types, under the Query Parameters section, insert a parame
 
 **Note**: This API request will return a maximum of **100 content types**. To retrieve the next batch of content types, make use of the [skip](/docs/developers/apis/content-delivery-api#skip) parameter (or refer [Pagination](/docs/developers/apis/content-delivery-api#pagination) for more details).
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_count** (required)
+  Set this to 'true' to include in response the total count of content types available in your stack.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| include_count | false | Set this to 'true' to include in response the total count of content types available in your stack. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -1153,3 +1157,4 @@ To query your content types, under the Query Parameters section, insert a parame
   ]
 }
 ```
+

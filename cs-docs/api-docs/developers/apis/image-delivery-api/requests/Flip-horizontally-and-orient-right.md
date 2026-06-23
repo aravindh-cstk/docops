@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Flip horizontally and orient right
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -26,11 +24,12 @@ last_updated: 2025-08-28
 
 1. This parameter can automatically correct the orientation of the image if the source image contains orientation details within its EXIF data (Exchangeable Image File Format).
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **orient** (optional)
+  Enter value to manage the cardinal orientation of the image.
+  Default: `7`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| orient | 7 | Enter value to manage the cardinal orientation of the image. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

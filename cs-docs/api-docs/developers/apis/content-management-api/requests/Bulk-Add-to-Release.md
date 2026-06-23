@@ -12,9 +12,7 @@ last_updated: 2025-02-20
 
 # Bulk Add to Release
 
-
-**Method:** `POST`  
-**Endpoint:** `/bulk/release/items`
+**POST** `/bulk/release/items`
 
 The Bulk Add to Release request allows you to add multiple entries and assets to a release, making content preparation for deployment more efficient and ensuring smooth, coordinated publishing.
 
@@ -39,22 +37,25 @@ Once the API request is executed, a job ID is generated in the response. You can
 
 **Note**: Pass bulk_version as 2.0 in the Headers section.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (optional)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **bulk_version** (required)
+  Pass the bulk_version header as 2.0 to allow bulk operation.
+  Default: `2.0`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-
-| authorization | your_management_token | Enter your management token. |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| Content-Type | application/json | Enter application/json to pass a request body. |
-
-| bulk_version | 2.0 | Pass the bulk_version header as 2.0 to allow bulk operation. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -76,7 +77,7 @@ Once the API request is executed, a job ID is generated in the response. You can
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -84,3 +85,4 @@ Once the API request is executed, a job ID is generated in the response. You can
     "notice": "Your add to release request is in progress."
 }
 ```
+

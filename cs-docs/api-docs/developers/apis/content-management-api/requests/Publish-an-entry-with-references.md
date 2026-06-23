@@ -12,9 +12,7 @@ last_updated: 2025-07-02
 
 # Publish an entry with references
 
-
-**Method:** `POST`  
-**Endpoint:** `/bulk/publish?x-bulk-action=publish`
+**POST** `/bulk/publish?x-bulk-action=publish`
 
 The Publish an Entry With References request allows you to publish an entry along with all its references at the same time.  
 To configure the permissions for your application via OAuth, please include the cm.bulk-operations:publish scope.
@@ -33,28 +31,34 @@ Here are some additional parameters that you need to pass in the “Request Body
 - skip_workflow_stage_check: true: Pass this parameter to skip those entries that do not satisfy the workflow stage of their publishing rule(s) and publish the rest of them.Note: Specifically applicable for Workflow enabled organizations, when this parameter is set to “false” and if any one of the entries fails to satisfy the set conditions, NONE of the entries will be sent for publishing.
 - approvals: true: Pass this parameter to publish only those entries that have been approved by the designated approver, and skip the rest that have not yet been approved.Note: Specifically applicable for Workflow enabled organizations, when this parameter is set to “false” and if any one of the entries is not approved by the Approver, NONE of the entries will be sent for publishing.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **approvals** (optional)
+  Set this to “true” to publish the entries that do not require an approval to be published.
+  Default: `true`
+- **x-bulk-action** (required)
+  Pass “publish” as the value of this parameter in order to publish an entry with all references.
+  Default: `publish`
+- **skip_workflow_stage_check** (optional)
+  Set this to “true” to publish the entries that are at a workflow stage where they satisfy the applied publish rules.
+  Default: `true`
 
-| api_key | blt02f7b45378b008ee |  |
+## Headers
 
-| authtoken | your authtoken |  |
+- **api_key** (required)
+  Default: `blt02f7b45378b008ee`
+- **authtoken** (optional)
+  Default: `your authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| Content-Type | application/json |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| approvals | true | Set this to “true” to publish the entries that do not require an approval to be published. |
-
-| x-bulk-action | publish | Pass “publish” as the value of this parameter in order to publish an entry with all references. |
-
-| skip_workflow_stage_check | true | Set this to “true” to publish the entries that are at a workflow stage where they satisfy the applied publish rules. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -75,10 +79,11 @@ Here are some additional parameters that you need to pass in the “Request Body
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Your bulk publish request is in progress. Please check publish queue for more details."
 }
 ```
+

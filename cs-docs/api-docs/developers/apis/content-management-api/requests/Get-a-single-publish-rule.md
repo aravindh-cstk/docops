@@ -12,27 +12,29 @@ last_updated: 2024-02-28
 
 # Get a single publish rule
 
-
-**Method:** `GET`  
-**Endpoint:** `/workflows/publishing_rules/{rule_uid}`
+**GET** `/workflows/publishing_rules/{rule_uid}`
 
 The Get a Single Publish Rule request retrieves the comprehensive details of a specific publish rule of a Workflow.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.publishing-rules:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **rule_uid** (required)
+  Enter the UID of the publish rule that you want to fetch.
+  Default: `blt53e09746340f82d9`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| rule_uid | blt53e09746340f82d9 | Enter the UID of the publish rule that you want to fetch. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -70,3 +72,4 @@ To configure the permissions for your application via OAuth, please include the 
     }
 }
 ```
+

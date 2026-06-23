@@ -12,32 +12,41 @@ last_updated: 2026-05-18
 
 # Get a single term
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+**GET** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Get a single term request retrieves a specific published term within a taxonomy.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (optional)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack.
+  Default: `categories`
+- **term_uid** (optional)
+  Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack.
+  Default: `gaming_laptops`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| access_token | your_access_token | Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication). |
+- **limit** (optional)
+  Number of results to return.
+  Default: `5`
+- **skip** (optional)
+  Number of results to skip (for pagination).
+  Default: `5`
+- **depth** (optional)
+  Depth of term hierarchy to retrieve.
+  Default: `2`
 
-| taxonomy_uid | categories | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. |
+## Headers
 
-| term_uid | gaming_laptops | Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. |
+- **api_key** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **access_token** (optional)
+  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Default: `your_access_token`
 
-| limit | 5 | Number of results to return. |
-
-| skip | 5 | Number of results to skip (for pagination). |
-
-| depth | 2 | Depth of term hierarchy to retrieve. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -56,3 +65,4 @@ The Get a single term request retrieves a specific published term within a taxon
   }
 }
 ```
+

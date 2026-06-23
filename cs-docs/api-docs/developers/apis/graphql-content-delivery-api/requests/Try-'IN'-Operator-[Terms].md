@@ -12,9 +12,7 @@ last_updated: 2024-04-17
 
 # Try 'IN' Operator [Terms]
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### IN Operator [Terms]
 
@@ -45,3 +43,4 @@ query {
   }
 }
 ```
+

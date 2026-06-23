@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Create a content type
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create a content type call creates a new content type in a particular stack of your Contentstack account.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
@@ -39,24 +37,30 @@ To mark a field as non-unique, you need to set the unique parameter to false. Fo
 
 ##### Create Content Type with Select Field
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 | Enter the API Key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API Key of the stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| Content-Type | application/json |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -100,7 +104,7 @@ To mark a field as non-unique, you need to set the unique parameter to false. Fo
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -208,3 +212,4 @@ To mark a field as non-unique, you need to set the unique parameter to false. Fo
 	}
 }
 ```
+

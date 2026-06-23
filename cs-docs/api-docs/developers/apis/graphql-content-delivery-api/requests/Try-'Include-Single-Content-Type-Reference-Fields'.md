@@ -12,9 +12,7 @@ last_updated: 2023-03-29
 
 # Try 'Include Single Content Type Reference Fields'
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries of a content type along with the comprehensive details of the specified referenced entry. This query uses [relay specification](https://relay.dev/docs/guides/graphql-server-specification/) to retrieve the details of the entries referred in reference fields.
 
@@ -50,3 +48,4 @@ query {
 The totalCount field returns the number of referenced entries for a specific Reference field.
 
 **Note**: Contentstack’s GraphQL queries can fetch referenced entries up to **three** levels deep.
+

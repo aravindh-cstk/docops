@@ -12,29 +12,32 @@ last_updated: 2024-07-25
 
 # Import an Existing Webhook
 
-
-**Method:** `POST`  
-**Endpoint:** `/webhooks/{webhook_uid}/import`
+**POST** `/webhooks/{webhook_uid}/import`
 
 The Import an Existing Webhook request will allow you to update the details of an existing webhook.  
 To configure the permissions for your application via OAuth, please include the cm.webhooks:import scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **webhook_uid** (required)
+  Enter the unique ID of the webhook that you want to update.
+  Default: `csbd27df54-3aad-46b4-970e-1f11a13e2708`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "multipart/form-data" to pass a form-data params.
+  Default: `multipart/form-data`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | multipart/form-data | Enter "multipart/form-data" to pass a form-data params. |
-
-| webhook_uid | csbd27df54-3aad-46b4-970e-1f11a13e2708 | Enter the unique ID of the webhook that you want to update. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -78,3 +81,4 @@ To configure the permissions for your application via OAuth, please include the 
     }
 }
 ```
+

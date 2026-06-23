@@ -12,9 +12,7 @@ last_updated: 2025-11-13
 
 # Import a taxonomy
 
-
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/import`
+**POST** `/taxonomies/import`
 
 The Import a taxonomy request is used to import a taxonomy and its terms into a stack by uploading the JSON or CSV file.
 
@@ -27,20 +25,25 @@ You can try the call manually in any REST API client, such as Postman. While imp
 - If the CSV import format is invalid, any invalid rows containing taxonomy/terms and subsequent rows will be ignored and only rows with valid taxonomy/terms will be created.
 - Refer to the Restricted Keywords for UIDs to avoid using reserved keywords.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **locale** (optional)
+  Target locale in which to import the taxonomy. If not specified, the master locale is used.
+  Default: `es-es`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
 
-| authorization | your_management_token | Enter your management token. |
-
-| locale | es-es | Target locale in which to import the taxonomy. If not specified, the master locale is used. |
-
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -57,3 +60,4 @@ You can try the call manually in any REST API client, such as Postman. While imp
     }
 }
 ```
+

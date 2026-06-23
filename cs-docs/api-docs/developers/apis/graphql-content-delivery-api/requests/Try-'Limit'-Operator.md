@@ -12,9 +12,7 @@ last_updated: 2023-03-28
 
 # Try 'Limit' Operator
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 The limit parameter will return a specific number of entries in the output. So for example, if the content type contains **more than 100** entries and you wish to fetch only the **first 2** entries, you need to specify '2' as the value in this parameter. Your query will look as follows:
 
@@ -32,3 +30,4 @@ query {
 ```
 
 The response body of this query will include only the first two entries of the **Product** content type that satisfy the query, and will include details of just the ‘Title’ and ‘Description’ fields.
+

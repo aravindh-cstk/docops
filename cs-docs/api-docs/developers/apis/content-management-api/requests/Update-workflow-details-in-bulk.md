@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Update workflow details in bulk
 
-
-**Method:** `POST`  
-**Endpoint:** `/bulk/workflow`
+**POST** `/bulk/workflow`
 
 The Update workflow details in bulk request allows you to update the workflow details for multiple entries at the same time.   
 To configure the permissions for your application via OAuth, please include the cm.bulk-operations:workflow scope.
@@ -27,20 +25,21 @@ In the 'Body' section, you need to provide the details of the workflow stage. En
 
 Within the ‘entries’ parameter, pass these details of each entry – content type UIDs, entry UIDs, and locales in which the entries are present.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| api_key | blt20962a819b57e233 |  |
-
-| authtoken | Your_authtoken | Enter your authtoken. |
-
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| branch | main | Enter your branch unique ID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -73,10 +72,11 @@ Within the ‘entries’ parameter, pass these details of each entry – content
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 "notice": "Your request to update workflow stage is complete."
 }
 ```
+

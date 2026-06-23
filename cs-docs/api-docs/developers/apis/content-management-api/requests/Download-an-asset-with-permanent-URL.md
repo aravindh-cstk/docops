@@ -12,9 +12,7 @@ last_updated: 2025-07-04
 
 # Download an asset with permanent URL
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{api_key}/{asset_uid}/{slug}`
+**GET** `/assets/{api_key}/{asset_uid}/{slug}`
 
 The Download an asset with permanent URL request displays an asset in the response. The asset returned in the response can be saved to your local storage system. Make sure to specify the unique identifier (slug) in the request URL.  
   
@@ -24,27 +22,36 @@ This request will return the most recent version of the asset, however, to downl
 
 **Note**: Before executing this API request, ensure to [create a permanent URL for the asset](/docs/developers/apis/content-management-api#generate-permanent-asset-url) you want to download.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_uid** (required)
+  Enter the UID of the asset you want to download. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) request to get the UID of the asset.
+  Default: `your_asset_uid`
+- **slug** (required)
+  Enter the unique identifier of the asset.
+  Default: `your_url_slug`
 
-| api_key | your_stack_api_key | Enter the API key of the stack that holds the asset. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Pass “application/json” as the value to this parameter.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Pass “application/json” as the value to this parameter. |
-
-| branch | main | Enter your branch unique ID. |
-
-| asset_uid | your_asset_uid | Enter the UID of the asset you want to download. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) request to get the UID of |
-
-| slug | your_url_slug | Enter the unique identifier of the asset. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {Displays the requested asset in API response}
 ```
+

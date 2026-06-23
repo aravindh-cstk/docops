@@ -12,9 +12,7 @@ last_updated: 2026-04-07
 
 # Transfer Organization ownership
 
-
-**Method:** `POST`  
-**Endpoint:** `/organizations/{organization_uid}/transfer-ownership`
+**POST** `/organizations/{organization_uid}/transfer-ownership`
 
 The Transfer organization ownership call transfers the ownership of an Organization to another user. When the call is executed, an email invitation for accepting the ownership of a particular Organization is sent to the specified user.
 
@@ -22,16 +20,19 @@ Once the specified user accepts the invitation by clicking on the link provided 
 
 When executing the API call, provide the Organization UID.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of the organization that you want to transfer to other user.
+  Default: `enter_the_organization_uid`
 
-| authtoken | your_authtoken | Enter the authtoken of the user. |
+## Headers
 
-| organization_uid | enter_the_organization_uid | Enter the UID of the organization that you want to transfer to other user. |
+- **authtoken** (required)
+  Enter the authtoken of the user.
+  Default: `your_authtoken`
 
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -39,10 +40,11 @@ When executing the API call, provide the Organization UID.
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Email has been successfully sent to the user."
 }
 ```
+

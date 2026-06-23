@@ -12,9 +12,7 @@ last_updated: 2026-04-17
 
 # Get a single asset
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{asset_uid}?environment={environment_name}&version={version}&include_fallback=true&include_dimension={boolean_value}`
+**GET** `/assets/{asset_uid}?environment={environment_name}&version={version}&include_fallback=true&include_dimension={boolean_value}`
 
 The Get a single asset request fetches the latest version of a specific asset of a particular stack.
 
@@ -50,32 +48,46 @@ Locale is **optional**
 - If you specify a locale in the query, it returns the latest published version of the localized asset
 - If an asset is not localized, make use of the include_fallback=true query parameter to fetch the published asset from its fallback locale
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_uid** (required)
+  Enter the unique ID of the asset of which you want to retrieve the details.
+  Default: `blt19c34e5374418484`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **environment** (required)
+  Enter the name of the environment if you want to retrieve an asset published in a particular environment.
+  Default: `production`
+- **version** (optional)
+  Specify the version number of the asset that you want to retrieve. To retrieve a specific version, keep the environment parameter blank. If the version is not specified, the details of the latest version will be retrieved.
+  Default: `1`
+- **include_fallback** (optional)
+  Enter 'true' to include published asset details from the fallback locale when the specified locale does not contain published information.
+  Default: `true`
+- **include_dimension** (optional)
+  Enter 'true' to include the dimensions (height and width) of the image in the response. Supported image types: JPG, GIF, PNG, WebP, BMP, TIFF, SVG, and PSD.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+- **include_metadata** (optional)
+  Set this parameter to true to include the asset metadata along with all assets in the response body.
+  Default: `true`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| asset_uid | blt19c34e5374418484 | Enter the unique ID of the asset of which you want to retrieve the details. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| environment | production | Enter the name of the environment if you want to retrieve an asset published in a particular environment. |
-
-| version | 1 | Specify the version number of the asset that you want to retrieve. To retrieve a specific version, keep the environment parameter blank. If the version is not s |
-
-| include_fallback | true | Enter 'true' to include published asset details from the fallback locale when the specified locale does not contain published information. |
-
-| include_dimension | true | Enter 'true' to include the dimensions (height and width) of the image in the response. Supported image types: JPG, GIF, PNG, WebP, BMP, TIFF, SVG, and PSD. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-| include_metadata | true | Set this parameter to true to include the asset metadata along with all assets in the response body. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -122,3 +134,4 @@ Locale is **optional**
   }
 }
 ```
+

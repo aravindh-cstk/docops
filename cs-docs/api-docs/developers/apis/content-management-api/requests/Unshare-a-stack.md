@@ -12,26 +12,22 @@ last_updated: 2023-01-05
 
 # Unshare a stack
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/unshare`
+**POST** `/stacks/unshare`
 
 The Unshare a stack call unshares a stack with a user and removes the user account from the list of collaborators. Once this call is executed, the user will not be able to view the stack in their account.
 
 In the 'Body' section, you need to provide the email ID of the user from whom you wish to unshare the stack.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| api_key | API_key_of_your_stack |  |
-
-| authtoken | Your_Authtoken |  |
-
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -39,10 +35,11 @@ In the 'Body' section, you need to provide the email ID of the user from whom yo
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "The stack has been successfully unshared."
 }
 ```
+

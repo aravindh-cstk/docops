@@ -12,24 +12,26 @@ last_updated: 2023-05-29
 
 # Get a single management token
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/management_tokens/{token_uid}`
+**GET** `/stacks/management_tokens/{token_uid}`
 
 The Get a single management token request returns the details of a specific management token generated in a stack and not the actual management token.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **token_uid** (required)
+  Enter the UID of the management token of which you want to retrieve the details of.
+  Default: `blt4c10d48233884473`
 
-| api_key | your_stack_api_key | Enter the API key of your stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| token_uid | blt4c10d48233884473 | Enter the UID of the management token of which you want to retrieve the details of. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -74,3 +76,4 @@ The Get a single management token request returns the details of a specific mana
     }
 }
 ```
+

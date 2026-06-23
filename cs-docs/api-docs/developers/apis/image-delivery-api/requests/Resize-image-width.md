@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Resize image width
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}`
 
 ##### Additional Notes
 
@@ -23,11 +21,12 @@ last_updated: 2025-08-28
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For Example 100 or 0.90 or 250p.
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| width | 100 | Enter the value of the image width in pixels or percentage. For Example 100 or 0.90 or 250p. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

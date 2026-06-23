@@ -12,31 +12,33 @@ last_updated: 2024-03-21
 
 # Create Content Type with Extension Field
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create Content Type with Extension Field request is used to create a content type that includes a custom field.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| Content-Type | application/json |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -92,7 +94,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -213,3 +215,4 @@ To configure the permissions for your application via OAuth, please include the 
 	}
 }
 ```
+

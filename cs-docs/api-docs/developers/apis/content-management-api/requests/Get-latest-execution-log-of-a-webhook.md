@@ -12,29 +12,31 @@ last_updated: 2024-10-31
 
 # Get latest execution log of a webhook
 
-
-**Method:** `GET`  
-**Endpoint:** `/webhooks/{execution_uid}/logs`
+**GET** `/webhooks/{execution_uid}/logs`
 
 Get latest execution log of a webhook call will return a comprehensive detail of all the webhooks that were executed at a particular execution cycle.
 
 When executing the API call, in the 'URL Parameter' section, enter the execution UID that you receive when you execute the call.  
 To configure the permissions for your application via OAuth, please include the cm.webhook:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **execution_uid** (required)
+  Enter the execution unique ID of the webhook of which you want to retrieve the execution log. Execute the [Get executions of a webhook](https://www.contentstack.com/docs/developers/apis/content-management-api#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
+  Default: `cs4eb0cd75-8a6e-416a-b367-07158d698d41`
 
-| api_key | Enter the API key of your stack |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `Enter the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| execution_uid | cs4eb0cd75-8a6e-416a-b367-07158d698d41 | Enter the execution unique ID of the webhook of which you want to retrieve the execution log. Execute the [Get executions of a webhook](https://www.contentstack |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -226,3 +228,4 @@ To configure the permissions for your application via OAuth, please include the 
     }
 }
 ```
+

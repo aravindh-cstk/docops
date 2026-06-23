@@ -12,28 +12,28 @@ last_updated: 2025-10-09
 
 # Create a taxonomy
 
-
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/`
+**POST** `/taxonomies/`
 
 The Create a taxonomy request creates a taxonomy in a particular stack of your organization.
 
 **Note**: Refer to the [Restricted Keywords for UIDs](/docs/developers/create-content-types/restricted-keywords-for-uids) to avoid using reserved keywords.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -45,7 +45,7 @@ The Create a taxonomy request creates a taxonomy in a particular stack of your o
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -60,3 +60,4 @@ The Create a taxonomy request creates a taxonomy in a particular stack of your o
     }
 }
 ```
+

@@ -12,22 +12,20 @@ last_updated: 2023-05-25
 
 # Get all management tokens
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/management_tokens`
+**GET** `/stacks/management_tokens`
 
 The Get all management tokens request returns the details of all the management tokens generated in a stack and not the actual management tokens.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -113,3 +111,4 @@ The Get all management tokens request returns the details of all the management 
     ]
 }
 ```
+

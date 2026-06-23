@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Create content type with select field
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create content type with select field request allows you to add a Select field while creating a content type. You can add choices within the Select field either in the form of single values or key-value pairs.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
@@ -72,24 +70,31 @@ The schema of the **Select** field that contains key-value pairs will look as fo
 
 ##### Create Content Type with JSON RTE
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -191,7 +196,7 @@ The schema of the **Select** field that contains key-value pairs will look as fo
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -366,3 +371,4 @@ The schema of the **Select** field that contains key-value pairs will look as fo
     }
 }
 ```
+

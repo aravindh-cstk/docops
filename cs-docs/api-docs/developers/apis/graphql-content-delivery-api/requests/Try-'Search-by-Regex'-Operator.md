@@ -12,6 +12,5 @@ last_updated: 2023-03-30
 
 # Try 'Search by Regex' Operator
 
+**** `/stacks/apiKey/explore`
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`

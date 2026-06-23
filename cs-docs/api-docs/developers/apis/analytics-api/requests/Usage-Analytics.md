@@ -12,9 +12,7 @@ last_updated: 2026-04-14
 
 # Usage Analytics
 
-
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/usage?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}`
+**GET** `/analytics/v2/usage?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}`
 
 The Usage Analytics request gives a quick usage overview of your bandwidth and API utilization over a particular period of time.
 
@@ -94,32 +92,43 @@ This data helps monitor and analyze the usage patterns of API and CDN resources,
 - The apiKey cannot be used with the services ["automations", "launch"] simultaneously.
 - The apiKey and environmentUid parameters are only applicable to the ["launch"] service.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
+- **services** (optional)
+  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
+  Default: `["cdn","cma"]`
+- **includeCount** (optional)
+  Set this parameter to true to include the total count of users in the response.
+  Default: `true`
+- **duration** (optional)
+  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
+  Default: `day`
+- **apiKey** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **projectUid** (optional)
+  Enter the Launch project UID to retrieve data from that specific project.
+  Default: `your_project_uid`
+- **environmentUid** (optional)
+  Enter the environment UID of the Launch project.
+  Default: `your_environment_uid`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-
-| services | ["cdn","cma"] | Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"]. |
-
-| includeCount | true | Set this parameter to true to include the total count of users in the response. |
-
-| duration | day | Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch. |
-
-| apiKey | your_stack_api_key | Enter the API key of the stack. |
-
-| projectUid | your_project_uid | Enter the Launch project UID to retrieve data from that specific project. |
-
-| environmentUid | your_environment_uid | Enter the environment UID of the Launch project. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -127,3 +136,4 @@ This data helps monitor and analyze the usage patterns of API and CDN resources,
     "paginated": false
 }
 ```
+

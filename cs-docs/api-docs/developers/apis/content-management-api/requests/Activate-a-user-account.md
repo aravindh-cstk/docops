@@ -12,20 +12,17 @@ last_updated: 2023-01-05
 
 # Activate a user account
 
-
-**Method:** `POST`  
-**Endpoint:** `/user/activate/{user_activation_token}`
+**POST** `/user/activate/{user_activation_token}`
 
 The Activate a user account call activates the account of a user after signing up. For account activation, you will require the token received in the activation email.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **user_activation_token** (required)
+  Enter the activation token received on the registered email address. You can find the activation token in the activation URL sent to the email address used while signing up.
+  Default: `bltf36705c7361d4734`
 
-| user_activation_token | bltf36705c7361d4734 | Enter the activation token received on the registered email address. You can find the activation token in the activation URL sent to the email address used whil |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -38,10 +35,11 @@ The Activate a user account call activates the account of a user after signing u
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Your account has been activated."
 }
 ```
+

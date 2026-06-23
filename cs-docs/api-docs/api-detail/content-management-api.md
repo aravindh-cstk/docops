@@ -206,26 +206,40 @@ A [stack](/docs/developers/set-up-stack) is a space that stores the content of a
 
 #### Get a single stack
 
-**Method:** `GET`  
-**Endpoint:** `/stacks?include_collaborators={boolean_value}&include_stack_variables={boolean_value}&include_discrete_variables={boolean_value}&include_count={boolean_value}`
+**GET** `/stacks?include_collaborators={boolean_value}&include_stack_variables={boolean_value}&include_discrete_variables={boolean_value}&include_count={boolean_value}`
 
 The Get a single stack call fetches comprehensive details of a specific stack.
 
 **Note**: For SSO-enabled organizations, it is mandatory to pass the organization UID in the header.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | enter_your_stack_api_key | Enter the API Key of the stack that you want to retrieve. |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| organization_uid | Your_Organization_uid | Enter the UID of your organization. |
-| include_collaborators | false | Set this parameter to 'true' to include the details of the stack collaborators. |
-| include_stack_variables | false | Set this to 'true' to display the stack variables. Stack variables are extra information about the stack, such as the de |
-| include_discrete_variables | false | Set this to 'true' to view the access token of your stack. |
-| include_count | false | Set this to 'true' to include in the response the total count of the stacks owned by or shared with a user account. |
+- **include_collaborators** (optional)
+  Set this parameter to 'true' to include the details of the stack collaborators.
+  Default: `false`
+- **include_stack_variables** (optional)
+  Set this to 'true' to display the stack variables. Stack variables are extra information about the stack, such as the description, format of date, format of time, and so on. Users can include or exclude stack variables in the response.
+  Default: `false`
+- **include_discrete_variables** (optional)
+  Set this to 'true' to view the access token of your stack.
+  Default: `false`
+- **include_count** (optional)
+  Set this to 'true' to include in the response the total count of the stacks owned by or shared with a user account.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API Key of the stack that you want to retrieve.
+  Default: `enter_your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **organization_uid** (optional)
+  Enter the UID of your organization.
+  Default: `Your_Organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -312,29 +326,41 @@ The Get a single stack call fetches comprehensive details of a specific stack.
 ```
 
 
+
 #### Get All Stacks
 
 #### Get all stacks
 
-**Method:** `GET`  
-**Endpoint:** `/stacks?include_collaborators={boolean_value}&include_stack_variables={boolean_value}&include_discrete_variables={boolean_value}&include_count={boolean_value}`
+**GET** `/stacks?include_collaborators={boolean_value}&include_stack_variables={boolean_value}&include_discrete_variables={boolean_value}&include_count={boolean_value}`
 
 The Get all stacks call fetches the list of all stacks owned by and shared with a particular user account.
 
 **Note**: For SSO-enabled organizations, it is mandatory to pass the organization UID in the header.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | Your_Authtoken |  |
-| organization_uid | Your_Organization_uid | Enter the uid of your organization. |
-| include_collaborators | false | Set this parameter to 'true' to include the details of the stack collaborators. |
-| include_stack_variables | false | Set this to 'true' to display the stack variables. Stack variables are extra information about the stack, such as the de |
-| include_discrete_variables | false | Set this to 'true' to view the access token of your stack. |
-| include_count | false | Set this to 'true' to include in the response the total count of the stacks owned by or shared with a user account. |
+- **include_collaborators** (optional)
+  Set this parameter to 'true' to include the details of the stack collaborators.
+  Default: `false`
+- **include_stack_variables** (optional)
+  Set this to 'true' to display the stack variables. Stack variables are extra information about the stack, such as the description, format of date, format of time, and so on. Users can include or exclude stack variables in the response.
+  Default: `false`
+- **include_discrete_variables** (optional)
+  Set this to 'true' to view the access token of your stack.
+  Default: `false`
+- **include_count** (optional)
+  Set this to 'true' to include in the response the total count of the stacks owned by or shared with a user account.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **organization_uid** (optional)
+  Enter the uid of your organization.
+  Default: `Your_Organization_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -398,12 +424,12 @@ The Get all stacks call fetches the list of all stacks owned by and shared with 
 ```
 
 
+
 #### Create Stack
 
 #### Create stack
 
-**Method:** `POST`  
-**Endpoint:** `/stacks`
+**POST** `/stacks`
 
 The Create stack call creates a new stack in your Contentstack account.
 
@@ -411,15 +437,17 @@ In the 'Body' section, provide the schema of the stack in JSON format.
 
 **Note**: At any given point of time, an organization can create only one stack per minute.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | Your_Authtoken |  |
-| organization_uid | Your_Organization_uid | Enter the uid of your organization. |
-| Content-Type | application/json |  |
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **organization_uid** (required)
+  Enter the uid of your organization.
+  Default: `Your_Organization_uid`
+- **Content-Type** (required)
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -431,7 +459,7 @@ In the 'Body' section, provide the schema of the stack in JSON format.
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -491,12 +519,12 @@ In the 'Body' section, provide the schema of the stack in JSON format.
 ```
 
 
+
 #### Update Stack
 
 #### Update stack
 
-**Method:** `PUT`  
-**Endpoint:** `/stacks`
+**PUT** `/stacks`
 
 The Update stack call lets you update the name and description of an existing stack.
 
@@ -504,15 +532,19 @@ In the 'Body' section, provide the updated schema of the stack in JSON format.
 
 **Warning:** The master locale cannot be changed once it is set while stack creation. So, you cannot use this call to change/update the master language.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | API_key_of_your_stack | Enter the API key of your stack. |
-| authtoken | Your_Authtoken | Enter your authtoken. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -523,7 +555,7 @@ In the 'Body' section, provide the updated schema of the stack in JSON format.
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -605,23 +637,23 @@ In the 'Body' section, provide the updated schema of the stack in JSON format.
 ```
 
 
-#### Delete stack
 
 #### Delete stack
 
-**Method:** `DELETE`  
-**Endpoint:** `/stacks`
+#### Delete stack
+
+**DELETE** `/stacks`
 
 The Delete stack call is used to delete an existing stack permanently from your Contentstack account.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | API_key_of_your_stack |  |
-| authtoken | Your_Authtoken |  |
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -630,24 +662,25 @@ The Delete stack call is used to delete an existing stack permanently from your 
 ```
 
 
+
 #### Get all users
 
 #### Get all users of a stack
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/users`
+**GET** `/stacks/users`
 
 The Get all users of a stack call fetches the list of all users of a particular stack
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | API_key_of_your_stack |  |
-| authtoken | Your_Authtoken |  |
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -675,26 +708,29 @@ The Get all users of a stack call fetches the list of all users of a particular 
 ```
 
 
+
 #### Update Existing User Role
 
 #### Update User Role
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/users/roles`
+**POST** `/stacks/users/roles`
 
 The Update User Role API Request updates the roles of an existing user account. This API Request will override the existing roles assigned to a user. For example, we have an existing user with the "Developer" role, and if you execute this API request with "Content Manager" role, the user role will lose "Developer" rights and the user role be updated to just "Content Manager".
 
 When executing the API call, under the 'Body' section, enter the user UID and UIDs of roles that you want to assign the user. This information should be in JSON format.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | Enter the API key of your stack | Enter the API key of your stack |
-| authtoken | Enter_your_authtoken | Enter your authtoken |
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Enter the API key of your stack
+  Default: `Enter the API key of your stack`
+- **authtoken** (required)
+  Enter your authtoken
+  Default: `Enter_your_authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -704,7 +740,7 @@ When executing the API call, under the 'Body' section, enter the user UID and UI
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -717,12 +753,12 @@ When executing the API call, under the 'Body' section, enter the user UID and UI
 ```
 
 
+
 #### Transfer Stack Ownership
 
 #### Transfer stack ownership to other users
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/transfer_ownership`
+**POST** `/stacks/transfer_ownership`
 
 The Transfer stack ownership to other users call sends the specified user an email invitation for accepting the ownership of a particular stack.
 
@@ -732,15 +768,16 @@ In the 'Body' section, you need to provide the email address of the user to whom
 
 **Additional Resource**: To transfer ownership of a stack to other users via Contentstack's UI, refer to the [Transfer Stack Ownership](/docs/developers/set-up-stack/transfer-stack-ownership) article.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | API_key_of_your_stack |  |
-| authtoken | Your_Authtoken |  |
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -748,7 +785,7 @@ In the 'Body' section, you need to provide the email address of the user to whom
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -757,12 +794,12 @@ In the 'Body' section, you need to provide the email address of the user to whom
 ```
 
 
+
 #### Accept Stack Ownership
 
 #### Accept stack owned by other user
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/accept_ownership/{ownership_token}?api_key={api_key}&uid={user_uid}`
+**GET** `/stacks/accept_ownership/{ownership_token}?api_key={api_key}&uid={user_uid}`
 
 The Accept stack owned by other user call allows a user to accept the ownership of a particular stack via an email invitation.
 
@@ -772,15 +809,22 @@ Once the user accepts the invitation by clicking on the link, the ownership is t
 
 When executing the API call, in the 'URL Parameters' section, you need to provide the ownership token and the user uid that you received in the invitation mail.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| ownership_token | blt2add6864996aa9f2 | Enter the ownership token received via email by another user. |
-| api_key | blt9f902ab2842258eb | Enter the stack API key. |
-| uid | Enter_your_user_uid | Enter the user uid. |
+- **ownership_token** (required)
+  Enter the ownership token received via email by another user.
+  Default: `blt2add6864996aa9f2`
 
-**Response (200):**
+##### Query Parameters
+
+- **api_key** (required)
+  Enter the stack API key.
+  Default: `blt9f902ab2842258eb`
+- **uid** (required)
+  Enter the user uid.
+  Default: `Enter_your_user_uid`
+
+##### Sample Response
 
 ```json
 {
@@ -789,23 +833,23 @@ When executing the API call, in the 'URL Parameters' section, you need to provid
 ```
 
 
+
 #### Stack Settings
 
 #### Get stack settings
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/settings`
+**GET** `/stacks/settings`
 
 The Get stack settings call retrieves the configuration settings of an existing stack.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | API_key_of_your_stack |  |
-| authtoken | Your_Authtoken |  |
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -828,10 +872,10 @@ The Get stack settings call retrieves the configuration settings of an existing 
 }
 ```
 
+
 #### Add stack settings
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/settings`
+**POST** `/stacks/settings`
 
 The Add stack settings request lets you add additional settings for your existing stack.
 
@@ -883,15 +927,19 @@ Here’s a sample of the Request Body:
 
 If you exclusively set "cs_only_breakline": true within the "rte" parameter, it ensures that only a <br> tag is inserted in the "Rich Text Editor" field when the content manager presses "Enter". Conversely, when this parameter is set to false, the <br> tag is substituted with <p></p>.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | API_key_of_your_stack | Enter the API key of your stack. |
-| authtoken | Your_Authtoken | Enter your authtoken. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -914,7 +962,7 @@ If you exclusively set "cs_only_breakline": true within the "rte" parameter, it 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -943,22 +991,26 @@ If you exclusively set "cs_only_breakline": true within the "rte" parameter, it 
 }
 ```
 
+
 #### Reset stack settings
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/settings/reset`
+**POST** `/stacks/settings/reset`
 
 The Reset stack settings call resets your stack to default settings, and additionally, lets you add parameters to or modify the settings of an existing stack.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | API_key_of_your_stack | Enter the API key of your stack. |
-| authtoken | Your_Authtoken | Enter your authtoken. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -966,7 +1018,7 @@ The Reset stack settings call resets your stack to default settings, and additio
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -985,26 +1037,27 @@ The Reset stack settings call resets your stack to default settings, and additio
 ```
 
 
+
 #### Share Stack
 
 #### Share a stack
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/share`
+**POST** `/stacks/share`
 
 The Share a stack call shares a stack with the specified user to collaborate on the stack.
 
 In the 'Body' section, you need to provide the email ID of the user with whom you wish to share the stack along with the role uid that you wish to assign the user.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | API_key_of_your_stack |  |
-| authtoken | Your_Authtoken |  |
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -1019,7 +1072,7 @@ In the 'Body' section, you need to provide the email ID of the user with whom yo
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -1028,26 +1081,27 @@ In the 'Body' section, you need to provide the email ID of the user with whom yo
 ```
 
 
+
 #### Unshare Stack
 
 #### Unshare a stack
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/unshare`
+**POST** `/stacks/unshare`
 
 The Unshare a stack call unshares a stack with a user and removes the user account from the list of collaborators. Once this call is executed, the user will not be able to view the stack in their account.
 
 In the 'Body' section, you need to provide the email ID of the user from whom you wish to unshare the stack.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | API_key_of_your_stack |  |
-| authtoken | Your_Authtoken |  |
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -1055,13 +1109,14 @@ In the 'Body' section, you need to provide the email ID of the user from whom yo
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
 	"notice": "The stack has been successfully unshared."
 }
 ```
+
 
 ### Branches
 
@@ -1072,26 +1127,38 @@ In the 'Body' section, you need to provide the email ID of the user from whom yo
 
 #### Get all branches
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches?limit={limit_value}&skip={skip_value}&include_count={boolean_value}`
+**GET** `/stacks/branches?limit={limit_value}&skip={skip_value}&include_count={boolean_value}`
 
 The Get all branches request returns comprehensive information of all the branches available in a particular stack in your account.
 
 You can add queries to extend the functionality of this API call. Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (Refer [Queries](/docs/developers/apis/content-delivery-api#queries))  
 To configure the permissions for your application via OAuth, please include the cm.branches.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| limit | 2 | Enter the maximum number of branches to be returned. |
-| skip | 2 | Enter the number of branches to be skipped from the response body. |
-| include_count | false | Set this parameter to 'true' to include in response the total count of branches available in a stack. |
+- **limit** (optional)
+  Enter the maximum number of branches to be returned.
+  Default: `2`
+- **skip** (optional)
+  Enter the number of branches to be skipped from the response body.
+  Default: `2`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of branches available in a stack.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -1123,26 +1190,35 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Get a Single Branch
 
 #### Get a single branch
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches/{branch_uid}`
+**GET** `/stacks/branches/{branch_uid}`
 
 The Get a single branch request returns information of a specific branch.  
 To configure the permissions for your application via OAuth, please include the cm.branches.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch_uid | your_branch_uid | Enter the unique ID of the branch of which you want to retrieve the details. The UID of a branch is unique across a stac |
+- **branch_uid** (required)
+  Enter the unique ID of the branch of which you want to retrieve the details. The UID of a branch is unique across a stack. Execute the [Get all branches](#get-all-branches) call to retrieve the UID of a branch.
+  Default: `your_branch_uid`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -1163,12 +1239,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Create a Branch
 
 #### Create a branch
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/branches`
+**POST** `/stacks/branches`
 
 The Create a branch request creates a new branch in a particular stack of your organization.
 
@@ -1176,15 +1252,19 @@ The Create a branch request creates a new branch in a particular stack of your o
 
 In the “Body” section, you need to provide a custom UID for the new branch and also the UID of the source branch from which it will inherit data.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your auth token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your auth token.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -1195,7 +1275,7 @@ In the “Body” section, you need to provide a custom UID for the new branch a
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -1213,12 +1293,12 @@ In the “Body” section, you need to provide a custom UID for the new branch a
 ```
 
 
+
 #### Delete a Branch
 
 #### Delete a branch
 
-**Method:** `DELETE`  
-**Endpoint:** `/stacks/branches/{branch_uid}?force={boolean_value}`
+**DELETE** `/stacks/branches/{branch_uid}?force={boolean_value}`
 
 The Delete a branch request deletes an existing branch and all the content within it.
 
@@ -1231,22 +1311,35 @@ To confirm the deletion of a branch, you need to specify the force=true query pa
 
 When executing the API call, in the “URL Parameters” section, provide the UID of your branch.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| branch_uid | your_branch_uid | Enter the unique ID of the branch that you want to delete. The UID of a branch is unique across a stack. Execute the [Ge |
-| force | true | Enter 'true' to force delete a branch. |
+- **branch_uid** (required)
+  Enter the unique ID of the branch that you want to delete. The UID of a branch is unique across a stack. Execute the [Get all branches](#get-all-branches) call to retrieve the UID of a branch.
+  Default: `your_branch_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **force** (required)
+  Enter 'true' to force delete a branch.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
     "notice": "Branch deleted successfully."
 }
 ```
+
 
 
 #### Comparing Branches
@@ -1257,8 +1350,7 @@ With the [Comparing Branches](/docs/developers/branches/comparing-branches) func
 
 #### Compare branches
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_compare?base_branch=main&compare_branch=redesign`
+**GET** `/stacks/branches_compare?base_branch=main&compare_branch=redesign`
 
 The Compare branches request returns a list of all the differences between two branches.
 
@@ -1269,19 +1361,34 @@ The Compare branches request returns a list of all the differences between two b
 
 ##### Compare Content Type between Branches
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| base_branch | main | The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default. |
-| compare_branch | redesign | Enter the branch you want to compare with the base branch. |
-| skip | 2 | Enter the number of branches to be skipped from the response body. |
-| limit | 100 | Enter the maximum number of branches compare result to be returned. The default limit is set at 100. |
+- **base_branch** (optional)
+  The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default.
+  Default: `main`
+- **compare_branch** (required)
+  Enter the branch you want to compare with the base branch.
+  Default: `redesign`
+- **skip** (optional)
+  Enter the number of branches to be skipped from the response body.
+  Default: `2`
+- **limit** (optional)
+  Enter the maximum number of branches compare result to be returned. The default limit is set at 100.
+  Default: `100`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -1325,28 +1432,43 @@ The Compare branches request returns a list of all the differences between two b
 }
 ```
 
+
 #### Compare content types between branches
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_compare/content_types?base_branch=main&compare_branch=redesign`
+**GET** `/stacks/branches_compare/content_types?base_branch=main&compare_branch=redesign`
 
 The Compare content types between branches request returns a list of all the differences in content types between the two specified branches.
 
 ##### Compare Global Fields between Branches
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| base_branch | main | The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default. |
-| compare_branch | redesign | Enter the branch you want to compare with the base branch. |
-| skip | 2 | Enter the number of branches to be skipped from the response body. |
-| limit | 100 | Enter the maximum number of branches compare result to be returned. The default limit is set at 100. |
+- **base_branch** (optional)
+  The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default.
+  Default: `main`
+- **compare_branch** (required)
+  Enter the branch you want to compare with the base branch.
+  Default: `redesign`
+- **skip** (optional)
+  Enter the number of branches to be skipped from the response body.
+  Default: `2`
+- **limit** (optional)
+  Enter the maximum number of branches compare result to be returned. The default limit is set at 100.
+  Default: `100`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -1390,28 +1512,43 @@ The Compare content types between branches request returns a list of all the dif
 }
 ```
 
+
 #### Compare global fields between branches
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_compare/global_fields?base_branch=main&compare_branch=redesign`
+**GET** `/stacks/branches_compare/global_fields?base_branch=main&compare_branch=redesign`
 
 The Compare global fields between branches request returns a list of all the differences in global fields between the two specified branches.
 
 ##### Compare Specific Content Types between Branches
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| base_branch | main | The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default. |
-| compare_branch | redesign | Enter the branch you want to compare with the base branch. |
-| skip | 2 | Enter the number of branches to be skipped from the response body. |
-| limit | 100 | Enter the maximum number of branches compare result to be returned. The default limit is set at 100. |
+- **base_branch** (optional)
+  The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default.
+  Default: `main`
+- **compare_branch** (required)
+  Enter the branch you want to compare with the base branch.
+  Default: `redesign`
+- **skip** (optional)
+  Enter the number of branches to be skipped from the response body.
+  Default: `2`
+- **limit** (optional)
+  Enter the maximum number of branches compare result to be returned. The default limit is set at 100.
+  Default: `100`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -1437,27 +1574,43 @@ The Compare global fields between branches request returns a list of all the dif
 }
 ```
 
+
 #### Compare specific content type between branches
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_compare/content_types/{content_type_uid}?base_branch=main&compare_branch=redesign&include_schemas=true`
+**GET** `/stacks/branches_compare/content_types/{content_type_uid}?base_branch=main&compare_branch=redesign&include_schemas=true`
 
 The Compare specific content type between branches request returns all the differences of the specified content type between the two specified branches.
 
 ##### Compare Specific Global Fields between Branches
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| content_type_uid | content_type_uid | Enter the unique ID of the content type of which you want to retrieve the difference. The UID is generated based on the  |
-| base_branch | main | The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default. |
-| compare_branch | redesign | Enter the branch you want to compare with the base branch. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the difference. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `content_type_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **base_branch** (optional)
+  The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default.
+  Default: `main`
+- **compare_branch** (required)
+  Enter the branch you want to compare with the base branch.
+  Default: `redesign`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -1600,25 +1753,41 @@ The Compare specific content type between branches request returns all the diffe
 }
 ```
 
+
 #### Compare specific global field between branches
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_compare/global_fields/{global_field_uid}?base_branch=main&compare_branch=redesign&include_schemas=true`
+**GET** `/stacks/branches_compare/global_fields/{global_field_uid}?base_branch=main&compare_branch=redesign&include_schemas=true`
 
 The  Compare specific global field between branches request returns all the differences of the specified global field between the two specified branches.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| global_field_uid | global_field_uid | Enter the unique ID of the global field  of which you want to retrieve the difference. The UID is generated based on the |
-| base_branch | main | The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default. |
-| compare_branch | redesign | Enter the branch you want to compare with the base branch. |
+- **global_field_uid** (required)
+  Enter the unique ID of the global field  of which you want to retrieve the difference. The UID is generated based on the title of the global field. The unique ID of a global field is unique across a stack.
+  Default: `global_field_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **base_branch** (optional)
+  The basis on which comparison is done. If kept empty, the source branch of the compare branch is considered by default.
+  Default: `main`
+- **compare_branch** (required)
+  Enter the branch you want to compare with the base branch.
+  Default: `redesign`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -1732,6 +1901,7 @@ The  Compare specific global field between branches request returns all the diff
 ```
 
 
+
 #### Merging Branches
 
 The [Merging Branches](/docs/developers/branches/merging-branches)functionality enables you to merge two branches, integrating the development changes made in the compare branch into the base branch.
@@ -1740,8 +1910,7 @@ The [Merging Branches](/docs/developers/branches/merging-branches)functionality 
 
 #### Merge branches
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/branches_merge?base_branch=main&compare_branch=redesign&default_merge_strategy=merge_prefer_compare&merge_comment=sample comment`
+**POST** `/stacks/branches_merge?base_branch=main&compare_branch=redesign&default_merge_strategy=merge_prefer_compare&merge_comment=sample comment`
 
 The Merge branches request merges the specified two branches as per the merge strategy selected.
 
@@ -1768,19 +1937,34 @@ Here are the details of available merge strategies and what each strategy does:
 
 ##### Get all Merge Jobs
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| base_branch | main | The base branch serves as the foundation where changes can be merged. |
-| compare_branch | redesign | Enter the branch from which you want to merge changes into the base branch. |
-| default_merge_strategy | merge_prefer_base | Specify the merge strategy to apply for the merge action. |
-| merge_comment | merge_comment | Enter the comment to be displayed for the merge action. |
+- **base_branch** (optional)
+  The base branch serves as the foundation where changes can be merged.
+  Default: `main`
+- **compare_branch** (required)
+  Enter the branch from which you want to merge changes into the base branch.
+  Default: `redesign`
+- **default_merge_strategy** (required)
+  Specify the merge strategy to apply for the merge action.
+  Default: `merge_prefer_base`
+- **merge_comment** (required)
+  Enter the comment to be displayed for the merge action.
+  Default: `merge_comment`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Request
 
 ```json
 {
@@ -1799,7 +1983,7 @@ Here are the details of available merge strategies and what each strategy does:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -1818,10 +2002,10 @@ Here are the details of available merge strategies and what each strategy does:
 }
 ```
 
+
 #### Get all merge jobs
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_queue`
+**GET** `/stacks/branches_queue`
 
 The Get all merge jobs request returns a list of all the recent merge jobs within a specific period.
 
@@ -1829,15 +2013,19 @@ The Get all merge jobs request returns a list of all the recent merge jobs withi
 
 ##### Get a Single Merge Job
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -2143,23 +2331,31 @@ The Get all merge jobs request returns a list of all the recent merge jobs withi
 }
 ```
 
+
 #### Get single merge job
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches_queue/your_merge_job_uid`
+**GET** `/stacks/branches_queue/your_merge_job_uid`
 
 The Get single merge job request returns the status and configuration details of a particular merge job.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| merge_job_uid | your_merge_job_uid |  |
+- **merge_job_uid** (required)
+  Default: `your_merge_job_uid`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -2189,6 +2385,7 @@ The Get single merge job request returns the status and configuration details of
 }
 ```
 
+
 ### Aliases
 
 [](/docs/developers/branches/create-a-branch)
@@ -2200,24 +2397,36 @@ An [alias](/docs/developers/branches/#work-with-aliases) acts as a pointer to a 
 
 #### Get all aliases
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branch_aliases?limit={limit_value}&skip={skip_value}&include_count={boolean_value}`
+**GET** `/stacks/branch_aliases?limit={limit_value}&skip={skip_value}&include_count={boolean_value}`
 
 The Get all aliases request returns comprehensive information of all the aliases available in a particular stack in your account.  
 To configure the permissions for your application via OAuth, please include the cm.branch-aliases.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| limit | 2 | Enter the maximum number of branches to be returned. |
-| skip | 2 | Enter the number of branches to be skipped from the response body. |
-| include_count | false | Set this parameter to 'true' to include in response the total count of branches available in a stack. |
+- **limit** (optional)
+  Enter the maximum number of branches to be returned.
+  Default: `2`
+- **skip** (optional)
+  Enter the number of branches to be skipped from the response body.
+  Default: `2`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of branches available in a stack.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -2257,26 +2466,35 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Get a Single Alias
 
 #### Get a single alias
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/branch_aliases/{branch_alias_uid}`
+**GET** `/stacks/branch_aliases/{branch_alias_uid}`
 
 The Get a single alias request returns information of a specific alias.  
 To configure the permissions for your application via OAuth, please include the cm.branch-aliases.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch_alias_uid | your_branch_alias_uid | Enter the unique ID of the alias of which you want to retrieve the details. The UID of an alias is unique across a stack |
+- **branch_alias_uid** (required)
+  Enter the unique ID of the alias of which you want to retrieve the details. The UID of an alias is unique across a stack. Execute the [Get all aliases](#get-all-aliases) call to retrieve the UID of an alias.
+  Default: `your_branch_alias_uid`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -2294,27 +2512,36 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Assign an Alias
 
 #### Assign an alias
 
-**Method:** `PUT`  
-**Endpoint:** `/stacks/branch_aliases/{branch_alias_uid}`
+**PUT** `/stacks/branch_aliases/{branch_alias_uid}`
 
 The Assign an alias request creates a new alias in a particular stack of your organization. This alias can point to any existing branch (target branch) of your stack.
 
 **Note:** Only stack owners, admins, and developers can assign a new alias to a branch. You must only use the authtoken to assign an alias.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch_alias_uid | your_branch_alias_uid | Enter the unique ID of the alias you want to assign or update. The UID of an alias is unique across a stack. Execute the |
+- **branch_alias_uid** (required)
+  Enter the unique ID of the alias you want to assign or update. The UID of an alias is unique across a stack. Execute the [Get all aliases](#get-all-aliases) call to retrieve the UID of an alias.
+  Default: `your_branch_alias_uid`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -2324,7 +2551,7 @@ The Assign an alias request creates a new alias in a particular stack of your or
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -2343,12 +2570,12 @@ The Assign an alias request creates a new alias in a particular stack of your or
 ```
 
 
+
 #### Delete an Alias
 
 #### Delete an alias
 
-**Method:** `DELETE`  
-**Endpoint:** `/stacks/branch_aliases/{branch_alias_uid}?force={boolean_value}`
+**DELETE** `/stacks/branch_aliases/{branch_alias_uid}?force={boolean_value}`
 
 The Delete an alias request deletes an existing alias.
 
@@ -2358,22 +2585,35 @@ When executing the API call, in the “URL Parameters” section, provide the UI
 
 **Note**: You must only use the authtoken to delete an alias.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| branch_alias_uid | your_branch_alias_uid | Enter the unique ID of the alias that you want to delete. The UID of an alias is unique across a stack. Execute the [Get |
-| force | true | Enter 'true' to force delete an alias. |
+- **branch_alias_uid** (required)
+  Enter the unique ID of the alias that you want to delete. The UID of an alias is unique across a stack. Execute the [Get all aliases](#get-all-aliases) call to retrieve the UID of an alias.
+  Default: `your_branch_alias_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **force** (required)
+  Enter 'true' to force delete an alias.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
     "notice": "Branch alias deleted successfully."
 }
 ```
+
 
 ### Content Types
 
@@ -2388,8 +2628,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 #### Get all content types
 
-**Method:** `GET`  
-**Endpoint:** `/content_types?include_count={boolean_value}&include_global_field_schema={boolean_value}`
+**GET** `/content_types?include_count={boolean_value}&include_global_field_schema={boolean_value}`
 
 The Get all content types call returns comprehensive information of all the content types available in a particular stack in your account.
 
@@ -2406,19 +2645,32 @@ Under the 'URL Parameters' section, insert a parameter named query and provide a
 - This API request will return a maximum of 100 content types. To retrieve the next batch of content types, make use of the skip parameter (or refer Pagination for more details).
 - Information about content types can be retrieved by all roles except for custom roles where access to certain or all content types is restricted.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| include_count | false | Set this to 'true' to include in response the total count of content types available in your stack. |
-| include_global_field_schema | true | Set this to 'true' to include in response the details of all the fields within the Global field's schema. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_count** (optional)
+  Set this to 'true' to include in response the total count of content types available in your stack.
+  Default: `false`
+- **include_global_field_schema** (optional)
+  Set this to 'true' to include in response the details of all the fields within the Global field's schema.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -3372,12 +3624,12 @@ Under the 'URL Parameters' section, insert a parameter named query and provide a
 ```
 
 
+
 #### Get Single Content Type
 
 #### Get a single content type
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}?version={content_type_version}`
+**GET** `/content_types/{content_type_uid}?version={content_type_version}`
 
 The Get a single content type call returns information of a specific content type.
 
@@ -3393,20 +3645,38 @@ To learn more about the queries, refer to the [Queries section of the Content De
 
 **Note**: Information about content types can be retrieved by all roles except for custom roles where access to certain or all content types is restricted.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you want to retrieve the details. The UID is generated based on the tit |
-| version | 1 | Enter the version of the content type of which you want to retrieve the details. If no version is specified, you will ge |
-| include_global_field_schema | true | Set this to 'true' to include in response the details of all the fields within the Global field's schema. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the details. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **version** (optional)
+  Enter the version of the content type of which you want to retrieve the details. If no version is specified, you will get the latest version of the content type.
+  Default: `1`
+- **include_global_field_schema** (optional)
+  Set this to 'true' to include in response the details of all the fields within the Global field's schema.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -3839,12 +4109,12 @@ To learn more about the queries, refer to the [Queries section of the Content De
 ```
 
 
+
 #### Create Content Type
 
 #### Create a content type
 
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create a content type call creates a new content type in a particular stack of your Contentstack account.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
@@ -3869,18 +4139,30 @@ To mark a field as non-unique, you need to set the unique parameter to false. Fo
 
 ##### Create Content Type with Select Field
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API Key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API Key of the stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -3924,7 +4206,7 @@ To mark a field as non-unique, you need to set the unique parameter to false. Fo
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -4033,10 +4315,10 @@ To mark a field as non-unique, you need to set the unique parameter to false. Fo
 }
 ```
 
+
 #### Create content type with select field
 
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create content type with select field request allows you to add a Select field while creating a content type. You can add choices within the Select field either in the form of single values or key-value pairs.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
@@ -4094,18 +4376,31 @@ The schema of the **Select** field that contains key-value pairs will look as fo
 
 ##### Create Content Type with JSON RTE
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -4207,7 +4502,7 @@ The schema of the **Select** field that contains key-value pairs will look as fo
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -4383,10 +4678,10 @@ The schema of the **Select** field that contains key-value pairs will look as fo
 }
 ```
 
+
 #### Create content type with JSON RTE
 
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create content type with JSON RTE request shows you how to add a JSON RTE field while creating a content type.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
@@ -4418,18 +4713,31 @@ Under the reference_to parameter, mention the UIDs of the content types whose en
 
 ##### Create content type with custom asset field
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -4493,7 +4801,7 @@ Under the reference_to parameter, mention the UIDs of the content types whose en
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -4607,27 +4915,40 @@ Under the reference_to parameter, mention the UIDs of the content types whose en
 }
 ```
 
+
 #### Create content type with custom asset field
 
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create content type with custom asset field request is used to create a content type with a custom field that accepts data of type asset.
 
 ##### Create content type with taxonomy
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch or alias unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -4682,7 +5003,7 @@ The Create content type with custom asset field request is used to create a cont
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -4787,10 +5108,10 @@ The Create content type with custom asset field request is used to create a cont
 }
 ```
 
+
 #### Create content type with taxonomy
 
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create content type with taxonomy request shows you how to add a taxonomy field while creating a content type.
 
@@ -4817,16 +5138,20 @@ In the “Body” section, you need to provide the complete schema of the conten
 }
 ```
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API Key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token |  |
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Enter the API Key of the stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -4889,7 +5214,7 @@ In the “Body” section, you need to provide the complete schema of the conten
     }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -5002,12 +5327,12 @@ In the “Body” section, you need to provide the complete schema of the conten
 ```
 
 
-#### Update Content Type
 
 #### Update Content Type
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}`
+#### Update Content Type
+
+**PUT** `/content_types/{content_type_uid}`
 
 The Update Content Type call is used to update the schema of an existing content type.
 
@@ -5018,19 +5343,34 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) document to know how you can add/update fields in your content type through API.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type that you wish to update. The uid is generated based on the title of the content  |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that you wish to update. The uid is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -5074,7 +5414,7 @@ In the “Body” section, you need to provide the updated schema of your conten
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -5214,12 +5554,12 @@ In the “Body” section, you need to provide the updated schema of your conten
 ```
 
 
-#### Set Field Visibility Rule for Content Type
 
 #### Set Field Visibility Rule for Content Type
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}`
+#### Set Field Visibility Rule for Content Type
+
+**PUT** `/content_types/{content_type_uid}`
 
 The Set Field Visibility Rule for Content Type API request lets you add Field Visibility Rules to existing content types. These rules allow you to show and hide fields based on the state or value of certain fields.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
@@ -5269,19 +5609,37 @@ Let’s look at the keys used in the above code snippet:
 
 For more details, check out the [Define Conditions](/docs/developers/create-content-types/add-a-field-visibility-rule#define-conditions) section when adding a Field Visibility Rule.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type in which you want to add field rules. The unique ID of a content type is unique  |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you want to add field rules. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -5355,7 +5713,7 @@ For more details, check out the [Define Conditions](/docs/developers/create-cont
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -5498,30 +5856,44 @@ For more details, check out the [Define Conditions](/docs/developers/create-cont
 ```
 
 
-#### Delete Content Type
 
 #### Delete Content Type
 
-**Method:** `DELETE`  
-**Endpoint:** `/content_types/{content_type_uid}?force={boolean value}`
+#### Delete Content Type
+
+**DELETE** `/content_types/{content_type_uid}?force={boolean value}`
 
 The Delete Content Type call deletes an existing content type and all the entries within it.
 
 When executing the API call, in the “URL Parameters” section, provide the UID of your content type.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type that you wish to delete. The UID is generated based on the title of the content  |
-| force | false | Enter 'true' to force delete a content type. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that you wish to delete. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **force** (optional)
+  Enter 'true' to force delete a content type.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -5530,12 +5902,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Content Type References
 
 #### Get all references of content type
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/references?include_global_fields={boolean_value}`
+**GET** `/content_types/{content_type_uid}/references?include_global_fields={boolean_value}`
 
 The Get all references of content type request retrieves a list of all content types where the specified content type is referenced. This includes both direct and nested references.
 
@@ -5547,19 +5919,36 @@ To configure the permissions for your application via OAuth, please include the 
 
 Additionally, to fetch all Global fields in which the specified content type is referenced, you need to pass include_global_fields as a query parameter. Set this parameter to true to include the Global fields along with the content types.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | brand | Enter the unique ID of the content type of which you wish to retrieve the references. The Unique ID of a content type is |
-| include_global_fields | true | Set the include_global_fields parameter to “true” to retrieve all the Global fields in which the specified content type  |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the references. The Unique ID of a content type is unique across a stack.
+  Default: `brand`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_global_fields** (optional)
+  Set the include_global_fields parameter to “true” to retrieve all the Global fields in which the specified content type is referenced.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -5571,12 +5960,12 @@ Additionally, to fetch all Global fields in which the specified content type is 
 ```
 
 
+
 #### Export Content Type
 
 #### Export a content type
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/export?version={content_type_version}`
+**GET** `/content_types/{content_type_uid}/export?version={content_type_version}`
 
 This call is used to export a specific content type and its schema. The data is exported in JSON format. The exported file won’t get downloaded automatically. To download the exported file, a **REST API** client, such as **Postman** can be used.  
 To configure the permissions for your application via OAuth, please include the cm.content-types:export scope.
@@ -5585,19 +5974,35 @@ However, please note that the entries of the specified content type are not expo
 
 The schema of the content type returned will depend on the version number provided.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type you want to retrieve. The unique ID of a content type is unique across a stack. |
-| version | 1 | Enter the version of content type you want to retrieve. If no version is specified, you will get the latest version of t |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type you want to retrieve. The unique ID of a content type is unique across a stack.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **version** (optional)
+  Enter the version of content type you want to retrieve. If no version is specified, you will get the latest version of the content type.
+  Default: `1`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -5734,31 +6139,43 @@ The schema of the content type returned will depend on the version number provid
 ```
 
 
+
 #### Import Content Type
 
 #### Import a content type
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/import?overwrite={boolean_value}`
+**POST** `/content_types/import?overwrite={boolean_value}`
 
 The Import a content type call imports a content type into a stack by uploading JSON file.   
 To configure the permissions for your application via OAuth, please include the cm.content-types:import scope.
 
 **Tip:** You can try the call manually in any REST API client, such as Postman. You can export the required content type's JSON file, make the necessary changes to the data and then import the content type. While importing, you need to pass a form-data parameter named content_type and select the input type as 'File'. Then, select the JSON file of the content type that you wish to import.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | multipart/form-data |  |
-| branch | main | Enter your branch unique ID. |
-| overwrite | false | Select 'true' to replace the existing content type with the imported content type file. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **overwrite** (optional)
+  Select 'true' to replace the existing content type with the imported content type file.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -5866,6 +6283,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 ### Variant Groups
 
 Variants in Contentstack provides an overview of variant groups and linked content types, which are used for content personalization. Linking content types to variant groups allows you to create entry variants.
@@ -5880,28 +6298,50 @@ Variants in Contentstack provides an overview of variant groups and linked conte
 
 #### Get all variant groups
 
-**Method:** `GET`  
-**Endpoint:** `/variant_groups?skip=0&limit=30&include_count=true&include_variant_info=true&include_variant_count=true&desc=created_at&content_type={your_content_type_uid}`
+**GET** `/variant_groups?skip=0&limit=30&include_count=true&include_variant_info=true&include_variant_count=true&desc=created_at&content_type={your_content_type_uid}`
 
 The Get all variant groups request returns a list of all variant groups linked to your stack. To retrieve the variant UIDs specific to a content type, include the content_type query parameter with the content type UID in your request.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| skip | 2 | Enter the number of items to be skipped from the response body. |
-| limit | 4 | Enter the maximum number of items to be returned. |
-| include_count | true | Set this parameter to “true” to include the total count of variant groups. |
-| include_variant_info | true | Set this parameter to “true” to include the variant information. |
-| include_variant_count | true | Set this parameter to “true” to include the total count of variants within a variant group. |
-| asc | created_at | Sort the response in ascending order. Options include created_at and name. |
-| desc | name | Sort the response in descending order. Options include created_at and name. |
-| content_type | your_content_type_uid | Enter the unique ID of your content type. |
+- **skip** (optional)
+  Enter the number of items to be skipped from the response body.
+  Default: `2`
+- **limit** (optional)
+  Enter the maximum number of items to be returned.
+  Default: `4`
+- **include_count** (optional)
+  Set this parameter to “true” to include the total count of variant groups.
+  Default: `true`
+- **include_variant_info** (optional)
+  Set this parameter to “true” to include the variant information.
+  Default: `true`
+- **include_variant_count** (optional)
+  Set this parameter to “true” to include the total count of variants within a variant group.
+  Default: `true`
+- **asc** (optional)
+  Sort the response in ascending order. Options include created_at and name.
+  Default: `created_at`
+- **desc** (optional)
+  Sort the response in descending order. Options include created_at and name.
+  Default: `name`
+- **content_type** (optional)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -6043,12 +6483,12 @@ The Get all variant groups request returns a list of all variant groups linked t
 ```
 
 
+
 #### Link Content Types
 
 #### Link content types
 
-**Method:** `PUT`  
-**Endpoint:** `/variant_groups/{variant_group_uid}/variants`
+**PUT** `/variant_groups/{variant_group_uid}/variants`
 
 The Link content types request allows you to link content types to your variant group.
 
@@ -6065,17 +6505,28 @@ In the “Body” section, enter the content type UID(s) in the following format
         }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Pass application/json value. |
-| variant_group_uid | your_variant_group_uid | Enter the unique ID for your variant group. |
+- **variant_group_uid** (required)
+  Enter the unique ID for your variant group.
+  Default: `your_variant_group_uid`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -6096,7 +6547,7 @@ In the “Body” section, enter the content type UID(s) in the following format
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -6128,12 +6579,12 @@ In the “Body” section, enter the content type UID(s) in the following format
 ```
 
 
+
 #### Unlink Content Types
 
 #### Unlink content types
 
-**Method:** `PUT`  
-**Endpoint:** `/variant_groups/{variant_group_uid}/variants`
+**PUT** `/variant_groups/{variant_group_uid}/variants`
 
 The Unlink content types request allows you to unlink content types to your variant group.
 
@@ -6150,17 +6601,28 @@ In the “Body” section, enter the content type UID(s) in the following format
         }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Pass application/json value. |
-| variant_group_uid | your_variant_group_uid | Enter the unique ID for your variant group. |
+- **variant_group_uid** (required)
+  Enter the unique ID for your variant group.
+  Default: `your_variant_group_uid`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -6181,7 +6643,7 @@ In the “Body” section, enter the content type UID(s) in the following format
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -6212,6 +6674,7 @@ In the “Body” section, enter the content type UID(s) in the following format
 }
 ```
 
+
 ### Taxonomy
 
 Taxonomy, simplifies the process of organizing content in your system, making it effortless to find and retrieve information. It allows you to arrange your web properties in a hierarchy according to your specific needs, whether it's their purpose, intended audience, or other aspects of your business.
@@ -6221,34 +6684,68 @@ Taxonomy, simplifies the process of organizing content in your system, making it
 
 #### Get all taxonomies
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies?include_terms_count={boolean_value}&include_count={boolean_value}&deleted={boolean_value}&limit={limit_value}&skip={skip_value}`
+**GET** `/taxonomies?include_terms_count={boolean_value}&include_count={boolean_value}&deleted={boolean_value}&limit={limit_value}&skip={skip_value}`
 
 The Get all taxonomies request returns comprehensive information of all the taxonomies available in a particular stack in your organization.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch b |
-| locale | es-es | Locale from which to fetch the taxonomies. If not specified, the default locale is used. |
-| include_fallback | true | Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the taxonom |
-| include_terms_count | true | Set this parameter to 'true' to include in response the total count of terms available in a taxonomy. |
-| include_referenced_terms_count | false | Set this parameter to 'true' to include in response the total count of terms referenced in entry(ies). |
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which terms are added. |
-| include_count | true | Set this parameter to 'true' to include in response the total count of taxonomies available in a stack. |
-| deleted | false | Set this parameter to 'true' to retrieve only deleted taxonomies within a stack. |
-| asc | created_at | Sort the response in ascending order. |
-| desc | created_at | Sort the response in descending order. |
-| query | {"uid":{"$in":["taxonomy_1","taxonomy_2"]}} | Provide a custom query for the taxonomy_uid in string format. |
-| typeahead | sample | Retrieves responses that match the provided string. |
-| limit | 2 | Enter the maximum number of taxonomies to be returned. |
-| skip | 2 | Enter the number of taxonomies to be skipped from the response body. |
+- **locale** (optional)
+  Locale from which to fetch the taxonomies. If not specified, the default locale is used.
+  Default: `es-es`
+- **include_fallback** (optional)
+  Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the taxonomy is not available in the given locale.
+  Default: `true`
+- **include_terms_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms available in a taxonomy.
+  Default: `true`
+- **include_referenced_terms_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms referenced in entry(ies).
+  Default: `false`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which terms are added.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of taxonomies available in a stack.
+  Default: `true`
+- **deleted** (optional)
+  Set this parameter to 'true' to retrieve only deleted taxonomies within a stack.
+  Default: `false`
+- **asc** (optional)
+  Sort the response in ascending order.
+  Default: `created_at`
+- **desc** (optional)
+  Sort the response in descending order.
+  Default: `created_at`
+- **query** (optional)
+  Provide a custom query for the taxonomy_uid in string format.
+  Default: `{"uid":{"$in":["taxonomy_1","taxonomy_2"]}}`
+- **typeahead** (optional)
+  Retrieves responses that match the provided string.
+  Default: `sample`
+- **limit** (optional)
+  Enter the maximum number of taxonomies to be returned.
+  Default: `2`
+- **skip** (optional)
+  Enter the number of taxonomies to be skipped from the response body.
+  Default: `2`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
+
+##### Sample Response
 
 ```json
 {
@@ -6305,31 +6802,55 @@ The Get all taxonomies request returns comprehensive information of all the taxo
 ```
 
 
-#### Get a single taxonomy
 
 #### Get a single taxonomy
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+#### Get a single taxonomy
+
+**GET** `/taxonomies/{taxonomy_uid}`
 
 The Get a single taxonomy request returns comprehensive information of a specific taxonomy available in a particular stack.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch b |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy of which you want to retrieve the details. The UID of a taxonomy is unique across a  |
-| locale | es | Locale from which to fetch the taxonomy. If not specified, the master locale is used. |
-| include_fallback | true | Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the taxonom |
-| include_terms_count | true | Set this parameter to 'true' to include in response the total count of terms available in a taxonomy. |
-| include_referenced_terms_count | false | Set this parameter to 'true' to include in response the total count of terms referenced in entry(ies). |
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which terms are added. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy of which you want to retrieve the details. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Locale from which to fetch the taxonomy. If not specified, the master locale is used.
+  Default: `es`
+- **include_fallback** (optional)
+  Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the taxonomy is not available in the given locale.
+  Default: `true`
+- **include_terms_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms available in a taxonomy.
+  Default: `true`
+- **include_referenced_terms_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms referenced in entry(ies).
+  Default: `false`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which terms are added.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
+
+##### Sample Response
 
 ```json
 {
@@ -6350,27 +6871,33 @@ The Get a single taxonomy request returns comprehensive information of a specifi
 ```
 
 
-#### Create a taxonomy
 
 #### Create a taxonomy
 
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/`
+#### Create a taxonomy
+
+**POST** `/taxonomies/`
 
 The Create a taxonomy request creates a taxonomy in a particular stack of your organization.
 
 **Note**: Refer to the [Restricted Keywords for UIDs](/docs/developers/create-content-types/restricted-keywords-for-uids) to avoid using reserved keywords.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -6382,7 +6909,7 @@ The Create a taxonomy request creates a taxonomy in a particular stack of your o
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -6399,27 +6926,43 @@ The Create a taxonomy request creates a taxonomy in a particular stack of your o
 ```
 
 
-#### Update a taxonomy
 
 #### Update a taxonomy
 
-**Method:** `PUT`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+#### Update a taxonomy
+
+**PUT** `/taxonomies/{taxonomy_uid}`
 
 The Update a taxonomy request is used to update the details of an existing taxonomy available in a particular stack.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Ge |
-| locale | es-es | Locale in which to update the taxonomy. If not specified, the master locale is used. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (optional)
+  Locale in which to update the taxonomy. If not specified, the master locale is used.
+  Default: `es-es`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -6430,7 +6973,7 @@ The Update a taxonomy request is used to update the details of an existing taxon
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -6448,27 +6991,43 @@ The Update a taxonomy request is used to update the details of an existing taxon
 ```
 
 
-#### Localize a taxonomy
 
 #### Localize a taxonomy
 
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+#### Localize a taxonomy
+
+**POST** `/taxonomies/{taxonomy_uid}`
 
 The Localize a taxonomy request is used to add translated values to a taxonomy for specific locales available in your stack.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| taxonomy_uid | global_content_topics | Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[ |
-| locale | fr-fr | The locale in which the taxonomy should be localized. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `global_content_topics`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (required)
+  The locale in which the taxonomy should be localized.
+  Default: `fr-fr`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -6480,7 +7039,7 @@ The Localize a taxonomy request is used to add translated values to a taxonomy f
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -6498,33 +7057,49 @@ The Localize a taxonomy request is used to add translated values to a taxonomy f
 ```
 
 
-#### Unlocalize a taxonomy
 
 #### Unlocalize a taxonomy
 
-**Method:** `DELETE`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+#### Unlocalize a taxonomy
+
+**DELETE** `/taxonomies/{taxonomy_uid}`
 
 The Unlocalize a taxonomy request is used to remove translated values from a taxonomy in a specified locale.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| taxonomy_uid | global_content_topics | Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the  |
-| locale | es-es | The locale from which to unlocalize. If not specified, the master locale is used. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `global_content_topics`
+
+##### Query Parameters
+
+- **locale** (required)
+  The locale from which to unlocalize. If not specified, the master locale is used.
+  Default: `es-es`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
 
 
 #### Publish a taxonomy
 
 #### Publish a taxonomy
 
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/publish`
+**POST** `/taxonomies/publish`
 
 The Publish a taxonomy request  initiates a job to publish one or more taxonomies to the specified environments, locales, and branches.
 
@@ -6537,17 +7112,25 @@ The Publish a taxonomy request  initiates a job to publish one or more taxonomie
 - The scheduled_at parameter is optional.
 - Although taxonomy is global, branch selection determines locale availability and the fallback hierarchy during publishing.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch b |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -6566,30 +7149,48 @@ The Publish a taxonomy request  initiates a job to publish one or more taxonomie
 ```
 
 
-#### Export a taxonomy
 
 #### Export a taxonomy
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/export`
+#### Export a taxonomy
+
+**GET** `/taxonomies/{taxonomy_uid}/export`
 
 The Export a taxonomy request is used to export a specific taxonomy and its terms. in JSON or CSV format.
 
 The exported file doesn't download automatically. You can use a REST API client such as Postman to manually download it.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch b |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to export. The UID of a taxonomy is unique across a stack. Execute the '[Ge |
-| format | json or csv | Enter the file format for exporting the taxonomy. The default format is JSON. |
-| locale | es | Exports the taxonomy in the specified locale. If not provided, the system uses the master locale by default (en-us). |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to export. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
 
-**Response (200):**
+##### Query Parameters
+
+- **format** (optional)
+  Enter the file format for exporting the taxonomy. The default format is JSON.
+  Default: `json or csv`
+- **locale** (optional)
+  Exports the taxonomy in the specified locale. If not provided, the system uses the master locale by default (en-us).
+  Default: `es`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
+
+##### Sample Response
 
 ```json
 {
@@ -6623,12 +7224,12 @@ The exported file doesn't download automatically. You can use a REST API client 
 ```
 
 
-#### Import a taxonomy
 
 #### Import a taxonomy
 
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/import`
+#### Import a taxonomy
+
+**POST** `/taxonomies/import`
 
 The Import a taxonomy request is used to import a taxonomy and its terms into a stack by uploading the JSON or CSV file.
 
@@ -6641,16 +7242,25 @@ You can try the call manually in any REST API client, such as Postman. While imp
 - If the CSV import format is invalid, any invalid rows containing taxonomy/terms and subsequent rows will be ignored and only rows with valid taxonomy/terms will be created.
 - Refer to the Restricted Keywords for UIDs to avoid using reserved keywords.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| locale | es-es | Target locale in which to import the taxonomy. If not specified, the master locale is used. |
+- **locale** (optional)
+  Target locale in which to import the taxonomy. If not specified, the master locale is used.
+  Default: `es-es`
 
-**Response (201):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -6669,25 +7279,38 @@ You can try the call manually in any REST API client, such as Postman. While imp
 ```
 
 
-#### Delete a taxonomy
 
 #### Delete a taxonomy
 
-**Method:** `DELETE`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+#### Delete a taxonomy
+
+**DELETE** `/taxonomies/{taxonomy_uid}`
 
 The Delete a taxonomy request deletes an existing taxonomy and all the terms within it. To confirm the deletion of a taxonomy, you need to specify the force=true query parameter.
 
 **Note:** When you delete a taxonomy, its existing associations with content types are removed. Additionally, the child terms will also eliminate associations with existing entries.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Ge |
-| force | false | Enter 'true' to force delete a taxonomy. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
+
+##### Query Parameters
+
+- **force** (required)
+  Enter 'true' to force delete a taxonomy.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
 
 
 #### Terms
@@ -6698,38 +7321,79 @@ Terms are the primary classification elements you generate within a taxonomy. Th
 
 #### Get all terms of a taxonomy
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms?include_terms_count={boolean_value}&include_count={boolean_value}&deleted=false&limit={limit_value}&skip={skip_value}`
+**GET** `/taxonomies/{taxonomy_uid}/terms?include_terms_count={boolean_value}&include_count={boolean_value}&deleted=false&limit={limit_value}&skip={skip_value}`
 
 The Get all terms of a taxonomy request returns comprehensive information of all the terms within a taxonomy available in a particular stack in your organization.
 
 ##### Get a single term
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token	 | Enter your management token. |
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch b |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Ge |
-| locale | en-us | Locale from which to fetch the taxonomy terms. If not specified, the master locale is used. |
-| include_fallback | true | Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is |
-| depth | 3 | The response includes terms beginning at the root level and continuing to the specified depth. |
-| include_children_count | true | Set this parameter to 'true' to include in response the total count of child terms available in the parent term. |
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which the term is added. |
-| include_count | true | Set this parameter to 'true' to include in response the total count of terms available in the specified taxonomy. |
-| include_order | true | Set this parameter to 'true' to include in response the order of the terms available in a taxonomy. |
-| asc | created_at | Sort the response in ascending order. |
-| desc | created_at | Sort the response in descending order. |
-| query | {"uid":{"$in":["term_1","term_2"]}} | Provide a custom query for the term_uid in string format. |
-| typeahead | sample | Retrieves responses that match the provided string. |
-| deleted | false | Set this parameter to 'true' to retrieve only deleted terms within a taxonomy. |
-| limit | 2 | Enter the maximum number of terms to be returned. |
-| skip | 2 | Enter the number of terms to be skipped from the response body. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Locale from which to fetch the taxonomy terms. If not specified, the master locale is used.
+  Default: `en-us`
+- **include_fallback** (optional)
+  Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is not available in the given locale.
+  Default: `true`
+- **depth** (optional)
+  The response includes terms beginning at the root level and continuing to the specified depth.
+  Default: `3`
+- **include_children_count** (optional)
+  Set this parameter to 'true' to include in response the total count of child terms available in the parent term.
+  Default: `true`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which the term is added.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms available in the specified taxonomy.
+  Default: `true`
+- **include_order** (optional)
+  Set this parameter to 'true' to include in response the order of the terms available in a taxonomy.
+  Default: `true`
+- **asc** (optional)
+  Sort the response in ascending order.
+  Default: `created_at`
+- **desc** (optional)
+  Sort the response in descending order.
+  Default: `created_at`
+- **query** (optional)
+  Provide a custom query for the term_uid in string format.
+  Default: `{"uid":{"$in":["term_1","term_2"]}}`
+- **typeahead** (optional)
+  Retrieves responses that match the provided string.
+  Default: `sample`
+- **deleted** (optional)
+  Set this parameter to 'true' to retrieve only deleted terms within a taxonomy.
+  Default: `false`
+- **limit** (optional)
+  Enter the maximum number of terms to be returned.
+  Default: `2`
+- **skip** (optional)
+  Enter the number of terms to be skipped from the response body.
+  Default: `2`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
+
+##### Sample Response
 
 ```json
 {
@@ -6781,31 +7445,55 @@ The Get all terms of a taxonomy request returns comprehensive information of all
 }
 ```
 
+
 #### Get a single term
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+**GET** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Get a single term request returns comprehensive information of a specific term available in a particular taxonomy.
 
 ##### Create a term
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token	 | Enter your management token. |
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch b |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy of which you want to retrieve the details. The UID of a taxonomy is unique across a  |
-| term_uid | term_a | Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. E |
-| locale | es | Locale from which to fetch the taxonomy term. If not specified, the master locale is used. |
-| include_fallback | true | Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is |
-| include_children_count | true | Set this parameter to 'true' to include in response the total count of child terms available in the parent term. |
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which the term is added. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy of which you want to retrieve the details. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
+- **term_uid** (required)
+  Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `term_a`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Locale from which to fetch the taxonomy term. If not specified, the master locale is used.
+  Default: `es`
+- **include_fallback** (optional)
+  Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is not available in the given locale.
+  Default: `true`
+- **include_children_count** (optional)
+  Set this parameter to 'true' to include in response the total count of child terms available in the parent term.
+  Default: `true`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which the term is added.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
+
+##### Sample Response
 
 ```json
 {
@@ -6825,10 +7513,10 @@ The Get a single term request returns comprehensive information of a specific te
 }
 ```
 
+
 #### Create a term
 
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms`
+**POST** `/taxonomies/{taxonomy_uid}/terms`
 
 The Create a term request creates a term in a particular taxonomy within your stack.
 
@@ -6864,19 +7552,37 @@ When creating terms at the child level, the request body should look like this:
 
 ##### Update a term
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token	 | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Ge |
-| include_children_count | true | Set this parameter to 'true' to include in response the total count of child terms available in the parent term. |
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which the term is added. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_children_count** (optional)
+  Set this parameter to 'true' to include in response the total count of child terms available in the parent term.
+  Default: `true`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which the term is added.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -6889,7 +7595,7 @@ When creating terms at the child level, the request body should look like this:
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -6906,28 +7612,46 @@ When creating terms at the child level, the request body should look like this:
 }
 ```
 
+
 #### Update a term
 
-**Method:** `PUT`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+**PUT** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Update a term request is used to update the details of an existing term available in a particular taxonomy.
 
 ##### Localize a term
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token	 | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Ge |
-| term_uid | term_a | Enter the unique ID of the term you want to update. The UID of a term is unique across a stack. Execute the '[Get all te |
-| locale | es | Locale in which to update the taxonomy term. If not specified, the master locale is used. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
+- **term_uid** (required)
+  Enter the unique ID of the term you want to update. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `term_a`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (optional)
+  Locale in which to update the taxonomy term. If not specified, the master locale is used.
+  Default: `es`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -6937,7 +7661,7 @@ The Update a term request is used to update the details of an existing term avai
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -6955,28 +7679,46 @@ The Update a term request is used to update the details of an existing term avai
 }
 ```
 
+
 #### Localize a term
 
-**Method:** `POST`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+**POST** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Localize a term request is used to add translated taxonomy terms to specific locales available within a stack.
 
 ##### Unlocalize a term
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token	 | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| taxonomy_uid | global_content_topics | Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[ |
-| term_uid | artificial_intelligence | Enter the unique ID of the term you want to localize. The UID of a term is unique across a stack. Execute the '[Get all  |
-| locale | es-es | The locale in which you want to localize the taxonomy term. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to localize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `global_content_topics`
+- **term_uid** (required)
+  Enter the unique ID of the term you want to localize. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `artificial_intelligence`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (required)
+  The locale in which you want to localize the taxonomy term.
+  Default: `es-es`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -6989,7 +7731,7 @@ The Localize a term request is used to add translated taxonomy terms to specific
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -7007,57 +7749,109 @@ The Localize a term request is used to add translated taxonomy terms to specific
 }
 ```
 
+
 #### Unlocalize a term
 
-**Method:** `DELETE`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+**DELETE** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Unlocalize a term request is used to remove localized values for a term in a specific locale.
 
 ##### Get descendants of a term
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token	 | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| taxonomy_uid | global_content_topics | Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the  |
-| term_uid | artificial_intelligence | Enter the unique ID of the term you want to unlocalize. The UID of a term is unique across a stack. Execute the '[Get al |
-| locale | es | The locale from which you want to remove localization. If not specified, the system uses the master locale. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `global_content_topics`
+- **term_uid** (required)
+  Enter the unique ID of the term you want to unlocalize. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `artificial_intelligence`
+
+##### Query Parameters
+
+- **locale** (optional)
+  The locale from which you want to remove localization. If not specified, the system uses the master locale.
+  Default: `es`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
 
 #### Get descendants of a term
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/descendants`
+**GET** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/descendants`
 
 The Get descendants of a term request returns all the child terms of a specific term available in a particular taxonomy.
 
 ##### Get ancestors of a term
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token	 | Enter your management token. |
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch b |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy of which you want to retrieve the details. The UID of a taxonomy is unique across a  |
-| term_uid | term_a | Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. E |
-| locale | en-us | Locale from which to fetch the descendant taxonomy terms. If not specified, the master locale is used. |
-| include_fallback | true | Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is |
-| depth | 3 | The response includes terms beginning at the root level and continuing to the specified depth. |
-| include_children_count | true | Set this parameter to 'true' to include in response the total count of child terms available in the parent term. |
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which the term is added. |
-| include_count | true | Set this parameter to 'true' to include in response the total count of terms available in the specified taxonomy. |
-| include_order | true | Set this parameter to 'true' to include in response the order of the terms available in a taxonomy. |
-| limit | 2 | Enter the maximum number of terms to be returned. |
-| skip | 2 | Enter the number of terms to be skipped from the response body. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy of which you want to retrieve the details. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
+- **term_uid** (required)
+  Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `term_a`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Locale from which to fetch the descendant taxonomy terms. If not specified, the master locale is used.
+  Default: `en-us`
+- **include_fallback** (optional)
+  Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is not available in the given locale.
+  Default: `true`
+- **depth** (optional)
+  The response includes terms beginning at the root level and continuing to the specified depth.
+  Default: `3`
+- **include_children_count** (optional)
+  Set this parameter to 'true' to include in response the total count of child terms available in the parent term.
+  Default: `true`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which the term is added.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms available in the specified taxonomy.
+  Default: `true`
+- **include_order** (optional)
+  Set this parameter to 'true' to include in response the order of the terms available in a taxonomy.
+  Default: `true`
+- **limit** (optional)
+  Enter the maximum number of terms to be returned.
+  Default: `2`
+- **skip** (optional)
+  Enter the number of terms to be skipped from the response body.
+  Default: `2`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
+
+##### Sample Response
 
 ```json
 {
@@ -7094,34 +7888,64 @@ The Get descendants of a term request returns all the child terms of a specific 
 }
 ```
 
+
 #### Get ancestors of a term
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/ancestors`
+**GET** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/ancestors`
 
 The Get ancestors of a term returns all the terms that are at higher levels in a specific taxonomy of the specified term.
 
 ##### Move/Reorder a term
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token	 | Enter your management token. |
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch b |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy of which you want to retrieve the details. The UID of a taxonomy is unique across a  |
-| term_uid | term_a | Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. E |
-| locale | en-us | Locale from which to fetch the ancestor taxonomy terms. If not specified, the master locale is used. |
-| include_fallback | true | Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is |
-| include_children_count | true | Set this parameter to 'true' to include in response the total count of child terms available in the parent term. |
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which the term is added. |
-| include_count | true | Set this parameter to 'true' to include in response the total count of terms available in the specified taxonomy. |
-| limit | 2 | Enter the maximum number of terms to be returned. |
-| skip | 2 | Enter the number of terms to be skipped from the response body. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy of which you want to retrieve the details. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
+- **term_uid** (required)
+  Enter the unique ID of the term of which you want to retrieve the details. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `term_a`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Locale from which to fetch the ancestor taxonomy terms. If not specified, the master locale is used.
+  Default: `en-us`
+- **include_fallback** (optional)
+  Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is not available in the given locale.
+  Default: `true`
+- **include_children_count** (optional)
+  Set this parameter to 'true' to include in response the total count of child terms available in the parent term.
+  Default: `true`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which the term is added.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms available in the specified taxonomy.
+  Default: `true`
+- **limit** (optional)
+  Enter the maximum number of terms to be returned.
+  Default: `2`
+- **skip** (optional)
+  Enter the number of terms to be skipped from the response body.
+  Default: `2`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
+
+##### Sample Response
 
 ```json
 {
@@ -7168,10 +7992,10 @@ The Get ancestors of a term returns all the terms that are at higher levels in a
 }
 ```
 
+
 #### Move/Reorder a term
 
-**Method:** `PUT`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/move`
+**PUT** `/taxonomies/{taxonomy_uid}/terms/{term_uid}/move`
 
 The Reorder a term request is used to reposition an existing term available in a particular taxonomy.
 
@@ -7214,19 +8038,37 @@ When reordering terms under an existing term on the same level (reorder term), t
 
 ##### Delete a term
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token	 | Enter your management token. |
-| Content-Type  | application/json | Enter "application/json" to pass a request body. |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy of which you want to move or reorder the terms. The UID of a taxonomy is unique acro |
-| term_uid | term_a | Enter the unique ID of the term you want to move or reorder. The UID of a term is unique across a stack. Execute the '[G |
-| force | false | Enter 'true' to force a term to be reordered. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy of which you want to move or reorder the terms. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
+- **term_uid** (required)
+  Enter the unique ID of the term you want to move or reorder. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `term_a`
 
-**Request Body:**
+##### Query Parameters
+
+- **force** (optional)
+  Enter 'true' to force a term to be reordered.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **Content-Type ** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -7237,7 +8079,7 @@ When reordering terms under an existing term on the same level (reorder term), t
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -7256,10 +8098,10 @@ When reordering terms under an existing term on the same level (reorder term), t
 }
 ```
 
+
 #### Delete a term
 
-**Method:** `DELETE`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+**DELETE** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Delete a term request deletes an existing term and all the child terms within it.
 
@@ -7269,20 +8111,34 @@ To confirm the deletion of a term, you need to specify the force=true query para
 
 ##### Get all terms across all taxonomies
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy which you want to delete. The UID of a taxonomy is unique across a stack. Execute th |
-| term_uid | term_a | Enter the unique ID of the term of which you want to delete. The UID of a term is unique across a stack. Execute the '[G |
-| force | false | Enter 'true' to force delete a term. |
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy which you want to delete. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
+- **term_uid** (required)
+  Enter the unique ID of the term of which you want to delete. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `term_a`
+
+##### Query Parameters
+
+- **force** (required)
+  Enter 'true' to force delete a term.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
 
 #### Get all terms across all taxonomies
 
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/$all/terms?typeahead={term}`
+**GET** `/taxonomies/$all/terms?typeahead={term}`
 
 The Get all terms across all taxonomies request returns comprehensive information of all the terms across all taxonomy available in a particular stack in your organization.
 
@@ -7291,24 +8147,49 @@ The Get all terms across all taxonomies request returns comprehensive informatio
 - The parameter $all in the URL is a reserved keyword in this context. It is used to refer to all taxonomies.
 - In the Query Parameters section, you must pass either the query or typeahead parameter.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token	 | Enter your management token. |
-| locale | en-us | Specifies the locale from which to fetch the terms. If not provided, the system uses the master locale. |
-| include_fallback | true | Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is |
-| include_children_count | true | Set this parameter to 'true' to include in response the total count of child terms available in the parent term. |
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which the term is added. |
-| include_count | true | Set this parameter to 'true' to include in response the total count of terms available in the specified taxonomy. |
-| query | {"$or":[{"taxonomy_uid":"taxonomy_1","uid":{"$in":["term_1", “term_2”]}}]} | Provide a custom query for the taxonomy_uid and term_uid in string format. |
-| typeahead | sample | Retrieves responses that match the provided string. |
-| limit | 2 | Enter the maximum number of terms to be returned. |
-| skip | 2 | Enter the number of terms to be skipped from the response body. |
+- **locale** (optional)
+  Specifies the locale from which to fetch the terms. If not provided, the system uses the master locale.
+  Default: `en-us`
+- **include_fallback** (optional)
+  Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the term is not available in the given locale.
+  Default: `true`
+- **include_children_count** (optional)
+  Set this parameter to 'true' to include in response the total count of child terms available in the parent term.
+  Default: `true`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which the term is added.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms available in the specified taxonomy.
+  Default: `true`
+- **query** (optional)
+  Provide a custom query for the taxonomy_uid and term_uid in string format.
+  Default: `{"$or":[{"taxonomy_uid":"taxonomy_1","uid":{"$in":["term_1", “term_2”]}}]}`
+- **typeahead** (optional)
+  Retrieves responses that match the provided string.
+  Default: `sample`
+- **limit** (optional)
+  Enter the maximum number of terms to be returned.
+  Default: `2`
+- **skip** (optional)
+  Enter the number of terms to be skipped from the response body.
+  Default: `2`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+
+##### Sample Response
 
 ```json
 {
@@ -7414,6 +8295,7 @@ The Get all terms across all taxonomies request returns comprehensive informatio
 }
 ```
 
+
 ### Global Fields
 
 A Global field is a reusable field (or group of fields) that you can define once and reuse across multiple content types within your stack. This eliminates the need to recreate the same set of fields multiple times, saving effort and ensuring consistency.
@@ -7429,8 +8311,7 @@ You can pass the **branch header** in API requests to fetch or manage modules wi
 
 #### Get all global fields
 
-**Method:** `GET`  
-**Endpoint:** `/global_fields`
+**GET** `/global_fields`
 
 The Get all global fields request returns comprehensive information of all the global fields available in a particular stack in your organization.
 
@@ -7440,22 +8321,43 @@ The Get all global fields request returns comprehensive information of all the g
 - If your Global field contains nested Global fields, they will appear as part of the schema in the API response.
 - To configure the permissions for your application via OAuth, please include the cm.global-fields.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| include_global_field_schema | true | Set this parameter to 'true' to include in response the schema of the nested Global field. |
-| include_branch | true | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
-| include_content_types | ture | Set this parameter to 'true' to include in response the details of the content types where the current Global field is r |
-| include_global_fields | true | Set this parameter to 'true' to include in response the details of Global fields where the current Global field is refer |
-| include_count | true | Set this parameter to 'true' to include in response the total count of Global fields available in a stack. |
-| deleted | true | Set this parameter to 'true' to retrieve only deleted Global fields within a stack. |
+- **include_global_field_schema** (optional)
+  Set this parameter to 'true' to include in response the schema of the nested Global field.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `true`
+- **include_content_types** (optional)
+  Set this parameter to 'true' to include in response the details of the content types where the current Global field is referred.
+  Default: `ture`
+- **include_global_fields** (optional)
+  Set this parameter to 'true' to include in response the details of Global fields where the current Global field is referred.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of Global fields available in a stack.
+  Default: `true`
+- **deleted** (optional)
+  Set this parameter to 'true' to retrieve only deleted Global fields within a stack.
+  Default: `true`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -7504,12 +8406,12 @@ The Get all global fields request returns comprehensive information of all the g
 ```
 
 
+
 #### Get Single Global Field
 
 #### Get a single global field
 
-**Method:** `GET`  
-**Endpoint:** `/global_fields/{global_field_uid}`
+**GET** `/global_fields/{global_field_uid}`
 
 The Get a single global field request allows you to fetch comprehensive details of a specific global field.
 
@@ -7521,23 +8423,49 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 - If your Global field contains nested Global fields, they will appear as part of the schema in the API response.
 - To configure the permissions for your application via OAuth, please include the cm.global-fields.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| global_field_uid | category | Enter the unique ID of the Global field of which you want to retrieve the details. The UID of a Global field is unique a |
-| version | 4 | Specify the version number of the specified Global field of which you want to retrieve details. |
-| include_global_field_schema | true | Set this parameter to 'true' to include in response the schema of the Global field. |
-| include_global_fields | true | Set this parameter to 'true' to include in response the count of Global fields. |
-| include_branch | true | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
-| include_content_types | true | Set this parameter to 'true' to include in response the details of the content types. |
-| deleted | false | Set this parameter to 'true' to retrieve only deleted Global fields within a stack. |
+- **global_field_uid** (required)
+  Enter the unique ID of the Global field of which you want to retrieve the details. The UID of a Global field is unique across a stack. Execute the '[Get all Global fields](/docs/developers/apis/content-management-api#get-all-global-fields)' request to retrieve the UID of a Global field.
+  Default: `category`
 
-**Response (200):**
+##### Query Parameters
+
+- **version** (optional)
+  Specify the version number of the specified Global field of which you want to retrieve details.
+  Default: `4`
+- **include_global_field_schema** (optional)
+  Set this parameter to 'true' to include in response the schema of the Global field.
+  Default: `true`
+- **include_global_fields** (optional)
+  Set this parameter to 'true' to include in response the count of Global fields.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `true`
+- **include_content_types** (optional)
+  Set this parameter to 'true' to include in response the details of the content types.
+  Default: `true`
+- **deleted** (optional)
+  Set this parameter to 'true' to retrieve only deleted Global fields within a stack.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -7584,12 +8512,12 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 ```
 
 
+
 #### Create Global Field
 
 #### Create a global field
 
-**Method:** `POST`  
-**Endpoint:** `/global_fields`
+**POST** `/global_fields`
 
 The Create a global field request allows you to create a new global field in a particular stack of your Contentstack account. You can use this global field in any content type within your stack.
 
@@ -7646,16 +8574,22 @@ To create a nested global field, follow the schema in the request body:
 }
 ```
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -7704,7 +8638,7 @@ To create a nested global field, follow the schema in the request body:
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -7761,30 +8695,45 @@ To create a nested global field, follow the schema in the request body:
 ```
 
 
+
 #### Update Global Field
 
 #### Update a global field
 
-**Method:** `PUT`  
-**Endpoint:** `/global_fields/{global_field_uid}`
+**PUT** `/global_fields/{global_field_uid}`
 
 The Update a global field request allows you to update the schema of an existing global field.   
 To configure the permissions for your application via OAuth, please include the cm.global-fields.management:write scope.
 
 When executing the API call, in the 'URL Parameters' section, provide the unique ID of your global field.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| global_field_uid | global_field_uid | Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global f |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **global_field_uid** (required)
+  Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global field. The unique ID of a global field is unique across a stack.
+  Default: `global_field_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -7815,7 +8764,7 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
     }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -7863,12 +8812,12 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 ```
 
 
+
 #### Delete Global Field
 
 #### Delete global field
 
-**Method:** `DELETE`  
-**Endpoint:** `/global_fields/{global_field_uid}?force=true`
+**DELETE** `/global_fields/{global_field_uid}?force=true`
 
 The Delete global field request allows you to delete a specific global field.
 
@@ -7878,18 +8827,33 @@ To configure the permissions for your application via OAuth, please include the 
 
 When executing the API call, in the 'URL Parameters' section, provide the unique ID of your global field.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| global_field_uid | global_field_uid | Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global f |
-| force | true | Set the force parameter to 'true' to delete the Global field. |
+- **global_field_uid** (required)
+  Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global field. The unique ID of a global field is unique across a stack.
+  Default: `global_field_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **force** (required)
+  Set the force parameter to 'true' to delete the Global field.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -7898,12 +8862,12 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 ```
 
 
+
 #### Import Global Field
 
 #### Import a global field
 
-**Method:** `POST`  
-**Endpoint:** `/global_fields/import`
+**POST** `/global_fields/import`
 
 The Import a global field call imports a global field into a stack.
 
@@ -7911,18 +8875,28 @@ To import, you need to provide/upload a JSON file that contains the schema of th
 
 **Tip**: You can try the call manually in any REST API client, such as Postman, by passing a 'Body' parameter named global_field and selecting the input type as 'File'. Then, select the JSON file of the global field that you wish to import.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| authorization | Your_management_token |  |
-| Content-Type | multipart/form-data |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (201):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Default: `Your_management_token`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -7971,28 +8945,43 @@ To import, you need to provide/upload a JSON file that contains the schema of th
 ```
 
 
+
 #### Export Global Field
 
 #### Export a global field
 
-**Method:** `GET`  
-**Endpoint:** `/global_fields/{global_field_uid}/export`
+**GET** `/global_fields/{global_field_uid}/export`
 
 This request is used to export a specific global field and its schema. The data is exported in JSON format. The exported file won’t get downloaded automatically. To download the exported file, a **REST API** client, such as **Postman** can be used.   
 To configure the permissions for your application via OAuth, please include the cm.global-fields.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| global_field_uid | global_field_uid | Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global f |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **global_field_uid** (required)
+  Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global field. The unique ID of a global field is unique across a stack.
+  Default: `global_field_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -8036,6 +9025,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 ### Entries
 
 An [entry](/docs/content-managers/author-content/) is the actual piece of content created using one of the defined [content types](/docs/developers/create-content-types/about-content-types).
@@ -8047,8 +9037,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 #### Get all entries
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?apply_draft={boolean_value}&locale={language_code}&include_workflow={boolean_value}&include_publish_details={boolean_value}`
+**GET** `/content_types/{content_type_uid}/entries?apply_draft={boolean_value}&locale={language_code}&include_workflow={boolean_value}&include_publish_details={boolean_value}`
 
 The Get all entries API retrieves all entries for a specified content type in a stack. The response returns entry data in JSON format. You can also specify parameters such as locale, environment, workflow details, and draft merging to customize the results.
 
@@ -8079,23 +9068,46 @@ For example, to retrieve entries in a specific workflow stage, pass a query usin
 
 **Tip**: This request returns the first **100 entries** for the specified content type. To retrieve additional entries, use [pagination](/docs/developers/apis/content-delivery-api#pagination).
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management- |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | The unique ID of the content type whose entries you want to retrieve. The UID is generated from the title of the content |
-| apply_draft | true | Set to true to retrieve and merge the draft entry (if it exists) with the base entry. |
-| locale | en-us | Specify the locale from which to retrieve entries. If not provided, the master locale is used. |
-| include_workflow | false | Set to true to include workflow details for each entry in the response. |
-| include_publish_details | true | Set to true to include publish details for each entry. |
-| include_branch | false | Set to true to include the _branch top-level key in the response. This key contains the unique ID of the branch where th |
+- **content_type_uid** (required)
+  The unique ID of the content type whose entries you want to retrieve. The UID is generated from the title of the content type and is unique within a stack.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **apply_draft** (optional)
+  Set to true to retrieve and merge the draft entry (if it exists) with the base entry.
+  Default: `true`
+- **locale** (optional)
+  Specify the locale from which to retrieve entries. If not provided, the master locale is used.
+  Default: `en-us`
+- **include_workflow** (optional)
+  Set to true to include workflow details for each entry in the response.
+  Default: `false`
+- **include_publish_details** (optional)
+  Set to true to include publish details for each entry.
+  Default: `true`
+- **include_branch** (optional)
+  Set to true to include the _branch top-level key in the response. This key contains the unique ID of the branch where the entry resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -8203,12 +9215,12 @@ For example, to retrieve entries in a specific workflow stage, pass a query usin
 ```
 
 
+
 #### Get a Single Entry
 
 #### Get a single entry
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?version={version_number}&locale={language_code}&include_workflow={boolean_value}&include_publish_details={boolean_value}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}?version={version_number}&locale={language_code}&include_workflow={boolean_value}&include_publish_details={boolean_value}`
 
 The Get a single entry request fetches a particular entry of a content type.
 
@@ -8234,23 +9246,47 @@ You will find the entry metadata under the _metadata key in the response. It wil
 
 **Tip: **Also, if no version is mentioned, this request will retrieve the latest published version of the entry. To retrieve a specific version, make use of the version parameter.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization |  [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the tit |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to fetch. |
-| version | 2 | Enter the version number of the entry that you want to retrieve. However, to retrieve a specific version of an entry, yo |
-| locale | en-us | Enter the code of the language of which the entries need to be included. Only the entries published in this locale will  |
-| include_workflow | true | Enter 'true' to include the workflow details of the entry. |
-| include_publish_details | true | Enter 'true' to include the publish details of the entry. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to fetch.
+  Default: `blt9965f5f9840923ba`
 
-**Response (200):**
+##### Query Parameters
+
+- **version** (optional)
+  Enter the version number of the entry that you want to retrieve. However, to retrieve a specific version of an entry, you need to keep the environment parameter blank.
+  Default: `2`
+- **locale** (optional)
+  Enter the code of the language of which the entries need to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include_workflow** (optional)
+  Enter 'true' to include the workflow details of the entry.
+  Default: `true`
+- **include_publish_details** (optional)
+  Enter 'true' to include the publish details of the entry.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: ` [Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -8278,12 +9314,12 @@ You will find the entry metadata under the _metadata key in the response. It wil
 ```
 
 
+
 #### Create an Entry
 
 #### Create an entry
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries?locale={locale_code}`
 
 The Create an entry call creates a new entry for the selected content type.
 
@@ -8342,20 +9378,37 @@ Here's the JSON schema for both the cases:
 
 ##### Create an Entry with JSON RTE
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the tit |
-| locale | en-us | Enter the code of the language in which you want your entry to be localized in. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (required)
+  Enter the code of the language in which you want your entry to be localized in.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -8366,7 +9419,7 @@ Here's the JSON schema for both the cases:
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -8388,10 +9441,10 @@ Here's the JSON schema for both the cases:
 }
 ```
 
+
 #### Create an entry with JSON RTE
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries?locale={locale_code}`
 
 The Create an entry with JSON RTE request lets you create a new entry for a selected content type that contains a JSON RTE field.
 
@@ -8496,20 +9549,40 @@ The schema to embed assets within the JSON RTE field is as follows:
 
 ##### Create an Entry with Master Locale
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type of which you wish to create an entry. The UID is generated based on the title of |
-| locale_code | locale_code | Enter the code of the language in which you want your entry to be localized in |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to create an entry. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale_code** (optional)
+  Enter the code of the language in which you want your entry to be localized in
+  Default: `locale_code`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -8639,7 +9712,7 @@ The schema to embed assets within the JSON RTE field is as follows:
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -8775,10 +9848,10 @@ The schema to embed assets within the JSON RTE field is as follows:
 }
 ```
 
+
 #### Create an entry with master locale
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries`
+**POST** `/content_types/{content_type_uid}/entries`
 
 The Create an entry with master locale request lets you create an entry in the master language of your stack if it does not already exist or has been deleted. You can use the UID of a [localized entry](/docs/developers/multilingual-content/localize-an-entry) to convert it into a [master language entry](/docs/developers/multilingual-content/set-the-master-language).
 
@@ -8804,20 +9877,40 @@ Here’s what your request body should look like:
 
 ##### Create an entry with custom asset field
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type of which you wish to retrieve the details. The UID is generated based on the tit |
-| copy_to_master | true | Set this parameter to true to copy content from a localized entry to the master language. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **copy_to_master** (required)
+  Set this parameter to true to copy content from a localized entry to the master language.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -8830,7 +9923,7 @@ Here’s what your request body should look like:
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -8852,29 +9945,49 @@ Here’s what your request body should look like:
 }
 ```
 
+
 #### Create an entry with custom asset field
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries?locale={locale_code}`
 
 The Create an entry with custom asset field request is used to create an entry with a custom field that accepts data of type asset.
 
 ##### Create an entry with taxonomy
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch or alias unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type of which you wish to create an entry. The UID is generated based on the title of |
-| locale | en-us | Enter the code of the language in which you want your entry to be localized in. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to create an entry. The UID is generated based on the title of the content type and it is unique across a stack.
+  Default: `your_content_type_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (required)
+  Enter the code of the language in which you want your entry to be localized in.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -8901,7 +10014,7 @@ The Create an entry with custom asset field request is used to create an entry w
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -8951,10 +10064,10 @@ The Create an entry with custom asset field request is used to create an entry w
 }
 ```
 
+
 #### Create an entry with taxonomy
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries`
+**POST** `/content_types/{content_type_uid}/entries`
 
 The Create an entry with taxonomy request lets you create a new entry for a selected content type that contains a taxonomy field.
 
@@ -8983,17 +10096,24 @@ In the “Body” section, you need to provide the content of your entry based o
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | Your_Management_Token |  |
-| Content-Type | application/json |  |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the tit |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `your_content_type_uid`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Default: `Your_Management_Token`
+- **Content-Type** (required)
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -9017,7 +10137,7 @@ In the “Body” section, you need to provide the content of your entry based o
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -9053,12 +10173,12 @@ In the “Body” section, you need to provide the content of your entry based o
 ```
 
 
+
 #### Update an Entry
 
 #### Update an entry
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
 
 The Update an entry call lets you update the content of an existing entry.
 
@@ -9090,21 +10210,40 @@ In the “Body” section, to update the taxonomy fields, use the following code
 
 #####
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type that you wish to delete. The UID is generated based on the title of the content  |
-| entry_uid | enter your entry uid | Enter the unique ID of the entry that you wish to update. |
-| locale | en-us | Enter the code of the language of which the entry you need to update. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that you wish to delete. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to update.
+  Default: `enter your entry uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entry you need to update.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -9125,7 +10264,7 @@ In the “Body” section, to update the taxonomy fields, use the following code
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -9161,10 +10300,10 @@ In the “Body” section, to update the taxonomy fields, use the following code
 }
 ```
 
+
 #### Update an entry with JSON RTE
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
 
 The Update an entry with JSON RTE call lets you update the content of an existing entry.
 
@@ -9251,21 +10390,43 @@ The schema to update an embedded asset within the JSON RTE field is as follows:
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type of which you wish to create an entry. The UID is generated based on the title of |
-| entry_uid | your_entry_uid | Enter the unique ID of the entry that you wish to update |
-| locale_code | locale_code | Enter the code of the language in which you want your entry to be localized in |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to create an entry. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to update
+  Default: `your_entry_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale_code** (optional)
+  Enter the code of the language in which you want your entry to be localized in
+  Default: `locale_code`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -9395,7 +10556,7 @@ The schema to update an embedded asset within the JSON RTE field is as follows:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -9532,6 +10693,7 @@ The schema to update an embedded asset within the JSON RTE field is as follows:
 ```
 
 
+
 #### Atomic Updates to Entries
 
 Atomic operations are particularly useful when we do not want content collaborators to overwrite data. Though it works efficiently for singular fields, these operations come handy especially in case of fields that are marked as “Multiple”.
@@ -9542,8 +10704,7 @@ To achieve data atomicity, we have provided support for following atomic operato
 
 #### PUSH Operation
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}`
 
 The PUSH operation allows you to “push” (or append) data into an array without overriding an existing value.
 
@@ -9582,20 +10743,39 @@ Say you need to push specific data (say “abc”) into a field named “Demo Fi
 
 ##### PULL Operation
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter Stack API Key. |
-| authtoken | your_authtoken | Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to mak |
-| authorization | Your_Management_Token | Enter the management token. |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a |
-| entry_uid | enter_your_entry_uid | Enter the unique ID of the entry. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry.
+  Default: `enter_your_entry_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter Stack API Key.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to make valid Content Management API requests.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter the management token.
+  Default: `Your_Management_Token`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -9619,7 +10799,7 @@ Say you need to push specific data (say “abc”) into a field named “Demo Fi
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -9660,10 +10840,10 @@ Say you need to push specific data (say “abc”) into a field named “Demo Fi
 }
 ```
 
+
 #### PULL Operation
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}`
 
 ThePULL operationallows you to pull data from an array field based on a query passed.
 
@@ -9710,20 +10890,39 @@ Another example is if you need to pull specific field data from a field (say a �
 
 ##### UPDATE Operation
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter Stack API Key. |
-| authtoken | your_authtoken | Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to mak |
-| authorization | Your_Management_Token | Enter the management token. |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a |
-| entry_uid | enter_your_entry_uid | Enter the unique ID of the entry. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry.
+  Default: `enter_your_entry_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter Stack API Key.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to make valid Content Management API requests.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter the management token.
+  Default: `Your_Management_Token`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -9742,7 +10941,7 @@ Another example is if you need to pull specific field data from a field (say a �
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -9778,10 +10977,10 @@ Another example is if you need to pull specific field data from a field (say a �
 }
 ```
 
+
 #### UPDATE Operation
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}`
 
 The UPDATE operation allows you to update data at a specific index. This operation works for both singular fields and fields marked “Multiple”.
 
@@ -9870,20 +11069,39 @@ Contentstack provides support for atomic operators that will specifically help y
 
 ##### ADD Operation
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter Stack API Key. |
-| authtoken | your_authtoken | Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to mak |
-| authorization | Your_Management_Token | Enter the management token. |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a |
-| entry_uid | enter_your_entry_uid | Enter the unique ID of the entry. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry.
+  Default: `enter_your_entry_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter Stack API Key.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to make valid Content Management API requests.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter the management token.
+  Default: `Your_Management_Token`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -9898,7 +11116,7 @@ Contentstack provides support for atomic operators that will specifically help y
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -9937,10 +11155,10 @@ Contentstack provides support for atomic operators that will specifically help y
 }
 ```
 
+
 #### ADD Operation
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}`
 
 The ADD operation reads the latest value of a “Number” field and increments it by a numeric passed along with the operator. The increment occurs irrespective of what the current value of the field is.
 
@@ -9948,20 +11166,39 @@ For example, you have a “Number” field and you want to increment the value o
 
 ##### SUB Operation
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter Stack API Key. |
-| authtoken | your_authtoken | Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to mak |
-| authorization | Your_Management_Token | Enter the management token. |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a |
-| entry_uid | enter_your_entry_uid | Enter the unique ID of the entry. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry.
+  Default: `enter_your_entry_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter Stack API Key.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to make valid Content Management API requests.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter the management token.
+  Default: `Your_Management_Token`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -9973,7 +11210,7 @@ For example, you have a “Number” field and you want to increment the value o
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -10012,29 +11249,48 @@ For example, you have a “Number” field and you want to increment the value o
 }
 ```
 
+
 #### SUB Operation
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}`
 
 The SUB operation works the opposite of ADD. It reads the latest value of a “Number” field and decrements it by a numeric value passed along with the operator.
 
 For example, you have a “Number” field and you want to decrease the value of the field by one. In this case, you need to use the "SUB":1 operation. This operation reads the latest value of the field, decrements it by 1, and replaces the existing value of the field with the new value.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter Stack API Key. |
-| authtoken | your_authtoken | Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to mak |
-| authorization | Your_Management_Token | Enter the management token. |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a |
-| entry_uid | enter_your_entry_uid | Enter the unique ID of the entry. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry.
+  Default: `enter_your_entry_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter Stack API Key.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to make valid Content Management API requests.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter the management token.
+  Default: `Your_Management_Token`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -10046,7 +11302,7 @@ For example, you have a “Number” field and you want to decrease the value of
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -10086,12 +11342,12 @@ For example, you have a “Number” field and you want to decrease the value of
 ```
 
 
+
 #### Delete an Entry
 
 #### Delete an entry
 
-**Method:** `DELETE`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}&delete_all_localized={boolean_value}`
+**DELETE** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}&delete_all_localized={boolean_value}`
 
 The Delete an entry request allows you to delete a specific entry from a content type. This API request also allows you to delete single and/or multiple localized entries.   
 To configure the permissions for your application via OAuth, please include the cm.entries.management:write scope.
@@ -10110,26 +11366,45 @@ This API Request supports the following actions as well:
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to delete the entry. The content type UID is generated based o |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to delete. |
-| locale | en-us | Enter the code of the language of which the entry needs to be deleted. |
-| delete_all_localized | true | Set the "delete_all_localized" parameter to "true" to delete all the localized versions of the entry. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to delete the entry. The content type UID is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to delete.
+  Default: `blt9965f5f9840923ba`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language of which the entry needs to be deleted.
+  Default: `en-us`
+- **delete_all_localized** (optional)
+  Set the "delete_all_localized" parameter to "true" to delete all the localized versions of the entry.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
 	"notice": "Entry deleted successfully."
 }
 ```
+
 
 
 #### Entry Versions
@@ -10142,8 +11417,7 @@ To learn how to assign a name to a version, refer to the [Name Entry Version](/d
 
 #### Set Version Name for Entry
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/versions/{version_number}/name`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/versions/{version_number}/name`
 
 The Set Version Name for Entry request allows you to assign a name to a specific version of an entry.
 
@@ -10155,20 +11429,35 @@ To configure the permissions for your application via OAuth, please include the 
 
 ##### Get Details of All Versions of an Entry
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the content type UID of the entry version to which you want to assign a specific name. |
-| entry_uid | blt01638c90cc28fb6d | Enter the UID of the entry to which you want to assign a specific version name. |
-| version_number | 1 | Enter the version number of the entry to which you want to assign a name. |
+- **content_type_uid** (required)
+  Enter the content type UID of the entry version to which you want to assign a specific name.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the UID of the entry to which you want to assign a specific version name.
+  Default: `blt01638c90cc28fb6d`
+- **version_number** (required)
+  Enter the version number of the entry to which you want to assign a name.
+  Default: `1`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -10180,7 +11469,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -10188,10 +11477,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Get Details of All Versions of an Entry
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/versions?named={boolean_value}&include_count={boolean_value}&locale={locale_code}&include_updated_at={boolean_value}&include_updated_by={boolean_value}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}/versions?named={boolean_value}&include_count={boolean_value}&locale={locale_code}&include_updated_at={boolean_value}&include_updated_by={boolean_value}`
 
 The Get Details of All Versions of an Entry request returns comprehensive information of all the versions of a specific entry within a content type.
 
@@ -10203,24 +11492,52 @@ The Get Details of All Versions of an Entry request returns comprehensive inform
 
 ##### Delete Version Name of Entry
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management- |
-| api_key | your_api_key | Enter the API key of your stack. |
-| Content-Type | application/json | Pass application/json value. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type. |
-| entry_uid | your_entry_uid | Enter the unique ID of the entry whose version history you want to retrieve. |
-| named | false | Set this parameter to 'true' to include in response only the named versions of the specified entry. |
-| include_count | true | Set this parameter to 'true' to include in response the total number of versions of the specified entry. |
-| locale | en-us | Enter the locale of the entry. If not provided it uses the master_locale of stack. |
-| include_updated_at | true | Set this parameter to 'true' to include in response the timestamps for when each version was updated. |
-| include_updated_by | true | Set this parameter to 'true' to include in response the UID of the user who updated each version. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry whose version history you want to retrieve.
+  Default: `your_entry_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **named** (optional)
+  Set this parameter to 'true' to include in response only the named versions of the specified entry.
+  Default: `false`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total number of versions of the specified entry.
+  Default: `true`
+- **locale** (optional)
+  Enter the locale of the entry. If not provided it uses the master_locale of stack.
+  Default: `en-us`
+- **include_updated_at** (optional)
+  Set this parameter to 'true' to include in response the timestamps for when each version was updated.
+  Default: `true`
+- **include_updated_by** (optional)
+  Set this parameter to 'true' to include in response the UID of the user who updated each version.
+  Default: `true`
+
+##### Headers
+
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -10290,26 +11607,38 @@ The Get Details of All Versions of an Entry request returns comprehensive inform
 }
 ```
 
+
 #### Delete Version Name of Entry
 
-**Method:** `DELETE`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/versions/{version_number}/name`
+**DELETE** `/content_types/{content_type_uid}/entries/{entry_uid}/versions/{version_number}/name`
 
 The Delete Version Name of Entry request allows you to delete the name assigned to a specific version of an entry. This request resets the name of the entry version to the version number.   
 To configure the permissions for your application via OAuth, please include the cm.entry:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| content_type_uid | product | Enter the content type UID of the entry of which you want to delete the version name. |
-| entry_uid | blt01638c90cc28fb6d | Enter the UID of the entry of which you want to delete the version name. |
-| version_number | 1 | Enter the version number of the entry that you want to delete. |
+- **content_type_uid** (required)
+  Enter the content type UID of the entry of which you want to delete the version name.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the UID of the entry of which you want to delete the version name.
+  Default: `blt01638c90cc28fb6d`
+- **version_number** (required)
+  Enter the version number of the entry that you want to delete.
+  Default: `1`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Request
 
 ```json
 {
@@ -10319,7 +11648,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (204):**
+##### Sample Response
 
 ```json
 {
@@ -10328,14 +11657,14 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Entry References
 
 ##### Get references of an entry
 
 #### Get references of an entry
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/references`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}/references`
 
 The Get references of an entry request retrieves a list of entries and content types that reference the specified entry.
 
@@ -10352,24 +11681,52 @@ To include publish-related metadata for the referenced entry, set the include_pu
 - version: Version number that was published
 - version_name: Metadata about the published version, including title, updated_by, and updated_at
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| api_key | your_api_key | Enter the API key of your stack. |
-| Content-Type | application/json | Pass application/json value. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type. |
-| entry_uid | blt**************ba | Enter the unique ID of the entry to find where it is referenced across entries and content types. |
-| include_count | true | Set this parameter to 'true' to include in response the total number of versions of the specified entry. |
-| locale | en-us | Enter the locale of the entry. If not provided it uses the master_locale of stack. |
-| deleted | true | Set this parameter to 'true' to include in response the timestamps for when each version was updated. |
-| include_branch | true | Set this parameter to 'true' to include the _branch top-level key in the response. |
-| include_publish_details | true | Set this parameter to 'true' to include publish-related metadata for each referenced entry in the response. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry to find where it is referenced across entries and content types.
+  Default: `blt**************ba`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total number of versions of the specified entry.
+  Default: `true`
+- **locale** (optional)
+  Enter the locale of the entry. If not provided it uses the master_locale of stack.
+  Default: `en-us`
+- **deleted** (optional)
+  Set this parameter to 'true' to include in response the timestamps for when each version was updated.
+  Default: `true`
+- **include_branch** (optional)
+  Set this parameter to 'true' to include the _branch top-level key in the response.
+  Default: `true`
+- **include_publish_details** (optional)
+  Set this parameter to 'true' to include publish-related metadata for each referenced entry in the response.
+  Default: `true`
+
+##### Headers
+
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -10407,28 +11764,39 @@ To include publish-related metadata for the referenced entry, set the include_pu
 ```
 
 
+
 #### Entry Languages
 
 #### Get languages of an entry
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/locales`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}/locales`
 
 The Get languages of an entry call returns the details of all the languages that an entry exists in.   
 To configure the permissions for your application via OAuth, please include the cm.entry:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the tit |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to fetch. Note: In case you do not know the UID of your entry, use the ‘G |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to fetch. Note: In case you do not know the UID of your entry, use the ‘Get Entries’ call to get all the entries (along with the UIDs).
+  Default: `blt9965f5f9840923ba`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -10442,12 +11810,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Localize an Entry
 
 #### Localize an entry
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
 
 The Localize an entry request allows you to localize an entry i.e., the entry will cease to fetch data from its fallback language and possess independent content specific to the selected locale.
 
@@ -10479,20 +11847,40 @@ Here's a sample request body:
 
 **Additional Resource:** Refer the [Localization](/docs/developers/multilingual-content/localize-an-entry) docs for more information.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack. |
-| authtoken | Your_Authtoken | Enter your authtoken |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type. |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you want to localize. |
-| locale | fr-fr | Enter the code of the language to localize the entry of that particular language. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you want to localize.
+  Default: `blt9965f5f9840923ba`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (required)
+  Enter the code of the language to localize the entry of that particular language.
+  Default: `fr-fr`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -10510,7 +11898,7 @@ Here's a sample request body:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -10541,12 +11929,12 @@ Here's a sample request body:
 ```
 
 
+
 #### Update a Localized Entry
 
 #### Update a localized entry
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
 
 The Update a localized entry request allows you to modify the localized version of an entry. This request is used when you want to update content specific to a locale that is independent of the fallback (master) language.
 
@@ -10584,20 +11972,40 @@ In this example, the group field is marked as multiple and contains a field (sin
 
 **Additional Resource:** Refer the [Localization](/docs/developers/multilingual-content/localize-an-entry) docs for more information.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack. |
-| authtoken | Your_Authtoken | Enter your authtoken |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type. |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you want to localize. |
-| locale | fr-fr | Enter the code of the language to localize the entry of that particular language. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you want to localize.
+  Default: `blt9965f5f9840923ba`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (required)
+  Enter the code of the language to localize the entry of that particular language.
+  Default: `fr-fr`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -10616,7 +12024,7 @@ In this example, the group field is marked as multiple and contains a field (sin
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -10647,29 +12055,45 @@ In this example, the group field is marked as multiple and contains a field (sin
 ```
 
 
+
 #### Unlocalize Entry
 
 #### Unlocalize an entry
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/unlocalize?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/unlocalize?locale={locale_code}`
 
 The Unlocalize an entry request is used to unlocalize an existing entry. Read more about [Unlocalization](/docs/developers/multilingual-content/unlocalize-an-entry).   
 To configure the permissions for your application via OAuth, please include the cm.entry:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the tit |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to fetch. Note: In case you do not know the UID of your entry, use the ‘G |
-| locale | fr-fr | Enter the code of the language to unlocalize the entry of that particular language. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to fetch. Note: In case you do not know the UID of your entry, use the ‘Get Entries’ call to get all the entries (along with the UIDs).
+  Default: `blt9965f5f9840923ba`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (required)
+  Enter the code of the language to unlocalize the entry of that particular language.
+  Default: `fr-fr`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -10678,30 +12102,48 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Export Entry
 
 #### Export an entry
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/export?locale={locale_code}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}/export?locale={locale_code}`
 
 The Export an entry call is used to export an entry. The exported entry data is saved in a downloadable JSON file.The exported file won’t get downloaded automatically. To download the exported file, a **REST API** client, such as **Postman** can be used.   
 To configure the permissions for your application via OAuth, please include the cm.entries:export scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the tit |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to fetch. Note: In case you do not know the UID of your entry, use the ‘G |
-| locale | en-us | Enter the code of the language to unlocalize the entry of that particular language. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to fetch. Note: In case you do not know the UID of your entry, use the ‘Get Entries’ call to get all the entries (along with the UIDs).
+  Default: `blt9965f5f9840923ba`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language to unlocalize the entry of that particular language.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -10724,6 +12166,7 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Import Entry
 
 The Import Entry calls given below help you to import entries by uploading JSON files.
@@ -10732,27 +12175,46 @@ The Import Entry calls given below help you to import entries by uploading JSON 
 
 #### Import an entry
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/import?locale={locale_code}&overwrite={overwrite}`
+**POST** `/content_types/{content_type_uid}/entries/import?locale={locale_code}&overwrite={overwrite}`
 
 The Import an entry call is used to import an entry. To import an entry, you need to upload a JSON file that has entry data in the format that fits the schema of the content type it is being imported to.   
 To configure the permissions for your application via OAuth, please include the cm.entries:import scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of stack of which you wish to retrieve the content types. |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | multipart/form-data |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of  |
-| locale | en-us | Enter the code of the language to import the entry of that particular language. |
-| overwrite | false | Select 'true' to replace an existing entry with the imported entry file. |
-| inclue_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language to import the entry of that particular language.
+  Default: `en-us`
+- **overwrite** (optional)
+  Select 'true' to replace an existing entry with the imported entry file.
+  Default: `false`
+- **inclue_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of stack of which you wish to retrieve the content types.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -10776,30 +12238,52 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Import an existing entry
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/import?locale={locale}&overwrite={overwrite}`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/import?locale={locale}&overwrite={overwrite}`
 
 The Import an existing entry call will import a new version of an existing entry. You can create multiple versions of an entry.   
 To configure the permissions for your application via OAuth, please include the cm.entries:import scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of stack of which you wish to retrieve the content types. |
-| authtoken | your authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | multipart/form-data |  |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of  |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of an entry that you wish to import. **Note:** In case you do not know the UID of your entry, use th |
-| locale | en-us | Enter the code of the language to import the entry of that particular language. |
-| overwrite | false | Select 'true' to replace an existing entry with the imported entry file. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of an entry that you wish to import. **Note:** In case you do not know the UID of your entry, use the ‘Get Entries’ call to get all the entries (along with the UIDs).
+  Default: `blt9965f5f9840923ba`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language to import the entry of that particular language.
+  Default: `en-us`
+- **overwrite** (optional)
+  Select 'true' to replace an existing entry with the imported entry file.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of stack of which you wish to retrieve the content types.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -10824,12 +12308,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Publish Entry
 
 #### Publish an entry
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/publish`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/publish`
 
 The Publish an entry request lets you publish an entry either immediately or schedule it for a later date/time.
 
@@ -10850,20 +12334,34 @@ In case of **Scheduled Publishing**, add the scheduled_at key and provide the da
 
 **Note**: To publish localized entries, you must include the publish_all_localized=true query parameter. This feature is plan-based and might not be enabled by default for your organization. Reach out to our [support](mailto:support@contentstack.com) team to enable this feature for your organization.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| api_version | 3.2 | Enter the API version to enable Nested Reference Publishing. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of  |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to publish **Note:** In case you do not know the UID of your entry, use t |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to publish **Note:** In case you do not know the UID of your entry, use the ‘Get Entries’ call to get all the entries (along with the UIDs).
+  Default: `blt9965f5f9840923ba`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **api_version** (required)
+  Enter the API version to enable Nested Reference Publishing.
+  Default: `3.2`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -10877,7 +12375,7 @@ In case of **Scheduled Publishing**, add the scheduled_at key and provide the da
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -10885,10 +12383,10 @@ In case of **Scheduled Publishing**, add the scheduled_at key and provide the da
 }
 ```
 
+
 #### Publish an entry with references
 
-**Method:** `POST`  
-**Endpoint:** `/bulk/publish?x-bulk-action=publish`
+**POST** `/bulk/publish?x-bulk-action=publish`
 
 The Publish an Entry With References request allows you to publish an entry along with all its references at the same time.  
 To configure the permissions for your application via OAuth, please include the cm.bulk-operations:publish scope.
@@ -10907,20 +12405,34 @@ Here are some additional parameters that you need to pass in the “Request Body
 - skip_workflow_stage_check: true: Pass this parameter to skip those entries that do not satisfy the workflow stage of their publishing rule(s) and publish the rest of them.Note: Specifically applicable for Workflow enabled organizations, when this parameter is set to “false” and if any one of the entries fails to satisfy the set conditions, NONE of the entries will be sent for publishing.
 - approvals: true: Pass this parameter to publish only those entries that have been approved by the designated approver, and skip the rest that have not yet been approved.Note: Specifically applicable for Workflow enabled organizations, when this parameter is set to “false” and if any one of the entries is not approved by the Approver, NONE of the entries will be sent for publishing.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt02f7b45378b008ee |  |
-| authtoken | your authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| approvals | true | Set this to “true” to publish the entries that do not require an approval to be published. |
-| x-bulk-action | publish | Pass “publish” as the value of this parameter in order to publish an entry with all references. |
-| skip_workflow_stage_check | true | Set this to “true” to publish the entries that are at a workflow stage where they satisfy the applied publish rules. |
+- **approvals** (optional)
+  Set this to “true” to publish the entries that do not require an approval to be published.
+  Default: `true`
+- **x-bulk-action** (required)
+  Pass “publish” as the value of this parameter in order to publish an entry with all references.
+  Default: `publish`
+- **skip_workflow_stage_check** (optional)
+  Set this to “true” to publish the entries that are at a workflow stage where they satisfy the applied publish rules.
+  Default: `true`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt02f7b45378b008ee`
+- **authtoken** (optional)
+  Default: `your authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -10941,7 +12453,7 @@ Here are some additional parameters that you need to pass in the “Request Body
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -10950,12 +12462,12 @@ Here are some additional parameters that you need to pass in the “Request Body
 ```
 
 
+
 #### Unpublish Entry
 
 #### Unpublish an entry
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/unpublish`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/unpublish`
 
 The Unpublish an entry call will unpublish an entry at once, and also, gives you the provision to unpublish an entry automatically at a later date/time.
 
@@ -10969,20 +12481,34 @@ In case of **Scheduled Unpublishing**, add the scheduled_at key and provide the 
 
 **Note**: To unpublish localized entries, you must include the publish_all_localized=true query parameter. This feature is plan-based and might not be enabled by default for your organization. Reach out to our [support](mailto:support@contentstack.com) team to enable this feature for your organization.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| api_version | 3.2 | Enter the API version to include Nested Reference Publishing. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | product | Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of  |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to import **Note:** In case you do not know the UID of your entry, use th |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that will contain the desired entry. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to import **Note:** In case you do not know the UID of your entry, use the ‘Get Entries’ call to get all the entries (along with the UIDs).
+  Default: `blt9965f5f9840923ba`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **api_version** (required)
+  Enter the API version to include Nested Reference Publishing.
+  Default: `3.2`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -10996,13 +12522,14 @@ In case of **Scheduled Unpublishing**, add the scheduled_at key and provide the 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
 	"notice": "The requested action has been performed."
 }
 ```
+
 
 ### Entry Variants
 
@@ -11015,8 +12542,7 @@ Entry Variants allows you to create content variations for different audiences, 
 
 #### Create entry variant
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/variants/{variant_uid}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}/variants/{variant_uid}`
 
 The Create entry variant request lets you create an entry variant of your existing base entry.
 
@@ -11064,20 +12590,40 @@ In the “Body” section, include only the fields that require updating for the
 - The _change_set field is automatically included in the response to indicate which fields were updated in the entry variant.
 - The system also detects changes in nested fields and includes them in the _change_set field of the response.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Pass application/json value. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of your content type. |
-| entry_uid | your_entry_uid | Enter the unique ID of your entry. |
-| variant_uid | your_variant_uid | Enter the unique ID of your variant. |
-| locale | en-us | Enter the code of the language for the entry you want to update. |
+- **content_type_uid** (required)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `your_entry_uid`
+- **variant_uid** (required)
+  Enter the unique ID of your variant.
+  Default: `your_variant_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language for the entry you want to update.
+  Default: `en-us`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -11116,7 +12662,7 @@ In the “Body” section, include only the fields that require updating for the
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -11176,12 +12722,12 @@ In the “Body” section, include only the fields that require updating for the
 ```
 
 
+
 #### Update Entry Variant
 
 #### Update entry variant
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/variants/{variant_uid}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}/variants/{variant_uid}`
 
 The Update entry variant request lets you update an entry variant of your existing base entry.
 
@@ -11232,20 +12778,40 @@ In the “Body” section, include only the fields that require updating for the
 - The _change_set field is automatically included in the response to indicate which fields were updated in the entry variant.
 - The system also detects changes in nested fields and includes them in the _change_set field of the response.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Pass application/json value. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of your content type. |
-| entry_uid | your_entry_uid | Enter the unique ID of your entry. |
-| variant_uid | your_variant_uid | Enter the unique ID of your variant. |
-| locale | en-us | Enter the code of the language for the entry you want to update. |
+- **content_type_uid** (required)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `your_entry_uid`
+- **variant_uid** (required)
+  Enter the unique ID of your variant.
+  Default: `your_variant_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language for the entry you want to update.
+  Default: `en-us`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -11284,7 +12850,7 @@ In the “Body” section, include only the fields that require updating for the
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -11344,32 +12910,58 @@ In the “Body” section, include only the fields that require updating for the
 ```
 
 
+
 #### Get All Entry Variants
 
 #### Get all entry variants
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/variants`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}/variants`
 
 The Get all entry variants request retrieves all entry variants of the specified entry.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of your content type. |
-| entry_uid | your_entry_uid | Enter the unique ID of your entry. |
-| locale | en-us | Enter the code of the language for the entry you want to update. |
-| include_workflow | true | Enter “true” to include the workflow details of the entry. |
-| include_publish_details | true | Enter “true” to include the publish details of the entry. |
-| include_rules | true | Enter “true” to include the publishing rules for the entry. |
-| skip | 0 | Enter the number of items to be skipped from the response body. |
-| limit | 10 | Enter the maximum number of items to be returned. |
+- **content_type_uid** (required)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `your_entry_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language for the entry you want to update.
+  Default: `en-us`
+- **include_workflow** (optional)
+  Enter “true” to include the workflow details of the entry.
+  Default: `true`
+- **include_publish_details** (optional)
+  Enter “true” to include the publish details of the entry.
+  Default: `true`
+- **include_rules** (optional)
+  Enter “true” to include the publishing rules for the entry.
+  Default: `true`
+- **skip** (optional)
+  Enter the number of items to be skipped from the response body.
+  Default: `0`
+- **limit** (optional)
+  Enter the maximum number of items to be returned.
+  Default: `10`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -11454,31 +13046,55 @@ The Get all entry variants request retrieves all entry variants of the specified
 ```
 
 
+
 #### Get Single Entry Variant
 
 #### Get single entry variant
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/variants/{variant_uid}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}/variants/{variant_uid}`
 
 The Get single entry variant request retrieves a single variant entry of a given base entry.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of your content type. |
-| entry_uid | your_entry_uid | Enter the unique ID of your entry. |
-| variant_uid | your_variant_uid | Enter the unique ID of your variant. |
-| locale | en-us | Enter the code of the language for the entry you want to update. |
-| include_workflow | true | Enter “true” to include the workflow details of the entry. |
-| include_publish_details | true | Enter “true” to include the publish details of the entry. |
-| include_rules | true | Enter “true” to include the publishing rules for the entry. |
+- **content_type_uid** (required)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `your_entry_uid`
+- **variant_uid** (required)
+  Enter the unique ID of your variant.
+  Default: `your_variant_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language for the entry you want to update.
+  Default: `en-us`
+- **include_workflow** (optional)
+  Enter “true” to include the workflow details of the entry.
+  Default: `true`
+- **include_publish_details** (optional)
+  Enter “true” to include the publish details of the entry.
+  Default: `true`
+- **include_rules** (optional)
+  Enter “true” to include the publishing rules for the entry.
+  Default: `true`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -11537,28 +13153,46 @@ The Get single entry variant request retrieves a single variant entry of a given
 ```
 
 
+
 #### Delete Entry Variant
 
 #### Delete entry variant
 
-**Method:** `DELETE`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/variants/{variant_uid}`
+**DELETE** `/content_types/{content_type_uid}/entries/{entry_uid}/variants/{variant_uid}`
 
 The Delete entry variant request lets you delete an entry variant.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of your content type. |
-| entry_uid | your_entry_uid | Enter the unique ID of your entry. |
-| variant_uid | your_variant_uid | Enter the unique ID of your variant. |
-| locale | en-us | Enter the code of the language for the entry you want to update. |
+- **content_type_uid** (required)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `your_entry_uid`
+- **variant_uid** (required)
+  Enter the unique ID of your variant.
+  Default: `your_variant_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language for the entry you want to update.
+  Default: `en-us`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -11567,12 +13201,12 @@ The Delete entry variant request lets you delete an entry variant.
 ```
 
 
+
 #### Publish Entry Variant
 
 #### Publish entry variant
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/publish`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/publish`
 
 The Publish entry variant request lets you publish an entry variant.
 
@@ -11592,21 +13226,43 @@ In the “Body” section, include the variant UID and version within variants. 
 
 **Note**: You don't need to include the base entry version in the payload. The entry variant will be published based on the latest version or as specified by the variant_rules toggle. If the base entry version is included, the system will ignore it.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Pass application/json value. |
-| api_version | 3.2 | Enter the API version to include Nested Reference Publishing. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of your content type. |
-| entry_uid | your_entry_uid | Enter the unique ID of your entry. |
-| locale | en-us | Enter the code of the language for the entry you want to update. |
+- **content_type_uid** (required)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `your_entry_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language for the entry you want to update.
+  Default: `en-us`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+- **api_version** (required)
+  Enter the API version to include Nested Reference Publishing.
+  Default: `3.2`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -11628,7 +13284,7 @@ In the “Body” section, include the variant UID and version within variants. 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -11638,12 +13294,12 @@ In the “Body” section, include the variant UID and version within variants. 
 ```
 
 
+
 #### Unpublish Entry Variant
 
 #### Unpublish entry variant
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/unpublish`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/unpublish`
 
 The Unpublish entry variant request lets you unpublish an entry variant.
 
@@ -11660,21 +13316,43 @@ In the “Body” section, include the version number and variant UID within var
 
 **Note**: You don't need to include the base entry version in the payload. The entry variant will be unpublished based on the latest version or as specified by the variant_rules toggle. If the base entry version is included, the system will ignore it.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Pass application/json value. |
-| api_version | 3.2 | Enter the API version to include Nested Reference Publishing. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of your content type. |
-| entry_uid | your_entry_uid | Enter the unique ID of your entry. |
-| locale | en-us | Enter the code of the language for the entry you want to update. |
+- **content_type_uid** (required)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `your_entry_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the language for the entry you want to update.
+  Default: `en-us`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+- **api_version** (required)
+  Enter the API version to include Nested Reference Publishing.
+  Default: `3.2`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -11692,7 +13370,7 @@ In the “Body” section, include the version number and variant UID within var
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -11700,6 +13378,7 @@ In the “Body” section, include the version number and variant UID within var
     "job_id": "05****9c-9**0-45**-9**4-ea********37"
 }
 ```
+
 
 ### Assets
 
@@ -11714,8 +13393,7 @@ These files can be attached and used in multiple [entries](/docs/content-manager
 
 #### Get all assets
 
-**Method:** `GET`  
-**Endpoint:** `/assets?folder={folder_uid}&include_folders={boolean_value}&environment={environment}&version={version_number}&include_publish_details={boolean_value}&include_count={include_count}&relative_urls={relative_urls}&asc={asc_field_uid}&desc={desc_field_uid}`
+**GET** `/assets?folder={folder_uid}&include_folders={boolean_value}&environment={environment}&version={version_number}&include_publish_details={boolean_value}&include_count={include_count}&relative_urls={relative_urls}&asc={asc_field_uid}&desc={desc_field_uid}`
 
 The Get all assets request returns comprehensive information on all assets available in a stack.
 
@@ -11743,26 +13421,53 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 
 **Tip:** To include the publish details in the response, make use of the include_publish_details parameter and set its value to ‘true’. This query will return the publish details of the entry in every environment along with the version number that is published in each of the environment. When you publish an asset, the associated metadata of that asset will also get published.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| folder | bltd7854a4567gh7 | Enter either the UID of a specific folder to get the assets of that folder, or enter ‘cs_root’ to get all assets and the |
-| include_folders | true | Set this parameter to ‘true’ to include the details of the created folders along with the details of the assets. |
-| environment | production | Enter the name of the environment to retrieve the assets published on them. You can enter multiple environments. |
-| version | 1 | Specify the version number of the asset that you want to retrieve. If the version is not specified, the details of the l |
-| include_publish_details | true | Enter 'true' to include the publish details of the entry. |
-| include_count | false | Set this parameter to 'true' to include the total number of assets available in your stack in the response body. |
-| relative_urls | false | Set this to 'true' to display the relative URL of the asset. |
-| asc | created_at | Enter the unique ID of the field for sorting the assets in ascending order by that field. |
-| desc | file_size | Enter the unique ID of the field for sorting the assets in descending order by that field. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **folder** (optional)
+  Enter either the UID of a specific folder to get the assets of that folder, or enter ‘cs_root’ to get all assets and their folder details from the root folder.
+  Default: `bltd7854a4567gh7`
+- **include_folders** (optional)
+  Set this parameter to ‘true’ to include the details of the created folders along with the details of the assets.
+  Default: `true`
+- **environment** (optional)
+  Enter the name of the environment to retrieve the assets published on them. You can enter multiple environments.
+  Default: `production`
+- **version** (optional)
+  Specify the version number of the asset that you want to retrieve. If the version is not specified, the details of the latest version will be retrieved.
+  Default: `1`
+- **include_publish_details** (optional)
+  Enter 'true' to include the publish details of the entry.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include the total number of assets available in your stack in the response body.
+  Default: `false`
+- **relative_urls** (optional)
+  Set this to 'true' to display the relative URL of the asset.
+  Default: `false`
+- **asc** (optional)
+  Enter the unique ID of the field for sorting the assets in ascending order by that field.
+  Default: `created_at`
+- **desc** (optional)
+  Enter the unique ID of the field for sorting the assets in descending order by that field.
+  Default: `file_size`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -11809,12 +13514,12 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 ```
 
 
+
 #### Get a Single Asset
 
 #### Get an asset
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{asset_uid}?include_path={boolean_value}&version={version_number}&environment={environment}&include_publish_details={boolean_value}&relative_urls={relative_urls}`
+**GET** `/assets/{asset_uid}?include_path={boolean_value}&version={version_number}&environment={environment}&include_publish_details={boolean_value}&relative_urls={relative_urls}`
 
 The Get an asset request returns comprehensive information about a specific version of an asset of a stack.
 
@@ -11838,24 +13543,50 @@ You will find the asset metadata under the _metadata key in the response. It wil
 
 **Tip:** To include the publish details in the response, make use of the include_publish_details parameter and set its value to ‘true’. This query will return the publish details of the entry in every environment along with the version number that is published in each of the environment. When you publish an asset, the associated metadata of that asset will also get published. However, when publishing assets in bulk, the associated metadata of the assets will not get published.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | blt91af1e5af9c3639f | Enter the unique ID of the asset of which you want to retrieve the details. |
-| include_path | false | Set this parameter to ‘true’ to retrieve the complete path of the folder. The path will be displayed as an array of obje |
-| version | 1 | Specify the version number of the asset that you want to retrieve. If the version is not specified, the details of the l |
-| environment | production | Enter the name of the environment to retrieve assets published on them. You can enter multiple environments. |
-| include_publish_details | true | Enter 'true' to include the publish details of the asset. |
-| relative_urls | false | Set this to 'true' to display the relative URL of the asset. This parameter is not applicable when you delete an asset. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **asset_uid** (required)
+  Enter the unique ID of the asset of which you want to retrieve the details.
+  Default: `blt91af1e5af9c3639f`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_path** (optional)
+  Set this parameter to ‘true’ to retrieve the complete path of the folder. The path will be displayed as an array of objects which includes the names and UIDs of each parent folder.
+  Default: `false`
+- **version** (optional)
+  Specify the version number of the asset that you want to retrieve. If the version is not specified, the details of the latest version will be retrieved. **Note**: If no version is mentioned, this request will retrieve the latest published version of the asset. To retrieve a specific version, make use of the version parameter and keep the environment parameter blank.
+  Default: `1`
+- **environment** (optional)
+  Enter the name of the environment to retrieve assets published on them. You can enter multiple environments.
+  Default: `production`
+- **include_publish_details** (optional)
+  Enter 'true' to include the publish details of the asset.
+  Default: `true`
+- **relative_urls** (optional)
+  Set this to 'true' to display the relative URL of the asset. This parameter is not applicable when you delete an asset.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -11887,28 +13618,41 @@ You will find the asset metadata under the _metadata key in the response. It wil
 ```
 
 
+
 #### Get Assets of a Specific Folder
 
 #### Get assets of a specific folder
 
-**Method:** `GET`  
-**Endpoint:** `/assets?folder={folder_uid}`
+**GET** `/assets?folder={folder_uid}`
 
 The Get assets of a specific folder retrieves all assets of a specific asset folder; however, it doesn't retrieve the details of subfolders within it.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | bltd7eee4a49bdf2842 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| folder | enter_your_folder_uid | Enter the UID of the asset folder. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **folder** (required)
+  Enter the UID of the asset folder.
+  Default: `enter_your_folder_uid`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `bltd7eee4a49bdf2842`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -11953,29 +13697,44 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Get Assets and Subfolders of a Parent Folder
 
 #### Get assets and subfolders of a parent folder
 
-**Method:** `GET`  
-**Endpoint:** `/assets?include_folders={boolean_value}&folder={folder_uid}`
+**GET** `/assets?include_folders={boolean_value}&folder={folder_uid}`
 
 The Get assets and folders of a parent folder retrieves details of both assets and asset subfolders within a specific parent asset folder.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| include_folders | true | Set this parameter to ‘true’ to include the asset folders in the search query. |
-| folder | enter_your_folder_uid | Enter the UID of the parent folder. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_folders** (required)
+  Set this parameter to ‘true’ to include the asset folders in the search query.
+  Default: `true`
+- **folder** (required)
+  Enter the UID of the parent folder.
+  Default: `enter_your_folder_uid`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12016,12 +13775,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Upload Asset
 
 #### Upload asset
 
-**Method:** `POST`  
-**Endpoint:** `/assets?relative_urls={boolean_value}&include_dimension={boolean_value}`
+**POST** `/assets?relative_urls={boolean_value}&include_dimension={boolean_value}`
 
 The Upload asset request uploads an asset file to your stack.  
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
@@ -12061,20 +13820,37 @@ curl -X POST \
 
 In the above cURL command, pass the necessary values within the curly brackets. The asset[parent_uid],asset[title],asset[description],asset[tags], and include_dimension=true parameters are optional. You can skip them if not required.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | multipart/form-data | Pass “multipart/form-data” to include form data body parameters. |
-| branch | main | Enter your branch unique ID. |
-| relative_urls | false | Set this to 'true' to display the relative URL of the asset. |
-| include_dimension | true | Set this to 'true' to include the dimensions (height and width) of the image in the response. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **relative_urls** (optional)
+  Set this to 'true' to display the relative URL of the asset.
+  Default: `false`
+- **include_dimension** (optional)
+  Set this to 'true' to include the dimensions (height and width) of the image in the response.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (201):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Pass “multipart/form-data” to include form data body parameters.
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12108,12 +13884,12 @@ In the above cURL command, pass the necessary values within the curly brackets. 
 ```
 
 
+
 #### Replace Asset
 
 #### Replace asset
 
-**Method:** `PUT`  
-**Endpoint:** `/assets/{asset_uid}?environment={environment}&relative_urls={boolean_value}`
+**PUT** `/assets/{asset_uid}?environment={environment}&relative_urls={boolean_value}`
 
 The Replace asset call will replace an existing asset with another file on the stack.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
@@ -12123,21 +13899,41 @@ Under 'Body', pass a body parameter named asset[upload] and select the input typ
 You can assign a parent folder to your asset by using the asset[parent_uid] parameter, where you can pass the UID of the parent folder.  
 Additionally, you can pass optional parameters such as asset[title] and asset[description] which let you enter a title and a description for the uploaded asset, respectively.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | multipart/form-data |  |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | blt91af1e5af9c3639f | Enter the unique ID of the asset of which you wish to retrieve details, or that you wish to update or delete. |
-| environment | production | Enter the name of the environment if you wish to retrieve the assets published on a particular environment. You can ente |
-| relative_urls | false | Set this to 'true' to display the relative URL of the asset. This parameter is not applicable when you delete an asset. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **asset_uid** (required)
+  Enter the unique ID of the asset of which you wish to retrieve details, or that you wish to update or delete.
+  Default: `blt91af1e5af9c3639f`
 
-**Response (200):**
+##### Query Parameters
+
+- **environment** (optional)
+  Enter the name of the environment if you wish to retrieve the assets published on a particular environment. You can enter multiple environments.
+  Default: `production`
+- **relative_urls** (optional)
+  Set this to 'true' to display the relative URL of the asset. This parameter is not applicable when you delete an asset.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12169,12 +13965,12 @@ Additionally, you can pass optional parameters such as asset[title] and asset[de
 ```
 
 
+
 #### Generate Permanent Asset URL
 
 #### Generate permanent asset URL
 
-**Method:** `PUT`  
-**Endpoint:** `/assets/{asset_uid}`
+**PUT** `/assets/{asset_uid}`
 
 The Generate Permanent Asset URL request allows you to generate a permanent URL for an asset. This URL remains constant irrespective of any subsequent updates to the asset.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
@@ -12200,19 +13996,37 @@ Another way to generate a permanent URL for an asset is to pass the URL as a for
 https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack that holds the asset. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter “application/json” to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | your_asset_uid | Enter the UID of the asset for which you want to generate a permanent URL. Use the [Get All Assets](/docs/developers/api |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **asset_uid** (required)
+  Enter the UID of the asset for which you want to generate a permanent URL. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) request to get the UID of the asset.
+  Default: `your_asset_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter “application/json” to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -12223,7 +14037,7 @@ https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -12251,12 +14065,12 @@ https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
 ```
 
 
+
 #### Download an Asset with Permanent URL
 
 #### Download an asset with permanent URL
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{api_key}/{asset_uid}/{slug}`
+**GET** `/assets/{api_key}/{asset_uid}/{slug}`
 
 The Download an asset with permanent URL request displays an asset in the response. The asset returned in the response can be saved to your local storage system. Make sure to specify the unique identifier (slug) in the request URL.  
   
@@ -12266,46 +14080,70 @@ This request will return the most recent version of the asset, however, to downl
 
 **Note**: Before executing this API request, ensure to [create a permanent URL for the asset](/docs/developers/apis/content-management-api#generate-permanent-asset-url) you want to download.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack that holds the asset. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Pass “application/json” as the value to this parameter. |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | your_asset_uid | Enter the UID of the asset you want to download. Use the [Get All Assets](/docs/developers/apis/content-management-api#g |
-| slug | your_url_slug | Enter the unique identifier of the asset. |
+- **asset_uid** (required)
+  Enter the UID of the asset you want to download. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) request to get the UID of the asset.
+  Default: `your_asset_uid`
+- **slug** (required)
+  Enter the unique identifier of the asset.
+  Default: `your_url_slug`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Pass “application/json” as the value to this parameter.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {Displays the requested asset in API response}
 ```
 
 
+
 #### Delete Asset
 
 #### Delete asset
 
-**Method:** `DELETE`  
-**Endpoint:** `/assets/{asset_uid}`
+**DELETE** `/assets/{asset_uid}`
 
 The Delete asset call will delete an existing asset from the stack.  
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of the stack that holds the asset |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | blt91af1e5af9c3639f | Enter the unique ID of the asset that you want to delete. |
+- **asset_uid** (required)
+  Enter the unique ID of the asset that you want to delete.
+  Default: `blt91af1e5af9c3639f`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `the API key of the stack that holds the asset`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12314,27 +14152,36 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Rich Text Editor Assets
 
 #### Get information on RTE assets
 
-**Method:** `GET`  
-**Endpoint:** `/assets/rt`
+**GET** `/assets/rt`
 
 The Get information on RTE assetscall returns comprehensive information on all assets uploaded through the [Rich Text Editor field](/docs/developers/create-content-types/rich-text-editor).  
 To configure the permissions for your application via OAuth, please include the cm.assets.rt:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of the stack that holds the asset |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `the API key of the stack that holds the asset`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 [{
@@ -12343,6 +14190,7 @@ To configure the permissions for your application via OAuth, please include the 
     "title": "filename"
 }]
 ```
+
 
 
 #### Asset Versions
@@ -12355,8 +14203,7 @@ For more details, refer to the [Name Asset Versions](/docs/content-managers/asse
 
 #### Set Version Name for Asset
 
-**Method:** `POST`  
-**Endpoint:** `/assets/{asset_uid}/versions/{version_number}/name`
+**POST** `/assets/{asset_uid}/versions/{version_number}/name`
 
 The Set Version Name for Asset request allows you to assign a name to a specific version of an asset.
 
@@ -12366,19 +14213,32 @@ To configure the permissions for your application via OAuth, please include the 
 
 ##### Get Details of All Versions of an Asset
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | blt04d762f8af902c97 | Enter the UID of the asset of which you want to assign a name to a specific asset version. |
-| version_number | 2 | Enter the version number of the asset version that you want to assign a name to. |
+- **asset_uid** (required)
+  Enter the UID of the asset of which you want to assign a name to a specific asset version.
+  Default: `blt04d762f8af902c97`
+- **version_number** (required)
+  Enter the version number of the asset version that you want to assign a name to.
+  Default: `2`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -12388,7 +14248,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -12396,10 +14256,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Get Details of All Versions of an Asset
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{asset_uid}/versions?named={boolean_value}&include_count={boolean_value}&include_updated_at={boolean_value}&include_updated_by={boolean_value}`
+**GET** `/assets/{asset_uid}/versions?named={boolean_value}&include_count={boolean_value}&include_updated_at={boolean_value}&include_updated_by={boolean_value}`
 
 The Get Details of All Versions of an Asset request returns comprehensive information of all the versions of a specific asset within your stack.
 
@@ -12410,22 +14270,46 @@ The Get Details of All Versions of an Asset request returns comprehensive inform
 
 ##### Delete Version Name of Asset
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| api_key | your_api_key | Enter the API key of your stack. |
-| Content-Type | application/json | Pass application/json value. |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | blt04d762f8af902c97 | Enter the UID of the asset of which you want to retrieve details of all versions. |
-| named | false | Set this parameter to 'true' to include in response only the named versions of the specified asset. |
-| include_count | true | Set this parameter to 'true' to include in response the total number of versions of the specified asset. |
-| include_updated_at | true | Set this parameter to 'true' to include in response the timestamps for when each version was updated. |
-| include_updated_by | true | Set this parameter to 'true' to include in response the UID of the user who updated each version. |
+- **asset_uid** (required)
+  Enter the UID of the asset of which you want to retrieve details of all versions.
+  Default: `blt04d762f8af902c97`
 
-**Response (200):**
+##### Query Parameters
+
+- **named** (optional)
+  Set this parameter to 'true' to include in response only the named versions of the specified asset.
+  Default: `false`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total number of versions of the specified asset.
+  Default: `true`
+- **include_updated_at** (optional)
+  Set this parameter to 'true' to include in response the timestamps for when each version was updated.
+  Default: `true`
+- **include_updated_by** (optional)
+  Set this parameter to 'true' to include in response the UID of the user who updated each version.
+  Default: `true`
+
+##### Headers
+
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12445,27 +14329,39 @@ The Get Details of All Versions of an Asset request returns comprehensive inform
 }
 ```
 
+
 #### Delete Version Name of Asset
 
-**Method:** `DELETE`  
-**Endpoint:** `/assets/{asset_uid}/versions/{version_number}/name`
+**DELETE** `/assets/{asset_uid}/versions/{version_number}/name`
 
 The Delete Version Name of Asset request allows you to delete the name assigned to a specific version of an asset. This request resets the name of the asset version to the version number.  
   
 To configure the permissions for your application via OAuth, please include the cm.asset:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | blt04d762f8af902c97 | Enter the UID of the asset of which you want to delete the version name. |
-| version_number | 2 | Enter the version number of the asset of which you want to delete the version name. |
+- **asset_uid** (required)
+  Enter the UID of the asset of which you want to delete the version name.
+  Default: `blt04d762f8af902c97`
+- **version_number** (required)
+  Enter the version number of the asset of which you want to delete the version name.
+  Default: `2`
 
-**Response (204):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12474,14 +14370,14 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Asset Reference
 
 ##### Get asset references
 
 #### Get asset references
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{asset_uid}/references`
+**GET** `/assets/{asset_uid}/references`
 
 The Get asset references request retrieves a list of entries and content types that reference the specified asset.
 
@@ -12498,22 +14394,46 @@ To include publish-related metadata for the referenced asset, set the include_pu
 - version: Version number that was published
 - version_name: Metadata about the published version, including title, updated_by, and updated_at
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| api_key | your_api_key | Enter the API key of your stack. |
-| Content-Type | application/json | Pass application/json value. |
-| branch | main | Enter your branch's unique ID. |
-| asset_uid | blt**************ba | Enter the unique ID of the asset to find where it is referenced across entries and content types. |
-| include_count | true | Set this parameter to 'true' to include in response the total number of versions of the specified asset. |
-| deleted | true | Set this parameter to 'true' to include in response the timestamps for when each version was updated. |
-| include_branch | true | Set this parameter to 'true' to include the _branch top-level key in the response. |
-| include_publish_details | true | Set this parameter to 'true' to include publish-related metadata for each referenced asset in the response. |
+- **asset_uid** (required)
+  Enter the unique ID of the asset to find where it is referenced across entries and content types.
+  Default: `blt**************ba`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total number of versions of the specified asset.
+  Default: `true`
+- **deleted** (optional)
+  Set this parameter to 'true' to include in response the timestamps for when each version was updated.
+  Default: `true`
+- **include_branch** (optional)
+  Set this parameter to 'true' to include the _branch top-level key in the response.
+  Default: `true`
+- **include_publish_details** (optional)
+  Set this parameter to 'true' to include publish-related metadata for each referenced asset in the response.
+  Default: `true`
+
+##### Headers
+
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch's unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12551,12 +14471,12 @@ To include publish-related metadata for the referenced asset, set the include_pu
 ```
 
 
+
 #### Retrieve Specific Asset Types
 
 #### Get either only images or videos
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{asset_type}`
+**GET** `/assets/{asset_type}`
 
 The Get either only images or videos request retrieves assets that are either image or video files, based on query request.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:read scope.
@@ -12565,18 +14485,32 @@ You can add queries to extend the functionality of this API call. Under the URL 
 
 To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of the stack that holds the asset |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| asset_type | images | Enter the asset type that you want to retrieve. For example, "images" or "videos".  For images, _https://api.contentstac |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **asset_type** (required)
+  Enter the asset type that you want to retrieve. For example, "images" or "videos". For images, _https://api.contentstack.io/v3/assets/images_ For videos, _https://api.contentstack.io/v3/assets/videos_
+  Default: `images`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `the API key of the stack that holds the asset`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12608,12 +14542,12 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 ```
 
 
+
 #### Update Asset Details
 
 #### Update asset revision
 
-**Method:** `PUT`  
-**Endpoint:** `/assets/{asset_uid}`
+**PUT** `/assets/{asset_uid}`
 
 The Update asset revision call upgrades a specified version of an asset as the latest version of that asset.
 
@@ -12633,19 +14567,36 @@ Here's an example of the raw body:
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Pass “application/json” to enter JSON request body and “multipart/form-data” to include form data body parameters. |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | enter_your_asset_uid | Enter the UID of the asset of which you want to update the version. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **asset_uid** (required)
+  Enter the UID of the asset of which you want to update the version.
+  Default: `enter_your_asset_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Pass “application/json” to enter JSON request body and “multipart/form-data” to include form data body parameters.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -12657,7 +14608,7 @@ Here's an example of the raw body:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -12682,10 +14633,10 @@ Here's an example of the raw body:
 }
 ```
 
+
 #### Update asset
 
-**Method:** `PUT`  
-**Endpoint:** `/assets/{asset_uid}`
+**PUT** `/assets/{asset_uid}`
 
 The Update asset request allows you to update the title and description of an asset.  
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
@@ -12708,19 +14659,36 @@ Under 'Body', you need to pass the updated details of "Title" and "Description" 
 
 Another way to provide a "Title" and a "Description" for the asset is to pass them as optional form-data parameters, i.e., asset[title] and asset[description]. You can assign a parent folder to your asset by using the asset[parent_uid] parameter, where you need to pass the UID of the parent folder.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | multipart/form-data | Pass “multipart/form-data” as the value to this parameter to include form data body parameters. |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | blt558a9890b838abcd | Enter the UID of the asset that you want to update. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **asset_uid** (required)
+  Enter the UID of the asset that you want to update.
+  Default: `blt558a9890b838abcd`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Pass “multipart/form-data” as the value to this parameter to include form data body parameters.
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -12732,7 +14700,7 @@ Another way to provide a "Title" and a "Description" for the asset is to pass th
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -12766,12 +14734,12 @@ Another way to provide a "Title" and a "Description" for the asset is to pass th
 ```
 
 
+
 #### Publish Asset
 
 #### Publish an asset
 
-**Method:** `POST`  
-**Endpoint:** `/assets/{asset_uid}/publish`
+**POST** `/assets/{asset_uid}/publish`
 
 The Publish an asset call is used to publish a specific version of an asset on the desired [environment](/docs/developers/set-up-environments/about-environments) either immediately or at a later date/time.  
 To configure the permissions for your application via OAuth, please include the cm.asset:publish scope.
@@ -12782,18 +14750,29 @@ In case of **Scheduled Publishing**, add the scheduled_at key and provide the da
 
 In the 'Body' section, enter the asset details, such as locales and environments, where the assets need to be published. These details should be in JSON format.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | blt558a9890b838abcd | Enter the UID of the asset that you want to publish. |
+- **asset_uid** (required)
+  Enter the UID of the asset that you want to publish.
+  Default: `blt558a9890b838abcd`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -12810,7 +14789,7 @@ In the 'Body' section, enter the asset details, such as locales and environments
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -12819,12 +14798,12 @@ In the 'Body' section, enter the asset details, such as locales and environments
 ```
 
 
+
 #### Unpublish Asset
 
 #### Unpublish an asset
 
-**Method:** `POST`  
-**Endpoint:** `/assets/{asset_uid}/unpublish`
+**POST** `/assets/{asset_uid}/unpublish`
 
 The Unpublish an asset call is used to unpublish a specific version of an asset from a desired [environment](/docs/developers/set-up-environments/about-environments).  
 To configure the permissions for your application via OAuth, please include the cm.asset:unpublish scope.
@@ -12833,18 +14812,29 @@ In case of **Scheduled Unpublishing**, add the scheduled_at key and provide the 
 
 In the 'Body' section, enter the asset details, such as locales and environments, from where the assets need to be unpublished. These details should be in JSON format.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| asset_uid | blt91af1e5af9c3639f | Enter the unique ID of the asset that you wish to unpublish. |
+- **asset_uid** (required)
+  Enter the unique ID of the asset that you wish to unpublish.
+  Default: `blt91af1e5af9c3639f`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -12861,7 +14851,7 @@ In the 'Body' section, enter the asset details, such as locales and environments
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -12870,31 +14860,48 @@ In the 'Body' section, enter the asset details, such as locales and environments
 ```
 
 
+
 #### Asset Folder Collection
 
 #### Get a single folder
 
-**Method:** `GET`  
-**Endpoint:** `/assets/folders/{folder_uid}?include_path={boolean_value}`
+**GET** `/assets/folders/{folder_uid}?include_path={boolean_value}`
 
 The Get a single folder call gets the comprehensive details of a specific [asset folder](/docs/content-managers/author-content/#create-and-manage-asset-folders) by means of folder UID.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:read scope.
 
 When executing the API call to search for a subfolder, you need to provide the parent folder UID.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| folder_uid | enter_asset_folder_uid | Enter the uid of the folder |
-| include_path | false | Set this parameter to ‘true’ to retrieve the complete path of the folder. The path will be displayed as an array of obje |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **folder_uid** (required)
+  Enter the uid of the folder
+  Default: `enter_asset_folder_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_path** (optional)
+  Set this parameter to ‘true’ to retrieve the complete path of the folder. The path will be displayed as an array of objects which includes the names and UIDs of each parent folder.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12919,26 +14926,39 @@ When executing the API call to search for a subfolder, you need to provide the p
 }
 ```
 
+
 #### Get a single folder by name
 
-**Method:** `GET`  
-**Endpoint:** `/assets?query={"is_dir": true, "name": "folder_name"}`
+**GET** `/assets?query={"is_dir": true, "name": "folder_name"}`
 
 The Get a single folder by name call retrieves a specific [asset folder](/docs/content-managers/author-content/#create-and-manage-asset-folders) based on the name provided.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| query | {"is_dir": true, "name": "folder_name"} | Enter the is_dir and name parameters to find the asset folder by name. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **query** (required)
+  Enter the is_dir and name parameters to find the asset folder by name.
+  Default: `{"is_dir": true, "name": "folder_name"}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -12959,28 +14979,45 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Get subfolders of a parent folder
 
-**Method:** `GET`  
-**Endpoint:** `/assets?include_folders=true&query={"is_dir": true}&folder={parent_folder_uid}`
+**GET** `/assets?include_folders=true&query={"is_dir": true}&folder={parent_folder_uid}`
 
 The Get subfolders of a parent folder request retrieves the details of only the subfolders of a specific [asset folder](/docs/content-managers/author-content/#create-and-manage-asset-folders). This request does not retrieve asset files.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | bltd7eee4a49bdf2842 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| include_folders | true | Set this parameter to ‘true’ to include the asset folders in the search query. |
-| query | {"is_dir": true} | Enter the is_dir parameter to include asset folder details. |
-| folder | enter_your_folder_uid | Enter the parent folder UID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_folders** (required)
+  Set this parameter to ‘true’ to include the asset folders in the search query.
+  Default: `true`
+- **query** (required)
+  Enter the is_dir parameter to include asset folder details.
+  Default: `{"is_dir": true}`
+- **folder** (required)
+  Enter the parent folder UID.
+  Default: `enter_your_folder_uid`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `bltd7eee4a49bdf2842`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -13001,10 +15038,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Create a folder
 
-**Method:** `POST`  
-**Endpoint:** `/assets/folders`
+**POST** `/assets/folders`
 
 The Create a folder call is used to create an asset folder and/or add a parent folder to it (if required). To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
 
@@ -13027,18 +15064,29 @@ If you want to place this folder within another folder, provide the UID of the p
 - The maximum level of folder nesting is 5.
 - When nesting folder, you cannot nest a folder within the same folder or within its child folders.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -13048,7 +15096,7 @@ If you want to place this folder within another folder, provide the UID of the p
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -13070,10 +15118,10 @@ If you want to place this folder within another folder, provide the UID of the p
 }
 ```
 
+
 #### Update or move folder
 
-**Method:** `PUT`  
-**Endpoint:** `/assets/folders/{folder_uid}`
+**PUT** `/assets/folders/{folder_uid}`
 
 The Update or move folder request can be used either to update the details of a folder or set the parent folder if you want to move a folder under another folder.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
@@ -13088,19 +15136,35 @@ In the ‘Body’ section, you need to provide a new name for your folder, and i
 - The maximum level of folder nesting is 5.
 - When nesting folder, you cannot nest a folder within the same folder or within its child folders.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| folder_uid | blt12af3e1af23c123f | Enter the UID of the folder that you want to either update or move. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **folder_uid** (required)
+  Enter the UID of the folder that you want to either update or move.
+  Default: `blt12af3e1af23c123f`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -13110,7 +15174,7 @@ In the ‘Body’ section, you need to provide a new name for your folder, and i
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -13131,33 +15195,44 @@ In the ‘Body’ section, you need to provide a new name for your folder, and i
 }
 ```
 
+
 #### Delete a folder
 
-**Method:** `DELETE`  
-**Endpoint:** `/assets/folders/{folder_uid}`
+**DELETE** `/assets/folders/{folder_uid}`
 
 The Delete a folder call is used to delete an [asset folder](/docs/content-managers/author-content/#create-and-manage-asset-folders) along with all the assets within that folder.
 
 When executing the API call, provide the parent folder UID.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| folder_uid | bltc7aa14ea1959b25c | Enter the UID of the asset folder that you want to delete. |
+- **folder_uid** (required)
+  Enter the UID of the asset folder that you want to delete.
+  Default: `bltc7aa14ea1959b25c`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
 	"notice": "Folder deleted successfully."
 }
 ```
+
 
 ### Embed Entries and Assets in the Rich Text Editor
 
@@ -13176,8 +15251,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 #### Create a content type with embedded RTE objects
 
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create a content type with embedded RTE objects request lets you create a content type, which supports embedded objects inside its RTE field.  
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
@@ -13211,18 +15285,31 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
 
 **Additional Resource**: Refer to the [Rich Text Field Schema](/docs/developers/create-content-types/json-schema-for-creating-a-content-type#html-based-rich-text-editor) guide to understand how you can format the content entered in the field.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -13286,7 +15373,7 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -13442,12 +15529,12 @@ Here’s a sample schema of a Rich Text Editor field that supports embedded entr
 ```
 
 
-#### Update content type with embedded RTE objects
 
 #### Update content type with embedded RTE objects
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}`
+#### Update content type with embedded RTE objects
+
+**PUT** `/content_types/{content_type_uid}`
 
 The Update content type with embedded RTE objects request allows you to update the schema of an existing content type that contains embedded entries and/or assets within its Rich Text Editor field. To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
@@ -13481,19 +15568,37 @@ You can make changes to the schema of the Rich Text Editor field while updating 
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type that you wish to update. The uid is generated based on the title of the content  |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that you wish to update. The uid is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -13552,7 +15657,7 @@ You can make changes to the schema of the Rich Text Editor field while updating 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -13706,12 +15811,12 @@ You can make changes to the schema of the Rich Text Editor field while updating 
 ```
 
 
-#### Create an entry with embedded entries in RTE
 
 #### Create an entry with embedded entries in RTE
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}`
+#### Create an entry with embedded entries in RTE
+
+**POST** `/content_types/{content_type_uid}/entries?locale={locale_code}`
 
 The Create an entry with embedded RTE entries request allows you to embed entries inside the Rich Text Editor field while creating a new entry for the selected content type.
 
@@ -13751,20 +15856,40 @@ The above Rich Text Editor contains entries embedded as a separate content block
 
 **Note**: Contentstack’s [SDKs](/docs/developers/#platforms-and-sdks) help consume the response returned when you create an entry containing embedded objects. You can then decide what content (fields of the embedded entry, for instance) should be rendered on the frontend.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type for which you want to create an entry. The uid is generated based on the title o |
-| locale_code | en-us | Enter the code of the language in the which you want to create the entry. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type for which you want to create an entry. The uid is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale_code** (optional)
+  Enter the code of the language in the which you want to create the entry.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -13777,7 +15902,7 @@ The above Rich Text Editor contains entries embedded as a separate content block
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -13801,12 +15926,12 @@ The above Rich Text Editor contains entries embedded as a separate content block
 ```
 
 
-#### Create an entry with embedded assets in RTE
 
 #### Create an entry with embedded assets in RTE
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}`
+#### Create an entry with embedded assets in RTE
+
+**POST** `/content_types/{content_type_uid}/entries?locale={locale_code}`
 
 The Create an entry with embedded RTE assets request allows you to embed assets inside the Rich Text Editor field while creating a new entry for the selected content type.
 
@@ -13842,20 +15967,40 @@ Embedded asset as downloadable image:
 
 **Note**: Contentstack’s [SDKs](/docs/developers/sdks/) help consume the response returned when you create an entry containing embedded objects. You can then render the embedded assets on the frontend whenever required.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type for which you want to create an entry. The UID is generated based on the title o |
-| locale_code | en-us | Enter the code of the language in the which you want to create the entry. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type for which you want to create an entry. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale_code** (optional)
+  Enter the code of the language in the which you want to create the entry.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -13868,7 +16013,7 @@ Embedded asset as downloadable image:
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -13892,12 +16037,12 @@ Embedded asset as downloadable image:
 ```
 
 
-#### Update embedded RTE objects
 
 #### Update embedded RTE objects
 
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
+#### Update embedded RTE objects
+
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
 
 The Update embedded RTE objects request lets you update the embedded entries or assets placed inside the Rich Text Editor field of an entry.
 
@@ -13918,21 +16063,43 @@ Updated embedded entry inline with text:
 "
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type of which you want to update an entry. The uid is generated based on the title of |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry of which you want to update embedded objects. |
-| locale_code | en-us | Enter the code of the language of which you want to update an entry. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to update an entry. The uid is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry of which you want to update embedded objects.
+  Default: `blt9965f5f9840923ba`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale_code** (optional)
+  Enter the code of the language of which you want to update an entry.
+  Default: `en-us`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -13945,7 +16112,7 @@ Updated embedded entry inline with text:
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -13969,12 +16136,12 @@ Updated embedded entry inline with text:
 ```
 
 
-#### Get information on embedded RTE objects
 
 #### Get information on embedded RTE objects
 
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}&include_embedded_items[]=BASE`
+#### Get information on embedded RTE objects
+
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}&include_embedded_items[]=BASE`
 
 The Get information on embedded RTE objects request returns comprehensive information on all entries and/or assets embedded within the Rich Text Editor field.
 
@@ -13985,21 +16152,43 @@ You can view information about the embedded objects under the _embedded_items pa
 
 **Note**: Contentstack’s [Content Delivery SDKs](/docs/developers/fetch-content#fetch-content-using-content-delivery-sdks) help consume the embedded entries and assets returned in the API response. You can then render the embedded objects on the frontend however required.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type that contains entries with embedded objects. The uid is generated based on the t |
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry of which you wish to fetch embedded object information. |
-| locale_code | en-us | Enter the code of the language of which the entries need to be included. |
-| include_embedded_items[] | BASE | Enter ‘BASE’ to include entries and assets embedded inside the Rich Text Editor field. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that contains entries with embedded objects. The uid is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry of which you wish to fetch embedded object information.
+  Default: `blt9965f5f9840923ba`
 
-**Response (200):**
+##### Query Parameters
+
+- **locale_code** (optional)
+  Enter the code of the language of which the entries need to be included.
+  Default: `en-us`
+- **include_embedded_items[]** (optional)
+  Enter ‘BASE’ to include entries and assets embedded inside the Rich Text Editor field.
+  Default: `BASE`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -14148,6 +16337,7 @@ You can view information about the embedded objects under the _embedded_items pa
 }
 ```
 
+
 ### Bulk Operations
 
 You can perform bulk operations such as [Add to Release](/docs/content-managers/author-content/bulk-add-to-release), [Publish](/docs/content-managers/bulk-operations-on-entries-and-assets/bulk-publish-entries), [Unpublish](/docs/content-managers/bulk-operations-on-entries-and-assets/bulk-unpublish-entries), and [Delete](/docs/content-managers/bulk-operations-on-entries-and-assets/bulk-delete-entries) on multiple entries or assets, or [Change the Workflow Details](/docs/content-managers/bulk-operations-on-entries-and-assets/update-entry-workflow-details-in-bulk) of multiple entries or assets at the same time.
@@ -14168,8 +16358,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 #### Bulk Add to Release
 
-**Method:** `POST`  
-**Endpoint:** `/bulk/release/items`
+**POST** `/bulk/release/items`
 
 The Bulk Add to Release request allows you to add multiple entries and assets to a release, making content preparation for deployment more efficient and ensuring smooth, coordinated publishing.
 
@@ -14194,17 +16383,25 @@ Once the API request is executed, a job ID is generated in the response. You can
 
 **Note**: Pass bulk_version as 2.0 in the Headers section.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authorization | your_management_token | Enter your management token. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| bulk_version | 2.0 | Pass the bulk_version header as 2.0 to allow bulk operation. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (optional)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **bulk_version** (required)
+  Pass the bulk_version header as 2.0 to allow bulk operation.
+  Default: `2.0`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -14226,7 +16423,7 @@ Once the API request is executed, a job ID is generated in the response. You can
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -14236,12 +16433,12 @@ Once the API request is executed, a job ID is generated in the response. You can
 ```
 
 
+
 #### Bulk Publish Operation
 
 #### Publish entries and assets in bulk
 
-**Method:** `POST`  
-**Endpoint:** `/bulk/publish?skip_workflow_stage_check={boolean_value}&approvals={boolean_value}`
+**POST** `/bulk/publish?skip_workflow_stage_check={boolean_value}&approvals={boolean_value}`
 
 The Publish entries and assets in bulk request allows you to publish multiple entries and assets at the same time.
 
@@ -14269,19 +16466,34 @@ When you use skip_workflow_stage_check=true as a query parameter, the entries th
 
 When you use approvals=true as a query parameter, the entries that satisfy the publish rules are sent for publishing, while those entries that have not yet received authorization from the approver assigned to them will not be sent for publishing. However, if you set this parameter to false and some of the entries included in the bulk publish request have not yet received authorization from the approver assigned to them, then all the entries selected will not be sent for publishing.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| api_version | 3.2 | Enter the API version to enable Nested Reference Publishing. |
-| skip_workflow_stage_check | true | Set this to 'true' to publish the entries that are at a workflow stage where they satisfy the applied publish rules. |
-| approvals | true | Set this to 'true' to publish the entries that do not require an approval to be published. |
+- **skip_workflow_stage_check** (optional)
+  Set this to 'true' to publish the entries that are at a workflow stage where they satisfy the applied publish rules.
+  Default: `true`
+- **approvals** (optional)
+  Set this to 'true' to publish the entries that do not require an approval to be published.
+  Default: `true`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+- **api_version** (required)
+  Enter the API version to enable Nested Reference Publishing.
+  Default: `3.2`
+
+##### Sample Request
 
 ```json
 {
@@ -14319,7 +16531,7 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -14329,12 +16541,12 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
 ```
 
 
+
 #### Bulk Unpublish Operation
 
 #### Unpublish entries and assets in bulk
 
-**Method:** `POST`  
-**Endpoint:** `/bulk/unpublish?skip_workflow_stage_check={boolean_value}&approvals={boolean_value}`
+**POST** `/bulk/unpublish?skip_workflow_stage_check={boolean_value}&approvals={boolean_value}`
 
 The Unpublish entries and assets in bulk request allows you to unpublish multiple entries and assets at the same time.   
 To configure the permissions for your application via OAuth, please include the cm.bulk-operations:unpublish scope.
@@ -14355,19 +16567,34 @@ When you use skip_workflow_stage_check=true as a query parameter, the entries th
 
 When you use approvals=true as a query parameter, the entries that satisfy the publish rules are sent for unpublishing, while those entries that have not yet received authorization from the approver assigned to them will not be sent for unpublishing. However, if you set this parameter to false and some of the entries included in the bulk unpublish request have not yet received authorization from the approver assigned to them, then all the entries selected will not be sent for unpublishing.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
-| api_version | 3.2 | Enter the API version to enable Nested Reference Publishing. |
-| skip_workflow_stage_check | true | Set this to 'true' to publish the entries that are at a workflow stage where they satisfy the applied publish rules. |
-| approvals | true | Set this to 'true' to publish the entries that do not require an approval to be published. |
+- **skip_workflow_stage_check** (optional)
+  Set this to 'true' to publish the entries that are at a workflow stage where they satisfy the applied publish rules.
+  Default: `true`
+- **approvals** (optional)
+  Set this to 'true' to publish the entries that do not require an approval to be published.
+  Default: `true`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+- **api_version** (optional)
+  Enter the API version to enable Nested Reference Publishing.
+  Default: `3.2`
+
+##### Sample Request
 
 ```json
 {
@@ -14413,7 +16640,7 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -14423,12 +16650,12 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
 ```
 
 
+
 #### Bulk Delete Operation
 
 #### Delete entries and assets in bulk
 
-**Method:** `POST`  
-**Endpoint:** `/bulk/delete`
+**POST** `/bulk/delete`
 
 The Delete entries and assets in bulk request allows you to delete multiple entries and assets at the same time.  
 To configure the permissions for your application via OAuth, please include the cm.bulk-operations:delete scope.
@@ -14437,16 +16664,21 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the 'Body' section, you need to specify the content type UIDs, entry UIDs or asset UIDs, and locales of which the entries or assets you want to delete.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -14466,13 +16698,14 @@ In the 'Body' section, you need to specify the content type UIDs, entry UIDs or 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
     "notice": "Your bulk delete request is in progress. Please check bulk task queue for more details."
 }
 ```
+
 
 
 #### Bulk Update Workflow Details Operation
@@ -14483,8 +16716,7 @@ The ‘Change Workflow Details’ action is a new option that allows you to chan
 
 #### Update workflow details in bulk
 
-**Method:** `POST`  
-**Endpoint:** `/bulk/workflow`
+**POST** `/bulk/workflow`
 
 The Update workflow details in bulk request allows you to update the workflow details for multiple entries at the same time.   
 To configure the permissions for your application via OAuth, please include the cm.bulk-operations:workflow scope.
@@ -14497,16 +16729,21 @@ In the 'Body' section, you need to provide the details of the workflow stage. En
 
 Within the ‘entries’ parameter, pass these details of each entry – content type UIDs, entry UIDs, and locales in which the entries are present.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -14539,13 +16776,14 @@ Within the ‘entries’ parameter, pass these details of each entry – content
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
 "notice": "Your request to update workflow stage is complete."
 }
 ```
+
 
 ### Job Status
 
@@ -14556,23 +16794,31 @@ The Job Status API allows you to monitor the progress of your bulk operations on
 
 #### Get job status
 
-**Method:** `GET`  
-**Endpoint:** `/bulk/jobs/{job_id}`
+**GET** `/bulk/jobs/{job_id}`
 
 The Get job status request returns comprehensive information of a specific publish/unpublish operation.
 
 **Note**: Pass api_version parameter as **3.2** in the Headers section.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authorization | your_management_token | Enter your management token. |
-| api_version | 3.2 | Enter the API version. |
-| job_id | eb4c0236-103a-4a04-82a4-0a452b94bfc8 | Enter the UID of the job of which you want to retrieve the details. |
+- **job_id** (required)
+  Enter the UID of the job of which you want to retrieve the details.
+  Default: `eb4c0236-103a-4a04-82a4-0a452b94bfc8`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **api_version** (required)
+  Enter the API version.
+  Default: `3.2`
+
+##### Sample Response
 
 ```json
 {
@@ -14607,12 +16853,12 @@ The Get job status request returns comprehensive information of a specific publi
 ```
 
 
+
 #### Get Job Items Status
 
 #### Get job items status
 
-**Method:** `GET`  
-**Endpoint:** `/bulk/jobs/{job_id}/items?include_count={boolean_value}&type={type_value}&skip={skip_value}&limit={limit_value}&status={status_value}&ct[]={content_type_uid}&include_reference={boolean_value}`
+**GET** `/bulk/jobs/{job_id}/items?include_count={boolean_value}&type={type_value}&skip={skip_value}&limit={limit_value}&status={status_value}&ct[]={content_type_uid}&include_reference={boolean_value}`
 
 The Get job items status request retrieves all the details of the items associated with a specific publish/unpublish job, along with their status.
 
@@ -14622,23 +16868,49 @@ The Get job items status request retrieves all the details of the items associat
 - The include_count query parameter will return the count only if skip is 0 or the value for skip is not provided.
 - The item status API request returns only the first 100 items. If you want to fetch the details other than the first 100 in your response, refer to the Pagination section to retrieve data for all items in paginated form.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authorization | your_management_token | Enter your management token. |
-| api_version | 3.2 | Enter the API version. |
-| job_id | eb4c0236-103a-4a04-82a4-0a452b94bfc8 | Enter the UID of the job of which you want to retrieve the details. |
-| include_count | false | If set to true, the response includes the total count of items within the job. Default value for this parameter is false |
-| skip | 0 | Enter the number of items to be skipped from the response body. Default value for this parameter is 0. |
-| limit | 100 | Enter the maximum number of items to be returned. Default and maximum value for this parameter is 100. |
-| include_reference | true | Set this parameter to 'true' to include the details of all the referenced items in response. Default value for this para |
-| status | success | Enter the status 'success' or 'failed' for which you want to retrieve items. |
-| type | asset | Enter the filter 'entry' or 'asset' for which you want to retrieve items. |
-| ct[] | your_content_type_uid | Enter the unique ID of the content type from which you want to filter responses. Filter multiple content types by using  |
+- **job_id** (required)
+  Enter the UID of the job of which you want to retrieve the details.
+  Default: `eb4c0236-103a-4a04-82a4-0a452b94bfc8`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_count** (optional)
+  If set to true, the response includes the total count of items within the job. Default value for this parameter is false.
+  Default: `false`
+- **skip** (optional)
+  Enter the number of items to be skipped from the response body. Default value for this parameter is 0.
+  Default: `0`
+- **limit** (optional)
+  Enter the maximum number of items to be returned. Default and maximum value for this parameter is 100.
+  Default: `100`
+- **include_reference** (optional)
+  Set this parameter to 'true' to include the details of all the referenced items in response. Default value for this parameter is false.
+  Default: `true`
+- **status** (optional)
+  Enter the status 'success' or 'failed' for which you want to retrieve items.
+  Default: `success`
+- **type** (optional)
+  Enter the filter 'entry' or 'asset' for which you want to retrieve items.
+  Default: `asset`
+- **ct[]** (optional)
+  Enter the unique ID of the content type from which you want to filter responses. Filter multiple content types by using ct[]=your_content_type_uid1&ct[]=your_content_type_uid2.
+  Default: `your_content_type_uid`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **api_version** (required)
+  Enter the API version.
+  Default: `3.2`
+
+##### Sample Response
 
 ```json
 {
@@ -14689,34 +16961,61 @@ The Get job items status request retrieves all the details of the items associat
 ```
 
 
-#### Get Stack Bulk Task Queue
 
 #### Get Stack Bulk Task Queue
 
-**Method:** `GET`  
-**Endpoint:** `/bulk/jobs`
+#### Get Stack Bulk Task Queue
+
+**GET** `/bulk/jobs`
 
 The Get Stack Bulk Task Queue request retrieves a list of all the bulk actions performed on entries and assets within a stack.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authorization | your_management_token | Enter your management token. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| bulk_version | 2.0 | Pass bulk_version parameter as 2.0. |
-| include_count | true | Set this parameter to true to include the total count of items within the job. |
-| skip | 2 | Enter the number of items to be skipped from the response body. |
-| limit | 10 | Enter the maximum number of items to be returned. |
-| asc | created_at | Sort the response in ascending order. Options include created_at, updated_at, status, created_by, and action. |
-| desc | updated_at | Sort the response in descending order. Options include created_at, updated_at, status, created_by, and action. |
-| status | 4,2 | Filter results by integers (1-6) separated by a comma to represent statuses: 1 - Waiting, 2 - In Queue, 3 - In Progress, |
-| users | blt**************53 | Filter results by user IDs, provided as a single ID or comma-separated IDs. |
-| from | 2024-05-13 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
-| to | 2024-06-13 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
+- **include_count** (optional)
+  Set this parameter to true to include the total count of items within the job.
+  Default: `true`
+- **skip** (optional)
+  Enter the number of items to be skipped from the response body.
+  Default: `2`
+- **limit** (optional)
+  Enter the maximum number of items to be returned.
+  Default: `10`
+- **asc** (optional)
+  Sort the response in ascending order. Options include created_at, updated_at, status, created_by, and action.
+  Default: `created_at`
+- **desc** (optional)
+  Sort the response in descending order. Options include created_at, updated_at, status, created_by, and action.
+  Default: `updated_at`
+- **status** (optional)
+  Filter results by integers (1-6) separated by a comma to represent statuses: 1 - Waiting, 2 - In Queue, 3 - In Progress, 4 - Completed, 5 - Partial Complete, 6 - Failed.
+  Default: `4,2`
+- **users** (optional)
+  Filter results by user IDs, provided as a single ID or comma-separated IDs.
+  Default: `blt**************53`
+- **from** (optional)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-05-13`
+- **to** (optional)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-06-13`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **bulk_version** (required)
+  Pass bulk_version parameter as 2.0.
+  Default: `2.0`
+
+##### Sample Response
 
 ```json
 {
@@ -14782,6 +17081,7 @@ The Get Stack Bulk Task Queue request retrieves a list of all the bulk actions p
 }
 ```
 
+
 ### Extensions
 
 **Note:** Experience Extensions use the legacy approach with extensions. We recommend using the [UI locations ](/docs/developers/developer-hub/about-ui-locations/)for the Contentstack App Framework to extend the functionality of your apps.
@@ -14797,26 +17097,38 @@ This type of extension lets you create custom fields that you can use in your co
 
 #### Get all custom fields
 
-**Method:** `GET`  
-**Endpoint:** `/extensions?query={"type":"field"}`
+**GET** `/extensions?query={"type":"field"}`
 
 The Get all custom fields request is used to get the information of all custom fields created in a stack.
 
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| query | {"type":"field"} | For custom fields |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **query** (required)
+  For custom fields
+  Default: `{"type":"field"}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -14856,27 +17168,42 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Get a single custom field
 
-**Method:** `GET`  
-**Endpoint:** `/extensions/{custom_field_uid}`
+**GET** `/extensions/{custom_field_uid}`
 
 The Get a single custom field request gets the comprehensive details of a specific custom field.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| custom_field_uid | blt123ea123b123a123f | Enter the UID of the custom field of which you want to retrieve the details. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **custom_field_uid** (required)
+  Enter the UID of the custom field of which you want to retrieve the details.
+  Default: `blt123ea123b123a123f`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -14899,10 +17226,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Upload a custom field
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Upload a custom field request is used to upload a custom field to Contentstack.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
@@ -14918,18 +17245,28 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 
 **Tip**: You can try the call manually in any REST API client, such as Postman. Under 'Body', for the extension[upload] parameter, select the input type as 'File'. This will enable you to select the file that you wish to import.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | multipart/form-data |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -14955,10 +17292,10 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 }
 ```
 
+
 #### Create a custom field with source URL
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Create a custom field with source URL call is used to create a custom field that is hosted externally.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
@@ -14967,18 +17304,28 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 
 **Note:** The custom field has various data types you can select from – Text, Number, Date, Boolean, JSON, Reference, File, and Asset.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | main | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `main`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -14997,7 +17344,7 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -15024,10 +17371,10 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 }
 ```
 
+
 #### Create a custom field with source code
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Create a custom field with source code request is used to create a custom field in Contentstack by providing the source code of the extensions. This source code will be hosted on Contentstack.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
@@ -15036,18 +17383,28 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 
 **Note:** The custom field has various data types you can select from – Text, Number, Date, Boolean, JSON, Reference, File, and Asset.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -15066,7 +17423,7 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -15092,29 +17449,45 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 }
 ```
 
+
 #### Update a custom field
 
-**Method:** `PUT`  
-**Endpoint:** `/extensions/{custom_field_uid}`
+**PUT** `/extensions/{custom_field_uid}`
 
 The Update a custom field request is used to update the details of a custom field.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
 
 In the ‘Body’ section, you need to provide details of the custom field, such as its tags, data type, title, external source link (or the updated external source code), set if the field is to take multiple values or not, and configuration details.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| custom_field_uid | bltcd0ac000b000b00e | Enter the UID of the custom field that you want to update. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **custom_field_uid** (required)
+  Enter the UID of the custom field that you want to update.
+  Default: `bltcd0ac000b000b00e`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -15133,7 +17506,7 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -15160,25 +17533,34 @@ In the ‘Body’ section, you need to provide details of the custom field, such
 }
 ```
 
+
 #### Delete custom field
 
-**Method:** `DELETE`  
-**Endpoint:** `/extensions/{custom_field_uid}`
+**DELETE** `/extensions/{custom_field_uid}`
 
 The Delete custom field request is used to delete a specific custom field.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| custom_field_uid | blt123c123ce12b3123 | Enter the UID of the custom field that you want to delete. |
+- **custom_field_uid** (required)
+  Enter the UID of the custom field that you want to delete.
+  Default: `blt123c123ce12b3123`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -15186,26 +17568,36 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Create Content Type with Extension Field
 
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create Content Type with Extension Field request is used to create a content type that includes a custom field.   
 To configure the permissions for your application via OAuth, please include the cm.content-types.management:write scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -15261,7 +17653,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -15384,30 +17776,41 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Custom Widgets
 
 This type of extensions lets you add widgets that help you analyze content of an entry and recommend content ideas. Read more [About Custom Widgets](/docs/developers/create-custom-widgets/about-custom-widgets).
 
 #### Get all widgets
 
-**Method:** `GET`  
-**Endpoint:** `/extensions?query={"type":"widget"}`
+**GET** `/extensions?query={"type":"widget"}`
 
 The Get widgets request is used to get the information of all custom widgets created in a stack.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| query | {"type":"widget"} | Parameter for custom widgets. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **query** (required)
+  Parameter for custom widgets.
+  Default: `{"type":"widget"}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -15466,26 +17869,37 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Get widgets of a content type
 
-**Method:** `GET`  
-**Endpoint:** `/extensions?scope={content_type_uid}`
+**GET** `/extensions?scope={content_type_uid}`
 
 The Get widgets of a content type request gets the comprehensive details of all widgets that are assigned to a specific content type.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| scope | products | Enter the UID of the content type of which you want to retrieve the details of all the applicable widgets. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **scope** (required)
+  Enter the UID of the content type of which you want to retrieve the details of all the applicable widgets.
+  Default: `products`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -15513,10 +17927,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Upload a widget
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Upload a widget request is used to upload a new custom widget to a stack.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
@@ -15531,18 +17945,28 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 
 **Tip**: You can try the call manually in any REST API client, such as Postman. Under 'Body', for the extension[upload] parameter, select the input type as 'File'. This will enable you to select the file that you wish to import.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | multipart/form-data |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -15575,28 +17999,38 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 }
 ```
 
+
 #### Create widget with source URL
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Create Widget with source URL call is used to create a widget that is hosted externally.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
 
 In the ‘Body’ section, you need to provide details of the widget, such as its tags, title, external source link (src), configuration details, set if the extension is a widget or field, and specify the scope, i.e., the content types to which you want to apply the widget.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -15617,7 +18051,7 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -15650,10 +18084,10 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 }
 ```
 
+
 #### Create widget with source code
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Create widget with source code request is used to create a widget in Contentstack by providing the source code. This source code will be hosted on Contentstack.
 
@@ -15662,18 +18096,28 @@ scope.
 
 In the ‘Body’ section, you need to provide details of the widget, such as its tags, title, source code of the widget, configuration details, set if the extension is a widget or field, and specify the scope i.e., the content types that you want to apply the widget.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -15693,7 +18137,7 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -15723,10 +18167,10 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 }
 ```
 
+
 #### Update a widget
 
-**Method:** `PUT`  
-**Endpoint:** `/extensions/{widget_uid}`
+**PUT** `/extensions/{widget_uid}`
 
 The Update a widget request is used to update the details of a widget.
 
@@ -15734,19 +18178,34 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the ‘Body’ section, you need to provide details of the widget, such as its tags, title, external source link (or the updated external source code), configuration details, set if the extension is a widget or field, and specify the scope i.e., the content types that you want to apply the widget.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| widget_uid | bltcd0ac000b000b00f | Enter the UID of the widget that you want to update. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **widget_uid** (required)
+  Enter the UID of the widget that you want to update.
+  Default: `bltcd0ac000b000b00f`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -15769,7 +18228,7 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -15799,26 +18258,35 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 }
 ```
 
+
 #### Delete a widget
 
-**Method:** `DELETE`  
-**Endpoint:** `/extensions/{widget_uid}`
+**DELETE** `/extensions/{widget_uid}`
 
 The Delete a widget call is used to delete a specific custom widget.
 
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| widget_uid | bltcd0ac000b000b00f | Enter the UID of the widget that you want to delete. |
+- **widget_uid** (required)
+  Enter the UID of the widget that you want to delete.
+  Default: `bltcd0ac000b000b00f`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -15827,32 +18295,44 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Dashboard Widgets
 
 This type of extension lets you create widgets for your dashboard. Read more [About Custom Dashboard Widgets](/docs/developers/create-dashboard-widgets/about-custom-dashboard-widgets).
 
 #### Get All Dashboard Widgets
 
-**Method:** `GET`  
-**Endpoint:** `/extensions?query={"type":"dashboard", "enable": true}`
+**GET** `/extensions?query={"type":"dashboard", "enable": true}`
 
 The Get All Dashboard Widgets request is used to get the information of all the enabled custom dashboard extension.
 
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| query | {"type":"dashboard", "enable": true} | Query to retrieve all dashboard widgets. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **query** (required)
+  Query to retrieve all dashboard widgets.
+  Default: `{"type":"dashboard", "enable": true}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {  
@@ -15884,10 +18364,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Upload Dashboard Widget
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Upload Dashboard Widget request uploads the widget to the Stack Dashboard.
 
@@ -15900,18 +18380,29 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 - extension[tags]: Enter the tags that you want to assign to the widget.
 - extension[type]: Enter type as ‘dashboard’, since this is a custom widget extension.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter the API key of your stack. |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | multipart/form-data |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {  
@@ -15942,10 +18433,10 @@ In the ‘Body’ section, you need to provide the following ‘Body’ paramete
 }
 ```
 
+
 #### Create a Dashboard Widget with Source URL
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Create a Dashboard Widget with Source URL request is used to upload an extension hosted externally.
 
@@ -15953,18 +18444,29 @@ To configure the permissions for your application via OAuth, include the cm.exte
 
 In the ‘Body’ section, you need to provide details of the dashboard widget, such as its tags, title, external source link (src), data types, configuration details, set if the extension is a widget or field, enable the extension, and set the default width of the viewport to either full or half.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -15982,7 +18484,7 @@ In the ‘Body’ section, you need to provide details of the dashboard widget, 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -16008,10 +18510,10 @@ In the ‘Body’ section, you need to provide details of the dashboard widget, 
 }
 ```
 
+
 #### Create a Dashboard Widget with Source code
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Create dashboard widget with source code request is used to create a widget in Contentstack by providing the source code. This source code will be hosted on Contentstack.
 
@@ -16019,18 +18521,28 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the ‘Body’ section, you need to provide details of the widget, such as its tags, title, source code of the widget, configuration details, set if the extension is a widget or field, enable the extension, and set the default width of the viewport to either full or half.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -16049,7 +18561,7 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -16076,10 +18588,10 @@ In the ‘Body’ section, you need to provide details of the widget, such as it
 }
 ```
 
+
 #### Update the Dashboard Widget
 
-**Method:** `PUT`  
-**Endpoint:** `/extensions/{extension_uid}`
+**PUT** `/extensions/{extension_uid}`
 
 The Update dashboard widget request is used to update the details of a widget.
 
@@ -16087,19 +18599,33 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the ‘Body’ section, you need to provide details of the extension, such as its tags, set if the extension is a widget or field, title, source code of the widget, configuration details, enable the extension, and set the default width of the viewport to either full or half.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| branch | main | Enter your branch unique ID. |
-| extension_uid | blt20a7158319e3e32d |  |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **extension_uid** (required)
+  Default: `blt20a7158319e3e32d`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -16118,7 +18644,7 @@ In the ‘Body’ section, you need to provide details of the extension, such as
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -16145,26 +18671,34 @@ In the ‘Body’ section, you need to provide details of the extension, such as
 }
 ```
 
+
 #### Delete the Dashboard Widget
 
-**Method:** `DELETE`  
-**Endpoint:** `/extensions/{extension_uid}`
+**DELETE** `/extensions/{extension_uid}`
 
 The Delete dashboard widget call is used to delete a specific custom dashboard.
 
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| extension_uid | blt20a7158319e3e32d |  |
+- **extension_uid** (required)
+  Default: `blt20a7158319e3e32d`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -16173,32 +18707,47 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### JSON RTE Plugins
 
 This type of extension lets you add customized plugins to your JSON Rich Text Editor and extend its functionality. Read more [About JSON RTE Plugins](/docs/developers/json-rich-text-editor-plugins).
 
 #### Get all JSON RTE plugins
 
-**Method:** `GET`  
-**Endpoint:** `/extensions?query={"type":"rte_plugin"}`
+**GET** `/extensions?query={"type":"rte_plugin"}`
 
 The Get all JSON RTE plugins request is used to get the information of all JSON Rich Text Editor plugins created in a stack.
 
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| query | {"type":"rte_plugin"} | Query to retrieve all  JSON RTE plugins. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **query** (required)
+  Query to retrieve all  JSON RTE plugins.
+  Default: `{"type":"rte_plugin"}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -16307,27 +18856,45 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Get a single JSON RTE plugin
 
-**Method:** `GET`  
-**Endpoint:** `/extensions/{json_rte_plugin_uid}`
+**GET** `/extensions/{json_rte_plugin_uid}`
 
 The Get a single JSON RTE plugin request gets the comprehensive details of a specific JSON Rich Text Editor plugin.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| json_rte_plugin_uid | blt123ea123b123a123f | Enter the UID of the JSON RTE plugin of which you want to retrieve details. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **json_rte_plugin_uid** (required)
+  Enter the UID of the JSON RTE plugin of which you want to retrieve details.
+  Default: `blt123ea123b123a123f`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -16354,10 +18921,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Create a JSON RTE plugin with source URL
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Create a JSON RTE plugin with source URL request allows you to add an externally hosted JSON RTE plugin to your stack.
 
@@ -16367,18 +18934,31 @@ In the ‘Body’ section, you need to provide details of the JSON RTE plugin, s
 
 **Note:** You can add a maximum of **50** extensions (including custom fields , custom widgets and JSON RTE plugins) in a stack.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -16396,7 +18976,7 @@ In the ‘Body’ section, you need to provide details of the JSON RTE plugin, s
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -16425,10 +19005,10 @@ In the ‘Body’ section, you need to provide details of the JSON RTE plugin, s
 }
 ```
 
+
 #### Update a JSON RTE plugin
 
-**Method:** `PUT`  
-**Endpoint:** `/extensions/{json_rte_plugin_uid}`
+**PUT** `/extensions/{json_rte_plugin_uid}`
 
 The Update a JSON RTE plugin request allows you to update the details of an existing JSON RTE plugin.
 
@@ -16436,19 +19016,37 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the ‘Body’ section, you need to provide details of the JSON RTE plugin, such as its tags, title, external source link (or the updated external source code), set if the field is to take multiple values or not, configuration details, and the extension type.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| json_rte_plugin_uid | blt123ea123b123a123f | Enter the UID of the JSON RTE plugin that you want to update. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **json_rte_plugin_uid** (required)
+  Enter the UID of the JSON RTE plugin that you want to update.
+  Default: `blt123ea123b123a123f`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -16466,7 +19064,7 @@ In the ‘Body’ section, you need to provide details of the JSON RTE plugin, s
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -16491,26 +19089,37 @@ In the ‘Body’ section, you need to provide details of the JSON RTE plugin, s
 }
 ```
 
+
 #### Delete JSON RTE plugin
 
-**Method:** `DELETE`  
-**Endpoint:** `/extensions/{json_rte_plugin_uid}`
+**DELETE** `/extensions/{json_rte_plugin_uid}`
 
 The Delete JSON RTE plugin request allows you to delete a specific JSON RTE plugin.
 
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| json_rte_plugin_uid | blt123ea123b123a123f | Enter the UID of the JSON RTE plugin that you want to update. |
+- **json_rte_plugin_uid** (required)
+  Enter the UID of the JSON RTE plugin that you want to update.
+  Default: `blt123ea123b123a123f`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -16518,10 +19127,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Create content type with JSON RTE plugin
 
-**Method:** `POST`  
-**Endpoint:** `/content_types`
+**POST** `/content_types`
 
 The Create content type with JSON RTE plugin request allows you to create a content type that includes JSON RTE plugins within the JSON Rich Text Editor.
 
@@ -16541,18 +19150,31 @@ The schema for this is as follows:
 
 **Note:** The maximum number of JSON RTE plugins that can be added to a single JSON RTE field in a content type is **five**.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -16626,7 +19248,7 @@ The schema for this is as follows:
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -16759,29 +19381,42 @@ The schema for this is as follows:
 ```
 
 
+
 #### Asset Sidebar Extensions
 
 This type of extension lets you add widgets with more capabilities or custom functionalities for editors to manage, transform, and optimize stack assets. Read more about [Asset Sidebar Extensions](/docs/developers/create-asset-sidebar-extensions).
 
 #### Get all asset sidebar extensions
 
-**Method:** `GET`  
-**Endpoint:** `/extensions?query={"type":"asset_sidebar_widget"}`
+**GET** `/extensions?query={"type":"asset_sidebar_widget"}`
 
 The Get all asset sidebar extensions request is used to get the information of all the asset sidebar extensions created in a stack.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| branch | main | Enter your branch or alias unique ID. |
-| query | {"type":"asset_sidebar_widget"} | Pass the query to retrieve all  asset sidebar extensions. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **query** (required)
+  Pass the query to retrieve all  asset sidebar extensions.
+  Default: `{"type":"asset_sidebar_widget"}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -16834,25 +19469,41 @@ The Get all asset sidebar extensions request is used to get the information of a
 }
 ```
 
+
 #### Get a single asset sidebar extension
 
-**Method:** `GET`  
-**Endpoint:** `/extensions/{asset_sidebar_extension_uid}`
+**GET** `/extensions/{asset_sidebar_extension_uid}`
 
 The Get a single asset sidebar extension request gets the comprehensive details of a specific asset sidebar extension.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| branch | main | Enter your branch or alias unique ID. |
-| asset_sidebar_extension_uid | blt123ea123b123a123f | Enter the UID of the asset sidebar extension of which you want to retrieve details. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **asset_sidebar_extension_uid** (required)
+  Enter the UID of the asset sidebar extension of which you want to retrieve details.
+  Default: `blt123ea123b123a123f`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -16881,10 +19532,10 @@ The Get a single asset sidebar extension request gets the comprehensive details 
 }
 ```
 
+
 #### Create an asset sidebar extension with source URL
 
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Create an asset sidebar extension with source URL request allows you to add an externally hosted asset sidebar extension to your stack.
 
@@ -16894,18 +19545,31 @@ The popup panel width should be within the range of **335** to **1024** pixels. 
 
 **Note:** You can add a maximum of **50** extensions (including custom fields , custom widgets, JSON RTE plugins, and asset sidebar extensions) in a stack.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch or alias unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -16920,7 +19584,7 @@ The popup panel width should be within the range of **335** to **1024** pixels. 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -16950,10 +19614,10 @@ The popup panel width should be within the range of **335** to **1024** pixels. 
 }
 ```
 
+
 #### Update an asset sidebar extension
 
-**Method:** `PUT`  
-**Endpoint:** `/extensions/{asset_sidebar_extension_uid}`
+**PUT** `/extensions/{asset_sidebar_extension_uid}`
 
 The Update an asset sidebar extension request allows you to update the details of an existing asset sidebar extension.
 
@@ -16961,19 +19625,37 @@ In the ‘Body’ section, you need to provide details of the asset sidebar exte
 
 The popup panel width should be within the range of **335** to **1024** pixels. Set the blur effect to true if you want to blur the details of the uploaded file by default.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch or alias unique ID. |
-| asset_sidebar_extension_uid | blt123ea123b123a123f | Enter the UID of the asset sidebar extension of which you want to update details. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **asset_sidebar_extension_uid** (required)
+  Enter the UID of the asset sidebar extension of which you want to update details.
+  Default: `blt123ea123b123a123f`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -16986,7 +19668,7 @@ The popup panel width should be within the range of **335** to **1024** pixels. 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -17016,30 +19698,42 @@ The popup panel width should be within the range of **335** to **1024** pixels. 
 }
 ```
 
+
 #### Delete asset sidebar extension
 
-**Method:** `DELETE`  
-**Endpoint:** `/extensions/{asset_sidebar_extension_uid}`
+**DELETE** `/extensions/{asset_sidebar_extension_uid}`
 
 The Delete asset sidebar extension request allows you to delete a specific asset sidebar extension.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| branch | main | Enter your branch or alias unique ID. |
-| asset_sidebar_extension_uid | blt123ea123b123a123f | Enter the UID of the asset sidebar extension that you want to delete. |
+- **asset_sidebar_extension_uid** (required)
+  Enter the UID of the asset sidebar extension that you want to delete.
+  Default: `blt123ea123b123a123f`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
     "notice": "Extension deleted successfully."
 }
 ```
+
 
 ### Metadata for Entries and Assets
 
@@ -17056,8 +19750,7 @@ You can manage your digital entities effectively and facilitate enhanced accessi
 
 #### Get metadata
 
-**Method:** `GET`  
-**Endpoint:** `/metadata/{metadata_uid}`
+**GET** `/metadata/{metadata_uid}`
 
 The Get metadata request fetches the metadata attached to a specific asset or entry of a stack.
 
@@ -17068,20 +19761,40 @@ Keep the following points in mind when getting metadata:
 - To retrieve metadata for a specific entry or asset, you need to have read access to that entry or asset.
 - You must pass the include_publish_details query parameter to fetch the metadata publishing details in the response.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch or alias unique ID. |
-| metadata_uid | cs3cbeeef5a398bf0f | Enter the unique ID of the metadata that you want to fetch. You can find the metadata UID by running the [Get all assets |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
-| include_publish_details | false | Enter 'true' to include the publish details of the entry. |
+- **metadata_uid** (required)
+  Enter the unique ID of the metadata that you want to fetch. You can find the metadata UID by running the [Get all assets](#get-all-assets) API request or [Get all entries](#get-all-entries) API request.
+  Default: `cs3cbeeef5a398bf0f`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+- **include_publish_details** (optional)
+  Enter 'true' to include the publish details of the entry.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -17112,39 +19825,72 @@ Keep the following points in mind when getting metadata:
 ```
 
 
-#### Get All Metadata
 
 #### Get All Metadata
 
-**Method:** `GET`  
-**Endpoint:** `/metadata/`
+#### Get All Metadata
+
+**GET** `/metadata/`
 
 The Get All Metadata request returns comprehensive information of all the metadata attached to all the entries and assets in your stack.
 
 **Note**: Limited keys such as entity_uid, content_type_uid etc. are shown to the user with no access. For eg: You will see limited keys in the third object of the example response body as the user has no access to that particular entry in the stack.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization |  your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch or alias unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
-| include_multi_stack | false | Set this to 'true' to fetch data from multiple stacks. |
-| include_multi_branch | false | Set this to 'true' to fetch data from multiple branches. |
-| include_title[] | content_type | You can request multiple titles in a single response. For example:  - Set to ‘content_type’ to fetch the name of the con |
-| limit | 50 | Set the limit in between ‘0-100’ to limit the number of items returned as response. |
-| skip | 7 | Set this as ‘0’ to skip the number of items from the response body. |
-| query | {“tags” :”presetBuilder”} | Set this to {{{key}}:{{value}}}. This key allows you to fetch the data that matches the query value. |
-| asc | type | Set this to {{key}}. This key will fetch the data in the ascending order as per the defined value. |
-| desc | type | Set this to {{key}}. This key will fetch the data in the descending order as per the defined value. |
-| only[BASE][] | presets | Set this to {{key}}. This key will only return the data defined in the value field. |
-| except[BASE][] | created_by | Set this to {{key}}. This key will not return the data defined in the value field. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+- **include_multi_stack** (optional)
+  Set this to 'true' to fetch data from multiple stacks.
+  Default: `false`
+- **include_multi_branch** (optional)
+  Set this to 'true' to fetch data from multiple branches.
+  Default: `false`
+- **include_title[]** (optional)
+  You can request multiple titles in a single response. For example: - Set to ‘content_type’ to fetch the name of the content type. - Set to ‘stack’ to fetch the name of the stack. - Set to ‘entity’ to fetch the title of the entity. An entity could be either an entry or an asset.
+  Default: `content_type`
+- **limit** (optional)
+  Set the limit in between ‘0-100’ to limit the number of items returned as response.
+  Default: `50`
+- **skip** (optional)
+  Set this as ‘0’ to skip the number of items from the response body.
+  Default: `7`
+- **query** (optional)
+  Set this to {{{key}}:{{value}}}. This key allows you to fetch the data that matches the query value.
+  Default: `{“tags” :”presetBuilder”}`
+- **asc** (optional)
+  Set this to {{key}}. This key will fetch the data in the ascending order as per the defined value.
+  Default: `type`
+- **desc** (optional)
+  Set this to {{key}}. This key will fetch the data in the descending order as per the defined value.
+  Default: `type`
+- **only[BASE][]** (optional)
+  Set this to {{key}}. This key will only return the data defined in the value field.
+  Default: `presets`
+- **except[BASE][]** (optional)
+  Set this to {{key}}. This key will not return the data defined in the value field.
+  Default: `created_by`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: ` your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -17220,12 +19966,12 @@ The Get All Metadata request returns comprehensive information of all the metada
 ```
 
 
+
 #### Create Metadata
 
 #### Create metadata
 
-**Method:** `POST`  
-**Endpoint:** `/metadata`
+**POST** `/metadata`
 
 The Create metadata request lets you create metadata for a specific asset or entry. Whenever you create metadata for an entry or asset, you need to specify the extension to which it will be connected.
 
@@ -17243,17 +19989,25 @@ In the ‘Body’ section, you need to provide the following information:
 - Once a metadata is created, the associated entry or asset must be published or republished for the metadata to take effect.
 - You can provide any key name to store the metadata for your entry or asset except the following prebuilt keys: created_by, updated_by, created_at, updated_at, deleted_at, api_key, scope, locale, type, extension_uid, _version.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch or alias unique ID. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -17273,7 +20027,7 @@ In the ‘Body’ section, you need to provide the following information:
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -17305,12 +20059,12 @@ In the ‘Body’ section, you need to provide the following information:
 ```
 
 
+
 #### Update Metadata
 
 #### Update metadata
 
-**Method:** `PUT`  
-**Endpoint:** `/metadata/{metadata_uid}`
+**PUT** `/metadata/{metadata_uid}`
 
 The Update metadata request lets you update the metadata for a specific entry or asset.
 
@@ -17330,18 +20084,31 @@ Keep the following points in mind when updating metadata:
 - Once a metadata is updated, the associated entry or asset must be published or republished for the metadata to take effect.
 - You can provide any key name to store the metadata for your entry or asset except the following prebuilt keys: created_by, updated_by, created_at, updated_at, deleted_at, api_key, scope, locale, type, extension_uid, _version, publish_details.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch or alias unique ID. |
-| metadata_uid | cs112ba1c547a3488c | Enter the unique ID of the metadata that you want to update. You can find the metadata UID by running the [Get all asset |
+- **metadata_uid** (required)
+  Enter the unique ID of the metadata that you want to update. You can find the metadata UID by running the [Get all assets](#get-all-assets) or [Get all entries](#get-all-entries) API request.
+  Default: `cs112ba1c547a3488c`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -17378,7 +20145,7 @@ Keep the following points in mind when updating metadata:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -17426,12 +20193,12 @@ Keep the following points in mind when updating metadata:
 ```
 
 
+
 #### Delete Metadata
 
 #### Delete metadata
 
-**Method:** `DELETE`  
-**Endpoint:** `/metadata/{metadata_uid}`
+**DELETE** `/metadata/{metadata_uid}`
 
 The Delete metadata request lets you delete the metadata associated with a specific entry or asset.
 
@@ -17442,18 +20209,34 @@ Keep the following points in mind when deleting metadata:
 - To delete metadata for a specific entry or asset, you need delete access to that entry or asset.
 - Once you delete entry or asset metadata, it is permanently deleted and cannot be restored.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| branch | main | Enter your branch or alias unique ID. |
-| metadata_uid | cs3cbeeef5a398bf0f | Enter the unique ID of the metadata that you want to delete. You can find the metadata UID by running the [Get all asset |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **metadata_uid** (required)
+  Enter the unique ID of the metadata that you want to delete. You can find the metadata UID by running the [Get all assets](#get-all-assets) API request or [Get all entries](https://www.contentstack.com/developers/apis/content-management-api#get-all-entries) API request.
+  Default: `cs3cbeeef5a398bf0f`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -17462,12 +20245,12 @@ Keep the following points in mind when deleting metadata:
 ```
 
 
+
 #### Publish Metadata
 
 #### Publish metadata
 
-**Method:** `POST`  
-**Endpoint:** `/metadata/{metadata_uid}/publish`
+**POST** `/metadata/{metadata_uid}/publish`
 
 The Publish metadata request lets you publish the metadata associated with a specific entry or asset.
 
@@ -17478,19 +20261,37 @@ Keep the following points in mind when publishing metadata:
 - When you publish an entry/asset, the associated metadata of that entry/asset will also get published.Tip: If you publish only the metadata without publishing the corresponding asset or entry, the metadata will not resolve if you pass include_metadata: true. As a best practice, always publish the associated asset or entry.
 - You must pass the include_publish_details query parameter to fetch the metadata publishing details in the response.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch or alias unique ID. |
-| metadata_uid | blt045d039eb6f2f9df | Enter the unique ID of the metadata that you want to publish. You can find the metadata UID by passing include_metadata  |
-| include_publish_details | false | Enter 'true' to include the publish details of the entry. |
+- **metadata_uid** (required)
+  Enter the unique ID of the metadata that you want to publish. You can find the metadata UID by passing include_metadata parameters while running the [Get all assets](#get-all-assets) API request or [Get all entries](#get-all-entries) API request.
+  Default: `blt045d039eb6f2f9df`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_publish_details** (optional)
+  Enter 'true' to include the publish details of the entry.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -17505,7 +20306,7 @@ Keep the following points in mind when publishing metadata:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -17514,29 +20315,42 @@ Keep the following points in mind when publishing metadata:
 ```
 
 
+
 #### Unpublish Metadata
 
 #### Unpublish metadata
 
-**Method:** `POST`  
-**Endpoint:** `/metadata/{metadata_uid}/unpublish`
+**POST** `/metadata/{metadata_uid}/unpublish`
 
 The Unpublish metadata request lets you unpublish the metadata associated with a specific entry or asset.
 
 In the URL, you need to pass the unique ID of the metadata that you want to unpublish against the metadata_uid parameter.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-| branch | main | Enter your branch or alias unique ID. |
-| metadata_uid | blt045d039eb6f2f9df | Enter the unique ID of the metadata that you want to unpublish. You can find the metadata UID by  by passing include_met |
+- **metadata_uid** (optional)
+  Enter the unique ID of the metadata that you want to unpublish. You can find the metadata UID by by passing include_metadata parameters while running the [Get all assets](#get-all-assets) API request or [Get all entries](#get-all-entries) API request.
+  Default: `blt045d039eb6f2f9df`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -17551,13 +20365,14 @@ In the URL, you need to pass the unique ID of the metadata that you want to unpu
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
     "notice": "Metadata sent for unpublishing."
 }
 ```
+
 
 ### Labels
 
@@ -17570,8 +20385,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 #### Get all labels
 
-**Method:** `GET`  
-**Endpoint:** `/labels?include_count={boolean_value}`
+**GET** `/labels?include_count={boolean_value}`
 
 The Get all labels call fetches all the existing labels of the stack.
 
@@ -17582,19 +20396,36 @@ You can add queries to extend the functionality of this API call. Under the URL 
 
 To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of the stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| query | {"type":"dashboard", "enable": true} | Query to retrieve all labels of the stack. |
-| include_count | false | Set this parameter to 'true' to include in response the total count of labels applied to content types. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **query** (optional)
+  Query to retrieve all labels of the stack.
+  Default: `{"type":"dashboard", "enable": true}`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of labels applied to content types.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `the API key of the stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -17650,10 +20481,10 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 }
 ```
 
+
 #### Get a single label
 
-**Method:** `GET`  
-**Endpoint:** `/labels/{label_uid}`
+**GET** `/labels/{label_uid}`
 
 The Get a single label call returns information about a particular label of a stack.
 
@@ -17661,18 +20492,33 @@ When executing the API call, add the label_uid as a URL parameter and management
 
 To configure the permissions for your application via OAuth, please include the cm.labels.management:readscope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| label_uid | blt5d1761bce4b36d57 | Enter the unique ID of the label that you want to retrieve. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **label_uid** (required)
+  Enter the unique ID of the label that you want to retrieve.
+  Default: `blt5d1761bce4b36d57`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -17690,10 +20536,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Add label
 
-**Method:** `POST`  
-**Endpoint:** `/labels`
+**POST** `/labels`
 
 The Add label call is used to create a label.
 
@@ -17702,18 +20548,30 @@ When executing the API call, under the 'Headers' section, add the API key of you
 In the 'Body' section, enter the label details, such as the name of the label, the uid of the parent label, and the content types that need to be included in the label. These details need to be provided in JSON format.  
 To configure the permissions for your application via OAuth, please include the cm.labels.management:writescope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of the stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `the API key of the stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -17729,7 +20587,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -17749,10 +20607,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Update label
 
-**Method:** `PUT`  
-**Endpoint:** `/labels/{label_uid}`
+**PUT** `/labels/{label_uid}`
 
 The Update label call is used to update an existing label.
 
@@ -17761,19 +20619,36 @@ When executing the API call add the label_uid as a URL parameter and management_
 In the 'Body' section, enter the updated details of your label, which include the name of the label, the uid of the parent label, and the content types that need to be included in the label. These details need to be provided in JSON format.  
 To configure the permissions for your application via OAuth, please include the cm.labels.management:writescope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| label_uid | blt5d1761bce4b36d57 | Enter the unique ID of the label that needs to be updated. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **label_uid** (required)
+  Enter the unique ID of the label that needs to be updated.
+  Default: `blt5d1761bce4b36d57`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -17789,7 +20664,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -17811,33 +20686,44 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Delete label
 
-**Method:** `DELETE`  
-**Endpoint:** `/labels/{label_uid}`
+**DELETE** `/labels/{label_uid}`
 
 The Delete label call is used to delete a specific label.
 
 When executing the API call, add the management_token in the Authorization parameters.  
 To configure the permissions for your application via OAuth, please include the cm.labels.management:writescope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| label_uid | blt5d1761bce4b36d57 | Enter the unique ID of the label that you want to delete. |
+- **label_uid** (required)
+  Enter the unique ID of the label that you want to delete.
+  Default: `blt5d1761bce4b36d57`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
   "notice": "Label deleted successfully."
 }
 ```
+
 
 ### Releases
 
@@ -17852,28 +20738,50 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 #### Get all Releases
 
-**Method:** `GET`  
-**Endpoint:** `/releases?include_count={boolean_value}&count={boolean_value}&include_items_count={boolean_value}&limit={limit_value}&skip={skip_value}`
+**GET** `/releases?include_count={boolean_value}&count={boolean_value}&include_items_count={boolean_value}&limit={limit_value}&skip={skip_value}`
 
 The Get all Releases request retrieves a list of all Releases of a stack along with details of each Release. To configure the permissions for your application via OAuth, please include the cm.releases.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authorization | your_management_token | Enter your management token. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| branch | main | Enter your branch unique ID. |
-| include_count | false | The ‘include_count’ parameter includes the count of total number of releases in your stack, along with the details of ea |
-| count | true | The ‘count’ parameter works similar to the ‘include_count’ parameter but returns ONLY the total count of releases in you |
-| include_items_count | true | The ‘include_items_count’ parameter returns the total number of items in a specific release. Example: If you want to kno |
-| limit | 2 | The ‘limit’ parameter will return a specific number of releases in the output. Example, if there are 10 releases and you |
-| skip | 2 | The ‘skip’ parameter will skip a specific number of releases in the response. Example: If there are 12 releases and you  |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_count** (optional)
+  The ‘include_count’ parameter includes the count of total number of releases in your stack, along with the details of each release. Example: If you want to know the total number of releases, you need to mention ‘true’ as the value of this parameter.
+  Default: `false`
+- **count** (optional)
+  The ‘count’ parameter works similar to the ‘include_count’ parameter but returns ONLY the total count of releases in your stack and not the details of the releases in the response. Example: If you want to know the total number of releases in your stack, you need to mention ‘true’ as value for this parameter.
+  Default: `true`
+- **include_items_count** (optional)
+  The ‘include_items_count’ parameter returns the total number of items in a specific release. Example: If you want to know the total number of items in a release, you need to mention ‘true’ as the value of this parameter.
+  Default: `true`
+- **limit** (optional)
+  The ‘limit’ parameter will return a specific number of releases in the output. Example, if there are 10 releases and you want to fetch the  five latest updated releases, you need to specify '5' as value in this parameter.
+  Default: `2`
+- **skip** (optional)
+  The ‘skip’ parameter will skip a specific number of releases in the response. Example: If there are 12 releases and you want to skip the first two updated releases to get only the next 10 in the response body, you need to specify ‘2’ here.
+  Default: `2`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -17897,10 +20805,10 @@ The Get all Releases request retrieves a list of all Releases of a stack along w
 }
 ```
 
+
 #### Get a single Release
 
-**Method:** `GET`  
-**Endpoint:** `/releases/{release_uid}`
+**GET** `/releases/{release_uid}`
 
 The Get a single Release request gets the details of a specific Release in a stack.
 
@@ -17908,19 +20816,37 @@ When executing the API request, provide the Release UID as parameter.
 
 To configure the permissions for your application via OAuth, please include the cm.releases.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release of which you want to retrieve the details. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **release_uid** (required)
+  Enter the unique ID of the release of which you want to retrieve the details.
+  Default: `blt719af000dcde0000`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -17986,28 +20912,43 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Create a Release
 
-**Method:** `POST`  
-**Endpoint:** `/releases`
+**POST** `/releases`
 
 The Create a Release request allows you to create a new Release in your stack. To create a release, you need to provide the name of the release in the request body.
 
 To configure the permissions for your application via OAuth, please include the cm.releases.management:write scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -18020,7 +20961,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18040,10 +20981,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Update a Release
 
-**Method:** `PUT`  
-**Endpoint:** `/releases/{release_uid}`
+**PUT** `/releases/{release_uid}`
 
 The Update a Release call allows you to update the details of a Release, i.e., the ‘name’ and ‘description’.
 
@@ -18051,19 +20992,37 @@ When executing this API request, provide the Release UID as parameter. In the 'B
 
 To configure the permissions for your application via OAuth, please include the cm.releases.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release that you want to update the details of. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **release_uid** (required)
+  Enter the unique ID of the release that you want to update the details of.
+  Default: `blt719af000dcde0000`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -18074,7 +21033,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18094,10 +21053,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Delete a Release
 
-**Method:** `DELETE`  
-**Endpoint:** `/releases/{release_uid}`
+**DELETE** `/releases/{release_uid}`
 
 The Delete a Release request allows you to delete a specific Release from a stack.
 
@@ -18105,18 +21064,31 @@ When executing the API request, provide the Release UID.
 
 To configure the permissions for your application via OAuth, please include the cm.releases.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release that you want to delete. |
+- **release_uid** (required)
+  Enter the unique ID of the release that you want to delete.
+  Default: `blt719af000dcde0000`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -18125,12 +21097,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Release Items
 
 #### Get all items in a Release
 
-**Method:** `GET`  
-**Endpoint:** `/releases/{release_uid}/items`
+**GET** `/releases/{release_uid}/items`
 
 The Get all items in a Release request retrieves a list of all items (entries and assets) that are part of a specific Release.
 
@@ -18138,19 +21110,37 @@ When executing the API request, you need to provide the Release UID.
 
 To configure the permissions for your application via OAuth, please include the cm.release:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release of which you want to retrieve the items. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **release_uid** (required)
+  Enter the unique ID of the release of which you want to retrieve the items.
+  Default: `blt719af000dcde0000`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -18183,10 +21173,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Add a single item to a Release
 
-**Method:** `POST`  
-**Endpoint:** `/releases/{release_uid}/item`
+**POST** `/releases/{release_uid}/item`
 
 The Add a single item to a Release request allows you to add an item (entry or asset) to a Release.
 
@@ -18194,20 +21184,40 @@ When executing the API request, you need to provide the Release UID. In the 'Bod
 
 To configure the permissions for your application via OAuth, please include the cm.release:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | your_release_uid | Enter the unique ID of the release in which you want to add an item. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **release_uid** (required)
+  Enter the unique ID of the release in which you want to add an item.
+  Default: `your_release_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -18221,7 +21231,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18255,10 +21265,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Add multiple items to a Release
 
-**Method:** `POST`  
-**Endpoint:** `/releases/{release_uid}/items`
+**POST** `/releases/{release_uid}/items`
 
 The Add multiple items to a Release request allows you to add multiple items (entries and/or assets) to a Release.
 
@@ -18268,20 +21278,40 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: In a single request, you can add maximum **25** items (entries/assets) to a Release.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | your_release_uid | Enter the unique ID of the release in which you want to add multiple items. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **release_uid** (required)
+  Enter the unique ID of the release in which you want to add multiple items.
+  Default: `your_release_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -18301,7 +21331,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18341,10 +21371,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Update Release items to their latest versions
 
-**Method:** `PUT`  
-**Endpoint:** `/releases/{release_uid}/update_items`
+**PUT** `/releases/{release_uid}/update_items`
 
 The Update Release items to their latest versions request let you update all the release items (entries and assets) to their latest versions before deployment.
 
@@ -18370,20 +21400,40 @@ In case an un-localized entry in the release has been localized later, this requ
 - You cannot update the items in a release once you deploy it.
 - If the latest version of an entry is in the in-progress state, this API request doesn't update the entry.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | blt045d036eb8f2f9df | Enter the unique ID of the release of which you want to update the items (entries and assets) to their latest versions.  |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **release_uid** (required)
+  Enter the unique ID of the release of which you want to update the items (entries and assets) to their latest versions. You can find the release uid by running the [Get all Releases](/docs/developers/apis/content-management-api#releases-collection) API request.
+  Default: `blt045d036eb8f2f9df`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -18393,7 +21443,7 @@ In case an un-localized entry in the release has been localized later, this requ
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18433,10 +21483,10 @@ In case an un-localized entry in the release has been localized later, this requ
 }
 ```
 
+
 #### Remove an item from a Release
 
-**Method:** `DELETE`  
-**Endpoint:** `/releases/{release_uid}/items`
+**DELETE** `/releases/{release_uid}/items`
 
 The Remove an item from a Release request removes one or more items (entries and/or assets) from a specific Release.
 
@@ -18444,20 +21494,40 @@ When executing the API request, provide the Release UID. In the 'Body' section, 
 
 To configure the permissions for your application via OAuth, please include the cm.release:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | blt718af000dcde0000 | Enter the unique ID of the release from which you want to remove an item. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **release_uid** (required)
+  Enter the unique ID of the release from which you want to remove an item.
+  Default: `blt718af000dcde0000`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -18471,7 +21541,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18507,10 +21577,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Delete multiple items from a Release
 
-**Method:** `DELETE`  
-**Endpoint:** `/releases/{release_uid}/items?all={boolean_value}`
+**DELETE** `/releases/{release_uid}/items?all={boolean_value}`
 
 The Delete multiple items from a Release request deletes one or more items (entries and/or assets) from a specific Release.
 
@@ -18518,21 +21588,43 @@ When executing the API request, provide the Release UID. In the 'Body' section, 
 
 To configure the permissions for your application via OAuth, please include the cm.release:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release from which you want to remove items. |
-| all | true | The ‘all’ parameter will allow you to delete all items (entries and/or assets) of a release at once. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **release_uid** (required)
+  Enter the unique ID of the release from which you want to remove items.
+  Default: `blt719af000dcde0000`
 
-**Request Body:**
+##### Query Parameters
+
+- **all** (required)
+  The ‘all’ parameter will allow you to delete all items (entries and/or assets) of a release at once.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -18546,7 +21638,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18575,12 +21667,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Deploy/Execute a Release
 
 #### Deploy a Release
 
-**Method:** `POST`  
-**Endpoint:** `/releases/{release_uid}/deploy`
+**POST** `/releases/{release_uid}/deploy`
 
 The Deploy a Release request deploys a specific Release to specific environment(s) and locale(s).
 
@@ -18588,19 +21680,34 @@ When executing the API request, provide the Release UID. In the 'Body' section, 
 
 To configure the permissions for your application via OAuth, please include the cm.release:deploy scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release which you want to deploy on a specific environment and locale. |
+- **release_uid** (required)
+  Enter the unique ID of the release which you want to deploy on a specific environment and locale.
+  Default: `blt719af000dcde0000`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -18615,7 +21722,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18624,12 +21731,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
-#### Clone a Release
 
 #### Clone a Release
 
-**Method:** `POST`  
-**Endpoint:** `/releases/{release_uid}/clone`
+#### Clone a Release
+
+**POST** `/releases/{release_uid}/clone`
 
 The Clone a Release request allows you to clone (make a copy of) a specific Release in a stack. When executing the API request, provide the Release UID.
 
@@ -18637,20 +21744,40 @@ In the 'Body' section, you need to provide the new name and description of the c
 
 To configure the permissions for your application via OAuth, please include the cm.release:clone scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| release_version | 2.0 | Enter the release version. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release that you want to clone. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **release_uid** (required)
+  Enter the unique ID of the release that you want to clone.
+  Default: `blt719af000dcde0000`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -18661,7 +21788,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18698,12 +21825,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
-#### Lock a Release
 
 #### Lock a Release
 
-**Method:** `PUT`  
-**Endpoint:** `/releases/{release_uid}`
+#### Lock a Release
+
+**PUT** `/releases/{release_uid}`
 
 The Lock a Release request prevents further modifications to the specified release by locking it. In the 'Body' section, set the locked parameter as true to lock the release.
 
@@ -18717,18 +21844,31 @@ Your request body is as follows:
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release that you want to lock. |
+- **release_uid** (required)
+  Enter the unique ID of the release that you want to lock.
+  Default: `blt719af000dcde0000`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -18738,7 +21878,7 @@ Your request body is as follows:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18775,12 +21915,12 @@ Your request body is as follows:
 ```
 
 
+
 #### Unlock a Release
 
 #### Unock a Release
 
-**Method:** `PUT`  
-**Endpoint:** `/releases/{release_uid}`
+**PUT** `/releases/{release_uid}`
 
 The Unlock a Release request removes the lock from a release, allowing further modifications to the specified release. In the 'Body' section, set the locked parameter as false to unlock the release.
 
@@ -18794,18 +21934,31 @@ Your request body is as follows:
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter application/json to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| release_uid | blt719af000dcde0000 | Enter the unique ID of the release that you want to unlock. |
+- **release_uid** (required)
+  Enter the unique ID of the release that you want to unlock.
+  Default: `blt719af000dcde0000`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -18815,7 +21968,7 @@ Your request body is as follows:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -18851,6 +22004,7 @@ Your request body is as follows:
 }
 ```
 
+
 ### Workflows
 
 Workflow is a tool that allows you to streamline the process of content creation and publishing, and lets you manage the content lifecycle of your project smoothly. For more information, refer to our [Workflows](/docs/developers/set-up-workflows-and-publish-rules/) documentation.
@@ -18860,21 +22014,23 @@ Workflow is a tool that allows you to streamline the process of content creation
 
 #### Get all workflows
 
-**Method:** `GET`  
-**Endpoint:** `/workflows`
+**GET** `/workflows`
 
 The Get all Workflows request retrieves the details of all the Workflows of a stack.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.management:read scope.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -19010,26 +22166,34 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Get a Single Workflow
 
 #### Get a single workflow
 
-**Method:** `GET`  
-**Endpoint:** `/workflows/{workflow_uid}`
+**GET** `/workflows/{workflow_uid}`
 
 The Get a Single Workflow request retrieves the comprehensive details of a specific Workflow of a stack.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| workflow_uid | bltc2bca504319aa69a | Enter the UID of your workflow that you want to retrieve. |
+- **workflow_uid** (required)
+  Enter the UID of your workflow that you want to retrieve.
+  Default: `bltc2bca504319aa69a`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -19162,12 +22326,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Create a Workflow
 
 #### Create a workflow
 
-**Method:** `POST`  
-**Endpoint:** `/workflows`
+**POST** `/workflows`
 
 The Create a Workflow request allows you to create a Workflow.
 
@@ -19194,15 +22358,17 @@ You can assign any one of the following values to this parameter:
 
 **Note**: The entry is available for editing, by default, in the first stage that you create in your workflow. As a result, the entry_lock parameter is set to $none for the first stage in the workflow.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -19281,7 +22447,7 @@ You can assign any one of the following values to this parameter:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -19439,12 +22605,12 @@ You can assign any one of the following values to this parameter:
 ```
 
 
+
 #### Add or Update Workflow Details
 
 #### Add or update workflow details
 
-**Method:** `PUT`  
-**Endpoint:** `/workflows/{workflow_uid}`
+**PUT** `/workflows/{workflow_uid}`
 
 The Add or Update Workflow request allows you to add a workflow stage or update the details of the existing stages of a workflow.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.management:writescope.
@@ -19471,16 +22637,23 @@ You can assign any one of the following values to this parameter:
 
 **Note**: The entry is available for editing, by default, in the first stage that you create in your workflow. As a result, the entry_lock parameter is set to $none for the first stage in the workflow.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| workflow_uid | blt53e09746340f82d9 | Enter the UID of your workflow whose details you want to update. |
+- **workflow_uid** (required)
+  Enter the UID of your workflow whose details you want to update.
+  Default: `blt53e09746340f82d9`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `your_authtoken`
+- **authorization** (optional)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Request
 
 ```json
 {
@@ -19559,7 +22732,7 @@ You can assign any one of the following values to this parameter:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -19717,26 +22890,34 @@ You can assign any one of the following values to this parameter:
 ```
 
 
+
 #### Disable Workflow
 
 #### Disable workflow
 
-**Method:** `GET`  
-**Endpoint:** `/workflows/{workflow_uid}/disable`
+**GET** `/workflows/{workflow_uid}/disable`
 
 The Disable Workflow request allows you to disable a workflow.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| workflow_uid | blt53e09746340f82d9 | Enter the UID of your workflow that you want to disable. |
+- **workflow_uid** (required)
+  Enter the UID of your workflow that you want to disable.
+  Default: `blt53e09746340f82d9`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -19870,26 +23051,34 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Enable Workflow
 
 #### Enable workflow
 
-**Method:** `GET`  
-**Endpoint:** `/workflows/{workflow_uid}/enable`
+**GET** `/workflows/{workflow_uid}/enable`
 
 The Enable Workflow request allows you to enable a workflow.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| workflow_uid | blt53e09746340f82d9 | Enter the UID of your workflow that you want to enable. |
+- **workflow_uid** (required)
+  Enter the UID of your workflow that you want to enable.
+  Default: `blt53e09746340f82d9`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -20023,26 +23212,34 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Delete Workflow
 
 #### Delete workflow
 
-**Method:** `DELETE`  
-**Endpoint:** `/workflows/{workflow_uid}`
+**DELETE** `/workflows/{workflow_uid}`
 
 The Delete Workflow request allows you to delete a workflow.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| workflow_uid | blt53e09746340f82d9 | Enter the UID of the workflow that you want to delete. |
+- **workflow_uid** (required)
+  Enter the UID of the workflow that you want to delete.
+  Default: `blt53e09746340f82d9`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -20167,12 +23364,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Entry Workflow Stages
 
 #### Set entry workflow stage
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/workflow?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/workflow?locale={locale_code}`
 
 The Set Entry Workflow Stage request allows you to either set a particular workflow stage of an entry or update the workflow stage details of an entry.   
 To configure the permissions for your application via OAuth, please include the cm.entry.workflow:write scope.
@@ -20181,19 +23378,35 @@ In the 'Body' section, you need to provide the details of the workflow stage. En
 
 **Note**: The request operates using a management token only when the transition rule is configured to "All users/roles."
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-a |
-| Content-Type | application/json |  |
-| content_type_uid | blt53e09746340f82d9 | Enter the content type UID of the entry of which you want to change the workflow stage. |
-| entry_uid | blt01638c90cc28fb6d | Enter the UID of the entry of which you want to change the workflow stage. |
-| locale | en-us | Enter you locale. |
+- **content_type_uid** (required)
+  Enter the content type UID of the entry of which you want to change the workflow stage.
+  Default: `blt53e09746340f82d9`
+- **entry_uid** (required)
+  Enter the UID of the entry of which you want to change the workflow stage.
+  Default: `blt01638c90cc28fb6d`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter you locale.
+  Default: `en-us`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (optional)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -20217,7 +23430,7 @@ In the 'Body' section, you need to provide the details of the workflow stage. En
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -20226,12 +23439,12 @@ In the 'Body' section, you need to provide the details of the workflow stage. En
 ```
 
 
+
 #### Publish Rules Collection
 
 #### Create publish rules
 
-**Method:** `POST`  
-**Endpoint:** `/workflows/publishing_rules`
+**POST** `/workflows/publishing_rules`
 
 The Create Publish Rules request allows you to create publish rules for the workflow of a stack.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.publishing-rules:write scope.
@@ -20245,15 +23458,17 @@ To define the branch scope, specify the unique IDs of the branches for which the
 ]
 ```
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -20285,7 +23500,7 @@ To define the branch scope, specify the unique IDs of the branches for which the
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -20324,10 +23539,10 @@ To define the branch scope, specify the unique IDs of the branches for which the
 }
 ```
 
+
 #### Update publish rules
 
-**Method:** `PUT`  
-**Endpoint:** `/workflows/publishing_rules/{rule_uid}`
+**PUT** `/workflows/publishing_rules/{rule_uid}`
 
 The Update Publish Rules request allows you to add a publish rule or update the details of the existing publish rules of a workflow.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.publishing-rules:write scope.
@@ -20341,17 +23556,26 @@ To define the branch scope, specify the unique IDs of the branches for which the
 ]
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| rule_uid | your_rule_uid | Enter the UID of the publish rule that you want to update. |
+- **rule_uid** (required)
+  Enter the UID of the publish rule that you want to update.
+  Default: `your_rule_uid`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -20376,7 +23600,7 @@ To define the branch scope, specify the unique IDs of the branches for which the
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -20384,24 +23608,33 @@ To define the branch scope, specify the unique IDs of the branches for which the
 }
 ```
 
+
 #### Delete publish rules
 
-**Method:** `DELETE`  
-**Endpoint:** `/workflows/publishing_rules/{rule_uid}`
+**DELETE** `/workflows/publishing_rules/{rule_uid}`
 
 The Delete Publish Rules request allows you to delete an existing publish rule.   
 To configure the permissions for your application via OAuth, please include the cm.workflows.publishing-rules:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter your stack API key |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| rule_uid | publish_rule_uid | Enter the UID of the publish rule that you want to delete. |
+- **rule_uid** (required)
+  Enter the UID of the publish rule that you want to delete.
+  Default: `publish_rule_uid`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter your stack API key
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -20409,26 +23642,38 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Get all publish rules
 
-**Method:** `GET`  
-**Endpoint:** `/workflows/publishing_rules?content_types=[{content_type_uid}]&limit={rule_limit}&include_count={boolean_value}`
+**GET** `/workflows/publishing_rules?content_types=[{content_type_uid}]&limit={rule_limit}&include_count={boolean_value}`
 
 The Get all Publish Rules request retrieves the details of all the Publish rules of a workflow.   
 To configure the permissions for your application via OAuth, please include the cm.workflows.publishing-rules:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| content_types | {{content_type_uid1,content_type_uid2,...}} | Enter a comma-separated list of content type UIDs for filtering publish rules on its basis. |
-| limit | 10 | Enter the limit value to display only the set number of publishing rules. |
-| include_count | true | Set this parameter to 'true' to include the total number of publish rules in the response body. |
+- **content_types** (required)
+  Enter a comma-separated list of content type UIDs for filtering publish rules on its basis.
+  Default: `{{content_type_uid1,content_type_uid2,...}}`
+- **limit** (optional)
+  Enter the limit value to display only the set number of publishing rules.
+  Default: `10`
+- **include_count** (required)
+  Set this parameter to 'true' to include the total number of publish rules in the response body.
+  Default: `true`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -20499,24 +23744,32 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Get a single publish rule
 
-**Method:** `GET`  
-**Endpoint:** `/workflows/publishing_rules/{rule_uid}`
+**GET** `/workflows/publishing_rules/{rule_uid}`
 
 The Get a Single Publish Rule request retrieves the comprehensive details of a specific publish rule of a Workflow.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.publishing-rules:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| rule_uid | blt53e09746340f82d9 | Enter the UID of the publish rule that you want to fetch. |
+- **rule_uid** (required)
+  Enter the UID of the publish rule that you want to fetch.
+  Default: `blt53e09746340f82d9`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -20556,32 +23809,50 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Publish Rules by Content Types
 
 #### Get publish rules by content types
 
-**Method:** `GET`  
-**Endpoint:** `/workflows/content_type/{content_type_uid}?action=(publish/unpublish)&locale={locale_code}&environment={environment_uid}`
+**GET** `/workflows/content_type/{content_type_uid}?action=(publish/unpublish)&locale={locale_code}&environment={environment_uid}`
 
 The Get Publish Rules by Content Types request allows you to retrieve details of a Publish Rule applied to a specific content type of your stack.
 
 When executing the API request, in the 'Header' section, you need to provide the API Key of your stack and the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json |  |
-| content_type_uid | content_type_uid | Enter the UID of the content type of which you want to retrieve the Publishing Rule. |
-| action | publish/unpublish | Enter the action that has been set in the Publishing Rule. |
-| locale | en-us | Enter the code of the locale where your Publishing Rule will be applicable. |
-| environment | production | Enter the UID of the environment where your Publishing Rule will be applicable. |
+- **content_type_uid** (required)
+  Enter the UID of the content type of which you want to retrieve the Publishing Rule.
+  Default: `content_type_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **action** (required)
+  Enter the action that has been set in the Publishing Rule.
+  Default: `publish/unpublish`
+- **locale** (optional)
+  Enter the code of the locale where your Publishing Rule will be applicable.
+  Default: `en-us`
+- **environment** (optional)
+  Enter the UID of the environment where your Publishing Rule will be applicable.
+  Default: `production`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+
+##### Sample Response
 
 ```json
 {
@@ -20617,12 +23888,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Publish Request Approval
 
 #### Request/Accept/Reject Entry Publish Request
 
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/workflow?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/workflow?locale={locale_code}`
 
 This multipurpose request allows you to either send a publish request or accept/reject a received publish request.
 
@@ -20630,18 +23901,31 @@ When executing the API request, in the 'Header' section, you need to provide the
 
 In the 'Body' section, you need to provide the details of the publish rule, such as its UID, action (‘publish’, ‘unpublish’, or ’both’), status (this could be ‘0’ for Approval Requested, ‘1’ for ‘Approval Accepted’, and ‘-1’ for ‘Approval Rejected’), notification setting, and comment for the approver.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken |  |
-| Content-Type | application/json |  |
-| content_type_uid | content_type_uid | Enter the unique ID of the content type to which the entry belongs. |
-| entry_uid | entry_uid | Enter the unique ID of the entry on which the Publishing Rule is applicable. |
-| locale | en-us | Enter the code of the locale that the entry belongs to. |
+- **content_type_uid** (required)
+  Enter the unique ID of the content type to which the entry belongs.
+  Default: `content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry on which the Publishing Rule is applicable.
+  Default: `entry_uid`
 
-**Request Body:**
+##### Query Parameters
+
+- **locale** (optional)
+  Enter the code of the locale that the entry belongs to.
+  Default: `en-us`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -20657,7 +23941,7 @@ In the 'Body' section, you need to provide the details of the publish rule, such
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 [{
@@ -20673,30 +23957,44 @@ In the 'Body' section, you need to provide the details of the publish rule, such
 ```
 
 
+
 #### Workflow Tasks
 
 #### Get all Tasks
 
-**Method:** `GET`  
-**Endpoint:** `/user/assignments?query={query_in_JSON}&sort={field_uid: "asc/desc"}&limit={limit_value}&skip={skip_value}`
+**GET** `/user/assignments?query={query_in_JSON}&sort={field_uid: "asc/desc"}&limit={limit_value}&skip={skip_value}`
 
 The Get all Tasks request retrieves a list of all tasks assigned to you.
 
 When executing the API request, in the 'Header' section, you need to provide the API Key of your stack and the authtoken that you receive after logging into your account.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| query | {"type":"workflow_stage"} | Enter the actual query that will be executed to retrieve the tasks. This query should be in JSON format. Example:  - {"j |
-| sort | {“assigned_at”: “desc”} | Enter the field UID on the basis of which you want to sort your tasks. Example: {"assigned_at": "desc"}, {"content_type" |
-| limit | 5 | Enter the maximum number of tasks that you want to retrieve in the response. |
-| skip | 5 | Enter the number of tasks to be skipped. |
+- **query** (required)
+  Enter the actual query that will be executed to retrieve the tasks. This query should be in JSON format. Example: - {"job.publishing_rule.status":0}: retrieves pending approval requests - {"type":"workflow_stage"}: retrieve tasks based on Workflow Stages - {"job.workflow_stage.uid": "workflow_stage_uid"}: retrieve tasks based on a specific Workflow Stage  - {"content_type":"content_type_uid", "type": "publishing_rule"}: retrieve tasks based on multiple conditions
+  Default: `{"type":"workflow_stage"}`
+- **sort** (optional)
+  Enter the field UID on the basis of which you want to sort your tasks. Example: {"assigned_at": "desc"}, {"content_type": "asc"}, or {"assigned_date": "desc", "locale":"asc"}
+  Default: `{“assigned_at”: “desc”}`
+- **limit** (optional)
+  Enter the maximum number of tasks that you want to retrieve in the response.
+  Default: `5`
+- **skip** (optional)
+  Enter the number of tasks to be skipped.
+  Default: `5`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Response
 
 ```json
 {
@@ -20790,6 +24088,7 @@ When executing the API request, in the 'Header' section, you need to provide the
 }
 ```
 
+
 ### Languages
 
 Contentstack has a sophisticated multilingual capability. It allows you to create and publish entries in any language. This feature allows you to set up multilingual websites and cater to a wide variety of audience by serving content in their local language(s).
@@ -20803,8 +24102,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 #### Get all languages
 
-**Method:** `GET`  
-**Endpoint:** `/locales?include_count={boolean_value}`
+**GET** `/locales?include_count={boolean_value}`
 
 This call fetches the list of all languages (along with the language codes) available for a stack.
 
@@ -20815,18 +24113,30 @@ You can add queries to extend the functionality of this API call. Under the URL 
 
 To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| include_count | false | Set this parameter to 'true' to include in response the total count of languages added to your stack. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of languages added to your stack.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -20858,10 +24168,10 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 }
 ```
 
+
 #### Add a language
 
-**Method:** `POST`  
-**Endpoint:** `/locales`
+**POST** `/locales`
 
 This call lets you add a new language to your stack. You can either add a [supported language](/docs/developers/multilingual-content/supported-languages) or a [custom language](/docs/developers/multilingual-content/add-a-custom-language) of your choice.  
 To configure the permissions for your application via OAuth, please include the cm.languages.management:write scope.
@@ -20872,18 +24182,31 @@ In the 'Body' section, enter the language name and code in JSON format. You can 
 
 **Warning**: Once generated, you cannot modify a custom language code. However, you can update the language name and fallback language if required.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | false | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `false`
+
+##### Sample Request
 
 ```json
 {
@@ -20895,7 +24218,7 @@ In the 'Body' section, enter the language name and code in JSON format. You can 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -20915,28 +24238,43 @@ In the 'Body' section, enter the language name and code in JSON format. You can 
 }
 ```
 
+
 #### Get a language
 
-**Method:** `GET`  
-**Endpoint:** `/locales/{code}`
+**GET** `/locales/{code}`
 
 The Get a language call returns information about a specific language available on the stack.
 
 When executing the API call, under the 'Header' section, you need to enter the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.languages.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| code | fr-fr | Enter the code of the language that you want to retrieve. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **code** (required)
+  Enter the code of the language that you want to retrieve.
+  Default: `fr-fr`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -20955,10 +24293,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Update language
 
-**Method:** `PUT`  
-**Endpoint:** `/locales/{code}`
+**PUT** `/locales/{code}`
 
 The Update language call will let you update the details (such as display name) and the fallback language of an existing language of your stack.  
 To configure the permissions for your application via OAuth, please include the cm.languages.management:write scope.
@@ -20967,19 +24305,37 @@ When executing the API call, under the 'Header' section, you need to enter the a
 
 In the 'Body' section, enter the updated details of your language name and fallback language in JSON format.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| code | your_language_code | Enter the code of the language that you wish to update. |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **code** (required)
+  Enter the code of the language that you wish to update.
+  Default: `your_language_code`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -20990,7 +24346,7 @@ In the 'Body' section, enter the updated details of your language name and fallb
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -21010,27 +24366,36 @@ In the 'Body' section, enter the updated details of your language name and fallb
 }
 ```
 
+
 #### Delete language
 
-**Method:** `DELETE`  
-**Endpoint:** `/locales/{code}`
+**DELETE** `/locales/{code}`
 
 The Delete language call deletes an existing language from your stack.
 
 When executing the API call, under the 'Header' section, you need to enter the API key of your stack and the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.languages.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of your stack |  |
-| authtoken | your_authtoken |  |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| code | fr-fr | Enter the code of the language that you wish to delete. |
+- **code** (required)
+  Enter the code of the language that you wish to delete.
+  Default: `fr-fr`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `the API key of your stack`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -21039,14 +24404,14 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Fallback Languages
 
 Language fallback allows entries created in a particular language to initially inherit data from the fallback language instead of directly inheriting content from the master language. For more information, refer the documentation for [Fallback Language](/docs/developers/multilingual-content/about-fallback-languages).
 
 #### Set a fallback language
 
-**Method:** `POST`  
-**Endpoint:** `/locales`
+**POST** `/locales`
 
 The Set a fallback language request allows you to assign a fallback language for an entry in a particular language.
 
@@ -21057,18 +24422,30 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: The language set as a fallback language will always inherit data from the master language if it does not have localized content.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of your stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| include_language | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **include_language** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -21080,7 +24457,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -21091,11 +24468,11 @@ To configure the permissions for your application via OAuth, please include the 
   }
 }
 ```
+
 
 #### Update fallback language
 
-**Method:** `PUT`  
-**Endpoint:** `/locales/{locale_uid}`
+**PUT** `/locales/{locale_uid}`
 
 The Update fallback language request allows you to update the fallback language for an existing language of your stack.
 
@@ -21106,19 +24483,36 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: The language set as a fallback language will always inherit data from the master language if it does not have localized content.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of your stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| branch | main | Enter your branch unique ID. |
-| locale_code | zh-cn | Enter the language code of the language that you want to assign as a fallback language for an existing language of your  |
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch w |
+- **locale_code** (required)
+  Enter the language code of the language that you want to assign as a fallback language for an existing language of your stack.
+  Default: `zh-cn`
 
-**Request Body:**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Request
 
 ```json
 {
@@ -21130,7 +24524,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -21150,6 +24544,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 ### Environment
 
 A publishing environment corresponds to one or more deployment servers or a content delivery destination where the entries need to be published.
@@ -21161,8 +24556,7 @@ Read more about [Environments](/docs/developers/set-up-environments).
 
 #### Get all environments
 
-**Method:** `GET`  
-**Endpoint:** `/environments?include_count={boolean_value}&asc={field_uid}&desc={field_uid}`
+**GET** `/environments?include_count={boolean_value}&asc={field_uid}&desc={field_uid}`
 
 The Get all environments call fetches the list of all environments available in a stack.
 
@@ -21171,18 +24565,30 @@ You can add queries to extend the functionality of this API call. Under the URL 
 To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api/#queries) section of the Content Delivery API doc.  
 To configure the permissions for your application via OAuth, please include thecm.environments.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| include_count | false | Set this parameter to 'true' to include in response the total count of languages added to your stack. |
-| asc | created_at | Enter the unique ID of the field for sorting the environments in ascending order with respect to that field. |
-| desc | updated_at | Enter the unique ID of the field for sorting the environments in descending order with respect to that field. |
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of languages added to your stack.
+  Default: `false`
+- **asc** (optional)
+  Enter the unique ID of the field for sorting the environments in ascending order with respect to that field.
+  Default: `created_at`
+- **desc** (optional)
+  Enter the unique ID of the field for sorting the environments in descending order with respect to that field.
+  Default: `updated_at`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -21241,26 +24647,34 @@ To configure the permissions for your application via OAuth, please include thec
 }
 ```
 
+
 #### Get a single environment
 
-**Method:** `GET`  
-**Endpoint:** `/environments/{environment_name}`
+**GET** `/environments/{environment_name}`
 
 The Get a single environment call returns more details about the specified environment of a stack.
 
 When executing the API call, under the 'Header' section, you need to enter the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.environments.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| environment_name | development | Enter the name of the environment. |
+- **environment_name** (required)
+  Enter the name of the environment.
+  Default: `development`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -21284,10 +24698,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Add an environment
 
-**Method:** `POST`  
-**Endpoint:** `/environments`
+**POST** `/environments`
 
 The Add an environment call will add a publishing environment for a stack.
 
@@ -21296,16 +24710,21 @@ When executing the API call, under the 'Header' section, you need to enter the A
 In the 'Body' section, mention the environment name, the URLs (which include the language code and the URL of the server).  
 To configure the permissions for your application via OAuth, please include the cm.environments.management:write scope.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of your stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Default: `the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -21319,7 +24738,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -21344,10 +24763,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Update environment
 
-**Method:** `PUT`  
-**Endpoint:** `/environments/{environment_name}`
+**PUT** `/environments/{environment_name}`
 
 The Update environment call will update the details of an existing publishing environment for a stack.
 
@@ -21356,17 +24775,27 @@ When executing the API call, under the 'Header' section, you need to enter the A
 In the 'Body' section, enter the updated details of the environment. You can modify the environment name, the URLs (which include the language code and the URL of the server).  
 To configure the permissions for your application via OAuth, please include the cm.environments.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of your stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| environment_name | development | Enter the name of the environment. |
+- **environment_name** (required)
+  Enter the name of the environment.
+  Default: `development`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -21380,7 +24809,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -21405,32 +24834,41 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Delete environment
 
-**Method:** `DELETE`  
-**Endpoint:** `/environments/{environment_name}`
+**DELETE** `/environments/{environment_name}`
 
 The Delete environment call will delete an existing publishing environment from your stack.
 
 When executing the API call, under the 'Header' section, you need to enter the API key of your stack and the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.environments.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | the API key of your stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| environment_name | development | Enter the name of the environment. |
+- **environment_name** (required)
+  Enter the name of the environment.
+  Default: `development`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
   "notice": "Environment deleted successfully."
 }
 ```
+
 
 ### Tokens
 
@@ -21443,19 +24881,18 @@ Delivery tokens provide read-only access to the associated environments, while m
 
 #### Get all delivery tokens
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/delivery_tokens`
+**GET** `/stacks/delivery_tokens`
 
 The Get all delivery tokens request returns the details of all the delivery tokens created in a stack.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -21536,23 +24973,28 @@ The Get all delivery tokens request returns the details of all the delivery toke
     ]
 }
 ```
+
 
 #### Get a single delivery token
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/delivery_tokens/{token_uid}`
+**GET** `/stacks/delivery_tokens/{token_uid}`
 
 The Get a single delivery token request returns the details of a particular delivery token created in a stack.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| token_uid | blt22222ecd22a2ccd222 | Enter the UID of the token that you want to retrieve. |
+- **token_uid** (required)
+  Enter the UID of the token that you want to retrieve.
+  Default: `blt22222ecd22a2ccd222`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+
+##### Sample Response
 
 ```json
 {
@@ -21634,10 +25076,10 @@ The Get a single delivery token request returns the details of a particular deli
 }
 ```
 
+
 #### Create delivery token
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/delivery_tokens`
+**POST** `/stacks/delivery_tokens`
 
 The Create delivery token request is used to create a delivery token in the stack.
 
@@ -21672,16 +25114,22 @@ You need to specify the branch and alias scope for your delivery token through t
 }
 ```
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| Content-Type | application/json |  |
-| create_with_preview_token | true | Set this to true to create a preview token. |
+- **create_with_preview_token** (optional)
+  Set this to true to create a preview token.
+  Default: `true`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -21699,7 +25147,7 @@ You need to specify the branch and alias scope for your delivery token through t
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -21750,10 +25198,10 @@ You need to specify the branch and alias scope for your delivery token through t
 }
 ```
 
+
 #### Update delivery token
 
-**Method:** `PUT`  
-**Endpoint:** `/stacks/delivery_tokens/{token_uid}`
+**PUT** `/stacks/delivery_tokens/{token_uid}`
 
 The Update delivery token request lets you update the details of a delivery token.
 
@@ -21785,16 +25233,22 @@ the branch and alias scope for your delivery token through the following schema 
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| Content-Type | application/json |  |
-| token_uid | blt12312ecd31a2ccd123 | Enter the UID of the token that you want to update. |
+- **token_uid** (required)
+  Enter the UID of the token that you want to update.
+  Default: `blt12312ecd31a2ccd123`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -21835,7 +25289,7 @@ the branch and alias scope for your delivery token through the following schema 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -21917,29 +25371,40 @@ the branch and alias scope for your delivery token through the following schema 
 }
 ```
 
+
 #### Delete delivery token
 
-**Method:** `DELETE`  
-**Endpoint:** `/stacks/delivery_tokens/{token_uid}?force={boolean_value}`
+**DELETE** `/stacks/delivery_tokens/{token_uid}?force={boolean_value}`
 
 The Delete delivery token request deletes a specific delivery token.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | Your_Authtoken |  |
-| token_uid | cs22222ecd22a2ccd222 | Enter the UID of the token that you want to delete. |
-| force | false | Enter ‘true’ to force delete a delivery token. |
+- **token_uid** (required)
+  Enter the UID of the token that you want to delete.
+  Default: `cs22222ecd22a2ccd222`
 
-**Response (200):**
+##### Query Parameters
+
+- **force** (optional)
+  Enter ‘true’ to force delete a delivery token.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+
+##### Sample Response
 
 ```json
 {
 	"notice:": "Delivery Token deleted successfully."
 }
 ```
+
 
 
 #### Preview Token Collection
@@ -21950,22 +25415,32 @@ A [Preview Token](/docs/developers/create-tokens/about-delivery-tokens#about-pre
 
 #### Create preview token
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/delivery_tokens/{delivery_token_uid}/preview_token`
+**POST** `/stacks/delivery_tokens/{delivery_token_uid}/preview_token`
 
 The Create preview token request creates a Preview token for a particular Delivery token in a stack of your organization.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| delivery_token_uid | your_delivery_token_uid | Enter the UID of the delivery token for which you want to delete the preview token. |
+- **delivery_token_uid** (required)
+  Enter the UID of the delivery token for which you want to delete the preview token.
+  Default: `your_delivery_token_uid`
 
-**Response (201):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (optional)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Response
 
 ```json
 {
@@ -22016,23 +25491,32 @@ The Create preview token request creates a Preview token for a particular Delive
 }
 ```
 
+
 #### Delete preview token
 
-**Method:** `DELETE`  
-**Endpoint:** `/stacks/delivery_tokens/{delivery_token_uid}/preview_token`
+**DELETE** `/stacks/delivery_tokens/{delivery_token_uid}/preview_token`
 
 The Delete preview token request deletes a preview token associated with a specific delivery token.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | your_management_token | Enter your management token. |
-| delivery_token_uid | your_delivery_token_uid | Enter the UID of the delivery token for which you want to delete the preview token. |
+- **delivery_token_uid** (required)
+  Enter the UID of the delivery token for which you want to delete the preview token.
+  Default: `your_delivery_token_uid`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+
+##### Sample Response
 
 ```json
 {
@@ -22041,23 +25525,25 @@ The Delete preview token request deletes a preview token associated with a speci
 ```
 
 
+
 #### Management Token Collection
 
 #### Get all management tokens
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/management_tokens`
+**GET** `/stacks/management_tokens`
 
 The Get all management tokens request returns the details of all the management tokens generated in a stack and not the actual management tokens.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -22144,22 +25630,29 @@ The Get all management tokens request returns the details of all the management 
 }
 ```
 
+
 #### Get a single management token
 
-**Method:** `GET`  
-**Endpoint:** `/stacks/management_tokens/{token_uid}`
+**GET** `/stacks/management_tokens/{token_uid}`
 
 The Get a single management token request returns the details of a specific management token generated in a stack and not the actual management token.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| token_uid | blt4c10d48233884473 | Enter the UID of the management token of which you want to retrieve the details of. |
+- **token_uid** (required)
+  Enter the UID of the management token of which you want to retrieve the details of.
+  Default: `blt4c10d48233884473`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
@@ -22205,10 +25698,10 @@ The Get a single management token request returns the details of a specific mana
 }
 ```
 
+
 #### Create management token
 
-**Method:** `POST`  
-**Endpoint:** `/stacks/management_tokens`
+**POST** `/stacks/management_tokens`
 
 The Create management token request is used to create a management token in a stack. This token provides you with read-write access to the content of your stack.
 
@@ -22244,15 +25737,19 @@ the branch and alias scope for your management token through the following schem
 
 **Note**: You can generate a maximum of 10 management tokens for a specific stack within your organization.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -22294,7 +25791,7 @@ the branch and alias scope for your management token through the following schem
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -22343,10 +25840,10 @@ the branch and alias scope for your management token through the following schem
 }
 ```
 
+
 #### Update management token
 
-**Method:** `PUT`  
-**Endpoint:** `/stacks/management_tokens/{token_uid}`
+**PUT** `/stacks/management_tokens/{token_uid}`
 
 The Update management token request lets you update the details of a management token. You can change the name and description of the token; update the stack-level permissions assigned to the token; and change the expiry date of the token (if set).
 
@@ -22377,16 +25874,25 @@ To specify the updated branch and alias scope for your management token, use the
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| token_uid | blt3c33b3833884482 | Enter the UID of the management token that you want to update. |
+- **token_uid** (required)
+  Enter the UID of the management token that you want to update.
+  Default: `blt3c33b3833884482`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -22434,7 +25940,7 @@ To specify the updated branch and alias scope for your management token, use the
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -22488,28 +25994,36 @@ To specify the updated branch and alias scope for your management token, use the
 }
 ```
 
+
 #### Delete management token
 
-**Method:** `DELETE`  
-**Endpoint:** `/stacks/management_tokens/{token_uid}`
+**DELETE** `/stacks/management_tokens/{token_uid}`
 
 The Delete management token request deletes a specific management token.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| token_uid | blt3c33b3833884482 | Enter the UID of the management token that you want to delete. |
+- **token_uid** (required)
+  Enter the UID of the management token that you want to delete.
+  Default: `blt3c33b3833884482`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+
+##### Sample Response
 
 ```json
 {
     "notice": "Management Token deleted successfully."
 }
 ```
+
 
 ### Roles
 
@@ -22520,8 +26034,7 @@ A role is a collection of permissions that will be applicable to all the users w
 
 #### Get all roles
 
-**Method:** `GET`  
-**Endpoint:** `/roles?include_permissions={boolean_value}&include_rules={boolean_value}`
+**GET** `/roles?include_permissions={boolean_value}&include_rules={boolean_value}`
 
 The Get all roles request returns comprehensive information about all roles created in a stack.
 
@@ -22530,17 +26043,27 @@ You can add queries to extend the functionality of this API request. Under the U
 To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.  
 To configure the permissions for your application via OAuth, please include the cm.roles.management:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| include_permissions | false | Set this parameter to 'true' to include the details of the permissions assigned to a particular role. |
-| include_rules | false | Set this to ‘true’ to include the details of the rules assigned to a role. |
+- **include_permissions** (optional)
+  Set this parameter to 'true' to include the details of the permissions assigned to a particular role.
+  Default: `false`
+- **include_rules** (optional)
+  Set this to ‘true’ to include the details of the rules assigned to a role.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -22726,26 +26249,41 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Get a single role
 
-**Method:** `GET`  
-**Endpoint:** `/roles/{role_uid}?include_permissions={include_permissions}&include_rules={include_rules}`
+**GET** `/roles/{role_uid}?include_permissions={include_permissions}&include_rules={include_rules}`
 
 The Get a single role request returns comprehensive information on a specific role.  
 To configure the permissions for your application via OAuth, please include the cm.roles.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| role_uid | blt0123123b123733 | Enter the unique ID of the role of which you want to retrieve the details. |
-| include_permissions | true | Set this parameter to 'true' to include the details of the permissions assigned to a particular role. |
-| include_rules | false | Set this to ‘true’ to include the details of the rules assigned to a particular role. |
+- **role_uid** (required)
+  Enter the unique ID of the role of which you want to retrieve the details.
+  Default: `blt0123123b123733`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_permissions** (optional)
+  Set this parameter to 'true' to include the details of the permissions assigned to a particular role.
+  Default: `true`
+- **include_rules** (optional)
+  Set this to ‘true’ to include the details of the rules assigned to a particular role.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -22812,10 +26350,10 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Create a role
 
-**Method:** `POST`  
-**Endpoint:** `/roles`
+**POST** `/roles`
 
 The Create a role request creates a new role in a stack.
 
@@ -22911,16 +26449,22 @@ To add taxonomy specific permissions, follow the following schema in your reques
     }
 ```
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| api_key | your_api_key | Enter the API key of your stack |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **api_key** (required)
+  Enter the API key of your stack
+  Default: `your_api_key`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -23004,7 +26548,7 @@ To add taxonomy specific permissions, follow the following schema in your reques
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -23105,10 +26649,10 @@ To add taxonomy specific permissions, follow the following schema in your reques
 }
 ```
 
+
 #### Update role
 
-**Method:** `PUT`  
-**Endpoint:** `/roles/{role_uid}`
+**PUT** `/roles/{role_uid}`
 
 The Update role request lets you modify an existing role of your stack. However, the pre-existing system roles cannot be modified.
 
@@ -23204,17 +26748,28 @@ To add taxonomy specific permissions, follow the following schema in your reques
     }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter your authtoken. |
-| api_key | your_api_key | Enter the API key of your stack |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| role_uid | your_role_uid | Enter the unique ID of the role of which you want to update the details. |
+- **role_uid** (required)
+  Enter the unique ID of the role of which you want to update the details.
+  Default: `your_role_uid`
 
-**Request Body:**
+##### Headers
+
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **api_key** (required)
+  Enter the API key of your stack
+  Default: `your_api_key`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -23298,7 +26853,7 @@ To add taxonomy specific permissions, follow the following schema in your reques
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -23400,30 +26955,39 @@ To add taxonomy specific permissions, follow the following schema in your reques
 }
 ```
 
+
 #### Delete role
 
-**Method:** `DELETE`  
-**Endpoint:** `/roles/{role_uid}`
+**DELETE** `/roles/{role_uid}`
 
 The Delete role call deletes an existing role from your stack.  
 To configure the permissions for your application via OAuth, please include the cm.roles.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | Enter the API key of your stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| role_uid | bltc7aa14ea1959b252 | Enter the unique ID of the role that you want to delete. |
+- **role_uid** (required)
+  Enter the unique ID of the role that you want to delete.
+  Default: `bltc7aa14ea1959b252`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `Enter the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
   "notice": "The role deleted successfully."
 }
 ```
+
 
 ### Webhooks
 
@@ -23436,8 +27000,7 @@ A webhook is a mechanism that sends real-time information to any third-party app
 
 #### Get all webhooks
 
-**Method:** `GET`  
-**Endpoint:** `/webhooks`
+**GET** `/webhooks`
 
 The Get all Webhooks request returns comprehensive information on all the available webhooks in the specified stack.
 
@@ -23446,16 +27009,21 @@ The Get all Webhooks request returns comprehensive information on all the availa
 When executing the API call, under the 'Header' section, you need to enter the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.webhooks.management:read scope.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -23536,28 +27104,36 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Get Single Webhook
 
 #### Get webhook
 
-**Method:** `GET`  
-**Endpoint:** `/webhooks/{webhook_uid}`
+**GET** `/webhooks/{webhook_uid}`
 
 The Get webhook request returns comprehensive information on a specific webhook.
 
 When executing the API call, under the 'Header' section, you need to enter the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.webhooks.management:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| webhook_uid | cscb27cf54-3abd-46b4-970e-1f11a11e2905 | Enter the unique ID of the webhook of which you want to retrieve the details. Execute the 'Get all webhooks' call to ret |
+- **webhook_uid** (required)
+  Enter the unique ID of the webhook of which you want to retrieve the details. Execute the 'Get all webhooks' call to retrieve the UID of a webhook.
+  Default: `cscb27cf54-3abd-46b4-970e-1f11a11e2905`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -23604,12 +27180,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Create a Webhook
 
 #### Create a webhook
 
-**Method:** `POST`  
-**Endpoint:** `/webhooks`
+**POST** `/webhooks`
 
 The Create a webhook request allows you to create a new webhook in a specific stack.
 
@@ -23691,16 +27267,22 @@ When creating a webhook, you can specify the branch scope through the following 
 
 **Note**: To configure the permissions for applications that are using Contentstack OAuth, add the cm.webhooks.management:write user-related permission scope under the OAuth settings of your app in Developer Hub. For more details, refer to the [Contentstack OAuth documentation](https://www.contentstack.com/docs/developers/developer-hub/contentstack-oauth).
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -23734,7 +27316,7 @@ When creating a webhook, you can specify the branch scope through the following 
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -23777,12 +27359,12 @@ When creating a webhook, you can specify the branch scope through the following 
 ```
 
 
+
 #### Update Webhook
 
 #### Update webhook
 
-**Method:** `PUT`  
-**Endpoint:** `/webhooks/{webhook_uid}`
+**PUT** `/webhooks/{webhook_uid}`
 
 The Update webhook request allows you to update the details of an existing webhook in the stack.
 
@@ -23864,17 +27446,28 @@ When updating a webhook, you can specify the branch scope through the following 
 
 **Note**: To configure the permissions for applications that are using Contentstack OAuth, add the cm.webhooks.management:write user-related permission scope under the OAuth settings of your app in Developer Hub. For more details, refer to the [Contentstack OAuth documentation](https://www.contentstack.com/docs/developers/developer-hub/contentstack-oauth).
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-| webhook_uid | csbe27cf64-3abd-86b4-970e-1f11b14e2705 | Enter the UID of the webhook that you want to update. Execute the “Get all webhooks” request to retrieve the UID of a we |
+- **webhook_uid** (required)
+  Enter the UID of the webhook that you want to update. Execute the “Get all webhooks” request to retrieve the UID of a webhook.
+  Default: `csbe27cf64-3abd-86b4-970e-1f11b14e2705`
 
-**Request Body:**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+
+##### Sample Request
 
 ```json
 {
@@ -23908,7 +27501,7 @@ When updating a webhook, you can specify the branch scope through the following 
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -23954,28 +27547,36 @@ When updating a webhook, you can specify the branch scope through the following 
 ```
 
 
+
 #### Delete Webhook
 
 #### Delete webhook
 
-**Method:** `DELETE`  
-**Endpoint:** `/webhooks/{webhook_uid}`
+**DELETE** `/webhooks/{webhook_uid}`
 
 The Delete webhook call deletes an existing webhook from a stack.
 
 When executing the API call, under the 'Header' section, you need to enter the API key of your stack and the authtoken that you receive after logging into your account.  
 To configure the permissions for your application via OAuth, please include the cm.webhooks.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | Enter the API key of your stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| webhook_uid | bltc7aa14ea1959b252 | Enter the unique ID of the webhook that you want to delete. Execute the 'Get all webhooks' call to retrieve the UID of a |
+- **webhook_uid** (required)
+  Enter the unique ID of the webhook that you want to delete. Execute the 'Get all webhooks' call to retrieve the UID of a webhook.
+  Default: `bltc7aa14ea1959b252`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `Enter the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -23984,27 +27585,37 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Export Webhook
 
 #### Export a Webhook
 
-**Method:** `GET`  
-**Endpoint:** `/webhooks/{webhook_uid}/export`
+**GET** `/webhooks/{webhook_uid}/export`
 
 The Export a Webhook request exports an existing webhook. The exported webhook data is saved in a downloadable JSON file. The exported file won’t get downloaded automatically. To download the exported file, a **REST API** client, such as **Postman** can be used.  
 To configure the permissions for your application via OAuth, please include the cm.webhooks:export scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | multipart/form-data | Enter "multipart/form-data" to pass form-data params. |
-| webhook_uid | cs14804cde-9be3-48c3-9008-33a7884bacb5 | Enter the unique ID of the webhook that you want to export.  **Note:** In case you do not know the UID of the webhook, u |
+- **webhook_uid** (required)
+  Enter the unique ID of the webhook that you want to export. **Note:** In case you do not know the UID of the webhook, use the **Get all webhooks** request to get all the webhooks (along with the UIDs).
+  Default: `cs14804cde-9be3-48c3-9008-33a7884bacb5`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "multipart/form-data" to pass form-data params.
+  Default: `multipart/form-data`
+
+##### Sample Response
 
 ```json
 {
@@ -24042,6 +27653,7 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Import Webhook
 
 The 'Import Webhook' section consists of the following two requests that will help you to import new Webhooks or update existing ones by uploading JSON files.
@@ -24050,23 +27662,27 @@ The 'Import Webhook' section consists of the following two requests that will he
 
 #### Import a Webhook
 
-**Method:** `POST`  
-**Endpoint:** `/webhooks/import`
+**POST** `/webhooks/import`
 
 The Import Webhook request imports a webhook. To import a webhook, you need to upload a JSON file with the webhook data.
 
 To configure the permissions for your application via OAuth, please include the cm.webhooks:import scope.
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | multipart/form-data | Enter "multipart/form-data" to pass form-data params. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "multipart/form-data" to pass form-data params.
+  Default: `multipart/form-data`
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -24108,25 +27724,35 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 #### Import an Existing Webhook
 
-**Method:** `POST`  
-**Endpoint:** `/webhooks/{webhook_uid}/import`
+**POST** `/webhooks/{webhook_uid}/import`
 
 The Import an Existing Webhook request will allow you to update the details of an existing webhook.  
 To configure the permissions for your application via OAuth, please include the cm.webhooks:import scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| Content-Type | multipart/form-data | Enter "multipart/form-data" to pass a form-data params. |
-| webhook_uid | csbd27df54-3aad-46b4-970e-1f11a13e2708 | Enter the unique ID of the webhook that you want to update. |
+- **webhook_uid** (required)
+  Enter the unique ID of the webhook that you want to update.
+  Default: `csbd27df54-3aad-46b4-970e-1f11a13e2708`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "multipart/form-data" to pass a form-data params.
+  Default: `multipart/form-data`
+
+##### Sample Response
 
 ```json
 {
@@ -24172,12 +27798,12 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Get Webhook Executions
 
 #### Get executions of a webhook
 
-**Method:** `GET`  
-**Endpoint:** `/webhooks/{webhook_uid}/executions?from=2020-12-14T08:00:00.000Z&to=2020-12-22T07:59:59.999Z&query={ "status": { "$gte": "200", "$lte": "399" } }`
+**GET** `/webhooks/{webhook_uid}/executions?from=2020-12-14T08:00:00.000Z&to=2020-12-22T07:59:59.999Z&query={ "status": { "$gte": "200", "$lte": "399" } }`
 
 The Get executions of a webhook request allows you to fetch the execution details of a specific webhook, which includes the **execution UID**. These details are instrumental in retrieving webhook logs and retrying a failed webhook.  
 To configure the permissions for your application via OAuth, please include the cm.webhook:read scope.
@@ -24215,20 +27841,40 @@ The following table shows values you can use for the query parameter:
 
 This API request will return a maximum of **100** records while fetching the execution details for a specific webhook. Previously, there was no limit on the number of records returned. You can use the "[skip](/docs/developers/apis/content-delivery-api#skip)" parameter to fetch older records. To limit the number of records returned, you can use the “[limit](/docs/developers/apis/content-delivery-api#limit)” parameter.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of your stack |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| webhook_uid | cs2642bec9-c336-4da1-8aad-fded56c7d50e | Enter the unique ID of the webhook of which you want to retrieve the details. Execute the 'Get all webhooks' call to ret |
-| from | 2016-10-07T12:34:36.000Z | Enter the start date for your date range filter in ISO format. |
-| to | 2020-12-22T07:59:59.999Z | Enter the end date for your date range filter in ISO format. |
-| query | {  "status": {     "$gte": "200",     "$lte": "399"   } } | Enter the actual query that will be executed to retrieve failed or successful webhook executions. This query should be i |
-| only_events | false | Set to true to receive events without "request_details," and set to false to include "request_details" in the response. |
+- **webhook_uid** (required)
+  Enter the unique ID of the webhook of which you want to retrieve the details. Execute the 'Get all webhooks' call to retrieve the uid of a webhook.
+  Default: `cs2642bec9-c336-4da1-8aad-fded56c7d50e`
 
-**Response (200):**
+##### Query Parameters
+
+- **from** (optional)
+  Enter the start date for your date range filter in ISO format.
+  Default: `2016-10-07T12:34:36.000Z`
+- **to** (optional)
+  Enter the end date for your date range filter in ISO format.
+  Default: `2020-12-22T07:59:59.999Z`
+- **query** (optional)
+  Enter the actual query that will be executed to retrieve failed or successful webhook executions. This query should be in JSON format.
+  Default: `{  "status": {     "$gte": "200",     "$lte": "399"   } }`
+- **only_events** (optional)
+  Set to true to receive events without "request_details," and set to false to include "request_details" in the response.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of your stack
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -24458,12 +28104,12 @@ This API request will return a maximum of **100** records while fetching the exe
 ```
 
 
+
 #### Webhook Retry
 
 #### Retry a webhook
 
-**Method:** `POST`  
-**Endpoint:** `/webhooks/{execution_uid}/retry`
+**POST** `/webhooks/{execution_uid}/retry`
 
 This call makes a manual attempt to execute a webhook after the webhook has finished executing its automatic attempts.
 
@@ -24471,16 +28117,24 @@ When executing the API call, in the 'URL Parameter' section, enter the execution
 
 To configure the permissions for your application via OAuth, please include the cm.webhooks.management:write scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | Enter the API key of your stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| execution_uid | cs2642bec9-c336-4da1-8aad-fded56c7d50e | Enter the execution unique ID of the webhook that you want to retry. Execute the [Get executions of a webhook](https://w |
+- **execution_uid** (required)
+  Enter the execution unique ID of the webhook that you want to retry. Execute the [Get executions of a webhook](https://www.contentstack.com/docs/developers/apis/content-management-api#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
+  Default: `cs2642bec9-c336-4da1-8aad-fded56c7d50e`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `Enter the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -24489,28 +28143,36 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Get Execution Log
 
 #### Get latest execution log of a webhook
 
-**Method:** `GET`  
-**Endpoint:** `/webhooks/{execution_uid}/logs`
+**GET** `/webhooks/{execution_uid}/logs`
 
 Get latest execution log of a webhook call will return a comprehensive detail of all the webhooks that were executed at a particular execution cycle.
 
 When executing the API call, in the 'URL Parameter' section, enter the execution UID that you receive when you execute the call.  
 To configure the permissions for your application via OAuth, please include the cm.webhook:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | Enter the API key of your stack |  |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| execution_uid | cs4eb0cd75-8a6e-416a-b367-07158d698d41 | Enter the execution unique ID of the webhook of which you want to retrieve the execution log. Execute the [Get execution |
+- **execution_uid** (required)
+  Enter the execution unique ID of the webhook of which you want to retrieve the execution log. Execute the [Get executions of a webhook](https://www.contentstack.com/docs/developers/apis/content-management-api#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
+  Default: `cs4eb0cd75-8a6e-416a-b367-07158d698d41`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Default: `Enter the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+
+##### Sample Response
 
 ```json
 {
@@ -24703,6 +28365,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 ### Audit Log
 
 Audit log displays a record of all the activities performed in a stack and helps you keep a track of all published items, updates, deletes, and current status of the existing content.
@@ -24716,8 +28379,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 #### Get audit log
 
-**Method:** `GET`  
-**Endpoint:** `/audit-logs`
+**GET** `/audit-logs`
 
 The Get audit log request is used to retrieve the audit log of a stack.
 
@@ -24726,17 +28388,28 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note:** You can retrieve audit log information only for 30 days prior to the current day (for an organization).
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 | Enter Stack API Key. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| include_branch | false | Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch wh |
+- **include_branch** (optional)
+  Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter Stack API Key.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -25615,30 +29288,45 @@ To configure the permissions for your application via OAuth, please include the 
 ```
 
 
+
 #### Get Audit Log Item
 
 #### Get audit log item
 
-**Method:** `GET`  
-**Endpoint:** `/audit-logs/{log_item_uid}`
+**GET** `/audit-logs/{log_item_uid}`
 
 The Get audit log item request is used to retrieve a specific item from the audit log of a stack.  
 To configure the permissions for your application via OAuth, please include the cm.audit-logs:read scope.
 
 **Note:** You can retrieve audit log information only for 30 days prior to the current day (for an organization).
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | blt20962a819b57e233 |  |
-| authtoken | your_authtoken | Enter your authtoken |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| log_item_uid | blt1ffebe11111e111d11c1 | Enter the UID of a specific log item you want to retrieve the details of. |
-| include_branch | false | Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch wh |
+- **log_item_uid** (required)
+  Enter the UID of a specific log item you want to retrieve the details of.
+  Default: `blt1ffebe11111e111d11c1`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+##### Sample Response
 
 ```json
 {
@@ -25703,6 +29391,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
+
 ### Publish Queue
 
 The **Publish Queue** displays the historical and current details of activities such as publish, unpublish, or delete that can be performed on entries and/or assets. It also shows details of Release deployments. These details include time, entry, content type, version, language, user, environment, and status.  
@@ -25716,8 +29405,7 @@ You can now pass the branch header in the API request to fetch or manage modules
 
 #### Get publish queue
 
-**Method:** `GET`  
-**Endpoint:** `/publish-queue`
+**GET** `/publish-queue`
 
 The Get publish queue request returns comprehensive information on activities such as publish, unpublish, and delete that have performed on entries and/or assets. This request also includes the details of the release deployments in the response body.  
 To configure the permissions for your application via OAuth, please include the cm.publish-queue.management:read scope.
@@ -25728,18 +29416,31 @@ You can apply various queries such as [count](https://www.contentstack.com/docs/
 
 Now, you can limit the number of bulk job details in the response body to **25** items. Also, you can view the summary of your bulk jobs within the summary key in the response body.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter Stack API Key. |
-| authtoken | your_authtoken | Enter your authtoken |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| api_version | 3.2 | Enter the API version to enable Nested Reference Publishing. |
-| include_branch | false | Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch wh |
+- **include_branch** (optional)
+  Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter Stack API Key.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+- **api_version** (required)
+  Enter the API version to enable Nested Reference Publishing.
+  Default: `3.2`
+
+##### Sample Response
 
 ```json
 {
@@ -26623,12 +30324,12 @@ Now, you can limit the number of bulk job details in the response body to **25**
 ```
 
 
+
 #### Get Publish Queue Activity
 
 #### Get publish queue activity
 
-**Method:** `GET`  
-**Endpoint:** `/publish-queue/{publish_queue_uid}`
+**GET** `/publish-queue/{publish_queue_uid}`
 
 The Get publish queue activity request returns comprehensive information on a specific publish, unpublish, or delete action that was performed on an entry and/or asset. You can also retrieve details of a specific release deployment.  
 To configure the permissions for your application via OAuth, please include the cm.publish-queue.management:read scope.
@@ -26637,19 +30338,37 @@ To configure the permissions for your application via OAuth, please include the 
 
 You can apply queries to filter the results. Refer to the [Queries](/docs/developers/apis/content-management-api#authentication) section for more details.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter your stack API Key. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| api_version | 3.2 | Enter the API version. |
-| publish_queue_uid | your_publish_queue_uid | Enter the UID of a specific publish queue activity of which you want to retrieve the details. Execute the [Get publish q |
-| include_branch | false | Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch wh |
+- **publish_queue_uid** (required)
+  Enter the UID of a specific publish queue activity of which you want to retrieve the details. Execute the [Get publish queue](/docs/developers/apis/content-management-api#get-publish-queue) API request to retrieve the UID of a particular publish queue activity.
+  Default: `your_publish_queue_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+##### Headers
+
+- **api_key** (required)
+  Enter your stack API Key.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+- **api_version** (required)
+  Enter the API version.
+  Default: `3.2`
+
+##### Sample Response
 
 ```json
 {
@@ -26692,36 +30411,50 @@ You can apply queries to filter the results. Refer to the [Queries](/docs/develo
 ```
 
 
+
 #### Cancel Scheduled Action
 
 #### Cancel scheduled action
 
-**Method:** `GET`  
-**Endpoint:** `/publish-queue/{publish_queue_uid}/unschedule`
+**GET** `/publish-queue/{publish_queue_uid}/unschedule`
 
 The Cancel Scheduled Action request will allow you to cancel any scheduled publishing or unpublishing activity of entries and/or assets and also cancel the deployment of releases.  
 To configure the permissions for your application via OAuth, please include the cm.publish-queue.management:write scope.
 
 **Note**: You must pass api_version:3.2 parameter in the **Header** section of the request to enable Nested References Publishing.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-| authtoken | your_authtoken | Enter your authtoken. |
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/develope |
-| branch | main | Enter your branch unique ID. |
-| api_version | 3.2 | Enter the API version to enable Nested Reference Publishing. |
-| publish_queue_uid | bltc2bbdb4a01c313a2cb3b | Enter the UID of the event to be cancelled in the publish queue. |
+- **publish_queue_uid** (required)
+  Enter the UID of the event to be cancelled in the publish queue.
+  Default: `bltc2bbdb4a01c313a2cb3b`
 
-**Response (200):**
+##### Headers
+
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+- **api_version** (required)
+  Enter the API version to enable Nested Reference Publishing.
+  Default: `3.2`
+
+##### Sample Response
 
 ```json
 {
     "notice": "Entry unscheduled successfully."
 }
 ```
+
 
 ## Postman Collection
 

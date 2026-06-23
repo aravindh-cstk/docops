@@ -12,9 +12,7 @@ last_updated: 2025-07-15
 
 # Reference Search Equals Within Group
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_field_id"."reference_field_uid":{"$in_query":{"referenced_content_type's_group_uid.field_uid":"value"}}}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"group_field_id"."reference_field_uid":{"$in_query":{"referenced_content_type's_group_uid.field_uid":"value"}}}`
 
 Get entries having values based on referenced fields. This query retrieves all entries that satisfy query conditions made on referenced fields.
 
@@ -27,24 +25,33 @@ If the reference field is part of a Group field, you need to mention the Group f
 
 ##### Reference Search Equals Within Modular Blocks
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of stack of which you wish to retrieve the content types. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"bank_offers.bank":{"$in_query":{"title":"Citigroup"}}}`
 
-| branch | main |  |
+## Headers
 
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
+- **api_key** (required)
+  Enter the API key of stack of which you wish to retrieve the content types.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Default: `main`
 
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed. |
-
-| query | {"bank_offers.bank":{"$in_query":{"title":"Citigroup"}}} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -349,3 +356,4 @@ If the reference field is part of a Group field, you need to mention the Group f
   ]
 }
 ```
+

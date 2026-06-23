@@ -12,19 +12,22 @@ last_updated: 2026-04-07
 
 # Delete a team
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/organizations/{organization_uid}/teams/{team_uid}`
+**DELETE** `/organizations/{organization_uid}/teams/{team_uid}`
 
 The Delete a team request deletes an existing team along with all its associated users and assigned roles.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **team_uid** (required)
+  Enter the UID of the team you want to update. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Default: `team_uid`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| organization_uid | your_organization_uid | Enter the UID of your Organization. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| team_uid | team_uid | Enter the UID of the team you want to update. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-mana |

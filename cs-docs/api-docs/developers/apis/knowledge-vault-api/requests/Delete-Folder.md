@@ -12,33 +12,38 @@ last_updated: 2026-03-02
 
 # Delete Folder
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/v1/knowledge-vault/folders/{folder_uid}`
+**DELETE** `/v1/knowledge-vault/folders/{folder_uid}`
 
 The Delete Folder request permanently deletes a specified folder from the Knowledge Vault in a brand kit.
 
 To configure the permissions for your app via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **folder_uid** (required)
+  Enter the UID of the folder to be deleted.
+  Default: `your_folder_uid`
 
-| authtoken | your_authtoken | Enter the authtoken. |
+## Headers
 
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication). |
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-
-| folder_uid | your_folder_uid | Enter the UID of the folder to be deleted. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
   "message": "Folder deleted successfully.",
 }
 ```
+

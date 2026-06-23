@@ -12,6 +12,5 @@ last_updated: 2023-03-28
 
 # Try 'Count' Function
 
+**** `/stacks/apiKey/explore`
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`

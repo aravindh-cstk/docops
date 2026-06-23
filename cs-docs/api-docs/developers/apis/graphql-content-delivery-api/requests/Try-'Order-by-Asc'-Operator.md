@@ -12,9 +12,7 @@ last_updated: 2025-02-17
 
 # Try 'Order by Asc' Operator
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 When fetching entries, you can sort them in the ascending order with respect to the value of the following system-defined fields in the response body:
 
@@ -46,3 +44,4 @@ query {
 ```
 
 The response body of this query will display all the entries of the Product content type that satisfy the query in an ascending order, including details of just the ‘Title’, ‘Color’, and ‘Price in USD’ fields.
+

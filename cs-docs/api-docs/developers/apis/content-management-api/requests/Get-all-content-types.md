@@ -12,9 +12,7 @@ last_updated: 2025-01-08
 
 # Get all content types
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types?include_count={boolean_value}&include_global_field_schema={boolean_value}`
+**GET** `/content_types?include_count={boolean_value}&include_global_field_schema={boolean_value}`
 
 The Get all content types call returns comprehensive information of all the content types available in a particular stack in your account.
 
@@ -31,26 +29,32 @@ Under the 'URL Parameters' section, insert a parameter named query and provide a
 - This API request will return a maximum of 100 content types. To retrieve the next batch of content types, make use of the skip parameter (or refer Pagination for more details).
 - Information about content types can be retrieved by all roles except for custom roles where access to certain or all content types is restricted.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_count** (optional)
+  Set this to 'true' to include in response the total count of content types available in your stack.
+  Default: `false`
+- **include_global_field_schema** (optional)
+  Set this to 'true' to include in response the details of all the fields within the Global field's schema.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | Your_Authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_count | false | Set this to 'true' to include in response the total count of content types available in your stack. |
-
-| include_global_field_schema | true | Set this to 'true' to include in response the details of all the fields within the Global field's schema. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -1002,3 +1006,4 @@ Under the 'URL Parameters' section, insert a parameter named query and provide a
 	]
 }
 ```
+

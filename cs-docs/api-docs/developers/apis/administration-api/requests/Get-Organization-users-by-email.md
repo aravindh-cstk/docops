@@ -12,9 +12,7 @@ last_updated: 2026-04-07
 
 # Get Organization users by email
 
-
-**Method:** `POST`  
-**Endpoint:** `/organizations/{organization_uid}/share/search`
+**POST** `/organizations/{organization_uid}/share/search`
 
 The Get Organization users by email request retrieves information about users within an organization based on their email addresses.
 
@@ -28,26 +26,37 @@ When executing the API request, you need to provide the organization UID. In the
 
 **Note:** If you do not pass the request body, you will get the details of all the users in the Organization.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of the Organization of which you want to retrieve the list of users.
+  Default: `blt3213213213213213`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Query Parameters
 
-| organization_uid | blt3213213213213213 | Enter the UID of the Organization of which you want to retrieve the list of users. |
+- **include_roles** (optional)
+  The include_roles parameter, when set to “true,” will display the details of the roles that are assigned to the organization users.
+  Default: `false`
+- **include_user_details** (optional)
+  The include_user_details parameter, when set to “true,” lets you know whether the user has enabled Two-factor Authentication or not.
+  Default: `false`
+- **include_count** (optional)
+  The include_count parameter returns the total number of organization users. Example: If you wish to know the total number of organization invitations, you need to mention “true.”
+  Default: `false`
+- **limit** (optional)
+  The limit parameter will return a specific number of organization users in your output. Example, if you want to retrieve details of 10 users and you wish to fetch only the first 5, you need to specify “5” as the value in this parameter.
+  Default: `false`
+- **skip** (optional)
+  The skip parameter will skip a specific number of organization users in your output. Example, if you want to retrieve details of 10 users and you wish to skip the latest 5, you need to specify “5” as the value in this parameter.
+  Default: `false`
 
-| include_roles | false | The include_roles parameter, when set to “true,” will display the details of the roles that are assigned to the organization users. |
+## Headers
 
-| include_user_details | false | The include_user_details parameter, when set to “true,” lets you know whether the user has enabled Two-factor Authentication or not. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| include_count | false | The include_count parameter returns the total number of organization users. Example: If you wish to know the total number of organization invitations, you need  |
-
-| limit | false | The limit parameter will return a specific number of organization users in your output. Example, if you want to retrieve details of 10 users and you wish to fet |
-
-| skip | false | The skip parameter will skip a specific number of organization users in your output. Example, if you want to retrieve details of 10 users and you wish to skip t |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -55,7 +64,7 @@ When executing the API request, you need to provide the organization UID. In the
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -79,3 +88,4 @@ When executing the API request, you need to provide the organization UID. In the
     ]
 }
 ```
+

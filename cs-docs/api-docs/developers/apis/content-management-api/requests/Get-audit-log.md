@@ -12,9 +12,7 @@ last_updated: 2024-02-29
 
 # Get audit log
 
-
-**Method:** `GET`  
-**Endpoint:** `/audit-logs`
+**GET** `/audit-logs`
 
 The Get audit log request is used to retrieve the audit log of a stack.
 
@@ -23,22 +21,28 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note:** You can retrieve audit log information only for 30 days prior to the current day (for an organization).
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 | Enter Stack API Key. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter Stack API Key.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module re |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -915,3 +919,4 @@ To configure the permissions for your application via OAuth, please include the 
   ]
 }
 ```
+

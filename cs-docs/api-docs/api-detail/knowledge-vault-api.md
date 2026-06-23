@@ -111,8 +111,7 @@ Learn more about [how to get started with using the Postman Collection](#postman
 
 #### Ingest Content Item
 
-**Method:** `POST`  
-**Endpoint:** `/v1/knowledge-vault/`
+**POST** `/v1/knowledge-vault/`
 
 The Ingest Content request stores textual content in a specified folder within the Knowledge Vault of a brand kit. It enriches the content with metadata such as title and tags for improved organization and retrieval.
 
@@ -130,17 +129,25 @@ Here’s an example of the Request Body for ingesting content:
 }
 ```
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication). |
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-| path | /dir0000000000000/dir************ | Enter the absolute path for the parent folder. |
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
+- **path** (required)
+  Enter the absolute path for the parent folder.
+  Default: `/dir0000000000000/dir************`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -152,7 +159,7 @@ Here’s an example of the Request Body for ingesting content:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -168,27 +175,36 @@ Here’s an example of the Request Body for ingesting content:
 ```
 
 
+
 #### Update Content
 
 #### Update Content Item
 
-**Method:** `PUT`  
-**Endpoint:** `/v1/knowledge-vault/{content_uid}`
+**PUT** `/v1/knowledge-vault/{content_uid}`
 
 The Update Content request lets you update a specific content stored in the Knowledge Vault.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication). |
-| content_uid | your_content_uid | Enter the Content UID. |
+- **content_uid** (optional)
+  Enter the Content UID.
+  Default: `your_content_uid`
 
-**Request Body:**
+##### Headers
+
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Request
 
 ```json
 {
@@ -199,7 +215,7 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -215,33 +231,43 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 ```
 
 
+
 #### Delete Content
 
 #### Delete Content Item
 
-**Method:** `DELETE`  
-**Endpoint:** `/v1/knowledge-vault/{content_uid}`
+**DELETE** `/v1/knowledge-vault/{content_uid}`
 
 The Delete Content request lets you delete a specific content stored in the Knowledge Vault.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication). |
-| content_uid | your_content_uid | Enter the Content UID. |
+- **content_uid** (optional)
+  Enter the Content UID.
+  Default: `your_content_uid`
 
-**Response (200):**
+##### Headers
+
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Response
 
 ```json
 {
     "message": "Content deleted successfully"
 }
 ```
+
 
 ## Postman Collection
 

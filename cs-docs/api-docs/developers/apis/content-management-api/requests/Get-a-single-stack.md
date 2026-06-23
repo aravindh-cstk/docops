@@ -12,34 +12,40 @@ last_updated: 2023-11-23
 
 # Get a single stack
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks?include_collaborators={boolean_value}&include_stack_variables={boolean_value}&include_discrete_variables={boolean_value}&include_count={boolean_value}`
+**GET** `/stacks?include_collaborators={boolean_value}&include_stack_variables={boolean_value}&include_discrete_variables={boolean_value}&include_count={boolean_value}`
 
 The Get a single stack call fetches comprehensive details of a specific stack.
 
 **Note**: For SSO-enabled organizations, it is mandatory to pass the organization UID in the header.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_collaborators** (optional)
+  Set this parameter to 'true' to include the details of the stack collaborators.
+  Default: `false`
+- **include_stack_variables** (optional)
+  Set this to 'true' to display the stack variables. Stack variables are extra information about the stack, such as the description, format of date, format of time, and so on. Users can include or exclude stack variables in the response.
+  Default: `false`
+- **include_discrete_variables** (optional)
+  Set this to 'true' to view the access token of your stack.
+  Default: `false`
+- **include_count** (optional)
+  Set this to 'true' to include in the response the total count of the stacks owned by or shared with a user account.
+  Default: `false`
 
-| api_key | enter_your_stack_api_key | Enter the API Key of the stack that you want to retrieve. |
+## Headers
 
-| authtoken | Your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API Key of the stack that you want to retrieve.
+  Default: `enter_your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **organization_uid** (optional)
+  Enter the UID of your organization.
+  Default: `Your_Organization_uid`
 
-| organization_uid | Your_Organization_uid | Enter the UID of your organization. |
-
-| include_collaborators | false | Set this parameter to 'true' to include the details of the stack collaborators. |
-
-| include_stack_variables | false | Set this to 'true' to display the stack variables. Stack variables are extra information about the stack, such as the description, format of date, format of tim |
-
-| include_discrete_variables | false | Set this to 'true' to view the access token of your stack. |
-
-| include_count | false | Set this to 'true' to include in the response the total count of the stacks owned by or shared with a user account. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -124,3 +130,4 @@ The Get a single stack call fetches comprehensive details of a specific stack.
     }
 }
 ```
+

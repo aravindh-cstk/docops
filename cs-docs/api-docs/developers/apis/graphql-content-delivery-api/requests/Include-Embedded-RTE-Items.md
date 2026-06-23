@@ -12,9 +12,7 @@ last_updated: 2023-03-29
 
 # Include Embedded RTE Items
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Get entries of a content type along with the comprehensive details of the embedded entries and assets referenced inside the [JSON Rich Text Editor](/docs/developers/json-rich-text-editor). This query uses inline fragments and relay specification to retrieve details of rich text editors that refer to multiple embedded items.
 
@@ -74,3 +72,4 @@ query {
 ```
 
 **Note**: You can retrieve a maximum of **100** embedded items (entries or assets) in a single GraphQL API request.
+

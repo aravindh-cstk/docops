@@ -12,9 +12,7 @@ last_updated: 2024-06-28
 
 # Array Equals Operator Within Modular Blocks
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "modular_block_UID.block_UID.field_UID": { "$in": [ value1, value2, ...] } }`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={ "modular_block_UID.block_UID.field_UID": { "$in": [ value1, value2, ...] } }`
 
 Get entries where the value of a field within Modular Blocks matches to any of the given values. This query is specifically for fields that are part of any block within a Modular Block field.  
   
@@ -24,26 +22,37 @@ This query will work for entries only.
 
 {"additional_info.deals.deal_name": {"$in": ["Christmas Deal", "Summer Deal"]}}
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{ "additional_info.deals.deal_name": { "$in": [ "Christmas Deal", "Summer Deal"] } }`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed. |
-
-| query | { "additional_info.deals.deal_name": { "$in": [ "Christmas Deal", "Summer Deal"] } } | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -529,3 +538,4 @@ This query will work for entries only.
   ]
 }
 ```
+

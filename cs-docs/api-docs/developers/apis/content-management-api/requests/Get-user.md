@@ -12,20 +12,16 @@ last_updated: 2023-01-05
 
 # Get user
 
-
-**Method:** `GET`  
-**Endpoint:** `/user`
+**GET** `/user`
 
 The Get user call returns comprehensive information of an existing user account. The information returned includes details of the stacks owned by and shared with the specified user account.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **authtoken** (required)
+  Default: `Enter_your_authtoken`
 
-| authtoken | Enter_your_authtoken |  |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -101,3 +97,4 @@ The Get user call returns comprehensive information of an existing user account.
 	}
 }
 ```
+

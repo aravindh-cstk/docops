@@ -12,9 +12,7 @@ last_updated: 2023-05-15
 
 # Request for a password
 
-
-**Method:** `POST`  
-**Endpoint:** `/user/forgot_password`
+**POST** `/user/forgot_password`
 
 The Request for a password API helps to get a temporary password to log into an account in case a user has forgotten the login password.
 
@@ -24,14 +22,12 @@ In the 'Body' section, provide the user's email address in JSON format.
 
 **Note:** The “**Reset password**” token that you receive in your email address is valid only for the **next 60 minutes** after it’s generated. Post that, it expires and you need to rerun the [Reset password](/docs/developers/apis/content-management-api/#reset-password) API request to generate a new token.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **Content-Type** (required)
+  Default: `application/json`
 
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -41,10 +37,11 @@ In the 'Body' section, provide the user's email address in JSON format.
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "If this email address exists, we will send you an email with instructions for resetting your password."
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2025-07-25
 
 # Create a workflow
 
-
-**Method:** `POST`  
-**Endpoint:** `/workflows`
+**POST** `/workflows`
 
 The Create a Workflow request allows you to create a Workflow.
 
@@ -41,18 +39,17 @@ You can assign any one of the following values to this parameter:
 
 **Note**: The entry is available for editing, by default, in the first stage that you create in your workflow. As a result, the entry_lock parameter is set to $none for the first stage in the workflow.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| api_key | blt20962a819b57e233 |  |
-
-| authtoken | your_authtoken |  |
-
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -131,7 +128,7 @@ You can assign any one of the following values to this parameter:
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -287,3 +284,4 @@ You can assign any one of the following values to this parameter:
     }
 }
 ```
+

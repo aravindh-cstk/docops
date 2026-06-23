@@ -12,9 +12,7 @@ last_updated: 2023-03-28
 
 # Try "Pagination"
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 When fetching all the entries of a particular content type, the GraphQL API allows you to provide arguments that paginate the response body.
 
@@ -42,3 +40,4 @@ query {
 ```
 
 The **total** field will display the number of entries where the ‘Price in USD’ field exists for a product within the response body, including details of just the ‘Title’, ‘Brand’, and ‘Price in USD’ fields. However, through the use of the skip and limit parameters, the response body will now only show the first seven matching entries initially.
+

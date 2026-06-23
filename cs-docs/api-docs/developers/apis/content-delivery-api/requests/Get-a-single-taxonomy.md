@@ -12,28 +12,35 @@ last_updated: 2026-05-18
 
 # Get a single taxonomy
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+**GET** `/taxonomies/{taxonomy_uid}`
 
 The Get a single taxonomy request retrieves details of a single published taxonomy.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (optional)
+  Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack.
+  Default: `categories`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| access_token | your_access_token | Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication). |
+- **limit** (optional)
+  Number of results to return.
+  Default: `5`
+- **skip** (optional)
+  Number of results to skip (for pagination).
+  Default: `5`
 
-| taxonomy_uid | categories | Enter the unique ID of the taxonomy you want to update. The UID of a taxonomy is unique across a stack. |
+## Headers
 
-| limit | 5 | Number of results to return. |
+- **api_key** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **access_token** (optional)
+  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Default: `your_access_token`
 
-| skip | 5 | Number of results to skip (for pagination). |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -50,3 +57,4 @@ The Get a single taxonomy request retrieves details of a single published taxono
   }
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-02-28
 
 # Get all languages
 
-
-**Method:** `GET`  
-**Endpoint:** `/locales?include_count={boolean_value}`
+**GET** `/locales?include_count={boolean_value}`
 
 This call fetches the list of all languages (along with the language codes) available for a stack.
 
@@ -25,24 +23,30 @@ You can add queries to extend the functionality of this API call. Under the URL 
 
 To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of languages added to your stack.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_count | false | Set this parameter to 'true' to include in response the total count of languages added to your stack. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -73,3 +77,4 @@ To learn more about the queries, refer to the [Queries](/docs/developers/apis/co
 	]
 }
 ```
+

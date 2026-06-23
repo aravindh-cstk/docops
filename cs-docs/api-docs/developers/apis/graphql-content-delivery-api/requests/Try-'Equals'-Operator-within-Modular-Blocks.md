@@ -12,9 +12,7 @@ last_updated: 2023-03-29
 
 # Try 'Equals' Operator within Modular Blocks
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Equals Operator within Modular Blocks
 
@@ -66,3 +64,4 @@ query {
 ```
 
 The response body of this query will include details of the ‘Deal Name’ and ‘Deal Details’ fields from the ‘Deals’ block of the modular block named ‘Additional Info.’
+

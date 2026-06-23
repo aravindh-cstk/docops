@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Update Content Type
 
-
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}`
+**PUT** `/content_types/{content_type_uid}`
 
 The Update Content Type call is used to update the schema of an existing content type.
 
@@ -25,26 +23,34 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the “Body” section, you need to provide the updated schema of your content type. You can refer the [JSON schema for creating a content type](/docs/developers/create-content-types/json-schema-for-creating-a-content-type) document to know how you can add/update fields in your content type through API.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type that you wish to update. The uid is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | Your_Authtoken |  |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type that you wish to update. The uid is generated based on the title of the content type. The unique ID of a content type is |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -88,7 +94,7 @@ In the “Body” section, you need to provide the updated schema of your conten
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -226,3 +232,4 @@ In the “Body” section, you need to provide the updated schema of your conten
 	}
 }
 ```
+

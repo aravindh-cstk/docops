@@ -12,9 +12,7 @@ last_updated: 2025-07-29
 
 # Create metadata
 
-
-**Method:** `POST`  
-**Endpoint:** `/metadata`
+**POST** `/metadata`
 
 The Create metadata request lets you create metadata for a specific asset or entry. Whenever you create metadata for an entry or asset, you need to specify the extension to which it will be connected.
 
@@ -32,22 +30,25 @@ In the ‘Body’ section, you need to provide the following information:
 - Once a metadata is created, the associated entry or asset must be published or republished for the metadata to take effect.
 - You can provide any key name to store the metadata for your entry or asset except the following prebuilt keys: created_by, updated_by, created_at, updated_at, deleted_at, api_key, scope, locale, type, extension_uid, _version.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-
-| branch | main | Enter your branch or alias unique ID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -67,7 +68,7 @@ In the ‘Body’ section, you need to provide the following information:
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -97,3 +98,4 @@ In the ‘Body’ section, you need to provide the following information:
 	}
 }
 ```
+

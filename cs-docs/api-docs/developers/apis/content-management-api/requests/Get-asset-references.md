@@ -12,9 +12,7 @@ last_updated: 2025-06-11
 
 # Get asset references
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{asset_uid}/references`
+**GET** `/assets/{asset_uid}/references`
 
 The Get asset references request retrieves a list of entries and content types that reference the specified asset.
 
@@ -31,32 +29,46 @@ To include publish-related metadata for the referenced asset, set the include_pu
 - version: Version number that was published
 - version_name: Metadata about the published version, including title, updated_by, and updated_at
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_uid** (required)
+  Enter the unique ID of the asset to find where it is referenced across entries and content types.
+  Default: `blt**************ba`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Query Parameters
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total number of versions of the specified asset.
+  Default: `true`
+- **deleted** (optional)
+  Set this parameter to 'true' to include in response the timestamps for when each version was updated.
+  Default: `true`
+- **include_branch** (optional)
+  Set this parameter to 'true' to include the _branch top-level key in the response.
+  Default: `true`
+- **include_publish_details** (optional)
+  Set this parameter to 'true' to include publish-related metadata for each referenced asset in the response.
+  Default: `true`
 
-| api_key | your_api_key | Enter the API key of your stack. |
+## Headers
 
-| Content-Type | application/json | Pass application/json value. |
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch's unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch's unique ID. |
-
-| asset_uid | blt**************ba | Enter the unique ID of the asset to find where it is referenced across entries and content types. |
-
-| include_count | true | Set this parameter to 'true' to include in response the total number of versions of the specified asset. |
-
-| deleted | true | Set this parameter to 'true' to include in response the timestamps for when each version was updated. |
-
-| include_branch | true | Set this parameter to 'true' to include the _branch top-level key in the response. |
-
-| include_publish_details | true | Set this parameter to 'true' to include publish-related metadata for each referenced asset in the response. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -92,3 +104,4 @@ To include publish-related metadata for the referenced asset, set the include_pu
   "count": 1
 }
 ```
+

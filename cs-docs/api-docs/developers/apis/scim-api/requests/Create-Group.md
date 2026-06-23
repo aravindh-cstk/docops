@@ -12,26 +12,28 @@ last_updated: 2023-01-05
 
 # Create Group
 
-
-**Method:** `POST`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups`
+**POST** `scim/v2.0/organizations/{organization_uid}/Groups`
 
 The Create Group request lets you create a group in your IdP client and add users to it.
 
 In the "Request Body" section, you need to pass the ID of the user in Contentstack as the value. Refer to the [Get All Users](#get-all-users) request to get the user ID. Also, provide a name to the group in the displayName key.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-| Content-Type | application/json | The format of the response content. |
+## Headers
 
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
 
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the o |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -45,7 +47,7 @@ In the "Request Body" section, you need to pass the ID of the user in Contentsta
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -66,3 +68,4 @@ In the "Request Body" section, you need to pass the ID of the user in Contentsta
   ]
 }
 ```
+

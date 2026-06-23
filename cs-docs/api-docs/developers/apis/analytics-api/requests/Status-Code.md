@@ -12,9 +12,7 @@ last_updated: 2026-04-14
 
 # Status Code
 
-
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/http-statuses?from={YYYY-MM-DD}&to={YYYY-MM-DD}&duration={duration}&orgUid={organization_uid}&services={["cdn","cma"]}`
+**GET** `/analytics/v2/http-statuses?from={YYYY-MM-DD}&to={YYYY-MM-DD}&duration={duration}&orgUid={organization_uid}&services={["cdn","cma"]}`
 
 The Status Code request will show the count for the number of API requests made for each HTTP status code. For example, 200, 201, 400, 404, and so on. You can use the httpStatusCode parameter to get the count for a specific status code instead of all status codes.
 
@@ -68,28 +66,37 @@ The response body provides detailed statistics on the number of API requests exe
 
 This information helps you monitor the frequency of specific HTTP status codes and track the performance and errors of your API requests.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
+- **duration** (required)
+  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
+  Default: `day`
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **services** (required)
+  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
+  Default: `["cdn","cma"]`
+- **httpStatusCode** (optional)
+  Enter an HTTP status code to filter the response.
+  Default: `200`
+- **apiKey** (optional)
+  Enter your stack API key to get data for that specific stack.
+  Default: `your_stack_api_key`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-
-| duration | day | Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch. |
-
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
-
-| services | ["cdn","cma"] | Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"]. |
-
-| httpStatusCode | 200 | Enter an HTTP status code to filter the response. |
-
-| apiKey | your_stack_api_key | Enter your stack API key to get data for that specific stack. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -97,3 +104,4 @@ This information helps you monitor the frequency of specific HTTP status codes a
     "paginated": false
 }
 ```
+

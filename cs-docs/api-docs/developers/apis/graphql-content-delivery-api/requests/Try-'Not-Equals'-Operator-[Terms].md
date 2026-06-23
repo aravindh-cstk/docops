@@ -12,9 +12,7 @@ last_updated: 2024-04-17
 
 # Try 'Not Equals' Operator [Terms]
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Not Equals Operator [Terms]
 
@@ -45,3 +43,4 @@ query {
   }
 }
 ```
+

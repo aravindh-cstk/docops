@@ -12,9 +12,7 @@ last_updated: 2023-03-30
 
 # Try 'Width' and 'Height' Parameters
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Let’s look at a few sample GraphQL queries that make use of multiple parameters.
 
@@ -37,3 +35,4 @@ query {
 This query will render an output image with width and height values of 650 and 400 pixels, respectively.
 
 **Note**: We have also set the disable parameter to UPSCALE to disable the upscale image feature for the output image in the above image transformation query.
+

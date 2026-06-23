@@ -12,9 +12,7 @@ last_updated: 2025-05-05
 
 # Get all global fields
 
-
-**Method:** `GET`  
-**Endpoint:** `/global_fields`
+**GET** `/global_fields`
 
 The Get all global fields request returns comprehensive information of all the global fields available in a particular stack in your organization.
 
@@ -24,32 +22,43 @@ The Get all global fields request returns comprehensive information of all the g
 - If your Global field contains nested Global fields, they will appear as part of the schema in the API response.
 - To configure the permissions for your application via OAuth, please include the cm.global-fields.management:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_global_field_schema** (optional)
+  Set this parameter to 'true' to include in response the schema of the nested Global field.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `true`
+- **include_content_types** (optional)
+  Set this parameter to 'true' to include in response the details of the content types where the current Global field is referred.
+  Default: `ture`
+- **include_global_fields** (optional)
+  Set this parameter to 'true' to include in response the details of Global fields where the current Global field is referred.
+  Default: `true`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of Global fields available in a stack.
+  Default: `true`
+- **deleted** (optional)
+  Set this parameter to 'true' to retrieve only deleted Global fields within a stack.
+  Default: `true`
 
-| api_key | your_api_key | Enter the API key of your stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_global_field_schema | true | Set this parameter to 'true' to include in response the schema of the nested Global field. |
-
-| include_branch | true | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-| include_content_types | ture | Set this parameter to 'true' to include in response the details of the content types where the current Global field is referred. |
-
-| include_global_fields | true | Set this parameter to 'true' to include in response the details of Global fields where the current Global field is referred. |
-
-| include_count | true | Set this parameter to 'true' to include in response the total count of Global fields available in a stack. |
-
-| deleted | true | Set this parameter to 'true' to retrieve only deleted Global fields within a stack. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -96,3 +105,4 @@ The Get all global fields request returns comprehensive information of all the g
     ]
 }
 ```
+

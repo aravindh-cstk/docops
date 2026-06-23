@@ -12,28 +12,31 @@ last_updated: 2024-08-29
 
 # Get job status
 
-
-**Method:** `GET`  
-**Endpoint:** `/bulk/jobs/{job_id}`
+**GET** `/bulk/jobs/{job_id}`
 
 The Get job status request returns comprehensive information of a specific publish/unpublish operation.
 
 **Note**: Pass api_version parameter as **3.2** in the Headers section.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **job_id** (required)
+  Enter the UID of the job of which you want to retrieve the details.
+  Default: `eb4c0236-103a-4a04-82a4-0a452b94bfc8`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authorization | your_management_token | Enter your management token. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **api_version** (required)
+  Enter the API version.
+  Default: `3.2`
 
-| api_version | 3.2 | Enter the API version. |
-
-| job_id | eb4c0236-103a-4a04-82a4-0a452b94bfc8 | Enter the UID of the job of which you want to retrieve the details. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -66,3 +69,4 @@ The Get job status request returns comprehensive information of a specific publi
   }
 }
 ```
+

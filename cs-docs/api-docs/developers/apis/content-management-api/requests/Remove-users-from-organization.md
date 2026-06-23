@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Remove users from organization
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/organizations/{organization_uid}/share`
+**DELETE** `/organizations/{organization_uid}/share`
 
 The Remove users from organization request allows you to remove existing users from your organization.
 
@@ -30,18 +28,22 @@ When executing the API request, provide the organization UID. In the “Body” 
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of the organization from which you want to remove users.
+  Default: `bltad182661f48a9afe1d00cdc2`
 
-| authtoken | your_authtoken | Enter the authtoken of the user. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **authtoken** (required)
+  Enter the authtoken of the user.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| organization_uid | bltad182661f48a9afe1d00cdc2 | Enter the UID of the organization from which you want to remove users. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -51,7 +53,7 @@ When executing the API request, provide the organization UID. In the “Body” 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -90,3 +92,4 @@ When executing the API request, provide the organization UID. In the “Body” 
     ]
 }
 ```
+

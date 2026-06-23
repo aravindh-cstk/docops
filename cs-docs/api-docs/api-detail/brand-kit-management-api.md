@@ -118,29 +118,49 @@ Learn more about [how to get started with using the Postman Collection](/docs/de
 
 #### Get All Brand Kits
 
-**Method:** `GET`  
-**Endpoint:** `/v1/brand-kits?skip={skip}&limit={limit}&include_users={boolean}&include_count={boolean}&include_voice_profiles_count={boolean}&typeahead={string}`
+**GET** `/v1/brand-kits?skip={skip}&limit={limit}&include_users={boolean}&include_count={boolean}&include_voice_profiles_count={boolean}&typeahead={string}`
 
 The Get All Brand Kits request fetches the list of all the Brand Kits in an organization.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| api_key | api_key_of_your_stack | Enter the API Key of the stack to retrieve the details of Brand Kits specifically associated with it. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| skip | 2 | Enter the number of Brand Kits to be skipped from the response body. |
-| limit | 2 | Enter the maximum number of Brand Kits to be returned. |
-| include_users | false | The “include_users” parameter allows you to fetch users information. |
-| include_count | false | The “include_count” parameter allows you to fetch the total count of the stacks owned by or shared with a user account. |
-| include_voice_profiles_count | false | The “include_voice_profiles_count” parameter allows you to fetch the count of all voice profiles from a Brand Kit. |
-| typeahead | sample | The “typeahead” parameter retrieves responses that match the provided string. |
+- **skip** (optional)
+  Enter the number of Brand Kits to be skipped from the response body.
+  Default: `2`
+- **limit** (optional)
+  Enter the maximum number of Brand Kits to be returned.
+  Default: `2`
+- **include_users** (optional)
+  The “include_users” parameter allows you to fetch users information.
+  Default: `false`
+- **include_count** (optional)
+  The “include_count” parameter allows you to fetch the total count of the stacks owned by or shared with a user account.
+  Default: `false`
+- **include_voice_profiles_count** (optional)
+  The “include_voice_profiles_count” parameter allows you to fetch the count of all voice profiles from a Brand Kit.
+  Default: `false`
+- **typeahead** (optional)
+  The “typeahead” parameter retrieves responses that match the provided string.
+  Default: `sample`
 
-**Response (200):**
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **api_key** (optional)
+  Enter the API Key of the stack to retrieve the details of Brand Kits specifically associated with it.
+  Default: `api_key_of_your_stack`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Response
 
 ```json
 {
@@ -165,27 +185,36 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 ```
 
 
-#### Get a Single Brand Kit
 
 #### Get a Single Brand Kit
 
-**Method:** `GET`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}`
+#### Get a Single Brand Kit
+
+**GET** `/v1/brand-kits/{brand_kit_uid}`
 
 The Get a Single Brand Kit request fetches the details of a specific Brand Kit in an organization.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>]   | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-**Response (200):**
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]  `
+
+##### Sample Response
 
 ```json
 {
@@ -208,12 +237,12 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 ```
 
 
-#### Create Brand Kit
 
 #### Create Brand Kit
 
-**Method:** `POST`  
-**Endpoint:** `/v1/brand-kits`
+#### Create Brand Kit
+
+**POST** `/v1/brand-kits`
 
 The Create Brand Kit request lets you create a new Brand Kit in the specified organization.
 
@@ -234,15 +263,19 @@ Here’s an example of the Request Body for creating a new Brand Kit:
 }
 ```
 
-**Parameters:**
+##### Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
 
-**Request Body:**
+##### Sample Request
 
 ```json
 {
@@ -256,7 +289,7 @@ Here’s an example of the Request Body for creating a new Brand Kit:
 }
 ```
 
-**Response (201):**
+##### Sample Response
 
 ```json
 {
@@ -279,12 +312,12 @@ Here’s an example of the Request Body for creating a new Brand Kit:
 ```
 
 
-#### Update Brand Kit
 
 #### Update Brand Kit
 
-**Method:** `PUT`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}`
+#### Update Brand Kit
+
+**PUT** `/v1/brand-kits/{brand_kit_uid}`
 
 The Update Brand Kit request lets you update an existing Brand Kit in an organization.
 
@@ -304,16 +337,25 @@ Here’s an example of the Request Body that you can use to update a Brand Kit:
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-**Request Body:**
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Request
 
 ```json
 {
@@ -327,7 +369,7 @@ Here’s an example of the Request Body that you can use to update a Brand Kit:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -351,33 +393,43 @@ Here’s an example of the Request Body that you can use to update a Brand Kit:
 ```
 
 
-#### Delete Brand Kit
 
 #### Delete Brand Kit
 
-**Method:** `DELETE`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}`
+#### Delete Brand Kit
+
+**DELETE** `/v1/brand-kits/{brand_kit_uid}`
 
 The Delete Brand Kit request lets you delete an existing Brand Kit in an organization.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-**Response (200):**
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Response
 
 ```json
 {
   "message": "Brand Kit deleted successfully"
 }
 ```
+
 
 ### Voice Profile
 
@@ -388,30 +440,55 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 
 #### Get All Voice Profiles
 
-**Method:** `GET`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/voice-profiles?skip={index}&limit={limit}&include_users={boolean}&include_count={boolean}&typeahead={string}&sort={string}&order={string}`
+**GET** `/v1/brand-kits/{brand_kit_uid}/voice-profiles?skip={index}&limit={limit}&include_users={boolean}&include_count={boolean}&typeahead={string}&sort={string}&order={string}`
 
 The Get All Voice Profiles request fetches the list of all Voice Profiles in a Brand Kit within an organization.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>]   | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-| skip | 0 | Enter the number of Voice Profiles to be skipped from the response body. |
-| limit | 2 | Enter the maximum number of Voice Profiles to be returned. |
-| include_users | true | The “include_users” parameter allows you to fetch users information. |
-| include_count | true | The “include_count” parameter allows you to fetch the total count of the stacks owned by or shared with a user account. |
-| typeahead | sample | The “typeahead” parameter retrieves responses that match the provided string. |
-| sort | created_at | Enter the value on the basis of which you want to sort your Voice Profiles. The voice profiles can be sorted by created_ |
-| order | asc | Specify how you want to order your Voice Profiles; asc for ascending order and desc for descending order. The default va |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **skip** (optional)
+  Enter the number of Voice Profiles to be skipped from the response body.
+  Default: `0`
+- **limit** (optional)
+  Enter the maximum number of Voice Profiles to be returned.
+  Default: `2`
+- **include_users** (optional)
+  The “include_users” parameter allows you to fetch users information.
+  Default: `true`
+- **include_count** (optional)
+  The “include_count” parameter allows you to fetch the total count of the stacks owned by or shared with a user account.
+  Default: `true`
+- **typeahead** (optional)
+  The “typeahead” parameter retrieves responses that match the provided string.
+  Default: `sample`
+- **sort** (optional)
+  Enter the value on the basis of which you want to sort your Voice Profiles. The voice profiles can be sorted by created_at, updated_at, and name values. The default value is updated_at.
+  Default: `created_at`
+- **order** (optional)
+  Specify how you want to order your Voice Profiles; asc for ascending order and desc for descending order. The default value is desc.
+  Default: `asc`
+
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]  `
+
+##### Sample Response
 
 ```json
 {
@@ -436,29 +513,45 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 ```
 
 
-#### Get a Single Voice Profile
 
 #### Get a Single Voice Profile
 
-**Method:** `GET`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/voice-profiles/{voice_profile_uid}?include_users={boolean}`
+#### Get a Single Voice Profile
+
+**GET** `/v1/brand-kits/{brand_kit_uid}/voice-profiles/{voice_profile_uid}?include_users={boolean}`
 
 The Get a Single Voice Profile request fetches the specific Voice Profile from a Brand Kit in an organization.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-| voice_profile_uid | your_voice_profile_uid | Enter the Voice Profile UID. |
-| include_users | true | The “include_users” parameter allows you to fetch users information. |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
+- **voice_profile_uid** (required)
+  Enter the Voice Profile UID.
+  Default: `your_voice_profile_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_users** (optional)
+  The “include_users” parameter allows you to fetch users information.
+  Default: `true`
+
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Response
 
 ```json
 {
@@ -483,12 +576,12 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 ```
 
 
-#### Create Voice Profile
 
 #### Create Voice Profile
 
-**Method:** `POST`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/voice-profiles`
+#### Create Voice Profile
+
+**POST** `/v1/brand-kits/{brand_kit_uid}/voice-profiles`
 
 The Create Voice Profile request lets you create a new Voice Profile in a Brand Kit within an organization.
 
@@ -511,16 +604,25 @@ Here’s an example of the Request Body for creating a new Voice Profile:
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-**Request Body:**
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Request
 
 ```json
 {
@@ -537,7 +639,7 @@ Here’s an example of the Request Body for creating a new Voice Profile:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -563,12 +665,12 @@ Here’s an example of the Request Body for creating a new Voice Profile:
 ```
 
 
-#### Update Voice Profile
 
 #### Update Voice Profile
 
-**Method:** `PUT`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/voice-profiles/{voice_profile_uid}`
+#### Update Voice Profile
+
+**PUT** `/v1/brand-kits/{brand_kit_uid}/voice-profiles/{voice_profile_uid}`
 
 The Update Voice Profile request lets you update an existing Voice Profile from the Brand Kit in an organization.
 
@@ -592,17 +694,28 @@ Here’s an example of the Request Body for updating a Voice Profile:
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-| voice_profile_uid | your_voice_profile_uid | Enter the Voice Profile UID. |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
+- **voice_profile_uid** (required)
+  Enter the Voice Profile UID.
+  Default: `your_voice_profile_uid`
 
-**Request Body:**
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Request
 
 ```json
 {
@@ -620,7 +733,7 @@ Here’s an example of the Request Body for updating a Voice Profile:
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -649,34 +762,46 @@ Here’s an example of the Request Body for updating a Voice Profile:
 ```
 
 
-#### Delete Voice Profile
 
 #### Delete Voice Profile
 
-**Method:** `DELETE`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/voice-profiles/{voice_profile_uid}`
+#### Delete Voice Profile
+
+**DELETE** `/v1/brand-kits/{brand_kit_uid}/voice-profiles/{voice_profile_uid}`
 
 The Delete Voice Profile request lets you delete an existing Voice Profile from the Brand Kits in an organization.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:manage scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-| voice_profile_uid | your_voice_profile_uid | Enter the Voice Profile UID. |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
+- **voice_profile_uid** (required)
+  Enter the Voice Profile UID.
+  Default: `your_voice_profile_uid`
 
-**Response (200):**
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Response
 
 ```json
 {
   "message": "Voice Profile deleted successfully"
 }
 ```
+
 
 ### Custom Credentials (LLM) Configuration
 
@@ -687,24 +812,37 @@ Custom Credentials (LLM) Configuration allows you to integrate your own Large La
 
 #### Get Custom Credentials
 
-**Method:** `GET`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/llm-configs?include_decrypted_keys={boolean}`
+**GET** `/v1/brand-kits/{brand_kit_uid}/llm-configs?include_decrypted_keys={boolean}`
 
 The Get Custom Credentials request fetches the custom credentials from a Brand Kit in an organization.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-| include_decrypted_keys | true | The “include_decrypted_keys” parameter allows you to fetch LLM Configuration details in encrypted format when set to tru |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-**Response (200):**
+##### Query Parameters
+
+- **include_decrypted_keys** (optional)
+  The “include_decrypted_keys” parameter allows you to fetch LLM Configuration details in encrypted format when set to true.
+  Default: `true`
+
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Response
 
 ```json
 {
@@ -731,12 +869,12 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
 ```
 
 
-#### Set Custom Credentials
 
 #### Set Custom Credentials
 
-**Method:** `PUT`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/llm-configs`
+#### Set Custom Credentials
+
+**PUT** `/v1/brand-kits/{brand_kit_uid}/llm-configs`
 
 The Set Custom Credentials request lets you configure the custom API credentials for Brand Kit.
 
@@ -760,16 +898,25 @@ Here’s an example of the Request Body for configuring the Brand Kit using **Op
 }
 ```
 
-**Parameters:**
+##### URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-| authtoken | your_authtoken | Enter the authtoken. |
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication) |
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-**Request Body:**
+##### Headers
+
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+
+##### Sample Request
 
 ```json
 {
@@ -787,7 +934,7 @@ Here’s an example of the Request Body for configuring the Brand Kit using **Op
 }
 ```
 
-**Response (200):**
+##### Sample Response
 
 ```json
 {
@@ -813,6 +960,7 @@ Here’s an example of the Request Body for configuring the Brand Kit using **Op
     }
 }
 ```
+
 
 ## Postman Collection
 

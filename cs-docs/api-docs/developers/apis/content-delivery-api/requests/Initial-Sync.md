@@ -12,9 +12,7 @@ last_updated: 2024-06-21
 
 # Initial Sync
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/sync?init=true&content_type_uid={content_type_uid}&locale={locale_code}&start_from={iso_date}&type={type}`
+**GET** `/stacks/sync?init=true&content_type_uid={content_type_uid}&locale={locale_code}&start_from={iso_date}&type={type}`
 
 The Initial Sync request syncs the entries and assets of a stack, published on a specific environment.
 
@@ -39,28 +37,36 @@ You can use the sync_token later to perform subsequent sync, which fetches only 
 
 If there are more than 100 records, you get a pagination_token in response. This token can be used to fetch the next batch of data. Read [Sync using pagination token](#sync-using-pagination-token) for more details.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **init** (required)
+  Enter ‘true’ to perform a complete sync of all your app data.
+  Default: `true`
+- **content_type_uid** (optional)
+  Enter the content type UID, if you want to sync entries of specific content types.
+  Default: `for_synchronization_calls`
+- **locale** (optional)
+  Enter the locale to retrieve and sync the content published on a specific locale.
+  Default: `en-us`
+- **start_from** (optional)
+  Specify the start date, if you want to retrieve and sync data starting from a specific date.
+  Default: `2018-01-14T00:00:00.000Z`
+- **type** (optional)
+  Enter the type(s) of content you want to retrieve and sync. You can pass multiple types as comma-separated values.
+  Default: `entry_published, entry_unpublished, asset_published`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the delivery token of the publishing environment. [Read more](https://www.contentstack.com/developers/create-tokens/types-of-tokens#access-tokens). |
+- **api_key** (required)
+  Enter the API key of your stack
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the delivery token of the publishing environment. [Read more](https://www.contentstack.com/developers/create-tokens/types-of-tokens#access-tokens).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Default: `main`
 
-| branch | main |  |
-
-| init | true | Enter ‘true’ to perform a complete sync of all your app data. |
-
-| content_type_uid | for_synchronization_calls | Enter the content type UID, if you want to sync entries of specific content types. |
-
-| locale | en-us | Enter the locale to retrieve and sync the content published on a specific locale. |
-
-| start_from | 2018-01-14T00:00:00.000Z | Specify the start date, if you want to retrieve and sync data starting from a specific date. |
-
-| type | entry_published, entry_unpublished, asset_published | Enter the type(s) of content you want to retrieve and sync. You can pass multiple types as comma-separated values. |
-
-**Response:**
+## Sample Response
 
 ```json
 {
@@ -103,3 +109,4 @@ If there are more than 100 records, you get a pagination_token in response. This
 	"sync_token": "blt122334455667"
 }
 ```
+

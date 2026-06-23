@@ -12,52 +12,67 @@ last_updated: 2025-07-31
 
 # Get All Metadata
 
-
-**Method:** `GET`  
-**Endpoint:** `/metadata/`
+**GET** `/metadata/`
 
 The Get All Metadata request returns comprehensive information of all the metadata attached to all the entries and assets in your stack.
 
 **Note**: Limited keys such as entity_uid, content_type_uid etc. are shown to the user with no access. For eg: You will see limited keys in the third object of the example response body as the user has no access to that particular entry in the stack.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+- **include_multi_stack** (optional)
+  Set this to 'true' to fetch data from multiple stacks.
+  Default: `false`
+- **include_multi_branch** (optional)
+  Set this to 'true' to fetch data from multiple branches.
+  Default: `false`
+- **include_title[]** (optional)
+  You can request multiple titles in a single response. For example: - Set to ‘content_type’ to fetch the name of the content type. - Set to ‘stack’ to fetch the name of the stack. - Set to ‘entity’ to fetch the title of the entity. An entity could be either an entry or an asset.
+  Default: `content_type`
+- **limit** (optional)
+  Set the limit in between ‘0-100’ to limit the number of items returned as response.
+  Default: `50`
+- **skip** (optional)
+  Set this as ‘0’ to skip the number of items from the response body.
+  Default: `7`
+- **query** (optional)
+  Set this to {{{key}}:{{value}}}. This key allows you to fetch the data that matches the query value.
+  Default: `{“tags” :”presetBuilder”}`
+- **asc** (optional)
+  Set this to {{key}}. This key will fetch the data in the ascending order as per the defined value.
+  Default: `type`
+- **desc** (optional)
+  Set this to {{key}}. This key will fetch the data in the descending order as per the defined value.
+  Default: `type`
+- **only[BASE][]** (optional)
+  Set this to {{key}}. This key will only return the data defined in the value field.
+  Default: `presets`
+- **except[BASE][]** (optional)
+  Set this to {{key}}. This key will not return the data defined in the value field.
+  Default: `created_by`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: ` your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| authorization |  your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-
-| branch | main | Enter your branch or alias unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-| include_multi_stack | false | Set this to 'true' to fetch data from multiple stacks. |
-
-| include_multi_branch | false | Set this to 'true' to fetch data from multiple branches. |
-
-| include_title[] | content_type | You can request multiple titles in a single response. For example:  - Set to ‘content_type’ to fetch the name of the content type. - Set to ‘stack’ to fetch the |
-
-| limit | 50 | Set the limit in between ‘0-100’ to limit the number of items returned as response. |
-
-| skip | 7 | Set this as ‘0’ to skip the number of items from the response body. |
-
-| query | {“tags” :”presetBuilder”} | Set this to {{{key}}:{{value}}}. This key allows you to fetch the data that matches the query value. |
-
-| asc | type | Set this to {{key}}. This key will fetch the data in the ascending order as per the defined value. |
-
-| desc | type | Set this to {{key}}. This key will fetch the data in the descending order as per the defined value. |
-
-| only[BASE][] | presets | Set this to {{key}}. This key will only return the data defined in the value field. |
-
-| except[BASE][] | created_by | Set this to {{key}}. This key will not return the data defined in the value field. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -131,3 +146,4 @@ The Get All Metadata request returns comprehensive information of all the metada
     ]
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Delete global field
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/global_fields/{global_field_uid}?force=true`
+**DELETE** `/global_fields/{global_field_uid}?force=true`
 
 The Delete global field request allows you to delete a specific global field.
 
@@ -24,27 +22,37 @@ To configure the permissions for your application via OAuth, please include the 
 
 When executing the API call, in the 'URL Parameters' section, provide the unique ID of your global field.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **global_field_uid** (required)
+  Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global field. The unique ID of a global field is unique across a stack.
+  Default: `global_field_uid`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | Your_authtoken | Enter your authtoken. |
+- **force** (required)
+  Set the force parameter to 'true' to delete the Global field.
+  Default: `true`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `Your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| global_field_uid | global_field_uid | Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global field. The unique ID of a global field is |
-
-| force | true | Set the force parameter to 'true' to delete the Global field. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
   "notice": "Global Field deleted successfully."
 }
 ```
+

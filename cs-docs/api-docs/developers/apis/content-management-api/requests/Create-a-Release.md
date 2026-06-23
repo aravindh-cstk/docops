@@ -12,34 +12,40 @@ last_updated: 2024-11-14
 
 # Create a Release
 
-
-**Method:** `POST`  
-**Endpoint:** `/releases`
+**POST** `/releases`
 
 The Create a Release request allows you to create a new Release in your stack. To create a release, you need to provide the name of the release in the request body.
 
 To configure the permissions for your application via OAuth, please include the cm.releases.management:write scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| release_version | 2.0 | Enter the release version. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Enter application/json to pass a request body. |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -52,7 +58,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -71,3 +77,4 @@ To configure the permissions for your application via OAuth, please include the 
 	}
 }
 ```
+

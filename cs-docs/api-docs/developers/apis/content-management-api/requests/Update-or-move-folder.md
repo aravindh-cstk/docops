@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Update or move folder
 
-
-**Method:** `PUT`  
-**Endpoint:** `/assets/folders/{folder_uid}`
+**PUT** `/assets/folders/{folder_uid}`
 
 The Update or move folder request can be used either to update the details of a folder or set the parent folder if you want to move a folder under another folder.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
@@ -29,26 +27,35 @@ In the ‘Body’ section, you need to provide a new name for your folder, and i
 - The maximum level of folder nesting is 5.
 - When nesting folder, you cannot nest a folder within the same folder or within its child folders.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **folder_uid** (required)
+  Enter the UID of the folder that you want to either update or move.
+  Default: `blt12af3e1af23c123f`
 
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
+## Query Parameters
 
-| authtoken | your_authtoken |  |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| folder_uid | blt12af3e1af23c123f | Enter the UID of the folder that you want to either update or move. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -58,7 +65,7 @@ In the ‘Body’ section, you need to provide a new name for your folder, and i
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -78,3 +85,4 @@ In the ‘Body’ section, you need to provide a new name for your folder, and i
 	}
 }
 ```
+

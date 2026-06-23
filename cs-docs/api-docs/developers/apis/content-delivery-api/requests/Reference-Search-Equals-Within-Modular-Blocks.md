@@ -12,9 +12,7 @@ last_updated: 2025-07-15
 
 # Reference Search Equals Within Modular Blocks
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_uid.block_uid.reference_field_uid":{"$in_query":{"referenced_content_type's_field_uid":"value"}}}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&query={"modular_block_uid.block_uid.reference_field_uid":{"$in_query":{"referenced_content_type's_field_uid":"value"}}}`
 
 Get entries having values based on referenced fields. This query retrieves all entries that satisfy query conditions made on referenced fields.If the reference is part of a Modular Blocks field, you need to mention the Modular Blocks UID, Block UID, as well as the reference field UID using a dot operatorNote that this query will work for entries only.
 
@@ -23,26 +21,37 @@ Get entries having values based on referenced fields. This query retrieves all e
 - General query: {"additional_info.related_products.products": {"$in_query": { "title": "iPhone 7 128GB"}}}
 - Multiple content type referencing query: {"additional_info.related_products.products":{"$in_query":{"title":"iPhone 7 128GB", "_content_type_uid": "product"}, "_content_type_uid": "electronics"}}
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of stack of which you wish to retrieve the content types. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **query** (required)
+  Enter the actual query that will be executed to retrieve entries. This query should be in JSON format.
+  Default: `{"additional_info.related_products.products":{"$in_query":{"title":"iPhone 7 128GB"}}}`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
+- **api_key** (required)
+  Enter the API key of stack of which you wish to retrieve the content types.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed. |
-
-| query | {"additional_info.related_products.products":{"$in_query":{"title":"iPhone 7 128GB"}}} | Enter the actual query that will be executed to retrieve entries. This query should be in JSON format. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -199,3 +208,4 @@ Get entries having values based on referenced fields. This query retrieves all e
   ]
 }
 ```
+

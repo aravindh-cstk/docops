@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Update asset revision
 
-
-**Method:** `PUT`  
-**Endpoint:** `/assets/{asset_uid}`
+**PUT** `/assets/{asset_uid}`
 
 The Update asset revision call upgrades a specified version of an asset as the latest version of that asset.
 
@@ -34,26 +32,36 @@ Here's an example of the raw body:
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_uid** (required)
+  Enter the UID of the asset of which you want to update the version.
+  Default: `enter_your_asset_uid`
 
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
+## Query Parameters
 
-| authtoken | your_authtoken |  |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | application/json | Pass “application/json” to enter JSON request body and “multipart/form-data” to include form data body parameters. |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Pass “application/json” to enter JSON request body and “multipart/form-data” to include form data body parameters.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| asset_uid | enter_your_asset_uid | Enter the UID of the asset of which you want to update the version. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -65,7 +73,7 @@ Here's an example of the raw body:
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -89,3 +97,4 @@ Here's an example of the raw body:
   }
 }
 ```
+

@@ -12,36 +12,44 @@ last_updated: 2024-03-21
 
 # Unlocalize an entry
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/unlocalize?locale={locale_code}`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/unlocalize?locale={locale_code}`
 
 The Unlocalize an entry request is used to unlocalize an existing entry. Read more about [Unlocalization](/docs/developers/multilingual-content/unlocalize-an-entry).   
 To configure the permissions for your application via OAuth, please include the cm.entry:write scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to fetch. Note: In case you do not know the UID of your entry, use the ‘Get Entries’ call to get all the entries (along with the UIDs).
+  Default: `blt9965f5f9840923ba`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | Your_Authtoken |  |
+- **locale** (required)
+  Enter the code of the language to unlocalize the entry of that particular language.
+  Default: `fr-fr`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique  |
-
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to fetch. Note: In case you do not know the UID of your entry, use the ‘Get Entries’ call to get all the entries  |
-
-| locale | fr-fr | Enter the code of the language to unlocalize the entry of that particular language. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Entry unlocalized successfully."
 }
 ```
+

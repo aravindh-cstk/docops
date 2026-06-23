@@ -12,9 +12,7 @@ last_updated: 2024-08-29
 
 # Get job items status
 
-
-**Method:** `GET`  
-**Endpoint:** `/bulk/jobs/{job_id}/items?include_count={boolean_value}&type={type_value}&skip={skip_value}&limit={limit_value}&status={status_value}&ct[]={content_type_uid}&include_reference={boolean_value}`
+**GET** `/bulk/jobs/{job_id}/items?include_count={boolean_value}&type={type_value}&skip={skip_value}&limit={limit_value}&status={status_value}&ct[]={content_type_uid}&include_reference={boolean_value}`
 
 The Get job items status request retrieves all the details of the items associated with a specific publish/unpublish job, along with their status.
 
@@ -24,34 +22,49 @@ The Get job items status request retrieves all the details of the items associat
 - The include_count query parameter will return the count only if skip is 0 or the value for skip is not provided.
 - The item status API request returns only the first 100 items. If you want to fetch the details other than the first 100 in your response, refer to the Pagination section to retrieve data for all items in paginated form.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **job_id** (required)
+  Enter the UID of the job of which you want to retrieve the details.
+  Default: `eb4c0236-103a-4a04-82a4-0a452b94bfc8`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authorization | your_management_token | Enter your management token. |
+- **include_count** (optional)
+  If set to true, the response includes the total count of items within the job. Default value for this parameter is false.
+  Default: `false`
+- **skip** (optional)
+  Enter the number of items to be skipped from the response body. Default value for this parameter is 0.
+  Default: `0`
+- **limit** (optional)
+  Enter the maximum number of items to be returned. Default and maximum value for this parameter is 100.
+  Default: `100`
+- **include_reference** (optional)
+  Set this parameter to 'true' to include the details of all the referenced items in response. Default value for this parameter is false.
+  Default: `true`
+- **status** (optional)
+  Enter the status 'success' or 'failed' for which you want to retrieve items.
+  Default: `success`
+- **type** (optional)
+  Enter the filter 'entry' or 'asset' for which you want to retrieve items.
+  Default: `asset`
+- **ct[]** (optional)
+  Enter the unique ID of the content type from which you want to filter responses. Filter multiple content types by using ct[]=your_content_type_uid1&ct[]=your_content_type_uid2.
+  Default: `your_content_type_uid`
 
-| api_version | 3.2 | Enter the API version. |
+## Headers
 
-| job_id | eb4c0236-103a-4a04-82a4-0a452b94bfc8 | Enter the UID of the job of which you want to retrieve the details. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **api_version** (required)
+  Enter the API version.
+  Default: `3.2`
 
-| include_count | false | If set to true, the response includes the total count of items within the job. Default value for this parameter is false. |
-
-| skip | 0 | Enter the number of items to be skipped from the response body. Default value for this parameter is 0. |
-
-| limit | 100 | Enter the maximum number of items to be returned. Default and maximum value for this parameter is 100. |
-
-| include_reference | true | Set this parameter to 'true' to include the details of all the referenced items in response. Default value for this parameter is false. |
-
-| status | success | Enter the status 'success' or 'failed' for which you want to retrieve items. |
-
-| type | asset | Enter the filter 'entry' or 'asset' for which you want to retrieve items. |
-
-| ct[] | your_content_type_uid | Enter the unique ID of the content type from which you want to filter responses. Filter multiple content types by using ct[]=your_content_type_uid1&ct[]=your_co |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -100,3 +113,4 @@ The Get job items status request retrieves all the details of the items associat
     "total_count": 29
 }
 ```
+

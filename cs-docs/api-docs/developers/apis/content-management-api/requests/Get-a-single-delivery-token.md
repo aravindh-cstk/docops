@@ -12,24 +12,24 @@ last_updated: 2023-05-25
 
 # Get a single delivery token
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/delivery_tokens/{token_uid}`
+**GET** `/stacks/delivery_tokens/{token_uid}`
 
 The Get a single delivery token request returns the details of a particular delivery token created in a stack.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **token_uid** (required)
+  Enter the UID of the token that you want to retrieve.
+  Default: `blt22222ecd22a2ccd222`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | Your_Authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
 
-| token_uid | blt22222ecd22a2ccd222 | Enter the UID of the token that you want to retrieve. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -110,3 +110,4 @@ The Get a single delivery token request returns the details of a particular deli
     ]
 }
 ```
+

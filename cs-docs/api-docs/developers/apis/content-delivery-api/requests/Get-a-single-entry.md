@@ -12,9 +12,7 @@ last_updated: 2026-06-05
 
 # Get a single entry
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}`
 
 The Get a single entry request fetches a particular entry of a content type.
 
@@ -53,30 +51,43 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 - If you specify a locale in the query, it returns the latest published version of the localized entry/entries
 - If an entry is not localized, make use of the include_fallback=true query parameter to fetch the published content from its fallback locale
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you want to retrieve the entries. The content type UID is often based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you want to fetch.
+  Default: `blta250054cfa4f5aab`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **environment** (optional)
+  Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production environment, pass the value as production.
+  Default: `production`
+- **locale** (optional)
+  Enter the code of the language of which you want to include the entries. Only the published localized entries will be displayed.
+  Default: `en-us`
+- **include_fallback** (optional)
+  Enter 'true' to include the published localized content from the fallback locale when the specified locale does not contain published content.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| content_type_uid | product | Enter the unique ID of the content type of which you want to retrieve the entries. The content type UID is often based on the title of the content type and it i |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| entry_uid | blta250054cfa4f5aab | Enter the unique ID of the entry that you want to fetch. |
-
-| environment | production | Enter the environment scoped to your delivery token. For example, if your delivery token is scoped to the production environment, pass the value as production. |
-
-| locale | en-us | Enter the code of the language of which you want to include the entries. Only the published localized entries will be displayed. |
-
-| include_fallback | true | Enter 'true' to include the published localized content from the fallback locale when the specified locale does not contain published content. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -168,3 +179,4 @@ You can add other [Queries](/docs/developers/apis/content-delivery-api#queries) 
 	}
 }
 ```
+

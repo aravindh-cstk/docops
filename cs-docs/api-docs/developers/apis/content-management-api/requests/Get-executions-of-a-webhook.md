@@ -12,9 +12,7 @@ last_updated: 2024-12-17
 
 # Get executions of a webhook
 
-
-**Method:** `GET`  
-**Endpoint:** `/webhooks/{webhook_uid}/executions?from=2020-12-14T08:00:00.000Z&to=2020-12-22T07:59:59.999Z&query={ "status": { "$gte": "200", "$lte": "399" } }`
+**GET** `/webhooks/{webhook_uid}/executions?from=2020-12-14T08:00:00.000Z&to=2020-12-22T07:59:59.999Z&query={ "status": { "$gte": "200", "$lte": "399" } }`
 
 The Get executions of a webhook request allows you to fetch the execution details of a specific webhook, which includes the **execution UID**. These details are instrumental in retrieving webhook logs and retrying a failed webhook.  
 To configure the permissions for your application via OAuth, please include the cm.webhook:read scope.
@@ -52,28 +50,40 @@ The following table shows values you can use for the query parameter:
 
 This API request will return a maximum of **100** records while fetching the execution details for a specific webhook. Previously, there was no limit on the number of records returned. You can use the "[skip](/docs/developers/apis/content-delivery-api#skip)" parameter to fetch older records. To limit the number of records returned, you can use the “[limit](/docs/developers/apis/content-delivery-api#limit)” parameter.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **webhook_uid** (required)
+  Enter the unique ID of the webhook of which you want to retrieve the details. Execute the 'Get all webhooks' call to retrieve the uid of a webhook.
+  Default: `cs2642bec9-c336-4da1-8aad-fded56c7d50e`
 
-| api_key | your_stack_api_key | Enter the API key of your stack |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **from** (optional)
+  Enter the start date for your date range filter in ISO format.
+  Default: `2016-10-07T12:34:36.000Z`
+- **to** (optional)
+  Enter the end date for your date range filter in ISO format.
+  Default: `2020-12-22T07:59:59.999Z`
+- **query** (optional)
+  Enter the actual query that will be executed to retrieve failed or successful webhook executions. This query should be in JSON format.
+  Default: `{  "status": {     "$gte": "200",     "$lte": "399"   } }`
+- **only_events** (optional)
+  Set to true to receive events without "request_details," and set to false to include "request_details" in the response.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
+## Headers
 
-| webhook_uid | cs2642bec9-c336-4da1-8aad-fded56c7d50e | Enter the unique ID of the webhook of which you want to retrieve the details. Execute the 'Get all webhooks' call to retrieve the uid of a webhook. |
+- **api_key** (required)
+  Enter the API key of your stack
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| from | 2016-10-07T12:34:36.000Z | Enter the start date for your date range filter in ISO format. |
-
-| to | 2020-12-22T07:59:59.999Z | Enter the end date for your date range filter in ISO format. |
-
-| query | {  "status": {     "$gte": "200",     "$lte": "399"   } } | Enter the actual query that will be executed to retrieve failed or successful webhook executions. This query should be in JSON format. |
-
-| only_events | false | Set to true to receive events without "request_details," and set to false to include "request_details" in the response. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -301,3 +311,4 @@ This API request will return a maximum of **100** records while fetching the exe
     ]
 }
 ```
+

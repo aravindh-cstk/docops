@@ -12,28 +12,31 @@ last_updated: 2023-01-05
 
 # Rename Group
 
-
-**Method:** `PATCH`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+**PATCH** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
 The Rename Group request lets you change the name of a group.
 
 In the "Request Body", you need to pass a new name for the group in the value key.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
+- **group_id** (required)
+  The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
+  Default: `your_group_id`
 
-| Content-Type | application/json | The format of the response content. |
+## Headers
 
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
 
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the o |
-
-| group_id | your_group_id | The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -50,7 +53,7 @@ In the "Request Body", you need to pass a new name for the group in the value ke
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -68,3 +71,4 @@ In the "Request Body", you need to pass a new name for the group in the value ke
     }
 }
 ```
+

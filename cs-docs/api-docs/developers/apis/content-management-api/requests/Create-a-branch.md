@@ -12,9 +12,7 @@ last_updated: 2024-02-08
 
 # Create a branch
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/branches`
+**POST** `/stacks/branches`
 
 The Create a branch request creates a new branch in a particular stack of your organization.
 
@@ -22,18 +20,19 @@ The Create a branch request creates a new branch in a particular stack of your o
 
 In the “Body” section, you need to provide a custom UID for the new branch and also the UID of the source branch from which it will inherit data.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your auth token.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
-
-| authtoken | your_authtoken | Enter your auth token. |
-
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -44,7 +43,7 @@ In the “Body” section, you need to provide a custom UID for the new branch a
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -60,3 +59,4 @@ In the “Body” section, you need to provide a custom UID for the new branch a
     }
 }
 ```
+

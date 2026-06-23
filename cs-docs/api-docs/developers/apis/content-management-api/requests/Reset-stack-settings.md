@@ -12,24 +12,23 @@ last_updated: 2023-03-11
 
 # Reset stack settings
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/settings/reset`
+**POST** `/stacks/settings/reset`
 
 The Reset stack settings call resets your stack to default settings, and additionally, lets you add parameters to or modify the settings of an existing stack.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| api_key | API_key_of_your_stack | Enter the API key of your stack. |
-
-| authtoken | Your_Authtoken | Enter your authtoken. |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -37,7 +36,7 @@ The Reset stack settings call resets your stack to default settings, and additio
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -54,3 +53,4 @@ The Reset stack settings call resets your stack to default settings, and additio
     }
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2025-07-18
 
 # Update an asset sidebar extension
 
-
-**Method:** `PUT`  
-**Endpoint:** `/extensions/{asset_sidebar_extension_uid}`
+**PUT** `/extensions/{asset_sidebar_extension_uid}`
 
 The Update an asset sidebar extension request allows you to update the details of an existing asset sidebar extension.
 
@@ -22,26 +20,37 @@ In the ‘Body’ section, you need to provide details of the asset sidebar exte
 
 The popup panel width should be within the range of **335** to **1024** pixels. Set the blur effect to true if you want to blur the details of the uploaded file by default.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_sidebar_extension_uid** (required)
+  Enter the UID of the asset sidebar extension of which you want to update details.
+  Default: `blt123ea123b123a123f`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch or alias unique ID. |
-
-| asset_sidebar_extension_uid | blt123ea123b123a123f | Enter the UID of the asset sidebar extension of which you want to update details. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -54,7 +63,7 @@ The popup panel width should be within the range of **335** to **1024** pixels. 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -83,3 +92,4 @@ The popup panel width should be within the range of **335** to **1024** pixels. 
   }
 }
 ```
+

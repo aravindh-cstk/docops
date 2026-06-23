@@ -12,31 +12,35 @@ last_updated: 2024-02-28
 
 # Get all publish rules
 
-
-**Method:** `GET`  
-**Endpoint:** `/workflows/publishing_rules?content_types=[{content_type_uid}]&limit={rule_limit}&include_count={boolean_value}`
+**GET** `/workflows/publishing_rules?content_types=[{content_type_uid}]&limit={rule_limit}&include_count={boolean_value}`
 
 The Get all Publish Rules request retrieves the details of all the Publish rules of a workflow.   
 To configure the permissions for your application via OAuth, please include the cm.workflows.publishing-rules:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_types** (required)
+  Enter a comma-separated list of content type UIDs for filtering publish rules on its basis.
+  Default: `{{content_type_uid1,content_type_uid2,...}}`
+- **limit** (optional)
+  Enter the limit value to display only the set number of publishing rules.
+  Default: `10`
+- **include_count** (required)
+  Set this parameter to 'true' to include the total number of publish rules in the response body.
+  Default: `true`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| content_types | {{content_type_uid1,content_type_uid2,...}} | Enter a comma-separated list of content type UIDs for filtering publish rules on its basis. |
-
-| limit | 10 | Enter the limit value to display only the set number of publishing rules. |
-
-| include_count | true | Set this parameter to 'true' to include the total number of publish rules in the response body. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -106,3 +110,4 @@ To configure the permissions for your application via OAuth, please include the 
     ]
 }
 ```
+

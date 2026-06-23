@@ -12,26 +12,22 @@ last_updated: 2023-01-05
 
 # Share a stack
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/share`
+**POST** `/stacks/share`
 
 The Share a stack call shares a stack with the specified user to collaborate on the stack.
 
 In the 'Body' section, you need to provide the email ID of the user with whom you wish to share the stack along with the role uid that you wish to assign the user.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| api_key | API_key_of_your_stack |  |
-
-| authtoken | Your_Authtoken |  |
-
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -46,10 +42,11 @@ In the 'Body' section, you need to provide the email ID of the user with whom yo
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "The invitation has been sent successfully."
 }
 ```
+

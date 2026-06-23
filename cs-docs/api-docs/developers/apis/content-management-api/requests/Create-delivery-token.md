@@ -12,9 +12,7 @@ last_updated: 2024-02-01
 
 # Create delivery token
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/delivery_tokens`
+**POST** `/stacks/delivery_tokens`
 
 The Create delivery token request is used to create a delivery token in the stack.
 
@@ -49,20 +47,22 @@ You need to specify the branch and alias scope for your delivery token through t
 }
 ```
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **create_with_preview_token** (optional)
+  Set this to true to create a preview token.
+  Default: `true`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | Your_Authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| Content-Type | application/json |  |
-
-| create_with_preview_token | true | Set this to true to create a preview token. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -80,7 +80,7 @@ You need to specify the branch and alias scope for your delivery token through t
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -130,3 +130,4 @@ You need to specify the branch and alias scope for your delivery token through t
     }
 }
 ```
+

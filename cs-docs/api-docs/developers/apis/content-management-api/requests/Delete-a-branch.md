@@ -12,9 +12,7 @@ last_updated: 2023-04-27
 
 # Delete a branch
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/stacks/branches/{branch_uid}?force={boolean_value}`
+**DELETE** `/stacks/branches/{branch_uid}?force={boolean_value}`
 
 The Delete a branch request deletes an existing branch and all the content within it.
 
@@ -27,23 +25,32 @@ To confirm the deletion of a branch, you need to specify the force=true query pa
 
 When executing the API call, in the “URL Parameters” section, provide the UID of your branch.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **branch_uid** (required)
+  Enter the unique ID of the branch that you want to delete. The UID of a branch is unique across a stack. Execute the [Get all branches](#get-all-branches) call to retrieve the UID of a branch.
+  Default: `your_branch_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **force** (required)
+  Enter 'true' to force delete a branch.
+  Default: `true`
 
-| branch_uid | your_branch_uid | Enter the unique ID of the branch that you want to delete. The UID of a branch is unique across a stack. Execute the [Get all branches](#get-all-branches) call  |
+## Headers
 
-| force | true | Enter 'true' to force delete a branch. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
     "notice": "Branch deleted successfully."
 }
 ```
+

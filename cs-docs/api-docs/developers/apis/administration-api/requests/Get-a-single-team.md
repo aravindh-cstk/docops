@@ -12,26 +12,32 @@ last_updated: 2026-04-07
 
 # Get a single team
 
-
-**Method:** `GET`  
-**Endpoint:** `/organizations/{organization_uid}/teams/{team_uid}`
+**GET** `/organizations/{organization_uid}/teams/{team_uid}`
 
 The Get a single team request returns comprehensive information of a specific team available in a particular organization.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **team_uid** (required)
+  Enter the UID of the team of which you want to retrieve the details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/developers/apis/content-management-api#get-all-teams) request to retrieve the UID of a team.
+  Default: `team_uid`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Query Parameters
 
-| organization_uid | your_organization_uid | Enter the UID of your Organization. |
+- **includeUserDetails** (optional)
+  Set this parameter to “true” to include the details of users in the response.
+  Default: `true`
 
-| team_uid | team_uid | Enter the UID of the team of which you want to retrieve the details. The UID of a team is unique across an organization. Execute the [Get all teams](/docs/devel |
+## Headers
 
-| includeUserDetails | true | Set this parameter to “true” to include the details of users in the response. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -68,3 +74,4 @@ The Get a single team request returns comprehensive information of a specific te
     "updatedByUserName": "Sample User"
 }
 ```
+

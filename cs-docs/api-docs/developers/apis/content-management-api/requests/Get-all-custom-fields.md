@@ -12,34 +12,38 @@ last_updated: 2024-04-25
 
 # Get all custom fields
 
-
-**Method:** `GET`  
-**Endpoint:** `/extensions?query={"type":"field"}`
+**GET** `/extensions?query={"type":"field"}`
 
 The Get all custom fields request is used to get the information of all custom fields created in a stack.
 
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (required)
+  For custom fields
+  Default: `{"type":"field"}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| query | {"type":"field"} | For custom fields |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -78,3 +82,4 @@ To configure the permissions for your application via OAuth, please include the 
 	]
 }
 ```
+

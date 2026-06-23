@@ -12,9 +12,7 @@ last_updated: 2023-06-21
 
 # PUSH Operation
 
-
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}`
 
 The PUSH operation allows you to “push” (or append) data into an array without overriding an existing value.
 
@@ -53,28 +51,39 @@ Say you need to push specific data (say “abc”) into a field named “Demo Fi
 
 ##### PULL Operation
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry.
+  Default: `enter_your_entry_uid`
 
-| api_key | blt20962a819b57e233 | Enter Stack API Key. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to make valid Content Management API requests. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | Your_Management_Token | Enter the management token. |
+## Headers
 
-| Content-Type | application/json |  |
+- **api_key** (required)
+  Enter Stack API Key.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your Authtoken. We recommend you to use the stack’s Management Token instead, along with the stack API key, to make valid Content Management API requests.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter the management token.
+  Default: `Your_Management_Token`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type. The UID is generated based on the title of the content type. The unique ID of a content type is unique across a stack. |
-
-| entry_uid | enter_your_entry_uid | Enter the unique ID of the entry. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -98,7 +107,7 @@ Say you need to push specific data (say “abc”) into a field named “Demo Fi
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -138,3 +147,4 @@ Say you need to push specific data (say “abc”) into a field named “Demo Fi
 	}
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Transfer stack ownership to other users
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/transfer_ownership`
+**POST** `/stacks/transfer_ownership`
 
 The Transfer stack ownership to other users call sends the specified user an email invitation for accepting the ownership of a particular stack.
 
@@ -24,18 +22,16 @@ In the 'Body' section, you need to provide the email address of the user to whom
 
 **Additional Resource**: To transfer ownership of a stack to other users via Contentstack's UI, refer to the [Transfer Stack Ownership](/docs/developers/set-up-stack/transfer-stack-ownership) article.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `API_key_of_your_stack`
+- **authtoken** (required)
+  Default: `Your_Authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| api_key | API_key_of_your_stack |  |
-
-| authtoken | Your_Authtoken |  |
-
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -43,10 +39,11 @@ In the 'Body' section, you need to provide the email address of the user to whom
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "An email has been sent to abc@example.com about transferring ownership of 'My New Stack'. The ownership will be transferred after the other user accepts ownership."
 }
 ```
+

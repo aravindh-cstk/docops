@@ -12,31 +12,36 @@ last_updated: 2024-03-21
 
 # Get assets of a specific folder
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets?folder={folder_uid}`
+**GET** `/assets?folder={folder_uid}`
 
 The Get assets of a specific folder retrieves all assets of a specific asset folder; however, it doesn't retrieve the details of subfolders within it.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **folder** (required)
+  Enter the UID of the asset folder.
+  Default: `enter_your_folder_uid`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | bltd7eee4a49bdf2842 | Enter the API key of the stack that holds the asset |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `bltd7eee4a49bdf2842`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| branch | main | Enter your branch unique ID. |
-
-| folder | enter_your_folder_uid | Enter the UID of the asset folder. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -79,3 +84,4 @@ To configure the permissions for your application via OAuth, please include the 
 	]
 }
 ```
+

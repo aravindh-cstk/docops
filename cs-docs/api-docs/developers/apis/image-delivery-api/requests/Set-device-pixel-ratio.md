@@ -12,21 +12,22 @@ last_updated: 2025-08-28
 
 # Set device pixel ratio
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&dpr={dpr_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&dpr={dpr_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **dpr** (optional)
+  Enter the device pixel ratio that needs to be applied on the image.
+  Default: `2`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `100`
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| dpr | 2 | Enter the device pixel ratio that needs to be applied on the image. |
-
-| height | 100 | Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p. |
-
-| width | 100 | Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

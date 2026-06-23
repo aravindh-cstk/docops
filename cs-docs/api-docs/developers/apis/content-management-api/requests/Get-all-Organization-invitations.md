@@ -12,42 +12,55 @@ last_updated: 2023-01-05
 
 # Get all Organization invitations
 
-
-**Method:** `GET`  
-**Endpoint:** `/organizations/{organization_uid}/share?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&include_roles={boolean_value}&include_invited_by={boolean_value}&include_user_details={boolean_value}&typeahead={value}`
+**GET** `/organizations/{organization_uid}/share?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&include_roles={boolean_value}&include_invited_by={boolean_value}&include_user_details={boolean_value}&typeahead={value}`
 
 The Get all organization invitations call gives you a list of all the Organization invitations. Only the owner or the admin of the Organization can resend the invitation to add users to an Organization.
 
 When executing the API call, provide the Organization UID.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of the Organization of which you want to retrieve the list of sent invitations.
+  Default: `blt4001c00ea0ddf287`
 
-| authtoken | your_authtoken | Enter the authtoken of the user. |
+## Query Parameters
 
-| organization_uid | blt4001c00ea0ddf287 | Enter the UID of the Organization of which you want to retrieve the list of sent invitations. |
+- **limit** (optional)
+  The ‘limit’ parameter will return a specific number of sent organization invitations in the output. Example, if 10 invitations were sent out and you wish to fetch only the first 8, you need to specify '2' as the value in this parameter.
+  Default: `1`
+- **skip** (optional)
+  The ‘skip’ parameter will skip a specific number of organization roles in the output. Example, if there are 12 organization roles and you want to skip the last 2 to get only the first 10 in the response body, you need to specify ‘2’ here.
+  Default: `2`
+- **asc** (optional)
+  The ‘asc’ parameter allows you to sort the list of organization invitations in ascending order on the basis of a specific parameter.
+  Default: `created_at`
+- **desc** (optional)
+  The ‘desc’ parameter allows you to sort the list of organization invitations in descending order on the basis of a specific parameter.
+  Default: `update_at`
+- **include_count** (optional)
+  The ‘include_count’ parameter returns the total number of organization invitations sent out. Example: If you wish to know the total number of organization invitations, you need to mention ‘true’.
+  Default: `true`
+- **include_roles** (optional)
+  The ‘include_roles’ parameter, when set to ‘true’, will display the details of the roles that are assigned to the user in an organization.
+  Default: `true`
+- **include_invited_by** (optional)
+  The ‘include_invited_by’ parameter, when set to ‘true’, includes the details of the user who sent out the organization invitation.
+  Default: `true`
+- **include_user_details** (optional)
+  The ‘include_user_details’ parameter, when set to ‘true’, lets you know whether the user who has been sent the organization invitation has enabled Two-factor Authentication or not.
+  Default: `true`
+- **typeahead** (optional)
+  The ‘typeahead’ parameter allows you to perform a name-based search on all the stacks on an organization based on the value provided. For example, it allows you to perform an email-ID-based search on all users based on the email ID provided.
+  Default: `Aravind`
 
-| limit | 1 | The ‘limit’ parameter will return a specific number of sent organization invitations in the output. Example, if 10 invitations were sent out and you wish to fet |
+## Headers
 
-| skip | 2 | The ‘skip’ parameter will skip a specific number of organization roles in the output. Example, if there are 12 organization roles and you want to skip the last  |
+- **authtoken** (required)
+  Enter the authtoken of the user.
+  Default: `your_authtoken`
 
-| asc | created_at | The ‘asc’ parameter allows you to sort the list of organization invitations in ascending order on the basis of a specific parameter. |
-
-| desc | update_at | The ‘desc’ parameter allows you to sort the list of organization invitations in descending order on the basis of a specific parameter. |
-
-| include_count | true | The ‘include_count’ parameter returns the total number of organization invitations sent out. Example: If you wish to know the total number of organization invit |
-
-| include_roles | true | The ‘include_roles’ parameter, when set to ‘true’, will display the details of the roles that are assigned to the user in an organization. |
-
-| include_invited_by | true | The ‘include_invited_by’ parameter, when set to ‘true’, includes the details of the user who sent out the organization invitation. |
-
-| include_user_details | true | The ‘include_user_details’ parameter, when set to ‘true’, lets you know whether the user who has been sent the organization invitation has enabled Two-factor Au |
-
-| typeahead | Aravind | The ‘typeahead’ parameter allows you to perform a name-based search on all the stacks on an organization based on the value provided. For example, it allows you |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -86,3 +99,4 @@ When executing the API call, provide the Organization UID.
     "count": 3
 }
 ```
+

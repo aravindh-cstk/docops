@@ -12,29 +12,33 @@ last_updated: 2024-02-01
 
 # Delete preview token
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/stacks/delivery_tokens/{delivery_token_uid}/preview_token`
+**DELETE** `/stacks/delivery_tokens/{delivery_token_uid}/preview_token`
 
 The Delete preview token request deletes a preview token associated with a specific delivery token.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **delivery_token_uid** (required)
+  Enter the UID of the delivery token for which you want to delete the preview token.
+  Default: `your_delivery_token_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
 
-| authorization | your_management_token | Enter your management token. |
-
-| delivery_token_uid | your_delivery_token_uid | Enter the UID of the delivery token for which you want to delete the preview token. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
     "notice": "Preview token deleted successfully."
 }
 ```
+

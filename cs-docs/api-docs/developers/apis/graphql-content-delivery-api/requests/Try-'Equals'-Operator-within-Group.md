@@ -12,9 +12,7 @@ last_updated: 2023-03-29
 
 # Try 'Equals' Operator within Group
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 #### Equals Operator within Group
 
@@ -39,3 +37,4 @@ query {
 ```
 
 The response body of this query will include all entries of the **Product** content type that satisfy the query, and include details of just the ‘Price in USD’ and ‘Description’ fields.
+

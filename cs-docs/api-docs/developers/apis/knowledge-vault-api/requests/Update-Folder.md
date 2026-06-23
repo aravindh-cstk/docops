@@ -12,9 +12,7 @@ last_updated: 2026-03-02
 
 # Update Folder
 
-
-**Method:** `PUT`  
-**Endpoint:** `/v1/knowledge-vault/folders/{folder_uid}`
+**PUT** `/v1/knowledge-vault/folders/{folder_uid}`
 
 The Update Folder request lets you rename an existing folder in the Knowledge Vault of a brand kit.
 
@@ -28,22 +26,28 @@ Example:
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **older_uid** (required)
+  Enter the UID of the folder to be updated.
+  Default: `your_folder_uid`
 
-| authtoken | your_authtoken | Enter the authtoken. |
+## Headers
 
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication). |
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-
-| older_uid | your_folder_uid | Enter the UID of the folder to be updated. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -51,10 +55,11 @@ Example:
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
    "message": "Folder name updated successfully"
 }
 ```
+

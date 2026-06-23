@@ -12,9 +12,7 @@ last_updated: 2024-04-25
 
 # Create a JSON RTE plugin with source URL
 
-
-**Method:** `POST`  
-**Endpoint:** `/extensions`
+**POST** `/extensions`
 
 The Create a JSON RTE plugin with source URL request allows you to add an externally hosted JSON RTE plugin to your stack.
 
@@ -24,24 +22,31 @@ In the ‘Body’ section, you need to provide details of the JSON RTE plugin, s
 
 **Note:** You can add a maximum of **50** extensions (including custom fields , custom widgets and JSON RTE plugins) in a stack.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -59,7 +64,7 @@ In the ‘Body’ section, you need to provide details of the JSON RTE plugin, s
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -87,3 +92,4 @@ In the ‘Body’ section, you need to provide details of the JSON RTE plugin, s
   }
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-11-11
 
 # Set Custom Credentials
 
-
-**Method:** `PUT`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/llm-configs`
+**PUT** `/v1/brand-kits/{brand_kit_uid}/llm-configs`
 
 The Set Custom Credentials request lets you configure the custom API credentials for Brand Kit.
 
@@ -38,20 +36,25 @@ Here’s an example of the Request Body for configuring the Brand Kit using **Op
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+## Headers
 
-| authtoken | your_authtoken | Enter the authtoken. |
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
 
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication). |
-
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -69,7 +72,7 @@ Here’s an example of the Request Body for configuring the Brand Kit using **Op
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -95,3 +98,4 @@ Here’s an example of the Request Body for configuring the Brand Kit using **Op
     }
 }
 ```
+

@@ -12,25 +12,34 @@ last_updated: 2025-11-13
 
 # Unlocalize a taxonomy
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+**DELETE** `/taxonomies/{taxonomy_uid}`
 
 The Unlocalize a taxonomy request is used to remove translated values from a taxonomy in a specified locale.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/apis/content-management-api#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `global_content_topics`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale** (required)
+  The locale from which to unlocalize. If not specified, the master locale is used.
+  Default: `es-es`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| taxonomy_uid | global_content_topics | Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](/docs/developers/a |
-
-| locale | es-es | The locale from which to unlocalize. If not specified, the master locale is used. |

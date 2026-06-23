@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Crop sub region
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -24,11 +22,12 @@ Offset positioning distributes the remaining space according to the specified of
 
 For instance, if you crop an image with 2000 pixels width to 1000 pixels wide, an offset value of offset-x10.5 would crop 10% (100 pixels) from the left of the image and 90% (900 pixels) from the right. If you set the offset to 50, the API centers the crop area in the middle of the image.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **crop** (optional)
+  Enter the width of the crop area, height of the crop area, top-left corner point of the crop on X-axis, and the top-left corner point of the crop on Y-axis in pixels or percentage. The format of the parameter is {width_value},{height_value},x{value},y{value}.
+  Default: `50,75,x0.10,y0.20`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| crop | 50,75,x0.10,y0.20 | Enter the width of the crop area, height of the crop area, top-left corner point of the crop on X-axis, and the top-left corner point of the crop on Y-axis in p |
-
-| environment | production | Enter the environment scoped to your delivery token. |

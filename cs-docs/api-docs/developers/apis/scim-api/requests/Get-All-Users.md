@@ -12,28 +12,35 @@ last_updated: 2023-01-05
 
 # Get All Users
 
-
-**Method:** `GET`  
-**Endpoint:** `scim/v2.0/organizations/{organization_uid}/Users`
+**GET** `scim/v2.0/organizations/{organization_uid}/Users`
 
 The Get All Users request fetches the list of all users (along with details such as name, user ID, and email address) of your Contentstack organization.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the organization.
+  Default: `your_organization_uid`
 
-| Content-Type | application/json | The format of the response content. |
+## Query Parameters
 
-| Authorization | Bearer access_token_from_IdP_client | The access token obtained after authorizing the IdP client. |
+- **count** (optional)
+  To fetch a certain number of users in a single request. You can fetch a maximum of 100 users at a time.
+  Default: `2`
+- **startIndex** (optional)
+  It is the index number from which you want to fetch user details. By default, the value is 1. Example: If you specify 2, you will get details starting from the second user in the list.
+  Default: `2`
 
-| organization_uid | your_organization_uid | The UID of the organization. Use the [Get All Organizations](/docs/developers/apis/content-management-api#get-all-organizations) request to get the UID of the o |
+## Headers
 
-| count | 2 | To fetch a certain number of users in a single request. You can fetch a maximum of 100 users at a time. |
+- **Content-Type** (required)
+  The format of the response content.
+  Default: `application/json`
+- **Authorization** (required)
+  The access token obtained after authorizing the IdP client.
+  Default: `Bearer access_token_from_IdP_client`
 
-| startIndex | 2 | It is the index number from which you want to fetch user details.  By default, the value is 1. Example: If you specify 2, you will get details starting from the |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -97,3 +104,4 @@ The Get All Users request fetches the list of all users (along with details such
     ]
 }
 ```
+

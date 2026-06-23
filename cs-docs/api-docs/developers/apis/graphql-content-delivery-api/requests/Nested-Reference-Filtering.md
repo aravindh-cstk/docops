@@ -12,9 +12,7 @@ last_updated: 2025-03-10
 
 # Nested Reference Filtering
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 Nested reference filtering allows you to filter referenced entries within a reference field, returning relevant entries matching specific criteria. This feature does not affect the parent or child documents, making it easier to retrieve only the necessary data.
 
@@ -62,3 +60,4 @@ You can use nested reference filtering to retrieve specific referenced entries b
 ```
 
 **Note**: Nested reference filtering does not support **File**, **Reference**, or **JSON RTE** fields.
+

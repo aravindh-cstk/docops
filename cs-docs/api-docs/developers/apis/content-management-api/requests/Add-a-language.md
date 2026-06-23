@@ -12,9 +12,7 @@ last_updated: 2024-02-28
 
 # Add a language
 
-
-**Method:** `POST`  
-**Endpoint:** `/locales`
+**POST** `/locales`
 
 This call lets you add a new language to your stack. You can either add a [supported language](/docs/developers/multilingual-content/supported-languages) or a [custom language](/docs/developers/multilingual-content/add-a-custom-language) of your choice.  
 To configure the permissions for your application via OAuth, please include the cm.languages.management:write scope.
@@ -25,24 +23,31 @@ In the 'Body' section, enter the language name and code in JSON format. You can 
 
 **Warning**: Once generated, you cannot modify a custom language code. However, you can update the language name and fallback language if required.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| branch | false | Enter your branch unique ID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -54,7 +59,7 @@ In the 'Body' section, enter the language name and code in JSON format. You can 
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -73,3 +78,4 @@ In the 'Body' section, enter the language name and code in JSON format. You can 
     }
 }
 ```
+

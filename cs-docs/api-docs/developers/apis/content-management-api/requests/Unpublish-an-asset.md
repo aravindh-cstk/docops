@@ -12,9 +12,7 @@ last_updated: 2024-02-20
 
 # Unpublish an asset
 
-
-**Method:** `POST`  
-**Endpoint:** `/assets/{asset_uid}/unpublish`
+**POST** `/assets/{asset_uid}/unpublish`
 
 The Unpublish an asset call is used to unpublish a specific version of an asset from a desired [environment](/docs/developers/set-up-environments/about-environments).  
 To configure the permissions for your application via OAuth, please include the cm.asset:unpublish scope.
@@ -23,24 +21,29 @@ In case of **Scheduled Unpublishing**, add the scheduled_at key and provide the 
 
 In the 'Body' section, enter the asset details, such as locales and environments, from where the assets need to be unpublished. These details should be in JSON format.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_uid** (required)
+  Enter the unique ID of the asset that you wish to unpublish.
+  Default: `blt91af1e5af9c3639f`
 
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| asset_uid | blt91af1e5af9c3639f | Enter the unique ID of the asset that you wish to unpublish. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -57,10 +60,11 @@ In the 'Body' section, enter the asset details, such as locales and environments
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
   "notice": "Asset sent for unpublishing."
 }
 ```
+

@@ -12,28 +12,31 @@ last_updated: 2024-02-22
 
 # Create a project variable
 
-
-**Method:** `POST`  
-**Endpoint:** `/v1/projects/{project_uid}/variables`
+**POST** `/v1/projects/{project_uid}/variables`
 
 The Create a project variable request lets you create a project variable in a project.
 
 To configure the permissions for your application via OAuth, include the automationhub.variables:write scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
+## Headers
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -43,7 +46,7 @@ To configure the permissions for your application via OAuth, include the automat
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -57,3 +60,4 @@ To configure the permissions for your application via OAuth, include the automat
     "id": "bd0ce37910cb4172b844308aa07e6bf7"
 }
 ```
+

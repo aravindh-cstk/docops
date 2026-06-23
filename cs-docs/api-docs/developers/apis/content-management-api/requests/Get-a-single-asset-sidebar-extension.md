@@ -12,30 +12,38 @@ last_updated: 2025-07-18
 
 # Get a single asset sidebar extension
 
-
-**Method:** `GET`  
-**Endpoint:** `/extensions/{asset_sidebar_extension_uid}`
+**GET** `/extensions/{asset_sidebar_extension_uid}`
 
 The Get a single asset sidebar extension request gets the comprehensive details of a specific asset sidebar extension.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_sidebar_extension_uid** (required)
+  Enter the UID of the asset sidebar extension of which you want to retrieve details.
+  Default: `blt123ea123b123a123f`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| branch | main | Enter your branch or alias unique ID. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| asset_sidebar_extension_uid | blt123ea123b123a123f | Enter the UID of the asset sidebar extension of which you want to retrieve details. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -63,3 +71,4 @@ The Get a single asset sidebar extension request gets the comprehensive details 
   }
 }
 ```
+

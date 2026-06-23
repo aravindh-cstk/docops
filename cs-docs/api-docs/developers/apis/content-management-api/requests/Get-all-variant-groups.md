@@ -12,40 +12,50 @@ last_updated: 2024-09-24
 
 # Get all variant groups
 
-
-**Method:** `GET`  
-**Endpoint:** `/variant_groups?skip=0&limit=30&include_count=true&include_variant_info=true&include_variant_count=true&desc=created_at&content_type={your_content_type_uid}`
+**GET** `/variant_groups?skip=0&limit=30&include_count=true&include_variant_info=true&include_variant_count=true&desc=created_at&content_type={your_content_type_uid}`
 
 The Get all variant groups request returns a list of all variant groups linked to your stack. To retrieve the variant UIDs specific to a content type, include the content_type query parameter with the content type UID in your request.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **skip** (optional)
+  Enter the number of items to be skipped from the response body.
+  Default: `2`
+- **limit** (optional)
+  Enter the maximum number of items to be returned.
+  Default: `4`
+- **include_count** (optional)
+  Set this parameter to “true” to include the total count of variant groups.
+  Default: `true`
+- **include_variant_info** (optional)
+  Set this parameter to “true” to include the variant information.
+  Default: `true`
+- **include_variant_count** (optional)
+  Set this parameter to “true” to include the total count of variants within a variant group.
+  Default: `true`
+- **asc** (optional)
+  Sort the response in ascending order. Options include created_at and name.
+  Default: `created_at`
+- **desc** (optional)
+  Sort the response in descending order. Options include created_at and name.
+  Default: `name`
+- **content_type** (optional)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
 
-| authorization | your_management_token | Enter your management token. |
-
-| skip | 2 | Enter the number of items to be skipped from the response body. |
-
-| limit | 4 | Enter the maximum number of items to be returned. |
-
-| include_count | true | Set this parameter to “true” to include the total count of variant groups. |
-
-| include_variant_info | true | Set this parameter to “true” to include the variant information. |
-
-| include_variant_count | true | Set this parameter to “true” to include the total count of variants within a variant group. |
-
-| asc | created_at | Sort the response in ascending order. Options include created_at and name. |
-
-| desc | name | Sort the response in descending order. Options include created_at and name. |
-
-| content_type | your_content_type_uid | Enter the unique ID of your content type. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -185,3 +195,4 @@ The Get all variant groups request returns a list of all variant groups linked t
     ]
 }
 ```
+

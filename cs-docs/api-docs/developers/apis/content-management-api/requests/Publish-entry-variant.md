@@ -12,9 +12,7 @@ last_updated: 2025-02-05
 
 # Publish entry variant
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/publish`
+**POST** `/content_types/{content_type_uid}/entries/{entry_uid}/publish`
 
 The Publish entry variant request lets you publish an entry variant.
 
@@ -34,30 +32,43 @@ In the “Body” section, include the variant UID and version within variants. 
 
 **Note**: You don't need to include the base entry version in the payload. The entry variant will be published based on the latest version or as specified by the variant_rules toggle. If the base entry version is included, the system will ignore it.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of your content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of your entry.
+  Default: `your_entry_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale** (optional)
+  Enter the code of the language for the entry you want to update.
+  Default: `en-us`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Pass application/json value. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+- **api_version** (required)
+  Enter the API version to include Nested Reference Publishing.
+  Default: `3.2`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| api_version | 3.2 | Enter the API version to include Nested Reference Publishing. |
-
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | your_content_type_uid | Enter the unique ID of your content type. |
-
-| entry_uid | your_entry_uid | Enter the unique ID of your entry. |
-
-| locale | en-us | Enter the code of the language for the entry you want to update. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -79,7 +90,7 @@ In the “Body” section, include the variant UID and version within variants. 
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -87,3 +98,4 @@ In the “Body” section, include the variant UID and version within variants. 
     "job_id": "75****1f-e**0-46**-a**5-02********9a"
 }
 ```
+

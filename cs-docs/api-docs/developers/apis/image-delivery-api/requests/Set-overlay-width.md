@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Set overlay width
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-width={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-width={value}`
 
 ##### Additional Notes
 
@@ -26,13 +24,15 @@ last_updated: 2025-08-28
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **overlay** (optional)
+  Specify the relative URL of the image that needs to be set as overlay image.
+  Default: `/v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png`
+- **overlay-width** (optional)
+  Specify the width of the overlay image in pixels or percentage.
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| overlay | /v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png | Specify the relative URL of the image that needs to be set as overlay image. |
-
-| overlay-width | 100 | Specify the width of the overlay image in pixels or percentage. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

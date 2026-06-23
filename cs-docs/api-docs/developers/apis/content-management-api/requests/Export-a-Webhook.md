@@ -12,29 +12,32 @@ last_updated: 2024-07-25
 
 # Export a Webhook
 
-
-**Method:** `GET`  
-**Endpoint:** `/webhooks/{webhook_uid}/export`
+**GET** `/webhooks/{webhook_uid}/export`
 
 The Export a Webhook request exports an existing webhook. The exported webhook data is saved in a downloadable JSON file. The exported file won’t get downloaded automatically. To download the exported file, a **REST API** client, such as **Postman** can be used.  
 To configure the permissions for your application via OAuth, please include the cm.webhooks:export scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **webhook_uid** (required)
+  Enter the unique ID of the webhook that you want to export. **Note:** In case you do not know the UID of the webhook, use the **Get all webhooks** request to get all the webhooks (along with the UIDs).
+  Default: `cs14804cde-9be3-48c3-9008-33a7884bacb5`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "multipart/form-data" to pass form-data params.
+  Default: `multipart/form-data`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | multipart/form-data | Enter "multipart/form-data" to pass form-data params. |
-
-| webhook_uid | cs14804cde-9be3-48c3-9008-33a7884bacb5 | Enter the unique ID of the webhook that you want to export.  **Note:** In case you do not know the UID of the webhook, use the **Get all webhooks** request to g |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -70,3 +73,4 @@ To configure the permissions for your application via OAuth, please include the 
     "updated_at": "2024-07-16T06:28:37.170Z"
 }
 ```
+

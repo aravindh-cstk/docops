@@ -12,9 +12,7 @@ last_updated: 2026-04-07
 
 # Get organization log details
 
-
-**Method:** `GET`  
-**Endpoint:** `/organizations/{organization_uid}/logs`
+**GET** `/organizations/{organization_uid}/logs`
 
 The Get organization log details request is used to retrieve the audit log details of an organization.
 
@@ -24,16 +22,19 @@ When executing the API call, provide the Organization UID.
 
 **Tip**: This request returns only the first **25 audit log items** of the specified organization. If you get more than **25 items** in your response, refer to the [Pagination](/docs/developers/apis/content-delivery-api#pagination) section to retrieve all the log items in a paginated form.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the UID of a specific organization of which you want to retrieve the audit log details.
+  Default: `656s5d1c65ea6ddf287`
 
-| authtoken | Your_authtoken | Enter your authtoken. |
+## Headers
 
-| organization_uid | 656s5d1c65ea6ddf287 | Enter the UID of a specific organization of which you want to retrieve the audit log details. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `Your_authtoken`
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -94,3 +95,4 @@ When executing the API call, provide the Organization UID.
 	]
 }
 ```
+

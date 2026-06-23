@@ -12,9 +12,7 @@ last_updated: 2026-01-08
 
 # Get all references of content type
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/references?include_global_fields={boolean_value}`
+**GET** `/content_types/{content_type_uid}/references?include_global_fields={boolean_value}`
 
 The Get all references of content type request retrieves a list of all content types where the specified content type is referenced. This includes both direct and nested references.
 
@@ -26,26 +24,36 @@ To configure the permissions for your application via OAuth, please include the 
 
 Additionally, to fetch all Global fields in which the specified content type is referenced, you need to pass include_global_fields as a query parameter. Set this parameter to true to include the Global fields along with the content types.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the references. The Unique ID of a content type is unique across a stack.
+  Default: `brand`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_global_fields** (optional)
+  Set the include_global_fields parameter to “true” to retrieve all the Global fields in which the specified content type is referenced.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| content_type_uid | brand | Enter the unique ID of the content type of which you wish to retrieve the references. The Unique ID of a content type is unique across a stack. |
-
-| include_global_fields | true | Set the include_global_fields parameter to “true” to retrieve all the Global fields in which the specified content type is referenced. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -55,3 +63,4 @@ Additionally, to fetch all Global fields in which the specified content type is 
 	]
 }
 ```
+

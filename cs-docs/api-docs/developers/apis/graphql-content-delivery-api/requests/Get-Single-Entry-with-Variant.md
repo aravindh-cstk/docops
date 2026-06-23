@@ -12,6 +12,5 @@ last_updated: 2024-10-18
 
 # Get Single Entry with Variant
 
+**** `/stacks/apiKey/explore`
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`

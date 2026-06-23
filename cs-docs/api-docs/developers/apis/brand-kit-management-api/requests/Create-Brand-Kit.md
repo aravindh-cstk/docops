@@ -12,9 +12,7 @@ last_updated: 2024-06-06
 
 # Create Brand Kit
 
-
-**Method:** `POST`  
-**Endpoint:** `/v1/brand-kits`
+**POST** `/v1/brand-kits`
 
 The Create Brand Kit request lets you create a new Brand Kit in the specified organization.
 
@@ -35,18 +33,19 @@ Here’s an example of the Request Body for creating a new Brand Kit:
 }
 ```
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-
-| authtoken | your_authtoken | Enter the authtoken. |
-
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication). |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -60,7 +59,7 @@ Here’s an example of the Request Body for creating a new Brand Kit:
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -81,3 +80,4 @@ Here’s an example of the Request Body for creating a new Brand Kit:
   }
 }
 ```
+

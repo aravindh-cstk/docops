@@ -24,6 +24,26 @@ Along with the dpr parameter, you need to specify either the height or width par
 
 The width or height of the output image changes depending on the values that you provide for dpr and height or width. For example, for a device pixel ratio of 2 and height 50, the height of the output image changes to 100.
 
-## Related Pages
+## API Endpoints
 
-- [](https://www.contentstack.com/docs)
+### Set device pixel ratio
+
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&dpr={dpr_value}`
+
+**Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
+
+#### Query Parameters
+
+- **dpr** (optional)
+  Enter the device pixel ratio that needs to be applied on the image.
+  Default: `2`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `100`
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+

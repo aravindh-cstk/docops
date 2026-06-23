@@ -12,27 +12,30 @@ last_updated: 2024-02-29
 
 # Get a single alias
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/branch_aliases/{branch_alias_uid}`
+**GET** `/stacks/branch_aliases/{branch_alias_uid}`
 
 The Get a single alias request returns information of a specific alias.  
 To configure the permissions for your application via OAuth, please include the cm.branch-aliases.management:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **branch_alias_uid** (required)
+  Enter the unique ID of the alias of which you want to retrieve the details. The UID of an alias is unique across a stack. Execute the [Get all aliases](#get-all-aliases) call to retrieve the UID of an alias.
+  Default: `your_branch_alias_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| branch_alias_uid | your_branch_alias_uid | Enter the unique ID of the alias of which you want to retrieve the details. The UID of an alias is unique across a stack. Execute the [Get all aliases](#get-all |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -48,3 +51,4 @@ To configure the permissions for your application via OAuth, please include the 
     }
 }
 ```
+

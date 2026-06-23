@@ -12,9 +12,7 @@ last_updated: 2024-02-28
 
 # Get all environments
 
-
-**Method:** `GET`  
-**Endpoint:** `/environments?include_count={boolean_value}&asc={field_uid}&desc={field_uid}`
+**GET** `/environments?include_count={boolean_value}&asc={field_uid}&desc={field_uid}`
 
 The Get all environments call fetches the list of all environments available in a stack.
 
@@ -23,24 +21,30 @@ You can add queries to extend the functionality of this API call. Under the URL 
 To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api/#queries) section of the Content Delivery API doc.  
 To configure the permissions for your application via OAuth, please include thecm.environments.management:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total count of languages added to your stack.
+  Default: `false`
+- **asc** (optional)
+  Enter the unique ID of the field for sorting the environments in ascending order with respect to that field.
+  Default: `created_at`
+- **desc** (optional)
+  Enter the unique ID of the field for sorting the environments in descending order with respect to that field.
+  Default: `updated_at`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| include_count | false | Set this parameter to 'true' to include in response the total count of languages added to your stack. |
-
-| asc | created_at | Enter the unique ID of the field for sorting the environments in ascending order with respect to that field. |
-
-| desc | updated_at | Enter the unique ID of the field for sorting the environments in descending order with respect to that field. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -98,3 +102,4 @@ To configure the permissions for your application via OAuth, please include thec
     ]
 }
 ```
+

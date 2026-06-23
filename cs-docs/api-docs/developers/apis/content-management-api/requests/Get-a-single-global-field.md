@@ -12,9 +12,7 @@ last_updated: 2025-05-05
 
 # Get a single global field
 
-
-**Method:** `GET`  
-**Endpoint:** `/global_fields/{global_field_uid}`
+**GET** `/global_fields/{global_field_uid}`
 
 The Get a single global field request allows you to fetch comprehensive details of a specific global field.
 
@@ -26,34 +24,49 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 - If your Global field contains nested Global fields, they will appear as part of the schema in the API response.
 - To configure the permissions for your application via OAuth, please include the cm.global-fields.management:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **global_field_uid** (required)
+  Enter the unique ID of the Global field of which you want to retrieve the details. The UID of a Global field is unique across a stack. Execute the '[Get all Global fields](/docs/developers/apis/content-management-api#get-all-global-fields)' request to retrieve the UID of a Global field.
+  Default: `category`
 
-| api_key | your_api_key | Enter the API key of your stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **version** (optional)
+  Specify the version number of the specified Global field of which you want to retrieve details.
+  Default: `4`
+- **include_global_field_schema** (optional)
+  Set this parameter to 'true' to include in response the schema of the Global field.
+  Default: `true`
+- **include_global_fields** (optional)
+  Set this parameter to 'true' to include in response the count of Global fields.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `true`
+- **include_content_types** (optional)
+  Set this parameter to 'true' to include in response the details of the content types.
+  Default: `true`
+- **deleted** (optional)
+  Set this parameter to 'true' to retrieve only deleted Global fields within a stack.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| global_field_uid | category | Enter the unique ID of the Global field of which you want to retrieve the details. The UID of a Global field is unique across a stack. Execute the '[Get all Glo |
-
-| version | 4 | Specify the version number of the specified Global field of which you want to retrieve details. |
-
-| include_global_field_schema | true | Set this parameter to 'true' to include in response the schema of the Global field. |
-
-| include_global_fields | true | Set this parameter to 'true' to include in response the count of Global fields. |
-
-| include_branch | true | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-| include_content_types | true | Set this parameter to 'true' to include in response the details of the content types. |
-
-| deleted | false | Set this parameter to 'true' to retrieve only deleted Global fields within a stack. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -98,3 +111,4 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
     }
 }
 ```
+

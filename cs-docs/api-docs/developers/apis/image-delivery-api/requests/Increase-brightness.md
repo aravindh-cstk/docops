@@ -12,19 +12,18 @@ last_updated: 2025-08-28
 
 # Increase brightness
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&brightness={brightness_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&brightness={brightness_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 To decrease the value of the brightness parameter of an image, pass a negative value:
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **brightness** (optional)
+  Enter the brightness value (1 to 100) to be applied to the image.
+  Default: `20`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| brightness | 20 | Enter the brightness value (1 to 100) to be applied to the image. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

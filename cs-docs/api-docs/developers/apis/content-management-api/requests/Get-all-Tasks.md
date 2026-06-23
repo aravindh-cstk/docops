@@ -12,34 +12,39 @@ last_updated: 2023-01-05
 
 # Get all Tasks
 
-
-**Method:** `GET`  
-**Endpoint:** `/user/assignments?query={query_in_JSON}&sort={field_uid: "asc/desc"}&limit={limit_value}&skip={skip_value}`
+**GET** `/user/assignments?query={query_in_JSON}&sort={field_uid: "asc/desc"}&limit={limit_value}&skip={skip_value}`
 
 The Get all Tasks request retrieves a list of all tasks assigned to you.
 
 When executing the API request, in the 'Header' section, you need to provide the API Key of your stack and the authtoken that you receive after logging into your account.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (required)
+  Enter the actual query that will be executed to retrieve the tasks. This query should be in JSON format. Example: - {"job.publishing_rule.status":0}: retrieves pending approval requests - {"type":"workflow_stage"}: retrieve tasks based on Workflow Stages - {"job.workflow_stage.uid": "workflow_stage_uid"}: retrieve tasks based on a specific Workflow Stage  - {"content_type":"content_type_uid", "type": "publishing_rule"}: retrieve tasks based on multiple conditions
+  Default: `{"type":"workflow_stage"}`
+- **sort** (optional)
+  Enter the field UID on the basis of which you want to sort your tasks. Example: {"assigned_at": "desc"}, {"content_type": "asc"}, or {"assigned_date": "desc", "locale":"asc"}
+  Default: `{“assigned_at”: “desc”}`
+- **limit** (optional)
+  Enter the maximum number of tasks that you want to retrieve in the response.
+  Default: `5`
+- **skip** (optional)
+  Enter the number of tasks to be skipped.
+  Default: `5`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| query | {"type":"workflow_stage"} | Enter the actual query that will be executed to retrieve the tasks. This query should be in JSON format. Example:  - {"job.publishing_rule.status":0}: retrieves |
-
-| sort | {“assigned_at”: “desc”} | Enter the field UID on the basis of which you want to sort your tasks. Example: {"assigned_at": "desc"}, {"content_type": "asc"}, or {"assigned_date": "desc", " |
-
-| limit | 5 | Enter the maximum number of tasks that you want to retrieve in the response. |
-
-| skip | 5 | Enter the number of tasks to be skipped. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -132,3 +137,4 @@ When executing the API request, in the 'Header' section, you need to provide the
 	]
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-07-30
 
 # AND Operator [Taxonomy]
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/entries?query={"$and": [{ "taxonomies.taxonomy_uid_1" : "term_uid1" }, { "taxonomies.taxonomy_uid_2" : "term_uid2" }]}`
+**GET** `/taxonomies/entries?query={"$and": [{ "taxonomies.taxonomy_uid_1" : "term_uid1" }, { "taxonomies.taxonomy_uid_2" : "term_uid2" }]}`
 
 Get all entries for a specific taxonomy that satisfy all the conditions provided in the “$and” query.
 
@@ -42,18 +40,22 @@ query={
 
 ##### Exists Operator
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (optional)
+  Provide a custom query in the string format.
+  Default: `{"$and": [{"taxonomies.color" : "black" }, { "taxonomies.category" : "mobile" }]}`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
 
-| query | {"$and": [{"taxonomies.color" : "black" }, { "taxonomies.category" : "mobile" }]} | Provide a custom query in the string format. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -108,3 +110,4 @@ query={
     ]
 }
 ```
+

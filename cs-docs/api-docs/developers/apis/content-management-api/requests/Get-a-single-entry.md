@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Get a single entry
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?version={version_number}&locale={language_code}&include_workflow={boolean_value}&include_publish_details={boolean_value}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}?version={version_number}&locale={language_code}&include_workflow={boolean_value}&include_publish_details={boolean_value}`
 
 The Get a single entry request fetches a particular entry of a content type.
 
@@ -40,34 +38,47 @@ You will find the entry metadata under the _metadata key in the response. It wil
 
 **Tip: **Also, if no version is mentioned, this request will retrieve the latest published version of the entry. To retrieve a specific version, make use of the version parameter.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to fetch.
+  Default: `blt9965f5f9840923ba`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | Your_Authtoken |  |
+- **version** (optional)
+  Enter the version number of the entry that you want to retrieve. However, to retrieve a specific version of an entry, you need to keep the environment parameter blank.
+  Default: `2`
+- **locale** (optional)
+  Enter the code of the language of which the entries need to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **include_workflow** (optional)
+  Enter 'true' to include the workflow details of the entry.
+  Default: `true`
+- **include_publish_details** (optional)
+  Enter 'true' to include the publish details of the entry.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization |  [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: ` [Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to retrieve the details. The uid is generated based on the title of the content type and it is unique  |
-
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to fetch. |
-
-| version | 2 | Enter the version number of the entry that you want to retrieve. However, to retrieve a specific version of an entry, you need to keep the environment parameter |
-
-| locale | en-us | Enter the code of the language of which the entries need to be included. Only the entries published in this locale will be displayed. |
-
-| include_workflow | true | Enter 'true' to include the workflow details of the entry. |
-
-| include_publish_details | true | Enter 'true' to include the publish details of the entry. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -93,3 +104,4 @@ You will find the entry metadata under the _metadata key in the response. It wil
 	}
 }
 ```
+

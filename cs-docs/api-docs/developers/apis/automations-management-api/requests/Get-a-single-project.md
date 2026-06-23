@@ -12,26 +12,28 @@ last_updated: 2024-03-11
 
 # Get a single project
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}`
+**GET** `/v1/projects/{project_uid}`
 
 The Get a single project request fetches a specific project created in your organization. When executing the API request, you need to provide the organization UID and your authtoken in the Request Header.
 
 To configure the permissions for your application via OAuth, include the automationhub.projects.management:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
+## Headers
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
 
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -48,3 +50,4 @@ To configure the permissions for your application via OAuth, include the automat
     "id": "05732fe9f7d***791715b09a3792f52"
 }
 ```
+

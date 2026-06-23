@@ -12,9 +12,7 @@ last_updated: 2023-01-05
 
 # Log in to your account
 
-
-**Method:** `POST`  
-**Endpoint:** `/user-session`
+**POST** `/user-session`
 
 The Log in to your account request is used to sign in to your Contentstack account and obtain the authtoken.
 
@@ -29,14 +27,12 @@ For SSO-enabled organizations, the ‘Log in to your account’ request will not
 
 For more details, refer the [REST API Usage - Content Management API](/docs/developers/single-sign-on/rest-api-usage#content-management-api) section in the Single Sign-On page.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **Content-Type** (required)
+  Default: `application/json`
 
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -48,7 +44,7 @@ For more details, refer the [REST API Usage - Content Management API](/docs/deve
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -183,3 +179,4 @@ For more details, refer the [REST API Usage - Content Management API](/docs/deve
 	}
 }
 ```
+

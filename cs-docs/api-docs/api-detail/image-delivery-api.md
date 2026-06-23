@@ -178,25 +178,31 @@ Let's try enabling the auto parameter.
 
 #### Enable auto optimization
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&auto={auto_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&auto={auto_value}`
 
 WebP and AVIF images are not supported by all browsers. If the auto parameter is used along with the format parameter, the former overrides the latter in browsers that support WebP and AVIF formats. In browsers that do not support WebP or AVIF format, the format parameter will be applied.
 
 Let's try enabling the auto parameter along with the format parameter, for browsers that do not support WebP or AVIF formats, and encode them to progressive JPEG.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| accept | image/webp | Enter value image/webp or image/avif depending on the value of auto parameter.  **Note**: The internal server handling t |
-| auto | webp | Enter value for auto optimization of the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **auto** (optional)
+  Enter value for auto optimization of the image.
+  Default: `webp`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
+##### Headers
+
+- **accept** (optional)
+  Enter value image/webp or image/avif depending on the value of auto parameter. **Note**: The internal server handling this API call does not support AVIF or WEBP formats. Hence this additional header needs to be included to receive the converted image. However, when running this query via Postman or on any browser that supports AVIF or WEBP format, the accept header is not required.
+  Default: `image/webp`
+
 
 #### Enable auto optimization and encode to progressive JPEG
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}&auto={auto}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}&auto={auto}`
 
 ##### Additional Notes
 
@@ -205,13 +211,18 @@ Let's try enabling the auto parameter along with the format parameter, for brows
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| auto | webp | Enter value for auto optimization of the image. It can either be webp or avif. |
-| format | pjpg | Enter the format that the image needs to be converted to for browsers that don’t support WEBP or AVIF. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **auto** (optional)
+  Enter value for auto optimization of the image. It can either be webp or avif.
+  Default: `webp`
+- **format** (optional)
+  Enter the format that the image needs to be converted to for browsers that don’t support WEBP or AVIF.
+  Default: `pjpg`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Control Quality
 
@@ -222,8 +233,7 @@ The quality parameter lets you control the compression level of images that have
 
 #### Quality
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&quality={quality_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&quality={quality_value}`
 
 ##### Additional Notes
 
@@ -233,12 +243,15 @@ The quality parameter lets you control the compression level of images that have
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| quality | 2 | Enter the percentage value (1 to 100) of the compression to be applied on the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **quality** (optional)
+  Enter the percentage value (1 to 100) of the compression to be applied on the image.
+  Default: `2`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Convert Formats
 
@@ -258,123 +271,143 @@ The format=auto parameter will serve the WebP or AVIF format to browsers that su
 
 #### Auto format
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
 
 Let’s try converting an image to **GIF** format.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| accept | image/webp | Enter value image/webp or image/avif.  **Note**: The internal server handling this API call does not support AVIF or WEB |
-| format | auto | Enter the format into which the source image needs to be converted. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `auto`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
+##### Headers
+
+- **accept** (optional)
+  Enter value image/webp or image/avif. **Note**: The internal server handling this API call does not support AVIF or WEBP formats. Hence this additional header needs to be included to receive the converted image. However, when running this query via Postman or on any browser that supports AVIF or WEBP format, the accept header is not required.
+  Default: `image/webp`
+
 
 #### Convert to GIF
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
 
 Images can also be easily converted to **PNG** format.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| format | gif | Enter the format into which the source image needs to be converted. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `gif`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Convert to PNG
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format_value}`
 
 **JPEG** is one of most common image formats.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| format | png | Enter the format into which the source image needs to be converted. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `png`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Convert to JPEG
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
 
 A **Progressive JPEG** is an image file created using a compression method that displays higher detail in progression. When a Progressive JPEG image is loaded, it first loads a lower-quality pixelated version, and then gradually increases in quality and detail. Due to this, Progressive JPEG files (or its lower-quality version) loads faster than the baseline JPEG files.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| format | jpg | Enter the format into which the source image needs to be converted. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `jpg`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Convert to Progressive JPEG
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
 
 **AVIF** images provide better compression and quality.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| format | pjpg | Enter the format into which the source image needs to be converted. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `pjpg`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Convert to AVIF
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
 
 **WEBP** images are usually lower in size and have good quality. The WEBP images files are currently supported only in Google Chrome, Opera, and Android browsers.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| format | avif | Enter the format into which the source image needs to be converted. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `avif`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Convert to WEBP
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
 
 WEBP images are of two types: Lossy and Lossless. In the former, the data lost while compression cannot be reversed, hence the quality can be lower. While with the later format, no data is lost while compression and quality remains the same even after compression. 
 
 Let’s try converting to **WEBP Lossy** first.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| format | webp | Enter the format into which the source image needs to be converted. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `webp`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Convert to WEBP Lossy
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
 
 Now let’s convert an image to **WEBP Lossless** format.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| format | webply | Enter the format into which the source image needs to be converted. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `webply`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Convert to WEBP Lossless
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
 
 **Additional Notes**:
 
@@ -383,12 +416,15 @@ Now let’s convert an image to **WEBP Lossless** format.
 3. GIF transcoding is not supported as of now.
 4. If 'auto=webp' or 'auto=avif' is used with the format parameter, the browsers that support the WEBP format will ignore the format parameter.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| format | webpll | Enter the format into which the source image needs to be converted. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `webpll`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Resize Images
 
@@ -405,8 +441,7 @@ In case the dimensions specified for the output image is greater than the dimens
 
 #### Resize image width
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}`
 
 ##### Additional Notes
 
@@ -415,12 +450,15 @@ In case the dimensions specified for the output image is greater than the dimens
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| width | 100 | Enter the value of the image width in pixels or percentage. For Example 100 or 0.90 or 250p. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For Example 100 or 0.90 or 250p.
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 
 #### Height
@@ -435,8 +473,7 @@ In case the dimensions specified for the output image is greater than the dimens
 
 #### Resize image height
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&height={height_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&height={height_value}`
 
 ##### Additional Notes
 
@@ -445,12 +482,15 @@ In case the dimensions specified for the output image is greater than the dimens
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| height | 100 | Enter the value of the image height in pixels or percentage. Example 100 or 0.90 or 250p |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. Example 100 or 0.90 or 250p
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 
 #### Disable
@@ -461,20 +501,24 @@ As of now, there is only one value, i.e., upscale, that you can use with the dis
 
 #### Disable upscaling of image
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={value}&disable={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={value}&disable={value}`
 
 To see this parameter in action, the height or width (or both) parameter should be used with it.
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| width | 650 | Enter the value of the image width in pixels or percentage   For Example 100 or 0.90 or 250p |
-| disable | upscale | Enter the name of the functionality that you want to disable. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage  For Example 100 or 0.90 or 250p
+  Default: `650`
+- **disable** (optional)
+  Enter the name of the functionality that you want to disable.
+  Default: `upscale`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Crop Images
 
@@ -487,8 +531,7 @@ When simply cropping an image, use the query ?crop={width_value},{height_value} 
 
 #### Crop by width and height
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -496,35 +539,43 @@ You can define the crop region by means of passing the aspect ratio for the imag
 
 Along with the crop parameter, you also need to specify either the width or height parameter or both in the API request to return an output image with the correct dimensions. If neither width nor height is defined for the given image, the API request will consider the dimensions of the source image and crop the image from the center on the basis of the requested aspect ratio. In this case, the image appears stretched out of proportion.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| crop | 150,100 | Enter the width and height of the crop area in pixels or percentage, respectively.  The format of the parameter is: crop |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **crop** (optional)
+  Enter the width and height of the crop area in pixels or percentage, respectively. The format of the parameter is: crop={width_value},{height_value}
+  Default: `150,100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Crop by aspect ratio
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&crop={crop}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&crop={crop}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 You can set the X-axis and Y-axis position of the top left corner of the crop by using the query ?crop={width_value},{height_value},x{value},y{value}. This lets you define the starting point of the crop region. The x-axis value and y-axis value can be defined in pixels or percentage. An example of this would be ?crop=300,400,x150,y75 or ?crop=300,400,x0.50,y0.60.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| width | 300 | Enter the value of the image width in pixels or percentage. For example, 300 or 0.80 or 250p |
-| height | 400 | Enter the value of the image height in pixels or percentage. For example, 400 or 0.90 or 250p |
-| crop | 1:3 | Enter the width and height of the crop area in aspect ratio.  The format of the parameter is: crop={width_value}:{height |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 300 or 0.80 or 250p
+  Default: `300`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 400 or 0.90 or 250p
+  Default: `400`
+- **crop** (optional)
+  Enter the width and height of the crop area in aspect ratio. The format of the parameter is: crop={width_value}:{height_value}
+  Default: `1:3`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Crop sub region
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -534,17 +585,19 @@ Offset positioning distributes the remaining space according to the specified of
 
 For instance, if you crop an image with 2000 pixels width to 1000 pixels wide, an offset value of offset-x10.5 would crop 10% (100 pixels) from the left of the image and 90% (900 pixels) from the right. If you set the offset to 50, the API centers the crop area in the middle of the image.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| crop | 50,75,x0.10,y0.20 | Enter the width of the crop area, height of the crop area, top-left corner point of the crop on X-axis, and the top-left |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **crop** (optional)
+  Enter the width of the crop area, height of the crop area, top-left corner point of the crop on X-axis, and the top-left corner point of the crop on Y-axis in pixels or percentage. The format of the parameter is {width_value},{height_value},x{value},y{value}.
+  Default: `50,75,x0.10,y0.20`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Crop and offset
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -552,36 +605,46 @@ You can append the safe parameter when cropping an image. This ensures that the 
 
 **Note**: When you use the safe parameter, the API request entirely avoids returning an incorrect output image, however the image returned may not match the defined dimensions. Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| crop | 150,100,offset-x10.5,offset-y10.5 | Enter the width, height, horizontal offset, and vertical offset of the crop area in pixels or percentage.  The format of |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **crop** (optional)
+  Enter the width, height, horizontal offset, and vertical offset of the crop area in pixels or percentage. The format of the parameter is {width_value},{height_value},offset-x{value},offset-y{value}
+  Default: `150,100,offset-x10.5,offset-y10.5`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Crop in fail-safe mode
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&crop={crop}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&crop={crop}`
 
 You can also specify the smart parameter to crop a given image using content-aware algorithms. Normal image cropping usually preserves the center of an image while cropping. However, content-aware image cropping returns a cropped image that automatically fits the defined dimensions while intelligently including the most important components of the image. For example, the smart parameter helps focus on a human being’s face while cropping a given image.
 
 Let us try to crop an image using aspect ratio and smart cropping algorithms.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| environment | production | Enter the environment scoped to your delivery token. |
-| test | test | test |
-| width | 300 | Enter the value of the image width in pixels or percentage. For example, 300 or 0.80 or 250p |
-| height | 400 | Enter the value of the image height in pixels or percentage. For example, 400 or 0.90 or 250p |
-| crop | 300,400,x50,y50,safe | Enter the width of the crop area, height of the crop area, top-left corner point of the crop on X-axis, and the top-left |
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+- **test** (required)
+  test
+  Default: `test`
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 300 or 0.80 or 250p
+  Default: `300`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 400 or 0.90 or 250p
+  Default: `400`
+- **crop** (optional)
+  Enter the width of the crop area, height of the crop area, top-left corner point of the crop on X-axis, and the top-left corner point of the crop on Y-axis in pixels or percentage. Append the safe parameter to this API request. The format of the parameter is: crop={width_value},{height_value},x{value},y{value},safe
+  Default: `300,400,x50,y50,safe`
+
 
 #### Smart Crop
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&crop={crop}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&crop={crop}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -596,14 +659,21 @@ Let us try to crop an image using aspect ratio and smart cropping algorithms.
 3. If the x and y, or offset-x and offset-y parameters are not specified, the image will be cropped from the center.
 4. The x parameter can be used without y (and vice versa), and the offset-x parameter can be used without offset-y (and vice versa).
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| environment | production | Enter the environment scoped to your delivery token. |
-| width | 300 | Enter the value of the image width in pixels or percentage. For example, 300 or 0.80 or 250p |
-| height | 300 | Enter the value of the image height in pixels or percentage. For example, 400 or 0.90 or 250p |
-| crop | 3:5,smart | Enter the width and height of the crop area in aspect ratio. Append the smart parameter to this API request.  The format |
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 300 or 0.80 or 250p
+  Default: `300`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 400 or 0.90 or 250p
+  Default: `300`
+- **crop** (optional)
+  Enter the width and height of the crop area in aspect ratio. Append the smart parameter to this API request. The format of the parameter is: crop={width_value}:{height_value},smart
+  Default: `3:5,smart`
+
 
 ### Fit Mode
 
@@ -616,19 +686,25 @@ If fit is set to bounds, it will constrain the given image into the specified he
 
 #### Fit to bounds
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&fit={fit_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&fit={fit_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| height | 0.50 | Enter the value of the image height in pixels or percentage. Example 250 or 0.50 |
-| fit | bounds | Enter either bounds or crop as value. Example bounds |
-| width | 0.50 | Enter the value of the image width in pixels or percentage. Example 250 or 0.50 |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. Example 250 or 0.50
+  Default: `0.50`
+- **fit** (optional)
+  Enter either bounds or crop as value. Example bounds
+  Default: `bounds`
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. Example 250 or 0.50
+  Default: `0.50`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 
 #### Fit to cover
@@ -637,19 +713,25 @@ If fit is set to cover, it resizes the image (shrinks or enlarges) to fill the e
 
 #### Fit to cover
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&fit={fit_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&fit={fit_value}`
 
 **Note**: The fit parameter requires both the height and the width parameters.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| width | 250 | Enter the value of the image width in pixels or percentage. Example 250 or 0.50 |
-| height | 250 | Enter the value of the image height in pixels or percentage. Example 250 or 0.50 |
-| fit | cover | Pass the fit value as cover to resize the image to entirely cover the specified region, making one dimension larger if n |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. Example 250 or 0.50
+  Default: `250`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. Example 250 or 0.50
+  Default: `250`
+- **fit** (optional)
+  Pass the fit value as cover to resize the image to entirely cover the specified region, making one dimension larger if needed.
+  Default: `cover`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 
 #### Fit by cropping
@@ -658,8 +740,7 @@ If fit is set to crop, it will crop the given image to the defined height and wi
 
 #### Fit by cropping
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&fit={fit_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&fit={fit_value}`
 
 ##### Additional Notes
 
@@ -667,14 +748,21 @@ If fit is set to crop, it will crop the given image to the defined height and wi
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| width | 250 | Enter the value of the image width in pixels or percentage. Example 250 or 0.50 |
-| height | 250 | Enter the value of the image height in pixels or percentage. Example 250 or 0.50 |
-| fit | crop | Enter either bounds or crop as value. Example crop |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. Example 250 or 0.50
+  Default: `250`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. Example 250 or 0.50
+  Default: `250`
+- **fit** (optional)
+  Enter either bounds or crop as value. Example crop
+  Default: `crop`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Trim Images
 
@@ -689,8 +777,7 @@ You can also combine two or more values. For example, to trim the top edge by 25
 
 #### Trim image
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&trim={top_value},{right_value},{bottom_value},{left_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&trim={top_value},{right_value},{bottom_value},{left_value}`
 
 **Additional Notes**
   
@@ -698,12 +785,15 @@ You can also combine two or more values. For example, to trim the top edge by 25
 - CSS style shorthand values are also acceptable.
 - Check out the limitations that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| trim | 25,50,75,100 | Enter value for top, right, bottom, and left edges that needs to be trimmed. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **trim** (optional)
+  Enter value for top, right, bottom, and left edges that needs to be trimmed.
+  Default: `25,50,75,100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Reorient Images
 
@@ -727,40 +817,43 @@ Let’s try to change the orientation of the image. Use the request given below 
 
 #### Orient the image right
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 Now let’s flip the image horizontally.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| orient | 6 | Enter value to manage the cardinal orientation of the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **orient** (optional)
+  Enter value to manage the cardinal orientation of the image.
+  Default: `6`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Flip the image horizontally
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 You can also use a combination of the two example given above. So, in the following API request, the image will be flipped horizontally, and then orient it right.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| orient | 2 | Enter value to manage the cardinal orientation of the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **orient** (optional)
+  Enter value to manage the cardinal orientation of the image.
+  Default: `2`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Flip horizontally and orient right
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&orient={orient_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -772,12 +865,15 @@ You can also use a combination of the two example given above. So, in the follow
 
 1. This parameter can automatically correct the orientation of the image if the source image contains orientation details within its EXIF data (Exchangeable Image File Format).
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| orient | 7 | Enter value to manage the cardinal orientation of the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **orient** (optional)
+  Enter value to manage the cardinal orientation of the image.
+  Default: `7`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Overlay Settings
 
@@ -788,8 +884,7 @@ The overlay parameter allows you to put one image on top of another. You need to
 
 #### Overlay image
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}`
 
 ##### Additional Notes
 
@@ -799,12 +894,15 @@ The overlay parameter allows you to put one image on top of another. You need to
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| overlay | /v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png | Specify the relative URL of the image that needs to be set as overlay image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **overlay** (optional)
+  Specify the relative URL of the image that needs to be set as overlay image.
+  Default: `/v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 
 #### Overlay Align
@@ -822,18 +920,22 @@ You can also specify two values for this parameter, for example ?overlay-align=l
 
 #### Align overlay
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-align={overlay-align}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-align={overlay-align}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| overlay | /v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png | Specify the relative URL of the image that needs to be set as overlay image. |
-| overlay-align | left,bottom | Specify the position of the overlay image. For example {left,bottom}.  The format of the parameter is overlay-align={val |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **overlay** (optional)
+  Specify the relative URL of the image that needs to be set as overlay image.
+  Default: `/v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png`
+- **overlay-align** (optional)
+  Specify the position of the overlay image. For example {left,bottom}. The format of the parameter is overlay-align={value},{value}.
+  Default: `left,bottom`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 
 #### Overlay Repeat
@@ -848,52 +950,64 @@ Let’s use these different parameters to understand how they work. First, try t
 
 #### Repeat overlay horizontally
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 Let us now try how the vertical repetition of overlay image works.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| overlay | /v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png | Specify the relative URL of the image that needs to be set as overlay image. |
-| overlay-repeat | x | Enter a value for the repeat pattern of the overlay image. Possible values are x, y, and both. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **overlay** (optional)
+  Specify the relative URL of the image that needs to be set as overlay image.
+  Default: `/v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png`
+- **overlay-repeat** (optional)
+  Enter a value for the repeat pattern of the overlay image. Possible values are x, y, and both.
+  Default: `x`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Repeat overlay vertically
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 Now, let’s see what happens to an image when the vertical as well as horizontal repetition is enabled for the overlay image.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| overlay | /v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png | Specify the relative URL of the image that needs to be set as overlay image. |
-| overlay-repeat | y | Enter a value for the repeat pattern of the overlay image. Possible values are x, y, and both. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **overlay** (optional)
+  Specify the relative URL of the image that needs to be set as overlay image.
+  Default: `/v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png`
+- **overlay-repeat** (optional)
+  Enter a value for the repeat pattern of the overlay image. Possible values are x, y, and both.
+  Default: `y`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Repeat overlay vertically and horizontally
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-repeat={value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| overlay | /v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png | Specify the relative URL of the image that needs to be set as overlay image. |
-| overlay-repeat | both | Enter a value for the repeat pattern of the overlay image. Possible values are x, y, and both. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **overlay** (optional)
+  Specify the relative URL of the image that needs to be set as overlay image.
+  Default: `/v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png`
+- **overlay-repeat** (optional)
+  Enter a value for the repeat pattern of the overlay image. Possible values are x, y, and both.
+  Default: `both`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 
 #### Overlay Width
@@ -904,8 +1018,7 @@ In order to set the overlay image width to more than 99%, use the p parameter al
 
 #### Set overlay width
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-width={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-width={value}`
 
 ##### Additional Notes
 
@@ -917,13 +1030,18 @@ In order to set the overlay image width to more than 99%, use the p parameter al
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| overlay | /v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png | Specify the relative URL of the image that needs to be set as overlay image. |
-| overlay-width | 100 | Specify the width of the overlay image in pixels or percentage. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **overlay** (optional)
+  Specify the relative URL of the image that needs to be set as overlay image.
+  Default: `/v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png`
+- **overlay-width** (optional)
+  Specify the width of the overlay image in pixels or percentage.
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 
 #### Overlay Height
@@ -934,8 +1052,7 @@ In order to set the overlay image height to more than 99%, use the p parameter a
 
 #### Set overlay height
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-height={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-height={value}`
 
 ##### Additional Notes
 
@@ -947,13 +1064,18 @@ In order to set the overlay image height to more than 99%, use the p parameter a
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| overlay | /v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png | Specify the relative URL of the image that needs to be set as overlay image. |
-| overlay-height | 150 | Specify the height of the overlay image in pixels or percentage. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **overlay** (optional)
+  Specify the relative URL of the image that needs to be set as overlay image.
+  Default: `/v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png`
+- **overlay-height** (optional)
+  Specify the height of the overlay image in pixels or percentage.
+  Default: `150`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Pad
 
@@ -967,24 +1089,25 @@ It is important to note that by default the pad parameter applies white backgrou
 
 #### Add padding
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&pad={top_value},{right_value},{bottom_value},{left_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&pad={top_value},{right_value},{bottom_value},{left_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 To add a colored border, you need to use the bg-color parameter along with pad. For example, to add a red border, use the query ?pad=10&bg-color=FF0000. Also, note that if the canvas and pad parameters are used together, the pad parameter will be ignored.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| pad | 25,50,75,100 | Enter value for top, left, bottom and right edges for which padding needs to be applied |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **pad** (optional)
+  Enter value for top, left, bottom and right edges for which padding needs to be applied
+  Default: `25,50,75,100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Add padding and background color
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&pad={top_value},{right_value},{bottom_value},{left_value}&bg-color={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&pad={top_value},{right_value},{bottom_value},{left_value}&bg-color={value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -999,13 +1122,18 @@ To add a colored border, you need to use the bg-color parameter along with pad. 
 3. CSS style shorthand values are also acceptable.
 4. If the pad and the canvas parameters are used together in the same request, the pad parameter will be ignored.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| pad | 25,50,75,100 | Enter the values for top, left, bottom and right edges for which padding needs to be applied. |
-| bg-color | FF0000 | Enter the values for background color for padding. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **pad** (optional)
+  Enter the values for top, left, bottom and right edges for which padding needs to be applied.
+  Default: `25,50,75,100`
+- **bg-color** (optional)
+  Enter the values for background color for padding.
+  Default: `FF0000`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Overlay Pad
 
@@ -1019,8 +1147,7 @@ You can either specify all the four padding values (top, right, bottom, and left
 
 #### Overlay pad
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-pad={top_value},{right_value},{bottom_value},{left_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&overlay={relative_URL}&overlay-pad={top_value},{right_value},{bottom_value},{left_value}`
 
 ##### Additional Notes
 
@@ -1033,13 +1160,18 @@ You can either specify all the four padding values (top, right, bottom, and left
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| overlay | /v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png | Specify the relative URL of the image that needs to be set as overlay image. |
-| overlay-pad | 25,50,75,100 | Specify padding values for top, right, bottom, and left edges of the overlay image in pixels or percentage. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **overlay** (optional)
+  Specify the relative URL of the image that needs to be set as overlay image.
+  Default: `/v3/assets/blteae40eb499811073/bltb21dacdd20d0e24c/59e0c401462a293417405f34/circle.png`
+- **overlay-pad** (optional)
+  Specify padding values for top, right, bottom, and left edges of the overlay image in pixels or percentage.
+  Default: `25,50,75,100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Background Color
 
@@ -1049,49 +1181,55 @@ The first type is the 3- or 6-digit hexadecimal value, for example ?bg-color=ccc
 
 #### Change background color using hexadecimal value
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.png?environment={environment_name}&bg-color={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.png?environment={environment_name}&bg-color={value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 The second type is the Red, Blue, Green value which defines the intensity of the corresponding color, with the value ranging anywhere between 0 and 255 for each. An example of this is ?bg-color=140,220,123.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| bg-color | cccccc | Enter the value for the background color. It should be a 3- or 6-digit hexadecimal value. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **bg-color** (optional)
+  Enter the value for the background color. It should be a 3- or 6-digit hexadecimal value.
+  Default: `cccccc`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Change background color by Red, Blue, Green value
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.png?environment={environment_name}&bg-color={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.png?environment={environment_name}&bg-color={value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 And the last type is the Red, Blue, Green, Alpha value, which is an extension of the second type with an addition of the alpha element. The alpha value defines the transparency, with 0.0 being fully transparent and 1.0 being completely opaque. An example of this is ?bg-color=140,220,123,0.5.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| bg-color | 140,220,123 | Enter the value for the background color. It should be a Red, Blue, Green value. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **bg-color** (optional)
+  Enter the value for the background color. It should be a Red, Blue, Green value.
+  Default: `140,220,123`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Change background color by Red, Blue, Green, Alpha value
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.png?environment={environment_name}&bg-color={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.png?environment={environment_name}&bg-color={value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| bg-color | 140,220,123,0.5 | Enter the value for the background color. It should be a Red, Blue, Green, Alpha value. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **bg-color** (optional)
+  Enter the value for the background color. It should be a Red, Blue, Green, Alpha value.
+  Default: `140,220,123,0.5`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Device Pixel Ratio
 
@@ -1109,19 +1247,25 @@ The width or height of the output image changes depending on the values that you
 
 #### Set device pixel ratio
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&dpr={dpr_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&dpr={dpr_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| dpr | 2 | Enter the device pixel ratio that needs to be applied on the image. |
-| height | 100 | Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p. |
-| width | 100 | Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **dpr** (optional)
+  Enter the device pixel ratio that needs to be applied on the image.
+  Default: `2`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `100`
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Blur
 
@@ -1134,17 +1278,19 @@ To increase the blurriness of an image by 40, use the following query:
 
 #### Increase blurriness
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&blur={blur}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&blur={blur}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| blur | 40 | Enter the blurriness value to be applied to the image, for e.g. 40.  The format of this parameter is: blur={blur_value} |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **blur** (optional)
+  Enter the blurriness value to be applied to the image, for e.g. 40. The format of this parameter is: blur={blur_value}
+  Default: `40`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Frame
 
@@ -1157,8 +1303,7 @@ To extract the first frame from the following animated GIF: {GIF_name}, try the 
 
 #### Fetch first frame
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.gif?environment={environment_name}&frame={frame_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.gif?environment={environment_name}&frame={frame_value}`
 
 ##### Additional Notes
 
@@ -1169,12 +1314,15 @@ To extract the first frame from the following animated GIF: {GIF_name}, try the 
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| frame | 1 | Enter the frame number to fetched for the animated GIF. You can only fetch the first frame, for e.g. 1.  The format of t |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **frame** (optional)
+  Enter the frame number to fetched for the animated GIF. You can only fetch the first frame, for e.g. 1. The format of this parameter is: frame={frame_value}
+  Default: `1`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Sharpen
 
@@ -1191,8 +1339,7 @@ Let us try to increase the sharpness of a given image by amount:2, radius:1000, 
 
 #### Increase sharpness
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&sharpen={sharpen}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&sharpen={sharpen}`
 
 ##### Things to Keep in Mind
 
@@ -1204,12 +1351,15 @@ Let us try to increase the sharpness of a given image by amount:2, radius:1000, 
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| sharpen | a5,r1000,t2 | Enter the value for the amount (for e.g. a5 ) of increase in contrast, the radius (for e.g. r1000) of the image edges to |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **sharpen** (optional)
+  Enter the value for the amount (for e.g. a5 ) of increase in contrast, the radius (for e.g. r1000) of the image edges to be sharpened, and the threshold (for e.g. t2) range of the image edges that need to be ignored while sharpening. The format of this parameter is: sharpen=a{amount_value},r{radius_value},t{threshold_value}
+  Default: `a5,r1000,t2`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Saturation
 
@@ -1222,24 +1372,25 @@ To increase the value of the saturation parameter of an image, pass a positive v
 
 #### Increase saturation
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&saturation={saturation_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&saturation={saturation_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 To decrease the value of the saturation parameter of an image, pass a negative value:
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| saturation | 50 | Enter the saturation value (1 to 100) to be applied to the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **saturation** (optional)
+  Enter the saturation value (1 to 100) to be applied to the image.
+  Default: `50`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Decrease saturation
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&saturation={saturation_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&saturation={saturation_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -1252,12 +1403,15 @@ To decrease the value of the saturation parameter of an image, pass a negative v
 1. The default value for the saturation parameter is 0. This renders an unchanged image.
 2. A value of -100 will render a grayscale image.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| saturation | -30 | Enter the saturation value (-100 to -1) to be applied to the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **saturation** (optional)
+  Enter the saturation value (-100 to -1) to be applied to the image.
+  Default: `-30`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Contrast
 
@@ -1270,24 +1424,25 @@ To increase the value of the contrast parameter of an image, pass a positive val
 
 #### Increase contrast
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&contrast={contrast_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&contrast={contrast_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 To decrease the value of the contrast parameter of an image, pass a negative value:
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| contrast | 50 | Enter the contrast value (1 to 100) to be applied to the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **contrast** (optional)
+  Enter the contrast value (1 to 100) to be applied to the image.
+  Default: `50`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Decrease contrast
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&contrast={contrast_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&contrast={contrast_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -1300,12 +1455,15 @@ To decrease the value of the contrast parameter of an image, pass a negative val
 1. The default value for the contrast parameter is 0. This renders an unchanged image.
 2. A value of -100 will render a neutral gray image.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| contrast | -50 | Enter the contrast value (-100 to -1) to be applied to the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **contrast** (optional)
+  Enter the contrast value (-100 to -1) to be applied to the image.
+  Default: `-50`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Brightness
 
@@ -1318,24 +1476,25 @@ To increase the value of the brightness parameter of an image, pass a positive v
 
 #### Increase brightness
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&brightness={brightness_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&brightness={brightness_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 To decrease the value of the brightness parameter of an image, pass a negative value:
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| brightness | 20 | Enter the brightness value (1 to 100) to be applied to the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **brightness** (optional)
+  Enter the brightness value (1 to 100) to be applied to the image.
+  Default: `20`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Decrease brightness
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&brightness={brightness_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&brightness={brightness_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -1349,12 +1508,15 @@ To decrease the value of the brightness parameter of an image, pass a negative v
 2. A value of 100 will render an entirely white image.
 3. A value of -100 will render an entirely black image.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| brightness | -20 | Enter the brightness value (-100 to -1) to be applied to the image. |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **brightness** (optional)
+  Enter the brightness value (-100 to -1) to be applied to the image.
+  Default: `-20`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Resize-filter
 
@@ -1379,62 +1541,79 @@ Use the ?resize-filter=nearest query to generate an image using the nearest resi
 
 #### Resize image by nearest
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 Try the following query to see how the bilinear resizing filter works.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| width | 500 | Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p. |
-| height | 550 | Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p. |
-| resize-filter | nearest | Enter the value for the resizing filter to be used to resize the image.  The format of the parameter is: resize-filter={ |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `500`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `550`
+- **resize-filter** (optional)
+  Enter the value for the resizing filter to be used to resize the image. The format of the parameter is: resize-filter={resize-filter_value}
+  Default: `nearest`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Resize image by bilinear
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 Try the following query to see what happens to the given image when we use the bicubic resizing filter.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| width | 500 | Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p. |
-| height | 550 | Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p. |
-| resize-filter | bilinear | Enter the value for the resizing filter to be used to resize the image.  The format of the parameter is: resize-filter={ |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `500`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `550`
+- **resize-filter** (optional)
+  Enter the value for the resizing filter to be used to resize the image. The format of the parameter is: resize-filter={resize-filter_value}
+  Default: `bilinear`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Resize image by bicubic
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 Let us also try out the lanczos resizing filter to check how it upscales a given image.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| width | 500 | Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p. |
-| height | 550 | Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p. |
-| resize-filter | bicubic | Enter the value for the resizing filter to be used to resize the image.  The format of the parameter is: resize-filter={ |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `500`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `550`
+- **resize-filter** (optional)
+  Enter the value for the resizing filter to be used to resize the image. The format of the parameter is: resize-filter={resize-filter_value}
+  Default: `bicubic`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Resize image by lanczos
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -1449,14 +1628,21 @@ Let us also try out the lanczos resizing filter to check how it upscales a given
 3. You can use the nearest filter to provide a natural pixelation effect while resizing the number of pixels in the given image.
 4. You can use the lanczos filter when you need to generate a new image with the best quality. The default value for this filter is lanczos3.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| width | 500 | Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p. |
-| height | 550 | Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p. |
-| resize-filter | lanczos3 | Enter the value for the resizing filter to be used to resize the image.  The format of the parameter is: resize-filter={ |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `500`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p.
+  Default: `550`
+- **resize-filter** (optional)
+  Enter the value for the resizing filter to be used to resize the image. The format of the parameter is: resize-filter={resize-filter_value}
+  Default: `lanczos3`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ### Canvas
 
@@ -1471,40 +1657,43 @@ You can use the query ?canvas={width_value},{height_value} to set the height and
 
 #### Canvas by width and height
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={width_value},{height_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={width_value},{height_value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 To define the X-axis and Y-axis position of the top left corner of the canvas area, use the query ?canvas={width_value},{height_value},x{value},y{value}. This allows you to define the starting point of the canvas region. The x-axis value and y-axis value can be specified in pixels or percentage. An example of this would be ?canvas=700,800,x150,y75 or ?canvas=700,800,x0.60,y0.50.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| canvas | 700,800 | Enter the width and height of the canvas area in pixels or percentage, respectively.  The format of the parameter is: ca |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **canvas** (optional)
+  Enter the width and height of the canvas area in pixels or percentage, respectively. The format of the parameter is: canvas={width_value},{height_value}
+  Default: `700,800`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Canvas sub region
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
 You can set the horizontal and vertical offset of the canvas area by using the query ?canvas={width_value},{height_value},offset-x{value},offset-y{value}. This allows you to define the center point of the canvas area. The x-axis offset value and y-axis offset value can be defined only in percentage. An example of this would be ?canvas=700,800,offset-x0.65,offset-y0.80.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| canvas | 700,800,x0.50,y0.60 | Enter the width of the canvas area, height of the canvas area, top-left corner point of the canvas on X-axis, and the to |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **canvas** (optional)
+  Enter the width of the canvas area, height of the canvas area, top-left corner point of the canvas on X-axis, and the top-left corner point of the canvas on Y-axis in pixels or percentage. The format of the parameter is canvas={width_value},{height_value},x{value},y{value}
+  Default: `700,800,x0.50,y0.60`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 #### Canvas and offset
 
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -1523,12 +1712,15 @@ You can set the horizontal and vertical offset of the canvas area by using the q
 7. The x parameter can be used without y (and vice versa), and the offset-x parameter can be used without offset-y (and vice versa).
 8. The canvas parameter takes precedence over the pad parameter if both are used in the same request.
 
-**Parameters:**
+##### Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| canvas | 700,800,offset-x0.65,offset-y0.80 | Enter the width, height, horizontal offset, vertical offset of the canvas area in pixels or percentage.  The format of t |
-| environment | production | Enter the environment scoped to your delivery token. |
+- **canvas** (optional)
+  Enter the width, height, horizontal offset, vertical offset of the canvas area in pixels or percentage. The format of the parameter is:canvas={width_value},{height_value},offset-x{value},offset-y{value}
+  Default: `700,800,offset-x0.65,offset-y0.80`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
 
 ## Regions
 

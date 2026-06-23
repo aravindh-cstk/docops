@@ -12,9 +12,7 @@ last_updated: 2024-02-22
 
 # Get execution log
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/executions?&limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
+**GET** `/v1/projects/{project_uid}/executions?&limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}`
 
 The Get execution log request is used to retrieve the execution log of a project.
 
@@ -22,28 +20,40 @@ To configure the permissions for your application via OAuth, include the automat
 
 **Note:** If you do not specify a value for the optional “limit” query parameter, the API request will by default return the initial 100 items.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
+## Query Parameters
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+- **limit** (optional)
+  The “limit” parameter will return a specific number of execution log (in between 0-100) in your response based on the value you provide. If there are 100 execution log and you want to fetch only 30 execution log, set the limit as 30.
+  Default: `30`
+- **skip** (optional)
+  The “skip” parameter will skip a specific number of execution log and return the remaining ones in your response based on the value you provide. If there are 12 log and you want to exclude the first 2 log, set this to 2 to fetch the remaining 10 log.
+  Default: `2`
+- **asc** (optional)
+  The “asc” parameter allows you to sort the list of execution log in the ascending order with respect to the value of a specific field. The execution log can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **desc** (optional)
+  The “desc” parameter allows you to sort the list of execution log in the descending order with respect to the value of a specific field. The execution log can be sorted by _created_at_, _title_, and _updated_at_values.
+  Default: `created_at`
+- **include_count** (optional)
+  Set this to “true” to include the total number (count) of execution log in an organization.
+  Default: `true`
 
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
+## Headers
 
-| limit | 30 | The “limit” parameter will return a specific number of execution log (in between 0-100) in your response based on the value you provide. If there are 100 execut |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
 
-| skip | 2 | The “skip” parameter will skip a specific number of execution log and return the remaining ones in your response based on the value you provide. If there are 12 |
-
-| asc | created_at | The “asc” parameter allows you to sort the list of execution log in the ascending order with respect to the value of a specific field. The execution log can be  |
-
-| desc | created_at | The “desc” parameter allows you to sort the list of execution log in the descending order with respect to the value of a specific field. The execution log can b |
-
-| include_count | true | Set this to “true” to include the total number (count) of execution log in an organization. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -99,3 +109,4 @@ To configure the permissions for your application via OAuth, include the automat
     ]
 }
 ```
+

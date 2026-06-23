@@ -12,9 +12,7 @@ last_updated: 2024-11-14
 
 # Remove an item from a Release
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/releases/{release_uid}/items`
+**DELETE** `/releases/{release_uid}/items`
 
 The Remove an item from a Release request removes one or more items (entries and/or assets) from a specific Release.
 
@@ -22,28 +20,40 @@ When executing the API request, provide the Release UID. In the 'Body' section, 
 
 To configure the permissions for your application via OAuth, please include the cm.release:write scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **release_uid** (required)
+  Enter the unique ID of the release from which you want to remove an item.
+  Default: `blt718af000dcde0000`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| release_version | 2.0 | Enter the release version. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| authorization | your_management_token | Enter your management token. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **release_version** (optional)
+  Enter the release version.
+  Default: `2.0`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter application/json to pass a request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| Content-Type | application/json | Enter application/json to pass a request body. |
-
-| branch | main | Enter your branch unique ID. |
-
-| release_uid | blt718af000dcde0000 | Enter the unique ID of the release from which you want to remove an item. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -57,7 +67,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -92,3 +102,4 @@ To configure the permissions for your application via OAuth, please include the 
 	}
 }
 ```
+

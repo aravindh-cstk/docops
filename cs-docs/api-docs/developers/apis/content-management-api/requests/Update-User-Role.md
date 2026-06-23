@@ -12,26 +12,24 @@ last_updated: 2023-03-28
 
 # Update User Role
 
-
-**Method:** `POST`  
-**Endpoint:** `/stacks/users/roles`
+**POST** `/stacks/users/roles`
 
 The Update User Role API Request updates the roles of an existing user account. This API Request will override the existing roles assigned to a user. For example, we have an existing user with the "Developer" role, and if you execute this API request with "Content Manager" role, the user role will lose "Developer" rights and the user role be updated to just "Content Manager".
 
 When executing the API call, under the 'Body' section, enter the user UID and UIDs of roles that you want to assign the user. This information should be in JSON format.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of your stack
+  Default: `Enter the API key of your stack`
+- **authtoken** (required)
+  Enter your authtoken
+  Default: `Enter_your_authtoken`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| api_key | Enter the API key of your stack | Enter the API key of your stack |
-
-| authtoken | Enter_your_authtoken | Enter your authtoken |
-
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -41,7 +39,7 @@ When executing the API call, under the 'Body' section, enter the user UID and UI
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -52,3 +50,4 @@ When executing the API call, under the 'Body' section, enter the user UID and UI
 	}]
 }
 ```
+

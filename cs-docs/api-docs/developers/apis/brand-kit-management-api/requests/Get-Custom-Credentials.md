@@ -12,30 +12,37 @@ last_updated: 2024-11-11
 
 # Get Custom Credentials
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/brand-kits/{brand_kit_uid}/llm-configs?include_decrypted_keys={boolean}`
+**GET** `/v1/brand-kits/{brand_kit_uid}/llm-configs?include_decrypted_keys={boolean}`
 
 The Get Custom Credentials request fetches the custom credentials from a Brand Kit in an organization.
 
 To configure the permissions for your application via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter the authtoken. |
+- **include_decrypted_keys** (optional)
+  The “include_decrypted_keys” parameter allows you to fetch LLM Configuration details in encrypted format when set to true.
+  Default: `true`
 
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication). |
+## Headers
 
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/brand-kit-management-api#authentication).
+  Default: `[Bearer <OAuth token>]`
 
-| include_decrypted_keys | true | The “include_decrypted_keys” parameter allows you to fetch LLM Configuration details in encrypted format when set to true. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -60,3 +67,4 @@ To configure the permissions for your application via [OAuth](/docs/developers/d
     }
 }
 ```
+

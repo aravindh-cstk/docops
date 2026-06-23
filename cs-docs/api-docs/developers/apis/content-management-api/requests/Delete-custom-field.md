@@ -12,32 +12,35 @@ last_updated: 2026-02-18
 
 # Delete custom field
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/extensions/{custom_field_uid}`
+**DELETE** `/extensions/{custom_field_uid}`
 
 The Delete custom field request is used to delete a specific custom field.  
 To configure the permissions for your application via OAuth, please include the cm.extensions.management:write scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **custom_field_uid** (required)
+  Enter the UID of the custom field that you want to delete.
+  Default: `blt123c123ce12b3123`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| branch | main | Enter your branch unique ID. |
-
-| custom_field_uid | blt123c123ce12b3123 | Enter the UID of the custom field that you want to delete. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Extension deleted successfully."
 }
 ```
+

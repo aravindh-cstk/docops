@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Generate permanent asset URL
 
-
-**Method:** `PUT`  
-**Endpoint:** `/assets/{asset_uid}`
+**PUT** `/assets/{asset_uid}`
 
 The Generate Permanent Asset URL request allows you to generate a permanent URL for an asset. This URL remains constant irrespective of any subsequent updates to the asset.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
@@ -40,26 +38,37 @@ Another way to generate a permanent URL for an asset is to pass the URL as a for
 https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_uid** (required)
+  Enter the UID of the asset for which you want to generate a permanent URL. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) request to get the UID of the asset.
+  Default: `your_asset_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack that holds the asset. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | application/json | Enter “application/json” to pass a Request body. |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter “application/json” to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| asset_uid | your_asset_uid | Enter the UID of the asset for which you want to generate a permanent URL. Use the [Get All Assets](/docs/developers/apis/content-management-api#get-all-assets) |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -70,7 +79,7 @@ https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -96,3 +105,4 @@ https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
   }
 }
 ```
+

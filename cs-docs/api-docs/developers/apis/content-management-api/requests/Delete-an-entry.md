@@ -12,9 +12,7 @@ last_updated: 2024-03-21
 
 # Delete an entry
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}&delete_all_localized={boolean_value}`
+**DELETE** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}&delete_all_localized={boolean_value}`
 
 The Delete an entry request allows you to delete a specific entry from a content type. This API request also allows you to delete single and/or multiple localized entries.   
 To configure the permissions for your application via OAuth, please include the cm.entries.management:write scope.
@@ -33,31 +31,42 @@ This API Request supports the following actions as well:
 }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type of which you wish to delete the entry. The content type UID is generated based on the title of the content type and it is unique across a stack.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you wish to delete.
+  Default: `blt9965f5f9840923ba`
 
-| api_key | blt20962a819b57e233 |  |
+## Query Parameters
 
-| authtoken | Your_Authtoken |  |
+- **locale** (optional)
+  Enter the code of the language of which the entry needs to be deleted.
+  Default: `en-us`
+- **delete_all_localized** (optional)
+  Set the "delete_all_localized" parameter to "true" to delete all the localized versions of the entry.
+  Default: `true`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| content_type_uid | product | Enter the unique ID of the content type of which you wish to delete the entry. The content type UID is generated based on the title of the content type and it i |
-
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you wish to delete. |
-
-| locale | en-us | Enter the code of the language of which the entry needs to be deleted. |
-
-| delete_all_localized | true | Set the "delete_all_localized" parameter to "true" to delete all the localized versions of the entry. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Entry deleted successfully."
 }
 ```
+

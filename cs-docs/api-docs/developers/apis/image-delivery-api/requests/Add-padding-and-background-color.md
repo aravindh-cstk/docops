@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Add padding and background color
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&pad={top_value},{right_value},{bottom_value},{left_value}&bg-color={value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&pad={top_value},{right_value},{bottom_value},{left_value}&bg-color={value}`
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
@@ -29,13 +27,15 @@ last_updated: 2025-08-28
 3. CSS style shorthand values are also acceptable.
 4. If the pad and the canvas parameters are used together in the same request, the pad parameter will be ignored.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **pad** (optional)
+  Enter the values for top, left, bottom and right edges for which padding needs to be applied.
+  Default: `25,50,75,100`
+- **bg-color** (optional)
+  Enter the values for background color for padding.
+  Default: `FF0000`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| pad | 25,50,75,100 | Enter the values for top, left, bottom and right edges for which padding needs to be applied. |
-
-| bg-color | FF0000 | Enter the values for background color for padding. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

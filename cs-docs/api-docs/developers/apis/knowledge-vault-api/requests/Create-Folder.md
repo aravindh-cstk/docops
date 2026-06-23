@@ -12,9 +12,7 @@ last_updated: 2026-03-02
 
 # Create Folder
 
-
-**Method:** `POST`  
-**Endpoint:** `/v1/knowledge-vault/folders`
+**POST** `/v1/knowledge-vault/folders`
 
 The Create Folder request lets you create a new folder within a specified parent directory in your knowledge vault.
 
@@ -33,20 +31,22 @@ The _name_ and _path_ are required strings where _name_ specifies the new folder
 
 **Note**: Root folder UID is dir0000000000000.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-| authtoken | your_authtoken | Enter the authtoken. |
-
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication). |
-
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -55,7 +55,7 @@ The _name_ and _path_ are required strings where _name_ specifies the new folder
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -63,3 +63,4 @@ The _name_ and _path_ are required strings where _name_ specifies the new folder
    "folder_uid": "dir************"
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2025-07-01
 
 # Upload asset
 
-
-**Method:** `POST`  
-**Endpoint:** `/assets?relative_urls={boolean_value}&include_dimension={boolean_value}`
+**POST** `/assets?relative_urls={boolean_value}&include_dimension={boolean_value}`
 
 The Upload asset request uploads an asset file to your stack.  
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
@@ -54,28 +52,37 @@ curl -X POST \
 
 In the above cURL command, pass the necessary values within the curly brackets. The asset[parent_uid],asset[title],asset[description],asset[tags], and include_dimension=true parameters are optional. You can skip them if not required.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **relative_urls** (optional)
+  Set this to 'true' to display the relative URL of the asset.
+  Default: `false`
+- **include_dimension** (optional)
+  Set this to 'true' to include the dimensions (height and width) of the image in the response.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | your_stack_api_key | Enter the API key of your stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Pass “multipart/form-data” to include form data body parameters.
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| Content-Type | multipart/form-data | Pass “multipart/form-data” to include form data body parameters. |
-
-| branch | main | Enter your branch unique ID. |
-
-| relative_urls | false | Set this to 'true' to display the relative URL of the asset. |
-
-| include_dimension | true | Set this to 'true' to include the dimensions (height and width) of the image in the response. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -107,3 +114,4 @@ In the above cURL command, pass the necessary values within the curly brackets. 
     }
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Fetch first frame
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.gif?environment={environment_name}&frame={frame_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.gif?environment={environment_name}&frame={frame_value}`
 
 ##### Additional Notes
 
@@ -25,11 +23,12 @@ last_updated: 2025-08-28
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **frame** (optional)
+  Enter the frame number to fetched for the animated GIF. You can only fetch the first frame, for e.g. 1. The format of this parameter is: frame={frame_value}
+  Default: `1`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| frame | 1 | Enter the frame number to fetched for the animated GIF. You can only fetch the first frame, for e.g. 1.  The format of this parameter is: frame={frame_value} |
-
-| environment | production | Enter the environment scoped to your delivery token. |

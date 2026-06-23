@@ -12,27 +12,30 @@ last_updated: 2024-02-29
 
 # Get a single branch
 
-
-**Method:** `GET`  
-**Endpoint:** `/stacks/branches/{branch_uid}`
+**GET** `/stacks/branches/{branch_uid}`
 
 The Get a single branch request returns information of a specific branch.  
 To configure the permissions for your application via OAuth, please include the cm.branches.management:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **branch_uid** (required)
+  Enter the unique ID of the branch of which you want to retrieve the details. The UID of a branch is unique across a stack. Execute the [Get all branches](#get-all-branches) call to retrieve the UID of a branch.
+  Default: `your_branch_uid`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| branch_uid | your_branch_uid | Enter the unique ID of the branch of which you want to retrieve the details. The UID of a branch is unique across a stack. Execute the [Get all branches](#get-a |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -51,3 +54,4 @@ To configure the permissions for your application via OAuth, please include the 
     }
 }
 ```
+

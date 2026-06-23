@@ -12,25 +12,23 @@ last_updated: 2024-02-27
 
 # Get all workflows
 
-
-**Method:** `GET`  
-**Endpoint:** `/workflows`
+**GET** `/workflows`
 
 The Get all Workflows request retrieves the details of all the Workflows of a stack.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.management:read scope.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| api_key | blt20962a819b57e233 |  |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -164,3 +162,4 @@ To configure the permissions for your application via OAuth, please include the 
     ]
 }
 ```
+

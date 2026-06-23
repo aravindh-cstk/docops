@@ -12,9 +12,7 @@ last_updated: 2024-09-18
 
 # Retrieve Data
 
-
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/job/{jobId}/data?orgUid=<string>&page=0`
+**GET** `/analytics/v2/job/{jobId}/data?orgUid=<string>&page=0`
 
 The Retrieve Data request will take the jobId value that was generated in your response, as a part of its URL and will get you the actual response data for that jobId without any processing delay. Due to the async nature of the APIs, this GET data request acts as an additional step to retrieve your actual response.
 
@@ -26,20 +24,28 @@ The Retrieve Data request will take the jobId value that was generated in your r
 
 You will receive the response depending on your request and relevant jobId.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **jobId** (required)
+  Enter your job ID.
+  Default: `job_0******9-b**d-4**b-9**0-4**********2`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Query Parameters
 
-| jobId | job_0******9-b**d-4**b-9**0-4**********2 | Enter your job ID. |
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **page** (optional)
+  Enter the page number you want to retrieve in the response.
+  Default: `1`
 
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
+## Headers
 
-| page | 1 | Enter the page number you want to retrieve in the response. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -61,3 +67,4 @@ You will receive the response depending on your request and relevant jobId.
     "uid": "c13878ab-ff27-4b9c-ae99-a085c8f75f7d"
 }
 ```
+

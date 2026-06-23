@@ -12,17 +12,16 @@ last_updated: 2025-08-28
 
 # Convert to AVIF
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&format={format}`
 
 **WEBP** images are usually lower in size and have good quality. The WEBP images files are currently supported only in Google Chrome, Opera, and Android browsers.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **format** (optional)
+  Enter the format into which the source image needs to be converted.
+  Default: `avif`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| format | avif | Enter the format into which the source image needs to be converted. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

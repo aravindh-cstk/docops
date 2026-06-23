@@ -12,28 +12,31 @@ last_updated: 2024-02-22
 
 # Get an audit log item
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/projects/{project_uid}/audit-logs/{auditlog_uid}`
+**GET** `/v1/projects/{project_uid}/audit-logs/{auditlog_uid}`
 
 The Get an audit log item request is used to retrieve a specific item from the audit log of a project.
 
 To configure the permissions for your application via OAuth, include the automationhub.audit-logs:read scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **project_uid** (required)
+  Enter the Project UID.
+  Default: `05732fe9f7d6454791715b09a3792f52`
+- **auditlog_uid** (required)
+  Enter the UID of the specific log you want to retrieve.
+  Default: `cslscb28b96f-f29c-4f68-bfc8-845a8085e948`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
+## Headers
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
 
-| project_uid | 05732fe9f7d6454791715b09a3792f52 | Enter the Project UID. |
-
-| auditlog_uid | cslscb28b96f-f29c-4f68-bfc8-845a8085e948 | Enter the UID of the specific log you want to retrieve. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -96,3 +99,4 @@ To configure the permissions for your application via OAuth, include the automat
     "uid": "cslscb28b96f-f29c-4f68-bfc8-845a8085e948"
 }
 ```
+

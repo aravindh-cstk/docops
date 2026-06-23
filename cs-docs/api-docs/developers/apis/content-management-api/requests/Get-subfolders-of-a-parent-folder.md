@@ -12,35 +12,42 @@ last_updated: 2024-03-21
 
 # Get subfolders of a parent folder
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets?include_folders=true&query={"is_dir": true}&folder={parent_folder_uid}`
+**GET** `/assets?include_folders=true&query={"is_dir": true}&folder={parent_folder_uid}`
 
 The Get subfolders of a parent folder request retrieves the details of only the subfolders of a specific [asset folder](/docs/content-managers/author-content/#create-and-manage-asset-folders). This request does not retrieve asset files.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_folders** (required)
+  Set this parameter to ‘true’ to include the asset folders in the search query.
+  Default: `true`
+- **query** (required)
+  Enter the is_dir parameter to include asset folder details.
+  Default: `{"is_dir": true}`
+- **folder** (required)
+  Enter the parent folder UID.
+  Default: `enter_your_folder_uid`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | bltd7eee4a49bdf2842 | Enter the API key of the stack that holds the asset |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `bltd7eee4a49bdf2842`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| branch | main | Enter your branch unique ID. |
-
-| include_folders | true | Set this parameter to ‘true’ to include the asset folders in the search query. |
-
-| query | {"is_dir": true} | Enter the is_dir parameter to include asset folder details. |
-
-| folder | enter_your_folder_uid | Enter the parent folder UID. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -60,3 +67,4 @@ To configure the permissions for your application via OAuth, please include the 
 	}]
 }
 ```
+

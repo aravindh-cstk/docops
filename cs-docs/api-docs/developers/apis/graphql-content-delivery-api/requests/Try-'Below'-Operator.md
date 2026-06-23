@@ -12,9 +12,7 @@ last_updated: 2024-04-17
 
 # Try 'Below' Operator
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 ##### Below Operator
 
@@ -48,3 +46,4 @@ query TermBelow {
   }
 }
 ```
+

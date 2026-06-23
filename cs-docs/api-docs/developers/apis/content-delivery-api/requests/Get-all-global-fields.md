@@ -12,9 +12,7 @@ last_updated: 2026-06-05
 
 # Get all global fields
 
-
-**Method:** `GET`  
-**Endpoint:** `/global_fields`
+**GET** `/global_fields`
 
 The Get all global fields request returns comprehensive information of all the global fields available in a particular stack in your organization. If you have nested global fields, it appears in the response.
 
@@ -23,22 +21,28 @@ The Get all global fields request returns comprehensive information of all the g
 - Information about Global fields can be retrieved by all users, regardless of their role or access level.
 - If your Global field contains nested Global fields, they will appear as part of the schema in the API response.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_global_field_schema** (optional)
+  Set this parameter to 'true' to include in response the schema of the Global field.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the Global field resides.
+  Default: `true`
 
-| api_key | your_api_key | Enter the API key of your stack. |
+## Headers
 
-| access_token | your_delivery_token | Enter the environment-specific delivery token of your stack. Refer to the [Authentication](#authentication) section for more details. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Refer to the [Authentication](#authentication) section for more details.
+  Default: `your_delivery_token`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| include_global_field_schema | true | Set this parameter to 'true' to include in response the schema of the Global field. |
-
-| include_branch | true | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the Global field resides. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -85,3 +89,4 @@ The Get all global fields request returns comprehensive information of all the g
     ]
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2025-06-30
 
 # Localize an entry
 
-
-**Method:** `PUT`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
+**PUT** `/content_types/{content_type_uid}/entries/{entry_uid}?locale={locale_code}`
 
 The Localize an entry request allows you to localize an entry i.e., the entry will cease to fetch data from its fallback language and possess independent content specific to the selected locale.
 
@@ -46,28 +44,40 @@ Here's a sample request body:
 
 **Additional Resource:** Refer the [Localization](/docs/developers/multilingual-content/localize-an-entry) docs for more information.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type.
+  Default: `product`
+- **entry_uid** (required)
+  Enter the unique ID of the entry that you want to localize.
+  Default: `blt9965f5f9840923ba`
 
-| api_key | blt20962a819b57e233 | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | Your_Authtoken | Enter your authtoken |
+- **locale** (required)
+  Enter the code of the language to localize the entry of that particular language.
+  Default: `fr-fr`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| branch | main | Enter your branch unique ID. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken
+  Default: `Your_Authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| content_type_uid | product | Enter the unique ID of the content type. |
-
-| entry_uid | blt9965f5f9840923ba | Enter the unique ID of the entry that you want to localize. |
-
-| locale | fr-fr | Enter the code of the language to localize the entry of that particular language. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -85,7 +95,7 @@ Here's a sample request body:
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -114,3 +124,4 @@ Here's a sample request body:
     }
 }
 ```
+

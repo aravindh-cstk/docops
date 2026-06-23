@@ -12,36 +12,43 @@ last_updated: 2026-03-02
 
 # Get All Folders
 
-
-**Method:** `GET`  
-**Endpoint:** `/v1/knowledge-vault/folders?limit={limit}&sort={sort_field}&skip={skip}&order={asc|desc}`
+**GET** `/v1/knowledge-vault/folders?limit={limit}&sort={sort_field}&skip={skip}&order={asc|desc}`
 
 The Get All Folders request retrieves a paginated list of all folders within the Knowledge Vault for a specified brand kit. You can apply filters such as sorting, pagination, and the inclusion of user metadata in the response.
 
 To configure the permissions for your app via [OAuth](/docs/developers/developer-hub/contentstack-oauth), include the brand-kits:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **limit** (optional)
+  Enter the maximum number of folders to return.
+  Default: `10`
+- **sort** (optional)
+  Enter the value on the basis of which you want to sort your folders.
+  Default: `created_at`
+- **skip** (optional)
+  Enter the number of folders to be skipped from the response body.
+  Default: `0`
+- **order** (optional)
+  Enter the ascending or descending order to organize the folders.
+  Default: `asc`
 
-| authtoken | your_authtoken | Enter the authtoken. |
+## Headers
 
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication). |
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-
-| limit | 10 | Enter the maximum number of folders to return. |
-
-| sort | created_at | Enter the value on the basis of which you want to sort your folders. |
-
-| skip | 0 | Enter the number of folders to be skipped from the response body. |
-
-| order | asc | Enter the ascending or descending order to organize the folders. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -88,3 +95,4 @@ To configure the permissions for your app via [OAuth](/docs/developers/developer
    ]
 }
 ```
+

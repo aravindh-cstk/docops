@@ -12,9 +12,7 @@ last_updated: 2024-07-01
 
 # Limit
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries?locale={locale_code}&limit={limit_value}`
+**GET** `/content_types/{content_type_uid}/entries?locale={locale_code}&limit={limit_value}`
 
 The limit parameter will return a specific number of entries in the output. So for example, if the content type contains more than 100 entries and you wish to fetch only the first 2 entries, you need to specify '2' as value in this parameter.
 
@@ -26,26 +24,37 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
 
 **Note**: By default, the limit for response details per request is 100.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type in which you wish to search for entries.
+  Default: `product`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **locale** (optional)
+  Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed.
+  Default: `en-us`
+- **limit** (required)
+  Enter the maximum number of entries to be returned.
+  Default: `2`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| content_type_uid | product | Enter the unique ID of the content type in which you wish to search for entries. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| locale | en-us | Enter the code of the language of which the entries needs to be included. Only the entries published in this locale will be displayed. |
-
-| limit | 2 | Enter the maximum number of entries to be returned. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -335,3 +344,4 @@ https://cdn.contentstack.io/v3/content_types/product/entries?environment=product
   ]
 }
 ```
+

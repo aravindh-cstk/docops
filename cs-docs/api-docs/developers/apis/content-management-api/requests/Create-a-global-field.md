@@ -12,9 +12,7 @@ last_updated: 2025-05-05
 
 # Create a global field
 
-
-**Method:** `POST`  
-**Endpoint:** `/global_fields`
+**POST** `/global_fields`
 
 The Create a global field request allows you to create a new global field in a particular stack of your Contentstack account. You can use this global field in any content type within your stack.
 
@@ -71,20 +69,22 @@ To create a nested global field, follow the schema in the request body:
 }
 ```
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| api_key | your_api_key | Enter the API key of your stack. |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| branch | main | Enter your branch unique ID. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -133,7 +133,7 @@ To create a nested global field, follow the schema in the request body:
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -188,3 +188,4 @@ To create a nested global field, follow the schema in the request body:
     }
 }
 ```
+

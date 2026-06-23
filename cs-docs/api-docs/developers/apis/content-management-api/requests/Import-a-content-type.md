@@ -12,35 +12,38 @@ last_updated: 2024-03-21
 
 # Import a content type
 
-
-**Method:** `POST`  
-**Endpoint:** `/content_types/import?overwrite={boolean_value}`
+**POST** `/content_types/import?overwrite={boolean_value}`
 
 The Import a content type call imports a content type into a stack by uploading JSON file.   
 To configure the permissions for your application via OAuth, please include the cm.content-types:import scope.
 
 **Tip:** You can try the call manually in any REST API client, such as Postman. You can export the required content type's JSON file, make the necessary changes to the data and then import the content type. While importing, you need to pass a form-data parameter named content_type and select the input type as 'File'. Then, select the JSON file of the content type that you wish to import.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **overwrite** (optional)
+  Select 'true' to replace the existing content type with the imported content type file.
+  Default: `false`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| Content-Type | multipart/form-data |  |
-
-| branch | main | Enter your branch unique ID. |
-
-| overwrite | false | Select 'true' to replace the existing content type with the imported content type file. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -147,3 +150,4 @@ To configure the permissions for your application via OAuth, please include the 
 	}
 }
 ```
+

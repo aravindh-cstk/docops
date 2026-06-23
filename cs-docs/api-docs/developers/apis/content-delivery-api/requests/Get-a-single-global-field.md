@@ -12,9 +12,7 @@ last_updated: 2025-05-05
 
 # Get a single global field
 
-
-**Method:** `GET`  
-**Endpoint:** `/global_fields/{global_field_uid}`
+**GET** `/global_fields/{global_field_uid}`
 
 The Get a single global field request allows you to fetch comprehensive details of a specific global field.
 
@@ -26,24 +24,34 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
 - Information about Global fields can be retrieved by all users, regardless of their role or access level.
 - If your Global field contains nested Global fields, they will appear as part of the schema in the API response.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **global_field_uid** (required)
+  Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global field. The unique ID of a global field is unique across a stack.
+  Default: `seo`
 
-| api_key | your_api_key | Enter the API key of your stack. |
+## Query Parameters
 
-| access_token | your_delivery_token | Enter the environment-specific delivery token of your stack. Refer to the [Authentication](#authentication) section for more details. |
+- **include_global_field_schema** (optional)
+  Set this parameter to 'true' to include in response the schema of the Global field.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the Global field resides.
+  Default: `ture`
 
-| branch | main | Enter your branch unique ID. |
+## Headers
 
-| global_field_uid | seo | Enter the unique ID of the global field that you wish to update. The UID is generated based on the title of the global field. The unique ID of a global field is |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Refer to the [Authentication](#authentication) section for more details.
+  Default: `your_delivery_token`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| include_global_field_schema | true | Set this parameter to 'true' to include in response the schema of the Global field. |
-
-| include_branch | ture | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the Global field resides. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -88,3 +96,4 @@ When executing the API call, in the 'URL Parameters' section, provide the unique
     }
 }
 ```
+

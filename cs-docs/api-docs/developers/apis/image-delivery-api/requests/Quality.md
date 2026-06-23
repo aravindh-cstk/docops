@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Quality
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&quality={quality_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&quality={quality_value}`
 
 ##### Additional Notes
 
@@ -24,11 +22,12 @@ last_updated: 2025-08-28
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **quality** (optional)
+  Enter the percentage value (1 to 100) of the compression to be applied on the image.
+  Default: `2`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| quality | 2 | Enter the percentage value (1 to 100) of the compression to be applied on the image. |
-
-| environment | production | Enter the environment scoped to your delivery token. |

@@ -12,9 +12,7 @@ last_updated: 2025-02-25
 
 # SDK Usage
 
-
-**Method:** `GET`  
-**Endpoint:** `/analytics/v2/sdk?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}&includeCount={boolean_value}&services={["cdn","cma"]}&duration={duration}`
+**GET** `/analytics/v2/sdk?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}&includeCount={boolean_value}&services={["cdn","cma"]}&duration={duration}`
 
 The SDK Usage request gets you the number of requests that were made using the SDKs. It helps you get an overview of the SDK usage by your customers.
 
@@ -77,34 +75,46 @@ The response body provides detailed insights into how SDKs are being used across
 
 This response helps organizations track SDK adoption and effectiveness by revealing usage patterns and frequency.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **from** (required)
+  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
+  Default: `2024-01-31`
+- **to** (required)
+  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
+  Default: `2024-03-31`
+- **orgUid** (required)
+  Enter the UID of your Organization.
+  Default: `your_organization_uid`
+- **includeCount** (required)
+  Set this parameter to true to include the total count of users in the response.
+  Default: `true`
+- **services** (required)
+  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
+  Default: `["cdn","cma"]`
+- **duration** (required)
+  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
+  Default: `day`
+- **orderBy** (optional)
+  Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the value is set to -1, which orders the response in descending order.
+  Default: `-1`
+- **limit** (optional)
+  Specify the number of items you wish to fetch per request. The maximum limit is 900.
+  Default: `20`
+- **skip** (optional)
+  Enter the number of items to skip. For example, a skip value of 10 will skip the first 10 items.
+  Default: `10`
+- **apiKey** (optional)
+  Enter your stack API key to get data for that specific stack.
+  Default: `your_stack_api_key`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| from | 2024-01-31 | Specify the start date for the required data. Use the following date format: YYYY-MM-DD. |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| to | 2024-03-31 | Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD. |
-
-| orgUid | your_organization_uid | Enter the UID of your Organization. |
-
-| includeCount | true | Set this parameter to true to include the total count of users in the response. |
-
-| services | ["cdn","cma"] | Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"]. |
-
-| duration | day | Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch. |
-
-| orderBy | -1 | Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the value is set to -1, which orders the res |
-
-| limit | 20 | Specify the number of items you wish to fetch per request. The maximum limit is 900. |
-
-| skip | 10 | Enter the number of items to skip. For example, a skip value of 10 will skip the first 10 items. |
-
-| apiKey | your_stack_api_key | Enter your stack API key to get data for that specific stack. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -112,3 +122,4 @@ This response helps organizations track SDK adoption and effectiveness by reveal
     "paginated": true
 }
 ```
+

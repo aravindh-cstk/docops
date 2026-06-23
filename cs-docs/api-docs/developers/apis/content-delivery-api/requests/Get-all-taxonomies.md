@@ -12,26 +12,29 @@ last_updated: 2026-05-18
 
 # Get all taxonomies
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies`
+**GET** `/taxonomies`
 
 The Get all taxonomies request retrieves all published taxonomies for the given environment.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **limit** (optional)
+  Number of results to return.
+  Default: `5`
+- **skip** (optional)
+  Number of results to skip (for pagination).
+  Default: `5`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| access_token | your_access_token | Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication). |
+- **api_key** (optional)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **access_token** (optional)
+  Enter your environment-specific delivery token. Check [Authentication](/docs/developers/apis/content-delivery-api#authentication).
+  Default: `your_access_token`
 
-| limit | 5 | Number of results to return. |
-
-| skip | 5 | Number of results to skip (for pagination). |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -51,3 +54,4 @@ The Get all taxonomies request retrieves all published taxonomies for the given 
   "count": 1
 }
 ```
+

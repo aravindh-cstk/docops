@@ -12,9 +12,7 @@ last_updated: 2025-08-28
 
 # Fit by cropping
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&fit={fit_value}`
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&fit={fit_value}`
 
 ##### Additional Notes
 
@@ -22,15 +20,18 @@ last_updated: 2025-08-28
 
 **Note:** Check out the [limitations](/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image) that are applicable here.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. Example 250 or 0.50
+  Default: `250`
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. Example 250 or 0.50
+  Default: `250`
+- **fit** (optional)
+  Enter either bounds or crop as value. Example crop
+  Default: `crop`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
 
-| width | 250 | Enter the value of the image width in pixels or percentage. Example 250 or 0.50 |
-
-| height | 250 | Enter the value of the image height in pixels or percentage. Example 250 or 0.50 |
-
-| fit | crop | Enter either bounds or crop as value. Example crop |
-
-| environment | production | Enter the environment scoped to your delivery token. |

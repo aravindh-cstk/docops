@@ -12,9 +12,7 @@ last_updated: 2023-07-18
 
 # Try 'AND' Operator within Nested Modular Blocks
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **AND Operator within Nested Modular Blocks**
 
@@ -102,3 +100,4 @@ query {
 ```
 
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
+

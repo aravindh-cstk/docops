@@ -12,9 +12,7 @@ last_updated: 2023-03-29
 
 # Try 'Not Equals' Operator within Nested Modular Blocks
 
-
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`
+**** `/stacks/apiKey/explore`
 
 **Not-equals Operator within Nested Modular Blocks**
 
@@ -87,3 +85,4 @@ query {
 ```
 
 The response body of this query will also include details of the fields that lie within the **Coupons** Nested Modular Blocks field.
+

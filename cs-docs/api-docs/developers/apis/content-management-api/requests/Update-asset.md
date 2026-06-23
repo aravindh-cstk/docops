@@ -12,9 +12,7 @@ last_updated: 2025-07-04
 
 # Update asset
 
-
-**Method:** `PUT`  
-**Endpoint:** `/assets/{asset_uid}`
+**PUT** `/assets/{asset_uid}`
 
 The Update asset request allows you to update the title and description of an asset.  
 To configure the permissions for your application via OAuth, please include the cm.assets.management:write scope.
@@ -37,26 +35,36 @@ Under 'Body', you need to pass the updated details of "Title" and "Description" 
 
 Another way to provide a "Title" and a "Description" for the asset is to pass them as optional form-data parameters, i.e., asset[title] and asset[description]. You can assign a parent folder to your asset by using the asset[parent_uid] parameter, where you need to pass the UID of the parent folder.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **asset_uid** (required)
+  Enter the UID of the asset that you want to update.
+  Default: `blt558a9890b838abcd`
 
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
+## Query Parameters
 
-| authtoken | your_authtoken |  |
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
+## Headers
 
-| Content-Type | multipart/form-data | Pass “multipart/form-data” as the value to this parameter to include form data body parameters. |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Pass “multipart/form-data” as the value to this parameter to include form data body parameters.
+  Default: `multipart/form-data`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| asset_uid | blt558a9890b838abcd | Enter the UID of the asset that you want to update. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -68,7 +76,7 @@ Another way to provide a "Title" and a "Description" for the asset is to pass th
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -100,3 +108,4 @@ Another way to provide a "Title" and a "Description" for the asset is to pass th
   }
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-02-28
 
 # Get all roles
 
-
-**Method:** `GET`  
-**Endpoint:** `/roles?include_permissions={boolean_value}&include_rules={boolean_value}`
+**GET** `/roles?include_permissions={boolean_value}&include_rules={boolean_value}`
 
 The Get all roles request returns comprehensive information about all roles created in a stack.
 
@@ -23,22 +21,27 @@ You can add queries to extend the functionality of this API request. Under the U
 To learn more about the queries, refer to the [Queries](/docs/developers/apis/content-delivery-api#queries) section of the Content Delivery API doc.  
 To configure the permissions for your application via OAuth, please include the cm.roles.management:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_permissions** (optional)
+  Set this parameter to 'true' to include the details of the permissions assigned to a particular role.
+  Default: `false`
+- **include_rules** (optional)
+  Set this to ‘true’ to include the details of the rules assigned to a role.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| include_permissions | false | Set this parameter to 'true' to include the details of the permissions assigned to a particular role. |
-
-| include_rules | false | Set this to ‘true’ to include the details of the rules assigned to a role. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -223,3 +226,4 @@ To configure the permissions for your application via OAuth, please include the 
   ]
 }
 ```
+

@@ -12,32 +12,37 @@ last_updated: 2025-07-18
 
 # Unpublish metadata
 
-
-**Method:** `POST`  
-**Endpoint:** `/metadata/{metadata_uid}/unpublish`
+**POST** `/metadata/{metadata_uid}/unpublish`
 
 The Unpublish metadata request lets you unpublish the metadata associated with a specific entry or asset.
 
 In the URL, you need to pass the unique ID of the metadata that you want to unpublish against the metadata_uid parameter.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **metadata_uid** (optional)
+  Enter the unique ID of the metadata that you want to unpublish. You can find the metadata UID by by passing include_metadata parameters while running the [Get all assets](#get-all-assets) API request or [Get all entries](#get-all-entries) API request.
+  Default: `blt045d039eb6f2f9df`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
-
-| branch | main | Enter your branch or alias unique ID. |
-
-| metadata_uid | blt045d039eb6f2f9df | Enter the unique ID of the metadata that you want to unpublish. You can find the metadata UID by  by passing include_metadata parameters while running the [Get  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -52,10 +57,11 @@ In the URL, you need to pass the unique ID of the metadata that you want to unpu
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
     "notice": "Metadata sent for unpublishing."
 }
 ```
+

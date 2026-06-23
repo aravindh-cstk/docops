@@ -12,22 +12,23 @@ last_updated: 2023-01-05
 
 # Update OAuth redirect URL and permission scopes of an app
 
+**PUT** `/apps/{app_uid}/oauth`
 
-**Method:** `PUT`  
-**Endpoint:** `/apps/{app_uid}/oauth`
+## URL Parameters
 
-**Parameters:**
+- **app_uid** (required)
+  The UID of the app to be updated.
 
-| Key | Value | Description |
-|-----|-------|-------------|
+## Headers
 
-| authtoken | your_authtoken | Enter your management token. |
+- **authtoken** (required)
+  Enter your management token.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  The UID of the organization.
+  Default: `your_organization_uid`
 
-| organization_uid | your_organization_uid | The UID of the organization. |
-
-| app_uid |  | The UID of the app to be updated. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -51,3 +52,4 @@ last_updated: 2023-01-05
   }
 }
 ```
+

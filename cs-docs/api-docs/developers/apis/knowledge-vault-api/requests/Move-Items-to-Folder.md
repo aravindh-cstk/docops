@@ -12,9 +12,7 @@ last_updated: 2026-03-02
 
 # Move Items to Folder
 
-
-**Method:** `PUT`  
-**Endpoint:** `/v1/knowledge-vault/folders/{folder_uid}/move-items`
+**PUT** `/v1/knowledge-vault/folders/{folder_uid}/move-items`
 
 The Move Items to Folder request lets you move multiple items into a specified folder within the Knowledge Vault of a brand kit.
 
@@ -33,22 +31,28 @@ Example:
 
 The content_uids holds the list of content item UIDs to move into another folder.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **folder_uid ** (required)
+  Enter the UID of the folder where the items will be moved.
+  Default: `your_folder_uid`
 
-| authtoken | your_authtoken | Enter the authtoken. |
+## Headers
 
-| authorization | [Bearer <OAuth token>] | Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication). |
+- **authtoken** (required)
+  Enter the authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token. Learn more about [Authentication](/docs/developers/apis/knowledge-vault-api#authentication).
+  Default: `[Bearer <OAuth token>]`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **brand_kit_uid** (required)
+  Enter the Brand Kit UID.
+  Default: `your_brand_kit_uid`
 
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-
-| brand_kit_uid | your_brand_kit_uid | Enter the Brand Kit UID. |
-
-| folder_uid  | your_folder_uid | Enter the UID of the folder where the items will be moved. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -59,7 +63,7 @@ The content_uids holds the list of content item UIDs to move into another folder
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -68,3 +72,4 @@ The content_uids holds the list of content item UIDs to move into another folder
    "elapsed_time": 0.033
 }
 ```
+

@@ -12,9 +12,7 @@ last_updated: 2024-02-27
 
 # Update publish rules
 
-
-**Method:** `PUT`  
-**Endpoint:** `/workflows/publishing_rules/{rule_uid}`
+**PUT** `/workflows/publishing_rules/{rule_uid}`
 
 The Update Publish Rules request allows you to add a publish rule or update the details of the existing publish rules of a workflow.  
 To configure the permissions for your application via OAuth, please include the cm.workflows.publishing-rules:write scope.
@@ -28,22 +26,26 @@ To define the branch scope, specify the unique IDs of the branches for which the
 ]
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **rule_uid** (required)
+  Enter the UID of the publish rule that you want to update.
+  Default: `your_rule_uid`
 
-| api_key | blt20962a819b57e233 |  |
+## Headers
 
-| authtoken | your_authtoken |  |
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| rule_uid | your_rule_uid | Enter the UID of the publish rule that you want to update. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -68,10 +70,11 @@ To define the branch scope, specify the unique IDs of the branches for which the
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Publish rule updated successfully."
 }
 ```
+

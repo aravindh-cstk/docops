@@ -12,9 +12,7 @@ last_updated: 2026-04-17
 
 # Get all assets
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets?environment={environment_name}&include_fallback=true&include_dimension={boolean_value}`
+**GET** `/assets?environment={environment_name}&include_fallback=true&include_dimension={boolean_value}`
 
 The Get all assets request fetches the list of all the assets of a particular stack. It returns the content of each asset in JSON format. You can also specify the environment of which you want to get the assets.
 
@@ -50,26 +48,34 @@ Locale is **optional**
 - If you specify a locale in the query, it returns the latest published version of the localized asset/assets
 - If an asset is not localized, make use of the include_fallback=true query parameter to fetch the published asset from its fallback locale
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **environment** (required)
+  Enter the name of the environment if you want to retrieve the assets published in a particular environment.
+  Default: `production`
+- **include_fallback** (optional)
+  Enter 'true' to include the published asset details from the fallback locale when the specified locale does not contain published content.
+  Default: `true`
+- **include_dimension** (optional)
+  Enter 'true' to include the dimensions (height and width) of the image in the response. Supported image types: JPG, GIF, PNG, WebP, BMP, TIFF, SVG, and PSD.
+  Default: `true`
+- **include_branch** (optional)
+  Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt02f7b45378b008ee | Enter the API key of your stack. |
+## Headers
 
-| access_token | cs5b69faf35efdebd91d08bcf4 | Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication). |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `blt02f7b45378b008ee`
+- **access_token** (required)
+  Enter the environment-specific delivery token of your stack. Check [Authentication](#authentication).
+  Default: `cs5b69faf35efdebd91d08bcf4`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| environment | production | Enter the name of the environment if you want to retrieve the assets published in a particular environment. |
-
-| include_fallback | true | Enter 'true' to include the published asset details from the fallback locale when the specified locale does not contain published content. |
-
-| include_dimension | true | Enter 'true' to include the dimensions (height and width) of the image in the response. Supported image types: JPG, GIF, PNG, WebP, BMP, TIFF, SVG, and PSD. |
-
-| include_branch | false | Set this to true to include the _branch top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resid |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -979,3 +985,4 @@ Locale is **optional**
   ]
 }
 ```
+

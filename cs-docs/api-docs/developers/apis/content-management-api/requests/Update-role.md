@@ -12,9 +12,7 @@ last_updated: 2024-06-10
 
 # Update role
 
-
-**Method:** `PUT`  
-**Endpoint:** `/roles/{role_uid}`
+**PUT** `/roles/{role_uid}`
 
 The Update role request lets you modify an existing role of your stack. However, the pre-existing system roles cannot be modified.
 
@@ -110,22 +108,28 @@ To add taxonomy specific permissions, follow the following schema in your reques
     }
 ```
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **role_uid** (required)
+  Enter the unique ID of the role of which you want to update the details.
+  Default: `your_role_uid`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Headers
 
-| api_key | your_api_key | Enter the API key of your stack |
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **api_key** (required)
+  Enter the API key of your stack
+  Default: `your_api_key`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| role_uid | your_role_uid | Enter the unique ID of the role of which you want to update the details. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -209,7 +213,7 @@ To add taxonomy specific permissions, follow the following schema in your reques
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -310,3 +314,4 @@ To add taxonomy specific permissions, follow the following schema in your reques
     }
 }
 ```
+

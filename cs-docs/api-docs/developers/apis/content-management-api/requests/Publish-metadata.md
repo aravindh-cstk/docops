@@ -12,9 +12,7 @@ last_updated: 2025-10-01
 
 # Publish metadata
 
-
-**Method:** `POST`  
-**Endpoint:** `/metadata/{metadata_uid}/publish`
+**POST** `/metadata/{metadata_uid}/publish`
 
 The Publish metadata request lets you publish the metadata associated with a specific entry or asset.
 
@@ -25,26 +23,37 @@ Keep the following points in mind when publishing metadata:
 - When you publish an entry/asset, the associated metadata of that entry/asset will also get published.Tip: If you publish only the metadata without publishing the corresponding asset or entry, the metadata will not resolve if you pass include_metadata: true. As a best practice, always publish the associated asset or entry.
 - You must pass the include_publish_details query parameter to fetch the metadata publishing details in the response.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **metadata_uid** (required)
+  Enter the unique ID of the metadata that you want to publish. You can find the metadata UID by passing include_metadata parameters while running the [Get all assets](#get-all-assets) API request or [Get all entries](#get-all-entries) API request.
+  Default: `blt045d039eb6f2f9df`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **include_publish_details** (optional)
+  Enter 'true' to include the publish details of the entry.
+  Default: `false`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a Request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Enter "application/json" to pass a Request body.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch or alias unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch or alias unique ID. |
-
-| metadata_uid | blt045d039eb6f2f9df | Enter the unique ID of the metadata that you want to publish. You can find the metadata UID by passing include_metadata parameters while running the [Get all as |
-
-| include_publish_details | false | Enter 'true' to include the publish details of the entry. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -59,10 +68,11 @@ Keep the following points in mind when publishing metadata:
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
     "notice": "Metadata sent for publishing."
 }
 ```
+

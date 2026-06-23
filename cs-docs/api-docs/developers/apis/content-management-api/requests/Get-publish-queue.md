@@ -12,9 +12,7 @@ last_updated: 2025-03-03
 
 # Get publish queue
 
-
-**Method:** `GET`  
-**Endpoint:** `/publish-queue`
+**GET** `/publish-queue`
 
 The Get publish queue request returns comprehensive information on activities such as publish, unpublish, and delete that have performed on entries and/or assets. This request also includes the details of the release deployments in the response body.  
 To configure the permissions for your application via OAuth, please include the cm.publish-queue.management:read scope.
@@ -25,24 +23,31 @@ You can apply various queries such as [count](https://www.contentstack.com/docs/
 
 Now, you can limit the number of bulk job details in the response body to **25** items. Also, you can view the summary of your bulk jobs within the summary key in the response body.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **include_branch** (optional)
+  Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | your_stack_api_key | Enter Stack API Key. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken |
+- **api_key** (required)
+  Enter Stack API Key.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+- **api_version** (required)
+  Enter the API version to enable Nested Reference Publishing.
+  Default: `3.2`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| branch | main | Enter your branch unique ID. |
-
-| api_version | 3.2 | Enter the API version to enable Nested Reference Publishing. |
-
-| include_branch | false | Set this to 'true' to include the 'branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module re |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -924,3 +929,4 @@ Now, you can limit the number of bulk job details in the response body to **25**
     }
 }
 ```
+

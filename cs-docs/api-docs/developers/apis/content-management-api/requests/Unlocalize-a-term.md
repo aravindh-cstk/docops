@@ -12,29 +12,39 @@ last_updated: 2025-11-13
 
 # Unlocalize a term
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
+**DELETE** `/taxonomies/{taxonomy_uid}/terms/{term_uid}`
 
 The Unlocalize a term request is used to remove localized values for a term in a specific locale.
 
 ##### Get descendants of a term
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `global_content_topics`
+- **term_uid** (required)
+  Enter the unique ID of the term you want to unlocalize. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)' request to retrieve the UID of a term.
+  Default: `artificial_intelligence`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale** (optional)
+  The locale from which you want to remove localization. If not specified, the system uses the master locale.
+  Default: `es`
 
-| authorization | your_management_token	 | Enter your management token. |
+## Headers
 
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token	`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| taxonomy_uid | global_content_topics | Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomie |
-
-| term_uid | artificial_intelligence | Enter the unique ID of the term you want to unlocalize. The UID of a term is unique across a stack. Execute the '[Get all terms](#get-all-terms-of-a-taxonomy)'  |
-
-| locale | es | The locale from which you want to remove localization. If not specified, the system uses the master locale. |

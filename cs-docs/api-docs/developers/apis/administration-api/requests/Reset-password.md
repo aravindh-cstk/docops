@@ -12,9 +12,7 @@ last_updated: 2026-04-07
 
 # Reset password
 
-
-**Method:** `POST`  
-**Endpoint:** `/user/reset_password`
+**POST** `/user/reset_password`
 
 The Reset password API request allows you to reset your Contentstack account password.
 
@@ -24,14 +22,12 @@ When executing the request, in the 'Body' section, you need to provide the token
 
 **Note**: The "**Reset password**" token is valid only for the **next 60 minutes** after it’s generated. Post that, it expires and you need to rerun the same request to generate a new token.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **Content-Type** (required)
+  Default: `application/json`
 
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -43,10 +39,11 @@ When executing the request, in the 'Body' section, you need to provide the token
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
 	"notice": "Your password has been reset successfully."
 }
 ```
+

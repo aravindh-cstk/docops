@@ -12,9 +12,7 @@ last_updated: 2025-04-28
 
 # Get Details of All Versions of an Entry
 
-
-**Method:** `GET`  
-**Endpoint:** `/content_types/{content_type_uid}/entries/{entry_uid}/versions?named={boolean_value}&include_count={boolean_value}&locale={locale_code}&include_updated_at={boolean_value}&include_updated_by={boolean_value}`
+**GET** `/content_types/{content_type_uid}/entries/{entry_uid}/versions?named={boolean_value}&include_count={boolean_value}&locale={locale_code}&include_updated_at={boolean_value}&include_updated_by={boolean_value}`
 
 The Get Details of All Versions of an Entry request returns comprehensive information of all the versions of a specific entry within a content type.
 
@@ -26,36 +24,52 @@ The Get Details of All Versions of an Entry request returns comprehensive inform
 
 ##### Delete Version Name of Entry
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **content_type_uid** (required)
+  Enter the unique ID of the content type.
+  Default: `your_content_type_uid`
+- **entry_uid** (required)
+  Enter the unique ID of the entry whose version history you want to retrieve.
+  Default: `your_entry_uid`
 
-| authtoken | your_authtoken | Enter your authtoken. |
+## Query Parameters
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication) |
+- **named** (optional)
+  Set this parameter to 'true' to include in response only the named versions of the specified entry.
+  Default: `false`
+- **include_count** (optional)
+  Set this parameter to 'true' to include in response the total number of versions of the specified entry.
+  Default: `true`
+- **locale** (optional)
+  Enter the locale of the entry. If not provided it uses the master_locale of stack.
+  Default: `en-us`
+- **include_updated_at** (optional)
+  Set this parameter to 'true' to include in response the timestamps for when each version was updated.
+  Default: `true`
+- **include_updated_by** (optional)
+  Set this parameter to 'true' to include in response the UID of the user who updated each version.
+  Default: `true`
 
-| api_key | your_api_key | Enter the API key of your stack. |
+## Headers
 
-| Content-Type | application/json | Pass application/json value. |
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication.](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_api_key`
+- **Content-Type** (required)
+  Pass application/json value.
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| branch | main | Enter your branch unique ID. |
-
-| content_type_uid | your_content_type_uid | Enter the unique ID of the content type. |
-
-| entry_uid | your_entry_uid | Enter the unique ID of the entry whose version history you want to retrieve. |
-
-| named | false | Set this parameter to 'true' to include in response only the named versions of the specified entry. |
-
-| include_count | true | Set this parameter to 'true' to include in response the total number of versions of the specified entry. |
-
-| locale | en-us | Enter the locale of the entry. If not provided it uses the master_locale of stack. |
-
-| include_updated_at | true | Set this parameter to 'true' to include in response the timestamps for when each version was updated. |
-
-| include_updated_by | true | Set this parameter to 'true' to include in response the UID of the user who updated each version. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -124,3 +138,4 @@ The Get Details of All Versions of an Entry request returns comprehensive inform
     "count": 10
 }
 ```
+

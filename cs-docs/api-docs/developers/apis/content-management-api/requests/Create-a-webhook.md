@@ -12,9 +12,7 @@ last_updated: 2024-08-09
 
 # Create a webhook
 
-
-**Method:** `POST`  
-**Endpoint:** `/webhooks`
+**POST** `/webhooks`
 
 The Create a webhook request allows you to create a new webhook in a specific stack.
 
@@ -96,20 +94,22 @@ When creating a webhook, you can specify the branch scope through the following 
 
 **Note**: To configure the permissions for applications that are using Contentstack OAuth, add the cm.webhooks.management:write user-related permission scope under the OAuth settings of your app in Developer Hub. For more details, refer to the [Contentstack OAuth documentation](https://www.contentstack.com/docs/developers/developer-hub/contentstack-oauth).
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| api_key | your_stack_api_key | Enter the API key of your stack. |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -143,7 +143,7 @@ When creating a webhook, you can specify the branch scope through the following 
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -184,3 +184,4 @@ When creating a webhook, you can specify the branch scope through the following 
     }
 }
 ```
+

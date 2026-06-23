@@ -12,26 +12,25 @@ last_updated: 2024-02-22
 
 # Create a project
 
-
-**Method:** `POST`  
-**Endpoint:** `/v1/projects`
+**POST** `/v1/projects`
 
 The Create a project request lets you create a project in your organization.
 
 To configure the permissions for your application via OAuth, include the automationhub.projects.management:writescope.
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **authtoken** (required)
+  Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details.
+  Default: `your_authtoken`
+- **organization_uid** (required)
+  Enter the Organization UID.
+  Default: `your_organization_uid`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| authtoken | your_authtoken | Enter your authtoken. Refer [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) for more details. |
-
-| organization_uid | your_organization_uid | Enter the Organization UID. |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -41,7 +40,7 @@ To configure the permissions for your application via OAuth, include the automat
 }
 ```
 
-**Response (201):**
+## Sample Response
 
 ```json
 {
@@ -59,3 +58,4 @@ To configure the permissions for your application via OAuth, include the automat
     "id": "d8674f45bee847***f044e1da7428a70"
 }
 ```
+

@@ -12,27 +12,30 @@ last_updated: 2023-01-05
 
 # Delete management token
 
-
-**Method:** `DELETE`  
-**Endpoint:** `/stacks/management_tokens/{token_uid}`
+**DELETE** `/stacks/management_tokens/{token_uid}`
 
 The Delete management token request deletes a specific management token.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **token_uid** (required)
+  Enter the UID of the management token that you want to delete.
+  Default: `blt3c33b3833884482`
 
-| api_key | your_stack_api_key | Enter the API key of your stack. |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of your stack.
+  Default: `your_stack_api_key`
+- **authtoken** (required)
+  Enter your authtoken.
+  Default: `your_authtoken`
 
-| token_uid | blt3c33b3833884482 | Enter the UID of the management token that you want to delete. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
     "notice": "Management Token deleted successfully."
 }
 ```
+

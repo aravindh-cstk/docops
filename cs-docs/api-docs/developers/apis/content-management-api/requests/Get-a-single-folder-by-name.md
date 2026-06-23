@@ -12,31 +12,36 @@ last_updated: 2024-03-21
 
 # Get a single folder by name
 
-
-**Method:** `GET`  
-**Endpoint:** `/assets?query={"is_dir": true, "name": "folder_name"}`
+**GET** `/assets?query={"is_dir": true, "name": "folder_name"}`
 
 The Get a single folder by name call retrieves a specific [asset folder](/docs/content-managers/author-content/#create-and-manage-asset-folders) based on the name provided.   
 To configure the permissions for your application via OAuth, please include the cm.assets.management:read scope.
 
-**Parameters:**
+## Query Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **query** (required)
+  Enter the is_dir and name parameters to find the asset folder by name.
+  Default: `{"is_dir": true, "name": "folder_name"}`
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
 
-| api_key | blt20962a819b57e233 | Enter the API key of the stack that holds the asset |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Enter the API key of the stack that holds the asset
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication)
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](/docs/developers/apis/content-management-api#authentication) |
-
-| branch | main | Enter your branch unique ID. |
-
-| query | {"is_dir": true, "name": "folder_name"} | Enter the is_dir and name parameters to find the asset folder by name. |
-
-| include_branch | false | Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module r |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -56,3 +61,4 @@ To configure the permissions for your application via OAuth, please include the 
 	}]
 }
 ```
+

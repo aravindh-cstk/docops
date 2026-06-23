@@ -12,6 +12,5 @@ last_updated: 2023-03-29
 
 # Get a List of Assets
 
+**** `/stacks/apiKey/explore`
 
-**Method:** ``  
-**Endpoint:** `/stacks/apiKey/explore`

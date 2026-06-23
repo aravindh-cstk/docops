@@ -12,28 +12,26 @@ last_updated: 2023-02-02
 
 # Add or Update Workflow Stages
 
-
-**Method:** `POST`  
-**Endpoint:** `/workflows/workflow_stages`
+**POST** `/workflows/workflow_stages`
 
 The Add or Update Workflow Stages request allows you to add or update the workflow stages.
 
 **Note**: You need to use either the stack’s Management Token or the user Authtoken (any one is mandatory), along with the stack API key, to make a valid Content Management API request. Read more about [authentication](/docs/developers/apis/content-management-api/#authentication).
 
-**Parameters:**
+## Headers
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **Content-Type** (required)
+  Default: `application/json`
 
-| api_key | blt20962a819b57e233 |  |
-
-| authtoken | your_authtoken | Enter your authtoken. |
-
-| authorization | your_management_token | Enter your management token. |
-
-| Content-Type | application/json |  |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -54,7 +52,7 @@ The Add or Update Workflow Stages request allows you to add or update the workfl
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -100,3 +98,4 @@ The Add or Update Workflow Stages request allows you to add or update the workfl
 	}
 }
 ```
+

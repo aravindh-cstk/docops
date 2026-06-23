@@ -12,9 +12,7 @@ last_updated: 2024-02-28
 
 # Update environment
 
-
-**Method:** `PUT`  
-**Endpoint:** `/environments/{environment_name}`
+**PUT** `/environments/{environment_name}`
 
 The Update environment call will update the details of an existing publishing environment for a stack.
 
@@ -23,22 +21,27 @@ When executing the API call, under the 'Header' section, you need to enter the A
 In the 'Body' section, enter the updated details of the environment. You can modify the environment name, the URLs (which include the language code and the URL of the server).  
 To configure the permissions for your application via OAuth, please include the cm.environments.management:write scope.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **environment_name** (required)
+  Enter the name of the environment.
+  Default: `development`
 
-| api_key | the API key of your stack |  |
+## Headers
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **api_key** (required)
+  Default: `the API key of your stack`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Enter "application/json" to pass a request body.
+  Default: `application/json`
 
-| authorization | [Bearer <OAuth token>] or [your_management_token] | Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentic |
-
-| Content-Type | application/json | Enter "application/json" to pass a request body. |
-
-| environment_name | development | Enter the name of the environment. |
-
-**Request Body:**
+## Sample Request
 
 ```json
 {
@@ -52,7 +55,7 @@ To configure the permissions for your application via OAuth, please include the 
 }
 ```
 
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -76,3 +79,4 @@ To configure the permissions for your application via OAuth, please include the 
   }
 }
 ```
+

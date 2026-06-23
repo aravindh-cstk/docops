@@ -12,38 +12,50 @@ last_updated: 2025-11-13
 
 # Get a single taxonomy
 
-
-**Method:** `GET`  
-**Endpoint:** `/taxonomies/{taxonomy_uid}`
+**GET** `/taxonomies/{taxonomy_uid}`
 
 The Get a single taxonomy request returns comprehensive information of a specific taxonomy available in a particular stack.
 
-**Parameters:**
+## URL Parameters
 
-| Key | Value | Description |
-|-----|-------|-------------|
+- **taxonomy_uid** (required)
+  Enter the unique ID of the taxonomy of which you want to retrieve the details. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Default: `sample_one`
 
-| api_key | your_stack_api_key | Enter the API key of the stack. |
+## Query Parameters
 
-| authtoken | your_authtoken | Enter your authtoken. |
+- **locale** (optional)
+  Locale from which to fetch the taxonomy. If not specified, the master locale is used.
+  Default: `es`
+- **include_fallback** (optional)
+  Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the taxonomy is not available in the given locale.
+  Default: `true`
+- **include_terms_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms available in a taxonomy.
+  Default: `true`
+- **include_referenced_terms_count** (optional)
+  Set this parameter to 'true' to include in response the total count of terms referenced in entry(ies).
+  Default: `false`
+- **include_referenced_entries_count** (optional)
+  Set this parameter to 'true' to include in response the total count of entries in which terms are added.
+  Default: `true`
 
-| authorization | your_management_token | Enter your management token. |
+## Headers
 
-| branch | dev | Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default. |
+- **api_key** (required)
+  Enter the API key of the stack.
+  Default: `your_stack_api_key`
+- **authtoken** (optional)
+  Enter your authtoken.
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your management token.
+  Default: `your_management_token`
+- **branch** (optional)
+  Specify the target branch when using the include_fallback parameter. If not specified, the system uses the main branch by default.
+  Default: `dev`
 
-| taxonomy_uid | sample_one | Enter the unique ID of the taxonomy of which you want to retrieve the details. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies] |
-
-| locale | es | Locale from which to fetch the taxonomy. If not specified, the master locale is used. |
-
-| include_fallback | true | Determines whether to follow the fallback locale hierarchy of the specified branch (or the main branch) when the taxonomy is not available in the given locale. |
-
-| include_terms_count | true | Set this parameter to 'true' to include in response the total count of terms available in a taxonomy. |
-
-| include_referenced_terms_count | false | Set this parameter to 'true' to include in response the total count of terms referenced in entry(ies). |
-
-| include_referenced_entries_count | true | Set this parameter to 'true' to include in response the total count of entries in which terms are added. |
-
-**Response (200):**
+## Sample Response
 
 ```json
 {
@@ -62,3 +74,4 @@ The Get a single taxonomy request returns comprehensive information of a specifi
    }
 }
 ```
+
