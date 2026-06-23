@@ -75,7 +75,7 @@ Through this approach Client/ Browser can directly access Contentstack Delivery 
 - The website setup is simple which makes it vulnerable to security risks.
 - With a simple website, your API keys and delivery tokens are visible in your browser, which could be exploited by malicious attackers.
 
-**Additional Resource**: To create and run a simple website refer to our detailed guide on how to [Build a Marketing App using Contenstack and React JS](/docs/developers/sample-apps/build-a-marketing-app-using-contentstack-and-react-js).
+**Additional Resource**: To create and run a simple website refer to our detailed guide on how to [Build a Marketing App using Contenstack and React JS](../sample-apps/build-a-marketing-app-using-contentstack-and-react-js.md).
 
 ## Next Steps
 

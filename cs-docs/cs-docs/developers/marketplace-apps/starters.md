@@ -25,15 +25,15 @@ Starters are built using different technologies combined with [Contentstack’s 
 
 Navigate to the [Starters](https://app.contentstack.com/#!/marketplace/starters) section in Contentstack Marketplace and select the app that you want to install.  
 Here is a list of the technologies we used to build the Starters.
-- [React.js](/docs/developers/sample-apps/build-a-starter-website-using-react-js-and-contentstack/)
-- [Next.js](/docs/developers/sample-apps/build-a-starter-website-using-next-js-and-contentstack/)
-- [Gatsby](/docs/developers/sample-apps/build-a-starter-website-with-gatsby-and-contentstack/)
-- [Nuxt.js](/docs/developers/sample-apps/build-a-starter-website-with-nuxt-js-and-contentstack/)
-- [Angular](/docs/developers/sample-apps/build-a-starter-website-with-angular-and-contentstack/)
-- [Vue.js](/docs/developers/sample-apps/build-a-starter-website-using-vue-js-and-contentstack/)
-- [Stencil.js](/docs/developers/sample-apps/build-a-starter-website-with-stenciljs-and-contentstack/)
-- [Astro](/docs/developers/sample-apps/build-a-starter-website-using-astro-and-contentstack/)
-- [Nuxt3](/docs/developers/sample-apps/build-a-starter-website-using-nuxt3-and-contentstack/)
+- [React.js](../sample-apps/build-a-starter-website-using-react-js-and-contentstack.md)
+- [Next.js](../sample-apps/build-a-starter-website-using-next-js-and-contentstack.md)
+- [Gatsby](../sample-apps/build-a-starter-website-with-gatsby-and-contentstack.md)
+- [Nuxt.js](../sample-apps/build-a-starter-website-with-nuxt-js-and-contentstack.md)
+- [Angular](../sample-apps/build-a-starter-website-with-angular-and-contentstack.md)
+- [Vue.js](../sample-apps/build-a-starter-website-using-vue-js-and-contentstack.md)
+- [Stencil.js](../sample-apps/build-a-starter-website-with-stenciljs-and-contentstack.md)
+- [Astro](../sample-apps/build-a-starter-website-using-astro-and-contentstack.md)
+- [Nuxt3](../sample-apps/build-a-starter-website-using-nuxt3-and-contentstack.md)
 
 Contentstack Marketplace allows easy installation of starters and quick hosting using [Contentstack Launch](https://app.contentstack.com/#!/launch). For more details, refer to the [Contentstack Launch documentation](../launch.md).
 

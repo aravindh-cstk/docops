@@ -98,7 +98,7 @@ Once you have added a custom field, you can use it in your content type like any
 - Finally, click on either **Save **or** Save and Close** to save your changes.
 - Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Shopify **field in action, based on the **type **you define in the **Config Parameters **section of the extension. ****
 
-**Additional Resource:** You can also refer to our wide collection of e-Commerce sample apps built using [Ruby on Rails](/docs/developers/sample-apps/build-a-product-catalog-using-ruby-on-rails-and-contentstack) and [DataSync](/docs/developers/sample-apps/build-an-ecommerce-website-using-contentstack-datasync).
+**Additional Resource:** You can also refer to our wide collection of e-Commerce sample apps built using [Ruby on Rails](../sample-apps/build-a-product-catalog-using-ruby-on-rails-and-contentstack.md) and [DataSync](../sample-apps/build-an-ecommerce-website-using-contentstack-datasync.md).
 
 ## Common questions
 

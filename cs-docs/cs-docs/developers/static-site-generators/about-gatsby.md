@@ -22,9 +22,9 @@ Gatsby is an open-source framework, based on React, that helps developers build 
 Contentstack provides [**contentstack-gatsby**](https://github.com/contentstack/gatsby-source-contentstack) plugin that allows you to build a static site by fetching content from Contentstack using [Content Delivery APIs](../../../api-docs/api-detail/content-delivery-api.md) and delivering it to your Gatsby-based website.
 
 To learn about implementation of Gasby websites, we have developed a sample website for you to explore as follows:
-- [Gatsby+Contentstack starter website](/docs/developers/sample-apps/get-started-with-gatsby-and-contentstack)
+- [Gatsby+Contentstack starter website](../sample-apps/get-started-with-gatsby-and-contentstack.md)
 
-If you want to start developing a basic website that fetches content from Contentstack and displays it on your Gatsby-based website, refer to our [Get Started](/docs/developers/sample-apps/get-started-with-gatsby-and-contentstack) article.
+If you want to start developing a basic website that fetches content from Contentstack and displays it on your Gatsby-based website, refer to our [Get Started](../sample-apps/get-started-with-gatsby-and-contentstack.md) article.
 
 ## Common questions
 
@@ -35,7 +35,7 @@ Use the [**contentstack-gatsby**](https://github.com/contentstack/gatsby-source-
 It fetches content from Contentstack using [Content Delivery APIs](../../../api-docs/api-detail/content-delivery-api.md).
 
 ### Is there a sample Gatsby + Contentstack project to reference?
-Yes, see the [Gatsby+Contentstack starter website](/docs/developers/sample-apps/get-started-with-gatsby-and-contentstack).
+Yes, see the [Gatsby+Contentstack starter website](../sample-apps/get-started-with-gatsby-and-contentstack.md).
 
 ### Where do I start if I want to build a basic Gatsby site with Contentstack?
-Refer to the [Get Started](/docs/developers/sample-apps/get-started-with-gatsby-and-contentstack) article.
+Refer to the [Get Started](../sample-apps/get-started-with-gatsby-and-contentstack.md) article.

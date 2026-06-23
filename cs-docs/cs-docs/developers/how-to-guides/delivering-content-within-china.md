@@ -65,7 +65,7 @@ An architecture diagram is shown below representing the strategy to deploy conte
 
 ## Example: Gatsby Starter App Integration
 
-To demonstrate the above steps, we utilize a [Gatsby Starter app](https://www.contentstack.com/docs/developers/sample-apps/build-a-starter-website-with-gatsby-and-contentstack).
+To demonstrate the above steps, we utilize a [Gatsby Starter app](../sample-apps/build-a-starter-website-with-gatsby-and-contentstack.md).
 
 **About the Gatsby Starter App**: Gatsby is a widely used **Static Site Generator** (**SSG**) built on React, enabling developers to create fast and optimized websites by generating static HTML at build time.
 
@@ -78,7 +78,7 @@ A [stack](../set-up-stack/about-stack.md) in Contentstack is a container that ho
 - **Import a stack using the Contentstack app**:Open **Marketplace** and navigate to **Discover** | **Starters**.
 - Hover over the desired Gatsby Starter app and click the **Import** button.
 - Authorize the app and provide a name for the stack to identify it, then import the starter.
-- **Import a stack using CLI**:** **Follow steps 1 to 3 in the documentation: [Build a Starter Website with Gatsby and Contentstack](https://www.contentstack.com/docs/developers/sample-apps/build-a-starter-website-with-gatsby-and-contentstack#set-up-your-app) to import the starter content using the CLI.
+- **Import a stack using CLI**:** **Follow steps 1 to 3 in the documentation: [Build a Starter Website with Gatsby and Contentstack](../sample-apps/build-a-starter-website-with-gatsby-and-contentstack.md#set-up-your-app) to import the starter content using the CLI.
 
 By completing these steps, you will have a stack containing all the content, assets, and configurations needed for further development and customization.
 

@@ -105,8 +105,8 @@ Contentstack’s Node.js web application framework, ‘contentstack-express’, 
 Static site generators offer powerful UI tools and framework that enable you to create amazing websites, apps, and e-commerce portals in minutes. Power the content of your site with Contentstack CMS to build blazing-fast web apps.
 
 Contentstack integrates with static site generators easily. Here are few guides to help you get started with popular static site generators:
-- [Contentstack + Gatsby](/docs/developers/sample-apps/get-started-with-gatsby-and-contentstack)
-- [Contentstack + Metalsmith](/docs/developers/sample-apps/build-a-website-using-metalsmith-and-contentstack)
+- [Contentstack + Gatsby](../sample-apps/get-started-with-gatsby-and-contentstack.md)
+- [Contentstack + Metalsmith](../sample-apps/build-a-website-using-metalsmith-and-contentstack.md)
 
 ## Common questions
 

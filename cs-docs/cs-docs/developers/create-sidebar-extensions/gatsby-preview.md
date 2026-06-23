@@ -138,7 +138,7 @@ Once you have added this Sidebar Extension, you can use it in the entries of the
  This will take you to the “Gatsby Preview instance URL” of your site. Once you open this URL, all the changes that you publish to your entry can be previewed instantly on this URL. Do not close the page until you are done working on the content.
 - Once done using the Sidebar Extension, click on the close (x) button.
 
-**Additional Resource:** You can build your own app using Gatsby by refering the [build a sample website using Gatsby and Contentstack](/docs/developers/sample-apps/get-started-with-gatsby-and-contentstack) document.
+**Additional Resource:** You can build your own app using Gatsby by refering the [build a sample website using Gatsby and Contentstack](../sample-apps/get-started-with-gatsby-and-contentstack.md) document.
 
 ## Common questions
 

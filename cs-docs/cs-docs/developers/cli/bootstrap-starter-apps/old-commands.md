@@ -176,11 +176,11 @@ The Bootstrap plugin supports the following starter apps.
 
 Starter Apps
 
-- [React JS](/docs/developers/sample-apps/build-a-starter-website-using-react-js-and-contentstack)
-- [Next JS](/docs/developers/sample-apps/build-a-starter-website-using-next-js-and-contentstack)
-- [Gatsby](/docs/developers/sample-apps/build-a-starter-website-with-gatsby-and-contentstack)
-- [Angular](/docs/developers/sample-apps/build-a-starter-website-with-angular-and-contentstack)
-- [Nuxt JS](/docs/developers/sample-apps/build-a-starter-website-with-nuxt-js-and-contentstack)
+- [React JS](../../sample-apps/build-a-starter-website-using-react-js-and-contentstack.md)
+- [Next JS](../../sample-apps/build-a-starter-website-using-next-js-and-contentstack.md)
+- [Gatsby](../../sample-apps/build-a-starter-website-with-gatsby-and-contentstack.md)
+- [Angular](../../sample-apps/build-a-starter-website-with-angular-and-contentstack.md)
+- [Nuxt JS](../../sample-apps/build-a-starter-website-with-nuxt-js-and-contentstack.md)
 
 **Additional Resource**: To create and run a demo website, use the sample code and guide provided in the Contentstack starter apps [documentation](/docs/developers/sample-apps#starter-apps).
 

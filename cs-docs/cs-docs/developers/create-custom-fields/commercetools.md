@@ -125,7 +125,7 @@ This extension will embed the details of the selected product as JSON in an entr
 
 As shown in the image above, the extension-data.js file can be used to modify the extension data. By default, the ID gets saved for products and/or categories. However, you can update the file to save other details of the products or categories, as shown in the image below.
 
-**Additional Resource**: Refer our detailed guide on how to [create an e-commerce app using Contentstack and commercetools](/docs/developers/sample-apps/build-an-e-commerce-website-using-contentstack-and-commercetools).
+**Additional Resource**: Refer our detailed guide on how to [create an e-commerce app using Contentstack and commercetools](../sample-apps/build-an-e-commerce-website-using-contentstack-and-commercetools.md).
 
 ## Common questions
 

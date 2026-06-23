@@ -61,7 +61,7 @@ A deployment service like Netlify helps you build, deploy and host your frontend
 - Development **can **get complicated on larger/ dynamic websites.
 - Incremental builds on larger sites not hosted in Gatsby Cloud can be a blocker for some customers.
 
-**Additional Resource**: To create and run a simple website refer to our detailed guide on how to [Build a Static Website using Contentstack and Gatsby](/docs/developers/sample-apps/get-started-with-gatsby-and-contentstack).
+**Additional Resource**: To create and run a simple website refer to our detailed guide on how to [Build a Static Website using Contentstack and Gatsby](../sample-apps/get-started-with-gatsby-and-contentstack.md).
 
 ## Next Steps
 
