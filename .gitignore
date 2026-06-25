@@ -16,3 +16,4 @@ contentstack.config.json
 
 # Local scratch files — never commit
 temp/
+cs-docs-backup/
