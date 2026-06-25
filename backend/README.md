@@ -1,6 +1,6 @@
-# Backend Scripts
+# Backend — Documentation Export Scripts & Configuration
 
-Export and maintenance scripts for Contentstack documentation sync.
+This folder contains export scripts, utilities, and configuration for the Contentstack documentation export pipeline.
 
 ## Scripts
 
@@ -13,6 +13,16 @@ Export and maintenance scripts for Contentstack documentation sync.
 | `lint-api-docs.js` | Validate exported files against LINTING.md rules |
 | `clean-frontmatter.js` | Clean and normalize YAML frontmatter |
 | `generate-lint-csv.js` | Generate CSV report of linting issues |
+
+## Configuration & Documentation
+
+| File | Purpose |
+|------|---------|
+| `package.json` | NPM dependencies and scripts |
+| `contentstack.config.example.json` | Example Contentstack configuration template |
+| `LINTING.md` | Documentation linting and style rules |
+| `CONVENTIONS.md` | Content structure and naming conventions |
+| `ddstyle.md` | Documentation syntax and formatting guide |
 
 ## Setup
 
@@ -59,10 +69,10 @@ node lint-api-docs.js
 ## Output Structure
 
 Scripts output to:
-- `../cs-docs/` — General documentation
+- `../cs-docs/` — General documentation (product areas)
 - `../api-docs/` — API documentation
   - `developer-apis/` — API overview pages
-  - `{api-name}-api-requests/` — API request examples
+  - `{api-name}-api-requests/` — API request examples (13 total)
   - `api-detail/` — API detail landing pages
   - `postman/` — Postman collections
 

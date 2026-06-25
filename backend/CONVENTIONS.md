@@ -1,6 +1,6 @@
 # Docs → Contentstack conventions
 
-Copy `contentstack.config.example.json` to `contentstack.config.json` at the repository root (next to `package.json` after you merge this package) and adjust UIDs to match your `docs_article` content type. Export one real entry from Contentstack and align keys with [fixtures/docs_article.entry.template.json](../fixtures/docs_article.entry.template.json).
+Copy `contentstack.config.example.json` to `contentstack.config.json` at the repository root (next to `package.json` after you merge this package) and adjust UIDs to match your `docs_article` content type. Export one real entry from Contentstack and align keys with [../../fixtures/docs_article.entry.template.json](../../../fixtures/docs_article.entry.template.json).
 
 ## Repository layout
 

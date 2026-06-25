@@ -16,7 +16,7 @@ Scripts are located in the `../backend/` directory:
 - `export-contentstack.js` — Export docs_article entries
 - `export-docs-sections.js` — Export additional doc sections
 - `rewrite-links.js` — Convert absolute links to relative paths
-- `lint-api-docs.js` — Validate exported files against LINTING.md
+- `lint-api-docs.js` — Validate exported files against ../backend/LINTING.md
 
 ## Usage
 
