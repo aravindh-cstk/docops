@@ -1,0 +1,161 @@
+---
+title: "CMA | Postman Collection"
+description: Import the Postman collection for Content Management API endpoints and test requests with ready-to-use examples.
+url: https://www.contentstack.com/docs/developers/apis/content-management-api/postman-collection
+product: Contentstack
+doc_type: api-reference
+audience:
+  - developers
+version: unknown
+last_updated: 2026-06-02
+---
+
+# CMA | Postman Collection
+
+
+
+## About Contentstack Postman Collection
+
+The Contentstack Postman collection is a set of preconfigured REST API requests that will make it easy for you to get started with the [Contentstack APIs](/docs/developers/apis/) and try out our API requests through the popular [Postman](https://www.getpostman.com/) REST client.
+
+
+
+## Install Postman
+
+To use the Contentstack Postman collection you will need to have the [Postman](https://www.postman.com/downloads/). You can either download the **Desktop app**or use **Postman for Web**.
+
+**Note:** If you have already installed Postman for your device, go to the [Download Latest Postman Collection for Contentstack](#download-latest-collection) section.
+
+Postman is available for [Windows (x64)](https://dl.pstmn.io/download/latest/win64), Mac ([Intel Chip](https://dl.pstmn.io/download/latest/osx_64) / [Apple Chip](https://dl.pstmn.io/download/latest/osx_arm64)), and [Linux](https://dl.pstmn.io/download/latest/linux64) environments.
+
+
+
+## Download Latest Collection
+
+Once you have installed Postman on your device, click the **Run in Postman** button to start working with the Content Management API endpoints for Contentstack.
+
+**Note:** The Contentstack Postman collection does not support the now deprecated Postman Chrome extension. Make sure you have installed the latest version of the [Postman desktop app](https://www.postman.com/downloads/).
+
+This opens the **Fork collection into your workspace** modal from where you can proceed to download/work with the Contentstack Postman collection in the following three ways:
+
+- View the Collection
+- Import a Copy of the Collection
+- Fork the Collection
+
+Let’s look at each of the above methods in detail.
+
+#### View the Collection
+
+This option allows you to just view (and not try out) the API requests of the Postman collection.
+
+Perform the following steps to view the Content Management API Postman collection:
+
+1. Click the View collection link in the Fork collection into your workspace modal.A new tab opens up in your browser where you should see the latest collection preloaded in the left navigation.
+
+#### Import a Copy of the Collection
+
+This option allows you to import a copy of the collection into your workspace.
+
+To import the Content Management API collection, perform the following steps:
+
+1. Click the import a copy link in the Fork collection into your workspace modal.
+2. In the resulting Import Collection modal within the Postman app, select a workspace and click Import to import the latest Postman collection into your selected workspace.
+
+#### Fork the Collection
+
+This option allows you to fork, or create a copy of the collection, and perform changes to the collection without affecting the original.
+
+To fork the Content Management API collection, perform the following steps:
+
+1. Click the Fork Collection button in the Fork collection into your workspace modal.
+2. This opens the Sign In page. You can either enter your login credentials and click Sign in, or sign in using your Google account or via SSO.
+3. In the resulting Fork collection modal, if needed, enter a Fork label that lets you uniquely identify your collection and select a Workspace.
+4. Once done, click Fork Collection to fork the Postman collection into your selected workspace.
+
+#### Download Collection from GitHub Page
+
+We have also hosted our Postman collection on [GitHub](https://github.com/contentstack/contentstack-postman-collections). You can follow the steps mentioned in the [Readme](https://github.com/contentstack/contentstack-postman-collections/blob/development/README.md) file to download and start using it.
+
+You can also choose to watch the latest Postman collection to get notifications of new releases or updates.
+
+To do so, click on the following **Watch** button and select **Watching**.
+
+
+
+## Configure Environment Variables
+
+When you download and install the latest version of the Content Management API (CMA) Postman Collection, you also download and import the respective environment along with the environment variables.
+
+Once your Environment is imported, next you need to set your Contentstack account specific values.
+
+**Note:** As these environment variables are referenced across multiple API requests, once you set the variables, it becomes a lot more convenient to make repeated use of the Postman Collection.
+
+Some of the important variables that you need to set are as follows:
+
+| Environment Variable | Value |
+| --- | --- |
+| base_url | api.contentstack.io |
+| api_key | your_stack_api_key |
+| authorization | your_management_token |
+
+**Note:** The Contentstack Postman Collection will require a valid [Management token](../../../../cs-docs/developers/create-tokens/about-management-tokens.md) to make API calls. Check out the [Authentication](#authentication) section for more details.
+
+If you want to add your own environment variables, you can follow the procedure in the next section.
+
+#### Add Other Environment Variables
+
+To add any new environment variables for your Postman collection, perform the following steps:
+
+1. Identify the environment variables that you want to define.
+2. In the top right corner of Postman, click on the environment's dropdown and select Content Management API - Environment.
+3. Click the "eye" icon present in the top right corner of Postman. It opens up in the environment variables modal. Click Edit to make changes in the variables.
+4. In the VARIABLE field, enter the name of the environment variable. In the INITIAL VALUE field, enter your Contentstack-account-specific value that will replace the variable when the call is made.
+5. Once you have defined your variables, click on Save.
+
+#### Update Environment Variables
+
+With every new API request added, we update our environment file. So, to get the latest environment variables, you need to download the collection along with the updated environment file again, compare your existing environment with the latest environment, identify and add the new variables to your existing environment.
+
+Next, let’s see how you can run API Requests from your Contentstack Postman collection using your environment.
+
+
+
+## Make an API Request
+
+With the Contentstack Postman Collection loaded into the Postman app (on the left pane) and the environment created, you can now make API requests to the Contentstack API via Postman.
+
+To make an API request, perform the following steps:
+
+1. Select the respective environment, Content Management API-Environment, from the dropdown.
+2. Select an API Request from the Contentstack Postman Collection. In this example, we will use the Get user request which is a part of the Users folder.Note: If you want to make changes to your parameters or want to add parameters of your own, you can do it here.
+3. Next, click on Send at the top right to make the API request.The API call should return with a response under the Body tab in the bottom half of the screen.
+
+
+
+## Secure API Keys and Tokens
+
+We strongly advise against storing your API keys and tokens in your collection permanently. If you or someone else shares the collection by mistake, other users will be able to export it along with these keys.
+
+We recommend that you provide your Contentstack account-specific API keys and tokens in your environment or directly to the sample requests.
+
+#### Users using Authtoken
+
+For users who use authtoken to authenticate their calls, when you make the **Log in to your account** API Request, your authtoken will be saved in cookies.
+
+If you want to prevent this action, perform the steps given below:
+
+1. Click on Cookies on the far right corner.
+2. In the Cookies modal under the Manage Cookies tab, click the Domains Allowlist at the bottom left.
+3. Add api.contentstack.io and click Add.
+
+This will allow you to access [cookies of this domain in scripts](https://learning.postman.com/docs/sending-requests/cookies/#accessing-cookies-in-scripts) programmatically.
+
+**Note:** To avoid this situation, we recommend you to use the stack’s Management Token along with the stack API key to make valid Content Management API requests. For more information, refer to [Authentication](#authentication).
+
+
+
+## Postman Collection Updates
+
+We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](#download-latest-collection) again and you are good to go.
+
+You can also choose to watch for the latest Postman Collection updates on our [GitHub repository](https://github.com/contentstack/contentstack-postman-collections) and get notifications of new releases or updates to the repository. The [GitHub Readme](https://github.com/contentstack/contentstack-postman-collections/blob/development/README.md) doc will help you with the steps that you need to follow.
