@@ -19,12 +19,12 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note**: You can retrieve the publish queue details for activities performed in the last **30** days only.
 
-You can apply queries to filter the results. Refer to the [Queries](../../../../api-detail/content-management-api.md#authentication) section for more details.
+You can apply queries to filter the results. Refer to the [Queries](../api-detail/content-management-api.md#authentication) section for more details.
 
 ## URL Parameters
 
 - **publish_queue_uid** (required)
-  Enter the UID of a specific publish queue activity of which you want to retrieve the details. Execute the [Get publish queue](../../../../api-detail/content-management-api.md#get-publish-queue) API request to retrieve the UID of a particular publish queue activity.
+  Enter the UID of a specific publish queue activity of which you want to retrieve the details. Execute the [Get publish queue](../api-detail/content-management-api.md#get-publish-queue) API request to retrieve the UID of a particular publish queue activity.
   Default: `your_publish_queue_uid`
 
 ## Query Parameters
@@ -42,7 +42,7 @@ You can apply queries to filter the results. Refer to the [Queries](../../../../
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

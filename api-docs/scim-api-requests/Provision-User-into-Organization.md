@@ -1,7 +1,7 @@
 ---
 title: "Provision User into Organization"
 description: POST scim/v2.0/organizations/{organization_uid}/Users
-url: developer-apis/scim-api/requests/provision-user-into-organization
+url: scim-api-requests/organization
 product: Contentstack
 doc_type: api-request
 audience:
@@ -21,7 +21,7 @@ If the user does not already exist in Contentstack, you can add the new user to 
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 ## Headers

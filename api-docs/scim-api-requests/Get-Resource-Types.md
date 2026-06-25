@@ -1,7 +1,7 @@
 ---
 title: "Get Resource Types"
 description: GET scim/v2.0/organizations/{organization_uid}/ResourceTypes
-url: developer-apis/scim-api/requests/get-resource-types
+url: scim-api-requests/types
 product: Contentstack
 doc_type: api-request
 audience:

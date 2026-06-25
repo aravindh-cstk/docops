@@ -1,7 +1,7 @@
 ---
 title: "Resend pending Organization invitation"
 description: GET /organizations/{organization_uid}/share/{share_uid}/resend_invitation
-url: developer-apis/administration-api/requests/resend-pending-organization-invitation
+url: administration-api-requests/invitation
 product: Contentstack
 doc_type: api-request
 audience:

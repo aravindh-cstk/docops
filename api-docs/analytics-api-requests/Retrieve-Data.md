@@ -1,7 +1,7 @@
 ---
 title: "Retrieve Data"
 description: GET /analytics/v2/job/{jobId}/data?orgUid=<string>&page=0
-url: developer-apis/analytics-api/requests/retrieve-data
+url: analytics-api-requests/data
 product: Contentstack
 doc_type: api-request
 audience:

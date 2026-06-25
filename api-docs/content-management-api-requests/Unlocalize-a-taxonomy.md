@@ -19,7 +19,7 @@ The Unlocalize a taxonomy request is used to remove translated values from a tax
 ## URL Parameters
 
 - **taxonomy_uid** (required)
-  Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](../../../../api-detail/content-management-api.md#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
+  Enter the unique ID of the taxonomy you want to unlocalize. The UID of a taxonomy is unique across a stack. Execute the '[Get all taxonomies](../api-detail/content-management-api.md#get-all-taxonomies)' request to retrieve the UID of a taxonomy.
   Default: `global_content_topics`
 
 ## Query Parameters

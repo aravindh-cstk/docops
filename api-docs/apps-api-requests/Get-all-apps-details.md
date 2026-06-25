@@ -1,7 +1,7 @@
 ---
 title: "Get all apps details"
 description: GET /apps
-url: developer-apis/apps-api/requests/get-all-apps-details
+url: apps-api-requests/details
 product: Contentstack
 doc_type: api-request
 audience:

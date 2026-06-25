@@ -16,7 +16,7 @@ last_updated: 2025-05-23
 
 The Reset password API request allows you to reset your Contentstack account password.
 
-******Note:**Before using this API request, you need to execute the [Request for a password](../../../../api-detail/content-management-api.md#request-for-a-password) API request to receive the reset password token in your registered email address.
+******Note:**Before using this API request, you need to execute the [Request for a password](../api-detail/content-management-api.md#request-for-a-password) API request to receive the reset password token in your registered email address.
 
 When executing the request, in the 'Body' section, you need to provide the token that you receive via email, your new password, and password confirmation in JSON format.
 

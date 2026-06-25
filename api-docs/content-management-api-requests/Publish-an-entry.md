@@ -49,7 +49,7 @@ In case of **Scheduled Publishing**, add the scheduled_at key and provide the da
 - **authtoken** (optional)
   Default: `your authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Default: `application/json`

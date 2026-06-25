@@ -20,9 +20,9 @@ When executing the API call, you can add queries to extend the functionality of 
 
 **Tip**: If any of your content types contains a Global field and you wish to fetch the content schema of the Global field, then you need to pass theinclude_global_field_schema:true parameter. This parameter helps return the Global field's schema along with the content type schema.
 
-To query your content types, under the Query Parameters section, insert a parameter named query and provide the query in JSON format as the value. To learn more about the queries, refer to the [Queries section of the Content Delivery API doc](../../../../api-detail/content-delivery-api.md#queries).
+To query your content types, under the Query Parameters section, insert a parameter named query and provide the query in JSON format as the value. To learn more about the queries, refer to the [Queries section of the Content Delivery API doc](../api-detail/content-delivery-api.md#queries).
 
-**Note**: This API request will return a maximum of **100 content types**. To retrieve the next batch of content types, make use of the [skip](../../../../api-detail/content-delivery-api.md#skip) parameter (or refer [Pagination](../../../../api-detail/content-delivery-api.md#pagination) for more details).
+**Note**: This API request will return a maximum of **100 content types**. To retrieve the next batch of content types, make use of the [skip](../api-detail/content-delivery-api.md#skip) parameter (or refer [Pagination](../api-detail/content-delivery-api.md#pagination) for more details).
 
 ## Query Parameters
 

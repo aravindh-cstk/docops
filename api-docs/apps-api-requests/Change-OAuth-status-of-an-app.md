@@ -1,7 +1,7 @@
 ---
 title: "Change OAuth status of an app"
 description: PATCH /apps/{app_uid}/oauth/enable
-url: developer-apis/apps-api/requests/change-oauth-status-of-an-app
+url: apps-api-requests/app
 product: Contentstack
 doc_type: api-request
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "Get all Organizations"
 description: GET /organizations?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}
-url: developer-apis/administration-api/requests/get-all-organizations
+url: administration-api-requests/organizations
 product: Contentstack
 doc_type: api-request
 audience:

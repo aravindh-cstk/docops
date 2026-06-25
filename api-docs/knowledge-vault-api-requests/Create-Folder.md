@@ -37,7 +37,7 @@ The _name_ and _path_ are required strings where _name_ specifies the new folder
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](../../../../api-detail/knowledge-vault-api.md#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../api-detail/knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 - **organization_uid** (required)
   Enter the Organization UID.

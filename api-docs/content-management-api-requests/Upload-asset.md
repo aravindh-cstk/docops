@@ -73,7 +73,7 @@ In the above cURL command, pass the necessary values within the curly brackets. 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Pass “multipart/form-data” to include form data body parameters.

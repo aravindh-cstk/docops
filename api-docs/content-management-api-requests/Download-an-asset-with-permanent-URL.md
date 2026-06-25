@@ -20,12 +20,12 @@ To configure the permissions for your application via OAuth, please include the 
 
 This request will return the most recent version of the asset, however, to download the latest published version of the asset, pass the environment query parameter with the environment name.
 
-**Note**: Before executing this API request, ensure to [create a permanent URL for the asset](../../../../api-detail/content-management-api.md#generate-permanent-asset-url) you want to download.
+**Note**: Before executing this API request, ensure to [create a permanent URL for the asset](../api-detail/content-management-api.md#generate-permanent-asset-url) you want to download.
 
 ## URL Parameters
 
 - **asset_uid** (required)
-  Enter the UID of the asset you want to download. Use the [Get All Assets](../../../../api-detail/content-management-api.md#get-all-assets) request to get the UID of the asset.
+  Enter the UID of the asset you want to download. Use the [Get All Assets](../api-detail/content-management-api.md#get-all-assets) request to get the UID of the asset.
   Default: `your_asset_uid`
 - **slug** (required)
   Enter the unique identifier of the asset.
@@ -40,7 +40,7 @@ This request will return the most recent version of the asset, however, to downl
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Pass “application/json” as the value to this parameter.

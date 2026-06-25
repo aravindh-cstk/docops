@@ -1,7 +1,7 @@
 ---
 title: "Uninstall an App"
 description: DELETE /installations/{installation-uid}
-url: developer-apis/apps-api/requests/uninstall-an-app
+url: apps-api-requests/app
 product: Contentstack
 doc_type: api-request
 audience:

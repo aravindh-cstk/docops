@@ -20,7 +20,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the "Body" parameter, you need to provide the content of your entry based on the content type.
 
-**Note**: When localizing an entry, if a **Group**, **Modular Blocks**, or **Global** field instance contains a field that is marked as non-localizable, you must include _metadata.uid for the field in the request payload to map that instance in child locale. This ensures that the non-localizable field retains its value from the master locale. You can find the metadata UID for each non-localizable field by using the [Get a Single Entry](../../../../api-detail/content-management-api.md#get-a-single-entry) request for the master entry.
+**Note**: When localizing an entry, if a **Group**, **Modular Blocks**, or **Global** field instance contains a field that is marked as non-localizable, you must include _metadata.uid for the field in the request payload to map that instance in child locale. This ensures that the non-localizable field retains its value from the master locale. You can find the metadata UID for each non-localizable field by using the [Get a Single Entry](../api-detail/content-management-api.md#get-a-single-entry) request for the master entry.
 
 Here's a sample request body:
 
@@ -71,7 +71,7 @@ Here's a sample request body:
   Enter your authtoken
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

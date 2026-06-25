@@ -1,7 +1,7 @@
 ---
 title: "Get Organization users by email"
 description: POST /organizations/{organization_uid}/share/search
-url: developer-apis/administration-api/requests/get-organization-users-by-email
+url: administration-api-requests/email
 product: Contentstack
 doc_type: api-request
 audience:

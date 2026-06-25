@@ -22,7 +22,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 **Note:** The schema of the content type returned will depend on the provided version. If no version is specified, you will get the latest version of the content type.
 
-To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](../../../../api-detail/content-delivery-api.md#queries)
+To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](../api-detail/content-delivery-api.md#queries)
 
 **Tip**: If any of your content types contains a Global field and you wish to fetch the content schema of the Global field, then you need to pass theinclude_global_field_schema:true parameter. This parameter helps return the Global field's schema along with the content type schema.
 
@@ -53,7 +53,7 @@ To learn more about the queries, refer to the [Queries section of the Content De
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

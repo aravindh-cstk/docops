@@ -1,7 +1,7 @@
 ---
 title: "Get Single Group By Display Name"
 description: GET scim/v2.0/organizations/{organization_uid}/Groups?filter=displayName Eq '<<group_name>>'
-url: developer-apis/scim-api/requests/get-single-group-by-display-name
+url: scim-api-requests/name
 product: Contentstack
 doc_type: api-request
 audience:
@@ -21,7 +21,7 @@ You need to pass the displayname as a query parameter.
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 ## Query Parameters

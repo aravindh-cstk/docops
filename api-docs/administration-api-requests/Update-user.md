@@ -1,7 +1,7 @@
 ---
 title: "Update user"
 description: PUT /user
-url: developer-apis/administration-api/requests/update-user
+url: administration-api-requests/user
 product: Contentstack
 doc_type: api-request
 audience:

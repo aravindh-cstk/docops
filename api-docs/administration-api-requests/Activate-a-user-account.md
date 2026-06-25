@@ -1,7 +1,7 @@
 ---
 title: "Activate a user account"
 description: POST /user/activate/{user_activation_token}
-url: developer-apis/administration-api/requests/activate-a-user-account
+url: administration-api-requests/account
 product: Contentstack
 doc_type: api-request
 audience:

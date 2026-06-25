@@ -1,7 +1,7 @@
 ---
 title: "Get all teams"
 description: GET /organizations/{organization_uid}/teams
-url: developer-apis/administration-api/requests/get-all-teams
+url: administration-api-requests/teams
 product: Contentstack
 doc_type: api-request
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "Get organization log details"
 description: GET /organizations/{organization_uid}/logs
-url: developer-apis/administration-api/requests/get-organization-log-details
+url: administration-api-requests/details
 product: Contentstack
 doc_type: api-request
 audience:
@@ -16,11 +16,11 @@ last_updated: 2026-04-07
 
 The Get organization log details request is used to retrieve the audit log details of an organization.
 
-You can apply queries to filter the results. Refer to the [Queries](../../../../api-detail/content-delivery-api.md#queries) section for more details.
+You can apply queries to filter the results. Refer to the [Queries](../api-detail/content-delivery-api.md#queries) section for more details.
 
 When executing the API call, provide the Organization UID.
 
-**Tip**: This request returns only the first **25 audit log items** of the specified organization. If you get more than **25 items** in your response, refer to the [Pagination](../../../../api-detail/content-delivery-api.md#pagination) section to retrieve all the log items in a paginated form.
+**Tip**: This request returns only the first **25 audit log items** of the specified organization. If you get more than **25 items** in your response, refer to the [Pagination](../api-detail/content-delivery-api.md#pagination) section to retrieve all the log items in a paginated form.
 
 ## URL Parameters
 

@@ -1,7 +1,7 @@
 ---
 title: "Add Users to Group"
 description: PATCH scim/v2.0/organizations/{organization_uid}/Groups/{group_id}
-url: developer-apis/scim-api/requests/add-users-to-group
+url: scim-api-requests/group
 product: Contentstack
 doc_type: api-request
 audience:
@@ -23,7 +23,7 @@ In the "Request Body", you need to pass the ID of the user in the value key.
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.

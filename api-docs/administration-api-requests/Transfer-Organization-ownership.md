@@ -1,7 +1,7 @@
 ---
 title: "Transfer Organization ownership"
 description: POST /organizations/{organization_uid}/transfer-ownership
-url: developer-apis/administration-api/requests/transfer-organization-ownership
+url: administration-api-requests/ownership
 product: Contentstack
 doc_type: api-request
 audience:

@@ -19,7 +19,7 @@ last_updated: 2025-08-28
 1. In case the dimensions specified for the output image is greater than the dimensions of the input image, the image will be upscaled.
 2. To disable upscaling, use the disable=upscale parameter.
 
-**Note:** Check out the [limitations](../../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ## Query Parameters
 

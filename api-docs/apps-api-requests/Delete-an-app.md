@@ -1,7 +1,7 @@
 ---
 title: "Delete an app"
 description: DELETE /apps/{app_uid}
-url: developer-apis/apps-api/requests/delete-an-app
+url: apps-api-requests/app
 product: Contentstack
 doc_type: api-request
 audience:

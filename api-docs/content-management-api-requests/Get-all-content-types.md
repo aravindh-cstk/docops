@@ -22,7 +22,7 @@ When executing the API call, you can add queries to extend the functionality of 
 
 **Tip**: If any of your content types contains a Global field and you wish to fetch the content schema of the Global field, then you need to pass the include_global_field_schema:true parameter. This parameter helps return the Global field's schema along with the content type schema.
 
-Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](../../../../api-detail/content-delivery-api.md#queries))
+Under the 'URL Parameters' section, insert a parameter named query and provide a query in JSON format as the value. (To learn more about the queries, refer to the [Queries section of the Content Delivery API doc.](../api-detail/content-delivery-api.md#queries))
 
 **Note**:
 
@@ -48,7 +48,7 @@ Under the 'URL Parameters' section, insert a parameter named query and provide a
 - **authtoken** (optional)
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

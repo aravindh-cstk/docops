@@ -1,7 +1,7 @@
 ---
 title: "Get Single User By Username"
 description: GET scim/v2.0/organizations/{organization_uid}/Users?filter=userName eq '<<email-address>>'
-url: developer-apis/scim-api/requests/get-single-user-by-username
+url: scim-api-requests/username
 product: Contentstack
 doc_type: api-request
 audience:
@@ -21,7 +21,7 @@ You need to pass the username as a query parameter.
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 ## Query Parameters

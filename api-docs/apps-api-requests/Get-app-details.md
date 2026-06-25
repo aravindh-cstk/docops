@@ -1,7 +1,7 @@
 ---
 title: "Get app details"
 description: GET /apps/{app_uid}
-url: developer-apis/apps-api/requests/get-app-details
+url: apps-api-requests/details
 product: Contentstack
 doc_type: api-request
 audience:

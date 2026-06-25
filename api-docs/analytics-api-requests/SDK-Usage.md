@@ -1,7 +1,7 @@
 ---
 title: "SDK Usage"
 description: GET /analytics/v2/sdk?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}&includeCount={boolean_value}&services={['cdn','cma']}&duration={duration}
-url: developer-apis/analytics-api/requests/sdk-usage
+url: analytics-api-requests/usage
 product: Contentstack
 doc_type: api-request
 audience:
@@ -16,7 +16,7 @@ last_updated: 2025-02-25
 
 The SDK Usage request gets you the number of requests that were made using the SDKs. It helps you get an overview of the SDK usage by your customers.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../../../../api-detail/analytics-api.md#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../api-detail/analytics-api.md#retrieve-data) endpoint.
 
 ```
 {

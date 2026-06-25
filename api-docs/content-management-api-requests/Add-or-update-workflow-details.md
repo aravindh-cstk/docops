@@ -52,7 +52,7 @@ You can assign any one of the following values to this parameter:
 - **authtoken** (required)
   Default: `your_authtoken`
 - **authorization** (optional)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 ## Sample Request

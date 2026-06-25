@@ -36,7 +36,7 @@ Here’s an example of the Request Body for ingesting content:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](../../../../api-detail/knowledge-vault-api.md#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../api-detail/knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 - **organization_uid** (required)
   Enter the Organization UID.

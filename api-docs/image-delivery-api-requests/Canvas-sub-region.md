@@ -14,7 +14,7 @@ last_updated: 2025-08-28
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&canvas={canvas}`
 
-**Note:** Check out the [limitations](../../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 You can set the horizontal and vertical offset of the canvas area by using the query ?canvas={width_value},{height_value},offset-x{value},offset-y{value}. This allows you to define the center point of the canvas area. The x-axis offset value and y-axis offset value can be defined only in percentage. An example of this would be ?canvas=700,800,offset-x0.65,offset-y0.80.
 

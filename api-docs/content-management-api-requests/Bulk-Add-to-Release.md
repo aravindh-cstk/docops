@@ -33,7 +33,7 @@ For each asset, provide the title, asset UID, set the content_type_uid to sys_as
         }
 ```
 
-Once the API request is executed, a job ID is generated in the response. You can use this job ID to track the status of your add to release request in [Get Stack Bulk Task Queue](../../../../api-detail/content-management-api.md#get-stack-bulk-task-queue).
+Once the API request is executed, a job ID is generated in the response. You can use this job ID to track the status of your add to release request in [Get Stack Bulk Task Queue](../api-detail/content-management-api.md#get-stack-bulk-task-queue).
 
 **Note**: Pass bulk_version as 2.0 in the Headers section.
 

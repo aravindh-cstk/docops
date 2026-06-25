@@ -1,7 +1,7 @@
 ---
 title: "Get organization log item"
 description: GET /organizations/{organization_uid}/logs/{log_uid}
-url: developer-apis/administration-api/requests/get-organization-log-item
+url: administration-api-requests/item
 product: Contentstack
 doc_type: api-request
 audience:

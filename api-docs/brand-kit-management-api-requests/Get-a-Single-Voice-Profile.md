@@ -42,7 +42,7 @@ To configure the permissions for your application via [OAuth](../../../../../cs-
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](../../../../api-detail/brand-kit-management-api.md#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../api-detail/brand-kit-management-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ## Sample Response

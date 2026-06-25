@@ -1,7 +1,7 @@
 ---
 title: "Create an app"
 description: POST /apps
-url: developer-apis/apps-api/requests/create-an-app
+url: apps-api-requests/app
 product: Contentstack
 doc_type: api-request
 audience:

@@ -20,7 +20,7 @@ Using this temporary password, you can log in to your account and [set a new pas
 
 In the 'Body' section, provide the user's email address in JSON format.
 
-**Note:** The “**Reset password**” token that you receive in your email address is valid only for the **next 60 minutes** after it’s generated. Post that, it expires and you need to rerun the [Reset password](../../../../api-detail/content-management-api.md#reset-password) API request to generate a new token.
+**Note:** The “**Reset password**” token that you receive in your email address is valid only for the **next 60 minutes** after it’s generated. Post that, it expires and you need to rerun the [Reset password](../api-detail/content-management-api.md#reset-password) API request to generate a new token.
 
 ## Headers
 

@@ -18,7 +18,7 @@ The Get all environments call fetches the list of all environments available in 
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](../../../../api-detail/content-delivery-api.md#queries) section of the Content Delivery API doc.  
+To learn more about the queries, refer to the [Queries](../api-detail/content-delivery-api.md#queries) section of the Content Delivery API doc.  
 To configure the permissions for your application via OAuth, please include thecm.environments.management:read scope.
 
 ## Query Parameters
@@ -41,7 +41,7 @@ To configure the permissions for your application via OAuth, please include thec
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 ## Sample Response

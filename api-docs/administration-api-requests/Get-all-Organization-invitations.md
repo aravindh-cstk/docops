@@ -1,7 +1,7 @@
 ---
 title: "Get all Organization invitations"
 description: GET /organizations/{organization_uid}/share?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&include_roles={boolean_value}&include_invited_by={boolean_value}&include_user_details={boolean_value}&typeahead={value}
-url: developer-apis/administration-api/requests/get-all-organization-invitations
+url: administration-api-requests/invitations
 product: Contentstack
 doc_type: api-request
 audience:

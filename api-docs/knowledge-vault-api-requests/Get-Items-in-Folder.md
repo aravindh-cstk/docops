@@ -61,7 +61,7 @@ To configure the permissions for your app via [OAuth](../../../../../cs-docs/dev
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](../../../../api-detail/knowledge-vault-api.md#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../api-detail/knowledge-vault-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 - **organization_uid** (required)
   Enter the Organization UID.

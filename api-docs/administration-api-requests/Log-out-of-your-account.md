@@ -1,7 +1,7 @@
 ---
 title: "Log out of your account"
 description: DELETE /user-session
-url: developer-apis/administration-api/requests/log-out-of-your-account
+url: administration-api-requests/account
 product: Contentstack
 doc_type: api-request
 audience:

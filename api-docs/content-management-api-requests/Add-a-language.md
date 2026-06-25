@@ -38,7 +38,7 @@ In the 'Body' section, enter the language name and code in JSON format. You can 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter "application/json" to pass a request body.

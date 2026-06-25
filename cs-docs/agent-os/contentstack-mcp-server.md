@@ -18,7 +18,7 @@ This page explains what the Contentstack MCP Server is, what it can do, and how 
 
 **Note: **This document is provided for informational purposes only. While the Contentstack MCP Server is available for internal experimentation and review, it is not yet a recommended or officially supported tool. Please proceed accordingly and consult the relevant teams if needed.
 
-The **Contentstack’s Model Context Protocol (MCP) **Server acts as a bridge between [Contentstack’s APIs](/docs/developers/apis), such as, Contentstack Delivery API, Contentstack Management API, Analytics API, Brand Kit API, Launch API, Lytics API, Personalize API, Developer Hub API, and AI systems. It implements the **Model Context Protocol (MCP)** to enable natural language-based content operations, making content workflows smarter and more conversational.
+The **Contentstack’s Model Context Protocol (MCP) **Server acts as a bridge between [Contentstack’s APIs](/docs/developer-apis), such as, Contentstack Delivery API, Contentstack Management API, Analytics API, Brand Kit API, Launch API, Lytics API, Personalize API, Developer Hub API, and AI systems. It implements the **Model Context Protocol (MCP)** to enable natural language-based content operations, making content workflows smarter and more conversational.
 
 ## Key Capabilities
 - **Content Operations: **Create, update, delete, publish, unpublish, or retrieve content via natural language commands.

@@ -1,7 +1,7 @@
 ---
 title: "Update OAuth redirect URL and permission scopes of an app"
 description: PUT /apps/{app_uid}/oauth
-url: developer-apis/apps-api/requests/update-oauth-redirect-url-and-permission-scopes-of-an-app
+url: apps-api-requests/app
 product: Contentstack
 doc_type: api-request
 audience:

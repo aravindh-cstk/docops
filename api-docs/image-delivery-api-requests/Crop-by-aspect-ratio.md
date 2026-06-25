@@ -14,7 +14,7 @@ last_updated: 2025-08-28
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&crop={crop}`
 
-**Note:** Check out the [limitations](../../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 You can set the X-axis and Y-axis position of the top left corner of the crop by using the query ?crop={width_value},{height_value},x{value},y{value}. This lets you define the starting point of the crop region. The x-axis value and y-axis value can be defined in pixels or percentage. An example of this would be ?crop=300,400,x150,y75 or ?crop=300,400,x0.50,y0.60.
 

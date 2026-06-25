@@ -1,7 +1,7 @@
 ---
 title: "Get a single Organization"
 description: GET /organizations/{organization_uid}?include_plan={boolean_value}
-url: developer-apis/administration-api/requests/get-a-single-organization
+url: administration-api-requests/organization
 product: Contentstack
 doc_type: api-request
 audience:

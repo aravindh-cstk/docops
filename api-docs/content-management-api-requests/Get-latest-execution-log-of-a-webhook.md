@@ -22,7 +22,7 @@ To configure the permissions for your application via OAuth, please include the 
 ## URL Parameters
 
 - **execution_uid** (required)
-  Enter the execution unique ID of the webhook of which you want to retrieve the execution log. Execute the [Get executions of a webhook](../../../../api-detail/content-management-api.md#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
+  Enter the execution unique ID of the webhook of which you want to retrieve the execution log. Execute the [Get executions of a webhook](../api-detail/content-management-api.md#get-executions-of-a-webhook) call to retrieve the UID of a webhook.
   Default: `cs4eb0cd75-8a6e-416a-b367-07158d698d41`
 
 ## Headers
@@ -33,7 +33,7 @@ To configure the permissions for your application via OAuth, please include the 
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 ## Sample Response

@@ -1,7 +1,7 @@
 ---
 title: "Get user"
 description: GET /user
-url: developer-apis/administration-api/requests/get-user
+url: administration-api-requests/user
 product: Contentstack
 doc_type: api-request
 audience:

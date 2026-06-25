@@ -1,7 +1,7 @@
 ---
 title: "Create a team"
 description: POST /organizations/{organization_uid}/teams
-url: developer-apis/administration-api/requests/create-a-team
+url: administration-api-requests/team
 product: Contentstack
 doc_type: api-request
 audience:

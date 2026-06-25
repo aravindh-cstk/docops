@@ -1,7 +1,7 @@
 ---
 title: "Create Group"
 description: POST scim/v2.0/organizations/{organization_uid}/Groups
-url: developer-apis/scim-api/requests/create-group
+url: scim-api-requests/group
 product: Contentstack
 doc_type: api-request
 audience:
@@ -21,7 +21,7 @@ In the "Request Body" section, you need to pass the ID of the user in Contentsta
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 
 ## Headers

@@ -22,7 +22,7 @@ last_updated: 2025-08-28
 2. To specify a height more than 100% of the original image, use the p parameter. For example, to get a height of 250%, use overlay-height=250p.
 3. If the overlay image used is larger than the actual image, the overlay image will be cropped to fit the actual image.
 
-**Note:** Check out the [limitations](../../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ## Query Parameters
 

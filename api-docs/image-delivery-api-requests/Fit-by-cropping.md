@@ -18,7 +18,7 @@ last_updated: 2025-08-28
 
 1. The fit parameter requires both the height and the width parameters.
 
-**Note:** Check out the [limitations](../../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ## Query Parameters
 

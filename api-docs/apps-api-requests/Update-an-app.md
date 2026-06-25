@@ -1,7 +1,7 @@
 ---
 title: "Update an app"
 description: PUT /apps/{app_uid}
-url: developer-apis/apps-api/requests/update-an-app
+url: apps-api-requests/app
 product: Contentstack
 doc_type: api-request
 audience:

@@ -1,7 +1,7 @@
 ---
 title: "Get all roles in an Organization"
 description: GET /organizations/{organization_uid}/roles?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&include_stack_roles={boolean_value}
-url: developer-apis/administration-api/requests/get-all-roles-in-an-organization
+url: administration-api-requests/organization
 product: Contentstack
 doc_type: api-request
 audience:

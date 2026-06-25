@@ -1,7 +1,7 @@
 ---
 title: "Add users to Organization"
 description: POST /organizations/{organization_uid}/share
-url: developer-apis/administration-api/requests/add-users-to-organization
+url: administration-api-requests/organization
 product: Contentstack
 doc_type: api-request
 audience:

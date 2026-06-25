@@ -16,7 +16,7 @@ last_updated: 2025-08-28
 
 To see this parameter in action, the height or width (or both) parameter should be used with it.
 
-**Note:** Check out the [limitations](../../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 ## Query Parameters
 

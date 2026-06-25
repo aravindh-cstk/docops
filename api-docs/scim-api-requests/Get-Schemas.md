@@ -1,7 +1,7 @@
 ---
 title: "Get Schemas"
 description: GET scim/v2.0/organizations/{organization_uid}/Schemas
-url: developer-apis/scim-api/requests/get-schemas
+url: scim-api-requests/schemas
 product: Contentstack
 doc_type: api-request
 audience:

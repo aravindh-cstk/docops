@@ -41,7 +41,7 @@ https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
 ## URL Parameters
 
 - **asset_uid** (required)
-  Enter the UID of the asset for which you want to generate a permanent URL. Use the [Get All Assets](../../../../api-detail/content-management-api.md#get-all-assets) request to get the UID of the asset.
+  Enter the UID of the asset for which you want to generate a permanent URL. Use the [Get All Assets](../api-detail/content-management-api.md#get-all-assets) request to get the UID of the asset.
   Default: `your_asset_uid`
 
 ## Query Parameters
@@ -59,7 +59,7 @@ https://{base_URL}/v3/assets/{stack_api_key}/{asset_uid}/{slug}
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Enter “application/json” to pass a Request body.

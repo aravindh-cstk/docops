@@ -40,7 +40,7 @@ The Get all terms request retrieves all published terms in a taxonomy for the sp
   Enter the API key of the stack.
   Default: `your_stack_api_key`
 - **access_token** (optional)
-  Enter your environment-specific delivery token. Check [Authentication](../../../../api-detail/content-delivery-api.md#authentication).
+  Enter your environment-specific delivery token. Check [Authentication](../api-detail/content-delivery-api.md#authentication).
   Default: `your_access_token`
 
 ## Sample Response

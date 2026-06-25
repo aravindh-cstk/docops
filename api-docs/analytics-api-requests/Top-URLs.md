@@ -1,7 +1,7 @@
 ---
 title: "Top URLs"
 description: GET /analytics/v2/url?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}&includeTotalCount={boolean_value}
-url: developer-apis/analytics-api/requests/top-urls
+url: analytics-api-requests/urls
 product: Contentstack
 doc_type: api-request
 audience:
@@ -16,7 +16,7 @@ last_updated: 2026-04-14
 
 The Top URLs request gets you the number of requests made from your URLs for the given services.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../../../../api-detail/analytics-api.md#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../api-detail/analytics-api.md#retrieve-data) endpoint.
 
 ```
 {

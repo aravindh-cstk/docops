@@ -20,7 +20,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the "Body" parameter, you need to provide the content of your entry based on the content type.
 
-**Important**: If a **Modular Blocks**, **Group**, or **Global** field (marked as multiple) contains a field marked as non-localizable, you must include both _metadata.uid and "non_localizable_content": true for that instance in the request payload. This ensures the non-localizable content continues to retrieve its value from the master locale. You can find the metadata UID for each instance by using the [Get a Single Entry](../../../../api-detail/content-management-api.md#get-a-single-entry) request for the master entry.
+**Important**: If a **Modular Blocks**, **Group**, or **Global** field (marked as multiple) contains a field marked as non-localizable, you must include both _metadata.uid and "non_localizable_content": true for that instance in the request payload. This ensures the non-localizable content continues to retrieve its value from the master locale. You can find the metadata UID for each instance by using the [Get a Single Entry](../api-detail/content-management-api.md#get-a-single-entry) request for the master entry.
 
 Here's a sample request body:
 
@@ -77,7 +77,7 @@ In this example, the group field is marked as multiple and contains a field (sin
   Enter your authtoken
   Default: `Your_Authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

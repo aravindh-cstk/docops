@@ -1,7 +1,7 @@
 ---
 title: "Install an app"
 description: POST /apps/{app_uid}/install
-url: developer-apis/apps-api/requests/install-an-app
+url: apps-api-requests/app
 product: Contentstack
 doc_type: api-request
 audience:

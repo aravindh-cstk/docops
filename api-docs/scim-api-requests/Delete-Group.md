@@ -1,7 +1,7 @@
 ---
 title: "Delete Group"
 description: DELETE scim/v2.0/organizations/{organization_uid}/Groups/{group_id}
-url: developer-apis/scim-api/requests/delete-group
+url: scim-api-requests/group
 product: Contentstack
 doc_type: api-request
 audience:
@@ -21,7 +21,7 @@ The Delete Group request deletes an existing group from the SCIM. This will remo
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../../../../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
+  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
   Default: `your_organization_uid`
 - **group_id** (required)
   The ID of the group you want to delete. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.

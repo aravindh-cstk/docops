@@ -1,7 +1,7 @@
 ---
 title: "Get OAuth configuration of an app"
 description: GET /apps/{app_uid}/oauth
-url: developer-apis/apps-api/requests/get-oauth-configuration-of-an-app
+url: apps-api-requests/app
 product: Contentstack
 doc_type: api-request
 audience:

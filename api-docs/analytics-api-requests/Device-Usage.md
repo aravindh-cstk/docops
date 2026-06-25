@@ -1,7 +1,7 @@
 ---
 title: "Device Usage"
 description: GET /analytics/v2/devices?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}
-url: developer-apis/analytics-api/requests/device-usage
+url: analytics-api-requests/usage
 product: Contentstack
 doc_type: api-request
 audience:
@@ -16,7 +16,7 @@ last_updated: 2026-04-14
 
 The Device Usage request helps you get a list of devices that your organization users are using to access Contentstack services.
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../../../../api-detail/analytics-api.md#retrieve-data) endpoint.
+Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../api-detail/analytics-api.md#retrieve-data) endpoint.
 
 ```
 {

@@ -14,7 +14,7 @@ last_updated: 2025-08-28
 
 **GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&crop={crop}`
 
-**Note:** Check out the [limitations](../../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
+**Note:** Check out the [limitations](../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
 
 You can define the crop region by means of passing the aspect ratio for the image, for example, ?crop={width}:{height}. So, if you have set an aspect ratio of 1:3 for an image, it means that the image height will be three times the width of the image.
 

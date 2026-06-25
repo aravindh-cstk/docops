@@ -1,7 +1,7 @@
 ---
 title: "Remove users from organization"
 description: DELETE /organizations/{organization_uid}/share
-url: developer-apis/administration-api/requests/remove-users-from-organization
+url: administration-api-requests/organization
 product: Contentstack
 doc_type: api-request
 audience:

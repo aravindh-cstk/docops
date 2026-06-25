@@ -2459,7 +2459,7 @@ Widget Description (under 160 characters)
 
 *OR*
 
-**authorization**(required): Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developers/apis/content-management-api#authentication).
+**authorization**(required): Enter your OAuth token or management token. Learn more about [authentication](https://www.contentstack.com/docs/developer-apis/content-management-api#authentication).
 
 **Example**: \[Bearer \<OAuth token\>\] or \[your\_management\_token\]
 

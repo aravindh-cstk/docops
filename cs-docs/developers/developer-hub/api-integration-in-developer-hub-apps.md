@@ -20,7 +20,7 @@ This page explains how to use the Contentstack App SDK `.api()` method in Develo
 The Contentstack App SDK `.api()` method offers a unified approach for making internal API calls to Contentstack services as well as external calls to third-party services. It automatically manages authentication, routing, and security, so you can focus on building functionality instead of handling infrastructure.
 
 ### When to Use Each Approach
-- **Internal API Calls: **Access [Contentstack APIs](/docs/developers/apis) such as content management, releases, and webhooks with automatic authentication handled through App Permissions.
+- **Internal API Calls: **Access [Contentstack APIs](/docs/developer-apis) such as content management, releases, and webhooks with automatic authentication handled through App Permissions.
 - **External API Calls:** Connect to third-party services such as AI, Slack, or payment processors using Advanced Settings for secure credential management.
 
 ## Prerequisites

@@ -26,7 +26,7 @@ To configure the permissions for your application via OAuth, please include the 
 
 In the 'Body' section, you need to specify the locales (mention the locale codes) and environments (mention the names) to which you want to publish the entries or assets. If you do not specify a source locale, the entries or assets will be published in the master locale automatically.
 
-**Tip**: To schedule the publishing of multiple entries and/or assets, you can make use of the [Create a Release](../../../../api-detail/content-management-api.md#create-a-release) request. Then, you can deploy this Release and all of the pinned items can be published together either immediately or at a scheduled time to whatever environment you choose.
+**Tip**: To schedule the publishing of multiple entries and/or assets, you can make use of the [Create a Release](../api-detail/content-management-api.md#create-a-release) request. Then, you can deploy this Release and all of the pinned items can be published together either immediately or at a scheduled time to whatever environment you choose.
 
 Within the ‘entries’ parameter, pass these details of each entry – content type UIDs, entry UIDs, locales in which the entries are present, and the version (you need to specify the entry versions when schedule publishing) that you want to publish. Within the ‘assets’ parameter, pass these details of each entry – asset UIDs and the version that you want to publish (optional).
 
@@ -58,7 +58,7 @@ When you use approvals=true as a query parameter, the entries that satisfy the p
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

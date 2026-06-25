@@ -21,7 +21,7 @@ When executing the API call, under the 'Header' section, you need to enter the a
 
 You can add queries to extend the functionality of this API call. Under the URL Parameters section, insert a parameter named query and provide a query in JSON format as the value.
 
-To learn more about the queries, refer to the [Queries](../../../../api-detail/content-delivery-api.md#queries) section of the Content Delivery API doc.
+To learn more about the queries, refer to the [Queries](../api-detail/content-delivery-api.md#queries) section of the Content Delivery API doc.
 
 ## Query Parameters
 
@@ -40,7 +40,7 @@ To learn more about the queries, refer to the [Queries](../../../../api-detail/c
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **branch** (optional)
   Enter your branch unique ID.

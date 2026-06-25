@@ -916,7 +916,7 @@ You will receive the response depending on your request and relevant jobId.
 
 ### About Postman Collection
 
-The Postman collection is a set of preconfigured REST API requests that will make it easy for you to get started with the [Contentstack APIs](/docs/developers/apis) and try out our API requests through the popular [Postman](https://www.getpostman.com/) REST client.
+The Postman collection is a set of preconfigured REST API requests that will make it easy for you to get started with the [Contentstack APIs](/docs/developer-apis) and try out our API requests through the popular [Postman](https://www.getpostman.com/) REST client.
 
 ### Install Postman
 

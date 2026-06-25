@@ -1,7 +1,7 @@
 ---
 title: "Get all stacks in an Organization"
 description: GET /organizations/{organization_uid}/stacks?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}
-url: developer-apis/administration-api/requests/get-all-stacks-in-an-organization
+url: administration-api-requests/organization
 product: Contentstack
 doc_type: api-request
 audience:

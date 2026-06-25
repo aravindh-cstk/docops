@@ -37,7 +37,7 @@ Here’s an example of the Request Body for using GenAI request:
   Enter the authtoken.
   Default: `your_authtoken`
 - **authorization** (optional)
-  Enter your OAuth token. Learn more about [Authentication](../../../../api-detail/generative-ai-api.md#authentication).
+  Enter your OAuth token. Learn more about [Authentication](../api-detail/generative-ai-api.md#authentication).
   Default: `[Bearer <OAuth token>]`
 
 ## Sample Request

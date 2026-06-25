@@ -52,7 +52,7 @@ Here's an example of the raw body:
 - **authtoken** (optional)
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication)
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication)
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 - **Content-Type** (required)
   Pass “application/json” to enter JSON request body and “multipart/form-data” to include form data body parameters.

@@ -48,7 +48,7 @@ The following table shows values you can use for the query parameter:
 }
 ``` |
 
-This API request will return a maximum of **100** records while fetching the execution details for a specific webhook. Previously, there was no limit on the number of records returned. You can use the "[skip](../../../../api-detail/content-delivery-api.md#skip)" parameter to fetch older records. To limit the number of records returned, you can use the “[limit](../../../../api-detail/content-delivery-api.md#limit)” parameter.
+This API request will return a maximum of **100** records while fetching the execution details for a specific webhook. Previously, there was no limit on the number of records returned. You can use the "[skip](../api-detail/content-delivery-api.md#skip)" parameter to fetch older records. To limit the number of records returned, you can use the “[limit](../api-detail/content-delivery-api.md#limit)” parameter.
 
 ## URL Parameters
 
@@ -80,7 +80,7 @@ This API request will return a maximum of **100** records while fetching the exe
   Enter your authtoken.
   Default: `your_authtoken`
 - **authorization** (required)
-  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
+  Enter your OAuth token or management token. Learn more about [authentication](../api-detail/content-management-api.md#authentication).
   Default: `[Bearer <OAuth token>] or [your_management_token]`
 
 ## Sample Response
