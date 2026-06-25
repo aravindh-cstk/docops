@@ -16,7 +16,7 @@ This page explains how to configure an AWS webhook listener (API Gateway + Lambd
 
 ## Set up AWS Webhook Listener to Test Contentstack Webhook URLs
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to configure and manage webhook integrations in Contentstack, refer to the [Webhooks](../../../api-docs/developers/apis/content-management-api/webhooks.md) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to configure and manage webhook integrations in Contentstack, refer to the [Webhooks](../../../api-docs/developer-apis/content-management-api/webhooks.md) documentation.
 
 Using Contentstack [Webhooks](../set-up-webhooks/about-webhooks.md), you can post data to AWS when an event occurs in your stack. AWS responds to the payload from Contentstack Webhook Dispatcher by returning the appropriate data.
 

@@ -1,7 +1,7 @@
 ---
 title: "Automations Management API I Postman Collection"
 description: Import the Postman collection for Automations Management API endpoints and test requests with ready-to-use examples.
-url: https://www.contentstack.com/docs/developers/apis/automations-management-api/postman-collection
+url: https://www.contentstack.com/docs/developer-apis/automations-management-api/postman-collection
 product: Contentstack
 doc_type: api-reference
 audience:
@@ -16,7 +16,7 @@ last_updated: 2026-06-02
 
 ## About Automations Postman Collection
 
-The Automations Postman collection is a set of preconfigured REST API requests that will make it easy for you to get started with the [Contentstack APIs](/docs/developers/apis/) and try out our API requests through the popular [Postman](https://www.getpostman.com/) REST client.
+The Automations Postman collection is a set of preconfigured REST API requests that will make it easy for you to get started with the [Contentstack APIs](/docs/developer-apis/) and try out our API requests through the popular [Postman](https://www.getpostman.com/) REST client.
 
 
 
@@ -101,7 +101,7 @@ Some of the important variables that you need to set are as follows:
 | organization_uid  | your_organization_uid |
 | authtoken | your_authtoken |
 
-**Note:** The Automations Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](/docs/developers/apis/automation-hub-management-api#authentication) section for more details.
+**Note:** The Automations Postman Collection will require a valid Authtoken to make API calls. Check out the [Authentication](/docs/developer-apis/automation-hub-management-api#authentication) section for more details.
 
 If you want to add your own environment variables, you can follow the procedure in the next section.
 
@@ -153,12 +153,12 @@ If you want to prevent this action, perform the steps given below:
 
 This will allow you to access [cookies of this domain in scripts](https://learning.postman.com/docs/sending-requests/cookies/#accessing-cookies-in-scripts) programmatically.
 
-**Note:** To avoid this situation, we recommend you to use the Organization UID along with the Authtoken to make valid Automations Management API requests. For more information, refer to [Authentication](/docs/developers/apis/automation-hub-management-api#authentication).
+**Note:** To avoid this situation, we recommend you to use the Organization UID along with the Authtoken to make valid Automations Management API requests. For more information, refer to [Authentication](/docs/developer-apis/automation-hub-management-api#authentication).
 
 
 
 ## Postman Collection Updates
 
-We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](/docs/developers/apis/automation-hub-management-api#download-latest-collection) again and you are good to go.
+We keep our Postman Collection updated. To get the latest version of our Postman Collection, all you need to do is to [download the Postman Collection along with the updated environment](/docs/developer-apis/automation-hub-management-api#download-latest-collection) again and you are good to go.
 
 You can also choose to watch for the latest Postman Collection updates on our [GitHub repository](https://github.com/contentstack/contentstack-postman-collections/blob/collections/automate-collection.json) and get notifications of new releases or updates to the repository. The GitHub Readme doc will help you with the steps that you need to follow.

@@ -1,7 +1,7 @@
 ---
 title: "CDA | Taxonomy"
 description: Retrieve taxonomy data and term assignments for organizing delivered content.
-url: https://www.contentstack.com/docs/developers/apis/content-delivery-api/taxonomy
+url: https://www.contentstack.com/docs/developer-apis/content-delivery-api/taxonomy
 product: Contentstack
 doc_type: api-reference
 audience:

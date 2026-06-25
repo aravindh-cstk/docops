@@ -1,7 +1,7 @@
 ---
 title: "CDA | Global Fields"
 description: Retrieve reusable global field schemas and metadata used by entries and content types in delivery responses.
-url: https://www.contentstack.com/docs/developers/apis/content-delivery-api/global-fields
+url: https://www.contentstack.com/docs/developer-apis/content-delivery-api/global-fields
 product: Contentstack
 doc_type: api-reference
 audience:

@@ -45,7 +45,7 @@ Let’s have a look at the characteristics of these three fields and their usage
 - Commonly used to add tags to an entry.
 - The applied tags are visible on the entry list page.
 - Use tags if you plan to search entries by tags using Contentstack’s Advanced Search.
-- Not recommended if you wish to retrieve entries (by filtering) using [APIs](/docs/developers/apis/).
+- Not recommended if you wish to retrieve entries (by filtering) using [APIs](/docs/developer-apis/).
 
 ## Recommendations
 - To categorize similar entries for easy retrieval later using API queries, we suggest using the **Reference field** (marked as multiple) instead of **Tags**.
@@ -61,7 +61,7 @@ Let’s have a look at the characteristics of these three fields and their usage
 A: Use a Reference field when the set of predefined choices constantly changes, and you want to select from referred entries rather than maintain a static list of options.
 
 **Q: Why are Tags not recommended for retrieving entries using APIs?**  
-A: Tags are not recommended if you wish to retrieve entries (by filtering) using [APIs](/docs/developers/apis/).
+A: Tags are not recommended if you wish to retrieve entries (by filtering) using [APIs](/docs/developer-apis/).
 
 **Q: What is a typical use case for a Select field?**  
 A: It is recommended to use when the choices are predefined and are not likely to change, such as “Gender” or “Age Group” fields in forms.

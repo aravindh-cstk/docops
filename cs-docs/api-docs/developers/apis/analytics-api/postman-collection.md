@@ -1,7 +1,7 @@
 ---
 title: "Analytics | Postman Collection"
 description: Import the Postman collection for Analytics API endpoints and test requests with ready-to-use examples.
-url: https://www.contentstack.com/docs/developers/apis/analytics-api/postman-collection
+url: https://www.contentstack.com/docs/developer-apis/analytics-api/postman-collection
 product: Contentstack
 doc_type: api-reference
 audience:

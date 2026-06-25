@@ -68,7 +68,7 @@ Learn more about [Languages](../developers/multilingual-content/how-languages-wo
 
 Access independent workspaces for developers and content managers to collaborate on redesigning content models and data by creating multiple copies of your stack content and synchronizing the development of websites within a single stack.
 
-Learn more about [Branches](../../api-docs/developers/apis/content-management-api/branches.md).
+Learn more about [Branches](../../api-docs/developer-apis/content-management-api/branches.md).
 
 ## Analyze your Organization
 

@@ -31,7 +31,7 @@ This step-by-step guide lets you use the Entry Migration utility to perform the 
 - [Contentstack account](https://www.contentstack.com/login/)
 - [CLI installed](./install-the-cli.md) and [configured](./configure-regions-in-the-cli.md) (version 1.7.0 and above)
 - [CLI authenticated](./cli-authentication.md)
-- [Branches](../../../api-docs/developers/apis/content-management-api/branches.md) enabled for your organization
+- [Branches](../../../api-docs/developer-apis/content-management-api/branches.md) enabled for your organization
 - [Merge operation](./compare-and-merge-branches-using-the-cli.md#steps-to-merge-branches) performed
 
 ## Usage

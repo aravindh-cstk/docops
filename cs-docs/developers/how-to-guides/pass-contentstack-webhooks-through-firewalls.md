@@ -17,7 +17,7 @@ This page explains how Contentstack webhooks interact with firewalls and outline
 
 ## Pass Contentstack Webhooks through Firewalls
 
-**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to configure and manage webhook integrations in Contentstack, refer to the [Webhooks](../../../api-docs/developers/apis/content-management-api/webhooks.md) documentation.
+**Note: **This page is no longer maintained, and the underlying code may be outdated or unsupported. It may be removed in a future release. To learn how to configure and manage webhook integrations in Contentstack, refer to the [Webhooks](../../../api-docs/developer-apis/content-management-api/webhooks.md) documentation.
 
 A firewall is an essential element in network security systems. It secures the organization's internal network and monitors the flow of inbound and outbound traffic based on predetermined rules and protocols.
 

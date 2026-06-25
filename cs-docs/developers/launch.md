@@ -368,7 +368,7 @@ More about Contentstack Launch
 
 - Launch API  
   Title: Launch API  
-  Url: /developers/apis/launch-api
+  Url: /developer-apis/launch-api
 
 - Select flag  
   NEW

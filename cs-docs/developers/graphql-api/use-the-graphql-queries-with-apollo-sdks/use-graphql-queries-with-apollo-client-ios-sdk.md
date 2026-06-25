@@ -53,7 +53,7 @@ Contentstack provides a GraphQL playground, which is a GraphiQL interface, to te
 Open a browser of your choice and hit this URL (after filling the required details):
 
 ```
-https://www.contentstack.com/docs/developers/apis/graphql-content-delivery-api/explorer/
+https://www.contentstack.com/docs/developer-apis/graphql-content-delivery-api/explorer/
 ```
 
 The following is an example of a sample query for GraphQL:

@@ -34,7 +34,7 @@ Contentstack provides a GraphQL playground, which is the GraphiQL interface, to 
 Open a browser of your choice and hit the following URL after filling the required details:
 
 ```
-https://www.contentstack.com/docs/developers/apis/graphql-content-delivery-api/explorer/
+https://www.contentstack.com/docs/developer-apis/graphql-content-delivery-api/explorer/
 ```
 
 **Note**: If you have pieces of data you may want to reuse in multiple places, make use of [fragments](https://www.apollographql.com/docs/ios/fragments.html).

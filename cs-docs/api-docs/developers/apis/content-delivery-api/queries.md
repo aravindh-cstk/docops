@@ -1,7 +1,7 @@
 ---
 title: "CDA | Queries"
 description: Build Content Delivery API queries with filters, sorting, pagination, references, and field selection for precise content retrieval.
-url: https://www.contentstack.com/docs/developers/apis/content-delivery-api/queries
+url: https://www.contentstack.com/docs/developer-apis/content-delivery-api/queries
 product: Contentstack
 doc_type: api-reference
 audience:

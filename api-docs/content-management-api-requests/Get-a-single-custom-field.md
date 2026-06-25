@@ -1,0 +1,69 @@
+---
+title: "Get a single custom field"
+description: GET /extensions/{custom_field_uid}
+url: developer-apis/content-management-api-requests/get-a-single-custom-field
+product: Contentstack
+doc_type: api-request
+audience:
+  - developers
+version: unknown
+last_updated: 2024-02-20
+---
+
+# Get a single custom field
+
+**GET** `/extensions/{custom_field_uid}`
+
+The Get a single custom field request gets the comprehensive details of a specific custom field.  
+To configure the permissions for your application via OAuth, please include the cm.extensions.management:read scope.
+
+## URL Parameters
+
+- **custom_field_uid** (required)
+  Enter the UID of the custom field of which you want to retrieve the details.
+  Default: `blt123ea123b123a123f`
+
+## Query Parameters
+
+- **include_branch** (optional)
+  Set this to 'true' to include the '_branch' top-level key in the response. This key states the unique ID of the branch where the concerned Contentstack module resides.
+  Default: `false`
+
+## Headers
+
+- **api_key** (required)
+  Default: `blt20962a819b57e233`
+- **authtoken** (optional)
+  Default: `your_authtoken`
+- **authorization** (required)
+  Enter your OAuth token or management token. Learn more about [authentication](../../../../api-detail/content-management-api.md#authentication).
+  Default: `[Bearer <OAuth token>] or [your_management_token]`
+- **Content-Type** (required)
+  Default: `application/json`
+- **branch** (optional)
+  Enter your branch unique ID.
+  Default: `main`
+
+## Sample Response
+
+```json
+{
+	"extensions": {
+		"uid": "blt002c000ce00b00000",
+		"created_at": "2018-07-03T05:32:29.450Z",
+		"updated_at": "2018-07-03T05:32:29.450Z",
+		"created_by": "blt1e1111e1111cf1e1",
+		"updated_by": "blt2e2222e2222cf2d2",
+		"tags": [],
+		"ACL": [],
+		"_version": 1,
+		"title": "Ratings",
+		"multiple": false,
+		"config": {},
+		"type": "field",
+		"data_type": "number",
+		"srcdoc": "Source doc of the extension"
+	}
+}
+```
+

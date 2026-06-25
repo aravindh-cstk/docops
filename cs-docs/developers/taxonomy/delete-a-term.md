@@ -47,4 +47,4 @@ Following the deletion steps will detach the term(s) association from the entrie
 Yes. To recover a deleted term, consult the documentation on restoring deleted terms: /docs/developers/manage-trash/restore-a-deleted-term.
 
 ### Can I delete a term using the API?
-Yes. To delete a term via API, refer to the Delete a Term API request: /docs/developers/apis/content-management-api#delete-a-term.
+Yes. To delete a term via API, refer to the Delete a Term API request: /docs/developer-apis/content-management-api#delete-a-term.

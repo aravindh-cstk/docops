@@ -56,7 +56,7 @@ Contentstack supports SCIM (System for Cross-domain Identity Management), which 
 
 - **SCIM 2.0 API Reference**
   - Title: SCIM 2.0 API Reference
-  - Url: /developers/apis/scim-api
+  - Url: /developer-apis/scim-api
 
 - **SCIM FAQs**
   - Title: SCIM FAQs

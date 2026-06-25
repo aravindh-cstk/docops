@@ -1,7 +1,7 @@
 ---
 title: "CDA | Entry Variants"
 description: Work with entry variants in the Content Delivery API, including variant-specific retrieval and management flows.
-url: https://www.contentstack.com/docs/developers/apis/content-delivery-api/entry-variants
+url: https://www.contentstack.com/docs/developer-apis/content-delivery-api/entry-variants
 product: Contentstack
 doc_type: api-reference
 audience:

@@ -33,7 +33,7 @@ A stack is a container that holds all the content (entries) and assets related t
 
 ### Branches
 
-Branches allow you to create multiple copies of your stack content. Changes can be made within different branches without affecting the main branch. Learn more about [Branches](../../api-docs/developers/apis/content-management-api/branches.md).
+Branches allow you to create multiple copies of your stack content. Changes can be made within different branches without affecting the main branch. Learn more about [Branches](../../api-docs/developer-apis/content-management-api/branches.md).
 
 **Note:** The term module may refer to a conceptual part of Contentstack, not a distinct feature.
 

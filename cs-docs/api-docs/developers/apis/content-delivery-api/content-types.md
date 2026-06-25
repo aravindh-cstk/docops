@@ -1,7 +1,7 @@
 ---
 title: "CDA | Content Types"
 description: Retrieve content type schemas and metadata for modeling and reading structured content through delivery endpoints.
-url: https://www.contentstack.com/docs/developers/apis/content-delivery-api/content-types
+url: https://www.contentstack.com/docs/developer-apis/content-delivery-api/content-types
 product: Contentstack
 doc_type: api-reference
 audience:

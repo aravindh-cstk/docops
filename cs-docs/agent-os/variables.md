@@ -21,7 +21,7 @@ The Project Variables section helps you add project variables to use the same ke
 
 To add the Project Variables, perform the following steps:
 - log in to your [Contentstack account](https://www.contentstack.com/login/).
-- Go to your project or [create](../../api-docs/developers/apis/automations-management-api/project-variables.md) a new one.
+- Go to your project or [create](../../api-docs/developer-apis/automations-management-api/project-variables.md) a new one.
 - In the top navigation panel, click **Settings**. Then in the left navigation click **Variables**. You will see all the project variables defined in your project.
 
 To add a new project variable, follow the steps below.

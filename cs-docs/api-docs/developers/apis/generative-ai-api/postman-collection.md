@@ -1,7 +1,7 @@
 ---
 title: "Generative AI | Postman Collection"
 description: Import the Postman collection for Generative AI API endpoints and test requests with ready-to-use examples.
-url: https://www.contentstack.com/docs/developers/apis/generative-ai-api/postman-collection
+url: https://www.contentstack.com/docs/developer-apis/generative-ai-api/postman-collection
 product: Contentstack
 doc_type: api-reference
 audience:
@@ -16,7 +16,7 @@ last_updated: 2026-06-02
 
 ## About Generative AI Postman Collection
 
-The Generative AI Postman collection is a set of preconfigured REST API requests that will make it easy for you to get started with the [Contentstack APIs](/docs/developers/apis/) and try out our API requests through the popular [Postman](https://www.getpostman.com/) REST client.
+The Generative AI Postman collection is a set of preconfigured REST API requests that will make it easy for you to get started with the [Contentstack APIs](/docs/developer-apis/) and try out our API requests through the popular [Postman](https://www.getpostman.com/) REST client.
 
 
 

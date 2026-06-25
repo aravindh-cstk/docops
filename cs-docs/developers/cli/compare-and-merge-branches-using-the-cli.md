@@ -27,7 +27,7 @@ This step-by-step guides you on how to create, update, delete, compare, and merg
 - [Contentstack account](https://www.contentstack.com/login/)
 - [CLI installed](./install-the-cli.md) and configured (version 1.7.0 and above)
 - [CLI authenticated](./cli-authentication.md)
-- [Branches](../../../api-docs/developers/apis/content-management-api/branches.md) enabled for your organization.**Note:** Contact your organization administrator for more details.
+- [Branches](../../../api-docs/developer-apis/content-management-api/branches.md) enabled for your organization.**Note:** Contact your organization administrator for more details.
 
 ## Steps to List, Create, and Delete Branches
 

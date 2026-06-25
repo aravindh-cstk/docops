@@ -47,7 +47,7 @@ To view the last modified timestamp of a stack, perform the following steps:
 **Note:** The last modified timestamp reflects changes to stack settings only. It does not update when content within the stack is changed.
 
 ## API Reference
-To view stack details via API, refer to the [Get Single Stack](/docs/developers/apis/content-management-api?_gl=1*81q8tb*_gcl_au*MTE2NTg1NDE5Ny4xNzQ4NDE1MjI1#get-a-single-stack) request.
+To view stack details via API, refer to the [Get Single Stack](/docs/developer-apis/content-management-api?_gl=1*81q8tb*_gcl_au*MTE2NTg1NDE5Ny4xNzQ4NDE1MjI1#get-a-single-stack) request.
 
 ## Common questions
 

@@ -31,7 +31,7 @@ Once you are satisfied, then you can publish the content on the production envir
 
 ## Use Multiple Stacks
 
-If you want to maintain separate content types and entries, you can use the multiple stack option. In this way, all the content types and entries will be isolated from each other. You can use a script, in this case, to enable our [Content Management API](../../../api-docs/api-detail/content-management-api.md) requests to reflect the changes on each stack using [Webhooks](../set-up-webhooks/about-webhooks.md) and the [REST API requests](/docs/developers/apis/).
+If you want to maintain separate content types and entries, you can use the multiple stack option. In this way, all the content types and entries will be isolated from each other. You can use a script, in this case, to enable our [Content Management API](../../../api-docs/api-detail/content-management-api.md) requests to reflect the changes on each stack using [Webhooks](../set-up-webhooks/about-webhooks.md) and the [REST API requests](/docs/developer-apis/).
 
 **Note**: SSO-enabled organizations can use the management token to make API requests.
 
@@ -53,4 +53,4 @@ Use multiple stacks when you want to maintain separate content types and entries
 No. Cross referencing between stack is not supported while using a [reference field](../create-content-types/reference.md).
 
 ### How can I keep multiple stacks in sync?
-You can use a script to enable [Content Management API](../../../api-docs/api-detail/content-management-api.md) requests to reflect changes on each stack using [Webhooks](../set-up-webhooks/about-webhooks.md) and the [REST API requests](/docs/developers/apis/).
+You can use a script to enable [Content Management API](../../../api-docs/api-detail/content-management-api.md) requests to reflect changes on each stack using [Webhooks](../set-up-webhooks/about-webhooks.md) and the [REST API requests](/docs/developer-apis/).
