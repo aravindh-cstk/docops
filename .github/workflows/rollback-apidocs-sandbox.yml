@@ -72,9 +72,9 @@ jobs:
       - name: Run rollback
         working-directory: tools/migration
         env:
-          DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
-          DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}
-          DEST_STACK_REGION: us
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          APIDOCS_SANDBOX_STACK_REGION: us
           SYNC_DRY_RUN: ${{ inputs.dry_run }}
           BACKUP_DIR: ./backups
           LOG_LEVEL: info

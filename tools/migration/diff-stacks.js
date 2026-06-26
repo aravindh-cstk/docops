@@ -9,9 +9,9 @@ const ContentstackAPI = require('./utils/contentstack-api');
 const logger = require('./utils/logger');
 
 const destApi = new ContentstackAPI(
-  process.env.DEST_STACK_API_KEY,
-  process.env.DEST_MANAGEMENT_TOKEN,
-  process.env.DEST_STACK_REGION
+  process.env.APIDOCS_SANDBOX_STACK_API_KEY,
+  process.env.APIDOCS_SANDBOX_MANAGEMENT_TOKEN,
+  process.env.APIDOCS_SANDBOX_STACK_REGION
 );
 
 // ── Helpers ──────────────────────────────────────────────────────────────────

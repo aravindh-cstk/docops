@@ -46,9 +46,9 @@ jobs:
           SOURCE_STACK_API_KEY: blt8fb40ae1e60d06b9
           SOURCE_STACK_REGION: us
           SOURCE_STACK_BRANCH: main
-          DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
-          DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}
-          DEST_STACK_REGION: us
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          APIDOCS_SANDBOX_STACK_REGION: us
           EXPORT_DIR: ./exports
           LOG_LEVEL: info
         run: npm run export
@@ -59,9 +59,9 @@ jobs:
         env:
           SOURCE_STACK_API_KEY: blt8fb40ae1e60d06b9
           SOURCE_STACK_REGION: us
-          DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
-          DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}
-          DEST_STACK_REGION: us
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          APIDOCS_SANDBOX_STACK_REGION: us
           EXPORT_DIR: ./exports
           LOG_LEVEL: info
         run: |
@@ -79,9 +79,9 @@ jobs:
         if: steps.diff.outputs.has_changes == 'true'
         working-directory: tools/migration
         env:
-          DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
-          DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}
-          DEST_STACK_REGION: us
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          APIDOCS_SANDBOX_STACK_REGION: us
           SYNC_DRY_RUN: ${{ inputs.dry_run || 'false' }}
           EXPORT_DIR: ./exports
           BACKUP_DIR: ./backups
@@ -93,9 +93,9 @@ jobs:
         if: steps.diff.outputs.has_changes == 'true' && inputs.dry_run != true
         working-directory: tools/migration
         env:
-          DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
-          DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}
-          DEST_STACK_REGION: us
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          APIDOCS_SANDBOX_STACK_REGION: us
           EXPORT_DIR: ./exports
           LOG_LEVEL: info
         run: npm run validate
