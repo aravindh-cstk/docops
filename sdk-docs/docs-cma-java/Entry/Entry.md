@@ -1,0 +1,20 @@
+---
+title: "Entry"
+description: "An entry is the actual piece of content created using one of the defined content types. You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides."
+url: "https://www.contentstack.com/developers/sdks/content-management-sdk/java/reference/entry"
+product: "Contentstack"
+doc_type: "class_intro"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+# Entry
+
+## Entry
+
+An entry is the actual piece of content created using one of the defined content types.
+
+You can now pass the branch header in the API request to fetch or manage modules located within specific branches of the stack. Additionally, you can also set the include_branch query parameter to true to include the _branch top-level key in the response. This key specifies the unique ID of the branch where the concerned Contentstack module resides.

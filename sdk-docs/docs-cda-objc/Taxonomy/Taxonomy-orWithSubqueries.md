@@ -1,0 +1,46 @@
+---
+title: "orWithSubqueries:"
+description: "The `orWithSubqueries` method combines multiple queries using AND condition."
+url: "https://www.contentstack.com/ios-taxonomy-orwithsubqueries-"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## orWithSubqueries:
+
+The `orWithSubqueries` method combines multiple queries using AND condition.
+
+| Name | Type | Required | Default | Description |
+|---|---|---|---|---|
+| subqueries | NSArray<Query*>* | No | — | Array of Query objects to combine with OR |
+
+Returns:
+Type
+void
+
+**Objective C:**
+
+```
+Query *query1 = [taxonomy query]; 
+[query1 whereKey:@"taxonomies.one" equalTo:@"term_one"]; 
+Query *query2 =[taxonomy query]; 
+[query2 whereKey:@"taxonomies.two" equalTo:@"term_two"]; 
+Query *mainQuery = [taxonomy query]; 
+[mainQuery orWithSubqueries:@[query1, query2]];
+```
+
+**Swift:**
+
+```
+let query1 = taxonomy.query() 
+query1.whereKey("taxonomies.one", equalTo: "term_one") 
+let query2 = taxonomy.query()
+query2.whereKey("taxonomies.two", equalTo: "term_two")
+let mainQuery = taxonomy.query()
+mainQuery.orWithSubqueries([query1, query2])
+```

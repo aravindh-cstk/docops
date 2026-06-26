@@ -1,0 +1,29 @@
+---
+title: "include_fallback"
+description: "Retrieve the published content of the fallback locale if an entry is not localized in specified locale"
+url: "https://www.contentstack.com/python-query-include_fallback"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## include_fallback
+
+Retrieve the published content of the fallback locale if an entry is not localized in specified locale
+
+No parameters.
+
+Returns:
+Type
+Query
+
+```
+import contentstack;
+stack = contentstack.Stack(api_key, delivery_token, environment);
+query = stack.content_type("content_type_uid").query()
+query.include_fallback()
+```

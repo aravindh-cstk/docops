@@ -1,0 +1,30 @@
+---
+title: "include_fallback"
+description: "Retrieve the published content of the fallback locale if an entry is not localized in specified locale"
+url: "https://www.contentstack.com/python-assetquery-include_fallback"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## include_fallback
+
+Retrieve the published content of the fallback locale if an entry is not localized in specified locale
+
+No parameters.
+
+Returns:
+Type
+AssetQuery
+
+```
+import contentstack;
+
+stack = contentstack.Stack(api_key, delivery_token, environment);
+asset_query = stack.asset_query()
+stack.asset_query().include_fallback()
+```

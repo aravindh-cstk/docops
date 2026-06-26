@@ -1,0 +1,69 @@
+---
+title: "limit(to:)"
+description: "Instance method to mutating query to limit response to contain n values."
+url: "https://www.contentstack.com/swift-basequery-limit-to-"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## limit(to:)
+
+Instance method to mutating query to limit response to contain n values.
+
+| Name | Type | Required | Default | Description |
+|---|---|---|---|---|
+| numberOfResults | UInt | Yes | — | The number of results the response will be limited to. |
+
+Returns:
+Type
+Self
+
+```
+let stack = Contentstack.stack(apiKey: "<API_KEY>", deliveryToken: "<DELIVERY_TOKEN>", environment: "<ENVIRNOMENT>")
+
+stack.contentType(uid: "<CONTENT_TYPE_UID>").entry().query()
+.limit(to: 20)
+.find { (result: Result<ContentstackResponse<EntryModel>, Error>, response: ResponseType) in
+   switch result {
+    case .success(let contentstackResponse):
+
+    case .failure(let error):
+
+   }
+}
+```
+
+```
+let stack = Contentstack.stack(apiKey: "<API_KEY>", deliveryToken: "<DELIVERY_TOKEN>", environment: "<ENVIRNOMENT>")
+
+stack.contentType().query()
+.limit(to: 20)
+.find { (result: Result<ContentstackResponse<ContentTypeModel>, Error>, response: ResponseType) in
+   switch result {
+    case .success(let contentstackResponse):
+
+    case .failure(let error):
+
+   }
+}
+```
+
+```
+let stack = Contentstack.stack(apiKey: "<API_KEY>", deliveryToken: "<DELIVERY_TOKEN>", environment: "<ENVIRNOMENT>")
+
+stack.asset().query()
+.limit(to: 20)
+.find { (result: Result<ContentstackResponse<AssetModel>, Error>, response: ResponseType) in
+   switch result {
+    case .success(let contentstackResponse):
+
+    case .failure(let error):
+
+   }
+}
+```

@@ -1,0 +1,35 @@
+---
+title: "not_exists"
+description: "Add a constraint that requires, a specified key does not exists in response."
+url: "https://www.contentstack.com/ruby-query-not_exists"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## not_exists
+
+Add a constraint that requires, a specified key does not exists in response.
+
+| Name | Type | Required | Default | Description |
+|---|---|---|---|---|
+| field_uid | String | No | — | The key to be constrained. |
+
+Returns:
+Type
+Query
+
+****
+
+```
+require "contentstack";
+
+@stack = Contentstack::Client.new("api_key", "delivery_token", "environment");
+@entries = @stack.content_type("content_type_uid").query
+	.not_exists('product_image')
+	.fetch;
+```
