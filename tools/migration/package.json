@@ -7,8 +7,10 @@
     "export": "node export-source.js",
     "diff": "node diff-stacks.js",
     "sync": "node sync-to-destination.js",
+    "sync:dry": "SYNC_DRY_RUN=true node sync-to-destination.js",
     "validate": "node validate-sync.js",
-    "rollback": "node rollback.js"
+    "rollback": "node rollback.js",
+    "rollback:dry": "SYNC_DRY_RUN=true node rollback.js"
   },
   "keywords": [
     "contentstack",

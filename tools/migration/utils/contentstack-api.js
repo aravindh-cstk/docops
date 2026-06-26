@@ -10,6 +10,23 @@ class ContentstackAPI {
     this.maxRetries = parseInt(process.env.MAX_RETRIES || 3);
   }
 
+  _readHeaders() {
+    const headers = { api_key: this.apiKey };
+    if (this.managementToken) {
+      // Management tokens use the authtoken header in Contentstack's CMA
+      headers.authtoken = this.managementToken;
+    }
+    return headers;
+  }
+
+  _writeHeaders() {
+    return {
+      api_key: this.apiKey,
+      authtoken: this.managementToken,
+      'Content-Type': 'application/json',
+    };
+  }
+
   async retryRequest(fn, retries = this.maxRetries) {
     try {
       return await fn();
@@ -23,109 +40,216 @@ class ContentstackAPI {
     }
   }
 
+  // ── Source read methods ────────────────────────────────────────────────────
+
   async exportContentTypes() {
-    logger.info('Fetching content types from source stack...');
-    try {
+    logger.info('Fetching content types...');
+    const all = [];
+    let skip = 0;
+    while (true) {
       const response = await this.retryRequest(() =>
-        axios.get(`${this.baseUrl}/content_types?limit=100`, {
-          headers: { api_key: this.apiKey }
+        axios.get(`${this.baseUrl}/content_types?limit=100&skip=${skip}&include_count=true`, {
+          headers: this._readHeaders(),
         })
       );
-      const contentTypes = response.data.content_types || [];
-      logger.success(`Fetched ${contentTypes.length} content types`);
-      return contentTypes;
-    } catch (error) {
-      logger.error(`Failed to export content types: ${error.message}`);
-      throw error;
+      const cts = response.data.content_types || [];
+      all.push(...cts);
+      if (all.length >= (response.data.count || 0) || cts.length === 0) break;
+      skip += 100;
     }
+    logger.success(`Fetched ${all.length} content types`);
+    return all;
   }
 
   async exportEntries(contentTypeUid, limit = 100, skip = 0) {
-    try {
-      const response = await this.retryRequest(() =>
-        axios.get(
-          `${this.baseUrl}/content_types/${contentTypeUid}/entries?limit=${limit}&skip=${skip}&include_count=true`,
-          { headers: { api_key: this.apiKey } }
-        )
-      );
-      return {
-        entries: response.data.entries || [],
-        count: response.data.entries ? response.data.entries.length : 0,
-        totalCount: response.data.count || 0
-      };
-    } catch (error) {
-      logger.error(`Failed to export entries for ${contentTypeUid}: ${error.message}`);
-      throw error;
-    }
+    const response = await this.retryRequest(() =>
+      axios.get(
+        `${this.baseUrl}/content_types/${contentTypeUid}/entries?limit=${limit}&skip=${skip}&include_count=true`,
+        { headers: this._readHeaders() }
+      )
+    );
+    return {
+      entries: response.data.entries || [],
+      totalCount: response.data.count || 0,
+    };
   }
 
   async exportAssets(limit = 100, skip = 0) {
-    try {
-      const response = await this.retryRequest(() =>
-        axios.get(
-          `${this.baseUrl}/assets?limit=${limit}&skip=${skip}&include_count=true`,
-          { headers: { api_key: this.apiKey } }
-        )
-      );
-      return {
-        assets: response.data.assets || [],
-        count: response.data.assets ? response.data.assets.length : 0,
-        totalCount: response.data.count || 0
-      };
-    } catch (error) {
-      logger.error(`Failed to export assets: ${error.message}`);
-      throw error;
-    }
+    const response = await this.retryRequest(() =>
+      axios.get(
+        `${this.baseUrl}/assets?limit=${limit}&skip=${skip}&include_count=true`,
+        { headers: this._readHeaders() }
+      )
+    );
+    return {
+      assets: response.data.assets || [],
+      totalCount: response.data.count || 0,
+    };
   }
 
   async exportGlobalFields() {
-    logger.info('Fetching global fields from source stack...');
-    try {
+    logger.info('Fetching global fields...');
+    const response = await this.retryRequest(() =>
+      axios.get(`${this.baseUrl}/global_fields?limit=100`, {
+        headers: this._readHeaders(),
+      })
+    );
+    const gfs = response.data.global_fields || [];
+    logger.success(`Fetched ${gfs.length} global fields`);
+    return gfs;
+  }
+
+  // ── Destination read methods ───────────────────────────────────────────────
+
+  async getContentTypes() {
+    const all = [];
+    let skip = 0;
+    while (true) {
       const response = await this.retryRequest(() =>
-        axios.get(`${this.baseUrl}/global_fields?limit=100`, {
-          headers: { api_key: this.apiKey }
+        axios.get(`${this.baseUrl}/content_types?limit=100&skip=${skip}&include_count=true`, {
+          headers: this._readHeaders(),
         })
       );
-      const globalFields = response.data.global_fields || [];
-      logger.success(`Fetched ${globalFields.length} global fields`);
-      return globalFields;
+      const cts = response.data.content_types || [];
+      all.push(...cts);
+      if (all.length >= (response.data.count || 0) || cts.length === 0) break;
+      skip += 100;
+    }
+    return all;
+  }
+
+  async getContentType(uid) {
+    const response = await this.retryRequest(() =>
+      axios.get(`${this.baseUrl}/content_types/${uid}`, {
+        headers: this._readHeaders(),
+      })
+    );
+    return response.data.content_type || null;
+  }
+
+  async getGlobalFields() {
+    const response = await this.retryRequest(() =>
+      axios.get(`${this.baseUrl}/global_fields?limit=100`, {
+        headers: this._readHeaders(),
+      })
+    );
+    return response.data.global_fields || [];
+  }
+
+  async getGlobalField(uid) {
+    try {
+      const response = await this.retryRequest(() =>
+        axios.get(`${this.baseUrl}/global_fields/${uid}`, {
+          headers: this._readHeaders(),
+        })
+      );
+      return response.data.global_field || null;
     } catch (error) {
-      logger.error(`Failed to export global fields: ${error.message}`);
+      if (error.response?.status === 404) return null;
       throw error;
     }
   }
 
-  async upsertEntry(contentTypeUid, entry, isUpdate = false) {
-    const method = isUpdate ? 'PUT' : 'POST';
-    const url = isUpdate 
-      ? `${this.baseUrl}/content_types/${contentTypeUid}/entries/${entry.uid}`
-      : `${this.baseUrl}/content_types/${contentTypeUid}/entries`;
+  async getEntries(contentTypeUid, limit = 100, skip = 0) {
+    const response = await this.retryRequest(() =>
+      axios.get(
+        `${this.baseUrl}/content_types/${contentTypeUid}/entries?limit=${limit}&skip=${skip}&include_count=true`,
+        { headers: this._readHeaders() }
+      )
+    );
+    return {
+      entries: response.data.entries || [],
+      totalCount: response.data.count || 0,
+    };
+  }
 
-    try {
-      const response = await this.retryRequest(() =>
-        axios({
-          method,
-          url,
-          headers: {
-            api_key: this.apiKey,
-            authtoken: this.managementToken,
-            'Content-Type': 'application/json'
-          },
-          data: { entry }
-        })
-      );
-      return response.data.entry;
-    } catch (error) {
-      logger.error(`Failed to upsert entry: ${error.message}`);
-      throw error;
-    }
+  // ── Destination write methods ──────────────────────────────────────────────
+
+  async createContentType(schema) {
+    const response = await this.retryRequest(() =>
+      axios.post(
+        `${this.baseUrl}/content_types`,
+        { content_type: schema },
+        { headers: this._writeHeaders() }
+      )
+    );
+    return response.data.content_type;
+  }
+
+  async updateContentType(uid, schema) {
+    const response = await this.retryRequest(() =>
+      axios.put(
+        `${this.baseUrl}/content_types/${uid}`,
+        { content_type: schema },
+        { headers: this._writeHeaders() }
+      )
+    );
+    return response.data.content_type;
+  }
+
+  async deleteContentType(uid) {
+    await this.retryRequest(() =>
+      axios.delete(`${this.baseUrl}/content_types/${uid}`, {
+        headers: this._writeHeaders(),
+      })
+    );
+  }
+
+  async createGlobalField(gf) {
+    const response = await this.retryRequest(() =>
+      axios.post(
+        `${this.baseUrl}/global_fields`,
+        { global_field: gf },
+        { headers: this._writeHeaders() }
+      )
+    );
+    return response.data.global_field;
+  }
+
+  async updateGlobalField(uid, gf) {
+    const response = await this.retryRequest(() =>
+      axios.put(
+        `${this.baseUrl}/global_fields/${uid}`,
+        { global_field: gf },
+        { headers: this._writeHeaders() }
+      )
+    );
+    return response.data.global_field;
+  }
+
+  async createEntry(contentTypeUid, entry, locale = 'en-us') {
+    const response = await this.retryRequest(() =>
+      axios.post(
+        `${this.baseUrl}/content_types/${contentTypeUid}/entries?locale=${locale}`,
+        { entry },
+        { headers: this._writeHeaders() }
+      )
+    );
+    return response.data.entry;
+  }
+
+  async updateEntry(contentTypeUid, uid, entry, locale = 'en-us') {
+    const response = await this.retryRequest(() =>
+      axios.put(
+        `${this.baseUrl}/content_types/${contentTypeUid}/entries/${uid}?locale=${locale}`,
+        { entry },
+        { headers: this._writeHeaders() }
+      )
+    );
+    return response.data.entry;
+  }
+
+  async upsertEntry(contentTypeUid, entry, isUpdate = false) {
+    return isUpdate
+      ? this.updateEntry(contentTypeUid, entry.uid, entry)
+      : this.createEntry(contentTypeUid, entry);
   }
 
   async getStackInfo() {
     try {
       const response = await this.retryRequest(() =>
         axios.get(`${this.baseUrl}/stacks`, {
-          headers: { api_key: this.apiKey }
+          headers: this._readHeaders(),
         })
       );
       return response.data.stack || {};

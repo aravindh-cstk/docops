@@ -1,145 +1,128 @@
 # Contentstack Migration Scripts
 
-Automated synchronization scripts for migrating content between Contentstack stacks.
+Automated synchronization scripts for keeping **APIDocs-Sandbox** in parity with the **Contentstack API Docs** source stack.
 
-## Overview
+## Stack Details
 
-This tool suite provides automated export, diff, sync, validation, and rollback capabilities for synchronizing content from the **Contentstack API Docs** stack to the **APIDocs-Sandbox** stack.
+| Stack | API Key | Region | Access |
+|-------|---------|--------|--------|
+| API Docs (source) | `blt8fb40ae1e60d06b9` | US | Read-only |
+| APIDocs-Sandbox (dest) | `bltf92796d1cef4d3d4` | US | Read/Write |
 
 ## Setup
-
-### 1. Install Dependencies
 
 ```bash
 cd tools/migration
 npm install
-```
-
-### 2. Configure Environment
-
-```bash
 cp .env.example .env
-# Edit .env with your credentials
+# Fill in your credentials in .env
 ```
 
-**Required Variables:**
-- `SOURCE_STACK_API_KEY` - API key for source stack (read-only)
-- `DEST_STACK_API_KEY` - API key for destination stack
-- `DEST_MANAGEMENT_TOKEN` - Management token for destination stack
+**Required environment variables:**
+
+```
+SOURCE_STACK_API_KEY=blt8fb40ae1e60d06b9
+DEST_STACK_API_KEY=bltf92796d1cef4d3d4
+DEST_MANAGEMENT_TOKEN=<management token for sandbox>
+```
 
 ## Usage
 
-### Export from Source Stack
+Run these in order for a full sync cycle:
+
+### 1. Export source stack
 
 ```bash
 npm run export
 ```
 
-Exports:
-- Content types (23)
-- Entries (100+)
-- Global fields (14)
-- Assets (52)
+Exports content types, global fields, entries, and assets from the source stack into `exports/YYYY-MM-DD/`. This is the source of truth used by all subsequent steps.
 
-Output: `exports/YYYY-MM-DD/`
-
-### Compare Stacks (Coming Soon)
+### 2. Diff stacks
 
 ```bash
 npm run diff
 ```
 
-### Synchronize to Destination (Coming Soon)
+Compares the latest export against the current destination stack state. Writes a diff report to `exports/diffs/latest.json`. Exits with code `2` if changes are found (useful in CI).
+
+### 3. Sync to destination
 
 ```bash
-npm run sync
+npm run sync        # Apply changes
+npm run sync:dry    # Preview only (no changes made)
 ```
 
-Options:
-- `--dry-run` - Preview changes without applying
+Reads the latest diff report and applies creates/updates to the destination stack. Global fields are synced before content types to respect dependencies. Creates a backup in `backups/` before applying any changes.
 
-### Validate Sync (Coming Soon)
+> Items that exist only in the destination are **not deleted** automatically — manual review required.
+
+### 4. Validate
 
 ```bash
 npm run validate
 ```
 
-### Rollback Changes (Coming Soon)
+Compares every content type schema field-by-field and checks entry counts. Writes a report to `exports/reports/latest.json`. Exits non-zero if mismatches are found.
+
+### 5. Rollback (if needed)
 
 ```bash
-npm run rollback
+npm run rollback                         # Restore most recent backup
+npm run rollback -- <backup-dir-name>    # Restore a specific backup
+npm run rollback:dry                     # Preview what would be restored
 ```
+
+Backups are stored in `backups/` and created automatically before every sync.
 
 ## Project Structure
 
 ```
-migration/
-├── export-source.js          # Export from source stack
-├── diff-stacks.js           # Compare stacks (WIP)
-├── sync-to-destination.js   # Synchronize changes (WIP)
-├── validate-sync.js         # Validate migration (WIP)
-├── rollback.js              # Rollback changes (WIP)
+tools/migration/
+├── export-source.js        # Step 1 — export source stack
+├── diff-stacks.js          # Step 2 — compare source export vs destination
+├── sync-to-destination.js  # Step 3 — apply diff to destination
+├── validate-sync.js        # Step 4 — verify destination matches source
+├── rollback.js             # Step 5 — restore from backup
 ├── utils/
-│   ├── logger.js            # Logging utility
-│   ├── contentstack-api.js  # API wrapper
-│   ├── error-handler.js     # Error handling (TODO)
-│   └── diff-engine.js       # Diff logic (TODO)
-├── config/
-│   ├── schema-rules.js      # Schema rules (TODO)
-│   └── migration-settings.js # Settings (TODO)
+│   ├── contentstack-api.js # Contentstack CMA wrapper (read + write)
+│   └── logger.js           # Color-coded console logger
+├── exports/                # (gitignored) export output
+│   ├── YYYY-MM-DD/         # Timestamped export snapshots
+│   ├── diffs/              # Diff reports (latest.json + timestamped)
+│   └── reports/            # Validation reports
+├── backups/                # (gitignored) pre-sync backups of destination
+├── .env.example            # Environment variable template
 └── package.json
 ```
 
-## Logs
+## GitHub Actions Workflows
 
-- All operations logged to console with color coding
-- Log level configurable via `LOG_LEVEL` env variable
-- Colors: Red=error, Yellow=warn, Blue=info, Green=success
+| Workflow | Trigger | Purpose |
+|----------|---------|---------|
+| `sync-apidocs-sandbox.yml` | Daily 02:00 UTC + manual | Export → Diff → Sync → Validate |
+| `validate-apidocs-sandbox.yml` | Daily 03:00 UTC + manual | Standalone validation check |
+| `rollback-apidocs-sandbox.yml` | Manual only | Restore destination from backup |
+
+### Required GitHub Secrets
+
+Set these in **Settings → Secrets and variables → Actions**:
+
+| Secret | Value |
+|--------|-------|
+| `SOURCE_STACK_API_KEY` | `blt8fb40ae1e60d06b9` |
+| `DEST_STACK_API_KEY` | `bltf92796d1cef4d3d4` |
+| `DEST_MANAGEMENT_TOKEN` | Management token for APIDocs-Sandbox |
+| `SLACK_WEBHOOK_URL` | Incoming webhook URL (optional) |
+
+## Logging
+
+Log levels: `error` (red), `warn` (yellow), `info` (blue), `success` (green), `debug` (gray).
+
+Set `LOG_LEVEL=debug` in `.env` for verbose output.
 
 ## Error Handling
 
-- Automatic retry on 5xx errors (up to 3 attempts)
-- Configurable retry count via `MAX_RETRIES`
-- Full error messages and stack traces
-
-## Performance
-
-- Batch operations with configurable batch size (default: 50)
-- Pagination for large datasets
-- ~30-60s for full stack export (100+ entries, 52 assets)
-
-## Stack Details
-
-### Source Stack (API Docs)
-- API Key: `blt8fb40ae1e60d06b9`
-- Region: US
-- Status: **READ ONLY**
-
-### Destination Stack (APIDocs-Sandbox)
-- API Key: `bltf92796d1cef4d3d4`
-- Region: US
-- Status: **Sync target**
-
-## Next Steps
-
-Phase 2 (coming soon):
-- [ ] Diff engine implementation
-- [ ] Sync script with create/update/delete logic
-- [ ] Validation script
-- [ ] Rollback script
-
-Phase 3 (coming soon):
-- [ ] GitHub Actions workflows
-- [ ] Scheduled syncs
-- [ ] Slack notifications
-
-## Support
-
-For issues or questions, refer to:
-1. `MIGRATION_IMPLEMENTATION_GUIDE.md`
-2. `MIGRATION_PLAN.md`
-3. Check logs for detailed error messages
-
-## License
-
-MIT
+- 5xx errors are retried up to `MAX_RETRIES` times (default: 3) with a 1-second backoff.
+- A backup is always created before any sync operation.
+- Dry-run mode (`SYNC_DRY_RUN=true`) is available for all write operations.

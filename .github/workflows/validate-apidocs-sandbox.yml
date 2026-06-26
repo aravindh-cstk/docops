@@ -1,0 +1,103 @@
+name: Validate APIDocs ↔ Sandbox
+
+on:
+  schedule:
+    # Runs daily at 03:00 UTC (1 hour after sync)
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: validate-apidocs-sandbox
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate stack parity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/migration/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tools/migration
+        run: npm ci
+
+      - name: Export source stack (for comparison baseline)
+        working-directory: tools/migration
+        env:
+          SOURCE_STACK_API_KEY: ${{ secrets.SOURCE_STACK_API_KEY }}
+          SOURCE_STACK_REGION: us
+          DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
+          DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}
+          DEST_STACK_REGION: us
+          EXPORT_DIR: ./exports
+          LOG_LEVEL: info
+        run: npm run export
+
+      - name: Validate destination against source
+        id: validate
+        working-directory: tools/migration
+        env:
+          DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
+          DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}
+          DEST_STACK_REGION: us
+          EXPORT_DIR: ./exports
+          LOG_LEVEL: info
+        run: |
+          npm run validate
+          echo "VALIDATE_EXIT=$?" >> "$GITHUB_ENV"
+
+      - name: Write job summary
+        if: always()
+        working-directory: tools/migration
+        run: |
+          REPORT=$(cat exports/reports/latest.json 2>/dev/null || echo '{}')
+          echo "## Validation Report" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Area | OK | Issues |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|------|----|--------|" >> "$GITHUB_STEP_SUMMARY"
+
+          GF_OK=$(echo "$REPORT" | node -e "process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const r=JSON.parse(d);console.log(r.summary?.globalFields?.ok??'-')}catch{console.log('-')}})")
+          GF_ISSUES=$(echo "$REPORT" | node -e "process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const r=JSON.parse(d);const s=r.summary?.globalFields||{};console.log((s.missing||0)+(s.mismatch||0))}catch{console.log('-')}})")
+          CT_OK=$(echo "$REPORT" | node -e "process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const r=JSON.parse(d);console.log(r.summary?.contentTypes?.ok??'-')}catch{console.log('-')}})")
+          CT_ISSUES=$(echo "$REPORT" | node -e "process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const r=JSON.parse(d);const s=r.summary?.contentTypes||{};console.log((s.missing||0)+(s.mismatch||0))}catch{console.log('-')}})")
+          EN_OK=$(echo "$REPORT" | node -e "process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const r=JSON.parse(d);console.log(r.summary?.entries?.ok??'-')}catch{console.log('-')}})")
+          EN_ISSUES=$(echo "$REPORT" | node -e "process.stdin.resume();let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const r=JSON.parse(d);console.log(r.summary?.entries?.mismatch??'-')}catch{console.log('-')}})")
+
+          echo "| Global Fields | $GF_OK | $GF_ISSUES |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Content Types | $CT_OK | $CT_ISSUES |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Entry Counts  | $EN_OK | $EN_ISSUES |" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-report-${{ github.run_id }}
+          path: tools/migration/exports/reports/
+          retention-days: 30
+
+      - name: Notify on failure
+        if: failure()
+        uses: actions/github-script@v7
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          script: |
+            const webhookUrl = process.env.SLACK_WEBHOOK_URL;
+            if (!webhookUrl) return;
+            const payload = {
+              text: `*APIDocs ↔ Sandbox validation failed* :warning:\nRun: <${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}|#${context.runId}>`
+            };
+            await fetch(webhookUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload),
+            });
