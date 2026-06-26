@@ -33,7 +33,7 @@ jobs:
       - name: Export source stack (for comparison baseline)
         working-directory: tools/migration
         env:
-          SOURCE_STACK_API_KEY: ${{ secrets.SOURCE_STACK_API_KEY }}
+          SOURCE_STACK_API_KEY: blt8fb40ae1e60d06b9
           SOURCE_STACK_REGION: us
           DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
           DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}

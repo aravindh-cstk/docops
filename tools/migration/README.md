@@ -110,10 +110,11 @@ Set these in **Settings → Secrets and variables → Actions**:
 
 | Secret | Value |
 |--------|-------|
-| `SOURCE_STACK_API_KEY` | `blt8fb40ae1e60d06b9` |
 | `DEST_STACK_API_KEY` | `bltf92796d1cef4d3d4` |
-| `DEST_MANAGEMENT_TOKEN` | Management token for APIDocs-Sandbox |
-| `SLACK_WEBHOOK_URL` | Incoming webhook URL (optional) |
+| `DEST_MANAGEMENT_TOKEN` | `cs5b76ec832ed68bafb5be08b2` |
+| `SLACK_WEBHOOK_URL` | Slack incoming webhook URL (optional) |
+
+> The source stack API key (`blt8fb40ae1e60d06b9`) is read-only and hardcoded directly in the workflows — no secret needed.
 
 ## Logging
 

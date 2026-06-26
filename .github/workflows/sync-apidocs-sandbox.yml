@@ -43,7 +43,7 @@ jobs:
         if: ${{ !inputs.skip_export }}
         working-directory: tools/migration
         env:
-          SOURCE_STACK_API_KEY: ${{ secrets.SOURCE_STACK_API_KEY }}
+          SOURCE_STACK_API_KEY: blt8fb40ae1e60d06b9
           SOURCE_STACK_REGION: us
           SOURCE_STACK_BRANCH: main
           DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
@@ -57,7 +57,7 @@ jobs:
         id: diff
         working-directory: tools/migration
         env:
-          SOURCE_STACK_API_KEY: ${{ secrets.SOURCE_STACK_API_KEY }}
+          SOURCE_STACK_API_KEY: blt8fb40ae1e60d06b9
           SOURCE_STACK_REGION: us
           DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
           DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}
@@ -79,8 +79,6 @@ jobs:
         if: steps.diff.outputs.has_changes == 'true'
         working-directory: tools/migration
         env:
-          SOURCE_STACK_API_KEY: ${{ secrets.SOURCE_STACK_API_KEY }}
-          SOURCE_STACK_REGION: us
           DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
           DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}
           DEST_STACK_REGION: us
@@ -95,8 +93,6 @@ jobs:
         if: steps.diff.outputs.has_changes == 'true' && inputs.dry_run != true
         working-directory: tools/migration
         env:
-          SOURCE_STACK_API_KEY: ${{ secrets.SOURCE_STACK_API_KEY }}
-          SOURCE_STACK_REGION: us
           DEST_STACK_API_KEY: ${{ secrets.DEST_STACK_API_KEY }}
           DEST_MANAGEMENT_TOKEN: ${{ secrets.DEST_MANAGEMENT_TOKEN }}
           DEST_STACK_REGION: us
