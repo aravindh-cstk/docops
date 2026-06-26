@@ -1,9 +1,9 @@
 ---
 title: "onChange(callback)"
-description: "The `onChange` method listens for asset change events. assetSidebar.onChange((changedAsset) => { console.log('Asset changed:', changedAsset); });"
+description: "The `onChange` method listens for asset change events."
 url: "https://www.contentstack.com/app-sdk---assetsidebarwidget---onchange-callback-"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "method_details"
 audience:
   - developers
   - admins

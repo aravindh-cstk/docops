@@ -1,9 +1,9 @@
 ---
 title: "RTELocation"
-description: "The `RTELocation` object provides access to the RTE context and entry data within rich text fields. const rteLocation = sdk.location.RTELocation; if (rteLocation) { const entry = rteLocation.entry; const entryData = entry.getData(); } It supports only the entry core object:"
+description: "The `RTELocation` object provides access to the RTE context and entry data within rich text fields."
 url: "https://www.contentstack.com/appsdk-rte-rtelocation"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "method_details"
 audience:
   - developers
   - admins

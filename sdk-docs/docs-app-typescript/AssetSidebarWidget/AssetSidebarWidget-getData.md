@@ -1,9 +1,9 @@
 ---
 title: "getData"
-description: "The `getData` method retrieves the current asset data. const assetData = assetSidebar.getData(); console.log('Asset title:', assetData.title); console.log('Asset URL:', assetData.url);"
+description: "The `getData` method retrieves the current asset data."
 url: "https://www.contentstack.com/app-sdk---assetsidebarwidget---getdata-"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "method_details"
 audience:
   - developers
   - admins

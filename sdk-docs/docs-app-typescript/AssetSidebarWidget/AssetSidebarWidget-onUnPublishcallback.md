@@ -1,9 +1,9 @@
 ---
 title: "onUnPublish(callback)"
-description: "The `onUnPublish` method listens for asset unpublish events. assetSidebar.onUnPublish((unpublishedAsset) => { console.log('Asset unpublished:', unpublishedAsset); });"
+description: "The `onUnPublish` method listens for asset unpublish events."
 url: "https://www.contentstack.com/app-sdk---assetsidebarwidget---onunpublish-callback-"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "method_details"
 audience:
   - developers
   - admins

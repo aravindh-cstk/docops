@@ -1,9 +1,9 @@
 ---
 title: "onSave(callback)"
-description: "The `onSave()` method listens for content type save events. contentTypeSidebar.onSave((updatedContentType) => { console.log('Content type saved:', updatedContentType); // Handle the updated content type });"
+description: "The `onSave()` method listens for content type save events."
 url: "https://www.contentstack.com/app-sdk---contenttype-sidebar-widget---onsave-callback-"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "method_details"
 audience:
   - developers
   - admins

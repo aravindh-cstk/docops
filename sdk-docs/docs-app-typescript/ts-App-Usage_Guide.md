@@ -3,7 +3,7 @@ title: "Contentstack App SDK TypeScript Support"
 description: "Contentstack App SDK TypeScript Support"
 url: ""
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "usage_guide"
 audience:
   - developers
   - admins

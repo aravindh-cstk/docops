@@ -1,9 +1,9 @@
 ---
 title: "AppConfigWidget"
-description: "The `AppConfigWidget` object enables app configuration and settings management within the Contentstack UI. const appConfig = sdk.location.AppConfigWidget; if (appConfig) { const stack = appConfig.stack; const installation = appConfig.installation; } It supports only the stack core object."
+description: "The `AppConfigWidget` object enables app configuration and settings management within the Contentstack UI."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/appconfigwidget"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "class_intro"
 audience:
   - developers
   - admins

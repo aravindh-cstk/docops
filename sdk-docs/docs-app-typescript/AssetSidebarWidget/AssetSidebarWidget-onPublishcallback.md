@@ -1,9 +1,9 @@
 ---
 title: "onPublish(callback)"
-description: "The `onPublish` method listens for asset publish events. assetSidebar.onPublish((publishedAsset) => { console.log('Asset published:', publishedAsset); });"
+description: "The `onPublish` method listens for asset publish events."
 url: "https://www.contentstack.com/app-sdk---assetsidebarwidget---onpublish-callback-"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "method_details"
 audience:
   - developers
   - admins

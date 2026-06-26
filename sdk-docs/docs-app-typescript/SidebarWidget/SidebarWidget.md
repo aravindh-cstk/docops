@@ -1,9 +1,9 @@
 ---
 title: "SidebarWidget"
-description: "The `SidebarWidget` UI location integrates with entry sidebars to provide contextual tools and information for content editors. const sidebar = sdk.location.SidebarWidget; if (sidebar) { const entry = sidebar.entry; const stack = sidebar.stack; } It supports the following core objects: Entry Stack"
+description: "The `SidebarWidget` UI location integrates with entry sidebars to provide contextual tools and information for content editors."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/sidebarwidget"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "class_intro"
 audience:
   - developers
   - admins

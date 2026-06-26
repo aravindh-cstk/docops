@@ -1,9 +1,9 @@
 ---
 title: "updateWidth(width)"
-description: "The `updateWidth` method updates the width of the Asset Sidebar widget. await assetSidebar.updateWidth(400);"
+description: "The `updateWidth` method updates the width of the Asset Sidebar widget."
 url: "https://www.contentstack.com/app-sdk---assetsidebarwidget---updatewidth-width-"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "method_details"
 audience:
   - developers
   - admins

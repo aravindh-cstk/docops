@@ -1,9 +1,9 @@
 ---
 title: "GlobalFullPageLocation"
-description: "The `GlobalFullPageLocation` object provides cross-stack functionality for global applications that operate across multiple stacks or organizations. const globalFullPage = sdk.location.GlobalFullPageLocation; if (globalFullPage) { const currentOrg = globalFullPage.currentOrganization; console.log('Current organization:', currentOrg); }"
+description: "The `GlobalFullPageLocation` object provides cross-stack functionality for global applications that operate across multiple stacks or organizations."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/globalfullpagelocation"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "class_intro"
 audience:
   - developers
   - admins

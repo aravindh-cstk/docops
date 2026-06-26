@@ -1,9 +1,9 @@
 ---
 title: "AssetSidebarWidget"
-description: "The `AssetSidebarWidget` UI location integrates with asset management interfaces in the Contentstack UI. const assetSidebar = sdk.location.AssetSidebarWidget; if (assetSidebar) { const assetData = assetSidebar.getData(); await assetSidebar.setData({ title: 'New Asset Title' }); assetSidebar.onSave((updatedAsset) => { console.log('Asset saved:', updatedAsset); }); }"
+description: "The `AssetSidebarWidget` UI location integrates with asset management interfaces in the Contentstack UI."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/assetsidebarwidget"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "class_intro"
 audience:
   - developers
   - admins

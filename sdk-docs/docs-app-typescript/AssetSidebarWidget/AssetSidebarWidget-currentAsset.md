@@ -1,9 +1,9 @@
 ---
 title: "currentAsset"
-description: "The `currentAsset` property retrieves the current asset object directly. const asset = assetSidebar.currentAsset; console.log('Current asset:', asset);"
+description: "The `currentAsset` property retrieves the current asset object directly."
 url: "https://www.contentstack.com/app-sdk---assetsidebarwidget---currentasset"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "method_details"
 audience:
   - developers
   - admins

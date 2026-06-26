@@ -1,9 +1,9 @@
 ---
 title: "currentContentType"
-description: "The `currentContentType` property retrieves the current content type object directly. const contentType = contentTypeSidebar.currentContentType; console.log('Current content type:', contentType);"
+description: "The `currentContentType` property retrieves the current content type object directly."
 url: "https://www.contentstack.com/app-sdk---contenttype-sidebar-widget---currentcontenttype"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "method_details"
 audience:
   - developers
   - admins

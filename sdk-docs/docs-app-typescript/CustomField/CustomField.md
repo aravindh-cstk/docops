@@ -1,9 +1,9 @@
 ---
 title: "CustomField"
-description: "The `CustomField` object extends field functionality with custom validation and input components. const customField = sdk.location.CustomField; if (customField) { const field = customField.field; const entry = customField.entry; const stack = customField.stack; const frame = customField.frame; } It supports the following core objects: Stack Frame Field Entry"
+description: "The `CustomField` object extends field functionality with custom validation and input components."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/customfield"
 product: "Contentstack"
-doc_type: "guide"
+doc_type: "class_intro"
 audience:
   - developers
   - admins
