@@ -1,29 +1,50 @@
-# Contentstack export to cs-docs
+# Contentstack Documentation Export
 
-This repository contains a Node.js script that exports `docs_article` entries from Contentstack into the local `cs-docs` folder.
+This folder contains exported documentation from Contentstack stacks, organized by product area.
+
+## Structure
+
+- **cs-docs/** — Product-specific documentation (administration, agent-os, developers, etc.)
+- **../api-docs/** — API documentation and request examples (at root level)
+- **../backend/** — Export scripts and utilities (at root level)
+
+## Export Scripts
+
+Scripts are located in the `../backend/` directory:
+
+- `export-api-docs.js` — Export API documentation from API stack
+- `export-contentstack.js` — Export docs_article entries
+- `export-docs-sections.js` — Export additional doc sections
+- `rewrite-links.js` — Convert absolute links to relative paths
+- `lint-api-docs.js` — Validate exported files against ../backend/LINTING.md
 
 ## Usage
 
-1. Set the required environment variables:
+From the `backend/` directory:
 
 ```bash
-export CONTENTSTACK_API_KEY=blt2d43f51baca745a8
-export CONTENTSTACK_DELIVERY_TOKEN=cs80888179b9220bd7cea067ff
-export CONTENTSTACK_ENV=production
-export OUTPUT_ROOT=./cs-docs
-```
-
-2. Run the export script:
-
-```bash
+cd ../backend
 npm run export
 ```
 
-3. The script will create nested folders under `cs-docs` based on each entry's `url` field, and write each entry's `md_content` into a `.md` file.
+Or run specific scripts:
+
+```bash
+cd ../backend
+node export-api-docs.js
+```
+
+## Environment Variables
+
+```bash
+export CONTENTSTACK_API_KEY=your_api_key
+export CONTENTSTACK_DELIVERY_TOKEN=your_delivery_token
+export CONTENTSTACK_ENV=production
+```
 
 ## Notes
 
 - Existing `.md` files are preserved and not overwritten.
 - URL path segments are sanitized for filesystem safety.
-- Asset and reference URLs are included in markdown frontmatter metadata.
+- All internal links are converted to relative markdown paths.
 - The default Contentstack host is `https://cdn.contentstack.io`.
