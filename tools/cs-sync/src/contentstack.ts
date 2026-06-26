@@ -112,30 +112,48 @@ export class ContentstackClient {
 
   async listRecentEntries(sinceIso: string): Promise<ContentstackEntry[]> {
     const query = JSON.stringify({ updated_at: { $gt: sinceIso } });
-    const params = new URLSearchParams({
-      query,
-      locale: this.config.CS_LOCALE,
-      include_count: "true",
-      limit: "100",
-    });
-    const url = `${this.entriesBase()}?${params}`;
+    const PAGE_SIZE = 100;
+    const all: ContentstackEntry[] = [];
+    let skip = 0;
 
-    const res = await fetch(url, { headers: this.headers() });
+    for (;;) {
+      const params = new URLSearchParams({
+        query,
+        locale: this.config.CS_LOCALE,
+        include_count: "true",
+        limit: String(PAGE_SIZE),
+        skip: String(skip),
+      });
+      const pageUrl = `${this.entriesBase()}?${params}`;
 
-    if (!res.ok) {
-      const text = await res.text();
-      throw new Error(
-        `listRecentEntries failed — GET ${url} returned HTTP ${res.status} ${res.statusText}.\n` +
-        `  Stack: ${this.config.CS_API_KEY} | Content-type: ${this.config.CS_CONTENT_TYPE} | Locale: ${this.config.CS_LOCALE}\n` +
-        `  since: ${sinceIso}\n` +
-        `  Response body: ${text}`,
-      );
+      const res = await fetch(pageUrl, { headers: this.headers() });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(
+          `listRecentEntries failed — GET ${pageUrl} returned HTTP ${res.status} ${res.statusText}.\n` +
+          `  Stack: ${this.config.CS_API_KEY} | Content-type: ${this.config.CS_CONTENT_TYPE} | Locale: ${this.config.CS_LOCALE}\n` +
+          `  since: ${sinceIso}\n` +
+          `  Response body: ${text}`,
+        );
+      }
+
+      const data = (await res.json()) as { entries?: ContentstackEntry[]; count?: number };
+      const page = data.entries ?? [];
+      all.push(...page);
+
+      const total = data.count ?? all.length;
+      if (skip === 0) {
+        console.log(`listRecentEntries: ${total} total entries updated since ${sinceIso}`);
+      }
+
+      if (all.length >= total || page.length < PAGE_SIZE) break;
+      skip += PAGE_SIZE;
+      console.log(`listRecentEntries: fetched ${all.length}/${total} — fetching next page (skip=${skip})`);
     }
 
-    const data = (await res.json()) as { entries?: ContentstackEntry[] };
-    const entries = data.entries ?? [];
-    console.log(`listRecentEntries: ${entries.length} entries updated since ${sinceIso}`);
-    return entries;
+    console.log(`listRecentEntries: done — ${all.length} entries fetched`);
+    return all;
   }
 
   async findAssetByFilename(filename: string): Promise<{ url: string; uid: string } | null> {
