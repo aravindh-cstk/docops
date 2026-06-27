@@ -13,8 +13,9 @@ class ContentstackAPI {
   _readHeaders() {
     const headers = { api_key: this.apiKey };
     if (this.managementToken) {
-      // Management tokens use the authtoken header in Contentstack's CMA
-      headers.authtoken = this.managementToken;
+      // Stack management tokens use the `authorization` header (not `authtoken`)
+      // `authtoken` is for user session tokens obtained via csdx auth:login
+      headers.authorization = this.managementToken;
     }
     return headers;
   }
@@ -22,7 +23,7 @@ class ContentstackAPI {
   _writeHeaders() {
     return {
       api_key: this.apiKey,
-      authtoken: this.managementToken,
+      authorization: this.managementToken,
       'Content-Type': 'application/json',
     };
   }
@@ -237,6 +238,15 @@ class ContentstackAPI {
       )
     );
     return response.data.entry;
+  }
+
+  async deleteEntry(contentTypeUid, uid) {
+    await this.retryRequest(() =>
+      axios.delete(
+        `${this.baseUrl}/content_types/${contentTypeUid}/entries/${uid}`,
+        { headers: this._writeHeaders() }
+      )
+    );
   }
 
   async upsertEntry(contentTypeUid, entry, isUpdate = false) {

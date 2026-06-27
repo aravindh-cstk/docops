@@ -10,7 +10,9 @@
     "sync:dry": "SYNC_DRY_RUN=true node sync-to-destination.js",
     "validate": "node validate-sync.js",
     "rollback": "node rollback.js",
-    "rollback:dry": "SYNC_DRY_RUN=true node rollback.js"
+    "rollback:dry": "SYNC_DRY_RUN=true node rollback.js",
+    "test": "node test_scripts.js",
+    "test:inspect": "node test_scripts.js --skip-cleanup"
   },
   "keywords": [
     "contentstack",
