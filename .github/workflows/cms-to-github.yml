@@ -72,7 +72,25 @@ jobs:
           git commit -m "chore: sync doc changes from Contentstack CMS"
           git push origin "$BRANCH"
 
-          CHANGED_FILES=$(git diff origin/main..."$BRANCH" --name-only | sed 's/^/- /' | head -20)
+          # Build the PR body with per-file editor info from the summary JSON
+          SUMMARY_FILE="tools/cs-sync/.cms-pull-summary.json"
+
+          if [ -f "$SUMMARY_FILE" ]; then
+            CHANGES_TABLE=$(node -e "
+              const changes = require('./$SUMMARY_FILE');
+              const rows = changes.map(c =>
+                '| \`' + c.filePath + '\` | ' + c.url + ' | **' + c.updatedByName + '** | ' + new Date(c.updatedAt).toUTCString() + ' |'
+              );
+              console.log('| File | CMS Entry | Modified By | Modified At |');
+              console.log('|------|-----------|-------------|-------------|');
+              rows.forEach(r => console.log(r));
+            ")
+          else
+            CHANGED_FILES=$(git diff origin/main..."$BRANCH" --name-only | grep '^docs/' | head -20)
+            CHANGES_TABLE="| File | CMS Entry | Modified By | Modified At |
+          |------|-----------|-------------|-------------|
+          $(echo "$CHANGED_FILES" | sed 's/^/| \`/' | sed 's/$/ \` | — | — | — |/')"
+          fi
 
           gh pr create \
             --title "CMS → GitHub: doc changes detected" \
@@ -82,8 +100,8 @@ jobs:
 
           **Review the diff carefully before merging** — in particular check that no content was unintentionally overwritten.
 
-          ### Changed files
-          ${CHANGED_FILES}
+          ### Changes detected
+          ${CHANGES_TABLE}
 
           ---
           _Triggered by the \`cms-to-github\` workflow · $(date -u '+%Y-%m-%d %H:%M UTC')_" \

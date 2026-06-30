@@ -156,6 +156,20 @@ export class ContentstackClient {
     return all;
   }
 
+  async getUserName(userUid: string): Promise<string> {
+    try {
+      const res = await fetch(`${this.config.baseUrl}/users/${userUid}`, {
+        headers: this.headers(),
+      });
+      if (!res.ok) return userUid;
+      const data = (await res.json()) as { user?: { display_name?: string; email?: string } };
+      const user = data.user ?? {};
+      return user.display_name || user.email || userUid;
+    } catch {
+      return userUid;
+    }
+  }
+
   async findAssetByFilename(filename: string): Promise<{ url: string; uid: string } | null> {
     const query = JSON.stringify({ filename });
     const params = new URLSearchParams({

@@ -102,6 +102,15 @@ function buildMarkdownFile(entry: ContentstackEntry): string {
   return `${fm}\n\n${body}\n`;
 }
 
+interface ChangeSummaryEntry {
+  filePath: string;
+  url: string;
+  entryUid: string;
+  updatedBy: string;
+  updatedByName: string;
+  updatedAt: string;
+}
+
 async function main(): Promise<void> {
   const { lookbackMinutes } = parseArgs(process.argv.slice(2));
   const since = new Date(Date.now() - lookbackMinutes * 60 * 1000).toISOString();
@@ -125,6 +134,7 @@ async function main(): Promise<void> {
 
   let changed = 0;
   let skipped = 0;
+  const changes: ChangeSummaryEntry[] = [];
 
   for (const entry of entries) {
     const url = (entry.url as string | undefined) ?? "";
@@ -161,11 +171,35 @@ async function main(): Promise<void> {
     const action = existing === null ? "created" : "updated";
     console.log(`cms-pull: ${action} ${filePath} (uid=${entry.uid})`);
     changed++;
+
+    changes.push({
+      filePath: path.relative(repoRoot, filePath),
+      url,
+      entryUid: entry.uid,
+      updatedBy: (entry.updated_by as string | undefined) ?? "unknown",
+      updatedByName: "",
+      updatedAt: (entry.updated_at as string | undefined) ?? "",
+    });
   }
 
   console.log(
     `cms-pull: done — ${changed} file(s) written, ${skipped} skipped out of ${entries.length} total.`,
   );
+
+  if (changes.length > 0) {
+    // Resolve updated_by UIDs to display names (cached to avoid duplicate API calls)
+    const userCache: Record<string, string> = {};
+    for (const c of changes) {
+      if (!userCache[c.updatedBy]) {
+        userCache[c.updatedBy] = await client.getUserName(c.updatedBy);
+      }
+      c.updatedByName = userCache[c.updatedBy]!;
+    }
+
+    const summaryPath = path.join(scriptDir, "../.cms-pull-summary.json");
+    fs.writeFileSync(summaryPath, JSON.stringify(changes, null, 2), "utf8");
+    console.log(`cms-pull: summary written to ${summaryPath}`);
+  }
 }
 
 main().catch((err) => {
