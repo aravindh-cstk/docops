@@ -58,5 +58,10 @@ export function htmlToMarkdown(html: string): string {
     .replace(/^(#{1,6} .+)$/gm, (line) => line.replace(/\\\[/g, "[").replace(/\\\]/g, "]"))
     // The GFM plugin escapes leading - in any content to prevent list rendering,
     // but inside table cells - is always literal. Unescape \- in table rows only.
-    .replace(/^\|.+\|$/gm, (row) => row.replace(/\\\-/g, "-"));
+    .replace(/^\|.+\|$/gm, (row) => row.replace(/\\\-/g, "-"))
+    // Turndown escapes * in plain text nodes to prevent accidental emphasis.
+    // CMS authors sometimes type **bold** directly in the rich-text editor as raw
+    // text rather than using the bold button, which produces <strong>. Restore
+    // balanced \*\*...\*\* pairs so they render as bold in the final markdown.
+    .replace(/\\\*\\\*(.+?)\\\*\\\*/g, "**$1**");
 }

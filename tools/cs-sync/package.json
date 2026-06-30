@@ -10,6 +10,10 @@
     "fix:check": "npm run fix && npm run lint",
     "cms-pull": "tsx src/cms-pull.ts",
     "test:integration": "tsx src/integration-test.ts",
+    "test:content": "tsx src/test-html-to-md.ts",
+    "test:errors": "tsx src/test-error-handling.ts",
+    "test:cms-pull": "tsx src/test-cms-pull.ts",
+    "test:all": "tsx src/test-report.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

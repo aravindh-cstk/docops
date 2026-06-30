@@ -1,0 +1,30 @@
+---
+title: "order_by_ascending"
+description: "you can sort them in the ascending order with respect to the value of a specific field in the response body."
+url: "https://www.contentstack.com/python-query-order_by_ascending"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## order_by_ascending
+
+you can sort them in the ascending order with respect to the value of a specific field in the response body.
+
+No parameters.
+
+Returns:
+Type
+Query
+
+```
+import contentstack;
+stack = contentstack.Stack(api_key, delivery_token, environment);
+content_type = stack.content_type('content_type_uid')
+query = content_type.query()
+query.order_by_ascending("key")
+```
