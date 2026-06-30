@@ -230,6 +230,40 @@ class ContentstackAPI {
     return { entries: response.data.entries || [] };
   }
 
+  // List entries updated since a given ISO timestamp (for CMS → GitHub pull)
+  async listRecentEntries(ctUid, sinceIso) {
+    const all = [];
+    let skip = 0;
+    const query = encodeURIComponent(JSON.stringify({ updated_at: { $gt: sinceIso } }));
+
+    while (true) {
+      const response = await this.retryRequest(() =>
+        axios.get(
+          `${this.cmaBaseUrl}/content_types/${ctUid}/entries?query=${query}&limit=100&skip=${skip}&include_count=true`,
+          { headers: this._readHeaders() }
+        )
+      );
+      const entries = response.data.entries || [];
+      all.push(...entries);
+      if (all.length >= (response.data.count || 0) || entries.length === 0) break;
+      skip += 100;
+    }
+    return all;
+  }
+
+  // Resolve a user UID to display name via the users API
+  async getUserName(userUid) {
+    try {
+      const response = await this.retryRequest(() =>
+        axios.get(`${this.cmaBaseUrl}/users/${userUid}`, { headers: this._readHeaders() })
+      );
+      const user = response.data.user || {};
+      return user.display_name || user.email || userUid;
+    } catch {
+      return userUid;
+    }
+  }
+
   // List all entries (paginated) for a content type — used for deletion sweep
   async getAllEntries(ctUid) {
     const all = [];

@@ -33,6 +33,7 @@ for (let i = 0; i < argv.length; i++) {
 }
 const GIT_BEFORE = argMap['--before'] || null;
 const GIT_AFTER = argMap['--after'] || null;
+const SDK_FILTER = argMap['--sdk'] || null;
 
 // ── CMS payload builders ──────────────────────────────────────────────────────
 
@@ -256,6 +257,15 @@ function getClassFiles(sdkFolder, className) {
 // ── Determine affected SDK folders ────────────────────────────────────────────
 
 function getAffectedSdks() {
+  if (SDK_FILTER) {
+    if (!SDK_CONFIG[SDK_FILTER]) {
+      logger.error(`Unknown SDK folder: "${SDK_FILTER}"`);
+      process.exit(1);
+    }
+    logger.info(`Single-SDK mode — syncing only: ${SDK_FILTER}`);
+    return [SDK_FILTER];
+  }
+
   if (GIT_BEFORE && GIT_AFTER) {
     try {
       const output = execSync(`git diff --name-only ${GIT_BEFORE} ${GIT_AFTER}`, {
