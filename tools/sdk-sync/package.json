@@ -1,0 +1,21 @@
+{
+  "name": "sdk-sync",
+  "version": "1.0.0",
+  "description": "Schema replication and sync tools for the SDK API Reference stack",
+  "scripts": {
+    "setup": "node setup-sandbox.js",
+    "setup:dry": "SYNC_DRY_RUN=true node setup-sandbox.js",
+    "validate": "node validate-sandbox.js",
+    "sync": "node sync-entries.js",
+    "sync:dry": "SYNC_DRY_RUN=true node sync-entries.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^4.1.0",
+    "dotenv": "^16.0.0",
+    "gray-matter": "^4.0.3",
+    "lodash": "^4.17.21",
+    "markdown-it": "^14.0.0",
+    "sanitize-html": "^2.12.0"
+  }
+}
