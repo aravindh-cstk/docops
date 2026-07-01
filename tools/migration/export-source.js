@@ -55,15 +55,13 @@ async function exportStack() {
     for (const ct of contentTypes) {
       let skip = 0;
       let totalFetched = 0;
-      
+      allEntries[ct.uid] = [];
+
       while (true) {
         const { entries, totalCount } = await sourceApi.exportEntries(ct.uid, 100, skip);
-        
+
         if (entries.length === 0) break;
-        
-        if (!allEntries[ct.uid]) {
-          allEntries[ct.uid] = [];
-        }
+
         allEntries[ct.uid].push(...entries);
         totalFetched += entries.length;
         
