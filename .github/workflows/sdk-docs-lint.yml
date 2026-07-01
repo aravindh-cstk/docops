@@ -27,6 +27,10 @@ jobs:
         working-directory: tools/sdk-sync
         run: npm ci
 
+      - name: Install cs-sync dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
       - name: Lint documentation
         id: lint
         working-directory: tools/sdk-sync
