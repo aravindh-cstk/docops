@@ -37,6 +37,10 @@ jobs:
         working-directory: tools/migration
         run: npm install
 
+      - name: Install cs-sync dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
       - name: Lint API docs
         working-directory: tools/migration
         run: npm run lint -- --base origin/main
