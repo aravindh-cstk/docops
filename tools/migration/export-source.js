@@ -8,7 +8,7 @@ const logger = require('./utils/logger');
 
 const sourceApi = new ContentstackAPI(
   process.env.SOURCE_STACK_API_KEY,
-  null,
+  process.env.SOURCE_STACK_MANAGEMENT_TOKEN,
   process.env.SOURCE_STACK_REGION
 );
 
