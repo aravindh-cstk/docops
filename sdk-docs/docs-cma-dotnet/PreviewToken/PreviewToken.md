@@ -19,7 +19,7 @@ last_updated: "2026-06-24"
 
 **Conceptual Role:** Acts as a scoped token manager for a single delivery token. Call `client.Stack(apiKey).PreviewToken(deliveryTokenUid)` to target it and enable Create, CreateAsync, Delete, and DeleteAsync.
 
-**Warning:** `deliveryTokenUid` is a positional string parameter. The SDK does not validate it client-side. Passing an incorrect or empty value will cause a runtime API error (typically 422 or 404) with no indication that the constructor argument is the source. Always verify the delivery token UID before calling any method on this class.
+**Warning:** `deliveryTokenUid` is a positional string parameter. The SDK does not validate it client-side. Passing an incorrect or empty value causes a runtime API error (typically 422 or 404) with no indication that the constructor argument is the source. Always verify the delivery token UID before calling any method on this class.
 
 ### Class-Level Notes
 

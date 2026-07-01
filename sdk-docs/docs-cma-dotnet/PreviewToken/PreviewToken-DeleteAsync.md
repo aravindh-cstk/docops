@@ -33,7 +33,7 @@ This method does not require a separate preview token UID. It deletes the previe
 
 #### Validation
 
-Throws `InvalidOperationException` with message "You are not logged in. Log in and try again." if the client has no active auth session.
+Throws `InvalidOperationException` with message "You are not logged in. Sign in and try again." if the client has no active auth session.
 
 For authentication and rate-limit errors (401, 403, 429), see Class-Level Notes.
 
@@ -47,7 +47,7 @@ Executes the HTTP DELETE asynchronously and does not block the calling thread. T
 
 #### Implementation & Examples
 
-**Basic usage — asynchronously delete the preview token for a delivery token**
+**Basic usage - asynchronously delete the preview token for a delivery token**
 
 ```csharp
 using Contentstack.Management.Core;
@@ -71,7 +71,7 @@ catch (Exception ex)
 }
 ```
 
-**All parameters — async with a ParameterCollection**
+**All parameters - async with a ParameterCollection**
 
 ```csharp
 using Contentstack.Management.Core;
@@ -97,7 +97,7 @@ catch (Exception ex)
 }
 ```
 
-**Error handling — catching async exceptions on a missing preview token**
+**Error handling - catching async exceptions on a missing preview token**
 
 ```csharp
 using Contentstack.Management.Core;

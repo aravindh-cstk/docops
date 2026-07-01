@@ -25,7 +25,7 @@ Creates a preview token for the specified delivery token in the stack.
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| model | PreviewTokenModel | Yes | — | The request payload containing preview token details. |
+| model | PreviewTokenModel | Yes | - | The request payload containing preview token details. |
 | collection | ParameterCollection | No | null | Optional query parameters appended to the request. See Class-Level Notes. |
 
 #### Validation
@@ -45,7 +45,7 @@ Sends a single HTTP POST request to the Management API and returns the created p
 
 #### Implementation & Examples
 
-**Basic usage — create a preview token for a delivery token**
+**Basic usage - create a preview token for a delivery token**
 
 ```csharp
 using Contentstack.Management.Core;
@@ -76,7 +76,7 @@ catch (Exception ex)
 }
 ```
 
-**All parameters — with a ParameterCollection**
+**All parameters - with a ParameterCollection**
 
 ```csharp
 using Contentstack.Management.Core;
@@ -108,7 +108,7 @@ catch (Exception ex)
 }
 ```
 
-**Error handling — catching a failed token creation**
+**Error handling - catching a failed token creation**
 
 ```csharp
 using Contentstack.Management.Core;

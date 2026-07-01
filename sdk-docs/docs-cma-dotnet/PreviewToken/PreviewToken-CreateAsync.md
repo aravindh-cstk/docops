@@ -25,14 +25,14 @@ Asynchronously creates a preview token for the specified delivery token in the s
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| model | PreviewTokenModel | Yes | — | The request payload containing preview token details. |
+| model | PreviewTokenModel | Yes | - | The request payload containing preview token details. |
 | collection | ParameterCollection | No | null | Optional query parameters appended to the request. See Class-Level Notes. |
 
 #### Validation
 
 Throws `InvalidOperationException` with message:
 
-- "You are not logged in. Log in and try again." if the client has no active auth session.
+- "You are not logged in. Sign in and try again." if the client has no active auth session.
 - "Operation not allowed on this model. Update your request and try again." if the `PreviewToken` object already has a UID assigned. `CreateAsync()` only supports creating new preview tokens.
 
 For authentication and rate-limit errors (401, 403, 429), see Class-Level Notes.
@@ -48,7 +48,7 @@ Executes the HTTP POST asynchronously and does not block the calling thread. Ret
 
 #### Implementation & Examples
 
-**Basic usage — asynchronously create a preview token**
+**Basic usage - asynchronously create a preview token**
 
 ```csharp
 using Contentstack.Management.Core;
@@ -79,7 +79,7 @@ catch (Exception ex)
 }
 ```
 
-**All parameters — async with a ParameterCollection**
+**All parameters - async with a ParameterCollection**
 
 ```csharp
 using Contentstack.Management.Core;
@@ -111,7 +111,7 @@ catch (Exception ex)
 }
 ```
 
-**Error handling — catching async exceptions**
+**Error handling - catching async exceptions**
 
 ```csharp
 using Contentstack.Management.Core;
