@@ -39,6 +39,10 @@ jobs:
         working-directory: tools/migration
         run: npm ci
 
+      - name: Lint API docs
+        working-directory: tools/migration
+        run: npm run lint -- --base origin/main
+
       - name: Export source stack
         if: ${{ !inputs.skip_export }}
         working-directory: tools/migration

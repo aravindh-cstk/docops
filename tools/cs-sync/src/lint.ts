@@ -4,13 +4,43 @@ import path from "node:path";
 import { execSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { z } from "zod";
+import matter from "gray-matter";
 import { findRepoRoot, listChangedDocs, parseArgs } from "./diff.js";
-import { parseDocFile, resolveDocPaths } from "./parser.js";
+import { parseDocFile, resolveDocPaths, frontMatterSchema } from "./parser.js";
 import { collectLocalImageRefs } from "./assets.js";
 import { lintStyle } from "./style-lint.js";
 
 const MD_LINK_RE = /\[([^\]]*)]\(([^)]+)\)/g;
-const DOCS_URL_PREFIX = "/developers/";
+
+// Returns the URL prefix used for internal link resolution, or null if not applicable.
+function getDocsUrlPrefix(docsRoot: string): string | null {
+  if (docsRoot === "docs") return "/developers/";
+  return null;
+}
+
+// Returns the Zod schema to validate frontmatter for the given docs root.
+function getFrontmatterValidator(docsRoot: string): z.ZodTypeAny {
+  if (docsRoot === "sdk-docs") {
+    return z.object({
+      title: z
+        .string({ required_error: "Missing required frontmatter field 'title'" })
+        .min(1, { message: "Missing required frontmatter field 'title'" }),
+      doc_type: z.enum(["usage_guide", "class_intro", "method_details"], {
+        required_error: "Missing required frontmatter field 'doc_type' — must be usage_guide, class_intro, or method_details",
+      }),
+      url: z.string().optional(),
+    });
+  }
+  if (docsRoot === "docs") {
+    return frontMatterSchema;
+  }
+  // All other roots (api-docs, etc.): require only a non-empty title
+  return z.object({
+    title: z
+      .string({ required_error: "Missing required frontmatter field 'title'" })
+      .min(1, { message: "Missing required frontmatter field 'title'" }),
+  });
+}
 
 function formatZodErrors(file: string, err: z.ZodError): string[] {
   return err.issues.map((issue) => {
@@ -31,9 +61,10 @@ function resolveUrlToFile(
   repoRoot: string,
   docsRoot: string,
   url: string,
+  urlPrefix: string,
 ): string | null {
-  if (!url.startsWith(DOCS_URL_PREFIX)) return null;
-  const suffix = url.slice(DOCS_URL_PREFIX.length);
+  if (!url.startsWith(urlPrefix)) return null;
+  const suffix = url.slice(urlPrefix.length);
   return path.join(repoRoot, docsRoot, `${suffix}.md`);
 }
 
@@ -50,8 +81,9 @@ function resolveLinkTarget(
   // /docs/ paths reference the live Contentstack site, not files in this repo
   if (href.startsWith("/docs/")) return null;
 
-  if (href.startsWith(DOCS_URL_PREFIX)) {
-    return resolveUrlToFile(repoRoot, docsRoot, href.split("#")[0] ?? href);
+  const urlPrefix = getDocsUrlPrefix(docsRoot);
+  if (urlPrefix && href.startsWith(urlPrefix)) {
+    return resolveUrlToFile(repoRoot, docsRoot, href.split("#")[0] ?? href, urlPrefix);
   }
 
   const docDir = path.dirname(docRepoPath);
@@ -111,14 +143,21 @@ function lintDoc(
   const errors: string[] = [];
 
   try {
-    const doc = parseDocFile(repoRoot, docsRoot, repoRelativePath);
     const { absolute } = resolveDocPaths(repoRoot, docsRoot, repoRelativePath);
     if (!fs.existsSync(absolute)) {
       errors.push(`${repoRelativePath}: file not found`);
       return errors;
     }
 
-    for (const match of doc.body.matchAll(MD_LINK_RE)) {
+    const raw = fs.readFileSync(absolute, "utf8");
+    const { data, content: body } = matter(raw);
+
+    // Validate frontmatter with the schema for this docs root
+    getFrontmatterValidator(docsRoot).parse(data);
+
+    const trimmedBody = body.trim();
+
+    for (const match of trimmedBody.matchAll(MD_LINK_RE)) {
       const href = match[2]?.trim() ?? "";
       const target = resolveLinkTarget(repoRoot, docsRoot, repoRelativePath, href);
       if (target === null) continue;
@@ -129,14 +168,14 @@ function lintDoc(
     }
 
     const absoluteDocPath = path.join(repoRoot, repoRelativePath);
-    for (const { ref, resolved } of collectLocalImageRefs(doc.body, absoluteDocPath)) {
+    for (const { ref, resolved } of collectLocalImageRefs(trimmedBody, absoluteDocPath)) {
       if (!fs.existsSync(resolved)) {
         const repoRel = path.relative(repoRoot, resolved).replace(/\\/g, "/");
         errors.push(`${repoRelativePath}: missing image \`${ref}\` → ${repoRel}`);
       }
     }
 
-    errors.push(...lintStyle(doc.body, repoRelativePath));
+    errors.push(...lintStyle(trimmedBody, repoRelativePath));
   } catch (err) {
     if (err instanceof z.ZodError) {
       errors.push(...formatZodErrors(repoRelativePath, err));
@@ -171,11 +210,11 @@ async function main(): Promise<void> {
     return;
   }
 
-  // Build the full doc list once and run duplicate-URL check across all docs.
-  // This catches duplicates introduced by any file in the PR, not just the file
-  // being linted — and avoids re-running the scan once per changed file.
   const allDocs = buildAllDocs(repoRoot, docsRoot);
-  allErrors.push(...checkDuplicateUrls(repoRoot, docsRoot, allDocs));
+  // Duplicate-URL check only applies to CS docs — other roots don't use unique URL slugs.
+  if (docsRoot === "docs") {
+    allErrors.push(...checkDuplicateUrls(repoRoot, docsRoot, allDocs));
+  }
 
   for (const file of mdFiles) {
     allErrors.push(...lintDoc(repoRoot, docsRoot, file, allDocs));

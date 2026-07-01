@@ -12,7 +12,9 @@
     "rollback": "node rollback.js",
     "rollback:dry": "SYNC_DRY_RUN=true node rollback.js",
     "test": "node test_scripts.js",
-    "test:inspect": "node test_scripts.js --skip-cleanup"
+    "test:inspect": "node test_scripts.js --skip-cleanup",
+    "lint": "CS_DOCS_ROOT=api-docs tsx ../cs-sync/src/lint.ts",
+    "fix": "CS_DOCS_ROOT=api-docs tsx ../cs-sync/src/fix.ts"
   },
   "keywords": [
     "contentstack",
@@ -26,5 +28,8 @@
     "chalk": "^4.1.0",
     "dotenv": "^16.0.0",
     "lodash": "^4.17.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0"
   }
 }

@@ -43,6 +43,12 @@ function buildMethodEntry(filePath, sdkFolder, className) {
   const cfg = SDK_CONFIG[sdkFolder];
   if (!cfg) return null;
 
+  const missing = ['title', 'doc_type'].filter(f => !data[f]);
+  if (missing.length > 0) {
+    logger.warn(`  Skipping ${filePath}: missing required frontmatter fields: ${missing.join(', ')}`);
+    return null;
+  }
+
   const methodName = data.title || '';
   const slug = extractUrlSlug(data.url || '');
 
@@ -93,6 +99,12 @@ function buildClassEntry(filePath, sdkFolder, className, methodUids) {
   const { data, body } = parseFrontmatter(content);
   const cfg = SDK_CONFIG[sdkFolder];
   if (!cfg) return null;
+
+  const missing = ['title', 'doc_type', 'url'].filter(f => !data[f]);
+  if (missing.length > 0) {
+    logger.warn(`  Skipping ${filePath}: missing required frontmatter fields: ${missing.join(', ')}`);
+    return null;
+  }
 
   const slug = extractUrlSlug(data.url || '');
 

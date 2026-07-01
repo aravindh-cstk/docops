@@ -14,6 +14,21 @@ export interface ContentstackEntry {
 export class ContentstackClient {
   constructor(private readonly config: AppConfig) {}
 
+  private readonly maxRetries = parseInt(process.env.MAX_RETRIES ?? "3", 10);
+
+  private async fetchWithRetry(
+    url: string,
+    opts?: RequestInit,
+    retriesLeft = this.maxRetries,
+  ): Promise<Response> {
+    const res = await fetch(url, opts);
+    if (res.status >= 500 && retriesLeft > 0) {
+      await new Promise((r) => setTimeout(r, 1000));
+      return this.fetchWithRetry(url, opts, retriesLeft - 1);
+    }
+    return res;
+  }
+
   private headers(json = true): Record<string, string> {
     const h: Record<string, string> = {
       api_key: this.config.CS_API_KEY,
@@ -35,7 +50,7 @@ export class ContentstackClient {
       include_count: "true",
     });
 
-    const res = await fetch(`${this.entriesBase()}?${params}`, {
+    const res = await this.fetchWithRetry(`${this.entriesBase()}?${params}`, {
       headers: this.headers(),
     });
 
@@ -55,7 +70,7 @@ export class ContentstackClient {
   }
 
   async createEntry(payload: SyncEntryPayload): Promise<ContentstackEntry> {
-    const res = await fetch(this.entriesUrl(), {
+    const res = await this.fetchWithRetry(this.entriesUrl(), {
       method: "POST",
       headers: this.headers(),
       body: JSON.stringify({ entry: payload }),
@@ -74,7 +89,7 @@ export class ContentstackClient {
     uid: string,
     payload: SyncEntryPayload,
   ): Promise<ContentstackEntry> {
-    const res = await fetch(this.entriesUrl(uid), {
+    const res = await this.fetchWithRetry(this.entriesUrl(uid), {
       method: "PUT",
       headers: this.headers(),
       body: JSON.stringify({ entry: payload }),
@@ -90,7 +105,7 @@ export class ContentstackClient {
   }
 
   async unpublishEntry(uid: string): Promise<void> {
-    const res = await fetch(
+    const res = await this.fetchWithRetry(
       `${this.entriesBase()}/${uid}/unpublish?locale=${encodeURIComponent(this.config.CS_LOCALE)}`,
       {
       method: "POST",
@@ -126,7 +141,7 @@ export class ContentstackClient {
       });
       const pageUrl = `${this.entriesBase()}?${params}`;
 
-      const res = await fetch(pageUrl, { headers: this.headers() });
+      const res = await this.fetchWithRetry(pageUrl, { headers: this.headers() });
 
       if (!res.ok) {
         const text = await res.text();
@@ -158,7 +173,7 @@ export class ContentstackClient {
 
   async getUserName(userUid: string): Promise<string> {
     try {
-      const res = await fetch(`${this.config.baseUrl}/users/${userUid}`, {
+      const res = await this.fetchWithRetry(`${this.config.baseUrl}/users/${userUid}`, {
         headers: this.headers(),
       });
       if (!res.ok) return userUid;
@@ -178,7 +193,7 @@ export class ContentstackClient {
       limit: "1",
     });
 
-    const res = await fetch(`${this.config.baseUrl}/assets?${params}`, {
+    const res = await this.fetchWithRetry(`${this.config.baseUrl}/assets?${params}`, {
       headers: this.headers(),
     });
 
@@ -203,7 +218,7 @@ export class ContentstackClient {
       filename,
     );
 
-    const res = await fetch(`${this.config.baseUrl}/assets`, {
+    const res = await this.fetchWithRetry(`${this.config.baseUrl}/assets`, {
       method: "POST",
       headers: {
         api_key: this.config.CS_API_KEY,
