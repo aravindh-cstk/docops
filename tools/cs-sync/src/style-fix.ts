@@ -78,6 +78,29 @@ function applyToTextSegments(
 }
 
 // ---------------------------------------------------------------------------
+// Fix: em dashes and en dashes → hyphens (style guide: use hyphens, not dashes)
+// ---------------------------------------------------------------------------
+
+function fixDashes(content: string): FixResult {
+  return applyToTextSegments(content, (text) => {
+    const fixes: string[] = [];
+    let result = text;
+
+    result = result.replace(/ ?— ?/g, () => {
+      fixes.push("em dash (—) → hyphen");
+      return " - ";
+    });
+
+    result = result.replace(/ ?– ?/g, () => {
+      fixes.push("en dash (–) → hyphen");
+      return " - ";
+    });
+
+    return { content: result, fixes };
+  });
+}
+
+// ---------------------------------------------------------------------------
 // Fix: double spaces, blank-line trailing whitespace, Markdown hard line breaks
 // ---------------------------------------------------------------------------
 
@@ -276,6 +299,7 @@ export function fixStyle(content: string): FixResult {
   let current = content;
 
   const passes: Array<(c: string) => FixResult> = [
+    fixDashes,              // Must run before fixDoubleSpaces — dash replacement can introduce double spaces
     fixDoubleSpaces,        // Must run before other passes (whitespace affects offsets)
     fixSpelling,
     fixPhrasalVerbs,

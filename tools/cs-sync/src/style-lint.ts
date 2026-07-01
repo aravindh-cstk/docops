@@ -44,30 +44,36 @@ function loadBulletList(filePath: string): string[] {
 // numbers remain accurate.
 // ---------------------------------------------------------------------------
 
+// Placeholder used to mask protected regions. It preserves line/column
+// positions like a space would, but — unlike a space — can never itself
+// satisfy a prose check (e.g. checkDoubleSpaces, checkAllCaps, checkOxfordComma),
+// so masked code/frontmatter/link content can't produce false positives.
+const MASK_CHAR = "￼";
+
 export function stripCodeRegions(body: string): string {
   let result = body;
 
   // Strip YAML frontmatter
   result = result.replace(/^---[\s\S]*?^---\s*\n/m, (m) =>
-    m.replace(/[^\n]/g, " "),
+    m.replace(/[^\n]/g, MASK_CHAR),
   );
 
   // Strip fenced code blocks (``` or ~~~)
   result = result.replace(/^(`{3,}|~{3,})[\s\S]*?\1\s*$/gm, (m) =>
-    m.replace(/[^\n]/g, " "),
+    m.replace(/[^\n]/g, MASK_CHAR),
   );
 
   // Strip <pre> and <code> HTML blocks
   result = result.replace(/<(pre|code)[\s\S]*?<\/\1>/gi, (m) =>
-    m.replace(/[^\n]/g, " "),
+    m.replace(/[^\n]/g, MASK_CHAR),
   );
 
   // Strip inline code (`...`)
-  result = result.replace(/`[^`\n]+`/g, (m) => " ".repeat(m.length));
+  result = result.replace(/`[^`\n]+`/g, (m) => MASK_CHAR.repeat(m.length));
 
   // Strip markdown link URLs — keep the [text] part, blank the (url) part
   result = result.replace(/\]\(([^)]+)\)/g, (_m, url: string) =>
-    "](" + " ".repeat(url.length) + ")",
+    "](" + MASK_CHAR.repeat(url.length) + ")",
   );
 
   return result;
