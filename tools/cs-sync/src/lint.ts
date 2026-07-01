@@ -6,40 +6,59 @@ import { fileURLToPath } from "node:url";
 import { z } from "zod";
 import matter from "gray-matter";
 import { findRepoRoot, listChangedDocs, parseArgs } from "./diff.js";
-import { parseDocFile, resolveDocPaths, frontMatterSchema } from "./parser.js";
+import { parseDocFile, resolveDocPaths, frontMatterSchema, sdkFrontMatterSchema } from "./parser.js";
 import { collectLocalImageRefs } from "./assets.js";
 import { lintStyle } from "./style-lint.js";
 
 const MD_LINK_RE = /\[([^\]]*)]\(([^)]+)\)/g;
 
+// Generic fallback schema for docs roots with no product-specific rules (e.g. api-docs).
+const genericFrontMatterSchema = z.object({
+  title: z
+    .string({ required_error: "Missing required frontmatter field 'title'" })
+    .min(1, { message: "Missing required frontmatter field 'title'" }),
+});
+
+// Per-root configuration: the seam between "common" lint behavior (everything not
+// listed here) and "product-specific" behavior (frontmatter shape, duplicate-URL
+// enforcement, internal link resolution). Add an entry here for each new docs root.
+interface RootConfig {
+  frontmatter: z.ZodTypeAny;
+  checkDuplicateUrls: boolean;
+  urlPrefix: string | null;
+}
+
+const ROOT_CONFIG: Record<string, RootConfig> = {
+  "cs-docs": {
+    frontmatter: frontMatterSchema,
+    checkDuplicateUrls: true,
+    urlPrefix: "/developers/",
+  },
+  "sdk-docs": {
+    frontmatter: sdkFrontMatterSchema,
+    checkDuplicateUrls: false,
+    urlPrefix: null,
+  },
+};
+
+function getRootConfig(docsRoot: string): RootConfig {
+  return (
+    ROOT_CONFIG[docsRoot] ?? {
+      frontmatter: genericFrontMatterSchema,
+      checkDuplicateUrls: false,
+      urlPrefix: null,
+    }
+  );
+}
+
 // Returns the URL prefix used for internal link resolution, or null if not applicable.
 function getDocsUrlPrefix(docsRoot: string): string | null {
-  if (docsRoot === "docs") return "/developers/";
-  return null;
+  return getRootConfig(docsRoot).urlPrefix;
 }
 
 // Returns the Zod schema to validate frontmatter for the given docs root.
 function getFrontmatterValidator(docsRoot: string): z.ZodTypeAny {
-  if (docsRoot === "sdk-docs") {
-    return z.object({
-      title: z
-        .string({ required_error: "Missing required frontmatter field 'title'" })
-        .min(1, { message: "Missing required frontmatter field 'title'" }),
-      doc_type: z.enum(["usage_guide", "class_intro", "method_details"], {
-        required_error: "Missing required frontmatter field 'doc_type' — must be usage_guide, class_intro, or method_details",
-      }),
-      url: z.string().optional(),
-    });
-  }
-  if (docsRoot === "docs") {
-    return frontMatterSchema;
-  }
-  // All other roots (api-docs, etc.): require only a non-empty title
-  return z.object({
-    title: z
-      .string({ required_error: "Missing required frontmatter field 'title'" })
-      .min(1, { message: "Missing required frontmatter field 'title'" }),
-  });
+  return getRootConfig(docsRoot).frontmatter;
 }
 
 function formatZodErrors(file: string, err: z.ZodError): string[] {
@@ -175,7 +194,7 @@ function lintDoc(
       }
     }
 
-    errors.push(...lintStyle(trimmedBody, repoRelativePath));
+    errors.push(...lintStyle(trimmedBody, repoRelativePath, docsRoot));
   } catch (err) {
     if (err instanceof z.ZodError) {
       errors.push(...formatZodErrors(repoRelativePath, err));
@@ -193,7 +212,7 @@ async function main(): Promise<void> {
   const { base } = parseArgs(process.argv.slice(2));
   const scriptDir = path.dirname(fileURLToPath(import.meta.url));
   const repoRoot = findRepoRoot(path.join(scriptDir, "../../.."));
-  const docsRoot = process.env.CS_DOCS_ROOT ?? "docs";
+  const docsRoot = process.env.CS_DOCS_ROOT ?? "cs-docs";
 
   const { mdFiles, nonMdFiles } = listChangedDocs(repoRoot, docsRoot, base);
 
@@ -211,8 +230,8 @@ async function main(): Promise<void> {
   }
 
   const allDocs = buildAllDocs(repoRoot, docsRoot);
-  // Duplicate-URL check only applies to CS docs — other roots don't use unique URL slugs.
-  if (docsRoot === "docs") {
+  // Duplicate-URL check only applies to roots that use unique URL slugs (see ROOT_CONFIG).
+  if (getRootConfig(docsRoot).checkDuplicateUrls) {
     allErrors.push(...checkDuplicateUrls(repoRoot, docsRoot, allDocs));
   }
 

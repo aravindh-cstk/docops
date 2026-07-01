@@ -47,6 +47,17 @@ export const frontMatterSchema = z.object({
 
 export type DocFrontMatter = z.infer<typeof frontMatterSchema>;
 
+export const sdkFrontMatterSchema = z.object({
+  title: z
+    .string({ required_error: "Missing required frontmatter field 'title'" })
+    .min(1, { message: "Missing required frontmatter field 'title'" }),
+  doc_type: z.enum(["usage_guide", "class_intro", "method_details"], {
+    required_error:
+      "Missing required frontmatter field 'doc_type' — must be usage_guide, class_intro, or method_details",
+  }),
+  url: z.string().optional(),
+});
+
 export interface ParsedDoc {
   filePath: string;
   relativePath: string;

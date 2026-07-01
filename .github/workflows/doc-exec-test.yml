@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - "docs/**"
+      - "cs-docs/**"
 
 permissions:
   pull-requests: write
@@ -35,7 +35,7 @@ jobs:
         run: |
           BASE=${{ github.event.pull_request.base.sha }}
           HEAD=${{ github.event.pull_request.head.sha }}
-          CHANGED=$(git diff --name-only "$BASE" "$HEAD" -- "docs/**/*.md" || true)
+          CHANGED=$(git diff --name-only "$BASE" "$HEAD" -- "cs-docs/**/*.md" || true)
 
           OPT_IN="[]"
           if [ -n "$CHANGED" ]; then
@@ -72,7 +72,7 @@ jobs:
           EXEC_TEST_FILES: /tmp/exec-test-files.json
           EXEC_TEST_OUTPUT: /tmp/exec-test-output.txt
           REPO_ROOT: ${{ github.workspace }}
-          DOCS_ROOT: docs
+          DOCS_ROOT: cs-docs
         run: |
           if npm run exec-test; then
             echo "EXEC_TEST_PASSED=true" >> "$GITHUB_ENV"

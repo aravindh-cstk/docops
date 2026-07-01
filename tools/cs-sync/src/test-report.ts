@@ -263,7 +263,7 @@ function makeMockConfig(): AppConfig {
     CS_CONTENT_TYPE: "docs_article",
     CS_ENVIRONMENT: "production",
     CS_LOCALE: "en-us",
-    CS_DOCS_ROOT: "docs",
+    CS_DOCS_ROOT: "cs-docs",
     baseUrl: "https://api.contentstack.io/v3",
     repoRoot: os.tmpdir(),
   };

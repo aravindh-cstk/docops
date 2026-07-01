@@ -1,10 +1,10 @@
-name: Lint docs
+name: Lint SDK docs
 
 on:
   pull_request:
     branches: [main]
     paths:
-      - "cs-docs/**"
+      - "sdk-docs/**"
 
 permissions:
   pull-requests: write
@@ -21,15 +21,15 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-          cache-dependency-path: tools/cs-sync/package-lock.json
+          cache-dependency-path: tools/sdk-sync/package-lock.json
 
       - name: Install dependencies
-        working-directory: tools/cs-sync
+        working-directory: tools/sdk-sync
         run: npm ci
 
       - name: Lint documentation
         id: lint
-        working-directory: tools/cs-sync
+        working-directory: tools/sdk-sync
         continue-on-error: true
         run: |
           if npm run lint -- --base origin/main > /tmp/lint-output.txt 2>&1; then
@@ -47,7 +47,7 @@ jobs:
             const fs = require('fs');
             const output = fs.readFileSync('/tmp/lint-output.txt', 'utf8').trim();
             const body = [
-              '## Docs lint failed',
+              '## SDK docs lint failed',
               '',
               'Fix the following issues before merging:',
               '',
@@ -57,21 +57,19 @@ jobs:
               '',
               '### Required frontmatter',
               '',
-              'Every `.md` file under `docs/` must include:',
+              'Every `.md` file under `sdk-docs/` must include:',
               '',
               '```yaml',
               '---',
-              'url: /your-product/your-article-slug',
-              'marker: Your Product Name',
-              'heading: Your Article Title',
+              'title: "Your Class or Method Name"',
+              'doc_type: usage_guide | class_intro | method_details',
               '---',
               '```',
               '',
               '| Field | Rule |',
               '|-------|------|',
-              '| `url` | Must not start with `/docs/` or end with `/` |',
-              '| `marker` | Non-empty string — used as the CMS title prefix |',
-              '| `heading` | Non-empty string — used as the article section heading |',
+              '| `title` | Non-empty string |',
+              '| `doc_type` | Must be one of `usage_guide`, `class_intro`, or `method_details` |',
               '',
               'Also ensure the file has a `.md` extension, otherwise it will not be synced.',
             ].join('\n');

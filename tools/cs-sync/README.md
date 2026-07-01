@@ -49,9 +49,9 @@ npm run sync -- --before "$(git rev-parse HEAD~1)" --after "$(git rev-parse HEAD
 npm run lint -- --base origin/main
 ```
 
-Optional env overrides: `CS_REGION` (default `us`), `CS_CONTENT_TYPE` (default `docs_article`), `CS_DOCS_ROOT` (default `docs`).
+Optional env overrides: `CS_REGION` (default `us`), `CS_CONTENT_TYPE` (default `docs_article`), `CS_DOCS_ROOT` (default `cs-docs`).
 
 ## Workflows
 
-- `.github/workflows/contentstack-sync.yml` — push to `main` when `docs/**/*.md` changes
+- `.github/workflows/contentstack-sync.yml` — push to `main` when `cs-docs/**/*.md` changes
 - `.github/workflows/docs-lint.yml` — pull requests; validates front matter and internal links

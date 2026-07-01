@@ -8,7 +8,7 @@ import { formatReport, formatStepSummary } from "./exec-reporter.js";
 import type { ExecutionReport } from "./exec-runner.js";
 
 const REPO_ROOT = process.env.REPO_ROOT ?? path.resolve(process.cwd(), "../..");
-const DOCS_ROOT = process.env.DOCS_ROOT ?? "docs";
+const DOCS_ROOT = process.env.DOCS_ROOT ?? "cs-docs";
 const PR_NUMBER = parseInt(process.env.PR_NUMBER ?? "0", 10);
 const EXEC_TEST_FILES = process.env.EXEC_TEST_FILES ?? "/tmp/exec-test-files.json";
 const OUTPUT_FILE = process.env.EXEC_TEST_OUTPUT ?? "/tmp/exec-test-output.txt";

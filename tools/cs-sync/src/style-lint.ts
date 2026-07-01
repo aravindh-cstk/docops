@@ -11,6 +11,9 @@ const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 interface StyleLintConfig {
   allowedAcronyms: string[];
   bannedPhrases: string[];
+  // Per-root escape hatch: rule ids to skip for a given docs root (e.g. sdk-docs
+  // API reference content tripping up prose rules tuned for narrative docs).
+  rootOverrides?: Record<string, { disabledRules?: string[] }>;
 }
 
 function loadConfig(): StyleLintConfig {
@@ -734,7 +737,15 @@ function checkRhetoricalQuestions(body: string, file: string): string[] {
 // Main export
 // ---------------------------------------------------------------------------
 
-export function lintStyle(body: string, filePath: string): string[] {
+interface StyleRule {
+  id: string;
+  check: () => string[];
+}
+
+// Every style rule applies to every docs root by default (these are the "common"
+// rules). To make a rule product-specific, add it to `rootOverrides.<root>.disabledRules`
+// in style-lint.config.json rather than special-casing it here.
+export function lintStyle(body: string, filePath: string, docsRoot?: string): string[] {
   const config = loadConfig();
   const allowedAcronyms = new Set(config.allowedAcronyms);
 
@@ -744,43 +755,54 @@ export function lintStyle(body: string, filePath: string): string[] {
   const futurePhrases = loadBulletList(futureTensePath);
 
   const stripped = stripCodeRegions(body);
+
+  const rules: StyleRule[] = [
+    // Tier 1
+    { id: "em-dash", check: () => checkEmDash(stripped, filePath) },
+    { id: "en-dash", check: () => checkEnDash(stripped, filePath) },
+    { id: "semicolon", check: () => checkSemicolon(stripped, filePath) },
+    { id: "double-spaces", check: () => checkDoubleSpaces(stripped, filePath) },
+    { id: "please", check: () => checkPlease(stripped, filePath) },
+    { id: "plus-symbol", check: () => checkPlusSymbol(stripped, filePath) },
+    { id: "nx-for-times", check: () => checkNxForTimes(stripped, filePath) },
+    { id: "etc", check: () => checkEtc(stripped, filePath) },
+    { id: "three-dots", check: () => checkThreeDots(stripped, filePath) },
+    { id: "ie-comma", check: () => checkIeComma(stripped, filePath) },
+    { id: "eg-comma", check: () => checkEgComma(stripped, filePath) },
+    { id: "navigation-panel", check: () => checkNavigationPanel(stripped, filePath) },
+    { id: "spelling", check: () => checkSpelling(stripped, filePath) },
+    { id: "naked-urls", check: () => checkNakedUrls(body, filePath) },
+    { id: "generic-link-text", check: () => checkGenericLinkText(body, filePath) },
+    { id: "oxford-comma", check: () => checkOxfordComma(stripped, filePath) },
+    { id: "all-caps", check: () => checkAllCaps(stripped, filePath, allowedAcronyms) },
+    { id: "banned-phrases", check: () => checkBannedPhrases(stripped, filePath, config.bannedPhrases) },
+    { id: "phrasal-verbs", check: () => checkPhrasalVerbs(stripped, filePath) },
+
+    // Tier 2
+    { id: "headings", check: () => checkHeadings(body, filePath) },
+    { id: "list-punctuation", check: () => checkListPunctuation(body, filePath) },
+    { id: "consecutive-info-panels", check: () => checkConsecutiveInfoPanels(body, filePath) },
+    { id: "info-panel-classes", check: () => checkInfoPanelClasses(body, filePath) },
+    { id: "sentence-length", check: () => checkSentenceLength(stripped, filePath) },
+    { id: "images", check: () => checkImages(body, filePath) },
+    { id: "duplicate-links", check: () => checkDuplicateLinks(body, filePath) },
+
+    // Tier 3 (warnings — still surfaced as errors to block merges)
+    { id: "vague-adverbs", check: () => checkVagueAdverbs(stripped, filePath, vagueAdverbs) },
+    { id: "future-tense", check: () => checkFutureTense(stripped, filePath, futurePhrases) },
+    { id: "gendered-pronouns", check: () => checkGenderedPronouns(stripped, filePath) },
+    { id: "rhetorical-questions", check: () => checkRhetoricalQuestions(body, filePath) },
+  ];
+
+  const disabledRules = new Set(
+    (docsRoot && config.rootOverrides?.[docsRoot]?.disabledRules) || [],
+  );
+
   const errors: string[] = [];
-
-  // Tier 1
-  errors.push(...checkEmDash(stripped, filePath));
-  errors.push(...checkEnDash(stripped, filePath));
-  errors.push(...checkSemicolon(stripped, filePath));
-  errors.push(...checkDoubleSpaces(stripped, filePath));
-  errors.push(...checkPlease(stripped, filePath));
-  errors.push(...checkPlusSymbol(stripped, filePath));
-  errors.push(...checkNxForTimes(stripped, filePath));
-  errors.push(...checkEtc(stripped, filePath));
-  errors.push(...checkThreeDots(stripped, filePath));
-  errors.push(...checkIeComma(stripped, filePath));
-  errors.push(...checkEgComma(stripped, filePath));
-  errors.push(...checkNavigationPanel(stripped, filePath));
-  errors.push(...checkSpelling(stripped, filePath));
-  errors.push(...checkNakedUrls(body, filePath));
-  errors.push(...checkGenericLinkText(body, filePath));
-  errors.push(...checkOxfordComma(stripped, filePath));
-  errors.push(...checkAllCaps(stripped, filePath, allowedAcronyms));
-  errors.push(...checkBannedPhrases(stripped, filePath, config.bannedPhrases));
-  errors.push(...checkPhrasalVerbs(stripped, filePath));
-
-  // Tier 2
-  errors.push(...checkHeadings(body, filePath));
-  errors.push(...checkListPunctuation(body, filePath));
-  errors.push(...checkConsecutiveInfoPanels(body, filePath));
-  errors.push(...checkInfoPanelClasses(body, filePath));
-  errors.push(...checkSentenceLength(stripped, filePath));
-  errors.push(...checkImages(body, filePath));
-  errors.push(...checkDuplicateLinks(body, filePath));
-
-  // Tier 3 (warnings — still surfaced as errors to block merges)
-  errors.push(...checkVagueAdverbs(stripped, filePath, vagueAdverbs));
-  errors.push(...checkFutureTense(stripped, filePath, futurePhrases));
-  errors.push(...checkGenderedPronouns(stripped, filePath));
-  errors.push(...checkRhetoricalQuestions(body, filePath));
+  for (const rule of rules) {
+    if (disabledRules.has(rule.id)) continue;
+    errors.push(...rule.check());
+  }
 
   return errors;
 }

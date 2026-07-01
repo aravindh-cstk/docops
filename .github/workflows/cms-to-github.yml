@@ -48,10 +48,10 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          if git status --porcelain docs/ | grep -q .; then
+          if git status --porcelain cs-docs/ | grep -q .; then
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
             echo "Changed files:"
-            git status --porcelain docs/
+            git status --porcelain cs-docs/
           else
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
             echo "No doc files changed — nothing to PR."
@@ -68,7 +68,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git checkout -b "$BRANCH"
-          git add docs/
+          git add cs-docs/
           git commit -m "chore: sync doc changes from Contentstack CMS"
           git push origin "$BRANCH"
 
@@ -86,7 +86,7 @@ jobs:
               rows.forEach(r => console.log(r));
             ")
           else
-            CHANGED_FILES=$(git diff origin/main..."$BRANCH" --name-only | grep '^docs/' | head -20)
+            CHANGED_FILES=$(git diff origin/main..."$BRANCH" --name-only | grep '^cs-docs/' | head -20)
             CHANGES_TABLE="| File | CMS Entry | Modified By | Modified At |
           |------|-----------|-------------|-------------|
           $(echo "$CHANGED_FILES" | sed 's/^/| \`/' | sed 's/$/ \` | — | — | — |/')"
@@ -96,7 +96,7 @@ jobs:
             --title "CMS → GitHub: doc changes detected" \
             --body "## CMS → GitHub sync
 
-          This PR was automatically created because one or more \`docs_article\` entries were edited directly in Contentstack and differ from the current files in \`docs/\`.
+          This PR was automatically created because one or more \`docs_article\` entries were edited directly in Contentstack and differ from the current files in \`cs-docs/\`.
 
           **Review the diff carefully before merging** — in particular check that no content was unintentionally overwritten.
 

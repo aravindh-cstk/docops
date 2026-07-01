@@ -9,7 +9,7 @@ async function main(): Promise<void> {
   const { base } = parseArgs(process.argv.slice(2));
   const scriptDir = path.dirname(fileURLToPath(import.meta.url));
   const repoRoot = findRepoRoot(path.join(scriptDir, "../../.."));
-  const docsRoot = process.env.CS_DOCS_ROOT ?? "docs";
+  const docsRoot = process.env.CS_DOCS_ROOT ?? "cs-docs";
 
   const { mdFiles } = listChangedDocs(repoRoot, docsRoot, base);
 

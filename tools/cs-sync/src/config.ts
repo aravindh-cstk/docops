@@ -7,7 +7,7 @@ const envSchema = z.object({
   CS_CONTENT_TYPE: z.string().default("docs_article"),
   CS_ENVIRONMENT: z.string().default("production"),
   CS_LOCALE: z.string().default("en-us"),
-  CS_DOCS_ROOT: z.string().default("docs"),
+  CS_DOCS_ROOT: z.string().default("cs-docs"),
 });
 
 export type AppConfig = z.infer<typeof envSchema> & {
@@ -44,7 +44,7 @@ function readEnv(): z.infer<typeof envSchema> {
       process.env.CONTENTSTACK_ENVIRONMENT ??
       "production",
     CS_LOCALE: process.env.CS_LOCALE ?? "en-us",
-    CS_DOCS_ROOT: process.env.CS_DOCS_ROOT ?? "docs",
+    CS_DOCS_ROOT: process.env.CS_DOCS_ROOT ?? "cs-docs",
   });
 }
 

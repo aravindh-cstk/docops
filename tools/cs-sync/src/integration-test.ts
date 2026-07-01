@@ -32,7 +32,7 @@ function makeConfig(repoRoot: string, overrides: Partial<AppConfig> = {}): AppCo
     CS_CONTENT_TYPE: process.env.CS_CONTENT_TYPE ?? "docs_article",
     CS_ENVIRONMENT: process.env.CS_ENVIRONMENT ?? "production",
     CS_LOCALE: process.env.CS_LOCALE ?? "en-us",
-    CS_DOCS_ROOT: "docs",
+    CS_DOCS_ROOT: "cs-docs",
     baseUrl: REGION_BASE_URL[region] ?? REGION_BASE_URL["us"]!,
     repoRoot,
     ...overrides,

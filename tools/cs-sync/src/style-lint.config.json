@@ -7,7 +7,7 @@
     "XML", "YAML", "SQL", "MDX", "SSO", "SAML", "MFA", "TOTP",
     "AWS", "GCP", "CDN", "SLA", "SLO", "SLI", "UUID", "GUID",
     "CORS", "CSP", "XSS", "CSRF", "ACL", "RBAC", "SSR", "CSR",
-    "SPA", "PWA", "DOM", "AST", "IDE", "EOF", "EOL", "TTL",
+    "SPA", "PWA", "DOM", "AST", "IDE", "EOF", "EOL", "TTL", "UID",
     "LTS", "OS", "VM", "VPC", "IAM", "ARN", "S3", "EC2", "RDS",
     "TS", "JS", "TSX", "JSX", "ESM", "CJS", "ESLint", "TSC",
     "NPM", "PNPM", "CI/CD", "DevOps", "SaaS", "PaaS", "IaaS",
