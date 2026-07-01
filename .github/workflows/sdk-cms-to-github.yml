@@ -38,8 +38,8 @@ jobs:
       - name: Pull changes from CMS
         working-directory: tools/sdk-sync
         env:
-          SANDBOX_STACK_API_KEY: ${{ secrets.SDK_SANDBOX_STACK_API_KEY }}
-          SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.SDK_SANDBOX_MANAGEMENT_TOKEN }}
+          SANDBOX_STACK_API_KEY: ${{ secrets.SDK_API_KEY }}
+          SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.SDK_MANAGEMENT_TOKEN }}
         run: node sdk-cms-pull.js --lookback ${{ inputs.lookback_minutes || '20' }}
 
       - name: Check for changes
