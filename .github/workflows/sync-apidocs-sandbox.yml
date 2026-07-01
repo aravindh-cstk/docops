@@ -49,7 +49,7 @@ jobs:
         if: ${{ !inputs.skip_export }}
         working-directory: tools/migration
         env:
-          SOURCE_STACK_API_KEY: bltf92796d1cef4d3d4
+          SOURCE_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
           SOURCE_STACK_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
           SOURCE_STACK_REGION: us
           SOURCE_STACK_BRANCH: main
@@ -64,7 +64,8 @@ jobs:
         id: diff
         working-directory: tools/migration
         env:
-          SOURCE_STACK_API_KEY: bltf92796d1cef4d3d4
+          SOURCE_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          SOURCE_STACK_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
           SOURCE_STACK_REGION: us
           APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
           APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
