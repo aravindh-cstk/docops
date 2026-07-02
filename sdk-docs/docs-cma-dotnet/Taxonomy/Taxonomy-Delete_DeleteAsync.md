@@ -1,6 +1,6 @@
 ---
 title: "Delete / DeleteAsync"
-description: "The `Delete` and `DeleteAsync` actions remove a taxonomy from the stack. Warning: Deleting a taxonomy is permanent and cannot be undone. This action removes all associated terms and breaks their links with entries. Use only when you intend to remove this structure from the stack. Validation You must call `Delete` or `DeleteAsync` on `stack.Taxonomy(\"<TAXONOMY_UID>\")` . Calling `stack.Taxonomy()` without a UID throws `InvalidOperationException` before the request is sent. If the API rejects the request (for example, due to permissions, dependencies, or a missing resource), the client throws `ContentstackErrorException` . Errors are not returned as a failed `ContentstackResponse` . Inspect `StatusCode` , `ErrorMessage` , and `ErrorCode` on the exception. Behavior Optional flags are sent as query parameters using `ParameterCollection` . Boolean values are serialized as lowercase ( `true` / `false` ) in the URL. For example, to force delete (if supported): ParameterCollection collection = new ParameterCollection(); collection.Add(\"force\", true); // becomes ?force=true ContentstackResponse response = await stack .Taxonomy(\"<TAXONOMY_UID>\") .DeleteAsync(collection); Use of parameters not supported by the Management API for taxonomies may be ignored or throw errors."
+description: "The `Delete` and `DeleteAsync` actions remove a taxonomy from the stack. Warning: Deleting a taxonomy is permanent and cannot be undone. This action removes all associated terms and breaks their links with entries. Use only when you intend to remove this structure from the stack. Validation You must call `Delete` or `DeleteAsync` on `stack.Taxonomy(\"<TAXONOMY_UID>\")` . Calling `stack.Taxonomy()` without a UID throws `InvalidOperationException` before the request is sent. If the API rejects the request (for example, due to permissions, dependencies, or a missing resource), the client throws `ContentstackErrorException` . Errors are not returned as a failed `ContentstackResponse` . Inspect `StatusCode` , `ErrorMessage` , and `ErrorCode` on the exception. Behavior Optional flags are sent as query parameters using `ParameterCollection` . Boolean values are serialized as lowercase ( `true` / `false` ) in the URL. For example, to force delete (if supported): ParameterCollection collection = new ParameterCollection(); collection.Add(\"force\", true); // becomes ?force=true ContentstackResponse response = await stack .Taxonomy(\"<TAXONOMY\\_UID>\") .DeleteAsync(collection); Use of parameters not supported by the Management API for taxonomies may be ignored or throw errors."
 url: "https://www.contentstack.com/taxonomy-delete-deleteasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Delete / DeleteAsync

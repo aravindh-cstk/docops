@@ -1,6 +1,6 @@
 ---
 title: "delete_multiple"
-description: "The delete_multiple method removes one or more items from the specific release."
+description: "The delete\\_multiple method removes one or more items from the specific release."
 url: "https://www.contentstack.com/python-management-publish-queue-delete_multiple"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## delete_multiple

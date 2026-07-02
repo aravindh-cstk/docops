@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - Java Delivery SDK"
+title: "Java Delivery Introduction"
 description: "Contentstack - Java Delivery SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blta396c6baa21b4f19"
 ---
 
-# Contentstack - Java Delivery SDK
+# Java Delivery Introduction
 
 ## Java Delivery SDK for Contentstack
 
@@ -24,8 +24,8 @@ Contentstack provides Java Delivery SDK to build application on top of Java. Giv
 
 To get started with Java SDK, you will need the following:
 
-- An IDE. You can use an IDE of your choice, but make sure it supports Java.
-- Java SDK version 1.8 or later
+-   An IDE. You can use an IDE of your choice, but make sure it supports Java.
+-   Java SDK version 1.8 or later
 
 ## SDK Installation and Setup
 
@@ -87,7 +87,7 @@ config.setBranch("branch");
 Stack stack = Contentstack.stack("APIkey", "deliveryToken", "environmentName", config);
 ```
 
-**Note**:For Europe, set the region as** EU**, for Azure North America , set the region as **AZURE_NA**, for Azure Europe, set the region as** AZURE_EU**, for GCP North America, set the region as **GCP_NA**, for GCP Europe, set the region as **GCP_EU.**
+**Note**:For Europe, set the region as** EU**, for Azure North America , set the region as **AZURE\_NA**, for Azure Europe, set the region as** AZURE\_EU**, for GCP North America, set the region as **GCP\_NA**, for GCP Europe, set the region as **GCP\_EU.**
 
 ### Basic Queries
 
@@ -128,8 +128,8 @@ if (error == null) {
 
 Note:
 
-- Currently, the Java SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](/docs/developers/apis/content-delivery-api/#queries)section of our Content Delivery API documentation
-- By default, the limit for response details per request is 100, with the maximum limit set at 250.
+-   Currently, the Java SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](/docs/developers/apis/content-delivery-api/#queries)section of our Content Delivery API documentation
+-   By default, the limit for response details per request is 100, with the maximum limit set at 250.
 
 ### Pagination
 

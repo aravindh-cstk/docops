@@ -1,6 +1,6 @@
 ---
 title: "update_publish_rule"
-description: "The update_publish_rule method allows you to add a publish rule or update the details of an existing publish rule of a workflow."
+description: "The update\\_publish\\_rule method allows you to add a publish rule or update the details of an existing publish rule of a workflow."
 url: "https://www.contentstack.com/python-management-workflows-update_publish_rule"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## update_publish_rule

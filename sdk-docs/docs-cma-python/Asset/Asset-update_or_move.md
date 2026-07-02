@@ -1,6 +1,6 @@
 ---
 title: "update_or_move"
-description: "The update_or_move method allows you to either update the details of a folder or set the folder as a parent folder if you want to move a folder under another folder."
+description: "The update\\_or\\_move method allows you to either update the details of a folder or set the folder as a parent folder if you want to move a folder under another folder."
 url: "https://www.contentstack.com/python-management-asset-update_or_move"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## update_or_move

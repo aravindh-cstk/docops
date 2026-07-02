@@ -1,6 +1,6 @@
 ---
 title: "fetch:completion:"
-description: "The `whereKey:equalTo: ` method adds a condition to filter entries where the specified key matches the provided value."
+description: "The `whereKey:equalTo:` method adds a condition to filter entries where the specified key matches the provided value."
 url: "https://www.contentstack.com/ios-taxonomy-fetch-completion-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch:completion:

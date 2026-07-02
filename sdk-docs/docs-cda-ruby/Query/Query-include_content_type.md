@@ -1,6 +1,6 @@
 ---
 title: "include_content_type"
-description: "Include object's content_type in response"
+description: "Include object's content\\_type in response"
 url: "https://www.contentstack.com/ruby-query-include_content_type"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## include_content_type

@@ -1,6 +1,6 @@
 ---
 title: "ManifestExperience "
-description: "The `ManifestExperience ` type alias defines the structure of an experience within a personalization manifest."
+description: "The `ManifestExperience` type alias defines the structure of an experience within a personalization manifest."
 url: "https://www.contentstack.com/javascript-personalize-edge-sdk-types-and-interface-manifestexperience"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## ManifestExperience 

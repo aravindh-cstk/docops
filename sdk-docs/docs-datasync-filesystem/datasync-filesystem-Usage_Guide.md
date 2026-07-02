@@ -1,5 +1,5 @@
 ---
-title: "DataSync Filesystem SDK API Reference"
+title: "Filesystem DataSync Introduction"
 description: "DataSync Filesystem SDK API Reference"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt6a6b66aee1cd108d"
 ---
 
-# DataSync Filesystem SDK API Reference
+# Filesystem DataSync Introduction
 
 ## Overview
 

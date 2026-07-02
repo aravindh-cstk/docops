@@ -1,6 +1,6 @@
 ---
 title: "syncToken"
-description: "In this API request, you need to provide the sync_token that you received in the last complete sync process. If there are more than 100 records, you will get a pagination_token instead"
+description: "In this API request, you need to provide the sync\\_token that you received in the last complete sync process. If there are more than 100 records, you will get a pagination\\_token instead"
 url: "https://www.contentstack.com/dart-stack-synctoken"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## syncToken
