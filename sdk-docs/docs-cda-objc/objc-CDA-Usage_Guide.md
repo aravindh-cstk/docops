@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - Objective-C Delivery SDK"
+title: "Objective C Delivery Introduction"
 description: "Contentstack - Objective-C Delivery SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt88d0bbb34f167b3a"
 ---
 
-# Contentstack - Objective-C Delivery SDK
+# Objective C Delivery Introduction
 
 ## Overview
 
@@ -71,20 +71,16 @@ Import the header files as a module too:
 
 To initialize the SDK, specify application context, the stack’s API key, Delivery token, and name of the environment where you will publish the content, as shown in the snippet below:
 
-1. Swiftlet stack:Stack = Contentstack.stack(withAPIKey: "API_KEY", accessToken:"DELIVERY_TOKEN", environmentName:"ENVIRONMENT")
-2. Objective CStack *stack = [Contentstack stackWithAPIKey:@"API_KEY" accessToken:@"DELIVERY_TOKEN" environmentName:@"ENVIRONMENT"];
+1. Swiftlet stack:Stack = Contentstack.stack(withAPIKey: "API\_KEY", accessToken:"DELIVERY\_TOKEN", environmentName:"ENVIRONMENT")
+2. Objective CStack \*stack = \[Contentstack stackWithAPIKey:@"API\_KEY" accessToken:@"DELIVERY\_TOKEN" environmentName:@"ENVIRONMENT"\];
 
 **For Setting other Regions:**
 
 To set and use the SDK for the AWS Europe, AWS AU, Azure NA, Azure EU, GCP NA, or GCP EU region refer to the code below:
 
-1. Swiftvar config: Config = Config();
-config.region = ContentstackRegion.EU; //ContentstackRegion.AU; or ContentstackRegion.AZURE_NA or ContentstackRegion.AZURE_EU or ContentstackRegion.GCP_NA or ContentstackRegion.GCP_EU
+1. Swiftvar config: Config = Config(); config.region = [ContentstackRegion.EU](http://ContentstackRegion.EU); //ContentstackRegion.AU; or ContentstackRegion.AZURE\_NA or ContentstackRegion.AZURE\_EU or ContentstackRegion.GCP\_NA or ContentstackRegion.GCP\_EU
 
-lt stack:Stack = Contentstack.stack(withAPIKey: "API_KEY", accessToken:"DELIVERY_TOKEN",environmentName:"ENVIRONMENT", config:config)
-2. Objective CConfig *config = [[Config alloc] init];
-config.region = EU; //AU or AZURE_NA or AZURE_EU or GCP_NA or GCP_EU
- Stack *stack = [Contentstack stackWithAPIKey:@"API_KEY" accessToken:@"DELIVERY_TOKEN" environmentName:@"ENVIRONMENT" config:config];
+lt stack:Stack = Contentstack.stack(withAPIKey: "API\_KEY", accessToken:"DELIVERY\_TOKEN",environmentName:"ENVIRONMENT", config:config) 2. Objective CConfig \*config = \[\[Config alloc\] init\]; config.region = EU; //AU or AZURE\_NA or AZURE\_EU or GCP\_NA or GCP\_EU Stack \*stack = \[Contentstack stackWithAPIKey:@"API\_KEY" accessToken:@"DELIVERY\_TOKEN" environmentName:@"ENVIRONMENT" config:config\];
 
 Once you have initialized the SDK, you can query entries to fetch the required content.
 
@@ -92,12 +88,8 @@ Once you have initialized the SDK, you can query entries to fetch the required c
 
 If you want to initialize SDK in a particular branch use the code given below:
 
-1. Swiftvar config: Config = Config();
-config.branch = "branch";
-let stack:Stack = Contentstack.stack(withAPIKey: "API_KEY", accessToken:"DELIVERY_TOKEN",environmentName:"ENVIRONMENT", config:config)
-2. Objective CConfig *config = [[Config alloc] init];
-config.branch = @"branch";
-Stack *stack = [Contentstack stackWithAPIKey:@"API_KEY" accessToken:@"DELIVERY_TOKEN" environmentName:@"ENVIRONMENT" config:config];
+1. Swiftvar config: Config = Config(); config.branch = "branch"; let stack:Stack = Contentstack.stack(withAPIKey: "API\_KEY", accessToken:"DELIVERY\_TOKEN",environmentName:"ENVIRONMENT", config:config)
+2. Objective CConfig \*config = \[\[Config alloc\] init\]; config.branch = @"branch"; Stack \*stack = \[Contentstack stackWithAPIKey:@"API\_KEY" accessToken:@"DELIVERY\_TOKEN" environmentName:@"ENVIRONMENT" config:config\];
 
 ### Basic Queries
 
@@ -105,54 +97,32 @@ Stack *stack = [Contentstack stackWithAPIKey:@"API_KEY" accessToken:@"DELIVERY_T
 
 To retrieve a single entry from a content type, use the code snippet given below:
 
-1. Swiftlet stack:Stack = Contentstack.stack(withAPIKey: "API_KEY", accessToken:"DELIVERY_TOKEN", environmentName:"ENVIRONMENT")
+1. Swiftlet stack:Stack = Contentstack.stack(withAPIKey: "API\_KEY", accessToken:"DELIVERY\_TOKEN", environmentName:"ENVIRONMENT")
 
-var contentType:ContentType = stack.contentType(withName: "CONTENT_TYPE_UID")
-var entry:Entry = contentType.entry(withUID: "ENTRY_UID")
-entry.fetch { (responseType, error) -> Void in
-}
-2. Objective CStack *stack = [Contentstack stackWithAPIKey:@"API_KEY" accessToken:@"DELIVERY_TOKEN" environmentName:@"ENVIRONMENT"];
+var contentType:ContentType = stack.contentType(withName: "CONTENT\_TYPE\_UID") var entry:Entry = contentType.entry(withUID: "ENTRY\_UID") entry.fetch { (responseType, error) -> Void in } 2. Objective CStack \*stack = \[Contentstack stackWithAPIKey:@"API\_KEY" accessToken:@"DELIVERY\_TOKEN" environmentName:@"ENVIRONMENT"\];
 
-ContentType *contentType = [stack contentTypeWithName:@"CONTENT_TYPE_UID"];
-Entry *entry  = [contentType entryWithUID:@"ENTRY_UID"];
-[entry fetch:^(ResponseType type, NSError * _Nullable error) {
+ContentType \*contentType = \[stack contentTypeWithName:@"CONTENT\_TYPE\_UID"\]; Entry \*entry = \[contentType entryWithUID:@"ENTRY\_UID"\]; \[entry fetch:^(ResponseType type, NSError \* \_Nullable error) {
 
-}];
+}\];
 
-**Get Multiple Entries******To retrieve multiple entries of a particular content type, use the code snippet given below:
+**Get Multiple Entries**\*\*\*\*To retrieve multiple entries of a particular content type, use the code snippet given below:
 
-1. Swiftlet stack:Stack = Contentstack.stack(withAPIKey: "API_KEY", accessToken:"DELIVERY_TOKEN", environmentName:"ENVIRONMENT")
+1. Swiftlet stack:Stack = Contentstack.stack(withAPIKey: "API\_KEY", accessToken:"DELIVERY\_TOKEN", environmentName:"ENVIRONMENT")
 
-var contentType:ContentType = stack.contentType(withName: "CONTENT_TYPE_UID")
-var query: Query = contentType.query()
-query.find { (responseType, result, error) -> Void in
-}
-2. Objective CStack *stack = [Contentstack stackWithAPIKey:@"API_KEY" accessToken:@"DELIVERY_TOKEN" environmentName:@"ENVIRONMENT"];
+var contentType:ContentType = stack.contentType(withName: "CONTENT\_TYPE\_UID") var query: Query = contentType.query() query.find { (responseType, result, error) -> Void in } 2. Objective CStack \*stack = \[Contentstack stackWithAPIKey:@"API\_KEY" accessToken:@"DELIVERY\_TOKEN" environmentName:@"ENVIRONMENT"\];
 
-ContentType *contentType = [stack contentTypeWithName:@"CONTENT_TYPE_UID"];
-Query *query  = [contentType <span>query</span>];
-[query find:^(ResponseType type,  QueryResult *result,, NSError * _Nullable error) {
+ContentType \*contentType = \[stack contentTypeWithName:@"CONTENT\_TYPE\_UID"\]; Query \*query = \[contentType <span>query</span>\]; \[query find:^(ResponseType type, QueryResult \*result,, NSError \* \_Nullable error) {
 
-}];
+}\];
 
 ### Paginating Responses
 
 In a single instance, the [Get Multiple Entries](https://www.contentstack.com/docs/developers/dot-net/get-started-with-dot-net-delivery-sdk/#get-multiple-entries) query will **retrieve only the first 100 items** of the specified content type. You can paginate and retrieve the rest of the items in batches using the skip and limit parameters in subsequent requests.
 
-1. Swiftlet stack:Stack = Contentstack.stack(withAPIKey: "API_KEY", accessToken:"DELIVERY_TOKEN", environmentName:"ENVIRONMENT")
+1. Swiftlet stack:Stack = Contentstack.stack(withAPIKey: "API\_KEY", accessToken:"DELIVERY\_TOKEN", environmentName:"ENVIRONMENT")
 
-var contentType:ContentType = stack.contentType(withName: "CONTENT_TYPE_UID")
-var query:Query = contentType.query()
-    query.limitObjects(NSNumber(int:20))
-query.skipObjects(NSNumber(int: 20))
-query.find { (responseType, result!, error!) -> Void in
-}
-2. Objective CStack *stack = [Contentstack stackWithAPIKey:@"API_KEY" accessToken:@"DELIVERY_TOKEN" environmentName:@"ENVIRONMENT"];
+var contentType:ContentType = stack.contentType(withName: "CONTENT\_TYPE\_UID") var query:Query = contentType.query() query.limitObjects(NSNumber(int:20)) query.skipObjects(NSNumber(int: 20)) query.find { (responseType, result!, error!) -> Void in } 2. Objective CStack \*stack = \[Contentstack stackWithAPIKey:@"API\_KEY" accessToken:@"DELIVERY\_TOKEN" environmentName:@"ENVIRONMENT"\];
 
-ContentType *contentType = [stack contentTypeWithName:@"CONTENT_TYPE_UID"];
-Query *query  = [contentType query</span>];
-[query limitObjects:@(20)];
-[query skipObjects:@(20)];
-[query find:^(ResponseType type, QueryResult *result, NSError *error) {
+ContentType \*contentType = \[stack contentTypeWithName:@"CONTENT\_TYPE\_UID"\]; Query \*query = \[contentType query</span>\]; \[query limitObjects:@(20)\]; \[query skipObjects:@(20)\]; \[query find:^(ResponseType type, QueryResult \*result, NSError \*error) {
 
-}];
+}\];

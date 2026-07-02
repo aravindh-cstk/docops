@@ -1,6 +1,6 @@
 ---
 title: "create_publish_rule"
-description: "The create_publish_rule method creates a new rule for the workflow in a specific stack."
+description: "The create\\_publish\\_rule method creates a new rule for the workflow in a specific stack."
 url: "https://www.contentstack.com/python-management-workflows-create_publish_rule"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## create_publish_rule
@@ -17,7 +17,7 @@ The create_publish_rule method creates a new rule for the workflow in a specific
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| data | Dict | Yes | — | Data required to create a new publish rule for the workflow |
+| data | Dict | Yes | - | Data required to create a new publish rule for the workflow |
 
 Returns:
 Type

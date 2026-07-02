@@ -1,5 +1,5 @@
 ---
-title: "React Studio SDK API Reference"
+title: "React Studio Introduction"
 description: "React Studio SDK API Reference"
 url: ""
 product: "Contentstack"
@@ -8,17 +8,17 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt2b38caeeddfac143"
 ---
 
-# React Studio SDK API Reference
+# React Studio Introduction
 
 ## Overview
 
 The Studio React SDK lets developers integrate and render Contentstack Studio compositions within React applications. It connects the application to Contentstack’s Delivery SDK, enabling Live Preview and synchronization between Studio and the deployed front end.
 
-The SDK supports initializing Studio, loading compositions, and rendering structured layouts in React. It also includes utilities to manage component registration, design tokens, responsive breakpoints, and Studio-level interactions for building modular and composable front-end experiences.
+The SDK supports initializing Studio, loading compositions, and rendering structured layouts in React. It also includes utilities to manage component registration, design tokens, responsive breakpoints, and Studio-level interactions for building modular and composable frontend experiences.
 
 **Additional Resources:**
 

@@ -1,6 +1,6 @@
 ---
 title: "include_embedded_items"
-description: "include_embedded_items instance of Entry include_embedded_objects (Entries and Assets) along with entry/entries details"
+description: "include\\_embedded\\_items instance of Entry include\\_embedded\\_objects (Entries and Assets) along with entry/entries details"
 url: "https://www.contentstack.com/python-entry-include_embedded_items"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## include_embedded_items

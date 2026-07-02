@@ -1,6 +1,6 @@
 ---
 title: "delete_publish_rule"
-description: "The delete_publish_rule method removes an existing publish rule for the workflow in a specific stack."
+description: "The delete\\_publish\\_rule method removes an existing publish rule for the workflow in a specific stack."
 url: "https://www.contentstack.com/python-management-workflows-delete_publish_rule"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## delete_publish_rule
@@ -17,7 +17,7 @@ The delete_publish_rule method removes an existing publish rule for the workflow
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| rule_uid | str | Yes | — | UID of the publishing rule |
+| rule_uid | str | Yes | - | UID of the publishing rule |
 
 Returns:
 Type
