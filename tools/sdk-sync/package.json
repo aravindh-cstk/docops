@@ -10,7 +10,8 @@
     "sync:dry": "SYNC_DRY_RUN=true node sync-entries.js",
     "cms-pull": "node sdk-cms-pull.js",
     "lint": "CS_DOCS_ROOT=sdk-docs tsx ../cs-sync/src/lint.ts",
-    "fix": "CS_DOCS_ROOT=sdk-docs tsx ../cs-sync/src/fix.ts"
+    "fix": "CS_DOCS_ROOT=sdk-docs tsx ../cs-sync/src/fix.ts",
+    "fix:worktree": "CS_DOCS_ROOT=sdk-docs tsx ../cs-sync/src/fix.ts --worktree"
   },
   "dependencies": {
     "axios": "^1.6.0",

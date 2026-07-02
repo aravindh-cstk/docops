@@ -1,12 +1,54 @@
 import { execSync } from "node:child_process";
 import path from "node:path";
 
-export function parseArgs(argv: string[]): { base: string } {
+export function parseArgs(argv: string[]): { base: string; worktree: boolean } {
   let base = "origin/main";
+  let worktree = false;
   for (let i = 0; i < argv.length; i++) {
-    if (argv[i] === "--base" && argv[i + 1]) base = argv[++i];
+    if (argv[i] === "--base" && argv[i + 1]) base = argv[++i]!;
+    if (argv[i] === "--worktree") worktree = true;
   }
-  return { base };
+  return { base, worktree };
+}
+
+// Lists .md files under docsRoot with uncommitted changes — modified (tracked)
+// or newly added (untracked) — rather than files changed vs. a committed base.
+// Used by automated processes (e.g. the CMS→GitHub pull) that write files
+// directly to the working tree and fix them up before the first commit exists.
+// git quotes porcelain paths containing spaces/special characters as a
+// C-style double-quoted string (e.g. `"sdk-docs/Global Fields/Global Fields.md"`).
+// Strip the surrounding quotes and unescape \" and \\ so the path matches the
+// real filesystem path.
+function unquotePorcelainPath(raw: string): string {
+  const trimmed = raw.trim();
+  if (trimmed.startsWith('"') && trimmed.endsWith('"')) {
+    return trimmed.slice(1, -1).replace(/\\(["\\])/g, "$1");
+  }
+  return trimmed;
+}
+
+export function listWorktreeChangedDocs(
+  repoRoot: string,
+  docsRoot: string,
+): { mdFiles: string[]; nonMdFiles: string[] } {
+  // Do NOT trim the whole multi-line output before slicing — String.trim()
+  // strips leading whitespace from the very first line only, which shifts the
+  // fixed-width status-code slice for that one line and corrupts its path.
+  const out = execSync(`git status --porcelain -- ${docsRoot}`, {
+    cwd: repoRoot,
+    encoding: "utf8",
+  });
+
+  const all = out
+    .split("\n")
+    .filter((line) => line.length > 3)
+    .map((line) => unquotePorcelainPath(line.slice(3)))
+    .filter(Boolean);
+
+  return {
+    mdFiles: all.filter((p) => p.endsWith(".md")),
+    nonMdFiles: all.filter((p) => !p.endsWith(".md")),
+  };
 }
 
 export function listChangedDocs(

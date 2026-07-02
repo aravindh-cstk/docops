@@ -1,4 +1,4 @@
-import { TITLE_CASE_ALWAYS_LOWER, isTitleCase } from "./style-lint.js";
+import { TITLE_CASE_ALWAYS_LOWER, isTitleCase, loadConfig } from "./style-lint.js";
 
 // ---------------------------------------------------------------------------
 // Segment-based text isolation
@@ -294,21 +294,30 @@ function fixH2TitleCase(content: string): FixResult {
 // Main export — orchestrates all fix passes in dependency order
 // ---------------------------------------------------------------------------
 
-export function fixStyle(content: string): FixResult {
+export function fixStyle(content: string, docsRoot?: string): FixResult {
   const allFixes: string[] = [];
   let current = content;
 
-  const passes: Array<(c: string) => FixResult> = [
-    fixDashes,              // Must run before fixDoubleSpaces — dash replacement can introduce double spaces
-    fixDoubleSpaces,        // Must run before other passes (whitespace affects offsets)
-    fixSpelling,
-    fixPhrasalVerbs,
-    fixAbbreviationCommas,
-    fixH2TitleCase,
+  // Mirrors lintStyle's rootOverrides — a rule disabled for linting a docs root
+  // (e.g. "headings" for sdk-docs, where H2s are literal method/class names,
+  // not prose titles) must also be skipped here, or the fixer would rewrite
+  // content the lint rule no longer even flags.
+  const disabledRules = new Set(
+    (docsRoot && loadConfig().rootOverrides?.[docsRoot]?.disabledRules) || [],
+  );
+
+  const passes: Array<{ id: string; run: (c: string) => FixResult }> = [
+    { id: "em-dash", run: fixDashes },              // Must run before fixDoubleSpaces — dash replacement can introduce double spaces
+    { id: "double-spaces", run: fixDoubleSpaces },  // Must run before other passes (whitespace affects offsets)
+    { id: "spelling", run: fixSpelling },
+    { id: "phrasal-verbs", run: fixPhrasalVerbs },
+    { id: "eg-comma", run: fixAbbreviationCommas },
+    { id: "headings", run: fixH2TitleCase },
   ];
 
   for (const pass of passes) {
-    const { content: next, fixes } = pass(current);
+    if (disabledRules.has(pass.id)) continue;
+    const { content: next, fixes } = pass.run(current);
     current = next;
     allFixes.push(...fixes);
   }
