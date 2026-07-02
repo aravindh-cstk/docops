@@ -1,6 +1,6 @@
 ---
 title: "publish"
-description: "The publish call is used to publish a specific version of an entry on the desired environment either immediately or at a later date/time. Note: Pass api_version 3.2 to use enhanced logic to publish"
+description: "The publish call is used to publish a specific version of an entry on the desired environment either immediately or at a later date/time. Note: Pass api\\_version 3.2 to use enhanced logic to publish"
 url: "https://www.contentstack.com/js-management-entry-publish"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## publish

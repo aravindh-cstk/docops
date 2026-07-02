@@ -1,6 +1,6 @@
 ---
 title: "getLastActivities"
-description: "To get the last_activity information of the configured environment from all the content types."
+description: "To get the last\\_activity information of the configured environment from all the content types."
 url: "https://www.contentstack.com/php-stack-getlastactivities"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getLastActivities

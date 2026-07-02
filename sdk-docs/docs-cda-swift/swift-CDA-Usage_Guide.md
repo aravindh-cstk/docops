@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - Swift SDK"
+title: "Swift Delivery Introduction"
 description: "Contentstack - Swift SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt064fa862f708c0c9"
 ---
 
-# Contentstack - Swift SDK
+# Swift Delivery Introduction
 
 ## Overview
 
@@ -36,13 +36,13 @@ To use this SDK on iOS platform, you will have to install the SDK according to t
 
 **CocoaPods**
 
-- Add the following line to your Podfile
+-   Add the following line to your Podfile
 
 ```
 pod ‘ContentstackSwift’
 ```
 
-- Run pod install, and you should now have the latest Contentstack release.
+-   Run pod install, and you should now have the latest Contentstack release.
 
 **Import Header/Module**
 

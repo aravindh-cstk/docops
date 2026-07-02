@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - Ruby Delivery SDK"
+title: "Ruby Delivery Introduction"
 description: "Contentstack - Ruby Delivery SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt9908a618cb038778"
 ---
 
-# Contentstack - Ruby Delivery SDK
+# Ruby Delivery Introduction
 
 ## Ruby SDK for Contentstack's Content Delivery API
 
@@ -46,8 +46,7 @@ You will need to specify the API key, Access token, and Environment Name of your
 @stack = Contentstack::Client.new("api_key", "delivery_token", "environment")
 ```
 
-Once you have initialized the SDK, you can start getting content in your app
-**For Setting other regions**:
+Once you have initialized the SDK, you can start getting content in your app **For Setting other regions**:
 
 Refer the below code if you want to use the Europe, Azure North America, Azure Europe, GCP North America, or GCP Europe region.
 
@@ -64,7 +63,7 @@ If you want to initialize SDK in a particular branch use the code given below:
 @stack = Contentstack::Client.<span>new</span>("api_key", "delivery_token", "environment",{"branch": "branch"})
 ```
 
-**Note:** For Europe, set the region as EU, for Azure North America and Azure Europe, set the region as AZURE_NA and AZURE_EU respectively, for GCP North America set the region as GCP_NA, and for GCP Europe set the region as GCP_EU.
+**Note:** For Europe, set the region as EU, for Azure North America and Azure Europe, set the region as AZURE\_NA and AZURE\_EU respectively, for GCP North America set the region as GCP\_NA, and for GCP Europe set the region as GCP\_EU.
 
 ### Basic Queries
 

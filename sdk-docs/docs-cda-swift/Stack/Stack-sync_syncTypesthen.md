@@ -1,6 +1,6 @@
 ---
 title: "sync(_:syncTypes:then:)"
-description: "The Initial Sync request performs a complete sync of your app data. It returns all the published entries and assets of the specified stack in response. The response also contains a sync_token, which you get in SyncStack, since this token is used to get subsequent delta updates later."
+description: "The Initial Sync request performs a complete sync of your app data. It returns all the published entries and assets of the specified stack in response. The response also contains a sync\\_token, which you get in SyncStack, since this token is used to get subsequent delta updates later."
 url: "https://www.contentstack.com/swift-stack-sync-_-synctypes-then-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## sync(_:syncTypes:then:)

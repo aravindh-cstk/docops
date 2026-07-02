@@ -1,5 +1,5 @@
 ---
-title: "TypeScript Delivery SDK API Reference"
+title: "TypeScript Delivery Introduction (test)"
 description: "TypeScript Delivery SDK API Reference"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "bltf517e565bb86274b"
 ---
 
-# TypeScript Delivery SDK API Reference
+# TypeScript Delivery Introduction (test)
 
 ## Overview
 

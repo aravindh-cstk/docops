@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - Java Management SDK"
+title: "Java Management Introduction"
 description: "Contentstack - Java Management SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt6b5f09928f3c73ce"
 ---
 
-# Contentstack - Java Management SDK
+# Java Management Introduction
 
 ## Java Management SDK for Contentstack
 

@@ -1,6 +1,6 @@
 ---
 title: "includeContentType"
-description: "To include content_type along with entries."
+description: "To include content\\_type along with entries."
 url: "https://www.contentstack.com/php-query-includecontenttype"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeContentType
