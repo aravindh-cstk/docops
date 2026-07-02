@@ -5,6 +5,7 @@ const path = require('path');
 const logger = require('./utils/logger');
 const ContentstackAPI = require('./utils/contentstack-api');
 const { parseFrontmatter } = require('./utils/parse-markdown');
+const { htmlToMarkdown } = require('./utils/html-to-md');
 
 const SDK_DOCS_DIR = path.resolve(__dirname, '../../sdk-docs');
 
@@ -120,8 +121,25 @@ function buildMarkdownFile(entry, ctUid, existingContent) {
 
   lines.push('---');
 
-  const body = (entry.md_content || '').trim();
+  // Sections is the authoritative structured source for the body once populated;
+  // md_content is a rendered mirror kept for CMS preview / backward compatibility.
+  // Entries not yet migrated (empty sections) fall back to the raw md_content blob.
+  const sections = Array.isArray(entry.sections) ? entry.sections : [];
+  const body = ctUid === 'sdk_usage_guides' && sections.length > 0
+    ? buildBodyFromSections(title, sections)
+    : (entry.md_content || '').trim();
+
   return `${lines.join('\n')}\n\n${body}\n`;
+}
+
+function buildBodyFromSections(title, sections) {
+  const parts = [`# ${title}`];
+  for (const block of sections) {
+    const sub = block.sub_section || {};
+    if (!sub.title) continue;
+    parts.push(`## ${sub.title}`, htmlToMarkdown(sub.description || ''));
+  }
+  return parts.join('\n\n');
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────

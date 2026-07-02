@@ -13,6 +13,7 @@ const {
   extractReturns,
   extractAfterReturns,
   extractProperties,
+  extractH2Sections,
 } = require('./utils/parse-markdown');
 const SDK_CONFIG = require('./sdk-config');
 
@@ -145,11 +146,20 @@ function buildUsageGuideEntry(filePath, sdkFolder) {
 
   // Title is authored in the CMS, not here — only used to seed a brand-new entry
   // (see upsertUsageGuide). cmsUid links this file to its CMS entry across renames.
+  //
+  // Each "## " heading in the body maps 1:1 to a `sections` block, in order.
+  // Files with no "## " headings (not yet using the Sections structure) send an
+  // empty array so nothing is synthesized — md_content stays their only source.
+  const sectionBlocks = extractH2Sections(body).map(({ title, content }) => ({
+    sub_section: { title, description: markdownToHtml(content) },
+  }));
+
   return {
     derivedTitle: `${cfg.framework} ${cfg.api} Introduction`,
     cmsUid: data.cms_uid || null,
     payload: {
       languages: { select: cfg.language },
+      sections: sectionBlocks,
       md_content: body.trim(),
     },
   };
