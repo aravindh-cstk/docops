@@ -60,7 +60,9 @@ jobs:
             --after  "${{ github.sha }}"
 
       - name: Commit cms_uid backfill
-        if: ${{ inputs.dry_run != true }}
+        # Run even if an unrelated entry failed in the sync step above (Pass 3/usage-guide
+        # results are independent of other passes) — just not if the job was cancelled.
+        if: ${{ !cancelled() && inputs.dry_run != true }}
         run: |
           if git status --porcelain sdk-docs/ | grep -q .; then
             git config user.name "github-actions[bot]"
