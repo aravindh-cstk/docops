@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - Android Delivery SDK"
+title: "Android Delivery Introduction"
 description: "Contentstack - Android Delivery SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt3456345a64828830"
 ---
 
-# Contentstack - Android Delivery SDK
+# Android Delivery Introduction
 
 ## Android Delivery SDK for Contentstack
 
@@ -24,9 +24,9 @@ Contentstack provides Android Delivery SDK to build applications on top of Andro
 
 To get started with Android SDK, you will the following:
 
-- Android Studio IDE
-- Android API SDK support 19 and above
-- Java SDK version 1.8 or later
+-   Android Studio IDE
+-   Android API SDK support 19 and above
+-   Java SDK version 1.8 or later
 
 ## SDK Installation and Setup
 
@@ -65,13 +65,13 @@ Stack stack = Contentstack.stack(context, "apiKey", "deliveryToken", "environmen
 
 **Note:** Use the following region codes based on your platform and location:
 
-- **NA** for North America
-- **EU** for Europe
-- **AU** for Australia
-- **AZURE NA** for Azure North America
-- **AZURE EU** for Azure Europe
-- **GCP NA** for GCP North America
-- **GCP EU** for GCP Europe
+-   **NA** for North America
+-   **EU** for Europe
+-   **AU** for Australia
+-   **AZURE NA** for Azure North America
+-   **AZURE EU** for Azure Europe
+-   **GCP NA** for GCP North America
+-   **GCP EU** for GCP Europe
 
 ### Basic Queries
 
@@ -115,8 +115,8 @@ query.find(new QueryResultsCallBack(){
 
 Note:
 
-- Currently, the Android SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer to the [Queries](https://www.contentstack.com/docs/developers/apis/content-delivery-api/#queries) section of our Content Delivery API documentation
-- By default, the limit for response details per request is 100, with the maximum limit set at 250.
+-   Currently, the Android SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer to the [Queries](https://www.contentstack.com/docs/developers/apis/content-delivery-api/#queries) section of our Content Delivery API documentation
+-   By default, the limit for response details per request is 100, with the maximum limit set at 250.
 
 ### Pagination
 

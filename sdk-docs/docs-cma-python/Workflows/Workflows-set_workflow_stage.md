@@ -1,6 +1,6 @@
 ---
 title: "set_workflow_stage"
-description: "The set_workflow_stage method allows you to either set a workflow stage of an entry or update an already existing one."
+description: "The set\\_workflow\\_stage method allows you to either set a workflow stage of an entry or update an already existing one."
 url: "https://www.contentstack.com/python-management-workflows-set_workflow_stage"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## set_workflow_stage

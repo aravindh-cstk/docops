@@ -1,6 +1,6 @@
 ---
 title: "set_field_visibility_rules"
-description: "The set_field_visibility_rules method lets you add the field visibility rules to an existing content type."
+description: "The set\\_field\\_visibility\\_rules method lets you add the field visibility rules to an existing content type."
 url: "https://www.contentstack.com/python-management-content-types-set_field_visibility_rules"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## set_field_visibility_rules

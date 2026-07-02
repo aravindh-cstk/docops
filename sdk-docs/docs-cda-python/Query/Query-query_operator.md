@@ -1,6 +1,6 @@
 ---
 title: "query_operator"
-description: "query_operator Get entries that satisfy all the conditions provided in the '$and' query."
+description: "query\\_operator Get entries that satisfy all the conditions provided in the '$and' query."
 url: "https://www.contentstack.com/python-query-query_operator"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## query_operator

@@ -1,5 +1,5 @@
 ---
-title: "Contentstack App SDK TypeScript Support"
+title: "TypeScript App Introduction"
 description: "Contentstack App SDK TypeScript Support"
 url: ""
 product: "Contentstack"
@@ -8,19 +8,19 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "bltd8b3bff4f1e0dac5"
 ---
 
-# Contentstack App SDK TypeScript Support
+# TypeScript App Introduction
 
 ## TypeScript Support
 
 The SDK provides comprehensive TypeScript definitions:
 
-- `ContentstackAppSDK` – Main SDK class
-- `UILocation` – UI location interfaces
-- `Entry` – Entry object interface
-- `Field` – Field object interface
-- `Stack` – Stack object interface
-- `Store` – Store object interface
+-   `ContentstackAppSDK` – Main SDK class
+-   `UILocation` – UI location interfaces
+-   `Entry` – Entry object interface
+-   `Field` – Field object interface
+-   `Stack` – Stack object interface
+-   `Store` – Store object interface

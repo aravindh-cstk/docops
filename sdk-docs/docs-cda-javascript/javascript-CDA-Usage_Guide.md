@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Delivery SDK"
+title: "JavaScript Delivery Introduction"
 description: "JavaScript Delivery SDK"
 url: ""
 product: "Contentstack"
@@ -8,19 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt8daf475e4b6eef6d"
 ---
 
-# JavaScript Delivery SDK
-
-**Note**: We recommend using the [TypeScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/typescript) as a preferred option over the JavaScript Delivery SDK for optimal performance and enhanced functionality in your project. Learn to seamlessly [migrate from JavaScript to TypeScript](/docs/developers/sdks/content-delivery-sdk/typescript/migrate-from-javascript-to-typescript/).
-
-Contentstack is a headless CMS with an API-first approach. It is a CMS that developers can use to build powerful cross-platform applications in their favorite languages. Build your application frontend, and Contentstack will take care of the rest. [Read More](https://www.contentstack.com/).
-
-Contentstack provides JavaScript Delivery SDK to build application on top of JavaScript. Given below is the detailed guide and helpful resources to get started with our JavaScript Delivery SDK.
-
-The JavaScript Delivery SDK can also be used to create Node.js and React native applications.
+# JavaScript Delivery Introduction
 
 ## Prerequisite
 
@@ -233,8 +225,8 @@ Query.where("title", "welcome")
 
 Note:
 
-- Currently, the JavaScript SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](https://www.contentstack.com/docs/developers/apis/content-delivery-api/#queries) section of our Content Delivery API documentation.
-- By default, the limit for response details per request is **100**, with the maximum limit set at **250**.
+-   Currently, the JavaScript SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](https://www.contentstack.com/docs/developers/apis/content-delivery-api/#queries) section of our Content Delivery API documentation.
+-   By default, the limit for response details per request is **100**, with the maximum limit set at **250**.
 
 ### Paginating Responses
 
@@ -286,7 +278,7 @@ Query
 
 You can set a cache policy on a stack and/or query object.
 
-##### Setting a cache policy on a stack
+Setting a cache policy on a stack
 
 This option allows you to globalize a cache policy. This means the cache policy you set will be applied to all the query objects of the stack.
 
@@ -295,7 +287,7 @@ This option allows you to globalize a cache policy. This means the cache policy 
 Stack.setCachePolicy(Contentstack.CachePolicy.NETWORK_ELSE_CACHE)
 ```
 
-##### Setting a cache policy on a query object
+Setting a cache policy on a query object
 
 This option allows you to set/override a cache policy on a specific query object.
 

@@ -1,6 +1,6 @@
 ---
 title: "fetch_publish_rules"
-description: "The fetch_publish_rules method retrieves the details of all publish rules from the stack."
+description: "The fetch\\_publish\\_rules method retrieves the details of all publish rules from the stack."
 url: "https://www.contentstack.com/python-management-workflows-fetch_publish_rules"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch_publish_rules

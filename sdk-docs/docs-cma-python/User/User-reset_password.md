@@ -1,6 +1,6 @@
 ---
 title: "reset_password"
-description: "The reset_password method sends a request for resetting the password of your Contentstack account."
+description: "The reset\\_password method sends a request for resetting the password of your Contentstack account."
 url: "https://www.contentstack.com/python-management-user-reset_password"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## reset_password

@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - .NET Delivery SDK"
+title: ".NET Delivery Introduction"
 description: "Contentstack - .NET Delivery SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "bltd35a40cddae7c426"
 ---
 
-# Contentstack - .NET Delivery SDK
+# .NET Delivery Introduction
 
 ## .NET SDK for Contentstack's Content Delivery API
 
@@ -24,13 +24,13 @@ For more information, you can check out the GitHub page of our [.NET Delivery SD
 
 To get started with C#, you will need:
 
-- .Net platform
-- IDE (Visual Studio)
-- NuGet.
+-   .Net platform
+-   IDE (Visual Studio)
+-   NuGet.
 
 ## SDK installation and setup
 
-The .Net SDK provided by contentstack.io is available for Xamarin, Windows Phone and legacy .Net applications. You can integrate contentstack with your application by following these steps.
+The .Net SDK provided by [contentstack.io](http://contentstack.io) is available for Xamarin, Windows Phone and legacy .Net applications. You can integrate contentstack with your application by following these steps.
 
 Open the terminal and install the contentstack module via 'Package Manager' command
 
@@ -75,8 +75,7 @@ ContentstackOptions options = new ContentstackOptions()
 ContentstackClient client = new ContentstackClient(options);
 ```
 
-Once you have initialized the SDK, you can start getting content in your app
-**For Setting other regions**:
+Once you have initialized the SDK, you can start getting content in your app **For Setting other regions**:
 
 Refer the below code if you want to use the Europe, Australia, Azure North America, Azure Europe, GCP North America, or GCP Europe region.
 
@@ -112,7 +111,7 @@ ContentstackClient client = new ContentstackClient(options);
 **Parameters:**
 
 | Name | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | EarlyAccess (Optional) | Array of Strings | Array of header strings for early access features. |
 
 ### Basic Queries

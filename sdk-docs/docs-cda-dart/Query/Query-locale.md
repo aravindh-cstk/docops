@@ -1,6 +1,6 @@
 ---
 title: "locale"
-description: "[locale] is the code of the language in which the entries need to be included."
+description: "\\[locale\\] is the code of the language in which the entries need to be included."
 url: "https://www.contentstack.com/dart-query-locale"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## locale

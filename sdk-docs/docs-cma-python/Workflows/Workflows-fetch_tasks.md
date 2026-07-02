@@ -1,6 +1,6 @@
 ---
 title: "fetch_tasks"
-description: "The fetch_tasks method retrieves the details of all tasks assigned to you."
+description: "The fetch\\_tasks method retrieves the details of all tasks assigned to you."
 url: "https://www.contentstack.com/python-management-workflows-fetch_tasks"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch_tasks
