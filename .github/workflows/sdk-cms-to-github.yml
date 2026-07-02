@@ -63,7 +63,7 @@ jobs:
             echo "No SDK doc files changed — nothing to PR."
           fi
 
-      - name: Create branch and commit
+      - name: Create branch, commit, and push
         id: commit
         if: steps.changes.outputs.has_changes == 'true'
         run: |
@@ -75,6 +75,9 @@ jobs:
           git checkout -b "$BRANCH"
           git add sdk-docs/
           git commit -m "chore: sync SDK doc changes from Contentstack CMS"
+          # Push before reporting a check run — the Checks API requires the SHA
+          # to already exist on GitHub's servers, not just locally on the runner.
+          git push origin "$BRANCH"
 
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
@@ -118,13 +121,12 @@ jobs:
 
           gh api "repos/${{ github.repository }}/check-runs" --input /tmp/check-run.json > /dev/null
 
-      - name: Push and open PR
+      - name: Open PR
         if: steps.changes.outputs.has_changes == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           BRANCH="${{ steps.commit.outputs.branch }}"
-          git push origin "$BRANCH"
 
           # Build the PR body with per-file editor info from the summary JSON.
           # Capped at 200 rows — with hundreds/thousands of changed files the full
