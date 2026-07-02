@@ -1,5 +1,6 @@
 const axios = require('axios');
 const logger = require('./logger');
+const userIndex = require('../cms-user-index.json');
 
 class ContentstackAPI {
   /**
@@ -267,17 +268,13 @@ class ContentstackAPI {
     return all;
   }
 
-  // Resolve a user UID to display name via the users API
-  async getUserName(userUid) {
-    try {
-      const response = await this.retryRequest(() =>
-        axios.get(`${this.cmaBaseUrl}/users/${userUid}`, { headers: this._readHeaders() })
-      );
-      const user = response.data.user || {};
-      return user.display_name || user.email || userUid;
-    } catch {
-      return userUid;
-    }
+  // Resolve a user UID to a display name via a locally-maintained index.
+  // The CMA has no endpoint to resolve an arbitrary user UID with a stack
+  // management token — only an org-level authtoken can, which this integration
+  // doesn't have — so unknown UIDs fall back to a clearly-labeled raw UID
+  // rather than silently displaying it as if it were a resolved name.
+  getUserName(userUid) {
+    return userIndex[userUid] || `Contentstack user ${userUid}`;
   }
 
   // List all entries (paginated) for a content type — used for deletion sweep
