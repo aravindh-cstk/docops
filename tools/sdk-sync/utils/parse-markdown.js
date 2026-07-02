@@ -188,6 +188,30 @@ function extractProperties(body) {
   return propsTable || [];
 }
 
+// ── H2 sections (sdk_usage_guides) ───────────────────────────────────────────
+
+// Splits a body into one entry per top-level "## " heading. Content runs until
+// the next "## " heading (or EOF) and includes any deeper headings (###, ####)
+// as part of that section's text. Anything before the first "## " (the H1 line
+// and any preamble) is ignored — it's not part of any CMS Section.
+function extractH2Sections(body) {
+  if (!body) return [];
+
+  const headingRe = /^##\s+(.+)$/gm;
+  const matches = [...body.matchAll(headingRe)];
+  if (matches.length === 0) return [];
+
+  const sections = [];
+  for (let i = 0; i < matches.length; i++) {
+    const title = matches[i][1].trim();
+    const startIdx = matches[i].index + matches[i][0].length;
+    const endIdx = i + 1 < matches.length ? matches[i + 1].index : body.length;
+    const content = body.slice(startIdx, endIdx).trim();
+    sections.push({ title, content });
+  }
+  return sections;
+}
+
 module.exports = {
   parseFrontmatter,
   extractUrlSlug,
@@ -195,4 +219,5 @@ module.exports = {
   extractReturns,
   extractAfterReturns,
   extractProperties,
+  extractH2Sections,
 };
