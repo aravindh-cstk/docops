@@ -1,6 +1,6 @@
 ---
 title: "publishRequest "
-description: "The publishRequest method allows you to either send a publish request or accept/reject a received publish request. Request Structure Headers: Include the API Key (stack identifier) and Auth Token (authentication). Body Parameters: uid – Publish rule identifier action – \"publish\", \"unpublish\", or \"both\" status – 0 (Approval Requested), 1 (Approval Accepted), -1 (Approval Rejected) notification_settings – Controls notification triggers comment – Optional note for the approver"
+description: "The publishRequest method allows you to either send a publish request or accept/reject a received publish request. Request Structure Headers: Include the API Key (stack identifier) and Auth Token (authentication). Body Parameters: uid – Publish rule identifier action – \"publish\", \"unpublish\", or \"both\" status – 0 (Approval Requested), 1 (Approval Accepted), -1 (Approval Rejected) notification\\_settings – Controls notification triggers comment – Optional note for the approver"
 url: "https://www.contentstack.com/java-management-entry-publishrequest"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## publishRequest 
@@ -21,15 +21,15 @@ The publishRequest method allows you to either send a publish request or accept/
 
 **Body Parameters:**
 
-- uid – Publish rule identifier
-- action – "publish", "unpublish", or "both"
-- status – 0 (Approval Requested), 1 (Approval Accepted), -1 (Approval Rejected)
-- notification_settings – Controls notification triggers
-- comment – Optional note for the approver
+- uid - Publish rule identifier
+- action - "publish", "unpublish", or "both"
+- status - 0 (Approval Requested), 1 (Approval Accepted), -1 (Approval Rejected)
+- notification_settings - Controls notification triggers
+- comment - Optional note for the approver
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| publishing_rule |  JSONObject | Yes | — | Details for the publishing rule |
+| publishing_rule | JSONObject | Yes | - | Details for the publishing rule |
 
 Returns:
 Type

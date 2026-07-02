@@ -1,6 +1,6 @@
 ---
 title: "reset_settings"
-description: "The reset_settings method resets the stack settings."
+description: "The reset\\_settings method resets the stack settings."
 url: "https://www.contentstack.com/python-management-stack-reset_settings"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## reset_settings
@@ -17,7 +17,7 @@ The reset_settings method resets the stack settings.
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| data | Dict | No | — | The request body. |
+| data | Dict | No | - | The request body. |
 
 Returns:
 Type

@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - Swift SDK"
+title: "Swift Delivery Introduction"
 description: "Contentstack - Swift SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt064fa862f708c0c9"
 ---
 
-# Contentstack - Swift SDK
+# Swift Delivery Introduction
 
 ## Overview
 

@@ -1,6 +1,6 @@
 ---
 title: "version_naming"
-description: "The version_naming method allows you to assign a name to a specific version of an entry."
+description: "The version\\_naming method allows you to assign a name to a specific version of an entry."
 url: "https://www.contentstack.com/python-management-entry-version_naming"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## version_naming
@@ -17,8 +17,8 @@ The version_naming method allows you to assign a name to a specific version of a
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| data | Dict | Yes | — | The information you want to send to the server |
-| version_number | str | Yes | — | The identifier to a specific version of an entry. |
+| data | Dict | Yes | - | The information you want to send to the server |
+| version_number | str | Yes | - | The identifier to a specific version of an entry. |
 
 Returns:
 Type

@@ -1,6 +1,6 @@
 ---
 title: "whereNotIn"
-description: "Get entries having values based on referenced fields. This query works the opposite of $in_query and retrieves all entries that does not satisfy query conditions made on referenced fields."
+description: "Get entries having values based on referenced fields. This query works the opposite of $in\\_query and retrieves all entries that does not satisfy query conditions made on referenced fields."
 url: "https://www.contentstack.com/java-query-wherenotin"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## whereNotIn
@@ -17,8 +17,8 @@ Get entries having values based on referenced fields. This query works the oppos
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| key | String | Yes | — | The key to be constrained |
-| queryObject | Query | Yes | — | Query object, so you can chain this call |
+| key | String | Yes | - | The key to be constrained |
+| queryObject | Query | Yes | - | Query object, so you can chain this call |
 
 Returns:
 Type

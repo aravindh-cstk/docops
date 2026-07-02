@@ -1,6 +1,6 @@
 ---
 title: "fetch_publish_rule_content_type"
-description: "The fetch_publish_rule_content_type method retrieves the details of publish rules applied to a specific content type."
+description: "The fetch\\_publish\\_rule\\_content\\_type method retrieves the details of publish rules applied to a specific content type."
 url: "https://www.contentstack.com/python-management-workflows-fetch_publish_rule_content_type"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch_publish_rule_content_type
@@ -17,7 +17,7 @@ The fetch_publish_rule_content_type method retrieves the details of publish rule
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| content_type_uid | str | Yes | — | UID of the content type |
+| content_type_uid | str | Yes | - | UID of the content type |
 
 Returns:
 Type
