@@ -35,12 +35,20 @@ jobs:
         working-directory: tools/sdk-sync
         run: npm ci
 
+      - name: Install cs-sync dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
       - name: Pull changes from CMS
         working-directory: tools/sdk-sync
         env:
           SANDBOX_STACK_API_KEY: ${{ secrets.SDK_API_KEY }}
           SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.SDK_MANAGEMENT_TOKEN }}
         run: node sdk-cms-pull.js --lookback ${{ inputs.lookback_minutes || '20' }}
+
+      - name: Auto-fix common style issues
+        working-directory: tools/sdk-sync
+        run: npm run fix:worktree
 
       - name: Check for changes
         id: changes

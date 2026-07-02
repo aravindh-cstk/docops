@@ -16,7 +16,7 @@ interface StyleLintConfig {
   rootOverrides?: Record<string, { disabledRules?: string[] }>;
 }
 
-function loadConfig(): StyleLintConfig {
+export function loadConfig(): StyleLintConfig {
   const configPath = path.join(scriptDir, "style-lint.config.json");
   try {
     return JSON.parse(fs.readFileSync(configPath, "utf8")) as StyleLintConfig;

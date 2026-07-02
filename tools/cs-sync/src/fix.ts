@@ -2,16 +2,18 @@ import "./loadEnv.js";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { findRepoRoot, listChangedDocs, parseArgs } from "./diff.js";
+import { findRepoRoot, listChangedDocs, listWorktreeChangedDocs, parseArgs } from "./diff.js";
 import { fixStyle } from "./style-fix.js";
 
 async function main(): Promise<void> {
-  const { base } = parseArgs(process.argv.slice(2));
+  const { base, worktree } = parseArgs(process.argv.slice(2));
   const scriptDir = path.dirname(fileURLToPath(import.meta.url));
   const repoRoot = findRepoRoot(path.join(scriptDir, "../../.."));
   const docsRoot = process.env.CS_DOCS_ROOT ?? "cs-docs";
 
-  const { mdFiles } = listChangedDocs(repoRoot, docsRoot, base);
+  const { mdFiles } = worktree
+    ? listWorktreeChangedDocs(repoRoot, docsRoot)
+    : listChangedDocs(repoRoot, docsRoot, base);
 
   if (mdFiles.length === 0) {
     console.log("No doc files to fix.");
@@ -31,7 +33,7 @@ async function main(): Promise<void> {
       continue;
     }
 
-    const { content: fixed, fixes } = fixStyle(content);
+    const { content: fixed, fixes } = fixStyle(content, docsRoot);
 
     if (fixes.length > 0 && fixed !== content) {
       fs.writeFileSync(absPath, fixed, "utf8");
