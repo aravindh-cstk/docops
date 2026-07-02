@@ -23,18 +23,11 @@ const PULL_CONTENT_TYPES = ['method_details', 'classes_reference', 'sdk_usage_gu
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-// Strip HTML tags and decode common entities — used for plain-text frontmatter fields
-function htmlToText(html) {
-  if (!html) return '';
-  return html
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/\s+/g, ' ')
-    .trim();
+// Render a CMS rich-text description as a single-line frontmatter value —
+// htmlToMarkdown preserves inline formatting (`code`, **bold**, etc.) that a
+// plain tag-stripping pass would otherwise destroy on every CMS round-trip.
+function descriptionText(html) {
+  return htmlToMarkdown(html || '').replace(/\s+/g, ' ').trim();
 }
 
 // Build a mapping of { urlSlug → absoluteFilePath } by scanning all sdk-docs/ .md files
@@ -81,12 +74,12 @@ function buildMarkdownFile(entry, ctUid, existingContent) {
 
   if (ctUid === 'method_details') {
     title = entry.method_name || existing.title || '';
-    description = htmlToText(entry.description || '');
+    description = descriptionText(entry.description);
     url = entry.url ? `https://www.contentstack.com${entry.url}` : (existing.url || '');
     docType = 'method_details';
   } else if (ctUid === 'classes_reference') {
     title = entry.class_name || existing.title || '';
-    description = htmlToText(entry.description || '');
+    description = descriptionText(entry.description);
     url = entry.url ? `https://www.contentstack.com${entry.url}` : (existing.url || '');
     docType = 'class_intro';
   } else if (ctUid === 'sdk_usage_guides') {
@@ -96,31 +89,6 @@ function buildMarkdownFile(entry, ctUid, existingContent) {
     docType = 'usage_guide';
   }
 
-  // Build frontmatter — preserve extra fields from the existing file
-  const lines = [
-    '---',
-    `title: ${JSON.stringify(title)}`,
-    `description: ${JSON.stringify(description)}`,
-    `url: ${JSON.stringify(url)}`,
-    `product: ${JSON.stringify(existing.product || 'Contentstack')}`,
-    `doc_type: ${JSON.stringify(docType)}`,
-  ];
-
-  if (existing.audience) {
-    lines.push('audience:');
-    const aud = Array.isArray(existing.audience) ? existing.audience : [existing.audience];
-    for (const a of aud) lines.push(`  - ${a}`);
-  }
-
-  lines.push(`version: ${JSON.stringify(existing.version || 'current')}`);
-  lines.push(`last_updated: ${JSON.stringify(today)}`);
-
-  if (ctUid === 'sdk_usage_guides') {
-    lines.push(`cms_uid: ${JSON.stringify(entry.uid)}`);
-  }
-
-  lines.push('---');
-
   // Sections is the authoritative structured source for the body once populated;
   // md_content is a rendered mirror kept for CMS preview / backward compatibility.
   // Entries not yet migrated (empty sections) fall back to the raw md_content blob.
@@ -129,7 +97,43 @@ function buildMarkdownFile(entry, ctUid, existingContent) {
     ? buildBodyFromSections(title, sections)
     : (entry.md_content || '').trim();
 
-  return `${lines.join('\n')}\n\n${body}\n`;
+  // Build frontmatter — preserve extra fields from the existing file
+  function render(lastUpdated) {
+    const lines = [
+      '---',
+      `title: ${JSON.stringify(title)}`,
+      `description: ${JSON.stringify(description)}`,
+      `url: ${JSON.stringify(url)}`,
+      `product: ${JSON.stringify(existing.product || 'Contentstack')}`,
+      `doc_type: ${JSON.stringify(docType)}`,
+    ];
+
+    if (existing.audience) {
+      lines.push('audience:');
+      const aud = Array.isArray(existing.audience) ? existing.audience : [existing.audience];
+      for (const a of aud) lines.push(`  - ${a}`);
+    }
+
+    lines.push(`version: ${JSON.stringify(existing.version || 'current')}`);
+    lines.push(`last_updated: ${JSON.stringify(lastUpdated)}`);
+
+    if (ctUid === 'sdk_usage_guides') {
+      lines.push(`cms_uid: ${JSON.stringify(entry.uid)}`);
+    }
+
+    lines.push('---');
+    return `${lines.join('\n')}\n\n${body}\n`;
+  }
+
+  // Only bump last_updated when something else actually changed. Otherwise any CMS
+  // entry whose updated_at was refreshed by an unrelated full-scan sync (which
+  // touches every entry) would look "changed" here purely because of the date stamp,
+  // and get rewritten on every pull run indefinitely.
+  const withPreservedDate = render(existing.last_updated || today);
+  if (existingContent !== null && withPreservedDate === existingContent) {
+    return existingContent;
+  }
+  return render(today);
 }
 
 function buildBodyFromSections(title, sections) {
