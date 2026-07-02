@@ -1,6 +1,6 @@
 ---
 title: "Update_fallback"
-description: "The Update_fallback method allows you to update the fallback language for an existing language of your stack."
+description: "The Update\\_fallback method allows you to update the fallback language for an existing language of your stack."
 url: "https://www.contentstack.com/python-management-locale-update_fallback"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Update_fallback

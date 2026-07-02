@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - .NET Management SDK"
+title: ".NET Management Introduction"
 description: "Contentstack - .NET Management SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt4d9d5c4fb2e09ef8"
 ---
 
-# Contentstack - .NET Management SDK
+# .NET Management Introduction
 
 ## .NET SDK for Contentstack's Content Management API
 
@@ -24,13 +24,13 @@ For more information, you can check out the GitHub page of our [.NET Management 
 
 To get started with C#, you will need:
 
-- .NET platform 3.1 and later
-- IDE (Visual Studio)
-- NuGet.
+-   .NET platform 3.1 and later
+-   IDE (Visual Studio)
+-   NuGet.
 
 ## SDK installation and setup
 
-The .NET SDK provided by contentstack.io is available for Xamarin, Windows Phone and legacy .NET applications. You can integrate contentstack with your application by following these steps.
+The .NET SDK provided by [contentstack.io](http://contentstack.io) is available for Xamarin, Windows Phone and legacy .NET applications. You can integrate contentstack with your application by following these steps.
 
 Open the terminal and install the contentstack module via 'Package Manager' command
 
@@ -76,8 +76,7 @@ ContentstackClient client = new ContentstackClient("AUTHTOKEN");
 
 To use this SDK, you need to authenticate your users by using the Authtoken, credentials, or Management Token (stack-level token).
 
-**Authtoken**
-An Authtoken is a read-write token used to make authorized CMA requests, and it is a user-specific token.
+**Authtoken** An Authtoken is a read-write token used to make authorized CMA requests, and it is a user-specific token.
 
 ```
 ContentstackClientOptions options = new ContentstackClientOptions() {

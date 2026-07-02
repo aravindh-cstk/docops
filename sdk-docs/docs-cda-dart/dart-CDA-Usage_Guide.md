@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - Dart Delivery SDK"
+title: "Dart Delivery Introduction"
 description: "Contentstack - Dart Delivery SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blta909a8112006b5f9"
 ---
 
-# Contentstack - Dart Delivery SDK
+# Dart Delivery Introduction
 
 ## Overview
 
@@ -28,8 +28,8 @@ Contentstack provides Dart Delivery SDK to build applications on top of Dart. Gi
 
 This guide will help you get started with Contentstack Dart SDK to build Flutter apps powered by Contentstack.
 
-- [Contentstack account](https://app.contentstack.com/#!/login)
-- [Dart](https://dart.dev/get-dart)
+-   [Contentstack account](https://app.contentstack.com/#!/login)
+-   [Dart](https://dart.dev/get-dart)
 
 ## SDK Installation and Setup
 
@@ -37,31 +37,31 @@ To use the Contentstack Dart SDK with your existing project, perform the followi
 
 **Create a New Flutter Project in VS Code**
 
-****
+---
 
-1. Open VS Code and select **Extensions** from the left navigation panel.
-2. Then, in the **Search Extensions in Marketplace** search box, type **Flutter**. From the quick results, click on **Flutter**.
-3. From the **Flutter** details page, click on **Install**.
-4. Press Ctrl + Shift + P on Windows and Cmd + Shift + P on macOS.
-5. Type **flutter** and select **Flutter: New Project**.
-6. If the Flutter SDK is not installed on your machine, it will ask you to **Download SDK**. Click on it and from the pop-up that opens, click on **Open**.
-7. It will take you the **Flutter install** page. Select as per your OS and the download will begin.
-8. Once it is installed, follow steps 4 and 5 and create a new Flutter project.
+1.  Open VS Code and select **Extensions** from the left navigation panel.
+2.  Then, in the **Search Extensions in Marketplace** search box, type **Flutter**. From the quick results, click on **Flutter**.
+3.  From the **Flutter** details page, click on **Install**.
+4.  Press Ctrl + Shift + P on Windows and Cmd + Shift + P on macOS.
+5.  Type **flutter** and select **Flutter: New Project**.
+6.  If the Flutter SDK is not installed on your machine, it will ask you to **Download SDK**. Click on it and from the pop-up that opens, click on **Open**.
+7.  It will take you the **Flutter install** page. Select as per your OS and the download will begin.
+8.  Once it is installed, follow steps 4 and 5 and create a new Flutter project.
 
-****
+---
 
 **Create a New Project in Android Studio**
 
-1. Open Android Studio and click on **Configure**.
-2. Then, select **Plugins**. From the resulting screen, click on **Flutter** and click on **Install**.
-3. Click on **Accept** and then **Yes** to install the Dart plugin.
-4. Click on **Restart** when prompted.
-5. In the Android Studio IDE, click on **Start a new Flutter project** from the **Welcome** screen.
-6. Then, select **Flutter Application** in the menu, and click on **Next**.
-7. On the next screen, give your project a name, provide the Flutter SDK path (where you installed the Flutter SDK), and your project location.
-8. If you prefer publishing the app, set the company domain and click on **Finish**.
+1.  Open Android Studio and click on **Configure**.
+2.  Then, select **Plugins**. From the resulting screen, click on **Flutter** and click on **Install**.
+3.  Click on **Accept** and then **Yes** to install the Dart plugin.
+4.  Click on **Restart** when prompted.
+5.  In the Android Studio IDE, click on **Start a new Flutter project** from the **Welcome** screen.
+6.  Then, select **Flutter Application** in the menu, and click on **Next**.
+7.  On the next screen, give your project a name, provide the Flutter SDK path (where you installed the Flutter SDK), and your project location.
+8.  If you prefer publishing the app, set the company domain and click on **Finish**.
 
-****
+---
 
 **Add Dart Dependencies to Your Project**
 
@@ -78,7 +78,7 @@ You can download the latest dependency version [here](https://pub.dev/packages/
 
 ### Initializing your SDK
 
-Contentstack offers six [regions](/docs/developers/contentstack-regions/about-regions) North America (NA), Europe (EU), Azure North America (AZURE_NA), Azure Europe (AZURE_EU), GCP North America (GCP_NA), and GCP Europe (GCP_EU) as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.
+Contentstack offers six [regions](/docs/developers/contentstack-regions/about-regions) North America (NA), Europe (EU), Azure North America (AZURE\_NA), Azure Europe (AZURE\_EU), GCP North America (GCP\_NA), and GCP Europe (GCP\_EU) as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.
 
 To use SDKs for the Europe, Azure NA, Azure EU region, GCP NA, or GCP EU you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.
 
@@ -96,7 +96,7 @@ import 'package:contentstack/contentstack.dart' as contentstack;
 final stack = contentstack.Stack(apiKey, deliveryToken, environment, region: contentstack.Region.<add_your_region>);
 ```
 
-****
+---
 
 **Note**: By default, the SDK uses the North American region. Configuration changes are not required for North American region users.
 
