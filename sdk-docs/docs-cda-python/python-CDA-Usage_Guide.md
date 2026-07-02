@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - Python Delivery SDK"
+title: "Python Delivery Introduction"
 description: "Contentstack - Python Delivery SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt0f259937b4a7ce58"
 ---
 
-# Contentstack - Python Delivery SDK
+# Python Delivery Introduction
 
 ## Overview
 
@@ -24,22 +24,17 @@ Contentstack provides Python Delivery SDK to build applications on top of Python
 
 This guide will help you get started with Contentstack [Python SDK](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/python/about-python-sdk/) to build apps powered by Contentstack.
 
-- [Contentstack account](https://app.contentstack.com/#!/login)
-- [Python 3](https://www.python.org/downloads/)
+-   [Contentstack account](https://app.contentstack.com/#!/login)
+-   [Python 3](https://www.python.org/downloads/)
 
 ## SDK Installation and Setup
 
 To use the Contentstack Python SDK with your existing project, perform the following steps:
 
-1. Open the terminal, create a project, and move inside it as follows:
-mkdir contentstack-example
-cd contentstack-example
-2. Create a virtual environment:
-python3 -m venv venv
-3. Activate the virtual environment:
-source  venv/bin/activate
-4. Install pip Contentstack as follows:
-pip install contentstack
+1.  Open the terminal, create a project, and move inside it as follows: mkdir contentstack-example cd contentstack-example
+2.  Create a virtual environment: python3 -m venv venv
+3.  Activate the virtual environment: source venv/bin/activate
+4.  Install pip Contentstack as follows: pip install contentstack
 
 You can download the latest dependency version [here](https://pypi.org/project/Contentstack/)
 
@@ -51,7 +46,7 @@ Contentstack offers seven [regions](/docs/developers/contentstack-regions/about-
 
 To use SDKs for the Europe, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.
 
-To initialize the SDK, the **stack’s api_key delivery token **and the name of the **environment **where you will publish the content, as shown in the snippet below:
+To initialize the SDK, the **stack’s api\_key delivery token **and the name of the **environment **where you will publish the content, as shown in the snippet below:
 
 ```
 import contentstack

@@ -1,6 +1,6 @@
 ---
 title: "activateAccount"
-description: "The activate_token a user account call activates the account of a user after signing up."
+description: "The activate\\_token a user account call activates the account of a user after signing up."
 url: "https://www.contentstack.com/java-management-user-activateaccount"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## activateAccount

@@ -1,6 +1,6 @@
 ---
 title: "localize"
-description: "The \"Localize an entry\" request allows you to localize an entry, i.e., the entry will cease to fetch data from its fallback language and possess independent content specific to the selected locale. Note : This request will only create the localized version of your entry and not publish it. To publish your localized entry, you need to use the Publish an entry request and pass the respective locale code in the locale={locale_code} parameter."
+description: "The \"Localize an entry\" request allows you to localize an entry, i.e., the entry will cease to fetch data from its fallback language and possess independent content specific to the selected locale. Note : This request will only create the localized version of your entry and not publish it. To publish your localized entry, you need to use the Publish an entry request and pass the respective locale code in the locale={locale\\_code} parameter."
 url: "https://www.contentstack.com/java-management-entry-localize"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## localize

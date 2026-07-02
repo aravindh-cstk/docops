@@ -1,6 +1,6 @@
 ---
 title: "Fetch"
-description: "Fetches the latest version of the entries from Contentstack.io content stack"
+description: "Fetches the latest version of the entries from [Contentstack.io](http://Contentstack.io) content stack"
 url: "https://www.contentstack.com/dotnet-entry-fetch"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Fetch

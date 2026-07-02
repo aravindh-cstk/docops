@@ -1,6 +1,6 @@
 ---
 title: "folder_by_name"
-description: "The folder_by_name method retrieves the details of a specific asset folder in the stack using the folder name."
+description: "The folder\\_by\\_name method retrieves the details of a specific asset folder in the stack using the folder name."
 url: "https://www.contentstack.com/python-management-asset-folder_by_name"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## folder_by_name

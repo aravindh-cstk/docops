@@ -1,6 +1,6 @@
 ---
 title: "get_subfolders"
-description: "The get_subfolders method retrieves the details of only the subfolder within a specific asset folder in the stack."
+description: "The get\\_subfolders method retrieves the details of only the subfolder within a specific asset folder in the stack."
 url: "https://www.contentstack.com/python-management-asset-get_subfolders"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## get_subfolders

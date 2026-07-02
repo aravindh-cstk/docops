@@ -1,5 +1,5 @@
 ---
-title: "React Native Delivery SDK"
+title: "React Native Delivery Introduction"
 description: "React Native Delivery SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt90a6ea868e2b787e"
 ---
 
-# React Native Delivery SDK
+# React Native Delivery Introduction
 
 ## Overview
 
@@ -53,16 +53,19 @@ const Stack = Contentstack.Stack({"api_key":"api_key","delivery_token":"delivery
 ```
 
 For Azure EU
+
 ```
 const Stack = Contentstack.Stack({"api_key":"api_key","delivery_token":"delivery_token","environment":"environment","region":Contentstack.Region.AZURE_EU});
 ```
 
-FOR AZURE_NA
+FOR AZURE\_NA
+
 ```
 const Stack = Contentstack.Stack({"api_key":"api_key","delivery_token":"delivery_token","environment": "environment", "region": Contentstack.Region.AZURE_NA});
 ```
 
-FOR GCP_NA
+FOR GCP\_NA
+
 ```
 const Stack = Contentstack.Stack({"api_key":"api_key","delivery_token":"delivery_token","environment":"environment","region":Contentstack.Region.GCP_NA});
 ```
@@ -117,8 +120,8 @@ Query.where("title", "welcome")
 
 Note:
 
-- Currently, the JavaScript SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](https://www.contentstack.com/docs/developers/apis/content-delivery-api/#queries) section of our Content Delivery API documentation.
-- By default, the limit for response details per request is 100, with the maximum limit set at 250.
+-   Currently, the JavaScript SDK does not support multiple content types referencing in a single query. For more information on how to query entries and assets, refer the [Queries](https://www.contentstack.com/docs/developers/apis/content-delivery-api/#queries) section of our Content Delivery API documentation.
+-   By default, the limit for response details per request is 100, with the maximum limit set at 250.
 
 ### Paginating Responses
 
@@ -170,7 +173,7 @@ Query
 
 You can set a cache policy on a stack and/or query object.
 
-##### Setting a cache policy on a stack
+Setting a cache policy on a stack
 
 This option allows you to globalize a cache policy. This means the cache policy you set will be applied to all the query objects of the stack.
 
@@ -179,7 +182,7 @@ This option allows you to globalize a cache policy. This means the cache policy 
 Stack.setCachePolicy(Contentstack.CachePolicy.NETWORK_ELSE_CACHE)
 ```
 
-##### Setting a cache policy on a query object
+Setting a cache policy on a query object
 
 This option allows you to set/override a cache policy on a specific query object.
 

@@ -1,6 +1,6 @@
 ---
 title: "App"
-description: "App/Manifest is used for creating/updating/deleting an app in your organization. Example: Marketplace marketplace = new Marketplace.Builder(\"ORGANIZATION_UID\").host(\"marketplace.contentstack.io\").build(); App app = marketplace.app(\"installationId\"); (or) App app = marketplace.app();"
+description: "App/Manifest is used for creating/updating/deleting an app in your organization. Example: Marketplace marketplace = new Marketplace.Builder(\"ORGANIZATION\\_UID\").host(\"[marketplace.contentstack.io](http://marketplace.contentstack.io)\").build(); App app = marketplace.app(\"installationId\"); (or) App app = marketplace.app();"
 url: "https://www.contentstack.com/developers/sdks/marketplace-sdk/java/reference/app"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # App

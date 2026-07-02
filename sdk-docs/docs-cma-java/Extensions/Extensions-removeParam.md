@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## removeParam
@@ -26,6 +26,6 @@ Void
 ```
 import contentstack;
 Contentstack contentstack = new Contentstack.Builder().build();
-Extensions extension = contentstack.stack().extensions();
-extension.removeParam("key");
+Branch branch = contentstack.stack().branch();
+branch.removeParam("key");
 ```

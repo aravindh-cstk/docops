@@ -1,5 +1,5 @@
 ---
-title: "Contentstack JavaScript Marketplace SDK"
+title: "JavaScript Marketplace Introduction"
 description: "Contentstack JavaScript Marketplace SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt4033b28a3f31b986"
 ---
 
-# Contentstack JavaScript Marketplace SDK
+# JavaScript Marketplace Introduction
 
 ## Introduction to JavaScript Marketplace SDK
 

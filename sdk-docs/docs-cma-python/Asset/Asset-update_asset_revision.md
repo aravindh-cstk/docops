@@ -1,6 +1,6 @@
 ---
 title: "update_asset_revision"
-description: "The update_asset_revision method upgrades the specified version of the asset to the latest version."
+description: "The update\\_asset\\_revision method upgrades the specified version of the asset to the latest version."
 url: "https://www.contentstack.com/python-management-asset-update_asset_revision"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## update_asset_revision

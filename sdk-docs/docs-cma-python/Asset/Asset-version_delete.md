@@ -1,6 +1,6 @@
 ---
 title: "version_delete"
-description: "The version_delete method allows you to remove the name of a specific version of an asset and resets it to the version number."
+description: "The version\\_delete method allows you to remove the name of a specific version of an asset and resets it to the version number."
 url: "https://www.contentstack.com/python-management-asset-version_delete"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## version_delete

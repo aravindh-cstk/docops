@@ -1,5 +1,5 @@
 ---
-title: "DataSync MongoDB SDK API Reference"
+title: "MongoDB DataSync Introduction"
 description: "DataSync MongoDB SDK API Reference"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt7380717b97e00f07"
 ---
 
-# DataSync MongoDB SDK API Reference
+# MongoDB DataSync Introduction
 
 ## Overview
 
