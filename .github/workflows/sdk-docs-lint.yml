@@ -12,6 +12,11 @@ permissions:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    # sdk-cms-to-github.yml already lints and reports a "lint" check for its own
+    # bot-authored PRs directly (its pull_request-triggered run here would need
+    # manual approval every time, since it's authored by github-actions[bot]).
+    # Skip to avoid a redundant, permanently-pending duplicate check.
+    if: ${{ !startsWith(github.head_ref, 'sdk-cms-sync/') }}
     steps:
       - uses: actions/checkout@v4
         with:
