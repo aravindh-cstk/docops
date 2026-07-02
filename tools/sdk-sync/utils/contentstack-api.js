@@ -218,6 +218,22 @@ class ContentstackAPI {
     return response.data.entry;
   }
 
+  // Fetch a single entry by uid — returns null if it no longer exists
+  async getEntry(ctUid, uid) {
+    try {
+      const response = await this.retryRequest(() =>
+        axios.get(`${this.cmaBaseUrl}/content_types/${ctUid}/entries/${uid}`, {
+          headers: this._readHeaders(),
+        })
+      );
+      return response.data.entry || null;
+    } catch (error) {
+      // CMA returns 422 with error_code 118 for "not found" (not 404)
+      if (error.response?.status === 404 || error.response?.status === 422) return null;
+      throw error;
+    }
+  }
+
   // Query entries by a JSON filter — returns { entries: [...] }
   async queryEntries(ctUid, query, limit = 1) {
     const q = encodeURIComponent(JSON.stringify(query));

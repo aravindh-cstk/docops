@@ -139,14 +139,16 @@ function buildClassEntry(filePath, sdkFolder, className, methodUids) {
 
 function buildUsageGuideEntry(filePath, sdkFolder) {
   const content = fs.readFileSync(filePath, 'utf8');
-  const { body } = parseFrontmatter(content);
+  const { data, body } = parseFrontmatter(content);
   const cfg = SDK_CONFIG[sdkFolder];
   if (!cfg) return null;
 
+  // Title is authored in the CMS, not here — only used to seed a brand-new entry
+  // (see upsertUsageGuide). cmsUid links this file to its CMS entry across renames.
   return {
-    title: `${cfg.framework} ${cfg.api} Introduction`,
+    derivedTitle: `${cfg.framework} ${cfg.api} Introduction`,
+    cmsUid: data.cms_uid || null,
     payload: {
-      title: `${cfg.framework} ${cfg.api} Introduction`,
       languages: { select: cfg.language },
       md_content: body.trim(),
     },
@@ -219,6 +221,62 @@ async function upsertByTitle(sandbox, ctUid, title, payload, label) {
   }
 }
 
+// Usage guides treat the CMS as the source of truth for `title` — editors rename
+// entries directly in the CMS UI. So matching/upserting can't rely on title (it's
+// mutable), and updates must never overwrite it. `built.cmsUid` (persisted in the
+// file's frontmatter, see injectCmsUid) is the stable link once a file has been
+// synced at least once; `built.derivedTitle` is only used to adopt a pre-existing
+// entry from the old title-based logic, or to seed a brand-new entry.
+async function upsertUsageGuide(sandbox, ctUid, built, label) {
+  let existing = null;
+
+  if (built.cmsUid) {
+    existing = await sandbox.getEntry(ctUid, built.cmsUid);
+    if (!existing) {
+      logger.warn(`  ${label}: cms_uid ${built.cmsUid} no longer exists in CMS — recreating`);
+    }
+  }
+
+  if (!existing && !built.cmsUid) {
+    const { entries } = await sandbox.queryEntries(ctUid, { title: built.derivedTitle });
+    existing = entries[0] || null;
+    if (existing) {
+      logger.info(`  ${label}: adopting existing entry ${existing.uid} via legacy title match`);
+    }
+  }
+
+  if (DRY_RUN) {
+    logger.info(`  [DRY] ${existing ? 'update' : 'create'} ${label}`);
+    return { uid: existing ? existing.uid : 'dry-run-uid', needsBackfill: !built.cmsUid };
+  }
+
+  if (existing) {
+    // `title` is mandatory on this content type, so it can't be omitted from the
+    // update payload — echo back the current CMS title so the update is a no-op on it.
+    const result = await sandbox.updateEntry(ctUid, existing.uid, { ...built.payload, title: existing.title });
+    logger.success(`  Updated ${label} (uid=${existing.uid}, title untouched)`);
+    return { uid: result.uid, needsBackfill: !built.cmsUid };
+  } else {
+    const result = await sandbox.createEntry(ctUid, { ...built.payload, title: built.derivedTitle });
+    logger.success(`  Created ${label} (uid=${result.uid}, title="${built.derivedTitle}")`);
+    return { uid: result.uid, needsBackfill: true };
+  }
+}
+
+// Injects/updates a `cms_uid` line in a file's frontmatter block via a targeted
+// text edit (not a full frontmatter re-serialization), so the diff stays to one line.
+function injectCmsUid(rawContent, uid) {
+  const fmMatch = rawContent.match(/^---\n([\s\S]*?)\n---/);
+  if (!fmMatch) return rawContent;
+
+  let fmBlock = fmMatch[1];
+  fmBlock = /^cms_uid:/m.test(fmBlock)
+    ? fmBlock.replace(/^cms_uid:.*$/m, `cms_uid: ${JSON.stringify(uid)}`)
+    : `${fmBlock}\ncms_uid: ${JSON.stringify(uid)}`;
+
+  return rawContent.replace(fmMatch[0], `---\n${fmBlock}\n---`);
+}
+
 // ── Filesystem helpers ────────────────────────────────────────────────────────
 
 function getSdkDirs() {
@@ -264,6 +322,24 @@ function getClassFiles(sdkFolder, className) {
   }
 
   return { introFile, methodFiles };
+}
+
+// Returns the set of SDK folders whose derived usage-guide title
+// ("{framework} {api} Introduction") collides with another folder's.
+function findDerivedTitleClashes(sdkFolders) {
+  const byTitle = {};
+  for (const sdkFolder of sdkFolders) {
+    const cfg = SDK_CONFIG[sdkFolder];
+    if (!cfg) continue;
+    const title = `${cfg.framework} ${cfg.api} Introduction`;
+    (byTitle[title] = byTitle[title] || []).push(sdkFolder);
+  }
+
+  const clashing = new Set();
+  for (const folders of Object.values(byTitle)) {
+    if (folders.length > 1) folders.forEach(f => clashing.add(f));
+  }
+  return clashing;
 }
 
 // ── Determine affected SDK folders ────────────────────────────────────────────
@@ -328,6 +404,7 @@ async function main() {
   const methodIndex = {};
   const classIndex = {};
   const guideIndex = {};
+  const backfillQueue = []; // { filePath, uid } — usage guide files needing a cms_uid write-back
 
   const stats = { processed: 0, skipped: 0, failed: 0 };
 
@@ -397,7 +474,18 @@ async function main() {
   logger.separator();
   logger.info('Pass 3: Syncing sdk_usage_guides...');
 
+  // The legacy-adoption path in upsertUsageGuide() matches pre-existing CMS entries
+  // by their derived "{framework} {api} Introduction" title, so that title must stay
+  // unique across SDK folders — otherwise adoption could attach the wrong entry.
+  const clashingSdks = findDerivedTitleClashes(affectedSdks);
+
   for (const sdkFolder of affectedSdks) {
+    if (clashingSdks.has(sdkFolder)) {
+      logger.error(`  [${sdkFolder}] usage guide: derived title clashes with another SDK folder — skipping`);
+      stats.failed++;
+      continue;
+    }
+
     const guideFile = getUsageGuideFile(sdkFolder);
     if (!guideFile) {
       logger.warn(`  No usage_guide file for [${sdkFolder}] — skipping`);
@@ -409,12 +497,22 @@ async function main() {
       const built = buildUsageGuideEntry(guideFile, sdkFolder);
       if (!built) { stats.skipped++; continue; }
 
-      const uid = await upsertByTitle(sandbox, 'sdk_usage_guides', built.title, built.payload,
+      const { uid, needsBackfill } = await upsertUsageGuide(sandbox, 'sdk_usage_guides', built,
         `[${sdkFolder}] usage guide`);
       if (uid) guideIndex[sdkFolder] = uid;
+      if (uid && needsBackfill && !DRY_RUN) backfillQueue.push({ filePath: guideFile, uid });
     } catch (err) {
       logger.error(`  Failed [${sdkFolder}] usage guide: ${err.response?.data?.error_message || err.message}`);
       stats.failed++;
+    }
+  }
+
+  if (backfillQueue.length > 0) {
+    logger.info(`Backfilling cms_uid into ${backfillQueue.length} usage guide file(s)...`);
+    for (const { filePath, uid } of backfillQueue) {
+      const raw = fs.readFileSync(filePath, 'utf8');
+      fs.writeFileSync(filePath, injectCmsUid(raw, uid), 'utf8');
+      logger.info(`  Backfilled cms_uid=${uid} into ${path.relative(REPO_ROOT, filePath)}`);
     }
   }
 

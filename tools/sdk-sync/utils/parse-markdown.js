@@ -12,17 +12,16 @@ function sanitizeYamlEscapes(content) {
 }
 
 function parseFrontmatter(content) {
+  // Sanitize unconditionally (idempotent — no-op when there's nothing to strip) so the
+  // raw, unsanitized string is never handed to matter(). gray-matter caches a pre-parse
+  // placeholder under the input string *before* parsing; if that parse throws (as it does
+  // for unescaped \| etc.), the empty placeholder stays cached under the raw content key
+  // and silently poisons any later parse of that same raw string.
   try {
-    const { data, content: body } = matter(content);
+    const { data, content: body } = matter(sanitizeYamlEscapes(content));
     return { data, body };
   } catch (err) {
-    // Retry after stripping unrecognized YAML escape sequences
-    try {
-      const { data, content: body } = matter(sanitizeYamlEscapes(content));
-      return { data, body };
-    } catch (err2) {
-      return { data: {}, body: content };
-    }
+    return { data: {}, body: content };
   }
 }
 

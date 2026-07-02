@@ -20,6 +20,6 @@ module.exports = {
   'docs-marketplace-java':      { framework: 'Java',         api: 'Marketplace', language: 'Java',        landingPageTitle: 'Contentstack Java Marketplace SDK',             landingPageUrl: '/developers/sdks/marketplace-sdk/java/reference' },
   'docs-marketplace-javascript':{ framework: 'JavaScript',   api: 'Marketplace', language: 'JavaScript',  landingPageTitle: 'Contentstack JavaScript Marketplace SDK',       landingPageUrl: '/developers/sdks/marketplace-sdk/javascript/reference' },
   'docs-personalize-javascript':{ framework: 'JavaScript',   api: 'Personalize', language: 'JavaScript',  landingPageTitle: 'JavaScript Personalize Edge SDK API Reference', landingPageUrl: '/developers/sdks/personalize-edge-sdk/javascript/reference' },
-  'docs-react-studio':          { framework: 'React',        api: 'Studio',      language: 'None',        landingPageTitle: 'React Studio SDK API Reference',                landingPageUrl: '/developers/sdks/studio-sdk/react/reference' },
+  'docs-react-studio':          { framework: 'React',        api: 'Studio',      language: 'JavaScript',  landingPageTitle: 'React Studio SDK API Reference',                landingPageUrl: '/developers/sdks/studio-sdk/react/reference' },
   'docs-app-typescript':        { framework: 'TypeScript',   api: 'App',         language: 'JavaScript',  landingPageTitle: 'Typescript Contentstack App SDK API Reference', landingPageUrl: '/developers/sdks/contentstack-app-sdk/typescript/reference' },
 };
