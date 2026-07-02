@@ -1,6 +1,6 @@
 ---
 title: "get_api_key"
-description: "api_key for the stack"
+description: "api\\_key for the stack"
 url: "https://www.contentstack.com/python-stack-get_api_key"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## get_api_key

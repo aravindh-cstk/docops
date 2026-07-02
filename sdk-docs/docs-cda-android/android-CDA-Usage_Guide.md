@@ -1,5 +1,5 @@
 ---
-title: "Contentstack - Android Delivery SDK"
+title: "Android Delivery Introduction"
 description: "Contentstack - Android Delivery SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt3456345a64828830"
 ---
 
-# Contentstack - Android Delivery SDK
+# Android Delivery Introduction
 
 ## Android Delivery SDK for Contentstack
 

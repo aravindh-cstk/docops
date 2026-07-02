@@ -1,6 +1,6 @@
 ---
 title: "transfer_ownership"
-description: "The transfer_ownership method transfers the ownership of the stack to another user."
+description: "The transfer\\_ownership method transfers the ownership of the stack to another user."
 url: "https://www.contentstack.com/python-management-stack-transfer_ownership"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## transfer_ownership
@@ -17,7 +17,7 @@ The transfer_ownership method transfers the ownership of the stack to another us
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| data | Dict | Yes | — | The request body |
+| data | Dict | Yes | - | The request body |
 
 Returns:
 Type

@@ -1,5 +1,5 @@
 ---
-title: "Contentstack Java Marketplace SDK"
+title: "Java Marketplace Introduction"
 description: "Contentstack Java Marketplace SDK"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blte22c2c065e94b2d4"
 ---
 
-# Contentstack Java Marketplace SDK
+# Java Marketplace Introduction
 
 ## Introduction to Java Marketplace SDK
 

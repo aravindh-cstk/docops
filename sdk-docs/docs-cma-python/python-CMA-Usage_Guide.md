@@ -1,5 +1,5 @@
 ---
-title: "Python Management SDK API Reference"
+title: "Python Management Introduction"
 description: "Python Management SDK API Reference"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt5c4bbb4c699ae12e"
 ---
 
-# Python Management SDK API Reference
+# Python Management Introduction
 
 ## Overview
 

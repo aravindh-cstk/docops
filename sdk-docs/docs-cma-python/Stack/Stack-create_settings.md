@@ -1,6 +1,6 @@
 ---
 title: "create_settings"
-description: "The create_settings method creates stack settings"
+description: "The create\\_settings method creates stack settings"
 url: "https://www.contentstack.com/python-management-stack-create_settings"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## create_settings
@@ -17,7 +17,7 @@ The create_settings method creates stack settings
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| data | Dict | Yes | — | The request body. |
+| data | Dict | Yes | - | The request body. |
 
 Returns:
 Type

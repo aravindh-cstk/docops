@@ -1,6 +1,6 @@
 ---
 title: "environment"
-description: "Enter the name of the [environment] if you wish to retrieve the assets published in a particular environment."
+description: "Enter the name of the \\[environment\\] if you wish to retrieve the assets published in a particular environment."
 url: "https://www.contentstack.com/dart-assetquery-environment"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## environment
@@ -17,7 +17,7 @@ Enter the name of the [environment] if you wish to retrieve the assets published
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| environment | String | Yes | — | The Environment |
+| environment | String | Yes | - | The Environment |
 
 Returns:
 Type
