@@ -1,6 +1,6 @@
 ---
 title: "SetHeader"
-description: "The `SetHeader` method sets custom headers when fetching a Global Field, allowing you to pass additional information such as authentication tokens, localization settings, or custom metadata with the API request."
+description: "The SetHeader method sets custom headers when fetching a Global Field, allowing you to pass additional information such as authentication tokens, localization settings, or custom metadata with the API request."
 url: "https://www.contentstack.com/dotnet-delivery-global-field-setheader"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## SetHeader

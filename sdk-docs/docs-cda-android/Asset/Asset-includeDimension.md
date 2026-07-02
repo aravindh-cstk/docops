@@ -1,6 +1,6 @@
 ---
 title: "includeDimension"
-description: "The `includeDimension` method includes the dimension information such as height and width in the asset response."
+description: "The includeDimension method includes the dimension information such as height and width in the asset response."
 url: "https://www.contentstack.com/android-asset-includedimension"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeDimension

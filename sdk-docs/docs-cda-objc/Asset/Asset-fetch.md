@@ -1,6 +1,6 @@
 ---
 title: "fetch:"
-description: "The `fetch` fetches an asset asynchronously (by UID or with a query built on the instance)."
+description: "The fetch fetches an asset asynchronously (by UID or with a query built on the instance)."
 url: "https://www.contentstack.com/ios-asset-fetch-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch:

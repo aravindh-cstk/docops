@@ -1,6 +1,6 @@
 ---
 title: "findAllAuthorizedApps"
-description: "The `findAllAuthorizedApps` method retrieves all the authorized apps for the organization."
+description: "The findAllAuthorizedApps method retrieves all the authorized apps for the organization."
 url: "https://www.contentstack.com/javascript-marketplace-findallauthorizedapps"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## findAllAuthorizedApps

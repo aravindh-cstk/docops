@@ -1,6 +1,6 @@
 ---
 title: "setEdgeApiUrl"
-description: "The `setEdgeApiUrl()` method configures the Edge API URL, especially when directing the SDK to a different Contentstack region. By default, the SDK will attempt to initialize using the AWS NA region. Invoke this method before initializing the SDK to ensure the configuration is applied. Refer to our documentation to find your region-specific base URL"
+description: "The setEdgeApiUrl() method configures the Edge API URL, especially when directing the SDK to a different Contentstack region. By default, the SDK will attempt to initialize using the AWS NA region. Invoke this method before initializing the SDK to ensure the configuration is applied. Refer to our documentation to find your region-specific base URL"
 url: "https://www.contentstack.com/javascript-personalize-edge-sdk-personalize-class-setedgeapiurl"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## setEdgeApiUrl

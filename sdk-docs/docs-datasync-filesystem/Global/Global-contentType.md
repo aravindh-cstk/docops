@@ -1,6 +1,6 @@
 ---
 title: "contentType"
-description: "The `contentType` method specifies the content type to query on."
+description: "The contentType method specifies the content type to query on."
 url: "https://www.contentstack.com/datasync-filesystem-global-containedin"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## contentType

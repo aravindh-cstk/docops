@@ -1,6 +1,6 @@
 ---
 title: "getHost()"
-description: "The `getHost` method retrieves the host associated with the request URL."
+description: "The getHost method retrieves the host associated with the request URL."
 url: "https://www.contentstack.com/android-config-gethost"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getHost()

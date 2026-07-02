@@ -1,6 +1,6 @@
 ---
 title: "except"
-description: "The `except` method excludes the specified fields from the response."
+description: "The except method excludes the specified fields from the response."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-except"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## except

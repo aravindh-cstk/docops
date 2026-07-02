@@ -1,6 +1,6 @@
 ---
 title: "appRequests"
-description: "The `appRequests` method creates an app request for the app."
+description: "The appRequests method creates an app request for the app."
 url: "https://www.contentstack.com/javascript-marketplace-apprequests"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## appRequests

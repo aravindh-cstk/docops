@@ -1,6 +1,6 @@
 ---
 title: "lessThanOrEqualTo"
-description: "The `lessThanOrEqualTo` method retrieves entries where the specified field’s value is less than or equal to the given value."
+description: "The lessThanOrEqualTo method retrieves entries where the specified field’s value is less than or equal to the given value."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-lessthanorequalto"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## lessThanOrEqualTo

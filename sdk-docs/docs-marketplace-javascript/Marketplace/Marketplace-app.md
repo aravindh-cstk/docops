@@ -1,6 +1,6 @@
 ---
 title: "app"
-description: "The `app` method creates and retrieves a new instance of the App class with the given parameters."
+description: "The app method creates and retrieves a new instance of the App class with the given parameters."
 url: "https://www.contentstack.com/javascript-marketplace-app"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## app

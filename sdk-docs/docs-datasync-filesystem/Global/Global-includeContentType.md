@@ -1,6 +1,6 @@
 ---
 title: "includeContentType"
-description: "The `includeContentType` method includes the full content type schema along with each entry in the response."
+description: "The includeContentType method includes the full content type schema along with each entry in the response."
 url: "https://www.contentstack.com/datasync-filesystem-global-includecontenttype"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeContentType

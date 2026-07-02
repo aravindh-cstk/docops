@@ -1,6 +1,6 @@
 ---
 title: "Update / UpdateAsync"
-description: "The `Update` and `UpdateAsync` actions modify the metadata of an existing term."
+description: "The Update and UpdateAsync actions modify the metadata of an existing term."
 url: "https://www.contentstack.com/term-update-updateasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Update / UpdateAsync

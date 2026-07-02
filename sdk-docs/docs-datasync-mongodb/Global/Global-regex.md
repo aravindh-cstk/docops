@@ -1,6 +1,6 @@
 ---
 title: "regex"
-description: "The `regex` method retrieves entries where the value of the specified field matches the given regular expression."
+description: "The regex method retrieves entries where the value of the specified field matches the given regular expression."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-regex"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## regex

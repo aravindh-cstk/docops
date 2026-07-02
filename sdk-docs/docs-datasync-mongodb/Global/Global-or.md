@@ -1,6 +1,6 @@
 ---
 title: "or"
-description: "The `or` method combines multiple conditions using the logical OR operator and returns entries that match at least one of the conditions."
+description: "The or method combines multiple conditions using the logical OR operator and returns entries that match at least one of the conditions."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-or"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## or

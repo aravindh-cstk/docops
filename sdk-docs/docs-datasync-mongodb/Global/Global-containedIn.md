@@ -1,6 +1,6 @@
 ---
 title: "containedIn"
-description: "The `containedIn` method retrieves entries where the specified field's value matches any value in the provided array."
+description: "The containedIn method retrieves entries where the specified field's value matches any value in the provided array."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-containedin"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## containedIn

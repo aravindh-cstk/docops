@@ -1,6 +1,6 @@
 ---
 title: "addQuery"
-description: "The `addQuery` method adds a custom key-value pair to the query URL, enabling support for extended or non-standard query parameters."
+description: "The addQuery method adds a custom key-value pair to the query URL, enabling support for extended or non-standard query parameters."
 url: "https://www.contentstack.com/android-query-addquery"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## addQuery

@@ -1,6 +1,6 @@
 ---
 title: "RTEPlugin"
-description: "The `RTEPlugin` function creates custom plugins for the Rich Text Editor."
+description: "The RTEPlugin function creates custom plugins for the Rich Text Editor."
 url: "https://www.contentstack.com/appsdk--rte-rteplugin"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## RTEPlugin

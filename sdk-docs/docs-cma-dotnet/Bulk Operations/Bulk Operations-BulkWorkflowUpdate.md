@@ -1,6 +1,6 @@
 ---
 title: "Bulk Workflow Update"
-description: "The `update` method updates an existing workflow with the specified configuration details"
+description: "The update method updates an existing workflow with the specified configuration details"
 url: "https://www.contentstack.com/dotnet-management-bulk-operations-bulk-workflow-update"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Bulk Workflow Update

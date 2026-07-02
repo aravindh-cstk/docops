@@ -1,6 +1,6 @@
 ---
 title: "oauth"
-description: "The `oauth` method allows you to retrieve and update Oauth and retrieve scopes."
+description: "The oauth method allows you to retrieve and update Oauth and retrieve scopes."
 url: "https://www.contentstack.com/javascript-marketplace-app-oauth"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## oauth

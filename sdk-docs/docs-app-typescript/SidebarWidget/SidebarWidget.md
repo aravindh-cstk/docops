@@ -1,6 +1,6 @@
 ---
 title: "SidebarWidget"
-description: "The `SidebarWidget` UI location integrates with entry sidebars to provide contextual tools and information for content editors."
+description: "The SidebarWidget UI location integrates with entry sidebars to provide contextual tools and information for content editors."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/sidebarwidget"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # SidebarWidget

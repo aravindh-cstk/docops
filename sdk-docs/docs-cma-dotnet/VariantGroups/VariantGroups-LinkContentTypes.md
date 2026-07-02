@@ -1,6 +1,6 @@
 ---
 title: "LinkContentTypes"
-description: "The `LinkContentTypes` method allows you to link content types to your variant group."
+description: "The LinkContentTypes method allows you to link content types to your variant group."
 url: "https://www.contentstack.com/dotnet-management-variantgroups-linkcontenttypes"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## LinkContentTypes

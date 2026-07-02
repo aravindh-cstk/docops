@@ -1,6 +1,6 @@
 ---
 title: "AssetSidebarWidget"
-description: "The `AssetSidebarWidget` UI location integrates with asset management interfaces in the Contentstack UI."
+description: "The AssetSidebarWidget UI location integrates with asset management interfaces in the Contentstack UI."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/assetsidebarwidget"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # AssetSidebarWidget

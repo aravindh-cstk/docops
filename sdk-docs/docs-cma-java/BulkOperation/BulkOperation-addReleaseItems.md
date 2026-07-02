@@ -1,6 +1,6 @@
 ---
 title: "addReleaseItems"
-description: "The `addReleaseItems` method adds multiple entries or assets to a release in a single request."
+description: "The addReleaseItems method adds multiple entries or assets to a release in a single request."
 url: "https://www.contentstack.com/java-management-bulkoperation-addreleaseitems"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## addReleaseItems

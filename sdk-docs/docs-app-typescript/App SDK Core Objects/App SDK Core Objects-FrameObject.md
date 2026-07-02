@@ -1,6 +1,6 @@
 ---
 title: "Frame Object"
-description: "The `frame` object provides window management and resizing capabilities for UI locations."
+description: "The frame object provides window management and resizing capabilities for UI locations."
 url: "https://www.contentstack.com/appsdk-core-objects-frame"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Frame Object

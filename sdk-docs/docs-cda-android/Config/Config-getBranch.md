@@ -1,6 +1,6 @@
 ---
 title: "getBranch"
-description: "The `getBranch` method retrieves the branch currently set on the stack."
+description: "The getBranch method retrieves the branch currently set on the stack."
 url: "https://www.contentstack.com/android-config-getbranch"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getBranch

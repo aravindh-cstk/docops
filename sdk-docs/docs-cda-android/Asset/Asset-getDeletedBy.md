@@ -1,6 +1,6 @@
 ---
 title: "getDeletedBy"
-description: "The `getDeletedBy` method retrieves the `deleted by` object from the asset response, indicating which user deleted the asset."
+description: "The getDeletedBy method retrieves the deleted by object from the asset response, indicating which user deleted the asset."
 url: "https://www.contentstack.com/android-asset-getdeletedby"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getDeletedBy

@@ -1,6 +1,6 @@
 ---
 title: "Asset"
-description: "Creates an instance of `Assets` . Use a `UID` to fetch a specific asset, or use the `AssetLibrary` class to retrieve all assets."
+description: "Creates an instance of Assets . Use a UID to fetch a specific asset, or use the AssetLibrary class to retrieve all assets."
 url: "https://www.contentstack.com/developers/sdks/content-delivery-sdk/dot-net/reference/asset"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # Asset

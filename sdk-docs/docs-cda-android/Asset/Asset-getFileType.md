@@ -1,6 +1,6 @@
 ---
 title: "getFileType"
-description: "The `getFileType` method retrieves the file type of the asset from the asset response."
+description: "The getFileType method retrieves the file type of the asset from the asset response."
 url: "https://www.contentstack.com/android-asset-getfiletype"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getFileType

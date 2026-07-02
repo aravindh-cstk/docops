@@ -1,6 +1,6 @@
 ---
 title: "updateWorkflow"
-description: "The `updateWorkflow` method updates the workflow stage for multiple entries in bulk."
+description: "The updateWorkflow method updates the workflow stage for multiple entries in bulk."
 url: "https://www.contentstack.com/java-management-bulkoperation-updateworkflow"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## updateWorkflow

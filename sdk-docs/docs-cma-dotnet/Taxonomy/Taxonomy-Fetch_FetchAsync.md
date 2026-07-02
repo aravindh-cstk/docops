@@ -1,6 +1,6 @@
 ---
 title: "Fetch / FetchAsync"
-description: "The `Fetch` and `FetchAsync` actions retrieve the details of a single, specific taxonomy. Fetching a Taxonomy (UID Requirement) The taxonomy returned is determined only by the UID passed to `stack.Taxonomy(\"<TAXONOMY_UID>\")` , which maps to `GET /taxonomies/{uid}` . Calling `Fetch` or `FetchAsync` on `stack.Taxonomy()` without a UID throws `InvalidOperationException` before any request is sent. The same entry point without a UID is used for collection operations such as create or query, not for fetching a single taxonomy. Handling the Response `ContentstackResponse` does not include a `Result` property. Use `OpenTResponse<T>()` to deserialize the response, or `OpenJObjectResponse()` / `OpenResponse()` for raw access. The response is wrapped in a `taxonomy` field, so define a DTO with `[JsonProperty(\"taxonomy\")]` to match the payload."
+description: "The Fetch and FetchAsync actions retrieve the details of a single, specific taxonomy. Fetching a Taxonomy (UID Requirement) The taxonomy returned is determined only by the UID passed to stack.Taxonomy(\"<TAXONOMY_UID>\") , which maps to GET /taxonomies/{uid} . Calling Fetch or FetchAsync on stack.Taxonomy() without a UID throws InvalidOperationException before any request is sent. The same entry point without a UID is used for collection operations such as create or query, not for fetching a single taxonomy. Handling the Response ContentstackResponse does not include a Result property. Use OpenTResponse<T>() to deserialize the response, or OpenJObjectResponse() / OpenResponse() for raw access. The response is wrapped in a taxonomy field, so define a DTO with [JsonProperty(\"taxonomy\")] to match the payload."
 url: "https://www.contentstack.com/taxonomy-fetch-fetchasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Fetch / FetchAsync

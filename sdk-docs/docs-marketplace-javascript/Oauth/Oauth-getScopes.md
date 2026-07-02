@@ -1,6 +1,6 @@
 ---
 title: "getScopes"
-description: "The `getScopes` method is used to retrieve all permission scopes."
+description: "The getScopes method is used to retrieve all permission scopes."
 url: "https://www.contentstack.com/javascript-marketplace-oauth-getscopes"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getScopes

@@ -1,6 +1,6 @@
 ---
 title: "update_items"
-description: "The `update_items` method updates all release items (entries and assets) to their latest versions before deployment, ensuring the most current content is published."
+description: "The update_items method updates all release items (entries and assets) to their latest versions before deployment, ensuring the most current content is published."
 url: "https://www.contentstack.com/python-management-sdk-bulk-operations-update_items"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## update_items

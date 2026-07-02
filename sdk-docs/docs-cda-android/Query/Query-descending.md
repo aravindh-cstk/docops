@@ -1,6 +1,6 @@
 ---
 title: "descending"
-description: "The `descending` method sorts the results in descending order based on the specified key to retrieve entries."
+description: "The descending method sorts the results in descending order based on the specified key to retrieve entries."
 url: "https://www.contentstack.com/android-query-descending"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## descending

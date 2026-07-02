@@ -1,6 +1,6 @@
 ---
 title: "logs"
-description: "The `logs` method retrieves the logs of a deployment."
+description: "The logs method retrieves the logs of a deployment."
 url: "https://www.contentstack.com/javascript-marketplace-deployment-logs"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## logs

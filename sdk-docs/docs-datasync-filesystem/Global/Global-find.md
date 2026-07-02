@@ -1,6 +1,6 @@
 ---
 title: "find"
-description: "The `find` method queries the local database using the built or optionally provided query object. It processes the data, applies filters, and resolves references before returning the result."
+description: "The find method queries the local database using the built or optionally provided query object. It processes the data, applies filters, and resolves references before returning the result."
 url: "https://www.contentstack.com/datasync-filesystem-global-find"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## find

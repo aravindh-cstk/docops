@@ -1,6 +1,6 @@
 ---
 title: "entry"
-description: "The `entry` method retrieves a single entry by its UID from the specified content type."
+description: "The entry method retrieves a single entry by its UID from the specified content type."
 url: "https://www.contentstack.com/datasync-filesystem-global-entry"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## entry

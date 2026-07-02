@@ -1,6 +1,6 @@
 ---
 title: "serverConfig"
-description: "The `serverConfig` method retrieves the server side organization level configuration required for the app."
+description: "The serverConfig method retrieves the server side organization level configuration required for the app."
 url: "https://www.contentstack.com/javascript-marketplace-installation-serverconfig"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## serverConfig

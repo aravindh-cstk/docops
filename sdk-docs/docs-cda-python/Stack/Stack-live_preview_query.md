@@ -1,6 +1,6 @@
 ---
 title: "live_preview_query"
-description: "`live_preview_query` accepts key-value pair objects to the query"
+description: "live_preview_query accepts key-value pair objects to the query"
 url: "https://www.contentstack.com/python-stack-live_preview_query"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## live_preview_query

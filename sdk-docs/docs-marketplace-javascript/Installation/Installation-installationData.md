@@ -1,6 +1,6 @@
 ---
 title: "installationData"
-description: "The `installationData` method retrieves the installation data of an app configuration."
+description: "The installationData method retrieves the installation data of an app configuration."
 url: "https://www.contentstack.com/javascript-marketplace-installation-installationdata"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## installationData

@@ -1,6 +1,6 @@
 ---
 title: "TriggerImpressionsOptions"
-description: "The `TriggerImpressionsOptions` type alias defines the structure of the argument passed to the `TriggerImpressionsOptions` method."
+description: "The TriggerImpressionsOptions type alias defines the structure of the argument passed to the TriggerImpressionsOptions method."
 url: "https://www.contentstack.com/javascript-personalize-edge-sdk-types-and-interface-triggerimpressionsoptions"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## TriggerImpressionsOptions

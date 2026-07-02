@@ -1,6 +1,6 @@
 ---
 title: "getUpdateAt"
-description: "The `getUpdateAt` method retrieves the `updated at` object from the asset response, indicating the timestamp when the asset was last updated."
+description: "The getUpdateAt method retrieves the updated at object from the asset response, indicating the timestamp when the asset was last updated."
 url: "https://www.contentstack.com/android-asset-getupdateat"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getUpdateAt

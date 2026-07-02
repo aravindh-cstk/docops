@@ -1,6 +1,6 @@
 ---
 title: "update"
-description: "The `update` method allows you to update the app details such as name, description, icon, and so on."
+description: "The update method allows you to update the app details such as name, description, icon, and so on."
 url: "https://www.contentstack.com/javascript-marketplace-app-update"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## update

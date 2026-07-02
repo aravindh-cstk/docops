@@ -1,6 +1,6 @@
 ---
 title: "fetch"
-description: "The `fetch` method retrieves all the content types available for the stack."
+description: "The fetch method retrieves all the content types available for the stack."
 url: "https://www.contentstack.com/android-contenttype-fetch"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch

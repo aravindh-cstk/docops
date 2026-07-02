@@ -1,6 +1,6 @@
 ---
 title: "get_live_preview"
-description: "`live_preview` for the stack"
+description: "live_preview for the stack"
 url: "https://www.contentstack.com/python-stack-get_live_preview"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## get_live_preview

@@ -1,6 +1,6 @@
 ---
 title: "Create / CreateAsync"
-description: "The `Create` and `CreateAsync` actions add a new term node under the designated taxonomy hierarchy. Validation Passing a null `model` throws `ArgumentNullException` before the request. Call `Create` / `CreateAsync` on `Terms()` (collection scope). Calling it on `Terms(termUid)` throws `InvalidOperationException` . You can set `ParentUid = null` to create a root term. The SDK omits null properties from the request body. Behavior Each call sends one HTTP POST to `/taxonomies/{taxonomy_uid}/terms` with the body `{ \"term\": … }` . The SDK serializes `TermModel` under the `term` key and does not derive `uid` from `Name` . The API returns a JSON response, commonly wrapping the created term under a `term` field. Define a matching DTO when using `OpenTResponse<T>()` . Pass `collection` to include query parameters. The SDK forwards them without validation and the API defines supported keys."
+description: "The Create and CreateAsync actions add a new term node under the designated taxonomy hierarchy. Validation Passing a null model throws ArgumentNullException before the request. Call Create / CreateAsync on Terms() (collection scope). Calling it on Terms(termUid) throws InvalidOperationException . You can set ParentUid = null to create a root term. The SDK omits null properties from the request body. Behavior Each call sends one HTTP POST to /taxonomies/{taxonomy_uid}/terms with the body { \"term\": … } . The SDK serializes TermModel under the term key and does not derive uid from Name . The API returns a JSON response, commonly wrapping the created term under a term field. Define a matching DTO when using OpenTResponse<T>() . Pass collection to include query parameters. The SDK forwards them without validation and the API defines supported keys."
 url: "https://www.contentstack.com/term-create-createasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Create / CreateAsync

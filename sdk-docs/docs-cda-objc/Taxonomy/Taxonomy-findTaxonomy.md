@@ -1,6 +1,6 @@
 ---
 title: "findTaxonomy:"
-description: "The `findTaxonomy:` method executes a query to fetch taxonomy entries that match specified query conditions."
+description: "The findTaxonomy: method executes a query to fetch taxonomy entries that match specified query conditions."
 url: "https://www.contentstack.com/ios-taxonomy-findtaxonomy-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## findTaxonomy:

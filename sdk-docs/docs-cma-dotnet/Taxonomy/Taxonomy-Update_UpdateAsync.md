@@ -1,6 +1,6 @@
 ---
 title: "Update / UpdateAsync"
-description: "The `Update` and `UpdateAsync` actions modify the details of an existing taxonomy. Update Behavior and UID Requirement The taxonomy is identified only by the UID passed to `stack.Taxonomy(\"<TAXONOMY_UID>\")` , which is used in the request path `PUT /taxonomies/{uid}` . The SDK does not infer the target from `TaxonomyModel` . You must call `Update` or `UpdateAsync` with a non-empty UID. Calling `stack.Taxonomy()` without a UID throws `InvalidOperationException` before any request is sent. You can set `TaxonomyModel.Uid` in the request body for consistency, but it does not determine which taxonomy is updated. Deserializing the Response `ContentstackResponse` does not include a `Result` property. Use `OpenTResponse<T>()` to deserialize the response, or `OpenJObjectResponse()` / `OpenResponse()` for raw access. The API wraps the response inside a `taxonomy` field, so define a DTO with `[JsonProperty(\"taxonomy\")]` to match the structure."
+description: "The Update and UpdateAsync actions modify the details of an existing taxonomy. Update Behavior and UID Requirement The taxonomy is identified only by the UID passed to stack.Taxonomy(\"<TAXONOMY_UID>\") , which is used in the request path PUT /taxonomies/{uid} . The SDK does not infer the target from TaxonomyModel . You must call Update or UpdateAsync with a non-empty UID. Calling stack.Taxonomy() without a UID throws InvalidOperationException before any request is sent. You can set TaxonomyModel.Uid in the request body for consistency, but it does not determine which taxonomy is updated. Deserializing the Response ContentstackResponse does not include a Result property. Use OpenTResponse<T>() to deserialize the response, or OpenJObjectResponse() / OpenResponse() for raw access. The API wraps the response inside a taxonomy field, so define a DTO with [JsonProperty(\"taxonomy\")] to match the structure."
 url: "https://www.contentstack.com/taxonomy-update-updateasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Update / UpdateAsync

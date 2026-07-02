@@ -1,6 +1,6 @@
 ---
 title: "setTags"
-description: "The `setTags` method includes the specified tags in the asset response to categorize the asset."
+description: "The setTags method includes the specified tags in the asset response to categorize the asset."
 url: "https://www.contentstack.com/android-asset-settags"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## setTags

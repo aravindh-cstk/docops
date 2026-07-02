@@ -1,6 +1,6 @@
 ---
 title: "query"
-description: "The `query()` method returns a query builder. Pass optional query parameters, which are stored until any one of the following terminal methods is called: `find()` : Retrieves multiple stacks as a `ContentstackCollection` . `findOne()` : Retrieves at most one stack as a `ContentstackCollection` ( `items[0]` ). `count():` Returns the total count by merging `count: true` into the request and returning `response.data` . Note: The `find()` method performs a single API request and returns a `ContentstackCollection` . Page size and offset are controlled via `limit` and `skip` in `query()` . Omitting them uses API defaults."
+description: "The query() method returns a query builder. Pass optional query parameters, which are stored until any one of the following terminal methods is called: find() : Retrieves multiple stacks as a ContentstackCollection . findOne() : Retrieves at most one stack as a ContentstackCollection ( items[0] ). count(): Returns the total count by merging count: true into the request and returning response.data . Note: The find() method performs a single API request and returns a ContentstackCollection . Page size and offset are controlled via limit and skip in query() . Omitting them uses API defaults."
 url: "https://www.contentstack.com/js-management-stack-query"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## query

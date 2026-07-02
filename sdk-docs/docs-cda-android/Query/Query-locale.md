@@ -1,6 +1,6 @@
 ---
 title: "locale"
-description: "The `locale` method retrieves entries by setting the language based on a specified locale code."
+description: "The locale method retrieves entries by setting the language based on a specified locale code."
 url: "https://www.contentstack.com/android-query-locale"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## locale

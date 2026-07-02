@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Personalize Edge SDK API Reference"
+title: "JavaScript Personalize Introduction"
 description: "JavaScript Personalize Edge SDK API Reference"
 url: ""
 product: "Contentstack"
@@ -8,13 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt7c8fa1ef90e052ef"
 ---
 
 # JavaScript Personalize Edge SDK API Reference
-
-## Overview
 
 The JavaScript Edge SDK allows real-time content personalization across websites powered by Contentstack, mobile applications using React Native, and server-side environments such as Node.js.
 

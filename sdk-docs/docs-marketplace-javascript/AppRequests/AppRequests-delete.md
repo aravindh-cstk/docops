@@ -1,6 +1,6 @@
 ---
 title: "delete"
-description: "The `delete` method deletes an app request of an app in target_uid."
+description: "The delete method deletes an app request of an app in target_uid."
 url: "https://www.contentstack.com/javascript-marketplace-apprequest-delete"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## delete

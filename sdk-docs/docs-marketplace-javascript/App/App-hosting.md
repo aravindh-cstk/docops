@@ -1,6 +1,6 @@
 ---
 title: "hosting"
-description: "The `hosting` method allows you to retrieve, update, and deploy a manifest."
+description: "The hosting method allows you to retrieve, update, and deploy a manifest."
 url: "https://www.contentstack.com/javascript-marketplace-app-hosting"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## hosting

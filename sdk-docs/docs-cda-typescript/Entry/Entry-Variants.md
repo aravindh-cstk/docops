@@ -1,6 +1,6 @@
 ---
 title: "Variants"
-description: "Variants are different versions of content designed to meet specific needs or target audiences. This feature allows content editors to create multiple variations of a single entry, each customized for a particular variant group or purpose. When Personalize creates a variant in the CMS, it assigns a \"Variant Alias\" to identify that specific variant. When fetching entry variants using the Delivery API, you can pass variant aliases in place of variant UIDs in the `x-cs-variant-uid` header."
+description: "Variants are different versions of content designed to meet specific needs or target audiences. This feature allows content editors to create multiple variations of a single entry, each customized for a particular variant group or purpose. When Personalize creates a variant in the CMS, it assigns a \"Variant Alias\" to identify that specific variant. When fetching entry variants using the Delivery API, you can pass variant aliases in place of variant UIDs in the x-cs-variant-uid header."
 url: "https://www.contentstack.com/typescript-delivery-entry-variants"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Variants

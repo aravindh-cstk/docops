@@ -1,6 +1,6 @@
 ---
 title: "or"
-description: "The `or` method retrieves all entries that meet any of the specified queries by combining them using the OR operator."
+description: "The or method retrieves all entries that meet any of the specified queries by combining them using the OR operator."
 url: "https://www.contentstack.com/android-query-or"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## or

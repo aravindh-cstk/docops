@@ -1,6 +1,6 @@
 ---
 title: "Localize / LocalizeAsync"
-description: "The `Localize` and `LocalizeAsync` actions create or update a localized version of a term node."
+description: "The Localize and LocalizeAsync actions create or update a localized version of a term node."
 url: "https://www.contentstack.com/term-localize-localizeasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Localize / LocalizeAsync

@@ -1,6 +1,6 @@
 ---
 title: "notEqualTo"
-description: "The `notEqualTo` method retrieves entries where the field’s value does not equal the specified value."
+description: "The notEqualTo method retrieves entries where the field’s value does not equal the specified value."
 url: "https://www.contentstack.com/datasync-filesystem-global-notequalto"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## notEqualTo

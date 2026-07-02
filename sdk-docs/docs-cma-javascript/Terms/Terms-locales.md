@@ -1,6 +1,6 @@
 ---
 title: "locales"
-description: "The `locales()` method retrieves all locales in which a term is localized."
+description: "The locales() method retrieves all locales in which a term is localized."
 url: "https://www.contentstack.com/js-management-terms-locales"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## locales

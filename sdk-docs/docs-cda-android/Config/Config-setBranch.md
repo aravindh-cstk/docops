@@ -1,6 +1,6 @@
 ---
 title: "setBranch"
-description: "The `setBranch` method sets the target branch for the stack to retrieve content from a specific development or release branch."
+description: "The setBranch method sets the target branch for the stack to retrieve content from a specific development or release branch."
 url: "https://www.contentstack.com/android-config-setbranch"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## setBranch

@@ -1,6 +1,6 @@
 ---
 title: "setHost()"
-description: "The `setHost` method sets a custom host for the request URL to direct API calls to a specified endpoint."
+description: "The setHost method sets a custom host for the request URL to direct API calls to a specified endpoint."
 url: "https://www.contentstack.com/android-config-sethost"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## setHost()

@@ -1,6 +1,6 @@
 ---
 title: "onlyWithReferenceUid"
-description: "The `onlyWithReferenceUid` method specifies an array of reference UIDs that should be included in the response."
+description: "The onlyWithReferenceUid method specifies an array of reference UIDs that should be included in the response."
 url: "https://www.contentstack.com/android-entry-onlywithreferenceuid-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## onlyWithReferenceUid

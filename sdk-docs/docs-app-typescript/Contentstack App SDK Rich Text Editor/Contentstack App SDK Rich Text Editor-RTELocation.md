@@ -1,6 +1,6 @@
 ---
 title: "RTELocation"
-description: "The `RTELocation` object provides access to the RTE context and entry data within rich text fields."
+description: "The RTELocation object provides access to the RTE context and entry data within rich text fields."
 url: "https://www.contentstack.com/appsdk-rte-rtelocation"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## RTELocation

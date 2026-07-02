@@ -1,6 +1,6 @@
 ---
 title: "lessThan"
-description: "The `lessThan` method retrieves entries where the value of a specified field is less than the provided value."
+description: "The lessThan method retrieves entries where the value of a specified field is less than the provided value."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-lessthan"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## lessThan

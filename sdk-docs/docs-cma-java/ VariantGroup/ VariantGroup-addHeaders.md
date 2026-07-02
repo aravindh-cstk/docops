@@ -1,6 +1,6 @@
 ---
 title: "addHeaders"
-description: "The `addHeaders` method sets multiple headers for the request. Pass a `HashMap` containing key–value pairs of header names and values."
+description: "The addHeaders method sets multiple headers for the request. Pass a HashMap containing key–value pairs of header names and values."
 url: "https://www.contentstack.com/java-management-variantgroups-addheaders"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## addHeaders

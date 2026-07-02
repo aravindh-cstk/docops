@@ -1,6 +1,6 @@
 ---
 title: "updateReleaseItems"
-description: "The `updateReleaseItems` method updates all items in a release to their latest saved versions."
+description: "The updateReleaseItems method updates all items in a release to their latest saved versions."
 url: "https://www.contentstack.com/java-management-bulkoperation-updatereleaseitems"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## updateReleaseItems

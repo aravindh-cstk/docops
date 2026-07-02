@@ -1,6 +1,6 @@
 ---
 title: "create"
-description: "The `create` method deploys the uploaded file in hosting."
+description: "The create method deploys the uploaded file in hosting."
 url: "https://www.contentstack.com/javascript-marketplace-deployment-create"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## create

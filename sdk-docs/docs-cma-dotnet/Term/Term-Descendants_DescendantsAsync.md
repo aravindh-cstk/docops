@@ -1,6 +1,6 @@
 ---
 title: "Descendants / DescendantsAsync"
-description: "The `Descendants` and `DescendantsAsync` actions return all child nodes downward in the taxonomy hierarchy for the given term."
+description: "The Descendants and DescendantsAsync actions return all child nodes downward in the taxonomy hierarchy for the given term."
 url: "https://www.contentstack.com/term-descendants-descendantsasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Descendants / DescendantsAsync

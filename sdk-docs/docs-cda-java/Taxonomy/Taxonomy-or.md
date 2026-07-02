@@ -1,6 +1,6 @@
 ---
 title: "or"
-description: "The or method retrieves all entries for a specific taxonomy that satisfy at least one of the given conditions provided in the `$or` query."
+description: "The or method retrieves all entries for a specific taxonomy that satisfy at least one of the given conditions provided in the $or query."
 url: "https://www.contentstack.com/java-taxonomy-or"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## or

@@ -1,6 +1,6 @@
 ---
 title: "Unlocalize"
-description: "The `Unlocalize` method removes an existing localized asset version for a specific locale so the locale no longer has independent localized asset content. Use `Stack.Asset(\"ASSETUID\")` before calling this method. The asynchronous counterpart is `UnlocalizeAsync` . Validation and Behavior A missing asset UID follows the existing asset instance pattern, resulting in an `InvalidOperationException` . If the locale values are: Null or empty, the SDK throws `ArgumentNullException` . Invalid, the SDK forwards the value unchanged. If the Management API rejects it, the client receives a failed HTTP response, which is handled as a `ContentstackErrorException` . The SDK does not supply fallback content. The API handles inheritance after removal. Additional Resources: For more information on the API errors, refer to the Errors section in the Content Management API document. Performance Behavior: Each `Unlocalize` call triggers one Management API request. High concurrency (many parallel or batched calls) can quickly reach rate limits. To avoid throttling: Use bounded parallelism (limit simultaneous requests) Add delays between requests Implement retries with backoff if you receive `429 Too Many Requests`"
+description: "The Unlocalize method removes an existing localized asset version for a specific locale so the locale no longer has independent localized asset content. Use Stack.Asset(\"ASSETUID\") before calling this method. The asynchronous counterpart is UnlocalizeAsync . Validation and Behavior A missing asset UID follows the existing asset instance pattern, resulting in an InvalidOperationException . If the locale values are: Null or empty, the SDK throws ArgumentNullException . Invalid, the SDK forwards the value unchanged. If the Management API rejects it, the client receives a failed HTTP response, which is handled as a ContentstackErrorException . The SDK does not supply fallback content. The API handles inheritance after removal. Additional Resources: For more information on the API errors, refer to the Errors section in the Content Management API document. Performance Behavior: Each Unlocalize call triggers one Management API request. High concurrency (many parallel or batched calls) can quickly reach rate limits. To avoid throttling: Use bounded parallelism (limit simultaneous requests) Add delays between requests Implement retries with backoff if you receive 429 Too Many Requests"
 url: "https://www.contentstack.com/dotnet-management-asset-unlocalize"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Unlocalize

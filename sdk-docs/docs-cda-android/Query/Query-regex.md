@@ -1,6 +1,6 @@
 ---
 title: "regex"
-description: "The `regex` method retrieves entries by applying a regular expression constraint that matches string values against the provided pattern, which may result in slower performance for large data sets."
+description: "The regex method retrieves entries by applying a regular expression constraint that matches string values against the provided pattern, which may result in slower performance for large data sets."
 url: "https://www.contentstack.com/android-query-regex"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## regex

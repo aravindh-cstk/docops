@@ -1,6 +1,6 @@
 ---
 title: "only"
-description: "The `only` method includes only the specified fields in the result set."
+description: "The only method includes only the specified fields in the result set."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-only"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## only

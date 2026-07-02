@@ -1,6 +1,6 @@
 ---
 title: "Ancestors / AncestorsAsync"
-description: "The `Ancestors` and `AncestorsAsync` actions return all parent nodes upward in the taxonomy hierarchy for the given term."
+description: "The Ancestors and AncestorsAsync actions return all parent nodes upward in the taxonomy hierarchy for the given term."
 url: "https://www.contentstack.com/term-ancestors-ancestorsasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Ancestors / AncestorsAsync

@@ -1,6 +1,6 @@
 ---
 title: "include"
-description: "The `include` method includes specific reference fields in the response."
+description: "The include method includes specific reference fields in the response."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-include"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## include

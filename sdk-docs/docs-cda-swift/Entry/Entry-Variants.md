@@ -1,6 +1,6 @@
 ---
 title: "Variants"
-description: "The variants method retrieves details of a specific entry variant or an array of entry variants based on the applied query. When Personalize creates a variant in the CMS, it assigns a \"Variant Alias\" to identify that specific variant. When fetching entry variants using the Delivery API, you can pass variant aliases in place of variant UIDs in the `x-cs-variant-uid` header."
+description: "The variants method retrieves details of a specific entry variant or an array of entry variants based on the applied query. When Personalize creates a variant in the CMS, it assigns a \"Variant Alias\" to identify that specific variant. When fetching entry variants using the Delivery API, you can pass variant aliases in place of variant UIDs in the x-cs-variant-uid header."
 url: "https://www.contentstack.com/swift-entry-variants"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Variants

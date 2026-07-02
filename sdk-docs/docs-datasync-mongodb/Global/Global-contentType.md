@@ -1,6 +1,6 @@
 ---
 title: "contentType"
-description: "The `contentType` method specifies the content type to query."
+description: "The contentType method specifies the content type to query."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-contenttype"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## contentType

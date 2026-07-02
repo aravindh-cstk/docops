@@ -1,6 +1,6 @@
 ---
 title: "exists"
-description: "The `exists` method applies a constraint that requires a specified key to be present in the response to retrieve entries."
+description: "The exists method applies a constraint that requires a specified key to be present in the response to retrieve entries."
 url: "https://www.contentstack.com/android-query-exists"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## exists

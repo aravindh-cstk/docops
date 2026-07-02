@@ -1,6 +1,6 @@
 ---
 title: "addParam"
-description: "The `addParam` method adds a key–value parameter to an entry request."
+description: "The addParam method adds a key–value parameter to an entry request."
 url: "https://www.contentstack.com/android-query-addparam"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## addParam

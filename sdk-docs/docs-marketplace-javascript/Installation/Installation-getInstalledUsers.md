@@ -1,6 +1,6 @@
 ---
 title: "getInstalledUsers"
-description: "The `getInstalledUsers` call retrieves the list of users for the organization who installed the apps."
+description: "The getInstalledUsers call retrieves the list of users for the organization who installed the apps."
 url: "https://www.contentstack.com/javascript-marketplace-installation-getinstalledusers"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getInstalledUsers

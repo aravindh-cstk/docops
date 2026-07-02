@@ -1,6 +1,6 @@
 ---
 title: "below"
-description: "The `below` method retrieves all entries for a specific taxonomy that match all of their descendant terms by specifying only the target term and a specific level. Note: If you don't specify the level, the default behavior is to retrieve terms up to level 10."
+description: "The below method retrieves all entries for a specific taxonomy that match all of their descendant terms by specifying only the target term and a specific level. Note: If you don't specify the level, the default behavior is to retrieve terms up to level 10."
 url: "https://www.contentstack.com/android-delivery-taxonomy-below"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## below

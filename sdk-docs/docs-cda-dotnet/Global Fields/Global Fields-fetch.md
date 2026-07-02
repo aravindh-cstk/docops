@@ -1,6 +1,6 @@
 ---
 title: "fetch"
-description: "The `fetch` method retrieves the details of the specified global field."
+description: "The fetch method retrieves the details of the specified global field."
 url: "https://www.contentstack.com/dotnet-delivery-global-field-fetch"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch

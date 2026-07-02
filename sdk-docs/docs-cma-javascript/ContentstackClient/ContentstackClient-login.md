@@ -1,6 +1,6 @@
 ---
 title: "login"
-description: "The `login` call is used to sign in to your Contentstack account and obtain the authtoken."
+description: "The login call is used to sign in to your Contentstack account and obtain the authtoken."
 url: "https://www.contentstack.com/js-management-contentstackclient-login"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## login

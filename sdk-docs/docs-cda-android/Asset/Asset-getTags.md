@@ -1,6 +1,6 @@
 ---
 title: "getTags"
-description: "The `getTags` method retrieves the array of tags associated with the asset in the response."
+description: "The getTags method retrieves the array of tags associated with the asset in the response."
 url: "https://www.contentstack.com/android-asset-gettags"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getTags

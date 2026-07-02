@@ -1,6 +1,6 @@
 ---
 title: "findAllApps"
-description: "The `findAllApps` method retrieves all the apps in your organization."
+description: "The findAllApps method retrieves all the apps in your organization."
 url: "https://www.contentstack.com/javascript-marketplace-findallapps"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## findAllApps

@@ -1,6 +1,6 @@
 ---
 title: "Locales / LocalesAsync"
-description: "The `Locales` and `LocalesAsync` actions return locale information strictly for the specified term."
+description: "The Locales and LocalesAsync actions return locale information strictly for the specified term."
 url: "https://www.contentstack.com/term-locales-localesasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Locales / LocalesAsync

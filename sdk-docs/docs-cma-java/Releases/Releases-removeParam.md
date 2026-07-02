@@ -1,6 +1,6 @@
 ---
 title: "removeParam"
-description: "The `removeParam` method removes a previously set query parameter from the release request."
+description: "The removeParam method removes a previously set query parameter from the release request."
 url: "https://www.contentstack.com/java-management-releases-removeparam"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## removeParam

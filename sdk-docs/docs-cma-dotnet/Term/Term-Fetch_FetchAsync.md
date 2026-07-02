@@ -1,6 +1,6 @@
 ---
 title: "Fetch / FetchAsync"
-description: "The `Fetch` and `FetchAsync` actions retrieve the properties and configuration of a single targeted term."
+description: "The Fetch and FetchAsync actions retrieve the properties and configuration of a single targeted term."
 url: "https://www.contentstack.com/terms-fetch-fetchasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Fetch / FetchAsync

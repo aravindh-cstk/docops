@@ -1,6 +1,6 @@
 ---
 title: "and"
-description: "The `and` method combines multiple queries using the AND operator to retrieve results that meet all specified conditions."
+description: "The and method combines multiple queries using the AND operator to retrieve results that meet all specified conditions."
 url: "https://www.contentstack.com/android-query-and"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## and

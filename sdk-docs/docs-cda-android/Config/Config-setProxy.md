@@ -1,6 +1,6 @@
 ---
 title: "setProxy"
-description: "The `setProxy` method sets a custom proxy to route SDK network requests through a specified HTTP proxy server."
+description: "The setProxy method sets a custom proxy to route SDK network requests through a specified HTTP proxy server."
 url: "https://www.contentstack.com/android-config-setproxy"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## setProxy

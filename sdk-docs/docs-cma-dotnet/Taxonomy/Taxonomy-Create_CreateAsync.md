@@ -1,6 +1,6 @@
 ---
 title: "Create / CreateAsync"
-description: "The `Create` and `CreateAsync` actions add a new taxonomy to the stack."
+description: "The Create and CreateAsync actions add a new taxonomy to the stack."
 url: "https://www.contentstack.com/taxonomy-create-createasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Create / CreateAsync

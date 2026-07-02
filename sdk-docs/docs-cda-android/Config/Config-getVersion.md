@@ -1,6 +1,6 @@
 ---
 title: "getVersion()"
-description: "The `getVersion` method retrieves the version of the request path."
+description: "The getVersion method retrieves the version of the request path."
 url: "https://www.contentstack.com/android-config-getversion"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getVersion()

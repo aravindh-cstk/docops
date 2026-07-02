@@ -1,6 +1,6 @@
 ---
 title: "update"
-description: "The `update` installation call is used to update information of an installation."
+description: "The update installation call is used to update information of an installation."
 url: "https://www.contentstack.com/javascript-marketplace-installation-update"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## update

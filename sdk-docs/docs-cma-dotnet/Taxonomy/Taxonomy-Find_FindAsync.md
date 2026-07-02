@@ -1,6 +1,6 @@
 ---
 title: "Find / FindAsync"
-description: "The `Find` and `FindAsync` methods retrieve all taxonomies available in the stack. Note: Results are paginated, so a single `Find()` / `FindAsync()` may not return every taxonomy. Refer to the Content Management API documentation for page size and maximum limit."
+description: "The Find and FindAsync methods retrieve all taxonomies available in the stack. Note: Results are paginated, so a single Find() / FindAsync() may not return every taxonomy. Refer to the Content Management API documentation for page size and maximum limit."
 url: "https://www.contentstack.com/taxonomy-find-findasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Find / FindAsync

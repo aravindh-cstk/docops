@@ -1,6 +1,6 @@
 ---
 title: "assetFields"
-description: "The `assetFields` method determines the optional asset field groups to include in the response. Note: The assetFields method is supported only in the North America (NA) region. Response Behavior: Retrieves only the requested asset metadata, keeping asset payloads smaller. Applies to published assets from the asset API. It applies to both single-asset responses and multi-asset responses. Does not filter which assets appear in the response or restrict them by file type (MIME). Requests optional metadata groups in addition to the core fields on `BaseAsset` , such as the file MIME type ( `content_type` ) and the folder flag ( `is_dir` ). It does not replace or modify those fields. Note: On asset objects, `content_type` represents the file’s MIME type, not a Contentstack CMS content type. Supported field groups (values): `user_defined_fields` : Includes stack-defined custom fields on the asset (author-managed key-value data). `embedded_metadata` : Includes metadata extracted from the file (e.g, EXIF or IPTC). `ai_generated_metadata` : Includes AI-generated data (e.g., tags, descriptions, classifications). `visual_markups` : Includes annotation data (e.g., regions, notes, overlays)"
+description: "The assetFields method determines the optional asset field groups to include in the response. Note: The assetFields method is supported only in the North America (NA) region. Response Behavior: Retrieves only the requested asset metadata, keeping asset payloads smaller. Applies to published assets from the asset API. It applies to both single-asset responses and multi-asset responses. Does not filter which assets appear in the response or restrict them by file type (MIME). Requests optional metadata groups in addition to the core fields on BaseAsset , such as the file MIME type ( content_type ) and the folder flag ( is_dir ). It does not replace or modify those fields. Note: On asset objects, content_type represents the file’s MIME type, not a Contentstack CMS content type. Supported field groups (values): user_defined_fields : Includes stack-defined custom fields on the asset (author-managed key-value data). embedded_metadata : Includes metadata extracted from the file (e.g, EXIF or IPTC). ai_generated_metadata : Includes AI-generated data (e.g., tags, descriptions, classifications). visual_markups : Includes annotation data (e.g., regions, notes, overlays)"
 url: "https://www.contentstack.com/asset-assetFields"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## assetFields

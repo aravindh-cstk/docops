@@ -1,6 +1,6 @@
 ---
 title: "Search / SearchAsync"
-description: "The `Search` and `SearchAsync` actions perform a typeahead search across terms in all taxonomies globally within the stack."
+description: "The Search and SearchAsync actions perform a typeahead search across terms in all taxonomies globally within the stack."
 url: "https://www.contentstack.com/term-search-searchasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Search / SearchAsync

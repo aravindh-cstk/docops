@@ -1,6 +1,6 @@
 ---
 title: "authorize"
-description: "The `authorize` method authorizes the app for a specific scope."
+description: "The authorize method authorizes the app for a specific scope."
 url: "https://www.contentstack.com/javascript-marketplace-auhorize"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## authorize

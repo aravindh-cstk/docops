@@ -1,6 +1,6 @@
 ---
 title: "currentContentType"
-description: "The `currentContentType` property retrieves the current content type object directly."
+description: "The currentContentType property retrieves the current content type object directly."
 url: "https://www.contentstack.com/app-sdk---contenttype-sidebar-widget---currentcontenttype"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## currentContentType

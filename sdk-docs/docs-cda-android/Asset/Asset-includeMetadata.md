@@ -1,6 +1,6 @@
 ---
 title: "includeMetadata"
-description: "The `includeMetadata` method includes the asset metadata along with the response body."
+description: "The includeMetadata method includes the asset metadata along with the response body."
 url: "https://www.contentstack.com/android-asset-includemetadata"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeMetadata

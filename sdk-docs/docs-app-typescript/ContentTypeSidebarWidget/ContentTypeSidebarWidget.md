@@ -1,6 +1,6 @@
 ---
 title: "ContentTypeSidebarWidget"
-description: "The `ContentTypeSidebarWidget` object provides content type management and schema tools within the Contentstack UI."
+description: "The ContentTypeSidebarWidget object provides content type management and schema tools within the Contentstack UI."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/contenttypesidebarwidget"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # ContentTypeSidebarWidget

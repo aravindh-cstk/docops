@@ -1,6 +1,6 @@
 ---
 title: "setLocale"
-description: "The `setLocale` sets the locale for a single asset request. Call it before `Asset.fetch()` so the SDK includes the locale in the GET request. Note: The response contains the asset data for the specified locale. Field-level values depend on your stack’s localization settings and how the Content Delivery API serves localized assets."
+description: "The setLocale sets the locale for a single asset request. Call it before Asset.fetch() so the SDK includes the locale in the GET request. Note: The response contains the asset data for the specified locale. Field-level values depend on your stack’s localization settings and how the Content Delivery API serves localized assets."
 url: "https://www.contentstack.com/android-asset-setlocale"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## setLocale

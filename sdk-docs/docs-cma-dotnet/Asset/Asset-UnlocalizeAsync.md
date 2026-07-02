@@ -1,6 +1,6 @@
 ---
 title: "UnlocalizeAsync"
-description: "The `UnlocalizeAsync` method asynchronously removes an existing localized asset version for a specific locale. Use this method after `Stack.Asset(\"ASSETUID\")` . Validation and Behavior A missing asset UID follows the existing asset instance pattern, resulting in an `InvalidOperationException` . If the locale values are: Null or empty, the SDK throws `ArgumentNullException` . Invalid, the SDK forwards the value unchanged. If the Management API rejects it, the client receives a failed HTTP response, which is handled as a `ContentstackErrorException` . The SDK does not supply fallback content. The API handles inheritance after removal. Performance Behavior: Each `UnlocalizeAsync` call triggers one Management API request. High concurrency (many parallel or batched calls) can quickly reach rate limits. To avoid throttling: Use bounded parallelism (limit simultaneous requests) Add delays between requests Implement retries with backoff if you receive `429 Too Many Requests`"
+description: "The UnlocalizeAsync method asynchronously removes an existing localized asset version for a specific locale. Use this method after Stack.Asset(\"ASSETUID\") . Validation and Behavior A missing asset UID follows the existing asset instance pattern, resulting in an InvalidOperationException . If the locale values are: Null or empty, the SDK throws ArgumentNullException . Invalid, the SDK forwards the value unchanged. If the Management API rejects it, the client receives a failed HTTP response, which is handled as a ContentstackErrorException . The SDK does not supply fallback content. The API handles inheritance after removal. Performance Behavior: Each UnlocalizeAsync call triggers one Management API request. High concurrency (many parallel or batched calls) can quickly reach rate limits. To avoid throttling: Use bounded parallelism (limit simultaneous requests) Add delays between requests Implement retries with backoff if you receive 429 Too Many Requests"
 url: "https://www.contentstack.com/dotnet-management-asset-unlocalizeasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## UnlocalizeAsync

@@ -1,6 +1,6 @@
 ---
 title: "includeReferenceContentTypUid"
-description: "The `includeReferenceContentTypeUid` method retrieves entries by including the content type UIDs of referenced entries in the response."
+description: "The includeReferenceContentTypeUid method retrieves entries by including the content type UIDs of referenced entries in the response."
 url: "https://www.contentstack.com/android-query-includereferencecontenttypuid"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeReferenceContentTypUid

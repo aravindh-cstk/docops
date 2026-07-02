@@ -1,6 +1,6 @@
 ---
 title: "logout"
-description: "The `logOut` of your account call is used to sign out the user of Contentstack account."
+description: "The logOut of your account call is used to sign out the user of Contentstack account."
 url: "https://www.contentstack.com/js-management-contentstackclient-logout"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## logout

@@ -1,6 +1,6 @@
 ---
 title: "deploy"
-description: "The `deploy` method deploys all entries and assets from a release to specified environments and locales."
+description: "The deploy method deploys all entries and assets from a release to specified environments and locales."
 url: "https://www.contentstack.com/java-management-releases-deploy"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## deploy

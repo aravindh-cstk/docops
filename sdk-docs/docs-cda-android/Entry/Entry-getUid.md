@@ -1,6 +1,6 @@
 ---
 title: "getUid"
-description: "The `getUid` method retrieves the UID of the entry."
+description: "The getUid method retrieves the UID of the entry."
 url: "https://www.contentstack.com/android-entry-getuid"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getUid

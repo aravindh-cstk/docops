@@ -1,6 +1,6 @@
 ---
 title: "asset"
-description: "The `asset` method retrieves a single asset by its UID."
+description: "The asset method retrieves a single asset by its UID."
 url: "https://www.contentstack.com/datasync-filesystem-global-asset"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## asset

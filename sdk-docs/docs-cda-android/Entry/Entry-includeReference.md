@@ -1,6 +1,6 @@
 ---
 title: "includeReference"
-description: "The `includeReference` method adds a constraint that requires the details of a specified reference key."
+description: "The includeReference method adds a constraint that requires the details of a specified reference key."
 url: "https://www.contentstack.com/android-entry-includereference"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeReference

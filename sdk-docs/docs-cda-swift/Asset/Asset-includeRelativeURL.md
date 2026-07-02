@@ -1,6 +1,6 @@
 ---
 title: "includeRelativeURL()"
-description: "The `includeRelativeURL()` method includes the relative URLs of the assets in the response instead of absolute URLs."
+description: "The includeRelativeURL() method includes the relative URLs of the assets in the response instead of absolute URLs."
 url: "https://www.contentstack.com/swift-asset-includerelativeurl-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeRelativeURL()

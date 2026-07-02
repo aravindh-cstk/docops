@@ -1,6 +1,6 @@
 ---
 title: "fetch"
-description: "The `fetch` method retrieves the details of a particular app with its ID."
+description: "The fetch method retrieves the details of a particular app with its ID."
 url: "https://www.contentstack.com/javascript-marketplace-app-fetch"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch

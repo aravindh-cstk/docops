@@ -1,6 +1,6 @@
 ---
 title: "fetch"
-description: "The `fetch` method executes a query using the provided query object. It returns a single entry/asset/content type object after applying all filters and references."
+description: "The fetch method executes a query using the provided query object. It returns a single entry/asset/content type object after applying all filters and references."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-fetch"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch

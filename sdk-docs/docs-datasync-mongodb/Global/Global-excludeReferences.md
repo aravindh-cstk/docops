@@ -1,6 +1,6 @@
 ---
 title: "excludeReferences"
-description: "The `excludeReferences` method excludes all references of the entries being returned. Note: On calling this, referenced entries and assets will not be included in the result."
+description: "The excludeReferences method excludes all references of the entries being returned. Note: On calling this, referenced entries and assets will not be included in the result."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-excludereferences"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## excludeReferences

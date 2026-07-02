@@ -1,6 +1,6 @@
 ---
 title: "FieldModifierLocation"
-description: "The `FieldModifierLocation` UI location enables field data transformation and manipulation."
+description: "The FieldModifierLocation UI location enables field data transformation and manipulation."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/fieldmodifierlocation"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # FieldModifierLocation

@@ -1,6 +1,6 @@
 ---
 title: "greaterThanOrEqualTo"
-description: "The `greaterThanOrEqualTo` method retrieves entries where the specified field’s value is greater than or equal to the provided value."
+description: "The greaterThanOrEqualTo method retrieves entries where the specified field’s value is greater than or equal to the provided value."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-greaterthanorequalto"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## greaterThanOrEqualTo

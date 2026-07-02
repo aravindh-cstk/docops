@@ -1,6 +1,6 @@
 ---
 title: "addHeadersWithDictionary:"
-description: "The `addHeadersWithDictionary` method sets a single header on the `Asset` . Multiple headers: Use `addHeadersWithDictionary:` . Override behavior: Headers set on the `Asset` override the same header from the `Stack` for that request only."
+description: "The addHeadersWithDictionary method sets a single header on the Asset . Multiple headers: Use addHeadersWithDictionary: . Override behavior: Headers set on the Asset override the same header from the Stack for that request only."
 url: "https://www.contentstack.com/ios-asset-addheaderswithdictionary-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## addHeadersWithDictionary:

@@ -1,6 +1,6 @@
 ---
 title: "unlinkContentTypes"
-description: "The `unlinkContentTypes` method removes one or more content types from a variant group. Use this method to detach content types previously linked for personalization."
+description: "The unlinkContentTypes method removes one or more content types from a variant group. Use this method to detach content types previously linked for personalization."
 url: "https://www.contentstack.com/java-management-variantgroup-unlinkcontenttypes"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## unlinkContentTypes

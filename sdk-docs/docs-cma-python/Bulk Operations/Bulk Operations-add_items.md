@@ -1,6 +1,6 @@
 ---
 title: "add_items"
-description: "The `add_items` method adds multiple entries and assets to a specified release for bulk publishing and coordinated deployment."
+description: "The add_items method adds multiple entries and assets to a specified release for bulk publishing and coordinated deployment."
 url: "https://www.contentstack.com/python-management-sdk-bulk-operations-add_items"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## add_items

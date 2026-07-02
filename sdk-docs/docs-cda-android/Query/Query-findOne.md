@@ -1,6 +1,6 @@
 ---
 title: "findOne"
-description: "The `findOne` method retrieves entries that match the query conditions and optionally caches the result to improve performance."
+description: "The findOne method retrieves entries that match the query conditions and optionally caches the result to improve performance."
 url: "https://www.contentstack.com/android-query-findone"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## findOne

@@ -1,6 +1,6 @@
 ---
 title: "FindAsync"
-description: "The `FindAsync` Variant Groups returns a list of all variant groups linked to your stack."
+description: "The FindAsync Variant Groups returns a list of all variant groups linked to your stack."
 url: "https://www.contentstack.com/dotnet-management-variantgroups-findasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## FindAsync

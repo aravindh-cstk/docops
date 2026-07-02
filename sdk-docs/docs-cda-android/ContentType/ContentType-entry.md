@@ -1,6 +1,6 @@
 ---
 title: "entry"
-description: "The `entry` method retrieves a specific entry, which is an actual piece of content created using one of the defined content types."
+description: "The entry method retrieves a specific entry, which is an actual piece of content created using one of the defined content types."
 url: "https://www.contentstack.com/android-contenttype-entry"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## entry

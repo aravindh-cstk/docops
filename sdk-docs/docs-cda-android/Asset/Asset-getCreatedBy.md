@@ -1,6 +1,6 @@
 ---
 title: "getCreatedBy"
-description: "The `getCreatedBy` method retrieves the `created by` object from the asset response, indicating which user created the asset."
+description: "The getCreatedBy method retrieves the created by object from the asset response, indicating which user created the asset."
 url: "https://www.contentstack.com/android-asset-getcreatedby"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getCreatedBy

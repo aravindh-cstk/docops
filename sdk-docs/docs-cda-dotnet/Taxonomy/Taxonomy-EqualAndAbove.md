@@ -1,6 +1,6 @@
 ---
 title: "EqualAndAbove"
-description: "The `EqualAndAbove` method retrieves all entries for a specific taxonomy that match a specific term and all its ancestor terms, requiring only the target term and a specified level. Note: If you don't specify the level, the default behavior is to retrieve terms up to level 10."
+description: "The EqualAndAbove method retrieves all entries for a specific taxonomy that match a specific term and all its ancestor terms, requiring only the target term and a specified level. Note: If you don't specify the level, the default behavior is to retrieve terms up to level 10."
 url: "https://www.contentstack.com/dotnet-delivery-taxonomy-equalandabove"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## EqualAndAbove

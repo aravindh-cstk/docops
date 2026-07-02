@@ -1,6 +1,6 @@
 ---
 title: "fetch"
-description: "The `fetch` method retrieves a specific installation of an app."
+description: "The fetch method retrieves a specific installation of an app."
 url: "https://www.contentstack.com/javascript-marketplace-installation-fetch"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch

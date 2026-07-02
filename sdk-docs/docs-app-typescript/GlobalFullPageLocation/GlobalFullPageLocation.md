@@ -1,6 +1,6 @@
 ---
 title: "GlobalFullPageLocation"
-description: "The `GlobalFullPageLocation` object provides cross-stack functionality for global applications that operate across multiple stacks or organizations."
+description: "The GlobalFullPageLocation object provides cross-stack functionality for global applications that operate across multiple stacks or organizations."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/globalfullpagelocation"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # GlobalFullPageLocation

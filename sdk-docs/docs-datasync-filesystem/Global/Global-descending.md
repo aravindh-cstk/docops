@@ -1,6 +1,6 @@
 ---
 title: "descending"
-description: "The `descending` method sorts the fetched entries in descending order based on the specified field."
+description: "The descending method sorts the fetched entries in descending order based on the specified field."
 url: "https://www.contentstack.com/datasync-filesystem-global-descending"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## descending

@@ -1,6 +1,6 @@
 ---
 title: "Localize / LocalizeAsync"
-description: "The `Localize` and `LocalizeAsync` actions create or update the localized fields for an existing taxonomy, using optional query parameters (typically `locale` ) to select the target locale. Validation A non-empty taxonomy UID must be provided; otherwise, `stack.Taxonomy()` throws `InvalidOperationException` . Passing `null` for `model` throws `ArgumentNullException` when the internal `CreateUpdateService` is constructed. You can pass `null` for `collection` . The SDK does not validate query parameters and defers validation to the API. Behavior Add entries to `ParameterCollection` to send query parameters (for example, `locale` ). The SDK forwards these values without validation. The SDK sends one HTTP POST request to `/taxonomies/{taxonomy_uid}` with the body `{ \"taxonomy\": … }` . Query parameters are included only when `collection` is non-empty. The API returns a JSON response. Deserialize it using `OpenTResponse<T>()` or similar if needed. Call `Locales` / `LocalesAsync` to read locale data, and call `stack.Locale().Query()` to list available locale codes."
+description: "The Localize and LocalizeAsync actions create or update the localized fields for an existing taxonomy, using optional query parameters (typically locale ) to select the target locale. Validation A non-empty taxonomy UID must be provided; otherwise, stack.Taxonomy() throws InvalidOperationException . Passing null for model throws ArgumentNullException when the internal CreateUpdateService is constructed. You can pass null for collection . The SDK does not validate query parameters and defers validation to the API. Behavior Add entries to ParameterCollection to send query parameters (for example, locale ). The SDK forwards these values without validation. The SDK sends one HTTP POST request to /taxonomies/{taxonomy_uid} with the body { \"taxonomy\": … } . Query parameters are included only when collection is non-empty. The API returns a JSON response. Deserialize it using OpenTResponse<T>() or similar if needed. Call Locales / LocalesAsync to read locale data, and call stack.Locale().Query() to list available locale codes."
 url: "https://www.contentstack.com/taxonomy-localize-localizeasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Localize / LocalizeAsync

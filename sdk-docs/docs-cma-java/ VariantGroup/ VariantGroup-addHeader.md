@@ -1,6 +1,6 @@
 ---
 title: "addHeader"
-description: "The `addHeader` method sets a custom header for the request. Use this to specify a key–value pair in the request header."
+description: "The addHeader method sets a custom header for the request. Use this to specify a key–value pair in the request header."
 url: "https://www.contentstack.com/java-management-variantgroups-addheader"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## addHeader

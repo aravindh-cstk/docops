@@ -1,6 +1,6 @@
 ---
 title: "setManagementToken()"
-description: "The `setManagementToken` method adds the management token to the stack header to authorize content management operations."
+description: "The setManagementToken method adds the management token to the stack header to authorize content management operations."
 url: "https://www.contentstack.com/android-config-setmanagementtoken"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## setManagementToken()

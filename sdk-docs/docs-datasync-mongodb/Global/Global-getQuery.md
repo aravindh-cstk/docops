@@ -1,6 +1,6 @@
 ---
 title: "getQuery"
-description: "The `getQuery` method exposes the query object built using chained query methods."
+description: "The getQuery method exposes the query object built using chained query methods."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-getquery"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getQuery

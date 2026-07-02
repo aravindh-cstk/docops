@@ -1,6 +1,6 @@
 ---
 title: "includeCount "
-description: "The `includeCount` method includes the total count of matching entries in the result response."
+description: "The includeCount method includes the total count of matching entries in the result response."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-includecount"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeCount 

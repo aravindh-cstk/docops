@@ -1,6 +1,6 @@
 ---
 title: "getContentType"
-description: "The `getContentType` method retrieves the content type of the entry."
+description: "The getContentType method retrieves the content type of the entry."
 url: "https://www.contentstack.com/android-entry-getcontenttype"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getContentType

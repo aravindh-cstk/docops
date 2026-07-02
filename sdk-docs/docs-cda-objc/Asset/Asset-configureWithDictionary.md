@@ -1,6 +1,6 @@
 ---
 title: "configureWithDictionary"
-description: "The `configureWithDictionary` method configures the assets’ in-memory metadata (for example, after a fetch or for local use). Request behavior: This method does not modify request parameters for `fetch` . For request parameters: Use `setLocale:` , `includeMetadata` , or `addParamKey:andValue:` ."
+description: "The configureWithDictionary method configures the assets’ in-memory metadata (for example, after a fetch or for local use). Request behavior: This method does not modify request parameters for fetch . For request parameters: Use setLocale: , includeMetadata , or addParamKey:andValue: ."
 url: "https://www.contentstack.com/ios-asset-configurewithdictionary-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## configureWithDictionary

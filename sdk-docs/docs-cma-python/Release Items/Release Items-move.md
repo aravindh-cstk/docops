@@ -1,6 +1,6 @@
 ---
 title: "move"
-description: "The `move` method transfers entries or assets from one release to another, preserving locale and variant information."
+description: "The move method transfers entries or assets from one release to another, preserving locale and variant information."
 url: "https://www.contentstack.com/python-management-sdk-release-items-move"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## move

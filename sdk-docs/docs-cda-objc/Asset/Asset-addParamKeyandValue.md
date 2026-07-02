@@ -1,6 +1,6 @@
 ---
 title: "addParamKey:andValue"
-description: "The `addParamKey:andValue` method adds a query parameter key–value pair to the `Asset` . The SDK sends the parameter with the next `fetch` request (for example, `include_dimension` , `locale` , or other supported API keys)."
+description: "The addParamKey:andValue method adds a query parameter key–value pair to the Asset . The SDK sends the parameter with the next fetch request (for example, include_dimension , locale , or other supported API keys)."
 url: "https://www.contentstack.com/ios-asset-addparamkey-andvalue-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## addParamKey:andValue

@@ -1,6 +1,6 @@
 ---
 title: "includeBranch"
-description: "The `fiincludeBranchd` method includes the branch details for single or multiple global fields"
+description: "The fiincludeBranchd method includes the branch details for single or multiple global fields"
 url: "https://www.contentstack.com/swift-global-fields-includebranch"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeBranch

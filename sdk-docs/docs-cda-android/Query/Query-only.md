@@ -1,6 +1,6 @@
 ---
 title: "only"
-description: "The `only` method retrieves entries by specifying an array of keys in the base object that should be included in the response."
+description: "The only method retrieves entries by specifying an array of keys in the base object that should be included in the response."
 url: "https://www.contentstack.com/android-query-only"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## only

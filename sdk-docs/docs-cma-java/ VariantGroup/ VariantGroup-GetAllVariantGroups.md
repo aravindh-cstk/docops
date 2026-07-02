@@ -1,6 +1,6 @@
 ---
 title: "Get All Variant Groups"
-description: "The `variantGroup.find()` method retrieves all variant groups linked to your stack. This helps list available groups for content personalization."
+description: "The variantGroup.find() method retrieves all variant groups linked to your stack. This helps list available groups for content personalization."
 url: "https://www.contentstack.com/java-management-variant-groups-get-all-variant-groups"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Get All Variant Groups

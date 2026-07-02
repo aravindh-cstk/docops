@@ -1,6 +1,6 @@
 ---
 title: "BulkPublish"
-description: "The `BulkPublish` method publishes multiple entries and assets simultaneously across specified locales and environments."
+description: "The BulkPublish method publishes multiple entries and assets simultaneously across specified locales and environments."
 url: "https://www.contentstack.com/dotnet-management-bulk-operations-bulk-publish"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## BulkPublish

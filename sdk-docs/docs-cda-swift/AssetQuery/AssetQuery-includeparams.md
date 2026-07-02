@@ -1,6 +1,6 @@
 ---
 title: "include(params:)"
-description: "The `include(params:)` method adds optional response options (count, relative URLs, dimensions, fallback, metadata) to the asset query."
+description: "The include(params:) method adds optional response options (count, relative URLs, dimensions, fallback, metadata) to the asset query."
 url: "https://www.contentstack.com/swift-assetquery-include-params-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## include(params:)

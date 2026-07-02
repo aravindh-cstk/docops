@@ -1,6 +1,6 @@
 ---
 title: "Include"
-description: "The `Query.Include` is parameter for including count, Unpublished, ContentType schema, Global Fields schema, and Reference ContentType Uid in result."
+description: "The Query.Include is parameter for including count, Unpublished, ContentType schema, Global Fields schema, and Reference ContentType Uid in result."
 url: "https://www.contentstack.com/developers/sdks/content-delivery-sdk/swift/reference/include"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # Include

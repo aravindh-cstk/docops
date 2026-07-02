@@ -1,6 +1,6 @@
 ---
 title: "Field Object"
-description: "The `Field` object provides access to individual field data, schema information, and field-level operations."
+description: "The Field object provides access to individual field data, schema information, and field-level operations."
 url: "https://www.contentstack.com/appsdk-core-objects-field"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Field Object

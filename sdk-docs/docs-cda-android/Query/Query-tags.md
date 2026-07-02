@@ -1,6 +1,6 @@
 ---
 title: "tags"
-description: "The `tags` method includes the specified tags as a search criterion in the query to retrieve entries."
+description: "The tags method includes the specified tags as a search criterion in the query to retrieve entries."
 url: "https://www.contentstack.com/android-query-tags"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## tags

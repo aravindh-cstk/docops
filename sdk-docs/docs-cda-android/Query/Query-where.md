@@ -1,6 +1,6 @@
 ---
 title: "where"
-description: "The `where` method filters entries by applying a condition that matches a specified field key with the provided value."
+description: "The where method filters entries by applying a condition that matches a specified field key with the provided value."
 url: "https://www.contentstack.com/android-query-where"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## where

@@ -1,6 +1,6 @@
 ---
 title: "Stack"
-description: "A stack is a repository or a container that holds all the entries / assets of your site. It allows multiple users to create , edit , approve , and publish their content within a single space. The `Stack` instance provides access to all query methods for fetching entries, assets, and content type data from the local filesystem."
+description: "A stack is a repository or a container that holds all the entries / assets of your site. It allows multiple users to create , edit , approve , and publish their content within a single space. The Stack instance provides access to all query methods for fetching entries, assets, and content type data from the local filesystem."
 url: "https://www.contentstack.com/datasync-filesystem-contentstack-stack"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Stack

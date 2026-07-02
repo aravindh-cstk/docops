@@ -1,6 +1,6 @@
 ---
 title: "createUploadUrl"
-description: "The `createUploadUrl` method creates a signed url for file upload."
+description: "The createUploadUrl method creates a signed url for file upload."
 url: "https://www.contentstack.com/javascript-marketplace-hosting-createuploadurl"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## createUploadUrl

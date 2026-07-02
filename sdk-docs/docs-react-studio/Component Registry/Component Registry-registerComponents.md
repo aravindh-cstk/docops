@@ -1,6 +1,6 @@
 ---
 title: "registerComponents"
-description: "The `registerComponents` method registers custom React components in Studio, making them available in the Visual Builder and Studio interface. This is the primary method for integrating reusable UI components into the composition workflow."
+description: "The registerComponents method registers custom React components in Studio, making them available in the Visual Builder and Studio interface. This is the primary method for integrating reusable UI components into the composition workflow."
 url: "https://www.contentstack.com/react-studio-sdk-component-registry-registercomponents"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## registerComponents

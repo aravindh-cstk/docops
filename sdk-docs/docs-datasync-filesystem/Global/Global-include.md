@@ -1,6 +1,6 @@
 ---
 title: "include"
-description: "The `include` method includes a specific field in the returned result."
+description: "The include method includes a specific field in the returned result."
 url: "https://www.contentstack.com/datasync-filesystem-global-include"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## include

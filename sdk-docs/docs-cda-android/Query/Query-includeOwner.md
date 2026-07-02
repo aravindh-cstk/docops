@@ -1,6 +1,6 @@
 ---
 title: "includeOwner"
-description: "The `includeOwner` method retrieves objects by including the owner’s profile information in each object’s data."
+description: "The includeOwner method retrieves objects by including the owner’s profile information in each object’s data."
 url: "https://www.contentstack.com/android-query-includeowner"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeOwner

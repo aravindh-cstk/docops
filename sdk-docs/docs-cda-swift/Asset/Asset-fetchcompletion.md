@@ -1,6 +1,6 @@
 ---
 title: "fetch(completion:)"
-description: "The `fetch(completion:)` call fetches the latest version of a specific Asset of a particular stack. The result is delivered to the completion handler."
+description: "The fetch(completion:) call fetches the latest version of a specific Asset of a particular stack. The result is delivered to the completion handler."
 url: "https://www.contentstack.com/swift-asset-fetch-_-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## fetch(completion:)

@@ -1,6 +1,6 @@
 ---
 title: "where(queryableCodingKey:_:)"
-description: "Use this method to do a search on Entries which enables searching for entries based on value’s queryable coding from `EntryType.FieldKeys`."
+description: "Use this method to do a search on Entries which enables searching for entries based on value’s queryable coding from EntryType.FieldKeys ."
 url: "https://www.contentstack.com/swift-queryon-where-queryablecodingkey-_-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## where(queryableCodingKey:_:)

@@ -1,6 +1,6 @@
 ---
 title: "exists"
-description: "The `exists` method retrieves entries if the value of the specified field exists."
+description: "The exists method retrieves entries if the value of the specified field exists."
 url: "https://www.contentstack.com/datasync-filesystem-global-exists"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## exists

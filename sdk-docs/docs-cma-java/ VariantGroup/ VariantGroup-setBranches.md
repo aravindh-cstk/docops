@@ -1,6 +1,6 @@
 ---
 title: "setBranches"
-description: "The `setBranches` method defines the branches used in the request body when linking or unlinking content types from a variant group. By default, only the main branch is included."
+description: "The setBranches method defines the branches used in the request body when linking or unlinking content types from a variant group. By default, only the main branch is included."
 url: "https://www.contentstack.com/java-management-variantgroup-setbranches"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## setBranches

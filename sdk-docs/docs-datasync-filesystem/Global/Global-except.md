@@ -1,6 +1,6 @@
 ---
 title: "except"
-description: "The `except` method accepts an array of field UIDs. Only the fields specified in the array will be excluded from the result set."
+description: "The except method accepts an array of field UIDs. Only the fields specified in the array will be excluded from the result set."
 url: "https://www.contentstack.com/datasync-filesystem-global-equalto"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## except

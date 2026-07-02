@@ -1,6 +1,6 @@
 ---
 title: "job_status"
-description: "The `job_status` method retrieves the current status of a bulk job, including detailed progress and nested reference publishing metadata."
+description: "The job_status method retrieves the current status of a bulk job, including detailed progress and nested reference publishing metadata."
 url: "https://www.contentstack.com/python-management-sdk-bulk-operations-job_status"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## job_status

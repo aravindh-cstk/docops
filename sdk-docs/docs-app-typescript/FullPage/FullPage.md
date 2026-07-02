@@ -1,6 +1,6 @@
 ---
 title: "FullPage"
-description: "The `FullPage` object enables full-page applications within the Contentstack interface for handling complex workflows or data operations."
+description: "The FullPage object enables full-page applications within the Contentstack interface for handling complex workflows or data operations."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/fullpage"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # FullPage

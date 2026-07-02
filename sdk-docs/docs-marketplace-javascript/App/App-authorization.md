@@ -1,6 +1,6 @@
 ---
 title: "authorization"
-description: "The `authorization` method allows you to retrieve all and revoke specific or all authorizations."
+description: "The authorization method allows you to retrieve all and revoke specific or all authorizations."
 url: "https://www.contentstack.com/javascript-marketplace-authorization"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## authorization

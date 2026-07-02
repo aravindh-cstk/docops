@@ -1,6 +1,6 @@
 ---
 title: "removeHeader"
-description: "The `removeHeader` method removes a header from the request using the specified header key."
+description: "The removeHeader method removes a header from the request using the specified header key."
 url: "https://www.contentstack.com/android-query-removeheader"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## removeHeader

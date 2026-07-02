@@ -1,6 +1,6 @@
 ---
 title: "setLocale"
-description: "The `setLocale` method sets the locale code used when fetching the asset so the response is in the requested language."
+description: "The setLocale method sets the locale code used when fetching the asset so the response is in the requested language."
 url: "https://www.contentstack.com/ios-assets-setlocale"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## setLocale

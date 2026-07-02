@@ -1,6 +1,6 @@
 ---
 title: "isEnable"
-description: "The `isEnable` method retrieves the OAuth details of the app."
+description: "The isEnable method retrieves the OAuth details of the app."
 url: "https://www.contentstack.com/javascript-marketplace-hosting-isenable"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## isEnable

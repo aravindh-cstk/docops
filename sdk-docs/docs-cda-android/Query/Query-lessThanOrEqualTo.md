@@ -1,6 +1,6 @@
 ---
 title: "lessThanOrEqualTo"
-description: "The `lessThanOrEqualTo` method applies a constraint that requires a specified key to have a value less than or equal to the given value to retrieve entries."
+description: "The lessThanOrEqualTo method applies a constraint that requires a specified key to have a value less than or equal to the given value to retrieve entries."
 url: "https://www.contentstack.com/android-query-lessthanorequalto"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## lessThanOrEqualTo

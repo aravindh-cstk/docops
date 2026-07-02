@@ -1,6 +1,6 @@
 ---
 title: "update"
-description: "The `update` method modifies the name, description, or schedule of an existing release."
+description: "The update method modifies the name, description, or schedule of an existing release."
 url: "https://www.contentstack.com/java-management-releases-update"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## update

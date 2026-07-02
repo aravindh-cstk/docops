@@ -1,6 +1,6 @@
 ---
 title: "getLastActivities"
-description: "The `getLastActivities` retrieves all the ContentTypes whose last activity updated."
+description: "The getLastActivities retrieves all the ContentTypes whose last activity updated."
 url: "https://www.contentstack.com/get-last-activities"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getLastActivities

@@ -1,6 +1,6 @@
 ---
 title: "addParam"
-description: "The `addParam` method adds a query parameter to the asset request to filter the response."
+description: "The addParam method adds a query parameter to the asset request to filter the response."
 url: "https://www.contentstack.com/android-asset-addparam"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## addParam

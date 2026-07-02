@@ -1,6 +1,6 @@
 ---
 title: "includeFallback"
-description: "The `includeFallback` method retrieves entries by including fallback language content in the response when content for the specified locale is unavailable."
+description: "The includeFallback method retrieves entries by including fallback language content in the response when content for the specified locale is unavailable."
 url: "https://www.contentstack.com/android-query-includefallback"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeFallback

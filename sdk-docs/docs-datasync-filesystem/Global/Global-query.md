@@ -1,6 +1,6 @@
 ---
 title: "query"
-description: "The `query` method initializes a query builder for the selected content type or resource."
+description: "The query method initializes a query builder for the selected content type or resource."
 url: "https://www.contentstack.com/datasync-filesystem-global-query"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## query

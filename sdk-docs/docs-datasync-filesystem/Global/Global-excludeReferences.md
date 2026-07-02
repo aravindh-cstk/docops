@@ -1,6 +1,6 @@
 ---
 title: "excludeReferences"
-description: "The `excludeReferences` method excludes all references of the entries being scanned."
+description: "The excludeReferences method excludes all references of the entries being scanned."
 url: "https://www.contentstack.com/datasync-filesystem-global-excludereferences"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## excludeReferences

@@ -1,6 +1,6 @@
 ---
 title: "notContainedIn"
-description: "The `notContainedIn` method retrieves entries where the specified field’s value does not match any value in the given array."
+description: "The notContainedIn method retrieves entries where the specified field’s value does not match any value in the given array."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-notcontainedin"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## notContainedIn

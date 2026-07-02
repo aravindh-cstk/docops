@@ -1,6 +1,6 @@
 ---
 title: "IncludeGlobalFieldSchema"
-description: "The `IncludeGlobalFieldSchema` method fetches the complete schema of a specified Global Field, including all nested fields and configurations"
+description: "The IncludeGlobalFieldSchema method fetches the complete schema of a specified Global Field, including all nested fields and configurations"
 url: "https://www.contentstack.com/dotnet-delivery-global-field-includeglobalfieldschema"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## IncludeGlobalFieldSchema

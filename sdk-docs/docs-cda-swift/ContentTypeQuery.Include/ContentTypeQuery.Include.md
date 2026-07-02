@@ -1,6 +1,6 @@
 ---
 title: "ContentTypeQuery.Include"
-description: "The `ContentTypeQuery.Include` is parameter for including count, Global Fields schema in result."
+description: "The ContentTypeQuery.Include is parameter for including count, Global Fields schema in result."
 url: "https://www.contentstack.com/developers/sdks/content-delivery-sdk/swift/reference/contenttypequery-include"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # ContentTypeQuery.Include

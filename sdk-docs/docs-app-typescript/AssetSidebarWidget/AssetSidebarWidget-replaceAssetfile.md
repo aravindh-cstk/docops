@@ -1,6 +1,6 @@
 ---
 title: "replaceAsset(file)"
-description: "The `replaceAsset` method replaces the current asset with a new file."
+description: "The replaceAsset method replaces the current asset with a new file."
 url: "https://www.contentstack.com/app-sdk---assetsidebarwidget---replaceasset-file-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## replaceAsset(file)

@@ -1,6 +1,6 @@
 ---
 title: "only"
-description: "The `only` method limits the returned fields in the result to the ones specified."
+description: "The only method limits the returned fields in the result to the ones specified."
 url: "https://www.contentstack.com/datasync-filesystem-global-notexists"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## only

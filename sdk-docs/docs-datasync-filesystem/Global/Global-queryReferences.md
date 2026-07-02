@@ -1,6 +1,6 @@
 ---
 title: "queryReferences"
-description: "The `queryReferences` method allows you to perform a query on referenced entries."
+description: "The queryReferences method allows you to perform a query on referenced entries."
 url: "https://www.contentstack.com/datasync-filesystem-global-queryreferences"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## queryReferences

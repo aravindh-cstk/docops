@@ -1,6 +1,6 @@
 ---
 title: "setRegion()"
-description: "The `setRegion` method sets the database region for your stack. You can choose from seven regions: NA, AU, EU, Azure NA, Azure EU, GCP NA, and GCP EU."
+description: "The setRegion method sets the database region for your stack. You can choose from seven regions: NA, AU, EU, Azure NA, Azure EU, GCP NA, and GCP EU."
 url: "https://www.contentstack.com/android-config-setregion"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## setRegion()

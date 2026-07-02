@@ -1,6 +1,6 @@
 ---
 title: "installation"
-description: "The `installation` method allows you to retrieve, update and delete the app installation."
+description: "The installation method allows you to retrieve, update and delete the app installation."
 url: "https://www.contentstack.com/javascript-marketplace-installation"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## installation

@@ -1,6 +1,6 @@
 ---
 title: "DashboardWidget"
-description: "The `DashboardWidget` UI location integrates with the Contentstack dashboard to provide stack-level functions."
+description: "The DashboardWidget UI location integrates with the Contentstack dashboard to provide stack-level functions."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/dashboardwidget"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # DashboardWidget

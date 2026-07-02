@@ -1,5 +1,5 @@
 ---
-title: "React Studio SDK API Reference"
+title: "React Studio Introduction"
 description: "React Studio SDK API Reference"
 url: ""
 product: "Contentstack"
@@ -8,11 +8,11 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 cms_uid: "blt2b38caeeddfac143"
 ---
 
-# React Studio SDK API Reference
+# React Studio Introduction
 
 ## Overview
 

@@ -1,6 +1,6 @@
 ---
 title: "linkContentTypes"
-description: "The `linkContentTypes` method links one or more content types to a variant group. Use it to enable personalization by associating content types with variant logic."
+description: "The linkContentTypes method links one or more content types to a variant group. Use it to enable personalization by associating content types with variant logic."
 url: "https://www.contentstack.com/java-management-variantgroup-linkcontenttypes"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## linkContentTypes

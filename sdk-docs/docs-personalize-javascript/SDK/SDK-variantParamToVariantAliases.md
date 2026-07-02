@@ -1,6 +1,6 @@
 ---
 title: "variantParamToVariantAliases"
-description: "The `variantParamToVariantAliases()` method decodes a variant parameter into a list of variant aliases. This parameter, often used as a query parameter in URLs, represents the variants activated for the current user. This method is typically used in server-side code to transform the variant parameter into a list of aliases, which can then be passed to the CMS Delivery API for fetching personalized content."
+description: "The variantParamToVariantAliases() method decodes a variant parameter into a list of variant aliases. This parameter, often used as a query parameter in URLs, represents the variants activated for the current user. This method is typically used in server-side code to transform the variant parameter into a list of aliases, which can then be passed to the CMS Delivery API for fetching personalized content."
 url: "https://www.contentstack.com/javascript-personalize-edge-sdk-sdk-variantparamtoaliases"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## variantParamToVariantAliases

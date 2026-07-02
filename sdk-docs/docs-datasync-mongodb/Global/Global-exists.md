@@ -1,6 +1,6 @@
 ---
 title: "exists"
-description: "The `exists` method filters entries that contain the specified field."
+description: "The exists method filters entries that contain the specified field."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-exists"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## exists

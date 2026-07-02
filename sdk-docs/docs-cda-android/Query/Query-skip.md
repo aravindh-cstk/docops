@@ -1,6 +1,6 @@
 ---
 title: "skip"
-description: "The `skip` method retrieves objects by skipping a specified number of objects before returning the results."
+description: "The skip method retrieves objects by skipping a specified number of objects before returning the results."
 url: "https://www.contentstack.com/android-query-skip"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## skip

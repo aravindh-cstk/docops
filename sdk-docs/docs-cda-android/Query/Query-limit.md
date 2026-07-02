@@ -1,6 +1,6 @@
 ---
 title: "limit"
-description: "The `limit` method retrieves entries by setting a limit on the number of objects to return."
+description: "The limit method retrieves entries by setting a limit on the number of objects to return."
 url: "https://www.contentstack.com/android-query-limit"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## limit

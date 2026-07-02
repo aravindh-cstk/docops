@@ -1,6 +1,6 @@
 ---
 title: "update"
-description: "The `update` method updates the OAuth details i.e., the redirect url and permission scope of an app."
+description: "The update method updates the OAuth details i.e., the redirect url and permission scope of an app."
 url: "https://www.contentstack.com/javascript-marketplace-oauth-update"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## update

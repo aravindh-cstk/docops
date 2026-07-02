@@ -1,6 +1,6 @@
 ---
 title: "addParams"
-description: "The `addParams()` method sets multiple query parameters for the request. Pass a `HashMap` of key-value pairs to customize the API response."
+description: "The addParams() method sets multiple query parameters for the request. Pass a HashMap of key-value pairs to customize the API response."
 url: "https://www.contentstack.com/java-management-variants-group-addparams"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## addParams

@@ -1,6 +1,6 @@
 ---
 title: "notEqualTo"
-description: "The `notEqualTo` method retrieves entries where the specified field’s value does not equal the given value."
+description: "The notEqualTo method retrieves entries where the specified field’s value does not equal the given value."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-notequalto"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## notEqualTo

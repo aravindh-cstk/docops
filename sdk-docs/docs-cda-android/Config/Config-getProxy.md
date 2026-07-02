@@ -1,6 +1,6 @@
 ---
 title: "getProxy"
-description: "The `getProxy` method retrieves the current proxy instance configured for routing network requests."
+description: "The getProxy method retrieves the current proxy instance configured for routing network requests."
 url: "https://www.contentstack.com/android-config-getproxy"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getProxy

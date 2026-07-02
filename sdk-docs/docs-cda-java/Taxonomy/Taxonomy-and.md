@@ -1,6 +1,6 @@
 ---
 title: "and"
-description: "The and method retrieves all entries for a specific taxonomy that satisfy all the conditions provided in the `$and` query."
+description: "The and method retrieves all entries for a specific taxonomy that satisfy all the conditions provided in the $and query."
 url: "https://www.contentstack.com/java-taxonomy-and"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## and

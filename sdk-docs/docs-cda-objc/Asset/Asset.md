@@ -1,6 +1,6 @@
 ---
 title: "Asset"
-description: "The Asset class represents a single asset and fetches its metadata from the delivery API. Note: For files over 4 GB , `fileSize` may overflow due to 32-bit type limits and may not represent the actual file size."
+description: "The Asset class represents a single asset and fetches its metadata from the delivery API. Note: For files over 4 GB , fileSize may overflow due to 32-bit type limits and may not represent the actual file size."
 url: "https://www.contentstack.com/developers/sdks/content-delivery-sdk/ios/reference/asset"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # Asset

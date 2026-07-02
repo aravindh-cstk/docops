@@ -1,6 +1,6 @@
 ---
 title: "search"
-description: "The `search` method retrieves only the entries that match the specified search value."
+description: "The search method retrieves only the entries that match the specified search value."
 url: "https://www.contentstack.com/android-query-search"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## search

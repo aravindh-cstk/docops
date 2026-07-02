@@ -1,6 +1,6 @@
 ---
 title: "move"
-description: "The `move` method allows you to move multiple items within a specific release."
+description: "The move method allows you to move multiple items within a specific release."
 url: "https://www.contentstack.com/java-management-sdk-releaseitem-move"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## move

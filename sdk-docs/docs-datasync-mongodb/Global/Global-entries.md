@@ -1,6 +1,6 @@
 ---
 title: "entries"
-description: "The `entries` method initiates a query for a set of entries within the specified content type."
+description: "The entries method initiates a query for a set of entries within the specified content type."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-entries"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## entries

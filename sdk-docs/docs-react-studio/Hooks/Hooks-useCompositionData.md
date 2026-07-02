@@ -1,6 +1,6 @@
 ---
 title: "useCompositionData"
-description: "The `useCompositionData` React hook fetches composition data and specifications. Use this as the primary method to load a composition along with its SEO and meta information."
+description: "The useCompositionData React hook fetches composition data and specifications. Use this as the primary method to load a composition along with its SEO and meta information."
 url: "https://www.contentstack.com/react-studio-sdk-usecompositiondata"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## useCompositionData

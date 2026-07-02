@@ -1,6 +1,6 @@
 ---
 title: "lessThanOrEqualTo"
-description: "The `lessThanOrEqualTo` method retrieves entries where the field's value is less than or equal to the specified number."
+description: "The lessThanOrEqualTo method retrieves entries where the field's value is less than or equal to the specified number."
 url: "https://www.contentstack.com/datasync-filesystem-global-lessthanorequalto"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## lessThanOrEqualTo

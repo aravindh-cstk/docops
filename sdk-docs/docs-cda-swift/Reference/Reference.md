@@ -1,6 +1,6 @@
 ---
 title: "Reference"
-description: "When fetching entries, you can search base on reference `$in` or `$nin`."
+description: "When fetching entries, you can search base on reference $in or $nin ."
 url: "https://www.contentstack.com/developers/sdks/content-delivery-sdk/swift/reference/reference"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # Reference

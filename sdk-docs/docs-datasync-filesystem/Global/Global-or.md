@@ -1,6 +1,6 @@
 ---
 title: "or"
-description: "The `or` method combines multiple conditions using the logical OR operator."
+description: "The or method combines multiple conditions using the logical OR operator."
 url: "https://www.contentstack.com/datasync-filesystem-global-or"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## or

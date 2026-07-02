@@ -1,6 +1,6 @@
 ---
 title: "findOne"
-description: "The `findOne` method queries the local database using the built or provided query and returns a single matching entry, asset, or content type object. It processes the data, applies filters, and resolves references before returning the result."
+description: "The findOne method queries the local database using the built or provided query and returns a single matching entry, asset, or content type object. It processes the data, applies filters, and resolves references before returning the result."
 url: "https://www.contentstack.com/datasync-filesystem-global-findone"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## findOne

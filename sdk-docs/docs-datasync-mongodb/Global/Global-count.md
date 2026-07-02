@@ -1,6 +1,6 @@
 ---
 title: "count"
-description: "The `count` method returns the total number of entries or assets that match the specified query."
+description: "The count method returns the total number of entries or assets that match the specified query."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-count"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## count

@@ -1,6 +1,6 @@
 ---
 title: "Assets"
-description: "Creates an instance of `Assets`. Retrieves all assets of a stack by default. To retrieve a single asset, specify its UID."
+description: "Creates an instance of Assets . Retrieves all assets of a stack by default. To retrieve a single asset, specify its UID."
 url: "https://www.contentstack.com/developers/sdks/content-delivery-sdk/react-native/reference/assets"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # Assets

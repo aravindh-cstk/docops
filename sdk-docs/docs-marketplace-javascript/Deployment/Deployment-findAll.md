@@ -1,6 +1,6 @@
 ---
 title: "findAll"
-description: "The `findAll` deployments method retrieves all the available deployments made for an app."
+description: "The findAll deployments method retrieves all the available deployments made for an app."
 url: "https://www.contentstack.com/javascript-marketplace-deployment-findall"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## findAll

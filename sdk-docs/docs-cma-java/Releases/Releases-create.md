@@ -1,6 +1,6 @@
 ---
 title: "create"
-description: "The `create` method creates a new release in the stack."
+description: "The create method creates a new release in the stack."
 url: "https://www.contentstack.com/java-management-bulkoperation-publish"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## create

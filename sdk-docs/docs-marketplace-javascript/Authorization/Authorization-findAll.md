@@ -1,6 +1,6 @@
 ---
 title: "findAll"
-description: "The `findAll` method retrieves the requests of all authorized apps in a particular organization."
+description: "The findAll method retrieves the requests of all authorized apps in a particular organization."
 url: "https://www.contentstack.com/javascript-marketplace-auhorization-findall"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## findAll

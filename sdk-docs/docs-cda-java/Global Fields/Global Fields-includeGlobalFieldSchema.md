@@ -1,6 +1,6 @@
 ---
 title: "includeGlobalFieldSchema"
-description: "The `includeGlobalFieldSchema` method includes the schema of the global field in the response."
+description: "The includeGlobalFieldSchema method includes the schema of the global field in the response."
 url: "https://www.contentstack.com/java-delivery-sdk-global-fields-includeglobalfieldschema"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeGlobalFieldSchema

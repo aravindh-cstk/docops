@@ -1,6 +1,6 @@
 ---
 title: "equalAndBelow"
-description: "The `equalAndBelow` method retrieves all entries for a specific taxonomy that match a specific term and all its descendant terms, requiring only the target term."
+description: "The equalAndBelow method retrieves all entries for a specific taxonomy that match a specific term and all its descendant terms, requiring only the target term."
 url: "https://www.contentstack.com/android-delivery-taxonomy-equalandbelow"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## equalAndBelow

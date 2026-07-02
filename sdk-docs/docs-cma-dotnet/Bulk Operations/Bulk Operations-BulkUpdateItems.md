@@ -1,6 +1,6 @@
 ---
 title: "Bulk UpdateItems"
-description: "The `UpdateItems` method updates multiple entries and assets to a release in a single operation."
+description: "The UpdateItems method updates multiple entries and assets to a release in a single operation."
 url: "https://www.contentstack.com/dotnet-management-bulk-operations-bulk-updateitems"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Bulk UpdateItems

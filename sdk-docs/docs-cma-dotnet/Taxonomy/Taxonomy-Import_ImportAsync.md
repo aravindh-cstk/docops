@@ -1,6 +1,6 @@
 ---
 title: "Import / ImportAsync"
-description: "The `Import` and `ImportAsync` actions upload a taxonomy configuration file into the stack via multipart form data. Validation Use `stack.Taxonomy()` (no UID) for import. Calling `stack.Taxonomy(\"TAXONOMYUID\").Import(...)` throws `InvalidOperationException` before the request. Passing `null` for the `model` parameter throws `ArgumentNullException` when constructing the upload service. Provide valid inputs to TaxonomyImportModel: `filePath` must be non-null and accessible. Invalid paths or permissions throw `IOException` (or related `System.IO` exceptions). A null `stream` throws `ArgumentNullException` . Passing a `null` or empty `collection` does not throw. The API validates any query parameters after the request."
+description: "The Import and ImportAsync actions upload a taxonomy configuration file into the stack via multipart form data. Validation Use stack.Taxonomy() (no UID) for import. Calling stack.Taxonomy(\"TAXONOMYUID\").Import(...) throws InvalidOperationException before the request. Passing null for the model parameter throws ArgumentNullException when constructing the upload service. Provide valid inputs to TaxonomyImportModel: filePath must be non-null and accessible. Invalid paths or permissions throw IOException (or related System.IO exceptions). A null stream throws ArgumentNullException . Passing a null or empty collection does not throw. The API validates any query parameters after the request."
 url: "https://www.contentstack.com/taxonomy-import-importasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Import / ImportAsync

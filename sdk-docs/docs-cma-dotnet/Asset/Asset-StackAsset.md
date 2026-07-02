@@ -1,6 +1,6 @@
 ---
 title: "Stack.Asset"
-description: "The `Stack.Asset` method returns an `Asset` object for a specific asset, to invoke asset-localization methods on that asset. Validation and Behavior It does not validate the UID for null or empty values at construction time. If `uid` is omitted, `Stack.Asset()` still returns an `Asset` object. Use this method before `Localize` , `LocalizeAsync` , `Unlocalize` , `UnlocalizeAsync` , `GetLocalizedVersions` , and `GetLocalizedVersionsAsync` ."
+description: "The Stack.Asset method returns an Asset object for a specific asset, to invoke asset-localization methods on that asset. Validation and Behavior It does not validate the UID for null or empty values at construction time. If uid is omitted, Stack.Asset() still returns an Asset object. Use this method before Localize , LocalizeAsync , Unlocalize , UnlocalizeAsync , GetLocalizedVersions , and GetLocalizedVersionsAsync ."
 url: "https://www.contentstack.com/dotnet-management-asset-stack-asset"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Stack.Asset

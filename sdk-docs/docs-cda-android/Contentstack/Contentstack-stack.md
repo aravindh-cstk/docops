@@ -1,6 +1,6 @@
 ---
 title: "stack"
-description: "The `stack` method provides access to the stack of your site, allowing users to retrieve and manage content within a single space."
+description: "The stack method provides access to the stack of your site, allowing users to retrieve and manage content within a single space."
 url: "https://www.contentstack.com/android-contentstack-stack"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## stack

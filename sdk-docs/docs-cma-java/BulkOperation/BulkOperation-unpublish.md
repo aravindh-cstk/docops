@@ -1,6 +1,6 @@
 ---
 title: "unpublish"
-description: "The `unpublish` method removes multiple entries and assets from specific environments and locales."
+description: "The unpublish method removes multiple entries and assets from specific environments and locales."
 url: "https://www.contentstack.com/java-management-bulkoperation-unpublish"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## unpublish

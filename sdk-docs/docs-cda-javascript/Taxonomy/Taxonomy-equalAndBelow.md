@@ -1,6 +1,6 @@
 ---
 title: "equalAndBelow"
-description: "The equalAndBelow method retrieves all entries for a specific taxonomy that match a specific term and all its descendant terms, requiring only the target term. Note : This query is applicable for the `stack.Taxonomies()` and `stack.ContentType('uid').Query()` methods."
+description: "The equalAndBelow method retrieves all entries for a specific taxonomy that match a specific term and all its descendant terms, requiring only the target term. Note : This query is applicable for the stack.Taxonomies() and stack.ContentType('uid').Query() methods."
 url: "https://www.contentstack.com/js-taxonomy-equalandbelow"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## equalAndBelow

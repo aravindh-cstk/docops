@@ -1,6 +1,6 @@
 ---
 title: "whereIn"
-description: "The `whereIn` method retrieves entries by applying conditions to referenced fields and returns those that match the specified values."
+description: "The whereIn method retrieves entries by applying conditions to referenced fields and returns those that match the specified values."
 url: "https://www.contentstack.com/android-query-wherein"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## whereIn

@@ -1,6 +1,6 @@
 ---
 title: "includeCount"
-description: "The `includeCount` method returns the total count of matching entries along with the result set."
+description: "The includeCount method returns the total count of matching entries along with the result set."
 url: "https://www.contentstack.com/datasync-filesystem-global-includecount"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## includeCount

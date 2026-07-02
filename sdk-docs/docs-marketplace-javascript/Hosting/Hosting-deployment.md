@@ -1,6 +1,6 @@
 ---
 title: "deployment"
-description: "The `deployment` method creates an instance of Hosting deployment."
+description: "The deployment method creates an instance of Hosting deployment."
 url: "https://www.contentstack.com/javascript-marketplace-hosting-deployment"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## deployment

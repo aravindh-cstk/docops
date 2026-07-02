@@ -1,6 +1,6 @@
 ---
 title: "publish"
-description: "The `publish` method initiates a job to publish a taxonomy and/or specific taxonomy terms to the specified environments and locales."
+description: "The publish method initiates a job to publish a taxonomy and/or specific taxonomy terms to the specified environments and locales."
 url: "https://www.contentstack.com/js-management-taxonomy-publish"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## publish

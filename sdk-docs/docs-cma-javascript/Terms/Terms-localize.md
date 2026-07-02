@@ -1,6 +1,6 @@
 ---
 title: "localize"
-description: "The `localize()` method creates a localized version of a term."
+description: "The localize() method creates a localized version of a term."
 url: "https://www.contentstack.com/js-management-terms-localize"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## localize

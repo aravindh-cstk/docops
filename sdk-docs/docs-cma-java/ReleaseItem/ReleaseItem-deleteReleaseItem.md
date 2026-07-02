@@ -1,6 +1,6 @@
 ---
 title: "deleteReleaseItem"
-description: "The `deleteReleaseItem` method removes a single entry or asset from a release."
+description: "The deleteReleaseItem method removes a single entry or asset from a release."
 url: "https://www.contentstack.com/java-management-sdk-releaseitem-deletereleaseitem"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## deleteReleaseItem

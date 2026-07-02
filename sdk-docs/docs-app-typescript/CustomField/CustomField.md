@@ -1,6 +1,6 @@
 ---
 title: "CustomField"
-description: "The `CustomField` object extends field functionality with custom validation and input components."
+description: "The CustomField object extends field functionality with custom validation and input components."
 url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescript/reference/customfield"
 product: "Contentstack"
 doc_type: "class_intro"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 # CustomField

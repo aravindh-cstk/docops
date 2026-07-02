@@ -1,6 +1,6 @@
 ---
 title: "Store Object"
-description: "The `Store` object provides methods to manage key-value data storage within the app environment."
+description: "The Store object provides methods to manage key-value data storage within the app environment."
 url: "https://www.contentstack.com/appsdk-core-objects-store"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Store Object

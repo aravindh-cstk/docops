@@ -1,6 +1,6 @@
 ---
 title: "query"
-description: "The `query` method returns a query instance for building and executing advanced entry queries on a specified content type."
+description: "The query method returns a query instance for building and executing advanced entry queries on a specified content type."
 url: "https://www.contentstack.com/android-contenttype-query"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## query

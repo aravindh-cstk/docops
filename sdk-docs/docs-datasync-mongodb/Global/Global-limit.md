@@ -1,6 +1,6 @@
 ---
 title: "limit"
-description: "The `limit` method restricts the number of entries returned by the query."
+description: "The limit method restricts the number of entries returned by the query."
 url: "https://www.contentstack.com/datasync-mongodb-sdk-global-limit"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## limit

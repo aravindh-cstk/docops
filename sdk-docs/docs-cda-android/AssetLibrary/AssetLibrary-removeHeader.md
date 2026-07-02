@@ -1,6 +1,6 @@
 ---
 title: "removeHeader"
-description: "The `removeHeader` method removes a header associated with the specified key."
+description: "The removeHeader method removes a header associated with the specified key."
 url: "https://www.contentstack.com/android-assetlibrary-removeheader"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## removeHeader

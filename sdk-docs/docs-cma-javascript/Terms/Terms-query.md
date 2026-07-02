@@ -1,6 +1,6 @@
 ---
 title: "query"
-description: "The `query` method fetches all taxonomies or returns filtered results based on the provided query parameters."
+description: "The query method fetches all taxonomies or returns filtered results based on the provided query parameters."
 url: "https://www.contentstack.com/js-management-terms-query"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## query

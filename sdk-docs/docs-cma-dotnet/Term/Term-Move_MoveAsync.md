@@ -1,6 +1,6 @@
 ---
 title: "Move / MoveAsync"
-description: "The `Move` and `MoveAsync` actions change the parent and/or sibling order of a specific term within the taxonomy hierarchy. Note: The SDK uses a `TermMoveModel` (not separate parameters) for move operations. Set `ParentUid` to the target parent term and optionally `Order` for sibling position. The SDK serializes this model under the `term` key in the request body. You can pass optional query parameters (for example, `force` ) using a `ParameterCollection` as the second argument to `Move` / `MoveAsync` ."
+description: "The Move and MoveAsync actions change the parent and/or sibling order of a specific term within the taxonomy hierarchy. Note: The SDK uses a TermMoveModel (not separate parameters) for move operations. Set ParentUid to the target parent term and optionally Order for sibling position. The SDK serializes this model under the term key in the request body. You can pass optional query parameters (for example, force ) using a ParameterCollection as the second argument to Move / MoveAsync ."
 url: "https://www.contentstack.com/term-move-moveasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Move / MoveAsync

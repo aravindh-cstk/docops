@@ -1,6 +1,6 @@
 ---
 title: "getInstalledApps"
-description: "The `getInstalledApps` method retrieves all the installed apps in your Contentstack organization."
+description: "The getInstalledApps method retrieves all the installed apps in your Contentstack organization."
 url: "https://www.contentstack.com/javascript-marketplace-installation-getinstalledapps"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getInstalledApps

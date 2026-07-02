@@ -1,6 +1,6 @@
 ---
 title: "greaterThan"
-description: "The `greaterThan` method applies a constraint that requires a specified key to have a value greater than the given value to retrieve entries."
+description: "The greaterThan method applies a constraint that requires a specified key to have a value greater than the given value to retrieve entries."
 url: "https://www.contentstack.com/android-query-greaterthan"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## greaterThan

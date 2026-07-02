@@ -1,6 +1,6 @@
 ---
 title: "exceptWithReferenceUid"
-description: "The `exceptWithReferenceUid` method retrieves entries by specifying an array of except keys that should be excluded from the response for referenced entries."
+description: "The exceptWithReferenceUid method retrieves entries by specifying an array of except keys that should be excluded from the response for referenced entries."
 url: "https://www.contentstack.com/android-query-exceptwithreferenceuid"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## exceptWithReferenceUid

@@ -1,6 +1,6 @@
 ---
 title: "count"
-description: "The `count` method retrieves the total count along with the data objects that match the query criteria."
+description: "The count method retrieves the total count along with the data objects that match the query criteria."
 url: "https://www.contentstack.com/android-query-count"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## count

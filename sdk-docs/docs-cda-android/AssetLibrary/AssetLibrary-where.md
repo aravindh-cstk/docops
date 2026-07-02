@@ -1,6 +1,6 @@
 ---
 title: "where"
-description: "The `where` method retrieves assets from the stack by applying filter conditions on any field UID associated with the assets."
+description: "The where method retrieves assets from the stack by applying filter conditions on any field UID associated with the assets."
 url: "https://www.contentstack.com/android-assetlibrary-where"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## where

@@ -1,6 +1,6 @@
 ---
 title: "getMode"
-description: "The `getMode()` method determines the current renderer mode for a given composition, identified by its UID. It allows components to conditionally render UI elements based on whether the composition is in `edit` , `edit-button` , or `preview` mode."
+description: "The getMode() method determines the current renderer mode for a given composition, identified by its UID. It allows components to conditionally render UI elements based on whether the composition is in edit , edit-button , or preview mode."
 url: "https://www.contentstack.com/react-studio-sdk-utilities-getmode"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## getMode

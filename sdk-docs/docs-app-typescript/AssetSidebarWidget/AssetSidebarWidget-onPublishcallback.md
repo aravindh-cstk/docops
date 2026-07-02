@@ -1,6 +1,6 @@
 ---
 title: "onPublish(callback)"
-description: "The `onPublish` method listens for asset publish events."
+description: "The onPublish method listens for asset publish events."
 url: "https://www.contentstack.com/app-sdk---assetsidebarwidget---onpublish-callback-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## onPublish(callback)

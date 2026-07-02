@@ -1,6 +1,6 @@
 ---
 title: "EqualAndBelow"
-description: "The `EqualAndBelow` method retrieves all entries for a specific taxonomy that match a specific term and its descendant terms, requiring only the target term. Note: This query is applicable for the `stack.Taxonomies()` and `stack.ContentType('uid').Query()` methods."
+description: "The EqualAndBelow method retrieves all entries for a specific taxonomy that match a specific term and its descendant terms, requiring only the target term. Note: This query is applicable for the stack.Taxonomies() and stack.ContentType('uid').Query() methods."
 url: "https://www.contentstack.com/dotnet-delivery-taxonomy-equalandbelow"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## EqualAndBelow

@@ -1,6 +1,6 @@
 ---
 title: " setHeader"
-description: "The `setHeader` method adds a header to the request using the specified key and value."
+description: "The setHeader method adds a header to the request using the specified key and value."
 url: "https://www.contentstack.com/android-assetlibrary-setheader-"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ##  setHeader

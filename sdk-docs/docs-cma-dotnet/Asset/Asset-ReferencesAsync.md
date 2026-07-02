@@ -1,6 +1,6 @@
 ---
 title: "ReferencesAsync"
-description: "The `ReferencesAsync` method retrieves the details of the entries and the content types in which the specified asset is referenced."
+description: "The ReferencesAsync method retrieves the details of the entries and the content types in which the specified asset is referenced."
 url: "https://www.contentstack.com/dotnet-management-asset-referencesasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## ReferencesAsync

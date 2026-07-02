@@ -1,6 +1,6 @@
 ---
 title: "in"
-description: "The `in` method retrieves all entries for a specific taxonomy that satisfy the given conditions provided in the `$in` query."
+description: "The in method retrieves all entries for a specific taxonomy that satisfy the given conditions provided in the $in query."
 url: "https://www.contentstack.com/android-delivery-taxonomy-in"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## in

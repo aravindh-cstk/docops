@@ -1,6 +1,6 @@
 ---
 title: "Delete / DeleteAsync"
-description: "The `Delete` and `DeleteAsync` actions remove a specific term from the taxonomy hierarchy."
+description: "The Delete and DeleteAsync actions remove a specific term from the taxonomy hierarchy."
 url: "https://www.contentstack.com/term-delete-deleteasync"
 product: "Contentstack"
 doc_type: "method_details"
@@ -8,7 +8,7 @@ audience:
   - developers
   - admins
 version: "current"
-last_updated: "2026-06-26"
+last_updated: "2026-07-02"
 ---
 
 ## Delete / DeleteAsync
