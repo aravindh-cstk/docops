@@ -69,29 +69,44 @@ jobs:
           git commit -m "chore: sync SDK doc changes from Contentstack CMS"
           git push origin "$BRANCH"
 
-          # Build the PR body with per-file editor info from the summary JSON
+          # Build the PR body with per-file editor info from the summary JSON.
+          # Capped at 200 rows — with hundreds/thousands of changed files the full
+          # table can exceed the shell's argument-length limit (and GitHub's PR body
+          # size limit), so beyond the cap we just point reviewers at the diff instead.
           SUMMARY_FILE="tools/sdk-sync/.cms-pull-summary.json"
+          MAX_ROWS=200
 
           if [ -f "$SUMMARY_FILE" ]; then
             CHANGES_TABLE=$(node -e "
               const changes = require('./$SUMMARY_FILE');
-              const rows = changes.map(c =>
+              const maxRows = $MAX_ROWS;
+              const rows = changes.slice(0, maxRows).map(c =>
                 '| \`' + c.filePath + '\` | ' + c.url + ' | **' + c.updatedByName + '** | ' + new Date(c.updatedAt).toUTCString() + ' |'
               );
               console.log('| File | CMS Entry | Modified By | Modified At |');
               console.log('|------|-----------|-------------|-------------|');
               rows.forEach(r => console.log(r));
+              if (changes.length > maxRows) {
+                console.log('');
+                console.log('_...and ' + (changes.length - maxRows) + ' more file(s) — see the PR diff for the full list._');
+              }
             ")
           else
-            CHANGED_FILES=$(git diff origin/main..."$BRANCH" --name-only | grep '^sdk-docs/' | sed 's/^/| \`/' | sed 's/$/ \` | — | — | — |/')
+            CHANGED_FILES=$(git diff origin/main..."$BRANCH" --name-only | grep '^sdk-docs/' | head -n "$MAX_ROWS" | sed 's/^/| \`/' | sed 's/$/ \` | — | — | — |/')
+            TOTAL_CHANGED=$(git diff origin/main..."$BRANCH" --name-only | grep -c '^sdk-docs/')
             CHANGES_TABLE="| File | CMS Entry | Modified By | Modified At |
           |------|-----------|-------------|-------------|
           $CHANGED_FILES"
+            if [ "$TOTAL_CHANGED" -gt "$MAX_ROWS" ]; then
+              CHANGES_TABLE="$CHANGES_TABLE
+
+          _...and $((TOTAL_CHANGED - MAX_ROWS)) more file(s) — see the PR diff for the full list._"
+            fi
           fi
 
-          gh pr create \
-            --title "CMS → GitHub: SDK doc changes detected" \
-            --body "## CMS → GitHub sync: SDK API Reference
+          PR_BODY_FILE=$(mktemp)
+          cat > "$PR_BODY_FILE" <<PRBODY
+          ## CMS → GitHub sync: SDK API Reference
 
           This PR was automatically created because one or more SDK API Reference entries were edited directly in the Contentstack sandbox stack and differ from the current files in \`sdk-docs/\`.
 
@@ -101,6 +116,11 @@ jobs:
           ${CHANGES_TABLE}
 
           ---
-          _Triggered by the \`sdk-cms-to-github\` workflow · $(date -u '+%Y-%m-%d %H:%M UTC')_" \
+          _Triggered by the \`sdk-cms-to-github\` workflow · $(date -u '+%Y-%m-%d %H:%M UTC')_
+          PRBODY
+
+          gh pr create \
+            --title "CMS → GitHub: SDK doc changes detected" \
+            --body-file "$PR_BODY_FILE" \
             --base main \
             --head "$BRANCH"
