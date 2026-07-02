@@ -89,7 +89,7 @@ function buildMarkdownFile(entry, ctUid, existingContent) {
     url = entry.url ? `https://www.contentstack.com${entry.url}` : (existing.url || '');
     docType = 'class_intro';
   } else if (ctUid === 'sdk_usage_guides') {
-    title = existing.title || '';
+    title = entry.title || existing.title || ''; // CMS is the source of truth for title
     description = existing.description || '';
     url = '';
     docType = 'usage_guide';
@@ -113,6 +113,11 @@ function buildMarkdownFile(entry, ctUid, existingContent) {
 
   lines.push(`version: ${JSON.stringify(existing.version || 'current')}`);
   lines.push(`last_updated: ${JSON.stringify(today)}`);
+
+  if (ctUid === 'sdk_usage_guides') {
+    lines.push(`cms_uid: ${JSON.stringify(entry.uid)}`);
+  }
+
   lines.push('---');
 
   const body = (entry.md_content || '').trim();
@@ -149,10 +154,9 @@ async function main() {
       let filePath = null;
 
       if (ctUid === 'sdk_usage_guides') {
-        // Match by title: scan for doc_type=usage_guide file whose generated title matches
-        // The CMS title is "{framework} {api} Introduction" — find the file in the right sdk folder
-        const cmsTitle = entry.title || '';
-        filePath = findUsageGuideFile(cmsTitle);
+        // Match by cms_uid stamped into the file's frontmatter on a prior sync/pull.
+        // Falls back to the legacy derived-title heuristic for files not yet backfilled.
+        filePath = findUsageGuideFile(entry);
       } else {
         // Match by URL slug
         const slug = entry.url;
@@ -211,10 +215,13 @@ async function main() {
   }
 }
 
-function findUsageGuideFile(cmsTitle) {
+function findUsageGuideFile(entry) {
+  const SDK_CONFIG = require('./sdk-config');
   const sdkFolders = fs.readdirSync(SDK_DOCS_DIR, { withFileTypes: true })
     .filter(d => d.isDirectory())
     .map(d => d.name);
+
+  let fallbackMatch = null;
 
   for (const sdkFolder of sdkFolders) {
     const sdkPath = path.join(SDK_DOCS_DIR, sdkFolder);
@@ -224,23 +231,24 @@ function findUsageGuideFile(cmsTitle) {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
         const { data } = parseFrontmatter(content);
-        if (data.doc_type === 'usage_guide') {
-          // The CMS title for this SDK would be "{framework} {api} Introduction"
-          // We don't have sdk-config here, so match by checking if the cmsTitle
-          // would be generated from the usage guide's framework/api
-          // Simplest: match against the generated title in the file's own title field
-          // The file title and CMS title may differ — CMS title is "{framework} {api} Introduction"
-          // Check if this file's sdk folder generates that title
-          const SDK_CONFIG = require('./sdk-config');
+        if (data.doc_type !== 'usage_guide') continue;
+
+        // Strong match: this file was already linked to the entry on a prior sync/pull.
+        if (data.cms_uid && data.cms_uid === entry.uid) return filePath;
+
+        // Legacy fallback for files never backfilled with cms_uid yet — match by the
+        // old derived title. Once matched, buildMarkdownFile() stamps cms_uid on write,
+        // so this path is self-eliminating.
+        if (!data.cms_uid) {
           const cfg = SDK_CONFIG[sdkFolder];
-          if (cfg && `${cfg.framework} ${cfg.api} Introduction` === cmsTitle) {
-            return filePath;
+          if (cfg && `${cfg.framework} ${cfg.api} Introduction` === (entry.title || '')) {
+            fallbackMatch = filePath;
           }
         }
       } catch { /* skip */ }
     }
   }
-  return null;
+  return fallbackMatch;
 }
 
 main().catch(err => {
