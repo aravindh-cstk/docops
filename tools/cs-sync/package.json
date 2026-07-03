@@ -9,6 +9,7 @@
     "fix": "tsx src/fix.ts",
     "fix:check": "npm run fix && npm run lint",
     "cms-pull": "tsx src/cms-pull.ts",
+    "create-draft": "tsx src/create-draft.ts",
     "test:integration": "tsx src/integration-test.ts",
     "test:content": "tsx src/test-html-to-md.ts",
     "test:errors": "tsx src/test-error-handling.ts",
