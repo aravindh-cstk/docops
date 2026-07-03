@@ -18,6 +18,7 @@ concurrency:
 permissions:
   contents: write
   pull-requests: write
+  checks: write
 
 jobs:
   cms-pull:
@@ -57,10 +58,9 @@ jobs:
             echo "No doc files changed — nothing to PR."
           fi
 
-      - name: Open PR with CMS changes
+      - name: Create branch, commit, and push
+        id: commit
         if: steps.changes.outputs.has_changes == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           BRANCH="cms-sync/$(date -u +%Y%m%d-%H%M%S)"
 
@@ -70,7 +70,58 @@ jobs:
           git checkout -b "$BRANCH"
           git add cs-docs/
           git commit -m "chore: sync doc changes from Contentstack CMS"
+          # Push before reporting a check run — the Checks API requires the SHA
+          # to already exist on GitHub's servers, not just locally on the runner.
           git push origin "$BRANCH"
+
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      # PRs opened here are authored by github-actions[bot] using the workflow's
+      # GITHUB_TOKEN. GitHub Actions does not cascade GITHUB_TOKEN-triggered events
+      # into other pull_request-triggered workflow runs (to prevent infinite loops),
+      # so docs-lint.yml would never run automatically on these PRs. Run the same
+      # lint tool here instead, in a run that's never gated (schedule/
+      # workflow_dispatch), and report a "lint" check run directly against the new
+      # commit via the Checks API — same check name as docs-lint.yml.
+      - name: Lint changed docs
+        id: lint
+        if: steps.changes.outputs.has_changes == 'true'
+        working-directory: tools/cs-sync
+        run: |
+          if npm run lint -- --base origin/main > /tmp/lint-output.txt 2>&1; then
+            echo "passed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "passed=false" >> "$GITHUB_OUTPUT"
+          fi
+          cat /tmp/lint-output.txt
+
+      - name: Report lint check
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          CONCLUSION="success"
+          if [ "${{ steps.lint.outputs.passed }}" != "true" ]; then
+            CONCLUSION="failure"
+          fi
+
+          jq -n \
+            --arg sha "${{ steps.commit.outputs.sha }}" \
+            --arg conclusion "$CONCLUSION" \
+            --arg summary "$(head -c 60000 /tmp/lint-output.txt)" \
+            '{name: "lint", head_sha: $sha, status: "completed", conclusion: $conclusion,
+              output: {title: "Docs lint", summary: $summary}}' \
+            > /tmp/check-run.json
+
+          gh api "repos/${{ github.repository }}/check-runs" --input /tmp/check-run.json > /dev/null
+
+      - name: Open PR with CMS changes
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="${{ steps.commit.outputs.branch }}"
 
           # Build the PR body with per-file editor info from the summary JSON
           SUMMARY_FILE="tools/cs-sync/.cms-pull-summary.json"
