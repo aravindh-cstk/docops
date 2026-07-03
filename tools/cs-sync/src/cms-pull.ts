@@ -25,7 +25,9 @@ function parseArgs(argv: string[]): { lookbackMinutes: number } {
 }
 
 /**
- * Maps a CMS entry URL (/developers/a/b/c) to its repo file path (docs/a/b/c.md).
+ * Maps a CMS entry URL (/developers/a/b/c) to its repo file path (cs-docs/developers/a/b/c.md).
+ * The full url path (including "developers") is preserved in the file path — only the
+ * "/developers/" prefix is used as a gate for which entries this repo manages.
  * Returns null if the URL does not belong to this docs root.
  */
 function urlToFilePath(
@@ -34,7 +36,7 @@ function urlToFilePath(
   url: string,
 ): string | null {
   if (!url.startsWith(DOCS_URL_PREFIX)) return null;
-  const suffix = url.slice(DOCS_URL_PREFIX.length);
+  const suffix = url.slice(1);
   if (!suffix) return null;
   return path.join(repoRoot, docsRoot, `${suffix}.md`);
 }
