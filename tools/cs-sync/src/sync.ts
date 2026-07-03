@@ -93,7 +93,21 @@ async function processChange(
   let html = markdownToHtml(doc.body);
   html = await processImagesInHtml(html, doc.filePath, client);
 
-  const existing = await client.findEntryByUrl(doc.frontMatter.url);
+  let existing = await client.findEntryByUrl(doc.frontMatter.url);
+
+  // The doc's url may have changed in place (same file, no rename) — fall back to
+  // the url it had before this change so we update that entry instead of creating
+  // a duplicate that collides on title.
+  if (!existing && change.type === "modified") {
+    const oldContent = readFileAtCommit(config.repoRoot, beforeSha, change.relativePath);
+    const oldDoc = oldContent
+      ? parseDocContent(config.repoRoot, config.CS_DOCS_ROOT, change.relativePath, oldContent)
+      : null;
+    if (oldDoc && oldDoc.frontMatter.url !== doc.frontMatter.url) {
+      existing = await client.findEntryByUrl(oldDoc.frontMatter.url);
+    }
+  }
+
   const payload = buildEntryPayload(
     doc.frontMatter,
     html,
