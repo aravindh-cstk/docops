@@ -25,12 +25,12 @@ This feature is not applicable if
 The following table maps each use case to its section and primary API call.
 
 
-| Use Case                                | Section                                                           | Key Call                                                                       |
+| Use Case | Section | Key Call |
 | --------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Configure the SDK for a region          | [Configure the SDK for a Region](#configure-the-sdk-for-a-region) | `Endpoint.GetContentstackEndpoint(region, "contentDelivery", omitHttps: true)` |
-| Return all service endpoints            | [Return All Endpoints](#return-all-endpoints)                     | `Endpoint.GetContentstackEndpoint(region)`                                     |
-| Strip `https://` for host configuration | [Configure the SDK for a Region](#configure-the-sdk-for-a-region) | `Endpoint.GetContentstackEndpoint(..., omitHttps: true)`                       |
-| Read from environment variable          | [Read from Environment Variable](#read-from-environment-variable) | `Environment.GetEnvironmentVariable("CONTENTSTACK_REGION") ?? "na"`            |
+| Configure the SDK for a region | [Configure the SDK for a Region](#configure-the-sdk-for-a-region) | `Endpoint.GetContentstackEndpoint(region, "contentDelivery", omitHttps: true)` |
+| Return all service endpoints | [Return All Endpoints](#return-all-endpoints) | `Endpoint.GetContentstackEndpoint(region)` |
+| Strip `https://` for host configuration | [Configure the SDK for a Region](#configure-the-sdk-for-a-region) | `Endpoint.GetContentstackEndpoint(..., omitHttps: true)` |
+| Read from environment variable | [Read from Environment Variable](#read-from-environment-variable) | `Environment.GetEnvironmentVariable("CONTENTSTACK_REGION") ?? "na"` |
 
 
 ---
@@ -39,12 +39,12 @@ The following table maps each use case to its section and primary API call.
 
 **Mandatory:**
 
-- contentstack.utils ([NuGet page](https://www.nuget.org/packages/contentstack.utils)) installed, version 2.0.0-beta.2 or later (the version that introduced `Endpoint.GetContentstackEndpoint()`). Run `dotnet add package contentstack.utils` 
+- contentstack.utils ([NuGet page](https://www.nuget.org/packages/contentstack.utils)) installed, version 2.0.0-beta.2 or later (the version that introduced `Endpoint.GetContentstackEndpoint()`). Run `dotnet add package contentstack.utils`
 - .NET project with `dotnet add package` support
 
 **Optional:**
 
-- Contentstack .NET CDA SDK: [.NET CDA SDK Setup Guide](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-delivery-sdk) (required for the integration examples)
+- Contentstack .NET CDA SDK: [.NET CDA SDK Setup Guide](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-delivery-sdk) (required for the integration examples).
 - Python 3: required only for running `Scripts/refresh-region.py` to pre-populate the registry in CI/CD pipelines. The SDK downloads the registry automatically on first use and does not require Python at runtime.
 - Familiarity with Contentstack regions: [Selecting a Region in SDKs](https://www.contentstack.com/docs/developers/contentstack-regions/selecting-region-in-sdks). Your stack's region is set when the stack is created and is visible under Organization Settings → Stacks in the Contentstack dashboard.
 
@@ -92,11 +92,11 @@ catch (Exception ex)
 To target a different region, change only the `region` argument.
 
 
-| Region     | Resolved host                   |
+| Region | Resolved host |
 | ---------- | ------------------------------- |
-| `na`       | `cdn.contentstack.io`           |
-| `eu`       | `eu-cdn.contentstack.com`       |
-| `au`       | `au-cdn.contentstack.com`       |
+| `na` | `cdn.contentstack.io` |
+| `eu` | `eu-cdn.contentstack.com` |
+| `au` | `au-cdn.contentstack.com` |
 | `azure-na` | `azure-na-cdn.contentstack.com` |
 
 
@@ -126,7 +126,7 @@ foreach (var (service, url) in endpoints)
 
 ---
 
-## Read from Environment Variable
+## Read From Environment Variable
 
 ```csharp
 using Contentstack.Core;
@@ -180,10 +180,10 @@ Dictionary<string, string> Endpoint.GetContentstackEndpoint(
 **Parameters**
 
 
-| Parameter   | Description                                                                     |
+| Parameter | Description |
 | ----------- | ------------------------------------------------------------------------------- |
-| `region`    | Region identifier or alias (case-insensitive)                                   |
-| `service`   | Service key (e.g. `"contentDelivery"`)                                          |
+| `region` | Region identifier or alias (case-insensitive) |
+| `service` | Service key (e.g., `"contentDelivery"`) |
 | `omitHttps` | When `true`, strips the `https://` prefix. Required for SDK host configuration. |
 
 
@@ -204,15 +204,15 @@ Region matching:
 **Examples**
 
 
-| Input      | Resolved Region |
+| Input | Resolved Region |
 | ---------- | --------------- |
-| `na`       | `na`            |
-| `us`       | `na`            |
-| `aws-na`   | `na`            |
-| `AWS_NA`   | `na`            |
-| `eu`       | `eu`            |
-| `azure-na` | `azure-na`      |
-| `gcp-eu`   | `gcp-eu`        |
+| `na` | `na` |
+| `us` | `na` |
+| `aws-na` | `na` |
+| `AWS_NA` | `na` |
+| `eu` | `eu` |
+| `azure-na` | `azure-na` |
+| `gcp-eu` | `gcp-eu` |
 
 Only dash (`-`) and underscore (`_`) are recognized as separators. A region string using any other separator (a space, a dot, or a slash, for example `"aws na"`) does not match any known region or alias and falls into the "Invalid region" error below. Dash and underscore variants resolve identically only because both forms are listed as separate alias entries in the regions registry, not because the SDK normalizes separators at runtime.
 
@@ -379,7 +379,7 @@ No exception is thrown. The current process keeps working normally, but `regions
 
 ---
 
-### macOS SSL certificate verification
+### Certificate verification error on macOS
 
 **Symptom**
 
@@ -388,7 +388,7 @@ WARNING: SSL certificate verification failed. Retrying without verification.
          To fix permanently, run: /Applications/Python*/Install Certificates.command
 ```
 
-**Root cause:** On macOS with a Python.org build, `refresh-region.py` may encounter an SSL certificate error on first run. The script retries automatically without verification.
+**Root cause:** On macOS with a Python.org build, `refresh-region.py` may encounter a certificate verification error on first run. The script retries automatically without verification.
 
 **Resolution:** Run `/Applications/Python*/Install Certificates.command` to install the required root certificates permanently.
 
@@ -401,11 +401,11 @@ This section covers registry caching and refresh internals. Skip it unless you'r
 The .NET Utils SDK loads the registry in the following priority order, and never commits `regions.json` to source control (excluded via `.gitignore`, never packed into the NuGet package):
 
 
-| Priority | Source                                  | Behavior                                                                                          |
+| Priority | Source | Behavior |
 | -------- | --------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| 1        | In-memory cache (`_regionsData`)        | Populated on first call, reused for the lifetime of the process. Zero I/O.                        |
-| 2        | Local disk file (`Assets/regions.json`) | Read from `bin/Assets/` next to `Contentstack.Utils.dll` in the output directory                  |
-| 3        | CDN download fallback                   | Downloads from `https://artifacts.contentstack.com/regions.json`, writes to disk for future calls |
+| 1 | In-memory cache (`_regionsData`) | Populated on first call, reused for the lifetime of the process. Zero I/O. |
+| 2 | Local disk file (`Assets/regions.json`) | Read from `bin/Assets/` next to `Contentstack.Utils.dll` in the output directory |
+| 3 | CDN download fallback | Downloads from `https://artifacts.contentstack.com/regions.json`, writes to disk for future calls |
 
 From package install through the first API call, the end-to-end workflow looks like this:
 
