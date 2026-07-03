@@ -176,6 +176,16 @@ function lintDoc(
 
     const trimmedBody = body.trim();
 
+    // lintStyle reports line numbers relative to trimmedBody. Shift them back to
+    // the raw file's line numbers (as seen in a GitHub diff) by counting how many
+    // lines precede trimmedBody's first line — the frontmatter block plus any
+    // blank lines trimmed off the body's start.
+    const trimmedBodyStart = raw.indexOf(trimmedBody);
+    const lineOffset =
+      trimmedBodyStart >= 0
+        ? raw.slice(0, trimmedBodyStart).split("\n").length - 1
+        : 0;
+
     for (const match of trimmedBody.matchAll(MD_LINK_RE)) {
       const href = match[2]?.trim() ?? "";
       const target = resolveLinkTarget(repoRoot, docsRoot, repoRelativePath, href);
@@ -194,7 +204,11 @@ function lintDoc(
       }
     }
 
-    errors.push(...lintStyle(trimmedBody, repoRelativePath, docsRoot));
+    // Pad with blank lines so every line number lintStyle computes — including
+    // ones embedded inside a check's own message text — lines up with the raw
+    // file (as seen in a GitHub diff), not the frontmatter-stripped body.
+    const paddedBody = "\n".repeat(lineOffset) + trimmedBody;
+    errors.push(...lintStyle(paddedBody, repoRelativePath, docsRoot));
   } catch (err) {
     if (err instanceof z.ZodError) {
       errors.push(...formatZodErrors(repoRelativePath, err));
