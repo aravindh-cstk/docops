@@ -1,7 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import type { AppConfig } from "./config.js";
 import type { SyncEntryPayload } from "./payload.js";
+
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const userIndex: Record<string, string> = JSON.parse(
+  fs.readFileSync(path.join(scriptDir, "../cms-user-index.json"), "utf8"),
+);
 
 export interface ContentstackEntry {
   uid: string;
@@ -171,18 +177,13 @@ export class ContentstackClient {
     return all;
   }
 
-  async getUserName(userUid: string): Promise<string> {
-    try {
-      const res = await this.fetchWithRetry(`${this.config.baseUrl}/users/${userUid}`, {
-        headers: this.headers(),
-      });
-      if (!res.ok) return userUid;
-      const data = (await res.json()) as { user?: { display_name?: string; email?: string } };
-      const user = data.user ?? {};
-      return user.display_name || user.email || userUid;
-    } catch {
-      return userUid;
-    }
+  // Resolve a user UID to a display name via a locally-maintained index.
+  // The CMA has no endpoint to resolve an arbitrary user UID with a stack
+  // management token — only an org-level authtoken can, which this integration
+  // doesn't have — so unknown UIDs fall back to a clearly-labeled raw UID
+  // rather than silently displaying it as if it were a resolved name.
+  getUserName(userUid: string): string {
+    return userIndex[userUid] || `Contentstack user ${userUid}`;
   }
 
   async findAssetByFilename(filename: string): Promise<{ url: string; uid: string } | null> {
