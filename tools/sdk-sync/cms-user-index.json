@@ -1,4 +1,4 @@
 {
   "_comment": "Maps Contentstack user UIDs to display values (email or name) for the CMS→GitHub pull PR body. The CMA has no endpoint to resolve an arbitrary user UID using a stack management token (only an org-level authtoken can, which isn't something we provision for CI). To add yourself: log in to Contentstack, call GET /v3/user with your personal authtoken (Authorization header, no api_key needed) and use the returned user.uid, or ask a teammate with org access to look it up for you. Unmapped UIDs fall back to a clearly-labeled 'Contentstack user <uid>' string — don't add placeholder values here, an entry only belongs once you have the real value.",
-  "bltdca6ba951efe37c6": "aravindh.s@contentstack.com"
+  "blt346b73255381ad74": "aravindh.s@contentstack.com"
 }
