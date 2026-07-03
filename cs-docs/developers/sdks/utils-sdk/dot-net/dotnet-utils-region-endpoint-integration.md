@@ -1,8 +1,9 @@
 ---
 
-title: "Configure Region Endpoints in .NET Utils SDK"
+heading: "Configure Region Endpoints in .NET Utils SDK"
 description: "Use the .NET Utils SDK to resolve Contentstack service endpoints dynamically for any supported region."
-slug: /docs/dotnet-utils/region-endpoint-integration
+url: /docs/dotnet-utils/region-endpoint-integration
+marker: dotnet-utils
 
 ---
 
