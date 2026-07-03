@@ -14,8 +14,8 @@ Use region resolution when your application supports multiple regions, cloud-spe
 
 This feature is not applicable if
 
--   Your application connects to one Contentstack region
--   You hardcode the endpoint
+- Your application connects to one Contentstack region
+- You hardcode the endpoint
 
 ## Quick Reference
 
@@ -26,7 +26,7 @@ The following table maps each use case to its section and primary API call.
 | Configure the SDK for a region | [Configure the SDK for a Region](#configure-the-sdk-for-a-region) | Endpoint.GetContentstackEndpoint(region, "contentDelivery", omitHttps: true) |
 | Return all service endpoints | [Return All Endpoints](#return-all-endpoints) | Endpoint.GetContentstackEndpoint(region) |
 | Strip https:// for host configuration | [Configure the SDK for a Region](#configure-the-sdk-for-a-region) | Endpoint.GetContentstackEndpoint(..., omitHttps: true) |
-| Read from environment variable | [Read from Environment Variable](#read-from-environment-variable) | Environment.GetEnvironmentVariable("CONTENTSTACK\_REGION") ?? "na" |
+| Read from environment variable | [Read from Environment Variable](#read-from-environment-variable) | `Environment.GetEnvironmentVariable("CONTENTSTACK_REGION") ?? "na"` |
 
 ---
 
@@ -34,14 +34,14 @@ The following table maps each use case to its section and primary API call.
 
 **Mandatory:**
 
--   contentstack.utils ([NuGet page](https://www.nuget.org/packages/contentstack.utils)) installed, version 2.0.0-beta.2 or later (the version that introduced Endpoint.GetContentstackEndpoint()). Run dotnet add package contentstack.utils
--   .NET project with dotnet add package support
+- contentstack.utils ([NuGet page](https://www.nuget.org/packages/contentstack.utils)) installed, version 2.0.0-beta.2 or later (the version that introduced Endpoint.GetContentstackEndpoint()). Run dotnet add package contentstack.utils
+- .NET project with dotnet add package support
 
 **Optional:**
 
--   Contentstack .NET CDA SDK: [.NET CDA SDK Setup Guide](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-delivery-sdk) (required for the integration examples).
--   Python 3: required only for running Scripts/refresh-region.py to pre-populate the registry in CI/CD pipelines. The SDK downloads the registry automatically on first use and does not require Python at runtime.
--   Familiarity with Contentstack regions: [Selecting a Region in SDKs](https://www.contentstack.com/docs/developers/contentstack-regions/selecting-region-in-sdks). Your stack's region is set when the stack is created and is visible under Organization Settings → Stacks in the Contentstack dashboard.
+- Contentstack .NET CDA SDK: [.NET CDA SDK Setup Guide](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-delivery-sdk) (required for the integration examples).
+- Python 3: required only for running Scripts/refresh-region.py to pre-populate the registry in CI/CD pipelines. The SDK downloads the registry automatically on first use and does not require Python at runtime.
+- Familiarity with Contentstack regions: [Selecting a Region in SDKs](https://www.contentstack.com/docs/developers/contentstack-regions/selecting-region-in-sdks). Your stack's region is set when the stack is created and is visible under Organization Settings → Stacks in the Contentstack dashboard.
 
 ---
 
@@ -186,11 +186,11 @@ C# overloads resolve cleanly at compile time, with no ambiguity and no Union typ
 
 Region matching:
 
--   Is case-insensitive
--   Trims leading/trailing whitespace
--   Supports aliases
--   Supports both dash (-) and underscore (\_) variants where defined
--   ID match takes priority over alias match (two-pass lookup)
+- Is case-insensitive
+- Trims leading/trailing whitespace
+- Supports aliases
+- Supports both dash (-) and underscore (\_) variants where defined
+- ID match takes priority over alias match (two-pass lookup)
 
 **Examples**
 
@@ -218,9 +218,9 @@ KeyNotFoundException: Invalid region: <input>
 
 The .NET Utils SDK:
 
-1.  Locates the resolved region
-2.  Locates the service key within the region endpoints
-3.  Returns the endpoint URL
+1. Locates the resolved region
+2. Locates the service key within the region endpoints
+3. Returns the endpoint URL
 
 **Example**
 
@@ -240,24 +240,24 @@ KeyNotFoundException: Service "unknownService" not found for region "eu"
 
 ## Supported Service Keys
 
--   contentDelivery
--   contentManagement
--   graphqlDelivery
--   graphqlPreview
--   preview
--   auth
--   application
--   images
--   assets
--   automate
--   launch
--   developerHub
--   brandKit
--   genAI
--   personalizeManagement
--   personalizeEdge
--   composableStudio
--   assetManagement
+- contentDelivery
+- contentManagement
+- graphqlDelivery
+- graphqlPreview
+- preview
+- auth
+- application
+- images
+- assets
+- automate
+- launch
+- developerHub
+- brandKit
+- genAI
+- personalizeManagement
+- personalizeEdge
+- composableStudio
+- assetManagement
 
 **Note:** assetManagement is available for NA only. The [Regions Registry](https://artifacts.contentstack.com/regions.json) is the authoritative list of all region identifiers, aliases, and service endpoint URLs.
 
@@ -394,7 +394,7 @@ The .NET Utils SDK loads the registry in the following priority order, and never
 | --- | --- | --- |
 | 1 | In-memory cache (\_regionsData) | Populated on first call, reused for the lifetime of the process. Zero I/O. |
 | 2 | Local disk file (Assets/regions.json) | Read from bin/Assets/ next to Contentstack.Utils.dll in the output directory |
-| 3 | CDN download fallback | Downloads from https://artifacts.contentstack.com/regions.json, writes to disk for future calls |
+| 3 | CDN download fallback | Downloads from [artifacts.contentstack.com/regions.json](https://artifacts.contentstack.com/regions.json), writes to disk for future calls |
 
 From package install through the first API call, the end-to-end workflow looks like this:
 
@@ -421,9 +421,9 @@ python3 Scripts/refresh-region.py   (run anytime to update)
 
 The CDN download has these network characteristics:
 
--   **Timeout:** Explicit 30 seconds, via HttpClient.
--   **Proxy support:** Uses the default HttpClientHandler, which honors the system/environment proxy configuration unless your application explicitly disables it.
--   **Firewall:** Allow outbound access to artifacts.contentstack.com.
+- **Timeout:** Explicit 30 seconds, via HttpClient.
+- **Proxy support:** Uses the default HttpClientHandler, which honors the system/environment proxy configuration unless your application explicitly disables it.
+- **Firewall:** Allow outbound access to artifacts.contentstack.com.
 
 On the first run in a new deployment (no regions.json on disk), the SDK makes a synchronous CDN call before returning the endpoint URL. Run python3 Scripts/refresh-region.py in your deployment pipeline to pre-populate bin/Assets/regions.json and avoid this blocking call in production.
 
@@ -431,13 +431,13 @@ Scripts/refresh-region.py is bundled inside the NuGet package. On dotnet build, 
 
 To manually refresh the registry with the latest version from CDN, run from your project root:
 
--   For Mac/Linux
+- For Mac/Linux
 
 ```
 python3 Scripts/refresh-region.py
 ```
 
--   For Windows
+- For Windows
 
 ```
 python Scripts/refresh-region.py
