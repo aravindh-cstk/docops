@@ -2,7 +2,7 @@
 
 heading: "Configure Region Endpoints in .NET Utils SDK"
 description: "Use the .NET Utils SDK to resolve Contentstack service endpoints dynamically for any supported region."
-url: /headless-cms/dotnet-utils/region-endpoint-integration
+url: /developers/sdks/utils-sdk/dot-net/dotnet-utils-region-endpoint-integration
 marker: dotnet-utils
 
 ---

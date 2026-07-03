@@ -21,6 +21,16 @@ export const PRODUCT_NAMES = new Set([
 
 const VALID_PRODUCTS = [...PRODUCT_NAMES].join(", ");
 
+// Compound prefixes accepted in addition to a single PRODUCT_NAMES segment — for
+// content that lives under a namespaced sub-path rather than a top-level product.
+const COMPOUND_URL_PREFIXES = ["developers/sdks"];
+
+function hasValidUrlPrefix(u: string): boolean {
+  const segments = u.split("/").slice(1);
+  if (PRODUCT_NAMES.has(segments[0] ?? "")) return true;
+  return COMPOUND_URL_PREFIXES.some((prefix) => u.startsWith(`/${prefix}/`));
+}
+
 export const frontMatterSchema = z.object({
   url: z
     .string({ required_error: "Missing required frontmatter field 'url' — add: url: /personalize/your-article-slug" })
@@ -31,8 +41,8 @@ export const frontMatterSchema = z.object({
     .refine((u) => u.startsWith("/"), {
       message: "Invalid 'url' — must start with / (e.g. /personalize/about-personalize)",
     })
-    .refine((u) => PRODUCT_NAMES.has(u.split("/")[1] ?? ""), {
-      message: `Invalid 'url' — first segment must be a known product name (e.g. /personalize/about-personalize). Valid products: ${VALID_PRODUCTS}`,
+    .refine((u) => hasValidUrlPrefix(u), {
+      message: `Invalid 'url' — first segment must be a known product name (e.g. /personalize/about-personalize) or one of: ${COMPOUND_URL_PREFIXES.join(", ")}. Valid products: ${VALID_PRODUCTS}`,
     })
     .refine((u) => !u.endsWith("/"), {
       message: "Invalid 'url' — must not end with a trailing slash (remove the trailing /)",
