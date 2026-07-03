@@ -20,7 +20,7 @@ The Contentstack iOS CDA SDK (Objective-C) is planned for deprecation. We recomm
 
 ## Objective C SDK for Contentstack's Content Delivery API
 
-Contentstack is a headless CMS with an API-first approach. It is a CMS that developers can use to build powerful cross-platform applications in their favorite languages. Build your application frontend, and Contentstack will take care of the rest.[Read More](https://www.contentstack.com/).
+Contentstack is a headless CMS with an API-first approach. The evelopers can use it to build powerful cross-platform applications in their favorite languages. Build your application frontend, and Contentstack takes care of the rest.[Read More](https://www.contentstack.com/).
 
 ## Prerequisites
 
