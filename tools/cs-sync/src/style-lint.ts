@@ -777,7 +777,7 @@ export function lintStyle(body: string, filePath: string, docsRoot?: string): st
     { id: "eg-comma", check: () => checkEgComma(stripped, filePath) },
     { id: "navigation-panel", check: () => checkNavigationPanel(stripped, filePath) },
     { id: "spelling", check: () => checkSpelling(stripped, filePath) },
-    { id: "naked-urls", check: () => checkNakedUrls(body, filePath) },
+    { id: "naked-urls", check: () => checkNakedUrls(stripped, filePath) },
     { id: "generic-link-text", check: () => checkGenericLinkText(body, filePath) },
     { id: "oxford-comma", check: () => checkOxfordComma(stripped, filePath) },
     { id: "all-caps", check: () => checkAllCaps(stripped, filePath, allowedAcronyms) },
