@@ -38,39 +38,45 @@ export class ContentstackClient {
     return h;
   }
 
-  private entriesBase(): string {
-    return `${this.config.baseUrl}/content_types/${this.config.CS_CONTENT_TYPE}/entries`;
+  private entriesBase(contentTypeOverride?: string): string {
+    const ct = contentTypeOverride ?? this.config.CS_CONTENT_TYPE;
+    return `${this.config.baseUrl}/content_types/${ct}/entries`;
   }
 
-  async findEntryByUrl(url: string): Promise<ContentstackEntry | null> {
-    const query = JSON.stringify({ url });
+  async findEntryByQuery(query: Record<string, unknown>, contentType?: string): Promise<ContentstackEntry | null> {
+    const queryStr = JSON.stringify(query);
     const params = new URLSearchParams({
-      query,
+      query: queryStr,
       locale: this.config.CS_LOCALE,
       include_count: "true",
     });
 
-    const res = await this.fetchWithRetry(`${this.entriesBase()}?${params}`, {
+    const res = await this.fetchWithRetry(`${this.entriesBase(contentType)}?${params}`, {
       headers: this.headers(),
     });
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`findEntryByUrl failed (${res.status}): ${text}`);
+      throw new Error(`findEntryByQuery failed (${res.status}): ${text}`);
     }
 
     const data = (await res.json()) as { entries?: ContentstackEntry[] };
-    const entries = data.entries ?? [];
-    return entries.length > 0 ? entries[0]! : null;
+    return (data.entries ?? [])[0] ?? null;
   }
 
-  private entriesUrl(entryUid?: string): string {
-    const base = entryUid ? `${this.entriesBase()}/${entryUid}` : this.entriesBase();
+  async findEntryByUrl(url: string, contentType?: string): Promise<ContentstackEntry | null> {
+    return this.findEntryByQuery({ url }, contentType);
+  }
+
+  private entriesUrl(entryUid?: string, contentType?: string): string {
+    const base = entryUid
+      ? `${this.entriesBase(contentType)}/${entryUid}`
+      : this.entriesBase(contentType);
     return `${base}?locale=${encodeURIComponent(this.config.CS_LOCALE)}`;
   }
 
-  async createEntry(payload: SyncEntryPayload): Promise<ContentstackEntry> {
-    const res = await this.fetchWithRetry(this.entriesUrl(), {
+  async createEntry(payload: SyncEntryPayload, contentType?: string): Promise<ContentstackEntry> {
+    const res = await this.fetchWithRetry(this.entriesUrl(undefined, contentType), {
       method: "POST",
       headers: this.headers(),
       body: JSON.stringify({ entry: payload }),
@@ -88,8 +94,9 @@ export class ContentstackClient {
   async updateEntry(
     uid: string,
     payload: SyncEntryPayload,
+    contentType?: string,
   ): Promise<ContentstackEntry> {
-    const res = await this.fetchWithRetry(this.entriesUrl(uid), {
+    const res = await this.fetchWithRetry(this.entriesUrl(uid, contentType), {
       method: "PUT",
       headers: this.headers(),
       body: JSON.stringify({ entry: payload }),
@@ -104,9 +111,9 @@ export class ContentstackClient {
     return data.entry;
   }
 
-  async unpublishEntry(uid: string): Promise<void> {
+  async unpublishEntry(uid: string, contentType?: string): Promise<void> {
     const res = await this.fetchWithRetry(
-      `${this.entriesBase()}/${uid}/unpublish?locale=${encodeURIComponent(this.config.CS_LOCALE)}`,
+      `${this.entriesBase(contentType)}/${uid}/unpublish?locale=${encodeURIComponent(this.config.CS_LOCALE)}`,
       {
       method: "POST",
       headers: this.headers(),
@@ -125,7 +132,7 @@ export class ContentstackClient {
     }
   }
 
-  async listRecentEntries(sinceIso: string): Promise<ContentstackEntry[]> {
+  async listRecentEntries(sinceIso: string, contentType?: string): Promise<ContentstackEntry[]> {
     const query = JSON.stringify({ updated_at: { $gt: sinceIso } });
     const PAGE_SIZE = 100;
     const all: ContentstackEntry[] = [];
@@ -139,7 +146,7 @@ export class ContentstackClient {
         limit: String(PAGE_SIZE),
         skip: String(skip),
       });
-      const pageUrl = `${this.entriesBase()}?${params}`;
+      const pageUrl = `${this.entriesBase(contentType)}?${params}`;
 
       const res = await this.fetchWithRetry(pageUrl, { headers: this.headers() });
 
@@ -147,7 +154,7 @@ export class ContentstackClient {
         const text = await res.text();
         throw new Error(
           `listRecentEntries failed — GET ${pageUrl} returned HTTP ${res.status} ${res.statusText}.\n` +
-          `  Stack: ${this.config.CS_API_KEY} | Content-type: ${this.config.CS_CONTENT_TYPE} | Locale: ${this.config.CS_LOCALE}\n` +
+          `  Stack: ${this.config.CS_API_KEY} | Content-type: ${contentType ?? this.config.CS_CONTENT_TYPE} | Locale: ${this.config.CS_LOCALE}\n` +
           `  since: ${sinceIso}\n` +
           `  Response body: ${text}`,
         );

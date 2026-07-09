@@ -1,15 +1,30 @@
 import * as core from "@actions/core";
 import { buildEntryPayload } from "./payload.js";
-import { parseDocContent, parseDocFile } from "./parser.js";
+import { parseDocContent, parseDocFile, type ParsedDoc } from "./parser.js";
 import { markdownToHtml } from "./transform.js";
 import { processImagesInHtml } from "./assets.js";
 import type { ContentstackClient } from "./contentstack.js";
 import type { AppConfig } from "./config.js";
+import type { SyncEntryPayload } from "./payload.js";
 import {
   getDocChanges,
   readFileAtCommit,
   type DocChange,
 } from "./diff.js";
+
+export interface SyncOptions {
+  /** Override which CMS content type to use per file. Defaults to config.CS_CONTENT_TYPE. */
+  resolveContentType?: (doc: ParsedDoc) => string;
+  /** Override how the entry payload is built per file. Defaults to buildEntryPayload. */
+  buildPayload?: (doc: ParsedDoc, html: string) => SyncEntryPayload;
+  /**
+   * Custom entry lookup for content types that are not keyed by url.
+   * Return a query object → findEntryByQuery with that query.
+   * Return null → always create (skip lookup entirely).
+   * Return undefined (or omit option) → fall back to url-based lookup.
+   */
+  resolveEntryLookup?: (doc: ParsedDoc) => Record<string, unknown> | null | undefined;
+}
 
 export interface SyncResult {
   path: string;
@@ -24,6 +39,7 @@ export async function runSync(
   client: ContentstackClient,
   beforeSha: string,
   afterSha: string,
+  options?: SyncOptions,
 ): Promise<SyncResult[]> {
   const changes = getDocChanges(
     config.repoRoot,
@@ -38,7 +54,7 @@ export async function runSync(
   for (let i = 0; i < changes.length; i += CONCURRENCY) {
     const batch = changes.slice(i, i + CONCURRENCY);
     const settled = await Promise.allSettled(
-      batch.map((change) => processChange(config, client, change, beforeSha)),
+      batch.map((change) => processChange(config, client, change, beforeSha, options)),
     );
     for (let j = 0; j < settled.length; j++) {
       const s = settled[j];
@@ -64,17 +80,32 @@ export async function runSync(
   return results;
 }
 
+async function resolveExistingEntry(
+  client: ContentstackClient,
+  doc: ParsedDoc,
+  contentType: string,
+  options?: SyncOptions,
+): Promise<import("./contentstack.js").ContentstackEntry | null> {
+  if (options?.resolveEntryLookup !== undefined) {
+    const query = options.resolveEntryLookup(doc);
+    if (query === null) return null;
+    if (query !== undefined) return client.findEntryByQuery(query, contentType);
+  }
+  return client.findEntryByUrl(doc.frontMatter.url!, contentType);
+}
+
 async function processChange(
   config: AppConfig,
   client: ContentstackClient,
   change: DocChange,
   beforeSha: string,
+  options?: SyncOptions,
 ): Promise<SyncResult> {
   if (change.type === "deleted") {
-    return unpublishDeleted(config, client, change, beforeSha);
+    return unpublishDeleted(config, client, change, beforeSha, options);
   }
   if (change.type === "renamed") {
-    return handleRename(config, client, change, beforeSha);
+    return handleRename(config, client, change, beforeSha, options);
   }
 
   const doc =
@@ -90,18 +121,18 @@ async function processChange(
     return { path: change.relativePath, action: "skipped", error: "Could not parse doc" };
   }
 
+  const contentType = options?.resolveContentType?.(doc) ?? config.CS_CONTENT_TYPE;
+
   let html = markdownToHtml(doc.body);
   html = await processImagesInHtml(html, doc.filePath, client);
 
-  const existing = await client.findEntryByUrl(doc.frontMatter.url);
-  const payload = buildEntryPayload(
-    doc.frontMatter,
-    html,
-    existing?.article_content,
-  );
+  const existing = await resolveExistingEntry(client, doc, contentType, options);
+  const payload = options?.buildPayload
+    ? options.buildPayload(doc, html)
+    : buildEntryPayload(doc.frontMatter, html, existing?.article_content);
 
   if (existing) {
-    const updated = await client.updateEntry(existing.uid, payload);
+    const updated = await client.updateEntry(existing.uid, payload, contentType);
     return {
       path: change.relativePath,
       action: "updated",
@@ -110,7 +141,7 @@ async function processChange(
     };
   }
 
-  const created = await client.createEntry(payload);
+  const created = await client.createEntry(payload, contentType);
   return {
     path: change.relativePath,
     action: "created",
@@ -124,6 +155,7 @@ async function unpublishDeleted(
   client: ContentstackClient,
   change: DocChange,
   beforeSha: string,
+  options?: SyncOptions,
 ): Promise<SyncResult> {
   const content = readFileAtCommit(
     config.repoRoot,
@@ -146,17 +178,18 @@ async function unpublishDeleted(
     content,
   );
 
-  const existing = await client.findEntryByUrl(doc.frontMatter.url);
+  const contentType = options?.resolveContentType?.(doc) ?? config.CS_CONTENT_TYPE;
+  const existing = await resolveExistingEntry(client, doc, contentType, options);
   if (!existing) {
     return {
       path: change.relativePath,
       action: "skipped",
       url: doc.frontMatter.url,
-      error: "No entry found for deleted doc URL",
+      error: "No entry found for deleted doc",
     };
   }
 
-  await client.unpublishEntry(existing.uid);
+  await client.unpublishEntry(existing.uid, contentType);
   return {
     path: change.relativePath,
     action: "unpublished",
@@ -170,6 +203,7 @@ async function handleRename(
   client: ContentstackClient,
   change: DocChange,
   beforeSha: string,
+  options?: SyncOptions,
 ): Promise<SyncResult> {
   const oldContent = change.oldRelativePath
     ? readFileAtCommit(config.repoRoot, beforeSha, change.oldRelativePath)
@@ -179,21 +213,24 @@ async function handleRename(
     ? parseDocContent(config.repoRoot, config.CS_DOCS_ROOT, change.oldRelativePath, oldContent)
     : null;
 
-  const existing = oldDoc
-    ? await client.findEntryByUrl(oldDoc.frontMatter.url)
-    : null;
-
   const newDoc = parseDocFile(config.repoRoot, config.CS_DOCS_ROOT, change.relativePath);
   if (!newDoc) {
     return { path: change.relativePath, action: "skipped", error: "Could not parse renamed doc" };
   }
 
+  const contentType = options?.resolveContentType?.(newDoc) ?? config.CS_CONTENT_TYPE;
+  const existing = oldDoc
+    ? await resolveExistingEntry(client, oldDoc, contentType, options)
+    : null;
+
   let html = markdownToHtml(newDoc.body);
   html = await processImagesInHtml(html, newDoc.filePath, client);
-  const payload = buildEntryPayload(newDoc.frontMatter, html, existing?.article_content);
+  const payload = options?.buildPayload
+    ? options.buildPayload(newDoc, html)
+    : buildEntryPayload(newDoc.frontMatter, html, existing?.article_content);
 
   if (existing) {
-    const updated = await client.updateEntry(existing.uid, payload);
+    const updated = await client.updateEntry(existing.uid, payload, contentType);
     return {
       path: change.relativePath,
       action: "renamed",
@@ -203,7 +240,7 @@ async function handleRename(
   }
 
   // Old entry not found — fall back to create
-  const created = await client.createEntry(payload);
+  const created = await client.createEntry(payload, contentType);
   return {
     path: change.relativePath,
     action: "created",

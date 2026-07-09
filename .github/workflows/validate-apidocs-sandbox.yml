@@ -52,8 +52,7 @@ jobs:
           EXPORT_DIR: ./exports
           LOG_LEVEL: info
         run: |
-          npm run validate
-          echo "VALIDATE_EXIT=$?" >> "$GITHUB_ENV"
+          npm run validate; echo "VALIDATE_EXIT=$?" >> "$GITHUB_ENV"
 
       - name: Write job summary
         if: always()

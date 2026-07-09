@@ -1,4 +1,4 @@
-import { buildTitle, type DocFrontMatter } from "./parser.js";
+import { extractHeading, type DocFrontMatter } from "./parser.js";
 
 export interface ArticleSectionBlock {
   article_section: {
@@ -10,8 +10,10 @@ export interface ArticleSectionBlock {
 
 export interface SyncEntryPayload {
   title: string;
-  url: string;
-  article_content: ArticleSectionBlock[];
+  url?: string; // optional for CMS types that have no url field (e.g. openapi, main_section_api_references)
+  description?: string;
+  article_content?: ArticleSectionBlock[];
+  [key: string]: unknown;
 }
 
 export function buildEntryPayload(
@@ -20,7 +22,7 @@ export function buildEntryPayload(
   existingArticleContent?: unknown,
 ): SyncEntryPayload {
   const section: ArticleSectionBlock["article_section"] = {
-    heading: frontMatter.heading,
+    heading: extractHeading(frontMatter.title),
     content: htmlContent,
   };
 
@@ -29,11 +31,17 @@ export function buildEntryPayload(
     section._metadata = { uid: preservedUid };
   }
 
-  return {
-    title: buildTitle(frontMatter.marker, frontMatter.heading),
+  const payload: SyncEntryPayload = {
+    title: frontMatter.title,
     url: frontMatter.url,
     article_content: [{ article_section: section }],
   };
+
+  if (frontMatter.description) {
+    payload.description = frontMatter.description;
+  }
+
+  return payload;
 }
 
 function extractBlockMetadataUid(articleContent: unknown): string | undefined {

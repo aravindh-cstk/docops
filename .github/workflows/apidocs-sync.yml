@@ -1,19 +1,19 @@
-name: Sync cs-docs to Contentstack
+name: Sync api-docs to APIDocs Sandbox
 
 on:
   push:
     branches: [main]
     paths:
-      - "cs-docs/**/*.md"
+      - "api-docs/**/*.md"
       - "tools/cs-sync/**"
 
 concurrency:
-  group: contentstack-sync-cs-docs
+  group: contentstack-sync-api-docs
   cancel-in-progress: false
 
 jobs:
   sync:
-    name: cs-docs → Contentstack (all changes as drafts)
+    name: api-docs → APIDocs Sandbox (all changes as drafts)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,17 +30,15 @@ jobs:
         working-directory: tools/cs-sync
         run: npm ci
 
-      - name: Sync changes to Contentstack
+      - name: Sync changes to APIDocs Sandbox
         working-directory: tools/cs-sync
         env:
-          CS_API_KEY: ${{ secrets.CONTENTSTACK_API_KEY }}
-          CS_MANAGEMENT_TOKEN: ${{ secrets.CONTENTSTACK_MANAGEMENT_TOKEN }}
+          CS_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          CS_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
           CS_REGION: us
-          CS_CONTENT_TYPE: ${{ vars.CONTENTSTACK_CONTENT_TYPE || 'docs_article' }}
-          CS_ENVIRONMENT: ${{ vars.CONTENTSTACK_ENVIRONMENT || 'production' }}
           CS_LOCALE: en-us
-          CS_DOCS_ROOT: cs-docs
-        run: npm run sync -- --before "${{ github.event.before }}" --after "${{ github.sha }}"
+          CS_DOCS_ROOT: api-docs
+        run: npm run sync:api-docs -- --before "${{ github.event.before }}" --after "${{ github.sha }}"
 
       - name: Notify on failure
         if: failure()
@@ -55,6 +53,6 @@ jobs:
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
-                text: `*cs-docs → CMS sync failed* :x:\nPush by: ${{ github.actor }}\nRun: <${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}|#${context.runId}>`
+                text: `*api-docs → APIDocs Sandbox sync failed* :x:\nPush by: ${{ github.actor }}\nRun: <${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}|#${context.runId}>`
               }),
             });

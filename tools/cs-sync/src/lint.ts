@@ -34,6 +34,11 @@ const ROOT_CONFIG: Record<string, RootConfig> = {
     checkDuplicateUrls: true,
     urlPrefix: "/developers/",
   },
+  "api-docs": {
+    frontmatter: frontMatterSchema,
+    checkDuplicateUrls: true,
+    urlPrefix: null,
+  },
   "sdk-docs": {
     frontmatter: sdkFrontMatterSchema,
     checkDuplicateUrls: false,

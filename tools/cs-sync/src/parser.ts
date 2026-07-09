@@ -3,49 +3,31 @@ import path from "node:path";
 import matter from "gray-matter";
 import { z } from "zod";
 
-export const PRODUCT_NAMES = new Set([
-  "content-managers",
-  "headless-cms",
-  "personalize",
-  "data-and-insights",
-  "studio",
-  "agent-os",
-  "assets",
-  "brand-kit",
-  "launch",
-  "developer-hub",
-  "administration",
-  "analytics",
-  "marketplace",
-]);
-
-const VALID_PRODUCTS = [...PRODUCT_NAMES].join(", ");
-
 export const frontMatterSchema = z.object({
+  title: z
+    .string({ required_error: "Missing required frontmatter field 'title'" })
+    .min(1, { message: "Missing required frontmatter field 'title'" }),
   url: z
-    .string({ required_error: "Missing required frontmatter field 'url' — add: url: /personalize/your-article-slug" })
-    .min(1, { message: "Missing required frontmatter field 'url' — add: url: /personalize/your-article-slug" })
-    .refine((u) => !u.startsWith("http://") && !u.startsWith("https://"), {
-      message: "Invalid 'url' — must be a relative path, not a full URL (e.g. /personalize/about-personalize)",
-    })
-    .refine((u) => u.startsWith("/"), {
-      message: "Invalid 'url' — must start with / (e.g. /personalize/about-personalize)",
-    })
-    .refine((u) => PRODUCT_NAMES.has(u.split("/")[1] ?? ""), {
-      message: `Invalid 'url' — first segment must be a known product name (e.g. /personalize/about-personalize). Valid products: ${VALID_PRODUCTS}`,
-    })
-    .refine((u) => !u.endsWith("/"), {
-      message: "Invalid 'url' — must not end with a trailing slash (remove the trailing /)",
-    }),
-  marker: z
-    .string({ required_error: "Missing required frontmatter field 'marker' — add: marker: Your Product Name" })
-    .min(1, { message: "Missing required frontmatter field 'marker' — add: marker: Your Product Name" }),
-  heading: z
-    .string({ required_error: "Missing required frontmatter field 'heading' — add: heading: Your Article Title" })
-    .min(1, { message: "Missing required frontmatter field 'heading' — add: heading: Your Article Title" }),
+    .string({ required_error: "Missing required frontmatter field 'url'" })
+    .min(1, { message: "Missing required frontmatter field 'url'" }),
+  description: z.string().optional(),
+  product: z.string().optional(),
+  doc_type: z.string().optional(),
+  audience: z.union([z.string(), z.array(z.string())]).optional(),
+  version: z.string().optional(),
+  last_updated: z.string().optional(),
+  exec_test: z.boolean().optional(),
+  exec_test_type: z.enum(["procedural", "troubleshooting"]).optional(),
+  hash_key: z.string().optional(),
 });
 
 export type DocFrontMatter = z.infer<typeof frontMatterSchema>;
+
+/** Extracts the article heading from a title like "[Product] - Heading". Falls back to the full title. */
+export function extractHeading(title: string): string {
+  const match = title.match(/^\[.+?\]\s*-\s*(.+)$/);
+  return match ? match[1]!.trim() : title;
+}
 
 export const sdkFrontMatterSchema = z.object({
   title: z
@@ -124,6 +106,3 @@ export function parseDocContent(
   };
 }
 
-export function buildTitle(marker: string, heading: string): string {
-  return `[${marker}] - ${heading}`;
-}

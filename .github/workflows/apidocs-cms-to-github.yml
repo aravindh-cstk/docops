@@ -1,0 +1,109 @@
+name: Sync APIDocs CMS changes to GitHub
+
+on:
+  schedule:
+    # Runs every 15 minutes. Looks back 20 minutes to cover any timing gap.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      lookback_minutes:
+        description: "How many minutes back to check for CMS changes"
+        default: "20"
+        required: false
+
+concurrency:
+  group: apidocs-cms-to-github
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  cms-pull:
+    name: APIDocs Sandbox → api-docs/
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/cs-sync/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
+      - name: Pull changes from APIDocs Sandbox CMS
+        working-directory: tools/cs-sync
+        env:
+          CS_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          CS_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          CS_REGION: us
+          CS_LOCALE: en-us
+          CS_DOCS_ROOT: api-docs
+        run: npm run cms-pull:api-docs -- --lookback ${{ inputs.lookback_minutes || '20' }}
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git status --porcelain api-docs/ | grep -q .; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            echo "Changed files:"
+            git status --porcelain api-docs/
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "No api-docs files changed — nothing to PR."
+          fi
+
+      - name: Open PR with CMS changes
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="apidocs-cms-sync/$(date -u +%Y%m%d-%H%M%S)"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "$BRANCH"
+          git add api-docs/
+          git commit -m "chore: sync api-docs changes from APIDocs Sandbox CMS"
+          git push origin "$BRANCH"
+
+          SUMMARY_FILE="tools/cs-sync/.cms-pull-apidocs-summary.json"
+
+          if [ -f "$SUMMARY_FILE" ]; then
+            CHANGES_TABLE=$(node -e "
+              const changes = require('./$SUMMARY_FILE');
+              const rows = changes.map(c =>
+                '| \`' + c.filePath + '\` | \`' + c.contentType + '\` | **' + c.updatedByName + '** | ' + new Date(c.updatedAt).toUTCString() + ' |'
+              );
+              console.log('| File | Content Type | Modified By | Modified At |');
+              console.log('|------|-------------|-------------|-------------|');
+              rows.forEach(r => console.log(r));
+            ")
+          else
+            CHANGED_FILES=$(git diff origin/main..."$BRANCH" --name-only | grep '^api-docs/' | head -20)
+            CHANGES_TABLE="| File | Content Type | Modified By | Modified At |
+          |------|-------------|-------------|-------------|
+          $(echo "$CHANGED_FILES" | sed 's/^/| \`/' | sed 's/$/ \` | — | — | — |/')"
+          fi
+
+          gh pr create \
+            --title "CMS → GitHub: APIDocs changes detected" \
+            --body "## APIDocs Sandbox → GitHub sync
+
+          This PR was automatically created because one or more entries were edited directly in the APIDocs Sandbox CMS and differ from the current files in \`api-docs/\`.
+
+          **Review the diff carefully before merging** — in particular check that no content was unintentionally overwritten.
+
+          ### Changes detected
+          ${CHANGES_TABLE}
+
+          ---
+          _Triggered by the \`apidocs-cms-to-github\` workflow · $(date -u '+%Y-%m-%d %H:%M UTC')_" \
+            --base main \
+            --head "$BRANCH"

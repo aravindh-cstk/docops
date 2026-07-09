@@ -99,12 +99,12 @@ class TempRepo {
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
-function doc(opts: { url: string; marker?: string; heading?: string; body?: string }): string {
+function doc(opts: { url: string; title?: string; description?: string; body?: string }): string {
   return [
     "---",
+    `title: "${opts.title ?? "[Test] - Test Article"}"`,
     `url: ${opts.url}`,
-    `marker: ${opts.marker ?? "Test SDK"}`,
-    `heading: ${opts.heading ?? "Test Article"}`,
+    ...(opts.description ? [`description: "${opts.description}"`] : []),
     "---",
     "",
     opts.body ?? "Integration test content.",
@@ -193,14 +193,14 @@ async function s02() {
   const uids: string[] = [];
   try {
     const base = repo.head();
-    repo.addFile("docs/article.md", doc({ url, heading: "Original" }));
+    repo.addFile("docs/article.md", doc({ url, title: "[Test] - Original" }));
     const sha1 = repo.commit();
     const r1 = await runSync(config, client, base, sha1);
     const created = r1.find((x) => x.action === "created");
     ok(!!created?.uid, "initial create failed");
     uids.push(created!.uid!);
 
-    repo.addFile("docs/article.md", doc({ url, heading: "Updated" }));
+    repo.addFile("docs/article.md", doc({ url, title: "[Test] - Updated" }));
     const sha2 = repo.commit();
     const r2 = await runSync(config, client, sha1, sha2);
     ok(!!r2.find((x) => x.action === "updated"), "expected 'updated' result");
@@ -316,7 +316,7 @@ async function s06() {
   const client = new ContentstackClient(config);
   try {
     const base = repo.head();
-    repo.addFile("docs/bad.md", "---\nmarker: Test\nheading: Test\n---\n\nNo url field.");
+    repo.addFile("docs/bad.md", "---\ntitle: \"[Test] - No URL\"\n---\n\nNo url field.");
     const after = repo.commit();
     let threw = false;
     let msg = "";
@@ -330,7 +330,7 @@ async function s06() {
   }
 }
 
-// ── Scenario 7: Missing marker field ────────────────────────────────────────
+// ── Scenario 7: Missing title field ─────────────────────────────────────────
 
 async function s07() {
   const repo = new TempRepo();
@@ -338,13 +338,13 @@ async function s07() {
   const client = new ContentstackClient(config);
   try {
     const base = repo.head();
-    repo.addFile("docs/bad.md", `---\nurl: ${nextUrl("no-marker")}\nheading: Test\n---\n\nNo marker.`);
+    repo.addFile("docs/bad.md", `---\nurl: ${nextUrl("no-title")}\n---\n\nNo title.`);
     const after = repo.commit();
     let threw = false;
     try { await runSync(config, client, base, after); }
     catch { threw = true; }
-    ok(threw, "runSync should throw on missing marker");
-    return "threw as expected (ZodError — missing marker)";
+    ok(threw, "runSync should throw on missing title");
+    return "threw as expected (ZodError — missing title)";
   } finally {
     repo.cleanup();
   }
@@ -360,19 +360,19 @@ async function s08() {
   const uids: string[] = [];
   try {
     const preCreated = await client.createEntry(
-      buildEntryPayload({ url, marker: "Pre", heading: "Pre-existing" }, "<p>Pre-existing</p>"),
+      buildEntryPayload({ url, title: "[Pre] - Pre-existing" }, "<p>Pre-existing</p>"),
     );
     uids.push(preCreated.uid);
 
     const base = repo.head();
-    repo.addFile("docs/article.md", doc({ url, heading: "Synced Heading" }));
+    repo.addFile("docs/article.md", doc({ url, title: "[Test] - Synced Heading" }));
     const after = repo.commit();
     const res = await runSync(config, client, base, after);
     const updated = res.find((x) => x.action === "updated");
     ok(!!updated, "expected 'updated' result");
     ok(updated!.uid === preCreated.uid, `expected same uid ${preCreated.uid}, got ${updated!.uid}`);
     const entry = await client.findEntryByUrl(url);
-    ok(entry?.title?.includes("Synced") === true, `heading not updated: ${entry?.title}`);
+    ok(entry?.title?.includes("Synced") === true, `title not updated: ${entry?.title}`);
     return `pre-uid=${preCreated.uid} correctly updated`;
   } finally {
     for (const u of uids) await deleteEntry(config, u);
@@ -393,8 +393,8 @@ async function s09() {
   const uids: string[] = [];
   try {
     const base = repo.head();
-    repo.addFile("docs/file-a.md", doc({ url: sharedUrl, heading: "File A" }));
-    repo.addFile("docs/file-b.md", doc({ url: sharedUrl, heading: "File B" }));
+    repo.addFile("docs/file-a.md", doc({ url: sharedUrl, title: "[Test] - File A" }));
+    repo.addFile("docs/file-b.md", doc({ url: sharedUrl, title: "[Test] - File B" }));
     const after = repo.commit();
 
     let threw = false;
@@ -618,8 +618,8 @@ async function s16() {
   const urls = [nextUrl("zero-sha-1"), nextUrl("zero-sha-2")];
   const uids: string[] = [];
   try {
-    repo.addFile("docs/doc1.md", doc({ url: urls[0]!, heading: "Doc 1" }));
-    repo.addFile("docs/doc2.md", doc({ url: urls[1]!, heading: "Doc 2" }));
+    repo.addFile("docs/doc1.md", doc({ url: urls[0]!, title: "[Test] - Doc 1" }));
+    repo.addFile("docs/doc2.md", doc({ url: urls[1]!, title: "[Test] - Doc 2" }));
     const afterSha = repo.commit();
     const ZERO = "0000000000000000000000000000000000000000";
     const res = await runSync(config, client, ZERO, afterSha);
@@ -644,8 +644,8 @@ async function s17() {
   try {
     const base = repo.head();
     for (let i = 0; i < 7; i++)
-      repo.addFile(`docs/doc${i}.md`, doc({ url: urls[i]!, heading: `Doc ${i}` }));
-    repo.addFile("docs/bad.md", "---\nmarker: Test\nheading: Bad\n---\n\nNo url.");
+      repo.addFile(`docs/doc${i}.md`, doc({ url: urls[i]!, title: `[Test] - Doc ${i}` }));
+    repo.addFile("docs/bad.md", "---\ntitle: \"[Test] - Bad\"\n---\n\nNo url.");
     const after = repo.commit();
     let threw = false;
     try { await runSync(config, client, base, after); } catch { threw = true; }
@@ -1109,7 +1109,7 @@ async function main() {
   await test(4,  "Rename/move within docs/",                 s04);
   await test(5,  "Move file out of docs/ → unpublish",       s05);
   await test(6,  "Missing url field → graceful error",       s06);
-  await test(7,  "Missing marker field → graceful error",    s07);
+  await test(7,  "Missing title field → graceful error",     s07);
   await test(8,  "URL matches different entry UID",           s08);
   await test(9,  "Two files share same URL (race)",          s09);
   await test(10, "URL changes on modified file → orphaned",  s10);

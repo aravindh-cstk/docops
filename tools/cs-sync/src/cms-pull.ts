@@ -40,22 +40,6 @@ function urlToFilePath(
 }
 
 /**
- * Parses the CMS title format "[marker] - heading" back into its parts.
- * Falls back to using the raw title for both fields if the format is unexpected.
- */
-function parseTitle(title: string): { marker: string; heading: string } {
-  const match = title.match(/^\[(.+?)\]\s*-\s*(.+)$/);
-  if (!match) {
-    console.warn(
-      `cms-pull: unexpected title format "${title}" — expected "[marker] - heading". ` +
-      `Using full title as both marker and heading.`,
-    );
-    return { marker: title, heading: title };
-  }
-  return { marker: match[1]!, heading: match[2]! };
-}
-
-/**
  * Extracts the HTML content from the first article_section block of an entry.
  */
 function extractHtml(entry: ContentstackEntry): string {
@@ -85,21 +69,19 @@ function extractHtml(entry: ContentstackEntry): string {
 function buildMarkdownFile(entry: ContentstackEntry): string {
   const title = (entry.title as string | undefined) ?? "";
   const url = (entry.url as string | undefined) ?? "";
-  const { marker, heading } = parseTitle(title);
+  const description = (entry.description as string | undefined) ?? "";
 
   const html = extractHtml(entry);
   const body = html ? htmlToMarkdown(html) : "";
 
   // Wrap values in quotes to handle special characters (colons, brackets, etc.).
-  const fm = [
-    "---",
-    `url: ${url}`,
-    `marker: "${marker.replace(/"/g, '\\"')}"`,
-    `heading: "${heading.replace(/"/g, '\\"')}"`,
-    "---",
-  ].join("\n");
+  const lines = ["---", `title: "${title.replace(/"/g, '\\"')}"`, `url: ${url}`];
+  if (description) {
+    lines.push(`description: "${description.replace(/"/g, '\\"')}"`);
+  }
+  lines.push("---");
 
-  return `${fm}\n\n${body}\n`;
+  return `${lines.join("\n")}\n\n${body}\n`;
 }
 
 interface ChangeSummaryEntry {
