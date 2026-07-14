@@ -29,9 +29,9 @@ To add this custom field extension to your [stack](../../set-up-stack/about-stac
 Go to your stack and click the “Settings” icon on the left navigation panel.
 
 - Click on **Extension**.
-- Click on the **+ New** **Extensions** button, and select the **Use prebuilt** option.
+- Click on the **+ New** **Extensions** button, and select the **Use prebuilt** option.![JSON_Editor_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltd9d577f012119d95/60b7c1101ea8cc0cc03a294f/JSON_Editor_1_highlighted.png)
 - In the following window, from the drop-down menu, select **Custom Field** options.
-- Hover over **JSON Editor**, and click on **+** **Add Extension**.
+- Hover over **JSON Editor**, and click on **+** **Add Extension**.![JSON_Editor_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltcb9a927351afc5a0/60b7c11ae5c1e71981818ea4/JSON_Editor_2_highlighted.png)
 - In the **Create New Extension** page, you will see the following options:
   - **Title*** (required)*: You will see a predefined title, “JSON Editor.” Use the same title to add the custom field in your content type.
   - **Field data type *** (required)*: By default, the data type for the input data is set as “JSON.”
@@ -49,14 +49,14 @@ To use JSON Editor custom field in your content type, perform the following step
 
 Click on the “Content Models” icon on the left navigation panel and click on **+ New Content Type** button.
 
-- [Create a content type](../../create-content-types/create-a-content-type.md) by adding relevant details as displayed below.
+- [Create a content type](../../create-content-types/create-a-content-type.md) by adding relevant details as displayed below.![JSON_Editor_4_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltcfa7e3869573c908/60b7c13ea8cd6a0a26e2900c/JSON_Editor_4_no_highlight.png)
 - On the **Content Type Builder** page, add the [**Custom**](../../create-content-types/custom.md) field to your content type by clicking on the “Insert a field” link denoted by a **+** sign and then clicking on **Custom**.
 - Select **JSON Editor** from the **Select Extension** dropdown menu, and configure other properties of your custom field.
 
 **Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.
 
 - After adding other fields to your content type, click on either **Save **or **Save and Close** button. This will create a content type.
-- To use the JSON editor, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see this field on your entry page as shown below:
+- To use the JSON editor, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see this field on your entry page as shown below:![JSON_Editor_6_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltdcabecbf746b3ebc/60b7c15d7979111986c71050/JSON_Editor_6_no_highlight.png)
 
 **Additional Resource:** Refer to our guide on how to add the [Ace Editor](./ace-editor.md), a prebuilt custom field that includes features of code editors like Sublime and Vim.
 

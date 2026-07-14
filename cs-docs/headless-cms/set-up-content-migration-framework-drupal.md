@@ -50,7 +50,9 @@ For Windows:
 git clone  https://github.com/contentstack/migration-v2.git && cd migration-v2 && setup-nvm.bat
 ```
 
-- During setup, select **Drupal** as the legacy CMS.**Warning**: Ensure you select the correct legacy CMS to avoid any errors during the migration.
+- During setup, select **Drupal** as the legacy CMS.
+
+  **Warning**: Ensure you select the correct legacy CMS to avoid any errors during the migration.
 - When prompted, enter the MySQL database connection details. Drupal-specific prompts appear only when you select Drupal in the previous step.Host (required): The host where the MySQL server runs. Use localhost if the server runs on the same machine, or enter the URL of the remote MySQL host.
 - Database name (required): The database that contains the Drupal SQL dump.
 - Username (required): The MySQL user with read access to the database.
@@ -58,9 +60,11 @@ git clone  https://github.com/contentstack/migration-v2.git && cd migration-v2 &
 - Password (optional): The password for the MySQL user.
 - Local path: Enter the string “sql”.
 - When prompted, enter the asset configuration details. These values are required only if you plan to migrate assets along with the content.Base site URL: The URL where your Drupal site is hosted (for example, https://example.com).
-- Public path: The directory path on the site where assets are stored (for example, /sites/default/files).**Note**: To skip asset migration, leave both fields blank.
+- Public path: The directory path on the site where assets are stored (for example, /sites/default/files).
+
+  **Note**: To skip asset migration, leave both fields blank.
 - Confirm the inputs. The script installs dependencies, writes the configuration, and starts the upload and migration API servers.
-- Once the installation is complete, navigate to http://localhost:3000 to access the Contentstack Migration Tool.
+- Once the installation is complete, navigate to http://localhost:3000 to access the Contentstack Migration Tool.![Set Up Content Migration Tool Docker 4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt452dc944ce02f2d2/68932f59d294dee4e7a71f90/Set_Up_Content_Migration_Tool_Docker_4.png)
 
 This completes the installation of Contentstack Migration Framework. Refer to the [Perform Content Migration](./drupal-to-contentstack.md) section for further steps.
 

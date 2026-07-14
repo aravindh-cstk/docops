@@ -22,8 +22,10 @@ Contentstack's discussion feature allows teams to collaborate seamlessly within 
 To resolve a discussion, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
 - Open an entry with comments and click the “Comment” icon next to the field.
-- In the comment box, click **Resolve** at the top to mark the discussion as resolved. **Note:** A content manager with the necessary permissions can resolve a discussion.
-- Alternatively, you can also resolve an **Active** discussion in the **Discussions** panel.
+- In the comment box, click **Resolve** at the top to mark the discussion as resolved. ![Resolve discussion link](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt163941da5ba3fa5d/678dc2fbad4fcc394c4032ca/Resolve-a-Discussion-link.png)
+
+  **Note:** A content manager with the necessary permissions can resolve a discussion.
+- Alternatively, you can also resolve an **Active** discussion in the **Discussions** panel.![Resolving active discussions](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6ed2bf16f5b576fa/678dc2fcee8f3845e9aa2c4d/Resolve-a-Discussion-panel.png)
 
 **Note:**
 - Resolving a discussion removes its comments from the field view. However, the discussion details remain available in the **Resolved** section in the **Discussions** panel.

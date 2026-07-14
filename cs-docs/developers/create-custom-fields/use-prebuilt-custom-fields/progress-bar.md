@@ -28,15 +28,15 @@ To add this extension to your stack, log in to your [Contentstack account](https
 
 Go to your [stack](../../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel
 - Click on **Extensions**.
-- Click on the **+ New**** Extensions** button, and select **Use prebuilt** option.
+- Click on the **+ New**** Extensions** button, and select **Use prebuilt** option.![Progress_bar_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt19d9ec61bba1cc16/60b90c9ecda43e2520908342/Progress_bar_1_highlighted.png)
 - In the following window, from the drop-down menu, select **Custom Field**.
-- Hover over **Progress bar**, and select **+ Add Extension**.
+- Hover over **Progress bar**, and select **+ Add Extension**.![Progress_bar_2_highlighted.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt895accf03ded7025/638760671686b510627b0787/Progress_bar_2_highlighted.jpg)
 - In the **Create New Extension** page, you will see the following options:**Title*** (required)*: You will see a predefined title, “Progress Bar.” Use the same title to add the custom field in your content type.
 - **Field data type *** (required)*: By default, the data type for the input data is set as “Number.”
 - **Multiple ***(optional)*: Select this if your custom field accepts multiple values, and the data type is not JSON.
 - **Hosting method** *(required)*: The hosting method is set to **Hosted By Contentstack** since it is a custom field hosted on Contentstack.
 - **Extension Source Code ***(required)*: Here you will find the source code for the custom field. You can make changes to this code as per your requirements.
-- **Config Parameters ***(optional)*: Provide values for the config parameters if you have used any in the source code.
+- **Config Parameters ***(optional)*: Provide values for the config parameters if you have used any in the source code.![Progress_bar_3_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt03557cd699ed90ec/60b90cc31ea8cc0cc03a2fcb/Progress_bar_3_no_highlight.png)
 - Finally,** Save **this custom field.
 
 After saving the custom field, let’s learn how to start using this custom field in your content type.
@@ -46,12 +46,12 @@ After saving the custom field, let’s learn how to start using this custom fiel
 To use Progress Bar custom field in your content type, perform the following steps:
 
 Click on the “Content Models” icon on the left navigation panel and click on **+**** New Content Type** button.
-- [Create a content type](../../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- [Create a content type](../../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:![Progress_bar_4_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta06eef246a334cb9/60b90ccd069dc90a315f828e/Progress_bar_4_no_highlight.png)
 - On the **Content Type Builder** page, add the [**Custom**](../../create-content-types/custom.md) field to your content type by clicking on the “Insert a field” link denoted by a **+** sign and then clicking on **Custom**.
 - Select **Progress Bar** from the **Select Extension** dropdown menu, and configure other properties of your custom field.
-**Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.
+![Progress_bar_5_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6d9f8144f93df674/60b90ce1e5c1e7198181954a/Progress_bar_5_highlighted.png)**Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.
 - After adding other fields to your content type, click on either **Save **or **Save and Close** button. This will create a content type.
-- To use this field, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see this field on your entry page as shown below:
+- To use this field, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see this field on your entry page as shown below:![Progress_bar_6_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt407d06cd9c38f3b7/60b90cede8788d184c9f7ec0/Progress_bar_6_no_highlight.png)
 
 ## Common questions
 

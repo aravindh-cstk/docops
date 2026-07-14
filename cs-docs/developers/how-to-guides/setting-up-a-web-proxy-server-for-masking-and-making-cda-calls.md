@@ -58,7 +58,7 @@ npm start
 ```
 http://{SERVERURL}:8000/v3/content_types/article/entries/bltd9d67cf4b11f9d62?environment=development&locale=en-us
 ```
-- Making the above call fetches the following results:
+- Making the above call fetches the following results:![image1.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltbdd82db793388f2c/5e098724631b8140b1f04f09/image1.png)
 
 In the above response, “defaultEntries” are the ones that you have specified in the configuration in step 3 (inside “DefaultContentTypes”).
 

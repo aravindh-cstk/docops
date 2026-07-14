@@ -27,7 +27,9 @@ Similar to localized entries, entry variants are variations of a base entry. You
 
 Here are some key concepts that will help you understand Entry Variants:
 
-- **Variant Group**: A collection of related [variants](../../personalize/about-variants.md) grouped based on a common purpose or audience. For example, you might have variant groups for location-based experiences, targeted promotions, or personalized recommendations.**Note**: Each [experiences](../../personalize/about-experiences.md) created in your Personalize project appears as a Variant Group (with the same name as the Experience) in the linked stack.
+- **Variant Group**: A collection of related [variants](../../personalize/about-variants.md) grouped based on a common purpose or audience. For example, you might have variant groups for location-based experiences, targeted promotions, or personalized recommendations.
+
+  **Note**: Each [experiences](../../personalize/about-experiences.md) created in your Personalize project appears as a Variant Group (with the same name as the Experience) in the linked stack.
 - **Base Entry**: This is the original entry from which all entry variants are derived. A base entry must exist before you can create any variations of it. The base entry contains the core content that is inherited by all its entry variants unless customized based on a variant.
 - **Entry Variant**: An entry variant is a version of the base entry that includes specific customizations. These customizations can be applied to any fields you select, allowing for personalized or scenario-specific content delivery.For example, consider you have a region-based experience (variant group) for a travel website that includes variants such as "Luxury Europe" and "Budget Adventure South America." Using entry variants, you can create tailored content based on these variants. This way, audiences from the Europe region will specifically see content associated with the "Luxury Europe" variant.
 

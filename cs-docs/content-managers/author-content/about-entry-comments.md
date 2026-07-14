@@ -24,7 +24,9 @@ Contentstack’s “Comments” feature allows you to add comments to fields in 
 - **Enhanced Collaboration**: Promotes direct communication among team members within entry fields.
 - **Contextual Feedback**: Ensures comments are tied to specific content areas, providing clarity.
 - **User Mentions**: Allows tagging teammates or roles using "@" to involve them in discussions.
-- **Integration with Localization**: Each [localized version](../../developers/multilingual-content/manage-versions-of-localized-entries.md) of an entry can host separate discussions pertinent to its content.**Note:** The Entry Comments feature is not available for unlocalized entries or older entry versions.
+- **Integration with Localization**: Each [localized version](../../developers/multilingual-content/manage-versions-of-localized-entries.md) of an entry can host separate discussions pertinent to its content.
+
+  **Note:** The Entry Comments feature is not available for unlocalized entries or older entry versions.
 
 ## Role-based Advantages
 

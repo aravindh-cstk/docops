@@ -34,13 +34,13 @@ Follow the steps to redeploy automatically when content is published.
 - Create a [deploy hook](./deploy-hooks.md) in Launch.
 - Follow the steps to add the deploy hook as a Webhook to Contentstack CMS.  
   Copy the **deploy hook URL**.
-- Go to your stack and then go to **Settings > Webhooks**.
+- Go to your stack and then go to **Settings > Webhooks**.![Launch_Auto-Redeploy_Webhook_Left-Nav-New.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt212353b10f369a28/67c687d18c6f4e2673b80914/Launch_Auto-Redeploy_Webhook_Left-Nav-New.png)
 - Click the **+ New Webhook** button.
 - In the **Name** field, enter a suitable name for the Webhook.
-- In the **URL To Notify** field, paste the deploy hook URL.
+- In the **URL To Notify** field, paste the deploy hook URL.![Launch_Auto-Redeploy_Webhook_Name_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdfae040171405081/65c1b031c258642b3108ae37/Launch_Auto-Redeploy_Webhook_Name_URL.png)
 - In the **Trigger Conditions** field, enter the conditions for the deploy hook to trigger.
 - Click the **Enable Webhook** toggle button.
-- Click the **Save** button.
+- Click the **Save** button.![Launch_Auto-Redeploy_Webhook_Save.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte094d5d1fb214d23/65c1b03108722270a9495278/Launch_Auto-Redeploy_Webhook_Save.png)
 
   You will see the conditions updated on the Webhooks page.
 

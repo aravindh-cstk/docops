@@ -21,8 +21,8 @@ Contentstack allows you to delete asset folders that are no longer required. Del
 
 To delete an asset folder, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel to view the list of available assets.
-- Locate the folder you want to delete, click the **vertical ellipses** under **Actions**, and select **Delete**.
-- In the **Delete Asset Folder** modal, click **Delete** to confirm the action.
+- Locate the folder you want to delete, click the **vertical ellipses** under **Actions**, and select **Delete**.![Assets_DeleteFolder_Delete.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3bd001fd6d5c1b87/6745a182acefd54fd0a6d9da/Assets_DeleteFolder_Delete.png)
+- In the **Delete Asset Folder** modal, click **Delete** to confirm the action.![Assets_DeleteFolder_DeleteModal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte9d08e482c36ab6a/6745528beae8d97a3e8fe0ba/Assets_DeleteFolder_DeleteModal.png)
 
 **Note**: Deleted asset folders, along with their contents, are moved to the [Trash](../../developers/manage-trash/about-trash.md) and can be restored within **14 days**. After this timeframe, they are permanently deleted.
 

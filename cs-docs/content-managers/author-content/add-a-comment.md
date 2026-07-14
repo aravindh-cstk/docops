@@ -21,8 +21,12 @@ Adding comments to your Contentstack entries improves team collaboration by enab
 
 To add a comment, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
-- Open an entry and click the corresponding “Add comment” icon for the field where you want to add a comment.**Note:** In [Group](../../developers/create-content-types/group.md), [Global](../../developers/global-field/about-global-field.md), and [Modular Block](../../developers/create-content-types/modular-blocks.md) fields, comments can only be added to subfields, not the parent field. Additionally, the “Add comment” icon appears only after you have entered some text and saved the entry.
-- Add your comment in the textbox that appears. **Note:** The maximum length of a comment is **500 characters**.
+- Open an entry and click the corresponding “Add comment” icon for the field where you want to add a comment.
+
+  **Note:** In [Group](../../developers/create-content-types/group.md), [Global](../../developers/global-field/about-global-field.md), and [Modular Block](../../developers/create-content-types/modular-blocks.md) fields, comments can only be added to subfields, not the parent field. Additionally, the “Add comment” icon appears only after you have entered some text and saved the entry.
+- Add your comment in the textbox that appears. ![Add comment textbox in Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt07275dca83aee889/663e10382ff97d9b347044de/About_Entry_Comment.png)
+
+  **Note:** The maximum length of a comment is **500 characters**.
 - Click **Post** to save your comment.
 
 Adding your first comment to a field starts a discussion. You can continue the conversation by adding more comments, resolving them, or managing the discussion. Learn more about [Discussions](./about-discussions.md).

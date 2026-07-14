@@ -46,8 +46,8 @@ After downloading, unzip the folder that contains the following two files:
 Once you have logged in to your Contentstack account, follow the steps given below:
 
 - Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” gear icon on the left navigation panel, and select **Extensions **(“alt + X” for Windows OS users, and “option + X” for Mac OS).
-- Click on the **+ New Extension** button, and select **Create New**.
-- Select the **Custom Field** option from the **Select Extension Type **screen as shown below:
+- Click on the **+ New Extension** button, and select **Create New**.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte379dd1d6a5df89b/6100278941dfac59f64694a7/image.png)
+- Select the **Custom Field** option from the **Select Extension Type **screen as shown below:![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte9ff872a7c23ee78/6100277cc2b5126aca15bafd/image.png)
 - On the **Create New Extension** page, enter values in the fields as given below:
   - **Title** *(required)*: Provide a suitable title, for example “Reference field” for your custom field. This title will be visible when you select the extension in the [custom](../create-content-types/custom.md) field in your content type.
   - **Field data type** *(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **Reference**.
@@ -78,13 +78,13 @@ Once you have added a custom field, you can use it in your content type like any
 In your stack, click on “Content Models” on the left navigation panel. By default, you will be on the Content Type page.
 
 - [Create a content type](../create-content-types/create-a-content-type.md) by clicking on the **+ New Content Type**. button. Enter the relevant details for the content type and click on **Save**. This leads you to the **Content Type Builder** page where you can add the relevant fields.
-- Under the **Select Extensions**, select the “Reference field” extension that you created and select the content types you want to refer, under the **Referenced Content Type** section.
+- Under the **Select Extensions**, select the “Reference field” extension that you created and select the content types you want to refer, under the **Referenced Content Type** section.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0df87cba0a72ec51/611280654df16d3d6de3e35b/image.png)
 - Once that is done, click on **Save and Close** to save your changes.
 - Now [create an entry](../../content-managers/author-content/create-an-entry.md) in this newly created content type and you will see the **Reference field** custom field in action.
 - Click on the **Choose Entry** button. You will see the list of entries from the referenced content type you selected.
 - Select the entries you want to refer through this custom field and click on **Add Selected Entries** to view the entries in your field.  
   If you want to add entries from more than one content type, select the content type first and then the entry/entries you want to add.
-- Lastly, click on the **Save** button to save your changes in the entry.
+- Lastly, click on the **Save** button to save your changes in the entry.![ReferencefieldVenus.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt9145f2aa23653454/6103e801ed7a525fcd55f77a/ReferencefieldVenus.gif)
 
 ## Common questions
 

@@ -26,9 +26,9 @@ Brand Kit helps you organize all your voice profiles in one location in an organ
 
 ## Steps for Execution
 To create a Brand Kit, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- On the left navigation panel, click the **Brand Kit** icon.
-- You will be directed to the Brand Kits landing page where you will find your previously created Brand Kits. To create a new one, click the **+ New Brand Kit** button.
-- In the **Create Brand Kit** modal, enter the **Brand Kit Name** and **Description** (optional). Then, **Select Stack(s)** from the dropdown and click **Create Brand Kit**.This creates your Brand Kit, and it now appears on the Brand Kits landing page or the dashboard.
+- On the left navigation panel, click the **Brand Kit** icon.![1-Brand-Kit-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2793aa12bafb2903/6656329d02c997c334b84fcb/1-Brand-Kit-Icon.png)
+- You will be directed to the Brand Kits landing page where you will find your previously created Brand Kits. To create a new one, click the **+ New Brand Kit** button.![2-Click-+-New-Brand-Kit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbb40b1c7b7ea7095/665640cab752e0103a81aa6f/2-Click-_-New-Brand-Kit.png)
+- In the **Create Brand Kit** modal, enter the **Brand Kit Name** and **Description** (optional). Then, **Select Stack(s)** from the dropdown and click **Create Brand Kit**.![3-Create-Brand-Kit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta2b1aa20ca843f52/665640d0e4a73285f497789f/3-Create-Brand-Kit.png)This creates your Brand Kit, and it now appears on the Brand Kits landing page or the dashboard.
 
 **Note**:
 - If you are a member of an organization with Brand Kit enabled, you can only view or manage the Brand Kits you create or collaborate on.

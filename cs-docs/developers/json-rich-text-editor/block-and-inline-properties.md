@@ -34,7 +34,7 @@ To add a block-level property within your JSON RTE, log in to your [Contentstack
 - In the **JSON RTE field**, select the block element (e.g., paragraph or heading) and click the **Property** icon in the toolbar.
 - Click **Add Property** or use the shortcut key “Cmd + Shift + P” for Mac users and “Ctrl + Shift + P” for Windows users.
 - In the **Add Property** modal that appears, enter the **Class** or **ID** property.
-- Click **Apply** to add the property to the content element.
+- Click **Apply** to add the property to the content element.![Add class or ID to a block-level element in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt15ef960f35b7820d/6819c71c473f11be33acc2a0/1-class-and-ID-adding-gif.gif)
 
 ## Inline Properties
 Inline properties apply to smaller segments within a block element, such as:

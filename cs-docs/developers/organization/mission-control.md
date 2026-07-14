@@ -44,7 +44,7 @@ Let's understand each of these in detail.
 
 The Status Code section of the Mission Control page allows you to get a detailed status view of your API calls. It helps you understand and track down nominal API call details like number of success calls, bad calls and unsupported calls.
 
-Status Code allows you to track the status of all the API calls made for CMS, Automate, and Launch.
+Status Code allows you to track the status of all the API calls made for CMS, Automate, and Launch.![Status_Code_CMS.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcf558b90f3c2109d/668ba625cf6f65fedc6e655a/Status_Code_CMS.png)
 
 You can track the status of all the API calls made for Launch.
 
@@ -61,7 +61,7 @@ Click the **Export** icon in the right top corner of the page to download a PDF 
 
 ## Cache Usage
 
-The Cache Usage dashboard lets you see the hit/ miss ratio percentage of your API calls in a given time frame.
+The Cache Usage dashboard lets you see the hit/ miss ratio percentage of your API calls in a given time frame.![Cache_Usage_CMS.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta7187f49f76e7580/668ba625a4dbae6ba84da502/Cache_Usage_CMS.png)
 
 Additionally, use the following data filters to get the desired details.
 - **Cache**: Use this filter to sort your data according to the number of Hits/ Miss API calls at a time.
@@ -75,7 +75,7 @@ Click the **Export **icon in the right top corner of the page to download a PDF 
 ## SDK Usage
 
 This section gives you an overview of the SDK usage by your customers. With this data you can understand the SDK consumption of your customers.
-The donut-shaped chart provides detailed insights about the consumption of SDKs, which can help you track individual SDK.
+The donut-shaped chart provides detailed insights about the consumption of SDKs, which can help you track individual SDK.![SDK_Usage_CMS.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf53c00d47d93d4bb/668ba625fda3927997664f4d/SDK_Usage_CMS.png)
 
 Here are some filters you can use to sort your data:
 - **Services**: Use this filter to sort your data according to various services.
@@ -89,7 +89,7 @@ Click the **Export **icon in the right top corner of the page to download a PDF 
 ## Device Usage
 
 Similar to the SDK Usage section, this donut-shaped chart allows you to understand and track the device usage of your customers. You can now find which devices your customers are using to access your website/ services.
-You can then make your website user-friendly by optimizing images, etc., based on the devices that users are using most frequently to access your website.
+You can then make your website user-friendly by optimizing images, etc., based on the devices that users are using most frequently to access your website.![Device_Usage_CMS.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd945af1222656509/668ba625b84bce338208ec0f/Device_Usage_CMS.png)
 
 You can use the following data filters to get the desired details.
 - **Services**: Use this filter to sort your data according to various services.

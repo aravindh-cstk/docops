@@ -22,12 +22,16 @@ The Project Variables section helps you add project variables to use the same ke
 To add the Project Variables, perform the following steps:
 - log in to your [Contentstack account](https://www.contentstack.com/login/).
 - Go to your project or [create](../../api-docs/developer-apis/automations-management-api/project-variables.md) a new one.
-- In the top navigation panel, click **Settings**. Then in the left navigation click **Variables**. You will see all the project variables defined in your project.
+- In the top navigation panel, click **Settings**. Then in the left navigation click **Variables**. You will see all the project variables defined in your project.![Variables_landing_page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd19ead74fa22d440/699c258131a5c5000890ea09/Variables_landing_page.png)
 
 To add a new project variable, follow the steps below.
-- Click the **"+"** icon on the Project Variables screen to add a new project variable.
-- A pop-up screen appears. Select a **Variable Type **to add a **Plain Text **or **Secret **variable.**Note:** Secret value cannot be viewed in an automation once saved.
-- Enter the variable’s name in the **Key **field and value in the **Value **field.**Note:** Each **Key **must be unique in a project.
+- Click the **"+"** icon on the Project Variables screen to add a new project variable.![Click_Add_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0ea8b87a63569769/656c24f96a1419a37b417f26/Click_Add_Icon.png)
+- A pop-up screen appears. Select a **Variable Type **to add a **Plain Text **or **Secret **variable.
+
+  **Note:** Secret value cannot be viewed in an automation once saved.
+- Enter the variable’s name in the **Key **field and value in the **Value **field.
+
+  **Note:** Each **Key **must be unique in a project.![Save_Variables.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf8d088579329629a/656c24f94c0b9a9a83d564a4/Save_Variables.png)
 - Click the **Save **button to create a project variable.
 
 You can view the project variables in all the connectors with custom authentication.
@@ -63,17 +67,19 @@ Select **Configure Trigger** from the left navigation panel.
 - Click the **Proceed **button.
 - You will find the applicable input “URL.” This URL will be the webhook URL to see the automation working.
 - Click the **Test Trigger **button to test the configured trigger.
-- On successful configuration, you can see the below output. Click the **Save and Exit **button.
+- On successful configuration, you can see the below output. Click the **Save and Exit **button.![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf4544c8b03a0c5fd/663093a024e181627cad160c/Save_Exit.png)
 
 ## Configure HTTP Action
 
-Within the **Configure Action** **Step**, click the **HTTP **connector.**Note: **You can sort and search the connector(s) based on the filter.
+Within the **Configure Action** **Step**, click the **HTTP **connector.
+
+**Note: **You can sort and search the connector(s) based on the filter.
 - Under **Choose an Action** tab, select the **HTTP Request **action.
 - On the **Configure Action** page, enter the **URL**. You can use any URL to fetch the data. Here, we are using a Content Management API URL to create an entry.
 Select any one **HTTP method **from **GET**, **POST**, **PUT**, **DELETE**, and **PATCH**. For this example, we are choosing the **POST **HTTP method.
 - In the Post **Body**, enter the entry data you want to fetch in JSON format.
 - Click the **Show Optional Fields** toggle button to enter the respective names and values for **Headers**. Here we use the Header parameters defined in the Content Management API.
-Use the Contentstack-defined header parameter in the **Header Name **field and the project variables in the **Value **field.
+Use the Contentstack-defined header parameter in the **Header Name **field and the project variables in the **Value **field.![HTTP_Action_Configuration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc5f816b4d755cdb3/656c24f994a2472ac434e1dd/HTTP_Action_Configuration.png)
 - Click the **Proceed **button.
 - Click the** Test Action** button to test the configured action.
 - Click the **Save and Exit **button.
@@ -81,10 +87,12 @@ Use the Contentstack-defined header parameter in the **Header Name **field and t
 
 ## Configure Response Connector
 
-Within the **Configure Action Step**, click the **Response **connector.**Note: **You can sort and search the connector(s) based on the filter.
+Within the **Configure Action Step**, click the **Response **connector.
+
+**Note: **You can sort and search the connector(s) based on the filter.
 - Under **Choose an Action** tab, select the **Response **action.
 - Based on the results of your configured action, enter the **Response Status**.
-- In the **Response Body **field, you can add the data that you want to send as the response. Fetch the data from the HTTP action.
+- In the **Response Body **field, you can add the data that you want to send as the response. Fetch the data from the HTTP action.![Response_Body.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5541aa35fd297a3f/656c24f941d574823fc8164d/Response_Body.png)
 - Click the **Proceed **button.
 - Click the **Test Action **button to test the configured action.
 - Click the **Save and Exit **button.

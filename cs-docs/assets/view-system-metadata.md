@@ -41,7 +41,9 @@ System metadata provides details such as file identity, type, size, and activity
 ```
 https://{base_url}/spaces/{space_uid}/assets/{asset_uid}/{file_uid}/{file_name}?locale={locale}&organization_uid={org_uid}
 ```
-- **Permanent URL**: Once generated, the URL remains constant, even after modifications to the asset.**Note:** Every save or update creates a new asset version. The permanent URL remains the same across all versions, ensuring a consistent reference point.
+- **Permanent URL**: Once generated, the URL remains constant, even after modifications to the asset.
+
+  **Note:** Every save or update creates a new asset version. The permanent URL remains the same across all versions, ensuring a consistent reference point.
 - **MIME Type**: Technical content type (e.g., `image/jpeg`, `application/pdf`).
 - **Asset Type**: System or custom type assigned (e.g., `jpeg_jpg`).
 - **File Size**: File size in kilobytes (KB) or megabytes (MB).

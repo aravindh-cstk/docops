@@ -26,8 +26,8 @@ Contentstack allows you to delete a [branch](./about-branches.md)that you create
 
 To delete a branch, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your stack, and perform the following steps:
 - Click the “Settings” icon on the left navigation panel, and select **Branches, **to view the list of available branches.
-- Hover over the branch you want to delete, click the “Delete” icon (trash can) that appears at the extreme right end.
-- Type in your branch ID and confirm the **Delete** action.
+- Hover over the branch you want to delete, click the “Delete” icon (trash can) that appears at the extreme right end.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta93835954cb7a0dc/615a7f3d7ab23a526f225173/image.png)
+- Type in your branch ID and confirm the **Delete** action.![Delete_Branch.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt97e38c2305ea7e51/62192f310e638750b44cd638/Delete_Branch.png)
 
 **Note:**
 - At a time only **one** branch can be deleted across an organization.

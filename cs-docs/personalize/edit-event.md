@@ -34,9 +34,11 @@ To edit an existing event, log in to your [Contentstack account](https://www.con
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to edit an event.
 - Click the **Events **tab.
-- You can edit an existing Event by clicking your event to open it or by clicking the corresponding vertical ellipses under the **Actions **section and selecting **Edit**.
+- You can edit an existing Event by clicking your event to open it or by clicking the corresponding vertical ellipses under the **Actions **section and selecting **Edit**.![AD_4nXf73qspVx9doKUtaSHEICRyoaQ-ahISa-8FTi3MlWj0MpVuJJnXN_aEv7lVWW7AL4PQLUPjU5DnbYQAkJd5qaZZyzfrAaPwNJFsEphpokQgVNln-MSnzaaEYSZTDjUtFF9zH97JqQ](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf73qspVx9doKUtaSHEICRyoaQ-ahISa-8FTi3MlWj0MpVuJJnXN_aEv7lVWW7AL4PQLUPjU5DnbYQAkJd5qaZZyzfrAaPwNJFsEphpokQgVNln-MSnzaaEYSZTDjUtFF9zH97JqQ?key=LqV841MXdJhIoLht06Dq9w)
 - In the **Edit Event** modal, make the necessary changes to the **Key **and **Description **fields.
-- Click **Save **to complete the setup.**Warning:** Modifying an event tied to A/B tests can impact your metrics. Before editing, update all references to it in your experiments. Reset the Event Key used in `triggerImpressions` and `triggerEvent` via the [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md). This prevents skewed metrics and keeps your personalization on track.
+- Click **Save **to complete the setup.
+
+  **Warning:** Modifying an event tied to A/B tests can impact your metrics. Before editing, update all references to it in your experiments. Reset the Event Key used in `triggerImpressions` and `triggerEvent` via the [Personalize Edge SDK](../developers/sdks/personalize-edge-sdk/javascript.md). This prevents skewed metrics and keeps your personalization on track.
 
 You will get a success message after the Event is edited.
 

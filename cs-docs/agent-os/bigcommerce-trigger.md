@@ -28,9 +28,9 @@ The Automate BigCommerce trigger lets you add BigCommerce-specific trigger event
 Perform the following steps to configure the BigCommerce trigger:
 
 - Click **Configure Trigger** from the left navigation panel.
-- Within the **Configure Trigger **step, click the **BigCommerce** connector.
-- Under **Choose Trigger** tab, select the **BigCommerce **trigger.
-- In the **Configure Trigger **tab, click **+ Add New Account **to add your BigCommerce account.
+- Within the **Configure Trigger **step, click the **BigCommerce** connector.![Select_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd48b9b56654465e7/65c1c5ef65d14328a57d6302/Select_Trigger.png)
+- Under **Choose Trigger** tab, select the **BigCommerce **trigger.![Select_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt97be883cd005d80a/65c1c5eefb34d0c1121afb3d/Select_Action.png)
+- In the **Configure Trigger **tab, click **+ Add New Account **to add your BigCommerce account.![Add_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcc6f7cd5d0fc1e0d/65c1c5ee68e9235793e56d20/Add_Account.png)
 - In the **Authorize **pop-up window, provide the **Store ****Hash **and **Access ****Token**.To generate Store Hash and Access Token, log into your BigCommerce dashboard and perform the following steps:
 
   Click the **Advanced ****Settings **tab in the navigation and select **API ****Accounts**.
@@ -39,12 +39,12 @@ Perform the following steps to configure the BigCommerce trigger:
 - Copy the “Store Hash” and “Access Token” to your clipboard for future use.
 
   **Additional Resources: **For more information, refer to the [Store API Accounts](https://support.bigcommerce.com/s/article/Store-API-Accounts?language=en_US) document.
-- Once done, click **Authorize**.
+- Once done, click **Authorize**.![Authorize.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf4f45b1865a1e172/65c1c5ee815b232e7dbb36ab/Authorize.png)
 - **Select an Event** from the dropdown.
-- Optionally, enable the **Show optional fields** toggle to add **Custom ****Header**. Click **+ Add Custom Header** to add multiple headers.
+- Optionally, enable the **Show optional fields** toggle to add **Custom ****Header**. Click **+ Add Custom Header** to add multiple headers.![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfe9389fbf10ba748/65c1c5ef65d143b3a97d62fe/Select_Fields.png)
 - Click the **Proceed **button.
-- To execute and test the configured trigger, click the **Test ****Trigger **button.
-- On successful configuration, you can see the below output. Click the **Save ****and ****Exit **button.
+- To execute and test the configured trigger, click the **Test ****Trigger **button.![Test_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9fe87601bf413688/65c1ce5b25aa94b86934f4ff/Test_Trigger.png)
+- On successful configuration, you can see the below output. Click the **Save ****and ****Exit **button.![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt75b22d48990df74e/65c1c5efb3cfc0e64ae5e37f/Save_Exit.png)
 
 Additionally, you can use the BigCommerce trigger with the [BigCommerce](/docs/developers/automation-hub-connectors/bigcommerce) connector to fetch the product details. For example, you can select the “Product Created” event in the BigCommerce trigger and configure the action to fetch the product details.
 

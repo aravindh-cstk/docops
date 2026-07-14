@@ -40,19 +40,19 @@ Firstly, you have to create a JW Player account to use this extension. Follow th
 
 Go to the [JW Player](https://www.jwplayer.com/) website and create a new account.
 
-- Click on the **Pricing**. Now, select **Try Today** under the **TRIAL SUBSCRIPTION **option.
+- Click on the **Pricing**. Now, select **Try Today** under the **TRIAL SUBSCRIPTION **option.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc3f943ca896d2c10/60959f918c053e542a5855f3/image.png)
 - To Sign up and validate your profile, enter your email address and click on the **Start for free** button. An activation link will be sent on the email address that you provided. Go to your email account and click on the **ACTIVATE NOW** button and complete the signup process.
 
   **Note** : If the account activation email is not received then you can re-enter your email address and check for the activation link.
 
 - Configure your JW Player account by providing the necessary details such as **Full Name**, **Country**, and **New Password**. Once you have done that, click on **Create Account**.
 - You will be directed to the Complete Your Profile modal. You can provide the required information or you can skip it for now to move to your dashboard.
-- You are now ready to upload your videos to JW Player. To do this, click on the **Upload** or **+ Add** button to start uploading.
+- You are now ready to upload your videos to JW Player. To do this, click on the **Upload** or **+ Add** button to start uploading.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltd9c334702d250260/611ef00f5e232866ad76940a/image.png)
 - You can either **Drop** your files or click on **select a file **option to upload your videos on JW Player.
 - Once the videos are uploaded, click on **Exit**. Your uploaded videos will be seen under **Recent Videos. **To check the **Video Summary **of any video click on the video, scroll down to add** Title** and a suitable **Description** of your video and **Save** it. These details will be visible in the [Custom Field](./about-custom-fields.md) of Contentstack.
 - Now for Contentstack to fetch videos from your JW Player in the custom field, it requires your accounts **API Key** and **Secret Key**. To get these, click on the **Settings** gear icon at top right corner and select the **API Credentials** option.
-- On the **API Credentials** screen, under the** v****1 ****API Credentials** click on **Show Credentials **to view the API** Key **as shown below.
-- Next we proceed to create a** Secret Key **under** v****2**** API Credentials **section. Click on the **Add **button to add a new API key. Enter a suitable **Name **for your API key, select the **Read-Only** option from the **User Role** dropdown, and click on the **Save **button.
+- On the **API Credentials** screen, under the** v****1 ****API Credentials** click on **Show Credentials **to view the API** Key **as shown below.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltbab36c131ced4c77/6095a31b01ff5a556925bfc6/image.png)
+- Next we proceed to create a** Secret Key **under** v****2**** API Credentials **section. Click on the **Add **button to add a new API key. Enter a suitable **Name **for your API key, select the **Read-Only** option from the **User Role** dropdown, and click on the **Save **button.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt02b0db42cff83c6c/6095a57c87e6314bbe7a7ff1/image.png)
 - Once you create the API Key, click on **Show Secret **to view the Secret Key as shown below.
 
   **Note**: Save the **API **key and the **Secret **key we created in the above step, it will be required when we set up an extension in Contentstack.
@@ -68,8 +68,8 @@ If Extensions are part of your plan, contact our [Support](mailto:support@conten
 
 - Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- Click on the **+ New Extension** button, and select **Create new**.
-- Select the **Custom Field** option in the **Select Extension Type **window. This Custom field extension will fetch videos from JW Player to your Contentstack field.
+- Click on the **+ New Extension** button, and select **Create new**.![Youtube_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5b859a40744879cf/60be2f39ff4b120facb6011c/Youtube_1_Highlighted.png)
+- Select the **Custom Field** option in the **Select Extension Type **window. This Custom field extension will fetch videos from JW Player to your Contentstack field.![Custom_field.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltd9b9f9a66a802669/60e88e45890eea276283a869/Custom_field.png)
 - On the **Create New Extension** page, enter values in the fields as given below:
 
   - **Title** *(required)*: Provide a suitable title, for example “JW Player” for your custom field. This title will be visible when you select the extension in the [custom](../create-content-types/custom.md) field in your content type.
@@ -106,10 +106,10 @@ Once you have added a custom field, you can use it in your content type like any
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [Custom](../create-content-types/custom.md) field to it.
 
-- Under the **Select Extension** dropdown, select the “JW Player” extension that you created and set the other properties. You can add other fields if required.
+- Under the **Select Extension** dropdown, select the “JW Player” extension that you created and set the other properties. You can add other fields if required.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt555d1ba9142b5e4f/60ea4e5003d890274e98a23e/image.png)
 - Finally, click on **Save and Close** to save your changes.
 - Now [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **JW Player** field in action.
-- Under your custom field you will find all the videos that you have uploaded on JW Player when you click on the **Choose Video** button. Select the videos you want to add to this field.
+- Under your custom field you will find all the videos that you have uploaded on JW Player when you click on the **Choose Video** button. Select the videos you want to add to this field.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt90bd83d4504ca04a/60ea4fd616291c305a369d3c/image.png)
 
 ## Common questions
 

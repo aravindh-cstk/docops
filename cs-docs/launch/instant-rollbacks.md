@@ -69,13 +69,13 @@ To request a tier change, contact our [Support](mailto:support@contentstack.com)
 
 To perform a rollback, follow the steps below:
 - On your Deployments screen, click **Rollback Deployment**.
-- In the modal that appears, select an eligible previous deployment and click **Review Rollback**.
-- You can enter the reason for rollback, if any. Then click **Confirm & Roll Back** to proceed with the rollback.
+- In the modal that appears, select an eligible previous deployment and click **Review Rollback**.![Launch_Rollbacks_Select_and_Review.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb5271ad10cc92175/6a01bb63129bb7b401f16160/Launch_Rollbacks_Select_and_Review.png)
+- You can enter the reason for rollback, if any. Then click **Confirm & Roll Back** to proceed with the rollback.![Launch_Rollbacks_Confirm_Rollback.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdbb44a7617b42de0/6a01bb639b2d92c3764bf29a/Launch_Rollbacks_Confirm_Rollback.png)
 
 You can find the rollback details as shown below:
-- **Deployment History**
-- **Current Deployment**
-- **Rolled Back Deployment**
+- **Deployment History**![Launch_Rollbacks_DeploymentHistory.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd39b645811abec5f/6a01bb635e6fea642aba173c/Launch_Rollbacks_DeploymentHistory.png)
+- **Current Deployment**![Launch_Rollbacks_DetailsCurrentLatestDeploy.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta0220df6dfd5f766/6a01bb633d39f2f5f82a38e1/Launch_Rollbacks_DetailsCurrentLatestDeploy.png)
+- **Rolled Back Deployment**![Launch_Rollbacks_DetailsPreviousLatestDeploy.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8969c89dd33e30fe/6a01bb63f4dd122ce294fcf3/Launch_Rollbacks_DetailsPreviousLatestDeploy.png)
 
 ## What Happens During Rollback
 

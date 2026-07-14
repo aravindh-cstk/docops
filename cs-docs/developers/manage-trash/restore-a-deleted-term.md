@@ -25,7 +25,9 @@ To restore a deleted term from the Trash, log in to your [Contentstack account](
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to restore a deleted term, navigate to the “Settings” icon (press “S”), and select **Trash** (or press “alt + T” for Windows OS, and “option + T” for Mac OS).
 - Click on the **Taxonomies** tab, locate the term you want to restore, and click the vertical ellipsis in the **Actions** column.
 - You can also inspect the term by clicking **View Details**.
-- Click **Restore**, and in the modal that appears, choose between **Restore with Entry Association** or **Restore without Entry Association** based on your requirements.**Note**: Restoring with Entry Association will reconnect the term to the entries where they were previously referenced. This action will increase the entry version since the terms are added back to the entry.
+- Click **Restore**, and in the modal that appears, choose between **Restore with Entry Association** or **Restore without Entry Association** based on your requirements.![Restore Deleted Term.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdc363e04c3a7a22c/6929c8ed7d0134462a3a82ce/Restore_Deleted_Term.gif)
+
+  **Note**: Restoring with Entry Association will reconnect the term to the entries where they were previously referenced. This action will increase the entry version since the terms are added back to the entry.
 
 ## Filter Deleted Terms
 

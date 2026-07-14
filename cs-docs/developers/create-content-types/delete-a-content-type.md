@@ -23,8 +23,8 @@ Contentstack allows you to delete a [content type](./about-content-types.md) tha
 To delete a content type, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your stack, click on the “Content Models” icon on the left navigation panel.
 - Next, click on the ellipses under the **Actions** column (extreme right) for the corresponding content type you want to delete.
-- Click on **Delete**.
-- Confirm the **Delete** action.
+- Click on **Delete**.![delete-a-content-type-1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt377209beb80a3db0/65ca1a24dccfc62885aaefab/delete-a-content-type-1.png)
+- Confirm the **Delete** action.![delete-a-content-type-2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4c516b9a82de1bb4/65ca1a2423dbef3c16ffe2a1/delete-a-content-type-2.png)
 
 **Warning:** These steps will move the content type along with all the [entries](../../content-managers/author-content/about-entries.md) within it to the [trash](../manage-trash/about-trash.md). But, before you delete anything, we suggest you check out our article on [Content Type Change Management](../content-modeling/content-type-change-management.md#make-major-changes-to-the-schema-of-a-content-type).
 

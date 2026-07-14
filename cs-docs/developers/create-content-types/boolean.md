@@ -44,7 +44,7 @@ Follow the steps to create a clickwrap Boolean field:
 - **Help Text**: You can provide additional information about the field (for example, "Visit our website to learn more about our privacy policies")
 - **Instruction Value**: It helps you add instructions to this field (for example, “Confirm by checking if you have read and agreed to our Terms and Conditions”)
 - Click on the **Save and Close** button.
-- Finally, [create an entry](../../content-managers/author-content/create-an-entry.md) to see the Boolean field in action.
+- Finally, [create an entry](../../content-managers/author-content/create-an-entry.md) to see the Boolean field in action.![Boolean_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcde0edc9a154c031/6673d53404c62958526f5468/Boolean_2.png)
 
 ## Example 2 - Default Boolean Value
 

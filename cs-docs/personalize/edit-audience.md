@@ -36,9 +36,9 @@ This guide provides a step-by-step walkthrough for editing audiences in Contents
 To edit an existing audience, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to edit an audience.
-- Click the **Audiences** tab.
-- You can edit an existing audience by clicking your audience to open it or by clicking the corresponding vertical ellipses under **Actions** and selecting **Edit**.
-- On the **Audience** page, make the necessary changes to the **Name**, **Description**, **Rules** or **Groups**.
+- Click the **Audiences** tab.![AD_4nXcSXPrxdt-g4okZcaEsGJqrE6FQfvzTb3X6Mok3vVrKMCsIiXbFGcLqL16YMMa32zKVXJphaLKzwSZr37PkQJ49OI6qyN4MMCckI11TYr_N900wpWaOZU8EuSnX0eL_r-HKESjsIQ](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcSXPrxdt-g4okZcaEsGJqrE6FQfvzTb3X6Mok3vVrKMCsIiXbFGcLqL16YMMa32zKVXJphaLKzwSZr37PkQJ49OI6qyN4MMCckI11TYr_N900wpWaOZU8EuSnX0eL_r-HKESjsIQ?key=h_YECix84SV67aYin9Q_kA)
+- You can edit an existing audience by clicking your audience to open it or by clicking the corresponding vertical ellipses under **Actions** and selecting **Edit**.![AD_4nXdOmAAO29WnIHHJ3iNC8NO6usq_jDU1vVJZdTBnbbuO-5nk5yMmTpM-5TTYSdJpZVKT2shsyfIlS8MXgbXb04Vq3e7NjJ9edcgZtKs1xvwJyordFCeEOEe2lDZj2tdJ2QVymrVi](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdOmAAO29WnIHHJ3iNC8NO6usq_jDU1vVJZdTBnbbuO-5nk5yMmTpM-5TTYSdJpZVKT2shsyfIlS8MXgbXb04Vq3e7NjJ9edcgZtKs1xvwJyordFCeEOEe2lDZj2tdJ2QVymrVi?key=h_YECix84SV67aYin9Q_kA)
+- On the **Audience** page, make the necessary changes to the **Name**, **Description**, **Rules** or **Groups**.![AD_4nXchgrIeEwfwb2_VfbrrTQjCwXL5CBnEmVdGZbNsan0HdMETHyxsFRP5vsOoyAB_ryF7PNWPSNhfZDg_7wYskUfS9E1leeb7Nhck6VTImmaQUdOgPLTTThwnTLHk0OJY1lzR6j4G4zq-R_TSncQRJGUnzGc](https://lh7-rt.googleusercontent.com/docsz/AD_4nXchgrIeEwfwb2_VfbrrTQjCwXL5CBnEmVdGZbNsan0HdMETHyxsFRP5vsOoyAB_ryF7PNWPSNhfZDg_7wYskUfS9E1leeb7Nhck6VTImmaQUdOgPLTTThwnTLHk0OJY1lzR6j4G4zq-R_TSncQRJGUnzGc?key=Bl_5yk9uexRBMu63qKHM6A)
 - Once you have done that, click the **Save** button to apply the changes.
 
 **Warning:** Editing an audience that is referenced in an experience might affect your active segmentation, A/B tests, and analytics. Ensure you update any references to the modified audience accordingly.

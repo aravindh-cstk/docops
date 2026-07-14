@@ -31,8 +31,10 @@ Instead of adding these components separately to each content type, you can use 
 To add Modular Blocks within Global fields, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon in the left navigation panel or use the shortcut key “C”.
 - On the **Content Models** page, select **Global Fields** and click **+ New Global Field**.
-- Enter a **Name** and **Description** (optional), then click **Proceed**.
-- Click **Insert a field (+)**, select **Modular Blocks**, and enter a name.**Note:** You can add up to **5 Modular Blocks** fields in a content type.
+- Enter a **Name** and **Description** (optional), then click **Proceed**.![Create Global Field modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltef6158c560f2d029/6800baac4851b5b6b0d2fec4/1._Complex_Global_Fields-Modular_Blocks_Within_Global_Fields-Create_New_Global_Field.png)
+- Click **Insert a field (+)**, select **Modular Blocks**, and enter a name.
+
+  **Note:** You can add up to **5 Modular Blocks** fields in a content type.
 - Click **+ New Block**, enter a **Title** (e.g., Car Brands), and click **Create**.
 - Inside this block, click **Insert a field (+)** and add:  
       **Single Line Textbox**: For Brand Name
@@ -44,7 +46,7 @@ To add Modular Blocks within Global fields, log in to your [Contentstack account
 - Click **+ New Block**, enter a name (e.g., Customer Enquiry Form), and add:  
       **Single Line Textbox**: For customer email
 - **Multi-line Textbox**: For message input
-- Click **Save and Close**.
+- Click **Save and Close**.![Modular Block saved inside Global Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd28a6e0a2ae9b261/6800bee615d4c5e4f29228f7/2-modular-blocks.gif)
 - Navigate to **Content Models** and open a **Content Type**.
 - Click **Insert a field (+)** and select **Global** field.
 - Select the Global Field you just created and click **Save** or **Save and Close**.

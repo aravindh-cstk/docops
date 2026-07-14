@@ -41,8 +41,8 @@ To get your configuration details for SAP Commerce Cloud, follow the steps given
 
 Log in to the [SAP Cloud Portal](https://portal.commerce.ondemand.com/) using your SAP Commerce Cloud account credentials.
 
-- Click **Environments** in the left panel, then click the environment for which you want to retrieve the configuration details.
-- Copy the **API** and **Backoffice** URLs. You will use them during app configuration in [step 2](#install-and-configure-the-sap-commerce-cloud-app-in-marketplace).
+- Click **Environments** in the left panel, then click the environment for which you want to retrieve the configuration details.![SAP-Commerce-Cloud-Portal-Environments](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltca3995dc360b9930/639d68467a84980155704c47/SAP-Cloud_Portal-Environments.png)
+- Copy the **API** and **Backoffice** URLs. You will use them during app configuration in [step 2](#install-and-configure-the-sap-commerce-cloud-app-in-marketplace).![SAP-Commerce-Cloud-Portal-API-Backoffice](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt07f84184c097d5af/639d684ae11ee01263ab45c5/SAP-Cloud_Portal-API-Backoffice.png)
 - To retrieve the **Base Site ID**, follow the steps below:Click the **Backoffice** URL, then log in using your SAP Commerce Cloud account credentials.
 - Under **Base Commerce**, in the left panel, click **Base Store**.
 - Click **Base Site** for which you want to retrieve theBase Site ID.
@@ -56,16 +56,18 @@ To install the app, log in to your [Contentstack account](https://www.contentsta
 In the left-hand side primary navigation, click the **Marketplace** icon.
 
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see the available apps. Hover over the **SAP Commerce Cloud** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the SAP Commerce Cloud app, accept the **Terms of Service** and click the **Install** button.
+- Within the Marketplace, you can see the available apps. Hover over the **SAP Commerce Cloud** app and click **Install**.![Marketplace_SAP_Commerce_Cloud.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f51fe422a7e830e/6a0199f8472b14af19def566/Marketplace_SAP_Commerce_Cloud.png)
+- In the pop-up window, select the stack where you want to install the SAP Commerce Cloud app, accept the **Terms of Service** and click the **Install** button.![SAP-Commerce-Cloud-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt48a342feed931425/68c949e658ae1782549a1050/SAP-Commerce-Cloud-App-Install.png)
 - On the **Configuration **screen, you can add multiple configurations for SAP Commerce Cloud. To do so, follow the steps given below:Click the **+ New Configuration** button to add new configuration details.
-- In the **Add Configuration** modal, enter the configuration **Name** and click **Add**.
+- In the **Add Configuration** modal, enter the configuration **Name** and click **Add**.![SAP-Commerce-Cloud-Add-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt01e0a7c24a217c93/68c949e68f9bf10102c6ba96/SAP-Commerce-Cloud-Add-Configuration.png)
 - After adding the configuration, enter the following details:**SAP URL Structure**: Choose the type of URL you want to use in your configuration.For **OCC URL** (Omni Commerce Connect URL): You can provide the **API Base URL** retrieved from the SAP Commerce Cloud dashboard.
 - For **Custom URL**: If you are not using OCC URL (Omni Commerce Connect URL) from the SAP Commerce Cloud, you can select Custom URL and provide the respective **API Base URL** and **API Route**.
 
 **Note**: Please choose Custom URL if the URL does not start with `https://your-base-url/occ/v2`.
 
-- Enter the **API Base URL** and **API Route** retrieved from [step 1](#retrieve-configuration-details-for-sap-commerce-cloud).**Note**: Enter the URL starting from `api`.
+- Enter the **API Base URL** and **API Route** retrieved from [step 1](#retrieve-configuration-details-for-sap-commerce-cloud).
+
+  **Note**: Enter the URL starting from `api`.
 - Enter the **Base Site ID** and **Backoffice URL** retrieved from [step 1](#retrieve-configuration-details-for-sap-commerce-cloud).
 - **Set as Default**: To set this configuration as the default, click this checkbox.Alternatively, you can set a configuration as the default by clicking the horizontal ellipses on the top-right side of the configuration section and then selecting **Set as Default**.
 
@@ -73,22 +75,26 @@ In the left-hand side primary navigation, click the **Marketplace** icon.
 
 Similarly, you can add multiple configurations by following the steps discussed above.
 
-- To delete the configuration, click the horizontal ellipses and select **Delete Configuration**.In the **Confirm Deletion** modal, add the configuration name and click **Delete.**
+- To delete the configuration, click the horizontal ellipses and select **Delete Configuration**.![SAP-Commerce-Cloud-Delete-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4a91ac65c69cfa8a/68ca63587b2e153708809666/SAP-Commerce-Cloud-Delete-Configuration.png)In the **Confirm Deletion** modal, add the configuration name and click **Delete.**![SAP-Commerce-Cloud-Delete-Configuration-Modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3df5b640c7a3c37c/68c94a51371e4c53f036ac50/SAP-Commerce-Cloud-Delete-Configuration-Modal.png)
 - For an existing user, the credentials will be added as the default configuration, and named as **legacy_config**.**Warning**:
 
 **legacy_config** is a reserved keyword and you cannot use it in adding new configurations.
 
 - If you delete the **legacy_config** configuration, data loss may occur and you will not be able to access the products and categories from the related accounts.
 - **Choose the SAP Commerce Cloud Keys to Save in Entry**: Choose how to save the data fetched from the SAP Commerce Cloud account in Contentstack entries.If you select the All Fields option, you can select only a limited number of products in the entry.
-- For **Custom Fields**, you can search and add specific SAP Commerce Cloud Fields you want to save in entries.
+- For **Custom Fields**, you can search and add specific SAP Commerce Cloud Fields you want to save in entries.![SAP-Commerce-Cloud-Save-In-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt157f04028b88d7e8/68c97deb3c509a517a6c380c/SAP-Commerce-Cloud-Save-In-Entry.png)
 
 If you select **Custom Fields** then the **SAP Commerce Cloud Keys** dropdown appears. By default, **code** and **name** keys are already selected. If you want to create a new key, click the **+ New Key Field** option.
 
 In the **Add SAP Commerce Cloud Key Field** modal, enter the **Key Name or Path** and click the **Create** button to create a new key.
 
 - After adding the configuration details, click the **Save** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Note**: The app requires at least one UI location to be enabled; otherwise, you would not be able to save your app configuration settings.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![SAP-Commerce-Cloud-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8c3887fab424ae9b/68c94aaa48d1be579361d995/SAP-Commerce-Cloud-UI-Locations.png)
+
+  **Note**: The app requires at least one UI location to be enabled; otherwise, you would not be able to save your app configuration settings.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.
+
+  **Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the SAP Commerce Cloud app.
 
 ## Use the SAP Commerce Cloud App within your Stack
@@ -97,11 +103,11 @@ To use the SAP Commerce Cloud app within an entry of your stack, follow the step
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![SAP-Commerce-Cloud-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt356625ae6a30c815/68c949f6d6e5002d39e1caad/SAP-Commerce-Cloud-Content-Type.png)
 - In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field for product in your content type by clicking the **Insert a field** link represented by a **+** sign.
-- Under **Select Extension or App**, select **SAP Commerce Cloud - Product** and click **Proceed**.This adds SAP Commerce Cloud - Product Field in the custom field.
+- Under **Select Extension or App**, select **SAP Commerce Cloud - Product** and click **Proceed**.![SAP-Commerce-Cloud-Add-Product-In-Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt964dd9e722b82c29/68c949e6cd8814091ef23be6/SAP-Commerce-Cloud-Add-Product-In-Custom-Field.png)This adds SAP Commerce Cloud - Product Field in the custom field.![SAP-Commerce-Cloud-Added-Product-In-Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7ea6cede89393e21/68c949e648d1beef7c61d98b/SAP-Commerce-Cloud-Added-Product-In-Custom-Field.png)
 - Add another [Custom](../create-content-types/custom.md) field for category in your content type by clicking the **Insert a field **link represented by a **+** sign.
-- Under **Select Extension or App**, select **SAP Commerce Cloud - Category** and click **Proceed**.This adds SAP Commerce Cloud - Category Field in the custom field.
+- Under **Select Extension or App**, select **SAP Commerce Cloud - Category** and click **Proceed**.![SAP-Commerce-Cloud-Add-Category-In-Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt443b6a596b305d2f/68c949e6d6e50063efe1caa9/SAP-Commerce-Cloud-Add-Category-In-Custom-Field.png)This adds SAP Commerce Cloud - Category Field in the custom field.![SAP-Commerce-Cloud-Added-Category-In-Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte2f6ee876989fa05/68c949e648d1be50c261d98d/SAP-Commerce-Cloud-Added-Category-In-Custom-Field.png)
 - Under **Advanced** properties, you have the option to set the **Config Parameter** for all entries of a particular content type. If you do so, it overrides the default app configuration that you set at the time of app installation on the Configuration screen.The `key:value` passed in the configuration object overrides the default app configuration settings.
 
 In case you want to use a different SAP Commerce Cloud configuration for any custom field within the same stack, you need to specify the configuration name in the Config Parameter.
@@ -140,7 +146,7 @@ In case you want to use a different SAP Commerce Cloud configuration for any cus
 **Note**: If any configuration value is not added, or if all the values are empty in the **Config Parameter** properties settings, the SAP Commerce Cloud app uses the default configuration which was set up in [step 2](#install-and-configure-the-sap-commerce-cloud-app-in-marketplace).
 
 - After adding the app, click **Save** or **Save and Close** to save your changes.
-- In the left navigation panel, navigate to the **Entries** page and click **+ New Entry** to [create an entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.You will see the SAP Commerce Cloud custom fields on your entry page as shown below:
+- In the left navigation panel, navigate to the **Entries** page and click **+ New Entry** to [create an entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.You will see the SAP Commerce Cloud custom fields on your entry page as shown below:![SAP-Commerce-Cloud-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85e1a18b8605881d/68c94aaa39d1a82c2ad3142a/SAP-Commerce-Cloud-Sample-Entry.png)
 - Click the **Add Product(s)** button, select the products from your SAP Commerce Cloud store and add them to your entry.Select the products from your SAP Commerce Cloud selector page and click **+ Add Product(s)** to add them to your entry.
 
 You can select the products from multiple configurations at once using the **Configuration** dropdown.
@@ -167,8 +173,8 @@ The products you selected are referenced within your entry in the list view:
 
 **Note**: You must save your entry to get the product details in the Sidebar Widget.
 
-- In the right navigation panel, select **Apps**, and then select **SAP Commerce Cloud** to view the product details.
-- Enter the product name in the dropdown to search and view the product details.
+- In the right navigation panel, select **Apps**, and then select **SAP Commerce Cloud** to view the product details.![SAP-Commerce-Cloud-Sidebar-Widget-Products](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt990f4701724caa96/68c94aaacd88147a81f23bf4/SAP-Commerce-Cloud-Sidebar-Widget-Products.png)
+- Enter the product name in the dropdown to search and view the product details.![SAP-Commerce-Cloud-Sidebar-Widget-Products-Search](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt266b7e63171c0c5f/68c94aaa60e5383ccde6df58/SAP-Commerce-Cloud-Sidebar-Widget-Products-Search.png)
 - Click the **Add Category(s)** button, select the categories from your SAP Commerce Cloud store and add them to your entry.Select the categories from your SAP Commerce Cloud selector page and click **+ Add Category(s)** to add them to your entry.
 
 You can select the categories from multiple configurations at once using the **Configuration** dropdown.
@@ -177,7 +183,7 @@ Hover over the category on the SAP Commerce Cloud selector page, and you can see
 
 The categories you selected get referenced within your entry.
 
-- To remove the selected category, hover over the category and click the **Remove** icon.
+- To remove the selected category, hover over the category and click the **Remove** icon.![SAP-Commerce-Cloud-Category-Thumbnail-View-Options](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc0c2789b90bdfe67/68c949f63c509a63096c3624/SAP-Commerce-Cloud-Category-Thumbnail-View-Options.png)
 - After adding the category(s), **Save** and **Publish** your entry.
 
 ## Common questions

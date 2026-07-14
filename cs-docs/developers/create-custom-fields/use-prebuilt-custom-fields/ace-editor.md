@@ -28,8 +28,8 @@ To add this custom field to your stack, log in to your [Contentstack account](ht
 
 - Go to your [stack](../../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**.
-- Click on the **+ New Extensions** button, and select **Use prebuilt** option.
-- In the following window, from the drop-down menu, select **Custom Field**.
+- Click on the **+ New Extensions** button, and select **Use prebuilt** option.![Ace_Editor_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt067caf6a5fb05b2b/60b7c21e16660819878654eb/Ace_Editor_1_highlighted.png)
+- In the following window, from the drop-down menu, select **Custom Field**.![ace_editor_2_no_highlight.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0a60e3ca38f27896/638760ad4005df1070b03d51/ace_editor_2_no_highlight.jpg)
 - Hover over **Ace Editor**, and click on **+**** Add Extension**.
 - In the **Create New Extension** page, you will see the following options:
   - **Title*** (required)*: You will see a predefined title, “Ace Editor.” Use the same title to add the custom field in your content type.
@@ -37,7 +37,7 @@ To add this custom field to your stack, log in to your [Contentstack account](ht
   - **Multiple ***(optional)*: Select this if your custom field accepts multiple values, and the data type is not JSON.
   - **Hosting method** *(required)*: The hosting method is set to **Hosted By Contentstack** since it is a custom field hosted on Contentstack.
   - **Extension Source Code ***(required)*: Here you will find the source code for the custom field. You can make changes to this code as per your requirements.
-  - **Config Parameters ***(optional)*: Provide values for the config parameters if you have used any in the source code.
+  - **Config Parameters ***(optional)*: Provide values for the config parameters if you have used any in the source code.![ace_editor_3_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8f46b2b939730467/60b7c23adbcf2a08eed7aef7/ace_editor_3_no_highlight.png)
 - Finally,** Save **this custom field
 
 ## Use your custom field
@@ -45,12 +45,12 @@ To add this custom field to your stack, log in to your [Contentstack account](ht
 To use Ace Editor custom field in your content type, perform the following steps:
 
 - Click on the “Content Models” icon on the left navigation panel and click on **+ New Content Type** button.
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![ace_editor_4_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2003eb8d02d1e87b/60b7c243dbcf2a08eed7aefb/ace_editor_4_no_highlight.png)
 - On the **Content Type Builder** page, add the [**Custom**](../../create-content-types/custom.md) field to your content type by clicking on the “Insert a field” link denoted by a **+** sign and then on **Custom**.
 - Select **Ace Editor** from the **Select Extension** dropdown menu, and configure other properties of your custom field.  
-  **Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.
+![Ace_Editor_5_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0502f87e94620459/60b7c2597979111986c7105e/Ace_Editor_5_highlighted.png)  **Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.
 - After adding other fields to your content type, click on either **Save **or **Save and Close** button. This will create a content type.
-- To use the Ace editor, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the this field on your entry page as shown below:
+- To use the Ace editor, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the this field on your entry page as shown below:![ace_editor_6_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt20c170de80a9b0df/60b7c24cdbcf2a08eed7aeff/ace_editor_6_no_highlight.png)
 
 **Additional Resource:** You can also refer to our guide on adding the [JSON editor](./json-editor.md) to your stack, which allows users to input JSON data as normal "text,” “code,” “tree” format, “form,” and “view.”
 

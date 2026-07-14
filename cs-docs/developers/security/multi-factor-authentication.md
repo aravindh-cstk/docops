@@ -27,14 +27,14 @@ We strongly recommend enabling MFA to safeguard your Contentstack account and it
 
 To enable MFA, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
-- Click the avatar icon in the top-right corner of the dashboard and select **Profile Settings** from the dropdown.
-- Click the **Security** tab in the left navigation panel.
-- Under **Multi-Factor Authentication**, click **Add**/**Enable**.
-- A confirmation modal appears stating that enabling MFA signs you out of all other active sessions to help secure your account. You remain signed in to the current session. Click **Continue** to proceed.
+- Click the avatar icon in the top-right corner of the dashboard and select **Profile Settings** from the dropdown.![EnableMFA_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta33558f37ce9b604/6971dfc560a98a6fb22de5cb/EnableMFA_1.png)
+- Click the **Security** tab in the left navigation panel.![EnableMFA_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltde540e5017de7611/6971df6509e62c51e878b046/EnableMFA_2.png)
+- Under **Multi-Factor Authentication**, click **Add**/**Enable**.![EnableMFA_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt43bd1483ff02d554/6971e070da4f60300f158e7f/EnableMFA_3.png)
+- A confirmation modal appears stating that enabling MFA signs you out of all other active sessions to help secure your account. You remain signed in to the current session. Click **Continue** to proceed.![EnableMFA_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6c854de6a875419a/6971df6409e62c51bd78b042/EnableMFA_4.png)
 - A modal window appears with a QR code.Open an authenticator app (e.g., Google Authenticator, Authy, 1Password, Microsoft Authenticator, or any authenticator app).
 - Scan the QR code or manually enter the code displayed under it.
 - Click **Next**.
-- Enter the 6-digit verification code generated on your authenticator app and click **Verify** to complete the setup.
+- Enter the 6-digit verification code generated on your authenticator app and click **Verify** to complete the setup.![EnableMFA_6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8356a571cf13da43/6971df6510f0fc208c96c44d/EnableMFA_6.png)
 - After MFA is enabled, a prompt appears to generate backup codes.Click **Generate Backup Codes** (recommended).
 - To postpone this action, click **Skip for Now** to do it later.
 - Choose one of the following options:Click **Copy codes** to copy the codes.
@@ -51,10 +51,10 @@ To enable MFA, log in to your [Contentstack account](https://www.contentstack.co
 To reset your authentication method (e.g., switching to a new device or app):
 
 - Go to your **Profile Settings** | **Security** tab and click **Reset MFA** under **Multi-Factor Authentication**.
-- A confirmation modal appears stating that enabling MFA signs you out of all other active sessions to help secure your account. You remain signed in to the current session. Click **Continue** to proceed.
-- Enter your current password when prompted and click **Continue**.
-- A new QR code gets generated. Scan it using your new authenticator app or manually enter the secret key, and click **Next**.
-- Enter the latest 6-digit code from your app and click **Verify** to finalize the update.
+- A confirmation modal appears stating that enabling MFA signs you out of all other active sessions to help secure your account. You remain signed in to the current session. Click **Continue** to proceed.![ResetMFA_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt67588d7a6221bbe2/6971df6b09e62cd7a278b04a/ResetMFA_1.png)
+- Enter your current password when prompted and click **Continue**.![ResetMFA_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb883493af5f022f6/6971df6b50018b2de6634ebe/ResetMFA_2.png)
+- A new QR code gets generated. Scan it using your new authenticator app or manually enter the secret key, and click **Next**.![ResetMFA_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c77f287cefd1a5f/6971df6b6b2a10e0147a523c/ResetMFA_3.png)
+- Enter the latest 6-digit code from your app and click **Verify** to finalize the update.![ResetMFA_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt87a0be70f87f214c/6971df6be0f8ef579c05e7f5/ResetMFA_4.png)
 - After MFA is enabled, a prompt appears to generate backup codes.Click **Generate Backup Codes** (recommended).
 - To postpone this action, click **Skip for Now** to do it later.
 - Choose one of the following options:Click **Copy codes** to copy the codes.

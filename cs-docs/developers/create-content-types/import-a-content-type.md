@@ -20,8 +20,8 @@ Contentstack allows you to import the JSON file of a [content type](./about-cont
 
 To import a content type, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your stack, and click on the "Content Models" icon from the left navigation pane.
-- Click on the **Import Content Type** icon located at the top right corner of the page.
-- This opens the **Import Content Type** window where you can browse and upload the JSON file of the content type that you want to import.
+- Click on the **Import Content Type** icon located at the top right corner of the page.![import-a-content-tyoe-1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt759af9ece244e02a/65ca18a023dbef3599ffe28c/import-a-content-tyoe-1.png)
+- This opens the **Import Content Type** window where you can browse and upload the JSON file of the content type that you want to import.![import-a-content-tyoe-2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2c8489e0c74d27b4/65ca18a08a7a5142a40a62e0/import-a-content-tyoe-2.png)
 - Click **Import** to import your content type.
 
 After successfully importing the content type, you can add [entry(ies)](../../content-managers/author-content/about-entries.md) to it, and publish them to an [environment](../set-up-environments/about-environments.md).

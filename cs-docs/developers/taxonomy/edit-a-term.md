@@ -21,8 +21,12 @@ After creating a term, you can modify its properties, such as the name of the te
 To edit terms within a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to edit the terms, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Select the taxonomy for which you want to edit the terms.
-- To edit a term, click the vertical ellipsis in the **Actions** column and select **Edit**.**Note**: Once saved, you cannot edit the UID.
-- Click **Save** to update your changes.**Note**: If your stack includes multiple locales, the **Term Details** view displays a table of all available locales. From this table, you can [provide localized](./term-localization.md) values for each locale or rely on fallback behavior when a translation is not supplied.
+- To edit a term, click the vertical ellipsis in the **Actions** column and select **Edit**.
+
+  **Note**: Once saved, you cannot edit the UID.
+- Click **Save** to update your changes.
+
+  **Note**: If your stack includes multiple locales, the **Term Details** view displays a table of all available locales. From this table, you can [provide localized](./term-localization.md) values for each locale or rely on fallback behavior when a translation is not supplied.
 
 ## API Reference
 

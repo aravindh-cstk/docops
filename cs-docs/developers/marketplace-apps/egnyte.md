@@ -44,7 +44,7 @@ To get your configuration details for Egnyte, follow the steps given below:
 To get the **Domain URL** for app configuration in [step 2](#install-and-configure-egnyte-in-contentstack-marketplace), refer to the [Custom URLs](https://helpdesk.egnyte.com/hc/en-us/articles/360026439952-Custom-URLs#h_66be3b8b-da37-47ca-8fc7-063916218914) webpage. You can register the domain while creating the app.
 
 - To get the **API Key**, log in to the [Egnyte Developer account](https://developers.egnyte.com/) using your Egnyte account credentials.
-- Click **Get API Key** on the dashboard.
+- Click **Get API Key** on the dashboard.![Egnyte-Get-API-Key](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf7724502ce6fdc18/65df8b4f3e2d0e353ff71887/Egnyte-Get-API-Key.png)
 - You can copy the Egnyte API **Key** to the clipboard to use in [step 2](#install-and-configure-egnyte-in-contentstack-marketplace).
 
 **Note**: The status of the API Key should be **active** for a successful configuration. Please contact the [Egnyte support](https://developers.egnyte.com/contact) team if the API key is in a waiting or inactive state.
@@ -57,8 +57,8 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see all the available apps. Hover over the **Egnyte** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the Egnyte app, accept the terms of service, and click the **Install** button.
+- Within the Marketplace, you can see all the available apps. Hover over the **Egnyte** app and click **Install**.![marketplace_appswitcher_egnyte.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amc4ef635c7ba6d17b/8aa21aa2671e46654c005a45/marketplace_appswitcher_egnyte.png?locale=en-us)
+- In the pop-up window, select the stack where you want to install the Egnyte app, accept the terms of service, and click the **Install** button.![Egnyte-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8382d484c1bea4f9/65df8b39396ebb3b8807d6b5/Egnyte-App-Install.png)
 - On the **Configuration** screen, enter the **Domain URL** and Egnyte **API Key** retrieved from your Egnyte account in [step 1](#retrieve-domain-url-and-api-key-for-egnyte-account).If you select **Custom Fields** then the **Egnyte Keys** drop-down appears. By default, **entry_id**, **path**, **name**, and **link.url** keys are already selected inside the dropdown. If you want to create a new key, click the **+ New Key Field** option.  
   In the **Add Egnyte Key Path** modal, enter the **Egnyte Key Path** and click the **Create** or **Create and Apply** button to create a new key.
 - Click the **Save** button.
@@ -72,7 +72,7 @@ To use the Egnyte app within an entry of your stack, follow the steps given belo
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![Egnyte-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltef018e07ea4bbcdd/65df8b383e2d0e02f7f71883/Egnyte-Content-Type.png)
 - There are two ways to use the Egnyte app in your entry:
   - [Custom Field](#steps-to-use-the-egnyte-app-as-a-custom-field)
   - [JSON Rich Text Editor Field](#steps-to-use-the-egnyte-app-in-a-json-rich-text-editor-field)
@@ -84,7 +84,7 @@ Go to your stack, click the **Content Models** icon in the left navigation panel
   This adds Egnyte in the custom field.
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
 - Now to use the Egnyte app, create an entry in this newly created content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.  
-  You can see the Egnyte app’s custom fields on your entry page as shown below:
+  You can see the Egnyte app’s custom fields on your entry page as shown below:![Egnyte-Custom-Field-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt937ea7d294276bb5/65df8b4e6c65d706ee87e2f9/Egnyte-Custom-Field-Sample-Entry.png)
 - Click **+ Choose Asset(s)** button.  
   **Note**: If you are using the Egnyte app for the first time, the app will redirect you to the Egnyte login page after clicking the **+ Choose Asset(s)** button. You need to authenticate the credentials and allow access to the Egnyte assets by clicking the **Allow Access** button.
 - Choose the required assets from your Egnyte account and click **OK** to add them to your entry.  
@@ -110,7 +110,7 @@ Go to your stack, click the **Content Models** icon in the left navigation panel
   This adds Egnyte in the custom field.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
 - Now to use the Egnyte app, create an entry in this newly created content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.  
-  You can see the Egnyte icon in the JSON Rich Text Editor field on your entry page as shown below:
+  You can see the Egnyte icon in the JSON Rich Text Editor field on your entry page as shown below:![Egnyte-JSONRTE-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt30190afba7ba6156/65df8b652c8bef0309621f8e/Egnyte-JSONRTE-Sample-Entry.png)
 - Click the **Egnyte** app icon.  
   **Note**: If you are using the Egnyte app for the first time, the app will redirect you to the Egnyte login page after clicking the app icon. You need to authenticate the credentials and allow access to the Egnyte assets by clicking the **Allow Access** button.
 - Choose the assets from your Egnyte account and click **OK** to add them to your entry.  

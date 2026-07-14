@@ -25,7 +25,7 @@ The Trash feature also provides the ability to modify entries before restoring t
 
 To restore a deleted entry from the Trash, log in to your [Contentstack account,](https://app.contentstack.com/#!/login) go to your stack, perform the following steps:
 - Click the “Settings” icon (press “S”) on the left navigation panel and select **Trash** (or press “**alt + T**” for Windows OS, and “option + **T**” for Mac OS).
-- Click on the **Entries** tab, and hover over the entry you want to restore (e.g., **Author Bio**).
+- Click on the **Entries** tab, and hover over the entry you want to restore (e.g., **Author Bio**).![Restore_a_Deleted_Entry_1_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta2431dfe3d6b785c/60c0c91068689d78c863164a/Restore_a_Deleted_Entry_1_no_highlight.png)
 - Click on the **Restore** button that appears at the extreme right end.
 
     **Note**: To be able to restore an entry that belongs to a deleted content type, you need to first restore the content type.

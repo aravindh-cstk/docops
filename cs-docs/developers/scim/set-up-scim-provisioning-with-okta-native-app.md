@@ -47,30 +47,30 @@ Log in to your Contentstack account.
 
 **Note**: In order to add Contentstack to the Okta application integration, you must be an administrator. If you've already created an app for Contentstack, you can skip this step.
 
-Log in to your Okta Admin account.
+Log in to your Okta Admin account.![3_Okta_Admin_Login.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt43079ae4b214afe0/661e53a3f5bcd1821a0c94b6/3_Okta_Admin_Login.png)
 - After logging in, you will see the Okta dashboard. Click on the **Application** tab and select **Applications.**
-- In the **Applications** page, you will see your already created applications, if any.
-- Click the **Browse App Catalog** to set up an application for Contentstack.
-- Search for “Contentstack” within the **Browse App Integration Catalog** section and select the **Contentstack** app.
-- You will be redirected to the **Contentstack** application. Click on the **Add Integration** button.
-- You can edit the **Application label** as per your preference and click on **Done**.
+- In the **Applications** page, you will see your already created applications, if any.![4_Applications_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9af22fa5313fe044/661e53a4f19ed857fe2556be/4_Applications_Page.png)
+- Click the **Browse App Catalog** to set up an application for Contentstack.![5_Browse_App_Catalog.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0f9ac1d16cf98b93/661e53a4645d1a3961cf0dea/5_Browse_App_Catalog.png)
+- Search for “Contentstack” within the **Browse App Integration Catalog** section and select the **Contentstack** app.![6_Browse_App_Integration_Catalog.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt864fc9ba207d542b/661e53a59db0245064a536f3/6_Browse_App_Integration_Catalog.png)
+- You will be redirected to the **Contentstack** application. Click on the **Add Integration** button.![7_Add_Integration_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1c77dc970816f150/661e53a5f19ed83ea12556c2/7_Add_Integration_Button.png)
+- You can edit the **Application label** as per your preference and click on **Done**.![8_Application_label.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb38a4b952b44bb4e/6666f340c97e387144f16389/Step_2.7_Application_Label.png)
 - Click **Save**.
 
 ## Configure Provisioning in Okta
 
 To enable your app to use the provisioning feature, you need to perform the following steps:
 
-Locate the **Sign On** tab and click the **Edit** button on Okta Configured App.
+Locate the **Sign On** tab and click the **Edit** button on Okta Configured App.![9_Edit_in_SSO_Tab.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd2c490d906fcf6ad/661e53a5f19ed807942556c6/9_Edit_in_SSO_Tab.png)
 - Enter the region-specific Application URL of the Contentstack app, as follows, to authorize Okta with SCIM in Contentstack.
   - For **North American** region, use `https://app.contentstack.com`
   - For **Europe** region, use `https://eu-app.contentstack.com`
   - For **Azure NA** region, use `https://azure-na-app.contentstack.com`
   - For **Azure EU** region, use `https://azure-eu-app.contentstack.com`
   - For **GCP NA** region, use `https://gcp-na-app.contentstack.com`
-- For **Application username format**, select **Email** from the dropdown.
+- For **Application username format**, select **Email** from the dropdown.![13_Application_username_format.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt94e7bdd076912fb6/661e53af45b6a8e45a390313/13_Application_username_format.png)
 - Click **Save**.
-- Click on **Provisioning** and then on **Configure API Integration**.
-- Select **Enable API integration**.
+- Click on **Provisioning** and then on **Configure API Integration**.![14_Configure_API_Integration_in_Provisioning.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf9c4f44a34738428/661e53afd89750101a17ba90/14_Configure_API_Integration_in_Provisioning.png)
+- Select **Enable API integration**.![15_Enable_API_integration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt16833000a5dc264f/6666f2fe3c0f7e3771a43fe9/Step_3.6_Enable_API_Integration.png)
 - Navigate back to Contentstack. Click on the “Org Admin” icon and from the **Organization Info** page, copy the Organization ID.
 - Next, you need to create the Base URL for the Contentstack Auth API. To do so, select the region-specific URL mentioned below, and replace ORG_ID with the **Organization ID** value you copied in the above step
 
@@ -81,10 +81,10 @@ Locate the **Sign On** tab and click the **Edit** button on Okta Configured App.
 | Azure NA | `https://azure-na-auth-api.contentstack.com/scim/v2.0/organizations/ORG_ID ` |
 | Azure EU | `https://azure-eu-auth-api.contentstack.com/scim/v2.0/organizations/ORG_ID` |
 
-- Now enter this URL beside the **Base URL** field as shown below:
+- Now enter this URL beside the **Base URL** field as shown below:![16_Base_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd31d61d923e0f3b7/6666f285a8434eed4826972b/Step_3.9_Base_URL.png)
 - Click on **Authenticate with Contentstack** and you will be redirected to the Contentstack Okta app to authorize.
-- Click on **Authorize & Install.**
-- Go to **To App** on the left under the Settings menu. Make sure you check all the values (as shown in screenshot below).
+- Click on **Authorize & Install.**![17_Authorize_&_Install.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt138ed4168c119a2d/661e53af45b6a8dd5939030f/17_Authorize_&_Install.png)
+- Go to **To App** on the left under the Settings menu. Make sure you check all the values (as shown in screenshot below).![18_To_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt25f9ff58f88bc042/661e53af0d562600e19cc901/18_To_App.png)
 - Click **Save**.
 
 ## Assign Users and Groups to your Application
@@ -95,21 +95,21 @@ After configuring the provisioning settings, you need to assign either users or 
 
 To assign people to your application, perform the following steps:
 
-Navigate to the **Assignments** tab. Click the **Assign** dropdown and select the **Assign to People** option.
-- You need to provide the individual's email address and click the **Assign** button.
+Navigate to the **Assignments** tab. Click the **Assign** dropdown and select the **Assign to People** option.![19_Assign_to_People_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5df0c5b494fb9f6f/662795e845f9893ed3cf4a3b/19_Assign_to_People_Button.png)
+- You need to provide the individual's email address and click the **Assign** button.![20_Assign_CS_to_People.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9c1b4b04c4023757/661e53afa3e62295b04bdce5/20_Assign_CS_to_People.png)
 - In the resulting people assignment modal, click **Save and Go Back.**
-- Click **Done** to save the assignment. The people assignments are listed as shown below:
+- Click **Done** to save the assignment. The people assignments are listed as shown below:![21_People_assignments.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt06b60a9398b4b38b/662795e885518c1969556f17/21_People_assignments.png)
 
 ### Assign Groups to your Application
 
 To assign groups to your application, perform the following steps:
-- Navigate to the **Assignments** tab. Click the **Assign** dropdown and select the **Assign to Groups** option.
-- Click **Assign** against the group for assigning the group to your app.
+- Navigate to the **Assignments** tab. Click the **Assign** dropdown and select the **Assign to Groups** option.![22_Assign_to_Groups_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdc024aa1ee4dde7c/662795e8b0544178b999ef88/22_Assign_to_Groups_Button.png)
+- Click **Assign** against the group for assigning the group to your app.![23_Assign_CS_to_Groups.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt55e00b351be99deb/6666f2351946582be64c806e/Step_4B.2_Assign_to_group.png)
 - Click **Done**.
 
 Another way to assign groups to your application is via the Push Groups method where you add rules and all groups that meet the rules will be added to the Contentstack app. Here’s how to do it:
-- Navigate to the **Push Groups** tab. Click the **Push Groups** dropdown and select **Find groups by rule**.
-- In the resulting window, add some rules for the group and click **Create Rule**.
+- Navigate to the **Push Groups** tab. Click the **Push Groups** dropdown and select **Find groups by rule**.![24_Find_groups_by_rule.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt90a8716edd39644a/662795e8c9de468583d4829f/24_Find_groups_by_rule.png)
+- In the resulting window, add some rules for the group and click **Create Rule**.![25_Create_Rule.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt162b0e307c85464f/662795e8cac8482f4928cd26/25_Create_Rule.png)
 
 Create a rule that matches with the groups to be pushed to Contentstack. For example, if you have a rule created that will push all groups with a name that starts with “Contentstack” to your app (Contentstack).
 

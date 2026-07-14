@@ -26,12 +26,12 @@ Let’s see the steps to Export and Import an automation.
 To export an automation, perform the steps given below:
 - On the Automations listing page, in the **Actions** column, click the vertical three dots.
 - Select the **Export** **Automation** option. A JSON file is downloaded in your local system.
-    You can also export the automation by navigating to the **Settings** page inside your automation and then clicking the **Export Automation **button as shown below:
+    ![Export_automation_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltad3a740af575820b/699bd52a48bd410008f09bd0/Export_automation_Icon.png)You can also export the automation by navigating to the **Settings** page inside your automation and then clicking the **Export Automation **button as shown below:![Export_Automation_From_Settings_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf6989fd48cba8f8a/6797993117131c48b0b1fec9/Export_Automation_From_Settings_Page.png)
 
 ## Import an Automation
 
 To import an automation, perform the steps given below:
-- On the Automations listing page, click the** + New Automation** button. From the dropdown, select the **Import** option.
+- On the Automations listing page, click the** + New Automation** button. From the dropdown, select the **Import** option.![Import_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt62e5e87ec7c02943/699bd52ae8917700087c275a/Import_Icon.png)
 - In the **Import** **Automation **modal, choose the automation’s JSON file you want to import.
 - Click the **Import** **Automation** button.
     **Note**:

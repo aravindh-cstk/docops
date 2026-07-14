@@ -45,7 +45,9 @@ Let us look in detail the steps that need to be performed by the respective role
 To delete a stack through the **Settings** page, perform the following steps:
 - Log in to your [Contentstack account](https://www.contentstack.com/login).
 - Select the Organization from the dropdown on the header, and click on the “Org Admin” icon on the left navigation panel.
-- Select the **Stacks** settings option, and click on the ellipses under the **Actions** column.**Note**: Only Organization Owner can delete a stack from the Org Admin settings.
+- Select the **Stacks** settings option, and click on the ellipses under the **Actions** column.
+
+  **Note**: Only Organization Owner can delete a stack from the Org Admin settings.![Delete_Stack_via_Org_Admin_(1).png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6babce2d4d98e620/66795d8a99587f682df4df97/Delete_Stack_via_Org_Admin_(1).png)
 - Confirm the **Delete** action.
 
 Your stack will now be permanently deleted.
@@ -55,7 +57,7 @@ Your stack will now be permanently deleted.
 There's an alternative method of deleting stacks through the Stack Settings page. This method can be performed by the Stack Creator/Owner. To delete a stack, perform the following steps:
 - Log in to your [Contentstack account](https://www.contentstack.com/login) and go to the stack that you want to delete.
 - Click the “Settings” icon on the left navigation panel and select **Stack**.
-- On the **Stack Settings** page, click on **Delete Stack** button.
+- On the **Stack Settings** page, click on **Delete Stack** button.![Delete_Stack_via_Org_Admin_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7425ac3e2caa6010/66796204612ffe5a902893a2/Delete_Stack_via_Org_Admin_3.png)
 - Confirm the **Delete** action to delete your stack permanently.
 
 **Warning**: Deletion of the stack will result in the permanent deletion of all the content stored within that stack.

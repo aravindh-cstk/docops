@@ -135,7 +135,7 @@ There are two ways to host your custom JSON RTE plugin code:
 - GCP NA region - `https://gcp-na-rte-extension.contentstack.com`
 - GCP EU region - `https://gcp-eu-rte-extension.contentstack.com`
 
-- **Host on Contentstack:** Through this method, you can host your custom JSON RTE plugin code on Contentstack. To do this, you need to upload the dist/plugin.system.js file to Contentstack’s [Assets](../../content-managers/author-content/create-upload-assets.md) repository. Now, you can use the file URL for your JSON RTE plugin.
+- **Host on Contentstack:** Through this method, you can host your custom JSON RTE plugin code on Contentstack. To do this, you need to upload the dist/plugin.system.js file to Contentstack’s [Assets](../../content-managers/author-content/create-upload-assets.md) repository. Now, you can use the file URL for your JSON RTE plugin.![Highlight_plugin_in_assets.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8f39e5d06f556d89/61d690a075ddd613c0fa2ae3/Highlight_plugin_in_assets.png)
 
 ### Add JSON RTE Plugin to a Stack
 
@@ -143,8 +143,8 @@ To add the custom JSON RTE Plugin extension, log in to your [Contentstack accoun
 
 Go to your stack, click the “Settings” icon on the left navigation panel, and select **Extensions**.
 
-- On the Extensions page, click on the **+ New Extension** button at the top-right corner of the page, and select **Create New**. If you have not added any extensions in the stack, click on the **+ New Extension** link as shown below.
-- In the **Select Extension Type** window, select **JSON RTE Plugin**.
+- On the Extensions page, click on the **+ New Extension** button at the top-right corner of the page, and select **Create New**. If you have not added any extensions in the stack, click on the **+ New Extension** link as shown below.![Create_New.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt93d208bc74696ac8/61d6909fc548b77c207ddb4a/Create_New.png)
+- In the **Select Extension Type** window, select **JSON RTE Plugin**.![JSON _RTE_plugin](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte6ce4da10e2439ad/64b4dd0c5b6d357efc53fd06/Create_a_new_JSON_RTE_Plugin_-_Select_JSON_RTE.png)
 - On the resulting page, enter values in the fields as given below:
   **Title** *(required)*: Define the title for your plugin. You can use this title when adding the JSON RTE plugin to your content type.
 - **External Hosting URL** *(required)*: Specify the URL of your externally-hosted JSON RTE plugin code or the file URL if you are hosting through Contentstack.  

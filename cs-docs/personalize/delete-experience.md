@@ -46,8 +46,10 @@ Before you proceed, please note:
 To delete an experience, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to delete an experience.
-- You can delete an existing experience draft by clicking the corresponding vertical ellipses under the **Actions** and selecting **Delete**.
-- In the **Delete Experience** modal, click **Delete** to permanently delete the experience.**Warning:** Deleting an experience may result in the loss of associated analytics data, unlink Variant Group for Entry Variants in the CMS by automatically removing the metadata and could affect active personalization campaigns on your website for visitors.
+- You can delete an existing experience draft by clicking the corresponding vertical ellipses under the **Actions** and selecting **Delete**.![EXp.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9987126c2cbee0b0/68cba648961205749091e78a/EXp.png)
+- In the **Delete Experience** modal, click **Delete** to permanently delete the experience.![AD_4nXeFHaxE0stvk-TSUYhM4qBC_fQKeta4gKiVaVKv0TMWplHmkRI2mfRyVZMnQg3pdbAqIt5nMYpAx-F8tqoMfOTwl4i5flf91WvSz2roXWY8bTjNVoxYoZpdK8gEx0kAcJtpHcDP_e3urPHppWFfkwBjdifW](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeFHaxE0stvk-TSUYhM4qBC_fQKeta4gKiVaVKv0TMWplHmkRI2mfRyVZMnQg3pdbAqIt5nMYpAx-F8tqoMfOTwl4i5flf91WvSz2roXWY8bTjNVoxYoZpdK8gEx0kAcJtpHcDP_e3urPHppWFfkwBjdifW?key=r_iE_avCzc_SouI8_unvIw)
+
+  **Warning:** Deleting an experience may result in the loss of associated analytics data, unlink Variant Group for Entry Variants in the CMS by automatically removing the metadata and could affect active personalization campaigns on your website for visitors.
 
 You will get a success message after the experience is deleted from Personalize.
 

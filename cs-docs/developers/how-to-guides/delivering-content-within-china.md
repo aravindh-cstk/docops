@@ -95,7 +95,9 @@ In this step, we need to create a Jenkins server on an instance (Ubuntu22.04) in
 - Reference for installing Gatsby: [How to Install Gatsby on Ubuntu 22.04](https://www.linuxcloudvps.com/blog/how-to-install-gatsby-on-ubuntu-22-04/)
 - We rely on the power and efficiency of rsync for synchronizing our project files. Rsync is a versatile and robust file synchronization tool, serving as the cornerstone of our strategy, ensuring seamless synchronization.
 - **Security group inbound rules**:Allow your public IPv4 address on ports `22` and `8080`.
-- Allow Contentstack Prod NAT GW IPs on port `8080`.**Note**: Contact our [support](mailto:support@contentstack.com) team for the Contentstack NAT Gateway IPs depending on the [region](../contentstack-regions/login-endpoints.md) from where you are accessing your Contentstack account.
+- Allow Contentstack Prod NAT GW IPs on port `8080`.![Delivering_Content_within_China_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbe14d3d4e298a18f/66726f4005319104ad1f7afa/Delivering_Content_within_China_2.png)
+
+  **Note**: Contact our [support](mailto:support@contentstack.com) team for the Contentstack NAT Gateway IPs depending on the [region](../contentstack-regions/login-endpoints.md) from where you are accessing your Contentstack account.
 
 **Create a Jenkins job build pipeline using the shell script**:
 
@@ -178,13 +180,13 @@ echo -e "SYNC COMPLETED SUCCESSFULLY... \n\n"
 
 **Other configurations of this pipeline**:
 
-- In the **Source Code Management** modal select **Git** and add the **Repository URL** of your app and specify the branch to build.
-- To trigger the build remotely using webhook add a randomly generated authentication token.
+- In the **Source Code Management** modal select **Git** and add the **Repository URL** of your app and specify the branch to build.![Delivering_Content_within_China_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9ab8d37588cc1461/66726f403ab7db380218cca7/Delivering_Content_within_China_3.png)
+- To trigger the build remotely using webhook add a randomly generated authentication token.![Delivering_Content_within_China_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt31391ef23ec80582/66726f407a609d7422a6d959/Delivering_Content_within_China_4.png)
 - Create a user in Jenkins, for example `csgatsbyremoteuser`, and generate a token for this user. This user and token are used as the basic-auth credentials in the stack’s webhook configuration.
 
 **Webhook configuration in the stack**:
 
-- Navigate to **Webhooks** under **Settings** within your stack. And [create a webhook](../set-up-webhooks/create-a-webhook.md) as per below configurations.
+- Navigate to **Webhooks** under **Settings** within your stack. And [create a webhook](../set-up-webhooks/create-a-webhook.md) as per below configurations.![China_5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb1615eaa889c5f6c/6694b4db05282f1d3fb207fe/China_5.png)
 - Our purpose is to send an HTTP POST request to the webhook URL (the Jenkins endpoint in this case) for any entry or asset being published/unpublished on the selected environment.
 - Create a webhook with the following configurations:**Name**: `jenkins-publish`
 - **URL to Notify**: `http://ec2-54-198-208-147.compute-1.amazonaws.com:8080/job/contentstack-gatsby-starter-app-build/build?token=xRPyRrQCDYxZdrYxcOAhxsyFG`
@@ -193,7 +195,7 @@ echo -e "SYNC COMPLETED SUCCESSFULLY... \n\n"
 - **Email Addresses to Notify**: `<YOUR_EMAIL_ADDRESSES>`
 - **Stack-level Scope**: We don't need any stack-level scope.
 - **Branch-level Scope:** Select the branch for which this webhook should be applicable.
-- **Trigger Conditions**: Configure the trigger conditions as shown below.
+- **Trigger Conditions**: Configure the trigger conditions as shown below.![Delivering_Content_within_China_6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte5b224d4b2425d32/66726f4076906dc21a9ef310/Delivering_Content_within_China_6.png)
 - Tick the **Enable Webhook** checkbox.
 
 Now we should be able to trigger the build whenever anything is published in the main branch of the stack in the development environment.

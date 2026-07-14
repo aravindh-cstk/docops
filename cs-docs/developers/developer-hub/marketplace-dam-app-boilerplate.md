@@ -138,9 +138,9 @@ To use your application, you need to set it up in Contentstack. To do so, perfor
 - In the left-hand-side primary navigation, click the **Developer Hub** icon to go to the Developer Hub.
 - Click the **+ New App** button.
 - In the **New App** modal, select **Stack App** as the **Type of App**. Enter a suitable **Name** for your app and an optional **Description**, and then click the **Create** button. By default, the **Status** of the created app will be **Private**.
-  **Warning**: While selecting the **Type of App** in the above step, ensure you select **Stack App**, as this boilerplate supports stack apps only.
-- On the resulting **Basic information** page, upload your app’s icon and **Save** the changes.
-- Click the **UI Locations **tab. To set the **App URL**, click the **View Hosting Settings **link. You will be redirected to the **Hosting **tab. On the resulting page, enter the **App URL**. In the development phase, this will be the UI server URL i.e,  
+![DAM-Biolerplate-Create-New-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt80aed3ac76d45231/6567905c2d2f23288ff3dcb6/DAM-Biolerplate-Create-New-App.png)  **Warning**: While selecting the **Type of App** in the above step, ensure you select **Stack App**, as this boilerplate supports stack apps only.
+- On the resulting **Basic information** page, upload your app’s icon and **Save** the changes.![Baisc_Information.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta0034dffa9ea7108/65b7d9971be7ff87855da256/Baisc_Information.png)
+- Click the **UI Locations **tab. To set the **App URL**, click the **View Hosting Settings **link. You will be redirected to the **Hosting **tab. On the resulting page, enter the **App URL**. In the development phase, this will be the UI server URL i.e,![UI_Locations.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt38db2e08ff92ad55/65b7d997292a0ed66887d241/UI_Locations.png)  
   `http://localhost:4000/#
 
 `
@@ -149,17 +149,19 @@ To use your application, you need to set it up in Contentstack. To do so, perfor
   - JSON RTE
 - Add the below routes for each UI Location to get the desired results.**Note**: The name for each UI location is optional. By default, the app name is the UI location name.
 
-**App Configuration**: In the App Configuration UI location, use `/config` for Path.
+**App Configuration**: In the App Configuration UI location, use `/config` for Path.![App_Config.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc2fc6122feb21150/65b75f13c6000541ead5a8a9/App_Config.png)
 
-- **Custom Field**: In the Custom Field UI location, use `<Your_App_Name>` for Name and `/custom-field` for Path. Select the **Data Type** as **JSON** to store JSON data in your entry.
+- **Custom Field**: In the Custom Field UI location, use `<Your_App_Name>` for Name and `/custom-field` for Path. Select the **Data Type** as **JSON** to store JSON data in your entry.![Custom_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5ca358bf3dd72966/65b75f14d2067b9be28c45cc/Custom_Field.png)
 
 **Note**: For configuring JSON RTE UI location, please refer to the [Add JSON RTE UI Location](#add-json-rte-ui-location) section, as it works on different ports.
 
 - After saving the recently added UI locations, click the **Install App** button to install the DAM app.
-- Select the stack where you want to install the app, accept the terms of service, and click the **Install** button.
+- Select the stack where you want to install the app, accept the terms of service, and click the **Install** button.![DAM-Biolerplate-Install-Sample-DAM-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3cf566341217a68a/656799a76a1419b99f416ceb/DAM-Biolerplate-Install-Sample-DAM-App.png)
 - You will be redirected to the configuration page of the app. On the **Configuration** page, enter the following details:**Text input**: You can enter the input text for the Sample DAM app and save the data. You can also use any other app configuration as per your DAM website.
   - **Select input**: You can use the Select input field to select any option from the dropdown options.
-  - **DAM radio input**: You can use the radio input field to choose an option from the given options (**Single Select** or **Multi Select**).**Note**: You can customize the app configuration with your dedicated fields.
+  - **DAM radio input**: You can use the radio input field to choose an option from the given options (**Single Select** or **Multi Select**).
+
+    **Note**: You can customize the app configuration with your dedicated fields.
   - **Save in Entry** [Mandatory]: If you select the **Custom Fields** option, you can select the structure of the data you want to save in the entry. If the **All Fields** option is selected, you might be able to add limited products in the custom field depending on the size of the data (Refer to the [Custom Fields Limitations](../create-custom-fields/limitations-of-custom-fields.md) documentation for more details).
 - Click the **Save** button and then click **Open Stack** to start using the application.
 
@@ -186,32 +188,32 @@ Having the basic DAM app setup ready, you can now update `rte_config` files in t
 To use the DAM application within an entry of your stack, follow the steps given below:
 
 - Go to your stack, click the [Content Models](../marketplace-platform-guides/content-models/about-content-models.md) icon in the left navigation panel, and click the **+ New Content Type** button.
-- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:![DAM-Biolerplate-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltee354d55bc8c985d/6567905c1204cdc284ca69e8/DAM-Biolerplate-Content-Type.png)
 
 ### Steps to use the DAM App within the Custom Field
 
 - In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a + sign.
 - Under **Select Extension/App**, select names defined for the Custom Field UI location and click the **Proceed** button.  
-  This adds the DAM app in the custom field.
+  ![DAM-Biolerplate-Add-App-In-Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte55b13c19c5aa9f1/6567905cac4c413a8194da09/DAM-Biolerplate-Add-App-In-Custom-Field.png)This adds the DAM app in the custom field.![DAM-Biolerplate-Added-App-In-Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta3b6b13a3407cea8/6567905c5af539a7b959fd8c/DAM-Biolerplate-Added-App-In-Custom-Field.png)
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
 - To use the DAM app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.  
-  You can see the DAM app’s custom field on your entry page as shown below:
-- Click the **+ Choose Asset(s)** button.
-- Select assets from the third-party DAM website to add them to your entry.
-- The asset(s) you selected are referenced within your entry. You can reorder the assets to arrange them in required order in both **Thumbnail** and **List** views.
+  You can see the DAM app’s custom field on your entry page as shown below:![DAM-Biolerplate-Custom-Field-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blted94ee14828c2658/656799a7753911eb69d065ee/DAM-Biolerplate-Custom-Field-Sample-Entry.png)
+- Click the **+ Choose Asset(s)** button.![DAM-Biolerplate-Custom-Field-Choose-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt77e018a7c564a09e/656799a71204cdc692ca6ab3/DAM-Biolerplate-Custom-Field-Choose-Assets.png)
+- Select assets from the third-party DAM website to add them to your entry.![DAM_Assets.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5f9244e0e1d29409/68a6b523026f3dd05e1dd20b/DAM_Assets.png)
+- The asset(s) you selected are referenced within your entry. You can reorder the assets to arrange them in required order in both **Thumbnail** and **List** views.![DAM-Biolerplate-Custom-Field-With-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7ebbf42e7bee9d77/656799a7753911b851d065f2/DAM-Biolerplate-Custom-Field-With-Assets.png)
 - Click **Save** to save the entry.
 
 ### Steps to use the DAM App within the JSON RTE
 
 - In the **Content Type Builder** page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field in your content type by clicking the **Insert a field** link represented by a + sign.
 - Under **Select JSON RTE Plugin(s)**, choose the names defined for the JSON RTE UI location, and then click the **Add Plugin(s)** button.  
-  This adds the DAM app in the JSON RTE.
+  ![DAM-Biolerplate-Add-App-In-JSON-RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf45412ce1e1d16d4/6567905c399417cf82b4a21d/DAM-Biolerplate-Add-App-In-JSON-RTE.png)This adds the DAM app in the JSON RTE.![DAM-Biolerplate-Added-Plugin-In-JSON-RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc09aa6167ff01620/6567905cdd39861d631453b0/DAM-Biolerplate-Added-Plugin-In-JSON-RTE.png)
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
 - To use the DAM app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.  
-  You can see the DAM app’s icon in the JSON RTE on your entry page as shown below:
-- Click the DAM app's icon.
+  You can see the DAM app’s icon in the JSON RTE on your entry page as shown below:![DAM-Biolerplate-JSON-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6cdcbe39b5c266b9/656799a8d411313e3c249aed/DAM-Biolerplate-JSON-Sample-Entry.png)
+- Click the DAM app's icon.![DAM-Biolerplate-JSON-DAM-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt144b96a353d07875/656799a7df428296402f0578/DAM-Biolerplate-JSON-DAM-Icon.png)
 - Select assets from the third-party DAM website to add them to your entry.
-- The asset(s) you select are referenced within your entry. You can reorder the assets to arrange them in the required order within the JSON RTE.
+- The asset(s) you select are referenced within your entry. You can reorder the assets to arrange them in the required order within the JSON RTE.![DAM-Biolerplate-JSON-With-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbddc25938e964f93/656799a894e6c952d4216b33/DAM-Biolerplate-JSON-With-Assets.png)
 - Click **Save** to save the entry.
 
 ## How to Use Predefined Examples in the Marketplace DAM App Boilerplate

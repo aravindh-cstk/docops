@@ -55,8 +55,8 @@ To add Optimizely Experiments to your [stack](../set-up-stack/about-stack.md), l
 
 Go to the stack and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- Click on the **+ New Extension** button on the top-right corner and select **Create new.**
-- In the **Select Extension Type** dialog box, select **Sidebar Extension**.
+- Click on the **+ New Extension** button on the top-right corner and select **Create new.**![Optimizely_Experiments_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt63bbfa2e613684f2/60c21aa33a3d1a5f519ebfa8/Optimizely_Experiments_1_highlighted.png)
+- In the **Select Extension Type** dialog box, select **Sidebar Extension**.![Click_Sidebar_Extension.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt09ddddec72ae30e7/61e668a392df143501298011/Click_Sidebar_Extension.png)
 - You will be led to the **Create New Extension** details page, where you need to enter details in the fields as given below:
 **Title**: Provide a suitable title. For example, **Optimizely Experiments**.
 - **Hosting method**: Select **Hosted on Contentstack**. As soon as you do this, you will see the **Extension Source Code** field below.
@@ -81,7 +81,7 @@ Once you have added this Sidebar Extension, you can use it in entries of selecte
 
 Go to your stack and click on the “Entries” icon on the left navigation panel.
 - Select the content type for which you have enabled the Sidebar Extension and click on an [entry](../../content-managers/author-content/about-entries.md)
-- Click the “Sidebar Extensions” icon on the right side of the page, and select **Optimizely Experiments** from the dropdown menu.
+- Click the “Sidebar Extensions” icon on the right side of the page, and select **Optimizely Experiments** from the dropdown menu.![Optimizely_Experiments_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt99c06c90f7088f4c/60c21ac1f8aee612d39973bd/Optimizely_Experiments_3_highlighted.png)
 - The selected Sidebar Extension expands on the sidebar displaying the list of experiments that you have already created.
 - Click on the “Run” or “Pause” Action buttons to run or pause your experiments, respectively.
 

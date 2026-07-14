@@ -26,7 +26,7 @@ You can cancel a scheduled action directly from the Publish Queue.
 - The list of historical and current publishing or unpublishing activities appears.
 - Under **Filters**, apply the **Scheduled Publish/Unpublish** status filter to refine results.
 - From the filtered list, locate the entry whose scheduled publishing or unpublishing you want to cancel.
-- Click the vertical ellipsis in the **Actions** column, select **Cancel Scheduling**, and confirm the action in the modal that appears.
+- Click the vertical ellipsis in the **Actions** column, select **Cancel Scheduling**, and confirm the action in the modal that appears.![Cancel_Scheduling_from_the_Publish_Queue.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9c2bd72cce12b5d1/68c9463bf7584932821b2dea/Cancel_Scheduling_from_the_Publish_Queue.png)
 
 **Note:** You must cancel each scheduled item individually in the publish queue.
 
@@ -35,10 +35,10 @@ You can cancel a scheduled action directly from the Publish Queue.
 ## Cancel Scheduling from the Entry Editor
 
 You can also cancel a scheduled action directly from the Entry Editor.
-- In the **Entry Status Panel**, hover over the scheduled publish/unpublish pill.
+- In the **Entry Status Panel**, hover over the scheduled publish/unpublish pill.![Cancel_a_Scheduled_Publish.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta20aee4b5fc4d0c9/68c9464dc5d971770d2babc5/Cancel_a_Scheduled_Publish.png)
 - Click **Cancel schedule**.
 - In the **Cancel Scheduling** modal, review the confirmation message.
-- Click **Unschedule** to confirm.
+- Click **Unschedule** to confirm.![Cancel_Scheduled_Publish_Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt257bdded09ffe3f8/68c946773bec1f1a3ccb09df/Cancel_Scheduled_Publish_Modal.png)
 
 A processing message appears, and you can track the change in the **Publish Queue**.
 

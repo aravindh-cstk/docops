@@ -46,7 +46,9 @@ You can get the following information about your deployment from this panel if y
 - **Created At**: Displays the time when the project build succeeded.
 - **Commit Message**: Displays a commit message which indicates that deployment was triggered by file upload.
 - **Redeploy** button: Allows you to redeploy your project.
-- **Download Code** button: Allows you to download the code (.zip file) used for creating your project.**Note**: The Download Code button appears only when the deployment goes to `Live`, `Deployed`, or `Failed` status.
+- **Download Code** button: Allows you to download the code (.zip file) used for creating your project.
+
+  **Note**: The Download Code button appears only when the deployment goes to `Live`, `Deployed`, or `Failed` status.
 
 On successful deployment, Launch also generates a preview image of your site that can be viewed on the deployment information panel.
 
@@ -69,11 +71,11 @@ Following are the different project deployment statuses available in Launch:
 You can view the previous deployments of projects deployed using GitHub and File Upload methods. To do this, follow the below steps:
 - Click the drop-down button in the **Deployments** page to view the latest **15** deployments as given below:
       Projects deployed using GitHub:
-- Projects deployed using File Upload:
+- Projects deployed using File Upload:![Launch_Deployments_DeploymentsList_FileUpload.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0fb2913ccb7df336/6606134cb1b99aa0ee30e698/Launch_Deployments_DeploymentsList_FileUpload.png)
 - Click the **Show All** button at the bottom of the drop-down to view all the deployments.
 - Select a deployment of your choice and click **View Deployment** to view the selected deployment:
       Projects deployed using GitHub:
-- Projects deployed using File Upload:
+- Projects deployed using File Upload:![Launch_Deployments_DeploymentsList_ViewOld_FileUpload.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt91b98121f99cb320/6606134cc8592ef1466f1860/Launch_Deployments_DeploymentsList_ViewOld_FileUpload.png)
 
 ## Cancel Deployment
 

@@ -39,11 +39,11 @@ In order to use this extension, you will first need to retrieve the storefront A
 
 On the Admin portal page, click on **Apps** from the left navigation menu.
 
-- Then, navigate to the bottom of the **Apps **page and click on the **Develop app for your store** link.
-- On the** App Development **page. click on** Create an app**. Mention your **App name **and select the** App developer, **then click on the** Create app **button.
+- Then, navigate to the bottom of the **Apps **page and click on the **Develop app for your store** link.![Develop_Apps_For_Your_Store.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3d8ca8d004577408/63873be771c75510a0ca529b/Develop_Apps_For_Your_Store.jpg)
+- On the** App Development **page. click on** Create an app**. Mention your **App name **and select the** App developer, **then click on the** Create app **button.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt78564d40583de651/620c9396849cd422f315bdb8/image.png)
 - On the next screen, navigate to the **Configuration **section and **Configure **the **Storefront API **integration for your app.
-- Now, select access scopes for your** Storefront API **and** Save **your configuration.
-- Finally, click on the** Install app **button, confirm your installation and proceed to get the** Storefront API access token****. ******
+- Now, select access scopes for your** Storefront API **and** Save **your configuration.![Storefront_API_Integration.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte9f79dfed7ce3878/63873be7fbf52a10934f0fdc/Storefront_API_Integration.jpg)
+- Finally, click on the** Install app **button, confirm your installation and proceed to get the** Storefront API access token****. ******![Storefront_API_Access_token.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltda36fddac7331f78/63873be7f9bf30104c6e38eb/Storefront_API_Access_token.jpg)
 
 The **Storefront API access token** is required to connect your store with Contentstack so make a note of this access token to be used in the next step.
 
@@ -55,8 +55,8 @@ If Extensions are part of your plan, contact our [Support](mailto:support@conten
 
 - **index.html**: We will upload the code in this file in the extension source code field of our extension in the next step.
 - Navigate to the “Settings” icon on the left navigation panel, and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ New Extension **button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **+ New Extension** link as shown below.
-- In the **Select Extension Type **window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ New Extension **button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **+ New Extension** link as shown below.![Shopify_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1bc44f8e84b79d5b/60be36ab2d95121b9b3d0dad/Shopify_1_Highlighted.png)
+- In the **Select Extension Type **window, select **Custom Field**.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltaba20a294de9cf16/620dd88eee0ea123b12261ed/image.png)
 - On the **Create New Extension **page, enter values in the fields as given below:**Title ***(required)*: Provide a suitable title, for example, “Shopify,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
 - **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - ******Multiple ***(optional)*: Leave this field unchecked.
@@ -94,9 +94,9 @@ Once you have added a custom field, you can use it in your content type like any
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
 
-- Under **Select Extension**, select the “Shopify” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Shopify” field that you created and set the other properties. You can add other fields as per requirements.![Shopify_3_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt823daba42e31b410/60be3775f77af428924b9592/Shopify_3_Highlighted.png)
 - Finally, click on either **Save **or** Save and Close** to save your changes.
-- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Shopify **field in action, based on the **type **you define in the **Config Parameters **section of the extension. ****
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Shopify **field in action, based on the **type **you define in the **Config Parameters **section of the extension. ****![Shopify_5_no_highlight.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb52bb3ad792cd0e9/6140e1b0f725af79f53fb827/Shopify_5_no_highlight.gif)
 
 **Additional Resource:** You can also refer to our wide collection of e-Commerce sample apps built using [Ruby on Rails](../sample-apps/build-a-product-catalog-using-ruby-on-rails-and-contentstack.md) and [DataSync](../sample-apps/build-an-ecommerce-website-using-contentstack-datasync.md).
 

@@ -56,7 +56,9 @@ After you create the stacks, use the Contentstack CLI to import entries and [ass
 
 Navigate to the downloaded folder and access the folder named “stack-data.”
 
-- **Note:** Before importing the data, make sure that you are [authenticated](../cli/cli-authentication.md) and have [added the stack management tokens](../cli/cli-authentication.md) for the parent Stack and the Child stacks A and B in CLI session.
+- 
+
+  **Note:** Before importing the data, make sure that you are [authenticated](../cli/cli-authentication.md) and have [added the stack management tokens](../cli/cli-authentication.md) for the parent Stack and the Child stacks A and B in CLI session.
 - Fire up the command prompt and run the following command and hit enter.
 - ```
   csdx cm:import -a
@@ -84,7 +86,9 @@ Log in to your **AWS Management Console** and select Lambda from the **Service**
 - Configure the lambda based on your requirements. Choose [**Node.js 16.x**](https://nodejs.org/en/download/) as your run-time language and click on the **Create function** button.
 - AWS Lambda offers an inline code editor. You can write your lambda code here or alternatively upload the code.
 - Once you get the code, upload the zip file of the “index” folder within the “lambda-function” folder on Lambda by selecting the **Upload a .zip** file option from the **Actions** drop-down. Keep **Handler** as **index/index.handler** and click on **Save**.
-- **Note:** Make sure that you only upload the “index.zip” file included in the “lambda-function” folder. Do not zip the entire source code folder.
+- 
+
+  **Note:** Make sure that you only upload the “index.zip” file included in the “lambda-function” folder. Do not zip the entire source code folder.
 - This is how it will look when you upload the code in the editor:
 - - - Once we have uploaded the code in the editor, let's now set up the **Environment variables** by adding the values to the keys as follows:**apiKeyStackA**: API key of the stack A
 - **apiKeyStackB**: API key of the stack B
@@ -103,13 +107,13 @@ This is depicted in the screenshot below:-
 
 Let’s proceed to create a trigger in our Lambda function by performing the following steps:
 
-Click on the **+ Add Trigger** button
+Click on the **+ Add Trigger** button![add_trigger.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltfd2af98bb6d5463d/5fa43fc0c1502b76a1699cf5/add_trigger.png)
 
 - Select **API Gateway** from the **Trigger Configuration** drop-down menu.
 - In the **API** sub-section, select the **Create an API** option from the dropdown, and set the options as shown in the image below:**API Type - Rest API**
-- **Security - Open******
+- **Security - Open******![API_setting.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltd44f1e991629232e/5fa4407b97f9f35d942e8b7c/API_setting.png)
 - Click on the **Add** button.
-- Within the **API Gateway** section, expand the **Details** menu. Next, note down the **API endpoint** URL as we will need it to configure the webhook in Contentstack.
+- Within the **API Gateway** section, expand the **Details** menu. Next, note down the **API endpoint** URL as we will need it to configure the webhook in Contentstack.![API_gateway_updated.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltee2e5ea260c3823c/6399a95353892a121b0b608a/API_gateway_updated.jpg)
 
 With this, we’ve completed the lambda setup.
 
@@ -122,9 +126,9 @@ To do this, in your [Contentstack account](https://app.contentstack.com/), go to
 Click on the “settings” icon on the left panel and click on **Webhooks**.
 
 - Click on **+ New Webhook** and enter the details in the name [field](../create-content-types/about-fields.md).
-- Create custom headers as shown below:
-- Paste the API endpoint URL in the **URL to notify** field.
-- Next, add the conditions for triggering the webhook as shown below in the **Conditional View** section: Note that we’ve added four conditions. This is because we have four content types, we want both the child stacks to be updated whenever any or all of the entries within these content types are changed.
+- Create custom headers as shown below:![Sync_Data_Between_Stacks_Using_Contentstack_Webhooks_and_AWS_Lambda_2_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc0ba74206f9dfc2d/60c202fff33fd90fa1ed1aee/Sync_Data_Between_Stacks_Using_Contentstack_Webhooks_and_AWS_Lambda_2_no_highlight.png)
+- Paste the API endpoint URL in the **URL to notify** field.![Sync_Data_Between_Stacks_Using_Contentstack_Webhooks_and_AWS_Lambda_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt89c4d6e039718491/60c20312f33fd90fa1ed1af2/Sync_Data_Between_Stacks_Using_Contentstack_Webhooks_and_AWS_Lambda_3_highlighted.png)
+- Next, add the conditions for triggering the webhook as shown below in the **Conditional View** section: ![Sync_Data_Between_Stacks_Using_Contentstack_Webhooks_and_AWS_Lambda_4_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt51a0a5cc15ab2857/60c20321f77af428924ba7fc/Sync_Data_Between_Stacks_Using_Contentstack_Webhooks_and_AWS_Lambda_4_no_highlight.png)Note that we’ve added four conditions. This is because we have four content types, we want both the child stacks to be updated whenever any or all of the entries within these content types are changed.
 - Finally, click the **Enable Webhook** checkbox option and, **Save **the webhook.
 
 ### Run the Sample App

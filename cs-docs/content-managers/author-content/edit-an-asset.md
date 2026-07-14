@@ -22,7 +22,7 @@ Editing assets in Contentstack is quick and seamless. You can update titles, des
 To edit an asset, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel or use the shortcut key “A” (for both Windows and Mac users).
 - Navigate to the asset you want to modify and update the **title**, **description**, or **tags** as needed.
-- To replace the asset, click the **Replace** button on the file preview image. Browse your files and upload the new file to replace the existing one.
+- To replace the asset, click the **Replace** button on the file preview image. Browse your files and upload the new file to replace the existing one.![Edit-an-Asset.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt01a775483567215d/675048eeef6d5aad69229a0b/Edit-an-Asset.gif)
 - Click **Save** to confirm your updates. The system will automatically create a new version of the asset, maintaining version history.
 
 **Note:**

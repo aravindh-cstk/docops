@@ -27,8 +27,8 @@ Below is the list of prebuilt templates that Contentstack provides:
 To use a prebuilt custom Sidebar Extensions, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon on the left navigation panel.
 - Click on **Extensions**.
-- Click on the **+ New Extensions** button at the top-right corner of the page, and select the **Use prebuilt** option.
-- In the **Prebuilt Extensions** window, select **Custom Sidebar Extensions** from the dropdown.
+- Click on the **+ New Extensions** button at the top-right corner of the page, and select the **Use prebuilt** option.![Use_Prebuilt_Sidebar_Extensions_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt26edb9404d2f153f/60b53e2fdbcf2a08eed7a24c/Use_Prebuilt_Custom_Widgets_1_highlighted.png)
+- In the **Prebuilt Extensions** window, select **Custom Sidebar Extensions** from the dropdown.![Use_Prebuilt_Custom_Widgets_2_highlighted.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3f57ead6973e9158/638716175bd399105c6fdedd/Use_Prebuilt_Custom_Widgets_2_highlighted.jpg)
 - Hover over any prebuilt template (for example, **Text Intelligence**), and click on **+ ****Add Extension**.
 - In the **Create New Extension** page, you will see the following options:
       **Title*** (required)*: You will see a predefined title that is displayed as the Sidebar Extension name on the entry page. You can edit it as per requirements.

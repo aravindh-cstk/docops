@@ -23,7 +23,7 @@ The Analytics dashboard for Assets provides detailed insights into asset usage, 
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to **Analytics** through the “App Switcher”.
-- By default, the **CMS** analytics dashboard appears. Click **Assets** to switch dashboards.
+- By default, the **CMS** analytics dashboard appears. Click **Assets** to switch dashboards.![Analytics_Assets_Select.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am66d5dae27a0c3da1/99c4cb9a3336e17e4dfe5ed5/Analytics_Assets_Select.png?locale=en-us)
 
 **Note:** The data in the Assets dashboard is updated every **24 hours**.
 

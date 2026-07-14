@@ -271,32 +271,34 @@ npm run dev
 ### Creating a Project Using The Boilerplate
 To use your application, you need to upload it to Contentstack. To do so, perform the steps given below:
 - Log in to your [Contentstack account](https://www.contentstack.com/login).
-- In the left-hand-side primary navigation, you will find a new icon for Developer Hub (as shown below). Click the icon to go to the **Developer Hub**.
+- In the left-hand-side primary navigation, you will find a new icon for Developer Hub (as shown below). Click the icon to go to the **Developer Hub**.![Welcome_to_Developer_Hub.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfe12cce20145a8ad/65b7a9dffd23e528627d99cd/Welcome_to_Developer_Hub.png)
 - Click the **+ New App** button.
 - In the **New App** modal, select **Stack App** as the **Type of App**. Enter a suitable **Name** for your app and an optional **Description**, and then click the **Create** button. By default, the **Status** of the created app will be **Private**.
-**Warning**: While selecting the **Type of App** in the above step, ensure you select **Stack App**, as this boilerplate supports stack apps only.
+![Install_Stack_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd6cb3909311101d8/64fa02ea68d8e1286460287d/Install_Stack_App.png)**Warning**: While selecting the **Type of App** in the above step, ensure you select **Stack App**, as this boilerplate supports stack apps only.
 - Click **Create**.
-- On the resulting **Basic Information **page, upload your app’s icon and **Save **the changes.
-- Click the **UI Locations **tab. To set the **App URL**, click the **View Hosting Settings **link. You will be redirected to the **Hosting **tab.
+- On the resulting **Basic Information **page, upload your app’s icon and **Save **the changes.![Basic_Information.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte8a927be837a9df4/65b7d85c55a88a0bc9da6b45/Basic_Information.png)
+- Click the **UI Locations **tab. To set the **App URL**, click the **View Hosting Settings **link. You will be redirected to the **Hosting **tab.![UI_Locations_Configuratio.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta4ac8e296d5e4cf5/65b7d8c8c025ee4a08b87f9b/UI_Locations_Configuratio.png)
 - Add the UI Locations as per your requirement.
 - Add the below routes for each UI Location to get the desired results.**Note: **The name for each UI Location is optional, and can be used to override the default app name.
 
 **Custom Field**
-You must add two custom locations to view the Product and Category for the products in your Contentstack entry. In the Custom Field 1, use `<your_ app_name="">- Product` for Name and `/product-field` for Path. In the Custom Field 2, user `<your_app_name> - Category` for Name and `/category-field` for Path. Select the Data Type as JSON to fetch JSON data in your entry.
+You must add two custom locations to view the Product and Category for the products in your Contentstack entry. In the Custom Field 1, use `<your_ app_name="">- Product` for Name and `/product-field` for Path. In the Custom Field 2, user `<your_app_name> - Category` for Name and `/category-field` for Path. Select the Data Type as JSON to fetch JSON data in your entry.![Custom_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0f3905eeb04cf7a4/65b75ee15f12ed00a6e218ae/Custom_Field.png)
 - **Entry Sidebar**
-For the Entry Sidebar UI Location, use `/sidebar-widget` for Path.
+For the Entry Sidebar UI Location, use `/sidebar-widget` for Path.![Entry_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt88259b4f5e04c2ce/65b75ee093cdf1d9357ca785/Entry_Sidebar.png)
 - **App Configuration**
-For the App Configuration UI Location, use `/config `for Path.
+For the App Configuration UI Location, use `/config `for Path.![App_Config.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4106414a17b6274c/65b75edf30d47ec25d521b03/App_Config.png)
 
 **Note:** After adding each route **save **and **install **the app in any stack.
-- Select the stack where you want to install the app and click the **Install **button.
-- You will be redirected to the configuration page of the app.
+- Select the stack where you want to install the app and click the **Install **button.![Install_the_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt08a567e20ce0e5ff/64fa02eb9da01596a61eb191/Install_the_App.png)
+- You will be redirected to the configuration page of the app.![Configuration_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt20c455f6d08a62b6/64fa02dd7db54e3536c18f03/Configuration_Page.png)
 - On the **Configuration **page, enter the values for **Sample Ecommerce App Client ID** and **Sample Ecommerce App Client Secret**. Let’s understand the configuration fields:
 
 **Sample Ecommerce App Client ID**
-You can enter the Client ID fetched from the third-party ecommerce website and save the data. You can also use any other app configuration as per your ecommerce website.**Note:** This configuration is a template for the user to understand how they can add/update/remove the config fields and add customized fields based on their requirement.
+You can enter the Client ID fetched from the third-party ecommerce website and save the data. You can also use any other app configuration as per your ecommerce website.
+
+**Note:** This configuration is a template for the user to understand how they can add/update/remove the config fields and add customized fields based on their requirement.
 - **Sample Ecommerce App Client Secret:**
-You can use this field to enter Client Secret fetched from third-party ecommerce websites. You can also customize the app configuration with your dedicated fields.
+You can use this field to enter Client Secret fetched from third-party ecommerce websites. You can also customize the app configuration with your dedicated fields.![Configuration_page_with_highlights.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte33689110897123d/64fa02ddea4b5d2213510b63/Configuration_page_with_highlights.png)
 
 **Note: **With **Save in Entry** field, If you select the ''Custom Fields'' option, you can select the structure of the data you want to save in the entry. If the 'All Fields' option is selected, you might be able to add limited products in the custom field depending on the size of the data (Refer to the [Custom Fields Limitations](../create-custom-fields/limitations-of-custom-fields.md) documentation, for more details). To increase this limit, **Items Per Page** defines the number of products to be displayed on the selector screen.
 
@@ -320,21 +322,23 @@ You can check examples of some ecommerce websites, such as BigCommerce and SAP C
 
 Restart both the servers for UI and API using the npm command as shown above.
 - Click **Save **and click **Open Stack** to start using the application.
-- Navigate to the stack where your application is installed and view your application in the configured UI location.**Note: **You **must **open the app in the configured UI location to view it.
+- Navigate to the stack where your application is installed and view your application in the configured UI location.
+
+  **Note: **You **must **open the app in the configured UI location to view it.
 - ## Use the Ecommerce application within your Stack
 - To use the Ecommerce application within an entry of your stack, follow the steps given below:
 
 Go to your stack and click the “Content Models” icon on the left navigation panel, and click the **+ New Content Type** button.
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![Save_Proceed_Content_Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5e449ddc676c8c38/64fa02eab8c6d6741d0e41b7/Save_Proceed_Content_Type.png)
 - In the Content Type Builder page, add a Custom field in your content type by clicking on the “Insert a field” link represented by a + sign.
-- Under **Select Extension/App**, select names defined for the Custom Field UI locations and click **Proceed**.
+- Under **Select Extension/App**, select names defined for the Custom Field UI locations and click **Proceed**.![Select_Extension_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteee23927efa8ed72/64fa02fe1d03ad077cdf2fd9/Select_Extension_App.png)
 - After adding the app, click either **Save **or **Save and Close** to save your changes.
-- To use the Ecommerce app, create an entry for this content type, and you will see this Ecommerce custom fields on your entry page as shown below:
-- Click the **+ Add Product(s)** button and select the products you want to add from the third-party ecommerce website.
-- You will see the products fetched within your entry. You can drag and drop the products to arrange them in required order in both **Thumbnail **and **List **views.
+- To use the Ecommerce app, create an entry for this content type, and you will see this Ecommerce custom fields on your entry page as shown below:![Custom_Field_on_Entry_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8dc3ad1c2d4dfc58/64fa02dd1c72d86d028af121/Custom_Field_on_Entry_Page.png)
+- Click the **+ Add Product(s)** button and select the products you want to add from the third-party ecommerce website.![Products_Selector_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8622fc3b83571837/64fa02ebc40f775e7da51e97/Products_Selector_Page.png)
+- You will see the products fetched within your entry. You can drag and drop the products to arrange them in required order in both **Thumbnail **and **List **views.![CustomProducts_Selection.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c0a00e731190cda/64fa02eb8606a805e1c853e7/CustomProducts_Selection.png)![CustomFieldCategory.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbd88c4da65b218ff/64fa02ebe60bfc77f3d3cff1/CustomFieldCategory.png)
 - Click the **Save **button.
-- You can view more product details in **Sidebar Widget**.
-- In the **Sidebar Widget**, enter the product name in the dropdown field to search and view the product details.
+- You can view more product details in **Sidebar Widget**.![Sidebar_Widget_Select_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3eb4656035b0f9fc/64fa02fd9bf261fb486bac99/Sidebar_Widget_Select_App.png)
+- In the **Sidebar Widget**, enter the product name in the dropdown field to search and view the product details.![Sidebar_Widget_Product_Details.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd6b07771a471e9dd/64fa02feec93375676ec5720/Sidebar_Widget_Product_Details.png)
 - -
 
 ## Common questions

@@ -17,9 +17,9 @@ This page explains how to rename a step in an automation. It is intended for dev
 ## Rename Step
 
 To rename a step from the automation, perform the steps given below:
-- Click the action tab (in our case, **Send Message**).
-- Click the edit icon visible on the action header to rename the step.
-- The **Send Message** field becomes editable. You can update the name of the step as required and click the “✔” check mark.
+- Click the action tab (in our case, **Send Message**).![Click_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf51d4784fd88cf5a/65aa9123c1930f3d6bf8b69c/Click_Action.png)
+- Click the edit icon visible on the action header to rename the step.![Click_to_rename.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd363ddaf9d6b09a2/65aa91239b1ffed84ae0e558/Click_to_rename.png)
+- The **Send Message** field becomes editable. You can update the name of the step as required and click the “✔” check mark.![Click_to_Update.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltadffa8b8e142089f/65aa9123c7bb16b494a29760/Click_to_Update.png)
 
 ## Common questions
 

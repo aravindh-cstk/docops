@@ -26,7 +26,7 @@ To tag a user or role in a comment, log in to your [Contentstack account](https:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and open an existing entry.
 - Open an entry and click the “Add comment” icon for a field.
 - To tag someone in the comment, type “@” and type their name or role. Then, select the user or role from the suggestions.
-    **Note:** You can tag users or roles in [JSON RTE comments](../../developers/json-rich-text-editor/json-rte-comments.md#tag-users-or-roles-within-a-json-rte-comment) for specific content blocks, text, and images.
+![Tagging a user or role in Contentstack comments](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5d5a272a9a301e5f/6788e1e05b4b8a822e68a935/Mention-Users-or-Roles-in-a-Comment-1-Tag-User-In-Comment.png)    **Note:** You can tag users or roles in [JSON RTE comments](../../developers/json-rich-text-editor/json-rte-comments.md#tag-users-or-roles-within-a-json-rte-comment) for specific content blocks, text, and images.
 - Click **Post** to comment.
 
 **Note:**

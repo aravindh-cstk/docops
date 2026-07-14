@@ -23,7 +23,7 @@ To import a Global field, log in to your [Contentstack account](https://www.cont
 - Click the **Content Models** icon in the left navigation panel and select **Global Fields** in the left panel.
 - Click the **Import Global Field** icon at the top right corner.
 - In the **Import Global Field** modal, browse and select the JSON file of the Global field you want to import.
-- Click **Import** to complete the process.
+- Click **Import** to complete the process.![Import Global Field modal interface](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcf7875e1069d942e/67ffa258782624e5d02e2e60/1-Import-Global-Field-1.gif)
 
 **Note:** When working with nested Global fields, ensure that all child Global fields are imported before attempting to import the parent Global field.
 

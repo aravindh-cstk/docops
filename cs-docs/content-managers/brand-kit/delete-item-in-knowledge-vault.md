@@ -31,14 +31,14 @@ If a Knowledge Vault item is no longer required, or becomes outdated or unnecess
 
 To delete a Knowledge Vault item, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-- On the left navigation panel, click the **Brand Kit** icon.
-- Select the **Brand Kit** whose Knowledge Vault item you want to delete.
-- Click **Knowledge Vault** from the left navigation panel.
-- Under the **Actions** tab, click the vertical ellipses corresponding to the Knowledge Vault item that you want to delete and then select **Delete**.
-- In the **Delete Item** modal, click **Delete** to permanently delete the Knowledge Vault item.
+- On the left navigation panel, click the **Brand Kit** icon.![1-Brand-Kit-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2793aa12bafb2903/6656329d02c997c334b84fcb/1-Brand-Kit-Icon.png)
+- Select the **Brand Kit** whose Knowledge Vault item you want to delete.![2-Knowledge-Vault-Select-Brand-Kit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1af4d1966c322020/66d86dde7297ea10f267b2a0/2-Knowledge-Vault-Select-Brand-Kit.png)
+- Click **Knowledge Vault** from the left navigation panel.![3-Knowledge-Vault-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt50ec638cb467c43c/66d87b4acf5ddd1ae5849ca8/3-Knowledge-Vault-Icon.png)
+- Under the **Actions** tab, click the vertical ellipses corresponding to the Knowledge Vault item that you want to delete and then select **Delete**.![4-Knowledge-Vault-Delete-Item](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte3395febc816efb8/6800f7cadac258beb1adde65/4-Knowledge-Vault-Delete-Item.png)
+- In the **Delete Item** modal, click **Delete** to permanently delete the Knowledge Vault item.![5-Knowledge-Vault-Delete-Item-Delete-Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt452659117331cfdc/66d87b4aa2a54f9b09fd916f/5-Knowledge-Vault-Delete-Item-Delete-Button.png)
 - To delete the subfolder from the Knowledge Vault, click the **Delete** option. You can also delete selected items from the folder.  
-  **Warning**: If you delete a folder, all items within the folder will be deleted.
-- In the **Delete Folder** modal, click the **Delete** button to permanently delete the Knowledge Vault folder.
+![4-a-Knowledge-Vault-Delete-Folder](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3ccea8903019adee/6800f7caf2c808f54f1ad2f9/4-a-Knowledge-Vault-Delete-Folder.png)  **Warning**: If you delete a folder, all items within the folder will be deleted.
+- In the **Delete Folder** modal, click the **Delete** button to permanently delete the Knowledge Vault folder.![4-b-Knowledge-Vault-Delete-Folder-Modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt762b786f86555557/6800f7ca1930db1a08e277c6/4-b-Knowledge-Vault-Delete-Folder-Modal.png)
 
 You will get a success message once the item or folder is deleted from the Knowledge Vault.
 

@@ -28,7 +28,9 @@ To create a custom role, log in to your [Contentstack account](https://www.conte
 - Open the **Roles** tab.
 - Click **+ New Role**.
 - Enter a name and description for the role.
-- Under **Scope**, select one or more workspaces. This role applies only to the selected workspaces.**Note:** Changing the selected workspace(s) resets previously configured permissions.
+- Under **Scope**, select one or more workspaces. This role applies only to the selected workspaces.
+
+  **Note:** Changing the selected workspace(s) resets previously configured permissions.
 - In the **Assets** section, click **+ Add Rule** to define what the role can do.Select permissions: **Read**, **Create**, **Update**, **Delete**.
 - Choose the scope:**All Asset(s) and Folder(s)**
 - **Specific Folder(s)** > **Select Folders**

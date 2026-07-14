@@ -32,14 +32,16 @@ To generate a management token, log in to your [Contentstack account](https://ww
 **Tip**: This option appears only if an alias exists for a branch.
 - Select the stack-level permissions you want to assign to this token (e.g., Read and/or Write).
 - Under **Expiry**, set an expiration limit for the token:Select **Never** if the token should not expire.
-- Choose **Date (in UTC)** to set a specific expiration date. If selected, you can also enable **Notify via email** to receive a reminder **7 days** before expiry.**Note:** The management token expires at **midnight UTC** on the chosen date. When a management token expires, it becomes invalid and cannot be used to make any [Content Management API](../../../api-docs/api-detail/content-management-api.md) calls.
+- Choose **Date (in UTC)** to set a specific expiration date. If selected, you can also enable **Notify via email** to receive a reminder **7 days** before expiry.
+
+  **Note:** The management token expires at **midnight UTC** on the chosen date. When a management token expires, it becomes invalid and cannot be used to make any [Content Management API](../../../api-docs/api-detail/content-management-api.md) calls.![Management Token Expiry Setup](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6bf53a4da6ea2dd1/67fe204f696c052f7d35a4eb/Generate_Mgmt_Token_aliases.png)
 - In the **Manage Rate Limits** section, configure the token's rate limits within your organization's overall rate limit:**Use Organization Rate Limit (default):** The token will follow the default organization-wide rate limit.
 - **Enforce Custom Rate Limit:** You can specify a custom rate limit for the token, within the organization’s overall rate limit.**Read Requests Per Second:** Enter the maximum number of GET requests allowed for the token.
 - **Write Requests Per Second:** Enter the maximum number of POST, PUT, DELETE, or other requests allowed for the token.
 
 **Note:** Custom rate limits cap the number of requests per second, ensuring efficient usage within your organization’s allocation.
 - Click **Generate Token**. A confirmation window displays the **Stack API Key** and the generated **Management Token**.
-**Warning:** Make sure to copy the token now—once the window is closed, you won’t be able to view it again.
+**Warning:** Make sure to copy the token now—once the window is closed, you won’t be able to view it again.![Generate Management Token Confirmation](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf123b87b92071b44/67f5c0eb1858947e0da0a9d4/Generate_Mgmt_Token_Confirmation.png)
 - Click **Done** on the modal to finalize and activate the management token.
 
 **Note:** You can generate up to **30 management tokens per stack** within your organization.

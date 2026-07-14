@@ -27,7 +27,7 @@ To add a new user in the stack, log in to your [Contentstack account](https://ap
 - Click on the **Invite User** button located at the top right corner of the page.
 - The **Invite User** forms opens up where you can add the following details:**Email**: Enter the email address(es) of the user(s) you want to invite and share the stack with
 - **Roles**: Select the [role(s)](./about-stack-roles.md) that you want to assign to the new user
-- **Message** (optional): Enter a short message that goes along with the invitation to the user
+- **Message** (optional): Enter a short message that goes along with the invitation to the user![Add_a_New_User_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltaa1701f258fa3b72/60bf7ea3f8aee612d39966be/Add_a_New_User_no_highlight.png)
 - Click on **Invite**.
 
 The invited user will receive an invitation email. Once the user accepts the invitation, he/she can collaborate with you on the specified stack.

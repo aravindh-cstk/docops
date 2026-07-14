@@ -36,7 +36,7 @@ To publish a page of your website, log in to your [Contentstack account](https:/
 - [Edit the page](./edit-page.md) directly on the canvas or use the [**Form**](./form.md) panel.
 - Click **Save** in the top-right corner and confirm your changes in the **Save Changes** modal.
 - Click **Publish**. This opens the **Publish Entries** modal.
-- Select the entries you want to publish and click **Proceed**.
+- Select the entries you want to publish and click **Proceed**.![1._Publish_Entries_modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb04dd4475f3eac42/6992e819ca1be7000834bfa1/1._Publish_Entries_modal.png)
 - If an entry contains errors, click the error message below the entry title. The entry form opens with errors listed at the top. Resolve the errors before proceeding.
 - In the **Publish Entries** modal, select the target [environments](../../developers/set-up-environments/about-environments.md) and click **Proceed**.
 - For additional control, click the dropdown next to the **Publish** button, select **Advanced Publish**, choose the desired entries in the **Publish Entries** modal, and then click **Proceed**.

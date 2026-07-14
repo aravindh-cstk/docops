@@ -39,8 +39,8 @@ To retrieve these details, log in with the Admin Marketo account, and follow the
 ### Retrieve Munchkin Account ID
 
 To get your Munchkin Account ID, perform the steps given below:
-- Log in to your Admin Marketo account, and click **Admin** in the top right corner.
-- On the left-hand side navigation, under **Integration**, click **Munchkin**. A page opens, where you will find the **Munchkin ID**.
+- Log in to your Admin Marketo account, and click **Admin** in the top right corner.![Login_to_Admin_Marketo_Account.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt409e02b9fe6d747d/63875a53fbf52a10934f100c/Login_to_Admin_Marketo_Account.jpg)
+- On the left-hand side navigation, under **Integration**, click **Munchkin**. A page opens, where you will find the **Munchkin ID**.![Click_on_Munchkin.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3ac5cecea3a98db3/5fc79f6824612d7400daa68d/Click_on_Munchkin.png)
 
 ### Retrieve Client ID and Client Secret
 
@@ -49,26 +49,26 @@ To get your Client ID and Client Secret, perform the steps given below.
 #### Step 1: Create a role that has full API access
 
 - Click **Admin** in the header.
-- On the left-hand side navigation panel, under **Security**, click on **Users & Roles**. Then, click on the **Roles** tab, and click **New Role** option.
-- Enter the **Role Name** (e.g., API-only User) and **Description*** (optional)*. Expand the **Access API** options in **Permissions**, and select **Read-Only Assets**.
+- On the left-hand side navigation panel, under **Security**, click on **Users & Roles**. Then, click on the **Roles** tab, and click **New Role** option.![Click_on_Roles_tab.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb0f3ec4204a155ca/5fc79f7697f9f35d942f0657/Click_on_Roles_tab.png)
+- Enter the **Role Name** (e.g., API-only User) and **Description*** (optional)*. Expand the **Access API** options in **Permissions**, and select **Read-Only Assets**.![Create_the_Api-only_User_Role.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5a6f015a3f6735a9/5fc79f69bfc5dd718866158d/Create_the_Api-only_User_Role.png)
 - Click **Create**.
 
 You will now need to create a user to whom you can assign this role.
 
 #### Step 2: Add an API-only user
 
-- Open the **Users** tab and click** Invite New** **User**.
-- Fill out the necessary information such as **Email**, **First Name**, and **Last Name** under **Step 1: Info**. Then, click **NEXT**.
-- In **Step 2: Permissions**, check the newly created role under **Roles** and check the **API Only** checkbox.
+- Open the **Users** tab and click** Invite New** **User**.![Click_on_Invite_New_User_.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blteb7869f6943bcd05/5fc79f6824612d7400daa689/Click_on_Invite_New_User_.png)
+- Fill out the necessary information such as **Email**, **First Name**, and **Last Name** under **Step 1: Info**. Then, click **NEXT**.![Enter_API-Only_User_info.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt73625cc3d0b1c706/5fc79f8709ed4c6f277f2116/Enter_API-Only_User_info.png)
+- In **Step 2: Permissions**, check the newly created role under **Roles** and check the **API Only** checkbox.![Assign_Permissions_to_the_API-only_User_role.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2c82dfc49bc8e41f/5fc79f756f82405d9a4b141d/Assign_Permissions_to_the_API-only_User_role.png)
 - Click **NEXT** and **Send**.
 
 Now, you need to create a service and assign the user to retrieve the Client ID and Client Secret.
 
 #### Step 3: Create a service in Marketo
 
-- In the left-hand side navigation panel, under **Integration**, click **LaunchPoint**. On the page that opens, click **New** and then **New Service** from the drop-down.
-- In the **New Service** window, enter a **Display Name**. Under **Service**, select **Custom**. Enter a **Description** and select the **API Only User** that you invited. This user will have full API access.
-- Once you have created the new service, click **View Details** to obtain the Client ID and Client Secret.
+- In the left-hand side navigation panel, under **Integration**, click **LaunchPoint**. On the page that opens, click **New** and then **New Service** from the drop-down.![Click_on_LaunchPoint_.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0c65a9744cd9692b/5fc79f766f82405d9a4b1421/Click_on_LaunchPoint_.png)
+- In the **New Service** window, enter a **Display Name**. Under **Service**, select **Custom**. Enter a **Description** and select the **API Only User** that you invited. This user will have full API access.![Enter_Service_details.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt980df7cca86fd33e/5fc79f936f82405d9a4b1425/Enter_Service_details.png)
+- Once you have created the new service, click **View Details** to obtain the Client ID and Client Secret.![Click_on_View_Details.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt649f6d1c91ebdef9/5fc79f684a4abb73ff7a322f/Click_on_View_Details.png)
 
 By the end of this step, you will have the Munchkin ID, Client ID, and Client Secret of your Marketo account.
 
@@ -97,8 +97,8 @@ To add the Marketo Form custom field extension to your stack, log in to your Con
 
 Go to your [stack](../set-up-stack/about-stack.md), and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ Add Extension** button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one** link as shown below.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ Add Extension** button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one** link as shown below.![Marketo_Forms_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt85d908c3386f359c/60bd81cc68689d78c8630595/Marketo_Forms_1_highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Marketo_Forms_2_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt97ea9945a909dcaf/60bd81b3f8aee612d3995d19/Marketo_Forms_2_no_highlight.png)
 - On the **Create New Extension **page, enter values in the fields as given below:
 **Title ***(required)*: Provide a suitable title, for example “Forms,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
 - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
@@ -123,9 +123,9 @@ Now, let’s understand how you can start using this custom field in your conten
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
-- Under **Select Extension**, select the “Marketo” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Marketo” field that you created and set the other properties. You can add other fields as per requirements.![Marketo_Forms_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt4fe182fd4d3aac1a/60bd81bf3fb413770446e769/Marketo_Forms_3_highlighted.png)
 - Finally, click on either **Save **or** Save and Close** to save your changes.
-- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Forms **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Forms **field in action.![Marketo_Forms_4_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltdde68841b1e2d045/60bd81aa68689d78c8630591/Marketo_Forms_4_no_highlight.png)
 
 ## More Articles
 

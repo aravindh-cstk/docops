@@ -19,9 +19,9 @@ This page explains how to change an entry’s workflow stage, assign the next st
 ## Change Workflow Stage of an Entry
 
 Once you are done working on a particular stage of an entry (e.g., Draft), you can change the stage of the entry (e.g., Ready for Review) and assign a user to work on the next stage. You can also add a due date for the next stage. Let’s look at how it’s done.
-- On the entry page, go to the **Workflow Details** section on the right side panel. You will see the current stage of the entry, along with the stage’s color label as shown below:
+- On the entry page, go to the **Workflow Details** section on the right side panel. You will see the current stage of the entry, along with the stage’s color label as shown below:![1. Change the entry page.png](https://images.contentstack.io/v3/assets/bltf2fb14dd3176c6f6/bltd5f2689b408bc832/5c00c3878a4bdd8f0b14b515/download)
 - Click on the **Change** link located beside the stage name.
-- This will open up a new window where you can make changes to the Workflow Stage of the entry as shown below:
+- This will open up a new window where you can make changes to the Workflow Stage of the entry as shown below:![2. Entry WF Settings.png](https://images.contentstack.io/v3/assets/bltf2fb14dd3176c6f6/bltc20338b4eb9efdbc/5c00c38722e8991b21f9d6da/download)
 - Under **Set Workflow Stage**, select the stage that you want to set for this entry.
 - Set a **Due Date** for this new stage by using the date picker tool.
 - Assign this stage to one or more users of your stack. To assign it to a user, click the **User(s)** field under **Assign to**, and select the user(s) from the list. If you can see a **Role(s)** field, you can assign the stage to a role.

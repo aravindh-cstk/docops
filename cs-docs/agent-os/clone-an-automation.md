@@ -24,11 +24,11 @@ Creating a duplicate version of an automation can be useful for a number of reas
 - Suppose you need to create an automation similar to another one. In that case, you can create a clone of the similar automation and have a nice starting point from which to begin building your steps.
 
 To clone an automation, perform the steps given below:
-- On the **Automations** listing page, click the **clone** icon.
+- On the **Automations** listing page, click the **clone** icon.![Clone_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt929a4072f9f79cad/699bcdb58923a00008498a84/Clone_Icon.png)
 - On the **Clone Automation** modal, provide the **Automation Name **and **Select Project **from the dropdown to clone the automation to the selected project.
-- Once you have updated the details, click **Clone**.
-- You can see the clone created for the automation in the selected project.
-- Alternatively, go to the automation **Settings** page and click **Clone Automation** to duplicate the automation.
+- Once you have updated the details, click **Clone**.![Clone_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt689742509b94d67a/699bcdb5676f8800085c09f8/Clone_Button.png)
+- You can see the clone created for the automation in the selected project.![Cloned_Automation_on_listing_page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9b241d4839e2faa5/699bcdb5e8917700087c2736/Cloned_Automation_on_listing_page.png)
+- Alternatively, go to the automation **Settings** page and click **Clone Automation** to duplicate the automation.![Clone_settings_page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt726350aa42f65ce6/699bcdb58923a00008498a88/Clone_settings_page.png)
 
 **Note:** You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](./throttle-execution.md) document.
 
@@ -46,8 +46,8 @@ If you have defined project variables in your project and used them in your auto
 
     **Note:** Project Variables are defined at project level.
 - Enable the toggle to copy the variables.
-- Click **Clone **to clone the automation.
-- You will see the cloned automation along with the project variables in the destination project.
+- Click **Clone **to clone the automation.![Clone_Button_New.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt45a84e1b1ab1b92a/656dbe190e4fd115ee57fc4a/Clone_Button_New.png)
+- You will see the cloned automation along with the project variables in the destination project.![Cloned_Automation.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt186c29da47bc5537/656dbe360e4fd163d957fc4e/Cloned_Automation.png)
 
 ## Common questions
 

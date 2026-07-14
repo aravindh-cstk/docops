@@ -39,11 +39,11 @@ Let's follow this step-by-step guide to install and configure Shopify within you
 To get your configuration details for Shopify, follow the steps given below:
 
 Log in to your [Shopify account](https://accounts.shopify.com/).
-- On the Admin portal, click **Apps** in the left navigation menu and then select **App and sales channel settings** from the dropdown.
-- Click the **Develop apps** button.
-- On the **App development** page, click **Create an app**. Mention the **App name** and select the **App developer** of your app, and then click the **Create app** button.
+- On the Admin portal, click **Apps** in the left navigation menu and then select **App and sales channel settings** from the dropdown.![Shopify-Account-App-and-Sales-Channel-Settings](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9eb85a5273ac219e/641c0d3eaf1f5455e8f49da4/Shopify-Account-App-and-Sales-Channel-Settings.png)
+- Click the **Develop apps** button.![Shopify-Account-Develop-Apps](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7af759442d975ba0/641c14059d04a8544bd872ac/Shopify-Account-Develop-Apps.png)
+- On the **App development** page, click **Create an app**. Mention the **App name** and select the **App developer** of your app, and then click the **Create app** button.![Shopify-Account-Create-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0e5d8827928cbff4/641c13ec9a08934e5773b47c/Shopify-Account-Create-App.png)
 - On the next screen, navigate to the **Configuration** section and configure the **Storefront API integration** for your app.
-- Select the access scopes for your Storefront API and **Save** your configuration.
+- Select the access scopes for your Storefront API and **Save** your configuration.![Shopify-Account-Save-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltada290bcc7d3550e/641c0d3e33e7f95594918825/Shopify-Account-Save-Configuration.png)
 - Finally, under the **API credentials** section, click the **Install app **button, confirm your installation, and proceed to get the **Storefront API access token**.  
   **Note:** The Storefront API access token is required to connect your store with Contentstack. Make a note of this access token to be used in the next step.
 
@@ -54,11 +54,11 @@ Follow the steps to install the app in Contentstack.
 Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the** Marketplace** icon to go to the Marketplace.
 - Click **Apps** in the left panel.
-- Within the Marketplace, you can see all the available apps. Hover over the **Shopify** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the Shopify app, accept the terms of service, and click the **Install** button.
+- Within the Marketplace, you can see all the available apps. Hover over the **Shopify** app and click **Install**.![marketplace_app_switcher_shopify.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am5b91a896bb6dd0b4/bf9308b26f7243bdd2313560/marketplace_app_switcher_shopify.png?locale=en-us)
+- In the pop-up window, select the stack where you want to install the Shopify app, accept the terms of service, and click the **Install** button.![Shopify-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf445c78d9962ded4/65d735bf421dd335deebc8b8/Shopify-App-Install.png)
 - On the **Configuration** screen, you can add multiple configurations for Shopify stores. To do this, follow the steps given below:  
   Click the **+ New Configuration** button to add new configuration details.
-- In the **Add Configuration** modal, enter the configuration **Name** and click **Add**.
+- In the **Add Configuration** modal, enter the configuration **Name** and click **Add**.![Shopify-Configuration-Add-New-Configuration-Modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt464bd4c457f3bd74/65d735bfdb0cb47ba687c844/Shopify-Configuration-Add-New-Configuration-Modal.png)
 - After adding the configuration, enter the following details:  
   **Domain**: Enter the Store domain name retrieved from your Shopify Console in [step 1](#get-your-storefront-api-access-token-from-shopify).**Note**: Please enter the URL without the `http://` and `https://` prefixes.
 - **Storefront Access Token**: Enter the Storefront API access token retrieved from your Shopify account in [step 1](#get-your-storefront-api-access-token-from-shopify).
@@ -90,7 +90,9 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - You cannot select products based on the collection.
 - The app does not support multiple configurations.
 - Click the **Save** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+
+  **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.![Shopify-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbec00f56c53821f9/65d738c7421dd3089aebc8cd/Shopify-UI-Locations.png)
 - Click **Open Stack** to start using the Shopify app.
 
 ## Use Shopify within your Stack
@@ -98,7 +100,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 To use the Shopify app within an entry of your stack, follow the steps given below:
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![Shopify-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3e9afa6bb0aa522c/65d739de743cbbef8b7c2257/Shopify-Content-Type.png)
 - In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field for product in your content type by clicking the **Insert a field** link represented by a **+ **sign.
 - Under **Select Extension or App**, select **Shopify-Product Field **and click the **Proceed **button.  
   This adds Shopify-Product Field in the custom field.
@@ -108,7 +110,7 @@ Go to your stack, click the **Content Models** icon in the left navigation panel
 - To add a deprecated version of the Shopify app to your entry, add yet another [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a + sign.
 - Under **Select Extension or App**, select **Shopify-Deprecated** and click the **Proceed** button.  
   This adds Shopify-Deprecated in the custom field.
-- After adding the app, click **Save** or **Save and Close** to save your changes.
+- After adding the app, click **Save** or **Save and Close** to save your changes.![Shopify-Content-Type-Fields](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt61aad937ccf49630/65d739deee1d166453aa3100/Shopify-Content-Type-Fields.png)
 - Under **Advanced** properties, you also have the option to set the **Config Parameter** for all entries of a particular content type. This will override the default app configuration which you set at the time of app installation on the **Configuration screen**.The `key:value` passed in the configuration object overrides the default app configuration settings.
 
   In case you want to use a different Shopify account(s) for any custom field within the same stack, you need to specify the Shopify store name in the **Config Parameter**.
@@ -170,7 +172,9 @@ Go to your stack, click the **Content Models** icon in the left navigation panel
 
   **List View**
 - Click the **Save** button to save your entry.  
-  You can view more product details in the Sidebar Widget.**Note**: You must save your entry to get the product details in the Sidebar Widget.
+  You can view more product details in the Sidebar Widget.
+
+  **Note**: You must save your entry to get the product details in the Sidebar Widget.
 - In the right navigation panel, select **Widgets**, and then select **Shopify** to view the product details.  
   **Note**:  
   Deprecated version of the Shopify app does not support the Sidebar Widget.
@@ -197,7 +201,7 @@ Go to your stack, click the **Content Models** icon in the left navigation panel
   **Thumbnail View**
 
   **List View**
-- You can continue to use the old version of the Shopify app in the current version by adding products(or collections) using the Shopify Deprecated custom field.
+- You can continue to use the old version of the Shopify app in the current version by adding products(or collections) using the Shopify Deprecated custom field.![Shopify-Deprecated-Product-Added](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcded075e5501dc56/65d739de421dd3bdbbebc8d7/Shopify-Deprecated-Product-Added.png)
 - Click the **Save** button to save your entry.
 
 ## Common questions

@@ -24,7 +24,7 @@ Managing comments in Contentstack allows users to maintain clear and relevant di
 To edit or delete a comment, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and edit an existing entry.
 - Open an entry and click the “Comment” icon of the field where you want to update the comments.
-- Hover over the comment you want to edit or delete, then click the "Edit" or "Delete" icon. After editing the comment, click **Update**.
+- Hover over the comment you want to edit or delete, then click the "Edit" or "Delete" icon. After editing the comment, click **Update**.![Edit or delete comment options in Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt051d0f71dfed8430/678a0ea6ad4fccf7e4402731/Edit-Or-Delete-a-Comment-3.png)
 
 **Note:** Deleted comments are permanently removed and cannot be restored.
 

@@ -38,7 +38,7 @@ Follow the steps to deploy a project from a monorepo.
 - Click the **+ New Project** button.
 - Select [Import from a Git Repository](./import-project-using-github.md) from the **Create New Project** modal, and then select your Git provider.**Note**:You can also deploy a project from a monorepo using the [File upload](./import-project-using-file-upload.md) approach.
 - To import a project using Bitbucket Cloud, follow the steps in the [Create a Project Using Bitbucket Cloud](./import-a-project-using-bitbucket-cloud.md) guide to proceed.
-- From the **Repository** drop-down, select the monorepo that contains the app you want to deploy.
+- From the **Repository** drop-down, select the monorepo that contains the app you want to deploy.![Monorepo_CreateProjModal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt794804961aa92cf7/654a5360786647040af50bf6/Monorepo_CreateProjModal.png)
 - In the **Build and Output Settings** section, perform the following steps:Select the framework for your project under the **Framework Preset** drop-down.
 - Update the **Build Command** field.
 The command `npm run build` runs the build for all the projects present in the monorepo.
@@ -48,7 +48,7 @@ npm run build -- --filter web
 ```
 - Update the **Output Directory** field.
 Since the `web` project is a `NextJS` site, its build will be generated at `./apps/web/.next`
-- Click the **Deploy** button to deploy the site.
+- Click the **Deploy** button to deploy the site.![Launch_Monorepo_Deployment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3e4485605bd22535/6605004204d34cc4a9bd8824/Launch_Monorepo_Deployment.png)
 
 You have successfully deployed a project from a monorepo.
 

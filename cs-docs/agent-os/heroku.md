@@ -23,8 +23,8 @@ The Heroku Action connector will trigger a build of your Heroku app.
 Perform the following steps to set up the Heroku action connector:
 - Click **Configure Action Step** from the left navigation panel.
 - Click **Action Step** to configure third-party services.
-- Within the **Configure Action Step**, click the **Heroku** connector.
-- Under **Choose an Action** tab, select the **Trigger a Build** action.
+- Within the **Configure Action Step**, click the **Heroku** connector.![Heroku.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfcefc402864f80a8/6527f8c86f293946ac191330/Heroku.png)
+- Under **Choose an Action** tab, select the **Trigger a Build** action.![Select_An_Action.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/blt403d654434c0a7c0/639d6d9272cb3955c5f0deed/Select_An_Action.png?locale=en-us)
 - Click the **+ Add New Account** button to select your Heroku account.
 - Now, add a suitable **Title** and the **API Key** of your Heroku app to connect your Heroku account with Contentstack.
 
@@ -48,7 +48,7 @@ To get your Heroku app's API Key, log in to the Heroku dashboard, and perform th
 `https://username:sampletoken@api.github.com/repos/username/samplename/tarball/master/`
 - Under the **App name/ id section**, select the app that you have created in Heroku.
 - You can mention a **Version** for your build. This is an optional step which will help you keep track of the latest version for your build.
-- Finally, click on the toggle button if you want to **Hide optional fields** and then click **Proceed**.
+- Finally, click on the toggle button if you want to **Hide optional fields** and then click **Proceed**.![Click_On_Proceed.jpg](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/blt167a77860a593db3/639d682f097e0f59cca5e078/Click_On_Proceed.jpg?locale=en-us)
 - Click **Test Action** to test if a build is created in Heroku. In the output section, you can view the status of your build.
 - Once set, click **Save and Exit**.
 

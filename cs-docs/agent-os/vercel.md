@@ -25,17 +25,17 @@ The Vercel Action Connector allows you to trigger a deployment in Vercel.
 Perform the following steps to set up the Vercel action connector:
 - Click **Configure Action Step** from the left navigation panel.
 - Click **Action Step** to configure third-party services.
-- Within the **Configure Action Step**, click the **Vercel **connector.
-- Under **Choose an Action** tab, select the **Trigger Deploy** action.
-- On the **Configure Action** page, enter the hook URL in the **Name** field.
+- Within the **Configure Action Step**, click the **Vercel **connector.![Vercel.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd073273a3682a350/6527f8ec31f9bbac62966804/Vercel.png)
+- Under **Choose an Action** tab, select the **Trigger Deploy** action.![Vercel-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltddf0a7526a51c0cd/63dcad54b3b39d7d817f0503/Vercel-Action.png)
+- On the **Configure Action** page, enter the hook URL in the **Name** field.![Vercel-Configure-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7542516a55f6a240/63dcad54c338484e3b194f42/Vercel-Configure-Action.png)
 
 **Note:** In Vercel, you will find the hook URL in your project’s **Project Settings** page, under **Git** > **Deploy Hooks**. To create a new hook, provide a “name” for your hook and the branch name of your GitHub project, and click **Create Hook**.
 
 **Additional Resource:** For more information, refer to the [Vercel - Deploy Hooks](https://vercel.com/docs/concepts/git/deploy-hooks/) documentation.
 - Click **Proceed**.
-- You will see the input values which you have configured in the **Configure Action** modal.
-- Check if the details are correct. If yes, click **Test Action**.
-- Once set, click **Save and Exit**.
+- You will see the input values which you have configured in the **Configure Action** modal.![Vercel-Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd9d6a8e5479ac7d9/63dcad546d590c21c347cd2d/Vercel-Input.png)
+- Check if the details are correct. If yes, click **Test Action**.![Vercel-Test-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2c2e9d21542dbcb6/63dcad547ccfaf4bc687f040/Vercel-Test-Action.png)
+- Once set, click **Save and Exit**.![Vercel-Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt32b4bffa66656c42/63dccf846d590c21c347cd77/Vercel-Output.png)
 
 **Note: **The **PENDING** state means that your deployment activity has been queued.
 

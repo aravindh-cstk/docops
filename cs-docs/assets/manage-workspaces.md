@@ -33,7 +33,9 @@ This view provides a quick summary of workspace configuration and language cover
 ## Edit a Workspace
 To update workspace details such as the name and description, perform the following steps:
 - Click the vertical ellipsis in the **Actions** column of the workspace and select **Edit Workspace**.
-- Update the **Name** or **Description** as required.**Note:** The **UID** and **Source Workspace** fields remain read-only after creation.
+- Update the **Name** or **Description** as required.
+
+  **Note:** The **UID** and **Source Workspace** fields remain read-only after creation.
 - Click **Update Workspace**.
 
 ## Copy Workspace UID
@@ -63,7 +65,9 @@ To manage languages for a workspace, perform the following steps:
 - Click the vertical ellipsis in the **Actions** column of the workspace and select **Manage Workspace Languages**.
 - In the **Manage Workspace Languages** modal, review the languages currently enabled for the workspace.
 - Click **+ Add Language**.
-- Select one or more languages from the available list. Each language displays its fallback language.**Note:** The default language remains locked and cannot be removed.
+- Select one or more languages from the available list. Each language displays its fallback language.
+
+  **Note:** The default language remains locked and cannot be removed.
 - Click **Apply** to confirm the selection.
 - Click **Save Changes** to add the selected languages to the workspace.
 

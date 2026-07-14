@@ -34,7 +34,7 @@ Note: To import a prebuilt content model within your stack, refer to our guide o
 - Based on the number of entries you want to create, under Type, select either:
   - Single (for creating a single entry, such as a homepage), or
   - Multiple (for creating multiple pages of the same structure).
-- Click Save and Proceed.
+- Click Save and Proceed.![Create_New_CT.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd7da3a590b37018a/69c6a5ae0a6de1d27c553a0c/Create_New_CT.png)
 
 ## Use the Content Type Builder
 

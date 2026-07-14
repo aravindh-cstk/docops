@@ -38,7 +38,7 @@ Let us see each of the processes in detail.
 
 Start by creating an SSO Name and generate the ACS URL in Contentstack
 
-Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to the **Organization Settings** page, and click on **SINGLE SIGN-ON** tab.
+Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to the **Organization Settings** page, and click on **SINGLE SIGN-ON** tab.![Set_up_SSo_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb9e244f2d1f270c5/60df389a7c871833cab137c1/Set_up_SSo_1_highlighted.png)
 - Enter an **SSO Name** of your choice, and click **Create**. For example, if your company name is “Acme, Inc.” enter “acme” here. This name will be used as one of the login credentials by the organization users while signing in.
 
 **Note:** The SSO Name can contain only alphabets (in lowercase), numbers (0-9), and/or hyphens (-).
@@ -52,17 +52,17 @@ Keep this window open, as you may need these details for setting up the Contents
 
 **Note:** You need to be a Microsoft Azure AD administrator to complete the steps below.
 
-To configure the integration of Contentstack into Microsoft Azure AD, you need to add the Contentstack app. For this, go to the Microsoft Azure portal, and click on the **Azure Active Directory** tab.
-- Click on **Enterprise Applications** on the left panel, and click on **+ New application** on the top.
-- Click on **Non-gallery application** to create a new application that is not already present in the gallery.
-- Provide a name to your app, for example, “test-sso,” and click on **Add**.
-- This will lead you to the **Overview** page where you will see the overview details of your application. Under the **Getting Started** section, click on the **2. Set up single sign on** tab.
-- On the **Select a single sign-on method** page, select the **SAML** mode to enable single sign-on.
-- You will be led to the **Set up Single Sign-On with SAML** page where you can perform the further steps after creating your app.
+To configure the integration of Contentstack into Microsoft Azure AD, you need to add the Contentstack app. For this, go to the Microsoft Azure portal, and click on the **Azure Active Directory** tab.![Click_on_Azure_Active_Directory.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb06ad172bd331035/5f461e99fb60b1668c21d6ad/Click_on_Azure_Active_Directory.png)
+- Click on **Enterprise Applications** on the left panel, and click on **+ New application** on the top.![Click_on_Newapplication.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1a8138f1176f5152/5f46221d70ca0f65ba10949a/Click_on_Newapplication.png)
+- Click on **Non-gallery application** to create a new application that is not already present in the gallery.![Click_on_Non_gallery_application.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltd3e2e3168d687482/5f46221dba13f249213fb7d7/Click_on_Non_gallery_application.png)
+- Provide a name to your app, for example, “test-sso,” and click on **Add**.![Name_for_your_Azure_app.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb55a68f63ff089fc/5f46221e2ecc864927d8c4c7/Name_for_your_Azure_app.png)
+- This will lead you to the **Overview** page where you will see the overview details of your application. Under the **Getting Started** section, click on the **2. Set up single sign on** tab.![Click_on_the_2_Set_up_single_sign_on_tab.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt51233ef8c91efb45/5f46221eb008d84afeba69be/Click_on_the_2_Set_up_single_sign_on_tab.png)
+- On the **Select a single sign-on method** page, select the **SAML** mode to enable single sign-on.![Select_SAML_as_the_Single_sign_on_method.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt756f6943548f8196/5f46224470ca0f65ba10949e/Select_SAML_as_the_Single_sign_on_method.png)
+- You will be led to the **Set up Single Sign-On with SAML** page where you can perform the further steps after creating your app.![Set_up_Single_Sign-On_with_SAML.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte3167e522b32f690/5f462244a9d4814afda14279/Set_up_Single_Sign-On_with_SAML.png)
 - Click on the “Edit” (pencil) icon beside the **Basic SAML Configuration** section, add the following details:
 
 **Identifier (Entity ID)**: Enter the “Entity ID” of  Contentstack, i.e., https://app.contentstack.com.
-- **Reply URL (Assertion Consumer Service URL)**: Enter the ACS URL that we generated in **Step 1.c.**
+- **Reply URL (Assertion Consumer Service URL)**: Enter the ACS URL that we generated in **Step 1.c.**![Basic_SAML_Configuration.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2bc9970d19ce8eed/5f461e99b008d84afeba69ba/Basic_SAML_Configuration.png)
 - Next, edit the **User Attributes & Claims** section. Under **Claim Name**, you will see the primary claim, **Unique User Identifier (Name ID)**, with the claim **Value** set to **user.userprincipalname [nameid-format:emailAddress]**. On clicking this claim, you will find the following details on the **Manage claim** page:
 
 Close this page. Now, delete the default attributes that you see under the **Additional claims** section. We will be adding our own set of attributes.
@@ -83,11 +83,11 @@ You will see the added attributes in the **User Attributes & Claims** section.
 - In the **SAML Signing Certificate** section, click the **Download** link beside **Certificate (Base64)**. This will download and save the Base64 version of the certificate for your Contentstack app.
 
 If needed, edit the **Notification Email Addresses** section, change the notification email, and click on **Save**.
-- Under the **Set up <*****app_name*****>** section, you will find important data, such as **Login URL**, **Azure AD Identifier**, and **Logout URL** of your Microsoft Azure AD app. This data is required when configuring the Microsoft Azure AD details in Contentstack.
+- Under the **Set up <*****app_name*****>** section, you will find important data, such as **Login URL**, **Azure AD Identifier**, and **Logout URL** of your Microsoft Azure AD app. This data is required when configuring the Microsoft Azure AD details in Contentstack.![Set_up_test_sso](https://images.contentstack.io/v3/assets/bltf2fb14dd3176c6f6/blt983bb7d87fa6af45/5de657aeabb9ae6aeedec8fd/download)
 
 ## Configure Microsoft Azure AD details in Contentstack
 
-From the previous section, copy the URL provided in the **Login URL** section of your Contentstack application in Microsoft Azure AD and paste it into **Single Sign-On URL** field in Contentstack’s **2 IdP configuration** section.
+From the previous section, copy the URL provided in the **Login URL** section of your Contentstack application in Microsoft Azure AD and paste it into **Single Sign-On URL** field in Contentstack’s **2 IdP configuration** section.![Set_up_SSo_4_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt21a8c8a269c3122a/60df38c9ccb5203c30a28e9f/Set_up_SSo_4_highlighted.png)
 - Upload the X.509 certificate that you downloaded from Microsoft Azure AD in Step 2.i. into the **Certificate** field in Contentstack SSO Settings.
 
 Next, you need to define roles in Microsoft Azure AD that would be used to create role mapping in Contentstack.
@@ -99,9 +99,9 @@ After setting the necessary configurations in Contentstack, you need to add user
 To do so, you need to perform the following steps:
 
 Navigate to **Azure Active Directory**, select **Enterprise Applications**, select **All applications**, then select your application.
-- Under the **Getting Started** section, click on the **1. Assign users and groups** tab.
-- Click on the **+ Add user** button.
-- Click on **Users and groups**. You will find a list of users whom you can add into your application.
+- Under the **Getting Started** section, click on the **1. Assign users and groups** tab.![Click_on_the_1_Assign_users_and_groups_tab.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltee694dc56a6898c6/5f46221ec0e5e047f9386cb8/Click_on_the_1_Assign_users_and_groups_tab.png)
+- Click on the **+ Add user** button.![Click_on_Add_User.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blteb21dd3d2f83d543/5f461e9979723565b971b1f0/Click_on_Add_User.png)
+- Click on **Users and groups**. You will find a list of users whom you can add into your application.![Select_users_under_Users_and_groups.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt55e246fb68499795/5f4622442a722a66860bd804/Select_users_under_Users_and_groups.png)
 
 You can either select from the given list of users or you can invite and add new users by inviting them.
 
@@ -111,7 +111,7 @@ You can either select from the given list of users or you can invite and add new
 
 Application Roles are defined under the application's registration manifest in the Microsoft Azure portal. To add user roles, perform the following steps:
 
-In the left navigation, click on **App Registrations**, and click on **All applications**. Locate your newly created application and click on it.
+In the left navigation, click on **App Registrations**, and click on **All applications**. Locate your newly created application and click on it.![Click_on_App_registrations.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2a13bd5be65ef3d9/5f461e9970ca0f65ba109486/Click_on_App_registrations.png)
 - In your application blade, click on **Manifest**. You will see the JSON representation of your application.
 
 Add the following code snippet of a new role under appRoles:

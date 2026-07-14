@@ -19,7 +19,7 @@ This page explains how to access the Customer Support Portal, navigate and manag
 
 User Access is managed via the Contentstack platform
 - Navigate to the [support portal site](https://www.contentstack.com/support/)
-- Select the correct data center (don’t worry, if you make a mistake you can always select to switch)
+- Select the correct data center (don’t worry, if you make a mistake you can always select to switch)![image1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd16c93fe02ac6c7f/67e4ee6c42bb03116562699d/image1.png)
 - Select the organization you need support for
 
 ## Navigating Within the Portal:

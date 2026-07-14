@@ -21,8 +21,8 @@ Once created, you can edit a taxonomy to make changes such as update its name or
 To edit a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to edit a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Select the taxonomy you want to edit and click the vertical ellipsis in the **Actions **column.
-- Click the **Edit** button.
-- In the **Edit Taxonomy** modal, you can edit the Taxonomy **Name **or **Description** but not the Taxonomy **UID**. Once done, click **Update** to save your changes.
+- Click the **Edit** button.![Edit_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85409f4f3253ed35/6656bac81f92d1052c2806b4/Edit_Taxonomy_Button.png)
+- In the **Edit Taxonomy** modal, you can edit the Taxonomy **Name **or **Description** but not the Taxonomy **UID**. Once done, click **Update** to save your changes.![Edit_Taxonomy_Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5fad608f2f4ea9b1/655b4cfe107d42f155b7a6f6/Edit_Taxonomy_Modal.png)
 
 ## API Reference
 

@@ -32,11 +32,11 @@ Integrating the Global field within the Group field ensures all associated field
 To add a Global field within a Group field, log in to your [Contentstack account](https://www.contentstack.com/login) and follow these steps:
 - Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon in the left navigation panel or press “C”.
 - On the **Content Models** page, select **Global Fields** and click **+ New Global Field**.
-- Enter a **Name** (e.g., SEO Metadata) and optional **Description**, then click **Proceed**.
+- Enter a **Name** (e.g., SEO Metadata) and optional **Description**, then click **Proceed**.![Create Global Field screen](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt73de037bba97de50/6805ff0ea090550e147f015b/1._Complex_Global_Fields-Global_Fields_Within_Group_Fields-Create-a-Global-Field.png)
 - Click the **Insert Field (+)** icon and add the following fields:**Single Line Textbox** for meta title
 - **Multi Line Textbox** for meta description
 - **Single Line Textbox** for meta keywords
-- Click **Save** or **Save and Close**.
+- Click **Save** or **Save and Close**.![Saved Global Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltacfaf1fd7c30c34e/6805ff0df6991c169db59c0e/2._global_field_crated.png)
 - Click the “Content Models” icon again, then click **+ New Content Type** and select **Create New**.
 - In the **Create New Content Type** modal:Provide a **Name** (e.g., SEO Optimized Page)
 - Provide a **Description** (optional)

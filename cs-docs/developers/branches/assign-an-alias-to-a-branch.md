@@ -20,11 +20,11 @@ An [Alias](./about-aliases.md)helps point to a particular [branch](./about-branc
 
 To create an alias, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon on the left navigation panel, select **Branches,** and click on the **Aliases** tab.
-- Click on **+ Assign Alias**.
+- Click on **+ Assign Alias**.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8f22beca860c29c0/615a7fbf6d2d465121b1c0fc/image.png)
 - The **Assign New Alias** form appears for you to add the following details:
   - **Alias ID:** Enter a name for the alias, such as “alias_1,” “manager_alias,” or so on.
 - **Target Branch:** Select a branch to which you want your alias to point from the dropdown.
-- Finally, click **Save** to save your alias.
+- Finally, click **Save** to save your alias.![Assign_an_Alias.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte4f055851fbeb4e1/62192f31f002d14904e68404/Assign_an_Alias.png)
 
 ## API Reference
 

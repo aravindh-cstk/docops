@@ -35,7 +35,7 @@ You can retrieve webhook log information only for **30 days** prior to the curre
 
 - In case of a failure or if a session timeout occurs (webhook request timeout is **30** seconds), the webhook will immediately retry to send data to the destination URL again for **four** more times. The interval time between two retries increases **exponentially** according to the retry attempt number.
 - Contentstack follows an exponential retry policy when any webhook fails to send data to the destination server. Refer to the [Webhook Retry Policy](./webhook-retry-policy.md) section to better understand how retries work.
-- To view the details of the webhook call, click the vertical ellipses in the **Actions** column for the log you want to see the details for, then select **See Details**.
+- To view the details of the webhook call, click the vertical ellipses in the **Actions** column for the log you want to see the details for, then select **See Details**.![View_Webhook_Log_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc66471e582d769fc/66a796eda4a657327e1dd661/View_Webhook_Log_2.png)
 - It will display the request details of the webhook call as well as the response details received.
 
 **Note**: In the case of failed attempts, the Response Details section will display no data.

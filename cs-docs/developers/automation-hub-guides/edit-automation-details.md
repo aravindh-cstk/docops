@@ -19,8 +19,8 @@ This page explains how to edit an Automation’s primary details (Name and Descr
 You can edit the primary details of an Automation, i.e., its Name and Description, from the homepage.
 
 To do so, perform the steps given below:
-- On the **Automations** page, click the edit icon that you see on an Automation card for editing the automation.
-- On the **Edit Automation **modal, provide the new **Name** and **Description** of the Automation. Once you have updated the details, click **Update**.
+- On the **Automations** page, click the edit icon that you see on an Automation card for editing the automation.![Edit_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf19cc54660c6cc39/65aa8b415731610666cc7d23/Edit_Icon.png)
+- On the **Edit Automation **modal, provide the new **Name** and **Description** of the Automation. Once you have updated the details, click **Update**.![Update_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltab922cc0413096b9/65aa8b407a1dd7636be14415/Update_Button.png)
 
 ## Common questions
 

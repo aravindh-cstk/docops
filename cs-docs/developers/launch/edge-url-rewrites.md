@@ -72,7 +72,9 @@ You can use the `headers` field in the `request` object to set custom headers be
 
 You can also use the `headers` field in the `response` object to set custom headers before the response is sent back to the client. The response from the destination is modified to add these headers, and any existing headers with the same key would be overridden. The `response` field is optional, and you can skip it if setting custom headers is not required.
 
-- Save the `launch.json` file.**Note:** The **file size** must be limited to **5MB**. To optimize performance and minimize latency during processing, use regular expressions to keep the configuration compact and efficient.
+- Save the `launch.json` file.
+
+  **Note:** The **file size** must be limited to **5MB**. To optimize performance and minimize latency during processing, use regular expressions to keep the configuration compact and efficient.
 
 #### Examples for the uses of Edge URL Rewrites
 

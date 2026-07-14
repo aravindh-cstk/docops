@@ -40,7 +40,9 @@ In order to use this extension, you need to create an account with Amazon Web Se
 Goto [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/en-us/free/) and click on **Start free **option.
 
 - On the next screen, you'll be asked to log in. If you already have an account, just log in with your credentials. Else, you can **Create one!**
-- Follow the on-screen instructions and create your Azure account.**Additional Resource**: For more information about the features of Azure Blob Storage, its pricing, and FAQs, visit the [Azure Storage](https://docs.microsoft.com/en-us/azure/storage/) page.
+- Follow the on-screen instructions and create your Azure account.
+
+  **Additional Resource**: For more information about the features of Azure Blob Storage, its pricing, and FAQs, visit the [Azure Storage](https://docs.microsoft.com/en-us/azure/storage/) page.
 - Log into your newly created account and proceed to create your Azure storage account. Select** Storage accounts **from the left menu of your Azure portal.
 - Navigate to the Storage accounts page and click on **Create. **Select your account type (you need a **Basic** storage account for this guide) and proceed to create your Azure storage account.
 - To start using your Storage, you need to create **Containers **for your account that will hold your data. To do that, select **Containers **from your left menu portal within the **Storage accounts** page.
@@ -60,7 +62,7 @@ To get the SAS token, follow the steps given below:
 Navigate to the **Storage accounts **page and expand your** Blob Container**.
 
 - Click on your **Blob Container,** in the left navigation,  scroll down and under the** Security + networking** section select the **Shared access signature **option.
-- Now specify your access policies, token lifespan, time zone and define your container’s permission as shown below:
+- Now specify your access policies, token lifespan, time zone and define your container’s permission as shown below:![set-the-permissions.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltdc04d4a14347f0e2/638755e2fa61d3109a10420a/set-the-permissions.jpg)
 - Once done, click on the **Generate SAS and connection string **button.
 - You will find the **SAS token **of your container. Note down the token, we will use it to set up our extension.
 
@@ -110,7 +112,7 @@ To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) then add the [**custom**](../create-content-types/custom.md) field to it.
 
-- Under **Select Extension**, select the “Azure Blob Storage” field that you created and set other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Azure Blob Storage” field that you created and set other properties. You can add other fields as per requirements.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt49a054e7b873210e/615f1a30c2ff901292ac7dc4/image.png)
 - Click on **Save **or** Save and Close** to save your changes.
 - Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Azure Blob Storage **field in your entry page.
 - Click on** Choose from Azure Container**.  

@@ -37,7 +37,7 @@ Here's the overview of the Automation that you need to create:
 - Select the Stack you want to target with the automation
 - Transform ConnectorChoose the Transform Connector
 
-We create a bare-bones entry creation payload with the asset details. We assume the product page uses the “Title” and “Description” fields from the asset details page.
+We create a bare-bones entry creation payload with the asset details. We assume the product page uses the “Title” and “Description” fields from the asset details page.![image1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4aff128aa09798ac/65f996cf0780b99f7761dedd/image1.png)
 - Below is the snippet you can use to create the entry payload. Feel free to add more details to the JSON, if needed.
 ```
 {
@@ -85,7 +85,7 @@ try {
 } catch (error) {
   return error.message }
 ```
-- Transform ConnectorBelow is what the transform statement looks like to update the entry with the new details. As you can see the input values take the title and description from the trigger event.
+- Transform ConnectorBelow is what the transform statement looks like to update the entry with the new details. As you can see the input values take the title and description from the trigger event.![image6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb01f71a7e5ac902a/65f996cf5fa1c6a5e64be7db/image6.png)
 - Update Entry ConnectorSelect the **Update Entry** Action
 - The **Stack** should be from a response in step 1.
 - The **Content Type** should be from a response in step 1.

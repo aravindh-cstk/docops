@@ -23,7 +23,7 @@ So, for instance, let’s assume that you have added five items to a release (3 
 
 To deploy a release, log in to your [Contentstack account](https://www.contentstack.com/login) and follow these steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Releases” icon in the left navigation panel. Or, press “alt + R” for Windows and “option + R” for Mac.
-- Select the release you want to deploy in the left panel and click the **Deploy** button located at the top.**Note**:
+- Select the release you want to deploy in the left panel and click the **Deploy** button located at the top.**![Deploy a Release_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5e302ef10c62a8dc/66f24662bb79b747154143c7/Deploy_a_Release_1.png)Note**:
 
 You can update the release items to their latest versions before you deploy the release. Refer to our [Update Release Items to their Latest Versions](./update-release-items-to-their-latest-versions.md) documentation for more information.
 - If a content type or global field is updated after an entry was created (for example, a new required field is added), Contentstack validates the entry against the latest configuration when you publish. If any required field is empty, the entry cannot be published until you complete it.

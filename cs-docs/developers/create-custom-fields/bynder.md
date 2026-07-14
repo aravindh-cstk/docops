@@ -48,8 +48,8 @@ To add the Bynder custom field to your stack, log in to your [Contentstack accou
 
 Go to your [stack](../set-up-stack/about-stack.md), and click on the “Settings” icon on the left navigation panel
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions** page, click on the **+ New Extension** button and then on **Create new**:
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions** page, click on the **+ New Extension** button and then on **Create new**:![Bynder_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5c18055d0a2e4652/60c214b2f33fd90fa1ed1b9c/Bynder_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Bynder_2_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta822ee5da85ec24d/60c214cc324cea0e69783679/Bynder_2_no_highlight.png)
 - On the **Create New Extension** page, enter values in the fields as given below
   - **Title ***(required)*: Provide a suitable title, for example “Bynder,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
   - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
@@ -75,10 +75,10 @@ Now, let’s understand how you can start using this custom field in your conten
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
-- Under **Select Extension**, select the “Bynder” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Bynder” field that you created and set the other properties. You can add other fields as per requirements.![Bynder_3_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2146ee0e3b52c426/60c214bf2d47ce78c28ad778/Bynder_3_Highlighted.png)
 - Finally, click on either **Save **or** Save and Close** to save your changes.
 - Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Bynder **field in action.
-- Click on **Choose Assets**. If you are still logged into Bynder, it will open inside your entry page, from where you can select multiple images and insert them in your entry as shown below:
+- Click on **Choose Assets**. If you are still logged into Bynder, it will open inside your entry page, from where you can select multiple images and insert them in your entry as shown below:![Bynder_5_no_highlight.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt7ed7bab54d632eda/6140df5fd4224e7daaed05d2/Bynder_5_no_highlight.gif)
 
 **Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 

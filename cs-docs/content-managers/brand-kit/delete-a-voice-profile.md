@@ -31,10 +31,10 @@ In this guide, we will discuss the steps required to delete a Voice Profile from
 
 To delete a Voice Profile, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-- On the left navigation panel, click the **Brand Kit** icon.
-- Select the **Brand Kit** whose Voice Profile you want to delete.
-- Under the **Actions** tab, click the vertical ellipses corresponding to the Voice Profile that you want to delete and then select **Delete**.
-- In the **Delete Voice Profile** modal, click **Delete** to permanently delete the Voice Profile.
+- On the left navigation panel, click the **Brand Kit** icon.![1-Brand-Kit-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2793aa12bafb2903/6656329d02c997c334b84fcb/1-Brand-Kit-Icon.png)
+- Select the **Brand Kit** whose Voice Profile you want to delete.![2-Select-Brand-Kit-For-Voice-Profile](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0f4b5020701cce81/6656618d89ebe611780abc9d/2-Delete-Select-Brand-Kit-For-Voice-Profile.png)
+- Under the **Actions** tab, click the vertical ellipses corresponding to the Voice Profile that you want to delete and then select **Delete**.![3-Delete-Voice-Profile](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltca3fc2738141668b/66566193e4a73213e29779a7/3-Delete-Voice-Profile.png)
+- In the **Delete Voice Profile** modal, click **Delete** to permanently delete the Voice Profile.![4-Delete-Voice-Profile-Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd04fa1027e9db3f1/6656619acac1293f854b0809/4-Delete-Voice-Profile-Button.png)
 
 You will get a success message after the Voice Profile is deleted from the Brand Kit.
 

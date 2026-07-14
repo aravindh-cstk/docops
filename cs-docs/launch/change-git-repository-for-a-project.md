@@ -39,16 +39,20 @@ Before changing the project repository, ensure the following conditions are met:
 ## Changing GitHub Repository for an Existing Launch Project
 
 - On the Launch landing page, click the **project card** to open the required project.
-- Click **Settings** in the top panel. Under **General**, click the **Current Repository** dropdown in the **Git Connection** card.**Note:** If you need to switch to a different GitHub account or organization, click **Switch GitHub Connection** in the Git Connection card and select the required GitHub account.
+- Click **Settings** in the top panel. Under **General**, click the **Current Repository** dropdown in the **Git Connection** card.![Launch_GitHub_Repo_Transfer_GitConnection.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am9b37755bc72a3f56/36d305eb77aa354a24a1f754/Launch_GitHub_Repo_Transfer_GitConnection.png?locale=en-us)
+
+  **Note:** If you need to switch to a different GitHub account or organization, click **Switch GitHub Connection** in the Git Connection card and select the required GitHub account.
 - Select the new GitHub repository to connect to the project.
-- Click **Save Changes** to apply the repository update.  
+- Click **Save Changes** to apply the repository update.![Launch_GitHub_Repo_Transfer_SaveChanges.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am1935138c1fb79584/5e07d0bed8b4af145f958254/Launch_GitHub_Repo_Transfer_SaveChanges.png?locale=en-us)  
   To discard the change and revert to the previously connected repository, click **Reset**.
-- In the **Change Project Repository?** confirmation modal, review the current and new repository details and click **Change Repository** to confirm.
-- After the transfer is complete, the **Git Connection** section displays the updated repository.**Additional Resource:** To repair GitHub connection, refer to the [Repair GitHub Connection for Projects](../developers/launch/repair-github-connection-for-projects.md) document.
-- If the newly connected repository uses a different framework or project structure, go to the **Environments** section and update the deployment commands under **Deployments** and the environment variables under **Environment Variables** accordingly.
+- In the **Change Project Repository?** confirmation modal, review the current and new repository details and click **Change Repository** to confirm.![Launch_GitHub_Repo_Transfer_ChangeRepo.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am3fb849abffbb2937/eda393facc59dfcb18d76093/Launch_GitHub_Repo_Transfer_ChangeRepo.png?locale=en-us)
+- After the transfer is complete, the **Git Connection** section displays the updated repository.![Launch_GitHub_Repo_Transfer_Connected.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am84d1b6e7fb2263e1/2a3dc94e6dbefcd254adfe2d/Launch_GitHub_Repo_Transfer_Connected.png?locale=en-us)
+
+  **Additional Resource:** To repair GitHub connection, refer to the [Repair GitHub Connection for Projects](../developers/launch/repair-github-connection-for-projects.md) document.
+- If the newly connected repository uses a different framework or project structure, go to the **Environments** section and update the deployment commands under **Deployments** and the environment variables under **Environment Variables** accordingly.![Launch_GitHub_Repo_Transfer_EnvUpdates.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am8a7e66c9ea0467ab/dc2a06d5fb55e8d8ede9d7aa/Launch_GitHub_Repo_Transfer_EnvUpdates.png?locale=en-us)
 - Click **Environments** in the top panel, select your deployment, and click **Redeploy** to deploy the project with the required commit.
 
-Once the deployment is successful, your project goes live with the newly connected repository.
+Once the deployment is successful, your project goes live with the newly connected repository.![Launch_GitHub_Repo_Transfer_Live.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am8287b4a3503428af/87bbf978e0fb4bd0133199a3/Launch_GitHub_Repo_Transfer_Live.png?locale=en-us)
 
 ## Troubleshooting
 

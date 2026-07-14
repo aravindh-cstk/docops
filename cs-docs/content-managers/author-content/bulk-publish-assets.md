@@ -23,7 +23,7 @@ To publish multiple assets at once, log in to your [Contentstack account,](https
 
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel. You can also use the shortcut key “A” (for both Windows and Mac OS users).
 - Use the checkboxes to select the assets you want to publish.
-- After selecting the assets, click the **Publish** option in the floating panel that appears.
+- After selecting the assets, click the **Publish** option in the floating panel that appears.![Publish_Asset_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf3bc899d7a85c4ed/676550b436f5cc2c8cdaf492/Publish_Asset_Icon.png)
 - In the **Publish** **Assets** modal:
   - **Select Environment(s):** Select the environment(s) where the assets will be published.
   - **Select Language(s):** Select the locale(s) in which you want the assets to be published.

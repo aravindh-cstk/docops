@@ -22,7 +22,7 @@ This page explains how to remove entries or assets from a Release in Contentstac
 To remove item(s) from a Release, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md), and click on the “Releases” icon on the left navigation panel. This opens the **Releases** page where you can see a list of existing Releases in the stack. You can also use the shortcut key “alt + R” for Windows OS users, and “option + R” for Mac OS users to access Releases.
 - Click on the Release from which you want to remove the item(s).
-- Hover over the entry/asset and click on the “Delete” icon that appears on the extreme right.
+- Hover over the entry/asset and click on the “Delete” icon that appears on the extreme right.![remove_entry_asset_from_a_release_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltec751ac51d324053/60b3c70fcda43e2520906d4e/remove_entry_asset_from_a_release_1_highlighted.png)
 - Click on **Remove** to confirm your action.
 
 Alternatively, you can also select the entry/asset and click on the **Remove** button that appears on the top of the list.

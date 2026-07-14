@@ -34,9 +34,9 @@ This document guides you through enabling and disabling password protection for 
 Follow the steps below to enable password protection for your environment:
 
 - From the Launch landing page, click the **project card** to open your project.
-- In the **Environments** screen, go to the environment for which you want to provide password protection, click the **ellipses** under **Actions**, and then click **Settings**.
-- In **Settings** > **Environments**, click the **Password Protection **tab.
-- Click the **Enable Password Protection** toggle button to enable it.
+- In the **Environments** screen, go to the environment for which you want to provide password protection, click the **ellipses** under **Actions**, and then click **Settings**.![Launch_Settings_2026.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3ccdc1d79b2ef2eb/69b78cd967be9e781070b034/Launch_Settings_2026.png)
+- In **Settings** > **Environments**, click the **Password Protection **tab.![Launch_Pwd_Protection_Venus2_Tab_GitHUb.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb2b3f4e1a35917c3/65c1b16990c22c9146d0300e/Launch_Pwd_Protection_Venus2_Tab_GitHUb.png)
+- Click the **Enable Password Protection** toggle button to enable it.![Launch_Pwd_Protection_Venus2_EnableToggle.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt66051e4e2387f6ac/65c1b1697958f95a495129f2/Launch_Pwd_Protection_Venus2_EnableToggle.png)
 - Enter a username in the **Username** field and password in the **Password** field for your current environment, not exceeding 200 characters each.
 - **Note**: The username must not contain the colon (:) character.
 - Click the **Save Password Protection Settings **button.
@@ -55,8 +55,8 @@ Follow the steps below to disable password protection for your environment:
 - From the Launch landing page, click the **project card** to open your project.
 - In the **Environments** screen, go to the environment for which you want to disable password protection, click the **ellipses** under **Actions**, and then click **Settings**.
 - In **Settings** > **Environments**, click the **Password Protection **tab.
-- Click the **Enable Password Protection** toggle button again to disable the password protection.
-- Click the **Yes, Disable** button.
+- Click the **Enable Password Protection** toggle button again to disable the password protection.![Launch_Pwd_Protection_Venus2_Disable.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt32ca246a464a4fe7/65c1b169b3cfc00d9ae5e322/Launch_Pwd_Protection_Venus2_Disable.png)
+- Click the **Yes, Disable** button.![Launch_Pwd_Protection_Venus2_Disable_Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta520b3eb667732b1/65c1b169ab9c0f4aeab91b09/Launch_Pwd_Protection_Venus2_Disable_Modal.png)
 
 You have now successfully disabled password protection for your environment. This allows anyone with the environment URL to access your environment.
 

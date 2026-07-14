@@ -195,10 +195,12 @@ To host a website, you can simply use [launch](../launch.md) or any other websit
 To set up Live Preview for the entries of your stack, perform the following steps:
 
 Navigate to **Settings **and select** Environments**.
-- [Set the base URL](../set-up-environments/add-an-environment.md)s for different locales, and click **Update**.
+- [Set the base URL](../set-up-environments/add-an-environment.md)s for different locales, and click **Update**.![Base URL setup](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbaa7fda3f1479aaa/684ac97134388681002cdeee/1._edit_environment_box.png)
 - Select **Visual Experience** from the stack settings.
 - In the **General** tab, select the **Enable Live Preview** checkbox.
-- Set the **Default Preview Environment** and click **Save** to save the settings.**Tip:** You can also update the preview URL and environment from the preview settings available on the entry page.
+- Set the **Default Preview Environment** and click **Save** to save the settings.
+
+  **Tip:** You can also update the preview URL and environment from the preview settings available on the entry page.
 - Enable the** Display Setup Status** toggle to display the configuration status.       You can now see the Live Preview icon within all the entries of your stack and the feature previews data from the hosted website.
 You can now see the Live Preview icon within all the entries of your stack and the feature previews data from the hosted website.
 

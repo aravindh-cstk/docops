@@ -46,7 +46,7 @@ To create a branch, log in to your [Contentstack account](https://app.contentsta
 - In the **Create New Branch** form, add the following details:  
   **Branch ID:** Enter a unique ID for the branch, e.g., “development”
   - **Source Branch:** Select a branch from the dropdown from which this new branch should inherit data, e.g., "main"
-  - Click on **Create** to save your branch.
+  - Click on **Create** to save your branch.![Branches.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta756639478fccf8d/6329ba7c2975ce72ea2fe22b/Branches-1.gif)
 
 With branches, developers and content managers can maintain and work on different versions of the production content within the same stack.
 

@@ -28,11 +28,13 @@ This action gets a user's first name, last name and email address based on the u
 - Under **Choose an Action** tab, select the **Get User Information** action.
 - On the **Get User Information Configure Action** page, enter the details given below:  
   Click **+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account to Automate](/docs/developers/automation-hub-connectors/contentstack-management#connect-your-contentstack-account-to-automate) step.
-- Provide a **User ID **to fetch the user details.**Note:** To fetch the user ID, you need to configure an action and select the dropdown to fetch from the previous step, where user details can be fetched.
-- You can easily select multiple user IDs from the **Suggested Data Elements** drop-down. This will automatically retrieve all the user IDs generated in the previous steps, streamlining the process.
+- Provide a **User ID **to fetch the user details.
+
+  **Note:** To fetch the user ID, you need to configure an action and select the dropdown to fetch from the previous step, where user details can be fetched.![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc896ef7ecb20da38/66f28a30ee6d37e2aea74767/Select_Fields.png)
+- You can easily select multiple user IDs from the **Suggested Data Elements** drop-down. This will automatically retrieve all the user IDs generated in the previous steps, streamlining the process.![Select_Fields_User_Profile.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltba274015f55e0c4c/682b22e5725241c7d18ceee4/Select_Fields_User_Profile.png)
 - Once done, click **Proceed**.
 - Click **Test Action** to test the configured action.
-- The output will be shown as follows. Click the **Save and Exit** button.
+- The output will be shown as follows. Click the **Save and Exit** button.![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6f30aabc225fdc31/66f28a2f8429273a92eed865/Save_Exit.png)
 
 ## Common questions
 

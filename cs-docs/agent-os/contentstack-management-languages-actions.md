@@ -27,12 +27,12 @@ This action fetches the details of all the languages (locales) added in a stack.
 - Under **Choose an Action** tab, select the **Get All Languages** action.
 - On the **Get All Languages Configure Action **page, enter the details given below:  
   Click **+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account to Automate](/docs/developers/automation-hub-connectors/contentstack-management#connect-your-contentstack-account-to-automate) step.
-- Select a **Stack **from the **Lookup **list.
+- Select a **Stack **from the **Lookup **list.![Select_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd2b883486460f6ca/6628d56da9b0ab22a6b9227f/Select_Field.png)
 - **[Optional] **Enable the **Show Optional Fields** toggle button to display the **Language Limit**, **Skip Language (Pagination)**, and **Branch **fields.
-- Click the checkboxes to include the **count of languages** and **branch details**.
+- Click the checkboxes to include the **count of languages** and **branch details**.![Show_Optional_Fiel.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt42748290546598e9/6628d56d24e181e38eace708/Show_Optional_Fiel.png)
 - Once done, click **Proceed**.
-- Click **Test Action** to test the configured action.
-- The output will be shown as below. Click the **Save and Exit** button.
+- Click **Test Action** to test the configured action.![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltadd15580ff3bc08b/6601a8d101e3118155cb0b30/Test_Action.png)
+- The output will be shown as below. Click the **Save and Exit** button.![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt223573c3ea899f5a/6628d56da02ad76354ee992a/Save_Exit.png)
 
 ## Common questions
 

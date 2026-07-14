@@ -44,11 +44,11 @@ To get the access token for JW Player, follow the steps given below:
 
 Log in to the [JW Player account](https://dashboard.jwplayer.com/login) using your JW Player account credentials.
 
-- Click the gear icon in the top-right corner of the JW Player dashboard, and then click **API Credentials**.
-- Now, click **Show Credentials** to view and copy the API Key.
-- To generate the **Secret**, click **Add**.
-- In the **API Key** modal, provide **Nam**e, select **User Role** from the dropdown, set the **Properties** checkboxes, and click **Save**.
-- Go to the recently created API Key and click **Show Secret** to view and copy the client secret.
+- Click the gear icon in the top-right corner of the JW Player dashboard, and then click **API Credentials**.![JW-Player-Dashboard](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltedd3fde93d57fa8f/657fff28a8ee436146196767/JW-Player-Dashboard.png)
+- Now, click **Show Credentials** to view and copy the API Key.![JW-Player-Dashboard-Show-Credentials](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta52be2581aa4b3e1/657fff28dd00676f2a203b37/JW-Player-Dashboard-Show-Credentials.png)
+- To generate the **Secret**, click **Add**.![JW-Player-Dashboard-Add-Credentials](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7bd42257360bd74f/657fff2813cde949901fdb84/JW-Player-Dashboard-Add-Credentials.png)
+- In the **API Key** modal, provide **Nam**e, select **User Role** from the dropdown, set the **Properties** checkboxes, and click **Save**.![JW-Player-Dashboard-Save-Credentials](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1c2c4fd589179f8e/657fff1941ecfd1f4ade21d1/JW-Player-Dashboard-Save-Credentials.png)
+- Go to the recently created API Key and click **Show Secret** to view and copy the client secret.![JW-Player-Dashboard-Show-Secret](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbb392ccf0286b278/657fffb1dd0067efe1203b3f/JW-Player-Dashboard-Show-Secret.png)
 
 ## Install and Configure the JW Player app in Contentstack Marketplace
 
@@ -59,7 +59,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **JW Player** app and click **Install App**.
-- In the pop-up window, select the stack where you want to install the JW Player app, accept the terms of service, and click the **Install** button.
+- In the pop-up window, select the stack where you want to install the JW Player app, accept the terms of service, and click the **Install** button.![JW-Player-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt31d36cf5943d9a3c/657fffb17d6d2eaf34b8a875/JW-Player-Install-App.png)
 - On the **Configuration** screen, enter the following details:
 
   **JW Player Credentials**: Enter the **API Key** and **Client Secret** retrieved from your JW Player account in [step 1](#retrieve-the-credentials-from-the-jw-player-account).
@@ -74,7 +74,7 @@ If you select **Custom Fields** then the **JW Player Keys** dropdown appears. By
 
 In the **Add Key Path** modal, enter the **JW Player Key Path** and click the **Create** or **Create and Apply** button to create a new key.
 
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![JW-Player-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt775fa237a44acd09/65b9526ada0f036dca5c67bf/JW-Player-UI-Locations.png)
 - If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.
 
 **Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
@@ -88,7 +88,7 @@ To use the JW Player application within an entry of your stack, follow the steps
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:![JW-Player-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc7e37c34409ef61b/657ffe694135c45d0356696b/JW-Player-Content-Type.png)
 
 There are two ways to use the JW Player application in your entry:
 

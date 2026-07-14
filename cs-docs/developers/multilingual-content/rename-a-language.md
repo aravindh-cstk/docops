@@ -22,7 +22,9 @@ Contentstack allows you to rename the existing [languages](./about-languages.md)
 To rename a language, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your stack, click the “Settings” icon (press “S”) on the left navigation panel, and select **Languages **(or press “**alt + L**” for Windows OS, and “option + **L**” for Mac OS). You will see the default [master language](./set-the-master-language.md) along with other added language(s).
 - This opens the **Languages** page that displays the list of languages added to the stack. Click on a language to rename it.
-- Provide a suitable **Name** for the language. For example, **Hindi - India** can be renamed to **Hindi**.**Note**: You cannot edit the code of a language
+- Provide a suitable **Name** for the language. For example, **Hindi - India** can be renamed to **Hindi**.
+
+  **Note**: You cannot edit the code of a language
 - Click on **Save**.
 
 ## API Reference

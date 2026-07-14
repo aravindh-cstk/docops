@@ -24,14 +24,16 @@ To add a Global field to your content type, log in to your [Contentstack account
 - Select the content type you want to edit.
 - Click the “+” (Insert a field) icon and select **Global** from the list.
 - To modify the properties of the Global field, click the **Properties** icon. This opens a modal with two tabs: **Basic** and **Advanced**.
-- In the **Basic** tab, under **Select Global Field**, choose your Global field. The selected field appears in your content type as a field, containing the required sub-fields.**Note:** You can add up to **25 Global** fields in a content type.
+- In the **Basic** tab, under **Select Global Field**, choose your Global field. The selected field appears in your content type as a field, containing the required sub-fields.
+
+  **Note:** You can add up to **25 Global** fields in a content type.
 - You can modify the following properties of a Global field at any time:
   - [**Display Name**](../create-content-types/display-name.md): Defines how the field appears in the UI.
   - [**Unique ID**](../create-content-types/unique-id.md): A system-generated identifier for the field.
   - [**Instruction Value**](../create-content-types/instruction-value.md): Guides users in filling the field.
   - [**Help Text**](../create-content-types/help-text.md): Displays additional information to assist users.
   - [**Multiple**](../create-content-types/multiple.md): Allows multiple instances for the field.
-  - [**Non-localizable**](../create-content-types/non-localizable.md): Set the field’s data only in the master-language entry.
+  - [**Non-localizable**](../create-content-types/non-localizable.md): Set the field’s data only in the master-language entry.![title=](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9e5f5011327ebaee/680a0d0cf2b32efed2658c77/add-global-fields-to-the-content.gif)
 
 **Note:**
 - Any changes to a Global field, its subfields, or properties automatically apply to all content types using the field.

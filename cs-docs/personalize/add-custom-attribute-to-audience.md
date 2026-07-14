@@ -31,14 +31,16 @@ After successfully creating the custom attribute in Personalize, you can add it 
 After [creating a custom attribute](./create-custom-attribute.md), you can add it to an Audience. Log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize.**
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to add the custom attribute.
-- Click the **Audiences** tab, and then click the **+ New Audience** button to create a new audience if you have not created one already.**Note:** If you have an existing Audience in your Personalize project, open it or click the corresponding vertical ellipses under the **Actions** section, select **Edit**, and jump directly to step 5.
+- Click the **Audiences** tab, and then click the **+ New Audience** button to create a new audience if you have not created one already.
+
+  **Note:** If you have an existing Audience in your Personalize project, open it or click the corresponding vertical ellipses under the **Actions** section, select **Edit**, and jump directly to step 5.
 - On the **Audience** page, provide a suitable **Name** and an optional **Description** for the audience.
 - In the **Rules** section, click the **+ Add Rule** button. To add the custom attribute:
 
 Click the **Select attribute** dropdown.
 - Scroll through the dropdown and select the custom attribute you want to add.
 - Click **Select Operator** to select an attribute-specific operator.
-- Enter a matching criterion for the condition in the **Select Value** field.
+- Enter a matching criterion for the condition in the **Select Value** field.![Select Value screenshot](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdBS9JhGBRXPGsbg18Er3T6aexmtDPN88qZrBUGpSqp-mTYZLV_YsHjAmOLliDh61W2zcGvOMH-jv_zZEOqCILwfn3BjETgCdhiA-rZi9XUfGDsrFvgOKWCHm4xa-0sOmqQowXc5TIOv18wCMu6dh1eNFRo?key=xdiy-Lh4PD3Y48RoXD83ZA)
 
 Similarly, you can add multiple attributes (preset and custom) to an Audience.
 

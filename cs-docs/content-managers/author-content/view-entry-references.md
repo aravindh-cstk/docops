@@ -25,7 +25,7 @@ To view references, log in to your [Contentstack account](https://www.contentsta
 - Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and open the desired entry.
 - Click the **Information** tab (represented by the **i** icon).
 - Scroll to the **Referenced In** section. This section lists all entries that reference the current entry. Each entry name is clickable, allowing you to open and edit the referencing entry directly.
-- To visualize relationships, click **View Reference Map**. This option is also available within applicable **Reference** fields.
+- To visualize relationships, click **View Reference Map**. This option is also available within applicable **Reference** fields.![View_Entry_References.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f6e2717e56ff107/69a546ab7ba984ac9c9e370e/View_Entry_References.gif)
 
 ## Understanding the Reference Map
 

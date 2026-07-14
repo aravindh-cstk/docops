@@ -47,8 +47,10 @@ Once the app is installed, you can access it from both the Full Page and Entry S
 ### Using Audience Insights as a Full Page Location App
 To use the Audience Insights app in Contentstack, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
 
-Go to the stack dashboard. On the left-hand side primary navigation, you will find the **Audience Insights** app icon.**Note**: If you have enabled the **App Switcher**, the icon will be available at the top under the **Apps** section.
-- Click the app icon to view the Audience Insights app within your CMS.
+Go to the stack dashboard. On the left-hand side primary navigation, you will find the **Audience Insights** app icon.![Audience-Insights-Full-Page-App-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0e52692eb52e1615/683aa535afd14d75a5625da1/Audience-Insights-Full-Page-App-Icon.png)
+
+**Note**: If you have enabled the **App Switcher**, the icon will be available at the top under the **Apps** section.![Audience-Insights-In-App-Switcher](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9ff9d3d1a7f8cce0/683b5deef809c1215f3e0820/Audience-Insights-In-App-Switcher.png)
+- Click the app icon to view the Audience Insights app within your CMS.![Audience-Insights-Full-Page-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9d0ff51d30ed0a8b/683d297aa2cdc214cea95561/Audience-Insights-Full-Page-App.png)
 - The app consists of three sections:
 
 #### Opportunity Explorer
@@ -78,11 +80,11 @@ Use the quadrants below to translate **Audience** Value (X-axis) and **Prevalenc
 - **Calculated Audience Size**: The size of each bubble reflects how many users are associated with that topic, larger bubbles mean larger audiences.
 - **Topic Name**: The specific content topic being analyzed in the chart (e.g., sun). Click the **Topic** to view the details and create audiences.**Entries**: The number of content entries where this topic appears. (e.g., 0.30). A score or weight indicating topic relevance, likely tied to model-calculated value or urgency.
 - **Topic appears in Audiences**: Shows how many audience segments currently include this topic.
-- **Create Audience**: Allows you to build a new audience segment based on the selected topic by clicking the **Create Audience** button. Then, provide the **Audience Name** and click the** Confirm **button.The audience will be created in Data & Insights (Lytics).
+- **Create Audience**: Allows you to build a new audience segment based on the selected topic by clicking the **Create Audience** button. Then, provide the **Audience Name** and click the** Confirm **button.![Audience-Insights-Opportunity-Explorer-Create-Audience-Modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt121d70f422f1afab/683aa53f64e286f814bc3931/Audience-Insights-Opportunity-Explorer-Create-Audience-Modal.png)The audience will be created in Data & Insights (Lytics).
 - **Source (Standard Customer)**: Defines the base audience or data segment used to populate the chart.
 - **Target (Premier Customer)**: The goal audience segment used for comparison or targeting strategy.
 - **View Changes Over Time**: Lets you track how topic performance evolves over a selected date range.
-- **Generate**: Click the **Generate** button to visualize Opportunity Explorer insights for the selected date range. This renders topic behavior and audience trends over time.You can select a date range, play and stop the timeline, and refresh it.
+- **Generate**: Click the **Generate** button to visualize Opportunity Explorer insights for the selected date range. This renders topic behavior and audience trends over time.![Audience-Insights-Opportunity-Explorer-Generate](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte69fc7a3fdcdbd20/683d297021ef7a4bda184b13/Audience-Insights-Opportunity-Explorer-Generate.png)You can select a date range, play and stop the timeline, and refresh it.
 
 #### Content Map
 Content Map visualizes how topics relate to one another based on user engagement. It helps identify core themes, topic clusters, and content gaps. Larger nodes indicate more traction, while connecting lines show shared associations. Use this map to refine strategy, personalize experiences, and prioritize content that aligns with audience interest.
@@ -120,8 +122,8 @@ Use the app to turn behavioral data into actionable strategy, so every audience 
 
 ### Using the Audience Insights App as an Entry Sidebar
 To use the Audience Insights app as an Entry Sidebar, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps given below:
-- Go to the stack dashboard and navigate to the **Entries** page. Open the entry and you will find the **Audience Insights** app icon in the right navigation panel.
-- Click the app icon to view the Audience Insights app within your entry. To view the real-time analysis, click the **Analyze** button.
+- Go to the stack dashboard and navigate to the **Entries** page. Open the entry and you will find the **Audience Insights** app icon in the right navigation panel.![Audience-Insights-Entry-Sidebar-App-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt70f349b9c55be014/683aa535d6b7cb2411211d70/Audience-Insights-Entry-Sidebar-App-Icon.png)
+- Click the app icon to view the Audience Insights app within your entry. To view the real-time analysis, click the **Analyze** button.![Audience-Insights-Entry-Sidebar-Analyze](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4f6a6089d2c77e6e/683d2411b705e066ac63fa63/Audience-Insights-Entry-Sidebar-Analyze.png)
 - You can view which topics your entry aligns with, and how well it connects with your target audiences. These insights help content teams turn every entry into a strategic, data-driven opportunity.**Topics**: This section shows the top themes detected in the analyzed content. Each topic (e.g., **Maldives**, **Beauty**, **Life**) reflects what the content is about, helping you understand its focus and contextual relevance. The length of each bar indicates how strongly the topic is represented.
 - **Audience Alignment**: This section displays which audience segments are most aligned with the content. Segments like **Frequent Users**, **At Risk Users**, or **Multi Session Visitors** show how different groups connect with the page. Higher alignment suggests stronger relevance or engagement potential with that group.
 - You can perform the analysis again by clicking the **Re-analyze** button.

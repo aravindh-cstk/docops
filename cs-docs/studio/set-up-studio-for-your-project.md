@@ -84,7 +84,9 @@ yarn add @contentstack/delivery-sdk
 Project Settings define how Studio connects to your Contentstack stack and rendering environment. Proper configuration ensures accurate previews, environment consistency, and correct localization when building or testing compositions to your linked stack.
 
 - In your Studio project, open the **Settings** tab.
-- Under **Configurations**, select the **Environment** and **Language** to load the correct **Base URL**.**Note**: You must [configure the environment](../developers/set-up-environments/add-an-environment.md), base URL, and language in your stack settings.
+- Under **Configurations**, select the **Environment** and **Language** to load the correct **Base URL**.
+
+  **Note**: You must [configure the environment](../developers/set-up-environments/add-an-environment.md), base URL, and language in your stack settings.
 - The **Base URL** configured against the selected environment is displayed.
 - Click **Save**.
 
@@ -285,11 +287,13 @@ When executed, this command analyzes your project, attempts to extract design to
 Compositions are structured layouts for pages. Create a linked composition template for content types with multiple entries, and use a freeform composition for single-entry (singleton) content types or standalone pages.
 
 - Open the **Compositions** tab and click **New Composition**.
-- Choose **Linked** (multiple entries share one template) or **Freeform** (one-off page).**Additional Resource**: Learn more about the [types of compositions](./manage-a-composition.md#composition-types) through our documentation.
+- Choose **Linked** (multiple entries share one template) or **Freeform** (one-off page).
+
+  **Additional Resource**: Learn more about the [types of compositions](./manage-a-composition.md#composition-types) through our documentation.
 - Let’s select the **Freeform** composition for this setup.
 - Enter a **Name** and review the auto-generated **UID** (you can edit it).
 - For the **Freeform** composition, you need to define the **URL Path**. This URL acts as the place where this composition is hosted.
-- Click **Create** to open it in **Canvas**.
+- Click **Create** to open it in **Canvas**.![4. Create a Freeform Composition.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt64b3ac6b46a13270/6925a1e47be89702113c980f/4._Create_a_Freeform_Composition.gif)
 
 **Tip**: If you plan to [bind content](./data-binding.md) immediately, ensure your content types and entries exist in the selected environment.
 

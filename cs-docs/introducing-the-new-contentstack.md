@@ -17,7 +17,7 @@ This page announces and explains the major changes in the new Contentstack exper
 
 Introducing the New Contentstack
 
-Welcome to the new Contentstack — a revolutionary way to create and manage content.
+Welcome to the new Contentstack — a revolutionary way to create and manage content.![Introducing_New_contentstack.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5dc2d543e27892bb/64830b12b9a076b6f5925ddb/Introducing_New_Contentstack.png)
 
 We have rebuilt our product from the ground up to make the content creation experience with a focus on doing one thing: Improve the core features to make them easier to use and more intuitive for both content managers and developers. This document explains some of the major changes that the new Contentstack brings to you:
 

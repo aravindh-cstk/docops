@@ -27,9 +27,9 @@ In this guide, you will learn about the different update types (Major, Minor, or
 ## Steps for Execution
 To view the latest releases of an app, log in to your [Contentstack account](https://www.contentstack.com/login) and follow the steps below:
 - Navigate to Contentstack [Marketplace](https://app.contentstack.com/#!/marketplace).
-- Click **Manage** from the left panel and select **Installed Apps**.
-- Click the app whose releases you want to view, a modal pops-up.The app modal includes **Overview**, **Screenshots**, **Use Cases**, **Installed On Stack**, and **Releases** tab. By default, you are on the **Installed On Stack** tab.
-- Click the **Releases** tab to view all the releases with release type, version number, release name, and description.There are three Release types: **Major** (1.0.0), **Minor** (1.1.0), and **Patch** (1.1.1).
+- Click **Manage** from the left panel and select **Installed Apps**.![1-App-Releases-In-Marketplace-Flow](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2c47d15292d7c3ab/66d8c358250400243af52ba0/1-App-Releases-In-Marketplace-Flow.png)
+- Click the app whose releases you want to view, a modal pops-up.![2-App-Releases-In-Marketplace-Sample-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltadcd1cc6eaf56a25/66d8c35820ece054a5f75590/2-App-Releases-In-Marketplace-Sample-App.png)The app modal includes **Overview**, **Screenshots**, **Use Cases**, **Installed On Stack**, and **Releases** tab. By default, you are on the **Installed On Stack** tab.
+- Click the **Releases** tab to view all the releases with release type, version number, release name, and description.![3-App-Releases-In-Marketplace-Releases-Tab](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt769946bc54682ef3/66d8c35796357f3fd4fd33d0/3-App-Releases-In-Marketplace-Releases-Tab.png)There are three Release types: **Major** (1.0.0), **Minor** (1.1.0), and **Patch** (1.1.1).
 
 **Major releases** introduce significant changes, potentially breaking compatibility with earlier versions such as Introducing a new UI.
 - **Minor releases** add incremental updates like or enhancements, maintaining backward compatibility.

@@ -25,9 +25,9 @@ To assign a name to an [asset](./about-assets.md) version, log in to your [Conte
 
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel.
 - Navigate to the asset you want to modify.
-- Click the **version** **dropdown **located in the top-right corner of the page.
-- From the dropdown menu, view the list of all asset versions. Click the **Rename** icon next to the asset version you want to rename.
-- Type the new name for the version in the provided field. Once done, confirm your changes by either clicking the **checkmark** icon or pressing **Enter** on your keyboard.
+- Click the **version** **dropdown **located in the top-right corner of the page.![Version_Dropdown.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8564fee18a589f52/674d6be41621f6d0466e838a/Version_Dropdown.png)
+- From the dropdown menu, view the list of all asset versions. Click the **Rename** icon next to the asset version you want to rename.![Rename_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd5a781e9e67f8108/674d6c76ef6d5a670e228b95/Rename_Icon.png)
+- Type the new name for the version in the provided field. Once done, confirm your changes by either clicking the **checkmark** icon or pressing **Enter** on your keyboard.![Checkmark_the_name.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47e0b15d7c944ed1/674d6c7627811854355d773d/Checkmark_the_name.png)
 
 **Note**: Custom version names have a maximum limit of **32** **characters**.
 

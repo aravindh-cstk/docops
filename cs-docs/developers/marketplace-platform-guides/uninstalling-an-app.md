@@ -20,8 +20,8 @@ To uninstall an app, follow the steps below:
 - Open Marketplace, and go to **Manage** > **Installed Apps**.
 - Click the app that you want to uninstall.
 - Go to the **Installed On** tab. You will see the list of stacks in which the app is installed. Hover on the stack from which you want to uninstall the app. You can see the icons for **Uninstall**** App** and **Configuration**.
-- Click the **Uninstall** icon to uninstall the app.
-- Enter the name of your application in the pop-up box and click **Uninstall** to permanently remove the app and all its associated data.
+- Click the **Uninstall** icon to uninstall the app.![Uninstall-App-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdd105edb9c69d02c/64b92de1bbc038dddb776d59/Uninstall-App-Icon.png)
+- Enter the name of your application in the pop-up box and click **Uninstall** to permanently remove the app and all its associated data.![Uninstall-App-Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte45000c521ecddac/64b92de1d570d747ad0748b2/Uninstall-App-Button.png)
 
 This will uninstall the app from your stack.
 

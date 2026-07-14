@@ -23,18 +23,18 @@ The localization operator in Contentstack's [Advanced Search](./advanced-search.
 
 To use the localization operator, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the [Entries](../author-content/about-entries.md) module.
-- Click the **Advanced Search** option next to the search bar.
-- By default, you will see **Match All Conditions**, but you can switch to **Match Any Conditions** if needed.
+- Click the **Advanced Search** option next to the search bar.![About Localization Operator_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte8ac1129e75b02c9/684299f10296e4572eb03a59/1._Advaned_search_button.png)
+- By default, you will see **Match All Conditions**, but you can switch to **Match Any Conditions** if needed.![About Localization Operator_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0bbbc3c2a7841f5b/684299f164e286f273bc7f68/2._matching_conditions_dropdown.png)
 - Select **Language** from the **Content Type or Field** dropdown.
 - From the **Operator** dropdown, select **Matches** to find entries where the language matches a specific value.
-- Choose the language you want to search for, such as **French**.
+- Choose the language you want to search for, such as **French**.![About Localization Operator_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85ca7cc7a20c5a4b/684299f121ef7a90ca188b15/3._operator_set_as_language.png)
 - Choose the operator that fits your needs:**Localized In**: Select this option if you want to find entries that have been localized in a specific language.
 - **Not Localized In**: Select this option to find entries that have not been localized in a specific language but might be available in their fallback languages.
 
 For example, to find entries that have not been localized in **French**:
 - Set the **Language** field to **French**.
 - Choose **Not Localized In** from the **Operator** dropdown.
-- You can add more criteria or filters as needed to narrow down your search. Once your query is set up, click the **Search** button to view the results.
+- You can add more criteria or filters as needed to narrow down your search. Once your query is set up, click the **Search** button to view the results.![About Localization Operator_5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0dc45ebf95e7aa61/684299f2afd14d5c4b62a202/5._Localized_entry_output.png)
 
 **Additional Resource**:
 - Explore real-world localization examples in our [Localization Operator Real-world Scenarios](./localization-operator-real-world-scenarios.md) article.

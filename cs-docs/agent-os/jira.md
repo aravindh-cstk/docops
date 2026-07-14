@@ -24,18 +24,18 @@ The JIRA action connector lets you create a task, create an issue, and update an
 Perform the following steps to set up JIRA action connector:
 - Click **Configure Action Step** from the left navigation panel.
 - Click **Action Step** to configure third-party services.
-- Within the **Configure Action Step**, click the **Jira **connector.
+- Within the **Configure Action Step**, click the **Jira **connector.![JIRA.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8704562b858e8036/6527f8c9931d631e7f9f18a9/JIRA.png)
 - Under **Choose an Action** tab, you will see three actions: **Create a Task** (creating a ticket in Jira), **Create an Issue** (creating an issue in Jira) , and **Update an Issue** (updating an issue in Jira).
 
 Let’s look at each of them in detail.
 
 Action 1: Select the** Create a Task** action:
-- Click the **+ Add New Account **button to set up your Jira account (see screenshot in next step).
+- Click the **+ Add New Account **button to set up your Jira account (see screenshot in next step).![Jira-Create-Task-Add-New-Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5193adcaaae9e02b/63dcadecc338484e3b194f4a/Jira-Create-Task-Add-New-Account.png)
 - In the **Authorize modal**, enter a **Title**, an **Email**, an** API Token** and a **Cloud Instance URL**, and then click** Authorize**.
 To generate the API Token and Cloud Instance URL, log in to the JIRA dashboard and perform the following steps:
 Log in to JIRA using your authorized email address and go to your **Account Settings**.
 - In the **Security** section, click **Create and manage API tokens**.
-- Click **Create API token**.
+- Click **Create API token**.![Jira-API-Dashboard.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt43f0cea33a8ef66a/63dd0138f4b2e369e5c73021/Jira-API-Dashboard.png)
 - Provide a **Label** for the token and click **Create**.
 - **Copy** this token and save it somewhere as you won’t be available to view it once you close the modal.
 **Note:** For more information on API Tokens, refer to the How to create API Tokens in JIRA document.
@@ -48,14 +48,14 @@ Additional Resource: Read more on [Create a Project | Customize your project](ht
 
 Click the **Show optional fields** toggle button to provide the **Description** and **Labels.**
 - Click **Proceed**.
-- You will see the input values which you have configured in the **Configure Action** modal.
-- Check if the details are correct. If yes, click **Test Action**.
+- You will see the input values which you have configured in the **Configure Action** modal.![Jira-Create-Task-Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc4f3fd0e6305451e/63dcadecf4b2e369e5c72f03/Jira-Create-Task-Input.png)
+- Check if the details are correct. If yes, click **Test Action**.![Jira-Test-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0d6e2ff9fd48c959/63dcadec7ccfaf4bc687f044/Jira-Test-Action.png)
 - Once set, click **Save and Exit**.
 - Navigate to your JIRA Project. You should see that the ticket has been generated and is placed under **Backlog.
-**
+**![Jira-Board-Task.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltea5368aa37630b4b/63dd066e4af9a97be711cef3/Jira-Board-Task.png)
 
 Action 2: Select the** Create an Issue** action:
-- Click the **+ Add New Account **button to set up your Jira account (see screenshot in next step).
+- Click the **+ Add New Account **button to set up your Jira account (see screenshot in next step).![Jira-Create-Issue-Add-New-Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5599788643f505ee/63dcade090fb3569e47fafb6/Jira-Create-Issue-Add-New-Account.png)
 - In the **Authorize modal**, enter a **Title**, an **Email**, an** API Token** and a **Cloud Instance URL**, and then click** Authorize**.
 To generate the API Token and Cloud Instance URL, log in to the JIRA dashboard and perform the following steps:
 Log in to JIRA using your authorized email address and go to your **Account Settings**.
@@ -75,14 +75,14 @@ Additional Resource: Read more on [Create a Project | Customize your project](ht
 
 Click the **Show optional fields** toggle button to provide the **Description** and **Labels.**
 - Click **Proceed**.
-- You will see the input values which you have configured in the **Configure Action** modal.
+- You will see the input values which you have configured in the **Configure Action** modal.![Jira-Create-Issue-Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt017e61b1d11dc03e/63dcadec14a2b44fa11def43/Jira-Create-Issue-Input.png)
 - Check if the details are correct. If yes, click **Test Action**.
 - Once set, click **Save and Exit**.
 - Navigate to your JIRA Project. You should see that the ticket has been generated and is placed under **Backlog.
-**
+**![Jira-Board-Issue.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt60d09d5b8f645dd5/63dd066e842f040f19e3e9b5/Jira-Board-Issue.png)
 
 Action 3: Select the** Update an Issue** action:
-- Click the **+ Add New Account **button to set up your Jira account (see screenshot in next step).
+- Click the **+ Add New Account **button to set up your Jira account (see screenshot in next step).![Jira-Update-Add-New-Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb1db53650ddc8689/63dcade0bd97af5094b65962/Jira-Update-Add-New-Account.png)
 - In the **Authorize modal**, enter a **Title**, an **Email**, an** API Token** and a **Cloud Instance URL**, and then click** Authorize**.
 To generate the API Token and Cloud Instance URL, log in to the JIRA dashboard and perform the following steps:
 Log in to JIRA using your authorized email address and go to your **Account Settings**.
@@ -96,13 +96,13 @@ Log in to JIRA using your authorized email address and go to your **Account Sett
 Additional Resource: Read more on [Create a Project | Customize your project](https://support.atlassian.com/jira-work-management/docs/create-a-project/#Createaproject-Customizeyourprojectstage2).
 - On the **Update an Issue** **Configure Action** page, enter the details given below:Select a **Project Key **of the project in which you want to update an issue from the Lookup list.
 - Select an **Issue **(of which you want to update the status) from the Lookup list.
-- Select the **Status** from the Lookup list.
+- Select the **Status** from the Lookup list.![Jira-Update-Configure-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd3e839b738a1fb68/63dcade0d0a39b6b6a9bdbcb/Jira-Update-Configure-Action.png)
 - Click **Proceed**.
-- You will see the input values which you have configured in the **Configure Action** modal.
+- You will see the input values which you have configured in the **Configure Action** modal.![Jira-Update-Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4a30ed2f9eaf9a7e/63dcade06d590c21c347cd3f/Jira-Update-Input.png)
 - Check if the details are correct. If yes, click **Test Action**.
 - Once set, click **Save and Exit**.
 - Navigate to your JIRA Project. You should see that the ticket has been generated and is placed under **Backlog.
-**
+**![Jira-Board-Update.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3d457e5225e77ead/63dd066e295f164f53ab3448/Jira-Board-Update.png)
 
 This sets your **JIRA** action connector.
 

@@ -41,8 +41,8 @@ To install the app, log in to your [Contentstack account](https://www.contentsta
 
 - From the left-hand side primary navigation, click the **Marketplace** icon.
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see all the available apps. Hover over the **Fonts** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the app, accept the **Terms of Service**, and click the **Install** button.
+- Within the Marketplace, you can see all the available apps. Hover over the **Fonts** app and click **Install**.![Fonts-app-marketplace.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt100e879c5872f741/69eeacc7bbc93e1f271f113f/Fonts-app-marketplace.png)
+- In the pop-up window, select the stack where you want to install the app, accept the **Terms of Service**, and click the **Install** button.![3-Fonts-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta2defbf25c704c7a/66885523534a9dbc57ae02df/3-Fonts-App-Install.png)
 - On the **Configuration** tab, enter a **Name** and **URL** to install the Fonts app. Click the **+ Add** button.  
   **Note**: **Name** denotes the name of the **Font Family** and **URL** denotes the source URL from where you want to fetch the fonts. You can search the public URLs available and use them in your JSON RTE content.
 
@@ -56,7 +56,7 @@ To install the app, log in to your [Contentstack account](https://www.contentsta
 To use the Fonts app within an entry of your stack, follow the steps given below:
 
 - Go to your stack, click the **Content Models** icon from the left navigation panel, and click the **+ New Content Type** button.
-- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:![6-Fonts-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8b27e9302c00f170/668855240325456c86883d7b/6-Fonts-Content-Type.png)
 - In the **Content Type Builder** page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - On the **JSON Rich Text Editor Properties** modal, enter the following:
   - Enter a **Display Name** for the field, for example, Fonts.
@@ -65,8 +65,8 @@ To use the Fonts app within an entry of your stack, follow the steps given below
   This adds Fonts in the JSON Rich Text Editor.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
 - To use the Fonts app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry**.
-- You can see new icons added in the JSON RTE editor as shown below:
-- Add the content in the JSON RTE field. Select the word or the content where you want to apply any specific Font Family, Color, or Size.You can see the Fonts in the JSON Rich Text Editor field on your entry page, as shown below:
+- You can see new icons added in the JSON RTE editor as shown below:![9-Fonts-JSONRTE-Options](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6cb2187dd6144190/66885523a4dbae1c564d9ffa/9-Fonts-JSONRTE-Options.png)
+- Add the content in the JSON RTE field. Select the word or the content where you want to apply any specific Font Family, Color, or Size.You can see the Fonts in the JSON Rich Text Editor field on your entry page, as shown below:![10-Fonts-JSONRTE-In-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta83d8327fb0fccf7/668855245a7e7617a41ce0a9/10-Fonts-JSONRTE-In-Entry.png)
 - You can then proceed to **Save** and **Publish** your entry.
 
 ## Common questions

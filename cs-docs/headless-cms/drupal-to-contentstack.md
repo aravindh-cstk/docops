@@ -40,16 +40,16 @@ Follow these steps to migrate your Drupal content into Contentstack:
 
 ### Step 1: Log in to the Migration Tool
 - From the welcome page, click **Sign In with Contentstack**. Or refer to the [Authenticating the Migration Tool via SSO](/docs/headless-cms/authenticating-the-migration-tool-via-sso) guide to log in via SSO for a more secure migration.
-- You get redirected to the login page with region selection.
+- You get redirected to the login page with region selection.![region-page.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am56dbd8d6fe037cb3/296786d0f8a629147cd16849/region-page.png?locale=en-us)
 - Log in using your Contentstack credentials.
 
 ### Step 2: Select Your Organization
 - After logging in, you see an empty dashboard.
-- Select your organization from the dropdown in the top-left corner.
+- Select your organization from the dropdown in the top-left corner.![project-dashboard.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/ame7c798fe6f68a3c6/963189f77c03015e6d6f7eff/project-dashboard.png?locale=en-us)
 
 ### Step 3: Create a New Project
 - Click **+ New Project**.
-- Enter a **Title **and **Description** for your project.
+- Enter a **Title **and **Description** for your project.![project-modal.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am7a53cc1b2213ee83/a5d57f35901c25f2e9e970d7/project-modal.png?locale=en-us)
 - Click **Create Project**.
 
 ### Step 4: Select and Validate Legacy CMS Data
@@ -58,7 +58,7 @@ Follow these steps to migrate your Drupal content into Contentstack:
 - Make sure the affix does not match any of the [restricted keywords](../developers/create-content-types/restricted-keywords-for-uids.md).
 - The affix is used as:A prefix if the content type UID matches the restricted UIDs.
 - A suffix for field UIDs.
-- Click **Validate File** to validate the exported Drupal content.**Note**: If validation fails, check for the following issues:
+- Click **Validate File** to validate the exported Drupal content.**Note**: If validation fails, check for the following issues:![legacy-cms-validation-screen.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am41058dbd128523a0/7598d80628b1817d58f35611/legacy-cms-validation-screen.png?locale=en-us)
 - **File Format Error**: Ensure the file is in the desired format.
 - **Missing Content**: Ensure the exported data contains all required content.
 - **Incomplete Files**: Verify that no files are missing or corrupted.
@@ -68,7 +68,7 @@ Follow these steps to migrate your Drupal content into Contentstack:
 ### Step 5: Configure Destination Stack
 - You can either select an existing stack with content types or create a new stack. For this guide, let’s migrate content to an existing stack (eg., Sitecore).
 - In the **Language Mapping** section, map the source CMS locale to a predefined language in Contentstack.
-- Click **+ Add Language** to map multiple locales.
+- Click **+ Add Language** to map multiple locales.![language-mapper-screen.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am19441d6ff873b2b9/bf5f88d7765378c9e93cd2cf/language-mapper-screen.png?locale=en-us)
 - Click **Save and Continue**.
 
 ### Step 6: Map Content Types
@@ -115,7 +115,7 @@ Use the following advanced options to efficiently manage your mappings:
 - Click **Start Test Migration**.This migrates a small subset of your data to validate the mapping before running the full migration.
 
 ### Step 8: Execute the Migration
-- After a successful test migration, click **Start Migration** to perform the full migration to your selected stack.
+- After a successful test migration, click **Start Migration** to perform the full migration to your selected stack.![migration-execution-screen.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am65f675854dbeed56/889ca57e482600fa393e0b22/migration-execution-screen.png?locale=en-us)
 - Upon completion, a success message appears in the logs with a link to your destination stack.
 
 Your migrated data is now available in Contentstack.

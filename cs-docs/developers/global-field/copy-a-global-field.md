@@ -23,8 +23,10 @@ To copy a Global field, log in to your [Contentstack account](https://www.conten
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to copy a Global field.
 - Click the **Content Models** icon in the left navigation panel and select **Global Fields** in the left panel.
 - Locate the Global field you want to copy. Click the vertical ellipsis in the **Actions** column next to it and select **Copy Global Field**.
-- The **Copy Global Field** modal appears with the name "Copy of {your_global_field_name}". Enter a suitable name and description. The UID is auto-generated, but you can update it as required.**Tip:** Refer to the [Restricted Keywords for UIDs](../create-content-types/restricted-keywords-for-uids.md) to avoid using reserved keywords.
-- Click **Copy**.
+- The **Copy Global Field** modal appears with the name "Copy of {your_global_field_name}". Enter a suitable name and description. The UID is auto-generated, but you can update it as required.
+
+  **Tip:** Refer to the [Restricted Keywords for UIDs](../create-content-types/restricted-keywords-for-uids.md) to avoid using reserved keywords.
+- Click **Copy**.![Copy Global Field modal in Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt23506295b44be3a9/67ff99ec54c6903a91ca9082/1-Copy-of-Global-Field-1.gif)
 
 Once copied, the new Global field retains the original structure, allowing modifications without affecting the source field.
 

@@ -36,7 +36,7 @@ To add a Reference field within Global fields, log in to your [Contentstack acco
 ## Step 2: Create Global Field
 
 - Navigate to **Content Models**, select **Global Fields**, and click **+ New Global Field**.
-- In the **Create New Global Field** modal, provide a **Name** (e.g., Blog Post) and click **Proceed**.
+- In the **Create New Global Field** modal, provide a **Name** (e.g., Blog Post) and click **Proceed**.![Creating Global Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltee6f4d078ab03098/6808f3f15c6380b053662b2a/1._Global_Fields-Reference_Fields_Within_Global_Fields-Global_Field_Creation.png)
 - Within the **Global Field**, add the following fields:**Single Line Textbox:** For Blog Title
 - **JSON Rich Text Editor:** For Blog Content
 - **Reference field:** To link the **Author Details** content type
@@ -48,7 +48,7 @@ To add a Reference field within Global fields, log in to your [Contentstack acco
 - Add the following basic fields:**Single Line Textbox:** Blog Header
 - **JSON Rich Text Editor:** Blog Footer
 - Click the **Insert a field (+)** icon and select the **Global** field.
-- Click the **Select Global Field** field and select the **Blog Post** global field.
+- Click the **Select Global Field** field and select the **Blog Post** global field.![Main Content Type with Global Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltda09e2630d56083a/6808f4daa7e11bf683283dd3/3._global_field_inside_the_content_type.png)
 - Click **Save** or **Save and Close**.
 
 Using Reference Fields within Global Fields helps you centralize and reuse content elements across entries. This method is ideal for linking dynamic content such as authors, categories, or partners. It reduces repetitive work, ensures consistency, and supports scalable, maintainable content models.

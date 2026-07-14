@@ -22,8 +22,8 @@ You can transfer the stack ownership during role transitions, team restructuring
 
 To transfer stack ownership, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Go to your [stack](./about-stack.md) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for both Windows and Mac OS users).
-- On the **Stack Settings** page, click **Transfer Ownership**.
-- Enter the recipient email address and click **Transfer Ownership.**
+- On the **Stack Settings** page, click **Transfer Ownership**.![Transfer Ownership option in Contentstack settings](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteab5d652f2acd1c3/67bf1d8c959e4ea6c3e47c2f/Setup-a-Stack-Transfer-stack-Ownership-Transfer-Ownership-button.png)
+- Enter the recipient email address and click **Transfer Ownership.**![Enter email for stack ownership transfer in Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb37bbfb07f5d41f0/67bf1ddd809db01f0fb4feb8/setup-a-stack-transfer-stack-ownership-email-field.png)
 
 **Note:** Make sure the recipient is an existing Contentstack user.
 

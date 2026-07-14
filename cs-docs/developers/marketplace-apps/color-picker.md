@@ -42,9 +42,9 @@ Follow the steps to install the application in Contentstack.
 Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see all the available apps. Hover over the **Color Picker** app and click **Install App**.
-- In the popup window, select the stack where you want to install the Color Picker app and click the **Install** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- Within the Marketplace, you can see all the available apps. Hover over the **Color Picker** app and click **Install App**.![Color-picker-app-marketplace.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9d2eec5ae196902d/69eeabbb51dedac2c2916e67/Color-picker-app-marketplace.png)
+- In the popup window, select the stack where you want to install the Color Picker app and click the **Install** button.![Color-Picker-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2ff7c5f560df38dc/64b9189927713f0e046a1352/Color-Picker-Install-App.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Color-Picker-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb61c0382da3928a9/65b7b10493cdf13aaf7ca9bc/Color-Picker-UI-Locations.png)
 
 **Note**: No additional configuration is required to use the Color Picker app.
 
@@ -53,7 +53,7 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 To use the Color Picker application within an entry of your stack, follow the steps given below:
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![Color-Picker-Content-Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt349a1d89a30bd5e8/64257a90524c8410f07bdd30/Color-Picker-Content-Type.png)
 - In the Content Type Builder page, add a Custom field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **Color Picker**, and click the **Proceed** button.
 
@@ -62,7 +62,7 @@ Color Picker is added in the custom field.
 - To use the Color Picker app, create an entry for this content type. In the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.
 
 You will see the Color Picker custom field on your entry page as shown below:
-- You can pick a color by dragging the cursor or providing the color codes.
+- You can pick a color by dragging the cursor or providing the color codes.![Color-Picker-Details.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt13b9e8e0d44d5672/64257a90e22a5011175ccd90/Color-Picker-Details.png)
 - After setting the slider, **Save** and **Publish** your entry.
 
 ## Common questions

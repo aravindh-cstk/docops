@@ -60,11 +60,15 @@ To register an app in Developer Hub, perform the steps given below:
 - Log in to your [Contentstack account](https://www.contentstack.com/login).
 - On the Dashboard page, click the **Developer Hub** icon.
 - Click the** + New App **button.
-- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](./introduction-to-contentstack-applications.md). Here, we will use the **Standard** application.**Additional Resource: **Refer to the [Creating an App in Developer Hub](./creating-an-app-in-developer-hub.md) documentation to know more about **Standard** and **Machine to Machine **app categories.
-- In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** (Quick Web Lookup) and an optional **Description** as shown below:
-- Click **Create**. You are redirected to the** UI Locations **landing page.
+- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](./introduction-to-contentstack-applications.md). Here, we will use the **Standard** application.
+
+  **Additional Resource: **Refer to the [Creating an App in Developer Hub](./creating-an-app-in-developer-hub.md) documentation to know more about **Standard** and **Machine to Machine **app categories.
+- In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** (Quick Web Lookup) and an optional **Description** as shown below:![Create_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt221595105fdee051/690a03d94f0dee6fb8efbea0/Create_App.png)
+- Click **Create**. You are redirected to the** UI Locations **landing page.![UI_Locations_Tab.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdbaaa4597cd51f87/690a03d9d3150529396abe1d/UI_Locations_Tab.png)
 - Navigate back to the UI Locations tab, click the vertical ellipses in the App Configuration UI location, then click the **+ Add UI Location** button to add as needed. **App Configuration:** Enter `/app-configuration`as the **Path**, then click **Save** to apply and store your configuration. This setup displays a dedicated app configuration page (after app installation) where you can manage app configuration.**Note:** The **App Configuration** UI location lets you add a **Peekalink API** key for the Quick Web Lookup app.
-- **Entry Sidebar: **Enter a **Name** and use `/entry-sidebar` as the **Path**, then click **Save** to apply and store your configuration. This setup ensures your app appears in the sidebar of the entry editor, allowing you to perform actions or view information related to an entry.**Note: **The Entry Sidebar UI location allows you to view the app in the Entry Sidebar of an entry.
+- **Entry Sidebar: **Enter a **Name** and use `/entry-sidebar` as the **Path**, then click **Save** to apply and store your configuration. This setup ensures your app appears in the sidebar of the entry editor, allowing you to perform actions or view information related to an entry.
+
+  **Note: **The Entry Sidebar UI location allows you to view the app in the Entry Sidebar of an entry.![Entry_Sidebar_Location.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt89f3f40f64d046dc/690a03d9c1ae535009f89a05/Entry_Sidebar_Location.png)
 - Navigate to the **Hosting** tab. You will see [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom Hosting** option to enter the hosted URL of your application.Enter the **App URL** and click **Save** to apply and confirm your hosting configuration. While running the application locally, select Custom Hosting and use your local app URL (for example, `http://localhost:3000`).
 
 After development, you can host your application using Contentstack [Launch](../launch.md).
@@ -151,12 +155,12 @@ const EntrySidebarExtension: React.FC = () => {
 ### Install and Test Your App
 To install and test the app, follow the steps below:
 - Navigate to [Developer Hub](../developer-hub.md) in Contentstack.
-- Go to the app, and click the **Install App **button.
-- On the permissions screen, select a **Stack** and mark the checkbox to accept the **Terms of Service** and **Privacy Policy**. Once done, click the **Install** button.
-- You will be redirected to the **App Configuration** Screen. Enter the Peekalink API Key and click **Save**. Click **Open Stack**.**Additional Resource: **Refer to the [Peekalink site](https://www.peekalink.io/) to fetch the API Key. You **must** create an account to get the API Key.
-- Navigate to the [Entries](../../content-managers/author-content/about-entries.md) page. Open any entry with a URL. From the right-hand side panel, click the **Apps** icon.
+- Go to the app, and click the **Install App **button.![Install_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0a8d997f432ae39e/690a03d936c0886041db3d81/Install_App.png)
+- On the permissions screen, select a **Stack** and mark the checkbox to accept the **Terms of Service** and **Privacy Policy**. Once done, click the **Install** button.![Authorize_Install.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1b41dff3aee8fdcb/690a03d9aef8bb61324fb8c9/Authorize_Install.png)
+- You will be redirected to the **App Configuration** Screen. Enter the Peekalink API Key and click **Save**. Click **Open Stack**.**Additional Resource: **Refer to the [Peekalink site](https://www.peekalink.io/) to fetch the API Key. You **must** create an account to get the API Key.![Peekaling_Config.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9694f1e6a562f41f/690a070cd3150585086abe2c/Peekaling_Config.png)
+- Navigate to the [Entries](../../content-managers/author-content/about-entries.md) page. Open any entry with a URL. From the right-hand side panel, click the **Apps** icon.![Apps_Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7843abe5cb0ed8f8/69384315b5ddb922fac24002/Apps_Icon.png)
 - Click the **Quick Web Lookup** app under the **All Apps **section.
-- You will see previews of all the links present in your entry, fetched securely without exposing sensitive front-end data by the app.This app connects to third-party APIs securely using Contentstack’s app and server configuration, without building or deploying a custom backend or worrying about future maintenance.
+- You will see previews of all the links present in your entry, fetched securely without exposing sensitive front-end data by the app.![Output](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3a9bcef3a0619a78/693846da8943a3e20a70c403/Output.png)This app connects to third-party APIs securely using Contentstack’s app and server configuration, without building or deploying a custom backend or worrying about future maintenance.
 
 ## Security and Best Practices
 - **Rotate API keys** regularly.

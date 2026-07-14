@@ -41,9 +41,9 @@ A non-referenced audience in Contentstack Personalize is an audience that is not
 To delete an existing non-referenced audience, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to delete an audience.
-- Click the **Audiences** tab.
-- You can delete an existing audience by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Delete**.
-- In the **Delete Audience** modal, click **Delete** to permanently delete the audience.
+- Click the **Audiences** tab.![AD_4nXeX4Msgqz57OAyM9SqDp1WRI1yFU_502PTR0qUrhAM8AO1-o32rZJGrjLX2FOru_SUzJmtm1RcRTS3wk86yy7ozEdP2ub5K4wpmXYwFtAKAD1vzfJW-h48suia1vmVAGBTaB6eIGQ](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeX4Msgqz57OAyM9SqDp1WRI1yFU_502PTR0qUrhAM8AO1-o32rZJGrjLX2FOru_SUzJmtm1RcRTS3wk86yy7ozEdP2ub5K4wpmXYwFtAKAD1vzfJW-h48suia1vmVAGBTaB6eIGQ?key=lx61JLV__VsURLhShzpulQ)
+- You can delete an existing audience by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Delete**.![AD_4nXeTzh6U3cFE-Kj7tsu5P0DbRuR5fl1YqSKNil3Nk0s3S6m5HiOTGyaDQC8meaPvf3GmWwmj3Cw5bjUFtYiNGJmazomSNTKqa-75nyaFkxhcJNZvukI4EOI_mGL9ytCKWtVjlhT4CA](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeTzh6U3cFE-Kj7tsu5P0DbRuR5fl1YqSKNil3Nk0s3S6m5HiOTGyaDQC8meaPvf3GmWwmj3Cw5bjUFtYiNGJmazomSNTKqa-75nyaFkxhcJNZvukI4EOI_mGL9ytCKWtVjlhT4CA?key=lx61JLV__VsURLhShzpulQ)
+- In the **Delete Audience** modal, click **Delete** to permanently delete the audience.![AD_4nXf3d0wfIGTNEU8KA3kQM_V6UfQU8xaXMsBlGrYyjXi02wNLHrrFlJycHoUFP5JTw0uuIXptzdVDL9RL1LzxZixwYFqEtJuYtP6riju_AjNtk_yHUf1hG1fGoIopg1R50IJVH6i-KGMI72SvNssSa3U4uhmm](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf3d0wfIGTNEU8KA3kQM_V6UfQU8xaXMsBlGrYyjXi02wNLHrrFlJycHoUFP5JTw0uuIXptzdVDL9RL1LzxZixwYFqEtJuYtP6riju_AjNtk_yHUf1hG1fGoIopg1R50IJVH6i-KGMI72SvNssSa3U4uhmm?key=FgoiKl48HsensDkIPuZKtg)
 
 You will get a success message after the audience is deleted from Personalize.
 
@@ -57,12 +57,16 @@ As a result, deleting a referenced audience requires additional steps to ensure 
 To delete an existing referenced audience in an Experience draft, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize.**
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to delete an audience.
-- On the **Experiences** page, to remove the referenced audience, navigate to the experience where the audience is used by clicking the experience to open it or by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Edit**.**Note:** An experience with the referenced audience must be in the 'Draft' status to delete the audience.
-- Click the **Configuration** tab in the left panel and click the **Remove** icon next to the preferred audience from the list.**Note:** For A/B Test experiences, go to the **Configuration > Target Group** to remove the referenced audiences.
+- On the **Experiences** page, to remove the referenced audience, navigate to the experience where the audience is used by clicking the experience to open it or by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Edit**.![AD_4nXd-EnSaSWNMaoRjUJR1s7N4pgPcrzInn7cJob27Yd-AAp-3OSidvtyK9QmtZyCEMMtxsrnao7v_kHrIuUrWexmYO0XrVGu4t1XpskekDreZkr46cdF1EScm0XBEEH89UUkC4eaB](https://lh7-rt.googleusercontent.com/docsz/AD_4nXd-EnSaSWNMaoRjUJR1s7N4pgPcrzInn7cJob27Yd-AAp-3OSidvtyK9QmtZyCEMMtxsrnao7v_kHrIuUrWexmYO0XrVGu4t1XpskekDreZkr46cdF1EScm0XBEEH89UUkC4eaB?key=lx61JLV__VsURLhShzpulQ)
+
+  **Note:** An experience with the referenced audience must be in the 'Draft' status to delete the audience.
+- Click the **Configuration** tab in the left panel and click the **Remove** icon next to the preferred audience from the list.![AD_4nXfXLrv6hQ888k4qR6vizy7fCDmoX3mcHvfoH-YvYBE9ZOnXGmZhWhnGKWEAHfg8xfnsBRtWmzUVXZjBhdRZjt4u9LzJE7KvWzcRNzBLj3pCujscSkvYsmHvRn3BnHeVQduQkMg5m2zoYFPfnoxqyfwECf7m](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfXLrv6hQ888k4qR6vizy7fCDmoX3mcHvfoH-YvYBE9ZOnXGmZhWhnGKWEAHfg8xfnsBRtWmzUVXZjBhdRZjt4u9LzJE7KvWzcRNzBLj3pCujscSkvYsmHvRn3BnHeVQduQkMg5m2zoYFPfnoxqyfwECf7m?key=FgoiKl48HsensDkIPuZKtg)
+
+  **Note:** For A/B Test experiences, go to the **Configuration > Target Group** to remove the referenced audiences.
 - Once you have done that, click the **Save Draft** button.
 - Now that we have removed the audience from the experience as a reference, click the **Audiences** tab in the left navigation panel.
 - You can delete the audience by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Delete**.
-- In the **Delete Audience** modal, click **Delete** to permanently delete the audience.
+- In the **Delete Audience** modal, click **Delete** to permanently delete the audience.![AD_4nXcBrHqRHk-gnPWZ4MYG80VYFuolkvT61L0JYqDBoeTcog_Ossr4OJmj8R0Qi6LWDP1ouGUQvtcf2iBZPow8t8S4gc4IxDIG7Fv7sN9z7mxm80WmR-D0LfJL-yVbKH7DW83tFTW0ezBLZwHOfjwCD2h4tC4](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcBrHqRHk-gnPWZ4MYG80VYFuolkvT61L0JYqDBoeTcog_Ossr4OJmj8R0Qi6LWDP1ouGUQvtcf2iBZPow8t8S4gc4IxDIG7Fv7sN9z7mxm80WmR-D0LfJL-yVbKH7DW83tFTW0ezBLZwHOfjwCD2h4tC4?key=FgoiKl48HsensDkIPuZKtg)
 
 **Warning:** Deleting an audience might cause loss of metrics data and also affect the experience performance. Ensure that any references to the deleted audience are updated accordingly.
 

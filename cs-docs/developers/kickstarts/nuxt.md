@@ -87,7 +87,7 @@ csdx config:set:region AWS-EU
 csdx auth:login
 ```
 This command will ask you to provide your Contentstack’s account credentials (email and password).
-- Get your **Organization ID** from the Contentstack dashboard: Go to Org Admin > **Info** and copy the Org ID
+- Get your **Organization ID** from the Contentstack dashboard: Go to Org Admin > **Info** and copy the Org ID![get-orgID.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt250c40ce6173b773/680254ba9a3191443e63edc7/get-orgID.png)
 - Seed your Stack:
 ```
 csdx cm:stacks:seed --repo "contentstack/kickstart-stack-seed" --org "" -n "CS Kickstart Nuxt"

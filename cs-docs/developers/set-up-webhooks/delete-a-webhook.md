@@ -20,8 +20,8 @@ This page explains how to delete a webhook in Contentstack and points to the API
 Contentstack allows you to delete a [webhook](./about-webhooks.md) if you no longer need it.
 
 To delete a webhook, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
-- Click the “Settings” icon (press “S”) on the left navigation panel, and select **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS).
-- Click the vertical ellipses in the **Actions** column for the webhook you want to delete, then select the **Delete** option from the dropdown menu.
+- Click the “Settings” icon (press “S”) on the left navigation panel, and select **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS).![Edit_a_Webhook_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt64c6872f751a8595/66a7375f7cd4c936333944c7/Edit_a_Webhook_1.png)
+- Click the vertical ellipses in the **Actions** column for the webhook you want to delete, then select the **Delete** option from the dropdown menu.![Delete_a_Webhook_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7393c06a981c03f1/66a7565ac3ff6ae25109b7f8/Delete_a_Webhook_2.png)
 - Confirm the **Delete **action.
 
 ## API Reference

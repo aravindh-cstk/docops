@@ -35,8 +35,10 @@ To access the Form panel, log in to your [Contentstack account](https://www.cont
 - Use **URL bar** to locate the page you want to update the content.
 - In the right sidebar, click the **Form** icon to open the entry editor.
 - Edit the fields in the **Form** panel to see real-time changes on the Visual Editor canvas.
-- Alternatively, click any field in the canvas. Then, in the toolbar, select **Form** to open that field in the Form panel.**Tip:** You can also use field modifiers directly on the canvas for supported fields without opening the Form panel.
-- Click the “Open in editor” icon next to the page title to open the full entry editor in a new tab.
+- Alternatively, click any field in the canvas. Then, in the toolbar, select **Form** to open that field in the Form panel.
+
+  **Tip:** You can also use field modifiers directly on the canvas for supported fields without opening the Form panel.
+- Click the “Open in editor” icon next to the page title to open the full entry editor in a new tab.![Visual_Editor_Open_in_New_Tab.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc96ff88ef06b83c3/6992eb32db043d0008252367/Visual_Editor_Open_in_New_Tab.png)
 
 ## Manage Entries from the Form Panel
 

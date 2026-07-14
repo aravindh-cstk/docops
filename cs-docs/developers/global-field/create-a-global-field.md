@@ -29,7 +29,9 @@ To create a Global field, log in to your [Contentstack account](https://www.cont
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to create a Global field.
 - Click the **Content Models** icon in the left navigation panel and select **Global Fields** in the left panel.
 - Click **+ New Global Field** to open the **Create New Global Field** modal.
-- Enter **"**Address**"** as the Global field **Name** and provide a relevant **Description**. The **Unique ID** is auto-generated, but you can update it as required.**Tip:** Refer to the [Restricted Keywords for Unique IDs](../create-content-types/restricted-keywords-for-uids.md) to avoid using reserved keywords.
+- Enter **"**Address**"** as the Global field **Name** and provide a relevant **Description**. The **Unique ID** is auto-generated, but you can update it as required.
+
+  **Tip:** Refer to the [Restricted Keywords for Unique IDs](../create-content-types/restricted-keywords-for-uids.md) to avoid using reserved keywords.
 - Click **Proceed** to create the Global field.
 - After creating the Global field, the **Global Field Builder** page will open. This page is empty by default.
 - Click the “+” (Insert a field) icon and choose from the available field options.
@@ -37,7 +39,9 @@ To create a Global field, log in to your [Contentstack account](https://www.cont
 - **Apartment Name:** Select the **Single Line Textbox** field.
 - **Street Name:** Select the **Single Line Textbox** field.
 - **City:** Select the **Single Line Textbox** field.
-- **Postal Code:** Select the [Number](../create-content-types/number.md) field.**Tip:** To modify field behavior, click the **Properties** icon displayed next to each field and configure its settings.
+- **Postal Code:** Select the [Number](../create-content-types/number.md) field.
+
+  **Tip:** To modify field behavior, click the **Properties** icon displayed next to each field and configure its settings.
 - Click **Save** or **Save and Close** to save your changes.
 
 Your **Address** Global field will look as follows:
@@ -52,7 +56,7 @@ To add a nested Global field, log in to your [Contentstack account](https://www.
 - Open the **Global Field Builder** for the parent Global field.
 - Click the “+” (Insert a field) icon and select **Global** from the list.
 - Click** Select Global Field **and choose **Address** from the available global fields.
-- **Save** the changes.
+- **Save** the changes.![Nested global field example](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3142760db9b2540e/67ff8b04e7161e900da288af/2._about_global_fields_-_nested_global_fields_-_image_2.png)
 
 Nested Global fields help in **maintaining consistency** and **reducing redundancy** in complex content structures.
 

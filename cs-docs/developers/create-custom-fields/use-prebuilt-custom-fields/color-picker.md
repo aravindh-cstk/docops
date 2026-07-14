@@ -29,15 +29,15 @@ To add this custom field extension to your [stack](../../set-up-stack/about-stac
 Go to your stack and click the “Settings” icon on the left navigation panel.
 
 - Click on **Extensions**.
-- Click on the **+ New Extensions** button, and select **Use prebuilt.**
+- Click on the **+ New Extensions** button, and select **Use prebuilt.**![color_picker_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltbdf609f41d5924b7/60b7c19acf9889265dab7c50/color_picker_1_highlighted.png)
 - In the following window, from the drop-down menu, select **Custom Field**.
-- Hover over **Color Picker**, and click on **+ ****Add Extension**.
+- Hover over **Color Picker**, and click on **+ ****Add Extension**.![color_picker_2_no_highlight.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt91d86a6153fa4048/638760c6f33b43105dcdaaaa/color_picker_2_no_highlight.jpg)
 - In the **Create New Extension** page, you will see the following options:**Title*** (required)*: You will see a predefined title, “Color Picker.” Use the same title to add the custom field in your content type.
 - **Field data type ***(required)*: By default, the data type for the input data is set as “Text.”
 - **Multiple ***(optional)*: Select this if your custom field accepts multiple values, and the data type is not JSON.
 - **Hosting method** *(required)*: The hosting method is set to **Hosted By Contentstack** since it is a custom field hosted on Contentstack.
 - **Extension Source Code ***(required)*: Here you will find the source code for the custom field. You can make changes to this code as per your requirements.
-- **Config Parameters ***(optional)*: Provide values for the config parameters if you have used any in the source code.
+- **Config Parameters ***(optional)*: Provide values for the config parameters if you have used any in the source code.![color_picker_3_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5706d95b602476c6/60b7c1b38bf36608f2c02db2/color_picker_3_no_highlight.png)
 - Finally,** Save **this custom field.
 
 After saving the custom field, let’s learn how to start using this custom field in your content type.
@@ -48,11 +48,13 @@ To use Color picker custom field in your content type, perform the following ste
 
 Click on the “Content Models” icon on the left navigation panel and click on the **+ New Content Type** button.
 
-- [Create a content type](../../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- [Create a content type](../../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:![color_picker_4_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta746ec44a6b7e34a/60b7c1bc16660819878654e7/color_picker_4_no_highlight.png)
 - On the **Content Type Builder** page, add the [**Custom**](../../create-content-types/custom.md) field to your content type by clicking on the “Insert a field” link denoted by a **+** sign. Then click on **Custom**.
-- Select **Color Picker** from the **Select Extension** dropdown menu, and configure other properties of your custom field.  **Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.
+- Select **Color Picker** from the **Select Extension** dropdown menu, and configure other properties of your custom field.  ![color_picker_5_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt699c9ee2d98c0d12/60b7c1d1dbcf2a08eed7aef3/color_picker_5_highlighted.png)
+
+  **Note**: You can provide specific instance-level configuration settings for your Custom Field extension by referring to the [Config parameters](../../create-content-types/config-parameter-for-custom-fields-only.md) section.
 - After adding other fields to your content type, click on either **Save **or **Save and Close** button. This will create a content type.
-- To use the Color Picker, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the this field on your entry page as shown below:
+- To use the Color Picker, [create an entry](../../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the this field on your entry page as shown below:![color_picker_6_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5068c515d62c0a2a/60b7c1dfa8cd6a0a26e29018/color_picker_6_no_highlight.png)
 
 ## Common questions
 

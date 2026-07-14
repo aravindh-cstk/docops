@@ -38,8 +38,8 @@ By the end of this guide, you will have the knowledge and skills to leverage Con
 
 As a first step, you need to create a Brand Kit. To do so, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps given below:
 
-On the left navigation panel, click the **Brand Kit** icon.
-- Click the **+ New Brand Kit** button to create a new Brand Kit.
+On the left navigation panel, click the **Brand Kit** icon.![1-Brand-Kit-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2793aa12bafb2903/6656329d02c997c334b84fcb/1-Brand-Kit-Icon.png)
+- Click the **+ New Brand Kit** button to create a new Brand Kit.![2-Get-Started-With-Brand Kit-Click-+-New-Brand-Kit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdf6aaef7b2aaec9b/665632b91f92d1cb0f28037f/2-Get-Started-With-Brand_Kit-Click-_-New-Brand-Kit.png)
 - In the **Create Brand Kit** modal, enter the **Brand Kit Name** and **Description** (optional). Then, **Select Stack(s)** from the dropdown and click **Create Brand Kit**.**Note**: When creating a Brand Kit, selecting one or multiple stacks will synchronize the associated stack content and its environment settings.
 
 This creates your Brand Kit.
@@ -49,7 +49,7 @@ This creates your Brand Kit.
 Let's now create a Voice Profile for this Brand Kit by following the steps given below:
 
 Select the **Brand Kit** in which you want to create a Voice Profile.
-- Click the **+ New Voice Profile** button to create a new Voice Profile.
+- Click the **+ New Voice Profile** button to create a new Voice Profile.![4-Get-Started-With-Brand Kit-Click-+-New-Voice Profile](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9afa760cef84a417/665632c8693345e7dcc24081/4-Get-Started-With-Brand_Kit-Click-_-New-Voice_Profile.png)
 - On the **Create Voice Profile** page, enter the following details:  
   Enter a suitable **Voice Profile Name** and **Description**.
 - Set the **Communication Style Mixer** using the **Formality Level**, **Tone Of Voice**, **Humor Level**, and **Language Complexity Level** slider bars. It defines how your content generation will be styled.
@@ -73,15 +73,15 @@ To install and configure the AI Assistant app, follow the step-by-step process d
 
 To use Brand Kit within the AI Assistant app within an entry of your stack, follow the steps given below:
 
-[Create a content type](../../developers/create-content-types/create-a-content-type.md) by adding relevant details as displayed below and click the **Save and proceed** button.
+[Create a content type](../../developers/create-content-types/create-a-content-type.md) by adding relevant details as displayed below and click the **Save and proceed** button.![8-Get-Started-With-Brand Kit-AI-Assistant-App-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3915ff63007168e6/664ba17e55b397df68604747/8-Get-Started-With-Brand_Kit-AI-Assistant-App-Content-Type.png)
 - To use the AI Assistant app, create an entry for the above content type. In the left navigation panel, navigate to the [Entries](../author-content/create-an-entry.md) page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.
-- You can see the AI Assistant app icon in the [Field Modifier Location](../../developers/developer-hub/field-modifier-location.md).
+- You can see the AI Assistant app icon in the [Field Modifier Location](../../developers/developer-hub/field-modifier-location.md).![9-Get-Started-With-Brand Kit-AI-Assistant-App-Field-Modifier-Location](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltad1b1a2e33f7bdec/664ba17f76a5b568ce31af67/9-Get-Started-With-Brand_Kit-AI-Assistant-App-Field-Modifier-Location.png)
 - To generate Brand Kit specific content, provide the following details:  
   Select the **Brand Kit** from the dropdown.
 - Select the relevant **Voice Profile** from the dropdown.
 - Enable or disable the **Knowledge Vault** to fetch the desired data.
 - Write a prompt and press **enter** to generate content in the respective field.
-- This starts generating your content. Click **Accept** to accept the newly generated content. To rephrase the content, click **Try Again**. To remove the content, click **Cancel**.
+- This starts generating your content. Click **Accept** to accept the newly generated content. To rephrase the content, click **Try Again**. To remove the content, click **Cancel**.![11-Get-Started-With-Brand Kit-AI-Assistant-App-Works](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4b1dd3070c785551/664ba17f707c0661cd81fe7d/11-Get-Started-With-Brand_Kit-AI-Assistant-App-Works.png)
 - After adding the content, **Save** and **Publish** your entry.
 
 **Additional Resource**:

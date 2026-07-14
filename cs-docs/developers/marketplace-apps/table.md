@@ -39,8 +39,8 @@ To install the app, log in to your [Contentstack account](https://www.contentsta
 
 - From the left-hand side primary navigation, click the **Marketplace** icon.
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see all the available apps. Hover over the **Table** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the Table app, accept the **Terms of Service**, and click the **Install** button.
+- Within the Marketplace, you can see all the available apps. Hover over the **Table** app and click **Install**.![Marketplace_table.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf4d46f756dfaa427/6a0194ca5a57717f03219e2a/Marketplace_table.png)
+- In the pop-up window, select the stack where you want to install the Table app, accept the **Terms of Service**, and click the **Install** button.![Install_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltea14609020732206/669510c625847000b8dcbce1/Install_App.png)
 - On the **UI Locations** tab, you can see the predefined app location. The only available UI location for the Table app is the **Custom Field**. If you disable this UI location, you will not be able to save the configuration as it requires at least one UI location to be enabled.
 
   **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
@@ -52,7 +52,7 @@ To install the app, log in to your [Contentstack account](https://www.contentsta
 To use the Table app within an entry of your stack, follow the steps given below:
 
 - Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
-- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:![New_Content_Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc1463bc74e17189e/669510c6d316c71770b314be/New_Content_Type.png)
 - In the **Content Type Builder** page, add a [Custom field](../create-content-types/custom.md) in your content type by clicking the **Insert a field **link represented by a + sign.
 - On the **Custom Field Editor Properties** modal:  
   Enter a **Display Name **for the field, for example Table.
@@ -73,11 +73,11 @@ To use the Table app within an entry of your stack, follow the steps given below
 
 - Here's how you can work with the available options:  
   Click the icon as shown below. If you want to add a header row or a column, you can simply enable the respective toggle. If you want to delete the entire table, click the **Delete Table **option.
-- If you want to view the table in full-screen, click the **Full Screen **icon as shown below:
-- You can then start entering the data in the table. Once you have entered the data in the table, click the icon (as shown below) and select the respective options if you want to add or delete a row or a column.
-- To import or export the table data in a CSV file, click the **Import CSV File **and **Export CSV File **icons respectively.
-- You can also search for a particular item in the table by using the Search option.
-- Using the drag handle, you can drag and drop the rows to change the sequence.
+- If you want to view the table in full-screen, click the **Full Screen **icon as shown below:![Full_Screen_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2c9ecf45ab6751a0/6698ecfa79f2045698392124/Full_Screen_Icon.png)
+- You can then start entering the data in the table. Once you have entered the data in the table, click the icon (as shown below) and select the respective options if you want to add or delete a row or a column.![Click_to_View_Insert_Options.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc7b91ce65291a174/6698ecfa54407534a3fecadb/Click_to_View_Insert_Options.png)
+- To import or export the table data in a CSV file, click the **Import CSV File **and **Export CSV File **icons respectively.![Import_Export.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6bf102a86b93ad0b/6698ecfa54407517fefecadf/Import_Export.png)
+- You can also search for a particular item in the table by using the Search option.![Search_Bar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf122850897fe9892/669510c577a780e446448ae7/Search_Bar.png)
+- Using the drag handle, you can drag and drop the rows to change the sequence.![Drag_Drop.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc190aa485a0e40d0/6698ecfae13bf8ba5cf85b08/Drag_Drop.png)
 - After adding your table, **Save **and **Publish **your entry.
 
 ## Common questions

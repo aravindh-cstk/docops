@@ -264,17 +264,23 @@ The following output appears in your browser once the localhost is running. This
 To use your application, you need to upload it to Contentstack. To do so, follow the steps given below:
 
 - Log in to your [Contentstack account](https://www.contentstack.com/login/).
-- On the Dashboard page, click the **Developer Hub** icon as shown below:
+- On the Dashboard page, click the **Developer Hub** icon as shown below:![Developer_Hub_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd183a670891dc235/6908cfb85e75bb3ef8ed9139/Developer_Hub_Icon.png)
 - Click the **+ New App** button.
-- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](./introduction-to-contentstack-applications.md).**Additional Resource: **Refer to the [Creating an App in Developer Hub](./creating-an-app-in-developer-hub.md) document to know more about Standard and Machine to Machine app categories.
-- In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** and an optional **Description**.
+- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](./introduction-to-contentstack-applications.md).
+
+  **Additional Resource: **Refer to the [Creating an App in Developer Hub](./creating-an-app-in-developer-hub.md) document to know more about Standard and Machine to Machine app categories.
+- In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** and an optional **Description**.![Create_Standard_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc532d72938e03f3d/6908cfb8e09550293e84218b/Create_Standard_App.png)
 - Click **Create**. You will be redirected to the **UI Locations** landing page.
 - To continue, go to the **Manage** section and select the **Basic** **Information** tab.
-- On the resulting **Basic** **Information** page, upload your app’s icon and **Save** the changes.**Note:** The **Save** button is **enabled only** after you edit the app’s editable details.
-- Click the **UI Locations** tab. To set the **App URL**, click the **View** **Hosting** link. You will be redirected to the **Hosting** tab.
-- In the **Hosting** tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom** **Hosting** option to enter the hosted URL of your application. Enter the **App URL** and click **Save** to confirm your hosting configuration.
-- Navigate back to the UI Locations tab, click the vertical ellipses, then click the **+ Add UI Location **button to add as needed.
-- Add the below routes for each UI Location to get the desired results.**Note:** The name for each UI Location is optional, and can be used to override the default app name.
+- On the resulting **Basic** **Information** page, upload your app’s icon and **Save** the changes.
+
+  **Note:** The **Save** button is **enabled only** after you edit the app’s editable details.![Basic_Information.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt61d8ccb8a4caa74c/6908cfb800b05480f8f06209/Basic_Information.png)
+- Click the **UI Locations** tab. To set the **App URL**, click the **View** **Hosting** link. You will be redirected to the **Hosting** tab.![View_Hostin.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt885d513fa56db29b/6908cfc6a45e96e25fb5aeeb/View_Hostin.png)
+- In the **Hosting** tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom** **Hosting** option to enter the hosted URL of your application. Enter the **App URL** and click **Save** to confirm your hosting configuration.![Hosting.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt10375b557d636598/6908cfb8a15f04f883b5e0c1/Hosting.png)
+- Navigate back to the UI Locations tab, click the vertical ellipses, then click the **+ Add UI Location **button to add as needed.![Adding_UI_Location.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb8fd692a702aff29/6908cfb8f373fd8866fa9d8c/Adding_UI_Location.png)
+- Add the below routes for each UI Location to get the desired results.
+
+  **Note:** The name for each UI Location is optional, and can be used to override the default app name.
 
   **Stack Dashboard**  
   Enter a **Name**, use `/stack-dashboard` as the **Path**, and select the **Default** **Width**, then click **Save** to apply and store your configuration. This setup ensures your app appears as a widget on the Stack Dashboard.
@@ -313,13 +319,17 @@ To use your application, you need to upload it to Contentstack. To do so, follow
 
   **Note: **After saving the locations, on the** UI Locations** screen, click **Install App** to install the app in a stack.
 
-- Select the stack where you want to install the app and click the **Install** button.
-- You will be redirected to the configuration page of the app.**Note: **The **App Configuration** page is visible **only** if the **App Configuration **UI Location is set up. Not all apps (for example, the [Color Picker](../marketplace-apps/color-picker.md) app) require this configuration. Set up the App Configuration location **only if** your app needs any configuration.
+- Select the stack where you want to install the app and click the **Install** button.![Install_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt97db2fa23e46faf5/6908cfc60564912ab86c9505/Install_App.png)
+- You will be redirected to the configuration page of the app.
+
+  **Note: **The **App Configuration** page is visible **only** if the **App Configuration **UI Location is set up. Not all apps (for example, the [Color Picker](../marketplace-apps/color-picker.md) app) require this configuration. Set up the App Configuration location **only if** your app needs any configuration.![Sample_App_Configuration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5842694232731756/6908cfc6a15f0471cfb5e0c9/Sample_App_Configuration.png)
 - On the **App Configuration** page, enter the values for **Sample App Configuration** field and **Sample Server Configuration** field.Let’s understand the configuration fields:
 
   **Sample App Configuration: **You can save non-sensitive data that you want to show in different UI locations. For example, if you want to create a form with Username, Date, Email Address, etc. then, you can add the value in the field and view the data in the configured UI location(s).
 
-- **Sample Server Configuration:** You can save sensitive data. For example, if you want to create a form with Password, Client Secret, and Client ID then, you can enter a value in the Sample Server Configuration Field and the value will be stored in the backend via webhooks.**Additional Resource:** To learn more, refer to the [App Configuration](./app-config-location.md) document.
+- **Sample Server Configuration:** You can save sensitive data. For example, if you want to create a form with Password, Client Secret, and Client ID then, you can enter a value in the Sample Server Configuration Field and the value will be stored in the backend via webhooks.
+
+  **Additional Resource:** To learn more, refer to the [App Configuration](./app-config-location.md) document.![Sample_Configuration_with_Values.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc056ff1e328e2bac/6908cfc65e75bb9aa1ed9151/Sample_Configuration_with_Values.png)
 
   **Note:** The values entered in the **Sample App Configuration** and **Sample Server Configuration** fields are displayed across all UI locations configured for the app.
 
@@ -375,7 +385,9 @@ export default AppConfigurationExtension;
 ```
 
 - Click **Save **and click **Open Stack** to start using the application.
-- Navigate to the stack where your application is installed and view your application in the configured UI location.**Note: **You **must** open the app in the configured UI location to view it.
+- Navigate to the stack where your application is installed and view your application in the configured UI location.
+
+  **Note: **You **must** open the app in the configured UI location to view it.
 
 ### Installing JSON RTE Plugin
 

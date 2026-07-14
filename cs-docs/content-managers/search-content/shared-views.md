@@ -21,8 +21,10 @@ Contentstack’s shared views functionality allows users to collaborate by shari
 
 To share your saved views, log in to your [Contentstack account](https://www.contentstack.com/login/), and follow the steps given below:
 - Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the [**Entries**](../author-content/about-entries.md) or [**Assets**](../author-content/about-assets.md) module.
-- Within the **Saved Views** tab, you will find all your saved views.**Additional Resource: **Refer to our [Save Your Views](./save-your-views.md) document for more information.
-- Click the **vertical ellipsis** next to your saved view and select **Share**.
+- Within the **Saved Views** tab, you will find all your saved views.
+
+  **Additional Resource: **Refer to our [Save Your Views](./save-your-views.md) document for more information.
+- Click the **vertical ellipsis** next to your saved view and select **Share**.![Shared_Views_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt69b183a590ddedb7/67c6fe98c66031868a204878/Shared_Views_1.png)
 - In the **Share View** modal, search for and select users or roles to share the view with. Assign one of the following permissions:**View**: Users can view the shared view but cannot update it. However, they can modify and save it as a new view.
 - **Edit**: Users can make changes to the view. Any updates they make will be visible to everyone with access.
 

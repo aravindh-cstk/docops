@@ -24,10 +24,12 @@ Contentstack allows you to delete a taxonomy that you create in your stack.
 To delete a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to delete a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Navigate to the taxonomy you want to delete and click the vertical ellipsis in the **Actions **column.
-- Click the **Delete **button. **Warning**: Deleting a taxonomy removes its connections to any linked content types. This also increments the entry version because the terms associated with the deleted taxonomy were removed from the entry.
+- Click the **Delete **button. ![Delete Taxonomy.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4955ab3a9f9c2324/6929bfd9d74c8918a61e5e5b/Delete_Taxonomy.png)
+
+  **Warning**: Deleting a taxonomy removes its connections to any linked content types. This also increments the entry version because the terms associated with the deleted taxonomy were removed from the entry.
 - In the **Delete Taxonomy** modal, you need to type “DELETE”, and confirm the **Delete** action.**Note**:If your content type includes a taxonomy field with multiple taxonomies configured, deleting one of them will not remove the entire field. Instead, only the term associations of the deleted taxonomy will be removed from the respective entries.
 - However, if the taxonomy field only has one taxonomy configured and it is deleted, then the entire field will be removed from the content type.
-- Alternatively, select a taxonomy and click the trash icon at the top-right corner to delete it.
+- Alternatively, select a taxonomy and click the trash icon at the top-right corner to delete it.![Delete_Taxonomy_from_Details_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt24013ccb0d4e366a/69162eab1baa6da21b7bed05/Delete_Taxonomy_from_Details_Page.png)
 
 **Additional Resource**: To recover a deleted term, consult our documentation on [restoring deleted taxonomies](../manage-trash/restore-a-deleted-taxonomy.md).
 

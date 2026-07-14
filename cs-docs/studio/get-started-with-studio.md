@@ -57,7 +57,9 @@ By default, Studio provides a built-in playground where you can create and exper
 
 Install the **Studio SDK** and any required dependencies in your front-end codebase ([CSR](./set-up-studio-for-a-csr-project.md) or [SSR](./set-up-studio-for-a-ssr-project.md)).
 
-- Ensure Studio has access to the correct **environment** and **locale** via the **Project Settings** tab.**Tip:** If you don’t have front-end access, you can still use Studio to build and preview compositions directly within the playground Canvas.
+- Ensure Studio has access to the correct **environment** and **locale** via the **Project Settings** tab.
+
+  **Tip:** If you don’t have front-end access, you can still use Studio to build and preview compositions directly within the playground Canvas.
 
 ## Configure Project Settings (Optional for Playground Use)
 
@@ -65,9 +67,13 @@ Studio requires the base URL of the website you want to integrate with. You can 
 
 In your Studio project, open the **Settings** tab.
 
-- Under **Configurations**, select the **Environment** and **Language**.**Note:** You must [configure the environment](../developers/set-up-environments/add-an-environment.md), base URL, and language in your stack settings.
+- Under **Configurations**, select the **Environment** and **Language**.
+
+  **Note:** You must [configure the environment](../developers/set-up-environments/add-an-environment.md), base URL, and language in your stack settings.
 - The **Base URL** configured against the selected environment is displayed.
-- Click **Save**.**Note:** This step can be skipped if you are using Studio as a playground. However, real projects with front-end integration require this configuration for proper rendering and deployment.
+- Click **Save**.
+
+  **Note:** This step can be skipped if you are using Studio as a playground. However, real projects with front-end integration require this configuration for proper rendering and deployment.
 
 ## Register Components and Set Up Design Tokens (Optional)
 
@@ -77,7 +83,9 @@ To use your own components and design tokens:
 
 **Register components via CLI:** Add your own React components using the [Agentic CLI](./work-with-studio-cli.md).
 
-- **Import designs and tokens:** Use the [Agentic CLI](./work-with-studio-cli.md) to create and register design tokens directly from your project.**Tip:** You can skip this step for prototyping with built-in components in Canvas.
+- **Import designs and tokens:** Use the [Agentic CLI](./work-with-studio-cli.md) to create and register design tokens directly from your project.
+
+  **Tip:** You can skip this step for prototyping with built-in components in Canvas.
 
 **When to Use**:
 
@@ -95,7 +103,9 @@ Click **New Composition** to create your composition.
 - **Freeform Composition:** Ideal for standalone pages or specific sections.Provide a custom URL Path (e.g., `/marketing/launch`).
 - Enter the **Name** of your composition.
 - The **UID** auto-generates based on the name. You can customize it.
-- Click **Create**.**Note:** You can convert a freeform composition to a linked composition later if needed.
+- Click **Create**.
+
+  **Note:** You can convert a freeform composition to a linked composition later if needed.
 
 ## Use the Composition UID in Code (Optional for Playground Use)
 
@@ -104,7 +114,9 @@ The **Composition UID** connects Studio compositions to your front-end code via 
 Open the file that handles the composition’s URL path.
 
 - Copy the **Composition UID** from the listing page.
-- Use the UID to render the composition based on your [CSR](./set-up-studio-for-a-csr-project.md#render-the-composition) or [SSR](./set-up-studio-for-a-ssr-project.md#render-the-composition-in-your-page) setup.**Note:** This step is optional unless you have front-end access.
+- Use the UID to render the composition based on your [CSR](./set-up-studio-for-a-csr-project.md#render-the-composition) or [SSR](./set-up-studio-for-a-ssr-project.md#render-the-composition-in-your-page) setup.
+
+  **Note:** This step is optional unless you have front-end access.
 
 ## Studio Migration and CLI Support
 

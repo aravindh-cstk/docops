@@ -93,7 +93,9 @@ Contentstack Personalize makes location-based personalization straightforward, e
 
 ### CMS - Link Content Types
 - Navigate to the desired Stack → Settings → Variants → select the associated Variant Group → Linked Content Types.
-**Note:** Variant Groups and Variants are automatically created for you based on the Experiences and Variants you define in Personalize.**Additional Resource:** For more information, refer to [Manage Variant Groups](../developers/variants/manage-variant-groups.md).
+**Note:** Variant Groups and Variants are automatically created for you based on the Experiences and Variants you define in Personalize.
+
+  **Additional Resource:** For more information, refer to [Manage Variant Groups](../developers/variants/manage-variant-groups.md).
 - In the **Linked Content Types** field, select the content types whose entries you wish to personalize.
 - Click **Apply → Save.**
 

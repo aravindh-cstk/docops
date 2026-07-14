@@ -34,7 +34,7 @@ To enable live preview in our website you need to perform the following steps:
 
 - Click on the Stack Settings icon and click on **Tokens**.
 - Open the previously generated delivery token (PlateStack)
-- Click on **+ Create Preview Token**
+- Click on **+ Create Preview Token**![1. Create Preview Token.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8ecebe9e379f9079/66d5c0d455d3e050d8d1ac3c/1._Create_Preview_Token.png)
 - Copy the Generated Preview token and save it in the `.env` file as:
 ```
 REACT_APP_CONTENTSTACK_PREVIEW_TOKEN=
@@ -45,7 +45,7 @@ REACT_APP_CONTENTSTACK_PREVIEW_TOKEN=
 
 - Click on the Stack Settings icon and click on **Live Preview**.
 - Tick the checkbox of **Enable Live Preview**.
-- Select the **Default Preview Environment** i.e., **Development**.
+- Select the **Default Preview Environment** i.e., **Development**.![2. Select the Default Preview Environment - Development.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1b352ebb0ee764fa/66d5c0d4bbafa705385cf13f/2._Select_the_Default_Preview_Environment_-_Development.png)
 - Click on **Save**.
 
 ### Update the code with the Live Preview Changes
@@ -206,7 +206,7 @@ You have successfully pushed your changes to Git. Now let’s deploy the new cha
 
 To deploy the changes you added to your application, perform the following set of steps:
 - Go to [Launch](https://launch.contentstack.com) and click the **contentstack-getting-started-react-app** project
-- By default, Launch will auto deploy new changes whenever you push code to the **main** branch of our repository. You would see a status of **Deploying** in the default environment as soon as the code is pushed.
+- By default, Launch will auto deploy new changes whenever you push code to the **main** branch of our repository. You would see a status of **Deploying** in the default environment as soon as the code is pushed.![6. Status of the default Environment changes to Deploying on code push.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7de598e4a219cdde/66d5c0d48f798d2543df8fcf/6._Status_of_the_default_Environment_changes_to_Deploying_on_code_push.png)
 - Click on the “Settings” icon (press “S”) on the left navigation panel, and click on **Environments**.
 - Select the **development** environment and navigate to **Environment Variables**.
 - Scroll down and under the **Environment Variables** section, click on **+ Add Environment Variable**.
@@ -226,8 +226,8 @@ To start viewing your website in the Live Preview panel, perform the following s
 - Click on the “Settings” icon (press “S”) on the left navigation panel, and click on the **Environments**.
 - Click the **development** environment and update the base URL with the Launch Environment URL where your website is deployed and click **Save**.
 - Click on the “Entries” icon (or press “E”) on the left navigation panel.
-- Go into any of the entry (say, “Footer”) and open the “Live Preview” tab from the right sidebar
-- Modify any value of a field and see it updated in the **Live Preview** panel instantly
+- Go into any of the entry (say, “Footer”) and open the “Live Preview” tab from the right sidebar![7. Footer entry - open the Live Preview panel.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt760760bcee65adaa/66d5c3239ca1fedf34754eff/7._Footer_entry_-_open_the_Live_Preview_panel.png)
+- Modify any value of a field and see it updated in the **Live Preview** panel instantly![8. Instantly view changes made to a field value in the Live Preview..png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf15322a2156f75ee/66d5c0d455d3e0b605d1ac40/8._Instantly_view_changes_made_to_a_field_value_in_the_Live_Preview..png)
 
 ## Live Edit Tags (optional)
 

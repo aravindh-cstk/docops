@@ -22,7 +22,7 @@ With Contentstack, you can easily export a taxonomy in a JSON or CSV file.
 To export a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to export a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Select the taxonomy you want to export and click the “ellipsis” (three dots) in the **Actions **column.
-- Choose the file format for exporting your taxonomy by selecting either **Export as JSON** or **Export as CSV**.
+- Choose the file format for exporting your taxonomy by selecting either **Export as JSON** or **Export as CSV**.![Export Taxonomy.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltab2260b411fdfcf5/6929bdd1308e506638307741/Export_Taxonomy.png)
 
 The system downloads the JSON or CSV file of your taxonomy and saves it to your local storage
 

@@ -32,13 +32,13 @@ To view or edit the configuration, UI locations, and webhook for any of the inst
 - Go to **Manage** > **Installed Apps** in the Marketplace section. Click the app that you want to change the configuration for. You can see the app information page.
 
   **Note**: You can also go to this page from **Discover** > **Apps**.
-- Go to the **Installed On** tab. You can see a list of stacks where the app is installed. Hover over the stack from which you want to uninstall the app or update the configuration settings. You can see **Uninstall App** and **Configuration** icons.
-- Click the **Configuration** tab to enter the configuration details of the app.
+- Go to the **Installed On** tab. You can see a list of stacks where the app is installed. Hover over the stack from which you want to uninstall the app or update the configuration settings. You can see **Uninstall App** and **Configuration** icons.![Installed-On-Screen](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6b41da45afefc430/659fc7eb96b1f69b0ffe8459/Installed-On-Screen.png)
+- Click the **Configuration** tab to enter the configuration details of the app.![Configuration-Page](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7a005d695ff36787/659fc80869ba2851d18ef520/Configuration-Page.png)
 - Click the **UI Locations** tab to access the app's locations.
- You can see the number of locations in the box corresponding to each UI Location.
- Click the icon (highlighted in the following screenshot) to view the UI Locations in detail.
- You can enable or disable a particular UI location by using the toggle button.
-**Note**: The UI locations marked as **Required** cannot be disabled.
+ ![UI_Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt471f67d868d07d9a/659fc89651c757367452d6ec/UI_Locations.png)You can see the number of locations in the box corresponding to each UI Location.
+ ![UI_Locations-Box](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0773e8fb5cd19823/659fc89641ec480355b7b9d4/UI_Locations-Box.png)Click the icon (highlighted in the following screenshot) to view the UI Locations in detail.
+ ![UI_Locations-Open-Detailed-Tab](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt979edf36b24eb5ee/659fc897ecc34e9acc10ba9f/UI_Locations-Open-Detailed-Tab.png)You can enable or disable a particular UI location by using the toggle button.
+![UI_Locations-Enable-Disable](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt585f20cee32e8034/65a13f17d6cafbb61cf75526/UI_Locations-Enable-Disable.png)**Note**: The UI locations marked as **Required** cannot be disabled.
 - If webhooks are enabled for the app, you can see a **Webhook** tab. The Webhook section provides a list of all configured events under the **Webhook Logs** section.
  If the app supports webhooks for all branches, and the branch feature is enabled for your organization, you can configure the webhook to send notifications only from a selected set of branches.
 Inside the **Configure Webhook** section, you can select the following options under **Branch Scope**:

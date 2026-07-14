@@ -24,7 +24,9 @@ Editing entry variants in Contentstack allows you to update personalized content
 To edit an entry variant, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
 
 - Navigate to the desired [stack](../../developers/set-up-stack/about-stack.md), then click the **Entries **icon in the left navigation panel and select an existing entry variant.
-- Within the entry editor for an entry variant, only the fields marked with the **Variant Field **tag are exclusive to the entry variant. Other field values are inherited from the latest version of the base entry.**Note: **Only the fields you modify within the entry variant will be saved; other field values will remain inherited from the base entry.
+- Within the entry editor for an entry variant, only the fields marked with the **Variant Field **tag are exclusive to the entry variant. Other field values are inherited from the latest version of the base entry.![1-Edit Entry Variants.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte481d1d3f961fe63/66fa8f74a18b1f58cc014506/1-Edit_Entry_Variants.png)
+
+  **Note: **Only the fields you modify within the entry variant will be saved; other field values will remain inherited from the base entry.
 - Modify the fields as needed. Make sure your changes align with the intended personalization for the user segment targeted by this variant.
 - Once you are satisfied with the edits, click the **Save **button to apply the changes to the entry variant.
 

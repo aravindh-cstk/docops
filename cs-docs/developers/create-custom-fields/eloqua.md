@@ -51,8 +51,8 @@ To use this extension in Contentstack, log in to your [Contentstack account](htt
 
 Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.![Eloqua_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt951d397944779f85/60c209fef8aee612d39972f2/Eloqua_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Eloqua_2_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt612a15d4f76af89a/60c20a0985c4c2118e317965/Eloqua_2_no_highlight.png)
 - On the **Create New Extension **page, enter values in the fields as given below:**Title ***(required)*: Provide a suitable title, for example “Eloqua,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
 - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple ***(optional)*: Leave this field unchecked.
@@ -74,7 +74,7 @@ Now, let’s understand how you can start using this custom field in your conten
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
-- Under **Select Extension**, select the “Eloqua” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Eloqua” field that you created and set the other properties. You can add other fields as per requirements.![Eloqua_3_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt556f30b175c538bf/60c20a1a324cea0e6978362f/Eloqua_3_Highlighted.png)
 - Finally, click on either **Save **or** Save and Close** to save your changes.
 - Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Eloqua **field in action.
 

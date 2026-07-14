@@ -17,10 +17,10 @@ This page explains how to delete a step in Automation Hub guides and connectors.
 ## Delete Step
 
 To delete a step, perform the steps given below:
-- Click the **Configure Action Step** tab (in our case, **Transform**).
-- Click the three vertical dots, then click the **Delete** **Step** icon.
-- Confirm your action by clicking **Delete** again.
-- You can also delete the step from the configured action as shown below:
+- Click the **Configure Action Step** tab (in our case, **Transform**).![Click_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt86ada91b58ba9980/67bc0e58d4f68beefb9cade3/Click_Action.png)
+- Click the three vertical dots, then click the **Delete** **Step** icon.![Delete_Step_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltba10f9dc698bd905/67bc0e58d4f68bbfea9cade7/Delete_Step_Icon.png)
+- Confirm your action by clicking **Delete** again.![Delete_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt809480e96d44382a/65aa90ea41047ff8304e7ca4/Delete_Button.png)
+- You can also delete the step from the configured action as shown below:![Delete_Step_Left_Navigation.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt758c43677c9fb462/67c6bd1324e52c5449e704d4/Delete_Step_Left_Navigation.png)
 
 ## Common questions
 

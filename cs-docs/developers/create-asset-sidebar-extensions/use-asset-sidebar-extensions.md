@@ -23,7 +23,7 @@ Once you have added an [Asset Sidebar Extension](./about-asset-sidebar-extension
 To use custom widgets in an entry, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Click on the "Assets" icon in the left navigation panel in your stack.
 - Select the asset for which you want to use the asset sidebar extension.
-- On the resulting information page, click on the "Widgets" icon in the right panel. Select the required asset sidebar extension from the drop-down menu in the top-right corner. Here we are considering the Image Preset Builder example.
+- On the resulting information page, click on the "Widgets" icon in the right panel. Select the required asset sidebar extension from the drop-down menu in the top-right corner. Here we are considering the Image Preset Builder example.![image_preset_builder.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt67b5c717c44877f3/621f6bcec4c1b167484d2ef1/image_preset_builder.png)
 - Now, you can begin optimizing and transforming your assets and use them within any entry of your stack.
 - Once done using the widget, **Save** the asset details.
 

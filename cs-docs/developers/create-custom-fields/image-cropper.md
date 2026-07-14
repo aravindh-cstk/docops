@@ -39,8 +39,8 @@ We have created the sample code for the extension. If Extensions are part of you
 Once you have logged in to your account, follow the steps given below:
 
 - Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” icon on the left navigation panel and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create New**.
-- Click on the **Custom Field** option in the **Select Extension Type **window as shown below:
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create New**.![Youtube_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5b859a40744879cf/60be2f39ff4b120facb6011c/Youtube_1_Highlighted.png)
+- Click on the **Custom Field** option in the **Select Extension Type **window as shown below:![Custom_field.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6cd604152a8da7d2/60e88d7f2a120025e58458b7/Custom_field.png)
 - On the **Create New Extension** page, enter values in the fields as given below:
 - **Title** *(required)*: Provide a suitable title, for example “Image Cropper” for your custom field. This title will be visible when you select the extension in the [custom](../create-content-types/custom.md) field in your content type.
 - **Field data type** *(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
@@ -67,9 +67,9 @@ To use the extension, we will have to create a content type and add a custom fie
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [Custom](../create-content-types/custom.md) field to it.
 
-- Under **Select Extension**, select the “Image Cropper” extension that you created and set other properties accordingly. You can add other fields if required.
+- Under **Select Extension**, select the “Image Cropper” extension that you created and set other properties accordingly. You can add other fields if required.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltf511870918707e8d/60e8952db86fce146acbbe0c/image.png)
 - Finally, click on **Save and Close** to save your changes.
-- Now [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Image Cropper** custom field in action.
+- Now [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Image Cropper** custom field in action.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8c80e0abd785df77/60e8981b6554cc2ee3b445a2/image.png)
 - Click on the **Crop Image** button and you will see the images stored in your stack.
 - Select and crop the image you want to add to this field. Set the focal point for the image you want to crop.
 

@@ -21,14 +21,20 @@ Invite users to your Contentstack organization to enable seamless collaboration 
 
 To invite users to an organization, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to your desired organization, click the “App Switcher” icon and select **Administration** from the list.
-- Navigate to **Users** and click **Invite User**.
-- On the **Invite User** page, enter the email address of the users to invite.**Note**: The selected roles and permissions will apply to all the email IDs mentioned. To add users with different set of permissions, the ideal approach would be to add them separately.
+- Navigate to **Users** and click **Invite User**.![Invite_User_1.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amc1ac8505cb5f63e3/9b35abdd11858c77eb1638df/Invite_User_1.png?locale=en-us)
+- On the **Invite User** page, enter the email address of the users to invite.
+
+  **Note**: The selected roles and permissions will apply to all the email IDs mentioned. To add users with different set of permissions, the ideal approach would be to add them separately.
 - In the **CMS** section, click **Manage Roles**. This opens a sidebar displaying existing stack-role assignments for the selected users.Select the stacks to which you want to assign roles.
 - Choose one or more roles.
-- Click **Save** to confirm your selections.**Note:** If no CMS level roles are selected for the user(s), they will not be able to access any of the stacks.
+- Click **Save** to confirm your selections.
+
+  **Note:** If no CMS level roles are selected for the user(s), they will not be able to access any of the stacks.
 - In the **Administration** section, click **Manage Roles**. The sidebar displays available product roles.Select the appropriate roles for the users.
-- Click **Save** to confirm.**Note:** To successfully send the invitation, you must assign at least one role from the Administration section.
-- Once done, click **Invite** to send the invitation.
+- Click **Save** to confirm.
+
+  **Note:** To successfully send the invitation, you must assign at least one role from the Administration section.
+- Once done, click **Invite** to send the invitation.![Invite_User_3.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am1ab71403e15904cb/f1180568686f73458b4f4942/Invite_User_3.png?locale=en-us)
 
 The invited users will receive an email notification. After accepting the invitation, they will be added to the organization with the assigned roles and access.
 

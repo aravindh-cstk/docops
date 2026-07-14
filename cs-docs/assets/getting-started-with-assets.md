@@ -262,7 +262,9 @@ Once assets are modeled and organized:
 
 CMS editors select assets from linked spaces using the updated **asset picker** in Headless CMS.
 - They benefit from everything configured in Assets:Correct asset types
-- Entry locale and fallback language rules**Note:** Only assets matching the entry’s locale or fallback locale appear as selectable, ensuring localization consistency.
+- Entry locale and fallback language rules
+
+  **Note:** Only assets matching the entry’s locale or fallback locale appear as selectable, ensuring localization consistency.
 - Rights-safe assets (based on metadata and filters)
 - Visual markups for shoppable content
 

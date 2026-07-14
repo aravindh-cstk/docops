@@ -54,7 +54,9 @@ When you are led to the **Manage** page, go to the **Credentials** tab
 
 To protect sensitive information (such as API Key and URL) and avoid Cross-Origin Resource Sharing (CORS) issues, you can use Lambda function for this extension. To do so, perform the below functions:
 
-After retrieving the credentials, deploy the code for the lambda function to AWS Lambda.**Note:** Refer **Step 4** for the source code along with the lambda function of the IBM Watson extension.
+After retrieving the credentials, deploy the code for the lambda function to AWS Lambda.
+
+**Note:** Refer **Step 4** for the source code along with the lambda function of the IBM Watson extension.
 - In the **Environment Variables** section of AWS Lambda, enter the credentials against the variables as follows:
 
 ```
@@ -66,8 +68,8 @@ WATSON_SERVICE_URL= URL received in service instance credentials
 
 To add IBM Watson Sidebar Extension to your [stack](../set-up-stack/about-stack.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:Go to your stack and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- Click on the **+ New Extension** button on the top-right corner and select **Create new******.
-- Select the extension type as **Sidebar Extension**.
+- Click on the **+ New Extension** button on the top-right corner and select **Create new******.![IBM_Watson_1_highlighted.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt7465d2d33eb78a6a/638716cdcd680e10326e4625/IBM_Watson_1_highlighted.jpg)
+- Select the extension type as **Sidebar Extension**.![IBM_Watson_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta7644848b4075199/60c21b742d95121b9b3d20a6/IBM_Watson_2_highlighted.png)
 - You will be led to the “Create New Extension” details page where you need to enter details in the fields as given below:
 
 **Title**: Provide a suitable title. For example, **IBM Watson**.
@@ -99,7 +101,7 @@ Go to your stack and click on the “Entries” icon on the left navigation pane
 - Click on an entry where you want to add the extension. You will see the “Sidebar Extensions” icon on the right-hand side of the page, as shown in the image below:
 - Click on it to expand the sidebar, and select **IBM Watson** from the drop-down menu.
 - Select a **Field** from the dropdown.
-- Select a **Model** and click on **Run**. Based on the model selected, you will find the result on the sidebar.
+- Select a **Model** and click on **Run**. Based on the model selected, you will find the result on the sidebar.![ibm_watson_3_no_highlight.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2d591325d05561cd/6140e11977d06a0c9835d09d/ibm_watson_3_no_highlight.gif)
 
 ## Common questions
 

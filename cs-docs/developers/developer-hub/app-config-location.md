@@ -25,7 +25,9 @@ Setting up an app configuration page allows you to store all the config settings
 
 There are two types of configurations that Contentstack supports:
 - **App Config:**  
-The app config type of configuration is a public configuration that you can share with all locations. You can view these configurations in your API response.**Note:** It is recommended not to store any sensitive data in the app config as anyone can access it via the APIs.
+The app config type of configuration is a public configuration that you can share with all locations. You can view these configurations in your API response.
+
+  **Note:** It is recommended not to store any sensitive data in the app config as anyone can access it via the APIs.
 - **Server Config:**  
 The server config contains sensitive configurations of your app. It is directly shared with the backend server.Suppose you register a webhook to capture app installation update events. After the installation is updated, the information is directly sent to the backend apps via the [webhook](./managing-webhooks-in-an-app.md).
 
@@ -45,12 +47,12 @@ Let's see how to add app config location to your app:
 - **Via the Developer Hub Console:**  
 To add the app config location to your app via the Developer Hub console, login to your [Contentstack Account](https://www.contentstack.com/login) and follow the steps given below:
 
-      Click the **Developer Hub** icon on the left navigation panel.
+      Click the **Developer Hub** icon on the left navigation panel.![Welcome_to_Developer_Hub.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c63262317460a13/665eb3af653cb9d069a7f067/Welcome_to_Developer_Hub.png)
 - Select the application for which you want to set up the configuration page.
-- Click the **UI Locations **tab. To set the **App URL**, click the **View Hosting **link. You will be redirected to the **Hosting **tab.
-- In the **Hosting **tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or[Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.
+- Click the **UI Locations **tab. To set the **App URL**, click the **View Hosting **link. You will be redirected to the **Hosting **tab.![View_Hosting.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf879b2d8d0af9821/68343990c589ead0184bdd34/View_Hosting.png)
+- In the **Hosting **tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or[Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.![App_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt37093a3aeb3377a9/68343990d6011e50b9ed53c9/App_URL.png)
 - Navigate to the **UI Locations **tab to configure the App Config UI location.
-- Hover over the **App Configuration** location, and click the **+ Add UI Location **button.
+- Hover over the **App Configuration** location, and click the **+ Add UI Location **button.![Add_App_Config_Location.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7acdbaa7d6872ded/683439903291d22df86485d0/Add_App_Config_Location.png)
 - On the resulting **Configuration **page, set up the configurations for your application by providing details such as **Path**, and **Description**. You can also enable the configuration using the **Enabled **toggle button.Properties that can be specified for this UI location:
 
           **Signed (optional)**: When enabled, Contentstack adds a JWT token to the initial HTTP request made for your app's first page. This token can be used to verify that the request originated from Contentstack. For more information, please refer to [Signed Locations](./securing-your-app.md).

@@ -119,7 +119,9 @@ Without the Live Preview SDK, integrating Live Preview is more complex:
 - **Visual Builder and Timeline Work with Live Preview**
 - **Visual Builder** enables on-page WYSIWYG-style editing with the help of edit tags attached to each editable DOM element.
 - **Timeline** provides visibility over the upcoming releases and scheduled publishes.
-- With Live Preview setup complete, both features work **automatically**.**Note:** Visual Builder will additionally require setting up edit tags for on-page editing.
+- With Live Preview setup complete, both features work **automatically**.
+
+  **Note:** Visual Builder will additionally require setting up edit tags for on-page editing.
 
 ## API Calls and Authentication
 

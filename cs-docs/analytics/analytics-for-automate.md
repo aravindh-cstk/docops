@@ -61,7 +61,9 @@ The data can be refined by applying filters based on the following criteria:
 - **Status Code:** Filter the chart to show only specific status codes.
 - **Group By:** Organize the data by daily, weekly, or monthly intervals.
 - **Date Range:** Choose from predefined time filters (1 week, 30 days (default), 60 days, or 90 days). Additionally, some sections include a date selector below the graph to refine the range within the last 90 days.
-- **Custom Date:** Use the date dropdown filter to select a specific range or set a custom date range.**Note:** The custom date range should not exceed **90 days**.
+- **Custom Date:** Use the date dropdown filter to select a specific range or set a custom date range.
+
+  **Note:** The custom date range should not exceed **90 days**.
 
 To save a specific filter for later use, click the horizontal ellipsis (...) beside Reset and choose **Save As New View**.
 

@@ -67,7 +67,7 @@ Third-party tools for Windows, Linux, and Mac OS, including [ngrok](https://ngro
 - The Contentstack cloud has two basic environments, i.e., the content management repository to manage and the content delivery repository to deliver the content.
 - Whenever we publish content on Contentstack, we're migrating data or updating a flag in the content delivery repository that this version of the entry is updated/ deleted/ live.
 - While we publish, if we've configured webhooks, then they can call external reverse proxies like ngrok.
-- The CMS and visitors can access our ngrok URL that is publicly available on the internet. We have the ngrok process running on the workstation (local server) inside the firewall, polling ngrok.io to get requests and forward requests on our local host's secure and unsecured ports.
+- The CMS and visitors can access our ngrok URL that is publicly available on the internet. We have the ngrok process running on the workstation (local server) inside the firewall, polling ngrok.io to get requests and forward requests on our local host's secure and unsecured ports.![Doc-Ngrok-05-01.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt487b604c91bc8f67/636c8650571726758dbe4a96/Doc-Ngrok-05-01.jpg)
 
 **Additional Resource**: For more detailed information, check ngrok's [documentation](https://ngrok.com/docs).
 

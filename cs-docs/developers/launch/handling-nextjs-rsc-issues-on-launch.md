@@ -25,7 +25,7 @@ When Next.js with App Router runs behind a CDN (such as the Launch CDN), you may
 ### Triggers for RSC Payload Error
 - A client-side navigation triggers a request containing the `?_rsc=...` query parameter and the `Rsc: 1` header.
 - A redirect occurs.
-- The CDN caches the **wrong response** (RSC payload) because the query parameter is missing after the redirect.
+- The CDN caches the **wrong response** (RSC payload) because the query parameter is missing after the redirect.![Launch_NextJS_RSC_Issues.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3f95d5f5270965d9/683024234d67fa58f158cbe8/Launch_NextJS_RSC_Issues.png)
 
 ### How the Issue Happens
 - A client-side navigation request is made to a page (for example, `/some-page?_rsc=abcd`) with the header `Rsc: 1`.

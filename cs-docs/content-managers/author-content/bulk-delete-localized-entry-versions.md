@@ -24,9 +24,9 @@ You can delete multiple localized and unlocalized versions of an entry directly 
 To bulk delete localized and unlocalized entries, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
 - Open the entry you want to delete.
-- In the top-right corner of the page, select the master language from the **language dropdown**. The master language is marked with an **(M)** at the end.
-- Click the **horizontal ellipses** located at the bottom of the entry editor, and click **Delete**.
-- In the **Delete Entry** modal, click **Select all languages** and then **Delete**.
+- In the top-right corner of the page, select the master language from the **language dropdown**. The master language is marked with an **(M)** at the end.![Bulk_Delete_LocalEntryVersions_MasterLangg.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt80c8946c6306ca57/677cb932ef8fc91badfc2c89/Bulk_Delete_LocalEntryVersions_MasterLangg.png)
+- Click the **horizontal ellipses** located at the bottom of the entry editor, and click **Delete**.![Bulk_Delete_Localized_Entry_Versions_DeleteButton.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt61ae237325233a7a/677cb93181e2c03eb879838b/Bulk_Delete_Localized_Entry_Versions_DeleteButton.png)
+- In the **Delete Entry** modal, click **Select all languages** and then **Delete**.![Bulk_Delete_Localized_Entry_Versions_DeleteModal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt548ce1dd2b6064f5/677cb93289f49bd66f894cc7/Bulk_Delete_Localized_Entry_Versions_DeleteModal.png)
 
 **Note**:
 - Deleting a master language entry moves it and all its localized versions to the [Trash](../../developers/manage-trash/about-trash.md). These can be restored within **14 days**. After that, they will be permanently deleted.

@@ -23,7 +23,7 @@ After creating a [content type](./about-content-types.md), you can edit it to ad
 To edit a content type, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) and click the "Content Models" icon.
 - Click the vertical ellipsis in the **Actions** column next to the content type, then select **Settings** to update its name, description, or type (Single or Multiple).
-- To open the content type and edit its schema, click the content type title. You can also click the vertical ellipsis in the **Actions** column and select **Edit**.
+- To open the content type and edit its schema, click the content type title. You can also click the vertical ellipsis in the **Actions** column and select **Edit**.![Edit_CT.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3663c8f50dbaa8a2/68dc36b4c471fcb250cf0487/Edit_CT.png)
 - The content type builder page opens, where you can modify the schema:**Add fields:** Click the “Insert a field” (+) icon.
 - **Remove fields:** Click the “Delete” icon next to the field.
 - **Edit field properties:** Click the “Properties” (gear) icon for the field, then update details in the **Properties** section.

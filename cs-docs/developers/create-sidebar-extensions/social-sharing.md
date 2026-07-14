@@ -44,8 +44,8 @@ To create a Sidebar Extension, log in to your [Contentstack account](https://app
 Go to your [stack](https://app.contentstack.com/#!/login) and click on the “Settings” icon on the left navigation panel.
 
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- Click on **+ New Extension** button on the top-right corner and select **Create new**.
-- On the **Select Extension Type** screen, select **Sidebar Extension**.
+- Click on **+ New Extension** button on the top-right corner and select **Create new**.![Social_Sharing_1_highlighted.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0ff3c670b1c6297a/638716669405fa1010ee9e49/Social_Sharing_1_highlighted.jpg)
+- On the **Select Extension Type** screen, select **Sidebar Extension**.![Social_Sharing_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltbc921c4a1f0fd271/60c21c643fb413770446fdce/Social_Sharing_2_highlighted.png)
 - On the **Create New Extension** page, enter the following details:  
   **Title**: Enter a name for your extension, for example, Social Sharing.
 - **Hosting method**: Select **Hosted by Contentstack**. When you select Hosted by Contentstack, the Extension source code field becomes visible.
@@ -60,7 +60,7 @@ Go to your stack and click on the “Entries” icon on the left navigation pane
 
 - Select the content type for which you have enabled the Sidebar Extension and click on an entry.
 - Click the “Sidebar Extensions” icon on the right-hand side of the page to expand the sidebar.
-- Select **Social Sharing** from the drop-down menu. This will display the list of options you can choose from.
+- Select **Social Sharing** from the drop-down menu. This will display the list of options you can choose from.![Social_Sharing_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb378d281a447afc1/60c21c77971f487708eb2bb5/Social_Sharing_3_highlighted.png)
 - The selected Sidebar Extension expands on the sidebar displaying the list of options that you can choose from******Select URL**: You need to select the URL of the environment such as production, development, or whichever that you have set up.
 - **Select Field To Share**: From this dropdown, select the field which you want to share on the available social media platforms. For example, on Twitter, you need to specify the fields such as Title, URL, or Body. On LinkedIn and Facebook, only the URL can be shared.
 - Finally, select the social media platform on which you want to share your content. For our example, click on the Twitter option.

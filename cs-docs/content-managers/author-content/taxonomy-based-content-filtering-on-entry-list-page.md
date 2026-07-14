@@ -21,8 +21,8 @@ Utilizing the new taxonomy feature, you gain the ability to organize and access 
 
 Log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Navigate to the [stack](../../developers/set-up-stack/about-stack.md) where you've categorized your entries, then click the "Entries" icon located in the left-hand navigation panel.
-- On the entries list page, the left panel now displays all the taxonomies you've created within the stack.
-- You can now choose specific terms from these taxonomies to filter and view entries that match those criteria. This customization allows you to have a tailored view of all your entries that have been categorized using taxonomies.
+- On the entries list page, the left panel now displays all the taxonomies you've created within the stack.![Taxonomy_Filter_in_Entry_List_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt44e00bfae418f9d7/656870860a03ad4b6939bdef/Taxonomy_Filter_in_Entry_List_Page.png)
+- You can now choose specific terms from these taxonomies to filter and view entries that match those criteria. This customization allows you to have a tailored view of all your entries that have been categorized using taxonomies.![Filtering_Terms_in_Entries_List_Page_GIF.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt981ab0110fb7d4cb/655b4e142b0af3e54b51c5a9/Filtering_Terms_in_Entries_List_Page_GIF.gif)
 
 ## Taxonomy-based Searching
 

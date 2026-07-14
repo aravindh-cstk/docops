@@ -95,7 +95,9 @@ This simplifies content duplication and speeds up entry creation.
 
 To copy and paste field values across group fields, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - In the **Group** field, select the instance, click the vertical ellipsis, and select **Copy Field Values**.
-- In the target entry or instance, click the vertical ellipsis again and select **Paste Field Values**.**Note:** The target instance must match the same instance’s name and structure as the source.
+- In the target entry or instance, click the vertical ellipsis again and select **Paste Field Values**.
+
+  **Note:** The target instance must match the same instance’s name and structure as the source.![Copy_Field_Values_Across_Groups.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt282f6230c7de7a53/68dc1d42b01de95c53a00723/Copy_Field_Values_Across_Groups.gif)
 
 **Additional Resources:**
 - To extend functionality, learn how to [add Global fields to Group fields](../global-field/global-fields-within-group-fields.md).

@@ -31,16 +31,16 @@ This guide provides step-by-step instructions for creating a new 'Import Entries
 Once Data & Insights (Lytics) is enabled and configured for your organization, follow these steps:
 - Go to [app.lytics.com](https://app.lytics.com/).
 - Navigate to **Data Pipeline > Jobs**.
-- Click the **+ Create New** button, and then select the appropriate job type card based on your use case.
-- In the **Set job details** section, enter a **Label** and optional **Description** for the job.
+- Click the **+ Create New** button, and then select the appropriate job type card based on your use case.![“Import Entries” and “Sync Audience Definitions” options](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt90fed36b98cd0d1c/686508bc6e85517ad6e6e03b/image.png)
+- In the **Set job details** section, enter a **Label** and optional **Description** for the job.![Set job details screen for importing Contentstack entries](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfd9444e35dcc3d5b/686509acabd7514e65abb34d/image.png)
 - In the **Authorizations** section, click the **+ New Authorization** button to manage and maintain the connection to your Contentstack channel tool over time.
-- Choose **Stack API Key** as the Authorization method.
+- Choose **Stack API Key** as the Authorization method.![Authorization method selection screen](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte1c443d2b1bc9c51/68650baef44b17495978b76c/image.png)
 - In the Configure Authorization **Details** section, enter a **Label** and optional **Description** for the authorization.
 - In the **Configuration** section,**Region:** Select the region where your organization is located.
 - **Stack API Key:** Enter your stack API key (**Stack Settings > API Credentials**).
 - [**Delivery Token**](../developers/create-tokens/create-a-delivery-token.md)**:** Enter the delivery token of your stack (**Stack Settings > Tokens > Delivery Token**).
 - [**Management Token**](../developers/create-tokens/generate-a-management-token.md)**:** Enter your stack's management token (**Stack Settings > Tokens > Management Token**).
-**Tip:** Generate a new management token with Read permissions to avoid issues caused by hidden or obfuscated values. This ensures your sync is correctly tied to the domain and environment you authorized, and avoids misconfiguration due to multiple tokens or domains.
+**Tip:** Generate a new management token with Read permissions to avoid issues caused by hidden or obfuscated values. This ensures your sync is correctly tied to the domain and environment you authorized, and avoids misconfiguration due to multiple tokens or domains.![Configuration screen showing region selection and fields to enter Stack API Key, Delivery Token, and Management Token.](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt669eb23a81422d83/686512ad65a219b379d19083/image.png)
 - Click the **Save and Continue** button. You will see a success message pop-up: **Authorization saved successfully**.
 
 **Note:** Authorization health can reflect the following statuses:
@@ -51,9 +51,9 @@ Once Data & Insights (Lytics) is enabled and configured for your organization, f
 - Now, in the **Configure Job** section, select your **Content Types** to import (likely "blog_post", "page", etc.). You can select multiple content types to import their entries.
 - Select **Keep Updated** to continuously import the entries for the selected content types.
 - Optionally, you can also provide the **Domain** on which you are serving content (same as your DAL configuration) and have the JavaScript Tag installed.
-- Select the **Taxonomies** you'd like to import for the **Context Layer Import**. Each taxonomy selected will create a new Context Layer and calculate new scores on profiles for each value in that taxonomy.
+- Select the **Taxonomies** you'd like to import for the **Context Layer Import**. Each taxonomy selected will create a new Context Layer and calculate new scores on profiles for each value in that taxonomy.![Configure Job screen showing selected content types, options to import tags, keep data updated, enrich entries, and specify domain and context layer.](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdfddd0b1a3e57f0d/686515087ff46dd6a9336045/image.png)
 - Click the **Complete** button to finish the setup of your job. You will see a success message pop-up: **J****ob saved successfully****.**
-- To view the newly created job, go to **Data Pipeline > Jobs**.
+- To view the newly created job, go to **Data Pipeline > Jobs**.![Jobs list view showing a Contentstack Entry Import job with details such as direction, authorization, provider, type, status, and last modified date.](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt67b5d82492fb38e6/6865181b65a2195ea5d190b7/image.png)
 
 This completes the setup for your Import Entries job.
 

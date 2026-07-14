@@ -43,9 +43,11 @@ To get your **Cloud Name** and **API Key** from Cloudinary, follow the steps giv
 
 Log in to your [Cloudinary account](https://cloudinary.com/users/login/).
 
-- On the left-hand side primary navigation, click the **Settings** gear icon. Then, go to **Account** under **Account settings** to view your **cloud name**.
-- Click **API Keys** under **Product environment settings** to view your **API Key**.
-- Save the **Cloud Name** and **API Key**; you will need it while configuring your Cloudinary app in Contentstack in [step 2](#install-and-configure-the-cloudinary-app-in-marketplace).**Note**: To view the restricted assets, you need to configure the **Access Control Key** in [step 2](#install-and-configure-the-cloudinary-app-in-marketplace). Please contact the Cloudinary Support team to get this credential.
+- On the left-hand side primary navigation, click the **Settings** gear icon. Then, go to **Account** under **Account settings** to view your **cloud name**.![1-Cloudinary-Get-Cloud-Name](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd7b2eff5a2c7952a/668d69233d793ff0bd76cffc/1-Cloudinary-Get-Cloud-Name.png)
+- Click **API Keys** under **Product environment settings** to view your **API Key**.![2-Cloudinary-Get-API-Key](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc1c12911704ea3ea/668d692242bfaccfb686ba0c/2-Cloudinary-Get-API-Key.png)
+- Save the **Cloud Name** and **API Key**; you will need it while configuring your Cloudinary app in Contentstack in [step 2](#install-and-configure-the-cloudinary-app-in-marketplace).
+
+  **Note**: To view the restricted assets, you need to configure the **Access Control Key** in [step 2](#install-and-configure-the-cloudinary-app-in-marketplace). Please contact the Cloudinary Support team to get this credential.
 
 ## Install and Configure the Cloudinary App in Marketplace
 
@@ -54,13 +56,13 @@ To install the app, log in to your [Contentstack account](https://www.contentsta
 From the left-hand side primary navigation, click the **Marketplace** icon.
 
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see all available apps. Hover over the **Cloudinary** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the Cloudinary app, accept the **Terms of Service**, and click the **Install** button.
+- Within the Marketplace, you can see all available apps. Hover over the **Cloudinary** app and click **Install**.![marketplace_appswitcher_cloudinary.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am426d89bf35362c2a/86ce13200edc150e09a6509a/marketplace_appswitcher_cloudinary.png?locale=en-us)
+- In the pop-up window, select the stack where you want to install the Cloudinary app, accept the **Terms of Service**, and click the **Install** button.![Cloudinary-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2ceda044f82140f5/672367ee91ff449071d70078/Cloudinary-App-Install.png)
 - On the **Configuration** screen, you can add multiple configurations for Cloudinary. To do this, follow the steps given below:  
   Click the **+ New Configuration** button to add new configuration details.
 - After adding the configuration, enter the following details:  
   **Cloud Name** and **API Key**: Enter the Cloudinary **Cloud Name** and **API Key** retrieved from your Cloudinary Account in [step 1](#get-your-credentials-from-cloudinary).
-- **Access Control**: Click the **Enable Access Control** toggle button to view the restricted assets. Enable this option and add the **Access Control Key** which you have received from the Cloudinary Support team in [step 1](#get-your-credentials-from-cloudinary).
+- **Access Control**: Click the **Enable Access Control** toggle button to view the restricted assets. Enable this option and add the **Access Control Key** which you have received from the Cloudinary Support team in [step 1](#get-your-credentials-from-cloudinary).![Cloudinary-Access-Control](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfc7d3700da1dc7ba/672367ee76b6797b5a7e2c63/Cloudinary-Access-Control.png)
 - **Set As Default**: To set this configuration as the default, click this checkbox.  
   Alternatively, you can set a configuration as the default by clicking three dots on the top-right side of the configuration section and then selecting **Set As Default**.
 
@@ -102,7 +104,9 @@ From the left-hand side primary navigation, click the **Marketplace** icon.
 - Click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.  
   **Note**: The app requires at least one UI location to be enabled, otherwise you will not be able to save your app configuration settings.
-- If the webhook is enabled for your app, you can view the webhook logs under the Webhook tab.**Additional Resource**: For more information on UI locations and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the Webhook tab.
+
+  **Additional Resource**: For more information on UI locations and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Cloudinary app.
 
 ## Use the Cloudinary App within your Stack
@@ -111,7 +115,7 @@ To use the Cloudinary app within an entry of your stack, follow the steps given 
 
 Go to your stack and click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:![12-Cloudinary-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt365c6e5bd2a24cc8/668d6929534bb9740626f693/12-Cloudinary-Content-Type.png)
 
 There are two ways to use the Cloudinary app in your entry.
 
@@ -208,8 +212,8 @@ There are two ways to use the Cloudinary app in your entry.
 
   **Additional Resource**: You can add more optional parameters within the `compact_view_options` object. For detailed description of these optional parameters, refer to the Cloudinary [Media Library Widget](https://cloudinary.com/documentation/media_library_widget#2_set_the_configuration_options) documentation.
 - After adding the app, click **Save** or **Save and Close** to save your changes.
-- To use the Cloudinary app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You will see the Cloudinary app added as a custom field in your entry page as shown below:
-- Click the **+ Choose Asset(s)** button to select assets from your Cloudinary account.
+- To use the Cloudinary app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You will see the Cloudinary app added as a custom field in your entry page as shown below:![16-Cloudinary-Custom-Field-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1a82f3ed1c2df79e/668d692962008a0d4010fb66/16-Cloudinary-Custom-Field-Sample-Entry.png)
+- Click the **+ Choose Asset(s)** button to select assets from your Cloudinary account.![17-Cloudinary-Custom-Field-Choose-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc6e2b016527d60f8/668d692994a8163b3c07f0a9/17-Cloudinary-Custom-Field-Choose-Assets.png)
 - If you are not logged into your Cloudinary account, it will ask you to enter your credentials. Once you do that, you are directed to your assets section. Then, select the image file(s) that you want to add and click the **Insert** button.  
   **Note**: If you have set the **Config Parameter** in the **Custom Field Advanced Properties**, you will directly land to the selected folder.
 
@@ -301,7 +305,7 @@ There are two ways to use the Cloudinary app in your entry.
 
   This adds Cloudinary in the JSON Rich Text Editor.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
-- To use the Cloudinary app as a JSON RTE plugin, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You will see the Cloudinary app icon inside the JSON RTE field in your entry page as shown below:
+- To use the Cloudinary app as a JSON RTE plugin, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You will see the Cloudinary app icon inside the JSON RTE field in your entry page as shown below:![31-Cloudinary-JSONRTE-Sample-Entry-App-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc45a194a23048d87/668d69310050a3261175962b/31-Cloudinary-JSONRTE-Sample-Entry-App-Icon.png)
 - Click the **Cloudinary** app icon to open the selector page or **Media Library**.
 - If you are not logged into your Cloudinary account, it will ask you to enter your credentials. Once you do that, you are directed to your assets section. Choose one or more media files from the **Media Library** folder and then click the **Insert** button.  
   **Note**: If you have set the **Config Parameter** in the JSON RTE field, you will directly land to the selected folder.

@@ -30,8 +30,8 @@ Below is a list of some of the popular custom field templates provided by Conten
 
 In order to use a pre-built custom field, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon on the left navigation panel.
-- Select **Extensions**, and click on **+ New Extensions** button at the top-right corner of the page, and select **Use prebuilt** option.
-- In the following window, from the drop-down menu, select **Custom Field**.
+- Select **Extensions**, and click on **+ New Extensions** button at the top-right corner of the page, and select **Use prebuilt** option.![Use_Prebuilt_Custom_Fields_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltcaaf0f03413e3ae3/60b7c02fcf9889265dab7c42/Use_Prebuilt_Custom_Fields_1_highlighted.png)
+- In the following window, from the drop-down menu, select **Custom Field**.![Select_Custom_Field.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3fca79699403bffc/638742241686b510627b05a1/Select_Custom_Field.jpg)
 - Select any prebuilt template (for example, **Color Picker**), and click on **+ ****Add Extension**.
 - In the configuration page, you will see the following options:  
   **Title*** (required)*: You will see a predefined title. This title can be used when adding the custom field in your content type.

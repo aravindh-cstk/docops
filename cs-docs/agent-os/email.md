@@ -27,11 +27,11 @@ Perform the following steps to set up the Email by Automate action connector:
 - Click **Action Step** to configure third-party services.
 - Within the **Configure Action Step**, click the **Email by Automate **connector.
 - Under **Choose an Action **tab, select the **Email by Automate **action.
-- On the **Configure Action** tab, enter the **To** email address, the **Subject line**, the **Body type**, and the **Body** of the email. The **Show optional fields** toggle switch allows you to enter the “CC” and “BCC” email addresses.
+- On the **Configure Action** tab, enter the **To** email address, the **Subject line**, the **Body type**, and the **Body** of the email. The **Show optional fields** toggle switch allows you to enter the “CC” and “BCC” email addresses.![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt82e310b8bf33b778/668c1e90a4dbaefd854dadd8/Select_Fields.png)
 - Click **Proceed** after entering the details.
-- Click **Test Action** to test if the email sending was a success or not.
-- The email is queued and sent to the receiver’s email address. Click **Save and Exit** to save and close the window.
-- You can check the receiver’s email address for the email sent from “Contentstack Automations.”
+- Click **Test Action** to test if the email sending was a success or not.![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt992883b12543055d/668c1e9050a8ec8df4b67fab/Test_Action.png)
+- The email is queued and sent to the receiver’s email address. Click **Save and Exit** to save and close the window.![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9c88e0bb20fcf54e/668c1e90534a9d128bae111c/Save_Exit.png)
+- You can check the receiver’s email address for the email sent from “Contentstack Automations.”![Email.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt66692f55cd1deb11/668c1e90fb3792ce4868a24a/Email.png)
 
 This sets the **Email by Automate **action connector.
 

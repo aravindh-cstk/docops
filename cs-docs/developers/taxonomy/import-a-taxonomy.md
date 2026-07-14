@@ -156,10 +156,10 @@ Now, to import this taxonomy into another stack. To achieve this, you will first
 
 To import a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to import a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
-- Click the **Create New Taxonomy** button, then select **Import** from the drop-down menu.
+- Click the **Create New Taxonomy** button, then select **Import** from the drop-down menu.![Import Taxonomy.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7cc9d9b32362bd7c/6929beb929f9d9a8d30dd7da/Import_Taxonomy.png)
 - In the **Import Taxonomy** modal, either drag and drop your CSV or JSON file or click **Choose a File** to browse for it.
 - To display your imported taxonomy at the top of the list, tick the box that says **Display this taxonomy at the top of the list**.
-- Finally, click **Done **to add your taxonomy.
+- Finally, click **Done **to add your taxonomy.![Import_Taxonomy_Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd3f3c17420276b26/65c5dbc3fcd864f6d6eeb4eb/Import_Taxonomy_Modal.png)
 
 After successfully importing the taxonomy, you can start adding terms to it and associating it with content types.
 

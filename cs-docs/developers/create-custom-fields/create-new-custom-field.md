@@ -175,11 +175,13 @@ This method is suitable if you do not want to host the custom field extension co
 
 To deploy the custom field extension via this method, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” gear icon, and select **Extensions**.
-- On the **Extensions** page, click on the **+ Add Extension** button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one** link as shown below.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions** page, click on the **+ Add Extension** button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one** link as shown below.![Create_New_Custom_Field_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8a952a2abf5bc948/60b7c08ecf9889265dab7c46/Create_New_Custom_Field_1_highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Custom_Field_Card.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc903b95bdea7df35/61d88c378aabbf6426b751e0/Custom_Field_Card.png)
 - On the **Create New Extension **page, enter values in the fields as given below:  
           **Title ***(required)*: Provide a suitable title for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
-- **Field data type ***(required)*****: Select the data type in which the input data of the field should be saved in Contentstack.**Note: **We only support these data types: Text, Number, Date, Boolean, Reference, File, and JSON.
+- **Field data type ***(required)*****: Select the data type in which the input data of the field should be saved in Contentstack.
+
+  **Note: **We only support these data types: Text, Number, Date, Boolean, Reference, File, and JSON.
 - **Multiple ***(optional)*: Select this if your custom field accepts multiple values, and the data type is not JSON.
 - **Hosting method ***(required)*: Select **External Hosting** as the hosting method for this content type.
 - **External hosting URL ***(required)*: Specify the URL of your externally-hosted custom field code.
@@ -201,11 +203,13 @@ Through this method, you can host your custom field code on Contentstack.
 To host a custom field on Contentstack, create a custom field by performing **steps 1 to 3** of the [aforementioned steps](#hosted-externally).  
 For **step 4**, on the **Create New Extension page** configure the following options:
 - **Title** *(required)*: Provide a suitable title for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
-- **Field data type ***(required)*:****Select the data type in which the input data of the field should be saved in Contentstack. **Note**: We only support these data types: Text, Number, Date, Boolean, Reference, File, and JSON.
+- **Field data type ***(required)*:****Select the data type in which the input data of the field should be saved in Contentstack. 
+
+  **Note**: We only support these data types: Text, Number, Date, Boolean, Reference, File, and JSON.
 - **Multiple ***(optional)*: Select this if your custom field accepts multiple values, and the data type is not JSON.
 - **Hosting method ***(required)*: Select **Hosted on Contentstack** as the hosting method for this content type.
 - **Extension source code ***(required)*: Enter your custom field code here. For this example, paste the code that we created in the previous steps.
-- **Config Parameter ***(optional)*****: If you want to provide any config parameters in the source code, specify the value of the parameters here.
+- **Config Parameter ***(optional)*****: If you want to provide any config parameters in the source code, specify the value of the parameters here.![Create_New_Custom_Field_4_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt4d3dece90bfce257/60b7c0c0e5c1e71981818e9a/Create_New_Custom_Field_4_no_highlight.png)
 
 After filling in the details, **Save** the extension.
 

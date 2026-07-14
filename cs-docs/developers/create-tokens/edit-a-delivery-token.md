@@ -23,9 +23,9 @@ In Contentstack, after [creating a Delivery Token](./create-a-delivery-token.md)
 To edit a Delivery Token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 - Click **Tokens** in the settings panel.
-- On the **Delivery Tokens** tab, click the Delivery Token you want to edit. Alternatively, click the vertical ellipsis in the **Actions** column and select **Edit**.**Tip:** If you are on the [Management Tokens](./about-management-tokens.md) tab, press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
+- On the **Delivery Tokens** tab, click the Delivery Token you want to edit. Alternatively, click the vertical ellipsis in the **Actions** column and select **Edit**.**Tip:** If you are on the [Management Tokens](./about-management-tokens.md) tab, press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.![Edit Delivery Token UI](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb1cb85191149b060/67f66ee2301cf1c754983739/1._Edit-a-Delivery-Token_imag-1.png)
 - Update the necessary fields. If a[Preview Token](./about-delivery-tokens.md#understanding-preview-tokens) has not been created, click **+ Create Preview Token** to generate one.
-- Click **Save** to apply your changes.
+- Click **Save** to apply your changes.![Save Token Changes](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1431781c70215627/67f66ee294d25d9aaa8672d0/2._Edit-a-delivery-token_img-2.png)
 
 **Note:** The value of a Delivery Token cannot be edited. If you need a different token string, you'll need to create a new Delivery Token.
 

@@ -20,11 +20,15 @@ This page explains how to publish entries and assets found in your search result
 To publish entries and assets found in your search results in bulk, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the “[Entries](../author-content/about-entries.md)” or “[Assets](../author-content/about-assets.md)” module.
 - Search for the entries and assets you want to publish. You can use [Basic Search](./basic-search.md), [Advanced Search](./advanced-search.md), [Filters](./use-filters.md), and [Views](./about-views.md) to refine your search results.
-- From the search results, select the entries or assets you want to publish. Click the **Publish** button on the floating bar at the top.**Note:** On smaller screens, click the vertical ellipsis to access the Publish option.
+- From the search results, select the entries or assets you want to publish. Click the **Publish** button on the floating bar at the top.
+
+  **Note:** On smaller screens, click the vertical ellipsis to access the Publish option.![Publish button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt71616516b21e1698/67d95e6218b0841814aafc3b/1._Bulk_operations_on_Search_Results-Publish_Option.png)
 - On the **Publish Entries**/**Publish Assets** screen:**Select Environment(s)** to which you want to publish the selected entries.
-- **Select Language(s)** for which you want to publish the selected entries.**Note:** While unpublishing multiple localized and unlocalized versions of a single entry, you can select a maximum of **50** **languages** and **50** **environments**.
+- **Select Language(s)** for which you want to publish the selected entries.
+
+  **Note:** While unpublishing multiple localized and unlocalized versions of a single entry, you can select a maximum of **50** **languages** and **50** **environments**.
 - Under **Publish**, you can select – **Now** (to publish immediately) or **Later** (to publish at a later date/time that you provide).
-- Click **Send With References** to publish the selected entries along with their referenced items, or **Send Without References** to publish only the selected entries.
+- Click **Send With References** to publish the selected entries along with their referenced items, or **Send Without References** to publish only the selected entries.![Send with References button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6bdc0de3a7430333/67d95e632a7095b4d78ca5d3/2._Bulk_operations_on_Search_Results-Publish_Entries_Modal.png)
 
 **Note:** When you publish multiple entries/assets, only the latest version of the entries/assets will be published. Read more about [working with different entry versions](../author-content/name-entry-versions.md).
 

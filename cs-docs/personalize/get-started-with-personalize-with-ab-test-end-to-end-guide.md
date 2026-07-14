@@ -45,7 +45,7 @@ To create a new Personalize project, log in to your [Contentstack account](https
 - You will be redirected to the **Personalize Projects** landing page. Click the **+ New Personalize Project** button.
 - In the **New Personalize Project** modal,Enter a **Name** and optional **Description** for the project.
 - Select an existing stack from the drop-down list to connect it to your Personalize project.
-- Click the **Create Project** button.
+- Click the **Create Project** button.![3 - Getting Started with Contentstack Personalize with A B Testing.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt322f6ad2aa274994/6752dbb67dc30f60b71cd913/3_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
 
 This creates your new Personalize project and it will now appear on the Personalize Projects landing page.
 
@@ -67,12 +67,12 @@ For this guide, we will create an A/B Test experience with the following details
 
 To create a new A/B Test experience in the new project, perform the following steps:
 - Click the newly created project to navigate to it.
-- By default, you will be navigated to the Experience landing page. Click the **+ New Experience** button.
-- In the **Select Experience Type** modal, click **A/B Test** as the experience type.
-- Provide a **Name** and an optional **Description** for your experience, and click **Save General Details**.
+- By default, you will be navigated to the Experience landing page. Click the **+ New Experience** button.![New_experience.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5f773f1d96e211f4/68df6308d43eb0341d4f96b0/New_experience.png)
+- In the **Select Experience Type** modal, click **A/B Test** as the experience type.![7 - Getting Started with Contentstack Personalize with A B Testing.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8ee0cc4cdfa8f3ee/6752dbb79f493462c3b8a3d0/7_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
+- Provide a **Name** and an optional **Description** for your experience, and click **Save General Details**.![headline_test_description.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb39d05de9732f928/68df647027ff814a1efb976c/headline_test_description.png)
 - Click the **Configuration** tab to set up your A/B test variants as follows:In the **Variant Distribution** drop-down, select **Equally split**.
 - Click the **+ Add Variant** button twice to create two variants.
-- Enter **Control** and **Bold headline** in the Variant name fields.
+- Enter **Control** and **Bold headline** in the Variant name fields.![9 - Getting Started with Contentstack Personalize with A B Testing.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c49ed87690ed689/6752dbb72eab9c5b01c86bcb/9_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
 - Click the **Save Draft** button to save the A/B Test experience.
 
 You’ve now created an A/B test experience that you can use to test different content variants.
@@ -90,9 +90,9 @@ Events in Contentstack Personalize, are essential for measuring the success of y
 For this guide, we are creating a `Click` event to track conversions for our A/B test on the ‘Learn More’.
 
 To create an event, perform the following steps:
-- Click the **Events** tab in the top navigation panel. From the **Events** page, click the **+ New Event** button.
+- Click the **Events** tab in the top navigation panel. From the **Events** page, click the **+ New Event** button.![New_Event.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt19bdbc70d708e4bd/68df65ff5eb723dea2237caf/New_Event.png)
 - In the **New Event** modal, provide a suitable **Key** and an optional **Description**.
-**Note**: You can create custom events to track conversions for common scenarios such as `click, add_to_cart, checkout` and many more.
+![11 - Getting Started with Contentstack Personalize with A B Testing.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt403d0c5fd003604e/6752dbbd6073ff09f4de5d5a/11_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)**Note**: You can create custom events to track conversions for common scenarios such as `click, add_to_cart, checkout` and many more.
 - Once you have done that, click the **Create** button.
 
 This creates a new event in your Personalize project. You can now add the event to an A/B Test experience as a Metric to evaluate the variant performance for conversions.
@@ -106,9 +106,9 @@ To add the created event to an A/B Test experience, perform the following steps:
 - Click the **Experiences** tab in the top navigation panel.
 - On the **Experiences** page, click the previously created A/B Test experience to open it or click the corresponding vertical ellipses under the **Actions** section, select **Edit**.
 - Click the **Configuration** tab.
-- Scroll to the **Metrics** section and then click **+ Add Event**.
+- Scroll to the **Metrics** section and then click **+ Add Event**.![12 - Getting Started with Contentstack Personalize with A B Testing.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaa4ab65e635ddc5a/6752dbbd8486f126159a64fb/12_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
 - Select the preferred event from the drop-down list.
-**Note**: Use the Personalize Edge SDK to trigger the [impressions](../developers/create-content-types/reference.md#personalize-triggerimpression) and [events](../developers/create-content-types/reference.md#personalize-triggerevent) for your experiences using the `triggerImpression` and `triggerEvent` methods.
+![13 - Getting Started with Contentstack Personalize with A B Testing.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt085b26ea39665ee4/6752dbbd9dbaba0a4f00ecb5/13_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)**Note**: Use the Personalize Edge SDK to trigger the [impressions](../developers/create-content-types/reference.md#personalize-triggerimpression) and [events](../developers/create-content-types/reference.md#personalize-triggerevent) for your experiences using the `triggerImpression` and `triggerEvent` methods.
 - Once you have done that, click the **Save** button.
 
 This adds the new event as a reference in your A/B Test experience. Now let’s create Entry Variants for your A/B Test experience.
@@ -139,14 +139,16 @@ Once you've linked a variant group to a content type, a **dropdown** will appear
 ### Create Entry Variants for the Experiences
 Entry Variants allow you to deliver customized content to different user groups, making it easier to target specific audience segments. Follow these steps to create an entry variant.
 - Navigate to the [stack](../developers/set-up-stack/about-stack.md) where you want to create entry variants.
-- Click the **Entries** icon in the top navigation panel.**Note**: Link variant groups to the relevant content type(s) before creating entry variants. Each [experience](./about-experiences.md) in your Personalize project appears as a Variant Group in the stack. For linking details, refer to the [Manage Variant Groups and Entry Variants](../developers/variants/manage-variant-groups.md) document.
-- In the top navigation panel, click the **Entries** icon and select **Base Entries.**
+- Click the **Entries** icon in the top navigation panel.
+
+  **Note**: Link variant groups to the relevant content type(s) before creating entry variants. Each [experience](./about-experiences.md) in your Personalize project appears as a Variant Group in the stack. For linking details, refer to the [Manage Variant Groups and Entry Variants](../developers/variants/manage-variant-groups.md) document.
+- In the top navigation panel, click the **Entries** icon and select **Base Entries.**![Compass_starter_base_variants.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4d43f7224cb3d1b7/68df67d5e943495cec8e71de/Compass_starter_base_variants.png)
 - Select the desired variant from the available variant groups to create your entry variant.
 - The entry editor will display content from the base entry by default. Enter or edit content in the fields as per the selected variant. This content will be tailored specifically for the configured [audiences](./about-audiences.md).
-- As soon as you enter or update content for a field, you will see a **Variant Field** tag.
-- You can click the **Variant Field** dropdown and select **Revert to base entry value** if you want to revert to the base entry content for a specific field.
+- As soon as you enter or update content for a field, you will see a **Variant Field** tag.![18 - Getting Started with Contentstack Personalize with A B Testing.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb04660987839bcb2/6752dbbdafbfb6b4896bfd92/18_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
+- You can click the **Variant Field** dropdown and select **Revert to base entry value** if you want to revert to the base entry content for a specific field.![19 - Getting Started with Contentstack Personalize with A B Testing.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9a779a418dc0b92c/6752dbbd9cd8ef15547d6875/19_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
 - Once satisfied with the content, click **Save** to save the entry variant.
-**Note**: Once saved, the entry variants become independent of the base entry. For more details, refer to the [manage versions of entry variants](../content-managers/entry-variants/manage-versions-of-entry-variants.md) document.
+![Compass_starter_variants_save.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc51f2ead8089db2a/68df69776011aa24e6754bfe/Compass_starter_variants_save.png)**Note**: Once saved, the entry variants become independent of the base entry. For more details, refer to the [manage versions of entry variants](../content-managers/entry-variants/manage-versions-of-entry-variants.md) document.
 
 You can manage and switch between different variants within the entry editor by selecting the relevant variant from the dropdown menu.
 
@@ -170,7 +172,7 @@ After creating the Entry Variants for your A/B Test experience, we can activate 
 - You will be redirected to the **Personalize Projects** landing page. Click the project we created in [step 1](#create-a-personalize-project-and-connect-it-to-an-existing-stack).
 - On the **Experiences** page, click the corresponding vertical ellipses under **Actions**, click **Edit** for the previously created A/B Test experience to activate it on your website.
 - Click the **Configuration** tab and then click the **Activate Draft** button.
-- In the Activate Draft modal, click **Activate.**
+- In the Activate Draft modal, click **Activate.**![activate_draft.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd71af81a2bfc3c2b/68df6d59b0493a39f9ccd5de/activate_draft.png)
 
 This activates your A/B Test experience created with the variants in Personalize with the Entry Variants in CMS. Once the experience is activated, the variants are displayed on your website to your visitors and Personalize automatically records the analytics for the impressions and conversions in real-time.
 

@@ -37,7 +37,7 @@ This guide shows how to get started with Polaris across three common CMS context
 Let's start by logging into the [Contentstack account](https://www.contentstack.com/login/) and following the steps given below:
 - Open the stack.
 - Navigate to an [Entry](../content-managers/author-content/about-entries.md), or [Asset](../content-managers/author-content/about-assets.md), or [Visual Editor](/docs/content-managers/visual-builder/about-visual-builder) page.
-- Click the **Polaris** icon to open the **Polaris** **panel** within the CMS interface.The Polaris panel opens as a side panel within the CMS UI. This panel is where you enter prompts and review planned actions and results.
+- Click the **Polaris** icon to open the **Polaris** **panel** within the CMS interface.The Polaris panel opens as a side panel within the CMS UI. This panel is where you enter prompts and review planned actions and results.![Entry_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3a965efbde2aeda0/69a163888c618d824cbf756a/Entry_Page.png)
 
 ## Using Polaris in the Entry Editor
 
@@ -176,7 +176,7 @@ This section shows how Polaris works within Visual Editor.
 ### Step 1: Open Visual Editor context
 - Navigate to your stack.
 - Open Visual Editor.
-- Load a page or experience in preview mode.
+- Load a page or experience in preview mode.![Visual_Editor.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd8c8d38b8205a3a5/69a16388c461db85626a238f/Visual_Editor.png)
 
 Once the page loads, Polaris operates within the Visual Editor context.
 
@@ -197,7 +197,7 @@ Prompt example: Shorten and sharpen the content on this page to improve readabil
 Polaris interprets this prompt using:
 - The selected Visual Editor element
 - The mapped entry fields
-- The existing content structure
+- The existing content structure![Visual_Editor_Prompt.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt568ecf93588e5bb4/69a1638348e3e8b6920ba667/Visual_Editor_Prompt.png)
 
 ### Step 4: Polaris plans the action
 

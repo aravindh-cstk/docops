@@ -42,8 +42,8 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **Calendar** app and click **Install App**.
-- In the popup window, select the stack where you want to install the Calendar app and click the **Install** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- In the popup window, select the stack where you want to install the Calendar app and click the **Install** button.![Calendar-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8771f2a94b477963/64b686de72f62ba629e8cbb3/Calendar-App-Install.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Calendar-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbfd0903713e6f3f2/65b8186893cdf105ac7cad28/Calendar-UI-Locations.png)
 
 **Note**: No additional configuration is required to use the Calendar app.
 
@@ -55,9 +55,9 @@ To use the Calendar application in your stack, follow the steps given below:
 
 Log in to your [Contentstack account](https://www.contentstack.com/login/).
 
-- Now, go to the stack dashboard. In the left-hand side primary navigation, you will find the **Calendar** app icon (as shown below).
-- Click the app icon to view the Calendar app within your CMS.
-- You first need to authorize the app by providing access to your stack. Click the **Authorize** button to start using the app.
+- Now, go to the stack dashboard. In the left-hand side primary navigation, you will find the **Calendar** app icon (as shown below).![Calendar-App-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4c9401cfea223393/64af6e7fce1ee505488fd839/Calendar-App-Icon.png)
+- Click the app icon to view the Calendar app within your CMS.![Calendar-Authorize-Full-Screen](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt49cc299189931950/64af6e7ff5591f3f5de59988/Calendar-Authorize-Full-Screen.png)
+- You first need to authorize the app by providing access to your stack. Click the **Authorize** button to start using the app.![Calendar-Authorize](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2edea56c93a3f7c8/64af6e7fb7aec378ccd8a2cf/Calendar-Authorize.png)
 - In the popup window, click the **Authorize** button again to authenticate the Calendar app.
 
 The Calendar app shows the total number of events scheduled per day. By default, the Calendar app highlights today's date and displays today's scheduled events in the right-hand side panel.
@@ -72,8 +72,8 @@ The app uses color codes and icons to differentiate the Task, Publish, and Relea
 
 You can see all the details of the task.
 
-- Click the **Entry name** to go to the entry editor.
-- Click **Open My Tasks** to view all the workflow tasks.
+- Click the **Entry name** to go to the entry editor.![Calendar-Task-In-Entry-Editor](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt03f285b2c341ca75/64af72224e2d5e4174f7663a/Calendar-Task-In-Entry-Editor.png)
+- Click **Open My Tasks** to view all the workflow tasks.![Calendar-Tasks-List](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3cee5fad395cc941/64af7222cef8c55dd5705d4f/Calendar-Tasks-List.png)
 
 ### Publish
 
@@ -81,8 +81,8 @@ You can see all the details of the task.
 
 You can view all the details of the entry.
 
-- Click the **Ent****ry name** to go to the entry editor.
-- Click **Open Publish Queue** to view the status of all the publishing events.
+- Click the **Ent****ry name** to go to the entry editor.![Calendar-Publish-Entry-Editor](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfc94ff2b1848404e/64af72224d814364ab900858/Calendar-Publish-Entry-Editor.png)
+- Click **Open Publish Queue** to view the status of all the publishing events.![Calendar-Publish-Queue](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1321e8a1caa8b021/64b3aeb03d598c5279044bac/Calendar-Publish-Queue.png)
 
 ### Release
 
@@ -90,13 +90,13 @@ You can view all the details of the entry.
 
 You can view all the details of the release.
 
-- Click the **Name** to view the release details.
-- Click **Open Releases** to view the list of all the releases added to the CMS.
+- Click the **Name** to view the release details.![Calendar-Release-Details-In-CMS](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt007b74bf6f9bfdc1/64af72224eb51c2bcf35f411/Calendar-Release-Details-In-CMS.png)
+- Click **Open Releases** to view the list of all the releases added to the CMS.![Calendar-Release-List](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd68f81e547b50475/64af7222bd3ef850f57412c6/Calendar-Release-List.png)
 
 ### Filters
 
-- You can select any month or year by clicking the dropdowns or using the **Previous month** and **Next month** icons.
-- Click the **Today** button to view the events scheduled for the current date.
+- You can select any month or year by clicking the dropdowns or using the **Previous month** and **Next month** icons.![Calendar-Filter-Month-And-Year](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1ebddaef8adc9798/64af6f804d814337ee90084e/Calendar-Filter-Month-And-Year.png)
+- Click the **Today** button to view the events scheduled for the current date.![Calendar-Filter-Today](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt877bbc603d5d890a/64af6f8155695ca698a94c17/Calendar-Filter-Today.png)
 - Using the **View By** filter, you can preview the scheduled events in **Month**, **Timeline**, or **Week** view.
 
 By default, the Calendar app displays the **Month** view.
@@ -107,7 +107,7 @@ Select the **Week** option from the **View By** dropdown to view the workflow ta
 
 **Note**: You can view the Task, Publish, and Release event details by clicking them.
 
-- Using the **All Events** filter, you can select the Task, Publish, and Release options. By default, all three options are selected.
+- Using the **All Events** filter, you can select the Task, Publish, and Release options. By default, all three options are selected.![Calendar-Filter-Events](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdc73b46c2469c3f2/64af6f80f122ca9567e6c17d/Calendar-Filter-Events.png)
 
 ## Common questions
 

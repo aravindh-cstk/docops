@@ -43,11 +43,13 @@ Follow the steps below to install the Release Preview app in Contentstack.
 
 Log in to your [Contentstack account](https://www.contentstack.com/login/).
 
-- In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
+- In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.![Marketplace-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2c0ff1299f3a2e4d/63ea7a3dd6b15b22437be719/Marketplace-Icon.png)
 - Click **Apps** in the left panel.
-- Within the Marketplace, you can see all the available apps. Hover over the **Release Preview **app and click **Install App**.
-- In the popup window, select the stack where you want to install the Release Preview app and click the **Install **button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements. **Note**: No additional configuration is required to use the Release Preview app.
+- Within the Marketplace, you can see all the available apps. Hover over the **Release Preview **app and click **Install App**.![Release-Preview-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte93c105ed5c5e2e5/643d39ad0736ac330839a828/Release-Preview-App.png)
+- In the popup window, select the stack where you want to install the Release Preview app and click the **Install **button.![Release-Preview-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte1f047c396d7bdcd/64b926b4361d39772c946956/Release-Preview-Install-App.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements. ![Release-Preview-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt232a5cbd768cfe62/65b8320141787549aa67590b/Release-Preview-UI-Locations.png)
+
+  **Note**: No additional configuration is required to use the Release Preview app.
 
 ## Use Release Preview within your Stack
 
@@ -55,10 +57,10 @@ To use the Release Preview application in your stack, follow the steps given bel
 
 Log in to your [Contentstack account](https://www.contentstack.com/login/).
 
-- In the left-hand side primary navigation, you will find the **Releases** icon (as shown below). Click the icon to go to the Releases.
-- Within the Releases, you will be able to add a new release by clicking the** + New Release** button.
-- Create a new release, enter the details, and click the **Create** button.
-- [Add entries to the release](../../content-managers/create-and-manage-releases/add-entry-asset-to-a-release.md) for bulk publishing.
+- In the left-hand side primary navigation, you will find the **Releases** icon (as shown below). Click the icon to go to the Releases.![Release-Preview-Release-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt55037cbf2671c6b4/63ea7a531ad11510731ba621/Release-Preview-Release-Icon.png)
+- Within the Releases, you will be able to add a new release by clicking the** + New Release** button.![Release-Preview-New-Release](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb0ef37750538184f/64a3aa7ccef8c5f7a1703963/Release-Preview-Release-Icon.png)
+- Create a new release, enter the details, and click the **Create** button.![Release-Preview-Create-Release](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f79fdda56ff60dd/63ea7a3d7c0ff85658855bbf/Release-Preview-Create-Release-.png)
+- [Add entries to the release](../../content-managers/create-and-manage-releases/add-entry-asset-to-a-release.md) for bulk publishing.![Release-Preview-Sample-Release](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7bf807b421dca7d5/64b3a53dcd888311a7e19d5c/Release-Preview-Sample-Release.png)
 - To schedule and lock the release for publishing, click the **Deploy** button.Select the environment(s), then select **Later**, choose the release date and time, and then click the **Deploy **button.
 
 **Note**: If the release date is not confirmed, you can use the Release Preview app to quickly set a tentative date and time.
@@ -67,13 +69,15 @@ The release is now locked. You cannot add, update or delete any entry or asset f
 
 ### Release Preview Calendar
 
-- Now go to the stack dashboard. In the left-hand side primary navigation, you will find the **Release Preview** app icon (as shown below).**Note**: Release Preview is a Full Page Location app. For more information, refer to the [Full Page Location](../developer-hub/full-page-location.md) documentation.
-- Click the app icon to view the Release Preview app within your CMS.
+- Now go to the stack dashboard. In the left-hand side primary navigation, you will find the **Release Preview** app icon (as shown below).![Release-Preview-Full-Page-App-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltacd4bf487bdcda86/6436d9888485c010da11ad68/Release-Preview-Full-Page-App-Icon.png)
+
+  **Note**: Release Preview is a Full Page Location app. For more information, refer to the [Full Page Location](../developer-hub/full-page-location.md) documentation.
+- Click the app icon to view the Release Preview app within your CMS.![Release-Preview-Full-Page-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf7032eacb98cb9b3/6436d9887f99b91181b334e2/Release-Preview-Full-Page-App.png)
 - The Release Preview Dashboard will show a list of all the scheduled (locked), tentative scheduled, and unscheduled releases in the left side panel and display all the scheduled (locked) and tentatively scheduled releases in the calendar view.  
-  Also, all the scheduled publishing events will be displayed in the calendar.  
-  By default, the format to view the Release Preview Calendar is set to **Month**.  
-  You can click the top-right dropdown in the Release Preview app and select the **Week **option to view the calendar in the week format.
-- If you click any scheduled or locked release from the Release Preview app calendar, it redirects you to the website preview of that release.To preview the website, you must configure the **Base URL** and select the corresponding **Language** in the [**Environment**](../set-up-environments/about-environments.md) settings of your stack.
+  ![Release-Preview-Dashboard-Release-View](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3e4b42ec122e2fa9/6436dbc78aab7b10efdf2c11/Release-Preview-Dashboard-Release-View.png)Also, all the scheduled publishing events will be displayed in the calendar.  
+  ![Release-Preview-Dashboard-Entry-View](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltea53edea67598d73/6436dc0b41f63e1131decc3b/Release-Preview-Dashboard-Entry-View.png)By default, the format to view the Release Preview Calendar is set to **Month**.  
+  ![Release-Preview-Dashboard-Month-View](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1620aa3b5f8966ef/63ea7a3e0185c11a442d612e/Release-Preview-Dashboard-Month-View.png)You can click the top-right dropdown in the Release Preview app and select the **Week **option to view the calendar in the week format.![Release-Preview-Dashboard-Week-View](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85ea6787178e22b1/63ea7a3dbb6c4e1c079f59fe/Release-Preview-Dashboard-Week-View.png)
+- If you click any scheduled or locked release from the Release Preview app calendar, it redirects you to the website preview of that release.![Release-Preview-Website](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4d25e1a5dd677b94/63ea7ba5346bf05048c7ff0f/Release-Preview-Website.png)To preview the website, you must configure the **Base URL** and select the corresponding **Language** in the [**Environment**](../set-up-environments/about-environments.md) settings of your stack.![Release-Preview-Dashboard-BaseURL](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta6532aafd27dc9d9/63ea7a3e167c064eec4b412e/Release-Preview-Dashboard-BaseURL.png)
 
 ### Release Preview Timeline
 
@@ -85,16 +89,16 @@ To view the Release Preview timeline, click the **release name **in the left pan
 Upcoming releases are filtered using the following filters:  
           **Environment Filter**: You can view the upcoming releases based on the **Environment **selected. This environment is already set at the time of deploying a release or while setting the tentative date and time for the unscheduled releases.
 
-- **Locale Filter**: According to the selected **Environment **and the corresponding **Base URL**, the **Locale** dropdown shows the content languages to preview the respective releases.
+- **Locale Filter**: According to the selected **Environment **and the corresponding **Base URL**, the **Locale** dropdown shows the content languages to preview the respective releases.![Release-Preview-Timeline-Filter-Locale](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt287cc85d89eaf436/63ea7a636e2df011036c5a8f/Release-Preview-Timeline-Filter-Locale.png)
 - You can set the tentative date and time for the unscheduled releases for publishing by clicking the unscheduled release name in the Release Preview app. In the modal, select the **Environment(s)**, choose the **Tentative Release Date** and **Time**, and then click **Done**.  
   The** Locked** releases are represented with a dark gray lock icon, the **Soft-locked** releases are represented with a light gray lock icon, and the **Unscheduled **releases are represented with a light gray open lock icon.
 
 **Note**: You can modify only the soft-locked and unscheduled releases and not the locked ones.
 
 - The Contentstack Release Preview app allows you to view the release details, preview the website, and compare the website changes as well as the individual content changes within the Release Preview timeline.  
-  The release details include **New Items** (content saved to publish for the first time) and **Updated Items **(content that is already published). The title, item type (**Entries** or** Assets**), content type, and version is provided for each item.
+  The release details include **New Items** (content saved to publish for the first time) and **Updated Items **(content that is already published). The title, item type (**Entries** or** Assets**), content type, and version is provided for each item.![Release-Preview-Timeline-3-Buttons](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8dd85dfdf2b95250/6436de07ba137c11cf05a3c7/Release-Preview-Timeline-3-Buttons.png)
 - To change the date and time of the soft-locked release, click the **Change date **icon, and then a pop-up appears. Select the **Date** and** Time **(optional), and click the **Done **button to modify the release date and time.  
-  **Note**: For **locked** releases, the **Change Date **button is hidden.
+![Release-Preview-Timeline-Change-Date-Time](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf22ad761dff24444/63ea7a538144df106174b54c/Release-Preview-Timeline-Change-Date-Time.png)  **Note**: For **locked** releases, the **Change Date **button is hidden.
 - Click the **Preview** button to preview the website with the upcoming release changes.
 - Click the **Compare **button to compare the current and upcoming release websites.  
   Click the **Highlight Differences** button to view the modified content.  
@@ -104,10 +108,10 @@ Upcoming releases are filtered using the following filters:
 
 In the right-hand side of the panel, you can see the **Rotate Screen** icon. It switches the screen from portrait to landscape mode and vice versa.
 
-- Additionally, you can compare the entry versions in the** Updated Items **section. You can also copy the URL of the entries.
+- Additionally, you can compare the entry versions in the** Updated Items **section. You can also copy the URL of the entries.![Release-Preview-Timeline-Entry-Compare-Copy](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb3dd71c75638c05a/6436e0fb243bd1112e62f698/Release-Preview-Timeline-Entry-Compare-Copy.png)
 - Entries can be compared with their different release versions, and the differences will be highlighted in red (deletions) and green (additions) color. Click **Done** to close the comparison window.  
-  **Note**: The compare feature does not support the **Assets** Item Type.
-- You can also preview and compare the changes by clicking the three ellipses on the release name in the list of releases.
+![Release-Preview-Timeline-Entry-Compare-Highlights](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc656cd235c3177ae/63ea7a6392662910c4ebf44f/Release-Preview-Timeline-Entry-Compare-Highlights.png)  **Note**: The compare feature does not support the **Assets** Item Type.
+- You can also preview and compare the changes by clicking the three ellipses on the release name in the list of releases.![Release-Preview-Timeline-Preview-Compare-Option](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte0be0c6bd2aa5b64/63ea7a6368b812598c76d67b/Release-Preview-Timeline-Preview-Compare-Option.png)
 
 ## Configure Release Preview Plugin
 
@@ -333,7 +337,9 @@ import '@contentstack/delivery-plugin-release-preview/dist/compareUtilsStyle.css
 
 Now you can compare the website changes between the current and upcoming release from the Release Preview app.
 
-- **Note**: You can use the [Release Preview SDK plugin](https://www.npmjs.com/package/@contentstack/delivery-plugin-release-preview) to preview and compare your website. Release preview compare relies on Live Preview edit tags to work.
+- 
+
+  **Note**: You can use the [Release Preview SDK plugin](https://www.npmjs.com/package/@contentstack/delivery-plugin-release-preview) to preview and compare your website. Release preview compare relies on Live Preview edit tags to work.
 
 ## Common questions
 

@@ -29,16 +29,22 @@ To add a publish rule in your stack, log in to your [Contentstack account](https
 - Click **+ New Publish Rule**.
 - On the **Rule Details** page:**Branch(es):** Select one or more branches to apply the rule.**Tip:** You can select multiple branches.
 - **Content Type:****All Content Types:** Apply the rule globally.
-- **Specific Content Type(s):** Select one or more types from the dropdown.**Note:** You cannot add more than one rule to the same content type.
+- **Specific Content Type(s):** Select one or more types from the dropdown.
+
+  **Note:** You cannot add more than one rule to the same content type.
 - **Language:****All Languages:** Apply the rule to all languages.
 - **Specific Language(s):** Choose desired languages from the dropdown.
 - **Environment:** Select the environment for which the rule applies (e.g., Production or Staging).
-- **Action:** Choose whether this rule applies to **Publish**, **Unpublish**, or **All** (both actions).**Note:** All parameters are required fields.
+- **Action:** Choose whether this rule applies to **Publish**, **Unpublish**, or **All** (both actions).
+
+  **Note:** All parameters are required fields.
 - Expand the **Conditions** section (if not expanded by default). You must define at least one condition.**Approver:** Add one or more users or roles who must approve before publishing or unpublishing.
 - **Workflow Stage:** Specify the workflow stage (e.g., Final Review or Legal Approved) that an entry must reach before it can be published or unpublished.
 - Enable **Prevent self-approval** to ensure independent validation:The last editor cannot approve or publish the entry.
 - Two distinct users must approve before publishing or unpublishing.
-- If only one user is assigned, the system displays a validation prompt asking you to add an additional approver.**Tip:** Enable this option to maintain separation of duties between content creators and reviewers, ensuring independent review and accountability in workflows.
+- If only one user is assigned, the system displays a validation prompt asking you to add an additional approver.
+
+  **Tip:** Enable this option to maintain separation of duties between content creators and reviewers, ensuring independent review and accountability in workflows.
 - After completing all required fields and conditions, click **Save**.
 
 This creates a publish rule that governs publishing and unpublishing actions based on the selected parameters and conditions within your defined workflow.

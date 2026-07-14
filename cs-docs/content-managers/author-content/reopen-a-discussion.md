@@ -26,7 +26,7 @@ You can reopen a resolved discussion from the **Discussions** tab in the right n
 To reopen a discussion, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
 - Open an entry with comments, click the **Discussions** tab in the right navigation panel, and select **Resolved** from the dropdown menu.
-- Hover over the discussion you want to reopen and click **Reopen**.
+- Hover over the discussion you want to reopen and click **Reopen**.![Reopening a discussion in Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt99e094390ef07561/678a322ee698982f3e2817b9/Reopen-a-Discussion.png)
 
 Once a discussion is reopened, all comments within it become visible in the field view. You can add new comments and continue collaborating on the field data.
 

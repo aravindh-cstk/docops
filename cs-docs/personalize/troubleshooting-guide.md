@@ -42,14 +42,14 @@ Data & Insights (Lytics) audiences in Personalize are visible only when a **Pers
 
 ### Check the DAL connection
 - Enable the **Try the New Navigation **toggle located within the profile dropdown.
-- From the App switcher, click the **Administration** icon.
-- Click **Data Activation Layer **from the top navigation panel.
-- Verify that your **Personalize project** is connected to the correct DAL. Click the **Edit** button for the DAL connection under **Actions**, then click the **Test Connection** button.
+- From the App switcher, click the **Administration** icon.![AD_4nXd0nSlTj7zjmTDo-essMgKKqyxTyXECNCswnSiiHUkXbjNOdFr1tDsLyKvAL7eefCy0MlebKh_IbvT-EK5rDS6MI4l42fhmHhOi9N6P-4iAoqCYVmgyotiXPvJ0Zxj9oYNl4e9r](https://lh7-rt.googleusercontent.com/docsz/AD_4nXd0nSlTj7zjmTDo-essMgKKqyxTyXECNCswnSiiHUkXbjNOdFr1tDsLyKvAL7eefCy0MlebKh_IbvT-EK5rDS6MI4l42fhmHhOi9N6P-4iAoqCYVmgyotiXPvJ0Zxj9oYNl4e9r?key=xywWeNcRD-7nPdx8xS1iYg)
+- Click **Data Activation Layer **from the top navigation panel.![AD_4nXc81HFt3Dhnwp4aqlXZdS9sNGbgjM9tO9L9uGu8aH-tbCduRmbYeHPDkqAYXXG8cX4UaCcqSYICF5CVOpPzu-7-w9OEG6j1zK9dP9vY7oZWYAB_zsFVjYFcQz_ek_jlL-XlyBjU4g](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc81HFt3Dhnwp4aqlXZdS9sNGbgjM9tO9L9uGu8aH-tbCduRmbYeHPDkqAYXXG8cX4UaCcqSYICF5CVOpPzu-7-w9OEG6j1zK9dP9vY7oZWYAB_zsFVjYFcQz_ek_jlL-XlyBjU4g?key=xywWeNcRD-7nPdx8xS1iYg)
+- Verify that your **Personalize project** is connected to the correct DAL. Click the **Edit** button for the DAL connection under **Actions**, then click the **Test Connection** button.![AD_4nXdKRdmc7aE4z2fU4TsVLudCh_8AHkuvEp852laGftMlHU_FIpSOPff761Jb4b8TcGEpPISCAfIF7E2Bs6dG9LQXrJfBCLKy0tuiW5BkjaUvPNBmqF0lWe_iZP2LGEUE5nq6ZP93](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdKRdmc7aE4z2fU4TsVLudCh_8AHkuvEp852laGftMlHU_FIpSOPff761Jb4b8TcGEpPISCAfIF7E2Bs6dG9LQXrJfBCLKy0tuiW5BkjaUvPNBmqF0lWe_iZP2LGEUE5nq6ZP93?key=xywWeNcRD-7nPdx8xS1iYg)
 - If the connection is missing, reconnect your project to the appropriate DAL as shown in step 4.
 
 ### Verify audience availability in Lytics
 - Log in to your [**Lytics**](https://docs.lytics.com/)** dashboard**.
-- Navigate to **Using Profiles > **[**Audiences**](https://docs.lytics.com/docs/audiences).
+- Navigate to **Using Profiles > **[**Audiences**](https://docs.lytics.com/docs/audiences).![AD_4nXdDuPqlmqm6ELayr9ENO4ZCd_S128E8Vj2grm62HQWlleyir5CzO5tC3_sz612H5JCs2ReFOzNtND-CRO_JgJQaVZVBPNHIxiCREXBCAIHH_EEAqc_rOZ86zj-WHo3EcUmxuWJSNA](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdDuPqlmqm6ELayr9ENO4ZCd_S128E8Vj2grm62HQWlleyir5CzO5tC3_sz612H5JCs2ReFOzNtND-CRO_JgJQaVZVBPNHIxiCREXBCAIHH_EEAqc_rOZ86zj-WHo3EcUmxuWJSNA?key=xywWeNcRD-7nPdx8xS1iYg)
 - [Search](https://docs.lytics.com/docs/audiences#finding-audiences) for the audiences linked to your experiences in Personalize.
 - If an Audience is missing:  
   Recreate it in Data & Insights (Lytics) and update the experience in Personalize, OR

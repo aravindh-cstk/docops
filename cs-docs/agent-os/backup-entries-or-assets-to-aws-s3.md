@@ -34,13 +34,13 @@ Log in to your [Contentstack account](https://app.contentstack.com/#!/login) and
 - Click **+ New Automation**.
 - Enter the **Automation Name** and **Description**.
 - Click **Create**.
-- Click** Configure Trigger** from the left navigation panel.
-- Within the **Configure Trigger** step, click the **Contentstack** connector.
-- Click the **Entry Trigger **event.
-- Click **+ Add New Account **to add your Contentstack account.
-- Select the **Event** and the **Stack** for which you want to configure the trigger.
+- Click** Configure Trigger** from the left navigation panel.![Configure-Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1f2711c66edfaa36/63d90bd01d043210df68769f/Configure-Trigger.png)
+- Within the **Configure Trigger** step, click the **Contentstack** connector.![Select_the_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3e8bd5b9927abad3/651ba082ff4a20ae40cb0f8c/Select_the_Trigger.png)
+- Click the **Entry Trigger **event.![Select-Entry-Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte8a5910dbb80fb10/63d90be2e408254c88fc03a3/Select-Entry-Trigger.png)
+- Click **+ Add New Account **to add your Contentstack account.![Add-New-Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt53b41f66ab3308ed/63d90bd0071fae111ebfd8b2/Add-New-Account.png)
+- Select the **Event** and the **Stack** for which you want to configure the trigger.![Select-Event-Stack.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9950ac581d6a13b1/63d90be204ee8615186bd5be/Select-Event-Stack.png)
 - Once done, click **Proceed**.
-- Click **Test Trigger**.
+- Click **Test Trigger**.![Test-Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2992ee96e18512ab/63d90be22d94ad4c89edc30c/Test-Trigger.png)
 - Click **Save and Exit**.
 
 ## Add an Asset
@@ -48,19 +48,19 @@ Log in to your [Contentstack account](https://app.contentstack.com/#!/login) and
 The next step requires you to add an asset to the AWS S3 bucket.  
 To add an asset, follow the given instructions:
 
-Click **Configure Action Step** from the left navigation panel.
+Click **Configure Action Step** from the left navigation panel.![Click-Configure-Action-Step.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd883d64a7b2deb55/63d90bd05c5c9c52a32ed0c9/Click-Configure-Action-Step.png)
 
-- Click **Action Step** to configure third-party services.
+- Click **Action Step** to configure third-party services.![Select-Action-Step.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb329321383833978/63d90bd0bbcc27228d8e0296/Select-Action-Step.png)
 - Within the **Configure Action Step**, click the **AWS S3 **connector.
 
 **Note:** You can sort and search the connector(s) based on the filter.
 
-- Select the **Create New Object** action.
+- Select the **Create New Object** action.![Select-AWS-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf3eb5c48d093c74b/63d90bd1c9787852a26be72a/Select-AWS-Action.png)
 - Click **+ Add New Account **to add your AWS S3 account.
-- Add **Bucket name**, **File Name**, and **Content** details in their respective fields. Once done, click **Proceed**.
-- Click **Test Action**.
-- Once the action is successfully executed, click **Save and Exit** to finish the process.
-- Navigate to your AWS S3 bucket and check for the recently uploaded asset. You can view the details in the Object overview section.
+- Add **Bucket name**, **File Name**, and **Content** details in their respective fields. Once done, click **Proceed**.![AWS-S3-Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c8b7124928363d2/63d90bd00cf395166a6e1d86/AWS-S3-Fields.png)
+- Click **Test Action**.![Test-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3fbe01d8f4c7a879/63d90be2e480c910d1acb664/Test-Action.png)
+- Once the action is successfully executed, click **Save and Exit** to finish the process.![Save-Exit-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd6cc01a6af064c66/63d90bd099f0c910e171a299/Save-Exit-Action.png)
+- Navigate to your AWS S3 bucket and check for the recently uploaded asset. You can view the details in the Object overview section.![47.AWS_S3_Bucket.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt4b9a3c97ffd548a6/6370c8bf6237d71069349bb5/47.AWS_S3_Bucket.jpg)
 
 This sets the Backup Entries/Assets to **AWS S3** scenario.
 

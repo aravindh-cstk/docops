@@ -23,7 +23,7 @@ The Analytics dashboard for Polaris provides detailed insights into how Contents
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to **Analytics** through the “App Switcher”.
-- By default, the **CMS** analytics dashboard appears. Click **Agent OS** and then select **Polaris** to switch dashboards.
+- By default, the **CMS** analytics dashboard appears. Click **Agent OS** and then select **Polaris** to switch dashboards.![Analytics_Polaris_Select.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am4c4600eaa7249500/99e9599e1c670c5a76cc68ff/Analytics_Polaris_Select.png?locale=en-us)
 
 **Note:** The data in the Polaris dashboard updates in real-time, with a latency of **5–10 minutes**.
 
@@ -75,7 +75,9 @@ To apply filters, click **Filters** and then click **Apply Filter(s)** after sel
 
 Filters available include:
 - **Date Range:** Choose from **1 week**, **30 days** (default), **60 days**, or **90 days**. Some charts include a timeline selector for further refinement.
-- **Custom Date:** Set a custom date range using the dropdown.**Note:** The custom date range should not exceed **90 days**.
+- **Custom Date:** Set a custom date range using the dropdown.
+
+  **Note:** The custom date range should not exceed **90 days**.
 - **Zoom:** Switch between **1 week**, **30 days**, **60 days**, or **90 days** for trend analysis.
 - **Group By:** View data grouped by day, week, or month, depending on the selected section.
 

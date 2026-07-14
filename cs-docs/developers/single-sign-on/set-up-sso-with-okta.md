@@ -32,7 +32,7 @@ Let’s see each of the processes in detail.
 
 ## Create SSO Name and ACS URL in Contentstack
 
-Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to the **Organization Settings** page and click on the **SINGLE SIGN-ON** tab.
+Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to the **Organization Settings** page and click on the **SINGLE SIGN-ON** tab.![Set_up_SSo_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt502bf146eb3bd724/60df37a5c8e01a3013e5f574/Set_up_SSo_1_highlighted.png)
 - Enter an **SSO name** of your choice, and click **Create**. For example, if your company name is “Acme, Inc.” enter “acme” here. This name will be used as one of the login credentials by the organization users while signing in.**Note:** The SSO Name can contain only alphabets (in lowercase), numbers (0-9), and/or hyphens (-).
 
 Let's use “sso-test” as the **SSO Name**.
@@ -42,17 +42,17 @@ Keep this window open, as you may need these details for setting up Contentstack
 
 ## Configure Contentstack App in Okta
 
-Log in to your Okta Admin account.
-- After logging in, you will see the Okta dashboard. Click on the **Application** tab and select **Applications**.
-- In the **Applications** page, you will see your already created applications, if any.
-- Click on the **Add Application** button and click on **Create New App** to create a new application for Contentstack.
-- Set the **Platform** as **Web,** the **Sign on method** as **SAML 2.0**, and **Create** your application:
-- You will be redirected to the **General Settings** page of your application. Provide a name for your application, e.g., **Contentstack**, a logo for your application, and click on **Next** to proceed to configure SAML settings.
+Log in to your Okta Admin account.![1. okta-login.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb71fe255a74ee5b8/5d65142c0f951227ac8327b1/1._okta-login.png)
+- After logging in, you will see the Okta dashboard. Click on the **Application** tab and select **Applications**.![okta-dashboard.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3b2e5ebb97404ae0/5f3cfc2f62013530f82eb6bf/okta-dashboard.png)
+- In the **Applications** page, you will see your already created applications, if any.![okta-application.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt654ee8da7220d176/5d651425de50ec209c8f4564/okta-application.png)
+- Click on the **Add Application** button and click on **Create New App** to create a new application for Contentstack.![okta-add-application.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5b0841dea1730824/5f3cfc2f5f7d2953ae821a3c/okta-add-application.png)
+- Set the **Platform** as **Web,** the **Sign on method** as **SAML 2.0**, and **Create** your application:![okta-create-application.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta4a4b7754d4c9a6a/5f3cfc2fd5b383280ff0f0b3/okta-create-application.png)
+- You will be redirected to the **General Settings** page of your application. Provide a name for your application, e.g., **Contentstack**, a logo for your application, and click on **Next** to proceed to configure SAML settings.![General_Settings_page.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte27e2c96750a4825/5f3cfc2f29a49b740ae68764/General_Settings_page.png)
 - In the **Configure SAML** tab, under **SAML Settings**, provide the following details:**Single Sign on URL**: Paste the **Assertion Consumer Service URL** that we create in Contentstack in Step 1.c
 - **Audience URI (SP Entity ID): **Enter Contentstack’s **Entity ID** that you received in **step 1**. In most cases, this value would be https://app.contentstack.com.
 - **Default RelayState: **Keep it blank.
 - **Name ID format**: Select **EmailAddress** option
-- **Application username**: Select **Email **option
+- **Application username**: Select **Email **option![okta-saml-congfiguration-step-2-1.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltcb5017d70c4028b4/5f3cfc496bbc0527106435df/okta-saml-congfiguration-step-2-1.png)
 - Click on the **Show Advanced Settings** link and in the **SAML Issuer ID**, enter Contentstack's **Entity ID**, for e.g., `https://app.contentstack.com`.
 - In **ATTRIBUTE STATEMENTS (OPTIONAL)**, under attribute mapping details, add the attributes.
 
@@ -65,11 +65,11 @@ The following image depicts the IdP role mapping for Okta:
 
 ## Configuring Okta details in Contentstack
 
-In Okta, click on the **Sign On** tab of the application that you created in Step 2.
+In Okta, click on the **Sign On** tab of the application that you created in Step 2.![okta-setup-instruction-button.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt815d34e04b2c9849/5f3cfc49327a6201d7ebcc3b/okta-setup-instruction-button.png)
 - Click on **View Setup Instructions** additional settings fields for your Contentstack application.
 
 Click on the **Download Certificate** button.
-- Copy **Identity Provider Single Sign-On URL**. Then, in the Contentstack SSO settings page, go to the **IdP Configuration**, and paste the URL in the **Single Sign-on URL** field.
+- Copy **Identity Provider Single Sign-On URL**. Then, in the Contentstack SSO settings page, go to the **IdP Configuration**, and paste the URL in the **Single Sign-on URL** field.![Set_up_SSo_4_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltaa89578e21b0bf39/60df37e30f2b3833d0f68f30/Set_up_SSo_4_highlighted.png)
 - Upload the X.509 certificate that you downloaded from Okta, into the **Certificate** field in the **2 IdP Configuration** section in Contentstack.
 
 That’s it! Now, let’s see how to assign your Contentstack application to your users in Okta.
@@ -80,8 +80,8 @@ After setting the necessary configurations in Contentstack, you need to now assi
 
 ### A – Add application to users
 
-Go to the **Assignments** tab of your application,click on the **Assign** dropdown, and select **Assign to People**.
-- You will get a list of registered users to whom you need to assign your application. Click on the **Assign** button beside the user to whom you want to assign the application, and click on **Done**.
+Go to the **Assignments** tab of your application,click on the **Assign** dropdown, and select **Assign to People**.![Assign_to_People.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt08f2199ecc2cc228/5f3cfc2e327a6201d7ebcc37/Assign_to_People.png)
+- You will get a list of registered users to whom you need to assign your application. Click on the **Assign** button beside the user to whom you want to assign the application, and click on **Done**.![okta-user-step-2.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt834ee995e90d47c0/5d6514195760052efac57a32/okta-user-step-2.png)
 - Also, you may use multiple applications assignments available in **Applications** > **Assign applications** menu.
 
 With this, you are done with setting up the Contentstack app in Okta. Proceed to configuring the remaining steps in Contentstack SSO in [Step 6](#test-and-enable-sso).
@@ -93,8 +93,8 @@ But, if you want to perform IdP Role Mapping and allow user groups to directly l
 ***Perform this step only if IdP Role Mapping is part of your Contentstack plan.***
 
 [IdP Role Mapping](./idp-role-mapping.md) is an alternate way of managing users and permissions of your SSO-enabled organization. This feature allows you to map your IdP roles to Contentstack roles while configuring SSO for your organization.
-- Go to the **Assignments** tab of your application, click on the **Assign** dropdown in the application details section, and select **Assign to Groups**.
-- You will see a list of registered groups. Click on the **Assign** button beside the group(s) to which you need to assign your application. Click on **Done**.
+- Go to the **Assignments** tab of your application, click on the **Assign** dropdown in the application details section, and select **Assign to Groups**.![Click_on_Assign_to_Groups_.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blteba196ebe8174373/5f3cfc2e5f7d2953ae821a38/Click_on_Assign_to_Groups_.png)
+- You will see a list of registered groups. Click on the **Assign** button beside the group(s) to which you need to assign your application. Click on **Done**.![Select_the_groups.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltda7ebec47661506c/5f3cfc49abb6922b67514e0b/Select_the_groups.png)
 
 You can now proceed to create role mappings in Contentstack for the IdP roles you created. Go to the **3. User Management** section of your Contentstack SSO settings and perform **Step 5**.
 
@@ -106,7 +106,7 @@ In the **User Management** section, you will see the following steps:
 - **Session Timeout**: The [**Session Timeout**](./set-up-sso-in-contentstack.md#session-timeout) option lets you define the session duration for a user signed in through SSO. While the default is set to 12 hours, you can modify it as needed.
 - **Advanced Settings**: Click on the [advanced settings](./set-up-sso-in-contentstack.md#advanced-settings) to expand the IdP Role Mapping section to map IdP roles to Contentstack.[/docs/developers/single-sign-on/set-up-sso-in-contentstack#advanced-settings](./set-up-sso-in-contentstack.md#advanced-settings)In the **Add Role Mapping** section, click on the **+ ADD ROLE MAPPING** link to add new IdP role mapping and enter the following details:**IdP Role Identifier**: Enter the IdP group/role identifier, for example, “Contentstack Developers.”
 - **Organization Role**: Assign either the **Admin or Member **role to the mapped group/role.
-- **Stack Roles ***(optional)*: Assign [stacks](../set-up-stack/about-stack.md) as well as the corresponding stack-level roles to this role.
+- **Stack Roles ***(optional)*: Assign [stacks](../set-up-stack/about-stack.md) as well as the corresponding stack-level roles to this role.![Set_up_SSo_7_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0096c1ab74eacf29/60df37f52490ed30145e4c30/Set_up_SSo_7_highlighted.png)
 
 Likewise, you can add more role mappings for your Contentstack organization. To add a new Role mapping, click on **+ ADD ROLE MAPPING** and enter the details.- Keep **Role Delimiter** blank as Okta usually returns roles in an array.
 - Finally, check the **Enable IdP Role Mapping** checkbox to enable the feature.
@@ -124,7 +124,7 @@ Before enabling SSO, it is recommended that you test the SSO settings configured
 
 Click on the **Test SSO** button and it will take you to Contentstack’s **Login Via SSO** page, where you need to specify your organization SSO name.
 - Then, click on **Continue** to go to your IdP sign in page.
-- Sign in to your account. If you are able to sign in to your IdP, your test is successful.On successful connection, you will see a success message as follows
+- Sign in to your account. If you are able to sign in to your IdP, your test is successful.On successful connection, you will see a success message as follows![Set_up_SSo_10_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltcda07901cf6eb3e6/60df38173b10992ed7acbb72/Set_up_SSo_10_no_highlight.png)
 - But, if you have enabled IdP Role Mapping, you’ll find the following details in a new page:
 
 **SSO connection established successfully** - A success message is displayed.

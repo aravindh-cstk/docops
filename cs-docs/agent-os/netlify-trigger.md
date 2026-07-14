@@ -30,9 +30,9 @@ Start with adding your Netlify account by following the steps given below:
 - Navigate to your project and click **Automations** in the top navigation panel.
 - Click **+ New Automation** and from the dropdown options, click **Create New**. Enter a **Name** and an optional **Description**. Click **Create**.
 - Click **Configure Trigger **from the left navigation panel.
-- Within the **Configure** **Trigger**, click the **Netlify** connector.
-- Under **Choose Trigger** tab, select the **Netlify Trigger**.
-- On the **Configure Trigger** page, click the **+ Add New Account** to add your Netlify account.
+- Within the **Configure** **Trigger**, click the **Netlify** connector.![Select_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd5283a0157f09b85/6a02f33ab9d8afc5b2372f26/Select_Trigger.png)
+- Under **Choose Trigger** tab, select the **Netlify Trigger**.![Select_action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbed5f76004e0b211/6a02f33a8b50846f8b0d4ff8/Select_action.png)
+- On the **Configure Trigger** page, click the **+ Add New Account** to add your Netlify account.![Add_new_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt68d0f60eca2960d5/6a02f944965849a3c992f96b/Add_new_Account.png)
 - In the **Authorize **modal, enter a **Title** and a **Token**.
 - You can generate a new token from the **Personal access token** section in your Netlify console. Navigate to **User settings** > **Applications **> **New access token** > **Generate token**.**Additional Resource:** For more information, refer to the [Obtain a token in Netlify UI](https://docs.netlify.com/cli/get-started/#obtain-a-token-in-the-netlify-ui/) document.
 
@@ -66,7 +66,7 @@ Let’s look at the steps to set up the trigger event.
 - **Deployment failed: **Triggered when a deployment fails during the build or publish process.
 - **Deployment locked: **Triggered when deployments are temporarily disabled for a site.
 - **Deployment unlocked:** Triggered when deployments are re-enabled for a site.
-- **Form submission received: **Triggered when a new form submission is captured by Netlify.
+- **Form submission received: **Triggered when a new form submission is captured by Netlify.![Select_Events.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1b02947fe21308b4/6a02f944a03d8d650d24ce51/Select_Events.png)
 - Click **Proceed**.
 - Click **Test Trigger** to execute and test the trigger that you configured.
 - If successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.

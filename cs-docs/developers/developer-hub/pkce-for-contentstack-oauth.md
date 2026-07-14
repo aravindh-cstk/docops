@@ -73,9 +73,9 @@ To enable PKCE for your application, follow the steps given below:
 - Log in to your [Contentstack account](https://app.contentstack.com/#!/login) and navigate to **Developer Hub**
 - Open your app in the **Developer Hub** console.
 - Click the **OAuth** tab**.
-**
-- ****Within the **User Token **section, add user scopes to enable PKCE.
-- Enable the **Allow PKCE** toggle button.
+**![Select_OAuh.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2f20df46c15f15dc/65b69c2b55a88a8094da672c/Select_OAuh.png)
+- ****Within the **User Token **section, add user scopes to enable PKCE.![User_Scop.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc03e553cff231d4e/65b69c2bc600052b5ed5a758/User_Scop.png)
+- Enable the **Allow PKCE** toggle button.![Allow_PKCE.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta6f2a53c36d065c1/65b69c2b24ea49ea9dde57d3/Allow_PKCE.png)
 - Click **Save** to save your OAuth configurations.
 
 ## Common questions

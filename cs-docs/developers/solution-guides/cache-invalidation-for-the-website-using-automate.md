@@ -31,7 +31,7 @@ Steps to create automation for entry publish/unpublish events:
 - Configure Automation TriggerChoose **Contentstack** as a trigger connector.
 - Select **Entry Trigger**.
 - In the next step, add/select your **Account**, select the **Entry Publish/Unpublish** event, and your **Stack**.
-- Test Trigger, Save and Exit
+- Test Trigger, Save and Exit![image5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt94b600e4f6b9f892/65faa520173215142fd2d463/image5.png)
 - Configure Action StepPrerequisites: Set up lambda function for invalidation using Cloudfront, which will be used in the HTTP connector.
 Lambda code:
 
@@ -109,7 +109,7 @@ Choose “HTTP” connector
 - Add #root object in the request’s body.
 - Toggle Advanced options and set the following headers:Content-Type: application/json
 - CLOUDFRONT_DISTRIBUTION_UID : <<distibution_uid>>
-- Test action and save and exit
+- Test action and save and exit![image2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdaaa489d9b914d6d/65faa52017321553f8d2d45f/image2.png)
 
 Activate Automation to run in a live environment.
 

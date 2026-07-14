@@ -46,8 +46,8 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **Progress Bar** app and click **Install App**.
-- In the popup window, select the stack where you want to install the Progress Bar app and click the **Install** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- In the popup window, select the stack where you want to install the Progress Bar app and click the **Install** button.![Progress-Bar-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt933be2041cc6d0eb/64b91b1c4389f4304ac5a779/Progress-Bar-Install-App.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Progress-Bar-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2313c06fcaf117cc/65b7b13a5f12ed1045e21ad2/Progress-Bar-UI-Locations.png)
 
 **Note**: No additional configuration is required to use the Progress Bar app.
 
@@ -57,7 +57,7 @@ To use the Progress Bar application within an entry of your stack, follow the st
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![Progress-Bar-Content-Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2326efd20e3b543a/64257a03095db610b0d53280/Progress-Bar-Content-Type.png)
 - In the Content Type Builder page, add a Custom field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **Progress Bar**, and click the **Proceed** button.
 
@@ -68,7 +68,7 @@ Progress Bar is added in the custom field.
 
 You will see the Progress Bar custom field on your entry page as shown below:
 
-- Hover over the slider to view the progress number. Drag the slider to set the progress.
+- Hover over the slider to view the progress number. Drag the slider to set the progress.![Progress-Bar-Details.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf17d135f515cff13/64257a03c72a46109ec9dcb5/Progress-Bar-Details.png)
 - After setting the slider, **Save** and **Publish** your entry.
 
 ## Common questions

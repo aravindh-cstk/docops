@@ -23,7 +23,7 @@ Once a review comment has been addressed, it can be resolved to keep discussions
 To resolve a review comment, follow these steps:
 - Open the **shared preview link** from your email.
 - Locate the comment thread by clicking the discussion icon on the website preview, or by navigating to the **Discussions** panel on the right.
-- Click **Resolve** to mark the comment as addressed.
+- Click **Resolve** to mark the comment as addressed.![Resolve a Review Comment GIF.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2dc6866a928e323d/67f95cf81976d8f6d69d6c13/Resolve_a_Review_Comment_GIF.gif)
 
 Resolved comments will be hidden but can be reopened if further discussion is needed.
 

@@ -56,11 +56,11 @@ Once you have added these details to your content type, click **Save and Close**
 
 To install the app, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
 
-From the left-hand side primary navigation, click the **Marketplace** icon.
+From the left-hand side primary navigation, click the **Marketplace** icon.![4-Contentstack-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltefd66d7f52bbbb54/6756c39b117e7e2b9a468e48/Contentstack-Marketplace.png)
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see all the available apps. Hover over the **Audience Variable** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the Audience Variable app and click the **Install** button.
-- On the **Configuration** screen, enter the Audience **Content Type UID**, **UID** of the **Group** field, and **Group Title Field UID** that you retrieved and copied in [step 1](#define-your-target-audience).
+- Within the Marketplace, you can see all the available apps. Hover over the **Audience Variable** app and click **Install**.![5-Audience-Variable-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2f54780dca69535e/68632617e8e8e695315cfbfa/5-Audience-Variable-App.png)
+- In the pop-up window, select the stack where you want to install the Audience Variable app and click the **Install** button.![6-Audience-Variable-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaa645b56d539074f/68632616e8e8e60e355cfbf1/6-Audience-Variable-App-Install.png)
+- On the **Configuration** screen, enter the Audience **Content Type UID**, **UID** of the **Group** field, and **Group Title Field UID** that you retrieved and copied in [step 1](#define-your-target-audience).![7-Audience-Variable-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfd9eded6bfe3325e/68632616bf423edf20dd6f62/7-Audience-Variable-Configuration.png)
 - Click the **Save** button.
 - On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.For the Audience Variable app, JSON RTE and Custom Field are the two UI locations. You can only enable or disable the Custom Field UI location.
 
@@ -74,7 +74,7 @@ To render the **University** data that we created in [step 1](#define-your-targe
 To use the Audience Variable app within an entry of your stack, follow the steps given below:
 
 Go to your stack and click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
-- [Create a content type](../create-content-types/create-a-content-type.md) (consider an example **Institution**) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) (consider an example **Institution**) by adding relevant details as displayed below:![9-Audience-Variable-Institution-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1838f2c75ba1f167/68632616e8e8e6f6fc5cfbf5/9-Audience-Variable-Institution-Content-Type.png)
 
 There are two ways to use the Audience Variable app in your entry:
 - [Custom Field](#steps-to-use-the-audience-app-as-a-custom-field)
@@ -87,22 +87,22 @@ There are two ways to use the Audience Variable app in your entry:
 
   This adds the Audience Variable app in the custom field.
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
-- To use the Audience Variable app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this newly created content type. To do this, on the left navigation panel, click **Entries** and then click **+ New Entry**. In the **Select Content Type** modal, select **Institution** (our example content type) and click **Proceed**.You can see the Audience Variable app’s custom field on your entry page as shown below:
-- Click the **Add Audience(s)** button.
-- In the **Select Audience** modal, select the target audience for your content (Faculty Members/Students/Staff) and click **Add Selected**.
-- The audiences you added get referenced within your entry.
+- To use the Audience Variable app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this newly created content type. To do this, on the left navigation panel, click **Entries** and then click **+ New Entry**. In the **Select Content Type** modal, select **Institution** (our example content type) and click **Proceed**.You can see the Audience Variable app’s custom field on your entry page as shown below:![12-Audience-Variable-Custom-Field-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltac17e0afc68e1e53/686325f053d8e35e21da988b/12-Audience-Variable-Custom-Field-Sample-Entry.png)
+- Click the **Add Audience(s)** button.![13-Audience-Variable-Custom-Field-Add-Audiences](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5f6516660e03dbaf/686325f1774cd0314e7590ee/13-Audience-Variable-Custom-Field-Add-Audiences.png)
+- In the **Select Audience** modal, select the target audience for your content (Faculty Members/Students/Staff) and click **Add Selected**.![14-Audience-Variable-Select-Audience-Modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5e7c016cad869d75/686325f0a139881c92c2d702/14-Audience-Variable-Select-Audience-Modal.png)
+- The audiences you added get referenced within your entry.![15-Audience-Variable-Custom-Field-Audience-Added](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2f595f559e546ac1/686325f0b776307f5efe2c4c/15-Audience-Variable-Custom-Field-Audience-Added.png)
 - After adding the audience, **Save** and **Publish** your entry.
 
 ### Steps to use the Audience Variable App as a JSON RTE Plugin
 - On the **Content Type Builder** page, add a [JSON Rich Text Editor](../json-rich-text-editor/about-json-rich-text-editor.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select JSON RTE Plugin(s)**, select **Audience Variable**, and then click **Add Plugin(s)**.  
-  This adds the Audience Variable app in the JSON Rich Text Editor field.
+  ![16-Audience-Variable-JSONRTE-Field-Add-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt38726d80f1bbf431/686325f1eeaccfb450d9c5c2/16-Audience-Variable-JSONRTE-Field-Add-App.png)This adds the Audience Variable app in the JSON Rich Text Editor field.![17-Audience-Variable-JSONRTE-Field-Added-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdd8419c6e4d881d1/686325f1b77630fb72fe2c50/17-Audience-Variable-JSONRTE-Field-Added-App.png)
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
-- To use the Audience Variable app as a JSON RTE plugin, [create an entry](../../content-managers/author-content/create-an-entry.md) for the content type. Within the JSON Rich Text Editor, add your content and click the **Audience Variable** app icon to customize which target audience can view the specific content. You can also select the text and click the **Audience Variable** app icon from the toolbar.
+- To use the Audience Variable app as a JSON RTE plugin, [create an entry](../../content-managers/author-content/create-an-entry.md) for the content type. Within the JSON Rich Text Editor, add your content and click the **Audience Variable** app icon to customize which target audience can view the specific content. You can also select the text and click the **Audience Variable** app icon from the toolbar.![18-Audience-Variable-JSONRTE-Field-App-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt484011544af90135/686325f074bed29770eb720c/18-Audience-Variable-JSONRTE-Field-App-Icon.png)
 - In the **Select Audience** modal, choose the following:  
   **Audience Tag Scope**: Select the **scope** for the Audience tag. There are two scopes: **Block** (supports elements such as lists, tables, and images) and **Inline** (supports text).
 - **Audience Selection**: Select the target audience for your content (Faculty Members/Students/Staff).
-- Once done, click **Add Selected**.
+- Once done, click **Add Selected**.![19-Audience-Variable-Select-Tag-Scope-And-Audience-Selection](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9a44b8953fc72d31/686325f053d8e32b1ada9887/19-Audience-Variable-Select-Tag-Scope-And-Audience-Selection.png)
 
 Now, the content you add would be visible to the **Faculty Members**, **Students**, **Staff**, or all. You need not to create separate entries to add different content. You can use the Audience Variable app and customize your content as per your target audience.
 

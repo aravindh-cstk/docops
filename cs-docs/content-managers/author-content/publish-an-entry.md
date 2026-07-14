@@ -47,10 +47,14 @@ Publishing referenced items ensures that all required content is available in th
 ### Publish References Without Validation (Quick Publish)
 
 - In the **Publish Reference(s)** modal, review all referenced entries and assets.
-- Hover over any warning icons to view the issues in the references. If required, click the “Edit entry/asset in new tab” icon to update the reference.**Additional Resource:** To learn more about fixing validation errors, refer to the [Validations](../../developers/security/validations.md) document.
+- Hover over any warning icons to view the issues in the references. If required, click the “Edit entry/asset in new tab” icon to update the reference.
+
+  **Additional Resource:** To learn more about fixing validation errors, refer to the [Validations](../../developers/security/validations.md) document.
 - Choose one of the following options:
   - **Send With References:** Publishes the parent entry along with the selected references.
-  - **Send Without References:** Publishes only the parent entry. Referenced items remain unpublished.**Tip:** When publishing without validation, you can track the task’s progress and status in the [Bulk Task Queue](./stack-bulk-task-queue.md) under **Settings**.
+  - **Send Without References:** Publishes only the parent entry. Referenced items remain unpublished.
+
+    **Tip:** When publishing without validation, you can track the task’s progress and status in the [Bulk Task Queue](./stack-bulk-task-queue.md) under **Settings**.
 
 ### Validate References and Publish
 
@@ -67,12 +71,18 @@ This workflow allows you to review, filter, and validate referenced entries and 
   - **Selects only first-level references:** Include only direct references linked to the parent entry.
   - **Select all references:** Include all the references of the entry.
   - **Select only the parent entry:** Publish only the entry without any references.
-- To select specific references, use the “Arrow” icon to expand or collapse the reference levels and choose the references.**Tip:** Asset rows will be displayed as system assets.
-- After selecting the references, choose one of the following actions:
-  - **Validate and Publish:** Opens the **Validate Items** modal to review the items selected for publishing.**Tip:** If your entry contains many references, you can minimize the **Validate Items** modal using the “Minimize” icon in the top-right corner.
+- To select specific references, use the “Arrow” icon to expand or collapse the reference levels and choose the references.
+
+  **Tip:** Asset rows will be displayed as system assets.
+- After selecting the references, choose one of the following actions:![Publish_Entries_PublishReview.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd188837d210713a3/698aecc2626f6476f147275e/Publish_Entries_PublishReview.png)
+  - **Validate and Publish:** Opens the **Validate Items** modal to review the items selected for publishing.
+
+    **Tip:** If your entry contains many references, you can minimize the **Validate Items** modal using the “Minimize” icon in the top-right corner.
   - **Send All References:** Publishes the entry and all referenced items immediately, without validation.
-- Click a reference to open it in a new tab and address any issues before proceeding.**Note:** When you fix validation errors or update a referenced item, the **Validate Entries** modal continues to show the previous results. Run a new validation to reflect the latest changes before publishing.
-- When you are ready, click **Publish Now**.  
+- Click a reference to open it in a new tab and address any issues before proceeding.
+
+  **Note:** When you fix validation errors or update a referenced item, the **Validate Entries** modal continues to show the previous results. Run a new validation to reflect the latest changes before publishing.
+- When you are ready, click **Publish Now**.![Publish_Entries_Validate.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt35f1c54627cc9e21/698aecc24069a72c855dea18/Publish_Entries_Validate.png)  
 The entry and selected references are added to the [**Publish Queue**](../publish-content/view-publish-status-of-entries-assets-in-publish-queue.md) for processing.
 
 **Tip:** You can run multiple entry validations and check their progress in the task window.

@@ -50,7 +50,7 @@ export default function handler(request, response) {
 - [Upload a file](./import-project-using-file-upload.md)
 
 After successful deployment, you will see the Cloud Functions displayed in the log:The function endpoint is determined by its **file path** relative to `/functions`. The function runs when you visit the path: `/users`.
-- Click the icon next to the URL in the **Domains** section to open the deployed website.In this example, the URL of the API endpoint will be `https://sample-test-api.devsampleapp.com/users`.
+- Click the icon next to the URL in the **Domains** section to open the deployed website.![Launch_API-Endpoints-DeployInfo.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt110b1b9e92067afb/66056e8fcac0bc34a0c8589b/Launch_API-Endpoints-DeployInfo.png)In this example, the URL of the API endpoint will be `https://sample-test-api.devsampleapp.com/users`.
 - On sending a request to the API Endpoint, you will see the following response:
 ```
 [

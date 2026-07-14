@@ -40,8 +40,8 @@ csdx studio:design-token:add
   - `**dynamic**`**:** Allows content editors to use only the design options that come from the entries linked to the Studio project. They cannot access or apply custom colors or other styling available in the Studio editing canvas.
   - `**tokens**`: Includes access to the dynamic components and the custom design tokens added through the CLI.
   - `**arbitrary**`: Extends access beyond dynamic and CLI-added tokens, allowing content editors to use any design properties available in the Studio canvas. This includes selecting custom colors, styles, or visual adjustments.
-- After you select an access level, the Studio CLI scans your project for design token sources such as JavaScript/TypeScript files and CSS files (such as  `global.css`). It extracts tokens defined using CSS custom properties or JSON/JS structures and generates a `register-design-tokens.ts` file in your project directory.
-- Import the generated file to your project’s main file (for example `main.tsx`, `index.tsx`).
+- After you select an access level, the Studio CLI scans your project for design token sources such as JavaScript/TypeScript files and CSS files (such as  `global.css`). It extracts tokens defined using CSS custom properties or JSON/JS structures and generates a `register-design-tokens.ts` file in your project directory.![Design token generation](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt089d7eb16de04e1e/692191beaa13cae10b3b7610/1._registered_design_tokens.png)
+- Import the generated file to your project’s main file (for example `main.tsx`, `index.tsx`).![How to Import Registered Design Token](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blted53678556b3b0ce/692191bede28bcc09d4e5b77/2._import_design_tokens.png)
 
 Once imported, the design tokens become available inside the Studio canvas, ensuring your components use the same design definitions extracted from your project.
 

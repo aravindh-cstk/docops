@@ -46,7 +46,9 @@ To integrate Figma designs with Studio, open your Figma file and perform the fol
 - Authenticate in the browser when redirected.
 - Select the organization to complete authorization.
 - After authorization, return to Figma. The plugin displays the list of projects linked to your organization in Studio. Select the Studio project and click **Proceed**.
-- Select a frame or component, or hold **Shift** and click to select multiple items. Alternatively, drag a selection box across the canvas to select multiple frames.**Tip**: If you use a custom design system, [map](./import-and-manage-new-designs.md#map-components-to-figma-plugin) your pre-built components and design tokens in Figma before generation. This avoids duplicate components and ensures consistency across the design system.
+- Select a frame or component, or hold **Shift** and click to select multiple items. Alternatively, drag a selection box across the canvas to select multiple frames.
+
+  **Tip**: If you use a custom design system, [map](./import-and-manage-new-designs.md#map-components-to-figma-plugin) your pre-built components and design tokens in Figma before generation. This avoids duplicate components and ensures consistency across the design system.
 - Click **Generate Design**. The plugin converts the selected design into Studio-compatible JSON.
 - After generation, two options appear:**Copy to Studio**Copies the generated component as Composition JSON to the clipboard for use in the Studio Canvas.
 
@@ -63,7 +65,7 @@ The design must be generated as code.
 - The component will become part of the project’s design system.
 - The component requires logic, customization, or future maintenance in the codebase.
 - Click **Copy to Studio** to copy the JSON.
-- Open the Studio **Canvas** and paste the copied design. The design appears immediately in Studio as a usable component.
+- Open the Studio **Canvas** and paste the copied design. The design appears immediately in Studio as a usable component.![Paste-Figma-components.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt742c187220e750df/6926ac34e0342d71b1fa7496/Paste-Figma-components.gif)
 
 The Figma Plugin simplifies importing visual layouts and is ideal for non-developers and content creators who want to build or update UI quickly.
 
@@ -71,7 +73,7 @@ The Figma Plugin simplifies importing visual layouts and is ideal for non-develo
 The Studio CLI is designed for developers who want to generate JavaScript or TypeScript components with customizable behavior. This method imports the design into the project and registers it automatically in Studio.
 
 To integrate Figma designs using Studio CLI, open your Figma file and perform the following steps:
-- In the Figma Plugin, copy the CLI command displayed under **Copy CLI Command**.
+- In the Figma Plugin, copy the CLI command displayed under **Copy CLI Command**.![1. copy CLI command.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c5cf288f165bc76/6926bc96bddc8816c21fec17/1._copy_CLI_command.png)
 - Ensure the local project is already configured with the Studio CLI and matches the selected Studio project.
 - Open the terminal and run the copied command:
 ```
@@ -82,7 +84,9 @@ csdx studio:component:add --component-id=
 - The CLI analyzes the project automatically:Detects the framework and language (for example, React and TypeScript).
 - Generates UI component code accordingly.
 - The CLI creates:A component file (for example, FinancialImageLayout.tsx).
-- A registerComponents file to register the component in Studio.**Note**: The number of generated files varies depending on the size and complexity of the design.
+- A registerComponents file to register the component in Studio.
+
+  **Note**: The number of generated files varies depending on the size and complexity of the design.
 - If prompted with **Would you like to make changes to the generated component?**Enter **Yes** to modify the generated code with an additional prompt.
 - Enter **No** to continue without changes.
 - - When generation completes, the files appear in the project folder.
@@ -100,7 +104,9 @@ Mapping helps the Figma Plugin reuse existing components registered to Studio wh
 
 To map components to the Figma plugin:
 - Go to the **Component Mapping** tab to view the detected Figma components and corresponding code components.
-- Click **Auto Map** to match design layers to code components automatically.**Note**: The mapping is based on component name, description, and properties. Layers without a matching component remain unmapped and can be linked manually.
+- Click **Auto Map** to match design layers to code components automatically.
+
+  **Note**: The mapping is based on component name, description, and properties. Layers without a matching component remain unmapped and can be linked manually.
 - Review and adjust mappings before export to ensure accuracy.
 
 This step ensures future design exports and code generation remain accurate and aligned with the existing component library.

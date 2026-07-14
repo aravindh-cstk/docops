@@ -32,9 +32,9 @@ To delete a Personalize project, log in to your [Contentstack account](https://w
 
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 - On the Personalize Projects landing page, select the project you want to delete.
-- In the top navigation bar, click **Settings**.
+- In the top navigation bar, click **Settings**.![image3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8023e32d02e9beec/69896b9d2aaa1e7967f4af3c/image3.png)
 - Scroll to the **Delete Project** section.
-- Click **Delete Project**.
+- Click **Delete Project**.![image1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt25dbd14232e8f5ed/69896bbffb4e44bfcf6596ad/image1.png)
 - Review the warning message carefully.
 - To exit without deleting the project, click **Cancel**.
 - To confirm deletion, type **DELETE** in the confirmation field, then click **Delete**.

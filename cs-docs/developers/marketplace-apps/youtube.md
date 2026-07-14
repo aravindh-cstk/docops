@@ -43,17 +43,17 @@ Follow the steps to get your YouTube API key.
 
 Sign in to[Google Console Cloud](https://console.cloud.google.com/projectselector2/apis/dashboard?pli=1&supportedpurview=project) to go to **APIs & Services**.
 
-- Click **SELECT PROJECT** to select an existing project or click **CREATE PROJECT** to create a new project.
+- Click **SELECT PROJECT** to select an existing project or click **CREATE PROJECT** to create a new project.![YouTube-API-Select_or_Create_Project.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt15af69281d0b0232/62ea35e046742610b18df9e8/YouTube-API-Select_or_Create_Project.png)
 - Go to the **Library** section in the left panel.
-- Click **YouTube Data API V3**.
-- Click **ENABLE**.
-- Click **CREATE CREDENTIALS**.
+- Click **YouTube Data API V3**.![YouTube-YouTube_Data_API_V3.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt275d479ed35aa731/62ea3605f0bc6d1158222886/YouTube-YouTube_Data_API_V3.png)
+- Click **ENABLE**.![YouTube-API-Enable.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc71e260302d34652/62ea35dfe717bf11519aab40/YouTube-API-Enable.png)
+- Click **CREATE CREDENTIALS**.![YouTube-Create-Credentials.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbb585f62be1c70ca/64cce122b1fb31800814a78e/YouTube-Create-Credentials.png)
 - Under **Credential Type**, select the following:
   - From the Select an API dropdown, select **YouTube Data API v3**.
 - From What data will you be accessing?, select **Public data**.
 - Click **NEXT**.
   This will create your YouTube API Key.
-- Copy the **API key** and click **DONE**.
+- Copy the **API key** and click **DONE**.![YouTube-API-Copy_API.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltbe618a3d79a452fd/62ea35e06f3f3701d6ff8c8d/YouTube-API-Copy_API.png)
 
 ## Get Channel ID
 
@@ -66,7 +66,7 @@ Each YouTube channel has a unique ID. Let us understand how to get this ID:
 Visit the home/landing page of the YouTube channel of your choice on a browser.
 
 - Right-click on the page and click **View page source**.
-- Search for **channelId**.
+- Search for **channelId**.![YouTube_-_ChannelID.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte9dff1da6b2ed964/62eb688134f523580f10e50a/YouTube_-_ChannelID.png)
 - Copy the **channel ID**.
 
 ## Install and Configure the YouTube app in Contentstack Marketplace
@@ -78,13 +78,13 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **YouTube** app and click **Install App**.
-- In the popup window, select the stack where you want to install the YouTube app and click the **Install** button.
+- In the popup window, select the stack where you want to install the YouTube app and click the **Install** button.![Youtube-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb2e0db86d75999a8/64b9266bb01916b5f5b17d4e/Youtube-Install-App.png)
 - On the **Configuration **page, enter the following details:
   - **API Key**: Enter the YouTube **API Key** that we retrieved in [Step 1](#get-youtube-api-key).
   - **Channel ID(s)**: Enter the YouTube **Channel ID(s)** that we retrieved in [Step 2](#get-channel-id).
 
   **Note**: You can add multiple channel ids at once.
-- **Choose YouTube Keys to Save in Entry**: Choose how to save the data fetched from theYouTube account in Contentstack entries.
+- **Choose YouTube Keys to Save in Entry**: Choose how to save the data fetched from theYouTube account in Contentstack entries.![YouTube-Congifuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt10306eb61b9e3111/65b95bb4655e3088c0ebad7c/YouTube-Congifuration.png)
   - If you select the **All Fields** option, you can select only a limited number of videos in the entry.
 - For **Custom Fields**, you can search and add specific YouTube Keys you want to save in entries. By default, the **videoId** key is selected.
 
@@ -99,7 +99,7 @@ attrs": {
         }
 ```
 
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![YouTube-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt31ca6a5e63559dad/65b95bbffd23e55fe17da3f8/YouTube-UI-Locations.png)
 
   **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click the **Save** button.
@@ -111,7 +111,7 @@ To use the YouTube application within an entry of your stack, follow the steps g
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![YouTube-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7e6f1c980add3d06/64cb9b7db1fb3137e014a1ee/YouTube-Content-Type.png)
 
 There are two ways to use the YouTube application in your entry:
 
@@ -130,7 +130,7 @@ This adds YouTube in the custom field.
 
 You will see the YouTube custom field on your entry page as shown below:
 
-- Click the **+ Add Video(s)** button.
+- Click the **+ Add Video(s)** button.![YouTube-Custom-Field-Add-Videos](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1546f73ee4fcda1c/64cb9beb36217321d70247fe/YouTube-Custom-Field-Add-Videos.png)
 - Select the video(s) from your YouTube selector page and click the **Add Videos(s)** button to add them to your entry.
 
   **Note**: You can add multiple videos in one go.
@@ -172,7 +172,7 @@ This adds YouTube in the JSON Rich Text Editor field.
 
 You will see the YouTube button in the JSON Rich Text Editor field on your entry page, as shown below:
 
-- Click the **YouTube** app icon.
+- Click the **YouTube** app icon.![YouTube-JSONRTE-Add-Videos](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt34cae6b9446c440b/64cb9f901d183ce70fd1d7ce/YouTube-JSONRTE-Add-Videos.png)
 - Select the video(s) from your YouTube selector page and click the **Add Videos(s)** button to add them to your entry.
 
   **Note**: You can add multiple videos in one go.

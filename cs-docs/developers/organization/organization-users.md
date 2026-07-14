@@ -45,7 +45,7 @@ Let’s walk through each action.
 
 ## Invite New User(s)
 To invite user(s) to your organization, perform the following steps:
-- Click **Invite User**.
+- Click **Invite User**.![RBAC_Invite_User.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am8c34e529cf38e27f/4aa6173a6fe0f1b66d06e8d4/RBAC_Invite_User.png)
 - Enter the email address of the user. To add multiple users, enter email addresses separated by a comma.
 - Assign an organization role to the new user. You can only assign either the **Admin** or **Member** role.
 - Optionally, assign stack-specific roles to the user.
@@ -57,12 +57,12 @@ To invite user(s) to your organization, perform the following steps:
 
 ## Edit a User
 To update permissions for a user, perform the following steps:
-- Click on the user you want to edit or click the vertical ellipses in the **Actions** column and click **Edit**. This opens the **Edit user** page.
+- Click on the user you want to edit or click the vertical ellipses in the **Actions** column and click **Edit**. This opens the **Edit user** page.![RBAC_Edit_User.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am6efdbeb486a9b14c/24a548bbc0f9c8f3c4e5c1e5/RBAC_Edit_User.png?locale=en-us)
 - Update roles under **Assign Organization Role** or the **Stack Role** as required, and click **Update**.
 
 ## Remove a User
 To remove a user from the organization, perform the following steps:
-- Navigate to the user you want to remove, click the vertical ellipses in the **Actions** column, and click **Remove**.
+- Navigate to the user you want to remove, click the vertical ellipses in the **Actions** column, and click **Remove**.![Organization_Users_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f8d0ae7de732e95/6891b2400a46b0f55eef43c2/Organization_Users_4.png)
 - In the **Remove User** modal, click **Remove** to confirm the action.
 
 **Note:** Alternatively, you can also remove a user from the **Edit user** page.
@@ -71,7 +71,7 @@ To remove a user from the organization, perform the following steps:
 
 ## Force Password Reset
 To send a password reset email to a user:
-- Select the checkboxes next to the users you want to send a password reset email to, and select **Force Password Reset**.
+- Select the checkboxes next to the users you want to send a password reset email to, and select **Force Password Reset**.![Organization_Users_5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcd884f8754a6bd05/6891aef574c4fdd1eb74a96a/Organization_Users_5.png)
 - In the **Force Password Reset** modal, click **Continue** to confirm the action.
 
 The user is forced to reset their password on their next login.
@@ -80,7 +80,7 @@ The user is forced to reset their password on their next login.
 Manually unlock users who have been locked out due to failed login attempts.
 
 To unlock users individually or in bulk:
-- Click the vertical ellipsis in the **Action** column next to the locked user.Or select up to **10 users** using the respective checkboxes.
+- Click the vertical ellipsis in the **Action** column next to the locked user.![Unlock_Users_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0465f2f1b10ad97e/693aa8495bb1c13b1837e284/Unlock_Users_1.png)Or select up to **10 users** using the respective checkboxes.![Unlock_Users_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf879e21d28d5d776/693aa84afe65010a443ecf9e/Unlock_Users_2.png)
 - Click **Unlock User**.
 - Review the selected users in the confirmation modal and click **Continue** or **Proceed** to restore access.
 
@@ -95,7 +95,7 @@ In both cases, contact Contentstack [support](mailto:support@contentstack.com) t
 Reset MFA when a user cannot access their account. Common scenarios include lost or stolen devices, switching to a new device, account security concerns, or issues with the authenticator app.
 
 To reset MFA for a user:
-- Click the vertical ellipses in the **Actions** column of a user and select **Reset MFA**.
+- Click the vertical ellipses in the **Actions** column of a user and select **Reset MFA**.![Organization_Users_6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd3cf95dac6ccbb8c/6891aef6ef8ef11f13cbbf62/Organization_Users_6.png)
 - In the **Reset Multi-Factor Authentication** modal, click **Proceed** to confirm the action.
 
 The user receives an email with a link to reset their MFA configuration.
