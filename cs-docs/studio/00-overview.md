@@ -9,6 +9,8 @@ audience: both
 
 Studio install has two layers: your app (SDKs, canvas route, catch-all template route) feeds the Studio project (stack link, environment, language, canvas URL).
 
+<img src="../assets/svg/svg-to-png/setup-two-layer-install.png" alt="Studio install has two layers: your app (SDKs, canvas route, catch-all template route) feeds the Studio project (stack link, environment, language, canvas URL)" width="640" style="max-width: 100%">
+
 Prerequisites lists what you need from your Contentstack stack before starting (Stack API Key, Delivery Token, Preview Token, Environment, Language, Visual Editor enabled). Those are stack-side setup, covered in Contentstack's own docs.
 
 ## Reading Order
