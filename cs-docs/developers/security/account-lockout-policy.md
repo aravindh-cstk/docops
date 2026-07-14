@@ -45,7 +45,7 @@ Organization admins and owners can manually unlock users individually or in bulk
 
 To unlock users individually or in bulk, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to **Administration** > **Users** through “App Switcher”.
-- Click the vertical ellipsis in the **Action** column next to the locked user.Or select up to **10 users** using the respective checkboxes.
+- Click the vertical ellipsis in the **Action** column next to the locked user.![Unlock_Users_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0465f2f1b10ad97e/693aa8495bb1c13b1837e284/Unlock_Users_1.png)Or select up to **10 users** using the respective checkboxes.![Unlock_Users_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf879e21d28d5d776/693aa84afe65010a443ecf9e/Unlock_Users_2.png)
 - Click **Unlock User**.
 - Review the selected users in the confirmation modal and click **Continue** or **Proceed** to restore access.
 

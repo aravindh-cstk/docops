@@ -44,25 +44,27 @@ Follow these steps to perform the content migration for AEM:
 
 ### Step 1 - Log in to the Migration Framework
 
-- From the welcome page, click **Sign In with Contentstack**.
-- You will be redirected to the login page with region selection.
+- From the welcome page, click **Sign In with Contentstack**.![AEM_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt34f346cc61d77732/692fd64af8653ac9b8b1513c/AEM_1.png)
+- You will be redirected to the login page with region selection.![AEM_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt715f094db35adbbb/692fd3171242086c1052cece/AEM_2.png)
 - Log in using your Contentstack credentials.
 
 ### Step 2 - Select Your Organization
 
 - After logging in, you will see an empty dashboard.
-- Select your organization from the dropdown in the top left corner.
+- Select your organization from the dropdown in the top left corner.![AEM_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt37673660cb1a55fe/692fd326bddc88535b200a58/AEM_3.png)
 
 ### Step 3 - Create a New Project
 
-- Click **+ New Project**.
+- Click **+ New Project**.![AEM_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt44a97bf7f62f1c1a/692fd33a9c4ad1e8ab1628ea/AEM_4.png)
 - Enter a **Title** and **Description** for your project.
 - Click **Create Project**.
 
 ### Step 4 - Select and Validate Legacy CMS Data
 
 - By default AEM will be selected as your legacy CMS.
-- Add a **2–5 character affix** for the source name. Use only letters, no numbers or special characters. Make sure the affix does not match with one of the [restricted keywords](../create-content-types/restricted-keywords-for-uids.md).**Note:** The affix will function as a prefix if the content type UID matches with restricted UIDs. The affix will function as a suffix for field UIDs. If no affix is added, `cs` is affixed by the system.
+- Add a **2–5 character affix** for the source name. Use only letters, no numbers or special characters. Make sure the affix does not match with one of the [restricted keywords](../create-content-types/restricted-keywords-for-uids.md).
+
+  **Note:** The affix will function as a prefix if the content type UID matches with restricted UIDs. The affix will function as a suffix for field UIDs. If no affix is added, `cs` is affixed by the system.
 - Click **Validate File** to validate the exported content. A success message appears once validation is completed.**Note:** If validation fails, it may be caused by one or more of the following issues:**File Format Error**: Ensure the file is in the desired format.
 - **Missing Content**: Ensure the exported data contains all required content.
 - **Incomplete Files**: Verify that no files are missing or corrupted.
@@ -72,7 +74,7 @@ Follow these steps to perform the content migration for AEM:
 
 - Create a new stack.
 - In the **Language Mapping** section, map the source CMS locale to a predefined language in Contentstack.
-- Click **Add Language** if multiple locales need to be mapped.
+- Click **Add Language** if multiple locales need to be mapped.![AEM_6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt463591e8636c4273/692fd3537737a35eaf684712/AEM_6.png)
 - Click **Save and Continue**.
 
 ### Step 6 - Map Content Types
@@ -133,7 +135,7 @@ Click **Continue**.
 
 ### Step 8 - Execute the Migration
 
-- After a successful test migration, click **Start Migration** to perform the full migration to your selected stack.
+- After a successful test migration, click **Start Migration** to perform the full migration to your selected stack.![AEM_15.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt489492404535eda4/692fd5215dcec622409def26/AEM_15.png)
 - Upon completion, a success message appears in the logs with a link to your stack. The migrated data is now available in the destination stack within Contentstack.
 
 **Note:** Once a migration has been performed on a stack, it cannot be used to perform another migration.

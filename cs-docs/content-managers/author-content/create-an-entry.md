@@ -23,12 +23,16 @@ In Contentstack, creating an entry is the first step in adding content to your w
 
 To create an [entry](./about-entries.md), log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click “Entries” or use the shortcut key “E” (for both Windows and Mac users).**Note: **To create an entry, you need to have a predefined content type that defines the structure of your content. For detailed information on creating content types, refer to our [Create a Content Type](../../developers/create-content-types/create-a-content-type.md) documentation language. By default, the language is set to the master language of your stack.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click “Entries” or use the shortcut key “E” (for both Windows and Mac users).
+
+  **Note: **To create an entry, you need to have a predefined content type that defines the structure of your content. For detailed information on creating content types, refer to our [Create a Content Type](../../developers/create-content-types/create-a-content-type.md) documentation language. By default, the language is set to the master language of your stack.
 - Click **+ New Entry**.
 - Select the content type for the entry.
 - Fill in the fields as defined by the content type, such as "Title," "Cover Image," or "Body Content".
 - [**Optional**] You can add tags to an entry. This helps you filter or search your entries quickly.
-- **Save** the entry for later editing or proceed to [publish](./publish-an-entry.md) it.**Note**: If [Drafts and Auto Save](./about-drafts-and-auto-save.md) is enabled for your stack, clicking **New Entry** immediately creates a draft entry. You can begin editing the entry without manually saving it, as Contentstack automatically saves draft changes while you work in the entry editor. The entry remains in the **Draft** state until it is saved for the first time.
+- **Save** the entry for later editing or proceed to [publish](./publish-an-entry.md) it.
+
+  **Note**: If [Drafts and Auto Save](./about-drafts-and-auto-save.md) is enabled for your stack, clicking **New Entry** immediately creates a draft entry. You can begin editing the entry without manually saving it, as Contentstack automatically saves draft changes while you work in the entry editor. The entry remains in the **Draft** state until it is saved for the first time.
 
 **Additional Resource:**
 
@@ -108,8 +112,10 @@ This option opens the **Select Entries** modal, where you can perform the follow
 
 This option allows you to create and add new reference entries on the go. This option is useful when you need to add a new entry to use as a reference.
 
-- Click **Create new entry** in the reference Field.**Warning**: If **Drafts and Auto Save** is disabled, ensure the parent entry is saved before navigating away from the editor to avoid losing unsaved changes.
-- In the modal, select the content type from the dropdown for the new entry and click **Create**.
+- Click **Create new entry** in the reference Field.
+
+  **Warning**: If **Drafts and Auto Save** is disabled, ensure the parent entry is saved before navigating away from the editor to avoid losing unsaved changes.
+- In the modal, select the content type from the dropdown for the new entry and click **Create**.![Create_a_new_entry_in_reference_field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta341fca941404a21/65814c0edd00671b1c20435e/Create_a_new_entry_in_reference_field.png)
 - Enter the details for the new entry and click **Save**. This will:Create a new entry for the referred content type.
 - Automatically add it under the **Reference field**.
 

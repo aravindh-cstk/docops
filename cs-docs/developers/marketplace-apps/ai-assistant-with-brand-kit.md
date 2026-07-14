@@ -49,8 +49,8 @@ To install the AI Assistant app, log in to your [Contentstack account](https://w
 From the left-hand side primary navigation, click the **Marketplace** icon.
 
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see all the available apps. Hover over the **AI Assistant** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the AI Assistant app, accept the **Terms of Service**, and click the **Install **button.
+- Within the Marketplace, you can see all the available apps. Hover over the **AI Assistant** app and click **Install**.![Market place-AI-Assistant.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt74f7cf43c4a7eed5/69ee9d7e0050b65543a3863a/Market_place-AI-Assistant.png)
+- In the pop-up window, select the stack where you want to install the AI Assistant app, accept the **Terms of Service**, and click the **Install **button.![3-AI-Assistant-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltccfb790fb013924d/665e888a3585f6f12b7360dd/3-AI-Assistant-App-Install.png)
 - On the **Configuration** page, enter the following details:
 
   **Platform Configuration**: You can manage the API Keys by enabling [Brand Kit](../../content-managers/brand-kit.md), or configure the app using a Contentstack-managed API Key or custom credentials:
@@ -61,9 +61,9 @@ From the left-hand side primary navigation, click the **Marketplace** icon.
 
   **Select API Credentials**: You can select a way to configure the AI Assistant app:
 
-  **Managed by Contentstack**: Select the **Managed by Contentstack** option to configure the app using Contentstack-powered API keys.
+  **Managed by Contentstack**: Select the **Managed by Contentstack** option to configure the app using Contentstack-powered API keys.![4-b-AI-Assistant-Configuration-Platform-Managed-By-Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdab8b40dccf57e4e/672cd7abe71e4925f7f0e831/4-b-AI-Assistant-Configuration-Platform-Managed-By-Contentstack.png)
 
-- **Custom Credentials**: You can configure the app using third-party API credentials, such as OpenAI, Azure OpenAI Service, AWS Bedrock, and Google Vertex AI. Select the **Provider Name** and enter the required credentials to configure the app.
+- **Custom Credentials**: You can configure the app using third-party API credentials, such as OpenAI, Azure OpenAI Service, AWS Bedrock, and Google Vertex AI. Select the **Provider Name** and enter the required credentials to configure the app.![4-c-AI-Assistant-Configuration-Platform-Custom-Credentials](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt45377e500bd60863/672cd7ab4f4fa3eb1fb79a9b/4-c-AI-Assistant-Configuration-Platform-Custom-Credentials.png)
 - **Brand Kit Enabled**: When enabling Brand Kit, the app will use Brand Kit’s API settings to manage the API credentials. This override aligns the AI Assistant’s output with your brand’s guidelines for tone, style, and voice, ensuring a consistent branded experience.Click the **Enable On-Brand Generative AI** toggle button, a pop-up appears. Then click **Proceed** to override the existing API Keys.
 
   Enabling Brand Kit will automatically manage the AI Assistant app API settings, overriding any manual configurations. You can see a note in the **Select API Credentials** section.
@@ -73,7 +73,7 @@ From the left-hand side primary navigation, click the **Marketplace** icon.
 - After adding the details, click **Save and Proceed**.
 - **Advanced Configuration**: You can create custom actions to use AI within your entry fields.Perform the following steps to create a Custom Action:
 
-  Click the **+ Create Action** button.
+  Click the **+ Create Action** button.![5-AI-Assistant-Configuration-Advanced-Create-Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbb6c5332fe6f21e0/665e888a4ddc4bf3f309cbfe/5-AI-Assistant-Configuration-Advanced-Create-Action.png)
 
 - In the **Add your custom prompt** section, enter the **Custom Name**, upload the **Icon** (in SVG format), enable or disable **Include Field data** option, and provide the required **Prompt**.
   You can group similar prompts together by adding sub-actions for the main prompt.
@@ -88,7 +88,7 @@ From the left-hand side primary navigation, click the **Marketplace** icon.
 
 - Choose the option to **Perform action on**. You can select whether to apply the action on the **Current Field** or **Other Field**.
 - To **View Custom Action on**, select the **Entry Field** checkbox(s) to view the app in the entry field. If you select the **When JSON RTE field content is selected** checkbox, you will be able to perform actions only on the selected content in the JSON Rich Text Editor field.
-- Then, click **Save or Save and Proceed** to save the advanced configuration settings.
+- Then, click **Save or Save and Proceed** to save the advanced configuration settings.![8-AI-Assistant-Configuration-Advanced-More-Settings.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta71638c791714ef4/665e888bd036b2f24500b192/8-AI-Assistant-Configuration-Advanced-More-Settings.png)
 
   You have successfully configured the AI Assistant app with Brand Kit.
 
@@ -102,8 +102,8 @@ From the left-hand side primary navigation, click the **Marketplace** icon.
 - For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - You must update the AI Assistant app manually, if available, to install the latest release enhancements.
   If there is any updated version available for installation, you will see a red dot on the stack name.
-- If you ignore the update requirement and directly go to the app configuration by clicking the gear icon, you will get instructions to update the app first.
-- In this case, you have to go back to the Installation tab and click the **Update** button to install the updates.
+- If you ignore the update requirement and directly go to the app configuration by clicking the gear icon, you will get instructions to update the app first.![10-b-AI-Assistant-Update-Required-Message](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1c09a7ba4775de1d/670660e31f5d8c35899b5581/10-b-AI-Assistant-Update-Required-Message.png)
+- In this case, you have to go back to the Installation tab and click the **Update** button to install the updates.![10-c-AI-Assistant-Update-Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt638e53bfc7b13249/670660e3baa0317b3633a475/10-c-AI-Assistant-Update-Button.png)
 - After installing the updates, click **Save** to save the updated app configurations.
 - Once done, click **Open Stack** to start using the AI Assistant app.
 
@@ -113,10 +113,10 @@ To use the AI Assistant app within the entry of a stack, follow the steps given 
 
 Go to the stack where you have installed the AI Assistant app, click the **Content Models** icon from the left navigation panel, and click the **+ New Content Type** button.
 
-- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:![11-AI-Assistant-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc801f293c3c3e822/6660509cdbfae91ece0fa7e5/11-AI-Assistant-Content-Type.png)
 - To use the AI Assistant app, let's create an entry in the newly created content type. In the left navigation panel, navigate to the [Entries](../../content-managers/author-content/create-an-entry.md) page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.
-- You can see the AI Assistant app in the [Field Modifier](../developer-hub/field-modifier-location.md) location.
-- Click the **AI Assistant** app icon, a pop-up appears.
+- You can see the AI Assistant app in the [Field Modifier](../developer-hub/field-modifier-location.md) location.![13-AI-Assistant-App-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9dd233acf01d1050/665e888bce5a1c95210c8b78/13-AI-Assistant-App-Icon.png)
+- Click the **AI Assistant** app icon, a pop-up appears.![14-AI-Assistant-with-Brand-Kit-Popup](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc5085368b92dac43/665e88b3d036b2250600b196/14-AI-Assistant-with-Brand-Kit-Popup.png)
 - A panel opens up. Click the **Brand Kits** drop-down and select the required Brand Kit. Then, from the **Voice Profiles** drop-down, select the applicable Voice Profile. If you want to generate content from the **Knowledge Vault**, enable it. If you disable it, the AI Assistant app will generate content directly from the LLM (Large Language Models).
 
   **Additional Resource**:
@@ -229,8 +229,8 @@ This generates the content based on your provided prompt.
 
 After the app generates the content, it offers these options: **Accept**, **Regenerate**, and **Edit**, as discussed below:
 
-- Click the **Accept** icon to accept the newly generated content and add it in the field.
-- To rephrase the content, click the **Regenerate** icon.
+- Click the **Accept** icon to accept the newly generated content and add it in the field.![33-e-Brainstorm-With-AI-Assistant-Accept](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1369d31849ad518a/672cdf63a26dfe01fe1dacb3/33-e-Brainstorm-With-AI-Assistant-Accept.png)
+- To rephrase the content, click the **Regenerate** icon.![33-f-Brainstorm-With-AI-Assistant-Regenerate](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd9c6b3e6ce7da4e5/672cdf63d01b2c6ef48ea1a8/33-f-Brainstorm-With-AI-Assistant-Regenerate.png)
 - Click the **Edit** icon, to update the prompt, then click the **Generate** button to get a new response for the updated prompt.
   You can use pagination to view all your responses.
 

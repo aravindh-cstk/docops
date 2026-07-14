@@ -21,7 +21,7 @@ This page explains how to create a Delivery Token in Contentstack (and optionall
 To create a Delivery Token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 - Click **Tokens** in the settings panel.
-- Click **+ Delivery Token** to create a new token.**Tip:** If you are on the [Management Tokens](./about-management-tokens.md) tab, you can press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
+- Click **+ Delivery Token** to create a new token.**Tip:** If you are on the [Management Tokens](./about-management-tokens.md) tab, you can press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.![Create Delivery Token UI](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt11e5a85189e4c3de/67f66c214de86407df8ae954/1._Create_Delivery_Token-navigation.png)
 - Enter a **Name** (required) and a **Description** (optional) for the Delivery Token.
 - In the **Scope** section, choose the **Branches** or [**Aliases**](../branches/about-aliases.md) you want to associate with this token.
 - Select the **Publishing Environments** for which you want to generate the Delivery Token.
@@ -34,7 +34,7 @@ A new token appears in both the Delivery Token and Preview Token fields. You can
 
 To create a Preview Token for an existing Delivery Token:
 - Select a Delivery Token from the **Tokens** page.
-- Click **+ Create Preview Token** at the bottom of the page.
+- Click **+ Create Preview Token** at the bottom of the page.![Create Preview Token UI](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt78a6581b9ce11367/67f66c203202bbe889ac7b2c/3._Create-Delivery-Token_Create-Preview-Token.png)
 
 **Note:** A Delivery Token is configured for a specific environment and can only retrieve content from that environment.
 

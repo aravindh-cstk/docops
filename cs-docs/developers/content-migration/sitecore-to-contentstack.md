@@ -35,22 +35,24 @@ Before you begin the migration process, ensure that you have the following prere
 Follow these steps to perform the content migration for Sitecore:
 
 ### Step 1 - Log In to the Migration Framework
-- From the welcome page, click **Sign in with Contentstack**.
-- You will be redirected to the login page with region selection.
+- From the welcome page, click **Sign in with Contentstack**.![S2C_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt16eb7dc1de93584f/6814a46979652b3b2e648424/S2C_1.png)
+- You will be redirected to the login page with region selection.![S2C_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0baffe5177cb5403/6814a46ac4a377c4d41a6d20/S2C_2.png)
 - Log in using your Contentstack credentials.
 
 ### Step 2 - Select Your Organization
 - After logging in, you will see an empty dashboard.
-- Select your organization from the dropdown in the top left corner.
+- Select your organization from the dropdown in the top left corner.![S2C_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0ae92a84f6b33d31/6814a4690dc84ff4d3858c53/S2C_3.png)
 
 ### Step 3 - Create a New Project
 - Click **+ New Project**.
-- Enter a **Name** and **Description** for your project.
+- Enter a **Name** and **Description** for your project.![S2C_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt848ad8693502634f/6814a469c4a3774aea1a6d1c/S2C_4.png)
 - Click **Create Project**.
 
 ### Step 4 - Select and Validate Legacy CMS Data
-- Select your legacy CMS version.
-- Add a **2–5 character affix** for the source name. Use only letters, no numbers or special characters. Make sure the affix does not match with one of the [restricted keywords](../create-content-types/restricted-keywords-for-uids.md).**Note:** The affix will function as a prefix if the content type UID matches with restricted UIDs. The affix will function as a suffix for field UIDs.
+- Select your legacy CMS version.![S2C_5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt97de56be13ad5db8/6814a469b259395db2bced04/S2C_5.png)
+- Add a **2–5 character affix** for the source name. Use only letters, no numbers or special characters. Make sure the affix does not match with one of the [restricted keywords](../create-content-types/restricted-keywords-for-uids.md).
+
+  **Note:** The affix will function as a prefix if the content type UID matches with restricted UIDs. The affix will function as a suffix for field UIDs.
 - Click **Validate File** to validate the exported content.**Note:** If validation fails, it may be caused by one or more of the following issues:**File Format Error**: Ensure the file is in the desired format.
 - **Missing Content**: Ensure the exported data contains all required content.
 - **Incomplete Files**: Verify that no files are missing or corrupted.
@@ -58,9 +60,9 @@ Follow these steps to perform the content migration for Sitecore:
 
 ### Step 5 - Configure Destination Stack
 - Either select an existing stack with content types or create a new stack.
-- For this guide, we will migrate content to an existing stack.
+- For this guide, we will migrate content to an existing stack.![S2C_7.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1dc42f41946ab7f9/6814a46ab55bf310ba07cdd3/S2C_7.png)
 - In the **Language Mapping** section, map the source CMS locale to a predefined language in Contentstack.
-- Click **Add Language** if multiple locales need to be mapped.
+- Click **Add Language** if multiple locales need to be mapped.![S2C_8.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt46e3f59bd33349ba/6814a46a9b09255830dee8ce/S2C_8.png)
 - Click **Save and Continue**.
 
 ### Step 6 - Map Content Types
@@ -104,7 +106,9 @@ Use the following advanced options to efficiently manage your mappings:
 - **Search fields**: Use the search bar in the mapping interface to locate specific field names.
 - **Reset to system mapping**: Click the ‘Reset to system mapping’ icon to revert any changes done to the default mappings.
 - **Select content type from destination stack**: Override the default behavior of creating new content types.
-- **Fetch content types from destination stack**: If updates are made in the stack during migration, click the icon to fetch changes.**Note:** If the user has created a new stack in [Step 5](./sitecore-to-contentstack.md#step-5-configure-destination-stack), they will not see the ‘Fetch content types from destination stack’ icon and the ‘Select Content Type from Destination Stack’ dropdown unless an existing stack was used.
+- **Fetch content types from destination stack**: If updates are made in the stack during migration, click the icon to fetch changes.
+
+  **Note:** If the user has created a new stack in [Step 5](./sitecore-to-contentstack.md#step-5-configure-destination-stack), they will not see the ‘Fetch content types from destination stack’ icon and the ‘Select Content Type from Destination Stack’ dropdown unless an existing stack was used.
 - **Advanced properties**: Use this option to fine-tune individual field mappings.
 
 Click **Save** to preserve the current mapping settings.
@@ -115,12 +119,14 @@ Click **Continue**.
 
 ### Step 7 - Run a Test Migration
 - Click **Create Test Stack** to create a sample stack within your organization.
-- Click **Start Test Migration** to perform a test migration.**Note:** This migration runs on a small chunk of data to ensure reliability before the full migration.
-- A success or error message will be displayed in the logs after completion.
+- Click **Start Test Migration** to perform a test migration.![S2C_13.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt541f8d5e55e2d72c/6814a4990dc84f1d4f858c58/S2C_13.png)
+
+  **Note:** This migration runs on a small chunk of data to ensure reliability before the full migration.
+- A success or error message will be displayed in the logs after completion.![S2C_14.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfc6413a9832954ac/6814a4996b233b5b805bb94b/S2C_14.png)
 - Click **Continue**.
 
 ### Step 8 - Execute the Migration
-- After a successful test, click **Start Migration** to initiate full migration.
+- After a successful test, click **Start Migration** to initiate full migration.![S2C_15.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbb1311f3393fb28c/6814a499a50a9d82e2184bc1/S2C_15.png)
 - Upon completion, a success message appears in the logs with a link to your stack. The migrated data is now available in the destination stack within Contentstack.
 
 **Note:** Once a migration has been performed on a stack, it cannot be used to perform another migration.

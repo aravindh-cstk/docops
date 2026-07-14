@@ -48,10 +48,10 @@ Here is how you can add the Global Full Page location to your app:
 **Via the Developer Hub Console:******To add the Global Full Page location to your app via the Developer Hub console, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps given below:
 - Click the **Developer Hub** icon in the left navigation panel.
 - Select an application for which you want to add the Global Full Page location.
-- Click the **UI Locations** tab. To set the App URL, click the **View Hosting** link. You will be redirected to the **Hosting **tab.
+- Click the **UI Locations** tab. To set the App URL, click the **View Hosting** link. You will be redirected to the **Hosting **tab.![UI_Screen.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd320d58f58a4464a/68184482ae96e72088d3893c/UI_Screen.png)
 - In the **Hosting **tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.
 - Navigate to the **UI Locations **tab to configure the Global Full Page UI location.
-- Click the three vertical dots and then, click **+ Add UI Location.******
+- Click the three vertical dots and then, click **+ Add UI Location.******![image4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf93b6d37d9ad105c/68184482a6dd34245b226e2c/image4.png)
 - On the resulting **Configuration **page, set up the configurations for Global Full Page location by providing details such as **Name**, **Path**, **Location Icon**, and **Description**. You can also enable the location by default using the **Enabled **toggle button.Properties that can be specified for this UI location:
 
 **Name (optional)**: Specifies the name of the UI location. This name will be displayed at the location after the app is installed. If not provided, the app name will be used. Ensure unique names for multiple configurations of the same location.

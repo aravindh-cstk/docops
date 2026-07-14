@@ -29,13 +29,13 @@ By streamlining the content review process, Live Preview helps maintain a consis
 To preview your content, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
 - Select an existing entry and click the **Live Preview** icon.
-- In the upper right corner of the preview window, click the **Toggle Viewport** button to access different preview modes for your webpage.
+- In the upper right corner of the preview window, click the **Toggle Viewport** button to access different preview modes for your webpage.![Toggle_Viewport_Button.jpg](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc1e22ddd0698ae0f/66b0ad179f2a8c6c3a990ed9/Toggle_Viewport_Button.jpg)
 - Choose a preview mode from the dropdown menu:**Responsive Mode**:
 Simulates how your content dynamically adjusts to various screen sizes.
 - **Mobile/Tablet Modes**:
 Shows how your content appears on specific mobile and tablet devices.
-**Note:** The aspect ratios defined for mobile and tablet devices in the preview window cannot be modified.
-- Use the **Toggle Orientation** button to preview your content in both portrait and landscape orientations.
+**![Preview_Content_on_Multiple_Devices.jpg](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt124a562aa639caea/66b09bb99519f04252725ce6/Preview_Content_on_Multiple_Devices.png)Note:** The aspect ratios defined for mobile and tablet devices in the preview window cannot be modified.
+- Use the **Toggle Orientation** button to preview your content in both portrait and landscape orientations.![Toggle_Orientation_Button.jpg](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4521b7aee535b9a5/66b0add6ae971f2805f0ecd9/Toggle_Orientation_Button.jpg)
 - Make real-time adjustments directly in the editor, and see your changes instantly reflected in the preview window.
 
 ## Common questions

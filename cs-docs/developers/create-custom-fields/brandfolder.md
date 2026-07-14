@@ -40,8 +40,8 @@ To use this extension, you need to create an account in Brandfolder. To do that,
 
 Visit the [Brandfolder](https://brandfolder.com/) official website and create a new account. It is recommended to use the partnership account by purchasing the license.
 - The free trial account won't work as expected. View the [plans](https://brandfolder.com/plans) offered by Brandfolder, signup with them, and get started.
-- Once your account is created, you need access to your Brandfolder API key. We need this API key when we set up the extension in the next step. To get the API key, click on your username and select **My Profile** as shown below:
-- Then, select **Integrations** from the left navigation panel as shown below:
+- Once your account is created, you need access to your Brandfolder API key. We need this API key when we set up the extension in the next step. To get the API key, click on your username and select **My Profile** as shown below:![my profile in BF](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt61125916b8975308/5f92d5912425cd7a8af67b62/image4.png)
+- Then, select **Integrations** from the left navigation panel as shown below:![integrations my profile in BF](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte9b3fd318c87b82a/5f92d59583a0a3620dd3977c/image7.png)
 - Copy the API key and keep it safe, we will use it in our next step.
 
 Now, let's move ahead and set up our extension.
@@ -50,8 +50,8 @@ Now, let's move ahead and set up our extension.
 
 Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel
 - Select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions** page, click on the **+ New Extension** button and then on **Create new** as shown below. Alternatively, you can click on the **+ New Extension** link.
-- On the **Select Extension Type** screen, select **Custom Field**.
+- On the **Extensions** page, click on the **+ New Extension** button and then on **Create new** as shown below. Alternatively, you can click on the **+ New Extension** link.![Brandfolder_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt55b1982c845f3af5/60be3c00f77af428924b95a8/Brandfolder_1_Highlighted.png)
+- On the **Select Extension Type** screen, select **Custom Field**.![Brandfolder_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb706094bc295a729/60be3c202d47ce78c28ac4f3/Brandfolder_2_highlighted.png)
 - On the **Create New Extension** page, enter details in the fields as given below:
 
   **Title**: Provide a suitable title. For example, Brandfolder.  
@@ -90,11 +90,11 @@ To use your custom field, you need to follow the steps given below:
 Create a content type by clicking on the **+ New Content Type**. Provide a suitable name to your content type, an optional description, and click on **Create and Add fields**.
 
 This leads you to the Content Type Builder page where you can add the relevant fields.
-- Add the **Custom** field in your content type. Provide a name to it, for example, Brandfolder, and add other fields such as a single-line text box, and so on.
-- In the **Edit Properties** pane on the right-hand side, select the custom field from the dropdown (that is, Brandfolder) and set the other properties of your custom field.
+- Add the **Custom** field in your content type. Provide a name to it, for example, Brandfolder, and add other fields such as a single-line text box, and so on.![Brandfolder_4_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6c9929ff2b2cf3e8/60be3c3a1b32a31d5305b56b/Brandfolder_4_highlighted.png)
+- In the **Edit Properties** pane on the right-hand side, select the custom field from the dropdown (that is, Brandfolder) and set the other properties of your custom field.![Brandfolder_5_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt065b802a05a324ac/60be3c43f77af428924b95ac/Brandfolder_5_highlighted.png)
 - After adding other relevant fields in your content type, click on **Save and Close**. This will create your content type.
-- Now open the content type and create an entry as usual. You will see the Brandfolder extension field in your entry as shown below:
-- Click on **Choose Assets**. From the Brandfolder modal that opens, you will be able to select and insert the required assets into the field.
+- Now open the content type and create an entry as usual. You will see the Brandfolder extension field in your entry as shown below:![Brandfolder_6_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt10da20d695527c1c/60be3c4c324cea0e6978239d/Brandfolder_6_highlighted.png)
+- Click on **Choose Assets**. From the Brandfolder modal that opens, you will be able to select and insert the required assets into the field.![Brandfolder_7_no_highlight.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6f2f35f489284f3d/6140e77dd4224e7daaed060a/Brandfolder_7_no_highlight.gif)
 
 **Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 

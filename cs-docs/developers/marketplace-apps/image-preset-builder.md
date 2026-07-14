@@ -43,10 +43,12 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **Image Preset Builder** app and click **Install App**.
-- In the popup window, select the stack where you want to install the Image Preset Builder app and click the **Install** button.
-- The Image Preset Builder app is auto configured.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
-- **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
+- In the popup window, select the stack where you want to install the Image Preset Builder app and click the **Install** button.![Image-Preset-Builder-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt436b100e22f661b1/64b9294d1add4df6f1fbb348/Image-Preset-Builder-Install-App.png)
+- The Image Preset Builder app is auto configured.![Image-Preset-Builder-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3b904dfd8727e832/65ba802e7d4ae73c4b981339/Image-Preset-Builder-Configuration.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Image-Preset-Builder-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt50ec3fafd4fd10f3/65ba803968334a1915c62453/Image-Preset-Builder-UI-Locations.png)
+- 
+
+  **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click the **Save** button.
 - Click **Open Stack** to start using the Image Preset Builder application.
 
@@ -54,12 +56,12 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 
 To use the Image Preset Builder app within your stack, follow the steps given below:
 
-Go to your stack dashboard and click the **Assets** icon in the left-hand side primary navigation panel. You can add or upload a new image file or use any existing asset.
+Go to your stack dashboard and click the **Assets** icon in the left-hand side primary navigation panel. You can add or upload a new image file or use any existing asset.![Add-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5737863ef7e5aa54/6473c62fc5da54855bb89504/Add-Assets.png)
 
-- Open the image and click the **Widgets** icon in the right-side navigation panel.
-- Select the **Image Preset Builder** option from the dropdown.
-- Now, click the** + New Preset** button to create image presets.
-- Add a preset name and click **Save**.
+- Open the image and click the **Widgets** icon in the right-side navigation panel.![Open-Widgets-In-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltacad5fcb199f1acf/6473c88386bda523e0530175/Open-Widgets-In-Assets.png)
+- Select the **Image Preset Builder** option from the dropdown.![Select-Image-Preset-Builder-In-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd6dc34e4391c6b12/6473c883133eef884f4991ce/Select-Image-Preset-Builder-In-Assets.png)
+- Now, click the** + New Preset** button to create image presets.![Create-New-Preset](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9ba1ddb1c0f6a70c/66744abeb00d39318ee02e2d/Create-New-Preset.png)
+- Add a preset name and click **Save**.![Create-New-Preset-And-Save](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47058c9e7ab5176a/6473c62ec1800111da432f02/Create-New-Preset-And-Save.png)
 - You can improve your image files by optimizing and transforming them, and then click **Save** to save the preset settings.
 
 You can view all the image presets.
@@ -76,7 +78,7 @@ To use the Image Presets Builder application within an entry of your stack, foll
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![Image-Preset-Builder-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0feb4eb836a26620/6473c62fdfafe51e0c049e16/Image-Preset-Builder-Content-Type.png)
 
 There are two ways to add Image Presets in your entry:
 
@@ -95,14 +97,14 @@ Image Preset Picker is added in the custom field.
 
 You can see the Image Preset Builder app’s custom fields on your entry page as shown below:
 
-- Click the **Choose a file** button to add an asset to the custom field.
+- Click the **Choose a file** button to add an asset to the custom field.![Image-Preset-Builder-Choose-File-In-Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteca2ae8a301aafaa/6473c62e731679b1666b5236/Image-Preset-Builder-Choose-File-In-Custom-Field.png)
 - In the **Select Asset** Modal, you can add the original asset or the specific image preset. Click **Add Selected Asset** to add the selected asset or preset to the Custom field.
 
 **Note**: You can directly create a new preset version of the selected image to add to the Custom field.
 
 You can view the selected asset or preset in the custom field.
 
-- Hover over the image to use the options to edit and delete the asset or preset.
+- Hover over the image to use the options to edit and delete the asset or preset.![Image-Preset-Builder-Custon-Field-Features](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbc46913ece288cb3/6473c76fb263922fbc134ffc/Image-Preset-Builder-Custon-Field-Features.png)
 - Once done, **Save** and **Publish** your entry.
 
 ### Steps to add Image Presets within JSON Rich Text Editor Fields
@@ -117,14 +119,14 @@ Image Preset Picker is added in JSON Rich Text Editor.
 
 You can click the **Assets** icon in the JSON Rich Text Editor field on your entry page, as shown below:
 
-- Select the **Choose from Assets** option to add an asset to the JSON Rich Text Editor field.
+- Select the **Choose from Assets** option to add an asset to the JSON Rich Text Editor field.![Image-Preset-Builder-JSONRTE-Choose-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt48411cc2d529121e/6473c76fc5da54b00ab89508/Image-Preset-Builder-JSONRTE-Choose-Assets.png)
 - In the **Select Asset** Modal, you can add the original asset or the specific image preset. Click **Add Selected Asset** to add the selected asset or preset to the JSON Rich Text Editor field.
 
 **Note**: You can directly create a new preset version of the selected image to add to the JSON Rich Text Editor field.
 
 You can view the selected asset or preset in the JSON Rich Text Editor field.
 
-- Hover over the image to use the options to view in full screen, edit the image, edit the preset, and delete the asset or preset.
+- Hover over the image to use the options to view in full screen, edit the image, edit the preset, and delete the asset or preset.![Image-Preset-Builder-JSONRTE-Features](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3740e931a8223fd7/6473c76f08523c04f72e6062/Image-Preset-Builder-JSONRTE-Features.png)
 - Once done, **Save** and **Publish** your entry.
 
 ## Render Images using Image Preset Builder

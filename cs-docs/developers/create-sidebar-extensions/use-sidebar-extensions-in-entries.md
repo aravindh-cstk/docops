@@ -24,8 +24,8 @@ Once you have added a [Sidebar Extension](./about-sidebar-extensions.md) in your
 To use Sidebar Extensions in an entry, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 - In your stack, click on the “Entries” icon on the left navigation panel.
 - Select the content type for which you have enabled the Sidebar Extension.
-- [Create an entry](../../content-managers/author-content/create-an-entry.md), click on the "Sidebar Extensions"** **icon located on the right panel. Select the Sidebar Extension that you want to add to the entry from the drop-down menu.
-- Then, the selected Sidebar Extension will expand in the sidebar. Run it to see the results.
+- [Create an entry](../../content-managers/author-content/create-an-entry.md), click on the "Sidebar Extensions"** **icon located on the right panel. Select the Sidebar Extension that you want to add to the entry from the drop-down menu.![Use_Sidebar_Extension_in_Entries_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt4d895ecb2c8dd371/60b53ed6069dc90a315f6fd0/Use_Custom_Widgets_in_Entries_1_highlighted.png)
+- Then, the selected Sidebar Extension will expand in the sidebar. Run it to see the results.![Use_Sidebar_Extension_in_Entries_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb22a6c47186c9461/60b53ee18bf36608f2c02183/Use_Custom_Widgets_in_Entries_2_highlighted.png)
 
 Once done using the Sidebar Extension, click on the close (x) button.
 

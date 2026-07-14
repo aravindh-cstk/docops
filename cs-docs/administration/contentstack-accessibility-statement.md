@@ -79,7 +79,9 @@ If you have any questions or need further assistance regarding accessibility, pl
 For further guidance on accessibility standards and best practices, explore the following resources.
 
 - [WCAG Standards](https://www.w3.org/WAI/standards-guidelines/wcag/)
-- [Contentstack Browser Support](../developers/contentstack-basics/what-you-need-to-get-started.md)**Note**: Devices that exclusively use a touch interface are not supported.
+- [Contentstack Browser Support](../developers/contentstack-basics/what-you-need-to-get-started.md)
+
+  **Note**: Devices that exclusively use a touch interface are not supported.
 
 ## Common questions
 

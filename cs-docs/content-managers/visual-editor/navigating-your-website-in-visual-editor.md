@@ -25,7 +25,7 @@ To navigate through your website, log in to your [Contentstack account](https://
 
 - Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
-- The Visual Editor interface includes five key areas to help you navigate and manage your website efficiently:
+- The Visual Editor interface includes five key areas to help you navigate and manage your website efficiently:![Navigating_Your_Website_in_Visual_Editor_.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfa2329dba887351a/6992e64f8b33e4000870a3b1/Navigating_Your_Website_in_Visual_Editor_.gif)
   - **URL Bar**: Displays a list of all available web pages. It helps you quickly understand the structure of your site and switch between pages for editing.
   - **Canvas**: Serves as the main workspace where you can preview your site and make visual edits directly. It reflects real-time changes and simulates the live appearance of the page.
   - **Toolbar**: Appears over page components and provides contextual tools to move elements, add comments, apply field modifiers, and view detailed field information such as the field name and its associated content type.

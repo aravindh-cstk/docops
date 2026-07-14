@@ -26,9 +26,13 @@ To create user-defined fields within Assets, log in to your [Contentstack accoun
 - Navigate to **Assets** through “App Switcher” and select the **Fields** tab.
 - Click **+ New Field**.
 - In the **General** section, enter the following:**Name** (required): A unique name for the field with a maximum of **50 characters**.
-- **UID** (required): A unique field identifier that uses only letters, numbers, and underscores.**Note:** Once you save the field, you cannot change the UID.
+- **UID** (required): A unique field identifier that uses only letters, numbers, and underscores.
+
+  **Note:** Once you save the field, you cannot change the UID.
 - **Description** (optional): A short explanation of the purpose of the field.
-- In the **Fields** section, click the **Field Type** dropdown and choose a field as needed.**Additional Resource**: Refer to the [Field Types](./field-types.md) document for more information.
+- In the **Fields** section, click the **Field Type** dropdown and choose a field as needed.
+
+  **Additional Resource**: Refer to the [Field Types](./field-types.md) document for more information.
 - Use the **Field Properties** panel, which opens on the right, to configure the field behaviour. The available options vary by field type and can include:**Placeholder Text**: Enter sample text to show as a prompt in the field.
 - **Instruction Text**: Guide users on how to fill the field.
 - **Help Text**: Provide context that appears with the control.

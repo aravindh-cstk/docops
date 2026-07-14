@@ -51,12 +51,14 @@ Advanced Settings includes three integrated features that work together to strea
 To use Advanced Settings, perform the following steps:
 
 - Log in to your [Contentstack account](https://www.contentstack.com/login).
-- On the Dashboard page, click the **Developer Hub** icon as shown below:
+- On the Dashboard page, click the **Developer Hub** icon as shown below:![Developer_Hub_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd183a670891dc235/6908cfb85e75bb3ef8ed9139/Developer_Hub_Icon.png)
 - Click the **+ New App** button.
-- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](./introduction-to-contentstack-applications.md).**Additional Resource: **Refer to the [Creating an App in Developer Hub](./creating-an-app-in-developer-hub.md) document to know more about Standard and Machine to Machine app categories.
-- In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** and an optional **Description.**
+- Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](./introduction-to-contentstack-applications.md).
+
+  **Additional Resource: **Refer to the [Creating an App in Developer Hub](./creating-an-app-in-developer-hub.md) document to know more about Standard and Machine to Machine app categories.
+- In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** and an optional **Description.**![Create_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltec6001966cfb17c4/6909de707973062fe7a2a348/Create_App.png)
 - Click **Create**. You will be redirected to the UI Locations landing page.
-- To continue, go to the **Advanced** section. You will see the three integrated features, i.e., **Variables**, **Mappings**, and **Rewrites**.
+- To continue, go to the **Advanced** section. You will see the three integrated features, i.e., **Variables**, **Mappings**, and **Rewrites**.![Left_navigation.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt13d9bc8370323800/6909dd8e4d6a6bd93683e419/Left_navigation.png)
 
 Each section is explained in more detail below.
 
@@ -100,7 +102,7 @@ Each mapping refers to a value stored in [server configuration](./app-config-loc
 - Collect credentials from the App Config screen
 - Set customer-specific webhook URLs
 - Define environment-specific API endpoints (e.g., staging, production)
-- Allow customers to customize values as needed
+- Allow customers to customize values as needed![Gemini_Generated_Image_12kauq12kauq12ka.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt001d2d2fb4848bf7/69f2fede5ab0e4d1793bd0b1/Gemini_Generated_Image_12kauq12kauq12ka.png)
 
 ## Transitioning Existing Apps to Advanced Settings
 

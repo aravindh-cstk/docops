@@ -25,7 +25,7 @@ To set the connection limit for the webhooks in your organization, log in to you
 - Select the Organization from the dropdown on the header and click on the “Org Admin” icon in the left navigation panel.Or, you can simply click on the “Org Admin” cog beside the Organization that you intend to open.
 - Click on the **Webhook Configuration** tab on the left panel.
 - Enter the limit (between 2 to 100) in the **Connection Rate Limit** field.
-- Click **Save** to save your configuration
+- Click **Save** to save your configuration![Webhook_Configuration_in_Org_Admin.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc643f9c3f9b1b466/6628b0eb528fc1a2c755b3d3/Webhook_Configuration_in_Org_Admin.png)
 
 **Note**: Due to the distributed nature of systems, the actual message rate may occasionally exceed the enforced rate limit. For instance, if a rate limit of 50 per second is set, an endpoint might receive messages at a rate of 53 or higher.
 

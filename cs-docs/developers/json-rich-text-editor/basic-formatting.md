@@ -25,14 +25,14 @@ The following [inline text styles](./about-block-and-inline-elements.md#inline-e
 - **Strikethrough**: Used to show removed or deprecated content.
 - **Inline Code**: Useful for displaying code snippets or programming references within text.
 - **Superscript**: Used for mathematical notations or footnotes.
-- **Subscript**: Often used for chemical formulas or mathematical expressions.
+- **Subscript**: Often used for chemical formulas or mathematical expressions.![Example of subscript style in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt305ac2f68254e473/6819b8ab8850e6db1c278bf8/1-text-styles.gif)
 
 ## Formatting Options
 The following block-level formatting options enhance the content structure.
 - **Normal Text**: Default text block without any special heading or styling.
 - **Headings (H1 to H6)**: Used to organize content hierarchically.
 - **Block Quotes**: Used to emphasize quoted text or references.
-- **Code Snippets**: Displays pre-formatted blocks of code.
+- **Code Snippets**: Displays pre-formatted blocks of code.![Example of block code formatting in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt65fbb88dea27159c/6819b8ab7a3a7c0d1caa8923/2-formatting-options.gif)
 
 ## Layout and Spacing
 Layout and spacing options control how content is visually positioned within the editor.

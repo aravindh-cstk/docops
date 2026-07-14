@@ -52,8 +52,8 @@ To add this extension to your stack, log in to your [Contentstack account](https
 
 Go to your [stack](../set-up-stack/about-stack.md), click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.![Click on “+ New Extension” and select “Create new”](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt48fc2f196c2412ce/60be2e9b1b32a31d5305b4fb/Optimizely_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Click on “Custom Field”](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc903b95bdea7df35/61d88c378aabbf6426b751e0/Custom_Field_Card.png)
 - On the **Create New Extension **page, enter values in the fields as given below:
 
 **Title ***(required)*: Provide a suitable title, for example “Optimizely,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
@@ -82,7 +82,7 @@ Now, let’s understand how you can start using your custom field extension in y
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [Custom](../create-content-types/custom.md) field to it.
-- Under **Select Extension**, select the “Optimizely” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Optimizely” field that you created and set the other properties. You can add other fields as per requirements.![Select the “Optimizely” option](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt535e3480fc2149f3/60be2ea62d95121b9b3d0d6d/Optimizely_3_Highlighted.png)
 - Finally, click on either **Save **or** Save and Close** to save your changes.
 - Next, [create an entry](../../content-managers/author-content/create-an-entry.md)for this content type, and you will see the **Optimizely **field in action.
 

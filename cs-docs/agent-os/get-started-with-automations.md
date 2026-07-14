@@ -42,9 +42,9 @@ To get started with automations, you need to [create](/agent-os/managing-project
 
 To create a project, perform the steps given below:
 - Log in to your [Contentstack account](https://www.contentstack.com/login/).
-- After logging in, click the **App Switcher** icon, then select **Agent OS** from the list.
+- After logging in, click the **App Switcher** icon, then select **Agent OS** from the list.![App_Switcher_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt18dc201cc44f2470/699bdcf2da5d88000881eee1/App_Switcher_Icon.png)
 - Click **+ New Project**.
-- In the **Create New Project** modal, enter the **Project Name** (for example, Slack-automation), an optional **Description**, and click **Create**. You can also add Tags for your project as shown below.
+- In the **Create New Project** modal, enter the **Project Name** (for example, Slack-automation), an optional **Description**, and click **Create**. You can also add Tags for your project as shown below.![Create_Project.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd628baded5169da9/651ba2c1375d982bd89cdada/Create_Project.png)
 
 The above steps open the Agent OS Dashboard page.
 
@@ -57,7 +57,7 @@ Automations help you set up specific steps that will perform based on the specif
 First, perform the following steps to create an Automation:
 - In the top navigation panel, click **Automations**.
 - On the **Automations** listing page, click **+ New Automation**. From the dropdown, select **Create New.**
-- In the **Create Automation **modal, provide an **Automation Name** and an optional **Description**. Click **Create**.
+- In the **Create Automation **modal, provide an **Automation Name** and an optional **Description**. Click **Create**.![Create_New_automation.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteba2954e341f49a3/67c8092a39a3ca8277112357/Create_New_automation.png)
 - After entering the basic details of the automation in the above step, the next set of actions can be broadly classified into the following two main steps:  
       [Configure Trigger](#configure-trigger)
 - [Configure Action Step](#configure-action-step)
@@ -74,8 +74,10 @@ First, perform the following steps to create an Automation:
 
     Configuring a trigger can be broken into the following steps:
 - Click **Configure Trigger** from the left navigation panel.
-- **Choose Connector**: Here, you can select Contentstack or an available third-party app or service which will serve as the trigger connector. For example, click **HTTP**.**Note:** For more details on the “HTTP” Connector and other available connectors, refer to [Automate Connectors](../developers/automation-hub-connectors.md).
-- **Choose Trigger**: Select the Trigger or the webhook event listed under the selected connector. In our case, you will select the **HTTP Request Trigger.** This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.
+- **Choose Connector**: Here, you can select Contentstack or an available third-party app or service which will serve as the trigger connector. For example, click **HTTP**.
+
+  **Note:** For more details on the “HTTP” Connector and other available connectors, refer to [Automate Connectors](../developers/automation-hub-connectors.md).
+- **Choose Trigger**: Select the Trigger or the webhook event listed under the selected connector. In our case, you will select the **HTTP Request Trigger.** This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.![Choose_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt90416d94f2f39023/659a7c21254eff8a34747e5a/Choose_Trigger.png)
 - **Configure Trigger**: Here, you need to provide additional details with respect to the trigger you selected in the above step. This section will differ for each trigger. For our example, click the displayed **Method**, i.e., **GET/POST**. You can also enable the **Secure HTTP Trigger** using the toggle to add security to the HTTP trigger and click **Proceed**.**Note:** For more information, refer to the[ HTTP Trigger](./http-trigger.md) documentation.
 
         You will find the applicable **Input methods** and an **Input URL** in the **Test Trigger** section.
@@ -95,12 +97,14 @@ First, perform the following steps to create an Automation:
 - Return to your **Test Trigger** setup page and click **Restest**. In the output, you will see your query parameter as follows:  
 `query:
 name:"john"`  
-            Here’s what you see
+            Here’s what you see![Save_and_Exit-trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2c1446aedacd91de/659a7e68be5d266ae365ab5b/Save_and_Exit-trigger.png)
 - The **Apply Trigger Conditions** section lets you filter the data displayed in the output. For example, if you want your trigger to proceed further with the configured actions, under the condition that the name parameter (the one you passed in the above step) is “scott” in the output result, click **+ Add Trigger Condition** and pass the following filter condition:  
 `query.name | Matches (Text) | scott`
 - Lastly, you can either pass a new query parameter and **Retest **the trigger or hit **Save and Exit** (see screenshot in **step 3**).
 - This completes your step of configuring your HTTP trigger.
-- **Note:** You will find more details on how to [rename a trigger](../developers/automation-hub-guides/rename-trigger.md) and [delete a trigger](../developers/automation-hub-guides/delete-trigger.md) in the "[Working with Automate](https://www.contentstack.com/docs/developers/automation-hub-guides#working-with-automate)" section.
+- 
+
+  **Note:** You will find more details on how to [rename a trigger](../developers/automation-hub-guides/rename-trigger.md) and [delete a trigger](../developers/automation-hub-guides/delete-trigger.md) in the "[Working with Automate](https://www.contentstack.com/docs/developers/automation-hub-guides#working-with-automate)" section.
 
 ### Configure Action Step
 
@@ -113,17 +117,19 @@ name:"john"`
     **Note:** You can click the** Add any additional context or notes relevant to this section **text to add any additional details about the action step.
 - Click **Configure Action Step** from the left navigation panel.
 - Click** Action Step** to configure third-party services.
-- **Choose Connector**: Click the connector (Contentstack or a third-party app or service) where you want your workflow to perform the next set of actions. In our case, click **Slack**.
-- **Choose an Action**: Select the action listed under the selected connector, Slack. In our case, select **Send Message** that will send a message to a specific Slack channel that you choose.
+- **Choose Connector**: Click the connector (Contentstack or a third-party app or service) where you want your workflow to perform the next set of actions. In our case, click **Slack**.![Select_Slack_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4d4add08399df588/659a7c6bbb2e10197d012258/Select_Slack_Connector.png)
+- **Choose an Action**: Select the action listed under the selected connector, Slack. In our case, select **Send Message** that will send a message to a specific Slack channel that you choose.![Select_Slack_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85675cfa86286269/659a7c5c14672fb5be6fadea/Select_Slack_Action.png)
 - **Configure Action**: Here, you need to provide additional details for the action you selected in the above step. This section will differ for each action. For our example, we will add the Slack account.  
           Click **+ Add New Account** (add Slack account).
-- You will see a list of permissions that you can choose to **Authorize**.**Additional Resource:** Refer to the Slack connector documentation to know more about the permissions.
-- Next, you will see a window open with access requests from the app. Click **Allow **to proceed further.
-- Enter a **Title **for this account, say “Allow-Slack-access” and click **Save**.
+- You will see a list of permissions that you can choose to **Authorize**.
+
+  **Additional Resource:** Refer to the Slack connector documentation to know more about the permissions.
+- Next, you will see a window open with access requests from the app. Click **Allow **to proceed further.![Allow-Access-Slack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfd2cde0a08775432/63d8afda5b2c1e6188c567cc/Allow-Access-Slack.png)
+- Enter a **Title **for this account, say “Allow-Slack-access” and click **Save**.![Save_an_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8751777c2ada6000/659a7c2e0543c560408f3711/Save_an_Account.png)
 - Next, click the **Channel **textbox. It displays a **Lookup list** containing all the channels in your Slack account. Click **Load More** until you locate your channel.  
-For our example, select the **sample** channel, and its name is displayed in the entry box.
-- Click the **Message **textbox. You will see all the values related to the “1.HTTP Request trigger” you set up earlier. Click a parameter, say `query.name`, that you want to send as a message to the selected Slack channel.  
-For example, if you want to send the `name` param, select `query.name` and type ahead a message if needed, say “1.query.name has sent a GET/POST request”.
+For our example, select the **sample** channel, and its name is displayed in the entry box.![Select_Slack_Channel.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteb1ecc953f705ff1/67c8092a21a60e396ea4829b/Select_Slack_Channel.png)
+- Click the **Message **textbox. You will see all the values related to the “1.HTTP Request trigger” you set up earlier. Click a parameter, say `query.name`, that you want to send as a message to the selected Slack channel.![Query_Name.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7d70071a6e0d526f/659a7c2fa8ee43b6ee19aaf0/Query_Name.png)  
+For example, if you want to send the `name` param, select `query.name` and type ahead a message if needed, say “1.query.name has sent a GET/POST request”.![Slack_Message.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt057ad2174e54fd21/67c809e4d1b1de1796ca9427/Slack_Message.png)
 - Once done, click **Proceed**.
 - **Test Action**: Finally, you can test the configuration you have set up by clicking on the **Test Action** button.The output shows the message that will be sent on the linked Slack channel.
 

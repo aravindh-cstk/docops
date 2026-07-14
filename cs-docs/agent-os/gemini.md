@@ -25,17 +25,17 @@ To use the Gemini connector, you first need to connect your [Google AI Studio](h
 - [Log in to your Contentstack account](https://www.contentstack.com/login) and click the **Automate **icon from the left navigation panel.
 - Select your project and then the automation.
 - Click **Configure Action Step** from the left navigation panel and then **Action Step** to configure third-party services.
-- Within the **Choose Connector**, click the **Gemini **connector.
-- Under **Choose an Action**, select the **Chat **action.
-- In the **Configure Action** section, click **+ Add New Account **to add your Google AI Studio account.
+- Within the **Choose Connector**, click the **Gemini **connector.![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9a32e17a08ea982c/67e4e8a703068d267ca21901/Select_Connector.png)
+- Under **Choose an Action**, select the **Chat **action.![Screenshot 2025-05-05 at 12.10.32 PM.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4a0c8107a6008bb1/681871c99b09253e91def71c/Screenshot_2025-05-05_at_12.10.32_PM.png)
+- In the **Configure Action** section, click **+ Add New Account **to add your Google AI Studio account.![Add_an_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd4981f6437abb488/67e11231460eb479a79483df/Add_an_Account.png)
 - In the **Authorize **modal, provide details such as **Title**, and **API Key **from the Google AI Studio.To generate an API key in Google AI Studio, follow the steps below:
 
       Go to the [Google AI Studio](https://aistudio.google.com/app/apikey).
 - Click the **Get API key **option in the top navigation and then click the** + Create API key** button.
 - From the **Search Google Cloud projects** drop-down, select an existing Google Cloud project.
-- Once done, click **Create API key in existing project** button.
+- Once done, click **Create API key in existing project** button.![Create_API_Key.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0434bd761987f5ae/67e11383efd8a912214c0dd7/Create_API_Key.png)
 - In the **API key generated** popup, click **Copy** to to copy the key.
-- Click the **Authorize **button.
+- Click the **Authorize **button.![Authorize_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf118b1a64f6c6f39/67e11230f7eccc6ca690e43a/Authorize_Button.png)
 
 This sets up your Google AI Studio account for the Gemini connector.
 
@@ -53,19 +53,21 @@ The Chat action returns the chat response(s) from the Gemini model. To use the C
 - Under **Choose an Action **tab, select the **Chat** action.
 - On the **Chat Configure Action **page, enter the details given below:
       Click** + Add New Account** button to connect your Gemini account as shown in the [Prerequisites](#prerequisites) step.
-- Select the **Model **from the dropdown list to generate content for the chat responses.**Note:** Different models are available to different users, based on the account the user holds such as paid accounts. You must check your account access before selecting the model.
-- Click the **+ Add System Instruction Text** button to provide specific guidance or directives to the model to help it understand the context and generate an appropriate response based on the provided prompt text.
+- Select the **Model **from the dropdown list to generate content for the chat responses.
+
+  **Note:** Different models are available to different users, based on the account the user holds such as paid accounts. You must check your account access before selecting the model.
+- Click the **+ Add System Instruction Text** button to provide specific guidance or directives to the model to help it understand the context and generate an appropriate response based on the provided prompt text.![Select_Model_Instruction_Text.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf5d04ff1fa5c23c1/67e4e8a6f483927e901580a4/Select_Model_Instruction_Text.png)
 - Select a** User Prompt** (text or image) to generate response(s).Click** + Add User Prompt **to enter multiple prompts.
 
         When **Text **prompt is selected:
 
           From the **Select Message Type** drop-down, select the **Text **type.
-- In the **Input Text** field, enter the input text to generate a response.
+- In the **Input Text** field, enter the input text to generate a response.![Messgae_Type_Text.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5ebb0762749761f0/67e11231bbf93e13605879c5/Messgae_Type_Text.png)
 
         When **Image **is selected:
 - From the **Select Message Type** drop-down, select the Image type.
 - In the **Image URL **field, enter the URL of the image.
-- Select the **MIME** **Type **for the image.
+- Select the **MIME** **Type **for the image.![Message_Type_Image.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd0d5f8656e178be6/67e112312d0b988b56fd1155/Message_Type_Image.png)
 - Click the **Show Optional Fields** toggle button to use these optional fields:
           Select the **Response Type** as either Text, **JSON **or **Structured Output**. For the **Response Type **as **JSON **or **Structured Output**, the output is produced in a valid JSON format.When selecting **Structured Output **as the Response **Type**, you must provide a valid JSON-formatted structured schema to ensure a properly formatted response.
 
@@ -80,10 +82,10 @@ The Chat action returns the chat response(s) from the Gemini model. To use the C
 - Enter the **Top-P** value to define how the model selects tokens for output. For instance, if tokens A, B, and C have probabilities of 0.3, 0.2, and 0.1; then entering a Top-P value as 0.5, the model chooses either A or B as the next token using temperature and excludes C. This must be within the range of **0 to 1**.
 - Enter the **Top-K **value to define how the model selects tokens for output. Entering a Top-K value of 1 implies that the next chosen token is the most likely among all tokens in the model's vocabulary. Top-K value of 3 means that the next token is selected from the three most probable tokens using temperature. This must be within the range of **1 to 40**.
 - Enter the **Count of Response** to fetch the desired number of responses for the user prompt. If you enter **5**, then **5 responses **will be displayed in the output.
-- You can mark the **Sanitize text **checkbox to remove special characters or spaces from the chat response. Enabling this checkbox, eliminates any special characters or spaces in the chat response, resulting in a clean and compatible text.
+- You can mark the **Sanitize text **checkbox to remove special characters or spaces from the chat response. Enabling this checkbox, eliminates any special characters or spaces in the chat response, resulting in a clean and compatible text.![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt37d8ff7f2b452b35/67e112310c6f55535a1fda95/Show_Optional_Fields.png)
 - Click **Proceed**.
 - Check if the details are correct. If yes, then click **Test Action**.
-- You will get the response(s). Once set, click **Save and Exit**.
+- You will get the response(s). Once set, click **Save and Exit**.![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt53551746c09b308b/67e11231c566eed0c95e0c70/Save_Exit.png)
 
 ### Translate an Entry
 
@@ -93,14 +95,14 @@ The Translate an Entry action returns the translated entry data in the response.
       Click **+ Add New Account **button to connect your Gemini account as shown in the [Prerequisites](#prerequisites) step.
 - Select the **Model** from the dropdown list for response predictions.
 - In the **Entry** **Data** field, enter the entry data to translate.
-- In the **Content** **Type** **Schema** field, enter the content type schema for translating the entry data.You can fetch the **Entry** **Data** and **Content** **Type** **Schema** from the previous step using the [Get a Single Content Type](./contentstack-management-content-types-actions.md#get-a-single-content-type) and [Get a Single Entry](./contentstack-management-entries-actions.md#get-a-single-entry) actions.
+- In the **Content** **Type** **Schema** field, enter the content type schema for translating the entry data.You can fetch the **Entry** **Data** and **Content** **Type** **Schema** from the previous step using the [Get a Single Content Type](./contentstack-management-content-types-actions.md#get-a-single-content-type) and [Get a Single Entry](./contentstack-management-entries-actions.md#get-a-single-entry) actions.![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb716f6d5e1aaaa4c/681858e78850e6674d277e01/Select_Fields.png)
 - In the **Select** **Language** drop-down, select the language in which you want to translate the entry data.
 - Click the **Show Optional Fields** toggle button to use these optional fields:
           Provide the **Prompt** **Text** to generate the response. This offers additional capabilities to customize the translated entry data.
-- Enter the **Number** **of** **Tokens** to generate the content. By default, the token limit is **2000**.
+- Enter the **Number** **of** **Tokens** to generate the content. By default, the token limit is **2000**.![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltec4add34d2922f74/681858e7ae96e74921d389ad/Show_Optional_Fields.png)
 - Click **Proceed**.
 - Check if the details are correct. If yes, then click **Test Action**.
-- You will get the response(s). Once set, click **Save and Exit**.
+- You will get the response(s). Once set, click **Save and Exit**.![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcb381f5251eadf86/681858e779652b727a649223/Save_Exit.png)
 
 This completes the **Gemini **connector’s setup.
 

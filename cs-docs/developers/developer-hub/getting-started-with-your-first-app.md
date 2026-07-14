@@ -43,11 +43,11 @@ This command allows you to create or register an app in [Developer Hub](../devel
 ```
 csdx app:create
 ```
-- You will be prompted to enter a name for the app.
-- Enter a name for your app and click enter. As per our example, we are using color picker.
-- You will be prompted to choose an organization.
+- You will be prompted to enter a name for the app.![App_Name.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte53e962915817136/65b23c279515001817a71f66/App_Name.png)
+- Enter a name for your app and click enter. As per our example, we are using color picker.![App_Name_Colorpicker.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte80c6789bf945e0c/65b23c2741787580ea674512/App_Name_Colorpicker.png)
+- You will be prompted to choose an organization.![Organization_Name.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt815897af4bfe2f90/65f82eb0edb2c70b17371d50/Organization_Name.png)
 - Enter **Y **i.e. Yes, if you want to fetch the app template from GitHub (recommended). This clones the latest Marketplace App Boilerplate for stack apps.
-Your boilerplate will be cloned locally in the `color-picker` directory and the app is automatically registered in Developer Hub.
+![Fetch_Template.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3525551d154b8be3/65b23c275cdaec184a3b76a8/Fetch_Template.png)Your boilerplate will be cloned locally in the `color-picker` directory and the app is automatically registered in Developer Hub.
 - Switch to the newly created project directory from CLI using the following command.
 ```
 cd color-picker
@@ -69,14 +69,14 @@ Run the following commands in a **separate console window** to keep the server r
 ```
 csdx app:install
 ```
-- The CLI prompts you to select the organization and stack to install the app.
-- Once done, you will see the stack URL for quick access to the stack. Open the Stack via the URL displayed in the terminal.
-- Go to the stack in which you have installed the app. Create a new content type or navigate to an existing one. Select the **Sample Custom **field to add the Color Picker app.
-- In the **Select Extensions or App** popup, select the Color Picker app.
+- The CLI prompts you to select the organization and stack to install the app.![Select_Stac.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltefa339780863e963/65b23c2860a275c5747fb6e9/Select_Stac.png)
+- Once done, you will see the stack URL for quick access to the stack. Open the Stack via the URL displayed in the terminal.![Terminal_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte9b7f9cfd3fc715d/65b23c28292a0ebb6487c184/Terminal_URL.png)
+- Go to the stack in which you have installed the app. Create a new content type or navigate to an existing one. Select the **Sample Custom **field to add the Color Picker app.![Select_Custom_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3cf58a5358e2ebb4/65b23c2824ea49a6c8de4a4c/Select_Custom_Field.png)
+- In the **Select Extensions or App** popup, select the Color Picker app.![Select_Extension_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfdf29e9b4df4ce74/65b23c288fc5c0e55b0bb447/Select_Extension_App.png)
 - Click **Proceed**.
 - Click **Save or Save and Close** to update and save your changes to the content type.
 - Navigate to the entries page. Create an entry for the above content type to see the app in action.
-You will see a custom field as shown above.
+![Custom_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt575eb671d8ff4c1e/65b23c286f1607451c394e30/Custom_Field.png)You will see a custom field as shown above.
 
 ### Implement your Business Logic
 For the Color Picker app, you **must **install some dependencies. Run the following command on a terminal to install the dependencies.
@@ -216,7 +216,7 @@ CustomField: {
 ```
 npm start
 ```
-- Revisit the entry page to see the Color Picker loaded into the custom field.
+- Revisit the entry page to see the Color Picker loaded into the custom field.![Revisit_Image.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7d7d877ebc4e7e5c/65b23c29316f0d0675aa0c7f/Revisit_Image.png)
 - Save any color and reload, and verify if the app is saving data and fetching it on reload.
 
 ### Next Steps

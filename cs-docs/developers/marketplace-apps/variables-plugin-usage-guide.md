@@ -55,9 +55,9 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **Variables** app and click the **Install App** button.
-- In the popup window, select the stack where you want to install the Variables app and click the **Install** button.
-- To configure your plugin, enter the **Content Type UID** from which data for the variable will be rendered, and the **Field** name.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- In the popup window, select the stack where you want to install the Variables app and click the **Install** button.![Variables-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd8909bbe0a9bd51b/64b90244ff3e9bb5f84d76f7/Variables-Install-App.png)
+- To configure your plugin, enter the **Content Type UID** from which data for the variable will be rendered, and the **Field** name.![Variables-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc7079d8072f27256/65b7f3b508561660f15e0d6f/Variables-Configuration.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Variables-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt69f426db16056038/65b7f3b5d2067b3d8a8c5ad2/Variables-UI-Locations.png)
 
 **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 
@@ -73,7 +73,7 @@ Go to your stack and click the **Content Models** icon on the left navigation pa
 - Under **Select Plugin**, select the **Variables **plugin, and click the **Add Plugin(s)** button.
 - After adding the plugin, click **Save** or **Save and Close** to save your changes.
 - Now, create an entry for the **Product **content type.
-- Within your JSON Rich Text Editor, add your content and click the **Insert Variable** icon to add variable data from the **Discount Codes** content type:
+- Within your JSON Rich Text Editor, add your content and click the **Insert Variable** icon to add variable data from the **Discount Codes** content type:![image2.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt4c5b053259fc996d/6386e2c11695dc10ab9252ae/image2.jpg)
 - From the options, select the discount codes you want to add within your content and click the **Add **button.
 
 Your content with the variable Discount Codes data looks as follows:

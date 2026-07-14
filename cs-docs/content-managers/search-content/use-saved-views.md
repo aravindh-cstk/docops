@@ -30,16 +30,18 @@ After selecting a view, any changes you make to the search settings or filters w
 - **Update the view**: Modify the existing view with new filters or settings.
 - **Save as new view**: Save the modified view as a new one without altering the original.
 - **Clear recent changes**: Revert any changes made during the current session to restore the view to its last saved state.
-- **Reset to all entries**: Revert back to the default "All Entries" view, which removes any applied filters or view settings.
+- **Reset to all entries**: Revert back to the default "All Entries" view, which removes any applied filters or view settings.![Use-Saved-Views-2.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb60c628eec4ef509/6842e59316704dd64af46a33/2-save-a-view.gif)
 
 ## Manage Saved Views
 
 For any saved view, click the vertical ellipsis next to it to see the following options:
 - **Rename**: Change the name of your saved view.
 - **Share**: [Share](./shared-views.md) the view with users or roles in your stack.
-- **Copy Link**: Share the view link with collaborators for quick access.**Note**: Anyone with the link can access the view and save it as a new view.
+- **Copy Link**: Share the view link with collaborators for quick access.
+
+  **Note**: Anyone with the link can access the view and save it as a new view.
 - **View Details**: See key information, including the creator, last modified date, and access permissions.
-- **Delete**: Permanently remove the view if it’s no longer needed. For shared views, the owner can either remove it for all users or transfer ownership to another user before removing it for themselves.
+- **Delete**: Permanently remove the view if it’s no longer needed. For shared views, the owner can either remove it for all users or transfer ownership to another user before removing it for themselves.![3._delete_a_saved_view.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt32f27dbb21b385e3/6842e59216704d7f7ef46a2f/3._delete_a_saved_view.png)
 
 With saved views, you can quickly switch between different search scenarios, saving your time and effort. This feature ensures that your search configurations are always easily accessible, making content management in Contentstack more efficient and organized.
 

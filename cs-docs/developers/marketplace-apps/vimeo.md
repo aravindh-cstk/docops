@@ -37,9 +37,11 @@ Let's follow this step-by-step guide to install and configure the Vimeo app with
 
 To get the access token for Vimeo, follow the steps given below:
 
-Log in to the [Vimeo account](https://vimeo.com/join) using your Vimeo account credentials.**Note**: To add videos to your Vimeo account, click the **Upload** button. Then, on the next screen, you can drag-and-drop the videos, or click the **Choose files** button, select the videos, and add them to your account.
-- Now, go to Vimeo’s [developer](https://developer.vimeo.com/) page and click the **+ Create an app** button at the top right corner.
-- Enter the **App name** and a **Brief description** of your app. Please note that these are mandatory fields. Then, choose who can access your app, accept the terms and conditions, and click **Create App**.  
+Log in to the [Vimeo account](https://vimeo.com/join) using your Vimeo account credentials.
+
+**Note**: To add videos to your Vimeo account, click the **Upload** button. Then, on the next screen, you can drag-and-drop the videos, or click the **Choose files** button, select the videos, and add them to your account.
+- Now, go to Vimeo’s [developer](https://developer.vimeo.com/) page and click the **+ Create an app** button at the top right corner.![Vimeo-Account-Developer-Create-An-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt49a920bb9b3953bc/651f1abe96bebf739ca05fae/Vimeo-Account-Developer-Create-An-App.png)
+- Enter the **App name** and a **Brief description** of your app. Please note that these are mandatory fields. Then, choose who can access your app, accept the terms and conditions, and click **Create App**.![Vimeo-Account-Developer-Create-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt51b0b8ac59aa65de/651f1abe024b46b698de3a6a/Vimeo-Account-Developer-Create-App.png)  
   The app gets created successfully.
 - Now, open your newly created app. Click the **Authentication** tab in the left navigation panel and select **Generate Access Token**.  
   To get the access token, select the **Authenticated (you)** option. Under the **Scopes** section, select **Private** and click the **Generate** button.
@@ -55,11 +57,13 @@ Follow the steps given below to install the application in Contentstack.
 Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see all the available apps. Hover over the **Vimeo** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the Vimeo app, accept the terms and conditions, and click the **Install** button.
+- Within the Marketplace, you can see all the available apps. Hover over the **Vimeo** app and click **Install**.![Vimeo_app_Install.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amcf9b1fa3c172c61f/1cf91fefd2604a6a242641dc/Vimeo_app_Install.png?locale=en-us)
+- In the pop-up window, select the stack where you want to install the Vimeo app, accept the terms and conditions, and click the **Install** button.![Vimeo-App-Install.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltecc048333de7e1a3/661cd55a0aca6b1dcb3272e9/Vimeo-App-Install.png)
 - On the **Configuration** screen, enter the following details:  
   **Vimeo Access Token**: Enter the **Vimeo Access Token** retrieved from your Vimeo Account in [Step 1](#retrieve-the-access-token-from-the-vimeo-account).
-- **Folder Settings**: Folder settings allows you to fetch videos directly from specific folders. To enable the Folder settings option, click the toggle button. You will see the **Get Folders** button. Click on it to fetch all folders and then select them in the dropdown.**Note**: Enabling the Folder settings will not impact the videos already stored in the entry.
+- **Folder Settings**: Folder settings allows you to fetch videos directly from specific folders. To enable the Folder settings option, click the toggle button. You will see the **Get Folders** button. Click on it to fetch all folders and then select them in the dropdown.
+
+  **Note**: Enabling the Folder settings will not impact the videos already stored in the entry.
 - **Choose the Vimeo Keys to Save in Entry**: Choose how to save the data fetched from the Vimeo account in Contentstack entries.  
   If you select the **All Fields** option, you can select only a limited number of videos in the entry.
 - For **Custom Fields**, you can search and add specific Vimeo Keys you want to save in entries.
@@ -69,9 +73,11 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 If you select **Custom Fields** then the **Vimeo Keys** dropdown appears. By default, **uri**, **name**, **link**, **pictures.base_link**, and **description** options are already selected inside the dropdown. If you want to create a new key, click the **+ New Key Field** option.
 
 In the **Add Key Path** modal, enter the **Vimeo Key Path** and click the **Create** or **Create and Apply** button to create a new key.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Vimeo-UI-Locations.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb264f54f0688befe/661cd5961dd1e9de89c6ad66/Vimeo-UI-Locations.png)
 - Click the **Save** button.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.
+
+  **Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Vimeo application.
 
 ## Use the Vimeo app within your Stack Entry
@@ -82,7 +88,7 @@ Pop-ups should be enabled.
 
 To use the Vimeo application within an entry of your stack, follow the steps given below:
 - Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
-- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:
+- [Create a content type](../create-content-types/create-a-content-type.md) by adding relevant details as displayed below:![Vimeo-Content-Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta2ffdbd8e1670799/661cd55aff37646cf9691938/Vimeo-Content-Type.png)
 
 There are two ways to use the Vimeo application in your entry:
 - [Custom Field](#steps-to-use-the-vimeo-application-using-a-custom-field)
@@ -95,8 +101,8 @@ There are two ways to use the Vimeo application in your entry:
 Change the **Display Name** of the custom field to your choice, for example, **Vimeo Custom Field**. Optionally, you can add **Help Text** and **Instruction Value** for your custom field. This adds the Vimeo app in the custom field.
 - After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
 - To use the Vimeo app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **+ New Entry** to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the above content type, and then click **Proceed**.  
-  You can see the Vimeo app’s custom field on your entry page as shown below:
-- Click the **+ Choose Video(s)** button.
+  You can see the Vimeo app’s custom field on your entry page as shown below:![Vimeo-JSONRTE-Sample-Entry.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta7c36f3e1d767c1b/661cd587188d352be72da25c/Vimeo-JSONRTE-Sample-Entry.png)
+- Click the **+ Choose Video(s)** button.![Vimeo-Custom-Field-Choose-Videos-Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7eeadd61f54241f4/661cd5869cbc2a6311a9c2b3/Vimeo-Custom-Field-Choose-Videos-Button.png)
 - Select the video(s) from your Vimeo selector page and click the **Add Videos(s)** button to add them to your entry.
 
 **Note**: You can add multiple videos in one go.
@@ -129,7 +135,7 @@ The videos you insert get referenced within your entry in the list view.
 This adds Vimeo in the JSON Rich Text Editor field.
 - After adding the app in a JSON Rich Text Editor field, click **Save** or **Save and Close** to save your changes.
 - To use the Vimeo app as a JSON RTE plugin, create an entry for this content type. You will see the Vimeo app icon inside the JSON RTE field in your entry page as shown below:
-- Click the **Vimeo** app icon.
+- Click the **Vimeo** app icon.![Vimeo-JSONRTE-App-Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8ab2dc95f95af047/661cd5879cbc2a8c9ca9c2b7/Vimeo-JSONRTE-App-Icon.png)
 - Select the video(s) from your Vimeo selector page and click the **Add Videos(s)** button to add them to your entry.
 
 **Note**: You can add multiple videos in one go.

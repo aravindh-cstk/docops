@@ -24,7 +24,7 @@ The bulk publish feature allows you to publish multiple entries along with their
 To bulk publish entries, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
 - Use the checkboxes to select the entries you want to publish.
-- After selecting the entries, click the **Publish** option in the floating panel that appears.
+- After selecting the entries, click the **Publish** option in the floating panel that appears.![Bulk_Publish_Entries_PublishIcon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta5d82ab37735ef52/6764e41d93a84baf1da341ea/Bulk_Publish_Entries_PublishIcon.png)
 - In the **Publish Entries** modal:
       **Select Environment(s)**: Select the environment(s) where the entries will be published.
 - **Select Language(s)**: Select the locale(s) in which you want the entries published. If localized content exists, it will be selected by default.

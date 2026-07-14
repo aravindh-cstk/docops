@@ -33,7 +33,7 @@ Contentstack enables users to filter and view entries localized in the selected 
   - In the **Language** dropdown, select the desired language.
   - In the **Localized in** dropdown (located within the same menu), select the same language again.
     - **For example:** To view localized entries in Chinese, select “Chinese” as the language and select “Chinese” again in the Localized in dropdown.
-  - Alternatively, enable the **Show localized only** toggle and select one or more languages as needed.
+  - Alternatively, enable the **Show localized only** toggle and select one or more languages as needed.![Show Localized Only toggle example](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3a906fde7e47a706/6842b60ba38f5d989dec8f9a/2._show_localized_entires_-_method_2.png)
 - Click **Apply** to save your preferences.
 
 The entries list now displays only those entries explicitly localized in the selected language.

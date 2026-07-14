@@ -31,11 +31,11 @@ Let’s take a closer look at how versions can be browsed.
 To view and create versions of an app via the Developer Hub interface, login to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps given below:
 - Navigate to the app you created. In the left navigation panel, click the **Developer Hub **icon to navigate to it.
 - You will be directed to the app dashboard where you will see all the apps created so far. Select an app to get started. For example, click **Sample **to view the app information.
-- By default, the app's **Basic Information **page will open. You will see a **Version **drop-down with the latest version selected.
+- By default, the app's **Basic Information **page will open. You will see a **Version **drop-down with the latest version selected.![Basic_Info_Version.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbed2c03845c6ce27/659e7a27fadb3aad42c39fcc/Basic_Info_Version.png)
 - Click the **Version **dropdown, to see a list of all the versions created for the app.You can preview a specific version of your app by clicking the preferred version from the dropdown.
 
     Details such as version number, creator name, date, and the version creation date and time is displayed for individual versions in the dropdown.
-- To restore your app to this selected version and set it as the latest version, click the **Yes,** **Restore **button.
+- To restore your app to this selected version and set it as the latest version, click the **Yes,** **Restore **button.![Basic_Information.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5bb3ac98a076ce2e/68493da8b037914d232b5f0c/Basic_Information.png)
 - A confirmation pop-up appears, click **Yes, Restore** to confirm the changes.
 
 ## Version Logs

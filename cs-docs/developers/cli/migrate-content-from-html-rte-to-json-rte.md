@@ -78,7 +78,9 @@ Let's learn how to use this method through the following steps:
 - Copy the above config code, open any code editor, paste the code and add the required parameters as shown below:  
   `alias`: Enter the alias name.
 - `content-type`: Specify the UID of the content type of which you want to migrate the HTML RTE content.
-- `global-field`: Set this flag to **true** if the content type is a global field. It is set to false by default.**Note**: Remember to set the **global-field** flag to** true** in your config file if you are migrating RTE content present in the global field.
+- `global-field`: Set this flag to **true** if the content type is a global field. It is set to false by default.
+
+  **Note**: Remember to set the **global-field** flag to** true** in your config file if you are migrating RTE content present in the global field.
 - `from`: Enter the path to the HTML RTE field of which you want to migrate content.
 - `to`: Enter the path to the JSON RTE field to which you want to migrate the HTML RTE content.
 - `delay` (*optional*): Set the interval time between the migration of HTML RTE to JSON RTE in subsequent entries of a content type. The default value is **1,000** milliseconds.
@@ -109,8 +111,8 @@ csdx cm:entries:migrate-html-rte -c “/home/admin/Desktop/config.json"
 ```
 
 **Tip**: Enclose the config file path in inverted commas if you are using a Windows system and the path to your respective RTE field contains a "space".
-- After running the above command, the CLI will display the config file you specified and ask if you would like to continue with the configuration. Type "yes" to initiate the migration process.
-- Now go to your stack and refresh the page; the content from your existing RTE field will reflect in the JSON RTE field as shown below:
+- After running the above command, the CLI will display the config file you specified and ask if you would like to continue with the configuration. Type "yes" to initiate the migration process.![Migrate_RTE_SS1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltacd73c5b36dbcf4e/6480623bd2420474171ca3b8/Migrate_RTE_SS1.png)
+- Now go to your stack and refresh the page; the content from your existing RTE field will reflect in the JSON RTE field as shown below:![JSON_RTE_Migration_Output_GIF.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt73140db039bb73a2/60f1248d2a120025e584787b/JSON_RTE_Migration_Output_GIF.gif)
 
 This completes your content migration process using the CLI. Your content is migrated to the new JSON RTE field by using the parameters you specified in the config file.
 

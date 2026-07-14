@@ -69,8 +69,8 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace **icon to go to the Marketplace.
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **Elastic Path Commerce Cloud **app and click the **Install App **button.
-- In the popup window, select the stack where you want to install the Elastic Path Commerce Cloud app and click the **Install** button.
-- On the **Configuration **screen, enter the following details retrieved from your Elastic Path Commerce Cloud Account:
+- In the popup window, select the stack where you want to install the Elastic Path Commerce Cloud app and click the **Install** button.![Elastic-Path-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcea2b856cf2acdb0/64b9050ab6e66540e1510bfb/Elastic-Path-Install-App.png)
+- On the **Configuration **screen, enter the following details retrieved from your Elastic Path Commerce Cloud Account:![Elastic-Path-Config-Screen.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2a9182698f56d10f/643d90533e745b11edf8181a/Elastic-Path-Config-Screen.png)
   - **Login Base URL**: The URL used to log in to the Elastic Path Commerce Cloud account.
   - **API Base URL**: The API Base URL retrieved from the Elastic Path Commerce Cloud account.
   - **Client ID**: The Client ID retrieved from the Elastic Path Commerce Cloud account.
@@ -87,22 +87,22 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 To use the Elastic Path Commerce Cloud application within an entry of your stack, follow the steps given below:
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![Elastic-Path-Content-Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt42e339e13011f59a/643d9052686ac411e37e3d6c/Elastic-Path-Content-Type.png)
 - In the Content Type Builder page, add a Custom field for hierarchy in your content type by clicking the **Insert a field** link represented by a **+ **sign.
-- Under **Select Extension/App**, select **Elastic Path - Hierarchy Field **and click the **Proceed **button.
+- Under **Select Extension/App**, select **Elastic Path - Hierarchy Field **and click the **Proceed **button.![Elastic-Path-Hierarchy-Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3dbbaeb5caed795f/643d9053a39e8e5aa0f4560b/Elastic-Path-Hierarchy-Field.png)
 - Add another Custom field for product in your content type by clicking the **Insert a field **link represented by a **+ **sign.
-- Under **Select Extension/App**, select **Elastic Path - Product Field **and click the **Proceed **button.
-- After adding the custom fields for the app, click **Save** or **Save and Close** to save your changes.
+- Under **Select Extension/App**, select **Elastic Path - Product Field **and click the **Proceed **button.![Elastic-Path-Product-Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8de4540b3f1cb3b8/643d905ca4989052e0336ee7/Elastic-Path-Product-Field.png)
+- After adding the custom fields for the app, click **Save** or **Save and Close** to save your changes.![Elastic-Path-Custom-Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt907f349d7a90713e/643d90530736ac330839a9d8/Elastic-Path-Custom-Fields.png)
 - In the left navigation panel, navigate to the Entries page and click **+ New Entry** to create a new entry for the above content type. And then click **Proceed**.
-You will see the Elastic Path Commerce Cloud app's custom fields on your entry page, as shown below:
-- Click the **Add Hierarchy(ies) **button, select the hierarchies from your Elastic Path Commerce Cloud store, and add them to your entry.
+You will see the Elastic Path Commerce Cloud app's custom fields on your entry page, as shown below:![Elastic-Path-Sample-Entry.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5981650a1dfb5082/643d905cd194fd5a99de95ea/Elastic-Path-Sample-Entry.png)
+- Click the **Add Hierarchy(ies) **button, select the hierarchies from your Elastic Path Commerce Cloud store, and add them to your entry.![Elastic-Path-Hierarchy-Selector-Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt60b8b78bb5177bb5/643d9053507a5f582f9166c9/Elastic-Path-Hierarchy-Selector-Page.png)
 
 **Note**: You can filter hierarchies by catalog or by a full-text search based on ID or name.
 
 The hierarchies you selected are referenced within your entry.
-- To remove the selected hierarchy, hover over the hierarchy and click the **Remove **icon.
+- To remove the selected hierarchy, hover over the hierarchy and click the **Remove **icon.![Elastic-Path-Hierarchy-Remove.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf8e39c3bac48e868/643d90525f834b59633e0b95/Elastic-Path-Hierarchy-Remove.png)
 - Click the **Save **button to save your entry.
-- Click the **Add Product(s) **button, select the products from your Elastic Path Commerce Cloud store, and add them to your entry.
+- Click the **Add Product(s) **button, select the products from your Elastic Path Commerce Cloud store, and add them to your entry.![Elastic-Path-Product-Selector-Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt928b4af1fc88a9f9/643d905cea4ed2292f8d3664/Elastic-Path-Product-Selector-Page.png)
 
 **Note**: You can filter products by catalog and hierarchies or by a full-text search based on SKU or name.
 
@@ -126,8 +126,8 @@ The products you selected are referenced within your entry in the list view:
 You can view more product details in the Sidebar Widget.
 
 **Note**: You must save your entry to get the product details in the Sidebar Widget.
-- In the right navigation panel, select **Widgets**, and then select **Elastic Path Commerce Cloud** to view the product details.
-- Enter the product name in the dropdown to search and view the product details.
+- In the right navigation panel, select **Widgets**, and then select **Elastic Path Commerce Cloud** to view the product details.![Elastic-Path-Sidebar-Widget.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt461535e141f60169/643d905ce8b191595dde4012/Elastic-Path-Sidebar-Widget.png)
+- Enter the product name in the dropdown to search and view the product details.![Elastic-Path-Sidebar-Widget-Search.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltad535e7b00fb99d0/643d905d686ac411e37e3d74/Elastic-Path-Sidebar-Widget-Search.png)
 - Click the **Publish **button to publish your entry.
 
 ## Common questions

@@ -38,7 +38,7 @@ Follow the steps below to create google service account key.
 
 In case you don’t have a Service Account, you can [create a Google service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts). Make sure you create a Service account that is **not assigned any role**.
 - Now that you have a Service Account, [create a new Service account key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys). You need to select **JSON** when setting the key type.
-- Open the JSON file in a JSON editor, and note down the **client_email** value.
+- Open the JSON file in a JSON editor, and note down the **client_email** value.![Service Key JSON file.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt573e4264c68a8aca/5d650f030746f71279d881c5/Service_Key_JSON_file.png)
 - You will need this **email address** in **Step 3** while configuring your Google Analytics account. You will also need the **complete JSON code** in **Step 4** while configuring the Lambda function of your extension in Contentstack.
 
 ## Enable Google Analytics Reporting API
@@ -46,9 +46,9 @@ In case you don’t have a Service Account, you can [create a Google service acc
 To enable the Google Analytics API, perform the steps given below:
 
 Go to your project’s API Dashboard page in Google Cloud Platform.
-- Click on the **ENABLE APIS AND SERVICES **button on the top.
+- Click on the **ENABLE APIS AND SERVICES **button on the top.![Click ENABLE APIS AND SERVICES.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt857427951fd4431a/5d650effcc605f23dfb552a7/Click_ENABLE_APIS_AND_SERVICES.png)
 - In the search bar of the API Library page, type and select **Google Analytics Reporting API**
-- Click on the **ENABLE **button.
+- Click on the **ENABLE **button.![Enable GA Reporting API.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt73fc01edecf70589/5d650eac43540922ef9b09c4/Enable_GA_Reporting_API.png)
 
 Next, we need to add a user and get the View ID.
 
@@ -59,9 +59,9 @@ Next, we need to add a user and get the View ID.
 After logging in to your [Google Analytics account](https://analytics.google.com/), perform the steps given below:
 
 Click on **Admin** at the bottom on the left navigation panel
-- Click on **Account Access Management**
-- In the **Account access management** page that opens, click on **+** (Plus icon) at top-right corner and select **Add users**.
-- In the **Add roles and data restrictions** page, enter the client email address that you retrieved in **Step 1** within the JSON file and set the **Standard roles **and **Data restrictions**.
+- Click on **Account Access Management**![Analytics_Account_Access_Management.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltcc1633d2a14d90a6/638718b71686b510627b04b3/Analytics_Account_Access_Management.jpg)
+- In the **Account access management** page that opens, click on **+** (Plus icon) at top-right corner and select **Add users**.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt73d07c485b3e173b/61d6667c8f8a44201b513365/image.png)
+- In the **Add roles and data restrictions** page, enter the client email address that you retrieved in **Step 1** within the JSON file and set the **Standard roles **and **Data restrictions**.![Analytics_Add_Roles_&_Data_Restrictions.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt42a3316f2320c0a3/638718b7ab91c31088587096/Analytics_Add_Roles_&_Data_Restrictions.jpg)
 - Finally, click on the **Add **button.
 
 ### B - Retrieve the View ID
@@ -93,7 +93,7 @@ Login to your [AWS Management Console](https://signin.aws.amazon.com/signin?redi
 - Scroll up to the **Designer** section and click on **+ Add trigger**.
 - On the **Add trigger** screen, from the **Select a trigger** dropdown, select **API Gateway**.
 - Select **Create an API**, from the **API** dropdown. Then, select **REST API** inside the **API type** block, select **Open** from the **Security** dropdown, and click on **Add**.
-- An API is created for your lambda function. Under the **Designer **block, click on **API Gateway**. Click on **Details** and you will find your **API endpoint**. Make a note of it as we will need it while setting up the Google Analytics extension in Contentstack.
+- An API is created for your lambda function. Under the **Designer **block, click on **API Gateway**. Click on **Details** and you will find your **API endpoint**. Make a note of it as we will need it while setting up the Google Analytics extension in Contentstack.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2ecca296158a4bb7/61d6735295cb603e6b5ce359/image.png)
 - For additional security, you can configure an API Key for the API Gateway trigger and use this API Key when configuring your lambda function.
 - Lastly, [Enable CORS](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors-console.html) in Amazon API Gateway console. It is mandatory for successful implementation of this extension.
 
@@ -103,7 +103,7 @@ To add Google Analytics widget to your stack, log in to your [Contentstack accou
 
 Go to your [stack](../set-up-stack/about-stack.md) and click on **CONTENT** at the header
 - Hover over the “Settings**”** gear icon and click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- Click on the **+ Add Extension** button on the top-right corner and select **Create new**
+- Click on the **+ Add Extension** button on the top-right corner and select **Create new**![google_analytics_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt993edd6303c99c1d/60c219ea3a3d1a5f519ebf98/google_analytics_1_highlighted.png)
 - On the **Create New Extension** details page enter the following details in the:
 **Title**: Provide a suitable title. For example, **Google Analytics**.
 - **Hosting method**: Select **Hosted on Contentstack**. As soon as you do this, you will see the "Extension Source Code" field below.

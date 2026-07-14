@@ -38,8 +38,8 @@ To delete an existing non-referenced custom attribute, log in to your [Contentst
 - In the top navigation bar, click the **App Switcher** icon and then click** Personalize**.
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to delete a custom attribute.
 - Click the **Attributes** tab.
-- You can delete an existing custom attribute by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Delete**.
-- In the **Delete Attribute** modal, click **Delete** to permanently delete the custom attribute.
+- You can delete an existing custom attribute by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Delete**.![Delete-custom-attribute.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6c13122bbab7558b/68c10c117823e25de537d10f/Delete-custom-attribute.png)
+- In the **Delete Attribute** modal, click **Delete** to permanently delete the custom attribute.![AD_4nXdRR_NBA0Wq8C8julQ33cYBCwQTI4fmGZLtfBj40Xlk_yuJc5anKppUPr1JEonsBroUCTordjwAKfMQmGB6py2X4XTtdcy37AV2ah1NhW3HHJ3QjMuEz2AVptmga8g1lIiNXqEzL_YnzzHrAGe2eR1tgOI](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdRR_NBA0Wq8C8julQ33cYBCwQTI4fmGZLtfBj40Xlk_yuJc5anKppUPr1JEonsBroUCTordjwAKfMQmGB6py2X4XTtdcy37AV2ah1NhW3HHJ3QjMuEz2AVptmga8g1lIiNXqEzL_YnzzHrAGe2eR1tgOI?key=hKIHfQblcnnfErhXCzHF4w)
 
 You will get a success message after the custom attribute is deleted from Personalize.
 
@@ -55,13 +55,17 @@ To delete an existing referenced custom attribute, log in to your [Contentstack 
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to delete a custom attribute.
 - Click the **Audiences** tab.
 - To remove a referenced custom attribute from the Audience, open the audience in one of the following ways:Click the audience name, or
-- Click the vertical ellipses under **Actions** and select **Edit**.
-- **Note:** To delete custom attributes from a referenced audience, ensure that the experience associated with that audience is in ‘Draft’ status.
-- In the **Audience** page, scroll to the **Rules** section and then click the **Delete** icon next to the preferred custom attribute from the list.
+- Click the vertical ellipses under **Actions** and select **Edit**.![Audience-attribute-delete.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta7e3ee405ecc3bb2/68c10c6707b4fa0e0538cd0c/Audience-attribute-delete.png)
+- 
+
+  **Note:** To delete custom attributes from a referenced audience, ensure that the experience associated with that audience is in ‘Draft’ status.
+- In the **Audience** page, scroll to the **Rules** section and then click the **Delete** icon next to the preferred custom attribute from the list.![AD_4nXdtBi_SNyrZXK4ezg1oc90NVzfvVdyaoBb_b2r48hht_AysKVLTD7Ep9s1R--TziPKl2MbHTv0fhJ1fsoqyckBHRsjTCFNgNBMBTTIh2ctnB8G30jKB4ZlZLIycXjc3c3gFYZedUtSqd7egAlU5D0HhgiI](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdtBi_SNyrZXK4ezg1oc90NVzfvVdyaoBb_b2r48hht_AysKVLTD7Ep9s1R--TziPKl2MbHTv0fhJ1fsoqyckBHRsjTCFNgNBMBTTIh2ctnB8G30jKB4ZlZLIycXjc3c3gFYZedUtSqd7egAlU5D0HhgiI?key=hKIHfQblcnnfErhXCzHF4w)
 - Once you have done that, click the **Save** button.
 - Now that we have removed the custom attribute from the Audience’s Rules, click the **Attributes** tab in the left navigation panel.
-- You can delete an existing custom attribute by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Delete**.
-- In the **Delete Attribute** modal, click **Delete** to permanently delete the custom attribute.**Warning:** Deleting a custom attribute might affect the Audience segmentation, experience performance, and the data for that attribute will no longer be collected from that point onward.
+- You can delete an existing custom attribute by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Delete**.![Attributes-delete-ellipsis.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt40693e2597e997c7/68c10cae4a2c2dab9212159f/Attributes-delete-ellipsis.png)
+- In the **Delete Attribute** modal, click **Delete** to permanently delete the custom attribute.![AD_4nXdgiR5k0wMeVtTA0U3KZ0Q3jHTNInSsGKG_7m5tV79MwEzrvtyXltNEmhGUSEBl4DPGDiLtkhBIi0n4tC-GxpOsiaNcihYUoXNFhdKJt9njeEjcuGE99pmluu_ZhCOoZx2XOH9HJRMMja82Z-WTG4JpD1aQ](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdgiR5k0wMeVtTA0U3KZ0Q3jHTNInSsGKG_7m5tV79MwEzrvtyXltNEmhGUSEBl4DPGDiLtkhBIi0n4tC-GxpOsiaNcihYUoXNFhdKJt9njeEjcuGE99pmluu_ZhCOoZx2XOH9HJRMMja82Z-WTG4JpD1aQ?key=hKIHfQblcnnfErhXCzHF4w)
+
+  **Warning:** Deleting a custom attribute might affect the Audience segmentation, experience performance, and the data for that attribute will no longer be collected from that point onward.
 
 You will get a success message after the custom attribute is deleted from Personalize.
 

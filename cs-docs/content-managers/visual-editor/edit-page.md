@@ -52,13 +52,13 @@ When this happens:
 
 - Click Request Edit Access from the message.  
 - (Optional) Add a comment explaining your request.  
-- Submit the request.  
+- Submit the request.![Request_Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt13cd4da218ed0db2/69d4981911fa1e1eb0b56a18/Request_Modal.png)
 
 ### After submission:
 
 - The request is sent to users with permission to grant access  
 - The request status is set to pending  
-- Editing remains disabled until access is granted  
+- Editing remains disabled until access is granted![Approve_Message.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb9ea15659404d95c/69d4982b22934aea4644b496/Approve_Message.png)
 
 If a request has already been submitted:
 

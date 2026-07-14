@@ -35,13 +35,15 @@ Below is a list of the prebuilt JSON RTE plugins provided by Contentstack:
 
 To use a prebuilt JSON RTE plugin, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon on the left navigation panel.
-- Select **Extensions**, and click on the **+ New Extension** button at the top-right corner of the page, and select the **Use Prebuilt** option.
-- In the following window, select **JSON RTE Plugin** from the drop-down menu.
-- Select any prebuilt plugin (for example, **Highlight**), and click on **+ Add Extension**.
+- Select **Extensions**, and click on the **+ New Extension** button at the top-right corner of the page, and select the **Use Prebuilt** option.![Use_Prebuilt.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3224f75786196da9/61d690c1c9ed2d27fb5a094a/Use_Prebuilt.png)
+- In the following window, select **JSON RTE Plugin** from the drop-down menu.![Prebuilt_dropdown.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltcd5a8404d306bd11/6386f143f7db4c1039207bda/Prebuilt_dropdown.jpg)
+- Select any prebuilt plugin (for example, **Highlight**), and click on **+ Add Extension**.![Add-Extension](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9b8daf9cd4f4b6a7/64b12b80cef8c532fc7064e4/Prebuilt_JSON_RTE_Plugins_-_Add_extension.png)
 - On the configuration page, you will see the following options:
       **Title** *(required)*: You will see a predefined title. You can use this title when adding the JSON RTE plugins to your JSON Rich Text Editor in your content type.
 - **Unique ID:** You will see a predefined unique ID for your JSON RTE plugin.
-- **External Hosting URL** *(required)*: You will see a predefined URL of the externally-hosted JSON RTE plugin code.**Note:** The external hosting URL should be an HTTPS or a localhost URL.
+- **External Hosting URL** *(required)*: You will see a predefined URL of the externally-hosted JSON RTE plugin code.
+
+  **Note:** The external hosting URL should be an HTTPS or a localhost URL.
 - **Config Parameter** *(optional)*: If you have used any config parameters in the source code, provide the value for the parameters here. You can make changes to this code as per your requirements. You can pass raw queries as config parameters in this section as shown below:
 ```
 {

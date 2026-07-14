@@ -23,8 +23,8 @@ Deleting a stack removes all associated [entries](../../content-managers/author-
 
 To delete a stack, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Go to your [stack](./about-stack.md) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
-- On the **Stack Settings** page, click **Delete Stack**.
-- In the **Delete Stack** modal, enter DELETE to confirm.
+- On the **Stack Settings** page, click **Delete Stack**.![Stack Settings page showing the Delete Stack option](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt55d565d8569fab9e/67beff62304ea9d30d82c9f1/Setup-a-Stack-Delete-Stack-Delete-Icon.png)
+- In the **Delete Stack** modal, enter DELETE to confirm.![Setup-a-Stack-Delete-a-Stack-Delete-confirmation-modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3ef953263210350e/67c032f94f9066ab238f6541/Setup-a-Stack-Delete-a-Stack-Delete-confirmation-modal.png)
 
 Once confirmed, the stack and all associated data are permanently removed.
 

@@ -41,20 +41,20 @@ To use the Contentstack Management connector, you first need to add your [Conten
 
 - Click **Configure Action Step** from the left navigation panel.
 - Click **Action Step** to configure third-party services.
-- Within the **Configure Action Step**, click the **Contentstack **connector.
-- Select the **Contentstack Management** connector to perform CMS tasks.
-- Under **Choose an Action** tab, select any one action from the list. Here, we are selecting the **Get All Content Types** action.
-- On the** Configure Action** page, click the **+ Add New Account **to add your Contentstack account.
-- Select a way to add a new account. You can authenticate your account in two ways: **Contentstack** or **Management Token**.
+- Within the **Configure Action Step**, click the **Contentstack **connector.![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta4039a5663896ca2/682b25fe24eaf7fd0d8182e1/Select_Connector.png)
+- Select the **Contentstack Management** connector to perform CMS tasks.![Select_CS_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt672cc3a63b5ae303/682b25feef59b13d396b53cd/Select_CS_Action.png)
+- Under **Choose an Action** tab, select any one action from the list. Here, we are selecting the **Get All Content Types** action.![Get_All_Content_Types.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt84756b6905091ca9/6601a8776f2eedfabdc2edc3/Get_All_Content_Types.png)
+- On the** Configure Action** page, click the **+ Add New Account **to add your Contentstack account.![Add_Account_Screen.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt299240b9e64d9d35/682b25fe7252414e898cef0a/Add_Account_Screen.png)
+- Select a way to add a new account. You can authenticate your account in two ways: **Contentstack** or **Management Token**.![Authorize_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6b3e4620943849cf/660a41ca1b5a584959adc9e8/Authorize_Account.png)
 
       If you select **Contentstack OAuth** and click **Proceed**, the Manage Permissions modal will open, as shown below. Provide the OAuth permissions for all the values by checking the boxes and click **Authorize**.
 
         **Note: **Contentstack offers support for [Branches](../developers/branches/about-branches.md) in Automate. You must authenticate and re-authorize your existing account by checking all the permissions to add your Contentstack account.
 
-- In the pop-up, select your organization to complete the authorization.
-- In the pop-up that appears, view the module-specific access rights provided to the app. Click **Authorize **to complete authorization.
-- Provide an Account Name** **and then click **Save**.
-- If you select **Management Token **and click **Proceed**, the **Authorize **modal will open, as shown below. Enter a **Title **and the **Management Token **of your stack and click **Authorize**.
+- In the pop-up, select your organization to complete the authorization.![Select_Organization.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt96ced61a3a48f48b/656daf7dae62f7796af682fd/Select_Organization.png)
+- In the pop-up that appears, view the module-specific access rights provided to the app. Click **Authorize **to complete authorization.![Authorize_Organization.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt58cd95e87f126f3f/6602bc9bdb68ba97b139e838/Authorize_Organization.png)
+- Provide an Account Name** **and then click **Save**.![Save_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaa0dd4d11504d599/6601a877c19510f2b7decebe/Save_Account.png)
+- If you select **Management Token **and click **Proceed**, the **Authorize **modal will open, as shown below. Enter a **Title **and the **Management Token **of your stack and click **Authorize**.![Authorize_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blted5a118fd9dc145a/660423f81741ea31ee651dc6/Authorize_Button.png)
 
 This sets up your Contentstack account for the Contentstack Management action connector.
 
@@ -69,7 +69,7 @@ Perform the following steps to set up the Contentstack Management connector:
     **Note: **You can sort and search the connector(s) based on the filter.
 
 - Select the **Contentstack Management **connector to perform CMS tasks.
-- Under **Choose an Action**, you will see nine categories of actions: **Asset**, **Branch**, **Branch Alias**, **Content Type**, **Entry**, **Global Fields**, **Locales**, **Release**,** Taxonomy**, **User**, and** Variant**.
+- Under **Choose an Action**, you will see nine categories of actions: **Asset**, **Branch**, **Branch Alias**, **Content Type**, **Entry**, **Global Fields**, **Locales**, **Release**,** Taxonomy**, **User**, and** Variant**.![List_of_Actions.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta1fd78cb5475d5cc/66332ef68a4a137d8cfe486b/List_of_Actions.png)
 
 Once done, you can go ahead and set up your Contentstack Management action connector.
 

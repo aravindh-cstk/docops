@@ -32,11 +32,11 @@ You can edit the specifications of your Voice Profile, such as its name and desc
 **Note**: For this guide, we have assumed that you have [created a Voice Profile](./create-a-voice-profile.md) inside your Brand Kit.
 
 To edit a Voice Profile, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- On the left navigation panel, click the **Brand Kit** icon.
-- Select the **Brand Kit** whose Voice Profile you want to edit.
-- You can edit a Voice Profile by clicking your voice profile to open it or by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Edit**.
+- On the left navigation panel, click the **Brand Kit** icon.![1-Brand-Kit-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2793aa12bafb2903/6656329d02c997c334b84fcb/1-Brand-Kit-Icon.png)
+- Select the **Brand Kit** whose Voice Profile you want to edit.![2-Select-Brand-Kit-For-Voice-Profile](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt60f85d413efa60eb/66566162fab32573f734d744/2-Edit-Select-Brand-Kit-For-Voice-Profile.png)
+- You can edit a Voice Profile by clicking your voice profile to open it or by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Edit**.![3-Edit-Voice-Profile](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf16940a90668e3ed/6656616f693345baf9c24264/3-Edit-Voice-Profile.png)
 - Make changes to the **Voice Profile Name** and **Description** and update the **Communication Style Mixer** details, such as **Formality Level**, **Tone Of Voice**, **Humor Level**, and **Language Complexity Level**.You can also update **Custom Details**, such as **Insights** and **Sample Content** as required and try generating content using **Playground** to refine the Voice Profiles.
-- Once you have done that, click **Save** to save the changes.
+- Once you have done that, click **Save** to save the changes.![4-Save-Edited-Voice-Profile](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta34f7c2e8fc83691/6656617586ba8b3f0e1d681b/4-Save-Edited-Voice-Profile.png)
 
 You will get a success message after the Voice Profile is edited.
 

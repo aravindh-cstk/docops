@@ -34,7 +34,7 @@ To use Modular Blocks, developers must first add the field to a content type.
 - Click **+ New Block**, provide a name (e.g., Hero Banner), and click **Create**.
 - Inside the block, use **Insert a Field** to add the required fields.
 - Repeat this to add multiple blocks within the same Modular Blocks field.
-- Rename or delete any block if needed.
+- Rename or delete any block if needed.![Developer_Creating_MB.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb58bd56a8b16999f/688ce87402d85c803cdf8697/Developer_Creating_MB.png)
 
 **Note:**
 - You can add up to **5 Modular Blocks** fields per content type, with up to **20 blocks** in each field.
@@ -70,7 +70,7 @@ To create a content type with modular blocks, log in to your [Contentstack accou
 - Inside **Page Components**, create blocks like:Banner
 - Quote
 - Sections
-- Content editors can structure and reorder components as needed.
+- Content editors can structure and reorder components as needed.![Example_1-_Fluid_Page_Components.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc3ba8ddb65f39db0/688ce90ba168ff353f77f804/Example_1-_Fluid_Page_Components.png)
 
 ### Example 2: Creating a Menu
 You can use Modular Blocks to create a navigation menu with references to internal or external pages.
@@ -79,13 +79,13 @@ To create a menu using modular blocks, log in to your [Contentstack account](htt
 - Go to your [stack](../set-up-stack/about-stack.md) and click the “Content Models” icon.
 - Click **+ New Content Type** and name it **Landing Page**.
 - Add fields like:Title (default)
-- JSON Rich Text Editor (Main Text)
+- JSON Rich Text Editor (Main Text)![Example_2-_Creating_a_LP_CT.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd1af645552d642fa/688ce94a558a1b242df6edda/Example_2-_Creating_a_LP_CT.png)
 - Click **Save and Close** to save your content type.
 - Now, create another content type named **Menu**.
 - Insert a **Modular Blocks** field and name it **Menu**.
 - Inside **Menu**, create blocks:**Landing Page Reference:** Single Line Textbox (Label) and Reference field (linked to Landing Page)
 - **External**: Single Line Textbox and Link field
-- **Custom**: Two Single Line Textboxes (Label, Path)
+- **Custom**: Two Single Line Textboxes (Label, Path)![Example_2-_Creating_a_Menu_CT.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt767086267534ba6b/688ce972450d71ee29cebb16/Example_2-_Creating_a_Menu_CT.png)
 
 Now that we are done creating our content types, let's create entries in them and see modular blocks in action.
 - Navigate to “Entries” and create a new entry in the **Landing Page** content type.
@@ -93,7 +93,9 @@ Now that we are done creating our content types, let's create entries in them an
 - In the **Menu** content type, create an entry with:**Landing Page Reference** title as **Home** and reference **Frontpage**.
 - Add another block with the title **About** referencing the **About** entry.
 - Within **External**, set the title as **Contentstack** and the URL as `https://contentstack.com`.
-- Within **Custom** keep the title as **Docs **with the Path as `/documentation/start`.**Tip:** The Custom block allows linking to any internal path (e.g., `/some-other-link/on-my-webpage`).
+- Within **Custom** keep the title as **Docs **with the Path as `/documentation/start`.
+
+  **Tip:** The Custom block allows linking to any internal path (e.g., `/some-other-link/on-my-webpage`).
 
 You can now use the [Content Delivery API](../../../api-docs/api-detail/content-delivery-api.md) to retrieve the Menu entry content and build your navigation dynamically. For example, refer to this [example](https://gist.github.com/oskarei/10a547de2049399d696414e84e9e9889).
 
@@ -121,7 +123,7 @@ To create nested modular blocks, log in to your [Contentstack account](https://w
 - Create two blocks:**News Articles** that contains a **nested Modular Blocks** field with:Image Block (File field)
 - Description Block (Single Line Textbox)
 - Body Block (RTE)
-- **Image Gallery** that contains a File field with **Multiple** enabled.
+- **Image Gallery** that contains a File field with **Multiple** enabled.![Nested_Modular_Blocks.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5e5d9384b0d26df7/688ceac57adc79b15ee97faf/Nested_Modular_Blocks.png)
 
 **Note:**
 - Only **two levels** of nesting are supported.

@@ -26,7 +26,7 @@ You can perform a simple partial keyword search by typing in the start of the ke
 The other type of partial keyword search is **suffix **or **infix matching **that allows you to search by the middle or the end of the keyword. To perform this kind of search, you will have to prefix * to your partial keyword. For example, use `*chno` or `*logy` to look for entries containing "technology".
 
 For proficient search results, you can:
-- Use double quotes for exact match searching. For instance, searching `"technology"` will retrieve all entries or assets where the term "technology" is used.
+- Use double quotes for exact match searching. For instance, searching `"technology"` will retrieve all entries or assets where the term "technology" is used.![Partial Search_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte803f873d441159c/684030e7aa31f70ee61b2f50/3._Partial_Search_Exact_Term.png)
 - Use prefix keywords to search for entries containing the specified partial keyword. For example, searching `tec` will retrieve all entries or assets where the term `tec` is present.
 - Use an asterisk (*) to search by the middle or end of the word. For example, searching `*olog` will retrieve all entries or assets where the term `olog` is present.
 

@@ -121,7 +121,7 @@ The `cm:stacks:audit:fix` command allows you to validate exported stack data and
 ```
 csdx cm:stacks:audit:fix
 ```
-- Enter the **local path** where the data is stored.
+- Enter the **local path** where the data is stored.![CLI_Audit_Plugin_Path.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7d2bee5298009286/652d0fcff620d479b3438bf6/CLI_Audit_Plugin_Path.png)
 - In the prompt that appears, enter the following:**Yes**, to overwrite the existing file.
 - **No**, to skip overwriting the existing file.
 

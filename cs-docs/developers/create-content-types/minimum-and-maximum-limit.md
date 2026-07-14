@@ -56,7 +56,7 @@ To set minimum and maximum limits, log in to your [Contentstack account](https:/
 You can use the minimum and maximum limits to simulate **either-or** logic in Modular Blocks. For example, if you want editors to include either a **Video** block or an **Image** block, but not both, in an entry, follow these steps:
 - Add a **Modular Blocks** field to your content type.
 - Create two blocks within it: **Video** and **Image**.
-- In the **Modular Blocks** parent field settings, set the **minimum** and **maximum** limit as **1**.
+- In the **Modular Blocks** parent field settings, set the **minimum** and **maximum** limit as **1**.![MB Parent Field Limits.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbe040916e40d63c4/688219c35dcf4b0e34d95f4f/MB_Parent_Field_Limits.png)
 - In the individual **Video** and **Image** blocks, set the maximum limit as **1**.
 
 This setup ensures that:

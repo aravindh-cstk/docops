@@ -25,8 +25,8 @@ This solution sets up a Taxonomy called “Region” that contains a list of cou
 **Example:** Country “Netherlands” term UID is netherlands.
 
 ## Tactical Rundown
-- Create the following Taxonomy in a stack:
-- Create a Content Type which also has the Taxonomy field where the locale can be stored.
+- Create the following Taxonomy in a stack:![image2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta4850a8c3d501c2d/65f96432a1e81507e5d5c65c/image2.png)
+- Create a Content Type which also has the Taxonomy field where the locale can be stored.![image5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt31ad45293724fa79/65f96432173215584ad2ccde/image5.png)
 - Create an Automation to fill the Region term based on the present entry's language.With the **Contentstack** connector create an Entry Trigger for any new entry created based on the particular Content Type.
 - Use the **CodeBlock** connector with the following JavaScript Code:
 
@@ -34,11 +34,11 @@ This solution sets up a Taxonomy called “Region” that contains a list of cou
 const mapping = {'sw':'sweden', 'en-us':'usa', 'en-uk':'england', 'nl-nl':'netherlands', 'de-de':'germany'}; return mapping[input.locale] || 'usa';
 ```
 Here's how it looks:
-- Use the **HTTP** connector to update an entry based on the localized country of the entry.
+- Use the **HTTP** connector to update an entry based on the localized country of the entry.![image6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbe2eba93cb98da4d/65f964325a287d8e37f2f31f/image6.png)
 
 **Examples:**
 - When the entry created in default locale, the term is set as “usa,” and when the entry gets localized into Dutch, the term is set as “netherlands.”
-- Based on the above automation steps, when the entry is localized in Germany, the term is automatically added.
+- Based on the above automation steps, when the entry is localized in Germany, the term is automatically added.![image3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt63f851a70a4e9845/65f964326119726b8c646fc4/image3.png)
 
 ## Common questions
 

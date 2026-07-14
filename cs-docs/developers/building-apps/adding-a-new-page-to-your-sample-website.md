@@ -45,7 +45,9 @@ Perform the steps below to [create a new entry](../../content-managers/author-co
 Within the Entry Editor page, enter/select the following content against the respective fields:
 
 Let's create an entry for the “APPETIZERS” Course
-- **Title**: Enter “Fried Prawns”**Note:** Make sure to keep the title of all dishes similar to the respective asset/image name.
+- **Title**: Enter “Fried Prawns”
+
+  **Note:** Make sure to keep the title of all dishes similar to the respective asset/image name.
 - **Image: **To upload the logo, perform the following set of actions (refer [About File Field](../create-content-types/file.md)):
       Click on **Upload a new file**.
 - Click on **Choose files **and select the desired asset file (in our case, select the Assets/Page - Menu /APPETIZERS/Fried Prawns.jpg), then click on **Open**.
@@ -77,7 +79,7 @@ Click on **Publish** and select the **development** environment for all respecti
 **Note:** Similarly, add the Entries for the Remaining Assets in the Page - Menu Folder.
 
 ### Create Entries for the Page Content Type
-- To create an entry, navigate back to the Entries section, click on the **+ New Entry** button on the top, select the content type (in our case, **Page**), and click on **Proceed**.
+- To create an entry, navigate back to the Entries section, click on the **+ New Entry** button on the top, select the content type (in our case, **Page**), and click on **Proceed**.![Create and Entry for Page Content Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6ebdadd44aa97183/66c87f4c53aefb82494d85c2/Create_and_Entry_for_Page_Content_Type.png)
 - Within the Entry Editor page, enter/select the following content against the respective fields:
       **Title: **Enter “Menu.”
 - **URL: **Enter “/menu”
@@ -94,7 +96,7 @@ Click on **Publish** and select the **development** environment for all respecti
           **Course Name**: APPETIZERS
 - **Dishes**: To select an option, perform the following steps:
               Click on **Choose existing entry** to browse a list of related entries.
-- Select the entry, **Fried Prawns**, of the referred Content type, **Dishes**, and click on **Add Selected Entries**.
+- Select the entry, **Fried Prawns**, of the referred Content type, **Dishes**, and click on **Add Selected Entries**.![Select Fried Prawns and click on Add Selected Entries.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8b9f35dbd4a1feba/66c87f4cefc13a00f7830cef/Select_Fried_Prawns_and_click_on_Add_Selected_Entries.png)
 
     **Note:** You can similarly add the other dishes for the next three instances.
 - Instance 2:
@@ -106,7 +108,7 @@ Click on **Publish** and select the **development** environment for all respecti
 - Instance 4:
           **Course Name**: BEVERAGES
 - **Dishes**: **Coconut Milkshake**
-- After successfully entering the details of the entry, click on **Publish**. And, in the **Publish Entry** modal, select the **development** environment, and click on **Send**.
+- After successfully entering the details of the entry, click on **Publish**. And, in the **Publish Entry** modal, select the **development** environment, and click on **Send**.![Click on Publish and select development.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3067cfebc5d52a14/66c87f4c89dfce5c5c0d1097/Click_on_Publish_and_select_development.png)
 
 Now, let’s do the code changes.
 
@@ -252,9 +254,9 @@ You have successfully pushed your changes to Git. Now, let’s deploy the new ch
 
 To deploy the changes you added to your website, perform the following set of steps:
 - Go to [Launch](https://app.contentstack.com/#!/launch) and click the **restaurant-menu-react-app** project.
-- By default, Launch will auto deploy new changes whenever you push code to the **main** branch of our repository. You would see a status of **Deploying **in the default Environment as soon as the code is pushed.
+- By default, Launch will auto deploy new changes whenever you push code to the **main** branch of our repository. You would see a status of **Deploying **in the default Environment as soon as the code is pushed.![See status of deploying in default environment after code push.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c6598b178e79730/66c87f4ceb27c941360b502d/See_status_of_deploying_in_default_environment_after_code_push.png)
 - Once the deployment is completed, the status will be **Live**, click on the **Environment URL** to view the website.
-- Go to the **Menu** page and you will see the latest version of the website with dishes in the Menu page.
+- Go to the **Menu** page and you will see the latest version of the website with dishes in the Menu page.![See the latest version of the website running.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1104771c23704639/66c87f662152e864767a74cd/See_the_latest_version_of_the_website_running.png)
 
 Awesome! You have successfully added a new page to the website and pushed it live.
 

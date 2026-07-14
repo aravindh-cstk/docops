@@ -164,7 +164,9 @@ Options defaultRender = new Options(entry);
 CustomRenderOption defaultRender = new CustomRenderOption(entry);
 
 ```
-- **Note**: Make sure the entry parameter has implemented the IEmbeddedObject property.
+- 
+
+  **Note**: Make sure the entry parameter has implemented the IEmbeddedObject property.
 
 ## Basic Queries
 

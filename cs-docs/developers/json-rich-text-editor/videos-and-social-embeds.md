@@ -31,7 +31,7 @@ To embed a video within your JSON RTE, log in to your
 - Create a new entry or open an existing one containing a JSON RTE field.
 - In the **JSON RTE field**, click the **Video** icon in the toolbar.
 - In the **Video** modal that appears, paste the **Embed Code** of the video you want to add.
-- Click the **Add** button to embed the video.
+- Click the **Add** button to embed the video.![Embed video using the Video icon in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt510b7be5ba7e5d51/6819bacf0bf88d603ed3bbf1/1-video-embed.gif)
 
 ## Social Embeds
 
@@ -47,7 +47,7 @@ To embed a link within your JSON RTE, log in to your
 - In the **JSON RTE field**, click the **Social Embeds** icon in the toolbar.
 - In the **Social Embeds** modal that appears, paste the **Embed URL** from a supported platform.  
   **Note:** Only shareable links from the listed platforms are supported.
-- Click the **Add** button to embed the social content within the JSON editor.
+- Click the **Add** button to embed the social content within the JSON editor.![Insert social embed in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt643b0cdfda119360/6819bacf6c26f4b994e5ffb7/2-social-embed.gif)
 
 ### Supported Platforms for Social Embeds
 

@@ -27,7 +27,9 @@ To restore a deleted taxonomy from the Trash, log in to your [Contentstack accou
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to restore a deleted taxonomy, navigate to the “Settings” icon (or press “S”), and select **Trash** (or press “alt + T” for Windows OS, and “option + T” for Mac OS).
 - Click on the **Taxonomies** tab, locate the taxonomy you want to restore, and click on the vertical ellipsis in the **Actions **column.
 - You can also view a taxonomy’s details by clicking **View Details**.
-- Click **Restore**. In the modal that appears, choose between **Restore with Content Type Association** or **Restore without Content Type Association** based on your requirements.**Note**: Restoring with Content Type Association will reintegrate the taxonomy with the content types it was linked to before deletion, reconnecting its terms to the entries where they were previously referenced. This action will increase the entry version since the terms are added back to the entry.
+- Click **Restore**. In the modal that appears, choose between **Restore with Content Type Association** or **Restore without Content Type Association** based on your requirements.![Restore Deleted Taxonomy.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc83dc68c6e1c6b7f/6929c96564580958292a1678/Restore_Deleted_Taxonomy.gif)
+
+  **Note**: Restoring with Content Type Association will reintegrate the taxonomy with the content types it was linked to before deletion, reconnecting its terms to the entries where they were previously referenced. This action will increase the entry version since the terms are added back to the entry.
 
 ## Filter Deleted Taxonomies
 

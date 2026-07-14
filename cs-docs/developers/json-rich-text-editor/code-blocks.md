@@ -33,7 +33,7 @@ Contentstack provides built-in syntax highlighting for over **60 programming lan
 - Click the inserted **code block** in the JSON RTE.
 - Select a programming language from the dropdown menu.
 - To move to the next line within the code block, press **Enter**.
-- To exit the code block, press **Shift + Enter**.
+- To exit the code block, press **Shift + Enter**.![Apply syntax highlighting to code blocks](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5cfcc4a2f42fed51/6819cbf1ae96e76c5ed39731/1-apply-language-formatting-to-c.gif)
 
 ## Best Practices for Code Blocks
 

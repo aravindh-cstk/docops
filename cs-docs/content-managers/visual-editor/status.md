@@ -24,10 +24,10 @@ To access the status of a web page using Visual Editor, log in to your [Contents
 - Click **Editor** in the bottom pill menu.
 - In the right sidebar, click the **Status** icon. The panel appears, providing details of the selected page.
 - Expand the relevant sections in the panel to view the following details:**Basic Information**: Displays details such as entry ID, content type ID, creator, creation date, last modified by, and last modified date.
-- **Referenced In**: Lists all entries that reference the selected entry.
-- **Localization Status**: Shows all languages where the entry is localized and highlights those where it is not.
-- **Publish Status**: Displays the entry’s publish details, including environment, version, publish date and time, and the user who published it.
-- **Release Status**: Lists all scheduled releases for the selected entry.
+- **Referenced In**: Lists all entries that reference the selected entry.![Referenced In Status.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltddbf27718d14e029/69d4dcff88e586053897f847/Referenced_In_Status.png)
+- **Localization Status**: Shows all languages where the entry is localized and highlights those where it is not.![Localization Status.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt598fb18d8838ceab/69d4dcfe3b53e1880153a96c/Localization_Status.png)
+- **Publish Status**: Displays the entry’s publish details, including environment, version, publish date and time, and the user who published it.![Publish Status.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf095f5057f4bf0a4/69d4dcffb1e57a5b0d052279/Publish_Status.png)
+- **Release Status**: Lists all scheduled releases for the selected entry.![Release Status.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt842d212f0f5c632f/69d4dcfe2e26a44596193bc2/Release_Status.png)
 
 Use the Status panel to quickly monitor each entry’s content, localization, and publish status.
 

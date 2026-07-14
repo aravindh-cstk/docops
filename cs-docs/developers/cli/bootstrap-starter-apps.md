@@ -64,7 +64,7 @@ Use one of the following:
 
     This will start cloning the selected app to the folder you provide.
 - **Organization Name**
-    Select the organization under which the stack should be created.
+    Select the organization under which the stack should be created.![CLI-Bootstrap-SelectOrg.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt86501569f082aa47/680f5f29d6b2551be2ebb4c1/CLI-Bootstrap-SelectOrg.png)
 - **Stack Preference**
     Choose to create a **New** stack or use an **Existing** stack to import the app content.
 

@@ -25,16 +25,20 @@ Contentstack allows you to create [dashboard extensions](./about-dashboard-exten
 To create a dashboard extension, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new.**
-- In the **Select Extension Type** window, select **Dashboard Extension**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new.**![Create_a_Custom_Dashboard_Widget_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8c364f3822dd0189/60b911decda43e2520908353/Create_a_Custom_Dashboard_Widget_1_highlighted.png)
+- In the **Select Extension Type** window, select **Dashboard Extension**.![Dashboard_Extension_Card.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltec26f9dd8e043377/61d88c37ec98266420c58555/Dashboard_Extension_Card.png)
 - In the **Create New Extension** page, enter values in the fields as given below:
       **Title**: Provide a suitable title for your dashboard extension. This title will be visible as the extension name on the main dashboard page.
-- **Default width**: Choose the width of the custom dashboard extension. Select either **Half Width** or **Full Width** as per your requirement.**Tip**: The height is configurable through the Extensions SDK. You can also define if the user can toggle between **Half Width** and **Full Width** in the SDK.
+- **Default width**: Choose the width of the custom dashboard extension. Select either **Half Width** or **Full Width** as per your requirement.
+
+  **Tip**: The height is configurable through the Extensions SDK. You can also define if the user can toggle between **Half Width** and **Full Width** in the SDK.
 - **Hosting method**: Select how you want to host the extension:
           **External Hosting**: Select this option for externally hosted extensions. You need to provide the URL in the **External hosting URL** field that appears below.
 - **Hosted on Contentstack**: Select this option if you can write the code in the **Extension source code** field that appears below.
 - **Config Parameter**: If you have used any config parameters (such as [access token](../create-tokens/types-of-tokens.md#access-tokens)) in the source code, specify the value of the parameters in this field.
-- **Enable dashboard extension**: Check this option to make the Dashboard Extension enabled for all users of the stack on the main **Dashboard **page.**Tip**: Using the “Settings” gear icon on the **Dashboard **page, the users can show or hide the extension on their Dashboard.
+- **Enable dashboard extension**: Check this option to make the Dashboard Extension enabled for all users of the stack on the main **Dashboard **page.
+
+  **Tip**: Using the “Settings” gear icon on the **Dashboard **page, the users can show or hide the extension on their Dashboard.
 - Finally, click on **Save**.
 
 ## Testing Dashboard Extension

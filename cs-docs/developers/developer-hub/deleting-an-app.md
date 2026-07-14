@@ -20,8 +20,8 @@ This page explains how to delete an app in Developer Hub, including important wa
 
 To delete an app, perform the steps given below:
 - Click the App you want to delete.
-- In the **Basic Information** section of your app, click the **Delete App **button at the top.
-- You will be prompted to enter the App name and click **Delete**.
+- In the **Basic Information** section of your app, click the **Delete App **button at the top.![Delete_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4657416b047e573f/67cec1abb8764ed97fe8c9c3/Delete_Icon.png)
+- You will be prompted to enter the App name and click **Delete**.![Delete_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltec71fc57d3883b27/67cec1ab6a793e32d0982148/Delete_App.png)
 
 This will permanently delete the app and all its resources.
 

@@ -137,7 +137,9 @@ ngrok http 5000
 
 Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your stack, and click on the "Settings" icon on the left navigation panel.
 - Select **Webhooks** and click on **+ New Webhook**.
-- On the **Create Webhook** page, enter a specific name for your webhook and inside the **URL to notify** field, provide the ngrok URL (generated in the above step) and append "/notify" to the URL (for example, "https://ca1a27e9.ngrok.io/notify").**Tip:** If you using a deployment environment, such as "production," you will have to provide the public URL of your environment inside the **URL to notify** field (for example, "https://(your_environment_name).com/notify")
+- On the **Create Webhook** page, enter a specific name for your webhook and inside the **URL to notify** field, provide the ngrok URL (generated in the above step) and append "/notify" to the URL (for example, "https://ca1a27e9.ngrok.io/notify").
+
+  **Tip:** If you using a deployment environment, such as "production," you will have to provide the public URL of your environment inside the **URL to notify** field (for example, "https://(your_environment_name).com/notify")
 - In the **When** section, click on the **Code View** option and paste the following code snippet in it:
 
 ```

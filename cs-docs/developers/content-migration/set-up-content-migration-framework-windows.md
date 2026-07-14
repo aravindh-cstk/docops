@@ -37,12 +37,14 @@ Follow the steps below to install the migration framework on your system:
 ```
 git clone  https://github.com/contentstack/migration-v2.git && cd migration-v2 && setup-nvm.bat
 ```
-- If prompted, enter your system password to allow installation of any missing dependencies.
+- If prompted, enter your system password to allow installation of any missing dependencies.![Content Migration Tool - Setup Guide (Windows)_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c5e6235bea3d21d/683946f064e2865546bc2bae/Content_Migration_Tool_-_Setup_Guide_(Windows)_1.png)
 - During the setup, select the legacy CMS you are migrating content from.
 
 **Warning:** Ensure you select the correct legacy CMS to avoid any errors during the migration.
-- Enter the file path of the exported content you wish to migrate. For example: `/Users/<username>/Downloads/<exported_data>.zip`.**Note:** The file type may vary depending on your legacy CMS. For example, Sitecore data is exported in ZIP format whereas Contentful data is exported in JSON.
-- If the installation is successful, a browser window should open automatically with the `http://localhost:3000` URL.
+- Enter the file path of the exported content you wish to migrate. For example: `/Users/<username>/Downloads/<exported_data>.zip`.![Content Migration Tool - Setup Guide (Windows)_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbde64ff361f1be88/683946f03bb899707ba3dfb4/Content_Migration_Tool_-_Setup_Guide_(Windows)_3.png)
+
+  **Note:** The file type may vary depending on your legacy CMS. For example, Sitecore data is exported in ZIP format whereas Contentful data is exported in JSON.
+- If the installation is successful, a browser window should open automatically with the `http://localhost:3000` URL.![Content Migration Tool Setup Guide 4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltafe4f226d96c3a1f/67ff9a478e7aaa859446115b/Content_Migration_Tool_Setup_Guide_4.png)
 
 This completes the installation of the Contentstack Migration Framework. You’re now ready to begin migrating your content.
 

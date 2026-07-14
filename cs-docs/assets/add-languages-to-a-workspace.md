@@ -30,7 +30,9 @@ To add languages to a workspace, log in to your [Contentstack account](https://w
 - Locate the required workspace and click the vertical ellipsis in the **Actions** column.
 - Select **Manage Workspace Languages**. The **Manage Workspace Languages** modal displays the languages currently enabled for the workspace.
 - Click **+ Add Language**.
-- Select one or more languages from the list of available languages. Each language displays its configured fallback language.**Note:** The default language remains locked and cannot be removed.
+- Select one or more languages from the list of available languages. Each language displays its configured fallback language.
+
+  **Note:** The default language remains locked and cannot be removed.
 - Click **Apply** to confirm the selection.
 - Click **Save Changes** to add the selected languages to the workspace.
 

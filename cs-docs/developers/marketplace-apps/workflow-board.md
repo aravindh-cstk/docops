@@ -41,9 +41,9 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see all the available apps. Hover over the **Workflow Board** app and click **Install App**.
-- In the popup window, select the stack where you want to install the Workflow Board app and click the **Install** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- Within the Marketplace, you can see all the available apps. Hover over the **Workflow Board** app and click **Install App**.![Marketplace-Workflow-board.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt588d40af9a0741d5/69eeaaa955f8965fb0f3da99/Marketplace-Workflow-board.png)
+- In the popup window, select the stack where you want to install the Workflow Board app and click the **Install** button.![Workflow-Board-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc3a9c87e9f4df128/64b927131add4d1fbbfbb337/Workflow-Board-Install-App.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Workflow-Board-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt66f68c0c39142fa9/65b8321a24ea49ddacde5f00/Workflow-Board-UI-Locations.png)
 
 **Note**: No additional configuration is required to use the Workflow Board app.
 
@@ -53,14 +53,14 @@ To use the Workflow Board application in your stack, follow the steps given belo
 
 Log in to your [Contentstack account](https://www.contentstack.com/login/).
 
-- In the left-hand side primary navigation, click **Settings** of your stack, navigate to **Workflows**, and then click **+ New Workflow** to create a new workflow.
+- In the left-hand side primary navigation, click **Settings** of your stack, navigate to **Workflows**, and then click **+ New Workflow** to create a new workflow.![Workflow_Board_Create_New_Workflow](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt791584277370bd22/6458de5d51a7d778535555d8/Workflow-Board-Create-New-Workflow.png)
 - Enter the **Workflow Name** and **Description**, select the **Scope**, add the **Workflow Stages** and **Workflow Superuser(s)**, **Enable** the workflow, and click the **Save** button.
 
 This creates your new workflow.
 
 **Note**: You can also set the [Publish Rules](../set-up-workflows-and-publish-rules/about-publish-rules.md) for the workflow stages.
 
-- Now, click **Entries** in the left navigation panel, open the entry that belongs to the content type added to the workflow, and then click the **Workflow Details** icon in the right navigation panel of your entry.
+- Now, click **Entries** in the left navigation panel, open the entry that belongs to the content type added to the workflow, and then click the **Workflow Details** icon in the right navigation panel of your entry.![Workflow_Board_Workflow_Details](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4c1eac098927fddf/6458decaf6d4ab4694deeeb6/Workflow-Board-Workflow-Details.png)
 - Set the workflow stage of an entry and assign the workflow task to the user or role, add comments, and then click **Save**.
 
 You can track the workflow tasks assigned by clicking **Tasks** in the left-hand side primary navigation panel.
@@ -73,8 +73,8 @@ You can track the workflow tasks assigned by clicking **Tasks** in the left-hand
 
 **Note**: Workflow Board is a Full Page Location app. For more information, refer to the [Full Page Location](../developer-hub/full-page-location.md) documentation.
 
-- Click the app icon to view the Workflow Board app within your CMS.
-- You first need to authorize the app by providing access to your stack. Click the **Authorize** button to start using the app.
+- Click the app icon to view the Workflow Board app within your CMS.![Workflow_Board_Full_Page_Location_App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte0318687809e86f6/6458de6f4c5d3a07d30beccc/Workflow-Board-Full-Page-Location-App.png)
+- You first need to authorize the app by providing access to your stack. Click the **Authorize** button to start using the app.![Workflow_Board_Authorize_App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7816b848963641a6/645cee51cae4f13fa165bf1a/Workflow-Board-Authorize-App.png)
 - In the popup window, click the **Authorize** button again to authenticate the Workflow Board app.
 
 The Workflow Board app will show a list of all workflows in the left panel and all the workflow stages and tasks (entries) on the right side of the board.
@@ -87,7 +87,7 @@ The Workflow Board app will show a list of all workflows in the left panel and a
 
 Also, you can search for any workflow using the search bar.
 
-- Click the **Collapse** icon to hide the list of workflows.
+- Click the **Collapse** icon to hide the list of workflows.![Workflow_Board_Collapse_Sidebar](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7d844ad220cb1527/645cee65d4a7920fc13dc510/Workflow-Board-Collapse-Sidebar.png)
 - Click the **Expand** icon to show the list of workflows if the sidebar is collapsed.
 
 **Note**: By default, the sidebar for the list of workflows is always visible.
@@ -126,7 +126,7 @@ The Workflow Board app lets you apply filters based on the entries.
 
 Also, you can view the total number of entries in a workflow on the Workflow Board app. Click the **Reload** icon to update the number if any entry is added or deleted.
 
-- **Content Type Filter**: You can view the workflow tasks (entries) based on the selected **Content Type(s)**. By default, the **All Content Types** option is selected.
+- **Content Type Filter**: You can view the workflow tasks (entries) based on the selected **Content Type(s)**. By default, the **All Content Types** option is selected.![Workflow_Board_Filter_Content_Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb11290401151b7a6/6458de6fd66b1b1ba5a60631/Workflow-Board-Filter-Content-Type.png)
 - **Sort By Filter**: You can shuffle and sort the tasks (entries) according to the available sorting options.
 
 By default, the **Modified At: Newest** option is selected. It enables you to view the entries arranged in their recently modified order.

@@ -55,32 +55,32 @@ For this exercise, you need a project manager (or an admin) account with XTM so 
 
 Assuming that you have a project manager account in XTM and have logged in the app, the first thing that you need to do is to activate machine translation in XTM. To do this, follow the steps given below:
 
-Once you [log in](https://api-test.xtm-intl.com/saas-manager/login.jsp#!/login) to the XTM app, you will be on the **Projects** page. Click on the **Settings** gear icon as shown below:
+Once you [log in](https://api-test.xtm-intl.com/saas-manager/login.jsp#!/login) to the XTM app, you will be on the **Projects** page. Click on the **Settings** gear icon as shown below:![XTM_settings.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb76428480ce041ff/608fe4533aa0431020f5ec4d/XTM_settings.png)
 - On the page that opens, click on the **Settings** option.
-- From the left navigation panel, click on **Translation** as shown below:
+- From the left navigation panel, click on **Translation** as shown below:![XTM_Translation.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt7461f8b5dbe6a9a3/608fe4a41671db1046c1a000/XTM_Translation.png)
 - Then, select the **Machine translation** option from the menu and select your preferred MT engines. For our example, we have used **Amazon Translate** as shown below:
 
   **Note**: You can select the MT engine you like but ensure you have the necessary keys for using that engine. You will need to enter those keys in the next step.
 - Leave the default options under the **General** options section untouched.
 - Scroll down to the **Amazon Translate** section (because we selected AWS Translate, if you select a different provider such as Google Translate, this section will change to Google Translate and you need to provide the necessary details specific to Google Translate), and keep the **Default setting** option checked.
-- Provide **AWS access key ID**, **AWS secret access key**, and click on **Synchronize**. You will get a message when it synchronizes successfully as shown below. Click on **Save**.
+- Provide **AWS access key ID**, **AWS secret access key**, and click on **Synchronize**. You will get a message when it synchronizes successfully as shown below. Click on **Save**.![AWS_Translate_keys_added.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltadd067e5fecbaf39/608fe57c3aa0431020f5ec53/AWS_Translate_keys_added.png)
 
 We have now activated the machine translation. Let's now go ahead and create a project in XTM.
 
 ### Create a Project Template in XTM
 
 To create the project template in XTM, follow the steps given below:
-- From the top menu, click on the **Projects** tab and then **Add project** as shown below:
+- From the top menu, click on the **Projects** tab and then **Add project** as shown below:![Add_project_in_XTM.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte4b1a8b5b525ca77/608fe62d71e79f1024c9a3c2/Add_project_in_XTM.png)
 - On the page that opens, under the **General information** section, the **Customer name** is auto-populated. You can provide a new name if you want and leave the remaining options blank.
 - Under the **Translation** section, provide the **Source language** (English USA in our example) and **Target languages** [Chinese (simplified), French (France) in our example]. You can add more languages if you like and leave the other options unchanged.
 - Leave the options Inside the **Workflow** and **Settings** sections to their default value.
 - Inside the **Machine translation** section, check the **Use Amazon machine translation** option, to enable machine translation of your content.
 
 Leave other options to their default values and click on the **Save as template** button.
-- The **Create template** modal will open. Provide a **Name** to your template and an optional **Description**. You can leave the default **Customer** specific option selected for **Type** as shown below:
+- The **Create template** modal will open. Provide a **Name** to your template and an optional **Description**. You can leave the default **Customer** specific option selected for **Type** as shown below:![New_MT_Template.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6506865eeace1cf5/608fe6e61022211019ccc6ff/New_MT_Template.png)
 - Click on the **Save** button and you will get a success message upon creation. Click on **Close** to close the **Create** **template** modal.
 - Your template is now ready. Go to the **Templates** option, next to **Project list**, and you will see the template that you just created listed.
-- Now hover over the "i" icon to the right corresponding to your template and you should be able to view the template ID. Make a note of it.
+- Now hover over the "i" icon to the right corresponding to your template and you should be able to view the template ID. Make a note of it.![Template_ID.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0eee270da0b88ecf/608fe7412d1d2210321940af/Template_ID.png)
 
 The XTM template is now ready. Similarly, you can create multiple templates for your project. We have created a couple of templates for the purpose of this exercise. We will require the template IDs while creating a content type in Contentstack.
 
@@ -117,7 +117,7 @@ To set up workflows for the translation process, perform the following steps:
 Hover over the **Settings** gear icon and click on **Workflows**.
 - On the **Workflow Settings** page, click on **+ ADD WORKFLOW**.
 - Provide a suitable name to your workflow and an optional description.
-- Under the **Scope** option, select if this workflow should be applied to **All Content Types** or **Specific Content Type(s)**. For our example, we will select the **Specific Content Types(s)** option and then select our content type, **XTM**, and then click on **Ad**d as shown below:
+- Under the **Scope** option, select if this workflow should be applied to **All Content Types** or **Specific Content Type(s)**. For our example, we will select the **Specific Content Types(s)** option and then select our content type, **XTM**, and then click on **Ad**d as shown below:![XTM_Machine_4_no_highlight.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb44901c3ccac2df5/60dcb71c1558ad5582219791/XTM_Machine_4_no_highlight.gif)
 - Inside the **WORKFLOW STAGES** option, [add four stages](../set-up-workflows-and-publish-rules/add-workflows-and-stages.md#add-workflow-stages) (for example, Draft, Send for Translation, Review, and Completed).
 
   **Additional resource**: Learn more about workflow and its stages, refer to the [set up workflows](../set-up-workflows-and-publish-rules/add-workflows-and-stages.md) guide.
@@ -178,8 +178,8 @@ for GCP NA region, enter **base_url** value as: `https://gcp-na-api.contentstack
 - Within **Configuration**, click on **General configuration** and increase the timeout value (by clicking on **Edit**) from 3 to 30 seconds and then save it.
 - Your lambda function is now ready. Let's add a trigger (API Gateway) for this lambda function. To do this, scroll up to the **Function overview** section and click on **+ Add trigger**.
 - On the **Trigger configuration **screen, select **API Gateway** from the **Select a trigger** dropdown.
-- From the **API** dropdown, select **Create an API**. Then, select **REST API** inside the **API type** block. Select **Open** from the **Security** dropdown and click on **Add**.
-- An API for your lambda function is now created. Inside the **Triggers** section, you will see the **Details** link. Click on it and you will find your API endpoint. Make a note of it as we will need it while setting up our webhook in Contentstack.
+- From the **API** dropdown, select **Create an API**. Then, select **REST API** inside the **API type** block. Select **Open** from the **Security** dropdown and click on **Add**.![Trigger_config.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5fb44f1740992d74/608ff2ab162d47104df4a98a/Trigger_config.png)
+- An API for your lambda function is now created. Inside the **Triggers** section, you will see the **Details** link. Click on it and you will find your API endpoint. Make a note of it as we will need it while setting up our webhook in Contentstack.![API_Gateway_for_LF_in_Human_Translation.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2503bc9cb6e41de2/608ff2e13aa0431020f5ec9d/API_Gateway_for_LF_in_Human_Translation.png)
 
 Let's now move ahead and create a webhook that will invoke the lambda function once the workflow stage changes to **Send for Translation**.
 
@@ -190,7 +190,7 @@ To create and [set up a webhook](../set-up-webhooks/create-a-webhook.md) in Cont
 Hover over the **Settings** gear icon, click on **Webhooks**, and on the **Webhooks** page, click on **+ New Webhook**.
 - On the **Create Webhook** page, fill up the **Name** field (for example, XTM Translation).
 - In the **URL to notify** field, enter the URL (the API endpoint of the first lambda function) that you generated in the previous step.
-- Scroll down to the **When** section for creating a trigger for the webhook as shown below:
+- Scroll down to the **When** section for creating a trigger for the webhook as shown below:![XTM_Machine_6_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2e97603438e30e03/60dcb73e9ef42b4859271959/XTM_Machine_6_no_highlight.png)
 - Ensure to check the **Enable Webhook** option and click on the **Save** button to save your settings.
 
 With these steps, we have completed the entire set up and now we are ready to try it out.

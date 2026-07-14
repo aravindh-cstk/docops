@@ -102,9 +102,9 @@ Next, you need to integrate the Gatsby Sidebar Extension with Contentstack stack
 To add the Gatsby Preview Sidebar Extension, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:Go to your stack and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**
 - Click on the **+ New Extension** button on the top-right corner and select **Use prebuilt.
-**
-- Click the filter dropdown and select **Sidebar Extension**.
-- From the available options, select **Gatsby Preview** and click on + **Add Extension.**
+**![Gatsby_Preview_1_highlighted.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6eebb534a9c3f59a/63871598268fa8109425a31b/Gatsby_Preview_1_highlighted.jpg)
+- Click the filter dropdown and select **Sidebar Extension**.![Gatsby_Preview_2_highlighted.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt754efb8e128f38e1/638715b311407d1056d631e7/Gatsby_Preview_2_highlighted.jpg)
+- From the available options, select **Gatsby Preview** and click on + **Add Extension.**![Gatsby_Preview_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt42bb9fcb9d4efa14/60b90f0b069dc90a315f829b/Gatsby_Preview_3_highlighted.png)
 - You will see the Sidebar Extension configuration page, where most details of the fields would be pre-filled. Enter widget-specific details in the fields as given below:
 
             **Title**: Provide a suitable title. For example, **Gatsby Preview**
@@ -131,8 +131,8 @@ Once you have added this Sidebar Extension, you can use it in the entries of the
 	Go to your stack and click on the “Entries” icon on the left navigation panel.
 - Click on the content type for which you have enabled the Sidebar Extension and click on an [entry](../../content-managers/author-content/about-entries.md)
 - Click the “Sidebar Extensions” icon on the right-hand side of the page to expand the sidebar.
-- Select **Gatsby Preview** from the drop-down menu.
-- The selected Sidebar Extension expands on the sidebar and you’ll see the **Open Preview **button.
+- Select **Gatsby Preview** from the drop-down menu.![Gatsby_Preview_4_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blteaefad68fab55c35/60b90f1b4d715a25225836db/Gatsby_Preview_4_highlighted.png)
+- The selected Sidebar Extension expands on the sidebar and you’ll see the **Open Preview **button.![Gatsby_Preview_5_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blteee26a36e5872807/60b90f2ca8cd6a0a26e29749/Gatsby_Preview_5_no_highlight.png)
 - After adding your entry content or making changes to your existing entry’s content, publish the entry.
 - Click on **Open Preview**.
  This will take you to the “Gatsby Preview instance URL” of your site. Once you open this URL, all the changes that you publish to your entry can be previewed instantly on this URL. Do not close the page until you are done working on the content.

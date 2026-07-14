@@ -31,11 +31,11 @@ In this guide, we will discuss the steps required to delete a Brand Kit.
 **Warning**: Deleting a Brand Kit deletes all its associated Voice Profiles as well. This action automatically unlinks the Brand Kit from its associated stacks. Once deleted, you cannot recover the Brand Kit and its Voice profiles.
 
 To delete a Brand Kit, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- On the left navigation panel, click the **Brand Kit** icon.
-- Select the **Brand Kit** that you want to delete.
-- Click Brand Kit **Settings** from the left navigation panel.
-- Scroll down to the **Delete Brand Kit** section. Read the instructions carefully and click the **Delete Brand Kit** button to delete the Brand Kit.
-- In the **Delete Brand Kit** modal, type **DELETE** in the text field and click the **Delete** button to delete the Brand Kit permanently.
+- On the left navigation panel, click the **Brand Kit** icon.![1-Brand-Kit-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2793aa12bafb2903/6656329d02c997c334b84fcb/1-Brand-Kit-Icon.png)
+- Select the **Brand Kit** that you want to delete.![2-Delete-Select-Brand-Kit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6023af19fa19b637/66564dd436a7941aba60b3c7/2-Delete-Select-Brand-Kit.png)
+- Click Brand Kit **Settings** from the left navigation panel.![3-Delete-Brand-Kit-Settings](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltadd937edbdf2ac3b/66564dd4d713af1b3f2d9754/3-Delete-Brand-Kit-Settings.png)
+- Scroll down to the **Delete Brand Kit** section. Read the instructions carefully and click the **Delete Brand Kit** button to delete the Brand Kit.![4-Delete-Brand-Kit-Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt44460f92e89917e9/66564ded6bf5e07e52af44d0/4-Delete-Brand-Kit-Button.png)
+- In the **Delete Brand Kit** modal, type **DELETE** in the text field and click the **Delete** button to delete the Brand Kit permanently.![5-Brand-Kit-Delete-Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2a54d322f3cec1b7/66564df43a9364f5228c8daa/5-Brand-Kit-Delete-Button.png)
 
 You will get a success message when the Brand Kit is deleted.
 

@@ -31,22 +31,24 @@ Without this authorization, Data & Insights (Lytics) cannot collect events, and 
 Once DAL is enabled for your organization, create a new DAL configuration as follows:
 - In the top navigation bar, click the **App Switcher** icon and then click **Administration**.
 - Click **Data Activation Layer**.
-- If this is your first time, you will be presented with the **Set Up Data Activation Layer** page, click the **+ New DAL Configuration** button to connect your Contentstack organization to Data & Insights (Lytics).
-- Mark the checkbox to accept the Data Privacy terms and conditions as shown below and then click the **Proceed** button.
+- If this is your first time, you will be presented with the **Set Up Data Activation Layer** page, click the **+ New DAL Configuration** button to connect your Contentstack organization to Data & Insights (Lytics).![1. Set up a new Data Activation Layer.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltba8ec72a8b08f66e/69b9d63cdafe75074090618a/1._Set_up_a_new_Data_Activation_Layer.png)
+- Mark the checkbox to accept the Data Privacy terms and conditions as shown below and then click the **Proceed** button.![2. Data privacy confirmation step in DAL setup.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt70132a8d5d301753/69b9d63c56a5ae48f0b838d6/2._Data_privacy_confirmation_step_in_DAL_setup.png)
 - In the modal that appears, enter the following details:**Title:** Enter a suitable name for your DAL. Spaces in the title are allowed.
 - **Domain: **Enter the domain name of your website. Ensure that you enter the **production URL** where your content resides. For example, `https://www.redpandaresorts.com/`
 - **CMS Stacks:** Add your CMS stack if you’ve set it up for this specific Launch project or website.
 - **Launch Projects: **(Optional)** **Select the Launch project where you want to integrate Event Tracking (Data & Insights (Lytics)).
 - **Personalize Projects:** Add your [Personalize](../personalize/about-personalize.md) project if you’ve set it up for this specific Launch project or website. You can leverage Personalize to deliver tailored experiences using [Entry Variants](/docs/content-managers/entry-variants#work-with-entry-variants), to optimize engagement and conversions.
-- **Data & Insights (Lytics) Account: **Create a new Data & Insights (Lytics) account by clicking the **+ New Lytics Account** button, OR select an existing Data & Insights (Lytics) account from the drop-down list to connect the appropriate Data & Insights (Lytics) account to your DAL.**Note:** To connect your pre-existing Data & Insights (Lytics) account, please contact the [support team](mailto:support@contetstack.com).
+- **Data & Insights (Lytics) Account: **Create a new Data & Insights (Lytics) account by clicking the **+ New Lytics Account** button, OR select an existing Data & Insights (Lytics) account from the drop-down list to connect the appropriate Data & Insights (Lytics) account to your DAL.
+
+  **Note:** To connect your pre-existing Data & Insights (Lytics) account, please contact the [support team](mailto:support@contetstack.com).
 - **Add additional DAL Managers** (Optional): You can grant users in your Contentstack organization access to the configuration.Click **+ Add users**.
 - In the Select Users modal, choose one or more users from your organization.Use the search bar to filter the list if needed.
 - Only users with the Admin or Member role appear in the list.
 - Click **Add Users**.
-- Review the list of added users displayed under Added Users.
+- Review the list of added users displayed under Added Users.![3. New_data_activation_layer_setup.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbfa1ab28065c6588/69b9d63c2a26b8140871b297/3._New_data_activation_layer_setup.png)
 
 **Note:** Ideally, each DAL should be connected to a **single website** for optimal tracking and data consistency.
-- Click the **Test Connection** button to ensure the setup was successful.
+- Click the **Test Connection** button to ensure the setup was successful.![4. Connection test success for RedPandaResorts.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt54f8bab0fc71f00d/69b9d63c8f08478396bbdcdd/4._Connection_test_success_for_RedPandaResorts.png)
 - Click **Save** to finalize your DAL configuration.
 
 The DAL has been created successfully.
@@ -67,8 +69,8 @@ The DAL has been created successfully.
 ## Authorize and Configure Content Classification for your DAL Connection
 The first time you access Data & Insights after setting up the DAL configuration, you will need to configure shared authorization. To do this, follow these steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Data & Insights**.
-- Click the **Select** button for the Data & Insights account you want to access.
-- Click the preferred Contentstack organization in the OAuth modal.
+- Click the **Select** button for the Data & Insights account you want to access.![5. Account selection screen.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt975d36aa7e57186a/69b9d63c7d3ec052722ffa79/5._Account_selection_screen.png)
+- Click the preferred Contentstack organization in the OAuth modal.![6. Organization selection screen.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2600d42b910b13a3/69b9d63c50ca695bddd3f46d/6._Organization_selection_screen.png)
 - Click the **Authorize** button to complete the setup.
 
 After successful authorization, you will be redirected to your Data & Insights dashboard. The first time you access it, you will be guided through the initial setup to ensure a personalized and efficient experience.

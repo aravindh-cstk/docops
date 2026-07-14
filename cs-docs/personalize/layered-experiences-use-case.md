@@ -120,7 +120,9 @@ When multiple experiences are active on a single page, layering comes into play.
 ### Dev - Set up Personalize Edge SDK (Manifest and Impressions/Events)
 - **Install SDK**Add the Personalize SDK to your site using npm, yarn, or pnpm. You can also add it through [Google Tag Manager](./google-tag-manager-integration-with-personalize.md) or another tag manager for impression and event tracking.
 - **Retrieve active variants**Initialize the SDK on each page load and retrieve active variant aliases for the visitor.
-- For server-side rendered (SSR) sites, run this logic at the edge using an edge function or middleware.**Additional Resource: **For more information, refer to [Server Side Rendering (SSR) with Edge Routing Technical Implementation Architecture](./ssr-edge-routing-technical-implementation-architecture.md), [Setup Next.js Website with Personalize - Launch](./setup-nextjs-website-with-personalize-launch.md).
+- For server-side rendered (SSR) sites, run this logic at the edge using an edge function or middleware.
+
+  **Additional Resource: **For more information, refer to [Server Side Rendering (SSR) with Edge Routing Technical Implementation Architecture](./ssr-edge-routing-technical-implementation-architecture.md), [Setup Next.js Website with Personalize - Launch](./setup-nextjs-website-with-personalize-launch.md).
 - Pass the active variant aliases to the Contentstack Delivery SDK to fetch corresponding entry variants.
 - **Track Impressions** Call [triggerImpressions()](../developers/create-content-types/reference.md#triggerimpressions) when a variant is displayed.
 

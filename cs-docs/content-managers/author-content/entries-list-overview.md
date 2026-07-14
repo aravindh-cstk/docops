@@ -71,7 +71,9 @@ Start creating entries directly from the list page in just a few steps:
 - Click the **+ New Entry** button at the top-right corner.
 - Choose the **Content Type** for your entry.
 - Add content within the entry editor.
-- **Note**: If **Drafts and Auto Save** is enabled, clicking **New Entry** creates a draft entry immediately. You can begin editing and collaborating without manually saving the entry first.
+- 
+
+  **Note**: If **Drafts and Auto Save** is enabled, clicking **New Entry** creates a draft entry immediately. You can begin editing and collaborating without manually saving the entry first.
 
 ### Views for Quick Access
 

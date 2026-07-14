@@ -25,7 +25,7 @@ To customize the JSON RTE, log in to your [Contentstack account](https://www.con
 - Go to the Content Type Builder and add the **JSON Rich Text Editor** field to your content type.
 - In the **Properties** pop-up of the JSON RTE field, click **Advanced**.
 - Under **Editor Type**, choose **Custom**. Select the desired formatting options to include in the toolbar. To enable all options, check the **Select All** checkbox.
-- Click **Save** or **Save and Close** to save your content type.
+- Click **Save** or **Save and Close** to save your content type.![Custom JSON RTE configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd308d4f5823a709c/68307cb1cf42ff32af04559c/customize-json-rte-edited.gif)
 
 Content managers will see the configured toolbar options when creating or editing entries of this content type.
 

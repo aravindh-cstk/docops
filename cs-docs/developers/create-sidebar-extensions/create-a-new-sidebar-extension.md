@@ -26,8 +26,8 @@ To create a custom Sidebar Extension, log in to your [Contentstack account](http
 
 - Navigate to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Sidebar Extension**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.![Create_New_Custom_Widget_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1095031e5e899675/60b53e859919771ac50cde6b/Create_New_Custom_Widget_1_highlighted.png)
+- In the **Select Extension Type** window, select **Sidebar Extension**.![Click_Sidebar_Extension.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb68f58ffe11c67ad/62b08ece36119858583d103a/Click_Sidebar_Extension.png)
 - In the **Create New Extension** page, enter values in the fields as given below:
   - **Title**: Provide a suitable title for your custom Sidebar Extension
     . This title will be visible as a sidebar extension name in the entry page.

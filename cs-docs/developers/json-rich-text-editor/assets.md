@@ -54,7 +54,7 @@ To upload new assets within your JSON RTE, log in to your
 - Choose the **Embed Type**:
   - **Block Embed**: Embeds the asset as a standalone block.
   - **Inline Embed**: Embeds the asset within a text flow.
-- Click **Insert Uploaded Images** to embed the new asset in the JSON RTE.
+- Click **Insert Uploaded Images** to embed the new asset in the JSON RTE.![Upload and embed new asset in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd05ad40c28bcf0a0/6819ba2d2ac67c4d20669462/1-upload-assets.gif)
 
 ## Best Practices for Asset Management
 

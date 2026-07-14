@@ -62,8 +62,8 @@ For this guide we have created a sample code, which you can download from our [G
 - **youtube-extension**: Navigate to youtube/build/index.html file. We will upload the code in this file in the extension source code field of our extension in the next step.
 - **youtube-extension-popup**: Navigate to youtube-popup/build/index.html, upload this file as an asset in your stack by referring to the [Create/Upload Assets](../../content-managers/author-content/create-upload-assets.md) guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
 - Go to your [stack](../set-up-stack/about-stack.md), and click on the “Settings” icon on the left navigation panel and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create New**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create New**.![Youtube_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5b859a40744879cf/60be2f39ff4b120facb6011c/Youtube_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Custom_field.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6cd604152a8da7d2/60e88d7f2a120025e58458b7/Custom_field.png)
 - On the **Create New Extension **page, enter values in the fields as given below:
 
   - **Title ***(required)*: Provide a suitable title, for example “Youtube,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md)** **field in your content type.
@@ -95,11 +95,11 @@ For this guide we have created a sample code, which you can download from our [G
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md)** **field to it.
-- Under **Select Extension**, select the “Youtube” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Youtube” field that you created and set the other properties. You can add other fields as per requirements.![Youtube_3_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt68204cc227a41636/60be2f52f33fd90fa1ed0813/Youtube_3_Highlighted.png)
 - Finally, click on either **Save** or **Save and Close** to save your changes.
-- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Youtube **field in action. Click the **Choose Video** button to display all the videos of the specified channel ID as follows:
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Youtube **field in action. Click the **Choose Video** button to display all the videos of the specified channel ID as follows:![Youtube_4_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6743ed1dfcf48e9c/60be2f602d95121b9b3d0d71/Youtube_4_Highlighted.png)
 - After clicking **Choose Video**, it will redirect you to a new page which displays a list of videos.
-- You can also choose the grid view for easy access. Select the videos you want to add and click on **Add Selected Videos**. The videos will be displayed in your custom field:
+- You can also choose the grid view for easy access. Select the videos you want to add and click on **Add Selected Videos**. The videos will be displayed in your custom field:![GIFyoutube.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt376a8eeaf0feeead/60ebba0634ae5f686460b2d7/GIFyoutube.gif)
 
 **Additional Resource: **You can also refer to our other documents on custom video extensions such as [Ooyala](./ooyala.md), [Brightcove](./brightcove.md), and [Vimeo](./vimeo.md).
 

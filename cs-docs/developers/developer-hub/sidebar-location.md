@@ -25,12 +25,12 @@ Let's see how to add entry sidebar location to your app:
 
 - **Via the Developer Hub Console:**  
   To add the entry sidebar location to your app via the Developer Hub console, login to your [Contentstack Account](https://www.contentstack.com/login) and follow the steps given below:
-  - Click the **Developer Hub** icon on the left navigation panel.
+  - Click the **Developer Hub** icon on the left navigation panel.![Welcome_to_Developer_Hub.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c63262317460a13/665eb3af653cb9d069a7f067/Welcome_to_Developer_Hub.png)
   - Select an application for which you want to add the entry sidebar location.
-  - Click the **UI Locations **tab. To set the **App URL**, click the **View Hosting** link. You will be redirected to the **Hosting **tab.
-  - In the **Hosting **tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.
+  - Click the **UI Locations **tab. To set the **App URL**, click the **View Hosting** link. You will be redirected to the **Hosting **tab.![View_Hosting.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf879b2d8d0af9821/68343990c589ead0184bdd34/View_Hosting.png)
+  - In the **Hosting **tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.![App_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt37093a3aeb3377a9/68343990d6011e50b9ed53c9/App_URL.png)
   - Navigate to the **UI Locations **tab to configure the Entry Sidebar location.
-  - Hover over the **Entry Sidebar** location, and click the **+ Add** **UI Location **button.
+  - Hover over the **Entry Sidebar** location, and click the **+ Add** **UI Location **button.![Add_Entry_Sidebar_Location.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt562e67d573d8c058/6835738f434ce7d3d342f4b5/Add_Entry_Sidebar_Location.png)
   - On the resulting **Configuration **page, set up the configurations for the entry sidebar location by providing details such as **Name**, **Path**, and **Description**. You can also enable the configuration using the **Enabled **toggle button. Properties that can be specified for this UI location:
 
     - **Name (optional)**: Specifies the name of the UI location. This name will be displayed at the location after the app is installed. If not provided, the app name will be used. Ensure unique names for multiple configurations of the same location.
@@ -51,7 +51,7 @@ Let's see how to add entry sidebar location to your app:
     Navigate to the [stack](../set-up-stack/about-stack.md). In the right navigation, you will see the **Widgets** icon. Click to view the sidebar widget. You will see two tabs: **Apps **and **Extensions**.
 
     - To set the app as the default, go to the **Apps **tab, click the three dots icon, and then click the **Set as Default App** option to pin the app at the top. OR
-    - To set the extension as the default, go to the **Extensions **tab, click the three dots icon, and then click the **Set as Default Extension** option to pin the app at the top.
+    - To set the extension as the default, go to the **Extensions **tab, click the three dots icon, and then click the **Set as Default Extension** option to pin the app at the top.![Sidebar_App_New_UI.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt62357667831dbf8a/66accfd56a871d2210b8db60/Sidebar_App_New_UI.png)
 
 You can create new entry sidebar locations by writing your custom code, or you can use the prebuilt [boilerplate](./marketplace-app-boilerplate.md) and modify the given code to suit your requirements.
 

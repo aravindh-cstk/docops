@@ -22,8 +22,8 @@ You can create a new webhook or update an existing webhook by importing a JSON f
 
 To import a webhook, log in to your [Contentstack account](https://www.contentstack.com/login), go to your [stack](../set-up-stack/about-stack.md), and Perform the steps given below:
 
-- Click the “Settings” icon (press “S”) on the left navigation panel and select **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS).
-- Click the "Import Webhook" icon on the top right side of the page.
+- Click the “Settings” icon (press “S”) on the left navigation panel and select **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS).![Edit_a_Webhook_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt64c6872f751a8595/66a7375f7cd4c936333944c7/Edit_a_Webhook_1.png)
+- Click the "Import Webhook" icon on the top right side of the page.![Import_a_Webhook_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltefebbd96a6ca4218/66a76daba4a65778941dd3ee/Import_a_Webhook_2.png)
 - Browse and select the appropriate JSON file and click **Import**.
 
 This imports your webhook.
@@ -32,7 +32,7 @@ This imports your webhook.
 
 Open the webhook that you need to update, and perform the following steps:
 
-- Click the **Import** button available at the bottom of the webhook page.
+- Click the **Import** button available at the bottom of the webhook page.![Import_a_Webhook_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f83a2f892ca36ac/66b0991a7836f26ef03061c9/Import_a_Webhook_3.png)
 - Browse and select the appropriate JSON file and click **Import**.
 
 This will update your existing webhook.

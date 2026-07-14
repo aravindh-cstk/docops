@@ -58,7 +58,9 @@ These tokens authenticate your front end to fetch published and preview content 
 
 To create a Delivery and Preview token, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Go to your [stack](../developers/set-up-stack/about-stack.md), navigate to the settings panel, and select **Tokens**.
-- Click **Delivery Token** to create a new token.**Tip:** If you are on the [Management Tokens](../developers/create-tokens/about-management-tokens.md) tab, you can press “Alt + O” (Windows) or “Option + O” (Mac) to navigate to the Delivery Tokens tab.
+- Click **Delivery Token** to create a new token.
+
+  **Tip:** If you are on the [Management Tokens](../developers/create-tokens/about-management-tokens.md) tab, you can press “Alt + O” (Windows) or “Option + O” (Mac) to navigate to the Delivery Tokens tab.
 - Enter a **Name** (required) and a **Description** (optional) for the Delivery Token.
 - In the **Scope** section, choose the [Branches](../developers/branches/about-branches.md) or [Aliases](../developers/branches/about-aliases.md) to associate with this token.
 - Select the **Publishing Environments** for which to generate the Delivery Token.

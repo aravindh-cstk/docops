@@ -46,10 +46,10 @@ Scheduled publishing and unpublishing are also available in [Releases](../create
 ## Reschedule a Scheduled Publish/Unpublish
 If you have already scheduled an entry to be published or unpublished, you can change the date and time without cancelling the schedule.
 - In the **Entry Status** panel, locate the scheduled publish/unpublish pill.
-- Click the “Reschedule” icon.
+- Click the “Reschedule” icon.![Reschedule_a_Scheduled_Publish.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdd5d807315b85d84/68c93acdcd88140e03f23ba2/Reschedule_a_Scheduled_Publish.png)
 - In the **Reschedule Publish/Unpublish** modal, select whether you want to:Publish/Unpublish **Now** (the action will execute immediately), or
 - Publish/Unpublish **Later** (choose a new date, time, and time zone).
-- Click **Reschedule** (for Later) or **Reschedule and Send** (for Now).
+- Click **Reschedule** (for Later) or **Reschedule and Send** (for Now).![Reschedule_Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9bbba684f8ffaa46/68c93ae672b4ed89470592ed/Reschedule_Modal.png)
 
 Your entry’s schedule gets updated.
 

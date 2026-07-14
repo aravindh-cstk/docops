@@ -52,7 +52,9 @@ Run the following command:
 ```
 chmod +x setup-docker.sh && ./setup-docker.sh
 ```
-- Choose the legacy CMS you are migrating content from.**Warning:** Ensure you select the correct legacy CMS to avoid any errors during the migration.
+- Choose the legacy CMS you are migrating content from.
+
+  **Warning:** Ensure you select the correct legacy CMS to avoid any errors during the migration.
 - Enter the file path of the exported content you wish to migrate.For **macOS/Linux**:
 
 ```
@@ -64,7 +66,7 @@ For **Windows**:
 C:\\Users\\{{username}}\\data\\{{sitecore_export}}.zip
 ```
 **Note:** The file type may vary depending on your legacy CMS. For example, Sitecore data is exported in ZIP format, whereas Contentful data is exported in JSON.
-- Once the installation is complete, navigate to the `http://localhost:3000` URL to access Contentstack Migration Framework.
+- Once the installation is complete, navigate to the `http://localhost:3000` URL to access Contentstack Migration Framework.![Set Up Content Migration Tool Docker 4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt452dc944ce02f2d2/68932f59d294dee4e7a71f90/Set_Up_Content_Migration_Tool_Docker_4.png)
 
 This completes the installation of Contentstack Migration Framework. Refer to the [Perform Content Migration](../content-migration.md#perform-content-migration) section for further steps based on your legacy CMS.
 

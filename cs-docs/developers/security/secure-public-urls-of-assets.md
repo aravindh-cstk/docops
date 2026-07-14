@@ -32,7 +32,9 @@ Example URLs:
 ## Behavior and Limitations
 
 When secure asset URLs are enabled, the following limitations apply:
-- **Rich Text Fields (RTE, JSON RTE, and Markdown):** Once asset privatization is enabled, these fields would no longer support asset or image insertion using the standard file picker. As a workaround, to include a secured asset, manually append the required authentication parameters to the URL.**Warning:** Manually appending the asset URL is not recommended for rich text fields due to maintainability and potential security exposure.
+- **Rich Text Fields (RTE, JSON RTE, and Markdown):** Once asset privatization is enabled, these fields would no longer support asset or image insertion using the standard file picker. As a workaround, to include a secured asset, manually append the required authentication parameters to the URL.
+
+  **Warning:** Manually appending the asset URL is not recommended for rich text fields due to maintainability and potential security exposure.
 - **Image Delivery API Limitations:** The [overlay](../../../api-docs/api-detail/image-delivery-api.md#overlay) transformation parameter does not function with secured assets.
 
 ## How To Access Draft Assets

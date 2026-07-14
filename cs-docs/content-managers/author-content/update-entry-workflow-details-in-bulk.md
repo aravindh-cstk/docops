@@ -22,10 +22,14 @@ You can update workflow details such as stage, assignee, due date, and comments 
 To bulk update the workflow details for multiple entries, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
 - Use the checkboxes to select the entries where you want to update the workflow stage.
-- Click the **Change Workflow Details** option in the floating panel that appears. **Additional Resource**: Read more about how Contentstack’s [Search](/docs/content-managers/search-content) functionality supports [changing workflow details of entries in bulk](../search-content/change-workflow-details-of-entries-in-bulk.md).
+- Click the **Change Workflow Details** option in the floating panel that appears. ![Bulk_Entry_WF_Details_Change_WF.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0740fcd6cfabf193/677cb94066c78767ddba10fb/Bulk_Entry_WF_Details_Change_WF.png)
+
+  **Additional Resource**: Read more about how Contentstack’s [Search](/docs/content-managers/search-content) functionality supports [changing workflow details of entries in bulk](../search-content/change-workflow-details-of-entries-in-bulk.md).
 - In the **Edit Workflow Settings** modal:**Set Workflow Stage**: Under **Workflow Stage**, select the stage to assign to the selected entries.
 - **Set Due Date**: Use the date picker tool under **Set Due Date** to assign a due date for this stage.
-- **Assign to Users**: Click the **Assign to User(s)** field and select user(s) from the drop-down list.**Tip**: Once an entry stage is assigned to a user, it appears as a new task in their **Tasks** section. Read more about [Tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md).
+- **Assign to Users**: Click the **Assign to User(s)** field and select user(s) from the drop-down list.
+
+  **Tip**: Once an entry stage is assigned to a user, it appears as a new task in their **Tasks** section. Read more about [Tasks](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md).
 - **Assign to Roles**: Click the **Assign to Role(s)** field to assign the stage to a role.
 - **Send Notifications**: To send a notification email to the assignee, select the **Notify via email** checkbox.
 - **Add Comments (Optional)**: Enter comments in the **Add Comment** field.

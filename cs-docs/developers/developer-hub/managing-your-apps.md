@@ -20,8 +20,8 @@ You can manage all your installed/authorized apps and installation requests from
 
 To see the installed/authorized apps in your stack, follow the steps below:
 - Log in to your [Contentstack Account](https://app.contentstack.com/#!/login).
-- In the left navigation panel, click the** Marketplace** icon.
-- On the screen that appears, click the **Manage** button.
+- In the left navigation panel, click the** Marketplace** icon.![Developer_Hub_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2d9db2d8d2be42ac/67cebb45420b6be1a80d8420/Developer_Hub_Icon.png)
+- On the screen that appears, click the **Manage** button.![Marketplace_Screen.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte84889fd696083d0/67cebaa0ef4ce649edd21f21/Marketplace_Screen.png)
 - Under the **Manage **> **Installed Apps** section, you will find your installed apps. Here you can configure or uninstall your apps as needed.
 - Under the **Manage **> **Authorized Apps** section, you will find your authorized apps.
 

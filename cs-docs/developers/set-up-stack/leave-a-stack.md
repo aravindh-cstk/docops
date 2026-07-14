@@ -24,7 +24,7 @@ You can leave a stack when you no longer need access or want to stop collaborati
 To leave a stack, log in to your
 [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Go to your [stack](./about-stack.md) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
-- Click **Leave Stack** and confirm your action.
+- Click **Leave Stack** and confirm your action.![Leave Stack option in Contentstack settings](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt225f86190bccbaae/67bf131e53fc5e3d4ab183be/Setup-a-Stack_Leave-a-Stack_Leave-Stack-_Button.png)
 
 Once you leave the stack, you will lose access to its content. This action **cannot** be undone.
 

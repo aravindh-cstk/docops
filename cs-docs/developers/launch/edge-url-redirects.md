@@ -55,12 +55,18 @@ Open your source code folder.
 
 ```
 - Replace `/source` in the code with your source route.
-- Replace `/destination` in the code with your destination route.**Note:** The source and destination URLs must not exceed **512** characters each.
+- Replace `/destination` in the code with your destination route.
+
+  **Note:** The source and destination URLs must not exceed **512** characters each.
 - Based on the type of redirection you require, add one of the following status codes in the `statusCode` field:For permanent redirection: `301` or `308`.
-- For temporary redirection: `302` or `307`.**Note:** By default, the `statusCode` value is set to `308` if you do not specify the `statusCode` field.
+- For temporary redirection: `302` or `307`.
+
+  **Note:** By default, the `statusCode` value is set to `308` if you do not specify the `statusCode` field.
 
 You can use the `headers` field in the `response` object to set custom headers for the redirect response. The `response` field is optional; you can skip it if setting custom headers is not required.
-- Save the `launch.json` file.**Note:** The **file size** must be limited to **5MB**. To optimize performance and minimize latency during processing, use regular expressions to keep the configuration compact and efficient.
+- Save the `launch.json` file.
+
+  **Note:** The **file size** must be limited to **5MB**. To optimize performance and minimize latency during processing, use regular expressions to keep the configuration compact and efficient.
 
 #### Examples for the uses of Edge URL Redirects
 - Using path variables allows you to capture dynamic segments of the source URL and re-use them to construct the destination URL.

@@ -23,7 +23,7 @@ To delete a Global field, log in to your [Contentstack account](https://www.cont
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to delete a Global field.
 - Click the **Content Models** icon in the left navigation panel and select **Global Fields** in the left panel.
 - Locate the Global field you want to delete. Click the vertical ellipsis in the **Actions** column next to it and select **Delete**.
-- In the **Delete Global Field** modal, enter the name of the Global field and confirm the action by clicking Delete.
+- In the **Delete Global Field** modal, enter the name of the Global field and confirm the action by clicking Delete.![Delete Global Field confirmation modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfeb1cc25de9f8263/67ffa3804851b564c7d2f203/1-Delete-a-Global-Field-1.gif)
 
 **Warning:**
 - Although you can restore a deleted Global field from the trash, its data will be permanently removed from all entries where it was used.

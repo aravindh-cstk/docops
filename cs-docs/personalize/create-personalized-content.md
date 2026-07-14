@@ -39,7 +39,7 @@ Follow these steps to navigate to the variant group in the CMS and begin creatin
 - From the list of experiences, click the experience you want to open.
 - Click the **Information** icon on the right to open the side drawer.
 - Scroll down to the **Contentstack CMS Sync Status** section. This section displays details about the connected stack and variant group.
-- Click the **Variant Group** link.
+- Click the **Variant Group** link.![image3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc480bdf855c91178/6930fe5f41f0926cd859185e/image3.png)
 - This opens up the linked Variant Group’s page in the stack settings.
 
 ### From the CMS Stack
@@ -52,7 +52,7 @@ To access Variants, log in to your [Contentstack account](https://www.contentsta
 - Select Variants in the navigation panel on the left.
 - Click a particular variant group.
 - In the Linked Content Types field, select one or more content types to associate with the variant group.
-  Associating a variant group with specific content type allows you to personalize the content of the entries based on the content types.
+  Associating a variant group with specific content type allows you to personalize the content of the entries based on the content types.![image2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcb91a7701115b5a0/6930fe7129f9d952670deeef/image2.png)
 - Click **Apply**, then click **Save**.**Additional Resources: **For more information, refer to [Linking Content Types.](../developers/variants/manage-variant-groups.md#linking-content-types)
 - You can now create entry variants by modifying the fields or sections as needed to personalize content.**Additional Resources: **For more information, refer to [Variants](./about-variants.md) and [Create Entry Variants.](../content-managers/entry-variants/create-an-entry-variant.md)
 - You can now publish the entries for the rendered pages to be personalized.

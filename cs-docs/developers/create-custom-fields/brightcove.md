@@ -43,18 +43,18 @@ This step-by-step guide explains how to create a Brightcove custom field extensi
 
 To use this extension, you need to create an account in Brightcove. To do that, perform the following steps:
 
-- Go to [Brightcove](https://signin.brightcove.com/) website and create your account by clicking on the **Sign up now** link.
+- Go to [Brightcove](https://signin.brightcove.com/) website and create your account by clicking on the **Sign up now** link.![BC_sign_up_page.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltabbc0a7431d31008/6387581a32130110b279e6d7/BC_sign_up_page.jpg)
 - On the next page, you can choose from the available options such as **Video Cloud**, **Enterprise Video Suite**, and so on.
 - Select the one that suits your requirement, enter your work email address, and click on **GET STARTED**.
 
   **Note**: You get a free trial to try the platform. However, if you want to use the APIs for integration, the free plan will not work. Therefore, it is suggested to buy one of their plans to have full-fledged access to the API usage.
 
-- Follow the on-screen instructions and set up your account and then log in. You should see your dashboard. Click on the **ADMIN** option at the top-right corner, as shown below, and select **API Authentication**.
-- On the **API Authentication** screen, you need to register your application for using the APIs. To do this, click on **Register New Application**.
+- Follow the on-screen instructions and set up your account and then log in. You should see your dashboard. Click on the **ADMIN** option at the top-right corner, as shown below, and select **API Authentication**.![Admin_page.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt914ca2fb8dea579f/6137cdca50d82f3b0a7a9bbb/Admin_page.png)
+- On the **API Authentication** screen, you need to register your application for using the APIs. To do this, click on **Register New Application**.![API_Authentication.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt7c1197afcd6eafde/6137cdfaec680b43eb02a302/API_Authentication.png)
 - On the **Register New Application** screen, provide a **Name** and an optional **Description**. Select the appropriate account from the **Select Accounts for Authorization** option.
 - Select all options in **CMS** (under the **Exposed Brightcove APIs** section) as shown below. You can leave all other options unchecked for now and click on the **Save** button.
-- A **Copy Your Client Secret** window will pop-up, as shown below. Make a note of the **Client ID** and **Client Secret** as we will need these keys while setting up the lambda function in AWS. Once you have copied the IDs, click on the **Okay, I copied it** button.
-- Your app is now registered and you can start uploading videos in Brightcove. To do this, click on the **BRIGHTCOVE** icon at top left. You'll get to your dashboard. Click on **HOME**, at the top-left corner, and select **Upload** as shown below:
+- A **Copy Your Client Secret** window will pop-up, as shown below. Make a note of the **Client ID** and **Client Secret** as we will need these keys while setting up the lambda function in AWS. Once you have copied the IDs, click on the **Okay, I copied it** button.![Client_Secret_and_ID.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt151882240d8a4975/6137cf06c5e2b142a75a24c5/Client_Secret_and_ID.png)
+- Your app is now registered and you can start uploading videos in Brightcove. To do this, click on the **BRIGHTCOVE** icon at top left. You'll get to your dashboard. Click on **HOME**, at the top-left corner, and select **Upload** as shown below:![Upload_Videos.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc5791e48007e3a37/6137cf3e402ba23dfc2236fb/Upload_Videos.png)
 - On the **Upload** screen, you can drag and drop videos, browse videos from your machine, or upload videos using the URL.
 - Once the uploading finishes, click on the dropdown next to the **UPLOAD** option and select **Media** to view the list of your uploaded videos.
 
@@ -99,14 +99,14 @@ Once you run the above command, a **brighcove.zip** file will be created.
 
 - Once added, click on **Save**. Your lambda function is now ready. Scroll up to the **Function** overview section and click on **+ Add trigger**.
 - On the **Add trigger** screen, select **API Gateway** from the **Select a trigger** dropdown.
-- Select **Create an API**, from the **API dropdown**. Then, select **REST API** inside the **API type** block, **Open** from the **Security** dropdown, and click on **Add**.
+- Select **Create an API**, from the **API dropdown**. Then, select **REST API** inside the **API type** block, **Open** from the **Security** dropdown, and click on **Add**.![API_Gateway_creation.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt863b739c8597f92b/6137d44e282922397db1c9d1/API_Gateway_creation.png)
 - An API gets created for your lambda function. Under the **Configuration** tab, click on **Triggers** you will see **API Gateway**.
 - Click on the **Details** link, you will find your **API endpoint**. Make a note of it as we will need it while setting up the Brightcove extension in Contentstack.
-- We now need to enable CORS for our API Gateway. So click on the **API Gateway** name as shown below:
+- We now need to enable CORS for our API Gateway. So click on the **API Gateway** name as shown below:![Enabling_CORS.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt665a637ebc6dac76/6137d4e14ae6cd43e46eaceb/Enabling_CORS.png)
 - On the **Amazon API Gateway** screen, click on the **Actions** dropdown and select **Enable CORS**. This is a mandatory step for the successful implementation of this extension.
-- On the **Enable CORS** screen, select **DEFAULT 4XX** from the **Gateway Responses for BrightcoveExtension-API API** option and click on **Enable CORS and replace existing CORS headers** as shown below:
-- Upon receiving the **Confirm method changes pop-up** message, click on **Yes, replace existing values**.
-- After the successful completion of this operation, click on the **Actions** drop-down again and select **Deploy API** inside **API ACTIONS**.
+- On the **Enable CORS** screen, select **DEFAULT 4XX** from the **Gateway Responses for BrightcoveExtension-API API** option and click on **Enable CORS and replace existing CORS headers** as shown below:![Enable_CORS_3.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt583f0fcc7be9fa22/6137d57b876fcf3cb80c33d5/Enable_CORS_3.png)
+- Upon receiving the **Confirm method changes pop-up** message, click on **Yes, replace existing values**.![Enable_CORS_4.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltbb2209f0b6261a57/6137d5a7d6b1f5398353d47c/Enable_CORS_4.png)
+- After the successful completion of this operation, click on the **Actions** drop-down again and select **Deploy API** inside **API ACTIONS**.![Deploy_API.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt7261c74e3d5cf036/6137d5cc4572ce3df5317402/Deploy_API.png)
 - On the **Deploy API** screen, select **[New Stage]** from the **Deployment** **stage** drop-down. Enter **Dev** (or whatever name you would like to name it) as the value for **Stage name**, and an optional description for **Stage description** and **Deployment description**. Click on **Deploy**.
 - On the next screen that you will get after clicking on Deploy, you will get an **Invoke URL** as shown below:
 - Make note of this URL as we will need it when we set up the configuration parameter for our extension in Contentstack.
@@ -122,8 +122,8 @@ To add this extension to your stack, log in to your [Contentstack account](https
 
 - Go to your [stack](../set-up-stack/about-stack.md), and click on the **Settings** icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.![Brightcove_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1ff4061fa675cb39/60bd820df77af428924b908f/Brightcove_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Brightcove_2_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltd253390db7398553/60bd821c68689d78c8630599/Brightcove_2_no_highlight.png)
 - On the **Create New Extension **page, enter values in the fields as given below:
   - **Title ***(required)*: Provide a suitable title, for example “Brightcove,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
   - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
@@ -157,9 +157,9 @@ Once you have added a custom field, you can use it in your content type like any
 
 - Click on the “Content Models” icon on the left panel and click the **+ New Content Type** button.
 - [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it by clicking on the “Insert a field” link denoted by a **+ **sign.
-- Under **Select Extension**, select the “Brightcove” field that you created and set the other properties. You can add other fields as per requirements
+- Under **Select Extension**, select the “Brightcove” field that you created and set the other properties. You can add other fields as per requirements![Brightcove_3_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt796fdc4cc866bcf1/60bd8229f33fd90fa1ed0386/Brightcove_3_Highlighted.png)
 - Finally, click on **Save and Close** to save your changes.
-- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Brightcove **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Brightcove **field in action.![Brightcove_4_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta7c7b50c7a008321/60bd82503fb413770446e76d/Brightcove_4_highlighted.png)
 - Click on **Choose Videos**. Your Brightcove video playlist will appear. Select the videos you want to add in your entry and click on the **Add Selected Videos** button.
 
 **Additional Resource: **You can also refer to our other documents on custom video extensions such as [YouTube](./youtube.md), [Ooyala](./ooyala.md), and [Vimeo](./vimeo.md).

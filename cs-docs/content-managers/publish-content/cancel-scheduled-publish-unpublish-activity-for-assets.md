@@ -23,7 +23,7 @@ Follow the below steps to cancel a scheduled publish or unpublish action for an 
 - Go to your stack, and click on the “Publish Queue” icon on the left navigation panel. You can also use the shortcut key “alt + P” for Windows OS users, and “option + P” for Mac OS users to access Publish Queue.
 
 You can view the list of historical or current publishing or unpublishing activities on screen.
-- Under **FILTERS**, apply the date range filter to refine the publish queue results based on the specific date on which the asset is scheduled for publishing or unpublishing.
+- Under **FILTERS**, apply the date range filter to refine the publish queue results based on the specific date on which the asset is scheduled for publishing or unpublishing.![Cancel_sheduled_publish_unpublish_entries_2_no_highlight.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8f2cf6d22261f9a2/6398db66a8100f5f84908324/Cancel_sheduled_publish_unpublish_entries_2_no_highlight.jpg)
 - From the refined activity list, click on the **Cancel (x)** icon beside an asset that needs to be removed from the publish queue.  
 **Additional Resource**: Learn how to [cancel scheduled publishing or unpublishing activity for an asset](../../../api-docs/api-detail/content-management-api.md#cancel-scheduled-action) using Contentstack's [Content Management API](../../../api-docs/api-detail/content-management-api.md).
 

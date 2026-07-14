@@ -35,7 +35,7 @@ This guide will help you set up your Next.js website with Personalize, hosted on
 To retrieve the project UID, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
 - Navigate to **Personalize** and select your preferred project.
 - Click the **Settings** icon in the left navigation panel.
-- In the **General** tab, under **Project Details**, you will find the 24-character project UID.
+- In the **General** tab, under **Project Details**, you will find the 24-character project UID.![Fetch_Personalize_Project_UID.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta484036b87342c85/67094fcdd5ba14b41f4578f6/Fetch_Personalize_Project_UID.png)
 - Click the **Copy** icon to copy the project UID to your clipboard. We will need this UID while setting up the Personalize Edge SDK in the next step.
 
 ### Proxy Requests with Launch Edge Proxy

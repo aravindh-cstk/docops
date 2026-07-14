@@ -25,12 +25,12 @@ Let's see how to add custom field location to your app:
 - **Via the Developer Hub Console:**
 To add the custom field location to your app via the Developer Hub console, login to your [Contentstack Account](https://www.contentstack.com/login/) and follow the steps given below:
 
-      Click the **Developer Hub **icon in the left navigation panel.
+      Click the **Developer Hub **icon in the left navigation panel.![Welcome_to_Developer_Hub.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c63262317460a13/665eb3af653cb9d069a7f067/Welcome_to_Developer_Hub.png)
 - Select an application for which you want to add the custom field location.
-- Click the **UI Locations** tab. To set the **App URL**, click the** View Hosting **link. You will be redirected to the **Hosting **tab.
-- In the **Hosting **tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.
+- Click the **UI Locations** tab. To set the **App URL**, click the** View Hosting **link. You will be redirected to the **Hosting **tab.![View_Hosting.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4502661279fd5aa6/68303235980bb6ba0872715f/View_Hosting.png)
+- In the **Hosting **tab, you can select [Hosting with Launch](./app-hosting.md#hosting-with-launch) or [Custom Hosting](./app-hosting.md#custom-hosting) options. Select the **Custom Hosting **option to enter the hosted URL of your application. Click the **Save **button to save your hosting configuration.![App_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc0ab1619e05e9133/68303234bcb194e9539ac1d6/App_URL.png)
 - Navigate to the **UI Locations** tab to configure the Custom Field location.
-- Hover over the **Custom Field** location, and click the **+ Add**** UI Location** button.
+- Hover over the **Custom Field** location, and click the **+ Add**** UI Location** button.![Add_Custom_Field_Location.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta6ce7cfb2b9b7cad/68341c6042d6ef56ab91e363/Add_Custom_Field_Location.png)
 - On the resulting Configuration page, set up the configurations for custom field location by providing details such as **Name**, **Path**, **Data Type**, and **Description**. You can also enable the configuration using the **Enabled **toggle button.Properties that can be specified for this UI location:
 
           **Name (optional):** Specifies the name of the UI location. This name will be displayed at the location after the app is installed. If not provided, the app name will be used. Ensure unique names for multiple configurations of the same location.

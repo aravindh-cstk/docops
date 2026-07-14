@@ -24,7 +24,9 @@ To rename an existing version, log in to your [Contentstack account](https://www
 - Navigate to the entry you want to modify.
 - Click the version icon in the top-right corner of the entry editor, or use the “Versions” icon in the right sidebar to open the **Version History** panel.
 - In the list of saved versions, locate the version you want to rename. Hover over it and click the “Rename” icon.
-- Enter a custom name and confirm your changes by pressing “Enter” on your keyboard.**Note**: Version names can include only **alphanumeric characters**, **spaces**, **hyphens**, or **underscores**. Special characters such as slashes and symbols are not supported.
+- Enter a custom name and confirm your changes by pressing “Enter” on your keyboard.
+
+  **Note**: Version names can include only **alphanumeric characters**, **spaces**, **hyphens**, or **underscores**. Special characters such as slashes and symbols are not supported.
 
 **Note**: Custom version names have a maximum limit of **32 characters**.
 

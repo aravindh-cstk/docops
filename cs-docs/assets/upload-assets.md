@@ -21,7 +21,9 @@ You can upload assets directly to the assets listing page. Asset Management supp
 
 To upload assets, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps below:
 - Navigate to the **Assets** listing page within your space.
-- Drag and drop files from your computer into the listing area, or click **+ New** and click **Upload File**.**Note:** Select or drag and drop up to **100 assets** at once. The size of an asset should not exceed **1.5 GB**.
+- Drag and drop files from your computer into the listing area, or click **+ New** and click **Upload File**.
+
+  **Note:** Select or drag and drop up to **100 assets** at once. The size of an asset should not exceed **1.5 GB**.
 - Browse your local system and select the files you want to upload.
 - Click **Open**.
 

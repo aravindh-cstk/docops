@@ -39,7 +39,9 @@ While viewing nested references in the **Publish Reference(s)** modal, it is ess
 
 - **Workflow stage error:** This error occurs when you have a workflow set, and your entry has not moved to the completion stage.
 - **In-progress entry error:** This error occurs when you have entries with missing data for fields that are marked as mandatory.
-- **Pending approvals:** This warning occurs when you need approvals to publish entries of certain content types. In this case, when you send the parent entry for publishing, the approver(s) will be notified of your request.**Note:** Once your publishing request is approved, you will need to republish those entries again.
+- **Pending approvals:** This warning occurs when you need approvals to publish entries of certain content types. In this case, when you send the parent entry for publishing, the approver(s) will be notified of your request.
+
+  **Note:** Once your publishing request is approved, you will need to republish those entries again.
 - **Publishing rights error:** This error occurs when you have insufficient permissions to publish content.
 
 The **Publish Reference(s)** modal not only allows you to view your child entries but also enables you to navigate to the respective entries to edit them. You can easily check and edit child entries by clicking the “Edit entry in new tab” icon, which opens the entry in a new tab. You can then make changes and save the entry, and the latest version of your entry will be sent for publishing along with the parent entry.

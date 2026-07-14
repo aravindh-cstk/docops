@@ -67,8 +67,8 @@ Navigate to commercetools **Project settings **page, and goto the **Storefront s
 To add this extension to your stack, perform the following steps:
 
 Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” gear icon, and select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ Add Extension **button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one **link as shown below.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ Add Extension **button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one **link as shown below.![commercetools_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6de3b3f6ce85fe15/60bd830d324cea0e69781e2a/commercetools_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![commercetools_2_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta82610e90eed99a2/60bd83181b32a31d5305b06e/commercetools_2_Highlighted.png)
 - On the **Create New Extension **page, enter values in the fields as given below:
 
   **Title ***(required)*: Provide a suitable title, for example, “commercetools,” for your custom field. This title will be visible when you select the extension in the [**Custom**](../create-content-types/custom.md) field in your content type.
@@ -113,9 +113,9 @@ Please note we have added sample values in the example below to help you underst
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
-- Under **Select Extension**, select the “commercetools” field that you created and set the other properties. You can add other fields as per requirement.
+- Under **Select Extension**, select the “commercetools” field that you created and set the other properties. You can add other fields as per requirement.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2fc1ed9bbf1c25d9/610754620d73bb3ec5da9448/image.png)
 - Finally, click on either **Save** or **Save and Close** to save your changes.
-- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **commercetools **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **commercetools **field in action.![commercetoolsvenus.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb77e4c065e03e07a/6103cf58d7b6f246ab877a9b/commercetoolsvenus.gif)
 
 **Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to the limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 

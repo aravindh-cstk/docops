@@ -39,11 +39,11 @@ Let's follow this step-by-step guide to install and configure the Aprimo app wit
 You can fetch Aprimo Account **Tenant** Name from the URL shared by Aprimo. For example, in the URL https://<sometenant>.dam.aprimo.com/, <sometenant> is the Tenant name.
 - To fetch the **Client ID** and **Client Secret** required during app configuration in [step 2](#install-and-configure-the-aprimo-app-from-marketplace), follow the steps:  
           Log in to your Aprimo account and select **Administration** from the left navigation panel.
-- Go to **Registrations** under the **Integration** section.
-- On the right side, click **NEW** to add a new registration.
+- Go to **Registrations** under the **Integration** section.![Aprimo-Registrations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt02427f3801d74656/67e68a0d5861916c35d4ded4/Aprimo-Registrations.png)
+- On the right side, click **NEW** to add a new registration.![Aprimo-New-Registration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2ae9828d3862232d/67e68a0da3b7856f78f7967d/Aprimo-New-Registration.png)
 - Fill up the details and click **SAVE** to generate the Client ID.  
             **Note**: Copy the **Client Secret** to the clipboard. You'll not be able to view it again.
-- You can get the **Client ID** after registration.
+- You can get the **Client ID** after registration.![Aprimo-Registration-Client-ID](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt93f6d18f265f45be/67e68a0d697ba16d2e5fe679/Aprimo-Registration-Client-ID.png)
 
 ## Install and Configure the Aprimo app from Marketplace
 
@@ -51,11 +51,11 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/) and f
 
 In the left navigation panel, click the **Marketplace** icon.
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see the available apps. Hover over the **Aprimo** app click **Install**.
-- In the pop-up window, select the stack where you want to install the Aprimo app, accept the **Terms of Service**, and click the **Install** button.
+- Within the Marketplace, you can see the available apps. Hover over the **Aprimo** app click **Install**.![marketplace_appswitcher_aprimo.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amc83e0a8a113d1001/83d066744cf676a5a2fcd258/marketplace_appswitcher_aprimo.png?locale=en-us)
+- In the pop-up window, select the stack where you want to install the Aprimo app, accept the **Terms of Service**, and click the **Install** button.![Aprimo-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb30196d3adca13e1/67e6b45e1b33b80cf9382036/Aprimo-App-Install.png)
 - On the **Configuration** screen, you can add multiple configurations for Aprimo. To do so, follow the steps given below:  
           Click the **+ New Configuration** button to add new configuration details.
-- In the **Add Configuration** modal, enter the configuration **Name** and click **Add**.
+- In the **Add Configuration** modal, enter the configuration **Name** and click **Add**.![Aprimo-Add-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteb0f5b6d2d99985e/67e6b17f5ea260db19cd28df/Aprimo-Add-Configuration.png)
 - After adding the configuration, enter the following details:  
               Enter the Aprimo Account **Tenant** Name retrieved in [step 1](#fetch-your-aprimo-credentials).
 - **Advanced Settings** (Optional): Enter the **Client ID** and **Client Secret** retrieved from your Aprimo account in [step 1](#fetch-your-aprimo-credentials).Then, under the **Mapper** section, click **+ Add rule** to map **Meta Fields** and **Languages** to **Content Types**. Click the checkmark icon to confirm and add the rule.
@@ -105,7 +105,7 @@ There are two ways to use the Aprimo application in your entry.
 
 ## Steps to use the Aprimo application using a Custom field
 - Click the **Insert a field** link represented by a **+** sign to add a custom field.
-- Under **Select Extension/App**, select **Aprimo**, and then click **Proceed**.
+- Under **Select Extension/App**, select **Aprimo**, and then click **Proceed**.![Aprimo-Custom-Field-Add-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltec2db0f679f025c1/67e6c9da901312ec8506a0e2/Aprimo-Custom-Field-Add-App.png)
 - Under **Advanced** properties, you have the option to set the **Config Parameter** for all entries of a particular content type. If you do so, it overrides the default app configuration that you set at the time of app installation on the Configuration screen.The `key:value` passed in the configuration object overrides the default app configuration settings.
 
           **Configuration Object **(Optional): In case you want to use a different Aprimo configuration for any custom field within the same stack, you need to specify the configuration name in the Config Parameter.
@@ -158,12 +158,12 @@ There are two ways to use the Aprimo application in your entry.
 
             **Additional Resource**: You can add more optional parameters within the compact_view_options object. For detailed description of these optional parameters, refer to the [Aprimo Developer Documentation](https://developers.aprimo.com/docs/aprimo-content-selector).
 - After adding the app, click **Save** or **Save and Close** to save your changes.
-- To use the Aprimo app, create an entry for the above content type, and you will see the Aprimo custom field on your entry page as shown below:
+- To use the Aprimo app, create an entry for the above content type, and you will see the Aprimo custom field on your entry page as shown below:![Aprimo-Custom-Field-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7e06942210388c96/67e6e5e0697ba12f3e5fecb6/Aprimo-Custom-Field-Sample-Entry.png)
 - Click **+ Choose Asset(s)** button.  
         **Note**: After clicking the **+ Choose Asset(s)** button, the app redirects you to log in to your Aprimo account if you are using it for the first time. Enter the **Login ID** and **Password** provided by Aprimo for fetching assets from your Aprimo account.
 
 Select image(s) from your Aprimo account.
-- Choose the rendition and then click **Select** to add the image to your entry.
+- Choose the rendition and then click **Select** to add the image to your entry.![Aprimo-Seelctor-Page-Select-Asset](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcc3ae673fda4a11e/67e6e5fd5ea2607f44cd2c17/Aprimo-Seelctor-Page-Select-Asset.png)
 - The assets you select are added within your entry.-
 - Hover over the image to view the options to remove or preview the image.  
           Click the **Preview** icon to view the image.
@@ -200,8 +200,8 @@ Select image(s) from your Aprimo account.
 
             **Additional Resource**: You can add more optional parameters within the compact_view_options object. For detailed description of these optional parameters, refer to the [Aprimo Developer Documentation](https://developers.aprimo.com/docs/aprimo-content-selector).
 - After adding the plugin, click **Save** or **Save and Close** to save your changes.
-- To use the Aprimo app as a JSON RTE plugin, create an entry for this content type, and you will see the Aprimo app icon in the JSON RTE field on your entry page, as shown below:
-- Click the Aprimo app icon to open the **Media Library**.
+- To use the Aprimo app as a JSON RTE plugin, create an entry for this content type, and you will see the Aprimo app icon in the JSON RTE field on your entry page, as shown below:![Aprimo-JSONRTE-App-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc37b76d710d4095c/67e6e5fb207d7902490efacb/Aprimo-JSONRTE-App-Icon.png)
+- Click the Aprimo app icon to open the **Media Library**.![Aprimo-Selector Page](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt972a896c971df79e/67e6e5fc29f0cd2cff183798/Aprimo-Selector_Page.png)
 - Choose the rendition and then click **Select** to add the image to your entry.  
 The selected asset(s) is displayed in the JSON RTE editor:-
 - To resize the image, drag the corner of the image and adjust the size as required.

@@ -33,7 +33,7 @@ To customize the HTML-based RTE field, log in to your [Contentstack account](htt
 - In the Content Type Builder page, add the **Rich Text Editor** (RTE) field to it.
 - In the **Editor Properties** section of the RTE field, under the **Editor Type**, select **Custom**, and choose the formatting options you want to include in the RTE field.
 - To select all the formatting options, check the **Select All** box.
-- After adding and configuring the fields, click either **Save** or **Save and Close** button to save your content type.
+- After adding and configuring the fields, click either **Save** or **Save and Close** button to save your content type.![html-rte-1gif.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfb6be71c33b10d01/65eb23842a3929848a30c508/html-rte-1gif.gif)
 
 Now, when the [content managers](../invite-users-and-assign-roles/types-of-roles.md#content-manager) edit or [create an entry](../../content-managers/author-content/create-an-entry.md) of this content type, they will see the HTML-based RTE with the formatting/inserting options that you selected in the above step.
 
@@ -122,9 +122,9 @@ Here are some real-world scenarios where we use embedded assets:
 
 To enable the option to embed entries and assets inside the HTML-based Rich Text Editor field, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the Content Type Builder page, add the **Rich Text Editor** (RTE) field to the content type.
-- In the **Properties** window of the RTE field, go to the **Advanced** section, and select the **Advanced** radio button under **Editor Type**.
-- Under **Options**, checkmark the **Embed Object(s)** option.
-- Click the dropdown and from the resulting modal, checkmark the **Embed Asset(s)** option. Further, from the **Content type** section, select the content types of which you want to embed entries within the RTE field.
+- In the **Properties** window of the RTE field, go to the **Advanced** section, and select the **Advanced** radio button under **Editor Type**.![html-rte-embed-ss3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt012ca6ed9baa759d/65eb211d5d7713504938e636/html-rte-embed-ss3.png)
+- Under **Options**, checkmark the **Embed Object(s)** option.![html-rte-embed-ss4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb4c0fd4881da4fec/65eb211d7f033e5af857b63b/html-rte-embed-ss4.png)
+- Click the dropdown and from the resulting modal, checkmark the **Embed Asset(s)** option. Further, from the **Content type** section, select the content types of which you want to embed entries within the RTE field.![html-rte-embed-ss5_9.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt769e2a778388cdcb/65eb211d7f033ecca157b63f/html-rte-embed-ss5_9.png)
 - Click **Add Content Type(s)**.
 - Click either **Save** or **Save and Close** button to save your content type.
 
@@ -134,7 +134,7 @@ You can also embed items within your RTE using the **Custom** Editor type.
 
 To do this, log in to your [Contentstack account](https://www.contentstack.com/login), add a **Rich Text Editor** (RTE) field to your content type, and perform the following steps:
 - In the **Properties** window of the RTE field, go to the **Advanced** section and select **Custom** under **Editor Type**.
-- Under **Insert Object**, select the “Embed” icon as displayed in the image below:
+- Under **Insert Object**, select the “Embed” icon as displayed in the image below:![Content Type RTE Embed.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt840a2afca15ab00d/667e70f9bbfa85371af8507b/Content_Type_RTE_Embed.png)
 - Click the dropdown and from the resulting modal, checkmark the **Embed Asset(s)** option. Further, from the **Content type** section, select the content types of which you want to embed entries within the RTE field.
 - Click **Add Content Type(s)**.
 - Click either **Save** or **Save and Close** button to save your content type.
@@ -145,11 +145,11 @@ To do this, log in to your [Contentstack account](https://www.contentstack.com/l
 
 To embed entries in your HTML-based Rich Text Editor, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Create an entry with the Content Type where you have enabled the Embed feature.
-- In the RTE field, click the “Embed” icon and click **Entry** as displayed below:
-- In the modal that opens up, select the content type of which you want to embed an entry from the dropdown.
-- From the list of entries that appears, select the entry that you want to embed within the RTE.
+- In the RTE field, click the “Embed” icon and click **Entry** as displayed below:![html-rte-embed-ss10.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1f55eba3c6ae3f56/65eb2b548221d9284056a5b0/html-rte-embed-ss10.png)
+- In the modal that opens up, select the content type of which you want to embed an entry from the dropdown.![html-rte-embed-ss11.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9ec37f20464db9f8/65eb2b5407cf2757854d1194/html-rte-embed-ss11.png)
+- From the list of entries that appears, select the entry that you want to embed within the RTE.![html-rte-embed-ss12.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2424302a485c28d0/65eb2b55f283f77cff285c0d/html-rte-embed-ss12.png)
 - Under **Select Embed Type**, you can select one of the following options:**Embed as Block**: On selecting this option, the embedded entry will appear as a block. You will be able to enter text above or below such a block.
-- **Embed as Inline **(a part of text): On selecting this option, the embedded entry will appear inline as part of the text. You will be able to enter your text before or after the embedded entry in the same paragraph.
+- **Embed as Inline **(a part of text): On selecting this option, the embedded entry will appear inline as part of the text. You will be able to enter your text before or after the embedded entry in the same paragraph.![html-rte-embed-ss14.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt007c258c2b2067be/65eb2b54f6198cda8d06cf7e/html-rte-embed-ss14.png)
 
 **Note**: You can only embed a maximum of **100** objects (entries and assets combined) within the RTE at the same time.
 
@@ -157,9 +157,9 @@ To embed entries in your HTML-based Rich Text Editor, log in to your [Contentsta
 
 To embed an entry as a hyperlink inside the HTML-based RTE, you can perform the following steps:
 - Go to the content type where you have enabled the Link option and open an entry.
-- In the RTE field, click the “Link” icon and click **Embed entry as link**.
+- In the RTE field, click the “Link” icon and click **Embed entry as link**.![html-rte-embed-ss15.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfab786674fa87c33/65eb2b552a39296f2e30c55f/html-rte-embed-ss15.png)
 - In the modal that opens up, select the content type of which you want to embed an entry from the dropdown.
-- From the list of entries that appears, select the entry that you want to embed within the RTE as a hyperlink.
+- From the list of entries that appears, select the entry that you want to embed within the RTE as a hyperlink.![html-rte-embed-ss16.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2a7280e968e274d4/65eb2b55a54ef850df93081f/html-rte-embed-ss16.png)
 - Enter appropriate anchor text for the hyperlinked entry, check the **Open link in new Tab** option if required, and click **Embed Selected Entry**.
 
 **Note: **If you've inserted the link of a child entry within a parent entry in the Master language and later decide to localize the parent entry, you'll need to update the embedded link manually in the localized version as well.
@@ -169,8 +169,8 @@ For instance, if you've linked the "Blog" entry in English within the "Home" ent
 
 To embed assets in your HTML-based Rich Text Editor field, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Go to the content type where you have enabled the Embed feature and open an entry.
-- In the RTE field, click the “Image” icon and click one of the options as displayed below:
-- In the modal that opens up, you can search for a specific asset or select from the displayed list as shown below:
+- In the RTE field, click the “Image” icon and click one of the options as displayed below:![html-rte-embed-ss17.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt78f528ba3e5615bf/65eb2eaf99cd9208a9c0c080/html-rte-embed-ss17.png)
+- In the modal that opens up, you can search for a specific asset or select from the displayed list as shown below:![html-rte-embed-ss18.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9c76675c9e834324/65eb2eaff283f76401285c3e/html-rte-embed-ss18.png)
 - Click the **Add Image** button to add the asset within the RTE.
 
 **Note**: You can only embed a maximum of **100** objects (entries and assets combined) within the RTE at the same time.
@@ -205,7 +205,9 @@ Conversely, assets embedded within the RTE are similar to the Reference field. O
 - **What is the difference between an embedded entry hyperlink and a normal entry hyperlink within the RTE?**  
 A hyperlink of an entry remains static, while a dynamic embedded hyperlink of an entry changes whenever you make any changes to the source entry’s webpage link. You can avoid the manual effort required to change the link across every content type.
 - **If I update and publish an asset from the asset manager, will the live entry that refers to the updated asset also get updated automatically with the latest asset version?**  
-Yes, when you publish the updated asset, the older published version gets purged from the cache. When a new request hits the server for the asset, the latest version shows up on your website in real-time.**Note**: This real-time update of frontend items works the same for embedded entries.
+Yes, when you publish the updated asset, the older published version gets purged from the cache. When a new request hits the server for the asset, the latest version shows up on your website in real-time.
+
+  **Note**: This real-time update of frontend items works the same for embedded entries.
 - **Can I publish an embedded entry along with its references?**  
 Yes, you can publish an embedded entry along with its references. However, Contentstack only resolves referenced entries that lie up to one level deep when publishing embedded entries and their references.
 - **Do embedded entries follow the fallback logic?**  
@@ -222,8 +224,10 @@ With the Social Embeds feature, you can embed your social media links within the
 
 To embed a link within your HTML RTE, log in to your Contentstack Account and follow the steps below:
 - Go to your stack and open an entry where you want to embed your social content.
-- Within the **HTML RTE** field, click the **Social Embeds** icon.
-- In the **Social Embeds** modal that appears, paste the URL or embed code from social media and click the **Add** button to embed your social content within the editor.**Note**: You can use any shareable link from the list of allowed embeds that you see below the Social Embeds modal.
+- Within the **HTML RTE** field, click the **Social Embeds** icon.![RTE Social Embed Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0c5adbb474a38b4f/667e70f9aaed412ace44c762/RTE_Social_Embed_Icon.png)
+- In the **Social Embeds** modal that appears, paste the URL or embed code from social media and click the **Add** button to embed your social content within the editor.![RTE Social Embed Link Updated_v2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7af612604702d8f0/667e70fa82ce1dfc803137d3/RTE_Social_Embed_Link_Updated_v2.png)
+
+  **Note**: You can use any shareable link from the list of allowed embeds that you see below the Social Embeds modal.
 
 Your embedded content should look as follows:
 

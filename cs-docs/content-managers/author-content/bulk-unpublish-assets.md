@@ -22,7 +22,7 @@ Contentstack’s Bulk Unpublish Assets feature helps to unpublish multiple asset
 To bulk unpublish assets, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel. You can also use the shortcut key “A” (for both Windows and Mac OS).
 - Use the checkboxes to select the assets you want to unpublish.
-- After selecting the assets, click the **Unpublish** option in the floating panel that appears.
+- After selecting the assets, click the **Unpublish** option in the floating panel that appears.![Unpublish_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c36b4787940276c/676554c9775da70e801f2995/Unpublish_Icon.png)
 - In the **Unpublish** **Assets** modal:**Select Environment(s):** Select the environment(s) from which the assets must be unpublished.
 - **Select Language(s):** Select the locale(s) in which you want the assets to be unpublished. If a localized asset exists, it will be selected automatically.
 - Click **Unpublish** to unpublish the selected assets.

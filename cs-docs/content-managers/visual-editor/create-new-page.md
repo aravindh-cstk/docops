@@ -33,9 +33,13 @@ To create a new web page, log in to your [Contentstack account](https://www.cont
 - In the URL bar, click the “+” icon.
 - In the **Create New Page** modal, provide the following details:**Select Content Type**: Select a [content type](../../developers/create-content-types/about-content-types.md) you want to use for the new page.
 - **Title**: Enter the page title. This also serves as the [entry](../author-content/about-entries.md) title.
-- **URL**: The system generates a URL based on the title. You can edit this URL if needed.**Tip:** Use the dropdown in the URL bar to browse available content types. Then, click the “+” icon next to the one you want.
-- Click the **Create** button to create the page. You will see the new URL in the URL bar.
-- After creating the page, you can start adding components to build its structure by clicking the **Components** button.**Note:** The available page components are based on the content model of the selected content type.
+- **URL**: The system generates a URL based on the title. You can edit this URL if needed.
+
+  **Tip:** Use the dropdown in the URL bar to browse available content types. Then, click the “+” icon next to the one you want.
+- Click the **Create** button to create the page. You will see the new URL in the URL bar.![Create_New_Page.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta3d1d62bdb8e772b/6992e73e60af9b0008db4e7b/Create_New_Page.gif)
+- After creating the page, you can start adding components to build its structure by clicking the **Components** button.
+
+  **Note:** The available page components are based on the content model of the selected content type.
 - When you click a page component (e.g., Hero Banner, FAQ Block), the right panel displays the settings and content fields for that component. Enter your content directly in the panel, and the page preview on the canvas updates in real time.
 - Click **Save** in the top-right corner.
 - In the **Save Changes** modal, confirm your changes by clicking **Save** again.

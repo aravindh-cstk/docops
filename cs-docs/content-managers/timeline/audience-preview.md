@@ -27,7 +27,7 @@ To access Audience Preview, log in to your [Contentstack account](https://www.co
 - In the right sidebar, click the **Audiences** icon.
 - Select **A/B Testing** or **Segmented Experience** and choose your experience to view the audience conditions that trigger the preview.
 - From the **Select Audiences** dropdown, choose one or more audiences that match your variant conditions.
-- Once the audience conditions are matched, the active variant will be displayed next to your experience title. This filters the content to preview the relevant [entry variants](../entry-variants/about-entry-variants.md) for the selected audience segment.
+- Once the audience conditions are matched, the active variant will be displayed next to your experience title. This filters the content to preview the relevant [entry variants](../entry-variants/about-entry-variants.md) for the selected audience segment.![Audience-Preview-1 (2).gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt79ed394e62ff60b3/674d8059256086784cdf5a46/Audience-Preview-1_(2).gif)
 
 The Audience Preview feature in Timeline empowers content managers to efficiently visualize and manage personalized content experiences for different user segments. By providing a straightforward way to see how content appears for each audience directly within the Timeline, you can ensure every audience receives the most relevant and engaging experience.
 

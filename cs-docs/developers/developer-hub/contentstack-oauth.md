@@ -81,7 +81,7 @@ Currently, user tokens and app tokens are valid for **60 minutes** only. You can
 You can create custom applications in Developer Hub. It provides the necessary tools to develop an app. While developing apps, you can integrate your application with the Contentstack OAuth.
 
 To integrate your app with Contentstack OAuth, log in to your [Contentstack account](https://www.contentstack.com/login) and follow the steps below:
-- On the left navigation panel, you will find a new icon for **Developer Hub** (as shown below). Click the icon to go to the Developer Hub.
+- On the left navigation panel, you will find a new icon for **Developer Hub** (as shown below). Click the icon to go to the Developer Hub.![Welcome_to_Developer_Hub.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfe12cce20145a8ad/65b7a9dffd23e528627d99cd/Welcome_to_Developer_Hub.png)
 - Click the **+ New App** button.
 - In the resulting **New App** modal, select the **Type of App** and enter the following details:**Name**: Enter the app's name (for example, Sample App).
 - **Description** (optional): Enter a description for your app.
@@ -95,7 +95,7 @@ To integrate your app with Contentstack OAuth, log in to your [Contentstack acco
 Configuring OAuth and its scopes allows your app to perform tasks in your development workspace. You can configure and select scopes through the **OAuth** option available in your app.
 To configure OAuth, log in to your Contentstack account and follow the steps below:
 - [Create a new App](./creating-an-app-in-developer-hub.md) or click the app you want to configure.
-- On the left navigation panel, click the **OAuth** tab.
+- On the left navigation panel, click the **OAuth** tab.![Click_OAuth.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt68b918104520da5b/65b288018fc5c0802b0bb67f/Click_OAuth.png)
 - In the **OAuth Details** page, the following options are displayed for your app:**Client ID**: The Client ID identifies your application and frequently appears in the OAuth negotiation URLs. You can freely share client IDs in code and emails, but you cannot use them alone to perform actions on behalf of your app.
 - **Client Secret**: The Client Secret acts as a secret credential when exchanging tokens with Contentstack. You should not share the client secret keys via emails, distributed native applications, client-side javascript, or public code repositories.
 - **Redirect URL**: The authorization server directs users to the Redirect URL once they have successfully granted authorization to the app. Maintaining the security of this URL is crucial to avoid redirection to unauthorized locations.
@@ -111,7 +111,7 @@ When configuring the app, developers must register one or more Redirect URLs. Us
 In the OAuth page, you will find the App Token section that lets you add app-related permission scopes.
 To do so, perform the following steps:
 - Click **+ App Scopes**.
-- From the resulting **Select App Token Scopes** pop-up window, select the permission you want to set up for your application.
+- From the resulting **Select App Token Scopes** pop-up window, select the permission you want to set up for your application.![Select_Scope.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc7e7fef4415a9848/65b288019274060174eb5a77/Select_Scope.png)
 - Once done, click **Choose Scope(s)**.
 
 ### Add User Token Scopes
@@ -119,7 +119,7 @@ To do so, perform the following steps:
 In the OAuth page, you will find the **User Token** section that lets you add user-related permission scopes.
 To do so, perform the following steps:
 - Click the **+ User Scopes** button.
-- From the resulting **Select User Token Scopes** pop-up window, select the permissions you want to set up for your users.
+- From the resulting **Select User Token Scopes** pop-up window, select the permissions you want to set up for your users.![User_Read_Scope.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdf93813987ccda18/65b2880168334a912cc605c0/User_Read_Scope.png)
 - Once done, click **Choose Scope(s)**.
 **Additional Resource:** Learn more about the app and user token scopes from the [OAuth Scopes](./oauth-scopes.md) document.
 
@@ -188,7 +188,9 @@ https://app.contentstack.com/apps/627e126bbe975e0*********/install
 https://example.com/oauth/callback?code={authorization_code}&location=NA
 ```
 
-- **Note:** This code is only valid for 60 seconds.
+- 
+
+  **Note:** This code is only valid for 60 seconds.
 
 #### Authorize OAuth Apps using User Token
 

@@ -37,8 +37,12 @@ To deploy a composition, log in to your [Contentstack account](https://www.conte
 - From the **App Switcher**, click **Studio**.
 - Navigate to your project and select the composition you want to deploy.
 - Click the **Deploy** button.
-- You will be redirected to the publish page where you can see the composition entry and publish it.**Note:** Studio will only publish the UI changes. To view your data on the front end, you will have to manually publish the related entries.
-- Select the **environment** where you want to publish, such as staging or production.**Note:** Publishing with references will also publish the symbols in that composition.
+- You will be redirected to the publish page where you can see the composition entry and publish it.
+
+  **Note:** Studio will only publish the UI changes. To view your data on the front end, you will have to manually publish the related entries.
+- Select the **environment** where you want to publish, such as staging or production.
+
+  **Note:** Publishing with references will also publish the symbols in that composition.
 
 **Tip:** Studio includes live preview and visual editing by default, allowing you to view and modify updates in real time.
 

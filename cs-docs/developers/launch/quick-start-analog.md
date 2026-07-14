@@ -27,29 +27,31 @@ The fastest way to get started with Launch is to clone and deploy a [sample Anal
 Follow the steps given below to deploy your first Launch project using GitHub:
 
 **Note:** Only the Organization [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) has the right to create projects in a stack for Launch.
-- [Log in to Contentstack](https://www.contentstack.com/login/) and click the **Launch** icon from the dashboard, as shown below:
-Alternatively, go to the **App Switcher** in the top panel and click the **Launch** icon.
-- On the **Launch Projects** screen, click the **+ New Project** button to initiate the project creation process.
+- [Log in to Contentstack](https://www.contentstack.com/login/) and click the **Launch** icon from the dashboard, as shown below:![Launch_2026_Landing_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt93cb437e9760884e/69647cf52269f8000829f814/Launch_2026_Landing_Page.png)
+Alternatively, go to the **App Switcher** in the top panel and click the **Launch** icon.![AppSwitcher_Launch.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c5085453e429d79/69ce4df3267d5e026d79f448/AppSwitcher_Launch.png)
+- On the **Launch Projects** screen, click the **+ New Project** button to initiate the project creation process.![Launch_Projects_Landing_Page_2026.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt21093a02592b00ef/69afdb45afcf450008d243b2/Launch_Projects_Landing_Page_2026.png)
 - From the **Create New Project** modal, click **Import from a Git Repository**.
-**Note:** You can also choose to [upload a .zip file to import a project](./import-project-using-file-upload.md).
+![Launch_Create_Proj_Git_File.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt09bbe7fc07e8c9a5/660bba5d1b5a585bbdadd2cc/Launch_Create_Proj_Git_File.png)**Note:** You can also choose to [upload a .zip file to import a project](./import-project-using-file-upload.md).
 - Click **GitHub**.**Additional Resource:** You can also import a project using Bitbucket Cloud. Follow the steps in the [Create a Project Using Bitbucket Cloud](./import-a-project-using-bitbucket-cloud.md) guide to proceed.
 
 A Sign in to GitHub screen pops up. Enter your credentials and log in to your GitHub account.
 
 **Note:** We have assumed that you have a GitHub account and your website code stored in the repository.
-- Enter your credentials and log in.
+- Enter your credentials and log in.![Launch-Sign-In](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt27acfd69a831865a/64365e5a74d71410bfac5229/Launch-Sign-In.png)
 - In the **Repository access** section, select **All repositories**.
-**Note:** If you want to choose specific repositories, select the **Only select repositories** option and choose the required repository.
+**Note:** If you want to choose specific repositories, select the **Only select repositories** option and choose the required repository.![Launch_New_Repository_Access_SS](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte4821228ea208a34/645b412eaf653fc45cd4764d/Launch_New_Repository_Access_SS.png)
 - Click the **Save **button.
 **Note:** If you are accessing GitHub through Contentstack for the first time, you must authorize Contentstack by clicking the **Install & Authorize** button after selecting **All repositories**.
 
 You will be redirected to the Launch app.
 - In the **Create New Project** modal, add the following details:
 
-**Repository** (Mandatory): Select the Git repository. In our example, we have selected the **Analog Starter App** repository.**Note:** When you select the repo, the **Build and Output Settings** section gets auto-populated.
+**Repository** (Mandatory): Select the Git repository. In our example, we have selected the **Analog Starter App** repository.
+
+**Note:** When you select the repo, the **Build and Output Settings** section gets auto-populated.
 - **Git Branch **(Mandatory): By default, `master` or `main` is selected as the branch. You can choose another branch from the dropdown.
 - **Project Name** (Mandatory): Gets auto-populated on selecting the repository. You can edit it as per your requirement.
-- **Environment Name** (Mandatory): Enter the name of the environment.
+- **Environment Name** (Mandatory): Enter the name of the environment.![Launch_Analog_CreateProjModal1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte0e144e73bca4c6b/69b92e3667be9e440470b837/Launch_Analog_CreateProjModal1.png)
 - **Build and Output Settings** (Mandatory): The fields in this section get auto-populated based on the Analog framework, as discussed above. Update the **Output Directory** to `./dist/contentstack-analog-starter-app`**Note:**The `Server Command` field allows you to deploy [Analog as Server-Side Rendered](#analog-as-an-ssr-based-application). In most cases, this command will be `npm preview`.
 - Leaving the `Server Command` field blank will deploy the framework as `CSR (Client-Side Rendered)`.
 - **Environment Variables** (Optional):Enter the key and value of one or more environment variables.
@@ -68,7 +70,7 @@ CONTENTSTACK_API_KEY=
 CONTENTSTACK_ENVIRONMENT=
 ```
 **Note:** Click **Back **to revert the changes and re-enter details.
-- Once ready, click **Deploy **to save and deploy the project.As soon as the deployment starts, you will see the **Deploying **status as shown in the following screenshot:
+- Once ready, click **Deploy **to save and deploy the project.As soon as the deployment starts, you will see the **Deploying **status as shown in the following screenshot:![Launch_Analog_Deploying_CancelFeature.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteb59b65155939df6/69dc7ac2160be8e7925e53a7/Launch_Analog_Deploying_CancelFeature.png)
 
 Upon successful deployment, you will see the following screen. You can preview the deployed website by clicking the icon next to the URL in the **Domains** section:
 
@@ -78,14 +80,14 @@ If you want to deploy the changes from any other commits, you can click the **Re
 
 ## Analog as an SSR-based Application
 By default, Analog is deployed as a Single-Page Application (SPA). To deploy Analog as an SSR-based application, follow the steps below:
-- On the top navigation panel, click the **Settings** icon and then **Environments**.
+- On the top navigation panel, click the **Settings** icon and then **Environments**.![Launch_Analog_SettingsEnv_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt70f51d8fba5c646a/69b92e3756a5ae81b9b833b0/Launch_Analog_SettingsEnv_Page.png)
 - Click the **Deployments** tab to navigate to the deployment settings screen.
 - In the **Server Command** field, add the command present in the `package.json` file to run the SSR based build locally. For example:
 ```
 node dist/my-app/server/server.mjs
 ```
 **Note:** The `Server Command` field will be displayed in the `Deployments` tab only if you choose `Analog` as the framework.
-- Click the **Save Deployment Settings** button.
+- Click the **Save Deployment Settings** button.![Launch_Analog_SaveDeploymentSettings.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1051679f536106fc/69b92e37cdbaf407cf3f4490/Launch_Analog_SaveDeploymentSettings.png)
 - To **redeploy** the environment with the latest updates, follow these steps:Click the **Environments** icon on the top panel and then click the **environment** where the updates are made.
 - In the **Deployments** screen that appears, click the **Redeploy** button to redeploy on the environment.
 

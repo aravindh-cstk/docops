@@ -53,12 +53,12 @@ To create an A/B Test Experience, log in to your [Contentstack account](https://
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize.**
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to create a A/B Test Experience.
 - On the **Experiences** page, click the **+ New Experience** button.
-- In the **Select Experience Type** modal, click the **A/B Test** experience type.
+- In the **Select Experience Type** modal, click the **A/B Test** experience type.![AD_4nXc-Ta63EI7SCkbz4uazyL5IMkzIpmEnis6MlqdRqCuBks-NL0ODY94tGT0HM-mGoZh6WDi4KdaKGcGQB3j4uepJA2JZaJF4TLVUFhM88_M01-W3C395FT6ZDQrY4PjpBvMcRLSudiHv9sGL7LIYorn8FEe1](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc-Ta63EI7SCkbz4uazyL5IMkzIpmEnis6MlqdRqCuBks-NL0ODY94tGT0HM-mGoZh6WDi4KdaKGcGQB3j4uepJA2JZaJF4TLVUFhM88_M01-W3C395FT6ZDQrY4PjpBvMcRLSudiHv9sGL7LIYorn8FEe1?key=dDaeMy9JHUzH107PmzBkWw)
 - On the experience draft page, in the **Overview** tab, provide a suitable **Name** and an optional **Description** for the experience and then click the **Save General Details** button.
 - Click the **Configuration** tab.
 - **Under the Variants** section,**Variant Distribution:** Variant Distribution in A/B testing is the process of determining how traffic is to be divided between the different variants of your content. You can choose from the following distribution options:**Equally split:** Distributes traffic evenly across all variants. Use this option when you want a controlled and unbiased comparison, validate a hypothesis, or ensure that each variant receives the same audience size.
 - **Custom:** Allows you to manually assign traffic percentages to each variant, letting you favor one variant over another.
-- **Multi-Armed Bandit:** Automatically optimizes traffic distribution across variants based on real-time conversion performance. Use this option when your primary goal is to maximize conversions while the test is running and you are comfortable with traffic distribution changing dynamically.
+- **Multi-Armed Bandit:** Automatically optimizes traffic distribution across variants based on real-time conversion performance. Use this option when your primary goal is to maximize conversions while the test is running and you are comfortable with traffic distribution changing dynamically.![image7.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt712406f070a89223/696484c2ced4ad0008b40acb/image7.png)
 By default, Variant Distribution is set to **Equally split**.
 
 ### Distribution Option
@@ -80,19 +80,23 @@ Once one of these thresholds is met, traffic redistribution occurs **every minut
 
 To ensure continued learning, every Multi-Armed Bandit test reserves a **minimum exploratory traffic share of 1%**, which is split equally across all variants. Until the threshold is met, all variants continue to receive equal traffic.
 - After selecting the variant distribution, you can create variants for the A/B Test. Variants are alternative versions ([CMS Entry Variants](../content-managers/entry-variants/about-entry-variants.md)) of content or experiences created for testing against each other. To create variants for your experience, click the **+ Add Variant** button.**Short UID:** This unique ID is automatically assigned to each variant and used in [Personalize API requests](../developers/create-content-types/reference.md).
-- **Variant Name:** Provide a meaningful name for the variant. This name will be reflected in the Entry Editor for the [Entry Variants](../content-managers/entry-variants/about-entry-variants.md) in the CMS.**Note:** Each A/B Test experience must contain at least **2 variants**. Each experience is reflected in the CMS as Variant Group and you can [create Entry Variants](../content-managers/entry-variants/create-an-entry-variant.md) for each of these variants via the Entry Editor.
+- **Variant Name:** Provide a meaningful name for the variant. This name will be reflected in the Entry Editor for the [Entry Variants](../content-managers/entry-variants/about-entry-variants.md) in the CMS.
+
+  **Note:** Each A/B Test experience must contain at least **2 variants**. Each experience is reflected in the CMS as Variant Group and you can [create Entry Variants](../content-managers/entry-variants/create-an-entry-variant.md) for each of these variants via the Entry Editor.
 - **Traffic Distribution in %:**For **Equally split**, the distribution percentage is calculated automatically.
-- For **Custom**, you can specify the percentage as per your preference.
-- For **Multi-Armed Bandit**, traffic percentages are managed automatically and cannot be edited manually.
+- For **Custom**, you can specify the percentage as per your preference.![image4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt36726b77f774b973/6964863af4f25c00087a9142/image4.png)
+- For **Multi-Armed Bandit**, traffic percentages are managed automatically and cannot be edited manually.![image2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2eaf8dd47cb2fc15/69648647420bc50008aa1c4c/image2.png)
 
 Similarly, you can add multiple variants by clicking the **+ Add Variant** button.
 - Under the **Metrics** section,Click **+ Add Event** and select the preferred event from the drop-down list.You can add multiple events to an A/B Test experience as Metrics. Use the Personalize Edge SDK to trigger the events for your experiences using the `triggerEvent method.`**Note:** The first event that you add becomes the ‘primary’ metric. The 'primary' metric determines the winning variants, while secondary metrics offer additional insights. When any of the listed events occur, metrics calculate an increase in unique conversions per visitor, which you can view in the experience **Analytics** tab.
 - Under the **Target Group** section,**Target Group:** By default, **Everyone** is part of the A/B test, you can target the A/B test to a specific set of audiences (**Selective**). Here, we are using the **Selective** split option for the target group.
 - **Condition:** You can set the rule to satisfy either all audiences (**Match All**) or at least one of them (**Match Any**) by selecting from the dropdown.
-- **Audiences:** Click the **Audiences** field. From the **Select Audience(s)** modal, select one or multiple audiences, then click the **Apply Selected Audiences** button to set the audience criteria for the target group.
+- **Audiences:** Click the **Audiences** field. From the **Select Audience(s)** modal, select one or multiple audiences, then click the **Apply Selected Audiences** button to set the audience criteria for the target group.![AD_4nXeP7rBa9quSyo8VoPGS6i0-agP-etUvlq1P2kMD0s2yHv6Yb27N90GxCY7MLLY6AKB_cYxLOCfSdpGt6DfaaYSi15DuUpFsrMu7bJoBnTzSghtEmHZxNjPU2rtt7NxeLNDZjY3G0pMknXFHSds07ylegTxQ](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeP7rBa9quSyo8VoPGS6i0-agP-etUvlq1P2kMD0s2yHv6Yb27N90GxCY7MLLY6AKB_cYxLOCfSdpGt6DfaaYSi15DuUpFsrMu7bJoBnTzSghtEmHZxNjPU2rtt7NxeLNDZjY3G0pMknXFHSds07ylegTxQ?key=dDaeMy9JHUzH107PmzBkWw)
 - Once you have defined your variant, click the **Save Draft** button.
 - Now click the **Activate Draft** button.
-- Click **Activate** in the Activate Draft Modal to activate the experience on your site for your visitors.**Note:** Ensure you [create Entry Variants](../content-managers/entry-variants/create-an-entry-variant.md) in the CMS before activating an experience for a seamless personalized campaign for your visitors.
+- Click **Activate** in the Activate Draft Modal to activate the experience on your site for your visitors.
+
+  **Note:** Ensure you [create Entry Variants](../content-managers/entry-variants/create-an-entry-variant.md) in the CMS before activating an experience for a seamless personalized campaign for your visitors.
 
 This creates a new A/B Test Experience in your Personalize project. For managing experience versions (activated/draft/paused), please refer to [this guide](./experience-versioning.md).
 

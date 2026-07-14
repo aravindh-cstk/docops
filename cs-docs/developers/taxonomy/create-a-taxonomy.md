@@ -21,10 +21,10 @@ A taxonomy defines the categorical container to organize and structure your webs
 
 To create a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to create a taxonomy, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
-- Click the **New Taxonomy** button.
+- Click the **New Taxonomy** button.![New_Taxonomy_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt815647550580479d/6656bab6d713afb6232d9930/New_Taxonomy_Button.png)
 - In the **Create New Taxonomy** modal that appears, add the following details:Enter the **Name** for the taxonomy. The **Unique ID** will be auto-generated and can be edited until it's saved.**Note**: Refer to the [Restricted Keywords for UIDs](../create-content-types/restricted-keywords-for-uids.md) to avoid using reserved keywords. Once saved, you cannot change the UID.
 - Add a **Description** for your taxonomy. This is an optional step.
-- Finally, click **Create Taxonomy**.
+- Finally, click **Create Taxonomy**.![Create_New_Taxonomy_Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt264e96823457ce29/655b4cc9ad68442455c3d757/Create_New_Taxonomy_Modal.png)
 
 Within a taxonomy, you can [create terms](./create-a-term.md) associated with the taxonomy. For instance, if your taxonomy is based on Regions, you can create terms such as USA, Australia, India, Europe, etc.
 

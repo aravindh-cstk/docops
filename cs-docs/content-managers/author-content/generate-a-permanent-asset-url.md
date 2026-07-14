@@ -22,8 +22,12 @@ Contentstack allows you to generate a permanent URL for an [asset](/docs/content
 To generate a permanent URL for an asset, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the **“Assets”** icon in the left navigation panel. You can also use the shortcut key “A” (for both Windows OS and Mac OS users) to access the assets menu.
 - Select the asset for which you want to generate a permanent URL.
-- In the asset panel, click **Generate permanent URL**.**Warning:** You can only generate the permanent URL and update asset details **once**. After this, the permanent URL cannot be changed.
-- Enter a slug for the permanent URL. This slug will be part of the URL path and should describe the asset appropriately.**Note:** The maximum length for the slug is **255 characters**.
+- In the asset panel, click **Generate permanent URL**.
+
+  **Warning:** You can only generate the permanent URL and update asset details **once**. After this, the permanent URL cannot be changed.
+- Enter a slug for the permanent URL. This slug will be part of the URL path and should describe the asset appropriately.
+
+  **Note:** The maximum length for the slug is **255 characters**.
 - Click **Save** to finalize and generate the permanent URL.
 
 ## API Reference

@@ -42,8 +42,8 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **Ace Editor** app and click **Install App**.
-- In the popup window, select the stack where you want to install the Ace Editor app and click the **Install** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- In the popup window, select the stack where you want to install the Ace Editor app and click the **Install** button.![Ace-Editor-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb308542c1d094019/64ba420cc0f305259fb69b7f/Ace-Editor-Install-App.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Ace-Editor-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6b7827446903fc9e/65b81e19292a0e513387d4dd/Ace-Editor-UI-Locations.png)
 
 **Note**: No additional configuration is required to use the Ace Editor app.
 
@@ -53,7 +53,7 @@ To use the Ace Editor application within an entry of your stack, follow the step
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![Ace-Editor-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltba8d33b46d465da6/64881f57352ac618edda2e47/Ace-Editor-Content-Type.png)
 - In the Content Type Builder page, add a [Custom](../create-content-types/custom.md) field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **Ace Editor**, and click the **Proceed** button.
 

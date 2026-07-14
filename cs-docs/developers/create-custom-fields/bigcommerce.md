@@ -65,9 +65,9 @@ Log in to your [AWS Management Console](https://signin.aws.amazon.com/signin?red
 - **Save** your settings.
 - Your lambda function is now ready. Scroll up to the **Designer** section and click on **+ Add trigger**.
 - On the **Add trigger** screen, from the **Select a trigger** dropdown, select **API Gateway**.
-- Select **Create an API**, from the **API** dropdown. Then, select **REST API** inside the **API type** block, select **Open** from the **Security** dropdown, and click on **Add**.
+- Select **Create an API**, from the **API** dropdown. Then, select **REST API** inside the **API type** block, select **Open** from the **Security** dropdown, and click on **Add**.![Trigger_config.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltf546df49cfcb257f/6041c6731a42e25ce54e7888/Trigger_config.png)
 - An API is created for your lambda function. Under the **Designer **block, click on **API Gateway**. Click on **Details** and you will find your **API endpoint**. Make a note of it as we will need it while setting up the BigCommerce extension in Contentstack.
-- Lastly, [Enable CORS](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors-console.html) in Amazon API Gateway console. It is mandatory for successful implementation of this extension.
+- Lastly, [Enable CORS](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors-console.html) in Amazon API Gateway console. It is mandatory for successful implementation of this extension.![trigger.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0aa6a54931c3fb4a/6041c6d73c41f30bce482d39/trigger.png)
 
 ## Add the “BigCommerce” Custom Field Extension to your Stack
 
@@ -76,8 +76,8 @@ To add this extension to your stack, log in to your [Contentstack account](https
 Click the “Settings” icon on the left navigation panel.
 
 - Select **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- Now, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- Now, click on the **+ New Extension** button, and select **Create new**.![BigCommerce_2_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt08c40aaa3e596422/610b77daf57b2f35921c4975/BigCommerce_2_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![BigCommerce_3_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3d69c39e72f09149/610b77cfae8b1139431dfba5/BigCommerce_3_Highlighted.png)
 - On the **Create New Extension **page, enter values in the fields as given below:**Title ***(required)*: Provide a suitable title, for example, “BigCommerce,” for your custom field. This title will be visible when you select the extension in the [**Custom**](../create-content-types/custom.md) field in your content type.
 - **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple ***(optional)*: Leave this field unchecked.
@@ -115,12 +115,12 @@ Click on the “Content Models” icon on the left navigation panel.
 
 - Click on the **+ New Content Type** button, enter the required details, and click **Proceed**.
 - Click on the “Insert a field” link (**+** sign), and add the [**Custom**](../create-content-types/custom.md) field to it.
-- Under **Select Extension** drop-down menu in **Basic** properties, select the “BigCommerce” extension field that you created.
+- Under **Select Extension** drop-down menu in **Basic** properties, select the “BigCommerce” extension field that you created.![BigCommerce_4_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt26f6d35e8ae31988/610b77e8be3cec3a86c12092/BigCommerce_4_Highlighted.png)
 - Finally, click on **Save and Close**.
 - Now create an entry for this content type, and you will see the **BigCommerce **custom field in action.
 - Click on the **Add Products **button to add products of your choice to the custom field.
 - Select the products of your choice and click on the **Add Product(s)** button.
-- Finally, click on the **Save** button to save your entry.
+- Finally, click on the **Save** button to save your entry.![BigCommerce_5.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte1cdbb3f85b22006/6140e243564bf37c154f7184/BigCommerce_5.gif)
 
 **Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more details.
 

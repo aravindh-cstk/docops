@@ -46,8 +46,8 @@ This extension will help us fetch assets from Stack A in one of the content type
 Log in to your [Contentstack account](https://app.contentstack.com/) and follow the steps given below to create a custom field extension:
 
 In your stack, navigate to the “Settings” icon on the left navigation panel, and select **Extensions**.
-- On the **Extensions** page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions** page, click on the **+ New Extension** button, and select **Create new**.![Sharing_Assets_Between_Stacks_Using_an_Extension_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0f8625a687df9d65/60b7beff069dc90a315f7c39/Sharing_Assets_Between_Stacks_Using_an_Extension_1_highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Sharing_Assets_Between_Stacks_Using_an_Extension_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt80fbfc2b0f2ac6d7/60b7bf0c7979111986c71030/Sharing_Assets_Between_Stacks_Using_an_Extension_2_highlighted.png)
 - On the **Create New Extension** page, enter values in the fields as given below:**Title**: Provide a suitable title for your custom field. This title will be visible when you select the extension in the [custom field](../create-content-types/custom.md) in your content type.
 - **Field data type**: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
 - **Multiple**: You can leave this field unchecked or select it if your custom field will expect multiple values. In such a case, the field will save the input values in an array. For this example, keep this option checked as we will be adding multiple files.
@@ -120,9 +120,9 @@ ngrok http <>
 ```
 
 The port number is the one that you generated in the above steps, in our case it is 3000.
-- Once you run the above command, the following screen pops up:
+- Once you run the above command, the following screen pops up:![ngrok address.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2f4f3c69b5e820d9/5f50cb07b553152466d1bf0f/image1.png)
 - Make note of the forwarding URL. This URL will be one that will provide our extension the public access.
-- Now open the extension that we have created earlier and paste this public URL (generated above) in the **External hosting URL** field as shown below:
+- Now open the extension that we have created earlier and paste this public URL (generated above) in the **External hosting URL** field as shown below:![Sharing_Assets_Between_Stacks_Using_an_Extension_3_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltee18d626edfba2d0/60b7bf1e16511018521e2fdc/Sharing_Assets_Between_Stacks_Using_an_Extension_3_no_highlight.png)
 - Click on **Save** to save your extension's settings.
 
 ## Use Your Custom Field Extension
@@ -133,9 +133,9 @@ Once you have added a custom field, you can use it in your content type like any
 - Under **Select Extension**, select the extension that we have created for this exercise.
 - After adding other relevant fields in your content type, click on either **Save** or **Save and Close** to save your changes
 - Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see your custom field (the name of our custom field is "asset") in action.
-- Click on the **Choose Assets** button as shown in the following screenshot:
-- When you click on **Choose Assets**, a window pops up that allows you choose assets from Stack A as shown below:
-- As you can see above, multiple assets are fetched from Stack A and in the following screenshot, you can see two images are selected to be saved in our Stack B entry:
+- Click on the **Choose Assets** button as shown in the following screenshot:![Sharing_Assets_Between_Stacks_Using_an_Extension_4_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt02c19ac9e3a9248e/60b7bf2fdbcf2a08eed7aee3/Sharing_Assets_Between_Stacks_Using_an_Extension_4_highlighted.png)
+- When you click on **Choose Assets**, a window pops up that allows you choose assets from Stack A as shown below:![Sharing_Assets_Between_Stacks_Using_an_Extension_5_no_highlight.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt031f2d38b1b4b28b/639a3f51d0dcf7221439d5f7/Sharing_Assets_Between_Stacks_Using_an_Extension_5_no_highlight.jpg)
+- As you can see above, multiple assets are fetched from Stack A and in the following screenshot, you can see two images are selected to be saved in our Stack B entry:![Sharing_Assets_Between_Stacks_Using_an_Extension_6_no_highlight.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta1b0ee13c64babc5/639a3f872a7bba15c0262def/Sharing_Assets_Between_Stacks_Using_an_Extension_6_no_highlight.jpg)
 
 This is how you can set up a system that fetches assets from one stack to another using a custom field extension.
 

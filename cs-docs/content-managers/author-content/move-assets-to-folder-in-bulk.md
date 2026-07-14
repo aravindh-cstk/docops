@@ -22,8 +22,8 @@ The Bulk Move feature in Contentstack allows you to efficiently transfer multipl
 To move multiple assets to a folder, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel. You can also use the shortcut key “A” (for both Windows and Mac OS users).
 - Use the checkboxes to select the assets you want to move.
-- After selecting the assets, click the **Move** **To** option in the floating panel that appears.
-- In the **Move** **To** modal, select the target folder where you want to relocate the assets. If needed, click the **+ New Folder** icon to create a new folder and move the assets into it.
+- After selecting the assets, click the **Move** **To** option in the floating panel that appears.![Move.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt074ede95c5cb73fa/676557491381a6e74b47ba35/Move.png)
+- In the **Move** **To** modal, select the target folder where you want to relocate the assets. If needed, click the **+ New Folder** icon to create a new folder and move the assets into it.![Move_Here_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4fa87755baa251d4/67655748775da75ca21f29a1/Move_Here_Button.png)
 
 Finally, click **Move** **here** to move the selected assets
 

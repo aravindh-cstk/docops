@@ -70,12 +70,12 @@ This hosts your application on `http://localhost:3000`. We'll later connect to t
 
 To register your app with Contentstack, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps given below:
 
-In the left navigation panel, you will find an icon for **Developer Hub** (as shown below). Click the icon to go to the Developer Hub.
+In the left navigation panel, you will find an icon for **Developer Hub** (as shown below). Click the icon to go to the Developer Hub.![Navigate_to_Developer_Hub](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltba4b476b918e797d/627e59822da7715d058ff6ce/1.png)
 
 - Click the **+ New App** button.
 - In the **New App** modal that appears, enter the following details:**Type of App** (*required*): Select **Stack App** as we plan to create a custom field UI location within a stack.
 - **Name** (*required*): Enter the name of your app. This can be whatever you want, we chose "Color Picker" for this tutorial.
-- **Description** (*optional*): Enter a description for your app.
+- **Description** (*optional*): Enter a description for your app.![Create_a_new_app](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt513286f78ef9c6ea/627e5982747a0167e76404d9/2.png)
 - Click the **Create** button.
 - On the **Basic Information** page, you can view the details about your app.
 
@@ -83,12 +83,12 @@ In the left navigation panel, you will find an icon for **Developer Hub** (as sh
 
 Next step is to declare where you want the app to appear in the Contentstack interface with the UI location section. Follow the steps given below to configure the Custom Field UI location for our newly created Color Picker app.
 
-- In the left navigation panel, click the **UI Locations** tab.
+- In the left navigation panel, click the **UI Locations** tab.![Navigate_to_UI_Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt12efc9a475ef9f91/63ed163eebf0774eed52de5f/Guide_to_build_your_first_simple_app-_UI_Location.png)
 - Enter the **App URL**. This is the URL, where our app is running. Since we are running our app locally the URL is `http://localhost:3000`.
 
 The **App Location(s)** section is enabled once you enter the App URL.
 
-- Hover over the **Custom Field** UI Location, and click the **+ Add** button.
+- Hover over the **Custom Field** UI Location, and click the **+ Add** button.![Add_custom_field_UI_location](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte856eb7fb1f63cb5/627e5982d5f9386926e62e5c/5.png)
 - Enter the details for the **Custom Field** configuration.
   **Name** (*optional*): By default, the app name is set as the location name. Enter appropriate names for the location, when you have more than one location of the same type.
 - **Signed** (*required*): When enabled, all the initial page load calls will contain a JWT token than can be used to verify whether the page load request originated from Contentstack itself. For more information, refer to the [Signed Locations](./securing-your-app.md) document.
@@ -104,7 +104,7 @@ On saving, you will be directed to the **UI Locations** tab. You will see that o
 
 Now that you have completed configuring your app, you can go ahead and install the app on any stack of your choice.
 
-Click the **Install App** button in the top right corner.
+Click the **Install App** button in the top right corner.![Install_app](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltbd757fea83ac4f52/627e5984e2c498542887fe33/8.png)
 
 - Select the stack within which you want to install the Color Picker app. Check the terms of service checkbox and click **Install**.
 
@@ -116,10 +116,10 @@ Now that you have installed the app, you can go ahead and add it to your content
 
 Click the **“**Content Models**”** icon on the left navigation panel, and click the **+ New Content Type** button.
 
-- Create a content type by adding relevant details as displayed below:
-- In the **Content Type Builder** page, add a [**Custom field**](../create-content-types/custom.md) to your content type by clicking the “Insert a field” link denoted by a **+** sign.
-- Under **Select Extension/App**, select the app you created.
-- After adding the fields, click either **Save** or **Save and Close** to save your changes.
+- Create a content type by adding relevant details as displayed below:![Create_new_content_type](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte1483c79bdaa57af/627e5983e2af4f67e9980317/10.png)
+- In the **Content Type Builder** page, add a [**Custom field**](../create-content-types/custom.md) to your content type by clicking the “Insert a field” link denoted by a **+** sign.![Add_custom_field](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2afba37ab62cf037/627e59afbde8395bd0122aa1/11.png)
+- Under **Select Extension/App**, select the app you created.![Select_extensions_or_app](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt52a76ccbe5be0555/63ed154841faab583d488de6/Guide_To_Build_Your_First_Simple_App_-_Select_App.png)
+- After adding the fields, click either **Save** or **Save and Close** to save your changes.![Save_and_close_custom_field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0574f6be4eb1be52/63ed154892662910c4ebf9c8/Guide_To_Build_Your_First_Simple_App_-_Save.png)
 
 Now, when you create an entry for that content type, you will see your app in action.
 
@@ -276,7 +276,7 @@ instruction: "Pick a Color",
 $ npm start
 ```
 
-- Reload the entry page, and now you will see an actual Color Picker loaded into the custom field.
+- Reload the entry page, and now you will see an actual Color Picker loaded into the custom field.![custom_color_picker_app](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltee0735404f9713f0/63ed237168b812598c76dba8/Guide_to_build_your_first_simple_app-_Color_Picker.png)
 - Save any color and reload, and verify if the app is saving data and fetching it on reload.
 
 ## Next Steps

@@ -55,8 +55,10 @@ Custom Preview URLs resolve the final preview URL through the following phases:
 To configure Custom Preview URLs, log in to your [Contentstack Account](https://www.contentstack.com/login) and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) and click “Settings”.
 - Navigate to **Visual Experience** and select the **Preview URL** tab.
-- Enable the **Custom Preview URL** toggle.
-- Under **Base URL**, define one or more aliases. Aliases allow you to define multiple hostnames for the same content. Each alias contains a **name** (identifier) and a **base URL pattern**.**Tip**: Use aliases to preview the same content across multiple domains or brand-specific hostnames.
+- Enable the **Custom Preview URL** toggle.![1._Enable_the_Custom_Preview_URL_toggle.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3fd981bb6e353e19/69bd7ce400c6f069c0875c65/1._Enable_the_Custom_Preview_URL_toggle.gif)
+- Under **Base URL**, define one or more aliases. Aliases allow you to define multiple hostnames for the same content. Each alias contains a **name** (identifier) and a **base URL pattern**.
+
+  **Tip**: Use aliases to preview the same content across multiple domains or brand-specific hostnames.![2._Base_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6e2400fce816271f/69bd7cf7d4ee4e0d96d09fd8/2._Base_URL.png)
 - Define the **URL Path**:  
       Enter a **path name** for the preview route.
 - Select the **Branch** where the configuration applies.
@@ -68,7 +70,9 @@ To configure Custom Preview URLs, log in to your [Contentstack Account](https://
 - **Reference fields**: `{{entry.author.name}}, {{entry.parent.url}}`
 - **Taxonomy values**: `{{taxonomy:brand}}`  
         **Tip**: Use `{{entry.<field_uid>}}` to access any field dynamically, including nested reference fields.
-- Click **Save** after testing your URLs and applying any advanced configurations described in the following sections.**Note**: If multiple configurations exist, Live Preview evaluates them in order and applies the first matching configuration.
+- Click **Save** after testing your URLs and applying any advanced configurations described in the following sections.
+
+  **Note**: If multiple configurations exist, Live Preview evaluates them in order and applies the first matching configuration.
 
 ### Test Your Configuration
 

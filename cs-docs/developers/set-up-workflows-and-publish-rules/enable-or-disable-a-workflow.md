@@ -22,8 +22,8 @@ Contentstack allows you to enable and disable a [workflow](./about-workflows.md)
 To enable or disable a workflow, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon (press “S”) on the left navigation panel.
 - Click on **Workflows** (press “**alt + F**” for Windows OS, and “option + **F**” for Mac OS).
-- Hover over the workflow you want to enable/disable, and click on the “Power” icon to enable or disable the workflow
-- Alternatively, to enable or disable the workflow via the workflow page, you need to check or uncheck the **Enable Workflow** checkbox, respectively.
+- Hover over the workflow you want to enable/disable, and click on the “Power” icon to enable or disable the workflow![Enable_a_workflow_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1f3b670bf49a7602/60c0bee0971f487708eb2477/Enable_a_workflow_1_highlighted.png)
+- Alternatively, to enable or disable the workflow via the workflow page, you need to check or uncheck the **Enable Workflow** checkbox, respectively.![Enable_webhook.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt9bd6eb5fa33333dd/6320716f94f0bf32f4c41b0d/Enable_webhook.png)
 - Click on **Save**.
 
 ## API Reference

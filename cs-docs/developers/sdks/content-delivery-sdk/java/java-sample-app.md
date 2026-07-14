@@ -38,7 +38,7 @@ To help you get started, we have provided a [Java code snippet](https://github.c
 - [Run the Application](#run-the-application)
 
 ## Creating a Java Project
-Create a new project under **File > New > Project > Java** and provide a name for your application, `{applicationName}`.
+Create a new project under **File > New > Project > Java** and provide a name for your application, `{applicationName}`.![Java_Sample_App_-_New_Project.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt53f75d079bedb6fe/6311e427b31aea583acf44b8/Java_Sample_App_-_New_Project.png)
 - Next, open the project in a code editor or an IDE of your choice, for example, IntelliJ, and open the `pom.xml` file. You will see the dependency section. You need to add one more dependency in the file as shown below:
 ```
 
@@ -47,7 +47,7 @@ Create a new project under **File > New > Project > Java** and provide a name fo
        {latest}
 
 ```
-- Save the file and then follow the instructions given in the "[Run the Application](#run-the-application)" section below:
+- Save the file and then follow the instructions given in the "[Run the Application](#run-the-application)" section below:![Java_Sample_App_-_Run_JavaNews.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt21240f71044802be/6311e427ff41d90f53a57122/Java_Sample_App_-_Run_JavaNews.png)
 
 You can skip setting up the project (as mentioned above) and [create the web app quickly](https://start.spring.io/), with a sample app with the required details for quick integration.
 

@@ -33,8 +33,12 @@ To create a project, log in to your [Contentstack account](https://www.contentst
 - Open **Studio** and click the **+ New Project** button.
 - In the **New Studio Project** modal:Enter a **Name** for your project.
 - Optionally, add a **Description**.
-- Select your **Contentstack Stack** to link with the project.**Note:** Ensure the selected stack has [Live Preview](../content-managers/author-content/about-live-preview.md) enabled.
-- Optionally, you can expand **Advanced Settings** to specify the **Content Type Name** and **UID** to create a new content type for storing compositions.**Note:** If not configured, the Studio stores composition details in Contentstack under the **compositions** content type in the main branch by default. You can customize this setting in the Advanced Settings.
+- Select your **Contentstack Stack** to link with the project.
+
+  **Note:** Ensure the selected stack has [Live Preview](../content-managers/author-content/about-live-preview.md) enabled.
+- Optionally, you can expand **Advanced Settings** to specify the **Content Type Name** and **UID** to create a new content type for storing compositions.
+
+  **Note:** If not configured, the Studio stores composition details in Contentstack under the **compositions** content type in the main branch by default. You can customize this setting in the Advanced Settings.
 - Click **Create**.
 
 Now that your project is set up, you can start creating **compositions**. These represent individual pages, sections, or reusable blocks that make up your digital experience.

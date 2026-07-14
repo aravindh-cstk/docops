@@ -25,11 +25,11 @@ To access the Audiences feature within Visual Editor, log in to your [Contentsta
 - Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - In the right sidebar, click the “Audiences” icon.
-- From the **Audiences** dropdown, select one or more predefined audiences (for example, Mobile, iOS, India, US) to determine which variant displays.
+- From the **Audiences** dropdown, select one or more predefined audiences (for example, Mobile, iOS, India, US) to determine which variant displays.![Descriptive view of the interface element](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c53171cc9afb252/68c9111c70c36f79d08b2d49/1._Select_audiences_-_Audience_dropdown.png)
 - Select **Segmented Experience** or **A/B Test**. Then choose from the available experiences to view the audience conditions that trigger your variant.
 - Once the audience conditions are met, Visual Editor displays the active variant in the experience dropdown.
 - By default, Visual Editor shows variant components as read-only. To enable editing for specific audiences, click the “Edit” icon for an experience.
-- Enable the **Highlight variant fields** toggle to highlight the variant fields in purple.
+- Enable the **Highlight variant fields** toggle to highlight the variant fields in purple.![Variant fields highlighted in Visual Builder](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt11affdd58c71996a/68c911200ccc4b4e7d86e9f9/2-edit-an-experience.gif)
 - Make the necessary edits. These updates apply to both the entry variants and base entries in real time.
 - Review the changes, then click **Save**.
 - Click [Publish](./publish-page.md) to make the content live for the selected audiences, ensuring each user segment sees the most relevant version of your content.

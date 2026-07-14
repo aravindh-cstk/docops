@@ -30,8 +30,8 @@ To add the Table custom field extension to your stack, log in to your [Contentst
 
 Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.![Table_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt4995d3b8feea0ccb/60c208d2f77af428924ba848/Table_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Table_2_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt441c0b49844fef82/60c208e7f33fd90fa1ed1b3e/Table_2_no_highlight.png)
 - On the **Create New Extension **page, enter values in the fields as given below:
           **Title ***(required)*: Provide a suitable title, for example “Table,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
 - **Field Data Type** *(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
@@ -61,9 +61,9 @@ Now, let’s understand how you can start using this custom field in your conten
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
-- Under **Select Extension**, select the “Table” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Table” field that you created and set the other properties. You can add other fields as per requirements.![Table_3_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltd9f5c39ac8fcf60c/60c208dd85c4c2118e31794f/Table_3_Highlighted.png)
 - Finally, click on either **Save **or** Save and Close** to save your changes.
-- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Table **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Table **field in action.![Table_4_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt444f9ca24747cbb2/60c208f1f33fd90fa1ed1b48/Table_4_no_highlight.png)
 
 ## Common questions
 

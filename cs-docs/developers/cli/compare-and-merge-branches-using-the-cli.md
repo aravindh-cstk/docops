@@ -27,7 +27,9 @@ This step-by-step guides you on how to create, update, delete, compare, and merg
 - [Contentstack account](https://www.contentstack.com/login/)
 - [CLI installed](./install-the-cli.md) and configured (version 1.7.0 and above)
 - [CLI authenticated](./cli-authentication.md)
-- [Branches](../../../api-docs/developer-apis/content-management-api/branches.md) enabled for your organization.**Note:** Contact your organization administrator for more details.
+- [Branches](../../../api-docs/developer-apis/content-management-api/branches.md) enabled for your organization.
+
+  **Note:** Contact your organization administrator for more details.
 
 ## Steps to List, Create, and Delete Branches
 
@@ -468,7 +470,9 @@ Choose what you want to do next from the following list:**Merge New Only**: Gene
 - If you choose **Merge, Ask for Preference** from step 4, follow the steps below:Select the **content type changes** for merge from the provided tabular column. With this, you can choose to modify/add/remove only those content types from a selected branch during the merge operation. **Note: **To ignore the changes in the compare branch for a specific content type, select the **Ignore(Use Base)** option for that content type.
 
 **Tip**: Use the **arrow keys** to move along the table cells and then hit the **spacebar **to make the selection.
-- Select the **global field changes** for merge from the provided tabular column. With this, you can choose to modify/add/remove only those global fields from a selected branch during the merge operation. **Note: **To ignore the changes in the compare branch for a specific global field, select the **Ignore(Use Base)** option for that global field.
+- Select the **global field changes** for merge from the provided tabular column. With this, you can choose to modify/add/remove only those global fields from a selected branch during the merge operation. ![Branches_CM_Merge_Ask_For_Preference_GF.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd02e46508c2f7d1d/644a3f77398bc14b3cfff63a/Branches_CM_Merge_Ask_For_Preference_GF.png)
+
+  **Note: **To ignore the changes in the compare branch for a specific global field, select the **Ignore(Use Base)** option for that global field.
 - In the next step, choose what you want to merge from the following list:**Execute Merge**: Executes the merge action and exports the merge result summary to the specified location.
 - **Export Merge Summary**: Exports the merge result summary to the specified location but does not execute the merge action.
 - **Execute Merge and Generate Content Migration Scripts**: Executes merge action, exports merge result summary to the specified location, and generates the entries migration script.

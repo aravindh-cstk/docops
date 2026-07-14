@@ -23,8 +23,8 @@ Contentstack allows you to remove unnecessary [Delivery Tokens](./about-delivery
 To delete a Delivery Token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](../set-up-stack/about-stack.md), and perform the following steps:
 - Click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 - Click **Tokens** in the settings panel.
-- On the **Delivery Tokens** tab, click the vertical ellipsis in the **Actions** column and select **Delete**.**Tip:** If you are on the [Management Tokens](./about-management-tokens.md) tab, press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
-- Confirm your action in the **Delete Delivery Token** modal.
+- On the **Delivery Tokens** tab, click the vertical ellipsis in the **Actions** column and select **Delete**.**Tip:** If you are on the [Management Tokens](./about-management-tokens.md) tab, press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.![Delete Delivery Token option](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6716df3cd376bb03/67f670e316c10fa30f57ac3a/1._delete-a-delivery-token-1.navigation.png)
+- Confirm your action in the **Delete Delivery Token** modal.![Delete confirmation modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt019ea4b7774225dc/67f670e353db7b607d224f9d/2._delete-a-token-2.confirmation.png)
 
 Once done, the Delivery Token and its associated Preview Token are deleted.
 

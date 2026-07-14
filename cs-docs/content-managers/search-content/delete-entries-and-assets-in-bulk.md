@@ -20,8 +20,10 @@ This page explains how to delete entries and assets in bulk from Contentstack se
 To delete entries and assets found in your search results in bulk, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select the “[Entries](../author-content/about-entries.md)” or “[Assets](../author-content/about-assets.md)” module.
 - Search for the entries and assets you want to delete. You can use [Basic Search](./basic-search.md), [Advanced Search](./advanced-search.md), [Filters](./use-filters.md), and [Views](./about-views.md) to refine your search results.
-- From the search results, select the entries or assets you want to delete. Click the **Delete** button on the floating bar at the top.
-- In the modal that appears, click the **Delete** button.**Note**: Deleted entries and assets are moved to the [trash](../../developers/manage-trash/about-trash.md) and remain there for **14** **days** before being permanently deleted.
+- From the search results, select the entries or assets you want to delete. Click the **Delete** button on the floating bar at the top.![Delete Entries and Assets in Bulk_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdcf433d3de8d89fb/67d9667aa5c0436ff371665f/1._Bulk_Operations_on_Searched_Results-Bulk_Delete-Delete_Icon.png)
+- In the modal that appears, click the **Delete** button.![Delete Entries and Assets in Bulk_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt19cdf8efbf17f64f/67d9667b9c716da61210b98e/2._Bulk_Operations_on_Searched_Results-Bulk_Delete-Confirmation-Box.png)
+
+  **Note**: Deleted entries and assets are moved to the [trash](../../developers/manage-trash/about-trash.md) and remain there for **14** **days** before being permanently deleted.
 
 ## Limitations for Deleting Entries and Assets in Bulk
 

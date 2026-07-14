@@ -34,8 +34,8 @@ To enable SAML encryption, perform the following steps:
 - Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to the [Organization Settings](../organization/organization-settings-overview.md) page, and click on the **Single Sign-On** tab.
 
 **Note**: Only the owner of an organization can set up SSO.
-- Click on the **2. IdP Configuration** tab.
-- Check the **Enable SAML Encryption** checkbox, and click on **Save**.
+- Click on the **2. IdP Configuration** tab.![IdP_Config.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt098ad58147de6967/6241b47f7239af5fef4137d1/IdP_Config.png)
+- Check the **Enable SAML Encryption** checkbox, and click on **Save**.![Enable_SAML.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt137da74f9d600ad8/6241b47f13968918d3ddd10e/Enable_SAML.png)
 
 ## Download the Contentstack Public Certificate for SAML Encryption
 

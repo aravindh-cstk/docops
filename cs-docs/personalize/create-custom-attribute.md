@@ -32,7 +32,7 @@ Let’s suppose you want to create a custom attribute for users who are a member
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to create a custom attribute.
 - Click the **Attributes** tab and then click the **+ New Attribute** button.
-- In the **New Attribute** modal, provide a suitable **Name** and **Key** for the attribute along with an optional **Description**.
+- In the **New Attribute** modal, provide a suitable **Name** and **Key** for the attribute along with an optional **Description**.![AD_4nXd2UAfoj02N3Aw3jRc5sF4fxxvDB676pGbi1ga2r1PxJWFiqfuaZJxXcKoZexsGop-B1d4mmLCsrYR6xLj0AwGSOF7Awzb1_Fk_zr8WHhc9jMfdFTlTdfJpytN5otD4HO1IWO1L05rQGA2XPZi8W7Guzgxe](https://lh7-rt.googleusercontent.com/docsz/AD_4nXd2UAfoj02N3Aw3jRc5sF4fxxvDB676pGbi1ga2r1PxJWFiqfuaZJxXcKoZexsGop-B1d4mmLCsrYR6xLj0AwGSOF7Awzb1_Fk_zr8WHhc9jMfdFTlTdfJpytN5otD4HO1IWO1L05rQGA2XPZi8W7Guzgxe?key=o0cFCswM-PkQlmna90sc-g)
 - Once you have done that, click the **Create** button.
 
 This creates a new custom attribute in your Personalize project. You can now [add the custom attribute to an audience](./add-custom-attribute-to-audience.md).

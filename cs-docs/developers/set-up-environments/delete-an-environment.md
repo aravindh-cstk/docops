@@ -24,7 +24,7 @@ To delete an [environment](./about-environments.md), log in to your [Contentstac
 - Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 - Navigate to **Environments** or use the “alt + E” shortcut key for Windows and “option + E” for Mac OS.
 - Click the vertical ellipsis icon next to an environment in the **Actions** menu and select **Delete**.
-- Click **Delete** to confirm your action.
+- Click **Delete** to confirm your action.![Confirmation prompt for deleting an environment](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd748a7f3152531d0/67dd5c4abbf93e4c9b586b9e/2-Delete-an-Environment-gif.gif)
 
 **Warning:** Once you delete an Environment, it is permanently removed from your stack, and its associated [delivery tokens](../create-tokens/about-delivery-tokens.md) become invalid.
 

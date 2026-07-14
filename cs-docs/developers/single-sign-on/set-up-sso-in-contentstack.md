@@ -41,7 +41,7 @@ Let’s go through each of these steps in detail.
 
 ### Create SSO Name and ACS URL in Contentstack
 
-Log in to your [Contentstack account](https://app.contentstack.com/#!/login), click the “Org Admin” icon on the left navigation panel and select **Single Sign-On**.
+Log in to your [Contentstack account](https://app.contentstack.com/#!/login), click the “Org Admin” icon on the left navigation panel and select **Single Sign-On**.![Set_Up_SSO.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd63658aa6b7e086c/6710d95bbcf8a669de1a9e9f/Set_Up_SSO.png)
 - Enter an SSO name of your choice, and click **Create**. For example, if your company name is “Acme, Inc.,” enter “acme” here. This name will be used as one of the login credentials by the organization users while signing in.
 
 **Note:** The SSO Name can contain only alphabets (in lowercase), numbers (0-9), and/or hyphens (-).
@@ -76,7 +76,7 @@ Go to **2. IdP Configuration** in Contentstack.
 - In the **Certificate** field in Contentstack, upload the **X.509** or **Public Key Certificate** that you received from your IdP.
 - Select the relevant algorithm from the options given under the **Signature Algorithm** field.
 - ***[Optional Step] ***Enable the [SAML encryption](./enable-saml-encryption.md) in Contentstack if you want to encrypt your SAML attributes via your IdP.
-- Click **Save** to save IdP configuration.
+- Click **Save** to save IdP configuration.![Set_Up_SSO_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd2c406e4cff9d2b9/6710d95bfe2f9d3cb3e2c9d9/Set_Up_SSO_4.png)
 
 **Tip:** In some IdPs, you may have to assign the newly-created Contentstack application to the existing users of your IdP. You can find these settings under the **Users** section in IdP.
 

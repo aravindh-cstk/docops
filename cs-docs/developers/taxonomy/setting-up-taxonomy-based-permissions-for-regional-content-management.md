@@ -33,7 +33,9 @@ To customize taxonomy-based permissions for custom roles, log in to your [Conten
 - Select whether you want to add these permissions to **All Taxonomies** or **Specific Taxonomies**. In our scenario, select **Specific Taxonomies**.
 - Select the **Regions** taxonomy from the list of available taxonomies.
 - Select **Specific Terms**, and finally select the term you want to allow your stack users to collaborate in.
-- You will be able to view the list of content types associated with the selected taxonomies.**Note:** Users assigned these custom roles will only be able to perform the permissions assigned to them if their entries contain the specific terms of those taxonomies.
+- You will be able to view the list of content types associated with the selected taxonomies.
+
+  **Note:** Users assigned these custom roles will only be able to perform the permissions assigned to them if their entries contain the specific terms of those taxonomies.
 - Click **Save** to create the new role.
 - Now, assign this specific role to users, and they will only be able to access content types linked to the **Regions** taxonomy and entries associated with the parent term “North America” and its child terms.
 

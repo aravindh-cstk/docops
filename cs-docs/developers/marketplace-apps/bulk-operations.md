@@ -45,11 +45,11 @@ Follow this step-by-step guide to install and configure the Bulk Operations app 
 
 To install the app in Contentstack, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
 
-Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.
+Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
 
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can see the available apps. Hover over the **Bulk Operations** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the Bulk Operations app, accept the **Terms of Service**, and click the **Authorize & Install** button.
+- Within the Marketplace, you can see the available apps. Hover over the **Bulk Operations** app and click **Install**.![Bulk-Operations-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt49dc9e47c40895ff/68f68d69a6c7daa048559e12/Bulk-Operations-App.png)
+- In the pop-up window, select the stack where you want to install the Bulk Operations app, accept the **Terms of Service**, and click the **Authorize & Install** button.![Bulk-Operations-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6c738e2f60af37b8/6889dee779c9e469c8e73954/Bulk-Operations-App-Install.png)
 - On the **Configuration** screen, click the **Check Release Version** button to detect which release version your stack supports.  
   If **v1.0** is detected, you can continue using the Bulk Operations features as usual.  
 
@@ -57,46 +57,48 @@ Navigate to the “App Switcher” icon in the top-right corner and click **Mark
 
   **Note**: If you skip the version check, the app defaults to **v1.0**. To use advanced features available in **v2.0**, contact Contentstack [Support](mailto:support@contentstack.com) for enablement.
 - Click the **Save** button if the release version is updated.
-- On the **UI Locations** tab, you can see the predefined app location ([Stack Dashboard Location](../developer-hub/dashboard-location.md)). You can use the toggle button corresponding to enable or disable it based on your requirements.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
+- On the **UI Locations** tab, you can see the predefined app location ([Stack Dashboard Location](../developer-hub/dashboard-location.md)). You can use the toggle button corresponding to enable or disable it based on your requirements.![Bulk-Operations-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt68eaf94fe0dd48c3/69d7d09b1c2210d6c2970994/Bulk-Operations-UI-Locations.png)
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.
+
+  **Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Bulk Operations app.
 
 ## Use the Bulk Operations App within your Stack
 
 To use the Bulk Operations app, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
 
-Navigate to the stack dashboard to view the Bulk Operations app within your CMS.
+Navigate to the stack dashboard to view the Bulk Operations app within your CMS.![Bulk-Operations-Dashboard](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfbc8ad16a6bfd805/690c8a1f0af1a828e7efb074/Bulk-Operations-Dashboard.png)
 
 ### Entries Operation
 
-- Click **Entries** to perform bulk operations like publish, unpublish, and delete on entries.
+- Click **Entries** to perform bulk operations like publish, unpublish, and delete on entries.![Bulk-Operations-Entries](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt37df56b2c6dfbbd4/68b76c6c1b488d4b79bff87e/Bulk-Operations-Entries.png)
 - In the Dashboard, choose the **Content Type** from all the available content types of your stack.  
   You can see all the entries of the selected content type.
-- Select the entries and click **Publish** to publish all the selected entries at once.
+- Select the entries and click **Publish** to publish all the selected entries at once.![Bulk-Operations-Entries-Publish](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt49d478b548a068a3/68b77a7c12dfd783a3f7ac04/Bulk-Operations-Entries-Publish.png)
 - In the **Publish Entries** modal, select the **Environment(s) **where you want to publish the entries. The stack **Language** is selected, by default; you can add more languages if needed. Choose the option to publish now or schedule it for later, and then click **Publish** to continue.  
   Once published, the entry status will update to Published.  
 
   Click the vertical ellipsis under **Actions** next to an entry and select **View Entry** to open the entry editor. Alternatively, you can click **View in Publish Queue** to view the status in the publish queue.
-- If you want to unpublish the entries, select entries and click **Unpublish**.
+- If you want to unpublish the entries, select entries and click **Unpublish**.![Bulk-Operations-Entries-Unpublish](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt14e00a38c2e7830a/68b77a94a312d39a1ed5e979/Bulk-Operations-Entries-Unpublish.png)
 - In the **Unpublish Entries** modal, select the **Environment(s)** where you want to unpublish the entries. The stack **Language** is selected, by default; you can add more languages if needed. Choose the option to unpublish now or schedule it for later, then click **Unpublish** to continue.  
   Once unpublished, the entry status will update to Unpublished.  
 
   Click the vertical ellipsis under **Actions** next to an entry and select **View Entry** to open the entry editor. Alternatively, you can click **View in Publish Queue** to view the status in the publish queue.
-- The **Delete** button allows you to delete all the selected entries of the respective locale and move them to trash.
+- The **Delete** button allows you to delete all the selected entries of the respective locale and move them to trash.![Bulk-Operations-Entries-Delete](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc32fb29742a5012b/68b77a7ca312d38393d5e971/Bulk-Operations-Entries-Delete.png)
 - In the **Delete Entries** modal, click **Delete** to delete all the selected entries.  
   After successful deletion, you can see the status.  
 
   Click the vertical ellipsis under **Actions** next to an entry and select **View in Trash** to view the entry in trash.  
 
   **Note**: Deleted entries stay in [Trash](../manage-trash/about-trash.md) for **14 days** before they are permanently removed.
-- Click the **Reset** button to reset the content type field to start a new search.
+- Click the **Reset** button to reset the content type field to start a new search.![Bulk-Operations-Entries-Reset](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0fd0669b4dc0ad32/68b77a7dcf96662dc2ec7418/Bulk-Operations-Entries-Reset.png)
 - Confirm and click the **Reset** button again to reset the content type drop-down.  
   **Note**: You can publish, unpublish, or delete up to **1000 entries** at a time.
 
 ### Assets Operation
 
-- Click **Assets** to upload, publish, unpublish, and delete assets.
-- In the Dashboard, you can see all the assets and assets folders. Click the **+ New Asset** button for adding new assets in your stack.
+- Click **Assets** to upload, publish, unpublish, and delete assets.![Bulk-Operations-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt15476fd321bb8287/68b76c6bb3421a11b009b302/Bulk-Operations-Assets.png)
+- In the Dashboard, you can see all the assets and assets folders. Click the **+ New Asset** button for adding new assets in your stack.![Bulk-Operations-Assets-Add-New-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt811c4fa1aa99a4a8/68b7612779acbb13d065bae5/Bulk-Operations-Assets-Add-New-Assets.png)
 - You can directly upload assets or you can create a folder and upload assets by clicking the **Upload Here** button.  
   **Note**: You can create a nested folder structure with up to **5 levels**.  
 
@@ -105,25 +107,25 @@ Navigate to the stack dashboard to view the Bulk Operations app within your CMS.
   **Note**: You can upload the maximum number of assets based on your organization’s limit.  
 
   Click the vertical ellipsis under **Actions** next to an asset and select **View Asset** to view it in CMS.
-- Select the assets and click **Publish** to publish all the selected assets at once.
+- Select the assets and click **Publish** to publish all the selected assets at once.![Bulk-Operations-Assets-Publish](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt179f8748922a24fe/68b761287e8fa90e421367d6/Bulk-Operations-Assets-Publish.png)
 - In the **Publish Assets** modal, select the **Environment(s)** where you want to publish the assets. The stack **Language** is selected, by default; you can add more languages if needed. Choose the option to publish now or schedule it for later, then click **Publish** to continue.  
   After successful publishing of assets, you can see the published status.  
 
   Click the vertical ellipsis under **Actions** next to an asset and select **View Asset** to view it in CMS. Alternatively, you can click **View in Publish Queue** to view the status in the publish queue.
-- If you want to unpublish the assets, select assets and click **Unpublish**.
+- If you want to unpublish the assets, select assets and click **Unpublish**.![Bulk-Operations-Assets-Unpublish](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt631d248a3676c0dd/68b76143974c2b7bfae702d0/Bulk-Operations-Assets-Unpublish.png)
 - In the **Unpublish Assets** modal, select the **Environment(s)** where you want to unpublish the assets. The stack **Language** is selected, by default; you can add more languages if needed. Choose the option to unpublish now or schedule it for later, and then click **Unpublish** to continue.  
   After successful unpublishing of assets, you can see the unpublished status.  
 
   Click the vertical ellipsis under **Actions** next to an asset and select **View Asset** to view it in CMS. Alternatively, you can click **View in Publish Queue** to view the status in the publish queue.
-- The **Delete** button can delete all the selected assets and move them to trash.
+- The **Delete** button can delete all the selected assets and move them to trash.![Bulk-Operations-Assets-Delete](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfedf0b6cdd7d7d9b/68b761276f1cb91198ef5316/Bulk-Operations-Assets-Delete.png)
 - In the **Delete Assets** modal, click **Delete** to delete all the selected assets.  
   After successful deletion, you can see the status.  
 
   Click the vertical ellipsis under **Actions** next to an asset and select **View in Trash** to view the asset in trash.  
 
   **Note**: Deleted assets stay in [Trash](../manage-trash/about-trash.md) for 14 days before they are permanently removed.
-- You can click the folder path links to move between folders.
-- Click the **Reset** button to reset the dashboard to start a new search.
+- You can click the folder path links to move between folders.![Bulk-Operations-Assets-Navigation](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdd7158f7733b17d5/68b76128af26f1d555748eae/Bulk-Operations-Assets-Navigation.png)
+- Click the **Reset** button to reset the dashboard to start a new search.![Bulk-Operations-Assets-Reset](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3b196f2d376b4495/68b761437e8fa9e6df1367de/Bulk-Operations-Assets-Reset.png)
 - Confirm and click the **Reset** button again to reset the dashboard view.  
   **Note**: You can publish, unpublish, or delete up to **1000 assets** at a time.
 
@@ -133,17 +135,17 @@ Click **Releases** to add multiple entries and assets to a release or create a n
 
 #### Add Entries to a Release
 
-- In the Dashboard, click **Entries** to add entries to a release.
+- In the Dashboard, click **Entries** to add entries to a release.![Bulk-Operations-Releases-Add-Entries](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt76cb5db8ac918b0c/68b72fd85075c301e6a00793/Bulk-Operations-Releases-Add-Entries.png)
 - Choose the **Content Type** from all the available content types of your stack.  
   You can see all the entries of the selected content type.  
 
   Click the vertical ellipsis under **Actions** next to an entry and select **View Entry** to open the entry editor.  
 
   **Note**: To change the language, click the **Locales** drop-down in the top-right corner of the dashboard and choose the required locale.
-- Select the entries and click **Add to Release** to add all the selected entries to the release at once.
+- Select the entries and click **Add to Release** to add all the selected entries to the release at once.![Bulk-Operations-Releases-Entries-Add-To-Release](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc91c7bb26e67425d/68b72fd9c6107956b0d88710/Bulk-Operations-Releases-Entries-Add-To-Release.png)
 - In the **Add to Release** modal, select the **Release**. The stack **Language** is selected, by default. Choose the **Publish** or **Unpublish** action option. And then click **Add without References** or **Add with References** to add all the selected entries without or with references to the release.  
   **Note**: Release **version 1.0** does not support the inclusion of references; only the selected items will be added to the release.
-- Alternatively, click **+ Create Release** in the **Select Release** drop-down to create a new release.
+- Alternatively, click **+ Create Release** in the **Select Release** drop-down to create a new release.![Bulk-Operations-Releases-Entries-Create-Release](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt385b3a95e4bfdec2/69dd92d3587a5677588426a7/Bulk-Operations-Releases-Entries-Create-Release.png)
 - In the **Create A New Release** modal, enter the **Name** and **Description** of the release and click **Create**.  
   A new release is created and can be seen in the **Select Release** drop-down options.  
 
@@ -151,12 +153,12 @@ Click **Releases** to add multiple entries and assets to a release or create a n
 
 #### Add Assets to a Release
 
-- In the Dashboard, click **Assets** to add assets to a release.
+- In the Dashboard, click **Assets** to add assets to a release.![Bulk-Operations-Releases-Add-Assets](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt05931bc3d30af8c2/68b72fd81b488d1373bff6b7/Bulk-Operations-Releases-Add-Assets.png)
 - Choose any **Asset** from all the available assets and assets folder.  
   Click the vertical ellipsis under **Actions** next to an asset and select **View Asset** to view it in CMS.
-- Select the assets and click **Add to Release** to add all the selected assets to the release at once.
-- In the **Add to Release** modal, select the **Release**. The stack **Languages** is selected, by default; you can add more languages if needed. Choose the **Publish** or **Unpublish** action option, then click the **+ Add To Release** button to add all the selected assets to the release.
-- Alternatively, click **+ Create Release** in the **Select Release** drop-down to create a new release.
+- Select the assets and click **Add to Release** to add all the selected assets to the release at once.![Bulk-Operations-Releases-Assets-Add-To-Release](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb84691298c58ddc5/68b72fd85ee14d59c0624219/Bulk-Operations-Releases-Assets-Add-To-Release.png)
+- In the **Add to Release** modal, select the **Release**. The stack **Languages** is selected, by default; you can add more languages if needed. Choose the **Publish** or **Unpublish** action option, then click the **+ Add To Release** button to add all the selected assets to the release.![Bulk-Operations-Releases-Assets-Modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta085f36f65545ac0/68b72fd94f9d3d897b82607c/Bulk-Operations-Releases-Assets-Modal.png)
+- Alternatively, click **+ Create Release** in the **Select Release** drop-down to create a new release.![Bulk-Operations-Releases-Assets-Create-Release](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfcd4541b7d07604a/68b72fd8c42f6869e9c5252e/Bulk-Operations-Releases-Assets-Create-Release.png)
 - In the **Create A New Release** modal, enter the **Name** and **Description** of the release and click **Create**.  
   A new release is created and can be seen in the **Select Release** drop-down options.  
 
@@ -166,12 +168,16 @@ Click **Releases** to add multiple entries and assets to a release or create a n
 
 ### Find and Replace Operation
 
-- Click **Find and Replace** to search and replace the content in the entries.
+- Click **Find and Replace** to search and replace the content in the entries.![Bulk-Operations-Find-And-Replace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt95f09674bc8ec632/68b6fcca5075c3ab63a00615/Bulk-Operations-Find-And-Replace.png)
 - In the Dashboard, enter the following mandatory details:  
   Select the **Content Type** from all the available content types of your stack.
 - Select the **Locale** from the available languages.
-- The **Field Name/Path** drop-down shows all fields of the selected content type. Choose the field in which you want to search the content.**Note**: **Field Name/Path** signifies the [Unique ID](../create-content-types/unique-id.md) of the field, which is generated when you add a field in the content type.
-- Enter a word or phrase in the **Search Value** field for searching.**Note**: The search value is case-sensitive.
+- The **Field Name/Path** drop-down shows all fields of the selected content type. Choose the field in which you want to search the content.
+
+  **Note**: **Field Name/Path** signifies the [Unique ID](../create-content-types/unique-id.md) of the field, which is generated when you add a field in the content type.
+- Enter a word or phrase in the **Search Value** field for searching.
+
+  **Note**: The search value is case-sensitive.
 - Click the **Search** button to find the search values in the entries of that content type.  
   **Note**: After the search results for entries are generated, the **Replace** button is enabled.
 - In the **Replace Value** field, enter a word or phrase which you want to replace, select the entries from the searched items, and then click the **Replace** button.  
@@ -183,13 +189,13 @@ Click **Releases** to add multiple entries and assets to a release or create a n
   After updating the content successfully, the status changes to **Success**. Scroll right to view the status and message.  
 
   **Note**: Every **Replace** action creates a new version of an entry being updated.
-- Select the entries and click the **Publish** button for bulk publishing.
+- Select the entries and click the **Publish** button for bulk publishing.![Bulk-Operations-Find-And-Replace-Publish](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf2c1f296a0d23ce4/68b6fccc974c2b7497e70023/Bulk-Operations-Find-And-Replace-Publish.png)
 - In the **Publish Entries** modal, select the **Environment(s) **where you want to publish the entries. The stack **Language** is selected, by default. Choose the option to publish now or schedule it for later, and then click **Publish** to continue.  
   **Note**: The app takes into account the Language which is configured at the time of selecting the locale in the Search filters.
 
 After publishing the entries successfully, the status changes to **Success** with a confirmation message. For unsuccessful publishing, the status changes to **Fail** with an error message.  
 **Note**: You cannot perform search, replace, and publish if it is restricted in your custom roles permissions. For more details, refer to the [Custom Roles](../invite-users-and-assign-roles/types-of-roles.md#custom-role) documentation.
-- Click the **Reset** button to reset all the fields to start a new search.
+- Click the **Reset** button to reset all the fields to start a new search.![Bulk-Operations-Find-And-Replace-Reset-Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt82c8ea431cbda56f/69d7ccf85344ac74f9fd3355/Bulk-Operations-Find-And-Replace-Reset-Button.png)
 - Confirm and click the **Reset** button again to reset the search filters.  
   You can also reset the filters by updating any value in the mandatory filters.
 
@@ -206,14 +212,14 @@ Let’s apply the Find and Replace operation on different Content Type Fields.
   The **Fields Name/Path** displays the Unique ID of the field along with the field instance number in which the content is found and replaced. For example, **single_line** is the Unique ID, and **[0]** signifies the first single line textbox within the entry.  
 
   When you select and replace the content in multiple instances of an entry, the entry is updated once for all the replaced values, and then this updated version of an entry is created.
-- **Number**: You can apply the find and replace operation on the entire number.
+- **Number**: You can apply the find and replace operation on the entire number.![Bulk-Operations-Find-And-Replace-Number-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5affb062f70c92b4/68b6fccbcf9666acf9ec7075/Bulk-Operations-Find-And-Replace-Number-Field.png)
 - **Date (with Hide Time)**: You can use the search filter only on dates, not time.**Note**: When adding a **Date** field to the content type, go to the **Advanced** properties, and select the **Hide Time** checkbox from the options provided.
 
 Select any date in the **Search Value** date selector and replace it with another date selected in the **Replace Value** date selector.
-- **Boolean**: You can apply the search filter to change the Boolean value to **True** if it is set to **False** and vice versa.
+- **Boolean**: You can apply the search filter to change the Boolean value to **True** if it is set to **False** and vice versa.![Bulk-Operations-Find-And-Replace-Boolean-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb9b807dbe2d212af/68b6fccac53b04301bf96c8a/Bulk-Operations-Find-And-Replace-Boolean-Field.png)
 - **References**: You can use the Find and Replace operation in two ways:  
   When the reference field has one referenced content type.Select a referenced entry in the **Search Value** drop-down and replace it with another referenced entry selected in the **Replace Value** drop-down.
-- When the referenced field has more than one referenced content type.Select the content type in the **Search Value** drop-down, then select the referenced entry from another drop-down. Similarly, in the **Replace Value** drop-down, select the content type first and then select the referenced entry to be updated.
+- When the referenced field has more than one referenced content type.Select the content type in the **Search Value** drop-down, then select the referenced entry from another drop-down. Similarly, in the **Replace Value** drop-down, select the content type first and then select the referenced entry to be updated.![Bulk-Operations-Find-And-Replace-Multiple-Reference-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5d473946c0701fb2/68b6fccb471af6d68d1ecb2f/Bulk-Operations-Find-And-Replace-Multiple-Reference-Field.png)
 
 **Note**:
 

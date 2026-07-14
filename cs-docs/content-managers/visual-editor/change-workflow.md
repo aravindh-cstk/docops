@@ -28,7 +28,9 @@ To change the workflow of a web page using Visual Editor, log in to your [Conten
 - Choose the appropriate [Workflow Stage](../../developers/set-up-workflows-and-publish-rules/about-workflow-stages.md).
 - Optionally, set the due date using the **Date Picker** tool.
 - Assign the stage using one or both of the following dropdowns:**User(s):** Assigns the stage to selected individual users.
-- **Role(s):** Assigns the stage to all users associated with the selected roles.**Tip:** The assigned workflow appears in the user’s [**Tasks**](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md) section.
+- **Role(s):** Assigns the stage to all users associated with the selected roles.
+
+  **Tip:** The assigned workflow appears in the user’s [**Tasks**](../../developers/set-up-workflows-and-publish-rules/about-workflow-tasks.md) section.
 - Check **Notify via email** to send email notifications to the assignees.
 - Optionally, provide any additional information or instructions in the **Add comment** field.
 - Click **Update Workflow** to apply your changes.

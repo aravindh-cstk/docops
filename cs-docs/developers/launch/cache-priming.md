@@ -92,10 +92,10 @@ Choose one of the following methods to deploy your project in Launch:
 
 Once the project is deployed, follow the steps below:
 
-Click the **Settings** icon in the top panel.
+Click the **Settings** icon in the top panel.![Launch_Cache_Priming_Settings.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt42750631b51d0090/69d744e7e583e6cae7f06c65/Launch_Cache_Priming_Settings.png)
 
-- Navigate to **Environments** > **Cache Priming**.
-- Click the **Enable Cache Priming** toggle to enable priming.
+- Navigate to **Environments** > **Cache Priming**.![Launch_Cache_Priming_Environments.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt33b1c63c16764306/69d74318c2d5f285547c6eef/Launch_Cache_Priming_Environments.png)
+- Click the **Enable Cache Priming** toggle to enable priming.![Launch-Cache-Priming-Enable-CachePriming.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt150f79b00a43447f/67e3814393c4846b32e1f8bd/Launch-Cache-Priming-Enable-CachePriming.png)
 
 **Note:** Cache Priming takes effect from the next deployment of your project.
 

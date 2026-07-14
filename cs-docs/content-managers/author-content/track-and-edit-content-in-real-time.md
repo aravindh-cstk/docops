@@ -31,7 +31,7 @@ To track and edit content in real-time, log in to your [Contentstack account](ht
 - Go to your stack and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).**Note:** Make sure to enable Live Preview in your stack, configure the base URL, and select the desired environment (development, staging, or production).
 - Select an existing entry and click the **Live Preview** icon.
 - Hover over any content block in the preview pane. An Edit button will appear when a block is editable.
-- Click the Edit button to navigate directly to the corresponding field or entry in the editor.
+- Click the Edit button to navigate directly to the corresponding field or entry in the editor.![Track_and_Edit_Content_In_Real_Life.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb06339ae200ef4b1/67a071b4b67c9b985271b4b7/Track_and_Edit_Content_In_Real_Life.gif)
 - Make the necessary changes in the editor.
 - View your edits instantly reflected in the preview pane, ensuring the content meets your expectations.
 

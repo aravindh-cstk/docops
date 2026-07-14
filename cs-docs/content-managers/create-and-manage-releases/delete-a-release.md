@@ -25,7 +25,7 @@ To delete a release, log in to your [Contentstack account](https://www.contentst
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Releases” icon in the left navigation panel.
 - Hover over the release you want to delete in the left panel.
 - Click the “Delete” icon in the popup modal. Alternatively, click the horizontal ellipsis in the top right corner and click **Delete**.
-- In the resulting **Delete Release** modal, click the **Delete** button to delete your release.
+- In the resulting **Delete Release** modal, click the **Delete** button to delete your release.![Delete-a-Release.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte3add117ce6899c6/67fe44050bdcf170155f6578/Delete-a-Release.gif)
 
 ## API Reference
 

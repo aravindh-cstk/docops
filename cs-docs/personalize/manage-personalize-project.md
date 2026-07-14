@@ -48,7 +48,7 @@ The **Settings** page includes the following sections:
 - **General** - Manage project details, stack connection, and project-level actions.
 - **Users** - Manage user access and permissions.
 
-By default, the **General** section opens.
+By default, the **General** section opens.![image7.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc749cbe4e99527dc/6989770b162d1d6c10c3d8b3/image7.png)
 
 ### General
 Use the **General** section to configure the project.
@@ -65,9 +65,9 @@ The **UID** field is read-only and serves as the unique system identifier for th
 - Select the required Contentstack stack from the dropdown.
 - Click **Connect Stack**.
 
-After connecting the stack, you can personalize content authored within the selected Contentstack CMS stack.
+After connecting the stack, you can personalize content authored within the selected Contentstack CMS stack.![image10.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5e3a1b1a47b66a71/6989776f1ab63e12fd27c449/image10.png)
 
-**Stack Disconnection******Disconnect a Contentstack stack from a Personalize project if you no longer want to deliver personalized experiences using that stack.
+**Stack Disconnection******Disconnect a Contentstack stack from a Personalize project if you no longer want to deliver personalized experiences using that stack.![image1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt31346b984c549a47/698977a0a44eeb749a981543/image1.png)
 
 **Delete Project:**
 
@@ -81,13 +81,13 @@ Project-level roles in Personalize inherit from Contentstack organization roles.
 
 **View users**
 - Go to** Settings.**
-- Select **Users** from the left navigation.
-- Review the list of users and their **Status** and **Role**.
+- Select **Users** from the left navigation.![image9.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd5a653973c35eee0/69897831a44eeb8a3098154b/image9.png)
+- Review the list of users and their **Status** and **Role**.![image6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfed35fd17e56147b/6989789c1c153a3fac817ab2/image6.png)
 
 **Invite users**
-- In the **Users** tab, click **Invite User**.
+- In the **Users** tab, click **Invite User**.![image2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt93c69cddd5add862/698978d6a8ab7bc019bb29e2/image2.png)
 - Enter the user’s email address and an optional message.
-- Click **Invite**.
+- Click **Invite**.![image3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1830f4454c8fa879/6989793ae32a778cd8880ca7/image3.png)
 
 **Modify user roles**
 

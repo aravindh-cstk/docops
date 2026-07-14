@@ -35,8 +35,8 @@ This Sidebar Extension is available as a prebuilt template that you can configur
 To add the Text Intelligence Sidebar Extension to your [stack](../set-up-stack/about-stack.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 - Go to your stack and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- Click on the **+ New Extension** button on the top-right corner and select **Use Prebuilt**.
-- Click the filter drop-down field, and select **Sidebar Extension**.
+- Click on the **+ New Extension** button on the top-right corner and select **Use Prebuilt**.![MonkeyLearn_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8a010a7f3d672410/60b90e3e069dc90a315f8292/MonkeyLearn_1_highlighted.png)
+- Click the filter drop-down field, and select **Sidebar Extension**.![Select_Use_Prebuilt_-_Sidebar_Extension.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt7ec115ebacf4225e/638715e0cd680e10326e4623/Select_Use_Prebuilt_-_Sidebar_Extension.jpg)
 - From the list, hover over **Text Intelligence** and click on + **Add Extension**.
 - You will see the Sidebar Extension configuration page, where most details of the fields would be pre-filled. Enter details in the fields as given below:
 
@@ -64,7 +64,7 @@ To use the Text Intelligence Sidebar Extension in any entry, follow the steps gi
 - A sidebar appears where you can use the Sidebar Extension.
 - From the **Select Model** drop-down, select an option of your choice. For example, **Keyword Extraction**. This model helps you extract highly relevant SEO keywords from the given text****.
 - From the **Field** drop-down, select the field (e.g. Body).
-- Click **Run**. This will display the results as shown below.
+- Click **Run**. This will display the results as shown below.![Monkeylearn_3_no_highlight.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0d5bee2ed4edc880/60b90e87cda43e252090834f/Monkeylearn_3_no_highlight.gif)
 
 ## Common questions
 

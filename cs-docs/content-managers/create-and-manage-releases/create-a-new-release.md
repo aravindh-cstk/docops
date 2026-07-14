@@ -24,7 +24,7 @@ A Release contains a set of [entries](../author-content/about-entries.md) and [a
 To create a release, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md), and click on the “Releases” icon located on the left navigation panel. You can also use the shortcut key “alt + R” for Windows OS users, and “option + R” for Mac OS users to access Releases.
 - You can either click on the **+ New Release **button located at the top-left side of the page.
-- In the **Create a New Release** box, provide a suitable **Name** and **Description** for the release.
+- In the **Create a New Release** box, provide a suitable **Name** and **Description** for the release.![create_a_new_release_1_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltdb3e62b78c8d6b4b/60b3c668e5c1e71981817dde/create_a_new_release_1_no_highlight.png)
 - After entering the details, click on **Save**.
 
 Now, you can [add item(s) to the release](../../developers/create-releases/add-entry-asset-to-a-release.md) and deploy it to an environment.

@@ -23,7 +23,9 @@ To access the Drafts panel, log in to your [Contentstack account](https://www.co
 - Navigate to your [stack](../../developers/set-up-stack/about-stack.md) and select **Visual Experience**.
 - Click **Editor** in the bottom pill menu.
 - In the right sidebar, click the **Drafts** icon to view the list of modified fields.
-- Click “Compare” next to an entry. A side-by-side view opens, showing the saved version and the current draft. Draft changes appear in red for quick identification.**Tip:** Modified fields are outlined in red on the canvas to help you quickly identify changes.
+- Click “Compare” next to an entry. A side-by-side view opens, showing the saved version and the current draft. Draft changes appear in red for quick identification.
+
+  **Tip:** Modified fields are outlined in red on the canvas to help you quickly identify changes.![compare the drafts](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte18c5979bc92e0b9/68c8512a75e1e1e1d8df0cf9/drafts_navigation.png)
 
 To remove all unsaved updates and restore the last saved version of the entry, click the **Revert** icon.
 

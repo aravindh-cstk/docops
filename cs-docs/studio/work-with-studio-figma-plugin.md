@@ -35,11 +35,17 @@ To integrate Figma designs with Studio, open your Figma file and perform the fol
 - In the login page, choose your organization’s [region](../developers/contentstack-regions/about-regions.md) and click **Authorize** to proceed.
 - The plugin redirects you to the Contentstack application. Select the desired organization from the list.
 - After authentication, return to Figma. The plugin displays the list of projects linked to your organization in Studio.
-- Select a frame or component, or hold Shift and click to select multiple items. Alternatively, drag a selection box across the canvas to select multiple frames.**Note:** To enhance accuracy and avoid duplication, map your pre-built components and design tokens before generation.
-- Define layout or visual requirements using short prompts such as “Make this a carousel,” “Arrange elements in a grid,” or “Keep text above the image.”**Note:** Prompts affect design only, such as layout, spacing, and responsiveness. They do not define functional behavior (no click handlers, modals, etc.).
+- Select a frame or component, or hold Shift and click to select multiple items. Alternatively, drag a selection box across the canvas to select multiple frames.
+
+  **Note:** To enhance accuracy and avoid duplication, map your pre-built components and design tokens before generation.
+- Define layout or visual requirements using short prompts such as “Make this a carousel,” “Arrange elements in a grid,” or “Keep text above the image.”
+
+  **Note:** Prompts affect design only, such as layout, spacing, and responsiveness. They do not define functional behavior (no click handlers, modals, etc.).
 - When multiple frames are selected, you can add individual prompts to each frame or apply a single shared prompt to all selected frames.
 - Choose a responsiveness option:**Optimize for responsiveness:** Generates code that adapts to desktop, tablet, and mobile views.
-- **Fixed-size screens:** Keeps the selected frame dimensions across all views.**Note:** The selected responsiveness applies to all frames in the export. Mixing responsive and fixed layouts within the same export session is not supported.
+- **Fixed-size screens:** Keeps the selected frame dimensions across all views.
+
+  **Note:** The selected responsiveness applies to all frames in the export. Mixing responsive and fixed layouts within the same export session is not supported.
 - Click **Generate Design** to create the component’s code, styles, and mapping metadata.
 - After code generation, choose one of the following export options:**Copy to Studio**Copies the generated component to your clipboard as composition JSON, which you can paste into the Studio editing canvas.
 - Use this when the Figma design includes components that are already built and registered in Studio and do not require further changes before import.
@@ -52,7 +58,9 @@ Mapping helps the Figma plugin identify and reuse components that already exist 
 
 **Note:** Before mapping design components in Figma, make sure the components are [synced using the CLI](./work-with-studio-cli.md#sync-your-existing-components). Only synced components appear in the Figma plugin map.
 - Go to the **Component Mapping** tab to view the detected Figma components and corresponding code components.
-- Click **Auto Map** to match design layers to code components automatically.**Note:** The mapping is based on component name, description, and properties. Layers without a matching component remain unmapped and can be linked manually.
+- Click **Auto Map** to match design layers to code components automatically.
+
+  **Note:** The mapping is based on component name, description, and properties. Layers without a matching component remain unmapped and can be linked manually.
 - Review and adjust mappings before export to ensure accuracy.
 
 ## Apply Design Tokens

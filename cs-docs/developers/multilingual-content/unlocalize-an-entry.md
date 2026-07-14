@@ -24,7 +24,7 @@ When a localized entry is unlocalized, it loses its localized content and starts
 Once you have [created an entry](../../content-managers/author-content/create-an-entry.md) and localized it in a particular language, you can unlocalize it by performing the following steps:
 - Open the entry, navigate to the language selector dropdown at the top, and select the language of which you want to unlocalize the entry.
 - The localized copy of the entry in that language will open. Click on the **Unlocalize **button located at the bottom of the page.
-- Confirm your action by clicking on **Unlocalize**.
+- Confirm your action by clicking on **Unlocalize**.![Unlocalize_an_Entry_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltaae2271a70eb569b/60c0a49268689d78c8631541/Unlocalize_an_Entry_no_highlight.png)
 
 Alternatively, you can also unlocalize an entry from the list page. To do so, perform the steps given below:
 - On the Entries list page, locate the entry you want to publish and click the “ellipsis” (three dots) under the **Actions** column.

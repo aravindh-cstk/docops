@@ -59,17 +59,17 @@ In the next sections, we will set up a trigger and action for our Zap.
 
 Now, let's set up a trigger for the entry creation event in Contentstack using the following steps:
 
-Next, select the app that you want to integrate with, for our example, **Contentstack BETA.**
+Next, select the app that you want to integrate with, for our example, **Contentstack BETA.**![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2f515904abcfa25e/61b9cbe8121d687d6e0178c4/image.png)
 - Select the **Trigger Event** in Contentstack which will trigger the Zap. For this example, let’s select **New Entry.** This will trigger the Zap whenever a new entry is created in your Contentstack account.
 - After selecting the trigger event, configure your Contentstack account to connect with Zapier. Click on the **Sign in to Contentstack** button to add a new account to Zapier.
-- This will redirect you to a new page where you need to select the [**Region**](../../contentstack-regions/available-regions.md) of your data center as shown below:
+- This will redirect you to a new page where you need to select the [**Region**](../../contentstack-regions/available-regions.md) of your data center as shown below:![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltbb411a5b5d15c663/6214bee81e27e75f8b4b2f03/image.png)
 - To complete your account set up, click on the **Yes, Continue **button.
-- Select the organization where you want to perform the operation and allow **Zapier OAuth** to access your Contentstack organization. Review the permissions and click on **Read more. S**croll down and click on the** Authorize **button to grant **Zapier OAuth** the permissions to access your organization as shown below:
+- Select the organization where you want to perform the operation and allow **Zapier OAuth** to access your Contentstack organization. Review the permissions and click on **Read more. S**croll down and click on the** Authorize **button to grant **Zapier OAuth** the permissions to access your organization as shown below:![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt26ed965460dbc77b/6214bf9723d8fd714a7a4668/image.png)
 - Now, in your Zapier app, choose the account (if not selected) that you just configured and click on **Continue**.
 - Next, click on **Set up a trigger **to notify events occurring in your stack.
 Select if you want to set up a trigger for all content types of your stack or for a particular content type. For this example, we will select all content types and accordingly set the **Use All Content Types?** value to **True**.
 Alternatively, if you want to select specific content types, then select **False **and select the **Content Type** or choose from the **Custom **settings dropdown.
-- Click on the **Test trigger** button. This will show the data of an existing entry from your stack. It is a representation of the data that you will get when the actual event will be triggered. You can use this data in the actions that you set up.
+- Click on the **Test trigger** button. This will show the data of an existing entry from your stack. It is a representation of the data that you will get when the actual event will be triggered. You can use this data in the actions that you set up.![Test-trigger.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt033a670567034340/6386245123cd3b1045c366a0/Test-trigger.jpg)
 
 With this steps, the trigger setup is complete. Let’s learn how to set an action event for the Zap.
 
@@ -94,7 +94,7 @@ With these steps, we have successfully configured the trigger and action for our
 Your Zap is now ready and you can test if it works as expected:
 
 Create a new entry in any content type of your stack. This entry will instantly trigger the Zap and a message will be sent to you on Slack.
-- The notification will be sent through the bot you created. It will contain the details of the new entry along with the input text message.
+- The notification will be sent through the bot you created. It will contain the details of the new entry along with the input text message.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6439c7987cec30e9/61126f5bac7fb61a3678ec57/image.png)
 
 This was an example of a simple Zap containing just a trigger and a single action. Likewise, you can create more complex and sophisticated Zaps using multiple actions.
 **Note**: Non-premium users can create a Zap with only one trigger and one action. And they can have only 5 active Zaps at a time. More Zaps can be saved in the draft state. To learn more check [Zapier's plans and pricing](https://zapier.com/app/billing/plans) page.

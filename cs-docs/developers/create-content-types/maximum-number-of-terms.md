@@ -23,10 +23,12 @@ The **Maximum Number of Terms** property allows you to specify a limit of maximu
 To set the maximum number of terms for a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login) and go to the stack. Perform the following steps in the stack:
 
 - Once the **Content Type** is created, add the required fields along with the Taxonomy field.
-- Within the Taxonomy field properties, add the necessary details for the [Display Name](./display-name.md), [Help Text](./help-text.md), and [Instruction Value](./instruction-value.md) field properties.**Note**: By default, the UID for the taxonomy field is set to taxonomies and cannot be updated.
+- Within the Taxonomy field properties, add the necessary details for the [Display Name](./display-name.md), [Help Text](./help-text.md), and [Instruction Value](./instruction-value.md) field properties.
+
+  **Note**: By default, the UID for the taxonomy field is set to taxonomies and cannot be updated.
 - Click on **+ Add Taxonomy**, and in the pop-up window, select a taxonomy from the drop down menu.
 - Within the **Maximum Number of Terms** field, enter the limit.
-- Once all the details are filled, click **Apply **to save the changes.
+- Once all the details are filled, click **Apply **to save the changes.![maximum-number-of-terms.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt08f00c13881093f4/65cef594719d563781e867ff/maximum-number-of-terms.png)
 
 **Additional Resource**: Refer to our [Add Taxonomy to a Content Type](../taxonomy/add-taxonomy-to-a-content-type.md) document for more information.
 

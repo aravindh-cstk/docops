@@ -28,8 +28,8 @@ To add this extension to your stack, log in to your [Contentstack account](https
 
 Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.![Ooyala_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8983d987d9df1799/60be35552d47ce78c28ac4bf/Ooyala_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Ooyala_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6370e0e85f766c92/60be355f3a3d1a5f519eab3c/Ooyala_2_highlighted.png)
 - On the **Create New Extension **page, enter values in the fields as given below:
   - **Title ***(required)*: Provide a suitable title, for example “Ooyala,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
   - **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **Text**.
@@ -60,9 +60,9 @@ Now, let’s understand how you can start using this custom field in your conten
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
-- Under **Select Extension**, select the “Ooyala” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Ooyala” field that you created and set the other properties. You can add other fields as per requirements.![Ooyala_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt45069ea2437cec53/60be356b85c4c2118e316713/Ooyala_3_highlighted.png)
 - Finally, click on either **Save** or **Save and Close** to save your changes.
-- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Ooyala **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Ooyala **field in action.![Ooyala_4_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltfa4a92516ba84cce/60be357636617c1194b6cd26/Ooyala_4_highlighted.png)
 
 **Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only **10 KB** of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 

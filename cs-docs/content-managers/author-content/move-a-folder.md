@@ -21,8 +21,8 @@ In Contentstack, you can move asset folders into other folders to create a neste
 
 To move an asset folder, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel.
-- Locate the folder you want to move, click the **vertical ellipses** under **Actions**, and select **Move To**.
-- In the **Move To** modal, select the destination folder, and click **Move here**.
+- Locate the folder you want to move, click the **vertical ellipses** under **Actions**, and select **Move To**.![Assets_MoveFolder_MoveTo.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb618d1a7b8e986e0/674552a7434d82d25a44f500/Assets_MoveFolder_MoveTo.png)
+- In the **Move To** modal, select the destination folder, and click **Move here**.![Assets_MoveFolder_MoveHere.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt17781eaffa58c1d9/674552a7465242c098d33e21/Assets_MoveFolder_MoveHere.png)
 
 Your folder will now be moved into the selected folder, creating a nested structure.
 

@@ -20,7 +20,7 @@ If you are working on a content structure similar to an existing content type in
 
 To create a copy of an existing content type, log in to your [Contentstack account](https://www.contentstack.com/login), go to your stack, and perform the following steps:
 - Click on the “Content Models” icon on the left navigation panel to view the list of available content types.
-- Click on the ellipses in the **Actions** column (extreme right) for the corresponding content type you want to copy, and then click on **Copy Content Type**.
+- Click on the ellipses in the **Actions** column (extreme right) for the corresponding content type you want to copy, and then click on **Copy Content Type**.![copy-a-content-type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb258b6f997425d97/65ca0ff97c5d41f2865278c2/copy-a-content-type.png)
 - This opens the **Copy Content Type {your_content_type_name}** form, where you can edit and change the details of your content type.
 - Finally, click on the **Copy** button to make a copy of your content type. The change(s) gets saved automatically and opens the new copy content type.
 

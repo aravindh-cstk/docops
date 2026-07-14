@@ -61,8 +61,8 @@ Let’s get started!
 Firstly,  log in to your [Contentstack account](https://app.contentstack.com/#!/login) and [create a stack](../set-up-stack/create-a-new-stack.md). Follow the steps given below to [create a custom field](../create-custom-fields/about-custom-fields.md) extension that will be required in the content types in step 2:
 
 Go to your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” gear icon, and select **Extensions**.
-- On the **Extensions **page, click on the **+ Add Extension** button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one** link as shown below:
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ Add Extension** button, and select **Create new**. If you have not added any extensions in the stack yet, click on the **create a new one** link as shown below:![Select_Create_New_and_Create_a_New_One.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6e0213aae4bb8efc/6011b7d30cb0aa0ffcdd61cd/Select_Create_New_and_Create_a_New_One.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Select_Custom_Field.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta92e567a0cfab615/60127ed00a80720ff10f42c5/Select_Custom_Field.png)
 - On the **Create New Extension** page, enter values in the fields as given below:
 **Title ***(required)*: Provide a suitable title for your custom field. This title will be visible when you select the extension in the custom field in your content type.
 - **Field data type** *(required)*: Select the data type in which the input data of the field should be saved in Contentstack. For this example, the data type is **JSON**.
@@ -115,7 +115,7 @@ The **Pet** content type schema is shown below, it contains the following fields
 Add a reference field to this content type. Under **Edit Properties, **add a **Display Name **(**Person**) and select the **Person** content type from the **Referenced Content Type **dropdown.
 - **Home** (Custom field)
 Add a custom field to the content type. Under **Edit Properties, Select Extension **that we created in step 1 and add a **Display Name **(**Home**).
-- The **Pet **content type schema should look like this:
+- The **Pet **content type schema should look like this:![Pet_CTdone.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3f1e7cb6caf63ee3/6024cdd0f13a6d4c0c258480/Pet_CTdone.png)
 - Finally, click on the **Save and Close **button.
 
 ## Try-out the Set-up

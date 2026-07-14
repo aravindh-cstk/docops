@@ -25,7 +25,7 @@ Contentstack offers predefined views tailored to common search scenarios. These 
 - **All Assets:** Displays all the assets that are uploaded in the stack.
 - **Modified by Me:** Lists entries or assets modified by you.
 - **Published by Me:** Lists entries or assets published by you.
-- **Not Published:** Lists entries or assets not published in any [environment](../../developers/set-up-environments/about-environments.md).
+- **Not Published:** Lists entries or assets not published in any [environment](../../developers/set-up-environments/about-environments.md).![alt_text](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc53e408621fa012f/67d93ab902de20f89f5a6e4c/1-Working-With-Views-Popular-Vie_copy.gif)
 
 The **Content Type Views** section provides a list of all the [content types](../../developers/create-content-types/about-content-types.md) available in the stack, allowing you to search and filter entries based on content types. You can also group views by labels.
 

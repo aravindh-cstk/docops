@@ -21,8 +21,8 @@ This page explains the legacy “Developer Tools” Sidebar Extension for Conten
 The “Developer Tools” Sidebar Extension provides developers with quick tools (API endpoint, JSON, etc.) to work with an [entry](../../content-managers/author-content/about-entries.md) or all entries of a [content type](../create-content-types/about-content-types.md) and do a lot more. Let’s explore more about this extension.
 
 The Developer Tools Sidebar Extension, which can be accessed on the right-hand side of the entry page, primarily has two tabs: **API Details** and **JSON View**.
-- **API Details**: This tab provides the [REST API](../single-sign-on/rest-api-usage.md) endpoints or queries (in any language of your choice) that you can readily use to access/fetch the current entry or all entries of the content type. You need to select the Platform, copy the endpoint/query, add the environment name, and use it as required to fetch the entry.
-- **JSON View**: The JSON view tab displays the JSON data of your entry. You can then copy this JSON and use it as per requirement or import it to other content types.
+- **API Details**: This tab provides the [REST API](../single-sign-on/rest-api-usage.md) endpoints or queries (in any language of your choice) that you can readily use to access/fetch the current entry or all entries of the content type. You need to select the Platform, copy the endpoint/query, add the environment name, and use it as required to fetch the entry.![developer_tools_api_details_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt71d8f467b939221e/60b9118a7979111986c71710/developer_tools_api_details_no_highlight.png)
+- **JSON View**: The JSON view tab displays the JSON data of your entry. You can then copy this JSON and use it as per requirement or import it to other content types.![developer_tools_JSON_View_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc051e4925ab557a4/60b911978bf36608f2c03505/developer_tools_JSON_View_no_highlight.png)
 
 This step-by-step guide explains how to create **Developer Tools** Sidebar Extension for your content types.
 
@@ -37,8 +37,8 @@ To create a Developer Tools Sidebar Extension, log in to your [Contentstack acco
 
 Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Select **Extensions.** You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- Click on **+ New Extension** and select **Create new. ******
-- On the **Select Extension Type** screen, select **Sidebar Extension.**********
+- Click on **+ New Extension** and select **Create new. ******![developer_tools_1_highlighted.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1df99638a3451df7/6387164ba447b710177c54c4/developer_tools_1_highlighted.jpg)
+- On the **Select Extension Type** screen, select **Sidebar Extension.**********![Click_Sidebar_Extension.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt09ddddec72ae30e7/61e668a392df143501298011/Click_Sidebar_Extension.png)
 - On the **Create New Extension** page, enter the following details:
 
   **Title**: Enter a name for your extension, for example, Developer Tools.
@@ -60,14 +60,14 @@ Now that you have added the extension to your content type, let's use it in our 
 ## Use the Extension
 
 Click on the content type for which you have enabled this Sidebar Extension.
-- Click on an entry. You will see the **Sidebar Extensions **dropdown at the top. Click on it and select Developer Tools**.**
-- The selected Sidebar Extension expands on the sidebar.
+- Click on an entry. You will see the **Sidebar Extensions **dropdown at the top. Click on it and select Developer Tools**.**![developer_tools_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt9eedba5e0bd00f2b/60b91141f393f31ac4329183/developer_tools_3_highlighted.png)
+- The selected Sidebar Extension expands on the sidebar.![developer_tools_4_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte3325ce793163bf5/60b91153f393f31ac4329187/developer_tools_4_highlighted.png)
 - You can then select either of the following options:
 
   **API Details**: This tab provides the **REST API endpoints **or **queries** (in any language of your choice) that you can readily use to access/fetch the current entry or all entries of the content type.  
   Under **Platform**, either select REST API or the platform (iOS, Android, Javascript, etc.) to view the REST API endpoint for fetching the entry. You can copy this endpoint/query (and enter the environment name) and use it as required.  
   The Sidebar Extension provides endpoints/queries for both **Get this entry** and **Get all entries**.
-- **JSON view**: The **JSON view** tab lets you to see the JSON format of the entry you're working on, which can then be copied and exported to other content types.
+- **JSON view**: The **JSON view** tab lets you to see the JSON format of the entry you're working on, which can then be copied and exported to other content types.![Developer_tools_gif.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3885f86c9927ce88/6140edc1564bf37c154f71b7/Developer_tools_gif.gif)
 
 ## Common questions
 

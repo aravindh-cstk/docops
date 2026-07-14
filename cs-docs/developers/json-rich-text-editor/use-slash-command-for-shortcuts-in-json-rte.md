@@ -48,7 +48,9 @@ To trigger the shortcut menu, click inside the JSON RTE and type a forward-slash
 Use the following commands to apply formatting styles:
 - **/paragraph**: Adds plain paragraph text.
 - **/h1 to /h6**: Inserts heading tags to emphasize titles or subtitles.
-- **/blockquote**: Creates a styled quote block, separated from surrounding text.**Note:** To add a line break within the blockquote, use **Shift+Enter**. To exit, press **Enter**.
+- **/blockquote**: Creates a styled quote block, separated from surrounding text.
+
+  **Note:** To add a line break within the blockquote, use **Shift+Enter**. To exit, press **Enter**.
 - **/code**: Inserts a code block with language-specific syntax highlighting.
 
 ## List Shortcuts

@@ -28,7 +28,7 @@ This step-by-step guide explains how to configure automatic deployments on the L
 
     [Log in](https://www.contentstack.com/login) to your Contentstack account and perform the following steps:
 
-      Click **Launch** from the dashboard as shown below.
+      Click **Launch** from the dashboard as shown below.![Launch_2026_Landing_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt93cb437e9760884e/69647cf52269f8000829f814/Launch_2026_Landing_Page.png)
 - On the Projects landing page, select your **project**.
 - Navigate to the Launch [Environment Settings](./environments.md#configure-an-environment) page.
 - Create a new [**Deploy Hook**](./deploy-hooks.md#create-a-deploy-hook).

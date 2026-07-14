@@ -38,22 +38,22 @@ Follow the step-by-step guide to install and configure Algolia within your stack
 ## Retrieve your Algolia Credentials
 To get the Algolia credentials, log in to your [Algolia account](https://www.algolia.com/users/sign_in), and follow the steps given below:
 
-In the left navigation, click **Settings**, then under **Team and Access**, click the **API Keys** option.
-- Under the **Your API Keys** tab, you can view the **Application ID**. Copy it to the clipboard to use during app configuration in [step 2](#install-and-configure-the-algolia-app-in-marketplace).
+In the left navigation, click **Settings**, then under **Team and Access**, click the **API Keys** option.![Algolia-API-Keys-Option](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8abbdc89414c87bc/68ef47b2da161219b684b40a/Algolia-API-Keys-Option.png)
+- Under the **Your API Keys** tab, you can view the **Application ID**. Copy it to the clipboard to use during app configuration in [step 2](#install-and-configure-the-algolia-app-in-marketplace).![Algolia-Application-ID](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltee549167851c2e2f/68ef47b1bd1d806b8be6f81a/Algolia-Application-ID.png)
 - Under the **All API Keys** tab, you can view the already created **API Keys**.While creating a new API Key, ensure to select **Indices**.
 
 Also, add the **ACL** options to perform indexing.
-- In the left navigation, click the “Search” icon. Under **Index**, you can copy the **Index Name** by clicking the “Copy” icon.
+- In the left navigation, click the “Search” icon. Under **Index**, you can copy the **Index Name** by clicking the “Copy” icon.![Algolia-Index-Name](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5f7b6635fc510b9f/68ff8a88f62d8ca5c0c2dad3/Algolia-Index-Name.png)
 
 Now, you have **Application ID**, **Index Name**, and **API Key** to configure the Algolia app in [step 2](#install-and-configure-the-algolia-app-in-marketplace).
 
 ## Install and Configure the Algolia App in Marketplace
 To install the app in Contentstack, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
 
-Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.
+Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
 - Click **Apps** from the left panel.
-- Within the Marketplace, you can view the available apps. Hover over the **Algolia** app and click **Install**.
-- In the pop-up window, select the stack where you want to install the Algolia app, accept the **Terms of Service**, and click the **Authorize & Install** button.
+- Within the Marketplace, you can view the available apps. Hover over the **Algolia** app and click **Install**.![Algolia-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt43fbcc3e5b19f8bb/68ee964bbd1d805edbe6f565/Algolia-App.png)
+- In the pop-up window, select the stack where you want to install the Algolia app, accept the **Terms of Service**, and click the **Authorize & Install** button.![Algolia-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt07a541c2f73cc9b8/68ee964bffa4016af5eec40b/Algolia-App-Install.png)
 - On the **Configuration** screen, enter the following details:Click the **+ Add Configuration** button to add new configuration details.
 - Select the environment and provide the Algolia credentials such as **Application Id**, **Index Name**, and **API Key** retrieved in [step 1](#retrieve-your-algolia-credentials).**Note:**
 
@@ -104,13 +104,15 @@ If you **deselect** this option, the app will perform the following actions:
 
 By default, the **Select for Asset(s)** checkbox is selected.
 - If this option is not selected, Asset(s) data will not be added to Algolia.
-- For existing users, a pop-up will appear on the **Configuration** screen while updating the app. Make sure to save the app to the latest settings, even if no changes are made.
+- For existing users, a pop-up will appear on the **Configuration** screen while updating the app. Make sure to save the app to the latest settings, even if no changes are made.![Algolia-Configuration-Update-Alert](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0c56f4d5045014bf/68ee9673bf9ee90c9d904a3b/Algolia-Configuration-Update-Alert.png)
 - After adding the configuration details, click the **Save** button.
-- On the **UI Locations** tab, you can see the predefined app location ([Full Page UI location](../developer-hub/full-page-location.md)). You can use the toggle button to enable or disable it based on your requirements.
+- On the **UI Locations** tab, you can see the predefined app location ([Full Page UI location](../developer-hub/full-page-location.md)). You can use the toggle button to enable or disable it based on your requirements.![Algolia-Configuration-UI-Location](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta41c246a16135727/68ee966af3ff9ef982871139/Algolia-Configuration-UI-Location.png)
 - If the branch feature is enabled for your organization, navigate to the **Webhook** tab to configure and trigger it on the required branches.Inside the **Configure Webhook** section, you can select the following options under **Branch Scope**:
 
 **All Branches:** If you want the webhook to trigger on all branches of the stack.
-- **Specific Branches:** If you want the webhook to trigger on a specific branches. You can add multiple branches.**Note:** When the webhook is triggered from the branch, Algolia's `ObjectId` value will have the branch uid appended at the end.
+- **Specific Branches:** If you want the webhook to trigger on a specific branches. You can add multiple branches.
+
+  **Note:** When the webhook is triggered from the branch, Algolia's `ObjectId` value will have the branch uid appended at the end.![Algolia-Configuration-Webhooks](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc3e873656cdff794/68ee964c6bfd9328633fee82/Algolia-Configuration-Webhooks.png)
 
 **Additional Resource:** For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Algolia app.
@@ -118,10 +120,10 @@ By default, the **Select for Asset(s)** checkbox is selected.
 ## Use the Algolia App within your Stack
 To use the Algolia app, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
 
-Navigate to the stack dashboard, click **Content Models** from the header, and click the **+ New Content Type** button.
-- Create a new content type by adding relevant details as displayed below.
+Navigate to the stack dashboard, click **Content Models** from the header, and click the **+ New Content Type** button.![Algolia-Content-Models](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte77f217f6b0f69e8/68ee964b150a96155956b871/Algolia-Content-Models.png)
+- Create a new content type by adding relevant details as displayed below.![Algolia-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1659e25a23b66a3e/68ee966c08234819504e8685/Algolia-Content-Type.png)
 - In the **Content Type Builder** page, add the required fields, and click **Save** or **Save and Close** to save the content type.
-- Navigate to **Entries** from the header and click **+ New Entry** to create an entry within the same content type.
+- Navigate to **Entries** from the header and click **+ New Entry** to create an entry within the same content type.![Algolia-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt425ee64816a8be9c/68ee966b150a96969b56b876/Algolia-Sample-Entry.png)
 - **Save** and **Publish** your entry within the same environment which was configured during the app configuration in [step 2](#install-and-configure-the-algolia-app-in-marketplace).**Note:**
 
 Publish the entries only in the environment(s) you selected while configuring the Algolia app.
@@ -135,12 +137,14 @@ If you delete a content type from your stack, the app deletes all the published 
 
 ## Algolia as a Full Page App
 To view analytics in the Algolia app, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
-- Navigate to the stack dashboard, click **Apps** from the header, and select the **Algolia** app.
+- Navigate to the stack dashboard, click **Apps** from the header, and select the **Algolia** app.![Aloglia-Full-Page-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt861528a03df28b3f/68ee966bbd1d80219fe6f56b/Aloglia-Full-Page-App.png)
 - You can view the **Audit Log** within the Full page app. You can also filter logs by **All Logs**, **Success Logs**, or **Error Logs** to quickly identify the status of operations. This ensures full traceability and helps troubleshoot sync or indexing issues with ease.Under **Actions**, click the vertical ellipses corresponding to the record to view the following:
 
 **View Details**: Shows the call details that includes request payload, details, and response.
 - **View Entry**: Redirects you to the corresponding entry within Contentstack, allowing you to quickly review or edit the content that triggered the log.
-- **Retry**: Allows you to reattempt the failed sync operation.**Note:** The **Retry** option is not available for the Delete operation. If a delete action fails, you must first retrieve the entry from Trash and then retry the delete operation manually.
+- **Retry**: Allows you to reattempt the failed sync operation.
+
+  **Note:** The **Retry** option is not available for the Delete operation. If a delete action fails, you must first retrieve the entry from Trash and then retry the delete operation manually.
 - Click the **Algolia Search Results** tab to view insights into your search activity across different environments within Algolia.Select the **Environment** from the dropdown menu. The available options correspond to the environments configured during app configuration in [step 2](#install-and-configure-the-algolia-app-in-marketplace).
 
 You can explore insights such as **Top Searches** and **Top searches with no results** at once:

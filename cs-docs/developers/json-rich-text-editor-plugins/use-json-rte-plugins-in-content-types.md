@@ -23,7 +23,7 @@ Once you have added a custom JSON RTE plugin to your [stack](../set-up-stack/abo
 To add a JSON RTE plugin within a JSON Rich Text Editor in a content type, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 - Go to your stack and click the “Content Models” icon on the left navigation panel.
 - Click on the **+ New Content Type** button.
-- Enter the details shown in the image below and click on **Save and proceed**.
+- Enter the details shown in the image below and click on **Save and proceed**.![CT_save.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt063d2dd50c7f2365/61d690a00d81d913d2ac73be/CT_save.png)
 - In the Content Type Builder page, add the JSON Rich Text Editor field in your content type by clicking on the “Insert a field” link represented by a **+** sign.
 - Under **Select Plugin(s)**, select the plugins you want to add within the JSON Rich Text Editor.
 

@@ -32,10 +32,10 @@ Import previously exported items into the Knowledge Vault to restore configurati
 **Note**: This guide assumes that you have already [added items in the Knowledge Vault](./add-item-in-knowledge-vault.md) within your Brand Kit.
 
 To import an item in Knowledge Vault, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- In the left navigation panel, click the **Brand Kit** icon.
-- Select the **Brand Kit** in which you want to import a Knowledge Vault item.
-- Click **Knowledge Vault** from the left navigation panel.
-- To import an item in the Knowledge Vault, click the **+ New Item** button and select the **Import** option.
+- In the left navigation panel, click the **Brand Kit** icon.![1-Brand-Kit-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2793aa12bafb2903/68a78e6d5555ae37ee9b0d79/1-Brand-Kit-Icon.png)
+- Select the **Brand Kit** in which you want to import a Knowledge Vault item.![2-Knowledge-Vault-Select-Brand-Kit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdefa55036c9dd703/68a78cdfcbb08154f864289c/2-Knowledge-Vault-Select-Brand-Kit.png)
+- Click **Knowledge Vault** from the left navigation panel.![3-Knowledge-Vault-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9a6f8e53ab3c8864/66d87b10f787522a7bb3cf0b/3-Knowledge-Vault-Icon.png)
+- To import an item in the Knowledge Vault, click the **+ New Item** button and select the **Import** option.![4-Import-Knowledge-Vault-Item-Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt75bae38102525157/687fb9e626a74d052e25754c/4-Import-Knowledge-Vault-Item-Button.png)
 - In the **Import** modal, click the **Upload File** to browse and select the .json file containing your Knowledge Vault item, then click **Proceed**.
 
       **Note**:

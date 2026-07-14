@@ -46,10 +46,14 @@ csdx cm:stacks:seed
 
 After running the command, you’ll be prompted to complete the following steps:
 - **Stack to import**: Select a stack from the list of available source stacks.
-- **Organization name**: From the list of organizations you have access to, select the one where your source stack is located or where you want to create a new stack.**Note**: You must be an [owner](../organization/organization-roles.md#organization-owner) or [admin](../organization/organization-roles.md#organization-admin) of the selected organization.
+- **Organization name**: From the list of organizations you have access to, select the one where your source stack is located or where you want to create a new stack.
+
+  **Note**: You must be an [owner](../organization/organization-roles.md#organization-owner) or [admin](../organization/organization-roles.md#organization-admin) of the selected organization.
 - **Stack preference**: You’ll be prompted to choose one of the following options.
       **Create a new stack**: Enter a name, and the CLI will begin the stack creation process.
-- **Use an existing stack**: Select a destination stack from the list of stacks you have access to within the selected organization. If the selected stack contains existing content, the CLI will prompt you to confirm before continuing.**Additional resource**: Refer to the [Stack Roles](../invite-users-and-assign-roles/types-of-roles.md) documentation to learn more about permissions.
+- **Use an existing stack**: Select a destination stack from the list of stacks you have access to within the selected organization. If the selected stack contains existing content, the CLI will prompt you to confirm before continuing.
+
+  **Additional resource**: Refer to the [Stack Roles](../invite-users-and-assign-roles/types-of-roles.md) documentation to learn more about permissions.
 
 **Tip:** To minimize errors, we recommend creating a new destination stack. If importing content into an existing stack, ensure that it is empty.
 

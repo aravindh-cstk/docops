@@ -45,13 +45,13 @@ For organization apps, there is only one UI location available.
 
 ### Enable UI locations in Organization Apps
 
-- Click the **+ Add** icon on App configuration to add the UI Location.
-- Add the necessary details for the app, such as its **Description**; select whether it’s **Signed **or not; provide a valid **Path**; and select if **Enabled** or not.
+- Click the **+ Add** icon on App configuration to add the UI Location.![Organization_UI_Location.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8cb0dda705839a97/66b1c803e3c58c3912d5cc94/Organization_UI_Location.png)
+- Add the necessary details for the app, such as its **Description**; select whether it’s **Signed **or not; provide a valid **Path**; and select if **Enabled** or not.![App_Config.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf7ab077c4b70eaea/65b2908b450fa44f13015b7f/App_Config.png)
 - Click the **Save** button to save the changes.
 
 ### List Webhook Events in Organization Apps
 
-[Webhooks](./managing-webhooks-in-an-app.md) provide a mechanism to send real-time information to any third-party app or service, when an event occurs in your app. Organization app only supports App events.
+[Webhooks](./managing-webhooks-in-an-app.md) provide a mechanism to send real-time information to any third-party app or service, when an event occurs in your app. Organization app only supports App events.![List_of_Webhook_Events_in_the_Organization.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf29a91b21ddd3aaa/66b1c8031370b663549d1554/List_of_Webhook_Events_in_the_Organization.png)
 
 ### Limitations of Organization App
 
@@ -77,12 +77,12 @@ For stack apps, six UI locations are available:
 - [RTE](./rte-location.md)
 - [Sidebar](./sidebar-location.md)
 - [Field Modifier](./field-modifier-location.md)
-- [Full Page](./full-page-location.md)
+- [Full Page](./full-page-location.md)![Stack_App_UI_Location.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt43822c74ea1bd941/66acb07733b37f79832a69ab/Stack_App_UI_Location.png)
 
 ### Enable UI Locations in Stack Apps
 
-- Click the **+ Add** button that appears when you hover on any UI Locations, to add the UI Location. Let’s consider that we add the **Custom Field **location.
-- Add the necessary details for the app, such as its **Name**, **Data Type**, and **Description**; select whether it’s **Signed** or not; provide a valid **Path**; and select if **Enabled** or not.
+- Click the **+ Add** button that appears when you hover on any UI Locations, to add the UI Location. Let’s consider that we add the **Custom Field **location.![Custom_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt600f2da072ca8a5c/65b2908b55a88a11bfda5bbf/Custom_Field.png)
+- Add the necessary details for the app, such as its **Name**, **Data Type**, and **Description**; select whether it’s **Signed** or not; provide a valid **Path**; and select if **Enabled** or not.![Custom_Field_Configuration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3ddaa7b3f091c521/65b2908bd2067b7d6f8c39e2/Custom_Field_Configuration.png)
 - Once done, click **Save**.
 
 ### List Webhook Events in Stack Apps

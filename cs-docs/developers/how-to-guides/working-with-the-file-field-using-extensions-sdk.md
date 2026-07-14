@@ -30,8 +30,8 @@ Follow the steps given below to create a custom field extension:
 
 In your [stack](../set-up-stack/about-stack.md), navigate to the “Settings” icon on the left navigation panel, and select **Extentions**.
 
-- On the **Extensions** page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions** page, click on the **+ New Extension** button, and select **Create new**.![Working_with_the_File_Field_Using_Extensions_SDK_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte33725b1ce12b3e7/60b7be7fcf9889265dab7c36/Working_with_the_File_Field_Using_Extensions_SDK_1_highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Click on the Custom Field](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc903b95bdea7df35/61d88c378aabbf6426b751e0/Custom_Field_Card.png)
 - On the **Create New Extension** page, enter values in the fields as given below:
 
 **Title**: Provide a suitable title for your custom field. This title will be visible when you select the extension in the custom field in your [content type](../create-content-types/about-content-types.md).

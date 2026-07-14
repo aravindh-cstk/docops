@@ -39,7 +39,7 @@ To view complete details of all the releases, follow the steps below:
 - From the left navigation panel, click the** Developer Hub **icon.
 - You will be directed to the Apps Dashboard page, where you see all the apps created so far. Select an app to get started.
 - By default, the app's **Basic Information** page will open.
-- In the left navigation panel, click the **Releases **tab.
+- In the left navigation panel, click the **Releases **tab.![Select_Releases_Tab.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta2f23d6ce93e7d4f/663b845770ebbab5ceab902f/Select_Releases_Tab.png)
 - If you have created releases previously, you will see the list of all the releases created for the app. The different columns along with relative information will be as shown below:
 
 | Column | Description |
@@ -58,11 +58,11 @@ To view complete details of all the releases, follow the steps below:
 **Historical: **After approval, a new release goes live, and the previous one transitions to "Historical" status. Only one release can be live at a time, while all past releases are marked as historical.
 
 - In the **Actions **column, click the ellipses to view the release details.
-- Click the **View **icon. A pop-up modal appears where you can view the release details.
+- Click the **View **icon. A pop-up modal appears where you can view the release details.![View_Relese.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt71ecf99dfad96c88/663dc79cc37e3456a9ad0677/View_Relese.png)
 
 ## Create a Release
 To create a new release, follow the steps below:
-- From the top right corner, click the **+ New Release **button to create the release notes associated with the version.
+- From the top right corner, click the **+ New Release **button to create the release notes associated with the version.![_New_Release.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt50f4583a85540828/663b845644cc74a10359550f/_New_Release.png)
 - Enter a suitable **Title **for the release.
 - Select a **Version **from the dropdown.You can create a release on the same version or the version that exceeds the current version of the latest release. For example, If you create a release for version 5, you cannot make a release for historical versions below 5, i.e., version 4, version 3, etc.
 - Provide a **Type **from the dropdown, i.e., **Major**, **Minor**, or **Patch**. With tag types, you can define the severity of the changes made to the app.**Major **releases typically introduce significant changes to an app. This could involve introducing new features, making substantial improvements, or even changing the overall direction of the application. Major releases may not be backward compatible. This means that the changes introduced could break compatibility with earlier versions. Developers should notify users of any breaking changes in their release notes. For example, overhauling the application's architecture for better performance, introducing a new UI, or enabling a new UI location.If the current application version is one and you select version two while creating a release, you will only be presented with the options for major and minor types.
@@ -76,15 +76,15 @@ To create a new release, follow the steps below:
 | **Minor: ** | Increments from 1.1.0 to 1.2.0 |
 | **Patch: ** | Increments from 1.1.1 to 1.1.2 |
 
-- In the **Release Note **field, enter the details of the update made to the app's current version. This helps the users understand the latest changes made to your app and will be the public record of your apps release history.
+- In the **Release Note **field, enter the details of the update made to the app's current version. This helps the users understand the latest changes made to your app and will be the public record of your apps release history.![Create_Release.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte1f0ef1b0647d78c/663b8457f8baf05434a75914/Create_Release.png)
 - Click the **Create Release **button.
-- After the release is created successfully, the pop-up modal closes. You can see the latest changes in the releases table. The release status is automatically changed to the “Draft” mode upon creation.
+- After the release is created successfully, the pop-up modal closes. You can see the latest changes in the releases table. The release status is automatically changed to the “Draft” mode upon creation.![Draft_Mode.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6b6542ea98d7bbb1/663b84565f24855438d0d626/Draft_Mode.png)
 - In the **Actions **column, click the ellipses to edit, delete, or submit the app for review.
 
 Contentstack’s Marketplace team will review your app upon submission. Users are required to wait for a duration of 21 days to receive the status of their [app submission](../marketplace-platform-guides/app-submission-and-approval-guide.md). You will be notified about the status via email.
 
 **Note: **You cannot revoke or delete your app submission request. Reach out to our [Support Team](mailto:support@contentstack.com) if you have any concerns or queries.
-- Click the **Edit **icon. A pop-up screen appears. You can only update the **Title **and the **Release Note **of the release.Once a release is submitted for review, editing it is not possible. However, if the app releases submission is rejected, you can make edits to the releases.
+- Click the **Edit **icon. A pop-up screen appears. You can only update the **Title **and the **Release Note **of the release.Once a release is submitted for review, editing it is not possible. However, if the app releases submission is rejected, you can make edits to the releases.![Edit_Release.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd55924e5591ea4db/663b8457aea3293cb260e3b2/Edit_Release.png)
 - Once done, click **Save Changes **to update the release.
 
 The approved release notes of your application will now be visible publicly on your application’s Releases tab in the Marketplace. You can view the detailed app model by navigating to *Marketplace -> Discover -> Search *for your Application and click to open the App Details modal.

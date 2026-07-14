@@ -44,8 +44,8 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace **icon to go to the Marketplace.
 - Click **Apps **from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **Content Type Visualizer **app and click the **Install App **button.
-- In the popup window, select the stack where you want to install the Content Type Visualizer app and click the **Install **button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- In the popup window, select the stack where you want to install the Content Type Visualizer app and click the **Install **button.![Content-Type-Visualizer-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltac2fbb8f68fc9d0f/64b8f69a4439472842238f7a/Content-Type-Visualizer-Install-App.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Content-Type-Visualizer-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2da3f05fa2ca96be/65b7bd3563dd3a8040961d33/Content-Type-Visualizer-UI-Locations.png)
 
   **Note:** No additional configuration is required to use the Content Type Visualizer app.
 
@@ -79,7 +79,9 @@ Reference field in the content type editor page:
 - Click the **+ **(zoom in) or** - **(zoom out) icons to zoom in or zoom out of the diagram.
 - To view the information of a specific content type in the diagram, follow the steps below:
   - Click a **content type card**.
-  - **Note:** If a content type card is already selected, then click the **Content Type Information** icon in the right panel to view the information of the selected content type.
+  - 
+
+    **Note:** If a content type card is already selected, then click the **Content Type Information** icon in the right panel to view the information of the selected content type.
   - The Content Type Information panel displays `Name` and `Field Count` of the selected content type, by default. If the selected content type has entries and/or reference fields, then the `Number of Entries (master)` field and the `Referenced Content Type(s)` field will be displayed.
 - Click the **icon** below the `Number of Entries (master)` field to view the entries associated with the selected content type, in a new tab.
 - Click the **Edit Content Type** button to edit the content type in the app.

@@ -25,7 +25,7 @@ To mark a project as a favorite, follow the steps below:
 
 You can also filter projects based on the tags.
 These tags can help you filter out the projects in the Search. If you use both; a tag filter and the Project Search, then it gives a consolidated list of projects based on the search and tags.
-- Refresh the page to view your favorite project(s) at the top.
+- Refresh the page to view your favorite project(s) at the top.![Favorite_at_Top.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte09af0a2e2bc5c3c/651bc26a865dec18230f1870/Favorite_at_Top.png)
 
 ## Common questions
 

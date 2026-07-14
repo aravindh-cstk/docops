@@ -23,13 +23,15 @@ To add a taxonomy to a content type, log in to your [Contentstack account](https
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to add a taxonomy to a content type, and click the “Content Models” icon on the left navigation panel.
 - [Create a new content type](../create-content-types/create-a-content-type.md) or select an existing.
 - In the “Content Type Builder” page, select the fields you want by clicking the “Insert a field” (+ icon) that appears when you hover the cursor.
-- Select **Taxonomy **from the list of fields.
+- Select **Taxonomy **from the list of fields.![Taxonomy_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8e1aa78c8f62419a/6656f1dce4a7327037977ca3/Taxonomy_Field.png)
 - You can configure the properties of the taxonomy field by clicking the properties.  
-  **Note**: By default, the UID for the taxonomy field is set to taxonomies and cannot be updated.
+![Taxonomy_Properties.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt16b8e5e73821badb/6656f2e7cb7d1875c3656317/Taxonomy_Properties.png)  **Note**: By default, the UID for the taxonomy field is set to taxonomies and cannot be updated.
 - Click the **+ Add Taxonomy** button and select a taxonomy from the dropdown menu of available taxonomies within the stack.
-- If you want to limit the maximum number of terms for the taxonomy field, enter a number in the **Maximum Number of Terms** field.**Note**: The maximum number of terms allowed per entry is **25**.
+- If you want to limit the maximum number of terms for the taxonomy field, enter a number in the **Maximum Number of Terms** field.
+
+  **Note**: The maximum number of terms allowed per entry is **25**.
 - You can disable the **Optional Field** toggle if you want to make this field mandatory.
-- Finally, click **Apply** to add the taxonomy.
+- Finally, click **Apply** to add the taxonomy.![Add_Taxonomy.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf8cec7221c1c70b6/6656d7c5672d190352dc9351/Add_Taxonomy.png)
 
 **Note**: You can include multiple taxonomies within a single taxonomy field in a content type.
 

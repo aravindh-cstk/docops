@@ -40,7 +40,7 @@ To enable the show as tab option, log in to your [Contentstack account](https://
 - Navigate to your [stack](../set-up-stack/about-stack.md) and open the content type where you want to enable this option.
 - Hover over a **Group**, **Modular Block**, or **Global Field**, then click the **Properties** icon.
 - Switch to the **Advanced** tab in the **Field Properties** modal, and enable the **Show as Tab** toggle.
-- Click **Save** or **Save and Close** to update the content type.
+- Click **Save** or **Save and Close** to update the content type.![Enable_Show_as_Tab.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt97a04036e136b321/6908f1cc4ce7cca73656960e/Enable_Show_as_Tab.png)
 
 Once saved, this field appears as a **tab** in the entry editor.
 

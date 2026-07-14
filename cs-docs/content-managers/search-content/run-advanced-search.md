@@ -32,7 +32,7 @@ To add multiple search queries, click the **+** link, and enter your query as ex
 **Note:** All the conditions or queries that you add on the same level will work with either ‘ALL’ or ‘ANY’ operator, not a mix of both.
 
 - Finally, you can add nested conditions. Nested conditions help you build really complex queries to further refine your search.
-  To add a nested condition, click the **+** link. You will see a nested block, within which you can select the ‘ALL’ or ‘ANY’ operator.
+  To add a nested condition, click the **+** link. You will see a nested block, within which you can select the ‘ALL’ or ‘ANY’ operator.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt59ac53250df7e952/60ddaf6494d4824720fe252c/image.png)
 
 ## Common questions
 

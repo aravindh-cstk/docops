@@ -29,12 +29,12 @@ To update the release items to their latest versions, log in to your [Contentsta
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Releases” icon in the left navigation panel. Or, press “alt + R” for Windows and “option + R” for Mac.
 - Hover over the release you want to unlock in the left panel.
 - Click the “Update All Release Items” icon from the popup. Alternatively, click the horizontal ellipsis in the top right corner and click **Update All Release Items**.
-- In the **Update All Release Items** modal, click **Update** to update the assets and entries of the release to the latest.
+- In the **Update All Release Items** modal, click **Update** to update the assets and entries of the release to the latest.![Update-Items-of-a-Release-to-Lat.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt728755e6680113ab/67ee7c1f4cd6a30def7a4b3a/Update-Items-of-a-Release-to-Lat.gif)
 
 To bulk update release items to their latest, follow these steps:
 - Use the checkboxes to select the entries you want to add to a release.
 - Once you have selected the items, a floating panel will appear on the page. Click the **Update Release Item(s)** option in this panel.
-- In the **Update Release Item(s)** modal, click **Yes, Proceed** to update the selected items to their latest.
+- In the **Update Release Item(s)** modal, click **Yes, Proceed** to update the selected items to their latest.![Bulk-Update-Items-of-a-Release.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltea219ed5a23fc648/67ee7cbfd32f688084ef03c0/Bulk-Update-Items-of-a-Release.gif)
 
 **Note:** If the release is locked, you can [unlock](./unlock-a-release.md) and then update the release items to their latest versions.
 

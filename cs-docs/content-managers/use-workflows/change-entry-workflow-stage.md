@@ -23,7 +23,7 @@ Once you are done working on an entry at a particular stage (e.g., “Draft”),
 
 To change the workflow stage of an [entry](../author-content/about-entries.md), log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your [stack](../../developers/set-up-stack/about-stack.md), and perform the following steps:
 - Open the entry workflow stage of which you want to update.
-- On the entry page, go to the **Workflow Details** section under the **Status** panel on the right. You will see the current stage of the entry, along with the stage’s color label as shown below:
+- On the entry page, go to the **Workflow Details** section under the **Status** panel on the right. You will see the current stage of the entry, along with the stage’s color label as shown below:![Change_Entry_Workflow_Stage_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltceac930908c2c68b/60c0c50d2d47ce78c28ad0eb/Change_Entry_Workflow_Stage_1_highlighted.png)
 - Click on the **Change **link located beside the workflow stage’s name. This will open the **Entry Workflow Settings** section with the following sections:**Set Workflow Stage**: Select the next stage you want to set for this entry.
 - **Set Due Date**: Select the due date for the next stage via the date picker tool.
 - **Assign to**: Select the** User(s)** from your stack to whom you want to assign the next stage. Also, you can select **Role(s) **to assign the stage to a particular role. If you want to send an email notification to the assignee, check the **Notify via Email** box.

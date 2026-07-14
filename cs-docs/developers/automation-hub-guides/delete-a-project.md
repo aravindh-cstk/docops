@@ -22,12 +22,16 @@ You can delete a project, its automations, and connected apps from Automate. Org
 
 To delete a project, perform the steps given below:
 - In the left-hand side primary navigation, click the **Automate** icon, and click the project you want to delete.  
-You can also filter projects based on the tags. These tags can help you filter out the projects in the Search. If you use both; a tag filter and the Project Search, then it gives a consolidated list of projects based on the search and tags.
-- Click **Settings**, scroll down, and you can see the **Advanced Settings** section.**Note**: The **Delete** button is disabled if there are any active automations and connected apps for the project. All the automations must be deactivated or deleted to enable the **Delete** button.
-- Click the **Delete** button to delete the project.
-- In the **Delete Project** Modal, you can see the details such as **Project name**, **Number of inactive automations**, and **Number of connected apps**.**Warning**: Clicking the **Delete** button permanently deletes the project, including all the automations and connected apps. You cannot recover a deleted project.
+You can also filter projects based on the tags. These tags can help you filter out the projects in the Search. If you use both; a tag filter and the Project Search, then it gives a consolidated list of projects based on the search and tags.![Automate_-_Delete_a_project_-_Click_a_project_to_delete.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf9cfc2f508454ccf/66042801d74dd12fdba19245/Automate_-_Delete_a_project_-_Click_a_project_to_delete.png)
+- Click **Settings**, scroll down, and you can see the **Advanced Settings** section.
+
+  **Note**: The **Delete** button is disabled if there are any active automations and connected apps for the project. All the automations must be deactivated or deleted to enable the **Delete** button.
+- Click the **Delete** button to delete the project.![Delete_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltac0b9dc8a0303330/651bc3522b6593b102c56f2a/Delete_Button.png)
+- In the **Delete Project** Modal, you can see the details such as **Project name**, **Number of inactive automations**, and **Number of connected apps**.
+
+  **Warning**: Clicking the **Delete** button permanently deletes the project, including all the automations and connected apps. You cannot recover a deleted project.
 - Enter the **Project Name**, and click the **Yes, delete it** button to delete the project permanently.  
-    You will get a notification after the project is deleted.
+    ![Automate_-_Delete_a_project_-_Confirm_project_deletion.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2e0410960f0ea695/66042801d74dd19150a19249/Automate_-_Delete_a_project_-_Confirm_project_deletion.png)You will get a notification after the project is deleted.![Notification.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7eef9bc4e1fc2db8/644217dd1338252c6f86fae6/Notification.png)
 
 **Note**: No email notification is triggered after deleting the project.
 

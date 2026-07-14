@@ -25,14 +25,16 @@ Use custom roles to align access with internal responsibilities and compliance r
 
 To create a custom organization-level role, log in to your Contentstack account and perform the steps given below:
 - Navigate to **Administration** through the "App Switcher", then click the **Roles** tab to view roles.
-- Click **+ New Role**.
+- Click **+ New Role**.![Create_Roles_1.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am610bb094e57628c4/b4e5c25f85fd96aa4279fbb1/Create_Roles_1.png?locale=en-us)
 - Enter a **Name** and a **Description**.
-- Under **Choose a Product**, select the product the role applies to, such as **CMS**, **Assets**, or **Administration**.
+- Under **Choose a Product**, select the product the role applies to, such as **CMS**, **Assets**, or **Administration**.![Create_Roles_2.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am0c1b315c82a3ffc4/6c518da3cc6cdcd2bb3ae194/Create_Roles_2.png?locale=en-us)
 - Review the permission categories available for the selected product. The categories vary by product. For example, Assets includes Spaces, Fields, Asset Types, Users, Roles, and Languages.
 - For each category, click **+ Select Permissions**, or click the vertical ellipsis and select **Manage Permissions**.
-- In the permissions side panel, select the required actions for the category, such as **View**, **Create**, **Edit**, or **Delete**.
-- Click **Save**.**Tip**: Configure permissions only for the areas this role should access. Leave other categories unselected to restrict access.
-- Click **Create Role**.
+- In the permissions side panel, select the required actions for the category, such as **View**, **Create**, **Edit**, or **Delete**.![Create_Roles_3.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amd5ed9777f7afb5d6/7a162e9d12fbcc1cc93a9914/Create_Roles_3.png?locale=en-us)
+- Click **Save**.
+
+  **Tip**: Configure permissions only for the areas this role should access. Leave other categories unselected to restrict access.
+- Click **Create Role**.![Create_Roles_4.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am21ee0c8220302ff9/73ef0171f0857889904ecd99/Create_Roles_4.png?locale=en-us)
 
 The custom role is created and appears on the Roles listing page with a Custom tag.
 

@@ -81,7 +81,9 @@ The `login` command authenticates your CLI session, allowing secure access to st
 ```
 csdx login --oauth
 ```
-- The CLI attempts to redirect you to the Contentstack application in your default browser.**Note:** If the browser does not open automatically, a URL will be generated in the terminal. Copy and paste the URL into your browser.
+- The CLI attempts to redirect you to the Contentstack application in your default browser.
+
+  **Note:** If the browser does not open automatically, a URL will be generated in the terminal. Copy and paste the URL into your browser.
 - Select the organization you want to work with.
 - After selecting the organization, return to your terminal. A confirmation message will indicate successful authentication.
 
@@ -135,7 +137,9 @@ To add a Figma component to your Studio project, perform the following steps:
 csdx studio:component:add --component-id=
 ```
 **Tip:** You can run this command without keeping Studio open.
-- The CLI analyzes your project and identifies a styling method (e.g., Tailwind CSS or CSS Modules).**Tip:** To override the detected styling method, include your preference in the prompt. Example: “Use CSS Modules instead of Tailwind.”
+- The CLI analyzes your project and identifies a styling method (e.g., Tailwind CSS or CSS Modules).
+
+  **Tip:** To override the detected styling method, include your preference in the prompt. Example: “Use CSS Modules instead of Tailwind.”
 - Optionally, provide a prompt to customize layout or behavior. Example: “Add a carousel with auto-scroll or “Use a two-column layout.”
 - The CLI generates a complete component package including:A React component file
 - A style file (based on the detected or specified styling method)

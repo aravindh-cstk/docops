@@ -49,8 +49,8 @@ To add this extension to your stack, log in to your [Contentstack account](https
 
 Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.![Cloudinary_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt077c26d64bae02f0/60c20b1a3fb413770446fd4c/Cloudinary_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Cloudinary_2_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8fc58bcae9f21e86/60c20b3cf8aee612d3997304/Cloudinary_2_no_highlight.png)
 - On the **Create New Extension **page, enter values in the fields as given below:
 
 **Title ***(required)*: Provide a suitable title, for example “Cloudinary,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
@@ -80,9 +80,9 @@ Now, let’s understand how you can start using this custom field in your conten
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
-- Under **Select Extension**, select the “Cloudinary” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Cloudinary” field that you created and set the other properties. You can add other fields as per requirements.![Cloudinary_3_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb68248625a7d45eb/60c20b271b32a31d5305c778/Cloudinary_3_Highlighted.png)
 - Finally, click on either **Save** or **Save and Close** to save your changes.
-- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Cloudinary **field in action.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Cloudinary **field in action.![Entry PAge.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltd8d65e184ed3d4dd/5e5fb0126885a673d12683b2/entry_page.jpg)
 - Click on **Choose Assets**. If you are still logged into Cloudinary, it will open inside your entry page, from where you can select multiple images and insert them in your entry.
 
 **Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.

@@ -42,8 +42,8 @@ Clicking on an asset will direct you to the Asset Details page.
 
 The Dashboard is the stack’s homepage. To access the Dashboard, follow the steps given below:
 - Log in to your [Contentstack account](https://app.contentstack.com/#!/login).
-- You will see the stacks that you have access to. Click on any stack of your choice.
-- This will take you to the homepage of the stack, i.e., the Dashboard.
+- You will see the stacks that you have access to. Click on any stack of your choice.![Default_Dashboard_Extensions_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd1c6aa355c62e9a3/667a5f18c16fc550aa4a1ef9/Default_Dashboard_Extensions_3.png)
+- This will take you to the homepage of the stack, i.e., the Dashboard.![Default_Dashboard_Extensions_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf82f591af8c216b2/667a5f32d92d10bdde9ff52f/Default_Dashboard_Extensions_4.png)
 
 The Dashboard page has the same default extensions that we just discussed above.
 

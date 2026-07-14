@@ -55,7 +55,7 @@ The top navigation bar ensures essential tools and actions are always accessible
 The top navigation is designed to provide consistent access to Contentstack’s core modules.
 - **Menu Item Navigation**: Key CMS modules such as Dashboard, Entries, Assets, Content Models, and Releases—along with similar modules for other Contentstack apps—are available as direct menu items in the top navigation bar.
 - **Product Menu (9-dot Grid)**: Click the grid icon on the top-right corner to access all Contentstack products. You can also find quick link to **Favorites**.
-- **Profile Settings**: Easily switch between organizations and update profile settings such as your profile image, password, two-factor authentication, or others.
+- **Profile Settings**: Easily switch between organizations and update profile settings such as your profile image, password, two-factor authentication, or others.![Top_Nav_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta045cfe1a855f4d0/68c1278911efa9c7045ca615/Top_Nav_3.png)
 
 Contentstack Home acts as your central dashboard and the top navigation allows seamless traversing across modules, enabling you to navigate Contentstack efficiently and stay focused on building powerful digital experiences.
 

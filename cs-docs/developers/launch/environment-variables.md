@@ -30,7 +30,7 @@ You can add environment variables while creating a new project or environment, o
 
 - Click the **project card** to open your project from the Launch landing page.
 - In the Environments screen, click an existing environment or create a new [environment](./environments.md). For this tutorial, we will add an environment variable to the **Default** environment for the Contentstack API key.
-  In the **Default** environment, click the **ellipses** under Actions and then click **Settings** to go to the Settings page.
+  In the **Default** environment, click the **ellipses** under Actions and then click **Settings** to go to the Settings page.![Launch_Settings_2026.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3ccdc1d79b2ef2eb/69b78cd967be9e781070b034/Launch_Settings_2026.png)
 - In **Environments** under **Settings**, click **Environment Variables**.
 
 If your project is connected to any stack, its status will be available inside **Integration Status**.

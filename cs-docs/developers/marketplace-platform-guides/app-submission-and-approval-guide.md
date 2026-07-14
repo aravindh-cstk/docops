@@ -60,7 +60,9 @@ Your app details will be displayed on your Marketplace listing once your app is 
 ## App Review
 
 Metadata and marketing content of the app will be reviewed and verified simultaneously.
-- In case the app details or the content are not approved then the Marketplace team will send a feedback to the Partner.**Additional Resource: **Read our detailed guide on [App Development Best Practices](../developer-hub/app-development-best-practices.md) to ensure you build the app according to our guidelines.
+- In case the app details or the content are not approved then the Marketplace team will send a feedback to the Partner.
+
+  **Additional Resource: **Read our detailed guide on [App Development Best Practices](../developer-hub/app-development-best-practices.md) to ensure you build the app according to our guidelines.
 
 ## App Testing and Security Checks
 

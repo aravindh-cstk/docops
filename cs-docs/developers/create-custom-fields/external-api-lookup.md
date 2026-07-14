@@ -36,8 +36,8 @@ To add the External API Lookup [custom field](./about-custom-fields.md) to your 
 Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.![External_API_Lookup_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt492b5b89cf2399ad/60c21893fbd63412d4134899/External_API_Lookup_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0a5acfec466941b2/611359345d80fd1b92ab9ba0/image.png)
 - On the **Create New Extension **page, enter values in the fields as given below:
   - **Title ***(required)*: Provide a suitable title, for example, “External API Lookup,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
   - **Field Data Type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **Text**.

@@ -31,9 +31,11 @@ To view your stack details, log in to your [Contentstack account](https://www.co
 - In the **General** section, you can view or update the following details:**Name** of your stack
 - The **description** provided for the stack
 - The **Stack Owner Email** in read-only mode
-- The **Appearance** section allows you to manage the visual identification of your stack. You can select a predefined color under **Stack Color** to visually identify your stack across the interface.**Note**: If no color is selected, a default color is applied.
+- The **Appearance** section allows you to manage the visual identification of your stack. You can select a predefined color under **Stack Color** to visually identify your stack across the interface.
+
+  **Note**: If no color is selected, a default color is applied.
 - In the **API Credentials** section, view the stack **API Key** (stack UID) used for authentication and API requests.
-- If you are the stack [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner), you can [delete the stack](../organization/organization-stacks.md#delete-a-stack) or [transfer ownership](./transfer-stack-ownership.md). Other users can only [leave the stack](./leave-a-stack.md).
+- If you are the stack [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner), you can [delete the stack](../organization/organization-stacks.md#delete-a-stack) or [transfer ownership](./transfer-stack-ownership.md). Other users can only [leave the stack](./leave-a-stack.md).![Stack Color in Stack Settings.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8c4738688592bef4/69a402b9fbdb4daac37752eb/Stack_Color_in_Stack_Settings.png)
 
 Accessing these settings allows you to manage stack configuration, authentication credentials, and user permissions effectively.
 
@@ -42,7 +44,7 @@ The last modified timestamp shows when the stack settings were most recently upd
 
 To view the last modified timestamp of a stack, perform the following steps:
 - Click the “Stacks” icon in the top-left corner of the screen.
-- This displays all accessible stack cards. Each card displays the **Last Modified** timestamp, which indicates when a user last made changes to the stack settings.
+- This displays all accessible stack cards. Each card displays the **Last Modified** timestamp, which indicates when a user last made changes to the stack settings.![Stack Dashboard.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd1b537808c2922a0/69a402b9f902d86aa729bb28/Stack_Dashboard.png)
 
 **Note:** The last modified timestamp reflects changes to stack settings only. It does not update when content within the stack is changed.
 

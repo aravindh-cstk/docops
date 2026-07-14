@@ -50,23 +50,23 @@ To integrate Shopify with Contentstack, log in to your [Contentstack account](ht
 
 Log in to your [Shopify account](https://accounts.shopify.com/store-login).
 
-- On the admin interface, from the **Select Region** drop-down, select your desired region (**North America**, **Europe**, **Azure Europe**, **Azure North America**, **GCP North America**) and click the **Authenticate** button.
-- A screen appears. To connect Shopify with Contentstack, scroll down, and click the **Authorize** button for successful authorization.
-- Now, you are connected with the Contentstack organization.
-- If you want to change the **Region** or connect with any other Contentstack organization, click the **Reauthenticate** button.
+- On the admin interface, from the **Select Region** drop-down, select your desired region (**North America**, **Europe**, **Azure Europe**, **Azure North America**, **GCP North America**) and click the **Authenticate** button.![1-Contentstack-Shopify-Integration-Authenticate](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt50b82ce7f6154ff5/679b3480b32935206ddbb82c/1-Contentstack-Shopify-Integration-Authenticate.png)
+- A screen appears. To connect Shopify with Contentstack, scroll down, and click the **Authorize** button for successful authorization.![2-Contentstack-Shopify-Integration-Authorize](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt87bbe9087713e114/679b34803be31408cdab29c4/2-Contentstack-Shopify-Integration-Authorize.png)
+- Now, you are connected with the Contentstack organization.![3-Contentstack-Shopify-Integration-Dashboard](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc6e6cfbd7e7458f7/679b348021aebd578e77ee08/3-Contentstack-Shopify-Integration-Dashboard.png)
+- If you want to change the **Region** or connect with any other Contentstack organization, click the **Reauthenticate** button.![4-Contentstack-Shopify-Integration-Reauthenticate](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt14c3454881f6a248/679b3480e4273c493ab88fbc/4-Contentstack-Shopify-Integration-Reauthenticate.png)
 - Now to synchronize the Shopify data with Contentstack, select the **Stack**. After selecting a stack, you can select an existing Content Type or create a new Content Type for syncing the **Content Type for Products**.  
-  **Note**: Syncing Products is mandatory.
-- Select **Sync Products Delete Event** checkbox to enable the deletion of products from Shopify when the corresponding entries are deleted in Contentstack.
-- You can also sync all available content types within the selected stack (as [Meta Objects in Shopify](#meta-objects-in-shopify)) by clicking the **Sync All Content Types** checkbox.
+![5-Contentstack-Shopify-Integration-Add-Stack-And-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1117f35ea9296b85/679b34801160e7a4a5057f1c/5-Contentstack-Shopify-Integration-Add-Stack-And-Content-Type.png)  **Note**: Syncing Products is mandatory.
+- Select **Sync Products Delete Event** checkbox to enable the deletion of products from Shopify when the corresponding entries are deleted in Contentstack.![6-Contentstack-Shopify-Integration-Sync-Products-Delete-Event](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt520bb5e959fb1ed8/679b3480d435d72b52221e56/6-Contentstack-Shopify-Integration-Sync-Products-Delete-Event.png)
+- You can also sync all available content types within the selected stack (as [Meta Objects in Shopify](#meta-objects-in-shopify)) by clicking the **Sync All Content Types** checkbox.![7-Contentstack-Shopify-Integration-Sync-All-Content-Types](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1d9e3e7000e4e7fb/679b3480e76cc660faef09ca/7-Contentstack-Shopify-Integration-Sync-All-Content-Types.png)
 - Click the **Sync Collections** checkbox if you want to synchronize the Shopify Collections in Contentstack. For syncing **Content Type for Collections**, you can create a new Content Type or select an existing Content type.  
-  **Note**: Syncing Collections is optional.
-- Select **Sync Collections Delete Event** checkbox to enable the deletion of collections from Shopify when the corresponding entries are deleted in Contentstack.
-- Click the **Connect** button to create a connection between Contentstack and Shopify and continue the syncing process. If there is any update in Contentstack, that will automatically be updated in Shopify and vice-versa.
+![8-Contentstack-Shopify-Integration-Sync-Collections](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt042ce9cebdcdb5b1/679b34802408e4885ad6021b/8-Contentstack-Shopify-Integration-Sync-Collections.png)  **Note**: Syncing Collections is optional.
+- Select **Sync Collections Delete Event** checkbox to enable the deletion of collections from Shopify when the corresponding entries are deleted in Contentstack.![9-Contentstack-Shopify-Integration-Sync-Collections-Delete-Event.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3597d13b447fea81/679b34806319bed1d4bc7376/9-Contentstack-Shopify-Integration-Sync-Collections-Delete-Event.png)
+- Click the **Connect** button to create a connection between Contentstack and Shopify and continue the syncing process. If there is any update in Contentstack, that will automatically be updated in Shopify and vice-versa.![10-Contentstack-Shopify-Integration-Connect](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1d0f5b9a95775fe5/679b34804d95179967d72bd1/10-Contentstack-Shopify-Integration-Connect.png)
 - Click the **Sync Now** button to initiate the syncing process between Contentstack and Shopify.  
   If some Products or Collections are available in Contentstack, but not in Shopify, they will be created in Shopify. Click **Confirm** to proceed with the syncing process.  
 
   **Note**: All Contentstack [Fields](/docs/developers/create-content-types#fields) support this transition from Contentstack to Shopify except [Custom](../create-content-types/custom.md) and [Taxonomy](../create-content-types/taxonomy.md) fields.
-- After the syncing process is complete, it will show a **Success** status with the day, date, and time.
+- After the syncing process is complete, it will show a **Success** status with the day, date, and time.![13-Contentstack-Shopify-Integration-Status](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdeb3ad0a73a5cf9e/679b348e284b0a75e190bbe3/13-Contentstack-Shopify-Integration-Status.png)
 - Click the **Disconnect** button to stop the syncing process without updating the data in Shopify and Contentstack.  
   In the modal, click the **Disconnect** button again to stop the sync.  
 

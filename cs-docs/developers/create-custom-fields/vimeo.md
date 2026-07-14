@@ -39,15 +39,17 @@ Follow the steps below to create an app and generate a Vimeo access token.
 
 Visit the Vimeo [log in](https://vimeo.com/log_in) page and create a new account. You can also log in using your Google, Facebook, or the suggested accounts.
 
-- Once you log in, you will be on the Vimeo's Home page. Hover over the **New Video** tab and click on the **Upload** button. Add the videos of your choice and proceed to create an app in Vimeo.
+- Once you log in, you will be on the Vimeo's Home page. Hover over the **New Video** tab and click on the **Upload** button. Add the videos of your choice and proceed to create an app in Vimeo.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltaf1dfcc16c89aad8/60ebffbd487cea2ee9e638b9/image.png)
 - Next, go to the [developer’s](https://developer.vimeo.com/) page and click on the **New app** button at the top right corner.
 - On the **Create a new app **page, fill in the mandatory details i.e. your **App name**, **App description**.
   You can decide if you want others to access your app besides you by selecting the appropriate option.
-- Select the terms of service checkbox and click on **Create App**.
+- Select the terms of service checkbox and click on **Create App**.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt08d9a376cbe3fe2a/60ec008d890eea276283ac51/image.png)
 - This will successfully create your app. Now open your newly created app and click on **Generate Access Token** under the **Authentication** section, from the left navigation panel.
 - Now, select the **Authenticated (you)** option and under the **Scopes** section select the **Private **option. Finally, click on the **Generate** button to get your access token as shown below.
 - Note down the access token, as you will need it while configuring this extension in Contentstack ( in [Step 3](#use-your-custom-field)).
-- **Additional Resource:** To learn more about access token in Vimeo refer the [documentation](https://developer.vimeo.com/api/guides/start#generate-access-token).
+- 
+
+  **Additional Resource:** To learn more about access token in Vimeo refer the [documentation](https://developer.vimeo.com/api/guides/start#generate-access-token).
 
 ## Add the Vimeo Custom Field Extension to Your Stack
 
@@ -59,8 +61,8 @@ For this extension, we have created the example code. If Extensions are part of 
 - **vimeo-popup**: Navigate to **vimeo-popup/build/index.html**, upload this file as an asset in your stack by referring to the [Create/Upload](../../content-managers/author-content/create-upload-assets.md) Assets guide. After uploading this file, make a note of the asset URL. To view the asset URL, open the asset and copy the File URL.
 - Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions **page, click on the **+ New Extension** button, and select **Create new**.![Vimeo_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0c84c4de0fc5c198/60be3a6f85c4c2118e31673f/Vimeo_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Vimeo_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1d781299bceda4e8/60be3a7885c4c2118e316743/Vimeo_2_highlighted.png)
 - On the **Create New Extension **page, enter values in the fields as given below:
   - **Title ***(required)*: Provide a suitable title, for example “Vimeo,” for your custom field. This title will be visible when you select the extension in the [**custom**](../create-content-types/custom.md) field in your content type.
   - **Field data type ***(required)*: Select the data type in which the input data of the field should be saved in Contentstack. In this case, select **JSON**.
@@ -88,12 +90,14 @@ Now, let’s understand how you can start using this custom field in your conten
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 - [Create a content type](../create-content-types/create-a-content-type.md) and add the [**Custom**](../create-content-types/custom.md) field to it.
-- Under **Select Extension**, select the “Vimeo” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “Vimeo” field that you created and set the other properties. You can add other fields as per requirements.![Vimeo_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt12e2130b8f236637/60be3a80d475801b9d54f080/Vimeo_3_highlighted.png)
 - Finally, click on either **Save **or** Save and Close** to save your changes.
 - Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Vimeo **field in action.
-- Click **Choose Video**. This will redirect you to a new page which displays a list of videos.
-- You can also choose the grid view for easy access. Select the videos you want to add and click on **Add Selected Videos**. The videos will be displayed in your custom field.
-- **Additional Resource: **You can also refer to our other documents on custom video extensions such as [YouTube](./youtube.md), [Brightcove](./brightcove.md), and [Ooyala](./ooyala.md).
+- Click **Choose Video**. This will redirect you to a new page which displays a list of videos.![Vimeo_4_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt644e434fb4670af6/60be3a891b32a31d5305b553/Vimeo_4_highlighted.png)
+- You can also choose the grid view for easy access. Select the videos you want to add and click on **Add Selected Videos**. The videos will be displayed in your custom field.![ezgif.com-gif-maker.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt7e42e8ea9ed9c43d/60ec05206554cc2ee3b44a45/ezgif.com-gif-maker.gif)
+- 
+
+  **Additional Resource: **You can also refer to our other documents on custom video extensions such as [YouTube](./youtube.md), [Brightcove](./brightcove.md), and [Ooyala](./ooyala.md).
 
 ## Common questions
 

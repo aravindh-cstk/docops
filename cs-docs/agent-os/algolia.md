@@ -27,9 +27,9 @@ To use the Algolia connector, you first need to add your [Algolia account](https
 
 - Click **Configure Action Step** from the left navigation panel.
 - Click **Action Step **to configure third-party services.
-- Within the Configure **Action **Step, click the **Algolia **connector.
-- Under **Choose an Action** tab, select any one action from the list. Here, we are selecting the **Index Entries **action.
-- On the **Configure Action **page, click the **+ Add New Account** to add your Contentstack account.
+- Within the Configure **Action **Step, click the **Algolia **connector.![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt624b713b8578611d/66a8d528c103442ffa06771d/Select_Connector.png)
+- Under **Choose an Action** tab, select any one action from the list. Here, we are selecting the **Index Entries **action.![Select_Index_Entries_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaeab97d4fac522df/66a8d528d141064461555da8/Select_Index_Entries_Action.png)
+- On the **Configure Action **page, click the **+ Add New Account** to add your Contentstack account.![Add_Account_Index_Entries.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt75b9d885f9de8602/66a8d5287cd4c96c183957e2/Add_Account_Index_Entries.png)
 - In the **Authorize** modal, enter a **Title**, an** Application ID**, and an **API Key**.To find your** Application ID **and **API Key**, log in to the Algolia dashboard and perform the following steps:
 
   **Additional Resource:** For more details, refer to the [Importing with API’s](https://www.algolia.com/doc/guides/sending-and-managing-data/send-and-update-your-data/how-to/importing-with-the-api/#quickstart) document.
@@ -47,7 +47,7 @@ Perform the following steps to set up the Algolia action connector:
 - Within the **Configure Action Step**, click the **Algolia **connector.
 
   **Note: **You can sort and search the connector(s) based on the filter.
-- Under **Choose an Action**, you will see three actions: **Delete Entries**, **Index Entries**, and **Update Entries**.
+- Under **Choose an Action**, you will see three actions: **Delete Entries**, **Index Entries**, and **Update Entries**.![Select_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6c354117a2253b30/66a8d5282b7be51b51a7677d/Select_Action.png)
 
 Once done, you can go ahead and set up your Algolia connector.
 
@@ -61,9 +61,9 @@ Once done, you can go ahead and set up your Algolia connector.
 
   **Note:** Provide your index data as per your object schema and in JSON format only. You can add a JSON object or an array of JSON objects.
 - Click **Proceed**.
-- Check if the details are correct. If yes, click **Test Action**.
-- Once set, click **Save and Exit**.
-- Go to the Algolia Index section and check the latest index entry with the data we passed as objects within the connector configurations.
+- Check if the details are correct. If yes, click **Test Action**.![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb92ada81e778cd84/66a8d528a3b12ed71a5f5e5a/Test_Action.png)
+- Once set, click **Save and Exit**.![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt983734c2797a9492/66a8d5287f0b670819fd1c23/Save_Exit.png)
+- Go to the Algolia Index section and check the latest index entry with the data we passed as objects within the connector configurations.![Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte7b80bbc7ff72565/66a8d74bd14106e075555dbb/Output.png)
 
 ### Action 2: Select the Delete Entries action:
 
@@ -75,8 +75,8 @@ Once done, you can go ahead and set up your Algolia connector.
 
   **Note: **You can add multiple object IDs separated by a comma to delete from the Algolia index.
 - Click **Proceed**.
-- Check if the details are correct. If yes, click **Test Action**.
-- Once set, click **Save and Exit**.
+- Check if the details are correct. If yes, click **Test Action**.![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte9fa7d5361656af3/66a8d508adec83715e2d0d3e/Test_Action.png)
+- Once set, click **Save and Exit**.![Save_Exit_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt131543f377ea05c4/66a8d509b3480c98ab14b344/Save_Exit_Button.png)
 
 ### Action 2: Select the Update Entries action:
 
@@ -88,9 +88,9 @@ Once done, you can go ahead and set up your Algolia connector.
 
   **Note: **Provide your index data as per your object schema and in JSON format only. You can add a JSON object or an array of JSON objects.
 - Click **Proceed**.
-- Check if the details are correct. If yes, click **Test Action**.
-- Once set, click **Save and Exit**.
-- To verify the output, go to the Algolia Index section and check the updated entry.
+- Check if the details are correct. If yes, click **Test Action**.![Test-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0e5e2bb34ee7efb6/66a8d535c3ff6a6ce609c90c/Test-Action.png)
+- Once set, click **Save and Exit**.![Save_Exit_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt91ca68ef81dd5e07/66a8d535cfbd23f7047d791c/Save_Exit_Button.png)
+- To verify the output, go to the Algolia Index section and check the updated entry.![Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6566200bade2f358/66a8d920eb20b447752cfafb/Output.png)
 
 This sets the **Algolia **action connector.
 

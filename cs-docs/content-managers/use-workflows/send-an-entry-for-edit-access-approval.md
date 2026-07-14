@@ -26,9 +26,9 @@ If a [stage access rule](../../developers/set-up-workflows-and-publish-rules/add
 To send your entry for edit access approval, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md), and open the entry.
 - On the entry page, click on **Request Edit Access** at the bottom of the page.  
-The **Request Edit Access** dialog box appears on screen.
+![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc471833c629409e9/60de100b9648f1650fe1a505/image.png)The **Request Edit Access** dialog box appears on screen.
 - Add comments for the approver in the **Add comments** box and click on **Send Request**.  
-The entry will be sent for edit access approval to the users with stage access rights.
+![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt97f1e65d7e1a42fd/60de104896b48063c70748a6/image.png)The entry will be sent for edit access approval to the users with stage access rights.
 
 Once an edit request has been sent, you will see the current status of the request (pending, approved, rejected) in the **Tasks** section.
 

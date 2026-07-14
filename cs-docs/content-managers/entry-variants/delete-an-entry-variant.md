@@ -23,9 +23,11 @@ Deleting an entry variant in Contentstack allows you to remove specific personal
 
 To delete an entry variant, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
 - Navigate to the desired [stack](../../developers/set-up-stack/about-stack.md), then click the **Entries **icon in the left navigation panel and select an existing entry variant.
-- Click the horizontal ellipsis at the bottom of the entry editor and click the **Delete **button.
+- Click the horizontal ellipsis at the bottom of the entry editor and click the **Delete **button.![1-Delete Entry Variant.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltecc2544cf6e2c45e/66fa8ff89f5a86f0b225bc3b/1-Delete_Entry_Variant.png)
 - In the **Delete Entry Variant** modal that appears, under **Select Language(s)**, select the locale(s) in which you want to delete the entry.
-- Confirm by clicking the **Delete **button.**Note: **Once deleted, you cannot recover the entry variant.
+- Confirm by clicking the **Delete **button.![2-Delete Entry Variant Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt96b5edcf966c5f4e/66fa8ff8c79828b82b8f2e93/2-Delete_Entry_Variant_Modal.png)
+
+  **Note: **Once deleted, you cannot recover the entry variant.
 
 By following these steps, you can efficiently delete entry variants in Contentstack, helping maintain the relevancy and accuracy of your content.
 

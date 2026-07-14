@@ -58,7 +58,9 @@ To generate a permanent URL for an asset:
 - Select the asset.
 - In the right-hand panel, click the “Non-Editable Metadata” icon.
 - The **System Metadata** section displays all system-managed fields. Click the “Generate permanent URL” icon.
-- Enter a slug for the permanent URL that describes the asset meaningfully.**Note:** The maximum slug length is **255 characters**.
+- Enter a slug for the permanent URL that describes the asset meaningfully.
+
+  **Note:** The maximum slug length is **255 characters**.
 - Click **Save Asset** to generate the permanent URL.
 
 The permanent URL becomes active immediately and can be used in entries, APIs, or external systems.

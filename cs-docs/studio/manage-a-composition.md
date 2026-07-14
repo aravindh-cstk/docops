@@ -225,9 +225,13 @@ To edit a composition’s metadata, open your Studio project and perform the fol
 - In the **Edit Composition** modal, update the required fields:**Name**: Update the composition’s display name.
 - **Content Type** (only visible for linked compositions): Choose or update the content type this composition is connected to.
 - **URL Slug** (only visible for linked compositions): Define the URL structure for this composition. You can use wildcards for dynamic routing (e.g., `/blog/*`).
-- **URL Path** (only visible for freeform compositions): Define the URL path for this composition.**Note:** The UID of a composition cannot be edited.
+- **URL Path** (only visible for freeform compositions): Define the URL path for this composition.
+
+  **Note:** The UID of a composition cannot be edited.
 - To change the composition type, expand **Advanced Options**:If you are editing a **linked composition**, you can see an option to convert it to a freeform composition.
-- If you are editing a **freeform composition**, you can see the option to convert it to a linked composition by connecting it to a content type.**Note:** Converting between modes affects how the composition binds to entries. A linked composition binds to a single content type. A freeform composition can be reused across multiple content types.
+- If you are editing a **freeform composition**, you can see the option to convert it to a linked composition by connecting it to a content type.
+
+  **Note:** Converting between modes affects how the composition binds to entries. A linked composition binds to a single content type. A freeform composition can be reused across multiple content types.
 - Click **Save** to confirm your changes.
 
 **Tip:**

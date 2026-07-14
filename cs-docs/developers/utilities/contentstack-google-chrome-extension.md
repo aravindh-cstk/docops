@@ -51,7 +51,7 @@ In the above example,
 
 **Note**: This is a one-time activity when you add a new domain or an API key.
 
-- The **Edit** button will now be visible on your Contentstack-powered web pages.
+- The **Edit** button will now be visible on your Contentstack-powered web pages.![quick edit button.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt4b36c9c21db0c9f7/5ed4c3094d187c101f3f330f/qucik_edit_button.png)
 - Clicking on this button will take you to its corresponding entry page in Contentstack.
 
 If you want to use this extension on other stacks, you can click on the **Extension** icon as shown below. Then, you need to click on **+ Add Stack** after that provide the details of your stack (API Key) and your domain just like you did in the previous step.

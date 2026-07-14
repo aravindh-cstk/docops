@@ -24,11 +24,11 @@ To edit a Global field, log in to your [Contentstack account](https://www.conten
 
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to edit a Global field.
 - Click the **Content Models** icon in the left navigation panel and select **Global Fields** in the left panel.
-- Locate the Global field you want to edit. Click the vertical ellipsis in the **Actions** column next to it and select **Edit**.
+- Locate the Global field you want to edit. Click the vertical ellipsis in the **Actions** column next to it and select **Edit**.![Edit global field option in actions menu](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb830fd70d0b5a3d9/67ff94d595f40fb6bc992771/3._edit_a_global_field.png)
 - Modify the **Name** or **Description** as needed.
 - To edit the fields inside the Global field, click its title.
 - Make the necessary changes to the Global field schema.  
-  **Note**: Changing or removing a field in a Global field increases the version number of all entries where the Global field is used.
+  **Note**: Changing or removing a field in a Global field increases the version number of all entries where the Global field is used.![Edit global field tiles](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt94e291ce4c15d7a0/680a233f2835f92c42ad9c28/2-edit-global-field-title.gif)
 - Click **Save** or **Save and Close** to apply the changes.
 
 **Warning**:

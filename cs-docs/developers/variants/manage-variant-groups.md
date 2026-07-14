@@ -45,7 +45,7 @@ The following information is available for each variant group:
 - **Linked With**: Indicates whether the group is linked to Personalize or unlinked meaning created within the stack.
 - **Variants**: The variants available within the group.
 - **Linked Content Types**: The content types associated with the variant group.
-- **Modified At**: Displays the date, time, and user who last modified the group
+- **Modified At**: Displays the date, time, and user who last modified the group![Accessing_Variant_Groups.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0510c5c2e9b08190/69bda2c850ca69fc19d4075a/Accessing_Variant_Groups.png)
 
 ## Create a Variant Group within the Stack
 

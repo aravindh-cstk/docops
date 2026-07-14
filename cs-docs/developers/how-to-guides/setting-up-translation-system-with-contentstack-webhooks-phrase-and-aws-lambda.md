@@ -65,7 +65,7 @@ Once the editor changes the workflow stage to **Send to Translation**, the webho
 We will need the workflow stage UID which we will enter when we set up our Lambda Function. This UID will instruct Lambda to change the workflow stage when the content is translated to **Review**.
 
 So proceed as follows to get the **Review **stage UID:
-- Once you have created the workflow, it will show up like this:
+- Once you have created the workflow, it will show up like this:![Setting_up_Translation_System_with_Contentstack_Webhooks_Memsource_1_highlighted](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt64e8d854411acf73/60c1ae0236617c1194b6dbe3/Setting_up_Translation_System_with_Contentstack_Webhooks_Memsource_1_highlighted.png)
 - Open Postman or any other API collaboration & development platform and make a GET request on any of the following URL. Enter the Workflow ID (highlighted above) at the end of the URL:
 *https://api.contentstack.io/v3/workflows/{YOUR WORKFLOW UID}*
 **Note**: For Europe region, the baseURL should be changed to `https://eu-api.contentstack.com` from `https://api.contentstack.io`. Similarly, for Azure NA region, change it to `https://azure-na-api.contentstack.com`, and for Azure EU region, change it to `https://azure-eu-api.contentstack.com`.
@@ -80,7 +80,7 @@ Sign up with [Phrase](https://www.phrase.com/pricing/).
 - You can choose from the different plans they offer. For now, click on Free Trial at the top right side of the screen.
 
 **Note**: Avoid selecting the personal plan as it doesn't provide any arrangement for making API calls.
-- On the **Sign Up** page, keep the settings as shown in the screenshot below and click on **Sign Up with Email**:
+- On the **Sign Up** page, keep the settings as shown in the screenshot below and click on **Sign Up with Email**:![Phrase_Signup](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt089590b54ea462fd/646bccf11fffbf490a9b5e72/Phrase-Signup.png)
 - On the next screen, enter your email, username, and password and click on **Sign Up**.
 
 With this, we have created an account in Phrase. Let's move ahead and create the Lambda function
@@ -122,7 +122,7 @@ To create and [set up a webhook](../set-up-webhooks/create-a-webhook.md) in Cont
 Click the “Settings” icon (press “S”) on the left navigation panel and click on **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS).
 - Click on **+ New Webhook**.
 - On the **Create Webhook **page, fill up the **Name **field (for example, “Translation”). In the **URL to notify field**, enter the URL that you generated when you deployed your APIs, in the previous step.
-- Scroll down to the **Conditional View **section for creating a trigger for the webhook as shown below:
+- Scroll down to the **Conditional View **section for creating a trigger for the webhook as shown below:![Setting_up_Translation_System_with_Contentstack_Webhooks_Memsource_2_no_highlight](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte0fc870948322514/60c1ae18d475801b9d550085/Setting_up_Translation_System_with_Contentstack_Webhooks_Memsource_2_no_highlight.png)
 - Once done, click **Save **to save your settings.
 
 With this, we have set up the webhooks for triggering notifications.
@@ -130,7 +130,7 @@ With this, we have set up the webhooks for triggering notifications.
 We are now ready to test the setup.
 
 Go to your **English (en-us**) entry and change the workflow stage by selecting **Send to Translation** from the **WORKFLOW DETAILS** section on the right.
-- Now select **Japanese **from the locale drop-down and you should see your entry translated in the target language, Japanese, and the workflow stage changed to **Review**.
+- Now select **Japanese **from the locale drop-down and you should see your entry translated in the target language, Japanese, and the workflow stage changed to **Review**.![Setting_up_Translation_System_with_Contentstack_Webhooks_Memsource_3_no_highlight](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt94cec2cd83ae790b/60dcc2004763af56bad5bc01/Setting_up_Translation_System_with_Contentstack_Webhooks_Memsource_3_no_highlight.gif)
 
 **Tip**: If you still cannot see your entry translated in Japanese, just hard refresh the page (Ctrl+Shift+R).
 

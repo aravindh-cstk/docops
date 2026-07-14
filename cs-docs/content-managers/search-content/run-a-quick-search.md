@@ -21,7 +21,7 @@ Consider a scenario where you are looking to quickly bring up all the entries th
 
 Perform the following steps:
 - Navigate to the search bar (or press “**K**”)  located on the header tab of the Contentstack site. You can also use the shortcut key “K” for both Windows OS and Mac OS users to access search.
-- Select the **Entries** option from the left-hand side drop-down menu, based on your requirement.
+- Select the **Entries** option from the left-hand side drop-down menu, based on your requirement.![Image-Entries-Search.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt58e16657295acd86/639b2fda2e75dc108bf88d82/Image-Entries-Search.jpg)
 - Type in the keywords “John Smith” and press **Enter**.
 
 The system will display all the entries of your stack that contain the term “**John Smith**”.

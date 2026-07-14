@@ -39,8 +39,8 @@ Follow the steps given below to host a static site on Launch.
 - Click the **+ New Project** button.
 - To host a static site project, select [Import from a Git Repository](./import-project-using-github.md) or [Upload a file](./import-project-using-file-upload.md) as usual from the **Create New Project** modal.
 - In the **Build and Output Settings**, leave the `Build Command` field blank.
-When a `Build Command` is not passed while creating a project or an environment, Launch assumes it as a static type and skips the build step.
-- Click the **Deploy** button.
+When a `Build Command` is not passed while creating a project or an environment, Launch assumes it as a static type and skips the build step.![Launch_Other_Framework_CreateModal_HostStaticSite.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4b903bc3ab73c56b/6628d740ac4b008938c42caa/Launch_Other_Framework_CreateModal_HostStaticSite.png)
+- Click the **Deploy** button.![Launch_Static_Site.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf95c3c53ed156500/6605002f407aec6c2a6c39a8/Launch_Static_Site.png)
 
 With these steps, you have successfully deployed and hosted a static site on Launch.
 
@@ -59,8 +59,10 @@ Follow the steps given below to host an SSG site on Launch.
 - [Log in to your Contentstack account](https://www.contentstack.com/login/) and click **Launch** from the dashboard.
 - Click the **+ New Project** button.
 - To host an SSG site, select [Import from a Git Repository](./import-project-using-github.md) or [Upload a file](./import-project-using-file-upload.md) from the **Create New Project** modal as usual.
-- In the **Build and Output Settings**, enter the `Build Command` field to build your site.**Note: **Find the `Build Command` by going through your relevant framework documentation. Be sure to choose the build command suitable for deploying to production.
-- Click the **Deploy** button.
+- In the **Build and Output Settings**, enter the `Build Command` field to build your site.
+
+  **Note: **Find the `Build Command` by going through your relevant framework documentation. Be sure to choose the build command suitable for deploying to production.
+- Click the **Deploy** button.![Launch_OtherFramework_SSGSite.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt83f6ed2834cc9729/66278f24b05441364199ef64/Launch_OtherFramework_SSGSite.png)
 
 With these steps, you have successfully deployed and hosted an SSG site on Launch.
 
@@ -89,8 +91,12 @@ Follow the steps given below to host an SSR site on Launch:
 - Select [Import from a Git Repository](./import-project-using-github.md) or [Upload a file](./import-project-using-file-upload.md) as usual from the Create New Project modal.
 - In the **Create New Project** modal, add the following details:
 
-**Repository** (Mandatory): Select the repo that contains the app that you want to deploy.**Note:** When you select the repo, the **Build and Output Settings** section gets auto-populated.
-- **Git Branch **(Mandatory): By default, `master` or `main` is selected as the branch. You can choose another branch from the dropdown.**Note:** This field will be displayed only if you choose [Import from a Git Repository](./import-project-using-github.md) to deploy your project.
+**Repository** (Mandatory): Select the repo that contains the app that you want to deploy.
+
+**Note:** When you select the repo, the **Build and Output Settings** section gets auto-populated.
+- **Git Branch **(Mandatory): By default, `master` or `main` is selected as the branch. You can choose another branch from the dropdown.
+
+  **Note:** This field will be displayed only if you choose [Import from a Git Repository](./import-project-using-github.md) to deploy your project.
 - **Project Name** (Mandatory): Gets auto-populated on selecting the repository. You can edit it as per your requirement.
 - **Environment Name** (Mandatory): Enter the name of the environment.
 - **Build and Output Settings** (Mandatory): The fields in this section get auto-populated based on the selected framework, as discussed above. Update the fields to the following:**Framework Preset** (Mandatory): Select **Other** as the framework from the dropdown.
@@ -98,7 +104,9 @@ Follow the steps given below to host an SSR site on Launch:
 For example, `npm run build`.
 - **Output Directory** (Mandatory): Enter a directory path to store the project’s build output files. For example, `./build`.
 - **Server Command** (Mandatory): A command required to start the SSR server.
-For example, `npm run start`.**Note:** This is the same command you would use locally to start a production-ready server. Please ensure you do not use a command that starts the framework in developer mode, as this will impact its performance.
+For example, `npm run start`.
+
+  **Note:** This is the same command you would use locally to start a production-ready server. Please ensure you do not use a command that starts the framework in developer mode, as this will impact its performance.
 
 **Note:** Launch expects the framework to use the environment variable `PORT` for determining the port on which the server should start.
 - **Environment Variables** (Optional):Enter the key and value of one or more environment variables.

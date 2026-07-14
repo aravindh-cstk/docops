@@ -67,7 +67,7 @@ In this section, we will import four content types - “Dishes,” “Header,”
 - Download and extract this [.zip file](https://assets.contentstack.io/v3/assets/bltb07d61d76cca54b3/bltb306b4d973df13f0/Stack%20Data.zip) that contains folders with the required **Assets** (images) and **Content Types** (JSON files) for this application.
 - Go to your stack where you want to create a content type, and click on the “Content Models” icon on the left navigation panel (or press “C”).
 - Click on the **Import Content Type** button.
-- In the **Import Content Type** modal,** **click on the **Choose a file **button and select the dishes.json file under the **Dishes** folder from the downloaded file.
+- In the **Import Content Type** modal,** **click on the **Choose a file **button and select the dishes.json file under the **Dishes** folder from the downloaded file.![04. Select the dishes.json file under the Dishes folder.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2205cb13142099b6/66a349028cc80a2dd3a944ba/4._Select_the_dishes.json_file_under_the_Dishes_folder.png)
 - Once your file is selected, click on **Import** and the Content Type is Imported into your stack.
 - Similarly, import the other Content Types namely **Header**, **Footer**, and **Page** in the same order.
 
@@ -98,10 +98,10 @@ Let’s start creating the entries for the Header, Footer, and Page Content Type
 #### Create Entries for the “Header” Content Type
 To create an entry, perform the following steps:
 - Click on the “Entries” icon (press “E”) on the left navigation panel.
-- Click on the **+ New Entry** button on the top, select the content type (in our case, **Header**), and click on **Proceed**.
+- Click on the **+ New Entry** button on the top, select the content type (in our case, **Header**), and click on **Proceed**.![08. Select the Header Content Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6d0609d36c622566/66a3469a9cd6fd6c03f25792/8._Select_the_Header_Content_Type.png)
 - Within the Entry Editor page, enter/select the following content against the respective fields:**Title**: Enter “Header.”
 - **Logo** : To upload the logo, perform the following set of actions:Click on **Upload a new file**.
-- Click on **Choose files **and select the desired asset file (in our case, select the Assets/Header/Header Logo.png), then click on **Open**.
+- Click on **Choose files **and select the desired asset file (in our case, select the Assets/Header/Header Logo.png), then click on **Open**.![10. Select the Header Logo file.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1488e33669bd5387/66a3469a7749f51f323b2236/10._Select_the_Header_Logo_file.png)
 
 This uploads and successfully adds the asset uploaded into your entry.
 
@@ -115,8 +115,10 @@ Instance 1: (**Title**: Home, **URL**: /)
 - Instance 3: (**Title**: About us, **URL**: /about-us)
 - Instance 4: (**Title**: Contact, **URL**: /contact)
 - After successfully entering the details of the entry, click on **Publish**.
-- Select the **development** environment and click on **Send**.
-- You need to publish this entry along with its references, i.e., the Asset file. So, click on **Send With References.****Note:** By clicking on **Send with References**, you can publish all referenced entries along with their parent entry, all at once. For more information, you can read our guides on [publishing referenced entries](../../content-managers/author-content/publish-an-entry.md#publish-referenced-entries) and [publishing nested references](../../content-managers/author-content/publish-an-entry.md#publish-entries-with-nested-references).
+- Select the **development** environment and click on **Send**.![12. Select development and click on Send.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0623248d39d3ed20/66a346a84e822dcc820e4c62/12._Select_development_and_click_on_Send.png)
+- You need to publish this entry along with its references, i.e., the Asset file. So, click on **Send With References.**![13. Click on Send with References to publish all referenced entries.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt762b4cec4ffa948a/66a346a94252d519acebb14e/13._Click_on_Send_with_References_to_publish_all_referenced_entries.png)
+
+  **Note:** By clicking on **Send with References**, you can publish all referenced entries along with their parent entry, all at once. For more information, you can read our guides on [publishing referenced entries](../../content-managers/author-content/publish-an-entry.md#publish-referenced-entries) and [publishing nested references](../../content-managers/author-content/publish-an-entry.md#publish-entries-with-nested-references).
 
 #### Create Entries for the “Footer” Content Type
 Similarly, to create an entry for the “Footer” content type, you need to follow the same process as performed in **step 2** of the [Create Entries for the “Header” Content Type](#create-entries-for-the-header-content-type) section.
@@ -172,10 +174,12 @@ Let’s look at each of the steps in detail.
 ### Fork the Starter App Repository
 To fork the GitHub repository of the starter app into your account, perform the following set of steps:
 - Login to [Github](https://github.com/), and visit the [GitHub repository](https://github.com/contentstack/contentstack-getting-started-react-app) of the starter React app.
-- Click on the **Fork** button (highlighted in the below screenshot).
-- Ensure to uncheck the **Copy the main branch only** checkbox and click on **Create fork**.The repository is now forked, and you should see it in your personal GitHub account.
+- Click on the **Fork** button (highlighted in the below screenshot).![19. Click on the Fork button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7ff0745dbf4801e1/66a34ce0cc9175c19d2ee335/19._Click_on_the_Fork_button.png)
+- Ensure to uncheck the **Copy the main branch only** checkbox and click on **Create fork**.![20. Uncheck Copy the main branch only checkbox and click on Create fork.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8d0eb6d956bf4287/66a34ce04e822d227e0e4c9a/20._Uncheck_Copy_the_main_branch_only_checkbox_and_click_on_Create_fork.png)The repository is now forked, and you should see it in your personal GitHub account.
 - Now, open **VS code** and click on **Open Folder** select **Open** from the **File** menu, or simply press. You can also use shortcut key *command* + *O* (Mac OS) or *ctrl* + *O* (Windows).
-- In the “Open” dialog box, choose the directory (in our case, `contentstack-react`) to clone the repository. And click on **Open**.**Note:** The directory name can be anything of your choice.
+- In the “Open” dialog box, choose the directory (in our case, `contentstack-react`) to clone the repository. And click on **Open**.
+
+  **Note:** The directory name can be anything of your choice.![21. Open the directory.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt87bebbe3f4a75bea/66a346b91b1b452c97eec480/21._Open_the_directory.png)
 - Open a new terminal (Press *control* + *shift* + *`* or click on **Terminal** > **New Terminal**) and run the below command to clone your forked repository:
 ```
 git clone https://github.com/your-username/your-repo-name.git
@@ -226,10 +230,12 @@ Congratulations! You've successfully run the starter application in your local m
 To deploy your app using Launch, you need to first [create a project in Launch and link your GitHub repository](../launch/import-project-using-github.md#connect-your-github-account-to-launch-and-deploy-a-project) to it.
 
 To do so, perform the following set of steps:
-- Go to [Launch](https://app.contentstack.com/#!/launch) and click on **+ New Project** and select **Import from a Git Repository**.**Note:** Connecting your Git repository with Launch provides various benefits like easy tracking and auto deployment.
+- Go to [Launch](https://app.contentstack.com/#!/launch) and click on **+ New Project** and select **Import from a Git Repository**.
+
+  **Note:** Connecting your Git repository with Launch provides various benefits like easy tracking and auto deployment.
 - Click on **Connect Account** and enter login credentials of your GitHub account.
 - Select **Only select repositories** and then on **Save**.
-- In the **Install & Authorize** Contentstack Launch modal, select the `contentstack-getting-started-react-app` repository from the dropdown menu and then on **Install & Authorize.**
+- In the **Install & Authorize** Contentstack Launch modal, select the `contentstack-getting-started-react-app` repository from the dropdown menu and then on **Install & Authorize.**![23. Install & Authorize Contentstack Launch.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltce2a9fa802ac0fb5/66a346bacc917516762ee2df/23._Install_&_Authorize_Contentstack_Launch.png)
 - You will be redirected to Contentstack Launch with the **Create New Project** pop up open. Enter the following details:**Repository**: Select the `**contentstack-getting-started-react-app**` repository from dropdown menu
 - **Git Branch**: Select **main**
 - **Project Name**: Enter “contentstack-getting-started-react-app”
@@ -248,7 +254,7 @@ This is how your details will look like:
 Once done, you will be redirected to the **Deployment Information** page as follows:
 
 Once the deployment is complete, you will be able to see the snapshot of the application as follows:
-- Click on the URL displayed on the page. You will be redirected to the application deployed using Launch.
+- Click on the URL displayed on the page. You will be redirected to the application deployed using Launch.![28. Redirected to application deployed using Launch.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb3d5ec1b15a09798/66a346bc9625011f7fb51fbf/28._Redirected_to_application_deployed_using_Launch.png)
 
 Congratulations! You have successfully connected your Github repository with Launch and deployed your application. Your application is live and it can be viewed anywhere with the generated URL.
 

@@ -29,12 +29,14 @@ To update a workflow in your stack, log in to your [Contentstack account](https:
 - Add or remove **branch(es)**
 - Select or deselect **content types**
 - Add, edit, or delete **workflow stages**
-- To edit a workflow stage, click the **Edit** icon next to the stage name and make changes as needed.
+- To edit a workflow stage, click the **Edit** icon next to the stage name and make changes as needed.![edit_a_workflow_stage.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4225e0ab377b3e2a/69090838aad66483a5e34b1b/edit_a_workflow_stage.png)
 - Within the **Stage Transition and Access Rules** section, you can enable the **Prevent self-advancement** toggle to ensure independent review and compliance:The user who moved an entry into the current stage cannot move it to the next stage.
 - At least two distinct users or a multi-member role must have permission to advance the entry.
 - If only one user or a single-member role is assigned, a validation message prompts you to add additional approvers.
-**Tip:** Enable **Prevent self-advancement** for sensitive or compliance-driven workflows to maintain editorial accountability.
-- To remove a workflow stage, click the **Delete** icon.**Note:** Deleting a stage permanently removes it from the workflow. If any entries are currently in that stage, they will **no longer be associated with a workflow stage** after deletion. You may need to manually move or reassign those entries to another stage to maintain continuity in your workflow process.
+![Set_Permissions_and_Prevent_Self-Advancement.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt427bf66ff9a7c92e/690906bf531ab077e4281aee/Set_Permissions_and_Prevent_Self-Advancement.png)**Tip:** Enable **Prevent self-advancement** for sensitive or compliance-driven workflows to maintain editorial accountability.
+- To remove a workflow stage, click the **Delete** icon.![remove_a_workflow_stage.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt39a02274900bb88d/690908690570b239b699abd0/remove_a_workflow_stage.png)
+
+  **Note:** Deleting a stage permanently removes it from the workflow. If any entries are currently in that stage, they will **no longer be associated with a workflow stage** after deletion. You may need to manually move or reassign those entries to another stage to maintain continuity in your workflow process.
 - Click **Save** to apply your updates.
 
 The updated workflow settings automatically apply to entries associated with the relevant content types.

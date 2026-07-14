@@ -28,9 +28,9 @@ The fastest way to get started with Launch is to clone and deploy a [sample Sten
 Follow the steps given below to deploy your first Launch project using GitHub:
 
 **Note:** Only the Organization [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) has the right to create projects in a stack for Launch.
-- [Log in to Contentstack](https://www.contentstack.com/login/) and click the **Launch** icon from the dashboard, as shown below:
-Alternatively, go to the **App Switcher** in the top panel and click the **Launch** icon.
-- On the **Launch Projects** screen, click the **+ New Project** button to initiate the project creation process.
+- [Log in to Contentstack](https://www.contentstack.com/login/) and click the **Launch** icon from the dashboard, as shown below:![Launch_2026_Landing_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt93cb437e9760884e/69647cf52269f8000829f814/Launch_2026_Landing_Page.png)
+Alternatively, go to the **App Switcher** in the top panel and click the **Launch** icon.![AppSwitcher_Launch.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c5085453e429d79/69ce4df3267d5e026d79f448/AppSwitcher_Launch.png)
+- On the **Launch Projects** screen, click the **+ New Project** button to initiate the project creation process.![Launch_Projects_Landing_Page_2026.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt21093a02592b00ef/69afdb45afcf450008d243b2/Launch_Projects_Landing_Page_2026.png)
 - From the **Create New Project** modal, click **Import from a Git Repository**.
 
     **Note:** You can also choose to [upload a .zip file to import a project](./import-project-using-file-upload.md).
@@ -40,7 +40,7 @@ Alternatively, go to the **App Switcher** in the top panel and click the **Launc
     A Sign in to GitHub screen pops up. Enter your credentials and log in to your GitHub account.
 
     **Note:** We have assumed that you have a GitHub account and your website code stored in the repository.
-- Enter your credentials and log in.
+- Enter your credentials and log in.![Launch-Sign-In](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt27acfd69a831865a/64365e5a74d71410bfac5229/Launch-Sign-In.png)
 - In the **Repository access** section, select **All repositories**.
 
     **Note:** If you want to choose specific repositories, select the **Only select repositories** option and choose the required repository.
@@ -54,7 +54,7 @@ Alternatively, go to the **App Switcher** in the top panel and click the **Launc
       **Repository** (Mandatory): Select the Git repository. In our example, we have selected the **Stencil Starter App** repository.
 - **Git Branch **(Mandatory): By default, `master` or `main` is selected as the branch. You can choose another branch from the dropdown.
 - **Project Name** (Mandatory): Gets auto-populated on selecting the repository. You can edit it as per your requirement.
-- **Environment Name** (Mandatory): Enter the name of the environment.
+- **Environment Name** (Mandatory): Enter the name of the environment.![Launch_Create_Project1_CSR.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt31b2a44cbb0812fd/69f2bb3d47d404a349ad4451/Launch_Create_Project1_CSR.png)
 - **Build and Output Settings** (Mandatory):
           **Framework Preset**: Select **CSR (Client-Side Rendered)** as the framework.
 - **Build Command**: Enter **npm run build** as the Build Command.
@@ -77,7 +77,7 @@ CONTENTSTACK_ENVIRONMENT=
 ```
 
         **Note:** Click **Back **to revert the changes and re-enter details.
-- Once ready, click **Deploy **to save and deploy the project.As soon as the deployment starts, you will see the **Deploying **status as shown in the following screenshot:
+- Once ready, click **Deploy **to save and deploy the project.As soon as the deployment starts, you will see the **Deploying **status as shown in the following screenshot:![Launch_Generic-CSR_Deploying_CancelFeature.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc92f1a6d254ceea5/69dc7ac39a81bd26cd2dbfb4/Launch_Generic-CSR_Deploying_CancelFeature.png)
 
 Upon successful deployment, you will see the following screen. You can preview the deployed website by clicking the icon next to the URL in the **Domains** section:
 

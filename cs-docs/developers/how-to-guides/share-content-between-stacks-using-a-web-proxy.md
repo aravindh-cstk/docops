@@ -98,7 +98,7 @@ Now that your stacks are ready with the content types and the respective entries
 Open the downloaded code in any appropriate code editor application.
 
 - Open the command prompt and move inside the project root directory. Then, run the command npm install to install the required dependencies.
-- After installing the dependencies for your code, navigate to the **.env** file.
+- After installing the dependencies for your code, navigate to the **.env** file.![env_preview.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltdfb6ea8fb437341d/6388d0f883315b288791520e/env_preview.jpg)
 - Mention the required details for Stack A:**Port****Proxy URL:**
   North America:`https://api.contentstack.io/`
 

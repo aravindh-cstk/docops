@@ -35,16 +35,16 @@ By prioritizing your experiences, you can enhance user engagement and deliver mo
 **Note:** For this guide, we have assumed that you have already created a Personalize project. If not, please follow [this guide](./create-personalize-project.md) and create a project in Personalize.
 
 For this guide, we are using the following example on your travel website with two experiences:
-- **Segmented Experience A (Rewards Program):** "70% off for Reward Members! Earn Points on Every Booking!". This is the experience which displays a personalized variant to the users who are part of the Reward Members Program.
-- **A/B Test Experience B (Headline Tests):** "Unleash Your Adventurous Spirit Explore Exotic Destinations!". This is the A/B test experience which displays variations to all users who are not part of the Reward Members Program with two different headlines.
+- **Segmented Experience A (Rewards Program):** "70% off for Reward Members! Earn Points on Every Booking!". This is the experience which displays a personalized variant to the users who are part of the Reward Members Program.![1_Prioritize_Experiences_-_Experience_A.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt12135883b88e9213/67124f84bd20af098059ddee/1_Prioritize_Experiences_-_Experience_A.png)
+- **A/B Test Experience B (Headline Tests):** "Unleash Your Adventurous Spirit Explore Exotic Destinations!". This is the A/B test experience which displays variations to all users who are not part of the Reward Members Program with two different headlines.![2_Prioritize_Experiences_-_Experience_B.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta6d2da69dd66fe7d/67124fe175ad1735fa461fb2/2_Prioritize_Experiences_-_Experience_B.png)
 
 To maximize engagement during a promotional campaign, you prioritize **Experience A**. When activated, **Experience A** is displayed first, promoting the rewards program while still attracting adventure seekers, effectively boosting user interest and engagement.
 
 To prioritize experiences, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher **icon and then click **Personalize**.
 - You will be redirected to the **Personalize Projects** landing page. Select the project where you want to reorder and prioritize experiences.
-- On the **Experiences** page, click the **Prioritize Experiences** button.
-- In the **Prioritize Experiences** sidebar, drag and drop the experiences to reorder their priorities.
+- On the **Experiences** page, click the **Prioritize Experiences** button.![Exp_view_img.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7993fe36175ca339/68cba7484b32b447cc0d3607/Exp_view_img.png)
+- In the **Prioritize Experiences** sidebar, drag and drop the experiences to reorder their priorities.![Priorotize_experiences.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt79fef717a5c719b5/68cba95f48d330c80b41c1e2/Priorotize_experiences.gif)
 - Click the **Save** button to save the order of the experiences' priorities.
 
 After saving the changes, the experiences are automatically reordered on the **Experiences** listing page and prioritized when they are activated on your site.

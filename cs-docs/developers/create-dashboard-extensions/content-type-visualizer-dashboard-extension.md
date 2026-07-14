@@ -39,7 +39,7 @@ To add the Content Type Visualizer Dashboard Extension, log in to your [Contents
 
 Go to your stack and click the “Settings**”** icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- Click on the **+ New Extension** button on the top and select **Create new**.
+- Click on the **+ New Extension** button on the top and select **Create new**.![Content_Type_Visualizer_Dashboard_Widget_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltd9c2869b34ad7018/60b91266a8cd6a0a26e29753/Content_Type_Visualizer_Dashboard_Widget_1_highlighted.png)
 - On the **Select Extension Type** page, select **Dashboard Extension**. You will be directed to the **Create New Dashboard** page, where you need to enter details in the fields as given below:
 
   **Title**: Provide a suitable title, for example, Content Type Visualization.

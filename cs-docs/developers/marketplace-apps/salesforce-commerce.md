@@ -39,13 +39,13 @@ Follow this step-by-step guide to install and configure the Salesforce Commerce 
 ### Get API Client ID
 To retrieve the API client ID, login in to Commerce Cloud Account Manager, and follow the steps given below:
 
-Click **API Client** from the menu.
-- Click the **Add API Client** button.
+Click **API Client** from the menu.![Salesforce-Commerce-API-Client](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt0ad0cdce04803f28/62e26a2a5c954177895abf99/SFCC-API_Client.png)
+- Click the **Add API Client** button.![Salesforce-Commerce-Add-API-Client](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb528bc27ba5d912a/62e26a2819ee366ebba55b4d/SFCC-Add_API_Client.png)
 - Provide the following details for the new API client:Enter a **Display Name** and set a **Password**.
 - Add an organization.Click the **Add** button for Organizations.
-- Select your organization and click the **Add** button.
+- Select your organization and click the **Add** button.![Salesforce-Assign-Organization-Add](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltdbbe88b652481762/62e26a2919ee366ebba55b51/SFCC-Assign_Organization-Add.png)
 - Add roles.Click the **Add** button for Roles.
-- Select the required roles and click the **Add** button.
+- Select the required roles and click the **Add** button.![Salesforce-Commerce-Assign-Roles-Add](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltd4e7e0a2e51c4f7f/62e26a2a552d0a1146320cee/SFCC-Assign_Roles-Add.png)
 - Add scopes under OpenID Connect.Enter the following scopes in **Default Scopes**:
 
 ```
@@ -80,15 +80,17 @@ sfcc.shopper-productlists
 ```
 
 **Note**: By default, you will see the scope **mail** in the **Default Scopes**.
-- Select **client_secret_post** as the **Token Endpoint Auth Method**.
+- Select **client_secret_post** as the **Token Endpoint Auth Method**.![Salesforce-Commerce-Client-Secret-Post](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltaa94914b21371832/62e26a2912f4cd75109ded73/SFCC-client-secret-post.png)
 - Click the **Save** button. You can see your API client ID in the **Account Manager** screen.
-- Copy the **API client ID** to use in the **Client ID** field during app configuration in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace).
+- Copy the **API client ID** to use in the **Client ID** field during app configuration in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace).![Salesforce-Commerce-API-Client-Displayed](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltbbc4cea4a960fb53/62e26a2a7e18987096ab765f/SFCC-API_Client-Displayed.png)
 
 ### Get Short Code, Organization ID, and Site ID
 To get the **Short Code**, **Organization ID**, and **Site ID**, follow the steps given below:
-- Log in to Business Manager using the Account Manager credentials.**Note:** Contact the Salesforce support team to get the Business Manager account link.
-- Navigate to **Administration**, go to **Site Development**, and click **Salesforce Commerce API Settings**. You can copy the **Short Code** and **Organization ID** to use in app configuration in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace).
-- Navigate to **Administration** and click **Manage Sites**. Note down the required **Site ID** from the list or create a new one to use during app configuration in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace).
+- Log in to Business Manager using the Account Manager credentials.
+
+  **Note:** Contact the Salesforce support team to get the Business Manager account link.
+- Navigate to **Administration**, go to **Site Development**, and click **Salesforce Commerce API Settings**. You can copy the **Short Code** and **Organization ID** to use in app configuration in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace).![Salesforce-Commerce-Credentials-Short-Code-And-Org-ID](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8932fa3f7692e471/690a216999b3e2ed990aa2e6/Salesforce-Commerce-Credentials-Short-Code-And-Org-ID.png)
+- Navigate to **Administration** and click **Manage Sites**. Note down the required **Site ID** from the list or create a new one to use during app configuration in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace).![Salesforce-Commerce-Credentials-Site-ID](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6c7336792de12f2d/690a21684f0dee735fefbfb8/Salesforce-Commerce-Credentials-Site-ID.png)
 
 **Note:** Before retrieving the **Client Secret**, go to the [Authorization for Shopper APIs](https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html) guide and follow the steps listed in the [Set Up User Roles and Filters](https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html#slas-admin-ui-set-up-user-roles-and-filters) section to set the SLAS Organization Administrator roles.
 
@@ -100,35 +102,41 @@ https://{{short-code}}.api.commercecloud.salesforce.com/shopper/auth-admin/v1/ui
 ```
 **Note:** Replace the `{{short-code}}` in the URL with the **Short Code** retrieved in the previous step.
 - Log in to **SLAS Admin UI** using the Account Manager credentials.
-- Navigate to **Clients** and click the **Add Client** button.
+- Navigate to **Clients** and click the **Add Client** button.![Salesforce-Commerce-Credentials-Add-Client-Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0ebd1b284c46cc27/690a2168450d167aa293d12a/Salesforce-Commerce-Credentials-Add-Client-Button.png)
 - On the next screen that appears, provide the following details:From the **What tenant will be used?** drop-down, select your tenant ID.**Note:** The tenant ID will be the same as the last portion of your organization ID. For example, if the organization ID is `abc_zybz_001`, the tenant ID will be `zybz_001`.
 - From the **What site will be used?** drop-down, enter the site name if the site is not already populated.
-- Enter the API client ID retrieved in the previous steps in the **Client Id** field.
-- Click the **Add** button. You can view the Client Secret generated at the top. Copy and save the **Client Secret** to use in app configuration in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace).**Note:** Your app, by default, is *Public*.
-- To make your app private, go to **Clients** from the top menu, click **Edit** for your Client ID, select the **Private?** checkbox, and click **Save.**
+- Enter the API client ID retrieved in the previous steps in the **Client Id** field.![Salesforce-Commerce-Credentials-Add-Client-Info](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt410ff23bfa33f354/690a2168c1ae536831f89b03/Salesforce-Commerce-Credentials-Add-Client-Info.png)
+- Click the **Add** button. You can view the Client Secret generated at the top. Copy and save the **Client Secret** to use in app configuration in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace).
+
+  **Note:** Your app, by default, is *Public*.
+- To make your app private, go to **Clients** from the top menu, click **Edit** for your Client ID, select the **Private?** checkbox, and click **Save.**![Salesforce-Commerce-Credentials-Set-As-Private](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta44bdf267e884605/690a216883a0d6c454cd77b4/Salesforce-Commerce-Credentials-Set-As-Private.png)
 
 ## Install and Configure the Salesforce Commerce App in Marketplace
 To install the app in Contentstack, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
 
-Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.
+Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see the available apps. Hover over the **Salesforce Commerce** app and click the **Install** button.
-- In the pop-up window, select the stack where you want to install the Salesforce Commerce app, accept the **Terms of Service**, and click **Install**.
+- In the pop-up window, select the stack where you want to install the Salesforce Commerce app, accept the **Terms of Service**, and click **Install**.![Salesforce-Commerce-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt97bf45457780f107/67d87d97ce729c1a70ae22d0/Salesforce-Commerce-App-Install.png)
 - On the **Configuration** screen, you can add multiple configurations for Salesforce Commerce. To do this, follow the steps given below:Click the **+ New Configuration** button to add new configuration details.
-- In the **Add Configuration** modal, enter the configuration **Name** and click **Add**.
+- In the **Add Configuration** modal, enter the configuration **Name** and click **Add**.![Salesforce-Commerce-Add-Confirguration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt828c4347e9f6e94e/67d87d6fa782ba797e8daa2e/Salesforce-Commerce-Add-Confirguration.png)
 - After adding the configuration, enter the following details:Enter the **Client ID** (API client ID), **Client Secret**, **Organization ID**, **Short Code**, and **Site ID** retrieved from your Salesforce Commerce account in [step 1](#retrieve-your-client-credentials-from-salesforce-commerce).
-- **Category Levels**: This represents the nesting of product categories on the selector page.**Note**: If you do not specify any value, the default value sets to **1**.
+- **Category Levels**: This represents the nesting of product categories on the selector page.
+
+  **Note**: If you do not specify any value, the default value sets to **1**.![Salesforce-Commerce-Configuration-Credentials](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt46772f17bb89d43e/67d87d9702de2095f65a67b4/Salesforce-Commerce-Configuration-Credentials.png)
 - **Set as Default**: To set this configuration as the default, click this checkbox.Alternatively, you can set a configuration as the default by clicking the three dots on the top-right side of the configuration section and then selecting **Set as Default**.
 
 **Note**: At least one app configuration should be selected as the default.
 
 Similarly, you can add multiple configurations by following the steps discussed above.
-- To delete the configuration, click the three dots and select **Delete**.In the **Confirm Deletion** modal, add the configuration name and click **Delete**.
-- For an existing user, the credentials will be added as the default configuration, and named as **legacy_config**.**Warning:**
+- To delete the configuration, click the three dots and select **Delete**.![Salesforce-Commerce-Delete-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt62634cd64bf3baa8/67d87d98b003920c9dc22359/Salesforce-Commerce-Delete-Configuration.png)In the **Confirm Deletion** modal, add the configuration name and click **Delete**.![Salesforce-Commerce-Delete-Configuration-Modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt13efa10d24767639/67d87d975baf4852ff3aec39/Salesforce-Commerce-Delete-Configuration-Modal.png)
+- For an existing user, the credentials will be added as the default configuration, and named as **legacy_config**.**![Salesforce-Commerce-Legacy-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb0ecb4d91d502562/67d87da72e696070ad33d3d6/Salesforce-Commerce-Legacy-Configuration.png)Warning:**
 
 **legacy_config** is a reserved keyword and you cannot use it in adding new configurations.
 - If you delete the **legacy_config** configuration, data loss may occur and you will not be able to access the products and categories from the related accounts.
-- **Advanced Settings**: Enable **Advanced Settings** to support two features – Locale Support and URL Auto Populate.**Note:** When you disable the **Advanced Settings**, all the saved configurations will be cleared.
+- **Advanced Settings**: Enable **Advanced Settings** to support two features – Locale Support and URL Auto Populate.![Salesforce-Commerce-Advanced-Settings.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt88f82210265004d7/690a27f076772e47a7677a36/Salesforce-Commerce-Advanced-Settings.png)
+
+  **Note:** When you disable the **Advanced Settings**, all the saved configurations will be cleared.
 
 **Locale Support**: The **Locale Support** feature allows you to map Contentstack locales with corresponding Salesforce Commerce locale codes to ensure consistent localization across products and categories.Enable the **Locale Support** toggle to add localized products and categories based on the selected locale in your entry.
 
@@ -151,7 +159,7 @@ Navigate to **Merchant Tools > Site Preferences > Locales**. For each active loc
 - **Custom Field:** Choose the custom field whose URL should be automatically populated in the URL field.
 - **Key Name:** Specify the field key that stores the populated URL.
 - **Entry Level:** Enable the **Entry Level** toggle button to decide whether you can turn the functionality on or off at the entry level.**Toggle ON:** You will see a corresponding toggle in the entry, allowing users to turn the automation OFF for that individual entry.
-- **Toggle OFF (Default):** The rule is enforced, and you cannot disable the automation at the entry level.Once configured, when you select a product or category in the specified content type, the URL automatically populates in the mapped field.
+- **Toggle OFF (Default):** The rule is enforced, and you cannot disable the automation at the entry level.Once configured, when you select a product or category in the specified content type, the URL automatically populates in the mapped field.![Salesforce-Commerce-Configuration-URL-Auto-Populate.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt32f3d73598a43142/690a27efdd2b1aadb79c51f3/Salesforce-Commerce-Configuration-URL-Auto-Populate.png)
 - **Choose the Salesforce Commerce Keys to Save in Entry**: Choose how to save the data fetched from the Salesforce Commerce account in Contentstack entries.If you select the **All Fields** option, you can select only a limited number of products in the entry
 - For **Custom Fields**, you can search and add specific Salesforce Commerce Fields you want to save in entries.If you select **Custom Fields** then the **Salesforce Commerce Keys** drop-down appears. By default, **id** and **name** keys are already selected.
 
@@ -161,21 +169,25 @@ If you want to create a new key, click the **+ New Key Field** option.
 
 In the **Add Salesforce Commerce Key Field** modal, enter the **Key Name or Path** and click the **Create** button to create a new key.
 - **Customize List View Options**: The **Customizable List View Columns** feature lets you choose which fields appear in the product and category list views within your entries.**Product List View Columns:** Choose and display specific product fields in the product list view within entries. By default, **name**, **image**, and **price** columns are selected.
-- **Category List View Columns:** Select and show specific category fields in the category list view within entries. By default, **id**, **name**, and **image** columns are selected.Once you save your configuration, the selected columns appear in the custom field’s list view on the entry page. You can also update or remove columns at any time to refine the view.
+- **Category List View Columns:** Select and show specific category fields in the category list view within entries. By default, **id**, **name**, and **image** columns are selected.![Salesforce-Commerce-Customize-List-View-Options.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta103df12984b667f/690a27f037acae57ff5ab71d/Salesforce-Commerce-Customize-List-View-Options.png)Once you save your configuration, the selected columns appear in the custom field’s list view on the entry page. You can also update or remove columns at any time to refine the view.
 - After adding the configuration details, click the **Save** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.**Note**: The app requires at least one UI location to be enabled, otherwise you will not be able to save your app configuration settings.
-- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.**Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Salesforce-Commerce-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt367f62e4446435ec/67d87da7b003925793c2235d/Salesforce-Commerce-UI-Locations.png)
+
+  **Note**: The app requires at least one UI location to be enabled, otherwise you will not be able to save your app configuration settings.
+- If the webhook is enabled for your app, you can view the webhook logs under the **Webhook** tab.
+
+  **Additional Resource**: For more information on UI location and webhooks, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 - Click **Open Stack** to start using the Salesforce Commerce app.
 
 ## Use the Salesforce Commerce App within your Stack
 To use the Salesforce Commerce app within an entry of your stack, follow the steps given below:
 
 Navigate to the stack dashboard, click **Content Models** in the header, then **New Content Type**. From the dropdown, select **Create New**.
-- Create a content type by entering relevant details as given below:
+- Create a content type by entering relevant details as given below:![Salesforce-Commerce-Content-Type](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltacbe8feb700ab02d/67d87d9717c80060e6cd9f3a/Salesforce-Commerce-Content-Type.png)
 - In the **Content Type Builder** page, add a [Custom](../create-content-types/custom.md) field for product in your content type by clicking the **Insert a field** link represented by a **+** sign.
-- Under **Select Extension or App**, select **Salesforce Commerce - Product** and click the **Proceed** button.This adds Salesforce Commerce - Product in the custom field.
+- Under **Select Extension or App**, select **Salesforce Commerce - Product** and click the **Proceed** button.![Salesforce-Commerce-Add-Product-In Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt896302684e2c76aa/67d87d7007d0f904bb5d1c76/Salesforce-Commerce-Add-Product-In_Custom-Field.png)This adds Salesforce Commerce - Product in the custom field.![Salesforce-Commerce-Added-Product-In Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt137e04c3e853bb8c/67d87d70a5c0432e71715dae/Salesforce-Commerce-Added-Product-In_Custom-Field.png)
 - Add another [Custom](../create-content-types/custom.md) field for category in your content type by clicking the **Insert a field **link represented by a **+** sign.
-- Under **Select Extension or App**, select **Salesforce Commerce - Category** and click the **Proceed** button.This adds Salesforce Commerce - Category in the custom field.
+- Under **Select Extension or App**, select **Salesforce Commerce - Category** and click the **Proceed** button.![Salesforce-Commerce-Add-Category-In Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5fdd484e11295bab/67d87d6f1c7222b284439247/Salesforce-Commerce-Add-Category-In_Custom-Field.png)This adds Salesforce Commerce - Category in the custom field.![Salesforce-Commerce-Added-Category-In Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd45b6422cde86ffd/67d87d6fce729c4e25ae22c9/Salesforce-Commerce-Added-Category-In_Custom-Field.png)
 - Under **Advanced** properties, you have the option to set the **Config Parameter** for all entries of a particular content type. If you do so, it overrides the default app configuration you set at the time of app installation on the Configuration screen.The **key:value** passed in the configuration object overrides the default app configuration settings.
 
 If you want to use a different Salesforce Commerce configuration for any custom field within the same stack, you need to specify the configuration name in the Config Parameter as follows:
@@ -221,8 +233,8 @@ If you want to use a different Salesforce Commerce configuration for any custom 
 
 **Note**: If any configuration value is not added, or if all the values are empty in the **Config Parameter** properties settings, the Salesforce Commerce app uses the default credentials configured in the installation in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace).
 - After adding the custom fields for the app, click **Save** or **Save and Close** to save your changes.
-- To use the Salesforce Commerce app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. In the left navigation panel, navigate to the Entries page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Salesforce Commerce app’s custom fields on your entry page as shown below:
-- Click the **+ Add Product(s)** button to choose the product(s).
+- To use the Salesforce Commerce app, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type. In the left navigation panel, navigate to the Entries page, click **+ New Entry** to create a new entry for the above content type, and then click **Proceed**.You can see the Salesforce Commerce app’s custom fields on your entry page as shown below:![Salesforce-Commerce-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbfcbd558ca7968e8/67d87da75baf488f3d3aec3f/Salesforce-Commerce-Sample-Entry.png)
+- Click the **+ Add Product(s)** button to choose the product(s).![Salesforce-Commerce-Add-Products](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt490bb5a05f441a0c/67d87d70fe8d6a565c48ba66/Salesforce-Commerce-Add-Products.png)
 - Select the products from your Salesforce Commerce store and click the **+ Add Product(s)** button to add them to your entry.You can select the products from multiple configurations at once using the **Configuration** drop-down.
 
 When the **Locale Support** is enabled during the app configuration in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace), you can select the locale-based products using the **Locale** drop-down in the selector page.
@@ -258,8 +270,10 @@ To view the variants in Product List view, you need to select the variant checkb
 
 **List View**
 - Click the **Save** button to save your entry.
-- You can view more product details in the Sidebar Widget.**Note**: You must save your entry to get the product details in the Sidebar Widget.
-- Click the **+ Add Category(s)** button to choose the category(s).
+- You can view more product details in the Sidebar Widget.![SS20.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt36d8f4843a86a8d7/690a3bec9d9a572c4682519e/SS20.png)
+
+  **Note**: You must save your entry to get the product details in the Sidebar Widget.
+- Click the **+ Add Category(s)** button to choose the category(s).![Salesforce-Commerce-Add-Category](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbad2b37618025bf7/67d87d6f2e6960e0b533d3d2/Salesforce-Commerce-Add-Category.png)
 - Select the categories from your Salesforce Commerce selector page and click the **+ Add Category(s)** button to add them to your entry.You can select the categories from multiple configurations at once using the **Configuration** drop-down.
 
 When the **Locale Support** is enabled during the app configuration in [step 2](#install-and-configure-the-salesforce-commerce-app-in-marketplace), you can select the locale-based categories using the **Locale** drop-down in the selector page.

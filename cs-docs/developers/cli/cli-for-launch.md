@@ -27,7 +27,9 @@ This step-by-step guide discusses how you can perform different operations in La
 - [CLI installed](./install-the-cli.md) and [configured](./configure-regions-in-the-cli.md) for AWS (version 1.6.0 and above), Azure (version 1.23.0 and above), or GCP (version 1.31.0 and above)
 - [CLI authenticated](./cli-authentication.md) (the cli-launch plugin supports only login-based authentication)
 - Access to Launch for your organization
-- [GitHub account](https://github.com/login) where your website code is hosted**Note**: This prerequisite is applicable only if you are importing a project via GitHub.
+- [GitHub account](https://github.com/login) where your website code is hosted
+
+  **Note**: This prerequisite is applicable only if you are importing a project via GitHub.
 
 ## Commands
 
@@ -55,7 +57,7 @@ csdx launch --data-dir
         **Note**: If you choose GitHub to create your project, provide the directory path in the Git repository as the current working directory path.
 
     **Note**: Launch automatically identifies Git projects.
-- If your current working directory is not a Git repository, you will be prompted to choose a project type to proceed. Select **Continue with GitHub** or **Continue with FileUpload** to proceed.
+- If your current working directory is not a Git repository, you will be prompted to choose a project type to proceed. Select **Continue with GitHub** or **Continue with FileUpload** to proceed.![Launch_Plugin-Project_Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0e0d2bc64da6923d/6437b49d1c46cc118806d761/Launch_Plugin-Project_Type.png)
 - Select the **organization **where you want to create your project.
 - In this step, select a **branch **if you decided to create your project using GitHub.
 - Enter a **name **for your project.
@@ -157,7 +159,7 @@ If you are using [GitHub](../launch/import-project-using-github.md) projects, af
 - Press **n** to cancel the process.
 
 If you are using the [File Upload](../launch/import-project-using-file-upload.md) projects, after running the command, you will see a prompt as shown in the screenshot below:
-- Press **Y** to redeploy the existing launch project.You will be prompted to select a redeployment method, as shown in the screenshot below:
+- Press **Y** to redeploy the existing launch project.You will be prompted to select a redeployment method, as shown in the screenshot below:![CLI-for-Launch-Redeploy-Method.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt35ab4553b49cc69b/67c6d7c1d1b1de8210ca84ea/CLI-for-Launch-Redeploy-Method.png)
 
       Select the preferred redeployment method and press **Enter**.
           **Redeploy with last file upload**: Redeploys the last uploaded file.

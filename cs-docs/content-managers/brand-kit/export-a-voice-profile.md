@@ -30,11 +30,11 @@ Exporting a Voice Profile in Contentstack helps you reuse your brand’s tone an
 **Note**: For this guide, we have assumed that you have [created a Voice Profile](./create-a-voice-profile.md) inside your Brand Kit.
 
 To export a Voice Profile, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- In the left navigation panel, click the **Brand Kit** icon.
-- Select the **Brand Kit** that contains the Voice Profile you want to export.
-- Under **Actions**, click the vertical ellipsis next to the desired Voice Profile and select **Export** to download the Voice Profile.
+- In the left navigation panel, click the **Brand Kit** icon.![1-Brand-Kit-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2793aa12bafb2903/68a78e6d5555ae37ee9b0d79/1-Brand-Kit-Icon.png)
+- Select the **Brand Kit** that contains the Voice Profile you want to export.![2-Select-Brand-Kit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbbadd20a5d68e86f/68a79e0e3e44086b28dc24ca/2-Select-Brand-Kit.png)
+- Under **Actions**, click the vertical ellipsis next to the desired Voice Profile and select **Export** to download the Voice Profile.![3-Import-Voice-Profile-Export](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaf3e3656e49d0942/687fbb102a594b079878bd97/3-Import-Voice-Profile-Export.png)
 - To export multiple Voice Profiles, select the checkboxes for the desired Voice Profiles and click **Export** from the floating bar.
-    The selected Voice Profiles will be downloaded as `.json` files.
+    ![4-Import-Voice-Profile-Export-From-Toolbar](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1883d225c7a47f62/687fbb10086c36fd62294c42/4-Import-Voice-Profile-Export-From-Toolbar.png)The selected Voice Profiles will be downloaded as `.json` files.
 
 ## Common questions
 

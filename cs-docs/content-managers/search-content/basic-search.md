@@ -26,9 +26,9 @@ To access the search bar, navigate to your [stack](../../developers/set-up-stack
 You will notice a dropdown before the search bar, with the options **All**, **Title**, **URL**, and **Specific field**. These options allow you to define the scope of search and help you find exactly what you are looking for.
 
 Let’s look at these options in detail:
-- **All (Search within all fields)**: This default option searches for a keyword across all fields of all entries and assets.
-- **Title (Search within title only)**: This option retrieves entries or assets containing the searched term (e.g., “Ramification”) in the title field.
-- **URL (Search within url only)**: This option restricts the search to the URL field of your entries or assets.
+- **All (Search within all fields)**: This default option searches for a keyword across all fields of all entries and assets.![Basic Search_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt656191e56435ab51/68402b6c3bb8991e8fa4153a/3._Search_Content-Basic_Search-All.png)
+- **Title (Search within title only)**: This option retrieves entries or assets containing the searched term (e.g., “Ramification”) in the title field.![Basic Search_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt308f6009c5649daa/68402b6cd6b7cbadbc214459/4._Search_Content-Basic_Search-Title.png)
+- **URL (Search within url only)**: This option restricts the search to the URL field of your entries or assets.![alt_text](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1770bb75a429ac6e/68402c6a3010e30c35e22a20/5._Search_Content-Basic_Search-URL.png)
 - **Specific Field (Search within a specific field)**: This option allows you to search for entries where a specific field of a specific content type contains the given keyword.Select the **Specific field** option to open up a modal enlisting all the content types and their respective fields. You can choose any field from any content type.
 
 Your search results are filtered depending on the field selected.

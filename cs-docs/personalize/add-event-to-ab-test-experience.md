@@ -35,7 +35,9 @@ The **primary** metric determines the winning variant, while **secondary** metri
 To add the created event to an A/B Test experience, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to add the event.
-- On the **Experiences **page, you can create a new A/B Test experience by clicking the **+ New Experience **button or select an existing A/B Test experience.**Note:** If you have an A/B Test experience already created then click the existing A/B Test experience to open it or click the corresponding vertical ellipses under the **Actions **section, select **Edit,** and jump directly to step 6.
+- On the **Experiences **page, you can create a new A/B Test experience by clicking the **+ New Experience **button or select an existing A/B Test experience.
+
+  **Note:** If you have an A/B Test experience already created then click the existing A/B Test experience to open it or click the corresponding vertical ellipses under the **Actions **section, select **Edit,** and jump directly to step 6.![AD_4nXdbX5E4hp2cMF8tlg9jYfMKTGtPFU-IZDGLj1FoQtgTCNqRKAbwbTbx154mBu7u2LsHTwI8ZwxbKc42dyqFPzPqjKf36dlFKT6BLmbD-9c0EBsVxIU5R3Wc68iq5vYhINOW28az](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdbX5E4hp2cMF8tlg9jYfMKTGtPFU-IZDGLj1FoQtgTCNqRKAbwbTbx154mBu7u2LsHTwI8ZwxbKc42dyqFPzPqjKf36dlFKT6BLmbD-9c0EBsVxIU5R3Wc68iq5vYhINOW28az?key=ixgDaj1MY9E9fQW_h5stqw)
 - In the **Select Experience Type** modal, click the **A/B Test** experience type.
 - On the experience draft page, in the **Overview **tab, provide a suitable **Name** and an optional **Description** for the experience.
 - Click **Save General Details**.

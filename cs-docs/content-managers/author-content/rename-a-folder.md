@@ -21,8 +21,8 @@ Renaming asset folders in Contentstack is a simple yet powerful way to keep your
 
 To rename an asset folder, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Assets” icon in the left navigation panel.
-- Locate the folder you want to rename, click the **vertical ellipses** under **Actions**, and select **Rename**.
-- Type in the new name for the folder in the pop-up modal and click **Save**.
+- Locate the folder you want to rename, click the **vertical ellipses** under **Actions**, and select **Rename**.![Assets_RenameFolder_Rename.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt369e3a959baf7a53/674552234dc5f0274b9b9a6a/Assets_RenameFolder_Rename.png)
+- Type in the new name for the folder in the pop-up modal and click **Save**.![Assets_RenameFolder_Save.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcdd9ce4e432a2513/67455272cf473215b18c1a8e/Assets_RenameFolder_Save.png)
 
 ## API Reference
 

@@ -58,7 +58,9 @@ npm install
 
 This downloads the required node modules within your lambda function.
 - Open the `private_key.json` file within your lambda function folder and replace the existing content with the content of the private key that you extracted in **Step 1**.
-- After that, zip your project file.**Note:** If you are using Linux, use the `zip -r index.zip *` command in your lambda code folder to zip it.
+- After that, zip your project file.
+
+  **Note:** If you are using Linux, use the `zip -r index.zip *` command in your lambda code folder to zip it.
 
 ## Deploy Lambda function
 
@@ -84,8 +86,8 @@ To add this Sidebar Extension to your stack, log in to your [Contentstack accoun
 
 Go to your stack and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- Click on the **+ New Extension** button on the top-right corner and select **Create new**.
-- Select the extension type as **Sidebar Extension**.
+- Click on the **+ New Extension** button on the top-right corner and select **Create new**.![Salesforce_Einstein_1_highlighted.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1dedb235171bf0d2/63871697e2091f1089651bf3/Salesforce_Einstein_1_highlighted.jpg)
+- Select the extension type as **Sidebar Extension**.![Salesforce_Einstein_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5662d536ba5519d6/60c21bf785c4c2118e317a29/Salesforce_Einstein_2_highlighted.png)
 - You will be led to the **Create New Extension** details page where you need to enter details in the fields as given below:
 
 **Title**: Provide a suitable title. For example, **Salesforce Einstein**.
@@ -119,7 +121,7 @@ Go to your stack and click on the “Entries” icon on the left navigation pane
 The selected Sidebar Extension expands on the sidebar.
 - Under **Select model**, you will see the **Einstein Sentiment** option selected by default (screenshot in Step 5).
 - Click on the Field dropdown and select the field that you want to analyze, in this case, Content.
-- Click on Run. You will sentiment probability of the content as follows:
+- Click on Run. You will sentiment probability of the content as follows:![Salesforce_Einstein_4_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2deee5e4ca9de4dd/60e53e0792aa422edd5e414a/Salesforce_Einstein_4_no_highlight.png)
 
 ## Optional Step - Add Einstein Intent Model
 

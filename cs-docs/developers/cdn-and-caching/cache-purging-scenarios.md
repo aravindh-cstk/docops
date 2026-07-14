@@ -29,14 +29,14 @@ Let us look at a few scenarios to understand how Contentstack purges only releva
 
 Consider a scenario where you have a website’s home page that contains a section that displays recently added articles. The “Home Page” content type has a “Reference” field that refers to the “News Articles” content type to pick up newly added articles regularly. The [content manager](../invite-users-and-assign-roles/types-of-roles.md#content-manager) has also added an asset to the home page, which represents the company logo.
 
-Each article also has references to a specific author bio from the “Author Details” content type. This content type contains bios for all authors that contribute to news articles. Apart from the biography, each entry of the “Author Details” content type also includes an asset representing the profile picture of a specific author.
+Each article also has references to a specific author bio from the “Author Details” content type. This content type contains bios for all authors that contribute to news articles. Apart from the biography, each entry of the “Author Details” content type also includes an asset representing the profile picture of a specific author.![Purging_1.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt08f286c6b0575e7f/62eb763d7e18987096ab9b46/Purging_1.png)
 
 The “News Articles” content type will have entries that contain details of specific news articles. Each article also comprises appropriate images related to the particular news item.
 
 Refer to the list of articles given below:
 - News article 1
 - News article 2
-- News article 3
+- News article 3![Purging_2.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt2c187369ae0a69c5/62eb763d361754115f1e485b/Purging_2.png)
 
 Since the website is [multilingual](/docs/developers/multilingual-content), the company publishes the above articles in the following languages:
 - English (United States)
@@ -56,7 +56,7 @@ Suppose if the content manager edits the company description in the “Home Page
 The following cached data will be purged:
 - “English (United States)” version of the “Home Page” entry on “Production” environment
 - “French (France)” version of the “Home Page” entry on “Production” environment
-- “German (Germany)” version of the “Home Page” entry on “Production” environment
+- “German (Germany)” version of the “Home Page” entry on “Production” environment![Purging_3.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc1a7fe99c9fc93cf/62eb763d569002760975405a/Purging_3.png)
 
 **Note**: We do not purge cached assets and download URLs when an entry is published or unpublished.
 
@@ -66,7 +66,7 @@ Suppose if the content manager replaces the existing company logo in the “Home
 The following cached data will be purged:
 - “English (United States)” version of the “Home Page” entry, along with all assets referred with the entry, on “Staging” and “Production” environments
 - “French (France)” version of the “Home Page” entry, along with all assets referred with the entry, on “Staging” and “Production” environments
-- “German (Germany)” version of the “Home Page” entry, along with all assets referred with the entry, on “Staging” and “Production” environments.
+- “German (Germany)” version of the “Home Page” entry, along with all assets referred with the entry, on “Staging” and “Production” environments.![Purging_4.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt812dcc677f26b3e1/62eb763d99dab06ebd13d0af/Purging_4.png)
 
 **Note**: We do not purge the cache of the download URLs of the assets when an asset is published or unpublished.
 
@@ -75,7 +75,7 @@ Now, suppose a content manager updates any article and publishes the changes to 
 
 The following cached data will be purged:
 - All entries of the “News Articles” content type present in “German (Germany)” and published to “Development”.
-- All entries of the “Home Page” content type present in “German (Germany)” and published to “Development”.
+- All entries of the “Home Page” content type present in “German (Germany)” and published to “Development”.![Purging_5.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc375af4263e48afb/62eb763e569002760975405e/Purging_5.png)
 
 **Note**: We do not purge cached assets and download URLs when an entry is published or unpublished.
 
@@ -85,7 +85,7 @@ Suppose if the content manager deletes an author bio entry from the “Author De
 The following cached data will be purged:
 - All entries of the “Author Details” content type present in “French (France)” and published to “Production”.
 - All entries of the “News Articles” content type present in “French (France)” and published to “Production”.
-- All entries of the “Home Page” content type present in “French (France)” and published to “Production”.
+- All entries of the “Home Page” content type present in “French (France)” and published to “Production”.![Purging_6.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt167f7337166baf9c/62eb763dd3b8a5700456644a/Purging_6.png)
 
 **Note**: We do not purge cached assets and download URLs when an entry is published or unpublished.
 

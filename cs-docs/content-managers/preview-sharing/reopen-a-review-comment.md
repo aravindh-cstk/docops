@@ -25,7 +25,7 @@ To reopen a review comment, follow these steps:
 - Open the **shared preview link** from your email.
 - Click the **Discussions** tab in the right navigation panel.
 - Select **Resolved** from the dropdown menu.
-- Hover over the discussion you want to reopen and click **Reopen**.
+- Hover over the discussion you want to reopen and click **Reopen**.![Reopen a Review Comment GIF.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltebfc42055c77e65f/67f95cd792c489c197cf9869/Reopen_a_Review_Comment_GIF.gif)
 
 Once reopened, the comment will be visible in the active comment thread, allowing reviewers to add further feedback.
 

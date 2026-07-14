@@ -27,15 +27,19 @@ You can either add a language from our [list of supported languages](./list-of-s
 
 To add a language, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 
-- Go to your stack, click the “Settings” icon (press “S”) on the left navigation panel, and select **Languages** (or press “**alt + L**” for Windows OS users, and “option + **L**” for Mac OS). You will see the default [master language](./set-the-master-language.md) along with other added language(s).**Note**: Apart from the master language, you can add/remove the other languages.
+- Go to your stack, click the “Settings” icon (press “S”) on the left navigation panel, and select **Languages** (or press “**alt + L**” for Windows OS users, and “option + **L**” for Mac OS). You will see the default [master language](./set-the-master-language.md) along with other added language(s).
+
+  **Note**: Apart from the master language, you can add/remove the other languages.
 - Click on the **+ New Language** button located at the top-right corner of the page. The **Add Language** box opens up, which lets you select from the existing supported language(s) or add a custom language.
-- Keep the **Add Supported Language** option selected to add any one of the existing supported languages. To [create and add a custom language](./add-a-custom-language.md) of your choice, select the **Create Custom Language** option.
+- Keep the **Add Supported Language** option selected to add any one of the existing supported languages. To [create and add a custom language](./add-a-custom-language.md) of your choice, select the **Create Custom Language** option.![Venus-add_custom_lang.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt4dda80f92ca2a250/60dc466e9648f1650fe197ea/Venus-add_custom_lang.jpg)
 - To add a supported language, select the required language from the list of available languages in the **Select Language** menu. The selected language’s code will appear.
 
 **Note: **The combination of language code and locale or country code should be **unique** across the stack.
 
-- Conversely, to add a custom language, enter the language name and code as per your choice.**Note**: The minimum character length of a language code is **2**, and the maximum character length is **12.
-**
+- Conversely, to add a custom language, enter the language name and code as per your choice.
+
+  **Note**: The minimum character length of a language code is **2**, and the maximum character length is **12.
+**![Venus-custom_lang.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5ffc22437e175d34/60dc466e9a701c56bb9114d5/Venus-custom_lang.jpg)
 - In the **Select Fallback Language** menu, select the [fallback language](./about-fallback-languages.md) for the newly added language.
 - Click on **Add**.
 

@@ -45,9 +45,9 @@ Follow the steps given below to install the Bitbucket Cloud app from Contetnstac
 Now that the app is installed, let's follow the steps given below to establish a connection between your Bitbucket Cloud and Contentstack Launch.
 
 - Click the **Launch **option from the dashboard, as shown below.
-- Click **+ New Project**.
-- From the **Create New Project** modal, click **Import from a Git Repository**.
-- Select **Bitbucket Cloud** as your repository host. During this step, Contentstack Launch will request access to the repositories that you manage.
+- Click **+ New Project**.![Launch_Projects_Landing_Page_2026.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt21093a02592b00ef/69afdb45afcf450008d243b2/Launch_Projects_Landing_Page_2026.png)
+- From the **Create New Project** modal, click **Import from a Git Repository**.![Launch_Create_Proj_Git_File.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt09bbe7fc07e8c9a5/660bba5d1b5a585bbdadd2cc/Launch_Create_Proj_Git_File.png)
+- Select **Bitbucket Cloud** as your repository host. During this step, Contentstack Launch will request access to the repositories that you manage.![Select Bitbucket.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta7bd230ecb294964/67a61df926b49ed8e16c102b/Select_Bitbucket.png)
 
 ## Configure and Deploy your Project in Launch
 
@@ -71,7 +71,9 @@ To delete the project:
 - Select your project from the Launch dashboard.
 - Click the **Settings** icon.
 - In the **General** section, click the **Delete Project** button under **Delete Project**.
-- In the **Delete Project** modal, enter `DELETE` and click the **Yes, Delete** button.**Warning**: This action will remove all domains associated with this project. After the removal, your Contentstack domains will still be available for use.
+- In the **Delete Project** modal, enter `DELETE` and click the **Yes, Delete** button.
+
+  **Warning**: This action will remove all domains associated with this project. After the removal, your Contentstack domains will still be available for use.
 
 This deletes your project successfully.
 

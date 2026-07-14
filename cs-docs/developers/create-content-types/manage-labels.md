@@ -21,10 +21,10 @@ Labels in Contentstack provide an efficient way to organize and categorize your 
 
 To manage labels, log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md), and click the “Content Models” icon in the left navigation panel to view the list of [content types](./about-content-types.md).
-- Click the “Gear” icon.
+- Click the “Gear” icon.![Manage Labels Gear Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta9c64f77933411dd/67a0481a4ddeeaf3b2c82fb5/ManageLabels-Gear.png)
 - The **Manage Labels** modal appears. From this modal, you can:**Add a new label:** Click the **+ New Label** button, enter the desired label name, and save your changes.
 - **Edit an existing label:** Update the label name or nest it under another label for better organization.
-- **Delete a label:** Select the label you want to delete and confirm the action to remove it from the list.
+- **Delete a label:** Select the label you want to delete and confirm the action to remove it from the list.![Delete Label Confirmation](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt58875040b9c1814d/67a04a1bf6f9a61b370cf68f/ManageLabels-Edit-Del.png)
 
 ## API Reference
 

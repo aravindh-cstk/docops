@@ -17,8 +17,8 @@ This page explains how to delete an automation in Automation Hub. It is intended
 ## Delete Automation
 
 To delete an automation, perform the steps given below:
-- On the **Automations** page, click the delete icon that you see on an Automation card for deleting the automation.
-- On the **Delete Automation **modal, click **Delete** again to delete the automation permanently.
+- On the **Automations** page, click the delete icon that you see on an Automation card for deleting the automation.![Delete_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2ed303cdc9c85089/65aa8c91c992b7f55fb8ad9e/Delete_Icon.png)
+- On the **Delete Automation **modal, click **Delete** again to delete the automation permanently.![Delete_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3228eb54e6eb41f8/65aa8c90df873360ffcdb54c/Delete_Button.png)
 
 ## Common questions
 

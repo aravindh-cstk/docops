@@ -34,9 +34,9 @@ A user removed from an organization also loses access to all stacks it contains.
 
 To remove an inactive user from the organization, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to the **Organization Settings** page.
-- Click the **Users** tab to view the list of users in the organization.
-- Hover over the user you want to remove and click the **Remove** icon that appears on the right.
-- Confirm your decision to remove the user from the organization.
+- Click the **Users** tab to view the list of users in the organization.![Users_Screen.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt22607af0f5d52f50/66cc3b438bdacf4b2d245c46/Users_Screen.png)
+- Hover over the user you want to remove and click the **Remove** icon that appears on the right.![RemoveUsers_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7b82fc89e5977746/66cc3b43769673218d6780aa/RemoveUsers_Icon.png)
+- Confirm your decision to remove the user from the organization.![Remove_Popup.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt648453618eb8fbc8/66cc3b437696735f226780a6/Remove_Popup.png)
 
 ## API Calls, Usage, and Bandwidth
 
@@ -48,7 +48,7 @@ To view the different usage by stacks in the organization over a period, log in 
 
 **Additional Resources: **Refer to the [Product Analytics](./product-analytics.md) documentation for detailed information.
 - Click the **Product Analytics** tab to view the **Usage Overview** page.
-- Scroll down the page to view the **Usage by Stacks** section.
+- Scroll down the page to view the **Usage by Stacks** section.![Usage_By_Stacks.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdfc7f9eb4e21de7d/65f7e7fef4a4cf34b214ee3a/Usage_By_Stacks.png)
 
 ### Bandwidth Usage
 

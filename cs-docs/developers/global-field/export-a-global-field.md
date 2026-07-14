@@ -22,7 +22,7 @@ Contentstack allows you to export the JSON file of any existing Global field in 
 To export a Global field, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to export a Global field.
 - Click the **Content Models** icon in the left navigation panel and select **Global Fields** in the left panel.
-- Locate the Global field you want to export. Click the vertical ellipsis in the **Actions** column next to it and select **Export**.
+- Locate the Global field you want to export. Click the vertical ellipsis in the **Actions** column next to it and select **Export**.![Export Global Field option in action menu](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt566d0c1dbec7d9d7/67ffa1344dc7b2723dbe6fc8/1._Export_Global_Field-Img-1.png)
 - The JSON file of the selected Global field will be saved to your local storage.
 
 The exported JSON file retains all configurations of the Global field, which you can later import into another stack or use for modifications.

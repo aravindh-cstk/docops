@@ -50,7 +50,9 @@ To add an asset to a release, log in to your [Contentstack account](https://www.
 - Click the horizontal ellipsis and select **Add to Release**.
 - In the **Add to Release** modal:Select an existing release, or
 - Click **Create New Release**.
-- Select the languages for deployment.**Note:** Assets do not support localization. Selecting languages determines the locales in which the asset is available.
+- Select the languages for deployment.
+
+  **Note:** Assets do not support localization. Selecting languages determines the locales in which the asset is available.
 - Choose one of the following:**Add for Publishing** to publish the asset, or
 - **Add for Unpublishing** to unpublish the asset
 

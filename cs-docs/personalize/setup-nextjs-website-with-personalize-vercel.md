@@ -32,7 +32,7 @@ To set up your Next.js website with Personalize, perform the following steps:
 To retrieve the project UID, perform the steps given below:
 - Navigate to **Personalize** > your preferred project.
 - Click the **Settings** icon in the left navigation panel.
-- In the **General** tab, under **Project Details**, you will find the 24-character project UID.
+- In the **General** tab, under **Project Details**, you will find the 24-character project UID.![Setup-Nextjs-Website-Vercel-Project-Details](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0dd55c7192d10c54/66fa4d3c1283dd8ce7e9d388/Setup-Nextjs-Website-Vercel-Project-Details.png)
 - Click the **Copy** icon to copy the project UID to your clipboard. We will need this UID while setting up the Personalize Edge SDK in the next step.
 
 ### Proxy Requests with Middleware

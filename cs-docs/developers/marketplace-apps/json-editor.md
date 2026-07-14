@@ -42,9 +42,9 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **JSON Editor **app and click **Install App**.
-- In the popup window, select the stack where you want the JSON Editor app to be installed and click the **Install** button.
-- Now on the **Configuration** screen, choose the global format in which you want to store the JSON. Select **JSON Object **to store the JSON in JSON format or select **JSON Stringified **to store the JSON as a String.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- In the popup window, select the stack where you want the JSON Editor app to be installed and click the **Install** button.![JSON-Editor-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt891e4d58d13fa76d/64b917c70c8ace3f5402ebec/JSON-Editor-Install-App.png)
+- Now on the **Configuration** screen, choose the global format in which you want to store the JSON. Select **JSON Object **to store the JSON in JSON format or select **JSON Stringified **to store the JSON as a String.![JSON-Editor-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd56c81dabf7a2f24/65b81df80b2014fe69411663/JSON-Editor-Configuration.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![JSON-Editor-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c680d251ad433f4/65b81e015f12edfa6de21eb9/JSON-Editor-UI-Locations.png)
 
 **Additional Resource**: For more information on UI locations, please refer to the [Installed Apps](../marketplace-platform-guides/installed-apps.md#view-edit-configuration-ui-locations-and-webhook) guide.
 
@@ -57,7 +57,7 @@ To use the JSON Editor application within an entry of your stack, follow the ste
 
 Go to your stack and click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![JSON-Editor-ContentType](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f498e5e468bbae5/64061056ce1f78108607fa4a/JSON-Editor-ContentType.png)
 - In the Content Type Builder page, add a [Custom field](../create-custom-fields/about-custom-fields.md) in your content type by clicking the **Insert a field **link represented by a **+** sign.
 - Under **Select Extension/App**, select **JSON Editor **and then click **Proceed**.
 
@@ -76,15 +76,15 @@ Add a key as `stringify` and its value as `true` (or `false`) in the following f
 After adding this config parameter "stringify" and setting it to true, the JSON data will be stored as a string for all the entries of this content type even if the global configuration is set to JSON Object, and vice-versa.
 
 - After adding the app in a custom field, click either **Save** or **Save and Close** to save your changes.
-- To use the JSON Editor app, create an entry for this content type, and you will see this JSON Editor custom field on your entry page as shown below:
+- To use the JSON Editor app, create an entry for this content type, and you will see this JSON Editor custom field on your entry page as shown below:![JSON-Editor-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt321d34a0e36e6a85/6406107e952945362ea1aeba/JSON-Editor-Sample-Entry.png)
 - You can input, edit, format, compact, and repair the JSON data, and perform undo and redo operations in the JSON editor. The content can be filtered, sorted, or transformed by JMESPath query language and can be viewed in different visual representations. There are five editor modes for writing:
 
-Code Editor mode:
+Code Editor mode:![JSON-Editor-Type-Code](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte677076dd43f6f7d/63bf9dc3788423108f1fa869/JSON-Editor-Type-Code.png)
 
-- Form Editor mode:
-- Text Editor mode:
-- Tree Editor mode:
-- View Editor mode:
+- Form Editor mode:![JSON-Editor-Type-Form](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltf25cf1e7fecc42d6/63bf9dc399e03c1edceda402/JSON-Editor-Type-Form.png)
+- Text Editor mode:![JSON-Editor-Type-Text](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt352e3f2c3b60ca55/63bf9dc38ac6c810b28360b1/JSON-Editor-Type-Text.png)
+- Tree Editor mode:![JSON-Editor-Type-Tree](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt05fed97f23217d79/63bf9dc30dc3963ccff8ad74/JSON-Editor-Type-Tree.png)
+- View Editor mode:![JSON-Editor-Type-View](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6e677c7d09b36f6f/63bf9dc3efe19d10ac157cc2/JSON-Editor-Type-View.png)
 - After adding your JSON content, **Save** and **Publish **your entry.
 
 ## Common questions

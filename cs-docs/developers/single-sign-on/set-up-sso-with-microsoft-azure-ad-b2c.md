@@ -33,27 +33,29 @@ Let us see each of the processes in detail.
 **Note:** Only the Organization [Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) will be able to perform the steps discussed below.
 
 Start by creating an SSO Name and generate the ACS URL in Contentstack
-- Log in to your [Contentstack account](https://www.contentstack.com/login/), go to the **Organization Settings** page, and click the **Single Sign-On** tab.
+- Log in to your [Contentstack account](https://www.contentstack.com/login/), go to the **Organization Settings** page, and click the **Single Sign-On** tab.![SSO_AD_B2C_-_Single_Sign_on.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5727bef6997ce85b/6501997e7db54e50cec1ab57/SSO_AD_B2C_-_Single_Sign_on.png)
 - Enter an **SSO Name** of your choice, and click **Create**. For example, if your company name is “Acme, Inc.” enter “acme” here. This name will be used as one of the login credentials by the organization users while signing in.**Note: **The SSO Name can contain only alphabets (in lowercase), numbers (0-9), and/or hyphens (-).
 
 Let's use “sso-test” as the SSO Name.
-- When you click **Create**, this will generate the **Assertion Consumer Service URL** and other details such as **Entity ID**, **Attributes**, **NameID Format**, and **SAML Version**. These details will be used in [Step 2](#configure-contentstack-app-in-microsoft-azure-ad-b2c) for configuring the Contentstack app in Microsoft Azure AD B2C.
+- When you click **Create**, this will generate the **Assertion Consumer Service URL** and other details such as **Entity ID**, **Attributes**, **NameID Format**, and **SAML Version**. These details will be used in [Step 2](#configure-contentstack-app-in-microsoft-azure-ad-b2c) for configuring the Contentstack app in Microsoft Azure AD B2C.![Azure_AD_B2C_-_SSO_Configuration_-_Step_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteecae654830e6ebf/6501997e68d8e15c4f6042f7/Azure_AD_B2C_-_SSO_Configuration_-_Step_3.png)
 
 Keep this window open, as you may need these details for setting up the Contentstack app in Microsoft Azure AD B2C.
 
 ## Configure Contentstack App in Microsoft Azure AD B2C
 
 To configure the integration of Contentstack into Microsoft Azure AD B2C, you need to add the Contentstack app in Microsoft Azure AD B2C Portal.
-- Go to the [Microsoft Azure Portal](https://portal.azure.com/), and click on **Azure AD B2C**:**
+- Go to the [Microsoft Azure Portal](https://portal.azure.com/), and click on **Azure AD B2C**:**![Azure-AD-B2C-portal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt68f157f35f1d58ad/64f6cbd555996b51f906bcc3/Azure_AD_B2C_-_portal.png)
 **
 **Note:** Please make sure you have an active subscription of Azure AD B2C before we proceed to the next step.
-- Within the **Azure AD B2C** portal, in the left navigation panel, scroll and click **Identity Experience Framework**.
-- Next, generate the required security certificate that you will be needing in the next step.**Additional Resource:** For detailed instructions on generating the certificate, refer to the [Obtain a Certificate](https://learn.microsoft.com/en-us/azure/active-directory-b2c/saml-service-provider?tabs=macos&pivots=b2c-custom-policy#obtain-a-certificate) documentation.
+- Within the **Azure AD B2C** portal, in the left navigation panel, scroll and click **Identity Experience Framework**.![Azure-AD-B2C-IEE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5333f6ebbc7b146f/64f6cbc89bcd1bf0cd1cd2e6/Azure_AD_B2C_-_Identity_Experience_Framework.png)
+- Next, generate the required security certificate that you will be needing in the next step.
+
+  **Additional Resource:** For detailed instructions on generating the certificate, refer to the [Obtain a Certificate](https://learn.microsoft.com/en-us/azure/active-directory-b2c/saml-service-provider?tabs=macos&pivots=b2c-custom-policy#obtain-a-certificate) documentation.
 - Next, you need to create and upload the Policy keys for your application. To do so, follow the steps given below:Navigate to the **Policy keys** section in your Azure AD B2C portal and click the **+ Add** button.
 - Within the **Create a key** panel that appears, select **Upload** from the dropdown menu for the **Options** field.
 - Enter the **Name** for the policy key.
 - In the **File upload** field, browse through your local machine and select the security certificate created in the previous step.
-- Enter a **Password** and click the **Create** button.
+- Enter a **Password** and click the **Create** button.![Azure-AD-B2C-create-policy keys](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt18674482658678a8/64f6cbc78606a861d4c84542/Azure_AD_B2C_-_Create_Policy.png)
 - Register the **IdentityExperienceFramework** and **ProxyIdentityExperienceFramework** applications in your portal.**Additional Resource:** Refer to the Microsoft documentation on Register the[IdentityExperienceFramework application](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-user-flows?pivots=b2c-custom-policy#register-the-identityexperienceframework-application) and Register the [ProxyIdentityExperienceFramework application](https://learn.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-user-flows?pivots=b2c-custom-policy#register-the-proxyidentityexperienceframework-application) documents for more information.
 - Register the Contentstack Application in the Azure AD B2C Portal as follows:Navigate to **App registrations** and click the **+ New registration** button.
 - Enter the **Name** for your application.
@@ -72,7 +74,7 @@ If you already have custom policies defined for your B2C application, you can us
 ```
 
 ```
-- Browse through your local machine and select the file that includes the updated custom policy as per your configuration and click **Upload.**
+- Browse through your local machine and select the file that includes the updated custom policy as per your configuration and click **Upload.**![Azure-AD-B2C-upload-policy](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2bd2f2b85c551504/64f6cbd555996bbcd106bcc7/Azure_AD_B2C_-_Upload_policy.png)
 - Once the setup is done, navigate to the below URL https://<tenant-name>.b2clogin.com/<tenant-name>.onmicrosoft.com/<policy-name>/Samlp/metadata where <tenant-name> is your Azure B2C tenant name.
 This should give you a valid SAML response.
 - Search for **SingleSignOnService** in the page and note the **URL** mentioned under the **Location** parameter.
@@ -80,7 +82,7 @@ This should give you a valid SAML response.
 ## Configure Microsoft Azure AD B2C Details in Contentstack
 
 To configure the Microsoft Azure AD B2C details in your stack, follow the steps below:
-- Paste the URL from step 2.10 within the **Single Sign-On Url** field in your stack’s **Single Sign-On** settings.
+- Paste the URL from step 2.10 within the **Single Sign-On Url** field in your stack’s **Single Sign-On** settings.![SSO_AD_B2C_-_Configure_AD_B2C_in_contentstack.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt217fe28860bafb05/6501997ec12d771768d067eb/SSO_AD_B2C_-_Configure_AD_B2C_in_contentstack.png)
 - In the **Certificate** field, upload the certificate generated in [step 2](#configure-contentstack-app-in-microsoft-azure-ad-b2c).
 
 ## Add Users to Your Microsoft Azure AD B2C Application
@@ -91,9 +93,9 @@ After setting the necessary configurations in Contentstack, you can add users to
 
 Here, we are using the second method to add users.
 - Within the **Microsoft Azure AD B2C** portal, click Users in the left navigation panel.
-- Click the **+New Users** button.
+- Click the **+New Users** button.![Azure-AD-B2C--new-user](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4affc8a2a439cfb4/64f8206f9bf26197fb6ba3cd/Azure_AD_B2C_-_Select_New_User.png)
 - In the **Select template**, choose any one from the options provided. You can either **Invite user**, **Create user**, or **Create Azure AD B2C** user.
-- In the **Identity** field, provide the required data and select the **Create** button.
+- In the **Identity** field, provide the required data and select the **Create** button.![Azure-AD-B2C-create-user](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8b0768588c95a1ab/64f6cbd59da0150c141ea1f7/Azure_AD_B2C_-_New_User.png)
 
 ## Test and Enable SSO
 
@@ -107,11 +109,11 @@ To do so, perform the following steps:
 - Click on the **Test SSO** button and it will take you to Contentstack’s **Login Via SSO** page where you need to specify your organization's SSO name.
 - Then, click **Continue** to go to your IdP sign in page.
 - Sign in to your account. If you are able to sign in to your IdP, your test is successful.
-On successful connection, you will see a success message as follows:
+On successful connection, you will see a success message as follows:![Azure-AD-B2C-test-sso](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt43e8a5bdf43e10e6/64f6cbfd8606a8b742c84546/SSO_AD_B2C_-_Test_SSO.png)
 
 ### Enable SSO
 
-Once you have tested your SSO settings, click **Enable SSO **to enable SSO for your Contentstack organization.
+Once you have tested your SSO settings, click **Enable SSO **to enable SSO for your Contentstack organization.![SSO_AD_B2C_-_Enable_SSO.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5438eefb58cae9d5/6501997e9bcd1b45cd1cfd02/SSO_AD_B2C_-_Enable_SSO.png)
 
 Confirm your action by clicking **Yes**.
 

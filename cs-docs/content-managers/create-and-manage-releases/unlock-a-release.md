@@ -23,7 +23,7 @@ To unlock a release, log in to your [Contentstack account](https://www.contentst
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Releases” icon in the left navigation panel.
 - Hover over the release you want to unlock in the left panel.
 - Click the “Unlock” icon in the popup modal. Alternatively, click the horizontal ellipsis in the top right corner and click **Unlock**.
-- In the resulting **Unlock Release** modal, click the **Yes, Proceed** button to unlock your release.
+- In the resulting **Unlock Release** modal, click the **Yes, Proceed** button to unlock your release.![Unlock-a-Release.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcaadb17d995dfc6f/67fe43416758e0803f5b3400/Unlock-a-Release.gif)
 
 ## Common questions
 

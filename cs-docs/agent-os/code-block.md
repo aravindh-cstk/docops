@@ -27,8 +27,8 @@ Perform the following steps to set up the Code Block action connector:
 
 - Click **Configure Action Step** from the left navigation panel.
 - Click **Action Step** to configure third-party services.
-- Within the **Configure Action Step**, click the **Code Block** connector.
-- Under **Choose an Action** tab, select the **JavaScript Code** action.
+- Within the **Configure Action Step**, click the **Code Block** connector.![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt346af1457fcb56aa/6684d76162008a267f10c62a/Select_Connector.png)
+- Under **Choose an Action** tab, select the **JavaScript Code** action.![Select_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc6b4d45a991f298c/6625f55cbb6372773d1ddde7/Select_Action.png)
 - On the **Javascript Code Configure Action** tab, enter the details given below:  
   Under the **Select Account** drop-down, select one of the accounts connected to your project. The sensitive information, such as access code, secret key, API key, etc., is fetched from the selected account.**Note**: *Select Account *is an optional field. You can still configure the action without selecting an account.
 - Provide the **Input Name** and **Input Value** you want to use in your JavaScript code. You can get the input data from the previous step.
@@ -42,9 +42,9 @@ Perform the following steps to set up the Code Block action connector:
 - The `console.log` output cannot be viewed in the payload if the string exceeds 4 kilobytes in length.
 - Click **Proceed**.
 - Click **Test Action** to test the configured action.  
-  You will get the response.  
-  For unsuccessful execution, an error message is displayed. This message specifies the type of error and the line number of the error to trace the issue.
-- Once set, click **Save and Exit**.
+  ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd8a729378083db06/6625f55cc9de461eead47388/Test_Action.png)You will get the response.  
+  ![Save_and_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt28afb7b67c6f2894/6625f54fcac848005f28bd9d/Save_and_Exit.png)For unsuccessful execution, an error message is displayed. This message specifies the type of error and the line number of the error to trace the issue.![Error_output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltba23b821ef8d7639/6625f54eb054410a4399c3b5/Error_output.png)
+- Once set, click **Save and Exit**.![Save_Exit_Codeblock.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt98d84a71f9e9d8f2/668243a2b1132449753a3a5c/Save_Exit_Codeblock.png)
 
 This sets the **Code Block** action connector.
 

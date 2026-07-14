@@ -41,11 +41,11 @@ Follow the steps below to enable Event Tracking in your Launch environment:
 
 Go to your Launch dashboard and click the **project card** to open your project from the Launch landing page.
 
-- On the **Environments** screen, click the **vertical ellipses** under **Actions** next to your environment and then click **Settings**.
+- On the **Environments** screen, click the **vertical ellipses** under **Actions** next to your environment and then click **Settings**.![Launch_Settings_2026.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3ccdc1d79b2ef2eb/69b78cd967be9e781070b034/Launch_Settings_2026.png)
 - In the **Settings** page, go to **Environments > Event Tracking**.
-- Click the **Enable Real-Time User Event Tracking** toggle to enable Event Tracking for Launch.
+- Click the **Enable Real-Time User Event Tracking** toggle to enable Event Tracking for Launch.![Launch_Lytics_EnableToggle.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt27e4a4775c7b34f0/683985d8fd6bfc805298e5de/Launch_Lytics_EnableToggle.png)
 - In the modal that appears, click the **checkbox** to accept the privacy regulations and then click the **Yes, Enable Event Tracking** button to confirm the action.  
-  Accepting the consent modal will load the Event Tracking script to your website.
+  ![Launch_Lytics_EnableLyticsFinal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt123f198d1f138927/68b82666bc3a223b924b56f4/Launch_Lytics_EnableLyticsFinal.png)Accepting the consent modal will load the Event Tracking script to your website.
 - Update your site to include a [consent](#handling-user-consent-optin) modal. Use a **Consent Management Platform** or build your own modal to collect this consent.
 - Perform a mandatory [redeployment](./deployments.md#redeploys) once you have enabled Event Tracking on the environment.
 
@@ -58,7 +58,7 @@ Go to your Launch dashboard and click the **project card** to open your project 
 
 ### Verify the Enabled Event Tracking
 
-- After enabling, you should see a `<script>` tag for Event Tracking injected into your website’s HTML responses.
+- After enabling, you should see a `<script>` tag for Event Tracking injected into your website’s HTML responses.![VerifyEnabled.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf04941ae3b44558c/68d4f4ef659ee0e3403c0b70/VerifyEnabled.png)
 - You can also install the [browser extension](https://docs.lytics.com/docs/chrome-extension) for debugging.
 
 ## Disable Event Tracking for Your Launch Environment
@@ -71,9 +71,9 @@ Go to your Launch dashboard and click the **project card** to open your project 
 
 - On the **Environments** screen, click the **vertical ellipses** under **Actions** next to your environment and then click **Settings**.
 - In the **Settings** page, go to **Environments > Event Tracking**.
-- Click the **Enable Real-Time User Event Tracking** toggle again to disable Event Tracking from your Launch project.
+- Click the **Enable Real-Time User Event Tracking** toggle again to disable Event Tracking from your Launch project.![Launch_Lytics_DisableToggle.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta9625dcfdc0b1ed5/683985d78b1229a52620a893/Launch_Lytics_DisableToggle.png)
 - In the modal that appears, click the **Yes, Disable Event Tracking** button to confirm the action.  
-  **Note**: Disabling Event Tracking deletes any previously collected data associated with this environment.
+![Launch_Lytics_DisableLyticsFinal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1c4f0c58df83a7ed/68b82665f6520ed35524ca82/Launch_Lytics_DisableLyticsFinal.png)  **Note**: Disabling Event Tracking deletes any previously collected data associated with this environment.
 - Perform a mandatory [redeployment](./deployments.md#redeploys) to remove the Real-Time Event Tag due to browser-side caching.
 
 **Once disabled:**

@@ -36,8 +36,8 @@ Each item is listed into separate tabs within the Trash view, allowing you to lo
 
 To access the Trash, login to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Navigate to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon, or press the shortcut key “S” (on both Windows and macOS).
-- Select **Trash** in the **Settings** panel or press the shortcut key “Alt + T” on Windows and “Option + T” on macOS.
-- Use the tabs to browse deleted content by type.
+- Select **Trash** in the **Settings** panel or press the shortcut key “Alt + T” on Windows and “Option + T” on macOS.![Navigating to the Trash Page](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt256109b2740a6060/687514b43db20004741d6850/1._Trash_Navigation.png)
+- Use the tabs to browse deleted content by type.![Tabs in Trash](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta82182c4aaaf7cf2/687514cbb38bd1dd8678fc03/2._tabs_categorization.png)
 
 **Note:** You can view or restore items in Trash only if you had access before they were deleted. Items remain restorable until the system or a user with appropriate [permissions](../invite-users-and-assign-roles/create-a-role.md#permissions-on-entries) removes them permanently.
 

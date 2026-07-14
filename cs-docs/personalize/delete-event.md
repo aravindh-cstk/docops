@@ -38,7 +38,7 @@ To delete an existing non-referenced event, log in to your [Contentstack account
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to delete an event.
 - Click the **Events **tab.
-- You can delete an existing event by clicking the corresponding vertical ellipses under the **Actions **section and selecting **Delete**.
+- You can delete an existing event by clicking the corresponding vertical ellipses under the **Actions **section and selecting **Delete**.![AD_4nXfQ6467h4dUC9ad9JG4Ha6Xk0JhTBkO1y8f4XjA3i1leWE3n6yOTl8j1jmiFVyfSSg7dUeih7NDmcQTn53krZMWsqDB2-qMJClDh3H3N1u6yOqcaa7wz6dSDXF7cBDXoyCsKoJdnQ](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfQ6467h4dUC9ad9JG4Ha6Xk0JhTBkO1y8f4XjA3i1leWE3n6yOTl8j1jmiFVyfSSg7dUeih7NDmcQTn53krZMWsqDB2-qMJClDh3H3N1u6yOqcaa7wz6dSDXF7cBDXoyCsKoJdnQ?key=kxf9b3oCOX-WSRLUHilftg)
 - In the** Delete Event **modal, click **Delete** to permanently delete the event.
 
 You will get a success message after the event is deleted from Personalize.
@@ -49,11 +49,15 @@ You will get a success message after the event is deleted from Personalize.
 To delete an existing referenced event, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 - You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to delete an event.
-- On the **Experiences** page, to remove the referenced event from the A/B Test experience, navigate to the experience you want to remove the referred event by clicking your experience to open it or by clicking the corresponding vertical ellipses under the **Actions **section and selecting **Edit**.**Note:** An A/B Test experience must be in the ‘Draft’ status to delete event(s) from it.
-- Click the **Configuration **tab, scroll to the Metrics section and then click the **Delete **icon next to the preferred event from the list.**Note:** When you delete a primary event from the Metrics, the immediate successor is assigned as the primary metric automatically.
+- On the **Experiences** page, to remove the referenced event from the A/B Test experience, navigate to the experience you want to remove the referred event by clicking your experience to open it or by clicking the corresponding vertical ellipses under the **Actions **section and selecting **Edit**.![AD_4nXe_SP6hWWkYYi0__5UbBBOqgnjo2ugvfeYKXqk9soEgqXVoXb6HIlc0YahHUF-KJSt0TNhs_vYUq8cKrqj-OTApXS_1tDJ0M6Sdqtu35vfDuIiZlrgkfyolxC1UlwJ0r3yFYWtWWg](https://lh7-rt.googleusercontent.com/docsz/AD_4nXe_SP6hWWkYYi0__5UbBBOqgnjo2ugvfeYKXqk9soEgqXVoXb6HIlc0YahHUF-KJSt0TNhs_vYUq8cKrqj-OTApXS_1tDJ0M6Sdqtu35vfDuIiZlrgkfyolxC1UlwJ0r3yFYWtWWg?key=kxf9b3oCOX-WSRLUHilftg)
+
+  **Note:** An A/B Test experience must be in the ‘Draft’ status to delete event(s) from it.
+- Click the **Configuration **tab, scroll to the Metrics section and then click the **Delete **icon next to the preferred event from the list.
+
+  **Note:** When you delete a primary event from the Metrics, the immediate successor is assigned as the primary metric automatically.
 - Once you have done that, click the **Save **button.
 - Now that we have removed the event from the A/B Test experience’s Metrics, click the **Events **tab in the left navigation panel.
-- You can delete an existing event by clicking the corresponding vertical ellipses under the **Actions **section and selecting **Delete**.
+- You can delete an existing event by clicking the corresponding vertical ellipses under the **Actions **section and selecting **Delete**.![AD_4nXeolcuyRI7pi4ZNOHL-KV6NAqkNRViI059VPTcozUX-UL22CoiWtedyFNdQxF7HaM_Q3gHYHiXWpAdhQvM9gTa_03OIO2Jubbqq0r6xL5ZJL6UXH_Yzm0PmI990xquoeEx4JeeLnA](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeolcuyRI7pi4ZNOHL-KV6NAqkNRViI059VPTcozUX-UL22CoiWtedyFNdQxF7HaM_Q3gHYHiXWpAdhQvM9gTa_03OIO2Jubbqq0r6xL5ZJL6UXH_Yzm0PmI990xquoeEx4JeeLnA?key=kxf9b3oCOX-WSRLUHilftg)
 - In the** Delete Event **modal, click **Delete** to permanently delete the event.
 
 You will get a success message after the event is deleted from Personalize.

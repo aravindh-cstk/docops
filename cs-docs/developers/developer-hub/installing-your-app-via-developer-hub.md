@@ -21,7 +21,7 @@ Once your app is ready, you can test the app by installing it in your preferred 
 **Note**: Stack admins can install any app in the stacks they own. Organization admins can install the app in any stack that they are a member of.
 - Click the app card to go to the app’s **Basic information** page.
 - Click the **Install App** button on the top-right side. Another quick step is to open this URL in a browser:
-`https://app.contentstack.com/!#/apps/{appUID}/install`.
+`https://app.contentstack.com/!#/apps/{appUID}/install`.![Basic_Information.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd21ef2cb3254df88/678517ad7dbc19079cf9f128/Basic_Information.png)
 - In the case of a stack app, you are prompted to select the stack within which you want to install the app. Select the stack and click **Install**.
 
     **Note**: If you are not a stack admin or owner, you will see a **Request Install** button instead. Clicking this button will send a request to the stack admin to install this app for you.

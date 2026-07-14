@@ -37,8 +37,8 @@ Follow the steps below to repair the Git Provider connection in your project aut
 - From the **Launch** landing page, select your project.
 - On the left-hand side primary navigation, click the **Settings** icon.
 - Under the **General** section, locate the **Git Connection** panel.  
-  You can view the status of your Git connection in this panel along with a link to your Git repository.
-- If there are any issues with the connection, click **Repair Connection** to re-establish the link between your project and the Git provider.  
+  You can view the status of your Git connection in this panel along with a link to your Git repository.![Launch_Connection_Status.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc402705086086631/69d74aa4b7eda10759f7e234/Launch_Connection_Status.png)
+- If there are any issues with the connection, click **Repair Connection** to re-establish the link between your project and the Git provider.![Launch_Connection_Status_repair.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4707f395189d880b/69d74ab19f59b06763100166/Launch_Connection_Status_repair.png)  
   Launch will automatically repair the connection between your project and the Git repository.
 
 ## Troubleshooting

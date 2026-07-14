@@ -40,7 +40,9 @@ Localizing a term allows you to define locale-specific values that can be used i
 To localize a term, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 - Navigate to your [stack](../set-up-stack/about-stack.md), go to **Settings**, and select **Taxonomy**.
 - Select the taxonomy with the terms you need to localize.
-- On the **Taxonomy Details** page, select the desired term and review the locale table.**Note:** The list of locales is automatically derived from all locales available across the branches in the stack. This ensures that any locale configured in any branch is reflected in the taxonomy localization view.
+- On the **Taxonomy Details** page, select the desired term and review the locale table.
+
+  **Note:** The list of locales is automatically derived from all locales available across the branches in the stack. This ensures that any locale configured in any branch is reflected in the taxonomy localization view.
 - Click the vertical ellipsis next to the locale you want to localize and select **Edit**.
 - In the **Edit Term** modal, enter the localized name for the selected locale.
 - Click **Save**.

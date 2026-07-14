@@ -31,7 +31,9 @@ Let us check the points to be considered when planning the CMS migration:
 
 - Define Migration goals.
 - Make sure that you have read and understood the requirements for migrating from your cms (Wordpress or Drupal) to Contentstacks Headless CMS.
-- **Note:** You can get details of the requirements in the Read Me section of the migration guides on our Github pages for [WordPress](./wordpress-to-contentstack.md) and [Drupal](./drupal-to-contentstack.md).
+- 
+
+  **Note:** You can get details of the requirements in the Read Me section of the migration guides on our Github pages for [WordPress](./wordpress-to-contentstack.md) and [Drupal](../../headless-cms/drupal-to-contentstack.md).
 - Note all the CMS-specific plugins that affect the content
 - Review custom styling, content annotation
 - Migration plan of comments associated with the post
@@ -55,7 +57,7 @@ Make sure to check the following points when executing migrations:
 - Perform the actual migration
 - Enable the new site and restore crawlability
 
-## Verification and monitoring stage
+## Verification and Monitoring Stage
 
 - Go through the acceptance criteria and ensure they are met
 - Manually test your content to confirm you haven’t missed out on anything critical.
@@ -66,7 +68,7 @@ Make sure to check the following points when executing migrations:
 
 To know more about migrating from your traditional CMSs such as WordPress and Drupal, make sure you read our documentation on [Export Content from other CMS](../content-migration.md#export-guides-for-cmss).
 
-## Common questions
+## Common Questions
 
 ### Is this checklist still current?
 
@@ -82,4 +84,4 @@ This migration checklist consists of 3 critical stages: planning, execution, and
 
 ### Where can I find more resources for WordPress or Drupal migrations?
 
-You can get details of the requirements in the Read Me section of the migration guides on our Github pages for [WordPress](./wordpress-to-contentstack.md) and [Drupal](./drupal-to-contentstack.md).
+You can get details of the requirements in the Read Me section of the migration guides on our Github pages for [WordPress](./wordpress-to-contentstack.md) and [Drupal](../../headless-cms/drupal-to-contentstack.md).

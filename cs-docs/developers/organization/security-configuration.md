@@ -32,7 +32,7 @@ You can configure the following:
 To enable MFA for your organization, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Navigate to **Administration** through “App Switcher”.
 - Click the **Security Configuration** tab.
-- Enable MFA using the toggle switch. Click **Save** to save your configuration.
+- Enable MFA using the toggle switch. Click **Save** to save your configuration.![MFA.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt28253b38051e9877/6915b51655501d6a21da50b8/MFA.png)
 
 **Note:** Once enabled, MFA setup becomes mandatory for all users on their next login.
 
@@ -45,9 +45,11 @@ Password policies help you control how passwords are created and maintained in y
 To enable and customize password policies for organization users, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 - Navigate to **Administration** through “App Switcher”.
 - Click the **Security Configuration** tab and select **Password Policies**.
-- In the **Password Duration** field, set the number of days (**0–365**) after which passwords must be updated. For example, setting the duration to 90 days forces users to reset their passwords every 90 days.**Note**: Set **Password Duration** to **0** for no password expiry.
+- In the **Password Duration** field, set the number of days (**0–365**) after which passwords must be updated. For example, setting the duration to 90 days forces users to reset their passwords every 90 days.
+
+  **Note**: Set **Password Duration** to **0** for no password expiry.
 - In **Minimum Password Length**, enter a value (**minimum 8**).
-- Click **Save** to save your configuration.
+- Click **Save** to save your configuration.![Password_Policies.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd354f70ad0cffe59/6915b516ac78ca3a8928a08b/Password_Policies.png)
 
 **Note:**
 
@@ -73,7 +75,7 @@ To configure session timeout, log in to your [Contentstack account](https://www.
 - Toggle the **Enable Session Timeout** switch to turn the feature on.
 - In the **Maximum Session Duration (hours)** field, enter the desired session duration in hours. Users get automatically logged out after the configured session timeout value. Default value: **12 hours**.
 - In the **Maximum Inactivity Timeout (hours) **field, enter the inactivity threshold in hours. Users get automatically logged out after the configured idle timeout value. Default value: **1 hour**.
-- In the **Allowlist User Email** field, enter comma-separated email addresses. These users are exempt from timeout rules.
+- In the **Allowlist User Email** field, enter comma-separated email addresses. These users are exempt from timeout rules.![Session_Timeout.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt05cbe1e5591e748e/696f5b5b596f034f56c26cad/Session_Timeout.png)
 - Click **Save** to apply your settings, or **Cancel** to discard changes.
 
 **Notes**:
@@ -92,7 +94,9 @@ To enable and add email domains, log in to your [Contentstack account](https://w
 - Navigate to **Administration** through “App Switcher”.
 - Click the **Security Configuration** tab and select **Allowed Email Domains**.
 - Toggle the **Enable Allowed Email Domains** switch.
-- In the **Add Allowed Email Domain(s)** field, enter the domains you want to allow (e.g., yourcompany.com).**Note**: You can add up to **30 email domains**.
+- In the **Add Allowed Email Domain(s)** field, enter the domains you want to allow (e.g., yourcompany.com).![Allowed_Email_Domains.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5afd82eeddba9d80/6915b516a582d743e01ac668/Allowed_Email_Domains.png)
+
+  **Note**: You can add up to **30 email domains**.
 - Click **Save** to apply the configuration.
 
 **Note**: When this setting is enabled, users with unapproved email domains cannot be invited or added to your organization. An error message appears if you attempt to add them.

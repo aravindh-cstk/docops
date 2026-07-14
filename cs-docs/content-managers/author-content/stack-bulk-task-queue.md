@@ -20,8 +20,8 @@ This page explains how to access and use the Bulk Task Queue in a Contentstack s
 The Bulk Task Queue displays a list of bulk operations performed within a specific stack.
 
 To access the bulk task queue for your organization, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Settings” icon on the left navigation panel. You can also use the shortcut key “S” (for both Windows OS and Mac OS users) to access **Settings**.
-- Click the **Bulk Task Queue** tab to access the section.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Settings” icon on the left navigation panel. You can also use the shortcut key “S” (for both Windows OS and Mac OS users) to access **Settings**.![Stack Bulk Task Queue_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt52b840249455b28a/66cf24a968aa7c0d68a55496/Stack_Bulk_Task_Queue_1.png)
+- Click the **Bulk Task Queue** tab to access the section.![Stack Bulk Task Queue_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt13a9064d72ca2208/66cf2548ec1754e22ec6aa21/Stack_Bulk_Task_Queue_2.png)
 
 The queue provides the following details about each task:
 - **Time**: The date and time when the task was initiated.

@@ -23,10 +23,12 @@ The HTTP Trigger connector lets you create a webhook URL to perform hypertext tr
 
 Perform the following steps to configure the HTTP Trigger Connector:
 - Click **Configure Trigger** from the left navigation panel.
-- Within the **Configure Trigger **step, click the **HTTP** connector.
-- Select **HTTP Request Trigger**. This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.
-- Select a **Method**, i.e., **GET/POST**.
-- Enable the **Secure HTTP Trigger** to add security to the HTTP trigger. The Secret value is automatically assigned once the setting is enabled. You can also set the Secret as per the criteria. Click **Proceed**.**Note:** When Secure HTTP trigger is enabled, you can only execute URLs with the key secret pair.
+- Within the **Configure Trigger **step, click the **HTTP** connector.![Select_triggger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt092b65816f45b6bb/65cf2ff8e07e36abc0e1abab/Select_triggger.png)
+- Select **HTTP Request Trigger**. This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.![Select_Trigger_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc24466f2cef39646/65cf2ff8ce7e235affd9ff21/Select_Trigger_Action.png)
+- Select a **Method**, i.e., **GET/POST**.![Select_Method.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4380cba048aaa2fa/65cf2ff82e0c64525bca0fa0/Select_Method.png)
+- Enable the **Secure HTTP Trigger** to add security to the HTTP trigger. The Secret value is automatically assigned once the setting is enabled. You can also set the Secret as per the criteria. Click **Proceed**.
+
+  **Note:** When Secure HTTP trigger is enabled, you can only execute URLs with the key secret pair.![Secure_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt183d84b283b128e6/65cf30bd9b8fd65bd1db8ebe/Secure_Trigger.png)
 - You will find the applicable input “URL.” This URL will be the webhook URL that you can use to see the automation working. Click **Test Trigger**.
 
 **Note:** You can update the configuration of a configured HTTP Trigger with the same URL.

@@ -39,7 +39,7 @@ In order to use this extension, you need to create an account with Amazon Web Se
 Go to [https://aws.amazon.com/s3/](https://aws.amazon.com/s3/) and click on **Get Started with Amazon S3**.
 - On the next screen, you'll be asked to log in. If you already have an account, just log in with your credentials. Else, click on **Create a new AWS account**.
 - Then, follow the on-screen instructions and get your account created. AWS will notify you by email when your account gets activated and available for you to use.
-- Once your account is created, log into it. Select** S3** from the **Services** drop-down. You'll see your dashboard as shown below:
+- Once your account is created, log into it. Select** S3** from the **Services** drop-down. You'll see your dashboard as shown below:![S3 Dashboard.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt4439d6c3765997e0/5e7c9cf0f82bc809d900a239/S3_dashboard.PNG)
 - To start using S3, you need to create a bucket for your account which will hold your objects. To do that, you can click on Create bucket. Then, follow the onscreen instructions and get your bucket created.
 - Once that is done, click on the bucket and add your objects. You need to make the objects public. So within the **Objects** tab, select the object(s), then click on the **Actions** drop-down, and select **Make public**.
 - Now click on the **Permissions** tab and scroll down to the **Cross-origin resource sharing** (**CORS**) section. Click on **Edit** and then, paste the following inside it:
@@ -67,8 +67,8 @@ Go to [https://aws.amazon.com/s3/](https://aws.amazon.com/s3/) and click on **Ge
 ]
 ```
 
-- Scroll up to the **Block public access** section and ensure all options are unchecked so that your objects remain public. If any option is enabled, click on **Edit** and ensure that it is unchecked as shown below:
-- Now, click on the arrow next to your username at the top and select **My Security Credentials** as shown below:
+- Scroll up to the **Block public access** section and ensure all options are unchecked so that your objects remain public. If any option is enabled, click on **Edit** and ensure that it is unchecked as shown below:![S3_new_block_public_access_image.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte221952d1c013107/63875edcead9e310abd90b09/S3_new_block_public_access_image.jpg)
+- Now, click on the arrow next to your username at the top and select **My Security Credentials** as shown below:![Security credentials.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1af916f74945167d/5e7c9cf090b30b164daeb761/security_credentials.PNG)
 - Then, click on **Access keys (access key ID and secret access key)**.
 - Click on **Create New Access Key** and then on **Show Access Key** to view your keys. Ensure that you save the keys. You'll need these keys while setting up your extension in Contentstack.  You can also download the keys by clicking on the **Download Key File** button.
 
@@ -80,8 +80,8 @@ To add the Amazon S3 custom field to your stack, log in to your [Contentstack ac
 
 Go to your [stack](../set-up-stack/about-stack.md) and click on the “Settings” icon on the left navigation panel.
 - Click on **Extensions**. You can also use the shortcut keys “alt + X” for Windows OS users, and “option + X” for Mac OS users to access the extensions menu.
-- On the **Extensions** page, click on the **+ New Extension **button, and select **Create new**.
-- In the **Select Extension Type** window, select **Custom Field**.
+- On the **Extensions** page, click on the **+ New Extension **button, and select **Create new**.![Amazon_S3_1_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltef95d5fa7d6b872e/60ffbc60ed7a525fcd55df3e/Amazon_S3_1_Highlighted.png)
+- In the **Select Extension Type** window, select **Custom Field**.![Amazon_S3_2_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt877be4b09e3e31c1/60ffbc7e5483765886b0e05f/Amazon_S3_2_no_highlight.png)
 - On the **Create New Extension** page, enter details in the fields as given below:**Title**: Provide a suitable title. For example, ****“AmazonS3.”
 - **Field data type**: Select the data type in which the input data of the field should be saved in Contentstack. Select **JSON** in this case.
 - **Multiple**: Keep this option unchecked.
@@ -114,10 +114,10 @@ Now, let’s understand how you can start using this custom field in your conten
 Once you have added a custom field, you can use it in your content type like any other field. To add a custom field in your content type, perform the following steps:
 
 [Create a content type](../create-content-types/create-a-content-type.md) and add the **Custom **field to it.
-- Under **Select Extension**, select the “AmazonS3” field that you created and set the other properties. You can add other fields as per requirements.
+- Under **Select Extension**, select the “AmazonS3” field that you created and set the other properties. You can add other fields as per requirements.![Amazon_S3_3_Highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta9a92841f0472f91/60ffbc9052fbad613927769a/Amazon_S3_3_Highlighted.png)
 - Finally, click on either **Save **or** Save and Close** to save your changes.
-- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Amazon S3 **field on your entry page as shown below:
-- Click on** Choose from S3 Bucket**. If you are still logged into Amazon S3, it will open inside your entry page, from where you can select multiple documents, images, videos, etc, and insert them in your entry. You can also upload items to your S3 bucket from here.
+- Next, [create an entry](../../content-managers/author-content/create-an-entry.md) for this content type, and you will see the **Amazon S3 **field on your entry page as shown below:![Amazon_S3_4_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt367e4a1cdbdbe0fd/60ffbc9dfaf95f59f8ec5643/Amazon_S3_4_no_highlight.png)
+- Click on** Choose from S3 Bucket**. If you are still logged into Amazon S3, it will open inside your entry page, from where you can select multiple documents, images, videos, etc, and insert them in your entry. You can also upload items to your S3 bucket from here.![Amazon_S3_5_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte71fed994040e154/60ffbcbcfaf95f59f8ec5647/Amazon_S3_5_no_highlight.png)
 
 **Note**: The number of items that can be selected depends on the size of the JSON that is to be stored, and currently, only 10 KB of data can be stored. This is due to limitation of the JSON data stored via Custom Field. Refer to our [Custom Field Limitation](./limitations-of-custom-fields.md) doc for more detail.
 

@@ -26,7 +26,7 @@ For example, a user with the “Editor” role can grant a content manager edit 
 To revoke edit access for other users who can edit an entry in a particular workflow stage, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 
 - Go to your [stack](../../developers/set-up-stack/about-stack.md), and open the entry.
-- On the entry page, go to the **Workflow Details** section under the **Status** panel on the right. The current workflow stage of the entry and its color label appear under this section.
+- On the entry page, go to the **Workflow Details** section under the **Status** panel on the right. The current workflow stage of the entry and its color label appear under this section.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt62a6055a40a500ea/60de1a2d9ec66d5af9c1aef1/image.png)
 - Further below, you will also see a section that displays the **Users to whom edit access is granted** over the current workflow stage. Click on the “**x**” icon beside a user name to revoke edit access for that user.
 - When more than four users are able to edit the entry over the current workflow stage, click on **View All** to view the entire list of users.
 - In the **All Other users** dialog box that appears on screen, you can click on the “**x**” icon beside a user name to revoke those users’ edit access rights over the entry.

@@ -29,7 +29,7 @@ To set up field visibility rules, log in to your [Contentstack account](https://
 
 - Go to your [stack](../set-up-stack/about-stack.md) and click the "Content Models" icon.
 - Click the title of a content type to open it. Alternatively, click the vertical ellipses in the **Actions** column next to the content type and select **Edit**.
-- Click **Field Visibility Rules** at the top of the page.
+- Click **Field Visibility Rules** at the top of the page.![Field Visibility Rules UI](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd3b9eca31c858c6b/67d453f718b0840590aadf49/Add_a_Field_Visibility_Rule_link.png)
 - In the resulting modal, click **Create New Rule**.
 - Under **RULE 1**, configure the rule as follows:
 
@@ -126,9 +126,11 @@ To set up field visibility rules for a global field, log in to your [Contentstac
 - Select **Global Fields** from the left navigation panel.
 - Click the title of a global field to open it.
 - Click **Field Visibility Rules** at the top of the page.
-- Create and configure rules using the same steps as for content types.**Note:** Fields marked as multiple cannot be used in rules within a Global field.
+- Create and configure rules using the same steps as for content types.
+
+  **Note:** Fields marked as multiple cannot be used in rules within a Global field.
 - Click **Save** to apply the rule(s).
-- Click **Save** or **Save and Close** to apply changes to the global field.
+- Click **Save** or **Save and Close** to apply changes to the global field.![Set_Up_Field_Visibility_Rules_for_a_Global_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt698d7ca07f2e01d1/68b811f0163c2f45ca98137e/Set_Up_Field_Visibility_Rules_for_a_Global_Field.png)
 
 **How Rules Work in Content Types**
 

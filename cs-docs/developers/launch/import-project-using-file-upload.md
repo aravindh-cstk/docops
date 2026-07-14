@@ -29,12 +29,12 @@ This document guides you through the process of creating a project in Launch by 
 
 **Note:** Only the Organization [Admin](../invite-users-and-assign-roles/types-of-roles.md#admin)/[Owner](../invite-users-and-assign-roles/types-of-roles.md#owner) has the right to create projects in a stack for Launch.
 - Click the **Launch **option from the dashboard, as shown below.
-- Click **+ New Project**.
-- From the **Create New Project** modal, click **Upload a file**.
+- Click **+ New Project**.![Launch_Projects_Landing_Page_2026.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt21093a02592b00ef/69afdb45afcf450008d243b2/Launch_Projects_Landing_Page_2026.png)
+- From the **Create New Project** modal, click **Upload a file**.![Launch_Create_Proj_Git_File.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt09bbe7fc07e8c9a5/660bba5d1b5a585bbdadd2cc/Launch_Create_Proj_Git_File.png)
 - You can either drag and drop a .zip file or click the **browse to upload** link to upload a .zip file.
 
     **Note:** When uploading the project's source code, ensure that the `node_modules` folder is excluded.
-- Click **Next** to proceed with the deployment steps.**Note:**
+- Click **Next** to proceed with the deployment steps.**Note:**![Launch-FileUpload-Next.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt635218a47959e052/645f6fe50227876dd02d78f0/Launch-FileUpload-Next.png)
 
         You can re-upload a .zip file after uploading one.
 - You can also Cancel an ongoing file upload and re-upload a new file.
@@ -57,7 +57,7 @@ The project card displays as given below in the Projects screen:
 
 ## Delete the Project
 - Click the **Settings** icon.
-- In the **General** section, click the **Delete Project **button under **Delete Project**.
+- In the **General** section, click the **Delete Project **button under **Delete Project**.![Launch_Create_File_Venus2_General_Settings_DeleteProject.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt428cd65f7f107763/65c1ae7325aa942de334f483/Launch_Create_File_Venus2_General_Settings_DeleteProject.png)
 - In the modal that appears, enter `DELETE` and then click the **Yes, Delete **button.
     **Warning**: This action will remove all domains associated with this project. After the removal, your Contentstack domains will still be available for use.
 

@@ -30,7 +30,7 @@ To create an agent, follow the below steps:
 5. In the **Create Agent** modal, click **Manual Setup**. Enter a suitable Title and a **Description** for your agent. Click the **Create Agent** button.![Create_Agent_Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt00ffd2b99855d2c8/6996d4137dd2cc0008d23e12/Create_Agent_Modal.png)
 
    **Note:** You can also create an agent using the **Automated Setup**, where you provide a description and the system automatically configures the trigger, tools, and instructions.
-6. You are redirected to the **Agent Builder** page, where you can add the **Trigger**, **Tools**, and **Instructions**.![Agent_Builder_Screen.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt95405d744f240a92/6996d88d2ed19a0008bc0fb5/Agent_Builder_Screen.png)
+6. You are redirected to the **Agent Builder** page, where you can add the **Trigger**, **Tools**, and **Instructions**.![Agent_Builder_Screen.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt95405d744f240a92/6996d88d2ed19a0008bc0fb5/Agent_Builder_Screen.png)![Create_Agent_Config_Screen.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4914255bc1139e55/69e9d7dd376d4b45bd5c4ba2/Create_Agent_Config_Screen.png)
 
 ## Common questions
 ### What is covered in [Automations guides and connectors] - Create an Agent?

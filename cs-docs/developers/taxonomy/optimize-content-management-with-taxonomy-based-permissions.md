@@ -43,8 +43,8 @@ For instance, different product categories such as Electronics, Clothing, Home A
 ### Example Implementation
 
 - **Create Custom Roles**: Define roles for each category (e.g., Electronics Manager, Clothing Manager).
-- **Assign Permissions**: Assign the relevant taxonomy-based permissions (e.g., Electronics, Clothing) to each role.
-- **Manage Content**: Content Managers will manage listings, descriptions, and updates for their assigned categories, reducing the risk of accidental changes to other categories.
+- **Assign Permissions**: Assign the relevant taxonomy-based permissions (e.g., Electronics, Clothing) to each role.![custom category role.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7acba8a22ab06160/6666b13aa05faea31ec2ed8e/custom_category_role.png)
+- **Manage Content**: Content Managers will manage listings, descriptions, and updates for their assigned categories, reducing the risk of accidental changes to other categories.![manage term specific content.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0958e5e857d9829b/6666b13bc97e38613bf161b6/manage_term_specific_content.png)
 
 **Additional Resource**: For detailed instructions on creating custom roles and applying permissions, refer to the [Create a Role](../invite-users-and-assign-roles/create-a-role.md) documentation.
 

@@ -32,9 +32,9 @@ Let’s look at each of them in detail.
 This action lets you update the attributes such as Asset ID, Title, Description, Asset Status etc. of an asset/record stored in Aprimo.
 - Click **Configure Action Step** from the left navigation panel.
 - Click **Action Step** to configure third-party services.
-- Within the **Configure Action Step**, click the **Aprimo** connector.
-- Under **Choose an Action** tab, select the **Edit a Record** action.
-- Click the **+ Add New Account** button to add your Aprimo account.
+- Within the **Configure Action Step**, click the **Aprimo** connector.![Select_the_Connector_Aprimo.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt712955cec57c3b95/6527c9503347f310d80279d0/Select_the_Connector_Aprimo.png)
+- Under **Choose an Action** tab, select the **Edit a Record** action.![Edit-Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd6662da048fef6cc/6442cec50de4a8509dbb883d/Edit-Record.png)
+- Click the **+ Add New Account** button to add your Aprimo account.![Add_New_Account_for_Edit_a_Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaa7d0a2060741937/6470320c86bda56c0e52fb6c/Add_New_Account_for_Edit_a_Record.png)
 - In the Authorize pop-up window, provide the **Title**, **Aprimo URL**, **Client ID**, and **Client Secret**.
 
 To generate **Client ID** and **Client Secret**, log in to the Aprimo dashboard and perform the following steps:
@@ -63,21 +63,21 @@ https://eu-prod-automations-api.contentstack.com/userauths/auth/callback
 ```
 
 **Note:** It is mandatory to select the **OAuth Flow Type** as **Client Credential**. The credentials are activated after 15 minutes so you can use them to authorize your Aprimo account.
-- Enter an **Account Name **and then click **Save**.
+- Enter an **Account Name **and then click **Save**.![Save-Account](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdb76df9291ef529e/6442cec51276ca183e1c0000/Save-Account.png)
 - Select an **Asset** which you want to update from the **Lookup** dropdown.
 **Note:** Contentstack Marketplace offers an [Aprimo](../developers/marketplace-apps/aprimo.md) app for its users, so they can fetch the assets/images into their Contentstack CMS entry. With the Aprimo connector, you can fetch the asset id from the Aprimo entry and you can edit the asset attributes.
-- In the **Asset Attribute** field, provide the name of the attribute in the **Key** field and the value that you want to update in the **Value** field.
+- In the **Asset Attribute** field, provide the name of the attribute in the **Key** field and the value that you want to update in the **Value** field.![Select_Different_Fields_Edit_Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc077304f1f0dbde2/6470320bec223357c951b0b6/Select_Different_Fields_Edit_Record.png)
 - Click the **Proceed** button.
-- Click the **Test Action** button to test the configured action.
-- Once set, click the **Save and Exit** button.
-- Navigate to the Aprimo dashboard to view the changes on the selected asset/record.
+- Click the **Test Action** button to test the configured action.![Test-Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt874d0444752122db/6442ced956d6297d852bcecb/Test-Action.png)
+- Once set, click the **Save and Exit** button.![Save-Exit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9afd496669ae9408/6442ced810882b4f2385c26c/Save-Exit.png)
+- Navigate to the Aprimo dashboard to view the changes on the selected asset/record.![Edit-Output](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5fc1084b49433a58/6442cec7ef41f64ab295153a/Edit-Output.png)
 
 ### Get Single Record
 
 This action lets you fetch the asset details from your Aprimo dashboard.
 - Within the **Configure Action Step**, click the **Aprimo** connector.
-- Select the **Get Single Record** action.
-- Click the **+ Add New Account** button to add your Aprimo account.
+- Select the **Get Single Record** action.![Get-Single-Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt16bf930690787616/6442cec5c5646c7d86ea69a2/Get-Single-Record.png)
+- Click the **+ Add New Account** button to add your Aprimo account.![Add_New_Account_Get_Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2ed8c68eda5cfdf8/6470320bdfafe53c8c04974f/Add_New_Account_Get_Record.png)
 - In the Authorize pop-up window, provide the **Title**, **Aprimo URL**, **Client ID**, and **Client Secret**.
 
 To generate **Client ID** and **Client Secret**, log in to the Aprimo dashboard and perform the following steps:
@@ -107,10 +107,10 @@ https://eu-prod-automations-api.contentstack.com/userauths/auth/callback
 
 **Note:** It is mandatory to select the **OAuth Flow Type** as **Client Credential**. The credentials are activated after 15 minutes so you can use them to authorize your Aprimo account.
 - Enter an **Account Name **and then click **Save**.
-- Select the **Record ID** to fetch the asset details from the **Lookup** dropdown.
+- Select the **Record ID** to fetch the asset details from the **Lookup** dropdown.![Select_Record_ID_Fields_Get_Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc1b29e05778c7e11/6470320c86abb2b600e82b0a/Select_Record_ID_Fields_Get_Record.png)
 - Click the **Proceed** button.
 - Click the **Test Action **button to test the configured action.
-- Once set, click the **Save and Exit** button.
+- Once set, click the **Save and Exit** button.![Save-Exit-Get-single-Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt34d48e60d06cf84d/6442ced9de40d20defb3c3cf/Save-Exit-Get-single-Record.png)
 
 **Note:** Aprimo does not support the Firefox browser, hence you cannot run this connector on Firefox.
 

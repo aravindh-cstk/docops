@@ -45,8 +45,8 @@ These are the updates that you can perform in your OAuth section.
 
 You can update the App URL i.e., the address of the app where it is hosted and the App Locations. To do so, perform the steps given below:
 - Click the app that you want to update.
-- In the **UI Locations** page, you can update the **App URL**.
-- You can edit the **Enabled location(s)** or add **Available location(s)** under **App Location(s)**, if needed.
+- In the **UI Locations** page, you can update the **App URL**.![image3.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt496b57b603da9642/627cfc949dad2234e4d04426/image3.png)
+- You can edit the **Enabled location(s)** or add **Available location(s)** under **App Location(s)**, if needed.![image1.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8a29d78aae48107c/627cfc94f628f26854f903a1/image1.png)
 - Once the locations are updated, click the **Save **button.
 
 These are the updates that you can perform in your UI Locations section.
@@ -55,7 +55,7 @@ These are the updates that you can perform in your UI Locations section.
 
 If you have enabled webhooks, you can update webhook configuration details. To do so, perform the steps given below:
 - Click the app that you want to update.
-- In the **Webhooks** page, you can update the **URL to Notify**, **HTTP Basic Auth** details, **Custom Headers**, the **App Events**, the **Stack Events, **and the** User(s) to Notify** section.
+- In the **Webhooks** page, you can update the **URL to Notify**, **HTTP Basic Auth** details, **Custom Headers**, the **App Events**, the **Stack Events, **and the** User(s) to Notify** section.![Update_webhook_configuration_details](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1fe549390ee6256b/641bde11abab7b1f152c64ae/Updating_an_app_in_dh.png)
 - Once the details are updated, click the **Save** button.
 
 These are the updates that you can perform in your webhooks section.

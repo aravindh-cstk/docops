@@ -23,7 +23,7 @@ To clone a release, log in to your [Contentstack account](https://www.contentsta
 - Go to your [stack](../../developers/set-up-stack/about-stack.md) and click the “Releases” icon in the left navigation panel.
 - Hover over the release you want to clone in the left panel.
 - Click the “Clone” icon in the popup modal. Alternatively, click the horizontal ellipsis in the top right corner and click **Clone**.
-- In the resulting **Clone Release** modal, enter a suitable name and description for your release and click the **Clone** button.
+- In the resulting **Clone Release** modal, enter a suitable name and description for your release and click the **Clone** button.![Clone-a-Release.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfb8191f743fe4699/67fe43e80bdcf17e065f6574/Clone-a-Release.gif)
 
 ## API Reference
 

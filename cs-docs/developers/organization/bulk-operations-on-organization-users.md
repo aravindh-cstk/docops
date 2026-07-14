@@ -24,11 +24,15 @@ You can efficiently perform bulk operations to manage multiple [organization use
 To perform bulk operations on organization users, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 - Navigate to **Administration** through “App Switcher”.
 - Click the **Users** tab.
-- Select the checkboxes next to the users you want to manage.**Note**: You can only select up to **10 users** at a time.
+- Select the checkboxes next to the users you want to manage.
+
+  **Note**: You can only select up to **10 users** at a time.
 - In the floating panel that appears, select the operation you want to perform.
   - **Remove**: Removes the selected users from the organization.
 - **Update Organization Role**: Updates the organization role for the selected users.
-- **Update Stack Access**: Updates the stack access for selected users.**Note**: The new stack access applied would overwrite the existing access the users had in respective stacks.
+- **Update Stack Access**: Updates the stack access for selected users.
+
+  **Note**: The new stack access applied would overwrite the existing access the users had in respective stacks.
 - **Force Password Reset**: Sends a password reset email to the selected users.
 - **Reset MFA**: Sends an MFA reset link email to the selected users.
 - **Force Kill Session**: Selected users will be logged out immediately and will need to log in again.**Note**: You cannot terminate your own sessions. Users added to multiple organizations or no active sessions will be skipped.

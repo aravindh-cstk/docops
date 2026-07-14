@@ -20,7 +20,9 @@ This page explains how to categorize Contentstack entries by assigning taxonomy 
 To categorize your entries with taxonomy, assign terms to them within the taxonomy field.
 
 To classify entries with taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
-- Go to your [stack](../../developers/set-up-stack/about-stack.md) where you want to classify your entries and click the “Entries” icon on the left navigation panel.**Note**: Ensure you have added and configured a taxonomy field for the relevant content type. If you haven't done this, refer to the [Add Taxonomy to Content Type](../../developers/taxonomy/add-taxonomy-to-a-content-type.md) document.
+- Go to your [stack](../../developers/set-up-stack/about-stack.md) where you want to classify your entries and click the “Entries” icon on the left navigation panel.
+
+  **Note**: Ensure you have added and configured a taxonomy field for the relevant content type. If you haven't done this, refer to the [Add Taxonomy to Content Type](../../developers/taxonomy/add-taxonomy-to-a-content-type.md) document.
 - Create a new entry or select an existing one that belongs to the content type with the taxonomy field.
 - Within the taxonomy field, choose a term from the **Select Term(s)** modal.
 - If your stack supports localization, the taxonomy field displays terms available in the selected entry locale.**Note**:When switching locales in the entry editor, the taxonomy field updates to show terms available for that locale. If localized versions of the terms do not exist, the field displays the term data from the **fallback locales defined in the current branch hierarchy**, ending with the master locale if needed.

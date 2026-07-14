@@ -34,12 +34,12 @@ Perform the following steps to configure the Scheduler by Automate trigger:
 ### When the user selects Minutes Trigger Interval
 
 Select **Minutes** from the **Trigger** **Interval** drop-down.
-- In the **Minutes** **Interval** field, enter the interval in minutes between each trigger.For example, entering **1** will schedule the trigger to run every **1** **minute**.
-- Optionally, enable the **Show** **Optional** **Fields** toggle button to view the **Metadata** field. Enter custom data that will be accessible during the automation process.
+- In the **Minutes** **Interval** field, enter the interval in minutes between each trigger.For example, entering **1** will schedule the trigger to run every **1** **minute**.![Select_Minutes_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2395d05b5a574b3e/674d77b550a1cf536bd5e4aa/Select_Minutes_Fields.png)
+- Optionally, enable the **Show** **Optional** **Fields** toggle button to view the **Metadata** field. Enter custom data that will be accessible during the automation process.![Select_Metadata_Minutes.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfd80363de9e48450/682ae3e3377d2d124623075d/Select_Metadata_Minutes.png)
 
 ### When the user selects Hours Trigger Interval
 - Select **Hours** from the **Trigger** **Interval** drop-down.
-- In the **Hours Interval** field, enter the interval in hours between each trigger.For example, entering **1** will schedule the trigger to run every **1 hour**.
+- In the **Hours Interval** field, enter the interval in hours between each trigger.For example, entering **1** will schedule the trigger to run every **1 hour**.![Select_Hours_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd3d2bf6447ca7740/674d77b5e1f08860a895e8fe/Select_Hours_Fields.png)
 - Optionally, enable the** Show Optional Fields** toggle button to view the **Trigger** **at** **Minute** and **Metadata** fields.
 
 In the **Trigger at Minute** field, enter the minute** (0–59) **past the hour when the trigger should run.
@@ -50,7 +50,7 @@ For example, setting **6** for **Hours** **Interval** and **30** for **Trigger**
 
 ### When the user selects Days Trigger Interval
 - Select **Days** from the **Trigger** **Interval** drop-down.
-- In the **Days** **Interval** field, enter the interval in days between each trigger.For example, entering **1** will schedule the trigger to run every **1 day**.
+- In the **Days** **Interval** field, enter the interval in days between each trigger.For example, entering **1** will schedule the trigger to run every **1 day**.![Select_Days_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt473520ca8d314bd1/674d77b59325fc5997f7745e/Select_Days_Fields.png)
 - Optionally, enable the **Show Optional Fields **toggle button to view the **Trigger at Hour**, **Trigger at Minute**, and **Metadata** fields.In the **Trigger at Hour** field, select the hour of the day to run the trigger, i.e., 1 am, 2 am, etc. Enter the minute** (0–59)** past the hour when the trigger should run in the **Trigger** **at** **Minute** field. In the **Metadata **field, provide the data to be accessed while the automation runs.
 
 For example, setting **2** for **Days** Interval, **9 am** for **Trigger at Hour**, and **15** for **Trigger at Minute** schedules the trigger to run **every 2 days at 9:15 am**.
@@ -64,7 +64,7 @@ For example, selecting **Monday** for **Trigger on Day of Week**, **3** **pm** f
 
 ### When the user selects Months Trigger Interval
 - Select **Months** from the **Trigger** **Interval** drop-down.
-- In the **Months** **Interval** field, enter the interval in months for the trigger.For example, entering **1** will schedule the trigger to run every **1** **month**.
+- In the **Months** **Interval** field, enter the interval in months for the trigger.For example, entering **1** will schedule the trigger to run every **1** **month**.![Select_Months_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb8b54380dfa3b0d8/674d77b53aff4e2b54d61084/Select_Months_Field.png)
 - Optionally, enable the **Show Optional Fields** toggle button to view the **Trigger at Day of Month**, **Trigger** **at** **Hour**, **Trigger** **at** **Minute**, and **Metadata** fields.In the **Trigger at Day of Month** field, enter the day of the month (1–31) for the trigger. If the day does not exist in a month, the trigger will not run (for example, **30** will **not** run in **February**).
 
 In the **Trigger** **at** **Hour** field, select the hour of the day to run the trigger, i.e., 1 am, 2 am, etc. Enter the minute **(0–59)** past the hour when the trigger should run in the **Trigger** **at** **Minute** field. In the **Metadata** field, provide the data to be accessed while the automation runs.
@@ -86,7 +86,7 @@ For example, setting **3** for **Months** **Interval**, **28** for **Trigger at 
 - Optionally, enable the** Show Optional Fields** toggle button, to display the **Metadata** field. Metadata can be utilized during the execution of automation.
 - Click the **Proceed** button.
 - Click the **Test Trigger** button to test the configured trigger.
-- Click the **Save** **and** **Exit** button.
+- Click the **Save** **and** **Exit** button.![Save_Exit_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte32b0c399ebb2156/674d77b5aafcfcb40eade7c3/Save_Exit_Button.png)
 
 **Note:** After configuring the trigger, reconfiguring another trigger will prompt you to revert to the previous trigger configuration. You can restore the last configuration by clicking the Revert Changes button.
 

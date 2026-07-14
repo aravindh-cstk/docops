@@ -31,7 +31,9 @@ This guide introduces the key concepts of variants and explains how they are cre
 Familiarize yourself with these essential terms:
 - **Personalize Project**: A [project](../../personalize/create-personalize-project.md) in Personalize allows you to manage and deliver personalized content across channels by linking it to an existing stack.
 - **Experience**: In Personalize, an [experience](../../personalize/about-experiences.md) defines and manages personalized content, A/B tests, or audience-specific variants to optimize content delivery and engagement.
-- **Variant Group**: A collection of related variants grouped for a common purpose or audience, such as location-based experiences or targeted promotions.**Note**: Each [experience](../../personalize/about-experiences.md) created in a Personalize project appears as a Variant Group in the linked stack.
+- **Variant Group**: A collection of related variants grouped for a common purpose or audience, such as location-based experiences or targeted promotions.
+
+  **Note**: Each [experience](../../personalize/about-experiences.md) created in a Personalize project appears as a Variant Group in the linked stack.
 - **Base Entry**: The original entry from which all entry variants are derived. It contains the base content that all entry variants inherit unless they are customized for a specific variant.
 - **Entry Variant**: An [entry variant](../../content-managers/entry-variants/about-entry-variants.md) is a customized version of the base entry, created to deliver personalized or scenario-specific content to different audiences.For example, a travel website could create variants like "Luxury Europe" or "Budget Adventure South America" to serve tailored content to specific regions.
 
@@ -43,15 +45,17 @@ This section outlines the process of creating experiences, defining variants, an
 - **Via Personalize**
     This section outlines the process of creating experiences, defining variants, and linking them to your stack.
 
-      **Create an Experience**: Set up an [A/B test](../../personalize/create-ab-test-experience.md) or [Segmented](../../personalize/create-segmented-experience.md) experience in Personalize to deliver content variations to different audience segments, optimizing engagement and conversions. These experiences are displayed as variant groups within the linked stacks.
+      **Create an Experience**: Set up an [A/B test](../../personalize/create-ab-test-experience.md) or [Segmented](../../personalize/create-segmented-experience.md) experience in Personalize to deliver content variations to different audience segments, optimizing engagement and conversions. These experiences are displayed as variant groups within the linked stacks.![1-Experiences.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt91d25af15baaee02/66fa902dd75ab88488acd395/1-Experiences.png)
 - **Define Variants**: Within each experience, define variants that describe the user experience. For example:
           For a Color experience, you can create variants for different colors.
-- For a Marketplace experience, create region-based variants like Asia, Europe, or North America.
-- **Linking to Stack**: Link your Personalize [project](../../personalize/create-personalize-project.md) to a stack to inherit all experiences as variant groups within that stack.
+- For a Marketplace experience, create region-based variants like Asia, Europe, or North America.![2-Variants.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6e4ac5f54f116ed8/66fa902d5a3473c28b021961/2-Variants.png)
+- **Linking to Stack**: Link your Personalize [project](../../personalize/create-personalize-project.md) to a stack to inherit all experiences as variant groups within that stack.![3-Linking to Stack.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0d69e25de5fae8ad/66fa902dc7982842788f2e98/3-Linking_to_Stack.png)
 - **Via CMS Stack**
     This method allows developers and administrators to create independent variant groups directly within the stack.
 
-      **Create a Variant Group**: Navigate to **Settings**, then **Variants**, and click **New Variant Group** to create a variant group directly in the CMS.**Note**: By default, the create variant groups button is visible only in the main branch.
+      **Create a Variant Group**: Navigate to **Settings**, then **Variants**, and click **New Variant Group** to create a variant group directly in the CMS.
+
+      **Note**: By default, the create variant groups button is visible only in the main branch.
 - **Define Variants**: Within the group, specify the variants that you want to associate with this variant group. (e.g., "Mobile," "Desktop," or "EMEA") to describe the user experience.
 - **Assign Content Types**: Select the specific content types that will use these variants.
 
@@ -64,9 +68,9 @@ This section explains how to manage variant groups to ensure personalized conten
 ## Creating Entry Variants
 
 Learn how to create and manage entry variants for personalized content delivery.
-- **Create Entry Variants**: Within the entry editor, use the “[Base Entry]” dropdown to select a variant and [create an entry variant](../../content-managers/entry-variants/create-an-entry-variant.md).
-- **Field Changes:** Only fields you update in the entry variant will display the **Variant Field** tag, while all other fields inherit data from the base entry.
-- **Versioning**: Once saved, an entry variant becomes independent of the base entry. You can [manage versions](../../content-managers/entry-variants/manage-versions-of-entry-variants.md), compare changes, or restore previous versions as needed.
+- **Create Entry Variants**: Within the entry editor, use the “[Base Entry]” dropdown to select a variant and [create an entry variant](../../content-managers/entry-variants/create-an-entry-variant.md).![5-Variants Dropdown.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc6bc13a9f017332b/66fa902cf32d377719a0717f/5-Variants_Dropdown.png)
+- **Field Changes:** Only fields you update in the entry variant will display the **Variant Field** tag, while all other fields inherit data from the base entry.![6-Variant Field Tag.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltda64baa363940823/66fa902c9f5a86238125bc47/6-Variant_Field_Tag.png)
+- **Versioning**: Once saved, an entry variant becomes independent of the base entry. You can [manage versions](../../content-managers/entry-variants/manage-versions-of-entry-variants.md), compare changes, or restore previous versions as needed.![7-Entry variant.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltce28f02e634f34b5/66fa902c80962461a07f6f22/7-Entry_variant.png)
 
 ## Publishing Entry Variants
 

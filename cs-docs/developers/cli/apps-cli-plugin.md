@@ -244,7 +244,9 @@ csdx app:deploy
 - Select a **Hosting Type**.
       If you select **Hosting with Launch**, then select from the following:
           **Existing**: Allows you to select an existing Launch project to host your app.
-- **New**: Creates a new Launch project to host your app.**Note:** When you create a new Launch project (using [GitHub](../launch/import-project-using-github.md) or [File upload](../launch/import-project-using-file-upload.md)) to host your app, you can pass the project parameters in a [config](https://github.com/contentstack/contentstack-apps-cli/blob/main/examples/create-launch-project.json) file.
+- **New**: Creates a new Launch project to host your app.
+
+  **Note:** When you create a new Launch project (using [GitHub](../launch/import-project-using-github.md) or [File upload](../launch/import-project-using-file-upload.md)) to host your app, you can pass the project parameters in a [config](https://github.com/contentstack/contentstack-apps-cli/blob/main/examples/create-launch-project.json) file.
 - If you select **Custom Hosting**, enter any custom URL to host your app.
 
 You have successfully deployed an app.

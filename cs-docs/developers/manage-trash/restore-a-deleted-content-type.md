@@ -22,10 +22,10 @@ Trash maintains a backup of all deleted content types for up to 14 days from the
 
 To restore a deleted content type from the Trash, log in to your Contentstack account, go to your stack, and perform the following steps:
 - Click the “Settings” icon (press “S”) on the left navigation panel and select **Trash **(or press “**alt + T**” for Windows OS, and “option + **T**” for Mac OS)****.
-- Click on the **Content Types** tab, and hover over the content type you want to restore (e.g. **Author Details**).
-- Click on the **Restore** button that appears at the extreme right end.
+- Click on the **Content Types** tab, and hover over the content type you want to restore (e.g. **Author Details**).![Restore_a_Deleted_Content_Type_1_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt38527d69efe7f0aa/60c0c6eef33fd90fa1ed143b/Restore_a_Deleted_Content_Type_1_no_highlight.png)
+- Click on the **Restore** button that appears at the extreme right end.![Restore_a_Deleted_Content_Type_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt33ee45531d275c61/60c0c708fbd63412d413419c/Restore_a_Deleted_Content_Type_2_highlighted.png)
 - The content type will then disappear from the Trash and will be available in the stack.
-- While restoring a content type, you can choose to restore the content type with or without the entries that were deleted with it. Select **Restore With Entries** or **Restore Without Entries** depending on your choice.
+- While restoring a content type, you can choose to restore the content type with or without the entries that were deleted with it. Select **Restore With Entries** or **Restore Without Entries** depending on your choice.![Restore_a_Deleted_Content_Type_3_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt952b753e24d2f63e/60c0c6f8f33fd90fa1ed143f/Restore_a_Deleted_Content_Type_3_no_highlight.png)
 
 ## Key Points to Remember
 

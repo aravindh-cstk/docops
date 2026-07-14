@@ -46,8 +46,8 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/).
 - In the left-hand side primary navigation, click the **Marketplace** icon to go to the Marketplace.
 - Click **Apps** from the left panel.
 - Within the Marketplace, you can see all the available apps. Hover over the **Star Ratings** app and click **Install App**.
-- In the popup window, select the stack where you want to install the Star Ratings app and click the **Install** button.
-- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.
+- In the popup window, select the stack where you want to install the Star Ratings app and click the **Install** button.![Star-Ratings-Install-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt14ca3f48d748680e/64b91a164855e93e62f996c2/Star-Ratings-Install-App.png)
+- On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Star-Ratings-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6bf516c7ef682831/65b7b1221f10e8053a4b9963/Star-Ratings-UI-Locations.png)
 
 **Note**: No additional configuration is required to use the Star Ratings app.
 
@@ -57,7 +57,7 @@ To use the Star Ratings application within an entry of your stack, follow the st
 
 Go to your stack, click the **Content Models** icon in the left navigation panel, and click the **+ New Content Type** button.
 
-- Create a content type by adding relevant details as displayed below:
+- Create a content type by adding relevant details as displayed below:![Star-Ratings-Content-Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt51f9ad58ed057d0d/64257a216a476e1187b2d128/Star-Ratings-Content-Type.png)
 - In the Content Type Builder page, add a Custom field in your content type by clicking the **Insert a field** link represented by a **+** sign.
 - Under **Select Extension/App**, select **Star Ratings**, and click the **Proceed** button.
 

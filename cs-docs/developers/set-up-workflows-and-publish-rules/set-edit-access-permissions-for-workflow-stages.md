@@ -26,7 +26,7 @@ For example, you can allow only the users with the “Release Manager” role to
 To set edit access permissions on an entry that has been moved to a particular Workflow stage, log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to your [stack](../set-up-stack/about-stack.md) and follow the below steps:
 - Click the “Settings” icon on the left navigation panel, and select **Workflows**.
 - Under the **Workflows** tab, you will see a list of existing workflows, if already created. Click on the workflow you want to update.
-- To edit settings for a specific workflow stage, click on the “Edit” icon of that stage.
+- To edit settings for a specific workflow stage, click on the “Edit” icon of that stage.![Set_Edit_Access_Permissions_for_Workflow_Stages_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltf9d484e2251c7770/60c0c5cf3fb413770446f6f1/Set_Edit_Access_Permissions_for_Workflow_Stages_1_highlighted.png)
 - Click on **Stage transition and access rules** drop-down to expand.
 - Under the **Users/roles who can edit the entry in this stage** section, select whom you want to provide edit access to (for example, **Current stage user(s)**).
 

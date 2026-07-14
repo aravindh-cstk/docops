@@ -40,7 +40,7 @@ Here's how the Automation would work:
 
   Use Transform action to Create Metadata Request Body using native file field UID data
 
-- ### Make Create Metadata CMA callMake Create Metadata CMA call against those native field asset UIDs
+- ### Make Create Metadata CMA callMake Create Metadata CMA call against those native field asset UIDs![image8.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta26498fdb21b753b/65f9affc9b2cda0bb593f2ac/image8.png)
 
 - Use Transform action to generate request Preset field Object for Entry update for adding metadata to preset fieldTransform Request Object for Entry update to migrate metadata to preset field.
 
@@ -59,9 +59,9 @@ Here's how the Automation would work:
 }
 ```
 
-- Use the Update Entry action to add Preset image data in the custom preset app fieldUpdate Entry with Preset image data in the custom preset app field
+- Use the Update Entry action to add Preset image data in the custom preset app fieldUpdate Entry with Preset image data in the custom preset app field![image5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9f542aa9607eb542/65f9affb7a44b0fdf154aaed/image5.png)
 
-- Enable Throttle Execution toggle in Automation SettingWhile setting up Automate Enable Throttle Execution toggle to throttle automation's executions to help stay within API rate limits while performing bulk update operations on Entries.
+- Enable Throttle Execution toggle in Automation SettingWhile setting up Automate Enable Throttle Execution toggle to throttle automation's executions to help stay within API rate limits while performing bulk update operations on Entries.![image4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4aab3adfbed113e4/65f9affbba94f019447cfe9c/image4.png)
 
 - Verify Migration of Preset data in entriesMigration of native image field to preset app field completes
 

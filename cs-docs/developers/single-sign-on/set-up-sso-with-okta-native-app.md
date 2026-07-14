@@ -37,27 +37,27 @@ Let’s see each of the processes in detail.
 
 ## Create SSO Name and ACS URL in Contentstack
 
-Log in to your [Contentstack account](https://www.contentstack.com/login/), go to the **Organization Settings** page and click on the **SINGLE SIGN-ON** tab.
+Log in to your [Contentstack account](https://www.contentstack.com/login/), go to the **Organization Settings** page and click on the **SINGLE SIGN-ON** tab.![SSO_Okta_-_SSO_in_Contentstack_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3f5bcc6c065a73c6/6561aea239941742e4b48abc/SSO_Okta_-_SSO_in_Contentstack_App.png)
 - Enter an **SSO name** of your choice, and click **Create**. For example, if your company name is “Acme, Inc.” enter “acme” here. This name will be used as one of the login credentials by the organization users while signing in and cannot be editable later on.
 
 **Note:** The SSO Name can contain only alphabets (in lowercase), numbers (0-9), and/or hyphens (-).
 
 Let's use “sso-test” as the **SSO Name**.
-- This will generate **Assertion Consumer Service (ACS) URL** and other details such as **Entity ID**, **Attributes** and **NameID** Format. These details will be used in [Step 2](#configure-contentstack-app-in-okta) for configuring the Contentstack app in Okta.
+- This will generate **Assertion Consumer Service (ACS) URL** and other details such as **Entity ID**, **Attributes** and **NameID** Format. These details will be used in [Step 2](#configure-contentstack-app-in-okta) for configuring the Contentstack app in Okta.![SSO_Okta_-_Assertion_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltef8d7fc1c3eef788/6561aa52dd3986449a143c2d/SSO_Okta_-_Assertion_URL.png)
 
 Keep this window open, as you may need these details for setting up the Contentstack app in Okta.
 
 ## Configure Contentstack App in Okta
 
-Log in to your Okta Admin account.
-- After logging in, you will see the Okta dashboard. Click on the **Application** tab and select **Applications**.
-- In the **Applications** page, you will see your already created applications, if any.
-- Click the **Browse App Catalog** to set up an application for Contentstack.
-- Search for “Contentstack” within the **Browse App Integration Catalog** section and select the **Contentstack** app.
-- You will be redirected to the **Contentstack** application. Click on the **Add Integration** button.
-- You can edit the **Application label** as per your preference and click on **Done**.
-- You will be redirected to the application’s configuration page. Locate the **Sign On** tab and click the **Edit** button.
-- In the **Settings** section expand **Attributes** to add any additional attributes (Optional).
+Log in to your Okta Admin account.![SSO_Okta_-_Okta_Login_page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4fc8cf555fcf67fd/6561aea2d5954944e1b656ec/SSO_Okta_-_Okta_Login_page.png)
+- After logging in, you will see the Okta dashboard. Click on the **Application** tab and select **Applications**.![SSO_Okta_-_Okta_Application.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd1b9f58b570137cb/6561aea3ec79944e1a968203/SSO_Okta_-_Okta_Application.png)
+- In the **Applications** page, you will see your already created applications, if any.![SSO_Okta_-_created_applications.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb0249809a1d5090e/6561aa516a1419639b41556b/SSO_Okta_-_created_applications.png)
+- Click the **Browse App Catalog** to set up an application for Contentstack.![SSO_Okta_-_browse_app_catalog.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7ddfa6074090a76a/6561aa51efd9ef732bb815e1/SSO_Okta_-_browse_app_catalog.png)
+- Search for “Contentstack” within the **Browse App Integration Catalog** section and select the **Contentstack** app.![SSO_Okta_-_App_Integration_catalog.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1393142028eba70e/6561ae932d2f23c97ef3c44c/SSO_Okta_-_App_Integration_catalog.png)
+- You will be redirected to the **Contentstack** application. Click on the **Add Integration** button.![SSO_Okta_-_Add_Integration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdfbd5853738316f5/6561ae9336b5457125cd694f/SSO_Okta_-_Add_Integration.png)
+- You can edit the **Application label** as per your preference and click on **Done**.![SSO_Okta_-_Add_app_in_Okta.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt271c7bc80290af42/6561ae9352b29bd0fc5bff39/SSO_Okta_-_Add_app_in_Okta.png)
+- You will be redirected to the application’s configuration page. Locate the **Sign On** tab and click the **Edit** button.![SSO_Okta_-_Sign_On_in_Okta.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt57cb1956541d0781/6561aea3df4282512a2eedd8/SSO_Okta_-_Sign_On_in_Okta.png)
+- In the **Settings** section expand **Attributes** to add any additional attributes (Optional).![SSO_Okta_-_Attributes.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt83dfe2710537790a/6561aea20a03adb4c239a09d/SSO_Okta_-_Attributes.png)
 - Optionally, you can create role mapping. To do this, in the **Group Attribute Statements (Optional)** section, enter the following:
 
 For Name, enter “roles” Name.
@@ -66,7 +66,7 @@ For Name, enter “roles” Name.
 - This will retrieve all the groups that start with "contentstack".
 
 **Note:** Perform this step only if you want to enable [IdP Role Mapping](./idp-role-mapping.md).
-- In the **Advance Sign-On** Settings, enter the following details:
+- In the **Advance Sign-On** Settings, enter the following details:![SSO_Okta_-_Update_app_username.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdd16a76b439992ea/6561aa5cf415048279125477/SSO_Okta_-_Update_app_username.png)
 
 **Assertion Consumer Service URL**: Enter the Assertion Consumer Service (ACS) URL that you created in Contentstack in [Step 1](#create-sso-name-and-acs-url-in-contentstack).
 - **Entity ID**: Enter the Entity ID of Contentstack, from [step 1](#create-sso-name-and-acs-url-in-contentstack), typically represented as `https://app.contentstack.com`.
@@ -76,9 +76,9 @@ For Name, enter “roles” Name.
 
 ## Configuring Okta details in Contentstack
 
-In Okta, click the **Sign On** tab of the application that you created in [Step 2](#configure-contentstack-app-in-okta) and then click **More details**.
-- Copy the **Sign-On URL** and Download the Certificate.
-- Go to the **Contentstack Single Sign-On** settings page, and locate the **IdP Configuration** tab. Enter the Sign-On URL that you copied in the previous step in the **Single Sign-on URL** field.
+In Okta, click the **Sign On** tab of the application that you created in [Step 2](#configure-contentstack-app-in-okta) and then click **More details**.![SSO_Okta_-_More_details.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1588ae11bbcbd0ec/6561aa5204116d6d7329e9e9/SSO_Okta_-_More_details.png)
+- Copy the **Sign-On URL** and Download the Certificate.![SSO_Okta_-_Sign-On-URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8614ef2e0d340267/6561aa5181b93e6837a19fcb/SSO_Okta_-_Sign-On-URL.png)
+- Go to the **Contentstack Single Sign-On** settings page, and locate the **IdP Configuration** tab. Enter the Sign-On URL that you copied in the previous step in the **Single Sign-on URL** field.![SSO_Okta_-_SSO_URL_in_contentstack.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5be9008db078a675/6561aeadec79943902968207/SSO_Okta_-_SSO_URL_in_contentstack.png)
 - Upload the X.509 certificate that you downloaded from Okta, into the **Certificate** field in the **2 IdP Configuration** section in Contentstack.
 
 That’s it! Now, let’s see how to assign your Contentstack application to your users in Okta.
@@ -89,7 +89,7 @@ After setting the necessary configurations in Contentstack, you need to now assi
 
 ### Add application to users
 
-Go to the **Assignments** tab of your application,click the **Assign** dropdown, and select **Assign to People**.
+Go to the **Assignments** tab of your application,click the **Assign** dropdown, and select **Assign to People**.![SSO_Okta_-_Assign_to_people.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt883f28322a9ee62d/6561aa517c56dd1561a5f876/SSO_Okta_-_Assign_to_people.png)
 - You will get a list of registered users to whom you need to assign your application. Click the **Assign** button beside the user to whom you want to assign the application, and click **Done**.
 - Also, you may use multiple applications assignments available under **Applications > Assign applications** menu.
 
@@ -103,7 +103,7 @@ But, if you want to perform IdP Role Mapping and allow user groups to directly l
 
 [IdP Role Mapping](./idp-role-mapping.md) is an alternate way of managing users and permissions of your SSO-enabled organization. This feature allows you to map your IdP roles to Contentstack roles while configuring SSO for your organization.
 
-Go to the **Assignments** tab of your application, click the **Assign** dropdown in the application details section, and select **Assign to Groups**.
+Go to the **Assignments** tab of your application, click the **Assign** dropdown in the application details section, and select **Assign to Groups**.![SSO_Okta_-_Assign_to_group.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt77f3539a3122545a/6561aa516f7bf45ce582e3ed/SSO_Okta_-_Assign_to_group.png)
 - You will see a list of registered groups. Click the **Assign** button beside the group(s) to which you need to assign your application. Click **Done**.
 
 You can now proceed to create role mappings in Contentstack for the IdP roles you created. Go to the **3. User Management** section of your Contentstack SSO settings and perform [Step 5](#create-role-mappings-in-contentstack).
@@ -138,7 +138,7 @@ Before enabling SSO, it is recommended that you test the SSO settings configured
 
 Click the **Test SSO** button and it will take you to Contentstack’s **Login Via SSO** page, where you need to specify your organization’s SSO name.
 - Then, click **Continue** to go to your IdP sign in page.
-- Sign in to your account. If you are able to sign in to your IdP, your test is successful. On successful connection, you will see a success message as follows:
+- Sign in to your account. If you are able to sign in to your IdP, your test is successful. On successful connection, you will see a success message as follows:![SSO_Okta_-_SSO_test_successful.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb3dd7ab0ba265069/6561aead94e6c934b021521e/SSO_Okta_-_SSO_test_successful.png)
 - But, if you have enabled IdP Role Mapping, you’ll find the following details in a new page:
 
 **SSO connection established successfully** - A success message is displayed.
@@ -150,16 +150,16 @@ Click the **Test SSO** button and it will take you to Contentstack’s **Login V
 
 ### Enable SSO
 
-Once you have tested your SSO settings, click **Enable SSO** to enable SSO for your Contentstack organization.
+Once you have tested your SSO settings, click **Enable SSO** to enable SSO for your Contentstack organization.![SSO_Okta_-_Enable_SSO.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8316d576464f993b/6561aea294e6c94ce521521a/SSO_Okta_-_Enable_SSO.png)
 - Confirm your action by clicking on **Yes**.
-- Once this is enabled, users of this organization can access the organization through SSO. If needed, you can always disable SSO from this page as well.
+- Once this is enabled, users of this organization can access the organization through SSO. If needed, you can always disable SSO from this page as well.![SSO_Okta_-_Disable_SSO.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbd5003282e05d67b/6561aa5c41d574aab2c7ed2b/SSO_Okta_-_Disable_SSO.png)
 
 ## Log In via SSO
 
 To log in to Contentstack via sso, perform the steps given below:
-- Go to the [Contentstack App](https://app.contentstack.com/#!/login) and click the **Via SSO** button.
+- Go to the [Contentstack App](https://app.contentstack.com/#!/login) and click the **Via SSO** button.![SSO_Okta_-_Login_via_SSO.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4e4ba02739cb0ca2/6561aa52dd3986d50a143c29/SSO_Okta_-_Login_via_SSO.png)
 - Enter your **SSO Name** (created in step 1.2).
-- Click on **Log In**.
+- Click on **Log In**.![SSO_Okta_-_App_login_page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9966a190d76e8a45/6561aa5041d5746e56c7ed27/SSO_Okta_-_App_login_page.png)
 
 ## Common questions
 

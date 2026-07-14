@@ -31,7 +31,9 @@ For example, an e-commerce team updates the **Color** taxonomy by reorganizing i
 To publish a taxonomy, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 - Go to your [stack](../developers/set-up-stack/about-stack.md) where you want to publish a taxonomy, navigate to **Settings**, and select **Taxonomy**.
 - Open the taxonomy you want to publish and click **Publish**.
-- In the **Publish Taxonomy** modal, select the **Branch**, **Environments**, and **Locales**.**Note:** Taxonomy is a global module. However, when publishing, selecting a branch determines the fallback hierarchy of the selected locales in that branch.
+- In the **Publish Taxonomy** modal, select the **Branch**, **Environments**, and **Locales**.
+
+  **Note:** Taxonomy is a global module. However, when publishing, selecting a branch determines the fallback hierarchy of the selected locales in that branch.
 - Choose **Now** to publish immediately or **Later** to schedule the publication.
 - Click **Send** to confirm the publishing.
 

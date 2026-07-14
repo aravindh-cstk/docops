@@ -23,7 +23,7 @@ To move or reorder terms within a taxonomy, log in to your [Contentstack account
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to edit the terms, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Select the taxonomy for which you want to move or reorder the terms.
 - To rearrange the terms, hover over it, then drag and drop it to your desired position. After placing the term, click **Move** in the confirmation popup modal that appears.To relocate a term as a parent term, use drag and drop when you see a guiding line.
-- To place the term as a child term, simply drag and drop it when a box appears.
+- To place the term as a child term, simply drag and drop it when a box appears.![Move_Reorder_a_Term_to_Child_Level.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt152b7b1db4ae0702/6916371c9caebf07143c5cd8/Move_Reorder_a_Term_to_Child_Level.gif)
 
 ## API Reference
 To move and reorder terms via API, refer to the [Move/Reorder a Term](../../../api-docs/api-detail/content-management-api.md#move-reorder-a-term) API request.

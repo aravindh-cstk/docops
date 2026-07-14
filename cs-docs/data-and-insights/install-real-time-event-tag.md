@@ -28,7 +28,7 @@ Follow the steps to install the Lytics tag using Google Tag Manager:
 - From the left-hand navigation, navigate to **Data Pipeline > SDK > Web SDK **in the Lytics app.
 - [Setup and install](https://support.google.com/tagmanager/answer/6103696?hl=en) Google Tag Manager if it's not already configured.
 - Create a new [Custom HTML](https://support.google.com/tagmanager/answer/6107167?hl=en) tag and paste the Lytics JavaScript snippet into the tag’s content box.
-- Configure the tag to trigger on the appropriate pages. We recommend using the **All Pages** default trigger to start.
+- Configure the tag to trigger on the appropriate pages. We recommend using the **All Pages** default trigger to start.![image1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9a259aeff4760f97/68381796e7e410bcf3ce427f/image1.png)
 - Submit and [publish](https://support.google.com/tagmanager/answer/6107163?hl=en) your Google Tag Manager version.
 
 ## Testing the Lytics Tag Installation
@@ -41,7 +41,7 @@ Lytics provides a simple tool to confirm that data is flowing into your account.
 - Select **Vault** using the product switcher at the top left.
 - Navigate to **Setup > JavaScript Tag **from the left-hand menu.
 - At the bottom of the page, click the Refresh button to validate the installation.
-- Setup click the **refresh** button to validate installation if it does not already state **Successfully installed**.
+- Setup click the **refresh** button to validate installation if it does not already state **Successfully installed**.![image2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9cd34bb25a7cb252/6838179688c3a02feb01030b/image2.png)
 
 ## Lytics Web SDK (JStag)
 

@@ -24,7 +24,7 @@ To edit an Environment, log in to your [Contentstack account](https://www.conten
 - Go to your [stack](../set-up-stack/about-stack.md) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 - Navigate to **Environments** or use the “alt + E” shortcut key for Windows and “option + E” for Mac OS.
 - Click the vertical ellipsis icon next to an environment in the **Actions** menu and select **Edit**.
-- Update the details in the **Edit Environment** modal and click **Save**.
+- Update the details in the **Edit Environment** modal and click **Save**.![Edit Environment modal with fields to update environment details](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt229bd80a997e55f2/67dd59ada71458fdd9b9b33e/1-Edit-an-Environment-gif.gif)
 
 **Note:** You can use [Webhooks](../set-up-webhooks/about-webhooks.md) to trigger deployments to multiple servers when you publish content.
 

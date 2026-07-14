@@ -59,7 +59,7 @@ For this example you can add **French (fr)** and **German (de) **as two addition
 - Goto the **Global Fields **section of your stack and[ import the global field](../global-field/import-a-global-field.md) file(in our example it is **Locale Field**) with a select field defined within it.
 This global field will display and let you select AWS supported languages in the field of your entry.
 - Now,[ import the content type](../create-content-types/import-a-content-type.md) file which we downloaded in the earlier step. After importing the content type file, [add the global field](../global-field/add-the-global-field-to-content-types.md) (**Locale Field**) to your **AWS Translate** content type.
-After adding the global field to your content type, it should look similar to the one given below:
+After adding the global field to your content type, it should look similar to the one given below:![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt5d4491c134bc420c/616e49e063aa5d04fc45607d/image.png)
 
 Once you have these configured, then you're ready to begin the integration process for translation.
 
@@ -69,8 +69,8 @@ To set up workflows for the translation process within Contentstack, follow the 
 Click on the “Settings” icon (press “S”) on the left navigation panel and select **Workflows **(press “alt + F” for Windows OS, and “option + F” for Mac OS).
 - Click on **+ New Workflow**.
 - Add stages, as required. Add a translation-related stage, such as **Send to Translation**.
-- Once the editor changes the workflow stage to “Send to Translation,” the webhook will be triggered and call the AWS Lambda function.
-- Now go to the Workflow Settings page and note down the WORKFLOW ID that we just created as shown below (we will need this ID later when we make Postman call to retrieve the ID of the Review stage):
+- Once the editor changes the workflow stage to “Send to Translation,” the webhook will be triggered and call the AWS Lambda function.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc01b35af53ad75ff/6181243a8f1ef36f628cbe85/image.png)
+- Now go to the Workflow Settings page and note down the WORKFLOW ID that we just created as shown below (we will need this ID later when we make Postman call to retrieve the ID of the Review stage):![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3e0be1cdbefa1ca1/6181253f07a3a40cd7f0e29a/image.png)
 - We will need the UID of the Review stage. To get the UID of the “Review” stage, open [Postman](https://www.postman.com/downloads/) or any other API collaboration & development platform and make a GET request on the following URL, enter the Workflow ID at the end of the URL:
 
 https://api.contentstack.io/v3/workflows/{YOUR WORKFLOW UID}
@@ -87,8 +87,10 @@ Login to your [AWS Management Console](https://signin.aws.amazon.com/signin?redi
 - Click on the **Create function** button.
 - AWS Lambda offers an inline code editor. Scroll down to the **Code source** section, click on the **Upload from** dropdown menu, select the **.zip file** option, and upload the** index.zip **file that you downloaded in step 1.
 - Keep **Handler** as **index.handler** and click on **Save**.
-- Navigate to** General Configuration** section under **Configuration **tab, click on the **Edit **button and set the **Memory **to** 524 **MB. Also, set the **Timeout** time as **5 min 3 sec **as shown below.
-- To add environment variables, go to the **Configuration** tab, click on **Environment variables**, and then the **Edit** button. Add the following environment variables:**Note**: For the EU region, change the base URL to `https://eu-api.contentstack.com/.` Similarly, for Azure NA, change the base URL to `https://azure-na-api.contentstack.com/`, and for Azure EU, change the base URL to `https://azure-eu-api.contentstack.com/`.
+- Navigate to** General Configuration** section under **Configuration **tab, click on the **Edit **button and set the **Memory **to** 524 **MB. Also, set the **Timeout** time as **5 min 3 sec **as shown below.![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt7ddf04cb513ceff2/6178e145c05249199df1948e/image.png)
+- To add environment variables, go to the **Configuration** tab, click on **Environment variables**, and then the **Edit** button. Add the following environment variables:![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltdc1da45aaaaf7d3b/616e3dbd63aa5d04fc456059/image.png)
+
+  **Note**: For the EU region, change the base URL to `https://eu-api.contentstack.com/.` Similarly, for Azure NA, change the base URL to `https://azure-na-api.contentstack.com/`, and for Azure EU, change the base URL to `https://azure-eu-api.contentstack.com/`.
 - Once you have added these environment variables, click on **Save**.
 - With these steps, we have set up our lambda function. Let's now move ahead with creating an API gateway. Scroll up to the **Function overview** section and click on the **+ Add trigger** button. From the **Trigger configuration** dropdown menu, select the **API Gateway** option.
 - Then, from the **API **dropdown menu, select **Create an API** option. Select **API type **as **REST API**, keep **Security **as **Open**, and click **Add**.
@@ -108,7 +110,7 @@ Click “Settings” (or press “S”) and select **Webhooks **(press “alt + 
 - Inside **Custom Headers**, add the **workflow stage UID** which we got through Postman.Note: In the **Custom Headers** section, we have named the **workflow stage UID** as **workflow_uid** as shown in the image below.
 - Within **Stack-Level Scope**, specify conditions for creating, deleting, assigning, or unassigning branches, branch aliases, taxonomy or terms.
 - In the **Branch-Level Scope** section, select the branch for which this webhook is applicable and configure trigger conditions for the specific branch.
-- In the **Conditional View** section, select the options **Any **> **Entry** > **All** > **Workflow Stage Changed** > (Workflow name) > (Stage name for example, "Send for Translation").
+- In the **Conditional View** section, select the options **Any **> **Entry** > **All** > **Workflow Stage Changed** > (Workflow name) > (Stage name for example, "Send for Translation").![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb0f8b639c431c331/616e3e338c0420102514f64b/image.png)
 - Click **Save** to create the webhook.
 - This will configure your webhook to trigger when workflow stage is changed to “Send for Translation”, like in the above workflow example. As soon as the webhook is triggered, it notifies the specified URL about the event along with a JSON payload.****
 
@@ -117,8 +119,10 @@ Goto the **AWS Translate **entry that you created in step 1, and add content to 
 - Navigate to the global field and add AWS languages to the select field (**Locale Field **in our example**).******We have selected **French (fr)** and **German (de) **from the AWS languages displayed via the select field.
 ****
 - Now select the language that you added to your stack, using the language selector option located on the top-right corner of the page.
-- Now, goto your default language and change the workflow to  “Send for Translation", and from the language selector dropdown select the localized language in which you want to translate your content.
-- **Additional Resource:** Though we don't provide translation, we do provide the ability to integrate with third-party translation providers that will translate content for you. All you need to do is make use of Contentstack workflows and set up a webhook trigger to initiate the translation process. Use any popular translation tool, such as Worldserver and iLangl, to translate your content. Here's our [Manage Content Translation in Contentstack](/docs/developers/how-to-guides/manage-content-translation-in-contentstack) guide that gives a detailed explanation of how you can do all of this.
+- Now, goto your default language and change the workflow to  “Send for Translation", and from the language selector dropdown select the localized language in which you want to translate your content.![AWS2_(1).gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt611af6d298ea9b4b/61813197a61df875c3459a99/AWS2_(1).gif)
+- 
+
+  **Additional Resource:** Though we don't provide translation, we do provide the ability to integrate with third-party translation providers that will translate content for you. All you need to do is make use of Contentstack workflows and set up a webhook trigger to initiate the translation process. Use any popular translation tool, such as Worldserver and iLangl, to translate your content. Here's our [Manage Content Translation in Contentstack](/docs/developers/how-to-guides/manage-content-translation-in-contentstack) guide that gives a detailed explanation of how you can do all of this.
 
 ## Title
 

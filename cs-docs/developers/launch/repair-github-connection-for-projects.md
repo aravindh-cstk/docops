@@ -50,16 +50,16 @@ If you are experiencing any of the below issues or errors while trying to repair
 
 - **Git provider OAuth app is uninstalled. Please reconnect the git provider OAuth app before proceeding with the repair**:  
   “Contentstack Launch” app is uninstalled in GitHub. Follow these steps to install the GitHub app and repair the connection:
-  - **Return** to the Create New Project modal and **disconnect** the existing connection.
+  - **Return** to the Create New Project modal and **disconnect** the existing connection.![Launch_RepairGitHub_Disconnect.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt468b783e00413402/66ed2664012ab082ab1eb834/Launch_RepairGitHub_Disconnect.png)
   - Now establish a new connection to the GitHub app by **reconnecting** it.
   - **Log in** to GitHub.
-  - In the GitHub authorization screen that appears in a modal, select **All repositories**, then click the **Install & Authorize** button.
+  - In the GitHub authorization screen that appears in a modal, select **All repositories**, then click the **Install & Authorize** button.![Launch_RepairGitHub_Install_Authorize.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt399a2145268d7dfc/66ed2664f8d2a9c99c14e6d3/Launch_RepairGitHub_Install_Authorize.png)
   - Now proceed with Repair Connection.
 
 - **Please add the repository to the git provider OAuth app before proceeding with the repair**:  
   You are attempting to access a repository that is not accessible. Follow these steps to grant access to the required repository:
   - Click [here](https://github.com/settings/installations) to navigate to the **Applications** page in GitHub and click **Configure** next to the app that is currently installed.
-  - In the **Repository access** section, select the required repository from **Only select repositories**, or select **All repositories**, and then click **Save**.
+  - In the **Repository access** section, select the required repository from **Only select repositories**, or select **All repositories**, and then click **Save**.![Launch_RepairGitHub_RepoAccess.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc9fc5d2ea51dc58d/66ed266434293733a6a17876/Launch_RepairGitHub_RepoAccess.png)
   - Now proceed with Repair Connection.
 
 ## Common questions

@@ -31,18 +31,18 @@ Voice Profiles allows you to define unique AI-generated brand voices that you ca
 ## Steps for Execution
 
 To create a Voice Profile in Brand Kit, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
-- In the left navigation panel, click the **Brand Kit** icon.
-- Select the **Brand Kit** in which you want to create a Voice Profile.
+- In the left navigation panel, click the **Brand Kit** icon.![1-Brand-Kit-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2793aa12bafb2903/6656329d02c997c334b84fcb/1-Brand-Kit-Icon.png)
+- Select the **Brand Kit** in which you want to create a Voice Profile.![2-Select-Brand-Kit-For-Voice-Profile](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbb43ce190ec9f497/665652cd2da50d0727473afd/2-Select-Brand-Kit-For-Voice-Profile.png)
 - You will be navigated to the **Voice Profile** landing page. If there are any Voice Profiles already created, they will appear here. To create a new one, click the **+ New Voice Profile** button and select **Add Manually**.  
-  **Additional Resource**: To import the Voice Profile, refer to the [Import a Voice Profile](./import-a-voice-profile.md) document
+![3-Click-+-New-Voice Profile](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2b98f792d543302e/687fb4f5febffa33c9528bf3/3-Click-_-New-Voice_Profile.png)  **Additional Resource**: To import the Voice Profile, refer to the [Import a Voice Profile](./import-a-voice-profile.md) document
 
 ### Create a Voice Profile
 
 On the **Create Voice Profile** page, enter the following details:
 
 - **Voice Profile Name** (required): Enter a suitable name for your Voice Profile.
-- **Description** (optional): Enter an appropriate Voice Profile description.
-- **Communication Style Mixer**: The Communication Style Mixer is a critical element of your brand identity, defining how your organization interacts with customers. In this section, you can set the following parameters:
+- **Description** (optional): Enter an appropriate Voice Profile description.![4-Create-Voice-Profile-Name-And-Description](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc7e8d1bdf2c12676/665652f61f92d13c162804df/4-Create-Voice-Profile-Name-And-Description.png)
+- **Communication Style Mixer**: The Communication Style Mixer is a critical element of your brand identity, defining how your organization interacts with customers. In this section, you can set the following parameters:![5-Create-Voice-Profile-Communication-Style-Mixer](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt623be74270db84ed/665652fc20b6e04e62facf15/5-Create-Voice-Profile-Communication-Style-Mixer.png)
   - **Formality Level**: You can set the formality level from **None**, **Casual**, **Business**, to **Professional**. Let’s discuss in detail:
     - **None**: Generic content without any specifications
     - **Casual**: Uses an informal but engaging tone that makes content more compelling.**Example**: "It’s true, nobody really enjoys grocery shopping. Here's five ways to make it less painful."
@@ -63,7 +63,7 @@ On the **Create Voice Profile** page, enter the following details:
     - **Plain**: Uses everyday words that are clear and understandable to a broad audience.**Example**: "Turn on the device and follow the on-screen instructions."
     - **Straightforward**: Employs clear communication, potentially including industry-specific terms relevant to the target audience.**Example**: "The ROI of this investment is significant."
     - **Technical**: Leverages advanced concepts and specialized vocabulary for audiences with prior knowledge.**Example**: "The software leverages machine learning algorithms for optimization."
-- **Custom Details**: Custom Details includes two entities: **Insights** and **Sample Content**:
+- **Custom Details**: Custom Details includes two entities: **Insights** and **Sample Content**:![6-Create-Voice-Profile-Custom-Details](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta43340d766df8275/66565303cac129fb3a4b07a8/6-Create-Voice-Profile-Custom-Details.png)
   - **Insights**: Insights are the additional information that you can provide to the AI model.**Example**: Monitor industry trends, experiment with new content formats and strategies, incorporate ethical AI practices.
   - **Sample Content**: You can provide sample content to your Voice Profile to generate similar content in action.**Example**: Navigating the AI Landscape: Essential Insights for Aspiring Bloggers. Explore the fundamentals of AI, uncover your niche, leverage AI tools, engage with the community, and address ethical considerations to succeed as an AI blogger.
 
@@ -74,18 +74,18 @@ Playground lets you experiment with prompts to test and refine your Voice Profil
 - **Enable Knowledge Vault**: Enable this button to generate content through the Knowledge Vault.
 - **Enter Prompt**: Enter your topic or content idea into the **Provide Prompt** field.
 - **Generate Response**: Click the **Generate Response in Playground** button to generate the content.  
-  The content generation initiated in the right side **Playground** panel.
-- **Stop Content Generation** (optional): Click **Stop Generating Response** option to halt the process.
-- **View/Hide Response**: Use the highlighted icon, to toggle the response display.
-- **Regenerate or Copy Generated Content**: After the content is generated, you can see two options:
+  ![7-Playground](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7afe86d11c7bb0fc/66d8ac181be6e16206246a6b/7-Playground.png)The content generation initiated in the right side **Playground** panel.![8-Playground-Panel](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdaf864ab5f0a401c/66d8ac1896357f332bfd31d1/8-Playground-Panel.png)
+- **Stop Content Generation** (optional): Click **Stop Generating Response** option to halt the process.![9-Playground-Stop-Generating-Response](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt624902504d954ff3/66d8ac18661b345fc0b36cf5/9-Playground-Stop-Generating-Response.png)
+- **View/Hide Response**: Use the highlighted icon, to toggle the response display.![10-Playground-Icon](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc781513ca1ced287/66d8ac1926adee0692f69c32/10-Playground-Icon.png)
+- **Regenerate or Copy Generated Content**: After the content is generated, you can see two options:![11-Playground-Regenerate-And-Copy](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4c7020adfb1e48e5/66d8ac19d742976ae6623069/11-Playground-Regenerate-And-Copy.png)
   - **Regenerate**: This option allows you to regenerate the content.
   - **Copy**: Copy the content to clipboard and use it further if required.
-- **Clear Prompt**: Click **Clear Prompt** to start a new prompt.
+- **Clear Prompt**: Click **Clear Prompt** to start a new prompt.![12-Playground-Clear-Prompt](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt087a8f2c8b2e27cc/66d8ac1964f9c8d690a73803/12-Playground-Clear-Prompt.png)
 
 **Warning**: The generated content will not be saved in the history and will be cleared once you click the **Save** button.
 
 - Once you have added these details to your Voice Profile, click **Save**.  
-  You will get a success message after the Voice Profile is created. You can view its details by clicking the **Information** icon on the right-side navigation panel.
+  ![13-Save-Voice-Profile](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt54d8c06e9046551b/66d8ac19a2a54f1297fd9493/13-Save-Voice-Profile.png)You will get a success message after the Voice Profile is created. You can view its details by clicking the **Information** icon on the right-side navigation panel.![14-View-Voice-Profile](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt115768431b0cad08/66d8ac19250400fb8bf529bb/14-View-Voice-Profile.png)
 
 **Additional Resource**: To generate content specifically in the entry’s [fields](../../developers/create-content-types/about-fields.md), refer to the [AI Assistant with Brand Kit](../../developers/marketplace-apps/ai-assistant-with-brand-kit.md) documentation.
 

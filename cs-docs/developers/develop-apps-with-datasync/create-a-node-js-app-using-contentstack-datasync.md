@@ -95,7 +95,9 @@ module.exports = config
 You need to specify the path inside the `baseDir` parameter. This is the location from where your synced data will be fetched.
 
 - **Create an example web page “about”**  
-  Let's consider you are creating an 'about' web page. Import the 'about' content type and its entry from the `schemaNentries` folder to your stack. Also, import the content type and entries of header and footer to your stack.**Additional Resource**: To import data into Contentstack, refer to the [Import an Entry](../../content-managers/author-content/import-an-entry.md) and [Import a Content type](../create-content-types/import-a-content-type.md) section.
+  Let's consider you are creating an 'about' web page. Import the 'about' content type and its entry from the `schemaNentries` folder to your stack. Also, import the content type and entries of header and footer to your stack.
+
+  **Additional Resource**: To import data into Contentstack, refer to the [Import an Entry](../../content-managers/author-content/import-an-entry.md) and [Import a Content type](../create-content-types/import-a-content-type.md) section.
 
 **Create an “about” page**  
 Inside the `routes` folder, create an `about.js` file, and copy-paste the following code in the file:

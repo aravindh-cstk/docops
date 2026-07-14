@@ -23,7 +23,9 @@ To create a term, log in to your [Contentstack account](https://www.contentstack
 - Go to your [stack](../set-up-stack/about-stack.md) where you want to create a term, navigate to the “Settings” icon (press “S”), and select **Taxonomy**.
 - Create a new taxonomy or select an existing taxonomy in which you want to create terms.
 - Click the **Add Term** button.
-- Enter the **Name** for the term. Contentstack auto-generates a **Unique ID**, which you can edit before saving.**Note**: Once saved, you cannot change the UID.
+- Enter the **Name** for the term. Contentstack auto-generates a **Unique ID**, which you can edit before saving.
+
+  **Note**: Once saved, you cannot change the UID.
 - Click the **Save** button to save the term within your taxonomy.
 - To add another term at the parent level, click **Add Term** and enter the details for the new term. You can also create a sibling term by clicking the vertical ellipsis next to an existing term and selecting **Create Sibling**.
 - To create a nested term within a parent term, click the vertical ellipsis next to that term and select **Create Child**, then enter the details for the child term.

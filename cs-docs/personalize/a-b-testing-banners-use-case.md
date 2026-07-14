@@ -44,7 +44,7 @@ Without testing, launching the new text is a gamble, risking thousands of impres
 You are a software company that has just released a game-changing new feature and needs to drive trial signups. You have crafted two distinct banners to promote it.
 
 - **Variant A:** "Start Free Trial" (A direct, practical call to action)
-- **Variant B:** "See How It Works" (A message that promises insight and value)
+- **Variant B:** "See How It Works" (A message that promises insight and value)![image3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt372afc5015103c62/690302e9ad5530c3670d1759/image3.png)
 
 You cannot afford to waste a single potential lead, but you have no way of knowing which message will convert more visitors into users. You can create an A/B test to split the traffic to your website 50/50, and see which variant leads to more trial sign ups in the first two weeks.
 
@@ -85,7 +85,9 @@ Contentstack Personalize makes A/B testing banners simple and effective:
 
 ### Personalize - Create a Project connected to your Stack
 
-- Navigate to App Switcher → Personalize → + New Personalize Project**Additional Resource:** For more information, refer to [Create a Personalize Project.](./create-personalize-project.md)
+- Navigate to App Switcher → Personalize → + New Personalize Project
+
+  **Additional Resource:** For more information, refer to [Create a Personalize Project.](./create-personalize-project.md)
 
 ### Personalize - Create Experience with Variants
 
@@ -94,7 +96,9 @@ Contentstack Personalize makes A/B testing banners simple and effective:
 - Save General Details.
 - Configure the experience with two variants in the **Configuration** tab.
 - In Variant Distribution, choose **Equally split (50/50)** or adjust percentages (**Custom**) if needed.
-- Click **+ Add Variant** to create **Variant A** and **Variant B**. Name the variants based on your use case (for example, for a sale campaign, use Control and Evocative Variant).**Additional Resource:** For more information, refer to [Create an A/B Test Experience.](./create-ab-test-experience.md)
+- Click **+ Add Variant** to create **Variant A** and **Variant B**. Name the variants based on your use case (for example, for a sale campaign, use Control and Evocative Variant).
+
+  **Additional Resource:** For more information, refer to [Create an A/B Test Experience.](./create-ab-test-experience.md)
 
 ### Personalize - Define Conversion Event
 
@@ -104,9 +108,13 @@ Contentstack Personalize makes A/B testing banners simple and effective:
 
 ### CMS - Link Content Types
 
-- Navigate to the desired Stack → Settings → Variants → select relevant Variant Group → Linked Content Types.**Note:** Variant Groups and Variants are automatically created based on the Experiences you define in Personalize.**Additional Resource**: For more information, refer to [Manage Variant Groups](../developers/variants/manage-variant-groups.md).
+- Navigate to the desired Stack → Settings → Variants → select relevant Variant Group → Linked Content Types.**Note:** Variant Groups and Variants are automatically created based on the Experiences you define in Personalize.
+
+  **Additional Resource**: For more information, refer to [Manage Variant Groups](../developers/variants/manage-variant-groups.md).
 - In the **Linked Content Types **field, select one or more content types you want to associate with the variant group.
-- Click **Apply → Save**.**Additional Resource:** For more information, refer to [Linking Content Types.](../developers/variants/manage-variant-groups.md#linking-content-types)
+- Click **Apply → Save**.
+
+  **Additional Resource:** For more information, refer to [Linking Content Types.](../developers/variants/manage-variant-groups.md#linking-content-types)
 
 ### CMS - Create Personalized Content in Entry Variants
 
@@ -121,7 +129,9 @@ Map each variant to the correct entry, personalize uses the variant-to-entry map
 
 - **Install SDK**Add the Personalize SDK via npm/yarn/pnpm to your site’s codebase. For the frontend code, you can also add it via [Google Tag Manager](./google-tag-manager-integration-with-personalize.md) or your preferred tag manager for easier impression and event tracking.
 - **Retrieve active variants**Initialize the SDK on every new page load and get the active variants' aliases for the current visitor. We recommend server-side rendered (SSR) sites place this logic at the edge by using an edge function/middleware.
-- Pass the active variants aliases to the Contentstack Delivery SDK to fetch the corresponding entry variants.**Additional Resource: **For more information, refer to [SSR Edge Routing](./ssr-edge-routing-technical-implementation-architecture.md), [Setup Next.js with Personalize.](./setup-nextjs-website-with-personalize-launch.md)
+- Pass the active variants aliases to the Contentstack Delivery SDK to fetch the corresponding entry variants.
+
+  **Additional Resource: **For more information, refer to [SSR Edge Routing](./ssr-edge-routing-technical-implementation-architecture.md), [Setup Next.js with Personalize.](./setup-nextjs-website-with-personalize-launch.md)
 - **Track Impressions**When displaying a banner, track an impression using the Personalize Edge SDK’s method:`triggerImpressions()`**Additional Resource: **For more information, refer to [Trigger Impressions](../developers/create-content-types/reference.md#triggerimpressions).
 - **Track Events**On click, call `triggerEvent('banner_click', { experienceId, variantAlias })`**Additional Resource:** For more information, refer to [Get Started with Personalize SDK](../developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk.md), [Manifest API](../../api-docs/api-detail/personalize-edge-api.md#manifest), [Dynamically Track Variant Impressions.](./dynamically-track-variant-impressions.md)
 

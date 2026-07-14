@@ -36,7 +36,7 @@ Adding an SEO Global field to your content types helps enhance search engine vis
 - **Save** the Global field.
 - Go to the content type where you want to add SEO, insert the Global field, and select your SEO configuration.
 - Set a display name and modify other properties as needed.
-- Create an [entry](../../content-managers/author-content/about-entries.md) to see the SEO Global field in action.
+- Create an [entry](../../content-managers/author-content/about-entries.md) to see the SEO Global field in action.![SEO Global field in entry view](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt295c9c6399a8d2d9/67ffa8a01ef983e420f77afc/1._case_1.png)
 
 ## Example 2: Site Header as a Global Field
 
@@ -50,7 +50,7 @@ Use a Site Header Global field to maintain consistency across website pages. The
 - **Boolean**: Toggle visibility of the notification bar.
 - **Save** the Global field.
 - In your target content type, insert the **Header** **Global Field**, set a display name, and configure other properties.
-- Create an entry to see the **Header** field in use.
+- Create an entry to see the **Header** field in use.![Header Global field example in entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1201a094d726b07d/67ffa8a08e7aaa1205461230/2._case_2_-_Site_Header_as_a_Global_Field.png)
 
 ## Example 3: Taxonomy Group Field as a Global Field
 
@@ -65,7 +65,7 @@ Organize content with a Taxonomy Global field to enhance navigation and user exp
 - [**Link**](../create-content-types/link.md): URL to the landing page for that sport.
 - Save and insert this Global field into the relevant content types.
 - Configure the display name and other properties.
-- Create an entry to implement content categorization using [taxonomy](../taxonomy/about-taxonomy.md).
+- Create an entry to implement content categorization using [taxonomy](../taxonomy/about-taxonomy.md).![Taxonomy Global field used for category](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte705778a17af1284/67ffa8a1dac258c597adcdbf/3._case_3_-_Taxonomy_Group_Field_as_a_Global_Field.png)
 
 ## Example 4: Website Banner as a Global Field
 
@@ -95,7 +95,7 @@ Open Graph tags control how your content appears when shared on social media.
 - **Save** the Global field.
 - Add it to content types as needed.
 - Configure the display name and other properties.
-- Create an entry to enable social sharing previews.
+- Create an entry to enable social sharing previews.![Open Graph Global Field configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1cdf023126780de2/67ffa8a128763469b805d0b4/5._case_5_-_Open_Graph_Meta_Tags_as_a_Global_Field.png)
 
 ## Example 6: Twitter Card Tag as a Global Field
 
@@ -109,7 +109,7 @@ Twitter Cards enhance how your content appears when shared on Twitter.
 - **File**: Image to display.
 - **Save** the Global field.
 - Add it to your content types and configure properties.
-- Create an entry to preview the Twitter Card.
+- Create an entry to preview the Twitter Card.![Twitter Card metadata as Global field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltec4b966c83bdb2c4/67ffa8a078262479652e2edd/case_6_-_Twitter_Card_Tag_as_a_Global_Field.png)
 
 ## Example 7: Nested Global Fields for Reusable Field Patterns
 
@@ -120,7 +120,7 @@ You can nest a Global field within another field such as a **Group** or **Modula
 - Create a Global** **field named **Page Components**.
 - Add a **Modular Blocks** field.
 - In each block, include:A **Group** field for structural content (title, media, layout).
-- A **Nested Global Field** for SEO.
+- A **Nested Global Field** for SEO.![Nested Global field used in Page Components](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5b4371846921d09e/67ffa8a12b1be92f9b1529c3/7._case_7_-_Nested_Global_Fields_for_Reusable_Field_Patterns_.png)
 
 This setup allows editors to build modular pages with pre-configured SEO capabilities. By nesting the SEO field, you maintain centralized control while giving editors flexibility to assemble content as needed.
 
