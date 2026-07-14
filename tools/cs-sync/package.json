@@ -17,6 +17,7 @@
     "test:cms-pull": "tsx src/test-cms-pull.ts",
     "test:inject": "tsx src/test-inject-images.ts",
     "test:doc-index": "tsx src/test-doc-index.ts",
+    "test:image-rewrite": "tsx src/test-image-rewrite.ts",
     "test:all": "tsx src/test-report.ts",
     "typecheck": "tsc --noEmit"
   },

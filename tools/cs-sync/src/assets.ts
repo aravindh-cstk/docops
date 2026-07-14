@@ -58,6 +58,47 @@ function resolveLocalPath(docDir: string, ref: string): string {
   return path.normalize(path.resolve(docDir, decoded));
 }
 
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+export type UploadCache = Map<string, { url: string; uid: string }>;
+
+/**
+ * Ensure a local image reference is present in Contentstack Assets and return its
+ * CDN url + uid. Dedupes by filename (so an image referenced by several docs is
+ * uploaded once) and, if the local file is already gone (a shared image deleted
+ * earlier in the same run), falls back to the existing asset so the reference can
+ * still be rewritten. Returns null for non-local refs or when nothing matches.
+ */
+export async function uploadLocalImage(
+  ref: string,
+  docDir: string,
+  client: ContentstackClient,
+  cache: UploadCache = new Map(),
+): Promise<{ url: string; uid: string } | null> {
+  if (!isLocalAssetRef(ref)) return null;
+  const abs = resolveLocalPath(docDir, ref);
+  const cached = cache.get(abs);
+  if (cached) return cached;
+
+  const filename = path.basename(abs);
+  if (fs.existsSync(abs)) {
+    const existing = await client.findAssetByFilename(filename);
+    const result = existing ?? (await client.uploadAsset(abs));
+    cache.set(abs, result);
+    return result;
+  }
+
+  const existing = await client.findAssetByFilename(filename);
+  if (existing) {
+    cache.set(abs, existing);
+    return existing;
+  }
+  console.warn(`Image not found and no matching asset, skipping: ${abs}`);
+  return null;
+}
+
 export async function processImagesInHtml(
   html: string,
   docFilePath: string,
@@ -66,32 +107,12 @@ export async function processImagesInHtml(
   const docDir = path.dirname(docFilePath);
   let result = html;
 
-  const uploads = new Map<string, { url: string; uid: string }>();
-
-  async function ensureUploaded(ref: string): Promise<{ url: string; uid: string } | null> {
-    if (!isLocalAssetRef(ref)) return null;
-    const abs = resolveLocalPath(docDir, ref);
-    if (!fs.existsSync(abs)) {
-      console.warn(`Image not found, skipping upload: ${abs}`);
-      return null;
-    }
-    const cached = uploads.get(abs);
-    if (cached) return cached;
-
-    const existing = await client.findAssetByFilename(path.basename(abs));
-    if (existing) {
-      uploads.set(abs, existing);
-      return existing;
-    }
-
-    const uploaded = await client.uploadAsset(abs);
-    uploads.set(abs, uploaded);
-    return uploaded;
-  }
+  const uploads: UploadCache = new Map();
+  const ensureUploaded = (ref: string) => uploadLocalImage(ref, docDir, client, uploads);
 
   const mdRefs = [...html.matchAll(MD_IMAGE_RE)].map((m) => m[1]);
   for (const ref of mdRefs) {
-    await ensureUploaded(ref);
+    await ensureUploaded(ref ?? "");
   }
 
   const matches = [...result.matchAll(IMG_SRC_RE)];
@@ -134,4 +155,91 @@ export function collectLocalImageRefs(
   }
 
   return results;
+}
+
+/**
+ * Validate a single local image reference for lint. Returns an error string or
+ * null, ordered most-specific-first so the message tells the author exactly what
+ * to fix:
+ *   1. absolute path (works on the author's machine, breaks in CI and after merge)
+ *   2. resolves outside the repo (the image would never be committed)
+ *   3. missing file (relative, in-repo, but not present)
+ * `resolved` is the normalized absolute path from collectLocalImageRefs.
+ */
+export function checkImagePath(
+  repoRoot: string,
+  docRelPath: string,
+  ref: string,
+  resolved: string,
+): string | null {
+  const refPath = decodeURIComponent((ref.split("#")[0] ?? ref).trim());
+
+  if (path.isAbsolute(refPath)) {
+    return `${docRelPath}: image \`${ref}\` uses an absolute path. Reference it relative to the doc instead, for example ![Alt text](./images/name.png).`;
+  }
+
+  if (resolved !== repoRoot && !resolved.startsWith(repoRoot + path.sep)) {
+    return `${docRelPath}: image \`${ref}\` points outside the project directory. Move the image into the repo (for example an images/ folder next to the doc) and reference it with a relative path.`;
+  }
+
+  if (!fs.existsSync(resolved)) {
+    const repoRel = path.relative(repoRoot, resolved).replace(/\\/g, "/");
+    return `${docRelPath}: missing image \`${ref}\` → ${repoRel}`;
+  }
+
+  return null;
+}
+
+// Replace only the ref inside markdown image syntax ![alt](ref), preserving alt.
+function replaceMarkdownImageRef(markdown: string, ref: string, url: string): string {
+  const re = new RegExp(`(!\\[[^\\]]*\\]\\()${escapeRegExp(ref)}(\\))`, "g");
+  return markdown.replace(re, `$1${url}$2`);
+}
+
+export interface UploadedImage {
+  ref: string;
+  resolved: string;
+  url: string;
+  uid: string;
+}
+
+/**
+ * Upload each LOCAL image referenced in a markdown body to Contentstack Assets and
+ * rewrite `![alt](localref)` to `![alt](cdnUrl)`, preserving alt text. Non-local
+ * refs (already-CDN, data:, #) are left untouched. Returns the rewritten markdown
+ * and the list of uploaded assets (with each ref's resolved local path, so the
+ * caller can delete the now-unused file). In dry-run mode nothing is uploaded,
+ * written, or rewritten — it only reports which local refs would be uploaded.
+ */
+export async function rewriteMarkdownImages(
+  markdown: string,
+  docFilePath: string,
+  client: ContentstackClient,
+  opts: { dryRun?: boolean } = {},
+): Promise<{ markdown: string; uploaded: UploadedImage[] }> {
+  const docDir = path.dirname(docFilePath);
+  const cache: UploadCache = new Map();
+  const uploaded: UploadedImage[] = [];
+
+  // Collect distinct local refs first (don't mutate while iterating matchAll).
+  const refs = new Set<string>();
+  for (const m of markdown.matchAll(MD_IMAGE_RE)) {
+    const ref = m[1] ?? "";
+    if (isLocalAssetRef(ref)) refs.add(ref);
+  }
+
+  let result = markdown;
+  for (const ref of refs) {
+    const resolved = resolveLocalPath(docDir, ref);
+    if (opts.dryRun) {
+      uploaded.push({ ref, resolved, url: `(dry-run) would upload ${path.basename(resolved)}`, uid: "(dry-run)" });
+      continue;
+    }
+    const asset = await uploadLocalImage(ref, docDir, client, cache);
+    if (!asset) continue;
+    uploaded.push({ ref, resolved, url: asset.url, uid: asset.uid });
+    result = replaceMarkdownImageRef(result, ref, asset.url);
+  }
+
+  return { markdown: result, uploaded };
 }

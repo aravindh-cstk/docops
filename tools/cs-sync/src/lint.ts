@@ -7,7 +7,7 @@ import { z } from "zod";
 import matter from "gray-matter";
 import { findRepoRoot, listChangedDocs, parseArgs } from "./diff.js";
 import { parseDocFile, resolveDocPaths, frontMatterSchema, sdkFrontMatterSchema } from "./parser.js";
-import { collectLocalImageRefs } from "./assets.js";
+import { collectLocalImageRefs, checkImagePath } from "./assets.js";
 import { lintStyle } from "./style-lint.js";
 
 const MD_LINK_RE = /\[([^\]]*)]\(([^)]+)\)/g;
@@ -198,10 +198,8 @@ function lintDoc(
 
     const absoluteDocPath = path.join(repoRoot, repoRelativePath);
     for (const { ref, resolved } of collectLocalImageRefs(trimmedBody, absoluteDocPath)) {
-      if (!fs.existsSync(resolved)) {
-        const repoRel = path.relative(repoRoot, resolved).replace(/\\/g, "/");
-        errors.push(`${repoRelativePath}: missing image \`${ref}\` → ${repoRel}`);
-      }
+      const err = checkImagePath(repoRoot, repoRelativePath, ref, resolved);
+      if (err) errors.push(err);
     }
 
     // Pad with blank lines so every line number lintStyle computes — including

@@ -6,32 +6,34 @@ import { findRepoRoot } from "./diff.js";
 import { ContentstackClient } from "./contentstack.js";
 import { runSync } from "./sync.js";
 
-function parseArgs(argv: string[]): { before: string; after: string } {
+function parseArgs(argv: string[]): { before: string; after: string; dryRun: boolean } {
   let before = "";
   let after = "";
+  let dryRun = false;
   for (let i = 0; i < argv.length; i++) {
     if (argv[i] === "--before" && argv[i + 1]) before = argv[++i];
     if (argv[i] === "--after" && argv[i + 1]) after = argv[++i];
+    if (argv[i] === "--dry-run") dryRun = true;
   }
   if (!before || !after) {
-    console.error("Usage: npm run sync -- --before <sha> --after <sha>");
+    console.error("Usage: npm run sync -- --before <sha> --after <sha> [--dry-run]");
     process.exit(1);
   }
-  return { before, after };
+  return { before, after, dryRun };
 }
 
 async function main(): Promise<void> {
-  const { before, after } = parseArgs(process.argv.slice(2));
+  const { before, after, dryRun } = parseArgs(process.argv.slice(2));
   const scriptDir = path.dirname(fileURLToPath(import.meta.url));
   const repoRoot = findRepoRoot(path.join(scriptDir, "../../.."));
   const config = loadConfig(repoRoot);
   const client = new ContentstackClient(config);
 
   console.log(
-    `Syncing ${config.CS_DOCS_ROOT}/**/*.md (${before.slice(0, 7)}..${after.slice(0, 7)}) → ${config.CS_CONTENT_TYPE}`,
+    `Syncing ${config.CS_DOCS_ROOT}/**/*.md (${before.slice(0, 7)}..${after.slice(0, 7)}) → ${config.CS_CONTENT_TYPE}${dryRun ? " [dry-run]" : ""}`,
   );
 
-  await runSync(config, client, before, after);
+  await runSync(config, client, before, after, { dryRun });
 }
 
 main().catch((err) => {

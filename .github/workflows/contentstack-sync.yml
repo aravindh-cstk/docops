@@ -11,6 +11,11 @@ concurrency:
   group: contentstack-sync
   cancel-in-progress: false
 
+# The sync uploads local images to Assets, rewrites the docs to the CDN URLs, and
+# deletes the local files. contents: write lets the bot commit that back to main.
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -38,3 +43,20 @@ jobs:
           CS_REGION: us
           CS_CONTENT_TYPE: docs_article
         run: npm run sync -- --before "${{ github.event.before }}" --after "${{ github.sha }}"
+
+      # The sync step uploaded any local images to Assets, rewrote the docs to the
+      # CDN URLs, and deleted the now-unused local files. Commit that back to main.
+      # The `[skip ci]` tag stops this push from re-triggering the workflow.
+      # NOTE: if `main` is a protected branch, allow github-actions[bot] to bypass
+      # the push restriction (or swap GITHUB_TOKEN for a PAT with that permission).
+      - name: Commit image URL rewrites back to main
+        run: |
+          if git status --porcelain cs-docs/ | grep -q .; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A cs-docs/
+            git commit -m "chore: upload local images to Assets and replace paths with CDN URLs [skip ci]"
+            git push origin HEAD:main
+          else
+            echo "No local-image rewrites to commit."
+          fi
