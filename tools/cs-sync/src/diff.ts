@@ -1,6 +1,15 @@
 import { execSync } from "node:child_process";
 import path from "node:path";
 
+// Binary assets (referenced by docs via relative image paths) live alongside
+// .md files under docsRoot but aren't synced themselves, so they're exempt
+// from both the mdFiles and nonMdFiles ("missing .md extension") lint checks.
+const ASSET_EXTENSIONS = new Set([".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"]);
+
+function isAssetFile(filePath: string): boolean {
+  return ASSET_EXTENSIONS.has(path.extname(filePath).toLowerCase());
+}
+
 export function parseArgs(argv: string[]): { base: string; worktree: boolean } {
   let base = "origin/main";
   let worktree = false;
@@ -47,7 +56,7 @@ export function listWorktreeChangedDocs(
 
   return {
     mdFiles: all.filter((p) => p.endsWith(".md")),
-    nonMdFiles: all.filter((p) => !p.endsWith(".md")),
+    nonMdFiles: all.filter((p) => !p.endsWith(".md") && !isAssetFile(p)),
   };
 }
 
@@ -69,7 +78,7 @@ export function listChangedDocs(
     const all = out ? out.split("\n").filter(Boolean) : [];
     return {
       mdFiles: all.filter((p) => p.endsWith(".md")),
-      nonMdFiles: all.filter((p) => !p.endsWith(".md")),
+      nonMdFiles: all.filter((p) => !p.endsWith(".md") && !isAssetFile(p)),
     };
   } catch {
     const out = execSync(`git ls-files '${docsRoot}/**/*.md'`, {
