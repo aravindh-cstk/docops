@@ -23,20 +23,70 @@ td.addRule("pre-fenced", {
   },
 });
 
-// <p class="note|tip|warning"> → > **Note:** ...
+// <p class="note|tip|warning|add-resource"> → **Note:** ... on its own line.
+// Callouts are preserved as callouts, never flattened into the preceding block.
+// Emits the bare `**Label:**` paragraph form (no blockquote marker) that
+// transform.ts round-trips back into <p class="..."> on the push side.
+const CALLOUT_LABEL: Record<string, string> = {
+  note: "Note",
+  tip: "Tip",
+  warning: "Warning",
+  "add-resource": "Additional Resource",
+};
+
 // Must run before the default paragraph rule.
 td.addRule("callout", {
   filter: (node) => {
     if (node.nodeName !== "P") return false;
     const cls = (node as Element).getAttribute("class") ?? "";
-    return ["note", "tip", "warning"].includes(cls);
+    return cls in CALLOUT_LABEL;
   },
-  replacement: (_content, node) => {
+  replacement: (content, node) => {
     const cls = (node as Element).getAttribute("class") ?? "";
-    const kind = cls.charAt(0).toUpperCase() + cls.slice(1);
-    // Strip the bold prefix that turndown already converted so we re-emit it cleanly.
-    const inner = _content.replace(/^\*\*\w+:\*\*\s*/, "").trim();
-    return `\n\n> **${kind}:** ${inner}\n\n`;
+    const label = CALLOUT_LABEL[cls] ?? cls.charAt(0).toUpperCase() + cls.slice(1);
+    // Strip whatever bold label prefix turndown already produced (handles both
+    // "**Note:**" and "**Note**:") so we re-emit it cleanly and uniformly.
+    const inner = content.replace(/^\s*\*\*[^*]+?\*\*:?\s*/, "").trim();
+    return `\n\n**${label}:** ${inner}\n\n`;
+  },
+});
+
+// <img> → ![alt](url). Turndown's default only reads `src`; Contentstack lazy-
+// loads with `data-src` (and sometimes `srcset`), which the default silently
+// drops (the s61 gap). Resolve src → data-src → first srcset URL, and keep the
+// URL as-is so either CDN host format survives.
+function firstSrcset(srcset: string | null): string {
+  if (!srcset) return "";
+  const first = srcset.split(",")[0]?.trim() ?? "";
+  return first.split(/\s+/)[0] ?? "";
+}
+
+function basenameFromUrl(url: string): string {
+  const noQuery = url.split(/[?#]/)[0] ?? url;
+  const seg = noQuery.split("/").filter(Boolean).pop() ?? "";
+  try {
+    return decodeURIComponent(seg);
+  } catch {
+    return seg;
+  }
+}
+
+function escapeAlt(alt: string): string {
+  return alt.replace(/\[/g, "\\[").replace(/\]/g, "\\]");
+}
+
+td.addRule("cs-img", {
+  filter: "img",
+  replacement: (_content, node) => {
+    const el = node as Element;
+    const src =
+      el.getAttribute("src") ||
+      el.getAttribute("data-src") ||
+      firstSrcset(el.getAttribute("srcset")) ||
+      "";
+    if (!src) return "";
+    const alt = (el.getAttribute("alt") ?? "").trim() || basenameFromUrl(src);
+    return `![${escapeAlt(alt)}](${src})`;
   },
 });
 

@@ -6,6 +6,7 @@ import { loadConfig } from "./config.js";
 import { findRepoRoot } from "./diff.js";
 import { ContentstackClient, type ContentstackEntry } from "./contentstack.js";
 import { htmlToMarkdown } from "./html-to-md.js";
+import { extractSections } from "./cda-fetch.js";
 
 // URL prefix used in frontmatter — matches the /developers/ site path.
 const DOCS_URL_PREFIX = "/developers/";
@@ -58,27 +59,26 @@ function parseTitle(title: string): { marker: string; heading: string } {
 }
 
 /**
- * Extracts the HTML content from the first article_section block of an entry.
+ * Builds the markdown body from ALL article_content sections, in order. Each
+ * section contributes its heading (from article_section.heading, per the entry→
+ * markdown field mapping) followed by its converted HTML content. Images are
+ * preserved by the html-to-md img rule (closing the s61 data-src gap), and
+ * concatenating every section fixes the prior behavior that read only block 0.
  */
-function extractHtml(entry: ContentstackEntry): string {
-  const blocks = entry.article_content as
-    | Array<{ article_section?: { content?: string } }>
-    | undefined;
-
-  if (!Array.isArray(blocks) || blocks.length === 0) {
+function buildBody(entry: ContentstackEntry): string {
+  const sections = extractSections(entry);
+  if (sections.length === 0) {
     console.warn(
-      `cms-pull: entry uid=${entry.uid} url=${entry.url} has no article_content blocks — skipping body.`,
+      `cms-pull: entry uid=${entry.uid} url=${entry.url} has no article_content sections — empty body.`,
     );
     return "";
   }
-
-  const content = blocks[0]?.article_section?.content;
-  if (!content) {
-    console.warn(
-      `cms-pull: entry uid=${entry.uid} url=${entry.url} article_section.content is empty.`,
-    );
+  const parts: string[] = [];
+  for (const sec of sections) {
+    if (sec.heading.trim()) parts.push(`## ${sec.heading.trim()}`);
+    if (sec.content.trim()) parts.push(htmlToMarkdown(sec.content));
   }
-  return content ?? "";
+  return parts.join("\n\n");
 }
 
 /**
@@ -89,8 +89,7 @@ function buildMarkdownFile(entry: ContentstackEntry): string {
   const url = (entry.url as string | undefined) ?? "";
   const { marker, heading } = parseTitle(title);
 
-  const html = extractHtml(entry);
-  const body = html ? htmlToMarkdown(html) : "";
+  const body = buildBody(entry);
 
   // Wrap values in quotes to handle special characters (colons, brackets, etc.).
   const fm = [
