@@ -96,6 +96,59 @@ test("s33", "Raw ** in HTML body — Turndown escape behavior documented", () =>
   throw new Error(`Expected "Note:" in some form — got:\n${md}`);
 });
 
+// ── s61: <img> with data-src (lazy load) → ![]() (previously dropped) ─────────
+
+test("s61", "img with data-src is preserved as ![]()", () => {
+  const html = `<p><img data-src="https://images.contentstack.io/v3/assets/blt1/blt2/hash/lazy.png" alt="lazy.png"/></p>`;
+  const md = htmlToMarkdown(html);
+  ok(md.includes("![lazy.png](https://images.contentstack.io/v3/assets/blt1/blt2/hash/lazy.png)"),
+    `expected data-src image preserved — got:\n${md}`);
+  return "data-src image emitted as ![]()";
+});
+
+test("s61b", "img with plain src → ![]()", () => {
+  const html = `<p>text<img asset_uid="am9b" src="https://assets.contentstack.io/spaces/am5/assets/am9b/hash/Shot.png?locale=en-us" alt="Shot.png" height="auto"/></p>`;
+  const md = htmlToMarkdown(html);
+  ok(md.includes("![Shot.png](https://assets.contentstack.io/spaces/am5/assets/am9b/hash/Shot.png?locale=en-us)"),
+    `expected src image preserved with query string — got:\n${md}`);
+  return "src image (assets.contentstack.io host) preserved";
+});
+
+test("s61c", "img with no alt derives filename from URL", () => {
+  const html = `<img src="https://images.contentstack.io/v3/assets/blt1/blt2/hash/My_File.png"/>`;
+  const md = htmlToMarkdown(html);
+  ok(md.includes("![My_File.png]("), `expected filename-derived alt — got:\n${md}`);
+  return "alt derived from URL basename";
+});
+
+// ── s62: callouts preserved as callouts (not flattened) ──────────────────────
+
+test("s62", "<p class=\"note\"> → **Note:** line", () => {
+  const html = `<p class="note"><strong>Note:</strong> This is a sample note</p>`;
+  const md = htmlToMarkdown(html);
+  ok(md.includes("**Note:** This is a sample note"), `expected bare Note callout — got:\n${md}`);
+  ok(!md.includes(">"), `should not emit blockquote marker — got:\n${md}`);
+  return "note callout emitted as bare **Note:** line";
+});
+
+test("s62b", "<p class=\"add-resource\"> → **Additional Resource:** line", () => {
+  const html = `<p class="add-resource"><strong>Additional Resource:</strong> To repair, refer to the doc.</p>`;
+  const md = htmlToMarkdown(html);
+  ok(md.includes("**Additional Resource:** To repair, refer to the doc."),
+    `expected Additional Resource callout — got:\n${md}`);
+  return "add-resource callout mapped to **Additional Resource:**";
+});
+
+test("s62c", "callout inside <li> stays on its own line (not flattened)", () => {
+  const html = `<ol><li>Click <strong>Save</strong>.<img src="https://images.contentstack.io/v3/assets/a/b/h/S.png" alt="S.png"/><p class="note"><strong>Note:</strong> after save</p></li></ol>`;
+  const md = htmlToMarkdown(html);
+  ok(md.includes("![S.png]("), `image missing — got:\n${md}`);
+  ok(md.includes("**Note:** after save"), `callout missing/flattened — got:\n${md}`);
+  ok(!/Save\.\*\*Note/.test(md.replace(/!\[[^\]]*]\([^)]*\)/g, "")),
+    `callout appears flattened onto step text — got:\n${md}`);
+  return "list-item image + un-flattened note callout";
+});
+
 // ── Summary ───────────────────────────────────────────────────────────────────
 
 const passed = results.filter((r) => r.status === "PASS").length;

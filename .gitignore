@@ -12,6 +12,12 @@ cs-docs-backup/
 *.tmp
 *.bak
 
+# cs-sync generated caches / run reports (never commit)
+tools/cs-sync/.image-source-cache.json
+tools/cs-sync/.image-source-coverage.json
+tools/cs-sync/.image-inject-report.json
+tools/cs-sync/.cms-pull-summary.json
+
 # OS files
 .DS_Store
 Thumbs.db
