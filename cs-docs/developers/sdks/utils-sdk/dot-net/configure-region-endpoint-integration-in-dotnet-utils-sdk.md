@@ -14,7 +14,7 @@ Use region resolution when your application supports multiple regions, cloud-spe
 
 This feature is not applicable if
 
-- Your application only connects to one Contentstack region
+- Your application connects to one Contentstack region
 - You hardcode the endpoint
 
 ## Quick Reference
