@@ -17,6 +17,9 @@ export const PRODUCT_NAMES = new Set([
   "administration",
   "analytics",
   "marketplace",
+  "lytics",
+  "data-and-insights-lytics",
+  "introducing-the-new-contentstack",
 ]);
 
 const VALID_PRODUCTS = [...PRODUCT_NAMES].join(", ");
