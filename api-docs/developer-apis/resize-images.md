@@ -1,0 +1,108 @@
+---
+title: "Image | Resize Images"
+description: Use Image Delivery API endpoints for resize images operations, including retrieval and management workflows.
+url: https://www.contentstack.com/docs/developer-apis/image-delivery-api/resize-images
+product: Contentstack
+doc_type: api-reference
+audience:
+  - developers
+version: unknown
+last_updated: 2026-06-02
+---
+
+# Image | Resize Images
+
+
+
+## Width
+
+The width parameter lets you dynamically resize the width of the output image by specifying pixels or percentage values. To specify pixel width, use any positive integer between 1 and 8192. For percentage width, use any value between 0.0 and 0.99. To get image width of more than 99 percent, use a value above 99 and append a p parameter to the value. For example, for image width of 300 percent, use width=300p.
+
+The width parameter will automatically adjust the height of the image using the aspect ratio of the image. If the height parameter is specified, the given value will be used. And if both the height and the width parameters are not specified, the dimensions of the input image will be used.
+
+In case the dimensions specified for the output image is greater than the dimensions of the input image, the image will be upscaled. You can disable upscaling of the image by using the disable=upscale parameter.
+
+**Note:** Currently, the width parameter doesn't work for GIF files as it affects their quality.
+
+### Resize image width
+
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}`
+
+##### Additional Notes
+
+1. In case the dimensions specified for the output image is greater than the dimensions of the input image, the image will be upscaled.
+2. To disable upscaling, use the disable=upscale parameter.
+
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
+
+#### Query Parameters
+
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage. For Example 100 or 0.90 or 250p.
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
+
+
+
+## Height
+
+The height parameter lets you dynamically resize the height of the output image by specifying pixels or percentage values. To specify pixel height, use any positive integer between 1 and 8192. For percentage height, use any value between 0.0 and 0.99. To get image height of more than 99 percent, use a value above 99 and append a p parameter to the value. For example, for image height of 300 percent, use height=300p.
+
+The height parameter will automatically adjust the width of the image using the aspect ratio of the image. If the width parameter is specified, the given value will be used. And if both the height and the width parameters are not specified, the dimensions of the input image will be used.
+
+In case the dimensions specified for the output image is greater than the dimensions of the input image, the image will be upscaled. You can disable upscaling of the image by using the disable=upscale parameter.
+
+**Note:** Currently, the height parameter doesn't work for GIF files as it affects their quality.
+
+### Resize image height
+
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&height={height_value}`
+
+##### Additional Notes
+
+1. In case the dimensions specified for the output image is greater than the dimensions of the input image, the image will be upscaled.
+2. To disable upscaling, use the disable=upscale parameter.
+
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
+
+#### Query Parameters
+
+- **height** (optional)
+  Enter the value of the image height in pixels or percentage. Example 100 or 0.90 or 250p
+  Default: `100`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+
+
+
+
+## Disable
+
+The disable parameter disables the functionality that is enabled by default. For instance, upscale is always enabled, in which the image is upscaled if the output image (by specifying the width or height) is bigger than the source image. To disable this feature, you can use the query ?disable=upscale. This ensures that even if the specified height or width is much bigger than the actual image, it will not be rendered disproportionately. 
+
+As of now, there is only one value, i.e., upscale, that you can use with the disable parameter.
+
+### Disable upscaling of image
+
+**GET** `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={value}&disable={value}`
+
+To see this parameter in action, the height or width (or both) parameter should be used with it.
+
+**Note:** Check out the [limitations](../../../api-detail/image-delivery-api.md#limitations-with-optimizing-image) that are applicable here.
+
+#### Query Parameters
+
+- **width** (optional)
+  Enter the value of the image width in pixels or percentage  For Example 100 or 0.90 or 250p
+  Default: `650`
+- **disable** (optional)
+  Enter the name of the functionality that you want to disable.
+  Default: `upscale`
+- **environment** (required)
+  Enter the environment scoped to your delivery token.
+  Default: `production`
+

@@ -1,0 +1,16 @@
+{
+  "contentTypeUid": "docs_article",
+  "locale": "en-us",
+  "docsRoot": "docs",
+  "urlPrefix": "/developers",
+  "breadcrumbReferenceContentTypeUid": "breadcrumb",
+  "fields": {
+    "title": "title",
+    "url": "url",
+    "breadcrumb": "breadcrumb",
+    "articleContent": "article_content",
+    "heading": "heading",
+    "htmlContent": "content",
+    "mdContent": "md_content"
+  }
+}

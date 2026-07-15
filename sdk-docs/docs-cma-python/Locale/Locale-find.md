@@ -1,0 +1,28 @@
+---
+title: "find"
+description: "The find method retrieves the list of all languages (along with the language codes) available for a stack."
+url: "https://www.contentstack.com/python-management-locale-find"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## find
+
+The find method retrieves the list of all languages (along with the language codes) available for a stack.
+
+No parameters.
+
+Returns:
+Type
+JSON
+
+```
+import contentstack_management 
+client = contentstack_management.Client(authtoken='authtoken')
+response = client.stack("api_key").locale().find().json()
+```

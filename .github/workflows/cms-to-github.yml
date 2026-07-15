@@ -1,0 +1,160 @@
+name: Sync CMS changes to GitHub
+
+on:
+  schedule:
+    # Runs every 15 minutes. Looks back 20 minutes to cover any timing gap.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      lookback_minutes:
+        description: "How many minutes back to check for CMS changes"
+        default: "20"
+        required: false
+
+concurrency:
+  group: cms-to-github
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: write
+
+jobs:
+  cms-pull:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/cs-sync/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
+      - name: Pull changes from CMS
+        working-directory: tools/cs-sync
+        env:
+          CONTENTSTACK_API_KEY: ${{ secrets.CONTENTSTACK_API_KEY }}
+          CONTENTSTACK_MANAGEMENT_TOKEN: ${{ secrets.CONTENTSTACK_MANAGEMENT_TOKEN }}
+          CONTENTSTACK_ENVIRONMENT: ${{ vars.CONTENTSTACK_ENVIRONMENT }}
+          CS_REGION: us
+          CS_CONTENT_TYPE: docs_article
+        run: npm run cms-pull -- --lookback ${{ inputs.lookback_minutes || '20' }}
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git status --porcelain cs-docs/ | grep -q .; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            echo "Changed files:"
+            git status --porcelain cs-docs/
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "No doc files changed — nothing to PR."
+          fi
+
+      - name: Create branch, commit, and push
+        id: commit
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          BRANCH="cms-sync/$(date -u +%Y%m%d-%H%M%S)"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "$BRANCH"
+          git add cs-docs/
+          git commit -m "chore: sync doc changes from Contentstack CMS"
+          # Push before reporting a check run — the Checks API requires the SHA
+          # to already exist on GitHub's servers, not just locally on the runner.
+          git push origin "$BRANCH"
+
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      # PRs opened here are authored by github-actions[bot] using the workflow's
+      # GITHUB_TOKEN. GitHub Actions does not cascade GITHUB_TOKEN-triggered events
+      # into other pull_request-triggered workflow runs (to prevent infinite loops),
+      # so docs-lint.yml would never run automatically on these PRs. Run the same
+      # lint tool here instead, in a run that's never gated (schedule/
+      # workflow_dispatch), and report a "lint" check run directly against the new
+      # commit via the Checks API — same check name as docs-lint.yml.
+      - name: Lint changed docs
+        id: lint
+        if: steps.changes.outputs.has_changes == 'true'
+        working-directory: tools/cs-sync
+        run: |
+          if npm run lint -- --base origin/main > /tmp/lint-output.txt 2>&1; then
+            echo "passed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "passed=false" >> "$GITHUB_OUTPUT"
+          fi
+          cat /tmp/lint-output.txt
+
+      - name: Report lint check
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          CONCLUSION="success"
+          if [ "${{ steps.lint.outputs.passed }}" != "true" ]; then
+            CONCLUSION="failure"
+          fi
+
+          jq -n \
+            --arg sha "${{ steps.commit.outputs.sha }}" \
+            --arg conclusion "$CONCLUSION" \
+            --arg summary "$(head -c 60000 /tmp/lint-output.txt)" \
+            '{name: "lint", head_sha: $sha, status: "completed", conclusion: $conclusion,
+              output: {title: "Docs lint", summary: $summary}}' \
+            > /tmp/check-run.json
+
+          gh api "repos/${{ github.repository }}/check-runs" --input /tmp/check-run.json > /dev/null
+
+      - name: Open PR with CMS changes
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="${{ steps.commit.outputs.branch }}"
+
+          # Build the PR body with per-file editor info from the summary JSON
+          SUMMARY_FILE="tools/cs-sync/.cms-pull-summary.json"
+
+          if [ -f "$SUMMARY_FILE" ]; then
+            CHANGES_TABLE=$(node -e "
+              const changes = require('./$SUMMARY_FILE');
+              const rows = changes.map(c =>
+                '| \`' + c.filePath + '\` | ' + c.url + ' | **' + c.updatedByName + '** | ' + new Date(c.updatedAt).toUTCString() + ' |'
+              );
+              console.log('| File | CMS Entry | Modified By | Modified At |');
+              console.log('|------|-----------|-------------|-------------|');
+              rows.forEach(r => console.log(r));
+            ")
+          else
+            CHANGED_FILES=$(git diff origin/main..."$BRANCH" --name-only | grep '^cs-docs/' | head -20)
+            CHANGES_TABLE="| File | CMS Entry | Modified By | Modified At |
+          |------|-----------|-------------|-------------|
+          $(echo "$CHANGED_FILES" | sed 's/^/| \`/' | sed 's/$/ \` | — | — | — |/')"
+          fi
+
+          gh pr create \
+            --title "CMS → GitHub: doc changes detected" \
+            --body "## CMS → GitHub sync
+
+          This PR was automatically created because one or more \`docs_article\` entries were edited directly in Contentstack and differ from the current files in \`cs-docs/\`.
+
+          **Review the diff carefully before merging** — in particular check that no content was unintentionally overwritten.
+
+          ### Changes detected
+          ${CHANGES_TABLE}
+
+          ---
+          _Triggered by the \`cms-to-github\` workflow · $(date -u '+%Y-%m-%d %H:%M UTC')_" \
+            --base main \
+            --head "$BRANCH"

@@ -1,0 +1,122 @@
+name: Doc execution test
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "cs-docs/**"
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  exec-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/cs-sync/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
+      - name: Find opt-in docs in this PR
+        id: find-docs
+        run: |
+          BASE=${{ github.event.pull_request.base.sha }}
+          HEAD=${{ github.event.pull_request.head.sha }}
+          CHANGED=$(git diff --name-only "$BASE" "$HEAD" -- "cs-docs/**/*.md" || true)
+
+          OPT_IN="[]"
+          if [ -n "$CHANGED" ]; then
+            OPT_IN=$(node -e "
+              const fs = require('fs');
+              const files = \`$CHANGED\`.trim().split('\n').filter(Boolean);
+              const optin = files.filter(f => {
+                try {
+                  const c = fs.readFileSync(f, 'utf8');
+                  const fm = c.split('---')[1] ?? '';
+                  return /^exec_test:\s*true/m.test(fm);
+                } catch { return false; }
+              });
+              process.stdout.write(JSON.stringify(optin));
+            ")
+          fi
+
+          echo "$OPT_IN" > /tmp/exec-test-files.json
+          echo "Found opt-in docs: $OPT_IN"
+          COUNT=$(node -e "process.stdout.write(String(JSON.parse(require('fs').readFileSync('/tmp/exec-test-files.json','utf8')).length))")
+          echo "opt_in_count=$COUNT" >> "$GITHUB_OUTPUT"
+
+      - name: Run doc execution test
+        if: steps.find-docs.outputs.opt_in_count != '0'
+        id: exec-test
+        working-directory: tools/cs-sync
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CS_SANDBOX_MANAGEMENT_TOKEN }}
+          CS_SANDBOX_ORG_UID: ${{ secrets.CS_SANDBOX_ORG_UID }}
+          CS_REGION: us
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          EXEC_TEST_FILES: /tmp/exec-test-files.json
+          EXEC_TEST_OUTPUT: /tmp/exec-test-output.txt
+          REPO_ROOT: ${{ github.workspace }}
+          DOCS_ROOT: cs-docs
+        run: |
+          if npm run exec-test; then
+            echo "EXEC_TEST_PASSED=true" >> "$GITHUB_ENV"
+          else
+            echo "EXEC_TEST_PASSED=false" >> "$GITHUB_ENV"
+          fi
+
+      - name: Post advisory PR comment on failure
+        if: steps.find-docs.outputs.opt_in_count != '0' && env.EXEC_TEST_PASSED == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body;
+            try {
+              body = fs.readFileSync('/tmp/exec-test-output.txt', 'utf8').trim();
+            } catch {
+              body = '## Doc Execution Test\n\nExecution test failed but no output was captured.';
+            }
+            if (!body) return;
+
+            // Remove any existing exec test comment to avoid stacking
+            const existing = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            for (const comment of existing.data) {
+              if (comment.body?.startsWith('## Doc Execution Test')) {
+                await github.rest.issues.deleteComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: comment.id,
+                });
+              }
+            }
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+
+      - name: Skip message when no opt-in docs
+        if: steps.find-docs.outputs.opt_in_count == '0'
+        run: echo "No docs with exec_test true in this PR — skipping execution test."
