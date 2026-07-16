@@ -1,0 +1,30 @@
+---
+title: "webhooks"
+description: "The `webhooks` gives a Webhook instance."
+url: "https://www.contentstack.com/javascript-marketplace-installation-webhooks"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## webhooks
+
+The `webhooks` gives a Webhook instance.
+
+| Name | Type | Required | Default | Description |
+|---|---|---|---|---|
+| webhook_uid | String | Yes | — | The UID of webhook |
+
+Returns:
+Type
+WebHooks
+
+```
+import * as contentstack from '@contentstack/marketplace-sdk'
+const client = contentstack.client({ authtoken: 'TOKEN'});
+client.marketplace('organization_uid')..installation('installation_uid').webhooks('webhook_uid');
+```

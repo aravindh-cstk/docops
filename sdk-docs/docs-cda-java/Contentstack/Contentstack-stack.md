@@ -1,0 +1,44 @@
+---
+title: "stack"
+description: "A stack method provides access to the stack of your site. It allows users to get the content within a single space."
+url: "https://www.contentstack.com/java-contentstack-stack"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## stack
+
+A stack method provides access to the stack of your site. It allows users to get the content within a single space.
+
+| Name | Type | Required | Default | Description |
+|---|---|---|---|---|
+| apiKey | String | Yes | — | API Key of your application on Contentstack |
+| deliveryToken | String | Yes | — | Delivery Tokens retrieves only the published entries of the environment with which it is associated |
+| environment | String | Yes | — | A publishing environment refers to one or more deployment servers or a content delivery destination (Webpage’s address) where you will publish your content ( entries or assets ). |
+| config | Config | No | — | Config instance to set environment and other configuration details. |
+
+Returns:
+Type
+Stack
+
+```
+import com.contentstack.sdk.*;
+ 
+Stack stack = Contentstack.stack("apiKey", "deliveryToken", "environment");
+```
+
+**Example with Config:**
+
+****
+
+```
+import com.contentstack.sdk.*; 
+
+Config config = new Config().setHost("api.contentstack.io");
+Stack stack = Contentstack.stack("apiKey", "deliveryToken", "environment");
+```

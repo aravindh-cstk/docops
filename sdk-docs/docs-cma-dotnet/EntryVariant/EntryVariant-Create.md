@@ -1,0 +1,95 @@
+---
+title: "Create"
+description: "Creates or replaces the content of a specific entry variant."
+url: "https://www.contentstack.com/dotnet-management-entryvariant-create"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## Create
+
+Creates or replaces the content of a specific entry variant.
+
+| Name | Type | Required | Default | Description |
+|---|---|---|---|---|
+| model | object | Yes | NA | Defines the variant entry data, including `entry` fields and `_variant` metadata. The `_variant` object must include `_change_set` (list of field names to write) and `_order` (field ordering). |
+| collection | ParameterCollection | No | null | Defines optional query parameters. When `null` , API defaults apply. |
+
+Returns:
+Type
+ContentstackResponse. The created or updated variant content.
+
+**Validation**
+
+Throws `InvalidOperationException` if no variant UID is set on the `EntryVariant` instance. Pass the target variant UID to `.Variant(uid)` before calling `Create`.
+
+**Behavior**
+
+Sends a PUT request to `/content_types/{contentTypeUid}/entries/{entryUid}/variants/{variantUid}`. Returns the raw API response wrapped in `ContentstackResponse`.
+
+**Implementation and examples**
+
+The following example creates content for a specific entry variant, specifying the changed fields in `_change_set`.
+
+```
+using Contentstack.Management.Core;
+using Contentstack.Management.Core.Models;
+
+ContentstackClient client = new ContentstackClient("AUTH_TOKEN");
+
+var variantData = new
+{
+    entry = new
+    {
+        title = "ENTRY_TITLE",
+        description = "ENTRY_DESCRIPTION"
+    },
+    _variant = new
+    {
+        _change_set = new[] { "title", "description" },
+        _order = new string[] { }
+    }
+};
+
+ContentstackResponse response = client
+    .Stack("API_KEY")
+    .ContentType("CONTENT_TYPE_UID")
+    .Entry("ENTRY_UID")
+    .Variant("VARIANT_UID")
+    .Create(variantData);
+```
+
+The following example creates variant content scoped to a specific branch.
+
+```
+using Contentstack.Management.Core;
+using Contentstack.Management.Core.Models;
+
+ContentstackClient client = new ContentstackClient("AUTH_TOKEN");
+
+var variantData = new
+{
+    entry = new
+    {
+        title = "ENTRY_TITLE",
+        description = "ENTRY_DESCRIPTION"
+    },
+    _variant = new
+    {
+        _change_set = new[] { "title", "description" },
+        _order = new string[] { }
+    }
+};
+
+ContentstackResponse response = client
+    .Stack("API_KEY")
+    .ContentType("CONTENT_TYPE_UID")
+    .Entry("ENTRY_UID")
+    .Variant("VARIANT_UID", "BRANCH_UID")
+    .Create(variantData);
+```

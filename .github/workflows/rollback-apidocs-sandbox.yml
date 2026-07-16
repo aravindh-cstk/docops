@@ -1,0 +1,118 @@
+name: Rollback APIDocs Sandbox
+
+on:
+  workflow_dispatch:
+    inputs:
+      backup_name:
+        description: "Backup directory name to restore (leave blank for most recent)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Dry run (preview what would be restored)"
+        type: boolean
+        default: true
+
+concurrency:
+  group: rollback-apidocs-sandbox
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  rollback:
+    name: Rollback destination stack
+    runs-on: ubuntu-latest
+    environment: production  # Requires manual approval via GitHub Environments
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/migration/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tools/migration
+        run: npm ci
+
+      - name: Download latest backup artifact
+        if: ${{ !inputs.backup_name }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const artifacts = await github.rest.actions.listArtifactsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'sync-reports',
+              per_page: 5,
+            });
+            if (!artifacts.data.artifacts.length) {
+              core.setFailed('No backup artifacts found. Provide a backup_name or run sync first.');
+              return;
+            }
+            const latest = artifacts.data.artifacts[0];
+            core.info(`Using artifact: ${latest.name} (run #${latest.workflow_run.id})`);
+            const download = await github.rest.actions.downloadArtifact({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              artifact_id: latest.id,
+              archive_format: 'zip',
+            });
+            const fs = require('fs');
+            fs.writeFileSync('/tmp/backup.zip', Buffer.from(download.data));
+
+      - name: Extract backup artifact
+        if: ${{ !inputs.backup_name }}
+        run: |
+          mkdir -p tools/migration/backups/artifact-restore
+          unzip -o /tmp/backup.zip -d tools/migration/backups/artifact-restore/ || true
+
+      - name: Run rollback
+        working-directory: tools/migration
+        env:
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          APIDOCS_SANDBOX_STACK_REGION: us
+          SYNC_DRY_RUN: ${{ inputs.dry_run }}
+          BACKUP_DIR: ./backups
+          LOG_LEVEL: info
+          MAX_RETRIES: "3"
+        run: |
+          if [ -n "${{ inputs.backup_name }}" ]; then
+            node rollback.js "${{ inputs.backup_name }}"
+          else
+            node rollback.js
+          fi
+
+      - name: Write job summary
+        if: always()
+        run: |
+          echo "## Rollback Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Parameter | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|-----------|-------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Backup used | ${{ inputs.backup_name || '(most recent)' }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Dry run | ${{ inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Status | ${{ job.status }} |" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Notify on completion
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          script: |
+            const webhookUrl = process.env.SLACK_WEBHOOK_URL;
+            if (!webhookUrl) return;
+            const status = '${{ job.status }}' === 'success' ? ':white_check_mark:' : ':x:';
+            const dryRun = '${{ inputs.dry_run }}' === 'true' ? ' [DRY RUN]' : '';
+            const payload = {
+              text: `${status} *APIDocs Sandbox rollback${dryRun}* — ${{ job.status }}\nBackup: ${{ inputs.backup_name || '(most recent)' }}\nRun: <${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}|#${context.runId}>`
+            };
+            await fetch(webhookUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload),
+            });

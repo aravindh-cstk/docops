@@ -1,0 +1,35 @@
+{
+  "name": "contentstack-migration",
+  "version": "1.0.0",
+  "description": "Migration scripts for Contentstack stacks synchronization",
+  "main": "index.js",
+  "scripts": {
+    "export": "node export-source.js",
+    "diff": "node diff-stacks.js",
+    "sync": "node sync-to-destination.js",
+    "sync:dry": "SYNC_DRY_RUN=true node sync-to-destination.js",
+    "validate": "node validate-sync.js",
+    "rollback": "node rollback.js",
+    "rollback:dry": "SYNC_DRY_RUN=true node rollback.js",
+    "test": "node test_scripts.js",
+    "test:inspect": "node test_scripts.js --skip-cleanup",
+    "lint": "CS_DOCS_ROOT=api-docs tsx ../cs-sync/src/lint.ts",
+    "fix": "CS_DOCS_ROOT=api-docs tsx ../cs-sync/src/fix.ts"
+  },
+  "keywords": [
+    "contentstack",
+    "migration",
+    "sync"
+  ],
+  "author": "DevOps Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^4.1.0",
+    "dotenv": "^16.0.0",
+    "lodash": "^4.17.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0"
+  }
+}
