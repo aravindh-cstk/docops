@@ -38,4 +38,4 @@ It supports the following core objects:
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-|  |  | No | — | The `fieldConfig` property provides access to the configuration and metadata of a custom field. It enables you to retrieve details such as field settings, data type, and other configuration parameters defined in the content type. const fieldConfig = customField.fieldConfig; console.log('Field config:', fieldConfig); console.log('Field type:', fieldConfig.type); |
+|  |  | No | — | The `fieldConfig` property provides access to the configuration and metadata of a custom field. It enables you to retrieve details such as field settings, data type, and other configuration parameters defined in the content type. Use `const fieldConfig = customField.fieldConfig`. Log the field config and field type using `console.log()`. |

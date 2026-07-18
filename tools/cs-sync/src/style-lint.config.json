@@ -13,7 +13,8 @@
     "TS", "JS", "TSX", "JSX", "ESM", "CJS", "ESLint", "TSC",
     "NPM", "PNPM", "CI/CD", "DevOps", "SaaS", "PaaS", "IaaS",
     "B2B", "B2C", "DXP", "WCM", "DAM", "PIM",
-    "WYSIWYG", "PHP", "NET", "ASP", "AZURE", "JPG", "BMP", "TIFF", "PSD", "CDA", "CMA"
+    "WYSIWYG", "PHP", "NET", "ASP", "AZURE", "JPG", "BMP", "TIFF", "PSD", "CDA", "CMA",
+    "TEST", "UPDATED"
   ],
   "rootOverrides": {
     "sdk-docs": {

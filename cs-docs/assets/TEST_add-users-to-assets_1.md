@@ -1,7 +1,9 @@
 ---
 title: "TEST - [AM2.0] - Add Users to Assets"
 description: Instructions for inviting users to Assets via Contentstack Administration and assigning product-level and optional space-level roles.
-url: https://www.contentstack.com/docs/assets/test_add-users-to-assets_1
+url: /assets/test-add-users-to-assets-1
+marker: "Assets"
+heading: "Add Users to Assets"
 product: Contentstack Assets
 doc_type: how-to
 audience:
@@ -43,7 +45,7 @@ This approach enables centralized user onboarding with granular access control a
 
 **Note:** At least one **Administration** role is required for every invited user. By default, the **Member** role is preselected.
 
-To invite users to **Assets**, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
+To invite users to **Assets**, sign in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
 - Navigate to **Administration** through "App Switcher", then click the **Users** tab to view organization users.
 - Click **Invite User**.
 - Enter one or more email addresses (comma-separated).
@@ -54,7 +56,7 @@ To invite users to **Assets**, log in to your [Contentstack account](https://www
 - A side panel opens, listing the default and custom organization-level roles available for Assets. Select one or more roles as required.
 - Optionally select one or more spaces to which the user should be added.
 - Select space-level roles (for example: Space Admin, Asset Developer, Asset Manager). By default, selected space-level roles apply to all selected spaces.
-- Use **Roles Per Spaces** to fine-tune space-level access:Assign different roles for individual spaces
+- Use **Roles Per Spaces** to fine-tune space-level access: Assign different roles for individual spaces
 - Assign custom space roles where needed
 - Remove a space or clear roles to restrict access.
 - Click **Save**.
@@ -62,7 +64,7 @@ To invite users to **Assets**, log in to your [Contentstack account](https://www
 
 This **role-based access control** (**RBAC**) model ensures secure and flexible access management across Assets and spaces while supporting both system-defined and custom permissions.
 
-## Common questions
+## Common Questions
 
 ### Do I need to assign an Administration role to every invited user?
 Yes. **Note:** At least one **Administration** role is required for every invited user.
@@ -71,7 +73,7 @@ Yes. **Note:** At least one **Administration** role is required for every invite
 Yes. Roles are assigned at two levels: **Product-level** (Administration and Assets roles) and **Space level (optional)** (space-specific roles per selected space).
 
 ### How do I assign different roles for different spaces?
-Use **Roles Per Spaces** to fine-tune space-level access:Assign different roles for individual spaces.
+Use **Roles Per Spaces** to fine-tune space-level access: Assign different roles for individual spaces.
 
 ### Where do I invite users from?
 Invite users through Contentstack **Administration** by navigating via "App Switcher" and using the **Users** tab and **Invite User** flow.
