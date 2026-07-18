@@ -7,8 +7,8 @@ heading: "Add Users to Assets"
 product: Contentstack Assets
 doc_type: how-to
 audience:
-  - administrators
-  - developers
+ - administrators
+ - developers
 version: AM2.0
 last_updated: 2026-03-25
 ---
@@ -51,7 +51,7 @@ To invite users to **Assets**, sign in to your [Contentstack account](https://ww
 - Enter one or more email addresses (comma-separated).
 - In **Assign Product Access**, click **Manage Roles** for **Administration**. By default, the **Member** role is selected.
 
-  **Note:** Modify this selection only if elevated administrative access is required.
+ **Note:** Modify this selection only if elevated administrative access is required.
 - Click **Manage Roles** for **Assets**.
 - A side panel opens, listing the default and custom organization-level roles available for Assets. Select one or more roles as required.
 - Optionally select one or more spaces to which the user should be added.

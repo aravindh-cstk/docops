@@ -5,7 +5,7 @@ url: developer-apis/asset-management-api-requests/test-create-a-space
 product: Contentstack
 doc_type: api-request
 audience:
-  - developers
+ - developers
 version: unknown
 last_updated: 2026-01-13
 ---
@@ -25,32 +25,32 @@ Sample request body:
 
 ```
 {
-  "name": "Test Space",
-  "description": "Sample Space Description"
+ "name": "Test Space",
+ "description": "Sample Space Description"
 }
 ```
 
 ## Headers
 
 - **x-cs-api-version** (required)
-  Pass the API version to be used for the request.
-  Default: `4`
+ Pass the API version to be used for the request.
+ Default: `4`
 - **organization_uid** (required)
-  Enter your organization UID.
-  Default: `your_organization_uid`
+ Enter your organization UID.
+ Default: `your_organization_uid`
 - **access_token** (required)
-  Enter your authtoken.
-  Default: `your_authtoken`
+ Enter your authtoken.
+ Default: `your_authtoken`
 - **content-type** (required)
-  Pass application/json value.
-  Default: `application/json`
+ Pass application/json value.
+ Default: `application/json`
 
 ## Sample Request
 
 ```json
 {
-  "name": "Marketing",
-  "description": "This space will contain all marketing assets."
+ "name": "Marketing",
+ "description": "This space will contain all marketing assets."
 }
 ```
 
@@ -58,36 +58,36 @@ Sample request body:
 
 ```json
 {
-    "notice": "Space created successfully",
-    "space": {
-        "uid": "dam39f58e6ad9c75dd3",
-        "name": "Test",
-        "description": "description",
-        "org_uid": "blt88556370c4c6f3cc",
-        "owner_uid": "bltdec2ecb708ddfb23",
-        "locales": [
-            {
-                "code": "en",
-                "fallback": "en-us"
-            },
-            {
-                "code": "en-us",
-                "fallback": null
-            }
-        ],
-        "tags": [],
-        "created_by": "bltdec2ecb708ddfb23",
-        "updated_by": "bltdec2ecb708ddfb23",
-        "updated_at": "2025-04-28T12:26:42.976Z",
-        "created_at": "2025-04-28T12:26:42.976Z",
-        "deleted_at": false,
-        "meta_info": {
-            "storage": 0,
-            "assets_count": 0,
-            "folders_count": 0,
-            "last_modified_at": "2025-04-28T12:26:42.976Z"
-        },
-        "users_count": 0
-    }
+  "notice": "Space created successfully",
+  "space": {
+    "uid": "dam39f58e6ad9c75dd3",
+    "name": "Test",
+    "description": "description",
+    "org_uid": "blt88556370c4c6f3cc",
+    "owner_uid": "bltdec2ecb708ddfb23",
+    "locales": [
+      {
+        "code": "en",
+        "fallback": "en-us"
+      },
+      {
+        "code": "en-us",
+        "fallback": null
+      }
+    ],
+    "tags": [],
+    "created_by": "bltdec2ecb708ddfb23",
+    "updated_by": "bltdec2ecb708ddfb23",
+    "updated_at": "2025-04-28T12:26:42.976Z",
+    "created_at": "2025-04-28T12:26:42.976Z",
+    "deleted_at": false,
+    "meta_info": {
+      "storage": 0,
+      "assets_count": 0,
+      "folders_count": 0,
+      "last_modified_at": "2025-04-28T12:26:42.976Z"
+    },
+    "users_count": 0
+  }
 }
 ```

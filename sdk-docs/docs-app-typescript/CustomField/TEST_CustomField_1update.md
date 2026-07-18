@@ -5,8 +5,8 @@ url: "https://www.contentstack.com/developers/sdks/contentstack-app-sdk/typescri
 product: "Contentstack"
 doc_type: "class_intro"
 audience:
-  - developers
-  - admins
+ - developers
+ - admins
 version: "current"
 last_updated: "2026-07-18"
 ---
@@ -20,10 +20,10 @@ The `CustomField` object extends field functionality with custom validation and 
 ```
 const customField = sdk.location.CustomField;
 if (customField) {
-  const field = customField.field;
-  const entry = customField.entry;
-  const stack = customField.stack;
-  const frame = customField.frame;
+ const field = customField.field;
+ const entry = customField.entry;
+ const stack = customField.stack;
+ const frame = customField.frame;
 }
 ```
 
@@ -38,4 +38,4 @@ It supports the following core objects:
 
 | Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-|  |  | No | — | The `fieldConfig` property provides access to the configuration and metadata of a custom field. It enables you to retrieve details such as field settings, data type, and other configuration parameters defined in the content type. Use `const fieldConfig = customField.fieldConfig`. Log the field config and field type using `console.log()`. |
+| | | No | — | The `fieldConfig` property provides access to the configuration and metadata of a custom field. It enables you to retrieve details such as field settings, data type, and other configuration parameters defined in the content type. Use `const fieldConfig = customField.fieldConfig`. Log the field config and field type using `console.log()`. |
