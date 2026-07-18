@@ -57,7 +57,7 @@ To invite users to **Assets**, sign in to your [Contentstack account](https://ww
 - A side panel opens, listing the default and custom organization-level roles available for Assets. Select one or more roles as required.
 - Optionally select one or more spaces to which the user should be added.
 - Select space-level roles (for example: Space Admin, Asset Developer, Asset Manager). By default, selected space-level roles apply to all selected spaces.
-- Use **Roles Per Spaces** to fine-tune space-level access: Assign different roles for individual spaces
+- Use **Roles Per Spaces** to fine-tune space-level access: Assign different roles for individual spaces.
 - Assign custom space roles where needed.
 - Remove a space or clear roles to restrict access.
 - Click **Save**.
