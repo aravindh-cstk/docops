@@ -7,6 +7,8 @@ doc_type: api-request
 audience:
  - developers
 version: unknown
+last_updated: 2026-07-22
+test_run: auto-sync-validation
 last_updated: 2026-01-13
 ---
 
