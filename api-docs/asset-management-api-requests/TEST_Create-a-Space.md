@@ -7,10 +7,10 @@ doc_type: api-request
 audience:
  - developers
 version: unknown
-last_updated: 2026-01-13
+last_updated: 2026-07-22
 ---
 
-# TEST - Create a Space
+# TEST - Create a Space (Updated)
 
 **POST** `/v4/spaces`
 
