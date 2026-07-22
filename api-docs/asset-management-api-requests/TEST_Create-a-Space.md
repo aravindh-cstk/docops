@@ -12,6 +12,10 @@ test_run: auto-sync-validation
 ---
 
 # TEST - Create a Space (Updated)
+last_updated: 2026-01-13
+---
+
+# TEST - Create a Space
 
 **POST** `/v4/spaces`
 
