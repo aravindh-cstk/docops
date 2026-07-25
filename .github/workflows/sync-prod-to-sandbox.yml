@@ -33,9 +33,25 @@ jobs:
           APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
           APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
 
-      - name: Sync Production → Git (Markdown)
+      - name: Sync Production → Git (Markdown - API Docs)
         working-directory: ./tools/cs-sync
         run: node sync-to-git_25July26.js
+
+      - name: Sync Production → Sandbox (CS Docs)
+        working-directory: ./tools/cs-sync
+        run: node full-sync-csdocs_25July26.js
+        env:
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_DELIVERY_TOKEN }}
+          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
+          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+
+      - name: Sync Production → Git (Markdown - CS Docs)
+        working-directory: ./tools/cs-sync
+        run: node sync-to-git-csdocs_25July26.js
+        env:
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_DELIVERY_TOKEN }}
 
       - name: Configure git for commit
         run: |
@@ -52,8 +68,13 @@ jobs:
         run: |
           echo "✅ All syncs completed successfully at $(date)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**API Docs Sync:**" >> $GITHUB_STEP_SUMMARY
           echo "- Production → Sandbox (CMS)" >> $GITHUB_STEP_SUMMARY
           echo "- Production → Git (Markdown in api-docs/)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**CS Docs Sync:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Production → Sandbox (CMS)" >> $GITHUB_STEP_SUMMARY
+          echo "- Production → Git (Markdown in cs-docs/)" >> $GITHUB_STEP_SUMMARY
 
       - name: Report sync failure
         if: failure()
