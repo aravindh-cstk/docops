@@ -26,7 +26,7 @@ jobs:
 
       - name: Sync Production → Sandbox
         working-directory: ./tools/cs-sync
-        run: node full-sync.js
+        run: node full-sync_25July26.js
         env:
           PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
           PROD_APIDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_DELIVERY_TOKEN }}
@@ -35,7 +35,7 @@ jobs:
 
       - name: Sync Production → Git (Markdown)
         working-directory: ./tools/cs-sync
-        run: node sync-to-git.js
+        run: node sync-to-git_25July26.js
 
       - name: Configure git for commit
         run: |
