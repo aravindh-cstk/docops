@@ -1,25 +1,16 @@
 ---
 title: "Device Usage"
-description: GET /analytics/v2/devices?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}
-url: analytics-api-requests/usage
+description: /analytics/v2/devices?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}
+url: /device-usage
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-14
+created_at: 2024-08-15T10:00:09.541Z
+updated_at: 2026-04-14T10:50:51.036Z
 ---
 
 # Device Usage
 
-**GET** `/analytics/v2/devices?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
-
-The Device Usage request helps you get a list of devices that your organization users are using to access Contentstack services.
-
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../api-detail/analytics-api.md#retrieve-data) endpoint.
-
-```
-{
+<p>The <span class="code">Device Usage</span> request helps you get a list of devices that your organization users are using to access Contentstack services.</p><p>Here’s how your response body would look like when you pass the <span class="code">jobId</span> in the <a href="/docs/developers/apis/analytics-api#retrieve-data" target="_self">Retrieve Data</a> endpoint.</p><pre>{
     "totalDocs": 26,
     "data": [
         {
@@ -67,49 +58,35 @@ Here’s how your response body would look like when you pass the jobId in the [
         "services": "[\"cdn\",\"cma\"]"
     },
     "uid": "35****12-acf4-4ad5-93e0-48********0e"
-}
-```
+}</pre><p>The response body provides detailed insights into users accessing Contentstack endpoints. Here’s a breakdown of the key elements:</p><ul><li><span class="code">count</span>: Number of times the specific device was used.</li><li><span class="code">type</span>: The type of access, such as "cma" for Content Management API.</li><li><span class="code">device</span>: Description of the device or software used, including the SDK version, platform, and operating system details.</li><li><span class="code">date</span>: The specific date when the usage was recorded.</li></ul><p>This data helps you track and analyze device and environment usage, supporting performance and user experience optimization.</p>
 
-The response body provides detailed insights into users accessing Contentstack endpoints. Here’s a breakdown of the key elements:
+**API Endpoint**: `/analytics/v2/devices?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}`
 
-- count: Number of times the specific device was used.
-- type: The type of access, such as "cma" for Content Management API.
-- device: Description of the device or software used, including the SDK version, platform, and operating system details.
-- date: The specific date when the usage was recorded.
-
-This data helps you track and analyze device and environment usage, supporting performance and user experience optimization.
+**Method**: `GET`
 
 ## Query Parameters
 
 - **orgUid** (required)
-  Enter the UID of your Organization.
-  Default: `your_organization_uid`
+  <p>Enter the UID of your Organization.</p>
 - **from** (required)
-  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
-  Default: `2024-01-31`
+  <p>Specify the start date for the required data. Use the following date format: <span class="code">YYYY-MM-DD</span>.</p>
 - **to** (required)
-  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
-  Default: `2024-03-31`
+  <p>Enter the current date or any date after the <span class="code">from</span> date. The date format should be: <span class="code">YYYY-MM-DD</span>.</p>
 - **services** (optional)
-  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
-  Default: `["cdn","cma"]`
+  <p>Specify the array of services for which you want statistics, such as: <span class="code">["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"]</span>.</p>
 - **duration** (optional)
-  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
-  Default: `day`
+  <p>Enter a value like <span class="code">day</span>, <span class="code">week</span>, or <span class="code">month</span>. This parameter determines the granularity of the data you want to fetch.</p>
 - **includeCount** (optional)
-  Set this parameter to true to include the total count of users in the response.
-  Default: `true`
+  <p>Set this parameter to <span class="code">true</span> to include the total count of users in the response.</p>
 - **orderBy** (optional)
-  Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the value is set to -1, which orders the response in descending order.
-  Default: `-1`
+  <p>Enter <span class="code">1</span> to sort the response in ascending order by <span class="code">count</span> or <span class="code">-1</span> to sort it in descending order by <span class="code">count</span>. By default, the value is set to <span class="code">-1</span>, which orders the response in descending order.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your authtoken.
-  Default: `your_authtoken`
+  <p>Enter your <span class="code">authtoken</span>.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

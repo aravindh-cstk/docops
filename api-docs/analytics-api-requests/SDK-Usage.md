@@ -1,120 +1,59 @@
 ---
 title: "SDK Usage"
-description: GET /analytics/v2/sdk?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}&includeCount={boolean_value}&services={['cdn','cma']}&duration={duration}
-url: analytics-api-requests/usage
+description: /analytics/v2/sdk?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}&includeCount={boolean_value}&services={["cdn","cma"]}&duration={duration}
+url: /sdk-usage
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2025-02-25
+created_at: 2024-08-15T16:27:58.908Z
+updated_at: 2025-02-25T04:47:12.754Z
 ---
 
 # SDK Usage
 
-**GET** `/analytics/v2/sdk?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}&includeCount={boolean_value}&services={["cdn","cma"]}&duration={duration}`
+<p>The <span class="code">SDK Usage</span> request gets you the number of requests that were made using the SDKs. It helps you get an overview of the SDK usage by your customers.</p>
+<p>Here’s how your response body would look like when you pass the <span class="code">jobId</span> in the <a href="/docs/developers/apis/analytics-api#retrieve-data" target="_self">Retrieve Data</a> endpoint.</p><pre>{<br />    "total": 16,<br />    "totalDocs": 4,<br />    "data": [<br />        {<br />            "count": 7,<br />            "type": "cdn",<br />            "sdk": "cda-collection/v9.31.0",<br />            "date": "2024-02-09"<br />        },<br />        {<br />            "count": 4,<br />            "type": "cdn",<br />            "sdk": "cda-collection/v9.31.0",<br />            "date": "2024-02-12"<br />        },<br />        {<br />            "count": 3,<br />            "type": "cdn",<br />            "sdk": "cda-collection/v9.31.0",<br />            "date": "2024-02-08"<br />        },<br />        {<br />            "count": 2,<br />            "type": "cdn",<br />            "sdk": "cda-collection/v9.31.0",<br />            "date": "2024-02-15"<br />        },<br />        {<br />            "date": "2024-02-28"<br />        }<br />    ],<br />    "meta": {<br />        "orderBy": -1,<br />        "from": "2024-01-31",<br />        "to": "2024-02-28",<br />        "orgUid": "blt**************87",<br />        "includeCount": true,<br />        "services": "[\"cdn\",\"cma\"]",<br />        "duration": "day",<br />        "skip": 0,<br />        "limit": 900<br />    },<br />    "uid": "0f****46-5ee9-4f38-9146-1f********8"<br />}</pre>
+<p>The response body provides detailed insights into how SDKs are being used across different services. Here’s a breakdown of the key elements:</p>
+<ul>
+  <li><span class="code">count</span>: The number of requests executed using a specific SDK on a given date.</li>
+  <li><span class="code">type</span>: The service type, such as "cdn".</li>
+  <li><span class="code">sdk</span>: The SDK version used for the requests.</li>
+  <li><span class="code">date</span>: The date when the SDK requests were executed.</li>
+</ul>
+<p>This response helps organizations track SDK adoption and effectiveness by revealing usage patterns and frequency.</p>
 
-The SDK Usage request gets you the number of requests that were made using the SDKs. It helps you get an overview of the SDK usage by your customers.
+**API Endpoint**: `/analytics/v2/sdk?from={YYYY-MM-DD}&to={YYYY-MM-DD}&orgUid={organization_uid}&includeCount={boolean_value}&services={["cdn","cma"]}&duration={duration}`
 
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../api-detail/analytics-api.md#retrieve-data) endpoint.
-
-```
-{
-    "total": 16,
-    "totalDocs": 4,
-    "data": [
-        {
-            "count": 7,
-            "type": "cdn",
-            "sdk": "cda-collection/v9.31.0",
-            "date": "2024-02-09"
-        },
-        {
-            "count": 4,
-            "type": "cdn",
-            "sdk": "cda-collection/v9.31.0",
-            "date": "2024-02-12"
-        },
-        {
-            "count": 3,
-            "type": "cdn",
-            "sdk": "cda-collection/v9.31.0",
-            "date": "2024-02-08"
-        },
-        {
-            "count": 2,
-            "type": "cdn",
-            "sdk": "cda-collection/v9.31.0",
-            "date": "2024-02-15"
-        },
-        {
-            "date": "2024-02-28"
-        }
-    ],
-    "meta": {
-        "orderBy": -1,
-        "from": "2024-01-31",
-        "to": "2024-02-28",
-        "orgUid": "blt**************87",
-        "includeCount": true,
-        "services": "[\"cdn\",\"cma\"]",
-        "duration": "day",
-        "skip": 0,
-        "limit": 900
-    },
-    "uid": "0f****46-5ee9-4f38-9146-1f********8"
-}
-```
-
-The response body provides detailed insights into how SDKs are being used across different services. Here’s a breakdown of the key elements:
-
-- count: The number of requests executed using a specific SDK on a given date.
-- type: The service type, such as "cdn".
-- sdk: The SDK version used for the requests.
-- date: The date when the SDK requests were executed.
-
-This response helps organizations track SDK adoption and effectiveness by revealing usage patterns and frequency.
+**Method**: `GET`
 
 ## Query Parameters
 
 - **from** (required)
-  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
-  Default: `2024-01-31`
+  <p>Specify the start date for the required data. Use the following date format: <span class="code">YYYY-MM-DD</span>.</p>
 - **to** (required)
-  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
-  Default: `2024-03-31`
+  <p>Enter the current date or any date after the <span class="code">from</span> date. The date format should be: <span class="code">YYYY-MM-DD</span>.</p>
 - **orgUid** (required)
-  Enter the UID of your Organization.
-  Default: `your_organization_uid`
+  <p>Enter the UID of your Organization.</p>
 - **includeCount** (required)
-  Set this parameter to true to include the total count of users in the response.
-  Default: `true`
+  <p>Set this parameter to <span class="code">true</span> to include the total count of users in the response.</p>
 - **services** (required)
-  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
-  Default: `["cdn","cma"]`
+  <p>Specify the array of services for which you want statistics, such as: <span class="code">["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"]</span>.</p>
 - **duration** (required)
-  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
-  Default: `day`
+  <p>Enter a value like <span class="code">day</span>, <span class="code">week</span>, or <span class="code">month</span>. This parameter determines the granularity of the data you want to fetch.</p>
 - **orderBy** (optional)
-  Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the value is set to -1, which orders the response in descending order.
-  Default: `-1`
+  <p>Enter <span class="code">1</span> to sort the response in ascending order by <span class="code">count</span> or <span class="code">-1</span> to sort it in descending order by <span class="code">count</span>. By default, the value is set to <span class="code">-1</span>, which orders the response in descending order.</p>
 - **limit** (optional)
-  Specify the number of items you wish to fetch per request. The maximum limit is 900.
-  Default: `20`
+  <p>Specify the number of items you wish to fetch per request. The maximum limit is 900.</p>
 - **skip** (optional)
-  Enter the number of items to skip. For example, a skip value of 10 will skip the first 10 items.
-  Default: `10`
+  <p>Enter the number of items to skip. For example, a skip value of <span class="code">10</span> will skip the first 10 items.</p>
 - **apiKey** (optional)
-  Enter your stack API key to get data for that specific stack.
-  Default: `your_stack_api_key`
+  <p>Enter your stack API key to get data for that specific stack.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your authtoken.
-  Default: `your_authtoken`
+  <p>Enter your <span class="code">authtoken</span>.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

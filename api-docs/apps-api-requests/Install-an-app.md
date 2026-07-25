@@ -1,36 +1,34 @@
 ---
 title: "Install an app"
-description: POST /apps/{app_uid}/install
-url: apps-api-requests/app
+description: /apps/{app_uid}/install
+url: /install-an-app
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:08:59.842Z
+updated_at: 2023-01-05T14:08:59.842Z
 ---
 
 # Install an app
 
-**POST** `/apps/{app_uid}/install`
+The <strong>Install an app</strong> request is used to initiate the installation of the app.<br>
 
-The **Install an app** request is used to initiate the installation of the app.
+**API Endpoint**: `/apps/{app_uid}/install`
+
+**Method**: `POST`
 
 ## URL Parameters
 
 - **app_uid** (required)
-  The UID of the app to be installed.
+  <p>The UID of the app to be installed.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your management token.
-  Default: `your_authtoken`
+  <p>Enter your management token.</p>
 - **organization_uid** (required)
-  The UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

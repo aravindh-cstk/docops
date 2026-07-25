@@ -1,54 +1,36 @@
 ---
 title: "Add a stack role mapping"
-description: POST /organizations/{organization_uid}/teams/{team_uid}/stack_role_mappings
-url: administration-api-requests/mapping
+description: /organizations/{organization_uid}/teams/{team_uid}/stack_role_mappings
+url: /add-a-stack-role-mapping
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:44.562Z
+updated_at: 2026-04-07T12:55:44.562Z
 ---
 
 # Add a stack role mapping
 
-**POST** `/organizations/{organization_uid}/teams/{team_uid}/stack_role_mappings`
+<p>The <span data-type='inlineCode'>Add a stack role mapping</span> request allows you to associate users from a specified team with the available stacks in your organization.</p><p>You need to pass the API key of the stack and the role UIDs in the request body as follows:</p><pre>{<br />    "stackApiKey": "stack_api_key",<br />    "roles": [<br />        "role_one_uid",<br />        "role_two_uid"<br />    ]<br />}<br /></pre><h5>Update a stack role mapping</h5>
 
-The Add a stack role mapping request allows you to associate users from a specified team with the available stacks in your organization.
+**API Endpoint**: `/organizations/{organization_uid}/teams/{team_uid}/stack_role_mappings`
 
-You need to pass the API key of the stack and the role UIDs in the request body as follows:
-
-```
-{
-    "stackApiKey": "stack_api_key",
-    "roles": [
-        "role_one_uid",
-        "role_two_uid"
-    ]
-}
-```
-
-##### Update a stack role mapping
+**Method**: `POST`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of your Organization.
-  Default: `your_organization_uid`
+  <p>Enter the UID of your Organization.</p>
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](../api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
-  Default: `team_uid`
+  <p>Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the <a href="/docs/developers/apis/content-management-api#get-all-teams" target="_self">Get all teams</a> request to retrieve the UID of a team.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your authtoken.
-  Default: `your_authtoken`
+  <p>Enter your authtoken.</p>
 - **Content-Type** (required)
-  Enter "application/json" to pass a request body.
-  Default: `application/json`
+  <p>Enter "application/json" to pass a request body.</p>
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -60,7 +42,7 @@ You need to pass the API key of the stack and the role UIDs in the request body 
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

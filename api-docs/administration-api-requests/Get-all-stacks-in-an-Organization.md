@@ -1,57 +1,48 @@
 ---
 title: "Get all stacks in an Organization"
-description: GET /organizations/{organization_uid}/stacks?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}
-url: administration-api-requests/organization
+description: /organizations/{organization_uid}/stacks?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}
+url: /get-all-stacks-in-an-organization
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:18.220Z
+updated_at: 2026-04-07T12:55:18.220Z
 ---
 
 # Get all stacks in an Organization
 
-**GET** `/organizations/{organization_uid}/stacks?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}`
+<p>The <span data-type="inlineCode">Get all stacks in an organization</span> call fetches the list of all stacks in an Organization.
+</p><p>When executing the API call, provide the Organization UID.</p>
 
-The Get all stacks in an organization call fetches the list of all stacks in an Organization.
+**API Endpoint**: `/organizations/{organization_uid}/stacks?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}`
 
-When executing the API call, provide the Organization UID.
+**Method**: `GET`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of the Organization of which you want to retrieve all the stacks.
-  Default: `blt4001c00ea0ddf287`
+  <p>Enter the UID of the Organization of which you want to retrieve all the stacks.</p>
 
 ## Query Parameters
 
 - **limit** (optional)
-  The ‘limit’ parameter will return a specific number of stacks in the output. Example, if there are 10 organization stacks and you wish to fetch only the first 2, you need to specify '2' as value in this parameter.
-  Default: `limit_value`
+  <p><span style="background-color: initial;">The ‘limit’ parameter will return a specific number of stacks in the output. Example, if there are 10 organization stacks and you wish to fetch only the first 2, you need to specify '2' as value in this parameter.</span></p>
 - **skip** (optional)
-  The ‘skip’ parameter will skip a specific number of organization stacks in the output. Example, if there are 12 stacks and you want to skip the last 2 to get only the first 10 in the response body, you need to specify ‘2’ here.
-  Default: `skip_value`
+  <p><span style="background-color: initial;">The ‘skip’ parameter will skip a specific number of organization stacks in the output. Example, if there are 12 stacks and you want to skip the last 2 to get only the first 10 in the response body, you need to specify ‘2’ here.</span></p>
 - **asc** (optional)
-  The ‘asc’ parameter allows you to sort the list of stacks in an organization in the ascending order.
-  Default: `field_uid`
+  <p><span style="background-color: initial;">The ‘asc’ parameter allows you to sort the list of stacks in an organization in the ascending order.</span></p>
 - **desc** (optional)
-  The ‘desc’ parameter allows you to sort the list of stacks in an organization in the descending order.
-  Default: `field_uid`
+  <p><span style="background-color: initial;">The ‘desc’ parameter allows you to sort the list of stacks in an organization in the descending order.</span></p>
 - **include_count** (optional)
-  The ‘include_count’ parameter returns the total number of stacks in an organization. Example: If you wish to know the total number of stacks in your organization, you need to mention ‘true’.
-  Default: `false`
+  <p><span style="background-color: initial;">The ‘include_count’ parameter returns the total number of stacks in an organization. Example: If you wish to know the total number of stacks in your organization, you need to mention ‘true’.</span></p>
 - **typeahead** (optional)
-  The ‘typeahead’ parameter allows you to perform a name-based search on all the stacks on an organization based on the value provided.
-  Default: `Aravind`
+  <p><span style="background-color: initial;">The ‘typeahead’ parameter allows you to perform a name-based search on all the stacks on an organization based on the value provided.</span></p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter the authtoken of the user.
-  Default: `your_authtoken`
+  <p>Enter the authtoken of the user.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

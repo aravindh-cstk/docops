@@ -1,45 +1,40 @@
 ---
 title: "Get Single User By Username"
-description: GET scim/v2.0/organizations/{organization_uid}/Users?filter=userName eq '<<email-address>>'
-url: scim-api-requests/username
+description: scim/v2.0/organizations/{organization_uid}/Users?filter=userName eq "<<email-address>>"
+url: /get-single-user-by-username
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:12.137Z
+updated_at: 2023-01-05T14:09:12.137Z
 ---
 
 # Get Single User By Username
 
-**GET** `scim/v2.0/organizations/{organization_uid}/Users?filter=userName eq "<<email-address>>"`
+<p>The <span data-type="inlineCode">Get Single User by Username</span> request returns comprehensive details of a specific user that exists in the Contentstack organization.</p>
+<p>You need to pass the username as a query parameter.</p>
 
-The Get Single User by Username request returns comprehensive details of a specific user that exists in the Contentstack organization.
+**API Endpoint**: `scim/v2.0/organizations/{organization_uid}/Users?filter=userName eq "<<email-address>>"`
 
-You need to pass the username as a query parameter.
+**Method**: `GET`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization. Use the <a href="/docs/developers/apis/content-management-api#get-all-organizations">Get All Organizations</a> request to get the UID of the organization.</p>
 
 ## Query Parameters
 
 - **filter** (required)
-  Specify the type of filter you want to use. In this case, the filter will be “userName eq”
-  Default: `userName eq "user.name@contentstack.com"`
+  <p>Specify the type of filter you want to use. In this case, the filter will be “userName eq”</p>
 
 ## Headers
 
 - **Content-Type** (required)
-  The format of the response content.
-  Default: `application/json`
+  <p>The format of the response content.</p>
 - **Authorization** (required)
-  The access token obtained after authorizing the IdP client.
-  Default: `Bearer access_token_from_IdP_client`
+  <p>The access token obtained after authorizing the IdP client.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

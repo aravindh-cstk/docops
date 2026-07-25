@@ -1,76 +1,61 @@
 ---
 title: "Get Items in Folder"
-description: GET /v1/knowledge-vault/folders/{folder_uid}?folder_depth={number}&limit={limit}&skip={index}&sort={string}&order={string}&date_range={dateRange}&filter_users={string}&filter_field={string}&include_users={boolean}&typeahead={string}
-url: developer-apis/knowledge-vault-api-requests/get-items-in-folder
+description: /v1/knowledge-vault/folders/{folder_uid}?folder_depth={number}&limit={limit}&skip={index}&sort={string}&order={string}&date_range={dateRange}&filter_users={string}&filter_field={string}&include_users={boolean}&typeahead={string}
+url: /get-items-in-folder
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-03-02
+created_at: 2025-12-12T08:31:52.010Z
+updated_at: 2026-03-02T22:44:40.646Z
 ---
 
 # Get Items in Folder
 
-**GET** `/v1/knowledge-vault/folders/{folder_uid}?folder_depth={number}&limit={limit}&skip={index}&sort={string}&order={string}&date_range={dateRange}&filter_users={string}&filter_field={string}&include_users={boolean}&typeahead={string}`
+<p>The <span class="code">Get Items in Folder</span> request retrieves all items contained within a specific folder in the Knowledge Vault of a brand kit.</p><p>To configure the permissions for your app via <a href="/docs/developers/developer-hub/contentstack-oauth" target="_self">OAuth</a>, include the <span class="code">brand-kits:read</span> scope.</p>
 
-The Get Items in Folder request retrieves all items contained within a specific folder in the Knowledge Vault of a brand kit.
+**API Endpoint**: `/v1/knowledge-vault/folders/{folder_uid}?folder_depth={number}&limit={limit}&skip={index}&sort={string}&order={string}&date_range={dateRange}&filter_users={string}&filter_field={string}&include_users={boolean}&typeahead={string}`
 
-To configure the permissions for your app via [OAuth](../../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
+**Method**: `GET`
 
 ## URL Parameters
 
 - **folder_uid** (required)
-  Enter the parent folder UID.
-  Default: `dir0000000000000`
+  <p>Enter the parent folder UID.</p>
 
 ## Query Parameters
 
 - **limit** (optional)
-  Enter the maximum number of content items to return.
-  Default: `10`
+  <p>Enter the maximum number of content items to return.</p>
 - **skip** (optional)
-  Enter the number of content items to be skipped from the response body.
-  Default: `0`
+  <p>Enter the number of content items to be skipped from the response body.</p>
 - **sort** (optional)
-  Enter the value on the basis of which you want to sort your content items.
-  Default: `created_at`
+  <p>Enter the value on the basis of which you want to sort your content items.</p>
 - **order** (optional)
-  Enter the ascending or descending order to organize your content items.
-  Default: `asc`
+  <p>Enter the ascending or descending order to organize your content items.</p>
 - **include_users** (optional)
-  This parameter lets you include user information in the response. Set to true if you want to include the user information, else set to false.
-  Default: `false`
+  <p>This parameter lets you include user information in the response. Set to true if you want to include the user information, else set to false.</p>
 - **folder_depth** (optional)
-  Number of folder levels to traverse (1 = only direct children).
-  Default: `1`
+  <p>Number of folder levels to traverse (1 = only direct children).</p>
 - **date_range** (optional)
-  You can filter the response by date range. The format must be YYYY-MM-DD.
-  Default: `2025-12-01`
+  <p>You can filter the response by date range. The format must be YYYY-MM-DD.</p>
 - **filter_users ** (optional)
-  You can filter the response based on the comma-separated user UIDs.
+  <p>You can filter the response based on the comma-separated user UIDs.</p>
 - **filter_field** (optional)
-  You can filter the response based on the user fields like created or updated.
+  <p>You can filter the response based on the user fields like created or updated.</p>
 - **typeahead** (optional)
-  Text-based search across content item title or name.
-  Default: `AI Tools`
+  <p>Text-based search across content item title or name.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter the authtoken.
-  Default: `your_authtoken`
+  <p>Enter the authtoken.</p>
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](../api-detail/knowledge-vault-api.md#authentication).
-  Default: `[Bearer <OAuth token>]`
+  <p>Enter your OAuth token. Learn more about <a href="/docs/developers/apis/knowledge-vault-api#authentication" target="_self">Authentication</a>.</p>
 - **organization_uid** (required)
-  Enter the Organization UID.
-  Default: `your_organization_uid`
+  <p>Enter the Organization UID.</p>
 - **brand_kit_uid** (required)
-  Enter the Brand Kit UID.
-  Default: `your_brand_kit_uid`
+  <p>Enter the Brand Kit UID.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

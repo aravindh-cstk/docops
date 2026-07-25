@@ -1,51 +1,48 @@
 ---
 title: "Get all apps details"
-description: GET /apps
-url: apps-api-requests/details
+description: /apps
+url: /get-all-apps-details
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:00.815Z
+updated_at: 2023-01-05T14:09:00.815Z
 ---
 
 # Get all apps details
 
-**GET** `/apps`
+<p>The <strong>Get all app details</strong> request is used to retrieve details of all the apps in a particular organization.</p>
+<p><strong>ACL: </strong></p><ul><li>Organization Admins</li><li>Organization Owners</li><li>Stack Owners</li><li>Stack Admins</li></ul>
 
-The **Get all app details** request is used to retrieve details of all the apps in a particular organization.
+**API Endpoint**: `/apps`
 
-**ACL:**
-
-- Organization Admins
-- Organization Owners
-- Stack Owners
-- Stack Admins
+**Method**: `GET`
 
 ## Query Parameters
 
 - **search** (optional)
-  Searches app details using its name and description.
+  <p>Searches app details using its name and description.</p>
 - **limit** (optional)
-  Sets response limit. Default: 50 Not greater than 50
+  <p>Sets response limit. Default: 50</p>
+<p>Not greater than 50</p>
 - **skip** (optional)
-  Skips the response by offset. Default value: 0
+  <p>Skips the response by offset. Default value: 0</p>
 - **order** (optional)
-  Defines the response order.  One of the below array:: [“asc“, “desc“, “ASC“, “DESC“ ]
+  <p>Defines the response order.&nbsp;</p>
+<p>One of the below array::</p>
+<p>[“asc“, “desc“, “ASC“, “DESC“ ]</p><br>
 - **sort** (optional)
-  Sorts the response based on the passed option.  One of the below array:: [“name“, “updated_at“, “created_at“]
+  <p>Sorts the response based on the passed option.&nbsp;</p>
+<p>One of the below array::</p>
+<p>[“name“, “updated_at“, “created_at“]</p><br>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your management token.
-  Default: `your_authtoken`
+  <p>Enter your management token.</p>
 - **organization_uid** (required)
-  The UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

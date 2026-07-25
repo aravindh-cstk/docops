@@ -1,30 +1,28 @@
 ---
 title: "Delete an app"
-description: DELETE /apps/{app_uid}
-url: apps-api-requests/app
+description: /apps/{app_uid}
+url: /delete-an-app
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:01.783Z
+updated_at: 2023-01-05T14:09:01.783Z
 ---
 
 # Delete an app
 
-**DELETE** `/apps/{app_uid}`
+**API Endpoint**: `/apps/{app_uid}`
+
+**Method**: `DELETE`
 
 ## URL Parameters
 
 - **app_uid** (required)
-  The UID of the app to be updated.
+  <p>The UID of the app to be updated.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your management token.
-  Default: `your_authtoken`
+  <p>Enter your management token.</p>
 - **organization_uid** (required)
-  The UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization.</p>
 

@@ -1,38 +1,34 @@
 ---
 title: "Add users to Organization"
-description: POST /organizations/{organization_uid}/share
-url: administration-api-requests/organization
+description: /organizations/{organization_uid}/share
+url: /add-users-to-organization
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:07.780Z
+updated_at: 2026-04-07T12:55:07.780Z
 ---
 
 # Add users to Organization
 
-**POST** `/organizations/{organization_uid}/share`
+<p>The <span data-type="inlineCode">Add users to organization</span> request allows you to send invitations to add users to your organization. Only the owner or the admin of the organization can add users.</p>
+<p>When executing the API request, in the request body, provide the organization admin/member role ID, obtained from the <span data-type="inlineCode">Get all roles in an Organization</span> request. Also, provide the stack role UID of the user in the request body, obtained from the <span data-type="inlineCode">Get all roles</span> request.</p>
 
-The Add users to organization request allows you to send invitations to add users to your organization. Only the owner or the admin of the organization can add users.
+**API Endpoint**: `/organizations/{organization_uid}/share`
 
-When executing the API request, in the request body, provide the organization admin/member role ID, obtained from the Get all roles in an Organization request. Also, provide the stack role UID of the user in the request body, obtained from the Get all roles request.
+**Method**: `POST`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of the organization to which you want to add users.
-  Default: `bltad182661f48a9afe1d00cdc2`
+  <p>Enter the UID of the organization to which you want to add users.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter the authtoken of the user.
-  Default: `your_authtoken`
+  <p>Enter the authtoken of the user.</p>
 - **Content-Type** (required)
-  Default: `application/json`
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -55,7 +51,7 @@ When executing the API request, in the request body, provide the organization ad
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

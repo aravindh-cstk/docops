@@ -1,39 +1,35 @@
 ---
 title: "Create Group"
-description: POST scim/v2.0/organizations/{organization_uid}/Groups
-url: scim-api-requests/group
+description: scim/v2.0/organizations/{organization_uid}/Groups
+url: /create-group
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:13.044Z
+updated_at: 2023-01-05T14:09:13.044Z
 ---
 
 # Create Group
 
-**POST** `scim/v2.0/organizations/{organization_uid}/Groups`
+<p> The <span data-type="inlineCode">Create Group</span> request lets you create a group in your IdP client and add users to it. </p>
+<p>In the "Request Body" section, you need to pass the ID of the user in Contentstack as the <span data-type="inlineCode">value</span>. Refer to the <a href="#get-all-users">Get All Users</a> request to get the user ID. Also, provide a name to the group in the <span data-type="inlineCode">displayName</span> key.</p>
 
-The Create Group request lets you create a group in your IdP client and add users to it.
+**API Endpoint**: `scim/v2.0/organizations/{organization_uid}/Groups`
 
-In the "Request Body" section, you need to pass the ID of the user in Contentstack as the value. Refer to the [Get All Users](#get-all-users) request to get the user ID. Also, provide a name to the group in the displayName key.
+**Method**: `POST`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization. Use the <a href="/docs/developers/apis/content-management-api#get-all-organizations">Get All Organizations</a> request to get the UID of the organization.</p>
 
 ## Headers
 
 - **Content-Type** (required)
-  The format of the response content.
-  Default: `application/json`
+  <p>The format of the response content.</p>
 - **Authorization** (required)
-  The access token obtained after authorizing the IdP client.
-  Default: `Bearer access_token_from_IdP_client`
+  <p>The access token obtained after authorizing the IdP client.</p>
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -47,7 +43,7 @@ In the "Request Body" section, you need to pass the ID of the user in Contentsta
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

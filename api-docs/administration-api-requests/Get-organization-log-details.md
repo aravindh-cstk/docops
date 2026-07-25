@@ -1,40 +1,32 @@
 ---
 title: "Get organization log details"
-description: GET /organizations/{organization_uid}/logs
-url: administration-api-requests/details
+description: /organizations/{organization_uid}/logs
+url: /get-organization-log-details
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:20.399Z
+updated_at: 2026-04-07T12:55:20.399Z
 ---
 
 # Get organization log details
 
-**GET** `/organizations/{organization_uid}/logs`
+<p>The <span class="code">Get organization log details</span> request is used to retrieve the audit log details of an organization.</p><p>You can apply queries to filter the results. Refer to the <a href="/docs/developers/apis/content-delivery-api#queries" target="_self">Queries</a> section for more details.</p><p>When executing the API call, provide the Organization UID.</p><p class="tip"><strong>Tip</strong>: This request returns only the first <strong>25 audit log items</strong> of the specified organization. If you get more than <strong>25 items</strong> in your response, refer to the <a href="/docs/developers/apis/content-delivery-api#pagination" target="_self">Pagination</a> section to retrieve all the log items in a paginated form.</p>
 
-The Get organization log details request is used to retrieve the audit log details of an organization.
+**API Endpoint**: `/organizations/{organization_uid}/logs`
 
-You can apply queries to filter the results. Refer to the [Queries](../api-detail/content-delivery-api.md#queries) section for more details.
-
-When executing the API call, provide the Organization UID.
-
-**Tip**: This request returns only the first **25 audit log items** of the specified organization. If you get more than **25 items** in your response, refer to the [Pagination](../api-detail/content-delivery-api.md#pagination) section to retrieve all the log items in a paginated form.
+**Method**: `GET`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of a specific organization of which you want to retrieve the audit log details.
-  Default: `656s5d1c65ea6ddf287`
+  <p>Enter the UID of a specific organization of which you want to retrieve the audit log details.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your authtoken.
-  Default: `Your_authtoken`
+  <p>Enter your authtoken.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

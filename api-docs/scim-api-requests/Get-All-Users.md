@@ -1,46 +1,42 @@
 ---
 title: "Get All Users"
-description: GET scim/v2.0/organizations/{organization_uid}/Users
-url: scim-api-requests/users
+description: scim/v2.0/organizations/{organization_uid}/Users
+url: /get-all-users
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:12.120Z
+updated_at: 2023-01-05T14:09:12.120Z
 ---
 
 # Get All Users
 
-**GET** `scim/v2.0/organizations/{organization_uid}/Users`
+<p>The <span data-type="inlineCode">Get All Users</span> request fetches the list of all users (along with details such as name, user ID, and email address) of your Contentstack organization.</p>
 
-The Get All Users request fetches the list of all users (along with details such as name, user ID, and email address) of your Contentstack organization.
+**API Endpoint**: `scim/v2.0/organizations/{organization_uid}/Users`
+
+**Method**: `GET`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization. Use the <a href="/docs/developers/apis/content-management-api#get-all-organizations">Get All Organizations</a> request to get the UID of the organization.</p>
 
 ## Query Parameters
 
 - **count** (optional)
-  To fetch a certain number of users in a single request. You can fetch a maximum of 100 users at a time.
-  Default: `2`
+  <p>To fetch a certain number of users in a single request. You can fetch a maximum of 100 users at a time.</p>
 - **startIndex** (optional)
-  It is the index number from which you want to fetch user details. By default, the value is 1. Example: If you specify 2, you will get details starting from the second user in the list.
-  Default: `2`
+  <p>It is the index number from which you want to fetch user details.</p>
+<p>By default, the value is 1. Example: If you specify 2, you will get details starting from the second user in the list.</p>
 
 ## Headers
 
 - **Content-Type** (required)
-  The format of the response content.
-  Default: `application/json`
+  <p>The format of the response content.</p>
 - **Authorization** (required)
-  The access token obtained after authorizing the IdP client.
-  Default: `Bearer access_token_from_IdP_client`
+  <p>The access token obtained after authorizing the IdP client.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

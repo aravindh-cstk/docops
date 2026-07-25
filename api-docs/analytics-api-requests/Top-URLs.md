@@ -1,25 +1,16 @@
 ---
 title: "Top URLs"
-description: GET /analytics/v2/url?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}&includeTotalCount={boolean_value}
-url: analytics-api-requests/urls
+description: /analytics/v2/url?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}&includeTotalCount={boolean_value}
+url: /top-urls
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-14
+created_at: 2024-08-15T10:37:56.082Z
+updated_at: 2026-04-14T10:44:04.084Z
 ---
 
 # Top URLs
 
-**GET** `/analytics/v2/url?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}&includeTotalCount={boolean_value}`
-
-The Top URLs request gets you the number of requests made from your URLs for the given services.
-
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../api-detail/analytics-api.md#retrieve-data) endpoint.
-
-```
-{
+<p>The <span class="code">Top URLs</span> request gets you the number of requests made from your URLs for the given services.</p><p>Here’s how your response body would look like when you pass the <span class="code">jobId</span> in the <a href="/docs/developers/apis/analytics-api#retrieve-data" target="_self">Retrieve Data</a> endpoint.</p><pre>{
     "data": [
         {
             "url": "https://cdn.contentstack.io/v3/content_types?include_count=false",
@@ -51,51 +42,37 @@ Here’s how your response body would look like when you pass the jobId in the [
         "services": "[\"cdn\"]"
     },
     "uid": "0f****46-5ee9-4f38-9146-1f********8"
-}
-```
+}</pre><p>The response body provides a detailed summary of the number of requests made to various URLs over a specific period. Here’s a breakdown of the key elements:</p><ul><li><span class="code">url</span>: The specific URL that was accessed.</li><li><span class="code">type</span>: The service type of the URL, such as "cdn".</li><li><span class="code">count</span>: The number of requests made to this URL.</li></ul><p>This data helps organizations monitor traffic, identify frequently accessed URLs, and optimize performance.</p>
 
-The response body provides a detailed summary of the number of requests made to various URLs over a specific period. Here’s a breakdown of the key elements:
+**API Endpoint**: `/analytics/v2/url?orgUid={organization_uid}&from={YYYY-MM-DD}&to={YYYY-MM-DD}&includeTotalCount={boolean_value}`
 
-- url: The specific URL that was accessed.
-- type: The service type of the URL, such as "cdn".
-- count: The number of requests made to this URL.
-
-This data helps organizations monitor traffic, identify frequently accessed URLs, and optimize performance.
+**Method**: `GET`
 
 ## Query Parameters
 
 - **orgUid** (required)
-  Enter the UID of your Organization.
-  Default: `your_organization_uid`
+  <p>Enter the UID of your Organization.</p>
 - **from** (required)
-  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
-  Default: `2024-01-31`
+  <p>Specify the start date for the required data. Use the following date format: <span class="code">YYYY-MM-DD</span>.</p>
 - **to** (required)
-  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
-  Default: `2024-03-31`
+  <p>Enter the current date or any date after the <span class="code">from</span> date. The date format should be: <span class="code">YYYY-MM-DD</span>.</p>
 - **includeTotalCount** (required)
-  Set this parameter to true to include the total count of users in the response.
-  Default: `true`
+  <p>Set this parameter to <span class="code">true</span> to include the total count of users in the response.</p>
 - **duration** (optional)
-  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
-  Default: `day`
+  <p>Enter a value like <span class="code">day</span>, <span class="code">week</span>, or <span class="code">month</span>. This parameter determines the granularity of the data you want to fetch.</p>
 - **services** (optional)
-  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
-  Default: `["cdn","cma"]`
+  <p>Specify the array of services for which you want statistics, such as: <span class="code">["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"]</span>.</p>
 - **apiKey** (optional)
-  Enter the API key of the stack.
-  Default: `your_stack_api_key`
+  <p>Enter the API key of the stack.</p>
 - **orderBy** (optional)
-  Enter 1 to sort the response in ascending order by count or -1 to sort it in descending order by count. By default, the value is set to -1, which orders the response in descending order.
-  Default: `1`
+  <p>Enter <span class="code">1</span> to sort the response in ascending order by <span class="code">count</span> or <span class="code">-1</span> to sort it in descending order by <span class="code">count</span>. By default, the value is set to <span class="code">-1</span>, which orders the response in descending order.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your authtoken.
-  Default: `your_authtoken`
+  <p>Enter your <span class="code">authtoken</span>.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

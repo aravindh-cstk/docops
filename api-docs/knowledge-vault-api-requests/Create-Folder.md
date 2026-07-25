@@ -1,66 +1,65 @@
 ---
-title: "Create Folder"
-description: POST /v1/knowledge-vault/folders
-url: developer-apis/knowledge-vault-api-requests/create-folder
+title: "Ingest Content Item"
+description: /v1/knowledge-vault/
+url: /create-folder
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-03-02
+created_at: 2024-11-08T08:14:39.347Z
+updated_at: 2025-12-12T08:40:09.138Z
 ---
 
-# Create Folder
+# Ingest Content Item
 
-**POST** `/v1/knowledge-vault/folders`
-
-The Create Folder request lets you create a new folder within a specified parent directory in your knowledge vault.
-
-To configure the permissions for your app via [OAuth](../../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:manage scope.
-
-Example:
-
-```
-{
-  "name": "AI for Advanced Users",
-  "path": "/dir0000000000000"
+<p>The <span class="code">Ingest Content</span> request stores textual content in a specified folder within the Knowledge Vault of a brand kit. It enriches the content with metadata such as title and tags for improved organization and retrieval.</p><p>To configure the permissions for your application via <a href="/docs/developers/developer-hub/contentstack-oauth" target="_self">OAuth</a>, include the <span class="code">brand-kits:manage</span> scope.</p><p>Here’s an example of the Request Body for ingesting content:</p><pre>{
+   "content": "ChatGPT, Google Gemini, Anthropic Claude, Perplexity AI, Jasper AI, Midjourney, DALL·E, Adobe Firefly, Canva AI, Runway ML, Pika Labs, ElevenLabs, Descript, GitHub Copilot, Amazon CodeWhisperer, Replit Ghostwriter, Microsoft Copilot, Notion AI, Zapier AI, HubSpot AI",
+   "_metadata": {
+       "title": "Popular AI Tools",
+       "tags": ["AI", "AI Tools", "AI New Users"]
+   }
 }
-```
+</pre>
 
-The _name_ and _path_ are required strings where _name_ specifies the new folder’s name and _path_ provides the parent folder UID where the new folder will be created.
+**API Endpoint**: `/v1/knowledge-vault/`
 
-**Note**: Root folder UID is dir0000000000000.
+**Method**: `POST`
 
 ## Headers
 
 - **authtoken** (required)
-  Enter the authtoken.
-  Default: `your_authtoken`
+  <p>Enter the authtoken.</p>
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](../api-detail/knowledge-vault-api.md#authentication).
-  Default: `[Bearer <OAuth token>]`
+  <p>Enter your OAuth token. Learn more about <a href="/docs/developers/apis/knowledge-vault-api#authentication" target="_self">Authentication</a>.</p>
 - **organization_uid** (required)
-  Enter the Organization UID.
-  Default: `your_organization_uid`
+  <p>Enter the Organization UID.</p>
 - **brand_kit_uid** (required)
-  Enter the Brand Kit UID.
-  Default: `your_brand_kit_uid`
+  <p>Enter the Brand Kit UID.</p>
+- **path** (required)
+  <p>Enter the absolute path for the parent folder.</p>
 
-## Sample Request
+## Request Body
 
 ```json
 {
-  "name": "AI for Advanced Users",
-  "path": "/dir0000000000000"
+   "content": "ChatGPT, Google Gemini, Anthropic Claude, Perplexity AI, Jasper AI, Midjourney, DALL·E, Adobe Firefly, Canva AI, Runway ML, Pika Labs, ElevenLabs, Descript, GitHub Copilot, Amazon CodeWhisperer, Replit Ghostwriter, Microsoft Copilot, Notion AI, Zapier AI, HubSpot AI",
+   "_metadata": {
+       "title": "Popular AI Tools",
+       "tags": ["AI", "AI Tools", "AI New Users"]
+   }
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {
-   "message": "Folder created successfully",
-   "folder_uid": "dir************"
+    "message": "Your content will be ingested shortly",
+    "content": {
+        "uid": "cs**************",
+        "tokens": {
+            "count": 10060,
+            "remaining": 989940
+        }
+    }
 }
 ```
 

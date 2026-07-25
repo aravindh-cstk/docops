@@ -1,27 +1,26 @@
 ---
 title: "Get user"
-description: GET /user
-url: administration-api-requests/user
+description: /user
+url: /get-user
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:54:48.969Z
+updated_at: 2026-04-07T12:54:48.969Z
 ---
 
 # Get user
 
-**GET** `/user`
+<p>The <span data-type="inlineCode">Get user</span> call returns comprehensive information of an existing user account. The information returned includes details of the stacks owned by and shared with the specified user account.</p>
 
-The Get user call returns comprehensive information of an existing user account. The information returned includes details of the stacks owned by and shared with the specified user account.
+**API Endpoint**: `/user`
+
+**Method**: `GET`
 
 ## Headers
 
 - **authtoken** (required)
-  Default: `Enter_your_authtoken`
 
-## Sample Response
+## Response
 
 ```json
 {

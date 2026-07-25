@@ -1,33 +1,30 @@
 ---
 title: "Update user"
-description: PUT /user
-url: administration-api-requests/user
+description: /user
+url: /update-user
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:54:51.005Z
+updated_at: 2026-04-07T12:54:51.005Z
 ---
 
 # Update user
 
-**PUT** `/user`
+<p>The <span data-type="inlineCode">Update User</span> API Request updates the details of an existing user account. Only the&nbsp;information entered here will be updated, the existing data will remain unaffected.</p>
+<p>When executing the API call, under the 'Body' section, enter the information of the user that you wish to update. This information should be in JSON format.
+</p>
+<p class="add-resource"><strong>Additional Resource:</strong> To update the role of an existing user, refer to the <a href="#update-existing-user-role">Update Existing User Role</a> API Request.</p>
 
-The Update User API Request updates the details of an existing user account. Only the information entered here will be updated, the existing data will remain unaffected.
+**API Endpoint**: `/user`
 
-When executing the API call, under the 'Body' section, enter the information of the user that you wish to update. This information should be in JSON format.
-
-**Additional Resource:** To update the role of an existing user, refer to the [Update Existing User Role](#update-existing-user-role) API Request.
+**Method**: `PUT`
 
 ## Headers
 
 - **authtoken** (required)
-  Default: `Enter_your_authtoken`
 - **Content-Type** (required)
-  Default: `application/json`
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -37,7 +34,7 @@ When executing the API call, under the 'Body' section, enter the information of 
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {
