@@ -12,8 +12,10 @@ jobs:
     name: Sync Contentstack Stacks
 
     steps:
-      - name: Checkout code
+      - name: Checkout code (main branch only)
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

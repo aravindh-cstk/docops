@@ -2,13 +2,17 @@
 
 /**
  * Git → CMS Import: CS Docs
- * - Reads markdown files from cs-docs/ folder
+ * - Reads markdown files from cs-docs/ folder (MAIN BRANCH ONLY)
  * - Parses YAML frontmatter into CMS fields
- * - Creates/updates entries in Production CMS
- * - Auto-syncs to Sandbox CMS
+ * - Creates/updates entries in Production CMS as DRAFT
+ * - Writer manually publishes when ready
  *
- * Triggered on: git push to main (cs-docs/ changes)
+ * Triggered on:
+ *   1. PR merge to main (immediate) - import-git-to-cms-csdocs_25July26.js
+ *   2. 2 AM UTC safety check (main branch) - sync-prod-to-sandbox.yml
+ *
  * Usage: node import-git-to-cms-csdocs_25July26.js
+ * Note: Only reads from checked-out git branch (main in production)
  */
 
 import https from 'https';
