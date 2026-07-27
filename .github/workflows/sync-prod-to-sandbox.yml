@@ -24,6 +24,20 @@ jobs:
         working-directory: ./tools/cs-sync
         run: npm ci
 
+      - name: Import Git Markdown → Production CMS (API Docs)
+        working-directory: ./tools/cs-sync
+        run: node import-git-to-cms-apidocs_25July26.js
+        env:
+          PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
+          PROD_APIDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_DELIVERY_TOKEN }}
+
+      - name: Import Git Markdown → Production CMS (CS Docs)
+        working-directory: ./tools/cs-sync
+        run: node import-git-to-cms-csdocs_25July26.js
+        env:
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_DELIVERY_TOKEN }}
+
       - name: Sync Production → Sandbox
         working-directory: ./tools/cs-sync
         run: node full-sync_25July26.js
@@ -75,16 +89,21 @@ jobs:
       - name: Log sync completion
         if: success()
         run: |
-          echo "✅ All syncs completed successfully at $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Bidirectional sync completed at $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Git → CMS Import:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Git markdown → Production CMS (API Docs)" >> $GITHUB_STEP_SUMMARY
+          echo "- Git markdown → Production CMS (CS Docs)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**API Docs Sync:**" >> $GITHUB_STEP_SUMMARY
-          echo "- Production → Sandbox (CMS)" >> $GITHUB_STEP_SUMMARY
-          echo "- Production → Git (Markdown in api-docs/)" >> $GITHUB_STEP_SUMMARY
+          echo "- Production → Sandbox CMS" >> $GITHUB_STEP_SUMMARY
+          echo "- Production → Git markdown (api-docs/)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**CS Docs Sync:**" >> $GITHUB_STEP_SUMMARY
-          echo "- Import content type definitions from Production" >> $GITHUB_STEP_SUMMARY
-          echo "- Production → Sandbox (CMS entries)" >> $GITHUB_STEP_SUMMARY
-          echo "- Production → Git (Markdown in cs-docs/)" >> $GITHUB_STEP_SUMMARY
+          echo "- Production → Sandbox CMS" >> $GITHUB_STEP_SUMMARY
+          echo "- Production → Git markdown (cs-docs/)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Safety Check:** All stacks now in sync (parity enforced)">> $GITHUB_STEP_SUMMARY
 
       - name: Report sync failure
         if: failure()
