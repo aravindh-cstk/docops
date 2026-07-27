@@ -207,18 +207,12 @@ class GitToCmsImporter {
         // Update existing entry
         const updated = await this.updateEntry(contentTypeUid, existing.uid, entryData);
         this.stats.updated++;
-        console.log(`  ✓ Updated: ${entryData.title}`);
-
-        // Publish if needed
-        await this.publishEntry(contentTypeUid, updated.uid);
+        console.log(`  ✓ Updated (Draft): ${entryData.title}`);
       } else {
-        // Create new entry
+        // Create new entry as DRAFT
         const created = await this.createEntry(contentTypeUid, entryData);
         this.stats.created++;
-        console.log(`  ✓ Created: ${entryData.title}`);
-
-        // Publish automatically
-        await this.publishEntry(contentTypeUid, created.uid);
+        console.log(`  ✓ Created (Draft): ${entryData.title}`);
       }
 
       this.stats.filesProcessed++;

@@ -188,7 +188,8 @@ class ContentstackSync {
               const clean = this.cleanEntry(entry);
               const created = await this.createSandboxEntry(ct, clean);
 
-              // Publish if was published in prod
+              // Mirror publish status: only publish if published in production
+              // Keep drafts as drafts in sandbox
               if (entry.publish_details && entry.publish_details.length > 0) {
                 await this.publishSandboxEntry(ct, created.uid);
               }
