@@ -1,0 +1,49 @@
+name: Real-time Entry Sync (Webhook)
+
+on:
+  repository_dispatch:
+    types: [contentstack-publish, contentstack-unpublish]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Sync Entry on Publish/Unpublish
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./tools/cs-sync
+        run: npm ci
+
+      - name: Sync Published/Unpublished Entry
+        working-directory: ./tools/cs-sync
+        run: node sync-on-publish_25July26.js '${{ toJSON(github.event.client_payload) }}'
+        env:
+          PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
+          PROD_APIDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_DELIVERY_TOKEN }}
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_DELIVERY_TOKEN }}
+          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
+          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+
+      - name: Log sync result
+        if: success()
+        run: |
+          echo "✅ Real-time sync completed at $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "Entry synced to Sandbox CMS and Git markdown immediately" >> $GITHUB_STEP_SUMMARY
+
+      - name: Report sync failure
+        if: failure()
+        run: |
+          echo "❌ Real-time sync failed" >> $GITHUB_STEP_SUMMARY
+          echo "Check logs above for details" >> $GITHUB_STEP_SUMMARY
+          exit 1
