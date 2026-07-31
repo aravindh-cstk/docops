@@ -1,49 +1,41 @@
 ---
 title: "Remove users from organization"
-description: DELETE /organizations/{organization_uid}/share
-url: administration-api-requests/organization
+description: /organizations/{organization_uid}/share
+url: /remove-users-from-organization
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:09.885Z
+updated_at: 2026-04-07T12:55:09.885Z
 ---
 
 # Remove users from organization
 
-**DELETE** `/organizations/{organization_uid}/share`
-
-The Remove users from organization request allows you to remove existing users from your organization.
-
-**Note**: Only the owner or the admin of the organization can remove users.
-
-When executing the API request, provide the organization UID. In the “Body” section, you need to enter the email IDs of the users you want to remove from the organization as follows:
-
-```
-{
+<p>The <span data-type="inlineCode">Remove users from organization</span> request allows you to remove existing users from your organization.</p>
+<p class="note"><strong>Note</strong>: Only the owner or the admin of the organization can remove users.</p>
+<p>When executing the API request, provide the organization UID. In the “Body” section, you need to enter the email IDs of the users you want to remove from the organization as follows:</p>
+<pre>{
   "emails":[
     "abc@sample.com", "xyz@sample.com"
   ]
-}
-```
+}</pre>
+
+**API Endpoint**: `/organizations/{organization_uid}/share`
+
+**Method**: `DELETE`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of the organization from which you want to remove users.
-  Default: `bltad182661f48a9afe1d00cdc2`
+  <p>Enter the UID of the organization from which you want to remove users.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter the authtoken of the user.
-  Default: `your_authtoken`
+  <p>Enter the authtoken of the user.</p>
 - **Content-Type** (required)
-  Enter "application/json" to pass a request body.
-  Default: `application/json`
+  <p>Enter "application/json" to pass a request body.</p>
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -53,7 +45,7 @@ When executing the API request, provide the organization UID. In the “Body” 
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

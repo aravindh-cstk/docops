@@ -1,25 +1,16 @@
 ---
 title: "Cache Usage"
-description: GET /analytics/v2/hit-miss-ratio?orgUid={organization_uid}&services={['cdn','cma']}&from={YYYY-MM-DD}&duration={duration}&to={YYYY-MM-DD}
-url: analytics-api-requests/usage
+description: /analytics/v2/hit-miss-ratio?orgUid={organization_uid}&services={["cdn","cma"]}&from={YYYY-MM-DD}&duration={duration}&to={YYYY-MM-DD}
+url: /cache-usage
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-14
+created_at: 2024-08-15T16:21:21.845Z
+updated_at: 2026-04-14T11:02:43.619Z
 ---
 
 # Cache Usage
 
-**GET** `/analytics/v2/hit-miss-ratio?orgUid={organization_uid}&services={["cdn","cma"]}&from={YYYY-MM-DD}&duration={duration}&to={YYYY-MM-DD}`
-
-The Cache Usage request will show the number of HIT/MISS instances for your cache. Number of HIT indicates that responses were received from the cache and MISS indicates the number of responses retrieved from the database.
-
-Here’s how your response body would look like when you pass the jobId in the [Retrieve Data](../api-detail/analytics-api.md#retrieve-data) endpoint.
-
-```
-{
+<p>The <span class="code">Cache Usage</span> request will show the number of HIT/MISS instances for your cache. Number of HIT indicates that responses were received from the cache and MISS indicates the number of responses retrieved from the database.</p><p>Here’s how your response body would look like when you pass the <span class="code">jobId</span> in the <a href="/docs/developers/apis/analytics-api#retrieve-data" target="_self">Retrieve Data</a> endpoint.</p><pre>{
     "data": [
         {
             "count": 7,
@@ -60,49 +51,35 @@ Here’s how your response body would look like when you pass the jobId in the [
         "to": "2024-03-31"
     },
     "uid": "0f****46-5ee9-4f38-9146-1f********8"
-}
-```
+}</pre><p>The response body provides insights into how effectively the cache is being utilized for the specified services. Here’s a breakdown of the key elements:</p><ul><li><span class="code">count</span>: The number of instances for the specified cache status (HIT or MISS).</li><li><span class="code">type</span>: The service type (e.g., "cdn") being tracked for cache usage.</li><li><span class="code">status</span>: Indicates whether the cache request was a "HIT" (response received from cache) or "MISS" (response retrieved from the database).</li><li><span class="code">date</span>: The date when the cache status was recorded.</li></ul><p>This information helps analyze cache efficiency by detailing the number of HITs and MISSes, aiding in optimizing the cache strategy and understanding cache utilization.</p>
 
-The response body provides insights into how effectively the cache is being utilized for the specified services. Here’s a breakdown of the key elements:
+**API Endpoint**: `/analytics/v2/hit-miss-ratio?orgUid={organization_uid}&services={["cdn","cma"]}&from={YYYY-MM-DD}&duration={duration}&to={YYYY-MM-DD}`
 
-- count: The number of instances for the specified cache status (HIT or MISS).
-- type: The service type (e.g., "cdn") being tracked for cache usage.
-- status: Indicates whether the cache request was a "HIT" (response received from cache) or "MISS" (response retrieved from the database).
-- date: The date when the cache status was recorded.
-
-This information helps analyze cache efficiency by detailing the number of HITs and MISSes, aiding in optimizing the cache strategy and understanding cache utilization.
+**Method**: `GET`
 
 ## Query Parameters
 
 - **orgUid** (required)
-  Enter the UID of your Organization.
-  Default: `your_organization_uid`
+  <p>Enter the UID of your Organization.</p>
 - **from** (required)
-  Specify the start date for the required data. Use the following date format: YYYY-MM-DD.
-  Default: `2024-01-31`
+  <p>Specify the start date for the required data. Use the following date format: <span class="code">YYYY-MM-DD</span>.</p>
 - **duration** (required)
-  Enter a value like day, week, or month. This parameter determines the granularity of the data you want to fetch.
-  Default: `day`
+  <p>Enter a value like <span class="code">day</span>, <span class="code">week</span>, or <span class="code">month</span>. This parameter determines the granularity of the data you want to fetch.</p>
 - **to** (required)
-  Enter the current date or any date after the from date. The date format should be: YYYY-MM-DD.
-  Default: `2024-03-31`
+  <p>Enter the current date or any date after the <span class="code">from</span> date. The date format should be: <span class="code">YYYY-MM-DD</span>.</p>
 - **services** (required)
-  Specify the array of services for which you want statistics, such as: ["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"].
-  Default: `["cdn","cma"]`
+  <p>Specify the array of services for which you want statistics, such as: <span class="code">["cma", "ui", "cdn", "graphql", "images", "assets", "automations", "launch"]</span>.</p>
 - **apiKey** (optional)
-  Enter your stack API key to get data for that specific stack.
-  Default: `your_stack_api_key`
+  <p>Enter your stack API key to get data for that specific stack.</p>
 - **cache** (optional)
-  Enter the value as HIT for this param if you want to get the number of hit API calls and MISS to get the number of missed API calls.
-  Default: `HIT`
+  <p>Enter the value as <span class="code">HIT</span> for this param if you want to get the number of hit API calls and <span class="code">MISS</span> to get the number of missed API calls.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your authtoken.
-  Default: `your_authtoken`
+  <p>Enter your <span class="code">authtoken</span>.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

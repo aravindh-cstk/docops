@@ -1,40 +1,38 @@
 ---
 title: "Get a single Organization"
-description: GET /organizations/{organization_uid}?include_plan={boolean_value}
-url: administration-api-requests/organization
+description: /organizations/{organization_uid}?include_plan={boolean_value}
+url: /get-a-single-organization
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:01.381Z
+updated_at: 2026-04-07T12:55:01.381Z
 ---
 
 # Get a single Organization
 
-**GET** `/organizations/{organization_uid}?include_plan={boolean_value}`
+<p>The <span data-type="inlineCode">Get a single organization</span> call gets the comprehensive details of a specific organization related to the system user.</p>
 
-The Get a single organization call gets the comprehensive details of a specific organization related to the system user.
+**API Endpoint**: `/organizations/{organization_uid}?include_plan={boolean_value}`
+
+**Method**: `GET`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of the organization that you want to retrieve.
-  Default: `enter_the_organization_uid`
+  <p>Enter the UID of the organization that you want to retrieve.</p>
 
 ## Query Parameters
 
 - **include_plan** (optional)
-  The include_plan parameter includes the details of the plan that the organization has subscribed to. To include the details of the subscribed plan in the Response body, enter ‘true’.
-  Default: `true`
+  <p>The <span data-type="inlineCode">include_plan</span> parameter includes the details of the plan that the organization has subscribed to. To include the details of the subscribed plan in the Response body, enter ‘true’.
+</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter the authtoken of the user.
-  Default: `your_authtoken`
+  <p>Enter the authtoken of the user.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

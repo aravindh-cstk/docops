@@ -1,49 +1,42 @@
 ---
 title: "Get all Organizations"
-description: GET /organizations?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}
-url: administration-api-requests/organizations
+description: /organizations?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}
+url: /get-all-organizations
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:54:59.256Z
+updated_at: 2026-04-07T12:54:59.256Z
 ---
 
 # Get all Organizations
 
-**GET** `/organizations?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}`
+<p>The <span data-type="inlineCode">Get all organizations</span> call lists all organizations related to the system user in the order that they were created.</p>
 
-The Get all organizations call lists all organizations related to the system user in the order that they were created.
+**API Endpoint**: `/organizations?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&typeahead={value_to_be_searched}`
+
+**Method**: `GET`
 
 ## Query Parameters
 
 - **limit** (optional)
-  The ‘limit’ parameter will return a specific number of entries in the output. Example, if there are 10 organizations and you wish to fetch only the first 2, you need to specify '2' as the value in this parameter.
-  Default: `1`
+  <p>The ‘limit’ parameter will return a specific number of entries in the output. Example, if there are 10 organizations and you wish to fetch only the first 2, you need to specify '2' as the value in this parameter.</p>
 - **skip** (optional)
-  The ‘skip’ parameter will skip a specific number of organizations in the output. Example, if there are 12 organizations and you want to skip the first 2 to get only the last 10 in the response body, you need to specify ‘2’ here.
-  Default: `1`
+  <p>The ‘skip’ parameter will skip a specific number of organizations in the output. Example, if there are 12 organizations and you want to skip the first 2 to get only the last 10 in the response body, you need to specify ‘2’ here.</p>
 - **asc** (optional)
-  The ‘asc’ parameter allows you to sort the list of organizations in the ascending order with respect to the value of a specific field.
-  Default: `created_at`
+  <p>The ‘asc’ parameter allows you to sort the list of organizations in the ascending order with respect to the value of a specific field.</p>
 - **desc** (optional)
-  The ‘desc’ parameter allows you to sort the list of Organizations in the descending order with respect to the value of a specific field.
-  Default: `update_at`
+  <p>The ‘desc’ parameter allows you to sort the list of Organizations in the descending order with respect to the value of a specific field.</p>
 - **include_count** (optional)
-  The ‘include_count’ parameter returns the total number of organizations related to the user. Example: If you wish to know the total number of organizations, you need to mention ‘true’.
-  Default: `true`
+  <p>The ‘include_count’ parameter returns the total number of organizations related to the user. Example: If you wish to know the total number of organizations, you need to mention ‘true’.</p>
 - **typeahead** (optional)
-  The typeahead parameter is a type of filter that allows you to perform a name-based search on all organizations based on the value provided. Example, if we have four organizations named ‘ABC’, ‘ABC1’, ‘XYZ’, and ‘ACC’, and we provide ‘ABC’ as the value to this parameter, the search result will return the organizations ‘ABC’ and ‘ABC1’ as the output.
-  Default: `Contentstack`
+  <p>The <span data-type="inlineCode">typeahead</span> parameter is a type of filter that allows you to perform a name-based search on all organizations based on the value provided. Example, if we have four organizations named ‘ABC’, ‘ABC1’, ‘XYZ’, and ‘ACC’, and we provide ‘ABC’ as the value to this parameter, the search result will return the organizations ‘ABC’ and ‘ABC1’ as the output.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter the authtoken of the user.
-  Default: `your_authtoken`
+  <p>Enter the authtoken of the user.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

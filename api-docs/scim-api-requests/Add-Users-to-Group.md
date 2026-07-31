@@ -1,44 +1,38 @@
 ---
 title: "Add Users to Group"
-description: PATCH scim/v2.0/organizations/{organization_uid}/Groups/{group_id}
-url: scim-api-requests/group
+description: scim/v2.0/organizations/{organization_uid}/Groups/{group_id}
+url: /add-users-to-group
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:13.093Z
+updated_at: 2023-01-05T14:09:13.093Z
 ---
 
 # Add Users to Group
 
-**PATCH** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+<p>The <span data-type="inlineCode">Add Users to Group</span> request adds the user(s) to a group.</p>
+<p>The specified user will then have the permissions (at the stack level and at the organization level) that are specific to that group.</p>
+<p>In the "Request Body", you need to pass the ID of the user in the <span data-type="inlineCode">value</span> key.</p>
 
-The Add Users to Group request adds the user(s) to a group.
+**API Endpoint**: `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
-The specified user will then have the permissions (at the stack level and at the organization level) that are specific to that group.
-
-In the "Request Body", you need to pass the ID of the user in the value key.
+**Method**: `PATCH`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization. Use the <a href="/docs/developers/apis/content-management-api#get-all-organizations">Get All Organizations</a> request to get the UID of the organization.</p>
 - **group_id** (required)
-  The ID of the group. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
-  Default: `your_group_id`
+  <p>The ID of the group. Refer to the <a href="#get-all-groups">Get All Groups</a> request to fetch group ID.</p>
 
 ## Headers
 
 - **Content-Type** (required)
-  The format of the response content.
-  Default: `application/json`
+  <p>The format of the response content.</p>
 - **Authorization** (required)
-  The access token obtained after authorizing the IdP client.
-  Default: `Bearer access_token_from_IdP_client`
+  <p>The access token obtained after authorizing the IdP client.</p>
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -59,7 +53,7 @@ In the "Request Body", you need to pass the ID of the user in the value key.
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

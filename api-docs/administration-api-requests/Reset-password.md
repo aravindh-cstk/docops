@@ -1,33 +1,29 @@
 ---
 title: "Reset password"
-description: POST /user/reset_password
-url: administration-api-requests/password
+description: /user/reset_password
+url: /reset-password
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:54:57.239Z
+updated_at: 2026-04-07T12:54:57.239Z
 ---
 
 # Reset password
 
-**POST** `/user/reset_password`
+<p>The <span data-type="inlineCode">Reset password</span> API request allows you to reset your Contentstack account password.</p>
+<p class="note"><strong></strong><strong>Note: </strong>Before using this API request, you need to execute the <a href="/docs/developers/apis/content-management-api/#request-for-a-password">Request for a password</a> API request to receive the reset password token in your registered email address.<br></p>
+<p>When executing the request, in the 'Body' section, you need to provide the token that you receive via email, your new password, and password confirmation in JSON format.</p>
+<p class="note"><strong>Note</strong>: The "<strong>Reset password</strong>" token is valid only for the <strong>next 60 minutes</strong> after it’s generated. Post that, it expires and you need to rerun the same request to generate a new token. </p>
 
-The Reset password API request allows you to reset your Contentstack account password.
+**API Endpoint**: `/user/reset_password`
 
-******Note:**Before using this API request, you need to execute the [Request for a password](../api-detail/content-management-api.md#request-for-a-password) API request to receive the reset password token in your registered email address.
-
-When executing the request, in the 'Body' section, you need to provide the token that you receive via email, your new password, and password confirmation in JSON format.
-
-**Note**: The "**Reset password**" token is valid only for the **next 60 minutes** after it’s generated. Post that, it expires and you need to rerun the same request to generate a new token.
+**Method**: `POST`
 
 ## Headers
 
 - **Content-Type** (required)
-  Default: `application/json`
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -39,7 +35,7 @@ When executing the request, in the 'Body' section, you need to provide the token
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "cs-docs/**"
+      - "api-docs/**"
 
 permissions:
   pull-requests: write

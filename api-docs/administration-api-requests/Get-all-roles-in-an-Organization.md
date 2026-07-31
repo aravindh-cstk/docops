@@ -1,57 +1,47 @@
 ---
 title: "Get all roles in an Organization"
-description: GET /organizations/{organization_uid}/roles?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&include_stack_roles={boolean_value}
-url: administration-api-requests/organization
+description: /organizations/{organization_uid}/roles?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&include_stack_roles={boolean_value}
+url: /get-all-roles-in-an-organization
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:03.478Z
+updated_at: 2026-04-07T12:55:03.478Z
 ---
 
 # Get all roles in an Organization
 
-**GET** `/organizations/{organization_uid}/roles?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&include_stack_roles={boolean_value}`
+<p>The <span data-type="inlineCode">Get all roles in an organization</span> call&nbsp;gives the details of all the roles that are set to users in an Organization.</p><p>When executing the API call, provide the Organization's&nbsp;UID.</p>
 
-The Get all roles in an organization call gives the details of all the roles that are set to users in an Organization.
+**API Endpoint**: `/organizations/{organization_uid}/roles?limit={limit_value}&skip={skip_value}&asc={field_uid}&desc={field_uid}&include_count={boolean_value}&include_stack_roles={boolean_value}`
 
-When executing the API call, provide the Organization's UID.
+**Method**: `GET`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of your Organization.
-  Default: `blt6eb149a1feb2263b6b6e454e`
+  <p>Enter the UID of your Organization.</p>
 
 ## Query Parameters
 
 - **limit** (optional)
-  The ‘limit’ parameter will return a specific number of Organization roles in the output. Example, if there are 10 organization roles and you wish to fetch only the first 2, you need to specify '2' as the value in this parameter.
-  Default: `limit_value`
+  <p>The ‘limit’ parameter will return a specific number of Organization roles in the output. Example, if there are 10 organization roles and you wish to fetch only the first 2, you need to specify '2' as the value in this parameter.</p>
 - **skip** (optional)
-  The ‘skip’ parameter will skip a specific number of Organization roles in the output. For example, if there are 12 organization roles and you want to skip the first 2 to get only the last 10 in the response body, you need to specify ‘2’ here.
-  Default: `skip_value`
+  <p>The ‘skip’ parameter will skip a specific number of Organization roles in the output. For example, if there are 12 organization roles and you want to skip the first 2 to get only the last 10 in the response body, you need to specify ‘2’ here.</p>
 - **asc** (optional)
-  The ‘asc’ parameter allows you to sort the list of organization roles in an ascending order on the basis of a parameter.
-  Default: `field_uid`
+  <p>The ‘asc’ parameter allows you to sort the list of organization roles in an ascending order on the basis of a parameter.</p>
 - **desc** (optional)
-  The ‘desc’ parameter allows you to sort the list of organization roles in a descending order on the basis of a parameter.
-  Default: `field_uid`
+  <p>The ‘desc’ parameter allows you to sort the list of organization roles in a descending order on the basis of a parameter.</p>
 - **include_count** (optional)
-  The ‘include_count’ parameter returns the total number of roles in an organization. For example: If you want to know the total number of roles in an organization, you need to mention ‘true’.
-  Default: `false`
+  <p>The ‘include_count’ parameter returns the total number of roles in an organization. For example: If you want to know the total number of roles in an organization, you need to mention ‘true’.</p>
 - **include_stack_roles** (optional)
-  The ‘include_stack_roles’ parameter, when set to ‘true’, includes the details of stack-level roles in the Response body.
-  Default: `false`
+  <p>The ‘include_stack_roles’ parameter,&nbsp;when set to ‘true’, includes the details of stack-level roles in the Response body.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter the authtoken of the user.
-  Default: `your_authtoken`
+  <p>Enter the authtoken of the user.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

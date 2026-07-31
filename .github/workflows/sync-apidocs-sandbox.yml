@@ -1,6 +1,11 @@
 name: Sync APIDocs → Sandbox
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "api-docs/**/*"
+      - "tools/migration/**"
   schedule:
     # Runs daily at 02:00 UTC
     - cron: "0 2 * * *"

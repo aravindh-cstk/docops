@@ -1,28 +1,29 @@
 ---
 title: "Activate a user account"
-description: POST /user/activate/{user_activation_token}
-url: administration-api-requests/account
+description: /user/activate/{user_activation_token}
+url: /activate-a-user-account
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:54:53.127Z
+updated_at: 2026-04-07T12:54:53.127Z
 ---
 
 # Activate a user account
 
-**POST** `/user/activate/{user_activation_token}`
+<p>The <span data-type="inlineCode">Activate a user account</span> call activates the account of a user after signing up. For account activation, you will require the token received in the activation email.
+</p>
 
-The Activate a user account call activates the account of a user after signing up. For account activation, you will require the token received in the activation email.
+**API Endpoint**: `/user/activate/{user_activation_token}`
+
+**Method**: `POST`
 
 ## URL Parameters
 
 - **user_activation_token** (required)
-  Enter the activation token received on the registered email address. You can find the activation token in the activation URL sent to the email address used while signing up.
-  Default: `bltf36705c7361d4734`
+  <p>Enter the activation token received on the registered email address. You can find the activation token in the activation URL sent to the email address used while signing up.
+</p>
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -35,7 +36,7 @@ The Activate a user account call activates the account of a user after signing u
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

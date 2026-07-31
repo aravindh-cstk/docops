@@ -1,0 +1,115 @@
+name: Sync Production to Sandbox
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC (adjust time as needed)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Sync Contentstack Stacks
+
+    steps:
+      - name: Checkout code (main branch only)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./tools/cs-sync
+        run: npm ci
+
+      - name: Import Git Markdown → Production CMS (API Docs)
+        working-directory: ./tools/cs-sync
+        run: node import-git-to-cms-apidocs_25July26.js
+        env:
+          PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
+          PROD_APIDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_DELIVERY_TOKEN }}
+
+      - name: Import Git Markdown → Production CMS (CS Docs)
+        working-directory: ./tools/cs-sync
+        run: node import-git-to-cms-csdocs_25July26.js
+        env:
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_DELIVERY_TOKEN }}
+
+      - name: Sync Production → Sandbox
+        working-directory: ./tools/cs-sync
+        run: node full-sync_25July26.js
+        env:
+          PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
+          PROD_APIDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_DELIVERY_TOKEN }}
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+
+      - name: Sync Production → Git (Markdown - API Docs)
+        working-directory: ./tools/cs-sync
+        run: node sync-to-git_25July26.js
+
+      - name: Import Content Types (CS Docs)
+        working-directory: ./tools/cs-sync
+        run: node import-csdocs-content-types_25July26.js
+        env:
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_DELIVERY_TOKEN }}
+          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
+          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+
+      - name: Sync Production → Sandbox (CS Docs)
+        working-directory: ./tools/cs-sync
+        run: node full-sync-csdocs_25July26.js
+        env:
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_DELIVERY_TOKEN }}
+          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
+          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+
+      - name: Sync Production → Git (Markdown - CS Docs)
+        working-directory: ./tools/cs-sync
+        run: node sync-to-git-csdocs_25July26.js
+        env:
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_DELIVERY_TOKEN }}
+
+      - name: Configure git for commit
+        run: |
+          git config --global user.name "Contentstack Sync Bot"
+          git config --global user.email "sync@contentstack.local"
+
+      - name: Push changes to main
+        if: success()
+        run: |
+          git diff --quiet || (git pull origin main && git push origin main)
+
+      - name: Log sync completion
+        if: success()
+        run: |
+          echo "✅ Bidirectional sync completed at $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Git → CMS Import:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Git markdown → Production CMS (API Docs)" >> $GITHUB_STEP_SUMMARY
+          echo "- Git markdown → Production CMS (CS Docs)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**API Docs Sync:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Production → Sandbox CMS" >> $GITHUB_STEP_SUMMARY
+          echo "- Production → Git markdown (api-docs/)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**CS Docs Sync:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Production → Sandbox CMS" >> $GITHUB_STEP_SUMMARY
+          echo "- Production → Git markdown (cs-docs/)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Safety Check:** All stacks now in sync (parity enforced)">> $GITHUB_STEP_SUMMARY
+
+      - name: Report sync failure
+        if: failure()
+        run: |
+          echo "❌ Sync failed" >> $GITHUB_STEP_SUMMARY
+          echo "Check the logs above for details"
+          exit 1

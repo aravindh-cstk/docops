@@ -1,33 +1,29 @@
 ---
 title: "Request for a password"
-description: POST /user/forgot_password
-url: administration-api-requests/password
+description: /user/forgot_password
+url: /request-for-a-password
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:54:55.194Z
+updated_at: 2026-04-07T12:54:55.194Z
 ---
 
 # Request for a password
 
-**POST** `/user/forgot_password`
+<p>The <span data-type="inlineCode">Request for a password</span> API helps to get a temporary password to log into an account in case a user has forgotten the login password.</p>
+<p>Using this temporary password, you can log in to your account and <a href="/docs/developers/password-related-security/forgot-reset-password" target="_self">set a new password</a> for your Contentstack account.</p>
+<p>In the 'Body' section, provide the user's email address in JSON format.<br></p>
+<p class="note"><strong>Note:</strong> The “<strong>Reset password</strong>” token that you receive in your email address is valid only for the <strong>next 60 minutes</strong> after it’s generated. Post that, it expires and you need to rerun the <a href="/docs/developers/apis/content-management-api/#reset-password">Reset password</a> API request to generate a new token.</p>
 
-The Request for a password API helps to get a temporary password to log into an account in case a user has forgotten the login password.
+**API Endpoint**: `/user/forgot_password`
 
-Using this temporary password, you can log in to your account and [set a new password](../../../../../cs-docs/developers/security/forgot-reset-password.md) for your Contentstack account.
-
-In the 'Body' section, provide the user's email address in JSON format.
-
-**Note:** The “**Reset password**” token that you receive in your email address is valid only for the **next 60 minutes** after it’s generated. Post that, it expires and you need to rerun the [Reset password](../api-detail/content-management-api.md#reset-password) API request to generate a new token.
+**Method**: `POST`
 
 ## Headers
 
 - **Content-Type** (required)
-  Default: `application/json`
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -37,7 +33,7 @@ In the 'Body' section, provide the user's email address in JSON format.
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

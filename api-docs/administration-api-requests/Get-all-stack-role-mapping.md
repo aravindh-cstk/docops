@@ -1,39 +1,35 @@
 ---
 title: "Get all stack role mapping"
-description: GET /organizations/{organization_uid}/teams/{team_uid}/stack_role_mappings
-url: administration-api-requests/mapping
+description: /organizations/{organization_uid}/teams/{team_uid}/stack_role_mappings
+url: /get-all-stack-role-mapping
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:42.381Z
+updated_at: 2026-04-07T12:55:42.381Z
 ---
 
 # Get all stack role mapping
 
-**GET** `/organizations/{organization_uid}/teams/{team_uid}/stack_role_mappings`
+<p>The <span data-type='inlineCode'>Get all stack role mapping</span> request allows you to retrieve details of all associated stacks for a specified team in your organization.</p>
+<h5>Add a stack role mapping</h5>
 
-The Get all stack role mapping request allows you to retrieve details of all associated stacks for a specified team in your organization.
+**API Endpoint**: `/organizations/{organization_uid}/teams/{team_uid}/stack_role_mappings`
 
-##### Add a stack role mapping
+**Method**: `GET`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of your Organization.
-  Default: `your_organization_uid`
+  <p>Enter the UID of your Organization.</p>
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](../api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
-  Default: `team_uid`
+  <p>Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the <a href="/docs/developers/apis/content-management-api#get-all-teams" target="_self">Get all teams</a> request to retrieve the UID of a team.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your authtoken.
-  Default: `your_authtoken`
+  <p>Enter your authtoken.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

@@ -1,54 +1,44 @@
 ---
 title: "Get All Folders"
-description: GET /v1/knowledge-vault/folders?limit={limit}&sort={sort_field}&skip={skip}&order={asc|desc}
-url: developer-apis/knowledge-vault-api-requests/get-all-folders
+description: /v1/knowledge-vault/folders?limit={limit}&sort={sort_field}&skip={skip}&order={asc|desc}
+url: /get-all-folders
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-03-02
+created_at: 2025-12-12T08:31:38.911Z
+updated_at: 2026-03-02T22:07:23.659Z
 ---
 
 # Get All Folders
 
-**GET** `/v1/knowledge-vault/folders?limit={limit}&sort={sort_field}&skip={skip}&order={asc|desc}`
+<p>The <span class="code">Get All Folders</span> request retrieves a paginated list of all folders within the Knowledge Vault for a specified brand kit. You can apply filters such as sorting, pagination, and the inclusion of user metadata in the response.</p><p>To configure the permissions for your app via <a href="/docs/developers/developer-hub/contentstack-oauth" target="_self">OAuth</a>, include the <span class="code">brand-kits:read</span> scope.</p>
 
-The Get All Folders request retrieves a paginated list of all folders within the Knowledge Vault for a specified brand kit. You can apply filters such as sorting, pagination, and the inclusion of user metadata in the response.
+**API Endpoint**: `/v1/knowledge-vault/folders?limit={limit}&sort={sort_field}&skip={skip}&order={asc|desc}`
 
-To configure the permissions for your app via [OAuth](../../../../../cs-docs/developers/developer-hub/contentstack-oauth.md), include the brand-kits:read scope.
+**Method**: `GET`
 
 ## Query Parameters
 
 - **limit** (optional)
-  Enter the maximum number of folders to return.
-  Default: `10`
+  <p>Enter the maximum number of folders to return.</p>
 - **sort** (optional)
-  Enter the value on the basis of which you want to sort your folders.
-  Default: `created_at`
+  <p>Enter the value on the basis of which you want to sort your folders.</p>
 - **skip** (optional)
-  Enter the number of folders to be skipped from the response body.
-  Default: `0`
+  <p>Enter the number of folders to be skipped from the response body.</p>
 - **order** (optional)
-  Enter the ascending or descending order to organize the folders.
-  Default: `asc`
+  <p>Enter the ascending or descending order to organize the folders.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter the authtoken.
-  Default: `your_authtoken`
+  <p>Enter the authtoken.</p>
 - **authorization** (required)
-  Enter your OAuth token. Learn more about [Authentication](../api-detail/knowledge-vault-api.md#authentication).
-  Default: `[Bearer <OAuth token>]`
+  <p>Enter your OAuth token. Learn more about <a href="/docs/developers/apis/knowledge-vault-api#authentication" target="_self">Authentication</a>.</p>
 - **organization_uid** (required)
-  Enter the Organization UID.
-  Default: `your_organization_uid`
+  <p>Enter the Organization UID.</p>
 - **brand_kit_uid** (required)
-  Enter the Brand Kit UID.
-  Default: `your_brand_kit_uid`
+  <p>Enter the Brand Kit UID.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

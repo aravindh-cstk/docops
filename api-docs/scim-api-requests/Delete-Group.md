@@ -1,38 +1,33 @@
 ---
 title: "Delete Group"
-description: DELETE scim/v2.0/organizations/{organization_uid}/Groups/{group_id}
-url: scim-api-requests/group
+description: scim/v2.0/organizations/{organization_uid}/Groups/{group_id}
+url: /delete-group
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:14.079Z
+updated_at: 2023-01-05T14:09:14.079Z
 ---
 
 # Delete Group
 
-**DELETE** `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
+<p>The <span data-type="inlineCode">Delete Group</span> request deletes an existing group from the SCIM. This will remove all the users from that group.</p>
+<p class="note"><strong>Note</strong>: This API request will not remove users from the organization or from the Contentstack account.</p>
 
-The Delete Group request deletes an existing group from the SCIM. This will remove all the users from that group.
+**API Endpoint**: `scim/v2.0/organizations/{organization_uid}/Groups/{group_id}`
 
-**Note**: This API request will not remove users from the organization or from the Contentstack account.
+**Method**: `DELETE`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization. Use the <a href="/docs/developers/apis/content-management-api#get-all-organizations">Get All Organizations</a> request to get the UID of the organization.</p>
 - **group_id** (required)
-  The ID of the group you want to delete. Refer to the [Get All Groups](#get-all-groups) request to fetch group ID.
-  Default: `your_group_id`
+  <p>The ID of the group you want to delete. Refer to the <a href="#get-all-groups">Get All Groups</a> request to fetch group ID.</p>
 
 ## Headers
 
 - **Content-Type** (required)
-  The format of the response content.
-  Default: `application/json`
+  <p>The format of the response content.</p>
 - **Authorization** (required)
-  The access token obtained after authorizing the IdP client.
-  Default: `Bearer access_token_from_IdP_client`
+  <p>The access token obtained after authorizing the IdP client.</p>
 
