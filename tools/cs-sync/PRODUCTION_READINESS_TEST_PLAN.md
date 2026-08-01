@@ -23,17 +23,23 @@ This document outlines all tests required to verify the Git ↔ Sandbox CMS bidi
 ## TEST CATEGORY 1: Sandbox Mirror Integrity
 
 ### Purpose
-Ensure Sandbox contains all Production data and is a true mirror for testing.
+Ensure Sandbox mirrors ALL Production data (published entries only) and is a true mirror for testing.
 
-### Test 1.1: Entry Count Verification
+**CRITICAL FILTERS**:
+- Only entries with `status === 'published'`
+- Exclude: Drafts, Scheduled, Archived entries
+- Production is authoritative source
+
+### Test 1.1: Entry Count Verification (Published Only)
 **Script**: `sandbox-mirror-check.js`
 
 | Aspect | Details |
 |--------|---------|
-| **What to Test** | Production entry count = Sandbox entry count (per content type) |
+| **What to Test** | Published entries in Production = Published entries in Sandbox (per content type) |
 | **Expected** | All published entries from Production exist in Sandbox |
-| **Fail Condition** | Entry count mismatch in any content type |
-| **Manual Verification** | Compare counts in Production CMS vs Sandbox CMS UIs |
+| **Filter** | Only `status === 'published'` entries counted |
+| **Fail Condition** | Count mismatch in any content type or draft entries in Sandbox |
+| **Manual Verification** | Compare counts in Production CMS vs Sandbox CMS UIs (published filter applied) |
 
 ### Test 1.2: Entry UID Presence Check
 **Script**: `sandbox-mirror-check.js`
@@ -450,19 +456,98 @@ Verify bidirectional sync works for all CRUD operations.
 
 ## Acceptance Criteria: 100% Production Ready
 
-### All Tests Must Pass
-- ✅ Category 1: Sandbox Mirror Integrity (5/5 tests)
-- ✅ Category 2: Git ↔ Sandbox Parity (5/5 tests)
-- ✅ Category 3: Sync Operations (5/5 tests)
-- ✅ Category 4: Error Handling (4/4 tests)
-- ✅ Category 5: Performance (3/3 tests)
-- ✅ Category 6: Data Integrity (4/4 tests)
-- ✅ Category 7: Authorization (3/3 tests)
-- ✅ Category 8: Workflow (4/4 tests)
-- ✅ Category 9: Git Integration (3/3 tests)
-- ✅ Category 10: Documentation (3/3 tests)
+### New Pass Criteria (22 Critical Improvements)
 
-**Total: 43 test categories covering all aspects**
+#### A. Entry Filtering & Status (Items 1-2)
+- ✅ Only published entries participate in sync
+- ✅ Draft, Scheduled, Archived entries excluded
+- ✅ Filter applied consistently across all scripts
+- ✅ Logging reports: total fetched → filtered (published only)
+
+#### B. Source of Truth & Roles (Items 3-4)
+- ✅ Production is read-only verified (credentials, code review)
+- ✅ Production = authoritative source of all published docs
+- ✅ Git = version-controlled Markdown + metadata
+- ✅ Sandbox = validation-only mirror of Production
+
+#### C. Validation Improvements (Items 5-7)
+- ✅ Entry count match (per content type)
+- ✅ Missing entry detection (in Prod, not in Sandbox)
+- ✅ Extra entry detection (in Sandbox, not in Prod)
+- ✅ URL uniqueness validation (no duplicates in Prod)
+- ✅ Content type mapping validation (all folders mapped)
+- ✅ YAML validation (required fields, invalid values, duplicates, missing titles)
+- ✅ Folder mapping validation (no silent skips)
+
+#### D. Failure Handling (Items 8-9)
+- ✅ Failed sync does not block next run
+- ✅ Fresh comparison on next run (no resume)
+- ✅ Error reporting: file, content type, URL, operation, error, retries
+
+#### E. Retry Logic (Item 10)
+- ✅ Only transient failures retried (429, 5xx, timeout)
+- ✅ Non-retryable errors fail immediately (4xx, validation)
+- ✅ Exponential backoff: 100ms → 400ms → 1600ms
+- ✅ Max 3 attempts documented
+
+#### F. Delete Behavior (Item 11)
+- ✅ Deleted files only remove published entries
+- ✅ Mass deletions (>10%) blocked with warning
+- ✅ Clear warnings before delete operations
+- ✅ Validation prevents accidental data loss
+
+#### G. Safety & Concurrency (Items 12-13)
+- ✅ Concurrency groups prevent simultaneous runs
+- ✅ Only one sync per branch at a time
+- ✅ Idempotent operations (run twice = same result)
+- ✅ No duplicates created
+
+#### H. Asset Handling (Item 14)
+- ✅ Binary assets remain in Production only
+- ✅ Git stores Markdown + metadata
+- ✅ Asset references are synchronized
+- ✅ Binary assets excluded from parity validation
+
+#### I. Logging & Observability (Items 15-16)
+- ✅ Workflow name, start/end time, duration
+- ✅ Entries processed, created, updated, deleted, skipped, failed
+- ✅ Retry attempts, total duration
+- ✅ Per-operation logs with timestamps
+- ✅ Detailed error messages with remediation
+
+#### J. Operational Notes (Items 19-20)
+- ✅ Expected runtime documented
+- ✅ Supported repository size specified
+- ✅ Pagination/batch processing explained
+- ✅ API rate limit considerations documented
+
+#### K. IST Schedule (Item 18)
+- ✅ 2:00 AM IST (8:30 PM UTC) → Daily health check
+- ✅ 5:30 PM IST (12:00 PM UTC) → End-of-day validation
+- ✅ On merge to main → Immediate sync
+- ✅ Concurrency groups ensure single execution
+
+#### L. Terminology (Item 21)
+- ✅ Standard terms used consistently
+- ✅ Avoid ambiguous terms (Draft/Release/Published)
+- ✅ Clear definitions in documentation
+
+#### M. Core Constraint (Item 22)
+- ✅ Update constraint: "Published documentation parity is maintained across Production CMS, Sandbox CMS, and Git. Git stores Markdown content and metadata, while binary assets remain in Production CMS. Sandbox CMS is an automated validation environment that mirrors Production's published documentation and is used solely to verify synchronization integrity, parity, and workflow correctness without impacting live content."
+
+### All Tests Must Pass
+- ✅ Category 1: Sandbox Mirror Integrity (5/5 tests + new published-only filter)
+- ✅ Category 2: Git ↔ Sandbox Parity (5/5 tests + enhanced validation)
+- ✅ Category 3: Sync Operations (5/5 tests + Release grouping)
+- ✅ Category 4: Error Handling (4/4 tests + enhanced reporting)
+- ✅ Category 5: Performance (3/3 tests + batch sizes)
+- ✅ Category 6: Data Integrity (4/4 tests + YAML validation)
+- ✅ Category 7: Authorization (3/3 tests + production read-only)
+- ✅ Category 8: Workflow (4/4 tests + IST schedule + merge trigger)
+- ✅ Category 9: Git Integration (3/3 tests + concurrency)
+- ✅ Category 10: Documentation (3/3 tests + spec)
+
+**Total: 22 critical improvements + 43 test categories = comprehensive system**
 
 ### Execution Checklist
 - [ ] All 3 test scripts run successfully

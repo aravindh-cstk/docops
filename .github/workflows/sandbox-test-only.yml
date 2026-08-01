@@ -2,11 +2,16 @@ name: Sandbox Test (Safe - No Production)
 
 on:
   schedule:
-    # 3x daily: 2 AM UTC, 12 PM UTC, 5 PM UTC
-    - cron: '0 2 * * *'   # 2 AM UTC
-    - cron: '0 12 * * *'  # 12 PM UTC
-    - cron: '0 17 * * *'  # 5 PM UTC
+    # NEW IST SCHEDULE (Item 18):
+    # 2:00 AM IST = 8:30 PM UTC (previous day)
+    # 5:30 PM IST = 12:00 PM UTC
+    - cron: '30 20 * * *'  # 2:00 AM IST
+    - cron: '0 12 * * *'   # 5:30 PM IST
   workflow_dispatch:
+
+concurrency:
+  group: sandbox-sync-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   sandbox-test:
@@ -68,12 +73,25 @@ jobs:
           echo "📊 Sandbox Test Run Complete"
           echo "================================"
           echo ""
+          echo "Workflow: Sandbox Test (Safe - No Production)"
+          echo "Timestamp: $(date -u +'%Y-%m-%dT%H:%M:%SZ') UTC"
+          echo "IST Time: $(date -u -d '+5 hours 30 minutes' +'%Y-%m-%dT%H:%M:%SZ')"
+          echo ""
           echo "✅ All test checks completed"
           echo "📋 Review logs above for details"
           echo ""
-          echo "Tests run at 3x daily:"
-          echo "  • 2 AM UTC"
-          echo "  • 12 PM UTC"
-          echo "  • 5 PM UTC"
+          echo "Schedule (India Standard Time):"
+          echo "  • 2:00 AM IST (8:30 PM UTC prev day) - Daily health check"
+          echo "  • 5:30 PM IST (12:00 PM UTC) - End-of-day validation"
           echo ""
-          echo "ℹ️  No production data touched"
+          echo "Concurrency Protection:"
+          echo "  ✓ Single sync per branch at a time"
+          echo "  ✓ No simultaneous executions"
+          echo ""
+          echo "Important Notes:"
+          echo "  ✓ Production is READ-ONLY"
+          echo "  ✓ Published entries only"
+          echo "  ✓ Sandbox is validation environment"
+          echo "  ✓ No production data modified"
+          echo ""
+          echo "See SYNCHRONIZATION_SPECIFICATION.md for full details"
