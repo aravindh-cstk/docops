@@ -9,11 +9,14 @@
  */
 
 import https from 'https';
+import { getConfig } from './lib/config.js';
+import { withRetry } from './lib/retry.js';
 
-const PROD_CSDOCS_STACK = process.env.PROD_CSDOCS_STACK_API_KEY || 'blt2d43f51baca745a8';
-const PROD_CSDOCS_TOKEN = process.env.PROD_CSDOCS_STACK_DELIVERY_TOKEN || 'cs80888179b9220bd7cea067ff';
-const SANDBOX_CSDOCS_STACK = process.env.CSDOCS_SANDBOX_STACK_API_KEY || 'blt1a9af0bcb3816d6e';
-const SANDBOX_CSDOCS_TOKEN = process.env.CSDOCS_SANDBOX_MANAGEMENT_TOKEN || 'csf59f3418fcc349a9c7f20d7e';
+const config = getConfig('csdocs');
+const PROD_CSDOCS_STACK = config.prod.apiKey;
+const PROD_CSDOCS_TOKEN = config.prod.deliveryToken;
+const SANDBOX_CSDOCS_STACK = config.sandbox.apiKey;
+const SANDBOX_CSDOCS_TOKEN = config.sandbox.managementToken;
 
 const CONCURRENCY = 5;
 

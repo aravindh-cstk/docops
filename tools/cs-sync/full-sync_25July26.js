@@ -10,11 +10,14 @@
 
 import https from 'https';
 import { URL } from 'url';
+import { getConfig } from './lib/config.js';
+import { withRetry } from './lib/retry.js';
 
-const PROD_APIDOCS_STACK = process.env.PROD_APIDOCS_STACK_API_KEY || 'blt8fb40ae1e60d06b9';
-const PROD_APIDOCS_TOKEN = process.env.PROD_APIDOCS_STACK_DELIVERY_TOKEN || 'cs9c8e6ecd1de6a45980524488';
-const SANDBOX_APIDOCS_STACK = process.env.APIDOCS_SANDBOX_STACK_API_KEY || 'bltf92796d1cef4d3d4';
-const SANDBOX_APIDOCS_TOKEN = process.env.APIDOCS_SANDBOX_MANAGEMENT_TOKEN || 'cs6829cf3da41d62cdad480661';
+const config = getConfig('apidocs');
+const PROD_APIDOCS_STACK = config.prod.apiKey;
+const PROD_APIDOCS_TOKEN = config.prod.deliveryToken;
+const SANDBOX_APIDOCS_STACK = config.sandbox.apiKey;
+const SANDBOX_APIDOCS_TOKEN = config.sandbox.managementToken;
 
 const CONCURRENCY = 5;
 
