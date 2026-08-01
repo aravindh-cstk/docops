@@ -23,12 +23,11 @@ jobs:
         working-directory: ./tools/cs-sync
         run: npm ci
 
-      - name: Run Sandbox Test (Git ↔ Sandbox only)
+      - name: Run Sandbox Test (Git ↔ Sandbox only - NO PRODUCTION)
         working-directory: ./tools/cs-sync
         run: node sandbox-test-sync.js
         env:
-          PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
-          PROD_APIDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_DELIVERY_TOKEN }}
+          # Sandbox credentials ONLY - Production is never touched
           APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
           APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
 

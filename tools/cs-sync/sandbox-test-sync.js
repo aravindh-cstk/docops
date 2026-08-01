@@ -24,9 +24,17 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '../../');
 const API_DOCS_PATH = path.join(REPO_ROOT, 'api-docs');
 
-const config = getConfig('apidocs');
-const SANDBOX_STACK = config.sandbox.apiKey;
-const SANDBOX_TOKEN = config.sandbox.managementToken;
+// For Sandbox-only testing, only require Sandbox credentials
+const SANDBOX_STACK = process.env.APIDOCS_SANDBOX_STACK_API_KEY;
+const SANDBOX_TOKEN = process.env.APIDOCS_SANDBOX_MANAGEMENT_TOKEN;
+
+if (!SANDBOX_STACK || !SANDBOX_TOKEN) {
+  console.error('❌ Missing Sandbox credentials:');
+  console.error('   - APIDOCS_SANDBOX_STACK_API_KEY');
+  console.error('   - APIDOCS_SANDBOX_MANAGEMENT_TOKEN');
+  console.error('\n📋 Set these in .env or as environment variables');
+  process.exit(1);
+}
 
 const FOLDER_TO_CONTENT_TYPE = {
   'cma-api-requests': 'api_requests_cma',
@@ -180,8 +188,8 @@ class SandboxTestSync {
 
     try {
       const contentTypeUid = 'api_requests_cma';
-      const path = `/v3/content_types/${contentTypeUid}/entries?limit=100`;
-      const res = await this.request('GET', 'api.contentstack.io', path);
+      const apiPath = `/v3/content_types/${contentTypeUid}/entries?limit=100`;
+      const res = await this.request('GET', 'api.contentstack.io', apiPath);
 
       if (res.status !== 200) {
         console.log(`✗ Failed to fetch entries: ${res.status}`);
@@ -226,8 +234,8 @@ ${entry.body || ''}
     try {
       // Count in Sandbox
       const contentTypeUid = 'api_requests_cma';
-      const path = `/v3/content_types/${contentTypeUid}/entries?limit=1`;
-      const res = await this.request('GET', 'api.contentstack.io', path);
+      const apiPath = `/v3/content_types/${contentTypeUid}/entries?limit=1`;
+      const res = await this.request('GET', 'api.contentstack.io', apiPath);
 
       if (res.status !== 200) {
         console.log(`✗ Failed to check Sandbox entries`);
