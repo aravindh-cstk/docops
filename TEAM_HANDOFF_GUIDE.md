@@ -84,44 +84,52 @@ tree -L 2 cs-docs/  # Shows only your folders
 
 ---
 
-## Step 3: Identify Changes from Development PRs
+## Step 3: Get the Development PR Link
 
-### 3.1 Get the Development PR
+### 3.1 Ask for (or Find) the Development PR
 
-1. Open the development PR from the source repo (e.g., `https://github.com/aravindh-cstk/docops`)
-2. Review the changes in the "Files changed" tab
-3. Take note of:
+**When starting documentation work:**
+- Ask your lead: "What PR should I document?"
+- Or: "Which development PR triggered this feature?"
+
+Development PRs come from various source repos:
+- SDK changes: `github.com/contentstack/developer-solution-docs`
+- Product features: Different team repos
+- API changes: Various development repositories
+
+**Get the PR link** from your lead or team.
+
+Example PR links:
+```
+https://github.com/contentstack/developer-solution-docs/pull/74
+https://github.com/[team-repo]/pull/[PR-number]
+```
+
+### 3.2 Review the PR Changes
+
+1. Open the development PR link in your browser
+2. Go to the "Files changed" tab
+3. Read through all changes and take notes:
    - Feature name
    - Changed APIs/fields
    - New configuration options
    - Breaking changes
-
-### 3.2 Compare with Your Local Markdown Files
-
-Use **Cursor**, **VS Code**, or **Diff tool** to compare:
-
-```bash
-# VS Code: Open the PR changes and local files side-by-side
-code .
-
-# OR: Use diff command
-diff -r local-path remote-path
-
-# OR: Use Cursor for AI-powered comparison
-cursor .
-```
+   - Examples from the PR
 
 ### 3.3 Use Claude to Analyze Changes
 
 **Claude Prompt for Change Analysis:**
 
 ```
-I have a development PR with API changes. Help me identify what documentation needs to be created or updated.
+I need to create documentation for a feature. Here's the development PR:
 
-Development PR changes:
-[Paste the API changes or feature description here]
+PR Link: [Paste the PR link]
+Feature Name: [Feature name]
 
-Current documentation location: cs-docs/studio/
+Development PR Changes:
+[Copy-paste the key changes from the PR's "Files changed" tab]
+
+Current documentation location: cs-docs/studio/ (or your folder)
 
 What documentation should I:
 1. Create (new docs)?
@@ -221,11 +229,13 @@ code cs-docs/studio/[new-file].md
 
 ## Step 5: Create a Feature Branch with TD-* Naming
 
-### 5.1 Get Your Jira Ticket Number
+### 5.1 Have Your Jira Ticket Number Ready
 
-Ask your lead for the Jira ticket number (format: `TD-XXXX`)
+You should already have a Jira ticket assigned or created for this feature (format: `TD-XXXX`)
 
 **Example:** `TD-5366` for CMS Entry Variant Version Naming
+
+If you don't have one, create it in Jira before proceeding.
 
 ### 5.2 Create Branch with Naming Convention
 
@@ -355,6 +365,12 @@ When your PR merges to `main`:
 2. Markdown files sync to Production CMS
 3. Entries created as **[DRAFT]** (not published yet)
 4. Entries appear in "Release" folder in CMS
+
+⚠️ **Disclaimer:** The sync script currently has a hardcoded limit to create up to **10 entries per sync run**. If your documentation includes more than 10 new files, they will sync in batches:
+- First 10 files: sync on first merge
+- Remaining files: sync on next merge/trigger
+
+If you have more than 10 files, contact your team lead or CMS admin for batch processing options.
 
 ### 8.3 Checklist: What to Look For in Production CMS
 
