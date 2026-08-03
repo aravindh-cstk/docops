@@ -1,12 +1,10 @@
 name: Import to Production on Merge (CS-Docs)
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'cs-docs/**/*.md'
-      - 'tools/cs-sync/import-git-to-cms-csdocs_*.js'
+  # REPLACED by two-phase workflow:
+  # - production-create-draft-on-pr-csdocs.yml (creates drafts on PR open)
+  # - production-add-to-release-csdocs.yml (adds to Release on merge)
+  workflow_dispatch:
 
 jobs:
   import:
