@@ -38,6 +38,7 @@ const CREATE_DRAFT_ONLY = process.env.CREATE_DRAFT_ONLY === 'true';
 const ADD_TO_RELEASE = process.env.ADD_TO_RELEASE === 'true';
 
 const FOLDER_TO_CONTENT_TYPE = {
+  'api-detail': 'api_detail_page',
   'cma-api-requests': 'api_requests_cma',
   'cda-api-requests': 'api_requests_cda',
   'graphql-api-requests': 'api_requests_graphql',
