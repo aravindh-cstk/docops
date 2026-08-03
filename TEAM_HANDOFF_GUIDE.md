@@ -593,9 +593,9 @@ git rebase --continue
 ## Support & Help
 
 **For Questions:**
-- Slack: #documentation-team
-- Email: docs-team@contentstack.com
-- Lead: Ask your documentation lead
+- Slack: #docs-issues-internal-discussion, Gladys, or Aravindh
+- Email: gladys.daniel@contentstack.com
+- Lead: Ask your documentation lead - Gladys/Azhar
 
 **Claude Code Help:**
 - Run: `claude --help`
@@ -619,11 +619,11 @@ git rebase --continue
 10. Publish manually → Done!
 ```
 
-**Total Time:** 2-4 hours per feature (depending on complexity)
+**Total Time:** 2-4 hours per feature (depending on complexity and review process)
 
 ---
 
 **Last Updated:** August 3, 2026  
 **Version:** 1.0  
-**Questions?** Contact: docs-team or your lead
+**Questions?** Contact: gladys.daniel@contentstack.com
 
