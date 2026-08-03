@@ -33,6 +33,10 @@ const PROD_APIDOCS_TOKEN = config.prod.managementToken;
 const SANDBOX_APIDOCS_STACK = config.sandbox.apiKey;
 const SANDBOX_APIDOCS_TOKEN = config.sandbox.managementToken;
 
+// Phase detection for two-phase workflow
+const CREATE_DRAFT_ONLY = process.env.CREATE_DRAFT_ONLY === 'true';
+const ADD_TO_RELEASE = process.env.ADD_TO_RELEASE === 'true';
+
 const FOLDER_TO_CONTENT_TYPE = {
   'cma-api-requests': 'api_requests_cma',
   'cda-api-requests': 'api_requests_cda',
@@ -281,6 +285,7 @@ class GitToCmsImporter {
     console.log('🚀 IMPORTING GIT MARKDOWN → PRODUCTION CMS (API-DOCS)');
     console.log(`📍 Source: ${API_DOCS_PATH}`);
     console.log(`📍 Target: ${PROD_APIDOCS_STACK}`);
+    console.log(`📊 Mode: ${CREATE_DRAFT_ONLY ? 'PHASE 1 (Create [DRAFT] only)' : ADD_TO_RELEASE ? 'PHASE 2 (Add to Release)' : 'DEFAULT (Create [DRAFT])'}`);
     console.log('⏱️  Started:', new Date().toISOString());
 
     try {

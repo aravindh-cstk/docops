@@ -29,9 +29,13 @@ const CS_DOCS_PATH = path.join(REPO_ROOT, 'cs-docs');
 
 const config = getConfig('csdocs');
 const PROD_CSDOCS_STACK = config.prod.apiKey;
-const PROD_CSDOCS_TOKEN = config.prod.deliveryToken;
+const PROD_CSDOCS_TOKEN = config.prod.managementToken;
 const SANDBOX_CSDOCS_STACK = config.sandbox.apiKey;
 const SANDBOX_CSDOCS_TOKEN = config.sandbox.managementToken;
+
+// Phase detection for two-phase workflow
+const CREATE_DRAFT_ONLY = process.env.CREATE_DRAFT_ONLY === 'true';
+const ADD_TO_RELEASE = process.env.ADD_TO_RELEASE === 'true';
 
 // Map title prefixes to folders (extracts [prefix] from title)
 const TITLE_PREFIX_TO_FOLDER = {
@@ -291,6 +295,7 @@ class GitToCmsImporter {
     console.log('🚀 IMPORTING GIT MARKDOWN → PRODUCTION CMS (CS-DOCS)');
     console.log(`📍 Source: ${CS_DOCS_PATH}`);
     console.log(`📍 Target: ${PROD_CSDOCS_STACK}`);
+    console.log(`📊 Mode: ${CREATE_DRAFT_ONLY ? 'PHASE 1 (Create [DRAFT] only)' : ADD_TO_RELEASE ? 'PHASE 2 (Add to Release)' : 'DEFAULT (Create [DRAFT])'}`);
     console.log('⏱️  Started:', new Date().toISOString());
 
     try {
