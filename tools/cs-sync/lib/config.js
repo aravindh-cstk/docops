@@ -28,9 +28,16 @@ export function loadEnv(requiredVars) {
 }
 
 export function getConfig(stackType) {
+  // Phase 1 (CREATE_DRAFT_ONLY): Only need production credentials
+  const createDraftOnly = process.env.CREATE_DRAFT_ONLY === 'true';
+  const addToRelease = process.env.ADD_TO_RELEASE === 'true';
+
   const stackTypes = {
     apidocs: {
-      required: [
+      required: createDraftOnly || addToRelease ? [
+        'PROD_APIDOCS_STACK_API_KEY',
+        'PROD_APIDOCS_STACK_MANAGEMENT_TOKEN',
+      ] : [
         'PROD_APIDOCS_STACK_API_KEY',
         'PROD_APIDOCS_STACK_DELIVERY_TOKEN',
         'APIDOCS_SANDBOX_STACK_API_KEY',
@@ -38,6 +45,7 @@ export function getConfig(stackType) {
       ],
       prod: {
         apiKey: process.env.PROD_APIDOCS_STACK_API_KEY,
+        managementToken: process.env.PROD_APIDOCS_STACK_MANAGEMENT_TOKEN,
         deliveryToken: process.env.PROD_APIDOCS_STACK_DELIVERY_TOKEN,
       },
       sandbox: {
@@ -46,7 +54,10 @@ export function getConfig(stackType) {
       },
     },
     csdocs: {
-      required: [
+      required: createDraftOnly || addToRelease ? [
+        'PROD_CSDOCS_STACK_API_KEY',
+        'PROD_CSDOCS_STACK_MANAGEMENT_TOKEN',
+      ] : [
         'PROD_CSDOCS_STACK_API_KEY',
         'PROD_CSDOCS_STACK_DELIVERY_TOKEN',
         'CSDOCS_SANDBOX_STACK_API_KEY',
@@ -54,6 +65,7 @@ export function getConfig(stackType) {
       ],
       prod: {
         apiKey: process.env.PROD_CSDOCS_STACK_API_KEY,
+        managementToken: process.env.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN,
         deliveryToken: process.env.PROD_CSDOCS_STACK_DELIVERY_TOKEN,
       },
       sandbox: {
