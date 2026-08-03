@@ -14,30 +14,36 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
+import { getConfig } from './lib/config.js';
+import { withRetry } from './lib/retry.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '../../');
 const CS_DOCS_PATH = path.join(REPO_ROOT, 'cs-docs');
 
-const PROD_CSDOCS_STACK = process.env.PROD_CSDOCS_STACK_API_KEY || 'blt2d43f51baca745a8';
-const PROD_CSDOCS_TOKEN = process.env.PROD_CSDOCS_STACK_DELIVERY_TOKEN || 'cs80888179b9220bd7cea067ff';
+const config = getConfig('csdocs');
+const PROD_CSDOCS_STACK = config.prod.apiKey;
+const PROD_CSDOCS_TOKEN = config.prod.deliveryToken;
 
-const CONTENT_TYPES = {
-  'api_sdk_name_2026': 'developers',
-  'academy_content_carousel_2026': 'get-started',
-  'content_managers_2026': 'content-managers',
-  'developers_2026': 'developers',
-  'header_2026': 'site-content',
-  'homepage_2026': 'site-content',
-  'info_cards_2026': 'site-content',
-  'left_navigation_2026': 'site-content',
-  'links_2026': 'site-content',
-  'not_found_404_page_2026': 'site-content',
-  'product_faqs_2026': 'headless-cms',
-  'product_landing_2026': 'headless-cms',
-  'product_name_2026': 'site-content',
-  'sdks_landing_page_2026': 'developers',
+// Map title prefixes to folders (all docs_article entries)
+const TITLE_PREFIX_TO_FOLDER = {
+  'Administration': 'administration',
+  'Automations guides and connectors': 'agent-os',
+  'Analytics Content': 'analytics',
+  'AM2.0': 'assets',
+  'Author Content': 'content-managers',
+  'Data & Insights': 'data-and-insights',
+  'Get Started with CS': 'get-started',
+  'Taxonomy': 'headless-cms',
+  'Contentstack Launch': 'launch',
+  'Marketplace guides and apps': 'marketplace',
+  'Introduction to Contentstack - a Headless CMS': 'overview',
+  'Personalize': 'personalize',
+  'Second level navigation': 'developers',
+  'Studio': 'studio',
 };
+
+const DOCS_ARTICLE_CONTENT_TYPE = 'docs_article';
 
 class GitSync {
   constructor() {
@@ -100,6 +106,11 @@ class GitSync {
 
     const fileName = `${pathPart}.md`;
     return path.join(CS_DOCS_PATH, folderName, fileName);
+  }
+
+  extractTitlePrefix(title) {
+    const match = title.match(/^\[([^\]]+)\]/);
+    return match ? match[1] : null;
   }
 
   createFrontmatter(entry) {
@@ -169,33 +180,40 @@ updated_at: ${entry.updated_at || new Date().toISOString()}
 
     const prodEntries = new Map(); // uid -> {entry, filePath, folder}
 
-    // Fetch all production entries
-    for (const [ct, folder] of Object.entries(CONTENT_TYPES)) {
-      try {
-        let skip = 0;
-        let hasMore = true;
+    // Fetch all docs_article entries from production
+    try {
+      let skip = 0;
+      let hasMore = true;
 
-        while (hasMore) {
-          const entries = await this.getPublishedEntries(ct, skip, 100);
+      while (hasMore) {
+        const entries = await this.getPublishedEntries(DOCS_ARTICLE_CONTENT_TYPE, skip, 100);
 
-          if (entries.length === 0) {
-            hasMore = false;
-            break;
-          }
-
-          entries.forEach(entry => {
-            const filePath = this.getFilePath(entry, folder);
-            prodEntries.set(entry.uid, { entry, filePath, folder, ct });
-          });
-
-          skip += 100;
+        if (entries.length === 0) {
+          hasMore = false;
+          break;
         }
 
-        console.log(`✓ ${ct}: Fetched entries`);
-      } catch (e) {
-        console.log(`✗ ${ct}: ${e.message}`);
-        this.stats.errors++;
+        entries.forEach(entry => {
+          // Extract folder from title prefix
+          const titlePrefix = this.extractTitlePrefix(entry.title || '');
+          const folder = titlePrefix ? TITLE_PREFIX_TO_FOLDER[titlePrefix] : null;
+
+          if (!folder) {
+            console.log(`  ⚠️  Skipping: No valid prefix in "${entry.title}"`);
+            return;
+          }
+
+          const filePath = this.getFilePath(entry, folder);
+          prodEntries.set(entry.uid, { entry, filePath, folder, ct: DOCS_ARTICLE_CONTENT_TYPE });
+        });
+
+        skip += 100;
       }
+
+      console.log(`✓ ${DOCS_ARTICLE_CONTENT_TYPE}: Fetched ${prodEntries.size} entries`);
+    } catch (e) {
+      console.log(`✗ ${DOCS_ARTICLE_CONTENT_TYPE}: ${e.message}`);
+      this.stats.errors++;
     }
 
     console.log(`\nTotal entries in production: ${prodEntries.size}\n`);

@@ -19,15 +19,19 @@ import https from 'https';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getConfig } from './lib/config.js';
+import { withRetry } from './lib/retry.js';
+import { mergeEntryFields } from './lib/merge-entry.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '../../');
 const API_DOCS_PATH = path.join(REPO_ROOT, 'api-docs');
 
-const PROD_APIDOCS_STACK = process.env.PROD_APIDOCS_STACK_API_KEY || 'blt8fb40ae1e60d06b9';
-const PROD_APIDOCS_TOKEN = process.env.PROD_APIDOCS_STACK_DELIVERY_TOKEN || 'cs9c8e6ecd1de6a45980524488';
-const SANDBOX_APIDOCS_STACK = process.env.APIDOCS_SANDBOX_STACK_API_KEY || 'bltf92796d1cef4d3d4';
-const SANDBOX_APIDOCS_TOKEN = process.env.APIDOCS_SANDBOX_MANAGEMENT_TOKEN || 'cs6829cf3da41d62cdad480661';
+const config = getConfig('apidocs');
+const PROD_APIDOCS_STACK = config.prod.apiKey;
+const PROD_APIDOCS_TOKEN = config.prod.deliveryToken;
+const SANDBOX_APIDOCS_STACK = config.sandbox.apiKey;
+const SANDBOX_APIDOCS_TOKEN = config.sandbox.managementToken;
 
 const FOLDER_TO_CONTENT_TYPE = {
   'cma-api-requests': 'api_requests_cma',
@@ -58,6 +62,13 @@ class GitToCmsImporter {
     };
   }
 
+  async requestWithRetry(method, host, path, headers = {}, body = null) {
+    return withRetry(
+      () => this.request(method, host, path, headers, body),
+      { name: `${method} ${path}` }
+    );
+  }
+
   request(method, host, path, headers = {}, body = null) {
     return new Promise((resolve, reject) => {
       const opts = {
@@ -76,9 +87,16 @@ class GitToCmsImporter {
         res.on('end', () => {
           try {
             const json = data ? JSON.parse(data) : {};
-            resolve({ status: res.statusCode, data: json });
+            const err = new Error(`HTTP ${res.statusCode}`);
+            err.status = res.statusCode;
+            err.statusCode = res.statusCode;
+            err.data = json;
+            resolve({ status: res.statusCode, data: json, error: err });
           } catch (e) {
-            resolve({ status: res.statusCode, data });
+            const err = new Error(`HTTP ${res.statusCode}`);
+            err.status = res.statusCode;
+            err.statusCode = res.statusCode;
+            resolve({ status: res.statusCode, data, error: err });
           }
         });
       });
@@ -123,13 +141,13 @@ class GitToCmsImporter {
 
   async getExistingEntry(contentTypeUid, url) {
     const path = `/v3/content_types/${contentTypeUid}/entries?query={"url":"${url}"}`;
-    const res = await this.request('GET', 'api.contentstack.io', path, {
+    const res = await this.requestWithRetry('GET', 'api.contentstack.io', path, {
       'api_key': PROD_APIDOCS_STACK,
       'authorization': PROD_APIDOCS_TOKEN,
     });
 
     if (res.status !== 200) {
-      throw new Error(`Failed to check existing entry: ${res.status}`);
+      throw res.error || new Error(`Failed to check existing entry: ${res.status}`);
     }
 
     return res.data.entries?.[0];
@@ -137,27 +155,28 @@ class GitToCmsImporter {
 
   async createEntry(contentTypeUid, entryData) {
     const path = `/v3/content_types/${contentTypeUid}/entries`;
-    const res = await this.request('POST', 'api.contentstack.io', path, {
+    const res = await this.requestWithRetry('POST', 'api.contentstack.io', path, {
       'api_key': PROD_APIDOCS_STACK,
       'authorization': PROD_APIDOCS_TOKEN,
     }, { entry: entryData });
 
     if (res.status !== 201 && res.status !== 200) {
-      throw new Error(`${res.status}: ${res.data.error_message || 'Creation failed'}`);
+      throw res.error || new Error(`${res.status}: ${res.data.error_message || 'Creation failed'}`);
     }
 
     return res.data.entry;
   }
 
-  async updateEntry(contentTypeUid, entryUid, entryData) {
+  async updateEntry(contentTypeUid, entryUid, existingEntry, entryData) {
+    const mergedData = mergeEntryFields(existingEntry, entryData);
     const path = `/v3/content_types/${contentTypeUid}/entries/${entryUid}`;
-    const res = await this.request('PUT', 'api.contentstack.io', path, {
+    const res = await this.requestWithRetry('PUT', 'api.contentstack.io', path, {
       'api_key': PROD_APIDOCS_STACK,
       'authorization': PROD_APIDOCS_TOKEN,
-    }, { entry: entryData });
+    }, { entry: mergedData });
 
     if (res.status !== 200) {
-      throw new Error(`${res.status}: ${res.data.error_message || 'Update failed'}`);
+      throw res.error || new Error(`${res.status}: ${res.data.error_message || 'Update failed'}`);
     }
 
     return res.data.entry;
@@ -220,8 +239,8 @@ class GitToCmsImporter {
       const existing = await this.getExistingEntry(contentTypeUid, entryData.url);
 
       if (existing) {
-        // Update existing entry
-        const updated = await this.updateEntry(contentTypeUid, existing.uid, entryData);
+        // Update existing entry (merge fields to prevent data loss)
+        const updated = await this.updateEntry(contentTypeUid, existing.uid, existing, entryData);
         this.stats.updated++;
         console.log(`  ✓ Updated (Draft): ${entryData.title}`);
       } else {

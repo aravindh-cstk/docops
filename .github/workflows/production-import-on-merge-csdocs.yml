@@ -1,0 +1,54 @@
+name: Import to Production on Merge (CS-Docs)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cs-docs/**/*.md'
+      - 'tools/cs-sync/import-git-to-cms-csdocs_*.js'
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    name: Import CS-Docs to Production CMS
+    concurrency:
+      group: import-csdocs-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./tools/cs-sync
+        run: npm ci
+
+      - name: Import CS-Docs to Production
+        working-directory: ./tools/cs-sync
+        run: node import-git-to-cms-csdocs_25July26.js
+        env:
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN }}
+        continue-on-error: true
+
+      - name: Report Results
+        if: always()
+        run: |
+          echo "================================"
+          echo "📊 CS-Docs Import Complete"
+          echo "================================"
+          echo ""
+          echo "✅ Import workflow completed"
+          echo "📋 Review logs above for details"
+          echo ""
+          echo "⚠️  Entries created as [DRAFT]"
+          echo "🔒 Manual publish required"
+          echo "📋 Check Contentstack CMS for Release"

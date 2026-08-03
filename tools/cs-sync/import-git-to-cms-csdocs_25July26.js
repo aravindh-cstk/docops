@@ -19,24 +19,40 @@ import https from 'https';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getConfig } from './lib/config.js';
+import { withRetry } from './lib/retry.js';
+import { mergeEntryFields } from './lib/merge-entry.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '../../');
 const CS_DOCS_PATH = path.join(REPO_ROOT, 'cs-docs');
 
-const PROD_CSDOCS_STACK = process.env.PROD_CSDOCS_STACK_API_KEY || 'blt2d43f51baca745a8';
-const PROD_CSDOCS_TOKEN = process.env.PROD_CSDOCS_STACK_DELIVERY_TOKEN || 'cs80888179b9220bd7cea067ff';
-const SANDBOX_CSDOCS_STACK = process.env.CSDOCS_SANDBOX_STACK_API_KEY || 'blt1a9af0bcb3816d6e';
-const SANDBOX_CSDOCS_TOKEN = process.env.CSDOCS_SANDBOX_MANAGEMENT_TOKEN || 'csf59f3418fcc349a9c7f20d7e';
+const config = getConfig('csdocs');
+const PROD_CSDOCS_STACK = config.prod.apiKey;
+const PROD_CSDOCS_TOKEN = config.prod.deliveryToken;
+const SANDBOX_CSDOCS_STACK = config.sandbox.apiKey;
+const SANDBOX_CSDOCS_TOKEN = config.sandbox.managementToken;
 
-// Map folders to content types (guessing based on names)
-const FOLDER_TO_CONTENT_TYPE = {
-  'developers': 'api_sdk_name_2026',
-  'get-started': 'academy_content_carousel_2026',
-  'content-managers': 'content_managers_2026',
-  'headless-cms': 'product_landing_2026',
-  'site-content': 'links_2026',
+// Map title prefixes to folders (extracts [prefix] from title)
+const TITLE_PREFIX_TO_FOLDER = {
+  'Administration': 'administration',
+  'Automations guides and connectors': 'agent-os',
+  'Analytics Content': 'analytics',
+  'AM2.0': 'assets',
+  'Author Content': 'content-managers',
+  'Data & Insights': 'data-and-insights',
+  'Get Started with CS': 'get-started',
+  'Taxonomy': 'headless-cms',
+  'Contentstack Launch': 'launch',
+  'Marketplace guides and apps': 'marketplace',
+  'Introduction to Contentstack - a Headless CMS': 'overview',
+  'Personalize': 'personalize',
+  'Second level navigation': 'developers',
+  'Studio': 'studio',
 };
+
+// All docs_article entries go to their folder based on title prefix
+const CONTENT_TYPE_UID = 'docs_article';
 
 class GitToCmsImporter {
   constructor() {
@@ -47,6 +63,13 @@ class GitToCmsImporter {
       failed: 0,
       errors: [],
     };
+  }
+
+  async requestWithRetry(method, host, path, headers = {}, body = null) {
+    return withRetry(
+      () => this.request(method, host, path, headers, body),
+      { name: `${method} ${path}` }
+    );
   }
 
   request(method, host, path, headers = {}, body = null) {
@@ -67,9 +90,16 @@ class GitToCmsImporter {
         res.on('end', () => {
           try {
             const json = data ? JSON.parse(data) : {};
-            resolve({ status: res.statusCode, data: json });
+            const err = new Error(`HTTP ${res.statusCode}`);
+            err.status = res.statusCode;
+            err.statusCode = res.statusCode;
+            err.data = json;
+            resolve({ status: res.statusCode, data: json, error: err });
           } catch (e) {
-            resolve({ status: res.statusCode, data });
+            const err = new Error(`HTTP ${res.statusCode}`);
+            err.status = res.statusCode;
+            err.statusCode = res.statusCode;
+            resolve({ status: res.statusCode, data, error: err });
           }
         });
       });
@@ -110,13 +140,13 @@ class GitToCmsImporter {
 
   async getExistingEntry(contentTypeUid, url) {
     const path = `/v3/content_types/${contentTypeUid}/entries?query={"url":"${url}"}`;
-    const res = await this.request('GET', 'api.contentstack.io', path, {
+    const res = await this.requestWithRetry('GET', 'api.contentstack.io', path, {
       'api_key': PROD_CSDOCS_STACK,
       'authorization': PROD_CSDOCS_TOKEN,
     });
 
     if (res.status !== 200) {
-      throw new Error(`Failed to check existing entry: ${res.status}`);
+      throw res.error || new Error(`Failed to check existing entry: ${res.status}`);
     }
 
     return res.data.entries?.[0];
@@ -124,27 +154,28 @@ class GitToCmsImporter {
 
   async createEntry(contentTypeUid, entryData) {
     const path = `/v3/content_types/${contentTypeUid}/entries`;
-    const res = await this.request('POST', 'api.contentstack.io', path, {
+    const res = await this.requestWithRetry('POST', 'api.contentstack.io', path, {
       'api_key': PROD_CSDOCS_STACK,
       'authorization': PROD_CSDOCS_TOKEN,
     }, { entry: entryData });
 
     if (res.status !== 201 && res.status !== 200) {
-      throw new Error(`${res.status}: ${res.data.error_message || 'Creation failed'}`);
+      throw res.error || new Error(`${res.status}: ${res.data.error_message || 'Creation failed'}`);
     }
 
     return res.data.entry;
   }
 
-  async updateEntry(contentTypeUid, entryUid, entryData) {
+  async updateEntry(contentTypeUid, entryUid, existingEntry, entryData) {
+    const mergedData = mergeEntryFields(existingEntry, entryData);
     const path = `/v3/content_types/${contentTypeUid}/entries/${entryUid}`;
-    const res = await this.request('PUT', 'api.contentstack.io', path, {
+    const res = await this.requestWithRetry('PUT', 'api.contentstack.io', path, {
       'api_key': PROD_CSDOCS_STACK,
       'authorization': PROD_CSDOCS_TOKEN,
-    }, { entry: entryData });
+    }, { entry: mergedData });
 
     if (res.status !== 200) {
-      throw new Error(`${res.status}: ${res.data.error_message || 'Update failed'}`);
+      throw res.error || new Error(`${res.status}: ${res.data.error_message || 'Update failed'}`);
     }
 
     return res.data.entry;
@@ -187,36 +218,46 @@ class GitToCmsImporter {
     return files;
   }
 
+  extractTitlePrefix(title) {
+    const match = title.match(/^\[([^\]]+)\]/);
+    return match ? match[1] : null;
+  }
+
   async processMarkdownFile(file) {
     try {
       const content = fs.readFileSync(file.filePath, 'utf-8');
       const { frontmatter, body } = this.parseFrontmatter(content);
 
-      // Determine content type from folder name (first-level folder)
-      const folderParts = file.folder.split(path.sep);
-      const topFolder = folderParts[0];
-      const contentTypeUid = FOLDER_TO_CONTENT_TYPE[topFolder];
+      // Extract title prefix from frontmatter
+      const titlePrefix = this.extractTitlePrefix(frontmatter.title || '');
 
-      if (!contentTypeUid) {
-        console.log(`  ⚠️  Unknown content type for folder: ${topFolder}`);
+      if (!titlePrefix) {
+        console.log(`  ⚠️  No title prefix found in ${file.fileName}. Expected format: [Prefix] - Title`);
+        return;
+      }
+
+      // Map prefix to folder (for logging only, content type is always docs_article)
+      const folder = TITLE_PREFIX_TO_FOLDER[titlePrefix];
+      if (!folder) {
+        console.log(`  ⚠️  Unknown title prefix "${titlePrefix}" in ${file.fileName}`);
         return;
       }
 
       const entryData = this.buildEntryData(frontmatter, body);
 
       // Check if entry exists
-      const existing = await this.getExistingEntry(contentTypeUid, entryData.url);
+      const existing = await this.getExistingEntry(CONTENT_TYPE_UID, entryData.url);
 
       if (existing) {
-        // Update existing entry
-        const updated = await this.updateEntry(contentTypeUid, existing.uid, entryData);
+        // Update existing entry (merge fields to prevent data loss)
+        const updated = await this.updateEntry(CONTENT_TYPE_UID, existing.uid, existing, entryData);
         this.stats.updated++;
-        console.log(`  ✓ Updated (Draft): ${entryData.title}`);
+        console.log(`  ✓ Updated (Draft): [${folder}] ${entryData.title}`);
       } else {
         // Create new entry as DRAFT
-        const created = await this.createEntry(contentTypeUid, entryData);
+        const created = await this.createEntry(CONTENT_TYPE_UID, entryData);
         this.stats.created++;
-        console.log(`  ✓ Created (Draft): ${entryData.title}`);
+        console.log(`  ✓ Created (Draft): [${folder}] ${entryData.title}`);
       }
 
       this.stats.filesProcessed++;

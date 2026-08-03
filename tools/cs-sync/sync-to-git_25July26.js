@@ -14,13 +14,16 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
+import { getConfig } from './lib/config.js';
+import { withRetry } from './lib/retry.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '../../');
 const API_DOCS_PATH = path.join(REPO_ROOT, 'api-docs');
 
-const PROD_APIDOCS_STACK = process.env.PROD_APIDOCS_STACK_API_KEY || 'blt8fb40ae1e60d06b9';
-const PROD_APIDOCS_TOKEN = process.env.PROD_APIDOCS_STACK_DELIVERY_TOKEN || 'cs9c8e6ecd1de6a45980524488';
+const config = getConfig('apidocs');
+const PROD_APIDOCS_STACK = config.prod.apiKey;
+const PROD_APIDOCS_TOKEN = config.prod.deliveryToken;
 
 const CONTENT_TYPES = {
   'api_requests_cma': 'cma-api-requests',
