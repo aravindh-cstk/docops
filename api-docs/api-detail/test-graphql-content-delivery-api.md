@@ -1,27 +1,25 @@
 ---
 title: "TEST- GraphQL Content Delivery API"
-description: GraphQL is a flexible, customized API query language. Contentstack's Content Delivery API gives you the power to query for exactly what you need—in one request.
 url: test-graphql-content-delivery-api
-product: Contentstack
-doc_type: api-detail
-audience:
-  - developers
-version: unknown
-last_updated: 2025-08-03
-# TODO: Add all other fields from original entry below
-# region_parameters: 
-# navigation_settings:
-# [ADD ALL OTHER CMS FIELDS HERE]
+api_version: ""
+superscript: 1
+select: ""
+date_field_for_flag: ""
+enable_openapi: false
+openapi_schema_url: ""
+enable_postman_button: true
+enable_localization: true
+enable_try_out: true
+enable_edit_request_body: false
+regions: 7
 ---
 
 # TEST- GraphQL Content Delivery API
 
-This is a test entry to verify the Phase 1 workflow. All details should match the original entry (blt5f2aaf44237ab6db).
+GraphQL Content Delivery API is a flexible alternative to REST APIs that lets you fetch exactly what you need in a single request.
 
-## Instructions
+This is a test entry created from the original GraphQL Content Delivery API entry (blt5f2aaf44237ab6db) with TEST- prefix for Phase 1 workflow verification.
 
-To complete this test:
-1. Copy ALL fields from the original CMS entry into the frontmatter above
-2. Include region parameters, navigation settings, and any custom fields
-3. Change title prefix to "TEST-" and URL prefix to "test-"
-4. Commit and push - Phase 1 workflow will create the [DRAFT] entry with ALL fields
+## Overview
+
+GraphQL is a flexible, customized API query language. Contentstack's Content Delivery API gives you the power to query for exactly what you need—in one request.
