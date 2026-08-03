@@ -29,7 +29,7 @@ const API_DOCS_PATH = path.join(REPO_ROOT, 'api-docs');
 
 const config = getConfig('apidocs');
 const PROD_APIDOCS_STACK = config.prod.apiKey;
-const PROD_APIDOCS_TOKEN = config.prod.deliveryToken;
+const PROD_APIDOCS_TOKEN = config.prod.managementToken;
 const SANDBOX_APIDOCS_STACK = config.sandbox.apiKey;
 const SANDBOX_APIDOCS_TOKEN = config.sandbox.managementToken;
 
