@@ -154,61 +154,87 @@ For each change, tell me:
 2. Go to **File** → **Download** → **Markdown (.md)**
 3. Save the file locally
 
-### 3.5.2 Use Claude to Clean Up & Structure the Markdown
+### 3.5.2 Use Claude for Complete Gdoc → Published Workflow
 
-**Claude Prompt for Converting Gdoc to Repo Format:**
+**This single prompt handles EVERYTHING from converting Gdoc to publishing:**
 
 ```
-I have a Google Doc exported as markdown that needs to be formatted for our documentation repo.
+I have a Google Doc from the previous process that needs to be converted to markdown, 
+committed to a branch, and turned into a PR. Guide me through the complete workflow.
 
-Existing Gdoc content (markdown export):
-[Paste the exported markdown content here]
+GDOC INFORMATION:
+- Gdoc content (exported as markdown): [Paste exported markdown here]
+- Feature/Product name: [e.g., "Entry Variant Versioning"]
+- Your Jira ticket: TD-XXXX (e.g., TD-5366)
+- Target folder: cs-docs/studio/ (or your folder: cs-docs/administration/, etc.)
+- Your local repo path: /path/to/contentstack-docs
 
-Target location: cs-docs/studio/ (or your folder)
-Feature/Product: [Feature name]
-Jira Ticket: TD-XXXX
+WORKFLOW: I want to go from Gdoc → markdown → branch → commit → PR → publish
 
-Convert this to repository-ready markdown:
+Please provide:
 
-Requirements:
-1. Add YAML frontmatter at the top:
-   ---
-   title: [Feature Title]
-   url: /[url-slug]
-   description: [Brief description]
-   ---
+1. **MARKDOWN CONVERSION**
+   - Convert this Gdoc to repo-ready markdown with:
+     * YAML frontmatter (title, url, description)
+     * Clean formatting and heading hierarchy (h1 → h2 → h3)
+     * Proper code block formatting (```language)
+     * Kebab-case filename (e.g., feature-overview.md)
+   - Output the complete markdown content
 
-2. Clean up formatting:
-   - Fix heading hierarchy (h1 → h2 → h3)
-   - Format code blocks properly (```language)
-   - Ensure consistent markdown syntax
+2. **GIT COMMANDS** (step-by-step, copy-paste ready)
+   - Create a new branch: git checkout -b TD-XXXX_ProductName_FeatureName
+   - Create the markdown file with the content
+   - Stage and commit: git add ... && git commit -m "..."
+   - Push to remote: git push origin ...
 
-3. Structure:
-   - Introduction/Overview
-   - Use Cases
-   - Configuration/Setup
-   - Examples
-   - Troubleshooting
-   - Links/References
+3. **PR CREATION COMMAND**
+   - gh pr create command with title and body
 
-4. File naming: Use kebab-case (example: feature-overview.md)
+4. **WHAT HAPPENS NEXT** (after I merge)
+   - The workflow will automatically sync to Production CMS
+   - Where to find [DRAFT] entries
+   - How to review and publish manually
 
-Generate the cleaned-up markdown content ready for the repo.
+Please provide all commands in order, clearly labeled, so I can copy-paste them directly.
 ```
 
-### 3.5.3 Create Branch & PR Automatically
+### 3.5.3 Follow Claude's Output
 
-Once Claude has converted the Gdoc to markdown:
+Claude will provide everything you need, in order:
 
-1. Claude creates the markdown file in your local repo
-2. You follow **Steps 5-6** to create a branch and PR
-3. Rest of the workflow proceeds normally (approval, merge, CMS sync, publish)
+1. ✅ **Converted markdown** — Copy this into your file
+2. ✅ **Git commands** — Run these in order (copy-paste ready)
+3. ✅ **PR creation command** — Run this
+4. ✅ **Next steps** — After merge: find drafts, review, publish
 
-**Example Flow:**
+**Complete workflow in one prompt!**
+
+Example of what Claude provides:
 ```
-Gdoc → Export as .md → Give to Claude → Claude converts to repo format
-→ Create TD-* branch → Commit markdown → Create PR → Get approval
-→ Merge → CMS sync → Review [DRAFT] → Publish
+✅ MARKDOWN (copy this):
+---
+title: Entry Variant Versioning
+url: /entry-variant-versioning
+...
+---
+
+✅ GIT COMMANDS (run in order):
+git checkout -b TD-5366_CMS_EntryVariantVersionNaming
+cat > cs-docs/studio/entry-variant-versioning.md << 'EOF'
+[markdown content]
+EOF
+git add cs-docs/studio/entry-variant-versioning.md
+git commit -m "docs: add entry variant versioning..."
+git push origin TD-5366_CMS_EntryVariantVersionNaming
+
+✅ PR COMMAND:
+gh pr create --title "docs: Add Entry Variant Versioning" ...
+
+✅ AFTER MERGE:
+- Wait 5 minutes for CMS sync
+- Go to Production CMS → Release
+- Find [DRAFT] entry
+- Review and Publish
 ```
 
 ---
@@ -561,26 +587,28 @@ If you find issues:
 
 ## Quick Reference: Claude Prompts
 
-### Prompt 0: Convert Google Docs to Markdown (From Previous Process)
+### Prompt 0: Google Docs → Complete Workflow (Gdoc Conversion + Git + PR + Publishing)
+
+**Use this if you have an existing Google Doc to convert and publish:**
 
 ```
-I have a Google Doc exported as markdown that needs to be formatted for our documentation repo.
+I have a Google Doc from the previous process that needs to be converted to markdown, 
+committed to a branch, and turned into a PR. Guide me through the complete workflow.
 
-Existing Gdoc content (markdown export):
-[Paste the exported markdown content here]
+GDOC INFORMATION:
+- Gdoc content (exported as markdown): [Paste exported markdown here]
+- Feature/Product name: [e.g., "Entry Variant Versioning"]
+- Your Jira ticket: TD-XXXX (e.g., TD-5366)
+- Target folder: cs-docs/studio/ (or cs-docs/administration/, etc.)
+- Your local repo path: /path/to/contentstack-docs
 
-Target location: cs-docs/studio/ (or your folder)
-Feature/Product: [Feature name]
-Jira Ticket: TD-XXXX
+WORKFLOW: Gdoc → markdown → branch → commit → PR → publish
 
-Convert this to repository-ready markdown with:
-1. YAML frontmatter (title, url, description)
-2. Clean formatting and heading hierarchy
-3. Proper code block formatting
-4. Consistent structure (overview, use cases, config, examples, troubleshooting)
-5. File naming: kebab-case (example: feature-overview.md)
-
-Generate the cleaned-up markdown content ready for the repo.
+Please provide (in order):
+1. Converted markdown with YAML frontmatter
+2. Git commands (copy-paste ready)
+3. PR creation command
+4. Next steps (after merge)
 ```
 
 ### Prompt 1: Analyze API Changes
