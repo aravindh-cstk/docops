@@ -144,6 +144,75 @@ For each change, tell me:
 
 ---
 
+## Step 3.5: (Optional) Converting Google Docs to Markdown
+
+**If you have already created documentation in Google Docs** (from the previous process), you can convert it to markdown and create a PR using Claude.
+
+### 3.5.1 Export Your Google Doc
+
+1. Open your Google Doc: https://docs.google.com/document/d/...
+2. Go to **File** → **Download** → **Markdown (.md)**
+3. Save the file locally
+
+### 3.5.2 Use Claude to Clean Up & Structure the Markdown
+
+**Claude Prompt for Converting Gdoc to Repo Format:**
+
+```
+I have a Google Doc exported as markdown that needs to be formatted for our documentation repo.
+
+Existing Gdoc content (markdown export):
+[Paste the exported markdown content here]
+
+Target location: cs-docs/studio/ (or your folder)
+Feature/Product: [Feature name]
+Jira Ticket: TD-XXXX
+
+Convert this to repository-ready markdown:
+
+Requirements:
+1. Add YAML frontmatter at the top:
+   ---
+   title: [Feature Title]
+   url: /[url-slug]
+   description: [Brief description]
+   ---
+
+2. Clean up formatting:
+   - Fix heading hierarchy (h1 → h2 → h3)
+   - Format code blocks properly (```language)
+   - Ensure consistent markdown syntax
+
+3. Structure:
+   - Introduction/Overview
+   - Use Cases
+   - Configuration/Setup
+   - Examples
+   - Troubleshooting
+   - Links/References
+
+4. File naming: Use kebab-case (example: feature-overview.md)
+
+Generate the cleaned-up markdown content ready for the repo.
+```
+
+### 3.5.3 Create Branch & PR Automatically
+
+Once Claude has converted the Gdoc to markdown:
+
+1. Claude creates the markdown file in your local repo
+2. You follow **Steps 5-6** to create a branch and PR
+3. Rest of the workflow proceeds normally (approval, merge, CMS sync, publish)
+
+**Example Flow:**
+```
+Gdoc → Export as .md → Give to Claude → Claude converts to repo format
+→ Create TD-* branch → Commit markdown → Create PR → Get approval
+→ Merge → CMS sync → Review [DRAFT] → Publish
+```
+
+---
+
 ## Step 4: Use Claude to Generate Documentation Drafts
 
 ### 4.1 Gather Information
@@ -491,6 +560,28 @@ If you find issues:
 ---
 
 ## Quick Reference: Claude Prompts
+
+### Prompt 0: Convert Google Docs to Markdown (From Previous Process)
+
+```
+I have a Google Doc exported as markdown that needs to be formatted for our documentation repo.
+
+Existing Gdoc content (markdown export):
+[Paste the exported markdown content here]
+
+Target location: cs-docs/studio/ (or your folder)
+Feature/Product: [Feature name]
+Jira Ticket: TD-XXXX
+
+Convert this to repository-ready markdown with:
+1. YAML frontmatter (title, url, description)
+2. Clean formatting and heading hierarchy
+3. Proper code block formatting
+4. Consistent structure (overview, use cases, config, examples, troubleshooting)
+5. File naming: kebab-case (example: feature-overview.md)
+
+Generate the cleaned-up markdown content ready for the repo.
+```
 
 ### Prompt 1: Analyze API Changes
 
