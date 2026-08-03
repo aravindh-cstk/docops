@@ -134,12 +134,18 @@ class GitToCmsImporter {
   }
 
   buildEntryData(frontmatter, body) {
-    return {
-      title: frontmatter.title || 'Untitled',
-      url: frontmatter.url || frontmatter.title?.toLowerCase().replace(/\s+/g, '-'),
-      description: frontmatter.description || frontmatter.summary || '',
-      body: body.trim(),
-    };
+    const entry = { ...frontmatter };
+    // Always ensure these core fields exist
+    entry.title = entry.title || 'Untitled';
+    entry.url = entry.url || entry.title?.toLowerCase().replace(/\s+/g, '-');
+    entry.body = body.trim();
+    // Remove non-CMS fields that shouldn't be sent to API
+    delete entry.product;
+    delete entry.doc_type;
+    delete entry.audience;
+    delete entry.version;
+    delete entry.last_updated;
+    return entry;
   }
 
   async getExistingEntry(contentTypeUid, url) {
