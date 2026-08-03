@@ -1,11 +1,12 @@
 name: Sync docs to Contentstack
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "cs-docs/**/*.md"
-      - "tools/cs-sync/**"
+  # PAUSED - New production-import-on-merge-csdocs.yml handles this flow
+  # push:
+  #   branches: [main]
+  #   paths:
+  #     - "cs-docs/**/*.md"
+  #     - "tools/cs-sync/**"
 
 concurrency:
   group: contentstack-sync

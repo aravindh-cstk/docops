@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - 'api-docs/**'
-      - 'cs-docs/**'
   workflow_dispatch:
 
 concurrency:
@@ -81,7 +80,7 @@ jobs:
         env:
           STACK_TYPE: ${{ matrix.stack }}
           PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
-          PROD_APIDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_APIDOCS_MANAGEMENT_TOKEN }}
+          PROD_APIDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_MANAGEMENT_TOKEN }}
 
       - name: Create Release Summary
         if: always()
@@ -104,81 +103,12 @@ jobs:
           echo "  Ref: ${{ github.ref }}"
           echo "  Commit: ${{ github.sha }}"
 
-  import-csdocs:
-    name: Import CS Docs to Production CMS
-    runs-on: ubuntu-latest
-    needs: validate
-    if: needs.validate.outputs.has_changes == 'true'
-    strategy:
-      matrix:
-        stack: [csdocs]
-      fail-fast: false
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        working-directory: ./tools/cs-sync
-        run: npm ci
-
-      - name: Pre-Import Validation
-        working-directory: ./tools/cs-sync
-        run: |
-          echo "🔍 Validating Git changes before import..."
-          echo ""
-          echo "Validation Checks:"
-          echo "  ✓ YAML frontmatter syntax"
-          echo "  ✓ Required fields (title, url, description)"
-          echo "  ✓ No duplicate URLs"
-          echo "  ✓ Folder mapping validity"
-          echo "  ✓ No draft/scheduled entries"
-          echo ""
-          echo "If any validation fails, import will be blocked."
-        env:
-          STACK_TYPE: ${{ matrix.stack }}
-
-      - name: Import Git → Production CMS
-        working-directory: ./tools/cs-sync
-        run: node import-git-to-cms-csdocs_25July26.js
-        env:
-          STACK_TYPE: ${{ matrix.stack }}
-          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
-          PROD_CSDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_MANAGEMENT_TOKEN }}
-
-      - name: Create Release Summary
-        if: always()
-        run: |
-          echo "📦 Release Created"
-          echo ""
-          echo "✅ Import Summary:"
-          echo "  - All entries created as [DRAFT]"
-          echo "  - Grouped in Release for review"
-          echo "  - Ready for writer publication"
-          echo ""
-          echo "⏭️  Next Steps:"
-          echo "  1. Writers review Release in CMS"
-          echo "  2. Edit entries as needed"
-          echo "  3. Click 'Publish' to go live"
-          echo ""
-          echo "📊 Deployment Details:"
-          echo "  Stack: Production CS Docs"
-          echo "  Timestamp: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          echo "  Ref: ${{ github.ref }}"
-          echo "  Commit: ${{ github.sha }}"
 
   report-summary:
     name: Summary
     runs-on: ubuntu-latest
     if: always()
-    needs: [validate, import-apidocs, import-csdocs]
+    needs: [validate, import-apidocs]
 
     steps:
       - name: Report Results
