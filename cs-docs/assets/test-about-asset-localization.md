@@ -1,5 +1,5 @@
 ---
-title: "TEST- [AM2.0] - About Asset Localization"
+title: "[AM2.0] - TEST About Asset Localization"
 description: Overview of asset localization in Assets, including benefits, supported languages, and an example workflow.
 url: /test-about-asset-localization
 product: Assets
