@@ -18,7 +18,8 @@ enable_postman_button: true
 enable_localization: true
 enable_try_out: true
 enable_edit_request_body: false
-regions: 7
+regions: "!clone_from:graphql-content-delivery-api"
+navigation: "!clone_from:graphql-content-delivery-api"
 ---
 
 # TEST- GraphQL Content Delivery API

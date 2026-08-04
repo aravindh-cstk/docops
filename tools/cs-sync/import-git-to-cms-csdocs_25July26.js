@@ -133,12 +133,31 @@ class GitToCmsImporter {
     return { frontmatter, body };
   }
 
-  buildEntryData(frontmatter, body) {
+  async buildEntryData(frontmatter, body) {
     const entry = { ...frontmatter };
     // Always ensure these core fields exist
     entry.title = entry.title || 'Untitled';
     entry.url = entry.url || entry.title?.toLowerCase().replace(/\s+/g, '-');
     entry.body = body.trim();
+
+    // Handle !clone_from: markers for complex fields
+    const fieldsToClone = [];
+    for (const [key, value] of Object.entries(entry)) {
+      if (typeof value === 'string' && value.startsWith('!clone_from:')) {
+        const sourceUrl = value.replace('!clone_from:', '');
+        fieldsToClone.push({ field: key, sourceUrl });
+        delete entry[key];
+      }
+    }
+
+    // Clone fields from source entries
+    for (const { field, sourceUrl } of fieldsToClone) {
+      const cloned = await this.cloneFieldsFromEntry(sourceUrl, [field]);
+      if (cloned[field]) {
+        entry[field] = cloned[field];
+      }
+    }
+
     // Remove non-CMS fields that shouldn't be sent to API
     delete entry.product;
     delete entry.doc_type;
@@ -160,6 +179,18 @@ class GitToCmsImporter {
     }
 
     return res.data.entries?.[0];
+  }
+
+  async cloneFieldsFromEntry(sourceUrl, fieldNames) {
+    const sourceEntry = await this.getExistingEntry('docs_article', sourceUrl);
+    if (!sourceEntry) return {};
+    const cloned = {};
+    fieldNames.forEach(field => {
+      if (sourceEntry[field] !== undefined) {
+        cloned[field] = sourceEntry[field];
+      }
+    });
+    return cloned;
   }
 
   async createEntry(contentTypeUid, entryData) {
@@ -253,7 +284,7 @@ class GitToCmsImporter {
         return;
       }
 
-      const entryData = this.buildEntryData(frontmatter, body);
+      const entryData = await this.buildEntryData(frontmatter, body);
 
       // Check if entry exists
       const existing = await this.getExistingEntry(CONTENT_TYPE_UID, entryData.url);
