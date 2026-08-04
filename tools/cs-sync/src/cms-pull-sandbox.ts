@@ -79,7 +79,13 @@ async function main() {
     }
 
     // For each entry, generate markdown file
+    const repoRoot = path.resolve(__dirname, "../../..");
+    const docsPath = config.stackType === "apidocs" ? "api-docs" : "cs-docs";
+    const basePath = path.join(repoRoot, docsPath);
+
+    const changes: any[] = [];
     let syncCount = 0;
+
     for (const entry of entries) {
       const title = entry.title as string;
       const url = entry.url as string;
@@ -94,17 +100,36 @@ async function main() {
       const body = (entry.body as string) || "";
       const markdown = `${frontmatter}\n\n${body}`;
 
-      // Determine file path based on stack type
-      const filePath = getFilePath(config.stackType, url);
+      // Determine file path based on stack type and folder
+      const filePath = getFilePath(config.stackType, url, entry);
+      const fullPath = path.join(basePath, filePath);
 
-      // Write to file (would be handled by workflow)
+      // Create directory if it doesn't exist
+      const dir = path.dirname(fullPath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+
+      // Write file
+      fs.writeFileSync(fullPath, markdown, "utf-8");
       console.log(`  ✓ ${title}`);
       console.log(`    → ${filePath}`);
+
+      changes.push({
+        filePath: path.relative(repoRoot, fullPath),
+        url: url,
+        updatedByName: entry.updated_by?.name || "Unknown",
+        updatedAt: entry.updated_at || new Date().toISOString(),
+      });
 
       syncCount++;
     }
 
-    console.log(`\n✅ Sync complete: ${syncCount} entries ready\n`);
+    // Write summary JSON for the workflow to use
+    const summaryPath = path.join(__dirname, ".cms-pull-summary.json");
+    fs.writeFileSync(summaryPath, JSON.stringify(changes, null, 2), "utf-8");
+
+    console.log(`\n✅ Sync complete: ${syncCount} entries synced\n`);
   } catch (error) {
     console.error("❌ Error during sync:", error instanceof Error ? error.message : error);
     process.exit(1);
@@ -128,11 +153,27 @@ function generateFrontmatter(entry: any): string {
   return lines.join("\n");
 }
 
-function getFilePath(stackType: string, url: string): string {
-  // This would be improved to handle different content types
-  // For now, returning a placeholder path
-  const baseDir = stackType === "apidocs" ? "api-docs" : "cs-docs";
-  return `${baseDir}/docs/${url}.md`;
+function getFilePath(stackType: string, url: string, entry: any): string {
+  // Map content type to folder structure
+  let folder = "docs";
+
+  if (stackType === "apidocs") {
+    // Check if this is an API detail page or a request entry
+    const contentType = entry.content_type?.uid;
+    if (contentType === "api_detail_page") {
+      folder = "api-detail";
+    } else if (contentType === "api_requests_cma") {
+      folder = "cma-api-requests";
+    } else if (contentType === "api_requests_cda") {
+      folder = "cda-api-requests";
+    } else if (contentType === "api_requests_graphql") {
+      folder = "graphql-api-requests";
+    }
+  } else if (stackType === "csdocs") {
+    folder = "docs";
+  }
+
+  return `${folder}/${url}.md`;
 }
 
 main().catch((error) => {
