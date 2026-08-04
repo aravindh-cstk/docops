@@ -23,6 +23,7 @@ class ContentstackClient {
   constructor(apiKey, token, region = 'us') {
     this.apiKey = apiKey;
     this.token = token;
+    this.productionEnvId = null;
     const regionMap = {
       us: 'api.contentstack.io',
       eu: 'eu-api.contentstack.com',
@@ -61,6 +62,22 @@ class ContentstackClient {
     });
   }
 
+  async getProductionEnvironmentId() {
+    const res = await this.request(`/v3/environments?limit=100`);
+    if (res.status !== 200) {
+      throw new Error(`Failed to fetch environments: ${res.status}`);
+    }
+
+    const environments = res.data.environments || [];
+    const prodEnv = environments.find(env => env.name === 'production' || env.uid === 'production');
+    if (!prodEnv) {
+      throw new Error(`Could not find production environment`);
+    }
+
+    this.productionEnvId = prodEnv.uid;
+    return prodEnv.uid;
+  }
+
   async getContentTypes() {
     const types = [];
     let skip = 0;
@@ -88,18 +105,23 @@ class ContentstackClient {
     let hasMore = true;
 
     while (hasMore) {
-      // Use Contentstack query API to filter for entries published to production environment
-      const query = encodeURIComponent(JSON.stringify({
-        "publish_details.production": { "$exists": true }
-      }));
-      const res = await this.request(`/v3/content_types/${contentTypeUid}/entries?query=${query}&limit=${limit}&skip=${skip}&include_count=true`);
+      const res = await this.request(`/v3/content_types/${contentTypeUid}/entries?limit=${limit}&skip=${skip}&include_publish_details=true`);
 
       if (res.status !== 200) {
         throw new Error(`Failed to fetch entries for ${contentTypeUid}: ${res.status}`);
       }
 
       const page = res.data.entries || [];
-      entries.push(...page);
+
+      // Filter: only entries published to PRODUCTION environment
+      for (const entry of page) {
+        if (Array.isArray(entry.publish_details)) {
+          const isPubToProduction = entry.publish_details.some(pd => pd.environment === this.productionEnvId);
+          if (isPubToProduction) {
+            entries.push(entry);
+          }
+        }
+      }
 
       hasMore = page.length === limit;
       skip += limit;
@@ -216,6 +238,11 @@ async function migrate() {
 
     console.log(`\n🔄 MIGRATION: ${stack.name} (ALL Content Types) PRODUCTION → SANDBOX\n`);
     console.log('═'.repeat(70));
+
+    // Get production environment ID
+    console.log(`\n🔍 Detecting production environment...`);
+    await prodClient.getProductionEnvironmentId();
+    console.log(`✅ Using environment: ${prodClient.productionEnvId}\n`);
 
     // Get all content types from Production
     console.log(`\n📋 Fetching content types from Production...`);
