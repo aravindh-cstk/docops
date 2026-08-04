@@ -44,7 +44,7 @@ export class SandboxClient {
   }
 
   private entriesPath(): string {
-    return `/content_types/${this.config.contentTypeUid}/entries`;
+    return `/v3/content_types/${this.config.contentTypeUid}/entries`;
   }
 
   /**
