@@ -6,6 +6,8 @@ on:
     paths:
       - "cs-docs/**"
       - "api-docs/**"
+      - "SYNC_WORKFLOW.md"
+      - ".github/workflows/docs-lint.yml"
 
 permissions:
   pull-requests: write
