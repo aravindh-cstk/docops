@@ -39,12 +39,11 @@ jobs:
       - name: Pull changes from CMS (API Docs)
         working-directory: tools/cs-sync
         env:
-          CONTENTSTACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
-          CONTENTSTACK_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
-          CONTENTSTACK_ENVIRONMENT: sandbox
-          CS_REGION: us
-          CS_CONTENT_TYPE: api_detail_page
-        run: npm run cms-pull -- --lookback ${{ inputs.lookback_minutes || '20' }}
+          STACK_TYPE: apidocs
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          LOOKBACK_MINUTES: ${{ inputs.lookback_minutes || '20' }}
+        run: npm run cms-pull-sandbox
 
       - name: Check for changes
         id: changes
