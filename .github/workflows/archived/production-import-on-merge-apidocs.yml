@@ -1,11 +1,9 @@
 name: Production Import on Merge (Git → CMS with Release)
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'api-docs/**'
+  # REPLACED by two-phase workflow:
+  # - production-create-draft-on-pr-apidocs.yml (creates drafts on PR open)
+  # - production-add-to-release-apidocs.yml (adds to Release on merge)
   workflow_dispatch:
 
 concurrency:

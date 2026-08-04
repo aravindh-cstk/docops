@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 /**
- * Git → CMS Import: API Docs
- * - Reads markdown files from api-docs/ folder (MAIN BRANCH ONLY)
+ * Git → CMS Import: CS Docs
+ * - Reads markdown files from cs-docs/ folder (MAIN BRANCH ONLY)
  * - Parses YAML frontmatter into CMS fields
  * - Creates/updates entries in Production CMS as DRAFT
  * - Writer manually publishes when ready
  *
  * Triggered on:
- *   1. PR merge to main (immediate) - import-git-to-cms-apidocs_25July26.js
+ *   1. PR merge to main (immediate) - import-git-to-cms-csdocs_25July26.js
  *   2. 2 AM UTC safety check (main branch) - sync-prod-to-sandbox.yml
  *
- * Usage: node import-git-to-cms-apidocs_25July26.js
+ * Usage: node import-git-to-cms-csdocs_25July26.js
  * Note: Only reads from checked-out git branch (main in production)
  */
 
@@ -25,31 +25,38 @@ import { mergeEntryFields } from './lib/merge-entry.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '../../');
-const API_DOCS_PATH = path.join(REPO_ROOT, 'api-docs');
+const CS_DOCS_PATH = path.join(REPO_ROOT, 'cs-docs');
 
-const config = getConfig('apidocs');
-const PROD_APIDOCS_STACK = config.prod.apiKey;
-const PROD_APIDOCS_TOKEN = config.prod.deliveryToken;
-const SANDBOX_APIDOCS_STACK = config.sandbox.apiKey;
-const SANDBOX_APIDOCS_TOKEN = config.sandbox.managementToken;
+const config = getConfig('csdocs');
+const PROD_CSDOCS_STACK = config.prod.apiKey;
+const PROD_CSDOCS_TOKEN = config.prod.managementToken;
+const SANDBOX_CSDOCS_STACK = config.sandbox.apiKey;
+const SANDBOX_CSDOCS_TOKEN = config.sandbox.managementToken;
 
-const FOLDER_TO_CONTENT_TYPE = {
-  'cma-api-requests': 'api_requests_cma',
-  'cda-api-requests': 'api_requests_cda',
-  'graphql-api-requests': 'api_requests_graphql',
-  'apps-api-requests': 'api_requests_apps',
-  'analytics-api-requests': 'api_requests_analytics',
-  'administration-api-requests': 'api_requests_administration',
-  'ai-platform-api-requests': 'api_requests_ai_platform',
-  'asset-management-api-requests': 'api_requests_asset_management_api',
-  'automation-hub-api-requests': 'api_requests_automation_hub',
-  'brand-kit-api-requests': 'api_requests_brand_kit',
-  'genai-ingest-api-requests': 'api_requests_genai_api_and_ingest_api',
-  'generative-api-requests': 'api_requests_generative_api',
-  'image-api-requests': 'api_requests_image',
-  'knowledge-vault-api-requests': 'api_requests_knowlegde_vault',
-  'scim-api-requests': 'api_requests_scim',
+// Phase detection for two-phase workflow
+const CREATE_DRAFT_ONLY = process.env.CREATE_DRAFT_ONLY === 'true';
+const ADD_TO_RELEASE = process.env.ADD_TO_RELEASE === 'true';
+
+// Map title prefixes to folders (extracts [prefix] from title)
+const TITLE_PREFIX_TO_FOLDER = {
+  'Administration': 'administration',
+  'Automations guides and connectors': 'agent-os',
+  'Analytics Content': 'analytics',
+  'AM2.0': 'assets',
+  'Author Content': 'content-managers',
+  'Data & Insights': 'data-and-insights',
+  'Get Started with CS': 'get-started',
+  'Taxonomy': 'headless-cms',
+  'Contentstack Launch': 'launch',
+  'Marketplace guides and apps': 'marketplace',
+  'Introduction to Contentstack - a Headless CMS': 'overview',
+  'Personalize': 'personalize',
+  'Second level navigation': 'developers',
+  'Studio': 'studio',
 };
+
+// All docs_article entries go to their folder based on title prefix
+const CONTENT_TYPE_UID = 'docs_article';
 
 class GitToCmsImporter {
   constructor() {
@@ -126,24 +133,45 @@ class GitToCmsImporter {
     return { frontmatter, body };
   }
 
-  buildEntryData(frontmatter, body) {
-    return {
-      title: frontmatter.title || 'Untitled',
-      url: frontmatter.url || frontmatter.title?.toLowerCase().replace(/\s+/g, '-'),
-      description: frontmatter.description || frontmatter.summary || '',
-      body: body.trim(),
-      api_endpoint: frontmatter.api_endpoint || '',
-      method: frontmatter.method ? { select: frontmatter.method } : undefined,
-      request_body: frontmatter.request_body || '',
-      response_body: frontmatter.response_body || '',
-    };
+  async buildEntryData(frontmatter, body) {
+    const entry = { ...frontmatter };
+    // Always ensure these core fields exist
+    entry.title = entry.title || 'Untitled';
+    entry.url = entry.url || entry.title?.toLowerCase().replace(/\s+/g, '-');
+    entry.body = body.trim();
+
+    // Handle !clone_from: markers for complex fields
+    const fieldsToClone = [];
+    for (const [key, value] of Object.entries(entry)) {
+      if (typeof value === 'string' && value.startsWith('!clone_from:')) {
+        const sourceUrl = value.replace('!clone_from:', '');
+        fieldsToClone.push({ field: key, sourceUrl });
+        delete entry[key];
+      }
+    }
+
+    // Clone fields from source entries
+    for (const { field, sourceUrl } of fieldsToClone) {
+      const cloned = await this.cloneFieldsFromEntry(sourceUrl, [field]);
+      if (cloned[field]) {
+        entry[field] = cloned[field];
+      }
+    }
+
+    // Remove non-CMS fields that shouldn't be sent to API
+    delete entry.product;
+    delete entry.doc_type;
+    delete entry.audience;
+    delete entry.version;
+    delete entry.last_updated;
+    return entry;
   }
 
   async getExistingEntry(contentTypeUid, url) {
     const path = `/v3/content_types/${contentTypeUid}/entries?query={"url":"${url}"}`;
     const res = await this.requestWithRetry('GET', 'api.contentstack.io', path, {
-      'api_key': PROD_APIDOCS_STACK,
-      'authorization': PROD_APIDOCS_TOKEN,
+      'api_key': PROD_CSDOCS_STACK,
+      'authorization': PROD_CSDOCS_TOKEN,
     });
 
     if (res.status !== 200) {
@@ -153,11 +181,23 @@ class GitToCmsImporter {
     return res.data.entries?.[0];
   }
 
+  async cloneFieldsFromEntry(sourceUrl, fieldNames) {
+    const sourceEntry = await this.getExistingEntry('docs_article', sourceUrl);
+    if (!sourceEntry) return {};
+    const cloned = {};
+    fieldNames.forEach(field => {
+      if (sourceEntry[field] !== undefined) {
+        cloned[field] = sourceEntry[field];
+      }
+    });
+    return cloned;
+  }
+
   async createEntry(contentTypeUid, entryData) {
     const path = `/v3/content_types/${contentTypeUid}/entries`;
     const res = await this.requestWithRetry('POST', 'api.contentstack.io', path, {
-      'api_key': PROD_APIDOCS_STACK,
-      'authorization': PROD_APIDOCS_TOKEN,
+      'api_key': PROD_CSDOCS_STACK,
+      'authorization': PROD_CSDOCS_TOKEN,
     }, { entry: entryData });
 
     if (res.status !== 201 && res.status !== 200) {
@@ -171,8 +211,8 @@ class GitToCmsImporter {
     const mergedData = mergeEntryFields(existingEntry, entryData);
     const path = `/v3/content_types/${contentTypeUid}/entries/${entryUid}`;
     const res = await this.requestWithRetry('PUT', 'api.contentstack.io', path, {
-      'api_key': PROD_APIDOCS_STACK,
-      'authorization': PROD_APIDOCS_TOKEN,
+      'api_key': PROD_CSDOCS_STACK,
+      'authorization': PROD_CSDOCS_TOKEN,
     }, { entry: mergedData });
 
     if (res.status !== 200) {
@@ -185,8 +225,8 @@ class GitToCmsImporter {
   async publishEntry(contentTypeUid, entryUid) {
     const path = `/v3/content_types/${contentTypeUid}/entries/${entryUid}/publish`;
     const res = await this.request('POST', 'api.contentstack.io', path, {
-      'api_key': PROD_APIDOCS_STACK,
-      'authorization': PROD_APIDOCS_TOKEN,
+      'api_key': PROD_CSDOCS_STACK,
+      'authorization': PROD_CSDOCS_TOKEN,
     }, { entry: {}, _publish_details: {} });
 
     if (res.status !== 200) {
@@ -204,7 +244,7 @@ class GitToCmsImporter {
 
         if (entry.isDirectory()) {
           walk(fullPath, relPath);
-        } else if (entry.name.endsWith('.md')) {
+        } else if (entry.name.endsWith('.md') && entry.name !== 'README.md') {
           files.push({
             filePath: fullPath,
             relativePath: relPath,
@@ -215,8 +255,13 @@ class GitToCmsImporter {
       });
     };
 
-    walk(API_DOCS_PATH);
+    walk(CS_DOCS_PATH);
     return files;
+  }
+
+  extractTitlePrefix(title) {
+    const match = title.match(/^\[([^\]]+)\]/);
+    return match ? match[1] : null;
   }
 
   async processMarkdownFile(file) {
@@ -224,30 +269,36 @@ class GitToCmsImporter {
       const content = fs.readFileSync(file.filePath, 'utf-8');
       const { frontmatter, body } = this.parseFrontmatter(content);
 
-      // Determine content type from folder name
-      const folderName = path.basename(file.folder);
-      const contentTypeUid = FOLDER_TO_CONTENT_TYPE[folderName];
+      // Extract title prefix from frontmatter
+      const titlePrefix = this.extractTitlePrefix(frontmatter.title || '');
 
-      if (!contentTypeUid) {
-        console.log(`  ⚠️  Unknown content type for folder: ${folderName}`);
+      if (!titlePrefix) {
+        console.log(`  ⚠️  No title prefix found in ${file.fileName}. Expected format: [Prefix] - Title`);
         return;
       }
 
-      const entryData = this.buildEntryData(frontmatter, body);
+      // Map prefix to folder (for logging only, content type is always docs_article)
+      const folder = TITLE_PREFIX_TO_FOLDER[titlePrefix];
+      if (!folder) {
+        console.log(`  ⚠️  Unknown title prefix "${titlePrefix}" in ${file.fileName}`);
+        return;
+      }
+
+      const entryData = await this.buildEntryData(frontmatter, body);
 
       // Check if entry exists
-      const existing = await this.getExistingEntry(contentTypeUid, entryData.url);
+      const existing = await this.getExistingEntry(CONTENT_TYPE_UID, entryData.url);
 
       if (existing) {
         // Update existing entry (merge fields to prevent data loss)
-        const updated = await this.updateEntry(contentTypeUid, existing.uid, existing, entryData);
+        const updated = await this.updateEntry(CONTENT_TYPE_UID, existing.uid, existing, entryData);
         this.stats.updated++;
-        console.log(`  ✓ Updated (Draft): ${entryData.title}`);
+        console.log(`  ✓ Updated (Draft): [${folder}] ${entryData.title}`);
       } else {
         // Create new entry as DRAFT
-        const created = await this.createEntry(contentTypeUid, entryData);
+        const created = await this.createEntry(CONTENT_TYPE_UID, entryData);
         this.stats.created++;
-        console.log(`  ✓ Created (Draft): ${entryData.title}`);
+        console.log(`  ✓ Created (Draft): [${folder}] ${entryData.title}`);
       }
 
       this.stats.filesProcessed++;
@@ -278,9 +329,10 @@ class GitToCmsImporter {
   }
 
   async run() {
-    console.log('🚀 IMPORTING GIT MARKDOWN → PRODUCTION CMS (API-DOCS)');
-    console.log(`📍 Source: ${API_DOCS_PATH}`);
-    console.log(`📍 Target: ${PROD_APIDOCS_STACK}`);
+    console.log('🚀 IMPORTING GIT MARKDOWN → PRODUCTION CMS (CS-DOCS)');
+    console.log(`📍 Source: ${CS_DOCS_PATH}`);
+    console.log(`📍 Target: ${PROD_CSDOCS_STACK}`);
+    console.log(`📊 Mode: ${CREATE_DRAFT_ONLY ? 'PHASE 1 (Create [DRAFT] only)' : ADD_TO_RELEASE ? 'PHASE 2 (Add to Release)' : 'DEFAULT (Create [DRAFT])'}`);
     console.log('⏱️  Started:', new Date().toISOString());
 
     try {

@@ -1,0 +1,54 @@
+name: Promote API Docs from Sandbox to Prod (Staging env)
+
+on:
+  workflow_dispatch:
+    inputs:
+      entry_uids:
+        description: "Comma-separated list of entry UIDs to promote (leave empty for all published entries)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  promote-to-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/cs-sync/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
+      - name: Promote published entries from Sandbox to Prod
+        working-directory: tools/cs-sync
+        env:
+          STACK_TYPE: apidocs
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
+          PROD_APIDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_MANAGEMENT_TOKEN }}
+          ENTRY_UIDS: ${{ inputs.entry_uids }}
+        run: npm run sandbox-promote
+
+      - name: Promotion summary
+        if: success()
+        run: |
+          echo "✅ API Docs promotion workflow completed successfully"
+          echo ""
+          echo "📝 What happened:"
+          echo "  1. ✓ Published entries from Sandbox were cloned to Prod CMS"
+          echo "  2. ✓ Entries were published to the 'staging' environment only"
+          echo "  3. ✓ Production environment was NOT affected"
+          echo ""
+          echo "📌 Next steps:"
+          echo "  - Entries are now in Prod CMS and published to Staging"
+          echo "  - Review in Staging environment before promoting to Production"
+          echo "  - If changes were made in Prod, they will auto-sync back to Sandbox and GitHub (via cms-to-github workflow)"
