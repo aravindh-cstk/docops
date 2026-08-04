@@ -39,3 +39,4 @@ updated_at: 2025-07-02T10:34:07.701Z
 # Published Entries Query Fix - Tue Aug  4 11:55:36 IST 2026
 # Version Filter Test
 # All Content Types Migration
+# Workflow Update - All Content Types
