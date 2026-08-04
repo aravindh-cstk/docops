@@ -48,7 +48,7 @@ class ContentstackClient {
         method: options.method || 'GET',
         headers: {
           'api_key': this.apiKey,
-          ...(this.isCDA ? {} : { 'authorization': this.token }),
+          ...(this.isCDA ? { 'access_token': this.token } : { 'authorization': this.token }),
           'Content-Type': 'application/json',
         },
       };
