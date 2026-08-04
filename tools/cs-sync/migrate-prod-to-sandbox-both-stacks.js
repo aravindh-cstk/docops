@@ -24,18 +24,17 @@ class ContentstackClient {
     this.token = token;
 
     const regionMap = {
-      us: 'https://api.contentstack.io/v3',
-      eu: 'https://eu-api.contentstack.com/v3',
+      us: 'api.contentstack.io',
+      eu: 'eu-api.contentstack.com',
     };
-    this.baseUrl = regionMap[region] || regionMap.us;
+    this.hostname = regionMap[region] || regionMap.us;
   }
 
   request(path, options = {}) {
     return new Promise((resolve, reject) => {
-      const url = new URL(path, this.baseUrl);
       const opts = {
-        hostname: url.hostname,
-        path: url.pathname + url.search,
+        hostname: this.hostname,
+        path: path,
         method: options.method || 'GET',
         headers: {
           'api_key': this.apiKey,
@@ -70,7 +69,7 @@ class ContentstackClient {
 
     while (hasMore) {
       const query = `?limit=${limit}&skip=${skip}&include_count=true&query=${encodeURIComponent(JSON.stringify({ status: 'published' }))}`;
-      const res = await this.request(`/content_types/${contentTypeUid}/entries${query}`);
+      const res = await this.request(`/v3/content_types/${contentTypeUid}/entries${query}`);
 
       if (res.status !== 200) {
         throw new Error(`Failed to fetch entries: ${res.status} - ${JSON.stringify(res.data)}`);
@@ -89,7 +88,7 @@ class ContentstackClient {
   }
 
   async createEntry(contentTypeUid, payload) {
-    const res = await this.request(`/content_types/${contentTypeUid}/entries`, {
+    const res = await this.request(`/v3/content_types/${contentTypeUid}/entries`, {
       method: 'POST',
       body: { entry: payload },
     });
@@ -109,7 +108,7 @@ class ContentstackClient {
 
     while (hasMore) {
       const query = `?limit=${limit}&skip=${skip}`;
-      const res = await this.request(`/content_types/${contentTypeUid}/entries${query}`);
+      const res = await this.request(`/v3/content_types/${contentTypeUid}/entries${query}`);
 
       if (res.status !== 200) {
         throw new Error(`Failed to fetch entries: ${res.status}`);
@@ -128,7 +127,7 @@ class ContentstackClient {
   }
 
   async deleteEntry(contentTypeUid, uid) {
-    const res = await this.request(`/content_types/${contentTypeUid}/entries/${uid}`, {
+    const res = await this.request(`/v3/content_types/${contentTypeUid}/entries/${uid}`, {
       method: 'DELETE',
     });
     return res.status === 204 || res.status === 200;
@@ -207,7 +206,7 @@ async function migrate() {
     console.log(`\n🔄 MIGRATION: ${stack.name} PRODUCTION → SANDBOX\n`);
     console.log('═'.repeat(70));
 
-    console.log(`\n📖 Reading published entries from Production (Delivery Token)...`);
+    console.log(`\n📖 Reading published entries from Production (Management API - read-only)...`);
     const prodEntries = await prodClient.getPublishedEntries(stack.contentTypeUid);
 
     console.log(`\n✅ Production data loaded (${prodEntries.length} entries)`);
