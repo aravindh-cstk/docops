@@ -1,7 +1,7 @@
 ---
-title: "GraphQL Content Delivery API"
+title: "NewFlow Test GraphQL Content Delivery API"
 description: GraphQL is a flexible, customized API query language. Contentstack’s Content Delivery API gives you the power to query for exactly what you need—in one request.
-url: graphql-content-delivery-api
+url: newflow-test-graphql-content-delivery-api
 product: Contentstack
 doc_type: api-detail
 audience:
