@@ -1,0 +1,68 @@
+name: Exact Mirror Migration (Production→Sandbox)
+
+on:
+  workflow_dispatch:
+    inputs:
+      stack:
+        description: 'Which stack to migrate?'
+        required: true
+        default: 'both'
+        type: choice
+        options:
+          - csdocs
+          - apidocs
+          - both
+
+permissions:
+  contents: read
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/cs-sync/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
+      - name: Migrate CS-DOCS (Exact Mirror)
+        if: github.event.inputs.stack == 'csdocs' || github.event.inputs.stack == 'both'
+        working-directory: tools/cs-sync
+        env:
+          STACK_TYPE: csdocs
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN }}
+          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
+          CSDOCS_SANDBOX_STACK_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_STACK_MANAGEMENT_TOKEN }}
+        run: node migrate-all-content-types.js --stack csdocs
+
+      - name: Migrate API-DOCS (Exact Mirror)
+        if: github.event.inputs.stack == 'apidocs' || github.event.inputs.stack == 'both'
+        working-directory: tools/cs-sync
+        env:
+          STACK_TYPE: apidocs
+          PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
+          PROD_APIDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_MANAGEMENT_TOKEN }}
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_STACK_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_STACK_MANAGEMENT_TOKEN }}
+        run: node migrate-all-content-types.js --stack apidocs
+
+      - name: Migration Complete
+        run: |
+          echo "✅ EXACT MIRROR MIGRATION COMPLETE!"
+          echo ""
+          echo "Sandbox now contains ONLY entries published to PRODUCTION environment"
+          echo ""
+          echo "Filter applied:"
+          echo "  ✓ Only entries with publish_details.production set"
+          echo "  ✓ Ignores Draft entries"
+          echo "  ✓ Ignores Staging/Development-only published entries"
+          echo ""
+          echo "Check the logs above for migration summary"
