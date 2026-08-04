@@ -124,3 +124,17 @@ LIVE on production website
 - Multiple review gates prevent errors
 - Staging environment allows final verification
 - No surprises - writers explicitly publish to production
+
+## Exact Mirror Migration
+
+Use the **Exact Mirror Migration** workflow to ensure Sandbox is an exact mirror of Production:
+
+**Workflow:** `.github/workflows/exact-mirror-migration.yml`
+
+**What it does:**
+- Filters for ONLY entries published to PRODUCTION environment
+- Ignores Draft entries
+- Ignores entries published to Staging/Development only
+- Creates exact duplicate in Sandbox
+
+**Manual trigger:** Actions → Exact Mirror Migration → Run workflow → Select stack

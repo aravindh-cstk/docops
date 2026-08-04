@@ -1,8 +1,14 @@
 #!/usr/bin/env node
 
 /**
- * Migrate All Published Content Types: Production → Sandbox
- * Dynamically fetches ALL content types and migrates entries from each
+ * Migrate Published-to-Production Entries: Production → Sandbox
+ * STRICT MIRROR: Only entries published to PRODUCTION environment in Prod CMS
+ *
+ * Filters:
+ * - Only entries with publish_details.production set
+ * - Ignores Draft entries
+ * - Ignores entries published to Staging/Development only
+ * - Creates as DRAFT in Sandbox for writers to review
  *
  * Usage: node migrate-all-content-types.js --stack csdocs|apidocs
  *
@@ -81,6 +87,7 @@ class ContentstackClient {
     let skip = 0;
     let hasMore = true;
     let count = 0;
+    let filtered = 0;
 
     while (hasMore) {
       const res = await this.request(`/v3/content_types/${contentTypeUid}/entries?limit=${limit}&skip=${skip}&include_count=true`);
@@ -90,14 +97,29 @@ class ContentstackClient {
       }
 
       const page = res.data.entries || [];
-      entries.push(...page);
+
+      // STRICT FILTER: Only include entries published to PRODUCTION environment
+      for (const entry of page) {
+        if (entry.publish_details &&
+            entry.publish_details.production &&
+            Object.keys(entry.publish_details.production).length > 0) {
+          entries.push(entry);
+        }
+      }
+
       count += page.length;
+      filtered += page.filter(e =>
+        e.publish_details &&
+        e.publish_details.production &&
+        Object.keys(e.publish_details.production).length > 0
+      ).length;
+
       hasMore = page.length === limit;
       skip += limit;
-      process.stdout.write(`\r  📥 Fetched ${count} entries...`);
+      process.stdout.write(`\r  📥 Scanned ${count} entries (${filtered} published to Production)...`);
     }
 
-    console.log(`\n  ✅ Total: ${entries.length}`);
+    console.log(`\n  ✅ Total Published to Production: ${entries.length}`);
     return entries;
   }
 
