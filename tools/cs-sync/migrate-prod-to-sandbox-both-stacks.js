@@ -207,7 +207,7 @@ async function migrate() {
     console.log(`\n🔄 MIGRATION: ${stack.name} PRODUCTION → SANDBOX\n`);
     console.log('═'.repeat(70));
 
-    console.log(`\n📖 Reading published entries from Production (Delivery Token)...`);
+    console.log(`\n📖 Reading published entries from Production (Management API - read-only)...`);
     const prodEntries = await prodClient.getPublishedEntries(stack.contentTypeUid);
 
     console.log(`\n✅ Production data loaded (${prodEntries.length} entries)`);
