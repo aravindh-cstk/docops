@@ -2,6 +2,8 @@
 title: "[Security Management] - TEST Single Sign-On (SSO) & IdP Configuration"
 uid: blt38ea9a05583d6030
 url: "/administration/test-single-sign-on-(SSO)-Idp-configuration"
+marker: Security Management
+heading: Single Sign-On (SSO) & IdP Configuration
 contentstack:
   environment: production
   assets: []
