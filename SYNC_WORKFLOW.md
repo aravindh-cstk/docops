@@ -33,7 +33,7 @@ gh workflow run gh-to-sandbox-sync-apidocs.yml -R aravindh-cstk/docops
 
 ## Phase 2: Sandbox → Production CMS Staging (Automatic Hourly)
 
-**Trigger:** Automatic check every hour (and manual via `workflow_dispatch`)
+**Trigger:** Automatic check every 15 minutes (and manual via `workflow_dispatch`)
 
 **Workflow:**
 ```
@@ -48,7 +48,7 @@ Production CMS (Staging environment - Published)
 **What happens:**
 - Checks Sandbox for entries published to Development/Staging
 - Automatically promotes published entries to Production CMS
-- Entries appear in **Production CMS Staging environment only**
+- Entries appear in **Production CMS Staging environment only** (within 15 minutes)
 - No impact on live Production environment yet
 
 **Manual trigger available:**
@@ -93,9 +93,9 @@ LIVE on production website
 | **10:01 AM** | gh-to-sandbox-sync workflow runs | Content in Sandbox (Draft) |
 | **10:05 AM** | Writer reviews in Sandbox | Writer editing |
 | **10:30 AM** | Writer publishes in Sandbox (Staging env) | Published in Sandbox |
-| **11:00 AM** | Hourly auto-promotion runs | Content in Prod CMS Staging |
-| **11:15 AM** | Writer reviews in Prod CMS Staging | Final review |
-| **11:30 AM** | Writer manually publishes to Production | 🎉 LIVE! |
+| **10:45 AM** | Auto-promotion runs (every 15 min) | Content in Prod CMS Staging |
+| **10:50 AM** | Writer reviews in Prod CMS Staging | Final review |
+| **11:00 AM** | Writer manually publishes to Production | 🎉 LIVE! |
 
 ---
 

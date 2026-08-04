@@ -2,10 +2,10 @@ name: Auto-Promote CS Docs (Sandbox→Prod Daily)
 
 on:
   schedule:
-    # Run every hour to promote published Sandbox entries to Prod
+    # Run every 15 minutes to promote published Sandbox entries to Prod
     # When writers publish entries in Sandbox (Development/Staging),
-    # they automatically sync to Prod CMS within 1 hour
-    - cron: '0 * * * *'
+    # they automatically sync to Prod CMS within 15 minutes
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -40,11 +40,11 @@ jobs:
       - name: Promotion summary
         if: success()
         run: |
-          echo "✅ Auto-promotion check completed (runs hourly)"
+          echo "✅ Auto-promotion check completed (runs every 15 minutes)"
           echo ""
           echo "📝 What happened:"
           echo "  1. ✓ Checked Sandbox for published entries (Development/Staging environments)"
           echo "  2. ✓ Published entries automatically promoted to Prod CMS (staging environment)"
           echo "  3. ✓ Entries are now ready in Prod staging for final promotion to Production"
           echo ""
-          echo "⏱️  Promotion happens automatically every hour when entries are published in Sandbox"
+          echo "⏱️  Promotion happens automatically every 15 minutes when entries are published in Sandbox"
