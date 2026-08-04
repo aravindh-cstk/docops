@@ -77,10 +77,9 @@ class ContentstackClient {
       }
 
       const page = res.data.entries || [];
-      // Filter for published entries: _version > 0 indicates published state
-      const published = page.filter(entry => entry._version && entry._version > 0);
-      entries.push(...published);
-      count += published.length;
+      // Include all entries (not filtering by _version) to match what's published in Production
+      entries.push(...page);
+      count += page.length;
       hasMore = page.length === limit;
       skip += limit;
       process.stdout.write(`\r📥 Fetched ${count} published entries...`);
