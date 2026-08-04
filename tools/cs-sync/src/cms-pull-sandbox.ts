@@ -118,7 +118,7 @@ async function main() {
       changes.push({
         filePath: path.relative(repoRoot, fullPath),
         url: url,
-        updatedByName: entry.updated_by?.name || "Unknown",
+        updatedByName: (entry.updated_by as any)?.name || "Unknown",
         updatedAt: entry.updated_at || new Date().toISOString(),
       });
 

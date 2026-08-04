@@ -68,15 +68,8 @@ export class ProdPromoteClient {
    * Does NOT modify existing Prod entries.
    */
   async cloneEntryToProd(sandboxEntry: ContentstackEntry): Promise<ContentstackEntry> {
-    const clonedEntry = { ...sandboxEntry };
-
-    // Remove Sandbox-specific fields
-    delete clonedEntry.uid;
-    delete clonedEntry.created_at;
-    delete clonedEntry.updated_at;
-    delete clonedEntry.created_by;
-    delete clonedEntry._version;
-    delete clonedEntry.publish_details;
+    // Clone without Sandbox-specific fields
+    const { uid, created_at, updated_at, created_by, _version, publish_details, ...clonedEntry } = sandboxEntry as any;
 
     const body = JSON.stringify({ entry: clonedEntry });
     const path = this.entriesPath();
