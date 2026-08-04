@@ -2,41 +2,32 @@
 
 /**
  * Migrate Published Content: Production → Sandbox (Both Stacks)
- * READ: Production via Delivery Token (published entries only) — READ-ONLY
- * WRITE: Sandbox via Management Token
+ * READ: Production via Management API (read-only) — NO MODIFICATIONS
+ * WRITE: Sandbox via Management API
  *
  * Supports: CS-Docs (docs_article) and API Docs (api_detail_page)
  *
  * Usage: node migrate-prod-to-sandbox-both-stacks.js \
- *   --stack csdocs|apidocs \
- *   --prod-key <api-key> --prod-delivery <delivery-token> \
- *   --sandbox-key <api-key> --sandbox-token <mgmt-token>
+ *   --stack csdocs|apidocs
+ *
+ * Environment variables required:
+ *   PROD_STACK_API_KEY, PROD_STACK_MANAGEMENT_TOKEN (read-only)
+ *   SANDBOX_STACK_API_KEY, SANDBOX_STACK_MANAGEMENT_TOKEN
  */
 
 import https from 'https';
 import { URL } from 'url';
 
 class ContentstackClient {
-  constructor(apiKey, token, isCDA = false, region = 'us') {
+  constructor(apiKey, token, region = 'us') {
     this.apiKey = apiKey;
     this.token = token;
-    this.isCDA = isCDA;
 
-    let baseUrl;
-    if (isCDA) {
-      const regionMap = {
-        us: 'https://cdn.contentstack.io/v3',
-        eu: 'https://eu-cdn.contentstack.com/v3',
-      };
-      baseUrl = regionMap[region] || regionMap.us;
-    } else {
-      const regionMap = {
-        us: 'https://api.contentstack.io/v3',
-        eu: 'https://eu-api.contentstack.com/v3',
-      };
-      baseUrl = regionMap[region] || regionMap.us;
-    }
-    this.baseUrl = baseUrl;
+    const regionMap = {
+      us: 'https://api.contentstack.io/v3',
+      eu: 'https://eu-api.contentstack.com/v3',
+    };
+    this.baseUrl = regionMap[region] || regionMap.us;
   }
 
   request(path, options = {}) {
@@ -48,7 +39,7 @@ class ContentstackClient {
         method: options.method || 'GET',
         headers: {
           'api_key': this.apiKey,
-          ...(this.isCDA ? {} : { 'authorization': this.token }),
+          'authorization': this.token,
           'Content-Type': 'application/json',
         },
       };
@@ -78,7 +69,7 @@ class ContentstackClient {
     let count = 0;
 
     while (hasMore) {
-      const query = `?limit=${limit}&skip=${skip}&include_count=true`;
+      const query = `?limit=${limit}&skip=${skip}&include_count=true&query=${encodeURIComponent(JSON.stringify({ status: 'published' }))}`;
       const res = await this.request(`/content_types/${contentTypeUid}/entries${query}`);
 
       if (res.status !== 200) {
@@ -183,7 +174,7 @@ async function migrate() {
   let stackType = process.env.STACK_TYPE || 'csdocs';
   const config = {
     prodKey: process.env.PROD_STACK_API_KEY,
-    prodDelivery: process.env.PROD_STACK_DELIVERY_TOKEN,
+    prodToken: process.env.PROD_STACK_MANAGEMENT_TOKEN,
     sandboxKey: process.env.SANDBOX_STACK_API_KEY,
     sandboxToken: process.env.SANDBOX_STACK_MANAGEMENT_TOKEN,
   };
@@ -191,7 +182,7 @@ async function migrate() {
   for (let i = 0; i < args.length; i += 2) {
     if (args[i] === '--stack') stackType = args[i + 1];
     if (args[i] === '--prod-key') config.prodKey = args[i + 1];
-    if (args[i] === '--prod-delivery') config.prodDelivery = args[i + 1];
+    if (args[i] === '--prod-token') config.prodToken = args[i + 1];
     if (args[i] === '--sandbox-key') config.sandboxKey = args[i + 1];
     if (args[i] === '--sandbox-token') config.sandboxToken = args[i + 1];
   }
@@ -202,14 +193,16 @@ async function migrate() {
     process.exit(1);
   }
 
-  if (!config.prodKey || !config.prodDelivery || !config.sandboxKey || !config.sandboxToken) {
-    console.error('❌ Missing credentials');
+  if (!config.prodKey || !config.prodToken || !config.sandboxKey || !config.sandboxToken) {
+    console.error('❌ Missing credentials. Required environment variables:');
+    console.error('   PROD_STACK_API_KEY, PROD_STACK_MANAGEMENT_TOKEN (read-only)');
+    console.error('   SANDBOX_STACK_API_KEY, SANDBOX_STACK_MANAGEMENT_TOKEN');
     process.exit(1);
   }
 
   try {
-    const prodClient = new ContentstackClient(config.prodKey, config.prodDelivery, true);
-    const sandboxClient = new ContentstackClient(config.sandboxKey, config.sandboxToken, false);
+    const prodClient = new ContentstackClient(config.prodKey, config.prodToken);
+    const sandboxClient = new ContentstackClient(config.sandboxKey, config.sandboxToken);
 
     console.log(`\n🔄 MIGRATION: ${stack.name} PRODUCTION → SANDBOX\n`);
     console.log('═'.repeat(70));
