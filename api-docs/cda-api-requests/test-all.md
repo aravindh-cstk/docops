@@ -36,3 +36,4 @@ updated_at: 2025-07-02T10:34:07.701Z
 - **environment** (optional)
   <p>Pass the environment UID as the value of this query parameter to retrieve the entries published in that environment.</p>
 # V3 API Migration Test
+# Published Entries Query Fix - Tue Aug  4 11:55:36 IST 2026

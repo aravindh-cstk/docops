@@ -68,7 +68,8 @@ class ContentstackClient {
     let count = 0;
 
     while (hasMore) {
-      const query = `?limit=${limit}&skip=${skip}&include_count=true&query=${encodeURIComponent(JSON.stringify({ status: 'published' }))}`;
+      // Management API doesn't filter by "published" status - fetch all and filter by _version > 0
+      const query = `?limit=${limit}&skip=${skip}&include_count=true`;
       const res = await this.request(`/v3/content_types/${contentTypeUid}/entries${query}`);
 
       if (res.status !== 200) {
@@ -76,8 +77,10 @@ class ContentstackClient {
       }
 
       const page = res.data.entries || [];
-      entries.push(...page);
-      count += page.length;
+      // Filter for published entries: _version > 0 indicates published state
+      const published = page.filter(entry => entry._version && entry._version > 0);
+      entries.push(...published);
+      count += published.length;
       hasMore = page.length === limit;
       skip += limit;
       process.stdout.write(`\r📥 Fetched ${count} published entries...`);
@@ -206,7 +209,7 @@ async function migrate() {
     console.log(`\n🔄 MIGRATION: ${stack.name} PRODUCTION → SANDBOX\n`);
     console.log('═'.repeat(70));
 
-    console.log(`\n📖 Reading published entries from Production (Delivery Token)...`);
+    console.log(`\n📖 Reading published entries from Production (Management API - read-only)...`);
     const prodEntries = await prodClient.getPublishedEntries(stack.contentTypeUid);
 
     console.log(`\n✅ Production data loaded (${prodEntries.length} entries)`);
