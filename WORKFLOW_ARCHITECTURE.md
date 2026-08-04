@@ -3,6 +3,8 @@
 ## 🎯 Core Principle
 **NEVER create entries directly on PRODUCTION stacks.** All content creation and testing happens in SANDBOX first, then promoted to PROD/Staging only after writer review and approval.
 
+> **Note:** These workflows support both **API Docs** (`apidocs`) and **CS Docs** (`csdocs`) stacks. The architecture and flow are identical; only the stack names change. Examples below show API Docs workflows, but equivalent workflows exist for CS Docs with the same naming pattern (e.g., `gh-to-sandbox-sync-apidocs.yml` → `gh-to-sandbox-sync-csdocs.yml`).
+
 ---
 
 ## 📋 Workflow Flows
@@ -299,4 +301,34 @@ A: GitHub → Sandbox: Instant (on merge). Sandbox → Prod: On-demand (manual w
 
 **Q: Can I preview before promoting?**
 A: Yes. Edit and publish in Sandbox, preview in Sandbox CMS. After promoting, preview in Staging environment before final Production push.
+
+---
+
+## 🔄 CS-Docs Stack Workflows
+
+The same sandbox-first architecture applies to the **CS-Docs** stack. Use these workflows instead of the API Docs ones:
+
+| Flow | API Docs Workflow | CS-Docs Workflow |
+|------|-------------------|------------------|
+| **GitHub → Sandbox** | `gh-to-sandbox-sync-apidocs.yml` | `gh-to-sandbox-sync-csdocs.yml` |
+| **Sandbox → Prod** | `sandbox-to-prod-promote-apidocs.yml` | `sandbox-to-prod-promote-csdocs.yml` |
+| **Prod → GitHub** | `cms-to-github-apidocs.yml` | `cms-to-github-csdocs.yml` |
+
+All workflows use environment variables prefixed with the stack type (`APIDOCS_*` or `CSDOCS_*`). The secret names follow the same pattern:
+- `CSDOCS_SANDBOX_STACK_API_KEY`
+- `CSDOCS_SANDBOX_MANAGEMENT_TOKEN`
+- `PROD_CSDOCS_STACK_API_KEY`
+- `PROD_CSDOCS_STACK_MANAGEMENT_TOKEN`
+
+To manually trigger CS-Docs workflows:
+
+```bash
+# Sync CS-Docs from Git to Sandbox
+gh workflow run gh-to-sandbox-sync-csdocs.yml \
+  --repo aravindh-cstk/docops
+
+# Promote published entries from Sandbox to Prod
+gh workflow run sandbox-to-prod-promote-csdocs.yml \
+  --repo aravindh-cstk/docops
+```
 
