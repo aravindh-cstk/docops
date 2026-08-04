@@ -1,0 +1,46 @@
+name: Sync GitHub to Sandbox (CS Docs)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cs-docs/**'
+      - '.github/workflows/gh-to-sandbox-sync-csdocs.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  sync-to-sandbox:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/cs-sync/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
+      - name: Sync CS Docs from Git to Sandbox
+        working-directory: tools/cs-sync
+        env:
+          STACK_TYPE: csdocs
+          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
+          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+        run: npm run git-to-sandbox
+
+      - name: Sync summary
+        if: success()
+        run: |
+          echo "✅ GitHub to Sandbox sync completed"
+          echo ""
+          echo "📝 What happened:"
+          echo "  - CS Docs changes from main branch synced to Sandbox"
+          echo "  - Writers can now review in Sandbox CMS"
+          echo "  - After review and publishing, entries will be promoted to Prod"
