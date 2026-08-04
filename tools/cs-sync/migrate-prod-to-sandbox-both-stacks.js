@@ -42,13 +42,19 @@ class ContentstackClient {
   request(path, options = {}) {
     return new Promise((resolve, reject) => {
       const url = new URL(path, this.baseUrl);
+      // For CDA, append token as query parameter
+      let finalPath = url.pathname + url.search;
+      if (this.isCDA) {
+        const separator = url.search ? '&' : '?';
+        finalPath += `${separator}access_token=${this.token}`;
+      }
       const opts = {
         hostname: url.hostname,
-        path: url.pathname + url.search,
+        path: finalPath,
         method: options.method || 'GET',
         headers: {
           'api_key': this.apiKey,
-          ...(this.isCDA ? { 'access_token': this.token } : { 'authorization': this.token }),
+          ...(this.isCDA ? {} : { 'authorization': this.token }),
           'Content-Type': 'application/json',
         },
       };
