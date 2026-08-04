@@ -1,0 +1,199 @@
+name: Promote API Docs from Sandbox to Prod (Staging env)
+
+on:
+  workflow_dispatch:
+    inputs:
+      entry_uids:
+        description: "Comma-separated list of entry UIDs to promote (leave empty for all published entries)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  promote-to-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/cs-sync/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
+      - name: Promote published entries from Sandbox to Prod
+        working-directory: tools/cs-sync
+        env:
+          SANDBOX_APIDOCS_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          SANDBOX_APIDOCS_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
+          PROD_APIDOCS_MANAGEMENT_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_MANAGEMENT_TOKEN }}
+          ENTRY_UIDS: ${{ inputs.entry_uids }}
+          PUBLISH_ENV: staging
+        run: |
+          cat > promote.js << 'EOF'
+          const https = require('https');
+          const fs = require('fs');
+
+          function request(method, hostname, path, headers, body = null) {
+            return new Promise((resolve, reject) => {
+              const opts = { hostname, path, method, headers };
+              const req = https.request(opts, (res) => {
+                let data = '';
+                res.on('data', chunk => data += chunk);
+                res.on('end', () => {
+                  try {
+                    const json = JSON.parse(data || '{}');
+                    resolve({ status: res.statusCode, data: json });
+                  } catch (e) {
+                    resolve({ status: res.statusCode, data });
+                  }
+                });
+              });
+              req.on('error', reject);
+              if (body) req.write(JSON.stringify(body));
+              req.end();
+            });
+          }
+
+          async function main() {
+            const sandboxKey = process.env.SANDBOX_APIDOCS_STACK_API_KEY;
+            const sandboxToken = process.env.SANDBOX_APIDOCS_MANAGEMENT_TOKEN;
+            const prodKey = process.env.PROD_APIDOCS_STACK_API_KEY;
+            const prodToken = process.env.PROD_APIDOCS_MANAGEMENT_TOKEN;
+            const publishEnv = process.env.PUBLISH_ENV || 'staging';
+            const entryUidsInput = process.env.ENTRY_UIDS;
+
+            console.log('🔄 Promoting API Docs from Sandbox to Prod (Staging env)\n');
+
+            let entryUids = [];
+            if (entryUidsInput && entryUidsInput.trim()) {
+              entryUids = entryUidsInput.split(',').map(s => s.trim()).filter(s => s);
+              console.log(`📝 Specific entries to promote: ${entryUids.join(', ')}\n`);
+            } else {
+              console.log('📝 Will promote all published entries from Sandbox\n');
+            }
+
+            try {
+              // Get published entries from Sandbox
+              const listPath = '/v3/content_types/api_detail_page/entries?query={"status":"published"}';
+              const sandboxRes = await request('GET', 'api.contentstack.io', listPath, {
+                'api_key': sandboxKey,
+                'authorization': sandboxToken,
+              });
+
+              if (sandboxRes.status !== 200) {
+                console.error('❌ Failed to fetch Sandbox entries:', sandboxRes.status);
+                process.exit(1);
+              }
+
+              let entriesToPromote = sandboxRes.data.entries || [];
+
+              if (entryUids.length > 0) {
+                entriesToPromote = entriesToPromote.filter(e => entryUids.includes(e.uid));
+              }
+
+              if (entriesToPromote.length === 0) {
+                console.log('✅ No entries to promote');
+                return;
+              }
+
+              console.log(`\n📋 Found ${entriesToPromote.length} entries to promote:\n`);
+
+              let promoted = 0;
+              let failed = 0;
+
+              for (const entry of entriesToPromote) {
+                try {
+                  console.log(`  🔹 ${entry.title} (${entry.uid})`);
+
+                  // Clone entry to Prod
+                  const prodCreatePath = '/v3/content_types/api_detail_page/entries';
+                  const clonedEntry = { ...entry };
+                  delete clonedEntry.uid;
+                  delete clonedEntry.created_at;
+                  delete clonedEntry.updated_at;
+                  delete clonedEntry.created_by;
+                  delete clonedEntry._version;
+                  delete clonedEntry.publish_details;
+
+                  const prodRes = await request('POST', 'api.contentstack.io', prodCreatePath, {
+                    'api_key': prodKey,
+                    'authorization': prodToken,
+                    'Content-Type': 'application/json',
+                  }, { entry: clonedEntry });
+
+                  if (prodRes.status !== 201 && prodRes.status !== 200) {
+                    console.log(`     ❌ Failed to create in Prod: ${prodRes.status}`);
+                    failed++;
+                    continue;
+                  }
+
+                  const prodEntry = prodRes.data.entry;
+                  console.log(`     ✓ Created in Prod (UID: ${prodEntry.uid})`);
+
+                  // Publish to Staging environment
+                  const publishPath = `/v3/content_types/api_detail_page/entries/${prodEntry.uid}/publish`;
+                  const publishRes = await request('POST', 'api.contentstack.io', publishPath, {
+                    'api_key': prodKey,
+                    'authorization': prodToken,
+                    'Content-Type': 'application/json',
+                  }, {
+                    entry: {},
+                    _publish_details: {
+                      environments: [publishEnv],
+                      locales: ['en-us'],
+                    },
+                  });
+
+                  if (publishRes.status !== 200) {
+                    console.log(`     ⚠️  Created but publish to ${publishEnv} failed: ${publishRes.status}`);
+                    failed++;
+                  } else {
+                    console.log(`     ✓ Published to ${publishEnv} environment`);
+                    promoted++;
+                  }
+                } catch (e) {
+                  console.log(`     ❌ Error: ${e.message}`);
+                  failed++;
+                }
+              }
+
+              console.log(`\n📊 Summary:`);
+              console.log(`   ✅ Promoted: ${promoted}`);
+              console.log(`   ❌ Failed: ${failed}`);
+              console.log(`   Total: ${entriesToPromote.length}\n`);
+
+              if (failed > 0) {
+                process.exit(1);
+              }
+            } catch (e) {
+              console.error('❌ Error:', e.message);
+              process.exit(1);
+            }
+          }
+
+          main();
+          EOF
+          node promote.js
+
+      - name: Promotion summary
+        if: success()
+        run: |
+          echo "✅ API Docs promotion workflow completed successfully"
+          echo ""
+          echo "📝 What happened:"
+          echo "  1. ✓ Published entries from Sandbox were cloned to Prod CMS"
+          echo "  2. ✓ Entries were published to the 'staging' environment only"
+          echo "  3. ✓ Production environment was NOT affected"
+          echo ""
+          echo "📌 Next steps:"
+          echo "  - Entries are now in Prod CMS and published to Staging"
+          echo "  - Review in Staging environment before promoting to Production"
+          echo "  - If changes were made in Prod, they will auto-sync back to Sandbox and GitHub (via cms-to-github workflow)"
