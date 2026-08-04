@@ -7,6 +7,7 @@ on:
     paths:
       - 'api-docs/**'
       - '.github/workflows/gh-to-sandbox-sync-apidocs.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read

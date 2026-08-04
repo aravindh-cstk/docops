@@ -7,6 +7,7 @@ on:
     paths:
       - 'cs-docs/**'
       - '.github/workflows/gh-to-sandbox-sync-csdocs.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
