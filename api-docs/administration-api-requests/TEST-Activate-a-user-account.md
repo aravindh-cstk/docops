@@ -1,7 +1,7 @@
 ---
-title: "Activate a user account"
+title: "TEST Activate a user account"
 description: /user/activate/{user_activation_token}
-url: /activate-a-user-account
+url: /test-activate-a-user-account
 product: Contentstack
 doc_type: api-request
 created_at: 2026-04-07T12:54:53.127Z
