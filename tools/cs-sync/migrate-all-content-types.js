@@ -86,37 +86,24 @@ class ContentstackClient {
     const entries = [];
     let skip = 0;
     let hasMore = true;
-    let count = 0;
-    let filtered = 0;
 
     while (hasMore) {
-      const res = await this.request(`/v3/content_types/${contentTypeUid}/entries?limit=${limit}&skip=${skip}&include_count=true`);
+      // Use Contentstack query API to filter for entries published to production environment
+      const query = encodeURIComponent(JSON.stringify({
+        "publish_details.production": { "$exists": true }
+      }));
+      const res = await this.request(`/v3/content_types/${contentTypeUid}/entries?query=${query}&limit=${limit}&skip=${skip}&include_count=true`);
 
       if (res.status !== 200) {
         throw new Error(`Failed to fetch entries for ${contentTypeUid}: ${res.status}`);
       }
 
       const page = res.data.entries || [];
-
-      // STRICT FILTER: Only include entries published to PRODUCTION environment
-      for (const entry of page) {
-        if (entry.publish_details &&
-            entry.publish_details.production &&
-            Object.keys(entry.publish_details.production).length > 0) {
-          entries.push(entry);
-        }
-      }
-
-      count += page.length;
-      filtered += page.filter(e =>
-        e.publish_details &&
-        e.publish_details.production &&
-        Object.keys(e.publish_details.production).length > 0
-      ).length;
+      entries.push(...page);
 
       hasMore = page.length === limit;
       skip += limit;
-      process.stdout.write(`\r  📥 Scanned ${count} entries (${filtered} published to Production)...`);
+      process.stdout.write(`\r  📥 Fetched ${entries.length} entries published to Production...`);
     }
 
     console.log(`\n  ✅ Total Published to Production: ${entries.length}`);
