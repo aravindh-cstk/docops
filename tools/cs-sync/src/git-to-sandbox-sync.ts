@@ -99,10 +99,11 @@ async function main() {
           title: frontmatter.title,
           url: frontmatter.url,
           body: body.trim(),
-          // Add other fields from frontmatter
+          // Add other fields from frontmatter, excluding CMS metadata
           ...Object.entries(frontmatter).reduce(
             (acc, [key, value]) => {
-              if (!["title", "url"].includes(key) && value) {
+              // Skip CMS metadata fields that shouldn't be synced to Sandbox
+              if (!["title", "url", "uid", "contentstack"].includes(key) && value) {
                 acc[key] = value;
               }
               return acc;
