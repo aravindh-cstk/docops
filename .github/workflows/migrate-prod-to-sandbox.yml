@@ -1,10 +1,10 @@
-name: Migrate Production to Sandbox (Published Entries)
+name: Migrate Production to Sandbox (All Content Types)
 
 on:
   workflow_dispatch:
     inputs:
       stack:
-        description: 'Stack to migrate'
+        description: 'Stack to migrate (all content types)'
         required: true
         default: 'both'
         type: choice
@@ -36,7 +36,7 @@ jobs:
           SANDBOX_STACK_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
         run: |
           echo "📚 Migrating CS-Docs: Production → Sandbox (read-only)"
-          node migrate-prod-to-sandbox-both-stacks.js --stack csdocs
+          node migrate-all-content-types.js --stack csdocs
 
       - name: Migrate API Docs (if selected)
         if: inputs.stack == 'apidocs' || inputs.stack == 'both'
@@ -55,6 +55,6 @@ jobs:
           echo ""
           echo "✅ Migration Complete!"
           echo ""
-          echo "📊 Expected counts:"
-          echo "  - CS-Docs: 7,401 published entries"
-          echo "  - API Docs: 837 published entries"
+          echo "📊 Expected counts (all content types):"
+          echo "  - CS-Docs: ~7,400 published entries"
+          echo "  - API Docs: ~837 published entries"
