@@ -40,3 +40,5 @@ updated_at: 2025-07-02T10:34:07.701Z
 # Version Filter Test
 # All Content Types Migration
 # Workflow Update - All Content Types
+
+# Sandbox Cleanup - Remove Unpublished Entries
