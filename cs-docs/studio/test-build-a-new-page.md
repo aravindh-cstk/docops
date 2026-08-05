@@ -16,7 +16,7 @@ last_updated: 2026-03-25
 
 # [Studio] - Build a New Page
 
-This page explains how to build new pages in Contentstack Studio using compositions (freeform and linked), including how to render compositions in a front-end project (CSR React example) and how to preview linked composition data. It is intended for developers and teams setting up Studio page rendering and templates, and should be used when creating new pages or reusable templates in Studio.
+This page explains how to build new pages in Contentstack Studio using compositions (freeform and linked), including how to render compositions in a frontend project (CSR React example) and how to preview linked composition data. It is intended for developers and teams setting up Studio page rendering and templates, and should be used when creating new pages or reusable templates in Studio.
 
 ### Item 1
 
@@ -38,7 +38,7 @@ This article demonstrates how to create full-length pages using both free form a
 
 Before you begin building a new page, make sure your environment is configured correctly.
 
-- Ensure you have set up your **Studio project** and connected it to your **front-end project (CSR or SSR)**.
+- Ensure you have configured your **Studio project** and connected it to your **frontend project (CSR or SSR)**.
 - You have **Admin** or **Developer** permissions to modify composition structure.
 
 **Tip**: Ensure your Figma Plugin integration is active if you plan to sync and preview designs.
@@ -55,7 +55,9 @@ Compositions define the structure and layout of a page in Studio. This section e
 - Select **Composition Type**: select **Freeform**.
 - Enter a **Name** (e.g., “About Us” or “Product Overview”).
 - Define the **URL Path** (e.g., `/about-us`). This path not only opens the page in the [composition editor](./composition-editor-overview.md) but also serves as the live URL for the About Us page.
-- Click **Create**.![4. Create a Freeform Composition.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt64b3ac6b46a13270/6925a1e47be89702113c980f/4._Create_a_Freeform_Composition.gif)
+- Click **Create**.
+
+  ![4. Create a Freeform Composition.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt64b3ac6b46a13270/6925a1e47be89702113c980f/4._Create_a_Freeform_Composition.gif)
 
 In this use case, the **About Us** page requires a freeform composition, which has been created accordingly.
 
@@ -79,7 +81,7 @@ export function AboutUs() {
   if (error) {
     return (
 
-## Something went wrong
+## Something Went Wrong
 
           We couldn't load this page right now.
 
@@ -153,7 +155,7 @@ export function CompositionRenderer() {
   if (error) {
     return (
 
-## Something went wrong
+## Something Went Wrong
 
           We couldn't load this page right now.
 
@@ -186,7 +188,7 @@ function App() {
 }
 ```
 
-After completing this setup, create new compositions in the Studio app. They will render in the Studio canvas based on the route, no additional code changes required.
+After completing this setup, create new compositions in the Studio app. They render in the Studio canvas based on the route, with no additional code changes required.
 
 **Additional Resource**: Refer to the [Create Editable Page Sections](./create-editable-page-sections.md) use-case for examples of how to design compositions in the Studio canvas.
 
@@ -194,17 +196,19 @@ After completing this setup, create new compositions in the Studio app. They wil
 
 Instead of coding the UI for each individual blog page, a single template is created and reused. Based on the URL, the corresponding blog data is rendered dynamically. Studio follows the same approach, create a template once, link it to a content type, and publish it to see the correct data populate in real time.
 
-In this example, the goal is to set up blog pages using a linked composition.
+In this example, the goal is to configure blog pages using a linked composition.
 
 - Click **New Composition**.
 - For **Composition Type**, select **Linked Composition**.
 - Enter a **Name** (e.g., Blog).
 - Define the **URL Slug** (e.g., `/blogs/*`). This slug matches wildcard routes in production to load the correct composition.
-- Click **Create**.![Blog Linked Composition.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteca7adf95aa72a44/6925d2b6179d43ad6e32e319/Blog_Linked_Composition.gif)
+- Click **Create**.
+
+  ![Blog Linked Composition.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteca7adf95aa72a44/6925d2b6179d43ad6e32e319/Blog_Linked_Composition.gif)
 
 Once the blog composition is created and configured, it can be reused across multiple blog pages. This approach streamlines development, ensures consistency in layout, and enables dynamic rendering of content based on URL patterns.
 
-## Linking Data from the Preview Entry
+## Linking Data From the Preview Entry
 
 When a linked composition is created, the **Preview Entry** section becomes available in the **Page Data** tab. This section allows connection to preview-specific content, enabling dynamic rendering in Studio without affecting live data.
 
@@ -216,9 +220,9 @@ Aside from the data binding functionality, the overall process remains consisten
 
 Studio enables teams to visually compose, preview, and manage modular digital experiences. With reusable components, design tokens, and editable sections, it enhances collaboration and promotes design consistency across projects.
 
-## Common questions
+## Common Questions
 
-### Do I need a new front-end route for every new Studio composition?
+### Do I need a new frontend route for every new Studio composition?
 If you use a wildcard route with a generic renderer (for example, `CompositionRenderer` that fetches by `url`), new compositions can render based on the route with no additional code changes required.
 
 ### What is the difference between Freeform and Linked Composition?
