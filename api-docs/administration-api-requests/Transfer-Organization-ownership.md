@@ -1,38 +1,34 @@
 ---
 title: "Transfer Organization ownership"
-description: POST /organizations/{organization_uid}/transfer-ownership
-url: administration-api-requests/ownership
+description: /organizations/{organization_uid}/transfer-ownership
+url: /transfer-organization-ownership
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:16.088Z
+updated_at: 2026-04-07T12:55:16.088Z
 ---
 
 # Transfer Organization ownership
 
-**POST** `/organizations/{organization_uid}/transfer-ownership`
+<p>The <span data-type="inlineCode">Transfer organization ownership</span> call transfers the ownership of an Organization to another user. When the call is executed, an email invitation for accepting the ownership of a particular Organization is sent to the specified user.
+</p><p>Once the specified user accepts the invitation by clicking on the link provided in the email, the ownership of the Organization gets transferred to the new user. Subsequently, the previous owner will no longer have any permission on the Organization.
+</p><p>When executing the API call, provide the Organization UID.</p>
 
-The Transfer organization ownership call transfers the ownership of an Organization to another user. When the call is executed, an email invitation for accepting the ownership of a particular Organization is sent to the specified user.
+**API Endpoint**: `/organizations/{organization_uid}/transfer-ownership`
 
-Once the specified user accepts the invitation by clicking on the link provided in the email, the ownership of the Organization gets transferred to the new user. Subsequently, the previous owner will no longer have any permission on the Organization.
-
-When executing the API call, provide the Organization UID.
+**Method**: `POST`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of the organization that you want to transfer to other user.
-  Default: `enter_the_organization_uid`
+  <p>Enter the UID of the organization that you want to transfer to other user.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter the authtoken of the user.
-  Default: `your_authtoken`
+  <p>Enter the authtoken of the user.</p>
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -40,7 +36,7 @@ When executing the API call, provide the Organization UID.
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

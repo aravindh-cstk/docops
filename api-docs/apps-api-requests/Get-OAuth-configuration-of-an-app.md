@@ -1,43 +1,35 @@
 ---
 title: "Get OAuth configuration of an app"
-description: GET /apps/{app_uid}/oauth
-url: apps-api-requests/app
+description: /apps/{app_uid}/oauth
+url: /get-oauth-configuration-of-an-app
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:01.789Z
+updated_at: 2023-01-05T14:09:01.789Z
 ---
 
 # Get OAuth configuration of an app
 
-**GET** `/apps/{app_uid}/oauth`
+<p>The <strong>Get OAuth configuration of an app</strong> request is used to retrieve the OAuth details of an app.</p>
+<p><strong>ACL: </strong></p><ul><li>Organization Admins</li><li>Organization Owners</li><li>Stack Owners</li><li>Stack Admins</li></ul>
 
-The **Get OAuth configuration of an app** request is used to retrieve the OAuth details of an app.
+**API Endpoint**: `/apps/{app_uid}/oauth`
 
-**ACL:**
-
-- Organization Admins
-- Organization Owners
-- Stack Owners
-- Stack Admins
+**Method**: `GET`
 
 ## URL Parameters
 
 - **app_uid** (required)
-  The UID of the app to be updated.
+  <p>The UID of the app to be updated.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your management token.
-  Default: `your_authtoken`
+  <p>Enter your management token.</p>
 - **organization_uid** (required)
-  The UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

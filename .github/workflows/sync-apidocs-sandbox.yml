@@ -1,9 +1,15 @@
 name: Sync APIDocs → Sandbox
 
 on:
-  schedule:
-    # Runs daily at 02:00 UTC
-    - cron: "0 2 * * *"
+  # PAUSED - New production-import-on-merge.yml handles this flow
+  # push:
+  #   branches: [main]
+  #   paths:
+  #     - "api-docs/**/*"
+  #     - "tools/migration/**"
+  # schedule:
+  #   # Runs daily at 02:00 UTC
+  #   - cron: "0 2 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

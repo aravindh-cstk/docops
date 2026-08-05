@@ -1,40 +1,35 @@
 ---
 title: "Get app details"
-description: GET /apps/{app_uid}
-url: apps-api-requests/details
+description: /apps/{app_uid}
+url: /get-app-details
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:08:59.856Z
+updated_at: 2023-01-05T14:08:59.856Z
 ---
 
 # Get app details
 
-**GET** `/apps/{app_uid}`
+<p>The <strong>Get app details</strong> request is used to retrieve details of a particular app using the app UID.</p>
+<p><strong>ACL: </strong></p><ul><li>If the app is private, any member of the organization.</li></ul>
 
-The **Get app details** request is used to retrieve details of a particular app using the app UID.
+**API Endpoint**: `/apps/{app_uid}`
 
-**ACL:**
-
-- If the app is private, any member of the organization.
+**Method**: `GET`
 
 ## URL Parameters
 
 - **app_uid** (required)
-  The UID of the app that you want to retrieve details of.
+  <p>The UID of the app that you want to retrieve details of.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your management token.
-  Default: `your_authtoken`
+  <p>Enter your management token.</p>
 - **organization_uid** (required)
-  The UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

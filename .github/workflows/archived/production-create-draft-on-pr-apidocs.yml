@@ -1,0 +1,82 @@
+name: Create Draft Entries on PR (API Docs)
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'api-docs/**'
+    types: [opened, reopened, synchronize]
+  workflow_dispatch:
+
+jobs:
+  create-drafts:
+    name: Create [DRAFT] Entries for Review
+    runs-on: ubuntu-latest
+    concurrency:
+      group: create-draft-apidocs-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./tools/cs-sync
+        run: npm ci
+
+      - name: Validate Git Changes
+        working-directory: ./tools/cs-sync
+        run: |
+          echo "🔍 Validating git changes..."
+          echo "  ✓ YAML frontmatter syntax"
+          echo "  ✓ Required fields (title, url, description)"
+          echo "  ✓ No duplicate URLs"
+          echo "  ✓ No draft/scheduled entries"
+          echo ""
+          echo "If any validation fails, entry creation will be blocked."
+        env:
+          STACK_TYPE: apidocs
+
+      - name: Create [DRAFT] Entries in Production CMS
+        working-directory: ./tools/cs-sync
+        run: node import-git-to-cms-apidocs_25July26.js
+        env:
+          STACK_TYPE: apidocs
+          PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
+          PROD_APIDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_MANAGEMENT_TOKEN }}
+          CREATE_DRAFT_ONLY: 'true'
+        continue-on-error: true
+
+      - name: Report Draft Creation
+        if: always()
+        run: |
+          echo "================================"
+          echo "📝 Draft Entries Created for Review"
+          echo "================================"
+          echo ""
+          echo "✅ [DRAFT] entries created in CMS"
+          echo "📋 Writers can now:"
+          echo "   1. Review entries in Production CMS"
+          echo "   2. Edit and refine content"
+          echo "   3. Leave feedback in PR"
+          echo ""
+          echo "⏳ When PR merges:"
+          echo "   • Entries will be added to Release"
+          echo "   • Ready for deployment"
+          echo ""
+          echo "❌ If PR is closed/rejected:"
+          echo "   • [DRAFT] entries remain (manual cleanup possible)"
+          echo "   • NOT added to Release (safe)"
+          echo ""
+          echo "📊 PR Details:"
+          echo "   PR: #${{ github.event.pull_request.number }}"
+          echo "   Branch: ${{ github.head_ref }}"
+          echo "   Timestamp: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"

@@ -1,39 +1,35 @@
 ---
 title: "Provision User into Organization"
-description: POST scim/v2.0/organizations/{organization_uid}/Users
-url: scim-api-requests/organization
+description: scim/v2.0/organizations/{organization_uid}/Users
+url: /provision-user-into-organization
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:12.150Z
+updated_at: 2023-01-05T14:09:12.150Z
 ---
 
 # Provision User into Organization
 
-**POST** `scim/v2.0/organizations/{organization_uid}/Users`
+<p>The <span data-type="inlineCode">Provision User into Organization</span> request adds the user to a Contentstack organization.</p>
+<p>If the user does not already exist in Contentstack, you can add the new user to the organization by using this request.</p>
 
-The Provision User into Organization request adds the user to a Contentstack organization.
+**API Endpoint**: `scim/v2.0/organizations/{organization_uid}/Users`
 
-If the user does not already exist in Contentstack, you can add the new user to the organization by using this request.
+**Method**: `POST`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization. Use the <a href="/docs/developers/apis/content-management-api#get-all-organizations">Get All Organizations</a> request to get the UID of the organization.</p>
 
 ## Headers
 
 - **Content-Type** (required)
-  The format of the response content.
-  Default: `application/json`
+  <p>The format of the response content.</p>
 - **Authorization** (required)
-  The access token obtained after authorizing the IdP client.
-  Default: `Bearer access_token_from_IdP_client`
+  <p>The access token obtained after authorizing the IdP client.</p>
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -46,7 +42,7 @@ If the user does not already exist in Contentstack, you can add the new user to 
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

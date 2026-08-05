@@ -1,51 +1,37 @@
 ---
 title: "Create a Space"
-description: POST /v4/spaces
-url: developer-apis/asset-management-api-requests/create-a-space
+description: /v4/spaces
+url: /create-a-space
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-01-13
+created_at: 2026-01-13T11:11:49.784Z
+updated_at: 2026-01-13T11:21:14.716Z
 ---
 
 # Create a Space
 
-**POST** `/v4/spaces`
-
-The Create a space request allows you to create a new space within Asset Management.
-
-In the request body, you must provide:
-
-- name (required): The name of the space you want to create.Example: Marketing
-- description (optional): A short description of the space.Example: This space contains all marketing assets.
-
-Sample request body:
-
-```
-{
+<p>The <span class="code">Create a space</span> request allows you to create a new space within Asset Management.</p><p>In the request body, you must provide:</p><ul><li><strong>name</strong> (required): The name of the space you want to create.<br /><strong>Example</strong>:&nbsp;<span class="code">Marketing</span></li><li><strong>description</strong> (optional): A short description of the space.<br /><strong>Example</strong>:&nbsp;<span class="code">This space contains all marketing assets.</span></li></ul><p>Sample request body:</p><pre>{
   "name": "Test Space",
   "description": "Sample Space Description"
 }
-```
+</pre>
+
+**API Endpoint**: `/v4/spaces`
+
+**Method**: `POST`
 
 ## Headers
 
 - **x-cs-api-version** (required)
-  Pass the API version to be used for the request.
-  Default: `4`
+  <p>Pass the API version to be used for the request.</p>
 - **organization_uid** (required)
-  Enter your organization UID.
-  Default: `your_organization_uid`
+  <p>Enter your organization UID.</p>
 - **access_token** (required)
-  Enter your authtoken.
-  Default: `your_authtoken`
+  <p>Enter your authtoken.</p>
 - **content-type** (required)
-  Pass application/json value.
-  Default: `application/json`
+  <p>Pass <span class="code">application/json</span> value.</p>
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -54,7 +40,7 @@ Sample request body:
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

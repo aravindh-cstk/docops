@@ -1,35 +1,31 @@
 ---
 title: "Deprovision User"
-description: DELETE scim/v2.0/organizations/{organization_uid}/Users/{user_id}
-url: scim-api-requests/user
+description: scim/v2.0/organizations/{organization_uid}/Users/{user_id}
+url: /deprovision-user
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:15.042Z
+updated_at: 2023-01-05T14:09:15.042Z
 ---
 
 # Deprovision User
 
-**DELETE** `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
+<p>The <span data-type="inlineCode">Deprovision User</span> request lets you remove a user from a Contentstack organization.</p>
+<p>This will remove the user from all the assigned stacks, but the user will continue to have a Contentstack account.</p>
 
-The Deprovision User request lets you remove a user from a Contentstack organization.
+**API Endpoint**: `scim/v2.0/organizations/{organization_uid}/Users/{user_id}`
 
-This will remove the user from all the assigned stacks, but the user will continue to have a Contentstack account.
+**Method**: `DELETE`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](../api-detail/content-management-api.md#get-all-organizations) request to get the UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization. Use the <a href="/docs/developers/apis/content-management-api#get-all-organizations">Get All Organizations</a> request to get the UID of the organization.</p>
 - **user_id** (required)
-  The ID of the user you want to remove. Refer to the [Get All Users](#get-all-users) request to get the user ID.
-  Default: `id_of_user`
+  <p>The ID of the user you want to remove. Refer to the <a href="#get-all-users">Get All Users</a> request to get the user ID.</p>
 
 ## Headers
 
 - **Authorization** (required)
-  The access token obtained after authorizing the IdP client.
-  Default: `Bearer access_token_from_IdP_client`
+  <p>The access token obtained after authorizing the IdP client.</p>
 

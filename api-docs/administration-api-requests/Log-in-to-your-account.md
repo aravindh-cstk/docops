@@ -1,38 +1,32 @@
 ---
 title: "Log in to your account"
-description: POST /user-session
-url: administration-api-requests/account
+description: /user-session
+url: /log-in-to-your-account
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:26:29.069Z
+updated_at: 2026-04-07T12:26:29.069Z
 ---
 
 # Log in to your account
 
-**POST** `/user-session`
+<p>The <span data-type="inlineCode">Log in to your account</span>&nbsp;request is used to sign in to your Contentstack account and obtain the authtoken.</p>
+<p class="note"><strong>Note:</strong> The <span data-type="inlineCode">authtoken</span> is a mandatory parameter when executing Content Management API calls. However, when executing Content Delivery API calls, use <a data-stringify-link="https://www.contentstack.com/docs/developers/apis/content-delivery-api
+" delay="150" data-sk="tooltip_parent" href="/docs/developers/apis/content-delivery-api/" rel="noopener noreferrer" tabindex="-1" data-remove-tab-index="true">the Content Delivery base URL&nbsp;</a>for your region, and&nbsp;pass the environment-specific delivery token against the <span data-type="inlineCode">access_token</span> key.</p>
+<p>In the 'Body' section, enter the user credentials in JSON format. The JSON query will include the email address, the&nbsp;Contentstack user account password, and the two-factor authentication token (if enabled) received in the Authy app or SMS.</p>
+<p>For SSO-enabled organizations, the ‘Log in to your account’ request will not return the user authtoken for users. In this case, you can try out the following:</p>
+<ul><li>The owner of an organization can access the SSO-enabled organization through Contentstack credentials and retrieve the user authtoken to make Content Management API requests.</li><li>Disable 'Strict Mode' for an SSO-enabled organization, and users who have the ability to access their organization through Contentstack credentials can retrieve the authtoken to make Content Management API requests.</li></ul>
+<p>For more details, refer the&nbsp;<a href="/docs/developers/single-sign-on/rest-api-usage#content-management-api">REST API Usage - Content Management API</a> section in the Single Sign-On page.</p>
 
-The Log in to your account request is used to sign in to your Contentstack account and obtain the authtoken.
+**API Endpoint**: `/user-session`
 
-**Note:** The authtoken is a mandatory parameter when executing Content Management API calls. However, when executing Content Delivery API calls, use [the Content Delivery base URL ](../api-detail/content-delivery-api.md)for your region, and pass the environment-specific delivery token against the access_token key.
-
-In the 'Body' section, enter the user credentials in JSON format. The JSON query will include the email address, the Contentstack user account password, and the two-factor authentication token (if enabled) received in the Authy app or SMS.
-
-For SSO-enabled organizations, the ‘Log in to your account’ request will not return the user authtoken for users. In this case, you can try out the following:
-
-- The owner of an organization can access the SSO-enabled organization through Contentstack credentials and retrieve the user authtoken to make Content Management API requests.
-- Disable 'Strict Mode' for an SSO-enabled organization, and users who have the ability to access their organization through Contentstack credentials can retrieve the authtoken to make Content Management API requests.
-
-For more details, refer the [REST API Usage - Content Management API](../../../../../cs-docs/developers/single-sign-on/rest-api-usage.md#content-management-api) section in the Single Sign-On page.
+**Method**: `POST`
 
 ## Headers
 
 - **Content-Type** (required)
-  Default: `application/json`
 
-## Sample Request
+## Request Body
 
 ```json
 {
@@ -44,7 +38,7 @@ For more details, refer the [REST API Usage - Content Management API](../../../.
 }
 ```
 
-## Sample Response
+## Response
 
 ```json
 {

@@ -1,50 +1,41 @@
 ---
 title: "Get all users of team"
-description: GET /organizations/{organization_uid}/teams/{team_uid}/users
-url: administration-api-requests/team
+description: /organizations/{organization_uid}/teams/{team_uid}/users
+url: /get-all-users-of-team
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:35.968Z
+updated_at: 2026-04-07T12:55:35.968Z
 ---
 
 # Get all users of team
 
-**GET** `/organizations/{organization_uid}/teams/{team_uid}/users`
+<p>The <span data-type='inlineCode'>Get all users of team</span> request retrieves information about all the users associated with a particular team.</p><p>Additionally, you can also set the query parameters: <span data-type='inlineCode'>includeUserDetails</span> or <span data-type='inlineCode'>include_count</span> to <span data-type='inlineCode'>true</span> to include user details and the count of users in the response.</p><h5>Add users to team</h5>
 
-The Get all users of team request retrieves information about all the users associated with a particular team.
+**API Endpoint**: `/organizations/{organization_uid}/teams/{team_uid}/users`
 
-Additionally, you can also set the query parameters: includeUserDetails or include_count to true to include user details and the count of users in the response.
-
-##### Add users to team
+**Method**: `GET`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of your Organization.
-  Default: `your_organization_uid`
+  <p>Enter the UID of your Organization.</p>
 - **team_uid** (required)
-  Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the [Get all teams](../api-detail/content-management-api.md#get-all-teams) request to retrieve the UID of a team.
-  Default: `team_uid`
+  <p>Enter the UID of the team of which you want to retrieve the user details. The UID of a team is unique across an organization. Execute the <a href="/docs/developers/apis/content-management-api#get-all-teams" target="_self">Get all teams</a> request to retrieve the UID of a team.</p>
 
 ## Query Parameters
 
 - **includeUserDetails** (optional)
-  Set this parameter to “true” to include the details of users in the response.
-  Default: `true`
+  <p>Set this parameter to “true” to include the details of users in the response.</p>
 - **include_count** (optional)
-  Set this parameter to “true” to include the total count of users in the response.
-  Default: `true`
+  <p>Set this parameter to “true” to include the total count of users in the response.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your authtoken.
-  Default: `your_authtoken`
+  <p>Enter your authtoken.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

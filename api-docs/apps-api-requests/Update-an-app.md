@@ -1,43 +1,35 @@
 ---
 title: "Update an app"
-description: PUT /apps/{app_uid}
-url: apps-api-requests/app
+description: /apps/{app_uid}
+url: /update-an-app
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:00.826Z
+updated_at: 2023-01-05T14:09:00.826Z
 ---
 
 # Update an app
 
-**PUT** `/apps/{app_uid}`
+<p>The <strong>Update an app</strong> request is used to update app details such as name, description, icon, etc.</p>
+<p><strong>ACL: </strong></p><ul><li>Organization Admins</li><li>Organization Owners</li><li>Stack Owners</li><li>Stack Admins</li></ul>
 
-The **Update an app** request is used to update app details such as name, description, icon, etc.
+**API Endpoint**: `/apps/{app_uid}`
 
-**ACL:**
-
-- Organization Admins
-- Organization Owners
-- Stack Owners
-- Stack Admins
+**Method**: `PUT`
 
 ## URL Parameters
 
 - **app_uid** (required)
-  The UID of the app to be updated.
+  <p>The UID of the app to be updated.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your management token.
-  Default: `your_authtoken`
+  <p>Enter your management token.</p>
 - **organization_uid** (required)
-  The UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

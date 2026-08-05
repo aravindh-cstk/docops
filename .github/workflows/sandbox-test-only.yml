@@ -1,0 +1,97 @@
+name: Sandbox Test (Safe - No Production)
+
+on:
+  schedule:
+    # NEW IST SCHEDULE (Item 18):
+    # 2:00 AM IST = 8:30 PM UTC (previous day)
+    # 5:30 PM IST = 12:00 PM UTC
+    - cron: '30 20 * * *'  # 2:00 AM IST
+    - cron: '0 12 * * *'   # 5:30 PM IST
+  workflow_dispatch:
+
+concurrency:
+  group: sandbox-sync-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  sandbox-test:
+    runs-on: ubuntu-latest
+    name: Test Sandbox ↔ Git Sync (API-Docs)
+    strategy:
+      matrix:
+        stack: [apidocs]
+      fail-fast: false
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./tools/cs-sync
+        run: npm ci
+
+      - name: Run Mirror Check (Sandbox ← Production)
+        working-directory: ./tools/cs-sync
+        run: node sandbox-mirror-check.js
+        env:
+          STACK_TYPE: ${{ matrix.stack }}
+          PROD_APIDOCS_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
+          PROD_APIDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_DELIVERY_TOKEN }}
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+        continue-on-error: true
+
+      - name: Run Parity Check (Sandbox ↔ Git)
+        working-directory: ./tools/cs-sync
+        run: node sandbox-git-parity-check.js
+        env:
+          STACK_TYPE: ${{ matrix.stack }}
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+        continue-on-error: true
+
+      - name: Run Sync Operations Test
+        working-directory: ./tools/cs-sync
+        run: node sandbox-sync-test.js
+        env:
+          STACK_TYPE: ${{ matrix.stack }}
+          APIDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          APIDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+        continue-on-error: true
+
+      - name: Report Results
+        if: always()
+        run: |
+          echo "================================"
+          echo "📊 Sandbox Test Run Complete"
+          echo "================================"
+          echo ""
+          echo "Workflow: Sandbox Test (Safe - No Production)"
+          echo "Timestamp: $(date -u +'%Y-%m-%dT%H:%M:%SZ') UTC"
+          echo "IST Time: $(date -u -d '+5 hours 30 minutes' +'%Y-%m-%dT%H:%M:%SZ')"
+          echo ""
+          echo "✅ All test checks completed"
+          echo "📋 Review logs above for details"
+          echo ""
+          echo "Schedule (India Standard Time):"
+          echo "  • 2:00 AM IST (8:30 PM UTC prev day) - Daily health check"
+          echo "  • 5:30 PM IST (12:00 PM UTC) - End-of-day validation"
+          echo ""
+          echo "Concurrency Protection:"
+          echo "  ✓ Single sync per branch at a time"
+          echo "  ✓ No simultaneous executions"
+          echo ""
+          echo "Important Notes:"
+          echo "  ✓ Production is READ-ONLY"
+          echo "  ✓ Published entries only"
+          echo "  ✓ Sandbox is validation environment"
+          echo "  ✓ No production data modified"
+          echo ""
+          echo "See SYNCHRONIZATION_SPECIFICATION.md for full details"

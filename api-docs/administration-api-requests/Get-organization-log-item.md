@@ -1,39 +1,34 @@
 ---
 title: "Get organization log item"
-description: GET /organizations/{organization_uid}/logs/{log_uid}
-url: administration-api-requests/item
+description: /organizations/{organization_uid}/logs/{log_uid}
+url: /get-organization-log-item
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2026-04-07
+created_at: 2026-04-07T12:55:22.510Z
+updated_at: 2026-04-07T12:55:22.510Z
 ---
 
 # Get organization log item
 
-**GET** `/organizations/{organization_uid}/logs/{log_uid}`
+<p>The <span class="code">Get organization log item</span> request is used to retrieve a specific item from the audit log of an organization.</p><p>When executing the <span data-type='inlineCode'>Get organization log details</span> request, you get the Organization UID and Log UID. Use these values to execute the <span><span data-type='inlineCode'>Get organization log item</span></span> API request.</p>
 
-The Get organization log item request is used to retrieve a specific item from the audit log of an organization.
+**API Endpoint**: `/organizations/{organization_uid}/logs/{log_uid}`
 
-When executing the Get organization log details request, you get the Organization UID and Log UID. Use these values to execute the Get organization log item API request.
+**Method**: `GET`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  Enter the UID of a specific organization of which you want to retrieve the audit log details.
-  Default: `656s5d1c65ea6ddf287`
+  <p>Enter the UID of a specific organization of which you want to retrieve the audit log details.</p>
 - **log_uid** (required)
-  Enter the UID of a specific log item of which you want to retrieve the details.
-  Default: `bget22758ff32ccd88ece`
+  <p>Enter the UID of a specific log item of which you want to retrieve the details.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your authtoken.
-  Default: `Your_authtoken`
+  <p>Enter your authtoken.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

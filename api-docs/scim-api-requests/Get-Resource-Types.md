@@ -1,37 +1,34 @@
 ---
 title: "Get Resource Types"
-description: GET scim/v2.0/organizations/{organization_uid}/ResourceTypes
-url: scim-api-requests/types
+description: scim/v2.0/organizations/{organization_uid}/ResourceTypes
+url: /get-resource-types
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:16.012Z
+updated_at: 2023-01-05T14:09:16.012Z
 ---
 
 # Get Resource Types
 
-**GET** `scim/v2.0/organizations/{organization_uid}/ResourceTypes`
+<p>The <span data-type="inlineCode">Get Resource Types</span>&nbsp;request returns the list of available resource types&nbsp;like Users or Groups.</p>
 
-The Get Resource Types request returns the list of available resource types like Users or Groups.
+**API Endpoint**: `scim/v2.0/organizations/{organization_uid}/ResourceTypes`
+
+**Method**: `GET`
 
 ## URL Parameters
 
 - **organization_uid** (required)
-  The UID of the organization. Use the [Get All Organizations](https://app.contentstack.com/docs/developer-apis/content-management-api/#get-all-organizations) request to get the UID of the organization.
-  Default: `your_organization_uid`
+  The UID of the organization. Use the <a href="https://app.contentstack.com/docs/developers/apis/content-management-api/#get-all-organizations">Get All Organizations</a> request to get the UID of the organization.
 
 ## Headers
 
 - **Content-Type** (required)
-  The format of the response content.
-  Default: `application/json`
+  <p>The format of the response content.</p>
 - **Authorization** (required)
-  The access token obtained after authorizing the IdP client.
-  Default: `Bearer access_token_from_IdP_client`
+  <p>The access token obtained after authorizing the IdP client.</p>
 
-## Sample Response
+## Response
 
 ```json
 {

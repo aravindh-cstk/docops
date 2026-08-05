@@ -1,0 +1,30 @@
+---
+title: "Resize image by nearest"
+description: /assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}
+url: /resize-image-by-nearest
+product: Contentstack
+doc_type: api-request
+created_at: 2023-01-05T14:09:19.731Z
+updated_at: 2025-08-28T13:58:38.352Z
+---
+
+# Resize image by nearest
+
+<p class="note"><strong>Note:</strong> Check out the <a href="/docs/developers/apis/image-delivery-api#limitations-with-optimizing-image" target="_self">limitations</a> that are applicable here.</p><p>Try the following query to see how the <span data-type='inlineCode'>bilinear</span> resizing filter works.</p>
+
+**API Endpoint**: `/assets/{stack_api_key}/{asset_uid}/{file_uid}/filename.jpg?environment={environment_name}&width={width_value}&height={height_value}&resize-filter={resize-filter_value}`
+
+**Method**: `GET`
+
+## Query Parameters
+
+- **width** (optional)
+  <p>Enter the value of the image width in pixels or percentage. For example, 100 or 0.90 or 250p.</p>
+- **height** (optional)
+  <p>Enter the value of the image height in pixels or percentage. For example, 100 or 0.90 or 250p.</p>
+- **resize-filter** (optional)
+  <p>Enter the value for the resizing filter to be used to resize the image.</p>
+<p>The format of the parameter is:&nbsp;<span data-type="inlineCode">resize-filter={resize-filter_value}</span></p>
+- **environment** (required)
+  <p>Enter the environment scoped to your delivery token.</p>
+

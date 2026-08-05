@@ -1,0 +1,14 @@
+---
+title: "Get Custom Fields while Retrieving Entries"
+description: /stacks/apiKey/explore
+url: /get-custom-fields-while-retrieving-entries
+product: Contentstack
+doc_type: api-request
+created_at: 2023-01-05T14:09:21.634Z
+updated_at: 2023-03-29T08:01:09.969Z
+---
+
+# Get Custom Fields while Retrieving Entries
+
+**API Endpoint**: `/stacks/apiKey/explore`
+

@@ -1,43 +1,35 @@
 ---
 title: "Change OAuth status of an app"
-description: PATCH /apps/{app_uid}/oauth/enable
-url: apps-api-requests/app
+description: /apps/{app_uid}/oauth/enable
+url: /change-oauth-status-of-an-app
 product: Contentstack
 doc_type: api-request
-audience:
-  - developers
-version: unknown
-last_updated: 2023-01-05
+created_at: 2023-01-05T14:09:01.797Z
+updated_at: 2023-01-05T14:09:01.797Z
 ---
 
 # Change OAuth status of an app
 
-**PATCH** `/apps/{app_uid}/oauth/enable`
+<p>The <strong>Change OAuth status of an app</strong> request is used to either enable or disable OAuth of an app.</p>
+<p><strong>ACL: </strong></p><ul><li>Organization Admins</li><li>Organization Owners</li><li>Stack Owners</li><li>Stack Admins</li></ul>
 
-The **Change OAuth status of an app** request is used to either enable or disable OAuth of an app.
+**API Endpoint**: `/apps/{app_uid}/oauth/enable`
 
-**ACL:**
-
-- Organization Admins
-- Organization Owners
-- Stack Owners
-- Stack Admins
+**Method**: `PATCH`
 
 ## URL Parameters
 
 - **app_uid** (required)
-  The UID of the app to be updated.
+  <p>The UID of the app to be updated.</p>
 
 ## Headers
 
 - **authtoken** (required)
-  Enter your management token.
-  Default: `your_authtoken`
+  <p>Enter your management token.</p>
 - **organization_uid** (required)
-  The UID of the organization.
-  Default: `your_organization_uid`
+  <p>The UID of the organization.</p>
 
-## Sample Response
+## Response
 
 ```json
 {
@@ -62,5 +54,7 @@ The **Change OAuth status of an app** request is used to either enable or disabl
         }
     }
 }
+
+
 ```
 
