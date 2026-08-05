@@ -62,17 +62,39 @@ export class SandboxClient {
   }
 
   /**
-   * Get all published entries from Sandbox
+   * Get all published entries from Sandbox (published to the configured environment)
    */
   async getPublishedEntries(): Promise<ContentstackEntry[]> {
-    const query = JSON.stringify({ status: "published" });
-    const path = `${this.entriesPath()}?query=${encodeURIComponent(query)}&locale=${this.config.locale}&limit=100`;
+    const entries: ContentstackEntry[] = [];
+    let skip = 0;
+    const limit = 100;
+    let hasMore = true;
 
-    const response = await this.request("GET", path);
-    if (!response) return [];
+    while (hasMore) {
+      const path = `${this.entriesPath()}?locale=${this.config.locale}&limit=${limit}&skip=${skip}&include_publish_details=true`;
 
-    const data = JSON.parse(response) as { entries?: ContentstackEntry[] };
-    return data.entries ?? [];
+      const response = await this.request("GET", path);
+      if (!response) break;
+
+      const data = JSON.parse(response) as { entries?: ContentstackEntry[] };
+      const page = data.entries ?? [];
+
+      // Filter for entries published to the configured environment
+      for (const entry of page) {
+        const publishDetails = entry.publish_details as any;
+        if (publishDetails && Array.isArray(publishDetails)) {
+          const isPubToEnv = publishDetails.some((pd: any) => pd.environment === this.config.environment);
+          if (isPubToEnv) {
+            entries.push(entry);
+          }
+        }
+      }
+
+      hasMore = page.length === limit;
+      skip += limit;
+    }
+
+    return entries;
   }
 
   /**
