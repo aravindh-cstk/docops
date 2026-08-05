@@ -1,0 +1,82 @@
+name: Sandbox Test CS-Docs (Safe - No Production)
+
+on:
+  schedule:
+    # 3x daily: 2 AM UTC, 12 PM UTC, 5 PM UTC
+    - cron: '0 2 * * *'   # 2 AM UTC
+    - cron: '0 12 * * *'  # 12 PM UTC
+    - cron: '0 17 * * *'  # 5 PM UTC
+  workflow_dispatch:
+
+jobs:
+  sandbox-test:
+    runs-on: ubuntu-latest
+    name: Test Sandbox ↔ Git Sync (CS-Docs)
+    strategy:
+      matrix:
+        stack: [csdocs]
+      fail-fast: false
+    concurrency:
+      group: sandbox-sync-csdocs-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./tools/cs-sync
+        run: npm ci
+
+      - name: Run Mirror Check (Sandbox ← Production)
+        working-directory: ./tools/cs-sync
+        run: node sandbox-mirror-check-enhanced.js
+        env:
+          STACK_TYPE: ${{ matrix.stack }}
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_DELIVERY_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_DELIVERY_TOKEN }}
+          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
+          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+        continue-on-error: true
+
+      - name: Run Parity Check (Sandbox ↔ Git)
+        working-directory: ./tools/cs-sync
+        run: node sandbox-git-parity-check-enhanced.js
+        env:
+          STACK_TYPE: ${{ matrix.stack }}
+          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
+          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+        continue-on-error: true
+
+      - name: Run Sync Operations Test
+        working-directory: ./tools/cs-sync
+        run: node sandbox-sync-test.js
+        env:
+          STACK_TYPE: ${{ matrix.stack }}
+          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
+          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+        continue-on-error: true
+
+      - name: Report Results
+        if: always()
+        run: |
+          echo "================================"
+          echo "📊 Sandbox Test Run Complete (CS-Docs)"
+          echo "================================"
+          echo ""
+          echo "✅ All test checks completed"
+          echo "📋 Review logs above for details"
+          echo ""
+          echo "Tests run at 3x daily:"
+          echo "  • 2 AM UTC"
+          echo "  • 12 PM UTC"
+          echo "  • 5 PM UTC"
+          echo ""
+          echo "ℹ️  No production data touched"

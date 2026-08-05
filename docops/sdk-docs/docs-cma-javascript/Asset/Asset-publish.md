@@ -1,0 +1,44 @@
+---
+title: "publish"
+description: "The publish call is used to publish a specific version of an asset on the desired environment either immediately or at a later date/time."
+url: "https://www.contentstack.com/js-management-asset-publish"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## publish
+
+The publish call is used to publish a specific version of an asset on the desired environment either immediately or at a later date/time.
+
+| Name | Type | Required | Default | Description |
+|---|---|---|---|---|
+| params.publishDetails | object | Yes | — | Details of asset to be publish. |
+| params.locale | string | No | — | Enter the code of the locale that the entry belongs to. |
+| params.version | number | No | — | Asset version to be publish |
+| params.scheduledAt | string | No | — | Schedule date for publishing Asset. |
+
+Returns:
+Type
+Promise
+
+```
+import * as contentstack from '@contentstack/management'
+const client = contentstack.client({ authtoken })
+
+const asset = {
+ "locales": [
+             "en-us"
+             ],
+  "environments": [
+               "development"
+              ]
+}
+client.stack({ api_key: 'api_key'}).asset('uid')
+.publish({ publishDetails: asset, locale: "en-us", version: 1, scheduledAt: "2019-02-08T18:30:00.000Z"})
+.then((response) => console.log(response.notice))
+```

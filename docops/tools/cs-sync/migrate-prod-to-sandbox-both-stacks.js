@@ -1,0 +1,258 @@
+#!/usr/bin/env node
+
+/**
+ * Migrate Published Content: Production → Sandbox (Both Stacks)
+ * READ: Production via Management API (read-only) — NO MODIFICATIONS
+ * WRITE: Sandbox via Management API
+ *
+ * Supports: CS-Docs (docs_article) and API Docs (api_detail_page)
+ *
+ * Usage: node migrate-prod-to-sandbox-both-stacks.js \
+ *   --stack csdocs|apidocs
+ *
+ * Environment variables required:
+ *   PROD_STACK_API_KEY, PROD_STACK_MANAGEMENT_TOKEN (read-only)
+ *   SANDBOX_STACK_API_KEY, SANDBOX_STACK_MANAGEMENT_TOKEN
+ */
+
+import https from 'https';
+import { URL } from 'url';
+
+class ContentstackClient {
+  constructor(apiKey, token, region = 'us') {
+    this.apiKey = apiKey;
+    this.token = token;
+
+    const regionMap = {
+      us: 'api.contentstack.io',
+      eu: 'eu-api.contentstack.com',
+    };
+    this.hostname = regionMap[region] || regionMap.us;
+  }
+
+  request(path, options = {}) {
+    return new Promise((resolve, reject) => {
+      const opts = {
+        hostname: this.hostname,
+        path: path,
+        method: options.method || 'GET',
+        headers: {
+          'api_key': this.apiKey,
+          'authorization': this.token,
+          'Content-Type': 'application/json',
+        },
+      };
+
+      const req = https.request(opts, (res) => {
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => {
+          try {
+            resolve({ status: res.statusCode, data: JSON.parse(data) });
+          } catch {
+            resolve({ status: res.statusCode, data });
+          }
+        });
+      });
+
+      req.on('error', reject);
+      if (options.body) req.write(JSON.stringify(options.body));
+      req.end();
+    });
+  }
+
+  async getPublishedEntries(contentTypeUid, limit = 100) {
+    const entries = [];
+    let skip = 0;
+    let hasMore = true;
+    let count = 0;
+
+    while (hasMore) {
+      // Management API doesn't filter by "published" status - fetch all and filter by _version > 0
+      const query = `?limit=${limit}&skip=${skip}&include_count=true`;
+      const res = await this.request(`/v3/content_types/${contentTypeUid}/entries${query}`);
+
+      if (res.status !== 200) {
+        throw new Error(`Failed to fetch entries: ${res.status} - ${JSON.stringify(res.data)}`);
+      }
+
+      const page = res.data.entries || [];
+      // Include all entries (not filtering by _version) to match what's published in Production
+      entries.push(...page);
+      count += page.length;
+      hasMore = page.length === limit;
+      skip += limit;
+      process.stdout.write(`\r📥 Fetched ${count} published entries...`);
+    }
+
+    console.log(`\n✅ Total published entries: ${entries.length}`);
+    return entries;
+  }
+
+  async createEntry(contentTypeUid, payload) {
+    const res = await this.request(`/v3/content_types/${contentTypeUid}/entries`, {
+      method: 'POST',
+      body: { entry: payload },
+    });
+
+    if (res.status !== 201) {
+      const errMsg = res.data?.errors || res.data?.error_message || JSON.stringify(res.data);
+      throw new Error(`Failed to create entry: ${res.status} - ${errMsg}`);
+    }
+    return res.data.entry;
+  }
+
+  async getAllEntries(contentTypeUid, limit = 100) {
+    const entries = [];
+    let skip = 0;
+    let hasMore = true;
+    let count = 0;
+
+    while (hasMore) {
+      const query = `?limit=${limit}&skip=${skip}`;
+      const res = await this.request(`/v3/content_types/${contentTypeUid}/entries${query}`);
+
+      if (res.status !== 200) {
+        throw new Error(`Failed to fetch entries: ${res.status}`);
+      }
+
+      const page = res.data.entries || [];
+      entries.push(...page);
+      count += page.length;
+      hasMore = page.length === limit;
+      skip += limit;
+      process.stdout.write(`\r📥 Fetched ${count} entries from Sandbox...`);
+    }
+
+    console.log(`\n✅ Total entries in Sandbox: ${entries.length}`);
+    return entries;
+  }
+
+  async deleteEntry(contentTypeUid, uid) {
+    const res = await this.request(`/v3/content_types/${contentTypeUid}/entries/${uid}`, {
+      method: 'DELETE',
+    });
+    return res.status === 204 || res.status === 200;
+  }
+
+  async deleteAllEntries(contentTypeUid) {
+    console.log('\n🗑️  Fetching all entries from Sandbox for deletion...');
+    const entries = await this.getAllEntries(contentTypeUid, 100);
+
+    let deleted = 0;
+    for (let i = 0; i < entries.length; i++) {
+      const entry = entries[i];
+      try {
+        const success = await this.deleteEntry(contentTypeUid, entry.uid);
+        if (success) {
+          deleted++;
+        }
+        process.stdout.write(`\r🗑️  Deleted ${deleted}/${entries.length} entries...`);
+      } catch (err) {
+        console.error(`\nFailed to delete ${entry.uid}: ${err.message}`);
+      }
+    }
+    console.log(`\n✅ Cleanup complete: deleted ${deleted} entries`);
+  }
+}
+
+const STACKS = {
+  csdocs: {
+    name: 'CS-Docs',
+    contentTypeUid: 'docs_article',
+    expectedCount: 7401,
+  },
+  apidocs: {
+    name: 'API Docs',
+    contentTypeUid: 'api_detail_page',
+    expectedCount: 837,
+  },
+};
+
+async function migrate() {
+  const args = process.argv.slice(2);
+
+  let stackType = process.env.STACK_TYPE || 'csdocs';
+  const config = {
+    prodKey: process.env.PROD_STACK_API_KEY,
+    prodToken: process.env.PROD_STACK_MANAGEMENT_TOKEN,
+    sandboxKey: process.env.SANDBOX_STACK_API_KEY,
+    sandboxToken: process.env.SANDBOX_STACK_MANAGEMENT_TOKEN,
+  };
+
+  for (let i = 0; i < args.length; i += 2) {
+    if (args[i] === '--stack') stackType = args[i + 1];
+    if (args[i] === '--prod-key') config.prodKey = args[i + 1];
+    if (args[i] === '--prod-token') config.prodToken = args[i + 1];
+    if (args[i] === '--sandbox-key') config.sandboxKey = args[i + 1];
+    if (args[i] === '--sandbox-token') config.sandboxToken = args[i + 1];
+  }
+
+  const stack = STACKS[stackType];
+  if (!stack) {
+    console.error(`❌ Invalid stack type: ${stackType}. Use: csdocs or apidocs`);
+    process.exit(1);
+  }
+
+  if (!config.prodKey || !config.prodToken || !config.sandboxKey || !config.sandboxToken) {
+    console.error('❌ Missing credentials. Required environment variables:');
+    console.error('   PROD_STACK_API_KEY, PROD_STACK_MANAGEMENT_TOKEN (read-only)');
+    console.error('   SANDBOX_STACK_API_KEY, SANDBOX_STACK_MANAGEMENT_TOKEN');
+    process.exit(1);
+  }
+
+  try {
+    const prodClient = new ContentstackClient(config.prodKey, config.prodToken);
+    const sandboxClient = new ContentstackClient(config.sandboxKey, config.sandboxToken);
+
+    console.log(`\n🔄 MIGRATION: ${stack.name} PRODUCTION → SANDBOX\n`);
+    console.log('═'.repeat(70));
+
+    console.log(`\n📖 Reading published entries from Production (Management API - read-only)...`);
+    const prodEntries = await prodClient.getPublishedEntries(stack.contentTypeUid);
+
+    console.log(`\n✅ Production data loaded (${prodEntries.length} entries)`);
+    console.log('\n📝 Clearing old entries from Sandbox...\n');
+    await sandboxClient.deleteAllEntries(stack.contentTypeUid);
+
+    console.log('\n📝 Creating published entries in Sandbox...\n');
+
+    let created = 0;
+    let failed = 0;
+
+    for (let i = 0; i < prodEntries.length; i++) {
+      const entry = prodEntries[i];
+      const cleanPayload = { ...entry };
+
+      delete cleanPayload.uid;
+      delete cleanPayload.created_at;
+      delete cleanPayload.updated_at;
+      delete cleanPayload.created_by;
+      delete cleanPayload.updated_by;
+      delete cleanPayload._version;
+      delete cleanPayload.publish_details;
+      delete cleanPayload.ACL;
+
+      try {
+        await sandboxClient.createEntry(stack.contentTypeUid, cleanPayload);
+        created++;
+        process.stdout.write(`\r✍️  Created ${created}/${prodEntries.length}...`);
+      } catch (err) {
+        failed++;
+      }
+    }
+
+    console.log(`\n\n✅ MIGRATION COMPLETE!\n`);
+    console.log('═'.repeat(70));
+    console.log(`\n📊 Stack: ${stack.name}`);
+    console.log(`📄 Created: ${created}/${prodEntries.length}`);
+    if (failed > 0) console.log(`❌ Failed: ${failed}`);
+    console.log('\n' + '═'.repeat(70) + '\n');
+
+  } catch (error) {
+    console.error('❌ Migration failed:', error.message);
+    process.exit(1);
+  }
+}
+
+migrate();

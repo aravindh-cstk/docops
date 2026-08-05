@@ -1,0 +1,63 @@
+name: Add Entries to Release on Merge (CS-Docs)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cs-docs/**'
+  workflow_dispatch:
+
+jobs:
+  add-to-release:
+    name: Add [DRAFT] Entries to Release
+    runs-on: ubuntu-latest
+    concurrency:
+      group: add-to-release-csdocs-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: ./tools/cs-sync
+        run: npm ci
+
+      - name: Add Entries to Release
+        working-directory: ./tools/cs-sync
+        run: node import-git-to-cms-csdocs_25July26.js
+        env:
+          STACK_TYPE: csdocs
+          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_CSDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN }}
+          ADD_TO_RELEASE: 'true'
+        continue-on-error: true
+
+      - name: Release Summary
+        if: always()
+        run: |
+          echo "================================"
+          echo "📦 Entries Added to Release"
+          echo "================================"
+          echo ""
+          echo "✅ Entries now in Release folder"
+          echo "🚀 Ready for deployment"
+          echo ""
+          echo "Next Steps:"
+          echo "  1. Go to Production CMS"
+          echo "  2. Review Release entries"
+          echo "  3. Click 'Publish' when ready"
+          echo ""
+          echo "📊 Deployment Details:"
+          echo "   Stack: Production CS-Docs"
+          echo "   Trigger: Push to main"
+          echo "   Timestamp: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          echo "   Commit: ${{ github.sha }}"

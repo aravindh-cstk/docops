@@ -1,0 +1,35 @@
+---
+title: "update"
+description: "The Update Folder call lets you update the name and description of an existing Folder."
+url: "https://www.contentstack.com/js-management-folder-update"
+product: "Contentstack"
+doc_type: "method_details"
+audience:
+  - developers
+  - admins
+version: "current"
+last_updated: "2026-06-26"
+---
+
+## update
+
+The Update Folder call lets you update the name and description of an existing Folder.
+
+No parameters.
+
+Returns:
+Type
+Promise
+
+```
+import * as contentstack from '@contentstack/management'
+const client = contentstack.client({ authtoken })
+
+client.stack({ api_key: 'api_key'}).asset().folder('uid')
+.fetch()
+.then((folder) => {
+ folder.name = 'My New folder'
+ return folder.update()
+})
+.then((folder) => console.log(folder))
+```

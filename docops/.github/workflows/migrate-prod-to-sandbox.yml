@@ -1,0 +1,60 @@
+name: Migrate Production to Sandbox (All Content Types)
+
+on:
+  workflow_dispatch:
+    inputs:
+      stack:
+        description: 'Stack to migrate (all content types)'
+        required: true
+        default: 'both'
+        type: choice
+        options:
+          - csdocs
+          - apidocs
+          - both
+
+permissions:
+  contents: read
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Migrate CS-Docs (if selected)
+        if: inputs.stack == 'csdocs' || inputs.stack == 'both'
+        working-directory: tools/cs-sync
+        env:
+          PROD_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
+          PROD_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN }}
+          SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
+          SANDBOX_STACK_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+        run: |
+          echo "📚 Migrating CS-Docs: Production → Sandbox (read-only)"
+          node migrate-all-content-types.js --stack csdocs
+
+      - name: Migrate API Docs (if selected)
+        if: inputs.stack == 'apidocs' || inputs.stack == 'both'
+        working-directory: tools/cs-sync
+        env:
+          PROD_STACK_API_KEY: ${{ secrets.PROD_APIDOCS_STACK_API_KEY }}
+          PROD_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_APIDOCS_STACK_MANAGEMENT_TOKEN }}
+          SANDBOX_STACK_API_KEY: ${{ secrets.APIDOCS_SANDBOX_STACK_API_KEY }}
+          SANDBOX_STACK_MANAGEMENT_TOKEN: ${{ secrets.APIDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+        run: |
+          echo "📖 Migrating API Docs: Production → Sandbox (read-only)"
+          node migrate-prod-to-sandbox-both-stacks.js --stack apidocs
+
+      - name: Summary
+        run: |
+          echo ""
+          echo "✅ Migration Complete!"
+          echo ""
+          echo "📊 Expected counts (all content types):"
+          echo "  - CS-Docs: ~7,400 published entries"
+          echo "  - API Docs: ~837 published entries"
