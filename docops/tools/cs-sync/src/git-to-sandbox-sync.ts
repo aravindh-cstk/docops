@@ -56,11 +56,12 @@ async function main() {
 
   const config = await loadConfig();
 
+  // Note: We create a default client, but will determine content type per entry based on doc_type
   const client = new SandboxClient({
     apiKey: config.sandboxApiKey,
     managementToken: config.sandboxToken,
     environment: "sandbox",
-    contentTypeUid: config.stackType === "apidocs" ? "api_detail_page" : "docs_article",
+    contentTypeUid: "", // Will be set per entry
     locale: "en-us",
   });
 
@@ -86,6 +87,19 @@ async function main() {
     let updated = 0;
     let failed = 0;
 
+    // Map doc_type to content type UID
+    const getContentTypeUid = (docType: string): string => {
+      const typeMap: Record<string, string> = {
+        "api-request": "api_requests",
+        "api-reference": "api_detail_page",
+        "api-detail": "api_detail_page",
+        "postman-collection": "postman_collections",
+        "api-landing": "api_landing_page",
+      };
+      // Default to api_requests for unknown types
+      return typeMap[docType] || "api_requests";
+    };
+
     for (const file of files) {
       try {
         const content = fs.readFileSync(file.path, "utf-8");
@@ -95,6 +109,19 @@ async function main() {
           console.log(`  ⚠️  Skipping ${file.name}: missing title or url`);
           continue;
         }
+
+        // Determine content type based on doc_type field
+        const docType = frontmatter.doc_type || "api-request";
+        const contentTypeUid = getContentTypeUid(docType);
+
+        // Create a client with the correct content type for this entry
+        const entryClient = new SandboxClient({
+          apiKey: config.sandboxApiKey,
+          managementToken: config.sandboxToken,
+          environment: "sandbox",
+          contentTypeUid: contentTypeUid,
+          locale: "en-us",
+        });
 
         const entryData: Partial<ContentstackEntry> = {
           title: frontmatter.title,
@@ -114,16 +141,16 @@ async function main() {
         };
 
         // Check if entry already exists
-        const existing = await client.findEntryByUrl(frontmatter.url);
+        const existing = await entryClient.findEntryByUrl(frontmatter.url);
 
         if (existing) {
           // Update existing
-          await client.updateEntry(existing.uid, entryData);
+          await entryClient.updateEntry(existing.uid, entryData);
           console.log(`  ✓ Updated (Draft): ${frontmatter.title}`);
           updated++;
         } else {
           // Create new
-          await client.createEntry(entryData);
+          await entryClient.createEntry(entryData);
           console.log(`  ✓ Created (Draft): ${frontmatter.title}`);
           created++;
         }
