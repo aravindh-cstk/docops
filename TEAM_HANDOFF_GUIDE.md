@@ -1,6 +1,7 @@
 # Team Handoff Guide — Documentation Workflow
 
-**Last Updated:** August 3, 2026  
+**Last Updated:** August 5, 2026  
+**Repository:** https://github.com/contentstack/contentstack-docs (Official)  
 **For:** Documentation Writers & Content Team  
 **Audience:** Technical writers updating docs for new features
 
@@ -8,7 +9,37 @@
 
 ## Overview
 
-This guide walks through the complete documentation workflow from cloning the repo to publishing in production CMS. Each step includes Claude prompts you can run in your terminal or Claude Code.
+This guide walks through the complete documentation workflow from cloning the **official contentstack/contentstack-docs repository** to publishing in production CMS. The repository now contains the complete **DocOps workflow** (migrated from aravindh-cstk/docops on August 5, 2026) with all sync tools, GitHub Actions workflows, and CMS synchronization capabilities built-in.
+
+**Key Update:** All documentation operations are now centralized in the official `contentstack/contentstack-docs` repository under the `docops/` folder.
+
+---
+
+## About DocOps Workflow System
+
+The **DocOps** system manages the complete documentation lifecycle with three phases:
+
+### ✅ Phase 1: GitHub → Sandbox (Automatic)
+- Changes pushed to `main` branch automatically sync to Sandbox CMS
+- Entries created as **DRAFT** for writer review
+- Sandbox is a safe testing environment
+
+### ✅ Phase 2: Sandbox → Production Staging (Manual Promotion)
+- Writers review and publish in Sandbox CMS
+- Manual workflow triggers promotion to Production CMS Staging
+- Entries published to **Staging environment only** (not live)
+
+### ✅ Phase 3: Production Staging → Live (Manual Decision)
+- Writers review final version in Production CMS Staging
+- Click "Publish" to go **LIVE** to production environment
+- No automatic promotion to keep content fully under writer control
+
+**Key Tools:**
+- `docops/tools/cs-sync/` — Migration and sync scripts
+- `.github/workflows/` — Automated workflows
+- `tests/` — Verification procedures
+
+Read `docops/SYNC_WORKFLOW.md` for detailed workflow documentation.
 
 ---
 
@@ -27,9 +58,15 @@ This guide walks through the complete documentation workflow from cloning the re
 ### 1.1 Clone the Repo
 
 ```bash
+# Clone the official repository
 git clone https://github.com/contentstack/contentstack-docs.git
 cd contentstack-docs
+
+# Navigate to the DocOps folder (where documentation lives)
+cd docops
 ```
+
+**Note:** All documentation and sync tools are in the `docops/` subfolder of the main repository.
 
 ### 1.2 Verify You Have the Right Folder Structure
 
@@ -38,11 +75,16 @@ ls -la
 ```
 
 Expected folders:
-- `api-docs/` — API documentation
-- `cs-docs/` — CS-Docs (product documentation)
-- `sdk-docs/` — SDK documentation
-- `.github/` — GitHub workflows
-- `tools/` — Sync tools
+- `docops/` — **Complete DocOps workflow system** (includes everything below)
+  - `api-docs/` — API documentation
+  - `cs-docs/` — CS-Docs (product documentation)
+  - `sdk-docs/` — SDK documentation
+  - `.github/` — GitHub workflows
+  - `tools/cs-sync/` — CMS sync and migration tools
+  - `tests/` — Test suite and verification
+  - `backend/` — Backend code
+
+**Note:** After migration on August 5, 2026, all DocOps content is organized under the `docops/` folder within the official repository.
 
 ---
 
@@ -758,7 +800,39 @@ git rebase --continue
 
 ---
 
-**Last Updated:** August 3, 2026  
-**Version:** 1.0  
+## Recent Updates (August 5, 2026)
+
+### ✅ DocOps Migration Complete
+
+On August 5, 2026, the complete DocOps system was migrated from `aravindh-cstk/docops` to the official `contentstack/contentstack-docs` repository.
+
+**Migration Details:**
+- **PR:** https://github.com/contentstack/contentstack-docs/pull/10
+- **What Migrated:** 
+  - 7,161 CS-Docs entries (exact mirror from Production)
+  - 837 API Docs entries (exact mirror from Production)
+  - All migration and sync scripts
+  - Complete GitHub Actions workflows
+  - Full git history and development tools
+- **Official Repository:** https://github.com/contentstack/contentstack-docs
+- **Location in Repo:** `/docops/` folder
+
+**For the Team:**
+- Update all bookmarks to the **official repository**
+- Clone from `https://github.com/contentstack/contentstack-docs`
+- All work happens in the `docops/` subfolder
+- Workflows remain unchanged; the platform is just centralized
+
+### Next Steps After Migration:
+1. ✅ PR #10 merged to official repo (August 5, 2026)
+2. ⏳ Configure GitHub Secrets (8 total - API keys for Prod & Sandbox)
+3. ⏳ Test workflows (exact-mirror-migration, git-to-sandbox-sync)
+4. ⏳ Update team documentation and bookmarks
+
+---
+
+**Last Updated:** August 5, 2026  
+**Version:** 1.1 (Post-Migration)  
+**Official Repository:** https://github.com/contentstack/contentstack-docs  
 **Questions?** Contact: gladys.daniel@contentstack.com
 
