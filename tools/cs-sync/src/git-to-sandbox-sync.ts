@@ -183,9 +183,19 @@ async function main() {
           locale: "en-us",
         });
 
+        // Normalize URL: strip domain and /docs/ prefix for cs-docs
+        let url = frontmatter.url;
+        if (config.stackType === "csdocs" && url.includes("http")) {
+          // Convert https://www.contentstack.com/docs/studio/about-studio → /studio/about-studio
+          url = url.replace(/^https?:\/\/[^/]+\/docs/, "");
+          if (!url.startsWith("/")) {
+            url = "/" + url;
+          }
+        }
+
         const entryData: Partial<ContentstackEntry> = {
           title: frontmatter.title,
-          url: frontmatter.url,
+          url: url,
           body: body.trim(),
           // Add other fields from frontmatter, excluding CMS metadata
           ...Object.entries(frontmatter).reduce(
@@ -200,8 +210,8 @@ async function main() {
           ),
         };
 
-        // Check if entry already exists
-        const existing = await entryClient.findEntryByUrl(frontmatter.url);
+        // Check if entry already exists (using normalized URL)
+        const existing = await entryClient.findEntryByUrl(url);
 
         if (existing) {
           // Update existing
