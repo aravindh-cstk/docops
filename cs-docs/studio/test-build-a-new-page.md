@@ -57,7 +57,7 @@ Compositions define the structure and layout of a page in Studio. This section e
 - Define the **URL Path** (e.g., `/about-us`). This path not only opens the page in the [composition editor](./composition-editor-overview.md) but also serves as the live URL for the About Us page.
 - Click **Create**.
 
-  ![4. Create a Freeform Composition.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt64b3ac6b46a13270/6925a1e47be89702113c980f/4._Create_a_Freeform_Composition.gif)
+![4. Create a Freeform Composition.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt64b3ac6b46a13270/6925a1e47be89702113c980f/4._Create_a_Freeform_Composition.gif)
 
 In this use case, the **About Us** page requires a freeform composition, which has been created accordingly.
 
@@ -204,7 +204,7 @@ In this example, the goal is to configure blog pages using a linked composition.
 - Define the **URL Slug** (e.g., `/blogs/*`). This slug matches wildcard routes in production to load the correct composition.
 - Click **Create**.
 
-  ![Blog Linked Composition.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteca7adf95aa72a44/6925d2b6179d43ad6e32e319/Blog_Linked_Composition.gif)
+![Blog Linked Composition.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteca7adf95aa72a44/6925d2b6179d43ad6e32e319/Blog_Linked_Composition.gif)
 
 Once the blog composition is created and configured, it can be reused across multiple blog pages. This approach streamlines development, ensures consistency in layout, and enables dynamic rendering of content based on URL patterns.
 
