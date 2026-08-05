@@ -10,7 +10,7 @@ updated_at: 2026-04-07T12:54:53.127Z
 
 # Test activate a user account
 
-<p>The <span data-type="inlineCode">Activate a user account</span> call activates the account of a user after signing up. For account activation, you will require the token received in the activation email.
+<p>The <span data-type="inlineCode">Activate a user account</span> call activates the account of a user after signing up.  For account activation, you will require the token received in the activation email.
 </p>
 
 **API Endpoint**: `/user/activate/{user_activation_token}`
