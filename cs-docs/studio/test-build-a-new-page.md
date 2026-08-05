@@ -1,7 +1,9 @@
 ---
 title: "[Studio] - TEST Build a New Page"
 description: Build a new page in Studio by creating freeform and linked compositions, configuring routes, and previewing data.
-url: https://www.contentstack.com/docs/studio/test-build-a-new-page
+url: /studio/test-build-a-new-page
+marker: Studio
+heading: Build a New Page
 product: Contentstack Studio
 doc_type: guide
 audience:
