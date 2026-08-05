@@ -15,6 +15,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import YAML from "yaml";
 import { SandboxClient, ContentstackEntry } from "./lib/sandbox-client.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -191,18 +192,15 @@ function parseFrontmatter(content: string): { frontmatter: Frontmatter; body: st
   }
 
   const [, frontmatterText, body] = match;
-  const frontmatter: Frontmatter = {};
 
-  for (const line of frontmatterText.split("\n")) {
-    const [key, ...valueParts] = line.split(":");
-
-    if (key && valueParts.length > 0) {
-      const value = valueParts.join(":").trim().replace(/^["']|["']$/g, "");
-      frontmatter[key.trim()] = value;
-    }
+  try {
+    // Use proper YAML parser to handle all YAML syntax correctly
+    const frontmatter = YAML.parse(frontmatterText) || {};
+    return { frontmatter, body };
+  } catch (error) {
+    console.error(`⚠️  Failed to parse YAML frontmatter: ${error instanceof Error ? error.message : error}`);
+    return { frontmatter: {}, body: content };
   }
-
-  return { frontmatter, body };
 }
 
 main().catch((error) => {
