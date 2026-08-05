@@ -35,7 +35,7 @@
 ## How to Trigger Tests
 
 ### **Option 1: Manual Workflow Trigger**
-1. Go to: https://github.com/aravindh-cstk/docops/actions
+1. Go to: https://github.com/contentstack/contentstack-docs/actions
 2. Click: "Sandbox Test (Safe - No Production)"
 3. Click: "Run workflow"
 4. Select branch: `test/sandbox-verify`
@@ -115,7 +115,7 @@ node sandbox-sync-test.js                  # Create/Update/Delete
 - CSDOCS_SANDBOX_MANAGEMENT_TOKEN
 
 **How to add to GitHub Secrets:**
-1. Go to: https://github.com/aravindh-cstk/docops/settings/secrets/actions
+1. Go to: https://github.com/contentstack/contentstack-docs/settings/secrets/actions
 2. Click: "New repository secret"
 3. Add each secret with values from Contentstack dashboard
 
@@ -144,7 +144,7 @@ node sandbox-sync-test.js                  # Create/Update/Delete
 ## Recommended Order
 
 **Phase 1: Test API Docs Stack (Today)**
-1. Trigger workflow: https://github.com/aravindh-cstk/docops/actions
+1. Trigger workflow: https://github.com/contentstack/contentstack-docs/actions
 2. Select "Sandbox Test (Safe - No Production)"
 3. Click "Run workflow"
 4. Wait 5 minutes for results
@@ -178,7 +178,7 @@ node sandbox-sync-test.js                  # Create/Update/Delete
 ### **Immediate (Can do now)**
 ```bash
 # Trigger API Docs testing via GitHub Actions
-# https://github.com/aravindh-cstk/docops/actions
+# https://github.com/contentstack/contentstack-docs/actions
 # Select: "Sandbox Test (Safe - No Production)"
 # Run workflow → Results in 5 minutes
 ```

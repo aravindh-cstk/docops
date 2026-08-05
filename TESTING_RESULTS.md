@@ -104,7 +104,7 @@ The Sandbox CMS stack is configured as a V3 stack, but the management credential
 
 ## Test Artifacts
 
-- PR #63: https://github.com/aravindh-cstk/docops/pull/63 (Merged)
+- PR #63: https://github.com/contentstack/contentstack-docs/pull/63 (Merged)
 - Workflow Run: 30871757387 (Failed - API authentication)
 - Test Content: `api-docs/api-detail/test-workflow-validation.md` (Created)
 

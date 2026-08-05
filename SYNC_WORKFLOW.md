@@ -25,8 +25,8 @@ Sandbox CMS (Draft entries created/updated)
 
 **Manual trigger available:**
 ```bash
-gh workflow run gh-to-sandbox-sync-csdocs.yml -R aravindh-cstk/docops
-gh workflow run gh-to-sandbox-sync-apidocs.yml -R aravindh-cstk/docops
+gh workflow run gh-to-sandbox-sync-csdocs.yml -R contentstack/contentstack-docs
+gh workflow run gh-to-sandbox-sync-apidocs.yml -R contentstack/contentstack-docs
 ```
 
 ---
@@ -53,8 +53,8 @@ Production CMS (Staging environment - Published)
 
 **Manual trigger available:**
 ```bash
-gh workflow run sandbox-auto-promote-csdocs.yml -R aravindh-cstk/docops
-gh workflow run sandbox-auto-promote-apidocs.yml -R aravindh-cstk/docops
+gh workflow run sandbox-auto-promote-csdocs.yml -R contentstack/contentstack-docs
+gh workflow run sandbox-auto-promote-apidocs.yml -R contentstack/contentstack-docs
 ```
 
 ---

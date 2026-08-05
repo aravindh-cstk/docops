@@ -121,7 +121,7 @@ find . -name "TEST_*.md" | head -3
 **Say:** "Before pushing, we validate all changes locally. This catches 90% of issues before they reach the PR."
 
 #### Step 3: Show the PR
-- Navigate to: https://github.com/aravindh-cstk/docops/pull/new/test_gladys
+- Navigate to: https://github.com/contentstack/contentstack-docs/pull/new/test_gladys
 - **Highlight:**
   - 9 new test files
   - LINT-WORKFLOW.md (developer workflow guide)

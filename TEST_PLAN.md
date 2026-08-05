@@ -71,7 +71,7 @@ git push origin test/workflow-validation
 
 # 2. Trigger promotion workflow:
 gh workflow run sandbox-to-prod-promote-apidocs.yml \
-  --repo aravindh-cstk/docops \
+  --repo contentstack/contentstack-docs \
   --branch test/phase1-apidocs-graphql-cda
 
 # 3. Wait for workflow to complete
@@ -112,7 +112,7 @@ gh workflow run sandbox-to-prod-promote-apidocs.yml \
 #    - Runs automatically every 15 minutes
 #    - Or manually trigger:
 gh workflow run cms-to-github-apidocs.yml \
-  --repo aravindh-cstk/docops \
+  --repo contentstack/contentstack-docs \
   --branch test/phase1-apidocs-graphql-cda \
   --raw-field "lookback_minutes=60"
 
@@ -168,7 +168,7 @@ git push origin docs/complete-test-cycle
 
 # 5. Manually trigger Sandbox → Prod promotion
 gh workflow run sandbox-to-prod-promote-apidocs.yml \
-  --repo aravindh-cstk/docops \
+  --repo contentstack/contentstack-docs \
   --branch test/phase1-apidocs-graphql-cda
 
 # 6. Verify in Prod CMS:
@@ -182,7 +182,7 @@ gh workflow run sandbox-to-prod-promote-apidocs.yml \
 
 # 8. Wait for cms-to-github workflow (15 min or manual trigger)
 gh workflow run cms-to-github-apidocs.yml \
-  --repo aravindh-cstk/docops \
+  --repo contentstack/contentstack-docs \
   --branch test/phase1-apidocs-graphql-cda \
   --raw-field "lookback_minutes=30"
 

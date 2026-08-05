@@ -254,7 +254,7 @@ Validation tests for bidirectional Git↔CMS synchronization. Run these after me
 **Verification Steps:**
 1. Create entry in CMS
 2. Publish entry
-3. Check GitHub: https://github.com/aravindh-cstk/docops/pulls
+3. Check GitHub: https://github.com/contentstack/contentstack-docs/pulls
 4. New PR should appear within 30 seconds
 5. Review PR: verify `.md` file content matches CMS entry
 
@@ -360,7 +360,7 @@ Document any failures or unexpected behavior here:
 
 ## Questions?
 
-- **Sync not working?** Check GitHub Actions logs: https://github.com/aravindh-cstk/docops/actions
+- **Sync not working?** Check GitHub Actions logs: https://github.com/contentstack/contentstack-docs/actions
 - **CMS entry missing?** Verify frontmatter url and marker fields
 - **Linting errors?** Run `./lint-before-push.sh` before pushing
 - **Need help?** Reference [LINT-WORKFLOW.md](./LINT-WORKFLOW.md)

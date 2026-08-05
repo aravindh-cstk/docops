@@ -34,7 +34,7 @@ Writers review in Sandbox
 **Manual trigger:**
 ```bash
 # Can also manually trigger to specific content types:
-gh workflow run gh-to-sandbox-sync-apidocs.yml --repo aravindh-cstk/docops
+gh workflow run gh-to-sandbox-sync-apidocs.yml --repo contentstack/contentstack-docs
 ```
 
 ---
@@ -66,11 +66,11 @@ Ready for review in Staging
 ```bash
 # Promote all published entries from Sandbox to Prod/Staging
 gh workflow run sandbox-to-prod-promote-apidocs.yml \
-  --repo aravindh-cstk/docops
+  --repo contentstack/contentstack-docs
 
 # Or promote specific entries only
 gh workflow run sandbox-to-prod-promote-apidocs.yml \
-  --repo aravindh-cstk/docops \
+  --repo contentstack/contentstack-docs \
   --raw-field "entry_uids=uid1,uid2,uid3"
 ```
 
@@ -108,7 +108,7 @@ Main branch updated
 ```bash
 # Force check right now instead of waiting 15 min
 gh workflow run cms-to-github-apidocs.yml \
-  --repo aravindh-cstk/docops \
+  --repo contentstack/contentstack-docs \
   --raw-field "lookback_minutes=60"
 ```
 
@@ -325,10 +325,10 @@ To manually trigger CS-Docs workflows:
 ```bash
 # Sync CS-Docs from Git to Sandbox
 gh workflow run gh-to-sandbox-sync-csdocs.yml \
-  --repo aravindh-cstk/docops
+  --repo contentstack/contentstack-docs
 
 # Promote published entries from Sandbox to Prod
 gh workflow run sandbox-to-prod-promote-csdocs.yml \
-  --repo aravindh-cstk/docops
+  --repo contentstack/contentstack-docs
 ```
 
