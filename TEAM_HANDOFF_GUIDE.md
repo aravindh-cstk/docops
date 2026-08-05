@@ -1,45 +1,369 @@
-# Team Handoff Guide — Documentation Workflow
+# Tech Writer Handoff Guide — Documentation Workflow
 
 **Last Updated:** August 5, 2026  
 **Repository:** https://github.com/contentstack/contentstack-docs (Official)  
 **For:** Documentation Writers & Content Team  
-**Audience:** Technical writers updating docs for new features
+**Audience:** Technical writers creating and updating feature documentation
 
 ---
 
-## Overview
+## Architecture: How Workflows Sync Content
 
-This guide walks through the complete documentation workflow from cloning the **official contentstack/contentstack-docs repository** to publishing in production CMS. The repository now contains the complete **DocOps workflow** (migrated from aravindh-cstk/docops on August 5, 2026) with all sync tools, GitHub Actions workflows, and CMS synchronization capabilities built-in.
-
-**Key Update:** All documentation operations are now centralized in the official `contentstack/contentstack-docs` repository under the `docops/` folder.
+```
+┌──────────────────┐         ┌──────────────────┐         ┌──────────────────┐
+│   GitHub Repo    │         │  Sandbox CMS     │         │ Production CMS   │
+│   (Main Branch)  │         │  (Test/Review)   │         │  (Staging/Live)  │
+└──────────────────┘         └──────────────────┘         └──────────────────┘
+        │                            │                            │
+        │ 1. Write docs              │                            │
+        │    in markdown             │                            │
+        │                            │                            │
+        ├──> Create TD-* branch      │                            │
+        │                            │                            │
+        ├──> Create Pull Request     │                            │
+        │                            │                            │
+        ├──> Get approval            │                            │
+        │                            │                            │
+        └──> Merge to main           │                            │
+             (Automatic)             │                            │
+                                     │                            │
+             (Workflow triggers)     │                            │
+                  │                  │                            │
+                  └─────────────────>│  Entries created as       │
+                  (Auto-sync)        │  DRAFT (not published)    │
+                  GitHub → Sandbox   │                            │
+                                     │ 2. Writers review in      │
+                                     │    Sandbox CMS            │
+                                     │                            │
+                                     │ 3. Publish to Staging     │
+                                     │    (Manual workflow)      │
+                                     │                            │
+                                     └───────────────────────────> Staging Env
+                                     (Promotion)                 (Review only)
+                                                                 
+                                                                 │
+                                                                 │ 4. Final check
+                                                                 │    in Production
+                                                                 │
+                                                                 └─> Production Env
+                                                                     (LIVE)
+```
 
 ---
 
-## About DocOps Workflow System
+## Tech Writer Workflow (10 Steps)
 
-The **DocOps** system manages the complete documentation lifecycle with three phases:
+Your job: **Create documentation in GitHub, approve in CMS, publish to production.**
 
-### ✅ Phase 1: GitHub → Sandbox (Automatic)
-- Changes pushed to `main` branch automatically sync to Sandbox CMS
-- Entries created as **DRAFT** for writer review
-- Sandbox is a safe testing environment
+### Step 1: Clone Repository
+```bash
+git clone https://github.com/contentstack/contentstack-docs.git
+cd contentstack-docs/docops
+```
 
-### ✅ Phase 2: Sandbox → Production Staging (Manual Promotion)
-- Writers review and publish in Sandbox CMS
-- Manual workflow triggers promotion to Production CMS Staging
-- Entries published to **Staging environment only** (not live)
+### Step 2: Delete Non-Relevant PODs (Projects)
+Keep only your assigned product folders. Delete everything else.
 
-### ✅ Phase 3: Production Staging → Live (Manual Decision)
-- Writers review final version in Production CMS Staging
-- Click "Publish" to go **LIVE** to production environment
-- No automatic promotion to keep content fully under writer control
+```bash
+# Example: Keep only Studio, delete others
+cd cs-docs
+rm -rf administration/ marketplace/ am2.0/ assets/
+cd ..
+```
 
-**Key Tools:**
-- `docops/tools/cs-sync/` — Migration and sync scripts
-- `.github/workflows/` — Automated workflows
-- `tests/` — Verification procedures
+### Step 3: Identify Changes
+Get the feature PR from your lead and understand what changed:
+- New APIs
+- Changed configuration
+- Deprecated features
+- Breaking changes
 
-Read `docops/SYNC_WORKFLOW.md` for detailed workflow documentation.
+### Step 4: Use Claude to Generate Doc Drafts
+**Run this Claude prompt:**
+
+```
+I need to create documentation for a new feature.
+
+FEATURE INFORMATION:
+- Feature Name: [e.g., "Entry Variant Versioning"]
+- Description: [What does it do?]
+- APIs/Config Changed: [Paste API changes]
+- Code Examples: [Any examples from the PR]
+
+REQUIREMENTS:
+1. Create markdown file with YAML frontmatter (title, url, description)
+2. Include: overview, use cases, code examples, troubleshooting
+3. ~500-800 words
+4. Follow existing cs-docs style
+5. Filename format: kebab-case (e.g., entry-variant-versioning.md)
+
+Generate the complete markdown file now, ready to save.
+```
+
+**Claude will give you:** Ready-to-copy markdown content with frontmatter.
+
+### Step 5: Create Feature Branch (TD-* naming)
+
+```bash
+# Format: TD-<ticket>_<product>_<feature>
+git checkout -b TD-5366_CMS_EntryVariantVersioning
+```
+
+### Step 6: Create Pull Request
+
+```bash
+# Stage your changes
+git add cs-docs/studio/entry-variant-versioning.md
+
+# Commit with clear message
+git commit -m "docs: add entry variant versioning documentation
+
+- Add new feature documentation
+- Include API examples and troubleshooting
+
+Jira: TD-5366"
+
+# Push to remote
+git push origin TD-5366_CMS_EntryVariantVersioning
+```
+
+**Create PR on GitHub:**
+```bash
+gh pr create \
+  --title "docs: Add Entry Variant Versioning" \
+  --body "## Summary
+Add documentation for new Entry Variant Versioning feature.
+
+### Files Added
+- cs-docs/studio/entry-variant-versioning.md
+
+### Related Jira Ticket
+TD-5366
+
+### Checklist
+- [ ] Content is accurate
+- [ ] Examples tested
+- [ ] Links valid
+- [ ] Formatting consistent
+"
+```
+
+### Step 7: Get Approval from Lead
+Your documentation lead will review for:
+- Accuracy
+- Examples
+- Style consistency
+- Links
+- Formatting
+
+Make changes if requested and push again.
+
+### Step 8: Merge to Main
+Once approved, merge the PR to `main`:
+
+```bash
+gh pr merge <PR-NUMBER> --merge
+```
+
+**What happens automatically:**
+- GitHub workflow triggers
+- Markdown syncs to Sandbox CMS
+- Entries created as **[DRAFT]** (not published)
+
+### Step 9: Check in Sandbox CMS
+1. Go to Sandbox CMS
+2. Find your **[DRAFT]** entry in the Release folder
+3. Verify content looks correct:
+   - Title matches
+   - URL correct
+   - Formatting displays properly
+   - Code examples render correctly
+   - All links work
+
+**Run this Claude prompt for QA:**
+
+```
+I need to verify my documentation in the CMS.
+
+ENTRY TO CHECK:
+- Title: [Your entry title]
+- URL: [The URL slug]
+- Location: Sandbox CMS → Release → [DRAFT] [Your Title]
+
+I've reviewed it and found:
+[List any issues, or "No issues found"]
+
+Should I publish this to Production? Check: accuracy, formatting, examples, links.
+```
+
+### Step 10: Publish Manually to Production
+
+**Final Checklist:**
+- ✅ Content 100% accurate
+- ✅ All examples tested
+- ✅ Links verified
+- ✅ Formatting correct
+- ✅ Lead approved
+- ✅ No outstanding feedback
+
+**In Production CMS:**
+1. Find your **[DRAFT]** entry in Release folder
+2. Click **"Publish"** button
+3. Select **"Publish"** (not "Schedule")
+4. Confirm
+
+**Verify publication:**
+1. Go to the published URL
+2. Check formatting
+3. Share link with team
+
+---
+
+## Quick Reference: Claude Prompts
+
+### Prompt 1: Generate Documentation
+
+```
+Create markdown documentation for a feature.
+
+FEATURE:
+- Name: [Feature Name]
+- Description: [What it does]
+- APIs: [List API changes]
+- Examples: [Code examples]
+
+REQUIREMENTS:
+- YAML frontmatter: title, url, description
+- Sections: overview, use cases, API reference, examples, troubleshooting
+- ~500-800 words
+- Markdown format
+- Follow cs-docs style
+
+Generate the complete markdown file now.
+```
+
+### Prompt 2: Update Existing Documentation
+
+```
+Update existing documentation with new information.
+
+CURRENT FILE:
+cs-docs/studio/[filename].md
+
+CHANGES NEEDED:
+1. Add new section: [Section name]
+2. Update API example for [Section]
+3. Add breaking changes note
+
+REQUIREMENTS:
+- Keep existing content
+- Add new content at top
+- Markdown format
+- Update YAML frontmatter if needed
+
+Generate the updated markdown file now.
+```
+
+### Prompt 3: Analyze What to Document
+
+```
+Tell me what documentation I need to create or update.
+
+CHANGES:
+[Paste the API changes or feature description]
+
+CURRENT DOCS:
+cs-docs/studio/[existing-file].md
+
+For each change, tell me:
+1. What to document (new file or update existing)
+2. What section needs change
+3. Brief summary of what changed
+
+Then generate a doc plan with filenames and sections.
+```
+
+---
+
+## Complete Workflow Loop
+
+```
+1. Clone repo → 2. Delete non-relevant PODs → 3. Identify changes
+    ↓
+4. Use Claude for doc drafts → 5. Create TD-* branch → 6. Create PR
+    ↓
+7. Get approval → 8. Merge to main → 9. Check CMS
+    ↓
+10. Publish manually → Done!
+```
+
+**Total Time:** 2-4 hours per feature (depending on complexity)
+
+---
+
+## Troubleshooting
+
+### Git Issues
+
+**Problem: Can't push changes**
+```bash
+# Make sure you're on the right branch
+git branch -a
+
+# Update from main if needed
+git pull origin main
+git rebase main
+```
+
+**Problem: PR has merge conflicts**
+```bash
+git checkout main
+git pull origin main
+git rebase main TD-5366_CMS_EntryVariantVersioning
+# Resolve conflicts in your editor
+git add .
+git rebase --continue
+git push origin TD-5366_CMS_EntryVariantVersioning -f
+```
+
+### CMS Issues
+
+**Problem: Entry not appearing in Sandbox CMS after merge**
+- Wait 5 minutes (workflow takes time)
+- Check GitHub Actions workflow status
+- Verify file is in correct folder structure
+
+**Problem: Content looks wrong in CMS**
+- Go back to GitHub
+- Edit the markdown file
+- Create another PR with corrections
+- It will update the CMS entry automatically
+
+**Problem: Ready to publish but entry is still [DRAFT]**
+- That's correct! DRAFT entries don't publish automatically
+- Click the Publish button manually in CMS
+- This is by design for safety
+
+---
+
+## Support & Help
+
+**Questions?**
+- Slack: #docs-issues-internal-discussion
+- Email: gladys.daniel@contentstack.com
+- Lead: Ask your documentation lead - Gladys/Azhar
+
+**Tools & Resources:**
+- Repository: https://github.com/contentstack/contentstack-docs
+- GitHub CLI: `gh help`
+- Claude Code: `claude --help`
+
+---
+
+**Last Updated:** August 5, 2026  
+**Version:** 2.0 (Tech Writer Focused)  
+**Official Repository:** https://github.com/contentstack/contentstack-docs  
+**DocOps Folder:** `/docops/` in the main repository
 
 ---
 
