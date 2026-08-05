@@ -69,7 +69,7 @@ async function main() {
   const sandboxClient = new SandboxClient({
     apiKey: config.sandboxApiKey,
     managementToken: config.sandboxToken,
-    environment: "sandbox",
+    environment: "development",
     contentTypeUid: config.stackType === "apidocs" ? "api_detail_page" : "docs_article",
     locale: "en-us",
   });
