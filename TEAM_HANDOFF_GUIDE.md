@@ -6,23 +6,44 @@
 
 ---
 
-## How It Works: Simple 3-Step Flow
+## Architecture: How Workflows Sync Content
 
 ```
-Step 1-6: Write docs in GitHub        Step 7-9: Review in CMS        Step 10: Publish
-─────────────────────────────         ──────────────────────         ──────────────
-1. Clone repo                          7. Check Sandbox CMS           10. Publish to
-2. Create feature branch               8. Verify content looks        Production
-3. Generate doc with Claude            good (formatting, links)
-4. Commit and create PR                9. Final review
-5. Get approval from lead
-6. Merge to main → Auto-syncs
-   to CMS as DRAFT
+┌──────────────────┐         ┌──────────────────┐         ┌──────────────────┐
+│   GitHub Repo    │         │  Sandbox CMS     │         │ Production CMS   │
+│   (Main Branch)  │         │  (Test/Review)   │         │  (Staging/Live)  │
+└──────────────────┘         └──────────────────┘         └──────────────────┘
+        │                            │                            │
+        │ 1. Write docs              │                            │
+        │    in markdown             │                            │
+        │                            │                            │
+        ├──> Create TD-* branch      │                            │
+        │                            │                            │
+        ├──> Create Pull Request     │                            │
+        │                            │                            │
+        ├──> Get approval            │                            │
+        │                            │                            │
+        └──> Merge to main           │                            │
+             (Automatic)             │                            │
+                                     │                            │
+             (Workflow triggers)     │                            │
+                  │                  │                            │
+                  └─────────────────>│  Entries created as       │
+                  (Auto-sync)        │  DRAFT (not published)    │
+                  GitHub → Sandbox   │                            │
+                                     │ 2. Writers review in      │
+                                     │    Sandbox CMS            │
+                                     │                            │
+                                     │ 3. Verify content         │
+                                     │    (formatting, links)    │
+                                     │                            │
+                                     └───────────────────────────> Production
+                                     (Manual Publish)            (LIVE)
 ```
 
 ---
 
-## 10-Step Workflow
+## 9-Step Workflow
 
 Your job: **Create documentation in GitHub → Review in CMS → Publish to production.**
 
