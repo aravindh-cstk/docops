@@ -4,7 +4,7 @@
     "HTTP", "HTTPS", "SDK", "SDKs", "CLI", "REST", "GraphQL", "CI", "CD",
     "PR", "PRs", "UI", "UX", "SEO", "IoT", "JWT", "OAuth", "CTA", "CTAs",
     "RTE", "FAQ", "FAQs", "PDF", "PDFs", "PNG", "GIF", "SVG", "CSV",
-    "XML", "YAML", "SQL", "MDX", "SSO", "SAML", "MFA", "TOTP",
+    "XML", "YAML", "SQL", "MDX", "SSO", "SAML", "SCIM", "MFA", "TOTP",
     "AWS", "GCP", "CDN", "SLA", "SLO", "SLI", "UUID", "GUID",
     "CORS", "CSP", "XSS", "CSRF", "ACL", "RBAC", "SSR", "CSR",
     "SPA", "PWA", "DOM", "AST", "IDE", "EOF", "EOL", "TTL", "UID",

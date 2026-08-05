@@ -1,7 +1,9 @@
 ---
 title: "[Administration] - Test About Administration Roles"
 description: About Administration Roles
-url: https://www.contentstack.com/docs/administration/test-about-administration-roles
+url: /administration/test-about-administration-roles
+marker: Administration
+heading: About Administration Roles
 product: Contentstack
 doc_type: concept
 audience:
@@ -15,7 +17,7 @@ last_updated: unknown
 
 This page explains Contentstack Administration roles and how role-based access control (RBAC) determines organization-wide capabilities. It is intended for organization administrators and anyone responsible for managing users, security, and access across Contentstack products, and should be used when assigning or reviewing Administration roles.
 
-## About Administration Roles
+## Administration Roles Overview
 
 Contentstack uses **role-based access control** (**RBAC**) to govern who can manage your organization and what they can do. Administration roles are organization-level roles that control organization-wide capabilities, such as managing users, roles, teams, security configuration, and audit logs.
 
@@ -25,7 +27,7 @@ Administration roles are separate from product roles. An Administration role gov
 
 Contentstack provides four default Administration roles:
 - **Owner:** The highest level of access in an organization. An Owner role can do everything an Admin role can do, and can also transfer organization ownership to another user. Each organization can only have one Owner role.
-- **Admin:** Full access to organization administration. An Admin manages organization users, roles, and teams; configures System for Cross-domain Identity Management (SCIM) provisioning, security settings, and webhooks; and reviews organization analytics, stacks, and audit logs. The Admin role also includes the access needed to invite users and assign product roles across the organization.
+- **Admin:** Full access to organization administration. An Admin manages organization users, roles, and teams. This role also configures System for Cross-domain Identity Management (SCIM) provisioning, security settings, and webhooks, and reviews organization analytics, stacks, and audit logs. The Admin role also includes the access needed to invite users and assign product roles across the organization.
 - **Security Manager:** Manages the organization's identity and security configuration. A Security Manager configures Single Sign-On (SSO), SCIM provisioning, security settings, and webhooks, and reviews audit logs. The role provides read-only visibility into organization users, roles, teams, and stacks, but does not manage users or assign roles.
 - **Product Analytics Viewer:** Read-only access to organization analytics. A Product Analytics Viewer views organization information and analytics but cannot manage users, roles, or settings.
 - **Member:** The default role assigned to every invited user. A Member has read-only access to organization information and no organization-wide administrative capabilities. A user's access within each product depends on the product roles assigned to them. At least one Administration role is required for every user, and Member is preselected during the invitation flow.
@@ -38,16 +40,16 @@ The table below compares the four Administration roles across key organization-l
 
 | Capability | Admin | Security Manager | Product Analytics Viewer | Member |
 |---|---|---|---|---|
-| Organization users | Manage | View | — | — |
-| Roles | Manage | View | — | — |
-| Teams | Manage | View | — | — |
-| Single Sign-On (SSO) | — | Manage | — | — |
-| SCIM provisioning | Manage | Manage | — | — |
-| Security configuration | Manage | Manage | — | — |
-| Webhooks configuration | Manage | Manage | — | — |
-| Organization analytics | View | — | View | — |
-| Audit logs | View | View | — | — |
-| Stacks | View | View | — | — |
+| Organization users | Manage | View | N/A | N/A |
+| Roles | Manage | View | N/A | N/A |
+| Teams | Manage | View | N/A | N/A |
+| Single Sign-On (SSO) | N/A | Manage | N/A | N/A |
+| SCIM provisioning | Manage | Manage | N/A | N/A |
+| Security configuration | Manage | Manage | N/A | N/A |
+| Webhooks configuration | Manage | Manage | N/A | N/A |
+| Organization analytics | View | N/A | View | N/A |
+| Audit logs | View | View | N/A | N/A |
+| Stacks | View | View | N/A | N/A |
 | Organization information | View | View | View | View |
 
 ## How Administration Roles Work With Product Roles
@@ -60,7 +62,7 @@ For example, a user with the Member Administration role and the CMS Content Mana
 
 **Additional Resource:** To assign Administration roles when onboarding users, refer to the [Invite Users to Organization](../developers/organization/invite-users-to-organization.md) documentation.
 
-## Common questions
+## Common Questions
 
 ### Are Administration roles the same as product roles?
 No. Administration roles are organization-level roles, while product roles govern access within a specific product, such as the CMS, Assets, or AgentOS.
