@@ -89,18 +89,75 @@ async function main() {
 
     // Map doc_type to content type UID
     const getContentTypeUid = (docType: string): string => {
-      const typeMap: Record<string, string> = {
+      // API Docs type mappings
+      const apiDocTypeMap: Record<string, string> = {
         "api-request": "api_requests",
         "api-reference": "api_detail_page",
         "api-detail": "api_detail_page",
         "postman-collection": "postman_collections",
         "api-landing": "api_landing_page",
       };
+
+      // CS Docs type mappings - consolidate many doc_types to primary content types
+      const csDocTypeMap: Record<string, string> = {
+        // Guide-like content
+        "guide": "docs_article",
+        "sdk-guide": "docs_article",
+        "developer-guide": "docs_article",
+        "marketplace-guide": "docs_article",
+        "connector-guide": "docs_article",
+        "cli-guide": "docs_article",
+        "integration-guide": "docs_article",
+        "solution-guide": "docs_article",
+        "feature-guide": "docs_article",
+        "how-to-guide": "docs_article",
+        "setup-guide": "docs_article",
+        "getting-started": "docs_article",
+        "quick-start": "docs_article",
+        "get-started": "docs_article",
+
+        // Reference content
+        "reference": "docs_reference",
+        "api-guide": "docs_reference",
+        "sdk-reference": "docs_reference",
+        "field-reference": "docs_reference",
+        "configuration-reference": "docs_reference",
+        "sdk-listing": "docs_reference",
+
+        // Concept/overview content
+        "concept": "docs_article",
+        "overview": "docs_article",
+        "concept-guide": "docs_article",
+        "architecture-guide": "docs_article",
+        "architecture-diagram": "docs_article",
+        "feature-overview": "docs_article",
+        "sdk-overview": "docs_article",
+
+        // How-to content
+        "how-to": "docs_article",
+
+        // Navigation and structure
+        "navigation": "docs_navigation",
+        "navigation-listing": "docs_navigation",
+        "navigation-page": "docs_navigation",
+        "navigation-landing": "docs_navigation",
+        "navigation-hub": "docs_navigation",
+
+        // Fallback for variations
+        "page": "docs_article",
+        "documentation": "docs_article",
+        "article": "docs_article",
+        "developer-hub-guide": "docs_article",
+      };
+
       // Default based on stack type if doc_type not specified
       if (!docType) {
         return config.stackType === "apidocs" ? "api_requests" : "docs_article";
       }
-      return typeMap[docType] || "api_requests";
+
+      // Use appropriate map based on stack type
+      const typeMap = config.stackType === "apidocs" ? apiDocTypeMap : csDocTypeMap;
+      return typeMap[docType] || (config.stackType === "apidocs" ? "api_requests" : "docs_article");
     };
 
     for (const file of files) {
