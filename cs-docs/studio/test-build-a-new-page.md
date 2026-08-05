@@ -16,7 +16,7 @@ last_updated: 2026-03-25
 
 # [Studio] - Build a New Page
 
-testing workflows. This page explains how to build new pages in Contentstack Studio using compositions (freeform and linked) ,  including how to render compositions in a frontend project (CSR React example) and how to preview linked composition data. It is intended for developers and teams setting up Studio page rendering and templates, and should be used when creating new pages or reusable templates in Studio.
+testing workflows. This page explains how to build new pages in Contentstack Studio using compositions (freeform and linked), including how to render compositions in a frontend project (CSR React example) and how to preview linked composition data. It is intended for developers and teams setting up Studio page rendering and templates, and should be used when creating new pages or reusable templates in Studio.
 
 ### Item 1
 
