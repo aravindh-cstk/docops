@@ -193,21 +193,13 @@ async function main() {
           }
         }
 
+        // Sync only core fields that map to content type fields
+        // Note: frontmatter fields like "product", "audience", "version" are metadata
+        // and don't have direct equivalents in the CMS content type
         const entryData: Partial<ContentstackEntry> = {
           title: frontmatter.title,
           url: url,
           body: body.trim(),
-          // Add other fields from frontmatter, excluding CMS metadata
-          ...Object.entries(frontmatter).reduce(
-            (acc, [key, value]) => {
-              // Skip CMS metadata fields that shouldn't be synced to Sandbox
-              if (!["title", "url", "uid", "contentstack"].includes(key) && value) {
-                acc[key] = value;
-              }
-              return acc;
-            },
-            {} as Record<string, any>,
-          ),
         };
 
         // Check if entry already exists (using normalized URL)
@@ -289,18 +281,15 @@ function parseFrontmatter(content: string): { frontmatter: Frontmatter; body: st
   }
 
   const [, frontmatterText, body] = match;
-  const frontmatter: Frontmatter = {};
 
-  for (const line of frontmatterText.split("\n")) {
-    const [key, ...valueParts] = line.split(":");
-
-    if (key && valueParts.length > 0) {
-      const value = valueParts.join(":").trim().replace(/^["']|["']$/g, "");
-      frontmatter[key.trim()] = value;
-    }
+  try {
+    // Use proper YAML parser to handle all YAML syntax correctly
+    const frontmatter = YAML.parse(frontmatterText) || {};
+    return { frontmatter, body };
+  } catch (error) {
+    console.error(`⚠️  Failed to parse YAML frontmatter: ${error instanceof Error ? error.message : error}`);
+    return { frontmatter: {}, body: content };
   }
-
-  return { frontmatter, body };
 }
 
 main().catch((error) => {
