@@ -193,21 +193,13 @@ async function main() {
           }
         }
 
+        // Sync core fields that map to content type fields
+        // Note: frontmatter fields like "product", "audience", "version" are metadata
+        // and don't have direct equivalents in the CMS content type
         const entryData: Partial<ContentstackEntry> = {
           title: frontmatter.title,
           url: url,
           body: body.trim(),
-          // Add other fields from frontmatter, excluding CMS metadata
-          ...Object.entries(frontmatter).reduce(
-            (acc, [key, value]) => {
-              // Skip CMS metadata fields that shouldn't be synced to Sandbox
-              if (!["title", "url", "uid", "contentstack"].includes(key) && value) {
-                acc[key] = value;
-              }
-              return acc;
-            },
-            {} as Record<string, any>,
-          ),
         };
 
         // Check if entry already exists (using normalized URL)
