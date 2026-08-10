@@ -1,6 +1,6 @@
 ---
 title: "[Administration] - Testing About Administration Roles"
-description: About Administration Roles
+description: Comprehensive guide to Contentstack Administration roles and role-based access control (RBAC) for managing organization-wide capabilities, users, and security.
 url: /administration/test-about-administration-roles
 marker: Administration
 heading: Testing About Administration Roles

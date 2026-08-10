@@ -1,7 +1,7 @@
 ---
 title: "[Platform Discovery] - Test About Platform Discovery"
-description: About Platform Discovery
-url: https://www.contentstack.com/docs/administration/test-about-platform-discovery
+description: Comprehensive guide to Platform Discovery dashboard for administrators to explore capabilities, evaluate feature adoption, and interpret status indicators.
+url: /administration/test-about-platform-discovery
 product: Contentstack
 doc_type: administration-guide
 audience:
