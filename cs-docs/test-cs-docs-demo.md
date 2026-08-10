@@ -1,6 +1,6 @@
 ---
 title: Test CS Docs Demo
-description: Test documentation entry to verify Git → Sandbox sync workflow (TC-002) with correct content type mapping.
+description: Test documentation entry verifying Git to Sandbox sync workflow (TC-002) with correct content type mapping and field synchronization for docs_article.
 url: /administration/test-cs-docs-demo
 doc_type: guide
 marker: Testing
@@ -28,7 +28,7 @@ This test demonstrates the complete documentation sync flow from Git to Contents
 - ✅ Content type mapping (guide → docs_article)
 - ✅ Field sync (title, url, body markdown)
 - ✅ URL normalization (relative paths)
-- ✅ Entry created as DRAFT in Sandbox (not published)
+- ✅ Entry created as Draft in Sandbox (not published)
 
 ## Next Steps
 

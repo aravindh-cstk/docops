@@ -53,16 +53,16 @@ Field mapping tests:
 ## Verification Steps
 
 1. **Check Sandbox CMS**
-   - Navigate to: Stack > Content Type: docs_article
-   - Search for: "Bundle1 Test Getting Started"
+   - Navigate to Stack > Content Type: docs_article
+   - Search for Bundle1 Test Getting Started
    - Verify all fields populated correctly
 
 2. **Verify Entry Status**
-   - Status should be: DRAFT
+   - Status should be Draft
    - Not published to any environment yet
 
 3. **Confirm No Duplicates**
-   - Check URL uniqueness: /studio/bundle1-test-getting-started
+   - Check URL uniqueness at /studio/bundle1-test-getting-started
    - Should appear exactly once in Sandbox
 
 ## Next Steps (Bundle 3)
