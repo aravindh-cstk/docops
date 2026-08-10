@@ -1,0 +1,47 @@
+name: Notify Slack on CS Docs sync bugs/fixes doc update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "CSDOCS_SYNC_BUGS_AND_FIXES.md"
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Slack DM
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_TARGET_USER_ID: ${{ secrets.SLACK_TARGET_USER_ID }}
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+          COMMIT_URL: ${{ github.event.head_commit.url }}
+          ACTOR: ${{ github.actor }}
+        run: |
+          if [ -z "$SLACK_BOT_TOKEN" ] || [ -z "$SLACK_TARGET_USER_ID" ]; then
+            echo "SLACK_BOT_TOKEN or SLACK_TARGET_USER_ID secret not set — skipping notification."
+            exit 0
+          fi
+
+          PAYLOAD=$(jq -n \
+            --arg channel "$SLACK_TARGET_USER_ID" \
+            --arg actor "$ACTOR" \
+            --arg msg "$COMMIT_MESSAGE" \
+            --arg url "$COMMIT_URL" \
+            '{channel: $channel,
+              text: ("*CSDOCS_SYNC_BUGS_AND_FIXES.md was updated* :memo:\n*By:* " + $actor + "\n*Commit:* " + $msg + "\n*Diff:* " + $url)}')
+
+          RESPONSE=$(curl -s -X POST "https://slack.com/api/chat.postMessage" \
+            -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD")
+
+          echo "$RESPONSE"
+
+          if [ "$(echo "$RESPONSE" | jq -r '.ok')" != "true" ]; then
+            echo "Slack notification failed."
+            exit 1
+          fi

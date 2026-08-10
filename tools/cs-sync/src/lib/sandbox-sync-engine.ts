@@ -2,17 +2,33 @@ import fs from "node:fs";
 import path from "node:path";
 import * as core from "@actions/core";
 import matter from "gray-matter";
-import { buildEntryPayload } from "./payload.js";
-import { parseDocContent, parseDocFile, type ParsedDoc } from "./parser.js";
-import { markdownToHtml } from "./transform.js";
-import { processImagesInHtml, rewriteMarkdownImages } from "./assets.js";
-import type { ContentstackClient } from "./contentstack.js";
-import type { AppConfig } from "./config.js";
+import {
+  buildEntryPayload,
+  resolveProductConfig,
+  docTypeMapsToDocsArticle,
+} from "./content-type-mappings/docs-article.js";
+import { parseDocContent, parseDocFile, extractH1, type ParsedDoc } from "../parser.js";
+import { markdownToHtml } from "../transform.js";
+import { processImagesInHtml, rewriteMarkdownImages } from "../assets.js";
+import type { ContentstackClient } from "../contentstack.js";
+import type { AppConfig } from "../config.js";
 import {
   getDocChanges,
   readFileAtCommit,
   type DocChange,
-} from "./diff.js";
+} from "../diff.js";
+
+/**
+ * First path segment after docsRoot, e.g. "cs-docs/assets/overview/foo.md"
+ * with docsRoot "cs-docs" returns "assets". This is a pure path computation,
+ * deliberately done before any frontmatter parsing so an out-of-scope
+ * product's files never have to satisfy docs_article's frontmatter schema.
+ */
+function topLevelFolderOf(relativePath: string, docsRoot: string): string {
+  const prefix = `${docsRoot}/`;
+  const stripped = relativePath.startsWith(prefix) ? relativePath.slice(prefix.length) : relativePath;
+  return stripped.split("/")[0] ?? "";
+}
 
 // Shared state for the local-image → asset upload + URL rewrite pass. Populated
 // as docs are processed, then acted on (file deletions) at the end of the run.
@@ -139,6 +155,13 @@ async function processChange(
     return handleRename(config, client, change, beforeSha, ctx);
   }
 
+  // Path-only check, before any frontmatter parsing, so a product with no
+  // verified docs_article mapping never has to satisfy that schema at all.
+  const topLevelFolder = topLevelFolderOf(change.relativePath, config.CS_DOCS_ROOT);
+  if (!resolveProductConfig(topLevelFolder)) {
+    return { path: change.relativePath, action: "skipped" };
+  }
+
   const doc =
     change.type === "added" || change.type === "modified"
       ? parseDocFile(
@@ -152,7 +175,24 @@ async function processChange(
     return { path: change.relativePath, action: "skipped", error: "Could not parse doc" };
   }
 
+  if (!docTypeMapsToDocsArticle(doc.frontMatter.doc_type)) {
+    return { path: change.relativePath, action: "skipped" };
+  }
+
   const body = await rewriteDocImages(doc, change.relativePath, client, ctx);
+
+  const split = extractH1(body);
+  if (!split) {
+    return { path: change.relativePath, action: "skipped", error: "missing a top-level H1 heading" };
+  }
+  if (split.h1 !== doc.frontMatter.title) {
+    return {
+      path: change.relativePath,
+      action: "skipped",
+      error: `frontmatter 'title' ("${doc.frontMatter.title}") does not match the H1 heading ("${split.h1}")`,
+    };
+  }
+
   let html = markdownToHtml(body);
   html = await processImagesInHtml(html, doc.filePath, client);
 
@@ -171,11 +211,14 @@ async function processChange(
     }
   }
 
-  const payload = buildEntryPayload(
-    doc.frontMatter,
-    html,
-    existing?.article_content,
-  );
+  const payload = buildEntryPayload({
+    topLevelFolder,
+    h1: split.h1,
+    htmlContent: html,
+    url: doc.frontMatter.url,
+    description: doc.frontMatter.description,
+    existingArticleContent: existing?.article_content,
+  });
 
   if (existing) {
     const updated = await client.updateEntry(existing.uid, payload);
@@ -202,6 +245,11 @@ async function unpublishDeleted(
   change: DocChange,
   beforeSha: string,
 ): Promise<SyncResult> {
+  const topLevelFolder = topLevelFolderOf(change.relativePath, config.CS_DOCS_ROOT);
+  if (!resolveProductConfig(topLevelFolder)) {
+    return { path: change.relativePath, action: "skipped" };
+  }
+
   const content = readFileAtCommit(
     config.repoRoot,
     beforeSha,
@@ -222,6 +270,10 @@ async function unpublishDeleted(
     change.relativePath,
     content,
   );
+
+  if (!docTypeMapsToDocsArticle(doc.frontMatter.doc_type)) {
+    return { path: change.relativePath, action: "skipped" };
+  }
 
   const existing = await client.findEntryByUrl(doc.frontMatter.url);
   if (!existing) {
@@ -249,27 +301,66 @@ async function handleRename(
   beforeSha: string,
   ctx: RewriteCtx,
 ): Promise<SyncResult> {
-  const oldContent = change.oldRelativePath
-    ? readFileAtCommit(config.repoRoot, beforeSha, change.oldRelativePath)
-    : null;
-
-  const oldDoc = oldContent && change.oldRelativePath
-    ? parseDocContent(config.repoRoot, config.CS_DOCS_ROOT, change.oldRelativePath, oldContent)
-    : null;
-
-  const existing = oldDoc
-    ? await client.findEntryByUrl(oldDoc.frontMatter.url)
-    : null;
+  // Where the file ends up decides scope. A rename into or out of an
+  // unconfigured product folder is left alone rather than guessed at.
+  const topLevelFolder = topLevelFolderOf(change.relativePath, config.CS_DOCS_ROOT);
+  if (!resolveProductConfig(topLevelFolder)) {
+    return { path: change.relativePath, action: "skipped" };
+  }
 
   const newDoc = parseDocFile(config.repoRoot, config.CS_DOCS_ROOT, change.relativePath);
   if (!newDoc) {
     return { path: change.relativePath, action: "skipped", error: "Could not parse renamed doc" };
   }
 
+  if (!docTypeMapsToDocsArticle(newDoc.frontMatter.doc_type)) {
+    return { path: change.relativePath, action: "skipped" };
+  }
+
+  // The old path may belong to a product or convention we don't parse
+  // successfully (e.g. a rename in from an unconfigured folder). That's not a
+  // reason to fail the rename, it just means we can't look up an old entry to
+  // update in place and fall back to treating it as a create.
+  let oldDoc: ParsedDoc | null = null;
+  if (change.oldRelativePath) {
+    try {
+      const oldContent = readFileAtCommit(config.repoRoot, beforeSha, change.oldRelativePath);
+      oldDoc = oldContent
+        ? parseDocContent(config.repoRoot, config.CS_DOCS_ROOT, change.oldRelativePath, oldContent)
+        : null;
+    } catch {
+      oldDoc = null;
+    }
+  }
+
+  const existing = oldDoc
+    ? await client.findEntryByUrl(oldDoc.frontMatter.url)
+    : null;
+
   const body = await rewriteDocImages(newDoc, change.relativePath, client, ctx);
+
+  const split = extractH1(body);
+  if (!split) {
+    return { path: change.relativePath, action: "skipped", error: "missing a top-level H1 heading" };
+  }
+  if (split.h1 !== newDoc.frontMatter.title) {
+    return {
+      path: change.relativePath,
+      action: "skipped",
+      error: `frontmatter 'title' ("${newDoc.frontMatter.title}") does not match the H1 heading ("${split.h1}")`,
+    };
+  }
+
   let html = markdownToHtml(body);
   html = await processImagesInHtml(html, newDoc.filePath, client);
-  const payload = buildEntryPayload(newDoc.frontMatter, html, existing?.article_content);
+  const payload = buildEntryPayload({
+    topLevelFolder,
+    h1: split.h1,
+    htmlContent: html,
+    url: newDoc.frontMatter.url,
+    description: newDoc.frontMatter.description,
+    existingArticleContent: existing?.article_content,
+  });
 
   if (existing) {
     const updated = await client.updateEntry(existing.uid, payload);

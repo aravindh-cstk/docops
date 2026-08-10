@@ -6,9 +6,48 @@ import { fileURLToPath } from "node:url";
 import { z } from "zod";
 import matter from "gray-matter";
 import { findRepoRoot, listChangedDocs, parseArgs } from "./diff.js";
-import { parseDocFile, resolveDocPaths, frontMatterSchema, sdkFrontMatterSchema } from "./parser.js";
+import { parseDocFile, resolveDocPaths, frontMatterSchema, sdkFrontMatterSchema, extractH1 } from "./parser.js";
 import { collectLocalImageRefs, checkImagePath } from "./assets.js";
 import { lintStyle } from "./style-lint.js";
+import { docTypeMapsToDocsArticle } from "./lib/content-type-mappings/docs-article.js";
+
+const SEO_DESCRIPTION_MIN = 120;
+const SEO_DESCRIPTION_MAX = 165;
+
+// Rules specific to docs_article-bound content (title/H1 consistency, SEO
+// description length). Scoped to doc_type, not to product folder, so they
+// apply the same way once products beyond "assets" get a verified mapping.
+function lintDocsArticleRules(
+  repoRelativePath: string,
+  frontMatter: { title?: unknown; description?: unknown; doc_type?: unknown },
+  body: string,
+): string[] {
+  if (!docTypeMapsToDocsArticle(frontMatter.doc_type as string | undefined)) {
+    return [];
+  }
+
+  const errors: string[] = [];
+
+  const split = extractH1(body);
+  if (!split) {
+    errors.push(`${repoRelativePath}: missing a top-level H1 heading (# Your Title) — required for docs_article`);
+  } else if (typeof frontMatter.title === "string" && split.h1 !== frontMatter.title) {
+    errors.push(
+      `${repoRelativePath}: frontmatter 'title' ("${frontMatter.title}") does not match the H1 heading ("${split.h1}") — they must be identical`,
+    );
+  }
+
+  if (typeof frontMatter.description === "string") {
+    const len = frontMatter.description.length;
+    if (len < SEO_DESCRIPTION_MIN || len > SEO_DESCRIPTION_MAX) {
+      errors.push(
+        `${repoRelativePath}: 'description' is ${len} characters, must be between ${SEO_DESCRIPTION_MIN} and ${SEO_DESCRIPTION_MAX} (it becomes the SEO description)`,
+      );
+    }
+  }
+
+  return errors;
+}
 
 const MD_LINK_RE = /\[([^\]]*)]\(([^)]+)\)/g;
 
@@ -175,6 +214,10 @@ function lintDoc(
     getFrontmatterValidator(docsRoot).parse(data);
 
     const trimmedBody = body.trim();
+
+    if (docsRoot === "cs-docs") {
+      errors.push(...lintDocsArticleRules(repoRelativePath, data, trimmedBody));
+    }
 
     // lintStyle reports line numbers relative to trimmedBody. Shift them back to
     // the raw file's line numbers (as seen in a GitHub diff) by counting how many

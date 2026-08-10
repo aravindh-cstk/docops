@@ -1,0 +1,13 @@
+{
+  "_comment": "Real shape pulled read-only from Production (content type: left_navigation_2026, uid blt92f94484c120f375, the single entry that owns the whole left nav). Trimmed of CMA/ACL bookkeeping fields.",
+  "entry": {
+    "title": "Left Nav 2026",
+    "product_dropdown": {
+      "navigation": [
+        { "uid": "blt61f927e340fc1992", "_content_type_uid": "product_navigation" },
+        { "uid": "bltf1afc727b1dd9ea9", "_content_type_uid": "product_navigation" },
+        { "uid": "blt20279703e08c5243", "_content_type_uid": "product_navigation" }
+      ]
+    }
+  }
+}

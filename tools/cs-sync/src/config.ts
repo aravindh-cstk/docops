@@ -57,6 +57,43 @@ export function loadConfig(repoRoot: string): AppConfig {
   };
 }
 
+/**
+ * Config for the git-to-Sandbox sync, reading the {STACK_TYPE}_SANDBOX_* pair
+ * git-to-sandbox-sync.ts already uses (never the single-stack CS_API_KEY /
+ * CS_MANAGEMENT_TOKEN, which points at Prod). Sandbox entries are created as
+ * drafts, not published, so there is no meaningful "environment" for creates
+ * or updates, CS_ENVIRONMENT here only matters if something later needs to
+ * unpublish an entry from whichever environment a writer published it to.
+ */
+export function loadSandboxConfig(
+  repoRoot: string,
+  stackType: "apidocs" | "csdocs",
+): AppConfig {
+  const prefix = stackType.toUpperCase();
+  const apiKey = process.env[`${prefix}_SANDBOX_STACK_API_KEY`];
+  const managementToken = process.env[`${prefix}_SANDBOX_MANAGEMENT_TOKEN`];
+
+  if (!apiKey || !managementToken) {
+    throw new Error(`Missing Sandbox credentials for stack type: ${stackType}`);
+  }
+
+  const env = envSchema.parse({
+    CS_API_KEY: apiKey,
+    CS_MANAGEMENT_TOKEN: managementToken,
+    CS_REGION: process.env.CS_REGION ?? "us",
+    CS_CONTENT_TYPE: process.env.CS_CONTENT_TYPE ?? "docs_article",
+    CS_ENVIRONMENT: process.env.CS_ENVIRONMENT ?? "development",
+    CS_LOCALE: process.env.CS_LOCALE ?? "en-us",
+    CS_DOCS_ROOT: stackType === "apidocs" ? "api-docs" : "cs-docs",
+  });
+
+  return {
+    ...env,
+    baseUrl: REGION_BASE_URL[env.CS_REGION] ?? REGION_BASE_URL.us,
+    repoRoot,
+  };
+}
+
 // ── Delivery-token (CDA) config ─────────────────────────────────────────────
 // The image restore + stub rebuild tooling reads content via the Content
 // Delivery API using a delivery token. That path must NOT require a management

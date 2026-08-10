@@ -1,29 +1,13 @@
-name: CS Docs CMS Sync (Sandbox→Prod promote, then Prod→GitHub)
-
-# Two steps that MUST run in this order, which is why they share one job
-# rather than sitting on two independent crons:
-#
-#   1. sandbox-promote  — copy published Sandbox entries into Prod
-#   2. cms-pull-prod    — open a PR for anything edited directly in Prod
-#
-# Step 2 decides "did a human edit Prod?" by comparing Prod against Sandbox.
-# If it runs before step 1, a Prod entry that promotion has not caught up to
-# yet looks like a direct edit, and the PR it opens contains the *older*
-# content — i.e. a revert of whatever was most recently merged. GitHub Actions
-# gives no ordering guarantee between separate workflows on the same cron, so
-# the ordering has to be expressed here.
-#
-# Running promotion first also means a failed promotion self-heals on the next
-# tick instead of turning into a bad PR.
+name: Sync Prod CS Docs CMS changes to GitHub
 
 on:
   schedule:
-    # Every 15 minutes: writers publishing in Sandbox reach Prod within one tick.
-    - cron: '*/15 * * * *'
+    # Runs every 15 minutes, same cadence as the Sandbox->GitHub pull.
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 concurrency:
-  group: sandbox-to-prod-promote-csdocs
+  group: prod-csdocs-to-github-sync
   cancel-in-progress: false
 
 permissions:
@@ -32,7 +16,7 @@ permissions:
   checks: write
 
 jobs:
-  promote-and-pull:
+  cms-pull:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -47,46 +31,16 @@ jobs:
         working-directory: tools/cs-sync
         run: npm ci
 
-      # ---------------------------------------------------------------
-      # Step 1 — Sandbox → Prod
-      # ---------------------------------------------------------------
-
-      - name: Promote published Sandbox entries to Prod
-        id: promote
-        working-directory: tools/cs-sync
-        env:
-          STACK_TYPE: csdocs
-          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
-          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
-          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
-          PROD_CSDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN }}
-        run: npm run sandbox-promote
-
-      # ---------------------------------------------------------------
-      # Step 2 — Prod → GitHub
-      #
-      # Runs even if promotion failed. A direct Prod edit still deserves a PR,
-      # and the Sandbox comparison inside the script keeps a stale Prod from
-      # producing a revert PR: if promotion did not run, Prod still matches
-      # what is already in main, so no file changes and no PR opens.
-      # ---------------------------------------------------------------
-
-      - name: Pull direct Prod edits into the repo
-        if: always()
+      - name: Pull changes from CMS (CS Docs, Prod)
         working-directory: tools/cs-sync
         env:
           STACK_TYPE: csdocs
           PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
           PROD_CSDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN }}
-          # Read-only, used to tell a direct Prod edit apart from content
-          # promotion just wrote in step 1.
-          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
-          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
         run: npm run cms-pull-prod
 
       - name: Check for changes
         id: changes
-        if: always()
         run: |
           if git status --porcelain cs-docs/ | grep -q .; then
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
@@ -190,9 +144,7 @@ jobs:
             --title "CMS → GitHub: CS doc changes detected (Prod)" \
             --body "## CMS → GitHub sync (Prod → Git)
 
-          This PR was automatically created because one or more CS documentation entries were edited **directly in the Prod CMS** and differ from both the published Sandbox entry and the current files in \`cs-docs/\`.
-
-          Content that merely arrived in Prod via Sandbox promotion does *not* appear here — it already has its own PR from the Sandbox→GitHub sync.
+          This PR was automatically created because one or more CS documentation entries were edited directly in the **Prod CMS** and differ from the current files in \`cs-docs/\`.
 
           **Review the diff carefully before merging** — in particular check that no content was unintentionally overwritten.
 
@@ -205,17 +157,7 @@ jobs:
           - Publish that draft in Sandbox to have this change flow through the normal promotion path
 
           ---
-          _Triggered by the \`sandbox-auto-promote-csdocs\` workflow · $(date -u '+%Y-%m-%d %H:%M UTC')_" \
+          _Triggered by the \`prod_csdocs-to-github-sync\` workflow · $(date -u '+%Y-%m-%d %H:%M UTC')_" \
             --label "origin:prod-sync" \
             --base main \
             --head "$BRANCH"
-
-      - name: Run summary
-        if: always()
-        run: |
-          echo "### CS Docs CMS sync" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "1. Sandbox → Prod promotion: \`${{ steps.promote.outcome }}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "2. Prod → GitHub PR opened: \`${{ steps.changes.outputs.has_changes }}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "Only entries published in Sandbox are promoted; unpublished drafts are never copied to Prod." >> "$GITHUB_STEP_SUMMARY"

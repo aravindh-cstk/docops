@@ -11,22 +11,31 @@
  */
 
 import https from "node:https";
+import { ContentstackEntry, getPublishedVersion, hasPublishRecord } from "./entry-content.js";
 
 export interface SandboxConfig {
   apiKey: string;
   managementToken: string;
-  environment: string;
   contentTypeUid: string;
   locale: string;
 }
 
-export interface ContentstackEntry {
+export type { ContentstackEntry };
+
+/**
+ * An entry as it exists at its published version, plus the bookkeeping the
+ * caller needs to report on it.
+ *
+ * `entry` is the content a reader of the site sees — never an unpublished
+ * draft. `unresolved` marks entries that carry a publish record whose version
+ * could not be read; those are surfaced as errors rather than promoted.
+ */
+export interface PublishedEntry {
   uid: string;
-  title?: string;
-  url?: string;
-  body?: string;
-  status?: string;
-  [key: string]: unknown;
+  title: string;
+  publishedVersion: number | null;
+  entry: ContentstackEntry;
+  unresolved: boolean;
 }
 
 export class SandboxClient {
@@ -62,10 +71,21 @@ export class SandboxClient {
   }
 
   /**
-   * Get all published entries from Sandbox (published to the configured environment)
+   * Every Sandbox entry that has been published, resolved to the content of
+   * its *published* version.
+   *
+   * Published to any environment — callers don't need to know or guess the
+   * environment's literal name.
+   *
+   * The distinction between "published entry" and "published version" is the
+   * important one. The CMA list endpoint returns each entry's latest version,
+   * which is the unpublished draft whenever a writer has saved without
+   * publishing. Promoting that content pushed half-finished edits to Prod.
+   * Here we read the version number out of publish_details and re-fetch that
+   * exact version when it differs from the latest.
    */
-  async getPublishedEntries(): Promise<ContentstackEntry[]> {
-    const entries: ContentstackEntry[] = [];
+  async getPublishedEntries(): Promise<PublishedEntry[]> {
+    const results: PublishedEntry[] = [];
     let skip = 0;
     const limit = 100;
     let hasMore = true;
@@ -79,22 +99,72 @@ export class SandboxClient {
       const data = JSON.parse(response) as { entries?: ContentstackEntry[] };
       const page = data.entries ?? [];
 
-      // Filter for entries published to the configured environment
       for (const entry of page) {
-        const publishDetails = entry.publish_details as any;
-        if (publishDetails && Array.isArray(publishDetails)) {
-          const isPubToEnv = publishDetails.some((pd: any) => pd.environment === this.config.environment);
-          if (isPubToEnv) {
-            entries.push(entry);
-          }
-        }
+        if (!hasPublishRecord(entry)) continue;
+        results.push(await this.resolvePublishedVersion(entry));
       }
 
       hasMore = page.length === limit;
       skip += limit;
     }
 
-    return entries;
+    return results;
+  }
+
+  /**
+   * The published version of the entry at a given url, or null if no entry
+   * matches or it has never been published.
+   *
+   * Used by the Prod→GitHub pull to tell a genuine direct Prod edit apart
+   * from content the promotion script just wrote.
+   */
+  async getPublishedEntryByUrl(url: string): Promise<PublishedEntry | null> {
+    const query = JSON.stringify({ url });
+    const path =
+      `${this.entriesPath()}?query=${encodeURIComponent(query)}` +
+      `&locale=${this.config.locale}&include_publish_details=true`;
+
+    const response = await this.request("GET", path);
+    if (!response) return null;
+
+    const data = JSON.parse(response) as { entries?: ContentstackEntry[] };
+    const entry = data.entries?.[0];
+    if (!entry || !hasPublishRecord(entry)) return null;
+
+    return this.resolvePublishedVersion(entry);
+  }
+
+  /**
+   * Swap an entry's latest-version content for its published-version content.
+   *
+   * Skips the extra API call in the common case where the entry has no
+   * unpublished draft, i.e. its latest version is already the published one.
+   */
+  private async resolvePublishedVersion(entry: ContentstackEntry): Promise<PublishedEntry> {
+    const uid = entry.uid;
+    const title = (entry.title as string) || "Untitled";
+    const publishedVersion = getPublishedVersion(entry);
+
+    if (publishedVersion === null) {
+      return { uid, title, publishedVersion: null, entry, unresolved: true };
+    }
+
+    const latestVersion = typeof entry._version === "number" ? entry._version : null;
+
+    if (latestVersion === publishedVersion) {
+      return { uid, title, publishedVersion, entry, unresolved: false };
+    }
+
+    const published = await this.getEntry(uid, publishedVersion);
+
+    // A version the publish record points at should always be fetchable. If it
+    // is not, treat the entry as unresolved rather than falling back to the
+    // draft sitting in `entry`.
+    if (!published) {
+      return { uid, title, publishedVersion, entry, unresolved: true };
+    }
+
+    return { uid, title, publishedVersion, entry: published, unresolved: false };
   }
 
   /**
@@ -118,7 +188,7 @@ export class SandboxClient {
    */
   async updateEntry(uid: string, entry: Partial<ContentstackEntry>): Promise<ContentstackEntry> {
     const body = JSON.stringify({ entry });
-    const path = `${this.entriesPath()}/${uid}`;
+    const path = `${this.entriesPath()}/${uid}?locale=${this.config.locale}`;
 
     const response = await this.request("PUT", path, body);
     if (!response) throw new Error("Failed to update entry in Sandbox");
@@ -130,10 +200,15 @@ export class SandboxClient {
   }
 
   /**
-   * Get entry by UID from Sandbox
+   * Get entry by UID from Sandbox.
+   *
+   * Pass `version` to read a specific historical version rather than the
+   * latest one. Without it the CMA returns the latest version, which is the
+   * unpublished draft whenever a writer has saved without publishing.
    */
-  async getEntry(uid: string): Promise<ContentstackEntry | null> {
-    const path = `${this.entriesPath()}/${uid}?locale=${this.config.locale}`;
+  async getEntry(uid: string, version?: number): Promise<ContentstackEntry | null> {
+    const versionParam = version === undefined ? "" : `&version=${version}`;
+    const path = `${this.entriesPath()}/${uid}?locale=${this.config.locale}${versionParam}`;
 
     const response = await this.request("GET", path);
     if (!response) return null;

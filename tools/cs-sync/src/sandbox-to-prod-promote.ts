@@ -3,24 +3,77 @@
 /**
  * Sandbox → Prod Promotion Script
  *
- * CRITICAL: This is the ONLY way to create entries on Production CMS.
+ * CRITICAL: This is the ONLY way to create or update entries on Production CMS.
  *
- * Clones published entries from Sandbox to Prod and publishes to Staging only.
- * Production environment is NEVER touched by this script.
+ * Matches published Sandbox entries to Prod by url. Creates a new Prod entry
+ * if none exists yet; updates the existing one in place otherwise. Either way,
+ * publishes to Staging only. Production environment is NEVER touched.
  *
- * Triggered by: sandbox-to-prod-promote-apidocs.yml (manual workflow_dispatch)
- * Environment: SANDBOX (read) + PROD (write, promotion only)
+ * Triggered by: sandbox-auto-promote-csdocs.yml (cron) and
+ * sandbox-to-prod-promote-csdocs.yml (manual workflow_dispatch)
+ * Environment: SANDBOX (read) + PROD (create-or-update by url, promotion only)
  *
  * Safety guarantees:
- * ✅ Only clones published entries
+ * ✅ Only promotes the *published version* of an entry, never an unpublished draft
  * ✅ Only publishes to Staging environment
  * ✅ Production environment remains untouched
- * ✅ No direct Prod editing
- * ✅ Creates NEW entries, doesn't modify existing
+ * ✅ Matches by url — creates if new, updates in place if already promoted
+ * ✅ Skips entries whose content hasn't changed since the last promotion
+ * ✅ Refuses to promote (rather than guessing) when the published version
+ *    cannot be read out of publish_details
  */
 
 import { SandboxClient } from "./lib/sandbox-client.js";
-import { ProdPromoteClient, PromotionResult } from "./lib/prod-promote-client.js";
+import { ProdPromoteClient, PromotionResult, ContentstackEntry } from "./lib/prod-promote-client.js";
+import { contentsEqual, PUBLISH_SHAPE_HELP } from "./lib/entry-content.js";
+import { linkNewEntryIntoNav, PRODUCT_NAVIGATION_UID } from "./lib/left-nav-linker.js";
+import { createReleaseForPromotion, extractPrNumberFromTags } from "./lib/release-manager.js";
+import { remapBreadcrumbForProd } from "./lib/content-type-mappings/docs-article.js";
+
+/**
+ * Links a newly created Prod entry into the nav and bundles it (plus the nav
+ * entry, if linking succeeded) into a PR-named Release. csdocs only, this
+ * round's nav mapping (PRODUCT_NAVIGATION_UID) only covers docs_article. Never
+ * throws, a linking or release failure should not fail the whole promotion
+ * run, it's logged and the promotion itself still counts as successful.
+ */
+async function afterCreate(
+  prodClient: ProdPromoteClient,
+  stackType: "apidocs" | "csdocs",
+  sandboxEntry: ContentstackEntry,
+  prodEntry: ContentstackEntry,
+): Promise<void> {
+  if (stackType !== "csdocs") return;
+
+  const items = [{ uid: prodEntry.uid, contentTypeUid: "docs_article" }];
+
+  try {
+    const linkResult = await linkNewEntryIntoNav(prodClient, prodEntry);
+    if (linkResult.linked) {
+      const topLevelFolder = String(prodEntry.url ?? "").split("/").filter(Boolean)[0] ?? "";
+      const navUid = PRODUCT_NAVIGATION_UID[topLevelFolder];
+      if (navUid) items.push({ uid: navUid, contentTypeUid: "product_navigation" });
+      console.log(`     ✓ Linked into left nav${linkResult.sectionCreated ? " (new section created)" : ""}`);
+    } else {
+      console.log(`     ⚠️  Not linked into left nav: ${linkResult.reason}`);
+    }
+  } catch (error) {
+    console.log(`     ⚠️  Left nav linking failed: ${error instanceof Error ? error.message : error}`);
+  }
+
+  const prNumber = extractPrNumberFromTags(sandboxEntry.tags);
+  if (!prNumber) {
+    console.log(`     ⚠️  No pr-<number> tag on this entry, skipping Release creation`);
+    return;
+  }
+
+  try {
+    const release = await createReleaseForPromotion(prodClient, prNumber, items);
+    if (release) console.log(`     ✓ Added to Release "${release.name}"`);
+  } catch (error) {
+    console.log(`     ⚠️  Release creation failed: ${error instanceof Error ? error.message : error}`);
+  }
+}
 
 interface Config {
   sandboxApiKey: string;
@@ -62,14 +115,13 @@ async function loadConfig(): Promise<Config> {
 
 async function main() {
   console.log("🚀 Sandbox → Prod Promotion\n");
-  console.log("⚠️  PROMOTION MODE: Creating entries in Prod and publishing to Staging ONLY\n");
+  console.log("⚠️  PROMOTION MODE: Creating/updating entries in Prod and publishing to Staging ONLY\n");
 
   const config = await loadConfig();
 
   const sandboxClient = new SandboxClient({
     apiKey: config.sandboxApiKey,
     managementToken: config.sandboxToken,
-    environment: "development",
     contentTypeUid: config.stackType === "apidocs" ? "api_detail_page" : "docs_article",
     locale: "en-us",
   });
@@ -103,38 +155,99 @@ async function main() {
 
     const results: PromotionResult[] = [];
 
-    for (const sandboxEntry of entriesToPromote) {
-      const title = sandboxEntry.title || "Untitled";
-      const uid = sandboxEntry.uid;
+    for (const published of entriesToPromote) {
+      const { uid, title, publishedVersion } = published;
+      const sandboxEntry: ContentstackEntry = published.entry;
 
-      console.log(`  🔹 ${title} (${uid})`);
+      console.log(`  🔹 ${title} (${uid}) v${publishedVersion ?? "?"}`);
 
-      try {
-        // Clone to Prod
-        const prodEntry = await prodClient.cloneEntryToProd(sandboxEntry);
-        console.log(`     ✓ Cloned to Prod (new UID: ${prodEntry.uid})`);
-
-        // Publish to Staging
-        const publishSuccess = await prodClient.publishToStaging(prodEntry.uid);
-
+      // The published version could not be determined, so we do not know which
+      // content a human actually approved. Fail closed — promoting the latest
+      // version here is exactly the bug this check exists to prevent.
+      if (published.unresolved) {
+        console.log(`     ❌ ${PUBLISH_SHAPE_HELP}`);
         results.push({
           entryUid: uid,
           title,
-          cloned: true,
-          published: publishSuccess,
+          written: false,
+          published: false,
+          error: "unresolved published version",
         });
+        continue;
+      }
 
-        if (publishSuccess) {
-          console.log(`     ✓ Published to Staging environment`);
-        } else {
-          console.log(`     ⚠️  Created but failed to publish to Staging`);
+      if (!sandboxEntry.url) {
+        console.log(`     ⚠️  Skipping: no url field, cannot match against Prod`);
+        results.push({
+          entryUid: uid,
+          title,
+          written: false,
+          published: false,
+          error: "missing url field",
+        });
+        continue;
+      }
+
+      // Sandbox and Prod are separate stacks — the same "Assets" navigation
+      // entry has a different uid in each, since Contentstack assigns uids
+      // on create and there's no way to force a match. Rewrite breadcrumb to
+      // the Prod-side uid before comparing or writing, otherwise every run
+      // sees the breadcrumb as "changed" and Prod never gets a working one.
+      if (config.stackType === "csdocs" && sandboxEntry.breadcrumb) {
+        sandboxEntry.breadcrumb = remapBreadcrumbForProd(sandboxEntry.url, sandboxEntry.breadcrumb);
+      }
+
+      let existingProdEntry: ContentstackEntry | null;
+      try {
+        existingProdEntry = await prodClient.findEntryByUrl(sandboxEntry.url);
+      } catch (error) {
+        console.log(`     ❌ Error looking up Prod entry: ${error instanceof Error ? error.message : error}`);
+        results.push({
+          entryUid: uid,
+          title,
+          written: false,
+          published: false,
+          error: error instanceof Error ? error.message : String(error),
+        });
+        continue;
+      }
+
+      try {
+        if (!existingProdEntry) {
+          // No match — create.
+          const prodEntry = await prodClient.cloneEntryToProd(sandboxEntry);
+          console.log(`     ✓ Created in Prod (new UID: ${prodEntry.uid})`);
+
+          const publishSuccess = await prodClient.publishToStaging(prodEntry.uid);
+          results.push({ entryUid: uid, title, written: true, published: publishSuccess, action: "created" });
+
+          console.log(publishSuccess ? `     ✓ Published to Staging environment` : `     ⚠️  Created but failed to publish to Staging`);
+
+          await afterCreate(prodClient, config.stackType, sandboxEntry, prodEntry);
+
+          continue;
         }
+
+        if (contentsEqual(sandboxEntry, existingProdEntry)) {
+          console.log(`     ⏭️  No changes detected — skipping (Prod uid: ${existingProdEntry.uid})`);
+          results.push({ entryUid: uid, title, written: false, published: false, action: "skipped" });
+          continue;
+        }
+
+        // Match found, content differs — update.
+        const updated = await prodClient.updateEntry(existingProdEntry.uid, sandboxEntry);
+        console.log(`     ✓ Updated in Prod (uid: ${updated.uid})`);
+
+        const publishSuccess = await prodClient.publishToStaging(updated.uid);
+        results.push({ entryUid: uid, title, written: true, published: publishSuccess, action: "updated" });
+
+        console.log(publishSuccess ? `     ✓ Published to Staging environment` : `     ⚠️  Updated but failed to publish to Staging`);
       } catch (error) {
         console.log(`     ❌ Error: ${error instanceof Error ? error.message : error}`);
         results.push({
           entryUid: uid,
           title,
-          cloned: false,
+          written: false,
           published: false,
           error: error instanceof Error ? error.message : String(error),
         });
@@ -142,19 +255,29 @@ async function main() {
     }
 
     // Summary
+    const created = results.filter((r) => r.action === "created").length;
+    const updated = results.filter((r) => r.action === "updated").length;
+    const skipped = results.filter((r) => r.action === "skipped").length;
     const successful = results.filter((r) => r.published).length;
-    const partial = results.filter((r) => r.cloned && !r.published).length;
-    const failed = results.filter((r) => !r.cloned).length;
+    const partial = results.filter((r) => r.written && !r.published).length;
+    const failed = results.filter((r) => !r.written && r.action !== "skipped").length;
+    const unresolved = results.filter((r) => r.error === "unresolved published version").length;
 
     console.log(`\n📊 Promotion Summary:`);
-    console.log(`   ✅ Successful: ${successful}`);
+    console.log(`   ✨ Created: ${created}`);
+    console.log(`   🔁 Updated: ${updated}`);
+    console.log(`   ⏭️  Skipped (no changes): ${skipped}`);
+    console.log(`   ✅ Published to Staging: ${successful}`);
+    if (unresolved > 0) {
+      console.log(`   🛑 Unresolved published version: ${unresolved} (not promoted — see above)`);
+    }
     if (partial > 0) {
-      console.log(`   ⚠️  Cloned but not published: ${partial}`);
+      console.log(`   ⚠️  Written but not published: ${partial}`);
     }
     if (failed > 0) {
       console.log(`   ❌ Failed: ${failed}`);
     }
-    console.log(`\n✨ Promoted ${entriesToPromote.length} entries from Sandbox to Prod (Staging)\n`);
+    console.log(`\n✨ Processed ${entriesToPromote.length} entries from Sandbox to Prod (Staging)\n`);
 
     console.log("📌 Next Steps:");
     console.log("   1. Review in Staging environment on docsite");

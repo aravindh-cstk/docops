@@ -1,0 +1,32 @@
+{
+  "_comment": "Real shape pulled read-only from Production (content type: product_navigation, e.g. 'Assets' bltf1afc727b1dd9ea9). Trimmed of CMA/ACL bookkeeping fields (uid, _version, ACL, created_at/by, updated_at/by, publish_details) — see docs_article.entry.template.json for that convention.",
+  "entry": {
+    "title": "Assets",
+    "nav_section": [
+      {
+        "header": "Overview",
+        "_metadata": { "uid": "cse35eca6b94e3fa93" },
+        "links": [
+          { "uid": "blt702b01614d1afb0b", "_content_type_uid": "docs_article" },
+          { "uid": "bltc5baf3c384da673b", "_content_type_uid": "docs_article" }
+        ]
+      },
+      {
+        "header": "Create and Manage Assets",
+        "_metadata": { "uid": "csafb4237288c6c0c3" },
+        "links": [
+          { "uid": "blt3cfbd7b4d5c288e1", "_content_type_uid": "docs_article" },
+          { "uid": "blt27d4adcc72845c05", "_content_type_uid": "docs_article" }
+        ]
+      },
+      {
+        "header": "More about Assets",
+        "_metadata": { "uid": "csec9ee7384b3d5ba6" },
+        "links": [
+          { "uid": "bltbbd803bd6c30bcff", "_content_type_uid": "docs_article" },
+          { "uid": "bltf0751b6e6100525b", "_content_type_uid": "product_faqs_2026" }
+        ]
+      }
+    ]
+  }
+}

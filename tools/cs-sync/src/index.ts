@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import { loadConfig } from "./config.js";
 import { findRepoRoot } from "./diff.js";
 import { ContentstackClient } from "./contentstack.js";
-import { runSync } from "./sync.js";
+import { runSync } from "./lib/sandbox-sync-engine.js";
 
 function parseArgs(argv: string[]): { before: string; after: string; dryRun: boolean } {
   let before = "";

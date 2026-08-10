@@ -35,6 +35,12 @@ function hasValidUrlPrefix(u: string): boolean {
 }
 
 export const frontMatterSchema = z.object({
+  title: z
+    .string({ required_error: "Missing required frontmatter field 'title' — add: title: Your Article Title" })
+    .min(1, { message: "Missing required frontmatter field 'title' — add: title: Your Article Title" }),
+  description: z
+    .string({ required_error: "Missing required frontmatter field 'description' — add: description: A one or two sentence summary" })
+    .min(1, { message: "Missing required frontmatter field 'description' — add: description: A one or two sentence summary" }),
   url: z
     .string({ required_error: "Missing required frontmatter field 'url' — add: url: /personalize/your-article-slug" })
     .min(1, { message: "Missing required frontmatter field 'url' — add: url: /personalize/your-article-slug" })
@@ -50,12 +56,7 @@ export const frontMatterSchema = z.object({
     .refine((u) => !u.endsWith("/"), {
       message: "Invalid 'url' — must not end with a trailing slash (remove the trailing /)",
     }),
-  marker: z
-    .string({ required_error: "Missing required frontmatter field 'marker' — add: marker: Your Product Name" })
-    .min(1, { message: "Missing required frontmatter field 'marker' — add: marker: Your Product Name" }),
-  heading: z
-    .string({ required_error: "Missing required frontmatter field 'heading' — add: heading: Your Article Title" })
-    .min(1, { message: "Missing required frontmatter field 'heading' — add: heading: Your Article Title" }),
+  doc_type: z.string().optional(),
 });
 
 export type DocFrontMatter = z.infer<typeof frontMatterSchema>;
@@ -137,6 +138,24 @@ export function parseDocContent(
   };
 }
 
-export function buildTitle(marker: string, heading: string): string {
-  return `[${marker}] - ${heading}`;
+export interface H1Split {
+  h1: string;
+  rest: string;
+}
+
+const H1_RE = /^#\s+(.+?)\s*$/m;
+
+/**
+ * Pulls the first H1 out of a doc body and returns it separately from
+ * everything after it. The H1 becomes the CMS article heading, so it must not
+ * also appear as literal content, only the text after it is real body content.
+ * Returns null when the body has no H1, callers must treat that as a hard
+ * error rather than falling back to some other heading source.
+ */
+export function extractH1(body: string): H1Split | null {
+  const match = body.match(H1_RE);
+  if (!match) return null;
+  const h1 = match[1]!.trim();
+  const rest = body.slice((match.index ?? 0) + match[0].length).trim();
+  return { h1, rest };
 }

@@ -2,7 +2,14 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { AppConfig } from "./config.js";
-import type { SyncEntryPayload } from "./payload.js";
+
+/**
+ * This client is content-type agnostic — it just PUTs/POSTs whatever payload
+ * shape a caller's content-type mapping module built. Callers (e.g.
+ * lib/content-type-mappings/docs-article.ts) own their own typed payload
+ * interface, this stays generic on purpose rather than coupling to one of them.
+ */
+export type EntryPayload = object;
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const userIndex: Record<string, string> = JSON.parse(
@@ -48,6 +55,17 @@ export class ContentstackClient {
     return `${this.config.baseUrl}/content_types/${this.config.CS_CONTENT_TYPE}/entries`;
   }
 
+  async getEntry(uid: string): Promise<ContentstackEntry | null> {
+    const res = await this.fetchWithRetry(this.entriesUrl(uid), { headers: this.headers() });
+    if (!res.ok) {
+      if (res.status === 404) return null;
+      const text = await res.text();
+      throw new Error(`getEntry failed (${res.status}): ${text}`);
+    }
+    const data = (await res.json()) as { entry?: ContentstackEntry };
+    return data.entry ?? null;
+  }
+
   async findEntryByUrl(url: string): Promise<ContentstackEntry | null> {
     const query = JSON.stringify({ url });
     const params = new URLSearchParams({
@@ -75,7 +93,7 @@ export class ContentstackClient {
     return `${base}?locale=${encodeURIComponent(this.config.CS_LOCALE)}`;
   }
 
-  async createEntry(payload: SyncEntryPayload): Promise<ContentstackEntry> {
+  async createEntry(payload: EntryPayload): Promise<ContentstackEntry> {
     const res = await this.fetchWithRetry(this.entriesUrl(), {
       method: "POST",
       headers: this.headers(),
@@ -93,7 +111,7 @@ export class ContentstackClient {
 
   async updateEntry(
     uid: string,
-    payload: SyncEntryPayload,
+    payload: EntryPayload,
   ): Promise<ContentstackEntry> {
     const res = await this.fetchWithRetry(this.entriesUrl(uid), {
       method: "PUT",
@@ -108,6 +126,29 @@ export class ContentstackClient {
 
     const data = (await res.json()) as { entry: ContentstackEntry };
     return data.entry;
+  }
+
+  /**
+   * Adds a tag to an entry's existing tags array, fetching the full entry
+   * first so the PUT round-trips every other field unchanged rather than
+   * risking the CMA treating a partial body as replacing the whole entry.
+   * A no-op if the entry already carries this tag.
+   */
+  async addTag(uid: string, tag: string): Promise<void> {
+    const entry = await this.getEntry(uid);
+    if (!entry) throw new Error(`addTag: entry ${uid} not found`);
+    const existingTags = Array.isArray(entry.tags) ? (entry.tags as string[]) : [];
+    if (existingTags.includes(tag)) return;
+
+    const res = await this.fetchWithRetry(this.entriesUrl(uid), {
+      method: "PUT",
+      headers: this.headers(),
+      body: JSON.stringify({ entry: { ...entry, tags: [...existingTags, tag] } }),
+    });
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`addTag failed (${res.status}): ${text}`);
+    }
   }
 
   async unpublishEntry(uid: string): Promise<void> {

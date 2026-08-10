@@ -16,7 +16,11 @@ jobs:
   sync-to-sandbox:
     runs-on: ubuntu-latest
     steps:
+      # fetch-depth: 0 is required — the sync diffs github.event.before against
+      # github.sha, a shallow checkout would not have the before commit available.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -34,6 +38,9 @@ jobs:
           STACK_TYPE: csdocs
           CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
           CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
+          SYNC_BEFORE_SHA: ${{ github.event.before }}
+          SYNC_AFTER_SHA: ${{ github.sha }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run git-to-sandbox
 
       - name: Sync summary

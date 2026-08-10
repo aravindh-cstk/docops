@@ -8,6 +8,10 @@ on:
         required: false
         default: ""
 
+concurrency:
+  group: sandbox-to-prod-promote-csdocs
+  cancel-in-progress: false
+
 permissions:
   contents: read
 
@@ -44,7 +48,7 @@ jobs:
           echo "✅ CS Docs promotion workflow completed successfully"
           echo ""
           echo "📝 What happened:"
-          echo "  1. ✓ Published entries from Sandbox were cloned to Prod CMS"
+          echo "  1. ✓ Published entries from Sandbox were created or updated in Prod CMS"
           echo "  2. ✓ Entries were published to the 'staging' environment only"
           echo "  3. ✓ Production environment was NOT affected"
           echo ""

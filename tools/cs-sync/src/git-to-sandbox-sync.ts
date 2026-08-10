@@ -6,19 +6,93 @@
  * Pushes changes FROM Git repository to Sandbox CMS.
  * Creates/updates DRAFT entries in Sandbox for writers to review.
  *
- * Triggered by: gh-to-sandbox-sync-apidocs.yml (on main branch merge)
+ * Triggered by: gh-to-sandbox-sync-apidocs.yml / gh-to-sandbox-sync-csdocs.yml
  * Environment: SANDBOX only (no Prod access)
  *
- * This keeps Sandbox in sync with Git, allowing writers to review and edit.
+ * STACK_TYPE=csdocs delegates to lib/sandbox-sync-engine.ts, the corrected
+ * docs_article-aware sync (title/article_content/breadcrumb/seo mapping,
+ * image upload, git-diff based change detection). Only "assets" has a
+ * verified product mapping so far, other cs-docs folders are skipped, not
+ * guessed at (see lib/content-type-mappings/docs-article.ts).
+ *
+ * STACK_TYPE=apidocs is untouched this round, its content types were never
+ * part of the reported bug and have not been verified against a real schema
+ * the way docs_article has, so it keeps the original flat-field behavior
+ * exactly as before.
  */
 
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import YAML from "yaml";
 import { SandboxClient, ContentstackEntry } from "./lib/sandbox-client.js";
+import { ContentstackClient } from "./contentstack.js";
+import { loadSandboxConfig } from "./config.js";
+import { runSync } from "./lib/sandbox-sync-engine.js";
+import { findRepoRoot } from "./diff.js";
+import { findPullRequestsForCommit } from "./lib/github-api.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+/**
+ * "cs-docs/assets/overview/foo.md" with docsRoot "cs-docs" -> "overview".
+ * Null for anything not nested two levels deep (product/subsection/file),
+ * left-nav-linker.ts treats a missing tag as "don't guess, don't link".
+ */
+function subsectionFolderFromPath(relativePath: string, docsRoot: string): string | null {
+  const prefix = `${docsRoot}/`;
+  const stripped = relativePath.startsWith(prefix) ? relativePath.slice(prefix.length) : relativePath;
+  const segments = stripped.split("/");
+  return segments.length >= 3 ? segments[1]! : null;
+}
+
+async function runCsDocsSync(repoRoot: string): Promise<void> {
+  const config = loadSandboxConfig(repoRoot, "csdocs");
+  const client = new ContentstackClient(config);
+
+  const beforeSha = process.env.SYNC_BEFORE_SHA;
+  const afterSha = process.env.SYNC_AFTER_SHA;
+  if (!beforeSha || !afterSha) {
+    throw new Error(
+      "SYNC_BEFORE_SHA and SYNC_AFTER_SHA must be set for the csdocs sync " +
+      "(the workflow passes github.event.before / github.sha).",
+    );
+  }
+
+  const results = await runSync(config, client, beforeSha, afterSha);
+
+  // Tag newly created entries with their subsection folder (so promotion can
+  // link them into the right nav_section block without any repo access) and
+  // with the originating PR number (so promotion can name its Release after
+  // it). Both are best-effort: a push with no associated PR, or a file
+  // structure this can't parse, is not an error, just skips that tag.
+  const created = results.filter((r) => r.action === "created" && r.uid);
+
+  for (const r of created) {
+    const subsection = subsectionFolderFromPath(r.path, config.CS_DOCS_ROOT);
+    if (subsection) {
+      await client.addTag(r.uid!, `nav-subsection-${subsection}`).catch((error) => {
+        console.warn(`Could not tag ${r.path} with its nav subsection: ${error instanceof Error ? error.message : error}`);
+      });
+    }
+  }
+
+  if (created.length > 0) {
+    try {
+      const prs = await findPullRequestsForCommit(afterSha);
+      const prNumber = prs[0]?.number;
+      if (prNumber) {
+        for (const r of created) {
+          await client.addTag(r.uid!, `pr-${prNumber}`);
+        }
+        console.log(`Tagged ${created.length} new entr${created.length === 1 ? "y" : "ies"} with pr-${prNumber}`);
+      } else {
+        console.log("No pull request found for this commit, skipping PR tagging.");
+      }
+    } catch (error) {
+      console.warn(`Could not tag new entries with a PR number: ${error instanceof Error ? error.message : error}`);
+    }
+  }
+}
 
 interface Config {
   sandboxApiKey: string;
@@ -51,16 +125,13 @@ async function loadConfig(): Promise<Config> {
   };
 }
 
-async function main() {
+async function runApiDocsSync(config: Config): Promise<void> {
   console.log("🔄 Git → Sandbox Sync\n");
-
-  const config = await loadConfig();
 
   // Note: We create a default client, but will determine content type per entry based on doc_type
   const client = new SandboxClient({
     apiKey: config.sandboxApiKey,
     managementToken: config.sandboxToken,
-    environment: "sandbox",
     contentTypeUid: "", // Will be set per entry
     locale: "en-us",
   });
@@ -98,66 +169,12 @@ async function main() {
         "api-landing": "api_landing_page",
       };
 
-      // CS Docs type mappings - consolidate many doc_types to primary content types
-      const csDocTypeMap: Record<string, string> = {
-        // Guide-like content
-        "guide": "docs_article",
-        "sdk-guide": "docs_article",
-        "developer-guide": "docs_article",
-        "marketplace-guide": "docs_article",
-        "connector-guide": "docs_article",
-        "cli-guide": "docs_article",
-        "integration-guide": "docs_article",
-        "solution-guide": "docs_article",
-        "feature-guide": "docs_article",
-        "how-to-guide": "docs_article",
-        "setup-guide": "docs_article",
-        "getting-started": "docs_article",
-        "quick-start": "docs_article",
-        "get-started": "docs_article",
-
-        // Reference content
-        "reference": "docs_reference",
-        "api-guide": "docs_reference",
-        "sdk-reference": "docs_reference",
-        "field-reference": "docs_reference",
-        "configuration-reference": "docs_reference",
-        "sdk-listing": "docs_reference",
-
-        // Concept/overview content
-        "concept": "docs_article",
-        "overview": "docs_article",
-        "concept-guide": "docs_article",
-        "architecture-guide": "docs_article",
-        "architecture-diagram": "docs_article",
-        "feature-overview": "docs_article",
-        "sdk-overview": "docs_article",
-
-        // How-to content
-        "how-to": "docs_article",
-
-        // Navigation and structure
-        "navigation": "docs_navigation",
-        "navigation-listing": "docs_navigation",
-        "navigation-page": "docs_navigation",
-        "navigation-landing": "docs_navigation",
-        "navigation-hub": "docs_navigation",
-
-        // Fallback for variations
-        "page": "docs_article",
-        "documentation": "docs_article",
-        "article": "docs_article",
-        "developer-hub-guide": "docs_article",
-      };
-
       // Default based on stack type if doc_type not specified
       if (!docType) {
-        return config.stackType === "apidocs" ? "api_requests" : "docs_article";
+        return "api_requests";
       }
 
-      // Use appropriate map based on stack type
-      const typeMap = config.stackType === "apidocs" ? apiDocTypeMap : csDocTypeMap;
-      return typeMap[docType] || (config.stackType === "apidocs" ? "api_requests" : "docs_article");
+      return apiDocTypeMap[docType] || "api_requests";
     };
 
     for (const file of files) {
@@ -178,20 +195,11 @@ async function main() {
         const entryClient = new SandboxClient({
           apiKey: config.sandboxApiKey,
           managementToken: config.sandboxToken,
-          environment: "sandbox",
           contentTypeUid: contentTypeUid,
           locale: "en-us",
         });
 
-        // Normalize URL: strip domain and /docs/ prefix for cs-docs
-        let url = frontmatter.url;
-        if (config.stackType === "csdocs" && url.includes("http")) {
-          // Convert https://www.contentstack.com/docs/studio/about-studio → /studio/about-studio
-          url = url.replace(/^https?:\/\/[^/]+\/docs/, "");
-          if (!url.startsWith("/")) {
-            url = "/" + url;
-          }
-        }
+        const url = frontmatter.url;
 
         const entryData: Partial<ContentstackEntry> = {
           title: frontmatter.title,
@@ -260,7 +268,6 @@ function findMarkdownFiles(startPath: string): MarkdownFile[] {
 
     for (const entry of entries) {
       const fullPath = path.join(dir, entry.name);
-      const relPath = path.relative(startPath, fullPath);
 
       if (entry.isDirectory()) {
         walk(fullPath);
@@ -301,6 +308,18 @@ function parseFrontmatter(content: string): { frontmatter: Frontmatter; body: st
   }
 
   return { frontmatter, body };
+}
+
+async function main() {
+  const config = await loadConfig();
+
+  if (config.stackType === "csdocs") {
+    const repoRoot = findRepoRoot(path.resolve(__dirname, "../../.."));
+    await runCsDocsSync(repoRoot);
+    return;
+  }
+
+  await runApiDocsSync(config);
 }
 
 main().catch((error) => {

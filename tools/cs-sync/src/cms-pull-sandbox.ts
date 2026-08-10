@@ -16,6 +16,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { SandboxClient } from "./lib/sandbox-client.js";
+import { getUserName } from "./lib/user-index.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -58,7 +59,6 @@ async function main() {
   const client = new SandboxClient({
     apiKey: config.sandboxApiKey,
     managementToken: config.sandboxToken,
-    environment: "sandbox",
     contentTypeUid: config.stackType === "apidocs" ? "api_detail_page" : "docs_article",
     locale: "en-us",
   });
@@ -86,9 +86,21 @@ async function main() {
     const changes: any[] = [];
     let syncCount = 0;
 
-    for (const entry of entries) {
+    let unresolvedCount = 0;
+
+    for (const published of entries) {
+      // `published.entry` is the content at the entry's published version, so
+      // a writer's saved-but-unpublished draft never reaches a PR here — same
+      // guarantee the promotion path relies on.
+      const entry = published.entry;
       const title = entry.title as string;
       const url = entry.url as string;
+
+      if (published.unresolved) {
+        console.log(`  ⚠️  Skipping ${title || published.uid}: could not resolve published version`);
+        unresolvedCount++;
+        continue;
+      }
 
       if (!title || !url) {
         console.log(`  ⚠️  Skipping entry without title/url`);
@@ -118,18 +130,24 @@ async function main() {
       changes.push({
         filePath: path.relative(repoRoot, fullPath),
         url: url,
-        updatedByName: (entry.updated_by as any)?.name || "Unknown",
+        updatedByName: getUserName(entry.updated_by as string | undefined),
         updatedAt: entry.updated_at || new Date().toISOString(),
       });
 
       syncCount++;
     }
 
-    // Write summary JSON for the workflow to use
-    const summaryPath = path.join(__dirname, ".cms-pull-summary.json");
+    // Write summary JSON for the workflow to use. __dirname is tools/cs-sync/src
+    // (this script runs via `tsx src/...ts`), but the workflow reads the summary
+    // relative to tools/cs-sync/ — write one level up so it's actually found.
+    const summaryPath = path.join(__dirname, "..", ".cms-pull-summary.json");
     fs.writeFileSync(summaryPath, JSON.stringify(changes, null, 2), "utf-8");
 
-    console.log(`\n✅ Sync complete: ${syncCount} entries synced\n`);
+    console.log(`\n✅ Sync complete: ${syncCount} entries synced`);
+    if (unresolvedCount > 0) {
+      console.log(`   🛑 ${unresolvedCount} skipped: published version unreadable — run \`npm run verify-publish-details\``);
+    }
+    console.log("");
   } catch (error) {
     console.error("❌ Error during sync:", error instanceof Error ? error.message : error);
     process.exit(1);
