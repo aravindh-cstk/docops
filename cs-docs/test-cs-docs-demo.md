@@ -1,5 +1,6 @@
 ---
 title: Test CS Docs Demo
+description: Test documentation entry to verify Git → Sandbox sync workflow (TC-002) with correct content type mapping.
 url: /administration/test-cs-docs-demo
 doc_type: guide
 marker: Testing
