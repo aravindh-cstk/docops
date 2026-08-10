@@ -55,7 +55,11 @@ export const SANDBOX_METADATA_FIELDS = [
  *   authored content.
  *
  * `locale` and `tags` are deliberately NOT here — they are real authored data
- * and a change to either should promote.
+ * and a change to either should promote. The one exception is the
+ * `sandbox-uid-*` tag itself: it is promotion bookkeeping that only ever
+ * exists on the Prod side, so contentsEqual strips it out of both sides
+ * before comparing rather than adding it here (stripFields only drops whole
+ * top-level fields, it can't remove one element out of an array field).
  */
 export const DIFF_IGNORE_FIELDS = [
   ...SANDBOX_METADATA_FIELDS,
@@ -69,6 +73,35 @@ export const DIFF_IGNORE_FIELDS = [
   "_applied_variants",
   "ACL",
 ] as const;
+
+/** Prefix for the Prod-only tag recording which Sandbox entry a Prod entry came from. */
+export const SANDBOX_UID_TAG_PREFIX = "sandbox-uid-";
+
+export function sandboxUidTag(uid: string): string {
+  return `${SANDBOX_UID_TAG_PREFIX}${uid}`;
+}
+
+/** Reads the sandbox-uid-<uid> tag off an entry's tags array, or null if absent. */
+export function extractSandboxUidFromTags(tags: unknown): string | null {
+  if (!Array.isArray(tags)) return null;
+  for (const tag of tags) {
+    if (typeof tag === "string" && tag.startsWith(SANDBOX_UID_TAG_PREFIX)) {
+      const uid = tag.slice(SANDBOX_UID_TAG_PREFIX.length);
+      return uid.length > 0 ? uid : null;
+    }
+  }
+  return null;
+}
+
+/**
+ * Returns a new tags array with this entry's sandbox-uid tag set, added if
+ * absent or replacing a stale one if present. Never mutates the input array.
+ */
+export function withSandboxUidTag(tags: unknown, sandboxUid: string): string[] {
+  const existing = Array.isArray(tags) ? tags.filter((t): t is string => typeof t === "string") : [];
+  const withoutStale = existing.filter((t) => !t.startsWith(SANDBOX_UID_TAG_PREFIX));
+  return [...withoutStale, sandboxUidTag(sandboxUid)];
+}
 
 /**
  * Sorts object keys recursively so two entries with the same content but
@@ -103,10 +136,18 @@ export function stripMetadataFields(entry: ContentstackEntry): Record<string, un
   return stripFields(entry, SANDBOX_METADATA_FIELDS);
 }
 
+function withoutSandboxUidTag(entry: ContentstackEntry): ContentstackEntry {
+  if (!Array.isArray(entry.tags)) return entry;
+  const filtered = (entry.tags as unknown[]).filter(
+    (t) => !(typeof t === "string" && t.startsWith(SANDBOX_UID_TAG_PREFIX)),
+  );
+  return { ...entry, tags: filtered };
+}
+
 /** Compare authored content only, ignoring cross-stack CMA bookkeeping. */
 export function contentsEqual(a: ContentstackEntry, b: ContentstackEntry): boolean {
-  const left = JSON.stringify(canonicalize(stripFields(a, DIFF_IGNORE_FIELDS)));
-  const right = JSON.stringify(canonicalize(stripFields(b, DIFF_IGNORE_FIELDS)));
+  const left = JSON.stringify(canonicalize(stripFields(withoutSandboxUidTag(a), DIFF_IGNORE_FIELDS)));
+  const right = JSON.stringify(canonicalize(stripFields(withoutSandboxUidTag(b), DIFF_IGNORE_FIELDS)));
   return left === right;
 }
 

@@ -53,6 +53,15 @@ const PRODUCT_CONFIG: Record<string, ProductConfig> = {
     sandboxBreadcrumbUid: "bltc6c549bf342fa12b",
     prodBreadcrumbUid: "blt4e390ab8adbc5b66",
   },
+  // Confirmed live against both stacks: at url "/headless-cms" both stacks
+  // have two navigation entries (also titled "How-to Guides"), only the one
+  // titled "Headless CMS" is the right breadcrumb target, url alone is not
+  // unique here (also true for Administration and Marketplace).
+  "headless-cms": {
+    marker: "Headless CMS",
+    sandboxBreadcrumbUid: "blt5e26f58d8f4f63ed",
+    prodBreadcrumbUid: "blt106cf6f243420c40",
+  },
 };
 
 /** Null means "not verified yet", callers must skip, not guess. */

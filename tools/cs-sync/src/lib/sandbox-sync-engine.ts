@@ -7,6 +7,12 @@ import {
   resolveProductConfig,
   docTypeMapsToDocsArticle,
 } from "./content-type-mappings/docs-article.js";
+import {
+  faqContainerSlugFromPath,
+  resolveFaqContainer,
+  rebuildFaqsSectionFromFolder,
+  type ExistingFaqsSection,
+} from "./content-type-mappings/product-faqs.js";
 import { parseDocContent, parseDocFile, extractH1, type ParsedDoc } from "../parser.js";
 import { markdownToHtml } from "../transform.js";
 import { processImagesInHtml, rewriteMarkdownImages } from "../assets.js";
@@ -54,11 +60,24 @@ export async function runSync(
   afterSha: string,
   opts: { dryRun?: boolean } = {},
 ): Promise<SyncResult[]> {
-  const changes = getDocChanges(
+  const allChanges = getDocChanges(
     config.repoRoot,
     config.CS_DOCS_ROOT,
     beforeSha,
     afterSha,
+  );
+
+  // product_faqs_2026 is many-files-to-one-entry, the opposite of
+  // docs_article's 1:1 shape. A file under troubleshooting-and-faqs/ never
+  // goes through the per-file docs_article path below, instead every
+  // distinct container touched by this diff gets rebuilt whole from
+  // everything currently on disk under it, once, regardless of how many of
+  // its files changed.
+  const changes = allChanges.filter(
+    (c) => faqContainerSlugFromPath(c.relativePath, config.CS_DOCS_ROOT) === null,
+  );
+  const faqChanges = allChanges.filter(
+    (c) => faqContainerSlugFromPath(c.relativePath, config.CS_DOCS_ROOT) !== null,
   );
 
   const ctx: RewriteCtx = {
@@ -91,6 +110,17 @@ export async function runSync(
     }
   }
 
+  const affectedContainers = new Set(
+    faqChanges
+      .map((c) => faqContainerSlugFromPath(c.relativePath, config.CS_DOCS_ROOT))
+      .filter((slug): slug is string => slug !== null),
+  );
+  for (const containerSlug of affectedContainers) {
+    const result = await processFaqContainer(config, client, containerSlug, ctx.dryRun);
+    results.push(result);
+    logResult(result);
+  }
+
   // Delete local image files now uploaded to the CDN (once, after every doc that
   // referenced them has been rewritten). Guarded to the repo for safety.
   if (!ctx.dryRun) {
@@ -108,6 +138,60 @@ export async function runSync(
   }
 
   return results;
+}
+
+/**
+ * Rebuilds one product_faqs_2026 container entry's whole faqs_section array
+ * from everything currently on disk under its folder, and writes it back.
+ * Section headings and per-item block uids are preserved via the CURRENT
+ * live entry (fetched fresh here, not cached from before this run), a
+ * brand new section with no matching uid gets a title-cased fallback
+ * heading, see product-faqs.ts for the full matching logic.
+ */
+async function processFaqContainer(
+  config: AppConfig,
+  client: ContentstackClient,
+  containerSlug: string,
+  dryRun: boolean,
+): Promise<SyncResult> {
+  const relPath = `${config.CS_DOCS_ROOT}/headless-cms/troubleshooting-and-faqs/${containerSlug}`;
+  const container = resolveFaqContainer(containerSlug);
+  if (!container) {
+    return { path: relPath, action: "skipped" };
+  }
+
+  const containerDir = path.join(config.repoRoot, relPath);
+
+  try {
+    const existing = await client.getEntryOfType("product_faqs_2026", container.sandboxUid);
+    if (!existing) {
+      return { path: relPath, action: "skipped", error: `product_faqs_2026 entry ${container.sandboxUid} not found` };
+    }
+
+    const existingSections: ExistingFaqsSection[] = Array.isArray(existing.faqs_section)
+      ? (existing.faqs_section as ExistingFaqsSection[])
+      : [];
+    const rebuiltSections = rebuildFaqsSectionFromFolder(containerDir, existingSections);
+
+    if (dryRun) {
+      const totalFaqs = rebuiltSections.reduce((sum, s) => sum + s.faqs.length, 0);
+      console.log(`  [dry-run] would rebuild ${containerSlug}: ${rebuiltSections.length} sections, ${totalFaqs} faqs`);
+      return { path: relPath, action: "updated", uid: container.sandboxUid };
+    }
+
+    await client.updateEntryOfType("product_faqs_2026", container.sandboxUid, {
+      ...existing,
+      faqs_section: rebuiltSections,
+    });
+
+    return { path: relPath, action: "updated", uid: container.sandboxUid };
+  } catch (error) {
+    return {
+      path: relPath,
+      action: "skipped",
+      error: error instanceof Error ? error.message : String(error),
+    };
+  }
 }
 
 /**

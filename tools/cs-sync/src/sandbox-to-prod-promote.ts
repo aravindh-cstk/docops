@@ -5,9 +5,11 @@
  *
  * CRITICAL: This is the ONLY way to create or update entries on Production CMS.
  *
- * Matches published Sandbox entries to Prod by url. Creates a new Prod entry
- * if none exists yet; updates the existing one in place otherwise. Either way,
- * publishes to Staging only. Production environment is NEVER touched.
+ * Matches published Sandbox entries to Prod by a sandbox-uid-<uid> tag
+ * stamped on the Prod entry, falling back to url matching only for entries
+ * promoted before this tag existed. Creates a new Prod entry if none exists
+ * yet; updates the existing one in place otherwise. Either way, publishes to
+ * Staging only. Production environment is NEVER touched.
  *
  * Triggered by: sandbox-auto-promote-csdocs.yml (cron) and
  * sandbox-to-prod-promote-csdocs.yml (manual workflow_dispatch)
@@ -17,15 +19,17 @@
  * ✅ Only promotes the *published version* of an entry, never an unpublished draft
  * ✅ Only publishes to Staging environment
  * ✅ Production environment remains untouched
- * ✅ Matches by url — creates if new, updates in place if already promoted
+ * ✅ Matches by sandbox-uid tag (url as legacy fallback) — creates if new,
+ *    updates in place if already promoted, even if the entry moved folders
  * ✅ Skips entries whose content hasn't changed since the last promotion
  * ✅ Refuses to promote (rather than guessing) when the published version
  *    cannot be read out of publish_details
  */
 
+import { fileURLToPath } from "node:url";
 import { SandboxClient } from "./lib/sandbox-client.js";
 import { ProdPromoteClient, PromotionResult, ContentstackEntry } from "./lib/prod-promote-client.js";
-import { contentsEqual, PUBLISH_SHAPE_HELP } from "./lib/entry-content.js";
+import { contentsEqual, PUBLISH_SHAPE_HELP, sandboxUidTag, withSandboxUidTag } from "./lib/entry-content.js";
 import { linkNewEntryIntoNav, PRODUCT_NAVIGATION_UID } from "./lib/left-nav-linker.js";
 import { createReleaseForPromotion, extractPrNumberFromTags } from "./lib/release-manager.js";
 import { remapBreadcrumbForProd } from "./lib/content-type-mappings/docs-article.js";
@@ -75,7 +79,7 @@ async function afterCreate(
   }
 }
 
-interface Config {
+export interface Config {
   sandboxApiKey: string;
   sandboxToken: string;
   prodApiKey: string;
@@ -84,8 +88,8 @@ interface Config {
   entryUids?: string[];
 }
 
-async function loadConfig(): Promise<Config> {
-  const stackType = process.env.STACK_TYPE as "apidocs" | "csdocs";
+export async function loadConfig(stackTypeOverride?: "apidocs" | "csdocs"): Promise<Config> {
+  const stackType = stackTypeOverride ?? (process.env.STACK_TYPE as "apidocs" | "csdocs");
 
   if (!stackType) {
     throw new Error("STACK_TYPE environment variable not set (apidocs|csdocs)");
@@ -198,8 +202,13 @@ async function main() {
       }
 
       let existingProdEntry: ContentstackEntry | null;
+      let matchedByUrlFallback = false;
       try {
-        existingProdEntry = await prodClient.findEntryByUrl(sandboxEntry.url);
+        existingProdEntry = await prodClient.findEntryByTag(sandboxUidTag(uid));
+        if (!existingProdEntry) {
+          existingProdEntry = await prodClient.findEntryByUrl(sandboxEntry.url);
+          matchedByUrlFallback = existingProdEntry !== null;
+        }
       } catch (error) {
         console.log(`     ❌ Error looking up Prod entry: ${error instanceof Error ? error.message : error}`);
         results.push({
@@ -211,6 +220,16 @@ async function main() {
         });
         continue;
       }
+
+      if (matchedByUrlFallback) {
+        console.log(`     ℹ️  Matched by url (legacy, pre-tag) — Prod uid ${existingProdEntry!.uid} will be tagged`);
+      }
+
+      // Stamp/refresh the sandbox-uid tag on whatever gets written to Prod
+      // this iteration, whether matched by tag already or just adopted via
+      // the url fallback. This is what lets a future run find this same
+      // Prod entry even after this Sandbox entry's url changes.
+      sandboxEntry.tags = withSandboxUidTag(sandboxEntry.tags, uid);
 
       try {
         if (!existingProdEntry) {
@@ -293,7 +312,9 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error("Fatal error:", error);
-  process.exit(1);
-});
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main().catch((error) => {
+    console.error("Fatal error:", error);
+    process.exit(1);
+  });
+}

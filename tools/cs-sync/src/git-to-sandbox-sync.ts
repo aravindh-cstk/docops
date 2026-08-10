@@ -34,15 +34,23 @@ import { findPullRequestsForCommit } from "./lib/github-api.js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
- * "cs-docs/assets/overview/foo.md" with docsRoot "cs-docs" -> "overview".
- * Null for anything not nested two levels deep (product/subsection/file),
- * left-nav-linker.ts treats a missing tag as "don't guess, don't link".
+ * "cs-docs/assets/overview/foo.md" with docsRoot "cs-docs" -> ["overview"].
+ * "cs-docs/headless-cms/introduction/overview/foo.md" -> ["introduction", "overview"].
+ * Every intermediate folder between the product folder and the file itself,
+ * in order, this is the chain left-nav-linker.ts walks through nav_section
+ * and (for deeper products) nested links_2026 entries to find where the
+ * entry belongs. Null for anything not nested at least two levels deep
+ * (product/subsection/file), left-nav-linker.ts treats a missing tag as
+ * "don't guess, don't link".
  */
-function subsectionFolderFromPath(relativePath: string, docsRoot: string): string | null {
+function subsectionChainFromPath(relativePath: string, docsRoot: string): string[] | null {
   const prefix = `${docsRoot}/`;
   const stripped = relativePath.startsWith(prefix) ? relativePath.slice(prefix.length) : relativePath;
   const segments = stripped.split("/");
-  return segments.length >= 3 ? segments[1]! : null;
+  // segments[0] is the product folder, the last segment is the filename,
+  // everything between is the subsection chain.
+  const chain = segments.slice(1, -1);
+  return chain.length > 0 ? chain : null;
 }
 
 async function runCsDocsSync(repoRoot: string): Promise<void> {
@@ -68,9 +76,9 @@ async function runCsDocsSync(repoRoot: string): Promise<void> {
   const created = results.filter((r) => r.action === "created" && r.uid);
 
   for (const r of created) {
-    const subsection = subsectionFolderFromPath(r.path, config.CS_DOCS_ROOT);
-    if (subsection) {
-      await client.addTag(r.uid!, `nav-subsection-${subsection}`).catch((error) => {
+    const chain = subsectionChainFromPath(r.path, config.CS_DOCS_ROOT);
+    if (chain) {
+      await client.addTag(r.uid!, `nav-subsection-${chain.join("/")}`).catch((error) => {
         console.warn(`Could not tag ${r.path} with its nav subsection: ${error instanceof Error ? error.message : error}`);
       });
     }

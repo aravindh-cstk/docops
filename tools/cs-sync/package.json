@@ -13,6 +13,7 @@
     "cms-pull-prod": "tsx src/cms-pull-prod.ts",
     "git-to-sandbox": "tsx src/git-to-sandbox-sync.ts",
     "sandbox-promote": "tsx src/sandbox-to-prod-promote.ts",
+    "prod-orphan-report": "tsx src/prod-orphan-report.ts",
     "verify-publish-details": "tsx src/verify-publish-details.ts",
     "image-inject": "tsx src/image-inject.ts",
     "rebuild-stubs": "tsx src/rebuild-stubs.ts",

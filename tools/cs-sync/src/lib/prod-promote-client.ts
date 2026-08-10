@@ -7,7 +7,7 @@
  * Allowed operations:
  * ✅ Clone entry from Sandbox to Prod, or update an existing Prod entry by url
  * ✅ Publish to Staging environment
- * ✅ Query Prod entries (lookup by url, listing published entries)
+ * ✅ Query Prod entries (lookup by url, lookup by tag, listing published entries)
  *
  * Forbidden operations:
  * ❌ Publishing to Production environment
@@ -135,6 +135,36 @@ export class ProdPromoteClient {
   }
 
   /**
+   * Find a Prod entry by exact tag match.
+   *
+   * Mirrors findEntryByUrl: throws rather than guessing if more than one
+   * entry matches. The query shape for matching a value inside an array
+   * field ({ tags: tag }) hasn't been confirmed against the live CMA the way
+   * findEntryByUrl's scalar-field query has — smoke-test this against a real
+   * stack before trusting it in the promotion loop.
+   */
+  async findEntryByTag(tag: string): Promise<ContentstackEntry | null> {
+    const query = JSON.stringify({ tags: tag });
+    const path = `${this.entriesPath()}?query=${encodeURIComponent(query)}&locale=${this.config.locale}`;
+
+    const response = await this.request("GET", path);
+    if (!response) return null;
+
+    const data = JSON.parse(response) as { entries?: ContentstackEntry[] };
+    const entries = data.entries ?? [];
+
+    if (entries.length > 1) {
+      throw new Error(
+        `Ambiguous tag match in Prod: "${tag}" matched ${entries.length} entries (uids: ${entries
+          .map((e) => e.uid)
+          .join(", ")}) — aborting to avoid guessing which to update`,
+      );
+    }
+
+    return entries[0] ?? null;
+  }
+
+  /**
    * List all Prod entries published to the given environment.
    *
    * Used by the Prod → GitHub pull script to detect direct CMS edits.
@@ -223,6 +253,23 @@ export class ProdPromoteClient {
     if (!response) return null;
     const data = JSON.parse(response) as { entry?: ContentstackEntry };
     return data.entry ?? null;
+  }
+
+  /**
+   * Create an entry of any content type (e.g. a links_2026 intermediate nav
+   * node). Distinct from cloneEntryToProd, which is docs_article-specific
+   * and expects a Sandbox source entry to strip metadata from.
+   */
+  async createEntryOfType(
+    contentTypeUid: string,
+    entry: Record<string, unknown>,
+  ): Promise<ContentstackEntry> {
+    const path = `/v3/content_types/${contentTypeUid}/entries?locale=${this.config.locale}`;
+    const response = await this.request("POST", path, JSON.stringify({ entry }));
+    if (!response) throw new Error(`Failed to create ${contentTypeUid} entry`);
+    const data = JSON.parse(response) as { entry?: ContentstackEntry };
+    if (!data.entry) throw new Error(`No entry returned creating ${contentTypeUid} entry`);
+    return data.entry;
   }
 
   /** Publish an entry of any content type to Staging (same as publishToStaging, generalized). */

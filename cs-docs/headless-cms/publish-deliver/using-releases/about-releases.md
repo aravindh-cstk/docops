@@ -1,0 +1,40 @@
+---
+title: "About Releases"
+description: "Simplify your content deployment with Contentstack's Releases, enabling seamless publishing of entries and assets across environments efficiently."
+url: /headless-cms/about-releases
+---
+
+# About Releases
+
+## About Releases
+
+A Release is a collection of [entries](/docs/headless-cms/about-entries/) and [assets](/docs/headless-cms/about-assets/) that you deploy together to a specific environment. Instead of [publishing](/docs/headless-cms/publish-an-entry/) or [unpublishing](/docs/headless-cms/unpublish-an-entry/) items individually, you can group related content and deploy it in a single action.
+
+Managing updates such as product launches, press releases, or promotions often involves multiple content items. Handling each item separately increases effort and the risk of inconsistencies. Releases help you coordinate these updates by grouping related content and deploying it together.
+
+![CMS-Releases](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0fc850dcf98e1c50/69f31131a495467da13f1f09/CMS-Releases.png)
+
+**Note:** Releases created within a branch are specific to that branch. For more information, refer to the [Branch-specific Modules](/docs/headless-cms/branch-specific-modules) documentation.
+
+## When to Use Releases
+
+Use Releases when you need to:
+
+-   Publish multiple entries and assets together
+-   Coordinate time-sensitive updates
+-   Maintain consistency across related content
+-   Reduce manual publishing effort
+
+## How Releases Work
+
+A typical release workflow includes:
+
+1.  Create a release
+2.  Add entries and assets to the release
+3.  Deploy the release to an environment
+
+This workflow helps you manage related updates as a single unit, ensuring consistent publishing across all items.
+
+**Additional Resource:** To learn how to add entries and assets to a release, refer to the [Add items to a release](/docs/headless-cms/add-entry-asset-to-a-release) and [Bulk add to release](/docs/headless-cms/bulk-add-to-release) documentation.
+
+Use Releases to manage content updates more efficiently. By grouping related items, you can deploy changes faster and maintain consistency across environments.

@@ -18,6 +18,7 @@ tools/cs-sync/.image-source-coverage.json
 tools/cs-sync/.image-inject-report.json
 tools/cs-sync/.cms-pull-summary.json
 tools/cs-sync/.cms-pull-prod-summary.json
+tools/cs-sync/prod-orphan-report.csv
 
 # OS files
 .DS_Store

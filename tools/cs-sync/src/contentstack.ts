@@ -128,6 +128,39 @@ export class ContentstackClient {
     return data.entry;
   }
 
+  /** Get an entry by uid from a content type other than this client's own (e.g. product_faqs_2026). */
+  async getEntryOfType(contentTypeUid: string, uid: string): Promise<ContentstackEntry | null> {
+    const path = `${this.config.baseUrl}/content_types/${contentTypeUid}/entries/${uid}?locale=${this.config.CS_LOCALE}`;
+    const res = await this.fetchWithRetry(path, { headers: this.headers() });
+    if (!res.ok) {
+      if (res.status === 404) return null;
+      const text = await res.text();
+      throw new Error(`getEntryOfType(${contentTypeUid}) failed (${res.status}): ${text}`);
+    }
+    const data = (await res.json()) as { entry?: ContentstackEntry };
+    return data.entry ?? null;
+  }
+
+  /** Update an entry by uid, for content types other than this client's own. */
+  async updateEntryOfType(
+    contentTypeUid: string,
+    uid: string,
+    entry: ContentstackEntry,
+  ): Promise<ContentstackEntry> {
+    const path = `${this.config.baseUrl}/content_types/${contentTypeUid}/entries/${uid}?locale=${this.config.CS_LOCALE}`;
+    const res = await this.fetchWithRetry(path, {
+      method: "PUT",
+      headers: this.headers(),
+      body: JSON.stringify({ entry }),
+    });
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`updateEntryOfType(${contentTypeUid}) failed (${res.status}): ${text}`);
+    }
+    const data = (await res.json()) as { entry: ContentstackEntry };
+    return data.entry;
+  }
+
   /**
    * Adds a tag to an entry's existing tags array, fetching the full entry
    * first so the PUT round-trips every other field unchanged rather than

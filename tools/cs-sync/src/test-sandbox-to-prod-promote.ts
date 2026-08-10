@@ -96,10 +96,12 @@ async function publishInSandbox(config: TestConfig, uid: string): Promise<void> 
         api_key: config.sandboxApiKey,
         authorization: config.sandboxToken,
       },
+      // Environments/locales must be nested inside `entry`, not sibling keys —
+      // see the identical fix (and its rationale) in
+      // ProdPromoteClient.publishToStaging in prod-promote-client.ts. The
+      // sibling-key shape 422s against the live CMA every time.
       body: JSON.stringify({
-        entry: {},
-        locales: [LOCALE],
-        environments: [config.testEnvironment],
+        entry: { locales: [LOCALE], environments: [config.testEnvironment] },
       }),
     },
   );
@@ -116,6 +118,29 @@ async function deleteEntry(apiKey: string, token: string, uid: string): Promise<
   if (!res.ok && res.status !== 404) {
     console.warn(`  [cleanup] DELETE entry ${uid} → ${res.status}`);
   }
+}
+
+// Simulates an entry promoted before the sandbox-uid tag existed — created
+// straight in Prod, bypassing cloneEntryToProd (which would tag it
+// automatically), so it has no tags at all.
+async function createEntryDirectlyInProd(config: TestConfig, entry: { title: string; url: string }): Promise<string> {
+  const res = await fetch(
+    `https://api.contentstack.io/v3/content_types/${CONTENT_TYPE}/entries?locale=${LOCALE}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        api_key: config.prodApiKey,
+        authorization: config.prodToken,
+      },
+      body: JSON.stringify({ entry }),
+    },
+  );
+  if (!res.ok) {
+    throw new Error(`Failed to create entry directly in Prod: HTTP ${res.status} ${await res.text()}`);
+  }
+  const data = (await res.json()) as { entry: { uid: string } };
+  return data.entry.uid;
 }
 
 function runPromotion(entryUid: string): string {
@@ -155,6 +180,8 @@ const prodClient = new ProdPromoteClient({
 
 let sandboxUid: string | undefined;
 let prodUid: string | undefined;
+let sandboxUid2: string | undefined;
+let prodUid2: string | undefined;
 
 try {
   // ── p1: first promotion of a newly-published Sandbox entry creates a Prod entry ──
@@ -228,9 +255,104 @@ try {
 
     return `updated in place, version ${beforeVersion} → ${prodEntry._version}, still exactly one Prod entry`;
   });
+
+  // ── p4: moving the Sandbox entry to a new url updates the SAME Prod entry, no duplicate ──
+
+  const MOVED_URL = `${TEST_URL}-moved`;
+
+  await test("p4", "Sandbox entry moved (new url, same uid) → same Prod entry updated, no duplicate", async () => {
+    if (!sandboxUid || !prodUid) throw new Error("p1 must pass first — no sandbox/prod entry to move");
+
+    await sandboxClient.updateEntry(sandboxUid, {
+      title: "[Test] Promotion fixture (moved)",
+      url: MOVED_URL,
+    });
+    await publishInSandbox(config, sandboxUid);
+
+    const output = runPromotion(sandboxUid);
+    if (!/Updated in Prod/i.test(output)) {
+      throw new Error(`Expected an "Updated in Prod" log, got:\n${output}`);
+    }
+
+    const oldUrlEntry = await prodClient.findEntryByUrl(TEST_URL);
+    if (oldUrlEntry) throw new Error(`Expected no Prod entry left at the old url ${TEST_URL}, found uid ${oldUrlEntry.uid}`);
+
+    const movedEntry = await prodClient.findEntryByUrl(MOVED_URL);
+    if (!movedEntry) throw new Error(`Expected exactly one Prod entry at ${MOVED_URL}, found none`);
+    if (movedEntry.uid !== prodUid) {
+      throw new Error(`Expected the SAME Prod uid ${prodUid} to be reused, got a different uid ${movedEntry.uid} (this is the bug this fix targets)`);
+    }
+    const tags = Array.isArray(movedEntry.tags) ? (movedEntry.tags as string[]) : [];
+    if (!tags.includes(`sandbox-uid-${sandboxUid}`)) {
+      throw new Error(`Expected Prod entry to carry tag "sandbox-uid-${sandboxUid}", got tags: ${JSON.stringify(tags)}`);
+    }
+
+    return `moved to ${MOVED_URL}, same Prod uid ${prodUid} reused, tagged correctly`;
+  });
+
+  // ── p5: re-running promotion after the move, with no further change, still skips ──
+
+  await test("p5", "re-running promotion after a move with no further change → still skips, tag doesn't defeat the diff", async () => {
+    if (!sandboxUid) throw new Error("p4 must pass first — no moved entry to re-promote");
+
+    const beforeVersion = (await prodClient.findEntryByUrl(MOVED_URL))?._version;
+
+    const output = runPromotion(sandboxUid);
+    if (!/no changes detected/i.test(output)) {
+      throw new Error(`Expected a "no changes detected" skip log despite the tag asymmetry, got:\n${output}`);
+    }
+
+    const prodEntry = await prodClient.findEntryByUrl(MOVED_URL);
+    if (!prodEntry) throw new Error("Prod entry disappeared after the no-op run");
+    if (prodEntry._version !== beforeVersion) {
+      throw new Error(`Expected _version to stay at ${beforeVersion}, got ${prodEntry._version} — contentsEqual is not correctly ignoring the sandbox-uid tag`);
+    }
+
+    return "no duplicate, version unchanged despite the Prod-only tag";
+  });
+
+  // ── p6: a legacy (pre-tag) Prod entry gets adopted via the url fallback ──
+
+  const LEGACY_URL = `/test/promote-fixture-legacy-${RUN_ID}`;
+
+  await test("p6", "legacy Prod entry with no tag yet → adopted via url fallback, not duplicated", async () => {
+    prodUid2 = await createEntryDirectlyInProd(config, {
+      title: "[Test] Legacy fixture (pre-tag)",
+      url: LEGACY_URL,
+    });
+
+    const entry = await sandboxClient.createEntry({
+      title: "[Test] Legacy fixture (from sandbox)",
+      url: LEGACY_URL,
+    });
+    sandboxUid2 = entry.uid;
+    await publishInSandbox(config, sandboxUid2);
+
+    const output = runPromotion(sandboxUid2);
+    if (!/Matched by url \(legacy/i.test(output)) {
+      throw new Error(`Expected a "Matched by url (legacy...)" adoption log, got:\n${output}`);
+    }
+    if (!/Updated in Prod/i.test(output)) {
+      throw new Error(`Expected the adoption to go through updateEntry (not a create), got:\n${output}`);
+    }
+
+    const prodEntry = await prodClient.findEntryByUrl(LEGACY_URL);
+    if (!prodEntry) throw new Error(`Expected exactly one Prod entry at ${LEGACY_URL}, found none`);
+    if (prodEntry.uid !== prodUid2) {
+      throw new Error(`Expected the legacy entry ${prodUid2} to be adopted in place, got a different uid ${prodEntry.uid} (a duplicate was created instead)`);
+    }
+    const tags = Array.isArray(prodEntry.tags) ? (prodEntry.tags as string[]) : [];
+    if (!tags.includes(`sandbox-uid-${sandboxUid2}`)) {
+      throw new Error(`Expected the adopted entry to now carry tag "sandbox-uid-${sandboxUid2}", got tags: ${JSON.stringify(tags)}`);
+    }
+
+    return `adopted legacy Prod entry ${prodUid2}, now tagged, no duplicate`;
+  });
 } finally {
   if (sandboxUid) await deleteEntry(config.sandboxApiKey, config.sandboxToken, sandboxUid);
   if (prodUid) await deleteEntry(config.prodApiKey, config.prodToken, prodUid);
+  if (sandboxUid2) await deleteEntry(config.sandboxApiKey, config.sandboxToken, sandboxUid2);
+  if (prodUid2) await deleteEntry(config.prodApiKey, config.prodToken, prodUid2);
 }
 
 // ── Summary ───────────────────────────────────────────────────────────────────
