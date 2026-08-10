@@ -1,7 +1,7 @@
 ---
-title: "[Platform Discovery] - About Platform Discovery"
+title: "[Platform Discovery] - Test About Platform Discovery"
 description: About Platform Discovery
-url: https://www.contentstack.com/docs/administration/about-platform-discovery
+url: https://www.contentstack.com/docs/administration/test-about-platform-discovery
 product: Contentstack
 doc_type: administration-guide
 audience:
@@ -11,7 +11,7 @@ version: unknown
 last_updated: 2026-05-15
 ---
 
-# [Platform Discovery] - About Platform Discovery
+# [Platform Discovery] - Test About Platform Discovery
 
 This page explains what Platform Discovery is in Contentstack, what information the dashboard provides, and how to access and interpret feature status indicators. It is intended for administrators and teams evaluating feature adoption across a Contentstack organization, and should be used when assessing current usage, identifying adoption gaps, or planning platform expansion.
 
