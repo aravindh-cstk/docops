@@ -17,49 +17,58 @@ This guide walks through the complete documentation workflow from cloning the re
 The documentation flows through three interconnected environments:
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                    docops Sync Workflow Architecture                         │
-│                     Git ↔ Sandbox ↔ Production Flow                         │
-└─────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────┐       ┌───────────────────┐       ┌──────────────────┐
+│  GIT REPOSITORY   │       │  SANDBOX STACK    │       │ PRODUCTION STACK │
+│                   │       │                   │       │                  │
+│ Markdown Files    │       │ Draft Entries     │       │ Published Entries│
+│ - api-docs/       │       │ (Not Published)   │       │ (On Staging)     │
+│ - cs-docs/        │       │                   │       │                  │
+│                   │       │ Content Type:     │       │ Content Type:    │
+│ YAML Frontmatter: │       │ - api_requests    │       │ - api_requests   │
+│ - title           │       │ - docs_article    │       │ - docs_article   │
+│ - url             │       │                   │       │                  │
+│ - doc_type        │       │ Field Mapping:    │       │ Field Mapping:   │
+│                   │       │ - title → title   │       │ - title → title  │
+│ PR Workflow       │       │ - url → url       │       │ - url → url      │
+│ Lint checks       │       │ - body → content  │       │ - body → content │
+│                   │       │                   │       │                  │
+└───────────────────┘       └───────────────────┘       └──────────────────┘
+         │                           │                           │
+         │                           │                           │
+         │ (1) PR Merge              │ (3) dev-published          │ (5) Live
+         │ gh-to-sandbox-sync        │ sandbox-to-prod            │ Content
+         │                           │                           │ Ready
+         └──────────────────────────▶│◀──────────────────────────┘
+                                     │
+                                     │ (2) Reverse Sync
+                                     │ sandbox-to-git-sync
+                                     │ (creates PR for updates)
+                                     │
+                                     │ (4) Rollback/Update
+                                     │ prod-to-sandbox
+                                     │
+                                     └──────────────────────────▶ Git (PR)
 
-   ┌──────────────────┐         ┌──────────────────┐         ┌──────────────────┐
-   │ Git Repository   │         │ Sandbox Stack    │         │Production Stack  │
-   └──────────────────┘         └──────────────────┘         └──────────────────┘
-           │                             │                             │
-           │                             │                             │
-      ┌────▼────────┐            ┌─────▼──────┐            ┌────────▼─────┐
-      │ Markdown     │            │ CMS Entries│            │Published on  │
-      │ Files        │            │ (Draft)    │            │Staging       │
-      │ - api-docs/  │            │            │            │              │
-      │ - cs-docs/   │            │Mapped &    │            │Ready for     │
-      │              │            │Verified    │            │review        │
-      └─────────────┘            └────────────┘            └──────────────┘
-           │                             │                             │
-           │                             │                             │
-      ┌────▼──────────────┐      ┌─────▼────────┐            ┌────────▼─────┐
-      │ YAML Frontmatter   │      │ Field Mapping│            │Live content  │
-      │ title, url,        │      │ title, url,  │            │              │
-      │ doc_type           │      │ body         │            │Final         │
-      │                    │      │              │            │validation    │
-      └────────────────────┘      └──────────────┘            └──────────────┘
-           │                             │                             │
-           │                             │                             │
-      ┌────▼──────────────┐      ┌─────▼────────┐            ┌────────▼─────┐
-      │ PR Workflow        │      │Testing Ground│            │Delivery      │
-      │ Lint checks        │      │Verify &      │            │API endpoints │
-      │ Content validation │      │review content│            │ready         │
-      └────────────────────┘      └──────────────┘            └──────────────┘
-
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ Forward Sync: Git → Sandbox → Production                                    │
-│ Reverse Sync: Sandbox ↔ Git (PR creation), Production → Sandbox (updates)   │
-└─────────────────────────────────────────────────────────────────────────────┘
+WORKFLOW STEPS:
+(1) Push to Git → Create PR → Merge to main
+    ↓
+(2) Auto-sync: Git → Sandbox (creates [DRAFT] entries)
+    ↓
+(3) Verify Sandbox entry is correct & populated
+    ↓
+(4) Publish Sandbox entry to Development environment
+    ↓
+(5) Auto-publish: Sandbox → Production (dev-published)
+    ↓
+(6) Verify Production entry exists and is staged
+    ↓
+Done! ✅
 ```
 
-**Flow:**
-- **Git Repository** → Source of truth (markdown files with YAML frontmatter)
-- **Sandbox Stack** → Testing & validation environment (draft entries)
-- **Production Stack** → Published content ready for delivery
+**Key Points:**
+- **Git** → Source of truth (markdown files with YAML frontmatter + lint checks)
+- **Sandbox** → Testing & validation (draft entries created on PR merge)
+- **Production** → Published content (entries published on dev-published, ready for delivery)
 
 ---
 
