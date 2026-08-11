@@ -27,30 +27,27 @@ This guide walks through the complete documentation workflow from cloning the re
 ### 1.1 Clone the Repo
 
 ```bash
-git clone https://github.com/contentstack/contentstack-docs.git
-cd contentstack-docs
+git clone https://github.com/aravindh-cstk/docops.git
+cd docops
 ```
 
-### 1.2 Verify You Have the Right Folder Structure
+### 1.2 Open the Repository in Your Editor
+
+Open the `docops` directory in **Cursor** or **VS Code**:
 
 ```bash
-ls -la
+code .   # For VS Code
+# or
+cursor . # For Cursor
 ```
-
-Expected folders:
-- `api-docs/` — API documentation
-- `cs-docs/` — CS-Docs (product documentation)
-- `sdk-docs/` — SDK documentation
-- `.github/` — GitHub workflows
-- `tools/` — Sync tools
 
 ---
 
-## Step 2: Delete Non-Relevant PODs (Projects)
+## Step 2: Organize Your Local Directory
 
-Each writer works on **2-3 specific product folders only**. Delete all other pods to keep your local clean.
+Each writer works on **2-3 specific product folders only**. Delete all other folders to keep your local clean. **Do not change the folder structure**, just delete the unwanted project folders.
 
-### 2.1 Identify Your PODs
+### 2.1 Identify Your PODs (Product Folders)
 
 **Example: If you're working on Studio documentation:**
 - Keep: `cs-docs/studio/`
@@ -60,668 +57,262 @@ Each writer works on **2-3 specific product folders only**. Delete all other pod
 - `studio/` — Studio product docs
 - `administration/` — Administration docs
 - `marketplace/` — Marketplace docs
-- `am2.0/` — Accelerated Marketplace 2.0
 - `assets/` — Asset management
 
-### 2.2 Delete Non-Relevant Folders
-
+**Example: Delete non-relevant folders locally**
 ```bash
-# Example: Delete all cs-docs except Studio
+# Keep only Studio, delete others
 cd cs-docs
-rm -rf administration/ marketplace/ am2.0/ assets/
+rm -rf administration/ marketplace/ assets/
 cd ..
 
-# Or keep only your assigned folders
-# Delete api-docs if you're not working on APIs
-rm -rf api-docs sdk-docs
-```
-
-### 2.3 Verify Your Local Structure
-
-```bash
-tree -L 2 cs-docs/  # Shows only your folders
+# Or delete entire api-docs if you're not working on APIs
+rm -rf api-docs
 ```
 
 ---
 
-## Step 3: Get the Development PR Link
+## Step 3: Check Recent PR for Documentation Updates
 
-### 3.1 Ask for (or Find) the Development PR
+### 3.1 Use Claude Chat to Analyze Documentation Needs
 
-**When starting documentation work:**
-- Ask your lead: "What PR should I document?"
-- Or: "Which development PR triggered this feature?"
+Open the integrated Claude chat in your editor and ask:
 
-Development PRs come from various source repos:
-- SDK changes: `github.com/contentstack/developer-solution-docs`
-- Product features: Different team repos
-- API changes: Various development repositories
-
-**Get the PR link** from your lead or team.
-
-Example PR links:
-```
-https://github.com/contentstack/developer-solution-docs/pull/74
-https://github.com/[team-repo]/pull/[PR-number]
-```
-
-### 3.2 Review the PR Changes
-
-1. Open the development PR link in your browser
-2. Go to the "Files changed" tab
-3. Read through all changes and take notes:
-   - Feature name
-   - Changed APIs/fields
-   - New configuration options
-   - Breaking changes
-   - Examples from the PR
-
-### 3.3 Use Claude to Analyze Changes
-
-**Claude Prompt for Change Analysis:**
+**Claude Prompt:**
 
 ```
-I need to create documentation for a feature. Here's the development PR:
+I need to check if documentation has been updated for a recent feature.
 
-PR Link: [Paste the PR link]
-Feature Name: [Feature name]
+Please help me:
+1. Review the recent PR to see if docs have been updated
+2. Compare with https://www.contentstack.com/docs/ to identify gaps
+3. Create a scope document for what needs to be created/updated
 
-Development PR Changes:
-[Copy-paste the key changes from the PR's "Files changed" tab]
+PR Link: [Paste recent PR link]
 
-Current documentation location: cs-docs/studio/ (or your folder)
+For each change:
+- List new docs to be created
+- List existing docs to be updated
+- Specify the contentstack.com/docs/ reference URLs where they should align
 
-What documentation should I:
-1. Create (new docs)?
-2. Update (existing docs)?
-3. Deprecate (old docs)?
-
-For each change, tell me:
-- Doc file name
-- Section to update
-- Type of change (new, update, deprecate)
+Create a scope document summarizing:
+1. New documentation files to create (with filenames)
+2. Existing files to update (with section names)
+3. Alignment with official documentation at contentstack.com/docs/
 ```
+
+### 3.2 Create a Scope of Changes
+
+Based on Claude's analysis, document:
+- **New docs to create:** List file names and paths
+- **Existing docs to update:** List files and sections
+- **Reference URLs:** Links to official docs on contentstack.com/docs/
 
 ---
 
-## Step 3.5: (Optional) Converting Google Docs to Markdown
+## Step 4: Create Documentation with Lint Checks
 
-**If you have already created documentation in Google Docs** (from the previous process), you can convert it to markdown and create a PR using Claude.
+### 4.1 Ask Claude Agent to Create New Documentation
 
-### 3.5.1 Export Your Google Doc
+Use Claude to generate the markdown file:
 
-1. Open your Google Doc: https://docs.google.com/document/d/...
-2. Go to **File** → **Download** → **Markdown (.md)**
-3. Save the file locally
-
-### 3.5.2 Use Claude for Complete Gdoc → Published Workflow
-
-**This single prompt handles EVERYTHING from converting Gdoc to publishing:**
+**Claude Prompt:**
 
 ```
-I have a Google Doc from the previous process that needs to be converted to markdown, 
-committed to a branch, and turned into a PR. Guide me through the complete workflow.
+Create a new markdown documentation file for:
 
-GDOC INFORMATION:
-- Gdoc content (exported as markdown): [Paste exported markdown here]
-- Feature/Product name: [e.g., "Entry Variant Versioning"]
-- Your Jira ticket: TD-XXXX (e.g., TD-5366)
-- Target folder: cs-docs/studio/ (or your folder: cs-docs/administration/, etc.)
-- Your local repo path: /path/to/contentstack-docs
-
-WORKFLOW: I want to go from Gdoc → markdown → branch → commit → PR → publish
-
-Please provide:
-
-1. **MARKDOWN CONVERSION**
-   - Convert this Gdoc to repo-ready markdown with:
-     * YAML frontmatter (title, url, description)
-     * Clean formatting and heading hierarchy (h1 → h2 → h3)
-     * Proper code block formatting (```language)
-     * Kebab-case filename (e.g., feature-overview.md)
-   - Output the complete markdown content
-
-2. **GIT COMMANDS** (step-by-step, copy-paste ready)
-   - Create a new branch: git checkout -b TD-XXXX_ProductName_FeatureName
-   - Create the markdown file with the content
-   - Stage and commit: git add ... && git commit -m "..."
-   - Push to remote: git push origin ...
-
-3. **PR CREATION COMMAND**
-   - gh pr create command with title and body
-
-4. **WHAT HAPPENS NEXT** (after I merge)
-   - The workflow will automatically sync to Production CMS
-   - Where to find [DRAFT] entries
-   - How to review and publish manually
-
-Please provide all commands in order, clearly labeled, so I can copy-paste them directly.
-```
-
-### 3.5.3 Follow Claude's Output
-
-Claude will provide everything you need, in order:
-
-1. ✅ **Converted markdown** — Copy this into your file
-2. ✅ **Git commands** — Run these in order (copy-paste ready)
-3. ✅ **PR creation command** — Run this
-4. ✅ **Next steps** — After merge: find drafts, review, publish
-
-**Complete workflow in one prompt!**
-
-Example of what Claude provides:
-```
-✅ MARKDOWN (copy this):
----
-title: Entry Variant Versioning
-url: /entry-variant-versioning
-...
----
-
-✅ GIT COMMANDS (run in order):
-git checkout -b TD-5366_CMS_EntryVariantVersionNaming
-cat > cs-docs/studio/entry-variant-versioning.md << 'EOF'
-[markdown content]
-EOF
-git add cs-docs/studio/entry-variant-versioning.md
-git commit -m "docs: add entry variant versioning..."
-git push origin TD-5366_CMS_EntryVariantVersionNaming
-
-✅ PR COMMAND:
-gh pr create --title "docs: Add Entry Variant Versioning" ...
-
-✅ AFTER MERGE:
-- Wait 5 minutes for CMS sync
-- Go to Production CMS → Release
-- Find [DRAFT] entry
-- Review and Publish
-```
-
----
-
-## Step 4: Use Claude to Generate Documentation Drafts
-
-### 4.1 Gather Information
-
-Before asking Claude, collect:
-- Feature name and description
-- API endpoints or config changes
-- Use cases/examples
-- Links to the feature in the product
-
-### 4.2 Claude Prompt for Doc Generation
-
-**Basic Prompt (for new documentation):**
-
-```
-Create a new documentation file for the following feature:
-
-Feature Name: [Feature Name]
-Stack: cs-docs (or api-docs)
-Folder: studio (or your folder)
-
-Feature Description:
-[Detailed description of what the feature does]
-
-Use Cases:
-[How writers/developers will use this feature]
-
-Example Configuration:
-[Code example showing how to use it]
+Feature: [Feature Name]
+File location: cs-docs/[folder]/[filename].md
+Description: [What the feature does]
 
 Requirements:
-1. Use markdown format (GitHub-flavored markdown)
-2. Include a title, description, code examples, and troubleshooting section
-3. Follow the existing documentation style in cs-docs/studio/
-4. Add YAML frontmatter with: title, url, published: true
-5. Make it ~500-800 words for a feature doc
+- YAML frontmatter (title, url, description, doc_type)
+- Markdown format with proper heading hierarchy
+- Code examples and troubleshooting section
+- 500-800 words
+- Match contentstack.com/docs/ style
 
-Generate the markdown content now.
+Generate complete markdown content now.
 ```
 
-**Advanced Prompt (for feature updates):**
+### 4.2 Run Lint Checks on Your Local
 
-```
-Update the existing documentation file: cs-docs/studio/[existing-file].md
-
-Current Changes:
-[Paste the API changes or new behavior]
-
-What to Update:
-1. Add new configuration option [option-name]
-2. Update the code example for [section-name]
-3. Add a new "Breaking Changes" section
-
-Requirements:
-1. Keep the existing structure and style
-2. Add new content without removing old content (unless it's deprecated)
-3. Use markdown format
-4. Update the YAML frontmatter if needed
-5. Add a note about when this change was added (date/version)
-
-Generate the updated markdown content now.
-```
-
-### 4.3 Review and Approve Claude's Draft
-
-1. Claude generates the draft
-2. **You review it:** Check for accuracy, style, completeness
-3. **You approve it:** "Yes, this looks good, create the file" or request changes
-4. Claude creates the file in your local or you copy-paste it
-
-### 4.4 Edit the Draft Further
+Once the file is created:
 
 ```bash
-# Open the generated file
-code cs-docs/studio/[new-file].md
-
-# Make your edits
-# Update: titles, examples, links, formatting
-# Fix: any inaccuracies or missing information
+# Run lint checks using lint.ts
+npx ts-node tools/lint.ts cs-docs/[folder]/[filename].md
 ```
 
----
+Fix any lint violations before proceeding.
 
-## Step 5: Create a Feature Branch with TD-* Naming
-
-### 5.1 Have Your Jira Ticket Number Ready
-
-You should already have a Jira ticket assigned or created for this feature (format: `TD-XXXX`)
-
-**Example:** `TD-5366` for CMS Entry Variant Version Naming
-
-If you don't have one, create it in Jira before proceeding.
-
-### 5.2 Create Branch with Naming Convention
+### 4.3 Stage Changes in Your Local
 
 ```bash
-# Format: TD-<ticket>_<product>_<feature>
-# Example: TD-5366_CMS_EntryVariantVersionNaming
-
-git checkout -b TD-5366_CMS_EntryVariantVersionNaming
-```
-
-### 5.3 Verify the Branch
-
-```bash
-git branch -a  # Shows all branches, * indicates current branch
-```
-
----
-
-## Step 6: Create a PR with Doc Updates
-
-### 6.1 Stage Your Changes
-
-```bash
-# Check what files you changed
+# Check status
 git status
 
-# Stage the new/updated markdown files
-git add cs-docs/studio/[file-1].md cs-docs/studio/[file-2].md
+# Stage the markdown file
+git add cs-docs/[folder]/[filename].md
 
-# Or stage all changes
-git add .
+# Verify staging
+git status
 ```
 
-### 6.2 Commit with Clear Message
+### 4.4 Push Changes and Create PR
 
 ```bash
-git commit -m "docs: [feature-name] documentation
+# Create a feature branch
+git checkout -b docs/[feature-name]
 
-- Add new doc for [feature-name]
-- Update [section-name] with new API changes
-- Added examples and troubleshooting sections
+# Commit changes
+git commit -m "docs: add [feature-name] documentation"
 
-Jira: TD-5366"
-```
+# Push to remote
+git push origin docs/[feature-name]
 
-### 6.3 Push to Remote
-
-```bash
-git push origin TD-5366_CMS_EntryVariantVersionNaming
-```
-
-### 6.4 Create PR on GitHub
-
-**Manual:**
-1. Go to https://github.com/contentstack/contentstack-docs
-2. Click "New Pull Request"
-3. Select base: `main`, compare: `TD-5366_CMS_EntryVariantVersionNaming`
-4. Fill in PR title and description
-
-**OR Use CLI:**
-
-```bash
-gh pr create \
-  --title "docs: Add/Update [Feature Name] documentation" \
-  --body "## Summary
-
-This PR adds documentation for [Feature Name].
-
-### Changes
-- Added: cs-docs/studio/[file-1].md
-- Updated: cs-docs/studio/[file-2].md
-
-### Related Jira Ticket
-TD-5366
-
-### Checklist
-- [ ] Content is accurate
-- [ ] Examples are tested
-- [ ] Links are valid
-- [ ] Formatting is consistent
-- [ ] Ready for review
-"
+# Create PR
+gh pr create --title "docs: Add [Feature Name]" --body "Adds documentation for [Feature Name]"
 ```
 
 ---
 
-## Step 7: Get Approval from Lead/Reviewer
+## Step 5: Assign Reviewers and Get Approval
 
-### Checklist for Reviewers
+### 5.1 Assign Reviewers on GitHub
 
-**Your lead will check:**
+1. Open your PR on GitHub
+2. Click "Reviewers" on the right panel
+3. Assign your lead and relevant team members
+4. Wait for review feedback
 
-- ✅ Content accuracy (matches the feature)
-- ✅ Code examples work correctly
-- ✅ Formatting and style consistency
-- ✅ No broken links
-- ✅ YAML frontmatter is correct
-- ✅ Files follow naming conventions
-- ✅ Jira ticket is referenced
+### 5.2 Address Review Feedback
 
-### If Requested Changes:
-
-1. Make edits locally in your editor
-2. Stage and commit changes: `git add . && git commit -m "docs: address review feedback"`
-3. Push: `git push origin TD-5366_CMS_EntryVariantVersionNaming`
-4. PR automatically updates
+If changes requested:
+1. Make edits in your local editor
+2. Commit and push updates: `git add . && git commit -m "docs: address review feedback"`
+3. PR automatically updates
 
 ---
 
-## Step 8: Merge to Main & Sync to Production CMS
+## Step 6: Merge PR to Main
 
-### 8.1 Merge the PR
-
-Once approved, merge the PR to `main`:
+Once PR is approved:
 
 ```bash
-# Via CLI
+# Merge via CLI
 gh pr merge <PR-NUMBER> --merge
 
 # OR: Click "Merge pull request" on GitHub
 ```
 
-### 8.2 Production CMS Sync (Automated)
+---
 
-When your PR merges to `main`:
-1. GitHub workflow triggers automatically
-2. Markdown files sync to Production CMS
-3. Entries created as **[DRAFT]** (not published yet)
-4. Entries appear in "Release" folder in CMS
+## Step 7: Verify Draft Entry in Sandbox Stack
 
-⚠️ **Disclaimer:** The sync script currently has a hardcoded limit to create up to **10 entries per sync run**. If your documentation includes more than 10 new files, they will sync in batches:
-- First 10 files: sync on first merge
-- Remaining files: sync on next merge/trigger
+After merge:
 
-If you have more than 10 files, contact your team lead or CMS admin for batch processing options.
-
-### 8.3 Checklist: What to Look For in Production CMS
-
-**After merge, check Production CMS for:**
-
-✅ **New Entries Created:**
-- [ ] Entry title matches markdown title
-- [ ] Entry URL is correct (matches `url` field in frontmatter)
-- [ ] Content is complete (no missing sections)
-- [ ] Entry status: **[DRAFT]** (not published)
-
-✅ **Entry Content:**
-- [ ] All markdown is converted to CMS format
-- [ ] Code examples display correctly
-- [ ] Images (if any) linked correctly
-- [ ] Links to other docs work
-- [ ] Formatting (bold, italic, code blocks) displays correctly
-
-✅ **Metadata:**
-- [ ] Title is correct
-- [ ] URL slug is correct
-- [ ] Content type matches (e.g., "Article")
-- [ ] Published field is set correctly
-- [ ] Tags/categories applied (if required)
-
-✅ **Common Issues to Check:**
-- [ ] No broken markdown syntax errors
-- [ ] No hardcoded links to local files
-- [ ] All images resolved
-- [ ] Code blocks formatted properly
-- [ ] Tables display correctly
+1. Go to **Contentstack Sandbox CMS**
+2. Check whether the merged file now appears as a **[DRAFT]** entry
+3. Verify all fields are correctly populated:
+   - Title matches markdown title
+   - URL is correct
+   - Content is complete
+   - Status shows as Draft
 
 ---
 
-## Step 9: Review Draft Release in Production CMS
+## Step 8: Publish to Sandbox Environment
 
-### 9.1 Access Production CMS
+Once entry is confirmed to be correctly created:
 
-Go to: `https://production.contentstack.com/` (or your stack URL)
-
-### 9.2 Find Your [DRAFT] Entries
-
-1. Navigate to **Release** folder
-2. Look for entries with **[DRAFT]** prefix
-3. Find your newly created/updated entries
-
-### 9.3 Claude Prompt: Final QA Check
-
-```
-I need to verify my documentation in the CMS before publishing.
-
-Production CMS Stack: cs-docs
-Release: [Your Release Name]
-
-[DRAFT] Entries to Review:
-1. [Feature Name] - URL: /feature-path
-2. [Updated Doc] - URL: /updated-path
-
-I've reviewed them and found:
-[List any issues found, if none, say "No issues found"]
-
-Based on my review, should I publish these entries? 
-(Check: accuracy, formatting, links, examples)
-
-Also verify:
-- All links are live
-- Code examples make sense
-- No broken references
-```
-
-### 9.4 Make Any Final Edits
-
-If you find issues:
-1. Click "Edit" on the [DRAFT] entry
-2. Fix the content in CMS (or go back to GitHub, edit .md, create another PR)
-3. Save changes
-
----
-
-## Step 10: Publish Manually to Production
-
-### 10.1 Ready to Publish?
-
-**Final Checklist Before Publishing:**
-
-- ✅ Content is 100% accurate
-- ✅ All examples tested and working
-- ✅ Links verified and live
-- ✅ Formatting looks good
-- ✅ No broken references
-- ✅ Lead/approver has reviewed in CMS
-- ✅ No outstanding feedback
-
-### 10.2 Publish the Entry
-
-**In Contentstack CMS:**
-
-1. Open the [DRAFT] entry
+1. Open the **[DRAFT]** entry in Sandbox
 2. Click **"Publish"** button
-3. Select **"Publish"** (not "Schedule")
+3. Select an environment to publish to **(recommended: Development)**
 4. Confirm publication
 
-**CLI (if available):**
+---
 
-```bash
-# Publish via CMS API (if your team uses this)
-# Contact your admin for the publish script
-./tools/cs-sync/publish-entries.js --entry-ids [entry-ids]
-```
+## Step 9: Verify Entry in Production Stack
 
-### 10.3 Verify Publication
+Final verification:
 
-1. Go to the published entry URL
-2. Verify content displays correctly
-3. Check production website (if applicable)
-4. Share the link with your team
+1. Go to **Production Contentstack environment**
+2. Check whether the same entry is created and staged
+3. Verify it matches the Sandbox version
+4. Document any discrepancies for your team
 
 ---
 
-## Quick Reference: Claude Prompts
+## Quick Reference: Key Commands
 
-### Prompt 0: Google Docs → Complete Workflow (Gdoc Conversion + Git + PR + Publishing)
+### Git Commands
 
-**Use this if you have an existing Google Doc to convert and publish:**
+```bash
+# Clone the repo
+git clone https://github.com/aravindh-cstk/docops.git
+cd docops
 
-```
-I have a Google Doc from the previous process that needs to be converted to markdown, 
-committed to a branch, and turned into a PR. Guide me through the complete workflow.
+# Create feature branch
+git checkout -b docs/[feature-name]
 
-GDOC INFORMATION:
-- Gdoc content (exported as markdown): [Paste exported markdown here]
-- Feature/Product name: [e.g., "Entry Variant Versioning"]
-- Your Jira ticket: TD-XXXX (e.g., TD-5366)
-- Target folder: cs-docs/studio/ (or cs-docs/administration/, etc.)
-- Your local repo path: /path/to/contentstack-docs
+# Stage and commit
+git add cs-docs/[folder]/[filename].md
+git commit -m "docs: add [feature-name] documentation"
 
-WORKFLOW: Gdoc → markdown → branch → commit → PR → publish
+# Push to remote
+git push origin docs/[feature-name]
 
-Please provide (in order):
-1. Converted markdown with YAML frontmatter
-2. Git commands (copy-paste ready)
-3. PR creation command
-4. Next steps (after merge)
-```
+# Create PR
+gh pr create --title "docs: Add [Feature Name]" --body "Adds documentation for [Feature Name]"
 
-### Prompt 1: Analyze API Changes
-
-```
-Analyze these API changes and tell me what documentation I need to create or update:
-
-[Paste API changes here]
-
-Stack: cs-docs/studio/
-Existing docs: cs-docs/studio/
-
-For each change, tell me:
-1. Doc file to create/update
-2. What section needs change
-3. Brief description of change
+# Merge PR
+gh pr merge <PR-NUMBER> --merge
 ```
 
-### Prompt 2: Generate New Documentation
+### Lint Check Command
 
+```bash
+# Run lint checks on your markdown file
+npx ts-node tools/lint.ts cs-docs/[folder]/[filename].md
 ```
-Create a markdown documentation file with YAML frontmatter.
+
+### Claude Prompts
+
+**For documentation scope analysis:**
+```
+I need to check if documentation has been updated for a recent feature.
+
+Please help me:
+1. Review the recent PR to see if docs have been updated
+2. Compare with https://www.contentstack.com/docs/ to identify gaps
+3. Create a scope document for what needs to be created/updated
+
+PR Link: [Paste recent PR link]
+
+Create a scope document summarizing:
+1. New documentation files to create (with filenames)
+2. Existing files to update (with section names)
+3. Alignment with official documentation at contentstack.com/docs/
+```
+
+**For creating new documentation:**
+```
+Create a new markdown documentation file for:
 
 Feature: [Feature Name]
-Description: [What it does]
-Use Case: [How it's used]
-Example: [Code example]
+File location: cs-docs/[folder]/[filename].md
+Description: [What the feature does]
 
 Requirements:
-- Markdown format
-- YAML frontmatter: title, url, description
+- YAML frontmatter (title, url, description, doc_type)
+- Markdown format with proper heading hierarchy
+- Code examples and troubleshooting section
 - 500-800 words
-- Include troubleshooting section
-- Follow cs-docs style
+- Match contentstack.com/docs/ style
 
-Generate the full markdown content now.
+Generate complete markdown content now.
 ```
-
-### Prompt 3: Update Existing Documentation
-
-```
-I need to update an existing documentation file with new information.
-
-Current File: cs-docs/studio/[filename].md
-New Content: [Feature changes/additions]
-
-Update the file to:
-1. Add new section: [Section Name]
-2. Update code example for [Section]
-3. Add breaking changes notice
-
-Keep existing content, add new content above.
-Generate the updated markdown now.
-```
-
-### Prompt 4: Compare Changes
-
-```
-Help me understand what documentation changes are needed.
-
-Source PR: [Link or description]
-Changes: [Paste the code/API changes]
-
-Current Local File: cs-docs/studio/[file].md
-
-Tell me:
-1. What's new?
-2. What changed?
-3. What's deprecated?
-4. What documentation to create/update?
-
-Then generate a brief summary of changes needed.
-```
-
----
-
-## Troubleshooting
-
-### Git Issues
-
-**Problem:** Branch already exists
-```bash
-git checkout TD-5366_CMS_EntryVariantVersionNaming
-```
-
-**Problem:** Merge conflicts
-```bash
-# Update main first
-git checkout main
-git pull origin main
-
-# Rebase your branch
-git rebase main TD-5366_CMS_EntryVariantVersionNaming
-# Resolve conflicts in your editor
-git add .
-git rebase --continue
-```
-
-### CMS Issues
-
-**Problem:** Entry not created after merge
-- Wait 5 minutes (sync takes time)
-- Check GitHub Actions workflow status
-- Verify file is in correct folder structure
-
-**Problem:** Entry is published, need to unpublish
-- Contact your CMS admin
-- Cannot unpublish via this workflow (by design, for safety)
-
-**Problem:** Wrong content in CMS entry
-- Go back to GitHub, edit .md file
-- Create a new PR with corrections
-- It will sync and update the CMS entry
 
 ---
 
@@ -742,115 +333,28 @@ git rebase --continue
 
 ---
 
-## Summary: The Complete Workflow
+## Workflow Summary
 
-### Step-by-Step Process
-
-**Step 1: Clone the Docs Repository**
-```bash
-git clone https://github.com/contentstack/contentstack-docs.git
-cd contentstack-docs
-```
-
-**Step 2: Organize and Keep Only Relevant Folders**
-```bash
-# Delete all non-relevant PODs (folders) to keep your local clean
-# Example: if working only on Studio docs
-rm -rf api-docs/ sdk-docs/ cs-docs/administration/ cs-docs/marketplace/
-# Keep only: cs-docs/studio/
-```
-
-**Step 3: Clone the Developer Codebase**
-```bash
-# Clone the development repository to check for recent changes
-git clone [developer-codebase-repo-url]
-cd [repo-name]
-```
-
-**Step 4: Check if Documentation Already Exists**
-- Review the recent PR to see whether docs have been updated
-- If docs don't exist: create a scope document for what needs to be documented
-- If docs exist but need updates: note the changes needed
-
-**Step 5: Create New Documentation with Lint Checks**
-
-Ask Claude to create a new doc and:
-
-5.1 **Run Lint Checks**
-```bash
-# Use the lint.ts file to validate your markdown
-npx ts-node tools/lint.ts cs-docs/[your-folder]/[filename].md
-```
-
-5.2 **Stage Changes Locally**
-```bash
-git add cs-docs/[your-folder]/[filename].md
-git status  # Verify changes are staged
-```
-
-5.3 **Push Changes and Create PR**
-```bash
-git push origin [branch-name]
-# Then create PR on GitHub
-gh pr create --title "docs: [Feature Name]" --body "[Description]"
-```
-
-**Step 6: Assign Reviewers on GitHub**
-- Open your PR on GitHub
-- Click "Reviewers" on the right panel
-- Assign your lead and relevant team members
-- Wait for review feedback
-
-**Step 7: Merge PR to Main**
-```bash
-# Once PR review is complete and approved
-gh pr merge [PR-NUMBER] --merge
-# OR: Click "Merge pull request" button on GitHub
-```
-
-**Step 8: Verify Draft Entry in Sandbox Stack**
-- Go to Contentstack Sandbox CMS
-- Check whether the merged markdown file now appears as a **[DRAFT]** entry
-- Verify all fields are correctly populated:
-  - Title matches markdown title
-  - URL is correct
-  - Content is complete
-  - Status shows as Draft
-
-**Step 9: Publish to Sandbox Environment**
-- Once entry is confirmed to be correctly created:
-- Click "Publish" on the draft entry
-- Select an environment to publish to **(recommended: Development)**
-- Confirm publication
-
-**Step 10: Verify Entry in Production Stack**
-- Go to Production Contentstack environment
-- Check whether the same entry is created and staged
-- Verify it matches the Sandbox version
-- Document any discrepancies for your team
-
-### Workflow Loop Summary
+The complete documentation workflow in 9 steps:
 
 ```
-1. Clone docs repo
+1. Clone the docops repo
    ↓
-2. Organize folders (keep only yours)
+2. Organize folders (keep only your PODs)
    ↓
-3. Clone developer codebase
+3. Check recent PR & create scope with contentstack.com/docs/ reference
    ↓
-4. Check PR for doc updates / Create scope
+4. Create new doc with Claude → Run lint checks → Stage changes
    ↓
-5. Create doc → Run lint checks → Stage → Push & Create PR
+5. Push to origin → Create PR
    ↓
-6. Assign reviewers on GitHub
+6. Assign reviewers & get approval
    ↓
 7. Merge PR to main
    ↓
-8. Verify draft entry in Sandbox
+8. Verify draft entry in Sandbox CMS
    ↓
-9. Publish to Sandbox environment (Dev recommended)
-   ↓
-10. Verify entry in Production stack
+9. Publish to Sandbox (Dev recommended) → Verify in Production
    ↓
 Done! ✅
 ```
