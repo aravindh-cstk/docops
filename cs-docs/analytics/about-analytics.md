@@ -1,44 +1,29 @@
 ---
-title: "[Analytics Content] - About Analytics"
-description: Overview of Analytics in Contentstack, including supported products, benefits, and access requirements.
-url: https://www.contentstack.com/docs/analytics/about-analytics
-product: Contentstack
-doc_type: overview
-audience:
-  - organization-owners
-  - admins
-version: current
-last_updated: 2026-03-25
+title: "About Analytics"
+description: "Contentstack Analytics offers real-time product specific insights to optimize performance, manage resources, and enhance user experience across various products."
+url: /analytics/about-analytics
 ---
 
-# [Analytics Content] - About Analytics
-
-This page explains what Analytics in Contentstack is, what products it covers, and who can access it. Read this if you are an organization Owner or Admin who needs a centralized view of product usage and performance to support monitoring and data-driven decisions.
+# About Analytics
 
 ## About Analytics
 
-Analytics in Contentstack offers a powerful, centralized platform for monitoring and analyzing the usage and performance of your organization’s key products: CMS, [Launch](../developers/launch/about-launch.md), [Automate](/docs/developers/automation-hub-guides/about-automation-hub), [Personalize](../personalize/about-personalize.md), [Brand Kit](../content-managers/brand-kit/about-brand-kit.md), and other products within Contentstack. This feature combines the capabilities of the previously separate Product Analytics and Mission Control, offering a unified and streamlined experience for organization owners and admins.
+Analytics is a centralized dashboard in Contentstack that lets organization owners and admins monitor and analyze usage and performance across the organization's products. It consolidates metrics from [Content Management System (CMS)](/docs/analytics/analytics-for-cms), [Launch](/docs/analytics/analytics-for-launch), [Personalize](/docs/analytics/analytics-for-personalize), [Brand Kit](/docs/analytics/analytics-for-brand-kit), [AI Credits](/docs/analytics/analytics-for-ai-credits), Agent OS ([Automations,](/docs/analytics/analytics-for-automate) [Agents](/docs/analytics/analytics-for-agents), [Polaris](/docs/analytics/analytics-for-polaris)), and other products into a single experience.
 
-By integrating these metrics into a cohesive dashboard, Analytics delivers a holistic view of your organization’s activity, enabling you to make data-driven decisions more efficiently.
+## What Analytics Covers
 
-**Note:** Only organization [Owner](../developers/organization/organization-roles.md#organization-owner) and [Admin](../developers/organization/organization-roles.md#organization-admin) roles can access the Analytics feature.
+Analytics brings together usage and performance data from across your Contentstack organization into one place. It combines the capabilities of the previously separate Product Analytics and Mission Control features into a unified experience.
 
-Organizing analytics data by product helps you allocate resources efficiently. For example, if a CMS stack uses more API requests, you can investigate and adjust. Understanding device usage patterns ensures your products are optimized for the most-used platforms.
+Organizing analytics data by product helps you allocate resources efficiently. For example, if a CMS stack is generating a high volume of API requests, you can investigate the cause and adjust accordingly. Understanding device usage patterns also ensures your products are optimized for the most-used platforms.
 
-With real-time data and detailed metrics, the Analytics dashboard lets you proactively address issues before they escalate. You can monitor status codes to fix API errors and track bandwidth to avoid overages, minimizing downtime and ensuring a smooth user experience.
+With the Analytics dashboard, you can monitor API status codes to identify and fix errors, and track bandwidth usage to avoid overages.
 
-Contentstack’s Analytics equips you with the insights needed to optimize performance, prevent issues, and enhance the user experience. By leveraging this powerful tool, you can make informed decisions, allocate resources wisely, and maintain a competitive edge in the market.
+## Why Use Analytics
 
-## Common questions
+A unified view of your organization's activity lets you identify issues before they affect users. You can address API errors and bandwidth overages proactively, reducing downtime and maintaining a consistent user experience.
 
-### Who can access the Analytics feature?
-Only organization Owner and Admin roles can access the Analytics feature.
+Analytics data lets you make resource decisions based on actual usage patterns rather than estimates.
 
-### What products does Analytics cover?
-Analytics covers CMS, Launch, Automate, Personalize, Brand Kit, and other products within Contentstack.
+## Related Resource
 
-### What is the benefit of organizing analytics data by product?
-Organizing analytics data by product helps you allocate resources efficiently and investigate usage patterns such as API requests and device usage.
-
-### What kinds of issues can the Analytics dashboard help prevent?
-It can help you proactively address issues by monitoring status codes to fix API errors and tracking bandwidth to avoid overages, minimizing downtime.
+-   [Analytics API](/docs/developers/apis/analytics-api)
