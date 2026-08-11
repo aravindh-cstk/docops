@@ -1,7 +1,7 @@
 ---
 title: "Frequently Asked Questions"
 description: "The Frequently Asked Questions Content Model defines the structure, fields, and schema to design the FAQs page of your website."
-url: /marketplace/faqs
+url: /marketplace/content-models/prebuilt-for-cms/faqs
 ---
 
 # Frequently Asked Questions

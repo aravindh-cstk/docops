@@ -1,7 +1,7 @@
 ---
 title: "Studio React SDK"
 description: Studio React SDK
-url: /studio/sdk-api-reference
+url: /developers/studio/sdk-api-reference
 product: Contentstack
 doc_type: page
 created_at: 2026-06-06T04:26:19.128Z
