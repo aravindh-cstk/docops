@@ -1,6 +1,6 @@
 # Team Handoff Guide — Documentation Workflow
 
-**Last Updated:** August 3, 2026  
+**Last Updated:** August 11, 2026  
 **For:** Documentation Writers & Content Team  
 **Audience:** Technical writers updating docs for new features
 
@@ -742,23 +742,124 @@ git rebase --continue
 
 ---
 
-## Summary: The Workflow Loop
+## Summary: The Complete Workflow
+
+### Step-by-Step Process
+
+**Step 1: Clone the Docs Repository**
+```bash
+git clone https://github.com/contentstack/contentstack-docs.git
+cd contentstack-docs
+```
+
+**Step 2: Organize and Keep Only Relevant Folders**
+```bash
+# Delete all non-relevant PODs (folders) to keep your local clean
+# Example: if working only on Studio docs
+rm -rf api-docs/ sdk-docs/ cs-docs/administration/ cs-docs/marketplace/
+# Keep only: cs-docs/studio/
+```
+
+**Step 3: Clone the Developer Codebase**
+```bash
+# Clone the development repository to check for recent changes
+git clone [developer-codebase-repo-url]
+cd [repo-name]
+```
+
+**Step 4: Check if Documentation Already Exists**
+- Review the recent PR to see whether docs have been updated
+- If docs don't exist: create a scope document for what needs to be documented
+- If docs exist but need updates: note the changes needed
+
+**Step 5: Create New Documentation with Lint Checks**
+
+Ask Claude to create a new doc and:
+
+5.1 **Run Lint Checks**
+```bash
+# Use the lint.ts file to validate your markdown
+npx ts-node tools/lint.ts cs-docs/[your-folder]/[filename].md
+```
+
+5.2 **Stage Changes Locally**
+```bash
+git add cs-docs/[your-folder]/[filename].md
+git status  # Verify changes are staged
+```
+
+5.3 **Push Changes and Create PR**
+```bash
+git push origin [branch-name]
+# Then create PR on GitHub
+gh pr create --title "docs: [Feature Name]" --body "[Description]"
+```
+
+**Step 6: Assign Reviewers on GitHub**
+- Open your PR on GitHub
+- Click "Reviewers" on the right panel
+- Assign your lead and relevant team members
+- Wait for review feedback
+
+**Step 7: Merge PR to Main**
+```bash
+# Once PR review is complete and approved
+gh pr merge [PR-NUMBER] --merge
+# OR: Click "Merge pull request" button on GitHub
+```
+
+**Step 8: Verify Draft Entry in Sandbox Stack**
+- Go to Contentstack Sandbox CMS
+- Check whether the merged markdown file now appears as a **[DRAFT]** entry
+- Verify all fields are correctly populated:
+  - Title matches markdown title
+  - URL is correct
+  - Content is complete
+  - Status shows as Draft
+
+**Step 9: Publish to Sandbox Environment**
+- Once entry is confirmed to be correctly created:
+- Click "Publish" on the draft entry
+- Select an environment to publish to **(recommended: Development)**
+- Confirm publication
+
+**Step 10: Verify Entry in Production Stack**
+- Go to Production Contentstack environment
+- Check whether the same entry is created and staged
+- Verify it matches the Sandbox version
+- Document any discrepancies for your team
+
+### Workflow Loop Summary
 
 ```
-1. Clone repo → 2. Delete non-relevant PODs → 3. Identify changes
-    ↓
-4. Use Claude for doc drafts → 5. Create TD-* branch → 6. Create PR
-    ↓
-7. Get approval → 8. Merge to main → 9. Check CMS
-    ↓
-10. Publish manually → Done!
+1. Clone docs repo
+   ↓
+2. Organize folders (keep only yours)
+   ↓
+3. Clone developer codebase
+   ↓
+4. Check PR for doc updates / Create scope
+   ↓
+5. Create doc → Run lint checks → Stage → Push & Create PR
+   ↓
+6. Assign reviewers on GitHub
+   ↓
+7. Merge PR to main
+   ↓
+8. Verify draft entry in Sandbox
+   ↓
+9. Publish to Sandbox environment (Dev recommended)
+   ↓
+10. Verify entry in Production stack
+   ↓
+Done! ✅
 ```
 
 **Total Time:** 2-4 hours per feature (depending on complexity and review process)
 
 ---
 
-**Last Updated:** August 3, 2026  
+**Last Updated:** August 11, 2026  
 **Version:** 1.0  
 **Questions?** Contact: gladys.daniel@contentstack.com
 
