@@ -74,63 +74,30 @@ Done! ✅
 
 ## Prerequisites
 
-- Git installed and configured
-- GitHub account with access to https://github.com/contentstack/contentstack-docs
-- Claude Code CLI or Claude AI access (for using Claude prompts)
-- VS Code, Cursor, or similar code editor
+- GitHub account access 
+- Claude Code CLI or Claude AI access (for using Claude prompts) integrated in VS Code, Cursor, or similar code editor
+- Get access to the Developer codebase
 - Jira ticket number for your feature (TD-XXXX format)
 
+## Rules
+- 1 PR per 1 TD ticket
+- Create meaningful branch names
 ---
 
 ## Step 1: Clone the Repository to Local
 
-### 1.1 Clone the Repo
+Open your IDE and run the following command in its terminal:
 
 ```bash
 git clone https://github.com/aravindh-cstk/docops.git
-cd docops
 ```
-
-### 1.2 Open the Repository in Your Editor
-
-Open the `docops` directory in **Cursor** or **VS Code**:
-
-```bash
-code .   # For VS Code
-# or
-cursor . # For Cursor
-```
-
 ---
 
-## Step 2: Organize Your Local Directory
+## Step 2: Clone the Developer codebase to your local
 
-Each writer works on **2-3 specific product folders only**. Delete all other folders to keep your local clean. **Do not change the folder structure**, just delete the unwanted project folders.
-
-### 2.1 Identify Your PODs (Product Folders)
-
-**Example: If you're working on Studio documentation:**
-- Keep: `cs-docs/studio/`
-- Delete: Everything else in `cs-docs/` except studio
-
-**Common PODs in cs-docs:**
-- `studio/` — Studio product docs
-- `administration/` — Administration docs
-- `marketplace/` — Marketplace docs
-- `assets/` — Asset management
-
-**Example: Delete non-relevant folders locally**
 ```bash
-# Keep only Studio, delete others
-cd cs-docs
-rm -rf administration/ marketplace/ assets/
-cd ..
-
-# Or delete entire api-docs if you're not working on APIs
-rm -rf api-docs
+git clone <codebase HTTP URL>>
 ```
-
----
 
 ## Step 3: Check Recent PR for Documentation Updates
 
@@ -140,71 +107,23 @@ Open the integrated Claude chat in your editor and ask:
 
 **Claude Prompt:**
 
-```
 I need to check if documentation has been updated for a recent feature.
 
-Please help me:
-1. Review the recent PR to see if docs have been updated
-2. Compare with https://www.contentstack.com/docs/ to identify gaps
-3. Create a scope document for what needs to be created/updated
-
-PR Link: [Paste recent PR link]
-
-For each change:
-- List new docs to be created
-- List existing docs to be updated
-- Specify the contentstack.com/docs/ reference URLs where they should align
-
-Create a scope document summarizing:
-1. New documentation files to create (with filenames)
-2. Existing files to update (with section names)
-3. Alignment with official documentation at contentstack.com/docs/
 ```
-
-### 3.2 Create a Scope of Changes
-
-Based on Claude's analysis, document:
-- **New docs to create:** List file names and paths
-- **Existing docs to update:** List files and sections
-- **Reference URLs:** Links to official docs on contentstack.com/docs/
-
+1. Review the recent PR <PR-Link> to see if doc changes are needed for the new PR
+2. Compare with the local product folder (Example: Studio) to identify gaps
+3. Create a detailed scope for what needs to be created/updated
+```
 ---
 
 ## Step 4: Create Documentation with Lint Checks
 
-### 4.1 Ask Claude Agent to Create New Documentation
-
-Use Claude to generate the markdown file:
-
-**Claude Prompt:**
+1. Run the following prompt in the same claude session
 
 ```
-Create a new markdown documentation file for:
+Run the `lint.ts` and `style-lint.ts` scripts and resolve the issues.  Let me know if you need any confirmation during this process.
 
-Feature: [Feature Name]
-File location: cs-docs/[folder]/[filename].md
-Description: [What the feature does]
-
-Requirements:
-- YAML frontmatter (title, url, description, doc_type)
-- Markdown format with proper heading hierarchy
-- Code examples and troubleshooting section
-- 500-800 words
-- Match contentstack.com/docs/ style
-
-Generate complete markdown content now.
 ```
-
-### 4.2 Run Lint Checks on Your Local
-
-Once the file is created:
-
-```bash
-# Run lint checks using lint.ts
-npx ts-node tools/lint.ts cs-docs/[folder]/[filename].md
-```
-
-Fix any lint violations before proceeding.
 
 ### 4.3 Stage Changes in Your Local
 
@@ -218,6 +137,19 @@ git add cs-docs/[folder]/[filename].md
 # Verify staging
 git status
 ```
+
+To do this manually, 
+
+1. Go to the **Source Control** 
+2. Stage the required changes by clicking the **`Plus`** icon.
+3. And instruct claude to checkout the staged changes.  
+
+To do this completely via Claude write the following prompt:
+
+```
+Checkout the changes that we made in this session to the same branch and create a PR.  Give me the PR link here. 
+```
+> **Tip:** We suggest using the terminal commands to start with and then automate the process once we are familiar with the process.  As manual method helps us incase of unavailability of agent. 
 
 ### 4.4 Push Changes and Create PR
 
@@ -234,6 +166,8 @@ git push origin docs/[feature-name]
 # Create PR
 gh pr create --title "docs: Add [Feature Name]" --body "Adds documentation for [Feature Name]"
 ```
+
+If you have used claude in the previous step, then it would automatically create PR for you. 
 
 ---
 
@@ -253,6 +187,20 @@ If changes requested:
 2. Commit and push updates: `git add . && git commit -m "docs: address review feedback"`
 3. PR automatically updates
 
+If you are doing it with Claude give the following prompts:
+
+1. Fetch the review comments and revamp docs
+
+```
+Fetch all the review comments provided by <Reviewer_ID> and list them out here.  Check if they are valid.  If yes, revamp the docs based on the review comments. 
+
+```
+2. Review the content and give the following prompt:
+
+```
+Checkout the doc changes to the same branch and also reply to the review comments and resolve the thread 
+```
+
 ---
 
 ## Step 6: Merge PR to Main
@@ -262,9 +210,8 @@ Once PR is approved:
 ```bash
 # Merge via CLI
 gh pr merge <PR-NUMBER> --merge
-
-# OR: Click "Merge pull request" on GitHub
 ```
+If doing directly in github, Click "Merge pull request"
 
 ---
 
@@ -279,17 +226,7 @@ After merge:
    - URL is correct
    - Content is complete
    - Status shows as Draft
-
----
-
-## Step 8: Publish to Sandbox Environment
-
-Once entry is confirmed to be correctly created:
-
-1. Open the **[DRAFT]** entry in Sandbox
-2. Click **"Publish"** button
-3. Select an environment to publish to **(recommended: Development)**
-4. Confirm publication
+4. Once you verirfy it, publish it to any environment.
 
 ---
 
@@ -337,46 +274,6 @@ gh pr merge <PR-NUMBER> --merge
 npx ts-node tools/lint.ts cs-docs/[folder]/[filename].md
 ```
 
-### Claude Prompts
-
-**For documentation scope analysis:**
-```
-I need to check if documentation has been updated for a recent feature.
-
-Please help me:
-1. Review the recent PR to see if docs have been updated
-2. Compare with https://www.contentstack.com/docs/ to identify gaps
-3. Create a scope document for what needs to be created/updated
-
-PR Link: [Paste recent PR link]
-
-Create a scope document summarizing:
-1. New documentation files to create (with filenames)
-2. Existing files to update (with section names)
-3. Alignment with official documentation at contentstack.com/docs/
-```
-
-**For creating new documentation:**
-```
-Create a new markdown documentation file for:
-
-Feature: [Feature Name]
-File location: cs-docs/[folder]/[filename].md
-Description: [What the feature does]
-
-Requirements:
-- YAML frontmatter (title, url, description, doc_type)
-- Markdown format with proper heading hierarchy
-- Code examples and troubleshooting section
-- 500-800 words
-- Match contentstack.com/docs/ style
-
-Generate complete markdown content now.
-```
-
----
-
-## Support & Help
 
 **For Questions:**
 - Slack: #docs-issues-internal-discussion, Gladys, or Aravindh
