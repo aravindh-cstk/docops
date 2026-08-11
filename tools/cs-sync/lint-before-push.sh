@@ -1,13 +1,13 @@
 #!/bin/bash
 # Lint docs before pushing to remote
-# Usage: ./lint-before-push.sh
+# Usage: ./tools/cs-sync/lint-before-push.sh (from repo root)
 
 set -e
 
 echo "🔍 Running docs linter..."
 echo ""
 
-cd "$(dirname "$0")/tools/cs-sync"
+cd "$(dirname "$0")"
 
 # Install dependencies if needed
 if [ ! -d "node_modules" ]; then

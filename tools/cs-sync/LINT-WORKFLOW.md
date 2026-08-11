@@ -7,7 +7,7 @@
 ### Option 1: Use the helper script (easiest)
 
 ```bash
-./lint-before-push.sh
+./tools/cs-sync/lint-before-push.sh
 ```
 
 This script:
@@ -85,8 +85,8 @@ All items must consistently end with periods or none should:
 ```
 
 ### Heading capitalization
-- **H1/H2:** Title Case — capitalize most words
-- **H3+:** Sentence case — capitalize first word only
+- **H1/H2:** Title Case, capitalize most words
+- **H3+:** Sentence case, capitalize first word only
 
 ```markdown
 ❌ ## Creating a new entry
@@ -106,7 +106,7 @@ Want to prevent pushing if linting fails?
 # Create .git/hooks/pre-push
 cat > .git/hooks/pre-push << 'EOF'
 #!/bin/bash
-./lint-before-push.sh || exit 1
+./tools/cs-sync/lint-before-push.sh || exit 1
 EOF
 
 chmod +x .git/hooks/pre-push
@@ -118,5 +118,5 @@ Now `git push` will abort if linting fails. ✨
 
 ## Questions?
 
-- Check [backend/LINTING.md](./backend/LINTING.md) for detailed rules
-- Run `npm run lint -- --help` in tools/cs-sync for more options
+- Check [backend/LINTING.md](../../backend/LINTING.md) for detailed rules
+- Run `npm run lint -- --help` in this folder for more options
