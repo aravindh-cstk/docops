@@ -1,9 +1,9 @@
 ---
-title: "[Administration] - Test About Administration Roles"
-description: About Administration Roles
+title: "[Administration] - Testing About Administration Roles"
+description: Comprehensive guide to Contentstack Administration roles and role-based access control (RBAC) for managing organization-wide capabilities, users, and security.
 url: /administration/test-about-administration-roles
 marker: Administration
-heading: About Administration Roles
+heading: Testing About Administration Roles
 product: Contentstack
 doc_type: concept
 audience:
@@ -13,7 +13,7 @@ version: unknown
 last_updated: unknown
 ---
 
-# [Administration] - Test About Administration Roles
+# [Administration] - Testing About Administration Roles
 
 This page explains Contentstack Administration roles and how role-based access control (RBAC) determines organization-wide capabilities. It is intended for organization administrators and anyone responsible for managing users, security, and access across Contentstack products, and should be used when assigning or reviewing Administration roles.
 

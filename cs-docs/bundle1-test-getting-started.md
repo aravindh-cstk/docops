@@ -26,7 +26,7 @@ Bundle 1 testing validates:
 When you push files to main branch:
 1. GitHub Actions workflow triggers automatically
 2. `gh-to-sandbox-sync-csdocs.yml` workflow runs
-3. Entries created as DRAFT in Sandbox CMS
+3. Entries created as Draft in Sandbox CMS
 
 ### TC-002: Create New CS Doc Entry
 
@@ -34,7 +34,7 @@ Expected result after sync:
 - Entry created in Sandbox with title: "Bundle1 Test Getting Started"
 - Content type: `docs_article`
 - URL: `/studio/bundle1-test-getting-started`
-- Status: DRAFT (not published)
+- Status: Draft (not published)
 
 ### TC-007: CS Doc Type Mapping
 
@@ -53,16 +53,16 @@ Field mapping tests:
 ## Verification Steps
 
 1. **Check Sandbox CMS**
-   - Navigate to: Stack > Content Type: docs_article
-   - Search for: "Bundle1 Test Getting Started"
+   - Navigate to Stack > Content Type: docs_article
+   - Search for Bundle1 Test Getting Started
    - Verify all fields populated correctly
 
 2. **Verify Entry Status**
-   - Status should be: DRAFT
+   - Status should be Draft
    - Not published to any environment yet
 
 3. **Confirm No Duplicates**
-   - Check URL uniqueness: /studio/bundle1-test-getting-started
+   - Check URL uniqueness at /studio/bundle1-test-getting-started
    - Should appear exactly once in Sandbox
 
 ## Next Steps (Bundle 3)
