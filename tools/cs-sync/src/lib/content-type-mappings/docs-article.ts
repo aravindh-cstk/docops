@@ -47,6 +47,11 @@ export interface ProductConfig {
 // breadcrumb reference to the "Assets" entry in the navigation content type.
 // Confirmed live against both stacks: both entries exist, share the same
 // title/url ("Assets" / "/assets"), only their uids differ.
+//
+// folder "studio" -> marker "Studio" -> breadcrumb reference to the "Studio"
+// entry in the navigation content type. Confirmed live against both stacks
+// (2026-08-11): both entries exist, share the same title/url
+// ("Studio" / "/studio"), only their uids differ.
 const PRODUCT_CONFIG: Record<string, ProductConfig> = {
   assets: {
     marker: "Assets",
@@ -61,6 +66,13 @@ const PRODUCT_CONFIG: Record<string, ProductConfig> = {
     marker: "Headless CMS",
     sandboxBreadcrumbUid: "blt5e26f58d8f4f63ed",
     prodBreadcrumbUid: "blt106cf6f243420c40",
+  },
+  // Confirmed live against both stacks (2026-08-11): both entries exist, share
+  // the same title/url ("Studio" / "/studio"), only their uids differ.
+  studio: {
+    marker: "Studio",
+    sandboxBreadcrumbUid: "blt411e490e123c493a",
+    prodBreadcrumbUid: "blt434e2688ea83a9d8",
   },
 };
 
