@@ -14,6 +14,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { buildDocIndex, canonicalizeUrl } from "./doc-index.js";
 import { fileURLToPath } from "node:url";
 import { SandboxClient } from "./lib/sandbox-client.js";
 import { getUserName } from "./lib/user-index.js";
@@ -114,6 +115,7 @@ async function main() {
 
       // Determine file path based on stack type and folder
       const filePath = getFilePath(config.stackType, url, entry);
+      if (!filePath) continue;
       const fullPath = path.join(basePath, filePath);
 
       // Create directory if it doesn't exist
@@ -171,12 +173,10 @@ function generateFrontmatter(entry: any): string {
   return lines.join("\n");
 }
 
-function getFilePath(stackType: string, url: string, entry: any): string {
-  // Map content type to folder structure
+function getFilePath(stackType: string, url: string, entry: any): string | null {
   let folder = "docs";
 
   if (stackType === "apidocs") {
-    // Check if this is an API detail page or a request entry
     const contentType = entry.content_type?.uid;
     if (contentType === "api_detail_page") {
       folder = "api-detail";
@@ -187,11 +187,24 @@ function getFilePath(stackType: string, url: string, entry: any): string {
     } else if (contentType === "api_requests_graphql") {
       folder = "graphql-api-requests";
     }
-  } else if (stackType === "csdocs") {
-    folder = "docs";
+    return `${folder}/${url}.md`;
   }
 
-  return `${folder}/${url}.md`;
+  // csdocs: cs-docs/ mirrors the left navigation, so a file's location is not
+  // derivable from its url. This used to return `docs/<url>.md`, a folder that
+  // has never existed, so every run quietly built a phantom tree beside the
+  // real one. Look the file up by its own frontmatter url instead, and skip
+  // rather than guess when there is no single match.
+  const index = buildDocIndex(path.resolve(__dirname, "../../.."), "cs-docs");
+  const canonical = canonicalizeUrl(url);
+  const matches = canonical ? (index.urlIndex.get(canonical) ?? []) : [];
+  if (matches.length === 1) return path.relative("cs-docs", matches[0]!.relPath);
+  console.log(
+    matches.length === 0
+      ? `  ! no cs-docs file has url ${url}, skipped (run nav-apply to create it)`
+      : `  ! ${matches.length} cs-docs files share url ${url}, skipped as ambiguous`,
+  );
+  return null;
 }
 
 main().catch((error) => {

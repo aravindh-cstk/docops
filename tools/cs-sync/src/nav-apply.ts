@@ -214,7 +214,10 @@ export function buildArticle(entry: Entry, urlOverride?: string | null): string 
   const sections = extractSections(entry as { article_content?: unknown });
   if (sections.length === 0) return null;
   const heading = cleanTitle(entry.title);
-  const description = (entry as any).seo?.description ?? "";
+  // An empty seo.description writes `description: ""`, which fails the
+  // frontmatter schema outright. The heading is a weaker summary but a valid
+  // one, and it keeps the file syncable until an author fills the field in.
+  const description = String((entry as any).seo?.description ?? "").trim() || heading;
   const body = sections
     .map((s) =>
       s.heading.trim() ? `## ${s.heading.trim()}\n\n${htmlToMarkdown(s.content)}` : htmlToMarkdown(s.content),
@@ -258,7 +261,10 @@ export function buildSampleApp(entry: Entry): string | null {
 
 export function buildStub(leaf: NavLeaf): string {
   const title = leaf.title || "Untitled";
-  const raw = (leaf.url ?? "").trim();
+  // Nav authors write these by hand and some include the site's /docs prefix,
+  // which is part of the public URL but not of the entry path the rest of the
+  // repo uses. Strip it so a stub and an article agree on how a url looks.
+  const raw = (leaf.url ?? "").trim().replace(/^\/docs(?=\/)/, "");
   const href = raw.startsWith("/") ? `${DOCS_BASE_URL}${raw}` : raw;
   const frontmatter = [
     "---",

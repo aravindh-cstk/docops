@@ -3,6 +3,14 @@ import path from "node:path";
 import matter from "gray-matter";
 import { z } from "zod";
 
+/**
+ * Valid first segments of a docs url. These are CMS url namespaces, not
+ * cs-docs folder names, and the two no longer line up one-to-one: the folder
+ * tree mirrors the left navigation while urls stayed where they were. Lytics
+ * CDP articles live in cs-docs/lytics-cdp/ but keep /lytics/ urls, and
+ * Developer Resources articles live in cs-docs/developer-resources/ while their
+ * urls are /developers/ or the product they were authored under.
+ */
 export const PRODUCT_NAMES = new Set([
   "content-managers",
   "headless-cms",
@@ -18,6 +26,9 @@ export const PRODUCT_NAMES = new Set([
   "analytics",
   "marketplace",
   "lytics",
+  "lytics-cdp",
+  "developers",
+  "developer-resources",
   "data-and-insights-lytics",
   "introducing-the-new-contentstack",
 ]);
@@ -43,20 +54,34 @@ export const frontMatterSchema = z.object({
     .min(1, { message: "Missing required frontmatter field 'description' — add: description: A one or two sentence summary" }),
   url: z
     .string({ required_error: "Missing required frontmatter field 'url' — add: url: /personalize/your-article-slug" })
-    .min(1, { message: "Missing required frontmatter field 'url' — add: url: /personalize/your-article-slug" })
-    .refine((u) => !u.startsWith("http://") && !u.startsWith("https://"), {
-      message: "Invalid 'url' — must be a relative path, not a full URL (e.g. /personalize/about-personalize)",
-    })
-    .refine((u) => u.startsWith("/"), {
-      message: "Invalid 'url' — must start with / (e.g. /personalize/about-personalize)",
-    })
-    .refine((u) => hasValidUrlPrefix(u), {
-      message: `Invalid 'url' — first segment must be a known product name (e.g. /personalize/about-personalize) or one of: ${COMPOUND_URL_PREFIXES.join(", ")}. Valid products: ${VALID_PRODUCTS}`,
-    })
-    .refine((u) => !u.endsWith("/"), {
-      message: "Invalid 'url' — must not end with a trailing slash (remove the trailing /)",
-    }),
+    .min(1, { message: "Missing required frontmatter field 'url' — add: url: /personalize/your-article-slug" }),
   doc_type: z.string().optional(),
+}).superRefine((fm, ctx) => {
+  // doc_type: link marks a navigation pointer, written for a links_2026 node
+  // that carries a url and no article of its own. It is never synced to the
+  // CMS as a docs_article, and it deliberately points wherever the nav points:
+  // an external site, a section anchor, or API reference in another stack.
+  // Holding it to the article url rules would fail it for doing its job.
+  if (fm.doc_type === "link") return;
+
+  const u = fm.url;
+  const fail = (message: string) =>
+    ctx.addIssue({ code: z.ZodIssueCode.custom, path: ["url"], message });
+
+  if (u.startsWith("http://") || u.startsWith("https://")) {
+    fail("Invalid 'url' — must be a relative path, not a full URL (e.g. /personalize/about-personalize)");
+  }
+  if (!u.startsWith("/")) {
+    fail("Invalid 'url' — must start with / (e.g. /personalize/about-personalize)");
+  }
+  if (!hasValidUrlPrefix(u)) {
+    fail(
+      `Invalid 'url' — first segment must be a known product name (e.g. /personalize/about-personalize) or one of: ${COMPOUND_URL_PREFIXES.join(", ")}. Valid products: ${VALID_PRODUCTS}`,
+    );
+  }
+  if (u.endsWith("/")) {
+    fail("Invalid 'url' — must not end with a trailing slash (remove the trailing /)");
+  }
 });
 
 export type DocFrontMatter = z.infer<typeof frontMatterSchema>;
