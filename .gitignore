@@ -19,6 +19,8 @@ tools/cs-sync/.image-inject-report.json
 tools/cs-sync/.cms-pull-summary.json
 tools/cs-sync/.cms-pull-prod-summary.json
 tools/cs-sync/prod-orphan-report.csv
+tools/cs-sync/.nav-tree.json
+tools/cs-sync/nav-audit/
 
 # OS files
 .DS_Store
