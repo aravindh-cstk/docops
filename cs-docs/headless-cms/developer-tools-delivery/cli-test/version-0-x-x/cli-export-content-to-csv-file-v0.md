@@ -1,7 +1,7 @@
 ---
 title: "Export Content to .CSV File | Old Commands"
 description: "Export Content to .CSV File using CLI"
-url: /headless-cms/export-content-to-csv-file/old-commands
+url: /headless-cms/cli-export-content-to-csv-file/v0
 ---
 
 # Export Content to .CSV File | Old Commands

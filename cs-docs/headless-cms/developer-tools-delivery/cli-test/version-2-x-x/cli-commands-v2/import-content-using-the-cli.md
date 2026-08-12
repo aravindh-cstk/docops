@@ -1,7 +1,7 @@
 ---
 title: "Import Content Using the CLI | Beta Commands"
 description: "Import content efficiently with Contentstack’s latest Command-line Interface commands to streamline data onboarding and content setup."
-url: /headless-cms/import-content-using-the-cli/beta
+url: /headless-cms/import-content-using-the-cli
 ---
 
 # Import Content Using the CLI | Beta Commands

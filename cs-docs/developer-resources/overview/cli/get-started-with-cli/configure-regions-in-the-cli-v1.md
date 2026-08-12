@@ -1,7 +1,7 @@
 ---
 title: "Configure Regions in the CLI"
 description: "Configure regions in Contentstack Command-line Interface to optimize your setup and streamline workflows across multiple data centers."
-url: /headless-cms/configure-regions-in-the-cli
+url: /headless-cms/configure-regions-in-the-cli/v1
 ---
 
 # Configure Regions in the CLI

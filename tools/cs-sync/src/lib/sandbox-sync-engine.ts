@@ -68,7 +68,7 @@ export async function runSync(
   );
 
   // product_faqs_2026 is many-files-to-one-entry, the opposite of
-  // docs_article's 1:1 shape. A file under troubleshooting-and-faqs/ never
+  // docs_article's 1:1 shape. A file inside a known FAQ container never
   // goes through the per-file docs_article path below, instead every
   // distinct container touched by this diff gets rebuilt whole from
   // everything currently on disk under it, once, regardless of how many of
@@ -156,10 +156,12 @@ async function processFaqContainer(
 ): Promise<SyncResult> {
   const container = resolveFaqContainer(containerSlug);
   if (!container) {
-    return { path: `${config.CS_DOCS_ROOT}/*/troubleshooting-and-faqs/${containerSlug}`, action: "skipped" };
+    return { path: `${config.CS_DOCS_ROOT}/**/${containerSlug}`, action: "skipped" };
   }
 
-  const relPath = `${config.CS_DOCS_ROOT}/${container.productSlug}/troubleshooting-and-faqs/${containerSlug}`;
+  // Nav-derived location, see FaqContainerConfig.dir. The old
+  // <product>/troubleshooting-and-faqs/<slug> path no longer exists.
+  const relPath = `${config.CS_DOCS_ROOT}/${container.dir}`;
   const containerDir = path.join(config.repoRoot, relPath);
 
   try {

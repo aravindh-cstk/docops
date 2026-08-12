@@ -202,7 +202,15 @@ function writeFile(rel: string, content: string, dryRun: boolean): void {
 
 // ── content builders ────────────────────────────────────────────────────────
 
-export function buildArticle(entry: Entry): string | null {
+/**
+ * `urlOverride` carries the entry's CURRENT url while the body comes from the
+ * version published to production, and the two can disagree: a rename that is
+ * drafted but not yet published leaves the published version holding the old
+ * url. Mixing them wrote a file named from one url with frontmatter declaring
+ * another (7 CLI pages did exactly this), and the reverse sync resolves a file
+ * back to its entry by querying that url, so it has to be the live one.
+ */
+export function buildArticle(entry: Entry, urlOverride?: string | null): string | null {
   const sections = extractSections(entry as { article_content?: unknown });
   if (sections.length === 0) return null;
   const heading = cleanTitle(entry.title);
@@ -218,7 +226,7 @@ export function buildArticle(entry: Entry): string | null {
     `description: "${escapeForFrontmatter(description)}"`,
     // Always the entry's own url, never rewritten to match the folder this
     // copy happens to sit in. One entry, one url, however many copies.
-    `url: ${entry.url ?? ""}`,
+    `url: ${urlOverride ?? entry.url ?? ""}`,
     "---",
   ].join("\n");
   return `${frontmatter}\n\n# ${heading}\n\n${body}\n`;
@@ -461,7 +469,9 @@ async function applyProduct(
       rel = `${DOCS_ROOT}/${dir}/${name}`;
       const source = await productionVersionOf(entryContentType, entry);
       content =
-        entryContentType === "sample_apps_demo_page" ? buildSampleApp(source) : buildArticle(source);
+        entryContentType === "sample_apps_demo_page"
+          ? buildSampleApp(source)
+          : buildArticle(source, leaf.url);
       if (content === null) {
         // No article_section blocks. Leaving the old file in place would be
         // worse than saying so, since it would silently survive as content the

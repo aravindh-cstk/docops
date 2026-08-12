@@ -8,11 +8,11 @@
  * without risking drift between what's on disk and what's live.
  *
  * Only the 4 containers linked from Headless CMS's Support & Troubleshooting
- * section are verified this round (their Sandbox uids confirmed live,
- * "Headless CMS FAQs" and "Headless CMS Troubleshooting Guides" cloned from
- * Prod into Sandbox since they didn't exist there yet). Any other folder
- * under troubleshooting-and-faqs/ returns null, callers must skip rather
- * than guess, same pattern as docs-article.ts's resolveProductConfig.
+ * section are wired up (their Sandbox uids confirmed live, "Headless CMS FAQs"
+ * and "Headless CMS Troubleshooting Guides" cloned from Prod into Sandbox since
+ * they didn't exist there yet). Any unrecognised container returns null and
+ * callers must skip rather than guess, same pattern as docs-article.ts's
+ * resolveProductConfig.
  */
 
 import fs from "node:fs";
@@ -25,13 +25,43 @@ export interface FaqContainerConfig {
   sandboxUid: string;
   /** Top-level cs-docs product folder this container's files live under, e.g. "headless-cms". */
   productSlug: string;
+  /**
+   * Directory holding this container, relative to docsRoot, with no trailing
+   * slash. Derived from the left navigation (product slug + nav header slug),
+   * not from a fixed subtree name.
+   */
+  dir: string;
 }
 
+/**
+ * Only these 4 are wired for git -> CMS sync. That is not a policy choice: the
+ * reverse sync writes to the Sandbox stack, and of the 19 FAQ containers in the
+ * production nav, only 6 exist in Sandbox at all. These 4 were cloned there
+ * deliberately. Launch FAQs and Lytics FAQs also exist in Sandbox but are not
+ * registered here, and the remaining 13 would need cloning first. Wiring the
+ * rest up is tracked as separate work.
+ */
 const FAQ_CONTAINERS: Record<string, FaqContainerConfig> = {
-  "headless-cms-faqs": { sandboxUid: "blt4baa29a18cdc5a2c", productSlug: "headless-cms" },
-  "headless-cms-troubleshooting-guides": { sandboxUid: "blt76353d77c4e8910e", productSlug: "headless-cms" },
-  "sdk-troubleshooting-guides": { sandboxUid: "bltb7912d2b60ba974f", productSlug: "headless-cms" },
-  "cli-troubleshooting-guides": { sandboxUid: "bltc15edadfe9458903", productSlug: "headless-cms" },
+  "headless-cms-faqs": {
+    sandboxUid: "blt4baa29a18cdc5a2c",
+    productSlug: "headless-cms",
+    dir: "headless-cms/support-troubleshooting/headless-cms-faqs",
+  },
+  "headless-cms-troubleshooting-guides": {
+    sandboxUid: "blt76353d77c4e8910e",
+    productSlug: "headless-cms",
+    dir: "headless-cms/support-troubleshooting/headless-cms-troubleshooting-guides",
+  },
+  "sdk-troubleshooting-guides": {
+    sandboxUid: "bltb7912d2b60ba974f",
+    productSlug: "headless-cms",
+    dir: "headless-cms/support-troubleshooting/sdk-troubleshooting-guides",
+  },
+  "cli-troubleshooting-guides": {
+    sandboxUid: "bltc15edadfe9458903",
+    productSlug: "headless-cms",
+    dir: "headless-cms/support-troubleshooting/cli-troubleshooting-guides",
+  },
 };
 
 /** Null means "not a verified container", callers must skip, not guess. */
@@ -39,21 +69,26 @@ export function resolveFaqContainer(containerSlug: string): FaqContainerConfig |
   return FAQ_CONTAINERS[containerSlug] ?? null;
 }
 
-const FAQS_SUBTREE = "troubleshooting-and-faqs";
-
 /**
- * Extracts the container slug from a path under
- * <docsRoot>/headless-cms/troubleshooting-and-faqs/<container-slug>/..., or
- * null if the path isn't under that subtree at all (the common case, this
- * runs against every changed file, not just FAQ ones).
+ * Extracts the container slug from a FAQ file's path, or null if the path is
+ * not inside a known container (the common case, this runs against every
+ * changed file, not just FAQ ones).
+ *
+ * Matches on the container slugs themselves rather than on a fixed
+ * troubleshooting-and-faqs/ segment. cs-docs now mirrors the left navigation,
+ * so a container sits under whatever nav header owns it (Headless CMS's four
+ * live under support-troubleshooting/), and that header can be renamed in the
+ * CMS at any time. Keying on the container slug survives those moves.
  */
 export function faqContainerSlugFromPath(relativePath: string, docsRoot: string): string | null {
   const prefix = `${docsRoot}/`;
   const stripped = relativePath.startsWith(prefix) ? relativePath.slice(prefix.length) : relativePath;
   const segments = stripped.split("/");
-  const subtreeIdx = segments.indexOf(FAQS_SUBTREE);
-  if (subtreeIdx === -1) return null;
-  return segments[subtreeIdx + 1] ?? null;
+  // The last segment is the file itself, so a container slug can never be it.
+  for (const segment of segments.slice(0, -1)) {
+    if (segment in FAQ_CONTAINERS) return segment;
+  }
+  return null;
 }
 
 interface ParsedFaqFile {

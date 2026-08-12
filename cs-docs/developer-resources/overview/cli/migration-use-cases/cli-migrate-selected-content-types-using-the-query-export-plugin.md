@@ -1,7 +1,7 @@
 ---
 title: "Migrate Selected Content Using the Query Export Plugin"
 description: "Learn how to migrate selected content types between stacks using the Query Export CLI plugin with query-based filtering and dependency support."
-url: /headless-cms/migrate-selected-content-types-using-the-query-export-plugin
+url: /headless-cms/cli-migrate-selected-content-types-using-the-query-export-plugin
 ---
 
 # Migrate Selected Content Using the Query Export Plugin

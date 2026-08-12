@@ -1,7 +1,7 @@
 ---
 title: "Configure Rate Limits in the CLI | Beta Commands"
 description: "Learn to configure and manage Contentstack CLI rate limits. Try the beta commands to adjust bulkLimit and utilization for optimized bulk publishing."
-url: /headless-cms/configure-rate-limits-in-the-cli/beta
+url: /headless-cms/configure-rate-limits-in-the-cli
 ---
 
 # Configure Rate Limits in the CLI | Beta Commands

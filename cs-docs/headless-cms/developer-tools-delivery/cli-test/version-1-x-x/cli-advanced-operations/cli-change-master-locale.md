@@ -1,7 +1,7 @@
 ---
 title: "Change Master Locale"
 description: "Learn how to change the master locale of the data exported from the CLI"
-url: /headless-cms/change-master-locale
+url: /headless-cms/cli-change-master-locale
 ---
 
 # Change Master Locale

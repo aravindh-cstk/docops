@@ -1,7 +1,7 @@
 ---
 title: "Bootstrap Starter Apps"
 description: "Set up Starter apps quickly with Contentstack's Bootstrap CLI plugin—automate stack creation, content import, and Live Preview setup."
-url: /headless-cms/bootstrap-starter-apps
+url: /headless-cms/cli-bootstrap-starter-apps/v1
 ---
 
 # Bootstrap Starter Apps

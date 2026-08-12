@@ -1,7 +1,7 @@
 ---
 title: "Configure Regions in the CLI | Beta Commands"
 description: "Configure regions in Contentstack Command-line Interface to optimize your setup and streamline workflows across multiple data centers."
-url: /headless-cms/configure-regions-in-the-cli/beta
+url: /headless-cms/configure-regions-in-the-cli
 ---
 
 # Configure Regions in the CLI | Beta Commands

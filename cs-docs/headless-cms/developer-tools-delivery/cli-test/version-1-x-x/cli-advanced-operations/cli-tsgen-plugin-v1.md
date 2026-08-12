@@ -1,7 +1,7 @@
 ---
 title: "Generate Typescript Typings with TSGen Plugin"
 description: "The tsgen plugin is a Contentstack CLI plugin that generates TypeScript typings from content types. This step-by-step guide lets you install and use the tsgen plugin in CLI."
-url: /headless-cms/tsgen-plugin
+url: /headless-cms/cli-tsgen-plugin/v1
 ---
 
 # Generate Typescript Typings with TSGen Plugin

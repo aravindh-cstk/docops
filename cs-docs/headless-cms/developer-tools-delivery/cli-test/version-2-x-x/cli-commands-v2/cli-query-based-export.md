@@ -1,7 +1,7 @@
 ---
 title: "Query-based Export"
 description: "Use the Contentstack CLI plugin to export content types using queries with automatic dependency and reference support."
-url: /headless-cms/query-based-export
+url: /headless-cms/cli-query-based-export
 ---
 
 # Query-based Export

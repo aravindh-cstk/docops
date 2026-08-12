@@ -1,7 +1,7 @@
 ---
 title: "Configure CLI Logging Preferences | Beta Commands"
 description: "Set and retrieve logging preferences in Contentstack CLI, including log level and file path configuration."
-url: /headless-cms/configure-cli-logging-preferences/beta
+url: /headless-cms/configure-cli-logging-preferences
 ---
 
 # Configure CLI Logging Preferences | Beta Commands

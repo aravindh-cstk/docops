@@ -1,7 +1,7 @@
 ---
 title: "Entry Migration"
 description: "Entry Migration Contentstack CLI utility lets you merge the entries along with the content types."
-url: /headless-cms/entry-migration
+url: /headless-cms/cli-entry-migration/v1
 ---
 
 # Entry Migration

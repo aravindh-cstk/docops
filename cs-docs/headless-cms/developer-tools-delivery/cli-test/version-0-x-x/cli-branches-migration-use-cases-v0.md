@@ -1,7 +1,7 @@
 ---
 title: "Branches | Migration Use Cases | Old Commands"
 description: "Branches | Migration Use Cases"
-url: /headless-cms/branches-migration-use-cases/old-commands
+url: /headless-cms/cli-branches-migration-use-cases/v0
 ---
 
 # Branches | Migration Use Cases | Old Commands

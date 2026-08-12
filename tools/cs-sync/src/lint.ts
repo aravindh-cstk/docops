@@ -168,22 +168,34 @@ function buildAllDocs(repoRoot: string, docsRoot: string): Set<string> {
   );
 }
 
+/**
+ * Two files may legitimately share a url: the left navigation places a single
+ * docs_article at more than one position (e.g. the SSO setup guides appear
+ * under both Administration and Developer Resources), and cs-docs mirrors the
+ * nav, so each position gets a copy of that one entry.
+ *
+ * Identical copies are therefore expected and not an error. Copies whose bodies
+ * have diverged are a real problem, because only one of them can be synced back
+ * to the single CMS entry, so those are still reported.
+ */
 function checkDuplicateUrls(
   repoRoot: string,
   docsRoot: string,
   allDocs: Set<string>,
 ): string[] {
   const errors: string[] = [];
-  const urlPaths = new Map<string, string>();
+  const seen = new Map<string, { path: string; body: string }>();
   for (const p of allDocs) {
     try {
       const d = parseDocFile(repoRoot, docsRoot, p);
-      if (urlPaths.has(d.frontMatter.url)) {
+      const body = fs.readFileSync(path.join(repoRoot, p), "utf8");
+      const prior = seen.get(d.frontMatter.url);
+      if (!prior) {
+        seen.set(d.frontMatter.url, { path: p, body });
+      } else if (prior.body !== body) {
         errors.push(
-          `Duplicate url "${d.frontMatter.url}" in ${urlPaths.get(d.frontMatter.url)} and ${p}`,
+          `Diverged copies of url "${d.frontMatter.url}": ${prior.path} and ${p} share one CMS entry but their content differs, so only one can sync back`,
         );
-      } else {
-        urlPaths.set(d.frontMatter.url, p);
       }
     } catch {
       /* skip files with invalid frontmatter — reported separately in lintDoc */
@@ -274,6 +286,10 @@ async function main(): Promise<void> {
   const allErrors: string[] = [];
 
   for (const file of nonMdFiles) {
+    // orphan-docs/ holds pages the left nav cannot reach, quarantined for
+    // author review rather than published. Its manifest is deliberately a CSV
+    // and is not meant to be synced to the CMS.
+    if (file.endsWith("orphan-docs/orphan-docs.csv")) continue;
     allErrors.push(
       `${file}: File is missing the .md extension — rename it to ${path.basename(file)}.md so it is picked up by the CMS sync`,
     );

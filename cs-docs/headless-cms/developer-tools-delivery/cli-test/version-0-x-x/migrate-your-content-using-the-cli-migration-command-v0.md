@@ -1,7 +1,7 @@
 ---
 title: "Migrate your Content using the CLI Migration Command | Old Commands"
 description: "Effortlessly migrate your content with Contentstack's CLI Migration Command."
-url: /headless-cms/migrate-your-content-using-the-cli-migration-command/old-commands
+url: /headless-cms/migrate-your-content-using-the-cli-migration-command/v0
 ---
 
 # Migrate your Content using the CLI Migration Command | Old Commands

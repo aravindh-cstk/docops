@@ -1,7 +1,7 @@
 ---
 title: "Bootstrap Starter Apps | Old Commands"
 description: "Learn how to Bootstrap Starter Apps using the CLI"
-url: /headless-cms/bootstrap-starter-apps/old-commands
+url: /headless-cms/cli-bootstrap-starter-apps/v0
 ---
 
 # Bootstrap Starter Apps | Old Commands

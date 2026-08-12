@@ -1,7 +1,7 @@
 ---
 title: "CLI Authentication and Adding Tokens | Old Commands"
 description: "Securely authenticate and access Contentstack's CLI with our comprehensive developer documentation."
-url: /headless-cms/cli-authentication/old-commands
+url: /headless-cms/cli-authentication/v0
 ---
 
 # CLI Authentication and Adding Tokens | Old Commands
