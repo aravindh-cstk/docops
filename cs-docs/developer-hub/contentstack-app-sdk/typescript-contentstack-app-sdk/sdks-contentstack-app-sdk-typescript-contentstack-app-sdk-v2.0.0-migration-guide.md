@@ -1,18 +1,10 @@
 ---
-title: "[TypeScript Contentstack App SDK] - Contentstack App SDK v2.0.0 Migration Guide"
-description: Contentstack App SDK v2.0.0 Migration Guide
-url: https://www.contentstack.com/docs/developers/sdks/contentstack-app-sdk/typescript/contentstack-app-sdk-v2.0.0-migration-guide
-product: Contentstack
-doc_type: migration-guide
-audience:
-  - developers
-version: v2.0.0
-last_updated: 2026-03-25
+title: "Contentstack App SDK v2.0.0 Migration Guide"
+description: "App SDK v2.0.0 introduces breaking changes for metadata response, UI location, and extension APIs. Update plugins for improved compatibility and migration stability."
+url: /developers/sdks/contentstack-app-sdk/typescript/contentstack-app-sdk-v2.0.0-migration-guide
 ---
 
-# [TypeScript Contentstack App SDK] - Contentstack App SDK v2.0.0 Migration Guide
-
-This page describes the breaking changes in Contentstack App SDK v2.0.0 and the specific code updates required to migrate from earlier versions. It is intended for developers maintaining Contentstack apps, plugins, or extensions and should be used when upgrading to App SDK v2.0.0.
+# Contentstack App SDK v2.0.0 Migration Guide
 
 ## Contentstack App SDK v2.0.0 Migration Guide
 
@@ -23,11 +15,12 @@ App SDK v2.0.0 introduces breaking changes that improve the structure and enhanc
 If your application uses the metadata module to manage app metadata, update your code to handle the new response structure.
 
 The following methods now return a simplified format in version 2.0.0:
-- `createMetaData()`
-- `retrieveMetaData()`
-- `retrieveAllMetaData()`
-- `updateMetaData()`
-- `deleteMetaData()`
+
+-   createMetaData()
+-   retrieveMetaData()
+-   retrieveAllMetaData()
+-   updateMetaData()
+-   deleteMetaData()
 
 Here's a comparison of the old and new response structures:
 
@@ -53,17 +46,17 @@ Here's a comparison of the old and new response structures:
 
 ## Field Modifier and Full Page Location Changes
 
-If your app uses the `EntryFieldLocation` or `FullscreenAppWidget` properties to manage field modifiers or full-page applications, update these references to match the new names in version 2.0.0:
+If your app uses the EntryFieldLocation or FullscreenAppWidget properties to manage field modifiers or full-page applications, update these references to match the new names in version 2.0.0:
 
-Replace `appSDK.location.EntryFieldLocation` with `appSDK.location.FieldModifierLocation`.
+Replace appSDK.location.EntryFieldLocation with appSDK.location.FieldModifierLocation.
 
-Replace `appSDK.location.FullscreenAppWidget` with `appSDK.location.FullPage`.
+Replace appSDK.location.FullscreenAppWidget with appSDK.location.FullPage.
 
-## Update for _extension Property
+## Update for \_extension Property
 
-In earlier versions of the App SDK, the `_extension` property was available after initialization. Version 2.0.0, replaces this with `_uiLocation`. Update your code as follows:
+In earlier versions of the App SDK, the \_extension property was available after initialization. Version 2.0.0, replaces this with \_uiLocation. Update your code as follows:
 
-Replace `appSdk._extension` with `appSdk._uiLocation`.
+Replace appSdk.\_extension with appSdk.\_uiLocation.
 
 **Example:**
 
@@ -81,24 +74,6 @@ ContentstackAppSDK.init((appSdk) => {
 
 The following table summarizes key changes introduced in App SDK v2.0.0. Use this as a quick reference when updating your plugin or extension code:
 
-| Old Reference | New Reference |
-|---|---|
-| `appSDK.location.EntryFieldLocation` | `appSDK.location.FieldModifierLocation` |
-| `appSDK.location.FullscreenAppWidget` | `appSDK.location.FullPage` |
-| `appSdk._extension` | `appSdk._uiLocation` |
+<table><tbody><tr><td><strong>Old Reference</strong></td><td><strong>New Reference</strong></td></tr><tr><td><span class="code">appSDK.location.EntryFieldLocation</span></td><td><span class="code">appSDK.location.FieldModifierLocation</span></td></tr><tr><td><span class="code">appSDK.location.FullscreenAppWidget</span></td><td><span class="code">appSDK.location.FullPage</span></td></tr><tr><td><span class="code">appSdk._extension</span></td><td><span class="code">appSdk._uiLocation</span></td></tr></tbody></table>
 
 These migration steps help you transition smoothly to App SDK v2.0.0. For any questions, contact [Contentstack Support](mailto:support@contentstack.com).
-
-## Common questions
-
-**Q: Which metadata methods changed their response structure in v2.0.0?**  
-A: `createMetaData()`, `retrieveMetaData()`, `retrieveAllMetaData()`, `updateMetaData()`, and `deleteMetaData()`.
-
-**Q: What should I replace `appSDK.location.EntryFieldLocation` with?**  
-A: Replace `appSDK.location.EntryFieldLocation` with `appSDK.location.FieldModifierLocation`.
-
-**Q: What replaced `appSdk._extension` in v2.0.0?**  
-A: Version 2.0.0 replaces `_extension` with `_uiLocation`, so use `appSdk._uiLocation`.
-
-**Q: Who should I contact if I have questions about the migration?**  
-A: Contact [Contentstack Support](mailto:support@contentstack.com).

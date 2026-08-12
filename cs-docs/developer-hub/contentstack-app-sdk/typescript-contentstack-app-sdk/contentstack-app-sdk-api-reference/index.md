@@ -1,12 +1,10 @@
 ---
-title: "Contentstack App SDK"
-description: Contentstack App SDK
+title: "Contentstack App SDK API Reference"
+description: "Contentstack App SDK API Reference"
 url: /developers/sdks/contentstack-app-sdk/typescript/reference
-product: Contentstack
-doc_type: page
-created_at: 2026-06-04T13:58:37.225Z
-updated_at: 2026-06-04T14:00:03.102Z
+doc_type: link
 ---
 
-# Contentstack App SDK
+# Contentstack App SDK API Reference
 
+This navigation entry links to [Contentstack App SDK API Reference](https://www.contentstack.com/docs/developers/sdks/contentstack-app-sdk/typescript/reference).
