@@ -154,12 +154,12 @@ async function processFaqContainer(
   containerSlug: string,
   dryRun: boolean,
 ): Promise<SyncResult> {
-  const relPath = `${config.CS_DOCS_ROOT}/headless-cms/troubleshooting-and-faqs/${containerSlug}`;
   const container = resolveFaqContainer(containerSlug);
   if (!container) {
-    return { path: relPath, action: "skipped" };
+    return { path: `${config.CS_DOCS_ROOT}/*/troubleshooting-and-faqs/${containerSlug}`, action: "skipped" };
   }
 
+  const relPath = `${config.CS_DOCS_ROOT}/${container.productSlug}/troubleshooting-and-faqs/${containerSlug}`;
   const containerDir = path.join(config.repoRoot, relPath);
 
   try {

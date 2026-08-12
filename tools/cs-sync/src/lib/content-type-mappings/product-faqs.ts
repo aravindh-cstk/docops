@@ -23,13 +23,15 @@ import { htmlToJsonRte, type RteOutNode } from "../html-to-json-rte.js";
 
 export interface FaqContainerConfig {
   sandboxUid: string;
+  /** Top-level cs-docs product folder this container's files live under, e.g. "headless-cms". */
+  productSlug: string;
 }
 
 const FAQ_CONTAINERS: Record<string, FaqContainerConfig> = {
-  "headless-cms-faqs": { sandboxUid: "blt4baa29a18cdc5a2c" },
-  "headless-cms-troubleshooting-guides": { sandboxUid: "blt76353d77c4e8910e" },
-  "sdk-troubleshooting-guides": { sandboxUid: "bltb7912d2b60ba974f" },
-  "cli-troubleshooting-guides": { sandboxUid: "bltc15edadfe9458903" },
+  "headless-cms-faqs": { sandboxUid: "blt4baa29a18cdc5a2c", productSlug: "headless-cms" },
+  "headless-cms-troubleshooting-guides": { sandboxUid: "blt76353d77c4e8910e", productSlug: "headless-cms" },
+  "sdk-troubleshooting-guides": { sandboxUid: "bltb7912d2b60ba974f", productSlug: "headless-cms" },
+  "cli-troubleshooting-guides": { sandboxUid: "bltc15edadfe9458903", productSlug: "headless-cms" },
 };
 
 /** Null means "not a verified container", callers must skip, not guess. */
