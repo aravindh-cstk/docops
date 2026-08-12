@@ -1,6 +1,6 @@
 ---
 title: "React"
-description: " Kickstart your React and Vite single-page app with Contentstack. Integrate the Delivery SDK, Live Preview, and Visual Editor using the TypeScript starter."
+description: "Kickstart your React and Vite single-page app with Contentstack. Integrate the Delivery SDK, Live Preview, and Visual Editor using the TypeScript starter."
 url: /headless-cms/react
 ---
 

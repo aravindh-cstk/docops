@@ -1,7 +1,6 @@
 ---
 title: "Contentstack MCP Server"
-description: "Leverage the Contentstack MCP Server for smarter workflows using natural language commands across APIs and tools like Lytics and Claude.
-"
+description: "Leverage the Contentstack MCP Server for smarter workflows using natural language commands across APIs and tools like Lytics and Claude."
 url: /developers/contentstack-mcp-server
 ---
 

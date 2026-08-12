@@ -1,7 +1,6 @@
 ---
 title: "Edit a Team"
-description: "Learn how to edit an existing team in Contentstack.
-"
+description: "Learn how to edit an existing team in Contentstack."
 url: /administration/edit-a-team
 ---
 

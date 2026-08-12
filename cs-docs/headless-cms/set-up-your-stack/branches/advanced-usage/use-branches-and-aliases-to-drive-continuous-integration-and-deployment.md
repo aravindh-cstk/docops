@@ -1,6 +1,6 @@
 ---
 title: "Use Branches and Aliases to Drive Continuous Integration and Deployment"
-description: "Learn how to drive continuous integration and deployment using branches and aliases in Contentstack's developer documentation. "
+description: "Learn how to drive continuous integration and deployment using branches and aliases in Contentstack's developer documentation."
 url: /headless-cms/use-branches-and-aliases-to-drive-continuous-integration-and-deployment
 ---
 

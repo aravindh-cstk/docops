@@ -1,6 +1,6 @@
 ---
 title: "Enhance Content Creation and Management"
-description: "Discover effective strategies and best practices to streamline your content creation and management processes with Contentstack. "
+description: "Discover effective strategies and best practices to streamline your content creation and management processes with Contentstack."
 url: /headless-cms/enhance-content-creation-and-management
 ---
 

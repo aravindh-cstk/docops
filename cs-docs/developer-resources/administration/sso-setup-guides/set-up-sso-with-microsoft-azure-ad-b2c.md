@@ -1,6 +1,6 @@
 ---
 title: "Set up SSO with Microsoft Azure AD B2C"
-description: "Learn how to effortlessly set up Single Sign-On (SSO) with Microsoft Azure AD B2C on Contentstack. "
+description: "Learn how to effortlessly set up Single Sign-On (SSO) with Microsoft Azure AD B2C on Contentstack."
 url: /administration/set-up-sso-with-microsoft-azure-ad-b2c
 ---
 

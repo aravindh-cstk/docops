@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting Browser \"Dangerous Site\" Warnings"
-description: " Identification, resolution, and prevention of third-party \"Dangerous site\" or \"Deceptive site ahead\" browser warnings on Contentstack Launch sites."
+description: "Identification, resolution, and prevention of third-party \"Dangerous site\" or \"Deceptive site ahead\" browser warnings on Contentstack Launch sites."
 url: /launch/troubleshooting-browser-dangerous-site-warnings
 ---
 

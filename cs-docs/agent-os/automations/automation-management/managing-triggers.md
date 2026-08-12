@@ -1,7 +1,6 @@
 ---
 title: "Managing Triggers"
-description: "Learn how to rename and delete triggers within Contentstack’s Agent OS.
-"
+description: "Learn how to rename and delete triggers within Contentstack’s Agent OS."
 url: /agent-os/managing-triggers
 ---
 

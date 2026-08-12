@@ -1,7 +1,6 @@
 ---
 title: "Agent OS Architecture"
-description: "Discover Agent OS, an adaptive AI framework with Agents, Automations, and governance for scalable enterprise automation.
-"
+description: "Discover Agent OS, an adaptive AI framework with Agents, Automations, and governance for scalable enterprise automation."
 url: /agent-os/agent-os-architecture
 ---
 

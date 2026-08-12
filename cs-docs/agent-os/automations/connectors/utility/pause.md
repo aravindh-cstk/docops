@@ -1,7 +1,6 @@
 ---
 title: "Pause"
-description: "Learn how to pause automation in the Automate platform using the Pause connector with step-by-step configuration guidance.
-"
+description: "Learn how to pause automation in the Automate platform using the Pause connector with step-by-step configuration guidance."
 url: /agent-os/pause
 ---
 

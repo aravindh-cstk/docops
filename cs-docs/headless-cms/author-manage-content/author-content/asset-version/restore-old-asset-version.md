@@ -1,7 +1,6 @@
 ---
 title: "Restore Old Asset Version"
-description: "Learn how to restore or rollback to a previously saved version of an asset in Contentstack for seamless asset management.
-"
+description: "Learn how to restore or rollback to a previously saved version of an asset in Contentstack for seamless asset management."
 url: /headless-cms/restore-old-asset-version
 ---
 

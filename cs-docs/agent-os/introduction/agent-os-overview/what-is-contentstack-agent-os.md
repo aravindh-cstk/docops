@@ -1,7 +1,6 @@
 ---
 title: "What is Contentstack Agent OS"
-description: "Discover Agent OS, an adaptive AI framework with Brand Kit, Automate tools, and governance for scalable enterprise automation.
-"
+description: "Discover Agent OS, an adaptive AI framework with Brand Kit, Automate tools, and governance for scalable enterprise automation."
 url: /agent-os/what-is-contentstack-agent-os
 ---
 

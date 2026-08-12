@@ -1,7 +1,6 @@
 ---
 title: "Set Up Live Preview with REST for CSR"
-description: "Learn to set up Live Preview using REST APIs for CSR websites in Contentstack. Enable real-time content updates with preview tokens and SDK configuration.
-"
+description: "Learn to set up Live Preview using REST APIs for CSR websites in Contentstack. Enable real-time content updates with preview tokens and SDK configuration."
 url: /headless-cms/set-up-live-preview-with-rest-for-client-side-rendering
 ---
 

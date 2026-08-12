@@ -1,7 +1,6 @@
 ---
 title: "Personalize Connector"
-description: "Use the Personalize connector to automate the retrieval of audiences and experiences from Contentstack’s Personalize platform.
-"
+description: "Use the Personalize connector to automate the retrieval of audiences and experiences from Contentstack’s Personalize platform."
 url: /agent-os/personalize
 ---
 

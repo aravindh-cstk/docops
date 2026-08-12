@@ -1,7 +1,6 @@
 ---
 title: "Anthropic"
-description: "The Anthropic connector lets you generate responses for text and images using the Anthropic Claude AI models.
-"
+description: "The Anthropic connector lets you generate responses for text and images using the Anthropic Claude AI models."
 url: /agent-os/anthropic
 ---
 

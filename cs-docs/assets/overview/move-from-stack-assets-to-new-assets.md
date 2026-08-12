@@ -1,6 +1,6 @@
 ---
 title: "Move from Stack Assets to New Assets"
-description: ""
+description: "Move from Stack Assets to New Assets"
 url: /assets/move-from-stack-assets-to-new-assets
 ---
 

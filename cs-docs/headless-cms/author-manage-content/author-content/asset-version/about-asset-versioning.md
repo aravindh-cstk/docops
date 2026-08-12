@@ -1,7 +1,6 @@
 ---
 title: "About Asset Versioning"
-description: "Learn how Contentstack Asset Versioning streamlines asset management with version control for seamless collaboration, better organization, and easy content updates.
-"
+description: "Learn how Contentstack Asset Versioning streamlines asset management with version control for seamless collaboration, better organization, and easy content updates."
 url: /headless-cms/about-asset-versioning
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Marketplace App Boilerplate"
-description: "Quickly build Contentstack apps using the Marketplace App Boilerplate with support for custom fields, entry sidebars, dashboards, and secure integrations.
-"
+description: "Quickly build Contentstack apps using the Marketplace App Boilerplate with support for custom fields, entry sidebars, dashboards, and secure integrations."
 url: /developer-hub/marketplace-app-boilerplate
 ---
 

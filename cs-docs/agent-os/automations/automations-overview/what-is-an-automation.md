@@ -1,7 +1,6 @@
 ---
 title: "What is an Automation"
-description: "Build automation workflows in Agent OS using triggers and actions to simplify tasks, integrate tools, and reduce manual operations.
-"
+description: "Build automation workflows in Agent OS using triggers and actions to simplify tasks, integrate tools, and reduce manual operations."
 url: /agent-os/what-is-an-automation
 ---
 

@@ -1,8 +1,6 @@
 ---
 title: "Entry Sidebar Location"
-description: "Customize the Contentstack entry editor using Sidebar Location to add custom widgets via the extension SDK.
-
-"
+description: "Customize the Contentstack entry editor using Sidebar Location to add custom widgets via the extension SDK."
 url: /developer-hub/sidebar-location
 ---
 

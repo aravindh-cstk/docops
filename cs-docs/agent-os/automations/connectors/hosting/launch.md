@@ -1,7 +1,6 @@
 ---
 title: "Launch"
-description: "Learn how to use the Launch Connector in Automate to deploy builds and revalidate CDN cache for your Contentstack-powered website.
-"
+description: "Learn how to use the Launch Connector in Automate to deploy builds and revalidate CDN cache for your Contentstack-powered website."
 url: /agent-os/launch
 ---
 

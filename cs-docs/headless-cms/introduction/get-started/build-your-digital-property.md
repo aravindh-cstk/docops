@@ -1,6 +1,6 @@
 ---
 title: "Build your Digital Property"
-description: ""
+description: "Build your Digital Property"
 url: /headless-cms/build-your-digital-property
 ---
 

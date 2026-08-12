@@ -1,6 +1,6 @@
 ---
 title: "Delete an Alias"
-description: "Learn how to delete an alias. Discover step-by-step instructions for removing aliases associated with branches in your version control system. "
+description: "Learn how to delete an alias. Discover step-by-step instructions for removing aliases associated with branches in your version control system."
 url: /headless-cms/delete-an-alias
 ---
 

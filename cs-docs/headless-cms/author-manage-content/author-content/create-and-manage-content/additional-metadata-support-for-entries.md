@@ -1,7 +1,6 @@
 ---
 title: "Additional Metadata Support for Entries"
-description: "Learn how to add and manage additional metadata for entries in Contentstack without increasing their version. Streamline content organization with custom metadata.
-"
+description: "Learn how to add and manage additional metadata for entries in Contentstack without increasing their version. Streamline content organization with custom metadata."
 url: /headless-cms/additional-metadata-support-for-entries
 ---
 

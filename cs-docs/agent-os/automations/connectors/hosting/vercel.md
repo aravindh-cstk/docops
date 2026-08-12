@@ -1,6 +1,6 @@
 ---
 title: "Vercel"
-description: " Use this connector to deploy your GitHub projects to Vercel domain."
+description: "Use this connector to deploy your GitHub projects to Vercel domain."
 url: /agent-os/vercel
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Implement TOTP Support for Java Management SDK"
-description: " Learn to integrate TOTP-based MFA in Contentstack’s Java SDK. Authenticate users via 2FA token or MFA secret to enhance login security and automation."
+description: "Learn to integrate TOTP-based MFA in Contentstack’s Java SDK. Authenticate users via 2FA token or MFA secret to enhance login security and automation."
 url: /developers/sdks/content-management-sdk/java/implement-totp-with-java-management-sdk
 ---
 

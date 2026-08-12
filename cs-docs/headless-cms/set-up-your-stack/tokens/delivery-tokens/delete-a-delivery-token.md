@@ -1,6 +1,6 @@
 ---
 title: "Delete a Delivery Token"
-description: " Learn to delete delivery and preview tokens in Contentstack to enhance API security and manage tokens effectively."
+description: "Learn to delete delivery and preview tokens in Contentstack to enhance API security and manage tokens effectively."
 url: /headless-cms/delete-a-delivery-token
 ---
 

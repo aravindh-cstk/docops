@@ -1,7 +1,6 @@
 ---
 title: "Contentstack Management - Taxonomy Actions"
-description: "Use the Contentstack Management Taxonomy actions to automate taxonomies based operations.
-"
+description: "Use the Contentstack Management Taxonomy actions to automate taxonomies based operations."
 url: /agent-os/contentstack-management-taxonomy-actions
 ---
 

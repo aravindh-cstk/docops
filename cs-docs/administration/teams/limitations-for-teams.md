@@ -1,7 +1,6 @@
 ---
 title: "Limitations for Teams"
-description: "Discover the limitations of the teams feature and learn how to navigate these restrictions for optimal use.
-"
+description: "Discover the limitations of the teams feature and learn how to navigate these restrictions for optimal use."
 url: /administration/limitations-for-teams
 ---
 

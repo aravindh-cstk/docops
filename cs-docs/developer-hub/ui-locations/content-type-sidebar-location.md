@@ -1,7 +1,6 @@
 ---
 title: "Content Type Sidebar Location"
-description: "Use the Content Type Sidebar to access TypeScript API type definitions for seamless integration.
-"
+description: "Use the Content Type Sidebar to access TypeScript API type definitions for seamless integration."
 url: /developer-hub/content-type-sidebar-location
 ---
 

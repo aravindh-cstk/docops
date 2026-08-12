@@ -1,6 +1,6 @@
 ---
 title: "Automate Recurring Processes"
-description: ""
+description: "Automate Recurring Processes"
 url: /headless-cms/automate-recurring-processes
 ---
 

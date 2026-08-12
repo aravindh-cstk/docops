@@ -1,7 +1,6 @@
 ---
 title: "Typesense Cloud"
-description: "Use the Typesense Cloud Connector to seamlessly index, update, or delete documents with Automate workflows.
-"
+description: "Use the Typesense Cloud Connector to seamlessly index, update, or delete documents with Automate workflows."
 url: /agent-os/typesense-cloud
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Key Concepts"
-description: "Understand the core building blocks of the Lytics in Contentstack: projects, connections, collaborators, roles, JStag, and the dashboard and how they work together. "
+description: "Understand the core building blocks of the Lytics in Contentstack: projects, connections, collaborators, roles, JStag, and the dashboard and how they work together."
 url: /lytics/key-concepts
 ---
 
@@ -60,10 +60,8 @@ A single Lytics project can connect to multiple stacks, Launch projects, and Per
 
 ## Collaborator
 
-A collaborator is any user who has been explicitly invited to a Lytics project. Being a member of the parent Contentstack organization does not automatically grant access to a Lytics project, a user must be invited to it.
-
-Collaborators are managed from **Settings > Users** inside the project. Each collaborator is assigned a role when they are invited.
+A collaborator is any user who has been explicitly invited to a Lytics project. Being a member of the parent Contentstack organization does not automatically grant access to a Lytics project, a user must be explicitly added as a collaborator to see it. The exceptions are Organization Owners and Admins, who automatically have access to every Lytics project in the organization, and the user who creates a project, who is automatically its owner and always retains full access regardless of any role assignments. Each collaborator is assigned a role when they are invited.
 
 ## Role
 
-A role is a named set of permissions that controls what a collaborator can do inside a Lytics project. Roles are mapped automatically from Contentstack organization roles and cannot be assigned or changed inside the Lytics CDP interface.
+A role is a named set of permissions that controls what a collaborator can do inside a Lytics project. Roles are assigned per project, a user can hold different roles on different projects within the same organization. Roles are assigned when a collaborator is invited and can be changed in the Lytics  CDP.

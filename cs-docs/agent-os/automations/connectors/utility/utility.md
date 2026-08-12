@@ -1,7 +1,6 @@
 ---
 title: "Utility"
-description: "Use this connector to manage your automation workflow. 
-"
+description: "Use this connector to manage your automation workflow."
 url: /agent-os/utility
 ---
 

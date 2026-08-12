@@ -1,7 +1,6 @@
 ---
 title: "Polaris Prompts"
-description: "Learn how to use Polaris Prompts to write effective AI instructions, streamline content operations, and improve results in Contentstack.
-"
+description: "Learn how to use Polaris Prompts to write effective AI instructions, streamline content operations, and improve results in Contentstack."
 url: /agent-os/polaris-prompts
 ---
 

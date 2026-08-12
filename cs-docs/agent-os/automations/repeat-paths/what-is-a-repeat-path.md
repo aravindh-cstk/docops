@@ -1,7 +1,6 @@
 ---
 title: "What is a Repeat Path?"
-description: "Learn how Repeat Path in Agent OS helps you automate repetitive tasks by looping over data and executing steps multiple times.
-"
+description: "Learn how Repeat Path in Agent OS helps you automate repetitive tasks by looping over data and executing steps multiple times."
 url: /agent-os/what-is-a-repeat-path
 ---
 

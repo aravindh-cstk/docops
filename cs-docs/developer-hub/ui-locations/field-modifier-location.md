@@ -1,6 +1,6 @@
 ---
 title: "Field Modifier Location"
-description: " Learn how to easily add the Entry Field location for your app via the Developer Hub Console."
+description: "Learn how to easily add the Entry Field location for your app via the Developer Hub Console."
 url: /developer-hub/field-modifier-location
 ---
 

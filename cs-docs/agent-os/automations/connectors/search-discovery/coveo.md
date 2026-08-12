@@ -1,7 +1,6 @@
 ---
 title: "Coveo"
-description: "Learn to use the Coveo Automate connector to efficiently push and delete items from your website to Coveo.
-"
+description: "Learn to use the Coveo Automate connector to efficiently push and delete items from your website to Coveo."
 url: /agent-os/coveo
 ---
 

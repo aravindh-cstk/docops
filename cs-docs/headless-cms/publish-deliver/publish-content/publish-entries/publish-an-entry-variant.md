@@ -1,7 +1,6 @@
 ---
 title: "Publish an Entry Variant"
-description: "Learn how to publish entry variants in Contentstack to deliver personalized content tailored to specific user segments.
-"
+description: "Learn how to publish entry variants in Contentstack to deliver personalized content tailored to specific user segments."
 url: /headless-cms/publish-an-entry-variant
 ---
 

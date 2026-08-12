@@ -1,7 +1,6 @@
 ---
 title: "Contentstack Management - Global Fields Actions"
-description: "Use the Contentstack Management Global Fields action to automate fetching a specific or all the global fields from a stack.
-"
+description: "Use the Contentstack Management Global Fields action to automate fetching a specific or all the global fields from a stack."
 url: /agent-os/contentstack-management-global-fields-actions
 ---
 

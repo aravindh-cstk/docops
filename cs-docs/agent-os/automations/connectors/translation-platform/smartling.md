@@ -1,7 +1,6 @@
 ---
 title: "Smartling"
-description: "Use this connector to add and translate content from your Smartling account.
-"
+description: "Use this connector to add and translate content from your Smartling account."
 url: /agent-os/smartling
 ---
 

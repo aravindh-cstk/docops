@@ -1,7 +1,6 @@
 ---
 title: "Agent OS Usage Limits"
-description: "Know about the execution limits in an organization.
-"
+description: "Know about the execution limits in an organization."
 url: /agent-os/agent-os-usage-limits
 ---
 

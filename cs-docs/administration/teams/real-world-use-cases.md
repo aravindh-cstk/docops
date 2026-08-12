@@ -1,7 +1,6 @@
 ---
 title: "Real World Use Cases"
-description: "Explore practical applications and real-world scenarios of the team's feature to streamline role management in your projects.
-"
+description: "Explore practical applications and real-world scenarios of the team's feature to streamline role management in your projects."
 url: /administration/real-world-use-cases
 ---
 

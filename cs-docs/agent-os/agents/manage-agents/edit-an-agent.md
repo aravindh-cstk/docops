@@ -1,7 +1,6 @@
 ---
 title: "Edit an Agent"
-description: "Learn how to edit or modify agents in Agent OS using the Agent Builder.
-"
+description: "Learn how to edit or modify agents in Agent OS using the Agent Builder."
 url: /agent-os/edit-an-agent
 ---
 

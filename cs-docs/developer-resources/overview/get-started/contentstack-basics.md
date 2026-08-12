@@ -1,6 +1,6 @@
 ---
 title: "Contentstack Basics"
-description: ""
+description: "Contentstack Basics"
 url: /headless-cms/contentstack-basics
 ---
 

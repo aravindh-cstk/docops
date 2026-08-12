@@ -1,7 +1,6 @@
 ---
 title: "Get Started with Agents"
-description: "Learn how to get started with agents in Agent OS to automate workflows, manage tasks, and build intelligent agents using Contentstack.
-"
+description: "Learn how to get started with agents in Agent OS to automate workflows, manage tasks, and build intelligent agents using Contentstack."
 url: /agent-os/get-started-with-agents
 ---
 

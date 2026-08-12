@@ -1,7 +1,6 @@
 ---
 title: "Create an Entry Variant"
-description: "Learn how to create entry variants in Contentstack to deliver personalized content to specific user groups and enhance user experiences.
-"
+description: "Learn how to create entry variants in Contentstack to deliver personalized content to specific user groups and enhance user experiences."
 url: /headless-cms/create-an-entry-variant
 ---
 

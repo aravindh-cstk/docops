@@ -1,7 +1,6 @@
 ---
 title: "Contentstack Management - Releases Actions"
-description: "Use the Contentstack Management Releases actions to automate releases based operations.
-"
+description: "Use the Contentstack Management Releases actions to automate releases based operations."
 url: /agent-os/contentstack-management-releases-actions
 ---
 

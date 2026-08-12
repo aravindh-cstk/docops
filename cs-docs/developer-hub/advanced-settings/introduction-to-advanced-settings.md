@@ -1,7 +1,6 @@
 ---
 title: "Introduction to Advanced Settings"
-description: "Securely manage API keys, configure routing, and streamline calls for API integrations with Contentstack's Advanced Settings.
-"
+description: "Securely manage API keys, configure routing, and streamline calls for API integrations with Contentstack's Advanced Settings."
 url: /developer-hub/introduction-to-advanced-settings
 ---
 

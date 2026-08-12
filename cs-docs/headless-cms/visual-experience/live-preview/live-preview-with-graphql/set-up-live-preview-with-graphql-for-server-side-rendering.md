@@ -1,7 +1,6 @@
 ---
 title: "Set Up Live Preview with GraphQL for SSR"
-description: "Learn to set up Live Preview with GraphQL for CSR websites using Contentstack. Enable real-time updates, configure tokens, and preview entries seamlessly.
-"
+description: "Learn to set up Live Preview with GraphQL for CSR websites using Contentstack. Enable real-time updates, configure tokens, and preview entries seamlessly."
 url: /headless-cms/set-up-live-preview-with-graphql-for-server-side-rendering
 ---
 

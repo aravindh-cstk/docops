@@ -1,6 +1,6 @@
 ---
 title: "Automating Asset Management with Contentstack Automate"
-description: " Learn how to automate digital asset management in Contentstack with a step-by-step guide. Streamline workflows using triggers, AI-driven actions, and automated updates."
+description: "Learn how to automate digital asset management in Contentstack with a step-by-step guide. Streamline workflows using triggers, AI-driven actions, and automated updates."
 url: /agent-os/automating-asset-management-with-contentstack-automate
 ---
 

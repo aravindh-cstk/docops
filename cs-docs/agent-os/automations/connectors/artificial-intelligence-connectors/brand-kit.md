@@ -1,7 +1,6 @@
 ---
 title: "Brand Kit Connector"
-description: "Automate Brand Kit actions seamlessly with the Brand Kit Connector.
-"
+description: "Automate Brand Kit actions seamlessly with the Brand Kit Connector."
 url: /agent-os/brand-kit
 ---
 

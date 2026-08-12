@@ -1,6 +1,6 @@
 ---
 title: "CLI for CS Assets"
-description: ""
+description: "CLI for CS Assets"
 url: /headless-cms/cli-for-cs-assets
 ---
 

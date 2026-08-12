@@ -1,6 +1,6 @@
 ---
 title: "Get Started with Polaris | Contentstack"
-description: " Learn how to get started with Polaris, the AI-powered co-pilot in Contentstack CMS, to create, update, and manage content using natural language prompts."
+description: "Learn how to get started with Polaris, the AI-powered co-pilot in Contentstack CMS, to create, update, and manage content using natural language prompts."
 url: /agent-os/get-started-with-polaris
 ---
 

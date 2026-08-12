@@ -1,6 +1,6 @@
 ---
 title: "Create a Global Field"
-description: " Learn how to create a Global field in Contentstack to standardize and reuse structured content."
+description: "Learn how to create a Global field in Contentstack to standardize and reuse structured content."
 url: /headless-cms/create-a-global-field
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Create and Publish Content"
-description: ""
+description: "Create and Publish Content"
 url: /headless-cms/create-and-publish-content
 ---
 

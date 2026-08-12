@@ -1,7 +1,6 @@
 ---
 title: "Azure ChatGPT"
-description: "Use this connector to generate content using the Azure cloud network.
-"
+description: "Use this connector to generate content using the Azure cloud network."
 url: /agent-os/azure-chatgpt
 ---
 

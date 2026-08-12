@@ -1,6 +1,6 @@
 ---
 title: "Get Started with Java Marketplace SDK"
-description: "This guide will help you get started with Contentstack Java Marketplace SDK to build apps. "
+description: "This guide will help you get started with Contentstack Java Marketplace SDK to build apps."
 url: /developers/sdks/marketplace-sdk/java/get-started-with-java-marketplace-sdk
 ---
 

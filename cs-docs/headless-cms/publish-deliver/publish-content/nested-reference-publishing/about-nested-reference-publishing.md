@@ -1,6 +1,6 @@
 ---
 title: "About Nested Reference Publishing"
-description: "Effortlessly publish entries with nested references across environments and languages. Avoid missing any referenced content. "
+description: "Effortlessly publish entries with nested references across environments and languages. Avoid missing any referenced content."
 url: /headless-cms/about-nested-reference-publishing
 ---
 

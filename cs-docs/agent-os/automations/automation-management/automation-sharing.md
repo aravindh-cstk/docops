@@ -1,7 +1,6 @@
 ---
 title: "Automation Sharing"
-description: "Discover how Contentstack's Automation Sharing feature allows you to effortlessly share and replicate automation workflows across different organizations.
-"
+description: "Discover how Contentstack's Automation Sharing feature allows you to effortlessly share and replicate automation workflows across different organizations."
 url: /agent-os/automation-sharing
 ---
 

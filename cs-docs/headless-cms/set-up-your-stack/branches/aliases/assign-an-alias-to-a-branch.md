@@ -1,6 +1,6 @@
 ---
 title: "Assign an Alias to a Branch"
-description: "Learn how to effectively assign aliases to branches, enabling easier navigation and identification within your version control system. "
+description: "Learn how to effectively assign aliases to branches, enabling easier navigation and identification within your version control system."
 url: /headless-cms/assign-an-alias-to-a-branch
 ---
 

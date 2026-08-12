@@ -1,7 +1,6 @@
 ---
 title: "TypeScript Delivery SDK - Migration Guide (V4 to V5)"
-description: "Migrate Contentstack TypeScript Delivery SDK from v4 to v5. Learn breaking cache changes, persistenceStore setup, and the required steps for stable caching behavior.
-"
+description: "Migrate Contentstack TypeScript Delivery SDK from v4 to v5. Learn breaking cache changes, persistenceStore setup, and the required steps for stable caching behavior."
 url: /developers/sdks/content-delivery-sdk/typescript/typescript-delivery-sdk-migrate-from-v4-to-v5
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Bulk Delete Assets"
-description: " Learn how to delete assets in bulk in Contentstack.
-"
+description: "Learn how to delete assets in bulk in Contentstack."
 url: /headless-cms/bulk-delete-assets
 ---
 

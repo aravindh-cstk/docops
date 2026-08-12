@@ -1,7 +1,6 @@
 ---
 title: "Contentstack Management - Content Types Actions"
-description: "Use the Contentstack Management Content Types action to automate fetching all the content types from a stack.
-"
+description: "Use the Contentstack Management Content Types action to automate fetching all the content types from a stack."
 url: /agent-os/contentstack-management-content-types-actions
 ---
 

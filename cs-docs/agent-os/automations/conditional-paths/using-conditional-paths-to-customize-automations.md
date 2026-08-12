@@ -1,7 +1,6 @@
 ---
 title: "Using Conditional Paths to Customize Automations"
-description: "Using Conditional Paths to Customize Automations
-"
+description: "Using Conditional Paths to Customize Automations"
 url: /agent-os/using-conditional-paths-to-customize-automations
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "What is an Agent"
-description: "Learn what Contentstack Agents are, how they combine AI and context to act intelligently in Agent OS.
-"
+description: "Learn what Contentstack Agents are, how they combine AI and context to act intelligently in Agent OS."
 url: /agent-os/what-is-an-agent
 ---
 

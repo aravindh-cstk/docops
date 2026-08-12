@@ -1,6 +1,6 @@
 ---
 title: "Limitations of Aliases"
-description: "Understand the limitations of aliases in Contentstack's developer documentation. "
+description: "Understand the limitations of aliases in Contentstack's developer documentation."
 url: /headless-cms/limitations-of-aliases
 ---
 

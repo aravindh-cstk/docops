@@ -1,6 +1,6 @@
 ---
 title: "About Compare and Merge Branches"
-description: "Learn how to compare and merge branches in Contentstack. Branches are a way to create different versions of your content. "
+description: "Learn how to compare and merge branches in Contentstack. Branches are a way to create different versions of your content."
 url: /headless-cms/about-compare-and-merge-branches
 ---
 

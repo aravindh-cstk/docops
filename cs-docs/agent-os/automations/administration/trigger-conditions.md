@@ -1,7 +1,6 @@
 ---
 title: "Trigger Conditions"
-description: "Learn how to set trigger conditions in automations to execute workflows based on events and logic-driven rules.
-"
+description: "Learn how to set trigger conditions in automations to execute workflows based on events and logic-driven rules."
 url: /agent-os/trigger-conditions
 ---
 

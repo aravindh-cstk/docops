@@ -1,7 +1,6 @@
 ---
 title: "Contentstack Management - Variants Actions"
-description: "Use the Contentstack Management Variants actions to automate variants based operations.
-"
+description: "Use the Contentstack Management Variants actions to automate variants based operations."
 url: /agent-os/contentstack-management-variants-actions
 ---
 

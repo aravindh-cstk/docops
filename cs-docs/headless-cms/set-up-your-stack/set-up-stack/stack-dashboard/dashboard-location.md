@@ -1,7 +1,6 @@
 ---
 title: "Stack Dashboard Location"
-description: "Use the Dashboard Location to create widgets for real-time stack usage, published entries, and daily to-dos.
-"
+description: "Use the Dashboard Location to create widgets for real-time stack usage, published entries, and daily to-dos."
 url: /developer-hub/dashboard-location
 ---
 

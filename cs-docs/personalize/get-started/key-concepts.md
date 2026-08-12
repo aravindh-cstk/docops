@@ -1,6 +1,6 @@
 ---
 title: "Key Concepts"
-description: "Understand key Contentstack Personalize concepts like audiences, experiences, attributes, events, and A/B testing. "
+description: "Understand key Contentstack Personalize concepts like audiences, experiences, attributes, events, and A/B testing."
 url: /personalize/key-concepts
 ---
 

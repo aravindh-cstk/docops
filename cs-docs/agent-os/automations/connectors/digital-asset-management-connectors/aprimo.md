@@ -1,7 +1,6 @@
 ---
 title: "Aprimo"
-description: "Use this connector to update and retrieve asset details stored in Aprimo.
-"
+description: "Use this connector to update and retrieve asset details stored in Aprimo."
 url: /agent-os/aprimo
 ---
 

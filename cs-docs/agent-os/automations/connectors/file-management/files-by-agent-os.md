@@ -1,6 +1,6 @@
 ---
 title: "Files by Agent OS"
-description: "Use the Files by Agent OS connector to export stack content into a downloadable file and deliver it via any third party application. "
+description: "Use the Files by Agent OS connector to export stack content into a downloadable file and deliver it via any third party application."
 url: /agent-os/files-by-agent-os
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Clearwinner App Installation Guide"
-description: "Save time with the ClearWinner app by automating A/B test cleanup. Efficiently identify winners, merge variants into baseline entries, and publish results in one click. 
-"
+description: "Save time with the ClearWinner app by automating A/B test cleanup. Efficiently identify winners, merge variants into baseline entries, and publish results in one click."
 url: /marketplace/clear-winner
 ---
 

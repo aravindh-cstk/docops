@@ -1,7 +1,6 @@
 ---
 title: "Bulk Publish Assets"
-description: "Learn how to publish assets in bulk in Contentstack.
-"
+description: "Learn how to publish assets in bulk in Contentstack."
 url: /headless-cms/bulk-publish-assets
 ---
 

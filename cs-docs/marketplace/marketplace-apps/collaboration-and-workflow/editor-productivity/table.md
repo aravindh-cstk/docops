@@ -1,7 +1,6 @@
 ---
 title: "Table App Installation Guide"
-description: "The Marketplace Table app lets you add a table as a custom field in your content type.
-"
+description: "The Marketplace Table app lets you add a table as a custom field in your content type."
 url: /marketplace/table
 ---
 

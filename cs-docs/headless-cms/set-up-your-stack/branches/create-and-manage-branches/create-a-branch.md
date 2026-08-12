@@ -1,6 +1,6 @@
 ---
 title: "Create a Branch"
-description: "Discover how to create a branch in Contentstack's developer documentation. Learn the step-by-step process for creating branches in your version control system. "
+description: "Discover how to create a branch in Contentstack's developer documentation. Learn the step-by-step process for creating branches in your version control system."
 url: /headless-cms/create-a-branch
 ---
 

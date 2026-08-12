@@ -1,7 +1,6 @@
 ---
 title: "Configuring an App"
-description: "Learn how to configure an app in Contentstack's Developer Hub with step-by-step instructions.
-"
+description: "Learn how to configure an app in Contentstack's Developer Hub with step-by-step instructions."
 url: /developer-hub/configuring-an-app
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Comparing Branches"
-description: "Learn how to effectively compare branches, identify differences, and make informed decisions for your project's version control. "
+description: "Learn how to effectively compare branches, identify differences, and make informed decisions for your project's version control."
 url: /headless-cms/comparing-branches
 ---
 
