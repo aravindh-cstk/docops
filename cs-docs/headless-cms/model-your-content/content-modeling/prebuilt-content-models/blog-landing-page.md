@@ -1,10 +1,10 @@
 ---
-title: "[Features Content Models] Blog Landing Page"
+title: "Blog Landing Page"
 description: "The Blog Landing Page defines the structure, fields, and schema to design the landing page for each blog."
 url: /headless-cms/blog-landing-page
 ---
 
-# [Features Content Models] Blog Landing Page
+# Blog Landing Page
 
 ## Blog Landing Page
 

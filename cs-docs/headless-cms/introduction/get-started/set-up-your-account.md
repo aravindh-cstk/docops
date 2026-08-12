@@ -1,10 +1,10 @@
 ---
-title: "[Get Started with CS] Set Up your Account"
+title: "Set Up your Account"
 description: "Learn how to set up your organization, data center location, migration or import of content, account security, and other attributes while creating a new Contentstack account."
 url: /headless-cms/set-up-your-account
 ---
 
-# [Get Started with CS] Set Up your Account
+# Set Up your Account
 
 ## Set Up your Account
 

@@ -351,6 +351,33 @@ If you cannot call setPageContext() directly — for example, when no JavaScript
 
 Meta tags are a useful fallback for frameworks that render <meta> natively (for example, Next.js App Router metadata / generateMetadata(), or Nuxt useHead()) and for sites with a strict Content Security Policy that blocks inline scripts but allows meta tags.
 
+## isVisualEditorEditing(element)
+
+The isVisualEditorEditing() method reports whether a field is currently selected for editing in Visual Editor. Selecting a field (clicking it) is enough for the check to return true, the author does not need to be typing. Use it to pause content that updates on its own, such as animations, carousels, or polled data, so the content does not move underneath the author.
+
+Pass the element that wraps the content you want to control. The method returns true while that element or any of its descendants is selected for editing, and false otherwise. Call it with no argument to check the entire document.
+
+The method performs a one-time check and does not set up any listeners or subscriptions. It returns false during server-side rendering, so it is safe to import in code shared between server and client.
+
+**Note:** This method is active only inside Visual Editor. On your live site it always returns false, so it has no effect on published pages. This method is available in Live Preview Utils SDK **v4.5.0** and **later**.
+
+<table><tbody><tr><td><strong>Parameter</strong></td><td><strong>Type</strong></td><td><strong>Optional</strong></td><td><strong>Description</strong></td></tr><tr><td><span class="code">element</span></td><td>Element</td><td>yes</td><td>The DOM element to check. If omitted, the method checks the whole document.</td></tr></tbody></table>
+
+**Returns:** boolean
+
+**For example:**
+
+```
+import { isVisualEditorEditing } from "@contentstack/live-preview-utils";
+
+const isEditing = isVisualEditorEditing(feedEl); // true / false
+
+feedEl.className = isEditing ? "pause-animation" : "continue-animation";
+
+.pause-animation    { animation-play-state: paused; }
+.continue-animation { animation-play-state: running; }
+```
+
 ## hash
 
 The hash property returns the Live Preview hash of the entry. It returns an empty string if the page is not opened in the Live Preview pane.

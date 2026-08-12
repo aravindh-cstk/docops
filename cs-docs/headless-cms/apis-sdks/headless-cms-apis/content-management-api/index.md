@@ -1,12 +1,10 @@
 ---
 title: "Content Management API"
-description: Content Management API
+description: "Content Management API"
 url: /developers/apis/content-management-api
-product: Contentstack
-doc_type: page
-created_at: 2026-05-20T12:21:07.422Z
-updated_at: 2026-05-20T12:21:19.707Z
+doc_type: link
 ---
 
 # Content Management API
 
+This navigation entry links to [Content Management API](https://www.contentstack.com/docs/developers/apis/content-management-api).

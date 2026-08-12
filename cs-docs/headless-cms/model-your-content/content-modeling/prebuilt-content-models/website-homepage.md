@@ -1,10 +1,10 @@
 ---
-title: "[Features Content Models] Website Homepage"
+title: "Website Homepage"
 description: "The Website Homepage Content Model includes fields and structures designed to capture the key information about the homepage of your website."
 url: /headless-cms/website-homepage
 ---
 
-# [Features Content Models] Website Homepage
+# Website Homepage
 
 ## Website Homepage
 

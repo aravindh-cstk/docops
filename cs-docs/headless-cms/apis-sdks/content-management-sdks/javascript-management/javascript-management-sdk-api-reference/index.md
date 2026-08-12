@@ -1,12 +1,10 @@
 ---
-title: "Content Management SDKs"
-description: Content Management SDKs
+title: "JavaScript Management SDK API Reference"
+description: "JavaScript Management SDK API Reference"
 url: /developers/sdks/content-management-sdk/javascript/reference
-product: Contentstack
-doc_type: page
-created_at: 2026-06-04T13:50:31.745Z
-updated_at: 2026-06-04T13:50:31.745Z
+doc_type: link
 ---
 
-# Content Management SDKs
+# JavaScript Management SDK API Reference
 
+This navigation entry links to [JavaScript Management SDK API Reference](https://www.contentstack.com/docs/developers/sdks/content-management-sdk/javascript/reference).

@@ -1,10 +1,10 @@
 ---
-title: "[Create Content Types] Import Prebuilt Content Models"
+title: "Import Prebuilt Content Models"
 description: "Effortlessly import and customize Content Models in Contentstack. Explore templates, extensions, and schema editing for efficient content management."
 url: /headless-cms/import-prebuilt-content-models
 ---
 
-# [Create Content Types] Import Prebuilt Content Models
+# Import Prebuilt Content Models
 
 ## Import Prebuilt Content Models
 

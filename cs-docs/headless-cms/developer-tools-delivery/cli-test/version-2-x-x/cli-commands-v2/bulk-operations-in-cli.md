@@ -1,7 +1,7 @@
 ---
 title: "Bulk Operations in CLI | Beta"
 description: "Run bulk publish and bulk unpublish operations with the Contentstack CLI for entries and assets across environments and locales at scale with built-in retries."
-url: /headless-cms/bulk-operations-in-cli
+url: /headless-cms/bulk-operations-in-cli/beta
 ---
 
 # Bulk Operations in CLI | Beta

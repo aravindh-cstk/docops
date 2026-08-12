@@ -1,7 +1,7 @@
 ---
 title: "Import Content using the CLI | Old Commands"
 description: "Efficiently import content using Contentstack's CLI commands."
-url: /headless-cms/import-content-using-the-cli/v0
+url: /headless-cms/import-content-using-the-cli/old-commands
 ---
 
 # Import Content using the CLI | Old Commands

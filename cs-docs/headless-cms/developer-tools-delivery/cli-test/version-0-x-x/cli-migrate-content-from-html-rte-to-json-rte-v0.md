@@ -1,7 +1,7 @@
 ---
 title: "Migrate Content from HTML RTE to JSON RTE | Old Commands"
 description: "Learn how to Migrate Content from HTML RTE to JSON RTE"
-url: /headless-cms/cli-migrate-content-from-html-rte-to-json-rte/v0
+url: /headless-cms/migrate-content-from-html-rte-to-json-rte/old-commands
 ---
 
 # Migrate Content from HTML RTE to JSON RTE | Old Commands

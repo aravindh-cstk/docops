@@ -1,7 +1,7 @@
 ---
 title: "Export Content to CSV File Using the CLI | Beta Commands"
 description: "Export entries, users, teams, and taxonomies to CSV files using Contentstack CLI with detailed commands and flexible options."
-url: /headless-cms/cli-export-content-to-csv-file
+url: /headless-cms/export-content-to-csv-file/beta
 ---
 
 # Export Content to CSV File Using the CLI | Beta Commands

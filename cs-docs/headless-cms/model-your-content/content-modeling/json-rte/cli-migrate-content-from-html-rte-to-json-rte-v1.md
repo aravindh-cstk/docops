@@ -1,7 +1,7 @@
 ---
 title: "Migrate Content from HTML RTE to JSON RTE using CLI"
 description: "Migrate HTML RTE to JSON RTE in Contentstack using CLI with config files or flags—automate content transformation efficiently."
-url: /headless-cms/cli-migrate-content-from-html-rte-to-json-rte/v1
+url: /headless-cms/migrate-content-from-html-rte-to-json-rte
 ---
 
 # Migrate Content from HTML RTE to JSON RTE using CLI

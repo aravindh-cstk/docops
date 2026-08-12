@@ -1,7 +1,7 @@
 ---
 title: "Cloning a Stack | Old Commands"
 description: "Learn how to clone a stack with Contentstack CLI commands."
-url: /headless-cms/cli-cloning-a-stack/v0
+url: /headless-cms/cloning-a-stack/old-commands
 ---
 
 # Cloning a Stack | Old Commands

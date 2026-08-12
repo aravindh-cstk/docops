@@ -1,86 +1,88 @@
 ---
-title: "[Android] - Use Persistence Library With Android SDK"
-description: Contentstack’s Realm Persistence Library for Android SDK helps you save the app data on the device that it is being accessed on.
-url: https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/android/use-persistence-library-with-android-sdk
-product: Contentstack
-doc_type: sdk-guide
-audience:
-  - developers
-  - android-developers
-version: unknown
-last_updated: 2026-03-26
+title: "Use Persistence Library With Android SDK"
+description: "Methods for using Persistence Library With Android SDK"
+url: /developers/sdks/content-delivery-sdk/android/use-persistence-library-with-android-sdk
 ---
 
-# [Android] - Use Persistence Library With Android SDK
-
-This page explains how to use Contentstack’s Realm Persistence Library with the Contentstack Android SDK to store and sync content locally on-device (including offline use). It is intended for Android developers integrating Contentstack content delivery with Realm-based persistence and should be used when setting up local storage, mapping content types to Realm models, and initiating sync.
+# Use Persistence Library With Android SDK
 
 ## Use Persistence Library With Android SDK
 
-Contentstack’s Realm Persistence Library for [Android SDK](./about-android-sdk.md) helps you save the app data on the device that it is being accessed on. This enables your app to serve data offline, i.e., even when it’s not connected to the internet.
+Contentstack’s Realm Persistence Library for [Android SDK](/docs/developers/sdks/content-delivery-sdk/android/about-android-sdk) helps you save the app data on the device that it is being accessed on. This enables your app to serve data offline, i.e., even when it’s not connected to the internet.
 
-This Persistent Library contains methods that are required to map data fields of your [content types](../../../create-content-types/about-content-types.md) and Realm for data storage.
+This Persistent Library contains methods that are required to map data fields of your [content types](/docs/headless-cms/about-content-types) and Realm for data storage.
 
 Let’s look at how to use this library for your Contentstack-powered Android apps.
 
-**Note**: If you have just started with Android SDK and Contenstack, we recommend reading more about [Realm](https://realm.io/docs/objc/latest/) and [Contentstack docs](https://www.contentstack.com/docs/) before proceeding with the following steps.
+**Note:** If you have just started with Android SDK and Contenstack, we recommend reading more about [Realm](https://realm.io/docs/objc/latest/) and [Contentstack docs](https://www.contentstack.com/docs/) before proceeding with the following steps.
 
 ## Prerequisites
-- [Android Studio](https://developer.android.com/studio/)
-- [JDK version 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
-- [Contentstack’s Android SDK](/docs/developers/android)
+
+-   [Android Studio](https://developer.android.com/studio/)
+-   [JDK version 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+-   [Contentstack’s Android SDK](/docs/developers/sdks/content-delivery-sdk/android/about-android-sdk)
 
 ## Installation and usage
+
 To sync data from Contentstack to Realm we need to first set up Realm and then [download](https://github.com/contentstack/contentstack-android-persistence/tree/master/app/src/main/java/com/contentstack) the wrapper folder. Let's go through the installation processes in detail.
 
 ### Set up Realm
+
 To set up Realm in your application, perform the following steps:
-- To add the Realm library to your project, first, add the classpath dependency to your project-level `build.gradle` file. You need to install Realm as a Gradle plugin as follows:
 
-```
-dependencies {
-  classpath "io.realm:realm-gradle-plugin:5.4.0"
-}
-```
+1.  To add the Realm library to your project, first, add the classpath dependency to your project-level build.gradle file. You need to install Realm as a Gradle plugin as follows:  
+    
+    ```
+    dependencies {
+      classpath "io.realm:realm-gradle-plugin:5.4.0"
+    }
+    ```
+    
+    For the latest gradle file, refer to the [Realm document](https://realm.io/docs/java/latest).
+2.  Apply the realm-android plugin to the top of the application level build.gradle file:
+    
+    ```
+    apply plugin: 'realm-android'
+    ```
+    
+3.  Create a table for your content type. The class should be annotated with @ClassClass(name = ‘provide\_content\_type\_uid’) and extend RealmObject.
+4.  Create a table field like regular realm field name it as per your requirement. Mention about the field of the table @RealmField(name=’field\_id’).
+5.  Unique ID (uid) is compulsory in every table. Mention it as follows:
+    
+    ```
+    @PrimaryKey()
+    @RealmField(name=’uid’)
+    private String uid;
+    ```
+    
+6.  Simply drag the file at SyncManager module in your project package.
 
-For the latest gradle file, refer to the [Realm document](https://realm.io/docs/java/latest).
-- Apply the realm-android plugin to the top of the application level `build.gradle` file:
-```
-apply plugin: 'realm-android'
-```
-- Create a table for your content type. The class should be annotated with `@ClassClass(name = ‘provide_content_type_uid’)` and extend `RealmObject`.
-- Create a table field like regular realm field name it as per your requirement. Mention about the field of the table `@RealmField(name=’field_id’)`.
-- Unique ID (uid) is compulsory in every table. Mention it as follows:
-```
-@PrimaryKey()
-@RealmField(name=’uid’)
-private String uid;
-```
-- Simply drag the file at `SyncManager` module in your project package.
+### Install Contentstack Android SDK and SyncManager
 
-### Install Contentstack Android SDK and SyncManager
 As you are now done setting up the Realm SDK, let's look into the Contentstack SDK setup.
-- Download and set up the [Contentstack Android SDK](./about-android-sdk.md).
-- [Download](https://github.com/contentstack/contentstack-android-persistence/tree/master/app/src/main/java/com/contentstack) the sync wrapper files and unzip it. This folder contains the following four files:
-`RealmStore.java`
-- `SyncManager.java`
-- `SyncPersistable.java`
-- `SyncStore.java`
 
-Add this folder to your project.
+1.  Download and set up the [Contentstack Android SDK](/docs/developers/sdks/content-delivery-sdk/android/about-android-sdk). 
+2.  [Download](https://github.com/contentstack/contentstack-android-persistence/tree/master/app/src/main/java/com/contentstack) the sync wrapper files and unzip it. This folder contains the following four files:  
+    -   RealmStore.java
+    -   SyncManager.java
+    -   SyncPersistable.java
+    -   SyncStore.javaAdd this folder to your project.
 
 ## Map data
-To start mapping of data, first, you need to [create a content type](../../../create-content-types/create-a-content-type.md) schema (in Contentstack) as per your app design and [create entries](../../../../content-managers/author-content/create-an-entry.md). For your convenience, we have already created the necessary content types. [Download](https://assets.contentstack.io/v3/assets/blt23180bf2502c7444/blt22c7854cf498d3bb/5ea04c6a6a64bf2a22a111ff/schema.zip) them and import them to your app’s stack in Contentstack.
+
+To start mapping of data, first, you need to [create a content type](/docs/headless-cms/create-a-content-type) schema (in Contentstack) as per your app design and [create entries](/docs/headless-cms/create-an-entry). For your convenience, we have already created the necessary content types. [Download](https://assets.contentstack.io/v3/assets/blt23180bf2502c7444/blt22c7854cf498d3bb/5ea04c6a6a64bf2a22a111ff/schema.zip) them and import them to your app’s stack in Contentstack.
 
 Next, create entries for the imported content types. In order to sync this data with Realm, we need to add data mappings. The three important items to be mapped in our Synchronization process are as follows:
-- Sync token/Pagination token
-- Entries
-- Assets
+
+-   Sync token/Pagination token
+-   Entries
+-   Assets
 
 Let’s look at how each of the above can be mapped.
 
 ### Sync token mapping
-To save sync token and pagination token, you need the `SyncStore` table which will manage the storage and retrieval of updated sync token and pagination token.
+
+To save sync token and pagination token, you need the SyncStore table which will manage the storage and retrieval of updated sync token and pagination token.
 
 ```
 if (stackResponse.getPaginationToken()!=null){
@@ -88,13 +90,13 @@ if (stackResponse.getPaginationToken()!=null){
 }else{
     persistsToken(stackStack.getSyncToken());
 }
-
 ```
 
 ### Entry mapping
-To begin with, let’s consider an example of our Conference app. Let’s say we have two content types: `Session` and `Speaker`. And, the ‘Session’ content type has a reference field that refers to multiple entries of the Speaker content type. Let’s see how to implement this example.
 
-Create a table class named `Session` extending `RealmObject`, and add following code to implement `EntityFields` as shown below:
+To begin with, let’s consider an example of our Conference app. Let’s say we have two content types: Session and Speaker. And, the ‘Session’ content type has a reference field that refers to multiple entries of the Speaker content type. Let’s see how to implement this example.
+
+Create a table class named Session extending RealmObject, and add following code to implement EntityFields as shown below:
 
 ```
 // @RealmClass accepts ("name= "content_type_uid"")
@@ -121,7 +123,7 @@ public class Session extends RealmObject {
     @RealmField(name = "locale")
     private String mLocale;
     @RealmField(name = "speakers")
-    private RealmList  speaker;
+    private RealmList < Speaker > speaker;
     @RealmField(name = "track")
     private String mTrack;
     @RealmField(name = "start_time")
@@ -132,7 +134,6 @@ public class Session extends RealmObject {
     private Room mRoom;
     ...Generated getters and setters...
 }
-
 ```
 
 You also need to implement the fieldMapping function which returns the mapping of attributes and entry fields in Contentstack.
@@ -140,17 +141,18 @@ You also need to implement the fieldMapping function which returns the mapping o
 Similarly, we can add other entity and mapping for each entity.
 
 ### Asset mapping
+
 To map Assets, create a table for assets named SysAssets and extend RealmObject. Add the following code to implement AssetProtocol.
 
 ```
 @RealmClass(name = "sys_assets")
 public class SysAssets extends RealmObject {
-    ** ** ** ** ** ** ** ** ** ** ** ** **
+    ** ** ** ** ** ** ** ** ** ** ** ** ** **
     // Mandatory fields
     @PrimaryKey
     @RealmField(name = "uid")
     private String uid; **
-    ** ** ** ** ** ** ** ** ** ** ** ** **
+    ** ** ** ** ** ** ** ** ** ** ** ** ** **
     // Note: the annotation name will be content_type's field id
     @RealmField(name = "created_at")
     //user defined fields may be anything of user liking.
@@ -183,12 +185,12 @@ public class SysAssets extends RealmObject {
     private String publish_details;
     ...Generated getters and setters...
 }
-
 ```
 
 Now, our final step is to initiate SyncManager and begin with the Sync process.
 
 ## Initiate SyncManager and Sync
+
 Finally, after setting up the content mapping, initiate SyncManager. It takes Stack instance and Helper class instance as follows:
 
 ```
@@ -203,22 +205,5 @@ syncManager.stackRequest();
 ```
 
 ## More resources
-- [View and Download Android SDK repository on GitHub](https://github.com/contentstack/contentstack-android)
 
-## Common questions
-
-### What does the Realm Persistence Library enable in an Android app?
-It helps you save the app data on the device that it is being accessed on so your app can serve data offline.
-
-### What are the three important items to be mapped in the synchronization process?
-- Sync token/Pagination token  
-- Entries  
-- Assets  
-
-### What do I need to download for SyncManager support?
-You need to [download](https://github.com/contentstack/contentstack-android-persistence/tree/master/app/src/main/java/com/contentstack) the sync wrapper files: `RealmStore.java`, `SyncManager.java`, `SyncPersistable.java`, and `SyncStore.java`.
-
-### How do you initiate the sync process?
-Create `Stack`, `Realm`, and `RealmStore` instances, then create `SyncManager` and call `syncManager.stackRequest();`.
-
-Filename: android-use-persistence-library-with-android-sdk.md
+-   [View and Download Android SDK repository on GitHub](https://github.com/contentstack/contentstack-android)

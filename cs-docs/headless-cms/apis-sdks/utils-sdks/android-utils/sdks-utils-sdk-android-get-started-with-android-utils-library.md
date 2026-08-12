@@ -1,28 +1,20 @@
 ---
-title: "[Android] - Get Started with Android Utils Library"
-description: This guide will help you get started with Contentstack Android Utils SDK to build apps powered by Contentstack.
-url: https://www.contentstack.com/docs/developers/sdks/utils-sdk/android/get-started-with-android-utils-library
-product: Contentstack
-doc_type: sdk-guide
-audience:
-  - developers
-  - android-developers
-version: latest
-last_updated: 2026-03-26
+title: "Get Started with Android Utils Library"
+description: "steps to use the Android Utils Library"
+url: /developers/sdks/utils-sdk/android/get-started-with-android-utils-library
 ---
 
-# [Android] - Get Started with Android Utils Library
+# Get Started with Android Utils Library
 
-This page explains how to install and use the Contentstack Android Utils SDK in an Android project, including setup, rendering embedded items, and fetching embedded items from single or multiple entries. It is intended for Android developers integrating Contentstack content (including RTE embedded items) into their apps.
+## Get Started with Android Utils Library
 
-Get Started with Android Utils Library
-
-This guide will help you get started with Contentstack [Android Utils SDK](./about-android-utils-library.md) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Android Utils SDK](/docs/developers/sdks/utils-sdk/android/about-android-utils-library) to build apps powered by Contentstack.
 
 ## Prerequisites
-- The latest version of Android Studio
-- JDK - 8 or later
-- Android SDK
+
+-   The latest version of Android Studio
+-   JDK - 8 or later
+-   Android SDK
 
 ## SDK Installation and Setup
 
@@ -61,25 +53,17 @@ public class DefaultOptionClass implements Option {
     public String renderOptions(JSONObject embeddedObject, Metadata metadata) {
         switch (metadata.getStyleType()) {
             case BLOCK:
-                return "" + embeddedObject.getString("title") + "
-
-" +
-                        embeddedObject.getString("multi") + "";
+                return "<p>" + embeddedObject.getString("title") + "</p><span>" +
+                        embeddedObject.getString("multi") + "</span>";
             case INLINE:
-                return "" + embeddedObject.getString("title") + "
-
-" +
-                        embeddedObject.getString("line") + "";
+                return "<p>" + embeddedObject.getString("title") + "</p><span>" +
+                        embeddedObject.getString("line") + "</span>";
             case LINK:
-                return "" + embeddedObject.getString("title") + "
-
-" +
-                        embeddedObject.getString("key") + "";
+                return "<p>" + embeddedObject.getString("title") + "</p><span>" +
+                        embeddedObject.getString("key") + "</span>";
             case DISPLAY:
-                return "" + embeddedObject.getString("someTitle") + "
-
-" +
-                        embeddedObject.getString("multi") + "";
+                return "<p>" + embeddedObject.getString("someTitle") + "</p><span>" +
+                        embeddedObject.getString("multi") + "</span>";
             default:
                 return null;
         }
@@ -88,7 +72,7 @@ public class DefaultOptionClass implements Option {
     @Override
     public String renderMark(MarkType markType, String renderText) {
         if (markType == MarkType.BOLD) {
-            return "**" + renderText + "**";
+            return "<b>" + renderText + "</b>";
         }
         return null;
     }
@@ -97,9 +81,7 @@ public class DefaultOptionClass implements Option {
     public String renderNode(String nodeType, JSONObject nodeObject, NodeCallback callback) {
         if (nodeType.equalsIgnoreCase("paragraph")) {
             String children = callback.renderChildren(nodeObject.optJSONArray("children"));
-            return "" + children + "
-
-";
+            return "<p class='class-id'>" + children + "</p>";
         }
 ​
         return null;
@@ -176,7 +158,7 @@ query.find(new QueryResultsCallBack() {
     @Override
     public void onCompletion(ResponseType responseType, QueryResult queryResult, Error error) {
         if (error == null) {
-            List entries = queryresult.getResultObjects();
+            List<Entry> entries = queryresult.getResultObjects();
             String[] keyPath = {
             "rte_fieldUid", "group.rteFieldUID"
             };
@@ -187,18 +169,3 @@ query.find(new QueryResultsCallBack() {
         }}
 });
 ```
-
-## Common questions
-
-### Do I need to install the Utils SDK separately if I already use the Contentstack Android SDK?
-If you are using the Contentstack Android SDK, then the Utils SDK is already imported into your project. In this case, the latest version must be used as shown:
-`implementation 'com.contentstack.sdk:android:latest'`
-
-### What function do I use to include embedded items in API responses?
-Use the `includeEmbeddedItems` function.
-
-### What do I need to provide to fetch embedded item(s) from a single entry?
-You need to provide the stack API key, environment name, delivery token, content type’s UID, and entry’s UID.
-
-### How do I render JSON RTE contents after fetching entries?
-Use the `Contentstack.Utils.jsonToHTML` function as shown in the example code.

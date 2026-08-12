@@ -1,7 +1,7 @@
 ---
 title: "Bulk Publish and Unpublish Content | Old Commands"
 description: "Use the CLI to bulk publish and unpublish entries and assets in Contentstack, streamlining content deployment across environments."
-url: /headless-cms/cli-bulk-publish-and-unpublish-content/v0
+url: /headless-cms/bulk-publish-and-unpublish-content/old-commands
 ---
 
 # Bulk Publish and Unpublish Content | Old Commands

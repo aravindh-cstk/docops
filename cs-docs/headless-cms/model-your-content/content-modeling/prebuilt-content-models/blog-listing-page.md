@@ -1,10 +1,10 @@
 ---
-title: "[Features Content Models] Blog Listing Page"
+title: "Blog Listing Page"
 description: "The Blog Listing Page defines the structure, fields, and schema to design the blog listing page of your website."
 url: /headless-cms/blog-listing-page
 ---
 
-# [Features Content Models] Blog Listing Page
+# Blog Listing Page
 
 ## Blog Listing Page
 

@@ -1,10 +1,10 @@
 ---
-title: "[Features Content Models] Contact Us Page"
+title: "Contact Us Page"
 description: "The Contact Us content model is structured to provide information about a website's 'Contact Us' page, such as name, address, phone, email, and social links. "
 url: /headless-cms/contact-us-page
 ---
 
-# [Features Content Models] Contact Us Page
+# Contact Us Page
 
 ## Contact Us Page
 

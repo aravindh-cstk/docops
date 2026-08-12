@@ -1,7 +1,7 @@
 ---
 title: "Content Type Plugin | Beta Commands"
 description: "Use the Contentstack CLI Content Type Plugin | V2 Beta to audit schema changes before deploying to production and compare content models across versions or stacks."
-url: /headless-cms/cli-content-type-plugin
+url: /headless-cms/cli-content-type-plugin/beta
 ---
 
 # Content Type Plugin | Beta Commands

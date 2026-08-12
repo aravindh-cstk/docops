@@ -1,12 +1,10 @@
 ---
-title: "DataSync Filesystem SDK"
-description: DataSync Filesystem SDK
+title: "DataSync Filesystem SDK API Reference"
+description: "DataSync Filesystem SDK API Reference"
 url: /developers/sdks/datasync-sdk-filesystem/typescript/reference
-product: Contentstack
-doc_type: page
-created_at: 2026-06-04T14:06:01.137Z
-updated_at: 2026-06-05T11:28:37.287Z
+doc_type: link
 ---
 
-# DataSync Filesystem SDK
+# DataSync Filesystem SDK API Reference
 
+This navigation entry links to [DataSync Filesystem SDK API Reference](https://www.contentstack.com/docs/developers/sdks/datasync-sdk-filesystem/typescript/reference).

@@ -1,10 +1,10 @@
 ---
-title: "[Features Content Models] Frequently Asked Questions (FAQs)"
+title: "Frequently Asked Questions (FAQs)"
 description: "The FAQs Content Model is tailored to gather & organize essential information for your website's FAQ section, providing easy access to key details."
 url: /headless-cms/faqs-page
 ---
 
-# [Features Content Models] Frequently Asked Questions (FAQs)
+# Frequently Asked Questions (FAQs)
 
 ## FAQs Page
 

@@ -1,29 +1,21 @@
 ---
-title: "[JavaScript Management] - Get Started with JavaScript Management SDK"
-description: Get started guide for Contentstack JavaScript Management SDK (Content Management APIs) including installation, authentication, initialization, and basic operations.
-url: https://www.contentstack.com/docs/developers/sdks/content-management-sdk/javascript/get-started-with-javascript-management-sdk
-product: Contentstack
-doc_type: sdk-guide
-audience:
-  - developers
-  - javascript-developers
-  - nodejs-developers
-version: latest
-last_updated: 2026-03-25
+title: "Get Started with JavaScript Management SDK"
+description: "Getting Started with JavaScript Management SDK"
+url: /developers/sdks/content-management-sdk/javascript/get-started-with-javascript-management-sdk
 ---
 
-# [JavaScript Management] - Get Started with JavaScript Management SDK
-
-This page explains how to install, authenticate, and initialize the Contentstack JavaScript Management SDK, and shows basic examples (fetch stack details, create entries, upload assets). It is intended for developers building Node.js/JavaScript or TypeScript tools and apps that manage Contentstack content via the Content Management APIs.
+# Get Started with JavaScript Management SDK
 
 ## Get Started with JavaScript Management SDK
 
 This guide will help you get started with Contentstack JavaScript Management SDK (that uses Content Management APIs) to manage apps powered by Contentstack. This includes operations such as creating, updating, deleting, and fetching content of your Contentstack account.
 
 ## Prerequisite
+
 You need [Node.js](https://nodejs.org/en) version 22 or above installed to use the Contentstack JavaScript Management SDK.
 
 ## Installation
+
 To install it via npm:
 
 ```
@@ -31,44 +23,48 @@ npm i @contentstack/management
 ```
 
 To import the SDK, use one of the following ways:
-- **JavaScript ES Modules**
 
-This method provides access to the `client` function via the default export. It requires `"type": "module"` in `package.json` to support ES module usage.
-
-```
-import contentstack from '@contentstack/management';
-```
-
-- **TypeScript with esModuleInterop**
-
-This method provides access to the `client` function via the default export. Requires `"type": "module"` in `package.json` and `"esModuleInterop": true` in `tsconfig.json`.
-
-```
-import contentstack from '@contentstack/management';
-```
-
-- **TypeScript Namespace Import**
-
-This method functions correctly, regardless of the `"esModuleInterop"` setting in `tsconfig.json`, ensuring broad compatibility across module configurations.
-
-```
-import * as contentstack from '@contentstack/management';
-```
-
-- **TypeScript Destructuring**
-
-Accesses the `client` function through the default export, enabling streamlined integration in ES module environments.
-
-```
-import contentstack from '@contentstack/management';
-const { client } = contentstack;
-```
+1.  **JavaScript ES Modules**
+    
+    This method provides access to the client function via the default export. It requires "type": "module" in package.json to support ES module usage.
+    
+    ```
+    import contentstack from '@contentstack/management';
+    ```
+    
+2.  **TypeScript with esModuleInterop**
+    
+    This method provides access to the client function via the default export. Requires "type": "module" in package.json and "esModuleInterop": true in tsconfig.json.
+    
+    ```
+    import contentstack from '@contentstack/management';
+    ```
+    
+3.  **TypeScript Namespace Import**
+    
+    This method functions correctly, regardless of the "esModuleInterop" setting in tsconfig.json, ensuring broad compatibility across module configurations.
+    
+    ```
+    import * as contentstack from '@contentstack/management';
+    ```
+    
+4.  **TypeScript Destructuring**
+    
+    Accesses the client function through the default export, enabling streamlined integration in ES module environments.
+    
+    ```
+    import contentstack from '@contentstack/management';
+    const { client } = contentstack;
+    ```
+    
 
 ## Authentication
+
 To use this SDK, you need to authenticate users. You can do this by using an authtoken, credentials, or a management token (stack-level token). Let's discuss them in detail.
 
 ### Authtoken
-An [authtoken](../../../create-tokens/types-of-tokens.md#authentication-tokens-authtokens-) is a read-write token used to make authorized CMA requests, and it is a user-specific token.
+
+An [authtoken](/docs/headless-cms/types-of-tokens#authentication-tokens-authtokens-) is a read-write token used to make authorized CMA requests, and it is a user-specific token.
 
 ```
 import * as contentstack from '@contentstack/management'
@@ -76,14 +72,15 @@ contentstackClient = contentstack.client({ authtoken: 'AUTHTOKEN' })
 ```
 
 ### Login
+
 The login call allows you to sign in to your Contentstack account and obtain an authentication token (authtoken). Multi-Factor Authentication (MFA) is supported for SDK based logins.
 
 | Name | Type | Description |
-|---|---|---|
-| email *(required)* | string | Registered email address used for login |
-| password *(required)* | string | Password associated with the registered email |
-| tfa_token | string | **Required for MFA-enabled accounts**. One-time passcode generated by an authenticator app for completing MFA during login. |
-| mfaSecret | string | **Required to generate the **`**tfa_token**`** dynamically**. Secret key generated when MFA is enabled for the user. |
+| --- | --- | --- |
+| email _(required)_ | string | Registered email address used for login  |
+| password _(required)_ | string | Password associated with the registered email |
+| tfa\_token  | string | **Required for MFA-enabled accounts**. One-time passcode generated by an authenticator app for completing MFA during login. |
+| mfaSecret  | string | **Required to generate the** **tfa\_token** **dynamically**. Secret key generated when MFA is enabled for the user. |
 
 **Example:**
 
@@ -91,45 +88,49 @@ The login call allows you to sign in to your Contentstack account and obtain an 
 import * as contentstack from '@contentstack/management'
 const client = contentstack.client()
 
+
 // When user does not have MFA enabled
-client.login({ email: , password:  })
+client.login({ email: <emailid>, password: <password> })
 .then(() => {
 
 }))
 
 // When user have MFA enabled
-client.login({ email: , password: , tfa_token:  })
+client.login({ email: <emailid>, password: <password>, tfa_token: <2FA_token> })
 .then(() => {
 }))
 
 import * as contentstack from '@contentstack/management'
 const client = contentstack.client()
 
-client.login({ email: , password: , mfaSecret:  })
+client.login({ email: <emailid>, password: <password>, mfaSecret: <mfaSecret> })
 .then(() => {
 }))
 ```
 
-**Note: **The `mfaSecret` is not passed in the request body—it’s used to generate the OTP dynamically, which is then sent as the tfa_token.
+**Note:** The mfaSecret is not passed in the request body—it’s used to generate the OTP dynamically, which is then sent as the tfa\_token.
 
 ### OAuth
-**Note: **This feature requires `@contentstack/management` **version 1.20.0** or later and registered OAuth client credentials.
+
+**Note:** This feature requires @contentstack/management **version 1.20.0** or later and registered OAuth client credentials.
 
 The JavaScript Management SDK supports **OAuth 2.0**, enabling secure, token-based access to Contentstack’s Content Management APIs. This integration simplifies authentication by automating token acquisition, refresh, and secure lifecycle management.
 
 With OAuth 2.0, developers can easily implement secure access for both **web-based interfaces** and **command-line tools**.
 
-**Additional Resource**: For more information on the OAuth support in JavaScript Management SDK, refer to [Implement OAuth 2.0 with JavaScript Management SDK](./implement-oauth-2-0-with-javascript-management-sdk.md) documentation.
+**Additional Resource:** For more information on the OAuth support in JavaScript Management SDK, refer to [Implement OAuth 2.0 with JavaScript Management SDK](/docs/developers/sdks/content-management-sdk/javascript/implement-oauth-2-0-with-javascript-management-sdk) documentation.
 
 **Key Features**
-- **Easy SDK initialization**: Set up OAuth effortlessly by configuring the SDK with minimal credentials.
-- **Automatic token management**: The SDK seamlessly handles token acquisition, automatic refresh on expiry, and secure in-memory storage—ensuring uninterrupted authentication.
-- **Compatible with both web and CLI applications**: The SDK works seamlessly across browser-based apps and command-line tools, supporting multiple secure token storage strategies.
-- **Built-in logout functionality**: Easily terminate the user sessions with a single method that clears tokens and resets the authentication state.
-- **Token revocation support included**: Integrated token revocation allows your app to invalidate access upon logout or session expiration.
+
+1.  **Easy SDK initialization**: Set up OAuth effortlessly by configuring the SDK with minimal credentials.
+2.  **Automatic token management**: The SDK seamlessly handles token acquisition, automatic refresh on expiry, and secure in-memory storage—ensuring uninterrupted authentication.
+3.  **Compatible with both web and CLI applications**: The SDK works seamlessly across browser-based apps and command-line tools, supporting multiple secure token storage strategies.
+4.  **Built-in logout functionality**: Easily terminate the user sessions with a single method that clears tokens and resets the authentication state.
+5.  **Token revocation support included**: Integrated token revocation allows your app to invalidate access upon logout or session expiration.
 
 ### Management Token
-[Management tokens](../../../create-tokens/about-management-tokens.md) are stack-level tokens with no users attached to them.
+
+[Management tokens](/docs/headless-cms/about-management-tokens) are stack-level tokens with no users attached to them.
 
 ```
 import * as contentstack from '@contentstack/management'
@@ -142,6 +143,7 @@ contentstackClient.stack({ api_key: 'API_KEY', management_token: 'MANAGEMENT_TOK
 ```
 
 ## Initialize your SDK
+
 To use the JavaScript CMA SDK, you need to first initialize it.
 
 ```
@@ -156,13 +158,13 @@ If you want to initialize SDK in a particular branch use the code given below:
 
 ```
 import * as contentstack from '@contentstack/management'
-contentstackClient = contentstack.client()
+contentstackClient = contentstack.client() 
 contentstackClient.stack({ api_key: 'API_KEY', management_token: 'MANAGEMENT_TOKEN', branch_uid: 'BRANCH'})
 ```
 
 **Initialization with Host Configuration**
 
-When using Contentstack, set the `host` to `api.contentstack.io` to connect to the North America (NA) region. This ensures the client communicates with the correct API endpoint:
+When using Contentstack, set the host to api.contentstack.io to connect to the North America (NA) region. This ensures the client communicates with the correct API endpoint:
 
 ```
 https://api.contentstack.io
@@ -170,7 +172,7 @@ https://api.contentstack.io
 
 Contentstack supports multiple regions, each with a distinct base URL. Using the correct region-specific endpoint ensures optimal performance and compliance with regional data regulations.
 
-For a full list of supported region values and their corresponding base URLs, refer to the [Content Management API](../../../../../api-docs/api-detail/content-management-api.md#base-url) documentation.
+For a full list of supported region values and their corresponding base URLs, refer to the [Content Management API](/docs/developers/apis/content-management-api#base-url) documentation.
 
 ```
 import * as contentstack from '@contentstack/management'
@@ -178,9 +180,10 @@ const client = contentstack.client({ host: 'api.contentstack.io' });
 ```
 
 ### Proxy Configuration
+
 Contentstack allows you to define HTTP proxy for your requests with the JavaScript Management SDK. A proxied request allows you to anonymously access public URLs even from within a corporate firewall through a proxy server.
 
-Here is the basic syntax of the proxy settings that you can pass within `fetchOptions` of the JavaScript Management SDK:
+Here is the basic syntax of the proxy settings that you can pass within fetchOptions of the JavaScript Management SDK:
 
 ```
 import * as contentstack from '@contentstack/management'
@@ -198,6 +201,7 @@ const client = contentstack.client({
 ```
 
 ## Fetch Stack Details
+
 To fetch your stack details through the SDK, use the following:
 
 ```
@@ -211,6 +215,7 @@ contentstackClient.stack({ api_key: 'API_KEY' })
 ```
 
 ## Create an Entry
+
 You can use the following to create an entry in a specific content type of a stack through the SDK:
 
 ```
@@ -232,6 +237,7 @@ contentstackClient.stack({ api_key: 'API_KEY' })
 ```
 
 ## Upload Assets
+
 Use the following code snippet to upload assets to your stack through the SDK:
 
 ```
@@ -250,19 +256,6 @@ contentstackClient.stack({ api_key: 'API_KEY' }).asset().create({ asset })
 ```
 
 ## Further Reading
-- [Contentstack Website](https://www.contentstack.com)
-- [Content Management API Docs](../../../../../api-docs/api-detail/content-management-api.md)
 
-## Common questions
-
-### Which Node.js version is required?
-You need [Node.js](https://nodejs.org/en) version 22 or above installed to use the Contentstack JavaScript Management SDK.
-
-### What authentication options does the SDK support?
-You can authenticate using an authtoken, credentials (login), OAuth 2.0, or a management token (stack-level token).
-
-### How do I connect to a specific region endpoint?
-Set the `host` in the client configuration (for example, `api.contentstack.io` for the North America (NA) region) and refer to the [Content Management API](../../../../../api-docs/api-detail/content-management-api.md#base-url) documentation for other base URLs.
-
-### Can I use a proxy with the JavaScript Management SDK?
-Yes. You can define an HTTP proxy for your requests by passing proxy settings within the client configuration.
+-   [Contentstack Website](https://www.contentstack.com)
+-   [Content Management API Docs](/docs/developers/apis/content-management-api)

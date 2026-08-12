@@ -1,18 +1,10 @@
 ---
-title: "[Java Management] - About Java Management SDK"
-description: About Java Management SDK
-url: https://www.contentstack.com/docs/developers/sdks/content-management-sdk/java/about-java-management-sdk
-product: Contentstack
-doc_type: sdk-guide
-audience:
-  - developers
-version: v1
-last_updated: 2026-03-26
+title: "About Java Management SDK"
+description: "This documentation on Java Management SDK provides insights into leveraging the SDK to manage and manipulate content within your Java applications efficiently."
+url: /developers/sdks/content-management-sdk/java/about-java-management-sdk
 ---
 
-# [Java Management] - About Java Management SDK
-
-This page introduces the Contentstack Java Management SDK, explains what it is used for, and who should use it when managing content in a Contentstack account from Java applications.
+# About Java Management SDK
 
 ## About Java Management SDK
 
@@ -22,15 +14,4 @@ Contentstack provides a Java Management SDK (that uses Content Management APIs) 
 
 **Note:** The Contentstack Java Management SDK supports **Java version 8** or later.
 
-To integrate your Java app with Contentstack Java Management SDK, follow the steps mentioned in the [Get Started with Java Management SDK](./get-started-with-java-management-sdk.md) document.
-
-## Common questions
-
-**Q: What can I do with the Contentstack Java Management SDK?**  
-A: You can manage the content of your Contentstack account, including creating, updating, deleting, and fetching content.
-
-**Q: What Java versions are supported by the Java Management SDK?**  
-A: The Contentstack Java Management SDK supports **Java version 8** or later.
-
-**Q: Where do I start to integrate the SDK into my Java app?**  
-A: Follow the steps in the [Get Started with Java Management SDK](./get-started-with-java-management-sdk.md) document.
+To integrate your Java app with Contentstack Java Management SDK, follow the steps mentioned in the [Get Started with Java Management SDK](/docs/developers/sdks/content-management-sdk/java/get-started-with-java-management-sdk) document.

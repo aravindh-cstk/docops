@@ -1,56 +1,53 @@
 ---
-title: Contentstack Command-line Interface (CLI) - Migrate Content Between Stacks Using the CLI
-description: Migrate content from one Contentstack stack to another manually using the Contentstack CLI.
-url: https://www.contentstack.com/docs/headless-cms/migrate-content-between-stacks-using-the-cli
-product: Contentstack
-doc_type: how-to
-audience:
-  - developers
-version: unknown
-last_updated: 2026-03-25
+title: "Migrate Content Between Stacks Using the CLI | V2.x.x"
+description: "Learn how to manually migrate content between Contentstack stacks with step-by-step instructions."
+url: /headless-cms/migrate-content-between-stacks-using-the-cli
 ---
 
-# Contentstack Command-line Interface (CLI) - Migrate Content Between Stacks Using the CLI
-
-This page explains how to migrate content from one Contentstack stack to another using the Contentstack CLI. It is intended for developers or administrators who have access to both stacks and need to move content (typically into an empty target stack) by exporting, optionally auditing, and importing.
+# Migrate Content Between Stacks Using the CLI | V2.x.x
 
 ## Migrate Content Between Stacks Using the CLI
 
 This document guides you through the process of migrating content from one Contentstack stack to another manually.
 
+**Warning:** The export writes content flat into the folder you name. It does not create a <branch-uid>/ subfolder, even when you pass \--branch. Use the same path for the export and the import, and use a separate \--data-dir per branch, because exporting a second branch into the same folder overwrites the first with no error.
+
+If you are importing an export produced by CLI V1, that layout did nest content under a branch subfolder. Point \--data-dir at the subfolder itself, for example ./export/main, because the automatic branch detection that V1 relied on has been removed.
+
 ## Prerequisites
-- [Contentstack account](https://www.contentstack.com/login/)
-- Contentstack CLI [installed](./install-the-cli.md) and [configured](./configure-regions-in-the-cli.md)
-- CLI [authenticated](./cli-authentication.md#authentication)
-- Access to both source and target stacks
-- An empty target stack
+
+-   [Contentstack account](https://www.contentstack.com/login/)
+-   Contentstack CLI [installed](/docs/headless-cms/install-the-cli) and [configured](/docs/headless-cms/configure-regions-in-the-cli)
+-   CLI [authenticated](/docs/headless-cms/cli-authentication#authentication)
+-   Access to both source and target stacks
+-   An empty target stack
 
 ## Steps for Execution
+
 To migrate all content from one stack to another quickly, follow the steps below:
-- [Export](./export-content-using-the-cli.md) from source stack:
-```
-csdx cm:stacks:export -k  -d ./export --branch main
-```
-- [Audit](./audit-plugin.md) the exported content (recommended):
-```
-csdx cm:stacks:audit -d ./export/main
-```
-**Note:** The [audit](./audit-plugin.md) process runs automatically during [import](./import-content-using-the-cli.md) to validate and fix any issues.
-- [Import](./import-content-using-the-cli.md) to target stack:
-```
-csdx cm:stacks:import -k  -d ./export/main
-```
 
-## Common questions
+-   [Export](/docs/headless-cms/export-content-using-the-cli) from source stack:
+    
+    ```
+    csdx cm:stacks:export -k <source_stack_api_key> --data-dir ./export --branch main
+    ```
+    
+-   [Audit](/docs/headless-cms/cli-audit-plugin) the exported content (recommended):
+    
+    ```
+    csdx cm:stacks:audit --data-dir ./export
+    ```
+    
+    **Note:** The [audit](/docs/headless-cms/cli-audit-plugin) process runs automatically during [import](/docs/headless-cms/import-content-using-the-cli) to validate and fix any issues.
+    
+-   [Import](/docs/headless-cms/import-content-using-the-cli) to target stack:
+    
+    ```
+    csdx cm:stacks:import -k <target_stack_api_key> --data-dir ./export
+    ```
+    
 
-### Do I need to run the audit step?
-No. The audit process runs automatically during import, but running it separately is recommended.
+## Behaviour to Check Before You Rely on the Result
 
-### Does the target stack need to be empty?
-Yes. The prerequisites specify an empty target stack.
-
-### What access do I need to perform the migration?
-You need access to both the source and target stacks and an authenticated CLI session.
-
-### Which branch is used in the example commands?
-The export command uses `--branch main`, and the subsequent steps reference `./export/main`.
+-   **Only the main branch is exported by default.** If you omit \--branch, the export covers the branch named main and nothing else, and it fails when no such branch exists. Pass \--branch once per branch to move a multi-branch stack.
+-   **Global fields from a V1 export are skipped silently.** If the folder you import came from CLI V1, every global field is skipped with no error and no warning, because V1 wrote them to a single aggregate file and the current importer reads one file per UID. The step reports success having created nothing. Re-export the source stack with the current CLI before importing.

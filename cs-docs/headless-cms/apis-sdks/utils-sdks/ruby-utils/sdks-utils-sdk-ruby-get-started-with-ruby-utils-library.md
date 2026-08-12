@@ -1,26 +1,18 @@
 ---
-title: "[Ruby] - Get Started with Ruby Utils Library"
-description: Get started guide for Contentstack Ruby Utils SDK to render embedded items and retrieve embedded items from RTE fields.
-url: https://www.contentstack.com/docs/developers/sdks/utils-sdk/ruby/get-started-with-ruby-utils-library
-product: Contentstack
-doc_type: sdk-guide
-audience:
-  - developers
-  - ruby-developers
-version: unknown
-last_updated: 2026-03-26
+title: "Get Started with Ruby Utils Library"
+description: "steps to use the Ruby Utils Library"
+url: /developers/sdks/utils-sdk/ruby/get-started-with-ruby-utils-library
 ---
 
-# [Ruby] - Get Started with Ruby Utils Library
-
-This page explains how to set up and use the Contentstack Ruby Utils SDK to render embedded items and work with embedded content in Rich Text Editor (RTE) fields. It is intended for developers integrating Contentstack content into Ruby applications and should be used when you need to fetch entries and render embedded items as HTML or JSON.
+# Get Started with Ruby Utils Library
 
 ## Get Started with Ruby Utils Library
 
-This guide will help you get started with Contentstack [Ruby Utils SDK](./about-ruby-utils-library.md) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Ruby Utils SDK](/docs/developers/sdks/utils-sdk/ruby/about-ruby-utils-library) to build apps powered by Contentstack.
 
 ## Prerequisites
-- Ruby version 2.0 or later
+
+-   Ruby version 2.0 or later
 
 ## SDK Installation and Setup
 
@@ -30,7 +22,7 @@ To set up Ruby Utils SDK, install it via gem:
 gem install contentstack_utils
 ```
 
-If you are using Contentstack Ruby SDK, then “contentstack/utils”  is already imported into your project.
+If you are using Contentstack Ruby SDK, then “contentstack/utils” is already imported into your project.
 
 ## Usage
 
@@ -38,25 +30,48 @@ Let’s learn how you can use Utils SDK to render embedded items.
 
 ### Create Render Option:
 
-To render embedded items on the front-end, use the `render_option` function, and define the UI elements you want to show in the front-end of your website, as shown in the example code below:
+To render embedded items on the front-end, use the render\_option function, and define the UI elements you want to show in the front-end of your website, as shown in the example code below:
 
 ```
-class CustomLOption
+class CustomLOption < ContentstackUtils::Model::Option
+    def render_mark(mark_type, text)
+        renderString = super(mark_type, text)
+        case mark_type
+        when 'bold'
+             renderString = "<b>#{text}</b>"
+        end
+        renderString
+    end
 
-## #{embeddedObject["title"]}
+    def render_node(node_type, node, inner_html)
+        renderString = super(node_type, node, inner_html)
+        case node_type
+        when 'p'
+              renderString = "<p class='class-id'>#{inner_html}</p>"
+        when 'h1'
+               renderString = "<h1 class='class-id'>#{inner_html}</h1>"
+         end
+        renderString
+    end
 
-              #{embeddedObject["price"]}
-
-                "
+    def render_option(embeddedObject, metadata)
+        case metadata.style_type
+        when 'block'
+            if metadataArray.content_type_uid === 'product' 
+                return "<div>
+              <h2 >#{embeddedObject["title"]}</h2>
+               <img src=#{embeddedObject["product_image"]["url"]} alt=#{embeddedObject["product_image"]["title"]}/>
+              <p>#{embeddedObject["price"]}</p>
+                </div>"
            end
         when 'inline'
-           return "**#{embeddedObject["title"]}** - #{embeddedObject["description"]}"
+           return "<span><b>#{embeddedObject["title"]}</b> - #{embeddedObject["description"]}</span>"
         when link
-           return "[#{metadata.text}](#{metadata.get_attribute_value()"
+           return "<a href='#{metadata.get_attribute_value("href")}'>#{metadata.text}</a>"
         when 'display'
-            return ""
+            return "<img src='#{metadata.get_attribute_value("src")}' alt='#{metadata.alt}' />"
         when download
-            return "[#{metadata.text}](#{metadata.get_attribute_value()"
+            return "<a href='#{metadata.get_attribute_value("href")}'>#{metadata.text}</a>"
         end
         super(embeddedObject, metadata)
      end
@@ -71,12 +86,12 @@ Contentstack Utils SDK lets you interact with the Content Delivery APIs and retr
 
 #### Render HTML RTE Embedded Object
 
-To get an embedded item of a single entry, you need to provide the stack API key, environment name, delivery token, content type’s UID, and entry’s UID. Then, use the `include_embedded_items` function as shown below:
+To get an embedded item of a single entry, you need to provide the stack API key, environment name, delivery token, content type’s UID, and entry’s UID. Then, use the include\_embedded\_items function as shown below:
 
 ```
 require 'contentstack'
-@stack = Contentstack::Client.new('', '', '')
-@entry = @stack.content_type('').entry('')
+@stack = Contentstack::Client.new('<API_KEY>', '<ENVIRONMENT_SPECIFIC_DELIVERY_TOKEN>', '<ENVIRONMENT>')
+@entry = @stack.content_type('<CONTENT_TYPE>').entry('<ENTRY_UID>')
                 .include_embedded_items
                 .fetch
 @rendered_rich_text = Contentstack.render_content(@entry.rich_text_content, ContentstackUtils::Model::Option.new(@entry))
@@ -90,12 +105,12 @@ If you want to render embedded items using the **CustomOption** function, you ca
 
 #### Render JSON RTE Contents
 
-To get a single entry, you need to provide the stack API key, environment name, delivery token, content type and entry UID. Then, use the `Contentstack.json_to_html` function as shown below:
+To get a single entry, you need to provide the stack API key, environment name, delivery token, content type and entry UID. Then, use the Contentstack.json\_to\_html function as shown below:
 
 ```
 require 'contentstack'
-@stack = Contentstack::Client.new('', '', '')
-@entry = @stack.content_type('').entry('')
+@stack = Contentstack::Client.new('<API_KEY>', '<ENVIRONMENT_SPECIFIC_DELIVERY_TOKEN>', '<ENVIRONMENT>')
+@entry = @stack.content_type('<CONTENT_TYPE>').entry('<ENTRY_UID>')
                 .include_embedded_items
                 .fetch
 @rendered_rich_text = Contentstack.json_to_html(@entry.rich_text_content, ContentstackUtils::Model::Option.new(@entry))
@@ -109,8 +124,8 @@ To get embedded items from multiple entries, you need to provide the stack API k
 
 ```
 require 'contentstack'
-@stack = Contentstack::Client.new('', '', '')
-@query = @stack.content_type('').query
+@stack = Contentstack::Client.new('<API_KEY>', '<ENVIRONMENT_SPECIFIC_DELIVERY_TOKEN>', '<ENVIRONMENT>')
+@query = @stack.content_type('<CONTENT_TYPE>').query
 @entries = @query.where('title', 'welcome')
                 .include_embedded_items
                 .fetch
@@ -121,29 +136,15 @@ end
 
 #### Render JSON RTE Contents
 
-To get embedded items from multiple entries, you need to provide the stack API key, environment name, delivery token, content type UID. Then, use the `Contentstack.json_to_html` function as shown below:
+To get embedded items from multiple entries, you need to provide the stack API key, environment name, delivery token, content type UID. Then, use the Contentstack.json\_to\_html function as shown below:
 
 ```
 require 'contentstack'
-@stack = Contentstack::Client.new('', '', '')
-@query = @stack.content_type('').query
+@stack = Contentstack::Client.new('<API_KEY>', '<ENVIRONMENT_SPECIFIC_DELIVERY_TOKEN>', '<ENVIRONMENT>')
+@query = @stack.content_type('<CONTENT_TYPE>').query
 @entries = @query.where('title', 'welcome')
                 .include_embedded_items
                 .fetch
 @entries.each do |entry|
     Contentstack.json_to_html(@entry.rich_text_content, ContentstackUtils::Model::Option.new(@entry))
 ```
-
-## Common questions
-
-### Do I need to install `contentstack_utils` if I already use the Contentstack Ruby SDK?
-If you are using Contentstack Ruby SDK, then “contentstack/utils”  is already imported into your project.
-
-### What Ruby version is required?
-- Ruby version 2.0 or later
-
-### How do I fetch embedded items from an entry?
-Use the `include_embedded_items` function when fetching an entry, as shown in the examples under “Fetch Embedded Item(s) from a Single Entry:”.
-
-### How do I render RTE embedded items as HTML or JSON?
-Use `Contentstack.render_content` to render HTML and `Contentstack.json_to_html` to render JSON RTE contents, as shown in the examples.

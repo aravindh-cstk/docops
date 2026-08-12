@@ -1,10 +1,10 @@
 ---
-title: "[Features Content Models] Product Listing Page"
+title: "Product Listing Page"
 description: "Create a Product Listing Page in Contentstack to display product images, descriptions, prices, and more in a structured layout."
 url: /headless-cms/product-listing-page
 ---
 
-# [Features Content Models] Product Listing Page
+# Product Listing Page
 
 ## Product Listing Page
 

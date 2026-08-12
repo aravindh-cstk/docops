@@ -1,12 +1,10 @@
 ---
-title: "DataSync MongoDB SDK"
-description: DataSync MongoDB SDK
+title: "DataSync MongoDB SDK API Reference"
+description: "DataSync MongoDB SDK API Reference"
 url: /developers/sdks/datasync-sdk-mongodb/typescript/reference
-product: Contentstack
-doc_type: page
-created_at: 2026-06-04T14:07:34.209Z
-updated_at: 2026-06-05T11:28:59.777Z
+doc_type: link
 ---
 
-# DataSync MongoDB SDK
+# DataSync MongoDB SDK API Reference
 
+This navigation entry links to [DataSync MongoDB SDK API Reference](https://www.contentstack.com/docs/developers/sdks/datasync-sdk-mongodb/typescript/reference).

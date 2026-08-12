@@ -26,7 +26,7 @@ Use this table to choose the AI coding assistant path before reading the setup r
 This guide uses three Contentstack AI integrations alongside your AI coding assistant:
 
 -   **Skills**: Gives your AI coding assistant Contentstack-specific knowledge making your prompts produce accurate, working code without boilerplate context.
--   [**MCP (Model Context Protocol)**](/docs/agent-os/contentstack-mcp-server): Connects your AI coding assistant directly to Contentstack APIs so it can create content types, entries, and trigger deployments without switching to the dashboard.
+-   [**MCP (Model Context Protocol)**](/docs/developers/contentstack-mcp-server): Connects your AI coding assistant directly to Contentstack APIs so it can create content types, entries, and trigger deployments without switching to the dashboard.
 -   [**Polaris**](https://www.contentstack.com/docs/agent-os/what-is-polaris): Contentstack's in-CMS AI co-pilot. Content editors can create, edit, and publish content via natural language entirely inside the CMS, with no developer involvement.
 
 ## Prerequisites
@@ -805,7 +805,7 @@ Content-Type: application/json
 -   [Create an Entry](https://www.contentstack.com/docs/headless-cms/create-an-entry): Full instructions for authoring, saving, and publishing content in the Contentstack dashboard.
 -   [Contentstack Launch](https://www.contentstack.com/docs/launch): Overview of the Launch hosting platform, including custom domains, environment variables, and deploy hooks.
 -   [Launch Quick Start Guide with NextJS](https://www.contentstack.com/docs/launch/quick-start-nextjs): Step-by-step walkthrough for deploying a Next.js app on Launch, with configuration details beyond what this guide covers.
--   [Contentstack CLI](https://www.contentstack.com/docs/headless-cms/install-the-cli/v1): Command-line tools for stack management, content migration, and local development workflows.
+-   [Contentstack CLI](https://www.contentstack.com/docs/headless-cms/install-the-cli): Command-line tools for stack management, content migration, and local development workflows.
 -   [Contentstack Agent Skills](https://github.com/contentstack/contentstack-agent-skills): The skills bundle repository. Install it for Claude Code, Cursor, Codex, or Gemini CLI.
 -   [Contentstack MCP Server](https://www.npmjs.com/package/@contentstack/mcp): @contentstack/mcp on npm. AI-driven Contentstack operations via the CMA, CDA, Launch, and more.
 

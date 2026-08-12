@@ -1,29 +1,22 @@
 ---
-title: "[Dart] - Get Started with Dart Utils Library"
-description: Get started guide for Contentstack Dart Utils SDK to build apps powered by Contentstack and render embedded items from RTE fields.
-url: https://www.contentstack.com/docs/developers/sdks/utils-sdk/dart/get-started-with-dart-utils-library
-product: Contentstack
-doc_type: sdk-guide
-audience:
-  - developers
-  - mobile-developers
-  - frontend-developers
-version: latest
-last_updated: 2026-03-26
+title: "Get Started with Dart Utils Library"
+description: "steps to use the Dart Utils Library"
+url: /developers/sdks/utils-sdk/dart/get-started-with-dart-utils-library
 ---
 
-# [Dart] - Get Started with Dart Utils Library
-
-This page explains how to set up and use the Contentstack Dart Utils SDK to render embedded items and work with RTE content. It’s intended for developers integrating Contentstack content into Dart-based apps and should be used when you need to install the SDK and implement rendering for embedded items.
+# Get Started with Dart Utils Library
 
 ## Get Started with Dart Utils Library
 
-This guide will help you get started with Contentstack [Dart Utils SDK](./about-dart-utils-library.md) to build apps powered by Contentstack.
+**Warning:** The Dart Utils package (contentstack\_utils on pub.dev) is planned for deprecation. For new integrations, use the [Content Delivery API](/docs/developers/apis/content-delivery-api) and the current product documentation for Rich Text Editor and JSON RTE handling.
+
+This guide will help you get started with Contentstack [Dart Utils SDK](/docs/developers/sdks/utils-sdk/dart/about-dart-utils-library) to build apps powered by Contentstack.
 
 ## Prerequisites
-- Latest version of Android Studio or IntelliJ IDEA or Visual Studio Code
-- Latest version of Dart
-- If using vscode, install the dart and flutter plugin extensions
+
+-   Latest version of Android Studio or IntelliJ IDEA or Visual Studio Code
+-   Latest version of Dart
+-   If using vscode, install the dart and flutter plugin extensions
 
 ## SDK Installation and Setup
 
@@ -45,7 +38,7 @@ Let’s learn how you can use Utils SDK to render embedded items.
 
 ### Create Render Option:
 
-To render embedded items on the front-end, use the `renderContents` function, and define the UI elements you want to show in the front-end of your website, as shown in the example code below:
+To render embedded items on the front-end, use the renderContents function, and define the UI elements you want to show in the front-end of your website, as shown in the example code below:
 
 ```
 import 'package:contentstack_utils/src/helper/Metadata.dart';
@@ -57,7 +50,7 @@ class OptionDemo implements Option {
     // TODO: implement renderMark
     switch (markType) {
       case 'bold':
-        return '**' + renderText + '**';
+        return '<b>' + renderText + '</b>';
         break;
       default:
         return '';
@@ -70,9 +63,7 @@ class OptionDemo implements Option {
     switch (nodeType) {
       case 'paragraph':
         String children = callback.renderChildren(node_obj['children']);
-        return "" + children + '
-
-';
+        return "<p class='class-id'>" + children + '</p>';
         break;
       default:
         return '';
@@ -83,24 +74,16 @@ class OptionDemo implements Option {
   String renderOption(Map obj, Metadata metadata) {
     switch (metadata.getStyleType) {
       case 'block':
-        return '' + obj['title'] + '
-
-' + obj['multi'] + '';
+        return '<p>' + obj['title'] + '</p><span>' + obj['multi'] + '</span>';
         break;
       case 'inline':
-        return '' + obj['title'] + '
-
-' + obj['line'] + '';
+        return '<p>' + obj['title'] + '</p><span>' + obj['line'] + '</span>';
         break;
       case 'link':
-        return '' + obj['title'] + '
-
-' + obj['key'] + '';
+        return '<p>' + obj['title'] + '</p><span>' + obj['key'] + '</span>';
         break;
       case 'display':
-        return '' + obj['title'] + '
-
-' + obj['multi'] + '';
+        return '<p>' + obj['title'] + '</p><span>' + obj['multi'] + '</span>';
         break;
       default:
         return '';
@@ -115,7 +98,7 @@ Contentstack Utils SDK lets you interact with the Content Delivery APIs and retr
 
 ### Fetch Embedded Item(s) from a Single Entry:
 
-To get an embedded item of a single entry, you need to provide the stack API key, environment name, delivery token, content type’s UID, and entry’s UID. Then, use the `includeEmbeddedObjects` function as shown below:
+To get an embedded item of a single entry, you need to provide the stack API key, environment name, delivery token, content type’s UID, and entry’s UID. Then, use the includeEmbeddedObjects function as shown below:
 
 ```
 import 'package:contentstack/contentstack.dart' as contentstack;
@@ -157,7 +140,7 @@ await query.includeEmbeddedObjects().find().then((response) {
 
 #### Render JSON RTE Contents
 
-To get multiple entries, you need to provide the stack API key, environment name, delivery token, content type, and entry UID. Then, use the `Utils.jsonToHTML` function as shown below:
+To get multiple entries, you need to provide the stack API key, environment name, delivery token, content type, and entry UID. Then, use the Utils.jsonToHTML function as shown below:
 
 ```
 import 'package:contentstack/contentstack.dart' as contentstack;
@@ -181,7 +164,7 @@ await query.find().then((response) {
 
 #### Render GQL SRTE Contents
 
-To get multiple entries, you need to provide the stack API key, environment name, delivery token, content type, and entry UID. Then, use the GQL.jsonToHTML function as shown below:
+To get multiple entries, you need to provide the stack API key, environment name, delivery token, content type, and entry UID. Then, use the GQL.jsonToHTML function as shown below:
 
 ```
 import 'package:contentstack/contentstack.dart' as contentstack;
@@ -202,17 +185,3 @@ await query.find().then((response) {
     });
 }
 ```
-
-## Common questions
-
-### Do I need to install `contentstack-utils` separately if I’m already using Contentstack Dart SDK?
-**Note:** If you are using Contentstack Dart SDK, then 'contentstack-utils' is already imported into your project.
-
-### What function do I use to retrieve embedded items from RTE fields?
-Use the `includeEmbeddedObjects` function as shown in the examples.
-
-### How do I render JSON RTE contents?
-Use the `Utils.jsonToHTML` function as shown below.
-
-### How do I render GQL SRTE contents?
-Use the GQL.jsonToHTML function as shown below.

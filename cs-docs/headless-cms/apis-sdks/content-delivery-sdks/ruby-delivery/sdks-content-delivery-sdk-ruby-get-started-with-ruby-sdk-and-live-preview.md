@@ -1,31 +1,24 @@
 ---
-title: "[Ruby] - Get Started with Ruby SDK and Live Preview"
-description: Get started with Contentstack Ruby SDK and set up Live Preview.
-url: https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/ruby/get-started-with-ruby-sdk-and-live-preview
-product: Contentstack
-doc_type: sdk-guide
-audience:
-  - developers
-version: v1
-last_updated: 2026-03-26
+title: "Get Started with Ruby SDK and Live Preview"
+description: "Get started with Contentstack using the Ruby SDK. Learn installation, stack initialization, middleware setup, and query requests for efficient content delivery."
+url: /developers/sdks/content-delivery-sdk/ruby/get-started-with-ruby-sdk-and-live-preview
 ---
 
-# [Ruby] - Get Started with Ruby SDK and Live Preview
-
-This page explains how to install and start using the Contentstack Ruby SDK and how to initialize Live Preview for your stack. It is intended for developers building Ruby/Rails applications that fetch content via Content Delivery APIs and need Live Preview support during development.
+# Get Started with Ruby SDK and Live Preview
 
 ## Get Started with Ruby SDK and Live Preview
 
-This guide will help you get started with Contentstack [Ruby SDK](./about-ruby-sdk.md) to build apps powered by Contentstack.
+This guide will help you get started with Contentstack [Ruby SDK](/docs/developers/sdks/content-delivery-sdk/ruby/about-ruby-sdk) to build apps powered by Contentstack.
 
 ## Prerequisites
 
 To get started with the Ruby SDK, you will need the following:
-- Ruby version 2.0 or later
+
+-   Ruby version 2.0 or later
 
 ## SDK Installation and Setup
 
-To use the Ruby SDK, download it using the `gem install` command:
+To use the Ruby SDK, download it using the gem install command:
 
 ```
 $ gem install contentstack
@@ -35,7 +28,7 @@ Let's get started with the implementation.
 
 ## Initializing the Stack with Live Preview
 
-Since the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md) is responsible for communication, you need to initialize it within your stack.
+Since the [Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk) is responsible for communication, you need to initialize it within your stack.
 
 Use the following command to initialize the stack:
 
@@ -43,17 +36,17 @@ Use the following command to initialize the stack:
 $client = Contentstack::Client.new("api_key", "delivery_token", "enviroment_name", {
    live_preview: {
      management_token: 'management_token',
-     enable: true,
+     enable: true, 
      host: 'api.contentstack.io',
  }
 })
 ```
 
-**Note**: By default, the `host` parameter points to the North America endpoint. If your website is hosted on the [European](../../../contentstack-regions/europe-region-what-it-is-and-what-it-isnt.md) data center, then pass the European endpoint against the `host` parameter.
+**Note:** By default, the host parameter points to the North America endpoint. If your website is hosted on the [European](/docs/administration/api-endpoints#base-api-urls-for-aws-europe-region) data center, then pass the European endpoint against the host parameter.
 
 ## Add Custom Middleware
 
-You need to add a custom middleware in the `lib/middleware/contentstack_middelware.rb` file.
+You need to add a custom middleware in the lib/middleware/contentstack\_middelware.rb file.
 
 Use the following code to get the Live Preview hash key:
 
@@ -88,13 +81,13 @@ end
 
 ## For Server-side Rendered Websites
 
-To install and initialize the [Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md), you can refer to our [SSR Live Preview Setup](../../../set-up-live-preview/set-up-live-preview-for-your-website.md#server-side-rendering-ssr-) documentation.
+To install and initialize the [Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk), you can refer to our [SSR Live Preview Setup](/docs/headless-cms/set-up-live-preview-for-your-website#server-side-rendering-ssr-) documentation.
 
 ## Query Request
 
-Contentstack SDKs let you interact with the [Content Delivery APIs](../../../../../api-docs/api-detail/content-delivery-api.md) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
+Contentstack SDKs let you interact with the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) and retrieve content from Contentstack. They are read-only in nature. The SDKs fetch and deliver content from the nearest server via Fastly, our powerful and robust CDN.
 
-To get an [entry](../../../../content-managers/author-content/about-entries.md), you need to specify the [content type](../../../create-content-types/about-content-types.md) UID, locale code, and the UID of the entry.
+To get an [entry](/docs/headless-cms/about-entries), you need to specify the [content type](/docs/headless-cms/about-content-types) UID, locale code, and the UID of the entry.
 
 ```
 entry = $client.content_type('content_type_uid')
@@ -109,22 +102,7 @@ entry = $client.content_type('content_type_uid')
 
 ## More Resources
 
-- [JavaScript Live Preview Utils SDK](../../utils-sdk/javascript/about-javascript-live-preview-utils-sdk.md)
-- [Product Catalog using Ruby SDK and Contentstack](../../../sample-apps/build-a-product-catalog-using-ruby-on-rails-and-contentstack.md)
-- [Ruby SDK API Reference](https://www.rubydoc.info/gems/contentstack/Contentstack)
-- [Ruby SDK Changelog](./ruby-sdk-changelog.md)
-- [View and Download Ruby SDK repository on GitHub](https://github.com/contentstack/contentstack-ruby)
-
-## Common questions
-
-**How do I install the Contentstack Ruby SDK?**  
-Use the `gem install contentstack` command.
-
-**What do I need to enable Live Preview in the Ruby SDK client?**  
-Initialize the stack with `live_preview` options including `management_token`, `enable: true`, and `host`.
-
-**When should I change the `host` parameter?**  
-Change it if your website is hosted on the European data center, and pass the European endpoint against the `host` parameter.
-
-**Where can I find the Ruby SDK API reference?**  
-See [Ruby SDK API Reference](https://www.rubydoc.info/gems/contentstack/Contentstack).
+-   [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk)
+-   [Ruby SDK API Reference](/docs/developers/sdks/content-delivery-sdk/ruby/reference)
+-   [Ruby SDK Changelog](/docs/developers/sdks/content-delivery-sdk/ruby/ruby-sdk-changelog/)
+-   [View and Download Ruby SDK repository on GitHub](https://github.com/contentstack/contentstack-ruby)

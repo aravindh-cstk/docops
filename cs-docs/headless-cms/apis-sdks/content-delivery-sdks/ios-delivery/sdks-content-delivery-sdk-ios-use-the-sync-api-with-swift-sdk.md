@@ -1,20 +1,10 @@
 ---
-title: "[iOS] - Use the Sync API With Swift SDK"
-description: How to use the Sync API with Contentstack Swift SDK for iOS, including advanced sync queries.
-url: https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/ios/use-the-sync-api-with-swift-sdk
-product: Contentstack
-doc_type: sdk-guide
-audience:
-  - developers
-  - ios-developers
-  - swift-developers
-version: unknown
-last_updated: 2026-03-26
+title: "Use the Sync API With Swift SDK"
+description: "Use the Sync API With Swift SDK"
+url: /developers/sdks/content-delivery-sdk/ios/use-the-sync-api-with-swift-sdk
 ---
 
-# [iOS] - Use the Sync API With Swift SDK
-
-This page explains how to use Contentstack’s Sync API with the Swift SDK in an iOS app, including advanced sync query options (date, content type, locale, publish type, and multiple parameters). It is intended for developers integrating Contentstack content delivery and keeping app data up-to-date via delta sync.
+# Use the Sync API With Swift SDK
 
 ## Use the Sync API With Swift SDK
 
@@ -70,7 +60,7 @@ let stack = Contentstack.stack(apiKey: apiKey,
 
  let syncStack = SyncStack(syncToken: syncToken)
 
- stack.sync(syncTypes: [.contentType("contentTypeUID")], then: { (result: Result) in
+ stack.sync(syncTypes: [.contentType("contentTypeUID")], then: { (result: Result<syncstack, error="">) in
   switch result {
   case .success(let syncStack):
        let items = syncStack.items
@@ -90,7 +80,6 @@ let stack = Contentstack.stack(apiKey: apiKey,
        print(error)
   }
  })
-
 ```
 
 ### Initial Sync with Specific Language
@@ -106,7 +95,7 @@ let stack = Contentstack.stack(apiKey: apiKey,
 
 let syncStack = SyncStack(syncToken: syncToken)
 
-stack.sync(syncTypes: [.locale("en-gb")], then: { (result: Result) in
+stack.sync(syncTypes: [.locale("en-gb")], then: { (result: Result<syncstack, error="">) in
  switch result {
  case .success(let syncStack):
       let items = syncStack.items
@@ -126,7 +115,6 @@ stack.sync(syncTypes: [.locale("en-gb")], then: { (result: Result) in
       print(error)
  }
 })
-
 ```
 
 ### Initial Sync with Publish Type
@@ -201,18 +189,4 @@ stack.sync(syncTypes: [.locale("en-gb"), .contentType("contentTypeUID")], then: 
 
 ## More resources
 
-- [View and Download iOS SDK repository on GitHub](https://github.com/contentstack/contentstack-ios)
-
-## Common questions
-
-### What is the Sync API used for in the Swift SDK?
-The Sync API takes care of syncing your Contentstack data with your app and ensures that the data is always up-to-date by providing delta updates.
-
-### What should I store for the next sync request?
-Store `syncStack.paginationToken` for the next sync page, or `syncStack.syncToken` for the next sync.
-
-### Can I limit sync results to a specific content type or locale?
-Yes. You can initialize sync with only specific content types using `.contentType("contentTypeUID")` and only specific locales using `.locale("en-gb")`.
-
-### Can I sync by publish type (entries/assets)?
-Yes. You can initialize sync based on a specific publish type using `.publishType(...)`, with acceptable values including entryPublished, entryUnpublished, entryDeleted, assetPublished, assetUnpublished, assetDeleted, and contentTypeDeleted.
+-   [View and Download iOS SDK repository on GitHub](https://github.com/contentstack/contentstack-ios)

@@ -1,46 +1,40 @@
 ---
-title: "[Java Management] - Get Started with Java Management SDK"
-description: Get started guide for installing, authenticating, initializing, and using the Contentstack Java Management SDK (Content Management APIs).
-url: https://www.contentstack.com/docs/developers/sdks/content-management-sdk/java/get-started-with-java-management-sdk
-product: Contentstack
-doc_type: sdk-guide
-audience:
-  - developers
-  - java-developers
-version: unknown
-last_updated: 2026-03-26
+title: "Get Started with Java Management SDK"
+description: "This guide will help you get started with Contentstack Java Management SDK to build apps. Get clear steps on SDK installation & setup, initialization, and basic queries."
+url: /developers/sdks/content-management-sdk/java/get-started-with-java-management-sdk
 ---
 
-# [Java Management] - Get Started with Java Management SDK
-
-This page explains how to install, authenticate, initialize, and perform basic operations using the Contentstack Java Management SDK. It is intended for developers building or managing Java applications powered by Contentstack, and should be used when setting up the SDK for the first time or implementing common management workflows (e.g., fetching stack details, creating entries, uploading assets).
+# Get Started with Java Management SDK
 
 ## Get Started with Java Management SDK
 
-This guide will help you get started with Contentstack [Java Management SDK](./about-java-management-sdk.md) (that uses Content Management APIs) to manage Java apps powered by Contentstack.
+This guide will help you get started with Contentstack [Java Management SDK](/docs/developers/sdks/content-management-sdk/java/about-java-management-sdk) (that uses Content Management APIs) to manage Java apps powered by Contentstack.
 
 ## Prerequisite
-- **Java version 8** or later.
+
+-   **Java version 8** or later.
 
 ## SDK Installation and Setup
 
 To install, you can use either Maven or Gradle.
 
-**Maven:**
-
-Add the given code to your `pom.xml` file.
-
-```
-
-     com.contentstack.sdk
-     cms
-     {version}
+**Maven:**  
+Add the given code to your pom.xml file.
 
 ```
+<project>
+  <dependencies>
+   <dependency>
+     <groupId>com.contentstack.sdk</groupId>
+     <artifactId>cms</artifactId>
+     <version>{version}</version>
+   </dependency>
+  </dependencies>
+ </project>
+```
 
-**Gradle: **
-
-Add the given code to your `build.gradle` file.
+**Gradle:**  
+Add the given code to your build.gradle file.
 
 ```
 repositories {
@@ -64,7 +58,7 @@ To use this SDK, you need to authenticate users. You can do this by using an aut
 
 ### Authtoken
 
-An [authtoken](../../../create-tokens/types-of-tokens.md#authentication-tokens-authtokens-) is a read-write token used to make authorized CMA requests, and it is a user-specific token.
+An [authtoken](/docs/headless-cms/types-of-tokens#authentication-tokens-authtokens-) is a read-write token used to make authorized CMA requests, and it is a user-specific token.
 
 ```
 Contentstack client = new Contentstack.Builder().setAuthtoken("AUTHTOKEN").build();
@@ -81,13 +75,12 @@ client.login("EMAIL", "PASSWORD");
 
 ### Management Token
 
-[Management tokens](../../../create-tokens/about-management-tokens.md) are stack-level tokens with no users attached to them.
+[Management tokens](/docs/headless-cms/about-management-tokens) are stack-level tokens with no users attached to them.
 
 ```
-Contentstack client = new Contentstack.Builder().build();
+<p>Contentstack client = new Contentstack.Builder().build();
 client.login("EMAIL", "PASSWORD");
-stack = contentstack.stack("APIKey", "managementToken").execute();
-
+stack = contentstack.stack("APIKey", "managementToken").execute();</p>
 ```
 
 ## Initialize your SDK
@@ -113,7 +106,7 @@ stack = contentstack.stack("APIKey", "managementToken", "branch").execute();
 
 Contentstack allows you to define HTTP proxy for your requests with the Java Management SDK. A proxied request allows you to anonymously access public URLs even from within a corporate firewall through a proxy server.
 
-Here is the basic syntax of the proxy settings that you can pass within `fetchOptions` of the Java Management SDK:
+Here is the basic syntax of the proxy settings that you can pass within fetchOptions of the Java Management SDK:
 
 ```
 Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("hostname", 433));
@@ -126,7 +119,7 @@ To fetch your stack details through the SDK, use the following code:
 
 ```
 Stack stack = new Contentstack.Builder().setAuthtoken("AUTHTOKEN").build().stack(headers);
-Response response = stack.fetch().execute();
+Response<ResponseBody> response = stack.fetch().execute();
 ```
 
 ## Create an Entry
@@ -137,7 +130,7 @@ You can use the following code to create an entry in a specific content type of 
 Stack stack = new Contentstack.Builder().setAuthtoken("authtoken").build().stack(headers);
 Entry entry = stack.entry("contentTypeUid");
 JSONObject requestBody = ...
-Response response = entry.create(requestBody).execute();
+Response<ResponseBody> response = entry.create(requestBody).execute();
 if (response.isSuccessful()){
    System.out.println(response.body());
 }
@@ -150,22 +143,8 @@ Use the following code snippet to upload assets to your stack through the SDK:
 ```
 Stack stack = new Contentstack.Builder().setAuthtoken("authtoken").build().stack(headers);
 Asset asset = stack.asset();
-Response response = asset.uploadAsset("filePath", "description").execute();
+Response<ResponseBody> response = asset.uploadAsset("filePath", "description").execute();
 if (response.isSuccessful()){
    System.out.println(response.body());
 }
 ```
-
-## Common questions
-
-### Which authentication method should I use with the Java Management SDK?
-Use an authtoken for user-specific authorized CMA requests, credentials to log in directly, or a management token for stack-level access with no users attached to them.
-
-### Can I initialize the SDK for a specific branch?
-Yes. Use the initialization code shown under “For Setting the branch:” and pass `"branch"` when calling `contentstack.stack("APIKey", "managementToken", "branch").execute();`.
-
-### How do I configure an HTTP proxy for SDK requests?
-Use the proxy configuration example and pass the proxy within the builder using `.setProxy(proxy)`.
-
-### What are some basic operations I can perform after setup?
-You can fetch stack details, create an entry in a content type, and upload assets using the code snippets provided in the respective sections.

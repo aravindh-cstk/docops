@@ -1,7 +1,7 @@
 ---
 title: "Cloning a Stack | Beta Commands"
 description: "Clone a stack easily with Contentstack Command-line Interface commands using our step-by-step guide to streamline stack duplication."
-url: /headless-cms/cli-cloning-a-stack
+url: /headless-cms/cloning-a-stack/beta
 ---
 
 # Cloning a Stack | Beta Commands

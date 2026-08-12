@@ -1,10 +1,10 @@
 ---
-title: "[Set Up Live Preview] Live Preview Implementation for NextJS SSR App Router"
+title: "Live Preview Implementation for NextJS SSR App Router"
 description: "Implement Live Preview in NextJS SSR App Router with Contentstack for seamless real-time content updates and previews."
 url: /headless-cms/live-preview-implementation-for-nextjs-ssr-app-router
 ---
 
-# [Set Up Live Preview] Live Preview Implementation for NextJS SSR App Router
+# Live Preview Implementation for NextJS SSR App Router
 
 ## Live Preview Implementation for NextJS SSR App Router
 

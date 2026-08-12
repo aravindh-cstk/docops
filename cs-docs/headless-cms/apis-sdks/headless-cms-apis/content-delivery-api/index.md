@@ -1,12 +1,10 @@
 ---
 title: "Content Delivery API"
-description: Content Delivery API
+description: "Content Delivery API"
 url: /developers/apis/content-delivery-api
-product: Contentstack
-doc_type: page
-created_at: 2026-05-20T12:19:50.086Z
-updated_at: 2026-05-20T12:19:50.086Z
+doc_type: link
 ---
 
 # Content Delivery API
 
+This navigation entry links to [Content Delivery API](https://www.contentstack.com/docs/developers/apis/content-delivery-api).

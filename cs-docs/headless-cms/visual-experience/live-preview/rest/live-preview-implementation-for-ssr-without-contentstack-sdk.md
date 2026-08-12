@@ -1,10 +1,10 @@
 ---
-title: "[Live Preview] Live Preview for SSR without Contentstack SDK"
+title: "Live Preview for SSR without Contentstack SDK"
 description: "Learn how to configure Live Preview for SSR websites using REST APIs. Enhance your Contentstack integration for optimal UX and seamless content updates."
 url: /headless-cms/live-preview-implementation-for-ssr-without-contentstack-sdk
 ---
 
-# [Live Preview] Live Preview for SSR without Contentstack SDK
+# Live Preview for SSR without Contentstack SDK
 
 ## Live Preview for SSR without Contentstack Delivery SDK
 

@@ -1,10 +1,10 @@
 ---
-title: "[Set Up Live Preview] Live PreviewImplementation for ReactJS CSR  Website"
+title: "Live PreviewImplementation for ReactJS CSR  Website"
 description: "Learn to implement Live Preview in ReactJS CSR website with Contentstack. Boost real-time content editing and previewing."
 url: /headless-cms/live-preview-implementation-for-reactjs-csr-website
 ---
 
-# [Set Up Live Preview] Live PreviewImplementation for ReactJS CSR  Website
+# Live PreviewImplementation for ReactJS CSR  Website
 
 ## Live Preview Implementation for ReactJS CSR Website
 

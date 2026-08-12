@@ -1,12 +1,10 @@
 ---
-title: "Content Delivery SDKs"
-description: Content Delivery SDKs
+title: "TypeScript Delivery SDK API Reference"
+description: "TypeScript Delivery SDK API Reference"
 url: /developers/sdks/content-delivery-sdk/typescript/reference
-product: Contentstack
-doc_type: page
-created_at: 2026-06-01T15:42:50.865Z
-updated_at: 2026-06-03T07:54:21.582Z
+doc_type: link
 ---
 
-# Content Delivery SDKs
+# TypeScript Delivery SDK API Reference
 
+This navigation entry links to [TypeScript Delivery SDK API Reference](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/typescript/reference).

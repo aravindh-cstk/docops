@@ -1,7 +1,7 @@
 ---
 title: "Migrate your Content using the CLI Migration Command | Beta Commands"
 description: "Migrate content effortlessly using Contentstack’s new Command-line Interface migration command to simplify and speed up content transfer."
-url: /headless-cms/migrate-your-content-using-the-cli-migration-command
+url: /headless-cms/migrate-your-content-using-the-cli-migration-command/beta
 ---
 
 # Migrate your Content using the CLI Migration Command | Beta Commands

@@ -1,21 +1,23 @@
 ---
+title: ".NET Utils - Configure Region Endpoints in .NET Utils SDK"
+description: "Configure region endpoints dynamically using the Contentstack .NET Utils SDK. A C# developer guide to dynamic resolution without hardcoding URLs."
 url: /developers/sdks/utils-sdk/dot-net/configure-region-endpoint-integration-in-dotnet-utils-sdk
-marker: "dotnet-utils"
-heading: "Configure Region Endpoints in .NET Utils SDK"
 ---
 
-# Configure Region Endpoints in .NET Utils SDK
+# .NET Utils - Configure Region Endpoints in .NET Utils SDK
+
+## Configure Region Endpoints in .NET Utils SDK
 
 ## Overview
 
-Contentstack services are available across various regions with multiple endpoint URLs. Hardcoding these URLs requires code changes as regions and services evolve. The .NET Utils SDK resolves the correct endpoint dynamically from the canonical regions registry, allowing the same initialization code to work across supported regions without hardcoded strings.
+Contentstack services are available across multiple regions with different endpoint URLs. Hardcoding these URLs requires code changes as regions and services evolve. The .NET Utils SDK resolves the correct endpoint dynamically from the canonical regions registry, allowing the same initialization code to work across supported regions without hardcoded strings.
 
-Use region resolution when your application supports multiple regions, cloud-specific regions, or needs to automatically adopt newly added regions without a code change or SDK upgrade.
+Use region resolution when your application supports multiple regions or cloud-specific regions, so you avoid hardcoding endpoint URLs for each one.
 
-This feature is not applicable if
+Region resolution is optional in these cases, though it still lets you switch regions later without rewriting hardcoded endpoint strings throughout your codebase:
 
-- Your application only connects to one Contentstack region
-- You hardcode the endpoint
+-   Your application only connects to one Contentstack region
+-   You hardcode the endpoint
 
 ## Quick Reference
 
@@ -26,7 +28,12 @@ The following table maps each use case to its section and primary API call.
 | Configure the SDK for a region | [Configure the SDK for a Region](#configure-the-sdk-for-a-region) | Endpoint.GetContentstackEndpoint(region, "contentDelivery", omitHttps: true) |
 | Return all service endpoints | [Return All Endpoints](#return-all-endpoints) | Endpoint.GetContentstackEndpoint(region) |
 | Strip https:// for host configuration | [Configure the SDK for a Region](#configure-the-sdk-for-a-region) | Endpoint.GetContentstackEndpoint(..., omitHttps: true) |
-| Read from environment variable | [Read from Environment Variable](#read-from-environment-variable) | `Environment.GetEnvironmentVariable("CONTENTSTACK_REGION") ?? "na"` |
+| Read from environment variable | [Read from Environment Variable](#read-from-environment-variable) | Environment.GetEnvironmentVariable("CONTENTSTACK\_REGION") ?? "na" |
+| Call endpoint resolution via the Contentstack.Utils namespace | [Use Utils Proxy](#use-utils-proxy) | Utils.GetContentstackEndpoint(region, "contentDelivery", omitHttps: true) |
+| Look up a valid region ID or alias | [Supported Regions](#supported-regions) | None |
+| Look up a valid service key | [Supported Service Keys](#supported-service-keys) | None |
+| Diagnose an exception or unexpected result | [Troubleshooting](#troubleshooting) | None |
+| Review caching, network behavior, or force a refresh | [Advanced: Registry Internals](#advanced-registry-internals) | Scripts/refresh-region.py |
 
 ---
 
@@ -34,24 +41,24 @@ The following table maps each use case to its section and primary API call.
 
 **Mandatory:**
 
-- contentstack.utils ([NuGet page](https://www.nuget.org/packages/contentstack.utils)) installed, version 2.0.0-beta.2 or later (the version that introduced Endpoint.GetContentstackEndpoint()). Run dotnet add package contentstack.utils
-- .NET project with dotnet add package support
+-   contentstack.utils ([NuGet page](https://www.nuget.org/packages/contentstack.utils)) installed, version 2.0.0-beta.2 or later (the version that introduced Endpoint.GetContentstackEndpoint()). Run dotnet add package contentstack.utils
+-   .NET project with dotnet add package support
 
 **Optional:**
 
-- Contentstack .NET CDA SDK: [.NET CDA SDK Setup Guide](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-delivery-sdk) (required for the integration examples).
-- Python 3: required only for running Scripts/refresh-region.py to pre-populate the registry in CI/CD pipelines. The SDK downloads the registry automatically on first use and does not require Python at runtime.
-- Familiarity with Contentstack regions: [Selecting a Region in SDKs](https://www.contentstack.com/docs/developers/contentstack-regions/selecting-region-in-sdks). Your stack's region is set when the stack is created and is visible under Organization Settings → Stacks in the Contentstack dashboard.
+-   Contentstack .NET CDA SDK: [.NET CDA SDK Setup Guide](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-delivery-sdk) (required for the integration examples)
+-   Python 3: required only for running Scripts/refresh-region.py to pre-populate the registry in CI/CD pipelines. The SDK downloads the registry automatically on first use and does not require Python at runtime.
+-   Familiarity with Contentstack regions: [Selecting a Region in SDKs](https://www.contentstack.com/docs/administration/selecting-region-in-sdks). Your stack's region is set when the stack is created and is visible under Organization Settings → Stacks in the Contentstack dashboard.
 
 ---
 
 ## Configure the SDK for a Region
 
-On the first call, the SDK loads regions.json from disk or downloads it from the CDN if it isn't already available, then caches the parsed registry in memory. Subsequent calls resolve endpoints from the in-memory cache without additional disk or network I/O.
+On the first call, the SDK loads the region registry and caches the parsed result in memory for the lifetime of the process. Subsequent calls resolve endpoints from the in-memory cache without additional disk or network I/O. See [Loading and Caching Priority](#loading-and-caching-priority) for the exact priority order and what happens when the on-disk file is stale.
 
 **Note:** The cache never auto-refreshes. Registry changes on the CDN require a process restart, or a manual Endpoint.ResetCache() call (testing only), to take effect.
 
-Resolve the host and wire it into ContentstackOptions.Host. Most applications should use the default overload, which returns a full HTTPS URL. Use omitHttps: true only when an API specifically expects a hostname without the scheme (such as the Host property), since the SDK adds https:// internally and a full URL would double the scheme.
+Resolve the host and wire it into ContentstackOptions.Host. Most applications should use the default overload, which returns a full HTTPS URL. Use omitHttps: true only when an API specifically expects a hostname without the scheme (such as the Host property), since the SDK adds https:// internally and a full URL would double the scheme. The region argument accepts a region ID or a supported alias, matched case-insensitively. See [Region Resolution Rules](#region-resolution-rules) for the full list of accepted forms.
 
 ```
 using Contentstack.Core;
@@ -119,7 +126,7 @@ foreach (var (service, url) in endpoints)
 
 ---
 
-## Read From Environment Variable
+## Read from Environment Variable
 
 ```
 using Contentstack.Core;
@@ -175,7 +182,7 @@ Dictionary<string, string> Endpoint.GetContentstackEndpoint(
 | Parameter | Description |
 | --- | --- |
 | region | Region identifier or alias (case-insensitive) |
-| service | Service key (e.g., "contentDelivery") |
+| service | Service key (e.g. "contentDelivery") |
 | omitHttps | When true, strips the https:// prefix. Required for SDK host configuration. |
 
 C# overloads resolve cleanly at compile time, with no ambiguity and no Union types.
@@ -186,25 +193,15 @@ C# overloads resolve cleanly at compile time, with no ambiguity and no Union typ
 
 Region matching:
 
-- Is case-insensitive
-- Trims leading/trailing whitespace
-- Supports aliases
-- Supports both dash (-) and underscore (\_) variants where defined
-- ID match takes priority over alias match (two-pass lookup)
+-   Is case-insensitive. The SDK calls ToLowerInvariant() on the input before matching, and does not perform any other normalization.
+-   Trims leading/trailing whitespace
+-   Supports aliases, matched as literal strings from the regions registry
+-   Does not convert between dash (\-) and underscore (\_) separators. An alias such as aws\_na resolves only because the registry lists it as its own literal alias string alongside aws-na, not because the SDK derives one form from the other.
+-   ID match takes priority over alias match (two-pass lookup)
 
-**Examples**
+For example, aws-na, AWS\_NA, and us all resolve to the na region because the registry lists aws-na, aws\_na, and us separately as aliases for na. See [Supported Regions](#supported-regions) for the complete list.
 
-| Input | Resolved Region |
-| --- | --- |
-| na | na |
-| us | na |
-| aws-na | na |
-| AWS\_NA | na |
-| eu | eu |
-| azure-na | azure-na |
-| gcp-eu | gcp-eu |
-
-Only dash (-) and underscore (\_) are recognized as separators. A region string using any other separator (a space, a dot, or a slash, for example "aws na") does not match any known region or alias and falls into the "Invalid region" error below. Dash and underscore variants resolve identically only because both forms are listed as separate alias entries in the regions registry, not because the SDK normalizes separators at runtime.
+Only dash (\-) and underscore (\_) are recognized as separators. A region string using any other separator (a space, a dot, or a slash, for example "aws na") does not match any known region or alias and falls into the "Invalid region" error below.
 
 If no region is found:
 
@@ -212,15 +209,29 @@ If no region is found:
 KeyNotFoundException: Invalid region: <input>
 ```
 
+### Supported Regions
+
+| Region ID | Cloud | Location | Default | Aliases |
+| --- | --- | --- | --- | --- |
+| na | AWS | North America | Yes | us, aws-na, aws\_na |
+| eu | AWS | Europe | No | aws-eu, aws\_eu |
+| au | AWS | Australia | No | aws-au, aws\_au |
+| azure-na | Azure | North America | No | azure\_na |
+| azure-eu | Azure | Europe | No | azure\_eu |
+| gcp-na | GCP | North America | No | gcp\_na |
+| gcp-eu | GCP | Europe | No | gcp\_eu |
+
+The [Regions Registry](https://artifacts.contentstack.com/regions.json) is the authoritative list of region identifiers and aliases.
+
 ---
 
 ## Service Resolution Rules
 
 The .NET Utils SDK:
 
-1. Locates the resolved region
-2. Locates the service key within the region endpoints
-3. Returns the endpoint URL
+1.  Locates the resolved region
+2.  Locates the service key within the region endpoints
+3.  Returns the endpoint URL
 
 **Example**
 
@@ -240,24 +251,24 @@ KeyNotFoundException: Service "unknownService" not found for region "eu"
 
 ## Supported Service Keys
 
-- contentDelivery
-- contentManagement
-- graphqlDelivery
-- graphqlPreview
-- preview
-- auth
-- application
-- images
-- assets
-- automate
-- launch
-- developerHub
-- brandKit
-- genAI
-- personalizeManagement
-- personalizeEdge
-- composableStudio
-- assetManagement
+-   contentDelivery
+-   contentManagement
+-   graphqlDelivery
+-   graphqlPreview
+-   preview
+-   auth
+-   application
+-   images
+-   assets
+-   automate
+-   launch
+-   developerHub
+-   brandKit
+-   genAI
+-   personalizeManagement
+-   personalizeEdge
+-   composableStudio
+-   assetManagement
 
 **Note:** assetManagement is available for NA only. The [Regions Registry](https://artifacts.contentstack.com/regions.json) is the authoritative list of all region identifiers, aliases, and service endpoint URLs.
 
@@ -291,7 +302,7 @@ KeyNotFoundException: Invalid region: <input>
 
 **Root cause:** The string does not match any region ID or alias in the registry. This is typically caused by a typo or an unsupported region name.
 
-**Resolution:** Check [Region Resolution Rules](#region-resolution-rules) for valid identifiers and aliases.
+**Resolution:** Check [Supported Regions](#supported-regions) for valid identifiers and aliases.
 
 ---
 
@@ -326,6 +337,22 @@ KeyNotFoundException: Service "" not found for region "<id>"
 **Root cause:** Unlike region, the service parameter has no explicit null/empty guard. Passing null propagates into an internal JsonElement.TryGetProperty() call and surfaces as ArgumentNullException. Passing "" is treated as an ordinary (nonexistent) service key and surfaces as the same KeyNotFoundException used for any unknown service.
 
 **Resolution:** Pass a specific service key from [Supported Service Keys](#supported-service-keys), or call the single-argument overload Endpoint.GetContentstackEndpoint(region) to get all endpoints for the region (see [Return All Endpoints](#return-all-endpoints)).
+
+---
+
+### Stale registry after an upstream region or service addition
+
+**Symptom**
+
+```
+KeyNotFoundException: Invalid region: <input>
+```
+
+or a service that you know Contentstack added still does not appear when you call Endpoint.GetContentstackEndpoint(region), even after you call Endpoint.ResetCache().
+
+**Root cause:** The local Assets/regions.json file on disk predates the upstream change. Endpoint.ResetCache() only clears the in-memory cache. On the next call, the SDK checks the local Assets/regions.json file on disk first, and only falls back to a live CDN download when that file is missing. If a stale file still exists on disk, ResetCache() alone does not force a network refresh.
+
+**Resolution:** Run python3 Scripts/refresh-region.py (or python Scripts/refresh-region.py on Windows) to overwrite every bin/\*\*/Assets/regions.json next to the built DLL with the latest registry. See [Refreshing the Registry](#refreshing-the-registry).
 
 ---
 
@@ -369,7 +396,7 @@ No exception is thrown. The current process keeps working normally, but regions.
 
 ---
 
-### Certificate verification error on macOS
+### macOS SSL certificate verification
 
 **Symptom**
 
@@ -378,7 +405,7 @@ WARNING: SSL certificate verification failed. Retrying without verification.
          To fix permanently, run: /Applications/Python*/Install Certificates.command
 ```
 
-**Root cause:** On macOS with a [Python.org](http://Python.org) build, refresh-region.py may encounter a certificate verification error on first run. The script retries automatically without verification.
+**Root cause:** On macOS with a [Python.org](http://Python.org) build, refresh-region.py may encounter an SSL certificate error on first run. The script retries automatically without verification.
 
 **Resolution:** Run /Applications/Python\*/Install Certificates.command to install the required root certificates permanently.
 
@@ -386,7 +413,9 @@ WARNING: SSL certificate verification failed. Retrying without verification.
 
 ## Advanced: Registry Internals
 
-This section covers registry caching and refresh internals. Skip it unless you're debugging a caching issue or automating registry refresh in a deployment pipeline.
+This section covers registry caching and refresh internals. Skip it unless you are debugging a caching issue or automating registry refresh in a deployment pipeline.
+
+### Loading and Caching Priority
 
 The .NET Utils SDK loads the registry in the following priority order, and never commits regions.json to source control (excluded via .gitignore, never packed into the NuGet package):
 
@@ -394,9 +423,9 @@ The .NET Utils SDK loads the registry in the following priority order, and never
 | --- | --- | --- |
 | 1 | In-memory cache (\_regionsData) | Populated on first call, reused for the lifetime of the process. Zero I/O. |
 | 2 | Local disk file (Assets/regions.json) | Read from bin/Assets/ next to Contentstack.Utils.dll in the output directory |
-| 3 | CDN download fallback | Downloads from [artifacts.contentstack.com/regions.json](https://artifacts.contentstack.com/regions.json), writes to disk for future calls |
+| 3 | CDN download fallback | Downloads from https://artifacts.contentstack.com/regions.json, writes to disk for future calls |
 
-From package install through the first API call, the end-to-end workflow looks like this:
+From package install through the first API call, the workflow looks like this:
 
 ```
 dotnet add package contentstack.utils
@@ -412,39 +441,45 @@ dotnet run
   → regions.json not found on disk
   → Downloads from CDN → writes to bin/Assets/regions.json
   → Cached in memory for process lifetime
+```
 
+Endpoint.ResetCache() clears only priority 1, the in-memory cache. The next call still checks priority 2, the local Assets/regions.json file on disk, first. It reaches priority 3, the CDN, only when that local file is missing. If a stale regions.json file still exists on disk, calling Endpoint.ResetCache() reloads that same stale file and does not reach the CDN. Endpoint.ResetCache() is intended for testing only. Do not call it in production code. See [Refreshing the Registry](#refreshing-the-registry) to force a network refresh.
+
+### Network Behavior
+
+The CDN download has these characteristics:
+
+-   **Timeout:** Explicit 30 seconds, via HttpClient.
+-   **Proxy support:** Uses the default HttpClientHandler, which honors the system/environment proxy configuration unless your application explicitly disables it.
+-   **Firewall:** Allow outbound access to artifacts.contentstack.com.
+
+On the first run in a new deployment (no regions.json on disk), the SDK makes a synchronous CDN call before returning the endpoint URL. Run python3 Scripts/refresh-region.py in your deployment pipeline to pre-populate bin/Assets/regions.json and avoid this blocking call in production.
+
+### Refreshing the Registry
+
+Scripts/refresh-region.py is bundled inside the NuGet package. On dotnet build, an MSBuild target copies it into your project's Scripts/ folder. This applies to SDK-style projects using PackageReference (the default for .NET Core/5+ projects). It does not run for packages.config\-based projects or on dotnet restore alone.
+
+To manually refresh the registry with the latest version from the CDN, run from your project root:
+
+-   For Mac/Linux
+
+```
+python3 Scripts/refresh-region.py
+```
+
+-   For Windows
+
+```
+python Scripts/refresh-region.py
+```
+
+```
 python3 Scripts/refresh-region.py   (run anytime to update)
           │
           ▼
   Download latest regions.json from CDN → overwrite bin/**/Assets/regions.json
 ```
 
-The CDN download has these network characteristics:
-
-- **Timeout:** Explicit 30 seconds, via HttpClient.
-- **Proxy support:** Uses the default HttpClientHandler, which honors the system/environment proxy configuration unless your application explicitly disables it.
-- **Firewall:** Allow outbound access to artifacts.contentstack.com.
-
-On the first run in a new deployment (no regions.json on disk), the SDK makes a synchronous CDN call before returning the endpoint URL. Run python3 Scripts/refresh-region.py in your deployment pipeline to pre-populate bin/Assets/regions.json and avoid this blocking call in production.
-
-Scripts/refresh-region.py is bundled inside the NuGet package. On dotnet build, an MSBuild target copies it into your project's Scripts/ folder. This applies to SDK-style projects using PackageReference (the default for .NET Core/5+ projects). It does not run for packages.config-based projects or on dotnet restore alone.
-
-To manually refresh the registry with the latest version from CDN, run from your project root:
-
-- For Mac/Linux
-
-```
-python3 Scripts/refresh-region.py
-```
-
-- For Windows
-
-```
-python Scripts/refresh-region.py
-```
-
-This overwrites every bin/\*\*/Assets/regions.json found in your project, making newly added regions and services available without requiring a new SDK release.
-
-**Note:** Endpoint.ResetCache() clears the in-memory cache and forces a reload on the next call. It is for testing only. Do not call it in production code.
+This overwrites every bin/\*\*/Assets/regions.json found in your project, making newly added regions and services available without requiring a new SDK release. Run this script whenever a region or service is added upstream after your local regions.json was last refreshed. Endpoint.ResetCache() alone does not force a network download while a local regions.json file still exists on disk, so it does not substitute for running this script.
 
 ---
