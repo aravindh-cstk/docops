@@ -1,40 +1,33 @@
 ---
-title: Contentstack Command-line Interface (CLI) - Create Custom CLI Plugins for Contentstack
-description: This guide explains how to develop an external plugin for Contentstack CLI, including requirements, project structure, best practices, testing, publishing steps, and key internal behaviors to consider.
-url: https://www.contentstack.com/docs/headless-cms/create-custom-cli-plugins
-product: Contentstack
-doc_type: developer-guide
-audience:
-  - developers
-  - cli-users
-version: v1
-last_updated: 2026-03-25
+title: "Create Custom CLI Plugins for Contentstack"
+description: "Learn how to build, test, and publish custom CLI plugins for Contentstack using oclif. Covers setup, development workflow, and best practices."
+url: /headless-cms/create-custom-cli-plugins
 ---
 
-# Contentstack Command-line Interface (CLI) - Create Custom CLI Plugins for Contentstack
-
-This page explains how to create and develop external plugins for the Contentstack CLI using oclif, including setup, command structure, testing, publishing, and troubleshooting. It is intended for developers extending the CLI with custom commands and should be used when building, linking, and distributing CLI plugins.
+# Create Custom CLI Plugins for Contentstack
 
 ## Create Custom CLI Plugins for Contentstack
 
-This guide explains how to develop an external plugin for [Contentstack CLI](https://www.contentstack.com/docs/developers/cli), including requirements, project structure, best practices, testing, publishing steps, and key internal behaviors to consider.
+This guide explains how to develop an external plugin for [Contentstack CLI](https://www.contentstack.com/docs/headless-cms/install-the-cli), including requirements, project structure, best practices, testing, publishing steps, and key internal behaviors to consider.
 
 ## Introduction
 
 The Contentstack CLI supports modular extensibility through external plugins.
 
 These plugins offer the following capabilities:
-- Extend CLI functionality with custom commands.
-- Allow global (system-wide) or local (project-specific) installation.
-- Integrate with the [oclif framework](https://oclif.io/) for structured command development.
 
-**Example plugin**: `@contentstack/apps-cli`
+-   Extend CLI functionality with custom commands.
+-   Allow global (system-wide) or local (project-specific) installation.
+-   Integrate with the [oclif framework](https://oclif.io/) for structured command development.
+
+**Example plugin**: [@contentstack/apps-cli](https://www.npmjs.com/package/@contentstack/apps-cli)
 
 ## Prerequisites
-- [Node.js version 22.x and above](https://nodejs.org/en/download/)
-- [Contentstack account](https://www.contentstack.com/login/)
-- Familiarity with the oclif CLI framework (recommended)
-- Contentstack CLI [installed](./install-the-cli.md)
+
+-   [Node.js version 22.x and above](https://nodejs.org/en/download/)
+-   [Contentstack account](https://www.contentstack.com/login/)
+-   Familiarity with the oclif CLI framework (recommended)
+-   Contentstack CLI [installed](/docs/headless-cms/install-the-cli)
 
 ## Plugin Structure
 
@@ -55,7 +48,7 @@ my-plugin/
 └── oclif.manifest.json
 ```
 
-**Note:** Use namespacing to prefix all commands to avoid collision. For example, use `csdx myplugin:do` instead of `csdx do`.
+**Note:** Use namespacing to prefix all commands to avoid collision. For example, use csdx myplugin:do instead of csdx do.
 
 ## Creating a Plugin
 
@@ -67,21 +60,22 @@ cd myplugin
 ```
 
 The generator prompts you with the following questions:
-- **Select a module type**: Choose `ESM` or `CommonJS`.
-- **NPM package name**: Example: `@contentstack/myplugin` or `myplugin`
-- **Command bin name the CLI will export**: Example: `myplugin` (this is the binary name, not the full command namespace)
-- **Description**: Example: `A new CLI generated with oclif`
-- **Author**: Example: `Contentstack` or your organization name
-- **License**: Default: `MIT`
-- **Who is the GitHub owner of repository**: Example: `@contentstack`
-- **What is the GitHub name of repository**: Example: `myplugin`
-- **Select a package manager**: Choose: `npm`, `yarn`, or `pnpm`
+
+1.  **Select a module type**: Choose ESM or CommonJS.
+2.  **NPM package name**: Example: @contentstack/myplugin or myplugin
+3.  **Command bin name the CLI will export**: Example: myplugin (this is the binary name, not the full command namespace)
+4.  **Description**: Example: A new CLI generated with oclif
+5.  **Author**: Example: Contentstack or your organization name
+6.  **License**: Default: MIT
+7.  **Who is the GitHub owner of repository**: Example: @contentstack
+8.  **What is the GitHub name of repository**: Example: myplugin
+9.  **Select a package manager**: Choose: npm, yarn, or pnpm
 
 After answering these prompts, the generator creates the plugin structure in your current directory.
 
 ### Configure package.json
 
-Modify the generated `package.json` to include the necessary oclif configuration:
+Modify the generated package.json to include the necessary oclif configuration:
 
 ```
 {
@@ -100,7 +94,7 @@ Modify the generated `package.json` to include the necessary oclif configuration
 ### Move to plugin-directory
 
 ```
-cd
+cd <plugin-directory>
 // Example:
 cd ./myplugin
 ```
@@ -111,7 +105,7 @@ cd ./myplugin
 npx oclif generate command myplugin:do
 ```
 
-This creates `src/commands/myplugin/do.ts`.
+This creates src/commands/myplugin/do.ts.
 
 ### Build the plugin
 
@@ -121,9 +115,9 @@ Before linking or using your plugin, you must build it to compile TypeScript to 
 npm run build
 ```
 
-This command compiles your TypeScript commands from `src/commands/` to `dist/commands/`.
+This command compiles your TypeScript commands from src/commands/ to dist/commands/.
 
-During development, oclif reads from `src`. When published, the CLI loads compiled commands from `dist` (based on your build settings).
+During development, oclif reads from src. When published, the CLI loads compiled commands from dist (based on your build settings).
 
 ### Generate the manifest
 
@@ -133,18 +127,18 @@ After building the plugin, generate the oclif manifest file by running the follo
 npx oclif manifest
 ```
 
-This command creates the `oclif.manifest.json` file, which is required for the CLI to discover your commands.
+This command creates the oclif.manifest.json file, which is required for the CLI to discover your commands.
 
 ## Plugin Registration and Linking
 
 When developing a plugin locally, you must link it to the Contentstack CLI for testing:
 
 ```
-cd
+cd <plugin-directory>
 csdx plugins:link
 ```
 
-This sets up the plugin within the `csdx` namespace, allowing you to use your custom commands directly.
+This sets up the plugin within the csdx namespace, allowing you to use your custom commands directly.
 
 ### Verify the Setup
 
@@ -166,16 +160,17 @@ Alternatively, run the plugin directly using Node.js:
 node bin/run myplugin:do
 ```
 
-**Tip:** After making changes to your plugin, rebuild and regenerate the manifest, then test with `csdx myplugin:do` to ensure everything works correctly.
+**Tip:** After making changes to your plugin, rebuild and regenerate the manifest, then test with csdx myplugin:do to ensure everything works correctly.
 
 ## Commands and Flags
 
-Each command in your plugin must follow the `oclif` command structure:
+Each command in your plugin must follow the oclif command structure:
 
 ### Command Structure
-- `static description` - Help text displayed in the CLI
-- `static flags` - CLI options and arguments
-- `async run()` - Main command logic
+
+-   static description - Help text displayed in the CLI
+-   static flags - CLI options and arguments
+-   async run() - Main command logic
 
 ### Example Command
 
@@ -184,7 +179,7 @@ import {Command, Flags} from '@oclif/core'
 
 export default class MyCommand extends Command {
   static description = 'Performs operations with Contentstack'
-
+  
   static flags = {
     stack: Flags.string({
       char: 's',
@@ -205,7 +200,7 @@ export default class MyCommand extends Command {
 
 ### Testing Setup
 
-Use `@oclif/test` with Mocha or Jest for testing your commands.
+Use @oclif/test with Mocha or Jest for testing your commands.
 
 ### Example Test
 
@@ -233,99 +228,117 @@ npm test
 ### Production Testing
 
 To simulate the end-user experience, follow these steps to test your published plugin:
-- [**Install the Contentstack CLI globally**](./install-the-cli.md):
 
-```
-npm i -g @contentstack/cli
-```
-- [**Set the region**](./configure-regions-in-the-cli.md#set-region):
-
-```
-csdx config:set:region
-```
-- [**Authenticate**](./cli-authentication.md#authentication):
-
-```
-csdx login
-```
-- **Install your published plugin**:
-
-```
-csdx plugins:install @contentstack/myplugin
-```
-- **Test the plugin command**:
-
-```
-csdx myplugin:do --help
-```
+1.  [**Install the Contentstack CLI globally**](/docs/headless-cms/install-the-cli):  
+    
+    ```
+    npm i -g @contentstack/cli
+    ```
+    
+2.  [**Set the region**](/docs/headless-cms/configure-regions-in-the-cli#set-region):  
+    
+    ```
+    csdx config:set:region <region-name>
+    ```
+    
+3.  [**Authenticate**](/docs/headless-cms/cli-authentication#authentication):  
+    
+    ```
+    csdx login
+    ```
+    
+4.  **Install your published plugin**:  
+    
+    ```
+    csdx plugins:install @contentstack/myplugin
+    ```
+    
+5.  **Test the plugin command**:  
+    
+    ```
+    csdx myplugin:do --help
+    ```
+    
 
 ### Development Testing
 
 Test your plugin during development:
-- **Install the Contentstack CLI globally**:
 
-```
-npm i -g @contentstack/cli
-```
-- **Set the region**:
-
-```
-csdx config:set:region
-```
-- **Authenticate**:
-
-```
-csdx login
-```
-- **Link your local plugin**:
-
-```
-csdx plugins:link
-```
-- **Test the plugin command**:
-
-```
-csdx myplugin:do --help
-```
+1.  **Install the Contentstack CLI globally**:  
+    
+    ```
+    npm i -g @contentstack/cli
+    ```
+    
+2.  **Set the region**:  
+    
+    ```
+    csdx config:set:region <region-name>
+    ```
+    
+3.  **Authenticate**:  
+    
+    ```
+    csdx login
+    ```
+    
+4.  **Link your local plugin**:  
+    
+    ```
+    csdx plugins:link <plugin-local-path>
+    ```
+    
+5.  **Test the plugin command**:  
+    
+    ```
+    csdx myplugin:do --help
+    ```
+    
 
 ## Important Considerations
 
 ### Region and Authentication
 
 Core plugins handle region and authentication automatically. Before using any command, ensure the user has configured the region and completed authentication.
-- [**Set the region**](./configure-regions-in-the-cli.md#set-region):
 
-```
-csdx config:set:region
-```
-- [**Authenticate**](./cli-authentication.md#authentication):
-
-```
-csdx login
-```
+1.  [**Set the region**](/docs/headless-cms/configure-regions-in-the-cli#set-region):  
+    
+    ```
+    csdx config:set:region <region-name>
+    ```
+    
+2.  [**Authenticate**](/docs/headless-cms/cli-authentication#authentication):  
+    
+    ```
+    csdx login
+    ```
+    
 
 ### Contentstack CLI Features
 
-The `@contentstack/cli` package provides additional features that plugins can leverage:
+The @contentstack/cli package provides additional features that plugins can leverage:
 
 | Feature | Description |
-|---|---|
-| `cdaHost`, `cmaHost`, `region` | Region-aware endpoints |
-| `authToken`, `email`, `region`, `config` | Auto-loaded from CSDX config |
-| `utilities` | Common helpers for I/O, logging, formatting, etc. |
+| --- | --- |
+| cdaHost, cmaHost, region | Region-aware endpoints |
+| authToken, email, region, config | Auto-loaded from CSDX config |
+| utilities | Common helpers for I/O, logging, formatting, etc. |
 | Shared base command classes | Consistent CLI behavior |
 
 ### Publishing the Plugin
-- Publish your plugin package to npm:
 
-```
-npm publish
-```
-- Install via CLI:
-
-```
-csdx plugins:install @contentstack/myplugin
-```
+1.  Publish your plugin package to npm:  
+    
+    ```
+    npm publish
+    ```
+    
+2.  Install via CLI:  
+    
+    ```
+    csdx plugins:install @contentstack/myplugin
+    ```
+    
 
 Once installed, users can use your custom plugin to execute tasks.
 
@@ -334,21 +347,21 @@ Once installed, users can use your custom plugin to execute tasks.
 ### Do's
 
 | Practice | Description |
-|---|---|
-| Use namespacing | Prefix commands like `myplugin:action` to avoid collisions. |
+| --- | --- |
+| Use namespacing | Prefix commands like myplugin:action to avoid collisions. |
 | Follow oclif standards | Maintain command/flag conventions for consistency. |
-| Use proper CLI feedback | Use `this.log`, `this.error`, `ux.prompt` for user interaction. |
+| Use proper CLI feedback | Use this.log, this.error, ux.prompt for user interaction. |
 | Validate inputs | Check required flags/args early in your command logic. |
 | Add tests | Include basic tests for every command. |
 | Document commands | Add descriptions, usage, and examples. |
-| Use Contentstack SDKs | Prefer official [SDKs](/docs/developers/sdks) like `contentstack-management`. |
-| Respect user configs | Use `~/.csdx/config.json` when needed. |
+| Use Contentstack SDKs | Prefer official [SDKs](/docs/developers/sdks) like contentstack-management. |
+| Respect user configs | Use ~/.csdx/config.json when needed. |
 | Log errors gracefully | Use clear error messages and helpful hints. |
 
 ### Don'ts
 
 | Practice | Reason |
-|---|---|
+| --- | --- |
 | Don't overwrite global configs | Avoid altering shared state. |
 | Don't hardcode values | Make plugins configurable. |
 | Don't break existing flows | Avoid side effects in CLI. |
@@ -358,16 +371,19 @@ Once installed, users can use your custom plugin to execute tasks.
 ## Uninstall a Plugin
 
 To uninstall a plugin, perform the following steps:
-- **List the installed plugins**:
 
-```
-csdx plugins:list
-```
-- **Uninstall a specific plugin**:
-
-```
-csdx plugins:uninstall
-```
+1.  **List the installed plugins**:  
+    
+    ```
+    csdx plugins:list
+    ```
+    
+2.  **Uninstall a specific plugin**:  
+    
+    ```
+    csdx plugins:uninstall <plugin_name>
+    ```
+    
 
 **Note:** This command **does not delete** the plugin's code folder from your local machine. It only removes the plugin from the CLI's plugin registry.
 
@@ -392,17 +408,17 @@ csdx plugins:reset
 To display the installation properties of a plugin, run the following commands:
 
 ```
-cd
+cd <plugin-directory>
 csdx plugins:inspect
 ```
 
 ## Available Methods and Utilities
 
-When building your plugin, you have access to various methods and utilities from both `oclif` and the Contentstack CLI. Here are the most commonly used ones:
+When building your plugin, you have access to various methods and utilities from both oclif and the Contentstack CLI. Here are the most commonly used ones:
 
 ### Basic oclif Command Methods
 
-These methods are available directly in the `Command` class:
+These methods are available directly in the Command class:
 
 ```
 // Logging
@@ -421,7 +437,7 @@ this.config.version                    // CLI version
 
 ### Contentstack CLI Utilities
 
-**Note:** `@contentstack/cli-utilities` is optional and only required if you plan to use Contentstack-specific utilities such as `cliux`, `configHandler`, or `managementSDKClient`. Skip this if you're building a simple plugin that doesn't interact with Contentstack APIs.
+**Note:** @contentstack/cli-utilities is optional and only required if you plan to use Contentstack-specific utilities such as cliux, configHandler, or managementSDKClient. Skip this if you're building a simple plugin that doesn't interact with Contentstack APIs.
 
 To use Contentstack CLI utilities, install the following package:
 
@@ -429,7 +445,7 @@ To use Contentstack CLI utilities, install the following package:
 npm install @contentstack/cli-utilities
 ```
 
-This ensures your plugin works correctly when published and installed via `csdx plugins:install`.
+This ensures your plugin works correctly when published and installed via csdx plugins:install.
 
 **User Interface (cliux)**
 
@@ -495,7 +511,7 @@ const entries = await stack.contentType('content_type_uid').entry().query().find
 **Essential Helper Functions**
 
 ```
-import {
+import { 
   isAuthenticated,
   formatError,
   validatePath,
@@ -524,8 +540,9 @@ if (validatePath('/some/path')) {
 **Logger Service**
 
 The logger automatically initializes with the log path determined by the following priority:
-- Environment variable: `CS_CLI_LOG_PATH` (highest priority)
-- User config: `log.path` from CLI config (set via `csdx config:set:log --path <path>`)
+
+1.  Environment variable: CS\_CLI\_LOG\_PATH (highest priority)
+2.  User config: log.path from CLI config (set via csdx config:set:log --path <path>)
 
 ```
 import { log, handleAndLogError, getLogPath } from '@contentstack/cli-utilities'
@@ -577,16 +594,16 @@ Here's a complete example showing how to use these utilities together:
 
 ```
 import {Command, Flags} from '@oclif/core'
-import {
-  cliux,
-  configHandler,
+import { 
+  cliux, 
+  configHandler, 
   isAuthenticated,
-  managementSDKClient
+  managementSDKClient 
 } from '@contentstack/cli-utilities'
 
 export default class MyCommand extends Command {
   static description = 'Fetches entries from Contentstack'
-
+  
   static flags = {
     'content-type': Flags.string({
       char: 'c',
@@ -602,44 +619,44 @@ export default class MyCommand extends Command {
 
   async run() {
     const {flags} = await this.parse(MyCommand)
-
+    
     // Check authentication
     if (!isAuthenticated()) {
       cliux.error('Please login first: csdx login')
       this.exit(1)
     }
-
+    
     // Get region configuration
     const region = configHandler.get('region')
     if (!region) {
-      cliux.error('Please set a region: csdx config:set:region ')
+      cliux.error('Please set a region: csdx config:set:region <region>')
       this.exit(1)
     }
-
+    
     cliux.info(`Using region: ${region.name}`)
-
+    
     try {
       // Get authenticated client
       const client = await managementSDKClient({ host: region.cma })
       const stack = client.stack({ api_key: flags['stack-api-key'] })
-
+      
       // Show loading indicator
       cliux.loader('Fetching entries...')
-
+      
       // Fetch entries
       const entries = await stack
         .contentType(flags['content-type'])
         .entry()
         .query()
         .find()
-
+      
       cliux.success(`Found ${entries.items.length} entries`)
-
+      
       // Display results
       entries.items.forEach((entry: any) => {
         cliux.print(`- ${entry.title} (${entry.uid})`)
       })
-
+      
     } catch (error: any) {
       cliux.error(`Error: ${error.message}`)
       this.exit(1)
@@ -650,112 +667,113 @@ export default class MyCommand extends Command {
 
 ### Quick Reference: Essential Utilities
 
-Here's a quick reference of essential utilities from `@contentstack/cli-utilities`:
+Here's a quick reference of essential utilities from @contentstack/cli-utilities:
 
 | Utility | Import | Purpose |
-|---|---|---|
-| User Interface | `cliux` | Print messages, prompts, confirmations |
-| Configuration | `configHandler` | Access CLI config (`authToken`, `email`, `region`) |
-| Authentication | `isAuthenticated` | Check if the user is logged in |
-| Management SDK | `managementSDKClient` | Contentstack Management API client |
-| Error Handling | `formatError` | Format Contentstack API errors |
-| Path Utilities | `validatePath`, `sanitizePath` | Validate and sanitize file paths |
-| Logging | `LoggerService` | Logging for your plugin |
+| --- | --- | --- |
+| User Interface | cliux | Print messages, prompts, confirmations |
+| Configuration | configHandler | Access CLI config (authToken, email, region) |
+| Authentication | isAuthenticated | Check if the user is logged in |
+| Management SDK | managementSDKClient | Contentstack Management API client |
+| Error Handling | formatError | Format Contentstack API errors |
+| Path Utilities | validatePath, sanitizePath | Validate and sanitize file paths |
+| Logging | LoggerService | Logging for your plugin |
 
 ## Troubleshooting
 
 ### Command Not Found After Linking
 
 If your command isn't recognized after linking:
-- Verify that the build completed successfully:
 
-```
-npm run build
-```
-- Regenerate the manifest:
-
-```
-npx oclif manifest
-```
-- Check that the command exists in the `dist/commands/` directory:
-
-```
-ls dist/commands/myplugin/
-```
-- Relink the plugin:
-
-```
-csdx plugins:uninstall myplugin
-csdx plugins:link
-```
+1.  Verify that the build completed successfully:  
+    
+    ```
+    npm run build
+    ```
+    
+2.  Regenerate the manifest:  
+    
+    ```
+    npx oclif manifest
+    ```
+    
+3.  Check that the command exists in the dist/commands/ directory:  
+    
+    ```
+    ls dist/commands/myplugin/
+    ```
+    
+4.  Relink the plugin:  
+    
+    ```
+    csdx plugins:uninstall myplugin
+    csdx plugins:link
+    ```
+    
 
 ### ESM Module Warnings
 
 You may see a warning as given below:
 
-`Warning: @contentstack/myplugin is a linked ESM module and cannot be auto-transpiled.`
+Warning: @contentstack/myplugin is a linked ESM module and cannot be auto-transpiled.
 
-This warning is expected. The plugin loads compiled code from the `dist/` directory. Ensure to build your plugin before linking.
+This warning is expected. The plugin loads compiled code from the dist/ directory. Ensure to build your plugin before linking.
 
 ### Changes Not Reflecting
 
 If your changes aren't showing up:
-- Rebuild the plugin:
 
-```
-npm run build
-```
-- Regenerate the manifest:
-
-```
-npx oclif manifest
-```
-- Relink if necessary:
-
-```
-csdx plugins:link
-```
+1.  Rebuild the plugin:  
+    
+    ```
+    npm run build
+    ```
+    
+2.  Regenerate the manifest:  
+    
+    ```
+    npx oclif manifest
+    ```
+    
+3.  Relink if necessary:  
+    
+    ```
+    csdx plugins:link
+    ```
+    
 
 ### Authentication or Region Errors
 
 If you get authentication or region errors:
-- Verify you're logged in:
 
-```
-csdx login
-```
-- Check your region:
-
-```
-csdx config:get:region
-```
-- Set region if required:
-
-```
-csdx config:set:region
-```
+1.  Verify you're logged in:  
+    
+    ```
+    csdx login
+    ```
+    
+2.  Check your region:  
+    
+    ```
+    csdx config:get:region
+    ```
+    
+3.  Set region if required:  
+    
+    ```
+    csdx config:set:region <region-name>
+    ```
+    
 
 ### Plugin Installation Issues
 
 If installation fails:
-- Verify that the package is published on npm.
-- Check that the package name matches:
 
-```
-csdx plugins:install @contentstack/myplugin
-```
-- Ensure that the package has the correct `oclif.manifest.json` file (generated during `npm publish`).
-
-## Common questions
-
-### Do I need to build the plugin before linking it?
-Yes. Ensure to run `npm run build` before linking so the plugin loads compiled code from the `dist/` directory.
-
-### Why is `oclif.manifest.json` required?
-The `oclif.manifest.json` file is required for the CLI to discover your commands.
-
-### Can I install a plugin globally or per project?
-These plugins allow global (system-wide) or local (project-specific) installation.
-
-### What should I do if my command is not found after linking?
-Verify the build, regenerate the manifest, confirm the command exists in `dist/commands/`, and relink the plugin.
+1.  Verify that the package is published on npm.
+2.  Check that the package name matches:  
+    
+    ```
+    csdx plugins:install @contentstack/myplugin
+    ```
+    
+3.  Ensure that the package has the correct oclif.manifest.json file (generated during npm publish).

@@ -1,7 +1,7 @@
 ---
 title: "CLI Limitations"
 description: "Understand Contentstack CLI limitations, supported environments, and workarounds for import/export, authentication, OS support, and more."
-url: /headless-cms/cli-limitations/v1
+url: /headless-cms/cli-limitations
 ---
 
 # CLI Limitations

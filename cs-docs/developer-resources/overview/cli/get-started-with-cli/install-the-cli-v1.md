@@ -1,7 +1,7 @@
 ---
 title: "Install the CLI"
 description: "Install and update the Contentstack CLI on macOS, Windows, and Linux with this step-by-step guide for cross-platform setup."
-url: /headless-cms/install-the-cli/v1
+url: /headless-cms/install-the-cli
 ---
 
 # Install the CLI

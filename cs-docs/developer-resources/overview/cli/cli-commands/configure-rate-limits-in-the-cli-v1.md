@@ -1,7 +1,7 @@
 ---
 title: "Configure Rate Limits in the CLI"
 description: "Configure Contentstack CLI rate limits with csdx config:set:rate-limit. Manage bulkLimit, set utilization, and get or remove settings for bulk publishing control."
-url: /headless-cms/configure-rate-limits-in-the-cli/v1
+url: /headless-cms/configure-rate-limits-in-the-cli
 ---
 
 # Configure Rate Limits in the CLI

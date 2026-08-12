@@ -1,7 +1,7 @@
 ---
 title: "Export Content Using the CLI"
 description: "Export content efficiently with Contentstack’s latest Command-line Interface commands to simplify data migration and content backup."
-url: /headless-cms/export-content-using-the-cli/v1
+url: /headless-cms/export-content-using-the-cli
 ---
 
 # Export Content Using the CLI

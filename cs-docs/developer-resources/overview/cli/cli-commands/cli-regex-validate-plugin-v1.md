@@ -1,7 +1,7 @@
 ---
 title: "Regex Validate Plugin"
 description: "Use the Contentstack CLI Regex Validate Plugin to scan content types and global fields for regex patterns vulnerable to catastrophic backtracking."
-url: /headless-cms/cli-regex-validate-plugin/v1
+url: /headless-cms/cli-regex-validate-plugin
 ---
 
 # Regex Validate Plugin

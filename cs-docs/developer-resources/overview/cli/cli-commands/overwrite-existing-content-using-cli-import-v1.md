@@ -1,7 +1,7 @@
 ---
 title: "Overwrite Existing Content using CLI Import"
 description: "Learn how to overwrite existing content using the CLI Import Overwrite feature."
-url: /headless-cms/overwrite-existing-content-using-cli-import/v1
+url: /headless-cms/overwrite-existing-content-using-cli-import
 ---
 
 # Overwrite Existing Content using CLI Import

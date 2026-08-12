@@ -1,7 +1,7 @@
 ---
 title: "Useful Plugins"
 description: "Useful Plugins"
-url: /headless-cms/cli-useful-plugins
+url: /headless-cms/useful-plugins
 ---
 
 # Useful Plugins

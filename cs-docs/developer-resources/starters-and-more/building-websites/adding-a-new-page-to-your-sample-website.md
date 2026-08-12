@@ -1,38 +1,30 @@
 ---
-title: "[Building Websites] - Adding a New Page to Your Sample Website"
-description: Add a “Menu” page to a sample website using Contentstack, including content creation, code changes, and deployment with Launch.
-url: https://www.contentstack.com/docs/headless-cms/adding-a-new-page-to-your-sample-website
-product: Contentstack
-doc_type: tutorial
-audience:
-  - developers
-  - content-managers
-version: unknown
-last_updated: 2026-03-26
+title: "Adding a New Page to Your Sample Website"
+description: "Integrate a “Menu” page into your website with Contentstack. Follow this guide for content creation, code updates, and deployment to get your page live quickly and efficiently."
+url: /headless-cms/adding-a-new-page-to-your-sample-website
 ---
 
-# [Building Websites] - Adding a New Page to Your Sample Website
-
-This page explains how to add a new “Menu” page to your sample website using Contentstack, covering entry creation, required code updates (TypeScript, Redux, API, components, routing), and deployment via Launch. It’s intended for developers and content managers who have already completed the sample website setup and want to extend it with an additional page.
+# Adding a New Page to Your Sample Website
 
 ## Adding a New Page to Your Sample Website
 
-After learning how to build an app from scratch in the [Get Started Building a Website](../building-websites/get-started-with-building-a-website.md) guide, let’s learn how to integrate a new page into your website using Contentstack.
+After learning how to build an app from scratch in the [Get Started Building a Website](/docs/headless-cms/get-started-with-building-a-website/) guide, let’s learn how to integrate a new page into your website using Contentstack.
 
 This guide specifically covers the step-by-step process of adding a “Menu” page, including content creation, code changes, and deployment.
 
 ## Steps to Follow
 
 To add the Menu page within your application, you need to perform the following steps:
-- [Create Entries for the Menu Page](#create-entries-for-the-menu-page)
-- [Add the Code of Menu page Within the Website](#add-the-code-of-menu-page-within-the-website)
-- [Deploy New Changes Using Launch](#deploy-new-changes-using-launch)
+
+1.  [Create Entries for the Menu Page](#create-entries-for-the-menu-page)
+2.  [Add the Code of Menu page Within the Website](#add-the-code-of-menu-page-within-the-website)
+3.  [Deploy New Changes Using Launch](#deploy-new-changes-using-launch)
 
 ## Create Entries for the Menu Page
 
 In this section, you will build the Menu page.
 
-**Note:** Before proceeding with the steps below, ensure that you have imported the “Dishes” and the “Page” content types. Refer to the [Import Content Types](../building-websites/get-started-with-building-a-website.md#import-content-types) section.
+**Note:** Before proceeding with the steps below, ensure that you have imported the “Dishes” and the “Page” content types. Refer to the [Import Content Types](/docs/headless-cms/get-started-with-building-a-website/#import-content-types) section.
 
 Let’s start creating the entries for the “Dishes” and the “Page” content types which you have already added previously.
 
@@ -40,89 +32,106 @@ Let’s start creating the entries for the “Dishes” and the “Page” conte
 
 You need to create one entry each for the courses: “APPETIZERS,” “MAIN DISHES,” “DESSERTS,” and “BEVERAGES.”
 
-Perform the steps below to [create a new entry](../../content-managers/author-content/create-an-entry.md) for the “Dishes” content type and enter the following values.
+Perform the steps below to [create a new entry](https://www.contentstack.com/docs/headless-cms/create-an-entry) for the “Dishes” content type and enter the following values.
 
 Within the Entry Editor page, enter/select the following content against the respective fields:
 
 Let's create an entry for the “APPETIZERS” Course
-- **Title**: Enter “Fried Prawns”
 
-  **Note:** Make sure to keep the title of all dishes similar to the respective asset/image name.
-- **Image: **To upload the logo, perform the following set of actions (refer [About File Field](../create-content-types/file.md)):
-      Click on **Upload a new file**.
-- Click on **Choose files **and select the desired asset file (in our case, select the Assets/Page - Menu /APPETIZERS/Fried Prawns.jpg), then click on **Open**.
-- **Price**: Enter “10”
-- **Description**: Enter “Delight in crispy, golden-battered prawns bursting with juicy, ocean-fresh flavor. Perfectly seasoned for an irresistible seafood treat!”
+-   **Title**: Enter “Fried Prawns”
+    
+    **Note:** Make sure to keep the title of all dishes similar to the respective asset/image name.
+    
+-   **Image:** To upload the logo, perform the following set of actions (refer [About File Field](https://www.contentstack.com/docs/headless-cms/file)):
+    1.  Click on **Upload a new file**.
+    2.  Click on **Choose files** and select the desired asset file (in our case, select the Assets/Page - Menu /APPETIZERS/Fried Prawns.jpg), then click on **Open**.
+-   **Price**: Enter “10”
+-   **Description**: Enter “Delight in crispy, golden-battered prawns bursting with juicy, ocean-fresh flavor. Perfectly seasoned for an irresistible seafood treat!”
 
 Here’s how your entry will look like:
 
+![Fried Prawns Entry for APPETIZERS Course.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5fefd5fb99f4692b/66c87f4c92816817598e49cc/Fried_Prawns_Entry_for_APPETIZERS_Course.png)
+
 Next, create an entry for the “MAIN DISHES” Course
-- **Title:** Enter “Fresh Seafood Stew”
-- **Image:**To upload the logo, click on **Upload a new file** >**Choose files, **select Assets/Page - Menu /MAIN DISHES/Fresh Seafood Stew.jpeg, and click on **Open**.
-- **Price:** Enter “15”
-- **Description:** Enter “Dive into a hearty bowl brimming with a succulent mix of ocean treasures, simmered to perfection in a savory broth. A comforting taste of the sea, served fresh!”
+
+-   **Title:** Enter “Fresh Seafood Stew”
+-   **Image:**To upload the logo, click on **Upload a new file** >**Choose files,** select Assets/Page - Menu /MAIN DISHES/Fresh Seafood Stew.jpeg, and click on **Open**.
+-   **Price:** Enter “15”
+-   **Description:** Enter “Dive into a hearty bowl brimming with a succulent mix of ocean treasures, simmered to perfection in a savory broth. A comforting taste of the sea, served fresh!”
 
 Now, add the entry details for the “DESSERTS” Course
-- **Title:** Enter “Brownie Vanilla Cake”
-- **Image:**To upload the logo, click on **Upload a new file** >**Choose files,** select Assets/Page - Menu /DESSERTS/Brownie Vanilla Cake.jpg, and click on **Open**.
-- **Price:** Enter “13”
-- **Description:** Enter “Indulge in a decadent fusion of rich chocolate brownie and velvety vanilla cake layers, creating a harmonious blend of flavors and textures. A delightful treat that satisfies every sweet craving!”
+
+-   **Title:** Enter “Brownie Vanilla Cake”
+-   **Image:**To upload the logo, click on **Upload a new file** >**Choose files,** select Assets/Page - Menu /DESSERTS/Brownie Vanilla Cake.jpg, and click on **Open**.
+-   **Price:** Enter “13”
+-   **Description:** Enter “Indulge in a decadent fusion of rich chocolate brownie and velvety vanilla cake layers, creating a harmonious blend of flavors and textures. A delightful treat that satisfies every sweet craving!”
 
 Finally, create an entry for the “BEVERAGES” Course
-- **Title:** Enter “Coconut Milkshake”
-- **Image:**To upload the logo, click on **Upload a new file** >**Choose files,** select Assets/Page - Menu /BEVERAGES/Coconut Milkshake.jpg), then click on **Open**.
-- **Price:** Enter “10”
-- **Description:** Enter “Enjoy the creamy blend of rich coconut milk and velvety ice cream, topped with a sprinkle of toasted coconut flakes. A tropical treat that's smooth and refreshing!”
+
+-   **Title:** Enter “Coconut Milkshake”
+-   **Image:**To upload the logo, click on **Upload a new file** >**Choose files,** select Assets/Page - Menu /BEVERAGES/Coconut Milkshake.jpg), then click on **Open**.
+-   **Price:** Enter “10”
+-   **Description:** Enter “Enjoy the creamy blend of rich coconut milk and velvety ice cream, topped with a sprinkle of toasted coconut flakes. A tropical treat that's smooth and refreshing!”
 
 Click on **Publish** and select the **development** environment for all respectively.
 
 **Note:** Similarly, add the Entries for the Remaining Assets in the Page - Menu Folder.
 
 ### Create Entries for the Page Content Type
-- To create an entry, navigate back to the Entries section, click on the **+ New Entry** button on the top, select the content type (in our case, **Page**), and click on **Proceed**.![Create and Entry for Page Content Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6ebdadd44aa97183/66c87f4c53aefb82494d85c2/Create_and_Entry_for_Page_Content_Type.png)
-- Within the Entry Editor page, enter/select the following content against the respective fields:
-      **Title: **Enter “Menu.”
-- **URL: **Enter “/menu”
-- **Menu**: Add a **Menu** section by clicking “**+ Menu**”.
-- Expand the **Course **group by clicking on the down arrow.
 
+1.  To create an entry, navigate back to the Entries section, click on the **\+ New Entry** button on the top, select the content type (in our case, **Page**), and click on **Proceed**.  
+    ![Create and Entry for Page Content Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6ebdadd44aa97183/66c87f4c53aefb82494d85c2/Create_and_Entry_for_Page_Content_Type.png)
+2.  Within the Entry Editor page, enter/select the following content against the respective fields:
+    -   **Title:** Enter “Menu.”
+    -   **URL:** Enter “/menu”
+    -   **Menu**: Add a **Menu** section by clicking “**\+ Menu**”.
+3.  Expand the **Course** group by clicking on the down arrow.  
+    
     You will need to add multiple instances for this field with the values mentioned below.
-
+    
     **Note:** If an entry field is designated as “Multiple,” you will see the Add “+” icon located beside the existing instance.
-
+    
     Here are the instances you need to add:
-
-      Instance 1:
-          **Course Name**: APPETIZERS
-- **Dishes**: To select an option, perform the following steps:
-              Click on **Choose existing entry** to browse a list of related entries.
-- Select the entry, **Fried Prawns**, of the referred Content type, **Dishes**, and click on **Add Selected Entries**.![Select Fried Prawns and click on Add Selected Entries.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8b9f35dbd4a1feba/66c87f4cefc13a00f7830cef/Select_Fried_Prawns_and_click_on_Add_Selected_Entries.png)
-
+    
+    -   Instance 1:
+        -   **Course Name**: APPETIZERS
+        -   **Dishes**: To select an option, perform the following steps:
+            1.  Click on **Choose existing entry** to browse a list of related entries.  
+                ![Click on Choose existing entry to select the entry for Appetizers course.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb5ee0b460c9f5acc/66c87f4c788dbe21a399808c/Click_on_Choose_existing_entry_to_select_the_entry_for_Appetizers_course.png)
+            2.  Select the entry, **Fried Prawns**, of the referred Content type, **Dishes**, and click on **Add Selected Entries**.  
+                ![Select Fried Prawns and click on Add Selected Entries.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8b9f35dbd4a1feba/66c87f4cefc13a00f7830cef/Select_Fried_Prawns_and_click_on_Add_Selected_Entries.png)
+    
     **Note:** You can similarly add the other dishes for the next three instances.
-- Instance 2:
-          **Course Name**: MAIN DISHES
-- **Dishes: Fresh Seafood Stew**
-- Instance 3:
-          **Course Name**: DESSERTS
-- Dishes: **Brownie Vanilla Cake**
-- Instance 4:
-          **Course Name**: BEVERAGES
-- **Dishes**: **Coconut Milkshake**
-- After successfully entering the details of the entry, click on **Publish**. And, in the **Publish Entry** modal, select the **development** environment, and click on **Send**.![Click on Publish and select development.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3067cfebc5d52a14/66c87f4c89dfce5c5c0d1097/Click_on_Publish_and_select_development.png)
+    
+    -   Instance 2:
+        -   **Course Name**: MAIN DISHES
+        -   **Dishes: Fresh Seafood Stew**
+    
+    -   Instance 3:
+        -   **Course Name**: DESSERTS
+        -   Dishes: **Brownie Vanilla Cake**
+    -   Instance 4:
+        -   **Course Name**: BEVERAGES
+        -   **Dishes**: **Coconut Milkshake**
+4.  After successfully entering the details of the entry, click on **Publish**. And, in the **Publish Entry** modal, select the **development** environment, and click on **Send**.  
+    ![Click on Publish and select development.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3067cfebc5d52a14/66c87f4c89dfce5c5c0d1097/Click_on_Publish_and_select_development.png)
 
 Now, let’s do the code changes.
 
 ## Add the Code of Menu page Within the Website
 
-You might have noticed that in our **PlateStack Restaurant Site** website accessed via browser, clicking the **Menu** navigation in the header currently leads to **404! Page not found**.
+You might have noticed that in our **PlateStack Restaurant Site** website accessed via browser, clicking the **Menu** navigation in the header currently leads to **404! Page not found**.  
+
+![404! Page not found!.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt12197a98cc00b8d1/66c87f4c2152e854747a74c8/404!_Page_not_found!.png)
 
 Let’s do some code changes to populate the M**enu** page with the content that was added in the previous section. Open the website source code in VS code and proceed to make the changes that are covered in the following sections.
 
 **Note:**
-- The required code changes are already present in source codefor the **Menu** page. The following steps will help you to understand how the code structure works.
-- The required code changes are commented out in the source files. To activate them, simply uncomment the code wherever you find “COMMENT”, they indicate where changes are needed.
-- To uncomment the code, select the commented code and press **command** +** /** keys
-- You can follow the steps 4.1 to 4.3 to add any new page.
+
+1.  The required code changes are already present in source codefor the **Menu** page. The following steps will help you to understand how the code structure works.
+2.  The required code changes are commented out in the source files. To activate them, simply uncomment the code wherever you find “COMMENT”, they indicate where changes are needed.
+3.  To uncomment the code, select the commented code and press **command** + **/** keys
+4.  You can follow the steps 4.1 to 4.3 to add any new page.
 
 ### Add Typescript Type Definition For Menu Page
 
@@ -131,8 +140,9 @@ TypeScript type definitions describe the structure and types of data used in you
 Type definitions promote clearer communication among team members and enable the use of advanced tooling, ultimately leading to safer, more maintainable code.
 
 The following steps will guide you on how to navigate and update type definitions in your project:
-- Go to the `src/types/index.ts` file. This file has all the type definitions required for our website. You will see **THeaderData, TFooterData, THomePageData**, and so on, which are all the type definitions of respective components/pages.
-- Now, if you scroll to the bottom of the file, you will see **TDishes** and **TMenu** commented. These are the type definitions for our “Menu” page. Uncomment this code and save (press *command* + *S*keys) the file.
+
+1.  Go to the src/types/index.ts file. This file has all the type definitions required for our website. You will see **THeaderData, TFooterData, THomePageData**, and so on, which are all the type definitions of respective components/pages.
+2.  Now, if you scroll to the bottom of the file, you will see **TDishes** and **TMenu** commented. These are the type definitions for our “Menu” page. Uncomment this code and save (press _command_ + _S_keys) the file.
 
 ### Redux Changes
 
@@ -143,50 +153,59 @@ Let's use Redux to maintain the state of our website and implement it with Redux
 **Tip**: You can read more about [Redux](https://redux-toolkit.js.org/introduction/getting-started) and [Redux slice](https://redux-toolkit.js.org/api/createslice) if interested.
 
 To effectively implement Redux in our website, follow these steps:
-- Go to the `src/reducer/index.ts` file. This file has the AppState, initialState, slice, and reducers of our application.
-- Now, add TMenu to the import statement in line number 3 as follows:
-```
-import{TFooterData,THeaderData,THomePageData, **TMenu**}from"../types";
-```
-- Please follow “COMMENT” and uncomment all the commented lines.
+
+1.  Go to the src/reducer/index.ts file. This file has the AppState, initialState, slice, and reducers of our application.
+2.  Now, add TMenu to the import statement in line number 3 as follows:
+    
+    ```
+    import{TFooterData,THeaderData,THomePageData, **TMenu**}from"../types";
+    ```
+    
+3.  Please follow “COMMENT” and uncomment all the commented lines.
 
 Here’s what the above action does:
-- Adds **TMenu** to the types**import** statement
-- Adds **menuPageData** to **AppState**
-- Updates **initialState** with **menuPageData**
-- Adds **setMenuPageData** to the mainSlice’s **reducers**
-- Adds **setMenuPageData** to the named exports of mainSlice’s **actions**
 
-Finally save the file using the *command* + *S* keys
+1.  Adds **TMenu** to the types**import** statement
+2.  Adds **menuPageData** to **AppState**
+3.  Updates **initialState** with **menuPageData**
+4.  Adds **setMenuPageData** to the mainSlice’s **reducers**
+5.  Adds **setMenuPageData** to the named exports of mainSlice’s **actions**
+
+Finally save the file using the _command_ + _S_ keys
 
 ### Adding API For Data Fetching
 
 Let's use the Contentstack SDK to fetch data from Contentstack and set it in our redux store to use within our React components.
-- Go to the `src/api/index.ts` file. This has the helper functions and individual methods to fetch data from Contentstack.
-- For example - **fetchHeaderData** is used to fetch **Header** content type data from Contentstack.
-- Please follow “COMMENT” and uncomment the commented lines in the file.
+
+1.  Go to the src/api/index.ts file. This has the helper functions and individual methods to fetch data from Contentstack.
+2.  For example - **fetchHeaderData** is used to fetch **Header** content type data from Contentstack.
+3.  Please follow “COMMENT” and uncomment the commented lines in the file.
 
 Here’s what the above action does:
-- Adds **setMenuPageData** in the **import** from reducer
-- Adds the **fetchMenuPageData** method
 
-Finally save the file using *command* + *S* keys
+1.  Adds **setMenuPageData** in the **import** from reducer
+2.  Adds the **fetchMenuPageData** method
+
+Finally save the file using _command_ + _S_ keys
 
 ### Building Menu Page Component
 
 You need a component to render when you go to the Menu page. Let’s build it.
-- Go to the `src/components/menu/Menu.tsx` file. This file contains the component that renders the Menu page.
-- Please follow “COMMENT” and uncomment all the commented lines.
+
+1.  Go to the src/components/menu/Menu.tsx file. This file contains the component that renders the Menu page.
+2.  Please follow “COMMENT” and uncomment all the commented lines.
 
 Here’s what the above action does:
-- Adds **two import statements** for importing **TMenu** and **fetchMenuPageData**
-- **Uncomments** the code from line number 14 to 96
-- **Deleted***return <></>;*
+
+1.  Adds **two import statements** for importing **TMenu** and **fetchMenuPageData**
+2.  **Uncomments** the code from line number 14 to 96
+3.  **Deleted**_return <></>;_
 
 Let’s understand what’s happening in this component code at a high level.
-- This component triggers the API to fetch the “Menu” page data using **fetchMenuPageData** inside **useEffect**. Internally **fetchMenuPageData** fetches the data from Contentstack using SDK and stores it in the redux store.
-- The “Menu” page data from the redux store is fetched using **useSelector**.
-- It constructs individual tab data (Breakfast, Lunch, Dinner) and passes them to the **Tabs** component.
+
+1.  This component triggers the API to fetch the “Menu” page data using **fetchMenuPageData** inside **useEffect**. Internally **fetchMenuPageData** fetches the data from Contentstack using SDK and stores it in the redux store.
+2.  The “Menu” page data from the redux store is fetched using **useSelector**.
+3.  It constructs individual tab data (Breakfast, Lunch, Dinner) and passes them to the **Tabs** component.
 
 Finally save the file using **command + s** keys
 
@@ -195,23 +214,27 @@ Finally save the file using **command + s** keys
 This file contains the reusable **MenuCard** component used in our “Restaurant Menu” website. This component is responsible for displaying individual dish cards on the Menu page.
 
 For best coding practices, it's recommended to add type definitions to the component's props and other relevant fields whenever possible. This helps to improve code readability, maintainability, and allows for catching potential errors during development.
-- Go to the `src/components/menu/MenuCard.tsx` file
-- Please follow “COMMENT” and uncomment all the commented lines.
+
+1.  Go to the src/components/menu/MenuCard.tsx file
+2.  Please follow “COMMENT” and uncomment all the commented lines.
 
 Here’s what the above action does:
-- Imports **TDishes** from **types**
-- Replaces **any[]** with **TDishes[]**
-- Replaces **any** with **TDishes**
+
+1.  Imports **TDishes** from **types**
+2.  Replaces **any\[\]** with **TDishes\[\]**
+3.  Replaces **any** with **TDishes**
 
 ### Add Routing Changes for Menu page
 
-This code uses [React Router](https://reactrouter.com/en/main) for routing in your website.
-- Go to the `src/routes/index.tsx` file. This is the file which maintains the routing logic of our website.
-- Please follow “COMMENT” and uncomment all the commented lines.
+This code uses [React Router](https://reactrouter.com/) for routing in your website.
+
+1.  Go to the src/routes/index.tsx file. This is the file which maintains the routing logic of our website.
+2.  Please follow “COMMENT” and uncomment all the commented lines.
 
 Here’s what the above action does:
-- Imports the **Menu** component
-- Replaces **<NotFound />** with **<Menu />** for the **/menu** route.
+
+1.  Imports the **Menu** component
+2.  Replaces **<NotFound />** with **<Menu />** for the **/menu** route.
 
 If you note, the **<NotFound />** component renders for the **/menu** path. That’s why you can see **404! Page not found** when you click on the Menu page in your website. It’s intentional.
 
@@ -221,59 +244,61 @@ Start the server using the **npm start** command in the terminal if you have not
 
 Yay! You have successfully completed building the Menu page.
 
-Now, go to [http://localhost:3000](http://localhost:3000) and click on the **Menu** page. You should see the **APPETIZERS**, **MAIN DISHES**, **DESSERTS**, AND **BEVERAGES** tabs with dishes.
+Now, go to http://localhost:3000 and click on the **Menu** page. You should see the **APPETIZERS**, **MAIN DISHES**, **DESSERTS**, AND **BEVERAGES** tabs with dishes.
+
+![View Menu page on localhost.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt26f6c7a2857bdb7e/66c87f669281685f7b8e49d0/View_Menu_page_on_localhost.png)
 
 ### Pushing the Menu page changes to Git repository
 
 Now, the changes done above are in your local machine.
 
 Let’s see how to deploy the website using Launch to take it live.
-- Open a new Terminal in VS code. You can simply press *control*** + ***shift*+ **` **() or click on **Terminal**>** New Terminal**,
-- Commit all the changes added in the source code files and push it to Git to deploy.
-- Now, let’s stage all the files that you need to commit. Run the below command in the terminal. You will see the list of files staged.
-```
-git add . -v
-```
-- After the changes are staged, you need to commit your staged files to the repository. Run the below command in the terminal. You will see the number of files changed.
-```
-git commit -m "Add Menu page changes"
-```
 
+1.  Open a new Terminal in VS code. You can simply press _control_ **+** _shift_\+ **\`** () or click on **Terminal**\> **New Terminal**,
+2.  Commit all the changes added in the source code files and push it to Git to deploy.
+3.  Now, let’s stage all the files that you need to commit. Run the below command in the terminal. You will see the list of files staged.
+    
+    ```
+    git add . -v
+    ```
+    
+    ![List of staged files.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt347d4547c0f0d302/66c87f4c01f1a410a20110cc/List_of_staged_files.png)
+4.  After the changes are staged, you need to commit your staged files to the repository. Run the below command in the terminal. You will see the number of files changed.
+    
+    ```
+    git commit -m "Add Menu page changes"
+    ```
+    
+    ![Number of files changed.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb7b16af069375684/66c87f4c6a8049531749ae3a/Number_of_files_changed.png)
+    
     **NOTE:**
-
-        Here you can give a commit message “Add Menu page changes” with -m flag. It’s a good practice to provide a commit message whenever you add new changes to the repository.
-- Insertions and deletions count may differ for you.
-- After the changes are committed, you need to push the changes to the repository. Run the following command in the terminal.
-```
-git push origin main
-```
+    
+    -   Here you can give a commit message “Add Menu page changes” with -m flag. It’s a good practice to provide a commit message whenever you add new changes to the repository.
+    -   Insertions and deletions count may differ for you.
+    
+5.  After the changes are committed, you need to push the changes to the repository. Run the following command in the terminal.
+    
+    ```
+    git push origin main
+    ```
+    
+    ![Push the changes to the repository.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt10b50c3be845cc04/66c87f4cac55b57ff8eaf4cf/Push_the_changes_to_the_repository.png)
 
 You have successfully pushed your changes to Git. Now, let’s deploy the new changes using Launch.
 
 ## Deploy New Changes Using Launch
 
 To deploy the changes you added to your website, perform the following set of steps:
-- Go to [Launch](https://app.contentstack.com/#!/launch) and click the **restaurant-menu-react-app** project.
-- By default, Launch will auto deploy new changes whenever you push code to the **main** branch of our repository. You would see a status of **Deploying **in the default Environment as soon as the code is pushed.![See status of deploying in default environment after code push.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c6598b178e79730/66c87f4ceb27c941360b502d/See_status_of_deploying_in_default_environment_after_code_push.png)
-- Once the deployment is completed, the status will be **Live**, click on the **Environment URL** to view the website.
-- Go to the **Menu** page and you will see the latest version of the website with dishes in the Menu page.![See the latest version of the website running.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1104771c23704639/66c87f662152e864767a74cd/See_the_latest_version_of_the_website_running.png)
+
+1.  Go to [Launch](https://app.contentstack.com/#!/launch) and click the **restaurant-menu-react-app** project.
+2.  By default, Launch will auto deploy new changes whenever you push code to the **main** branch of our repository. You would see a status of **Deploying** in the default Environment as soon as the code is pushed.  
+    ![See status of deploying in default environment after code push.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c6598b178e79730/66c87f4ceb27c941360b502d/See_status_of_deploying_in_default_environment_after_code_push.png)
+3.  Once the deployment is completed, the status will be **Live**, click on the **Environment URL** to view the website.
+4.  Go to the **Menu** page and you will see the latest version of the website with dishes in the Menu page.  
+    ![See the latest version of the website running.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1104771c23704639/66c87f662152e864767a74cd/See_the_latest_version_of_the_website_running.png)
 
 Awesome! You have successfully added a new page to the website and pushed it live.
 
 ## Next Steps
 
-[Enable Live Preview in Your Sample Website](./enable-live-preview-in-your-sample-website.md)
-
-## Common questions
-
-### Do I need to import content types before creating entries for the Menu page?
-Yes. **Note:** Before proceeding with the steps below, ensure that you have imported the “Dishes” and the “Page” content types. Refer to the [Import Content Types](../building-websites/get-started-with-building-a-website.md#import-content-types) section.
-
-### Why does clicking the Menu navigation show “404! Page not found” initially?
-Because the **<NotFound />** component renders for the **/menu** path. It’s intentional until you replace it with the **<Menu />** component in routing.
-
-### How do I activate the Menu page code that’s already in the repository?
-The required code changes are commented out in the source files. To activate them, simply uncomment the code wherever you find “COMMENT”, they indicate where changes are needed.
-
-### Will Launch deploy automatically after I push changes?
-By default, Launch will auto deploy new changes whenever you push code to the **main** branch of our repository.
+[Enable Live Preview in Your Sample Website](/docs/headless-cms/enable-live-preview-in-your-sample-website/)
