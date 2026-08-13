@@ -1,6 +1,6 @@
 ---
 title: "DocOps Sync Test - Marketplace Platform Guides"
-description: "Temporary test file created to verify the GitHub-to-Sandbox sync recognizes the Marketplace product folder (catch-all Marketplace Platform Guides breadcrumb). Safe to delete after verification."
+description: "Temporary test file verifying the docs sync recognizes Marketplace and uses the catch-all Marketplace Platform Guides breadcrumb."
 url: /marketplace/docops-sync-test-platform
 ---
 

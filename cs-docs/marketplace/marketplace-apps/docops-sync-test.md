@@ -1,6 +1,6 @@
 ---
 title: "DocOps Sync Test - Marketplace Apps"
-description: "Temporary test file created to verify the GitHub-to-Sandbox sync recognizes docs under marketplace/marketplace-apps/ and uses the Marketplace Apps breadcrumb. Safe to delete after verification."
+description: "Temporary test file verifying the docs sync recognizes marketplace/marketplace-apps/ and uses the Marketplace Apps breadcrumb."
 url: /marketplace/docops-sync-test-apps
 ---
 

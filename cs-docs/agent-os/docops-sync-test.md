@@ -1,6 +1,6 @@
 ---
 title: "DocOps Sync Test - Agent OS Guides"
-description: "Temporary test file created to verify the GitHub-to-Sandbox sync recognizes the Agent OS product folder (catch-all Automate Guides breadcrumb). Safe to delete after verification."
+description: "Temporary test file verifying the docs sync recognizes the Agent OS folder and uses the catch-all Automate Guides breadcrumb."
 url: /agent-os/docops-sync-test-guides
 ---
 
