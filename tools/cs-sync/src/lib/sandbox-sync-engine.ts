@@ -25,15 +25,17 @@ import {
 } from "../diff.js";
 
 /**
- * First path segment after docsRoot, e.g. "cs-docs/assets/overview/foo.md"
- * with docsRoot "cs-docs" returns "assets". This is a pure path computation,
- * deliberately done before any frontmatter parsing so an out-of-scope
- * product's files never have to satisfy docs_article's frontmatter schema.
+ * Path after docsRoot, e.g. "cs-docs/agent-os/automations/connectors/foo.md"
+ * with docsRoot "cs-docs" returns "agent-os/automations/connectors/foo.md".
+ * This is a pure path computation, deliberately done before any frontmatter
+ * parsing so an out-of-scope product's files never have to satisfy
+ * docs_article's frontmatter schema. resolveProductConfig uses the full path
+ * (not just the top-level folder) so products with sub-routed breadcrumb
+ * variants (agent-os, marketplace) resolve to the right one.
  */
-function topLevelFolderOf(relativePath: string, docsRoot: string): string {
+function docPathUnderRoot(relativePath: string, docsRoot: string): string {
   const prefix = `${docsRoot}/`;
-  const stripped = relativePath.startsWith(prefix) ? relativePath.slice(prefix.length) : relativePath;
-  return stripped.split("/")[0] ?? "";
+  return relativePath.startsWith(prefix) ? relativePath.slice(prefix.length) : relativePath;
 }
 
 // Shared state for the local-image → asset upload + URL rewrite pass. Populated
@@ -243,8 +245,8 @@ async function processChange(
 
   // Path-only check, before any frontmatter parsing, so a product with no
   // verified docs_article mapping never has to satisfy that schema at all.
-  const topLevelFolder = topLevelFolderOf(change.relativePath, config.CS_DOCS_ROOT);
-  if (!resolveProductConfig(topLevelFolder)) {
+  const docPath = docPathUnderRoot(change.relativePath, config.CS_DOCS_ROOT);
+  if (!resolveProductConfig(docPath)) {
     return { path: change.relativePath, action: "skipped" };
   }
 
@@ -298,7 +300,7 @@ async function processChange(
   }
 
   const payload = buildEntryPayload({
-    topLevelFolder,
+    docPath,
     h1: split.h1,
     htmlContent: html,
     url: doc.frontMatter.url,
@@ -331,8 +333,8 @@ async function unpublishDeleted(
   change: DocChange,
   beforeSha: string,
 ): Promise<SyncResult> {
-  const topLevelFolder = topLevelFolderOf(change.relativePath, config.CS_DOCS_ROOT);
-  if (!resolveProductConfig(topLevelFolder)) {
+  const docPath = docPathUnderRoot(change.relativePath, config.CS_DOCS_ROOT);
+  if (!resolveProductConfig(docPath)) {
     return { path: change.relativePath, action: "skipped" };
   }
 
@@ -389,8 +391,8 @@ async function handleRename(
 ): Promise<SyncResult> {
   // Where the file ends up decides scope. A rename into or out of an
   // unconfigured product folder is left alone rather than guessed at.
-  const topLevelFolder = topLevelFolderOf(change.relativePath, config.CS_DOCS_ROOT);
-  if (!resolveProductConfig(topLevelFolder)) {
+  const docPath = docPathUnderRoot(change.relativePath, config.CS_DOCS_ROOT);
+  if (!resolveProductConfig(docPath)) {
     return { path: change.relativePath, action: "skipped" };
   }
 
@@ -440,7 +442,7 @@ async function handleRename(
   let html = markdownToHtml(body);
   html = await processImagesInHtml(html, newDoc.filePath, client);
   const payload = buildEntryPayload({
-    topLevelFolder,
+    docPath,
     h1: split.h1,
     htmlContent: html,
     url: newDoc.frontMatter.url,
