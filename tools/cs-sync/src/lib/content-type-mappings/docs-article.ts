@@ -3,10 +3,10 @@
  * against the real schema (see fixtures/docs_article.entry.template.json) and
  * against the product owner's explicit spec, not guessed from old code.
  *
- * Only the "assets" product folder has a verified marker and breadcrumb
- * navigation entry this round. Any other folder is a deliberate unknown, not
- * an oversight, resolveProductConfig returns null for it so callers can skip
- * that file rather than writing an unverified mapping.
+ * Every product folder listed in PRODUCT_CONFIG has a verified marker and
+ * breadcrumb navigation entry. Any folder not listed is a deliberate
+ * unknown, not an oversight: resolveProductConfig returns null for it so
+ * callers can skip that file rather than writing an unverified mapping.
  */
 
 export interface ArticleSectionBlock {
@@ -43,6 +43,16 @@ export interface ProductConfig {
   prodBreadcrumbUid: string;
 }
 
+interface ProductVariant extends ProductConfig {
+  // Matched as a prefix against the path immediately after the top-level
+  // product folder, e.g. "automations/connectors/" for
+  // cs-docs/agent-os/automations/connectors/vercel.md. Checked longest-prefix
+  // first, so a product with sub-routing lists its specific variant(s) before
+  // the "" catch-all. Every product has exactly one "" variant as its
+  // default/fallback.
+  pathPrefix: string;
+}
+
 // Confirmed with the product owner: folder "assets" -> marker "Assets" ->
 // breadcrumb reference to the "Assets" entry in the navigation content type.
 // Confirmed live against both stacks: both entries exist, share the same
@@ -52,33 +62,102 @@ export interface ProductConfig {
 // entry in the navigation content type. Confirmed live against both stacks
 // (2026-08-11): both entries exist, share the same title/url
 // ("Studio" / "/studio"), only their uids differ.
-const PRODUCT_CONFIG: Record<string, ProductConfig> = {
-  assets: {
-    marker: "Assets",
-    sandboxBreadcrumbUid: "bltc6c549bf342fa12b",
-    prodBreadcrumbUid: "blt4e390ab8adbc5b66",
-  },
+const PRODUCT_CONFIG: Record<string, ProductVariant[]> = {
+  assets: [
+    { pathPrefix: "", marker: "Assets", sandboxBreadcrumbUid: "bltc6c549bf342fa12b", prodBreadcrumbUid: "blt4e390ab8adbc5b66" },
+  ],
   // Confirmed live against both stacks: at url "/headless-cms" both stacks
   // have two navigation entries (also titled "How-to Guides"), only the one
   // titled "Headless CMS" is the right breadcrumb target, url alone is not
-  // unique here (also true for Administration and Marketplace).
-  "headless-cms": {
-    marker: "Headless CMS",
-    sandboxBreadcrumbUid: "blt5e26f58d8f4f63ed",
-    prodBreadcrumbUid: "blt106cf6f243420c40",
-  },
+  // unique here (also true for other products below, disambiguated by exact
+  // title match against the left nav's product dropdown title instead).
+  "headless-cms": [
+    { pathPrefix: "", marker: "Headless CMS", sandboxBreadcrumbUid: "blt5e26f58d8f4f63ed", prodBreadcrumbUid: "blt106cf6f243420c40" },
+  ],
   // Confirmed live against both stacks (2026-08-11): both entries exist, share
   // the same title/url ("Studio" / "/studio"), only their uids differ.
-  studio: {
-    marker: "Studio",
-    sandboxBreadcrumbUid: "blt411e490e123c493a",
-    prodBreadcrumbUid: "blt434e2688ea83a9d8",
-  },
+  studio: [
+    { pathPrefix: "", marker: "Studio", sandboxBreadcrumbUid: "blt411e490e123c493a", prodBreadcrumbUid: "blt434e2688ea83a9d8" },
+  ],
+  // Confirmed live against both stacks (2026-08-13) by exact title match
+  // ("Brand Kit"). Its navigation entry sits at /content-managers/brand-kit/,
+  // not /brand-kit, url alone would not have found it.
+  "brand-kit": [
+    { pathPrefix: "", marker: "Brand Kit", sandboxBreadcrumbUid: "bltd7f613722fe3db33", prodBreadcrumbUid: "bltda3caa33c84bc7b3" },
+  ],
+  // Confirmed live against both stacks (2026-08-13) by exact title match.
+  personalize: [
+    { pathPrefix: "", marker: "Personalize", sandboxBreadcrumbUid: "blt3ab82918618897b1", prodBreadcrumbUid: "blt1196cce20c4ee74c" },
+  ],
+  // Confirmed live against both stacks (2026-08-13) by exact title match.
+  launch: [
+    { pathPrefix: "", marker: "Launch", sandboxBreadcrumbUid: "blt9750d6f5d59249cc", prodBreadcrumbUid: "blt5ce84ffd221a2e3b" },
+  ],
+  // Confirmed live against both stacks (2026-08-13) by exact title match. Its
+  // navigation entry sits at /lytics, not /lytics-cdp.
+  "lytics-cdp": [
+    { pathPrefix: "", marker: "Lytics CDP", sandboxBreadcrumbUid: "bltdc71d36d83447b62", prodBreadcrumbUid: "blt42935045253b7882" },
+  ],
+  // Confirmed live against both stacks (2026-08-13): 7 entries share url
+  // "/administration", disambiguated by exact title match ("Administration").
+  administration: [
+    { pathPrefix: "", marker: "Administration", sandboxBreadcrumbUid: "blt987d00e56379801b", prodBreadcrumbUid: "blt6cd92ec74de2c7b5" },
+  ],
+  // Confirmed live against both stacks (2026-08-13) by exact title match.
+  "developer-hub": [
+    { pathPrefix: "", marker: "Developer Hub", sandboxBreadcrumbUid: "blt9692b65f8e171ce4", prodBreadcrumbUid: "bltc39adf459fb6e634" },
+  ],
+  // Confirmed live against both stacks (2026-08-13) by exact title match. Its
+  // navigation entry sits at /developers, not /developer-resources.
+  "developer-resources": [
+    { pathPrefix: "", marker: "Developer Resources", sandboxBreadcrumbUid: "blt3966cb2e3a3ae996", prodBreadcrumbUid: "blt1a635e66ddfdd93f" },
+  ],
+  // Confirmed live against both stacks (2026-08-13) by exact title match.
+  analytics: [
+    { pathPrefix: "", marker: "Analytics", sandboxBreadcrumbUid: "bltbdbfd785d7388b70", prodBreadcrumbUid: "bltc4eaaabe45bbee69" },
+  ],
+  // No navigation entry is titled exactly "Agent OS" in either stack. Checked
+  // live usage instead (2026-08-13): "Automate Connectors" and "Automate
+  // Guides" are both heavily used, both prod-published, and map to genuinely
+  // different subsections (connector pages vs everything else), confirmed
+  // with the product owner rather than picking one and guessing.
+  "agent-os": [
+    { pathPrefix: "automations/connectors/", marker: "Automate Connectors", sandboxBreadcrumbUid: "blt0fad368d864fb908", prodBreadcrumbUid: "bltfe478b96e6881fe2" },
+    { pathPrefix: "", marker: "Automate Guides", sandboxBreadcrumbUid: "blt039d518bf90064cf", prodBreadcrumbUid: "blt3e991e57bcba1351" },
+  ],
+  // No navigation entry is titled exactly "Marketplace" in either stack. A
+  // third candidate, "Integrations", was checked and rejected (2026-08-13):
+  // 0% prod-published and every entry using it lives under
+  // /developers/integrations/, unrelated to the marketplace folder. Between
+  // the remaining two, "Marketplace Apps" is the individual app-install
+  // guides (marketplace/marketplace-apps/*), "Marketplace Platform Guides"
+  // is everything else under marketplace/, confirmed with the product owner.
+  marketplace: [
+    { pathPrefix: "marketplace-apps/", marker: "Marketplace Apps", sandboxBreadcrumbUid: "bltf9440c5e765fc662", prodBreadcrumbUid: "bltc7e9e0bf17bf4838" },
+    { pathPrefix: "", marker: "Marketplace Platform Guides", sandboxBreadcrumbUid: "blt727e9447e70dee41", prodBreadcrumbUid: "blt16f9611c727c5a2e" },
+  ],
 };
 
-/** Null means "not verified yet", callers must skip, not guess. */
-export function resolveProductConfig(topLevelFolder: string): ProductConfig | null {
-  return PRODUCT_CONFIG[topLevelFolder] ?? null;
+/**
+ * Null means "not verified yet", callers must skip, not guess. Accepts
+ * either just the top-level folder name or the full path under the docs
+ * root (e.g. "agent-os/automations/connectors/vercel.md") — passing only the
+ * folder name always resolves to that product's "" catch-all variant.
+ */
+export function resolveProductConfig(docPathUnderRoot: string): ProductConfig | null {
+  const segments = docPathUnderRoot.split("/").filter(Boolean);
+  const topLevelFolder = segments[0];
+  if (!topLevelFolder) return null;
+  const variants = PRODUCT_CONFIG[topLevelFolder];
+  if (!variants) return null;
+
+  const rest = segments.slice(1).join("/");
+  const sorted = [...variants].sort((a, b) => b.pathPrefix.length - a.pathPrefix.length);
+  const match = sorted.find((v) => rest.startsWith(v.pathPrefix));
+  if (!match) return null;
+
+  const { pathPrefix: _pathPrefix, ...config } = match;
+  return config;
 }
 
 // doc_type values that resolve to docs_article. Mirrors the mapping already in
@@ -99,7 +178,8 @@ export function docTypeMapsToDocsArticle(docType: string | undefined): boolean {
 }
 
 export interface BuildPayloadInput {
-  topLevelFolder: string;
+  /** Path under the docs root, e.g. "agent-os/automations/connectors/vercel.md". */
+  docPath: string;
   h1: string;
   htmlContent: string;
   url: string;
@@ -108,16 +188,17 @@ export interface BuildPayloadInput {
 }
 
 /**
- * Throws if topLevelFolder has no verified ProductConfig. Callers are
- * expected to check resolveProductConfig / docTypeMapsToDocsArticle
- * themselves first and skip rather than call this for out of scope files,
- * this is the last-resort guard, not the primary scope check.
+ * Throws if docPath's product folder (and sub-path, for products with
+ * sub-routed variants) has no verified ProductConfig. Callers are expected
+ * to check resolveProductConfig / docTypeMapsToDocsArticle themselves first
+ * and skip rather than call this for out of scope files, this is the
+ * last-resort guard, not the primary scope check.
  */
 export function buildEntryPayload(input: BuildPayloadInput): DocsArticlePayload {
-  const config = resolveProductConfig(input.topLevelFolder);
+  const config = resolveProductConfig(input.docPath);
   if (!config) {
     throw new Error(
-      `No verified docs_article mapping for product folder "${input.topLevelFolder}". ` +
+      `No verified docs_article mapping for "${input.docPath}". ` +
       `Add it to PRODUCT_CONFIG in docs-article.ts once its marker and breadcrumb ` +
       `navigation entry are confirmed.`,
     );
@@ -148,33 +229,35 @@ export function buildEntryPayload(input: BuildPayloadInput): DocsArticlePayload 
   };
 }
 
-function topLevelFolderFromUrl(url: string | undefined): string | null {
-  if (!url) return null;
-  const segments = url.split("/").filter(Boolean);
-  return segments[0] ?? null;
-}
+// Flat sandboxBreadcrumbUid -> prodBreadcrumbUid lookup across every variant
+// of every product. A docs_article's `url` does not encode which variant a
+// multi-variant product (agent-os, marketplace) used at creation time (e.g.
+// both an "automations/connectors/" and a catch-all agent-os page get a flat
+// url like /agent-os/<slug>), so remapping has to key off the uid that is
+// actually already present in the breadcrumb, not re-derive it from the url.
+const SANDBOX_TO_PROD_BREADCRUMB: Record<string, string> = Object.fromEntries(
+  Object.values(PRODUCT_CONFIG)
+    .flat()
+    .map((variant) => [variant.sandboxBreadcrumbUid, variant.prodBreadcrumbUid]),
+);
 
 /**
  * A Sandbox entry's `breadcrumb` references the Sandbox-stack uid of its nav
  * entry. Cloning/updating that entry in Prod as-is would carry a uid over
  * that doesn't exist there, silently dropping the breadcrumb. Rewrites the
- * uid to the Prod-side equivalent for verified products only, leaves
- * anything else (unverified product, no breadcrumb, uid that doesn't match
- * the known Sandbox uid) untouched rather than guessing.
+ * uid to the Prod-side equivalent for every known Sandbox uid, leaves
+ * anything else (no breadcrumb, uid not in PRODUCT_CONFIG) untouched rather
+ * than guessing.
  */
 export function remapBreadcrumbForProd(
-  url: string | undefined,
   breadcrumb: unknown,
 ): Array<{ uid: string; _content_type_uid: string }> | undefined {
   if (!Array.isArray(breadcrumb) || breadcrumb.length === 0) return breadcrumb as undefined;
 
-  const topLevelFolder = topLevelFolderFromUrl(url);
-  const config = topLevelFolder ? resolveProductConfig(topLevelFolder) : null;
-  if (!config) return breadcrumb as Array<{ uid: string; _content_type_uid: string }>;
-
-  return (breadcrumb as Array<{ uid: string; _content_type_uid: string }>).map((ref) =>
-    ref.uid === config.sandboxBreadcrumbUid ? { ...ref, uid: config.prodBreadcrumbUid } : ref,
-  );
+  return (breadcrumb as Array<{ uid: string; _content_type_uid: string }>).map((ref) => {
+    const prodUid = SANDBOX_TO_PROD_BREADCRUMB[ref.uid];
+    return prodUid ? { ...ref, uid: prodUid } : ref;
+  });
 }
 
 function extractBlockMetadataUid(articleContent: unknown): string | undefined {

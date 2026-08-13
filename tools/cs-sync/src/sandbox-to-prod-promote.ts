@@ -198,7 +198,7 @@ async function main() {
       // the Prod-side uid before comparing or writing, otherwise every run
       // sees the breadcrumb as "changed" and Prod never gets a working one.
       if (config.stackType === "csdocs" && sandboxEntry.breadcrumb) {
-        sandboxEntry.breadcrumb = remapBreadcrumbForProd(sandboxEntry.url, sandboxEntry.breadcrumb);
+        sandboxEntry.breadcrumb = remapBreadcrumbForProd(sandboxEntry.breadcrumb);
       }
 
       let existingProdEntry: ContentstackEntry | null;
