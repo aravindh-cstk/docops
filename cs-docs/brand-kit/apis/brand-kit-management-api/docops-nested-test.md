@@ -37,7 +37,7 @@ echo "docops nested sync test for Brand Kit"
 | Value 1 | Value 2 |
 | Value 3 | Value 4 |
 
-![DocOps Test Image](./images/docops-test.png)
+![DocOps Round Three Test Image](./images/docops-test-v2-round3.png)
 
 **Note:** This is a Note callout used to verify note styling renders correctly.
 

@@ -10,6 +10,8 @@ url: /headless-cms/docops-nested-test
 
 This is a temporary test article verifying nested-folder sync, image upload, callouts, and full text formatting for **Headless CMS**. Safe to delete after verification.
 
+This sentence was added in round 3 to test that editing an already-synced doc's body updates the existing Sandbox entry instead of creating a duplicate.
+
 Here is some *italic* emphasis and a `inline code span` for good measure.
 
 ### Key Points

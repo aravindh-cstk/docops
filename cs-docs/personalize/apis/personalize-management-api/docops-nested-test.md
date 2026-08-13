@@ -15,8 +15,8 @@ Here is some *italic* emphasis and a `inline code span` for good measure.
 ### Key Points
 
 - First bullet point with **bold text**.
-- Second bullet point with an internal link: [Publish Rules](/docs/headless-cms/about-publish-rules).
-- Third bullet point with an external link: [W3C](https://www.w3.org).
+- Second bullet point with an internal link: [About Brand Kit](/docs/brand-kit/about-brand-kit).
+- Third bullet point with an external link: [Mozilla](https://www.mozilla.org).
 
 ### Step by Step
 
@@ -47,5 +47,5 @@ echo "docops nested sync test for Personalize"
 
 **Additional Resources:**
 
-- [Publish Rules](/docs/headless-cms/about-publish-rules)
-- [W3C Website](https://www.w3.org)
+- [About Brand Kit](/docs/brand-kit/about-brand-kit)
+- [Mozilla Website](https://www.mozilla.org)

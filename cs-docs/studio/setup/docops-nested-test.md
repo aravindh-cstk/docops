@@ -1,10 +1,10 @@
 ---
-title: "DocOps Nested Test - Studio"
+title: "DocOps Nested Test - Studio (Updated)"
 description: "Temporary nested test article for the Studio product, covering local images, all four callout types, lists, tables, code blocks, and links in a single pass."
 url: /studio/docops-nested-test
 ---
 
-# DocOps Nested Test - Studio
+# DocOps Nested Test - Studio (Updated)
 
 ## Overview
 

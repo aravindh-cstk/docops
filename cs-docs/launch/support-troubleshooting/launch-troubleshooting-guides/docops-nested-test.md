@@ -1,7 +1,7 @@
 ---
 title: "DocOps Nested Test - Launch"
 description: "Temporary nested test article for the Launch product, covering local images, all four callout types, lists, tables, code blocks, and links in a single pass."
-url: /launch/docops-nested-test
+url: /launch/docops-nested-test-renamed
 ---
 
 # DocOps Nested Test - Launch
