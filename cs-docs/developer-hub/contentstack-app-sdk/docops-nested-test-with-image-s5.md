@@ -1,14 +1,14 @@
 ---
-title: "DocOps Nested Test - Analytics"
-description: "Temporary nested test article for the Analytics product, covering local images, all four callout types, lists, tables, code blocks, and links in a single pass."
-url: /analytics/docops-nested-test
+title: "DocOps Nested Test - Developer Hub"
+description: "Temporary nested test article for the Developer Hub product, covering local images, all four callout types, lists, tables, code blocks, and links in a single pass."
+url: /developer-hub/docops-nested-test
 ---
 
-# DocOps Nested Test - Analytics
+# DocOps Nested Test - Developer Hub
 
 ## Overview
 
-This is a temporary test article verifying nested-folder sync, image upload, callouts, and full text formatting for **Analytics**. Safe to delete after verification.
+This is a temporary test article verifying nested-folder sync, image upload, callouts, and full text formatting for **Developer Hub**. Safe to delete after verification.
 
 Here is some *italic* emphasis and a `inline code span` for good measure.
 
@@ -27,7 +27,7 @@ Here is some *italic* emphasis and a `inline code span` for good measure.
 ### Example Command
 
 ```bash
-echo "docops nested sync test for Analytics"
+echo "docops nested sync test for Developer Hub"
 ```
 
 ### Comparison Table
@@ -37,7 +37,7 @@ echo "docops nested sync test for Analytics"
 | Value 1 | Value 2 |
 | Value 3 | Value 4 |
 
-![DocOps Test Image](../../../../docops-shared.png)
+![DocOps Test Image](./images-moved-s5/docops-test.png)
 
 **Note:** This is a Note callout used to verify note styling renders correctly.
 

@@ -1,14 +1,14 @@
 ---
-title: "DocOps Nested Test - Assets"
-description: "Temporary nested test article for the Assets product, covering local images, all four callout types, lists, tables, code blocks, and links in a single pass."
-url: /assets/docops-nested-test
+title: "DocOps Round 4 Rename Test - Brand Kit"
+description: "Round 4 rename test for Brand Kit. An attempt to collide this url with the Personalize entry was blocked by the docs lint check before merge."
+url: /brand-kit/docops-nested-test-collision-attempt-s6
 ---
 
-# DocOps Nested Test - Assets
+# DocOps Round 4 Rename Test - Brand Kit
 
 ## Overview
 
-This is a temporary test article verifying nested-folder sync, image upload, callouts, and full text formatting for **Assets**. Safe to delete after verification.
+This is a temporary test article verifying nested-folder sync, image upload, callouts, and full text formatting for **Brand Kit**. Safe to delete after verification.
 
 Here is some *italic* emphasis and a `inline code span` for good measure.
 
@@ -27,7 +27,7 @@ Here is some *italic* emphasis and a `inline code span` for good measure.
 ### Example Command
 
 ```bash
-echo "docops nested sync test for Assets"
+echo "docops nested sync test for Brand Kit"
 ```
 
 ### Comparison Table
@@ -37,7 +37,7 @@ echo "docops nested sync test for Assets"
 | Value 1 | Value 2 |
 | Value 3 | Value 4 |
 
-![DocOps Test Image](./images/docops-test.png)
+![DocOps Round Three Test Image](./images/docops-test-v2-round3.png)
 
 **Note:** This is a Note callout used to verify note styling renders correctly.
 
