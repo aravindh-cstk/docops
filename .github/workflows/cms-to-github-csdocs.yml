@@ -61,20 +61,44 @@ jobs:
         id: commit
         if: steps.changes.outputs.has_changes == 'true'
         run: |
-          BRANCH="cms-sync/csdocs/$(date -u +%Y%m%d-%H%M%S)"
+          # Fixed name, reused every run, rather than a fresh timestamped branch.
+          # Edits landing in separate runs before the first PR merges force-push
+          # onto this same branch, updating the one open PR instead of opening a
+          # competing one (see the "check for open PR" step below).
+          BRANCH="cms-sync/csdocs"
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git checkout -b "$BRANCH"
+          # Reset from current main every run, not from whatever this branch
+          # last pointed at, so each run's commit is a clean, current diff.
+          git checkout -B "$BRANCH" origin/main
           git add cs-docs/
           git commit -m "chore: sync CS doc changes from Contentstack CMS (Sandbox)"
           # Push before reporting a check run — the Checks API requires the SHA
           # to already exist on GitHub's servers, not just locally on the runner.
-          git push origin "$BRANCH"
+          # Force push since the branch was just reset from main above.
+          git push origin "$BRANCH" --force
 
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Check for an already open PR on this branch
+        id: existing_pr
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="${{ steps.commit.outputs.branch }}"
+          NUMBER=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$NUMBER" ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "number=$NUMBER" >> "$GITHUB_OUTPUT"
+            echo "PR #$NUMBER is already open on $BRANCH — the force-push above already updated it."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "No open PR on $BRANCH yet."
+          fi
 
       # Run lint checks before creating PR
       - name: Lint changed docs
@@ -110,7 +134,7 @@ jobs:
           gh api "repos/${{ github.repository }}/check-runs" --input /tmp/check-run.json > /dev/null
 
       - name: Open PR with CMS changes
-        if: steps.changes.outputs.has_changes == 'true'
+        if: steps.changes.outputs.has_changes == 'true' && steps.existing_pr.outputs.exists == 'false'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
