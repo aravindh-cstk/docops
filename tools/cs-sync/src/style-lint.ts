@@ -135,6 +135,32 @@ function checkDoubleSpaces(stripped: string, file: string): string[] {
   return errors;
 }
 
+// Counts bold markers per paragraph (blank-line-delimited block) rather than
+// per whole file, so a balanced pair in one paragraph can't mask a genuinely
+// unclosed marker in another. The lookbehind/lookahead excludes `***` runs
+// (bold+italic) from the count, those aren't a `**` pair on their own.
+export function checkUnclosedBold(stripped: string, file: string): string[] {
+  const errors: string[] = [];
+  const parts = stripped.split(/(\n\s*\n)/);
+  let pos = 0;
+  for (let i = 0; i < parts.length; i += 2) {
+    const para = parts[i]!;
+    const sep = parts[i + 1] ?? "";
+    const markers = [...para.matchAll(/(?<!\*)\*\*(?!\*)/g)];
+    if (markers.length % 2 !== 0) {
+      errors.push(
+        err(
+          file,
+          lineNumber(stripped, pos + markers[0]!.index!),
+          "an unclosed bold marker (**)",
+        ),
+      );
+    }
+    pos += para.length + sep.length;
+  }
+  return errors;
+}
+
 function checkPlease(stripped: string, file: string): string[] {
   const errors: string[] = [];
   for (const m of stripped.matchAll(/\bplease\b/gi)) {
@@ -768,6 +794,7 @@ export function lintStyle(body: string, filePath: string, docsRoot?: string): st
     { id: "en-dash", check: () => checkEnDash(stripped, filePath) },
     { id: "semicolon", check: () => checkSemicolon(stripped, filePath) },
     { id: "double-spaces", check: () => checkDoubleSpaces(stripped, filePath) },
+    { id: "unclosed-bold", check: () => checkUnclosedBold(stripped, filePath) },
     { id: "please", check: () => checkPlease(stripped, filePath) },
     { id: "plus-symbol", check: () => checkPlusSymbol(stripped, filePath) },
     { id: "nx-for-times", check: () => checkNxForTimes(stripped, filePath) },

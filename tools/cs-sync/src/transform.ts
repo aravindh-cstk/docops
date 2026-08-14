@@ -155,10 +155,25 @@ function applyCallouts(html: string): string {
     (match, label: string, rest: string) => (calloutClassFor(label) ? `<p><strong>${label}:</strong>${rest}</p>` : match),
   );
 
+  // Tight list items (no blank line between items) render as <li><strong>Label:</strong>...</li>
+  // with no <p> wrapper at all, markdown-it only adds <p> for "loose" lists. This pass classes
+  // those the same way as a standalone callout paragraph, keeping the label inside its <li>.
+  // A callout item that itself contains a nested list/list-item is left untouched rather than
+  // risk producing mismatched tags, that combination isn't supported by this pass.
+  const withListCallouts = unwrapped.replace(
+    /<li>\s*<strong>([^<]+):<\/strong>([\s\S]*?)<\/li>/gi,
+    (match, label: string, rest: string) => {
+      const cls = calloutClassFor(label);
+      if (!cls) return match;
+      if (/<\/?(?:ul|ol|li)[\s>]/i.test(rest)) return match;
+      return `<li><p class="${cls}"><strong>${label}:</strong>${rest}</p></li>`;
+    },
+  );
+
   // Single pass: a bare label immediately followed by a list becomes a <div> wrapper
   // (list captured in the same match so it can't be re-processed by this same regex);
   // a label with inline text becomes a class-tagged <p>.
-  return unwrapped.replace(
+  return withListCallouts.replace(
     /<p>\s*<strong>([^<]+):<\/strong>([\s\S]*?)<\/p>(\s*(<[uo]l>[\s\S]*?<\/[uo]l>))?/gi,
     (match, label: string, rest: string, _listBlock: string | undefined, list: string | undefined) => {
       const cls = calloutClassFor(label);
