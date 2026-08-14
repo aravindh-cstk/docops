@@ -8,6 +8,6 @@ url: /developer-hub/docops-nested-test-image-in-list-s11
 
 ## List With An Image Item
 
-- First step in the process.
+- First step in the process
 - ![DocOps Test Image](./images-list-s11/docops-test-s11.png)
-- Third step in the process.
+- Third step in the process
