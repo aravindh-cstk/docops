@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { z } from "zod";
+import { checkUnclosedBold, stripCodeRegions } from "./style-lint.js";
 
 /**
  * Valid first segments of a docs url. These are CMS url namespaces, not
@@ -133,12 +134,14 @@ export function parseDocFile(
   const raw = fs.readFileSync(absolute, "utf8");
   const { data, content } = matter(raw);
   const frontMatter = frontMatterSchema.parse(data);
+  const body = content.trim();
+  assertBodyIsWellFormed(body, relativePath);
 
   return {
     filePath: absolute,
     relativePath,
     frontMatter,
-    body: content.trim(),
+    body,
   };
 }
 
@@ -155,12 +158,25 @@ export function parseDocContent(
   );
   const { data, content: bodyContent } = matter(content);
   const frontMatter = frontMatterSchema.parse(data);
+  const body = bodyContent.trim();
+  assertBodyIsWellFormed(body, relativePath);
   return {
     filePath: absolute,
     relativePath,
     frontMatter,
-    body: bodyContent.trim(),
+    body,
   };
+}
+
+// Second line of defense alongside npm run lint: a bad body reaches this even
+// if it somehow got merged past a failing lint check (e.g. an admin-override
+// merge), so the sync engine still refuses to push it rather than syncing
+// broken content silently.
+function assertBodyIsWellFormed(body: string, relativePath: string): void {
+  const errors = checkUnclosedBold(stripCodeRegions(body), relativePath);
+  if (errors.length > 0) {
+    throw new Error(errors.join("; "));
+  }
 }
 
 export interface H1Split {
