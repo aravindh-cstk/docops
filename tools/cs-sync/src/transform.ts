@@ -186,6 +186,36 @@ function applyCallouts(html: string): string {
   );
 }
 
+// A list item whose entire content is just one image or one classed callout
+// paragraph isn't a real list step on its own, it's supporting content for the
+// item above it. Written as its own bullet (`- ![alt](src)`), markdown-it still
+// gives it a distinct <li>; this merges it into the immediately preceding <li>
+// instead of leaving it as a sibling bullet.
+const SOLO_LIST_ITEM_CONTENT_RE =
+  /^\s*(?:<img\b[^>]*\/?>|<p class="(?:note|tip|warning|add-resource)">[\s\S]*<\/p>)\s*$/i;
+
+function mergeSoloListItemsIntoPrevious(html: string): string {
+  return html.replace(/<(ul|ol)>([\s\S]*?)<\/\1>/gi, (fullMatch, tag: string, inner: string) => {
+    // A nested sub-list inside this block means item boundaries aren't flat,
+    // bail out rather than risk merging across list levels.
+    if (/<\/?(?:ul|ol)[\s>]/i.test(inner)) return fullMatch;
+
+    const items = [...inner.matchAll(/<li>([\s\S]*?)<\/li>/gi)].map((m) => m[1]!);
+    if (items.length === 0) return fullMatch;
+
+    const merged: string[] = [];
+    for (const item of items) {
+      if (merged.length > 0 && SOLO_LIST_ITEM_CONTENT_RE.test(item)) {
+        merged[merged.length - 1] += `\n${item.trim()}`;
+      } else {
+        merged.push(item);
+      }
+    }
+
+    return `<${tag}>\n${merged.map((c) => `<li>${c}</li>`).join("\n")}\n</${tag}>`;
+  });
+}
+
 /**
  * The doc title/heading is stored in frontmatter and rendered separately by
  * Contentstack; a leading H1 in the body would duplicate it. Body content
@@ -198,5 +228,6 @@ function stripLeadingH1(markdown: string): string {
 export function markdownToHtml(markdown: string): string {
   const rendered = md.render(stripLeadingH1(markdown));
   const withCallouts = applyCallouts(rendered);
-  return sanitizeHtml(withCallouts, SANITIZE_OPTIONS).trim();
+  const withMergedListItems = mergeSoloListItemsIntoPrevious(withCallouts);
+  return sanitizeHtml(withMergedListItems, SANITIZE_OPTIONS).trim();
 }
