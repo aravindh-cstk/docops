@@ -18,6 +18,13 @@ import { buildDocIndex, canonicalizeUrl } from "./doc-index.js";
 import { fileURLToPath } from "node:url";
 import { SandboxClient } from "./lib/sandbox-client.js";
 import { getUserName } from "./lib/user-index.js";
+import { extractSections } from "./cda-fetch.js";
+import { htmlToMarkdown } from "./html-to-md.js";
+import { parseTitle } from "./lib/entry-content.js";
+
+// Tag prefixes our own automation adds (see git-to-sandbox-sync.ts and
+// entry-content.ts's SANDBOX_UID_TAG_PREFIX) — bookkeeping, not writer content.
+const AUTOMATION_TAG_PREFIXES = ["sandbox-uid-", "pr-", "nav-subsection-"];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -109,14 +116,22 @@ async function main() {
       }
 
       // Generate markdown from CMS entry
-      const frontmatter = generateFrontmatter(entry);
-      const body = (entry.body as string) || "";
+      const frontmatter = generateFrontmatter(config.stackType, entry);
+      const body = buildBody(config.stackType, entry);
       const markdown = `${frontmatter}\n\n${body}`;
 
       // Determine file path based on stack type and folder
       const filePath = getFilePath(config.stackType, url, entry);
       if (!filePath) continue;
       const fullPath = path.join(basePath, filePath);
+
+      // Skip the write (and the PR-summary entry below) when nothing actually
+      // changed, so writers get a real one-line diff instead of every
+      // published entry being rewritten on every 15-minute run.
+      const existing = fs.existsSync(fullPath) ? fs.readFileSync(fullPath, "utf-8") : null;
+      if (existing === markdown) {
+        continue;
+      }
 
       // Create directory if it doesn't exist
       const dir = path.dirname(fullPath);
@@ -156,13 +171,55 @@ async function main() {
   }
 }
 
-function generateFrontmatter(entry: any): string {
+/**
+ * csdocs (docs_article) entries hold their content in `article_content`
+ * modular blocks, not a `body` field (that field doesn't exist on this content
+ * type — see cms-pull.ts's buildBody, which this mirrors). apidocs
+ * (api_detail_page) has never been verified against a real schema this way,
+ * so it keeps reading the flat `body` field as before.
+ */
+function buildBody(stackType: string, entry: any): string {
+  if (stackType !== "csdocs") {
+    return (entry.body as string) || "";
+  }
+  const sections = extractSections(entry);
+  const parts: string[] = [];
+  for (const sec of sections) {
+    if (sec.heading.trim()) parts.push(`## ${sec.heading.trim()}`);
+    if (sec.content.trim()) parts.push(htmlToMarkdown(sec.content));
+  }
+  return parts.join("\n\n");
+}
+
+function generateFrontmatter(stackType: string, entry: any): string {
   const lines: string[] = ["---"];
 
-  // Add standard fields
-  if (entry.title) lines.push(`title: "${entry.title}"`);
+  // csdocs titles carry the "[Marker] - Heading" format the GitHub-to-Sandbox
+  // writer adds (docs-article.ts) so the marker survives round trips inside
+  // the CMS. Strip it back off here — apidocs titles were never prefixed.
+  const title =
+    stackType === "csdocs" && entry.title ? parseTitle(entry.title as string).heading : entry.title;
+  if (title) lines.push(`title: "${title}"`);
   if (entry.url) lines.push(`url: ${entry.url}`);
-  if (entry.description) lines.push(`description: ${entry.description}`);
+
+  // docs_article's SEO description lives at entry.seo.description, not a
+  // top-level entry.description (same field this pipeline already reads in
+  // backfill-headless-cms.ts, backfill-product-docs.ts, and nav-apply.ts).
+  const description =
+    stackType === "csdocs"
+      ? (entry.seo as { description?: string } | undefined)?.description
+      : entry.description;
+  if (description) lines.push(`description: ${description}`);
+
+  if (stackType === "csdocs" && Array.isArray(entry.tags)) {
+    const authoredTags = (entry.tags as unknown[]).filter(
+      (t): t is string =>
+        typeof t === "string" && !AUTOMATION_TAG_PREFIXES.some((prefix) => t.startsWith(prefix)),
+    );
+    if (authoredTags.length > 0) {
+      lines.push(`tags: [${authoredTags.map((t) => JSON.stringify(t)).join(", ")}]`);
+    }
+  }
 
   // Add content-type specific fields
   if (entry.api_version) lines.push(`api_version: "${entry.api_version}"`);

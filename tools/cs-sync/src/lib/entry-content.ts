@@ -74,6 +74,25 @@ export const DIFF_IGNORE_FIELDS = [
   "ACL",
 ] as const;
 
+/**
+ * Parses the docs_article CMS title format "[marker] - heading" back into its
+ * parts (the marker is added by buildEntryPayload in
+ * content-type-mappings/docs-article.ts so it survives round trips inside the
+ * CMS). Falls back to using the raw title for both fields if the format is
+ * unexpected.
+ */
+export function parseTitle(title: string): { marker: string; heading: string } {
+  const match = title.match(/^\[(.+?)\]\s*-\s*(.+)$/);
+  if (!match) {
+    console.warn(
+      `unexpected title format "${title}" — expected "[marker] - heading". ` +
+      `Using full title as both marker and heading.`,
+    );
+    return { marker: title, heading: title };
+  }
+  return { marker: match[1]!, heading: match[2]! };
+}
+
 /** Prefix for the Prod-only tag recording which Sandbox entry a Prod entry came from. */
 export const SANDBOX_UID_TAG_PREFIX = "sandbox-uid-";
 

@@ -7,6 +7,7 @@ import { findRepoRoot } from "./diff.js";
 import { ContentstackClient, type ContentstackEntry } from "./contentstack.js";
 import { htmlToMarkdown } from "./html-to-md.js";
 import { extractSections } from "./cda-fetch.js";
+import { parseTitle } from "./lib/entry-content.js";
 
 // URL prefix used in frontmatter — matches the /developers/ site path.
 const DOCS_URL_PREFIX = "/developers/";
@@ -40,22 +41,6 @@ function urlToFilePath(
   const suffix = url.slice(1);
   if (!suffix) return null;
   return path.join(repoRoot, docsRoot, `${suffix}.md`);
-}
-
-/**
- * Parses the CMS title format "[marker] - heading" back into its parts.
- * Falls back to using the raw title for both fields if the format is unexpected.
- */
-function parseTitle(title: string): { marker: string; heading: string } {
-  const match = title.match(/^\[(.+?)\]\s*-\s*(.+)$/);
-  if (!match) {
-    console.warn(
-      `cms-pull: unexpected title format "${title}" — expected "[marker] - heading". ` +
-      `Using full title as both marker and heading.`,
-    );
-    return { marker: title, heading: title };
-  }
-  return { marker: match[1]!, heading: match[2]! };
 }
 
 /**
