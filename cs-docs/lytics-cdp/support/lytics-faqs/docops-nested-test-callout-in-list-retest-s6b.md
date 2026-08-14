@@ -1,10 +1,10 @@
 ---
-title: "DocOps Round 7 Test - Callout Merges Into The Previous List Item"
+title: "DocOps Round 7 - Callout Merges Into Previous Item"
 description: "Round 7 retest confirming a callout style line inside a list now merges into the previous list item instead of becoming its own bullet."
 url: /lytics-cdp/docops-nested-test-callout-in-list-retest-s6b
 ---
 
-# DocOps Round 7 Test - Callout Merges Into The Previous List Item
+# DocOps Round 7 - Callout Merges Into Previous Item
 
 ## Unordered List Callout
 
