@@ -1,6 +1,6 @@
 ---
 title: "DocOps Round 5 Test - List And Links In Tables And Callouts"
-description: "Round 5 test with a list inside a table cell, plus links inside a table cell and inside a callout."
+description: "Round 5 test with a list inside a table cell, plus links placed inside a table cell and inside a callout, to confirm both render correctly."
 url: /agent-os/docops-nested-test-table-cell-list-s8
 ---
 

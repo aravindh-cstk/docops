@@ -1,6 +1,6 @@
 ---
 title: "Editor's Guide - DocOps Round 5 Test"
-description: "Round 5 test with an apostrophe in the title, to confirm it syncs correctly with no escaping artifacts."
+description: "Round 5 test with an apostrophe in the title and body text, to confirm the sync stores it correctly with no HTML escaping artifacts anywhere."
 url: /lytics-cdp/docops-nested-test-apostrophe-s4
 ---
 

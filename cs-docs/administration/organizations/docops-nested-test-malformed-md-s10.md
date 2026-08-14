@@ -1,6 +1,6 @@
 ---
 title: "DocOps Round 5 Test - Malformed Markdown"
-description: "Round 5 test with an unclosed bold marker and a table missing a closing pipe, to confirm both degrade silently."
+description: "Round 5 test with an unclosed bold marker and a table missing a closing pipe, to confirm both degrade silently with no sync errors thrown."
 url: /administration/docops-nested-test-malformed-md-s10
 ---
 

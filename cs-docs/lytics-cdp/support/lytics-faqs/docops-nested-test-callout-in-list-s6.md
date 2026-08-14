@@ -1,6 +1,6 @@
 ---
 title: "DocOps Round 5 Test - Callout Inside a List"
-description: "Round 5 test with a callout style line written inside a bullet list item, to confirm it stays plain list text."
+description: "Round 5 test with a callout style line written inside a bullet list item, to confirm it stays plain list text and does not become a styled callout."
 url: /lytics-cdp/docops-nested-test-callout-in-list-s6
 ---
 

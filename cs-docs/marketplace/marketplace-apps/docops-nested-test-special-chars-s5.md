@@ -1,6 +1,6 @@
 ---
 title: "DocOps Round 5 Café Test 🚀"
-description: "Round 5 test with an emoji and an accented character in the title, plus literal angle brackets in the body."
+description: "Round 5 test with an emoji and an accented character in the title, plus literal angle brackets in body text, to confirm both sync cleanly."
 url: /marketplace/docops-nested-test-special-chars-s5
 ---
 
@@ -8,7 +8,7 @@ url: /marketplace/docops-nested-test-special-chars-s5
 
 ## Angle Bracket Check
 
-This line states that 5 < 10 and 10 > 5, written as plain text rather than markup.
+This line states that 5 < 10 and 10 > 5, written as plain text with no markup intended.
 
 ## Unicode Check
 
