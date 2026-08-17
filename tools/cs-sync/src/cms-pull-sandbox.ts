@@ -154,13 +154,38 @@ async function main() {
       syncCount++;
     }
 
+    // Remove files for entries that used to be published and no longer are.
+    // Only ever considers files carrying the `uid` frontmatter marker stamped
+    // above, so a hand-authored file that happens to share a url is never at
+    // risk — a file without the marker (not yet touched by this sync, or never
+    // CMS-owned) is left alone. apidocs entries are never stamped, so this is
+    // csdocs-only, matching the create-side folder mapping's own scope.
+    let deleteCount = 0;
+    if (config.stackType === "csdocs") {
+      const publishedUids = new Set(entries.map((p) => p.uid));
+      const index = buildDocIndex(repoRoot, "cs-docs");
+      for (const doc of index.files) {
+        if (doc.uid && !publishedUids.has(doc.uid)) {
+          fs.rmSync(doc.filePath);
+          console.log(`  ✗ removed ${doc.relPath} (entry ${doc.uid} no longer published)`);
+          changes.push({
+            filePath: doc.relPath,
+            url: doc.url || "",
+            updatedByName: "(entry unpublished)",
+            updatedAt: new Date().toISOString(),
+          });
+          deleteCount++;
+        }
+      }
+    }
+
     // Write summary JSON for the workflow to use. __dirname is tools/cs-sync/src
     // (this script runs via `tsx src/...ts`), but the workflow reads the summary
     // relative to tools/cs-sync/ — write one level up so it's actually found.
     const summaryPath = path.join(__dirname, "..", ".cms-pull-summary.json");
     fs.writeFileSync(summaryPath, JSON.stringify(changes, null, 2), "utf-8");
 
-    console.log(`\n✅ Sync complete: ${syncCount} entries synced`);
+    console.log(`\n✅ Sync complete: ${syncCount} entries synced, ${deleteCount} files removed`);
     if (unresolvedCount > 0) {
       console.log(`   🛑 ${unresolvedCount} skipped: published version unreadable — run \`npm run verify-publish-details\``);
     }
@@ -201,6 +226,12 @@ function generateFrontmatter(stackType: string, entry: any): string {
     stackType === "csdocs" && entry.title ? parseTitle(entry.title as string).heading : entry.title;
   if (title) lines.push(`title: "${title}"`);
   if (entry.url) lines.push(`url: ${entry.url}`);
+
+  // Stamps this file as CMS-owned so the delete pass below (and doc-index's
+  // uidIndex) can tell it apart from a hand-authored file that just happens to
+  // share a url — never written before, so pre-existing synced files won't
+  // carry this until the sync next touches them.
+  if (stackType === "csdocs" && entry.uid) lines.push(`uid: ${entry.uid}`);
 
   // docs_article's SEO description lives at entry.seo.description, not a
   // top-level entry.description (same field this pipeline already reads in
