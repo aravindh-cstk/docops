@@ -18,8 +18,14 @@ name: CS Docs CMS Sync (Sandbox→Prod promote, then Prod→GitHub)
 
 on:
   schedule:
-    # Every 15 minutes: writers publishing in Sandbox reach Prod within one tick.
-    - cron: '*/15 * * * *'
+    # Every 5 minutes (GitHub's documented floor for scheduled workflows, not
+    # guaranteed below that). A real-time, webhook-triggered path was
+    # evaluated and ruled out: Contentstack webhooks can only send their own
+    # fixed payload shape, never GitHub's required {event_type,
+    # client_payload} body, so calling GitHub's repository_dispatch API
+    # directly from a webhook isn't viable without a middleware layer to
+    # reshape the payload. Revisit only alongside building that middleware.
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 concurrency:
