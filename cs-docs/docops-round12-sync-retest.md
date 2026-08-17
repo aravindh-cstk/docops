@@ -1,6 +1,6 @@
 ---
 title: "DocOps Round 12 Sync Retest EDITED TITLE"
-url: /docops-test/round12-sync-retest
+url: /developer-resources/docops-round12-sync-retest
 uid: blt53df765506c51e70
 description: UPDATED SEO description for scenario 4 re-test.
 tags: ["round12-fixture", "extra-writer-tag"]
