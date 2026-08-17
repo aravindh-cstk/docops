@@ -1,308 +1,98 @@
-# Contentstack Webhook Configuration Guide
+# Contentstack Webhook Configuration: CS Docs Sandbox → Prod (real-time)
+
+This is the current, working webhook design. It replaces an earlier draft of
+this file that described a different, now-defunct architecture (Prod-side
+publish/unpublish notifications, a different repo, scripts that no longer
+exist). If you find a copy of that old version elsewhere, don't use it.
+
+This webhook feeds `.github/workflows/sandbox-webhook-promote-csdocs.yml`,
+which promotes a single Sandbox entry to Prod (Staging environment) within
+seconds of it being published, instead of waiting for the
+`sandbox-auto-promote-csdocs.yml` cron's next 15-minute tick. That cron is
+unaffected by this and keeps running as the safety net for whenever this
+webhook path doesn't fire or fails.
 
 ## Prerequisites
-- GitHub Personal Access Token: `GITHUB_WEBHOOK_TOKEN` (already added to GitHub Secrets)
-- Access to Contentstack Production stacks (as admin)
-- Both stacks need webhooks configured:
-  - **API Docs**: blt8fb40ae1e60d06b9
-  - **CS Docs**: blt2d43f51baca745a8
 
----
+- A GitHub Personal Access Token, scoped to only this repo
+  (`aravindh-cstk/docops`) with **Contents: read and write** permission and
+  nothing broader. This token is pasted directly into the Contentstack
+  webhook's headers below (it is **not** a GitHub repo secret, since GitHub
+  is the destination of this call, not the source).
+- Admin access to the **Sandbox** CS Docs stack in Contentstack, not the
+  Prod stack (this webhook lives on Sandbox, since that's where writers
+  publish).
 
-## Configure API Docs Stack Webhooks
+## Configure the webhook
 
-### 1. Go to API Docs Production Stack
-
-**URL:** `https://app.contentstack.com/#!/stack/blt8fb40ae1e60d06b9/settings/webhooks`
-
-Or navigate:
-1. **Stack** → Select **API Docs** (blt8fb40ae1e60d06b9)
-2. **Settings** (gear icon) → **Webhooks**
-
----
-
-### 2. Create Webhook: Entry Published
-
-**Click "Add Webhook"**
-
-Fill in these fields:
+**Stack → Settings → Webhooks → Add Webhook**, on the Sandbox CS Docs stack:
 
 | Field | Value |
-|-------|-------|
-| **Name** | `API Docs Entry Published` |
-| **URL** | `https://api.github.com/repos/aravindh-cstk/docops/dispatches` |
-| **HTTP Method** | `POST` |
-| **Events** | Entry > Publish |
-| **Environments** | Production |
+|---|---|
+| Name | `CS Docs: real-time promote to Prod` |
+| Event | Entry > Publish |
+| Content type | `docs_article` |
+| HTTP Method | `POST` |
+| URL | `https://api.github.com/repos/aravindh-cstk/docops/dispatches` |
+
+One event channel (`Entry > Publish`) covers both a first-time publish and a
+republish after an edit, so no separate `entries.update` webhook is needed.
 
 **Headers:**
 ```
-Authorization: token [YOUR_GITHUB_WEBHOOK_TOKEN]
+Authorization: Bearer <the PAT from Prerequisites>
 Content-Type: application/json
-X-Webhook: contentstack-api-docs-publish
+Accept: application/vnd.github+json
 ```
 
-**Request Body:**
+**Request body**: build this using Contentstack's own variable-picker in the
+webhook UI rather than hand-typing the interpolation syntax, since that's
+easy to get subtly wrong. Only `uid` is actually required, the promote
+script re-fetches the entry itself and ignores everything else in the
+payload. The other two fields are free defense-in-depth for the workflow's
+own validation step and for readable run names:
+
 ```json
 {
-  "event_type": "contentstack-publish",
+  "event_type": "csdocs-sandbox-entry-published",
   "client_payload": {
-    "event": "entry.publish",
-    "data": {
-      "stack_id": "${{ stack_id }}",
-      "content_type_uid": "${{ content_type_uid }}",
-      "uid": "${{ uid }}",
-      "title": "${{ title }}",
-      "url": "${{ fields.url }}"
-    }
+    "uid": "<inserted via variable picker: entry uid>",
+    "content_type_uid": "<inserted via variable picker: content type uid>",
+    "title": "<inserted via variable picker: entry title>"
   }
 }
 ```
 
-**Save** the webhook
+**Save**, then use Contentstack's **"Try"** button to send a test call before
+relying on a real publish. A test call has no real entry uid, so the expected
+result is: Contentstack shows a `2xx` delivery, and the GitHub Actions run
+that appears fails fast at its "Validate webhook payload" step. That failure
+is itself proof the wiring (auth, URL, event_type routing) works end to end.
 
----
+## Testing with a real entry
 
-### 3. Create Webhook: Entry Unpublished
+1. Publish (or republish) one real, low-stakes Sandbox `docs_article` entry.
+2. Contentstack's webhook execution log should show a successful delivery
+   within a few seconds.
+3. A new run should appear under **Actions → Promote CS Docs entry to Prod
+   (real-time, webhook-triggered)**, labeled with that entry's uid.
+4. The run should succeed and show the entry created/updated in Prod,
+   published to Staging.
+5. Wait for the next `sandbox-auto-promote-csdocs.yml` cron tick and confirm
+   its promote step logs that same entry as skipped/no-op, proof the two
+   paths don't duplicate work.
 
-**Click "Add Webhook"** again
+## Known limitations (accepted, not bugs)
 
-| Field | Value |
-|-------|-------|
-| **Name** | `API Docs Entry Unpublished` |
-| **URL** | `https://api.github.com/repos/aravindh-cstk/docops/dispatches` |
-| **HTTP Method** | `POST` |
-| **Events** | Entry > Unpublish |
-| **Environments** | Production |
-
-**Headers:**
-```
-Authorization: token [YOUR_GITHUB_WEBHOOK_TOKEN]
-Content-Type: application/json
-X-Webhook: contentstack-api-docs-unpublish
-```
-
-**Request Body:**
-```json
-{
-  "event_type": "contentstack-unpublish",
-  "client_payload": {
-    "event": "entry.unpublish",
-    "data": {
-      "stack_id": "${{ stack_id }}",
-      "content_type_uid": "${{ content_type_uid }}",
-      "uid": "${{ uid }}",
-      "title": "${{ title }}",
-      "url": "${{ fields.url }}"
-    }
-  }
-}
-```
-
-**Save** the webhook
-
----
-
-## Configure CS Docs Stack Webhooks
-
-### 1. Go to CS Docs Production Stack
-
-**URL:** `https://app.contentstack.com/#!/stack/blt2d43f51baca745a8/settings/webhooks`
-
-Or navigate:
-1. **Stack** → Select **CS Docs** (blt2d43f51baca745a8)
-2. **Settings** (gear icon) → **Webhooks**
-
----
-
-### 2. Create Webhook: Entry Published
-
-**Click "Add Webhook"**
-
-| Field | Value |
-|-------|-------|
-| **Name** | `CS Docs Entry Published` |
-| **URL** | `https://api.github.com/repos/aravindh-cstk/docops/dispatches` |
-| **HTTP Method** | `POST` |
-| **Events** | Entry > Publish |
-| **Environments** | Production |
-
-**Headers:**
-```
-Authorization: token [YOUR_GITHUB_WEBHOOK_TOKEN]
-Content-Type: application/json
-X-Webhook: contentstack-csdocs-publish
-```
-
-**Request Body:**
-```json
-{
-  "event_type": "contentstack-publish",
-  "client_payload": {
-    "event": "entry.publish",
-    "data": {
-      "stack_id": "${{ stack_id }}",
-      "content_type_uid": "${{ content_type_uid }}",
-      "uid": "${{ uid }}",
-      "title": "${{ title }}",
-      "url": "${{ fields.url }}"
-    }
-  }
-}
-```
-
-**Save** the webhook
-
----
-
-### 3. Create Webhook: Entry Unpublished
-
-**Click "Add Webhook"** again
-
-| Field | Value |
-|-------|-------|
-| **Name** | `CS Docs Entry Unpublished` |
-| **URL** | `https://api.github.com/repos/aravindh-cstk/docops/dispatches` |
-| **HTTP Method** | `POST` |
-| **Events** | Entry > Unpublish |
-| **Environments** | Production |
-
-**Headers:**
-```
-Authorization: token [YOUR_GITHUB_WEBHOOK_TOKEN]
-Content-Type: application/json
-X-Webhook: contentstack-csdocs-unpublish
-```
-
-**Request Body:**
-```json
-{
-  "event_type": "contentstack-unpublish",
-  "client_payload": {
-    "event": "entry.unpublish",
-    "data": {
-      "stack_id": "${{ stack_id }}",
-      "content_type_uid": "${{ content_type_uid }}",
-      "uid": "${{ uid }}",
-      "title": "${{ title }}",
-      "url": "${{ fields.url }}"
-    }
-  }
-}
-```
-
-**Save** the webhook
-
----
-
-## Verify Webhooks Created
-
-After creating all 4 webhooks (2 per stack):
-
-### API Docs Stack Webhooks
-- ✅ API Docs Entry Published
-- ✅ API Docs Entry Unpublished
-
-### CS Docs Stack Webhooks
-- ✅ CS Docs Entry Published
-- ✅ CS Docs Entry Unpublished
-
-**Check:** Go back to Webhooks page, you should see all 4 listed with green checkmarks (enabled)
-
----
-
-## Test Webhooks
-
-### Manual Test from Contentstack
-
-1. Go to **Webhooks** tab
-2. Find **"API Docs Entry Published"**
-3. Click the **three-dot menu** → **"Try"** (or **"Test"**)
-4. Select an API Docs entry to test with
-5. Click **"Send"**
-6. You should see:
-   - **Status: 202** (Accepted)
-   - Response shows GitHub dispatch event received
-
-### Check GitHub Actions
-
-1. Go to **GitHub → Actions → Real-time Entry Sync (Webhook)**
-2. Look for a recent run (should appear within seconds)
-3. Click on the run to see logs
-4. **Expected logs:**
-   ```
-   ✅ Real-time sync completed
-   Entry synced to Sandbox CMS and Git markdown immediately
-   ```
-
-### Verify Sync Results
-
-After test webhook triggers:
-
-1. **Check Sandbox CMS:**
-   - Go to Sandbox API Docs stack
-   - Search for the test entry
-   - Verify it was updated
-
-2. **Check Git:**
-   - Go to GitHub → api-docs/ folder
-   - Find the markdown file for that entry
-   - Verify it was created/updated
-
----
-
-## Troubleshooting Webhooks
-
-### Webhook Showing Red "X" (Failed)
-
-1. Click the webhook → **"View Logs"**
-2. Check error message:
-   - **401/403:** Token invalid or missing permissions
-   - **404:** Wrong repository URL
-   - **500:** GitHub server error (try again)
-
-3. **Fix:**
-   - Verify token is valid: `gh auth status`
-   - Check token has correct scopes: `gh api user/authentication_token`
-   - Update webhook with correct token
-
-### Webhook Never Fires
-
-1. Verify webhook is **enabled** (toggle switch on)
-2. Verify **environment is "Production"**
-3. Verify **event is "Entry > Publish"** (not draft)
-4. Try manual "Try" button first
-5. Check Contentstack webhook logs for errors
-
-### GitHub Actions Never Triggers
-
-1. Go to **GitHub Actions → Real-time Entry Sync**
-2. If no runs appear:
-   - Webhook might not have fired (check Contentstack logs)
-   - Token might be invalid (check GitHub token)
-   - Repository URL might be wrong
-
----
-
-## Success Checklist
-
-- [ ] 4 webhooks created (2 stacks × 2 events each)
-- [ ] All webhooks showing green/enabled
-- [ ] Manual "Try" webhook succeeds with 202 status
-- [ ] GitHub Actions "Real-time Entry Sync" triggered
-- [ ] Sandbox CMS received synced entry
-- [ ] Git markdown file created/updated
-- [ ] All working without errors
-
----
-
-## Next Steps
-
-Once webhooks are verified:
-
-1. ✅ Webhooks configured
-2. ✅ Test passed
-3. ✅ Real-time sync working
-4. ✅ Ready for writers to use!
-
-Write manual for writers once all tests pass.
+- **No signature verification.** The webhook calls GitHub's API directly
+  rather than a receiver we control, so there's nothing to verify against.
+  The PAT's narrow scope (this repo only, Contents read/write only) is the
+  actual protection here, the same level of trust the existing manual
+  `workflow_dispatch` promotion already carries.
+- **Publish bursts can drop some runs.** GitHub's concurrency lock
+  (`sandbox-to-prod-promote-csdocs`, shared with the cron and manual
+  workflows) allows only one running and one queued run at a time. Extra
+  triggers arriving while one is already queued cancel it rather than queue
+  behind it. A Contentstack Release publishing many entries at once can
+  therefore skip some of them on the real-time path, they fall back to the
+  next cron tick instead, which is why the cron must keep running unchanged.
