@@ -4,28 +4,32 @@
  * the right nav_section block -> (for products with deeper nesting, a chain
  * of links_2026 entries) -> append a reference to the new entry.
  *
- * Two nav shapes are handled:
+ * Three nav shapes are handled, all confirmed against the live Prod nav
+ * snapshot in .nav-tree.json (1694 leaves across all 13 products):
  *  - Flat (Assets): nav_section.links[] holds docs_article references
  *    directly. Chain length 1.
- *  - Nested (Headless CMS): nav_section.links[] holds links_2026 entries,
- *    each with its own nested_links[] that either holds more links_2026
- *    entries or the docs_article references, arbitrary depth. Chain length
- *    2+, one links_2026 level created/descended per remaining chain segment.
+ *  - Nested (Headless CMS, Agent OS, Marketplace, ...): nav_section.links[]
+ *    holds links_2026 entries, each with its own nested_links[] that either
+ *    holds more links_2026 entries or the docs_article references, to depth
+ *    5 in practice and arbitrary depth here. Chain length 2+, one links_2026
+ *    level created/descended per remaining chain segment.
+ *  - Top level (Launch, Analytics): the article sits directly under the
+ *    product in a nav_section with a blank header. Signalled by the
+ *    nav-toplevel tag rather than a nav-subsection-* chain.
  *
- * Only "assets" and "headless-cms" are verified (see
- * fixtures/product_navigation.entry.template.json and
- * fixtures/left_navigation_2026.entry.template.json for the schema this was
- * built against). Any other product returns linked: false rather than
- * guessing at an entry UID nobody has confirmed.
+ * All 13 products are in scope. The product_navigation uid comes from
+ * product-registry.ts, which derives every uid from the live
+ * left_navigation_2026 entry, so there is one source of truth rather than a
+ * hardcoded subset maintained here.
  */
 
 import { ProdPromoteClient } from "./prod-promote-client.js";
 import type { ContentstackEntry } from "./entry-content.js";
-
-const PRODUCT_NAVIGATION_UID: Record<string, string> = {
-  assets: "bltf1afc727b1dd9ea9",
-  "headless-cms": "blt61f927e340fc1992",
-};
+import { resolveProduct } from "./product-registry.js";
+import {
+  resolveProductSlugFromBreadcrumb,
+  resolveProductSlugFromTitle,
+} from "./content-type-mappings/docs-article.js";
 
 interface LinkRef {
   uid: string;
@@ -38,14 +42,52 @@ interface NavSectionBlock {
   _metadata?: { uid: string };
 }
 
+export interface TouchedEntry {
+  uid: string;
+  contentTypeUid: string;
+}
+
+export interface CreatedNode {
+  uid: string;
+  title: string;
+}
+
 export interface LinkResult {
   linked: boolean;
+  /** product_navigation uid this entry was linked under, absent when not linked. */
+  navUid?: string;
+  /** cs-docs folder slug the entry resolved to, absent when resolution failed. */
+  productSlug?: string;
+  /**
+   * Every entry this call created or modified, for the caller to publish and
+   * bundle into the Release. Includes the product_navigation entry and each
+   * links_2026 node along the chain. Excludes the docs_article itself, which
+   * the caller already has. Empty when nothing was linked.
+   */
+  touched: TouchedEntry[];
+  /**
+   * The subset of `touched` that did not exist before this call, plus a
+   * pseudo-entry for a newly created nav_section block (which lives on
+   * product_navigation rather than having its own uid). Non-empty means this
+   * promotion changes nav structure, not just nav content.
+   */
+  createdNodes: CreatedNode[];
   sectionCreated?: boolean;
-  nodesCreated?: number;
   reason?: string;
 }
 
-function slugifyHeader(header: string): string {
+function emptyResult(reason: string): LinkResult {
+  return { linked: false, touched: [], createdNodes: [], reason };
+}
+
+/**
+ * Character-for-character the same as slugify() in nav-tree.ts, kept separate
+ * so the promotion runtime does not import that script (it runs dotenv at
+ * module load). nav-link-audit.ts imports this one rather than nav-tree's, so
+ * the audit predicts what the linker will actually do. left-nav-linker.test.ts
+ * asserts the two stay in agreement.
+ */
+export function slugifyHeader(header: string): string {
   return header
     .toLowerCase()
     .trim()
@@ -78,10 +120,58 @@ export function extractNavSubsectionChainFromTags(tags: unknown): string[] | nul
   return null;
 }
 
-function topLevelFolderFromUrl(url: string | undefined): string | null {
-  if (!url) return null;
-  const segments = url.split("/").filter(Boolean);
-  return segments[0] ?? null;
+/**
+ * True when the entry carries the `nav-toplevel` tag, meaning its source file
+ * sat directly in the product folder with no subfolder to derive a section
+ * from. Such articles belong in the product's blank-header nav_section.
+ */
+export function hasNavToplevelTag(tags: unknown): boolean {
+  return Array.isArray(tags) && tags.some((tag) => tag === "nav-toplevel");
+}
+
+/** Reads the `product-<slug>` tag written at creation time (see git-to-sandbox-sync.ts). */
+export function extractProductSlugFromTags(tags: unknown): string | null {
+  if (!Array.isArray(tags)) return null;
+  for (const tag of tags) {
+    if (typeof tag === "string" && tag.startsWith("product-")) {
+      const slug = tag.slice("product-".length);
+      if (slug) return slug;
+    }
+  }
+  return null;
+}
+
+export interface ProductResolution {
+  slug: string;
+  /** Which signal resolved it, for run logs and the audit script. */
+  via: "breadcrumb" | "tag" | "title";
+}
+
+/**
+ * Resolves the cs-docs product folder a promoted entry belongs to, in
+ * descending order of reliability. Deliberately never falls back to the
+ * entry's url: lytics-cdp articles carry /lytics/ urls and
+ * developer-resources articles carry other products' url prefixes, so a
+ * url-derived product is wrong for those two by construction.
+ */
+export function resolveProductSlug(
+  sandboxEntry: ContentstackEntry | undefined,
+  prodEntry: ContentstackEntry,
+): ProductResolution | null {
+  const breadcrumbSlug =
+    resolveProductSlugFromBreadcrumb(sandboxEntry?.breadcrumb) ??
+    resolveProductSlugFromBreadcrumb(prodEntry.breadcrumb);
+  if (breadcrumbSlug) return { slug: breadcrumbSlug, via: "breadcrumb" };
+
+  const tagSlug =
+    extractProductSlugFromTags(sandboxEntry?.tags) ?? extractProductSlugFromTags(prodEntry.tags);
+  if (tagSlug && resolveProduct(tagSlug)) return { slug: tagSlug, via: "tag" };
+
+  const titleSlug =
+    resolveProductSlugFromTitle(sandboxEntry?.title) ?? resolveProductSlugFromTitle(prodEntry.title);
+  if (titleSlug) return { slug: titleSlug, via: "title" };
+
+  return null;
 }
 
 /** Where a links[] array currently lives, and how to persist a change to it. */
@@ -90,24 +180,31 @@ interface LinksContainer {
   save: (updatedLinks: LinkRef[]) => Promise<void>;
 }
 
+interface DescendResult {
+  touched: TouchedEntry[];
+  createdNodes: CreatedNode[];
+}
+
 /**
  * Descends the remaining chain segments through links_2026 entries,
  * creating any that don't exist yet, then appends newRef into the leaf
- * container's links array. Returns how many new links_2026 nodes were
- * created along the way (0 for the flat, single-segment case).
+ * container's links array. Reports every links_2026 entry it created or
+ * modified so the caller can publish and release them, a node left
+ * unpublished breaks the nav path to the new article even though the
+ * article itself is live.
  */
 async function descendAndLink(
   client: ProdPromoteClient,
   container: LinksContainer,
   remainingChain: string[],
   newRef: LinkRef,
-): Promise<{ nodesCreated: number }> {
+): Promise<DescendResult> {
   if (remainingChain.length === 0) {
     const alreadyLinked = container.links.some((l) => l.uid === newRef.uid);
     if (!alreadyLinked) {
       await container.save([...container.links, newRef]);
     }
-    return { nodesCreated: 0 };
+    return { touched: [], createdNodes: [] };
   }
 
   const [slug, ...rest] = remainingChain;
@@ -122,21 +219,27 @@ async function descendAndLink(
     }
   }
 
-  let nodesCreated = 0;
+  const createdNodes: CreatedNode[] = [];
   let childEntry: ContentstackEntry;
   if (matchUid) {
     const existing = await client.getEntryOfType("links_2026", matchUid);
     if (!existing) throw new Error(`links_2026 entry ${matchUid} disappeared between lookup and fetch`);
     childEntry = existing;
   } else {
+    const title = titleCaseSlug(slug!);
     childEntry = await client.createEntryOfType("links_2026", {
-      title: titleCaseSlug(slug),
+      title,
       url: "",
       nested_links: [],
     });
     await container.save([...container.links, { uid: childEntry.uid, _content_type_uid: "links_2026" }]);
-    nodesCreated++;
+    createdNodes.push({ uid: childEntry.uid, title });
   }
+
+  // Touched whether created or descended: descending still rewrites this
+  // node's nested_links below, and its published version goes stale until it
+  // is republished.
+  const touched: TouchedEntry[] = [{ uid: childEntry.uid, contentTypeUid: "links_2026" }];
 
   const childContainer: LinksContainer = {
     links: Array.isArray(childEntry.nested_links) ? (childEntry.nested_links as LinkRef[]) : [],
@@ -147,58 +250,78 @@ async function descendAndLink(
       // this entry itself is republished (confirmed live: creating a brand
       // new node left it unpublished, and editing an existing node's
       // nested_links left its published version stale).
-      await client.publishEntryOfTypeToStaging("links_2026", childEntry.uid);
+      await client.publishEntryOfType("links_2026", childEntry.uid);
     },
   };
 
   const result = await descendAndLink(client, childContainer, rest, newRef);
-  return { nodesCreated: nodesCreated + result.nodesCreated };
+  return {
+    touched: [...touched, ...result.touched],
+    createdNodes: [...createdNodes, ...result.createdNodes],
+  };
 }
 
 /**
- * Links a newly promoted docs_article entry into the nav. No-op (linked:
- * false, with a reason) for anything outside the verified scope, or when
- * the create-time tag is missing, rather than guessing.
+ * Links a newly promoted docs_article entry into the nav. Returns linked:
+ * false with a reason (never throws) when the product cannot be resolved or
+ * the entry has no placement tag from creation time, so an unlinkable entry
+ * degrades to a logged warning rather than failing the promotion.
  */
 export async function linkNewEntryIntoNav(
   client: ProdPromoteClient,
+  sandboxEntry: ContentstackEntry | undefined,
   prodEntry: ContentstackEntry,
 ): Promise<LinkResult> {
-  const topLevelFolder = topLevelFolderFromUrl(prodEntry.url as string | undefined);
-  if (!topLevelFolder) {
-    return { linked: false, reason: "prod entry has no url field to derive its product from" };
+  const resolution = resolveProductSlug(sandboxEntry, prodEntry);
+  if (!resolution) {
+    return emptyResult(
+      "could not resolve the product from breadcrumb, product-* tag, or title marker",
+    );
   }
 
-  const navUid = PRODUCT_NAVIGATION_UID[topLevelFolder];
-  if (!navUid) {
-    return { linked: false, reason: `no verified product_navigation mapping for "${topLevelFolder}"` };
+  const product = resolveProduct(resolution.slug);
+  if (!product) {
+    return emptyResult(
+      `"${resolution.slug}" (via ${resolution.via}) is not in product-registry.ts`,
+    );
   }
+  const navUid = product.navUid;
 
-  const chain = extractNavSubsectionChainFromTags(prodEntry.tags);
-  if (!chain) {
-    return { linked: false, reason: "entry has no nav-subsection-* tag from creation time" };
+  // Top-level articles have no subsection chain, they belong in the product's
+  // blank-header section. Everything else places by its nav-subsection-* chain.
+  const isToplevel = hasNavToplevelTag(sandboxEntry?.tags) || hasNavToplevelTag(prodEntry.tags);
+  const chain = extractNavSubsectionChainFromTags(sandboxEntry?.tags)
+    ?? extractNavSubsectionChainFromTags(prodEntry.tags);
+  if (!chain && !isToplevel) {
+    return emptyResult("entry has no nav-subsection-* or nav-toplevel tag from creation time");
   }
 
   const navEntry = await client.getEntryOfType("product_navigation", navUid);
   if (!navEntry) {
-    return { linked: false, reason: `product_navigation entry ${navUid} not found` };
+    return emptyResult(`product_navigation entry ${navUid} not found`);
   }
 
   const sections: NavSectionBlock[] = Array.isArray(navEntry.nav_section)
     ? (navEntry.nav_section as NavSectionBlock[])
     : [];
 
-  const [sectionSlug, ...restChain] = chain;
-  let section = sections.find((s) => slugifyHeader(s.header) === sectionSlug);
+  // A top-level article targets the blank-header section (Launch and Analytics
+  // both have one live). Otherwise the first chain segment names the section.
+  const sectionSlug = isToplevel ? "" : chain![0]!;
+  const restChain = isToplevel ? [] : chain!.slice(1);
+
+  let section = sections.find((s) => slugifyHeader(s.header ?? "") === sectionSlug);
+  const createdNodes: CreatedNode[] = [];
   let sectionCreated = false;
   if (!section) {
-    section = { header: titleCaseSlug(sectionSlug!), links: [] };
+    const header = isToplevel ? "" : titleCaseSlug(sectionSlug);
+    section = { header, links: [] };
     sections.push(section);
     sectionCreated = true;
+    createdNodes.push({ uid: navUid, title: `nav_section "${header}"` });
   }
 
   const newRef: LinkRef = { uid: prodEntry.uid, _content_type_uid: "docs_article" };
-  let nodesCreated = 0;
 
   // nav_section is a field on product_navigation itself, not a separate
   // entry, so persisting the top-level container means re-saving the whole
@@ -220,11 +343,15 @@ export async function linkNewEntryIntoNav(
   }
 
   const result = await descendAndLink(client, sectionContainer, restChain, newRef);
-  nodesCreated = result.nodesCreated;
 
-  await client.publishEntryOfTypeToStaging("product_navigation", navUid);
+  await client.publishEntryOfType("product_navigation", navUid);
 
-  return { linked: true, sectionCreated, nodesCreated };
+  return {
+    linked: true,
+    navUid,
+    productSlug: resolution.slug,
+    touched: [{ uid: navUid, contentTypeUid: "product_navigation" }, ...result.touched],
+    createdNodes: [...createdNodes, ...result.createdNodes],
+    sectionCreated,
+  };
 }
-
-export { PRODUCT_NAVIGATION_UID };

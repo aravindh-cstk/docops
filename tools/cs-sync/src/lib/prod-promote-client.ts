@@ -6,7 +6,7 @@
  *
  * Allowed operations:
  * ✅ Clone entry from Sandbox to Prod, or update an existing Prod entry by url
- * ✅ Publish to Staging environment
+ * ✅ Publish to the Staging and Development environments (PROMOTION_ENVIRONMENTS)
  * ✅ Query Prod entries (lookup by url, lookup by tag, listing published entries)
  *
  * Forbidden operations:
@@ -18,6 +18,17 @@
 
 import https from "node:https";
 import { ContentstackEntry, SANDBOX_METADATA_FIELDS, stripMetadataFields } from "./entry-content.js";
+
+/**
+ * Every environment promotion publishes to. Production is deliberately absent
+ * and must stay absent: deploying to Production is a manual step done by
+ * releasing the promotion's Release, never by this automation.
+ *
+ * Both publish methods below read this one constant so they cannot drift into
+ * publishing an article to one set of environments and its nav entries to
+ * another, which would leave the nav pointing at content that isn't there.
+ */
+export const PROMOTION_ENVIRONMENTS = ["staging", "development"] as const;
 
 export interface ProdConfig {
   apiKey: string;
@@ -199,29 +210,29 @@ export class ProdPromoteClient {
   }
 
   /**
-   * Publish entry to Staging environment ONLY
+   * Publish a promoted entry of this client's own content type to every
+   * environment in PROMOTION_ENVIRONMENTS.
    *
-   * IMPORTANT: This publishes to Staging environment, NOT Production.
-   * Production environment is never touched by automation.
+   * IMPORTANT: Production is never in that list and must never be added to it.
    */
-  async publishToStaging(entryUid: string): Promise<boolean> {
+  async publishPromotedEntry(entryUid: string): Promise<boolean> {
     // Verified against the live CMA directly: the publish endpoint reads
     // environments/locales from inside `entry`, not a sibling
     // `_publish_details` key. The previous shape silently 422'd on every
     // call, this bug predates this file's other changes.
     const body = JSON.stringify({
-      entry: { environments: ["staging"], locales: ["en-us"] },
+      entry: { environments: [...PROMOTION_ENVIRONMENTS], locales: ["en-us"] },
     });
 
     const path = `${this.entriesPath()}/${entryUid}/publish`;
 
     const response = await this.request("POST", path, body);
     if (!response) {
-      console.error(`Failed to publish entry ${entryUid} to Staging`);
+      console.error(`Failed to publish entry ${entryUid} to ${PROMOTION_ENVIRONMENTS.join(" and ")}`);
       return false;
     }
 
-    console.log(`✓ Published entry ${entryUid} to Staging environment`);
+    console.log(`✓ Published entry ${entryUid} to ${PROMOTION_ENVIRONMENTS.join(" and ")}`);
     return true;
   }
 
@@ -272,19 +283,42 @@ export class ProdPromoteClient {
     return data.entry;
   }
 
-  /** Publish an entry of any content type to Staging (same as publishToStaging, generalized). */
-  async publishEntryOfTypeToStaging(contentTypeUid: string, entryUid: string): Promise<boolean> {
+  /** Publish an entry of any content type (same as publishPromotedEntry, generalized). */
+  async publishEntryOfType(contentTypeUid: string, entryUid: string): Promise<boolean> {
     const body = JSON.stringify({
-      entry: { environments: ["staging"], locales: ["en-us"] },
+      entry: { environments: [...PROMOTION_ENVIRONMENTS], locales: ["en-us"] },
     });
     const path = `/v3/content_types/${contentTypeUid}/entries/${entryUid}/publish`;
     const response = await this.request("POST", path, body);
     if (!response) {
-      console.error(`Failed to publish ${contentTypeUid} entry ${entryUid} to Staging`);
+      console.error(`Failed to publish ${contentTypeUid} entry ${entryUid} to ${PROMOTION_ENVIRONMENTS.join(" and ")}`);
       return false;
     }
-    console.log(`✓ Published ${contentTypeUid} entry ${entryUid} to Staging environment`);
+    console.log(`✓ Published ${contentTypeUid} entry ${entryUid} to ${PROMOTION_ENVIRONMENTS.join(" and ")}`);
     return true;
+  }
+
+  /**
+   * Confirms every environment in PROMOTION_ENVIRONMENTS exists in this stack,
+   * once per run. Without this a wrong or renamed environment name fails one
+   * publish call at a time, deep in the run, and reads as a per-entry glitch
+   * rather than a misconfiguration. Throws so the run stops before writing.
+   */
+  async verifyPromotionEnvironments(): Promise<void> {
+    const response = await this.request("GET", "/v3/environments");
+    if (!response) {
+      throw new Error("Could not list environments to verify the promotion targets exist");
+    }
+    const data = JSON.parse(response) as { environments?: Array<{ name?: string }> };
+    const available = new Set((data.environments ?? []).map((env) => env.name).filter(Boolean));
+    const missing = PROMOTION_ENVIRONMENTS.filter((name) => !available.has(name));
+    if (missing.length > 0) {
+      throw new Error(
+        `Promotion targets ${missing.join(" and ")} but this stack has no such environment. ` +
+        `Available: ${[...available].join(", ")}. ` +
+        `Fix PROMOTION_ENVIRONMENTS in prod-promote-client.ts or the stack's environments.`,
+      );
+    }
   }
 
   /**

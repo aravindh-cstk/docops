@@ -98,7 +98,7 @@ async function publishInSandbox(config: TestConfig, uid: string): Promise<void> 
       },
       // Environments/locales must be nested inside `entry`, not sibling keys —
       // see the identical fix (and its rationale) in
-      // ProdPromoteClient.publishToStaging in prod-promote-client.ts. The
+      // ProdPromoteClient.publishPromotedEntry in prod-promote-client.ts. The
       // sibling-key shape 422s against the live CMA every time.
       body: JSON.stringify({
         entry: { locales: [LOCALE], environments: [config.testEnvironment] },
