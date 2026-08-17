@@ -260,6 +260,58 @@ export function remapBreadcrumbForProd(
   });
 }
 
+// Reverse of PRODUCT_CONFIG: every breadcrumb uid a docs_article can carry,
+// in either stack, mapped back to the cs-docs folder slug that produced it.
+// Multi-variant products (agent-os, marketplace) contribute two uids each and
+// both map to the one folder, so this stays unambiguous.
+//
+// This is the only reliable product signal on a promoted entry. `url` is not:
+// lytics-cdp articles live under /lytics/ and developer-resources articles
+// carry other products' url prefixes entirely, so deriving the product from
+// the url files those two under the wrong nav.
+const BREADCRUMB_UID_TO_PRODUCT_SLUG: Record<string, string> = Object.fromEntries(
+  Object.entries(PRODUCT_CONFIG).flatMap(([slug, variants]) =>
+    variants.flatMap((variant) => [
+      [variant.sandboxBreadcrumbUid, slug],
+      [variant.prodBreadcrumbUid, slug],
+    ]),
+  ),
+);
+
+/**
+ * Resolves a docs_article's cs-docs folder slug from its `breadcrumb` field,
+ * accepting either a Sandbox-stack or Prod-stack breadcrumb uid. Null when the
+ * breadcrumb is missing, empty, or references a uid outside PRODUCT_CONFIG,
+ * callers must skip rather than guess.
+ */
+export function resolveProductSlugFromBreadcrumb(breadcrumb: unknown): string | null {
+  if (!Array.isArray(breadcrumb)) return null;
+  for (const ref of breadcrumb) {
+    const uid = (ref as { uid?: unknown } | null)?.uid;
+    if (typeof uid === "string" && BREADCRUMB_UID_TO_PRODUCT_SLUG[uid]) {
+      return BREADCRUMB_UID_TO_PRODUCT_SLUG[uid];
+    }
+  }
+  return null;
+}
+
+// Reverse of PRODUCT_CONFIG's markers, for the fallback path when an entry has
+// no usable breadcrumb. Keyed by marker exactly as buildEntryPayload writes it
+// into the title, e.g. "[Lytics CDP] - How to ..." resolves to "lytics-cdp".
+const MARKER_TO_PRODUCT_SLUG: Record<string, string> = Object.fromEntries(
+  Object.entries(PRODUCT_CONFIG).flatMap(([slug, variants]) =>
+    variants.map((variant) => [variant.marker, slug]),
+  ),
+);
+
+/** Resolves the folder slug from a "[Marker] - Heading" title. Null if the title has no known marker. */
+export function resolveProductSlugFromTitle(title: unknown): string | null {
+  if (typeof title !== "string") return null;
+  const match = title.match(/^\[([^\]]+)\]/);
+  if (!match) return null;
+  return MARKER_TO_PRODUCT_SLUG[match[1]!] ?? null;
+}
+
 function extractBlockMetadataUid(articleContent: unknown): string | undefined {
   if (!Array.isArray(articleContent) || articleContent.length === 0) {
     return undefined;

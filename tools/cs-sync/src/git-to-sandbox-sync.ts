@@ -30,28 +30,13 @@ import { loadSandboxConfig } from "./config.js";
 import { runSync } from "./lib/sandbox-sync-engine.js";
 import { findRepoRoot } from "./diff.js";
 import { findPullRequestsForCommit } from "./lib/github-api.js";
+import { subsectionChainFromPath, productSlugFromPath } from "./lib/nav-placement.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-/**
- * "cs-docs/assets/overview/foo.md" with docsRoot "cs-docs" -> ["overview"].
- * "cs-docs/headless-cms/introduction/overview/foo.md" -> ["introduction", "overview"].
- * Every intermediate folder between the product folder and the file itself,
- * in order, this is the chain left-nav-linker.ts walks through nav_section
- * and (for deeper products) nested links_2026 entries to find where the
- * entry belongs. Null for anything not nested at least two levels deep
- * (product/subsection/file), left-nav-linker.ts treats a missing tag as
- * "don't guess, don't link".
- */
-function subsectionChainFromPath(relativePath: string, docsRoot: string): string[] | null {
-  const prefix = `${docsRoot}/`;
-  const stripped = relativePath.startsWith(prefix) ? relativePath.slice(prefix.length) : relativePath;
-  const segments = stripped.split("/");
-  // segments[0] is the product folder, the last segment is the filename,
-  // everything between is the subsection chain.
-  const chain = segments.slice(1, -1);
-  return chain.length > 0 ? chain : null;
-}
+// subsectionChainFromPath and productSlugFromPath live in lib/nav-placement.ts
+// so nav-link-audit.ts can replay the same placement logic without importing
+// this file, which runs main() on import.
 
 async function runCsDocsSync(repoRoot: string): Promise<void> {
   const config = loadSandboxConfig(repoRoot, "csdocs");
@@ -68,18 +53,29 @@ async function runCsDocsSync(repoRoot: string): Promise<void> {
 
   const results = await runSync(config, client, beforeSha, afterSha);
 
-  // Tag newly created entries with their subsection folder (so promotion can
-  // link them into the right nav_section block without any repo access) and
-  // with the originating PR number (so promotion can name its Release after
-  // it). Both are best-effort: a push with no associated PR, or a file
-  // structure this can't parse, is not an error, just skips that tag.
+  // Tag newly created entries with their product folder and subsection folder
+  // (so promotion can link them into the right nav_section block without any
+  // repo access) and with the originating PR number (so promotion can name its
+  // Release after it). All are best-effort: a push with no associated PR, or a
+  // file structure this can't parse, is not an error, just skips that tag.
   const created = results.filter((r) => r.action === "created" && r.uid);
 
   for (const r of created) {
+    const productSlug = productSlugFromPath(r.path, config.CS_DOCS_ROOT);
+    if (productSlug) {
+      await client.addTag(r.uid!, `product-${productSlug}`).catch((error) => {
+        console.warn(`Could not tag ${r.path} with its product: ${error instanceof Error ? error.message : error}`);
+      });
+    }
+
     const chain = subsectionChainFromPath(r.path, config.CS_DOCS_ROOT);
-    if (chain) {
-      await client.addTag(r.uid!, `nav-subsection-${chain.join("/")}`).catch((error) => {
-        console.warn(`Could not tag ${r.path} with its nav subsection: ${error instanceof Error ? error.message : error}`);
+    // A file directly in its product folder has no subsection. Tag it as
+    // top-level so promotion places it in the blank-header nav_section rather
+    // than skipping it for want of a chain.
+    const placementTag = chain ? `nav-subsection-${chain.join("/")}` : productSlug ? "nav-toplevel" : null;
+    if (placementTag) {
+      await client.addTag(r.uid!, placementTag).catch((error) => {
+        console.warn(`Could not tag ${r.path} with its nav placement: ${error instanceof Error ? error.message : error}`);
       });
     }
   }

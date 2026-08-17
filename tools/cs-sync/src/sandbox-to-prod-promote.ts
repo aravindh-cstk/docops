@@ -28,18 +28,23 @@
 
 import { fileURLToPath } from "node:url";
 import { SandboxClient } from "./lib/sandbox-client.js";
-import { ProdPromoteClient, PromotionResult, ContentstackEntry } from "./lib/prod-promote-client.js";
+import { ProdPromoteClient, PromotionResult, ContentstackEntry, PROMOTION_ENVIRONMENTS } from "./lib/prod-promote-client.js";
 import { contentsEqual, PUBLISH_SHAPE_HELP, sandboxUidTag, withSandboxUidTag } from "./lib/entry-content.js";
-import { linkNewEntryIntoNav, PRODUCT_NAVIGATION_UID } from "./lib/left-nav-linker.js";
+import { linkNewEntryIntoNav } from "./lib/left-nav-linker.js";
 import { createReleaseForPromotion, extractPrNumberFromTags } from "./lib/release-manager.js";
 import { remapBreadcrumbForProd } from "./lib/content-type-mappings/docs-article.js";
 
 /**
- * Links a newly created Prod entry into the nav and bundles it (plus the nav
- * entry, if linking succeeded) into a PR-named Release. csdocs only, this
- * round's nav mapping (PRODUCT_NAVIGATION_UID) only covers docs_article. Never
- * throws, a linking or release failure should not fail the whole promotion
- * run, it's logged and the promotion itself still counts as successful.
+ * Links a newly created Prod entry into the nav and bundles it, plus every nav
+ * entry the linking touched, into a PR-named Release. csdocs only, docs_article
+ * only. Never throws, a linking or release failure should not fail the whole
+ * promotion run, it's logged and the promotion itself still counts as
+ * successful.
+ *
+ * Every touched entry goes into the Release, not just the article and its
+ * product_navigation entry: each links_2026 node along the chain carries its
+ * own publish state, so a Release missing one deploys a nav that doesn't
+ * actually reach the new article.
  */
 async function afterCreate(
   prodClient: ProdPromoteClient,
@@ -52,12 +57,19 @@ async function afterCreate(
   const items = [{ uid: prodEntry.uid, contentTypeUid: "docs_article" }];
 
   try {
-    const linkResult = await linkNewEntryIntoNav(prodClient, prodEntry);
+    const linkResult = await linkNewEntryIntoNav(prodClient, sandboxEntry, prodEntry);
     if (linkResult.linked) {
-      const topLevelFolder = String(prodEntry.url ?? "").split("/").filter(Boolean)[0] ?? "";
-      const navUid = PRODUCT_NAVIGATION_UID[topLevelFolder];
-      if (navUid) items.push({ uid: navUid, contentTypeUid: "product_navigation" });
-      console.log(`     ✓ Linked into left nav${linkResult.sectionCreated ? " (new section created)" : ""}`);
+      items.push(...linkResult.touched);
+      console.log(`     ✓ Linked into left nav under "${linkResult.productSlug}"`);
+      if (linkResult.createdNodes.length > 0) {
+        // Structural changes deserve a louder line than content changes: whoever
+        // deploys this Release is adding nav entries that never existed before,
+        // which is usually right but is worth eyeballing before it ships.
+        console.log(`     ⚠️  This Release changes nav STRUCTURE, ${linkResult.createdNodes.length} new node(s) created:`);
+        for (const node of linkResult.createdNodes) {
+          console.log(`          + ${node.title} (${node.uid})`);
+        }
+      }
     } else {
       console.log(`     ⚠️  Not linked into left nav: ${linkResult.reason}`);
     }
@@ -118,8 +130,9 @@ export async function loadConfig(stackTypeOverride?: "apidocs" | "csdocs"): Prom
 }
 
 async function main() {
+  const envList = PROMOTION_ENVIRONMENTS.join(" and ");
   console.log("🚀 Sandbox → Prod Promotion\n");
-  console.log("⚠️  PROMOTION MODE: Creating/updating entries in Prod and publishing to Staging ONLY\n");
+  console.log(`⚠️  PROMOTION MODE: Creating/updating entries in Prod and publishing to ${envList} ONLY\n`);
 
   const config = await loadConfig();
 
@@ -138,8 +151,12 @@ async function main() {
   });
 
   console.log(`📍 Source: Sandbox`);
-  console.log(`📍 Target: Prod (Staging environment only)`);
+  console.log(`📍 Target: Prod (${envList} environments only)`);
   console.log(`📊 Stack: ${config.stackType}\n`);
+
+  // Fail before touching anything if a target environment doesn't exist,
+  // rather than creating entries and then failing to publish each one.
+  await prodClient.verifyPromotionEnvironments();
 
   try {
     let entriesToPromote = await sandboxClient.getPublishedEntries();
@@ -237,10 +254,10 @@ async function main() {
           const prodEntry = await prodClient.cloneEntryToProd(sandboxEntry);
           console.log(`     ✓ Created in Prod (new UID: ${prodEntry.uid})`);
 
-          const publishSuccess = await prodClient.publishToStaging(prodEntry.uid);
+          const publishSuccess = await prodClient.publishPromotedEntry(prodEntry.uid);
           results.push({ entryUid: uid, title, written: true, published: publishSuccess, action: "created" });
 
-          console.log(publishSuccess ? `     ✓ Published to Staging environment` : `     ⚠️  Created but failed to publish to Staging`);
+          console.log(publishSuccess ? `     ✓ Published to ${PROMOTION_ENVIRONMENTS.join(" and ")}` : `     ⚠️  Created but failed to publish`);
 
           await afterCreate(prodClient, config.stackType, sandboxEntry, prodEntry);
 
@@ -257,10 +274,10 @@ async function main() {
         const updated = await prodClient.updateEntry(existingProdEntry.uid, sandboxEntry);
         console.log(`     ✓ Updated in Prod (uid: ${updated.uid})`);
 
-        const publishSuccess = await prodClient.publishToStaging(updated.uid);
+        const publishSuccess = await prodClient.publishPromotedEntry(updated.uid);
         results.push({ entryUid: uid, title, written: true, published: publishSuccess, action: "updated" });
 
-        console.log(publishSuccess ? `     ✓ Published to Staging environment` : `     ⚠️  Updated but failed to publish to Staging`);
+        console.log(publishSuccess ? `     ✓ Published to ${PROMOTION_ENVIRONMENTS.join(" and ")}` : `     ⚠️  Updated but failed to publish`);
       } catch (error) {
         console.log(`     ❌ Error: ${error instanceof Error ? error.message : error}`);
         results.push({
