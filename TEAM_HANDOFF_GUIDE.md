@@ -343,13 +343,17 @@ code --install-extension ms-playwright.playwright
 
 Add your test-account credentials to `.env` (see `.env.example`): `DEV_STACK_LOGIN_EMAIL`, `DEV_STACK_LOGIN_PASSWORD`, and (once, org-wide) `CSDOCS_SANDBOX_DASHBOARD_URL` / `APIDOCS_SANDBOX_DASHBOARD_URL` as the fallback stacks. Note these are dashboard login credentials for the CMS web UI — a different credential type from the Management API tokens used elsewhere in this repo's sync scripts, which cannot log into the dashboard itself.
 
+Optionally, run `npm run doc:setup-auth` once to save a logged-in Sandbox session (`tools/cs-sync/playwright/.auth/dev-stack.json`, gitignored) — future Sandbox-path runs skip the login pause entirely until that session expires. This doesn't apply to the dev11 path below, since org/stack selection there is manual every run regardless.
+
 ### 4.5.1 Run the Walkthrough
 
 In VS Code: **Terminal → Run Task → "Docs: Playwright Procedure Walkthrough."** You'll be prompted for:
 - **Doc path** — the .md file you just drafted, e.g. `cs-docs/studio/my-new-feature.md`
-- **Dev stack URL** — the link from Step 3.1.1 (leave blank to use the Sandbox fallback)
+- **Dev stack URL** — a specific PR/feature stack if you have one; leave blank to default to **dev11** (see below), or paste a Sandbox URL explicitly if you want that instead
 
 A headed Chromium browser opens at 1920×1080 and walks the doc's numbered steps one by one, clicking whatever each step's **bold UI label** refers to. This is the same UI-navigation coverage `tools/cs-sync/src/exec-runner.ts` (the automated API-level exec test) deliberately skips as "not testable via API" — this step exists specifically to close that gap.
+
+**dev11 is the real priority target** for verifying a feature as it's actually being built (Sandbox is only a fallback). Org names and testing-stack names vary project to project, so this always pauses for a human: complete SAML login if prompted, switch to the right org via the profile menu, use the App Switcher to open the right product, and navigate to the correct testing stack — then click ▶ Resume and the walkthrough takes it from there. Conceptual/reference docs (no numbered procedure) are skipped automatically either way.
 
 - A step whose target can't be found **fails the run** — that's your signal the doc is stale (the feature's UI moved) or the automation's element-matching needs a nudge; check the console output and `tools/cs-sync/playwright/screenshots/<doc-slug>/manifest.json`.
 - A screenshot is captured automatically whenever a step produces a **new UI state** (a modal appears, the URL changes, a panel opens) — not on every step. Routine/repetitive steps are skipped on purpose; this matches both this repo's existing docs and the published docs portal (contentstack.com/docs), where task docs typically carry 0–4 screenshots, never one per step.

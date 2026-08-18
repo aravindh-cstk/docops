@@ -35,7 +35,7 @@
     {
       "id": "devStackUrl",
       "type": "promptString",
-      "description": "Dev/staging stack URL for the feature being documented (ask your lead, same time you ask for the Dev PR link — see TEAM_HANDOFF_GUIDE.md Step 3). Leave blank to fall back to CSDOCS_SANDBOX_DASHBOARD_URL in .env.",
+      "description": "Dev/staging stack URL for the feature being documented, if you have one specific to this PR. Leave blank to use dev11 (you'll pick the org/stack manually when the browser pauses) — paste a Sandbox URL here explicitly if you want that instead.",
       "default": ""
     }
   ]

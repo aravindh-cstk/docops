@@ -7,7 +7,8 @@ import { captureUiState, isNewUiState } from "./lib/screenshot-decision.js";
 import { highlightAndScreenshot } from "./lib/capture-screenshot.js";
 import { compressPngToTarget } from "./lib/compress-image.js";
 import { loginIfNeeded } from "./lib/login.js";
-import { resolveDevStackUrl } from "./lib/resolve-stack-url.js";
+import { resolveDevStackUrl, isDev11Url } from "./lib/resolve-stack-url.js";
+import { pauseForDev11Setup } from "./lib/dev11-handoff.js";
 import { fillExampleValue } from "./lib/fill-example-value.js";
 
 /**
@@ -96,7 +97,16 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
   // it likely keeps a background connection (analytics/websocket) open
   // indefinitely, which "load" waits on but "domcontentloaded" does not.
   await page.goto(devStackUrl!, { waitUntil: "domcontentloaded" });
-  await loginIfNeeded(page, process.env.DEV_STACK_LOGIN_EMAIL, process.env.DEV_STACK_LOGIN_PASSWORD, devStackUrl);
+
+  // dev11 always hands off to a human — org/stack names vary project to
+  // project, so there's nothing here to detect or automate (see
+  // dev11-handoff.ts). Only the Sandbox path gets the login-form-detecting,
+  // possibly-skip-entirely treatment in login.ts.
+  if (isDev11Url(devStackUrl!)) {
+    await pauseForDev11Setup(page, docPath!);
+  } else {
+    await loginIfNeeded(page, process.env.DEV_STACK_LOGIN_EMAIL, process.env.DEV_STACK_LOGIN_PASSWORD, devStackUrl);
+  }
 
   // A deep link straight into an entry can trigger a login redirect and,
   // once resumed, a second navigation back to the original URL — give that
