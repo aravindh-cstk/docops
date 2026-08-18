@@ -10,4 +10,4 @@ This is a throwaway test article created to verify the Sandbox to Prod promotion
 
 ## Purpose
 
-This article sits two folder levels deep under Developer Tools and Delivery, so promoting it for the first time creates a brand new nav chain node, and this article checks that node lands in the same promotion Release as the article itself.
+This article sits two folder levels deep under Developer Tools and Delivery. Promoting it for the first time creates a brand new nav chain node. This checks that the new node lands in the same promotion Release as the article.
