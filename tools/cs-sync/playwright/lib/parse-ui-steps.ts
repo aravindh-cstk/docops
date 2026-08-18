@@ -13,6 +13,7 @@ export interface UiStep {
   raw: string;
   targets: string[];
   sectionHeading: string;
+  fillValue?: string;
 }
 
 export interface ParsedUiSteps {
@@ -32,6 +33,13 @@ const BOLD_RE = /\*\*(.+?)\*\*/g;
 // a step (e.g. the shortcut key "E" in 'use the shortcut key "E"').
 const QUOTED_UI_RE =
   /["“]([^"”]+)["”]\s+(?:icon|button|tab|link|menu(?:\s+item)?|option|panel|field|section)\b/gi;
+// Confirmed against create-a-folder.md: "enter a name for your folder (e.g.,
+// Project) and click **Create**" — a required field the doc's own example
+// value can fill, so the walkthrough can actually submit the form instead of
+// clicking a button that's disabled with nothing entered. Restricted to
+// "enter"/"type" so a step's own worked example ("e.g., ...") elsewhere for
+// illustration, not data entry, doesn't get typed somewhere unrelated.
+const EXAMPLE_VALUE_RE = /\b(?:enter|type)\b[^.]*\(e\.g\.,?\s*([^)]+)\)/i;
 const ORDERED_RE = /^(\d+)\.\s+(.+)/;
 const HEADING_RE = /^#{1,2}\s+(.+)/;
 
@@ -64,7 +72,8 @@ export function parseUiSteps(body: string): ParsedUiSteps {
         ...[...raw.matchAll(BOLD_RE)].map((m) => m[1].trim()),
         ...[...raw.matchAll(QUOTED_UI_RE)].map((m) => m[1].trim()),
       ];
-      steps.push({ index: ++stepIndex, raw, targets, sectionHeading: currentHeading });
+      const fillValue = raw.match(EXAMPLE_VALUE_RE)?.[1]?.trim();
+      steps.push({ index: ++stepIndex, raw, targets, sectionHeading: currentHeading, fillValue });
     }
   }
 

@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { expect, test } from "@playwright/test";
+import { expect, test, type Locator } from "@playwright/test";
 import { buildAltText, parseUiSteps, stripFrontMatter } from "./lib/parse-ui-steps.js";
 import { locateTarget } from "./lib/locate-target.js";
 import { captureUiState, isNewUiState } from "./lib/screenshot-decision.js";
@@ -8,6 +8,7 @@ import { highlightAndScreenshot } from "./lib/capture-screenshot.js";
 import { compressPngToTarget } from "./lib/compress-image.js";
 import { loginIfNeeded } from "./lib/login.js";
 import { resolveDevStackUrl } from "./lib/resolve-stack-url.js";
+import { fillExampleValue } from "./lib/fill-example-value.js";
 
 /**
  * Walks a single doc's numbered procedure in a real browser against a Dev
@@ -43,6 +44,16 @@ interface ManifestEntry {
   status: "done" | "not-found" | "no-target";
   screenshotPath: string | null;
   altText: string | null;
+  filledValue: string | null;
+}
+
+async function describeElement(locator: Locator): Promise<string> {
+  return locator
+    .evaluate((el) => {
+      const testId = el.getAttribute("data-test-id") ?? el.getAttribute("data-testid");
+      return `<${el.tagName.toLowerCase()}${testId ? ` data-test-id="${testId}"` : ""} class="${el.className}">`;
+    })
+    .catch(() => "<unknown>");
 }
 
 function slugifyForFilename(text: string): string {
@@ -100,13 +111,22 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
 
   for (const step of steps) {
     if (step.targets.length === 0) {
-      manifest.push({ index: step.index, raw: step.raw, status: "no-target", screenshotPath: null, altText: null });
+      manifest.push({
+        index: step.index,
+        raw: step.raw,
+        status: "no-target",
+        screenshotPath: null,
+        altText: null,
+        filledValue: null,
+      });
       continue;
     }
 
     const before = await captureUiState(page);
+
     let status: ManifestEntry["status"] = "not-found";
     let lastLocator = null as Awaited<ReturnType<typeof locateTarget>>;
+    let filledValue: string | null = null;
 
     for (const targetText of step.targets) {
       const locator = await locateTarget(page, targetText);
@@ -116,6 +136,18 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
         await page.waitForTimeout(300);
         status = "done";
         lastLocator = locator;
+        console.log(`Step ${step.index} clicked "${targetText}" -> ${await describeElement(locator)}`);
+
+        // Fill a required field's example value (e.g. a folder name) right
+        // after whichever click opened its modal/panel, so a later submit
+        // button that's disabled with nothing entered (Contentstack's
+        // Create Asset Folder modal, confirmed live) can actually be
+        // clicked. Scoped to modal-contained inputs (see
+        // fill-example-value.ts) so this is a no-op until that modal is
+        // genuinely open, rather than firing on the very first click.
+        if (step.fillValue && filledValue === null && (await fillExampleValue(page, step.fillValue))) {
+          filledValue = step.fillValue;
+        }
       } catch {
         // leave status as-is; try the next bold target in this step, if any
       }
@@ -138,7 +170,7 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
       }
     }
 
-    manifest.push({ index: step.index, raw: step.raw, status, screenshotPath, altText });
+    manifest.push({ index: step.index, raw: step.raw, status, screenshotPath, altText, filledValue });
   }
 
   fs.writeFileSync(path.join(screenshotDir, "manifest.json"), JSON.stringify(manifest, null, 2));
