@@ -1,15 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { expect, test, type Locator } from "@playwright/test";
-import { buildAltText, parseUiSteps, stripFrontMatter } from "./lib/parse-ui-steps.js";
-import { locateTarget } from "./lib/locate-target.js";
-import { captureUiState, isNewUiState } from "./lib/screenshot-decision.js";
-import { highlightAndScreenshot } from "./lib/capture-screenshot.js";
-import { compressPngToTarget } from "./lib/compress-image.js";
-import { loginIfNeeded } from "./lib/login.js";
-import { resolveDevStackUrl, isDev11Url } from "./lib/resolve-stack-url.js";
-import { pauseForDev11Setup } from "./lib/dev11-handoff.js";
-import { fillExampleValue } from "./lib/fill-example-value.js";
+import { buildAltText, parseUiSteps, stripFrontMatter, locateTarget, fillExampleValue } from "./lib/doc-steps.js";
+import { captureUiState, isNewUiState, highlightAndScreenshot, compressPngToTarget } from "./lib/screenshot.js";
+import { loginIfNeeded, resolveDevStackUrl, isDev11Url, pauseForDev11Setup } from "./lib/session.js";
 
 /**
  * Walks a single doc's numbered procedure in a real browser against a Dev
