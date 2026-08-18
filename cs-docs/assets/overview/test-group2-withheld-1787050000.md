@@ -1,6 +1,6 @@
 ---
 title: "Test Group 2 Withheld Article"
-description: "Throwaway test article published then unpublished before any promotion run, verifying it never reaches Prod."
+description: "Throwaway test article published then unpublished before any promotion run, verifying it never reaches Prod at all in the CMS pipeline test suite."
 url: /assets/test-group2-withheld-1787050000
 ---
 
@@ -10,4 +10,4 @@ This is a throwaway test article created to verify the Sandbox to Prod promotion
 
 ## Purpose
 
-This article gets published then unpublished before a promotion run ever sees it, confirming it never reaches Prod at all, rather than merely being skipped once.
+This article gets published then unpublished before a promotion run ever sees it. This confirms it never reaches Prod at all. It is not merely skipped once.
