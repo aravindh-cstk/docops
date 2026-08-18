@@ -26,10 +26,14 @@ export function extractPrNumberFromTags(tags: unknown): number | null {
 }
 
 /**
- * Creates a Release titled "PR #<number>" with a description naming the PR,
- * and adds every item to it marked for the publish action. Returns null
- * without creating anything if there is nothing to bundle, an empty Release
- * is not useful to anyone reviewing the promotion.
+ * Finds or creates a Release titled "PR #<number>" and adds every item to it
+ * marked for the publish action. Multiple entries from the same PR can be
+ * promoted in the same run (e.g. two docs changed in one PR); reusing the
+ * existing Release instead of always creating one is what lets every entry
+ * land in the same bundle instead of only the first entry processed winning
+ * the name and every later one silently failing to create its own. Returns
+ * null without creating anything if there is nothing to bundle, an empty
+ * Release is not useful to anyone reviewing the promotion.
  */
 export async function createReleaseForPromotion(
   client: ProdPromoteClient,
@@ -38,10 +42,17 @@ export async function createReleaseForPromotion(
 ): Promise<{ uid: string; name: string } | null> {
   if (items.length === 0) return null;
 
-  const prTitle = await getPullRequestTitle(prNumber).catch(() => null);
-  const description = `Docs update from PR #${prNumber}${prTitle ? `: ${prTitle}` : ""}`;
+  const releaseName = `PR #${prNumber}`;
+  const existingRelease = await client.findReleaseByName(releaseName);
 
-  const release = await client.createRelease(`PR #${prNumber}`, description);
+  let release: { uid: string; name: string };
+  if (existingRelease) {
+    release = existingRelease;
+  } else {
+    const prTitle = await getPullRequestTitle(prNumber).catch(() => null);
+    const description = `Docs update from PR #${prNumber}${prTitle ? `: ${prTitle}` : ""}`;
+    release = await client.createRelease(releaseName, description);
+  }
 
   const versionedItems = [];
   for (const item of items) {
