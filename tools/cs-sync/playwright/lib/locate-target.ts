@@ -17,44 +17,55 @@ export async function locateTarget(page: Page, target: string): Promise<Locator 
   const cleaned = target.replace(/^\\?[+➕]\s*/, "").trim();
   if (!cleaned) return null;
 
-  const roleAndTextCandidates: Array<() => Locator> = [
+  // getByText is listed here (not appended after the loop) so both passes
+  // below share one candidate list — see the comment further down on why it
+  // must still be tried before the data-test-id fallback.
+  const candidates: Array<() => Locator> = [
     () => page.getByRole("button", { name: cleaned, exact: false }),
     () => page.getByRole("menuitem", { name: cleaned, exact: false }),
     () => page.getByRole("link", { name: cleaned, exact: false }),
     () => page.getByRole("tab", { name: cleaned, exact: false }),
     () => page.getByLabel(cleaned, { exact: false }),
     () => page.getByPlaceholder(cleaned, { exact: false }),
+    () => page.getByText(cleaned, { exact: false }),
   ];
 
-  // A short, bounded wait per candidate rather than an instant count() check —
-  // confirmed live that a step run right after a preceding action (e.g. a
-  // folder-create response triggering the list/toolbar to re-render) can
-  // catch this exact corner of the page mid-remount, with zero matching
-  // elements for the length of a synchronous check even though the target
-  // reappears within ~1s. Same class of bug login.ts already documents for
-  // its own login-form detection.
-  const isPresent = async (locator: Locator): Promise<boolean> =>
-    locator
-      .waitFor({ state: "visible", timeout: 2_000 })
-      .then(() => true)
-      .catch(() => false);
-
-  for (const make of roleAndTextCandidates) {
+  // Fast pass: instant count() checks, same cost as before this file ever
+  // added a wait — most targets match one of the first couple candidates
+  // immediately, and a bounded wait on every candidate (this file's earlier
+  // fix for the one case below) turned out to tax EVERY step by several
+  // seconds even when the very next candidate would have matched instantly.
+  // Confirmed live: that blew a doc's total walkthrough time past the
+  // 60s test timeout.
+  for (const make of candidates) {
     const locator = make().first();
-    if (await isPresent(locator)) return locator;
+    if ((await locator.count()) > 0) return locator;
   }
 
-  // getByText before the data-test-id fallback: confirmed live that a
-  // modal's own visible heading text (e.g. "Create Asset Folder") can share
-  // vocabulary with an unrelated icon's data-test-id (e.g. "asset-create-
-  // new-folder"), and matching the icon again re-clicked it, toggling the
-  // modal it had just opened closed. Real, visible text a human would
-  // actually read should win over a coincidental id-token match — the
-  // data-test-id strategy exists for icon-only elements that have no text
-  // at all, so it's a true last resort.
-  const textLocator = page.getByText(cleaned, { exact: false }).first();
-  if (await isPresent(textLocator)) return textLocator;
+  // Slow pass, only reached when NOTHING matched instantly: confirmed live
+  // that a step run right after a preceding action (e.g. a folder-create
+  // response triggering the list/toolbar to re-render) can catch this exact
+  // corner of the page mid-remount, with zero matching elements for the
+  // length of an instant check even though the target reappears within
+  // ~1s. Retrying with a short bounded wait costs nothing in the common
+  // case (the fast pass above already returned) and only applies this
+  // latency to the rare step that actually needs it.
+  for (const make of candidates) {
+    const locator = make().first();
+    const appeared = await locator
+      .waitFor({ state: "visible", timeout: 1_500 })
+      .then(() => true)
+      .catch(() => false);
+    if (appeared) return locator;
+  }
 
+  // data-test-id token match is the true last resort, after getByText —
+  // confirmed live that a modal's own visible heading text (e.g. "Create
+  // Asset Folder") can share vocabulary with an unrelated icon's
+  // data-test-id (e.g. "asset-create-new-folder"), and matching the icon
+  // again re-clicked it, toggling the modal it had just opened closed. Real,
+  // visible text a human would actually read should win over a coincidental
+  // id-token match.
   const testIdMatch = await locateByTestIdTokens(page, cleaned);
   if (testIdMatch) return testIdMatch;
 
