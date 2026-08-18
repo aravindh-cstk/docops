@@ -14,5 +14,5 @@ This article, along with a sibling Beta article, is reused across several promot
 
 ## Notes
 
-- This article will be edited and republished multiple times during testing.
+- This article gets edited and republished multiple times during testing.
 - The content here has no bearing on real Contentstack documentation.
