@@ -97,6 +97,13 @@ export function buildAltText(step: UiStep): string {
   const cleaned = step.raw
     .replace(/\*\*(.+?)\*\*/g, "$1")
     .replace(/`(.+?)`/g, "$1")
+    // A raw markdown link (e.g. "[stack](/docs/headless-cms/about-stack)")
+    // left in place lands verbatim inside the alt attribute — confirmed
+    // live, where the docs linter then misread its nested "(/path)" as an
+    // absolute-path image reference. Keep just the link text, same
+    // treatment as bold/code above.
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/\\([+➕])/g, "$1")
     .replace(/\s+/g, " ")
     .trim();
 

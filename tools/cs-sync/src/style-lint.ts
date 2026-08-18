@@ -510,10 +510,18 @@ function checkListPunctuation(body: string, file: string): string[] {
   let blockStart = -1;
   let blockItems: Array<{ text: string; lineNum: number }> = [];
 
+  // A step's own captured screenshot is appended straight onto its line
+  // (e.g. "...panel.![alt](url)") — the doc-walkthrough convention (see
+  // apply-screenshots.ts) — which otherwise makes an item with a period
+  // followed by an image look punctuation-inconsistent with a plain-text
+  // sibling item that has no screenshot at all. Strip a trailing image
+  // before checking, since only some steps in a list get one by design.
+  const stripTrailingImage = (text: string) => text.replace(/(?:!\[[^\]]*\]\([^)]*\))+\s*$/, "");
+
   function flushBlock() {
     if (blockItems.length < 2) return;
-    const withPeriod = blockItems.filter((b) => /\.\s*$/.test(b.text));
-    const without = blockItems.filter((b) => !/\.\s*$/.test(b.text));
+    const withPeriod = blockItems.filter((b) => /\.\s*$/.test(stripTrailingImage(b.text)));
+    const without = blockItems.filter((b) => !/\.\s*$/.test(stripTrailingImage(b.text)));
     if (withPeriod.length > 0 && without.length > 0) {
       errors.push(
         err(
