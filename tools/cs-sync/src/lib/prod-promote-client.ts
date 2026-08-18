@@ -322,8 +322,42 @@ export class ProdPromoteClient {
   }
 
   /**
+   * Find a Release by exact name match.
+   *
+   * The Releases list endpoint isn't a content-type entries endpoint, so it's
+   * not confirmed to support the same `query=` JSON filtering findEntryByTag/
+   * findEntryByUrl use. Paginates and filters by name client-side instead,
+   * mirroring getPublishedEntries below, rather than assuming query support
+   * that hasn't been verified against a live stack.
+   */
+  async findReleaseByName(name: string): Promise<{ uid: string; name: string } | null> {
+    let skip = 0;
+    const limit = 100;
+    let hasMore = true;
+
+    while (hasMore) {
+      const path = `/v3/releases?limit=${limit}&skip=${skip}`;
+      const response = await this.request("GET", path);
+      if (!response) return null;
+
+      const data = JSON.parse(response) as { releases?: Array<{ uid: string; name: string }> };
+      const page = data.releases ?? [];
+
+      const match = page.find((release) => release.name === name);
+      if (match) return match;
+
+      hasMore = page.length === limit;
+      skip += limit;
+    }
+
+    return null;
+  }
+
+  /**
    * Create a Release. Items are added separately via addItemsToRelease —
    * a Release with no items is a valid, harmless intermediate state.
+   * Callers wanting find-or-create semantics should call findReleaseByName
+   * first (see release-manager.ts's createReleaseForPromotion).
    */
   async createRelease(name: string, description: string): Promise<{ uid: string; name: string }> {
     const body = JSON.stringify({ release: { name, description } });
