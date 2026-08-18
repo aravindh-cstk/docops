@@ -28,6 +28,10 @@ tools/cs-sync/playwright/screenshots/
 tools/cs-sync/test-results/
 tools/cs-sync/playwright-report/
 
+# Playwright doc-walkthrough: saved login session (see setup-auth.ts) — live
+# session cookies, never commit
+tools/cs-sync/playwright/.auth/
+
 # OS files
 .DS_Store
 Thumbs.db

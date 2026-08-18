@@ -34,7 +34,8 @@
     "typecheck": "tsc --noEmit",
     "doc:walkthrough": "playwright test",
     "doc:walkthrough:headed": "playwright test --headed",
-    "doc:apply-screenshots": "tsx src/apply-screenshots.ts"
+    "doc:apply-screenshots": "tsx src/apply-screenshots.ts",
+    "doc:setup-auth": "tsx playwright/setup-auth.ts"
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
