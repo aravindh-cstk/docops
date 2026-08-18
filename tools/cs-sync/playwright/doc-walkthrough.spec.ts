@@ -124,6 +124,19 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
 
     const before = await captureUiState(page);
 
+    // A success toast/banner from the previous step (e.g. "Folder created
+    // successfully.") can render over the same top-right corner as this
+    // step's target and block the click for its whole timeout — confirmed
+    // live, where this left the "+ New Asset" button unreachable right
+    // after creating a folder. Give it a chance to clear first; a toast
+    // that never disappears (or wasn't there at all) just times out here
+    // without failing the step.
+    await page
+      .locator('[role="alert"], [role="status"]')
+      .first()
+      .waitFor({ state: "hidden", timeout: 5_000 })
+      .catch(() => {});
+
     let status: ManifestEntry["status"] = "not-found";
     let lastLocator = null as Awaited<ReturnType<typeof locateTarget>>;
     let filledValue: string | null = null;
@@ -162,6 +175,20 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
         const label = step.targets[step.targets.length - 1] ?? step.sectionHeading;
         const filename = `${step.index}-${slugifyForFilename(label)}.png`;
         screenshotPath = path.join(screenshotDir, filename);
+        // The 300ms click-settle wait above is enough for a modal/panel to
+        // appear, but not for an async-loaded list (e.g. the Assets grid) to
+        // finish fetching — confirmed live, where that left a loading
+        // spinner baked into the captured screenshot. "networkidle" turned
+        // out not to help here (confirmed live, still 5s of nothing but a
+        // spinner) — Contentstack's app likely keeps a background
+        // connection open (see the "load" vs "domcontentloaded" comment
+        // above), so networkidle may just burn its whole timeout without
+        // ever actually going idle. Wait on the loading spinner itself
+        // instead: give it a moment to appear (it may not have mounted yet
+        // at this exact instant), then wait for it to go away.
+        const spinner = page.locator('[class*="loader" i]').first();
+        await spinner.waitFor({ state: "attached", timeout: 1_000 }).catch(() => {});
+        await spinner.waitFor({ state: "hidden", timeout: 10_000 }).catch(() => {});
         await highlightAndScreenshot(page, screenshotPath, lastLocator);
         // Docs image standard: PNG, ~100KB max, horizontal (the 1920x1080
         // viewport above already guarantees landscape framing).

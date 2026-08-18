@@ -10,7 +10,11 @@ import type { Locator, Page } from "@playwright/test";
  * step result instead of crashing the whole walkthrough.
  */
 export async function locateTarget(page: Page, target: string): Promise<Locator | null> {
-  const cleaned = target.replace(/^[+➕]\s*/, "").trim();
+  // Doc source sometimes markdown-escapes a leading "+" (`**\+ New Asset**`)
+  // so it isn't parsed as a list marker — confirmed live that leaving the
+  // backslash in place made every candidate below search for the literal,
+  // never-matching string "\+ New Asset" instead of "New Asset".
+  const cleaned = target.replace(/^\\?[+➕]\s*/, "").trim();
   if (!cleaned) return null;
 
   const roleAndTextCandidates: Array<() => Locator> = [
@@ -22,9 +26,22 @@ export async function locateTarget(page: Page, target: string): Promise<Locator 
     () => page.getByPlaceholder(cleaned, { exact: false }),
   ];
 
+  // A short, bounded wait per candidate rather than an instant count() check —
+  // confirmed live that a step run right after a preceding action (e.g. a
+  // folder-create response triggering the list/toolbar to re-render) can
+  // catch this exact corner of the page mid-remount, with zero matching
+  // elements for the length of a synchronous check even though the target
+  // reappears within ~1s. Same class of bug login.ts already documents for
+  // its own login-form detection.
+  const isPresent = async (locator: Locator): Promise<boolean> =>
+    locator
+      .waitFor({ state: "visible", timeout: 2_000 })
+      .then(() => true)
+      .catch(() => false);
+
   for (const make of roleAndTextCandidates) {
     const locator = make().first();
-    if ((await locator.count()) > 0) return locator;
+    if (await isPresent(locator)) return locator;
   }
 
   // getByText before the data-test-id fallback: confirmed live that a
@@ -36,7 +53,7 @@ export async function locateTarget(page: Page, target: string): Promise<Locator 
   // data-test-id strategy exists for icon-only elements that have no text
   // at all, so it's a true last resort.
   const textLocator = page.getByText(cleaned, { exact: false }).first();
-  if ((await textLocator.count()) > 0) return textLocator;
+  if (await isPresent(textLocator)) return textLocator;
 
   const testIdMatch = await locateByTestIdTokens(page, cleaned);
   if (testIdMatch) return testIdMatch;
