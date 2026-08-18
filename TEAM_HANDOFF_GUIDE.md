@@ -109,7 +109,7 @@ https://github.com/[team-repo]/pull/[PR-number]
 
 At the same time you ask for the PR, also ask: **"What Dev/staging stack has this feature deployed to?"** This is the stack Playwright will log into in Step 4.5 to actually walk through your doc's procedure and capture screenshots — it changes every feature, so re-ask each time rather than reusing an old link.
 
-If the feature has no dedicated Dev stack yet, the walkthrough falls back to the CS-Docs Sandbox stack (`CSDOCS_SANDBOX_DASHBOARD_URL` in `.env`).
+If the feature has no dedicated Dev stack yet, the walkthrough falls back automatically to whichever Sandbox stack matches the doc's folder — CS-Docs Sandbox (`CSDOCS_SANDBOX_DASHBOARD_URL` in `.env`) for `cs-docs/...` docs, API-Docs Sandbox (`APIDOCS_SANDBOX_DASHBOARD_URL`) for `api-docs/...` docs.
 
 ### 3.2 Review the PR Changes
 
@@ -341,7 +341,7 @@ npx playwright install chromium
 code --install-extension ms-playwright.playwright
 ```
 
-Add your test-account credentials to `.env` (see `.env.example`): `DEV_STACK_LOGIN_EMAIL`, `DEV_STACK_LOGIN_PASSWORD`, and (once, org-wide) `CSDOCS_SANDBOX_DASHBOARD_URL` as the fallback stack.
+Add your test-account credentials to `.env` (see `.env.example`): `DEV_STACK_LOGIN_EMAIL`, `DEV_STACK_LOGIN_PASSWORD`, and (once, org-wide) `CSDOCS_SANDBOX_DASHBOARD_URL` / `APIDOCS_SANDBOX_DASHBOARD_URL` as the fallback stacks. Note these are dashboard login credentials for the CMS web UI — a different credential type from the Management API tokens used elsewhere in this repo's sync scripts, which cannot log into the dashboard itself.
 
 ### 4.5.1 Run the Walkthrough
 

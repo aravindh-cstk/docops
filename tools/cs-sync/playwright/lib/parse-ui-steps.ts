@@ -21,6 +21,17 @@ export interface ParsedUiSteps {
 }
 
 const BOLD_RE = /\*\*(.+?)\*\*/g;
+// Confirmed across multiple real docs (create-a-folder.md, reopen-a-discussion.md,
+// test-edit-or-delete-a-comment.md): Step 1's "go to X" navigation target is
+// commonly quoted rather than bolded ('click the "Assets" icon'), even though
+// later steps in the same doc do bold their targets. Without this, Step 1
+// always comes back with zero targets and the walkthrough never navigates
+// anywhere, silently searching later steps' targets on the wrong page.
+// Restricted to a quoted phrase immediately followed by a UI noun so this
+// doesn't also match quoted example values or literal strings elsewhere in
+// a step (e.g. the shortcut key "E" in 'use the shortcut key "E"').
+const QUOTED_UI_RE =
+  /["“]([^"”]+)["”]\s+(?:icon|button|tab|link|menu(?:\s+item)?|option|panel|field|section)\b/gi;
 const ORDERED_RE = /^(\d+)\.\s+(.+)/;
 const HEADING_RE = /^#{1,2}\s+(.+)/;
 
@@ -49,7 +60,10 @@ export function parseUiSteps(body: string): ParsedUiSteps {
     const ordered = trimmed.match(ORDERED_RE);
     if (ordered) {
       const raw = ordered[2].trim();
-      const targets = [...raw.matchAll(BOLD_RE)].map((m) => m[1].trim());
+      const targets = [
+        ...[...raw.matchAll(BOLD_RE)].map((m) => m[1].trim()),
+        ...[...raw.matchAll(QUOTED_UI_RE)].map((m) => m[1].trim()),
+      ];
       steps.push({ index: ++stepIndex, raw, targets, sectionHeading: currentHeading });
     }
   }

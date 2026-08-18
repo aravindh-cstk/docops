@@ -7,6 +7,7 @@ import { captureUiState, isNewUiState } from "./lib/screenshot-decision.js";
 import { highlightAndScreenshot } from "./lib/capture-screenshot.js";
 import { compressPngToTarget } from "./lib/compress-image.js";
 import { loginIfNeeded } from "./lib/login.js";
+import { resolveDevStackUrl } from "./lib/resolve-stack-url.js";
 
 /**
  * Walks a single doc's numbered procedure in a real browser against a Dev
@@ -18,8 +19,11 @@ import { loginIfNeeded } from "./lib/login.js";
  *
  * Inputs (see .vscode/tasks.json for the prompted VS Code entry point):
  *   DOC_PATH        - repo-relative path to the .md file to walk through
- *   DEV_STACK_URL   - the feature's Dev/staging stack URL (falls back to
- *                      CSDOCS_SANDBOX_DASHBOARD_URL if left blank — see
+ *   DEV_STACK_URL   - the feature's Dev/staging stack URL, if given. Left
+ *                      blank, falls back to whichever Sandbox dashboard
+ *                      matches the doc's folder — CSDOCS_SANDBOX_DASHBOARD_URL
+ *                      for cs-docs/..., APIDOCS_SANDBOX_DASHBOARD_URL for
+ *                      api-docs/... (see lib/resolve-stack-url.ts, and
  *                      TEAM_HANDOFF_GUIDE.md Step 3)
  *   DEV_STACK_LOGIN_EMAIL / DEV_STACK_LOGIN_PASSWORD - optional, only used
  *                      if a login form is actually present
@@ -51,12 +55,15 @@ function slugifyForFilename(text: string): string {
 
 test("walk through doc procedure and capture screenshots", async ({ page }) => {
   const docPath = process.env.DOC_PATH;
-  const devStackUrl = process.env.DEV_STACK_URL || process.env.CSDOCS_SANDBOX_DASHBOARD_URL;
 
   test.skip(!docPath, "Set DOC_PATH to the .md file to walk through (see .vscode/tasks.json)");
+
+  const devStackUrl = resolveDevStackUrl(docPath!);
+
   test.skip(
     !devStackUrl,
-    "Set DEV_STACK_URL to the feature's Dev stack (or CSDOCS_SANDBOX_DASHBOARD_URL as a fallback default)",
+    "Set DEV_STACK_URL to the feature's Dev stack, or configure CSDOCS_SANDBOX_DASHBOARD_URL / " +
+      "APIDOCS_SANDBOX_DASHBOARD_URL as the fallback for this doc's folder (see lib/resolve-stack-url.ts)",
   );
 
   const repoRoot = path.resolve(process.cwd(), "..", "..");
@@ -71,9 +78,22 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
   const screenshotDir = path.join(process.cwd(), "playwright", "screenshots", docSlug);
   fs.mkdirSync(screenshotDir, { recursive: true });
 
-  await page.setViewportSize({ width: 1920, height: 1080 });
-  await page.goto(devStackUrl!);
-  await loginIfNeeded(page, process.env.DEV_STACK_LOGIN_EMAIL, process.env.DEV_STACK_LOGIN_PASSWORD);
+  // Kept in sync with playwright.config.ts's viewport — see the comment
+  // there on why 1280x800, not 1920x1080.
+  await page.setViewportSize({ width: 1280, height: 800 });
+  // "load" has twice hit the 60s test timeout against Contentstack's app —
+  // it likely keeps a background connection (analytics/websocket) open
+  // indefinitely, which "load" waits on but "domcontentloaded" does not.
+  await page.goto(devStackUrl!, { waitUntil: "domcontentloaded" });
+  await loginIfNeeded(page, process.env.DEV_STACK_LOGIN_EMAIL, process.env.DEV_STACK_LOGIN_PASSWORD, devStackUrl);
+
+  // A deep link straight into an entry can trigger a login redirect and,
+  // once resumed, a second navigation back to the original URL — give that
+  // render a chance to settle before searching for step targets. Confirmed
+  // against Contentstack's entry editor: page.goto()'s "load" event fires
+  // well before fields/comments actually render, so searching immediately
+  // after resume can match incidental static chrome instead of real content.
+  await page.waitForLoadState("networkidle", { timeout: 15_000 }).catch(() => {});
 
   const manifest: ManifestEntry[] = [];
   let shotCount = 0;

@@ -16,7 +16,7 @@ To edit or delete a comment, log in to your [Contentstack account](https://www.c
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) and edit an existing entry.
 2.  Open an entry and click the “Comment” icon of the field where you want to update the comments.
-3.  Hover over the comment you want to edit or delete, then click the "Edit" or "Delete" icon. After editing the comment, click **Update**. !
+3.  Hover over the comment you want to edit or delete, then click the **Edit** or **Delete** icon. After editing the comment, click **Update**. !
 
 **Note:** Deleted comments are permanently removed and cannot be restored.
 

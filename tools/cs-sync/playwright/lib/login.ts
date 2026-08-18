@@ -18,11 +18,19 @@ import type { Page } from "@playwright/test";
  *   a labeled email field to actually appear, and auto-fill if so. No field
  *   within the timeout is treated as "already authenticated," not an error.
  */
-export async function loginIfNeeded(page: Page, email?: string, password?: string): Promise<void> {
+export async function loginIfNeeded(
+  page: Page,
+  email?: string,
+  password?: string,
+  targetUrl?: string,
+): Promise<void> {
   if (!email || !password) {
     console.log(
-      "\nNo DEV_STACK_LOGIN_EMAIL/PASSWORD configured — pausing so you can log in and navigate to the " +
-        "right screen manually. Click ▶ Resume in the Playwright Inspector when ready to continue.\n",
+      "\nNo DEV_STACK_LOGIN_EMAIL/PASSWORD configured — pausing so you can log in manually.\n" +
+        `Target page: ${targetUrl ?? page.url()}\n` +
+        "IMPORTANT: after logging in, Contentstack may drop you on your own default org's dashboard " +
+        "instead of returning to the target page above — check the org/stack switcher and navigate " +
+        "back to the exact page before clicking ▶ Resume in the Playwright Inspector.\n",
     );
     await page.pause();
     return;
