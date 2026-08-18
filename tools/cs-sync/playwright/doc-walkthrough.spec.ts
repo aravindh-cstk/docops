@@ -108,6 +108,12 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
 
   const manifest: ManifestEntry[] = [];
   let shotCount = 0;
+  // Contentstack doesn't enforce folder/asset-name uniqueness itself —
+  // confirmed live, where repeated walkthrough runs silently piled up
+  // several identically-named "Project" folders in the Sandbox stack
+  // instead of erroring. A short per-run suffix keeps each run's created
+  // name distinct so the Sandbox doesn't accumulate duplicates.
+  const runSuffix = Date.now().toString(36);
 
   for (const step of steps) {
     if (step.targets.length === 0) {
@@ -158,8 +164,11 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
         // clicked. Scoped to modal-contained inputs (see
         // fill-example-value.ts) so this is a no-op until that modal is
         // genuinely open, rather than firing on the very first click.
-        if (step.fillValue && filledValue === null && (await fillExampleValue(page, step.fillValue))) {
-          filledValue = step.fillValue;
+        if (step.fillValue && filledValue === null) {
+          const uniqueValue = `${step.fillValue}-${runSuffix}`;
+          if (await fillExampleValue(page, uniqueValue)) {
+            filledValue = uniqueValue;
+          }
         }
       } catch {
         // leave status as-is; try the next bold target in this step, if any
