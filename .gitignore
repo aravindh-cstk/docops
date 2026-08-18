@@ -22,12 +22,20 @@ tools/cs-sync/prod-orphan-report.csv
 tools/cs-sync/.nav-tree.json
 tools/cs-sync/nav-audit/
 
+# Playwright doc-walkthrough: local capture staging only — the images that
+# actually ship are uploaded to CS-Docs Sandbox Assets and referenced by URL
+tools/cs-sync/playwright/screenshots/
+tools/cs-sync/test-results/
+tools/cs-sync/playwright-report/
+
 # OS files
 .DS_Store
 Thumbs.db
 
 # IDE
-.vscode/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/extensions.json
 .idea/
 *.swp
 *.swo
