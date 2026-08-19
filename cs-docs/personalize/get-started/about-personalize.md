@@ -14,13 +14,13 @@ Contentstack Personalize is an edge-optimized personalization engine designed to
 
 With Personalize, you can create and manage audiences, define audience attributes, and develop personalized experiences within your project. You can then link these experiences to your Content Types in Contentstack through Variants, allowing you to create content variations for dynamically delivering personalized content to visitors in real-time based on demographics, behavior, and preferences.
 
-You can also [import](/docs/headless-cms/import-content-using-the-cli#support-for-variants) and [export](/docs/headless-cms/export-content-using-the-cli#support-for-variants) data for the Personalize modules (Experiences, Audiences, Attributes, and Events) linked to a stack containing your Variants via the CLI.
+You can also [import](/docs/personalize/working-with-projects) and [export](/docs/headless-cms/export-content-using-the-cli#support-for-variants) data for the Personalize modules (Experiences, Audiences, Attributes, and Events) linked to a stack containing your Variants via the CLI.
 
 ## Enable and Access Personalize
 
 **Note:** To enable Personalize for your organization, reach out to our [support](mailto:support@contentstack.com) team.
 
-To access Personalize and create your first project, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow these steps:
+To access Personalize and create your first project, log in to your [Contentstack account](https://www.contentstack.com/docs/personalize/link-test-target) and follow these steps:
 
 1.  In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
 2.  You can then create a new Personalize project by clicking the **\+ New Personalize Project** button.
