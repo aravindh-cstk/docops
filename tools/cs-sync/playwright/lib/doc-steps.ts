@@ -43,9 +43,13 @@ const BOLD_RE = /\*\*(.+?)\*\*/g;
 // anywhere, silently searching later steps' targets on the wrong page.
 // Restricted to a quoted phrase immediately followed by a UI noun so this
 // doesn't also match quoted example values or literal strings elsewhere in
-// a step (e.g. the shortcut key "E" in 'use the shortcut key "E"').
+// a step (e.g. the shortcut key "E" in 'use the shortcut key "E"'). "module"
+// confirmed missing live (test-save-your-views.md: select the "Assets"
+// module) — without it, step 1 came back with zero targets and the
+// walkthrough never left the dashboard, so every later step's target
+// genuinely didn't exist on the (wrong) page it was searching.
 const QUOTED_UI_RE =
-  /["“]([^"”]+)["”]\s+(?:icon|button|tab|link|menu(?:\s+item)?|option|panel|field|section)\b/gi;
+  /["“]([^"”]+)["”]\s+(?:icon|button|tab|link|menu(?:\s+item)?|option|panel|field|section|module)\b/gi;
 // Confirmed against create-a-folder.md: "enter a name for your folder (e.g.,
 // Project) and click **Create**" — a required field the doc's own example
 // value can fill, so the walkthrough can actually submit the form instead of
