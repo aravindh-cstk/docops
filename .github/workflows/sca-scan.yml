@@ -2,6 +2,12 @@ name: Source Composition Analysis Scan
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - 'backend/**'
+      - 'tools/**'
+      - '**/package.json'
+      - '**/package-lock.json'
+      - '.github/workflows/sca-scan.yml'
 jobs:
   security-sca:
     runs-on: ubuntu-latest
