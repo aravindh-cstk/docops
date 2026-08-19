@@ -10,7 +10,7 @@ url: /personalize/about-personalize
 
 Contentstack Personalize is an edge-optimized personalization engine designed to deliver real-time, data-driven content experiences. Deliver real-time content efficiently and create personalized experiences without relying on developers.
 
-## What You Can Do With Personalize
+## What You Can Do With Contentstack Personalize
 
 With Personalize, you can create and manage audiences, define audience attributes, and develop personalized experiences within your project. You can then link these experiences to your Content Types in Contentstack through Variants, allowing you to create content variations for dynamically delivering personalized content to visitors in real-time based on demographics, behavior, and preferences.
 
