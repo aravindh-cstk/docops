@@ -66,7 +66,7 @@ Contentstack Personalize makes location-based personalization straightforward, e
 
 -   [Contentstack account](https://www.contentstack.com/login/)
 -   Personalize-enabled Organization with [permissions](/docs/administration/about-administration-roles)
--   Access to Personalize [project](/docs/personalize/create-personalize-project)
+-   Access to Personalize [project](/docs/personalize/working-with-projects)
 
 **This setup requires:**
 
@@ -81,7 +81,7 @@ Contentstack Personalize makes location-based personalization straightforward, e
 
 1.  Navigate to App Switcher → Personalize → + New Personalize Project
 
-**Additional Resource:** For more information, refer to [Create a Personalize Project.](/docs/personalize/create-personalize-project)
+**Additional Resource:** For more information, refer to [Create a Personalize Project.](/docs/personalize/working-with-projects)
 
 ### Create location-based audiences
 
@@ -169,7 +169,7 @@ Once published, the mapping between Personalize Experiences and Entry Variants d
 
 ## Reference Project
 
-You can refer to the following project for a reference implementation: [Geolocation Inspiration GitHub repository](https://github.com/contentstack-personalize-examples/personalize-geolocation-inspiration), hosted at [Personalize-geolocation-inspiration.](https://personalize-geolocation-inspiration.contentstackapps.com/)
+You can refer to the following project for a reference implementation: [Geolocation Inspiration GitHub repository](https://github.com/contentstack/personalize-docs-link-test), hosted at [Personalize-geolocation-inspiration.](https://personalize-geolocation-inspiration.contentstackapps.com/)
 
 ## Outcomes You Can Expect
 
