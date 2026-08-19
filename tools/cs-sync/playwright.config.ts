@@ -1,4 +1,3 @@
-import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { config as loadDotenv } from "dotenv";
@@ -9,12 +8,6 @@ import { defineConfig, devices } from "@playwright/test";
 // separate, older convention used by the legacy single-stack scripts.
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 loadDotenv({ path: path.join(repoRoot, ".env") });
-
-// Saved by `npm run doc:setup-auth` (see playwright/setup-auth.ts) — reused
-// automatically so a walkthrough run doesn't need a fresh manual login every
-// time. Missing/expired just falls back to lib/login.ts's usual pause, so
-// there's nothing to configure if this hasn't been set up yet.
-const AUTH_FILE = path.join(path.dirname(fileURLToPath(import.meta.url)), "playwright", ".auth", "dev-stack.json");
 
 export default defineConfig({
   testDir: "./playwright",
@@ -31,7 +24,10 @@ export default defineConfig({
     viewport: { width: 1280, height: 800 },
     screenshot: "off", // doc-walkthrough.spec.ts manages its own highlighted screenshots
     trace: "retain-on-failure",
-    storageState: fs.existsSync(AUTH_FILE) ? AUTH_FILE : undefined,
+    // NOT storageState — doc-walkthrough.spec.ts imports test/expect from
+    // ./playwright/fixtures.ts, which overrides context/page to launch a
+    // PERSISTENT Chrome profile (see that file for why) instead of the
+    // built-in fixture's fresh-profile-per-run + storageState-file combo.
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
 });

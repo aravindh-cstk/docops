@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import { expect, test, type Locator } from "@playwright/test";
+import type { Locator } from "@playwright/test";
+import { expect, test } from "./lib/fixtures.js";
 import { buildAltText, parseUiSteps, stripFrontMatter, locateTarget, fillExampleValue } from "./lib/doc-steps.js";
 import { captureUiState, isNewUiState, highlightAndScreenshot, compressPngToTarget } from "./lib/screenshot.js";
 import { loginIfNeeded, resolveDevStackUrl, isDev11Url, pauseForDev11Setup } from "./lib/session.js";
