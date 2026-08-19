@@ -1,12 +1,12 @@
 ---
-title: "About Personalize"
+title: "Personalize"
 description: "Learn what Contentstack Personalize is and how audience-based rules, experiences, and variants work together to personalize content for users."
 url: /personalize/about-personalize
 ---
 
-# About Personalize
+# Personalize
 
-## About Personalize
+## Personalize Explained
 
 Contentstack Personalize is an edge-optimized personalization engine designed to deliver real-time, data-driven content experiences. Deliver real-time content efficiently and create personalized experiences without relying on developers.
 
