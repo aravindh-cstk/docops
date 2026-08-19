@@ -65,6 +65,17 @@ export function isNewUiState(before: UiState, after: UiState): boolean {
 
 const HIGHLIGHT_ID = "__doc_walkthrough_highlight";
 
+// page.evaluate() has no timeout option of its own, and once page.pause()
+// runs even once, the overall test timeout stops being enforced for the
+// rest of the run — confirmed live against dev11, where an unrelated
+// evaluate() call stalled for ~10 minutes with nothing else blocking it. A
+// manual race bounds any evaluate() the same way, regardless of why the
+// page's JS execution stalled.
+async function evaluateWithTimeout<T>(promise: Promise<T>, timeoutMs: number, fallback: T): Promise<T> {
+  const timeout = new Promise<T>((resolve) => setTimeout(() => resolve(fallback), timeoutMs));
+  return Promise.race([promise.catch(() => fallback), timeout]);
+}
+
 /**
  * Screenshot spec matches the published docs portal convention: 1920px-wide
  * viewport, cropped to the app only (no browser chrome — Playwright already
@@ -78,32 +89,40 @@ export async function highlightAndScreenshot(
   const box = locator ? await locator.boundingBox().catch(() => null) : null;
 
   if (box) {
-    await page.evaluate(
-      ({ x, y, width, height, id }) => {
-        const el = document.createElement("div");
-        el.id = id;
-        el.style.cssText = [
-          "position:fixed",
-          `left:${x - 6}px`,
-          `top:${y - 6}px`,
-          `width:${width + 12}px`,
-          `height:${height + 12}px`,
-          "border:3px solid #E01F4D",
-          "border-radius:10px",
-          "z-index:2147483647",
-          "pointer-events:none",
-          "box-sizing:border-box",
-        ].join(";");
-        document.body.appendChild(el);
-      },
-      { x: box.x, y: box.y, width: box.width, height: box.height, id: HIGHLIGHT_ID },
+    await evaluateWithTimeout(
+      page.evaluate(
+        ({ x, y, width, height, id }) => {
+          const el = document.createElement("div");
+          el.id = id;
+          el.style.cssText = [
+            "position:fixed",
+            `left:${x - 6}px`,
+            `top:${y - 6}px`,
+            `width:${width + 12}px`,
+            `height:${height + 12}px`,
+            "border:3px solid #E01F4D",
+            "border-radius:10px",
+            "z-index:2147483647",
+            "pointer-events:none",
+            "box-sizing:border-box",
+          ].join(";");
+          document.body.appendChild(el);
+        },
+        { x: box.x, y: box.y, width: box.width, height: box.height, id: HIGHLIGHT_ID },
+      ),
+      3_000,
+      undefined,
     );
   }
 
-  await page.screenshot({ path: outPath });
+  await page.screenshot({ path: outPath, timeout: 15_000 });
 
   if (box) {
-    await page.evaluate((id) => document.getElementById(id)?.remove(), HIGHLIGHT_ID);
+    await evaluateWithTimeout(
+      page.evaluate((id) => document.getElementById(id)?.remove(), HIGHLIGHT_ID),
+      3_000,
+      undefined,
+    );
   }
 }
 

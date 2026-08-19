@@ -33,10 +33,23 @@ import type { Page } from "@playwright/test";
  * resolves to undefined, which the caller treats as "skip this run" rather
  * than guessing a stack.
  */
-const DEV11_STACKS_URL = process.env.DEV11_STACKS_URL ?? "https://dev11-app.csnonprod.com/#!/stacks";
+export const DEV11_STACKS_URL = process.env.DEV11_STACKS_URL ?? "https://dev11-app.csnonprod.com/#!/stacks";
+const DEV11_HOSTNAME = new URL(DEV11_STACKS_URL).hostname;
 
+function extractStackUid(url: string): string | null {
+  return url.match(/\/stack\/([a-z0-9]+)\b/i)?.[1] ?? null;
+}
+
+// Matches by hostname, not exact URL — an explicit DEV_STACK_URL pointing at
+// a SPECIFIC dev11 stack (e.g. ".../#!/stack/bltXXXX/dashboard") still needs
+// the SAML/org/stack hand-off below, not the Sandbox-oriented login.ts-style
+// treatment, even though it isn't the generic /#!/stacks listing page.
 export function isDev11Url(url: string): boolean {
-  return url === DEV11_STACKS_URL;
+  try {
+    return new URL(url).hostname === DEV11_HOSTNAME;
+  } catch {
+    return false;
+  }
 }
 
 export function resolveDevStackUrl(docPath: string): string | undefined {
@@ -140,12 +153,31 @@ export function productHint(docPath: string): string {
  * dev11 is the real priority target for real-time verification (Sandbox is
  * only a fallback — see resolveDevStackUrl above), but org names and testing
  * stack names both vary project to project, so there's no fixed URL or
- * selector to automate here. Always pause — same as a first-time login —
- * and let a human handle SAML, org selection, and stack navigation; the
- * walkthrough picks back up once they click Resume, exactly as it does
- * today for the Sandbox path.
+ * selector to automate the FIRST time. Always pause — same as a first-time
+ * login — and let a human handle SAML, org selection, and stack navigation;
+ * the walkthrough picks back up once they click Resume.
+ *
+ * Exception: when DEV_STACK_URL points at a SPECIFIC stack (not just the
+ * generic /#!/stacks listing — i.e. a real stack UID is in the URL) and a
+ * saved dev11 session (see setup-auth.ts) lands us there directly with no
+ * redirect, there's nothing left for a human to do — skip the pause. A
+ * generic target (no specific stack UID) always still pauses, since org and
+ * stack selection genuinely can't be inferred in that case.
  */
-export async function pauseForDev11Setup(page: Page, docPath: string): Promise<void> {
+export async function pauseForDev11Setup(page: Page, docPath: string, targetUrl: string): Promise<void> {
+  const targetStackUid = extractStackUid(targetUrl);
+
+  if (targetStackUid) {
+    // Give a SAML/org-picker redirect a moment to happen before deciding
+    // whether we're already where we need to be.
+    await page.waitForLoadState("domcontentloaded").catch(() => {});
+    await page.waitForTimeout(1_500);
+    if (isDev11Url(page.url()) && extractStackUid(page.url()) === targetStackUid) {
+      console.log("Already on the target dev11 stack via a saved session — skipping the manual pause.\n");
+      return;
+    }
+  }
+
   console.log(
     "\nDev11 real-time verification run — this needs a person for the parts that vary by project:\n" +
       "  1. Complete SAML login if prompted.\n" +
@@ -153,7 +185,9 @@ export async function pauseForDev11Setup(page: Page, docPath: string): Promise<v
       `  3. Use the App Switcher (next to the profile icon) to open the right product — ` +
       `this doc lives under "${docPath}", likely ${productHint(docPath)}.\n` +
       "  4. Navigate to the correct testing stack for the feature/PR being verified.\n" +
-      "Then click ▶ Resume in the Playwright Inspector.\n",
+      "Then click ▶ Resume in the Playwright Inspector.\n" +
+      "Tip: run `npm run doc:setup-auth` once to save a dev11 session too, and future runs against " +
+      "the SAME specific stack URL can skip this pause entirely.\n",
   );
   await page.pause();
 }

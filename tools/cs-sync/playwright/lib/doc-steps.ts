@@ -56,6 +56,16 @@ const EXAMPLE_VALUE_RE = /\b(?:enter|type)\b[^.]*\(e\.g\.,?\s*([^)]+)\)/i;
 const ORDERED_RE = /^(\d+)\.\s+(.+)/;
 const HEADING_RE = /^#{1,2}\s+(.+)/;
 
+// A quoted or bolded target can itself be a markdown link — e.g. select the
+// "[Assets](/docs/headless-cms/about-assets)" module — confirmed live
+// (test-save-your-views.md) that leaving the link syntax in place made
+// locateTarget search for the literal, never-matching string
+// "[Assets](/docs/headless-cms/about-assets)" instead of "Assets".
+function stripMarkdownLink(text: string): string {
+  const m = text.match(/^\[([^\]]+)\]\([^)]+\)$/);
+  return m ? m[1]! : text;
+}
+
 export function parseUiSteps(body: string): ParsedUiSteps {
   const lines = body.split("\n");
   const steps: UiStep[] = [];
@@ -82,8 +92,8 @@ export function parseUiSteps(body: string): ParsedUiSteps {
     if (ordered) {
       const raw = ordered[2].trim();
       const targets = [
-        ...[...raw.matchAll(BOLD_RE)].map((m) => m[1].trim()),
-        ...[...raw.matchAll(QUOTED_UI_RE)].map((m) => m[1].trim()),
+        ...[...raw.matchAll(BOLD_RE)].map((m) => stripMarkdownLink(m[1].trim())),
+        ...[...raw.matchAll(QUOTED_UI_RE)].map((m) => stripMarkdownLink(m[1].trim())),
       ];
       const fillValue = raw.match(EXAMPLE_VALUE_RE)?.[1]?.trim();
       steps.push({ index: ++stepIndex, raw, targets, sectionHeading: currentHeading, fillValue });

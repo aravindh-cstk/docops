@@ -16,11 +16,12 @@ import { loginIfNeeded, resolveDevStackUrl, isDev11Url, pauseForDev11Setup } fro
  * Inputs (see .vscode/tasks.json for the prompted VS Code entry point):
  *   DOC_PATH        - repo-relative path to the .md file to walk through
  *   DEV_STACK_URL   - the feature's Dev/staging stack URL, if given. Left
- *                      blank, falls back to whichever Sandbox dashboard
- *                      matches the doc's folder — CSDOCS_SANDBOX_DASHBOARD_URL
- *                      for cs-docs/..., APIDOCS_SANDBOX_DASHBOARD_URL for
- *                      api-docs/... (see lib/resolve-stack-url.ts, and
- *                      TEAM_HANDOFF_GUIDE.md Step 3)
+ *                      blank, defaults to dev11 (a human picks org/stack —
+ *                      see lib/session.ts), then falls back to whichever
+ *                      Sandbox dashboard matches the doc's folder —
+ *                      CSDOCS_SANDBOX_DASHBOARD_URL for cs-docs/...,
+ *                      APIDOCS_SANDBOX_DASHBOARD_URL for api-docs/...
+ *                      (see lib/session.ts, and TEAM_HANDOFF_GUIDE.md Step 3)
  *   DEV_STACK_LOGIN_EMAIL / DEV_STACK_LOGIN_PASSWORD - optional, only used
  *                      if a login form is actually present
  *
@@ -42,21 +43,21 @@ interface ManifestEntry {
   filledValue: string | null;
 }
 
+// locator.evaluate() has no timeout option of its own, and once page.pause()
+// runs even once, the overall test timeout stops being enforced for the
+// rest of the run too — confirmed live against dev11, where this exact
+// evaluate() call (purely for a console.log description, not load-bearing)
+// stalled for ~10 minutes with nothing else blocking it. A manual race
+// bounds it without needing to know why the page's JS execution stalled.
 async function describeElement(locator: Locator): Promise<string> {
-  return locator
+  const evaluate = locator
     .evaluate((el) => {
       const testId = el.getAttribute("data-test-id") ?? el.getAttribute("data-testid");
       return `<${el.tagName.toLowerCase()}${testId ? ` data-test-id="${testId}"` : ""} class="${el.className}">`;
     })
     .catch(() => "<unknown>");
-}
-
-function slugifyForFilename(text: string): string {
-  return text
-    .replace(/^[+➕]\s*/, "")
-    .replace(/[^a-zA-Z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 60) || "step";
+  const timeout = new Promise<string>((resolve) => setTimeout(() => resolve("<unknown>"), 3_000));
+  return Promise.race([evaluate, timeout]);
 }
 
 test("walk through doc procedure and capture screenshots", async ({ page }) => {
@@ -69,7 +70,7 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
   test.skip(
     !devStackUrl,
     "Set DEV_STACK_URL to the feature's Dev stack, or configure CSDOCS_SANDBOX_DASHBOARD_URL / " +
-      "APIDOCS_SANDBOX_DASHBOARD_URL as the fallback for this doc's folder (see lib/resolve-stack-url.ts)",
+      "APIDOCS_SANDBOX_DASHBOARD_URL as the fallback for this doc's folder (see lib/session.ts)",
   );
 
   const repoRoot = path.resolve(process.cwd(), "..", "..");
@@ -94,10 +95,10 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
 
   // dev11 always hands off to a human — org/stack names vary project to
   // project, so there's nothing here to detect or automate (see
-  // dev11-handoff.ts). Only the Sandbox path gets the login-form-detecting,
-  // possibly-skip-entirely treatment in login.ts.
+  // lib/session.ts). Only the Sandbox path gets the login-form-detecting,
+  // possibly-skip-entirely treatment (also lib/session.ts).
   if (isDev11Url(devStackUrl!)) {
-    await pauseForDev11Setup(page, docPath!);
+    await pauseForDev11Setup(page, docPath!, devStackUrl!);
   } else {
     await loginIfNeeded(page, process.env.DEV_STACK_LOGIN_EMAIL, process.env.DEV_STACK_LOGIN_PASSWORD, devStackUrl);
   }
@@ -166,7 +167,7 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
         // button that's disabled with nothing entered (Contentstack's
         // Create Asset Folder modal, confirmed live) can actually be
         // clicked. Scoped to modal-contained inputs (see
-        // fill-example-value.ts) so this is a no-op until that modal is
+        // lib/doc-steps.ts) so this is a no-op until that modal is
         // genuinely open, rather than firing on the very first click.
         if (step.fillValue && filledValue === null) {
           const uniqueValue = `${step.fillValue}-${runSuffix}`;
@@ -185,8 +186,11 @@ test("walk through doc procedure and capture screenshots", async ({ page }) => {
       const after = await captureUiState(page);
       if (shotCount < MAX_SCREENSHOTS_PER_DOC && isNewUiState(before, after)) {
         shotCount++;
-        const label = step.targets[step.targets.length - 1] ?? step.sectionHeading;
-        const filename = `${step.index}-${slugifyForFilename(label)}.png`;
+        // Filename is the doc's own slug (not its full relative path) plus a
+        // running number — e.g. "test-save-your-views-1.png" — rather than
+        // step index + a slugified UI label, so uploaded filenames read as
+        // "which doc, which screenshot" at a glance.
+        const filename = `${docSlug}-${shotCount}.png`;
         screenshotPath = path.join(screenshotDir, filename);
         // The 300ms click-settle wait above is enough for a modal/panel to
         // appear, but not for an async-loaded list (e.g. the Assets grid) to
