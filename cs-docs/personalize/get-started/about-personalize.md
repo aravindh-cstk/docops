@@ -20,10 +20,10 @@ You can also [import](/docs/personalize/working-with-projects) and [export](/doc
 
 **Note:** To enable Personalize for your organization, reach out to our [support](mailto:support@contentstack.com) team.
 
-To access Personalize and create your first project, log in to your [Contentstack account](https://www.contentstack.com/docs/personalize/link-test-target) and follow these steps:
+To access Personalize and create your first project, sign in to your [Contentstack account](https://www.contentstack.com/docs/personalize/link-test-target) and follow these steps:
 
-1.  In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
-2.  You can then create a new Personalize project by clicking the **\+ New Personalize Project** button.
-3.  Your Personalize landing page will look as follows:![Personalize Projects landing page](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta170a6cc4f9123c3/690d8c1d7e61cd12ad59d191/New-Personalize-project.png)
+1. In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
+2. You can then create a new Personalize project by clicking the **New Personalize Project** button.
+3. Your Personalize landing page looks as follows:![Personalize Projects landing page](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta170a6cc4f9123c3/690d8c1d7e61cd12ad59d191/New-Personalize-project.png).
 
 ## Tutorial Video
