@@ -10,6 +10,13 @@
  * matching the inline placement convention found throughout cs-docs
  * (e.g. cs-docs/brand-kit/set-up-brand-kit/create-a-brand-kit.md).
  *
+ * More than 2 screenshots for one doc go into a folder named after the
+ * doc's own slug (e.g. test-save-your-views/) instead of dropping loose
+ * into the root Assets library — keeps a busy procedure's images grouped
+ * without cluttering root for docs that only need a shot or two. Re-running
+ * this for the same doc replaces each existing asset (by filename) in
+ * place rather than uploading a fresh duplicate every time.
+ *
  * Usage: npm run doc:apply-screenshots -- --doc=cs-docs/brand-kit/set-up-brand-kit/create-a-brand-kit.md
  */
 import "./loadEnv.js";
@@ -18,6 +25,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadSandboxConfig } from "./config.js";
 import { ContentstackClient } from "./contentstack.js";
+
+// Above this many screenshots, group them in a per-doc folder instead of
+// the root Assets library.
+const FOLDER_THRESHOLD = 2;
 
 interface ManifestEntry {
   index: number;
@@ -68,6 +79,14 @@ async function main() {
   const config = loadSandboxConfig(repoRoot, "csdocs");
   const client = new ContentstackClient(config);
 
+  // null = root Assets library (1-2 screenshots isn't worth a folder).
+  let folderUid: string | null = null;
+  if (withShots.length > FOLDER_THRESHOLD) {
+    const folder = await client.findOrCreateFolder(docSlug);
+    folderUid = folder.uid;
+    console.log(`Using folder "${docSlug}" (${withShots.length} screenshots) — ${folder.uid}`);
+  }
+
   let markdown = fs.readFileSync(absDocPath, "utf8");
 
   for (const entry of withShots) {
@@ -78,7 +97,10 @@ async function main() {
 
     const filename = path.basename(entry.screenshotPath);
     console.log(`Uploading ${filename}...`);
-    const asset = await client.uploadAsset(entry.screenshotPath);
+    // Upsert, not a fresh upload every time — re-running this script for the
+    // same doc (e.g. after a doc edit) replaces each existing asset by
+    // filename in place instead of piling up duplicates in the Sandbox.
+    const asset = await client.upsertAsset(entry.screenshotPath, folderUid);
     // Alt text is the descriptive sentence buildAltText() generated at capture
     // time (docs standard: explains what's shown, never "image of X") — the
     // filename stays a plain step-numbered asset name, that's a separate concern.
@@ -86,8 +108,17 @@ async function main() {
     const imageTag = `![${altText}](${asset.url})`;
 
     const stepLineRe = new RegExp(`^(\\d+\\.\\s+.*${escapeRegExp(firstWords(entry.raw))}.*)$`, "m");
-    if (stepLineRe.test(markdown)) {
-      markdown = markdown.replace(stepLineRe, (line) => `${line}${imageTag}`);
+    const match = markdown.match(stepLineRe);
+    if (match) {
+      const line = match[1]!;
+      // An existing image tag on this line (from an earlier run of this
+      // script) gets replaced in place — appending a second one would
+      // duplicate the screenshot in the doc every time this re-runs.
+      const existingImageRe = /!\[[^\]]*\]\([^)]*\)\s*$/;
+      const newLine = existingImageRe.test(line)
+        ? line.replace(existingImageRe, imageTag)
+        : `${line}${imageTag}`;
+      markdown = markdown.replace(line, newLine);
       console.log(`  Inserted into step ${entry.index}`);
     } else {
       console.warn(`  Could not find step ${entry.index}'s line verbatim — appending image tag at end of file.`);
