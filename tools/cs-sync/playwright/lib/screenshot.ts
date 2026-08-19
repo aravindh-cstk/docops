@@ -92,12 +92,19 @@ export async function highlightAndScreenshot(
     await evaluateWithTimeout(
       page.evaluate(
         ({ x, y, width, height, id }) => {
+          // Clamped to 0, not just x/y - 6 — confirmed live that an element
+          // sitting flush against the viewport edge (e.g. a left sidebar at
+          // x≈0) pushed the highlight box's border into negative
+          // coordinates, clipping it off-screen in the captured screenshot
+          // on that side.
+          const left = Math.max(0, x - 6);
+          const top = Math.max(0, y - 6);
           const el = document.createElement("div");
           el.id = id;
           el.style.cssText = [
             "position:fixed",
-            `left:${x - 6}px`,
-            `top:${y - 6}px`,
+            `left:${left}px`,
+            `top:${top}px`,
             `width:${width + 12}px`,
             `height:${height + 12}px`,
             "border:3px solid #E01F4D",
