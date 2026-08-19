@@ -1,16 +1,14 @@
 ---
-
+title: "MCP Profile Hub"
+description: "Create governed MCP profiles that expose a curated set of Contentstack tools, then connect them to Claude, ChatGPT, Cursor, and other AI clients."
 url: "/developers/mcp-profile-hub"
-seo_title: "MCP Profile Hub | Contentstack"
-seo_description: "Create governed MCP profiles that expose a curated set of Contentstack tools, then connect them to Claude, ChatGPT, Cursor, and other AI clients."
-
 ---
 
 # MCP Profile Hub
 
 MCP Profile Hub is a Contentstack [Marketplace app](https://www.contentstack.com/docs/marketplace/about-marketplace) that creates **profiles**. Each profile exposes a fixed subset of Contentstack tools over the Model Context Protocol (MCP), and any MCP-compatible AI client can connect to it. This helps agents select the correct tool, prevents unused tool definitions from consuming the context window, and reduces task failures in smaller models.
 
-## What you'll learn
+## What You'll Learn
 
 - Decide whether to install a system profile or build a custom one
 - Create a profile using the Tool selection, Configuration, and Installation wizard
@@ -20,13 +18,13 @@ MCP Profile Hub is a Contentstack [Marketplace app](https://www.contentstack.com
 
 
 
-## Quick decision guide
+## Quick Decision Guide
 
 
-| Approach                                                   | Key configuration value                                            | Reason                                                                                               |
-| ---------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| [Use a system profile](#option-a-use-a-system-profile)     | Pick a profile from the System profiles list, then choose a stack  | Fastest path. No tool selection needed, works for common jobs like asset lookup or content discovery |
-| [Build a custom profile](#option-b-build-a-custom-profile) | Run the 3-step wizard: Tool selection, Configuration, Installation | Needed when no system profile matches the job, or the job requires a specific, narrower toolset      |
+| Approach | Key configuration value | Reason |
+| --- | --- | --- |
+| [Use a system profile](#option-a-use-a-system-profile) | Pick a profile from the System profiles list, then choose a stack | Fastest path. No tool selection needed, works for common jobs like asset lookup or content discovery |
+| [Build a custom profile](#option-b-build-a-custom-profile) | Run the 3-step wizard: Tool selection, Configuration, Installation | Needed when no system profile matches the job, or the job requires a specific, narrower toolset |
 
 
 
@@ -38,7 +36,7 @@ MCP Profile Hub is a Contentstack [Marketplace app](https://www.contentstack.com
 
 
 
-## Create a profile
+## Create a Profile
 
 You create a profile in the MCP Profile Hub app through a three-step wizard: Tool selection, Configuration, Installation. Starting from a system profile skips Tool selection, so you only complete Configuration and Installation.
 
@@ -63,11 +61,11 @@ No tool selection is needed for a system profile.
 5. Select the tools this profile should expose and click **Save selection**.
 6. Click **Save & Continue**.
 
-![Browse tools panel showing catalogs on the left, such as All tools, CMA, CDA, Analytics, BrandKit, Launch, DeveloperHub, Audience Intelligence, and Personalize, tools grouped by area, such as Entry Management, and each tool tagged by operation, such as Publishing or Create.](assets/browse-tools-panel.png)
+![Browse tools panel showing catalogs on the left, tools grouped by area, and each tool tagged by operation, such as Publishing or Create.](assets/browse-tools-panel.png)
 
 **Tip:** Tools are grouped by area and tagged by operation: Read, Create, Update, Delete, Action, or Publishing.
 
-A wider tool selection pulls in more OAuth  scopes for the client to request, since required scopes are derived automatically from your selection. Keep the selection tight. Prefer a second focused profile over adding unrelated tools to one.
+A wider tool selection pulls in more OAuth scopes for the client to request, since required scopes are derived automatically from your selection. Keep the selection tight. Prefer a second focused profile over adding unrelated tools to one.
 
 **Step 2: Configure**
 
@@ -86,7 +84,9 @@ The `profile_id` is a catalog identifier, not a secret. The `org_uid` scopes the
 
 The **Install** screen shows a ready-to-paste snippet for each supported client, and the raw connector URL.
 
-Installation step shows different client tabs along with the raw connector URL.  Select your client and follow the matching section under [Connect your AI client](#connect-your-ai-client).
+![Installation step showing different client tabs along with the raw connector URL.](assets/installation-step.png)
+
+Select your client and follow the matching section under [Connect your AI client](#connect-your-ai-client).
 
 **Verification:** the profile's Installation screen shows a stable endpoint URL. Paste that URL into an MCP client in the next section.
 
@@ -94,7 +94,7 @@ Installation step shows different client tabs along with the raw connector URL. 
 
 Reopen a profile any time to change its tools or configuration. The `profile_id` and connector URL stay stable, so connected clients keep working after you edit it.
 
-## Connect your AI client
+## Connect Your AI Client
 
 Every profile is a remote MCP server you connect to over Streamable HTTP. Auth is handled by OAuth in the browser on first connect. No keys, [management tokens, or delivery tokens](https://www.contentstack.com/docs/developers/create-tokens/overview-of-tokens) go into client configuration.
 
@@ -108,16 +108,16 @@ https://mcp-profile-hub.contentstack.com/api/mcp?profile_id=asset_librarian&org_
 
 MCP Profile Hub works with any MCP-compatible client, but behavior differs between clients and models. Model capability matters as much as the client: a more capable model interprets tool descriptions and input schemas more accurately, so it picks the right tool and passes valid arguments more consistently.
 
-| Client               | Reliability         | Notes                                                                                                                                                                                                                    |
-| -------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Claude Code (CLI)    | Recommended           | Gives the most consistent connection and tool execution.                                                                                                                                                              |
-| Claude Desktop       | Works                 | The connection can be intermittent. Reconnect the server if tools don't appear.                                                                                                                                       |
-| Claude.ai (web)      | Can be inconsistent   | On Enterprise and Team plans, connector installation and the authorization handshake depend on your organization's settings, and may fail or require an administrator to enable and approve the connector first. If setup does not complete, check with your Claude workspace administrator, or use Claude Code (CLI) instead. |
-| Codex                | Depends on model      | Use the latest models (5.6 Terra/Luna). Older models are less reliable at tool selection and invocation.                                                                                                              |
+| Client | Reliability | Notes |
+| --- | --- | --- |
+| Claude Code (CLI) | Recommended | Gives the most consistent connection and tool execution. |
+| Claude Desktop | Works | The connection can be intermittent. Reconnect the server if tools don't appear. |
+| Claude.ai (browser) | Can be inconsistent | On Enterprise and Team plans, connector installation and the authorization handshake depend on your organization's settings, and may fail or require an administrator to enable and approve the connector first. If setup does not complete, check with your Claude workspace administrator, or use Claude Code (CLI) instead. |
+| Codex | Depends on model | Use the latest models (5.6 Terra/Luna). Older models are less reliable at tool selection and invocation. |
 
 If a tool call fails on an older or less capable model, see [Execution errors](#execution-errors).
 
-### Claude (Desktop and web)
+### Claude (desktop and browser)
 
 1. From the profile's Installation step, open the **Claude Desktop** tab and click **Add to Claude**. This opens claude.ai's custom connector popup, pre-filled with the profile's details.
 2. Review the details and click **Add**.
@@ -154,7 +154,7 @@ Claude Desktop only reads `claude_desktop_config.json` on launch, so restart it 
 
 ### Claude Code (CLI)
 
-Claude Code supports remote HTTP MCP servers natively.
+Claude Code supports remote HTTP MCP servers directly, with no bridge required.
 
 1. Run:
 
@@ -231,7 +231,7 @@ For clients that only support stdio, bridge with [mcp-remote](https://www.npmjs.
 
 **Verification**: most clients list the connected server and its tools once auth completes. Ask the agent to do something the profile supports. If tools do not appear or the call fails, see [Troubleshooting](#troubleshooting).
 
-## Concepts and reference
+## Concepts and Reference
 
 ### How MCP Profile Hub works
 
@@ -253,7 +253,7 @@ A profile bundles:
 - **Tools**: the curated set of catalog tools it exposes
 - **Configuration**: the Contentstack projects it operates on, such as the default stack
 
-Tools are not raw API endpoints. When a client connects, the runtime contextualizes each tool against your Contentstack setup, so the tool reflects what you can do rather than a generic API surface.
+Tools are not raw API endpoints. When a client connects, the runtime contextualizes each tool against your Contentstack setup, so the tool reflects what you can do instead of exposing a generic API surface.
 
 ### System profiles and custom profiles
 
@@ -261,7 +261,7 @@ Tools are not raw API endpoints. When a client connects, the runtime contextuali
 
 **Custom profiles** are created by your organization. You build them from the tool catalog to match your own jobs, for example a regional publishing assistant, a localization workflow profile, or a content audit profile.
 
-Profiles screen showing System profiles section with predefined profiles such as Asset Librarian and Content Explorer, plus the organization's custom profiles and the New Profile button.
+![Profiles screen showing System profiles section with predefined profiles such as Asset Librarian and Content Explorer, plus the organization's custom profiles and the New Profile button.](assets/profiles-screen.png)
 
 A profile works best when it supports one well-defined job. When in doubt:
 
@@ -276,19 +276,19 @@ A profile works best when it supports one well-defined job. When in doubt:
 A profile's tools are drawn from catalogs, one per Contentstack service:
 
 
-| Catalog               | Covers                                                                                                          |
-| --------------------- | --------------------------------------------------------------------------------------------------------------- |
-| CMA                   | Content Management API: entries, [content types](https://www.contentstack.com/docs/headless-cms/about-content-types), [branches](https://www.contentstack.com/docs/headless-cms/about-branches), [workflows](https://www.contentstack.com/docs/headless-cms/about-workflows), [releases](https://www.contentstack.com/docs/headless-cms/about-releases), [environments](https://www.contentstack.com/docs/developers/set-up-environments/about-environments), [publishing](https://www.contentstack.com/docs/content-managers/publish-content) |
-| [CDA](https://www.contentstack.com/docs/developers/apis/content-delivery-api) | Content Delivery API: read-only published content                                                               |
-| [Analytics](https://www.contentstack.com/docs/analytics/about-analytics) | Content and API usage analytics                                                                                 |
-| [Brand Kit](https://www.contentstack.com/docs/content-managers/brand-kit/about-brand-kit) | On-brand content generation                                                                                     |
-| [Launch](https://www.contentstack.com/docs/developers/launch/about-launch) | Deployments, environments, CDN cache revalidation, logs                                                         |
-| [Developer Hub](https://www.contentstack.com/docs/developers/developer-hub/about-developer-hub) | Marketplace apps, OAuth, and app-integration management                                                         |
-| [Audience Intelligence](https://www.contentstack.com/docs/lytics/about-lytics-cdp) | Audience segments, user profiles, and behavioral intelligence (Lytics)                                          |
-| [Personalize](https://www.contentstack.com/docs/personalize/about-experiences) | Experiences, experiments, and personalization data                                                              |
+| Catalog | Covers |
+| --- | --- |
+| CMA | Content Management API: entries, [content types](https://www.contentstack.com/docs/headless-cms/about-content-types), [branches](https://www.contentstack.com/docs/headless-cms/about-branches), [workflows](https://www.contentstack.com/docs/headless-cms/about-workflows), [releases](https://www.contentstack.com/docs/headless-cms/about-releases), [environments](https://www.contentstack.com/docs/developers/set-up-environments/about-environments), [publishing](https://www.contentstack.com/docs/content-managers/publish-content) |
+| [CDA](https://www.contentstack.com/docs/developers/apis/content-delivery-api) | Content Delivery API: read-only published content |
+| [Analytics](https://www.contentstack.com/docs/analytics/about-analytics) | Content and API usage analytics |
+| [Brand Kit](https://www.contentstack.com/docs/content-managers/brand-kit/about-brand-kit) | On-brand content generation |
+| [Launch](https://www.contentstack.com/docs/developers/launch/about-launch) | Deployments, environments, CDN cache revalidation, logs |
+| [Developer Hub](https://www.contentstack.com/docs/developers/developer-hub/about-developer-hub) | Marketplace apps, OAuth, and app-integration management |
+| [Audience Intelligence](https://www.contentstack.com/docs/lytics/about-lytics-cdp) | Audience segments, user profiles, and behavioral intelligence (Lytics) |
+| [Personalize](https://www.contentstack.com/docs/personalize/about-experiences) | Experiences, experiments, and personalization data |
 
 
-More tool categories will be added over time. Browse the catalog in the app for the current tool set.
+More tool categories arrive over time. Browse the catalog in the app for the current tool set.
 
 ### Who it's for
 
@@ -304,11 +304,11 @@ More tool categories will be added over time. Browse the catalog in the app for 
 Both connect AI agents to Contentstack and cover the same kinds of work. They differ in how you install them and how many tools your agent ends up with:
 
 
-|                | [Contentstack MCP Server](https://www.contentstack.com/docs/agent-os/contentstack-mcp-server)             | MCP Profile Hub                                                                    |
-| -------------- | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Installation   | Runs locally via `npx`, configured per machine with credentials or an OAuth session                       | Hosted at `mcp-profile-hub.contentstack.com`. Nothing to install, add a URL to your client |
-| Transport      | stdio, so it only works in clients that can run a local process                                           | Streamable HTTP, so it also works in web-based clients like claude.ai and ChatGPT  |
-| Tool selection | Tool groups (`cma`, `launch`, and so on). Each group loads its full toolset, up to 77 tools for CMA alone | Curated per profile. You expose exactly the tools a job needs, nothing more        |
+| | [Contentstack MCP Server](https://www.contentstack.com/docs/agent-os/contentstack-mcp-server) | MCP Profile Hub |
+| --- | --- | --- |
+| Installation | Runs locally via `npx`, configured per machine with credentials or an OAuth session | Hosted at `mcp-profile-hub.contentstack.com`. Nothing to install, add a URL to your client |
+| Transport | stdio, so it only works in clients that can run a local process | Streamable HTTP, so it also works in browser-based clients like claude.ai and ChatGPT |
+| Tool selection | Tool groups (`cma`, `launch`, and so on). Each group loads its full toolset, up to 77 tools for CMA alone | Curated per profile. You expose exactly the tools a job needs, nothing more |
 
 
 The MCP Server gives a developer the full toolset on their own machine. MCP Profile Hub gives any user a scoped toolset from any client, shared across a team.
@@ -335,11 +335,11 @@ Least-privilege execution: access is derived from your existing [Contentstack ro
 Frequently asked:
 
 
-| Question                                        | Answer                                                      |
-| ----------------------------------------------- | ----------------------------------------------------------- |
-| Do I need to create an API key?                 | No. Auth is OAuth, you sign in through the browser.         |
-| Is the connector URL sensitive?                 | No. The `profile_id` is a catalog identifier, not a secret. |
-| Can a shared profile give someone extra access? | No. Each user connects with their own login and roles.      |
+| Question | Answer |
+| --- | --- |
+| Do I need to create an API key? | No. Auth is OAuth, you sign in through the browser. |
+| Is the connector URL sensitive? | No. The `profile_id` is a catalog identifier, not a secret. |
+| Can a shared profile give someone extra access? | No. Each user connects with their own login and roles. |
 
 
 
@@ -350,7 +350,7 @@ All profile activity is logged. A log entry captures the user, profile, client, 
 
 The MCP Profile Hub app includes an **Executions** view: a searchable, filterable history of tool calls across your profiles. Each entry shows the status (running, completed, or failed), the profile and tool involved, timing, and any error message. Expanding an entry shows its request metadata (profile, tool, status, and input parameters where captured). The Executions view does not show which user or client made the call, or the permission outcome. For that level of detail, use the full audit log.
 
-![Executions view with a search bar and All statuses and All profiles filters, listing tool calls with a status badge (Completed, Running, or Failed), profile name, tool name, and timestamp, including a failed create_an_entry_variant call with its HTTP 412 error message shown inline.](assets/executions-view.png)
+![Executions view with search and filters, listing tool calls with a status badge, profile name, tool name, timestamp, and an inline error message on a failed call.](assets/executions-view.png)
 
 Use it to:
 
@@ -369,33 +369,33 @@ Start with the **Executions** view in the MCP Profile Hub app. Most execution fa
 ### Connection issues
 
 
-| Symptom                              | Root cause                                      | Resolution                                                                                                                        |
-| ------------------------------------ | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Client shows the server but no tools | OAuth was not completed                         | Trigger the sign-in (for example, `/mcp` in Claude Code) and finish the browser flow.                                             |
-| `mcp-remote` fails to start          | Node.js is missing, or `npx` is blocked         | Install Node.js, ensure `npx -y mcp-remote` can run.                                                                              |
-| Auth loops or repeated sign-in       | Stale cached token                              | Clear the client's cached MCP credentials and reconnect. For `mcp-remote`, remove its local auth cache (`~/.mcp-auth`) and retry. |
+| Symptom | Root cause | Resolution |
+| --- | --- | --- |
+| Client shows the server but no tools | OAuth was not completed | Trigger the sign-in (for example, `/mcp` in Claude Code) and finish the browser flow. |
+| `mcp-remote` fails to start | Node.js is missing, or `npx` is blocked | Install Node.js, ensure `npx -y mcp-remote` can run. |
+| Auth loops or repeated sign-in | Stale cached token | Clear the client's cached MCP credentials and reconnect. For `mcp-remote`, remove its local auth cache (`~/.mcp-auth`) and retry. |
 
 
 
 
 ### Authentication errors
 
-| Error                        | Root cause                                                       | Resolution                                                                                 |
-| ----------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-| Sign-in required or not authorized | You have not completed OAuth for this profile, or the token expired and could not refresh | Reconnect and sign in again.                                                              |
-| Scope not granted            | The profile requests scopes you did not approve                    | Reconnect and approve all requested scopes, or ask the profile owner to narrow the tools. |
+| Error | Root cause | Resolution |
+| --- | --- | --- |
+| Sign-in required or not authorized | You have not completed OAuth for this profile, or the token expired and could not refresh | Reconnect and sign in again. |
+| Scope not granted | The profile requests scopes you did not approve | Reconnect and approve all requested scopes, or ask the profile owner to narrow the tools. |
 
 
 
 ### Execution errors
 
 
-| Error                       | Root cause                                              | Resolution                                                                                                                |
-| --------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Permission denied on a tool | Your Contentstack role cannot perform the operation     | This is least-privilege working as intended. Use an account with the needed role, or a profile scoped to what you can do. |
-| No stack selected           | The profile has no stack configured                      | Configure a stack in the profile's Configuration step.                                                                    |
-| Cannot find that stack      | Wrong stack or region mismatch                          | Confirm the profile's configured stack is correct for your account and region.                                            |
-| Tool not found              | Tool name mismatch in the client                        | Use the exact tool name the client lists for the server.                                                                  |
+| Error | Root cause | Resolution |
+| --- | --- | --- |
+| Permission denied on a tool | Your Contentstack role cannot perform the operation | This is least-privilege working as intended. Use an account with the needed role, or a profile scoped to what you can do. |
+| No stack selected | The profile has no stack configured | Configure a stack in the profile's Configuration step. |
+| Cannot find that stack | Wrong stack or region mismatch | Confirm the profile's configured stack is correct for your account and region. |
+| Tool not found | Tool name mismatch in the client | Use the exact tool name the client lists for the server. |
 | Tool call uses the wrong tool, or invalid arguments | The model is not interpreting the tool's description or input schema correctly. This is more common on older or less capable models. | Retry on a newer model, or give the model more context about the operation. See [Client and model compatibility](#client-and-model-compatibility). |
 
 
@@ -409,7 +409,7 @@ Start with the **Executions** view in the MCP Profile Hub app. Most execution fa
 
 
 
-## Next steps
+## Next Steps
 
 - [Contentstack MCP Server](https://www.contentstack.com/docs/agent-os/contentstack-mcp-server): compare the locally-installed MCP Server against MCP Profile Hub if you need the full toolset on a developer machine instead of a scoped, hosted profile.
 - [MCP Client: Connect Remote Tools](https://www.contentstack.com/docs/agent-os/mcp-client-connect-remote-tools): connect any remote MCP server, including but not limited to MCP Profile Hub, to the Contentstack Agent.
