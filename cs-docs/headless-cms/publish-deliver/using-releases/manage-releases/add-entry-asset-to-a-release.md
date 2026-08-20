@@ -26,6 +26,9 @@ To add an entry to a release, log in to your [Contentstack account](https://www.
         **Note:** For older releases, you may receive a warning message indicating references may not be included, or only one level of nesting may be processed. To include all references, [create a new release](/docs/headless-cms/create-a-new-release) or [clone an existing one](/docs/headless-cms/clone-a-release).
         
 5.  Select the language(s) for deployment.
+    
+    **Note:** If **Disable fallback publishing** is enabled for your stack, you can select only the locales in which the entry is localized. Locales where the entry is not localized are disabled in the modal, and adding a non-localized item through the API returns an error.
+    
 6.  Choose the required action (Publish or Unpublish).
 7.  Click **Add**.
 8.  If the entry contains references, review the **Add Reference(s) to Release** modal, which lists linked entries and assets up to the configured nested reference publishing (NRP) depth.

@@ -38,6 +38,8 @@ To deploy a release, log in to your [Contentstack account](https://www.contentst
         
 4.  Finally, click **Deploy**.
 
+**Note:** If **Disable fallback publishing** is enabled, any item that is not localized in a deploy locale is skipped and not published through fallback when you deploy the release. This applies to immediate, scheduled, and rollback deploys of the latest (v2) releases.
+
 **Note**
 
 -   Once you deploy a release in an environment, all the items within are locked. You can [unlock the release](/docs/headless-cms/unlock-a-release) and make the necessary changes.

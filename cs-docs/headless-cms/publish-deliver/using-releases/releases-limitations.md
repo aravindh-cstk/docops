@@ -17,3 +17,4 @@ url: /headless-cms/releases-limitations
 -   A release must be deployed before it can be rolled back. You cannot roll back a release that has not been deployed, including a scheduled release before its scheduled date.
 -   After you delete a rollback release, you must redeploy the original release before creating another rollback release.
 -   A rollback release cannot itself be rolled back.
+-   The cross-locale add restriction from the **Disable fallback publishing** setting applies to the latest (v2) releases only. Legacy (v1) releases are not affected.

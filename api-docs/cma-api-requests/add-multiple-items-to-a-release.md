@@ -101,3 +101,19 @@ updated_at: 2024-11-14T06:33:06.597Z
 }
 ```
 
+## Error Response
+
+<p>When the stack has <span data-type='inlineCode'>disable_fallback_publish</span> enabled and one or more items are not localized in the requested locale, the request is rejected with HTTP status <span data-type='inlineCode'>422</span> and error code <span data-type='inlineCode'>141</span>. The request is rejected all-or-none, and <span data-type='inlineCode'>unpublish</span> items are not affected. The <span data-type='inlineCode'>locale : uid</span> pairs listed are illustrative.</p>
+
+```json
+{
+    "error_message": "Failed to add item(s) to release.",
+    "error_code": 141,
+    "errors": {
+        "items": [
+            "Item(s) not localized in the selected locale. Fallback publishing is disabled for this stack: fr-fr : blt222, de-at : blt333."
+        ]
+    }
+}
+```
+

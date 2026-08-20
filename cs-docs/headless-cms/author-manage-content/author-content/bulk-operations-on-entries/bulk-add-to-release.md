@@ -25,6 +25,8 @@ To bulk add entries to a release, log in to your [Contentstack account](https://
 5.  Select the languages in which you want to deploy the entries. Specify the action you want to perform—either **Publish** or **Unpublish**.![Bulk Add to Release_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta59ebbcb24f23201/66cf1b1d62373b199f72430d/Bulk_Add_to_Release_4.png)
 6.  Select **Add with References** to include all referenced entries or **Add without References** to add only the selected entries.
     
+    **Note:** If **Disable fallback publishing** is enabled for your stack, entries that are not localized in a selected locale are skipped and not added to the release. Only localized entries are added. You can view skipped items in the [Stack Bulk Task Queue](/docs/headless-cms/stack-bulk-task-queue).
+    
     **Note**
     
     -   Nested references up to a default depth of **5 levels** will be included, for both single and bulk add to release actions, and can vary as per your organization’s plan.
