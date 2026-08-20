@@ -10,7 +10,7 @@ updated_at: 2023-03-11T07:54:19.683Z
 
 # Get stack settings
 
-<p>The <span data-type="inlineCode">Get stack settings</span> call retrieves the configuration settings of an existing stack.</p>
+<p>The <span data-type="inlineCode">Get stack settings</span> call retrieves the configuration settings of an existing stack.</p><p class="note"><strong>Note</strong>: The <span data-type="inlineCode">disable_fallback_publish</span> field appears in the response only after it has been saved for the stack.</p>
 
 **API Endpoint**: `/stacks/settings`
 
@@ -26,6 +26,7 @@ updated_at: 2023-03-11T07:54:19.683Z
 ```json
 {
     "stack_settings": {
+        "disable_fallback_publish": true,
         "rte": {
             "cs_only_breakline": true
         },

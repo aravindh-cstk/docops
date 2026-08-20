@@ -27,6 +27,8 @@ You can add specific settings for your stack by passing any of the following par
 
 **Note**: We are currently supporting four attributes (GD:font-size, GD:color, GD:background-color, and MW:color) for this key. This is applicable for both HTML and JSON Rich Text Editors. For more information, refer to the [API Change Log](/docs/changelog/#accept-or-skip-source-color-background-color-while-copying-content-into-html-json-rtes) for this update.
 
+- "disable_fallback_publish": true: Prevents entries that are not localized in the target locale from being fallback-published. When enabled, non-localized items are rejected when added to a v2 release and skipped at deploy time. This is a plan-based setting and can be saved only by the stack Owner, Admin, or Developer when your plan includes the feature.
+
 To enable/disable Live Preview, pass the following schema in the Request Body:
 
 ```
@@ -44,6 +46,7 @@ Here’s a sample of the Request Body:
 ```
 {
     "stack_settings": {
+        "disable_fallback_publish": true,
  		"stack_variables": {
 			"enforce_unique_urls": true,
 			"sys_rte_allowed_tags": "style,figure,script",
@@ -81,6 +84,7 @@ If you exclusively set "cs_only_breakline": true within the "rte" parameter, it 
 ```json
 {
     "stack_settings": {
+        "disable_fallback_publish": true,
  		"stack_variables": {
 			"enforce_unique_urls": true,
 			"sys_rte_allowed_tags": "style,figure,script",
@@ -105,6 +109,7 @@ If you exclusively set "cs_only_breakline": true within the "rte" parameter, it 
 {
     "notice": "Stack settings updated successfully.",
     "stack_settings": {
+        "disable_fallback_publish": true,
         "rte": {
             "cs_breakline_on_enter": true,
             "cs_only_breakline": true
