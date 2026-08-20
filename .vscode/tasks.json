@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docs: Playwright Procedure Walkthrough",
+      "type": "shell",
+      "command": "DOC_PATH='${input:docPath}' DEV_STACK_URL='${input:devStackUrl}' npx playwright test --headed",
+      "options": {
+        "cwd": "${workspaceFolder}/tools/cs-sync"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "detail": "Walks a doc's numbered procedure in a real browser against the Dev stack, capturing screenshots at each new UI state. See TEAM_HANDOFF_GUIDE.md Step 4.5."
+    },
+    {
+      "label": "Docs: Apply Captured Screenshots",
+      "type": "shell",
+      "command": "npm run doc:apply-screenshots -- --doc='${input:docPath}'",
+      "options": {
+        "cwd": "${workspaceFolder}/tools/cs-sync"
+      },
+      "problemMatcher": [],
+      "detail": "Uploads the screenshots from the last walkthrough run to CS-Docs Sandbox and splices them into the doc."
+    }
+  ],
+  "inputs": [
+    {
+      "id": "docPath",
+      "type": "promptString",
+      "description": "Path (repo-relative) to the new/updated .md file, e.g. cs-docs/studio/my-new-feature.md"
+    },
+    {
+      "id": "devStackUrl",
+      "type": "promptString",
+      "description": "Dev/staging stack URL for the feature being documented, if you have one specific to this PR. Leave blank to use dev11 (you'll pick the org/stack manually when the browser pauses) — paste a Sandbox URL here explicitly if you want that instead.",
+      "default": ""
+    }
+  ]
+}

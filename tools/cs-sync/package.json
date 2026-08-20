@@ -31,7 +31,11 @@
     "test:doc-index": "tsx src/test-doc-index.ts",
     "test:image-rewrite": "tsx src/test-image-rewrite.ts",
     "test:all": "tsx src/test-report.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "doc:walkthrough": "playwright test",
+    "doc:walkthrough:headed": "playwright test --headed",
+    "doc:apply-screenshots": "tsx src/apply-screenshots.ts",
+    "doc:setup-auth": "tsx playwright/setup-auth.ts"
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
@@ -40,11 +44,13 @@
     "markdown-it": "^14.1.0",
     "node-html-parser": "^7.1.0",
     "sanitize-html": "^2.14.0",
+    "sharp": "^0.35.3",
     "turndown": "^7.2.0",
     "turndown-plugin-gfm": "^1.0.2",
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.48.0",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.13.10",
     "@types/sanitize-html": "^2.13.0",

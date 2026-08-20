@@ -260,10 +260,18 @@ export class ContentstackClient {
     return userIndex[userUid] || `Contentstack user ${userUid}`;
   }
 
-  async findAssetByFilename(filename: string): Promise<{ url: string; uid: string } | null> {
-    const query = JSON.stringify({ filename });
+  /**
+   * folderUid: undefined searches the whole stack (original behavior,
+   * pre-folder-scoping); null explicitly scopes to root-level assets only
+   * (parent_uid: null); a string scopes to that specific folder. Doc
+   * screenshots need the null/string distinction so a same-named file in a
+   * DIFFERENT doc's folder never gets mistaken for this doc's own asset.
+   */
+  async findAssetByFilename(filename: string, folderUid?: string | null): Promise<{ url: string; uid: string } | null> {
+    const queryObj: Record<string, unknown> = { filename };
+    if (folderUid !== undefined) queryObj.parent_uid = folderUid;
     const params = new URLSearchParams({
-      query,
+      query: JSON.stringify(queryObj),
       include_count: "true",
       limit: "1",
     });
@@ -283,15 +291,66 @@ export class ContentstackClient {
     return { url: asset.url, uid: asset.uid };
   }
 
-  async uploadAsset(filePath: string): Promise<{ url: string; uid: string }> {
+  /**
+   * Finds a root-level asset FOLDER (not a regular asset — folders are
+   * "assets" with is_dir: true) by exact name. Used to reuse a doc's
+   * screenshot folder across walkthrough re-runs instead of creating a
+   * fresh one (and duplicate images inside it) every time.
+   */
+  async findFolderByName(name: string): Promise<{ uid: string } | null> {
+    const params = new URLSearchParams({
+      include_folders: "true",
+      query: JSON.stringify({ is_dir: true, name, parent_uid: null }),
+      include_count: "true",
+      limit: "1",
+    });
+
+    const res = await this.fetchWithRetry(`${this.config.baseUrl}/assets?${params}`, {
+      headers: this.headers(),
+    });
+
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`findFolderByName failed (${res.status}): ${text}`);
+    }
+
+    const data = (await res.json()) as { assets?: Array<{ uid?: string }> };
+    const folder = data.assets?.[0];
+    return folder?.uid ? { uid: folder.uid } : null;
+  }
+
+  async createFolder(name: string): Promise<{ uid: string }> {
+    const res = await this.fetchWithRetry(`${this.config.baseUrl}/assets/folders`, {
+      method: "POST",
+      headers: this.headers(),
+      body: JSON.stringify({ asset: { name } }),
+    });
+
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`createFolder failed (${res.status}): ${text}`);
+    }
+
+    const data = (await res.json()) as { asset?: { uid?: string } };
+    if (!data.asset?.uid) throw new Error("createFolder response missing uid");
+    return { uid: data.asset.uid };
+  }
+
+  /**
+   * findFolderByName, creating it if missing — the single call site
+   * (apply-screenshots.ts) needs for a doc's screenshot folder to exist
+   * exactly once regardless of how many times the walkthrough re-runs.
+   */
+  async findOrCreateFolder(name: string): Promise<{ uid: string }> {
+    return (await this.findFolderByName(name)) ?? (await this.createFolder(name));
+  }
+
+  async uploadAsset(filePath: string, parentUid?: string): Promise<{ url: string; uid: string }> {
     const buffer = fs.readFileSync(filePath);
     const filename = path.basename(filePath);
     const form = new FormData();
-    form.append(
-      "asset[upload]",
-      new Blob([buffer]),
-      filename,
-    );
+    form.append("asset[upload]", new Blob([buffer]), filename);
+    if (parentUid) form.append("asset[parent_uid]", parentUid);
 
     const res = await this.fetchWithRetry(`${this.config.baseUrl}/assets`, {
       method: "POST",
@@ -316,5 +375,48 @@ export class ContentstackClient {
     }
 
     return { url: asset.url, uid: asset.uid };
+  }
+
+  /** Re-uploads a new file into an EXISTING asset uid, replacing its content in place. */
+  async replaceAsset(uid: string, filePath: string): Promise<{ url: string; uid: string }> {
+    const buffer = fs.readFileSync(filePath);
+    const filename = path.basename(filePath);
+    const form = new FormData();
+    form.append("asset[upload]", new Blob([buffer]), filename);
+
+    const res = await this.fetchWithRetry(`${this.config.baseUrl}/assets/${uid}`, {
+      method: "PUT",
+      headers: {
+        api_key: this.config.CS_API_KEY,
+        authorization: this.config.CS_MANAGEMENT_TOKEN,
+      },
+      body: form,
+    });
+
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`replaceAsset failed (${res.status}): ${text}`);
+    }
+
+    const data = (await res.json()) as { asset?: { url?: string; uid?: string } };
+    const asset = data.asset;
+    if (!asset?.url || !asset?.uid) {
+      throw new Error("replaceAsset response missing url or uid");
+    }
+
+    return { url: asset.url, uid: asset.uid };
+  }
+
+  /**
+   * Upload-or-replace by filename, scoped to a folder (or root if
+   * folderUid is null) — re-running the walkthrough for the same doc
+   * updates the SAME asset in place instead of piling up duplicates with
+   * every run.
+   */
+  async upsertAsset(filePath: string, folderUid: string | null): Promise<{ url: string; uid: string }> {
+    const filename = path.basename(filePath);
+    const existing = await this.findAssetByFilename(filename, folderUid);
+    if (existing) return this.replaceAsset(existing.uid, filePath);
+    return this.uploadAsset(filePath, folderUid ?? undefined);
   }
 }

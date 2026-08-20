@@ -105,6 +105,12 @@ https://github.com/contentstack/developer-solution-docs/pull/74
 https://github.com/[team-repo]/pull/[PR-number]
 ```
 
+### 3.1.1 Also Get the Dev Stack Link
+
+At the same time you ask for the PR, also ask: **"What Dev/staging stack has this feature deployed to?"** This is the stack Playwright will log into in Step 4.5 to actually walk through your doc's procedure and capture screenshots — it changes every feature, so re-ask each time rather than reusing an old link.
+
+If the feature has no dedicated Dev stack yet, the walkthrough falls back automatically to whichever Sandbox stack matches the doc's folder — CS-Docs Sandbox (`CSDOCS_SANDBOX_DASHBOARD_URL` in `.env`) for `cs-docs/...` docs, API-Docs Sandbox (`APIDOCS_SANDBOX_DASHBOARD_URL`) for `api-docs/...` docs.
+
 ### 3.2 Review the PR Changes
 
 1. Open the development PR link in your browser
@@ -319,6 +325,49 @@ code cs-docs/studio/[new-file].md
 # Update: titles, examples, links, formatting
 # Fix: any inaccuracies or missing information
 ```
+
+---
+
+## Step 4.5: Playwright Procedure Walkthrough & Screenshots
+
+Runs after your draft is written, before you branch/commit — so screenshots are already in the .md file by the time it's reviewed. This step **only does anything for task/procedural docs** (a doc with a numbered "Steps for Execution" list). Concept, reference, and overview docs are skipped automatically — no walkthrough, no screenshots, nothing to do.
+
+### 4.5.0 One-Time Setup (skip if already done)
+
+```bash
+cd tools/cs-sync
+npm install
+npx playwright install chromium
+code --install-extension ms-playwright.playwright
+```
+
+Add your test-account credentials to `.env` (see `.env.example`): `DEV_STACK_LOGIN_EMAIL`, `DEV_STACK_LOGIN_PASSWORD`, and (once, org-wide) `CSDOCS_SANDBOX_DASHBOARD_URL` / `APIDOCS_SANDBOX_DASHBOARD_URL` as the fallback stacks. Note these are dashboard login credentials for the CMS web UI — a different credential type from the Management API tokens used elsewhere in this repo's sync scripts, which cannot log into the dashboard itself.
+
+Optionally, run `npm run doc:setup-auth` once to save a logged-in Sandbox session (`tools/cs-sync/playwright/.auth/dev-stack.json`, gitignored) — future Sandbox-path runs skip the login pause entirely until that session expires. This doesn't apply to the dev11 path below, since org/stack selection there is manual every run regardless.
+
+### 4.5.1 Run the Walkthrough
+
+In VS Code: **Terminal → Run Task → "Docs: Playwright Procedure Walkthrough."** You'll be prompted for:
+- **Doc path** — the .md file you just drafted, e.g. `cs-docs/studio/my-new-feature.md`
+- **Dev stack URL** — a specific PR/feature stack if you have one; leave blank to default to **dev11** (see below), or paste a Sandbox URL explicitly if you want that instead
+
+A headed Chromium browser opens at 1920×1080 and walks the doc's numbered steps one by one, clicking whatever each step's **bold UI label** refers to. This is the same UI-navigation coverage `tools/cs-sync/src/exec-runner.ts` (the automated API-level exec test) deliberately skips as "not testable via API" — this step exists specifically to close that gap.
+
+**dev11 is the real priority target** for verifying a feature as it's actually being built (Sandbox is only a fallback). Org names and testing-stack names vary project to project, so this always pauses for a human: complete SAML login if prompted, switch to the right org via the profile menu, use the App Switcher to open the right product, and navigate to the correct testing stack — then click ▶ Resume and the walkthrough takes it from there. Conceptual/reference docs (no numbered procedure) are skipped automatically either way.
+
+- A step whose target can't be found **fails the run** — that's your signal the doc is stale (the feature's UI moved) or the automation's element-matching needs a nudge; check the console output and `tools/cs-sync/playwright/screenshots/<doc-slug>/manifest.json`.
+- A screenshot is captured automatically whenever a step produces a **new UI state** (a modal appears, the URL changes, a panel opens) — not on every step. Routine/repetitive steps are skipped on purpose; this matches both this repo's existing docs and the published docs portal (contentstack.com/docs), where task docs typically carry 0–4 screenshots, never one per step.
+- Every captured screenshot is automatically brought to the docs image standard: **PNG, ~100KB max, horizontal framing**, with a highlighted (red box) UI element and a **descriptive alt text** generated from the step itself (never a filename, never "image of..."/"picture of..." phrasing).
+
+### 4.5.2 Review, Then Apply
+
+Open `tools/cs-sync/playwright/screenshots/<doc-slug>/` in VS Code and eyeball the captured PNGs. Happy with them? Run:
+
+**Terminal → Run Task → "Docs: Apply Captured Screenshots"** (same doc path prompt).
+
+This uploads each screenshot to the **CS-Docs Sandbox** stack as an Asset (via the same `ContentstackClient.uploadAsset` the rest of the sync pipeline uses, so the resulting CDN URL matches every other image already in cs-docs) and splices `![alt text](cdn-url)` inline at the end of the matching step — the exact placement convention already used throughout cs-docs (see `cs-docs/brand-kit/set-up-brand-kit/create-a-brand-kit.md` for a real example).
+
+Now continue at Step 5 with the illustrated .md file.
 
 ---
 
@@ -745,9 +794,11 @@ git rebase --continue
 ## Summary: The Workflow Loop
 
 ```
-1. Clone repo → 2. Delete non-relevant PODs → 3. Identify changes
+1. Clone repo → 2. Delete non-relevant PODs → 3. Identify changes (+ get Dev stack link)
     ↓
-4. Use Claude for doc drafts → 5. Create TD-* branch → 6. Create PR
+4. Use Claude for doc drafts → 4.5. Playwright walkthrough + screenshots (task docs only)
+    ↓
+5. Create TD-* branch → 6. Create PR
     ↓
 7. Get approval → 8. Merge to main → 9. Check CMS
     ↓
