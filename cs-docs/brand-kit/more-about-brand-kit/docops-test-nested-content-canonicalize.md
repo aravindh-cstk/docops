@@ -1,14 +1,12 @@
 ---
 title: "DocOps Test Nested Content Canonicalize"
-description: "Internal test article with deeply nested tables, images, and sections used to verify the Prod to GitHub docs sync pipeline behavior."
 url: /brand-kit/docops-test-nested-content-canonicalize
+description: "Internal test article with deeply nested tables, images, and sections used to verify the Prod to GitHub docs sync pipeline behavior."
 ---
 
 # DocOps Test Nested Content Canonicalize
 
-## Overview
-
-This article is an internal test fixture for the Prod to GitHub sync pipeline. It exists to exercise the comparison logic that decides whether reordered but otherwise identical nested content counts as a real change.
+This paragraph was edited directly in Production for scenario 1 of the sync test drill (body-only edit).
 
 ## Configuration Options
 
