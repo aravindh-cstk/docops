@@ -1,6 +1,6 @@
 ---
 title: "Add Entry/Asset to a Release"
-description: "Add entries and assets to a release in Contentstack, streamlining your content release workflow."
+description: "Add entries and assets to a release in Contentstack to group content and deploy it together across your environments in one coordinated action."
 url: /headless-cms/add-entry-asset-to-a-release
 ---
 
@@ -14,32 +14,35 @@ After creating a release, you can add entries or assets to prepare them for depl
 
 ## Add an Entry to a Release
 
-To add an entry to a release, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
+To add an entry to a release, sign in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-1.  Go to your stack.
-2.  Click the **Entries** icon and select the entry you want to add.
-3.  Click the horizontal ellipsis at the bottom of the entry editor and select **Add to Release**.
-4.  In the **Add to Release** modal:
-    -   Select an existing release, or
-    -   Click the **+** icon to create a new release.
-        
-        **Note:** For older releases, you may receive a warning message indicating references may not be included, or only one level of nesting may be processed. To include all references, [create a new release](/docs/headless-cms/create-a-new-release) or [clone an existing one](/docs/headless-cms/clone-a-release).
-        
-5.  Select the language(s) for deployment.
-6.  Choose the required action (Publish or Unpublish).
-7.  Click **Add**.
-8.  If the entry contains references, review the **Add Reference(s) to Release** modal, which lists linked entries and assets up to the configured nested reference publishing (NRP) depth.
-    
-    **Note:**
-    
-    -   If the selected entry contains taxonomy terms, associated taxonomies and localized taxonomy terms are automatically added to the release when references are included.
-    -   Nested references are included up to a default depth of 5 levels.
-    -   This limit may vary based on your organization’s plan.
-    -   This modal appears only when adding a single entry with references.
-    
-9.  Choose one of the following:
-    1.  **Add With References** to include all linked items
-    2.  **Add Without References** to add only the selected entry
+1. Go to your stack.
+2. Click the **Entries** icon and select the entry you want to add.
+3. Click the horizontal ellipsis at the bottom of the entry editor and select **Add to Release**.
+4. In the **Add to Release** modal, choose one of the following options.
+ - Select an existing release.
+ - Click the plus icon to create a new release.
+
+ **Note:** For older releases, you may receive a warning message indicating references may not be included, or only one level of nesting may be processed. To include all references, [create a new release](/docs/headless-cms/create-a-new-release) or [clone an existing one](/docs/headless-cms/clone-a-release).
+
+5. Select the language(s) for deployment.
+
+ **Note:** If **Disable fallback publishing** is enabled for your stack, you can select only the locales in which the entry is localized. Locales where the entry is not localized are disabled in the modal, and adding a non-localized item through the API returns an error.
+
+6. Choose the required action (Publish or Unpublish).
+7. Click **Add**.
+8. If the entry contains references, review the **Add Reference(s) to Release** modal, which lists linked entries and assets up to the configured nested reference publishing depth.
+
+ **Note:**
+
+ - If the selected entry contains taxonomy terms, associated taxonomies and localized taxonomy terms are automatically added to the release when references are included.
+ - Nested references are included up to a default depth of 5 levels.
+ - This limit may vary based on your organization’s plan.
+ - This modal appears only when adding a single entry with references.
+
+9. Choose one of the following:
+ 1. **Add With References** to include all linked items
+ 2. **Add Without References** to add only the selected entry
 
 **Note:** You can view release action logs in the [Stack Bulk Task Queue](/docs/headless-cms/stack-bulk-task-queue).
 
@@ -47,21 +50,21 @@ To add an entry to a release, log in to your [Contentstack account](https://www.
 
 ## Add an Asset to a Release
 
-To add an asset to a release, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
+To add an asset to a release, sign in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-1.  Go to your stack.
-2.  Click the **Assets** icon and select the asset you want to add.
-3.  Click the horizontal ellipsis and select **Add to Release**.
-4.  In the **Add to Release** modal:
-    -   Select an existing release, or
-    -   Click **Create New Release**.
-5.  Select the languages for deployment.
-    
-    **Note:** Assets do not support localization. Selecting languages determines the locales in which the asset is available.
-    
-6.  Choose one of the following:
-    -   **Add for Publishing** to publish the asset, or
-    -   **Add for Unpublishing** to unpublish the asset
+1. Go to your stack.
+2. Click the **Assets** icon and select the asset you want to add.
+3. Click the horizontal ellipsis and select **Add to Release**.
+4. In the **Add to Release** modal, choose one of the following options.
+ - Select an existing release.
+ - Click **Create New Release**.
+5. Select the languages for deployment.
+
+ **Note:** Assets do not support localization. Selecting languages determines the locales in which the asset is available.
+
+6. Choose one of the following:
+ - **Add for Publishing** to publish the asset, or
+ - **Add for Unpublishing** to unpublish the asset
 
 **Note:** You can view release action logs in the [Stack Bulk Task Queue](/docs/headless-cms/stack-bulk-task-queue).
 
