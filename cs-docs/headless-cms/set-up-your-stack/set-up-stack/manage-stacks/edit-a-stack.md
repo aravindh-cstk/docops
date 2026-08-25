@@ -29,25 +29,29 @@ After updating the stack settings, you can view the **Last Modified** timestamp 
 
 ## Manage Publishing Settings
 
-If your plan includes the fallback publishing controls, the stack **Settings** page shows a **Publishing** section. Here you control how Contentstack handles entries that are not localized in a target locale.
+If your plan includes the fallback publishing controls, the stack **Settings** page shows a **Publishing** section below **API Credentials**. By default, when you publish an entry to a locale it is not localized in, Contentstack publishes the content of its fallback locale instead. Disable fallback publishing to publish only the locales that have their own localized entry.
 
 **Note:** The Owner, Admin, and Developer roles can change this setting. The Developer role cannot change the stack name, description, or color.
 
 To disable fallback publishing, go to your stack settings and perform the following steps:
 
 1. Open the **Publishing** section and select **Disable fallback publishing**.
-
- **Note:** Entries that were already published through fallback stay live. This setting affects only future release and deploy actions.
-
 2. Click **Save**.
 
-After you save this setting, a **Cross-locale unpublish release** panel appears. Use it to clean up content that was previously published through fallback:
+Selecting the checkbox shows a note that turning the setting on does not remove content that is already live. Entries published through fallback stay live until you unpublish them.
 
-1. Select the branches to clean up. Choose **All branches** or pick specific branches. You must select at least one branch.
-2. Click **Create releases**. The helper text shows how many releases Contentstack creates.
-3. Review the confirmation modal and confirm. Contentstack creates one draft release per selected branch, with auto-generated names.
+<!-- Screenshot: Stack Settings > Publishing section showing the Disable fallback publishing checkbox and helper text -->
 
-**Note:** A background job creates these releases, so they are not available right away. Track progress in the [Stack Bulk Task Queue](/docs/headless-cms/stack-bulk-task-queue). This applies to the latest (v2) releases only.
+After you save the setting, a **Cross-Locale Unpublish Release** section appears. Use it to clean up content that was previously published through fallback:
+
+1. In **Select branches**, choose one or more branches to clean up. The **Create Releases** button stays disabled until you select at least one branch.
+2. Click **Create Releases**.
+
+Contentstack scans each selected branch in the background and creates one release of unpublish items per branch. Release names are generated automatically. Track progress in the [Stack Bulk Task Queue](/docs/headless-cms/stack-bulk-task-queue). This applies to the latest (v2) releases only.
+
+<!-- Screenshot: Stack Settings > Cross-Locale Unpublish Release section with the Select branches dropdown and Create Releases button -->
+
+**Note:** This setting is available only when your organization plan includes fallback publishing controls. It applies to the latest (v2) releases.
 
 ## API Reference
 

@@ -27,7 +27,7 @@ To add an entry to a release, sign in to your [Contentstack account](https://www
 
 5. Select the language(s) for deployment.
 
- **Note:** If **Disable fallback publishing** is enabled for your stack, you can select only the locales in which the entry is localized. Locales where the entry is not localized are disabled in the modal, and adding a non-localized item through the API returns an error.
+ **Note:** If **Disable fallback publishing** is enabled for your stack, the **Add to Release** modal notes that only entries localized in the selected languages are added to the release. Entries that are not localized are skipped.
 
 6. Choose the required action (Publish or Unpublish).
 7. Click **Add**.
