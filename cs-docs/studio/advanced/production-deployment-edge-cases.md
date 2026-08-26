@@ -2,6 +2,7 @@
 title: "Production Deployment Edge Cases"
 description: "A deployment playbook covering cache invalidation for ISR and SSG, CDN purge patterns, edge runtime constraints, and monorepo setups for Contentstack Studio."
 url: /studio/production-deployment-edge-cases
+uid: bltd1be45338ed68f25
 ---
 
 # Production Deployment Edge Cases

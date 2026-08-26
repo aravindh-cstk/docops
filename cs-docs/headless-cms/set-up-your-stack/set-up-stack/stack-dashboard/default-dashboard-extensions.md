@@ -2,6 +2,7 @@
 title: "Default Dashboard Extensions"
 description: "details about the default dashboard widgets"
 url: /headless-cms/default-dashboard-extensions
+uid: bltcc51667f4498d5cb
 ---
 
 # Default Dashboard Extensions

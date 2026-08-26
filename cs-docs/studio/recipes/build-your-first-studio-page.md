@@ -2,6 +2,7 @@
 title: "Build Your First Studio Page"
 description: "Step-by-step walkthrough to go from zero to a working Studio composition, covering stack setup, SDK install, component registration, and page rendering."
 url: /studio/build-your-first-studio-page
+uid: blt2f50772c94862156
 ---
 
 # Build Your First Studio Page
