@@ -2,13 +2,14 @@
 title: "Get Started"
 description: "Install Contentstack Agent Skills in Claude Code, Cursor, Codex, or Gemini CLI and start writing correct, secure Contentstack code in minutes."
 url: /developers/skills-get-started
+uid: blt2240fe7c8e26e56d
 ---
 
 # Get Started
 
 ## Get Started
 
-Use this guide to install Contentstack Agent Skills. It walks you through setup for Claude Code, Cursor, Codex/OpenAI agents, and Gemini CLI, and shows you how to verify the install worked.
+Use this guide to install Contentstack Agent Skills for Claude Code, Cursor, Codex/OpenAI agents, and Gemini CLI, and to verify the install worked.
 
 ## Installation paths
 
@@ -22,7 +23,7 @@ Use this guide to install Contentstack Agent Skills. It walks you through setup 
 
 ## Install for Claude Code
 
-Claude Code installs the bundle as a **plugin**. Once installed, the router is loaded into Claude's active session and Claude automatically picks the matching skill when you ask a Contentstack question.
+Claude Code installs the bundle as a **plugin**. Once installed, Claude loads the router into its active session and automatically picks the matching skill when you ask a Contentstack question.
 
 ### Install
 
@@ -45,7 +46,7 @@ In a Claude Code session, run the following two commands:
 ### What gets installed
 
 -   The plugin configuration files from .claude-plugin/ (plugin.json and marketplace.json).
--   The router at skills/CLAUDE.md, loaded into Claude's active session.
+-   The router at [skills/CLAUDE.md](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/CLAUDE.md), loaded into Claude's active session.
 -   All 21 skills under skills/<slug>/SKILL.md, with their bundled references/ and scripts/.
 
 ### Use it
@@ -56,7 +57,7 @@ Ask Contentstack questions in natural language. There is no need to name a skill
 Write a TypeScript Delivery SDK helper that fetches an entry by URL with pagination and typing.
 ```
 
-Claude routes to the **Delivery SDK** skill and follows its rules. To force a specific skill, name it directly (for example, \*"use the Data Modeling skill to review this schema"\*).
+Claude routes to the **Delivery SDK** skill and follows its rules. To force a specific skill, name it directly (for example, "use the Data Modeling skill to review this schema").
 
 ### Update
 
@@ -120,7 +121,7 @@ If you installed via the marketplace, update through it. If you copied the files
 
 ## Install for Codex / OpenAI agents
 
-Codex and similar OpenAI-style agents use the generated **codex/ markdown tree**. The entry point is codex/AGENTS.md (the router). Each skill is a plain markdown file with its metadata header removed.
+Codex and similar OpenAI-style agents use the generated codex/ markdown tree. The entry point is codex/AGENTS.md (the router). Each skill is a plain markdown file with its metadata header removed.
 
 ### Install
 
@@ -135,7 +136,7 @@ Make sure your agent reads codex/AGENTS.md as its context/instructions entry poi
 
 ### What gets installed
 
--   codex/AGENTS.md: the router, copied from skills/CLAUDE.md with link paths rewritten for the codex tree.
+-   codex/AGENTS.md: the router, copied from [skills/CLAUDE.md](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/CLAUDE.md) with link paths rewritten for the codex tree.
 -   codex/<slug>/SKILL.md: one markdown file per skill (body only, no metadata header).
 -   codex/<slug>/references/ and codex/<slug>/scripts/: bundled assets, mirrored from the source skill.
 
@@ -219,7 +220,7 @@ npx skills add contentstack/contentstack-agent-skills@dx-delivery-sdk
 
 ### Finding the slug
 
-The slug is the skill's directory name. Find it in the [skills reference](/docs/developers/skills-reference) or in manifest.json. Common ones:
+The slug is the skill's directory name. Find it in the [skills reference](https://www.contentstack.com/docs/developers/skills-reference) or in manifest.json. Common ones:
 
 | Slug | Skill |
 | --- | --- |
@@ -234,7 +235,7 @@ The slug is the skill's directory name. Find it in the [skills reference](/docs/
 -   **Single skill**: you want one focused capability and don't need automatic routing across many topics.
 -   **Full bundle** (Claude Code, Cursor, Codex, Gemini): you want the agent to choose the right skill automatically across all 21.
 
-**Additional Resource:** Refer to the [Supported tools](/docs/developers/skills-overview#installation-format-selection-and-maintenance) documentation for details.
+**Additional Resource:** Refer to the [Installation format selection and maintenance](https://www.contentstack.com/docs/developers/skills-overview#installation-format-selection-and-maintenance) documentation for details.
 
 ### Note on routing
 
