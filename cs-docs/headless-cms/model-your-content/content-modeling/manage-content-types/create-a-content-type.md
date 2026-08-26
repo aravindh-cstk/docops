@@ -2,6 +2,7 @@
 title: "Create a Content Type"
 description: "Learn how to create and configure content types in Contentstack to define reusable content structures."
 url: /headless-cms/create-a-content-type
+uid: bltc895a4a926c204ca
 ---
 
 # Create a Content Type
@@ -20,9 +21,9 @@ To create a content type, log in to your [Contentstack account](https://www.cont
 2.  Click the **\+ New Content Type** button and, from the dropdown:
     -   Select **Create New** to create a new content type, or
     -   Select **Use Prebuilt** to import a prebuilt content type.
-        
+
         **Note:** To import a prebuilt content model within your stack, refer to our guide on [Import Prebuilt Content Models](/docs/headless-cms/import-prebuilt-content-models).
-        
+
 3.  In the **Create New Content Type** modal that appears, enter the **Name** for the content type. The **Unique ID** will be auto-generated.
 4.  Add a **Description**. This step is optional.
 5.  Based on the number of entries you want to create, under **Type**, select either:

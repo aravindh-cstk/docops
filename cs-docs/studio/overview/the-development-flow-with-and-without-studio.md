@@ -2,6 +2,7 @@
 title: "The Development Flow With and Without Studio"
 description: "Understand how Studio fits into your development workflow by comparing the page-building process with and without Studio, step by step."
 url: /studio/the-development-flow-with-and-without-studio
+uid: blt8ca80856303032a2
 ---
 
 # The Development Flow With and Without Studio

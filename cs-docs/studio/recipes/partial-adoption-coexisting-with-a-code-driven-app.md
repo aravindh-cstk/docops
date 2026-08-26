@@ -2,6 +2,7 @@
 title: "Partial Adoption Coexisting With a Code-Driven App"
 description: "Learn how to add Contentstack Studio incrementally to an existing code-driven app using a catch-all route pattern, without disrupting your current routes."
 url: /studio/partial-adoption-coexisting-with-a-code-driven-app
+uid: blt100b160819671cd0
 ---
 
 # Partial Adoption Coexisting With a Code-Driven App
