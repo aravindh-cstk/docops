@@ -2,6 +2,7 @@
 title: "About Management Tokens"
 description: "Discover how Management Tokens provide secure, flexible access to manage your stack content seamlessly with Contentstack's Content Management API."
 url: /headless-cms/about-management-tokens
+uid: bltb6fbeaf5f84fe5cf
 ---
 
 # About Management Tokens

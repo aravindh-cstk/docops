@@ -2,6 +2,7 @@
 title: "Simple Website Using DataSync"
 description: "A simple website architecture that uses DataSync"
 url: /headless-cms/simple-website-using-datasync
+uid: blta403562052624914
 ---
 
 # Simple Website Using DataSync
@@ -37,7 +38,7 @@ SaaS - Software as a Service
 CDN - Content Delivery Network
 
 ##   
-  
+
 SaaS (Software as a Service) Layer
 
 Setting up a headless architecture lets you use a microservices approach to add and replace applications with ease. Your app communicates and works with several SaaS applications via APIs. Let’s look at examples of specific popular SaaS applications that simple websites use and understand how these applications interact with other architecture components.
@@ -56,7 +57,7 @@ Contentstack lets you create and manage the content of your website. Also, Conte
 **GitHub** helps you with smooth code deployment by setting up developer workflow. This workflow ensures the code changes reflect correctly in the GitHub repository via **CI/CD** (Continuous Integration/Continuous Deployment) pipeline. Thus, this guarantees smooth code deployments in your GitHub repository whenever there are code changes in your Contentstack-powered website’s code.
 
 ##   
-  
+
 IaaS (Infrastructure as a Service) Layer
 
 Your website’s infrastructure stays within this layer. This layer holds your website’s code, DataSync utility, frontend server, load balancers, firewalls, and other essential components. The cloud infrastructure provider (such as AWS, Azure, or Google Cloud) offers some of the services you may need to set up the rest of the parts. 
@@ -78,7 +79,7 @@ Let’s have an overview of these components:
 -   When a user requests data, the DataSync component residing within the website’s code fetches the data from your local database.
 
 ##   
-  
+
 CDN (Content Delivery Network) Layer
 
 -   A CDN is responsible for serving user requests through caches. You can use a CDN service, such as Fastly, to deliver content quickly to your clients.
@@ -94,9 +95,9 @@ CDN (Content Delivery Network) Layer
 -   [Simple Website](/docs/headless-cms/simple-website-detailed-architecture)
 -   [Dynamic website architecture](/docs/headless-cms/dynamic-website-detailed-architecture)
 -   [Partially headless setup architecture](/docs/headless-cms/partially-headless-setup-detailed-architecture)  
-    
+
 -   [Layered architecture for Contentstack-powered websites](/docs/headless-cms/contentstack-powered-website-layered-architecture)  
-    
+
 -   [Cloud infrastructure diagram](/docs/headless-cms/cloud-infrastructure-architecture-for-contentstack-powered-websites)
 -   [MACH System Architecture](/docs/headless-cms/mach-architecture-diagram)
 -   [Mobile and Smart Devices System Architecture](/docs/headless-cms/mobile-and-smart-devices-system-architecture)

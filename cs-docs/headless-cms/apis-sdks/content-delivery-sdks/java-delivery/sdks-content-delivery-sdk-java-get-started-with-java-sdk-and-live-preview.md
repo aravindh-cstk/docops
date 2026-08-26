@@ -2,6 +2,7 @@
 title: "Get Started with Java Delivery SDK and Live Preview"
 description: "Get started with Contentstack’s Java Delivery SDK for browsers and Live Preview to enable real-time content updates easily."
 url: /developers/sdks/content-delivery-sdk/java/get-started-with-java-sdk-and-live-preview
+uid: bltbb8be5e589cd0e41
 ---
 
 # Get Started with Java Delivery SDK and Live Preview
@@ -24,7 +25,7 @@ To install the Java SDK, choose either of the following methods (Maven or Gradle
 Add the following dependency code snippets into your project:
 
 -   **Maven**
-    
+
     ```
     <dependency>
         <groupid>com.contentstack.sdk</groupid>
@@ -32,17 +33,17 @@ Add the following dependency code snippets into your project:
         <version>{latest}</version>
     </dependency>
     ```
-    
+
     Maven users need to add the above code in your pom.xml file under the <dependencies> section.
-    
+
 -   **Gradle**
-    
+
     ```
     compile 'com.contentstack.sdk:java:{latest}'
     ```
-    
+
     Gradle users need to add the above dependency code into your build.gradle file.
-    
+
 
 You can download the latest dependency version [here](https://search.maven.org/artifact/com.contentstack.sdk/java).
 
