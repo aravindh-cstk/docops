@@ -2,6 +2,7 @@
 title: "Microsoft Teams"
 description: "Integrate Microsoft Teams with Automate to send real-time notifications and updates from your Contentstack workflows."
 url: /agent-os/microsoft-teams
+uid: bltddc8cc0d9e8983f0
 ---
 
 # Microsoft Teams
@@ -18,14 +19,14 @@ Perform the following steps to set up the Microsoft Teams action connector:
 1.  Click **Configure Action Step** from the left navigation panel.
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **Microsoft Teams** connector.
-    
+
     **Note:** You can sort and search the connector(s) based on the filter.
-    
+
     ![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt27424790edcf4dda/6569d6a8ec7994924d96a614/Select_Connector.png)
 4.  You will see two actions under the **Choose an Action** tab: **Send Message in Channel** and **Send Message in Chat**.
-    
+
     Let’s look at each of them in detail.
-    
+
 
 ### Send Message in Channel
 
@@ -39,9 +40,9 @@ Perform the following steps to set up the Microsoft Teams action connector:
 5.  Provide an **Account** **Name** and click **Save**.  
     ![Save_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt84dfe93eda82e814/6569d6a736b54576adcd8ff3/Save_Account.png)
 6.  Select a **Team** and a **Channel** from the dropdown options to send a message.
-    
+
     **Note:** A team has multiple channels.
-    
+
     ![Select_Team_Channel.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt08cead02b6a9d045/6569d6a86f7bf40e308309bd/Select_Team_Channel.png)
 7.  Select a **Message** **Type** to send a message in Text or HTML format.
 8.  Enter the message in the **Message** **Body**.  
@@ -71,6 +72,6 @@ Perform the following steps to set up the Microsoft Teams action connector:
     ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt77055d6634037073/6569d6a8867c0b76a838b63a/Test_Action.png)
 10.  Navigate to the Microsoft Teams platform to view the message. Once done, click the **Save** **and** **Exit** button.  
      ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc07769aee2f4c41f/656b5e3636b5450bc0cd93f8/Save_Exit.png)  
-     
+
 
 This sets up the **Microsoft Teams action** connector.
