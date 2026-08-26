@@ -125,13 +125,41 @@ function checkSemicolon(stripped: string, file: string): string[] {
   return errors;
 }
 
+/**
+ * Matches the whole structural prefix of a list line: any indentation, the
+ * marker, and the spaces separating the marker from its content.
+ *
+ * Those spaces are layout, not prose. The house convention across cs-docs is
+ * "-   item" and "1.  item" with 4-space nesting (13871 files use the wide
+ * bullet form against 89 using a single space), and it is also exactly what the
+ * CMS → markdown converter emits, so a rule that flagged them contradicted both
+ * the corpus and the pipeline. It did: this check used to match every run of two
+ * or more spaces anywhere, so any doc containing a list failed lint on every
+ * line of it, and no CMS-generated PR could ever go green.
+ */
+const LIST_PREFIX_RE = /^([ \t]*)([-*+]|\d+[.)])([ \t]+)/;
+
 function checkDoubleSpaces(stripped: string, file: string): string[] {
   const errors: string[] = [];
-  for (const m of stripped.matchAll(/ {2,}/g)) {
-    errors.push(
-      err(file, lineNumber(stripped, m.index!), "double spaces"),
-    );
-  }
+
+  stripped.split("\n").forEach((line, index) => {
+    // A whitespace-only line carries no prose to double-space.
+    if (line.trim().length === 0) return;
+
+    // Blank out the structural prefix (indentation plus any list marker and its
+    // trailing spaces) before looking for prose double spaces, so an offset
+    // inside it can never be reported. Indentation alone is also structural:
+    // nested list items and indented continuation paragraphs both rely on it.
+    const prefixMatch = LIST_PREFIX_RE.exec(line) ?? /^[ \t]+/.exec(line);
+    const prefixLength = prefixMatch ? prefixMatch[0].length : 0;
+    const content = line.slice(prefixLength);
+
+    for (const m of content.matchAll(/ {2,}/g)) {
+      void m;
+      errors.push(err(file, index + 1, "double spaces"));
+    }
+  });
+
   return errors;
 }
 

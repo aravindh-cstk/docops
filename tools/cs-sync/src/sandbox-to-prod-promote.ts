@@ -11,8 +11,12 @@
  * yet; updates the existing one in place otherwise. Either way, publishes to
  * Staging only. Production environment is NEVER touched.
  *
- * Triggered by: sandbox-auto-promote-csdocs.yml (cron) and
- * sandbox-to-prod-promote-csdocs.yml (manual workflow_dispatch)
+ * Triggered by: sandbox-to-prod-promote-csdocs.yml (manual workflow_dispatch)
+ * only. There is deliberately no schedule: in practice content is edited
+ * directly in Prod, and a background job that re-pushes Sandbox over Prod every
+ * few minutes can overwrite those edits within one cron interval. Promotion is
+ * something a human asks for right after publishing in Sandbox.
+ *
  * Environment: SANDBOX (read) + PROD (create-or-update by url, promotion only)
  *
  * Safety guarantees:
@@ -24,15 +28,23 @@
  * ✅ Skips entries whose content hasn't changed since the last promotion
  * ✅ Refuses to promote (rather than guessing) when the published version
  *    cannot be read out of publish_details
+ * ✅ Refuses to overwrite a Prod entry a human edited directly, detected via
+ *    the src-hash-<hash> tag promotion stamps on every write (see
+ *    lib/promotion-guard.ts)
  */
 
 import { fileURLToPath } from "node:url";
 import { SandboxClient } from "./lib/sandbox-client.js";
 import { ProdPromoteClient, PromotionResult, ContentstackEntry, PROMOTION_ENVIRONMENTS } from "./lib/prod-promote-client.js";
-import { contentsEqual, PUBLISH_SHAPE_HELP, sandboxUidTag, withSandboxUidTag } from "./lib/entry-content.js";
+import { diffFingerprint, PUBLISH_SHAPE_HELP, sandboxUidTag, withSandboxUidTag, withSrcHashTag } from "./lib/entry-content.js";
+import { evaluatePromotionGuard, type ConflictMode } from "./lib/promotion-guard.js";
 import { linkNewEntryIntoNav } from "./lib/left-nav-linker.js";
 import { createReleaseForPromotion, extractPrNumberFromTags } from "./lib/release-manager.js";
-import { remapBreadcrumbForProd } from "./lib/content-type-mappings/docs-article.js";
+import { remapBreadcrumbForProd, unmappedBreadcrumbUids } from "./lib/content-type-mappings/docs-article.js";
+import { getUserName } from "./lib/user-index.js";
+import * as core from "@actions/core";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
 /**
  * Links a newly created Prod entry into the nav and bundles it, plus every nav
@@ -91,6 +103,85 @@ async function afterCreate(
   }
 }
 
+/**
+ * Makes sure the src-hash tag on the entry Prod actually stored matches Prod's
+ * own content, not just the content we sent.
+ *
+ * If the CMA normalizes anything inside the diff projection on write, the
+ * stamped fingerprint would no longer describe the live entry, and the next run
+ * would read that as "a human edited Prod" and refuse to promote forever. One
+ * corrective write closes that gap.
+ *
+ * Deliberately one attempt, not a retry loop: a fingerprint that still doesn't
+ * settle means the diff projection is missing a nested ignore key, which needs
+ * a code fix rather than more writes. Returns the number of corrections made
+ * so the run summary can surface it.
+ */
+async function reconcileFingerprint(
+  prodClient: ProdPromoteClient,
+  writtenEntry: ContentstackEntry,
+  expectedHash: string,
+): Promise<number> {
+  const actualHash = diffFingerprint(writtenEntry);
+  if (actualHash === expectedHash) return 0;
+
+  console.log(`     ⚠️  Fingerprint drifted on write (${expectedHash} → ${actualHash}), restamping`);
+  try {
+    await prodClient.updateEntry(writtenEntry.uid, {
+      ...writtenEntry,
+      tags: withSrcHashTag(writtenEntry.tags, actualHash),
+    });
+    return 1;
+  } catch (error) {
+    // A missing baseline is a conflict next run, which is loud and safe. Do
+    // not fail the promotion that already succeeded over it.
+    console.log(`     ⚠️  Could not restamp fingerprint: ${error instanceof Error ? error.message : error}`);
+    return 1;
+  }
+}
+
+/**
+ * Writes conflicts where a human will actually see them: the GitHub run
+ * summary, and a JSON file the workflow can render. A conflict means someone's
+ * Sandbox change is sitting unpromoted, so it must not be discoverable only by
+ * scrolling the log.
+ */
+function reportConflicts(conflicts: PromotionResult[]): void {
+  const summaryPath = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", ".sandbox-promote-summary.json");
+  try {
+    fs.writeFileSync(summaryPath, JSON.stringify(conflicts, null, 2), "utf-8");
+  } catch (error) {
+    console.log(`⚠️  Could not write promotion summary: ${error instanceof Error ? error.message : error}`);
+  }
+
+  if (conflicts.length === 0) return;
+
+  const stepSummary = process.env.GITHUB_STEP_SUMMARY;
+  if (!stepSummary) return;
+
+  const rows = conflicts.map(
+    (c) => `| ${c.title} | \`${c.conflict?.prodUid}\` | ${c.conflict?.reason} | ${c.conflict?.prodUpdatedBy ?? "—"} | ${c.conflict?.prodUpdatedAt ?? "—"} |`,
+  );
+
+  const table = [
+    "",
+    "### Promotion conflicts",
+    "",
+    "These Prod entries were **not** overwritten because they no longer match what promotion last wrote. The Sandbox version of each is still unpromoted.",
+    "",
+    "| Entry | Prod UID | Reason | Last edited by | Last edited at |",
+    "|---|---|---|---|---|",
+    ...rows,
+    "",
+  ].join("\n");
+
+  try {
+    fs.appendFileSync(stepSummary, table, "utf-8");
+  } catch (error) {
+    console.log(`⚠️  Could not append to step summary: ${error instanceof Error ? error.message : error}`);
+  }
+}
+
 export interface Config {
   sandboxApiKey: string;
   sandboxToken: string;
@@ -98,6 +189,10 @@ export interface Config {
   prodToken: string;
   stackType: "apidocs" | "csdocs";
   entryUids?: string[];
+  /** Overwrite Prod even when the fingerprint says a human edited it. */
+  forceOverwrite: boolean;
+  /** `report` logs conflicts but still writes, for sizing a rollout. */
+  conflictMode: ConflictMode;
 }
 
 export async function loadConfig(stackTypeOverride?: "apidocs" | "csdocs"): Promise<Config> {
@@ -126,6 +221,8 @@ export async function loadConfig(stackTypeOverride?: "apidocs" | "csdocs"): Prom
     prodToken,
     stackType,
     entryUids,
+    forceOverwrite: process.env.PROMOTE_FORCE_OVERWRITE === "true",
+    conflictMode: process.env.PROMOTE_CONFLICT_MODE === "report" ? "report" : "enforce",
   };
 }
 
@@ -175,6 +272,7 @@ async function main() {
     console.log(`📋 Found ${entriesToPromote.length} published entries to promote\n`);
 
     const results: PromotionResult[] = [];
+    let fingerprintCorrections = 0;
 
     for (const published of entriesToPromote) {
       const { uid, title, publishedVersion } = published;
@@ -215,6 +313,17 @@ async function main() {
       // the Prod-side uid before comparing or writing, otherwise every run
       // sees the breadcrumb as "changed" and Prod never gets a working one.
       if (config.stackType === "csdocs" && sandboxEntry.breadcrumb) {
+        // A uid outside PRODUCT_CONFIG can't be remapped, so it stays a
+        // Sandbox uid in Prod and makes this entry compare unequal forever.
+        // Say so rather than quietly re-promoting it on every run.
+        const unmapped = unmappedBreadcrumbUids(sandboxEntry.breadcrumb);
+        if (unmapped.length > 0) {
+          console.log(
+            `     ⚠️  Breadcrumb uid(s) not in PRODUCT_CONFIG: ${unmapped.join(", ")} — ` +
+            `cannot remap to Prod, this entry will keep comparing as changed. ` +
+            `Add the product to PRODUCT_CONFIG in lib/content-type-mappings/docs-article.ts.`,
+          );
+        }
         sandboxEntry.breadcrumb = remapBreadcrumbForProd(sandboxEntry.breadcrumb);
       }
 
@@ -248,11 +357,61 @@ async function main() {
       // Prod entry even after this Sandbox entry's url changes.
       sandboxEntry.tags = withSandboxUidTag(sandboxEntry.tags, uid);
 
+      const decision = evaluatePromotionGuard(sandboxEntry, existingProdEntry, {
+        mode: config.conflictMode,
+        force: config.forceOverwrite,
+      });
+
+      if (decision.action === "skip") {
+        console.log(`     ⏭️  No changes detected — skipping (Prod uid: ${existingProdEntry!.uid})`);
+        results.push({ entryUid: uid, title, written: false, published: false, action: "skipped" });
+        continue;
+      }
+
+      if (decision.action === "conflict") {
+        const prodUid = existingProdEntry!.uid;
+        const editor = getUserName(existingProdEntry!.updated_by as string | undefined);
+        const editedAt = existingProdEntry!.updated_at as string | undefined;
+        const detail =
+          decision.conflictReason === "prod-edited"
+            ? `this Prod entry was edited directly (last touched by ${editor}${editedAt ? ` at ${editedAt}` : ""})`
+            : `this Prod entry has no promotion baseline yet, so it cannot be proven safe to overwrite`;
+
+        console.log(`     ⛔ CONFLICT — NOT overwritten (Prod uid: ${prodUid}): ${detail}`);
+        console.log(`        Sandbox's version stays unpromoted. Resolve by merging the Prod edit back through GitHub, or re-run with force_overwrite scoped to this entry.`);
+        core.warning(`Promotion conflict on "${title}" (Prod uid ${prodUid}, ${decision.conflictReason}): ${detail}`);
+
+        results.push({
+          entryUid: uid,
+          title,
+          written: false,
+          published: false,
+          action: "conflict",
+          conflict: {
+            prodUid,
+            reason: decision.conflictReason!,
+            prodUpdatedAt: editedAt,
+            prodUpdatedBy: editor,
+          },
+        });
+        continue;
+      }
+
+      if (decision.forced) {
+        console.log(`     ⚠️  Overwriting Prod despite a ${decision.conflictReason} conflict (${config.forceOverwrite ? "force_overwrite" : "report mode"})`);
+      }
+
+      // Record what promotion is about to write, so the next run can tell its
+      // own echo apart from a human's Prod edit.
+      const expectedHash = diffFingerprint(sandboxEntry);
+      sandboxEntry.tags = withSrcHashTag(sandboxEntry.tags, expectedHash);
+
       try {
-        if (!existingProdEntry) {
-          // No match — create.
+        if (decision.action === "create") {
           const prodEntry = await prodClient.cloneEntryToProd(sandboxEntry);
           console.log(`     ✓ Created in Prod (new UID: ${prodEntry.uid})`);
+
+          fingerprintCorrections += await reconcileFingerprint(prodClient, prodEntry, expectedHash);
 
           const publishSuccess = await prodClient.publishPromotedEntry(prodEntry.uid);
           results.push({ entryUid: uid, title, written: true, published: publishSuccess, action: "created" });
@@ -264,15 +423,10 @@ async function main() {
           continue;
         }
 
-        if (contentsEqual(sandboxEntry, existingProdEntry)) {
-          console.log(`     ⏭️  No changes detected — skipping (Prod uid: ${existingProdEntry.uid})`);
-          results.push({ entryUid: uid, title, written: false, published: false, action: "skipped" });
-          continue;
-        }
-
-        // Match found, content differs — update.
-        const updated = await prodClient.updateEntry(existingProdEntry.uid, sandboxEntry);
+        const updated = await prodClient.updateEntry(existingProdEntry!.uid, sandboxEntry);
         console.log(`     ✓ Updated in Prod (uid: ${updated.uid})`);
+
+        fingerprintCorrections += await reconcileFingerprint(prodClient, updated, expectedHash);
 
         const publishSuccess = await prodClient.publishPromotedEntry(updated.uid);
         results.push({ entryUid: uid, title, written: true, published: publishSuccess, action: "updated" });
@@ -294,16 +448,27 @@ async function main() {
     const created = results.filter((r) => r.action === "created").length;
     const updated = results.filter((r) => r.action === "updated").length;
     const skipped = results.filter((r) => r.action === "skipped").length;
+    const conflicts = results.filter((r) => r.action === "conflict");
     const successful = results.filter((r) => r.published).length;
     const partial = results.filter((r) => r.written && !r.published).length;
-    const failed = results.filter((r) => !r.written && r.action !== "skipped").length;
+    // A conflict is a deliberate refusal to write, not a failure. Counting it
+    // as one would turn every unresolved Prod edit into a red run.
+    const failed = results.filter((r) => !r.written && r.action !== "skipped" && r.action !== "conflict").length;
     const unresolved = results.filter((r) => r.error === "unresolved published version").length;
+
+    reportConflicts(conflicts);
 
     console.log(`\n📊 Promotion Summary:`);
     console.log(`   ✨ Created: ${created}`);
     console.log(`   🔁 Updated: ${updated}`);
     console.log(`   ⏭️  Skipped (no changes): ${skipped}`);
     console.log(`   ✅ Published to Staging: ${successful}`);
+    if (conflicts.length > 0) {
+      console.log(`   ⛔ Conflicts (Prod edited, NOT overwritten): ${conflicts.length}`);
+    }
+    if (fingerprintCorrections > 0) {
+      console.log(`   🔧 Fingerprint corrections: ${fingerprintCorrections}`);
+    }
     if (unresolved > 0) {
       console.log(`   🛑 Unresolved published version: ${unresolved} (not promoted — see above)`);
     }
