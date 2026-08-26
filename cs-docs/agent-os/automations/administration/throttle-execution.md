@@ -2,6 +2,7 @@
 title: "Throttle Execution"
 description: "Discover how to throttle executions in automations and control workflow run frequency effectively."
 url: /agent-os/throttle-execution
+uid: bltcedf9c7f2f6e3da6
 ---
 
 # Throttle Execution

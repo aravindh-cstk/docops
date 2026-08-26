@@ -2,6 +2,7 @@
 title: "Key Features of Management Tokens"
 description: "Explore access levels, rate limits, and usage rules for management tokens in Contentstack."
 url: /headless-cms/key-features
+uid: bltf967827012b7d39d
 ---
 
 # Key Features of Management Tokens

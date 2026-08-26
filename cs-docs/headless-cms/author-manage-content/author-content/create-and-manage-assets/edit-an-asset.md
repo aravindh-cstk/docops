@@ -2,6 +2,7 @@
 title: "Edit an Asset"
 description: "Edit an Asset"
 url: /headless-cms/edit-an-asset
+uid: blt38d3e4b0b7fdeb99
 ---
 
 # Edit an Asset

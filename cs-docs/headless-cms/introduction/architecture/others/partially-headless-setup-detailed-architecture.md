@@ -2,6 +2,7 @@
 title: "Partially Headless Setup"
 description: "Use our partially headless setup to create your own website"
 url: /headless-cms/partially-headless-setup-detailed-architecture
+uid: bltf5496760399ddd11
 ---
 
 # Partially Headless Setup
@@ -79,7 +80,7 @@ CDN (Content Delivery Network) Layer
 -   You can set up load balancers to filter out unwanted requests and manage network traffic and reverse proxy (for masking) between the CDN and the headless infrastructure.
 
 ##   
-  
+
 Next Steps 
 
 ### More Architecture Diagrams
@@ -94,7 +95,7 @@ Next Steps 
 -   [Mobile and Smart Devices System Architecture](/docs/headless-cms/mobile-and-smart-devices-system-architecture) 
 
 ###   
-  
+
 Resources to Get Started
 
 -   [Quickstart in 5 minutes](/docs/headless-cms/quickstart-in-5-mins)

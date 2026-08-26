@@ -2,6 +2,7 @@
 title: "Add Entry/Asset to a Release"
 description: "Add entries and assets to a release in Contentstack, streamlining your content release workflow."
 url: /headless-cms/add-entry-asset-to-a-release
+uid: bltff54f6b08a65685c
 ---
 
 # Add Entry/Asset to a Release
@@ -22,21 +23,21 @@ To add an entry to a release, log in to your [Contentstack account](https://www.
 4.  In the **Add to Release** modal:
     -   Select an existing release, or
     -   Click the **+** icon to create a new release.
-        
+
         **Note:** For older releases, you may receive a warning message indicating references may not be included, or only one level of nesting may be processed. To include all references, [create a new release](/docs/headless-cms/create-a-new-release) or [clone an existing one](/docs/headless-cms/clone-a-release).
-        
+
 5.  Select the language(s) for deployment.
 6.  Choose the required action (Publish or Unpublish).
 7.  Click **Add**.
 8.  If the entry contains references, review the **Add Reference(s) to Release** modal, which lists linked entries and assets up to the configured nested reference publishing (NRP) depth.
-    
+
     **Note:**
-    
+
     -   If the selected entry contains taxonomy terms, associated taxonomies and localized taxonomy terms are automatically added to the release when references are included.
     -   Nested references are included up to a default depth of 5 levels.
     -   This limit may vary based on your organization’s plan.
     -   This modal appears only when adding a single entry with references.
-    
+
 9.  Choose one of the following:
     1.  **Add With References** to include all linked items
     2.  **Add Without References** to add only the selected entry
@@ -56,9 +57,9 @@ To add an asset to a release, log in to your [Contentstack account](https://www.
     -   Select an existing release, or
     -   Click **Create New Release**.
 5.  Select the languages for deployment.
-    
+
     **Note:** Assets do not support localization. Selecting languages determines the locales in which the asset is available.
-    
+
 6.  Choose one of the following:
     -   **Add for Publishing** to publish the asset, or
     -   **Add for Unpublishing** to unpublish the asset

@@ -2,6 +2,7 @@
 title: "Resolve a Review Comment"
 description: "Learn how to resolve comments on shared preview content in Contentstack."
 url: /headless-cms/resolve-a-review-comment
+uid: bltcd9f861a75ee7924
 ---
 
 # Resolve a Review Comment

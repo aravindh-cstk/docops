@@ -2,6 +2,7 @@
 title: "Contentstack Home and Top Navigation"
 description: "Discover Contentstack’s intuitive dashboard & navigation. Access tools, resources, and updates effortlessly to enhance your digital experience."
 url: /headless-cms/navigating-contentstack
+uid: blt0ba9cc3a166a422e
 ---
 
 # Contentstack Home and Top Navigation
@@ -21,9 +22,9 @@ The home screen serves as the starting point of your workflow in Contentstack. I
 The home screen is organized into multiple sections to give you a quick, intuitive view of your workspace.
 
 -   **Explore Apps**: Navigate to Contentstack’s product suite from this section.
-    
+
     **Note:** By default, all apps are displayed on the home screen to provide complete visibility into the Contentstack ecosystem. However, access to each app may vary based on your user role and your organization’s subscription plan.
-    
+
 -   **Learning Modules**: Stay sharp with curated training courses from Contentstack Academy, including:
     -   Understanding Contentstack
     -   Launch Foundations

@@ -2,6 +2,7 @@
 title: "Modal Support for Apps/Extensions"
 description: "The newly introduced functionality for “venus-components” allows you to open modal within apps and extensions for custom fields."
 url: /headless-cms/modal-support-for-apps-and-extensions
+uid: blt5f11328c4ea2bb7e
 ---
 
 # Modal Support for Apps/Extensions
@@ -73,12 +74,12 @@ function App() {
      // or
      // const iframeWrapperRef = document.getElementById('root')
      window.iframeRef = iframeWrapperRef;
- 
+
      window.postRobot = sdk.postRobot
      sdk.location.CustomField.frame.updateHeight(55)
    })
  }, []);
- 
+
  const handleClick = (e) => {
    cbModal({
      component: (props) => (<SelectModal {...props} />),
@@ -87,7 +88,7 @@ function App() {
      }
    })
  }
- 
+
  return (
    <div ref={ref} className="extension-wrapper">
      <div className="btn-wrapper">
@@ -106,7 +107,7 @@ function App() {
    </div>
  );
 }
- 
+
 export default App;
 ```
 
@@ -115,8 +116,8 @@ export default App;
 ```
 import React from "react"
 import { ModalFooter, ModalBody, ModalHeader, ButtonGroup, Button } from "@contentstack/venus-components"
- 
- 
+
+
 const SelectModal = (props) => {
    return (
        <>
@@ -139,7 +140,7 @@ const SelectModal = (props) => {
        </>
    )
 }
- 
+
 export default SelectModal;
 ```
 

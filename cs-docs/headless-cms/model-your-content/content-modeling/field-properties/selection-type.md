@@ -2,6 +2,7 @@
 title: "Selection Type"
 description: "Selection Type of your fields"
 url: /headless-cms/selection-type
+uid: blt619f09dfe1bc8373
 ---
 
 # Selection Type

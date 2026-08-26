@@ -2,6 +2,7 @@
 title: "Data Store"
 description: "Learn how to use the Data Store connector in Automation Hub to store and retrieve key-value pairs."
 url: /agent-os/data-store
+uid: blt17461559d28ad847
 ---
 
 # Data Store
@@ -21,27 +22,27 @@ Perform the following steps to set up the Data Store action connector:
 3.  Within the **Configure Action Step**, click the **Data Store** connector.  
     ![Select_the_Connector_Datastore.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt52e76662b115407f/6527d139ff3bbd7e69ad0827/Select_the_Connector_Datastore.png)
 4.  Under **Choose an Action** tab, you will see three actions: **Get Data** (retrieve data stored in Data Store) and **Set Data** (add data into Data Store), **Append Data** (append new data to an existing data in the form of an array), and **Clear Data**.  
-    
+
     ### **Action 1:** Select the **Append Data** action:
-    
+
     ![Append_Data_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc49df42f0003ae57/6793cd506a4ee834e6ad8dc0/Append_Data_Action.png)
     1.  On the **Append Data** **Configure Action** page, you need to provide at what level you need to store your data, i.e., at **Automation Level**, **Organizational Level**, and **Execution Level.** Lets see their difference:
-        
+
         1.  **Automation Level**: Data set at this level can be retrieved when working only on the current automation you are setting it for.
         2.  **Organizational Level**: Data set at this level can be retrieved when working with any automation within the organization.
         3.  **Execution Level**: Data set at this level can be retrieved when working for one completed execution of an automation. Even with parallel executions of an automation, the data is tightly coupled to an individual execution.
-        
+
         Once you select the **Store At** value, enter the **Data** values, i.e., **Key** and corresponding **Value** for the same.
-        
+
         ![Append_Data_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf918efcf2ce6636c/6793cd50e05cbf295c564565/Append_Data_Fields.png)
 5.  Click the **Proceed** button.
 6.  Check if the details are correct. If yes, click the **Test Action** button.  
     ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2d104d50b5075416/6793cd50a057852df77747a0/Test_Action.png)
 7.  Once set, click the **Save and Exit** button.  
     ![Save_Exit_Append.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf6a6a0ca817e041f/6793cd50d8a19ec1521b6682/Save_Exit_Append.png)
-    
+
     Append action will create an array with the provided value.
-    
+
 
 Let’s see a simple use-case of Append Data action using Repeat Path.
 
@@ -49,9 +50,9 @@ Append Data action is helpful while working with bulk data. In this example, we 
 We are sending two arrays via Postman which will append and form a single array. For example: {"array1":\["start"\], "array2":\[1,2,3\]}.
 
 1.  Configure the **HTTP Trigger** connector. For more details, refer to the [HTTP Trigger](/docs/agent-os/http-trigger/) connector documentation.
-    
+
     **Note:** Send a request to the HTTP trigger URL via Postman to send bulk data and test the trigger. Once you click **Test Trigger**, you can see the data sent via Postman in the output.
-    
+
 2.  Once the trigger is configured, configure an **Action Step** and click the **Data Store** connector.
 3.  Under **Choose an Action** step, select the **Set Data** action. In the **Store At** dropdown, select **Automation** Level.
 4.  In the **Set Data** action, set the **Key** and **Value**. Fetch the array data coming from the previous step. Select the value of array1 in the **Value** field.  
@@ -69,11 +70,11 @@ Once the data is fetched and stored, use the Repeat Path step to fetch the array
     ![Select_Repeat_Path_Step](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2b75203a2038ceca/6442e15a717a360937d75d22/Select-Repeat-Path-Step.png)
 4.  In the Repeat Path configuration, select the **Data source** to fetch the array of numbers configured previously.  
     ![Select_Repeat_Path_Second_Array](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt493e9188ad252409/6442e19210882b4f2385c2c7/Select-Repeat-Path-Second-Array.png)
-    
+
     We have set the value of the first array in the Set Data action, and now, we are fetching the array of numbers (array 2) using the Repeat Path, to append both arrays.
-    
+
     **Note:** Repeat Path will iterate through the number of items in the array.
-    
+
 5.  Click **Save Configuration** to save the Repeat Path configuration.  
     ![Save_Repeat_Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltda39f882a1149929/6442e1c1d57e320df0d8064a/Save-Repeat-Configuration.png)
 
@@ -86,9 +87,9 @@ On successful completion, use the Append Data action inside Repeat Path. Follow 
 3.  Under **Choose an Action** step, select the **Append Data** action.  
     ![Append_Data_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc49df42f0003ae57/6793cd506a4ee834e6ad8dc0/Append_Data_Action.png)
 4.  In the **Store At** field dropdown, select **Automation** Level.
-    
+
     **Note:** You can use organization or execution level from the dropdown.
-    
+
 5.  In the **Append Data** action, set the **Key** and **Value**. Provide the **Key** value specified in the **Set Data** action and fetch the current\_item data from the Repeat Path step in the Value field.  
     The current\_item data will fetch the data iterated using the Repeat Path for the array of numbers and append it to the first array.  
     ![Repeat_path.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltedd5329368a1cb60/6794a0a52108d897bb7fd002/Repeat_path.png)
@@ -110,7 +111,7 @@ Now, to fetch the data outside of the Repeat Path, follow the steps below:
 6.  Click the **Proceed** button.
 7.  Click the **Test Action** button to test the configured action.
 8.  Click the **Save and Exit** button. You will be able to see the appended data in the key.  
-    
+
 
 To check the output, we will configure the **Response** action connector.
 
@@ -144,15 +145,15 @@ Let’s set up our automation by following these simple steps:
 9.  In the **Get Value At** field, select **Execution Level** from the dropdown.
 10.  Enter the key data in the **Keys** field i.e., **Key**.  
      ![Get_Data_Execution_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8d4826755e42f8c7/6794a0a54cebb23e1815dc26/Get_Data_Execution_Fields.png)
-     
+
      **Note:** If you are using the Pause action, you can only get the data which you have set before configuring the Pause connector. You can preserve the data in the Pause connector and retrieve the preserved value afterwards. This is applicable only when you select Execution Level storage.
-     
+
 11.  Click **Proceed**.
 12.  Click **Test Action** to test the configured action.
 13.  The output will be shown as follows. Click the **Save and Exit** button.  
-     
+
      **Note:** While testing the automation, you will get null value but the data will be available at the time of execution.
-     
+
 
 To see the output data, we will configure the Response connector. Perform the following steps to set up the Response action connector:
 
@@ -179,12 +180,12 @@ Now, to view the output, activate the automation and hit the HTTP trigger URL. Y
 ![Clear_Data_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt422bb4a140969734/6793cd50bf520497ff7d3008/Clear_Data_Action.png)
 
 1.  On the **Clear Data** **Configure Action** page, you need to provide at what level you need to store your data, i.e., at **Automation Level**, **Organizational Level**, and **Execution Level.**
-    
+
     **Note**:
-    
+
     -   Clear Data requires manual configuration to initiate the data deletion.
     -   Clear Data can delete the data both from Set Data and Append Data actions.
-    
+
 2.  In the **Enter** **Key** field, enter the data key to clear. Click the **+ Add Key(s)** button to add multiple keys you want to clear.  
     ![Clear_Data_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt149bbee41ef93942/6793cd50259b9a1aea273d54/Clear_Data_Fields.png)
 3.  Click **Proceed**.
@@ -197,18 +198,18 @@ Now, to view the output, activate the automation and hit the HTTP trigger URL. Y
 ![Get_Data_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt94ff3b4a09763763/6793ce87e05cbf96a2564588/Get_Data_Action.png)
 
 1.  On the **Get Data** **Configure Action** page, you need to provide at what level you need to get/retrieve your data, i.e., at **Automation Level**, **Organizational Level**, and **Execution Level**. Lets see their difference:
-    
+
     1.  **Automation Level:** This will retrieve data stored at Automation Level.
-        
+
     2.  **Organization Level:** This will retrieve data stored at Organization Level.
-        
+
     3.  **Execution Level:** This will retrieve data stored at Execution Level.
-        
-    
+
+
     Once you select the **Get Value At** value in the **Keys** field, you need to enter the keys you want to retrieve. For the Execution Level, the data will be retrieved only at the time of execution and not at the time of configuration of automation.
-    
+
     **Note:** For retrieving multiple values, enter the keys in a comma-separated manner.
-    
+
     ![Get_Data.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c453cf159e06630/6794a0a54cebb24a5815dc24/Get_Data.png)
 2.  Click **Proceed**.
 3.  Check if the details are correct. If yes, click **Test Action**.  
@@ -221,15 +222,15 @@ Now, to view the output, activate the automation and hit the HTTP trigger URL. Y
 ![Set_Data_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta945c613e470eada/6793cd50a05785b40e7747a4/Set_Data_Action.png)
 
 1.  On the **Set Data** **Configure Action** page, you need to provide at what level you need to store your data, i.e., at **Automation Level**, **Organizational Level**, and **Execution Level.** Lets see their difference:
-    
+
     1.  **Automation Level**: Data set at this level can be retrieved when working only on the current automation you are setting it for.
     2.  **Organizational Level**: Data set at this level can be retrieved when working with any automation within the organization.
     3.  **Execution Level**: Data set at this level can be retrieved when working for one completed execution of an automation. Even with parallel executions of an automation, the data is tightly coupled to an individual execution.
-    
+
     **Note:** You can store the data inside the steps of the Conditional Path statement and access the data outside of it, as the output data for the conditional path steps is not accessible otherwise. This is applicable for all the storage levels.
-    
+
     Once you select the **Store At** value, enter the **Data** values, i.e., **Key** and corresponding **Value** for the same.  
-    
+
 2.  Optionally, enable the **Show Optional Fields** setting to display the **Data** **Expiration** **Time** field. This field allows you to specify the expiration time for the data in minutes. This is the duration after which the data will no longer be valid.  
     ![Set_Data_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt51fc60ee9fa6aaaf/6793cfb1a5499b54b314ec82/Set_Data_Fields.png)
 3.  Click **Proceed**.

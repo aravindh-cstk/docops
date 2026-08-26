@@ -2,6 +2,7 @@
 title: "What’s Changed for Users"
 description: "Discover efficient asset management with Contentstack: Fast searches, intuitive filters, AI-powered suggestions, and scalable for teams."
 url: /assets/whats-changed-for-users
+uid: bltbbd803bd6c30bcff
 ---
 
 # What’s Changed for Users

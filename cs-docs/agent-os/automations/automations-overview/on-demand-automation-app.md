@@ -2,6 +2,7 @@
 title: "On-Demand Automation App"
 description: "Learn how to use the On-Demand Automation App to integrate Agent OS within your entry editor."
 url: /agent-os/on-demand-automation-app
+uid: blt37be86620f9e069d
 ---
 
 # On-Demand Automation App
@@ -35,9 +36,9 @@ Follow the steps to install the On-Demand Automation App in Contentstack.
 5.  In the pop-up window, select the stack where you want to install the On-Demand Automation app, accept the terms and conditions, and click the **Install** button.  
     ![Install_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blted945708d8b6891b/668386429b2b7a520ad983ca/Install_App.png)
 6.  On the configuration screen, you will see the Entry Sidebar Rail UI location and the Asset Sidebar Rail UI location enabled for the On-Demand Automation app. Click the **Open Stack** button, which will redirect you to your stack.
-    
+
     **Note:** The Entry Sidebar Rail and the Asset Sidebar UI locations are enabled **only** for the On-Demand Automation app.
-    
+
     ![UI_Locations_Configuration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf27895b4cd19c052/6684fcf8fda39284cb662dfb/UI_Locations_Configuration.png)
 
 You can view the On-Demand Automation app on the **Entry** and **Asset** editor page in the Entry Sidebar and the Asset Sidebar Rail UI Locations.
@@ -52,11 +53,11 @@ To view the On-Demand Automation app in the Entry Editor page, follow the steps 
 4.  In the right navigation panel, you will see the **On-Demand Automation app** icon. Click to view the On-Demand Automation App.  
     ![Automate_App_Asset_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbe3f33c2eeeecbf8/66838642c8ca7733c1ce006c/Automate_App_Asset_Sidebar.png)
 5.  You will see two icons: **View Recipes** and **Manage Automations**. Click **Manage Automations** to create a new automation.
-    
+
     On clicking the **View Recipes** icon, you can see the recipes list.
-    
+
     **Note:** **View Recipes** and **Manage Automations** icons are only visible to an organization’s [Admin(s)](/docs/administration/about-administration-roles#organization-admin)/[Owner(s)](/docs/administration/about-administration-roles#organization-owner). Standard users can **only execute** the automation that is visible via the On-Demand Automation App in the Entry Sidebar location.
-    
+
 
 ### Create an Automation
 
@@ -71,7 +72,7 @@ To start executing the automation via the On-Demand Automation App, you first ne
     2.  Configure Action Step  
         ![Configure_Action_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltda2435f1803be46a/664b00861c913512ff13d320/Configure_Action_Trigger.png)
 6.  Let’s look at the above steps ‌in the next section.
-    
+
 
 #### Configure Trigger
 
@@ -83,9 +84,9 @@ Configuring a trigger can be broken into the following steps:
     ![Select_Actions.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt576fcfb7d87de84e/6683864282ce1d020a3151aa/Select_Actions.png)
 4.  On the **Entry Sidebar Configure Trigger** page, enter the details given below:
     1.  Select a **Stack** and **Branch** from the **Lookup** list.
-        
+
         **Note:** You **cannot** configure a [Response](/docs/agent-os/response) connector with the On-Demand Agent OS trigger.
-        
+
     2.  Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
         1.  Click the **\+ Input Options** button to view an Additional Information modal in the Entry Sidebar.
         2.  In the **Input** **Label** field, enter the content to display as a label in the Additional Information modal.
@@ -94,7 +95,7 @@ Configuring a trigger can be broken into the following steps:
             ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt42ce7d735e622c14/675fdb09680101d5a756d23a/Show_Optional_Fields.png)
 5.  Click the **Proceed** button.
 6.  Click the **Test Trigger** button to test the configured trigger.  
-    
+
 7.  Click the **Save and Exit** button.  
     ![Save_And_Exit_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt170e65d58f593d1d/675fdb854657c83a79d1f81c/Save_And_Exit_Button.png)
 
@@ -118,7 +119,7 @@ To configure an action step follow the steps below:
     ![Select_Email_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4ccec17f18110c60/664b008fb2e85241ba451c9e/Select_Email_Fields.png)
 6.  Click **Proceed** after entering the details.
 7.  Click **Test Action** to test if the email sending was a success or not.  
-    
+
 8.  The email is queued and sent to the receiver’s email address. Click **Save and Exit**.  
     ![Save_Exit_Actin.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2cdd949469706f4e/664b008fb2e852313c451c9a/Save_Exit_Actin.png)
 
@@ -164,9 +165,9 @@ Let’s look at the setup in detail.
     ![Select_Actions.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt576fcfb7d87de84e/6683864282ce1d020a3151aa/Select_Actions.png)
 4.  On the **Entry Sidebar Configure Trigger** page, enter the details given below:
     1.  Select a **Stack** and **Branch** from the **Lookup** list.
-        
+
         **Note:** You cannot configure a [Response](/docs/agent-os/response) connector with the On-Demand Agent OS trigger.
-        
+
         ![Select_Trigger_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt927aa8ca49db7332/675fdacc1cd21e548cc25d96/Select_Trigger_Fields.png)
     2.  Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
         1.  Click the **\+ Input Options** button to view an Additional Information modal in the Entry Sidebar.
@@ -176,7 +177,7 @@ Let’s look at the setup in detail.
             ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc2c07671e689c62e/675fdad3f56c138249bd9691/Show_Optional_Fields.png)
 5.  Click the **Proceed** button.
 6.  Click the **Test** **Trigger** button to test the configured trigger.  
-    
+
 7.  Click the **Save and Exit** button.  
     ![Save_And_Exit_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt170e65d58f593d1d/675fdb854657c83a79d1f81c/Save_And_Exit_Button.png)
 
@@ -188,23 +189,23 @@ Let’s look at the setup in detail.
 4.  On the **Chat Configure Action** page, enter the details given below:
     1.  Click **\+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account](/docs/agent-os/chatgpt#connect-your-chatgpt-account-to-automate) step.
     2.  Select the **API** **Model** from the dropdown list to generate content for the chat responses.
-        
+
         **Note:** Different models are available to different users based on the account the user holds such as paid accounts. You must check the account access before selecting the model.
-        
+
     3.  Provide the **Prompt** Text to generate response(s). Click **\+ Add Prompt Text** to enter multiple prompts.
     4.  Select the **Role** from the dropdown options to send to the API model request. By default, the role is set to the user.
-        
+
         **Additional Resource:** There are three different types of roles provided by the OpenAI platform. The **system** role sets the response context, the **assistant** role provides the response content, and the **user** role asks the prompt.
-        
+
     5.  Enter the value in the **Input** **Query** field. For example, _Give me description for the {{1.body.entry.title}}. Provide output in HTML format_. This provides a description about the entry in the Results modal.  
         ![Chat_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdea4ef133b72678e/675fdacb216a9cad62314a0e/Chat_Fields.png)
     6.  Click the **Show Optional Fields** toggle button to use the optional fields.
-        
+
         **Additional Resource:** Refer to the [ChatGPT](/docs/agent-os/chatgpt) Connector.
-        
+
 5.  Click the **Proceed** button.
 6.  Click the **Test Action** button to test the configured action.  
-    
+
 7.  Click the **Save and Exit** button.  
     ![Save_Exit_Chat.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1d2b134736d0aff1/675fdacc21e066b2b8411519/Save_Exit_Chat.png)
 
@@ -218,7 +219,7 @@ Let’s look at the setup in detail.
     ![Response_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8353831e5e5a6734/675fdacbbbb2f6cf2f39d248/Response_Fields.png)
 5.  Click the **Proceed** button.
 6.  Click the **Test** **Action** button to test the configured action.  
-    
+
 7.  Click the **Save and Exit** button.  
     ![Save_Exit_Response.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt469644d8abad8d1d/675fdacb19cfd535b5f0c9a8/Save_Exit_Response.png)
 
@@ -274,9 +275,9 @@ Let’s look at the setup in detail.
 3.  Under the **Choose Trigger** section, select the **Entry** **Sidebar** trigger.
 4.  On the **Entry Sidebar Configure Trigger** page, enter the details given below:
     1.  Select a **Stack** and **Branch** from the **Lookup** list.
-        
+
         **Note:** You cannot configure a [Response](/docs/agent-os/response) connector with the On-Demand Agent OS trigger.
-        
+
         ![Select_Fields_Entry_Sidebat.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt814cedd00ef30b0a/67e26ab929f30c0055f8e51a/Select_Fields_Entry_Sidebat.png)
     2.  Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
         1.  Click the **\+ Add Input Options** button to view an Additional Information modal in the Entry Sidebar.
@@ -285,7 +286,7 @@ Let’s look at the setup in detail.
         4.  In the **Input** **Description** field, enter a suitable instruction text for the input type field. For example, _Enter the request._![Select_Other_Fields_Entry_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt15af4f991d92985c/67e26aba6678fd1c69aeadc7/Select_Other_Fields_Entry_Sidebar.png)
 5.  Click the **Proceed** button.
 6.  Click the **Test** **Trigger** button to test the configured trigger.  
-    
+
 7.  Click the **Save and Exit** button.  
     ![Save_and_Exit_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4745168d2f5783fd/67e26ab9362ee360e855cfe5/Save_and_Exit_Trigger.png)
 
@@ -295,15 +296,15 @@ Let’s look at the setup in detail.
 2.  Within the **Configure Action Step**, click the **On-Demand Agent OS** Connector.
 3.  Under the **Choose an Action** tab, select the **Pause On-Demand** action.
 4.  In the **Preserve Previous Step Properties** field, select the values you want to retain from the previous step. Click the **\+ Add Preserve Previous Step Properties** button, then enter the **Property Name** and **Property Value**.  
-    
+
     In this example, we are selecting **Entry Title** and **Entry** **Content** to update the Title and Body content.
-    
+
 5.  In the **Select Body Type** drop-down, select a format for the output. Then, in the **Body** **Content** field, enter the content based on the selected type.
-    
+
     The **Body Type** and **Body Content** define the message displayed in the **Pause** modal during execution.
-    
+
     In this example, we are selecting **Text** as the **Body Type** and **"Do you want to update the entry?"** as the **Body** **Content**.
-    
+
     ![Select_Pause_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9a0895a9a874faef/682b2aebc665719819be519f/Select_Pause_Field.png)
 6.  Optionally, enable the **Show Optional Fields** toggle button to display the Pause modal title . You can enter a custom name for the **Pause Modal Title**.  
     ![Show_Optional_Fiels.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8c4939461df0a7a7/67e26ac103068dd66fa1fbdb/Show_Optional_Fiels.png)
@@ -337,9 +338,9 @@ Once the automation is activated, you can check all the active automations in th
 3.  A pop-up window will appear. Enter a prompt in the input field as shown below:  
     ![Additional_Information.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9d4cc6eb41795de4/67e26ab929f30c283df8e516/Additional_Information.png)
 4.  Once you enter the prompt, the **Pause** modal appears. Click **Confirm** to proceed with the execution. If you want to stop the execution of the subsequent step(s), click **Close**.
-    
+
     **Note:** To execute the automation, you must run it again.
-    
+
     ![Pause_Preview.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7409e483d56b69a5/67e26ab9848c634bb7cfdb8c/Pause_Preview.png)
 5.  Once confirmed, you will see the updated entry.
 
@@ -368,9 +369,9 @@ Let’s look at the setup in detail.
 3.  Under the **Choose Trigger** section, select the **Entry** **Sidebar** trigger.
 4.  On the **Entry Sidebar Configure Trigger** page, enter the details given below:
     1.  Select a **Stack** and **Branch** from the **Lookup** list.
-        
+
         **Note:** You cannot configure a [Response](/docs/agent-os/response) connector with the On-Demand Automate trigger.
-        
+
         ![Select_Trigger_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt927aa8ca49db7332/675fdacc1cd21e548cc25d96/Select_Trigger_Fields.png)
     2.  Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
         1.  Click the **\+ Input Options** button to view an Additional Information modal in the Entry Sidebar.
@@ -379,7 +380,7 @@ Let’s look at the setup in detail.
         4.  In the **Input** **Description** field, enter a suitable instruction text for the input type field. For example, _Enter the entry title to update._![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt95753f529964c2da/6794bd51b085b1371773ad57/Show_Optional_Fields.png)
 5.  Click the **Proceed** button.
 6.  Click the **Test** **Trigger** button to test the configured trigger.  
-    
+
 7.  Click the **Save and Exit** button.  
     ![Save_Exit_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta92b96382b38bd90/6794bd512108d8bc947fd032/Save_Exit_Button.png)
 
@@ -394,7 +395,7 @@ Let’s look at the setup in detail.
     ![User_Draft_Update_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3e604f32936364ac/6794bd5916946945a1974fe2/User_Draft_Update_Field.png)
 6.  Click the **Proceed** button.
 7.  Click the **Test** **Action** button to test the configured action.  
-    
+
 8.  Click the **Save and Exit** button.  
     ![Save_ExitUserDraft.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2e1e8057a4295488/6794bd51a326206e70291eec/Save_ExitUserDraft.png)
 
@@ -420,11 +421,11 @@ To view the On-Demand Automation App in the Asset Editor page, follow the steps 
 5.  In the right navigation panel, you will see the **On-Demand Automation App** icon. Click to view the On-Demand Automation App.  
     ![Automate_App_Asset_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbe3f33c2eeeecbf8/66838642c8ca7733c1ce006c/Automate_App_Asset_Sidebar.png)
 6.  You will see two icons: View Recipes and Manage Automations. Click **Manage Automations** to create a new automation.
-    
+
     On clicking the **View Recipes** icon, you can see the Recipes list.
-    
+
     **Note:** View Recipes and Manage Automations icons are only visible to an organization’s [Admin(s)](/docs/administration/about-administration-roles#organization-admin)/[Owner(s)](/docs/administration/about-administration-roles#organization-owner). Standard users can **only execute** the automation that is visible via the On-Demand Automation App in the Asset Sidebar location.
-    
+
 
 ### Create an Automation
 
@@ -439,7 +440,7 @@ To start executing the automation via the On-Demand Automation App, you first ne
     2.  Configure Action Step  
         ![Configure_Action_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltda2435f1803be46a/664b00861c913512ff13d320/Configure_Action_Trigger.png)
 6.  Let’s look at the above steps ‌in the next section.
-    
+
 
 #### Configure Trigger
 
@@ -451,18 +452,18 @@ Configuring a trigger can be broken into the following steps:
     ![Asset_Sidebar_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt59956035f8c992e9/668386420b1faa286adc03f6/Asset_Sidebar_Action.png)
 4.  On the **Asset Sidebar Configure Trigger** page, enter the details given below:
     1.  Select a **Stack** and **Branch** from the **Lookup** list.
-        
+
         **Note:** You **cannot** configure a [Response](/docs/agent-os/response) connector with the On-Demand Agent OS trigger.
-        
+
         ![Select_Fields_Asset_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt45ce36c4b58e913d/66838652b1132466c53a45c3/Select_Fields_Asset_Trigger.png)
     2.  Optionally, enable the **Show Optional Fields** toggle button to display the **Select Asset Type** field.
-        
+
         You can select the type of asset (Image, Video, Audio, PDF, Plain Text, Document, Presentation, Spreadsheet) on which the On-Demand Automation App will appear.
-        
+
         ![Select_Asset_Type_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt54096a2ceec9c0aa/6686788350a8ec5f52b665c6/Select_Asset_Type_Fields.png)
 5.  Click the **Proceed** button.
 6.  Click the **Test Trigger** button to test the configured trigger.  
-    
+
 7.  Click the **Save and Exit** button.  
     ![Save_Exit_Asset_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbdb8eddcaedebeb4/66838642b11324a6473a45bf/Save_Exit_Asset_Sidebar.png)
 
@@ -488,15 +489,15 @@ To configure an action step follow the steps below:
     2.  Enter the **File Name** (for example, File01) or/and any value from the values list. For this example, select the asset name fetched from the Asset Sidebar trigger.  
         ![File_Name.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc1078f564ad79d65/66866c0f62008a525310d474/File_Name.png)
     3.  In the **Source** dropdown, select the **Source** of the upload (Content or File URL) and the **Input Value** for each source.
-        
+
         For this example, select the **Source** as **File URL** and select the file URL fetched from the Asset Sidebar trigger in the **Input URL** field.
-        
+
         ![File_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta100a033fba6db66/66866c0fa4dbae118a4d91c8/File_URL.png)
     4.  Click the **Show Optional Fields** toggle button to enter the text for the **Tags** and **Metadata** optional fields.  
         ![Show_Optional_Fields_Create.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7cf3d005eddaf0ba/6683898bbbfa856f3ff86801/Show_Optional_Fields_Create.png)
 7.  Click **Proceed** after entering the details.
 8.  Click **Test Action** to test if the email sending was a success or not.  
-    
+
 9.  The email is queued and sent to the receiver’s email address. Click **Save and Exit**.  
     ![Save_Exit_Create.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8b1c5656f21775a7/6683898a8887dcf65bd95ea8/Save_Exit_Create.png)
 

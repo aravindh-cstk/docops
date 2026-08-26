@@ -2,6 +2,7 @@
 title: "URL Variables Reference"
 description: "Complete reference for every URL variable Studio accepts in composition URL patterns, including entry fields, taxonomy, context metadata, date pseudo variables, and validation rules."
 url: /studio/url-variables-reference
+uid: blta19657f9ab21b456
 ---
 
 # URL Variables Reference

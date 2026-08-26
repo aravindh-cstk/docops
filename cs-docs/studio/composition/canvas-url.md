@@ -2,6 +2,7 @@
 title: "Canvas URL"
 description: "Learn what the canvas URL is, how to configure it in project settings, and how to add the matching route to your app for section previews."
 url: /studio/canvas-url
+uid: blt8002e09c98ab2d8b
 ---
 
 # Canvas URL

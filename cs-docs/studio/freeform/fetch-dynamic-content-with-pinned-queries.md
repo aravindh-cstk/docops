@@ -2,6 +2,7 @@
 title: "Fetch Dynamic Content with Pinned Queries"
 description: "Learn how to pin a CDA query onto a Freeform template so a Repeater can iterate over dynamic list results that refresh automatically as content changes."
 url: /studio/fetch-dynamic-content-with-pinned-queries
+uid: blt63ad5b30fa2414cc
 ---
 
 # Fetch Dynamic Content with Pinned Queries

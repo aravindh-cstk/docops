@@ -2,6 +2,7 @@
 title: "Assign Role to a User"
 description: "steps to assign a role to a user"
 url: /headless-cms/assign-role-to-a-user
+uid: blt90aa210438cee1e7
 ---
 
 # Assign Role to a User

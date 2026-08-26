@@ -2,6 +2,7 @@
 title: "Sub Automation Action"
 description: "Use this action to fetch the sub automation created in a project."
 url: /agent-os/sub-automation-action
+uid: blt7f75d2c7c1c30782
 ---
 
 # Sub Automation Action
@@ -21,9 +22,9 @@ Perform the following steps to configure the Sub Automation action:
     ![Select_Actio.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt56f4484473a7870d/65c3110ceed32e6d97ac3344/Select_Actio.png)
 4.  Select the **Sub Automation** from the dropdown. This fetches a list of all the sub automations created in a project.
 5.  Enter the values in the **Sub Automation Template**. The schema is fetched from the configured sub automation.
-    
+
     **Note:** Only **Live** Sub Automation(s) will be displayed in the drop-down menu.
-    
+
     ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt40d0b729693ba9cf/65c3110cab9c0f4608b92990/Select_Fields.png)
 6.  Click the **Proceed** button.
 7.  To test the configured action, click the **Test Action** button.  
@@ -74,16 +75,16 @@ In the next step, we will create a new entry for the translated text.
 1.  Under **Choose an Action** tab, select the **Create Entry** action.
 2.  In the **Configure Action** tab, click + Add New Account to add your Contentstack account. Refer to the [Contentstack](/docs/agent-os/about-contentstack-management-actions) action connector for adding an account.
 3.  Select a **Stack**, **Branch**, and **Content Type** from the **Lookup** list. Provide your entry data in the **Entry Data** field.
-    
+
     **Note:** Provide your entry data as per your content type schema in JSON format only.
-    
+
     You can fetch the UID for all the previously configured automation steps directly from the Lookup list as shown below:
-    
+
     ![Create_Etry_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0b7cfff0ee49ae78/65c3110cab9c0f46dcb9298c/Create_Etry_Fields.png)
 4.  In the **Entry Data** field, you can add a predefined schema template for your entry data. This will add a structure to provide your entry data in a particular format for different fields. Enter the “title” value from the previous step, i.e. the title of the translated content.
-    
+
     **Note:** You must manually configure the entry data for JSON Rich Text Editor, Custom, and Experience Container fields.
-    
+
 5.  Click **Proceed**.
 6.  Click **Test Action** to test the configured action.  
     ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3abb49e62d6998b3/65c311167998da328a6b4897/Test_Action.png)

@@ -2,6 +2,7 @@
 title: "AEM to Contentstack"
 description: "Seamlessly migrate content from legacy CMS to Contentstack with our intuitive framework. Step-by-step guides, video tutorials, and support included."
 url: /headless-cms/aem-to-contentstack
+uid: blt96db8aa72ca90a57
 ---
 
 # AEM to Contentstack
@@ -20,7 +21,7 @@ Before you begin the installation and migration process, ensure that you have th
 
 -   **Contentstack Account**: [Admin](/docs/administration/about-administration-roles#organization-admin) or [Owner](/docs/administration/about-administration-roles#organization-owner) role access
 -   **Asset Migration**: Assets must be extracted from the DAM using the provided [script](https://github.com/contentstack-expert-services/Universal-Dynamic-Asset-Downloader). Migration will fail if assets are not extracted.
-    
+
 
 **Note:** The Migration Framework must be installed and running on your system. Refer to the [Setup Guides](/docs/headless-cms/set-up-content-migration-framework-macos) for installation instructions.
 
@@ -38,7 +39,7 @@ Follow these steps to perform the content migration for AEM:
 
 1.  From the welcome page, click **Sign In with Contentstack**.![AEM_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt34f346cc61d77732/692fd64af8653ac9b8b1513c/AEM_1.png)
 2.  You will be redirected to the login page with region selection.![AEM_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt715f094db35adbbb/692fd3171242086c1052cece/AEM_2.png)
-    
+
 3.  Log in using your Contentstack credentials.
 
 ### Step 2 - Select Your Organization
@@ -56,17 +57,17 @@ Follow these steps to perform the content migration for AEM:
 
 1.  By default AEM will be selected as your legacy CMS.
 2.  Add a **2–5 character affix** for the source name. Use only letters, no numbers or special characters. Make sure the affix does not match with one of the [restricted keywords](/docs/headless-cms/restricted-keywords-for-uids).
-    
+
     **Note:** The affix will function as a prefix if the content type UID matches with restricted UIDs. The affix will function as a suffix for field UIDs. If no affix is added, cs is affixed by the system.
-    
+
 3.  Click **Validate File** to validate the exported content. A success message appears once validation is completed.![AEM_5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4c92394c6a97abd1/692fd344645809b6832a26b9/AEM_5.png)
-    
+
     **Note:** If validation fails, it may be caused by one or more of the following issues:
-    
+
     -   **File Format Error**: Ensure the file is in the desired format.
     -   **Missing Content**: Ensure the exported data contains all required content.
     -   **Incomplete Files**: Verify that no files are missing or corrupted.
-    
+
 4.  Click **Save and Continue**.
 
 ### Step 5 - Configure Destination Stack
@@ -131,11 +132,11 @@ Click **Continue**.
 
 1.  Click **Create Test Stack** to create a sample stack within your organization to test the migration.
 2.  Click **Start Test Migration** to perform a migration to the test stack. A success message appears in the logs once the test migration is complete.
-    
+
     ![AEM_13.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt74f140ccf220842a/692fd368eabd9ed6d1e303e4/AEM_13.png)
-    
+
     **Note:** Test migration performs the migration on a small chunk of data in the test stack. This gives a validation and assurance that the migration will not fail in the selected stack.
-    
+
 3.  Click **Continue**.
 
 ### Step 8 - Execute the Migration

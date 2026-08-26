@@ -2,6 +2,7 @@
 title: "Taxonomy for a Basic Blog Website"
 description: "Organize your blog website with taxonomy in Contentstack. Follow this step-by-step guide to streamline content management."
 url: /headless-cms/taxonomy-for-a-basic-blog-website
+uid: bltbd68bc0b53da0d8e
 ---
 
 # Taxonomy for a Basic Blog Website
@@ -22,14 +23,14 @@ To create this taxonomy, log in to your [Contentstack account](https://www.conte
 2.  Click the **\+ New Taxonomy** button.
 3.  In the **Create Taxonomy** modal, add the following details:
     1.  Enter a **Name** for the taxonomy, for example **Blog Posts**. The **Unique ID** will be auto-generated.
-        
+
         **Note:** Once saved, you cannot change the UID.
-        
+
     2.  (Optional) Add a **Description** for reference.
 4.  Click **Create Taxonomy**.
-    
+
     **Note**: You can [localize](/docs/headless-cms/taxonomy-localization) the taxonomy name to display language-specific labels.
-    
+
 5.  Start defining terms to categorize your blog content. Create a term named **Artificial Intelligence** and click **Save**.
 6.  To add a child (nested) term, click the vertical ellipsis next to the parent term and select **Create Child Term**.
 7.  Repeat this process to add more terms under the _Blog Posts_ taxonomy as needed. As you build out the taxonomy, the left panel will display the full hierarchy of terms.

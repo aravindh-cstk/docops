@@ -2,6 +2,7 @@
 title: "Section Slots"
 description: "Learn how Section Slots let section authors carve named, editable holes into a section's layout for template authors to fill with any component or section."
 url: /studio/section-slots
+uid: bltc1ac0798fa01b970
 ---
 
 # Section Slots
