@@ -2,6 +2,7 @@
 title: "About Attributes"
 description: "Customize your content with Contentstack Personalize using preset and custom attributes for precise audience targeting."
 url: /personalize/about-attributes
+uid: bltf3f03835df7d6cd3
 ---
 
 # About Attributes
@@ -23,7 +24,7 @@ By combining preset and custom attributes, you can create granular audience segm
 Personalize offers the following **2** **types** of Attributes:
 
 1.  **Preset Attribute**: In Contentstack Personalize, preset attributes are pre-defined visitor characteristics that are readily available for audience segmentation and targeting. These built-in attributes represent common user traits or behaviors that are essential for delivering personalized experiences. Personalize contains the following preset attributes:
-    
+
     -   **City:** Target audiences based on their city location. For example, target users in New York City to show local event promotions.
     -   **Country:** Target audiences from a specific country. For example, display a country-specific discount for visitors from Canada.
     -   **Date and Time:** Target audiences with specific date and time details. For example, offer a special deal to users accessing your site during Black Friday.
@@ -32,9 +33,9 @@ Personalize offers the following **2** **types** of Attributes:
     -   **Query Parameter:** Use URL query parameters to dynamically tailor content for specific audience segments, enhancing personalization and targeting. For example, personalize content based on a query parameter like utm\_campaign=spring\_sale for users coming from a specific campaign.
     -   **Referrer:** Target audiences based on the referral source. For example, customize landing pages for users referred from a specific partner website.
     -   **Region:** Target audiences from a particular geographic region within a country. For example, target users in the state of California with tailored content.
-    
+
     By leveraging these default system attributes, you can quickly and easily create audience segments without the need for extensive customization, enabling you to tailor your content based on visitor demographics, technographics, and other key factors. This streamlines the process of delivering targeted content and ensures that your personalization efforts are both efficient and effective.
-    
+
 2.  **Custom Attribute**: In Contentstack Personalize, custom attributes are user-defined characteristics or properties that you can create to enhance audience segmentation and targeting. These attributes allow you to capture specific visitor information that is not covered by the preset attributes, enabling more granular and tailored personalization. After creating a custom attribute in your project, the data needs to be collected for the attribute. This can be done using the [Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/about-javascript-personalize-edge-sdk) or the [Personalize Edge API](/docs/developers/apis/personalize-edge-api). You can also use tools like [Google Tag Manager](/docs/personalize/about-gtm-integration) and [Customer Data Platform](/docs/personalize/about-cdp-integration) integrations for collecting the data.
 
 This flexibility empowers you to create highly specific audience segments and deliver personalized experiences that resonate with individual users, ultimately driving engagement and conversions.

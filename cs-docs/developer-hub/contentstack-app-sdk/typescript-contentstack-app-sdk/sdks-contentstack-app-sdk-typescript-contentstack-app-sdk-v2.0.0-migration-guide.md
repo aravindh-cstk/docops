@@ -2,6 +2,7 @@
 title: "Contentstack App SDK v2.0.0 Migration Guide"
 description: "App SDK v2.0.0 introduces breaking changes for metadata response, UI location, and extension APIs. Update plugins for improved compatibility and migration stability."
 url: /developers/sdks/contentstack-app-sdk/typescript/contentstack-app-sdk-v2.0.0-migration-guide
+uid: bltc92902103bb46d51
 ---
 
 # Contentstack App SDK v2.0.0 Migration Guide

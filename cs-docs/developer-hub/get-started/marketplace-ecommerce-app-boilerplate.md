@@ -2,6 +2,7 @@
 title: "Marketplace Ecommerce App Boilerplate"
 description: "Marketplace Ecommerce App Boilerplate provides a template to configure and create your ecommerce app and use it within Contentstack."
 url: /developer-hub/marketplace-ecommerce-app-boilerplate
+uid: blta4c19e17f918cbbd
 ---
 
 # Marketplace Ecommerce App Boilerplate
@@ -17,13 +18,13 @@ The following guide shows how to build an ecommerce marketplace app using our Ma
 ## What You Will Learn
 
 -   How to install and run the boilerplate UI and API locally.
-    
+
 -   How to create an ecommerce app in Developer Hub and add UI locations.
-    
+
 -   How to update root\_config for a third-party ecommerce platform.
-    
+
 -   How to use the ecommerce custom fields and sidebar widget within an entry.
-    
+
 
 ## Why should you use the Marketplace Ecommerce App Boilerplate?
 
@@ -265,74 +266,74 @@ Create a .env file and provide the URLs to configure the app.
 For example:
 
 1.  REACT\_APP\_API\_URL: http://localhost:8080/  
-    
+
 2.  REACT\_APP\_UI\_URL: http://localhost:4000/
 
 ### Install Dependencies
 
 1.  Navigate to the root directory of the downloaded zip file.
 2.  Run the following command to install the necessary packages:
-    
+
     In the terminal, go to the APP\_DIRECTORY and install the necessary dependencies.
-    
+
     ```
     cd <APP_DIRECTORY>
     ```
-    
+
     ```
     npm i
     ```
-    
+
 
 **For UI**
 
 1.  To install the necessary packages for the UI, navigate to the UI folder.  
-    
+
     ```
     cd <APP_DIRECTORY>/ui
     ```
-    
+
     ```
     npm i
     ```
-    
-      
-    
+
+
+
 2.  After you install the packages, run the following command in the UI folder to get started.  
-    
+
     ```
     npm run start
     ```
-    
+
 3.  For Windows operating system, use the following command:  
-    
+
     ```
     npm run startWin
     ```
-    
-      
-    
+
+
+
 
 **For API**
 
 1.  To install the necessary packages for the API, navigate to the API folder.  
-    
+
     ```
     cd <APP_DIRECTORY>/api
     ```
-    
+
     ```
     npm i
     ```
-    
-      
-    
+
+
+
 2.  After you install the packages, run the following command in the API folder to get started.  
-    
+
     ```
     npm run dev
     ```
-    
+
 3.  All the backend APIs are handled in a handler file inside the api/handler/index.js and all the UI API calls are handled inside the ui/src/services/index.tsx file.
 
 ### Creating a Project Using The Boilerplate
@@ -345,9 +346,9 @@ To use your application, you need to upload it to Contentstack. To do so, perfor
 3.  Click the **\+ New App** button.
 4.  In the **New App** modal, select **Stack App** as the **Type of App**. Enter a suitable **Name** for your app and an optional **Description**, and then click the **Create** button. By default, the **Status** of the created app will be **Private**.  
     ![Install_Stack_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd6cb3909311101d8/64fa02ea68d8e1286460287d/Install_Stack_App.png)
-    
+
     **Warning:** While selecting the **Type of App** in the above step, ensure you select **Stack App**, as this boilerplate supports stack apps only.
-    
+
 5.  Click **Create**.
 6.  On the resulting **Basic Information** page, upload your app’s icon and **Save** the changes.  
     ![Basic_Information.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte8a927be837a9df4/65b7d85c55a88a0bc9da6b45/Basic_Information.png)
@@ -355,9 +356,9 @@ To use your application, you need to upload it to Contentstack. To do so, perfor
     ![UI_Locations_Configuratio.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta4ac8e296d5e4cf5/65b7d8c8c025ee4a08b87f9b/UI_Locations_Configuratio.png)
 8.  Add the UI Locations as per your requirement.
 9.  Add the below routes for each UI Location to get the desired results.
-    
+
     **Note:** The name for each UI Location is optional, and can be used to override the default app name.
-    
+
     -   **Custom Field**  
         You must add two custom locations to view the Product and Category for the products in your Contentstack entry. In the Custom Field 1, use <your\_ app\_name="">- Product for Name and /product-field for Path. In the Custom Field 2, user <your\_app\_name> - Category for Name and /category-field for Path. Select the Data Type as JSON to fetch JSON data in your entry.  
          ![Custom_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0f3905eeb04cf7a4/65b75ee15f12ed00a6e218ae/Custom_Field.png)
@@ -367,59 +368,59 @@ To use your application, you need to upload it to Contentstack. To do so, perfor
     -   **App Configuration**  
         For the App Configuration UI Location, use /config for Path.  
         ![App_Config.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4106414a17b6274c/65b75edf30d47ec25d521b03/App_Config.png)
-    
+
     **Note:** After adding each route **save** and **install** the app in any stack.
-    
+
 10.  Select the stack where you want to install the app and click the **Install** button.  
      ![Install_the_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt08a567e20ce0e5ff/64fa02eb9da01596a61eb191/Install_the_App.png)
 11.  You will be redirected to the configuration page of the app.  
      ![Configuration_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt20c455f6d08a62b6/64fa02dd7db54e3536c18f03/Configuration_Page.png)
 12.  On the **Configuration** page, enter the values for **Sample Ecommerce App Client ID** and **Sample Ecommerce App Client Secret**. 
-     
+
      Let’s understand the configuration fields:
-     
+
      1.  **Sample Ecommerce App Client ID**  
          You can enter the Client ID fetched from the third-party ecommerce website and save the data. You can also use any other app configuration as per your ecommerce website.
-         
+
          **Note:** This configuration is a template for the user to understand how they can add/update/remove the config fields and add customized fields based on their requirement.
-         
+
      2.  **Sample Ecommerce App Client Secret:**  
          You can use this field to enter Client Secret fetched from third-party ecommerce websites. You can also customize the app configuration with your dedicated fields.  
          ![Configuration_page_with_highlights.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte33689110897123d/64fa02ddea4b5d2213510b63/Configuration_page_with_highlights.png)
-     
+
      **Note:** With **Save in Entry** field, If you select the ''Custom Fields'' option, you can select the structure of the data you want to save in the entry. If the 'All Fields' option is selected, you might be able to add limited products in the custom field depending on the size of the data (Refer to the [Custom Fields Location](/docs/developer-hub/custom-field-location) documentation, for more details). To increase this limit, **Items Per Page** defines the number of products to be displayed on the selector screen.
-     
+
      **Additional Resource:** To learn more, refer to the [App Configuration](/docs/developer-hub/app-config-location) document.
-     
+
      Having the basic ecommerce app setup ready, you can now update root\_config files in the UI and API directories. You can go through the [Template.MD file in our code repository](https://github.com/contentstack/marketplace-ecomm-boilerplate-app/blob/main/TEMPLATE.md) documentation for complete details on root\_config and update it as per the ecommerce platform that you are trying to integrate.
-     
+
      **Note:** In the root\_config file, you can add the name of your app, the selector page information, etc. You can add details about the configuration screen as well.
-     
+
      You can check examples of some ecommerce websites, such as BigCommerce and SAP Commerce Cloud in the GitHub code you downloaded to get started. To do so, follow the steps below:
-     
+
      **For API**
-     
+
      -   Navigate to the example -> app\_name/index.tsx file.
      -   Copy the code present in index.tsx file.
      -   Navigate to the root\_config and paste the code inside index.tsx file.
-     
+
      **For UI**
-     
+
      -   Navigate to the example -> app\_name -> index.tsx file.
      -   Copy the code present in index.tsx file.
      -   Navigate to the src -> root\_config folder and paste the code inside index.tsx file.
-     
+
      Restart both the servers for UI and API using the npm command as shown above.
-     
+
 13.  Click **Save** and click **Open Stack** to start using the application.
 14.  Navigate to the stack where your application is installed and view your application in the configured UI location.
-     
+
      **Note:** You **must** open the app in the configured UI location to view it.
-     
+
 15.  ## Use the Ecommerce application within your Stack
-     
+
 16.  To use the Ecommerce application within an entry of your stack, follow the steps given below:
-     
+
      1.  Go to your stack and click the “Content Models” icon on the left navigation panel, and click the **\+ New Content Type** button.
      2.  Create a content type by adding relevant details as displayed below:  
          ![Save_Proceed_Content_Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5e449ddc676c8c38/64fa02eab8c6d6741d0e41b7/Save_Proceed_Content_Type.png)
@@ -434,7 +435,7 @@ To use your application, you need to upload it to Contentstack. To do so, perfor
      8.  You will see the products fetched within your entry. You can drag and drop the products to arrange them in required order in both **Thumbnail** and **List** views.  
          ![CustomProducts_Selection.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c0a00e731190cda/64fa02eb8606a805e1c853e7/CustomProducts_Selection.png)  
          ![CustomFieldCategory.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbd88c4da65b218ff/64fa02ebe60bfc77f3d3cff1/CustomFieldCategory.png)  
-         
+
      9.  Click the **Save** button.
      10.  You can view more product details in **Sidebar Widget**.  
           ![Sidebar_Widget_Select_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3eb4656035b0f9fc/64fa02fd9bf261fb486bac99/Sidebar_Widget_Select_App.png)
