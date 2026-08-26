@@ -2,6 +2,7 @@
 title: "Get Started with Polaris | Contentstack"
 description: "Learn how to get started with Polaris, the AI-powered co-pilot in Contentstack CMS, to create, update, and manage content using natural language prompts."
 url: /agent-os/get-started-with-polaris
+uid: blt9e42a8381100ccd4
 ---
 
 # Get Started with Polaris | Contentstack
@@ -29,11 +30,11 @@ This guide shows how to get started with Polaris across three common CMS context
 Let's start by logging into the [Contentstack account](https://www.contentstack.com/login/) and following the steps given below:
 
 1.  Open the stack.
-2.  Navigate to an [Entry](/docs/headless-cms/about-entries), or [Asset](/docs/headless-cms/about-assets), or [Visual Editor](/docs/content-managers/visual-editor/about-visual-editor) page.
+2.  Navigate to an [Entry](/docs/headless-cms/about-entries), or [Asset](/docs/headless-cms/about-assets), or [Visual Editor](/docs/headless-cms/about-visual-editor) page.
 3.  Click the **Polaris** icon to open the **Polaris** **panel** within the CMS interface.
-    
+
     The Polaris panel opens as a side panel within the CMS UI. This panel is where you enter prompts and review planned actions and results.
-    
+
     ![Entry_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3a965efbde2aeda0/69a163888c618d824cbf756a/Entry_Page.png)
 
 ## Using Polaris in the Entry Editor

@@ -2,6 +2,7 @@
 title: "Change Entry Workflow Stage"
 description: "Change Entry Workflow Stage"
 url: /headless-cms/change-entry-workflow-stage
+uid: bltb5c9f0aee6d9dd03
 ---
 
 # Change Entry Workflow Stage
@@ -25,7 +26,7 @@ To change the workflow stage of an [entry](/docs/headless-cms/about-entries), lo
 
 As soon as an entry stage is assigned to a user, it is added as a new task in the [Tasks](/docs/headless-cms/about-workflow-tasks) section of the assignee.
 
-**Additional Resource:** You can get familiar with the [workflow use cases](/docs/headless-cms/workflows-use-cases) to learn how to efficiently work with the workflows. Also, you can check out the [Limitations](/docs/headless-cms/workflows-limitations) and [FAQs](/docs/faqs/#workflows-faqs) section.
+**Additional Resource:** You can get familiar with the [workflow use cases](/docs/headless-cms/workflows-use-cases) to learn how to efficiently work with the workflows. Also, you can check out the [Limitations](/docs/headless-cms/workflows-limitations) and [FAQs](/docs/headless-cms/faqs) section.
 
 ## API Reference
 
