@@ -22,7 +22,8 @@ To view your stack details, log in to your [Contentstack account](https://www.co
     **Note:** If no color is selected, a default color is applied.
     
 4.  In the **API Credentials** section, view the stack **API Key** (stack UID) used for authentication and API requests.
-5.  If you are the stack [Owner](https://www.contentstack.com/docs/headless-cms/types-of-roles#owner), you can [delete the stack](/docs/administration/organization-stacks#delete-a-stack) or [transfer ownership](/docs/headless-cms/transfer-stack-ownership). Other users can only [leave the stack](/docs/headless-cms/leave-a-stack). ![Stack Color in Stack Settings.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8c4738688592bef4/69a402b9fbdb4daac37752eb/Stack_Color_in_Stack_Settings.png)
+5.  In the **Publishing** section, view or change **Disable fallback publishing**. This section is available when your plan includes the fallback publishing controls. When the option is selected, entries are published only in the locales they are localized in. For details, refer to [Manage Publishing Settings](/docs/headless-cms/edit-a-stack).
+6.  If you are the stack [Owner](https://www.contentstack.com/docs/headless-cms/types-of-roles#owner), you can [delete the stack](/docs/administration/organization-stacks#delete-a-stack) or [transfer ownership](/docs/headless-cms/transfer-stack-ownership). Other users can only [leave the stack](/docs/headless-cms/leave-a-stack). ![Stack Color in Stack Settings.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8c4738688592bef4/69a402b9fbdb4daac37752eb/Stack_Color_in_Stack_Settings.png)
 
 Accessing these settings allows you to manage stack configuration, authentication credentials, and user permissions effectively.
 
