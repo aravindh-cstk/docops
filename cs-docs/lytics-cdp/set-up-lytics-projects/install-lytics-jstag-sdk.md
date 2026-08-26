@@ -2,6 +2,7 @@
 title: "Install the Lytics JStag SDK"
 description: "Learn how to install the Lytics JStag SDK on your front-end, verify the installation, and confirm data is flowing to your Lytics project dashboard."
 url: /lytics/install-lytics-jstag-sdk
+uid: blt74ef1f00168f479d
 ---
 
 # Install the Lytics JStag SDK
@@ -37,9 +38,9 @@ To install the Lytics JStag SDK, log in to your [Contentstack account](https://w
     -   **Installation verification:** Status indicator that polls Lytics for received events.
 6.  In the **Installation Instructions** section, click **Copy**.  
     ![Lytics_JStag_Code_snippet.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am6ced3428f8f6a5b6/8127b6e45f9fc3632e8a0bbe/Lytics_JStag_Code_snippet.png?locale=en-us)
-    
+
     **Note:** The snippet is a small <script> tag scoped to your project's Lytics account. It loads JStag from Lytics's CDN and starts tracking page views and interactions automatically.
-    
+
 7.  Paste the snippet as the first element inside <head> on every page you want to track.
 8.  Save and deploy your front-end.
 

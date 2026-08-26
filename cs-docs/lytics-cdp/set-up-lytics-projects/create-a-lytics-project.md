@@ -2,6 +2,7 @@
 title: "Create a Lytics Project"
 description: "Learn how to create and manage a Lytics project in Contentstack."
 url: /lytics/create-a-lytics-project
+uid: blt2888b189257cc5ca
 ---
 
 # Create a Lytics Project
