@@ -2,6 +2,7 @@
 title: "Edge URL Redirects"
 description: "Learn how to create edge URL redirects for your projects in Contentstack Launch."
 url: /launch/edge-url-redirects
+uid: bltfad65de37d220d02
 ---
 
 # Edge URL Redirects
@@ -27,12 +28,12 @@ This step-by-step guide will help you create a project in Launch that configures
 2.  [Deploy your project in Launch](#deploy-your-project-in-launch)
 
 1.  ### Create the launch.json File
-    
+
     Follow the steps to create the launch.json file for URL redirects:
-    
+
     1.  Open your source code folder.
     2.  Create a JSON file named launch.json inside the folder, and paste the following code into it:
-        
+
         ```
         {
           "redirects": [
@@ -49,32 +50,32 @@ This step-by-step guide will help you create a project in Launch that configures
           ]
         }
         ```
-        
+
     3.  Replace /source in the code with your source route.
     4.  Replace /destination in the code with your destination route.
-        
+
         **Note:** The source and destination URLs must not exceed **512** characters each.
-        
+
     5.  Based on the type of redirection you require, add one of the following status codes in the statusCode field:
-        
+
         -   For permanent redirection: 301 or 308.
         -   For temporary redirection: 302 or 307.
-            
+
             **Note:** By default, the statusCode value is set to 308 if you do not specify the statusCode field.
-            
-        
+
+
         You can use the headers field in the response object to set custom headers for the redirect response. The response field is optional; you can skip it if setting custom headers is not required.
-        
+
     6.  Save the launch.json file.
-        
+
         **Note:** The **file size** must be limited to **5MB**. To optimize performance and minimize latency during processing, use regular expressions to keep the configuration compact and efficient.
-        
-    
+
+
     #### Examples for the uses of Edge URL Redirects
-    
+
     -   Using path variables allows you to capture dynamic segments of the source URL and re-use them to construct the destination URL.  
         **Example:**
-        
+
         ```
         {
           "redirects": [
@@ -86,12 +87,12 @@ This step-by-step guide will help you create a project in Launch that configures
           ]
         }
         ```
-        
+
         The above example uses a path variable slug to redirect requests to any path (including subdirectories) under /blog/ to a corresponding path under /news/. The redirection is done with a 308 status code.
-        
+
     -   Path variables can also be captured with a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions). A regular expression allows you to pattern match on any given text, including URLs. The resulting path variable captures a part of the URL that matches the regular expression, and can then be re-used to construct the destination URL.  
         **Example:**
-        
+
         ```
         {
           "redirects": [
@@ -103,12 +104,12 @@ This step-by-step guide will help you create a project in Launch that configures
           ]
         }
         ```
-        
+
         In the above example, we have redirected all blogs that fall under the “product-updates” or “announcements” categories to a separate /product-updates section in the website. Note how we're defining two different regular expressions for capturing path variables, category and postId. In the destination, we're using only the postId path variable to construct the final URL. Given a URL like /blogs/product-updates/march-updates, the destination URL will be /product-updates/march-updates.
-        
+
     -   Using an absolute path, you can redirect your sites to external links.  
         **Example:**
-        
+
         ```
         {
           "redirects": [
@@ -120,12 +121,12 @@ This step-by-step guide will help you create a project in Launch that configures
           ]
         }
         ```
-        
+
         In the above example, the requests to the path /blog/post from the root of your website are redirected to the absolute path of an external site https://example.com/news/page.
-        
+
     -   You can also capture specific query parameters in URLs and use those parameters in the destination.  
         **Example:**
-        
+
         ```
         {
           "redirects": [
@@ -137,15 +138,15 @@ This step-by-step guide will help you create a project in Launch that configures
           ]
         }
         ```
-        
+
         With this configuration, requests like /blogs/insights?postId=321 redirects to /blogs/insights/321. The query parameter postId is captured with the given regular expression and used as a path parameter in the destination URL. We also see here the usage of the negative lookahead regular expression, which allows you to exclude categories such as "product-updates" and "announcements" from being matched.
-        
+
 2.  ### Deploy your Project in Launch
-    
+
     Deploy your project in Launch by [importing the source code from GitHub](/docs/launch/import-project-using-github/) or by [uploading the source code folder](/docs/launch/import-project-using-file-upload/).
-    
+
     After successful deployment, the Logs section displays the count of redirects as follows:
-    
+
     ![Launch_V2_EdgeURLRedirects.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt35f43492564c43c4/6604fac7b35eec5091031fc2/Launch_V2_EdgeURLRedirects.png)
 
 ## Limitations

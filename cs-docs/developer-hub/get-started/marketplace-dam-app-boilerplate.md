@@ -2,6 +2,7 @@
 title: "Marketplace DAM App Boilerplate"
 description: "Marketplace DAM App Boilerplate provides a template to configure and create your DAM app and use it within Contentstack."
 url: /developer-hub/marketplace-dam-app-boilerplate
+uid: blta75a9080dbbbbd4e
 ---
 
 # Marketplace DAM App Boilerplate
@@ -17,13 +18,13 @@ The following guide shows how to build a DAM (Digital Asset Management) Marketpl
 ## What You Will Learn
 
 -   How to install and run the boilerplate UI and JSON RTE servers locally.
-    
+
 -   How to create a DAM app in Developer Hub and add UI locations.
-    
+
 -   How to update root\_config and rte\_config for a third-party DAM.
-    
+
 -   How to use the DAM app in a custom field and in the JSON RTE within an entry.
-    
+
 
 ## Why should you use the Marketplace DAM App Boilerplate?
 
@@ -112,48 +113,48 @@ npm i
 **For UI**
 
 1.  To install the necessary packages for the UI, navigate to the UI folder.
-    
+
     ```
     cd <APP_DIRECTORY>/ui
     ```
-    
+
     ```
     npm i
     ```
-    
+
 2.  Once the packages are installed, run the following command in the UI folder to get started. The UI server will start at port 4000.
-    
+
     For Linux/MacOS:
-    
+
     ```
     npm run start
     ```
-    
+
     For Windows:
-    
+
     ```
     npm run winStart
     ```
-    
+
 
 **For RTE**
 
 1.  To install the necessary packages for the JSON RTE, navigate to the RTE folder.
-    
+
     ```
     cd <APP_DIRECTORY>/ui/rte
     ```
-    
+
     ```
     npm i
     ```
-    
+
 2.  After you install the packages, run the following command in the RTE folder to get started. The RTE server will start at port 1268.
-    
+
     ```
     npm run start
     ```
-    
+
 
 **Note:** Add .env files to UI and JSON RTE before starting the server. The .env values are mentioned in the [README.md](https://github.com/contentstack/marketplace-dam-boilerplate-app/blob/main/README.md) file.
 
@@ -168,31 +169,31 @@ To use your application, you need to set it up in Contentstack. To do so, perfor
 3.  Click the **\+ New App** button.
 4.  In the **New App** modal, select **Stack App** as the **Type of App**. Enter a suitable **Name** for your app and an optional **Description**, and then click the **Create** button. By default, the **Status** of the created app will be **Private**.  
     ![DAM-Biolerplate-Create-New-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt80aed3ac76d45231/6567905c2d2f23288ff3dcb6/DAM-Biolerplate-Create-New-App.png)
-    
+
     **Warning:** While selecting the **Type of App** in the above step, ensure you select **Stack App**, as this boilerplate supports stack apps only.
-    
+
 5.  On the resulting **Basic information** page, upload your app’s icon and **Save** the changes.  
     ![Baisc_Information.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta0034dffa9ea7108/65b7d9971be7ff87855da256/Baisc_Information.png)  
-    
+
 6.  Click the **UI Locations** tab. To set the **App URL**, click the **View Hosting Settings** link. You will be redirected to the **Hosting** tab. On the resulting page, enter the **App URL**. In the development phase, this will be the UI server URL i.e,  
     http://localhost:4000/#  
     ![UI_Locations.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt38db2e08ff92ad55/65b7d997292a0ed66887d241/UI_Locations.png)  
-    
+
 7.  Add the UI locations for your app, as per your requirement, inside the **App location(s)** option. The DAM template supports the following 3 UI locations:
     1.  App Configuration
     2.  Custom Field
     3.  JSON RTE
 8.  Add the below routes for each UI Location to get the desired results.
-    
+
     **Note:** The name for each UI location is optional. By default, the app name is the UI location name.
-    
+
     1.  **App Configuration**: In the App Configuration UI location, use /config for Path.  
         ![App_Config.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc2fc6122feb21150/65b75f13c6000541ead5a8a9/App_Config.png)
     2.  **Custom Field**: In the Custom Field UI location, use <Your\_App\_Name> for Name and /custom-field for Path. Select the **Data Type** as **JSON** to store JSON data in your entry.  
         ![Custom_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5ca358bf3dd72966/65b75f14d2067b9be28c45cc/Custom_Field.png)
-    
+
     **Note**: For configuring JSON RTE UI location, please refer to the [Add JSON RTE UI Location](#add-json-rte-ui-location) section, as it works on different ports.
-    
+
 9.  After saving the recently added UI locations, click the **Install App** button to install the DAM app.
 10.  Select the stack where you want to install the app, accept the terms of service, and click the **Install** button.  
      ![DAM-Biolerplate-Install-Sample-DAM-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3cf566341217a68a/656799a76a1419b99f416ceb/DAM-Biolerplate-Install-Sample-DAM-App.png)
@@ -200,9 +201,9 @@ To use your application, you need to set it up in Contentstack. To do so, perfor
      1.  **Text input**: You can enter the input text for the Sample DAM app and save the data. You can also use any other app configuration as per your DAM website.
      2.  **Select input**: You can use the Select input field to select any option from the dropdown options.
      3.  **DAM radio input**: You can use the radio input field to choose an option from the given options (**Single Select** or **Multi Select**).
-         
+
          **Note:** You can customize the app configuration with your dedicated fields.
-         
+
      4.  **Save in Entry** \[Mandatory\]: If you select the **Custom Fields** option, you can select the structure of the data you want to save in the entry. If the **All Fields** option is selected, you might be able to add limited products in the custom field depending on the size of the data (Refer to the [Custom Fields Location](/docs/developer-hub/custom-field-location) documentation for more details).  
          ![Configuration_Screen_DAM.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt08e958834f245001/68a6b8fb65a024956f5543f8/Configuration_Screen_DAM.png)
 12.  Click the **Save** button and then click **Open Stack** to start using the application.
@@ -277,14 +278,14 @@ You can check examples of some DAM (Digital Asset Management) apps, such as Bynd
 To do so, follow the steps below:
 
 1.  Select the app example and configure the changes:
-    
+
     **For UI**
-    
+
     1.  Navigate to the ui > example > sample\_dam\_app folder and copy the root\_config folder.
     2.  Navigate to the ui > src folder and replace the root\_config folder with the ui > example > sample\_dam\_app > root\_config folder.
-    
+
     **For RTE**
-    
+
     1.  Navigate to the ui > example > sample\_dam\_app folder and copy the rte\_config folder.
     2.  Navigate to the ui > rte > src folder and replace the rte\_config folder with the ui > example > sample\_dam\_app > rte\_config folder.
 2.  After configuration, restart both the servers for UI and RTE using the npm command as shown in the [Install Dependencies](#install-dependencies) section.

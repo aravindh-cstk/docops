@@ -2,6 +2,7 @@
 title: "Deploy Hooks"
 description: "Create, trigger, and manage Deploy Hooks in Contentstack Launch to automate site deployments with custom URLs and Git commit options."
 url: /launch/deploy-hooks
+uid: bltb82f4dc7d6ddcbf5
 ---
 
 # Deploy Hooks
@@ -26,13 +27,13 @@ This document guides you through the process of creating, triggering, renaming, 
 ## What You Will Learn
 
 -   How to create a Deploy Hook and get its unique URL.
-    
+
 -   How to trigger a Deploy Hook with a POST request.
-    
+
 -   How to pass the optional commit parameter.
-    
+
 -   How to rename and delete a Deploy Hook.
-    
+
 
 ## Create a Deploy Hook
 
@@ -41,16 +42,16 @@ Follow the steps given below to create a Deploy Hook in your project:
 1.  [Log in to your Contentstack account](https://www.contentstack.com/login/) and select the **Launch** icon from the dashboard.
 2.  On the Launch landing page, click the **project card** to open your project.
 3.  In the **Environments** screen, go to the environment where you created the project, click the **ellipses** under **Actions**, and then click **Settings** to configure the Deploy Hook. For this tutorial, we will be adding a Deploy Hook to the **Default** environment.
-    
+
     ![Launch_Settings_2026.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3ccdc1d79b2ef2eb/69b78cd967be9e781070b034/Launch_Settings_2026.png)
-    
+
 4.  In **Environments** under **Settings**, click **Deploy Hooks**.  
     ![Launch_Deploy_Hooks_Venus2_Tab_GitHub.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcb4eda307ce78db9/65c1b080554798126e808625/Launch_Deploy_Hooks_Venus2_Tab_GitHub.png)
 5.  Click the **\+ New Deploy Hook** button.
 6.  Enter a name for your Deploy Hook.
-    
+
     **Note:** The Deploy Hook name is for your reference. This name will be displayed in your list of Deploy Hooks.
-    
+
     ![Launch_Deploy_Hooks_Venus2_NewDeployModal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt74b6d9552b8f56e1/65c1b080d6cf04169e1512f9/Launch_Deploy_Hooks_Venus2_NewDeployModal.png)
 7.  Click the **Create Deploy Hook** button.  
     Launch provides you with a unique URL for this Deploy Hook.  
@@ -66,22 +67,22 @@ Follow the steps given below to trigger a Deploy Hook:
 4.  Click the **ellipses** under **Actions** and then click **Copy URL** to copy the Deploy Hook URL.  
     ![Launch_Deploy_Hooks_Venus2_CopyURL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta582bd94e6503112/65c1b0800acbc5354810ebc0/Launch_Deploy_Hooks_Venus2_CopyURL.png)
 5.  Send a **POST** request to this URL to trigger the Deploy Hook you created.
-    
+
     **Example Request**
-    
+
     ```
     curl -X POST
     https://cs-domain.com/Launch-path/manage/deploy/deploy-hook-id
     ```
-    
+
     **Example Response**
-    
+
     ```
     {
      "message": "Deployment triggered successfully"
     }
     ```
-    
+
 6.  Click the **Environments** icon in the left panel and then go to your environment.
 
 You will see that it has triggered a deployment successfully.

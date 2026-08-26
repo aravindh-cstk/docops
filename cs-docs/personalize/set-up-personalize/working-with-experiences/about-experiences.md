@@ -2,6 +2,7 @@
 title: "About Experiences"
 description: "Learn about experiences and how they let you personalize content for your visitors."
 url: /personalize/about-experiences
+uid: blt46697059a1efbb9f
 ---
 
 # About Experiences
