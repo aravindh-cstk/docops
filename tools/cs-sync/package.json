@@ -27,6 +27,7 @@
     "test:sandbox-promote": "tsx src/test-sandbox-to-prod-promote.ts",
     "test:nav-linker": "tsx src/test-left-nav-linker.ts",
     "test:release-manager": "tsx src/test-release-manager.ts",
+    "test:promote-guard": "tsx src/test-promotion-diff-guard.ts",
     "test:inject": "tsx src/test-inject-images.ts",
     "test:doc-index": "tsx src/test-doc-index.ts",
     "test:image-rewrite": "tsx src/test-image-rewrite.ts",

@@ -143,7 +143,7 @@ async function createEntryDirectlyInProd(config: TestConfig, entry: { title: str
   return data.entry.uid;
 }
 
-function runPromotion(entryUid: string): string {
+function runPromotion(entryUid: string, opts: { force?: boolean } = {}): string {
   return execSync("npx tsx src/sandbox-to-prod-promote.ts", {
     cwd: csSyncDir,
     encoding: "utf8",
@@ -151,6 +151,7 @@ function runPromotion(entryUid: string): string {
       ...process.env,
       STACK_TYPE: "csdocs",
       ENTRY_UIDS: entryUid,
+      PROMOTE_FORCE_OVERWRITE: opts.force ? "true" : "false",
     },
   });
 }
@@ -311,11 +312,11 @@ try {
     return "no duplicate, version unchanged despite the Prod-only tag";
   });
 
-  // ── p6: a legacy (pre-tag) Prod entry gets adopted via the url fallback ──
+  // ── p6: a legacy (pre-tag) Prod entry is NOT silently overwritten ──
 
   const LEGACY_URL = `/test/promote-fixture-legacy-${RUN_ID}`;
 
-  await test("p6", "legacy Prod entry with no tag yet → adopted via url fallback, not duplicated", async () => {
+  await test("p6", "legacy Prod entry with differing content → conflict, left untouched", async () => {
     prodUid2 = await createEntryDirectlyInProd(config, {
       title: "[Test] Legacy fixture (pre-tag)",
       url: LEGACY_URL,
@@ -328,7 +329,27 @@ try {
     sandboxUid2 = entry.uid;
     await publishInSandbox(config, sandboxUid2);
 
+    const beforeVersion = (await prodClient.findEntryByUrl(LEGACY_URL))?._version;
+
     const output = runPromotion(sandboxUid2);
+    if (!/CONFLICT/i.test(output) || !/no-baseline/i.test(output)) {
+      throw new Error(`Expected a no-baseline CONFLICT (this Prod entry carries no src-hash fingerprint, so it cannot be proven safe to overwrite), got:\n${output}`);
+    }
+
+    const untouched = await prodClient.findEntryByUrl(LEGACY_URL);
+    if (untouched?._version !== beforeVersion) {
+      throw new Error(`Expected _version to stay at ${beforeVersion}, got ${untouched?._version} — the conflict guard did not prevent the write`);
+    }
+
+    return `legacy Prod entry ${prodUid2} left untouched, reported as a conflict`;
+  });
+
+  // ── p7: forcing adopts that legacy entry deliberately ──
+
+  await test("p7", "force_overwrite adopts the legacy entry via the url fallback and stamps both tags", async () => {
+    if (!sandboxUid2) throw new Error("p6 must pass first — no legacy fixture to adopt");
+
+    const output = runPromotion(sandboxUid2, { force: true });
     if (!/Matched by url \(legacy/i.test(output)) {
       throw new Error(`Expected a "Matched by url (legacy...)" adoption log, got:\n${output}`);
     }
@@ -345,8 +366,31 @@ try {
     if (!tags.includes(`sandbox-uid-${sandboxUid2}`)) {
       throw new Error(`Expected the adopted entry to now carry tag "sandbox-uid-${sandboxUid2}", got tags: ${JSON.stringify(tags)}`);
     }
+    if (!tags.some((t) => t.startsWith("src-hash-"))) {
+      throw new Error(`Expected the adopted entry to now carry a src-hash fingerprint so later runs need no force, got tags: ${JSON.stringify(tags)}`);
+    }
 
-    return `adopted legacy Prod entry ${prodUid2}, now tagged, no duplicate`;
+    return `adopted legacy Prod entry ${prodUid2}, now tagged with sandbox-uid and src-hash, no duplicate`;
+  });
+
+  // ── p8: with a baseline in place, the next run is a clean skip without force ──
+
+  await test("p8", "after adoption, re-running with no change skips without needing force", async () => {
+    if (!sandboxUid2) throw new Error("p7 must pass first — no adopted entry to re-promote");
+
+    const beforeVersion = (await prodClient.findEntryByUrl(LEGACY_URL))?._version;
+
+    const output = runPromotion(sandboxUid2);
+    if (!/no changes detected/i.test(output)) {
+      throw new Error(`Expected a "no changes detected" skip once a fingerprint exists, got:\n${output}`);
+    }
+
+    const prodEntry = await prodClient.findEntryByUrl(LEGACY_URL);
+    if (prodEntry?._version !== beforeVersion) {
+      throw new Error(`Expected _version to stay at ${beforeVersion}, got ${prodEntry?._version}`);
+    }
+
+    return "clean no-op, fingerprint recognised as promotion's own write";
   });
 } finally {
   if (sandboxUid) await deleteEntry(config.sandboxApiKey, config.sandboxToken, sandboxUid);
