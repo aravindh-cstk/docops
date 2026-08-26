@@ -2,6 +2,7 @@
 title: "Lytics User Permissions"
 description: "Understand how access to Lytics projects is governed by Contentstack organization membership and project-level roles, and see a full breakdown of who can do what."
 url: /lytics/user-permissions
+uid: blte4b1d980eaa2ee06
 ---
 
 # Lytics User Permissions
@@ -50,8 +51,6 @@ The Lytics CDP evaluates access in a fixed order of precedence. The first condit
 -   An **Organization Owner or Admin** can perform any action on any Lytics project in the organization, regardless of their project-level role.
 -   A **Project Owner** who is an organization member (not an admin) has full control over their own project but cannot access other projects in the organization.
 -   An **Invited Collaborator's** access is limited to the specific actions permitted by the role they were assigned on that project.
-
-The table makes the precedence logic scannable without the question-mark phrasing, and the bullet summary below it translates each rule into plain consequence, which is what a reader actually needs to walk away with.
 
 ## Permissions Matrix
 

@@ -2,6 +2,7 @@
 title: "AWS SNS"
 description: "AWS SNS"
 url: /agent-os/aws-sns
+uid: blt7d6d0ccd862ca4f3
 ---
 
 # AWS SNS
@@ -17,21 +18,21 @@ For instance, consider a scenario where you either create or update an entry in 
 Perform the following steps to set up the AWS SNS action connector:
 
 1.  Click **Configure Action Step** from the left navigation panel.  
-    
+
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **AWS SNS** connector.  
     ![Select_the_Connector_SNS.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt20b85c00353c3250/6527c9d47986d42c508f3830/Select_the_Connector_SNS.png)  
-      
-    
+
+
 4.  Under **Choose an Action** tab, select the **Send Notification** action.  
     ![AWS-SNS-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltda9c550c94722190/63dc0a47ef38d05093a9a040/AWS-SNS-Action.png)  
-    
+
 5.  Click the **\+ Add New Account** button to add your AWS account (see screenshot in next step).  
     ![AWS-SNS-Configure-Action-Add-New-Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7025a6ca050d72cf/63dc0a479fc1e60f1a99de70/AWS-SNS-Configure-Action-Add-New-Account.png)  
-    
+
 6.  In the **Authorize** modal, provide details such as **Title****, Access Key**, **Secret Key**, and **Region**.  
     You can generate the **Access** and **Secret Key** by navigating through **Security credentials** \> **Access Keys** \> **Create New Access Key** in your AWS account.  
-    
+
 
 ![5.Generate_Access_Key.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltbbf46236d700600c/6386004d5bbc641099351c30/5.Generate_Access_Key.jpg)
 
@@ -46,18 +47,18 @@ Perform the following steps to set up the AWS SNS action connector:
 13.  Click the **Show optional fields** toggle button to enter the values for **Message Attributes** and **Subject** optional fields.  
      In **Message attributes**, you can enter certain attributes (in JSON format only) along with your message, and in **Subject**, you can enter the subject of the message.  
      ![Subject_Message_Attributes.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte0f9f5b04f7bcf8c/651fde9e6c9e36009cc0bc4b/Subject_Message_Attributes.png)  
-     
+
 14.  Click **Proceed**.
 15.  Check if the details are correct. If yes, click **Test Action**.  
      ![AWS-SNS-Test-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdf0aa1568185ca20/63dc0a48e69a5812255551cd/AWS-SNS-Test-Action.png)  
-     
+
 16.  After successfully executing the Action, you will get a notification on your configured communication medium. For this example, we have configured the user's email in their SNS account.  
-     
+
 
 ![11.Output_Email.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt4c6660aea05e74cf/629d4c8b9687cd428c1fb42a/11.Output_Email.png)
 
 18.  Click **Save and Exit** to finish the process.![AWS-SNS-Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85fbf6bd41c07021/63dc0a47bd97af5094b657fd/AWS-SNS-Output.png)  
-       
-     
+
+
 
 This sets the **AWS SNS** action connector.

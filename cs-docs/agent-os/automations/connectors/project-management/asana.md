@@ -2,6 +2,7 @@
 title: "Asana"
 description: "Use the Asana connector to create, update, and fetch projects, tasks, and users."
 url: /agent-os/asana
+uid: bltf93c14e98e773cb3
 ---
 
 # Asana
@@ -16,7 +17,7 @@ The Asana action connector lets you create a task, fetch tasks details from a pr
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **Asana** connector.  
     ![Select_the_Connector_Asana.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcbe9f977868ad6be/6527c9503347f307770279cc/Select_the_Connector_Asana.png)  
-    
+
 4.  Under **Choose an Action** tab, you will see four actions:
     -   [**Create a Task**](#action-1-select-the-create-a-task-action) (creating a task in Asana)
     -   [**Get Tasks from Project**](#action-2-select-the-get-tasks-from-project-action) (fetching tasks from Asana project)
@@ -43,9 +44,9 @@ Let’s look at each of them in detail.
     6.  Select the **Assignee Name** from the lookup values to whom you want to assign this task.
     7.  Select the **Parent Task Name** from the lookup list if creating a sub-task.
     8.  Choose the section from the **Select Section** dropdown where you want to place the task.
-    
+
     **Note:** When you want to change the section, the task must be assigned to a user.
-    
+
     10.  **Custom Fields** are the user-specified fields that store the task information in the Asana project—for example, Priority, Status, etc. You can add a Custom Field as a key-value pair from the lookup data.
     11.  Choose the value from the **Select Approval Status** dropdown to set the approval status. The status can be **Pending**, **Approved**, **Rejected**, and **Changes Requested**.
     12.  Check the **Mark a task as complete** checkbox to set the task status as complete.
@@ -102,7 +103,7 @@ Let’s look at each of them in detail.
     ![Asana-Set-Account-Name](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltabff4387cbb00621/64e768bc566653897911961b/Asana-Set-Account-Name.png)
 4.  On the **Get a User - Configure Action** page, select the **User Name** or **Email ID** from the lookup values to retrieve the user details.  
     ![Asana-Get-A-User-Configure-Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1df0a73e3728a062/64e768bc29a0627b71b809c1/Asana-Get-A-User-Configure-Action.png)  
-    
+
 5.  Click **Proceed**.
 6.  Click **Test Action** to test the configured action.  
     ![Asana-Test-Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5d036fc8f66f6bea/64e768bc29a514788594de4f/Asana-Test-Action.png)
@@ -115,7 +116,7 @@ Let’s look at each of them in detail.
 
 1.  Click the **\+ Add New Account** button to add your Asana account (see screenshot in next step).  
     ![Asana-Update-A-Task-Action-Add-Account](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7baa55c85a3d1c97/64e76916ffe8ee9e233e7a7a/Asana-Update-A-Task-Action-Add-Account.png)  
-    
+
 2.  In the **Manage Permissions** modal, click the **Checkbox** and click **Authorize**.  
     ![Asana-Account-Authorization](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2128f92a43c39e92/64e76961ea7fb3a73412e520/Asana-Account-Authorization.png)
 3.  In the **Set Account Name** modal, enter the **Title** and click **Save** to add your Asana account.  
@@ -128,9 +129,9 @@ Let’s look at each of them in detail.
     6.  Enter the **Description** to update the task description.
     7.  Select the **Assignee Name** from the lookup values to whom you want to assign this task.
     8.  Choose the section from the **Select Section** dropdown where you want to place the task.
-    
+
     **Note:** When you want to change the section, the task must be assigned to a user.
-    
+
     10.  **Custom Fields** are the user-specified fields that store the task information in the Asana project—for example, Priority, Status, etc. You can add a Custom Field as a key-value pair from the lookup data.
     11.  Choose the value from the **Select Approval Status** dropdown to set the approval status. The status can be **Pending**, **Approved**, **Rejected**, and **Changes Requested**.
     12.  Check the **Mark a task as complete** checkbox to set the task status as complete.
@@ -140,7 +141,7 @@ Let’s look at each of them in detail.
     ![Asana-Test-Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5d036fc8f66f6bea/64e768bc29a514788594de4f/Asana-Test-Action.png)
 7.  You will get the response. Once set, click **Save and Exit**.  
     ![Asana-Update-A-Task-Configure-Output](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcfb4af0c674196d6/64e7691656ef586fc08ee89c/Asana-Update-A-Task-Configure-Output.png)  
-    
+
 8.  Navigate to your Asana Project. You should see that the task has been updated successfully.
 
 This sets the **Asana** action connector.
