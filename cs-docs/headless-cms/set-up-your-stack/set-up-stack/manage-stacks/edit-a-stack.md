@@ -33,6 +33,8 @@ If your plan includes the fallback publishing controls, the stack **Settings** p
 
 **Note:** The Owner, Admin, and Developer roles can change this setting. The Developer role cannot change the stack name, description, or color.
 
+**Note:** For a new stack, **Disable fallback publishing** is selected by default. For an existing stack, it is cleared by default, so fallback publishing continues until you turn it on.
+
 To disable fallback publishing, go to your stack settings and perform the following steps:
 
 1. Open the **Publishing** section and select **Disable fallback publishing**.
@@ -46,8 +48,9 @@ After you save the setting, a **Cross-Locale Unpublish Release** section appears
 
 1. In **Select branches**, choose one or more branches to clean up. The **Create Releases** button stays disabled until you select at least one branch.
 2. Click **Create Releases**.
+3. In the **Create Cross-Locale Unpublish Release** modal, review the number of releases to be created, then confirm. Saving the setting and creating the releases happen together.
 
-Contentstack scans each selected branch in the background and creates one release of unpublish items per branch. Release names are generated automatically. Track progress in the [Stack Bulk Task Queue](/docs/headless-cms/stack-bulk-task-queue). This applies to the latest (v2) releases only.
+Contentstack scans each selected branch in the background and creates one release of unpublish items per branch. Release names are generated automatically. The releases are created for review, so nothing is unpublished until you deploy them to an environment. Track progress in the [Stack Bulk Task Queue](/docs/headless-cms/stack-bulk-task-queue). This applies to the latest (v2) releases only.
 
 <!-- Screenshot: Stack Settings > Cross-Locale Unpublish Release section with the Select branches dropdown and Create Releases button -->
 

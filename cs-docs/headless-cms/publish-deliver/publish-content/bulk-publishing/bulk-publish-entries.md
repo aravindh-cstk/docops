@@ -25,6 +25,8 @@ To bulk publish entries, log in to your [Contentstack account](https://www.conte
     
     **Note:** When publishing multiple localized and unlocalized versions of an entry, you can select up to **50 languages** and **50 environments**.
     
+    **Note:** If **Disable fallback publishing** is enabled for your stack, only entries localized in the selected languages are published. Entries that are not localized are skipped, as noted in the modal.
+    
     ![Bulk_Publish_Entries_PublishModal1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltde62ae0e98db59e8/678f35439d626e91d411c9e8/Bulk_Publish_Entries_PublishModal1.png)
 5.  Click **Send With References** to publish the selected entries along with their referenced items, or **Send Without References** to publish only the selected entries.
 

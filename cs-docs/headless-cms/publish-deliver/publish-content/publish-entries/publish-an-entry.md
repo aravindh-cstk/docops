@@ -22,6 +22,9 @@ To publish an entry, log in to your [Contentstack account](https://www.contentst
     -   Select the **checkbox** next to the entry and click **Publish** in the floating action widget.
     
 4.  In the **Publish Entry** modal, select the target [environments](/docs/headless-cms/about-environments) and [locales](/docs/headless-cms/about-localization) to which you want to publish the entry.
+    
+    **Note:** If **Disable fallback publishing** is enabled for your stack, you can select only the locales in which the entry is localized. Non-localized locales are disabled, with a tooltip explaining why. If the entry is not localized in the current locale, the **Publish** button is disabled, and publishing a single non-localized entry through the API returns an error.
+    
 5.  If the entry has [variants](/docs/headless-cms/about-entry-variants), select the variants to publish from the **Variants** dropdown.
 6.  Under the **Publish** section, select one of the two available options:
     -   **Now:** Publish the entry immediately.
