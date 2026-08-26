@@ -2,6 +2,7 @@
 title: "Authoring Conventions"
 description: "Conventions for writing a skill's SKILL.md beyond its required structure and security rules."
 url: /developers/skills-authoring-conventions
+uid: blta8e348f88c284bce
 ---
 
 # Authoring Conventions
@@ -12,7 +13,7 @@ Following these conventions when you write or edit a skill's SKILL.md keeps its 
 
 ## Keep "When to Use" aligned with the router
 
-**If "When to Use" drifts from the skill's row in skills/CLAUDE.md, the router activates the wrong skill for a request.** Phrase "When to Use" as the exact user intents that should trigger the skill, and mirror that same phrasing in its routing row to keep the two aligned. See [The Router](/docs/developers/skills-router) for how the routing table is structured.
+**If "When to Use" drifts from the skill's row in [skills/CLAUDE.md](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/CLAUDE.md), the router activates the wrong skill for a request.** Phrase "When to Use" as the exact user intents that should trigger the skill, and mirror that same phrasing in its routing row to keep the two aligned. See [The Router](/docs/developers/skills-router) for how the routing table is structured.
 
 ## Add a skill-specific Security section
 
