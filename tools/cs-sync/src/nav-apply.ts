@@ -29,6 +29,8 @@ import matter from "gray-matter";
 import { htmlToMarkdown } from "./html-to-md.js";
 import { extractSections } from "./cda-fetch.js";
 import { jsonRteToHtml, type RteNode } from "./lib/json-rte-to-html.js";
+import { entryToMarkdown, type DocsArticleLike } from "./lib/entry-to-markdown.js";
+import { articleFileName } from "./lib/nav-shared.js";
 import { canonicalizeUrl } from "./doc-index.js";
 import {
   slugify,
@@ -139,11 +141,9 @@ function escapeForFrontmatter(value: string): string {
   return value.replace(/"/g, '\\"');
 }
 
-export function articleFileName(url: string | null): string | null {
-  const segments = (url ?? "").split("/").filter(Boolean);
-  if (segments.length === 0) return null;
-  return `${(segments.length > 1 ? segments.slice(1) : segments).join("-")}.md`;
-}
+// Moved to lib/nav-shared.ts, where nav-audit.ts's identical copy and the
+// Prod → GitHub sync can both reach it. Re-exported for existing importers.
+export { articleFileName };
 
 // ── git helpers ─────────────────────────────────────────────────────────────
 
@@ -211,28 +211,19 @@ function writeFile(rel: string, content: string, dryRun: boolean): void {
  * back to its entry by querying that url, so it has to be the live one.
  */
 export function buildArticle(entry: Entry, urlOverride?: string | null): string | null {
-  const sections = extractSections(entry as { article_content?: unknown });
-  if (sections.length === 0) return null;
-  const heading = cleanTitle(entry.title);
-  // An empty seo.description writes `description: ""`, which fails the
-  // frontmatter schema outright. The heading is a weaker summary but a valid
-  // one, and it keeps the file syncable until an author fills the field in.
-  const description = String((entry as any).seo?.description ?? "").trim() || heading;
-  const body = sections
-    .map((s) =>
-      s.heading.trim() ? `## ${s.heading.trim()}\n\n${htmlToMarkdown(s.content)}` : htmlToMarkdown(s.content),
-    )
-    .join("\n\n");
-  const frontmatter = [
-    "---",
-    `title: "${escapeForFrontmatter(heading)}"`,
-    `description: "${escapeForFrontmatter(description)}"`,
-    // Always the entry's own url, never rewritten to match the folder this
-    // copy happens to sit in. One entry, one url, however many copies.
-    `url: ${urlOverride ?? entry.url ?? ""}`,
-    "---",
-  ].join("\n");
-  return `${frontmatter}\n\n# ${heading}\n\n${body}\n`;
+  // Delegates to the shared converter in lib/entry-to-markdown.ts, which was
+  // lifted out of this function. `stampUid`/`includeTags` are off so the output
+  // is byte-identical to what this pass has always written: adding two new
+  // frontmatter keys across the whole 1500-file tree is its own change.
+  //
+  // urlOverride carries the entry's CURRENT url while the body comes from the
+  // version published to production, and the two can disagree. See
+  // EntryMarkdownOptions.urlOverride for why the live url has to win.
+  return entryToMarkdown(entry as DocsArticleLike, {
+    urlOverride,
+    stampUid: false,
+    includeTags: false,
+  });
 }
 
 /**

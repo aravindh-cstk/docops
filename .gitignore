@@ -18,6 +18,10 @@ tools/cs-sync/.image-source-coverage.json
 tools/cs-sync/.image-inject-report.json
 tools/cs-sync/.cms-pull-summary.json
 tools/cs-sync/.cms-pull-prod-summary.json
+# Prod-sync staging area. cms-pull-prod.ts writes generated files here rather
+# than into cs-docs/, so prod-sync-open-prs.ts can apply one editor's bundle at
+# a time onto a clean branch.
+tools/cs-sync/.prod-sync-staging/
 tools/cs-sync/prod-orphan-report.csv
 tools/cs-sync/.nav-tree.json
 tools/cs-sync/nav-audit/
