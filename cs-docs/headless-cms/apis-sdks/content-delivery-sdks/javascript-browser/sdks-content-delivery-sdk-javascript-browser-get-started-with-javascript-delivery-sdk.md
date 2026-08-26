@@ -2,6 +2,7 @@
 title: "Get Started with JavaScript Delivery SDK"
 description: "Getting Started with JavaScript Delivery SDK"
 url: /developers/sdks/content-delivery-sdk/javascript-browser/get-started-with-javascript-delivery-sdk
+uid: bltea31b93f90ad1e70
 ---
 
 # Get Started with JavaScript Delivery SDK
@@ -20,7 +21,7 @@ To get started with JavaScript, you will need the following:
 
 ## SDK Installation and Setup
 
-To use the JavaScript Delivery SDK, [download](/docs/developers/javascript-browser/javascript_sdk_latest) and include it in the <script> tag:
+To use the JavaScript Delivery SDK, [download](https://assets.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfdab91eaab6a564e/639d6efa970241131cd5af49/contentstack-v3.15.0.min.js) and include it in the <script> tag:
 
 ```
 <script type="text/javascript" src="/path/to/contentstack.min.js"></script>
@@ -62,21 +63,21 @@ const Stack = Contentstack.Stack("api_key", "access_token", "environment_name",
 Here are a few examples of how you can add a username and password to HttpProxyAgent.
 
 -   You can pass it in the URI:  
-    
+
     ```
     var proxy = new HttpsProxyAgent('https://username:password@your-proxy.com');
     ```
-    
+
 -   You can set it in the auth option  
-    
+
     ```
     var proxyOpts = url.parse('https://your-proxy.com');
     proxyOpts.auth = 'username:password';
     var proxy = new HttpsProxyAgent(proxyOpts);
     ```
-    
+
 -   You can even set the HTTP header manually:  
-    
+
     ```
     var proxyOpts = url.parse('https://your-proxy.com');
     proxyOpts.headers = {
@@ -84,7 +85,7 @@ Here are a few examples of how you can add a username and password to HttpProxyA
     };
     var proxy = new HttpsProxyAgent(proxyOpts);
     ```
-    
+
 
 ### Region Support
 

@@ -2,6 +2,7 @@
 title: "Password Protection for Environments"
 description: "Learn how to restrict your Launch environments using the Password Protection feature in Contentstack Launch."
 url: /launch/password-protection
+uid: blt5ecf7eaa59b719fd
 ---
 
 # Password Protection for Environments
@@ -10,7 +11,7 @@ url: /launch/password-protection
 
 Development, staging, and production environments refer to common stages of software development where an application or system is deployed and operated in isolated environments. Access to the development and staging environments is usually restricted from public access as it is in these environments that new features, code changes, and updates are tested, built, and validated before they are published on the web in the production environment.
 
-The Password Protection feature of Contentstack Launch allows you to enable access restrictions to your development and staging environments in Launch using the [Basic Auth](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication) method in order to prevent them from being accessed by search engines and the public.
+The Password Protection feature of Contentstack Launch allows you to enable access restrictions to your development and staging environments in Launch using the [Basic Auth](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Authentication) method in order to prevent them from being accessed by search engines and the public.
 
 This document guides you through enabling and disabling password protection for your environments in Contentstack Launch.
 
@@ -23,9 +24,9 @@ This document guides you through enabling and disabling password protection for 
 ## What You Will Learn
 
 -   How to enable password protection for an environment.
-    
+
 -   How to disable password protection for an environment.
-    
+
 
 ## Enable Password Protection for your Environment
 
@@ -39,13 +40,13 @@ Follow the steps below to enable password protection for your environment:
     ![SiteAccessPassProtectToggle.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am8cbad01b7691008c/dc2a0cd5f4b30df4e858f173/SiteAccessPassProtectToggle.png?locale=en-us)
 5.  Enter a username in the **Username** field and password in the **Password** field for your current environment, not exceeding 200 characters each.  
     ![SiteAccessPasswordProtectionDetails.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amb8cd9051db3b7c36/c40ca671f866227ec5779339/SiteAccessPasswordProtectionDetails.png?locale=en-us)
-    
+
     **Note:** The username must not contain the colon (:) character.
-    
+
 6.  Click the **Save Password Protection Settings** button.
-    
+
     **Note:** The protection is specific to the selected environment. All domains within this environment are automatically password protected.
-    
+
 
 You have now successfully enabled and set password protection for your environment.
 

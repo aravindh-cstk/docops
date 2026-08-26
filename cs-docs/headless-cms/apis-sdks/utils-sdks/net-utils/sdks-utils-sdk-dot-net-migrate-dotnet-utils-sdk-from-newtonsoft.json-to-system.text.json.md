@@ -2,6 +2,7 @@
 title: "Migrate the Contentstack Utils .NET SDK from Newtonsoft.Json to System.Text.Json"
 description: "Utilize the Contentstack .NET Utils SDK Variant Utility to extract variant aliases and generate data-csvariants attributes using GetVariantAliases."
 url: /developers/sdks/utils-sdk/dot-net/migrate-dotnet-utils-sdk-from-newtonsoft.json-to-system.text.json
+uid: blt9eda2d149b6ce8d1
 ---
 
 # Migrate the Contentstack Utils .NET SDK from Newtonsoft.Json to System.Text.Json
@@ -17,7 +18,7 @@ This guide shows the System.Text.Json replacement for each affected area and the
 ## Prerequisites
 
 -   The [Contentstack Utils .NET SDK](https://www.nuget.org/packages/contentstack.utils) version 3.x.x, installed in your project.
--   [.NET 10](https://dotnet.microsoft.com/) or later.
+-   [.NET 10](https://dotnet.microsoft.com/en-us/) or later.
 
 **Warning:** This version of the SDK removes its Newtonsoft.Json package reference and depends only on System.Text.Json. If your own application code directly uses Newtonsoft types (JObject, JsonConvert, etc.) outside of SDK calls, add the Newtonsoft.Json package reference to your project yourself, since the SDK no longer brings it in transitively.
 
@@ -509,5 +510,5 @@ Use this checklist to verify you have completed every change before releasing th
 
 ## Next Steps
 
--   [System.Text.Json overview (Microsoft)](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-overview). Background on the serializer the SDK now uses, including supported types, configuration options, and behavioral differences from Newtonsoft.Json.
+-   [System.Text.Json overview (Microsoft)](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/overview). Background on the serializer the SDK now uses, including supported types, configuration options, and behavioral differences from Newtonsoft.Json.
 -   [Migrate from Newtonsoft.Json to System.Text.Json (Microsoft)](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/migrate-from-newtonsoft). Microsoft's API-by-API migration reference for cases beyond the SDK-specific changes covered here.

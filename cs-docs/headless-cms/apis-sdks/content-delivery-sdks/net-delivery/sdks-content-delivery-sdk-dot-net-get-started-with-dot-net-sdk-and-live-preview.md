@@ -2,6 +2,7 @@
 title: "Get Started with .NET SDK and Live Preview"
 description: "Get started with Contentstack .NET SDK for building apps. Learn installation, setup, Live Preview integration, and more. Explore the guide now!"
 url: /developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-sdk-and-live-preview
+uid: blt4eb0b76b49301dde
 ---
 
 # Get Started with .NET SDK and Live Preview
@@ -20,17 +21,17 @@ This guide will help you get started with [Contentstack .NET SDK](/docs/develope
 To install the .NET SDK, choose either of the following methods:
 
 -   **Via Package Manager**: Open the terminal and install the contentstack module using the following “Package Manager” command:
-    
+
     ```
     PM> Install-Package contentstack.csharp
     ```
-    
+
 -   **Via .NET CLI**: Run the following .NET CLI command:
-    
+
     ```
     dotnet add package contentstack.csharp
     ```
-    
+
 
 After successful installation, to use the module in your application, you need to first add a namespace to your class:
 
@@ -148,5 +149,5 @@ For more information, refer to our [Timeline Preview](/docs/headless-cms/set-up-
 -   [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk)
 -   [.NET News App](/docs/developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-delivery-sdk)
 -   [API Reference](/docs/developers/sdks/content-delivery-sdk/dot-net/reference/)
--   [.NET SDK Changelog](/docs/developers/sdks/content-delivery-sdk/dot-net/dot-net-sdk-changelog/)
+-   [.NET SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download .NET SDK repository on GitHub](https://github.com/contentstack/contentstack-dotnet)

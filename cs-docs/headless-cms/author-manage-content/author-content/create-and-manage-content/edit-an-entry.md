@@ -2,6 +2,7 @@
 title: "Edit an Entry"
 description: "Easily update and manage your Contentstack entries. Learn editing, preview changes, and publish updates seamlessly with our guide."
 url: /headless-cms/edit-an-entry
+uid: blt2775dbe9e98c83e8
 ---
 
 # Edit an Entry
@@ -36,7 +37,7 @@ To edit an [entry](/docs/headless-cms/about-entries), log in to your [Contentsta
 Contentstack provides multiple features designed to simplify entry editing and ensure efficient content management. These tools include:
 
 1.  [**Live Preview**](/docs/headless-cms/about-live-preview): See real-time updates to your content before saving or publishing.
-2.  [**Visual Builder**](/docs/content-managers/visual-editor/about-visual-editor): Edit page layouts in real-time directly on the preview of your website without developer assistance.
+2.  [**Visual Builder**](/docs/headless-cms/about-visual-editor): Edit page layouts in real-time directly on the preview of your website without developer assistance.
 3.  [**Timeline**](/docs/headless-cms/about-timeline): Visualize and manage the publishing history and future updates. Preview scheduled updates and track publishing history.
 
 **Additional Resource:** Within an entry that contains reference fields (or is referenced by other entries), you can click [View Reference Map](/docs/headless-cms/view-entry-references#understanding-the-reference-map) to visualize relationships.
