@@ -2,6 +2,7 @@
 title: "Edit a Webhook"
 description: "Easily edit a webhook to customize automated triggers for user-defined events in your application or service."
 url: /headless-cms/edit-a-webhook
+uid: blt23a2f51e54bcefdc
 ---
 
 # Edit a Webhook
