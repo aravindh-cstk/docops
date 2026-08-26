@@ -1,5 +1,14 @@
 name: Promote CS Docs from Sandbox to Prod (Staging env)
 
+# The only path that copies Sandbox content into Prod. Deliberately manual:
+# content is normally edited directly in Prod, so a scheduled job re-pushing
+# Sandbox over Prod could overwrite those edits before anyone noticed. Run this
+# after publishing an entry in Sandbox.
+#
+# Promotion refuses to overwrite a Prod entry whose content no longer matches
+# the src-hash-<hash> fingerprint promotion last wrote to it, i.e. one a human
+# has edited. Those are reported as conflicts and left alone.
+
 on:
   workflow_dispatch:
     inputs:
@@ -7,8 +16,23 @@ on:
         description: "Comma-separated list of entry UIDs to promote (leave empty for all published entries)"
         required: false
         default: ""
+      conflict_mode:
+        description: "enforce = never overwrite a Prod entry a human edited. report = write anyway, but list what would have been blocked (rollout only)"
+        required: false
+        type: choice
+        default: enforce
+        options:
+          - enforce
+          - report
+      force_overwrite:
+        description: "Overwrite Prod even where a conflict is detected. Only ever use this with entry_uids scoped to specific entries you have checked."
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
+  # Shared with the Prod→GitHub pull workflow so the two never touch Prod at
+  # the same time.
   group: sandbox-to-prod-promote-csdocs
   cancel-in-progress: false
 
@@ -40,6 +64,8 @@ jobs:
           PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
           PROD_CSDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN }}
           ENTRY_UIDS: ${{ inputs.entry_uids }}
+          PROMOTE_CONFLICT_MODE: ${{ inputs.conflict_mode }}
+          PROMOTE_FORCE_OVERWRITE: ${{ inputs.force_overwrite }}
         run: npm run sandbox-promote
 
       - name: Promotion summary
@@ -51,8 +77,10 @@ jobs:
           echo "  1. ✓ Published entries from Sandbox were created or updated in Prod CMS"
           echo "  2. ✓ Entries were published to the 'staging' environment only"
           echo "  3. ✓ Production environment was NOT affected"
+          echo "  4. ✓ Prod entries edited directly by a human were reported as conflicts, not overwritten"
           echo ""
           echo "📌 Next steps:"
           echo "  - Entries are now in Prod CMS and published to Staging"
           echo "  - Review in Staging environment before promoting to Production"
-          echo "  - If changes were made in Prod, they will auto-sync back to Sandbox and GitHub (via cms-to-github workflow)"
+          echo "  - Check the run summary for any conflicts. Each one means a Sandbox change is still unpromoted"
+          echo "  - Prod edits are pulled back into the repo by the CS Docs CMS Sync (Prod→GitHub) workflow"

@@ -22,7 +22,9 @@ import type { ProdPromoteClient } from "./lib/prod-promote-client.js";
 import { PROMOTION_ENVIRONMENTS } from "./lib/prod-promote-client.js";
 import { PRODUCTS, resolveProduct } from "./lib/product-registry.js";
 import { resolveProductConfig } from "./lib/content-type-mappings/docs-article.js";
-import { slugify } from "./nav-tree.js";
+// From lib/nav-shared.ts, not nav-tree.ts: the latter demands CMS credentials at
+// import time, which made this credential-free unit test unrunnable without a .env.
+import { slugify } from "./lib/nav-shared.js";
 import { subsectionChainFromPath, productSlugFromPath } from "./lib/nav-placement.js";
 import type { ContentstackEntry } from "./lib/entry-content.js";
 

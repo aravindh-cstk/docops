@@ -113,5 +113,10 @@ export function htmlToMarkdown(html: string): string {
     // CMS authors sometimes type **bold** directly in the rich-text editor as raw
     // text rather than using the bold button, which produces <strong>. Restore
     // balanced \*\*...\*\* pairs so they render as bold in the final markdown.
-    .replace(/\\\*\\\*(.+?)\\\*\\\*/g, "**$1**");
+    .replace(/\\\*\\\*(.+?)\\\*\\\*/g, "**$1**")
+    // A list item holding two paragraphs comes out with the separating line
+    // indented to match ("-   First\n    \n    Second"), leaving trailing
+    // whitespace on an otherwise blank line. Harmless to render, but it shows up
+    // as invisible diff noise in every PR, so blank it out.
+    .replace(/^[ \t]+$/gm, "");
 }

@@ -12,10 +12,10 @@ Syncs Markdown under `docs/` to Contentstack `docs_article` entries when changes
 
 ## What is not written
 
-- `md_content` — maintained by separate internal automation
-- `breadcrumb`, `related_articles`, `next_and_prev_links`, `seo` — editors manage in the CMS
+- `md_content`: maintained by separate internal automation
+- `breadcrumb`, `related_articles`, `next_and_prev_links`, `seo`: editors manage in the CMS
 
-Entries are matched by `url` (no Contentstack UIDs in GitHub). Creates are saved as **drafts**; publishing stays manual in Contentstack.
+Entries are matched by `url` (no Contentstack UIDs in GitHub). Creates are saved as **drafts**, and publishing stays manual in Contentstack.
 
 ## GitHub setup
 
@@ -53,5 +53,42 @@ Optional env overrides: `CS_REGION` (default `us`), `CS_CONTENT_TYPE` (default `
 
 ## Workflows
 
-- `.github/workflows/contentstack-sync.yml` — push to `main` when `cs-docs/**/*.md` changes
-- `.github/workflows/docs-lint.yml` — pull requests; validates front matter and internal links
+- `.github/workflows/contentstack-sync.yml`: push to `main` when `cs-docs/**/*.md` changes
+- `.github/workflows/docs-lint.yml`: pull requests. Validates front matter and internal links
+- `.github/workflows/sandbox-to-prod-promote-csdocs.yml`: **manual**, copies published Sandbox entries into Prod
+- `.github/workflows/sandbox-auto-promote-csdocs.yml`: every 5 minutes, pulls direct Prod edits back into the repo as a PR
+
+## Promoting Sandbox content to Prod
+
+Promotion is a manual step. There is no schedule, on purpose: content is normally
+edited directly in Prod, and a background job re-pushing Sandbox over Prod could
+overwrite those edits before anyone noticed.
+
+Run it after you publish an entry in Sandbox:
+
+1. Actions → **Promote CS Docs from Sandbox to Prod (Staging env)** → Run workflow.
+2. Put the entry UID(s) in `entry_uids` (comma-separated). Leaving it blank sweeps
+   every published Sandbox entry, which is valid but much broader than usually intended.
+3. Read the run summary. Entries land in Prod published to Staging and Development.
+   Production is never published to by this automation.
+
+### Conflicts
+
+If someone edited an entry directly in Prod, promotion will **not** overwrite it. It
+reports a conflict and moves on, so that edit is never silently lost.
+
+Promotion knows this because it stamps a `src-hash-<hash>` tag on every entry it
+writes, a fingerprint of the content it wrote. If re-fingerprinting the live Prod
+entry no longer reproduces that tag, someone changed it since.
+
+A conflict means two versions of that article now exist and a human has to pick. The
+usual resolution is to let the Prod→GitHub workflow pull the Prod edit into a PR,
+merge it, then let it flow back through Sandbox as normal.
+
+Two inputs exist for the rollout and for legacy entries:
+
+- `conflict_mode: report` writes anyway but lists what would have been blocked. For
+  sizing the conflict set, not for normal use.
+- `force_overwrite: true` overwrites despite a conflict. Only ever use it with
+  `entry_uids` scoped to specific entries you have checked. Entries promoted before
+  the fingerprint existed report as `no-baseline` and need this once to adopt them.
