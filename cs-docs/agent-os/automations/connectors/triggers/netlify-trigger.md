@@ -2,6 +2,7 @@
 title: "Netlify Trigger"
 description: "Configure the Netlify trigger to sync workflows with deployment status and form submissions using a Site ID and personal access token."
 url: /agent-os/netlify-trigger
+uid: blt057e94fa262d3979
 ---
 
 # Netlify Trigger
@@ -25,9 +26,9 @@ Start with adding your Netlify account by following the steps given below:
 5.  Under **Choose Trigger** tab, select the **Netlify Trigger**.![Select_action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbed5f76004e0b211/6a02f33a8b50846f8b0d4ff8/Select_action.png)
 6.  In the **Authorize** modal, enter a **Title** and a **Token**.
 7.  You can generate a new token from the **Personal access token** section in your Netlify console. Navigate to **User settings** > **Applications** \> **New access token** > **Generate token**.![Netlify_Dashboard.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt84c7f1e40ca0e970/639d6d8c04ce585b97424850/Netlify_Dashboard.png)
-    
-    **Additional Resource:** For more information, refer to the [Obtain a token in Netlify UI](https://docs.netlify.com/cli/get-started/#obtain-a-token-in-the-netlify-ui/) document.
-    
+
+    **Additional Resource:** For more information, refer to the [Obtain a token in Netlify UI](https://docs.netlify.com/api-and-cli-guides/cli-guides/get-started-with-cli) document.
+
     Then click **Authorize.** ![Authorize_button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5798608568928144/6a02f33a2e7ac0cc44f9eeeb/Authorize_button.png)
 
 ## Set up the Netlify Trigger
@@ -39,11 +40,11 @@ Perform the following steps to set up the Netlify trigger connector:
     ![Select_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd5283a0157f09b85/6a02f33ab9d8afc5b2372f26/Select_Trigger.png)
 3.  Under the **Choose Trigger** section, select **Netlify** Trigger.  
     ![Select_action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbed5f76004e0b211/6a02f33a8b50846f8b0d4ff8/Select_action.png)
-    
+
     **Note:** After successfully configuring a trigger, if you re-configure any other trigger you will be prompted to revert to the previously configured trigger. You can revert back to the last trigger configurations by clicking the Revert Changes button.
-    
+
 4.  Let’s look at it in detail.
-    
+
 
 ### Netlify Trigger
 
@@ -55,13 +56,13 @@ Let’s look at the steps to set up the trigger event.
 2.  On the **Netlify Trigger Configure Trigger** page, enter the details given below:
     1.  Click **\+ Add New Account** button to connect your Netlify account as shown in the [Connect your Netlify Account](#connect-your-netlify-account) step.
     2.  Select the **Site ID** from the **Lookup** drop-down.
-        
+
         The **Site ID** is a unique identification given to a project configured in Netlify. You can select the desired project for which you want to configure the Netlify connector.
-        
+
     3.  Select the trigger event from the drop-down, i.e., **Deployment succeeded**.
-        
+
         The **Netlify** Trigger supports the following events:
-        
+
         -   **Deployment started:** Triggered when Netlify begins building a new deployment.
         -   **Deployment succeeded:** Triggered when a deployment completes successfully and goes live.
         -   **Deployment failed:** Triggered when a deployment fails during the build or publish process.

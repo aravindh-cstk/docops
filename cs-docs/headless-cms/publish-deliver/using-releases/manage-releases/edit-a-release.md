@@ -2,6 +2,7 @@
 title: "Edit a Release"
 description: "Learn how to update release name and description with our step-by-step guide."
 url: /headless-cms/edit-a-release
+uid: blt87b3501769c11735
 ---
 
 # Edit a Release

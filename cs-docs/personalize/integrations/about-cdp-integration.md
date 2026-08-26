@@ -2,6 +2,7 @@
 title: "About Customer Data Platform Integration"
 description: "Leverage Customer Data Platform with Contentstack to manage personalization campaigns and enhance user experiences effectively."
 url: /personalize/about-cdp-integration
+uid: bltacdbc4aef9cae861
 ---
 
 # About Customer Data Platform Integration
@@ -18,7 +19,7 @@ When used with **Contentstack Personalize**, CDP's play a crucial role in poweri
 
 The architecture for integrating customer data with **Contentstack Personalize** follows a hub-and-spoke model. Instead of connecting CDPs directly to Personalize, Contentstack recommends routing all CDP data through **Lytics** to maintain a centralized profile and ensure a scalable personalization workflow.
 
-**Note:** Direct integrations between CDPs and Personalize are no longer recommended. Route all CDP data through [Lytics](/docs/lytics-cdp) to maintain consistency and enable advanced features such as experience versioning, variants, and experience targeting.
+**Note:** Direct integrations between CDPs and Personalize are no longer recommended. Route all CDP data through [Lytics](/docs/lytics) to maintain consistency and enable advanced features such as experience versioning, variants, and experience targeting.
 
 ### CDP Integration via Lytics
 
@@ -48,7 +49,7 @@ Organizations integrating CDPs with Lytics and Personalize typically:
 
 If you currently use a CDP such as Segment, Salesforce, or another provider, Contentstack recommends routing your integration through **Lytics** instead of connecting directly to Personalize. This approach standardizes data ingestion, ensures consistent audience logic, and provides a single hub to manage segmentation and profile enrichment.
 
-Lytics acts as the bridge between your CDP and Contentstack Personalize. You can configure Lytics to ingest data, compute traits, build audiences, and push enriched data to Personalize via the [Lytics CDP](/docs/lytics-cdp).
+Lytics acts as the bridge between your CDP and Contentstack Personalize. You can configure Lytics to ingest data, compute traits, build audiences, and push enriched data to Personalize via the [Lytics CDP](/docs/lytics).
 
 ### Integration Path
 
@@ -58,4 +59,4 @@ To personalize experiences using customer data, connect your CDP through Lytics.
 
 -   If you are using Segment or another CDP, refer to the [Lytics Destination documentation on Segment](https://segment.com/docs/connections/destinations/catalog/lytics/#lytics-destination) for instructions on routing CDP data through Lytics.
 
-For setup steps, refer to the [Lytics CDP Documentation](/docs/lytics-cdp).
+For setup steps, refer to the [Lytics CDP Documentation](/docs/lytics).

@@ -2,6 +2,7 @@
 title: "Setup Next.js Website with Personalize - Vercel"
 description: "Learn how to set up a Next.js website with Personalize integration on Vercel for fast, dynamic user experiences."
 url: /personalize/setup-nextjs-website-with-personalize-vercel
+uid: bltba0e29c976745a7b
 ---
 
 # Setup Next.js Website with Personalize - Vercel
@@ -20,13 +21,13 @@ This guide will help you setup your Next.js website with Personalize, hosted on 
 ## What You Will Learn
 
 -   How to get the Personalize project UID.
-    
+
 -   How to proxy requests with Next.js Middleware to fetch the user manifest.
-    
+
 -   How to fetch variant content from the CMS based on the resolved variants.
-    
+
 -   How to set attributes and trigger impression and conversion events.
-    
+
 
 ## Steps for Execution
 
@@ -43,37 +44,37 @@ To retrieve the project UID, perform the steps given below:
 
 ### Proxy Requests with Middleware
 
-[Middleware](https://nextjs.org/docs/app/building-your-application/routing/middleware) allows you to execute logic on the edge before each request on the website. Using this feature, we can make a call to the [Personalize Edge API](/docs/developers/apis/personalize-edge-api/) and fetch the [User Manifest](/docs/personalize/glossary-key-features#user-manifest) for each visitor. The User Manifest contains the selected Variant for each Experience. We can then pass these variants as the URL query parameters.
+[Middleware](https://nextjs.org/docs/app/api-reference/file-conventions/proxy) allows you to execute logic on the edge before each request on the website. Using this feature, we can make a call to the [Personalize Edge API](/docs/developers/apis/personalize-edge-api/) and fetch the [User Manifest](/docs/personalize/glossary-key-features#user-manifest) for each visitor. The User Manifest contains the selected Variant for each Experience. We can then pass these variants as the URL query parameters.
 
 Let’s take a look at each one of these steps.
 
 1.  #### Install the Personalize SDK
-    
+
     To install the Personalize Edge SDK in your Next.js project:
-    
+
     ```
     $ npm install @contentstack/personalize-edge-sdk
     ```
-    
+
     **Additional Resource:** The [API Reference](/docs/developers/sdks/personalize-edge-sdk/javascript/reference/) for the SDK contains a lot of information on how to use the SDK.
-    
+
 2.  #### Create the Middleware Handler
-    
+
     The middleware.ts is to be created at the root folder of your website source code. To create the Middleware Handler:
-    
+
     ```
     // middleware.ts
     export default async function middleware(req: NextRequest) {
       return NextResponse.next();
     }
     ```
-    
+
     The Middleware will now allow you to proxy all requests.
-    
+
 3.  #### Initialize the SDK
-    
+
     Now modify the middleware.ts file with the following code to initialize the Personalize Edge SDK:
-    
+
     ```
     import {
       NextRequest,
@@ -93,22 +94,22 @@ Let’s take a look at each one of these steps.
       return NextResponse.next();
     }
     ```
-    
+
     Here, we initialize the Personalize Edge SDK. Notice how we are passing the request object along. As part of the initialization process, the user context is extracted from the request object and used to fetch the [User Manifest](/docs/personalize/glossary-key-features#user-manifest) from the Personalize Edge API. The Manifest provides a list of variants selected in each published experience.
-    
+
     **Note**: You can also provide a different Edge API URL in case you are on a different Contentstack region. Here are the Edge API URLs for each region:
-    
+
     -   AWS NA: https://personalize-edge.contentstack.com
     -   AWS EU: https://eu-personalize-edge.contentstack.com
     -   Azure NA: https://azure-na-personalize-edge.contentstack.com
     -   Azure EU: https://azure-eu-personalize-edge.contentstack.com
     -   GCP NA: https://gcp-na-personalize-edge.contentstack.com
     -   AWS AU: https://au-personalize-edge.contentstack.com
-    
+
 4.  #### Pass the variant parameter in the URL
-    
+
     Now add the following code the middleware.ts file to pass the variant parameter in the URL:
-    
+
     ```
     import {
       NextRequest,
@@ -133,56 +134,56 @@ Let’s take a look at each one of these steps.
       return response;
     }
     ```
-    
+
     Here, we’re passing the variants we receive from Personalize into a query parameter personalize\_variants as defined by personalizeSdk.VARIANT\_QUERY\_PARAM. We then make a request to the Next.js app with the modified URL. Essentially, we are rewriting the URL with the modified query parameter (here the website user does not know about the changed URL).
-    
+
     For e.g. if we have a URL as follows: /rewards, we’re rewriting it to /rewards?personalize\_variants=0\_0,1\_0 here 0\_0,1\_0 is the variant parameter which is the combination of the Experience Short UID mapped to the selected Variant Short UID.
-    
-    We use the short uids here to optimize the URL length which has a [limit](https://developer.mozilla.org/en-US/docs/Web/URI/Schemes/data#length_limitations).
-    
+
+    We use the short uids here to optimize the URL length which has a [limit](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/data).
+
 5.  #### Add Response Context
-    
+
     Now add the following code to the middleware.ts file to add the response context:
-    
+
     ```
     import {
       NextRequest,
       NextResponse,
     } from 'next/server';
-    
+
     import Personalize from '@contentstack/personalize-edge-sdk';
     export default async function middleware(req: NextRequest) {
       const projectUid = process.env.NEXT_PUBLIC_PERSONALIZATION_PROJECT_UID as string;
-    
+
       if (process.env.CONTENTSTACK_PERSONALIZE_EDGE_API_URL) {
       Personalize.setEdgeApiUrl(process.env.CONTENTSTACK_PERSONALIZE_EDGE_API_URL);
       }
-    
+
       const personalizeSdk = await Personalize.init(projectUid, {
         request: req,
       });
-    
+
       // get the variant parameter from the SDK
       const variantParam = personalizeSdk.getVariantParam();
       const parsedUrl = new URL(req.url);
-    
+
       // set the variant parameter as a query param in the URL
       parsedUrl.searchParams.set(personalizeSdk.VARIANT_QUERY_PARAM, variantParam);
-    
+
       // rewrite the request with the modified URL
       const response = NextResponse.rewrite(parsedUrl);
-    
+
       // add cookies to the response
       personalizeSdk.addStateToResponse(response);
-    
+
       return response;
     }
     ```
-    
+
     The Personalize Edge SDK needs to identify the visitor on the next request. To achieve this, the SDK sets two cookies on the response, with one for the user UID and another for the current state of the manifest. Here, we use addStateToResponse() method to modify the response object and add those cookies before returning it.
-    
+
     We now have the Middleware ready to go. Next, we’ll look at leveraging the variant parameter passed in the URL.
-    
+
 
 ### Fetching Variant Content from Origin
 
@@ -246,57 +247,57 @@ Setting attributes and triggering events can be done in the following ways:
 Below we have elaborated on the third approach.
 
 1.  #### Initialize the SDK
-    
+
     You can create a personalized [React Context](https://react.dev/learn/passing-data-deeply-with-context) and React Provider to initialize the SDK as follows:
-    
+
     **Note:** For this step, we have placed the file in /components/context/ but you can choose to place this wherever appropriate.
-    
+
     ```
     // /components/context/PersonalizeContext.ts
-    
+
     'use client';
-    
+
     import Personalize from '@contentstack/personalize-edge-sdk';
     import { Sdk } from '@contentstack/personalize-edge-sdk/dist/sdk';
-    
+
     let sdkInstance: Sdk | null = null;
-    
+
     export async function getPersonalizeInstance() {
       if (!Personalize.getInitializationStatus()) {
         sdkInstance = await Personalize.init(process.env.PERSONALIZE_PROJECT_UID);
       }
       return sdkInstance;
     }
-    
+
     const PersonalizeContext = createContext<Sdk | null>(null);
-    
+
     export function PersonalizeProvider({ children }: { children: React.ReactNode }) {
       const [sdk, setSdk] = useState<Sdk | null>(null);
-    
+
       useEffect(() => {
         getPersonalizeInstance().then(setSdk);
       }, []);
-    
+
       return (
         <PersonalizeContext.Provider value={sdk}>
           {children}
         </PersonalizeContext.Provider>
       );
     }
-    
+
     export function usePersonalize() {
       return useContext(PersonalizeContext);
     }
     ```
-    
+
     And you can wrap the app with PersonalizeProvider as follows:
-    
+
     ```
     // app/layout.tsx
-    
+
     import 
     {PersonalizeProvider} from '@/app/components/context/PersonalizeContext'
-    
+
     export default function RootLayout({
       children,
     }: Readonly<{
@@ -311,17 +312,17 @@ Below we have elaborated on the third approach.
       );
     }
     ```
-    
+
     Here, we initialize the Personalize SDK as part of the React Context. We then use the SDK object to create the context.
-    
+
     The SDK needs to be initialized before setting attributes or triggering events.
-    
-    We use React Context here so the SDK is initialized once and then available as Context for any [Client Component](https://nextjs.org/docs/app/building-your-application/rendering/client-components) in Next.js. Setting attributes and triggering impressions and events should be done on the client side since we set data and trigger the events when the page renders on the browser.
-    
+
+    We use React Context here so the SDK is initialized once and then available as Context for any [Client Component](https://nextjs.org/docs/app/getting-started/server-and-client-components) in Next.js. Setting attributes and triggering impressions and events should be done on the client side since we set data and trigger the events when the page renders on the browser.
+
 2.  #### Set Attributes
-    
+
     The following snippet shows how to set an attribute submitted via a form for a user’s age:
-    
+
     ```
     'use client';
     import { useContext } from 'react';
@@ -334,15 +335,15 @@ Below we have elaborated on the third approach.
       // render the component
     }
     ```
-    
+
     Here, the attributes are a key-value object passed to the set method. You can pass multiple key-values here. If the same key is passed, the existing attribute is overwritten.
-    
+
 3.  #### Trigger Events
-    
+
     **Impressions**
-    
+
     To let Personalize know that a particular experience is being shown to the user, you can trigger an impression event. The following snippet shows how to trigger impressions:
-    
+
     ```
     'use client';
     import { useContext, useEffect } from 'react';
@@ -355,15 +356,15 @@ Below we have elaborated on the third approach.
       // render the component
     }
     ```
-    
+
     We are using useEffect in this example so that the impression is triggered only on the first render of the component, that is, when the page loads for the first time in the browser.
-    
+
     Here the triggerImpression method takes an Experience Short UID, which you can find in the Personalize UI on the Experiences List page. The SDK will also automatically pass the selected variant of the experience as part of the impression.
-    
+
     **Conversions**
-    
+
     Any action performed by the user can be a conversion event if it leads to a positive outcome. To let Personalize know that an action has been performed, trigger the event as follows:
-    
+
     ```
     'use client';
     import { useContext } from 'react';
@@ -377,11 +378,11 @@ Below we have elaborated on the third approach.
       // render the component
     }
     ```
-    
+
     Here, we are triggering an event on the click of the Learn More button. The triggerEvent method takes an eventKey. The eventKey is configured when you [create an event](/docs/personalize/get-started-with-personalize-with-ab-test-end-to-end-guide#create-an-event).
-    
+
     _Your Personalize Edge SDK is now set up and ready to interact with your Contentstack Personalize project and proceed with personalization for your website._
-    
+
 
 ### Reference Project
 

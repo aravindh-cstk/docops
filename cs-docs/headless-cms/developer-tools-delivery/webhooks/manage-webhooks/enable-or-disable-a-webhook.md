@@ -2,6 +2,7 @@
 title: "Enable or Disable a Webhook"
 description: "To enable or disable a webhook, log in to your Contentstack account, and perform the steps on this page. Access more articles on \"Work with Webhooks\" here."
 url: /headless-cms/enable-or-disable-a-webhook
+uid: blt1588fa3a47c4146e
 ---
 
 # Enable or Disable a Webhook
