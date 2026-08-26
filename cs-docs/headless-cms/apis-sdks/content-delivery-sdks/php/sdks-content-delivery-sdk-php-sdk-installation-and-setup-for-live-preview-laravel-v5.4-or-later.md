@@ -2,6 +2,7 @@
 title: "SDK Installation and Setup for Live Preview (Laravel v5.4 or later)"
 description: "SDK Installation and Setup for Live Preview (Laravel v5.4 or later)"
 url: /developers/sdks/content-delivery-sdk/php/sdk-installation-and-setup-for-live-preview-laravel-v5.4-or-later
+uid: blt042f44bbd273904d
 ---
 
 # SDK Installation and Setup for Live Preview (Laravel v5.4 or later)
@@ -83,33 +84,33 @@ return $this;
 
 A middleware means that any HTTP request for that route must pass through it, making it useful for determining whether a user has the required permissions or meets a set of criteria, etc. ”A middleware means that any HTTP request for that route must pass through it, making it useful for checking if a user has permissions or meets a criteria etc”.
 
-  
+
 
 With artisan create the middleware with a name:
 
-  
+
 
 ```
 php artisan make:middleware ContentstackEventListener
 ```
 
-  
+
 
 This will generate:
 
-  
+
 
 ```
 app/Http/Middleware/ContentstackEventListener.php
 ```
 
-  
+
 
 You need to add a custom middleware in the ContentstackEventListener.php file.  
 “Open this file and enter your logic for the middleware into the handle() function”.  
 Use the following code to get the Live Preview hash key:
 
-  
+
 
 ```
 <!--?php
@@ -156,7 +157,7 @@ class ContentstackEventListener {
 }
 ```
 
-  
+
 
 “Open app/Http/Kernel.php and find the $routeMiddleware array, this is where you register your middleware with the name and the class”.
 
@@ -180,21 +181,21 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->middlewa
 Route::get('instances', [App\Http\Controllers\InstanceController::class, 'index'])->middleware(['auth']);
 ```
 
-  
+
 
 Since you modified your routes make sure to refresh the routes with:
 
-  
+
 
 ```
 $ php artisan route:cache
 ```
 
-  
+
 
 Run the following command to check whether ContentstackRequestListener has been added to the kernel request:
 
-  
+
 
 ```
 $ php artisan serve
@@ -240,5 +241,5 @@ $stack->ContentType('CONTENT_TYPE_UID')->Query()->toJSON()->find();
 -   [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk/)
 -   [Download PHP SDK](/docs/developers/sdks/content-delivery-sdk/php/download-php-sdk/)
 -   [PHP SDK API Reference](/docs/developers/sdks/content-delivery-sdk/php/reference/)
--   [PHP SDK Changelog](/docs/developers/sdks/content-delivery-sdk/php/php-sdk-changelog/)
+-   [PHP SDK Changelog](/docs/changelog?filter=sdks)
 -   [Download PHP SDK repository on GitHub](https://github.com/contentstack/contentstack-php)

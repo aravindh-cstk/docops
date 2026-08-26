@@ -2,6 +2,7 @@
 title: "About Launch Framework Support"
 description: "Learn about the popular frameworks supported by Contentstack Launch."
 url: /launch/launch-framework-support
+uid: blt0a7967d76d5bc9d1
 ---
 
 # About Launch Framework Support
@@ -50,7 +51,7 @@ Minimum required versions:
 ## Limitations
 
 -   Launch offers a framework agnostic approach for [revalidating CDN cache](/docs/launch/revalidate-cdn-cache) using [Automate](/docs/agent-os/what-is-contentstack-agent-os). Launch does not support any framework’s native mechanisms for On Demand CDN cache revalidation.
--   Currently, Launch does not support direct integration with the Next.js App Router [data cache](https://nextjs.org/docs/app/building-your-application/caching#data-cache). Launch offers alternative approaches to caching and revalidation built on established web standards.
+-   Currently, Launch does not support direct integration with the Next.js App Router [data cache](https://nextjs.org/docs/app/guides/caching-without-cache-components). Launch offers alternative approaches to caching and revalidation built on established web standards.
 -   Launch does not support [On Demand Cache Revalidation with static ISR routes](/docs/launch/nextjs-on-launch#cache-revalidation-does-not-work-with-static-isr-routes).
 
 **Additional Resource:** Learn more about [App Router](/docs/launch/nextjs-on-launch#next-js-app-router-cache-revalidation-on-launch) and [Pages Router](/docs/launch/nextjs-on-launch#next-js-on-demand-revalidation) On Demand Cache Revalidation support for [Next.js on Launch](/docs/launch/nextjs-on-launch).

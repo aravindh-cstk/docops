@@ -2,6 +2,7 @@
 title: "Unlock a Release"
 description: "Unlock and modify locked releases in Contentstack with our step-by-step guide. Learn how to access and deploy content easily"
 url: /headless-cms/unlock-a-release
+uid: blt6954c924b3d5a0dc
 ---
 
 # Unlock a Release

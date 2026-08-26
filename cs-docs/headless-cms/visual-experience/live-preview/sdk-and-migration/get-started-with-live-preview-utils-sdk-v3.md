@@ -2,6 +2,7 @@
 title: "Get Started with Live Preview Utils SDK V3.0"
 description: "Simplify real-time content updates with the Live Preview Utils SDK V3.0. Learn how to install, configure, and use its powerful features to enhance your website's interactivity."
 url: /headless-cms/get-started-with-live-preview-utils-sdk-v3
+uid: blt3d1d29197a4a9359
 ---
 
 # Get Started with Live Preview Utils SDK V3.0
@@ -14,24 +15,24 @@ The Live Preview Utils SDK version 3 allows you to listen to entry change events
 
 ## Prerequisite
 
--   [Node.js](https://nodejs.org/) version 4.4.7 or later
+-   [Node.js](https://nodejs.org/en) version 4.4.7 or later
 
 ## Migrate from V2 to V3 _(optional)_
 
 If you are upgrading from version 2 to version 3 of the Live Preview Utils SDK, there are some key changes that may impact your existing implementation. Below are the important updates and recommended alternatives to ensure a smooth transition.
 
 1.  **Removal of** **setConfigFromParams**
-    
+
     The setConfigFromParams method, previously used to extract the Live Preview hash from the request query string (available via Contentstack.hash), has been removed.
-    
+
     If you have implemented setConfigFromParams in your middleware, you can safely remove it. To manually extract and use the Live Preview hash, refer to **Step 3: Utilize the Live Preview Hash** in the [Set Up the Website](/docs/headless-cms/live-preview-implementation-for-ssr-without-contentstack-sdk#set-up-the-website) section.
-    
+
 2.  **Removal of** **getGatsbyDataFormat**
-    
+
     The getGatsbyDataFormat method has been deprecated in version 3. This method is no longer necessary because the gatsby-source-contentstack plugin now handles data formatting internally.
-    
+
     Use the [gatsby-source-contentstack](https://www.gatsbyjs.com/plugins/gatsby-source-contentstack/) plugin for your Gatsby project to ensure seamless compatibility with Live Preview.
-    
+
 
 By addressing these changes during your migration, you can ensure smooth integration with version 3 of the Live Preview Utils SDK.
 

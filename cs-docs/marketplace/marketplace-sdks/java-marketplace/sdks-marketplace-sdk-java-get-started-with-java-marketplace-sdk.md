@@ -2,6 +2,7 @@
 title: "Get Started with Java Marketplace SDK"
 description: "This guide will help you get started with Contentstack Java Marketplace SDK to build apps."
 url: /developers/sdks/marketplace-sdk/java/get-started-with-java-marketplace-sdk
+uid: blt9e9c0285c5421b3e
 ---
 
 # Get Started with Java Marketplace SDK
@@ -12,7 +13,7 @@ This step-by-step guide will help you get started with the [Java Marketplace SDK
 
 ## Prerequisites
 
--   [Java version 8](https://www.java.com/download/ie_manual.jsp) or later.
+-   [Java version 8](https://www.java.com/en/download/) or later.
 -   [Contentstack Account](https://www.contentstack.com/login/)
 -   Basic understanding of Java programming language.
 -   Familiarity with your chosen Integrated Development Environment (IDE), such as Eclipse or IntelliJ IDEA.
