@@ -2,6 +2,7 @@
 title: "Host a Static Site on Launch"
 description: "Learn how to configure, build, deploy and host your static site, including leveraging Content Delivery Networks (CDNs) in Contentstack Launch."
 url: /launch/host-a-static-site
+uid: blt8f5a58d96b749a3e
 ---
 
 # Host a Static Site on Launch

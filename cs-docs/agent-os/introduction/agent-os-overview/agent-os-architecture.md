@@ -2,6 +2,7 @@
 title: "Agent OS Architecture"
 description: "Discover Agent OS, an adaptive AI framework with Agents, Automations, and governance for scalable enterprise automation."
 url: /agent-os/agent-os-architecture
+uid: blt64d115265eda66c8
 ---
 
 # Agent OS Architecture

@@ -2,6 +2,7 @@
 title: "Change Organization Role of Existing Users"
 description: "How to update an existing user's organization-level Administration and product roles, along with project-level roles, in Contentstack."
 url: /administration/change-organization-role-of-existing-users
+uid: bltda4a5fdab7ba73f3
 ---
 
 # Change Organization Role of Existing Users
@@ -24,9 +25,9 @@ A user can hold more than one role at the same time. For example, a user can be 
 ## What You Will Learn
 
 -   How to edit an existing user's Administration, product, and project-level roles.
-    
+
 -   Which role rules apply when updating a user, such as the required Administration role.
-    
+
 
 ## Change a User's Roles
 
