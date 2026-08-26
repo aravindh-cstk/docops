@@ -23,6 +23,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { SandboxClient } from "./lib/sandbox-client.js";
 import { ProdPromoteClient } from "./lib/prod-promote-client.js";
+import { resolveEnvironment } from "./lib/environment-index.js";
 import { extractSandboxUidFromTags } from "./lib/entry-content.js";
 import { loadConfig } from "./sandbox-to-prod-promote.js";
 
@@ -63,16 +64,22 @@ async function collectOrphansForStack(stackType: "apidocs" | "csdocs"): Promise<
     sandboxPublished.map((p) => p.entry.url).filter((u): u is string => typeof u === "string"),
   );
 
-  const prodEntries = await prodClient.getPublishedEntries("staging");
+  // getPublishedEntries takes a resolved environment rather than a bare name.
+  // It used to take the name and compare it against publish_details[].environment,
+  // which the CMA returns as a UID, so this report has also been finding zero
+  // entries on every run. Resolving the name to its UID fixes both callers at once.
+  const stagingEnv = await resolveEnvironment(config.prodApiKey, config.prodToken, "staging");
+  const prodEntries = await prodClient.getPublishedEntries(stagingEnv);
 
   const orphans: OrphanRow[] = [];
-  for (const entry of prodEntries) {
+  for (const published of prodEntries) {
+    const entry = published.entry;
     const url = typeof entry.url === "string" ? entry.url : undefined;
     if (!url || sandboxUrls.has(url)) continue;
 
     orphans.push({
       stackType,
-      uid: entry.uid,
+      uid: published.uid,
       title: typeof entry.title === "string" ? entry.title : "",
       url,
       updatedAt: typeof entry.updated_at === "string" ? entry.updated_at : "",

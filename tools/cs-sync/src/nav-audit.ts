@@ -15,7 +15,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildDocIndex, canonicalizeUrl, type DocFile } from "./doc-index.js";
-import { slugify, DOCS_BASE_URL, type NavLeaf, type NavTree } from "./nav-tree.js";
+// Imported from lib/nav-shared.ts rather than nav-tree.ts: this script only
+// reads the generated .nav-tree.json, and nav-tree.ts demands CMS credentials at
+// import time.
+import { slugify, DOCS_BASE_URL, articleFileName } from "./lib/nav-shared.js";
+import type { NavLeaf, NavTree } from "./lib/nav-shared.js";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, "../../..");
@@ -86,12 +90,7 @@ function writeCsv(file: string, header: string[], rows: unknown[][]): void {
  * sdks-content-delivery-sdk-php-reference.md rather than colliding on
  * reference.md.
  */
-export function articleFileName(url: string | null): string | null {
-  const segments = (url ?? "").split("/").filter(Boolean);
-  if (segments.length === 0) return null;
-  const rest = segments.length > 1 ? segments.slice(1) : segments;
-  return `${rest.join("-")}.md`;
-}
+export { articleFileName };
 
 export function targetPathForLeaf(leaf: NavLeaf): string | null {
   const dir = leaf.chain.join("/");
