@@ -2,6 +2,7 @@
 title: "Launch"
 description: "Learn how to use the Launch Connector in Automate to deploy builds and revalidate CDN cache for your Contentstack-powered website."
 url: /agent-os/launch
+uid: blt0e1c028c993eac4a
 ---
 
 # Launch
@@ -44,9 +45,9 @@ Perform the following steps to set up the Launch action connector:
 1.  Click **Configure Action Step** from the left navigation panel.
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **Launch** connector.
-    
+
     **Note:** You can sort and search the connector(s) based on the filter.
-    
+
     ![select_connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfb79ba121b3a0608/68c131f48f21b414a50eabb5/select_connector.png)
 4.  Under the **Choose an Action** tab, you will see these actions: **Deploy a Build** and **Revalidate CDN Cache**.
 
@@ -64,9 +65,9 @@ This action triggers a deployment in Contentstack Launch when specific events oc
         ![Select_Fields_Deploy.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte1b6fff8efe2015e/68c147b511efa913e95ca6f8/Select_Fields_Deploy.png)
 3.  Click **Proceed**.
 4.  Click **Test Action** to test the configured action.
-    
+
     **Note:** If a deployment is ongoing and you trigger a new one in the same instance, then the previous deployment will show as “Failed” in Launch.
-    
+
 5.  Once set, click **Save and Exit**.  
     ![Save_Exit_Deploy.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt864da3add9f5002c/68c131e8e2fb9abead9182dd/Save_Exit_Deploy.png)
 6.  Navigate to the Launch platform to view the deployment status of your project in the Deployments tab.
@@ -80,29 +81,29 @@ This action triggers a deployment in Contentstack Launch when specific events oc
     3.  Select an **Environment** where you want to revalidate the cache from the **Lookup** list.  
         ![Select_Project_Environment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt775e924c90b30ce6/68c131f4d2e6bb5eb5d18a78/Select_Project_Environment.png)
     4.  Select the Revalidate Type, i.e., **Path**, **Cache Tags**, or **Hostnames** from the dropdown.
-        
+
         If **Path** is selected:
-        
+
         1.  In the **Revalidation Path** field, enter the URL to revalidate the CDN cache.
         2.  You can optionally mark the **Is Prefix - Include all the nested URLs under the revalidation path** checkbox to revalidate all the nested URLs under the revalidation path.  
             ![Select_Path_Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta94cf282734443a2/68c131f4fc86ebb644e186e6/Select_Path_Type.png)
-        
+
         If **Cache** **Tags** is selected:
-        
+
         1.  In the **Cache Tags** field, enter the cache tags you want the system to invalidate when the action runs.
-            
+
             The **Cache Tags** option is used to invalidate or purge specific cached content from the CDN based on assigned tags, rather than clearing the entire cache.
-            
+
             When an entry or asset is published or unpublished, the action targets only the cache entries associated with its tags (e.g., entry ID, content type, or custom labels). This ensures that only the affected content is refreshed, while other cached content remains intact and continues to be served quickly.  
-            
+
             ![Select_Cache_Tags.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte837408186fe0d32/68c131f453f915e59214a15f/Select_Cache_Tags.png)
-        
+
         If **Hostnames** is selected:
-        
+
         1.  In the **Hostnames** field, enter the domain or subdomain that you want to target when the action runs.
-            
+
             The **Hostnames** option purges cached content only for the specified **domains** or **subdomains**, rather than all domains in the environment. This ensures that cache invalidation is limited to the selected hostnames (for example, www.example.com, staging.example.com), giving you precise control over which audiences see refreshed content without affecting other mapped domains.  
-            
+
             ![Select_Hostnames.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltab85a83bb2a75d51/68c131f4a726cb28e2e18ad5/Select_Hostnames.png)
 3.  Click **Proceed**.
 4.  Click **Test Action** to test the configured action.
