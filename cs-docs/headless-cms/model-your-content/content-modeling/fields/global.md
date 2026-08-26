@@ -2,6 +2,7 @@
 title: "Global"
 description: "Learn how to create and use Global fields in Contentstack to reuse field groups across content types and manage metadata."
 url: /headless-cms/global
+uid: blt04f491a252c6ef5b
 ---
 
 # Global
@@ -123,11 +124,11 @@ To copy and paste field values across group fields, log in to your [Contentstack
 
 1.  In the **Global** field, select the instance, click the vertical ellipsis, and select **Copy Field Values**.
 2.  In the target entry or instance, click the vertical ellipsis again and select **Paste Field Values**.
-    
+
     **Note:** The destination instance must match the original instance’s name and structure.
-    
+
     ![Copy_Field_Values_Across_Global_Fields.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt20a2edbf3f7c6feb/68dc20dd1b16f7dc48dd30c7/Copy_Field_Values_Across_Global_Fields.gif)
-    
+
 
 **Additional Resources:**
 
