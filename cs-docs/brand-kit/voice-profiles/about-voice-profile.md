@@ -2,6 +2,7 @@
 title: "About Voice Profiles"
 description: "Understand the Contentstack voice profile and tone of communication to maintain consistent brand messaging across all channels and content types."
 url: /brand-kit/about-voice-profile
+uid: blt3d52f9ae416111ce
 ---
 
 # About Voice Profiles

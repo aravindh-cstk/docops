@@ -2,6 +2,7 @@
 title: "Invite Collaborators"
 description: "Invite collaborators to your Brand Kit to manage permissions, ensuring a consistent brand voice across content."
 url: /brand-kit/invite-collaborators
+uid: blt0975a55f766243af
 ---
 
 # Invite Collaborators
@@ -17,9 +18,9 @@ This helps in ensuring that your brand's voice stays consistent across all your 
 ## What You Will Learn
 
 -   How to invite one or more Collaborators to a Brand Kit.
-    
+
 -   How to remove a Collaborator from a Brand Kit.
-    
+
 
 ## Steps for Execution
 
@@ -31,9 +32,9 @@ To add a Collaborator in Brand Kit, log in to your [Contentstack account](https:
 4.  On the **Settings** page, click **Collaborators**.
 5.  Click the **\+ Invite Collaborator** button to add collaborators in the Brand Kit.![5-Invite-Collaborator](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt74a0b1cbb5fce398/66c5b06a3bab110a97a2d239/5-Invite-Collaborator.png)
 6.  In the **Invite Collaborator** modal, enter the emails and click **Invite** to grant access. You can add multiple email addresses to invite collaborators in bulk. Optionally, you can add a message to the invitees.![6-Invite-Collaborator-Dialog-Box](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt84893f75ef8e2f19/66c5b06a33f9a5f29b7a94f3/6-Invite-Collaborator-Dialog-Box.png)
-    
+
     The added Collaborators receive an invitation through an email. After they accept the invite and get authorized, the status will update to **Accepted** and they access the Voice Profiles.
-    
+
     ![7-Collaborator-Accepted-Invite](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9d587e8c64fa901f/66c5b06ab506aac585c6efc0/7-Collaborator-Accepted-Invite.png)
 
 ## Remove a Collaborator

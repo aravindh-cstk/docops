@@ -2,6 +2,7 @@
 title: "Security Configuration"
 description: "Boost organization security with Contentstack's Security Configuration feature. Set up multi-factor authentication and password policies to enforce strong user protection."
 url: /administration/security-configuration
+uid: blt2c421ffc517c576e
 ---
 
 # Security Configuration
@@ -18,13 +19,13 @@ Strengthen your organization's security by configuring the level of protection y
 ## What You Will Learn
 
 -   How to enable Multi-Factor Authentication for your organization.
-    
+
 -   How to configure password policies, including duration and minimum length.
-    
+
 -   How to set maximum session and inactivity timeouts.
-    
+
 -   How to restrict organization membership to allowed email domains.
-    
+
 
 ## Multi-Factor Authentication
 
@@ -49,9 +50,9 @@ To enable and customize password policies for organization users, log in to your
 1.  Navigate to **Administration** through “App Switcher”.
 2.  Click the **Security Configuration** tab and select **Password Policies**.
 3.  In the **Password Duration** field, set the number of days (**0 to 365**) after which passwords must be updated. For example, setting the duration to 90 days forces users to reset their passwords every 90 days.
-    
+
     **Note:** Set **Password Duration** to **0** for no password expiry.
-    
+
 4.  In **Minimum Password Length**, enter a value (**minimum 8**).
 5.  Click **Save** to save your configuration.![Password Policies settings](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd354f70ad0cffe59/6915b516ac78ca3a8928a08b/Password_Policies.png)
 
@@ -104,9 +105,9 @@ To enable and add email domains, log in to your [Contentstack account](https://w
 2.  Click the **Security Configuration** tab and select **Allowed Email Domains**.
 3.  Toggle the **Enable Allowed Email Domains** switch.
 4.  In the **Add Allowed Email Domain(s)** field, enter the domains you want to allow (e.g., yourcompany.com).![Allowed Email Domains settings](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5afd82eeddba9d80/6915b516a582d743e01ac668/Allowed_Email_Domains.png)
-    
+
     **Note:** You can add up to **30 email domains**.
-    
+
 5.  Click **Save** to apply the configuration.
 
 **Note:** When this setting is enabled, users with unapproved email domains cannot be invited or added to your organization. An error message appears if you attempt to add them.

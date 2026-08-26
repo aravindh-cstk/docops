@@ -2,6 +2,7 @@
 title: "Deployments"
 description: "Manage deployments in Contentstack Launch—track statuses, view logs, and redeploy using Git or file upload methods with ease."
 url: /launch/deployments
+uid: blt7c5cfa9979a8202f
 ---
 
 # Deployments
@@ -48,9 +49,9 @@ You can get the following information about your deployment from this panel if y
 -   **Commit Message**: Displays a commit message which indicates that deployment was triggered by file upload.
 -   **Redeploy** button: Allows you to redeploy your project.
 -   **Download Code** button: Allows you to download the code (.zip file) used for creating your project.
-    
+
     **Note:** The Download Code button appears only when the deployment goes to Live, Deployed, or Failed status.
-    
+
 
 ![Launch-Deployments_File_InfoPage.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcffcb2243d103b53/660b822d04d34cfb4bbda0fa/Launch-Deployments_File_InfoPage.png)
 
