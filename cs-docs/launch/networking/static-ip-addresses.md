@@ -2,6 +2,7 @@
 title: "Static IPs (Egress)"
 description: "Learn how Static IP addresses work in Contentstack Launch and how to set up outbound IP allowlisting for your backend systems."
 url: /launch/static-ip-addresses
+uid: blt67315f9cda7e9b1e
 ---
 
 # Static IPs (Egress)
@@ -17,13 +18,9 @@ Static IPs give your Launch application a fixed set of **outbound** IP addresses
 ## What You Will Learn
 
 -   When Static IPs are, and are not, the right fit.
-    
 -   How Static IPs route outbound traffic through a fixed set of addresses.
-    
 -   How Static IPs compare to Private Network Deployments.
-    
 -   How to enable, allowlist, and test Static IPs.
-    
 
 ## When to Use Static IPs
 
@@ -65,22 +62,31 @@ Launch gives you two ways to manage how your application reaches your backend. S
 
 ## Set up Static IPs
 
-The Launch team handles setup, and you do not need to configure anything on each deployment.
+The Launch team handles the setup, so there is nothing to configure on each deployment. Once the feature is on, you can see your addresses any time from the Launch UI.
+
+![Launch_Static_IPs_image1.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/am4057ccf1b5585429/0cec6780b9764e35797d3697/Launch_Static_IPs_image1.png?locale=en-us)
 
 1.  Contact your account manager or [Contentstack Support](mailto:support@contentstack.com) to turn on Static IPs for your organization.
-2.  Once it is enabled, Launch sends you the set of static IP addresses assigned to your application.
-3.  Add those addresses to the allowlist on every backend your application needs to reach. This is usually a firewall rule, a security group, or an IP allowlist.
-4.  Deploy the way you normally do. Your outbound requests now come from the static IPs.
+2.  Once it is enabled, in Launch, go to **Settings** → **Networking**.
+3.  Under **Static IPs**, you can see your organization's outbound IP addresses listed under Outbound IP addresses (shared pool). Use the copy icon next to an address to grab it. ![Launch_Static_IPs_image3.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/amdb0ef046fa6c86a4/cd0f53fddf28799ddd69576e/Launch_Static_IPs_image3.png?locale=en-us)
+4.  Add every address in that list to the allowlist on each backend your application needs to reach. This is usually a firewall rule, a security group, or an IP allowlist.
+5.  Deploy the way you normally do. Your outbound requests now come from those addresses.
+
+    **Note:**
+
+    -   If the **Networking** tab shows "Static IPs are not enabled. To enable them, contact your organization admin.", the feature isn't turned on for your organization yet. Reach out to your [organization admin](/docs/administration/about-administration-roles#out-of-the-box-administration-roles) or [Contentstack Support](mailto:support@contentstack.com) to get it enabled.
+    -   If your organization also has **Private Network Deployments** turned on, the Static IPs card is greyed out and shows a message saying **Private Network Deployments** take precedence. In that case your traffic uses the PND addresses instead, and the static IPs listed here aren't used. See [Private Network Deployments](/docs/launch/private-network-deployments).
+
 
 ## Test Your Static IP Configuration
 
 After the Static IPs feature is enabled and you have added the addresses to your allowlist, you can confirm everything works with a small Launch cloud function. The function below does two things: it calls one of your allowlisted backends, and it reports the public IP address from which your traffic leaves.
 
 1.  Deploy the following as a Launch cloud function, replacing the backend URL with an allowlisted endpoint, such as a health-check endpoint:
-    
+
     ```
     const BACKEND_URL = 'https://api.example.com/health';
-      
+
     async function tryFetch(url) {
       try { 
        const res = await fetch(url, { signal: AbortSignal.timeout(5000) }); 
@@ -89,17 +95,17 @@ After the Static IPs feature is enabled and you have added the addresses to your
          return { ok: false, error: err.message }; 
        }
     }
-    
+
     export default async function handler(request, response) {
       const backend = await tryFetch(BACKEND_URL);
       const egress = await tryFetch('https://checkip.amazonaws.com');
-      
+
       response.status(200).json({ backend, egress });
     }
     ```
-    
+
 2.  Invoke the function and check the JSON response:
-    
+
     ```
     {
       "backend": {
@@ -112,14 +118,14 @@ After the Static IPs feature is enabled and you have added the addresses to your
       }
     }
     ```
-    
+
     Verify two things:
-    
-    -   The egress value matches one of the static IP addresses Contentstack provided.
-    -   The backend call succeeds—ok is true and a body is returned.
-    
+
+    -   The egress value matches one of the addresses listed under **Settings → Networking → Static IPs**.
+    -   The backend call succeeds: ok is true and a body is returned.
+
     If the backend call fails, confirm every static IP address has been added to that backend's allowlist.
-    
+
 
 ## How Static IPs Apply Across Your Projects
 
@@ -127,4 +133,4 @@ Launch sets Static IPs at the organization level, so they apply to all of your p
 
 ## Pricing and Support
 
-The Static IPs feature is available as an add-on. To turn it on for your organization, contact your account manager or [Contentstack Support](mailto:support@contentstack.com). They confirm pricing and send you the static IP addresses to allowlist.
+The Static IPs feature is available as an add-on. To turn it on for your organization, contact your account manager or [Contentstack Support](mailto:support@contentstack.com). They confirm pricing and enable the feature. After that, your addresses show up in **Settings → Networking**.

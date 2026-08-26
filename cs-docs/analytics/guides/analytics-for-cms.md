@@ -2,6 +2,7 @@
 title: "Analytics for CMS"
 description: "Monitor your CMS performance with our Analytics dashboard. Track usage, manage resources, and optimize efficiency with key metrics and insights."
 url: /analytics/analytics-for-cms
+uid: blt8ef437c0e3e318ec
 ---
 
 # Analytics for CMS
@@ -18,20 +19,20 @@ The Analytics dashboard for Content Management System (CMS) gives organization o
 ## What You Will Learn
 
 -   How to access the CMS Analytics dashboard.
-    
+
 -   What each dashboard section shows and what metrics it includes.
-    
+
 -   How to apply filters and save custom views.
-    
+
 
 ## Access the CMS Analytics Dashboard
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
 1.  Navigate to **Analytics** through the "App Switcher".
-    
+
 2.  By default, the **CMS** analytics dashboard appears, which shows detailed metrics specific to your CMS usage.
-    
+
     ![CMS Analytics dashboard overview](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am494ac21d4b4f7b6b/a498b522ef0c97c8ee1c2160/Analytics_CMS_Dashboard.png?locale=en-us)
 
 **Note:** Dashboard data updates every **24 hours**. Data shown does not reflect real-time activity.
@@ -57,33 +58,33 @@ This section offers detailed metrics for each stack, allowing you to monitor the
 Metrics available for each stack:
 
 -   **Stack Name:** Name of all stacks within your organization.
-    
+
 -   **API Key:** API keys of the listed stacks.
-    
+
 -   **Owner:** Email addresses of the owners of the listed stacks.
-    
+
 -   **Content Types:** Number of content types within the stacks.
-    
+
 -   **Global Fields:** Number of global fields within the stacks.
-    
+
 -   **Entries:** Number of entries created within the stacks.
-    
+
 -   **Assets:** Number of assets present within the stacks.
-    
+
 -   **Environments:** Number of environments created within the stacks.
-    
+
 -   **Locales:** Number of languages created within the stacks.
-    
+
 -   **Extensions:** Number of extensions created within the stacks.
-    
+
 -   **Webhooks:** Number of webhooks created within the stacks.
-    
+
 -   **Custom Roles:** Number of custom roles within the stacks.
-    
+
 -   **Branches:** Number of branches within the stacks.
-    
+
 -   **Branch Aliases:** Number of branch aliases within the stacks.
-    
+
 
 **Note:** [Global Fields](/docs/headless-cms/about-global-field), [Branches](/docs/headless-cms/about-branches), and [Branch Aliases](/docs/headless-cms/about-aliases) are plan-based features. To enable these features for your organization, contact the [support](mailto:support@contentstack.com) team.
 
@@ -143,6 +144,72 @@ The Device Usage section shows a pie chart of the device types used to access yo
 
 The analytics dashboard for CMS offers crucial insights into your resource usage.
 
+### Content Lifecycle
+
+This section shows how content moves from creation to publication, including how many entries are still in progress and what percentage of created entries have been published. Each metric also shows the percentage change compared to the previous month.
+
+Metrics available:
+
+-   **Ready to Publish:** Number of entries with every required field completed, waiting to be published.
+-   **Publish Completion Rate:** Percentage of created entries that have been published.
+
+### Entries Created, Published, and Deleted
+
+This section shows entry creation, publishing, and deletion volumes over time. Hover over the chart to see the volume for a specific date.
+
+Metrics available:
+
+-   **Entries Created:** Number of entries created during the selected time frame.
+-   **Entries Published:** Number of entries published during the selected time frame.
+-   **Entries Deleted:** Number of entries deleted during the selected time frame.
+
+### Workflow Coverage
+
+This section shows how many entries are currently covered by workflows and publish rules, across all stacks in this organization.
+
+Metrics available:
+
+-   **Entries in a Workflow Stage:** Entries currently assigned a workflow stage.
+-   **Entries with No Workflow:** Entries with no workflow stage assigned. These publish with no review step.
+-   **Entries with Publish Rules:** Entries covered by at least one active publish rule. Publish rules set conditions that must be met before an entry can be published or unpublished, such as approval from specific users or roles, or reaching a workflow stage.
+
+### Stalled Entries by Workflow Stage
+
+This section shows the **top 10 workflow stages** with the most stalled entries, grouped by how long they have been waiting, along with the individual stalled entries listed below. An entry is stalled if it has not moved to a new workflow stage in **7 or more days**.
+
+The chart groups stalled entries into the following time ranges: 7-14 days, 15-29 days, 30-89 days, and 90+ days.
+
+The table below the chart lists the following details for each stalled entry:
+
+-   **Entry:** Title of the stalled entry.
+-   **Current Stage:** Workflow stage the entry is currently in.
+-   **Branch:** Branch the entry belongs to.
+-   **Locale:** Language of the entry.
+-   **Content Type:** Content type of the entry.
+-   **Stack:** Stack the entry belongs to.
+-   **Days in Stage:** Number of days the entry has been in its current stage. Hover over this value to see the exact date the entry entered the stage.
+-   **Entry Owner:** User associated with the entry.
+
+### Team Activity
+
+This section shows who created and published content in the last **90 days**, and how active they are compared with the rest of your organization. Each metric also shows the percentage change since last month.
+
+Metrics available:
+
+-   **Active Users:** Users who created or published at least one entry in the last 90 days.
+-   **Inactive Users:** Users who have not created or published an entry in the last 90 days.
+-   **Active User Ratio:** Share of users who created or published an entry in the last 90 days, shown as a percentage alongside the exact user counts, for example, 15 of 1,250 users.
+-   **Entries Created:** Entries created in the last 90 days, across all stacks in this organization.
+-   **Average Entries per Author:** Average entries created per author in the last 90 days. An author is a user who created at least one entry.
+
+The table below lists the following details for each user:
+
+-   **User:** Name of the user.
+-   **Last Activity:** Time since the user last created or published an entry.
+-   **Entries Created:** Number of entries the user created in the selected period.
+-   **Entries Published:** Number of entries the user published in the selected period.
+-   **Status:** Whether the user is Active or Inactive. Active means the user created or published an entry in the last 90 days.
+
 ## Apply Filters and Manage Views
 
 To apply filters, click **Filters** and then the **Apply Filter(s)** button after selecting your desired options.
@@ -150,19 +217,19 @@ To apply filters, click **Filters** and then the **Apply Filter(s)** button afte
 You can refine dashboard data using the following filters:
 
 -   **Stacks:** Select specific stacks or choose **All Stacks** for a consolidated view.
-    
+
 -   **Services:** Filter API requests by specific services or view all services together.
-    
+
 -   **Status Code:** Filter the chart to show only specific status codes.
-    
+
 -   **Cache:** Filter the chart to show only HITs or MISSes.
-    
+
 -   **Group By:** Organize data by daily, weekly, or monthly intervals.
-    
+
 -   **Date Range:** Choose from predefined time filters: 1 week, 30 days (default), 60 days, or 90 days. Some sections include a date selector below the graph to refine data for a custom period within the last 90 days.
-    
+
 -   **Custom Date:** Use the date dropdown to set a specific or custom range.
-    
+
 
 **Note:** The custom date range must not exceed **90 days**.
 
