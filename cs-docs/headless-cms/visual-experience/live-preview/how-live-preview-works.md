@@ -2,6 +2,7 @@
 title: "How Live Preview Works"
 description: "Learn how Contentstack’s Live Preview enables real-time content updates using CSR and SSR. Explore its setup, SDK integration, and caching considerations."
 url: /headless-cms/how-live-preview-works
+uid: blt44c52d0f5ec55ff9
 ---
 
 # How Live Preview Works
@@ -20,7 +21,7 @@ Live Preview involves several key components that work together to ensure seamle
 
 Live Preview relies on multiple components working together to deliver real-time content updates.
 
--   **Contentstack CMS**: The entry editor or [Visual Builder](https://www.contentstack.com/docs/content-managers/visual-editor/about-visual-editor) where content is modified.
+-   **Contentstack CMS**: The entry editor or [Visual Builder](/docs/headless-cms/about-visual-editor) where content is modified.
 -   **Live Preview SDK**: Facilitates real-time updates between the CMS and the website.
 -   **Your Website**: Iframe-compatible site using either Client-Side Rendering (CSR) or Server-Side Rendering (SSR) method.
 -   **Contentstack Preview API**: Fetches unpublished content for previewing.
@@ -48,32 +49,32 @@ The Live Preview process follows a structured workflow, ensuring that content up
 Contentstack Live Preview behaves differently depending on how your website renders content.
 
 1.  ### Client-Side Rendering (CSR)
-    
+
     In CSR-based websites, content is fetched dynamically in the browser using JavaScript rather than being pre-rendered on the server. This approach enables **real-time content updates** without requiring a full page reload.
-    
+
     **CSR Workflow with Live Preview:**
-    
+
     -   The browser loads a minimal HTML shell with JavaScript.
     -   The frontend framework (React, Vue, etc.) fetches content dynamically from the **Preview API**.
     -   The **Live Preview SDK** establishes a postMessage connection to listen for content updates.
     -   The **Live Preview SDK** provides a function onEntryChange that accepts a callback. When an entry is updated in Contentstack, this callback function is triggered and should fetch relevant content from the Preview API **without reloading the page**.
-        
+
         Live Preview with **Client-Side Rendering** (CSR) provides **instant content updates** without requiring a full page reload, ensuring a **smooth user experience**.
-        
+
 2.  ### Server-Side Rendering (SSR)
-    
+
     In SSR-based websites, content is fetched and rendered on the **server** before being sent as a fully formed HTML page to the browser. This approach ensures that search engines can index content effectively and improves the initial page load speed.
-    
+
     **SSR Workflow with Live Preview:**
-    
+
     -   When a preview request is made, Contentstack appends the **Live Preview Hash** to the iframe URL’s search parameters.
     -   The server-side code on the user's end is responsible for extracting this query parameter based on the server-side framework (e.g., Next.js, Express.js) and passing it to livePreviewQuery(), which instructs the Delivery SDK to fetch data from the Preview API.
     -   The page is fully rendered server-side and delivered as an HTML document.
     -   The Live Preview SDK is initialized and communication with Contentstack is set up.
     -   When an entry is updated in Contentstack, the **iframe reloads** to reflect the latest changes.
-    
+
     With **Server-Side Rendering (SSR)**, content is fetched and rendered on the server before being sent as a fully formed HTML page to the browser. This approach improves **SEO** and ensures a **faster initial page load**, making it ideal for large-scale applications. However, since the preview updates require a **full page reload** to reflect changes, SSR may not provide the same instant update experience as CSR.
-    
+
 
 ## Live Preview’s Role in Preview Process
 
@@ -135,9 +136,9 @@ Without the Live Preview SDK, integrating Live Preview is more complex:
 4.  **Visual Builder** enables on-page WYSIWYG-style editing with the help of edit tags attached to each editable DOM element.
 5.  **Timeline** provides visibility over the upcoming releases and scheduled publishes.
 6.  With Live Preview setup complete, both features work **automatically**.
-    
+
     **Note:** Visual Builder will additionally require setting up edit tags for on-page editing.
-    
+
 
 ## API Calls and Authentication
 

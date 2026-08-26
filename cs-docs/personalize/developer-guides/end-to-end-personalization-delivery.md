@@ -2,6 +2,7 @@
 title: "Delivering Personalized Experiences: A detailed end-to-end technical guide"
 description: "Learn how to deliver personalized content using Contentstack, from user consent to real-time variant rendering and event tracking with Personalize."
 url: /personalize/end-to-end-personalization-delivery
+uid: bltb6e0d44db60822c5
 ---
 
 # Delivering Personalized Experiences: A detailed end-to-end technical guide
@@ -13,13 +14,13 @@ This guide explains the complete flow of personalization delivery in Contentstac
 ## What You Will Learn
 
 -   How to collect and pass user data for personalization.
-    
+
 -   How Data & Insights (Lytics) tracks user profiles and audience memberships.
-    
+
 -   How Personalize determines active variants from audience membership and user context.
-    
+
 -   How the Personalize Edge API and the Contentstack Delivery API render the correct variants, and how to track impressions and conversions.
-    
+
 
 ![End-to-end personalization delivery architecture diagram](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/ame4d8c2ae4e28e842/ef51672f94c9be7b2e8cced9/End-to-End-Personalization-Delivery.png?locale=en-us)
 
@@ -59,7 +60,7 @@ This collected data is sent to Lytics, which processes it to build audience segm
 
 For more information, refer to the following guides:
 
--   [Lytics](/docs/lytics-cdp)
+-   [Lytics](/docs/lytics)
 -   [Set up JS Tag](/docs/lytics/install-real-time-event-tag)
 -   [Data Collection by the JS Tag](https://docs.lytics.com/docs/lytics-javascript-tag#data-collection)
 
@@ -224,24 +225,24 @@ const variantAliases = manifestResponse.experiences
 The variant aliases can then be passed to the CMS Delivery API to fetch entries.
 
 1.  **Via Contentstack Delivery SDK**
-    
+
     ```
     import contentstack from '@contentstack/delivery-sdk';
-    
+
     const stack = contentstack.stack({
       apiKey: 'your stack api key',
       deliveryToken: 'your stack delivery token',
       environment: 'your stack environment',
       host: 'your stack delivery api host',
     });
-    
+
     const entry = await stack
       .contentType('your_content_type_uid')
       .entry('your_entry_uid')
       .variants(variantAliases)
       .fetch();
     ```
-    
+
 2.  **Via Contentstack Delivery API (CDA)**
 
 -   REST API: [Entry Variants API](/docs/developers/apis/content-delivery-api#entry-variants)

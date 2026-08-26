@@ -2,6 +2,7 @@
 title: "Cloud Functions"
 description: "Easily create, deploy, and manage cloud functions using Contentstack Launch to streamline your serverless workflows."
 url: /launch/cloud-functions
+uid: bltea3e19f505f6e54a
 ---
 
 # Cloud Functions
@@ -213,7 +214,7 @@ When deploying projects on Contentstack Launch that utilize server-side framewor
 For example:
 
 -   **Next.js Pages Router**: Use [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)
--   **Next.js App Router**: Use [Route Handlers](https://nextjs.org/docs/app/building-your-application/routing/route-handlers)
+-   **Next.js App Router**: Use [Route Handlers](https://nextjs.org/docs/app/api-reference/file-conventions/route)
 -   **Gatsby**: Use [Gatsby Functions](https://www.gatsbyjs.com/docs/reference/functions/getting-started/)
 -   **Other**: Use [other framework with server command](/docs/launch/other-frameworks-on-launch#hosting-an-ssr-framework-site)
 
@@ -236,7 +237,7 @@ If you want to deploy a project that does not have a website but only Launch Clo
 
 ## Running Cloud Functions Locally
 
-You can run your Launch project Cloud Functions locally using the [launch:functions](/docs/headless-cms/cli-for-launch/#functions) command in CLI.
+You can run your Launch project Cloud Functions locally using the [launch:functions](/docs/headless-cms/cli-for-launch/v1#functions) command in CLI.
 
 ## Limitations
 

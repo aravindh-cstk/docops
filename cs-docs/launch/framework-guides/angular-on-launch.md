@@ -2,19 +2,20 @@
 title: "Angular on Launch"
 description: "Explore Angular framework support and features available in Contentstack Launch for building dynamic front-end apps."
 url: /launch/angular-on-launch
+uid: bltbedba9890dcfae86
 ---
 
 # Angular on Launch
 
 ## Angular on Launch
 
-[Angular](https://angular.io/) is a widely used open-source web application framework developed and maintained by Google. Known for its modularity and maintainability, Angular is efficient at building dynamic, single-page web applications (SPAs). Angular employs TypeScript, a superset of JavaScript, enabling you to build robust, scalable applications with a clear structure.
+[Angular](https://angular.dev/) is a widely used open-source web application framework developed and maintained by Google. Known for its modularity and maintainability, Angular is efficient at building dynamic, single-page web applications (SPAs). Angular employs TypeScript, a superset of JavaScript, enabling you to build robust, scalable applications with a clear structure.
 
 ## Supported Features in Contentstack Launch
 
 ### Static Site Generation (SSG)
 
-Contentstack Launch seamlessly supports Angular applications through [Static Site Generation (SSG)](https://angular.io/guide/prerendering) . This feature allows you to pre-render your Angular applications into static HTML files during the build process. These static files can be deployed to Launch, enhancing the performance and enabling quicker page loads.
+Contentstack Launch seamlessly supports Angular applications through [Static Site Generation (SSG)](https://v17.angular.io/guide/prerendering) . This feature allows you to pre-render your Angular applications into static HTML files during the build process. These static files can be deployed to Launch, enhancing the performance and enabling quicker page loads.
 
 ### Single-Page Application (SPA)
 
@@ -32,7 +33,7 @@ Refer to the [Server Configuration](/docs/launch/server-configuration) document 
 
 ### Caching
 
-By default, all the pages are cached on Launch’s CDN when you deploy Angular as SSR. This means that the subsequent requests to the same page will be cached, and the page will not be regenerated.
+By default, all the pages are cached on Launch���s CDN when you deploy Angular as SSR. This means that the subsequent requests to the same page will be cached, and the page will not be regenerated.
 
 You can configure this behavior by returning appropriate cache headers from your server side implementation in Angular. In the following example, we modify the Express.js route that handles Angular engine requests in server.ts to regenerate the page every 5 minutes:
 

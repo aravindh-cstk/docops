@@ -2,6 +2,7 @@
 title: "Get Started with iOS SDK"
 description: "This guide will help you get started with Contentstack iOS SDK to build apps. Learn more about basic installation, setup, and cache policies on this page."
 url: /developers/sdks/content-delivery-sdk/ios/get-started-with-ios-sdk
+uid: blt3cd72f74f4ac3833
 ---
 
 # Get Started with iOS SDK
@@ -21,7 +22,7 @@ To get started with iOS SDK, you will need the following:
 ## SDK Installation and Setup
 
 Contentstack offers six [regions](/docs/administration/about-regions/) **AWS North America**, **AWS Europe**, **Azure North America**, **Azure Europe**, **GCP North America,** and **GCP Europe** as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.  
-  
+
 To use SDKs for the Europe, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.
 
 To add the Contentstack iOS SDK to your existing project, perform the following steps:
@@ -29,40 +30,40 @@ To add the Contentstack iOS SDK to your existing project, perform the following
 1.  **SDK Installation:**  
     You can use the SDK using CocoaPods.
     1.  Add the following line to your Podfile:
-        
+
         ```
         pod 'Contentstack'
         ```
-        
+
     2.  Then, run the command given below to get the latest release of Contentstack.
-        
+
         ```
         pod install
         ```
-        
+
 2.  **Import header/module:**
-    
+
     You can either import the header or the module.
-    
+
     1.  Import the header file in Objective-C project using the command given below:  
-        
+
         ```
         #import <contentstack/contentstack.h>
         ```
-        
+
     2.  Import the header files as a module too:  
-        
+
         -   Swift
         -   ObjC
-        
+
         ```
         import Contentstack
         ```
-        
+
         ```
         @import Contentstack
         ```
-        
+
 
 ## Initialize SDK
 
@@ -293,6 +294,6 @@ Query *query = [contentType query];
 -   [iOS Sample App](https://github.com/contentstack/contentstack-ios-persistence-example)
 -   [API Reference for IOS SDK](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/ios/reference/)
 -   [API Reference for Swift SDK](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/swift/reference/)
--   [iOS SDK Change Log](/docs/developers/sdks/content-delivery-sdk/ios/ios-sdk-changelog/)
--   [Swift SDK Change Log](/docs/developers/sdks/content-delivery-sdk/ios/swift-sdk-changelog/)
+-   [iOS SDK Change Log](/docs/changelog?filter=sdks)
+-   [Swift SDK Change Log](/docs/changelog?filter=sdks)
 -   [View and Download iOS SDK repository on GitHub](https://github.com/contentstack/contentstack-ios)
