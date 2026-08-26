@@ -2,6 +2,7 @@
 title: "Get Started with Java Delivery SDK"
 description: "This guide will help you get started with Contentstack Java SDK to build apps. Get clear steps on SDK installation & setup, initialization, and basic queries."
 url: /developers/sdks/content-delivery-sdk/java/get-started-with-java-delivery-sdk
+uid: blt14007f6e3a9333fb
 ---
 
 # Get Started with Java Delivery SDK
@@ -22,7 +23,7 @@ To get started with Java SDK, you will the following:
 Add the following dependency code snippets into your project:
 
 -   **Maven**
-    
+
     ```
     <dependency>
         <groupid>com.contentstack.sdk</groupid>
@@ -30,24 +31,24 @@ Add the following dependency code snippets into your project:
         <version>{version}</version>
     </dependency>
     ```
-    
+
     Maven users need to add the above code in your pom.xml file under the <dependencies> section.
-    
+
 -   **Gradle**
-    
+
     ```
     compile 'com.contentstack.sdk:java:{version}'
     ```
-    
+
     Gradle users need to add the above dependency code into your build.gradle file.
-    
+
 
 You can download the latest dependency version [here](https://search.maven.org/artifact/com.contentstack.sdk/java).
 
 ## Initialize SDK
 
 Contentstack offers six [regions](/docs/administration/about-regions) seven regions, **AWS North America**, **AWS Europe, AWS Australia**, **Azure North America**, **Azure Europe**, **GCP North America,** and **GCP Europe** as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.  
-  
+
 To use SDKs for the Europe, Australia, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.
 
 To initialize the SDK, you will need to specify the stack’s **API Key,** [**delivery token**](/docs/headless-cms/about-delivery-tokens)**,** and name of the [**environment**](/docs/headless-cms/about-environments)where you will publish your content.  
