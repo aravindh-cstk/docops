@@ -2,6 +2,7 @@
 title: "Download JavaScript SDK"
 description: "Download JavaScript SDK"
 url: /developers/sdks/content-delivery-sdk/javascript-browser/download-javascript-sdk
+uid: blt0c72b681658c9a8d
 ---
 
 # Download JavaScript SDK

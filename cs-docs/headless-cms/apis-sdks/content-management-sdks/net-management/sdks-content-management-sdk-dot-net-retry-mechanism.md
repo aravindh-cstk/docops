@@ -2,6 +2,7 @@
 title: "Implement Retry Mechanism with .NET Management SDK"
 description: "The .NET Management SDK retry mechanism automatically handles 429, 5xx, and network errors with exponential backoff, improving the reliability when using the Management API"
 url: /developers/sdks/content-management-sdk/dot-net/retry-mechanism
+uid: blt7cbb0631602fcb53
 ---
 
 # Implement Retry Mechanism with .NET Management SDK

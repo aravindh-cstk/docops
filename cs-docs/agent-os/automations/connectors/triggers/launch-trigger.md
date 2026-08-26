@@ -2,6 +2,7 @@
 title: "Launch Trigger"
 description: "Launch Trigger"
 url: /agent-os/launch-trigger
+uid: bltf664eac8d9207951
 ---
 
 # Launch Trigger
@@ -53,9 +54,9 @@ Let’s look at the steps to set up the trigger event.
      ![Test_Trigger_Deployment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt51a36249c0908c22/667142a97b258d6ea0c8a7b9/Test_Trigger_Deployment.png)
 12.  If successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.  
      ![Save_Exit_Deployment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3afb53a3a9a14d8b/667142982424700722ac8eec/Save_Exit_Deployment.png)
-     
+
      **Note:** In the Contentstack Launch, you can either [import your project](/docs/launch/import-project-using-github/) from a GitHub repository or [upload a zip file from your system](/docs/launch/import-project-using-file-upload/).
-     
+
 
 This sets your **Deployment** trigger.
 
@@ -69,7 +70,7 @@ Let’s look at the steps to set up the trigger event.
 2.  Within the **Configure Trigger** step, click the **Launch** trigger.  
     ![Select_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt832e09bd54a49834/667142a96e8ad04f3d1bbe64/Select_Trigger.png)
 3.  Under the **Choose Trigger** tab, select **Environment** Trigger.  
-    
+
     ![Select_Environment_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4d0ec4f4d2d03cac/66714298d3f1302c4c3dbabd/Select_Environment_Trigger.png)
 4.  In the **Configure Trigger** tab, click **\+ Add New Account** to add your Launch account.  
     ![Add_Account_Environment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8bce217f378c4509/667142987b258df33fc8a7b1/Add_Account_Environment.png)
@@ -86,14 +87,14 @@ Let’s look at the steps to set up the trigger event.
     -   **Environment Updated:** Triggers when an environment is updated.
     -   **All:** Triggers when any of the above events is performed on an environment.
 9.  Select a Launch **Project** from the **Lookup** dropdown.  
-    
+
     ![Select_Fields_Environment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f1a4e749c09a0dc/6671429946a037c935a29524/Select_Fields_Environment.png)
 10.  Click **Proceed**.
 11.  Click **Test Trigger** to execute and test the trigger that you configured.  
      ![Test_Trigger_Deployment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt51a36249c0908c22/667142a97b258d6ea0c8a7b9/Test_Trigger_Deployment.png)
-     
+
      **Note:** While creating a new [environment](/docs/launch/environments/) for a Launch project, you must [upload a zip file of your project](/docs/launch/import-project-using-file-upload/). For projects deployed on GitHub, you must select a branch to fetch the project and create a new environment.
-     
+
 12.  If successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.  
      ![Save_Exit_Environment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7228778dc451beef/6671429876906d78ff9ee66d/Save_Exit_Environment.png)
 

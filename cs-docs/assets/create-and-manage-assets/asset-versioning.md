@@ -2,6 +2,7 @@
 title: "Asset Versioning"
 description: "Manage and track asset changes effortlessly with Contentstack's asset versioning. Ensure accuracy, streamline collaboration, and restore previous versions seamlessly."
 url: /assets/asset-versioning
+uid: blt1e6f816fba2550a6
 ---
 
 # Asset Versioning

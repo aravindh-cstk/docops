@@ -2,6 +2,7 @@
 title: "Implement TOTP Support for .NET Management SDK"
 description: "Add TOTP support to .NET Management SDK for MFA in Contentstack. Secure logins with time-based one-time passwords."
 url: /developers/sdks/content-management-sdk/dot-net/implement-totp-with-dot-net-management-sdk
+uid: blt8a56bbe847d53e78
 ---
 
 # Implement TOTP Support for .NET Management SDK

@@ -2,6 +2,7 @@
 title: "Cloud Infrastructure"
 description: "Use our detailed architecture to set up your own cloud infrastructure"
 url: /headless-cms/cloud-infrastructure-architecture-for-contentstack-powered-websites
+uid: blt684e23d77b1a0891
 ---
 
 # Cloud Infrastructure

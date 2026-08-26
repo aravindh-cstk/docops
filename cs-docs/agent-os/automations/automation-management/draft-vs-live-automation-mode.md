@@ -2,6 +2,7 @@
 title: "Draft vs. Live Automation Mode"
 description: "With the Draft mode, you can update automation configuration, while with the Live mode you can only view the automation."
 url: /agent-os/draft-vs-live-automation-mode
+uid: blt682701d5d453ba52
 ---
 
 # Draft vs. Live Automation Mode
@@ -20,7 +21,7 @@ If you wish to make alterations to a live automation, you have two options. Firs
 
 ![Draft_Mode.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt046a99caf5f8816b/65408cb1588560001b273ebf/Draft_Mode.png)
 
-  
+
 
 ![Live_Mode.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt12a7c4cb29224f98/65408cb12797e3040709c5ad/Live_Mode.png)
 

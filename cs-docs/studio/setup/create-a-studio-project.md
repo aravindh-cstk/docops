@@ -2,6 +2,7 @@
 title: "Create a Studio Project"
 description: "Learn how to create a Contentstack Studio project, connect it to your stack, and configure the Studio SDK with the provisioned content type UID."
 url: /studio/create-a-studio-project
+uid: blt9b5d0cdc78371016
 ---
 
 # Create a Studio Project

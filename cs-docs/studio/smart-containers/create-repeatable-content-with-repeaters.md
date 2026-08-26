@@ -2,6 +2,7 @@
 title: "Create Repeatable Content with Repeaters"
 description: "Learn how to use Repeaters in Contentstack Studio to render multi-valued fields like Modular Blocks, Reference fields, and Groups as iterated lists of components."
 url: /studio/create-repeatable-content-with-repeaters
+uid: blt815626101c696c82
 ---
 
 # Create Repeatable Content with Repeaters

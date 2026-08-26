@@ -2,6 +2,7 @@
 title: "Sub Automation Trigger"
 description: "Use the Sub Automation trigger to invoke a sub automation action."
 url: /agent-os/sub-automation-trigger
+uid: blte3ef5f20ef60269b
 ---
 
 # Sub Automation Trigger
@@ -22,9 +23,9 @@ Perform the following steps to configure the Sub Automation trigger:
 3.  Under **Choose Trigger** tab, select the **Sub Automation Trigger**.  
     ![Select_Trigger_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3344ae1d1f7a749e/65c30a244cd370459470d27a/Select_Trigger_Action.png)
 4.  Enter the **Description** of the trigger.
-    
+
     **Note:** The description in the schema can be helpful while using the [ChatGPT](/docs/agent-os/chatgpt#action-4-select-the-function-calling-action) Function Calling action to briefly describe the schema defined in the sub automation trigger.
-    
+
 5.  Under the **Schema** field, enter the value in the **Key** field and select the **Type** from the dropdown. Click **\+ Add Schema** button to add multiple values.  
     Additionally, you can also mark the **Required** checkbox to make it mandatory.  
     ![Select_Different_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf573e0d0e6150ff0/665ed45945172598cf7a5cc2/Select_Different_Fields.png)
@@ -58,23 +59,23 @@ Let’s configure the [ChatGPT](/docs/agent-os/chatgpt) connector to view the c
 1.  Within the **Configure Action Step**, click the **ChatGPT** connector.
 2.  Under **Choose an Action** tab, select the **Chat** action.
 3.  Click the **\+ Add New Account** button to add your ChatGPT account.
-    
+
     **Additional Resource:** Refer to the [ChatGPT](/docs/agent-os/chatgpt) connector documentation for adding the account.
-    
+
 4.  Select the **API Model** from the dropdown list to generate content for the chat responses.
-    
+
     **Note:** Different models are available to different users based on the account the user holds such as paid accounts. You must check the account access before selecting the model.
-    
+
 5.  Provide the **Prompt Text** to generate the chat response(s). You must select the output from the sub automation trigger. For example, convert the given string into German.
 6.  Select the **Role** from the dropdown options to send to the API model request. By default, the role is set to the user.
-    
+
     **Additional Resource:** There are three different types of roles provided by the OpenAI platform. The **system** role sets the response context, the **assistant** role provides the response content, and the **user** role asks the prompt.
-    
+
     ![Select_Chat_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8ae08961ddd426b8/665edca6653cb9b3e6a7f1ce/Select_Chat_Fields.png)
 7.  Click **Proceed**.
 8.  Click **Test Action** to test the configured action.
 9.  Click the **Save and Exit** button. You will see the input string converted into German language.  
-    
+
     ![Save_Exit_Chat.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6cbd12d4c686ba3a/665edcfb585b447949987840/Save_Exit_Chat.png)
 
 Now let’s configure a **Response** connector to send the output.

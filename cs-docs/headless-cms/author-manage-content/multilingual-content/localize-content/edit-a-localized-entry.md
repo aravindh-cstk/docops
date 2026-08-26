@@ -2,6 +2,7 @@
 title: "Edit a Localized Entry"
 description: "steps to edit a localized entry"
 url: /headless-cms/edit-a-localized-entry
+uid: blt90390e0f4fb41410
 ---
 
 # Edit a Localized Entry

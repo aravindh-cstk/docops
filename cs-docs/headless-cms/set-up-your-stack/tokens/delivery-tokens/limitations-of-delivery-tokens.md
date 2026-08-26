@@ -2,6 +2,7 @@
 title: "Limitations of Delivery Tokens"
 description: "Learn about the limitations of Delivery Tokens to better manage access and control content delivery in your projects."
 url: /headless-cms/limitations-of-delivery-tokens
+uid: blt0bb943c84e5cd3a9
 ---
 
 # Limitations of Delivery Tokens

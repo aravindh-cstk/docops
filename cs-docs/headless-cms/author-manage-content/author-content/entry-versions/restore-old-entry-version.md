@@ -2,6 +2,7 @@
 title: "Restore Old Entry Version"
 description: "Learn how to restore or rollback to a previously saved version of an entry in Contentstack to manage entry versions efficiently."
 url: /headless-cms/restore-old-entry-version
+uid: bltae6bcaf2feccd9e5
 ---
 
 # Restore Old Entry Version
@@ -16,7 +17,7 @@ To restore or rollback to an earlier saved version of an entry, log in to your [
 2.  Navigate to the entry you want to modify.
 3.  Click the version icon in the top-right corner of the page or the “Versions” icon in the right sidebar.
 4.  Locate the entry you want to restore and click it.
-    
+
 5.  Click the **Save** button to make the selected version the latest version of the entry.
 6.  After restoring the version, publish the entry to the desired environment(s). This action ensures that the restored version replaces the currently published version.
 

@@ -2,6 +2,7 @@
 title: "Choosing Between Templates and Sections"
 description: "Learn when to choose Templates for content-type-driven pages versus Sections for reusable blocks, with a decision tree and quick reference table."
 url: /studio/choosing-between-templates-and-sections
+uid: blt3c244f6eaac0f5ba
 ---
 
 # Choosing Between Templates and Sections

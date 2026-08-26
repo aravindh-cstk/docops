@@ -2,6 +2,7 @@
 title: "About Objective-C SDK"
 description: "Contentstack iOS SDK lets you fetch and deliver content from Contentstack."
 url: /developers/sdks/content-delivery-sdk/ios/about-objective-c-sdk
+uid: bltafc243277fec3ec6
 ---
 
 # About Objective-C SDK

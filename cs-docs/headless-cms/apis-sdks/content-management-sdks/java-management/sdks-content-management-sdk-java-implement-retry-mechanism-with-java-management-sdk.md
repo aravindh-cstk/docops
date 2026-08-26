@@ -2,6 +2,7 @@
 title: "Implement a Retry Mechanism with Java Management SDK"
 description: "Implement automatic retries with RetryConfig, RetryCondition, and fixed, linear, or exponential backoff in the Java Management SDK for resilient API calls."
 url: /developers/sdks/content-management-sdk/java/implement-retry-mechanism-with-java-management-sdk
+uid: blte963e17c61add1ca
 ---
 
 # Implement a Retry Mechanism with Java Management SDK
@@ -33,74 +34,74 @@ Before you begin, ensure you have the following:
 -   Java 8 or higher
 -   The Contentstack Java Management SDK must be on the classpath.
 -   Authenticate in one of two ways:
-    
+
     -   Management API authtoken
     -   OAuth is configured on the client
     -   HTTPS access to the Contentstack API
-    
+
     ## Set up and credentials
-    
+
     -   **Dependencies:** Add the Contentstack Java Management SDK to your project (it brings OkHttp and Retrofit). No extra libraries are required for retries.
     -   **Credentials:** Do not hardcode the auth token. Use an environment variable (e.g., CONTENTSTACK\_AUTH\_TOKEN) or a secrets manager.
-    
+
     **Example:**
-    
+
     ```
     String authToken = System.getenv("CONTENTSTACK_AUTH_TOKEN");
     if (authToken == null || authToken.isEmpty()) {
         throw new IllegalStateException("CONTENTSTACK_AUTH_TOKEN must be set");
     }
     ```
-    
+
     ## Quick Reference
-    
+
     <table><tbody><tr><td>Sync calls (for example, <span class="code">.execute()</span>)</td><td>You call the API synchronously. Retries are handled by the SDK interceptors; no extra code required.</td></tr><tr><td>Async calls (<span class="code">.enqueue()</span>)</td><td>Retries are applied by the SDK interceptors, even when using a normal <span class="code">Callback</span>. Use <span class="code">RetryCallback</span> when you need per-call custom retry behavior or a different <span class="code">RetryConfig</span>.</td></tr><tr><td>Fixed delay</td><td>Same delay between every retry. Set <span class="code">retryDelay</span> only; leave <span class="code">retryDelayOptions</span> unset.</td></tr><tr><td>Linear backoff</td><td>Delay grows linearly (e.g., 1s, 2s, 3s). Use <span class="code">retryDelayOptions</span> with <span class="code">base</span> only.</td></tr><tr><td>Exponential / custom backoff</td><td>You need an exponential (or other) delay. Use <span class="code">retryDelayOptions</span> with <span class="code">customBackoff</span>.</td></tr></tbody></table>
-    
+
     ## Configuration Parameters
-    
+
     <table><tbody><tr><td><strong>Parameter</strong></td><td><strong>Type</strong></td><td><strong>Default</strong></td><td><strong>Description</strong></td></tr><tr><td><span class="code">retryLimit</span></td><td>int</td><td>3</td><td>Number of additional retry attempts.</td></tr><tr><td><span class="code">retryDelay</span></td><td>long</td><td>300 ms</td><td>Fixed delay interval between retries.</td></tr><tr><td><span class="code">retryCondition</span></td><td>RetryCondition</td><td>DefaultRetryCondition</td><td>Criteria for determining retryable errors.</td></tr><tr><td><span class="code">retryDelayOptions</span></td><td>RetryDelayOptions</td><td>null</td><td>Configuration for linear or custom backoff.</td></tr></tbody></table>
-    
+
     **Note:** The total number of requests is 1 + retryLimit. For example, a retryLimit of 3 results in 4 total attempts.
-    
+
     **Detailed parameter logic**
-    
+
     -   **retryDelay:** This value is ignored if retryDelayOptions is configured. There is no fallback between strategies.
     -   **retryCondition:** This functional interface uses the signature boolean shouldRetry(int statusCode, Throwable error). By default, the SDK retries:
         -   **Status Codes:** 408, 429, 500, 502, 503, and 504.
         -   **Network Errors:** IOException and SocketTimeoutException.
     -   **retryDelayOptions:** This parameter supports base for linear backoff and customBackoff for user-defined delay calculations.
-    
+
     ## Override Behavior
-    
+
     The SDK selects exactly one backoff strategy based on the parameters provided in the RetryConfig. These strategies are mutually exclusive; the SDK does not combine them or use one as a timeout for another.
-    
+
     The selection follows a strict priority order: customBackoff → base → retryDelay.
-    
+
     <table><tbody><tr><td><strong>Configuration</strong></td><td><strong>Applied Strategy</strong></td><td><strong>Parameters Ignored</strong></td></tr><tr><td><span class="code">customBackoff</span></td><td>The custom logic is defined in your calculate method.</td><td>base and <span class="code">retryDelay</span>.</td></tr><tr><td>base (without <span class="code">customBackoff</span>)</td><td>Linear backoff (delay = base × retryCount).</td><td><span class="code">retryDelay</span>.</td></tr><tr><td><span class="code">retryDelay</span> only</td><td>A fixed, constant delay interval.</td><td>N/A</td></tr></tbody></table>
-    
+
     **Note:** retryDelay is the fallback only when retryDelayOptions is null or no valid backoff strategy is provided.
-    
+
     **Example:**
-    
+
     -   If retryDelayOptions is set with only base, retryDelay is ignored.
     -   retryDelay is used only when retryDelayOptions is null, or when no valid delay strategy is provided.
-    
+
     ![Retry strategy selection flowchart](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt89813c29519526fe/69a7f0f3ba8a3c8b88cbd3bd/java_management_retry_mechanism.png)
-    
+
     **Retry condition logic**
-    
+
     The **RetryCondition** is a functional interface that determines if a failed request requires a retry based on the following signature: boolean shouldRetry(int statusCode, Throwable error)
-    
+
     **Default retry behavior**
-    
+
     The **DefaultRetryCondition** automatically triggers a retry for the following scenarios:
-    
+
     -   **Status Codes:** 408, 429, 500, 502, 503, and 504.
     -   **Network Failures:** Requests resulting in a status code of 0.
     -   **Exceptions:** Common network-related errors such as IOException and SocketTimeoutException.
-    
+
     ## Basic Usage — Default Configuration (Recommended Practice)
-    
+
     ```
     import com.contentstack.cms.Contentstack;
     import com.contentstack.cms.core.RetryCallback;
@@ -108,19 +109,19 @@ Before you begin, ensure you have the following:
     import okhttp3.ResponseBody;
     import retrofit2.Call;
     import retrofit2.Response;
-    
+
     import java.io.IOException;
-    
+
     // Use environment variable; never hardcode the token.
     String authToken = System.getenv("CONTENTSTACK_AUTH_TOKEN");
     if (authToken == null || authToken.isEmpty()) {
         throw new IllegalStateException("CONTENTSTACK_AUTH_TOKEN must be set");
     }
-    
+
     Contentstack client = new Contentstack.Builder()
             .setAuthtoken(authToken)
             .build();
-    
+
     // Default retry configuration: 3 attempts, 300 ms fixed delay, retries on 408, 429, 5xx, network errors.
     // Sync calls use this automatically via interceptors.
     Response<ResponseBody> response = null;
@@ -139,9 +140,9 @@ Before you begin, ensure you have the following:
         }
     }
     ```
-    
+
     Asynchronous calls must use RetryCallback so the configured retry behavior and delays apply before your callback:
-    
+
     ```
     Call<ResponseBody> call = client.user().getUser();
     call.enqueue(new RetryCallback<ResponseBody>(call, client.getRetryConfig()) {
@@ -151,26 +152,26 @@ Before you begin, ensure you have the following:
                System.out.println("Request completed successfully");
            }
        }
-    
+
        @Override
        protected void onFinalFailure(Call<ResponseBody> call, Throwable t) {
            System.err.println("Error: " + t.getMessage());
        }
     });
     ```
-    
+
     ## Asynchronous call retries
-    
+
     The Java SDK automatically applies retry logic to asynchronous requests (.enqueue()) through internal network interceptors. You are not required to use RetryCallback to enable basic retries.
-    
+
     The SDK provides two layers for handling asynchronous retries:
-    
+
     <table><tbody><tr><td><strong>Retry method</strong></td><td><strong>Implementation layer</strong></td><td><strong>Use case</strong></td></tr><tr><td>Interceptors (default)</td><td>Network layer</td><td>Standard retries using the global <span class="code">RetryConfig</span> defined on the Contentstack client.</td></tr><tr><td>RetryCallback</td><td>Application layer</td><td>Custom or per-call <span class="code">RetryConfig</span> and advanced failure handling.</td></tr></tbody></table>
-    
+
     **Using RetryCallback for custom behavior**
-    
+
     While interceptors handle global settings, use RetryCallback when a specific request requires a unique backoff strategy or retry limit that differs from the client's default configuration.
-    
+
     ```
     // Example: Using RetryCallback for a specific async request
     Call<ResponseBody> call = client.user().getUser();
@@ -181,14 +182,14 @@ Before you begin, ensure you have the following:
                System.out.println("Request successful");
            }
        }
-    
+
        @Override
        protected void onFinalFailure(Call<ResponseBody> call, Throwable t) {
            System.err.println("Request failed after all custom retries: " + t.getMessage());
        }
     });
     ```
-    
+
 
 ## Advanced Configuration — Custom Retry Configuration
 

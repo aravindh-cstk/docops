@@ -2,6 +2,7 @@
 title: "Edit an Entry Variant"
 description: "Learn how to edit entry variants in Contentstack to update personalized content for specific user segments and keep your content relevant."
 url: /headless-cms/edit-an-entry-variant
+uid: blt1141378949238057
 ---
 
 # Edit an Entry Variant
@@ -16,9 +17,9 @@ To edit an entry variant, log in to your [Contentstack account](https://www.cont
 
 1.  Navigate to the desired [stack](/docs/headless-cms/about-stack), then click the **Entries** icon in the left navigation panel and select an existing entry variant.
 2.  Within the entry editor for an entry variant, only the fields marked with the **Variant Field** tag are exclusive to the entry variant. Other field values are inherited from the latest version of the base entry.![1-Edit Entry Variants.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte481d1d3f961fe63/66fa8f74a18b1f58cc014506/1-Edit_Entry_Variants.png)
-    
+
     **Note:** Only the fields you modify within the entry variant will be saved; other field values will remain inherited from the base entry.
-    
+
 3.  Modify the fields as needed. Make sure your changes align with the intended personalization for the user segment targeted by this variant.
 4.  Once you are satisfied with the edits, click the **Save** button to apply the changes to the entry variant.
 

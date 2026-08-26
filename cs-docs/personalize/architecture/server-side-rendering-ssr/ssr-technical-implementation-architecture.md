@@ -2,6 +2,7 @@
 title: "Server Side Rendering (SSR) Technical Implementation Architecture"
 description: "Explore how Server Side Rendering enhances dynamic personalization and SEO for businesses without needing edge infrastructure in Contentstack."
 url: /personalize/ssr-technical-implementation-architecture
+uid: blt242ed13ef8119cc9
 ---
 
 # Server Side Rendering (SSR) Technical Implementation Architecture
@@ -82,9 +83,9 @@ The following are the key components of this implementation architecture:
 -   **Your user’s browser:** A user accesses your website using a browser on their device. The browser is responsible for making requests to your domain to ask for your website, and then rendering the received page.
 -   **Your SSR Origin:** The application server dynamically generates HTML pages with personalized or non-personalized content created in the CMS. The server is responsible for extracting user information from the incoming request and using it to interact with the Personalize Edge API. By passing relevant user context to the Edge API, it retrieves the appropriate variant information, which is then used to fetch corresponding entries from the CDA. This component is entirely responsible for communicating with both Contentstack Personalize and CDA to deliver personalized web pages tailored to individual users.
 -   **Contentstack Personalize Edge API and SDK:** The Personalize Edge API is the decision engine that powers real-time personalization. Given the user UID and other context such as the page URL, referrer, etc., it responds with the UIDs of each experience’s variant that the visitor should see. Read more about the Edge API [here](/docs/developers/apis/personalize-edge-api).
-    
+
     We recommend using the [JavaScript Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/about-javascript-personalize-edge-sdk), which handles communicating with the Edge API and providing it with the required context on your behalf.
-    
+
 -   **Contentstack CMS Content Delivery API (CDA):** Contentstack's CDA delivers the content (articles, products, etc.) — both [base and personalized variants](/docs/developers/apis/content-delivery-api/entry-variants). Your SSR process combines this content with your page layout or components to generate the final personalized page that will be shown to the user.
 -   **Your cache layer:** This layer ensures that personalized content is efficiently delivered to the user. It helps reduce the load on the origin server, providing faster content delivery.
 

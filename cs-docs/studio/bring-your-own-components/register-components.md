@@ -2,6 +2,7 @@
 title: "Register Components"
 description: "Learn how to use registerComponent, registerComponents, and registerLazyComponent to add your React components to the Contentstack Studio palette."
 url: /studio/register-components
+uid: bltcdcc85f8e1e80f7c
 ---
 
 # Register Components

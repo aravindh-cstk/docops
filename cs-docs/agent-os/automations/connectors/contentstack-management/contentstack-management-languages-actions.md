@@ -2,6 +2,7 @@
 title: "Contentstack Management - Languages Actions"
 description: "Use the Contentstack Management Languages action to automate fetching all the languages from a stack."
 url: /agent-os/contentstack-management-languages-actions
+uid: blt3a1e11da4639a804
 ---
 
 # Contentstack Management - Languages Actions

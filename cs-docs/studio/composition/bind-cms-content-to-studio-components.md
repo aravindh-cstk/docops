@@ -2,6 +2,7 @@
 title: "Bind CMS Content to Studio Components"
 description: "Learn how Studio components get their data from Contentstack through prop binding, the Data Picker, scope-aware Repeaters, and automatic Visual Editor integration."
 url: /studio/bind-cms-content-to-studio-components
+uid: blt6f3068b1df5cf904
 ---
 
 # Bind CMS Content to Studio Components

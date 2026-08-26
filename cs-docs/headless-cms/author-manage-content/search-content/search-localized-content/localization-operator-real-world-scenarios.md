@@ -2,6 +2,7 @@
 title: "Localization Operator Real-world Scenarios"
 description: "Learn how to use Contentstack's localization search to find content in specific languages or leverage fallback options."
 url: /headless-cms/localization-operator-real-world-scenarios
+uid: bltdf6c3116b6bd1630
 ---
 
 # Localization Operator Real-world Scenarios

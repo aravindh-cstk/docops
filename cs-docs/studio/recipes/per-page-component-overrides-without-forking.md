@@ -2,6 +2,7 @@
 title: "Per-Page Component Overrides without Forking"
 description: "Learn how to expose section props in Contentstack Studio to deliver per-page content overrides across multiple landing pages without forking a section."
 url: /studio/per-page-component-overrides-without-forking
+uid: blt52719ecdd84b2454
 ---
 
 # Per-Page Component Overrides without Forking
@@ -31,9 +32,9 @@ The hero is the same on every page. Only the four exposed props differ.
 5.  **Text** component, set to "A short subhead that explains the value"
 6.  **Button** component, set label to "Get started", href to #
 7.  **Image** component for the background overlay (with placeholder src)
-    
+
 8.  **Save**.
-    
+
 
 Studio opens the **Expose Props** modal because the section has component props that could be exposed.
 
