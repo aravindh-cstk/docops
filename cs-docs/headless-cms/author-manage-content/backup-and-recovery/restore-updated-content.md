@@ -2,6 +2,7 @@
 title: "Restore Updated Content"
 description: "Learn to restore lost entry data from entries after content type updates using Contentstack’s Versioning API or by contacting support."
 url: /headless-cms/restore-updated-content
+uid: blt7d029f22a113f8c0
 ---
 
 # Restore Updated Content
@@ -22,7 +23,7 @@ If changes were made to a content type (e.g., modifying a field UID or deleting 
 
 Perform the following steps to restore a prior version of a content type:
 
-1.  Use a REST API client, such as [Postman](https://www.postman.com/) or [Swagger](https://swagger.io/tools/swagger-ui/), and execute the [Get a single content type API](/docs/developers/apis/content-management-api/content-types#get-a-single-content-type) request.
+1.  Use a REST API client, such as [Postman](https://www.postman.com/) or [Swagger](https://swagger.io/open-source/swagger-ui/), and execute the [Get a single content type API](/docs/developers/apis/content-management-api/content-types#get-a-single-content-type) request.
 2.  In the API request, specify the version parameter to fetch a previous version of the content type.
 
 This API call allows you to retrieve older versions of the updated content type and restore the schema as needed.

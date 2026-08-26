@@ -2,6 +2,7 @@
 title: "Get Started with Contentstack App SDK"
 description: "Install and initialize the TypeScript-based Contentstack App SDK to access Custom Field context, entry data, and UI location APIs for type-safe in-app extensions."
 url: /developers/sdks/contentstack-app-sdk/typescript/get-started-with-contentstack-app-sdk
+uid: bltfb049e330527db59
 ---
 
 # Get Started with Contentstack App SDK
@@ -15,17 +16,17 @@ This guide explains how to install the Contentstack App SDK, initialize it, and 
 To get started with the TypeScript Delivery SDK, you will need the following:
 
 -   [Contentstack account](https://www.contentstack.com/login/) with access to [Marketplace apps](/marketplace)
--   [Node.js](https://nodejs.org/) version 22 or later
+-   [Node.js](https://nodejs.org/en) version 22 or later
 -   Basic knowledge of TypeScript
 
 ## What You Will Learn
 
 -   How to install the Contentstack App SDK.
-    
+
 -   How to initialize the SDK.
-    
+
 -   How to access the Custom Field context to work with entry and field data.
-    
+
 
 ## Installation
 

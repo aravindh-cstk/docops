@@ -2,6 +2,7 @@
 title: "Unpublish an Asset"
 description: "Learn how to unpublish assets in Contentstack across environments and locales, schedule unpublishing, and manage assets effectively."
 url: /headless-cms/unpublish-an-asset
+uid: blt05de7813e73cfced
 ---
 
 # Unpublish an Asset
@@ -15,19 +16,19 @@ To unpublish an asset, log in to your [Contentstack account](https://www.content
 1.  Go to your [stack](/docs/headless-cms/about-stack), and click the **“Assets”** icon. You can also use the shortcut key “A” (for both Windows OS and Mac OS users) to access the assets menu.
 2.  Select the asset you want to unpublish and click **Unpublish**.
 3.  Under **Select Environment(s)** and **Select Language(s)**, select the environment(s) and the locale(s) from which you want to unpublish the asset.
-    
+
     **Note:** You can select up to **10 environments** and **10 locales** for a single unpublishing action.
-    
+
 4.  Under **Unpublish**, select one of the two available options:
     -   **Now**: Unpublish the asset immediately.
     -   **Later**: Schedule the asset to be unpublished at a specific date and time. If you select this option, additional fields appear where you can specify the date, time, and time zone.
-        
+
         **Note:** Scheduled unpublishing dates cannot exceed **12 months** from the current date.
-        
+
         If the selected time zone follows [daylight saving time (DST)](/docs/headless-cms/daylight-saving-time-in-contentstack), a help text will appear at the bottom of the dialog, indicating the effective unpublishing date, time, and time zone with DST adjustments.
-        
+
         **Note:** The DST time difference is **one hour**.
-        
+
 5.  Click **Unpublish** to confirm your action.
 
 **Note:** After unpublishing, the asset will no longer be accessible in the selected environments or locales but will remain stored in your Contentstack repository.

@@ -2,6 +2,7 @@
 title: "Azure ChatGPT"
 description: "Use this connector to generate content using the Azure cloud network."
 url: /agent-os/azure-chatgpt
+uid: bltf8b5b9662653f976
 ---
 
 # Azure ChatGPT
@@ -27,9 +28,9 @@ To use the Azure ChatGPT connector, you first need to connect your Azure ChatGPT
     2.  You must create a resource (if not created already). Click **\+ Create Resource**.
     3.  Click the resource created. Click to manage the keys or create one in the **Manage Keys** section.
     4.  In the **Model Deployments** section, click **Manage Deployments** -> Authorize your account. You will see a list of all the deployments created in the Azure platform. Click **\+ Create new deployment** to create a new deployment.
-        
-        **Note:** Refer to the [Azure OpenAI Service REST API Reference](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference#authentication) document for more information on API Version.
-        
+
+        **Note:** Refer to the [Azure OpenAI Service REST API Reference](https://learn.microsoft.com/en-us/azure/foundry/openai/reference) document for more information on API Version.
+
 8.  Click the **Authorize** button.  
     ![Click_the_Authorize_Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt44dd7f4236dcf9f5/64ba72a3320b7e4063ca7646/Click_the_Authorize_Button.png)
 
@@ -44,9 +45,9 @@ Perform the following steps to set up the Azure ChatGPT action connector:
 3.  Within the **Configure Action Step**, click the **Azure ChatGPT** connector.![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt322198feaa68952e/6826fdc364f73f79a09008d1/Select_Connector.png)
 4.  You will see three actions under the **Choose an Action** tab: **Chat**, **Prompt**, and **Translate an Entry**.  
     ![Screenshot 2025-05-05 at 12.10.12 PM (1).png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf0c0a7a0023f52b8/6818710b0307cd518cedfb64/Screenshot_2025-05-05_at_12.10.12_PM_(1).png)
-    
+
     Let’s look at each of them in detail.
-    
+
 
 ### Chat Action
 
@@ -55,15 +56,15 @@ Perform the following steps to set up the Azure ChatGPT action connector:
     1.  Click the **\+ Add New Account** button to add your **Azure ChatGPT** account.
     2.  In the **Prompt Text** field, provide your query to generate the chat response(s).
     3.  Select the **Role** from the dropdown options to send to the API model request. By default, the role is set to the user.
-        
+
         **Additional Resource:** There are three types of roles provided by the OpenAI platform. The **system** role sets the response context, the **assistant** role provides the response content, and the **user** role asks the prompt.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6cd2f92f8ca73b16/68273f6146fb3c4bc38895c7/Select_Fields.png)
     4.  Enable the **Show Optional Fields** toggle button to display the **Number of Tokens**, **Randomness of Responses**, **Number** **of** **Chat** **Responses**, **User Identifier**, **Frequency** **of** **Repeated** **Words**, **Presence** **of** **Repeated** **Responses**, and **Additional** **Prompt** **Text** fields.
     5.  Enter the **Number of Tokens** to generate the content. This must be within the range of 1 to 2048.
     6.  Enter a value for the **Randomness of Responses** of the generated content. 0 being the most precise and 2 being the most random content predictions. This must be within the range of 0 to 2.
     7.  Enter the **Number of Chat Responses** you want to be generated in the automation response. This must be within the range of 1 to 3.  
-        
+
     8.  Provide the **User Identifier** name, which helps the OpenAI platform to monitor and detect abuse.
     9.  Provide the value to set the **Frequency of Repeated Words**. The most positive value is likely to avoid the use of repeated words. This must be within the range of -2 to 2.
     10.  Provide the value to set the **Presence of Repeated Responses**. The most positive value is likely to generate a new response. This must be within the range of -2 to 2.
@@ -104,9 +105,9 @@ The Translate an Entry action returns the translated entry data in the response.
     1.  Click **\+ Add New Account** button to connect your Azure ChatGPT account as shown in the [Prerequisites](#prerequisites) step.
     2.  In the **Entry** **Data** field, enter the entry data to translate.
     3.  In the **Content** **Type** **Schema** field, enter the content type schema for translating the entry data.
-        
+
         You can fetch the **Entry** **Data** and **Content** **Type** **Schema** from the previous step using the [_Get a Single Content Type_](/docs/agent-os/contentstack-management-content-types-actions#get-a-single-content-type) and [_Get a Single Entry_](/docs/agent-os/contentstack-management-entries-actions#get-a-single-entry) actions.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5a97feb414338b75/681859f66a96c056905601b6/Select_Fields.png)
     4.  In the **Select** **Language** drop-down, select the language in which you want to translate the entry data.
     5.  Click the **Show Optional Fields** toggle button to use these optional fields:

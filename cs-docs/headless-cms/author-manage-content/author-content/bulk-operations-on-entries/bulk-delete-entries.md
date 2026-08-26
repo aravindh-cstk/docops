@@ -2,6 +2,7 @@
 title: "Bulk Delete Entries"
 description: "Learn how to efficiently bulk delete entries in Contentstack, streamlining your content management process and saving valuable time and effort."
 url: /headless-cms/bulk-delete-entries
+uid: bltd576d4c8fc237f5e
 ---
 
 # Bulk Delete Entries

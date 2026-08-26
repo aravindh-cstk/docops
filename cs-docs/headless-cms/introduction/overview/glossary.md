@@ -2,6 +2,7 @@
 title: "Glossary"
 description: "Explore Contentstack CMS: Learn about content modeling, workflows, and personalized experiences for seamless content management and delivery."
 url: /headless-cms/glossary
+uid: blt12b01cbf8be6f05a
 ---
 
 # Glossary
@@ -53,7 +54,7 @@ This reference document defines key terms and core concepts across the Contentst
 
 ## Developer Tools, APIs, and Integrations
 
--   [Command Line Interface (CLI)](/docs/headless-cms/install-the-cli): Perform content ops via terminal scripting.
+-   [Command Line Interface (CLI)](/docs/headless-cms/install-the-cli/v1): Perform content ops via terminal scripting.
 -   [SCIM API](/docs/developers/apis/scim-api): Automates user provisioning with SCIM standard.
 -   [Synchronization API](/docs/developers/apis/content-delivery-api/synchronization): Sync content across systems/environments.
 -   [Content Delivery API](/docs/developers/apis/content-delivery-api): Fetches published content.
@@ -77,7 +78,7 @@ This reference document defines key terms and core concepts across the Contentst
 -   [Launch](/docs/launch/about-launch/): Deploy front-end websites built on Contentstack.
 -   [Marketplace](/docs/marketplace/about-marketplace): Browse apps/extensions to extend CMS functionality.
 -   [Brand Kit](/docs/brand-kit/about-brand-kit/): Manage branding, style guides, and voice.
--   [Visual Builder](/docs/content-managers/visual-editor/about-visual-editor/): Drag-and-drop interface for visual content editing.
+-   [Visual Builder](/docs/headless-cms/about-visual-editor): Drag-and-drop interface for visual content editing.
 -   [Analytics](/docs/analytics/about-analytics): Centralized CMS usage and performance insights.
 
 **Note:** Experience Extensions use a legacy method. Prefer [UI locations](/docs/developer-hub/about-ui-locations/) to build and extend Contentstack apps.

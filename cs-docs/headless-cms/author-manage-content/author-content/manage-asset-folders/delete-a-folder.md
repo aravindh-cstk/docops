@@ -2,6 +2,7 @@
 title: "Delete an Asset Folder"
 description: "Learn how to delete an asset folder in Contentstack efficiently."
 url: /headless-cms/delete-a-folder
+uid: bltbe1f5c0a1a2aac9b
 ---
 
 # Delete an Asset Folder

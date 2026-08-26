@@ -2,6 +2,7 @@
 title: "Get Started with Java Utils Library"
 description: "steps to work with Java Utils Library"
 url: /developers/sdks/utils-sdk/java/get-started-with-java-utils-library
+uid: bltc5d08d26fe1bc385
 ---
 
 # Get Started with Java Utils Library
@@ -14,7 +15,7 @@ This guide will help you get started with Contentstack [Java Utils SDK](/docs/de
 
 To get started with the Java Utils SDK, you will need:
 
--   [JDK 8](https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html) or later
+-   [JDK 8](https://www.oracle.com/in/java/technologies/downloads/) or later
 -   [Contentstack account](https://www.contentstack.com/login/)
 -   Latest version of any of below IDEs:
     -   IntelliJ IDEA
