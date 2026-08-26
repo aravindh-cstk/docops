@@ -2,6 +2,7 @@
 title: "Launch Definitions and Core Concepts"
 description: "Definitions of core Launch concepts, including build time, compute time, and bandwidth, that determine usage and cost across the CDN and origin."
 url: /launch/launch-definitions-and-core-concepts
+uid: blta11a91e54b0830c5
 ---
 
 # Launch Definitions and Core Concepts
@@ -16,7 +17,7 @@ Use it to understand what each concept means and how usage is counted. For the r
 
 When a visitor requests a page on a Launch-hosted website, the request goes to the Content Delivery Network (CDN) first. The CDN is a global network of servers that keeps copies of your content close to your visitors.
 
-If the CDN already holds a valid cached copy of the requested content, it serves that copy directly. If not, it fetches the content from the origin — where your application runs — and may cache the response depending on the caching headers returned.
+If the CDN already holds a valid cached copy of the requested content, it serves that copy directly. If not, it fetches the content from the origin ��� where your application runs — and may cache the response depending on the caching headers returned.
 
 The cache serves most traffic to a well-configured site, so visitors do not face geographic latency and get instant responses from the nearest CDN POP to their location, thus reducing the load on the origin and providing a much better experience.
 
