@@ -21,10 +21,9 @@ import { getUserName } from "./lib/user-index.js";
 import { extractSections } from "./cda-fetch.js";
 import { htmlToMarkdown } from "./html-to-md.js";
 import { parseTitle } from "./lib/entry-content.js";
-
-// Tag prefixes our own automation adds (see git-to-sandbox-sync.ts and
-// entry-content.ts's SANDBOX_UID_TAG_PREFIX) — bookkeeping, not writer content.
-const AUTOMATION_TAG_PREFIXES = ["sandbox-uid-", "pr-", "nav-subsection-"];
+// Shared with the Prod → GitHub pull and nav-apply. Previously a local copy
+// here, which is how the Prod pull came to be missing the tag filter entirely.
+import { AUTOMATION_TAG_PREFIXES } from "./lib/entry-to-markdown.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -198,10 +197,10 @@ async function main() {
 
 /**
  * csdocs (docs_article) entries hold their content in `article_content`
- * modular blocks, not a `body` field (that field doesn't exist on this content
- * type — see cms-pull.ts's buildBody, which this mirrors). apidocs
- * (api_detail_page) has never been verified against a real schema this way,
- * so it keeps reading the flat `body` field as before.
+ * modular blocks, not a `body` field — that field does not exist on this content
+ * type, and reading it is what left the Prod pull writing title-only files.
+ * apidocs (api_detail_page) has never been verified against a real schema this
+ * way, so it keeps reading the flat `body` field as before.
  */
 function buildBody(stackType: string, entry: any): string {
   if (stackType !== "csdocs") {

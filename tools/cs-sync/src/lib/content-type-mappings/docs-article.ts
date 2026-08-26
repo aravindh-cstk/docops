@@ -278,6 +278,52 @@ const BREADCRUMB_UID_TO_PRODUCT_SLUG: Record<string, string> = Object.fromEntrie
   ),
 );
 
+// Same reverse lookup as BREADCRUMB_UID_TO_PRODUCT_SLUG but keyed to the
+// variant marker rather than the folder slug. Markers are unique per variant,
+// so a multi-variant product's two nav targets stay distinguishable — moving
+// an article between "Automate Guides" and "Automate Connectors" is a real
+// content change and must not canonicalize away.
+const BREADCRUMB_UID_TO_MARKER: Record<string, string> = Object.fromEntries(
+  Object.values(PRODUCT_CONFIG).flatMap((variants) =>
+    variants.flatMap((variant) => [
+      [variant.sandboxBreadcrumbUid, variant.marker],
+      [variant.prodBreadcrumbUid, variant.marker],
+    ]),
+  ),
+);
+
+/**
+ * Rewrites breadcrumb refs to a stack-independent form so the same nav target
+ * compares equal whichever stack's uid it is expressed with.
+ *
+ * This is a *comparison* helper only, never a write helper — the uid it
+ * produces is not a real entry uid. remapBreadcrumbForProd remains the thing
+ * that puts a genuine Prod uid into Prod.
+ *
+ * A uid outside PRODUCT_CONFIG is left as-is rather than guessed at, so it
+ * still compares unequal across stacks. That is the correct failure (nothing
+ * here knows what that nav entry is), but it means the entry diffs forever, so
+ * callers should pair this with unmappedBreadcrumbUids and warn.
+ */
+export function canonicalizeBreadcrumbForDiff(breadcrumb: unknown): unknown {
+  if (!Array.isArray(breadcrumb)) return breadcrumb;
+
+  return breadcrumb.map((ref) => {
+    const uid = (ref as { uid?: unknown } | null)?.uid;
+    if (typeof uid !== "string") return ref;
+    const marker = BREADCRUMB_UID_TO_MARKER[uid];
+    return marker ? { ...(ref as object), uid: `nav:${marker}` } : ref;
+  });
+}
+
+/** Breadcrumb uids this module has no cross-stack mapping for. */
+export function unmappedBreadcrumbUids(breadcrumb: unknown): string[] {
+  if (!Array.isArray(breadcrumb)) return [];
+  return breadcrumb
+    .map((ref) => (ref as { uid?: unknown } | null)?.uid)
+    .filter((uid): uid is string => typeof uid === "string" && !BREADCRUMB_UID_TO_MARKER[uid]);
+}
+
 /**
  * Resolves a docs_article's cs-docs folder slug from its `breadcrumb` field,
  * accepting either a Sandbox-stack or Prod-stack breadcrumb uid. Null when the

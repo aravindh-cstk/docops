@@ -14,6 +14,9 @@
  * both in one module is what stops that drifting apart.
  */
 
+import { createHash } from "node:crypto";
+import { canonicalizeBreadcrumbForDiff } from "./content-type-mappings/docs-article.js";
+
 export interface ContentstackEntry {
   uid: string;
   title?: string;
@@ -50,15 +53,17 @@ export const SANDBOX_METADATA_FIELDS = [
  *   every entry look changed on every run, which silently defeated the
  *   skip-unchanged check entirely.
  * - `_metadata` carries per-stack modular-block UIDs that are regenerated on
- *   clone.
+ *   clone. Note this entry only covers a *top-level* `_metadata`, which
+ *   docs_article does not have — the one that actually matters is nested
+ *   inside `article_content`, handled by NESTED_DIFF_IGNORE_KEYS below.
  * - The rest are workflow/ACL/publish bookkeeping that never represents
  *   authored content.
  *
  * `locale` and `tags` are deliberately NOT here — they are real authored data
- * and a change to either should promote. The one exception is the
- * `sandbox-uid-*` tag itself: it is promotion bookkeeping that only ever
- * exists on the Prod side, so contentsEqual strips it out of both sides
- * before comparing rather than adding it here (stripFields only drops whole
+ * and a change to either should promote. The exception is the promotion
+ * bookkeeping tags (`sandbox-uid-*`, `src-hash-*`), which only ever exist on
+ * the Prod side, so normalizeForDiff strips them out of both sides before
+ * comparing rather than adding `tags` here (stripFields only drops whole
  * top-level fields, it can't remove one element out of an array field).
  */
 export const DIFF_IGNORE_FIELDS = [
@@ -73,6 +78,20 @@ export const DIFF_IGNORE_FIELDS = [
   "_applied_variants",
   "ACL",
 ] as const;
+
+/**
+ * Keys ignored at *every* depth, not just the top level.
+ *
+ * `article_content[i].article_section._metadata.uid` is assigned by the CMA
+ * when a modular block is created, so a Sandbox entry and its Prod clone never
+ * agree on it. Because stripFields only deletes top-level keys, this nested
+ * uid used to survive into the comparison and made every promoted entry look
+ * changed on every run.
+ *
+ * Deliberately just `_metadata`. A nested `uid` is load-bearing (breadcrumb
+ * refs, file/reference fields) and stripping it would hide real changes.
+ */
+export const NESTED_DIFF_IGNORE_KEYS = ["_metadata"] as const;
 
 /**
  * Parses the docs_article CMS title format "[marker] - heading" back into its
@@ -123,6 +142,48 @@ export function withSandboxUidTag(tags: unknown, sandboxUid: string): string[] {
 }
 
 /**
+ * Prefix for the Prod-only tag recording a fingerprint of the content
+ * promotion last wrote to this entry.
+ *
+ * This is what lets promotion tell its own echo apart from a human's direct
+ * Prod edit. On the next run, re-fingerprinting the live Prod entry either
+ * reproduces this value (nobody touched it since we wrote it, safe to
+ * overwrite) or does not (a human edited Prod, stop and report). Timestamps
+ * can't answer that: promotion always writes Prod *after* the Sandbox
+ * publish, so Prod is always "newer".
+ *
+ * `src-hash-` + 12 hex = 21 chars, well inside the stack's 50-char-per-tag
+ * cap.
+ */
+export const SRC_HASH_TAG_PREFIX = "src-hash-";
+
+export function srcHashTag(hash: string): string {
+  return `${SRC_HASH_TAG_PREFIX}${hash}`;
+}
+
+/** Reads the src-hash-<hash> tag off an entry's tags array, or null if absent. */
+export function extractSrcHashFromTags(tags: unknown): string | null {
+  if (!Array.isArray(tags)) return null;
+  for (const tag of tags) {
+    if (typeof tag === "string" && tag.startsWith(SRC_HASH_TAG_PREFIX)) {
+      const hash = tag.slice(SRC_HASH_TAG_PREFIX.length);
+      return hash.length > 0 ? hash : null;
+    }
+  }
+  return null;
+}
+
+/**
+ * Returns a new tags array with this entry's src-hash tag set, replacing any
+ * stale one. Never mutates the input array.
+ */
+export function withSrcHashTag(tags: unknown, hash: string): string[] {
+  const existing = Array.isArray(tags) ? tags.filter((t): t is string => typeof t === "string") : [];
+  const withoutStale = existing.filter((t) => !t.startsWith(SRC_HASH_TAG_PREFIX));
+  return [...withoutStale, srcHashTag(hash)];
+}
+
+/**
  * Sorts object keys recursively so two entries with the same content but
  * different key order (or different-but-equivalent CMA field ordering)
  * compare equal. Array element order is preserved — it is semantically
@@ -155,19 +216,63 @@ export function stripMetadataFields(entry: ContentstackEntry): Record<string, un
   return stripFields(entry, SANDBOX_METADATA_FIELDS);
 }
 
-function withoutSandboxUidTag(entry: ContentstackEntry): ContentstackEntry {
+/** Recursively drops `keys` at every depth. Array order is preserved. */
+export function stripNestedKeys(value: unknown, keys: readonly string[]): unknown {
+  if (Array.isArray(value)) {
+    return value.map((item) => stripNestedKeys(item, keys));
+  }
+  if (value !== null && typeof value === "object") {
+    const result: Record<string, unknown> = {};
+    for (const [key, child] of Object.entries(value as Record<string, unknown>)) {
+      if (keys.includes(key)) continue;
+      result[key] = stripNestedKeys(child, keys);
+    }
+    return result;
+  }
+  return value;
+}
+
+const PROMOTION_TAG_PREFIXES = [SANDBOX_UID_TAG_PREFIX, SRC_HASH_TAG_PREFIX] as const;
+
+function withoutPromotionTags(entry: ContentstackEntry): ContentstackEntry {
   if (!Array.isArray(entry.tags)) return entry;
   const filtered = (entry.tags as unknown[]).filter(
-    (t) => !(typeof t === "string" && t.startsWith(SANDBOX_UID_TAG_PREFIX)),
+    (t) => !(typeof t === "string" && PROMOTION_TAG_PREFIXES.some((p) => t.startsWith(p))),
   );
   return { ...entry, tags: filtered };
 }
 
+/**
+ * Projects an entry down to just its authored content, in a stack-independent
+ * form, so two entries can be compared or fingerprinted.
+ *
+ * Kept separate from `canonicalize` on purpose: canonicalize is a pure
+ * key-sorting utility other callers rely on, while this carries diff policy
+ * and content-type knowledge.
+ */
+export function normalizeForDiff(entry: ContentstackEntry): unknown {
+  const stripped = stripFields(withoutPromotionTags(entry), DIFF_IGNORE_FIELDS);
+  if ("breadcrumb" in stripped) {
+    stripped.breadcrumb = canonicalizeBreadcrumbForDiff(stripped.breadcrumb);
+  }
+  return canonicalize(stripNestedKeys(stripped, NESTED_DIFF_IGNORE_KEYS));
+}
+
 /** Compare authored content only, ignoring cross-stack CMA bookkeeping. */
 export function contentsEqual(a: ContentstackEntry, b: ContentstackEntry): boolean {
-  const left = JSON.stringify(canonicalize(stripFields(withoutSandboxUidTag(a), DIFF_IGNORE_FIELDS)));
-  const right = JSON.stringify(canonicalize(stripFields(withoutSandboxUidTag(b), DIFF_IGNORE_FIELDS)));
-  return left === right;
+  return JSON.stringify(normalizeForDiff(a)) === JSON.stringify(normalizeForDiff(b));
+}
+
+/**
+ * A short, stable hash of an entry's authored content.
+ *
+ * Computed over the same projection `contentsEqual` uses, so two entries share
+ * a fingerprint exactly when they compare equal. Because promotion tags are
+ * stripped first, storing the fingerprint in a tag does not change it, which
+ * is what makes stamping it idempotent.
+ */
+export function diffFingerprint(entry: ContentstackEntry): string {
+  return createHash("sha256").update(JSON.stringify(normalizeForDiff(entry))).digest("hex").slice(0, 12);
 }
 
 interface PublishRecord {

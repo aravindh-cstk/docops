@@ -17,7 +17,26 @@
  */
 
 import https from "node:https";
-import { ContentstackEntry, SANDBOX_METADATA_FIELDS, stripMetadataFields } from "./entry-content.js";
+import {
+  ContentstackEntry,
+  SANDBOX_METADATA_FIELDS,
+  getPublishedVersion,
+  stripMetadataFields,
+} from "./entry-content.js";
+import { isPublishedTo, type ResolvedEnvironment } from "./environment-index.js";
+
+/**
+ * A Prod entry at its published version, plus the bookkeeping the caller needs.
+ * Same shape as SandboxClient's PublishedEntry so the pull scripts on both
+ * sides read alike.
+ */
+export interface PublishedProdEntry {
+  uid: string;
+  title: string;
+  publishedVersion: number | null;
+  entry: ContentstackEntry;
+  unresolved: boolean;
+}
 
 /**
  * Every environment promotion publishes to. Production is deliberately absent
@@ -48,8 +67,19 @@ export interface PromotionResult {
   title: string;
   written: boolean;
   published: boolean;
-  action?: "created" | "updated" | "skipped";
+  action?: "created" | "updated" | "skipped" | "conflict";
   error?: string;
+  /**
+   * Set when promotion refused to overwrite Prod because a human had edited it.
+   * Read by the run summary and the .sandbox-promote-summary.json the workflow
+   * renders, so a conflict is never only a log line.
+   */
+  conflict?: {
+    prodUid: string;
+    reason: string;
+    prodUpdatedAt?: string;
+    prodUpdatedBy?: string;
+  };
 }
 
 export class ProdPromoteClient {
@@ -109,8 +139,16 @@ export class ProdPromoteClient {
   }
 
   /** Get a Prod entry by uid, regardless of which content type this client is scoped to. */
-  async getEntry(uid: string): Promise<ContentstackEntry | null> {
-    const path = `${this.entriesPath()}/${uid}?locale=${this.config.locale}`;
+  /**
+   * Get an entry by uid.
+   *
+   * Pass `version` to read a specific historical version. Without it the CMA
+   * returns the latest version, which is the unpublished draft whenever a
+   * writer has saved without publishing.
+   */
+  async getEntry(uid: string, version?: number): Promise<ContentstackEntry | null> {
+    const versionParam = version === undefined ? "" : `&version=${version}`;
+    const path = `${this.entriesPath()}/${uid}?locale=${this.config.locale}${versionParam}`;
     const response = await this.request("GET", path);
     if (!response) return null;
     const data = JSON.parse(response) as { entry?: ContentstackEntry };
@@ -176,12 +214,31 @@ export class ProdPromoteClient {
   }
 
   /**
-   * List all Prod entries published to the given environment.
+   * Every Prod entry published to the given environment, resolved to the
+   * content of its *published* version.
    *
-   * Used by the Prod → GitHub pull script to detect direct CMS edits.
+   * Used by the Prod → GitHub pull to detect direct CMS edits. Two things here
+   * were previously wrong and are worth spelling out, because both failed
+   * silently:
+   *
+   *   1. The environment filter compared publish_details[].environment against
+   *      a literal name. That field is a UID, so the comparison was never true
+   *      and this method returned an empty array on every run for as long as it
+   *      existed. isPublishedTo() now matches the UID or the name, and handles
+   *      the non-array publish_details shapes that toPublishRecords already
+   *      knew about.
+   *   2. It returned each entry's *latest* version, which is an unpublished
+   *      draft whenever a writer saved without publishing. A PR built from that
+   *      would expose half-finished edits. The published version is resolved
+   *      here the same way SandboxClient.getPublishedEntries does it, so the
+   *      two sides of the comparison mean the same thing.
+   *
+   * Entries whose published version cannot be read come back with
+   * `unresolved: true` rather than falling back to the draft. Callers surface
+   * them as errors.
    */
-  async getPublishedEntries(environment: string): Promise<ContentstackEntry[]> {
-    const entries: ContentstackEntry[] = [];
+  async getPublishedEntries(env: Pick<ResolvedEnvironment, "uid" | "name">): Promise<PublishedProdEntry[]> {
+    const results: PublishedProdEntry[] = [];
     let skip = 0;
     const limit = 100;
     let hasMore = true;
@@ -196,17 +253,46 @@ export class ProdPromoteClient {
       const page = data.entries ?? [];
 
       for (const entry of page) {
-        const publishDetails = entry.publish_details as any;
-        if (Array.isArray(publishDetails) && publishDetails.some((pd: any) => pd.environment === environment)) {
-          entries.push(entry);
-        }
+        if (!isPublishedTo(entry, env)) continue;
+        results.push(await this.resolvePublishedVersion(entry));
       }
 
       hasMore = page.length === limit;
       skip += limit;
     }
 
-    return entries;
+    return results;
+  }
+
+  /**
+   * Swap an entry's latest-version content for its published-version content,
+   * skipping the extra call when the entry has no unpublished draft.
+   *
+   * Mirrors SandboxClient.resolvePublishedVersion. Kept as its own copy rather
+   * than shared because the two clients are deliberately separate (no Prod
+   * credentials in the Sandbox client, and vice versa); the shared part, which
+   * is the definition of "published version", lives in entry-content.ts.
+   */
+  private async resolvePublishedVersion(entry: ContentstackEntry): Promise<PublishedProdEntry> {
+    const uid = entry.uid;
+    const title = (entry.title as string) || "Untitled";
+    const publishedVersion = getPublishedVersion(entry);
+
+    if (publishedVersion === null) {
+      return { uid, title, publishedVersion: null, entry, unresolved: true };
+    }
+
+    const latestVersion = typeof entry._version === "number" ? entry._version : null;
+    if (latestVersion === publishedVersion) {
+      return { uid, title, publishedVersion, entry, unresolved: false };
+    }
+
+    const published = await this.getEntry(uid, publishedVersion);
+    if (!published) {
+      return { uid, title, publishedVersion, entry, unresolved: true };
+    }
+
+    return { uid, title, publishedVersion, entry: published, unresolved: false };
   }
 
   /**

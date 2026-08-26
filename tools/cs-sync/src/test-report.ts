@@ -4,8 +4,10 @@
  * Runs all automatable High-priority test scenarios inline and writes the
  * result table to ../../temp/test-results.md (relative to this file).
  *
- * Scenarios requiring real CS credentials (s22, s36, s37, s61) are marked
- * PENDING — run `npm run test:cms-pull` separately and fill them in manually.
+ * Scenarios requiring real CS credentials (s61) are marked PENDING. The
+ * Prod → GitHub cases (s22, s36, s37) are covered offline by
+ * `npm run test:prod-sync`, which replaced the credential-gated cms-pull
+ * integration test when the legacy cms-pull.ts pipeline was removed.
  *
  * Scenarios requiring GitHub Actions (s20, s41–s43) are marked MANUAL REQUIRED
  * with step-by-step instructions embedded in the report.
@@ -50,7 +52,7 @@ function confirmedGap(id: string, expected: string, gapNote: string, how: string
 }
 
 function pending(id: string, expected: string, how: string): void {
-  rows.push({ id, expected, actual: "🔲 PENDING — run `npm run test:cms-pull`", how });
+  rows.push({ id, expected, actual: "🔲 PENDING — run the command in the How column", how });
 }
 
 function manual(id: string, expected: string, steps: string): void {
@@ -94,40 +96,27 @@ manual(
   "5. Record: both runs complete without data loss.",
 );
 
-// ── s22, s36, s37, s61: cms-pull integration — requires .env ──────────────────
+// ── s22, s36, s37: Prod → GitHub sync — covered offline ──────────────────────
+//
+// These were credential-gated against the legacy cms-pull.ts. That script is
+// gone, and cms-pull-prod.ts's behaviour is asserted without credentials by
+// npm run test:prod-sync (p1-p5 conversion, p10 field diffing, p11-p14 bundling).
 
-pending("s22", "CMS entry edited → detected on next cron run (file created/updated in repo)",
-  "npm run test:cms-pull → see s22 result");
-pending("s36", "cms-pull creates brand-new .md file not yet tracked in git",
-  "npm run test:cms-pull → see s36 result");
-pending("s37", "cms-pull updates content of an existing tracked file",
-  "npm run test:cms-pull → see s37 result");
+covered("s22", "CMS entry edited → detected on next cron run (file created/updated in repo)");
+covered("s36", "A page created directly in Prod becomes a new .md at its nav-derived path");
+covered("s37", "An edited entry updates the content of its existing tracked file");
 
 // ── s23, s24, s25, s27: confirmed gaps (code analysis) ───────────────────────
 
-confirmedGap(
-  "s23",
-  "Published without content edit → NOT detected by cms-pull",
-  "cms-pull queries updated_at only. Publishing an entry does not change updated_at.",
-  "Code analysis — contentstack.ts:listRecentEntries uses {updated_at: {$gt: sinceIso}}. " +
-  "Fix sketch: track published_at separately or use a CS webhook on publish events.",
-);
+covered("s23", "Published without a content edit → correctly produces no PR. cms-pull-prod.ts " +
+  "compares rendered markdown against the file on disk rather than querying updated_at, so a " +
+  "publish with no content change yields no diff and no PR.");
 
-confirmedGap(
-  "s24",
-  "Unpublished in CS → file stays in repo",
-  "cms-pull has no query for recently unpublished entries and no file-removal logic.",
-  "Code analysis — cms-pull.ts:130-163: loop only creates/updates files, never removes. " +
-  "Fix sketch: after each pull, compare local docs/ files against CS entry list and remove orphans.",
-);
+covered("s24", "Unpublished in CS → file removed in the same PR (cms-pull-prod.ts delete pass, " +
+  "guarded by PROD_SYNC_MAX_DELETIONS; only touches files carrying the uid frontmatter marker)");
 
-confirmedGap(
-  "s25",
-  "Deleted from CS → file stays in repo indefinitely",
-  "Deleted entries do not appear in listRecentEntries. No reconciliation sweep exists.",
-  "Code analysis — cms-pull.ts:119: listRecentEntries returns only recently-modified entries. " +
-  "Fix sketch: periodic full-sweep comparing local .md file URLs against all CS entry UIDs.",
-);
+covered("s25", "Deleted from CS → file removed. cms-pull-prod.ts lists every published entry " +
+  "each run rather than a lookback window, so a deleted entry simply stops appearing.");
 
 confirmedGap(
   "s27",
@@ -228,7 +217,8 @@ runHtmlToMdTest(
 pending(
   "s41",
   "Stale PR: cms-sync PR left open, same entry re-edited in CS → second PR opened",
-  "npm run test:cms-pull (file-change part) + manual PR observation",
+  "npm run test:prod-sync (bundling part, p11-p14) + manual PR observation. Note the Prod path " +
+  "opens a fresh timestamped branch per editor per run, so a second edit opens a second PR.",
 );
 
 manual(
@@ -236,22 +226,23 @@ manual(
   "Bidirectional conflict: GitHub edit + CMS edit simultaneously → last write wins",
   "1. Edit docs/path/file.md locally and push to main. " +
   "2. Edit the same CS entry before the sync completes. " +
-  "3. Observe: cms-pull PR may overwrite the GitHub edit if merged. " +
+  "3. Observe: the Prod sync PR may overwrite the GitHub edit if merged. " +
   "4. Record: which write wins and whether any conflict is surfaced.",
 );
 
 manual(
   "s43",
   "cms-sync PR merged → contentstack-sync echoes content back to CS (potential loop)",
-  "1. Trigger cms-to-github workflow (dispatch). 2. Observe the PR it creates. " +
+  "1. Trigger sandbox-auto-promote-csdocs (dispatch). 2. Observe the PR it creates. " +
   "3. Merge the PR. 4. Watch 'Sync docs to Contentstack' workflow fire. " +
   "5. Check if updated_at changes in CS after write-back. " +
-  "6. Watch for a second cms-pull PR — if one appears, loop is confirmed.",
+  "6. Watch for a second Prod sync PR — if one appears, loop is confirmed. The Sandbox " +
+  "comparison in cms-pull-prod.ts is what should suppress it.",
 );
 
-pending("s61",
-  "CS entry with data-src lazy-loaded image → image URL captured from data-src",
-  "npm run test:cms-pull → see s61 result");
+covered("s61",
+  "CS entry with data-src lazy-loaded image → image URL captured from data-src " +
+  "(npm run test:content, cases s61/s61b/s61c)");
 
 // ── s45, s46: error handling — inline mock fetch ──────────────────────────────
 

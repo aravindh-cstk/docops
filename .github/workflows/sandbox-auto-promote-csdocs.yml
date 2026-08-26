@@ -1,20 +1,21 @@
-name: CS Docs CMS Sync (Sandbox→Prod promote, then Prod→GitHub)
+name: CS Docs CMS Sync (Prod→GitHub)
 
-# Two steps that MUST run in this order, which is why they share one job
-# rather than sitting on two independent crons:
+# Pulls anything edited directly in the Prod CMS back into the repo as a PR.
 #
-#   1. sandbox-promote  — copy published Sandbox entries into Prod
-#   2. cms-pull-prod    — open a PR for anything edited directly in Prod
+# This used to run Sandbox→Prod promotion first, in the same job, so that a
+# Prod entry promotion had not caught up to yet would not look like a direct
+# edit and produce a revert PR. Promotion has since moved to a manual-only
+# workflow (sandbox-to-prod-promote-csdocs.yml), because in practice content is
+# edited in Prod and a job that re-pushes Sandbox over Prod every five minutes
+# can overwrite those edits before anyone sees them.
 #
-# Step 2 decides "did a human edit Prod?" by comparing Prod against Sandbox.
-# If it runs before step 1, a Prod entry that promotion has not caught up to
-# yet looks like a direct edit, and the PR it opens contains the *older*
-# content — i.e. a revert of whatever was most recently merged. GitHub Actions
-# gives no ordering guarantee between separate workflows on the same cron, so
-# the ordering has to be expressed here.
+# What makes the pull safe to run on its own is the src-hash-<hash> tag that
+# promotion stamps on every entry it writes. An entry whose content still
+# matches that fingerprint is a promotion echo and is skipped, so a Prod stack
+# that has not been promoted to yet cannot produce a revert PR here.
 #
-# Running promotion first also means a failed promotion self-heals on the next
-# tick instead of turning into a bad PR.
+# The concurrency group is shared with the manual promote workflow so this
+# never reads Prod while promotion is mid-write.
 
 on:
   schedule:
@@ -38,7 +39,7 @@ permissions:
   checks: write
 
 jobs:
-  promote-and-pull:
+  pull-prod-edits:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -53,175 +54,72 @@ jobs:
         working-directory: tools/cs-sync
         run: npm ci
 
-      # ---------------------------------------------------------------
-      # Step 1 — Sandbox → Prod
-      # ---------------------------------------------------------------
-
-      - name: Promote published Sandbox entries to Prod
-        id: promote
-        working-directory: tools/cs-sync
-        env:
-          STACK_TYPE: csdocs
-          CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
-          CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
-          PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
-          PROD_CSDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN }}
-        run: npm run sandbox-promote
-
-      # ---------------------------------------------------------------
-      # Step 2 — Prod → GitHub
-      #
-      # Runs even if promotion failed. A direct Prod edit still deserves a PR,
-      # and the Sandbox comparison inside the script keeps a stale Prod from
-      # producing a revert PR: if promotion did not run, Prod still matches
-      # what is already in main, so no file changes and no PR opens.
-      # ---------------------------------------------------------------
-
-      - name: Pull direct Prod edits into the repo
-        if: always()
+      # Stages qualifying changes under tools/cs-sync/.prod-sync-staging/ and
+      # writes .cms-pull-prod-summary.json grouping them by editor. Deliberately
+      # does not write into cs-docs/: the next step applies one editor's bundle at
+      # a time onto a clean branch, which is what makes one PR per editor
+      # possible instead of one PR per run.
+      - name: Detect direct Prod edits
+        id: pull
         working-directory: tools/cs-sync
         env:
           STACK_TYPE: csdocs
           PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
           PROD_CSDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN }}
-          # Read-only, used to tell a direct Prod edit apart from content
-          # promotion just wrote in step 1.
+          # A name, not a UID. The script resolves it against GET /v3/environments.
+          # publish_details records carry the environment UID, so comparing them
+          # against the literal name matched nothing, and this step reported "0
+          # published entries" on every run for as long as it existed.
+          PROD_ENVIRONMENT: production
+          # Optional. Echo detection is primarily the src-hash tag on the Prod
+          # entry itself; Sandbox read access only sharpens the answer for
+          # entries promoted before that tag existed.
           CSDOCS_SANDBOX_STACK_API_KEY: ${{ secrets.CSDOCS_SANDBOX_STACK_API_KEY }}
           CSDOCS_SANDBOX_MANAGEMENT_TOKEN: ${{ secrets.CSDOCS_SANDBOX_MANAGEMENT_TOKEN }}
         run: npm run cms-pull-prod
 
-      - name: Check for changes
-        id: changes
-        if: always()
-        run: |
-          if git status --porcelain cs-docs/ | grep -q .; then
-            echo "has_changes=true" >> "$GITHUB_OUTPUT"
-            echo "Changed files:"
-            git status --porcelain cs-docs/
-          else
-            echo "has_changes=false" >> "$GITHUB_OUTPUT"
-            echo "No CS doc files changed — nothing to PR."
-          fi
-
-      - name: Create branch, commit, and push
-        id: commit
-        if: steps.changes.outputs.has_changes == 'true'
-        run: |
-          BRANCH="cms-sync/prod-csdocs/$(date -u +%Y%m%d-%H%M%S)"
-
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git checkout -b "$BRANCH"
-          git add cs-docs/
-          git commit -m "chore: sync CS doc changes from Contentstack CMS (Prod)"
-          # Push before reporting a check run — the Checks API requires the SHA
-          # to already exist on GitHub's servers, not just locally on the runner.
-          git push origin "$BRANCH"
-
-          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
-          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-      # Run lint checks before creating PR
-      - name: Lint changed docs
-        id: lint
-        if: steps.changes.outputs.has_changes == 'true'
+      # One branch and one PR per editor, each linted with its result posted as a
+      # check run. A PR authored with GITHUB_TOKEN does not trigger
+      # `pull_request` workflows, so the repo's normal docs-lint job never fires
+      # on these branches and the check has to be reported explicitly.
+      - name: Open one PR per editor
+        if: steps.pull.outcome == 'success'
         working-directory: tools/cs-sync
-        run: |
-          if npm run lint -- --base origin/main > /tmp/lint-output.txt 2>&1; then
-            echo "passed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "passed=false" >> "$GITHUB_OUTPUT"
-          fi
-          cat /tmp/lint-output.txt
-
-      - name: Report lint check
-        if: steps.changes.outputs.has_changes == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          CONCLUSION="success"
-          if [ "${{ steps.lint.outputs.passed }}" != "true" ]; then
-            CONCLUSION="failure"
-          fi
-
-          jq -n \
-            --arg sha "${{ steps.commit.outputs.sha }}" \
-            --arg conclusion "$CONCLUSION" \
-            --arg summary "$(head -c 60000 /tmp/lint-output.txt)" \
-            '{name: "lint", head_sha: $sha, status: "completed", conclusion: $conclusion,
-              output: {title: "CS Docs lint", summary: $summary}}' \
-            > /tmp/check-run.json
-
-          gh api "repos/${{ github.repository }}/check-runs" --input /tmp/check-run.json > /dev/null
-
-      - name: Ensure origin:prod-sync label exists
-        if: steps.changes.outputs.has_changes == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh label create "origin:prod-sync" \
-            --color "B60205" \
-            --description "PR originated from a direct edit in the Prod CMS" \
-            || true
-
-      - name: Open PR with CMS changes
-        if: steps.changes.outputs.has_changes == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          BRANCH="${{ steps.commit.outputs.branch }}"
-
-          # Build the PR body with per-file editor info from the summary JSON
-          SUMMARY_FILE="tools/cs-sync/.cms-pull-prod-summary.json"
-
-          if [ -f "$SUMMARY_FILE" ]; then
-            CHANGES_TABLE=$(node -e "
-              const changes = require('./$SUMMARY_FILE');
-              const rows = changes.map(c =>
-                '| \`' + c.filePath + '\` | ' + c.url + ' | **' + c.updatedByName + '** | ' + new Date(c.updatedAt).toUTCString() + ' |'
-              );
-              console.log('| File | CMS Entry | Modified By | Modified At |');
-              console.log('|------|-----------|-------------|-------------|');
-              rows.forEach(r => console.log(r));
-            ")
-          else
-            CHANGED_FILES=$(git diff origin/main..."$BRANCH" --name-only | grep '^cs-docs/' | head -20)
-            CHANGES_TABLE="| File | CMS Entry | Modified By | Modified At |
-          |------|-----------|-------------|-------------|
-          $(echo "$CHANGED_FILES" | sed 's/^/| \`/' | sed 's/$/ \` | — | — | — |/')"
-          fi
-
-          gh pr create \
-            --title "CMS → GitHub: CS doc changes detected (Prod)" \
-            --body "## CMS → GitHub sync (Prod → Git)
-
-          This PR was automatically created because one or more CS documentation entries were edited **directly in the Prod CMS** and differ from both the published Sandbox entry and the current files in \`cs-docs/\`.
-
-          Content that merely arrived in Prod via Sandbox promotion does *not* appear here — it already has its own PR from the Sandbox→GitHub sync.
-
-          **Review the diff carefully before merging** — in particular check that no content was unintentionally overwritten.
-
-          ### Changes detected
-          ${CHANGES_TABLE}
-
-          ### Workflow
-          - These changes originated from a direct edit in the **Prod stack**
-          - Merging to main will trigger sync to Sandbox, creating a draft there
-          - Publish that draft in Sandbox to have this change flow through the normal promotion path
-
-          ---
-          _Triggered by the \`sandbox-auto-promote-csdocs\` workflow · $(date -u '+%Y-%m-%d %H:%M UTC')_" \
-            --label "origin:prod-sync" \
-            --base main \
-            --head "$BRANCH"
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: npm run prod-sync-open-prs
 
       - name: Run summary
         if: always()
         run: |
-          echo "### CS Docs CMS sync" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "1. Sandbox → Prod promotion: \`${{ steps.promote.outcome }}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "2. Prod → GitHub PR opened: \`${{ steps.changes.outputs.has_changes }}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "Only entries published in Sandbox are promoted; unpublished drafts are never copied to Prod." >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo "### CS Docs Prod to GitHub sync"
+            echo ""
+            echo "Detection: \`${{ steps.pull.outcome }}\`"
+            echo ""
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          SUMMARY_FILE="tools/cs-sync/.cms-pull-prod-summary.json"
+          if [ -f "$SUMMARY_FILE" ]; then
+            node -e '
+              const s = require("./tools/cs-sync/.cms-pull-prod-summary.json");
+              const out = [];
+              if (!s.bundles.length) out.push("No direct Prod edits found.");
+              for (const b of s.bundles) {
+                out.push("- **" + b.editorName + "** \u2014 " + b.files.length + " file(s)");
+                for (const f of b.files) {
+                  const fields = f.fieldsModified.length ? ": " + f.fieldsModified.join(", ") : "";
+                  out.push("  - `" + f.filePath + "` (" + f.changeKind + fields + ")");
+                }
+              }
+              out.push("", "Counters: `" + JSON.stringify(s.stats) + "`");
+              console.log(out.join("\n"));
+            ' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          {
+            echo ""
+            echo "Only entries published to Production **and** present in the left navigation are pulled back."
+            echo "Content that promotion wrote is skipped via its \`src-hash\` fingerprint."
+          } >> "$GITHUB_STEP_SUMMARY"
