@@ -2,6 +2,7 @@
 title: "Contentstack MCP Server"
 description: "Leverage the Contentstack MCP Server for smarter workflows using natural language commands across APIs and tools like Lytics and Claude."
 url: /developers/contentstack-mcp-server
+uid: bltc2205acbb762b7a2
 ---
 
 # Contentstack MCP Server
@@ -45,8 +46,8 @@ Before you start, make sure you have:
 -   An active [Contentstack account](https://www.contentstack.com/login/)
 -   Node.js 18 or later installed locally (required to run npx)
 -   A supported MCP client:
-    -   [Claude Desktop](https://claude.ai/download) (macOS / Windows)
-    -   [Cursor](https://cursor.sh/)
+    -   [Claude Desktop](https://claude.com/download) (macOS / Windows)
+    -   [Cursor](https://cursor.com/)
     -   [Claude Code](https://claude.ai/code) (CLI)
     -   Any other MCP client that supports stdio transport
 
