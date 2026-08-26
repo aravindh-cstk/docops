@@ -2,6 +2,7 @@
 title: "Managing Multiple Locales at Scale"
 description: "Learn how to resolve, configure, and scale locale handling in Contentstack Studio, including fallback chains, region-specific compositions, and patterns to avoid."
 url: /studio/managing-multiple-locales-at-scale
+uid: bltb61ac29b5a9aacb7
 ---
 
 # Managing Multiple Locales at Scale

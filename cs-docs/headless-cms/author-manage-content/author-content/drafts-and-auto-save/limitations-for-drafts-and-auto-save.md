@@ -2,6 +2,7 @@
 title: "Limitations for Drafts and Auto Save"
 description: "Explore Contentstack's Drafts & Auto Save features: connectivity, collaboration, and versioning limits for seamless content management."
 url: /headless-cms/limitations-for-drafts-and-auto-save
+uid: blt67210ac0c43249c5
 ---
 
 # Limitations for Drafts and Auto Save
@@ -49,12 +50,12 @@ Because Auto Save processes edits at short intervals, changes made within the **
 
 -   Marketplace apps that update field values using the App SDK setData method can bypass standard field locking. When this occurs, updates made by the app may override a locked field. Users who currently hold the lock are notified when the field data changes.
 -   Draft data created through Drafts and Auto Save is not currently supported in Visual Editor.
-    
+
 
 ### Live Preview Limitations
 
 -   With Drafts and Auto Save enabled, Live Preview is not available for unlocalized entries or variant drafts. The Live Preview tab is hidden in these states.
-    
+
 
 ### Visual Editor Limitations
 

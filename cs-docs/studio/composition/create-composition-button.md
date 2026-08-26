@@ -2,6 +2,7 @@
 title: "Create Composition Button"
 description: "API reference for the VisualEditorCreateCompositionButton React component, including props, render-prop pattern, and Visual Builder integration."
 url: /studio/create-composition-button
+uid: bltda72fa4160f7f12e
 ---
 
 # Create Composition Button
