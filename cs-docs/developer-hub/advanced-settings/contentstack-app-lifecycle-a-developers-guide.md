@@ -2,6 +2,7 @@
 title: "Contentstack App Lifecycle: A Developer's Guide"
 description: "This guide walks you through the complete app lifecycle for Standard and Machine-to-Machine apps, from setup to deployment."
 url: /developer-hub/contentstack-app-lifecycle-a-developers-guide
+uid: bltcc2c328bf0e4d4e8
 ---
 
 # Contentstack App Lifecycle: A Developer's Guide
@@ -22,9 +23,9 @@ Contentstack applications offer powerful ways to extend the platform's functiona
     1.  **Installation:** Install your app within your organization from Developer Hub.
         1.  This requires Admin access to the Organization or Stack, depending on the app type.
     2.  **Testing:** Thoroughly test your app in a test stack to ensure it works as intended.
-        
+
         **Note:** If you don’t plan to list your application publicly, then you can ignore the next step and use your app privately in your organization.
-        
+
 4.  **Public Listing and Release (Optional):**
     1.  **Public Listing Submission:** If you want to release your app publicly, you will need to submit it to Contentstack for review and approval. Contentstack's team will assess your app to ensure it meets their quality and functionality standards.
         1.  You can find details on the submission process here: [Submit your app for review](/docs/marketplace/app-submission-and-approval-guide/)

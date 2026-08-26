@@ -2,6 +2,7 @@
 title: "Revalidate CDN Cache"
 description: "Learn how to revalidate the cache for the changes made to your content/configuration in an environment in Contentstack Launch."
 url: /launch/revalidate-cdn-cache
+uid: blt4af402931f6f3255
 ---
 
 # Revalidate CDN Cache
@@ -24,13 +25,13 @@ CDN cache revalidation allows you to refresh cached content in your environment 
 To revalidate the CDN cache for a website using URL path, you must provide the following:
 
 1.  **Revalidation path**
-    
+
     The revalidation path is the URL path that you can revalidate across all the domains in your environment. For example, if you have an environment that consists of https://example.com, https://example.net, and https://example.org, and your revalidation path is /blog, then the CDN revalidates https://example.com/blog, https://example.net/blog, and https://example.org/blog.  
-    
+
 2.  **Is Prefix**
-    
+
     The boolean value Is Prefix indicates whether you can revalidate only the exact path or also all the nested paths under it. For example, if your revalidation path is /blog and you set Is Prefix to true, then the CDN revalidates https://example.com/blog, and also all the pages under it, such as https://example.com/blog/post1, https://example.com/blog/post2, etc. If you set Is Prefix to false, then the CDN revalidates only https://example.com/blog. Similarly, CDN cache will also be revalidated for all other domains that are a part of the same environment.
-    
+
 
 ### Cache Purging Using Cache-Tags
 
@@ -80,7 +81,7 @@ To revalidate the CDN cache for an environment, you can use the Revalidate CDN C
 ### Using Cache-Tags
 
 1.  Set Cache-Tag header in your app (for example, Next.js):
-    
+
     ```
     import { NextResponse } from 'next/server';
     export async function GET() {
@@ -91,20 +92,20 @@ To revalidate the CDN cache for an environment, you can use the Revalidate CDN C
       return response;
     }
     ```
-    
+
 2.  Trigger purge by Cache-Tags using the revalidateCDNCache API via Automate:
-    
+
     ```
     {
       "cacheTags": ["blog-post-123"]
     }
     ```
-    
+
 
 ### Using Hostnames (Domains)
 
 1.  Trigger purge by hostnames using the revalidateCDNCache API via Automate:
-    
+
     ```
     {
       "hostnames": ["domain1.com", "domain2.com"]

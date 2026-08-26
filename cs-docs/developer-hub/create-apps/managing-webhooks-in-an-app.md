@@ -2,6 +2,7 @@
 title: "Managing Webhooks in an App"
 description: "Managing Webhooks in an App"
 url: /developer-hub/managing-webhooks-in-an-app
+uid: blt20b8c19eddf1aded
 ---
 
 # Managing Webhooks in an App
@@ -20,11 +21,11 @@ A webhook provides a mechanism or a method for enabling real-time communication 
 ## What You Will Learn
 
 -   How to enable a webhook for an app.
-    
+
 -   How to configure the webhook URL, authentication, events, branch scope, and notification recipients.
-    
+
 -   How to disable a webhook.
-    
+
 
 ## Steps to Enable Webhook
 
@@ -32,9 +33,9 @@ A webhook provides a mechanism or a method for enabling real-time communication 
 2.  From the left navigation menu, click the **Webhooks** option.  
     ![Enable_Webhooks_.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd3b767fa98f5a155/65b7adf5e5c1f3d765d956cc/Enable_Webhooks_.png)
 3.  To enable the webhook, use the **Enable Webhook** toggle button.
-    
+
     Once the webhook is enabled, you can configure it for your app by entering the following details:
-    
+
     -   Enter a valid **URL to Notify** (mandatory fields).
     -   To secure the **URL to Notify**, provide necessary details in the **HTTP Basic Auth Username** and **HTTP Basic Auth Password** fields. You can also provide unique **Custom Headers** for securing the URL further.  
         ![Enabled_Webhook_Options.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd89fea87e30c9470/65b7adf45f12ed2b4be21a9e/Enabled_Webhook_Options.png)
@@ -51,17 +52,17 @@ A webhook provides a mechanism or a method for enabling real-time communication 
     ![users_to_notify](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbf4b06c31f260883/653b96ce56bf7b0407d2c7f4/Users_to_notify.png)
 6.  Configure the webhook information.
 7.  Click **Save** to save your webhook details in the manifest.
-    
+
     You will see the details of the webhook logs on the **Webhooks** tab in the **App Configuration** screen after installing the app.
-    
+
     You can update the branch for which you want to trigger the webhooks from the **Branch** dropdown.
-    
+
 
 ## Steps to Disable Webhook
 
 1.  In the left navigation panel, click the **Webhooks** tab.  
     ![Disable_Webhook_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1743b061022abf90/65b7adf48fc5c0e7d50bc573/Disable_Webhook_Button.png)  
-    
+
 2.  Click the **Enable Webhook** toggle button to disable the webhook, and then click the **Disable webhook** button in the modal.
 
 Once the webhook is disabled, the **Configure Webhook** section will disappear, but the details added previously will remain saved. And, no notifications will be sent to the target URL any more.

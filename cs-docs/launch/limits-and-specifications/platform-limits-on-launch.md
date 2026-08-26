@@ -2,6 +2,7 @@
 title: "Platform Limits on Launch"
 description: "Understand Contentstack Launch platform limits to build scalable digital experiences and ensure optimal performance during deployment and delivery."
 url: /launch/platform-limits-on-launch
+uid: blte9f262405f89e828
 ---
 
 # Platform Limits on Launch

@@ -2,6 +2,7 @@
 title: "Location-based Personalization Use Cases"
 description: "Learn how to deliver personalized experiences to users based on their location with Contentstack Personalize."
 url: /personalize/location-based-personalization-use-case
+uid: blt684bc8b22a140e51
 ---
 
 # Location-based Personalization Use Cases
@@ -19,13 +20,13 @@ With **Contentstack Personalize**, you can dynamically serve targeted banners, p
 ## What You Will Learn
 
 -   How to define location-based audiences by country, region, or city.
-    
+
 -   How to create a segmented experience with location-specific variants.
-    
+
 -   How to create location-specific personalized content as entry variants.
-    
+
 -   How to set up the Personalize Edge SDK to retrieve active variants and track impressions.
-    
+
 
 ## The Challenge - Why Location Matters?
 
@@ -115,11 +116,11 @@ Contentstack Personalize makes location-based personalization straightforward, e
 ### CMS - Link Content Types
 
 1.  Navigate to the desired Stack → Settings → Variants → select the associated Variant Group → Linked Content Types.  
-    
+
     **Note:** Variant Groups and Variants are automatically created for you based on the Experiences and Variants you define in Personalize.
-    
+
     **Additional Resource:** For more information, refer to [Manage Variant Groups](/docs/headless-cms/manage-variant-groups).
-    
+
 2.  In the **Linked Content Types** field, select the content types whose entries you wish to personalize.
 3.  Click **Apply → Save.**
 
@@ -141,17 +142,17 @@ Once published, the mapping between Personalize Experiences and Entry Variants d
 1.  **Install SDK**
     -   Add the Personalize SDK via npm/yarn/pnpm to your site’s codebase. For frontend code, you can also use [Google Tag Manager](/docs/personalize/google-tag-manager-integration-with-personalize) or a preferred tag manager for easier impression and event tracking.
 2.  **Retrieve active variants**
-    
+
     -   Initialize the SDK on every new page load and get the active variants aliases for the current visitor. We recommend server-side rendered (SSR) sites place this logic at the edge using middleware.
     -   Pass the active variant aliases to the Contentstack Delivery SDK to fetch corresponding entry variants.
-    
+
     **Additional Resource:** For more information, refer to S[erver Side Rendering (SSR) with Edge Routing Technical Implementation Architecture](/docs/personalize/ssr-edge-routing-technical-implementation-architecture), [Setup Next.js Website with Personalize - Launch](/docs/personalize/setup-nextjs-website-with-personalize-launch).
-    
+
 3.  **Track Impressions**
     -   When displaying a banner, track an impression using [triggerImpressions()](/docs/developers/sdks/personalize-edge-sdk/javascript/reference#triggerimpressions).
-        
+
         **Note:** Tracking impressions is optional but recommended to measure which variants are viewed most frequently.
-        
+
 4.  **Track Events (for A/B Test)**
     -   On click, call triggerEvent('event\_name', { experienceId, variantAlias }).
 
