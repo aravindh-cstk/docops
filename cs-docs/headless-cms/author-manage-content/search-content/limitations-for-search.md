@@ -2,6 +2,7 @@
 title: "Limitations for Search"
 description: "Learn more about the limitations for the search feature."
 url: /headless-cms/limitations-for-search
+uid: blt517d70e7ddcb32e9
 ---
 
 # Limitations for Search

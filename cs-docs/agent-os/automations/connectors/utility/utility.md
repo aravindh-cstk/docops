@@ -2,6 +2,7 @@
 title: "Utility"
 description: "Use this connector to manage your automation workflow."
 url: /agent-os/utility
+uid: bltf0b78391b6c60f24
 ---
 
 # Utility
@@ -64,9 +65,9 @@ Sample data:
 \- In the Conditional Path, conditions are checked, and if the condition matches, the IF block is executed; if not, the flow moves to the ELSE block. Whereas in Continue Automation If, if the condition is true, it executes the succeeding step, and if it is false, the automation exits completely.
 
 1.  Configure the **HTTP Trigger** connector.  
-    
+
     **Additional Resource:** Refer to the [HTTP Trigger connector](https://www.contentstack.com/docs/agent-os/http-trigger/) documentation for more details.
-    
+
 2.  Under the **Choose Trigger** tab, select the **HTTP Request Trigger** action. Select **HTTP Request Trigger**. This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.
 3.  Select a **Method**, i.e., GET/POST.
 4.  You will find the applicable input “URL.” This URL will be the webhook URL to trigger the automation. You can send your Postman data via this trigger URL.  
@@ -81,17 +82,17 @@ Once the data is fetched, configure the **Create an Entry** action to create an 
 3.  Within the **Configure Action Step**, click the **Contentstack** connector.
 4.  Under **Choose an Action** tab, select the **Create an Entry** action.
 5.  In the **Configure Action** tab, click **\+ Add New Account** to add your Contentstack account.  
-    
+
     **Additional Resource:** For more details on how to add an account, refer to the [Contentstack Action](https://www.contentstack.com/docs/agent-os/about-contentstack-management-actions/) documentation.
-    
+
 6.  Select a **Stack**, **Branch**, and **Content Type** from the **Lookup** list.  
     In the **Entry Data** field, fetch the data output from the HTTP trigger.  
     ![Select_Fields_Create_Entry.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbcb9b38afa32f7eb/66c4b318ab1b6909043ca75b/Select_Fields_Create_Entry.png)
-    
+
     **Note:** In the **Entry Data** field, you can add a predefined schema template for your entry data. You must manually configure the entry data for **JSON Rich Text Editor**, **Custom**, and **Experience Container** fields.
-    
+
 7.  Click the **Proceed** button.
-    
+
 8.  Click the **Test Action** button.  
     ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt800a019105f2d22d/66c4ad83c7117108c8699b87/Test_Action.png)
 9.  Click the **Save and Exit** button.  
@@ -102,9 +103,9 @@ Once the entry is created, configure the **Continue Automation If** action insid
 1.  Under **Choose an Action** tab, select the **Continue Automation If** action.  
     ![Continue_Automation_If.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfa42bda8bfb41071/66c4ad6b1ee8050b5816680d/Continue_Automation_If.png)
 2.  Click **\+ Add Condition**. In the **Select Input** box, select the pdf field UID from the HTTP Request Body. Select **Loosely Matches (Text)**, and provide the value “yes.”  
-    
+
     _This means Continue Automation If checks the value for the pdf field based on the trigger data sent via Postman. If the value is yes, i.e.. the condition matches, the automation continues to execute. If the value is no, i.e., the condition does not match; the automation exits completely._
-    
+
     ![Continue_Automation_If_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt59a49c1460c6b26b/66c4ad6caff77d2ae9c42314/Continue_Automation_If_Fields.png)
 3.  Click the **Test Action** button.
 4.  You will see the output if the condition is met. Click the **Save and Exit** button.  
@@ -145,7 +146,7 @@ Continue Repeat If executes the automation based on the defined conditions. You 
 1.  Under **Choose an Action** tab, select the **Continue Repeat If** action.  
     ![Continue_Repeat_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5eb50eb6cb90497b/66c4ad6bab1b69597e3ca6d4/Continue_Repeat_Action.png)
 2.  Provide the conditions you want to set up in the input box.  
-      
+
     Suppose you want to execute succeeding steps inside of a Repeat Path only if the condition is **true**, i.e., the value of the pdf field is **yes**, then the succeeding steps after the Continue Repeat If action will execute inside the Repeat Path.
 3.  Select the exit behavior in case the condition is not met. You can either exit the Repeat Path completely, i.e, the steps outside the Repeat Path will continue to execute or you can exit the current iteration and continue with the next iteration in the Repeat Path.  
     ![Continue_Repeat_Path_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt01a3478700e1272e/66c4ad6bc7117123c3699b77/Continue_Repeat_Path_Fields.png)
@@ -184,9 +185,9 @@ Sample data to be sent via Postman:
 ```
 
 1.  Configure the **HTTP Trigger** connector.  
-    
+
     **Additional Resource:** Refer to the [HTTP Trigger connector](https://www.contentstack.com/docs/agent-os/http-trigger/) documentation for more details.
-    
+
 2.  Under the **Choose Trigger** tab, select the **HTTP Request Trigger** action. Select **HTTP Request Trigger**. This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.
 3.  Select a **Method**, i.e., GET/POST.
 4.  You will find the applicable input “URL.” This URL will be the webhook URL to trigger the automation. You can send your Postman data via this trigger URL.  
@@ -212,14 +213,14 @@ Configuring an action step inside the Repeat Path will iterate and run the actio
 3.  Within the **Configure Action Step**, click the **Contentstack** connector.
 4.  Under **Choose an Action** tab, select the **Create an Entry** action.
 5.  In the **Configure Action** tab, click **\+ Add New Account** to add your Contentstack account.  
-    
+
     **Additional Resource:** For more details on how to add an account, refer to the [Contentstack Action](https://www.contentstack.com/docs/agent-os/about-contentstack-management-actions/) documentation.
-    
+
 6.  Select a **Stack**, **Branch**, and **Content Type** from the **Lookup** list.  
     In the **Entry Data** field, fetch the data output from the HTTP trigger as shown below:  
-    
+
     **Note:** In the **Entry Data** field, you can add a predefined schema template for your entry data. You must manually configure the entry data for **JSON Rich Text Editor**, **Custom**, and **Experience Container** fields.
-    
+
     ![Create_Entry_Configuration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt760c68bee09d1e08/66c4ad6cab1b6950f73ca6d8/Create_Entry_Configuration.png)
 7.  Click the **Proceed** button.
 8.  Click the **Test Action** button.
@@ -230,11 +231,11 @@ Once the entry is created, configure the **Continue Repeat If** action present i
 1.  Under **Choose an Action** tab, select the **Continue Repeat If** action.  
     ![Continue_Repeat_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5eb50eb6cb90497b/66c4ad6bab1b69597e3ca6d4/Continue_Repeat_Action.png)
 2.  Click **\+ Add Condition**. In the **Select Input** box, enter the UID of the pdf field from the HTTP trigger step. Select **Loosely Matches (Text)**, and provide the value “yes.”  
-    
+
     _This means Continue Repeat If will continue to iterate through the array data if the value for the pdf field is yes for an entry. If the value is yes, i.e., the condition matches, the Repeat Path will execute the succeeding action and continue to iterate through the array data._
-    
+
     _If the value is no i.e. the condition does not match, then based on the exit behavior defined in the configuration, Repeat Path will break and execute the succeeding action in the automation or it will break the current iteration and continue to create entries as per the defined conditions._
-    
+
     ![Conitnue_Repeat_Fields_Selection.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9d8382b581aab15e/66c4ad6b5c1ba4c1a02687c1/Conitnue_Repeat_Fields_Selection.png)
 3.  Click the **Test Action** button.
 4.  You will see the output as shown below. Click the **Save and Exit** button.
@@ -266,7 +267,7 @@ Now, let's configure the **Response** connector to see what happens if the exit 
 8.  On successful configuration, you can see the below output. Click **Save and Exit**.  
     ![Save_Exit_Response.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd95a4c299641725e/66c4ad79e712ef60bf310e00/Save_Exit_Response.png)
 
-  
+
 Let's see what happens if the exit option is - _Exit the Repeat Path completely_
 
 1.  Navigate to the **Execution Log** section.
@@ -308,19 +309,19 @@ In this example, we are sending bulk data through the HTTP action with a limitat
     ![HTTP.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcd11137c4b680ccf/6527f8c9a4cac20fe4c5d04c/HTTP.png)
 3.  Under **Choose an Action** step, select the **HTTP Request** action.
 4.  Under the Select Account drop-down, select one of the accounts connected to your project. The sensitive information, such as access code, secret key, API key, etc., can be fetched from the selected account.
-    
+
     **Note:** Select Account is an optional field. You can still configure the action without selecting an account.
-    
+
 5.  Provide a **URL** to fetch the bulk data. In this example, we have set the limit to 20, i.e. the URL will fetch the data as per the limit.
-    
+
     **Note:** You can provide any URL that can fetch bulk data from a source.
-    
+
     ![Select_HTTP_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7c276bf0eb1ed372/66c4bf883f4c193ac41cca97/Select_HTTP_Fields.png)
 6.  Click the **Proceed** button.
 7.  Click the **Test Action** button.  
     ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5538ef47ff7b8a23/66c4bf881ee805b8461669cf/Test_Action.png)
 8.  You will be able to see the entire data in the output. Click the **Save and Exit** button.  
-    
+
 
 Once the data is fetched, configure the Repeat Path step to bring the data from the HTTP action. To do so, follow the steps below:
 

@@ -2,6 +2,7 @@
 title: "Copy a Content Type"
 description: "To copy a content type in order to be reused."
 url: /headless-cms/copy-a-content-type
+uid: bltd3102586cbb790af
 ---
 
 # Copy a Content Type

@@ -2,6 +2,7 @@
 title: "Understanding How Publishing Works with Entry Variants"
 description: "Learn how Contentstack's Entry Variants feature enables independent publishing for multiple versions of an entry, allowing you to manage targeted content for different audiences and environments."
 url: /headless-cms/understanding-how-publishing-works-with-entry-variants
+uid: blt68425c2eea23c2c8
 ---
 
 # Understanding How Publishing Works with Entry Variants
@@ -45,22 +46,22 @@ Unpublishing an entry variant removes it from public view without affecting othe
 Let’s consider a scenario where you want to publish an entry variant for the Europe region. There are three possible outcomes when publishing a specific entry variant, depending on the base entry’s status.
 
 1.  ### Base Entry Not Published
-    
+
     If the base entry for the entry variant is not published in the specified environment(s) and language(s), the system will first publish the base entry, followed by the entry variant.
-    
+
     **Note:** Nested references for the base entry and entry variant will be published up to a depth of 5 levels, but entry variants of the nested references will not be published.
-    
+
 2.  ### Base Entry Published in an Older Version
-    
+
     If the base entry is published in a non-latest version, the system will skip republishing the base entry and only publish the entry variant as requested.
-    
+
     **Note:** Nested references for the base entry will not be republished, and the entry variants of the nested references will not be published.
-    
+
 3.  ### Base Entry Published in the Latest Version
-    
+
     If the base entry is already published in its latest version, the system will skip republishing the base entry and the entry variant will be published directly.
-    
+
     **Note:** Nested references for the base entry will not be republished, and the entry variants of the nested references will not be published.
-    
+
 
 Contentstack's Entry Variants offer flexibility for creating and managing targeted content. By understanding how publishing works with entry variants, you can ensure that your content reaches the right audience at the right time.

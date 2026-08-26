@@ -2,6 +2,7 @@
 title: "Create a Role"
 description: "Learn how to create custom roles in Contentstack to manage user access, permissions, publishing environments, and languages."
 url: /headless-cms/create-a-role
+uid: bltf33e2c40427c1b78
 ---
 
 # Create a Role
@@ -33,19 +34,19 @@ You can configure entry-level permissions to control what a role can do with ent
 Entry permissions are divided into the following categories:
 
 -   **All Entries of Content Types/Taxonomies**
-    
+
     Use this option to define permissions for all entries of one or more content types or taxonomies.
-    
+
     For example:
-    
+
     -   Allow a role to **Read** all entries from the “Marketing Blogs” content type.
     -   Allow a role to manage entries associated with a specific taxonomy and term combination, such as the “Regions” taxonomy with the “North America” term.
 -   **Specific Entries**
-    
+
     Use this option to define permissions for selected entries within one or more content types.
-    
+
     For example, allow a role to **Read** and **Update** the “AI” entry from the “Marketing Blogs” content type.
-    
+
 
 ## Permissions on Taxonomies
 
@@ -62,19 +63,19 @@ With taxonomy permissions, you can allow a role to perform the following actions
 Taxonomy permissions are divided into the following categories:
 
 -   **All Taxonomies**
-    
+
     Use this option to define permissions for all taxonomies in the stack.
-    
+
     For example:
-    
+
     -   Allow a role to **Read** all taxonomies in the stack.
     -   Allow a role to **Create** and **Update** taxonomy structures across all taxonomies.
 -   **Specific Taxonomies**
-    
+
     Use this option to define permissions for selected taxonomies.
-    
+
     For example, allow a role to **Read** and **Update** the “Regions” taxonomy.
-    
+
 
 **Note**:
 
@@ -90,25 +91,25 @@ Available permissions include **Read**, **Create**, **Update**, **Publish/Unpubl
 Asset permissions are divided into the following categories:
 
 -   **All Assets and Folders**
-    
+
     Use this option to define permissions for all assets and asset folders in the stack.
-    
+
     For example, allow a role to **Read** all assets and folders.
-    
+
 -   **Specific Assets**
-    
+
     Use this option to define permissions for selected assets.
-    
+
     For example, allow a role to **Read** and **Publish/Unpublish** the “AI\_1” asset.
-    
+
 -   **Specific Folders**
-    
+
     Use this option to define permissions for selected asset folders.
-    
+
     Permissions applied to a folder also apply to all assets and subfolders within that folder.
-    
+
     For example:
-    
+
     -   Allow a role to **Read** the “Blogs” folder.
     -   Allow a role to **Read** and **Publish/Unpublish** the “Homepage” folder.
 
@@ -121,23 +122,23 @@ Available permissions include **Read**, **Create**, **Update**, and **Delete**.
 Language permissions are divided into the following categories:
 
 -   **All Languages**
-    
+
     Use this option to define permissions for all language variants in the stack.
-    
+
     For example, allow a role to access all English and German entry variants.
-    
+
 -   **Specific Languages**
-    
+
     Use this option to define permissions for selected language variants.
-    
+
     For example, allow a role to access only the “English - United States” language variant.
-    
+
     **Note:** Language permissions apply at the role level and cannot vary by content type.
-    
+
     **Warning:** If you deselect the master language, users cannot access unlocalized entries that inherit content from the master language.
-    
+
     To allow access to all available languages, select **All Languages**.
-    
+
 
 For more information about language-based access behavior, refer to the [Language-Specific Restrictions on Entries Scenarios](/docs/headless-cms/manage-language-permissions#language-specific-restrictions-on-entries-scenarios) section.
 
@@ -154,25 +155,25 @@ You can configure entry exceptions to restrict a role from performing actions su
 Entry exceptions are divided into the following categories:
 
 -   **All Entries of Content Types/Taxonomies**
-    
+
     Use this option to restrict actions across all entries of one or more content types or taxonomies.
-    
+
     For example:
-    
+
     -   Allow a role to **Read** entries from the “Blog” content type but restrict **Update** access.
     -   Allow a role to manage entries associated with the “Regions” taxonomy and “North America” term but restrict **Publish/Unpublish** access.
 -   **Specific Entries**
-    
+
     Use this option to restrict actions on selected entries.
-    
+
     For example, allow a role to read all entries but restrict updates to the “AI” entry from the “Marketing Blogs” content type.
-    
+
 -   **Specific Fields**
-    
+
     Use this option to restrict actions on selected fields across entries.
-    
+
     For example, allow a role to read all entries from the “Marketing Blogs” content type but restrict updates to the “Multi Line Textbox” field.
-    
+
 
 ### Exceptions on Taxonomies
 
@@ -183,17 +184,17 @@ These exceptions apply only to taxonomy structures and do not affect entry-level
 Taxonomy exceptions are divided into the following categories:
 
 -   **All Taxonomies**
-    
+
     Use this option to restrict actions across all taxonomies.
-    
+
     For example, allow a role to read all taxonomies but restrict delete access.
-    
+
 -   **Specific Taxonomies**
-    
+
     Use this option to restrict actions on selected taxonomies.
-    
+
     For example, allow a role to manage all taxonomies but restrict publishing or deletion of the “Regions” taxonomy.
-    
+
 
 ### Exceptions on Assets
 
@@ -204,25 +205,25 @@ Available restrictions include **Read**, **Create**, **Update**, **Publish/Unpub
 Asset exceptions are divided into the following categories:
 
 -   **All Assets and Folders**
-    
+
     Use this option to restrict actions across all assets and folders.
-    
+
     For example, allow a role to read all assets and folders but restrict update access.
-    
+
 -   **Specific Assets**
-    
+
     Use this option to restrict actions on selected assets.
-    
+
     For example, allow a role to read all assets but restrict publishing of the “Image1” asset.
-    
+
 -   **Specific Folders**
-    
+
     Use this option to restrict actions on selected folders.
-    
+
     For example, allow a role to read and update all folders except the “Marketing Blogs” and “Sales Blogs” folders.
-    
+
     By default, users can still access assets and subfolders within those folders based on the configured exception settings.
-    
+
 
 ### Exceptions on Languages
 
@@ -233,17 +234,17 @@ Available restrictions include **Create**, **Update**, and **Delete**.
 Language exceptions are divided into the following categories:
 
 -   **All Languages**
-    
+
     Use this option to restrict actions across all language variants.
-    
+
     For example, allow a role to read entries in all languages but restrict update access.
-    
+
 -   **Specific Languages**
-    
+
     Use this option to restrict actions on selected language variants.
-    
+
     For example, allow a role to read English (United States) entry variants but restrict update access.
-    
+
 
 ## API Reference
 

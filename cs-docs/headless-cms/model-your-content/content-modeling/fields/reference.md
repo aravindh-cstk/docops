@@ -2,6 +2,7 @@
 title: "Reference"
 description: "Learn how to use the Reference field to link entries across content types and manage content relationships in Contentstack."
 url: /headless-cms/reference
+uid: blt1c9df07f3f7064b9
 ---
 
 # Reference
@@ -55,41 +56,41 @@ Include Referencing allows you to reference entries from one or more different c
 There are two approaches:
 
 1.  ### Single Content Type Referencing
-    
+
     Allows referencing entries from one specific content type.
-    
+
     If you have **News Article** and **Author** content types, you can add a Reference field in News Article that references Author entries.
-    
+
     To configure:
-    
+
     -   Add a Reference field to the **News Article** content type.
     -   Rename it (for example, _Author Details_).
     -   Select **Author** as the referenced content type.
-    
+
     ![Single_Content_Type_Referencing.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf7167523bae35e88/69a408a548e3e8248f0bab80/Single_Content_Type_Referencing.gif)
-    
+
     Content managers can then select one or more authors while creating news articles.
-    
+
 2.  ### Multiple Content Type Referencing
-    
+
     Allows referencing entries from multiple content types.
-    
+
     If you have content types such as **Clothes**, **Shoes**, and **Bags**, and want to associate them with a **Brand**, you can:
-    
+
     -   Add a Reference field to the **Brand** content type.
     -   Select multiple content types under **Referenced Content Type**.
     -   Enable the **Multiple** option.
-    
+
     ![Multiple_Content_Type_Referencing.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc6a8c3701114b7ed/69a409a8fbdb4d27157752ef/Multiple_Content_Type_Referencing.gif)
-    
-      
+
+
     Content managers can then select entries from all configured content types.
-    
+
     **Note**:
-    
+
     -   You can add up to **50 content types** in a single Reference field.
     -   A Reference field is counted as a single field, regardless of the number of fields in the referenced content types.
-    
+
 
 ## Additional Functionalities
 

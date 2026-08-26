@@ -2,6 +2,7 @@
 title: "Create a Taxonomy"
 description: "Organize your website effectively using Contentstack taxonomies. Learn to create and manage taxonomies to categorize content seamlessly."
 url: /headless-cms/create-a-taxonomy
+uid: bltf8c2649e296dd957
 ---
 
 # Create a Taxonomy
@@ -16,9 +17,9 @@ To create a taxonomy, log in to your [Contentstack account](https://www.contents
 2.  Click the **New Taxonomy** button. ![New_Taxonomy_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt815647550580479d/6656bab6d713afb6232d9930/New_Taxonomy_Button.png)
 3.  In the **Create New Taxonomy** modal that appears, add the following details:
     1.  Enter the **Name** for the taxonomy. The **Unique ID** will be auto-generated and can be edited until it's saved.
-        
+
         **Note:** Refer to the [Restricted Keywords for UIDs](/docs/headless-cms/restricted-keywords-for-uids) to avoid using reserved keywords. Once saved, you cannot change the UID.
-        
+
     2.  Add a **Description** for your taxonomy. This is an optional step.
 4.  Finally, click **Create Taxonomy**.  
     ![Create_New_Taxonomy_Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt264e96823457ce29/655b4cc9ad68442455c3d757/Create_New_Taxonomy_Modal.png)

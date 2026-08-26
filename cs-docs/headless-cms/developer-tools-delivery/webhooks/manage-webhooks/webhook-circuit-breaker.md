@@ -2,6 +2,7 @@
 title: "Webhook Circuit Breaker"
 description: "Contentstack deploys the Webhook Circuit Breaker (WCB) implementation to stop retrying webhook requests that hit inactive, invalid, or unresponsive third-party URLs."
 url: /headless-cms/webhook-circuit-breaker
+uid: blt614873c7ffb6912e
 ---
 
 # Webhook Circuit Breaker

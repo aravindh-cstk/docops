@@ -2,6 +2,7 @@
 title: "Entries List Overview"
 description: "Learn to navigate the Entries list in Contentstack. Discover tools for filtering, sorting, and managing entries efficiently to streamline workflows."
 url: /headless-cms/entries-list-overview
+uid: blt9306916c838de803
 ---
 
 # Entries List Overview
@@ -22,7 +23,7 @@ The Entries list displays content in a tabular format, providing key details at 
 
 -   **Title**: Name of the entry.
 -   **Entry UID**: Unique identifier of the entry. Hover over the copy icon to copy it to your clipboard.
-    
+
 -   **Language**: Locale of the content.
 -   **Content Type**: Associated content type.
 -   **Variant(s)**: Name of the variant group.
@@ -68,7 +69,7 @@ Start creating entries directly from the list page in just a few steps:
 2.  Choose the **Content Type** for your entry.
 3.  Add content within the entry editor.
 4.  **Note:** If **Drafts and Auto Save** is enabled, clicking **New Entry** creates a draft entry immediately. You can begin editing and collaborating without manually saving the entry first.
-    
+
 
 ### Views for Quick Access
 
@@ -123,14 +124,14 @@ To sort entries or assets, log in to your [Contentstack account](https://www.con
     -   **First click:** Sorts in ascending order (0–9 / A–Z).
     -   **Second click:** Sorts in descending order (Z–A / 9–0).
     -   **Third Click:** Restores the default settings.
-        
+
         -   For entries, the default sort order is descending by the **Modified At** timestamp.
         -   For assets, the default sort order is descending by the **Title** value.
-        
+
         **Note:** The Modified At and Title columns toggle only between ascending and descending order. They do not reset on the third click.
-        
+
         ![Sorting example animation](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta8aae714cdf74165/682b067c46fb3c519188a3c7/Sorting-GIF.gif)
-        
+
 
 A **sort icon** appears next to the column header indicating the sort order.
 

@@ -2,6 +2,7 @@
 title: "Ruby Utils - Configure Region Endpoints in Ruby Utils SDK"
 description: "Configure region endpoints dynamically using the Contentstack Ruby Utils SDK. A Ruby developer guide to dynamic resolution without hardcoding URLs."
 url: /developers/sdks/utils-sdk/ruby/region-endpoint-integration
+uid: blt5f1c49cdd27b4911
 ---
 
 # Ruby Utils - Configure Region Endpoints in Ruby Utils SDK

@@ -2,6 +2,7 @@
 title: "Website Header"
 description: "The Website Header content model defines the structure and fields to design the header of your website."
 url: /headless-cms/website-header
+uid: blt0a47e25956467861
 ---
 
 # Website Header
@@ -13,25 +14,25 @@ The header is a constant element located at the top of each page, including key 
 Let’s dive deep into how this model will help you create your company’s Website Header.
 
 1.  ## Analyzing Requirements for the Website Header
-    
+
     The “Website Header” content model defines the structure and fields to design the website header of your website.
-    
+
     Here’s how your website header looks after you publish the entry  
-    
+
     ![Analyzing_Requirements_for_the_Website_Header.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6f25e20821c2f811/65360c2be5f6ed25bef77fae/Analyzing_Requirements_for_the_Website_Header.png)
-    
+
 2.  ## Identifying Content Model
-    
+
     Let's identify the fields that build up your Website Header content type that you see in the above step  
-    
+
     ![Identifying_Content_Model_for_the_Website_Header.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb0f2085769e4b1d1/65360c2b6ca7486c3dc20e66/Identifying_Content_Model_for_the_Website_Header.png)
-    
+
 3.  ## Developing Content Type
-    
+
     The “Website Header” content model contains the following set of fields. Let’s look in detail at what content types and fields were used to create the model.
-    
+
     **Header** Content Type:
-    
+
     -   **Title**: This is where you'll provide your Website Header a name. This is a [Title](/docs/headless-cms/title) field that displays the title of the website header entry. This mandatory field defines the title of the Website Header.
     -   **Logo**: Choose an appropriate image file to add as the website logo. The Logo field is a [File](/docs/headless-cms/file/) field. This is also a mandatory field. The image size must not exceed 100 Kb.
     -   **Navigation Menu**: This is a [Group](/docs/headless-cms/group/) field with the following fields in it:

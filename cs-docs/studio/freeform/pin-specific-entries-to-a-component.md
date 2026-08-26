@@ -2,6 +2,7 @@
 title: "Pin Specific Entries to a Component"
 description: "Learn how to pin one or more CMS entries to a Freeform template so layout components can bind directly to their fields."
 url: /studio/pin-specific-entries-to-a-component
+uid: bltd6464dfea80b6d89
 ---
 
 # Pin Specific Entries to a Component

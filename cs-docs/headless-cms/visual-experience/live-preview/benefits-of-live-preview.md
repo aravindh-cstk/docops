@@ -2,6 +2,7 @@
 title: "Benefits of Live Preview"
 description: "Discover how Contentstack's Live Preview enhances content management through real-time editing, omnichannel previews, and developer-friendly features, all within an intuitive interface."
 url: /headless-cms/benefits-of-live-preview
+uid: blt80ab20bb4733a4a8
 ---
 
 # Benefits of Live Preview

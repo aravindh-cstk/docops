@@ -2,6 +2,7 @@
 title: "Default Value"
 description: "Learn how to set default values for fields in Contentstack to streamline your content creation process and enhance efficiency effortlessly."
 url: /headless-cms/default-value
+uid: blt020796fb90bac88d
 ---
 
 # Default Value

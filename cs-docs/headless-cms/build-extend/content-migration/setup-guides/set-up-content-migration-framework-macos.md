@@ -2,6 +2,7 @@
 title: "Set Up Content Migration Framework (macOS)"
 description: "Easily migrate content to Contentstack with our seamless framework. Follow our guide to install prerequisites and start your migration effortlessly."
 url: /headless-cms/set-up-content-migration-framework-macos
+uid: blt24dee4d78a708e7e
 ---
 
 # Set Up Content Migration Framework (macOS)
@@ -25,20 +26,20 @@ Before you begin the installation process, ensure that you have the following pr
 Follow the steps below to install the migration framework on your system:
 
 1.  Open a terminal and run the following command to clone the repository and install dependencies:
-    
+
     ```
     git clone https://github.com/contentstack/migration-v2.git && cd migration-v2 && chmod +x setup.sh && ./setup.sh
     ```
-    
+
 2.  If prompted, enter your system password to allow installation of any missing dependencies.![Content Migration Tool Setup Guide 1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt199a0fb239ed549b/68232ff14fb8e40d38f48c16/Content_Migration_Tool_Setup_Guide_1.png)
 3.  During the setup, select the legacy CMS you are migrating content from.![Content Migration Tool Setup Guide 2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8fc462dd35f18f4f/6838647e21ef7a3a13182e20/Content_Migration_Tool_Setup_Guide_2.png)
-    
+
     **Warning:** Ensure you select the correct legacy CMS to avoid any errors during the migration.
-    
+
 4.  Enter the file path of the exported content you wish to migrate. For example: /Users/<username>/Downloads/<sitecore\_data>.zip.![Content Migration Tool Setup Guide 3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2d4a67f6a214599d/681caaf1bef859bca51ab48e/Content_Migration_Tool_Setup_Guide_3.png)
-    
+
     **Note:** The file type may vary depending on your legacy CMS. For example, Sitecore data is exported in ZIP format whereas Contentful data is exported in JSON.
-    
+
 5.  If the installation is successful, a browser window should open automatically with the http://localhost:3000 URL.![Content Migration Tool Setup Guide 4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltafe4f226d96c3a1f/67ff9a478e7aaa859446115b/Content_Migration_Tool_Setup_Guide_4.png)
 
 This completes the installation of the Contentstack Migration Framework. You’re now ready to begin migrating your content.

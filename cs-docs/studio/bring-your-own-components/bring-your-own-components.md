@@ -2,6 +2,7 @@
 title: "Bring Your Own Components"
 description: "Learn how to register your own React components with Contentstack Studio so authors can use your design system components to compose pages."
 url: /studio/bring-your-own-components
+uid: blt9c574722748d0adb
 ---
 
 # Bring Your Own Components

@@ -2,6 +2,7 @@
 title: "Get Started with .NET Utils Library"
 description: "steps to use the .NET Utils SDK"
 url: /developers/sdks/utils-sdk/dot-net/get-started-with-dot-net-utils-library
+uid: bltbf634de6f4425157
 ---
 
 # Get Started with .NET Utils Library
@@ -25,17 +26,17 @@ To get started with .NET Utils SDK, you will need:
 To download the Contentstack.Utils module, open the terminal and perform any of the following options:
 
 -   Via Package Manager:
-    
+
     ```
     PM> Install-Package contentstack.utils
     ```
-    
+
 -   Via .NET CLI:
-    
+
     ```
     dotnet add package contentstack.utils
     ```
-    
+
 
 After successful installation, to use the module in your application, you need to add a namespace to your class:
 
@@ -43,7 +44,7 @@ After successful installation, to use the module in your application, you need t
 using Contentstack.Utils
 ```
 
-  
+
 
 ## Usage
 
@@ -51,13 +52,13 @@ Let’s learn how you can use .NET Utils SDK to render embedded items by perform
 
 1.  Create Render Option
 2.  To render embedded items on the front-end, use the CustomRenderOption class, and define the UI elements you want to show in the front-end of your website, as shown in the example below. In this example, we have specified the cases for each method of adding embedded items: Block, Inline, Link, Display and Download (for asset).
-    
+
 3.  ```
     using System.Collections.Generic;
     using Contentstack.Utils.Interfaces;
     using Contentstack.Utils.Models;
     using Contentstack.Utils.Enums;
-    
+
     public class CustomRenderOption: Options
     {
             public CustomRenderOption(IEntryEmbedable entry) : base(entry)
@@ -73,7 +74,7 @@ Let’s learn how you can use .NET Utils SDK to render embedded items by perform
                     return base.RenderMark(markType: markType, text: text);
             }
         }
-    
+
         public override string RenderNode(NodeType nodeType, Node node, NodeChildrenCallBack callBack)
         {
             switch (nodeType)
@@ -86,13 +87,13 @@ Let’s learn how you can use .NET Utils SDK to render embedded items by perform
                     return base.RenderNode(nodeType, node, callBack);
             }
         }
-    
-    
+
+
             public override string RenderOption(IEmbeddedObject embeddedObject, Metadata metadata)
             {
                 switch (metadata.StyleType)
                 {
-    
+
              	//if you have added embedded object using the "Block" option
                     case StyleType.Block:
                         string renderString = "";
@@ -105,7 +106,7 @@ Let’s learn how you can use .NET Utils SDK to render embedded items by perform
                             renderString += $"<div> <b>{embeddedObject.Uid}</b></div>";
                         }
                         return renderString;
-    
+
              	//if you have added embedded object using the "Inline" option
                     case StyleType.Inline:
                         if (embeddedObject is IEmbeddedEntry)
@@ -117,9 +118,9 @@ Let’s learn how you can use .NET Utils SDK to render embedded items by perform
                             return $"<span><b>{embeddedObject.Uid}</b></span>";
                         }
                         return "<span>" + embeddedObject.Uid + "</span>";
-    
-    
-    
+
+
+
          		//if you have added embedded object using the "Link" option
                    	case StyleType.Link:
                         if (embeddedObject is IEmbeddedEntry)
@@ -131,8 +132,8 @@ Let’s learn how you can use .NET Utils SDK to render embedded items by perform
                             return $"<span> Please find link to: <a><b>{metadata.Text ?? embeddedObject.Uid}</b></a></span>";
                         }
                         return "<a href=\"" + embeddedObject.Uid + "\">" + (metadata.Text ?? embeddedObject.Uid) + "</a></span>";
-    
-    
+
+
            		//if you have embedded an asset into the RTE field
                   	case StyleType.Display:
                         if (embeddedObject is IEmbeddedAsset)
@@ -140,7 +141,7 @@ Let’s learn how you can use .NET Utils SDK to render embedded items by perform
                             return $"<b>{((IEmbeddedAsset)embeddedObject).Title}</b><p>{((IEmbeddedAsset)embeddedObject).FileName} image: <img src=\"{((IEmbeddedAsset)embeddedObject).Url}\" alt=\"{((IEmbeddedAsset)embeddedObject).Title}\"/></p>";
                         }
                         return "<img src=\"" + embeddedObject.Uid + "\" alt=\"" + embeddedObject.Uid + "\" />";
-    
+
     		//if you have embedded an asset directly via a download link. 
                     case StyleType.Download:
                         if (embeddedObject is IEmbeddedAsset)
@@ -153,20 +154,20 @@ Let’s learn how you can use .NET Utils SDK to render embedded items by perform
             }
     }
     ```
-    
+
 4.  Initialize the class
 5.  Initialize either the Options or CustomRenderOption class to use them for rendering embedded items as shown below:
-    
+
 6.  ```
     //To use the default render option:
     Options defaultRender = new Options(entry);
-    
+
     //To use CustomRenderOptions:
     CustomRenderOption defaultRender = new CustomRenderOption(entry);
     ```
-    
+
 7.  **Note:** Make sure the entry parameter has implemented the IEmbeddedObject property.
-    
+
 
 ## Basic Queries
 

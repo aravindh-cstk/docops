@@ -2,6 +2,7 @@
 title: "Add Taxonomy to Release"
 description: "Learn how to add taxonomies to releases in Contentstack to deploy taxonomy structures and localized taxonomy terms."
 url: /headless-cms/add-taxonomy-to-release
+uid: blt9ced52370e6af7d4
 ---
 
 # Add Taxonomy to Release

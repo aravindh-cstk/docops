@@ -2,6 +2,7 @@
 title: "Use SSL Pinning with Swift SDK"
 description: "Enhance security in your Swift app by implementing SSL pinning with the Contentstack SDK."
 url: /developers/sdks/content-delivery-sdk/ios/use-ssl-pinning-with-swift-sdk
+uid: blt4cd031e00b94a920
 ---
 
 # Use SSL Pinning with Swift SDK

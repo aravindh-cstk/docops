@@ -2,6 +2,7 @@
 title: "Edit a Content Type"
 description: "Learn how to edit a content type in Contentstack, including updating fields, properties, and schema safely."
 url: /headless-cms/edit-a-content-type
+uid: bltd669584d6e3e73e5
 ---
 
 # Edit a Content Type
@@ -17,9 +18,9 @@ To edit a content type, log in to your [Contentstack account](https://www.conten
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the "Content Models" icon.
 2.  Click the vertical ellipsis in the **Actions** column next to the content type, then select **Settings** to update its name, description, or type (Single or Multiple).
 3.  To open the content type and edit its schema, click the content type title. You can also click the vertical ellipsis in the **Actions** column and select **Edit**.
-    
+
     ![Edit_CT.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3663c8f50dbaa8a2/68dc36b4c471fcb250cf0487/Edit_CT.png)
-    
+
 4.  The content type builder page opens, where you can modify the schema:
     1.  **Add fields:** Click the “Insert a field” (+) icon.
     2.  **Remove fields:** Click the “Delete” icon next to the field.

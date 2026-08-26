@@ -2,6 +2,7 @@
 title: "Studio Design Tokens Overview"
 description: "Complete design-token reference for Contentstack Studio, covering typeface, color palette, type scale, spacing, radii, shadows, and component conventions."
 url: /studio/studio-design-tokens-overview
+uid: blt2785cf54fb6136e5
 ---
 
 # Studio Design Tokens Overview

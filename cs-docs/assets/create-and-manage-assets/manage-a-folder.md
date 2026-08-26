@@ -2,6 +2,7 @@
 title: "Manage a Folder"
 description: "Organize assets with ease in Contentstack. Learn to view, edit, upload, and delete folders efficiently in a structured, user-friendly interface."
 url: /assets/manage-a-folder
+uid: blt3c8f946a37f310a3
 ---
 
 # Manage a Folder

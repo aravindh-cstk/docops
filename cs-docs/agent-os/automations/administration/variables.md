@@ -2,6 +2,7 @@
 title: "Variables"
 description: "Add and uniformly use project variables across all the automation to eliminate redundancy."
 url: /agent-os/variables
+uid: blt9cd48ed2e765aa6a
 ---
 
 # Variables
@@ -21,13 +22,13 @@ To add a new project variable, follow the steps below.
 1.  Click the **"+"** icon on the Project Variables screen to add a new project variable.  
     ![Click_Add_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0ea8b87a63569769/656c24f96a1419a37b417f26/Click_Add_Icon.png)
 2.  A pop-up screen appears. Select a **Variable Type** to add a **Plain Text** or **Secret** variable.
-    
+
     **Note:** Secret value cannot be viewed in an automation once saved.
-    
+
 3.  Enter the variable’s name in the **Key** field and value in the **Value** field.
-    
+
     **Note:** Each **Key** must be unique in a project.
-    
+
     ![Save_Variables.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf8d088579329629a/656c24f94c0b9a9a83d564a4/Save_Variables.png)
 4.  Click the **Save** button to create a project variable.
 
@@ -60,7 +61,7 @@ The steps to set up the Automation are as follows:
 Let’s look at the setup in detail.
 
 1.  ## Configure HTTP Trigger
-    
+
     1.  Select **Configure Trigger** from the left navigation panel.
     2.  Within the **Configure Trigger Step**, click the **HTTP** trigger connector.
     3.  Select **HTTP Request Trigger**. This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.
@@ -71,11 +72,11 @@ Let’s look at the setup in detail.
     8.  On successful configuration, you can see the below output. Click the **Save and Exit** button.  
         ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf4544c8b03a0c5fd/663093a024e181627cad160c/Save_Exit.png)
 2.  ## Configure HTTP Action
-    
+
     1.  Within the **Configure Action** **Step**, click the **HTTP** connector.
-        
+
         **Note:** You can sort and search the connector(s) based on the filter.
-        
+
     2.  Under **Choose an Action** tab, select the **HTTP Request** action.
     3.  On the **Configure Action** page, enter the **URL**. You can use any URL to fetch the data. Here, we are using a Content Management API URL to create an entry.  
         Select any one **HTTP method** from **GET**, **POST**, **PUT**, **DELETE**, and **PATCH**. For this example, we are choosing the **POST** HTTP method.
@@ -88,11 +89,11 @@ Let’s look at the setup in detail.
     8.  Click the **Save and Exit** button.
     9.  You will see an entry created in the defined content type.
 3.  ## Configure Response Connector
-    
+
     1.  Within the **Configure Action Step**, click the **Response** connector.
-        
+
         **Note:** You can sort and search the connector(s) based on the filter.
-        
+
     2.  Under **Choose an Action** tab, select the **Response** action.
     3.  Based on the results of your configured action, enter the **Response Status**.
     4.  In the **Response Body** field, you can add the data that you want to send as the response. Fetch the data from the HTTP action.  
@@ -101,9 +102,9 @@ Let’s look at the setup in detail.
     6.  Click the **Test Action** button to test the configured action.
     7.  Click the **Save and Exit** button.
 4.  ## Test the Automation
-    
+
     Now, let’s see how you can test out your Automation. To do so, perform the steps given below:
-    
+
     1.  Toggle the **Activate Automation** button to activate the automation.
     2.  Hit the trigger URL to see the response generated.
     3.  To check the entries created in Contentstack, go to Contentstack, navigate to the desired content type. You will see entries created.

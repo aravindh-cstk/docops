@@ -2,6 +2,7 @@
 title: "Webhook Integrations"
 description: "Contentstack Webhooks allow you to provide real-time info to any endpoint. Integrate webhooks with any third-party applications and create custom solutions!"
 url: /headless-cms/webhook-integrations
+uid: blt0523ac6a1a277a4a
 ---
 
 # Webhook Integrations
@@ -9,7 +10,7 @@ url: /headless-cms/webhook-integrations
 ## Webhook Integrations
 
 Contentstack Webhooks allow you to provide real-time information to any endpoint. This helps you integrate webhooks with any third-party applications and create custom solutions.  
-  
+
 Here we list some examples of how to integrate Contentstack webhooks with AWS Lambda to achieve custom functionalities such as notification, translation, etc. 
 
 ## Set up a Notification System with Webhooks, AWS Lambda, and AWS SNS
@@ -33,7 +34,7 @@ Read more about [Automation Hub Connectors](/docs/agent-os).
 ## Set up Text Translation System with Webhooks, Workflows, AWS Lambda, and Memsource
 
 By using Contentstack Webhooks and AWS Lambda, you can set up a translation system which translates the content of an entry into a specified language. We will use Contentstack Webhooks and Workflows along with AWS Lambda and Memsource to get this done.  
-  
+
 Read more about [Setting up a Translation System using Marketplace Apps](/marketplace#translation).
 
 ## Set up an Instant Preview System with Webhooks and Pusher

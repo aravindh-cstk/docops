@@ -2,6 +2,7 @@
 title: "Open Live Preview in a New Tab"
 description: "Enable “Open in New Tab” in Contentstack Live Preview for seamless, iframe-free site editing and better tool compatibility."
 url: /headless-cms/open-live-preview-in-a-new-tab
+uid: blt2ff311b8a7a2b58a
 ---
 
 # Open Live Preview in a New Tab
@@ -26,17 +27,17 @@ To enable the feature:
 
 1.  Ensure your **Contentstack App** is up to date (this is auto-managed).
 2.  Update your **Live Preview SDK** to the latest version (**v4.0.0** or **later**) using the following command:
-    
+
     ```
     npm install @contentstack/live-preview-utils
     ```
-    
+
 3.  In your stack, go to **Settings** and select **Visual Experience**.
 4.  In the **General** tab, enable the **Always Open in New Tab** toggle.
 5.  Click **Save**. ![Enable_LP_Open_in_New_Tab.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9b2de40925240e2f/69bd80e04440ed410cb1da8e/Enable_LP_Open_in_New_Tab.png)
 6.  Clicking the **Live Preview icon** in an entry opens the site in a new browser tab.
-    
+
     If the SDK is outdated, the site opens in a new browser tab but remains inside an iframe, skipping the additional click.
-    
+
 
 The **Open in New Tab** feature provides more flexibility in how editors and developers use Live Preview. By keeping the preview experience outside the iFrame and reducing extra clicks, it streamlines content review and supports advanced integrations.

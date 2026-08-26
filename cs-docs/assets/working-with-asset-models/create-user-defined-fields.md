@@ -2,6 +2,7 @@
 title: "Create User-Defined Fields"
 description: "Efficiently manage asset metadata in Contentstack by creating custom fields. Enhance asset searchability and categorization with user-defined attributes."
 url: /assets/create-user-defined-fields
+uid: blt78ad8b8167b8090a
 ---
 
 # Create User-Defined Fields
@@ -19,14 +20,14 @@ To create user-defined fields within Assets, log in to your [Contentstack accoun
 3.  In the **General** section, enter the following:
     -   **Name** (required): A unique name for the field with a maximum of **50 characters**.
     -   **UID** (required): A unique field identifier that uses only letters, numbers, and underscores.
-        
+
         **Note:** Once you save the field, you cannot change the UID.
-        
+
     -   **Description** (optional): A short explanation of the purpose of the field.
 4.  In the **Fields** section, click the **Field Type** dropdown and choose a field as needed.
-    
+
     **Additional Resource:** Refer to the [Field Types](/docs/assets/field-types) document for more information.
-    
+
 5.  Use the **Field Properties** panel, which opens on the right, to configure the field behaviour. The available options vary by field type and can include:
     -   **Placeholder Text**: Enter sample text to show as a prompt in the field.
     -   **Instruction Text**: Guide users on how to fill the field.
