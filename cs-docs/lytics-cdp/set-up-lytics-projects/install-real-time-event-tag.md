@@ -2,6 +2,7 @@
 title: "Install Real-Time Events Tag"
 description: "Learn how to install the Real-Time Events Tag using Google Tag Manager or Web SDK to track behavioral data and enable real-time user profile updates."
 url: /lytics/install-real-time-event-tag
+uid: blt452b470706c0d502
 ---
 
 # Install Real-Time Events Tag
@@ -17,7 +18,7 @@ If your website uses Google Tag Manager (GTM), it is recommended to use the foll
 Follow the steps to install the Lytics tag using Google Tag Manager:
 
 -   From the left-hand navigation, navigate to **Data Pipeline > SDK > Web SDK** in the Lytics app.
--   [Setup and install](https://support.google.com/tagmanager/answer/6103696?hl=en) Google Tag Manager if it's not already configured.
+-   [Setup and install](https://support.google.com/tagmanager/answer/14842164?visit_id=639220222474585079-4020826632&hl=en&ref_topic=14841964&rd=2) Google Tag Manager if it's not already configured.
 -   Create a new [Custom HTML](https://support.google.com/tagmanager/answer/6107167?hl=en) tag and paste the Lytics JavaScript snippet into the tag’s content box.
 -   Configure the tag to trigger on the appropriate pages. We recommend using the **All Pages** default trigger to start.![image1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9a259aeff4760f97/68381796e7e410bcf3ce427f/image1.png)
 -   Submit and [publish](https://support.google.com/tagmanager/answer/6107163?hl=en) your Google Tag Manager version.
@@ -45,7 +46,7 @@ You can install the JStag:
 -   Through a tag manager
 -   Automatically via CMS plugins
 
-**Additional Resource:** For additional information, please refer to our [documentation](https://docs.lytics.com/docs/lytics-javascript-tag#installation).
+**Additional Resource:** For additional information, please refer to our [documentation](/docs/lytics/lytics-javascript-tag#installation).
 
 ### 1\. Installation Instructions
 

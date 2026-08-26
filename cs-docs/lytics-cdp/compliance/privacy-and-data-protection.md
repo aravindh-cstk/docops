@@ -2,6 +2,7 @@
 title: "Privacy and Data Protection"
 description: "Explore how Lytics supports GDPR and CCPA compliance through secure data handling, consent management, and privacy protection tools."
 url: /lytics/privacy-and-data-protection
+uid: blta8413485441becf9
 ---
 
 # Privacy and Data Protection
@@ -27,7 +28,7 @@ Restrict access to personal information by role.
 
 Map personal information processed by Lytics, including sources and destinations.
 
--   **Audit your data schema:** Use the [Schema Audit](https://docs.lytics.com/docs/schema-audit#schema-audit) feature to see what user fields are being populated, the data contained, the source(s), and if that data is being used in audience definitions.
+-   **Audit your data schema:** Use the [Schema Audit](/docs/lytics/schema-audit#schema-audit) feature to see what user fields are being populated, the data contained, the source(s), and if that data is being used in audience definitions.
 -   **Determine third-party data sources:** You can see the third-party data sources from which you send data to Lytics using the Lytics UI by navigating to **Data > Data Streams**. The "default" stream will contain your web data unless otherwise configured. You will see your other integrations in the list of stream names using the drop-down menu at the top right. Each stream page will show you the last time Lytics received data.
 -   **Determine third-party data destinations:** You can view the activity history for a data destination using the Lytics UI by navigating to **Data > Integrations**. Click on the tile for the integration in question. If you're already running the integration, you will automatically be taken to the overview page that shows a list of running imports and exports and the history of events for those works.
 
@@ -49,7 +50,7 @@ For sites not using Google Tag Manager, customer consent on the web can be manag
 
 Respond to the data subject (consumer) requests in compliance with regional and state privacy and data protection requirements.
 
--   **Personal Data Access:** Using the [find a user](https://docs.lytics.com/docs/finding-a-user) feature, enter the identifying details provided by the consumer to locate their profile. The profile "created" date refers to the earliest date Lytics collected any data on this user.
+-   **Personal Data Access:** Using the [find a user](/docs/lytics/finding-a-user) feature, enter the identifying details provided by the consumer to locate their profile. The profile "created" date refers to the earliest date Lytics collected any data on this user.
 -   **Personal Data Correction:** If user profile data requires correction, you must send the corrected data to Lytics, which will be remapped to convert the resulting user profile information.
 -   **Determining Categories of Personal Data Collected:** You can use the Lytics UI to obtain information about the categories and specific pieces of PII collected on a consumer in the past 12 months. Again using the find a user feature, you can view the fields of populated data and determine the appropriate consumer PII categories to disclose to a requesting data subject/consumer.
 -   **Personal Data Portability:** We support the export of profile information via the Lytics UI or APIs. An individual’s profile data from Lytics will be downloaded as a JavaScript Object Notation (JSON) file. JSON is a common, machine-readable file format.
