@@ -2,6 +2,7 @@
 title: "Bulk Publish Entries"
 description: "Effortlessly publish multiple content entries with Contentstack's bulk publish feature, ensuring consistency and efficiency across your platforms."
 url: /headless-cms/bulk-publish-entries
+uid: bltb8bba90526b5c581
 ---
 
 # Bulk Publish Entries
@@ -18,13 +19,13 @@ To bulk publish entries, log in to your [Contentstack account](https://www.conte
 2.  Use the checkboxes to select the entries you want to publish.
 3.  After selecting the entries, click the **Publish** option in the floating panel that appears. ![Bulk_Publish_Entries_PublishIcon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta5d82ab37735ef52/6764e41d93a84baf1da341ea/Bulk_Publish_Entries_PublishIcon.png)
 4.  In the **Publish Entries** modal:
-    
+
     1.  **Select Environment(s)**: Select the environment(s) where the entries will be published.
     2.  **Select Language(s)**: Select the locale(s) in which you want the entries published. If localized content exists, it will be selected by default.
     3.  **Publish**: Select whether to publish the entries immediately (**Now**) or at a scheduled time (**Later**).
-    
+
     **Note:** When publishing multiple localized and unlocalized versions of an entry, you can select up to **50 languages** and **50 environments**.
-    
+
     ![Bulk_Publish_Entries_PublishModal1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltde62ae0e98db59e8/678f35439d626e91d411c9e8/Bulk_Publish_Entries_PublishModal1.png)
 5.  Click **Send With References** to publish the selected entries along with their referenced items, or **Send Without References** to publish only the selected entries.
 
@@ -44,5 +45,5 @@ You can roll back items published through a bulk publish action from the Publish
 
 **Additional Resource**:
 
--   For automated bulk publishing, refer to the [Bulk Publish and Unpublish Content](/docs/headless-cms/bulk-publish-and-unpublish-content/) guide.
+-   For automated bulk publishing, refer to the [Bulk Publish and Unpublish Content](/docs/headless-cms/cli-bulk-publish-and-unpublish-content/v1) guide.
 -   To publish with entry variants, refer to our documentation on [Publish an Entry Variant](/docs/headless-cms/publish-an-entry-variant) and [Understanding How Publishing Works with Entry Variants](/docs/headless-cms/understanding-how-publishing-works-with-entry-variants).

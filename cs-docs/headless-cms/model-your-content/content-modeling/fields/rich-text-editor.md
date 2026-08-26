@@ -2,6 +2,7 @@
 title: "HTML-based Rich Text Editor"
 description: "The Rich Text Editor (RTE) allows you to edit and format content entered in the field without using HTML tags (however, you can use HTML tags, if needed)."
 url: /headless-cms/rich-text-editor
+uid: blt2d6bf6e5e60ed54f
 ---
 
 # HTML-based Rich Text Editor
@@ -10,7 +11,7 @@ url: /headless-cms/rich-text-editor
 
 The **HTML-based Rich Text Editor** (**RTE**) field enables users to input different types of content such as text, image, videos, and so on. When you add a HTML-based RTE field in a [content type](/docs/headless-cms/about-content-types), it displays a text area with editing and formatting options in the [entry](/docs/headless-cms/about-entries/) page. This field allows you to edit and format content entered in the field without using HTML tags (however, you can use HTML tags in the HTML mode, if needed).
 
-**Note:** We now have a **JSON Rich Text Editor** that stores content in structured JSON blocks and returns clean data in the response body. You can also migrate content from your HTML-based RTE to the new JSON RTE using our CLI. Read more about our [JSON Rich Text Editor](/docs/headless-cms/about-json-rich-text-editor) and [migration guide](/docs/headless-cms/migrate-content-from-html-rte-to-json-rte).
+**Note:** We now have a **JSON Rich Text Editor** that stores content in structured JSON blocks and returns clean data in the response body. You can also migrate content from your HTML-based RTE to the new JSON RTE using our CLI. Read more about our [JSON Rich Text Editor](/docs/headless-cms/about-json-rich-text-editor) and [migration guide](/docs/headless-cms/cli-migrate-content-from-html-rte-to-json-rte/v1).
 
 ## Customized HTML-based Rich Text Editor
 
@@ -136,7 +137,7 @@ Now when the Content Managers try to edit or create an entry within the selected
 
 ![html-rte-embed-ss6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt609936b3ea6fdb4e/65eb211daac51d29378fa593/html-rte-embed-ss6.png)
 
-  
+
 You can also embed items within your RTE using the **Custom** Editor type.
 
 To do this, log in to your [Contentstack account](https://www.contentstack.com/login), add a **Rich Text Editor** (RTE) field to your content type, and perform the following steps:
@@ -218,9 +219,9 @@ To embed assets in your HTML-based Rich Text Editor field, log in to your [Conte
     A hyperlink of an entry remains static, while a dynamic embedded hyperlink of an entry changes whenever you make any changes to the source entry’s webpage link. You can avoid the manual effort required to change the link across every content type.
 -   **If I update and publish an asset from the asset manager, will the live entry that refers to the updated asset also get updated automatically with the latest asset version?**  
     Yes, when you publish the updated asset, the older published version gets purged from the cache. When a new request hits the server for the asset, the latest version shows up on your website in real-time.
-    
+
     **Note:** This real-time update of frontend items works the same for embedded entries.
-    
+
 -   **Can I publish an embedded entry along with its references?**  
     Yes, you can publish an embedded entry along with its references. However, Contentstack only resolves referenced entries that lie up to one level deep when publishing embedded entries and their references.
 -   **Do embedded entries follow the fallback logic?**  
@@ -241,9 +242,9 @@ To embed a link within your HTML RTE, log in to your Contentstack Account and fo
 1.  Go to your stack and open an entry where you want to embed your social content.
 2.  Within the **HTML RTE** field, click the **Social Embeds** icon. ![RTE Social Embed Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0c5adbb474a38b4f/667e70f9aaed412ace44c762/RTE_Social_Embed_Icon.png)
 3.  In the **Social Embeds** modal that appears, paste the URL or embed code from social media and click the **Add** button to embed your social content within the editor.![RTE Social Embed Link Updated_v2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7af612604702d8f0/667e70fa82ce1dfc803137d3/RTE_Social_Embed_Link_Updated_v2.png)
-    
+
     **Note:** You can use any shareable link from the list of allowed embeds that you see below the Social Embeds modal.
-    
+
 
 Your embedded content should look as follows:
 
@@ -281,7 +282,7 @@ You can indent or outdent content using the **Indent** and **Outdent** icons in 
 -   Malicious content will be removed from the <a>, <b>, <i>, <img>, <svg>, and <details> tags. For example, any JavaScript code within the href attribute of <a> tag will no longer be visible. You can recover this code from previous versions of the entry by referring to the [Compare Entry Versions](https://www.contentstack.com/docs/headless-cms/compare-entry-versions) document.
 -   All event listeners such as onload, onerror, ontoggle, onwheel, onmouseover, oncopy, etc. attached to any tags will be removed to prevent XSS attacks.
 -   Indentation is disabled if text alignment (left, center, right, justify) is applied.
-    
+
 -   Alignment options are disabled for indented blocks.
 -   Tables and their contents cannot be indented.
 -   Converting indented blocks into lists removes the indentation and reverts the list to the root level.

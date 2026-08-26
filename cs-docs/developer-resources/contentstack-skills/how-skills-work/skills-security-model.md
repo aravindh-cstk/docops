@@ -2,17 +2,18 @@
 title: "Security Model"
 description: "See how Contentstack Agent Skills protect management tokens and secrets, gating destructive actions behind confirmation for safe AI-assisted development."
 url: /developers/skills-security-model
+uid: blte3ed709b375d4b6a
 ---
 
 # Security Model
 
 ## Security Model
 
-Use this guide to understand the safety contract every skill follows, so you know what a skill will and won't do without your explicit confirmation, especially around tokens and destructive operations. It covers the default rules shared across CMS, Developer Experience, Launch, Developer Hub, and Brand Kit skills, plus four safety pillars: defaults, destructive actions, secrets, and environment variables.
+Use this guide to understand the safety contract every skill follows, so you know what a skill does and does not do without your explicit confirmation, especially around tokens and destructive operations. It covers the default rules shared across CMS, Developer Experience, Launch, Developer Hub, and Brand Kit skills, plus four safety pillars: defaults, destructive actions, secrets, and environment variables.
 
 ## Product-level defaults
 
-Each skill is tagged with a product, and each product defines baseline safety rules.
+A product tags each skill, and each product defines baseline safety rules.
 
 ### CMS
 
@@ -53,28 +54,28 @@ Each skill is tagged with a product, and each product defines baseline safety ru
 
 Every skill's Security section addresses four areas.
 
-### 1\. Defaults
+### Defaults
 
 The standing rules the skill always applies. For example, that delivery tokens are safe to include in client-side code while management tokens are not, or that Live Preview should never be enabled in production builds.
 
-### 2\. Destructive actions
+### Destructive actions
 
-Most skills are **advisory and read-only**: they explain and generate code but never mutate your stack. They explicitly refuse to delete, publish, unpublish, or overwrite, and will explain the impact instead.
+Most skills are **advisory and read-only**: they explain and generate code but never mutate your stack. They explicitly refuse to delete, publish, unpublish, or overwrite, and explain the impact instead.
 
 **Action skills** can cause external side effects and gate them behind explicit confirmation:
 
--   **Trigger & Monitor Launch Deployments**. Requires explicit confirmation for production deployments. Never auto-deploys. Exits non-zero on failure.
+-   **Trigger and Monitor Launch Deployments**. Requires explicit confirmation for production deployments. Never auto-deploys. Exits non-zero on failure.
 -   **Sync Launch env vars**. Treats any PATCH as a destructive external action. Confirms the target project and environment. Prefers dry-run.
 -   **Migration Companion**. Gates login, stack creation, and code edits behind confirmation.
 
-### 3\. Secrets
+### Secrets
 
 -   No skill ever prints, echoes, infers, or stores secrets.
 -   If you paste a token, the skill acknowledges it at a high level and does not repeat it.
 -   Examples always use placeholders and environment variables.
 -   The Launch skills log only key names and counts, never values.
 
-### 4\. Environment variables
+### Environment variables
 
 Credentials belong in environment variables, never in source or client-visible config. Skills follow these conventions:
 
@@ -92,7 +93,7 @@ A common pattern across CMS skills:
 | **Management token** | No, server-side only | Stack-level read/write (CMA) |
 | **Authtoken / OAuth** | No, server-side only | User sessions and automation (OAuth preferred in SSO orgs) |
 
-**Additional Resource:** Refer to the [Tokens & Authentication](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/cms-tokens-authentication/SKILL.md) documentation for full guidance.
+**Additional Resource:** Refer to the [Tokens & Authentication](https://github.com/contentstack/contentstack-agent-skills/tree/main/skills/cms-tokens-authentication) documentation for full guidance.
 
 ## What this means for you
 
@@ -100,4 +101,4 @@ A common pattern across CMS skills:
 -   **Action skills** pause and ask before doing anything irreversible or production-facing.
 -   The agent does not hardcode credentials. It uses environment variables regardless of how the request is phrased.
 
-**Additional Resource:** Refer to the [Verify your setup](/docs/developers/skills-get-started) documentation for a validation test.
+**Additional Resource:** Refer to the [Verify your setup](https://www.contentstack.com/docs/developers/skills-get-started#verify-your-setup) documentation for a validation test.
