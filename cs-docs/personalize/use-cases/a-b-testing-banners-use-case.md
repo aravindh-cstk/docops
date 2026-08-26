@@ -2,6 +2,7 @@
 title: "Simple Banner Swap A/B Testing Use Cases"
 description: "Discover how to A/B test banner variants using Contentstack Personalize to boost engagement and optimize website personalization."
 url: /personalize/a-b-testing-banners-use-case
+uid: bltc910b81aaf71177b
 ---
 
 # Simple Banner Swap A/B Testing Use Cases
@@ -13,13 +14,13 @@ Imagine your banner space, a prime piece of digital real estate, as a powerful d
 ## What You Will Learn
 
 -   How to create an A/B test experience with two variants and a traffic split.
-    
+
 -   How to define a conversion event and set it as the primary metric.
-    
+
 -   How to create banner content as entry variants.
-    
+
 -   How to set up the Personalize Edge SDK to track impressions and events.
-    
+
 
 ## The Challenge - Why Risks of Untested Content
 
@@ -90,9 +91,9 @@ Contentstack Personalize makes A/B testing banners simple and effective:
 ### Personalize - Create a Project connected to your Stack
 
 1.  Navigate to App Switcher → Personalize → + New Personalize Project
-    
+
     **Additional Resource:** For more information, refer to [Create a Personalize Project.](/docs/personalize/create-personalize-project)
-    
+
 
 ### Personalize - Create Experience with Variants
 
@@ -102,9 +103,9 @@ Contentstack Personalize makes A/B testing banners simple and effective:
 4.  Configure the experience with two variants in the **Configuration** tab.
 5.  In Variant Distribution, choose **Equally split (50/50)** or adjust percentages (**Custom**) if needed.
 6.  Click **\+ Add Variant** to create **Variant A** and **Variant B**. Name the variants based on your use case (for example, for a sale campaign, use Control and Evocative Variant).
-    
+
     **Additional Resource:** For more information, refer to [Create an A/B Test Experience.](/docs/personalize/create-ab-test-experience)
-    
+
 
 ### Personalize - Define Conversion Event
 
@@ -115,16 +116,16 @@ Contentstack Personalize makes A/B testing banners simple and effective:
 ### CMS - Link Content Types
 
 1.  Navigate to the desired Stack → Settings → Variants → select relevant Variant Group → Linked Content Types.
-    
+
     **Note:** Variant Groups and Variants are automatically created based on the Experiences you define in Personalize.
-    
+
     **Additional Resource:** For more information, refer to [Manage Variant Groups](/docs/headless-cms/manage-variant-groups).
-    
+
 2.  In the **Linked Content Types** field, select one or more content types you want to associate with the variant group.
 3.  Click **Apply → Save**.
-    
+
     **Additional Resource:** For more information, refer to [Linking Content Types.](/docs/headless-cms/manage-variant-groups#linking-content-types)
-    
+
 
 ### CMS - Create Personalized Content in Entry Variants
 
@@ -133,9 +134,9 @@ Contentstack Personalize makes A/B testing banners simple and effective:
 3.  Publish these entries to the connected environment.
 4.  Once published, navigate to Personalize → Experiences → Your Experience → Configuration.  
     Map each variant to the correct entry, personalize uses the variant-to-entry mapping to decide in real time which banner each visitor sees based on their audience group.
-    
+
     **Additional Resource:** For more information, refer to [Create an Entry Variant.](/docs/headless-cms/create-an-entry-variant)
-    
+
 
 ### Dev - Setup Personalize Edge SDK: Retrieve active variants and track impressions/events)
 
@@ -144,19 +145,19 @@ Contentstack Personalize makes A/B testing banners simple and effective:
 2.  **Retrieve active variants**
     -   Initialize the SDK on every new page load and get the active variants' aliases for the current visitor. We recommend server-side rendered (SSR) sites place this logic at the edge by using an edge function/middleware.
     -   Pass the active variants aliases to the Contentstack Delivery SDK to fetch the corresponding entry variants.
-        
+
         **Additional Resource:** For more information, refer to [SSR Edge Routing](/docs/personalize/ssr-edge-routing-technical-implementation-architecture), [Setup Next.js with Personalize.](/docs/personalize/setup-nextjs-website-with-personalize-launch)
-        
+
 3.  **Track Impressions**
     -   When displaying a banner, track an impression using the Personalize Edge SDK’s method:triggerImpressions()
-        
+
         **Additional Resource:** For more information, refer to [Trigger Impressions](/docs/developers/sdks/personalize-edge-sdk/javascript/reference#triggerimpressions).
-        
+
 4.  **Track Events**
     -   On click, call triggerEvent('banner\_click', { experienceId, variantAlias })
-        
+
         **Additional Resource:** For more information, refer to [Get Started with Personalize SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk), [Manifest API](/docs/developers/apis/personalize-edge-api/manifest), [Dynamically Track Variant Impressions.](/docs/personalize/dynamically-track-variant-impressions)
-        
+
 
 ### Personalize - Activate the Experience
 

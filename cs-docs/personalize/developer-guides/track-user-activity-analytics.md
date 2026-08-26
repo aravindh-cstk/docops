@@ -2,6 +2,7 @@
 title: "Track User Activity for Analytics"
 description: "Track user activity in Contentstack Personalize to measure impressions, conversions, and A/B test performance with analytics."
 url: /personalize/track-user-activity-analytics
+uid: bltc8761c2ad7845e85
 ---
 
 # Track User Activity for Analytics
@@ -13,13 +14,13 @@ Tracking user activity, such as [Impressions](/docs/personalize/about-events#imp
 ## What You Will Learn
 
 -   How to trigger impressions with the JavaScript Personalize Edge SDK and the Personalize Edge API.
-    
+
 -   How to track impressions dynamically so analytics reflect what the user actually saw.
-    
+
 -   How to track conversions and attribute them to variants in A/B tests.
-    
+
 -   How to track impressions and conversions using Google Tag Manager.
-    
+
 
 ## Track Impressions
 

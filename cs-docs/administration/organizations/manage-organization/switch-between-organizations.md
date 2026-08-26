@@ -2,6 +2,7 @@
 title: "Switch Between Organizations"
 description: "Switch organizations in Contentstack to access and manage stacks across multiple organizations, ensuring smooth workflow and navigation."
 url: /administration/switch-between-organizations
+uid: bltd5dfabada3d6c777
 ---
 
 # Switch Between Organizations
@@ -14,16 +15,16 @@ Contentstack allows you to switch between [organizations](/docs/administration/a
 
 -   [Contentstack account](https://www.contentstack.com/login)
 -   Administration-enabled Organizations with [Member](/docs/administration/about-administration-roles) permissions
-    
+
     **Note:** You can only view organizations in which you are a **Member**.
-    
+
 
 ## What You Will Learn
 
 -   How to switch the active organization.
-    
+
 -   Where to find the organization switcher in the interface.
-    
+
 
 ## Switch the Active Organization
 

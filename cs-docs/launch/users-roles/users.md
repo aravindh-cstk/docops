@@ -2,6 +2,7 @@
 title: "Users"
 description: "Learn about the different users and their roles in Contentstack Launch."
 url: /launch/users
+uid: bltba1dc05d932d65a9
 ---
 
 # Users
@@ -19,13 +20,13 @@ Roles define the scope of actions users can perform based on their level of acce
 ## What You Will Learn
 
 -   The Launch roles and what each role can do.
-    
+
 -   The permissions for each role across Launch resources.
-    
+
 -   How to invite a user to a project.
-    
+
 -   How to remove a user from a project.
-    
+
 
 ## Roles and Capabilities
 
@@ -88,27 +89,27 @@ The following table outlines the permissions for each role across various resour
 3.  From the top panel, click the **Settings** icon. ![Launch_Settings_Top_Panel_2026.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd8d176dbeab238ef/69b79184e1b72b1fca87fca1/Launch_Settings_Top_Panel_2026.png)
 4.  In the **Users** section, click the **Invite User** button. ![Launch_Users_InviteUser.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte9125939a76cc786/673c4acb19d0a88442f248f2/Launch_Users_InviteUser.png)
 5.  In the **Invite User** modal:
-    
+
     -   To assign the **Admin** role to the user, follow the steps below:
-        
+
         1.  Enter the user's email address.
         2.  Select the role as **Admin** from **Roles** drop-down.
         3.  Optionally, add a message for the invitee.
         4.  Click **Invite** to send the invitation.
-        
+
         ![Launch_Users_Admin.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt191d14d60df4ca81/673c4acc7f08481251e9a76f/Launch_Users_Admin.png)
     -   To assign the **Read-Only** role to the user, follow the steps below:
-        
+
         1.  Enter the user's email address.
         2.  Select the role as **Read-Only** from **Roles** drop-down.
         3.  Optionally, add a message for the invitee.
         4.  Click **Invite** to send the invitation.
-        
+
         ![Launch_Users_ReadOnly.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt704e7069810b13d3/673c4acb34cf2e2f9a98e9ab/Launch_Users_ReadOnly.png)
-    
+
     You can invite multiple users by entering their email addresses.  
     The invited user will receive an email. Once they accept the invite and are authorized, their status will update to **Accepted**.
-    
+
     ![Launch_Users_Accepted.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt37c4083a0a00e1a3/673c4acb22e1d8c26e62b55f/Launch_Users_Accepted.png)
 
 ### Remove a User from the Project

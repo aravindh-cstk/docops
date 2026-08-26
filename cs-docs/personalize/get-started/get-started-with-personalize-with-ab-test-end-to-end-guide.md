@@ -2,6 +2,7 @@
 title: "Getting Started with Contentstack Personalize with A/B Testing: An End-to-End Guide"
 description: "Learn how to get started with Contentstack Personalize using A/B testing in this comprehensive end-to-end guide."
 url: /personalize/get-started-with-personalize-with-ab-test-end-to-end-guide
+uid: blt174d1cc4b54d4f41
 ---
 
 # Getting Started with Contentstack Personalize with A/B Testing: An End-to-End Guide
@@ -33,13 +34,13 @@ This step-by-step guide will help you get started quickly with Contentstack Pers
 ## What You Will Learn
 
 -   How to create a Personalize project and connect it to a stack.
-    
+
 -   How to build and activate an A/B test experience with variants and an event.
-    
+
 -   How to create, publish, and manage entry variants in the CMS.
-    
+
 -   How to view experience analytics and act on the winning variant.
-    
+
 
 In this guide, you will create an A/B test to test a different headline on your website, and convert a visitor every time they click the CTA (Call to Action). Let’s dive in and create a Personalize project.
 
@@ -111,9 +112,9 @@ To create an event, perform the following steps:
 
 1.  Click the **Events** tab in the top navigation panel. From the **Events** page, click the **\+ New Event** button.![Events page with New Event button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt19bdbc70d708e4bd/68df65ff5eb723dea2237caf/New_Event.png)
 2.  In the **New Event** modal, provide a suitable **Key** and an optional **Description**.![New Event modal with Key and Description fields](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt403d0c5fd003604e/6752dbbd6073ff09f4de5d5a/11_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
-    
+
     **Note:** You can create custom events to track conversions for common scenarios such as click, add\_to\_cart, checkout and many more.
-    
+
 3.  Once you have done that, click the **Create** button.
 
 This creates a new event in your Personalize project. You can now add the event to an A/B Test experience as a Metric to evaluate the variant performance for conversions.
@@ -131,9 +132,9 @@ To add the created event to an A/B Test experience, perform the following steps:
 3.  Click the **Configuration** tab.
 4.  Scroll to the **Metrics** section and then click **\+ Add Event**.![Metrics section with Add Event button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaa4ab65e635ddc5a/6752dbbd8486f126159a64fb/12_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
 5.  Select the preferred event from the drop-down list.![Event drop-down list in Metrics section](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt085b26ea39665ee4/6752dbbd9dbaba0a4f00ecb5/13_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
-    
+
     **Note:** Use the Personalize Edge SDK to trigger the [impressions](/docs/developers/sdks/personalize-edge-sdk/javascript/reference/personalize#personalize-triggerimpression) and [events](/docs/developers/sdks/personalize-edge-sdk/javascript/reference/personalize#personalize-triggerevent) for your experiences using the triggerImpression and triggerEvent methods.
-    
+
 6.  Once you have done that, click the **Save** button.
 
 This adds the new event as a reference in your A/B Test experience. Now let’s create Entry Variants for your A/B Test experience.
@@ -149,22 +150,22 @@ The Variants page in Contentstack allows you to view and manage all variant grou
 1.  Navigate to the [stack](/docs/headless-cms/about-stack) that we synced with our personalized project in earlier steps.
 2.  In the top navigation panel, click the **Settings** icon (or press **S**) and select **Variants**.
 3.  You will see a list of all **Variant Groups** imported from Personalize. Below is an overview of the key details on this page:
-    
+
     1.  **Variant Group**: Displays the name of the variant group.
     2.  **Linked With**: Indicates the connection status of the variant group with Personalize.
     3.  **Variant(s)**: Shows the total number of variants available within the group.
     4.  **Linked Content-Type(s)**: Lists the total number of content types linked with the variant group.
     5.  **Modified At:** The date and time along with the user name who modified the variant group.
-    
+
     ![Variants page listing Variant Groups from Personalize](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb684b14514ce7092/68df6728d0e856bd0251e2fd/Compass_starter_variants.png)
 4.  When you click a specific **Variant Group**, you will be redirected to the **Variant Group Details** page. On this page, you can view the following details:
-    
+
     1.  **Variant Group Name**: The name of the group.
     2.  **Description**: A brief description of the variant group.
     3.  [**Variants**](/docs/personalize/about-variants): A list of all the variants under this group.
-    
+
     **Note:** You cannot edit the above fields on the **Variant Group Details** page since this information comes from Personalize.
-    
+
 5.  In the **Link** [**Content Types**](/docs/headless-cms/about-content-types) section, select one or more content types you want to link with this variant group.
 6.  Click **Apply** to link the selected content types to the variant group.
 7.  Finally, click **Save** to confirm your changes.
@@ -177,18 +178,18 @@ Entry Variants allow you to deliver customized content to different user groups,
 
 1.  Navigate to the [stack](/docs/headless-cms/about-stack) where you want to create entry variants.
 2.  Click the **Entries** icon in the top navigation panel.
-    
+
     **Note:** Link variant groups to the relevant content type(s) before creating entry variants. Each [experience](/docs/personalize/about-experiences) in your Personalize project appears as a Variant Group in the stack. For linking details, refer to the [Manage Variant Groups and Entry Variants](/docs/headless-cms/manage-variant-groups) document.
-    
+
 3.  In the top navigation panel, click the **Entries** icon and select **Base Entries**.![Entries menu with Base Entries option](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4d43f7224cb3d1b7/68df67d5e943495cec8e71de/Compass_starter_base_variants.png)
 4.  Select the desired variant from the available variant groups to create your entry variant.
 5.  The entry editor will display content from the base entry by default. Enter or edit content in the fields as per the selected variant. This content will be tailored specifically for the configured [audiences](/docs/personalize/about-audiences).
 6.  As soon as you enter or update content for a field, you will see a **Variant Field** tag.![Entry editor showing a Variant Field tag](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb04660987839bcb2/6752dbbdafbfb6b4896bfd92/18_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
 7.  You can click the **Variant Field** dropdown and select **Revert to base entry value** if you want to revert to the base entry content for a specific field.![Variant Field drop-down with Revert to base entry value option](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9a779a418dc0b92c/6752dbbd9cd8ef15547d6875/19_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
 8.  Once satisfied with the content, click **Save** to save the entry variant.![Saving an entry variant in the entry edito](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc51f2ead8089db2a/68df69776011aa24e6754bfe/Compass_starter_variants_save.png)
-    
+
     **Note:** Once saved, the entry variants become independent of the base entry. For more details, refer to the [manage versions of entry variants](/docs/headless-cms/manage-versions-of-entry-variants) document.
-    
+
 
 You can manage and switch between different variants within the entry editor by selecting the relevant variant from the dropdown menu.
 
@@ -199,17 +200,17 @@ You can manage and switch between different variants within the entry editor by 
 3.  Click the **Publish** button within the entry editor.
 4.  In the **Publish Entry Variant** modal that appears, under **Select Environment(s)** and **Select Language(s)**, select the environment(s) and the locale(s) to which you want to publish the entry.
 5.  Under **Publish**, you have two sub-options – **Now** (to publish immediately) and **Later** (to publish at a later date/time that you provide).
-    
+
     When you select “Later”, a group of options appear asking you to select the **Date** and **Time** of publishing, and the **Time-Zone**.
-    
+
 6.  Confirm your settings by clicking the **Send** button.
 7.  If you have nested references within your entry variant, the Publish Reference(s) modal showing all the nested references for the entry will open up.
 8.  Click **Send With References** to send the entry along with all its nested references for publishing.![Publishing an entry variant with references](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2e2f78b58b6b01a1/68df6c65b0493a973accd5d0/publish_variants.gif)
-    
+
     **Note:** If no previous or current version of the base entry is published in the selected environment(s) and language(s), the base entry will be published by default. Learn more about [how publishing works with Entry Variants](/docs/headless-cms/understanding-how-publishing-works-with-entry-variants/).
-    
+
     Alternatively, when publishing the base entry, you can **Select Variant(s)** from the dropdown in the **Publish Entry** modal. Choose from the available entry variants to publish them alongside the base entry.
-    
+
     ![Selecting variants to publish alongside the base entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3976008b038583c5/68df6cc3da110978c146a4e3/page_components_publish_variants.gif)
 
 ## Activate the A/B Test Experience
