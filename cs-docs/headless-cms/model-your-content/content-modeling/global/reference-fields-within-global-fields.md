@@ -2,6 +2,7 @@
 title: "Reference Fields within Global Fields"
 description: "Learn to add Reference fields within Global Fields in Contentstack to maintain consistent, reusable content across multiple entries."
 url: /headless-cms/reference-fields-within-global-fields
+uid: blt99d170d85a8ec558
 ---
 
 # Reference Fields within Global Fields
@@ -30,17 +31,17 @@ To add a Reference field within Global fields, log in to your [Contentstack acco
 
 1.  Navigate to **Content Models**, select **Global Fields**, and click **\+ New Global Field**.
 2.  In the **Create New Global Field** modal, provide a **Name** (e.g., Blog Post) and click **Proceed**.
-    
+
     ![Creating Global Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltee6f4d078ab03098/6808f3f15c6380b053662b2a/1._Global_Fields-Reference_Fields_Within_Global_Fields-Global_Field_Creation.png)
-    
+
 3.  Within the **Global Field**, add the following fields:
-    
+
     -   **Single Line Textbox:** For Blog Title
     -   **JSON Rich Text Editor:** For Blog Content
     -   **Reference field:** To link the **Author Details** content type
-    
+
     ![Adding Reference Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47a47c765b4c7c09/6808f4bc3cded8049cdb62a1/2._global_field_creation.png)
-    
+
 4.  Click **Save and Close**.
 
 ## Step 3: Create Main Content Type
@@ -51,9 +52,9 @@ To add a Reference field within Global fields, log in to your [Contentstack acco
     -   **JSON Rich Text Editor:** Blog Footer
 3.  Click the **Insert a field (+)** icon and select the **Global** field.
 4.  Click the **Select Global Field** field and select the **Blog Post** global field.
-    
+
     ![Main Content Type with Global Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltda09e2630d56083a/6808f4daa7e11bf683283dd3/3._global_field_inside_the_content_type.png)
-    
+
 5.  Click **Save** or **Save and Close**.
 
 Using Reference Fields within Global Fields helps you centralize and reuse content elements across entries. This method is ideal for linking dynamic content such as authors, categories, or partners. It reduces repetitive work, ensures consistency, and supports scalable, maintainable content models.

@@ -2,6 +2,7 @@
 title: "Create Custom Assets Roles"
 description: "Learn how to create custom organization-level roles in Contentstack to manage permissions for assets efficiently, aligning with compliance needs."
 url: /assets/create-custom-assets-roles
+uid: bltfda583e006a35dbd
 ---
 
 # Create Custom Assets Roles

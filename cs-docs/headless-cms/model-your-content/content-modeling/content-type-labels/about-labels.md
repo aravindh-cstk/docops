@@ -2,6 +2,7 @@
 title: "About Labels"
 description: "Organize Content Types effectively with Labels in Contentstack. Categorize, group, and manage content types using branch-specific labels."
 url: /headless-cms/about-labels
+uid: blt7245ee5a28ad86b7
 ---
 
 # About Labels

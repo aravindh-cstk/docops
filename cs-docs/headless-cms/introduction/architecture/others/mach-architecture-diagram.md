@@ -2,6 +2,7 @@
 title: "MACH Architecture Diagram"
 description: "Comprehensive MACH System Architecture Diagram"
 url: /headless-cms/mach-architecture-diagram
+uid: blt839129f5d5407058
 ---
 
 # MACH Architecture Diagram
@@ -33,7 +34,7 @@ Let's discuss these architectural components in detail. 
 -   This allows businesses to auto-scale each service on-demand as the entire setup is now modular. An excellent example of a microservices-based component is AWS Lambda.
 -   In the above architecture, AWS Lambda forms a bridge between Contentstack and other third-party apps such as SendGrid (for email management), Elasticsearch (for search-related operations), and Memsource (for content translation).
 -   You can invoke it by using Contentstack webhooks when a particular event takes place in Contentstack. Using the APIs, it fetches the information from Contentstack and sends it to a third-party app, such as Memsource and vice versa.  
-    
+
 
 ## API-first Component 
 
@@ -41,7 +42,7 @@ Let's discuss these architectural components in detail. 
 -   The API allows your infrastructure to be modular by enabling apps to run independently of each other as services are not tightly coupled and use the APIs to fetch, store, and inject information in different systems or apps. 
 -   All SaaS applications and microservices are connected through the APIs (arrows indicate API communication) in the above architecture. 
 -   Commercertools, SendGrid, Google Analytics, and other services communicate with Contentstack using APIs. Thus, if you replace commercetools with any other app, the infrastructure will still not be affected as you can use other apps and establish communication with Contentstack using the APIs.  
-    
+
 
 ## Cloud-native Component
 
@@ -49,13 +50,13 @@ Let's discuss these architectural components in detail. 
 -   The full functionality of cloud-based apps is updated automatically by the vendor and requires no manual effort whatsoever in its management.
 -   Examples of cloud-native apps include Memsource, SendGrid, Google Analytics, and so on. As a business, you don't have to worry about managing these apps at your end. 
 -   You need to create APIs and connect your systems with these apps. The APIs will exchange information between SaaS apps and your CMS, Contentstack.    
-    
+
 
 ## Headless Component
 
 -   The headless setup refers to the decoupling of the application frontend with the backend. Thus, as a business, you get the flexibility of customizing your frontend experience for your customers. It can be smart devices, desktop or mobile devices, or any other digital touchpoint. 
 -   In the above diagram, Contentstack is an excellent example of a headless system. It lets you choose and use the frontend of your choice and any other DAM, video platform, translation service provider, or email management solution that you may find fit for your infrastructure or business.   
-    
+
 
 ## Next Steps
 
@@ -65,9 +66,9 @@ Let's discuss these architectural components in detail. 
 -   [Simple Website](/docs/headless-cms/simple-website-detailed-architecture)
 -   [Dynamic website architecture](/docs/headless-cms/dynamic-website-detailed-architecture)
 -   [Partially headless setup architecture](/docs/headless-cms/partially-headless-setup-detailed-architecture)  
-    
+
 -   [Layered architecture for Contentstack-powered websites](/docs/headless-cms/contentstack-powered-website-layered-architecture)  
-    
+
 -   [Cloud infrastructure diagram](/docs/headless-cms/cloud-infrastructure-architecture-for-contentstack-powered-websites)
 -   [Simple Website using DataSync](/docs/headless-cms/simple-website-using-datasync)
 -   [Mobile or Smart Devices System Architecture](/docs/headless-cms/mobile-and-smart-devices-system-architecture) 

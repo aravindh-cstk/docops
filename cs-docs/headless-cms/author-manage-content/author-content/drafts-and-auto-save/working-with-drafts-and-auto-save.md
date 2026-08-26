@@ -2,6 +2,7 @@
 title: "Working with Drafts and Auto Save"
 description: "Learn how to work with Drafts and Auto Save in Contentstack, including draft lifecycle, version differences, collaboration controls, and limitations."
 url: /headless-cms/working-with-drafts-and-auto-save
+uid: blt062d599fbdad9efe
 ---
 
 # Working with Drafts and Auto Save

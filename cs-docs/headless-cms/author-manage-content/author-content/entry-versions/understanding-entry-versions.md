@@ -2,6 +2,7 @@
 title: "Understanding Entry Versions"
 description: "Learn how to manage, compare, and restore entry versions in Contentstack for efficient content management."
 url: /headless-cms/understanding-entry-versions
+uid: blt463d4e05497b17fc
 ---
 
 # Understanding Entry Versions

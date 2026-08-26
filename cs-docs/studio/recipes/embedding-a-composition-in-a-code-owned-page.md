@@ -2,6 +2,7 @@
 title: "Embedding a Composition in a Code-Owned Page"
 description: "Learn how to embed a Studio-managed composition region inside a code-owned page using compositionUid, with CSR and SSR examples."
 url: /studio/embedding-a-composition-in-a-code-owned-page
+uid: blt66f402b33f0bc723
 ---
 
 # Embedding a Composition in a Code-Owned Page

@@ -2,6 +2,7 @@
 title: "About Spaces and Workspaces"
 description: "Optimize asset management and experimentation with Spaces and Workspaces in Contentstack. Ensure organized, compliant, and flexible governance."
 url: /assets/about-spaces-and-workspaces
+uid: blt49a899ce4183717d
 ---
 
 # About Spaces and Workspaces
@@ -61,6 +62,6 @@ Within a space, you can create workspaces. Workspaces act as parallel environmen
 | Safely test new asset schemas or metadata | cancel | check\_circle |
 | Branch assets to align with CMS content variants | cancel | check\_circle |
 
-  
+
 
 By combining spaces and workspaces correctly, Assets provides both structural clarity and operational flexibility, ensuring assets are always organized, governed, and adaptable.

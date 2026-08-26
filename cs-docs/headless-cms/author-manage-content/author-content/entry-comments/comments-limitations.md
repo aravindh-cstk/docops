@@ -2,6 +2,7 @@
 title: "Comments Limitations"
 description: "Learn about the limitations of comments in Contentstack: active discussions, max comments, message length, mentions, and export restrictions."
 url: /headless-cms/comments-limitations
+uid: blt5ed41af4cf87df86
 ---
 
 # Comments Limitations

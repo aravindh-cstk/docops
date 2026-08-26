@@ -2,6 +2,7 @@
 title: "Hero Banner"
 description: "The Hero Banner content model is a well-structured system designed for front-page hero banner content information on your website."
 url: /headless-cms/hero-banner
+uid: blt6fb888fb78a2ac7d
 ---
 
 # Hero Banner
@@ -15,21 +16,21 @@ The Hero Banner Content Model is a thoughtfully designed system for gathering an
 Let’s understand how this content model will assist you in creating a Hero Banner for your webpage.
 
 1.  ## Analyzing Requirements for the Hero Banner
-    
+
     The “Hero Banner” in your webpage will be the point of attraction for your webpage. It will include the brief details about your webpage and a Call-to-Action (CTA) button for the users.
-    
+
     Here is how a Hero Banner will look like on your webpage:
-    
+
     ![Analyze_Requirements_for_the_Hero_Banner.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt77b5ad3f25865f93/65360bf2d3195307fa0dafba/Analyze_Requirements_for_the_Hero_Banner.png)
 2.  ## Identifying Content Model
-    
+
     Let's identify the fields that create the Hero Banner for your webpage content type that you see in the above step.
-    
+
     ![Identifying_the_Content_Model_for_the_Hero_Banner.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt699d351b92ebeefd/65360bf25904dc7e3daa336f/Identifying_the_Content_Model_for_the_Hero_Banner.png)
 3.  ## Developing Content Type
-    
+
     The “Hero Banner” content model contains the following set of fields. Let’s look in detail at what content types and fields were used to create the model.
-    
+
     **Hero Banner** Content Type:   
     **Banner Title**: This is a [Title](/docs/headless-cms/title) field where you will add a unique name to your banner. It is a mandatory field and must be clear and concise.   
     **Banner Image**: This field allows you to insert images in your banner. We have used a [File](/docs/headless-cms/file/) field to make this possible.  

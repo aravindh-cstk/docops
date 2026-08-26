@@ -2,6 +2,7 @@
 title: "Custom Preview URLs"
 description: "Enhance your preview capabilities with Contentstack's Custom Preview URLs, supporting dynamic routing, taxonomies, and multi-domain previews efficiently."
 url: /headless-cms/custom-preview-urls
+uid: blt96404544e9989686
 ---
 
 # Custom Preview URLs
@@ -73,16 +74,16 @@ To configure Custom Preview URLs, log in to your [Contentstack Account](https://
 2.  Navigate to **Visual Experience** and select the **Preview URL** tab.
 3.  Enable the **Custom Preview URL** toggle.![1._Enable_the_Custom_Preview_URL_toggle.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3fd981bb6e353e19/69bd7ce400c6f069c0875c65/1._Enable_the_Custom_Preview_URL_toggle.gif)
 4.  Under **Base URL**, define one or more aliases. Aliases allow you to define multiple hostnames for the same content. Each alias contains a **name** (identifier) and a **base URL pattern**.
-    
+
     **Tip:** Use aliases to preview the same content across multiple domains or brand-specific hostnames.
-    
+
     ![2._Base_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6e2400fce816271f/69bd7cf7d4ee4e0d96d09fd8/2._Base_URL.png)
 5.  Define the **URL Path**:
-    
+
     1.  Enter a **path name** for the preview route.
     2.  Select the **Branch** where the configuration applies.
     3.  Choose whether the pattern applies to **All content types** or only to **Specific content types**.
-    
+
     ![3._URL_Path.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6eb3587fb476e2b4/69bd7d1f5af5239d6c960288/3._URL_Path.png)
 6.  Build **preview URLs** using dynamic placeholders in the pattern. Placeholders use the {{...}} syntax and can reference:
     1.  **Entry fields**: {{entry.slug}}, {{entry.title}}, {{entry.uid}}
@@ -90,13 +91,13 @@ To configure Custom Preview URLs, log in to your [Contentstack Account](https://
     3.  **Context variables**: {{environment}}, {{locale}}, {{branch}}, {{contentTypeUid}}
     4.  **Reference fields**: {{entry.author.name}}, {{entry.parent.url}}
     5.  **Taxonomy values**: {{taxonomy:brand}}
-        
+
         **Tip:** Use {{entry.<field\_uid>}} to access any field dynamically, including nested reference fields.
-        
+
 7.  Click **Save** after testing your URLs and applying any advanced configurations described in the following sections.
-    
+
     **Note:** If multiple configurations exist, Live Preview evaluates them in order and applies the first matching configuration.
-    
+
 
 ### Test Your Configuration
 
@@ -465,11 +466,11 @@ Live Preview handles URL resolution failures through a combination of defaults, 
 2.  **Default Value Handling:** If a required value is missing, the system checks for a default value defined in Advanced Config and uses it if available.
 3.  **Error Handling:** If a required value is still missing after applying defaults, Live Preview displays an error screen indicating which value could not be resolved. This helps identify gaps in the configuration.
 4.  **System Fallback:** In cases where URL resolution fails due to processing errors (such as invalid transformations), Live Preview falls back to the traditional behavior:
-    
+
     ```
     <base URL> + <entry URL field>
     ```
-    
+
 5.  **Base URL Fallback:** If the entry does not contain a URL field value, only the base URL is loaded.
 
 This layered approach ensures that:

@@ -2,6 +2,7 @@
 title: "Add a New User"
 description: "steps to add a new user in the stack"
 url: /headless-cms/add-a-new-user
+uid: blt8f01ec013cd719fb
 ---
 
 # Add a New User
@@ -15,7 +16,7 @@ A [user](/docs/headless-cms/about-stack-users) with the required permissions can
 To add a new user in the stack, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 
 1.  Go to the stack where you want to add a user  
-    
+
 2.  Click the “Settings” icon on the left navigation panel, and select **Users & Roles**. This will open the **Users & Roles** page where you can see the list of all the existing users (collaborators) of the stack along with their details.
 3.  Click on the **Invite User** button located at the top right corner of the page.
 4.  The **Invite User** forms opens up where you can add the following details:

@@ -2,6 +2,7 @@
 title: "Framework Agnostic CSR Hosting on Launch"
 description: "Learn about the Framework Agnostic CSR Hosting and its supported features in Contentstack Launch."
 url: /launch/framework-agnostic-csr-hosting-on-launch
+uid: blt2eeb92c22e939886
 ---
 
 # Framework Agnostic CSR Hosting on Launch

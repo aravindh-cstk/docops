@@ -2,6 +2,7 @@
 title: "Localize an Asset"
 description: "Learn how to localize assets in Contentstack to create region-specific content, enhancing engagement with tailored metadata and language-specific offerings."
 url: /assets/localize-an-asset
+uid: blt52e636120f4442e9
 ---
 
 # Localize an Asset
