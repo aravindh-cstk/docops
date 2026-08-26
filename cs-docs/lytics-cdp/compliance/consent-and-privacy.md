@@ -2,6 +2,7 @@
 title: "Consent and Privacy"
 description: "Discover how Lytics CDP helps manage customer data consent with granularity, ensuring privacy compliance and trust."
 url: /lytics/consent-and-privacy
+uid: blt117ce49a69254039
 ---
 
 # Consent and Privacy
@@ -27,7 +28,7 @@ To maintain compliance with data privacy regulations, businesses need a clear an
 -   **Granularity of the consent**. Is this a simple boolean (on or off), or is it more granular, such as opting into specific communication methods?
 -   **Additional context** related to the consent. Are there specific forms being consented to or a unique source?
 
-To address these considerations, Lytics offers a suggested schema to get you started. This schema can be customized via [Conductor](https://docs.lytics.com/docs/getting-started-with-conductor) to meet your specific needs.
+To address these considerations, Lytics offers a suggested schema to get you started. This schema can be customized via [Conductor](/docs/lytics/getting-started-with-conductor) to meet your specific needs.
 
 ## Data Structure
 
@@ -41,4 +42,4 @@ Effective consent management requires a comprehensive set of properties that can
 | Date | An optional parameter to capture the timestamp of the most recent consent. Useful for tracking time-bound consent and prompting re-consent if the validity period has lapsed. |
 | Documents | The documents array in the default schema provides additional context about the source of consent. For example, it can indicate whether consent was given via a global site-wide agreement or a specific call to action during a transaction. Including this field helps prevent the loss of critical context during execution. The values and formats are determined by the data manager. |
 
-**Additional Resource:** To learn more, refer to the Lytics CDP [Consent & Privacy](https://docs.lytics.com/docs/consent) documentation.
+**Additional Resource:** To learn more, refer to the Lytics CDP [Consent & Privacy](/docs/lytics/consent) documentation.
