@@ -2,6 +2,7 @@
 title: "PubNub"
 description: "PubNub"
 url: /agent-os/pubnub
+uid: blt76efc9294eee8fbf
 ---
 
 # PubNub
@@ -19,14 +20,14 @@ Perform the following steps to set up the PubNub action connector:
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **PubNub** connector.  
     ![Pubnub.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltafc2d8b997f15d09/6527f8d688bee5e9408713cf/Pubnub.png)  
-    
+
 4.  Under **Choose an Action** tab, select the **Send Message** action.  
     ![Select-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc11ec9a703d4356c/63dbb13814a2b44fa11decea/Select-Action.png)
 5.  Click the **\+ Add New Account** button to select your PubNub account.
 6.  Now, add the **Publish Key** and the **Subscribe Key** of your PubNub account to connect it with Contentstack. You can generate the Publish and Subscribe key by navigating to **Keysets** in your PubNub dashboard.
-    
+
     Refer to the Application Setup document for more information.
-    
+
     ![api.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltffbf7fc9634dd6f6/63dbb13911a22c0d98232667/api.png)
 7.  Click the **Authorize** button.  
     ![Authorize.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c44e4d96180c801/63dbb138eace6a21b8fc18c7/Authorize.png)
