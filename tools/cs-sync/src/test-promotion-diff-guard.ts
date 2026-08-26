@@ -20,6 +20,7 @@ import {
   stripMetadataFields,
   stripNestedKeys,
   canonicalize,
+  getPublishedVersion,
   SANDBOX_METADATA_FIELDS,
   type ContentstackEntry,
 } from "./lib/entry-content.js";
@@ -217,6 +218,53 @@ async function main() {
     const tags = withSrcHashTag(["pr-439", srcHashTag("aaaaaaaaaaaa")], "bbbbbbbbbbbb");
     assert.deepEqual(tags, ["pr-439", srcHashTag("bbbbbbbbbbbb")]);
     assert.equal(extractSrcHashFromTags(tags), "bbbbbbbbbbbb");
+  });
+
+  console.log("\npublished-version resolution");
+
+  // A real bug: a Prod entry edited directly, then Sandbox promotion
+  // re-publishes Staging/Development afterward. Without pinning to the
+  // requested environment, getPublishedVersion picked whichever record was
+  // most recently published *anywhere*, silently masking the Production
+  // edit with stale Staging/Development content.
+  const multiEnvEntry: ContentstackEntry = {
+    uid: "u",
+    title: "T",
+    url: "/u",
+    publish_details: [
+      { environment: "staging-uid", time: "2026-08-26T14:30:49.079Z", version: 3 },
+      { environment: "development-uid", time: "2026-08-26T14:30:49.079Z", version: 3 },
+      { environment: "production-uid", time: "2026-08-26T14:29:57.580Z", version: 2 },
+    ],
+  };
+
+  await test("with no env, falls back to the most recently published record anywhere", () => {
+    assert.equal(getPublishedVersion(multiEnvEntry), 3);
+  });
+
+  await test("with env pinned, resolves that environment's own version even if it is not the newest", () => {
+    assert.equal(getPublishedVersion(multiEnvEntry, { uid: "production-uid", name: "production" }), 2);
+    assert.equal(getPublishedVersion(multiEnvEntry, { uid: "staging-uid", name: "staging" }), 3);
+  });
+
+  await test("env matches by name as well as by uid", () => {
+    const nameKeyedEntry: ContentstackEntry = {
+      uid: "u",
+      title: "T",
+      url: "/u",
+      publish_details: [
+        { environment: "production", time: "2026-08-26T14:29:57.580Z", version: 2 },
+        { environment: "staging", time: "2026-08-26T14:30:49.079Z", version: 3 },
+      ],
+    };
+    assert.equal(
+      getPublishedVersion(nameKeyedEntry, { uid: "production-uid", name: "production" }),
+      2,
+    );
+  });
+
+  await test("env with no matching record falls back to any-environment behavior", () => {
+    assert.equal(getPublishedVersion(multiEnvEntry, { uid: "preview-uid", name: "preview" }), 3);
   });
 
   console.log("\nconflict guard");

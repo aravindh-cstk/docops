@@ -314,6 +314,23 @@ function toPublishRecords(publishDetails: unknown): PublishRecord[] {
 }
 
 /**
+ * Narrows publish records down to the ones naming `env`, matching by UID or
+ * name the same way isPublishedTo does. Falls back to the full list when
+ * none name an environment at all (an older payload shape), rather than
+ * reporting no records and losing the entry entirely.
+ */
+function filterRecordsByEnvironment(
+  records: PublishRecord[],
+  env: { uid: string; name: string },
+): PublishRecord[] {
+  const wanted = new Set([env.uid.toLowerCase(), env.name.toLowerCase()]);
+  const matched = records.filter(
+    (r) => typeof r.environment === "string" && wanted.has(r.environment.toLowerCase()),
+  );
+  return matched.length > 0 ? matched : records;
+}
+
+/**
  * The version number a human last published, or null if it cannot be
  * determined from the payload.
  *
@@ -321,9 +338,26 @@ function toPublishRecords(publishDetails: unknown): PublishRecord[] {
  * falling back to the entry's latest version is the whole point: the latest
  * version may be an unpublished draft, and guessing here is what previously
  * pushed half-finished edits into the Prod stack.
+ *
+ * An entry can carry separate publish records per environment, each at its
+ * own version — Staging and Development get re-published on every promotion
+ * run, independently of whatever a human most recently published straight to
+ * Production. Pass `env` to resolve "the version published to *this*
+ * environment" rather than "the most recently published version anywhere",
+ * which would otherwise let a same-second Staging/Development promotion mask
+ * a genuine, older-timestamped Production edit. Omitted (as Sandbox callers
+ * do, since Sandbox intentionally treats "published to any environment" as
+ * one signal) it falls back to the most recent record across all of them. If
+ * `env` is given but no record names it — an older payload shape without
+ * per-record environment info — falls back to the same any-environment
+ * behavior rather than reporting unresolved.
  */
-export function getPublishedVersion(entry: ContentstackEntry): number | null {
-  const records = toPublishRecords(entry.publish_details);
+export function getPublishedVersion(
+  entry: ContentstackEntry,
+  env?: { uid: string; name: string },
+): number | null {
+  const allRecords = toPublishRecords(entry.publish_details);
+  const records = env ? filterRecordsByEnvironment(allRecords, env) : allRecords;
 
   let best: { version: number; time: number } | null = null;
 
