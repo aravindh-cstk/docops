@@ -2,6 +2,7 @@
 title: "Update a Workflow"
 description: "Learn how to update an existing workflow in Contentstack to modify its configuration as your content processes evolve."
 url: /headless-cms/update-a-workflow
+uid: blt9a1ec2827b2eae5e
 ---
 
 # Update a Workflow
@@ -28,13 +29,13 @@ To update a workflow in your stack, log in to your [Contentstack account](https:
     -   At least two distinct users or a multi-member role must have permission to advance the entry.
     -   If only one user or a single-member role is assigned, a validation message prompts you to add additional approvers.  
         ![Set_Permissions_and_Prevent_Self-Advancement.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt427bf66ff9a7c92e/690906bf531ab077e4281aee/Set_Permissions_and_Prevent_Self-Advancement.png)
-        
+
         **Tip:** Enable **Prevent self-advancement** for sensitive or compliance-driven workflows to maintain editorial accountability.
-        
+
 7.  To remove a workflow stage, click the **Delete** icon.![remove_a_workflow_stage.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt39a02274900bb88d/690908690570b239b699abd0/remove_a_workflow_stage.png)
-    
+
     **Note:** Deleting a stage permanently removes it from the workflow. If any entries are currently in that stage, they will **no longer be associated with a workflow stage** after deletion. You may need to manually move or reassign those entries to another stage to maintain continuity in your workflow process.
-    
+
 8.  Click **Save** to apply your updates.
 
 The updated workflow settings automatically apply to entries associated with the relevant content types.

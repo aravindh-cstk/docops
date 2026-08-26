@@ -2,6 +2,7 @@
 title: "Set Component Default Data"
 description: "Learn how schema defaultValue props and the runtime data prop on StudioComponent let you seed components with placeholder and external data in Contentstack Studio."
 url: /studio/set-component-default-data
+uid: blt54fb6aaae4f0f0ea
 ---
 
 # Set Component Default Data

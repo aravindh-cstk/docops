@@ -2,6 +2,7 @@
 title: "Choosing Between CSR and SSR Rendering"
 description: "Learn how to choose between client-side and server-side rendering in Contentstack Studio, including patterns for Next.js, Remix, and Vite."
 url: /studio/choosing-between-csr-and-ssr-rendering
+uid: blt50d99f950ea64b2b
 ---
 
 # Choosing Between CSR and SSR Rendering

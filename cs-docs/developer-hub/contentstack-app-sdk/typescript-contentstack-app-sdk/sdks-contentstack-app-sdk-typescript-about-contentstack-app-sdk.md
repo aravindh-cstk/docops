@@ -2,6 +2,7 @@
 title: "About Contentstack App SDK"
 description: "Build custom apps in the Contentstack UI with the App SDK to extend UI locations, access entry data, and integrate APIs for predictable, in-context workflows."
 url: /developers/sdks/contentstack-app-sdk/typescript/about-contentstack-app-sdk
+uid: bltc012574284919922
 ---
 
 # About Contentstack App SDK

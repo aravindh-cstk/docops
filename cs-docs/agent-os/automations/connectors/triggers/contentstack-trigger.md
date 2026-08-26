@@ -2,6 +2,7 @@
 title: "Contentstack Trigger"
 description: "Contentstack Trigger"
 url: /agent-os/contentstack-trigger
+uid: blt5039971eb433e82e
 ---
 
 # Contentstack Trigger
@@ -27,9 +28,9 @@ To use the Contentstack Management connector, you first need to add your [Conten
     ![Authorize_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6b3e4620943849cf/660a41ca1b5a584959adc9e8/Authorize_Account.png)
     1.  If you select **Contentstack OAuth** and click **Proceed**, the Manage Permissions modal will open, as shown below. Provide the OAuth permissions for all the values by checking the boxes and click **Authorize**.  
         ![Authorize_Org.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt29a9f4a3b919e034/6683e87a534bb9b8ac26b131/Authorize_Org.png)
-        
+
         **Note:** Contentstack offers support for [Branches](/docs/headless-cms/about-branches/) in Automations. You must authenticate and re-authorize your existing account by checking all the permissions to add your Contentstack account.
-        
+
     2.  In the pop-up, select your organization to complete the authorization.  
         ![Select_Organization.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt96ced61a3a48f48b/656daf7dae62f7796af682fd/Select_Organization.png)
     3.  In the pop-up that appears, view the module-specific access rights provided to the app. Click **Authorize** to complete authorization.  
@@ -37,7 +38,7 @@ To use the Contentstack Management connector, you first need to add your [Conten
     4.  Provide an Account Name and then click **Save**.  
         ![Save_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaa0dd4d11504d599/6601a877c19510f2b7decebe/Save_Account.png)
     5.  If you select **Management Token** and click **Proceed**, the **Authorize** modal will open. Enter a **Title** and the **Management Token** of your stack and click **Authorize**.  
-        
+
 
 Once done, you can go ahead and set up your Contentstack Trigger.
 
@@ -73,7 +74,7 @@ Let’s look at the steps to set up the trigger event.
     1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](#connect-your-contentstack-account) step.
     2.  Select the trigger event from the dropdown, i.e., **Asset Created** and select a **Stack**, and **Branch** from the **Lookup** dropdown.  
         For Asset Trigger, you will find the following events:
-        
+
         -   **Asset Created:** When you create a new asset in your stack.
         -   **Asset Updated:** When you update an asset.
         -   **Asset Deleted:** When you delete an asset.
@@ -82,11 +83,11 @@ Let’s look at the steps to set up the trigger event.
         -   **Asset Unpublished:** When you unpublish or remove your assets from a publishing environment.
         -   **Asset Unpublish Failed:** When the asset unpublishing activity fails.
         -   **ALL:** When you perform any of the above activities on an asset.
-        
+
         ![Asset_Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcf5f0e8e22d99428/66a8c42aa4a6574b3a1de3c7/Asset_Select_Fields.png)
-        
+
         **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
-        
+
     3.  **\[Optional\]** Enable the **Show Optional Fields** toggle button to display the **Environment** field.  
         ![Select_Environment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6a2e4ca52e57051e/66a8c42ac10344956206767f/Select_Environment.png)
 3.  Click **Proceed**.
@@ -121,9 +122,9 @@ Let’s look at the steps to set up the trigger event.
             ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt58b59cb4c311e248/663dd3b52a72d9c4e617a4c8/Select_Fields.png)
 3.  Click **Proceed**.
 4.  Click **Test Trigger** to execute and test the trigger that you configured.
-    
+
     **Note:** You can preview the latest data created in Contentstack without performing the trigger event. The latest data will be fetched and displayed to you after you test the trigger. You must click **Retest** to fetch the data you created in Contentstack.
-    
+
     ![Test_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt24e8d29ae35d4edc/663dd3b5e7f45d8a038b0889/Test_Trigger.png)
 5.  When successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.  
     ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltde5c57a395066086/663dd3b5f6a9a3c7cb286b79/Save_Exit.png)
@@ -141,23 +142,23 @@ Let’s look at the steps to set up the trigger event.
     1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](#connect-your-contentstack-account) step.
     2.  Select the trigger event from the dropdown, i.e., **Content Type Created** and select a **Stack,** and **Branch** from the **Lookup** dropdown  
         For Content Type Trigger, you will find the following events:
-        
+
         -   **Content Type Created:** When you create a new content type.
         -   **Content Type Updated:** When you update a content type.
         -   **Content Type Deleted:** When you delete a content type.
         -   **ALL:** When you perform any of the above activities on a content type.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt68a8a7f581aea3be/66a8c6d1cfbd234e8d7d780c/Select_Fields.png)
-        
+
         **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
-        
+
     3.  **\[Optional\]** Enable the **Show Optional Fields** toggle button to display the specific **Content Type.**  
         ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfaea3f83a9644f0b/66a8c6d12fce4547746fce33/Show_Optional_Fields.png)
 3.  Click **Proceed**.
 4.  Click **Test Trigger** to execute and test the trigger that you configured.
-    
+
     **Note:** You can preview the latest data created in Contentstack without performing the trigger event. The latest data will be fetched and displayed to you after you test the trigger. You must click Retest to fetch the data you created in Contentstack.
-    
+
     ![Test_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte1f5a4cabcbbd040/66a8c6d2610c41ad51420395/Test_Trigger.png)
 5.  If successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.  
     ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt91022d0b2bbd08c8/66a8c6d1a3b12ea8d05f5e13/Save_Exit.png)
@@ -172,11 +173,11 @@ Let’s look at the steps to set up the trigger event.
 
 1.  Under the **Choose Trigger** tab, select **Entry Trigger**.
 2.  On the **Entry Trigger Configure Trigger** page, enter the details given below:
-    
+
     1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](#connect-your-contentstack-account) step.
     2.  Select the trigger event from the dropdown, i.e, **All.** Select a **Stack,** and **Branch** from the **Lookup** dropdown.  
         For Entries, you will find the following module-specific sub-events:
-        
+
         -   **Entry Created:** Triggers when you create a new entry
         -   **Entry Updated:** Triggers when you update an entry
         -   **Entry Deleted:** Triggers when you delete an entry
@@ -185,18 +186,18 @@ Let’s look at the steps to set up the trigger event.
         -   **Entry Publish Failed:** Triggers when an entry publish activity fails
         -   **Entry Unpublish Failed:** Triggers when an entry unpublish activity fails
         -   **ALL:** Triggers when you perform any of the above activities on an entry
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt48e7ff07c8e624e8/66a8c762a4a6576d3d1de3e2/Select_Fields.png)
-        
+
         **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
-        
+
     3.  **\[Optional\]** Enable the **Show Optional Fields** toggle button to display the **Content Type** and **Environment** fields.  
         ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt34fd59d3f677bf5e/66a8c763bb9512d459022a5c/Show_Optional_Fields.png)
 3.  Click **Proceed**.
 4.  Click **Test Trigger** to execute and test the trigger that you configured.  
-    
+
     **Note:** You can preview the latest data created in Contentstack without performing the trigger event. The latest data will be fetched and displayed to you after you test the trigger. You must click Retest to fetch the data you created in Contentstack.
-    
+
     ![Test_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5423f11615bd9c50/66a8c763610c41ff4d4203a9/Test_Trigger.png)
 5.  If successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.  
     ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte25d7f8ba6a86685/66a8c762610c4192cb4203a5/Save_Exit.png)
@@ -217,26 +218,26 @@ Let’s look at the steps to set up the trigger event.
     1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](#connect-your-contentstack-account) step.
     2.  Select the trigger event from the drop-down, i.e, **Entry Comment Created**. Select a **Stack**, and **Branch** from the **Lookup** drop-down.  
         For Entry Comment Trigger, you will find the following module-specific sub-events:
-        
+
         -   **Entry Comment Created**: Triggers when you create a new entry comment.
         -   **Entry Comment Updated**: Triggers when you update an entry comment.
         -   **Entry Comment Deleted**: Triggers when you delete an entry comment.
         -   **All**: Triggers when you perform any of the above activities on an entry comment.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6916aa80ab5143c6/663d993d1077fa35b2de775c/Select_Fields.png)
-        
+
         **Note:** By default, the main branch is selected (even if the **Branch** field is empty).
-        
+
     3.  **\[Optional\]** Enable the **Show Optional Fields** toggle button to display the **Content Type** and **Entry** fields.
-        
+
         **Note:** If you do not select any content type or entry, you will be able to invoke the trigger event on all entries or content types within the selected stack.
-        
+
         ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt005448c74ebcb302/663d993d907afe2ae9af8b0d/Show_Optional_Fields.png)
 3.  Click **Proceed**.
 4.  Click **Test Trigger** to execute and test the trigger that you configured.
-    
+
     **Note:** You can preview the latest data created in Contentstack without performing the trigger event. The latest data will be fetched and displayed to you after you test the trigger. You must click **Retest** to fetch the data you created in Contentstack.
-    
+
     ![Test_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfc5c9c19d0b2d8f1/663d993dd94eaf19afd2b50f/Test_Trigger.png)
 5.  When successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.  
     ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt90b3ebc958a4cfde/663d993df807b270b8e9c783/Save_Exit.png)
@@ -259,27 +260,27 @@ Let’s look at the steps to set up the trigger event.
 2.  On the **Entry Variant Trigger Configure Trigger** page, enter the details given below:
     1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](#connect-your-contentstack-account) step.
     2.  Select the trigger event from the dropdown, for example, **All**. Then, select a **Stack** and a **Branch** from the **Lookup** list.
-        
+
         For Entry Variant Trigger, you will find the following module-specific sub-events:
-        
+
         -   **Entry Variant Created**: Triggers when you create a new entry variant.
         -   **Entry Variant Updated**: Triggers when you update an entry’s variant.
         -   **Entry Variant Deleted**: Triggers when you delete an entry’s variant.
         -   **All**: Triggers when you perform any of the above activities (create/update/delete) on an entry variant.
-        
+
         **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
-        
+
         ![ConfigureTrigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt69edc54d1522524b/678f78dce698989394282e94/ConfigureTrigger.png)
     3.  **Optionally**, enable the **Show Optional Fields** toggle button to display the **Content Type**, **Entry**, **Variant Group**, and **Variant** fields.
-        
+
         **Note:** If you do not select any of the optional fields, you will be able to invoke the trigger event on **all** entries, content types, and variants within the selected stack.
-        
+
         ![ShowOptionalFields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt174c3e2582a4476a/678f78dcee8f383da0aa3858/ShowOptionalFields.png)
 3.  Click **Proceed**.
 4.  Click **Test Trigger** to execute and test the trigger that you configured. ![TestTrigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltca4639637c6ae4fc/678f78dcff9d110e7b7d9f08/TestTrigger.png)
-    
+
     **Note:** You can preview the latest data created in Contentstack without performing the trigger event. The latest data will be fetched and displayed to you after you test the trigger. You must click **Retest** to fetch the data you created in Contentstack.
-    
+
 5.  When successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**. ![SaveandExit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltedaad628d6cb4908/678f78dc4a780327276c05da/SaveandExit.png)
 
 This sets your Entry Variant Trigger.
@@ -295,23 +296,23 @@ Let’s look at the steps to set up the trigger event.
     1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](#connect-your-contentstack-account) step.
     2.  Select the trigger event from the dropdown, i.e., **Global Field Created** and select a **Stack**, and **Branch** from the **Lookup** dropdown.  
         For Global Field, you will find the following events:
-        
+
         -   **Global Field Created:** When you create a global field.
         -   **Global Field Updated:** When you update a global field.
         -   **Global Field Deleted:** When you delete a global field.
         -   **ALL:** When you perform any of the above activities on a global field.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6cffde88d5783c4b/66a8c89590e89a563a2900bc/Select_Fields.png)
-        
+
         **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
-        
+
     3.  **\[Optional\]** Enable the **Show Optional Fields** toggle button to display the specific **Global Field**.  
         ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfa2dc451a42560aa/66a8c8952b7be565f8a766ab/Show_Optional_Fields.png)
 3.  Click **Proceed**.
 4.  Click **Test Trigger** to execute and test the trigger that you configured.
-    
+
     **Note:** You can preview the latest data created in Contentstack without performing the trigger event. The latest data will be fetched and displayed to you after you test the trigger. You must click Retest to fetch the data you created in Contentstack.
-    
+
     ![Test_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt166006749e78202d/66a8c895adec83574f2d0cd8/Test_Trigger.png)
 5.  If successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.  
     ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9410922cf0c39ae2/66a8c89555b2352912e7ad99/Save_Exit.png)
@@ -331,22 +332,22 @@ Let’s look at the steps to set up the trigger event.
     1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](#connect-your-contentstack-account) step.
     2.  Select the trigger event from the drop-down, i.e, **Job Published**. Select a **Stack** from the **Lookup** drop-down.  
         For Job Trigger, you will find the following module-specific sub-events:
-        
+
         -   **Job Published:** Triggers when you bulk publish entries/assets/releases.
         -   **Job Unpublished:** Triggers when you bulk unpublish entries/assets/releases.
         -   **All:** Triggers when you perform any of the above activities.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdbc91ed50a333fc2/668250fcc66c88b5da69e196/Select_Fields.png)
     3.  **\[Optional\]** Enable the **Show Optional Fields** toggle button to display the **Environment** field.
-        
+
         **Note:** If you do not select any environment, the trigger event will be invoked across all environments within the selected stack.
-        
+
         ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltad794c28b9e351b2/668250fbc8ca77feb1cdf564/Show_Optional_Fields.png)
 3.  Click **Proceed**.
 4.  Click **Test Trigger** to execute and test the trigger that you configured.
-    
+
     **Note:** You can preview the latest data created in Contentstack without performing the trigger event. The latest data will be fetched and displayed to you after you test the trigger. You must click **Retest** to fetch the data you created in Contentstack.
-    
+
     ![Test_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt24e8d29ae35d4edc/663dd3b5e7f45d8a038b0889/Test_Trigger.png)
 5.  When successful, you will see an output as follows. If it looks appropriate, click **Save and Exit**.  
     ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd06831c4cbb3eda4/668250fbe31634667871db05/Save_Exit.png)
@@ -364,16 +365,16 @@ Let’s look at the steps to set up the trigger event.
     1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](#connect-your-contentstack-account) step.
     2.  Select the trigger event from the dropdown, i.e., **Release Deployed** and select a **Stack** , and **Branch** from the **Lookup** dropdown.  
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcd2d73781b037895/66a8c94f2fce4526b16fce6b/Select_Fields.png)
-        
+
         **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
-        
+
     3.  **\[Optional\]** Enable the **Show Optional Fields** toggle button to display the **Release** , and **Environment** fields.  
         ![Show_optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc6afa0993379c16c/66a8c94fcfbd230c247d7834/Show_optional_Fields.png)
 3.  Click **Proceed**.
 4.  Click **Test Trigger** to execute and test the trigger that you configured.
-    
+
     **Note:** You can preview the latest data created in Contentstack without performing the trigger event. The latest data will be fetched and displayed to you after you test the trigger. You must click Retest to fetch the data you created in Contentstack.
-    
+
     ![Test_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7e6568105f8940ba/66a8c94feb20b470672cfa00/Test_Trigger.png)
 5.  If successful, you will see an output as follows. If it looks appropriate, click **Save and Exit** .  
     ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt20d0138139860a4a/66a8c94fc56a10408b3c10e7/Save_Exit.png)
@@ -391,9 +392,9 @@ Let’s look at the steps to set up the trigger event.
     Click **+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](#connect-your-contentstack-account) step.3.  Select the trigger event from the dropdown, i.e., **Workflow Stage Changed** .![Select_Workflow_Event.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta3482c4a3e8c104f/66a8c9bfcfbd235e847d7838/Select_Workflow_Event.png)
     4.  Select a **Stack** , **Branch, Content Type** , and **Workflow** from the **Lookup** dropdown.  
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt27669a98fa4488dc/66a8c9bf2fce458c486fce86/Select_Fields.png)
-        
+
         **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
-        
+
     5.  **\[Optional\]** Enable the **Show Optional Fields** toggle button to display the **Workflow Stage** field.  
         ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte31c8fc9e43b6272/66a8c9bfadec834cf42d0d03/Show_Optional_Fields.png)
 3.  Click **Proceed**.

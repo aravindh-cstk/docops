@@ -2,6 +2,7 @@
 title: "Types of Roles"
 description: "Discover Contentstack's five user roles—Owner, Admin, Developer, Content Manager, and Custom Role. Learn detailed permissions for optimal content management."
 url: /headless-cms/types-of-roles
+uid: blt625bf3efbd68b58c
 ---
 
 # Types of Roles
@@ -31,7 +32,9 @@ The Admin role has the following rights:
 -   Create delivery and management tokens
 -   View audit log and publish queue
 
-The Admin role has more rights than a Developer and fewer than the Owner. Developer
+The Admin role has more rights than a Developer and fewer than the Owner.
+
+## Developer
 
 A “Developer” is a person who creates the structure of the site or defines the way content will appear on the site. Hence, this role has the right to:
 

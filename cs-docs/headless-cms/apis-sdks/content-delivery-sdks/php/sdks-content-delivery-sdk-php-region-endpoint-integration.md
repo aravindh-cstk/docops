@@ -2,6 +2,7 @@
 title: "PHP CDA - Configure Region Endpoints in PHP Content Delivery SDK"
 description: "Configure region endpoints in the Contentstack PHP Content Delivery SDK. A PHP developer guide to connecting to the correct region without hardcoding URLs."
 url: /developers/sdks/content-delivery-sdk/php/region-endpoint-integration
+uid: blt21de7d3b0610196c
 ---
 
 # PHP CDA - Configure Region Endpoints in PHP Content Delivery SDK

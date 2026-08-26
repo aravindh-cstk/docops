@@ -2,6 +2,7 @@
 title: "Stack Bulk Task Queue"
 description: "Manage and track bulk operations in your Contentstack release with the Bulk Task Queue. Access task details, statuses, and filters for efficient processing."
 url: /headless-cms/stack-bulk-task-queue
+uid: blt21edab79d9be7e65
 ---
 
 # Stack Bulk Task Queue
@@ -23,10 +24,10 @@ The queue provides the following details about each task:
 -   **By User**: The name of the user who initiated the bulk operation.
 -   **Task Status**: The current status of the task.
 -   **Actions**: This column provides options to interact with a specific bulk action.
-    
+
     -   **Open Release**: Navigate directly to the release associated with the bulk action.
     -   **View Details**: A comprehensive list of all entries impacted by this bulk operation, including their entry name, version, language, and content type.
-    
+
     ![Stack Bulk Task Queue_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt89371a254fd6ac93/66cf2548baa9790657da7177/Stack_Bulk_Task_Queue_3.png)
 
 ## Task Status

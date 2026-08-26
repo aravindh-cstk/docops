@@ -2,6 +2,7 @@
 title: "Limitations of Trash"
 description: "Limitations of Trash"
 url: /headless-cms/limitations-of-trash
+uid: bltf78cb25da1cda068
 ---
 
 # Limitations of Trash

@@ -2,6 +2,7 @@
 title: "Use Filters"
 description: "Refine your search with customizable filters for entries and assets, streamlining content management and enhancing efficiency."
 url: /headless-cms/use-filters
+uid: bltc5a6405a8908d0ab
 ---
 
 # Use Filters

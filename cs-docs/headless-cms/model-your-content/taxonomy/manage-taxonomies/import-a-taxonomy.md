@@ -2,6 +2,7 @@
 title: "Import a Taxonomy"
 description: "Easily import a taxonomy from CSV or JSON files into your Contentstack stack. Follow simple steps to organize and categorize your content efficiently."
 url: /headless-cms/import-a-taxonomy
+uid: blt49c344b8f02fd6bd
 ---
 
 # Import a Taxonomy

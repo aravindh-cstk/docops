@@ -2,6 +2,7 @@
 title: "SSR Composition Query"
 description: "Learn when and how to use server-side rendering for Studio compositions, including the fetchCompositionData API, Next.js App Router, and Remix loader patterns."
 url: /studio/ssr-composition-query
+uid: blt70fdf1ddfd012ad8
 ---
 
 # SSR Composition Query

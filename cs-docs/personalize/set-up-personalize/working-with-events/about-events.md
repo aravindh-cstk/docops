@@ -2,6 +2,7 @@
 title: "About Events"
 description: "Learn how Contentstack Personalize allows you to capture and monitor user interactions with events."
 url: /personalize/about-events
+uid: blt7b34c1edc7a09d5f
 ---
 
 # About Events

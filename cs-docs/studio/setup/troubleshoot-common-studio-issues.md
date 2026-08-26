@@ -2,6 +2,7 @@
 title: "Troubleshoot Common Studio Issues"
 description: "Fix common Studio setup issues including canvas iframe errors, template render failures, Live Preview problems, content fetch errors, and SDK init order issues."
 url: /studio/troubleshoot-common-studio-issues
+uid: blt895158ed79acf0ed
 ---
 
 # Troubleshoot Common Studio Issues

@@ -2,6 +2,7 @@
 title: "Website Homepage"
 description: "The Website Homepage Content Model defines the structure, fields, and schema to design the homepage of your website."
 url: /marketplace/website-homepage
+uid: bltbb0d40a8d0c8fbee
 ---
 
 # Website Homepage
@@ -61,9 +62,9 @@ The Website Homepage Content Model contains six [Content Types](/docs/headless-c
     -   **From Blog**: This [Modular Block](/docs/headless-cms/modular-blocks/) field covers the following components of a blog in the list:
         -   **Title H2**: This is a [Single Line Textbox](/docs/headless-cms/single-line-textbox/) field to add the title of the reference blog. The title is displayed as a level-two heading.
         -   **Featured Blogs**: This is a [Reference](/docs/headless-cms/reference/) field that refers to the [Blog Landing Page](/docs/marketplace/blog-landing-page#schema-for-blog-landing-page-content-type) content type.
-        
+
         **Note:** You can find the [Author](/docs/marketplace/blog-landing-page#schema-for-author-content-type) content type and the [Social Share](/docs/marketplace/blog-landing-page#schema-for-blog-landing-page-content-type) [Global](/docs/headless-cms/global) field in the [Blog Landing Page](/docs/marketplace/blog-landing-page) content model.
-        
+
         -   **View Articles**: This is a [Link](/docs/headless-cms/link/) field to add links to any related articles.
     -   **Widget**: This [Modular Block](/docs/headless-cms/modular-blocks/) field covers the following components of the widget section:
         -   **Title H2**: This is a [Single Line Textbox](/docs/headless-cms/single-line-textbox/) field to add the title of the blog in the list. The title is displayed as a level-two heading.

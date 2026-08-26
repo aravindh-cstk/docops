@@ -2,6 +2,7 @@
 title: "Remove a User"
 description: "Learn how to efficiently remove users from your Contentstack stack, whether through UI steps or API requests, with this comprehensive guide."
 url: /headless-cms/remove-a-user
+uid: bltc44fdb87d1be36ee
 ---
 
 # Remove a User

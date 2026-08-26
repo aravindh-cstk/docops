@@ -2,6 +2,7 @@
 title: "About PHP Utils Library"
 description: "The PHP Utils library contains all the utilities for the PHP SDK."
 url: /developers/sdks/utils-sdk/php/about-php-utils-library
+uid: bltab4351575c2e954d
 ---
 
 # About PHP Utils Library

@@ -2,6 +2,7 @@
 title: "Layered Diagram"
 description: "This layered architecture diagrams shows various components of a Contentstack-powered website."
 url: /headless-cms/contentstack-powered-website-layered-architecture
+uid: bltf7a5084dcc37d541
 ---
 
 # Layered Diagram

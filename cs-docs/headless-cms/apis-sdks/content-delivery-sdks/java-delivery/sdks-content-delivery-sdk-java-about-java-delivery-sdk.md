@@ -2,6 +2,7 @@
 title: "About Java Delivery SDK"
 description: "This document on Java delivery SDK provides an overview of the SDK, seamlessly integrating and retrieving content from Contentstack to your Java applications."
 url: /developers/sdks/content-delivery-sdk/java/about-java-delivery-sdk
+uid: blt6dc7144d7eb0bcfc
 ---
 
 # About Java Delivery SDK

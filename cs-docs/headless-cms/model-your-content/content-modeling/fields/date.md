@@ -2,6 +2,7 @@
 title: "Date"
 description: "Learn how to use the Date field to configure date and time values with timezone support in Contentstack."
 url: /headless-cms/date
+uid: bltae6d8a7e53b631bb
 ---
 
 # Date

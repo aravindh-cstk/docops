@@ -2,6 +2,7 @@
 title: "Get Started with Java Management SDK"
 description: "This guide will help you get started with Contentstack Java Management SDK to build apps. Get clear steps on SDK installation & setup, initialization, and basic queries."
 url: /developers/sdks/content-management-sdk/java/get-started-with-java-management-sdk
+uid: blt308da1d720b0f66b
 ---
 
 # Get Started with Java Management SDK

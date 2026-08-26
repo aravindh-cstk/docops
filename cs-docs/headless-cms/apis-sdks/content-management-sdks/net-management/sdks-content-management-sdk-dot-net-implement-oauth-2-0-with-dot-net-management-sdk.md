@@ -2,6 +2,7 @@
 title: "Implement OAuth 2.0 with .NET Management SDK"
 description: "Build secure .NET apps with Contentstack CMA using OAuth 2.0. Simplify authentication with PKCE, token refresh, session/cookie storage, and role-based access."
 url: /developers/sdks/content-management-sdk/dot-net/implement-oauth-2-0-with-dot-net-management-sdk
+uid: blt69bfc96a7c48f961
 ---
 
 # Implement OAuth 2.0 with .NET Management SDK
@@ -41,16 +42,16 @@ The SDK simplifies the OAuth 2.0 flow by handling token acquisition, refresh, an
 The following steps show the OAuth 2.0 flow in the .NET Management SDK, from authorization to logout.
 
 1.  ### Initialize the OAuth Handler
-    
+
     Use the OAuth() method to configure your app for OAuth 2.0 authentication. Then, call AuthorizeAsync() to generate the authorization URL and begin the login flow.
-    
+
     ```
     using Contentstack.Management.Core;
     using Contentstack.Management.Core.Models;
-    
+
     // Initialize client
     var client = new ContentstackClient();
-    
+
     // Configure OAuth options
     OAuthOptions oauthOptions = new OAuthOptions
     {
@@ -60,91 +61,91 @@ The following steps show the OAuth 2.0 flow in the .NET Management SDK, from aut
        Scope = new[] { "content_management" }
        // Leave ClientSecret unset to enable PKCE flow (recommended for public clients)
     };
-    
+
     // Create OAuth handler
     IOAuthHandler oauthHandler = client.OAuth(oauthOptions);
-    
+
     // Generate authorization URL
     var authUrl = await oauthHandler.AuthorizeAsync();
     ```
-    
+
     **Parameters:**
-    
+
     The following parameters are required to initialize OAuth 2.0 with the SDK:
-    
+
     <table><colgroup data-width="749.9997500000002"><col style="width:33.3333%"><col style="width:33.4667%"><col style="width:33.20000000000001%"></colgroup><tbody><tr><td><strong>Parameter</strong></td><td><strong>Type</strong></td><td><strong>Description</strong></td></tr><tr><td>AppId (required)</td><td><p class="code">string</p></td><td style="text-align: left;">The App ID you registered with Contentstack.</td></tr><tr><td>ClientId (required)</td><td><p class="code">string</p></td><td style="text-align: left;">The OAuth client ID associated with your app.</td></tr><tr><td>RedirectUri (required)</td><td><p class="code">string</p></td><td style="text-align: left;">The URL to redirect users after they log in and grant access.</td></tr><tr><td>Scope</td><td><p class="code">string[]</p></td><td style="text-align: left;">The permissions your app is requesting (e.g., read-only, write). Use scopes based on your app’s needs.</td></tr><tr><td>ClientSecret</td><td><p class="code">string</p></td><td style="text-align: left;">Required for standard OAuth flows. Not needed if you're using PKCE.</td></tr><tr><td>responseType</td><td><p class="code">string</p></td><td style="text-align: left;">Set to <span class="code">code</span> by default. You can override this based on your OAuth configuration.</td></tr></tbody></table>
-    
+
 2.  ### Start the Authorization Flow
-    
+
     Use the AuthorizeAsync() method to generate the Authorization URL for Contentstack’s OAuth server. This URL includes parameters such as response type, client ID, scope, and the PKCE code challenge (if used). Direct users to this URL so they can log in and authorize your app.
-    
+
     ```
     string authUrl = await oauthHandler.AuthorizeAsync();
     ```
-    
+
 3.  ### Handle Redirect and Exchange Token
-    
+
     Use the HandleRedirectAsync() method to capture the authorization code from the redirected URL after the user logs in and approves access. This method should be called when your app receives the redirect to your specified redirect\_uri.
-    
+
     ```
     // Example: redirect URL contains ?code=authorization_code
     await oauthHandler.HandleRedirectAsync(url);
     ```
-    
+
     Alternatively, use the ExchangeCodeForTokenAsync() method if you already have access to the authorization code from the query parameters.
-    
+
     ```
     // Example: extract the code from the URL query string (?code=authorization_code)
     await oauthHandler.ExchangeCodeForTokenAsync(code);
     ```
-    
+
 4.  ### Token Access and Storage
-    
+
     Use the GetOAuthTokens() method to access the stored OAuth tokens after a successful authentication. The SDK stores these tokens securely in memory.
-    
+
     ```
     OAuthTokens tokens = client.GetOAuthTokens(clientId);
-    
+
     // Tokens used for authenticating and refreshing access token
     string accessToken = tokens.AccessToken;
     string refreshToken = tokens.RefreshToken; 
-    
+
     // Additional context about the authenticated session
     DateTime expiresAt = tokens.ExpiresAt;         
     string organizationUid = tokens.OrganizationUid;   
     string userUid = tokens.UserUid;  
-    
+
     // Token status properties
     bool isValid = tokens.IsValid;                   
     bool isExpired = tokens.IsExpired;                 
     bool needsRefresh = tokens.NeedsRefresh;
     ```
-    
+
 5.  ### Make Authenticated API Requests
-    
+
     Use the access token to authenticate your API requests. The SDK automatically adds the token to the Authorization header as a Bearer token for all outgoing requests.
-    
+
     ```
     var stack = client.Stack(stackApiKey);
     ContentstackResponse contentTypesResponse = await stack.ContentType().Query().FindAsync();
     ```
-    
+
 6.  ### Refresh Access Token
-    
+
     Use the RefreshTokenAsync() method to get a new access token when the current one expires. The SDK handles this automatically using the refresh token, ensuring uninterrupted authenticated requests without requiring the user to log in again.
-    
+
     ```
     OAuthTokens refreshedTokens = await oauthHandler.RefreshTokenAsync();
     ```
-    
+
 7.  ### Logout and Revoke Access
-    
+
     Use the LogoutAsync() method to log out the user and revoke their authorization. This clears stored tokens and ends the current authenticated session.
-    
+
     ```
     string result = await oauthHandler.LogoutAsync();
     ```
-    
+
 
 ## Token Storage
 
@@ -155,11 +156,11 @@ After authentication, tokens are managed in memory. You can access them using th
 In web applications, you can store tokens in session storage or cookies, depending on your security and persistence requirements.
 
 1.  ### Session Storage (ASP.NET Core)
-    
+
     Use ASP.NET Core session storage to persist OAuth tokens securely between requests. The following example configures session services and stores tokens after a successful authorization flow.
-    
+
     **Note:** Avoid storing access tokens in localStorage or sessionStorage, as they are vulnerable to cross-site scripting (XSS) attacks. Instead, use secure, HttpOnly cookies configured with the Secure and SameSite=Strict attributes to protect sensitive tokens. Additionally, implement regular refresh token rotation and expiration to minimize security risks.
-    
+
     ```
     // Configure session middleware in Program.cs or Startup.cs
     builder.Services.AddSession(options =>
@@ -170,16 +171,16 @@ In web applications, you can store tokens in session storage or cookies, dependi
         options.Cookie.HttpOnly = true; // Secure session cookie
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // HTTPS only
         options.Cookie.SameSite = SameSiteMode.Strict; // Mitigate CSRF
-    
+
     });
-    
+
     public async Task<IActionResult> OAuthCallback(string code)
     {
         try
         {
             // Exchange authorization code for access and refresh tokens
             OAuthTokens tokens = await oauthHandler.ExchangeCodeForTokenAsync(code);
-    
+
             // Store essential OAuth token values in session for later use
             HttpContext.Session.SetString("access_token", tokens.AccessToken);
             HttpContext.Session.SetString("refresh_token", tokens.RefreshToken ?? string.Empty);
@@ -193,15 +194,15 @@ In web applications, you can store tokens in session storage or cookies, dependi
         }
     }
     ```
-    
+
 2.  ### Cookie Storage
-    
+
     Use secure HTTP cookies to persist OAuth tokens in ASP.NET Core. The following example sets encrypted, HttpOnly cookies after exchanging the authorization code for tokens.
-    
+
     ```
     // Exchange authorization code for tokens
     OAuthTokens tokens = await oauthHandler.ExchangeCodeForTokenAsync(code);
-    
+
     // Define secure cookie options
     var cookieOptions = new CookieOptions
     {
@@ -210,14 +211,14 @@ In web applications, you can store tokens in session storage or cookies, dependi
         SameSite = SameSiteMode.Strict,
         Expires = tokens.ExpiresAt
     };
-    
+
     // Store tokens and user context in cookies
     Response.Cookies.Append("access_token", tokens.AccessToken, cookieOptions);
     Response.Cookies.Append("refresh_token", tokens.RefreshToken ?? string.Empty, cookieOptions);
     Response.Cookies.Append("organization_uid", tokens.OrganizationUid ?? string.Empty, cookieOptions);
     Response.Cookies.Append("user_uid", tokens.UserUid ?? string.Empty, cookieOptions);
     ```
-    
+
 
 ### CLI Applications
 
