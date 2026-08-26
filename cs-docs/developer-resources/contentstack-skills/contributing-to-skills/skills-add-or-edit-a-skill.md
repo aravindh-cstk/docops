@@ -2,6 +2,7 @@
 title: "Add or Edit a Skill"
 description: "Edit an existing Contentstack Agent Skill or add a new one, then regenerate the Cursor and Codex trees your AI coding tools rely on."
 url: /developers/skills-add-or-edit-a-skill
+uid: blte2a61c8fcfca88c9
 ---
 
 # Add or Edit a Skill
@@ -26,22 +27,25 @@ Use this guide to edit an existing skill or create a new one, including the buil
 ## Edit an existing skill
 
 1.  Open skills/<slug>/SKILL.md and make your change.
+
 2.  If you added bundled assets, put them in skills/<slug>/references/ or skills/<slug>/scripts/.
+
 3.  Regenerate the derived trees:
-    
+
     ```
     bash scripts/build-cursor-rules.sh
     bash scripts/build-codex-skills.sh
     ```
-    
+
 4.  Commit both your skills/ change and the regenerated cursor/rules/ and codex/ output.
+
 
 ## Add a new skill
 
 1.  Create a directory: skills/<new-slug>/.
 2.  Add SKILL.md following the structure in the [Anatomy of Skills](/docs/developers/skills-skill-anatomy) documentation and the rules in the [Authoring conventions](/docs/developers/skills-authoring-conventions) documentation.
 3.  Add any references/ or scripts/ the skill needs.
-4.  Add a routing row to skills/CLAUDE.md so the router matches requests to it.
+4.  Add a routing row to [skills/CLAUDE.md](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/CLAUDE.md) so the router matches requests to it.
 5.  Add an entry to manifest.json with the slug, title, and product.
 6.  Regenerate the derived trees (commands above) and commit everything.
 7.  Add a documentation page under docs/skills/<new-slug>.md and link it from the skills reference index.

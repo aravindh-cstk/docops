@@ -2,6 +2,7 @@
 title: "Comparing Branches"
 description: "Learn how to effectively compare branches, identify differences, and make informed decisions for your project's version control."
 url: /headless-cms/comparing-branches
+uid: blt12cbee33f4188914
 ---
 
 # Comparing Branches
@@ -12,7 +13,7 @@ The Branch Compare feature enables you to compare the changes between two branch
 
 The base branch serves as the basis for comparison and also the location where any changes would be merged into (see [Merging Branches](/docs/headless-cms/merging-branches) for more information). The compare branch contains the changes you want to merge.
 
-**Note:** The Compare feature is currently available only for the content type and global field modules and is accessible through [Content Management API](/docs/developers/apis/content-management-api/branches#compare-branches) and [CLI commands](/docs/headless-cms/compare-and-merge-branches-using-the-cli/).
+**Note:** The Compare feature is currently available only for the content type and global field modules and is accessible through [Content Management API](/docs/developers/apis/content-management-api/branches#compare-branches) and [CLI commands](/docs/headless-cms/compare-and-merge-branches-using-the-cli).
 
 ## Methods to Compare Branches
 
@@ -24,7 +25,7 @@ When comparing two branches, you can see:
 -   All the differences between a specific content type in both branches
 -   All the differences between a specific global field in both branches
 
-**Additional Resource:** To learn how to compare branches using our new request in the [Comparing Branches](/docs/developers/apis/content-management-api/branches#compare-branches) section in CMA, refer to our documentation. To compare branches via CLI, you can refer to the [Compare Branches](/docs/headless-cms/compare-and-merge-branches-using-the-cli/#steps-to-compare-branches) section in the guide on how to [Compare and Merge Branches using the CLI](/docs/headless-cms/compare-and-merge-branches-using-the-cli/).
+**Additional Resource:** To learn how to compare branches using our new request in the [Comparing Branches](/docs/developers/apis/content-management-api/branches#compare-branches) section in CMA, refer to our documentation. To compare branches via CLI, you can refer to the [Compare Branches](/docs/headless-cms/compare-and-merge-branches-using-the-cli#steps-to-compare-branches) section in the guide on how to [Compare and Merge Branches using the CLI](/docs/headless-cms/compare-and-merge-branches-using-the-cli).
 
 ## Status of Comparisons
 
@@ -42,7 +43,7 @@ Let's learn how to Compare branches in Contentstack using a few use cases.
 
 Consider a scenario where you need to redesign certain fields of your website without affecting anything in production. For example, you want to modify the Blog content type to have an Author reference field rather than an Author single line textbox. To achieve this, you can create a child branch called “development” that inherits all content types, entries, assets, languages, etc. from the main branch as is.
 
-Next, you can make changes to the Blog content type within the development branch. Once you are satisfied with your changes, you can quickly check the differences between the development (compare) branch and the main (base) branch using Branch Compare [CMA requests](/docs/developers/apis/content-management-api/branches#compare-branches) or [CLI commands](/docs/headless-cms/compare-and-merge-branches-using-the-cli/).
+Next, you can make changes to the Blog content type within the development branch. Once you are satisfied with your changes, you can quickly check the differences between the development (compare) branch and the main (base) branch using Branch Compare [CMA requests](/docs/developers/apis/content-management-api/branches#compare-branches) or [CLI commands](/docs/headless-cms/compare-and-merge-branches-using-the-cli).
 
 In this case, the differences will show a “modified” status since the Blog content type exists in both the base and compare branches, but you have made changes to their structure.
 
