@@ -2,6 +2,7 @@
 title: "Lytics Limitations"
 description: "Explore Contentstack Lytics limits for events, profiles, and integrations, and learn how to request limit increases."
 url: /lytics/limitations
+uid: bltc445db81111d4dbf
 ---
 
 # Lytics Limitations
@@ -30,7 +31,7 @@ An **event** refers to:
 
 ### User Profiles
 
-A [**user profile**](https://docs.lytics.com/docs/understanding-user-profiles) is the living record of an individual who interacts with your brand. Lytics user profiles provide a unified view of your customers across connected channels.
+A [**user profile**](/docs/lytics/understanding-user-profiles) is the living record of an individual who interacts with your brand. Lytics user profiles provide a unified view of your customers across connected channels.
 
 -   **Known profiles** include at least one identifiable attribute, such as an email address or CRM ID.
 -   **Anonymous profiles** contain only anonymous identifiers, such as a cookie ID.
@@ -46,7 +47,7 @@ A [**user profile**](https://docs.lytics.com/docs/understanding-user-profiles) i
 
 ### Audiences
 
-An [**audience**](https://docs.lytics.com/docs/audiences) is a group of users defined by conditions, attributes, or behaviors. Audiences allow you to segment users for targeting, personalization, or analysis.
+An [**audience**](/docs/lytics/audiences) is a group of users defined by conditions, attributes, or behaviors. Audiences allow you to segment users for targeting, personalization, or analysis.
 
 | Resource | Limit | Description |
 | --- | --- | --- |
@@ -57,7 +58,7 @@ An [**audience**](https://docs.lytics.com/docs/audiences) is a group of users de
 
 ### Browsers and Cookies
 
-The following limits apply to client-side integrations. These are implemented in browser-facing code using the [**Lytics JavaScript tag**](https://docs.lytics.com/docs/developer-quickstart-3-install-lytics).
+The following limits apply to client-side integrations. These are implemented in browser-facing code using the [**Lytics JavaScript tag**](/docs/lytics/developer-quickstart-3-install-lytics).
 
 | Resource | Limit | Description |
 | --- | --- | --- |
@@ -67,7 +68,7 @@ The following limits apply to client-side integrations. These are implemented in
 
 ### Integrations
 
-The following limits apply to [**server-side integrations**](https://docs.lytics.com/docs/integrated-marketing-tools#server-to-server-integrations), which allow Lytics to communicate directly with third-party services.
+The following limits apply to [**server-side integrations**](/docs/lytics/integrated-marketing-tools#server-to-server-integrations), which allow Lytics to communicate directly with third-party services.
 
 | Resource | Limit | Description |
 | --- | --- | --- |
@@ -79,7 +80,7 @@ The following limits apply to [**server-side integrations**](https://docs.lytics
 
 ### Content
 
-The **Lytics** [**Content Affinity Engine**](https://docs.lytics.com/docs/content-affinity) uses NLP to analyze content and calculate user-level affinities.
+The **Lytics** [**Content Affinity Engine**](/docs/lytics/content-affinity) uses NLP to analyze content and calculate user-level affinities.
 
 | Resource | Limit | Description |
 | --- | --- | --- |
@@ -90,7 +91,7 @@ The **Lytics** [**Content Affinity Engine**](https://docs.lytics.com/docs/conten
 
 ### Custom Modeling
 
-**Lytics** enables you to build [**custom Lookalike Models**](https://docs.lytics.com/docs/ml-modeling).
+**Lytics** enables you to build [**custom Lookalike Models**](/docs/lytics/ml-modeling).
 
 | Resource | Limit | Description |
 | --- | --- | --- |
