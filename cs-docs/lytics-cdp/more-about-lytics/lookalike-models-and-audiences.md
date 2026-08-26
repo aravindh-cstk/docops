@@ -2,6 +2,7 @@
 title: "Lookalike Models and Audiences"
 description: "Create dynamic, ML-powered Lookalike Audiences with Lytics to predict user behavior and boost marketing performance in real time."
 url: /lytics/lookalike-models-and-audiences
+uid: bltd2dbe48aef756a75
 ---
 
 # Lookalike Models and Audiences
@@ -34,9 +35,9 @@ Lytics also provides robust APIs for Lookalike Models, so your engineering team 
 
 ## Resources
 
--   [Getting Started](https://docs.lytics.com/docs/getting-started-1)
--   [Building Lookalike Models](https://docs.lytics.com/docs/building-lookalike-models)
--   [Evaluating Lookalike Models](https://docs.lytics.com/docs/evaluating-lookalike-models)
--   [Creating Predictive Audiences](https://docs.lytics.com/docs/creating-predictive-audiences)
--   [Improving your Lookalike Models](https://docs.lytics.com/docs/improving-lookalike-models)
+-   [Getting Started](/docs/lytics/getting-started-1)
+-   [Building Lookalike Models](/docs/lytics/building-lookalike-models)
+-   [Evaluating Lookalike Models](/docs/lytics/evaluating-lookalike-models)
+-   [Creating Predictive Audiences](/docs/lytics/creating-predictive-audiences)
+-   [Improving your Lookalike Models](/docs/lytics/improving-lookalike-models)
 -   [Python Notebook](https://colab.research.google.com/drive/1pULreGdOr2o6whiyUA_mBwm6JPQcoxbm#scrollTo=A6_Wu1x-speD)
