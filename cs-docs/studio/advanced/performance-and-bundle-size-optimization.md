@@ -2,6 +2,7 @@
 title: "Performance and Bundle-Size Optimization"
 description: "Patterns for reducing Studio's runtime weight in production: lazy registration, code-splitting, SSR resolution, and avoiding Live Preview in visitor bundles."
 url: /studio/performance-and-bundle-size-optimization
+uid: blt3a73d3142eb3d0a1
 ---
 
 # Performance and Bundle-Size Optimization

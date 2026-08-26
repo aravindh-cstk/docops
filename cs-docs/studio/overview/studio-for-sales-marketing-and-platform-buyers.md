@@ -2,6 +2,7 @@
 title: "Studio for Sales, Marketing, and Platform Buyers"
 description: "Learn how Contentstack Studio lets marketing teams compose and publish pages from your existing React components and CMS, without engineering tickets or deploys."
 url: /studio/studio-for-sales-marketing-and-platform-buyers
+uid: blt5d6f504568611c74
 ---
 
 # Studio for Sales, Marketing, and Platform Buyers

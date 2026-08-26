@@ -2,6 +2,7 @@
 title: "SSR Streaming Patterns"
 description: "Learn how to integrate Contentstack Studio with Next.js App Router, Remix, and Astro to stream SSR responses and optimize page load performance."
 url: /studio/ssr-streaming-patterns
+uid: bltc369178939abe9ce
 ---
 
 # SSR Streaming Patterns

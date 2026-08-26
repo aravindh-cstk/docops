@@ -2,6 +2,7 @@
 title: "App Keyboard Shortcuts"
 description: "Discover efficient keyboard shortcuts for quick access to Contentstack modules in the new UI, boosting productivity across Windows and Mac OS."
 url: /headless-cms/keyboard-shortcuts
+uid: bltfdc9f25aa648778a
 ---
 
 # App Keyboard Shortcuts

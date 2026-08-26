@@ -2,6 +2,7 @@
 title: "Testing Strategies for Studio-Rendered Pages"
 description: "A layered five-layer testing strategy for Contentstack Studio compositions, covering unit tests, snapshot tests, render tests, visual regression, and E2E authoring flows."
 url: /studio/testing-strategies-for-studio-rendered-pages
+uid: blt01fcb60ec09b86e3
 ---
 
 # Testing Strategies for Studio-Rendered Pages

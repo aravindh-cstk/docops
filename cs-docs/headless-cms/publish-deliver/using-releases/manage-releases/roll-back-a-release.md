@@ -2,6 +2,7 @@
 title: "Roll Back a Release"
 description: "Roll back a deployed release in Contentstack to revert its entries and assets to the version published before deployment."
 url: /headless-cms/roll-back-a-release
+uid: blta2d30a8b5f3cff31
 ---
 
 # Roll Back a Release
@@ -38,7 +39,7 @@ To roll back a release, log in to your [Contentstack account](https://www.conten
 3.  Click the horizontal ellipsis and select **Create Rollback Release**. A confirmation message explains that Contentstack duplicates the release and that deploying the rollback release reverts the changes from the last deployment.
 4.  Confirm the action. The rollback release appears in your releases list, marked as a rollback release.
 5.  Open the rollback release and review its items.
-6.  Click **Deploy**, select the target environment, and confirm the deployment. This reverts each entry and asset to its previously published version in that environment, or unpublishes it if no previous version exists.
+6.  Click **Rollback**, select the target environment, and confirm the deployment. This reverts each entry and asset to its previously published version in that environment, or unpublishes it if no previous version exists.
 
 ![Roll_Back_a_Release.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amc8b94a1d699cb5ee/57622f20acbe5c05240a9ae3/Roll_Back_a_Release.gif)
 
