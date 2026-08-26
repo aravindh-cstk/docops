@@ -2,6 +2,7 @@
 title: "Using the Sync API with Python SDK"
 description: "Learn how to use Sync APIs with Python SDK"
 url: /developers/sdks/content-delivery-sdk/python/using-the-sync-api-with-python-sdk
+uid: bltddb453604ba40d4b
 ---
 
 # Using the Sync API with Python SDK

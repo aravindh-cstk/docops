@@ -2,6 +2,7 @@
 title: "Use Default URL Pattern"
 description: "Define and customize URL patterns in Contentstack to generate structured, consistent entry URLs using fields, locales, and formatting rules."
 url: /headless-cms/use-default-url-pattern
+uid: blt8cfe13ca70126fdd
 ---
 
 # Use Default URL Pattern
@@ -39,9 +40,9 @@ To add and configure a URL field, log in to your [Contentstack account](https://
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click **Content Models**.
 2.  Select the content type where you want to add the URL field.
-    
+
     **Tip:** You can also click the **vertical ellipsis** icon in the **Actions** column next to the content type and select **Edit**.
-    
+
 3.  In the **Content Type Builder** page, hover over a field, and click the “+” (Insert a field) icon.
 4.  Click the **URL** field from the field selector to add it to your content type.
 5.  In the **URL Properties** modal, you can configure the URL settings as needed.

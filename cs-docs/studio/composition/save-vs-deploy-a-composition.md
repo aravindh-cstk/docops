@@ -2,6 +2,7 @@
 title: "Save vs. Deploy a Composition"
 description: "Understand the difference between saving and deploying a composition in Contentstack Studio, including when to use each action and pre-deploy best practices."
 url: /studio/save-vs-deploy-a-composition
+uid: blt38b121c15fe270db
 ---
 
 # Save vs. Deploy a Composition

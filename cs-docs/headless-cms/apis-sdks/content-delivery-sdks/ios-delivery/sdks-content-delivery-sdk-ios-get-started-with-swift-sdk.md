@@ -2,6 +2,7 @@
 title: "Get Started with Swift SDK"
 description: "Get Started with Swift SDK"
 url: /developers/sdks/content-delivery-sdk/ios/get-started-with-swift-sdk
+uid: blt0009c21753e293cd
 ---
 
 # Get Started with Swift SDK
@@ -92,7 +93,7 @@ To set the cache policy to all the query objects of an entry, refer to the code 
 let stack = Contentstack.stack(apiKey: apiKey,
               deliveryToken: deliveryToken,
               environment: environment)
- 
+
 let entry = stack.contentType(uid: contentTypeUID).entry(uid: UID)
 entry.cachePolicy = .networkElseCache
 entry.fetch { (result: Result<EntryModel, Error>, response: ResponseType) in
@@ -113,7 +114,7 @@ To set the cache policy to all the query objects of an asset, refer to the code 
 let stack = Contentstack.stack(apiKey: apiKey,
               deliveryToken: deliveryToken,
               environment: environment)
- 
+
 let asset = stack.contentType(uid: contentTypeUID).asset(uid: UID)
 asset.cachePolicy = .networkElseCache
 asset.fetch { (result: Result<AssetModel, Error>, response: ResponseType) in
@@ -159,7 +160,7 @@ To retrieve a single entry from a [content type](/docs/headless-cms/about-conten
 let stack = Contentstack.stack(apiKey: apiKey,
               deliveryToken: deliveryToken,
               environment: environment)
- 
+
 stack.contentType(uid: contentTypeUID).entry(uid: UID)
 .fetch { (result: Result<EntryModel, Error>, response: ResponseType) in
      switch result {

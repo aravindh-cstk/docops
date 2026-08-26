@@ -2,6 +2,7 @@
 title: "Environment Limitations"
 description: "Understand the limitations of environments to ensure seamless content publishing across different deployment channels."
 url: /headless-cms/environment-limitations
+uid: blt4790f2f61788c1b9
 ---
 
 # Environment Limitations

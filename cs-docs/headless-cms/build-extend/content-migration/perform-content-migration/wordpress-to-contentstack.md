@@ -2,6 +2,7 @@
 title: "Wordpress to Contentstack"
 description: "Migrate content from WordPress to Contentstack seamlessly with the Migration Framework. Follow our step-by-step guide for easy content import, mapping, and data migration."
 url: /headless-cms/wordpress-to-contentstack
+uid: blt584193d297ec2739
 ---
 
 # Wordpress to Contentstack
@@ -47,13 +48,13 @@ Follow these steps to perform the content migration for Wordpress:
 
 1.  By default Wordpress will be selected as your legacy CMS.
 2.  Add a **2–5 character affix** for the source name. Use only letters, no numbers or special characters. Make sure the affix does not match with one of the [restricted keywords](/docs/headless-cms/restricted-keywords-for-uids).![W2C_5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltedc5d31b1a2074f5/68398974bac1ae5ea43cb935/W2C_5.png)
-    
+
     **Note:** The affix will function as a prefix if the content type UID matches with restricted UIDs. The affix will function as a suffix for field UIDs.
-    
+
 3.  Click **Validate File** to validate the exported content.![W2C_6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2741ea5731579208/68398975f809c103dc3dfbd3/W2C_6.png)
-    
+
     **Note:** If validation fails, it may be caused by one or more of the following issues:
-    
+
     -   **File Format Error**: Ensure the file is in the desired format.
     -   **Missing Content**: Ensure the exported data contains all required content.
     -   **Incomplete Files**: Verify that no files are missing or corrupted.
@@ -120,9 +121,9 @@ Use the following advanced options to efficiently manage your mappings:
 -   **Reset to system mapping**: Click the ‘Reset to system mapping’ icon to revert any changes done to the default mappings.
 -   **Select content type from destination stack**: Override the default behavior of creating new content types.
 -   **Fetch content types from destination stack**: If updates are made in the stack during migration, click the icon to fetch changes.
-    
+
     **Note:** If the user has created a new stack in [Step 5](/docs/headless-cms/wordpress-to-contentstack#step-5-configure-destination-stack), they will not see the ‘Fetch content types from destination stack’ icon and the ‘Select Content Type from Destination Stack’ dropdown. However, if an existing stack was selected, the icons will be available.
-    
+
 -   **Advanced properties**: Click the ‘Advanced properties’ icon next to each field to adjust field specific properties.
 
 ![W2C-12.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7d0f77684b313056/6839898573466c7f5a9efd75/W2C-12.gif)
@@ -136,9 +137,9 @@ Click **Continue**.
 1.  Click **Create Test Stack** to create a sample stack within your organization.
 2.  Click **Start Test Migration** to perform a test migration.![W2C_13.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1c654af63b6da172/6839897522d56982a7353826/W2C_13.png)
 3.  A success or error message will be displayed in the logs after completion.![W2C_14.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6efa9b4df1a19fb9/6839897522d5691a0f353822/W2C_14.png)
-    
+
     **Note:** Test migration performs the migration on a small chunk of data to validate success.
-    
+
 4.  Click **Continue**.
 
 ### Step 8 - Execute the Migration

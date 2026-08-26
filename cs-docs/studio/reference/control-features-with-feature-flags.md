@@ -2,6 +2,7 @@
 title: "Control Features with Feature Flags"
 description: "Complete reference for all Studio feature flags, including stack-level and project-level toggles, their defaults, scopes, and effects on Studio's UI."
 url: /studio/control-features-with-feature-flags
+uid: blta31f58edd6523adb
 ---
 
 # Control Features with Feature Flags

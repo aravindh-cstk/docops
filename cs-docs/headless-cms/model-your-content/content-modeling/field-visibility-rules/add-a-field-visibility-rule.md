@@ -2,6 +2,7 @@
 title: "Add a Field Visibility Rule"
 description: "Field Visibility Rules in Contentstack let you dynamically show or hide fields based on conditions, streamlining content entry and improving user experience."
 url: /headless-cms/add-a-field-visibility-rule
+uid: blt4988ba550f6b317f
 ---
 
 # Add a Field Visibility Rule
@@ -23,49 +24,49 @@ To set up field visibility rules, log in to your [Contentstack account](https://
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the "Content Models" icon.
 2.  Click the title of a content type to open it. Alternatively, click the vertical ellipses in the **Actions** column next to the content type and select **Edit**.
 3.  Click **Field Visibility Rules** at the top of the page.
-    
+
     ![Field Visibility Rules UI](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd3b9eca31c858c6b/67d453f718b0840590aadf49/Add_a_Field_Visibility_Rule_link.png)
 4.  In the resulting modal, click **Create New Rule**.
 5.  Under **RULE 1**, configure the rule as follows:
-    
+
     1.  Select whether the rule should apply when **All** or **Any** of the specified conditions are met:
-        
+
         -   **All:** The action triggers when all specified conditions are met.
         -   **Any:** The action triggers when at least one specified condition is met.
     2.  Specify the conditions:
-        
+
         -   Select a **Field** from the dropdown. This is the operand to be evaluated.
         -   Choose a **Condition**. This is an operator that defines the comparison.
-            
+
             **Additional Resource:** Refer to the [Operand Fields and Supported Operators](/docs/headless-cms/operand-fields-and-supported-operators) document for more details.
-            
+
         -   Enter an expected **Value** that triggers the condition.
-            
-        
+
+
         **Example Condition:** If "Date" is Before "12-31-2024".
-        
+
         -   **Operand Field:** Date
         -   **Condition (operator):** Before
         -   **Expected Value:** 12-31-2024
-        
+
         **Tip:** You can add more conditions to a rule by clicking **\+ Add Condition** or remove them by clicking the delete icon.
-        
+
     3.  In the **Perform the following actions** section, define the actions triggered when the condition is met.
-        
+
         -   Select **Show** or **Hide** action type from the dropdown.
         -   Choose a target **Field** to be shown or hidden based on the condition.
-        
+
         For example, if "Date" is Before "12-31-2024", **Show** the **Archive Notification** field and **Hide** the **Body** field.
-        
+
         **Tip:** You can add more actions to a condition by clicking **\+ Add Action** or remove an action by clicking the delete icon.
-        
-    
+
+
     **Note:** Refer to the [Limitations of Field Visibility Rules](/docs/headless-cms/limitations-of-field-visibility-rules) document to know more about the validations on the operand field and target field.
-    
+
     ![Setting up actions in Field Visibility Rules](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt58e7bc211790df30/67d45407883896a76090fb01/Add_a_Field_Visibility_Rule_create.png)
-    
+
     **Tip:** You can add multiple rules to a content type by clicking **\+ Add Another Rule** or remove a rule by clicking the **Delete Rule** option from the vertical ellipsis.
-    
+
 6.  Click **Save** to apply the rule(s).
 7.  Click **Save** or **Save and Close** to apply changes to the content type.
 
@@ -136,9 +137,9 @@ To set up field visibility rules for a global field, log in to your [Contentstac
 3.  Click the title of a global field to open it.
 4.  Click **Field Visibility Rules** at the top of the page.
 5.  Create and configure rules using the same steps as for content types.
-    
+
     **Note:** Fields marked as multiple cannot be used in rules within a Global field.
-    
+
 6.  Click **Save** to apply the rule(s).
 7.  Click **Save** or **Save and Close** to apply changes to the global field.![Set_Up_Field_Visibility_Rules_for_a_Global_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt698d7ca07f2e01d1/68b811f0163c2f45ca98137e/Set_Up_Field_Visibility_Rules_for_a_Global_Field.png)
 
