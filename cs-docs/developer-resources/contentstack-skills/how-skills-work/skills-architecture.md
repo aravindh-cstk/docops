@@ -2,6 +2,7 @@
 title: "Architecture"
 description: "See how Contentstack Agent Skills are authored once in SKILL.md and built into Cursor, Codex, and Gemini formats with CI-enforced consistency."
 url: /developers/skills-architecture
+uid: blt8d5e99dc0900fa83
 ---
 
 # Architecture
@@ -59,7 +60,7 @@ The GitHub Action in .github/workflows/build.yml:
 -   **On pull requests**: regenerates the trees and **fails the build** if anything differs from what's committed. This forces contributors to run the build scripts and commit the result.
 -   **On push to main**: regenerates the trees and commits any drift automatically (as github-actions\[bot\]).
 
-**Warning:** Never edit cursor/rules/ or codex/ directly. Your change will be reverted by the next regeneration.
+**Warning:** Never edit cursor/rules/ or codex/ directly. The next regeneration reverts your changes.
 
 ## Repository layout
 

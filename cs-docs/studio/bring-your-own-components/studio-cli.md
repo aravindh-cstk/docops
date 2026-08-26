@@ -2,6 +2,7 @@
 title: "Studio CLI"
 description: "Learn how to use the Studio CLI to register components, sync designs from Figma, and import design tokens directly from your terminal."
 url: /studio/studio-cli
+uid: blt670599b17e5b19bd
 ---
 
 # Studio CLI
@@ -144,7 +145,7 @@ The CLI also supports moving Studio configurations between stacks:
 -   Import to a target stack
 -   Clone setups between environments (e.g. dev to staging to production)
 
-See [CLI-Supported Features for Export, Import, and Clone Operations](/docs/headless-cms/cli-supported-features-for-export-import-and-clone-operations) for the full list of supported entity types.
+See [CLI-Supported Features for Export, Import, and Clone Operations](/docs/headless-cms/cli-supported-features-for-export-import-and-clone-operations/v1) for the full list of supported entity types.
 
 ## When to use the CLI vs the LLM skills
 
