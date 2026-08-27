@@ -2,6 +2,7 @@
 title: "Get Started with Dart SDK"
 description: "Explore Contentstack's Dart SDK for efficient content delivery. Learn its capabilities to optimize your development process."
 url: /developers/sdks/content-delivery-sdk/dart/get-started-with-dart-sdk
+uid: bltad97602e5fdd6068
 ---
 
 # Get Started with Dart SDK
