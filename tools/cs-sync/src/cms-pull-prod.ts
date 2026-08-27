@@ -45,7 +45,6 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { buildDocIndex, resolveEntry } from "./doc-index.js";
 import { ProdPromoteClient, type PublishedProdEntry } from "./lib/prod-promote-client.js";
@@ -189,19 +188,23 @@ function loadConfig(): Config {
 }
 
 /**
- * An editor's branch name fragment, stable across runs.
+ * An editor's branch name fragment.
  *
- * The uid fragment is not decoration: prod-sync-open-prs.ts reuses an editor's
- * already-open PR by looking it up by branch name, so the same editor has to
- * resolve to the same slug on every run or every run opens a duplicate PR.
- * Display names alone cannot carry that — two editors can slugify identically,
- * and the collision suffix that used to disambiguate them was assigned by
- * encounter order *within a run*, so it moved when the set of editors changed.
+ * Deliberately just the display name, slugified. An earlier version appended
+ * a hash of the editor's uid so the slug would resolve identically across
+ * runs, which is what prod-sync-open-prs.ts used to reuse an editor's
+ * already-open PR (look up by exact branch name). That put an ID-derived
+ * value in every branch name, visible in the PR's URL to anyone with repo
+ * access, which is not acceptable here. PR reuse now matches on the editor's
+ * uid via an invisible marker in the PR description instead (see
+ * editorMarker in prod-sync-open-prs.ts), so this slug no longer needs to be
+ * stable across runs for correctness — only branch-safe and readable. The
+ * collision suffix added below still has to hold within one run (two editors
+ * whose names slugify identically), but a same-editor slug moving between
+ * runs is now harmless.
  */
-export function branchSlugFor(name: string, editorUid: string): string {
-  const base = slugify(name) || "unknown-editor";
-  const fragment = createHash("sha256").update(editorUid).digest("hex").slice(0, 8);
-  return `${base}-${fragment}`;
+export function branchSlugFor(name: string): string {
+  return slugify(name) || "unknown-editor";
 }
 
 /**
@@ -552,15 +555,18 @@ export function buildSummary(
 
     let bundle = bundles.get(editorUid);
     if (!bundle) {
-      bundle = { editorUid, editorName, branchSlug: branchSlugFor(editorName, editorUid), files: [] };
+      bundle = { editorUid, editorName, branchSlug: branchSlugFor(editorName), files: [] };
       bundles.set(editorUid, bundle);
     }
     bundle.files.push(change);
   }
 
-  // Defensive only, now that branchSlugFor carries a per-uid fragment: two
-  // editors would have to collide on that hash to reach this. Kept because the
-  // cost of a collision here is one PR silently overwriting another.
+  // Disambiguates two editors whose names slugify identically within this
+  // run. This is the only thing branchSlug needs to guarantee now: PR reuse
+  // matches on the editor's uid via a marker in the PR body (see
+  // prod-sync-open-prs.ts), not on this slug, so a same-editor slug moving
+  // between runs is harmless. The cost of a same-run collision going
+  // unhandled is one PR silently overwriting another's branch.
   const usedSlugs = new Set<string>();
   for (const bundle of bundles.values()) {
     let slug = bundle.branchSlug;

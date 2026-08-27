@@ -16,11 +16,13 @@ import {
   type DocsArticleLike,
 } from "./lib/entry-to-markdown.js";
 import { crossCheckProduct, findNavPosition, type NavMembership } from "./lib/nav-membership.js";
-import { buildSummary, type ChangedFile } from "./cms-pull-prod.js";
+import { buildSummary, type ChangedFile, type EditorBundle, type PullSummary } from "./cms-pull-prod.js";
 import {
+  bodyBelongsToEditor,
   branchFor,
   buildPrBody,
   buildPrTitle,
+  editorMarker,
   isRemovalBundle,
   MAX_BODY_CHARS,
 } from "./prod-sync-open-prs.js";
@@ -438,35 +440,64 @@ test("p14", "removals go in their own bundle, never attributed to an editor", ()
 
 // ── Reusing an editor's open PR ─────────────────────────────────────────────
 
-test("p23", "an editor's branch slug is identical across runs, whoever else edited", () => {
-  // Two display names that slugify the same way. The old collision suffix was
-  // assigned by encounter order within a run, so editor_a's slug moved when a
-  // colliding editor appeared, and the next run could not find their open PR.
-  const alone = buildSummary(
-    [change("cs-docs/assets/a.md", "blt1")],
-    [pub("blt1", "editor_a")],
-    "production",
-    {},
-  );
-  // The colliding editor is listed first on purpose: that is what pushed
-  // editor_a onto the "-2" suffix under the old encounter-order scheme.
-  const crowded = buildSummary(
-    [change("cs-docs/launch/b.md", "blt2"), change("cs-docs/assets/a.md", "blt1")],
-    [pub("blt2", "editor_a "), pub("blt1", "editor_a")],
-    "production",
-    {},
-  );
+function bundleFor(editorUid: string, editorName: string, files: ChangedFile[]): EditorBundle {
+  return { editorUid, editorName, branchSlug: editorName.toLowerCase().replace(/\s+/g, "-"), files };
+}
 
-  const first = alone.bundles.find((b) => b.editorUid === "editor_a")!;
-  const second = crowded.bundles.find((b) => b.editorUid === "editor_a")!;
+const testSummary: PullSummary = { generatedAt: "2026-08-26T10:00:00.000Z", environment: "production", bundles: [], stats: {} };
+
+test("p23", "an editor's PR marker survives their display name changing", () => {
+  // cms-user-index.json is edited by hand as people are mapped, so the same
+  // account goes from "Contentstack user blt0115..." to a real name over
+  // time. The branch slug moves with it (it is derived from the name), but
+  // findOpenPrForEditor must not: it has to recognize this as the same editor
+  // regardless, or the next run opens a duplicate PR beside the existing one.
+  const files = [change("cs-docs/assets/a.md", "blt1")];
+  const before = bundleFor("blt0115cfb095846676", "Contentstack user blt0115cfb095846676", files);
+  const after = bundleFor("blt0115cfb095846676", "Anaum Hasan", files);
+
+  ok(before.branchSlug !== after.branchSlug, "test setup: the slugs should actually differ here");
+
+  const bodyBefore = buildPrBody(before, testSummary);
+  const bodyAfter = buildPrBody(after, testSummary);
+
   ok(
-    first.branchSlug === second.branchSlug,
-    `slug moved between runs: "${first.branchSlug}" then "${second.branchSlug}"`,
+    bodyBefore.startsWith(editorMarker("blt0115cfb095846676")),
+    "marker must be the very first thing in the body, so it survives truncation",
   );
-  for (const bundle of crowded.bundles) {
-    ok(/^[a-z0-9-]+$/.test(bundle.branchSlug), `slug "${bundle.branchSlug}" is not branch-safe`);
-  }
-  return first.branchSlug;
+  ok(bodyAfter.includes(editorMarker("blt0115cfb095846676")), "renamed bundle lost its own marker");
+  ok(bodyBelongsToEditor(bodyBefore, "blt0115cfb095846676"), "pre-rename body must match its own editor");
+  ok(bodyBelongsToEditor(bodyAfter, "blt0115cfb095846676"), "post-rename body must still match the same editor");
+  return `${before.branchSlug} → ${after.branchSlug}, marker unchanged`;
+});
+
+test("p26", "two editors' markers never cross-match, including a substring uid", () => {
+  const uidA = "blt1";
+  const uidB = "blt12"; // starts with uidA's full text — must not false-positive
+  const bodyA = buildPrBody(bundleFor(uidA, "Editor A", [change("cs-docs/assets/a.md", "blt1")]), testSummary);
+
+  ok(bodyBelongsToEditor(bodyA, uidA), "a body must match its own editor");
+  ok(!bodyBelongsToEditor(bodyA, uidB), "blt12 must not match a marker written for blt1");
+  ok(!bodyBelongsToEditor(null, uidA), "a null body (PR with no description) must not match anyone");
+  ok(!bodyBelongsToEditor("", uidA), "an empty body must not match anyone");
+  return `${uidA} vs ${uidB}`;
+});
+
+test("p27", "the marker is at the very start of a truncated 800-file body", () => {
+  // Re-runs p25's oversized-backlog case: truncation only ever trims from the
+  // end of the body, so a marker placed at the front must survive it too,
+  // however large the backlog gets.
+  const changes = Array.from({ length: 800 }, (_, n) =>
+    change(`cs-docs/assets/a-very-long-directory-name/another-nested-folder/page-${n}.md`, `blt${n}`),
+  );
+  const published = changes.map((c) => pub(c.entryUid, "editor_a"));
+  const summary = buildSummary(changes, published, "production", {});
+  const bundle = summary.bundles[0]!;
+  const body = buildPrBody(bundle, summary);
+
+  ok(body.length <= MAX_BODY_CHARS, `body is ${body.length} chars, over the ${MAX_BODY_CHARS} cap`);
+  ok(body.startsWith(editorMarker(bundle.editorUid)), "marker did not survive truncation of the oversized body");
+  return `${body.length} chars, marker intact`;
 });
 
 test("p24", "the branch name carries no per-run timestamp", () => {
