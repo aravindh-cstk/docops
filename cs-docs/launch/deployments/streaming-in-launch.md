@@ -2,6 +2,7 @@
 title: "Streaming in Launch"
 description: "Enable streaming in Contentstack Launch for real-time, incremental response delivery via SSR, Cloud Functions, or Edge Functions."
 url: /launch/streaming-in-launch
+uid: bltdefc81a2a32759b2
 ---
 
 # Streaming in Launch
@@ -17,11 +18,11 @@ Streaming works over standard HTTP protocols and leverages Launch’s edge and s
 ## What You Will Learn
 
 -   When to use streaming for AI or LLM responses, SSE, CTE, and progressive rendering.
-    
+
 -   How to enable streaming during project creation, environment creation, or redeploy.
-    
+
 -   The execution timeout, authentication support, and limitations that apply to streaming.
-    
+
 
 ## Use Cases
 
@@ -67,12 +68,12 @@ You can enable Streaming Responses at different stages of your project setup. Fo
 2.  On the top panel, click the **Settings** icon.
 3.  Go to **Environments** > **Deployments**.
 4.  Select a response mode:
-    
+
     -   **Streaming**: Delivers response chunks in real time as they are generated.
     -   **Buffered**: Displays output only after the entire response has been generated.
-    
+
     **Note:** Buffered is selected by default.
-    
+
     ![Launch_Deployments_BuildOutput.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amed21bfe47f8ae49a/2a61ce4905b08089b1905e23/Launch_Deployments_BuildOutput.png?locale=en-us)
 5.  Click **Save Deployment Settings**.
 6.  On the top panel, click the **Environments** icon.
@@ -93,20 +94,20 @@ Streaming endpoints support Basic Authentication using the standard WWW-Authenti
 ## Limitations
 
 -   **Hop-by-hop headers are not supported**
-    
+
     Headers such as Proxy-Authenticate, Connection, Transfer-Encoding, Keep-Alive, Upgrade, and others are managed by the underlying infrastructure and will not be forwarded in streaming responses.
-    
+
 -   **Proxied chunked streams may be buffered**
-    
+
     When Launch proxies external streaming HTTP responses, the underlying infrastructure or runtime may buffer the response before forwarding it to the client if the upstream emits very small chunks at high frequency.
-    
+
     This behavior primarily affects:
-    
+
     -   Non-SSE streaming responses (text/plain, generic chunked streaming)
     -   Short-lived, high-frequency chunk streams proxied from external origins
-    
+
     **Note:** This limitation does not apply to streams generated directly inside Edge Functions without an external fetch() call.
-    
+
 
 **Tip:** For real-time streaming use cases such as AI/LLM responses, live updates, or progressive content delivery, Contentstack recommends using Server-Sent Events (SSE) with Content-Type: text/event-stream.  
 Edge runtimes and proxies handle SSE streams more reliably. Standard proxied chunked streaming also works for many workloads, but behavior may vary depending on chunk frequency and the underlying edge runtime.
