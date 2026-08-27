@@ -321,7 +321,7 @@ Below we have elaborated on the third approach.
 
 2.  #### Set Attributes
 
-    The following snippet shows how to set an attribute submitted via a form for a user’s age:
+    The following snippet shows how to set an attribute submitted via a form for a user���s age:
 
     ```
     'use client';

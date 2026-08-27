@@ -141,7 +141,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   └── AssetSidebar.tsx
 │   │   ├── ContentTypeSidebar/
 │   │   │   ├── ContentTypeSidebar.css
-│   │   │   ��─�� ContentTypeSidebar.tsx
+│   │   │   └── ContentTypeSidebar.tsx
 │   │   ├── CustomField/
 │   │   │   ├── CustomField.css
 │   │   │   ├── CustomField.test.tsx
