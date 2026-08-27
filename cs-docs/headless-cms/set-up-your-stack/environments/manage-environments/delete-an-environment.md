@@ -2,6 +2,7 @@
 title: "Delete an Environment"
 description: "Learn to delete an Environment in Contentstack via UI or API request."
 url: /headless-cms/delete-an-environment
+uid: blt80f56c3d8f248b40
 ---
 
 # Delete an Environment
@@ -18,9 +19,9 @@ To delete an [environment](/docs/headless-cms/about-environments), log in to you
 2.  Navigate to **Environments** or use the “alt + E” shortcut key for Windows and “option + E” for Mac OS.
 3.  Click the vertical ellipsis icon next to an environment in the **Actions** menu and select **Delete**.
 4.  Click **Delete** to confirm your action.
-    
+
     ![Confirmation prompt for deleting an environment](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd748a7f3152531d0/67dd5c4abbf93e4c9b586b9e/2-Delete-an-Environment-gif.gif)
-    
+
 
 **Warning:** Once you delete an Environment, it is permanently removed from your stack, and its associated [delivery tokens](/docs/headless-cms/about-delivery-tokens) become invalid.
 

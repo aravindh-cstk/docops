@@ -2,6 +2,7 @@
 title: "Leave a Stack"
 description: "Learn how to leave a stack on Contentstack, manage your stack roles, and transfer ownership or delete for seamless collaboration."
 url: /headless-cms/leave-a-stack
+uid: bltbd1296b10ce8b611
 ---
 
 # Leave a Stack
@@ -14,8 +15,8 @@ To leave a stack, log in to your [Contentstack account](https://www.contentstack
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Settings” icon or use the shortcut key “S” (for Windows and Mac OS users).
 2.  Click **Leave Stack** and confirm your action.
-    
+
     ![Leave Stack option in Contentstack settings](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt225f86190bccbaae/67bf131e53fc5e3d4ab183be/Setup-a-Stack_Leave-a-Stack_Leave-Stack-_Button.png)
-    
+
 
 Once you leave the stack, you will lose access to its content. This action **cannot** be undone.

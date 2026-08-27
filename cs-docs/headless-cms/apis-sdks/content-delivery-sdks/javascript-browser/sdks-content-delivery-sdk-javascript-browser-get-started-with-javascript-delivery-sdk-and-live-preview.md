@@ -2,6 +2,7 @@
 title: "Get Started with JavaScript Delivery SDK and Live Preview"
 description: "Get started with Contentstack’s JavaScript Delivery SDK for browsers and Live Preview to enable real-time content updates easily."
 url: /developers/sdks/content-delivery-sdk/javascript-browser/get-started-with-javascript-delivery-sdk-and-live-preview
+uid: blt013c80c6219d4fbb
 ---
 
 # Get Started with JavaScript Delivery SDK and Live Preview
@@ -92,5 +93,5 @@ For more information, refer to our [Timeline Preview](/docs/headless-cms/set-up-
 -   [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk)
 -   [JavaScript Playground App](https://github.com/contentstack/contentstack-js-sync-playground)
 -   [API Reference for JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/)
--   [JavaScript SDK Changelog](/docs/developers/sdks/content-delivery-sdk/javascript-browser/javascript-sdk-changelog/)
+-   [JavaScript SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download JavaScript Delivery SDK repository on GitHub](https://github.com/contentstack/contentstack-javascript)

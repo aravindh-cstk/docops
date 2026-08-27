@@ -2,6 +2,7 @@
 title: "Enable or Disable a Workflow"
 description: "steps to enable or disable a workflow"
 url: /headless-cms/enable-or-disable-a-workflow
+uid: bltc2ec8250d6c00a38
 ---
 
 # Enable or Disable a Workflow
