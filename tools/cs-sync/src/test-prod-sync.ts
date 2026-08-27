@@ -17,7 +17,13 @@ import {
 } from "./lib/entry-to-markdown.js";
 import { crossCheckProduct, findNavPosition, type NavMembership } from "./lib/nav-membership.js";
 import { buildSummary, type ChangedFile } from "./cms-pull-prod.js";
-import { buildPrBody, buildPrTitle, isRemovalBundle } from "./prod-sync-open-prs.js";
+import {
+  branchFor,
+  buildPrBody,
+  buildPrTitle,
+  isRemovalBundle,
+  MAX_BODY_CHARS,
+} from "./prod-sync-open-prs.js";
 import { articleFileName } from "./lib/nav-shared.js";
 import { lintStyle } from "./style-lint.js";
 import {
@@ -428,6 +434,75 @@ test("p14", "removals go in their own bundle, never attributed to an editor", ()
   ok(removal.files.length === 1, "removal bundle should hold only the removal");
   ok(!removal.editorName.includes("editor_a"), "removal attributed to an editor");
   return removal.editorName;
+});
+
+// ── Reusing an editor's open PR ─────────────────────────────────────────────
+
+test("p23", "an editor's branch slug is identical across runs, whoever else edited", () => {
+  // Two display names that slugify the same way. The old collision suffix was
+  // assigned by encounter order within a run, so editor_a's slug moved when a
+  // colliding editor appeared, and the next run could not find their open PR.
+  const alone = buildSummary(
+    [change("cs-docs/assets/a.md", "blt1")],
+    [pub("blt1", "editor_a")],
+    "production",
+    {},
+  );
+  // The colliding editor is listed first on purpose: that is what pushed
+  // editor_a onto the "-2" suffix under the old encounter-order scheme.
+  const crowded = buildSummary(
+    [change("cs-docs/launch/b.md", "blt2"), change("cs-docs/assets/a.md", "blt1")],
+    [pub("blt2", "editor_a "), pub("blt1", "editor_a")],
+    "production",
+    {},
+  );
+
+  const first = alone.bundles.find((b) => b.editorUid === "editor_a")!;
+  const second = crowded.bundles.find((b) => b.editorUid === "editor_a")!;
+  ok(
+    first.branchSlug === second.branchSlug,
+    `slug moved between runs: "${first.branchSlug}" then "${second.branchSlug}"`,
+  );
+  for (const bundle of crowded.bundles) {
+    ok(/^[a-z0-9-]+$/.test(bundle.branchSlug), `slug "${bundle.branchSlug}" is not branch-safe`);
+  }
+  return first.branchSlug;
+});
+
+test("p24", "the branch name carries no per-run timestamp", () => {
+  const summary = buildSummary(
+    [change("cs-docs/assets/a.md", "blt1")],
+    [pub("blt1", "editor_a")],
+    "production",
+    {},
+  );
+  const bundle = summary.bundles[0]!;
+  const branch = branchFor(bundle);
+
+  ok(
+    branch === `cms-sync/prod-csdocs/${bundle.branchSlug}`,
+    `unexpected branch name "${branch}"`,
+  );
+  // A stamp looked like 20260826-100000. Any run of 8+ digits would reintroduce
+  // a per-run branch, which silently disables PR reuse.
+  ok(!/\d{8,}/.test(branch), `branch "${branch}" looks like it carries a timestamp`);
+  return branch;
+});
+
+test("p25", "an oversized backlog still produces a PR body inside GitHub's limit", () => {
+  // GitHub rejects a body over 65536 chars outright, so this editor used to get
+  // no PR at all rather than a truncated one.
+  const changes = Array.from({ length: 800 }, (_, n) =>
+    change(`cs-docs/assets/a-very-long-directory-name/another-nested-folder/page-${n}.md`, `blt${n}`),
+  );
+  const published = changes.map((c) => pub(c.entryUid, "editor_a"));
+  const summary = buildSummary(changes, published, "production", {});
+  const body = buildPrBody(summary.bundles[0]!, summary);
+
+  ok(body.length <= MAX_BODY_CHARS, `body is ${body.length} chars, over the ${MAX_BODY_CHARS} cap`);
+  ok(body.includes("more files"), "no notice that files were omitted");
+  ok(body.includes("Files changed"), "omission notice does not point at the diff");
+  return `${body.length} chars for 800 files`;
 });
 
 // ── The PR body ────────────────────────────────────────────────────────────

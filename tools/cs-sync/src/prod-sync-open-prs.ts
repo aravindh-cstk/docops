@@ -40,6 +40,16 @@ const LABEL = "origin:prod-sync";
 const BASE = "main";
 const DOCS_ROOT_REL = "cs-docs";
 
+/**
+ * GitHub rejects a PR body over 65536 characters outright, which used to mean
+ * an editor with a large backlog got no PR at all rather than a long one. Both
+ * caps below exist because either one alone can be defeated: the row cap can
+ * still overflow on very long file paths, and a character cap alone would cut
+ * the table mid-row. MAX_BODY_CHARS leaves headroom under the hard limit.
+ */
+export const MAX_BODY_CHARS = 65000;
+const MAX_TABLE_ROWS = 150;
+
 const dryRun = process.env.PROD_SYNC_DRY_RUN === "1";
 
 function run(command: string, args: string[], options: { cwd?: string; allowFailure?: boolean } = {}): string {
@@ -62,9 +72,16 @@ function git(args: string[], options: { allowFailure?: boolean } = {}): string {
   return run("git", args, options);
 }
 
-/** UTC stamp shared by every branch in one run, so a run's PRs are identifiable together. */
-function runStamp(): string {
-  return new Date().toISOString().replace(/[-:]/g, "").replace(/\..+$/, "").replace("T", "-");
+/**
+ * An editor's branch name. Deliberately carries no per-run timestamp.
+ *
+ * The name has to be identical across runs, because that is how a second edit
+ * by the same editor finds their already-open PR and lands on it as another
+ * commit instead of opening a duplicate. Stability comes from branchSlug, which
+ * cms-pull-prod.ts derives from the editor's uid.
+ */
+export function branchFor(bundle: EditorBundle): string {
+  return `cms-sync/prod-csdocs/${bundle.branchSlug}`;
 }
 
 function escapeCell(value: string): string {
@@ -112,7 +129,8 @@ export function buildPrTitle(bundle: EditorBundle): string {
  * the file landed in the right folder.
  */
 export function buildPrBody(bundle: EditorBundle, summary: PullSummary): string {
-  const rows = bundle.files.map(
+  const shown = bundle.files.slice(0, MAX_TABLE_ROWS);
+  const rows = shown.map(
     (file) =>
       `| \`${escapeCell(file.filePath)}\` | \`${escapeCell(file.url || "—")}\` | ${escapeCell(
         navPosition(file),
@@ -120,6 +138,15 @@ export function buildPrBody(bundle: EditorBundle, summary: PullSummary): string 
         file.updatedAt,
       ).toUTCString()} |`,
   );
+
+  const omitted = bundle.files.length - shown.length;
+  if (omitted > 0) {
+    rows.push(
+      "",
+      `_...and ${omitted} more ${omitted === 1 ? "file" : "files"}, not listed here to stay inside ` +
+        `GitHub's PR description size limit. The **Files changed** tab is the complete list._`,
+    );
+  }
 
   const warnings = bundle.files
     .filter((file) => file.warning)
@@ -201,7 +228,14 @@ export function buildPrBody(bundle: EditorBundle, summary: PullSummary): string 
     `_Prod → GitHub sync, environment \`${summary.environment}\`, run ${summary.generatedAt}_`,
   );
 
-  return lines.join("\n");
+  const body = lines.join("\n");
+  if (body.length <= MAX_BODY_CHARS) return body;
+
+  // Backstop for the case the row cap cannot cover: enough very long file paths
+  // to overflow even MAX_TABLE_ROWS rows. Truncating loses the trailing review
+  // notes, which is worse than a full body but far better than no PR at all.
+  const notice = "\n\n_Description truncated to fit GitHub's size limit. See the **Files changed** tab._";
+  return `${body.slice(0, MAX_BODY_CHARS - notice.length)}${notice}`;
 }
 
 /** Copy one bundle's staged files into the working tree, and remove its deletions. */
@@ -287,6 +321,54 @@ function ensureLabel(): void {
   );
 }
 
+/**
+ * The editor's already-open PR for this branch, or null if they have none.
+ *
+ * Deliberately not allowFailure: a `gh` outage returning "" would parse as "no
+ * open PR" and open a duplicate, which is the exact failure this lookup exists
+ * to prevent. Letting it throw puts the bundle in the failed list instead, and
+ * the next run retries. No match is a normal exit 0 returning [], not an error.
+ *
+ * Querying only open PRs is also what recycles a branch whose PR was merged or
+ * closed: it stops matching, so the next run rebuilds it from main.
+ */
+function findOpenPrForBranch(branch: string): { number: number; headRefName: string } | null {
+  const output = run("gh", [
+    "pr",
+    "list",
+    "--head",
+    branch,
+    "--state",
+    "open",
+    "--json",
+    "number,headRefName",
+    "--limit",
+    "1",
+  ]);
+  const rows = JSON.parse(output.trim() || "[]") as Array<{ number: number; headRefName: string }>;
+  return rows[0] ?? null;
+}
+
+/**
+ * Refresh an existing PR's title and body after adding a commit to it.
+ *
+ * A bundle is always the full current diff against main, never just this run's
+ * delta, so after a second edit the original body describes fewer files than
+ * the PR now contains. The title matters too: the removal bundle's title counts
+ * files. allowFailure because the commit is already pushed and visible by now,
+ * so a stale description must not fail an otherwise successful sync.
+ */
+function editPr(prNumber: number, bundle: EditorBundle, summary: PullSummary): void {
+  const bodyPath = path.join(os.tmpdir(), `prod-sync-body-${bundle.branchSlug}.md`);
+  fs.writeFileSync(bodyPath, buildPrBody(bundle, summary), "utf8");
+
+  run(
+    "gh",
+    ["pr", "edit", String(prNumber), "--title", buildPrTitle(bundle), "--body-file", bodyPath],
+    { allowFailure: true },
+  );
+}
+
 function openPr(bundle: EditorBundle, summary: PullSummary, branch: string): void {
   const bodyPath = path.join(os.tmpdir(), `prod-sync-body-${bundle.branchSlug}.md`);
   fs.writeFileSync(bodyPath, buildPrBody(bundle, summary), "utf8");
@@ -331,24 +413,38 @@ async function main(): Promise<void> {
     ensureLabel();
   }
 
-  const stamp = runStamp();
   const opened: string[] = [];
   const failed: string[] = [];
 
   for (const bundle of summary.bundles) {
-    const branch = `cms-sync/prod-csdocs/${bundle.branchSlug}-${stamp}`;
-    console.log(`\n── ${bundle.editorName} → ${branch} (${bundle.files.length} file(s))`);
+    const branch = branchFor(bundle);
 
     if (dryRun) {
+      console.log(`\n── ${bundle.editorName} → ${branch} (${bundle.files.length} file(s))`);
       for (const file of bundle.files) console.log(`   ${file.changeKind} ${file.filePath}`);
       console.log(`   title: ${buildPrTitle(bundle)}`);
       continue;
     }
 
+    // Looked up before the checkout because it decides what to branch from.
+    const existingPr = findOpenPrForBranch(branch);
+    console.log(
+      `\n── ${bundle.editorName} → ${branch} (${bundle.files.length} file(s))` +
+        (existingPr ? ` [reusing PR #${existingPr.number}]` : ""),
+    );
+
     try {
-      // Each bundle starts from a clean main so a PR holds exactly one editor's
-      // changes and never inherits files staged for someone else.
-      git(["checkout", "-B", branch, `origin/${BASE}`]);
+      if (existingPr) {
+        // The branch is not a local ref yet: the workflow's checkout only
+        // fetches the ref that triggered it. Continuing from the PR's own tip
+        // is what makes this run land as another commit on it.
+        git(["fetch", "origin", branch]);
+        git(["checkout", "-B", branch, `origin/${branch}`]);
+      } else {
+        // A bundle with no open PR starts from a clean main so its PR holds
+        // exactly one editor's changes and never inherits someone else's.
+        git(["checkout", "-B", branch, `origin/${BASE}`]);
+      }
 
       applyBundle(bundle);
 
@@ -367,12 +463,26 @@ async function main(): Promise<void> {
 
       // Push before the check run: the Checks API requires the SHA to exist on
       // GitHub's servers, not just locally on the runner.
-      git(["push", "--force", "origin", branch]);
+      //
+      // Only the fresh path forces. On an open PR the tip was just fetched, so
+      // the commit is a fast-forward, and a plain push failing is the signal
+      // that someone pushed a manual fixup to the branch. Better to fail the
+      // bundle and report it than to force over a human's work.
+      git(existingPr ? ["push", "origin", branch] : ["push", "--force", "origin", branch]);
       const sha = git(["rev-parse", "HEAD"]).trim();
 
       const passed = lintAndReport(sha);
-      openPr(bundle, summary, branch);
-      opened.push(`${bundle.editorName} (${bundle.files.length} file(s), lint ${passed ? "passed" : "FAILED"})`);
+      const lintNote = `lint ${passed ? "passed" : "FAILED"}`;
+
+      if (existingPr) {
+        editPr(existingPr.number, bundle, summary);
+        opened.push(
+          `${bundle.editorName} (${bundle.files.length} file(s), added to PR #${existingPr.number}, ${lintNote})`,
+        );
+      } else {
+        openPr(bundle, summary, branch);
+        opened.push(`${bundle.editorName} (${bundle.files.length} file(s), ${lintNote})`);
+      }
     } catch (error) {
       // One editor's bundle failing must not cost every other editor their PR.
       const message = error instanceof Error ? error.message : String(error);
