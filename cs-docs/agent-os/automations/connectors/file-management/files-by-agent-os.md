@@ -2,6 +2,7 @@
 title: "Files by Agent OS"
 description: "Use the Files by Agent OS connector to export stack content into a downloadable file and deliver it via any third party application."
 url: /agent-os/files-by-agent-os
+uid: bltfb41172f75c558c9
 ---
 
 # Files by Agent OS
