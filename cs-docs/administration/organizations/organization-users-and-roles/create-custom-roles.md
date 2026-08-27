@@ -2,6 +2,7 @@
 title: "Create Custom Roles"
 description: "Learn how to create custom roles in Contentstack to align permissions with team duties, ensuring compliance and effective access management."
 url: /administration/create-custom-roles
+uid: blt5e51b3293e5c3442
 ---
 
 # Create Custom Roles
@@ -20,9 +21,9 @@ Use custom roles to align access with internal responsibilities and compliance r
 ## What You Will Learn
 
 -   How to create an organization-level custom role for a product.
-    
+
 -   Where custom roles become available after creation.
-    
+
 
 ## Create a Custom Role
 
@@ -36,9 +37,9 @@ To create a custom organization-level role, log in to your Contentstack account 
 6.  For each category, click **\+ Select Permissions**, or click the vertical ellipsis and select **Manage Permissions**.
 7.  In the permissions side panel, select the required actions for the category, such as **View**, **Create**, **Edit**, or **Delete**.![Permissions side panel with action selections](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amd5ed9777f7afb5d6/7a162e9d12fbcc1cc93a9914/Create_Roles_3.png?locale=en-us)
 8.  Click **Save**.
-    
+
     **Tip:** Configure permissions only for the areas this role should access. Leave other categories unselected to restrict access.
-    
+
 9.  Click **Create Role**.![Create Role button confirming the new custom role](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am21ee0c8220302ff9/73ef0171f0857889904ecd99/Create_Roles_4.png?locale=en-us)
 
 The custom role is created and appears on the Roles listing page with a Custom tag.

@@ -2,6 +2,7 @@
 title: "Analytics for CMS"
 description: "Monitor your CMS performance with our Analytics dashboard. Track usage, manage resources, and optimize efficiency with key metrics and insights."
 url: /analytics/analytics-for-cms
+uid: blt8ef437c0e3e318ec
 ---
 
 # Analytics for CMS
@@ -18,20 +19,20 @@ The Analytics dashboard for Content Management System (CMS) gives organization o
 ## What You Will Learn
 
 -   How to access the CMS Analytics dashboard.
-    
+
 -   What each dashboard section shows and what metrics it includes.
-    
+
 -   How to apply filters and save custom views.
-    
+
 
 ## Access the CMS Analytics Dashboard
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
 1.  Navigate to **Analytics** through the "App Switcher".
-    
+
 2.  By default, the **CMS** analytics dashboard appears, which shows detailed metrics specific to your CMS usage.
-    
+
     ![CMS Analytics dashboard overview](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am494ac21d4b4f7b6b/a498b522ef0c97c8ee1c2160/Analytics_CMS_Dashboard.png?locale=en-us)
 
 **Note:** Dashboard data updates every **24 hours**. Data shown does not reflect real-time activity.
@@ -57,33 +58,33 @@ This section offers detailed metrics for each stack, allowing you to monitor the
 Metrics available for each stack:
 
 -   **Stack Name:** Name of all stacks within your organization.
-    
+
 -   **API Key:** API keys of the listed stacks.
-    
+
 -   **Owner:** Email addresses of the owners of the listed stacks.
-    
+
 -   **Content Types:** Number of content types within the stacks.
-    
+
 -   **Global Fields:** Number of global fields within the stacks.
-    
+
 -   **Entries:** Number of entries created within the stacks.
-    
+
 -   **Assets:** Number of assets present within the stacks.
-    
+
 -   **Environments:** Number of environments created within the stacks.
-    
+
 -   **Locales:** Number of languages created within the stacks.
-    
+
 -   **Extensions:** Number of extensions created within the stacks.
-    
+
 -   **Webhooks:** Number of webhooks created within the stacks.
-    
+
 -   **Custom Roles:** Number of custom roles within the stacks.
-    
+
 -   **Branches:** Number of branches within the stacks.
-    
+
 -   **Branch Aliases:** Number of branch aliases within the stacks.
-    
+
 
 **Note:** [Global Fields](/docs/headless-cms/about-global-field), [Branches](/docs/headless-cms/about-branches), and [Branch Aliases](/docs/headless-cms/about-aliases) are plan-based features. To enable these features for your organization, contact the [support](mailto:support@contentstack.com) team.
 
@@ -150,19 +151,19 @@ To apply filters, click **Filters** and then the **Apply Filter(s)** button afte
 You can refine dashboard data using the following filters:
 
 -   **Stacks:** Select specific stacks or choose **All Stacks** for a consolidated view.
-    
+
 -   **Services:** Filter API requests by specific services or view all services together.
-    
+
 -   **Status Code:** Filter the chart to show only specific status codes.
-    
+
 -   **Cache:** Filter the chart to show only HITs or MISSes.
-    
+
 -   **Group By:** Organize data by daily, weekly, or monthly intervals.
-    
+
 -   **Date Range:** Choose from predefined time filters: 1 week, 30 days (default), 60 days, or 90 days. Some sections include a date selector below the graph to refine data for a custom period within the last 90 days.
-    
+
 -   **Custom Date:** Use the date dropdown to set a specific or custom range.
-    
+
 
 **Note:** The custom date range must not exceed **90 days**.
 

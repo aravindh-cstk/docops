@@ -2,6 +2,7 @@
 title: "Server Configuration"
 description: "Learn about Launch Server configuration specs, including execution timeout, memory size, runtime environment, file system, and architecture."
 url: /launch/server-configuration
+uid: blt03c0eb3c8daec03a
 ---
 
 # Server Configuration
