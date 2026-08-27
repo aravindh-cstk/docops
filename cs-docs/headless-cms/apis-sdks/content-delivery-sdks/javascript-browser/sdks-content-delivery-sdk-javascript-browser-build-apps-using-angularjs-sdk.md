@@ -2,6 +2,7 @@
 title: "Build Apps Using AngularJS SDK"
 description: "Build Apps Using AngularJS SDK with Contentstack"
 url: /developers/sdks/content-delivery-sdk/javascript-browser/build-apps-using-angularjs-sdk
+uid: bltce01207daac520cc
 ---
 
 # Build Apps Using AngularJS SDK
