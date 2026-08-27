@@ -2,6 +2,7 @@
 title: "Build Your Own MCP: Tool Definitions API"
 description: "Fetch Contentstack tool definitions from public HTTPS endpoints to build your own MCP server, agent framework, or API client without vendoring the repository."
 url: /developers/build-your-own-mcp-tool-tool-definition-api
+uid: blt730ec114592936bf
 ---
 
 # Build Your Own MCP: Tool Definitions API
