@@ -2,6 +2,7 @@
 title: "GDPR Compliance with Lytics Customer Data Platform"
 description: "Discover how Lytics supports GDPR compliance by enabling consent management, data access, portability, and erasure for customer data profiles."
 url: /lytics/gdpr-compliance-with-cdp
+uid: bltce198ce2247de5cb
 ---
 
 # GDPR Compliance with Lytics Customer Data Platform
