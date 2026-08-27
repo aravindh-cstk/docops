@@ -2,6 +2,7 @@
 title: "Private Network Deployments"
 description: "Learn to configure Private Network Deployments with static egress IPs and AWS VPC peering for secure connectivity to your backend infrastructure."
 url: /launch/private-network-deployments
+uid: blt1103c2f3dbdeefff
 ---
 
 # Private Network Deployments
@@ -23,13 +24,13 @@ By providing dedicated networking and predictable egress IP addresses, Private N
 ## What You Will Learn
 
 -   What Private Network Deployments and Egress IPs are.
-    
+
 -   When to use a private network.
-    
+
 -   How to set up VPC peering to your AWS VPC.
-    
+
 -   How to test both the peered and public traffic paths.
-    
+
 
 ## Use Cases
 
@@ -97,18 +98,18 @@ Once your private network is provisioned, we share:
 4.  Click **Create Peering Connection** in your AWS console to send the request.
 5.  We accept the peering connection request on our end.
 6.  Update your route table to direct traffic for our Subnet CIDR through the new peering connection.
-    
+
     **Example route table entry**
-    
+
     <table><tbody><tr><td><strong>Destination</strong></td><td><strong>Target</strong></td></tr><tr><td><span class="code">10.100.0.0/16</span><p><br>(Our Subnet CIDR)</p></td><td><span class="code">pcx-0a1b2c3d4e5f6g7h8</span><p><br>(Your peering connection ID)</p></td></tr></tbody></table>
-    
+
 7.  Enable DNS resolution on your VPC. Open the peering connection in your AWS console, go to its DNS settings, and turn on **Requester DNS resolution**. This lets our systems resolve your private DNS hostnames over the connection. Most VPCs already have DNS hostnames and DNS resolution turned on by default, so this is usually a quick toggle. Skip this step if your application only connects to backend resources by IP address.
 8.  Add the Launch-peered subnet to your **security group** inbound rules. Update the security group attached to your backend resources (and network ACL, if you use a custom one) to allow inbound traffic from **our Subnet CIDR**. The route table change only configures routing; your security group still needs to explicitly allow traffic through, or it'll be blocked even with the peering connection active.
-    
+
     **Example security group inbound rule**
-    
+
     <table><tbody><tr><td><strong>Type</strong></td><td><strong>Protocol</strong></td><td><strong>Port range</strong></td><td><strong>Source</strong></td></tr><tr><td>Custom TCP</td><td>TCP</td><td>5432</td><td><span class="code">10.100.0.0/16</span><p><br>(Our Subnet CIDR)</p></td></tr></tbody></table>
-    
+
 
 ## Testing the Connection
 

@@ -2,6 +2,7 @@
 title: "Create a Project Using Bitbucket Cloud"
 description: "Learn how to import a project using Bitbucket Cloud in Contentstack Launch with this step-by-step guide."
 url: /launch/import-a-project-using-bitbucket-cloud
+uid: blt23504c593f732f0a
 ---
 
 # Create a Project Using Bitbucket Cloud
@@ -23,13 +24,13 @@ Unlike GitHub, which allows direct connections, Bitbucket Cloud requires install
 ## What You Will Learn
 
 -   How to install the Bitbucket Cloud Marketplace app.
-    
+
 -   How to connect Bitbucket Cloud to Launch.
-    
+
 -   How to configure and deploy a project from a Bitbucket Cloud repository.
-    
+
 -   How to delete a project.
-    
+
 
 ## Install the Bitbucket Cloud Marketplace App
 
@@ -49,9 +50,9 @@ Now that the app is installed, let's follow the steps given below to establish a
     Alternatively, go to the **App Switcher** in the top panel and click the **Launch** icon.![AppSwitcher_Launch.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c5085453e429d79/69ce4df3267d5e026d79f448/AppSwitcher_Launch.png)
 2.  Click **\+ New Project**.![Launch_Projects_Landing_Page_2026.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt21093a02592b00ef/69afdb45afcf450008d243b2/Launch_Projects_Landing_Page_2026.png)
 3.  From the **Create New Project** modal, click **Import from a Git Repository**.
-    
+
     ![Launch_Create_Proj_Git_File.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt09bbe7fc07e8c9a5/660bba5d1b5a585bbdadd2cc/Launch_Create_Proj_Git_File.png)
-    
+
 4.  Select **Bitbucket Cloud** as your repository host. During this step, Contentstack Launch will request access to the repositories that you manage. ![Select Bitbucket.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta7bd230ecb294964/67a61df926b49ed8e16c102b/Select_Bitbucket.png)
 
 ## Configure and Deploy your Project in Launch
@@ -60,21 +61,21 @@ Now that we have connected your Bitbucket Cloud account with Contentstack Launch
 
 1.  Select the repository you want to import.
 2.  Then, define the following settings:
-    
+
     1.  **Environment Variables**: Add any required environment variables.
     2.  **Build Commands**: Specify the build and deployment commands for your project.
     3.  **Output Directory**: Define the folder for your built project (for example, dist or build).
-        
+
         Select a response mode:
-        
+
         -   **Streaming**: Delivers response chunks in real time as they are generated.
         -   **Buffered**: Displays output only after the entire response has been generated.
-        
+
         **Note:** Buffered is selected by default.
-        
-    
+
+
     **Additional Resource:** To fill out the **Create New Project** modal fields, refer to the sample data in your framework's [Quick Start Guide](/docs/launch#launch-overview).
-    
+
 3.  Once all the fields are filled with appropriate values and the configuration is complete, click the **Deploy** button.
 4.  Monitor the deployment logs to ensure the process completes successfully.
 
@@ -86,9 +87,9 @@ To delete the project:
 2.  Click the **Settings** icon.
 3.  In the **General** section, click the **Delete Project** button under **Delete Project**.
 4.  In the **Delete Project** modal, enter DELETE and click the **Yes, Delete** button.
-    
+
     **Warning:** This action will remove all domains associated with this project. After the removal, your Contentstack domains will still be available for use.
-    
+
 
 This deletes your project successfully.
 

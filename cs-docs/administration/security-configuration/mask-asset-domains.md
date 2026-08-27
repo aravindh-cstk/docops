@@ -2,6 +2,7 @@
 title: "Mask Asset Domains"
 description: "Mask Asset Domains"
 url: /administration/mask-asset-domains
+uid: blt37f95f410505790e
 ---
 
 # Mask Asset Domains
@@ -19,13 +20,13 @@ However, it is recommended not to set up a proxy, as it not only increases the o
 ## What You Will Learn
 
 -   How asset domain masking works with a CDN.
-    
+
 -   How to set up a proxy domain with Cloudflare.
-    
+
 -   How to set up a proxy domain with Fastly for both images and assets.
-    
+
 -   How to point a static subdomain to Fastly and update your asset URLs.
-    
+
 
 ## How Does Masking Work
 
@@ -58,13 +59,13 @@ To create a proxy (images.contentstack.io and assets.contentstack.io) with a cus
     Leave all other fields to their default value and click **Update**. ![Edit this host fields for images.contentstack.io](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt103750c506c86c96/672c7883adf8c5790cfbe0d7/image13.gif)
 10.  Now, we will attach a condition in the origin of images.contentstack.io by editing the host again. To do this, click the edit icon and then the **attach a condition** link as shown below: ![Attach a condition link on the images host](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfa91358e2656b35f/672c78a6170171f5bceffe7e/image5.png)
 11.  On the **Create a new request condition** modal, enter the name (for example, images) and the following condition in the respective fields.
-     
+
      ```
      req.url ~ "\. 
      (exr|apng|bmp|cgm|drle|emf|fits|g3|gif|heic|he ics|heif|heifs|ief|jls|jp2|jpg2||jpeg|jpg|jpe| jpm|jpx|jpf|ktx|png|sgi|svg|svgz|t38|tif|tiff| tfx|webp|wmf|pti|psd|azv|uvi|uvvi|uvg|uvvg|djv u|djv|\*sub|dwg|dxf|fbs|fpx|fst|mmr|rlc|ico|mdi|wdp|npx|tap|vtf|wbmp|xif|pcx|3ds|ras|cmx|fh| fhc|fh4|fh5|fh7|\*ico|jng|sid|\*bmp|\*pcx|pic| pct|pnm|pbm|pgm|ppm|rgb|tga|xbm|xpm|xwd)$"
      ```
-     
-       
+
+
      This basically implies that anything that has an extension like png, bmp, svg, and so on, consider it as an image and apply the condition accordingly.
 12.  Then, click the **Save and apply to images\_contenstack\_io** button as shown below: ![Save and apply the images request condition](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt76c1f1ad2a02518f/672c78b553e3c42343b3a51b/image10.gif)
 13.  Then, go to the bottom of the page and click **Update** for the settings to take effect.
@@ -74,45 +75,45 @@ To create a proxy (images.contentstack.io and assets.contentstack.io) with a cus
 17.  On the **Edit this host** page, enter the name (**assets\_contentstack\_io**) in the **Name** field. Ensure the **Address** field has the value _**assets.contentstack.io**_.  
      Scroll down to the **Override host** field at the bottom and enter **assets.contentstack.io**. Keep all other settings as is and click **Update**. ![Edit this host fields for assets.contentstack.io](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfcd1a1b338d91e19/672c78a6dec4ef3fd27cd430/image2.png)
 18.  Now, we will attach a condition in the origin of assets.contentstack.io by editing the host again. To do this, click the **Attach a condition** link on the host pages when it gets updated. ![Attach a condition link on the assets host](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt222c4da778eb4502/672c788288bc785e42597db7/image18.png)
-     
-       
+
+
      Alternatively, you can click the edit icon, and then click the **Attach a condition** link.
-     
+
 19.  On the modal that opens, create a new condition by clicking the **Create a new request condition** button. ![Create a new request condition button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta142a688a629825a/672c78824b9fed252f2c14e2/image17.png)
 20.  On the **Create a new request condition** modal, enter the name (for example, NOT images) and the following condition in the respective fields.
-     
+
      ```
      req.url !~ "\. 
      (exr|apng|bmp|cgm|drle|emf|fits|g3|gif|heic|he ics|heif|heifs|ief|jls|jp2|jpg2||jpeg|jpg|jpe| jpm|jpx|jpf|ktx|png|sgi|svg|svgz|t38|tif|tiff| tfx|webp|wmf|pti|psd|azv|uvi|uvvi|uvg|uvvg|djv u|djv|\*sub|dwg|dxf|fbs|fpx|fst|mmr|rlc|ico|md i|wdp|npx|tap|vtf|wbmp|xif|pcx|3ds|ras|cmx|fh| fhc|fh4|fh5|fh7|\*ico|jng|sid|\*bmp|\*pcx|pic| pct|pnm|pbm|pgm|ppm|rgb|tga|xbm|xpm|xwd)$"
      ```
-     
+
 21.  Then, click the **Save and apply to assets\_contenstack\_io** button, as shown below, and then the **Update** button for changes to take effect: ![Save and apply the assets request condition](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt216faecae8391c60/672c78837ca8e82fda486f64/image1.png)
 22.  Then, at the top of the **Hosts** page, click **Activate**. ![Activate button on the Hosts page](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta014f2bc730f75f4/672c78b41d8baba9eae83d25/image11.png)
-     
-       
+
+
      You will get a message that the service has been activated and locked.
-     
+
      ![Service activated and locked message](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2be194592d4bb513/672c78a7e5b8c53524a8208a/image8.png)
 23.  If you already have a static subdomain for your images and assets, then make a DNS entry, pointing it to k.sni.fastly.net. For example:
-     
+
      ```
      static.<your-custom-domain>.com  → k.sni.fastly.net
      ```
-     
-       
+
+
      Pointing your static subdomain to Fastly will help you mask images and assets from Contentstack to your domain based on the settings that we have done in Fastly.
-     
+
      **Note:** If you do not have a subdomain, then there could be different ways of routing the traffic depending on the requirement. For this, contact our [support](mailto:support@contentstack.com) team.
-     
+
 24.  Lastly, update your images/assets URL in your application with your own domain URL. For example:  
      Update
-     
+
      ```
      https://images.contentstack.io/v3/assets/blt2xxxyyyzzze34/blt7xxxyyyzzb4b/65a71577/istockphoto-1295274245-612x612.jpg
      ```
-     
+
      to
-     
+
      ```
      https://static.<your-custom-domain>.com/v3/assets/blt2xxxyyyzzze34/blt7xxxyyyzzb4b/65a71577/istockphoto-1295274245-612x612.jpg
      ```

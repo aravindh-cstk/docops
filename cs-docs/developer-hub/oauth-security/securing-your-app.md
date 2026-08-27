@@ -2,6 +2,7 @@
 title: "Securing your App"
 description: "Secure your Contentstack app with Signed Webhooks, JWT for UI Locations, IP whitelisting, and replay attack protection."
 url: /developer-hub/securing-your-app
+uid: blt2fcd9c90884f095f
 ---
 
 # Securing your App
@@ -22,13 +23,13 @@ Contentstack provides signed support for both integrations.
 ## What You Will Learn
 
 -   How to secure webhooks with the signed webhooks feature.
-    
+
 -   How to secure UI locations using a JWT app-token.
-    
+
 -   How to retrieve the signing public key and verify a JWT app-token.
-    
+
 -   How IP whitelisting restricts access to your domains.
-    
+
 
 ## Securing Webhooks
 

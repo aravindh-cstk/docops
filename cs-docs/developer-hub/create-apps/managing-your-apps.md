@@ -2,6 +2,7 @@
 title: "Managing your Apps"
 description: "Learn how to manage your apps in Contentstack's Developer Hub with step-by-step instructions."
 url: /developer-hub/managing-your-apps
+uid: bltc728979830ff0ba9
 ---
 
 # Managing your Apps
@@ -17,11 +18,11 @@ You can manage all your installed/authorized apps and installation requests from
 ## What You Will Learn
 
 -   How to reach the Manage section.
-    
+
 -   Where to find your installed apps.
-    
+
 -   Where to find your authorized apps.
-    
+
 
 ## View your Apps
 

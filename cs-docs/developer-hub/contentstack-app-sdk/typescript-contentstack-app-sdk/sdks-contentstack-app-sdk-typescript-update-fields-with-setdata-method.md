@@ -2,6 +2,7 @@
 title: "Update Fields With the setData Method"
 description: "Learn to use the Contentstack App SDK's setData method to update your field values automatically. Understand TypeScript field UIDs for custom editors and marketplace apps."
 url: /developers/sdks/contentstack-app-sdk/typescript/update-fields-with-setdata-method
+uid: blt22f570f5fbdbf40d
 ---
 
 # Update Fields With the setData Method
@@ -29,11 +30,11 @@ The setData method lets your Contentstack marketplace app programmatically updat
 ## What You Will Learn
 
 -   How to obtain a Field instance from sdk.location.entry.getField("field\_uid") for your UI location.
-    
+
 -   How to execute the setData method and handle the returned promise to perform updates.
-    
+
 -   When to use entry.setData() for batch operations across several fields versus field.setData() for a single field.
-    
+
 
 **Note:** When calling setData on a group field or modular block, the entire nested structure is replaced. Pass all sub-fields to avoid unintentional data loss.
 
@@ -559,7 +560,7 @@ You must pass data on every call. Omitting it triggers an error; the SDK supplie
 
 -   Passing an invalid UID or path throws an error before setData runs.
 -   For user-visible validation failures and editor behavior, see [Troubleshooting](/docs/developers/sdks/contentstack-app-sdk/typescript/update-fields-with-setdata-method#troubleshooting).
-    
+
 
 **Note:** Whether null, empty strings, or empty collections clear a field depends on the field type and your content type schema. Verify behavior in the entry editor.
 
