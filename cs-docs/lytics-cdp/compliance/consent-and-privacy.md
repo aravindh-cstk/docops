@@ -2,6 +2,7 @@
 title: "Consent and Privacy"
 description: "Discover how Lytics CDP helps manage customer data consent with granularity, ensuring privacy compliance and trust."
 url: /lytics/consent-and-privacy
+uid: blt117ce49a69254039
 ---
 
 # Consent and Privacy

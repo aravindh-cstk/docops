@@ -2,6 +2,7 @@
 title: "Manage a Lytics Project"
 description: "Learn how to edit project settings, manage connections to CMS stacks, Launch, and Personalize projects, invite collaborators, and delete a Lytics project in Contentstack."
 url: /lytics/manage-a-lytics-project
+uid: blt5edad935602bca67
 ---
 
 # Manage a Lytics Project
@@ -40,11 +41,11 @@ Follow these steps to manage and update your Lytics project.
 4.  Click **Manage Lytics** to open the Lytics platform directly at [app.lytics.com](https://www.lytics.com/), where you can build audiences, view customer profiles, and configure data collection and activation.  
     ![Manage_lytics.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am452b26bf09a8bf44/58a065274b6dac095f170833/Manage_lytics.png?locale=en-us)
 5.  **After JStag is installed**, the dashboard switches to the live data view showing event counts, audience counts, user profiles, and the Event Activity chart. The quick-action cards are no longer shown. To access settings:
-    
+
     -   Click **Settings** in the top navigation bar.
-    
+
     To open the Lytics platform, click **Manage Lytics** in the top right corner. it takes you to [app.lytics.com](https://www.lytics.com/).
-    
+
 
 The **Settings** panel opens with two sections in the left navigation: **General** and **Users**.
 
