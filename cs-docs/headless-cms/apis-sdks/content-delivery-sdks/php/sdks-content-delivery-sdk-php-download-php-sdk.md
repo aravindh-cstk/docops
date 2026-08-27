@@ -2,6 +2,7 @@
 title: "Download PHP SDK"
 description: "Download PHP SDK"
 url: /developers/sdks/content-delivery-sdk/php/download-php-sdk
+uid: blt47eeb6e07f4f655a
 ---
 
 # Download PHP SDK

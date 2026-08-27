@@ -2,6 +2,7 @@
 title: "About Java Marketplace SDK"
 description: "This documentation on Java Marketplace SDK provides insights into leveraging the SDK to manage and manipulate content within your Java applications efficiently."
 url: /developers/sdks/marketplace-sdk/java/about-java-marketplace-sdk
+uid: blt477b58c8f6c1d7d3
 ---
 
 # About Java Marketplace SDK

@@ -2,6 +2,7 @@
 title: "About Assets"
 description: "Centralize, organize, and optimize digital assets with Contentstack Assets featuring AI-powered search, metadata, versioning, and enterprise governance."
 url: /assets/about-assets
+uid: blt702b01614d1afb0b
 ---
 
 # About Assets
@@ -15,10 +16,10 @@ From product images and brand videos to 3D models and marketing documents, Conte
 ## Key Features
 
 -   **Spaces and Workspaces**
-    
+
     Spaces are top-level containers where assets are managed independently. Each brand, business unit, or region can have its own space.  
     Workspaces are isolated environments inside a space, ideal for campaign-specific collaboration or branch-aligned workflows. They provide controlled editing, access management, and campaign asset governance.
-    
+
 -   **Centralized Asset Library**
     -   Upload and store images, documents, videos, 3D models, and more.
     -   Organize assets into folders for clarity and easy navigation.

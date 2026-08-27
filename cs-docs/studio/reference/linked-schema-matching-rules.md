@@ -2,6 +2,7 @@
 title: "Linked-Schema Matching Rules"
 description: "Reference for every rule and edge case in Studio's algorithm that matches a section's linked schema to fields on a template's connected content type."
 url: /studio/linked-schema-matching-rules
+uid: blt34a7c81407940869
 ---
 
 # Linked-Schema Matching Rules

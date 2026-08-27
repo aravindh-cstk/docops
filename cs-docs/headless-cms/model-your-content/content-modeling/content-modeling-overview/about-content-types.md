@@ -2,6 +2,7 @@
 title: "About Content Types"
 description: "A content type defines the structure or blueprint of a page or a section of your web or mobile property. Contact Contentstack today"
 url: /headless-cms/about-content-types
+uid: blt260e33e30aa77abd
 ---
 
 # About Content Types

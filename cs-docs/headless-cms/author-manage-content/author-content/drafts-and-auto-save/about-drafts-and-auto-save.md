@@ -2,6 +2,7 @@
 title: "About Drafts and Auto Save"
 description: "Learn how Drafts and Auto Save protects draft changes, enables collaborative editing, and manages version history in Contentstack."
 url: /headless-cms/about-drafts-and-auto-save
+uid: blt78c5e287ba85c79b
 ---
 
 # About Drafts and Auto Save

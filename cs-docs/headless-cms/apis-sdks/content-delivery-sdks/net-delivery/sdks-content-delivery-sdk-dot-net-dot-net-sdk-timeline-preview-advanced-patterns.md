@@ -2,6 +2,7 @@
 title: ".NET SDK Timeline Preview Advanced Patterns"
 description: "Discover advanced implementation examples for Contentstack's Timeline Preview, including validation strategies for complex content structures and scheduled launches."
 url: /developers/sdks/content-delivery-sdk/dot-net/dot-net-sdk-timeline-preview-advanced-patterns
+uid: bltf5c0f0ea4040d704
 ---
 
 # .NET SDK Timeline Preview Advanced Patterns

@@ -2,6 +2,7 @@
 title: "Use Task Filter"
 description: "Use Task Filter"
 url: /headless-cms/use-task-filter
+uid: blt643f4ec98784a900
 ---
 
 # Use Task Filter
@@ -17,6 +18,6 @@ You can refine tasks based on specific filters as shown below: 
 Let’s look at the filters that you can use.
 
 -   **By Users (available for stack Admins and Owner)**: Stack admins and the owner can view all tasks of all the stack users. They can filter the tasks by users.  
-    
+
 -   **By Action**: This filter lets you refine tasks based on the action that is required by you. Some of the values that you can select here are **Approved**, **Pending**, and **Rejected**.
 -   **By Workflow Stages**: You will see the list of all the workflows that are available for your stack. You can then select a workflow to view all the stages. If you select any stage, Contentstack will filter all the entries of which the selected stage is assigned to you.

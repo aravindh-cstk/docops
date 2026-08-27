@@ -2,6 +2,7 @@
 title: "Assigning Taxonomy Terms Based on Locale"
 description: "This guide explains how to assign taxonomy terms according to locale, which in turn influences the application of other business rules for term assignment."
 url: /headless-cms/assigning-taxonomy-terms-based-on-locale
+uid: blt831ad0dab2d5ced7
 ---
 
 # Assigning Taxonomy Terms Based on Locale
@@ -25,11 +26,11 @@ This solution sets up a Taxonomy called “Region” that contains a list of cou
 3.  Create an Automation to fill the Region term based on the present entry's language.
     1.  With the **Contentstack** connector create an Entry Trigger for any new entry created based on the particular Content Type. ![image1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3949476564e70942/65f964328330b3df1802f923/image1.png)
     2.  Use the **CodeBlock** connector with the following JavaScript Code:  
-        
+
         ```
         const mapping = {'sw':'sweden', 'en-us':'usa', 'en-uk':'england', 'nl-nl':'netherlands', 'de-de':'germany'}; return mapping[input.locale] || 'usa';
         ```
-        
+
         Here's how it looks:  
         ![image4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt30f7e1716d7da65e/65f96432f50f9a6bba7c181a/image4.png)
     3.  Use the **HTTP** connector to update an entry based on the localized country of the entry.![image6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbe2eba93cb98da4d/65f964325a287d8e37f2f31f/image6.png)

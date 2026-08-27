@@ -2,6 +2,7 @@
 title: "Authorized Apps"
 description: "Authorized Apps"
 url: /marketplace/authorized-apps
+uid: blt253aeb06b41cc8fd
 ---
 
 # Authorized Apps
@@ -25,7 +26,7 @@ To revoke permissions for an app, follow the below steps:
 5.  On the page that appears, click the user whose permission you want to revoke.![Revoking_Token_-_Select_User](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7ea57b5297efa2a9/63ecde523464ff7685a87096/Revoking_Token_-_Select_User.png)
 6.  Click the **Revoke** button to proceed. After you revoke the app, it can no longer access your data. ![Revoke_Token_-_Revoke](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4ddb246450ed2602/63ecda680773755832f89e41/Revoke_Token_-_Revoke.png) If you are a non-admin user of the organization, you will see the permissions authorized by only you. On the page that appears, click the **Revoke** button to revoke the access token.![Revoke_Token_-_Revoke_3](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf0fbbaedda8fb28c/63ece1dae4d5251cb468821a/Revoke_Token_-_Revoke_3.png)
 7.  You can also revoke the permissions of all users by clicking the **Revoke All** button.
-    
+
     ![Revoke_Token_-_Revoke_All](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltea92b7a3b755f88d/63ecda699b18a175e2431a24/Revoke_Token_-_Revoke_All.png)
 
 ## Revoking Permissions for Contentstack Starter

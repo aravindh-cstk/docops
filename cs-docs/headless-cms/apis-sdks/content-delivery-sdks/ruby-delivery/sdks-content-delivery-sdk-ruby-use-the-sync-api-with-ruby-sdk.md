@@ -2,6 +2,7 @@
 title: "Use the Sync API With Ruby SDK"
 description: "steps for using the Sync API With Ruby Delivery SDK"
 url: /developers/sdks/content-delivery-sdk/ruby/use-the-sync-api-with-ruby-sdk
+uid: blt9f412f804af2f014
 ---
 
 # Use the Sync API With Ruby SDK

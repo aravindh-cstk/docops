@@ -2,6 +2,7 @@
 title: "Get Started with DataSync FileSystem SDK"
 description: "Sync and query Contentstack data locally using the Filesystem SDK. Fast, reliable content access from JSON files with minimal API calls."
 url: /developers/sdks/datasync-sdk-filesystem/typescript/get-started-with-datasync-filesystem-sdk
+uid: bltb584ad119fbe936d
 ---
 
 # Get Started with DataSync FileSystem SDK

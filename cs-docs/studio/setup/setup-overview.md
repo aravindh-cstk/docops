@@ -2,6 +2,7 @@
 title: "Setup Overview"
 description: "Learn how to set up Contentstack Studio by completing both layers of installation: wiring SDKs in your app and configuring a Studio project."
 url: /studio/setup-overview
+uid: blt9896528ab2a75f40
 ---
 
 # Setup Overview

@@ -2,6 +2,7 @@
 title: "Page Data Tab for Entry Data, Queries, and External Data"
 description: "Learn how the Data tab in the Freeform canvas right panel lets you pin entry data, saved CDA queries, and external runtime data onto a Freeform template."
 url: /studio/page-data-tab-for-entry-data-queries-and-external-data
+uid: blt81bd7707fb269fe8
 ---
 
 # Page Data Tab for Entry Data, Queries, and External Data

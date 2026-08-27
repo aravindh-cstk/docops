@@ -2,6 +2,7 @@
 title: "Publish an Entry"
 description: "Learn how to efficiently publish and manage entries in Contentstack, ensuring accurate content delivery across multiple environments and locales."
 url: /headless-cms/publish-an-entry
+uid: blt36d8e7817f5e65de
 ---
 
 # Publish an Entry
@@ -15,12 +16,12 @@ To publish an entry, log in to your [Contentstack account](https://www.contentst
 1.  Navigate to your stack and click the “Entries” icon. You can also use the shortcut key “E” (both Windows and Mac) to access entries.
 2.  [Search](/docs/headless-cms/about-search) for the entry you want to publish.
 3.  Open the entry and click **Publish** at the bottom-right corner of the page.
-    
+
     **Tip:** You can also publish entries directly from the Entries list page using one of the following methods:
-    
+
     -   Click the **vertical ellipsis** next to the entry, then select **Publish** from the dropdown menu.
     -   Select the **checkbox** next to the entry and click **Publish** in the floating action widget.
-    
+
 4.  In the **Publish Entry** modal, select the target [environments](/docs/headless-cms/about-environments) and [locales](/docs/headless-cms/about-localization) to which you want to publish the entry.
 5.  If the entry has [variants](/docs/headless-cms/about-entry-variants), select the variants to publish from the **Variants** dropdown.
 6.  Under the **Publish** section, select one of the two available options:
@@ -44,15 +45,15 @@ Publishing referenced items ensures that all required content is available in th
 
 1.  In the **Publish Reference(s)** modal, review all referenced entries and assets.
 2.  Hover over any warning icons to view the issues in the references. If required, click the “Edit entry/asset in new tab” icon to update the reference.
-    
+
     **Additional Resource:** To learn more about fixing validation errors, refer to the [Validations](/docs/administration/validations) document.
-    
+
 3.  Choose one of the following options:
     -   **Send With References:** Publishes the parent entry along with the selected references.
     -   **Send Without References:** Publishes only the parent entry. Referenced items remain unpublished.
-        
+
         **Tip:** When publishing without validation, you can track the task’s progress and status in the [Bulk Task Queue](/docs/headless-cms/stack-bulk-task-queue) under **Settings**.
-        
+
 
 ### Validate References and Publish
 
@@ -72,22 +73,22 @@ This workflow allows you to review, filter, and validate referenced entries and 
     -   **Select all references:** Include all the references of the entry.
     -   **Select only the parent entry:** Publish only the entry without any references.
 2.  To select specific references, use the “Arrow” icon to expand or collapse the reference levels and choose the references.
-    
+
     **Tip:** Asset rows will be displayed as system assets.
-    
+
 3.  After selecting the references, choose one of the following actions:
-    
+
     -   **Validate and Publish:** Opens the **Validate Items** modal to review the items selected for publishing.
-        
+
         **Tip:** If your entry contains many references, you can minimize the **Validate Items** modal using the “Minimize” icon in the top-right corner.
-        
+
     -   **Send All References:** Publishes the entry and all referenced items immediately, without validation.
-    
+
     ![Publish_Entries_PublishReview.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd188837d210713a3/698aecc2626f6476f147275e/Publish_Entries_PublishReview.png)
 4.  Click a reference to open it in a new tab and address any issues before proceeding.
-    
+
     **Note:** When you fix validation errors or update a referenced item, the **Validate Entries** modal continues to show the previous results. Run a new validation to reflect the latest changes before publishing.
-    
+
 5.  When you are ready, click **Publish Now**.![Publish_Entries_Validate.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt35f1c54627cc9e21/698aecc24069a72c855dea18/Publish_Entries_Validate.png)  
     The entry and selected references are added to the [**Publish Queue**](/docs/headless-cms/view-publish-status-of-entries-assets-in-publish-queue) for processing.
 

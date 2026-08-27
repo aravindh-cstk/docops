@@ -2,6 +2,7 @@
 title: "Configure Environment, Language, and Canvas URL"
 description: "Learn how to set the environment, language, and canvas URL in your Studio project configuration to enable live section previews."
 url: /studio/configure-environment-language-and-canvas-url
+uid: blt1de145b317448379
 ---
 
 # Configure Environment, Language, and Canvas URL

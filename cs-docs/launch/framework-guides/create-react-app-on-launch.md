@@ -2,6 +2,7 @@
 title: "Create React App on Launch"
 description: "Learn about the Create React App (CRA) framework and its supported features in Contentstack Launch."
 url: /launch/create-react-app-on-launch
+uid: blt14ea7076e1134f68
 ---
 
 # Create React App on Launch

@@ -2,6 +2,7 @@
 title: "Cache Purging Scenarios"
 description: "Learn how Contentstack purges cache under different scenarios."
 url: /headless-cms/cache-purging-scenarios
+uid: bltbfc793bd0d7b2462
 ---
 
 # Cache Purging Scenarios
@@ -24,7 +25,7 @@ Each article also has references to a specific author bio from the “Author Det
 ![Purging_1.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt08f286c6b0575e7f/62eb763d7e18987096ab9b46/Purging_1.png)
 
 The “News Articles” content type will have entries that contain details of specific news articles. Each article also comprises appropriate images related to the particular news item.  
-  
+
 Refer to the list of articles given below:
 
 -   News article 1
@@ -91,7 +92,7 @@ Suppose if the content manager deletes an author bio entry from the “Author De
 The following cached data will be purged:
 
 -   All entries of the “Author Details” content type present in “French (France)” and published to “Production”.
--   All entries of the “News Articles” content type present in “French (France)” and published to “Production”.
+-   All entries of the ���News Articles” content type present in “French (France)” and published to “Production”.
 -   All entries of the “Home Page” content type present in “French (France)” and published to “Production”.  
     ![Purging_6.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt167f7337166baf9c/62eb763dd3b8a5700456644a/Purging_6.png)
 

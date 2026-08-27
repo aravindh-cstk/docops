@@ -2,6 +2,7 @@
 title: "About iOS Utils Library"
 description: "The iOS Utils library contains all the utilities for the iOS SDK."
 url: /developers/sdks/utils-sdk/ios/about-ios-utils-library
+uid: bltab71fcdf957d807e
 ---
 
 # About iOS Utils Library

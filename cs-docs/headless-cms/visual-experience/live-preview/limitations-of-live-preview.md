@@ -2,6 +2,7 @@
 title: "Limitations of Live Preview"
 description: "Learn about the current limitations of Contentstack's Live Preview feature, including compatibility restrictions, permission constraints, and technical requirements."
 url: /headless-cms/limitations-of-live-preview
+uid: blt718174c49f9ba697
 ---
 
 # Limitations of Live Preview

@@ -2,6 +2,7 @@
 title: "Quick Search"
 description: "Quick Search in Contentstack speeds up finding entries or assets with instant results and easy navigation, enhancing productivity across the app."
 url: /headless-cms/quick-search
+uid: blt3a3efa4a4cc22fb2
 ---
 
 # Quick Search
@@ -15,9 +16,9 @@ To access the Quick search, log in to your [Contentstack account](https://www.co
 1.  Navigate to your stack and click the “**Search”** icon (or press “ctrl” + "K") located in the header.
 2.  Use the dropdown menu within the search bar to select whether you want to search for **Entries** or **Assets**.
 3.  Type your search term in the search bar and find all the relevant results.
-    
+
     ![alt_text](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7c220c995f1b6b6e/684050f7df1392385af5db23/1-Quick-search-Walkthrough.gif)
-    
+
 4.  You can also refine your search further using filters or advanced queries.
 
 Quick Search in Contentstack simplifies and speeds up finding entries or assets by providing immediate results from anywhere in the stack.
