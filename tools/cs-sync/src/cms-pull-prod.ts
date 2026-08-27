@@ -192,16 +192,31 @@ function loadConfig(): Config {
  * An editor's branch name fragment, stable across runs.
  *
  * The uid fragment is not decoration: prod-sync-open-prs.ts reuses an editor's
- * already-open PR by looking it up by branch name, so the same editor has to
- * resolve to the same slug on every run or every run opens a duplicate PR.
+ * already-open PR by matching that fragment, so the same editor has to resolve
+ * to the same fragment on every run or every run opens a duplicate PR.
  * Display names alone cannot carry that — two editors can slugify identically,
- * and the collision suffix that used to disambiguate them was assigned by
- * encounter order *within a run*, so it moved when the set of editors changed.
+ * the collision suffix that used to disambiguate them was assigned by encounter
+ * order *within a run* so it moved when the set of editors changed, and a name
+ * itself changes whenever someone is added to cms-user-index.json.
  */
 export function branchSlugFor(name: string, editorUid: string): string {
   const base = slugify(name) || "unknown-editor";
-  const fragment = createHash("sha256").update(editorUid).digest("hex").slice(0, 8);
-  return `${base}-${fragment}`;
+  return `${base}-${uidFragmentFor(editorUid)}`;
+}
+
+/**
+ * The rename-proof half of the slug above, on its own.
+ *
+ * The `base` half is not stable in practice: display names come from
+ * cms-user-index.json, which is edited by hand as people are mapped, so an
+ * editor who was "Contentstack user blt0115cfb095846676" becomes "Anaum Hasan"
+ * the moment their uid is added there. That rename changes the branch name and,
+ * before this existed, cost the editor their open PR — the next run could not
+ * find it by name and opened a duplicate. So PR lookup keys off this fragment
+ * and never off the full slug.
+ */
+export function uidFragmentFor(editorUid: string): string {
+  return createHash("sha256").update(editorUid).digest("hex").slice(0, 8);
 }
 
 /**

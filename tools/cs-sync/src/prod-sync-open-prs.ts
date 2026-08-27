@@ -29,6 +29,7 @@ import os from "node:os";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
+import { uidFragmentFor } from "./cms-pull-prod.js";
 import type { ChangedFile, EditorBundle, PullSummary } from "./cms-pull-prod.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -39,6 +40,7 @@ const SUMMARY_PATH = path.join(TOOL_ROOT, ".cms-pull-prod-summary.json");
 const LABEL = "origin:prod-sync";
 const BASE = "main";
 const DOCS_ROOT_REL = "cs-docs";
+const BRANCH_PREFIX = "cms-sync/prod-csdocs/";
 
 /**
  * GitHub rejects a PR body over 65536 characters outright, which used to mean
@@ -81,7 +83,27 @@ function git(args: string[], options: { allowFailure?: boolean } = {}): string {
  * cms-pull-prod.ts derives from the editor's uid.
  */
 export function branchFor(bundle: EditorBundle): string {
-  return `cms-sync/prod-csdocs/${bundle.branchSlug}`;
+  return `${BRANCH_PREFIX}${bundle.branchSlug}`;
+}
+
+/**
+ * Does this open PR's head branch belong to the editor owning `fragment`?
+ *
+ * Matches on the uid fragment alone, never the whole branch name, because the
+ * display-name half of the name changes whenever someone is mapped in
+ * cms-user-index.json. Keying on the full name meant a rename orphaned the
+ * editor's open PR and the next run opened a duplicate beside it — observed
+ * live, where seven editors gained real names in one index update and every
+ * one of them got a second PR.
+ *
+ * The optional `-<n>` tail is the collision suffix buildSummary appends when
+ * two editors slugify identically, so it has to match too.
+ */
+export function branchBelongsToEditor(headRefName: string, fragment: string): boolean {
+  if (!headRefName.startsWith(BRANCH_PREFIX)) return false;
+  const slug = headRefName.slice(BRANCH_PREFIX.length);
+  // fragment is hex from a sha256 digest, so it needs no regex escaping.
+  return new RegExp(`-${fragment}(-\\d+)?$`).test(slug);
 }
 
 function escapeCell(value: string): string {
@@ -322,7 +344,10 @@ function ensureLabel(): void {
 }
 
 /**
- * The editor's already-open PR for this branch, or null if they have none.
+ * The editor's already-open PR, or null if they have none.
+ *
+ * Matched by uid fragment across every open prod-sync PR rather than by exact
+ * branch name, so an editor keeps their PR when their display name changes.
  *
  * Deliberately not allowFailure: a `gh` outage returning "" would parse as "no
  * open PR" and open a duplicate, which is the exact failure this lookup exists
@@ -332,21 +357,36 @@ function ensureLabel(): void {
  * Querying only open PRs is also what recycles a branch whose PR was merged or
  * closed: it stops matching, so the next run rebuilds it from main.
  */
-function findOpenPrForBranch(branch: string): { number: number; headRefName: string } | null {
+function findOpenPrForEditor(bundle: EditorBundle): { number: number; headRefName: string } | null {
   const output = run("gh", [
     "pr",
     "list",
-    "--head",
-    branch,
+    "--label",
+    LABEL,
     "--state",
     "open",
     "--json",
     "number,headRefName",
     "--limit",
-    "1",
+    "200",
   ]);
   const rows = JSON.parse(output.trim() || "[]") as Array<{ number: number; headRefName: string }>;
-  return rows[0] ?? null;
+  const fragment = uidFragmentFor(bundle.editorUid);
+  const matches = rows.filter((row) => branchBelongsToEditor(row.headRefName, fragment));
+
+  // More than one open PR for the same editor means an earlier run duplicated
+  // them (the rename bug this lookup now prevents). Take the lowest number, the
+  // oldest, so every subsequent run converges on that one instead of alternating
+  // between them, and say so rather than picking silently.
+  if (matches.length > 1) {
+    matches.sort((a, b) => a.number - b.number);
+    console.log(
+      `   ⚠️  ${matches.length} open PRs match this editor (${matches
+        .map((m) => `#${m.number}`)
+        .join(", ")}); continuing on the oldest, #${matches[0]!.number}. Close the others.`,
+    );
+  }
+  return matches[0] ?? null;
 }
 
 /**
@@ -417,9 +457,8 @@ async function main(): Promise<void> {
   const failed: string[] = [];
 
   for (const bundle of summary.bundles) {
-    const branch = branchFor(bundle);
-
     if (dryRun) {
+      const branch = branchFor(bundle);
       console.log(`\n── ${bundle.editorName} → ${branch} (${bundle.files.length} file(s))`);
       for (const file of bundle.files) console.log(`   ${file.changeKind} ${file.filePath}`);
       console.log(`   title: ${buildPrTitle(bundle)}`);
@@ -427,7 +466,14 @@ async function main(): Promise<void> {
     }
 
     // Looked up before the checkout because it decides what to branch from.
-    const existingPr = findOpenPrForBranch(branch);
+    const existingPr = findOpenPrForEditor(bundle);
+
+    // Keep committing to the branch the open PR already points at. Its name may
+    // embed a since-changed display name, but a PR's head branch cannot be
+    // repointed, so renaming here would abandon the PR — the very thing this
+    // fix exists to stop. The name is cosmetic; the PR title carries the
+    // current name and is refreshed on every run.
+    const branch = existingPr ? existingPr.headRefName : branchFor(bundle);
     console.log(
       `\n── ${bundle.editorName} → ${branch} (${bundle.files.length} file(s))` +
         (existingPr ? ` [reusing PR #${existingPr.number}]` : ""),

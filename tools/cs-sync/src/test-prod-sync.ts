@@ -16,9 +16,10 @@ import {
   type DocsArticleLike,
 } from "./lib/entry-to-markdown.js";
 import { crossCheckProduct, findNavPosition, type NavMembership } from "./lib/nav-membership.js";
-import { buildSummary, type ChangedFile } from "./cms-pull-prod.js";
+import { buildSummary, uidFragmentFor, type ChangedFile } from "./cms-pull-prod.js";
 import {
   branchFor,
+  branchBelongsToEditor,
   buildPrBody,
   buildPrTitle,
   isRemovalBundle,
@@ -487,6 +488,57 @@ test("p24", "the branch name carries no per-run timestamp", () => {
   // a per-run branch, which silently disables PR reuse.
   ok(!/\d{8,}/.test(branch), `branch "${branch}" looks like it carries a timestamp`);
   return branch;
+});
+
+test("p26", "an editor keeps their PR when their display name changes", () => {
+  // Observed live: seven editors were mapped in cms-user-index.json between two
+  // runs, so "Contentstack user blt0115..." became "Anaum Hasan". The branch
+  // name changed with it and every one of them got a duplicate PR beside the
+  // one they already had.
+  const uid = "blt0115cfb095846676";
+  const before = buildSummary(
+    [change("cs-docs/assets/a.md", "blt1")],
+    [pub("blt1", uid)],
+    "production",
+    {},
+  );
+  const beforeBranch = branchFor(before.bundles[0]!);
+
+  // Same editor, now carrying a real name. Only the uid is unchanged.
+  const fragment = uidFragmentFor(uid);
+
+  ok(
+    branchBelongsToEditor(beforeBranch, fragment),
+    `the editor's own branch "${beforeBranch}" must match their fragment`,
+  );
+  ok(
+    branchBelongsToEditor("cms-sync/prod-csdocs/anaum-hasan-" + fragment, fragment),
+    "a renamed editor must still match the PR opened under their old name",
+  );
+  return `${beforeBranch} ↔ anaum-hasan-${fragment}`;
+});
+
+test("p27", "one editor's branch never matches another editor's fragment", () => {
+  const mine = uidFragmentFor("blt0115cfb095846676");
+  const theirs = uidFragmentFor("blt8e5689a3647afd22");
+
+  ok(mine !== theirs, "two uids must not share a fragment");
+  ok(
+    !branchBelongsToEditor(`cms-sync/prod-csdocs/anaum-hasan-${theirs}`, mine),
+    "matching must not cross editors",
+  );
+  // The collision suffix buildSummary appends when two names slugify the same.
+  ok(
+    branchBelongsToEditor(`cms-sync/prod-csdocs/jane-doe-${mine}-2`, mine),
+    "a collision-suffixed branch must still match its owner",
+  );
+  // Guards against a fragment matching mid-name rather than at the slug's end.
+  ok(
+    !branchBelongsToEditor(`cms-sync/prod-csdocs/${mine}-someone-else-${theirs}`, mine),
+    "a fragment appearing earlier in the name must not count as a match",
+  );
+  ok(!branchBelongsToEditor(`refs/heads/unrelated-${mine}`, mine), "non-sync branches must not match");
+  return `${mine} vs ${theirs}`;
 });
 
 test("p25", "an oversized backlog still produces a PR body inside GitHub's limit", () => {
