@@ -2,6 +2,7 @@
 title: "About Lytics"
 description: "Understand what the Lytics App is, how it relates to the Lytics platform, and how it fits into the Contentstack product suite."
 url: /lytics/about-lytics
+uid: blt0ae5d996feb902d1
 ---
 
 # About Lytics
@@ -34,7 +35,7 @@ From your project dashboard, click **Manage Lytics** to jump straight into the f
 
 **Connection:** A link between a Lytics project and a CMS stack, Launch project, or Personalize project. Connections enable automatic data flow between systems.
 
-**Collaborator:** A user who has access to a specific Lytics project. Access is determined by the user's Contentstack organization role, which is mapped automatically to a corresponding role in Lytics. Roles are managed through Contentstack and cannot be configured independently. Refer to the Access Management documentation for details on organization roles and how they map to Lytics access.
+**Collaborator:** A user who has been explicitly invited to a Lytics project. Each collaborator is assigned a role that controls what they can see and do within that project. Roles are assigned per project and can be changed. For a full breakdown of roles and permissions, see [Lytics User Permissions](/docs/lytics/user-permissions).
 
 **JSTag:** The Lytics JavaScript SDK. Installed on your front end, it sends visitor events into your project's data stream, enabling profile building and audience segmentation.
 

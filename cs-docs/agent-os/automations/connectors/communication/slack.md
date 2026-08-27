@@ -2,6 +2,7 @@
 title: "Slack"
 description: "Slack"
 url: /agent-os/slack
+uid: blt9096f1b9dfacfa17
 ---
 
 # Slack
@@ -22,13 +23,13 @@ Perform the following steps to set up the Slack action connector:
     ![Add_New_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf0eefd2d78656820/65990af3bb2e10c33d0121e9/Add_New_Account.png)
 4.  Select a way to add a new account. You can authenticate your account in two ways; **Slack** **OAuth** or **Slack** **Bot** **Token**. Click **Proceed**.  
     ![Proceed_Authentication.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb85dc4fe08580e9c/65990af4bb2e1053920121ed/Proceed_Authentication.png)
-    
+
     For **Slack** **Bot** **Token**, enter a **Title** and the **Slack** **Bot** **Token** retrieved from your Slack account. Click **Authorize.**  
-    
+
     ![Authorize_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf5e3832bd09e62a9/65990af42d2612f84fe7636c/Authorize_Button.png)
-    
+
     To create a new bot token, follow these steps:
-    
+
     1.  Navigate to [Slack account](https://api/slack.com).
     2.  Login to your organization. Click **Your** **Apps** to create a new app.
     3.  Navigate inside your app and click **OAuth** **&** **Permissions**.
@@ -43,14 +44,14 @@ Perform the following steps to set up the Slack action connector:
 9.  Click the **Message** textbox and select the parameter you want to include in your message that will be sent to the selected Slack channel. For example, we will draft this: “1.query.name has sent a GET/POST request”.  
     ![Select_Different_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3761150ecc7376a8/65990af39fa6cfa01b289b93/Select_Different_Field.png)
 10.  Optionally, enable the **Show optional fields** toggle button to display the **Username** and **Icon** **URL** fields. **Username** and **Icon** **URL** fields can **only** be used while using Slack Bot Token. If you prefer not to send a message that displays your name on Slack, you can authorize your account via Slack Bot Token and provide a suitable **Username** and **Icon** **URL** to send a slack message.
-     
+
      **Note:** If you use Slack OAuth, **Username** and **Icon** **URL** will not be visible in the output.
-     
-       
+
+
      ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8293eac2d627f40e/65990af3b17790a495d03b1f/Show_Optional_Fields.png)
 11.  Once done, click **Proceed.**
 12.  Finally, you can test the configuration you set up by clicking the **Test Action** button.  
-     
+
 
 The output shows the message that will be sent on the linked Slack channel. Click **Save and Continue**.
 
