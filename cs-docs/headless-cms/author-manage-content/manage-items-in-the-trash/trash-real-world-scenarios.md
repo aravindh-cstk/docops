@@ -66,7 +66,7 @@ However, when you restore the “Dealer Address” Global field to the stack, on
 
 ## When the “Electronics” entry is deleted
 
-If you delete the “Electronics” entry from the “Category” content type, then that entry and its content will be moved to the Trash. This will remove any reference of the “Electronics” category in entries of the “Appliances” content type.
+If you delete the “Electronics” entry from the “Category” content type, then that entry and its content will be moved to the Trash. This will remove any reference of the “Electronics” category in entries of the ���Appliances” content type.
 
 To restore the “Electronics” entry, you can go to **Trash** > **Entries** and click on **Restore** to the right hand side of the entry. Once restored, the entry returns back to the content type just as it was before you had deleted it. The references of the “Electronics” entry will be visible again in the “Appliances” content type.
 

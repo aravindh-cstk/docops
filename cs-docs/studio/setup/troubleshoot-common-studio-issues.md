@@ -180,7 +180,7 @@ The content type UID is wrong, or doesn't exist in the stack.
 
 ### API error (422): The Content Type 'compositions' was not found
 
-You wired the SDKs but no Studio project exists yet �� the compositions content type hasn't been provisioned into your stack, OR the contentTypeUid value passed to studioSdk.init doesn't match the actual provisioned UID.
+You wired the SDKs but no Studio project exists yet — the compositions content type hasn't been provisioned into your stack, OR the contentTypeUid value passed to studioSdk.init doesn't match the actual provisioned UID.
 
 This is the **expected error** for the "installed but no project yet" state. It's not a broken install.
 
