@@ -75,13 +75,37 @@ function git(args: string[], options: { allowFailure?: boolean } = {}): string {
 /**
  * An editor's branch name. Deliberately carries no per-run timestamp.
  *
- * The name has to be identical across runs, because that is how a second edit
- * by the same editor finds their already-open PR and lands on it as another
- * commit instead of opening a duplicate. Stability comes from branchSlug, which
- * cms-pull-prod.ts derives from the editor's uid.
+ * Only used to name a *new* branch, when this editor has no open PR yet. An
+ * editor's identity is not tied to this name (see findOpenPrForEditor below),
+ * so it does not need to be stable across runs: it only has to be branch-safe
+ * and readable, which branchSlugFor already guarantees.
  */
 export function branchFor(bundle: EditorBundle): string {
   return `cms-sync/prod-csdocs/${bundle.branchSlug}`;
+}
+
+const EDITOR_MARKER_PREFIX = "<!-- prod-sync-editor: ";
+const EDITOR_MARKER_SUFFIX = " -->";
+
+/**
+ * An invisible marker identifying which editor a PR belongs to.
+ *
+ * An HTML comment renders as nothing on GitHub's PR page, so this carries the
+ * editor's own Contentstack uid without exposing it anywhere a human reading
+ * the PR would see it (unlike the branch name, which is visible in the URL
+ * and branch list). `gh pr view --json body` still reads it back fine, which
+ * is all findOpenPrForEditor needs. Keying on the uid rather than a slug of
+ * the display name is also what survives a rename in cms-user-index.json,
+ * which is the bug this replaces (see prod-to-github-testing.csv, Round 1
+ * scenario 2's actual-behavior notes).
+ */
+export function editorMarker(editorUid: string): string {
+  return `${EDITOR_MARKER_PREFIX}${editorUid}${EDITOR_MARKER_SUFFIX}`;
+}
+
+/** Whether a PR's raw body carries this editor's marker. */
+export function bodyBelongsToEditor(body: string | null | undefined, editorUid: string): boolean {
+  return (body ?? "").includes(editorMarker(editorUid));
 }
 
 function escapeCell(value: string): string {
@@ -228,6 +252,11 @@ export function buildPrBody(bundle: EditorBundle, summary: PullSummary): string 
     `_Prod → GitHub sync, environment \`${summary.environment}\`, run ${summary.generatedAt}_`,
   );
 
+  // At the very front, and never touched by the truncation below (which only
+  // ever trims from the end), so findOpenPrForEditor can always find it even
+  // on the largest backlog bundles.
+  lines.unshift(editorMarker(bundle.editorUid), "");
+
   const body = lines.join("\n");
   if (body.length <= MAX_BODY_CHARS) return body;
 
@@ -322,7 +351,13 @@ function ensureLabel(): void {
 }
 
 /**
- * The editor's already-open PR for this branch, or null if they have none.
+ * The editor's already-open PR, or null if they have none.
+ *
+ * Matches on the invisible editorMarker inside each open PR's body, not on
+ * branch name: a branch is only named after the editor's display name, which
+ * changes whenever cms-user-index.json is updated, so matching by name meant
+ * a rename orphaned the PR and the next run opened a duplicate beside it.
+ * The marker is keyed on the editor's uid, which does not change.
  *
  * Deliberately not allowFailure: a `gh` outage returning "" would parse as "no
  * open PR" and open a duplicate, which is the exact failure this lookup exists
@@ -331,22 +366,41 @@ function ensureLabel(): void {
  *
  * Querying only open PRs is also what recycles a branch whose PR was merged or
  * closed: it stops matching, so the next run rebuilds it from main.
+ *
+ * More than one match means an earlier run already duplicated this editor's
+ * PR (the exact failure mode above). Converging on the oldest, rather than
+ * picking arbitrarily or the newest, is what makes every later run agree on
+ * the same PR instead of alternating between the two.
  */
-function findOpenPrForBranch(branch: string): { number: number; headRefName: string } | null {
+function findOpenPrForEditor(bundle: EditorBundle): { number: number; headRefName: string } | null {
   const output = run("gh", [
     "pr",
     "list",
-    "--head",
-    branch,
+    "--label",
+    LABEL,
     "--state",
     "open",
     "--json",
-    "number,headRefName",
+    "number,headRefName,body",
     "--limit",
-    "1",
+    "200",
   ]);
-  const rows = JSON.parse(output.trim() || "[]") as Array<{ number: number; headRefName: string }>;
-  return rows[0] ?? null;
+  const rows = JSON.parse(output.trim() || "[]") as Array<{
+    number: number;
+    headRefName: string;
+    body: string | null;
+  }>;
+  const matches = rows.filter((row) => bodyBelongsToEditor(row.body, bundle.editorUid));
+
+  if (matches.length > 1) {
+    matches.sort((a, b) => a.number - b.number);
+    console.log(
+      `   ⚠️  ${matches.length} open PRs match this editor (${matches
+        .map((m) => `#${m.number}`)
+        .join(", ")}); continuing on the oldest, #${matches[0]!.number}. Close the others.`,
+    );
+  }
+  return matches[0] ?? null;
 }
 
 /**
@@ -417,9 +471,8 @@ async function main(): Promise<void> {
   const failed: string[] = [];
 
   for (const bundle of summary.bundles) {
-    const branch = branchFor(bundle);
-
     if (dryRun) {
+      const branch = branchFor(bundle);
       console.log(`\n── ${bundle.editorName} → ${branch} (${bundle.files.length} file(s))`);
       for (const file of bundle.files) console.log(`   ${file.changeKind} ${file.filePath}`);
       console.log(`   title: ${buildPrTitle(bundle)}`);
@@ -427,7 +480,15 @@ async function main(): Promise<void> {
     }
 
     // Looked up before the checkout because it decides what to branch from.
-    const existingPr = findOpenPrForBranch(branch);
+    const existingPr = findOpenPrForEditor(bundle);
+
+    // Keep committing to the branch the open PR already points at. Its name
+    // may no longer match what branchFor(bundle) would compute today — the
+    // editor's display name can have changed since the PR was opened — but a
+    // PR's head branch cannot be repointed, so branching off the freshly
+    // computed name here would abandon the PR. The name is cosmetic; the
+    // title and marker are refreshed on every run regardless.
+    const branch = existingPr ? existingPr.headRefName : branchFor(bundle);
     console.log(
       `\n── ${bundle.editorName} → ${branch} (${bundle.files.length} file(s))` +
         (existingPr ? ` [reusing PR #${existingPr.number}]` : ""),
