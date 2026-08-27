@@ -2,6 +2,7 @@
 title: "Monitor Stack Activities in Audit Log"
 description: "Track and review all stack activities in Contentstack's Audit Log. Filter logs by users, actions, modules, and dates for detailed tracking."
 url: /headless-cms/monitor-stack-activities-in-audit-log
+uid: blt25f94985898fd108
 ---
 
 # Monitor Stack Activities in Audit Log
@@ -25,9 +26,9 @@ The **Audit Log** page provides the following details of the events that occurre
         -   **Entry Module:** Shows Content Type, version, and language details.
         -   **User Module:** Displays assigned roles for users.
 -   **Remote Address**: Specifies the IP address of the node where the event occurred.
-    
+
     ![Audit Log details in Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4b8cd9d7d6b16079/67c1996a62af0c53818a4193/Setup-a-Stack_Monitor-Audit-Logs.png)
-    
+
 
 The audit log helps track all published items, updates, deletions, and the current status of existing content.
 
@@ -58,9 +59,9 @@ By default, the audit log displays data for the past 7 days. You can change the 
 -   Last 14 days
 -   Last 30 days
 -   **Custom Date Range:** Set a specific period for log analysis.
-    
+
     ![Audit Log Date Filter](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt44240e76b41c0d05/67c19a4d2c963bfb331b9a84/Setup-a-Stack_Monitor-Audit-Logs_Filter-By-Date.png)
-    
+
 
 Applying filters lets you focus on relevant events and streamline audit log analysis.
 
@@ -154,9 +155,9 @@ The Audit Log tracks and displays all the events performed in a stack. The follo
 
 -   Bulk-delete Entries or Assets
 -   Bulk-move Assets to Folder
-    
+
     **Note:** Bulk publish and unpublish entries/assets actions are logged in [Publish Queue](/docs/headless-cms/view-publish-status-of-entries-assets-in-publish-queue).
-    
+
 
  |
 | Extensions | 

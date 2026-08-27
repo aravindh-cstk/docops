@@ -2,6 +2,7 @@
 title: "Clone a Release"
 description: "Easily clone a Release in Contentstack, creating a duplicate with all its items for quick reuse and modification."
 url: /headless-cms/clone-a-release
+uid: blt47f50a4ab186873e
 ---
 
 # Clone a Release

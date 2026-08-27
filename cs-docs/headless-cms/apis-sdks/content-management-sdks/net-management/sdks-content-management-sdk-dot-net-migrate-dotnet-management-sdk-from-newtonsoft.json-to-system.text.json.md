@@ -2,6 +2,7 @@
 title: "Migrate .NET Management SDK from Newtonsoft.Json to System.Text.Json"
 description: "Upgrade your Contentstack Management .NET SDK seamlessly from v0.x to v1.0.0-beta.1+ with this comprehensive guide on switching to System.Text.Json."
 url: /developers/sdks/content-management-sdk/dot-net/migrate-dotnet-management-sdk-from-newtonsoft.json-to-system.text.json
+uid: bltc2079141c575b9fa
 ---
 
 # Migrate .NET Management SDK from Newtonsoft.Json to System.Text.Json
@@ -17,7 +18,7 @@ This guide shows the System.Text.Json replacement for each affected area and the
 ## Prerequisites
 
 -   The [Contentstack Management .NET SDK](https://www.nuget.org/packages/contentstack.management.csharp) 1.x.x installed in your project.
--   [.NET 10](https://dotnet.microsoft.com/) or later, the framework version this SDK targets.
+-   [.NET 10](https://dotnet.microsoft.com/en-us/) or later, the framework version this SDK targets.
 
 ## Breaking Changes Reference
 
@@ -456,6 +457,6 @@ Use this checklist to verify you have completed every change before removing the
 
 ## Next Steps
 
--   [System.Text.Json overview (Microsoft)](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-overview). Background on the serializer the SDK now uses, including supported types and configuration options.
+-   [System.Text.Json overview (Microsoft)](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/overview). Background on the serializer the SDK now uses, including supported types and configuration options.
 -   [Migrate from Newtonsoft.Json to System.Text.Json (Microsoft)](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/migrate-from-newtonsoft). Microsoft's API-by-API migration reference for cases beyond the SDK-specific changes covered here.
 -   [CHANGELOG.md](https://github.com/contentstack/contentstack-management-dotnet/blob/main/CHANGELOG.md). The v3.x.x release notes for this SDK.
