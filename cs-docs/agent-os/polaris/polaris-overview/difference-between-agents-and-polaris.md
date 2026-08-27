@@ -2,6 +2,7 @@
 title: "Difference Between Agents and Polaris"
 description: "Discover the key differences between agents and automations in Agent OS for building intelligent, scalable workflows in Contentstack."
 url: /agent-os/difference-between-agents-and-polaris
+uid: bltdc8d09b704052abc
 ---
 
 # Difference Between Agents and Polaris

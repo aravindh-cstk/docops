@@ -2,6 +2,7 @@
 title: "Cloudinary"
 description: "Cloudinary"
 url: /agent-os/cloudinary
+uid: bltd9cf7098fffb92e7
 ---
 
 # Cloudinary
@@ -24,17 +25,17 @@ Perform the following steps to set up the Cloudinary action connector:
 5.  In the **Configure Action** tab, click **\+ Add New Account** to add your Cloudinary account.  
     ![Add_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt44c1c5eaa16e3b64/668bf5fabbb92252e8358403/Add_Account.png)
 6.  In the **Authorize** pop-up window, provide details such as **Cloud Name**, **API Key**, and **API Secret**.
-    
+
     To generate Cloud Name, API Key, and API Secret, log in to the Cloudinary dashboard and perform the following steps:
-    
+
     1.  Click the **Dashboard** tab in the left navigation.  
         ![Cloudinary_Dashboard.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf204207c3e61bd12/668bf5fac984887f245e4a75/Cloudinary_Dashboard.png)
     2.  Under the “Product Environment” section, you will see the **Cloud Name**. Click **Go to API Keys**, and click the **\+ Generate New API Key** button to create a new API key.
-        
+
         You will see the **API Secret**. Click the **Eye** icon and provide the login password. Click **Approve** to view the API Secret.
-        
+
         For more information, refer to the [Admin API reference](https://cloudinary.com/documentation/admin_api) document.
-        
+
         ![Cloudinary_Dashboard.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf204207c3e61bd12/668bf5fac984887f245e4a75/Cloudinary_Dashboard.png)
 7.  Once done, click **Authorize**.  
     ![Authorize_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb1ad0096ea7aa119/668bf5fa03254593d98846a3/Authorize_Button.png)
