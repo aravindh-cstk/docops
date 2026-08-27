@@ -2,6 +2,7 @@
 title: "About Analytics"
 description: "Contentstack Analytics offers real-time product specific insights to optimize performance, manage resources, and enhance user experience across various products."
 url: /analytics/about-analytics
+uid: blt06b111cbf5120d01
 ---
 
 # About Analytics

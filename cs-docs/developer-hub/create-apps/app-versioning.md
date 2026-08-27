@@ -2,6 +2,7 @@
 title: "App Versioning"
 description: "Track changes and manage app versions with Contentstack's Version Logs in the Developer Hub."
 url: /developer-hub/app-versioning
+uid: blt48da4ff5c31838a6
 ---
 
 # App Versioning
@@ -23,13 +24,13 @@ Developer Hub will help you manage your application over time, allowing you to l
 ## What You Will Learn
 
 -   How to browse the versions of an app.
-    
+
 -   How to preview a specific version.
-    
+
 -   How to restore a version and set it as the latest.
-    
+
 -   How to view the Version Logs.
-    
+
 
 ## Browse and Restore Versions
 
@@ -42,13 +43,13 @@ To view and create versions of an app via the Developer Hub interface, login to 
 3.  By default, the app's **Basic Information** page will open. You will see a **Version** drop-down with the latest version selected.  
     ![Basic_Info_Version.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbed2c03845c6ce27/659e7a27fadb3aad42c39fcc/Basic_Info_Version.png)
 4.  Click the **Version** dropdown, to see a list of all the versions created for the app.
-    
+
     You can preview a specific version of your app by clicking the preferred version from the dropdown.
-    
+
     ![Versions_Dropdown.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltda208d3a4d29cb82/659e7a27d838b37db39d7f81/Versions_Dropdown.png)
-    
+
     Details such as version number, creator name, date, and the version creation date and time is displayed for individual versions in the dropdown.
-    
+
 5.  To restore your app to this selected version and set it as the latest version, click the **Yes,** **Restore** button.  
     ![Basic_Information.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5bb3ac98a076ce2e/68493da8b037914d232b5f0c/Basic_Information.png)
 6.  A confirmation pop-up appears, click **Yes, Restore** to confirm the changes.

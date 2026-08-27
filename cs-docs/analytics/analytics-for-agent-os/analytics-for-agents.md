@@ -2,6 +2,7 @@
 title: "Analytics for Agents"
 description: "Gain insights into agent executions, AI model adoption, token consumption, and activity trends with the Contentstack Agents Analytics dashboard."
 url: /analytics/analytics-for-agents
+uid: bltec58235a9fac5b2f
 ---
 
 # Analytics for Agents
@@ -20,11 +21,11 @@ Contentstack Agents are automated systems built on four core components: trigger
 ## What You Will Learn
 
 -   How to navigate to the Agents Analytics dashboard.
-    
+
 -   What each dashboard section tracks and how to read it.
-    
+
 -   How to apply filters and save custom views.
-    
+
 
 ## Access the Agents Analytics Dashboard
 
@@ -44,13 +45,13 @@ The dashboard is divided into five sections. Each section covers a different asp
 The Overview section provides a high-level snapshot of agent activity across your organization. It displays four summary cards:
 
 -   **Total Agents:** The total number of agents configured in your organization.
-    
+
 -   **Total Active Agents:** The number of agents that have executed at least once in the selected date range.
-    
+
 -   **Total Executions:** The total number of agent runs in the selected date range.
-    
+
 -   **Token Consumption:** The total tokens consumed by agent executions. Tokens are units that measure AI model input and output consumption.
-    
+
 
 Use this section to quickly assess execution frequency and resource consumption across your organization.
 
@@ -90,9 +91,9 @@ The following filters are available:
 
 -   **Date Range:** Choose from **1 week**, **30 days** (default), **60 days**, or **90 days**. Some charts include a timeline selector for further refinement.
 -   **Custom Date:** Set a custom date range using the dropdown.
-    
+
     **Note:** The custom date range should not exceed **90 days**.
-    
+
 -   **Zoom:** Switch between **1 week**, **30 days**, **60 days**, or **90 days** for trend analysis.
 -   **Projects:** View metrics for a specific project or all projects together.
 -   **Group By:** View data grouped by day, week, or month, depending on the selected section.

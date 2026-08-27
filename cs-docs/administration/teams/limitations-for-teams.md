@@ -2,6 +2,7 @@
 title: "Limitations for Teams"
 description: "Discover the limitations of the teams feature and learn how to navigate these restrictions for optimal use."
 url: /administration/limitations-for-teams
+uid: bltfde84aabbb914c93
 ---
 
 # Limitations for Teams

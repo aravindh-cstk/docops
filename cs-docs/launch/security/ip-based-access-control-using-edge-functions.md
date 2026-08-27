@@ -2,6 +2,7 @@
 title: "IP-based Access Control Using Edge Functions in Launch"
 description: "Implement IP-based access control in Contentstack Launch using Edge Functions to allow or block traffic based on IP rules."
 url: /launch/ip-based-access-control-using-edge-functions
+uid: blt2e44c0068f4017c5
 ---
 
 # IP-based Access Control Using Edge Functions in Launch
@@ -13,9 +14,9 @@ This guide explains how to implement **IP-based access control** using [**Edge F
 ## What You Will Learn
 
 -   How to allow traffic only from a trusted list of IP addresses.
-    
+
 -   How to deny traffic from a blocked list of IP addresses.
-    
+
 
 ## Implementing IP Filtering with Edge Functions
 
