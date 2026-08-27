@@ -2,6 +2,7 @@
 title: "Assets"
 description: "Manage assets seamlessly in Contentstack’s JSON Rich Text Editor. Learn how to embed existing assets, upload new ones, and follow best practices for optimized workflows."
 url: /headless-cms/assets
+uid: bltebb4ead9ffe29003
 ---
 
 # Assets
@@ -47,9 +48,9 @@ To upload new assets within your JSON RTE, log in to your [Contentstack account]
     -   **Block Embed**: Embeds the asset as a standalone block.
     -   **Inline Embed**: Embeds the asset within a text flow.
 8.  Click **Insert Uploaded Images** to embed the new asset in the JSON RTE.
-    
+
     ![Upload and embed new asset in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd05ad40c28bcf0a0/6819ba2d2ac67c4d20669462/1-upload-assets.gif)
-    
+
 
 ## Best Practices for Asset Management
 

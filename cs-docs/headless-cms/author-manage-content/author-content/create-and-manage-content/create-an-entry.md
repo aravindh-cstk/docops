@@ -2,6 +2,7 @@
 title: "Create an Entry"
 description: "Learn how to create and manage entries effectively in Contentstack. Follow these steps to streamline your content creation process."
 url: /headless-cms/create-an-entry
+uid: blt6e51ec43f07c7af7
 ---
 
 # Create an Entry
@@ -15,18 +16,18 @@ In Contentstack, creating an entry is the first step in adding content to your w
 To create an [entry](/docs/headless-cms/about-entries), log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click “Entries” or use the shortcut key “E” (for both Windows and Mac users).
-    
+
     **Note:** To create an entry, you need to have a predefined content type that defines the structure of your content. For detailed information on creating content types, refer to our [Create a Content Type](/docs/headless-cms/create-a-content-type) documentation language. By default, the language is set to the master language of your stack.
-    
+
 2.  Click **\+ New Entry**.
 3.  Select the content type for the entry.
-    
+
 4.  Fill in the fields as defined by the content type, such as "Title," "Cover Image," or "Body Content".
 5.  \[**Optional**\] You can add tags to an entry. This helps you filter or search your entries quickly.
 6.  **Save** the entry for later editing or proceed to [publish](/docs/headless-cms/publish-an-entry) it.
-    
+
     **Note:** If [Drafts and Auto Save](/docs/headless-cms/about-drafts-and-auto-save) is enabled for your stack, clicking **New Entry** immediately creates a draft entry. You can begin editing the entry without manually saving it, as Contentstack automatically saves draft changes while you work in the entry editor. The entry remains in the **Draft** state until it is saved for the first time.
-    
+
 
 ![Create_an_Entry.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc1af7f8d016912d6/69b855178f08477fd2bbd4b8/Create_an_Entry.gif)
 
@@ -119,29 +120,29 @@ This option opens the **Select Entries** modal, where you can perform the follow
 This option allows you to create and add new reference entries on the go. This option is useful when you need to add a new entry to use as a reference.
 
 1.  Click **Create new entry** in the reference Field.
-    
+
     **Warning:** If **Drafts and Auto Save** is disabled, ensure the parent entry is saved before navigating away from the editor to avoid losing unsaved changes.
-    
+
 2.  In the modal, select the content type from the dropdown for the new entry and click **Create**.![Create_a_new_entry_in_reference_field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta341fca941404a21/65814c0edd00671b1c20435e/Create_a_new_entry_in_reference_field.png)
 3.  Enter the details for the new entry and click **Save**. This will:
-    
+
     1.  Create a new entry for the referred content type.
     2.  Automatically add it under the **Reference field**.
-    
+
     Once the new entries are added:
-    
+
     -   Use the **Edit** icon beside a referenced entry to make changes to it.
     -   Use the **Remove** icon to delete an entry from the reference list.
-    
+
     **Tip:** Each field in a content type supports specific data types. For details about field types and their supported data, refer to our [Fields](/docs/headless-cms/about-fields) documentation.
-    
+
 
 ## Preview and Manage Entry Changes
 
 Contentstack provides multiple features designed to simplify entry editing and ensure efficient content management. These tools include:
 
 1.  [**Live Preview**](/docs/headless-cms/about-live-preview)**:** View content changes in real-time without saving or publishing.
-2.  [**Visual Builder**](/docs/content-managers/visual-editor/about-visual-editor)**:** An interface for creating and editing page layouts. It enables real-time adjustments directly on the page without any developer intervention.
+2.  [**Visual Builder**](/docs/headless-cms/about-visual-editor)**:** An interface for creating and editing page layouts. It enables real-time adjustments directly on the page without any developer intervention.
 3.  [**Timeline**](/docs/headless-cms/about-timeline)**:** Visualize and manage the publishing history and future updates. Preview scheduled updates and track publishing history.
 
 ## API Reference

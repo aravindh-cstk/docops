@@ -2,6 +2,7 @@
 title: "Delete a Branch"
 description: "Learn how to delete a branch in Contentstack's developer documentation. Explore step-by-step instructions for removing branches from your version control system."
 url: /headless-cms/delete-a-branch
+uid: blt0154326c08d5ddae
 ---
 
 # Delete a Branch

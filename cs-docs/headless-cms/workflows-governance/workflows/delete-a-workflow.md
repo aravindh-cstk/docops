@@ -2,6 +2,7 @@
 title: "Delete a Workflow"
 description: "steps to delete a workflow"
 url: /headless-cms/delete-a-workflow
+uid: blte4a70e23a526ce83
 ---
 
 # Delete a Workflow
