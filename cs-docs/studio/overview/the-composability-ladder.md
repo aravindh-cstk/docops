@@ -2,6 +2,7 @@
 title: "The Composability Ladder"
 description: "Learn the four-rung mental model behind Contentstack Studio — how slot props and Section Slots let Components, Sections, and Templates compose into each other."
 url: /studio/the-composability-ladder
+uid: blt6253bde15752bfa7
 ---
 
 # The Composability Ladder

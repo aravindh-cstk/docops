@@ -2,6 +2,7 @@
 title: "About Localization"
 description: "Learn how localization works in Contentstack, including fallback behavior, publishing, and Delivery API responses across locales and environments."
 url: /headless-cms/about-localization
+uid: blt76f45cde7063c6fd
 ---
 
 # About Localization
