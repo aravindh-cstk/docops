@@ -1,7 +1,8 @@
 ---
 title: "Key Concepts"
-description: "Understand key Contentstack Personalize concepts like audiences, experiences, attributes, events, and A/B testing."
+description: "Learn the core concepts behind Contentstack Personalize - experiences, variants, audiences, attributes, events, and how they work together for real-time personalization."
 url: /personalize/key-concepts
+uid: blta0a59556182aa043
 ---
 
 # Key Concepts
@@ -115,13 +116,13 @@ In A/B Test experiences, conversions help identify which variant performs better
 When multiple experiences are active on a page, layering and prioritization of experiences ensure optimal personalization for your users as it helps reflect the whole visitor context on the content.
 
 1.  **Scenario 1:** Multiple experiences target different contents on the page.
-    
+
     Personalize and the CMS automatically layer these experiences, optimizing each section based on the respective active variant.
-    
+
 2.  **Scenario 2:** Multiple experiences target the same content on the page.
-    
+
     Personalize uses the experience [prioritization](/docs/personalize/prioritize-experiences) order defined by you, so the variant from the higher-priority experience is displayed. You can adjust the order of experiences in Personalize to control which content is shown when multiple experiences are active.
-    
+
 
 ### Experience Tags
 
@@ -218,3 +219,10 @@ Variant Groups and Variants are automatically created and synced for you based o
 -   **Iterate and evolve:** Monitor content variants’ performance regularly and apply data-driven insights to improve the content for better user engagement and outcomes.
 
 By connecting user attributes, unified and real-time audiences, experience rules, and measurable events, these concepts create a complete and adaptable personalization model. This foundation helps you deliver more relevant content today while continuously refining your strategies as user behavior evolves.
+
+## Next Steps
+
+Now that you understand the core concepts, put them into practice:
+
+-   [Create a Personalize Project](/docs/personalize/create-personalize-project) - Set up your first project and link it to a stack.
+-   [Getting Started with Personalize with A/B Testing: An End-to-End Guide](/docs/personalize/get-started-with-personalize-with-ab-test-end-to-end-guide) - Walk through a complete A/B test from project setup to results.
