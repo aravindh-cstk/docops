@@ -2,6 +2,7 @@
 title: "Generate Permanent URL"
 description: "Discover how Contentstack's permanent URLs ensure stable asset references, even after updates. Learn to generate consistent links effortlessly."
 url: /assets/generate-permanent-url
+uid: blt20d5a9a64d26522c
 ---
 
 # Generate Permanent URL
@@ -18,23 +19,23 @@ Every asset has two types of URLs:
 **Example:**
 
 -   Initial upload URL:
-    
+
     ```
     https://assets.contentstack.io/spaces/ambc6ed3deb2dbba87/assets/am3740ef98897fc99a/ad2ed624b04a86eec6476408/sample_logo.png
     ```
-    
+
 -   After replacing the file, the auto-generated URL changes to:
-    
+
     ```
     https://assets.contentstack.io/spaces/ambc6ed3deb2dbba87/assets/am3740ef98897fc99a/fecd4e011526cf7beaa85faa/new_sample_logo.png
     ```
-    
+
 -   With a permanent URL, the reference stays unchanged:
-    
+
     ```
     https://assets.contentstack.io/spaces/ambc6ed3deb2dbba87/assets/am3740ef98897fc99a/sample_logo.png
     ```
-    
+
 
 **Permanent URL Structure:**
 
@@ -62,9 +63,9 @@ To generate a permanent URL for an asset:
 2.  In the right-hand panel, click the “Non-Editable Metadata” icon.
 3.  The **System Metadata** section displays all system-managed fields. Click the "**+**" icon beside **Permanent URL**.
 4.  Enter a slug for the permanent URL that describes the asset meaningfully.
-    
+
     **Note:** The slug supports a maximum of **255 characters** and accepts only letters (A-Z, a-z), digits (0-9), underscores (\_), hyphens (-), and dots (.). Any other character is replaced with an underscore (\_). For example, my logo@2x.png becomes my\_logo\_2x.png.
-    
+
 5.  Click **Save Asset** to generate the permanent URL.
 
 The permanent URL becomes active immediately and can be used in entries, APIs, or external systems.
