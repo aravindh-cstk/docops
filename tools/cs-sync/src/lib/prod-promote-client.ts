@@ -254,7 +254,7 @@ export class ProdPromoteClient {
 
       for (const entry of page) {
         if (!isPublishedTo(entry, env)) continue;
-        results.push(await this.resolvePublishedVersion(entry));
+        results.push(await this.resolvePublishedVersion(entry, env));
       }
 
       hasMore = page.length === limit;
@@ -268,15 +268,26 @@ export class ProdPromoteClient {
    * Swap an entry's latest-version content for its published-version content,
    * skipping the extra call when the entry has no unpublished draft.
    *
-   * Mirrors SandboxClient.resolvePublishedVersion. Kept as its own copy rather
-   * than shared because the two clients are deliberately separate (no Prod
-   * credentials in the Sandbox client, and vice versa); the shared part, which
-   * is the definition of "published version", lives in entry-content.ts.
+   * Mirrors SandboxClient.resolvePublishedVersion, with one deliberate
+   * difference: `env` is passed through to getPublishedVersion so this
+   * resolves the version published to *that* environment specifically. A
+   * promotion run can re-publish Staging/Development after a human publishes
+   * straight to Production; without pinning to `env`, the entry's other
+   * (unrelated, more recently touched) environments would win and mask the
+   * genuine Production edit.
+   *
+   * Kept as its own copy rather than shared with SandboxClient because the
+   * two clients are deliberately separate (no Prod credentials in the
+   * Sandbox client, and vice versa); the shared part, which is the
+   * definition of "published version", lives in entry-content.ts.
    */
-  private async resolvePublishedVersion(entry: ContentstackEntry): Promise<PublishedProdEntry> {
+  private async resolvePublishedVersion(
+    entry: ContentstackEntry,
+    env: Pick<ResolvedEnvironment, "uid" | "name">,
+  ): Promise<PublishedProdEntry> {
     const uid = entry.uid;
     const title = (entry.title as string) || "Untitled";
-    const publishedVersion = getPublishedVersion(entry);
+    const publishedVersion = getPublishedVersion(entry, env);
 
     if (publishedVersion === null) {
       return { uid, title, publishedVersion: null, entry, unresolved: true };
