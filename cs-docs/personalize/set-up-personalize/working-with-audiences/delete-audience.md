@@ -2,6 +2,7 @@
 title: "Delete an Audience"
 description: "Learn how to delete referenced and non-referenced audience in your Personalize projects."
 url: /personalize/delete-audience
+uid: blt23df5d2b9d2cabcb
 ---
 
 # Delete an Audience
@@ -18,23 +19,23 @@ Let's get started with the step-by-step instructions for deleting both reference
 
 -   [Contentstack account](https://www.contentstack.com/login)
 -   Personalize-enabled Organization with [permissions](/docs/administration/about-administration-roles)
-    
+
     **Note:** Users with **Owner** and **Member** access to a Personalize project can delete existing audiences.
-    
+
 -   Access to Personalize project
-    
+
     **Note:** We assumed that you have already created a Personalize project. If not, follow [this guide](/docs/personalize/create-personalize-project) to create a project in Personalize.
-    
+
 -   [Audience created](/docs/personalize/create-audience) in your Personalize project
 
 ## What You Will Learn
 
 -   How to delete a non-referenced audience from a Personalize project.
-    
+
 -   How to remove a referenced audience from an experience before deleting it.
-    
+
 -   What data and performance impacts to expect when you delete an audience.
-    
+
 
 ## Steps for Execution
 
@@ -67,13 +68,13 @@ To delete an existing referenced audience in an Experience draft, log in to your
 1.  In the top navigation bar, click the **App Switcher** icon and then click **Personalize.**
 2.  You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to delete an audience.
 3.  On the **Experiences** page, to remove the referenced audience, navigate to the experience where the audience is used by clicking the experience to open it or by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Edit**.![Edit option for an experience](https://lh7-rt.googleusercontent.com/docsz/AD_4nXd-EnSaSWNMaoRjUJR1s7N4pgPcrzInn7cJob27Yd-AAp-3OSidvtyK9QmtZyCEMMtxsrnao7v_kHrIuUrWexmYO0XrVGu4t1XpskekDreZkr46cdF1EScm0XBEEH89UUkC4eaB?key=lx61JLV__VsURLhShzpulQ)
-    
+
     **Note:** An experience with the referenced audience must be in the 'Draft' status to delete the audience.
-    
+
 4.  Click the **Configuration** tab in the left panel and click the **Remove** icon next to the preferred audience from the list.![Remove icon next to an audience in experience Configuration](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfXLrv6hQ888k4qR6vizy7fCDmoX3mcHvfoH-YvYBE9ZOnXGmZhWhnGKWEAHfg8xfnsBRtWmzUVXZjBhdRZjt4u9LzJE7KvWzcRNzBLj3pCujscSkvYsmHvRn3BnHeVQduQkMg5m2zoYFPfnoxqyfwECf7m?key=FgoiKl48HsensDkIPuZKtg)
-    
+
     **Note:** For A/B Test experiences, go to the **Configuration > Target Group** to remove the referenced audiences.
-    
+
 5.  Once you have done that, click the **Save Draft** button.
 6.  Now that we have removed the audience from the experience as a reference, click the **Audiences** tab in the left navigation panel.
 7.  You can delete the audience by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Delete**.

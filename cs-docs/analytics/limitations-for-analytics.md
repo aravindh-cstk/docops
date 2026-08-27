@@ -2,6 +2,7 @@
 title: "Limitations for Analytics"
 description: "Learn about the limitations of the Analytics feature in Contentstack."
 url: /analytics/limitations-for-analytics
+uid: bltdec8c92c62c80eaf
 ---
 
 # Limitations for Analytics

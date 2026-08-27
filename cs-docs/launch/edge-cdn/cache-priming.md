@@ -2,6 +2,7 @@
 title: "Cache Priming"
 description: "Boost website speed with Cache Priming. Preload content, reduce latency, and enhance user experience with this Contentstack Launch feature."
 url: /launch/cache-priming
+uid: blt0292a5ab52d20996
 ---
 
 # Cache Priming
@@ -48,12 +49,12 @@ Use this value to filter cache priming traffic in your server logs or observabil
 Follow the steps below to configure and implement Cache Priming in Contentstack Launch:
 
 1.  ### Add URLs to launch.json
-    
+
     1.  Open your source code folder.
     2.  Edit the launch.json file inside the folder by adding the URLs you want to prime. For optimal performance, ensure these URLs are unique and frequently accessed.
-    
+
     **Example for** **launch.json** **Configuration:**
-    
+
     ```
     {
       "cache": {
@@ -67,20 +68,20 @@ Follow the steps below to configure and implement Cache Priming in Contentstack 
       }
     }
     ```
-    
+
     **Note:** Ensure the URLs you add return cacheable Cache-Control headers. Adding a non-cacheable route produces no performance benefit.
-    
+
 2.  ### Deploy your Project in Launch
-    
+
     Choose one of the following methods to deploy your project in Launch:
-    
+
     -   [Importing the source code from GitHub](/docs/launch/import-project-using-github/)
     -   [Importing a project using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud/)
     -   [Uploading the source code folder.](/docs/launch/import-project-using-file-upload/)
 3.  ### Enable Cache Priming in your Project
-    
+
     Once the project is deployed, follow the steps below:
-    
+
     1.  Click the **Settings** icon in the top panel.![Launch_Cache_Priming_Settings.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt42750631b51d0090/69d744e7e583e6cae7f06c65/Launch_Cache_Priming_Settings.png)
     2.  Navigate to **Environments** > **Cache Priming**.![Launch_Cache_Priming_Environments.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt33b1c63c16764306/69d74318c2d5f285547c6eef/Launch_Cache_Priming_Environments.png)
     3.  Click the **Enable Cache Priming** toggle to enable priming.![Launch-Cache-Priming-Enable-CachePriming.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt150f79b00a43447f/67e3814393c4846b32e1f8bd/Launch-Cache-Priming-Enable-CachePriming.png)

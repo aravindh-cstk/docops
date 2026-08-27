@@ -2,6 +2,7 @@
 title: "Delete a Team"
 description: "Learn how to delete an existing team in Contentstack."
 url: /administration/delete-a-team
+uid: bltf590b28cd8080534
 ---
 
 # Delete a Team
@@ -14,17 +15,17 @@ Contentstack allows you to delete an existing team created in your organization.
 
 -   [Contentstack account](https://www.contentstack.com/login/)
 -   Organization [Owner or Admin](/docs/administration/about-administration-roles) permissions
-    
+
     **Note:** Only the Organization **Owner** or **Admin** can delete teams created by other stakeholders.
-    
+
 -   An existing [team](/docs/administration/create-a-team)
 
 ## What You Will Learn
 
 -   How to delete a team from your organization.
-    
+
 -   What happens to member permissions when a team is deleted.
-    
+
 
 ## Delete a Team
 

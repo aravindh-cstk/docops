@@ -2,6 +2,7 @@
 title: "About Knowledge Vault"
 description: "Explore the Knowledge Vault - a centralized repository that stores all your brand-related content."
 url: /brand-kit/about-knowledge-vault
+uid: blt798197658873d911
 ---
 
 # About Knowledge Vault

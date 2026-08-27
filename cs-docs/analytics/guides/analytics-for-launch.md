@@ -2,6 +2,7 @@
 title: "Analytics for Launch"
 description: "Optimize Launch deployments with in-depth analytics on project progress, API usage, and device trends for improved performance and resource efficiency."
 url: /analytics/analytics-for-launch
+uid: blt1b07ffcd95a9dd0e
 ---
 
 # Analytics for Launch
@@ -18,20 +19,20 @@ The Launch Analytics page provides detailed insights into the progress of your d
 ## What You Will Learn
 
 -   How to navigate to the Launch Analytics dashboard using the App Switcher.
-    
+
 -   What each dashboard section measures and how to use it.
-    
+
 -   How to apply filters, group data, and save custom views.
-    
+
 
 ## Access the Launch Analytics Dashboard
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
 1.  Navigate to **Analytics** through the "App Switcher".
-    
+
 2.  By default, the **CMS** analytics dashboard appears. Click **Launch** to switch to the Launch dashboard.
-    
+
     ![Selecting the Launch dashboard in Analytics](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/ambc5352604fc37a85/dc61adc0a614028ebb59a98e/Analytics_Launch_NewSelect.png?locale=en-us)
 
 **Note:** The data in the Launch dashboard is updated every **24 hours**.
@@ -91,19 +92,19 @@ To apply filters, click **Filters**, select your desired options, and then click
 The following filters are available:
 
 -   **Projects:** View metrics for a specific project or for all projects together.
-    
+
 -   **Environments:** Filter data for specific environments or for all environments.
-    
+
 -   **Status Code:** Filter by specific HTTP response codes.
-    
+
 -   **Cache:** Filter by HITs or MISSes.
-    
+
 -   **Group By:** View data grouped by day, week, or month.
-    
+
 -   **Date Range:** Choose from 1 week, 30 days (default), 60 days, or 90 days. Some charts include a timeline selector for further refinement.
-    
+
 -   **Custom Date:** Set a custom date range using the dropdown.
-    
+
 
 **Note:** The custom date range must not exceed **90 days**.
 
