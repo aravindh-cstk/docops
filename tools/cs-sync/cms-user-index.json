@@ -1,4 +1,14 @@
 {
-  "_comment": "Maps Contentstack user UIDs to display values (email or name) for the CMS→GitHub pull PR body. The CMA has no endpoint to resolve an arbitrary user UID using a stack management token (only an org-level authtoken can, which isn't something we provision for CI). To add yourself: log in to Contentstack, call GET /v3/user with your personal authtoken (Authorization header, no api_key needed) and use the returned user.uid, or ask a teammate with org access to look it up for you. Unmapped UIDs fall back to a clearly-labeled 'Contentstack user <uid>' string — don't add placeholder values here, an entry only belongs once you have the real value.",
-  "blt346b73255381ad74": "aravindh.s@contentstack.com"
+  "_comment": "Maps Contentstack user UIDs to display names for the CMS→GitHub pull PR title and body. The CMA has no endpoint to resolve an arbitrary user UID using a stack management token (only an org-level authtoken can, which isn't something we provision for CI). To add yourself: log in to Contentstack, call GET /v3/user with your personal authtoken (Authorization header, no api_key needed) and use the returned user.uid, or ask a teammate with org access to look it up for you. Use the person's display name, not their email — PR titles read better and stay consistent that way. Unmapped UIDs fall back to a clearly-labeled 'Contentstack user <uid>' string — don't add placeholder values here, an entry only belongs once you have the real value.",
+  "blt0115cfb095846676": "Anaum Hasan",
+  "blt346b73255381ad74": "Aravindh Somasundaram",
+  "blt3274538a64ad0ade": "Varsha Sreenivas",
+  "blt3cf27864e6b61df3": "Janice Rodrigues",
+  "blt5e99c104bb6b1a30": "Dhaval Majithia",
+  "blt6f4af1e2b24af770": "Gladys Daniel",
+  "blt7aa8530ab03b79c0": "Ankita Behere",
+  "blte93d4119f79db761": "Romy Dias",
+  "blteaf2e44ba211bb3f": "Azharuddin Shaikh",
+  "bltd50b1d8587841ba2": "Priyal Patil",
+  "bltd56f31b904a05d7f": "Azariahj Onyx"
 }
