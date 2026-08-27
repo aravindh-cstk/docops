@@ -2,6 +2,7 @@
 title: "Edit an Environment"
 description: "Learn to update your Contentstack Environment to adjust deployment settings via UI or API for seamless publishing."
 url: /headless-cms/edit-an-environment
+uid: blte35aa192e80f03cd
 ---
 
 # Edit an Environment
@@ -18,9 +19,9 @@ To edit an Environment, log in to your [Contentstack account](https://www.conten
 2.  Navigate to **Environments** or use the “alt + E” shortcut key for Windows and “option + E” for Mac OS.
 3.  Click the vertical ellipsis icon next to an environment in the **Actions** menu and select **Edit**.
 4.  Update the details in the **Edit Environment** modal and click **Save**.
-    
+
     ![Edit Environment modal with fields to update environment details](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt229bd80a997e55f2/67dd59ada71458fdd9b9b33e/1-Edit-an-Environment-gif.gif)
-    
+
 
 **Note:** You can use [Webhooks](/docs/headless-cms/about-webhooks) to trigger deployments to multiple servers when you publish content.
 

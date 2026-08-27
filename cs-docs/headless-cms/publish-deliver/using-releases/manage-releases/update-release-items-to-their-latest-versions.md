@@ -2,6 +2,7 @@
 title: "Update Release Items to the Latest"
 description: "Keep your content current with Contentstack's update feature. Easily refresh release items to the latest version and manage localizations effectively."
 url: /headless-cms/update-release-items-to-their-latest-versions
+uid: blt405c79b3b210d4c9
 ---
 
 # Update Release Items to the Latest

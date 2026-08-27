@@ -2,6 +2,7 @@
 title: "Videos and Social Embeds"
 description: "Learn how to embed videos and social media posts in Contentstack’s JSON Rich Text Editor. This guide covers embedding from platforms like YouTube, Vimeo, Instagram, and more."
 url: /headless-cms/videos-and-social-embeds
+uid: blt000cf2ee3e1deb34
 ---
 
 # Videos and Social Embeds
@@ -23,9 +24,9 @@ To embed a video within your JSON RTE, log in to your [Contentstack account](htt
 3.  In the **JSON RTE field**, click the **Video** icon in the toolbar.
 4.  In the **Video** modal that appears, paste the **Embed Code** of the video you want to add.
 5.  Click the **Add** button to embed the video.
-    
+
     ![Embed video using the Video icon in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt510b7be5ba7e5d51/6819bacf0bf88d603ed3bbf1/1-video-embed.gif)
-    
+
 
 ## Social Embeds
 
@@ -39,13 +40,13 @@ To embed a link within your JSON RTE, log in to your [Contentstack account](http
 2.  Create a new entry or open an existing one containing a JSON RTE field.
 3.  In the **JSON RTE field**, click the **Social Embeds** icon in the toolbar.
 4.  In the **Social Embeds** modal that appears, paste the **Embed URL** from a supported platform.
-    
+
     **Note:** Only shareable links from the listed platforms are supported.
-    
+
 5.  Click the **Add** button to embed the social content within the JSON editor.
-    
+
     ![Insert social embed in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt643b0cdfda119360/6819bacf6c26f4b994e5ffb7/2-social-embed.gif)
-    
+
 
 ### Supported Platforms for Social Embeds
 

@@ -2,6 +2,7 @@
 title: "Use Persistence Library With Android SDK"
 description: "Methods for using Persistence Library With Android SDK"
 url: /developers/sdks/content-delivery-sdk/android/use-persistence-library-with-android-sdk
+uid: blt544135192f84f606
 ---
 
 # Use Persistence Library With Android SDK
@@ -14,12 +15,12 @@ This Persistent Library contains methods that are required to map data fields of
 
 Let’s look at how to use this library for your Contentstack-powered Android apps.
 
-**Note:** If you have just started with Android SDK and Contenstack, we recommend reading more about [Realm](https://realm.io/docs/objc/latest/) and [Contentstack docs](https://www.contentstack.com/docs/) before proceeding with the following steps.
+**Note:** If you have just started with Android SDK and Contenstack, we recommend reading more about [Realm](https://www.mongodb.com/docs/atlas/device-sdks/deprecation/) and [Contentstack docs](https://www.contentstack.com/docs/) before proceeding with the following steps.
 
 ## Prerequisites
 
 -   [Android Studio](https://developer.android.com/studio/)
--   [JDK version 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+-   [JDK version 8](https://www.oracle.com/java/technologies/downloads/)
 -   [Contentstack’s Android SDK](/docs/developers/sdks/content-delivery-sdk/android/about-android-sdk)
 
 ## Installation and usage
@@ -31,30 +32,30 @@ To sync data from Contentstack to Realm we need to first set up Realm and then [
 To set up Realm in your application, perform the following steps:
 
 1.  To add the Realm library to your project, first, add the classpath dependency to your project-level build.gradle file. You need to install Realm as a Gradle plugin as follows:  
-    
+
     ```
     dependencies {
       classpath "io.realm:realm-gradle-plugin:5.4.0"
     }
     ```
-    
-    For the latest gradle file, refer to the [Realm document](https://realm.io/docs/java/latest).
+
+    For the latest gradle file, refer to the [Realm document](https://www.mongodb.com/docs/atlas/device-sdks/deprecation/).
 2.  Apply the realm-android plugin to the top of the application level build.gradle file:
-    
+
     ```
     apply plugin: 'realm-android'
     ```
-    
+
 3.  Create a table for your content type. The class should be annotated with @ClassClass(name = ‘provide\_content\_type\_uid’) and extend RealmObject.
 4.  Create a table field like regular realm field name it as per your requirement. Mention about the field of the table @RealmField(name=’field\_id’).
 5.  Unique ID (uid) is compulsory in every table. Mention it as follows:
-    
+
     ```
     @PrimaryKey()
     @RealmField(name=’uid’)
     private String uid;
     ```
-    
+
 6.  Simply drag the file at SyncManager module in your project package.
 
 ### Install Contentstack Android SDK and SyncManager

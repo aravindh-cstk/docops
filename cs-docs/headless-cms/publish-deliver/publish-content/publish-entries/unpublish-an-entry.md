@@ -2,6 +2,7 @@
 title: "Unpublish an Entry"
 description: "Learn how to unpublish entries in Contentstack to remove content from your web or mobile properties. Follow step-by-step instructions to unpublish entries effectively."
 url: /headless-cms/unpublish-an-entry
+uid: blt0e7291d25cce8020
 ---
 
 # Unpublish an Entry
@@ -19,14 +20,14 @@ To unpublish an entry, log in to your [Contentstack account](https://www.content
 3.  Open the entry to be unpublished and click the **Unpublish** icon at the bottom-right corner.
 4.  In the **Unpublish Entry** modal, select the desired environments under **Select Environment(s)** and the appropriate locales under **Select Language(s)** from which the entry will be unpublished.
 5.  Under **Unpublish**, select one of the two available options:
-    
+
     1.  **Now**: Unpublish the asset immediately.
     2.  **Later**: Schedule the asset to be unpublished at a specific date and time. If you select this option, additional fields appear where you can specify the date, time, and time zone.
-    
+
     **Note:** The unpublishing date cannot extend beyond 12 months.
-    
+
     If you select a time zone that follows [daylight saving time (DST)](https://www.contentstack.com/docs/headless-cms/daylight-saving-time-in-contentstack), a help text will indicate the adjusted unpublishing time considering DST changes (with a one-hour adjustment).
-    
+
 6.  Confirm your settings by clicking **Send.**
 
 Alternatively, you can also unpublish an entry from the entries list page. To do so, perform the following steps:
