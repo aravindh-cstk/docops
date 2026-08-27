@@ -2,6 +2,7 @@
 title: "Variant Aliases Deep Dive"
 description: "Learn how to use Contentstack variant aliases in Studio for A/B testing, personalisation, and seasonal content, including cache key strategy and patterns to avoid."
 url: /studio/variant-aliases-deep-dive
+uid: blt70f213710e554dee
 ---
 
 # Variant Aliases Deep Dive
@@ -17,9 +18,9 @@ A variant alias is a **named slice of an entry**. The base entry has its canonic
 The active variant alias reaches the SDK through two paths: one for editors, one for visitor sites:
 
 1.  **Editor preview (set by Studio, not by your code).** When an editor picks a variant in the Studio canvas navbar, Studio applies it to the iframe preview internally. The SDK overrides its own config.variantAlias for every subsequent fetch while running inside the iframe. You don't set this; Studio does. Your visitor-site code never sees or parses this. (The transport between Studio's canvas and the SDK is internal and may change between SDK versions; never inspect or pass Studio's iframe URL params yourself.)
-    
+
 2.  **Visitor site (you set this).** Your route passes variantAlias explicitly to the SDK:
-    
+
 3.  SSR: sdk.fetchCompositionData({ variantAlias: "holiday-2026", … })
 4.  CSR: useCompositionData({ variantAlias })
 5.  Or via studioSdk.init({ variantAlias }) to bake one into the SDK instance.

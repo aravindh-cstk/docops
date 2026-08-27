@@ -2,6 +2,7 @@
 title: "Add Studio to a Visual Editor App"
 description: "Learn how to layer Contentstack Studio on top of an existing Visual Editor setup to enable layout composition alongside inline field editing."
 url: /studio/add-studio-to-a-visual-editor-app
+uid: blte8389c32628150ca
 ---
 
 # Add Studio to a Visual Editor App

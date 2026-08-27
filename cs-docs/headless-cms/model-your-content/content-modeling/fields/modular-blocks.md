@@ -2,6 +2,7 @@
 title: "Modular Blocks"
 description: "Learn how to use Modular Blocks in Contentstack to build dynamic, flexible content structures without needing developer changes."
 url: /headless-cms/modular-blocks
+uid: bltafd590a3e2af7024
 ---
 
 # Modular Blocks
@@ -31,16 +32,16 @@ To use Modular Blocks, developers must first add the field to a content type.
 3.  Inside the block, use **Insert a Field** to add the required fields.
 4.  Repeat this to add multiple blocks within the same Modular Blocks field.
 5.  Rename or delete any block if needed.
-    
+
     ![Developer_Creating_MB.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb58bd56a8b16999f/688ce87402d85c803cdf8697/Developer_Creating_MB.png)
-    
+
 
 **Note:**
 
 -   You can add up to **5 Modular Blocks** fields per content type, with up to **20 blocks** in each field.
 -   You can also mark a Modular Blocks field to **Show as Tab** in the entry editor. This option displays the field as a separate tab, helping content managers navigate large entries more easily. Learn more in [Show as Tab](/docs/headless-cms/show-as-tab).
 -   You can now designate a specific field inside a block as the “title” of each block instance by enabling the [Mark as Modular block title](/docs/headless-cms/mark-as-title#mark-as-modular-block-title) toggle.  
-    
+
 
 **Warning:** You cannot add a Modular Blocks field within a [Group](/docs/headless-cms/group) field.
 
@@ -121,9 +122,9 @@ Now that we are done creating our content types, let's create entries in them an
     2.  Add another block with the title **About** referencing the **About** entry.
     3.  Within **External**, set the title as **Contentstack** and the URL as https://contentstack.com.
     4.  Within **Custom** keep the title as **Docs** with the Path as /documentation/start.
-        
+
         **Tip:** The Custom block allows linking to any internal path (e.g., /some-other-link/on-my-webpage).
-        
+
 
 You can now use the [Content Delivery API](/docs/developers/apis/content-delivery-api) to retrieve the Menu entry content and build your navigation dynamically. For example, refer to this [example](https://gist.github.com/oskarei/10a547de2049399d696414e84e9e9889).
 
