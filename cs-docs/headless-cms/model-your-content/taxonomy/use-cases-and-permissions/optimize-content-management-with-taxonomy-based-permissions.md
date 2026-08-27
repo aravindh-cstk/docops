@@ -2,6 +2,7 @@
 title: "Optimizing Content Management with Taxonomy-based Permissions"
 description: "Enhance content management with taxonomy-based permissions in Contentstack. Control user access to specific entries based on assigned taxonomies and terms."
 url: /headless-cms/optimize-content-management-with-taxonomy-based-permissions
+uid: blt7388612e45bb7eaa
 ---
 
 # Optimizing Content Management with Taxonomy-based Permissions

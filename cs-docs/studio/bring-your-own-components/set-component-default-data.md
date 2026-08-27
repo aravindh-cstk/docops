@@ -2,28 +2,29 @@
 title: "Set Component Default Data"
 description: "Learn how schema defaultValue props and the runtime data prop on StudioComponent let you seed components with placeholder and external data in Contentstack Studio."
 url: /studio/set-component-default-data
+uid: blt54fb6aaae4f0f0ea
 ---
 
 # Set Component Default Data
 
 ## Set Component Default Data
 
-"Component Default Data" in Studio is two related things that share a name. Both feed values into a component without going through a Contentstack entry, and the more powerful of the two is also the easiest one to miss.
+"Component Default Data" in Studio is two related things that share a name. Both feed values into a component without going through a Contentstack entry — and the more powerful of the two is also the easiest one to miss.
 
 |  | What it is | Where it lives | When it's used |
 | --- | --- | --- | --- |
-| **Schema defaults** (defaultValue) | Per-prop fallback baked into the component's registration | The props.<name>.defaultValue field in registerComponent({...}) | Preview only: author drops the component, sees the default, replaces it on bind |
-| **Runtime Component Default Data** (the data prop on <StudioComponent />) | A Record<string, any> you pass in at render time | The data prop on <StudioComponent specOptions={...} data={...} /> | **Always**: these values are bindable from the canvas, so components inside the composition can pull from them at render time |
+| **Schema defaults** (defaultValue) | Per-prop fallback baked into the component's registration | The props.<name>.defaultValue field in registerComponent({...}) | Preview only — author drops the component, sees the default, replaces it on bind |
+| **Runtime Component Default Data** (the data prop on <StudioComponent />) | A Record<string, any> you pass in at render time | The data prop on <StudioComponent specOptions={...} data={...} /> | **Always** — these values are bindable from the canvas, so components inside the composition can pull from them at render time |
 
-The second one is the canonical hook for **bringing external data into a Studio composition**: pricing, inventory, feature flags, geolocation, weather, A/B variant, user profile, or anything else that doesn't live in Contentstack. You fetch the data wherever it actually lives, hand it to <StudioComponent /> via the data prop, and bind the composition's components to it through the Data Picker.
+The second one is the canonical hook for **bringing external data into a Studio composition** — pricing, inventory, feature flags, geolocation, weather, A/B variant, user profile, or anything else that doesn't live in Contentstack. You fetch the data wherever it actually lives, hand it to <StudioComponent /> via the data prop, and bind the composition's components to it through the Data Picker.
 
-This page covers both: schema defaults first (the simpler case), then runtime Component Default Data (the powerful one).
+This page covers both — schema defaults first (the simpler case), then runtime Component Default Data (the powerful one).
 
 ---
 
-## Part 1: Schema defaults (defaultValue)
+## Part 1 — Schema defaults (defaultValue)
 
-Schema defaults are what authors see the moment they drop your component on the canvas, before they've bound it to data or typed anything.
+Schema defaults are what authors see the moment they drop your component on the canvas — before they've bound it to data or typed anything.
 
 A good set of defaults makes your component **immediately visible and recognisable**. Bad or missing defaults mean the dropped component renders blank, which makes authors think they did something wrong.
 
@@ -88,7 +89,7 @@ size: { type: "choice", options: ["small", "medium", "large"], defaultValue: ["m
 tone: { type: "choice", options: ["neutral", "primary", "danger"], defaultValue: ["neutral"] }
 ```
 
-Not the rarest variant; the most common.
+Not the rarest variant — the most common.
 
 ### defaultValue vs defaultValueHint
 
@@ -97,7 +98,7 @@ Two different things:
 | Field | What it does |
 | --- | --- |
 | defaultValue | The actual value passed to your component if nothing is set |
-| defaultValueHint | A hint string shown in the form input as placeholder text, for guidance, not a real value |
+| defaultValueHint | A hint string shown in the form input as placeholder text — for guidance, not a real value |
 
 ```
 title: {
@@ -110,9 +111,9 @@ Use defaultValueHint when you want to suggest a shape without committing to plac
 
 ### When schema defaults don't apply
 
--   **The prop is bound to data:** the entry's value wins; defaults only matter for unbound props
--   **The prop is explicitly cleared:** Studio respects empty string / null; doesn't fall back to default
--   **Required validation failed:** the prop stays at its default but shows a validation error
+-   **The prop is bound to data** — the entry's value wins; defaults only matter for unbound props
+-   **The prop is explicitly cleared** — Studio respects empty string / null; doesn't fall back to default
+-   **Required validation failed** — the prop stays at its default but shows a validation error
 
 ### Schema defaults inside object and array props
 
@@ -136,9 +137,9 @@ For arrays, the outer defaultValue is the initial array; items.defaultValue is w
 
 ---
 
-## Part 2: Runtime Component Default Data (the data prop on <StudioComponent />)
+## Part 2 — Runtime Component Default Data (the data prop on <StudioComponent />)
 
-This is the part most teams discover late. **<StudioComponent /> takes a data prop**, a plain Record<string, any> of values you can bind to inside the composition through the Data Picker root labelled **"Component Default Data"**.
+This is the part most teams discover late. **<StudioComponent /> takes a data prop** — a plain Record<string, any> of values that become bindable inside the composition through the Data Picker root labelled **"Component Default Data"**.
 
 This is how external data enters a Studio composition without round-tripping through Contentstack.
 
@@ -151,7 +152,7 @@ interface StudioComponentProps {
 }
 ```
 
-The data value is whatever you make it: a flat object, a nested object, or a mix. Each top-level key shows up as a bindable node under "Component Default Data" in the canvas's Data Picker.
+The data value is whatever you make it — a flat object, a nested object, or a mix. Each top-level key shows up as a bindable node under "Component Default Data" in the canvas's Data Picker.
 
 ### The flow
 
@@ -176,9 +177,9 @@ The composition doesn't know the data is external. Bindings work the same way; t
 
 ### Works in both CSR and SSR
 
-The data prop is just a React prop on <StudioComponent />, so it works wherever React renders the component. The fetch path for specOptions differs by framework (hook in CSR, server function in SSR), but the data prop attaches the same way in both.
+The data prop is just a React prop on <StudioComponent /> — it works wherever React renders the component. The fetch path for specOptions differs by framework (hook in CSR, server function in SSR), but the data prop attaches the same way in both.
 
-#### CSR example: Vite / React SPA
+#### CSR example — Vite / React SPA
 
 ```
 // src/routes/ProductPage.tsx
@@ -200,7 +201,8 @@ export function ProductPage({ sku }: { sku: string }) {
   }, [sku]);
 
   if (isLoading || !pricing) return <Loading />;
-  if (error)                 return <ErrorState message={error.message} />;
+  if (error)                 return <ErrorState message={error instanceof Error ? error.message : String(error)} />;
+  if (!specOptions?.spec)    return <NotFound />;
 
   // 3. Pass both into <StudioComponent /> via specOptions + data
   return (
@@ -212,13 +214,13 @@ export function ProductPage({ sku }: { sku: string }) {
 }
 ```
 
-Live Preview updates work the same way: ContentstackLivePreview.onEntryChange(refetchSpec) refreshes the composition; pricing refreshes through its own effect/SWR/React Query path.
+Live Preview updates work the same way — ContentstackLivePreview.onEntryChange(refetchSpec) refreshes the composition; pricing refreshes through its own effect/SWR/React Query path.
 
-#### SSR / RSC example: Next.js App Router
+#### SSR / RSC example — Next.js App Router
 
 ```
 // app/products/[sku]/page.tsx — Server Component (no "use client")
-import { sdk } from "@/lib/contentstack";
+import { csStudio } from "@/lib/contentstack";
 import { ProductPageClient } from "./ProductPageClient";
 import { getLivePricing } from "@/lib/pricing-api";
 
@@ -226,11 +228,18 @@ export default async function ProductPage({ params, searchParams }) {
   const url = `/products/${params.sku}`;
   const searchQuery = new URLSearchParams(searchParams).toString();
 
-  // Two parallel fetches on the server: composition spec + live pricing
-  const [specOptions, pricing] = await Promise.all([
-    sdk.fetchCompositionData({ url, searchQuery }),
-    getLivePricing(params.sku),  // returns { unit_price, currency, in_stock }
-  ]);
+  // Two parallel fetches on the server: composition spec + live pricing.
+  // fetchCompositionData REJECTS for not-found URLs — catch to 404 cleanly.
+  let specOptions, pricing;
+  try {
+    [specOptions, pricing] = await Promise.all([
+      csStudio.fetchCompositionData({ url, searchQuery }),
+      getLivePricing(params.sku),  // returns { unit_price, currency, in_stock }
+    ]);
+  } catch {
+    return notFound();
+  }
+  if (!specOptions.hasSpec) return notFound();
 
   return (
     <ProductPageClient
@@ -251,53 +260,53 @@ export function ProductPageClient({ specOptions, data }) {
 }
 ```
 
-The shape of what reaches <StudioComponent /> is **identical in both cases**: specOptions is the same StudioComponentSpecOptions shape whether you got it from the hook or from the server fetch; data is the same Record<string, any> you constructed alongside.
+The shape of what reaches <StudioComponent /> is **identical in both cases** — specOptions is the same StudioComponentSpecOptions shape whether you got it from the hook or from the server fetch; data is the same Record<string, any> you constructed alongside.
 
 #### Equivalent patterns for other frameworks
 
 | Framework | Where to fetch specOptions | Where to fetch external data | Where <StudioComponent /> mounts |
 | --- | --- | --- | --- |
 | Vite / React SPA | useCompositionData({url}) hook | useEffect + useState, or React Query / SWR | Directly in the page component |
-| Next.js Pages Router | getServerSideProps → sdk.fetchCompositionData | Same getServerSideProps (server-side) | Page component receives both as props |
-| Next.js App Router (RSC) | Server Component awaits sdk.fetchCompositionData | Server Component awaits the external fetch | Client Component wrapper marked "use client" |
-| Remix | loader calls sdk.fetchCompositionData | Same loader (server-side) | Route component reads via useLoaderData |
+| Next.js Pages Router | getServerSideProps → csStudio.fetchCompositionData | Same getServerSideProps (server-side) | Page component receives both as props |
+| Next.js App Router (RSC) | Server Component awaits csStudio.fetchCompositionData | Server Component awaits the external fetch | Client Component wrapper marked "use client" |
+| Remix | loader calls csStudio.fetchCompositionData | Same loader (server-side) | Route component reads via useLoaderData |
 | Astro (with React island) | .astro server-side fetch | Same .astro server-side fetch | React island marked client:load |
 
 For the full render-strategy decision, see [CSR vs SSR](/docs/studio/choosing-between-csr-and-ssr-rendering).
 
-### What authors see: same picker in both paths
+### What authors see — same picker in both paths
 
 Now in Studio's canvas, an author opens the <PriceTag /> component's right panel, clicks the price prop's binding chip, and the Data Picker shows:
 
--   **Linked Template Entry:** the connected product entry (title, description, etc.)
--   **Component Default Data:** livePricing.unit\_price, livePricing.currency, livePricing.in\_stock
+-   **Linked Template Entry** — the connected product entry (title, description, etc.)
+-   **Component Default Data** — livePricing.unit\_price, livePricing.currency, livePricing.in\_stock
 
-They pick livePricing.unit\_price. The composition renders with whatever your pricing API returned: Contentstack never sees that number, but the page does.
+They pick livePricing.unit\_price. The composition renders with whatever your pricing API returned — Contentstack never sees that number, but the page does.
 
 ### Use cases that fit this pattern
 
--   **Live pricing or inventory:** fetched from a commerce backend, not Contentstack
--   **Personalization variant:** data={{ variant: getABVariant(user) }}
--   **Geolocation / region:** data={{ region: getRegion(request) }}, components bind to region.currency etc.
--   **Authenticated user data:** data={{ user: { name, tier } }} for personalized greetings
--   **Time-sensitive data:** current weather, "next showtime", live event status
--   **Feature flags:** data={{ flags: { newCheckoutEnabled: true } }} → bind a Condition Block to it
+-   **Live pricing or inventory** — fetched from a commerce backend, not Contentstack
+-   **Personalization variant** — data={{ variant: getABVariant(user) }}
+-   **Geolocation / region** — data={{ region: getRegion(request) }}, components bind to region.currency etc.
+-   **Authenticated user data** — data={{ user: { name, tier } }} for personalized greetings
+-   **Time-sensitive data** — current weather, "next showtime", live event status
+-   **Feature flags** — data={{ flags: { newCheckoutEnabled: true } }} → bind a Condition Block to it
 -   **Anything stored outside Contentstack** that the page still needs to render
 
 ### Why this is better than fetching inside the component
 
-Fetching directly inside a registered component works, but it locks the data dependency _into_ the component code: every component that wants live pricing has to import the pricing client and replicate auth, error handling, caching, and SSR concerns.
+Fetching directly inside a registered component works, but it locks the data dependency _into_ the component code — every component that wants live pricing has to import the pricing client and replicate auth, error handling, caching, and SSR concerns.
 
 Routing the data through the data prop on <StudioComponent /> puts the fetch in one place (the app's route handler), keeps your components dumb-and-bindable, and lets a single component render the same way against CMS data OR external data depending on what the binding points to. The component author doesn't have to know which source it's coming from.
 
 ### Visibility in the Data Picker
 
-The "Component Default Data" root **is visible when**:
+The "Component Default Data" root is **only visible when**:
 
--   A component is selected on the canvas (this is a per-component data source; see [Component Data tab](/docs/studio/the-component-data-tab))
--   The component has registered props that can accept a binding
+-   A component is selected on the canvas (this is a per-component data source — see [Component Data tab](/docs/studio/the-component-data-tab))
+-   The component has registered props that could accept a binding
 
-If you pass a data prop but the picker doesn't show the root, select a component on the canvas first: the picker scopes to the selected node, so the root only appears when a component is actively selected.
+If you pass a data prop but the picker doesn't show the root, the most likely reason is no component is currently selected — the picker scopes to the selected node.
 
 ### Combining schema defaults + runtime data
 
@@ -314,11 +323,11 @@ Schema defaults are the floor; runtime Component Default Data is one of several 
 
 ### Updating runtime data after render
 
-The data prop is a normal React prop: re-render <StudioComponent /> with a new data value and the composition reflects the change. So:
+The data prop is a normal React prop — re-render <StudioComponent /> with a new data value and the composition reflects the change. So:
 
--   **Polling / SWR / React Query:** refetch external data and pass the latest into data
--   **Subscriptions:** wire a WebSocket to your state, update data, the composition re-renders
--   **User-driven changes:** currency switcher, variant toggle, locale switch; flow them through data
+-   **Polling / SWR / React Query** — refetch external data and pass the latest into data
+-   **Subscriptions** — wire a WebSocket to your state, update data, the composition re-renders
+-   **User-driven changes** — currency switcher, variant toggle, locale switch — flow them through data
 
 You don't need a special Studio API to do this; the React render cycle handles it.
 
@@ -326,14 +335,8 @@ You don't need a special Studio API to do this; the React render cycle handles i
 
 Two things to watch for in SSR:
 
--   **Don't pass functions or non-serializable values** in data. If you're handing data from a Server Component to a Client Component (Next.js App Router) or via getServerSideProps (Pages Router), data has to round-trip through JSON.
+-   **Don't pass functions or non-serializable values** in data. If you're handing data from a Server Component to a Client Component (Next.js App Router) or via getServerSideProps (Pages Router) → data has to round-trip through JSON.
 -   **Hydration matches must align.** Server and client must agree on the value of data at hydration time. If the value depends on Date.now() or Math.random() and you compute it twice, you'll get a hydration mismatch warning. Compute server-side, pass through, let the client reuse the same value.
-
-## When NOT to use Component Default Data
-
--   **Data that belongs in a Contentstack entry.** If your content team edits it, it should live in the CMS, not be injected as a runtime data prop.
--   **Auth tokens or server secrets.** The data prop is a React prop: don't pass credentials. Fetch protected data server-side and pass only the result.
--   **Large binary or non-serializable values.** The data prop must round-trip through JSON in SSR contexts (Next.js App Router, getServerSideProps). Functions, class instances, and Blob values cause serialization errors. Keep data to plain objects, strings, numbers, and arrays.
 
 ---
 
@@ -345,13 +348,14 @@ Two things to watch for in SSR:
 | defaultValue used as real product copy | Author ships placeholder text as if it's content | Use clearly-template phrasing like "Your headline here" |
 | Forgetting runtime data exists | Team forks components to call APIs from inside | Route external fetches through <StudioComponent data={...} /> |
 | "Component Default Data" missing from picker | Authors can't find the binding | Select a component on the canvas first; the root is per-selection |
-| Passing non-JSON values in data (functions, classes) | SSR serialization errors | Keep data plain: strings, numbers, arrays, objects |
+| Passing non-JSON values in data (functions, classes) | SSR serialization errors | Keep data plain — strings, numbers, arrays, objects |
 | Hydration mismatch on data-driven props | React warning in console | Compute once server-side, pass through; don't recompute on the client |
 
 ## See also
 
--   [Component schema](/docs/studio/component-schema-prop-types): all prop types and how defaultValue fits per type
--   [Component Data tab](/docs/studio/the-component-data-tab): the per-component right-panel surface that exposes "Component Default Data" in the picker
--   [CMS Binding](/docs/studio/bind-cms-content-to-studio-components): how the picker resolves bindings against each available data source
--   [SDK API reference: StudioComponent](/docs/studio/sdk-api-reference): the data prop type definition
--   [Optimizing load](/docs/studio/optimizing-load-with-lazy-registration): lazy registration for big libraries
+-   [Component schema](/docs/studio/component-schema-prop-types) — all prop types and how defaultValue fits per type
+-   [Component Data tab](/docs/studio/the-component-data-tab) — the per-component right-panel surface that exposes "Component Default Data" in the picker
+-   [CMS Binding](/docs/studio/bind-cms-content-to-studio-components) — how the picker resolves bindings against each available data source
+-   [SDK API reference — StudioComponent](/docs/studio/sdk-api-reference) — the data prop type definition
+-   Bring your own data — rendering a composition against data you hold (<StudioComposition />) and per-slot data (<Slot>)
+-   [Optimizing load](/docs/studio/optimizing-load-with-lazy-registration) — lazy registration for big libraries

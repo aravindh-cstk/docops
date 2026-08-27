@@ -2,6 +2,7 @@
 title: "Server Machines on Launch"
 description: "Learn how server machines manage CPU and memory for your functions on Contentstack Launch. Explore machine tiers L1, L2, and L3 for optimal performance."
 url: /launch/server-machines-on-launch
+uid: blt45683c1a7a5fe226
 ---
 
 # Server Machines on Launch

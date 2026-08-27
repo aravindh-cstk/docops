@@ -2,6 +2,7 @@
 title: "Getting Started with Variants"
 description: "Learn how to create, manage, and deliver personalized content using variants in Contentstack. Get started with tailored experiences for your audience."
 url: /headless-cms/getting-started-with-variants
+uid: blt61c892aaab9a84aa
 ---
 
 # Getting Started with Variants
@@ -23,14 +24,14 @@ Familiarize yourself with these essential terms:
 1.  **Personalize Project**: A [project](/docs/personalize/create-personalize-project) in Personalize allows you to manage and deliver personalized content across channels by linking it to an existing stack.
 2.  **Experience**: In Personalize, an [experience](/docs/personalize/about-experiences) defines and manages personalized content, A/B tests, or audience-specific variants to optimize content delivery and engagement.
 3.  **Variant Group**: A collection of related variants grouped for a common purpose or audience, such as location-based experiences or targeted promotions.
-    
+
     **Note:** Each [experience](/docs/personalize/about-experiences) created in a Personalize project appears as a Variant Group in the linked stack.
-    
+
 4.  **Base Entry**: The original entry from which all entry variants are derived. It contains the base content that all entry variants inherit unless they are customized for a specific variant.
 5.  **Entry Variant**: An [entry variant](/docs/headless-cms/about-entry-variants) is a customized version of the base entry, created to deliver personalized or scenario-specific content to different audiences.
-    
+
     For example, a travel website could create variants like "Luxury Europe" or "Budget Adventure South America" to serve tailored content to specific regions.
-    
+
 
 **Additional Resource:** To learn more about the key terms within Personalize, refer to the [Glossary and Key Features](/docs/personalize/glossary-key-features) document
 
@@ -39,22 +40,22 @@ Familiarize yourself with these essential terms:
 This section outlines the process of creating experiences, defining variants, and linking them to your stack.
 
 1.  **Via Personalize**
-    
+
     This section outlines the process of creating experiences, defining variants, and linking them to your stack.
-    
+
     1.  **Create an Experience**: Set up an [A/B test](/docs/personalize/create-ab-test-experience) or [Segmented](/docs/personalize/create-segmented-experience) experience in Personalize to deliver content variations to different audience segments, optimizing engagement and conversions. These experiences are displayed as variant groups within the linked stacks.![1-Experiences.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt91d25af15baaee02/66fa902dd75ab88488acd395/1-Experiences.png)
     2.  **Define Variants**: Within each experience, define variants that describe the user experience. For example:
         -   For a Color experience, you can create variants for different colors.
         -   For a Marketplace experience, create region-based variants like Asia, Europe, or North America.![2-Variants.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6e4ac5f54f116ed8/66fa902d5a3473c28b021961/2-Variants.png)
     3.  **Linking to Stack**: Link your Personalize [project](/docs/personalize/create-personalize-project) to a stack to inherit all experiences as variant groups within that stack.![3-Linking to Stack.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0d69e25de5fae8ad/66fa902dc7982842788f2e98/3-Linking_to_Stack.png)
 2.  **Via CMS Stack**
-    
+
     This method allows developers and administrators to create independent variant groups directly within the stack.
-    
+
     1.  **Create a Variant Group**: Navigate to **Settings**, then **Variants**, and click **New Variant Group** to create a variant group directly in the CMS.
-        
+
         **Note:** By default, the create variant groups button is visible only in the main branch.
-        
+
     2.  **Define Variants**: Within the group, specify the variants that you want to associate with this variant group. (e.g., "Mobile," "Desktop," or "EMEA") to describe the user experience.
     3.  **Assign Content Types**: Select the specific content types that will use these variants.
     ![Create_and_Manage_Variant_Groups_in_the_CMS.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6baf5d96f7be059e/69bda20e554eb218ba371e6d/Create_and_Manage_Variant_Groups_in_the_CMS.gif)
@@ -97,9 +98,9 @@ Use APIs to manage and retrieve entry variants for personalized content:
     1.  View all the available variant groups and link them to the content types within your stack via the [Variant Groups collection](/docs/developers/apis/content-management-api/variant-groups) in our Content Management API.
     2.  Manage entry variants by creating, updating, deleting, publishing entry variants via the [Entry Variants collection](/docs/developers/apis/content-management-api/entry-variants) in our Content Management API.
 -   **Applying Multiple Variants**: Pass multiple variant UIDs in an API request to apply layered variants, with the latest entry variant taking precedence.
-    
+
     For example, if you pass variant UIDs for Mumbai, India, and Asia, the Asia variant will take precedence, ensuring the content is most relevant to users in that location. This approach allows for flexible and granular content personalization across different markets or audience segments.
-    
+
 
 ## Handling Complex Cases
 

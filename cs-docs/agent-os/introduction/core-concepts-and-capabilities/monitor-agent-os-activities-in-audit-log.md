@@ -2,6 +2,7 @@
 title: "Monitor Agent OS Activities in Audit Log"
 description: "Monitor Agents, Automations, Connected Apps, etc., activities using the Audit Log to track edits, updates, and events across your Agent OS project."
 url: /agent-os/monitor-agent-os-activities-in-audit-log
+uid: blte1a4a8e58ed04895
 ---
 
 # Monitor Agent OS Activities in Audit Log

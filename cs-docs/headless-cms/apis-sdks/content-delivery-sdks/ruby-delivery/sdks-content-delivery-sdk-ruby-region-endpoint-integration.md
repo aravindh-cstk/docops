@@ -2,6 +2,7 @@
 title: "Ruby CDA - Configure Region Endpoints in Ruby Content Delivery SDK"
 description: "Configure region endpoints in the Contentstack Ruby Content Delivery SDK. A Ruby developer guide to connecting to the correct region without hardcoding URLs."
 url: /developers/sdks/content-delivery-sdk/ruby/region-endpoint-integration
+uid: blt3efb1186c97180f2
 ---
 
 # Ruby CDA - Configure Region Endpoints in Ruby Content Delivery SDK

@@ -2,6 +2,7 @@
 title: "Approve Edit Access Request for an Entry"
 description: "Approve edit access request for an entry"
 url: /headless-cms/approve-edit-access-request-for-an-entry
+uid: blt91826386e26329cd
 ---
 
 # Approve Edit Access Request for an Entry
@@ -18,12 +19,12 @@ To approve an edit access request for an entry, log in to your [Contentstack acc
 
 1.  Go to your [stack](/docs/headless-cms/about-stack), and open the entry.
 2.  On the entry page, click on the “Information” icon on the right panel.  
-      
+
     ![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3905385eb3e39a87/60de11e6a1ff3159b5939646/image.png)The **Pending Access Requests** dialog box appears on screen.
 3.  In the **Pending Access Requests** dialog box, you can view the set of edit access requests sent by different users. Click on **Allow** to grant edit access to the entry or **Reject** to disallow edit access to the entry.   
     ![Image-Entry-Info-Edit-Access-Requests.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb51305f6b2f883ee/639b2fda6ae58123d91e0a65/Image-Entry-Info-Edit-Access-Requests.jpg)  
-    
+
     **Note:** Any one of the users with edit access rights over the entry in the current stage can go ahead and approve or reject the request.
-    
+
 
 The approvers can also navigate to the **Tasks** section to view the request for edit access and directly allow or reject access to the entry from that section.

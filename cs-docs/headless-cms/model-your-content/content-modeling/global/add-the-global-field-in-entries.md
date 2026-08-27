@@ -2,6 +2,7 @@
 title: "Add the Global Field in Entries"
 description: "Learn how to add and use Global fields in entries within Contentstack. Improve content consistency and reuse structured data efficiently."
 url: /headless-cms/add-the-global-field-in-entries
+uid: bltcb58ae85f71b9af8
 ---
 
 # Add the Global Field in Entries

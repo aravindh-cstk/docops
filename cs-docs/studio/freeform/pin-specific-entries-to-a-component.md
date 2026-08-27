@@ -2,6 +2,7 @@
 title: "Pin Specific Entries to a Component"
 description: "Learn how to pin one or more CMS entries to a Freeform template so layout components can bind directly to their fields."
 url: /studio/pin-specific-entries-to-a-component
+uid: bltd6464dfea80b6d89
 ---
 
 # Pin Specific Entries to a Component
@@ -24,7 +25,7 @@ Inside a Freeform template on the canvas:
 Right panel  →  Data tab  →  Additional Entry Data section
 ```
 
-The Data tab itself only appears when [**Enable Freeform Feature**](/docs/studio/freeform-templates) is on in Project Configuration; without Freeform, the right panel collapses to **Settings only**. See [The Data tab](/docs/studio/page-data-tab-for-entry-data-queries-and-external-data) for the full structure (Additional Entry Data + Queries + External Data sections).
+The Data tab itself only appears when Enable Freeform Feature is on in Project Configuration; without Freeform, the right panel collapses to **Settings only**. See [The Data tab](/docs/studio/page-data-tab-for-entry-data-queries-and-external-data) for the full structure (Additional Entry Data + Queries + External Data sections).
 
 ## What You Can Do with a Pinned Entry
 

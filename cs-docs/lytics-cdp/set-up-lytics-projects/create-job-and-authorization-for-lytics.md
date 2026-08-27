@@ -2,6 +2,7 @@
 title: "Create a Job and Authorization for Lytics"
 description: "Set up a job and authorization in Contentstack's Lytics to enable secure data syncing and personalized content delivery across digital platforms."
 url: /lytics/create-job-and-authorization-for-lytics
+uid: blt349232fb04a58d26
 ---
 
 # Create a Job and Authorization for Lytics
@@ -34,20 +35,20 @@ Once Lytics is enabled and configured for your organization, follow these steps:
     1.  **Region:** Select the region where your organization is located.
     2.  **Stack API Key:** Enter your stack API key (**Stack Settings > API Credentials**).
     3.  [**Delivery Token**](/docs/headless-cms/create-a-delivery-token)**:** Enter the delivery token of your stack (**Stack Settings > Tokens > Delivery Token**).
-        
+
     4.  [**Management Token**](/docs/headless-cms/generate-a-management-token)**:** Enter your stack's management token (**Stack Settings > Tokens > Management Token**).  
-        
+
         **Tip:** Generate a new management token with Read permissions to avoid issues caused by hidden or obfuscated values. This ensures your sync is correctly tied to the domain and environment you authorized, and avoids misconfiguration due to multiple tokens or domains.
-        
+
         ![Configuration screen showing region selection and fields to enter Stack API Key, Delivery Token, and Management Token.](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt669eb23a81422d83/686512ad65a219b379d19083/image.png)
     5.  Click the **Save and Continue** button. You will see a success message pop-up: **Authorization saved successfully**.
-        
+
         **Note:** Authorization health can reflect the following statuses:
-        
+
         -   **Healthy:** The authorization is valid.
         -   **Unhealthy:** The authorization has failed or is inactive.
         -   **Unknown:** The authorization check hasn't completed or the status couldn’t be determined.
-        
+
 9.  Now, in the **Configure Job** section, select your **Content Types** to import (likely "blog\_post", "page", etc.). You can select multiple content types to import their entries.
 10.  Select **Keep Updated** to continuously import the entries for the selected content types.
 11.  Optionally, you can also provide the **Domain** on which you are serving content and have the JavaScript Tag installed.

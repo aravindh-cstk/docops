@@ -2,6 +2,7 @@
 title: "Real-Time Collaboration in the Entry Editor"
 description: "Learn how Real-Time Collaboration in Contentstack enables multi-user editing with field-level locking, live presence indicators, and conflict prevention."
 url: /headless-cms/real-time-collaboration-in-the-entry-editor
+uid: bltfefef86fb8b434ab
 ---
 
 # Real-Time Collaboration in the Entry Editor
@@ -124,28 +125,28 @@ Follow these recommendations to collaborate effectively.
     -   Avoid editing the same field simultaneously
     -   Use comments or internal communication tools to align on structural updates
 2.  Communicate Structural Edits
-    
+
     Before performing major structural actions such as:
-    
+
     -   Reordering modular blocks
     -   Deleting grouped content
     -   Performing large structural updates
-    
+
     Ensure no nested fields are actively locked.
-    
+
 3.  Refresh Before Major Edits
-    
+
     If you have had the entry open for an extended period:
-    
+
     -   Refresh the page before making structural changes
     -   Confirm that no newer version exists
 4.  Use Draft Compare for Review
     -   Compare minor draft updates with major saved versions
     -   Review changes before publishing in high-collaboration environments
 5.  Keep Sessions Intentional
-    
+
     Avoid keeping entries open in unused tabs. Active sessions may retain locks longer than necessary.
-    
+
 
 ## When to Use Real-Time Collaboration
 

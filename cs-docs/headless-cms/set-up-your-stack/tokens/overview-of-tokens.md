@@ -2,6 +2,7 @@
 title: "Overview of Tokens"
 description: "Learn how Contentstack token-based authentication secures API access using Delivery and Management tokens."
 url: /headless-cms/overview-of-tokens
+uid: blt5984dc613bc4bbea
 ---
 
 # Overview of Tokens

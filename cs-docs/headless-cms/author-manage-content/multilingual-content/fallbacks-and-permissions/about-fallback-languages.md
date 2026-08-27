@@ -2,6 +2,7 @@
 title: "About Fallback Languages"
 description: "Fallback language is the parent from which the given language inherits data. Define fallback languages for every language you add to a stack with Contentstack."
 url: /headless-cms/about-fallback-languages
+uid: blt2a9d01c5887a55db
 ---
 
 # About Fallback Languages

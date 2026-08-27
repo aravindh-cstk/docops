@@ -2,6 +2,7 @@
 title: "Preview Content Across a Timeline"
 description: "Learn to navigate the Timeline feature effortlessly. Visualize future updates, compare versions, and ensure seamless website transitions."
 url: /headless-cms/preview-content-across-a-timeline
+uid: blt25ff9cd3e5a975ac
 ---
 
 # Preview Content Across a Timeline
@@ -16,9 +17,9 @@ To view the timeline, log in to your [Contentstack account](https://www.contents
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) where you want to preview your website’s timeline.
 2.  In the left panel, click the "Visual Experience" icon. By default you would see the Timeline preview.
-    
+
     **Note:** If you have not set up the default environment, the latest live preview SDK, and the preview token in the live preview settings, the Set Up Timeline screen will appear. This screen will guide you through each step to set up and use the timeline feature.
-    
+
 3.  Click any of the dates visible in the timeline bar to view your website in any future timeline.
 4.  Select different **environments** and **locales** to see how your content will appear in various settings.
 
@@ -59,9 +60,9 @@ You can also compare your website in two different timelines.
 
 1.  Hover over a date for comparison and click the **Compare Website** icon to open a side-by-side comparison of your website in the current timeline and the selected date.
 2.  Use the **Highlight Differences** option to see all differences between the two pages.
-    
+
     **Note:** You can [customize the color options](/docs/headless-cms/set-up-timeline-for-your-website#customize-color-options-for-highlight-differences-feature) for the highlight differences functionality.
-    
+
 3.  Preview the website in different views (Responsive, Desktop, Tablet, or Mobile) or manually set the width and height.
 4.  Change the orientation of the website as needed.
 5.  Alternatively, compare websites in different timelines from the **Preview Details** page.

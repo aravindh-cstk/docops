@@ -2,6 +2,7 @@
 title: "About Us Page"
 description: "The About Us Page Content Model defines the structure, fields, and schema to design the About Us page of the website."
 url: /marketplace/about-us-page
+uid: bltf2f7b60afb002e63
 ---
 
 # About Us Page

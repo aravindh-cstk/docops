@@ -2,6 +2,7 @@
 title: "Live Preview Real-world Scenarios"
 description: "Contentstack’s Live Preview enables real-time content editing, testing, and collaboration across environments. Instantly validate design, localization, and omnichannel delivery without publishing."
 url: /headless-cms/live-preview-real-world-scenarios
+uid: blt5c70216969a72eb5
 ---
 
 # Live Preview Real-world Scenarios
