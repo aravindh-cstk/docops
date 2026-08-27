@@ -1,10 +1,13 @@
 ---
-title: "QA Round 1 Prod Sync Test"
+title: "QA Round 1 Prod Sync Test Retitled"
 description: "Internal QA fixture used to validate the Prod-to-GitHub CMS sync pipeline. Not end-user documentation, and is removed once the test run finishes."
 url: /headless-cms/qa-round1-prod-sync-test
+uid: bltfff875c8226d4cc0
 ---
 
-# QA Round 1 Prod Sync Test
+# QA Round 1 Prod Sync Test Retitled
+
+## QA Round 1 Prod Sync Test Retitled
 
 ## QA Round 1 Prod Sync Test
 

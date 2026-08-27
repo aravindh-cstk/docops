@@ -2,6 +2,7 @@
 title: "Skills Reference"
 description: "Browse all 21 Contentstack Agent Skills by goal or product area, CMS, Delivery SDK, Launch, Brand Kit, and Developer Hub, to find the right skill fast."
 url: /developers/skills-reference
+uid: blt5a64d86a9fe7fad1
 ---
 
 # Skills Reference
@@ -28,11 +29,11 @@ Use this guide to find the right skill for your goal. It lists all 21 Contentsta
 | Set up webhooks, verify signatures, and handle retries | [Webhooks](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/cms-webhooks/SKILL.md) |
 | Design content governance with workflow stages | [Workflows](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/cms-workflows/SKILL.md) |
 | Fetch and query content with the TypeScript Delivery SDK | [Delivery SDK](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/dx-delivery-sdk/SKILL.md) |
-| Migrate code from the JavaScript SDK to TypeScript SDK | [Migrate JS → TS SDK](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/dx-migrate-js-to-ts-sdk/SKILL.md) |
+| Migrate code from the JavaScript SDK to TypeScript SDK | [Migrate JS to TS SDK](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/dx-migrate-js-to-ts-sdk/SKILL.md) |
 | Debug or implement Live Preview and Visual Builder | [Live Preview & Visual Builder](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/cms-live-preview-visual-builder-support-assistant/SKILL.md) |
 | Migrate a project from Contentful to Contentstack | [Migration Companion](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/migration-companion/SKILL.md) |
 | Sync .env.example keys with a Launch environment | [Sync Environment Variables](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/launch-sync-environment-variables-from-env-example/SKILL.md) |
-| Trigger a deployment and monitor it to completion | [Trigger & Monitor Deployments](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/launch-trigger-and-monitor-launch-deployments/SKILL.md) |
+| Trigger a deployment and monitor it to completion | [Trigger and Monitor Deployments](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/launch-trigger-and-monitor-launch-deployments/SKILL.md) |
 | Set up Brand Kit, Voice Profiles, or Knowledge Vault | [Brand Kit Assistant](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/brand-kit-assistant/SKILL.md) |
 | Design or build a Developer Hub app | [Developer Hub App Architect](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/developer-hub-app-architect/SKILL.md) |
 
@@ -61,7 +62,7 @@ Use this guide to find the right skill for your goal. It lists all 21 Contentsta
 | Skill | What it covers |
 | --- | --- |
 | [Delivery SDK](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/dx-delivery-sdk/SKILL.md) | TypeScript SDK setup, method chains, query patterns, Live Preview wiring |
-| [Migrate JS → TS SDK](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/dx-migrate-js-to-ts-sdk/SKILL.md) | Package changes, API mappings, typed results, cache persistence |
+| [Migrate JS to TS SDK](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/dx-migrate-js-to-ts-sdk/SKILL.md) | Package changes, API mappings, typed results, cache persistence |
 | [Live Preview & Visual Builder](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/cms-live-preview-visual-builder-support-assistant/SKILL.md) | Failure diagnosis, preview contract, CSR/SSR/SSG/BFF rendering patterns |
 | [Migration Companion](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/migration-companion/SKILL.md) | Contentful → Contentstack: content migration, code rewrite, field mapping |
 
@@ -70,7 +71,7 @@ Use this guide to find the right skill for your goal. It lists all 21 Contentsta
 | Skill | What it covers |
 | --- | --- |
 | [Sync Environment Variables](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/launch-sync-environment-variables-from-env-example/SKILL.md) | Read .env.example, compare keys, build minimal patch, dry-run first |
-| [Trigger & Monitor Deployments](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/launch-trigger-and-monitor-launch-deployments/SKILL.md) | Trigger, poll, fetch logs on failure, production approval required |
+| [Trigger and Monitor Deployments](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/launch-trigger-and-monitor-launch-deployments/SKILL.md) | Trigger, poll, fetch logs on failure, production approval required |
 
 ### Brand Kit
 

@@ -2,6 +2,7 @@
 title: "Release and Versioning"
 description: "How the Contentstack Agent Skills bundle is versioned and released across its five formats."
 url: /developers/skills-release-and-versioning
+uid: blt93bca894172c1b8a
 ---
 
 # Release and Versioning
@@ -35,12 +36,12 @@ Because the generated trees are committed and verified by continuous integration
 
 1.  Make changes under skills/. See [Add or Edit a Skill](/docs/developers/skills-add-or-edit-a-skill) for the SKILL.md edit and rebuild steps.
 2.  Regenerate derived trees:
-    
+
     ```
     bash scripts/build-cursor-rules.sh
     bash scripts/build-codex-skills.sh
     ```
-    
+
 3.  Update manifest.json if skills were added or removed.
 4.  Manifests with a stale version number make tools report the wrong bundle version to their users. Bump the version in the plugin and extension manifests.
 5.  A failed drift check means the tagged commit would ship a generated tree that does not match skills/. Confirm CI passes before tagging.
