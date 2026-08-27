@@ -2,6 +2,7 @@
 title: "Global Fields within Group Fields"
 description: "Learn to use Global Fields within a Group Field in Contentstack to ensure consistency and simplify updates across content types."
 url: /headless-cms/global-fields-within-group-fields
+uid: blt7f649d10a65303c8
 ---
 
 # Global Fields within Group Fields
@@ -27,27 +28,27 @@ To add a Global field within a Group field, log in to your [Contentstack account
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Content Models” icon in the left navigation panel or press “C”.
 2.  On the **Content Models** page, select **Global Fields** and click **\+ New Global Field**.
 3.  Enter a **Name** (e.g., SEO Metadata) and optional **Description**, then click **Proceed**.
-    
+
     ![Create Global Field screen](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt73de037bba97de50/6805ff0ea090550e147f015b/1._Complex_Global_Fields-Global_Fields_Within_Group_Fields-Create-a-Global-Field.png)
-    
+
 4.  Click the **Insert Field (+)** icon and add the following fields:
     -   **Single Line Textbox** for meta title
     -   **Multi Line Textbox** for meta description
     -   **Single Line Textbox** for meta keywords
 5.  Click **Save** or **Save and Close**.
-    
+
     ![Saved Global Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltacfaf1fd7c30c34e/6805ff0df6991c169db59c0e/2._global_field_crated.png)
-    
+
 6.  Click the “Content Models” icon again, then click **\+ New Content Type** and select **Create New**.
 7.  In the **Create New Content Type** modal:
-    
+
     -   Provide a **Name** (e.g., SEO Optimized Page)
     -   Provide a **Description** (optional)
     -   Select **Type**
     -   Click **Save and proceed**
-    
+
     ![Create Content Type modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt83f2c4a372370487/6805ff0d1ef983cdf8f7a007/3._Complex_Global_Fields-Global_Fields_Within_Group_Fields-Create-a-content-type.png)
-    
+
 8.  On the “Content Type Builder” page, click **Insert Field (+)** and select **Group**.
 9.  In the **Group Properties** modal, enter a **Display Name** (e.g., SEO Content).
 10.  Within the Group field, click **Insert Field (+)** and select **Global**.

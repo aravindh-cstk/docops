@@ -2,6 +2,7 @@
 title: "About Environments"
 description: "Environments in Contentstack act as content delivery destinations, allowing seamless publishing, previewing, and management across multiple channels."
 url: /headless-cms/about-environments
+uid: blt7ae2fff942163693
 ---
 
 # About Environments

@@ -2,6 +2,7 @@
 title: "About .NET Management SDK"
 description: "This comprehensive documentation provides insights into leveraging the SDK to manage and manipulate content within your .NET applications efficiently."
 url: /developers/sdks/content-management-sdk/dot-net/about-dot-net-management-sdk
+uid: bltfd44ee6df48264fe
 ---
 
 # About .NET Management SDK

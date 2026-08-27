@@ -2,6 +2,7 @@
 title: "Review Prerequisites Before You Start"
 description: "What you need before installing Contentstack Studio: stack credentials, tokens, environment settings, and dev environment requirements."
 url: /studio/review-prerequisites-before-you-start
+uid: blt201386f21f3781f9
 ---
 
 # Review Prerequisites Before You Start

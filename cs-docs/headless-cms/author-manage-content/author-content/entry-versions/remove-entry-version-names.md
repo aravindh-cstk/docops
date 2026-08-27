@@ -2,6 +2,7 @@
 title: "Remove Entry Version Names"
 description: "Learn how to remove or reset the name assigned to an entry version in Contentstack."
 url: /headless-cms/remove-entry-version-names
+uid: blt7eec891f304439d5
 ---
 
 # Remove Entry Version Names

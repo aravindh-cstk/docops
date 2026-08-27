@@ -2,6 +2,7 @@
 title: "About JavaScript Utils Library"
 description: "JavaScript Utils library contains all the utilities for the JavaScript Delivery SDK."
 url: /developers/sdks/utils-sdk/javascript/about-javascript-utils-library
+uid: blt49c39ffbff8550d2
 ---
 
 # About JavaScript Utils Library

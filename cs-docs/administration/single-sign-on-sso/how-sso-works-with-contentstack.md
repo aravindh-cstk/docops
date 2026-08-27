@@ -2,6 +2,7 @@
 title: "How SSO works with Contentstack"
 description: "How SSO works with Contentstack"
 url: /administration/how-sso-works-with-contentstack
+uid: bltb81614d35dc5e246
 ---
 
 # How SSO works with Contentstack

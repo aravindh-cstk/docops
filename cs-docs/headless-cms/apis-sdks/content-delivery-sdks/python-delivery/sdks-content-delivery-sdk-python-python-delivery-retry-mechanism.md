@@ -2,6 +2,7 @@
 title: "Python Delivery Retry Mechanism"
 description: "Configure retry strategy in the Contentstack Python SDK to handle timeouts and 429s with exponential backoff, status codes, and method control for reliable API calls."
 url: /developers/sdks/content-delivery-sdk/python/python-delivery-retry-mechanism
+uid: blt4c7b6e07189af1fc
 ---
 
 # Python Delivery Retry Mechanism

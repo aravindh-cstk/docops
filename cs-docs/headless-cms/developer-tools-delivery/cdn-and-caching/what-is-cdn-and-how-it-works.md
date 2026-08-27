@@ -2,6 +2,7 @@
 title: "What Is CDN and How It Works"
 description: "A content delivery network (CDN) is a set of servers scattered across the planet. Deliver content to your users faster with Contentstack's CDN-enabled CMS!"
 url: /headless-cms/what-is-cdn-and-how-it-works
+uid: blt29eaeb6ba3bd2674
 ---
 
 # What Is CDN and How It Works

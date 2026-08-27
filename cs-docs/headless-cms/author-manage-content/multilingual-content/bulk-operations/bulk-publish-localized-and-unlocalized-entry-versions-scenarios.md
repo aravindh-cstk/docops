@@ -2,6 +2,7 @@
 title: "Bulk Publish Localized and Unlocalized Entry Versions Scenarios"
 description: "Bulk Publish Localized and Unlocalized Entry Versions Scenarios"
 url: /headless-cms/bulk-publish-localized-and-unlocalized-entry-versions-scenarios
+uid: blt9a4957ab941b4691
 ---
 
 # Bulk Publish Localized and Unlocalized Entry Versions Scenarios
@@ -57,6 +58,6 @@ Now, if you select languages English (United States), Spanish (Spain), and Japan
 -   The latest entry version present in English (United States)
 -   The latest entry version present in Spanish (Spain) \[with content inherited from the master language\]
 -   The latest localized entry version present in Japanese (Japan) \[independent copy\]  
-    
+
 
 Here, since the entry present in Japanese (Japan) is the child entry of the entry present in Spanish (Spain) \[parent entry\], the localized independent copy of the child entry is also available for publishing.

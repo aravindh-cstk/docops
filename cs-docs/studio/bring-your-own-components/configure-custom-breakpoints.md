@@ -2,6 +2,7 @@
 title: "Configure Custom Breakpoints"
 description: "Learn how to register and configure responsive breakpoints in Contentstack Studio so authors can design and preview layouts across multiple viewport sizes."
 url: /studio/configure-custom-breakpoints
+uid: blte0f74dfb5cb2800b
 ---
 
 # Configure Custom Breakpoints

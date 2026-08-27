@@ -2,6 +2,7 @@
 title: "Freeform Templates"
 description: "Learn how to create and configure Freeform templates in Contentstack Studio for one-off layouts that pull data via Pinned Entries and Pinned Queries."
 url: /studio/freeform-templates
+uid: blt6a9009545c994fb3
 ---
 
 # Freeform Templates

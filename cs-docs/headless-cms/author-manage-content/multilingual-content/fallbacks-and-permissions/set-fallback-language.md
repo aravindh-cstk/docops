@@ -2,6 +2,7 @@
 title: "Set Fallback Language"
 description: "Fallback language is the parent language from which any given language inherits data. Update the fallback language in your stack using Contentstack."
 url: /headless-cms/set-fallback-language
+uid: bltd447fec43539c336
 ---
 
 # Set Fallback Language

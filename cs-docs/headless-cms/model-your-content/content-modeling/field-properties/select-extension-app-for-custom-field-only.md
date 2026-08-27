@@ -2,6 +2,7 @@
 title: "Select Extension/App (for Custom Field only)"
 description: "Extension/App for Custom Fields."
 url: /headless-cms/select-extension-app-for-custom-field-only
+uid: blt4709f92bad2ee219
 ---
 
 # Select Extension/App (for Custom Field only)

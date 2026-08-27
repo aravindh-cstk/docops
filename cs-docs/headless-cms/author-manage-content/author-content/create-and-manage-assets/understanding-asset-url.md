@@ -2,6 +2,7 @@
 title: "Understanding Asset URL"
 description: "Learn about Contentstack asset URLs, their structure, components, and how to create permanent URLs for consistent asset referencing."
 url: /headless-cms/understanding-asset-url
+uid: blt1c6fc82c1035281b
 ---
 
 # Understanding Asset URL

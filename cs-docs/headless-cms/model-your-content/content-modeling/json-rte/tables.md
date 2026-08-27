@@ -2,6 +2,7 @@
 title: "Tables"
 description: "Learn how to work with tables in Contentstack’s JSON RTE. Render, style, and optimize tabular data for your frontend applications."
 url: /headless-cms/tables
+uid: bltdf4f8e38d91fba1b
 ---
 
 # Tables

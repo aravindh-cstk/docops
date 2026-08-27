@@ -2,6 +2,7 @@
 title: "Save Your Views"
 description: "Learn how to save and customize your search views in Contentstack for easy access, personalized settings, and efficient content management."
 url: /headless-cms/save-your-views
+uid: blt288d88917032feac
 ---
 
 # Save Your Views

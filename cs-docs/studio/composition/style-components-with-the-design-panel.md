@@ -2,6 +2,7 @@
 title: "Style Components with the Design Panel"
 description: "Learn how to use the Design Panel in Contentstack Studio to apply styles (colors, spacing, typography, borders, shadows, layout, and visibility) to components."
 url: /studio/style-components-with-the-design-panel
+uid: blt689c2a49e01b57ff
 ---
 
 # Style Components with the Design Panel

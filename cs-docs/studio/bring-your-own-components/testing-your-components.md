@@ -2,6 +2,7 @@
 title: "Testing Your Components"
 description: "How to test registered Studio components by verifying palette drop, right-panel form controls, and CMS bindings using a structured workflow."
 url: /studio/testing-your-components
+uid: blt88bb01daec5b6019
 ---
 
 # Testing Your Components

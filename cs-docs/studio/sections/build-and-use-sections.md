@@ -2,6 +2,7 @@
 title: "Build and Use Sections"
 description: "Learn how to build reusable Studio sections, bind them to CMS data using linked schema and drop-location auto-binding, and expose section props so template authors can override values without forking."
 url: /studio/build-and-use-sections
+uid: bltc66acb79def639e0
 ---
 
 # Build and Use Sections

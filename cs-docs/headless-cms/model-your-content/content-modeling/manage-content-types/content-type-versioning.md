@@ -2,6 +2,7 @@
 title: "Content Type Versioning"
 description: "Learn how to compare and track changes in Contentstack content type versions."
 url: /headless-cms/content-type-versioning
+uid: blt14f1f3c1a3269d8d
 ---
 
 # Content Type Versioning
@@ -25,9 +26,9 @@ To compare two versions of a content type, log in to your [Contentstack account]
 5.  The editor does not show the current version; you can only see this in the Compare Versions screen.
 6.  Rearranging the order of fields is not considered a schema change and does not appear in comparisons.
 7.  Once a content type has multiple versions, a **Compare Versions** button appears in the header. Click it to open the comparison screen.
-    
+
     ![Compare_Versions_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltecf4df3479574d60/68dc33e443e5729dff05d607/Compare_Versions_Button.png)
-    
+
 
 The comparison screen shows the differences between any two saved versions of the content type.
 

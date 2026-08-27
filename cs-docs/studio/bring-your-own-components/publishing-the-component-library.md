@@ -2,6 +2,7 @@
 title: "Publishing the Component Library"
 description: "Learn three patterns for sharing a Studio component library across multiple projects, including npm packages, monorepo workspaces, and versioning strategies."
 url: /studio/publishing-the-component-library
+uid: blt9d9b9f3a7248b9cd
 ---
 
 # Publishing the Component Library

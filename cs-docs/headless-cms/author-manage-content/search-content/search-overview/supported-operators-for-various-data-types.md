@@ -2,6 +2,7 @@
 title: "Supported Operators for Various Data Types"
 description: "Explore supported operators for various data types in Contentstack to refine your searches and get precise results."
 url: /headless-cms/supported-operators-for-various-data-types
+uid: bltdc1ccfa0c0ef5d5a
 ---
 
 # Supported Operators for Various Data Types

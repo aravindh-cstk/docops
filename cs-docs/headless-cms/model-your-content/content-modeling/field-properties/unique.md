@@ -2,6 +2,7 @@
 title: "Unique"
 description: "Learn how the Unique property ensures data integrity by preventing duplicate field values in Contentstack entries."
 url: /headless-cms/unique
+uid: blte5c2a4ef99d75ac7
 ---
 
 # Unique

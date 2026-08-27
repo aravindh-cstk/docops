@@ -2,6 +2,7 @@
 title: "Get Started with JavaScript Utils Library"
 description: "Learn how to install and use the Contentstack JavaScript Utils SDK to render embedded items, convert HTML/JSON RTE content, and simplify front-end integration."
 url: /developers/sdks/utils-sdk/javascript/get-started-with-javascript-utils-library
+uid: blt26c5eb3e21d8f819
 ---
 
 # Get Started with JavaScript Utils Library

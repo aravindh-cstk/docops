@@ -2,6 +2,7 @@
 title: "BigCommerce Trigger"
 description: "Use the BigCommerce trigger to invoke BigCommerce related events via Automation Hub."
 url: /agent-os/bigcommerce-trigger
+uid: bltbff483baa7a9bb3d
 ---
 
 # BigCommerce Trigger
@@ -26,16 +27,16 @@ Perform the following steps to configure the BigCommerce trigger:
 4.  In the **Configure Trigger** tab, click **\+ Add New Account** to add your BigCommerce account.  
     ![Add_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcc6f7cd5d0fc1e0d/65c1c5ee68e9235793e56d20/Add_Account.png)
 5.  In the **Authorize** pop-up window, provide the **Store** **Hash** and **Access** **Token**.
-    
+
     To generate Store Hash and Access Token, log into your BigCommerce dashboard and perform the following steps:
-    
+
     1.  Click the **Advanced** **Settings** tab in the navigation and select **API** **Accounts**.
     2.  Under the “API Accounts” section, click **\+ Create API Account**.
     3.  Provide a **Name** and set the OAuth scopes. Once done, click **Save**.
     4.  Copy the “Store Hash” and “Access Token” to your clipboard for future use.
-    
+
     **Additional Resource:** For more information, refer to the [Store API Accounts](https://support.bigcommerce.com/s/article/Store-API-Accounts?language=en_US) document.
-    
+
 6.  Once done, click **Authorize**.  
     ![Authorize.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf4f45b1865a1e172/65c1c5ee815b232e7dbb36ab/Authorize.png)
 7.  **Select an Event** from the dropdown.

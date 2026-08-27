@@ -2,6 +2,7 @@
 title: "Choosing Your Studio Setup Path"
 description: "Compare the Enterprise and Quickstart setup paths in Contentstack Studio to choose the right starting point for your project or evaluation."
 url: /studio/choosing-your-studio-setup-path
+uid: blt80d3f8dc34928c4d
 ---
 
 # Choosing Your Studio Setup Path
