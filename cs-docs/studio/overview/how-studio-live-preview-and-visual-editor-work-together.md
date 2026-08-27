@@ -2,6 +2,7 @@
 title: "How Studio, Live Preview, and Visual Editor Work Together"
 description: "Learn how Live Preview, Visual Editor, and Studio relate — one rendering layer with two editing modes, split by structure versus content."
 url: /studio/how-studio-live-preview-and-visual-editor-work-together
+uid: blt6b8e8f5a00c2e0a9
 ---
 
 # How Studio, Live Preview, and Visual Editor Work Together
