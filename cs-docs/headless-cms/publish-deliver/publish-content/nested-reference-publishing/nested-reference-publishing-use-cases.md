@@ -2,6 +2,7 @@
 title: "Nested Reference Publishing Use Cases"
 description: "Effortlessly publish nested references and explore use cases with Nested Reference Publishing."
 url: /headless-cms/nested-reference-publishing-use-cases
+uid: blt9eff30def71c6465
 ---
 
 # Nested Reference Publishing Use Cases

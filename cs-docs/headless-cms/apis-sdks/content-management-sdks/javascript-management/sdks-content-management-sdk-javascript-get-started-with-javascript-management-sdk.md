@@ -2,6 +2,7 @@
 title: "Get Started with JavaScript Management SDK"
 description: "Getting Started with JavaScript Management SDK"
 url: /developers/sdks/content-management-sdk/javascript/get-started-with-javascript-management-sdk
+uid: blt0c62b21232e81510
 ---
 
 # Get Started with JavaScript Management SDK
@@ -25,38 +26,38 @@ npm i @contentstack/management
 To import the SDK, use one of the following ways:
 
 1.  **JavaScript ES Modules**
-    
+
     This method provides access to the client function via the default export. It requires "type": "module" in package.json to support ES module usage.
-    
+
     ```
     import contentstack from '@contentstack/management';
     ```
-    
+
 2.  **TypeScript with esModuleInterop**
-    
+
     This method provides access to the client function via the default export. Requires "type": "module" in package.json and "esModuleInterop": true in tsconfig.json.
-    
+
     ```
     import contentstack from '@contentstack/management';
     ```
-    
+
 3.  **TypeScript Namespace Import**
-    
+
     This method functions correctly, regardless of the "esModuleInterop" setting in tsconfig.json, ensuring broad compatibility across module configurations.
-    
+
     ```
     import * as contentstack from '@contentstack/management';
     ```
-    
+
 4.  **TypeScript Destructuring**
-    
+
     Accesses the client function through the default export, enabling streamlined integration in ES module environments.
-    
+
     ```
     import contentstack from '@contentstack/management';
     const { client } = contentstack;
     ```
-    
+
 
 ## Authentication
 

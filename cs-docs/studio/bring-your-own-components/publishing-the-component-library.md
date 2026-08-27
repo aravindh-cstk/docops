@@ -2,6 +2,7 @@
 title: "Publishing the Component Library"
 description: "Learn three patterns for sharing a Studio component library across multiple projects, including npm packages, monorepo workspaces, and versioning strategies."
 url: /studio/publishing-the-component-library
+uid: blt9d9b9f3a7248b9cd
 ---
 
 # Publishing the Component Library
@@ -16,7 +17,7 @@ Three patterns for sharing a library, in order of investment.
 
 Publish your component library as an npm package that includes both the React components **and** the Studio registration calls.
 
-![@yourorg/studio-components npm package layout — package.json, src with index.ts, studio.ts and a components folder, plus a built dist directory](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am83034c7740483b33/99e097d9f03525d1773d5c78/byo-publish-npm-package-layout.png)
+![@yourorg/studio-components npm package layout — package.json, src with index.ts, studio.ts and a components folder, plus a built dist directory](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am1a8ab6f74c26ff3b/123a039de24700898a8eb3ca/byo-publish-npm-package-layout.svg)
 
 The package exports a single registerStudioComponents() function:
 
@@ -60,7 +61,7 @@ The pattern most enterprise teams converge on.
 
 For monorepos where everything lives in one repo, a workspace package serves the same purpose without publishing to npm:
 
-![Monorepo with a shared packages/studio-components library consumed by site-marketing and site-docs via workspace dependencies](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amfdd7f3a7873e5ab3/040a3d7e5da199dd662af843/byo-publish-monorepo-layout.png)
+![Monorepo with a shared packages/studio-components library consumed by site-marketing and site-docs via workspace dependencies](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am789c299876bcdec7/a9835de6d6d5f902e83c871f/byo-publish-monorepo-layout.svg)
 
 pnpm, yarn workspaces, npm workspaces, Turborepo, Nx: any monorepo tool works. The component package exports the same registerStudioComponents() function; consumer sites import it.
 
@@ -95,7 +96,7 @@ Consider tiers when your library grows beyond ~30 components or when initial loa
 
 For large libraries, consider a tier split:
 
-![Tier-split component library — core (always-eager, small), layouts (eager, medium), advanced (always-lazy, heavy)](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am2f8bfe26204e2e1a/3ae91ecf038077b26c5ee2c4/byo-publish-tier-split.png)
+![Tier-split component library — core (always-eager, small), layouts (eager, medium), advanced (always-lazy, heavy)](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/ameb5a99ab6ed045b6/f7c97af29838699ff72b4593/byo-publish-tier-split.svg)
 
 Export them as separate sub-packages or separate registerStudioComponents\*() functions:
 
@@ -155,5 +156,5 @@ studioSdk.init always lives in the consuming site; the stack credentials are dif
 The chapter ends here. Likely next stops:
 
 -   [Setup: Layer 1 install](/docs/studio/setup-overview) if you haven't installed the SDKs yet in your library's consumer sites
--   [Composition: Templates](/docs/studio/using-sections-and-components-in-a-template) for how authors use your registered components
+-   Composition: Templates for how authors use your registered components
 -   [Recipes](/docs/studio/enterprise-setup-from-install-to-first-authored-page): an end-to-end recipe that puts everything together

@@ -2,6 +2,7 @@
 title: "HTML RTE vs JSON RTE"
 description: "Compare HTML RTE and JSON RTE in Contentstack to choose between flexible structured storage or traditional HTML-based content editing."
 url: /headless-cms/html-rte-vs-json-rte
+uid: blt6e84ba3ad0295b41
 ---
 
 # HTML RTE vs JSON RTE

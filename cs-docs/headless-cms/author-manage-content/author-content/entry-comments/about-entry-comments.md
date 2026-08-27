@@ -2,6 +2,7 @@
 title: "About Entry Comments"
 description: "Learn how to streamline collaboration by enabling users to add comments, tag teammates, and discuss directly within entry fields."
 url: /headless-cms/about-entry-comments
+uid: blt8e6d63df5bc72fb3
 ---
 
 # About Entry Comments
@@ -16,9 +17,9 @@ Contentstack’s “Comments” feature allows you to add comments to fields in 
 -   **Contextual Feedback**: Ensures comments are tied to specific content areas, providing clarity.
 -   **User Mentions**: Allows tagging teammates or roles using "@" to involve them in discussions.
 -   **Integration with Localization**: Each [localized version](/docs/headless-cms/manage-versions-of-localized-entries) of an entry can host separate discussions pertinent to its content.
-    
+
     **Note:** The Entry Comments feature is not available for unlocalized entries or older entry versions.
-    
+
 
 ## **Role-based Advantages**
 

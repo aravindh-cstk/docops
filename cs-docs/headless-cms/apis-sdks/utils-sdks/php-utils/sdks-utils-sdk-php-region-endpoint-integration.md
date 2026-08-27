@@ -2,6 +2,7 @@
 title: "PHP Utils - Configure Region Endpoints in PHP Utils SDK"
 description: "Configure region endpoints dynamically using the Contentstack PHP Utils SDK. A PHP developer guide to dynamic resolution without hardcoding URLs."
 url: /developers/sdks/utils-sdk/php/region-endpoint-integration
+uid: blt76e0ef41bc8e591e
 ---
 
 # PHP Utils - Configure Region Endpoints in PHP Utils SDK

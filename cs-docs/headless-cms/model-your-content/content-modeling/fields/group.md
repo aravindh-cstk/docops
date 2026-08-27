@@ -2,6 +2,7 @@
 title: "Group"
 description: "Combine fields into reusable groups in Contentstack to streamline content modeling and real-world use cases."
 url: /headless-cms/group
+uid: blt638da471650adb46
 ---
 
 # Group
@@ -103,9 +104,9 @@ To copy and paste field values across group fields, log in to your [Contentstack
 
 1.  In the **Group** field, select the instance, click the vertical ellipsis, and select **Copy Field Values**.
 2.  In the target entry or instance, click the vertical ellipsis again and select **Paste Field Values**.
-    
+
     **Note:** The target instance must match the same instance’s name and structure as the source.
-    
+
     ![Copy_Field_Values_Across_Groups.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt282f6230c7de7a53/68dc1d42b01de95c53a00723/Copy_Field_Values_Across_Groups.gif)
 
 **Additional Resources:**

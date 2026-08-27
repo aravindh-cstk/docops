@@ -2,6 +2,7 @@
 title: "Workflows Limitations"
 description: "Limitations of workflows"
 url: /headless-cms/workflows-limitations
+uid: blt2f8178a5ac2c7736
 ---
 
 # Workflows Limitations

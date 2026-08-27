@@ -2,6 +2,7 @@
 title: "Enable SAML Encryption"
 description: "Enable SAML Encryption"
 url: /administration/enable-saml-encryption
+uid: blt3d7947f731c26e8d
 ---
 
 # Enable SAML Encryption
@@ -23,9 +24,9 @@ An IdP stores specific SAML attributes that help validate users during logins. A
 ## What You Will Learn
 
 -   How to enable encryption for SAML attributes in Contentstack.
-    
+
 -   How to download the Contentstack public certificate for SAML encryption.
-    
+
 
 ## Enabling encryption for SAML attributes in Contentstack
 
@@ -34,9 +35,9 @@ Once you enable the encryption, the IdP will encrypt the SAML attributes using t
 To enable SAML encryption, perform the following steps:
 
 1.  Log in to your [Contentstack account](https://app.contentstack.com/#!/login), go to the [Organization Settings](/docs/administration/organization-settings-overview) page, and click on the **Single Sign-On** tab. ![SSO.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8ec8db6a88618de0/6241b47f79348e75f916206b/SSO.png)
-    
+
     **Note:** Only the owner of an organization can set up SSO.
-    
+
 2.  Click on the **2\. IdP Configuration** tab. ![IdP_Config.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt098ad58147de6967/6241b47f7239af5fef4137d1/IdP_Config.png)
 3.  Check the **Enable SAML Encryption** checkbox, and click on **Save**. ![Enable_SAML.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt137da74f9d600ad8/6241b47f13968918d3ddd10e/Enable_SAML.png)
 

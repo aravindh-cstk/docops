@@ -2,6 +2,7 @@
 title: "Salesforce Commerce Cloud"
 description: "Use this connector to fetch product details stored in your Salesforce Commerce Cloud platform."
 url: /agent-os/salesforce-commerce-cloud
+uid: blt59282fedcbd5b634
 ---
 
 # Salesforce Commerce Cloud
@@ -18,7 +19,7 @@ Perform the following steps to set up the Salesforce Commerce Cloud action conne
 
 1.  Within the **Configure Action Step**, click the **Salesforce Commerce Cloud** connector.  
     ![Salesforce_commerce_cloud.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2e7f898bee81587e/6527f8d6a0980fec28edeada/Salesforce_commerce_cloud.png)  
-    
+
 2.  Under **Choose an Action** tab, select the **Get Product Details** action.  
     ![Select_the_get_product_Details_Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6952fe6eb70812c3/64e5dded0818cce6cc16117c/Select_the-Action.png)
 3.  In the **Configure Action** tab, click **\+ Add New Account** to add your Salesforce Commerce Cloud account.  
@@ -30,18 +31,18 @@ Perform the following steps to set up the Salesforce Commerce Cloud action conne
     3.  To generate the **Client ID** and **Client Secret**, refer to our [Salesforce Commerce](/docs/marketplace/salesforce-commerce#retrieve-your-client-credentials-from-salesforce-commerce) documentation.
 5.  Once done, click **Authorize**.  
     ![Click_the_Authorize_Button](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltee66cc9e7d6c86ce/64e5ddec66f1ff32902f4ed7/Click_the_Authorize_button.png)
-    
+
     **Note:** Contentstack Marketplace offers a [Salesforce Commerce](/docs/marketplace/salesforce-commerce) app for its users, so they can fetch the products into their Contentstack CMS entry. With the Salesforce Commerce Cloud connector, you can fetch the product details from your Salesforce Commerce Cloud account and use it within your entry.
-    
+
 6.  Select the **Product Category** based on your preferred site to fetch the product details.
 7.  Select the **Product ID** to fetch the product details.  
     ![Select_Different_Fields](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc1e3c9247e5107c3/64e5ddec37cf46271213c2fd/Select_Different_Fields.png)
 8.  Enable the **Show optional fields** toggle button to display the **Product Parameter(s)** field to fetch specific details of a product. Click the checkboxes to fetch the image model and the price details of the product.  
-      
+
     The first checkbox will fetch the _Image Model_ for the product, i.e. the entire collection of the images for that product along with the details and the second checkbox will fetch the price for each product based on the price book.  
-    
+
     **Note:** You can enter only predefined values in the Product Parameter(s) field. Refer to the [Reference](https://developer.salesforce.com/docs/commerce/commerce-api/references/shopper-products?meta=getProduct) document to learn more.
-    
+
     ![Salesforce_SHow_optional_Field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8a057aa5871f7d00/64f827e1dc21171643c2f070/Salesforce_SHow_optional_Field.png)
 9.  Click the **Proceed** button.
 10.  To execute and test the configured action, click the **Test Action** button.  

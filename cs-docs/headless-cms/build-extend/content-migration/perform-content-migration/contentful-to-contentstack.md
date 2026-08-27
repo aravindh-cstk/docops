@@ -2,6 +2,7 @@
 title: "Contentful to Contentstack"
 description: "Effortlessly migrate content to Contentstack with our intuitive framework. Enjoy seamless data transfer from legacy CMS to your stack. Start today!"
 url: /headless-cms/contentful-to-contentstack
+uid: blt82f6f3f330376fa9
 ---
 
 # Contentful to Contentstack
@@ -47,17 +48,17 @@ Follow these steps to perform the content migration for Contentful:
 
 1.  By default Contentful will be selected as your legacy CMS.
 2.  Add a **2–5 character affix** for the source name. Use only letters, no numbers or special characters. Make sure the affix does not match with one of the [restricted keywords](/docs/headless-cms/restricted-keywords-for-uids).![C2C_5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt702a5dab25e93d73/681ca3f62ac67c7ac366b5f7/C2C_5.png)
-    
+
     **Note:** The affix will function as a prefix if the content type UID matches with restricted UIDs. The affix will function as a suffix for field UIDs.
-    
+
 3.  Click **Validate File** to validate the exported content.![C2C-6.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2bbd6a8aea79e038/681ca3e6a50a9db459188b0c/C2C-6.gif)
-    
+
     **Note:** If validation fails, it may be caused by one or more of the following issues:
-    
+
     -   **File Format Error**: Ensure the file is in the desired format.
     -   **Missing Content**: Ensure the exported data contains all required content.
     -   **Incomplete Files**: Verify that no files are missing or corrupted.
-    
+
 4.  Click **Save and Continue**.
 
 ### Step 5 - Configure Destination Stack
@@ -121,9 +122,9 @@ Use the following advanced options to efficiently manage your mappings:
 -   **Reset to system mapping**: Click the ‘Reset to system mapping’ icon to revert any changes done to the default mappings.
 -   **Select content type from destination stack**: Override the default behavior of creating new content types.
 -   **Fetch content types from destination stack**: If updates are made in the stack during migration, click the icon to fetch changes.
-    
+
     **Note:** If the user has created a new stack in [Step 5](/docs/headless-cms/contentful-to-contentstack#step-5-configure-destination-stack), they will not see the ‘Fetch content types from destination stack’ icon and the ‘Select Content Type from Destination Stack’ dropdown. However, if an existing stack was selected, the icons will be available.
-    
+
 -   **Advanced properties**: Click the ‘Advanced properties’ icon next to each field to adjust field specific properties.
 
 ![C2C-12.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6dba7a71179b1eb0/681ca3e8b7c4fcb59469bf3d/C2C-12.gif)
@@ -138,9 +139,9 @@ Click **Continue**.
 2.  Click **Start Test Migration** to perform a test migration.  
     ![C2C_13.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdcfd5fec934cca35/681ca3e57a319668cf3e3330/C2C_13.png)
 3.  A success or error message will be displayed in the logs after completion.![C2C_14.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5ef05654cbc5c993/681ca3e566b9766306eb33f7/C2C_14.png)
-    
+
     **Note:** Test migration performs the migration on a small chunk of data to validate success.
-    
+
 4.  Click **Continue**.
 
 ### Step 8 - Execute the Migration

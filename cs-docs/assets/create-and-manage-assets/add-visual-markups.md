@@ -2,6 +2,7 @@
 title: "Add Visual Markups"
 description: "Transform static images into interactive experiences with Visual Markup. Highlight, add info, or create shoppable images in Contentstack Assets."
 url: /assets/add-visual-markups
+uid: blt3c78b5a914518dfd
 ---
 
 # Add Visual Markups
@@ -76,9 +77,9 @@ You can edit a markup to make it interactive and meaningful by performing the fo
     -   **URL**: Link to related content or a product page (e.g., https://www.ecommerce.com/buy/monitor).
     -   **Position** (X, Y): Adjust coordinates for precise placement.
     -   **Dimensions** (W, H): Resize bounding boxes by entering numeric values or dragging the edges.
-        
+
         **Note:** Dimensions are applicable only for bounding boxes.
-        
+
 3.  Click **Save Hotspot** or **Save Bounding Box**.
 
 ## Manage Markup

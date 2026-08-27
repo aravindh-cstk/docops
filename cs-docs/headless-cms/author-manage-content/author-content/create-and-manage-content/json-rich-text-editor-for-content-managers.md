@@ -2,6 +2,7 @@
 title: "JSON Rich Text Editor for Content Managers"
 description: "JSON RTE for Content Managers"
 url: /headless-cms/json-rich-text-editor-for-content-managers
+uid: blt93d66cc241f6a70f
 ---
 
 # JSON Rich Text Editor for Content Managers
