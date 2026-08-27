@@ -152,7 +152,7 @@ export function MarketingBandClient({ specOptions }) {
 The composable\_uid is Studio's slug for the composition (kebab-case derived from the display name, editable on creation). Authors can find it three ways:
 
 1.  **Composition list:** Studio → Templates → look at the row's second column (composable\_uid).
-2.  **URL:** the canvas URL contains /canvas/<entry\_uid> ��� not the composable\_uid — but the composition's metadata pane (right rail → Settings) shows the composable\_uid.
+2.  **URL:** the canvas URL contains /canvas/<entry\_uid> — not the composable\_uid — but the composition's metadata pane (right rail → Settings) shows the composable\_uid.
 3.  **Convention:** for embedded bands, pick a stable kebab-case name when creating the composition (pdp\_marketing\_band, home\_promo\_strip). The dev who writes the embed code uses that same name. Don't rename the composition after embedding — the embed code is hard-coded to the slug.
 
 For larger teams: keep a STUDIO\_EMBEDS.md in the repo listing every composable\_uid you embed and which page renders it, so the marketer and the developer share a contract.

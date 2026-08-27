@@ -85,7 +85,7 @@ Let's follow the step-by-step guide to install and configure the Healthcheck app
         ![Healthcheck-Failed](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcd6a8a2f01f9e48b/69370ebabed167420d0f8497/Healthcheck-Failed.png)
     5.  After the app finishes examining your stack, on the selected entities, it displays a comprehensive dashboard of its overall health.![Healthcheck-Full-Page-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt83adbb60b6a83f80/69d4e9e6e94b487f735ef8f6/Healthcheck-Full-Page-App.png)
 
-        The dashboard displays a summary of your stack��s health, including the number of actions required, opportunities, and strengths, along with a bar graph. It shows the total number of checks performed and skipped, represented in a pie chart. It also renders a list of unused platform applications like Launch, Personalize etc.
+        The dashboard displays a summary of your stack’s health, including the number of actions required, opportunities, and strengths, along with a bar graph. It shows the total number of checks performed and skipped, represented in a pie chart. It also renders a list of unused platform applications like Launch, Personalize etc.
 
         **Note:** If the Healthcheck app is not updated to the latest version, the app displays the current running version and instructs you to update to the latest version to access full functionality.
 
