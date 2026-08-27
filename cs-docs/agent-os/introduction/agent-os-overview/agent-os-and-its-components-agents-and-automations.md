@@ -2,6 +2,7 @@
 title: "Agent OS and Its Components: Agents and Automations"
 description: "Learn how Agent OS, Agents, and Automations work together in Contentstack to deliver intelligent, reusable workflows."
 url: /agent-os/agent-os-and-its-components-agents-and-automations
+uid: blt697418ebf2b9bd80
 ---
 
 # Agent OS and Its Components: Agents and Automations

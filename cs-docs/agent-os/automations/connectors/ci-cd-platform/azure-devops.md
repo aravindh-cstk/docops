@@ -2,6 +2,7 @@
 title: "Azure DevOps"
 description: "Use the Azure DevOps connector to automate the CI/CD workflow."
 url: /agent-os/azure-devops
+uid: bltd2221b3f1f240728
 ---
 
 # Azure DevOps
@@ -15,9 +16,9 @@ The [Azure DevOps](https://azure.microsoft.com/en-in/products/devops/) connector
 1.  Click **Configure Action Step** from the left navigation panel.
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **Azure DevOps** connector.  
-    
+
     **Note:** You can sort and search the connector(s) based on the filter.
-    
+
     ![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfc277612dfeda6de/65c1cf4965d14385837d632c/Select_Connector.png)
 4.  Under **Choose an Action** tab, select the **Run a Pipeline** action.  
     ![Select_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta1dc28ec0ec2d985/65c1cf49c25864de0608aea4/Select_Action.png)
