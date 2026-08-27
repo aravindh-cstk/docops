@@ -2,6 +2,7 @@
 title: "Add Languages to a Workspace"
 description: "Discover how to manage language settings in Contentstack, enabling targeted asset localization across workspaces for efficient, clutter-free campaigns."
 url: /assets/add-languages-to-a-workspace
+uid: blt6428e0ea28863fe8
 ---
 
 # Add Languages to a Workspace
@@ -23,9 +24,9 @@ To add languages to a workspace, log in to your [Contentstack account](https://w
 5.  Select **Manage Workspace Languages**. The **Manage Workspace Languages** modal displays the languages currently enabled for the workspace.
 6.  Click **\+ Add Language**.
 7.  Select one or more languages from the list of available languages. Each language displays its configured fallback language.
-    
+
     **Note:** The default language remains locked and cannot be removed.
-    
+
 8.  Click **Apply** to confirm the selection.
 9.  Click **Save Changes** to add the selected languages to the workspace.
 

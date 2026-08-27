@@ -2,6 +2,7 @@
 title: "Restore an Asset or Folder"
 description: "Learn how to restore a deleted asset or folder from Trash in Contentstack, including how parent folders affect restoration."
 url: /assets/restore-an-asset-or-folder
+uid: blt844d509568c686ec
 ---
 
 # Restore an Asset or Folder
@@ -23,9 +24,9 @@ To restore an asset, sign in to your [Contentstack account](https://www.content
 3.  To narrow the list, use the filters in the left panel for **Deleted By** or **Type**, and use the date range at the top to view assets deleted in a specific window. The listing shows only assets deleted within the selected range.
 4.  Click the vertical ellipsis (⋮) to open the actions menu.
 5.  Click **Restore**.  
-    
+
     **Note:** If you cannot click Restore for an asset, the asset's parent folder is also in trash. Restore the parent folder first using the steps in [Restore a Folder](/docs/assets/restore-an-asset-or-folder#restore-a-folder), then return to the asset's row and click Restore.
-    
+
 
 Contentstack returns the asset to the assets listing.
 
