@@ -17,7 +17,7 @@ Let’s dive deep into how the “Blog Listing Page” content model will help y
 
     The “Blog Listing Page” content model includes three main sections:
 
-    1.  The ��Blog” hero banner
+    1.  The “Blog” hero banner
     2.  The main “Blog Listing” page that includes blog references with their titles, small description, date of publish, and the respective author names
     3.  The “Archived blogs” section on the right
 
