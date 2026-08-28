@@ -53,7 +53,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   ├── tests/
 │   │   ├── app-flow.spec.ts
 │   │   └── org-app-flow.spec.ts
-│   ���── types.ts
+│   ├── types.ts
 │   └── utils/
 │       └── helper.ts
 │
