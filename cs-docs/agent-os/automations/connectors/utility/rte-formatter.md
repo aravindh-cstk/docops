@@ -2,6 +2,7 @@
 title: "RTE Formatter"
 description: "RTE Formatter"
 url: /agent-os/rte-formatter
+uid: bltf73d7522f0f4593a
 ---
 
 # RTE Formatter
@@ -29,9 +30,9 @@ This action lets you convert the content within the JSON RTE into HTML format. Y
 1.  Click **Configure Action Step** from the left navigation panel.
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **RTE Formatter** connector.
-    
+
     **Note:** You can sort and search the connector(s) based on the filter.
-    
+
     ![Select_Connector](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4fe903bef6bfb357/65df01367c852613b4234940/Select_Connector.png)
 4.  Under **Choose an Action** tab, select the **Format JSON RTE Content to HTML** action.![Select_Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt661abea5fbaf4eeb/65df013672b387848c22b783/Select_Action.png)
 5.  Click the **\+ Add JSON RTE Content** button to select the JSON RTE content you want to convert.  
@@ -57,9 +58,9 @@ This action lets you convert the HTML RTE content into JSON.
 
 1.  Select the **Format HTML RTE Content to JSON** action.![Select_Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6e255fc28d3d1b8d/65df007f3e2d0e0e4bf714cc/Select_Action.png)
 2.  Select the **HTML RTE Content** you want to convert.![Select_Content](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt53562de9fc32826e/65df007fee3a131714c8ecaa/Select_Content.png)
-    
+
     **Note:** Provide the content in HTML format.
-    
+
 3.  Click **Proceed**.
 4.  Click **Test Action** to test the configured action.![Test_Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt21ad8e3d30d8bbf6/65df013631aca173477eee7e/Test_Action.png)
 5.  The content will appear in JSON format. Click **Save and Exit**.![Save_Exit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltde8b40a946380636/65df00802568eff9f66cb3fa/Save_Exit.png)

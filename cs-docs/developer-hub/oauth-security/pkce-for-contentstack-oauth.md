@@ -2,6 +2,7 @@
 title: "PKCE for Contentstack OAuth"
 description: "PKCE for Contentstack OAuth"
 url: /developer-hub/pkce-for-contentstack-oauth
+uid: blt0a288fe78eadf00e
 ---
 
 # PKCE for Contentstack OAuth
@@ -20,22 +21,22 @@ In PKCE flow, the calling application creates a secret key that the authorizatio
 ## What You Will Learn
 
 -   How PKCE secures the OAuth 2.0 authorization flow.
-    
+
 -   How the code verifier and code challenge work.
-    
+
 -   How the PKCE authorization, token, and refresh requests differ from the standard flow.
-    
+
 -   How to enable PKCE for your app in Developer Hub.
-    
+
 
 ## Working of PKCE
 
 1.  PKCE makes use of a unique string code\_verifier making client\_secret an optional parameter.
-    
+
 2.  In the authorization request, the unique string code\_challenge\_method is used to derive the code\_challenge parameter. The code\_challenge\_method can be either plain or S256.
-    
+
 3.  The code\_challenge\_method is optional. If it is not mentioned in the request, the system takes plain as the default method.
-    
+
 
 ## PKCE Flow
 
@@ -47,11 +48,11 @@ Some modifications for the PKCE authorization flow are as follows:
 2.  ```
     {BASE_URL}/#!/apps/{app_uid}/authorize?response_type=code&client_id={client_id}&redirect_uri={redirect_uri}&scope={scope}&state={state}&code_challenge={code_challenge}&code_challenge_method={plain/S256}
     ```
-    
+
 3.  **Note:** The parameter code\_challenge\_method is optional and when not included in the request, the default value plain is considered.
-    
+
 4.  After authorization is granted, the user will exchange this auth code for an access token. The request will be as follows:  
-    
+
     ```
     POST {BASE_URL}/apps-api/apps/token
     Headers:
@@ -63,10 +64,10 @@ Some modifications for the PKCE authorization flow are as follows:
       code:{authorization_code}
       code_verifier:{code_verifier}
     ```
-    
+
     **Note:** \- After enabling PKCE, the client\_secret parameter is optional. If you still provide the parameter for the User Token, then it should also be added for the **Refresh Token**.  
     \- If a user requests re-authorization for the same set or subset of scopes that were once granted, the user is automatically redirected to the redirect URL.
-    
+
 5.  While exchanging the refresh token, the client\_secret parameter is not included in the request. The request will be as follows:
 6.  ```
     POST {BASE_URL}/apps-api/apps/token
@@ -78,7 +79,7 @@ Some modifications for the PKCE authorization flow are as follows:
       redirect_uri:{redirect_uri}
       refresh_token:{refresh_token}
     ```
-    
+
 
 ## Enabling PKCE in Contentstack
 
