@@ -68,7 +68,7 @@ The following table shows what each access level can do across common Lytics CDP
 | Remove a collaborator | ✅ | ✅ | Depends on role |
 | Delete the project | ✅ | ✅ | ❌ |
 | Open the Lytics platform  | ✅ | ✅ | ✅ |
-| Access Contentstack organization settings | Depends on org role | ❌ | ❌ |
+| Access Contentstack organization settings | Depends on org role | ��� | ❌ |
 
 **Note:**
 
