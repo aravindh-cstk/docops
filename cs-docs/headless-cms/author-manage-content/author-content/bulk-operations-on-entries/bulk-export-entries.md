@@ -20,7 +20,7 @@ To bulk export entries, log in to your [Contentstack account](https://www.conten
     1.  **Search**: Use different [search methods](/docs/headless-cms/about-search) (e.g., keyword or full-text) to display matching entries.
     2.  **Filter**: [Apply filters](/docs/headless-cms/use-filters) on the entry list page to narrow down the results.
     3.  **Select**: Manually select specific entries in the list.
-3.  Click the “Export” icon in the top-right corner of the Entries page. If entries are manually selected, click the **Export** option in the floating panel.
+3.  Click the ��Export” icon in the top-right corner of the Entries page. If entries are manually selected, click the **Export** option in the floating panel.
 
     ![Export option in entries page](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3f829c97b0224aa8/68fb66f6f8c18b3e0c488848/1._Export_button.png)
 

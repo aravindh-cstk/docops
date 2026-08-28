@@ -32,7 +32,7 @@ Think of a **section as a compound component built in Studio** — it wraps regi
 
 | Code component surface | Section equivalent | What the template author gets to decide |
 | --- | --- | --- |
-| Props (title, href, tone, …) | [**Exposed Section Props**](/docs/studio/expose-section-props) | Which **values** are overridable per instance |
+| Props (title, href, tone, ��) | [**Exposed Section Props**](/docs/studio/expose-section-props) | Which **values** are overridable per instance |
 | Slot / children props (<Card><Card.Header>…</Card.Header></Card>) | **Section Slots** (this page) | Which **regions** are droppable per instance |
 
 Everything else — the layout containers, the bindings to the linked schema, the internal component wiring — is locked-in section structure. **Exposed Props decide what the template author can _change_; Section Slots decide what they can _drop into_.** Design a section by asking those two questions and picking the right primitive for each.
