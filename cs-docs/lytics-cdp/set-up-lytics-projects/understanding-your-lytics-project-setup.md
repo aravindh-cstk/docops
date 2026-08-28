@@ -2,6 +2,7 @@
 title: "Understanding Your Lytics Project Setup"
 description: "Understand how a Lytics project, JStag, connections, collaborators, roles, and the dashboard depend on each other to make the Lytics App work."
 url: /lytics/understanding-your-lytics-project-setup
+uid: bltabedf7733e2e7379
 ---
 
 # Understanding Your Lytics Project Setup
