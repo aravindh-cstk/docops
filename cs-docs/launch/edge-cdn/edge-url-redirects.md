@@ -105,7 +105,7 @@ This step-by-step guide will help you create a project in Launch that configures
         }
         ```
 
-        In the above example, we have redirected all blogs that fall under the ��product-updates” or “announcements” categories to a separate /product-updates section in the website. Note how we're defining two different regular expressions for capturing path variables, category and postId. In the destination, we're using only the postId path variable to construct the final URL. Given a URL like /blogs/product-updates/march-updates, the destination URL will be /product-updates/march-updates.
+        In the above example, we have redirected all blogs that fall under the “product-updates” or “announcements” categories to a separate /product-updates section in the website. Note how we're defining two different regular expressions for capturing path variables, category and postId. In the destination, we're using only the postId path variable to construct the final URL. Given a URL like /blogs/product-updates/march-updates, the destination URL will be /product-updates/march-updates.
 
     -   Using an absolute path, you can redirect your sites to external links.  
         **Example:**
