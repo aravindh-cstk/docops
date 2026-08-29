@@ -13,7 +13,7 @@ While creating or updating a [webhook](/docs/headless-cms/about-webhooks), Conte
 
 To send a concise webhook payload, log in to [Contentstack](https://www.contentstack.com/login), go to your [stack](/docs/headless-cms/about-stack), and perform the following steps:
 
-1.  Click the “Settings” icon (press “S”) on the left navigation panel, and select **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS). You will notice a list of existing webhooks.
+1.  Click the ��Settings” icon (press “S”) on the left navigation panel, and select **Webhooks** (press “alt + W” for Windows OS, and “option + W” for Mac OS). You will notice a list of existing webhooks.
 2.  Select the webhook for which you want to enable the concise JSON payload.
 3.  On the webhook page, toggle the **Send Concise Payload** switch to enable the webhook to return a concise JSON payload and click **Save**.![Send Concise Webhook Payload_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt00774b53ddb765aa/66a8a5c6610c4172b64201fb/Send_Concise_Webhook_Payload_1.png)
 4.  To view the payload sent by a webhook, refer to the [View Webhook Logs](https://www.contentstack.com/docs/headless-cms/view-webhook-logs) document.
