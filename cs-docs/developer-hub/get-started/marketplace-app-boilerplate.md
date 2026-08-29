@@ -132,7 +132,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── 404/
 │   │   │   └── 404.tsx
 │   │   ├── App/
-│   │   ���   ���── App.tsx
+│   │   │   └── App.tsx
 │   │   ├── AppConfiguration/
 │   │   │   ├── AppConfiguration.module.css
 │   │   │   └── AppConfiguration.tsx
@@ -146,7 +146,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   ├── CustomField.css
 │   │   │   ├── CustomField.test.tsx
 │   │   │   └── CustomField.tsx
-│   │   ├── DashboardWidget/
+│   │   ├─��� DashboardWidget/
 │   │   │   ├── StackDashboard.css
 │   │   │   └── StackDashboard.tsx
 │   │   ├── FieldModifier/
