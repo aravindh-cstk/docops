@@ -93,7 +93,7 @@ Use Contentstack::Endpoint.get\_contentstack\_endpoint to resolve a service URL 
 ```
 require 'contentstack'
 
-# Content Delivery API (CDA) endpoint �� default service
+# Content Delivery API (CDA) endpoint — default service
 Contentstack::Endpoint.get_contentstack_endpoint('us')
 # => "https://cdn.contentstack.io"
 
