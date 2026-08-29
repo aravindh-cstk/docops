@@ -146,7 +146,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   ├── CustomField.css
 │   │   │   ├── CustomField.test.tsx
 │   │   │   └── CustomField.tsx
-│   │   ├─��� DashboardWidget/
+│   │   ├── DashboardWidget/
 │   │   │   ├── StackDashboard.css
 │   │   │   └── StackDashboard.tsx
 │   │   ├── FieldModifier/
