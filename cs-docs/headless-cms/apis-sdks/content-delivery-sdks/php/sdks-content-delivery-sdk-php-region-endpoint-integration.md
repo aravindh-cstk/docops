@@ -105,7 +105,7 @@ use Contentstack\Utils\Endpoint;
 
 // Content Delivery API (CDA) — with https://
 $url = Endpoint::getContentstackEndpoint('eu', 'contentDelivery');
-// �� "https://eu-cdn.contentstack.com"
+// → "https://eu-cdn.contentstack.com"
 
 // Content Delivery API — without https:// (for setHost())
 $host = Endpoint::getContentstackEndpoint('eu', 'contentDelivery', true);
