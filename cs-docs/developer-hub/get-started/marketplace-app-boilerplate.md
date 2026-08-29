@@ -132,7 +132,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── 404/
 │   │   │   └── 404.tsx
 │   │   ├── App/
-│   │   │   └── App.tsx
+│   │   ���   ���── App.tsx
 │   │   ├── AppConfiguration/
 │   │   │   ├── AppConfiguration.module.css
 │   │   │   └── AppConfiguration.tsx
