@@ -42,7 +42,7 @@ Consider a scenario where you have your production-facing content in the main br
 
 Now, you plan to redesign your website and create a branch called redesign that is a copy of all of the above-mentioned content types from the main branch and their current content. You make the following structural changes to the content types within the child branch:
 
--   **Homepage** - with fields “Title,” “Feature B” (modified from “Feature A”), and “SEO Description” (new)
+-   **Homepage** - with fields “Title,” “Feature B” (modified from “Feature A”), and ���SEO Description” (new)
 -   **Banner** \- a new content type with fields “Title” and “Image”
 -   **Product** - with only the “Title” field (and the “Related Products” field removed)
 -   **Author** - with the “Title” and “Biography” (new) fields (and the “Image” field removed)
