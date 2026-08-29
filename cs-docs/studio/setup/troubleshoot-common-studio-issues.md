@@ -196,7 +196,7 @@ The composition's connected content type UID in studioSdk.init doesn't match wha
 
 ## Studio project + canvas
 
-If your problem is a Canvas iframe issue ��� project not loading in Studio UI, iframe blank/CORS/mixed-content/PNA localhost issues, section preview route not resolving, or HTTPS-in-localhost — jump here.
+If your problem is a Canvas iframe issue — project not loading in Studio UI, iframe blank/CORS/mixed-content/PNA localhost issues, section preview route not resolving, or HTTPS-in-localhost — jump here.
 
 ### "No Canvas URL Found" / MISSING\_CANVAS\_URL
 

@@ -433,7 +433,7 @@ registerComponent({
   displayName: "Feature Callout",
   component: FeatureCallout,
   wrap: true,        // SDK adds a wrapper <div> automatically
-  props: { /* �� */ },
+  props: { /* … */ },
 });
 ```
 
