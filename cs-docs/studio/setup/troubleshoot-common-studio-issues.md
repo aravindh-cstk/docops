@@ -382,7 +382,7 @@ You passed a query object with keys that aren't valid at the top level of Compos
 **Common misuses:**
 
 ```
-// ��� Wrong — these keys are options, not top-level query fields
+// ❌ Wrong — these keys are options, not top-level query fields
 useCompositionData({ contentTypeUid: "blog_post", templateEntryUid: slug });
 useCompositionData({ variantAlias: "winter-sale", url: "/blog/x" });
 useCompositionData({ locale: "fr-fr", url: "/blog/x" });
