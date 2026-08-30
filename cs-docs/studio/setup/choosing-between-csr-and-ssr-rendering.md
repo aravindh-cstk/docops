@@ -270,7 +270,7 @@ If you forget dynamic({ ssr: false }) in App Router, you'll see a React hydratio
 3.  **Live Preview is client-only.** Wire onEntryChange after hydration to trigger refetches.
 4.  **Hydration mismatch.** If your server fetch and client expectations diverge (different locale defaults, different variants), you'll see a mismatch warning. Pin both sides to the same locale / variantAlias options.
 5.  **Cache invalidation on publish.** SSG/ISR doesn't update until revalidation. For instant updates, wire a Contentstack publish webhook to your revalidation endpoint.
-6.  **One renderer everywhere.** <StudioComponent specOptions={...} /> is the single renderer for both visitor pages and pages authors open inside Studio — it picks the right inner path by mode automatically.
+6.  **One renderer everywhere.** <StudioComponent specOptions={...} /> is the single renderer for both visitor pages and pages authors open inside Studio �� it picks the right inner path by mode automatically.
 
 ## Common pitfalls
 
