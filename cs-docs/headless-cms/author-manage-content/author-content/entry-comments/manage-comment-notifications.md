@@ -9,7 +9,7 @@ uid: blt0fbd3f3a81fcb2c5
 
 ## Manage Comment Notifications
 
-When anyone tags you in a specific comment, you receive an email as well as an in-app notification. To view these notifications, click on the “Bell” icon on the left navigation panel:
+When anyone tags you in a specific comment, you receive an email as well as an in-app notification. To view these notifications, click on the ���Bell” icon on the left navigation panel:
 
 ![manage_notification_1_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt792bf208c9401f30/60d9cf2194d4824720fe0c47/manage_notification_1_no_highlight.png)
 
