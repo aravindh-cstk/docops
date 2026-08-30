@@ -13,7 +13,7 @@ The complete list of gates that hide or change Studio's UI based on configuratio
 
 ## Stack-level (set in Contentstack web app)
 
-These live on the Contentstack, in Stack → Settings → Visual Experience.
+These live on the Contentstack, in Stack ��� Settings → Visual Experience.
 
 ### Enable Live Preview
 

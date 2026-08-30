@@ -46,7 +46,7 @@ Why looser: sections typically wrap their Repeater in a ConditionBlock that narr
 
 Strict rule: a match requires the section's reference\_to union and the template field's reference\_to union to be **equal as sorted sets**. Every CT in one must be present in the other, and vice versa. Order in the schema doesn't matter (the comparison sorts both sides first), but the membership must be identical.
 
-![Four rows showing strict sorted-set equality for reference fields �� order-invariant equality matches; subsets, supersets, or disjoint unions do not](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/ame23e0ceb989ee0b8/3aacdccbbc51dab392826028/reference-references-matching-examples.svg)
+![Four rows showing strict sorted-set equality for reference fields — order-invariant equality matches; subsets, supersets, or disjoint unions do not](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/ame23e0ceb989ee0b8/3aacdccbbc51dab392826028/reference-references-matching-examples.svg)
 
 Why strict (unlike blocks): references have no ConditionBlock narrowing mechanism; at runtime a reference field can resolve to any CT in its union, and the section's internal bindings assume the **exact** union it was authored against. Accepting a subset would let bindings reference CTs the template's field can't actually hold; accepting a superset would let the template surface CTs the section doesn't know how to render. Sorted-set equality is the only safe rule.
 
