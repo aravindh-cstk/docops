@@ -9,7 +9,7 @@ uid: blt497ab735c2a946d4
 
 ## Releases Limitations
 
--   Max character length of the ���Title’ field is **50**.
+-   Max character length of the ‘Title’ field is **50**.
 -   Max items that can be added in a Release is **5****00**.
 -   Max items allowed to be added in a Release, in a single instance via API, is **25**.
 -   The update release items option doesn't add the new references added to an updated version of a release item automatically. Manual addition is required.

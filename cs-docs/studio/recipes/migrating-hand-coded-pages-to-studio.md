@@ -40,7 +40,7 @@ Sections come first because they're the units of reuse. Once your Hero section e
 
 Resist converting whole templates in one PR — there's no rush. Each section is a chance to learn what authors need (which props to expose, which slots make sense). Convert one section, use it across the templates that need it, then move to the next section.
 
-## Step 1 ��� Inventory your components, sections, and templates
+## Step 1 — Inventory your components, sections, and templates
 
 **Ask your LLM:** _"Run discover-sections."_
 
