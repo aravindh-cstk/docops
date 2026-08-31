@@ -15,7 +15,7 @@ So, for instance, let’s assume that you have added five items to a release (3 
 
 To deploy a release, log in to your [Contentstack account](https://www.contentstack.com/login) and follow these steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and, in the top navigation bar, click **Releases**. Or, press “alt + R” for Windows and ��option + R” for Mac.
+1.  Go to your [stack](/docs/headless-cms/about-stack) and, in the top navigation bar, click **Releases**. Or, press “alt + R” for Windows and “option + R” for Mac.
 2.  Select the release you want to deploy in the left panel and click the **Deploy** button located at the top.![Deploy a Release_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5e302ef10c62a8dc/66f24662bb79b747154143c7/Deploy_a_Release_1.png)
 
     **Note**:
