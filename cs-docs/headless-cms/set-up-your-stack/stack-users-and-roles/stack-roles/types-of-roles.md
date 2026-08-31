@@ -2,6 +2,7 @@
 title: "Types of Roles"
 description: "Discover Contentstack's five user roles—Owner, Admin, Developer, Content Manager, and Custom Role. Learn detailed permissions for optimal content management."
 url: /headless-cms/types-of-roles
+uid: blt625bf3efbd68b58c
 ---
 
 # Types of Roles
@@ -31,7 +32,9 @@ The Admin role has the following rights:
 -   Create delivery and management tokens
 -   View audit log and publish queue
 
-The Admin role has more rights than a Developer and fewer than the Owner. Developer
+The Admin role has more rights than a Developer and fewer than the Owner.
+
+## Developer
 
 A “Developer” is a person who creates the structure of the site or defines the way content will appear on the site. Hence, this role has the right to:
 
@@ -67,7 +70,7 @@ To create a Custom role, follow the steps mentioned in the [Create a Role](/docs
 
 The following is a tabular summary that outlines the Stack roles and their permissions - making it easier for users to understand what each role entails - and how it operates within the context of stacks:
 
-<table><colgroup data-width="500"><col style="width:35.8%"><col style="width:64.2%"></colgroup><tbody><tr><td><p><strong>Roles</strong></p></td><td><p><strong>Permissions/Rights</strong></p></td></tr><tr><td><p><strong>Owner</strong></p></td><td><ul><li><span>Complete rights to stack content and settings</span></li><li><span>Delete own stack</span></li><li><span>Transfer a stack’s ownership to other user</span></li><li><span>Can create and manage delivery and management tokens&nbsp;</span></li><li><span>Combined rights of admin, developer, and content manager</span></li></ul></td></tr><tr><td><p><span style="color: rgb(13, 13, 13);font-size: 12pt;"><strong>Admin</strong></span></p></td><td><ul><li><span>Create, read, update, and delete rights on: entries, assets, languages, Environments, content types, and custom roles</span></li><li><p><span>Can publish/unpublish entries and assets</span></p></li><li><p><span>Invite/remove users</span></p></li><li><p><span>View audit log and publish queue</span></p></li></ul></td></tr><tr><td><span style="color: rgb(13, 13, 13);font-size: 12pt;"><strong>Developer</strong></span></td><td><ul><li><span>Create roles</span></li><li><span>Invite users</span></li><li><span>Create, read, update, and delete rights on: entries, assets, languages, Environments, and Content Types</span></li><li><span>Can publish/unpublish entries and assets</span></li><li><span>Can create and manage delivery tokens</span></li><li>Cannot create management tokens</li><li><span>View audit log and publish queue</span></li></ul></td></tr><tr><td><span style="color: rgb(13, 13, 13);font-size: 12pt;"><strong>Content Manager</strong></span></td><td><ul><li><span>Create, read, update, and delete rights on published entries and assets</span></li><li><span>View publish queue</span></li><li><span>Limited access to specific environments/locales</span></li></ul></td></tr><tr><td><span style="color: rgb(13, 13, 13);font-size: 12pt;"><strong>Custom Role</strong></span></td><td><ul><li><span>Specific tailored permissions</span></li><li><span>Specific entry, field, and asset-level permissions</span></li></ul></td></tr></tbody></table>
+<table><tbody><tr><td><strong>Roles</strong></td><td><strong>Permissions/Rights</strong></td></tr><tr><td><strong>Owner</strong></td><td><ul><li><span>Complete rights to stack content and settings</span></li><li><span>Delete own stack</span></li><li><span>Transfer a stack’s ownership to other user</span></li><li><span>Can create and manage delivery and management tokens&nbsp;</span></li><li><span>Combined rights of admin, developer, and content manager</span></li></ul></td></tr><tr><td><strong>Admin</strong></td><td><ul><li><span>Create, read, update, and delete rights on: entries, assets, languages, Environments, content types, and custom roles</span></li><li><p><span>Can publish/unpublish entries and assets</span></p></li><li><p><span>Invite/remove users</span></p></li><li><p><span>View audit log and publish queue</span></p></li></ul></td></tr><tr><td><strong>Developer</strong></td><td><ul><li><span>Create roles</span></li><li><span>Invite users</span></li><li><span>Create, read, update, and delete rights on: entries, assets, languages, Environments, and Content Types</span></li><li><span>Can publish/unpublish entries and assets</span></li><li><span>Can create and manage delivery tokens</span></li><li>Cannot create management tokens</li><li><span>View audit log and publish queue</span></li></ul></td></tr><tr><td><strong>Content Manager</strong></td><td><ul><li><span>Create, read, update, and delete rights on published entries and assets</span></li><li><span>View publish queue</span></li><li><span>Limited access to specific environments/locales</span></li></ul></td></tr><tr><td><strong>Custom Role</strong></td><td><ul><li><span>Specific tailored permissions</span></li><li><span>Specific entry, field, and asset-level permissions</span></li></ul></td></tr></tbody></table>
 
 **Note:** It's important to note that custom roles for stacks allow for highly specific permissions that can be tailored to fit various needs, while Organization roles are predefined and cannot be customized.
 
