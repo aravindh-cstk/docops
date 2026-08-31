@@ -203,7 +203,7 @@ See [Build your own MCP Stack-aware enrichment](https://developers.contentstack.
 
 -   **Stack API Key:** Contentstack Dashboard → Settings → API Credentials
 -   **Delivery Token:** Contentstack Dashboard → Settings → Tokens → Delivery Tokens → create one for your target environment
--   **Management Token:** Contentstack Dashboard → Settings → Tokens → Management Tokens → create one (only if authenticating CMA without OAuth)
+-   **Management Token:** Contentstack Dashboard → Settings ��� Tokens → Management Tokens → create one (only if authenticating CMA without OAuth)
 -   **Brand Kit ID:** BrandKit Dashboard → your brand kit's settings page
 -   **Launch Project ID:** Launch Dashboard → your project's URL or settings
 -   Organisation UID: Launch Dashboard → your project's URL or organisation settings
