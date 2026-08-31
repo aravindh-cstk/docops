@@ -97,7 +97,7 @@ Let's follow this step-by-step guide to install and configure the JW Player app 
             ![JW-Player-Added-App-In-Custom-Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb2bb65e99468a807/657ffe69c4b620467efb4989/JW-Player-Added-App-In-Custom-Field.png)
         3.  After adding the app in a custom field, click **Save** or **Save and Close** to save your changes.
         4.  To use the JW Player app, create an entry for this newly created content type. To do this, in the left navigation panel, navigate to the **Entries** page, click **\+ New Entry** to [create a new entry](/docs/headless-cms/create-an-entry) for the above content type, and then click **Proceed**.  
-            You can see the JW Player app��s custom field on your entry page as shown below:  
+            You can see the JW Player app’s custom field on your entry page as shown below:  
             ![JW-Player-Custom-Field-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdcce3e28e04b52d1/657fff1713cde947331fdb80/JW-Player-Custom-Field-Sample-Entry.png)
         5.  Click the **\+ Choose Video(s)** button.  
             ![JW-Player-Custom-Field-Choose-Videos](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1cfa3e6eb9d05f8f/657ffe6abb2e10109800df82/JW-Player-Custom-Field-Choose-Videos.png)

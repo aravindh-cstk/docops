@@ -11,7 +11,7 @@ uid: bltd1be45338ed68f25
 
 Studio works on every common React deploy target. The edges show up around caching (compositions change without code changes — caches need to invalidate), edge-runtime weight limits, and monorepo patterns. This page is the deployment playbook.
 
-## ISR + SSG — cache invalidation when compositions change
+## ISR + SSG �� cache invalidation when compositions change
 
 Studio compositions are **content, not code**. Caching them as if they were code means stale layouts persist even after a publish.
 
