@@ -2,6 +2,7 @@
 title: "Private Network Deployments"
 description: "Learn to configure Private Network Deployments with static egress IPs and AWS VPC peering for secure connectivity to your backend infrastructure."
 url: /launch/private-network-deployments
+uid: blt1103c2f3dbdeefff
 ---
 
 # Private Network Deployments
@@ -20,16 +21,16 @@ By providing dedicated networking and predictable egress IP addresses, Private N
 -   An AWS VPC hosting your backend infrastructure
 -   Enterprise plan with the Private Network Deployments add-on
 
-## What You Will Learn
+## What You Can Learn
 
 -   What Private Network Deployments and Egress IPs are.
-    
+
 -   When to use a private network.
-    
+
 -   How to set up VPC peering to your AWS VPC.
-    
+
 -   How to test both the peered and public traffic paths.
-    
+
 
 ## Use Cases
 
@@ -40,7 +41,7 @@ Use Private Network Deployments when:
 -   You want to remove public internet exposure between your application and your backend systems.
 -   You require a dedicated network with static IP addresses for your deployments, ensuring your application’s outgoing traffic remains isolated from other Launch organizations.
 
-**Note:** If you only need static egress IP addresses for IP allowlisting, without features like dedicated infrastructure, VPC peering, or complete network isolation, consider Static IPs.
+**Note:** If you only need static egress IP addresses for IP allowlisting, without features like dedicated infrastructure, VPC peering, or complete network isolation, consider [Static IPs](/docs/launch/static-ip-addresses).
 
 ## How Private Network Deployments Work
 
@@ -56,7 +57,9 @@ Each private network is assigned its own pair of static IP addresses, referred t
 
 A single private network can support multiple Launch projects and environments.
 
-**Note:** Currently, build machines are not included in the dedicated network. Only runtime (server) machines are connected. Backend calls made during the build process do not use the private network or the assigned Egress IPs.
+**Note:** Currently, build machines and Launch edge functions are not included in the dedicated network. Only runtime (server) machines are connected. Backend calls made from the build process and edge functions do not use the private network or the assigned Egress IPs.
+
+You can check your Egress IPs any time under **Settings → Networking**, in the **Private Network Deployments** section. If that section says "Private Network Deployments are not enabled. To enable them, contact your organization admin.", the add-on isn't active for your organization yet.
 
 ### VPC Peering
 
@@ -73,48 +76,55 @@ Setting up VPC peering requires an update to the route table in your AWS VPC. Th
 
 To provision a private network, provide the following:
 
--   **VPC ID:** The AWS VPC that hosts your backend infrastructure.
--   **Subnet CIDR:** The IP address range used by your VPC, so we can confirm there is no overlap with our network.
--   **Region:** The AWS region your backend infrastructure runs in.
+-   **VPC ID:** The AWS VPC hosting your backend infrastructure
+-   **Subnet CIDR:** Your VPC's IP address range
+-   **Region:** The AWS region your backend runs in
 
 ### Information Provided
 
-Once your private network is provisioned, we share:
+Once the Contentstack Launch team has provisioned your network, everything you need for the peering request shows up in Launch. Go to Settings → Networking, then find the Private Network Deployments section: 
 
--   **AWS Account ID:** The account ID of our private network. You'll need this to create the peering connection request.
--   **VPC ID:** The VPC ID of our private network. You'll need this to create the peering connection request.
--   **Subnet CIDR:** The IP address range assigned to your private network.
--   **Egress IPs:** The static IP address pair assigned to your private network.
+![image2.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/amb1c531ed9c11b1eb/d7df965a53a1a9574a55c6bf/image2.png?locale=en-us)
+
+-   **Outbound IP addresses (dedicated):** Your Egress IP pair, with a copy icon next to each one.
+-   **Connection Details:** The AWS Account ID, VPC ID, AWS Region, and VPC CIDR of your private network. Each value has its own copy icon, so you can paste them straight into the AWS console.
+
+**Tip:** Keep this page open while you set up peering, you have to copy from it a few times.
 
 ### Setup Steps
 
-1.  Submit your VPC ID, Subnet CIDR, and Region to our support team.
-2.  We provision your private network and send back its AWS Account ID, VPC ID, Subnet CIDR, and Egress IPs.
-3.  In your AWS VPC dashboard, enter the peering connection details using the values we provided:
+1.  Submit your VPC ID, VPC CIDR, and Region to support.
+2.  Contentstack Launch team provisions your network. Once it is ready, open Settings → Networking in Launch and find the Private Network Deployments section. Your AWS Account ID, VPC ID, AWS Region, and VPC CIDR are all listed under Connection Details, and your Egress IPs are right above them.
+3.  In your AWS VPC dashboard, enter the peering details:
+
     -   **Requester VPC ID:** Your VPC ID
-    -   **Account ID:** AWS Account ID provided by us
-    -   **VPC ID (Accepter):** VPC ID provided by us
-4.  Click **Create Peering Connection** in your AWS console to send the request.
-5.  We accept the peering connection request on our end.
-6.  Update your route table to direct traffic for our Subnet CIDR through the new peering connection.
-    
+    -   **Account ID:** The AWS Account ID from Connection Details
+    -   **VPC ID (Accepter):** The VPC ID from Connection Details
+
+    ![image1.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/amd75d834502fbda4b/7fe80d219ee3439a6404530f/image1.png?locale=en-us)
+4.  Click **Create Peering Connection** in your AWS console to send the request.  
+    The Contentstack Launch team accepts the peering connection request.
+5.  Update your route table to send traffic for the destination VPC CIDR through the peering connection. That's the VPC CIDR value under **Connection Details** in **Settings → Networking**.
+
     **Example route table entry**
-    
-    <table><tbody><tr><td><strong>Destination</strong></td><td><strong>Target</strong></td></tr><tr><td><span class="code">10.100.0.0/16</span><p><br>(Our Subnet CIDR)</p></td><td><span class="code">pcx-0a1b2c3d4e5f6g7h8</span><p><br>(Your peering connection ID)</p></td></tr></tbody></table>
-    
-7.  Enable DNS resolution on your VPC. Open the peering connection in your AWS console, go to its DNS settings, and turn on **Requester DNS resolution**. This lets our systems resolve your private DNS hostnames over the connection. Most VPCs already have DNS hostnames and DNS resolution turned on by default, so this is usually a quick toggle. Skip this step if your application only connects to backend resources by IP address.
-8.  Add the Launch-peered subnet to your **security group** inbound rules. Update the security group attached to your backend resources (and network ACL, if you use a custom one) to allow inbound traffic from **our Subnet CIDR**. The route table change only configures routing; your security group still needs to explicitly allow traffic through, or it'll be blocked even with the peering connection active.
-    
+
+    <table><tbody><tr><td><strong>Destination</strong></td><td><strong>Target</strong></td></tr><tr><td><span class="code">10.100.0.0/16</span><p><br>(Contentstack Launch’s VPC CIDR)</p></td><td><span class="code">pcx-0a1b2c3d4e5f6g7h8</span><p><br>(Your peering connection ID)</p></td></tr></tbody></table>
+
+6.  Enable DNS resolution on your VPC. Open the peering connection in your AWS console, go to its DNS settings, and turn on **Requester DNS resolution**. This lets Contentstack Launch resolve your private DNS hostnames over the connection. Most VPCs already have DNS hostnames and DNS resolution turned on by default, so this is usually a quick toggle. Skip this step if your application only connects to backend resources by IP address.
+7.  Add the Launch-peered subnet to your **security group** inbound rules. Update the security group attached to your backend resources (and network ACL, if you use a custom one) to allow inbound traffic from the **Subnet CIDR**. The route table change only configures routing; your security group still needs to explicitly allow traffic through, or it'll be blocked even with the peering connection active.
+
     **Example security group inbound rule**
-    
-    <table><tbody><tr><td><strong>Type</strong></td><td><strong>Protocol</strong></td><td><strong>Port range</strong></td><td><strong>Source</strong></td></tr><tr><td>Custom TCP</td><td>TCP</td><td>5432</td><td><span class="code">10.100.0.0/16</span><p><br>(Our Subnet CIDR)</p></td></tr></tbody></table>
-    
+
+    <table><tbody><tr><td><strong>Type</strong></td><td><strong>Protocol</strong></td><td><strong>Port range</strong></td><td><strong>Source</strong></td></tr><tr><td>Custom TCP</td><td>TCP</td><td>5432</td><td><span class="code">10.100.0.0/16</span><p><br>(Contentstack Launch’s VPC CIDR)</p></td></tr></tbody></table>
+
 
 ## Testing the Connection
 
 Once VPC peering is configured and your route table, security group rules, and (if needed) DNS resolution are in place, you can verify the setup by deploying a small Launch function that exercises both traffic paths at once: a call to a backend resource over the peering connection, and a call to the public internet.
 
 Deploy the following as a Launch cloud function, replacing PRIVATE\_URL with the hostname or internal IP of a resource inside your VPC (for example, a health-check endpoint on your internal API):
+
+After it runs, the publicInternet.ip value in the response should match one of the Egress IPs listed under **Settings → Networking**. If it does not, your traffic is not leaving through the private network:
 
 ```
 // Replace with your private resource's URL (hostname or internal IP)
@@ -159,10 +169,10 @@ Invoking the function returns a JSON response summarizing both tests, for exampl
 }
 ```
 
-If either test returns an error, review your route table entries, DNS resolution settings, and security group inbound rules (and network ACL, if you use a custom one) to confirm each is configured as described above.
+If either test returns an error, go back over your route table entries, DNS resolution settings, and security group inbound rules (and your network ACL if you use one). Double-check that the CIDR in each of those matches the VPC CIDR shown in **Settings → Networking**.
 
 ## Pricing and Support
 
 Private Network Deployments are available as an add-on Enterprise feature.
 
-To enable Private Network Deployments for your account, contact the Contentstack [support](mailto:support@contentstack.com) team with your VPC ID, Subnet CIDR, and Region. Our team will confirm pricing and begin provisioning your network.
+To enable Private Network Deployments for your account, contact Contentstack [Support](mailto:support@contentstack.com) with your VPC ID, VPC CIDR, and Region. The team confirms pricing and starts provisioning. Once your network is up, your Egress IPs and connection details show up in **Settings → Networking**.
