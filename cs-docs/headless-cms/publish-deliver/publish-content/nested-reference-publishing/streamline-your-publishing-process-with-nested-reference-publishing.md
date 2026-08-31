@@ -39,7 +39,7 @@ While viewing nested references in the **Publish Reference(s)** modal, it is ess
 
 -   **Publishing rights error:** This error occurs when you have insufficient permissions to publish content.
 
-The **Publish Reference(s)** modal not only allows you to view your child entries but also enables you to navigate to the respective entries to edit them. You can easily check and edit child entries by clicking the “Edit entry in new tab” icon, which opens the entry in a new tab. You can then make changes and save the entry, and the latest version of your entry will be sent for publishing along with the parent entry.
+The **Publish Reference(s)** modal not only allows you to view your child entries but also enables you to navigate to the respective entries to edit them. You can easily check and edit child entries by clicking the “Edit entry in new tab��� icon, which opens the entry in a new tab. You can then make changes and save the entry, and the latest version of your entry will be sent for publishing along with the parent entry.
 
 **Note:** Only the latest version of entries and assets are sent for publishing along with the parent entry.
 

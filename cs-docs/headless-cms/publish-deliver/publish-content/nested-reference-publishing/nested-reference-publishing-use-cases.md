@@ -27,7 +27,7 @@ Now with Nested Reference Publishing enabled for their organization, if the user
 
 If few of the nested references do not meet the publishing validation criteria, you will see an alert sign across the entry.
 
-Let��s check out a few scenarios where publishing might fail.
+Let’s check out a few scenarios where publishing might fail.
 
 ### Entry is in In-progress State
 
