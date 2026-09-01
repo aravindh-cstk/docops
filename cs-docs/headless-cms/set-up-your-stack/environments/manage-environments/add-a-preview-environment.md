@@ -50,7 +50,7 @@ Let’s look at the steps in detail.
 
     You can create a setup such that whenever you create or update an entry in your stack, it will be automatically published to the preview environment.
 
-    In this method, you’ll need to create a webhook that triggers whenever content is either created or updated. So, whenever a new item (entry or asset) is created or existing items are updated, this webhook will be triggered to send a notification each time to the URL of your choice.
+    In this method, you���ll need to create a webhook that triggers whenever content is either created or updated. So, whenever a new item (entry or asset) is created or existing items are updated, this webhook will be triggered to send a notification each time to the URL of your choice.
 
     #### B. 1. Create a Webhook
 
