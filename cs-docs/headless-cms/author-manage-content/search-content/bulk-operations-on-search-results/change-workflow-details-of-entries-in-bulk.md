@@ -11,7 +11,7 @@ uid: blt7949105a0f343140
 
 To change the workflow details of multiple entries from your search results, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-1.  Navigate to your [stack](https://www.contentstack.com/docs/headless-cms/about-stack) and select the “[Entries](https://www.contentstack.com/docs/headless-cms/about-entries)” or ��[Assets](https://www.contentstack.com/docs/headless-cms/about-assets)” module.
+1.  Navigate to your [stack](https://www.contentstack.com/docs/headless-cms/about-stack) and select the “[Entries](https://www.contentstack.com/docs/headless-cms/about-entries)” or “[Assets](https://www.contentstack.com/docs/headless-cms/about-assets)” module.
 2.  Perform a search based on your requirements using [Basic Search](/docs/headless-cms/basic-search), [Advanced Search](/docs/headless-cms/advanced-search), [Filters](/docs/headless-cms/use-filters), and [Views](/docs/headless-cms/about-views) to narrow down your search results.
 3.  From the search results, select the entries you want to update. Then, click **Change Workflow Details** from the floating bar.![Change Workflow Details of Entries in Bulk_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt017e8907d66adf64/67d96704ef4ce60e22d27e83/1._Bulk_Workflow_Change-Worflow_Icon.png)
 4.  On the **Edit Workflow Settings** screen:
