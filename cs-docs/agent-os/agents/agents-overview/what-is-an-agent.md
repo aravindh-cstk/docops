@@ -10,7 +10,7 @@ url: /agent-os/what-is-an-agent
 
 **Note:** For access, please talk to our [Support](mailto:support@contentstack.com) team.
 
-An **Agent** is an intelligent system that combines AI understanding with context, instructions, and tools to act on behalf of users. Unlike traditional automation, which simply executes tasks, an agent can think, learn, and adapt across your digital ecosystem.
+An agent is a workflow of instructions, trigger and tools. 
 
 By uniting intelligence, context, and capabilities, agents free teams from repetitive work while accelerating creativity, innovation, and business growth.
 
