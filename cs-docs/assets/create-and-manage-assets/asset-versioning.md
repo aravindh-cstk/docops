@@ -37,7 +37,7 @@ To name or rename an asset version, perform the following steps:
 
 -   Renaming a version does not create a new asset version.
 -   Custom version names support a maximum of **32 characters**.
--   Supported characters include uppercase letters (A–Z), lowercase letters (a–z), numbers (0–9), spaces, hyphens (\-), and underscores (\_).
+-   Supported characters include uppercase letters (A–Z), lowercase letters (a���z), numbers (0–9), spaces, hyphens (\-), and underscores (\_).
 
 ## Restore an Older Asset Version
 
