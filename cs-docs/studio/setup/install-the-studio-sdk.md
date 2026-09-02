@@ -112,7 +112,7 @@ registerComponents([
 ]);
 ```
 
-### registerLazyComponent — code-split a component
+### registerLazyComponent ��� code-split a component
 
 For large component libraries, register a loader instead of the component itself. Studio holds the schema (thumbnailUrl, displayName, props) eagerly so it can render the palette tile; the actual component code loads only when an author drops it or a visitor's page renders it.
 

@@ -348,7 +348,7 @@ Two things to watch for in SSR:
 | defaultValue used as real product copy | Author ships placeholder text as if it's content | Use clearly-template phrasing like "Your headline here" |
 | Forgetting runtime data exists | Team forks components to call APIs from inside | Route external fetches through <StudioComponent data={...} /> |
 | "Component Default Data" missing from picker | Authors can't find the binding | Select a component on the canvas first; the root is per-selection |
-| Passing non-JSON values in data (functions, classes) | SSR serialization errors | Keep data plain — strings, numbers, arrays, objects |
+| Passing non-JSON values in data (functions, classes) | SSR serialization errors | Keep data plain �� strings, numbers, arrays, objects |
 | Hydration mismatch on data-driven props | React warning in console | Compute once server-side, pass through; don't recompute on the client |
 
 ## See also
