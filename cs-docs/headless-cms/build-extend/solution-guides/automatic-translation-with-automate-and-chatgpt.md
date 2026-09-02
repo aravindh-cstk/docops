@@ -33,7 +33,7 @@ Once we have these basics ready, we can set up the required automation for trans
 1.  **Create an Automation**  
     If you are new to Automate, this guide will help you [get started with Automate](/docs/agent-os/get-started-with-automations#create-project)
 2.  **Configure the Trigger**  
-    Choose Connector �� Contentstack → Workflow Trigger.  
+    Choose Connector → Contentstack → Workflow Trigger.  
     Fill the required fields and then set the workflow stage to “Ready for Translation.”
 3.  **Get the Content to be translated**  
     Choose Connector → Contentstack → Get Single Entry.  
