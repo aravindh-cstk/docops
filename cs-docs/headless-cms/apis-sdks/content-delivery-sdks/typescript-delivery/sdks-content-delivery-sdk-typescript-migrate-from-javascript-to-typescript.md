@@ -61,7 +61,7 @@ This section shows how to initialize the JavaScript and TypeScript Delivery SDKs
     ```
     import contentstack from '@contentstack/delivery-sdk';
 
-    const Stack = contentstack.stack({apiKey: ��apiKey”, deliveryToken: “deliveryToken”, environment: “environment”});
+    const Stack = contentstack.stack({apiKey: “apiKey”, deliveryToken: “deliveryToken”, environment: “environment”});
     ```
 
 
