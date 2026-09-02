@@ -1,10 +1,11 @@
 ---
-title: "Overwrite Existing Content using CLI Import | Beta Commands"
+title: "Overwrite Existing Content using CLI Import | V2.x.x"
 description: "Learn how to overwrite existing content using the CLI Import Overwrite feature."
 url: /headless-cms/overwrite-existing-content-using-cli-import
+uid: bltd28635508877b2ec
 ---
 
-# Overwrite Existing Content using CLI Import | Beta Commands
+# Overwrite Existing Content using CLI Import | V2.x.x
 
 ## Overwrite Existing Content using CLI Import
 
@@ -22,7 +23,7 @@ By providing the ability to overwrite content, this feature streamlines content 
 **Usage**
 
 ```
-csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path> -k <value> -d <content-dir-path>
+csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path> -k <value> --data-dir <content-dir-path>
 ```
 
 **Options**
@@ -44,11 +45,11 @@ Follow the steps below to perform the overwrite operation on your target stack:
 2.  Export the content of your source stack using the CLI export command.
 3.  Import the content to your target stack using the CLI import command with the \--replace-existing flag.
     1.  Import all modules (It will replace modules which are supported by the Overwrite feature).
-        
+
         ```
-        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path> -k <value> -d <content-dir-path>
+        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path> -k <value> --data-dir <content-dir-path>
         ```
-        
+
     2.  [Overwrite specific modules](#overwrite-specific-modules) using the import-setup command.
 
 ### Overwrite Specific Modules
@@ -72,7 +73,7 @@ The cm:stacks:import-setup command is designed to simplify the import process by
 **Usage**
 
 ```
-cm:stacks:import-setup --module module-name1 module-name2 -d <exported-content-dir> -k <target-stack-api-key> --branch <branch>
+cm:stacks:import-setup --module module-name1 module-name2 --data-dir <exported-content-dir> -k <target-stack-api-key> --branch <branch>
 ```
 
 **Options**
@@ -80,7 +81,7 @@ cm:stacks:import-setup --module module-name1 module-name2 -d <exported-content-d
 | Flag | Short Flag | Description |
 | --- | --- | --- |
 | --stack-api-key | -k | API key of the target stack where the content will be imported. |
-| --data-dir | -d | The path or location in your file system where the content to be imported is stored.  |
+| --data-dir | - | The path or location in your file system where the content to be imported is stored.  |
 | --alias | -a | \[Optional\] Alias (name) of the management token for the destination stack. |
 | \--module | \- | \[Optional\] Specify the module(s) to import into the target stack.
 Supported values: global-fields, content-types, entries
@@ -105,57 +106,57 @@ Supported values: global-fields, content-types, entries
 
 1.  Import to update only the global fields in the target stack:
     1.  ```
-        csdx cm:stacks:import-setup --module global-fields -d <exported-content-dir> -k <target-stack-api-key>
+        csdx cm:stacks:import-setup --module global-fields --data-dir <exported-content-dir> -k <target-stack-api-key>
         ```
-        
+
     2.  ```
-        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> -d <content-dir-path> --module global-fields
+        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> --data-dir <content-dir-path> --module global-fields
         ```
-        
+
 2.  Import to update only the content types in the target stack:
     1.  ```
-        csdx cm:stacks:import-setup --module content-types -d <exported-content-dir> -k <target-stack-api-key>
+        csdx cm:stacks:import-setup --module content-types --data-dir <exported-content-dir> -k <target-stack-api-key>
         ```
-        
+
     2.  ```
-        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> -d <content-dir-path> --module content-types
+        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> --data-dir <content-dir-path> --module content-types
         ```
-        
+
 3.  Import to update both global fields and content types in the target stack:
     1.  ```
-        csdx cm:stacks:import-setup --module global-fields content-types -d <exported-content-dir> -k <target-stack-api-key>
+        csdx cm:stacks:import-setup --module global-fields content-types --data-dir <exported-content-dir> -k <target-stack-api-key>
         ```
-        
+
     2.  ```
-        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> -d <content-dir-path> --module global-fields
+        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> --data-dir <content-dir-path> --module global-fields
         ```
-        
+
     3.  ```
-        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> -d <content-dir-path> --module content-types
+        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> --data-dir <content-dir-path> --module content-types
         ```
-        
+
 4.  Import to update only the entries in the target stack:
     1.  ```
-        csdx cm:stacks:import-setup --module entries -d <exported-content-dir> -k <target-stack-api-key>
+        csdx cm:stacks:import-setup --module entries --data-dir <exported-content-dir> -k <target-stack-api-key>
         ```
-        
+
     2.  ```
-        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> -d <content-dir-path> --module entries
+        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> --data-dir <content-dir-path> --module entries
         ```
-        
+
 5.  Import to update both content types and entries in the target stack:
     1.  ```
-        csdx cm:stacks:import-setup --module content-types entries content-types -d <exported-content-dir> -k <target-stack-api-key>
+        csdx cm:stacks:import-setup --module content-types entries content-types --data-dir <exported-content-dir> -k <target-stack-api-key>
         ```
-        
+
     2.  ```
-        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> -d <content-dir-path> --module content-types
+        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> --data-dir <content-dir-path> --module content-types
         ```
-        
+
     3.  ```
-        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> -d <content-dir-path> --module entries
+        csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path-generated-by-import-setup> -k <value> --data-dir <content-dir-path> --module entries
         ```
-        
+
 
 ## Migration Scenarios
 

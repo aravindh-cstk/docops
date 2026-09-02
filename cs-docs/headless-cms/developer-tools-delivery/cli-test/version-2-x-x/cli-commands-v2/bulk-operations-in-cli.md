@@ -1,10 +1,11 @@
 ---
-title: "Bulk Operations in CLI | Beta"
+title: "Bulk Operations in CLI | V2.x.x"
 description: "Run bulk publish and bulk unpublish operations with the Contentstack CLI for entries and assets across environments and locales at scale with built-in retries."
 url: /headless-cms/bulk-operations-in-cli
+uid: blt85d9deae08de968d
 ---
 
-# Bulk Operations in CLI | Beta
+# Bulk Operations in CLI | V2.x.x
 
 ## Bulk Operations in CLI
 
@@ -186,7 +187,7 @@ First, add the delivery token for the source environment (one-time setup):
 csdx auth:tokens:add \
   -a prod-delivery \
   --delivery-token prod-delivery-token \
-  --api-key blt******* \
+  --stack-api-key blt******* \
   --environment production \
   --type delivery
 ```
@@ -277,10 +278,6 @@ Same as bulk entries (see above).
 | Flag | Description | Example |
 | --- | --- | --- |
 | --folder-uid | The UID of the Assets' folder from which the assets need to be published. Default: cs\_root | --folder-uid cs\_root |
-| --data-dir, -d | Path to exported content folder containing asset publish details. Publishes assets from that folder instead of scanning the live stack. | --data-dir ./content |
-| --dry-run | Preview the publish plan without making any API calls. Default: false. Only takes effect when combined with --data-dir. It has no effect on the default live-folder-scan publish or unpublish flow. | --dry-run |
-
-On stacks where asset scanning applies, cm:stacks:bulk-assets prints an "Asset Scan Status" dashboard before publishing. The dashboard reports the total assets found, how many are clean and will publish, how many are still scanning (skipped), and how many are quarantined (skipped). In the \--data-dir flow, it also reports assets skipped locally for missing publish details and assets skipped for having no mapped UID. If no assets are publishable after this filtering, the command prints a warning and exits without publishing anything.
 
 #### Examples
 
@@ -345,28 +342,18 @@ csdx cm:stacks:bulk-assets \
   --revert ./bulk-operation
 ```
 
-**7\. Publish assets from an exported content folder (data-dir flow)**
-
-```
-# Publish assets from a backup or export folder after asset scanning clears
-csdx cm:stacks:bulk-assets \
-  --data-dir ./content \
-  --operation publish \
-  -k blt*******
-```
-
-Add \--dry-run to preview which assets would publish without making any API calls. \--dry-run only affects this \--data-dir flow. It has no effect on the default publish or unpublish flow shown in examples 1 through 4.
-
 ### Bulk CS Assets operations
 
 Perform bulk **delete** or **move** operations on assets stored in cs-assets spaces. This command uses the cs-assets REST API and is separate from the CMA-based Bulk Publish API used by bulk-entries and bulk-assets.
 
 **Prerequisite**: Your region must have CS Assets enabled. See [Configure Regions](/docs/headless-cms/configure-regions-in-the-cli).
 
+**Warning:** Do not combine CMS flags (\--stack-api-key, \--alias, \--environments, \--locales, \--branch) with the CS Assets flags in the table below. The delete and move operations target the CS Assets API, not the CMS publish pipeline.
+
 #### Syntax
 
 ```
-csdx cm:stacks:bulk-am-assets [OPTIONS]
+csdx cm:stacks:bulk-assets [OPTIONS]
 ```
 
 #### Options
@@ -374,12 +361,13 @@ csdx cm:stacks:bulk-am-assets [OPTIONS]
 | Flag | Description | Required |
 | --- | --- | --- |
 | --operation | Operation type: delete or move | Yes |
-| --space-uid | UID of the cs-assets space | Yes |
+| --space-uid | UID of the CS Assets space | Yes |
 | --org-uid | Organization UID | Yes |
-| --locales | Comma-separated locales to delete assets in (delete only) | For delete |
+| --asset-uids-file | Path to a JSON file listing the assets to act on, in the form { "uids": \["uid1", "uid2"\] } | Yes |
+| --workspace | Workspace to operate in. Default: main | No |
+| --locale | Locale to delete assets in. Required for delete and not accepted for move | For delete |
 | --target-folder-uid | UID of the destination folder (move only) | For move |
 | --folder-uid | UID of the source folder to filter assets | No |
-| --branch | Branch name | No |
 | -y, --yes | Skip confirmation prompt | No |
 
 #### Examples
@@ -387,23 +375,73 @@ csdx cm:stacks:bulk-am-assets [OPTIONS]
 **Bulk delete assets in a space:**
 
 ```
-csdx cm:stacks:bulk-am-assets \
+csdx cm:stacks:bulk-assets \
   --operation delete \
   --space-uid blt1234567890abcdef \
   --org-uid bltorg1234567890 \
-  --locales en-us,fr-fr
+  --locale en-us \
+  --asset-uids-file ./assets.json
 ```
 
 **Bulk move assets to a different folder:**
 
 ```
-csdx cm:stacks:bulk-am-assets \
+csdx cm:stacks:bulk-assets \
   --operation move \
   --space-uid blt1234567890abcdef \
   --org-uid bltorg1234567890 \
   --folder-uid cs_source_folder \
   --target-folder-uid cs_destination_folder \
+  --asset-uids-file ./assets.json \
   --yes
+```
+
+---
+
+### Bulk Taxonomies
+
+Bulk publish or unpublish taxonomy terms. This command has no equivalent in CLI V1.
+
+#### Syntax
+
+```
+csdx cm:stacks:bulk-taxonomies [OPTIONS]
+```
+
+#### Options
+
+| Flag | Description | Required |
+| --- | --- | --- |
+| --operation | Operation type: publish or unpublish | Yes |
+| --taxonomies | UIDs of the taxonomies to act on. Separate multiple UIDs with a space. | Yes |
+| --environments | Environments to publish to or unpublish from | Yes |
+| --locales | Locales to act on | Yes |
+| --stack-api-key | API key of the target stack | Yes, unless --alias is used |
+| --alias | Management token alias of the target stack | Yes, unless --stack-api-key is used |
+| -y, --yes | Skip confirmation prompt | No |
+
+#### Examples
+
+**Publish taxonomy terms to an environment:**
+
+```
+csdx cm:stacks:bulk-taxonomies \
+  --operation publish \
+  --taxonomies product_category \
+  --environments production \
+  --locales en-us \
+  --stack-api-key bltxxxxxx
+```
+
+**Unpublish taxonomy terms:**
+
+```
+csdx cm:stacks:bulk-taxonomies \
+  --operation unpublish \
+  --taxonomies product_category region \
+  --environments production \
+  --locales en-us \
+  --alias myalias
 ```
 
 ---
@@ -478,7 +516,7 @@ Cross-publish uses the **Delivery API** to fetch only published content from the
 csdx auth:tokens:add \
   -a <alias-name> \
   --delivery-token <your-delivery-token> \
-  --api-key <your-stack-api-key> \
+  --stack-api-key <your-stack-api-key> \
   --environment <source-environment> \
   --type delivery
 ```
@@ -490,7 +528,7 @@ csdx auth:tokens:add \
 csdx auth:tokens:add \
   -a prod-delivery \
   --delivery-token prod-delivery-token \
-  --api-key blt******** \
+  --stack-api-key blt******** \
   --environment production \
   --type delivery
 
@@ -498,7 +536,7 @@ csdx auth:tokens:add \
 csdx auth:tokens:add \
   -a staging-delivery \
   --delivery-token stag-delivery-token \
-  --api-key blt******** \
+  --stack-api-key blt******** \
   --environment staging \
   --type delivery
 ```
@@ -585,7 +623,7 @@ csdx cm:stacks:bulk-entries \
 csdx auth:tokens:add \
   -a staging-delivery \
   --delivery-token blt_staging_token \
-  --api-key blt******** \
+  --stack-api-key blt******** \
   --environment staging \
   --type delivery
 ```
@@ -720,11 +758,11 @@ csdx cm:stacks:bulk-entries \
 -   The bulk-operation folder stores detailed logs of the last operation only
 -   Each new operation overwrites the previous logs
 -   To preserve logs for audit purposes, copy the folder before running a new operation:
-    
+
     ```
     cp -r bulk-operation bulk-operation-backup-$(date +%Y%m%d-%H%M%S)
     ```
-    
+
 
 ---
 
@@ -975,7 +1013,7 @@ csdx cm:stacks:bulk-entries -c my-config.json -k blt********
 csdx auth:tokens:add \
   -a <alias-name> \
   --delivery-token <token> \
-  --api-key <api-key> \
+  --stack-api-key <api-key> \
   --environment <source-env> \
   --type delivery
 ```
@@ -1000,36 +1038,6 @@ csdx auth:tokens:add \
 
 1.  Add a delivery token with \--type delivery flag
 2.  Use the delivery token alias with \--source-alias
-
-### Assets stay in "still scanning" status with no automatic retry
-
-**Root Cause(s)**: cm:stacks:bulk-assets checks each asset's scan status once at command run time. There is no polling loop that waits for a pending scan to finish before deciding whether to publish. An asset in the scan queue at the time the command runs is skipped for that run.
-
-**Resolution**: Wait for the asset's scan to complete, then run the same cm:stacks:bulk-assets command again. The command rechecks scan status on every run.
-
-### "Asset UID mapper is empty" warning during a \--data-dir publish
-
-**Root Cause(s)**: The mapper/assets/uid-mapping.json file in the data directory is missing or contains no entries. This file maps source asset UIDs to their UIDs on the destination stack. Unlike a missing assets.json, a missing or empty UID mapping file does not stop the command. It logs this warning and continues, and every asset in the run is then skipped because none can be mapped to a destination UID.
-
-**Resolution**: Confirm the data directory points at a completed import backup and that mapper/assets/uid-mapping.json exists and is populated. Re-run the import if the mapping file was not generated.
-
-### Environment names show as raw UIDs instead of names in a \--data-dir publish
-
-**Root Cause(s)**: The environments/environments.json file in the data directory is missing. Asset scanning falls back to using raw environment UIDs in place of names for output, and continues processing. This is a warning, not a failure.
-
-**Resolution**: Confirm the data directory contains environments/environments.json from the same import backup. If it is missing, re-export or re-import to regenerate it.
-
----
-
-## Limitations
-
--   \--retry-failed on cm:stacks:bulk-assets rebuilds its item list from the failed-operation log only. It does not recheck asset scan status before retrying, so an asset that entered quarantine after the original run can still be retried.
--   The retry mechanism for assets still in the scan queue only checks scan status once per command invocation. See [Assets stay in "still scanning" status with no automatic retry](#assets-stay-in-still-scanning-status-with-no-automatic-retry) for details and the workaround.
--   In the \--data-dir publish flow, a missing assets.json in the data directory stops the command with an error. A missing mapper/assets/uid-mapping.json or environments/environments.json only logs a warning and the command continues with degraded behavior (all assets skipped, or environment names shown as raw UIDs).
-
-## Next Steps
-
--   [Asset Scanning in CLI](/docs/headless-cms/asset-scanning-in-cli): full reference for asset-scan gating behavior, the scan status dashboard, and troubleshooting for cm:stacks:bulk-assets.
 
 ---
 
