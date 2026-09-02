@@ -1,12 +1,13 @@
 ---
-title: "Content Type Plugin | Beta Commands"
+title: "Content Type Plugin | V2.x.x"
 description: "Use the Contentstack CLI Content Type Plugin | V2 Beta to audit schema changes before deploying to production and compare content models across versions or stacks."
 url: /headless-cms/cli-content-type-plugin
+uid: blt8012fa025c919ece
 ---
 
-# Content Type Plugin | Beta Commands
+# Content Type Plugin | V2.x.x
 
-## Content Type Plugin | V2 Beta
+## Content Type Plugin
 
 ## Overview
 
@@ -50,15 +51,15 @@ Find your starting point based on what you are doing.
 
 ## Prerequisites
 
--   **Contentstack CLI v2 installed**: See [Install the Contentstack CLI](/docs/developers/cli/install-the-cli). This provides the csdx command used throughout this doc.
+-   **Contentstack CLI v2 installed**: See [Install the Contentstack CLI](/docs/headless-cms/install-the-cli). This provides the csdx command used throughout this doc.
 -   **Plugin installed**: See [Installation](#installation). This adds the content-type:\* commands to your CLI.
 -   **Authentication**: A saved management token alias or a stack API key. See [Authentication](#authentication). If using a management token, its [role](/docs/headless-cms/about-stack-roles) must grant Content Type: Read permission.
--   **Region configured, if your stack is not in North America**: [Set your region](/docs/developers/cli/configure-regions-in-the-cli#set-region) before running any stack commands.
-    
+-   **Region configured, if your stack is not in North America**: [Set your region](/docs/headless-cms/configure-regions-in-the-cli#set-region) before running any stack commands.
+
     ```
     csdx config:set:region
     ```
-    
+
     This routes requests to the correct data center for your stack.
 
 ---
@@ -66,17 +67,17 @@ Find your starting point based on what you are doing.
 ## Installation
 
 1.  Install the plugin:
-    
+
     ```
     csdx plugins:install contentstack-cli-content-type
     ```
-    
+
 2.  Verify:
-    
+
     ```
     csdx plugins
     ```
-    
+
 
 ---
 
@@ -449,7 +450,7 @@ v2 removes the deprecated flags and all command-specific short flags from v1. On
 1.  Log in: csdx auth:login
 2.  Re-run your command.
 
-For more detail, see [CLI Authentication](/docs/developers/cli/cli-authentication).
+For more detail, see [CLI Authentication](/docs/headless-cms/cli-authentication).
 
 ---
 
@@ -463,7 +464,7 @@ For more detail, see [CLI Authentication](/docs/developers/cli/cli-authenticatio
 2.  If you do not have a management token, add one as shown in [Authentication](#authentication).
 3.  Pass the management token alias with \-a.
 
-See [Add a Management Token](/docs/developers/cli/cli-authentication#add-management-token).
+See [Add a Management Token](/docs/headless-cms/cli-authentication#add-management-token).
 
 ---
 
@@ -491,7 +492,7 @@ This covers messages that start with Error: and name an authentication or permis
 2.  Confirm the token has Content Type: Read permission in the Contentstack UI.
 3.  Check your region: csdx config:get:region. If it does not match the stack, reset it with csdx config:set:region.
 
-See [Configure Regions in the CLI](/docs/developers/cli/configure-regions-in-the-cli#set-region).
+See [Configure Regions in the CLI](/docs/headless-cms/configure-regions-in-the-cli#set-region).
 
 ---
 
@@ -579,8 +580,8 @@ The CLI creates missing parent directories automatically. The \--type value and 
 ## Next Steps
 
 -   [Content Type Plugin (v1)](/docs/headless-cms/cli-content-type-plugin): the v1 command reference, useful if you still run v1 or need the old flag names while upgrading.
--   [Regex Validate Plugin (v2)](/docs/headless-cms/cli-regex-validate-plugin/beta): scan your content types and [global fields](/docs/headless-cms/about-global-field) for regex patterns vulnerable to catastrophic backtracking.
--   [Audit Plugin](/docs/headless-cms/audit-plugin): a related Contentstack plugin for reviewing audit log activity across your stack.
--   [CLI Authentication: Add Management Token](/docs/developers/cli/cli-authentication#add-management-token): create and save the management token alias these commands use.
--   [Configure Regions in the CLI](/docs/developers/cli/configure-regions-in-the-cli#set-region): set your region if your stack is not in North America.
--   [About Content Types](/docs/developers/create-content-types/about-content-types): conceptual background on how content types and their fields are structured.
+-   [Regex Validate Plugin (v2)](/docs/headless-cms/cli-regex-validate-plugin): scan your content types and [global fields](/docs/headless-cms/about-global-field) for regex patterns vulnerable to catastrophic backtracking.
+-   [Audit Plugin](/docs/headless-cms/cli-audit-plugin): a related Contentstack plugin for reviewing audit log activity across your stack.
+-   [CLI Authentication: Add Management Token](/docs/headless-cms/cli-authentication#add-management-token): create and save the management token alias these commands use.
+-   [Configure Regions in the CLI](/docs/headless-cms/configure-regions-in-the-cli#set-region): set your region if your stack is not in North America.
+-   [About Content Types](/docs/headless-cms/about-content-types): conceptual background on how content types and their fields are structured.

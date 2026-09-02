@@ -1,10 +1,11 @@
 ---
-title: "Export Content using the CLI | Old Commands"
+title: "Export Content using the CLI | V0.x.x"
 description: "Efficiently export content using Contentstack's CLI commands."
 url: /headless-cms/export-content-using-the-cli/v0
+uid: blt88f14f6af9eca1d9
 ---
 
-# Export Content using the CLI | Old Commands
+# Export Content using the CLI | V0.x.x
 
 ## Export Content using the CLI
 
@@ -15,7 +16,7 @@ You can export the following modules from a stack:
 -   [Assets](/docs/headless-cms/about-assets/)
 -   [Locales](/docs/headless-cms/about-languages)
 -   [Environments](/docs/headless-cms/about-environments)
--   [Extensions](/docs/developers/experience-extensions-overview)
+-   [Extensions](/docs/developer-hub/about-ui-locations)
 -   [Webhooks](/docs/headless-cms/about-webhooks)
 -   [Global Fields](/docs/headless-cms/about-global-field)
 -   [Content Types](/docs/headless-cms/about-content-types)
@@ -26,8 +27,8 @@ You can export the following modules from a stack:
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login)
--   CLI [installed](/docs/headless-cms/install-the-cli)
--   A [configured management token](/docs/headless-cms/cli-authentication#add-token) (alias) or [authtoken](/docs/headless-cms/cli-authentication#login)
+-   CLI [installed](/docs/headless-cms/install-the-cli/v1)
+-   A [configured management token](/docs/headless-cms/cli-authentication/v0#add-token) (alias) or [authtoken](/docs/headless-cms/cli-authentication/v0#login)
 
 ## Commands
 
@@ -70,41 +71,41 @@ csdx cm:export -a <management_token_alias> -d <file_path>
 **Examples**:
 
 -   To export all modules from a stack:  
-    
+
     ```
     csdx cm:export -a mytoken  -d "C:\Users\Name\Desktop\cli\content"
     ```
-    
+
 -   To export all modules from a particular branch of your stack(For example: **develop**).  
-    
+
     ```
     csdx cm:export -a mytoken -d "C:\Users\Name\Desktop\cli\content" -B develop
     ```
-    
+
 -   To export only content types from a stack:  
-    
+
     ```
     csdx cm:export -a mytoken  -d "C:\Users\Name\Desktop\cli\content" -m content-types
     ```
-    
+
     OR  
-    
+
     ```
     csdx cm:export -a mytoken  -d "C:\Users\Name\Desktop\cli\content" --module content-types
     ```
-    
+
 -   To export only environments from a stack:  
-    
+
     ```
     csdx cm:export -a mytoken  -d "C:\Users\Name\Desktop\cli\content" -m environments
     ```
-    
+
     OR  
-    
+
     ```
     csdx cm:export -a mytoken  -d "C:\Users\Name\Desktop\cli\content" --module environments
     ```
-    
+
 
 **Note:** When exporting modules individually, make sure you follow this module sequence: **assets > environments > locales > extensions > webhooks > global-fields > content-types > workflows > entries > labels.** For example, before exporting entries, you must have had exported assets, environments, locales, extensions, webhooks, global-fields, content-types, and workflows.
 
@@ -130,15 +131,15 @@ csdx cm:export -a <management_token_alias> -c <config_file_path>
 **Example**
 
 -   To export content using a config file:  
-    
+
     ```
     csdx cm:export -a mytoken -c “C:/Users/Name/Desktop/cli/config.json”
     ```
-    
+
 
 ### Export Content Using Auth Token and Parameters
 
-You can use this method to export content to your stack if you have logged in to the session using the [Login](https://www.contentstack.com/docs/headless-cms/cli-authentication/#login) command. Running the Login command generates an auth token, which is used in the command below.
+You can use this method to export content to your stack if you have logged in to the session using the [Login](https://www.contentstack.com/docs/headless-cms/cli-authentication/v0#login) command. Running the Login command generates an auth token, which is used in the command below.
 
 **Tip:** To store the exported content efficiently, create a folder named “content” in your system and note its path.
 
@@ -163,54 +164,54 @@ csdx cm:export -A -s <stack_ApiKey> -d <file_path>
 -   \-B, \--branch=branch: The name of the branch where you want to export your content. If you don’t mention the branch name, then by default the content will be exported from **all** the branches of your stack.
 -   \-m, \--module=module (_optional_): Specify the module to export to the source stack. If not specified, the export command will export all the modules to the stack. The available modules are _assets, content-types, entries, environments, extensions, global-fields, labels, locales_, _workflows, releases,_ _webhooks,_ and _workflows._ 
 -   \--secured-assets: Use this flag to export your content, if the [secured assets](/docs/administration#manage-asset-security) feature is enabled for your stack.
-    
+
     **Note:** Make sure to add the \--secured-assets flag to avoid errors while exporting content for the stack where the [secured assets](/docs/administration#manage-asset-security) feature is enabled.
-    
+
 
 **Examples**
 
 -   To export all modules from a stack:  
-    
+
     ```
     csdx cm:export -A  -d "C:\Users\Name\Desktop\cli\content" -s bltxxxxxx
     ```
-    
+
 -   To export all modules from a particular branch of your stack(For example: **develop**).  
-    
+
     ```
     csdx cm:export -A -d "C:\Users\Name\Desktop\cli\content" -s bltxxxxxx  -B develop
     ```
-    
+
 -   To export only content types from a stack:  
-    
+
     ```
     csdx cm:export -A -d "C:\Users\Name\Desktop\cli\content" -m content-types -s bltxxxxxx
     ```
-    
+
     OR  
-    
+
     ```
     csdx cm:export -A -d "C:\Users\Name\Desktop\cli\content" --module content-types -s bltxxxxxxxx
     ```
-    
+
 -   To export only environments from a stack:  
-    
+
     ```
     csdx cm:export -A  -d "C:\Users\Name\Desktop\cli\content" -m environments -s bltxxxxxx
     ```
-    
+
     OR  
-    
+
     ```
     csdx cm:export -A -d "C:\Users\Name\Desktop\cli\content" --module environments -s bltxxxxxxxx
     ```
-    
+
 -   To export content from your stack where secured assets feature is enabled:  
-    
+
     ```
     csdx cm:export -A -d "C:\Users\Name\Desktop\cli\content" -s bltxxxxxx --secured-assets
     ```
-    
+
 
 **Note:** When exporting  modules individually, make sure you follow this module sequence: **assets > locales > environments > extensions > webhooks > global-fields > content-types > workflows > entries > labels**.  For example, before exporting entries, you must have had exported assets, environments, locales, extensions, webhooks, global-fields, content-types, and workflows.
 
@@ -238,11 +239,11 @@ csdx cm:export -A -c <config_file_path>
 **Example**
 
 -   To export content using a config file:  
-    
+
     ```
     csdx cm:export -A -c “C:/Users/Name/Desktop/cli/config.json”
     ```
-    
+
 
 ## Limitations
 
@@ -254,5 +255,5 @@ csdx cm:export -A -c <config_file_path>
 
 ## Next Steps
 
--   [Import the content in the stack](/docs/developers/cli/import-content-using-the-cli)
--   [Audit Plugin](/docs/headless-cms/audit-plugin/)
+-   [Import the content in the stack](/docs/headless-cms/import-content-using-the-cli/v0)
+-   [Audit Plugin](/docs/headless-cms/cli-audit-plugin/v1)
