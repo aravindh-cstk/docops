@@ -2,6 +2,7 @@
 title: "Anatomy of Skills"
 description: "Learn the anatomy of a Contentstack Agent Skill, frontmatter, instructions, and references, the structure every SKILL.md follows for reliable AI guidance."
 url: /developers/skills-skill-anatomy
+uid: blt1dcf19eac1d4afd4
 ---
 
 # Anatomy of Skills
@@ -33,7 +34,7 @@ Common keys:
 | disable-model-invocation | Marks a skill that should only run when explicitly invoked, not auto-routed (used by the Launch action skills). |
 | context / agent | Execution hints (e.g. context: fork, agent: general-purpose or agent: plan). |
 
-When generated for Codex, frontmatter is stripped: the body becomes the instructions.
+When Codex generates the skill, it strips the frontmatter, converting the body into instructions.
 
 ## Body sections
 
@@ -45,7 +46,7 @@ The Markdown body follows a repeatable outline. Not every skill uses every secti
 | **When to Use** | The routing trigger: the user intents that should activate it. |
 | **User Problem** | The underlying need the skill addresses. |
 | **Success Criteria** | What a correct answer looks like. |
-| **Expected Inputs** | What the agent should gather (UIDs, locale, framework, etc.). |
+| **Expected Inputs** | What the agent should gather (for example, UIDs, locale, or framework). |
 | **Expected Outputs** | The deliverables (code, recommendations, checklists). |
 | **Example User Requests** | Representative prompts the skill handles. |
 | **Workflow Summary** | The step-by-step approach. |
@@ -88,5 +89,5 @@ Many skills end with worked **User/Assistant** pairs, often tagged few-shot or e
 A predictable structure means:
 
 -   Agents can find the routing trigger, the rules, and the security and safety rules in the same place every time.
--   Documentation pages correspond directly to skill sections, so the [skills reference](/docs/developers/skills-reference) can be generated from source.
+-   Documentation pages correspond directly to skill sections, so the system can generate the [skills reference](https://www.contentstack.com/docs/developers/skills-reference) directly from source.
 -   Authors have a template to follow.
