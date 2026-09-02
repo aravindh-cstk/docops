@@ -453,7 +453,7 @@ Endpoint.getContentstackEndpoint(region, service)
                 │
                 ▼
           Download regions.json from CDN
-                ├─�� Success ──► Cache in memory ──► Return URL
+                ├── Success ──► Cache in memory ──► Return URL
                 └── Failure
                       │
                       ▼
