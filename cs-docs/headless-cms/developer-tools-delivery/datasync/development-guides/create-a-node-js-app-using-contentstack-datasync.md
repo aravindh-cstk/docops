@@ -88,7 +88,7 @@ So, download the boilerplate code, configure it as required, and get started wit
 
         **Additional Resource:** To import data into Contentstack, refer to the [Import an Entry](/docs/headless-cms/import-an-entry) and [Import a Content type](/docs/headless-cms/import-a-content-type) section.
 
-        1.  **Create an “about” page**  
+        1.  **Create an ���about” page**  
             Inside the routes folder, create an about.js file, and copy-paste the following code in the file:
 
             ```
