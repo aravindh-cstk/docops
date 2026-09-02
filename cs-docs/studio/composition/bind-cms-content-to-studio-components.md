@@ -30,7 +30,7 @@ Details on the picker's tabs, scoping, and type filtering are in [The Data Picke
 
 ## Static value vs. bound — same prop, different source
 
-Every prop on every component has the same two halves in the right panel: a **direct input** and a **binding chip**. Use the input to type a literal value; use the chip to bind the prop to a CMS field. You can switch a prop between the two whenever you want — the component doesn't know or care which source produced its value, so there's no refactor cost.
+Every prop on every component has the same two halves in the right panel: a **direct input** and a **binding chip**. Use the input to type a literal value; use the chip to bind the prop to a CMS field. You can switch a prop between the two whenever you want ��� the component doesn't know or care which source produced its value, so there's no refactor cost.
 
 What changes when you switch is **where the value comes from at render time**:
 

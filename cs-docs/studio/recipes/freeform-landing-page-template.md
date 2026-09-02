@@ -29,7 +29,7 @@ Two existing content types in your stack:
 
 A campaign entry exists with a hero ready to go. Multiple product entries exist; some have featured: true.
 
-## Step 1 ��� Create the Freeform template
+## Step 1 — Create the Freeform template
 
 1.  **Compositions → Templates tab → + New Template**
 2.  In the create dialog, pick **Freeform** (not "Connected Template")
