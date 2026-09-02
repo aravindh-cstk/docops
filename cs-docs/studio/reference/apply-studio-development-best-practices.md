@@ -41,7 +41,7 @@ A consolidated reference of patterns that work and patterns to avoid. Each secti
 -   **Repeater + Condition Block for Modular Block lists** — one Repeater iterating the list, one Condition Block per block type.
 -   **Don't manually loop inside a component.** If your component takes an array prop and .map()s internally, you're hiding iteration from Studio's binding system. Use a Repeater instead.
 -   **template.\* inside a Repeater refers to the iteration item**, not the page entry. Use dataSources.page.\* if you genuinely need the outer scope inside the Repeater body.
--   **Add a fallback Condition Block** at the end of a Modular Block Repeater to catch new block types — otherwise new types render as nothing.
+-   **Add a fallback Condition Block** at the end of a Modular Block Repeater to catch new block types ��� otherwise new types render as nothing.
 
 ## CMS Binding
 
