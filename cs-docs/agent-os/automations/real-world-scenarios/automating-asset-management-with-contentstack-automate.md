@@ -19,7 +19,7 @@ Let's break this scenario to see what the trigger event and the consequent actio
 
 -   **Set up the “Contentstack Asset'' Trigger Event:** This trigger event is activated whenever a user publishes an asset in Contentstack.
 -   **Set up the ChatGPT “Chat with Vision” Action:** Once the above event triggers the automation, Chat with Vision fetches the asset UID and generates a response based on the prompt.
--   **Set up the Brand Kit “Get a Voice Profile” Action:** Once the response generates, Get a Single Voice Profile fetches the Voice Profile created in the Brand Kit.
+-   **Set up the Brand Kit “Get a Voice Profile��� Action:** Once the response generates, Get a Single Voice Profile fetches the Voice Profile created in the Brand Kit.
 -   **Set up the ChatGPT “Chat” Action:** Provide a prompt to generate an output based on the Chat with Vision and Get a Voice Profile action output.
 -   **Set up the Contentstack “Update an Asset” Action:** Fetch the output of the Chat action in the Asset Description.
 
