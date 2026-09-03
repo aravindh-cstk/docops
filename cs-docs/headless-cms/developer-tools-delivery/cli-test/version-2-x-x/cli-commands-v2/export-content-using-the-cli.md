@@ -274,7 +274,7 @@ CONTENT TYPES:
     └─ Content types       |████████████████████████████████████████| 100% | 6/6 | ✓ Complete (6/6)
 
 ENTRIES:
-   ├─ Entries              |████████████████████████████████████████| 100% | 12/12 | ✓ Complete (12/12)
+   ├─ Entries              |████████████��███████████████████████████| 100% | 12/12 | ✓ Complete (12/12)
 ```
 
 **Steps to Switch to Console Logs (Optional):**
