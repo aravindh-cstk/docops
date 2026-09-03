@@ -40,7 +40,7 @@ Let’s dive deep into how this model will help you create your company’s “A
 
     -   **Title****:** This is where you'll provide your “About Us" page a name, such as “Who We Are," “Our Story," or even “About Us”. The [Title](/docs/headless-cms/title) field defines the title of the About Us page/entry.
     -   **URL****:** Here goes the web URL of your “About Us" page. When clicked on, this link provided in the [URL](/docs/headless-cms/url)[](/docs/headless-cms/link)field takes users straight to your About Us page.
-    -   **Page Components****:** The different sections that you see on your “About Us" page have been collectively considered together, and hence have used the [Modular Block](/docs/headless-cms/modular-blocks/) field to create the following components:
+    -   **Page Components****:** The different sections that you see on your ���About Us" page have been collectively considered together, and hence have used the [Modular Block](/docs/headless-cms/modular-blocks/) field to create the following components:
         -   **Hero Banner:** This is the big, bold section at the top of your page, usually with standout images or messages. In this block, we have used a [Reference field](/docs/headless-cms/reference) to allow you to fetch “About Us” content/entries from single/multiple content types into your field.
             -   **Hero Banner****:** This is a Reference field that refers to the [Hero Banner](/docs/headless-cms/hero-banner#developing-content-type) content type.
         -   **Section with Bucket****:** For the “Our Mission” section, we have made use of a [Global field](/docs/headless-cms/about-global-field/) that contains the following group of fields:

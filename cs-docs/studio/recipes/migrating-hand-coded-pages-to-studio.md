@@ -165,7 +165,7 @@ The Section renders inline; everything else on the route stays code-owned. When 
 -   **Validate the Section against real production traffic.** You see how it behaves under cache, SSR, Live Preview, and variant flows before you commit to a route swap.
 -   **Defer the route swap until it's actually worth it.** For pages with lots of code-side logic, you might never fully swap — the Section embed is the permanent endpoint, not an interim step. See the [Embed a Studio-managed region inside a code-owned page](/docs/studio/embedding-a-composition-in-a-code-owned-page) recipe for the canonical bounded-zone pattern.
 
-**Full walkthrough**: [Embed a Studio-managed region inside a code-owned page](/docs/studio/embedding-a-composition-in-a-code-owned-page) — covers the SDK API (useCompositionData({ compositionUid })), multiple embeds on the same page, and how the embed coexists with the rest of the route's data fetching.
+**Full walkthrough**: [Embed a Studio-managed region inside a code-owned page](/docs/studio/embedding-a-composition-in-a-code-owned-page) �� covers the SDK API (useCompositionData({ compositionUid })), multiple embeds on the same page, and how the embed coexists with the rest of the route's data fetching.
 
 If your goal is the full route swap, treat this step as optional — skip straight to Step 4 if you've already proved the Section in lower environments. If your goal is incremental author capability with minimal blast radius, ship every Section as an embed first, then promote routes one at a time when the Templates are ready.
 
