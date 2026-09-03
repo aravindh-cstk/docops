@@ -15,7 +15,7 @@ In Contentstack, creating an entry is the first step in adding content to your w
 
 To create an [entry](/docs/headless-cms/about-entries), log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click “Entries” or use the shortcut key “E” (for both Windows and Mac users).
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click “Entries” or use the shortcut key “E�� (for both Windows and Mac users).
 
     **Note:** To create an entry, you need to have a predefined content type that defines the structure of your content. For detailed information on creating content types, refer to our [Create a Content Type](/docs/headless-cms/create-a-content-type) documentation language. By default, the language is set to the master language of your stack.
 
