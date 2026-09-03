@@ -38,6 +38,6 @@ A typical Studio-powered app ships **both**.
 
 ## Next
 
--   [Composition concepts](/docs/studio/overview) — how Studio thinks about pages
+-   [Composition concepts](/docs/studio/composition-concepts) — how Studio thinks about pages
 -   Templates — content-type-driven pages
 -   Sections — reusable blocks

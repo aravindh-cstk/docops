@@ -279,6 +279,6 @@ Each step has a dedicated skill that walks the same flow.
 
 ## See Also
 
--   [Bring your own components](/docs/studio/overview)
+-   [Bring your own components](/docs/studio/bring-your-own-components)
 -   Templates
 -   [Verify end to end](/docs/studio/verify-your-studio-setup-end-to-end)

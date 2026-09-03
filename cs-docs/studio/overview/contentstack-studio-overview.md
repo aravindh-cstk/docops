@@ -75,7 +75,7 @@ Once you see Sections and Templates, one more lens locks the picture in. Any CMS
 Today's component-driven frontend stack solved two big problems and left a third unsolved.
 
 -   **Component libraries** (React + design systems + Storybook) solved **components**: write once, isolate, test, ship.
--   **Headless CMS** (Contentstack + Live Preview + [Visual Editor](/content-managers/visual-builder/about-visual-builder)) solved **content**: model, author, translate, version, publish.
+-   **Headless CMS** (Contentstack + Live Preview + [Visual Editor](/docs/headless-cms/about-visual-editor)) solved **content**: model, author, translate, version, publish.
 -   What got left out: **composition**. _How your components compose into sections, how sections compose into pages, how a page binds to entries, how an author rearranges any of it without filing an engineering ticket_ — all of that still lives in code. In route files. In JSX that ships through git → PR → deploy.
 
 That's the bottleneck. The component library is reusable; the composition that arranges those components into pages **isn't**. Every layout change is engineering work. Every new page is a route file. Every re-binding is a code change. Authors describe layouts in tickets; engineers translate them into JSX; a sprint later the page ships.

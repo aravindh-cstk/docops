@@ -62,4 +62,4 @@ Use the audience tag (or just the table of contents) to find the right page for 
 ## Next
 
 -   Set up Studio
--   [Bring your own components](/docs/studio/overview)
+-   [Bring your own components](/docs/studio/bring-your-own-components)

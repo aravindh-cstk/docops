@@ -94,4 +94,4 @@ Each breakpoint's value can also be bound to data via the database icon, exactly
 -   [CMS binding](/docs/studio/bind-cms-content-to-studio-components) — how bindings are serialized into the composition JSON.
 -   [Layers](/docs/studio/navigate-and-use-the-layers-tab) — selecting the right node so the Data tab targets what you intend.
 -   [Design panel](/docs/studio/style-components-with-the-design-panel) — the styles-side counterpart to the Data tab.
--   [Composition overview](/docs/studio/overview) — where the Data tab sits in the larger authoring flow.
+-   [Composition overview](/docs/studio/composition-concepts) — where the Data tab sits in the larger authoring flow.

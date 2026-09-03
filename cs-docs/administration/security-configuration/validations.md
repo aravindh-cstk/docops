@@ -2,6 +2,7 @@
 title: "Validations"
 description: "Content errors can be minimized considerably by setting validations. Let’s go through the types of content validations available in Contentstack!"
 url: /administration/validations
+uid: bltaaa189808573a509
 ---
 
 # Validations
@@ -24,7 +25,9 @@ Let’s go through the types of validation checks available in Contentstack. The
 
 ### Mandatory
 
-You can mark a field as [Mandatory](/docs/headless-cms/mandatory), which means that a particular field cannot be left blank. Fields marked as mandatory will be represented by an asterisk (\*) sign beside the field name. Content managers will not be able to save entries if "Mandatory" fields are left blank.
+You can mark a field as [Mandatory](/docs/headless-cms/mandatory), which means that a particular field cannot be left blank. Contentstack marks mandatory fields with an asterisk (\*) beside the field name. Content managers cannot save an entry if "Mandatory" fields are left blank.
+
+**Note:** If the [Save In-progress Entry](/docs/headless-cms/save-in-progress-entry) feature is enabled for your organization, mandatory field validation does not block saving. This feature is enabled by default for most organizations. Content managers can save an entry that has empty mandatory fields, and Contentstack enforces the validation at publish time instead. Entries with incomplete mandatory fields cannot be published, scheduled for publishing, included in bulk publishing, added to a release, or referenced for publishing.
 
 You can set this validation rule to the “Single Line Textbox,” “Multi Line Textbox,” “Rich Text Editor,” “Markdown,” “Number,” “Date,” “File,” “Link,” and “Reference” fields.
 
@@ -75,26 +78,26 @@ You define [custom validation rules](/docs/headless-cms/validation-regex) that w
 Validation rules can be defined by specifying custom validation regular expressions. Let’s see a few examples:
 
 1.  Email: To check whether the email address entered in the email field is valid or not, you can specify the following regex code as the validation rule for the field:
-    
+
     ```
     [a-z0-9!#$%&'*+=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?
     ```
-    
+
 2.  URL: To check whether a URL entered by a user is valid, you can use the following regex code for validating the field:
-    
+
     ```
     ^(http(?:s)?\:\/\/[a-zA-Z0-9]+(?:(?:\.|\-)[a-zA-Z0-9]+)+(?:\:\d+)?(?:\/[\w\-]+)*(?:\/?|\/\w+\.[a-zA-Z]{2,4}(?:\?[\w]+\=[\w\-]+)?)?(?:\&[\w]+\=[\w\-]+)*)$
     ```
-    
+
 3.  Date: You can define rules to check whether the date entered by a user is in the valid format by using the following regex code.
-    
+
     ```
     ^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$
     ```
-    
+
 
 **Note:** The above code will check if the entered value is in one of the “dd/mm/yyyy”, “dd-mm-yyyy”, or “dd.mm.yyyy” formats. It will also validate leap years.  
-Learn more about [regular expressions](http://www.regular-expressions.info/).
+Learn more about [regular expressions](https://www.regular-expressions.info/).
 
 ## Custom Error Message
 

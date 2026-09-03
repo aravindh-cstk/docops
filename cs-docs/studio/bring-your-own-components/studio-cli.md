@@ -153,7 +153,7 @@ The CLI also supports moving Studio configurations between stacks:
 -   Import to a target stack
 -   Clone setups between environments (e.g. dev to staging to production)
 
-See [CLI-Supported Features for Export, Import, and Clone Operations](/developers/cli/cli-supported-features-for-export-import-and-clone-operations#studio) for the full list of supported entity types.
+See [CLI-Supported Features for Export, Import, and Clone Operations](/docs/headless-cms/cli-supported-features-for-export-import-and-clone-operations#studio) for the full list of supported entity types.
 
 ## When to use the CLI vs the LLM skills
 

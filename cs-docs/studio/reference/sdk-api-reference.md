@@ -223,7 +223,7 @@ Re-exported types: CompositionQueryForSSR, LightConfig, SearchQueryInput, Studio
 
 ## See also
 
--   [Composition overview](/docs/studio/overview) — what useCompositionData returns and how to render it.
+-   [Composition overview](/docs/studio/composition-concepts) — what useCompositionData returns and how to render it.
 -   [Canvas URL](/docs/studio/canvas-url) — pairing StudioCanvas with a dedicated canvas route.
 -   [Registering components](/docs/studio/register-components) — using registerComponent and registerComponents.
 -   [Design tokens](/docs/studio/configure-design-tokens-in-studio) — registerDesignTokens and registerDesignClasses in context.
