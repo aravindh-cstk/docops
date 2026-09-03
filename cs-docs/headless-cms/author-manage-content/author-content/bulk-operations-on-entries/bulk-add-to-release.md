@@ -23,7 +23,7 @@ To bulk add entries to a release, log in to your [Contentstack account](https://
 
     **Note:** For older releases, you may receive a warning message indicating that references will not be included, or that only one level of nesting is allowed for single items. To avoid this, [create](/docs/headless-cms/create-a-new-release) a new release or [clone](/docs/headless-cms/clone-a-release) the older release.
 
-5.  Select the languages in which you want to deploy the entries. Specify the action you want to perform—either **Publish** or **Unpublish**.![Bulk Add to Release_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta59ebbcb24f23201/66cf1b1d62373b199f72430d/Bulk_Add_to_Release_4.png)
+5.  Select the languages in which you want to deploy the entries. Specify the action you want to perform���either **Publish** or **Unpublish**.![Bulk Add to Release_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta59ebbcb24f23201/66cf1b1d62373b199f72430d/Bulk_Add_to_Release_4.png)
 6.  Select **Add with References** to include all referenced entries or **Add without References** to add only the selected entries.
 
     **Note**
