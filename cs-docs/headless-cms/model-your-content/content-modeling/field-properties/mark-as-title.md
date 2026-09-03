@@ -60,7 +60,7 @@ In a blog CMS setup, a Modular Block may allow different types of content, such 
 
 The **Mark as Global field title** toggle appears for supported fields within a Global field only if the Global field is set to **Multiple** in the content type.
 
-The selected field��s value is displayed as the title when the Global field is expanded within an entry.
+The selected field’s value is displayed as the title when the Global field is expanded within an entry.
 
 **Example:**
 
