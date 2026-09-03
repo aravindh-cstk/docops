@@ -26,7 +26,7 @@ A bound prop is dynamic — the value comes from the connected entry, a pinned e
 Details on the picker's tabs, scoping, and type filtering are in [The Data Picker](#the-data-picker) below. The rest of this page is split into two halves:
 
 1.  **Binding concepts** — what binding is, how sources scope, how the picker works (this page, top half).
-2.  **data-cslp tag emission** — the _second job_ the binding map does at render time: emitting the data-cslp tags Visual Editor consumes. See [data-cslp tag emission](#data-cslp-tag-emission--visual-editor-consumes-what-studio-emits) — orthogonal to authoring; skip on first read if VE isn't installed.
+2.  **data-cslp tag emission** ��� the _second job_ the binding map does at render time: emitting the data-cslp tags Visual Editor consumes. See [data-cslp tag emission](#data-cslp-tag-emission--visual-editor-consumes-what-studio-emits) — orthogonal to authoring; skip on first read if VE isn't installed.
 
 ## Static value vs. bound — same prop, different source
 
