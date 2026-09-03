@@ -474,7 +474,7 @@ csStudio.fetchCompositionData({ url, searchQuery }, { locale: "fr-fr" });
 
 Studio surfaces this as a banner on the canvas showing the composition UID and URL pattern that failed to resolve. The template's URL pattern doesn't match a route on your site that mounts <StudioComponent />.
 
-**Fix paths (in order of likelihood):** 1. **Add a catch-all route** mounting <StudioComponent /> — recommended default. See [Composition load → Templates 404](#templates-404-in-production-or-template-did-not-load-in-studio-even-though-the-canvas-renders-fine). 2. Edit the template's URL pattern in Studio → click the pencil icon in the canvas toolbar → Edit URL modal (see [Connected content type → Editing the URL](/docs/studio/connected-content-type#editing-the-url)). 3. Confirm the route mounts <StudioComponent /> and not <StudioCanvas /> — they're not interchangeable.
+**Fix paths (in order of likelihood):** 1. **Add a catch-all route** mounting <StudioComponent /> — recommended default. See [Composition load → Templates 404](#templates-404-in-production-or-template-did-not-load-in-studio-even-though-the-canvas-renders-fine). 2. Edit the template's URL pattern in Studio ��� click the pencil icon in the canvas toolbar → Edit URL modal (see [Connected content type → Editing the URL](/docs/studio/connected-content-type#editing-the-url)). 3. Confirm the route mounts <StudioComponent /> and not <StudioCanvas /> — they're not interchangeable.
 
 ### Preview Entry from Studio renders empty fields
 
