@@ -64,7 +64,7 @@ Let’s look at the steps in detail.
         -   **Any**: ‘Any’ (no change)
         -   **Select Module:** ‘Entry’
         -   **Select Content Type (Optional)**: Select a content type only if needed, else leave it blank
-        -   **Select Action**: ‘Created��
+        -   **Select Action**: ‘Created’
 
         Click on the ‘**+**’ (plus) icon to add another condition, and enter the following details:
 

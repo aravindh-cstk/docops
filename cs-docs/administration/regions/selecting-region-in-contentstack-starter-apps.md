@@ -112,7 +112,7 @@ CONTENTSTACK_APP_HOST = azure-na-app.contentstack.com
 CONTENTSTACK_LIVE_PREVIEW = true 
 #By default, the live preview feature is enabled for this project. To disable it, set "CONTENTSTACK_LIVE_PREVIEW= false".
 CONTENTSTACK_LIVE_EDIT_TAGS = false 
-#By default, live editing tags are disabled for this project. To enable it, set “CONTENTSTACK_LIVE_EDIT_TAGS= true”.
+#By default, live editing tags are disabled for this project. To enable it, set ��CONTENTSTACK_LIVE_EDIT_TAGS= true”.
 ```
 
 ### Gatsby App Configuration for Azure EU Region
