@@ -25,7 +25,7 @@ This is the most robust option and will also deliver the smoothest user experien
 
 ## What is the Edge?
 
-**TL;DR:** it’s essentially your CDN.
+**TL;DR:** it��s essentially your CDN.
 
 For the longest time, CDNs have been associated with caching. Their primary responsibility has been to stand in front of your origin servers, close to your users and serve your web content directly from there to enhance user experience, and also avoid overwhelming your origin server with requests from around the world.
 
