@@ -33,7 +33,7 @@ This is where microservices, firewalls, front-end servers, and other services ru
     -   **Application Gateway**: You can set up an application gateway to manage traffic between your Contentstack app and the infrastructure. 
     -   **CDN Purge**: This is where the caching mechanism runs to help purge the CDN cache when the request for caching is received.
 
-Let���s dig a little deeper into the various components of the diagram and understand how the set up works as a whole to provide a seamless experience to the user.
+Let’s dig a little deeper into the various components of the diagram and understand how the set up works as a whole to provide a seamless experience to the user.
 
 ## CDN (Content Delivery Network) Layer  
 
