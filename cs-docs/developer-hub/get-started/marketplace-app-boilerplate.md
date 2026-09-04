@@ -110,7 +110,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   └── useVerifyAppToken.tsx
 │   │   ├── locales/
 │   │   │   └── en-us/
-│   │   │       └── index.ts
+│   ���   │       └── index.ts
 │   │   ├── providers/
 │   │   │   ├── AppConfigurationExtensionProvider.tsx
 │   │   │   ├── CustomFieldExtensionProvider.tsx
