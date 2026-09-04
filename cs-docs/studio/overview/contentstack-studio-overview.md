@@ -250,7 +250,7 @@ The "on-the-fly" part covers both: launching a new product line under an existin
 
 ## Why Studio doesn't compete with Vibe Coding / AI-assisted dev — it stacks
 
-AI-assisted dev — **Cursor, Claude Code, GitHub Copilot, Windsurf, Cline** — is excellent at the build-time slice of the work. It generates React components, scaffolds routes, writes JSX, drafts schemas, and shortens the path from "I have an idea for a component" to "the component is in my repo." That work still ships the way code has always shipped: **git → PR → CI → deploy**.
+AI-assisted dev ��� **Cursor, Claude Code, GitHub Copilot, Windsurf, Cline** — is excellent at the build-time slice of the work. It generates React components, scaffolds routes, writes JSX, drafts schemas, and shortens the path from "I have an idea for a component" to "the component is in my repo." That work still ships the way code has always shipped: **git → PR → CI → deploy**.
 
 Studio addresses a different layer entirely: **runtime composability**. Once components exist in the repo, who recomposes them into new pages? Who re-maps a prop to a different CMS field after the launch? Who builds the spring-sale landing page next Tuesday? Today the answer is "an engineer, on a redeploy." AI tools don't change that — they just make the engineer faster. Studio changes the answer to **"the author, on a publish."**
 
