@@ -59,4 +59,4 @@ Once the recipient accepts the invite, you can confirm the change from the proje
 
 ## Switch GitHub Connection
 
-After the ownership transfer, the project's GitHub connection remains linked to the previous owner's GitHub account. If the new owner wants to connect the project to their own repository, they must switch the GitHub connection from **Settings → General ��� Git Connection**. Follow the steps in [Switch GitHub Connection and Change Repository for an Existing Project](/docs/launch/change-git-repository-for-a-project#switch-github-connection-and-change-repository-for-an-existing-project) to select and link a different repository.
+After the ownership transfer, the project's GitHub connection remains linked to the previous owner's GitHub account. If the new owner wants to connect the project to their own repository, they must switch the GitHub connection from **Settings → General → Git Connection**. Follow the steps in [Switch GitHub Connection and Change Repository for an Existing Project](/docs/launch/change-git-repository-for-a-project#switch-github-connection-and-change-repository-for-an-existing-project) to select and link a different repository.
