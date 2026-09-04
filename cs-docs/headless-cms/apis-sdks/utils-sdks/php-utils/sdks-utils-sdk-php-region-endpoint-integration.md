@@ -89,7 +89,7 @@ try {
         ->toJSON()
         ->find();
 } catch (\InvalidArgumentException $e) {
-    // Bad region or service key �� check configuration
+    // Bad region or service key — check configuration
     error_log($e->getMessage());
 } catch (\RuntimeException $e) {
     // Registry unavailable — run: composer install or composer refresh-regions
