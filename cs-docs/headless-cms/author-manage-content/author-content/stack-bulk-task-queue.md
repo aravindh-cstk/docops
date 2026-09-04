@@ -11,10 +11,10 @@ uid: blt21edab79d9be7e65
 
 The Bulk Task Queue displays a list of bulk operations performed within a specific stack.
 
-To access the bulk task queue for your organization, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
+To access the bulk task queue for your stack, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Settings” icon on the left navigation panel. You can also use the shortcut key “S” (for both Windows OS and Mac OS users) to access **Settings**.![Stack Bulk Task Queue_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt52b840249455b28a/66cf24a968aa7c0d68a55496/Stack_Bulk_Task_Queue_1.png)
-2.  Click the **Bulk Task Queue** tab to access the section.![Stack Bulk Task Queue_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt13a9064d72ca2208/66cf2548ec1754e22ec6aa21/Stack_Bulk_Task_Queue_2.png)
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click **Settings** in the navigation bar. You can also use the shortcut key “S” (for both Windows OS and Mac OS users) to access **Settings**.
+2.  Click the **Bulk Task Queue** tab to access the section.
 
 The queue provides the following details about each task:
 
@@ -24,11 +24,8 @@ The queue provides the following details about each task:
 -   **Initiated By**: The name of the user who initiated the bulk operation.
 -   **Task Status**: The current status of the task.
 -   **Actions**: This column provides options to interact with a specific bulk action.
-
     -   **Open Release**: Navigate directly to the release associated with the bulk action.
     -   **View Details**: A comprehensive list of all entries impacted by this bulk operation, including their entry name, version, language, and content type.
-
-    ![Stack Bulk Task Queue_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt89371a254fd6ac93/66cf2548baa9790657da7177/Stack_Bulk_Task_Queue_3.png)
 
 ## Task Status
 
