@@ -2,6 +2,7 @@
 title: "Transfer Project Ownership"
 description: "Learn how to transfer ownership of a Contentstack Launch project to another collaborator, including prerequisites and post-transfer steps."
 url: /launch/transfer-project-ownership
+uid: blte40d461c5e927467
 ---
 
 # Transfer Project Ownership
@@ -26,7 +27,7 @@ To transfer project ownership, log in to your [Contentstack account](https://www
     Alternatively, scroll down to the **Git Connection** section and click **Transfer Project Ownership** below it. ![Launch_Project_Transfer_Ownership_2ndbutton.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/am514f2eb6e935145f/e8da430228d3be91309093be/Launch_Project_Transfer_Ownership_2ndbutton.png?locale=en-us)
 4.  In the **Transfer Project Ownership** dialog, select the **Recipient** from the dropdown. You can search by name or email; only existing project collaborators appear in the list.
 5.  Select the checkbox: **I understand I will lose administrative access once the new owner accepts this transfer**.
-6.  Click **Send Transfer Invite**. ![Launch_Project_Transfer_Ownership_SendTransferInvite.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/ame240c4d82c44d487/f2cf9fbd12b8671de073fa4b/Launch_Project_Transfer_Ownership_SendTransferInvite.png?locale=en-us)
+6.  Click **Send Transfer Invite**.![Launch_Project_Transfer_Ownership_UpdatedSendTransferInvite.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/am1c420017295a0282/3a92ce3400959970b1ad2121/Launch_Project_Transfer_Ownership_UpdatedSendTransferInvite.png?locale=en-us)
 
 **Note:** The **Send Transfer Invite** button stays disabled until you have selected a recipient and checked the confirmation checkbox.
 
@@ -39,7 +40,7 @@ If you change your mind after sending a transfer invite, you can cancel it befor
 To cancel an ownership transfer, follow the steps below:
 
 1.  Go to **Settings → General**.
-2.  In the **Transfer pending · awaiting acceptance** banner, click **Cancel Ownership Transfer**. ![Launch_Proj_Ownership_CancelButtonSS.png.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/ama10aa1b95e6eb95c/c908deee9533682707bdd11a/Launch_Proj_Ownership_CancelButtonSS.png.png?locale=en-us)
+2.  In the **Transfer pending · awaiting acceptance** banner, click **Cancel Ownership Transfer**. ![Launch_Proj_Ownership_CancelButtonSS.png.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/ama10aa1b95e6eb95c/c908deee9533682707bdd11a/Launch_Proj_Ownership_CancelButtonSS.png.png?locale=en-us)
 
 The transfer is canceled immediately. If the recipient clicks the invite link after cancellation, they see an **Invitation Cancelled** screen indicating the sender canceled the transfer before they could accept it. 
 
