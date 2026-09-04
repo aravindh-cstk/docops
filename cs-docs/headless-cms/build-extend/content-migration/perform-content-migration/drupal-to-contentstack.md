@@ -122,7 +122,7 @@ By default, all fields are selected for migration; however, you can uncheck fiel
 
     1.  **Search for Specific Fields**: Use the search bar in the mapping interface to locate field names.
     2.  **Reset Content Mapping**: Click the ‘Reset to default mapping’ icon to revert any changes made to the default mappings.
-    3.  **Select an Existing Content Type from Destination Stack**: By default, the tool maps the source models to the destination stack as new content types. For example, a ‘Contact Us’ page model from your source CMS gets mapped as a new ‘Contact Us’ content type during migration. However, you can select an existing content type from the destination stack if it exists.
+    3.  **Select an Existing Content Type from Destination Stack**: By default, the tool maps the source models to the destination stack as new content types. For example, a ��Contact Us’ page model from your source CMS gets mapped as a new ‘Contact Us’ content type during migration. However, you can select an existing content type from the destination stack if it exists.
     4.  **Fetch Content Types**: During migration, if new content types or fields are created/updated/deleted in the destination stack, retrieve them by clicking the ‘Fetch content type’ icon to update the schema.
 
         **Note**:

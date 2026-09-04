@@ -29,7 +29,7 @@ Let’s understand how this content model will assist you in creating a Hero Ban
     ![Identifying_the_Content_Model_for_the_Hero_Banner.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt699d351b92ebeefd/65360bf25904dc7e3daa336f/Identifying_the_Content_Model_for_the_Hero_Banner.png)
 3.  ## Developing Content Type
 
-    The ��Hero Banner” content model contains the following set of fields. Let’s look in detail at what content types and fields were used to create the model.
+    The “Hero Banner” content model contains the following set of fields. Let’s look in detail at what content types and fields were used to create the model.
 
     **Hero Banner** Content Type:   
     **Banner Title**: This is a [Title](/docs/headless-cms/title) field where you will add a unique name to your banner. It is a mandatory field and must be clear and concise.   
