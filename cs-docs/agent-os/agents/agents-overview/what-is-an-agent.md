@@ -1,16 +1,17 @@
 ---
 title: "What Is an Agent"
-description: "Learn what Contentstack Agents are and how they combine AI, context, instructions, and tools to act intelligently within Agent OS."
 url: /agent-os/what-is-an-agent
+uid: blt32b50e55965211a8
+description: Learn what Contentstack Agents are and how they combine AI, context, instructions, and tools to act intelligently within Agent OS.
 ---
 
-# What Is an Agent
+## What Is an Agent
 
 ## What Is an Agent
 
 **Note:** For access, talk to our [Support](mailto:support@contentstack.com) team.
 
-An agent is a workflow of instructions, trigger, and tools. 
+An agent is a workflow of instructions, trigger, and tools.
 
 By uniting intelligence, context, and capabilities, agents free teams from repetitive work while accelerating creativity, innovation, and business growth.
 
