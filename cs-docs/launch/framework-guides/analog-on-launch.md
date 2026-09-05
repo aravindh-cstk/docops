@@ -254,7 +254,7 @@ export default defineConfig({
 Place .md files in src/app/pages; the filename defines the route:
 
 ```
-src/app/pages/about.md → /about
+src/app/pages/about.md �� /about
 ```
 
 **Example for** **about.md****:**
